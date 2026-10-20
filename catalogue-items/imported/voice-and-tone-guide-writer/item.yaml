@@ -1,0 +1,39 @@
+slug: voice-and-tone-guide-writer
+name: Voice and tone guide writer
+summary: Describe how your brand talks. Get voice traits, tone by situation, word lists and side-by-side examples.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: copy_draft
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: brand_guide
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/brand-voice
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/brand-voice
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: brand-voice
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: brand-voice skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/brand-voice
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

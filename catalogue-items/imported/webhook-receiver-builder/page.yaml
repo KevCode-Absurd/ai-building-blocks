@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows a known safe pattern with a few choices.
+new_slug: webhook-receiver-builder
+name: Webhook receiver builder
+summary: Say which events to catch. Get a webhook receiver that checks signatures and handles repeats safely.
+job: connect-tools
+headline: Webhook receiver builder
+subhead: Say which events to catch. Get a webhook receiver that checks signatures and handles repeats safely.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

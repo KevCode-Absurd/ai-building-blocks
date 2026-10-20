@@ -1,0 +1,994 @@
+# alirezarezvani/claude-skills, slice 2 of 3.
+"alirezarezvani/claude-skills:engineering-team/skills/epic-design":
+  name: "Scroll animation site builder"
+  summary: "Describe the site. Get a scroll-driven page with layered depth, motion and smooth reveals, built in code."
+  task: build-websites
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It plans the motion first, then writes the page."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: web_app } ]
+  needs: run code and open a browser
+  author: "Abbas Mir"
+  author_url: ""
+"alirezarezvani/claude-skills:engineering-team/skills/gcp-cloud-architect":
+  name: "Google Cloud architect"
+  summary: "Describe your app. Get a Google Cloud design with services, cost estimate and deploy steps."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows set design patterns but weighs cost and scale trade-offs."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:engineering-team/skills/incident-commander":
+  name: "Outage incident leader"
+  summary: "Give it an outage. Get severity, a timeline, roles and a blame-free review once it is fixed."
+  task: ship-and-host
+  role: orchestrate
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs a fixed process but needs judgment on severity."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+"alirezarezvani/claude-skills:engineering-team/skills/incident-response":
+  name: "Security incident triager"
+  summary: "Give it a security alert. Get severity, who to tell, what to preserve and the next steps."
+  task: secure-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Wrong calls here cost a lot, so it reasons carefully."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: security_report } ]
+"alirezarezvani/claude-skills:engineering-team/skills/ms365-tenant-manager":
+  name: "Microsoft 365 admin helper"
+  summary: "Say what your company needs. Get Microsoft 365 setup scripts for users, mail, Teams and security."
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows admin steps but must match your setup."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and use your admin account
+"alirezarezvani/claude-skills:engineering-team/skills/named-persona-adversarial-review":
+  name: "Famous engineer code reviewer"
+  summary: "Give it code. Get blunt reviews in the voices of well-known engineers, each tied to their written views."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It argues from several views, which takes some thought."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering-team/skills/security-pen-testing":
+  name: "Vulnerability scan planner"
+  summary: "Point it at your own app. Get a check for common web flaws and a ranked list of fixes."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Finding real flaws needs careful reading of code and results."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering-team/skills/senior-architect":
+  name: "System design planner"
+  summary: "Describe what you are building. Get an architecture choice with diagrams and the trade-offs behind it."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Design choices have lasting effects, so it weighs them."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: plan } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering-team/skills/senior-backend":
+  name: "Backend builder"
+  summary: "Say what the service must do. Get API routes, database design and secure login written for you."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows known patterns but writes real code."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering-team/skills/senior-data-engineer":
+  name: "Data pipeline builder"
+  summary: "Describe your data sources and goal. Get a working pipeline with checks, scheduling and fixes for common faults."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows known pipeline patterns with checks."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering-team/skills/senior-frontend":
+  name: "React and Next.js builder"
+  summary: "Describe the screen. Get React and Next.js components with fast loading, Tailwind styling and bundle checks."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows known patterns and checks the result."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: web_app } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering-team/skills/senior-prompt-engineer":
+  name: "Prompt tester and tuner"
+  summary: "Give it a prompt and test cases. Get scores for each version and a better prompt backed by results."
+  task: set-up-ai
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs a test loop and compares results."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering-team/skills/senior-qa":
+  name: "React test writer"
+  summary: "Point it at your React app. Get unit, integration and end-to-end tests for the parts that lack them."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads components and writes matching tests."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: test_report } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering-team/skills/senior-secops":
+  name: "Secure development checker"
+  summary: "Give it your project. Get a scan for code flaws, weak packages and exposed secrets, with fixes ranked."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs set scans and ranks what they find."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering-team/skills/stripe-integration-expert":
+  name: "Stripe payments builder"
+  summary: "Say how you charge. Get Stripe checkout, subscriptions and webhooks built safely, with test steps."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "Money code needs care, but the patterns are well known."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering-team/skills/tech-stack-evaluator":
+  name: "Tech stack comparer"
+  summary: "Name the options. Get a side-by-side of cost, security, team fit and long-term support, with a pick."
+  task: plan-strategy
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs several factors against your needs."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+"alirezarezvani/claude-skills:engineering-team/snowflake-development/skills/snowflake-development":
+  name: "Snowflake SQL helper"
+  summary: "Describe your data job. Get Snowflake SQL, pipelines and AI function calls that follow its rules."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows platform rules and writes the SQL."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/agent-harness/skills/agent-harness":
+  name: "Goal-to-task loop runner"
+  summary: "Give it a goal and a folder of skills. Get a checked task plan that runs one task at a time."
+  task: set-up-ai
+  role: orchestrate
+  level: expert
+  thinking: high
+  thinking_why: "It plans, runs and verifies in a loop."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/agent-memory/skills/agent-memory":
+  name: "Project memory builder"
+  summary: "Give it a bloated project notes file. Get a lean version, plus a way for your AI to save lasting facts."
+  task: set-up-ai
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts what is worth keeping from what is noise."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read and write files in your project
+"alirezarezvani/claude-skills:engineering/agenthub/skills/agenthub":
+  name: "Competing agent racer"
+  summary: "Give it one task. Get several AI agents trying it in separate branches, scored, with the best one merged."
+  task: build-software
+  role: orchestrate
+  level: expert
+  thinking: high
+  thinking_why: "It coordinates many agents and judges their results."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code, use git and start helper agents
+"alirezarezvani/claude-skills:engineering/autoresearch-agent/skills/autoresearch-agent":
+  name: "Metric-driven file improver"
+  summary: "Pick a file and a score. Get an agent that edits, measures and keeps only changes that raise the score."
+  task: set-up-ai
+  role: orchestrate
+  level: expert
+  thinking: high
+  thinking_why: "It loops through experiments and judges each result."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code, use git and run commands on a timer
+"alirezarezvani/claude-skills:engineering/behuman/skills/behuman":
+  name: "Human-sounding reply writer"
+  summary: "Ask for it once. Get AI replies that sound like a person, with less listing and fewer stock phrases."
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It mostly changes tone and style."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: copy_draft } ]
+"alirezarezvani/claude-skills:engineering/book-to-skill/skills/book-to-skill":
+  name: "Book to skill converter"
+  summary: "Give it a book or a folder of documents. Get skill files that put its method to work."
+  task: make-skills
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It reads long sources and picks what becomes a skill."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: skill_files } ]
+  needs: read files and write files
+"alirezarezvani/claude-skills:engineering/boost-asio-pro":
+  name: "C++ network code helper"
+  summary: "Describe the networking job. Get safe Boost.Asio code for servers, clients, timers and secure connections."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Async C++ has subtle traps that need careful thought."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/caveman/skills/caveman":
+  name: "Short reply mode"
+  summary: "Switch it on. Get much shorter AI replies that drop filler but keep the facts, to save tokens."
+  task: set-up-ai
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It only changes how replies are phrased."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: copy_draft } ]
+"alirezarezvani/claude-skills:engineering/chaos-engineering/skills/chaos-engineering":
+  name: "Failure drill planner"
+  summary: "Name a system. Get safe experiments that break parts on purpose, with limits, checks and lessons."
+  task: test-and-fix-code
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Safe fault tests need careful scoping."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code and read your project files
+  author: "claude-code-skills collection"
+  author_url: "https://github.com/alirezarezvani/claude-skills"
+"alirezarezvani/claude-skills:engineering/claude-coach/skills/claude-coach":
+  name: "Claude power-user coach"
+  summary: "Tell it your work. Get lessons and exercises that make you faster with Claude, one step at a time."
+  task: set-up-ai
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It adapts lessons to what you do."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:engineering/code-tour/skills/code-tour":
+  name: "Codebase tour guide"
+  summary: "Name your audience. Get a step-by-step tour file that links real files and lines for a new teammate."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads the code and orders it into a story."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/collab-proof/skills/collab-proof":
+  name: "Session credit reviewer"
+  summary: "Finish a work session. Get a record of what you drove, what Claude did and where you steered."
+  task: think-and-decide
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It summarises one session against a simple rubric."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+"alirezarezvani/claude-skills:engineering/data-quality-auditor/skills/data-quality-auditor":
+  name: "Data quality auditor"
+  summary: "Give it a dataset. Get a report on gaps, duplicates, odd values and the rules that would catch them."
+  task: work-with-files
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It profiles data and judges what looks wrong."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your files
+"alirezarezvani/claude-skills:engineering/demo-video/skills/demo-video":
+  name: "Product demo video maker"
+  summary: "Give it screenshots or a page. Get a short demo video or GIF that walks through the product."
+  task: make-images
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans scenes and then renders them with code."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  needs: run code and save video files
+"alirezarezvani/claude-skills:engineering/docker-development/skills/docker-development":
+  name: "Docker setup builder"
+  summary: "Point it at your app. Get a lean, safe Dockerfile and compose file that run your project."
+  task: ship-and-host
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows known container patterns."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/feature-flags-architect/skills/feature-flags-architect":
+  name: "Feature flag planner"
+  summary: "Say what you ship. Get flags with rollout steps, kill switches and a plan to remove them later."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows a rollout pattern but fits your system."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code and read your project files
+  author: "claude-code-skills collection"
+  author_url: "https://github.com/alirezarezvani/claude-skills"
+"alirezarezvani/claude-skills:engineering/helm-chart-builder/skills/helm-chart-builder":
+  name: "Helm chart builder"
+  summary: "Describe your service. Get a Helm chart for Kubernetes with sensible values, checks and safe defaults."
+  task: ship-and-host
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: "It follows chart conventions with set checks."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/hivemind":
+  name: "Free worker delegator"
+  summary: "Hand off routine coding. Get free helper models doing scout, code and test jobs while Claude reviews."
+  task: build-software
+  role: orchestrate
+  level: expert
+  thinking: medium
+  thinking_why: "It splits work and reviews it, with set steps."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code, use git and the opencode tool
+"alirezarezvani/claude-skills:engineering/human-gate/skills/human-gate":
+  name: "Human review gate"
+  summary: "Finish AI work. Get a one-page review you sign off before anything counts as done, with proof it happened."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It builds the review page and tracks the sign-off."
+  inputs: [ { type: code_change, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/karpathy-coder/skills/karpathy-coder":
+  name: "Simple code coach"
+  summary: "Write code with it. Get assumptions stated, the smallest change made and only what you asked for."
+  task: build-software
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It keeps code changes small and checks each one."
+  inputs: [ { type: code_change, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+  author: "claude-code-skills collection"
+  author_url: "https://github.com/alirezarezvani/claude-skills"
+"alirezarezvani/claude-skills:engineering/kubernetes-operator/skills/kubernetes-operator":
+  name: "Kubernetes operator builder"
+  summary: "Describe the resource you manage. Get a custom operator with its CRD design and reconcile loop."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Operators have subtle correctness traps."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+  author: "claude-code-skills collection"
+  author_url: "https://github.com/alirezarezvani/claude-skills"
+"alirezarezvani/claude-skills:engineering/llm-cost-optimizer/skills/llm-cost-optimizer":
+  name: "AI cost cutter"
+  summary: "Describe your AI app. Get where the tokens go and changes that cut the bill without hurting quality."
+  task: build-software
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It analyses usage and weighs savings against quality."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/llm-wiki/skills/llm-wiki":
+  name: "Personal wiki keeper"
+  summary: "Feed it sources. Get an Obsidian wiki that updates pages, links ideas and flags where sources disagree."
+  task: organise-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads sources and updates linked notes."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read and write files in your vault
+  author: "claude-code-skills collection"
+  author_url: "https://github.com/alirezarezvani/claude-skills"
+"alirezarezvani/claude-skills:engineering/prompt-governance/skills/prompt-governance":
+  name: "Prompt change manager"
+  summary: "Keep prompts in production. Get versioning, tests of changes, a registry and safe rollbacks."
+  task: set-up-ai
+  role: orchestrate
+  level: advanced
+  thinking: medium
+  thinking_why: "It sets up process and tracks changes."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:engineering/security-guidance/skills/security-guidance":
+  name: "Insecure code catcher"
+  summary: "Turn it on. Get a warning when your AI writes risky code, like injection, XSS or unsafe commands."
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "It matches code against a fixed list of risky patterns."
+  inputs: [ { type: code_change, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run hooks in Claude Code
+"alirezarezvani/claude-skills:engineering/skills/agent-workflow-designer":
+  name: "AI agent workflow designer"
+  summary: "Describe the job. Get a multi-agent design with handoffs, failure handling and cost limits."
+  task: set-up-ai
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Design choices cascade, so it weighs them."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:engineering/skills/api-design-reviewer":
+  name: "API design reviewer"
+  summary: "Give it your API spec. Get a scorecard, flagged breaking changes and fixes for naming and errors."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It lints against rules and then judges design."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/skills/api-test-suite-builder":
+  name: "API test suite builder"
+  summary: "Point it at your endpoints. Get integration and contract tests for each route, with fixtures."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads routes and writes matching tests."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: test_report } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/skills/changelog-generator":
+  name: "Release notes writer"
+  summary: "Point it at your commits. Get tidy release notes and the right version bump from Conventional Commits."
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It reads commit messages and applies fixed rules."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read your git history
+"alirezarezvani/claude-skills:engineering/skills/ci-cd-pipeline-builder":
+  name: "Build pipeline writer"
+  summary: "Point it at your project. Get a CI/CD pipeline file for your stack with test and deploy stages."
+  task: ship-and-host
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It detects the stack and fills a known pattern."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/skills/codebase-onboarding":
+  name: "New teammate guide writer"
+  summary: "Point it at a codebase. Get an onboarding guide for new engineers, leads or contractors."
+  task: build-software
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It reads the code and explains it in order."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/skills/database-designer":
+  name: "Database schema planner"
+  summary: "Describe your data. Get a clean schema, migration plan and query advice, with SQL or NoSQL guidance."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "Schema choices last, so it weighs trade-offs."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:engineering/skills/dependency-auditor":
+  name: "Dependency risk auditor"
+  summary: "Point it at your project. Get risky packages, licence clashes and a safe order to upgrade."
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scans manifests and ranks what it finds."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/skills/env-secrets-manager":
+  name: "Secrets hygiene checker"
+  summary: "Point it at your project. Get leaked keys found, env files tidied and a plan to rotate secrets."
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scans for secrets and plans fixes."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/skills/focused-fix":
+  name: "Feature fixer"
+  summary: "Name the broken feature. Get it traced end to end, fixed and tested without touching the rest."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scopes the area, finds the cause and fixes it."
+  inputs: [ { type: codebase, required: true }, { type: question, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/skills/full-page-screenshot":
+  name: "Full-page screenshot taker"
+  summary: "Give it a page address. Get one long image of the whole page, even with scroll areas and lazy images."
+  task: build-websites
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It runs a fixed capture routine."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: image } ]
+  needs: run code and open a browser
+"alirezarezvani/claude-skills:engineering/skills/git-worktree-manager":
+  name: "Parallel branch manager"
+  summary: "Start several tasks at once. Get a separate git worktree for each, with its own ports and clean-up."
+  task: build-software
+  role: orchestrate
+  level: intermediate
+  thinking: low
+  thinking_why: "It runs fixed git steps."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run git commands
+"alirezarezvani/claude-skills:engineering/skills/interview-system-designer":
+  name: "Hiring interview designer"
+  summary: "Name the role. Get an interview plan with questions, scoring guides and a way to compare candidates."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It builds a structured process for the role."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:engineering/skills/mcp-server-builder":
+  name: "API to MCP server builder"
+  summary: "Give it an API spec. Get an MCP server in Python or TypeScript that lets your AI use that API."
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It maps an API to tools using a set method."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: tool_connection } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/skills/migration-architect":
+  name: "Zero-downtime migration planner"
+  summary: "Name what you are moving. Get a zero-downtime plan with checks and a rollback for each step."
+  task: ship-and-host
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Migrations fail in subtle ways, so it plans for rollback."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/skills/monorepo-navigator":
+  name: "Monorepo helper"
+  summary: "Point it at a monorepo. Get what a change affects and the tests to run, in Turborepo, Nx or pnpm."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It traces package links to scope work."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/skills/observability-designer":
+  name: "Monitoring planner"
+  summary: "Describe your service. Get metrics, logs, traces, alerts and service targets that tell you when it hurts."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It applies known frameworks to your service."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:engineering/skills/performance-profiler":
+  name: "Slow code finder"
+  summary: "Point it at slow code. Get CPU, memory and I/O hot spots found, with flame graphs and fixes."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs profilers and reads their output."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/skills/pr-review-expert":
+  name: "Pull request risk reviewer"
+  summary: "Give it a pull request. Get issues ranked by severity, security notes and clear review comments."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads the diff and judges risk."
+  inputs: [ { type: code_change, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  needs: read your git diff
+"alirezarezvani/claude-skills:engineering/skills/rag-architect":
+  name: "RAG pipeline designer"
+  summary: "Describe your documents. Get chunking, embedding and vector database choices, with ways to test results."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Many linked choices affect answer quality."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:engineering/skills/runbook-generator":
+  name: "Runbook writer"
+  summary: "Name a service. Get runbooks for deploy, incidents, maintenance and rollback, ready to edit."
+  task: ship-and-host
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It fills a fixed template from what you know."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+"alirezarezvani/claude-skills:engineering/skills/self-eval":
+  name: "AI work grader"
+  summary: "Finish a task. Get an honest score on quality and effort, with the weak spots named."
+  task: think-and-decide
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It applies a fixed two-axis rubric."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+"alirezarezvani/claude-skills:engineering/skills/ship-gate":
+  name: "Ship readiness gate"
+  summary: "Before you release. Get a go or no-go from set checks, with the blockers listed."
+  task: ship-and-host
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It runs a checklist and judges the results."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your project files
+  author: "Rajaraman Arumugam"
+  author_url: ""
+"alirezarezvani/claude-skills:engineering/skills/skill-security-auditor":
+  name: "Skill safety auditor"
+  summary: "Give it a skill before you install it. Get risky code and hidden commands flagged."
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scans for known dangerous patterns."
+  inputs: [ { type: skill_files, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run code and read files
+"alirezarezvani/claude-skills:engineering/skills/skill-tester":
+  name: "Skill quality tester"
+  summary: "Give it a skill. Get its structure checked, scripts run and a score with fixes."
+  task: make-skills
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It runs checks and scores results."
+  inputs: [ { type: skill_files, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read files
+"alirezarezvani/claude-skills:engineering/skills/slo-architect":
+  name: "Service target planner"
+  summary: "Describe your service. Get service level targets, error budgets and alert rules that fit."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It sets targets from known methods."
+  inputs: [ { type: codebase, required: false }, { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "claude-code-skills collection"
+  author_url: "https://github.com/alirezarezvani/claude-skills"
+"alirezarezvani/claude-skills:engineering/skills/sql-database-assistant":
+  name: "SQL query helper"
+  summary: "Describe the data you need. Get a tested SQL query, a faster version, or a migration."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It writes and checks SQL against your schema."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/skills/tech-debt-tracker":
+  name: "Tech debt tracker"
+  summary: "Point it at your code. Get debt found, scored by severity and ordered into a clean-up plan."
+  task: build-software
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scans, scores and prioritises."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/statistical-analyst/skills/statistical-analyst":
+  name: "Experiment result analyst"
+  summary: "Give it test numbers. Get the right test, sample size and whether the result is real, in plain words."
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks tests and reads numbers carefully."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+"alirezarezvani/claude-skills:engineering/terraform-patterns/skills/terraform-patterns":
+  name: "Terraform setup builder"
+  summary: "Describe your cloud. Get Terraform modules with safe state, security checks and clean structure."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows known infrastructure patterns."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:engineering/zero-hallucination-coder/skills/zero-hallucination-coder":
+  name: "Verified code writer"
+  summary: "Describe the change. Get code grounded in your real files, with each step checked before it counts."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It maps, plans and verifies before and after coding."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:finance/business-investment-advisor/skills/business-investment-advisor":
+  name: "Business investment analyst"
+  summary: "Describe a purchase. Get payback, return and risk worked out, so you can decide whether to invest."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It runs the numbers and weighs risk."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+"alirezarezvani/claude-skills:finance/skills/financial-analyst":
+  name: "Financial statement analyst"
+  summary: "Give it your numbers. Get ratio analysis, a valuation, budget variances and a rolling forecast."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies standard methods to your data."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+"alirezarezvani/claude-skills:finance/skills/saas-metrics-coach":
+  name: "SaaS metrics coach"
+  summary: "Share your revenue and customers. Get your ARR, churn, CAC and LTV read, with what to fix first."
+  task: money-and-investing
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It computes the metrics and interprets them."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  author: "Abbas Mir"
+  author_url: ""
+"alirezarezvani/claude-skills:finance/skills/stock-analysis":
+  name: "Company stock analyst"
+  summary: "Name a listed company. Get a sector-relative review of its numbers, strengths and risks."
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Judging a company needs many factors weighed."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: search the web for company data
+"alirezarezvani/claude-skills:loop-library":
+  name: "Repeatable AI loop designer"
+  summary: "Describe a recurring job. Get a loop with triggers, checks, stop rules and handoffs."
+  task: set-up-ai
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It designs a process from known loop patterns."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:markdown-html/skills/design-system":
+  name: "Brand style setup wizard"
+  summary: "Answer ten questions once. Get your colours, fonts and style saved for every page that follows."
+  task: brand-file
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It collects a few choices into a style file."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: design_direction } ]
+"alirezarezvani/claude-skills:markdown-html/skills/md-document":
+  name: "Markdown to web page maker"
+  summary: "Give it a long markdown file. Get one HTML page with a contents bar, search and light interactivity."
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It converts text into a page with set parts."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: web_app } ]
+  needs: run code and open a browser
+"alirezarezvani/claude-skills:markdown-html/skills/md-review":
+  name: "Code review page maker"
+  summary: "Give it a markdown code review. Get one HTML page with severity tags and diffs that are easy to read."
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It converts text into a page with set parts."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: web_app } ]
+  needs: run code and open a browser
+"alirezarezvani/claude-skills:engineering-team/skills/engineering-skills":
+  skip: "Index of the bundle, only points to other skills"
+"alirezarezvani/claude-skills:engineering/skills/engineering-advanced-skills":
+  skip: "Index of the bundle, only points to other skills"
+"alirezarezvani/claude-skills:finance/skills/finance-skills":
+  skip: "Router for the repo finance skills, no content of its own"
+"alirezarezvani/claude-skills:engineering-team/skills/red-team":
+  skip: "Offensive attack simulation, not safe to list for general use"
+"alirezarezvani/claude-skills:engineering-team/skills/threat-detection":
+  skip: "Security operations threat hunting, too narrow for most people"
+"alirezarezvani/claude-skills:engineering-team/skills/senior-security":
+  skip: "Threat modelling, near copy of our Threat model writer"
+"alirezarezvani/claude-skills:engineering-team/skills/senior-computer-vision":
+  skip: "Narrow research topic, thin for general use"
+"alirezarezvani/claude-skills:engineering-team/skills/senior-data-scientist":
+  skip: "Near copy of its Experiment result analyst"
+"alirezarezvani/claude-skills:engineering-team/skills/senior-devops":
+  skip: "Near copy of its CI/CD, Docker and Terraform skills"
+"alirezarezvani/claude-skills:engineering-team/skills/senior-fullstack":
+  skip: "Near copy of its frontend and backend skills"
+"alirezarezvani/claude-skills:engineering-team/skills/senior-ml-engineer":
+  skip: "Too narrow, overlaps its other data and AI skills"
+"alirezarezvani/claude-skills:engineering-team/skills/tdd-guide":
+  skip: "Near copy of our Test-first coach"
+"alirezarezvani/claude-skills:engineering/agenthub/skills/board":
+  skip: "Sub-command that only works inside AgentHub"
+"alirezarezvani/claude-skills:engineering/agenthub/skills/eval":
+  skip: "Sub-command that only works inside AgentHub"
+"alirezarezvani/claude-skills:engineering/agenthub/skills/hub-init":
+  skip: "Sub-command that only works inside AgentHub"
+"alirezarezvani/claude-skills:engineering/agenthub/skills/hub-status":
+  skip: "Sub-command that only works inside AgentHub"
+"alirezarezvani/claude-skills:engineering/agenthub/skills/merge":
+  skip: "Sub-command that only works inside AgentHub"
+"alirezarezvani/claude-skills:engineering/agenthub/skills/run":
+  skip: "Sub-command that only works inside AgentHub"
+"alirezarezvani/claude-skills:engineering/agenthub/skills/spawn":
+  skip: "Sub-command that only works inside AgentHub"
+"alirezarezvani/claude-skills:engineering/autoresearch-agent/skills/ar-resume":
+  skip: "Sub-command that only works inside autoresearch"
+"alirezarezvani/claude-skills:engineering/autoresearch-agent/skills/ar-status":
+  skip: "Sub-command that only works inside autoresearch"
+"alirezarezvani/claude-skills:engineering/autoresearch-agent/skills/loop":
+  skip: "Sub-command that only works inside autoresearch"
+"alirezarezvani/claude-skills:engineering/autoresearch-agent/skills/run":
+  skip: "Same skill as the AgentHub run command, and a sub-command"
+"alirezarezvani/claude-skills:engineering/autoresearch-agent/skills/setup":
+  skip: "Sub-command that only works inside autoresearch"
+"alirezarezvani/claude-skills:engineering/deep-learning-book/skills/deep-learning-book":
+  skip: "Study notes tied to one textbook, not a reusable skill"
+"alirezarezvani/claude-skills:engineering/spinning-up-deep-rl/skills/spinning-up-deep-rl":
+  skip: "Study notes tied to one course, narrow topic"
+"alirezarezvani/claude-skills:engineering/grill-me/skills/grill-me":
+  skip: "Copy of a mattpocock/skills skill, taken from the source"
+"alirezarezvani/claude-skills:engineering/grill-with-docs/skills/grill-with-docs":
+  skip: "Copy of a mattpocock/skills skill, taken from the source"
+"alirezarezvani/claude-skills:engineering/handoff/skills/handoff":
+  skip: "Copy of a mattpocock/skills skill, taken from the source"
+"alirezarezvani/claude-skills:engineering/write-a-skill/skills/write-a-skill":
+  skip: "Copy of a mattpocock/skills skill, taken from the source"
+"alirezarezvani/claude-skills:engineering/minimalist":
+  skip: "Thin rule list, covered by Simple code coach"
+"alirezarezvani/claude-skills:engineering/strict-api":
+  skip: "Thin, covered by Verified code writer"
+"alirezarezvani/claude-skills:engineering/memory-engineering/skills/memory-engineering":
+  skip: "Overlaps Project memory builder"
+"alirezarezvani/claude-skills:engineering/skill-doctor/skills/skill-doctor":
+  skip: "Reads Claude Code's own conversation history, works in one product only"
+"alirezarezvani/claude-skills:engineering/skillopt-sleep/skills/skillopt-sleep":
+  skip: "Works on Claude Code internals and past sessions only"
+"alirezarezvani/claude-skills:engineering/skills/agent-designer":
+  skip: "Near copy of AI agent workflow designer"
+"alirezarezvani/claude-skills:engineering/skills/browser-automation":
+  skip: Logs in to accounts, saves cookies and uses anti-detection tricks to avoid bot checks, which breaks our login and bot-check rules.
+"alirezarezvani/claude-skills:engineering/universal-scraping-architect/skills/universal-scraping-architect":
+  name: Data extraction pipeline builder
+  summary: Give it a site and the data you want. Get a checked script and a clean data file. Collects data from websites.
+  task: build-software
+  role: source
+  level: advanced
+  thinking: high
+  thinking_why: It must pick a method, handle paging and check the results.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: code_change }, { type: spreadsheet } ]
+  needs: run code and use your Firecrawl API key
+  scrapes: true
+"alirezarezvani/claude-skills:engineering/skills/chaos-engineering":
+  skip: "Same skill as engineering/chaos-engineering/skills/chaos-engineering"
+"alirezarezvani/claude-skills:engineering/skills/feature-flags-architect":
+  skip: "Same skill as engineering/feature-flags-architect/skills/feature-flags-architect"
+"alirezarezvani/claude-skills:engineering/skills/kubernetes-operator":
+  skip: "Same skill as engineering/kubernetes-operator/skills/kubernetes-operator"
+"alirezarezvani/claude-skills:engineering/slo-architect/skills/slo-architect":
+  skip: "Same skill as engineering/skills/slo-architect"
+"alirezarezvani/claude-skills:engineering/skills/database-schema-designer":
+  skip: "Near copy of Database schema planner"
+"alirezarezvani/claude-skills:engineering/skills/secrets-vault-manager":
+  skip: "Overlaps Secrets hygiene checker, vendor-heavy"
+"alirezarezvani/claude-skills:engineering/skills/spec-driven-workflow":
+  skip: "Near copy of our Spec writer and Spec builder"
+"alirezarezvani/claude-skills:engineering/skills/tc-tracker":
+  skip: "Tracks changes in its own record format, narrow"
+"alirezarezvani/claude-skills:engineering/workflow-builder/skills/workflow-builder":
+  skip: "Works only with Claude Code Workflow tool"
+"alirezarezvani/claude-skills:markdown-html/skills/markdown-html-orchestrator":
+  skip: "Only routes to the other markdown-html skills"

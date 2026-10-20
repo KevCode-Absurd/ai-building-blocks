@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows set patterns for modules and tests.
+new_slug: terraform-best-practice-guide
+name: Terraform best-practice guide
+summary: Describe the cloud setup you need. Get Terraform or OpenTofu code with tested modules and CI steps.
+job: ship-and-host
+headline: Terraform best-practice guide
+subhead: Describe the cloud setup you need. Get Terraform or OpenTofu code with tested modules and CI steps.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

@@ -1,0 +1,32 @@
+slug: browser-test-setup-builder
+name: Browser test setup builder
+summary: Point it at your project. Get Playwright installed with a config, a sample test and a CI file.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/playwright-pro/skills/pw-init
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/playwright-pro/skills/pw-init
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: pw-init
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pw-init skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/playwright-pro/skills/pw-init
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

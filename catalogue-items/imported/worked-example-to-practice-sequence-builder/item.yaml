@@ -1,0 +1,32 @@
+slug: worked-example-to-practice-sequence-builder
+name: Worked example to practice sequence builder
+summary: Give it a procedure. Get a sequence from fully worked examples to solving it alone.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/memory-learning-science/worked-example-fading-designer
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/memory-learning-science/worked-example-fading-designer
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: worked-example-fading-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: worked-example-fading-designer skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/memory-learning-science/worked-example-fading-designer
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

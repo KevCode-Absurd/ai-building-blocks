@@ -1,0 +1,38 @@
+slug: ga4-raw-data-analyst
+name: GA4 raw data analyst
+summary: Point it at your GA4 export in BigQuery. Get sessions, channels and sign-ups, plus why they differ from the GA4 screen.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: expert
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: performance_sheet
+    required: true
+uses: []
+origin: imported
+source:
+  by: wizard7558
+  repo: wizard7558/attribution-skills
+  path: skills/ga4-bigquery-export
+  url: https://github.com/wizard7558/attribution-skills/tree/main/skills/ga4-bigquery-export
+  licence: MIT
+  licence_file: LICENSE
+  commit: bed5a8f
+  original_name: ga4-bigquery-export
+  author: Riley Sorenson
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ga4-bigquery-export skill
+    by: wizard7558
+    url: https://github.com/wizard7558/attribution-skills/tree/main/skills/ga4-bigquery-export
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Riley Sorenson
+    url: https://github.com/wizard7558
+    used: Wrote the skill; wizard7558 shared it in their collection.

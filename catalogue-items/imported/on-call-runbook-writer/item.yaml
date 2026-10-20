@@ -1,0 +1,37 @@
+slug: on-call-runbook-writer
+name: On-call runbook writer
+summary: Describe a service or process. Get a step-by-step runbook that anyone on call can follow under pressure.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/runbook-creation
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/runbook-creation
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: runbook-creation
+  author: BagelHole
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: runbook-creation skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/runbook-creation
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: BagelHole
+    url: https://github.com/BagelHole
+    used: Wrote the skill; sickn33 shared it in their collection.

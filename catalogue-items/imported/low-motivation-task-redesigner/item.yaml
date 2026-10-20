@@ -1,0 +1,32 @@
+slug: low-motivation-task-redesigner
+name: Low-motivation task redesigner
+summary: Give it a task students resist. Get why it drains motivation and a redesign built on choice, success and connection.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: motivation-diagnostic-task-redesign
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: motivation-diagnostic-task-redesign skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

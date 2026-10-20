@@ -1,0 +1,33 @@
+slug: on-page-seo-tuner
+name: On-page SEO tuner
+summary: Give it a page. Get fixes for titles, descriptions, headings, content, internal links, images, URLs and schema.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: audit_report
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/seo-onpage
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/seo-onpage
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: seo-onpage
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: seo-onpage skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/seo-onpage
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

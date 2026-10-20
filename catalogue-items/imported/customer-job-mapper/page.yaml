@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It follows set steps but needs judgement about people.
+new_slug: customer-job-mapper
+name: Customer job mapper
+summary: Describe your product and buyer. Get the functional, emotional and social jobs they hire it for.
+job: understand-customers
+headline: Customer job mapper
+subhead: Describe your product and buyer. Get the functional, emotional and social jobs they hire it for.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

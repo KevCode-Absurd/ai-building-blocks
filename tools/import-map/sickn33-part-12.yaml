@@ -1,0 +1,739 @@
+# Our names and summaries for sickn33/agentic-awesome-skills, slice 12 of 14.
+
+"sickn33/agentic-awesome-skills:skills/screenstudio-alt":
+  skip: "Logs keystrokes and cursor input to polish recordings, which is too sensitive, and very narrow."
+"sickn33/agentic-awesome-skills:skills/scroll-experience":
+  skip: "Thin skill with little guidance."
+"sickn33/agentic-awesome-skills:skills/sdk-dx":
+  skip: "Thin skill with little guidance."
+"sickn33/agentic-awesome-skills:skills/seaborn":
+  skip: "Mostly points to a reference file; plain library help the AI already knows."
+"sickn33/agentic-awesome-skills:skills/search-specialist":
+  skip: "Stub with generic advice."
+"sickn33/agentic-awesome-skills:skills/secrets-management":
+  name: "Secrets setup helper"
+  summary: "Name your pipeline and secret store. Get a safe plan for storing, reading and rotating secrets."
+  task: secure-code
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows a set procedure but must fit your setup."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read your project files
+"sickn33/agentic-awesome-skills:skills/security-and-hardening":
+  skip: "Copy of addyosmani/agent-skills, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/security-arsenal":
+  skip: "Attack-focused pentest guide with exploit steps; not safe to list."
+"sickn33/agentic-awesome-skills:skills/security-audit":
+  skip: "Thin, generic or near-copy of another security skill here."
+"sickn33/agentic-awesome-skills:skills/security-auditor":
+  skip: "Thin, generic or near-copy of another security skill here."
+"sickn33/agentic-awesome-skills:skills/security-automation":
+  skip: "Generic infrastructure notes; thin or near-copies of each other."
+"sickn33/agentic-awesome-skills:skills/security-bluebook-builder":
+  skip: "Thin, generic or near-copy of another security skill here."
+"sickn33/agentic-awesome-skills:skills/security-compliance-compliance-check":
+  skip: "Thin, generic or near-copy of another security skill here."
+"sickn33/agentic-awesome-skills:skills/security-requirement-extraction":
+  skip: "Thin, generic or near-copy of another security skill here."
+"sickn33/agentic-awesome-skills:skills/security-scanning-security-dependencies":
+  skip: "Thin, generic or near-copy of another security skill here."
+"sickn33/agentic-awesome-skills:skills/security-scanning-security-hardening":
+  skip: "Thin, generic or near-copy of another security skill here."
+"sickn33/agentic-awesome-skills:skills/security-scanning-security-sast":
+  skip: "Thin, generic or near-copy of another security skill here."
+"sickn33/agentic-awesome-skills:skills/security/aws-compliance-checker":
+  skip: "Thin, generic or near-copy of another security skill here."
+"sickn33/agentic-awesome-skills:skills/security/aws-iam-best-practices":
+  name: "AWS access policy reviewer"
+  summary: "Give it your IAM policies. Get risky permissions found and tighter versions that grant only what is needed."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It reviews rules against least access."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: read your project files
+"sickn33/agentic-awesome-skills:skills/security/aws-secrets-rotation":
+  skip: "Thin, generic or near-copy of another security skill here."
+"sickn33/agentic-awesome-skills:skills/security/aws-security-audit":
+  name: "AWS security checker"
+  summary: "Point it at your AWS account. Get a ranked list of security gaps with fixes."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs checks, then ranks the findings."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run code and read your project files
+"sickn33/agentic-awesome-skills:skills/seek-and-analyze-video":
+  skip: "Sells or needs a paid outside service."
+"sickn33/agentic-awesome-skills:skills/segment-automation":
+  skip: "Composio connector skill; covered by the Composio import."
+"sickn33/agentic-awesome-skills:skills/segment-cdp":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/selenium-skill":
+  skip: "Mainly steers you to a paid vendor cloud."
+"sickn33/agentic-awesome-skills:skills/semantic-versioning":
+  name: "Version and changelog automator"
+  summary: "Point it at your repo. Get release numbers and a changelog worked out from your commits."
+  task: ship-and-host
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows fixed versioning rules."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+  author: "BagelHole"
+  author_url: "https://github.com/BagelHole/DevOps-Security-Agent-Skills"
+"sickn33/agentic-awesome-skills:skills/semgrep-rule-creator":
+  name: "Code scan rule writer"
+  summary: "Describe a bug pattern. Get a tested Semgrep rule that finds it across your code."
+  task: secure-code
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Good rules need careful pattern design and testing."
+  inputs: [ { type: codebase, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"sickn33/agentic-awesome-skills:skills/semgrep-rule-variant-creator":
+  skip: "Near-copy of Code scan rule writer."
+"sickn33/agentic-awesome-skills:skills/sendblue/sendblue-api":
+  skip: "Sells or needs a paid outside service."
+"sickn33/agentic-awesome-skills:skills/sendblue/sendblue-cli":
+  skip: "Sells or needs a paid outside service."
+"sickn33/agentic-awesome-skills:skills/sendblue/sendblue-notify":
+  skip: "Sells or needs a paid outside service."
+"sickn33/agentic-awesome-skills:skills/sendblue/textme":
+  skip: "Sells or needs a paid outside service."
+"sickn33/agentic-awesome-skills:skills/sendgrid-automation":
+  skip: "Composio connector skill; covered by the Composio import."
+"sickn33/agentic-awesome-skills:skills/senior-architect":
+  skip: "Generic or thin, or needs an outside tool."
+"sickn33/agentic-awesome-skills:skills/senior-frontend":
+  skip: "Generic or thin, or needs an outside tool."
+"sickn33/agentic-awesome-skills:skills/senior-fullstack":
+  skip: "Generic or thin, or needs an outside tool."
+"sickn33/agentic-awesome-skills:skills/sentry-automation":
+  skip: "Composio connector skill; covered by the Composio import."
+"sickn33/agentic-awesome-skills:skills/seo":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-aeo-blog-writer":
+  name: "Search blog post writer"
+  summary: "Give a topic and target keyword. Get a long post with an answer first, FAQs and internal links."
+  task: get-found-in-search
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It follows a set structure but needs sound writing."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+"sickn33/agentic-awesome-skills:skills/seo-aeo-content-cluster":
+  name: "Topic cluster mapper"
+  summary: "Name your business goal. Get a main page and supporting articles, ranked by what to write first."
+  task: get-found-in-search
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans how many pages fit together."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/seo-aeo-content-quality-auditor":
+  skip: "Overlaps SEO auditor and our landing page writers."
+"sickn33/agentic-awesome-skills:skills/seo-aeo-internal-linking":
+  name: "Internal link mapper"
+  summary: "Give it your pages. Get which pages should link to which, with anchor text and orphan pages to fix."
+  task: get-found-in-search
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares many pages to find links."
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/seo-aeo-keyword-research":
+  name: "Keyword research planner"
+  summary: "Name your site and topic. Get a ranked keyword list, including question searches, grouped by what people want."
+  task: get-found-in-search
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It gathers searches and then ranks them."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: shortlist } ]
+"sickn33/agentic-awesome-skills:skills/seo-aeo-landing-page-writer":
+  skip: "Overlaps SEO auditor and our landing page writers."
+"sickn33/agentic-awesome-skills:skills/seo-aeo-meta-description-generator":
+  name: "Title and meta tag writer"
+  summary: "Give it a page. Get title tags, meta descriptions and social share tags that fit the page's aim."
+  task: get-found-in-search
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It fills short fields within set length limits."
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: copy_draft } ]
+"sickn33/agentic-awesome-skills:skills/seo-aeo-orchestrator":
+  skip: "Overlaps SEO auditor and our landing page writers."
+"sickn33/agentic-awesome-skills:skills/seo-aeo-schema-generator":
+  name: "Schema markup writer"
+  summary: "Name the page type. Get checked JSON-LD markup ready to paste for search results."
+  task: get-found-in-search
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "The markup follows fixed formats."
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: code_change } ]
+"sickn33/agentic-awesome-skills:skills/seo-audit":
+  skip: "Copy of a coreyhaines31/marketingskills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/seo-authority-builder":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-cannibalization-detector":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-competitor-pages":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-content":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-content-auditor":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-content-planner":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-content-refresher":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-content-writer":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-dataforseo":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-directory-backlinks":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-drift":
+  name: "SEO change tracker"
+  summary: "Save your site's SEO state today. Get a warning when rankings, tags or pages slip later."
+  task: get-found-in-search
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It compares two snapshots and flags differences."
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: browse the web
+  author: "nowork-studio"
+  author_url: "https://github.com/nowork-studio/NotFair"
+"sickn33/agentic-awesome-skills:skills/seo-forensic-incident-response":
+  name: "Traffic drop investigator"
+  summary: "Describe a sudden search traffic drop. Get the likely causes ranked and a fix plan."
+  task: get-found-in-search
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It must weigh many possible causes with thin evidence."
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+"sickn33/agentic-awesome-skills:skills/seo-fundamentals":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-geo":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-hreflang":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-image-gen":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-images":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-keyword-strategist":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-meta-optimizer":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-page":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-plan":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-programmatic":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-schema":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-sitemap":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-snippet-hunter":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-structure-architect":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/seo-technical":
+  skip: "Copy of AgriciDaniel/claude-seo, a stub, or near-copy of another SEO skill here."
+"sickn33/agentic-awesome-skills:skills/sequence-psychologist":
+  name: "Email sequence arc planner"
+  summary: "Name the goal and buyer. Get an email series where each message builds trust and sets up the next."
+  task: write-ad-copy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans the order of ideas across several messages."
+  inputs: [ { type: persona, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: email_flow } ]
+"sickn33/agentic-awesome-skills:skills/serply-search-mcp":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/server-management":
+  skip: "Generic infrastructure notes; thin or near-copies of each other."
+"sickn33/agentic-awesome-skills:skills/service-mesh":
+  skip: "Generic infrastructure notes; thin or near-copies of each other."
+"sickn33/agentic-awesome-skills:skills/service-mesh-expert":
+  skip: "Generic infrastructure notes; thin or near-copies of each other."
+"sickn33/agentic-awesome-skills:skills/service-mesh-observability":
+  skip: "Generic infrastructure notes; thin or near-copies of each other."
+"sickn33/agentic-awesome-skills:skills/session-handoff":
+  skip: "We already have Handoff note writer."
+"sickn33/agentic-awesome-skills:skills/setup-help":
+  name: "Setup walkthrough guide"
+  summary: "Name what you want to set up. Get one small step at a time, with the steps left shown."
+  task: organise-work
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: "It gives one plain step at a time."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "davidondrej"
+  author_url: "https://github.com/davidondrej/skills"
+"sickn33/agentic-awesome-skills:skills/setup-matt-pocock-skills":
+  skip: "Sets up mattpocock/skills, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/sexual-health-analyzer":
+  skip: "Personal health data analyser; not safe to list."
+"sickn33/agentic-awesome-skills:skills/shadcn":
+  name: "UI component adder"
+  summary: "Say which components you need. Get them added to your project with the right setup and usage."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It runs a set command line tool."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+  author: "shadcn"
+  author_url: "https://github.com/shadcn-ui/ui"
+"sickn33/agentic-awesome-skills:skills/shader-programming-glsl":
+  name: "GLSL shader writer"
+  summary: "Describe the visual effect. Get an efficient vertex and fragment shader for the web or a game."
+  task: build-websites
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It needs math care and speed checks."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+"sickn33/agentic-awesome-skills:skills/shark":
+  name: "Investor panel pitch tester"
+  summary: "Pitch a business idea. Get a panel of tough investors who grill it and vote in or out."
+  task: test-an-idea
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It runs several roles and weighs their views."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  needs: run several AI helpers at once
+  author: "Alex Chen"
+  author_url: "https://github.com/alexyc9381/shark-skill"
+"sickn33/agentic-awesome-skills:skills/sharp-coder":
+  skip: "Generic or thin, or needs an outside tool."
+"sickn33/agentic-awesome-skills:skills/sharp-edges":
+  name: "Risky design reviewer"
+  summary: "Give it an API or config design. Get the easy-to-misuse parts that lead to security mistakes."
+  task: secure-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "It has to spot subtle ways people will misuse a design."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: read your project files
+"sickn33/agentic-awesome-skills:skills/shellcheck-configuration":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/shipping-and-launch":
+  skip: "Copy of addyosmani/agent-skills, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/shipvela-publish":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/shodan-reconnaissance":
+  skip: "Attack-focused pentest guide with exploit steps; not safe to list."
+"sickn33/agentic-awesome-skills:skills/shopify-apps":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/shopify-automation":
+  skip: "Composio connector skill; covered by the Composio import."
+"sickn33/agentic-awesome-skills:skills/shopify-development":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/shopify-review-triage":
+  name: "Low-star review triager"
+  summary: "Paste 1 to 3 star app reviews. Get a ranked brief of risks, repeat problems and what to fix first."
+  task: understand-customers
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts many reviews and ranks them by harm."
+  inputs: [ { type: voc_reviews, required: true } ]
+  outputs: [ { type: audit_report } ]
+  author: "alfredtech2026"
+  author_url: "https://github.com/alfredtech2026/shopify-app-review-brief"
+"sickn33/agentic-awesome-skills:skills/short":
+  skip: "Too thin: one line telling the AI to rewrite shorter."
+"sickn33/agentic-awesome-skills:skills/signup-flow-cro":
+  skip: "Copy of a coreyhaines31/marketingskills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/similarity-search-patterns":
+  skip: "Generic or thin, or needs an outside tool."
+"sickn33/agentic-awesome-skills:skills/simplify-code":
+  skip: "We already have Code simplifier."
+"sickn33/agentic-awesome-skills:skills/since-cutoff":
+  name: "Library change finder"
+  summary: "Point it at a Python project. Get which library changes came after the AI's training and where your code uses them."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs a tool and then reads the results."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+  author: "Mohammad Hijjawi"
+  author_url: "https://github.com/MohammadHijjawi97/since-cutoff"
+"sickn33/agentic-awesome-skills:skills/site-architecture":
+  skip: "Copy of a coreyhaines31/marketingskills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/skeleton-first":
+  name: "Small-sample pipeline builder"
+  summary: "Describe a data or AI workflow. Get it working end to end on a tiny sample, then scaled with cost checks."
+  task: build-software
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It plans cost gates and tests each step before scaling."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: plan }, { type: code_change } ]
+  needs: run code and read your project files
+  author: "Dan He"
+  author_url: "https://github.com/sickn33/agentic-awesome-skills"
+"sickn33/agentic-awesome-skills:skills/skill-audit":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/skill-check":
+  name: "Skill file validator"
+  summary: "Give it a SKILL.md. Get a list of structure, wording and naming problems to fix before you share it."
+  task: make-skills
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "It checks a file against a fixed rule list."
+  inputs: [ { type: skill_files, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  needs: read your skill files
+  author: "olgasafonova"
+  author_url: "https://github.com/olgasafonova/SkillCheck-Free"
+"sickn33/agentic-awesome-skills:skills/skill-creator":
+  skip: "Copy of an Anthropic skill; we have Skill writer."
+"sickn33/agentic-awesome-skills:skills/skill-creator-ms":
+  skip: "Azure only; we have Skill writer."
+"sickn33/agentic-awesome-skills:skills/skill-developer":
+  skip: "We already have Skill writer and Skill builder."
+"sickn33/agentic-awesome-skills:skills/skill-gap-analysis":
+  skip: "Register template for HR; near-copy of other register skills."
+"sickn33/agentic-awesome-skills:skills/skill-improver":
+  skip: "Needs an agent that exists only in one product."
+"sickn33/agentic-awesome-skills:skills/skill-installer":
+  skip: "Written for the repo's own skill system, in Portuguese."
+"sickn33/agentic-awesome-skills:skills/skill-issue":
+  name: "Skill trigger auditor"
+  summary: "Give it your skills. Get a grade for each on when it fires, and which skills block each other."
+  task: make-skills
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must judge how people phrase requests."
+  inputs: [ { type: skill_files, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  needs: read your skill files
+  author: "mishanefedov"
+  author_url: "https://github.com/mishanefedov/skill-issue"
+"sickn33/agentic-awesome-skills:skills/skill-optimizer":
+  skip: "Near-copy of Skill trigger auditor."
+"sickn33/agentic-awesome-skills:skills/skill-porter":
+  skip: "Only converts skills for Google Antigravity."
+"sickn33/agentic-awesome-skills:skills/skill-rails-upgrade":
+  skip: "Narrow Rails upgrade checker."
+"sickn33/agentic-awesome-skills:skills/skill-router":
+  skip: "Only routes to the repo's own skills."
+"sickn33/agentic-awesome-skills:skills/skill-scanner":
+  skip: "Near-copy of Skill safety reviewer and needs a helper script."
+"sickn33/agentic-awesome-skills:skills/skill-security-audit":
+  name: "Skill safety reviewer"
+  summary: "Point it at a skill, MCP server or add-on. Get a read-only safety review before you install it."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It must trace code and spot hidden risks."
+  inputs: [ { type: skill_files, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: read files without running them
+  author: "sandbaseai"
+  author_url: "https://github.com/sandbaseai/awesome-workbuddy"
+"sickn33/agentic-awesome-skills:skills/skill-seekers":
+  skip: "Only points to an outside tool."
+"sickn33/agentic-awesome-skills:skills/skill-sentinel":
+  skip: "Audits the repo's own skill system, in Portuguese."
+"sickn33/agentic-awesome-skills:skills/skill-suggester":
+  skip: "Works only with opencode prompt history."
+"sickn33/agentic-awesome-skills:skills/skill-writer":
+  skip: "We already have Skill writer."
+"sickn33/agentic-awesome-skills:skills/skin-health-analyzer":
+  skip: "Personal health data analyser; not safe to list."
+"sickn33/agentic-awesome-skills:skills/skyvern-browser-automation":
+  skip: "Logs in with stored credentials and drives sites; AGPL licence."
+"sickn33/agentic-awesome-skills:skills/slack-automation":
+  skip: "Composio connector skill; covered by the Composio import."
+"sickn33/agentic-awesome-skills:skills/slack-bot-builder":
+  name: "Slack bot builder"
+  summary: "Say what the bot should do. Get a Slack app with commands, events and rich messages."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows the Bolt setup but needs design choices."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"sickn33/agentic-awesome-skills:skills/slack-gif-creator":
+  skip: "Copy of an anthropics/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/sleep-analyzer":
+  skip: "Personal health data analyser; not safe to list."
+"sickn33/agentic-awesome-skills:skills/slideops":
+  name: "Repo slide deck builder"
+  summary: "Point it at a repo. Get a slide deck with cited facts that warns you when the code changes."
+  task: work-with-files
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It builds slides and checks every cited line."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: slide_deck } ]
+  needs: run code and read your project files
+  author: "glukicov"
+  author_url: "https://github.com/glukicov/slideops"
+"sickn33/agentic-awesome-skills:skills/slo-implementation":
+  name: "Reliability target setter"
+  summary: "Name your service. Get service level targets, error budgets and alerts to track them."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It sets numbers from how users feel outages."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/smart-contract-formal-verification":
+  skip: "Narrow blockchain contract skill."
+"sickn33/agentic-awesome-skills:skills/smart-contract-upgrade-governance":
+  skip: "Narrow blockchain contract skill."
+"sickn33/agentic-awesome-skills:skills/smart-git-automation":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/smartui-skill":
+  skip: "Mainly steers you to a paid vendor cloud."
+"sickn33/agentic-awesome-skills:skills/smtp-penetration-testing":
+  skip: "Attack-focused pentest guide with exploit steps; not safe to list."
+"sickn33/agentic-awesome-skills:skills/snowflake-development":
+  name: "Snowflake data builder"
+  summary: "Describe your data job. Get Snowflake SQL, pipelines and tuning that follow good practice."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It applies platform rules to your task."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"sickn33/agentic-awesome-skills:skills/soc2-compliance":
+  skip: "Same skill is in alirezarezvani/claude-skills."
+"sickn33/agentic-awesome-skills:skills/social-content":
+  skip: "Thin; copy-style marketingskills content."
+"sickn33/agentic-awesome-skills:skills/social-media-setup":
+  skip: "Register template; near-copy of other register skills here."
+"sickn33/agentic-awesome-skills:skills/social-metadata-hardening":
+  name: "Link preview fixer"
+  summary: "Share a link that looks wrong. Get the tags and image fixes so it shows a rich card everywhere."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "The fixes follow known tag rules."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read your project files
+  author: "Whoisabhishekadhikari"
+  author_url: "https://github.com/WHOISABHISHEKADHIKARI"
+"sickn33/agentic-awesome-skills:skills/social-orchestrator":
+  skip: "Portuguese or tied to one posting service."
+"sickn33/agentic-awesome-skills:skills/social-post-writer-seo":
+  name: "Social post writer"
+  summary: "Give a topic. Get clear posts for Instagram, LinkedIn and more that also help search."
+  task: get-found-in-search
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It writes short posts to a set format."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: "WHOISABHISHEKADHIKARI"
+  author_url: "https://github.com/WHOISABHISHEKADHIKARI"
+"sickn33/agentic-awesome-skills:skills/social-proof-architect":
+  name: "Social proof placer"
+  summary: "Describe your buyer's doubts. Get which testimonials, numbers or case studies to use and where to place them."
+  task: write-landing-page
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It matches kinds of proof to specific doubts."
+  inputs: [ { type: persona, required: true }, { type: voc_reviews, required: false } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/socialclaw":
+  skip: "Portuguese or tied to one posting service."
+"sickn33/agentic-awesome-skills:skills/software-architecture":
+  skip: "Generic or thin, or needs an outside tool."
+"sickn33/agentic-awesome-skills:skills/solidity-security":
+  skip: "Narrow blockchain contract skill."
+"sickn33/agentic-awesome-skills:skills/solidping":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/sop-company-wiki":
+  name: "Company wiki planner"
+  summary: "Describe your business. Get the smallest useful process wiki set-up, with a register of each process."
+  task: document-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It picks a small setup and fills a set register."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "WHOISABHISHEKADHIKARI"
+  author_url: "https://github.com/WHOISABHISHEKADHIKARI/sme-ops-system-builder"
+"sickn33/agentic-awesome-skills:skills/sops-encryption":
+  skip: "Generic infrastructure notes; thin or near-copies of each other."
+"sickn33/agentic-awesome-skills:skills/soroban-contract-audit":
+  skip: "Narrow blockchain contract skill."
+"sickn33/agentic-awesome-skills:skills/soroban-liquidity-pool":
+  skip: "Narrow blockchain contract skill."
+"sickn33/agentic-awesome-skills:skills/soroban-oracle-data-feed-audit":
+  skip: "Narrow blockchain contract skill."
+"sickn33/agentic-awesome-skills:skills/soroban-storage-ttl-lifecycle":
+  skip: "Narrow blockchain contract skill."
+"sickn33/agentic-awesome-skills:skills/soroban-token-minter":
+  skip: "Narrow blockchain contract skill."
+"sickn33/agentic-awesome-skills:skills/source-document-filing":
+  skip: "Register template; near-copy of other register skills here."
+"sickn33/agentic-awesome-skills:skills/source-driven-development":
+  skip: "Copy of addyosmani/agent-skills, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/spark-optimization":
+  name: "Spark job tuner"
+  summary: "Give it a slow Spark job. Get changes to partitions, caching and memory that speed it up."
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It diagnoses first, then tunes."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"sickn33/agentic-awesome-skills:skills/spec-driven-development":
+  skip: "Copy of addyosmani/agent-skills, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/spec-driven-loop":
+  name: "Spec to acceptance builder"
+  summary: "Describe a big software request. Get an approved spec, a controlled build and proof it meets the criteria."
+  task: build-software
+  role: orchestrate
+  level: expert
+  thinking: high
+  thinking_why: "It runs a long loop with many agents and checks."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: run code, read your project files and run several AI helpers
+  author: "Linji-x"
+  author_url: "https://github.com/Linji-x/spec-driven-loop"
+"sickn33/agentic-awesome-skills:skills/spec-to-code-compliance":
+  skip: "Narrow blockchain contract skill."
+"sickn33/agentic-awesome-skills:skills/speckit-updater":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/speed":
+  skip: "Thin reading aid that launches one viewer."
+"sickn33/agentic-awesome-skills:skills/spline-3d-integration":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/spreadsheet-manual-build":
+  name: "Empty workbook builder"
+  summary: "Give a confirmed field list. Get a formatted empty Excel or CSV file, with no invented rows."
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It builds from a fixed list of fields."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: run code and save files
+  author: "WHOISABHISHEKADHIKARI"
+  author_url: "https://github.com/WHOISABHISHEKADHIKARI/sme-ops-system-builder"
+"sickn33/agentic-awesome-skills:skills/sql-injection-testing":
+  skip: "Attack-focused pentest guide with exploit steps; not safe to list."
+"sickn33/agentic-awesome-skills:skills/sql-optimization-patterns":
+  skip: "Same skill is in seb1n/awesome-ai-agent-skills."
+"sickn33/agentic-awesome-skills:skills/sql-pro":
+  skip: "Generic or thin, or needs an outside tool."
+"sickn33/agentic-awesome-skills:skills/sql-sentinel":
+  skip: "Generic or thin, or needs an outside tool."
+"sickn33/agentic-awesome-skills:skills/sqlmap-database-pentesting":
+  skip: "Attack-focused pentest guide with exploit steps; not safe to list."
+"sickn33/agentic-awesome-skills:skills/square-automation":
+  skip: "Composio connector skill; covered by the Composio import."
+"sickn33/agentic-awesome-skills:skills/squirrel":
+  skip: "Generic or thin, or needs an outside tool."
+"sickn33/agentic-awesome-skills:skills/sre-dashboards":
+  skip: "Generic infrastructure notes; thin or near-copies of each other."
+"sickn33/agentic-awesome-skills:skills/sred-project-organizer":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/sred-work-summary":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/ssh-configuration":
+  skip: "Generic infrastructure notes; thin or near-copies of each other."
+"sickn33/agentic-awesome-skills:skills/ssh-penetration-testing":
+  skip: "Attack-focused pentest guide with exploit steps; not safe to list."
+"sickn33/agentic-awesome-skills:skills/sshepherd":
+  skip: "Tied to one vendor product, thin, or niche."
+"sickn33/agentic-awesome-skills:skills/ssl-tls-management":
+  skip: "Generic infrastructure notes; thin or near-copies of each other."
+"sickn33/agentic-awesome-skills:skills/stability-ai":
+  skip: "Needs a paid image API and is written in Portuguese."
+"sickn33/agentic-awesome-skills:skills/stakeholder-investor-reports":
+  skip: "Register template; near-copy of other register skills here."
+"sickn33/agentic-awesome-skills:skills/startup-analyst":
+  skip: "Near-copy of another startup skill here, or a stub."
+"sickn33/agentic-awesome-skills:skills/startup-business-analyst-business-case":
+  skip: "Near-copy of another startup skill here, or a stub."
+"sickn33/agentic-awesome-skills:skills/startup-business-analyst-financial-projections":
+  skip: "Near-copy of another startup skill here, or a stub."
+"sickn33/agentic-awesome-skills:skills/startup-business-analyst-market-opportunity":
+  skip: "Near-copy of market-sizing-analysis in this repo."
+"sickn33/agentic-awesome-skills:skills/startup-financial-modeling":
+  name: "Startup financial model builder"
+  summary: "Give your numbers and plans. Get a 3 to 5 year model with revenue, costs, cash flow and scenarios."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "The numbers must tie together across years."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+"sickn33/agentic-awesome-skills:skills/startup-it-troubleshooting":
+  name: "Small team IT fixer"
+  summary: "Name the IT problem, like a lockout or Wi-Fi drop. Get steps to fix it, ranked by how many people it hits."
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows set fix steps."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "BagelHole"
+  author_url: "https://github.com/BagelHole/DevOps-Security-Agent-Skills"

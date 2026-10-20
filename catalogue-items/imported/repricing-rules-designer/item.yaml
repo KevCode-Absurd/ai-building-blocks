@@ -1,0 +1,34 @@
+slug: repricing-rules-designer
+name: Repricing rules designer
+summary: Give it your margins and stock. Get safe automatic price rules, test cases, and a kill switch you can trust.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: product_data
+    required: true
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Nexscope AI
+  repo: nexscope-ai/eCommerce-Skills
+  path: dynamic-pricing-ecommerce
+  url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/dynamic-pricing-ecommerce
+  licence: MIT
+  licence_file: LICENSE
+  commit: ee0fb29
+  original_name: dynamic-pricing-ecommerce
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: dynamic-pricing-ecommerce skill
+    by: Nexscope AI
+    url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/dynamic-pricing-ecommerce
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

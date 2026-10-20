@@ -1,0 +1,51 @@
+# robpalmer99/claude-code-copywriting-skills (CC BY 4.0)
+"robpalmer99/claude-code-copywriting-skills:ad-copy":
+  name: Meta ad copywriter
+  summary: Describe your offer and buyer. Get Facebook and Instagram ad text, hooks and UGC scripts ready to test.
+  task: write-ad-copy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a proven method but must pick fresh angles.
+  inputs: [{type: brief, required: true}, {type: voc_reviews, required: false}]
+  outputs: [{type: ad_copy}, {type: script}]
+"robpalmer99/claude-code-copywriting-skills:compliance-checker":
+  name: Ad and page policy checker
+  summary: Paste your ad, page or email. Get policy risks flagged for each platform, with safer rewrites.
+  task: check-ads
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It checks copy against a long set of rules.
+  inputs: [{type: copy_draft, required: true}]
+  outputs: [{type: audit_report}]
+"robpalmer99/claude-code-copywriting-skills:copychief":
+  name: Sales copy reviewer
+  summary: Paste your sales copy. Get a direct-response critique with fixes for the weakest parts.
+  task: write-ad-copy
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: A good critique weighs the whole piece against several methods.
+  inputs: [{type: copy_draft, required: true}]
+  outputs: [{type: audit_report}]
+"robpalmer99/claude-code-copywriting-skills:direct-response-copy":
+  name: Direct response copywriter
+  summary: Describe your offer. Get headlines, emails, calls to action or a full sales page that sells.
+  task: write-landing-page
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It applies set copy frameworks to your offer.
+  inputs: [{type: brief, required: true}, {type: voc_reviews, required: false}]
+  outputs: [{type: copy_draft}]
+"robpalmer99/claude-code-copywriting-skills:landing-page-copy":
+  name: Bridge page writer
+  summary: Describe your ad and offer. Get a short page that warms visitors and sends them on to buy.
+  task: write-landing-page
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a set page structure and fits it to your offer.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: landing_page}]

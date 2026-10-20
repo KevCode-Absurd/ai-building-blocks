@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Good design here decides whether an AI picks the right tool.
+new_slug: mcp-tool-set-designer
+name: MCP tool set designer
+summary: Say what your AI should do through MCP. Get a small set of clearly named tools with plain descriptions.
+job: connect-tools
+headline: MCP tool set designer
+subhead: Say what your AI should do through MCP. Get a small set of clearly named tools with plain descriptions.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

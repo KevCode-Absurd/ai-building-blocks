@@ -1,0 +1,32 @@
+slug: matlab-secret-keeper
+name: MATLAB secret keeper
+summary: Give it code with passwords or API keys. Get them moved into the MATLAB Vault, not left in the file.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/matlab-data-import-and-analysis/matlab-secure-credentials
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-data-import-and-analysis/matlab-secure-credentials
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-secure-credentials
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-secure-credentials skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-data-import-and-analysis/matlab-secure-credentials
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

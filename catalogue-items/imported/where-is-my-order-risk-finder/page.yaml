@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It flags orders against set time limits.
+new_slug: where-is-my-order-risk-finder
+name: Where-is-my-order risk finder
+summary: Run it on open orders. Get shipped orders with stale tracking and late unshipped ones, before customers ask.
+job: run-your-store
+headline: Where-is-my-order risk finder
+subhead: Run it on open orders. Get shipped orders with stale tracking and late unshipped ones, before customers ask.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin.

@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Automatic tuning needs good metrics and judgement.
+new_slug: dspy-prompt-optimizer
+name: DSPy prompt optimizer
+summary: Describe your AI task and a few examples. Get a program that tunes its own prompts to score better.
+job: build-software
+headline: DSPy prompt optimizer
+subhead: Describe your AI task and a few examples. Get a program that tunes its own prompts to score better.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and call an AI model.

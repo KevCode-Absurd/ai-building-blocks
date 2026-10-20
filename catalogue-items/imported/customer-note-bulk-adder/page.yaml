@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It repeats one fixed step.
+new_slug: customer-note-bulk-adder
+name: Customer note bulk adder
+summary: Give it a customer list and a note. Get the note added to each record in one go. Changes live customer data.
+job: run-your-store
+headline: Customer note bulk adder
+subhead: Give it a customer list and a note. Get the note added to each record in one go. Changes live customer data.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin and change it.

@@ -1,0 +1,32 @@
+slug: discount-wording-planner
+name: Discount wording planner
+summary: Give it the discount you plan. Get the percent or amount form, sale price display and banner wording that look biggest.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: offer
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Checkout Page
+  repo: checkout-page/ecommerce-skills
+  path: skills/discounts
+  url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/discounts
+  licence: MIT
+  licence_file: LICENSE
+  commit: 8b85f63
+  original_name: discounts
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: discounts skill
+    by: Checkout Page
+    url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/discounts
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: product-description-writer
+name: Product description writer
+summary: Give it your product facts. Get a description with the right number of claims, units and tone to lift sales.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: pdp_copy
+uses: []
+origin: imported
+source:
+  by: Checkout Page
+  repo: checkout-page/ecommerce-skills
+  path: skills/product-copy
+  url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/product-copy
+  licence: MIT
+  licence_file: LICENSE
+  commit: 8b85f63
+  original_name: product-copy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: product-copy skill
+    by: Checkout Page
+    url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/product-copy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

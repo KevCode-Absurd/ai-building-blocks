@@ -1,0 +1,42 @@
+slug: email-program-lead
+name: Email program lead
+summary: Say your email goal. Get flows, copy, deliverability fixes and compliance checks, with a hard stop before any real send.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: brand_brain
+    required: false
+outputs:
+  - type: email_flow
+    required: true
+  - type: audit_report
+    required: false
+uses: []
+origin: imported
+source:
+  by: CosmoBlk
+  repo: CosmoBlk/email-marketing-bible
+  path: skills/email-marketing-bible
+  url: https://github.com/CosmoBlk/email-marketing-bible/tree/main/skills/email-marketing-bible
+  licence: MIT
+  licence_file: LICENSE
+  commit: 962648c
+  original_name: email-marketing-bible
+  author: George Hartley
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: email-marketing-bible skill
+    by: CosmoBlk
+    url: https://github.com/CosmoBlk/email-marketing-bible/tree/main/skills/email-marketing-bible
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: George Hartley
+    url: https://github.com/CosmoBlk
+    used: Wrote the skill; CosmoBlk shared it in their collection.

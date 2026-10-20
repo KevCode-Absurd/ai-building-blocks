@@ -1,0 +1,32 @@
+slug: breakeven-point-calculator
+name: Breakeven point calculator
+summary: Give it your prices and costs. Get the breakeven volume, margin of safety and the effect of price changes.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/cvp-breakeven
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/cvp-breakeven
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: cvp-breakeven
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cvp-breakeven skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/cvp-breakeven
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

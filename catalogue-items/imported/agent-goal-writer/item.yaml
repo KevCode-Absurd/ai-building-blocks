@@ -1,0 +1,37 @@
+slug: agent-goal-writer
+name: Agent goal writer
+summary: Give it a vague job. Get a goal an AI agent can finish, with proof of done, limits and stop rules.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/goal-instruction-writer
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/goal-instruction-writer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 0c10eb8
+  original_name: goal-instruction-writer
+  author: wu736139669
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: goal-instruction-writer skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/goal-instruction-writer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: wu736139669
+    url: https://github.com/wu736139669/goal-instruction-writer
+    used: Wrote the skill; sickn33 shared it in their collection.

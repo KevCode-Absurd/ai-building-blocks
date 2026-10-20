@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It builds across many files and checks as it goes.
+new_slug: spec-builder
+name: Spec builder
+summary: Give it a spec and tickets. Get the work built in code, tested and reviewed.
+job: build-software
+headline: Spec builder
+subhead: Give it a spec and tickets. Get the work built in code, tested and reviewed.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

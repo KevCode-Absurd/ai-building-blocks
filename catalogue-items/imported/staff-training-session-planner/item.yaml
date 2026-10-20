@@ -1,0 +1,32 @@
+slug: staff-training-session-planner
+name: Staff training session planner
+summary: Give it a training goal. Get a session plan for teachers that uses adult learning methods.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/professional-learning/professional-development-session-designer
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/professional-learning/professional-development-session-designer
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: professional-development-session-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: professional-development-session-designer skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/professional-learning/professional-development-session-designer
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

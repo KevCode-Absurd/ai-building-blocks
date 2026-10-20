@@ -1,0 +1,37 @@
+slug: database-migration-conflict-fixer
+name: Database migration conflict fixer
+summary: Describe the Drizzle migration clash. Get it diagnosed and repaired, with steps to stop it coming back.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/drizzle-migration-conflict
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/drizzle-migration-conflict
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: drizzle-migration-conflict
+  author: chaunsin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: drizzle-migration-conflict skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/drizzle-migration-conflict
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: chaunsin
+    url: https://github.com/chaunsin
+    used: Wrote the skill; sickn33 shared it in their collection.

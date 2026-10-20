@@ -1,0 +1,33 @@
+slug: bank-messaging-security-checker
+name: Bank messaging security checker
+summary: Describe how you connect to SWIFT. Get your architecture type, control gaps and what your yearly attestation needs.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/swift-csp/skills/swift-csp
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/swift-csp/skills/swift-csp
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: swift-csp
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: swift-csp skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/swift-csp/skills/swift-csp
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

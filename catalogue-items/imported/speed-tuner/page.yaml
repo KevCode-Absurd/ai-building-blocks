@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It must measure first, then rule out guesses.
+new_slug: speed-tuner
+name: Speed tuner
+summary: Name what feels slow. Get the real bottleneck measured, fixed and measured again.
+job: test-and-fix-code
+headline: Speed tuner
+subhead: Name what feels slow. Get the real bottleneck measured, fixed and measured again.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

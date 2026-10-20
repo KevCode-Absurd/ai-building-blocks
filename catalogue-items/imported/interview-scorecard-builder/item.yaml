@@ -1,0 +1,32 @@
+slug: interview-scorecard-builder
+name: Interview scorecard builder
+summary: Give it your interview stages. Get scorecards, question banks, a phone screen script and a rating guide.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: plan
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Carlo Pezzuto
+  repo: carlopezzuto/recruiting
+  path: .claude/skills/interview-kit
+  url: https://github.com/carlopezzuto/recruiting/tree/main/.claude/skills/interview-kit
+  licence: MIT
+  licence_file: LICENSE
+  commit: 6e9716a
+  original_name: interview-kit
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: interview-kit skill
+    by: Carlo Pezzuto
+    url: https://github.com/carlopezzuto/recruiting/tree/main/.claude/skills/interview-kit
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

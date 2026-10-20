@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It runs several rounds of scoring and combining ideas.
+new_slug: idea-tournament-runner
+name: Idea tournament runner
+summary: Give it a pile of rough ideas. Get them scored, crossed and mutated until the strongest few are left.
+job: think-and-decide
+headline: Idea tournament runner
+subhead: Give it a pile of rough ideas. Get them scored, crossed and mutated until the strongest few are left.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

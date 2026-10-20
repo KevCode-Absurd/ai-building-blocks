@@ -1,0 +1,35 @@
+slug: company-fair-value-modeler
+name: Company fair value modeler
+summary: Give it a stock ticker. Get a fair value range from three methods, with a sensitivity grid. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: audit_report
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: himself65
+  repo: himself65/finance-skills
+  path: plugins/market-analysis/skills/company-valuation
+  url: https://github.com/himself65/finance-skills/tree/main/plugins/market-analysis/skills/company-valuation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 73d554d
+  original_name: company-valuation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: company-valuation skill
+    by: himself65
+    url: https://github.com/himself65/finance-skills/tree/main/plugins/market-analysis/skills/company-valuation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

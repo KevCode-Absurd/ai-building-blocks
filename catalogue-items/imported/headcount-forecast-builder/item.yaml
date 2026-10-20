@@ -1,0 +1,40 @@
+slug: headcount-forecast-builder
+name: Headcount forecast builder
+summary: Give it past headcount and goals. Get a forecast of hires and exits with a clear method and a range of error.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+uses: []
+origin: imported
+source:
+  by: Tuan Duc Tran
+  repo: tuanductran/hr-skills
+  path: skills/hr-workforce-forecasting
+  url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-workforce-forecasting
+  licence: MIT
+  licence_file: LICENSE
+  commit: 078f2fb
+  original_name: hr-workforce-forecasting
+  author: Tuan Duc Tran
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hr-workforce-forecasting skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-workforce-forecasting
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

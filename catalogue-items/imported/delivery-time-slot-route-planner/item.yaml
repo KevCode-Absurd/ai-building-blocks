@@ -1,0 +1,32 @@
+slug: delivery-time-slot-route-planner
+name: Delivery time slot route planner
+summary: Give it stops with promised delivery windows. Get routes that hit each window with the fewest vehicles.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/vrp-time-windows
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/vrp-time-windows
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: vrp-time-windows
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: vrp-time-windows skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/vrp-time-windows
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

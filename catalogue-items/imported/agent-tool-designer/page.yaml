@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Tool design shapes how the whole agent behaves.
+new_slug: agent-tool-designer
+name: Agent tool designer
+summary: Describe what your agent must do. Get tool definitions it can use well, with fewer and clearer tools.
+job: connect-tools
+headline: Agent tool designer
+subhead: Describe what your agent must do. Get tool definitions it can use well, with fewer and clearer tools.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

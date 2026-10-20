@@ -1,0 +1,33 @@
+slug: uk-cyber-essentials-checker
+name: UK Cyber Essentials checker
+summary: Describe your devices and cloud services. Get gaps against Cyber Essentials and what to fix before you apply.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/cyber-essentials/skills/cyber-essentials
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/cyber-essentials/skills/cyber-essentials
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: cyber-essentials
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cyber-essentials skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/cyber-essentials/skills/cyber-essentials
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

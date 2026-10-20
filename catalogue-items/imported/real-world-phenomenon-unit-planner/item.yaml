@@ -1,0 +1,32 @@
+slug: real-world-phenomenon-unit-planner
+name: Real-world phenomenon unit planner
+summary: Name a real event or puzzle. Get a unit plan that uses several subjects to explain it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/global-cross-cultural-pedagogies/phenomenon-based-unit-anchor
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/global-cross-cultural-pedagogies/phenomenon-based-unit-anchor
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: phenomenon-based-unit-anchor
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: phenomenon-based-unit-anchor skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/global-cross-cultural-pedagogies/phenomenon-based-unit-anchor
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

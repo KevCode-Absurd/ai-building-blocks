@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It reads numbers and reports them.
+new_slug: app-update-health-checker
+name: App update health checker
+summary: Name your Expo app. Get crash rates, installs and update sizes for each published update.
+job: ship-and-host
+headline: App update health checker
+subhead: Name your Expo app. Get crash rates, installs and update sizes for each published update.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run commands and sign in to Expo.

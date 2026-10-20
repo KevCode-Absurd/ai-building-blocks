@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It turns roles into clear, level-based skill lists.
+new_slug: role-skills-framework-builder
+name: Role skills framework builder
+summary: Name your roles. Get the key skills for each, what good looks like at each level, and matching interview questions.
+job: hire-people
+headline: Role skills framework builder
+subhead: Name your roles. Get the key skills for each, what good looks like at each level, and matching interview questions.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

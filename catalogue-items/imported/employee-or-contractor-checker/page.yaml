@@ -1,0 +1,13 @@
+thinking: high
+thinking_why: The tests are fact-heavy and differ by place.
+new_slug: employee-or-contractor-checker
+name: Employee or contractor checker
+summary: Describe how someone will work for you. Get employee or contractor risks flagged. Not legal advice.
+job: hire-people
+headline: Employee or contractor checker
+subhead: Describe how someone will work for you. Get employee or contractor risks flagged. Not legal advice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can search the web for current local tests.
+  - Where the skill points to /employment-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.

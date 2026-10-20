@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It traces permission paths through the code.
+new_slug: django-access-control-auditor
+name: Django access control auditor
+summary: Point it at a Django project. Get a review of who can see or change what, with fixes for each gap.
+job: secure-code
+headline: Django access control auditor
+subhead: Point it at a Django project. Get a review of who can see or change what, with fixes for each gap.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

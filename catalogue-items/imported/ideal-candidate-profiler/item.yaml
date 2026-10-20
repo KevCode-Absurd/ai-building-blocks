@@ -1,0 +1,32 @@
+slug: ideal-candidate-profiler
+name: Ideal candidate profiler
+summary: "Give it a job description. Get a profile of who fits: their motives, where they spend time, what moves them."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: persona
+uses: []
+origin: imported
+source:
+  by: Carlo Pezzuto
+  repo: carlopezzuto/recruiting
+  path: .claude/skills/persona-research
+  url: https://github.com/carlopezzuto/recruiting/tree/main/.claude/skills/persona-research
+  licence: MIT
+  licence_file: LICENSE
+  commit: 6e9716a
+  original_name: persona-research
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: persona-research skill
+    by: Carlo Pezzuto
+    url: https://github.com/carlopezzuto/recruiting/tree/main/.claude/skills/persona-research
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

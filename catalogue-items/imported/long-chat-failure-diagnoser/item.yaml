@@ -1,0 +1,37 @@
+slug: long-chat-failure-diagnoser
+name: Long chat failure diagnoser
+summary: Describe how your AI gets worse in long chats. Get the likely cause and a fix to try.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/context-degradation
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/context-degradation
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: context-degradation
+  author: Agent Skills for Context Engineering Contributors
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: context-degradation skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/context-degradation
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Agent Skills for Context Engineering Contributors
+    url: https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering
+    used: Wrote the skill; sickn33 shared it in their collection.

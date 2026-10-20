@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It searches, then compares what each paper really shows.
+new_slug: paper-claim-evidence-finder
+name: Paper claim evidence finder
+summary: Name a topic or DOI. Get claims taken from full papers, with the numbers, limits and source for each.
+job: research-topics
+headline: Paper claim evidence finder
+subhead: Name a topic or DOI. Get claims taken from full papers, with the numbers, limits and source for each.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can connect to the BGPT paper search service.

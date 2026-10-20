@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It traces how untrusted data flows through several files.
+new_slug: ai-workflow-security-checker
+name: AI workflow security checker
+summary: Point it at a repo. Get a report on where outside text could reach an AI agent in your GitHub workflows.
+job: secure-code
+headline: AI workflow security checker
+subhead: Point it at a repo. Get a report on where outside text could reach an AI agent in your GitHub workflows.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

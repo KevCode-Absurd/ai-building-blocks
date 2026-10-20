@@ -1,0 +1,32 @@
+slug: skill-making-guide
+name: Skill-making guide
+summary: Describe a task you repeat. Get a step-by-step guide to turning it into your own skill that triggers reliably.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: skill_files
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/skill-creation-walkthrough
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/skill-creation-walkthrough
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: skill-creation-walkthrough
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: skill-creation-walkthrough skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/skill-creation-walkthrough
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

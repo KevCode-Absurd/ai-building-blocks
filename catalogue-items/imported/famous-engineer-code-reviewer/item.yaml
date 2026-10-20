@@ -1,0 +1,32 @@
+slug: famous-engineer-code-reviewer
+name: Famous engineer code reviewer
+summary: Give it code. Get blunt reviews in the voices of well-known engineers, each tied to their written views.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/skills/named-persona-adversarial-review
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/named-persona-adversarial-review
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: named-persona-adversarial-review
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: named-persona-adversarial-review skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/named-persona-adversarial-review
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

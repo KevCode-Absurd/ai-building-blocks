@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It looks for friction and then redesigns the order of steps.
+new_slug: decision-friction-auditor
+name: Decision friction auditor
+summary: Give it a page or flow. Get the spots where layout, defaults or order stop people acting, with clearer fixes.
+job: audit-landing-page
+headline: Decision friction auditor
+subhead: Give it a page or flow. Get the spots where layout, defaults or order stop people acting, with clearer fixes.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

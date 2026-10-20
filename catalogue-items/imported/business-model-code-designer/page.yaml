@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Modelling a domain needs real judgment about where concepts split.
+new_slug: business-model-code-designer
+name: Business model code designer
+summary: Describe your business rules. Get areas, shared terms and clusters of data that map to your code. Uses domain-driven design.
+job: build-software
+headline: Business model code designer
+subhead: Describe your business rules. Get areas, shared terms and clusters of data that map to your code. Uses domain-driven design.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

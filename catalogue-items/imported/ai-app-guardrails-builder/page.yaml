@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Rules follow a set pattern, but each needs testing.
+new_slug: ai-app-guardrails-builder
+name: AI app guardrails builder
+summary: Describe what your AI app must never do. Get rules that block jailbreaks, made-up facts and leaked personal details.
+job: build-software
+headline: AI app guardrails builder
+subhead: Describe what your AI app must never do. Get rules that block jailbreaks, made-up facts and leaked personal details.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows set processing steps with checks on the axis.
+new_slug: nmr-spectrum-processor
+name: NMR spectrum processor
+summary: Give it raw 1D NMR data. Get a phased spectrum, peak candidates and integration regions.
+job: research-topics
+headline: NMR spectrum processor
+subhead: Give it raw 1D NMR data. Get a phased spectrum, peak candidates and integration regions.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code.

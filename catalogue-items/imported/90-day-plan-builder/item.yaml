@@ -1,0 +1,32 @@
+slug: 90-day-plan-builder
+name: 90-day plan builder
+summary: Give it a decision you made. Get a 90-day plan with weekly steps, owners and check-in times.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: plan
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: c-level-agents/skills/execute
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-agents/skills/execute
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: execute
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: execute skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-agents/skills/execute
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

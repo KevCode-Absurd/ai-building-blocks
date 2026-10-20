@@ -1,0 +1,32 @@
+slug: uk-late-payment-chaser
+name: UK late payment chaser
+summary: Give it an overdue invoice. Get the legal interest and fixed fee worked out, plus reminder emails ready to send.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Pro Skill Packs
+  repo: proskillpacks/skills
+  path: skills/freelancers/late-payment-chaser-uk
+  url: https://github.com/proskillpacks/skills/tree/main/skills/freelancers/late-payment-chaser-uk
+  licence: MIT
+  licence_file: LICENSE
+  commit: e8c3393
+  original_name: late-payment-chaser-uk
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: late-payment-chaser-uk skill
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/freelancers/late-payment-chaser-uk
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

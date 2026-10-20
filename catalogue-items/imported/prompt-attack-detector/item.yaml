@@ -1,0 +1,33 @@
+slug: prompt-attack-detector
+name: Prompt attack detector
+summary: Point it at your AI app's inputs. Get a small filter that flags tricks and hidden instructions before they land.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 07-safety-alignment/prompt-guard
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/07-safety-alignment/prompt-guard
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: prompt-guard
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: prompt-guard skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/07-safety-alignment/prompt-guard
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

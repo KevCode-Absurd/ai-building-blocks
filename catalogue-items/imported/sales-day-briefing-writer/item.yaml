@@ -1,0 +1,37 @@
+slug: sales-day-briefing-writer
+name: Sales day briefing writer
+summary: Ask for your day. Get today's meetings with context, deals closing soon, waiting emails and your top actions.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: beginner
+inputs:
+  - type: tool_connection
+    required: false
+outputs:
+  - type: brief
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/daily-briefing
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/daily-briefing
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: daily-briefing
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: daily-briefing skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/daily-briefing
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

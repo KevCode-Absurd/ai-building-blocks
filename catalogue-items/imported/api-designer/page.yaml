@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Interfaces are hard to change later, so each choice needs weighing.
+new_slug: api-designer
+name: API designer
+summary: Say what your code needs to offer. Get a clear, stable API or module design that is hard to misuse.
+job: build-software
+headline: API designer
+subhead: Say what your code needs to offer. Get a clear, stable API or module design that is hard to misuse.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

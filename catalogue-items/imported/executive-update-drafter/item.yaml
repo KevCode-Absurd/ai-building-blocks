@@ -1,0 +1,32 @@
+slug: executive-update-drafter
+name: Executive update drafter
+summary: Give it the news and who reads it. Get a status update, exec review or bad-news note pitched to that audience.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/stakeholder-communication
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/stakeholder-communication
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: stakeholder-communication
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: stakeholder-communication skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/stakeholder-communication
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

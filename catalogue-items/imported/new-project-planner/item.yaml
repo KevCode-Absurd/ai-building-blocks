@@ -1,0 +1,32 @@
+slug: new-project-planner
+name: New project planner
+summary: Give it a vague app idea. Get eight planning files your AI reads each session to stay on track.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/not-a-vibe-coder
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/not-a-vibe-coder
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: not-a-vibe-coder
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: not-a-vibe-coder skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/not-a-vibe-coder
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

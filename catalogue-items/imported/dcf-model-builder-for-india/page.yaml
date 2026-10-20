@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It builds a long model with many linked assumptions.
+new_slug: dcf-model-builder-for-india
+name: DCF model builder for India
+summary: Name a listed Indian company. Get a discounted cash flow Excel model with WACC, sensitivities and a summary.
+job: money-and-investing
+headline: DCF model builder for India
+subhead: Name a listed Indian company. Get a discounted cash flow Excel model with WACC, sensitivities and a summary.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read files.

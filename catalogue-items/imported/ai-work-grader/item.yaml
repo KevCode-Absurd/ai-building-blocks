@@ -1,0 +1,32 @@
+slug: ai-work-grader
+name: AI work grader
+summary: Finish a task. Get an honest score on quality and effort, with the weak spots named.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/self-eval
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/self-eval
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: self-eval
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: self-eval skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/self-eval
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

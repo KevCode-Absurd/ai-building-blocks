@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It runs the app and decides what to try next.
+new_slug: desktop-app-tester
+name: Desktop app tester
+summary: Point it at your Electron app. Get it launched and driven by clicks and typing, with screenshots and logs.
+job: test-and-fix-code
+headline: Desktop app tester
+subhead: Point it at your Electron app. Get it launched and driven by clicks and typing, with screenshots and logs.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and take screenshots.

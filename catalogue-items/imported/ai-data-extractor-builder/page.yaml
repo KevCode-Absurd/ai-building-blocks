@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks one of a few known methods and writes code.
+new_slug: ai-data-extractor-builder
+name: AI data extractor builder
+summary: Say what data to pull from AI answers. Get code that returns checked, typed results instead of free text.
+job: build-software
+headline: AI data extractor builder
+subhead: Say what data to pull from AI answers. Get code that returns checked, typed results instead of free text.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

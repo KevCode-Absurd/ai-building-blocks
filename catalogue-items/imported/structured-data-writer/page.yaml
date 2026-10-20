@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It maps page content to set markup types.
+new_slug: structured-data-writer
+name: Structured data writer
+summary: Give it a page. Get working JSON-LD markup for rich results, tested and ready to paste.
+job: build-websites
+headline: Structured data writer
+subhead: Give it a page. Get working JSON-LD markup for rich results, tested and ready to paste.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

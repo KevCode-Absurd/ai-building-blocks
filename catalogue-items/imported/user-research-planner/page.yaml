@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks a method that fits your question.
+new_slug: user-research-planner
+name: User research planner
+summary: Say what you need to learn. Get the right research method, a plan and a way to store what you find.
+job: understand-customers
+headline: User research planner
+subhead: Say what you need to learn. Get the right research method, a plan and a way to store what you find.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

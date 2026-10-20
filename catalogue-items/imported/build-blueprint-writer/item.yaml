@@ -1,0 +1,37 @@
+slug: build-blueprint-writer
+name: Build blueprint writer
+summary: Give it a product idea. Get one researched build document with stack, steps and tests an AI can build from.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/idea-to-blueprint
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/idea-to-blueprint
+  licence: MIT
+  licence_file: LICENSE
+  commit: 0c10eb8
+  original_name: idea-to-blueprint
+  author: iniesohidham
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: idea-to-blueprint skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/idea-to-blueprint
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: iniesohidham
+    url: https://github.com/iniesohidham
+    used: Wrote the skill; sickn33 shared it in their collection.

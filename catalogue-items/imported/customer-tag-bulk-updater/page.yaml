@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It repeats one fixed step.
+new_slug: customer-tag-bulk-updater
+name: Customer tag bulk updater
+summary: Pick customers and tags. Get tags added or removed across the whole group. Changes live customer data.
+job: run-your-store
+headline: Customer tag bulk updater
+subhead: Pick customers and tags. Get tags added or removed across the whole group. Changes live customer data.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin and change it.

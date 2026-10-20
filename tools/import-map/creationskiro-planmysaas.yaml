@@ -1,0 +1,14 @@
+# creationskiro/planmysaas-claude-skill (MIT)
+"creationskiro/planmysaas-claude-skill:.":
+  name: SaaS blueprint planner
+  summary: "Give it a one-line SaaS idea. Get eight files: research, analysis, architecture, features, screens, phases and a step-by-step build plan."
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "Each file builds on the last, so the plan only holds if the thinking is careful."
+  needs: "save files to a folder. It ends with a pointer to the author's paid web app, which you can ignore"
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan, required: true }, { type: document, required: false } ]
+  author: creationskiro
+  author_url: https://github.com/creationskiro

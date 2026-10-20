@@ -1,0 +1,32 @@
+slug: scholarly-work-reviewer
+name: Scholarly work reviewer
+summary: Give it a paper or thesis. Get a fair review of what is strong, what is weak and what to fix next.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/scholar-evaluation
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scholar-evaluation
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: scholar-evaluation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: scholar-evaluation skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scholar-evaluation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It applies a short set of pricing rules to one price.
+new_slug: price-digits-and-placement-planner
+name: Price digits and placement planner
+summary: Give it a price you are weighing. Get whether to round it, how to price add-ons, and where to place it.
+job: set-prices
+headline: Price digits and placement planner
+subhead: Give it a price you are weighing. Get whether to round it, how to price add-ons, and where to place it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

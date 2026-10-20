@@ -1,0 +1,32 @@
+slug: event-ticket-pricer
+name: Event ticket pricer
+summary: Tell it about your class, workshop or event. Get ticket prices, early-bird terms and how to show seats and dates.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: offer
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Checkout Page
+  repo: checkout-page/ecommerce-skills
+  path: skills/event-pricing
+  url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/event-pricing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 8b85f63
+  original_name: event-pricing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: event-pricing skill
+    by: Checkout Page
+    url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/event-pricing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

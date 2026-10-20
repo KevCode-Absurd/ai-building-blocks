@@ -14,5 +14,5 @@ export default defineConfig({
     { name: "desktop", use: { ...devices["Desktop Chrome"], viewport: { width: 1440, height: 900 }, ...(channel ? { channel } : {}) }, grepInvert: /@mobile/ },
     { name: "mobile", use: { ...devices["Pixel 7"], ...(channel ? { channel } : {}) }, grep: /@mobile/ },
   ],
-  webServer: { command: "npm run dev", url: "http://localhost:5180", reuseExistingServer: true, timeout: 60_000 },
+  webServer: { command: "npm run dev", url: "http://localhost:5180", reuseExistingServer: true, timeout: 180_000 },
 });

@@ -1,0 +1,32 @@
+slug: spreadsheet-formula-auditor
+name: Spreadsheet formula auditor
+summary: Give it a spreadsheet. Get formula errors, broken links and model checks such as balance sheet tie-out listed.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/financial-analysis/skills/audit-xls
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/audit-xls
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: audit-xls
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: audit-xls skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/audit-xls
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

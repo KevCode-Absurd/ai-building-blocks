@@ -1,0 +1,40 @@
+slug: model-training-recipe-finder
+name: Model training recipe finder
+summary: Say what you are training. Get the right settings, a safe training loop and a checklist for when the loss goes wrong.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 10-optimization/ml-training-recipes
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/10-optimization/ml-training-recipes
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: ml-training-recipes
+  author: dailycafi
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ml-training-recipes skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/10-optimization/ml-training-recipes
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: dailycafi
+    url: https://github.com/dailycafi
+    used: Wrote the skill; Orchestra Research shared it in their collection.

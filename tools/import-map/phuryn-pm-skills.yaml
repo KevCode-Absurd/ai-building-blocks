@@ -1,0 +1,391 @@
+# phuryn/pm-skills (MIT, Pawel Huryn). 69 skills in 9 plugin folders, each skill appears once.
+# Product management, discovery, strategy and go-to-market. Many overlap skills we already have; those are skipped.
+
+"phuryn/pm-skills:pm-ai-shipping/skills/code-review":
+  skip: "Another code reviewer; we already have many (Hidden bug hunter, Code change reviewer, Parallel code reviewer)."
+"phuryn/pm-skills:pm-ai-shipping/skills/intended-vs-implemented":
+  name: Code intent gap auditor
+  summary: "Give it your docs and code. Get each place the code breaks its own rules, with a fix."
+  task: secure-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "It must trace rules through the code and prove each gap is real."
+  inputs: [ { type: codebase, required: true }, { type: document, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: read your code files
+"phuryn/pm-skills:pm-ai-shipping/skills/shipping-artifacts":
+  name: Ship-ready docs writer
+  summary: "Point it at an AI-built app. Get the short set of docs a reviewer needs: architecture, permissions, secrets and test map."
+  task: document-work
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It reads the code and writes set documents, with some judgment on what applies."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read your code files
+"phuryn/pm-skills:pm-data-analytics/skills/ab-test-analysis":
+  skip: "Same job as Experiment result analyst and A/B test verdict maker."
+"phuryn/pm-skills:pm-data-analytics/skills/cohort-analysis":
+  name: Retention cohort analyst
+  summary: "Give it user activity data. Get retention curves by sign-up group, feature adoption trends and what they suggest."
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "The steps are set, but reading the patterns takes judgment."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+"phuryn/pm-skills:pm-data-analytics/skills/sql-queries":
+  skip: "Same job as Plain-words SQL writer and SQL query writer."
+"phuryn/pm-skills:pm-execution/skills/brainstorm-okrs":
+  skip: "Same job as Product vision and OKR planner and Objectives and key results writer."
+"phuryn/pm-skills:pm-execution/skills/create-prd":
+  name: Product requirements writer
+  summary: "Describe a product or feature. Get a short product requirements document with goal, audience, value and release plan."
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It fills a set template but must shape the content to your idea."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+"phuryn/pm-skills:pm-execution/skills/dummy-dataset":
+  name: Sample data file maker
+  summary: "Say which columns and rules you need. Get a realistic fake dataset as CSV, JSON, SQL or a script."
+  task: test-and-fix-code
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows your column list and invents plausible values."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+"phuryn/pm-skills:pm-execution/skills/job-stories":
+  name: Job story writer
+  summary: "Describe a customer situation. Get job stories in the when, I want, so I can format, with checks for done."
+  task: build-product
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It fills a fixed sentence format from your description."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+"phuryn/pm-skills:pm-execution/skills/outcome-roadmap":
+  skip: "Same job as Feature roadmap to outcomes rewriter."
+"phuryn/pm-skills:pm-execution/skills/pre-mortem":
+  skip: "Same job as Plan pre-mortem runner."
+"phuryn/pm-skills:pm-execution/skills/prioritization-frameworks":
+  name: Priority method picker
+  summary: "Describe your backlog and team. Get the best way to rank it from nine methods, with the steps to use it."
+  task: build-product
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It matches your case to a short list of known methods."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"phuryn/pm-skills:pm-execution/skills/release-notes":
+  skip: "Same job as Release notes writer and App Store release notes writer."
+"phuryn/pm-skills:pm-execution/skills/retro":
+  name: Sprint retro facilitator
+  summary: "Give it your team's feedback. Get what went well, what did not, and action items with owners and dates."
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It sorts feedback into a fixed layout."
+  inputs: [ { type: meeting_notes, required: true } ]
+  outputs: [ { type: plan } ]
+"phuryn/pm-skills:pm-execution/skills/sprint-plan":
+  skip: "Same job as Sprint plan writer."
+"phuryn/pm-skills:pm-execution/skills/stakeholder-map":
+  name: Stakeholder map builder
+  summary: "List the people affected by your project. Get a power and interest grid with how to talk to each group."
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It places people on a grid and applies a standard plan per box."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"phuryn/pm-skills:pm-execution/skills/strategy-red-team":
+  skip: "Same job as Plan stress-tester and Idea stress-test panel."
+"phuryn/pm-skills:pm-execution/skills/summarize-meeting":
+  skip: "Same job as Meeting minutes writer."
+"phuryn/pm-skills:pm-execution/skills/test-scenarios":
+  name: QA test scenario writer
+  summary: "Paste your user stories. Get test scenarios with starting state, steps and the result to expect."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must think through edge cases for each story."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+"phuryn/pm-skills:pm-execution/skills/user-stories":
+  skip: "Same job as User story writer."
+"phuryn/pm-skills:pm-execution/skills/wwas":
+  skip: "Near-copy of the user story and job story skills in this repo."
+"phuryn/pm-skills:pm-go-to-market/skills/beachhead-segment":
+  skip: "Same job as First market picker."
+"phuryn/pm-skills:pm-go-to-market/skills/competitive-battlecard":
+  skip: "Same job as Sales battlecard builder and Competitor battlecard builder."
+"phuryn/pm-skills:pm-go-to-market/skills/growth-loops":
+  name: Growth loop designer
+  summary: "Describe your product and users. Get the growth loops that fit, from sharing to referrals, and how to start one."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must match five loop types to your product."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"phuryn/pm-skills:pm-go-to-market/skills/gtm-motions":
+  name: Launch channel picker
+  summary: "Describe your product and buyers. Get the best of seven ways to reach them, with tools and first steps."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs seven options against your case."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"phuryn/pm-skills:pm-go-to-market/skills/gtm-strategy":
+  skip: "Same job as Go-to-market positioning planner."
+"phuryn/pm-skills:pm-go-to-market/skills/ideal-customer-profile":
+  name: Ideal customer profiler
+  summary: "Give it survey or customer data. Get a profile of your best customers and what they need."
+  task: understand-customers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must find patterns in your data before writing the profile."
+  inputs: [ { type: voc_reviews, required: true } ]
+  outputs: [ { type: persona } ]
+"phuryn/pm-skills:pm-market-research/skills/competitor-analysis":
+  skip: "Same job as Competitor product analyst."
+"phuryn/pm-skills:pm-market-research/skills/customer-journey-map":
+  name: Customer path mapper
+  summary: "Describe your product and customer. Get a stage by stage map with feelings, pain points and fixes."
+  task: understand-customers
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It fills a standard journey layout from your description."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+"phuryn/pm-skills:pm-market-research/skills/market-segments":
+  skip: "Same job as Customer segment builder."
+"phuryn/pm-skills:pm-market-research/skills/market-sizing":
+  skip: "Same job as Market size estimator."
+"phuryn/pm-skills:pm-market-research/skills/sentiment-analysis":
+  skip: "Same job as Review insight finder."
+"phuryn/pm-skills:pm-market-research/skills/user-personas":
+  skip: "Same job as User persona and path mapper."
+"phuryn/pm-skills:pm-market-research/skills/user-segmentation":
+  skip: "Same job as Behaviour group finder."
+"phuryn/pm-skills:pm-marketing-growth/skills/marketing-ideas":
+  skip: "Same job as Marketing idea picker."
+"phuryn/pm-skills:pm-marketing-growth/skills/north-star-metric":
+  name: North star metric picker
+  summary: "Describe your product. Get the one metric to steer by, plus 3 to 5 supporting numbers that feed it."
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must test the metric against seven checks."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"phuryn/pm-skills:pm-marketing-growth/skills/positioning-ideas":
+  name: Positioning idea generator
+  summary: "Give it your product and rivals. Get several ways to stand apart, each with a positioning statement and a reason."
+  task: plan-strategy
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It brainstorms options from your description."
+  inputs: [ { type: brief, required: true }, { type: competitor_set, required: false } ]
+  outputs: [ { type: copy_draft } ]
+"phuryn/pm-skills:pm-marketing-growth/skills/product-name":
+  name: Product name brainstormer
+  summary: "Describe your product and buyers. Get five memorable name ideas, each with the reason it fits."
+  task: brand-file
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It generates options from your brand values."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: shortlist } ]
+"phuryn/pm-skills:pm-marketing-growth/skills/value-prop-statements":
+  name: Value statement writer
+  summary: "Give it your value proposition. Get versions for marketing, sales and onboarding, ready to use."
+  task: make-offer
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It rewrites one message for three audiences."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+"phuryn/pm-skills:pm-product-discovery/skills/analyze-feature-requests":
+  skip: "Same job as Feature request screener."
+"phuryn/pm-skills:pm-product-discovery/skills/brainstorm-experiments-existing":
+  skip: "Same job as MVP experiment planner and Product experiment designer."
+"phuryn/pm-skills:pm-product-discovery/skills/brainstorm-experiments-new":
+  name: Pretotype experiment designer
+  summary: "Give it a new product idea. Get cheap tests like landing pages and pre-orders, each with a clear pass mark."
+  task: test-an-idea
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must pick tests that fit the idea and set pass marks."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"phuryn/pm-skills:pm-product-discovery/skills/brainstorm-ideas-existing":
+  skip: "Same job as Product idea brainstorm partner."
+"phuryn/pm-skills:pm-product-discovery/skills/brainstorm-ideas-new":
+  skip: "Same job as Product idea brainstorm partner."
+"phuryn/pm-skills:pm-product-discovery/skills/identify-assumptions-existing":
+  skip: "Same job as Hidden assumption auditor and Leap-of-faith assumption finder."
+"phuryn/pm-skills:pm-product-discovery/skills/identify-assumptions-new":
+  skip: "Same job as Leap-of-faith assumption finder."
+"phuryn/pm-skills:pm-product-discovery/skills/interview-script":
+  skip: "Same job as Customer discovery interview planner and Customer interview question writer."
+"phuryn/pm-skills:pm-product-discovery/skills/metrics-dashboard":
+  skip: "Same job as Product metrics planner and KPI dashboard designer."
+"phuryn/pm-skills:pm-product-discovery/skills/opportunity-solution-tree":
+  name: Opportunity solution tree builder
+  summary: "Give it the outcome you want. Get a tree of customer opportunities, solution ideas and the tests for each."
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must link outcomes, needs and ideas in a clear order."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"phuryn/pm-skills:pm-product-discovery/skills/prioritize-assumptions":
+  name: Assumption test ranker
+  summary: "Give it your list of assumptions. Get them ranked by impact and risk, with a test for each top one."
+  task: test-an-idea
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scores each item and must suggest fitting tests."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: shortlist } ]
+"phuryn/pm-skills:pm-product-discovery/skills/prioritize-features":
+  skip: "Same job as Feature priority scorer."
+"phuryn/pm-skills:pm-product-discovery/skills/summarize-interview":
+  name: Interview summary writer
+  summary: "Paste a customer interview transcript. Get a one-page summary of needs, satisfaction and next steps."
+  task: understand-customers
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: "It sorts what was said into a fixed template."
+  inputs: [ { type: transcript, required: true } ]
+  outputs: [ { type: document } ]
+"phuryn/pm-skills:pm-product-strategy/skills/ansoff-matrix":
+  name: Growth option mapper
+  summary: "Describe your business. Get four growth paths mapped, from selling more to new markets, with risks."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must judge fit and risk for each path."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"phuryn/pm-skills:pm-product-strategy/skills/business-model":
+  skip: "Same job as Business model canvas builder."
+"phuryn/pm-skills:pm-product-strategy/skills/lean-canvas":
+  name: Lean canvas builder
+  summary: "Describe your idea. Get a one-page lean canvas with problem, solution, channels, costs and revenue."
+  task: test-an-idea
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It fills nine boxes from your description."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+"phuryn/pm-skills:pm-product-strategy/skills/monetization-strategy":
+  name: Revenue model picker
+  summary: "Describe your product and users. Get three to five ways to earn from it, with risks and tests."
+  task: set-prices
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must weigh each model against your audience."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"phuryn/pm-skills:pm-product-strategy/skills/pestle-analysis":
+  name: Outside forces analyst
+  summary: "Name your business and market. Get the outside forces that affect you: rules, money, people, tech and nature."
+  task: plan-strategy
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It must judge which outside factors matter most."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+"phuryn/pm-skills:pm-product-strategy/skills/porters-five-forces":
+  skip: "Same job as Five forces industry checker."
+"phuryn/pm-skills:pm-product-strategy/skills/pricing-strategy":
+  skip: "Same job as Pricing strategist, Pricing model designer and Price sensitivity analyst."
+"phuryn/pm-skills:pm-product-strategy/skills/product-strategy":
+  name: Product strategy canvas writer
+  summary: "Describe your product. Get a nine-part strategy: vision, customers, trade-offs, metrics and what keeps you ahead."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must link nine parts into one consistent plan."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+"phuryn/pm-skills:pm-product-strategy/skills/product-vision":
+  skip: "Same job as Product vision and OKR planner."
+"phuryn/pm-skills:pm-product-strategy/skills/startup-canvas":
+  name: Startup canvas builder
+  summary: "Describe your new product. Get one canvas joining your strategy to costs and revenue."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It joins strategy and money parts into one view."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+"phuryn/pm-skills:pm-product-strategy/skills/swot-analysis":
+  name: SWOT analyst
+  summary: "Name your business or product. Get strengths, weaknesses, opportunities and threats, with actions to take."
+  task: plan-strategy
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It fills four boxes and adds standard actions."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+"phuryn/pm-skills:pm-product-strategy/skills/value-proposition":
+  skip: "Same job as Value proposition builder."
+"phuryn/pm-skills:pm-toolkit/skills/draft-nda":
+  name: NDA drafter
+  summary: "Name the two parties and what is shared. Get a draft confidentiality agreement with the clauses a lawyer should check."
+  task: check-contracts
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Legal wording needs care, but the structure is set."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+"phuryn/pm-skills:pm-toolkit/skills/grammar-check":
+  skip: "Same job as Proofreader and Draft proofreader."
+"phuryn/pm-skills:pm-toolkit/skills/privacy-policy":
+  skip: "Same job as Privacy policy drafter."
+"phuryn/pm-skills:pm-toolkit/skills/review-resume":
+  name: Product manager resume reviewer
+  summary: "Give it your resume and a target job. Get a review against ten best practices and a version tailored to the role."
+  task: hire-people
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It scores against set rules and rewrites to fit the job."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: document } ]

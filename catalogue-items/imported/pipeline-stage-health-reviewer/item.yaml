@@ -1,0 +1,37 @@
+slug: pipeline-stage-health-reviewer
+name: Pipeline stage health reviewer
+summary: Ask for a pipeline review. Get coverage, aging, conversion and at-risk deals stage by stage.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/pipeline-review
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/pipeline-review
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: pipeline-review
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pipeline-review skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/pipeline-review
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

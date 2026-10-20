@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It is a short set of rules your AI follows while it works.
+new_slug: small-change-keeper
+name: Small change keeper
+summary: Turn it on while you code. Your AI changes only what you asked for and picks the simplest fix.
+job: build-software
+headline: Small change keeper
+subhead: Turn it on while you code. Your AI changes only what you asked for and picks the simplest fix.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

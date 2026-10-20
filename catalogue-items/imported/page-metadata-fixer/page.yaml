@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It checks a fixed list of tags and repairs them.
+new_slug: page-metadata-fixer
+name: Page metadata fixer
+summary: Point it at your pages. Get missing titles, share cards, canonical links and page data found and fixed.
+job: build-websites
+headline: Page metadata fixer
+subhead: Point it at your pages. Get missing titles, share cards, canonical links and page data found and fixed.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

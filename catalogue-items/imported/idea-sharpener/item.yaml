@@ -1,0 +1,32 @@
+slug: idea-sharpener
+name: Idea sharpener
+summary: Share a rough idea. Get it widened, stress-tested and cut to a one-page concept worth acting on.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Addy Osmani
+  repo: addyosmani/agent-skills
+  path: skills/idea-refine
+  url: https://github.com/addyosmani/agent-skills/tree/main/skills/idea-refine
+  licence: MIT
+  licence_file: LICENSE
+  commit: aeac41d
+  original_name: idea-refine
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: idea-refine skill
+    by: Addy Osmani
+    url: https://github.com/addyosmani/agent-skills/tree/main/skills/idea-refine
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,37 @@
+slug: renewal-watch-planner
+name: Renewal watch planner
+summary: Ask what is renewing. Get upcoming renewals with timing, risk and room to raise the price.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/renewal-radar
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/renewal-radar
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: renewal-radar
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: renewal-radar skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/renewal-radar
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

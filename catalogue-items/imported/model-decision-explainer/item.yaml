@@ -1,0 +1,34 @@
+slug: model-decision-explainer
+name: Model decision explainer
+summary: Give it a trained model. Get which inputs matter, why it made each call, and where it goes wrong.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/ai-and-statistics/matlab-interpret-machine-learning-model
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-interpret-machine-learning-model
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-interpret-machine-learning-model
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-interpret-machine-learning-model skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-interpret-machine-learning-model
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

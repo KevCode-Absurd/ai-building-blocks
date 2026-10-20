@@ -1,0 +1,32 @@
+slug: dev-container-setup-builder
+name: Dev container setup builder
+summary: Name your project and language. Get a ready dev container with tools and saved volumes, so setup is the same each time.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/devcontainer-setup
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/devcontainer-setup
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: devcontainer-setup
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: devcontainer-setup skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/devcontainer-setup
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

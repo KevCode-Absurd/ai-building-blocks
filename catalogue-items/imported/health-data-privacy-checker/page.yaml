@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It applies set rules to your data flows.
+new_slug: health-data-privacy-checker
+name: Health data privacy checker
+summary: Describe your health data use or app. Get HIPAA gaps, safeguards to add and draft notices or agreements.
+job: check-contracts
+headline: Health data privacy checker
+subhead: Describe your health data use or app. Get HIPAA gaps, safeguards to add and draft notices or agreements.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

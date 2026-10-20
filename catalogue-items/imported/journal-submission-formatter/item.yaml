@@ -1,0 +1,32 @@
+slug: journal-submission-formatter
+name: Journal submission formatter
+summary: Name the journal or conference. Get its template, current page and anonymity rules checked, and your paper fitted to them.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/venue-templates
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/venue-templates
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: venue-templates
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: venue-templates skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/venue-templates
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

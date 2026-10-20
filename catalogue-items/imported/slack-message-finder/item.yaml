@@ -1,0 +1,37 @@
+slug: slack-message-finder
+name: Slack message finder
+summary: Ask what was said and where. Get the right messages, files and people from your Slack, found with smart searches. Needs Slack.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: source_text
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: partner-built/slack/skills/slack-search
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/slack/skills/slack-search
+  licence: MIT
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: slack-search
+  author: Slack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: slack-search skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/slack/skills/slack-search
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Slack
+    url: ""
+    used: Wrote the skill; Anthropic shared it in their collection.

@@ -1,0 +1,33 @@
+slug: australian-government-security-checker
+name: Australian government security checker
+summary: Describe your system and its data level. Get which ISM controls apply, your gaps and what assessors will ask.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/ism/skills/ism
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/ism/skills/ism
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: ism
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ism skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/ism/skills/ism
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

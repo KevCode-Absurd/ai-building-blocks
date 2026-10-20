@@ -1,0 +1,33 @@
+slug: competitor-battle-card-builder
+name: Competitor battle card builder
+summary: Name your market. Get each rival's product, pricing and customer views with battle cards and a feature grid.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: competitor_set
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Ferdinando Bons
+  repo: ferdinandobons/startup-skill
+  path: startup-competitors
+  url: https://github.com/ferdinandobons/startup-skill/tree/main/startup-competitors
+  licence: MIT
+  licence_file: LICENSE
+  commit: a5f97c3
+  original_name: startup-competitors
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: startup-competitors skill
+    by: Ferdinando Bons
+    url: https://github.com/ferdinandobons/startup-skill/tree/main/startup-competitors
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

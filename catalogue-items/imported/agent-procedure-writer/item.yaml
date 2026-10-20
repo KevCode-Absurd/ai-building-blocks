@@ -1,0 +1,32 @@
+slug: agent-procedure-writer
+name: Agent procedure writer
+summary: Describe a repeatable job. Get a step-by-step procedure file for your AI, with firm rules and a format check.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: skill_files
+uses: []
+origin: imported
+source:
+  by: Strands Agents
+  repo: strands-agents/agent-sop
+  path: skills/agent-sop-author
+  url: https://github.com/strands-agents/agent-sop/tree/main/skills/agent-sop-author
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: 2634a6e
+  original_name: agent-sop-author
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: agent-sop-author skill
+    by: Strands Agents
+    url: https://github.com/strands-agents/agent-sop/tree/main/skills/agent-sop-author
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

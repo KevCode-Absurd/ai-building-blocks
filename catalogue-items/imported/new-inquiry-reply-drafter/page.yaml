@@ -1,0 +1,13 @@
+thinking: medium
+thinking_why: It judges lead quality and writes a fitting reply.
+new_slug: new-inquiry-reply-drafter
+name: New inquiry reply drafter
+summary: Give it new inquiries. Get each one qualified and answered with a draft reply and real meeting times. You send it.
+job: write-emails
+headline: New inquiry reply drafter
+subhead: Give it new inquiries. Get each one qualified and answered with a draft reply and real meeting times. You send it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your accounts and files.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.

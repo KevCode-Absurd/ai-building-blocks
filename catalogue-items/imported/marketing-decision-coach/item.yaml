@@ -1,0 +1,39 @@
+slug: marketing-decision-coach
+name: Marketing decision coach
+summary: Ask whether a marketing move will work. Get a straight verdict with the reasons, including "not worth doing".
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+  - type: offer
+    required: false
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/marketing-mindset
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/marketing-mindset
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: marketing-mindset
+  author: Axel Freeman
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: marketing-mindset skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/marketing-mindset
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Axel Freeman
+    url: https://github.com/axelfreeman
+    used: Wrote the skill; sickn33 shared it in their collection.

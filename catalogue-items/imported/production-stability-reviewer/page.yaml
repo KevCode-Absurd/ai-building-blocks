@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Failure patterns are subtle and depend on how your system fits together.
+new_slug: production-stability-reviewer
+name: Production stability reviewer
+summary: Give it a service. Get weak spots found and fixes like timeouts, retries and circuit breakers, so outages stay small.
+job: ship-and-host
+headline: Production stability reviewer
+subhead: Give it a service. Get weak spots found and fixes like timeouts, retries and circuit breakers, so outages stay small.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It orders known tasks into a calendar.
+new_slug: month-end-close-planner
+name: Month-end close planner
+summary: Say what must be done to close the books. Get a dated task list with owners and blockers.
+job: track-numbers
+headline: Month-end close planner
+subhead: Say what must be done to close the books. Get a dated task list with owners and blockers.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

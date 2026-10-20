@@ -1,0 +1,37 @@
+slug: low-star-review-triager
+name: Low-star review triager
+summary: Paste 1 to 3 star app reviews. Get a ranked brief of risks, repeat problems and what to fix first.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: voc_reviews
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/shopify-review-triage
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/shopify-review-triage
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: shopify-review-triage
+  author: alfredtech2026
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-review-triage skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/shopify-review-triage
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: alfredtech2026
+    url: https://github.com/alfredtech2026/shopify-app-review-brief
+    used: Wrote the skill; sickn33 shared it in their collection.

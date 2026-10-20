@@ -1,0 +1,433 @@
+# rampstackco/claude-skills, skills folder, chunk 1 of 2 (MIT, RampStack)
+
+"rampstackco/claude-skills:skills/accessibility-audit": {skip: "Same job as the accessibility auditor and WCAG fixer skills we already list."}
+"rampstackco/claude-skills:skills/after-action-report": {skip: "Same job in the same form as our failure and incident postmortem writers."}
+"rampstackco/claude-skills:skills/brand-identity": {skip: "Same job as our logo and brand kit designer, which covers logo, colour and type."}
+"rampstackco/claude-skills:skills/chatbot-flow-design": {skip: "Same job as our chatbot conversation designer."}
+"rampstackco/claude-skills:skills/code-review-web": {skip: "Same job as the many code review skills we already list."}
+"rampstackco/claude-skills:skills/content-and-copy": {skip: "Thin general writing skill that repeats our blog post and copy skills."}
+"rampstackco/claude-skills:skills/content-strategy": {skip: "Same job as our content strategy planner and content topic planner."}
+"rampstackco/claude-skills:skills/analytics-strategy": {skip: "Same job as our tracking plan builder and KPI dashboard designer."}
+"rampstackco/claude-skills:skills/email-sequences": {skip: "Same job as our email sequence writer, which already covers welcome, nurture and win-back flows."}
+"rampstackco/claude-skills:skills/cost-optimization": {skip: "Same job as our cloud bill waste finder and software spend auditor."}
+"rampstackco/claude-skills:skills/creative-brief-selector": {skip: "Built to work with the repo's own other skills and its own demo builds, so it does not stand alone."}
+"rampstackco/claude-skills:skills/cro-optimization": {skip: "Repeats our experiment designer and landing page auditor skills."}
+"rampstackco/claude-skills:skills/dependency-management": {skip: "Same job as our dependency risk auditor."}
+"rampstackco/claude-skills:skills/design-system": {skip: "Same job as our design system auditor and design system file writer."}
+"rampstackco/claude-skills:skills/experiment-design": {skip: "Same job as our experiment designer and product experiment designer."}
+"rampstackco/claude-skills:skills/experimentation-analytics": {skip: "Same job as our experiment result analyst and A/B test verdict maker."}
+"rampstackco/claude-skills:skills/feature-flagging": {skip: "Same job as our feature flag planner."}
+"rampstackco/claude-skills:skills/frontend-component-build": {skip: "Same job as our interface builder and accessible UI builder."}
+"rampstackco/claude-skills:skills/incident-response": {skip: "Same job as our outage incident leader and incident runbook writer."}
+"rampstackco/claude-skills:skills/information-architecture": {skip: "Same job as our site map planner."}
+
+"rampstackco/claude-skills:skills/ads-creative-development":
+  name: Ad creative variation planner
+  summary: Give it your offer and audience. Get hooks, formats and a testing plan that spots tired ads early.
+  task: plan-ad-tests
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans many ad variations and a test order.
+  inputs: [{type: brand_brain, required: false}, {type: brief, required: true}]
+  outputs: [{type: hooks}, {type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/ads-performance-analytics":
+  name: Ad dashboard reader
+  summary: Paste your ad numbers. Get what each metric really means, where platforms disagree, and whether to scale or cut.
+  task: read-ad-results
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It weighs biased numbers against each other before advising.
+  inputs: [{type: performance_sheet, required: true}]
+  outputs: [{type: audit_report}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/ai-content-collaboration":
+  name: AI writing workflow planner
+  summary: Describe how your team writes. Get what AI should draft, what people own, and rules that keep your voice.
+  task: set-up-ai
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It sets rules for a workflow from your answers.
+  inputs: [{type: brand_guide, required: false}]
+  outputs: [{type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/art-direction":
+  name: Creative shoot briefer
+  summary: Give it your brand and campaign goal. Get a brief for a photographer, illustrator or video team.
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It turns a brand look into a clear brief for others.
+  inputs: [{type: brand_brain, required: false}, {type: brief, required: true}]
+  outputs: [{type: brief}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/backup-and-disaster-recovery":
+  name: Backup and recovery planner
+  summary: Describe your systems. Get how much loss you can take, a backup plan and a restore drill to run.
+  task: set-up-ai
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It sets recovery targets and checks for gaps.
+  inputs: [{type: codebase, required: false}]
+  outputs: [{type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/beta-program-management":
+  name: Beta program planner
+  summary: Describe your launch. Get who to invite, what to ask them, and clear rules for when the beta ends.
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans a beta and sets the exit rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/brand-archetype-system":
+  name: Brand style starter picker
+  summary: Say what your business does. Get a ready style starting point with colours, fonts, voice and image direction.
+  task: brand-file
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It picks from a set of ready starting points.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/brand-discovery":
+  name: Brand discovery researcher
+  summary: Describe your business. Get who it is for, who you compete with and where you could stand out.
+  task: understand-customers
+  role: compress
+  level: intermediate
+  thinking: high
+  thinking_why: It weighs the market and picks positions to explore.
+  inputs: [{type: competitor_set, required: false}, {type: voc_reviews, required: false}]
+  outputs: [{type: brief}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/brand-ideation":
+  name: Brand direction brainstormer
+  summary: Describe your idea. Get name options, positioning angles, mood directions and a story, narrowed to one direction.
+  task: brand-file
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It makes many ideas, then narrows them.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: brief}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/brand-style-guide":
+  name: Brand style guide writer
+  summary: Give it your logo, colours and fonts. Get a full style guide others can follow without guessing.
+  task: brand-file
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It organises a finished identity into a reference.
+  inputs: [{type: brand_brain, required: false}, {type: design_direction, required: false}]
+  outputs: [{type: brand_guide}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/brand-voice":
+  name: Voice and tone guide writer
+  summary: Describe how your brand talks. Get voice traits, tone by situation, word lists and side-by-side examples.
+  task: brand-file
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It turns a brand sound into rules with examples.
+  inputs: [{type: copy_draft, required: false}, {type: brand_brain, required: false}]
+  outputs: [{type: brand_guide}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/calculator-design":
+  name: Online calculator designer
+  summary: Name what your visitors want to work out. Get a calculator design that gives a real answer and gathers leads fairly.
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans inputs, results and lead capture together.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/comparison-tool-design":
+  name: Comparison table designer
+  summary: Give it your products or plans. Get a comparison page that helps people choose, with a fair default pick.
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It chooses what to compare and how to guide the choice.
+  inputs: [{type: product_data, required: true}]
+  outputs: [{type: page_layout_spec}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/competitor-experience-audit":
+  name: Competitor site experience auditor
+  summary: Name your market. Get what leading sites do well and badly, and the bar your own site must meet.
+  task: study-competitors
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It compares many sites and finds patterns.
+  inputs: [{type: competitor_set, required: true}]
+  outputs: [{type: audit_report}]
+  needs: "open web pages in a browser"
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/content-brief-authoring":
+  name: Content brief writer
+  summary: Give it a topic and keyword. Get a brief with search intent, outline, key terms and links, ready for a writer.
+  task: get-found-in-search
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It combines search intent and audience into an outline.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: brief}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/content-distribution":
+  name: Content channel planner
+  summary: Give it your content and audience. Get where to share it, when, and which channels to skip.
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It matches content types to channels.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/content-migration":
+  name: Website content mover
+  summary: Name your old and new site. Get a move plan that keeps search rank, links and bookmarks working.
+  task: build-websites
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: A bad move can lose traffic, so it checks each step.
+  inputs: [{type: web_page, required: true}]
+  outputs: [{type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/content-refresh-system":
+  name: Old content refresher
+  summary: Give it your existing posts. Get which to update, merge or delete, and how deep each update goes.
+  task: get-found-in-search
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It scores pages and applies decision rules.
+  inputs: [{type: web_page, required: true}, {type: performance_sheet, required: false}]
+  outputs: [{type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/content-repurposing":
+  name: Content repurposer
+  summary: Give it one strong piece. Get a blog series, emails, posts and clips, each adapted to its format.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It rewrites one source for many formats.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: copy_draft}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/creative-brief":
+  name: Project kickoff brief writer
+  summary: Describe your project. Get a one-page brief with goal, audience, tone and limits that your team can sign off.
+  task: plan-strategy
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a standard brief from your answers.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: brief}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/creative-direction":
+  name: Aesthetic direction brief writer
+  summary: Answer four questions about tone and feel. Get a brief that keeps copy, design and images in one style.
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It turns taste answers into usable design rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/data-warehouse-experimentation":
+  name: Warehouse A/B test runner
+  summary: Describe your data setup. Get SQL steps to split users, log exposure and read results with proper stats.
+  task: track-numbers
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: It needs careful statistics and SQL.
+  inputs: [{type: performance_sheet, required: true}]
+  outputs: [{type: plan}]
+  needs: "run code and query your data warehouse"
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/design-standards":
+  name: Page design standards checker
+  summary: Give it a page or component. Get checks on colour contrast, spacing, hierarchy and mobile, with fixes.
+  task: design-work
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: It runs a fixed list of design checks.
+  inputs: [{type: web_page, required: true}]
+  outputs: [{type: audit_report}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/discovery-research-synthesis":
+  name: Customer interview synthesizer
+  summary: Paste interviews, tickets or survey notes. Get clear patterns and what each means for your product.
+  task: understand-customers
+  role: compress
+  level: intermediate
+  thinking: high
+  thinking_why: It groups raw notes into themes and decisions.
+  inputs: [{type: voc_reviews, required: true}]
+  outputs: [{type: audit_report}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/dispatch-authoring":
+  name: Coding agent handoff writer
+  summary: Describe the change you want. Get a handoff note with scope, checks and stop rules for a coding agent.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It writes strict instructions an agent can run alone.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: brief}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/documentation-strategy":
+  name: Documentation system planner
+  summary: Describe your team and product. Get what to write down, where it lives and how to keep it fresh.
+  task: document-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans a doc system from your needs.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/domain-strategy":
+  name: Domain and DNS planner
+  summary: List your domains and sites. Get a DNS layout, redirect rules and a plan for unused names.
+  task: ship-and-host
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It sets a layout where small mistakes break sites.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/editorial-qa":
+  name: Pre-publish content checker
+  summary: Give it a draft and its brief. Get checks on facts, voice, structure, AI sound and search readiness.
+  task: write-and-tell-stories
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It reviews a draft against many fixed checks.
+  inputs: [{type: copy_draft, required: true}, {type: brief, required: false}]
+  outputs: [{type: audit_report}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/email-deliverability":
+  name: Inbox delivery fixer
+  summary: Name your sending domain. Get SPF, DKIM and DMARC set up and a plan to stop emails landing in spam.
+  task: write-emails
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows set steps but needs your setup details.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/evidence-based-reviews":
+  name: Honest product review writer
+  summary: Name the products. Get reviews and buying guides built on real evidence, with no made-up hands-on claims.
+  task: get-found-in-search
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It must sort real evidence from guesses.
+  inputs: [{type: product_data, required: true}, {type: voc_reviews, required: false}]
+  outputs: [{type: copy_draft}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/experimentation-platform-orchestrator":
+  name: Experiment tool picker
+  summary: Describe your team and traffic. Get which testing tool fits, how to switch tools, and when to use more than one.
+  task: plan-ad-tests
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It compares tools against your needs.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/feature-launch-playbook":
+  name: Feature launch planner
+  summary: Name your feature. Get a launch plan with messaging, support prep, rollout steps and rollback triggers.
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It covers many teams and sets rollback rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/form-strategy":
+  name: Web form designer
+  summary: Name your form. Get fields, error messages, spam protection and a plan to raise completions.
+  task: build-websites
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It applies known form patterns.
+  inputs: [{type: web_page, required: false}]
+  outputs: [{type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills
+"rampstackco/claude-skills:skills/funnel-flow-architecture":
+  name: Funnel flow planner
+  summary: Describe your audience and offer. Get the path from page to lead magnet to emails to sale.
+  task: make-offer
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It links many tools into one path matched to the buyer.
+  inputs: [{type: persona, required: false}, {type: offer, required: true}]
+  outputs: [{type: plan}]
+  author: RampStack
+  author_url: https://github.com/rampstackco/claude-skills

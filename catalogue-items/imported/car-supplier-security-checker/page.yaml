@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It picks levels and labels, then checks set controls.
+new_slug: car-supplier-security-checker
+name: Car supplier security checker
+summary: Describe your work for car makers. Get the right TISAX level, labels and gaps before the assessment.
+job: check-contracts
+headline: Car supplier security checker
+subhead: Describe your work for car makers. Get the right TISAX level, labels and gaps before the assessment.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

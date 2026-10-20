@@ -1,0 +1,32 @@
+slug: suspicious-money-trail-reviewer
+name: Suspicious money trail reviewer
+summary: Give it records that do not add up. Get a structured review of red flags and evidence to follow up.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/forensic-accounting
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/forensic-accounting
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: forensic-accounting
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: forensic-accounting skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/forensic-accounting
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

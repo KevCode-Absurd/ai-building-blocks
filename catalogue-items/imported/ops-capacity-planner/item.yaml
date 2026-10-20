@@ -1,0 +1,37 @@
+slug: ops-capacity-planner
+name: Ops capacity planner
+summary: Give it your demand and team size. Get staffing levels, overload risk and a 12-month hiring plan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: business-operations/skills/capacity-planner
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/capacity-planner
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: capacity-planner
+  author: claude-code-skills
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: capacity-planner skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/capacity-planner
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: claude-code-skills
+    url: https://github.com/alirezarezvani/claude-code-skills
+    used: Wrote the skill; Alireza Rezvani shared it in their collection.

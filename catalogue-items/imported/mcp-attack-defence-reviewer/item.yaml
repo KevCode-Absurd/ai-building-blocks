@@ -1,0 +1,32 @@
+slug: mcp-attack-defence-reviewer
+name: MCP attack defence reviewer
+summary: Point it at an MCP server. Get a ranked list of attack risks, each with a fix.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: Paldom
+  repo: Paldom/mcp-server-skills
+  path: skills/mcp-server-security
+  url: https://github.com/Paldom/mcp-server-skills/tree/main/skills/mcp-server-security
+  licence: MIT
+  licence_file: LICENSE
+  commit: 17ce2a4
+  original_name: mcp-server-security
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mcp-server-security skill
+    by: Paldom
+    url: https://github.com/Paldom/mcp-server-skills/tree/main/skills/mcp-server-security
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

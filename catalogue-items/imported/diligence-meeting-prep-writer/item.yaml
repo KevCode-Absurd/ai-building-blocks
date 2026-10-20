@@ -1,0 +1,32 @@
+slug: diligence-meeting-prep-writer
+name: Diligence meeting prep writer
+summary: Name the meeting and company. Get sharp questions, benchmarks and red flags to probe.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/private-equity/skills/dd-meeting-prep
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/private-equity/skills/dd-meeting-prep
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: dd-meeting-prep
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: dd-meeting-prep skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/private-equity/skills/dd-meeting-prep
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

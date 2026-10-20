@@ -1,0 +1,13 @@
+thinking: medium
+thinking_why: It writes several linked documents from one brief.
+new_slug: hiring-packet-builder
+name: Hiring packet builder
+summary: Give it your hiring brief. Get a job post, interview guide with scoring rubric, and an offer letter template.
+job: hire-people
+headline: Hiring packet builder
+subhead: Give it your hiring brief. Get a job post, interview guide with scoring rubric, and an offer letter template.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your accounts and files.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.

@@ -1,0 +1,32 @@
+slug: skill-portability-checker
+name: Skill portability checker
+summary: Point it at your skill folder. Get a list of mistakes that stop it loading in other AI tools, with fixes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: skill_files
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Pro Skill Packs
+  repo: proskillpacks/skills
+  path: skills/developers/skill-portability-check
+  url: https://github.com/proskillpacks/skills/tree/main/skills/developers/skill-portability-check
+  licence: MIT
+  licence_file: LICENSE
+  commit: e8c3393
+  original_name: skill-portability-check
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: skill-portability-check skill
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/developers/skill-portability-check
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

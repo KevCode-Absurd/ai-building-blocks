@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Large structures need careful solver choices.
+new_slug: large-antenna-analyzer
+name: Large antenna analyzer
+summary: Describe a dish or reflector antenna. Get a built model with patterns and performance checked.
+job: build-software
+headline: Large antenna analyzer
+subhead: Describe a dish or reflector antenna. Get a built model with patterns and performance checked.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Antenna Toolbox.

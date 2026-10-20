@@ -1,0 +1,34 @@
+slug: asp-net-web-app-builder
+name: ASP.NET web app builder
+summary: Describe the web app or API. Get ASP.NET Core code that follows current official guidance.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/aspnet-core
+  url: https://github.com/openai/skills/tree/main/skills/.curated/aspnet-core
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: aspnet-core
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: aspnet-core skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/aspnet-core
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

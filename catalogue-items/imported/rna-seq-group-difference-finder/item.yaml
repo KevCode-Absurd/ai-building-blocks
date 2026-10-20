@@ -1,0 +1,33 @@
+slug: rna-seq-group-difference-finder
+name: RNA-seq group difference finder
+summary: Give it gene counts for two or more groups. Get which genes changed, with checks, corrected p-values and plots.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: image
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/pydeseq2
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/pydeseq2
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: pydeseq2
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pydeseq2 skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/pydeseq2
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

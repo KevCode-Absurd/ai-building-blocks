@@ -1,0 +1,32 @@
+slug: api-design-reviewer
+name: API design reviewer
+summary: Give it your API spec. Get a scorecard, flagged breaking changes and fixes for naming and errors.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/api-design-reviewer
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/api-design-reviewer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: api-design-reviewer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: api-design-reviewer skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/api-design-reviewer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,33 @@
+slug: startup-runway-forecaster
+name: Startup runway forecaster
+summary: Give it your monthly cash data. Get a forecast of burn and the month cash runs out.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/predictive-burn-rate
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/predictive-burn-rate
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: predictive-burn-rate
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: predictive-burn-rate skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/predictive-burn-rate
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

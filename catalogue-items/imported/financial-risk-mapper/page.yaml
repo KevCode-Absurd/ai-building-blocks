@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It lists risks and judges their size.
+new_slug: financial-risk-mapper
+name: Financial risk mapper
+summary: Describe your exposures. Get risks listed and sized, with stress test scenarios and ways to limit each.
+job: money-and-investing
+headline: Financial risk mapper
+subhead: Describe your exposures. Get risks listed and sized, with stress test scenarios and ways to limit each.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

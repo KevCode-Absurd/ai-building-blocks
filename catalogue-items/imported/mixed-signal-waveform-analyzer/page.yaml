@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Measurements need exact method choices.
+new_slug: mixed-signal-waveform-analyzer
+name: Mixed-signal waveform analyzer
+summary: Give it circuit waveform data. Get phase noise, jitter, timing and ADC accuracy measured.
+job: build-software
+headline: Mixed-signal waveform analyzer
+subhead: Give it circuit waveform data. Get phase noise, jitter, timing and ADC accuracy measured.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Mixed-Signal Blockset.

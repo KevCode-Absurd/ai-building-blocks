@@ -1,0 +1,32 @@
+slug: cross-docking-planner
+name: Cross-docking planner
+summary: Describe your inbound and outbound loads. Get a plan to move goods truck to truck without storing them.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/cross-docking
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/cross-docking
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: cross-docking
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cross-docking skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/cross-docking
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,33 @@
+slug: quick-time-series-forecaster
+name: Quick time series forecaster
+summary: Give it a CSV of past values. Get a forecast with ranges and a test on held-back data, with no model training.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: image
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/timesfm-forecasting
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/timesfm-forecasting
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: timesfm-forecasting
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: timesfm-forecasting skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/timesfm-forecasting
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

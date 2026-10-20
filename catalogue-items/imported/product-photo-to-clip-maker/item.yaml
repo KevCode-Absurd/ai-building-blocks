@@ -1,0 +1,37 @@
+slug: product-photo-to-clip-maker
+name: Product photo to clip maker
+summary: Give it a main product photo. Get a 3 to 5 second video for your listing. Your video model makes it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: product_photos
+    required: true
+outputs:
+  - type: video_ads
+uses: []
+origin: imported
+source:
+  by: dLazy
+  repo: dlazy-ai/ecommerce-skills
+  path: skills/main-image-video
+  url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/main-image-video
+  licence: MIT
+  licence_file: LICENSE
+  commit: 87791a1
+  original_name: main-image-video
+  author: dLazy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: main-image-video skill
+    by: dLazy
+    url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/main-image-video
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: dLazy
+    url: https://github.com/dlazy-ai
+    used: Wrote the skill; dLazy shared it in their collection.

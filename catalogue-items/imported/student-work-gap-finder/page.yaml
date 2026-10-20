@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It compares the work to each criterion and sorts the gaps.
+new_slug: student-work-gap-finder
+name: Student work gap finder
+summary: Paste a piece of student work and the criteria. Get exactly what is missing, why, and what feedback to give.
+job: teach-and-train
+headline: Student work gap finder
+subhead: Paste a piece of student work and the criteria. Get exactly what is missing, why, and what feedback to give.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

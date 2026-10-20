@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It runs one standard formula and explains the result.
+new_slug: one-time-stock-quantity-picker
+name: One-time stock quantity picker
+summary: Give it cost, price and demand range for a short-life item. Get the best order amount and the risk of each choice.
+job: plan-supply-chain
+headline: One-time stock quantity picker
+subhead: Give it cost, price and demand range for a short-life item. Get the best order amount and the risk of each choice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code (Python).

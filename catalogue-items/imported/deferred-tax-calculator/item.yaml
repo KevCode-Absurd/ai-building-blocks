@@ -1,0 +1,33 @@
+slug: deferred-tax-calculator
+name: Deferred tax calculator
+summary: Give it asset and liability figures. Get deferred tax, whether it can be used, and a tax rate reconciliation.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: document
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/deferred-tax
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/deferred-tax
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: deferred-tax
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: deferred-tax skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/deferred-tax
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

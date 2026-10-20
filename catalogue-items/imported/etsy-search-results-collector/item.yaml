@@ -1,0 +1,40 @@
+slug: etsy-search-results-collector
+name: Etsy search results collector
+summary: Give it a keyword. Get Etsy listings with rank, price and shop. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:Apify
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/etsy-search-listings
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/etsy-search-listings
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: etsy-search-listings
+  author: GeminiGeorge22
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: etsy-search-listings skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/etsy-search-listings
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: GeminiGeorge22
+    url: ""
+    used: Wrote the skill; sickn33 shared it in their collection.

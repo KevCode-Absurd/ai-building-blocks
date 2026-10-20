@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reviews rules against least access.
+new_slug: aws-access-policy-reviewer
+name: AWS access policy reviewer
+summary: Give it your IAM policies. Get risky permissions found and tighter versions that grant only what is needed.
+job: secure-code
+headline: AWS access policy reviewer
+subhead: Give it your IAM policies. Get risky permissions found and tighter versions that grant only what is needed.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

@@ -1,0 +1,37 @@
+slug: test-framework-migrator
+name: Test framework migrator
+summary: Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them converted to the framework you choose.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/test-framework-migration-skill
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/test-framework-migration-skill
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: test-framework-migration-skill
+  author: LambdaTest
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: test-framework-migration-skill skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/test-framework-migration-skill
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: LambdaTest
+    url: https://github.com/LambdaTest
+    used: Wrote the skill; sickn33 shared it in their collection.

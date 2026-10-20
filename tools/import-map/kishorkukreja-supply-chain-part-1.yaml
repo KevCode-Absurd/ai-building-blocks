@@ -1,0 +1,447 @@
+# kishorkukreja/awesome-supply-chain, part 1 of 2
+"kishorkukreja/awesome-supply-chain:skills/1d-cutting-stock":
+  name: Rod and pipe cutting planner
+  summary: Give it your stock lengths and cut list. Get cutting patterns that use the fewest pieces and waste the least.
+  task: plan-supply-chain
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It tests many cut combinations.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/2d-cutting-stock":
+  name: Sheet cutting planner
+  summary: Give it your sheet size and the panels you need. Get cutting layouts that waste the least material.
+  task: plan-supply-chain
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It tests many layouts.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/3d-bin-packing":
+  name: Truck loading planner (bin packing)
+  summary: Give it your box sizes and counts. Get a plan to pack them into the fewest trucks or containers.
+  task: plan-supply-chain
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Packing many sizes takes careful trial and error.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/load-building-optimization":
+  name: Truck load builder
+  summary: Give it your orders and truck sizes. Get orders grouped into full truck loads that cost less to ship.
+  task: plan-supply-chain
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It groups orders by size, weight and place.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/knapsack-problems":
+  name: Budget and space picker (knapsack)
+  summary: Give it items with values and costs. Get the best set to pick within your budget, weight or space limit.
+  task: plan-supply-chain
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It compares many item combinations.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/capacitated-vrp":
+  name: Delivery route planner (vehicle routing)
+  summary: Give it your stops and truck limits. Get routes that reach every stop with the fewest miles.
+  task: plan-supply-chain
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Routes with load limits are hard to get right.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/multi-depot-vrp":
+  name: Multi-warehouse route planner
+  summary: Give it your warehouses and stops. Get which warehouse serves each stop and the route for every truck.
+  task: plan-supply-chain
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It splits stops across sites and then routes them.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/dsd-route-optimization":
+  name: Store delivery route planner
+  summary: Give it your stores, order sizes and delivery windows. Get weekly truck routes that cover every store at less cost.
+  task: plan-supply-chain
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Time windows and visit rules add many limits.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/last-mile-delivery":
+  name: Last-mile delivery planner
+  summary: Describe your local deliveries. Get ways to cut cost per drop, speed up delivery and plan same-day service.
+  task: plan-supply-chain
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It weighs cost, speed and customer needs.
+  inputs: [ { type: spreadsheet, required: false } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/economic-order-quantity":
+  name: Order quantity calculator
+  summary: Give it demand, order cost and holding cost. Get the order size with the lowest total cost, with discounts compared.
+  task: plan-supply-chain
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It is a clear formula with a few variations.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/multi-echelon-inventory":
+  name: Warehouse stock level planner
+  summary: Give it your warehouses and demand. Get how much stock to hold at each level of your network.
+  task: plan-supply-chain
+  role: compress
+  level: expert
+  thinking: high
+  thinking_why: Stock at one site changes what the others need.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/cycle-counting":
+  name: Stock count program planner
+  summary: Give it your item list. Get a rolling count schedule, who counts what, and how to trace count mismatches.
+  task: plan-supply-chain
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows a standard counting routine.
+  inputs: [ { type: spreadsheet, required: false } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/demand-forecasting":
+  name: Demand forecast planner
+  summary: Give it your past sales. Get a forecast, the best-fit method and a way to track how far off it is.
+  task: plan-supply-chain
+  role: compress
+  level: intermediate
+  thinking: high
+  thinking_why: Picking a method depends on the sales pattern.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan }, { type: spreadsheet } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/demand-supply-matching":
+  name: Supply and demand balancer
+  summary: Give it your stock and open orders. Get a plan to fill the right orders first when you cannot fill them all.
+  task: plan-supply-chain
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It ranks orders against limited stock.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/master-production-scheduling":
+  name: Production plan builder
+  summary: Give it your sales forecast and capacity. Get a week-by-week plan of what to make and when.
+  task: plan-supply-chain
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It balances demand against what you can make.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/capacity-planning":
+  name: Production capacity checker
+  summary: Give it demand and what you can make. Get your bottlenecks and a plan to close the gap.
+  task: plan-supply-chain
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It compares demand with limits step by step.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/job-shop-scheduling":
+  name: Machine job scheduler
+  summary: Give it your jobs and machines. Get a job order that finishes everything sooner.
+  task: plan-supply-chain
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Job order choices multiply fast.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/assembly-line-balancing":
+  name: Assembly line balancer
+  summary: Give it your work steps and times. Get steps split across stations so none waits or overloads.
+  task: plan-supply-chain
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It assigns steps under order rules.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/distribution-center-network":
+  name: Warehouse location planner
+  summary: Give it your customers and demand. Get how many warehouses you need and where to put them.
+  task: plan-supply-chain
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Cost and delivery speed pull in different directions.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/cross-docking":
+  name: Cross-docking planner
+  summary: Describe your inbound and outbound loads. Get a plan to move goods truck to truck without storing them.
+  task: plan-supply-chain
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It needs timing between arrivals and departures.
+  inputs: [ { type: spreadsheet, required: false } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/ecommerce-fulfillment":
+  name: Online order fulfillment planner
+  summary: Give it your order volume and setup. Get ways to pick, pack and ship faster and cheaper, with returns handled.
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It weighs in-house work against outside help.
+  inputs: [ { type: spreadsheet, required: false } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/freight-optimization":
+  name: Freight mode and carrier picker
+  summary: Give it your shipments. Get the cheapest mix of modes and carriers, and where to combine loads.
+  task: plan-supply-chain
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It compares cost against transit time.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/control-tower-design":
+  name: Supply chain dashboard designer
+  summary: Tell it what you ship and from where. Get a one-screen design showing delays, low stock and orders at risk.
+  task: track-numbers
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It picks which numbers deserve a place on screen.
+  inputs: [ { type: spreadsheet, required: false } ]
+  outputs: [ { type: document } ]
+"kishorkukreja/awesome-supply-chain:skills/compliance-management":
+  name: Trade compliance checklist builder
+  summary: Give it what you make, import and export. Get a checklist of the rules that apply and who owns each.
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It matches your business to the right rules.
+  inputs: [ { type: document, required: false } ]
+  outputs: [ { type: audit_report } ]
+"kishorkukreja/awesome-supply-chain:skills/contract-management":
+  name: Supplier contract manager
+  summary: Give it your supplier deals. Get a renewal calendar, terms to push for and a way to track broken promises.
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads terms and flags what to act on.
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/carbon-footprint-tracking":
+  name: Supply chain carbon tracker
+  summary: Give it your shipping, energy and supplier data. Get emissions worked out by source, plus ways to cut them.
+  task: track-numbers
+  role: compress
+  level: advanced
+  thinking: high
+  thinking_why: Emission math needs the right method for each source.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: plan } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/circular-economy":
+  name: Reuse and returns planner
+  summary: Tell it your products. Get a plan to reuse, refurbish or recycle them and take back returns.
+  task: plan-supply-chain
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It weighs each product end of life option.
+  inputs: [ { type: spreadsheet, required: false } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/lean-manufacturing":
+  name: Waste reduction planner
+  summary: Describe your process. Get a map of waste, a 5S plan and quick fixes ranked by payoff.
+  task: plan-supply-chain
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It must spot waste in your own steps.
+  inputs: [ { type: document, required: false } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/maintenance-planning":
+  name: Equipment maintenance planner
+  summary: Give it your machines and repair history. Get a service schedule and spare parts list that cut breakdowns.
+  task: plan-supply-chain
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It weighs repair cost against downtime.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/markdown-optimization":
+  name: Clearance discount planner
+  summary: Give it your slow stock and past sales. Get when and how much to cut prices to sell out.
+  task: set-prices
+  role: compress
+  level: advanced
+  thinking: high
+  thinking_why: Discounts change demand in ways you must model.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"kishorkukreja/awesome-supply-chain:skills/fleet-management":
+  name: Vehicle fleet planner
+  summary: Give it your vehicles and costs. Get how many you need and when to replace each one.
+  task: plan-supply-chain
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It compares running cost against replacement cost.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/co-packing-management":
+  name: Co-packer picker
+  summary: Tell it what you need made or packed. Get a way to pick a co-packer and a plan to manage the deal.
+  task: plan-supply-chain
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It scores outside makers on cost, quality and fit.
+  inputs: [ { type: document, required: false } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/hospitality-procurement":
+  name: Hotel and restaurant buying planner
+  summary: Give it what you buy. Get a sourcing plan, a supplier shortlist and negotiation points to cut costs.
+  task: plan-supply-chain
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It ranks spend by category and supplier.
+  inputs: [ { type: spreadsheet, required: false } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/hotel-inventory-management":
+  name: Hotel room pricing planner
+  summary: Give it your bookings and rates. Get room prices, overbooking limits and a channel mix that fill rooms at the best rate.
+  task: set-prices
+  role: compress
+  level: advanced
+  thinking: high
+  thinking_why: Price, demand and no-shows interact.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/food-beverage-supply-chain":
+  name: Food supply chain planner
+  summary: Describe your food business. Get a plan for shelf life, safe handling, tracing and cold storage.
+  task: plan-supply-chain
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: Food safety and freshness limits shape every step.
+  inputs: [ { type: document, required: false } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/hospital-logistics":
+  name: Hospital supply stock planner
+  summary: Give it your supply usage. Get par levels, expiry rules and an emergency stock plan.
+  task: plan-supply-chain
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: Stock rules differ by item risk.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/electronics-supply-chain":
+  name: Electronics parts sourcing planner
+  summary: Give it your parts list. Get a plan for scarce parts, long lead times and leftover stock.
+  task: plan-supply-chain
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It weighs supply risk across many parts.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+"kishorkukreja/awesome-supply-chain:skills/aerospace-supply-chain":
+  skip: Narrow industry overview for one sector (aerospace, automotive, cruise, drilling, energy, fuel, clinical trials, medical devices, air cargo). Most readers cannot use it.
+"kishorkukreja/awesome-supply-chain:skills/automotive-supply-chain":
+  skip: Narrow industry overview for one sector (aerospace, automotive, cruise, drilling, energy, fuel, clinical trials, medical devices, air cargo). Most readers cannot use it.
+"kishorkukreja/awesome-supply-chain:skills/cruise-supply-chain":
+  skip: Narrow industry overview for one sector (aerospace, automotive, cruise, drilling, energy, fuel, clinical trials, medical devices, air cargo). Most readers cannot use it.
+"kishorkukreja/awesome-supply-chain:skills/drilling-logistics":
+  skip: Narrow industry overview for one sector (aerospace, automotive, cruise, drilling, energy, fuel, clinical trials, medical devices, air cargo). Most readers cannot use it.
+"kishorkukreja/awesome-supply-chain:skills/energy-logistics":
+  skip: Narrow industry overview for one sector (aerospace, automotive, cruise, drilling, energy, fuel, clinical trials, medical devices, air cargo). Most readers cannot use it.
+"kishorkukreja/awesome-supply-chain:skills/energy-storage-optimization":
+  skip: Narrow industry overview for one sector (aerospace, automotive, cruise, drilling, energy, fuel, clinical trials, medical devices, air cargo). Most readers cannot use it.
+"kishorkukreja/awesome-supply-chain:skills/fuel-distribution":
+  skip: Narrow industry overview for one sector (aerospace, automotive, cruise, drilling, energy, fuel, clinical trials, medical devices, air cargo). Most readers cannot use it.
+"kishorkukreja/awesome-supply-chain:skills/clinical-trial-logistics":
+  skip: Narrow industry overview for one sector (aerospace, automotive, cruise, drilling, energy, fuel, clinical trials, medical devices, air cargo). Most readers cannot use it.
+"kishorkukreja/awesome-supply-chain:skills/medical-device-distribution":
+  skip: Narrow industry overview for one sector (aerospace, automotive, cruise, drilling, energy, fuel, clinical trials, medical devices, air cargo). Most readers cannot use it.
+"kishorkukreja/awesome-supply-chain:skills/airline-cargo-optimization":
+  skip: Narrow industry overview for one sector (aerospace, automotive, cruise, drilling, energy, fuel, clinical trials, medical devices, air cargo). Most readers cannot use it.
+"kishorkukreja/awesome-supply-chain:skills/2d-bin-packing":
+  skip: Near-copy of another skill in this set that does the same job more clearly.
+"kishorkukreja/awesome-supply-chain:skills/guillotine-cutting":
+  skip: Near-copy of another skill in this set that does the same job more clearly.
+"kishorkukreja/awesome-supply-chain:skills/nesting-optimization":
+  skip: Near-copy of another skill in this set that does the same job more clearly.
+"kishorkukreja/awesome-supply-chain:skills/container-loading-optimization":
+  skip: Near-copy of another skill in this set that does the same job more clearly.
+"kishorkukreja/awesome-supply-chain:skills/flow-shop-scheduling":
+  skip: Near-copy of another skill in this set that does the same job more clearly.
+"kishorkukreja/awesome-supply-chain:skills/dynamic-lot-sizing":
+  skip: Near-copy of another skill in this set that does the same job more clearly.
+"kishorkukreja/awesome-supply-chain:skills/lot-sizing-problems":
+  skip: Near-copy of another skill in this set that does the same job more clearly.
+"kishorkukreja/awesome-supply-chain:skills/facility-location-problem":
+  skip: Near-copy of another skill in this set that does the same job more clearly.
+"kishorkukreja/awesome-supply-chain:skills/hub-location-problem":
+  skip: Near-copy of another skill in this set that does the same job more clearly.
+"kishorkukreja/awesome-supply-chain:skills/cpg-network-design":
+  skip: Near-copy of another skill in this set that does the same job more clearly.
+"kishorkukreja/awesome-supply-chain:skills/dock-door-assignment":
+  skip: Near-copy of another skill in this set that does the same job more clearly.
+"kishorkukreja/awesome-supply-chain:skills/inventory-routing-problem":
+  skip: Near-copy of another skill in this set that does the same job more clearly.
+"kishorkukreja/awesome-supply-chain:skills/inventory-optimization":
+  skip: Near-copy of another skill in this set that does the same job more clearly.
+"kishorkukreja/awesome-supply-chain:skills/column-generation":
+  skip: Method lesson for specialist maths with no usable plan or output for a business owner.
+"kishorkukreja/awesome-supply-chain:skills/constraint-programming":
+  skip: Method lesson for specialist maths with no usable plan or output for a business owner.
+"kishorkukreja/awesome-supply-chain:skills/metaheuristic-optimization":
+  skip: Method lesson for specialist maths with no usable plan or output for a business owner.
+"kishorkukreja/awesome-supply-chain:skills/multi-objective-optimization":
+  skip: Method lesson for specialist maths with no usable plan or output for a business owner.
+"kishorkukreja/awesome-supply-chain:skills/digital-twin-modeling":
+  skip: Method lesson for specialist maths with no usable plan or output for a business owner.
+"kishorkukreja/awesome-supply-chain:skills/ml-supply-chain":
+  skip: Method lesson for specialist maths with no usable plan or output for a business owner.
+"kishorkukreja/awesome-supply-chain:skills/computer-vision-warehouse":
+  skip: Code samples for camera models that need trained image models and hardware, with no plan a reader can use.

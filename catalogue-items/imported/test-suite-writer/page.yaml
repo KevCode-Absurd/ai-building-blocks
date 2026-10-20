@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows test patterns but must understand your code.
+new_slug: test-suite-writer
+name: Test suite writer
+summary: Point it at your code. Get unit, integration and end-to-end tests, run with a coverage report.
+job: test-and-fix-code
+headline: Test suite writer
+subhead: Point it at your code. Get unit, integration and end-to-end tests, run with a coverage report.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

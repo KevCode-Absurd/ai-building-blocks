@@ -1,0 +1,32 @@
+slug: training-curve-viewer
+name: Training curve viewer
+summary: Give it your training code. Get live charts of loss and accuracy, plus a way to compare runs.
+category: general
+boards: []
+type: skill
+role: render
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 13-mlops/tensorboard
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/13-mlops/tensorboard
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: tensorboard
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: tensorboard skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/13-mlops/tensorboard
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

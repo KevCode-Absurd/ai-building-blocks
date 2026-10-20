@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It transcribes then summarises with a fixed format.
+new_slug: meeting-notes-maker
+name: Meeting notes maker
+summary: Give it meeting audio. Get a transcript by speaker, with a summary, decisions and action items.
+job: organise-work
+headline: Meeting notes maker
+subhead: Give it meeting audio. Get a transcript by speaker, with a summary, decisions and action items.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read audio files.

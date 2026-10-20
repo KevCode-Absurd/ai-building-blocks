@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It pulls a list and fetches text for each item.
+new_slug: youtube-playlist-reader
+name: YouTube playlist reader
+summary: Give it a playlist. Get every video listed, with transcripts for the ones you want. Collects data from websites.
+job: research-topics
+headline: YouTube playlist reader
+subhead: Give it a playlist. Get every video listed, with transcripts for the ones you want. Collects data from websites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your TranscriptAPI key.

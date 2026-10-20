@@ -1,0 +1,32 @@
+slug: retention-cohort-analyst
+name: Retention cohort analyst
+summary: Give it user activity data. Get retention curves by sign-up group, feature adoption trends and what they suggest.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-data-analytics/skills/cohort-analysis
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-data-analytics/skills/cohort-analysis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: cohort-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cohort-analysis skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-data-analytics/skills/cohort-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

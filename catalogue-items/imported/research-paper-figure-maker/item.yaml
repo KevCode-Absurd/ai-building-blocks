@@ -1,0 +1,32 @@
+slug: research-paper-figure-maker
+name: Research paper figure maker
+summary: Give it your results or a method section. Get charts and architecture diagrams that look ready for a paper.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 20-ml-paper-writing/academic-plotting
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/20-ml-paper-writing/academic-plotting
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: academic-plotting
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: academic-plotting skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/20-ml-paper-writing/academic-plotting
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It condenses facts into a set template.
+new_slug: on-call-handoff-writer
+name: On-call handoff writer
+summary: Give it your shift alerts and open issues. Get a handoff note the next person can act on at once.
+job: organise-work
+headline: On-call handoff writer
+subhead: Give it your shift alerts and open issues. Get a handoff note the next person can act on at once.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

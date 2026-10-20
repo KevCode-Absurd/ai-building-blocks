@@ -1,0 +1,1227 @@
+# seb1n/awesome-ai-agent-skills (MIT)
+"seb1n/awesome-ai-agent-skills:agent-security/skill-supply-chain-audit":
+  skip: Checks skills for hidden risks, which few people need and our own skill checks already cover.
+"seb1n/awesome-ai-agent-skills:context-engineering/context-injection":
+  skip: Narrow prompt-plumbing skill for builders; overlaps context-optimization and adds little for most people.
+"seb1n/awesome-ai-agent-skills:context-engineering/context-ranking":
+  skip: Narrow retrieval-tuning skill for builders; overlaps context-optimization.
+"seb1n/awesome-ai-agent-skills:context-engineering/context-retrieval":
+  skip: Search-index plumbing for builders, not a job most people hire for.
+"seb1n/awesome-ai-agent-skills:security/threat-modeling":
+  skip: Same job in the same form as the openai/skills threat model skill we already list, so we keep one.
+"seb1n/awesome-ai-agent-skills:ai-ml-operations/data-labeling":
+  skip: Narrow machine-learning tooling skill with little use outside ML teams.
+"seb1n/awesome-ai-agent-skills:agent-engineering/agent-evaluation":
+  name: AI agent tester
+  summary: "Describe your AI agent. Get a test set, scoring rules and a release decision memo you can trust."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Good tests need careful choices about what counts as success."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: test_report, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:agent-engineering/agent-observability":
+  name: AI agent monitoring planner
+  summary: "Describe your AI agent. Get a plan to trace its steps, costs and errors without logging private data."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows a set method but depends on your setup."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:agent-engineering/human-in-the-loop":
+  name: AI approval gate designer
+  summary: "Describe what your AI agent does. Get clear rules for which actions need a person to approve and when to escalate."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Wrong gates cause harm or friction, so it weighs each action."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:agent-engineering/mcp-server-building":
+  name: MCP tool server builder
+  summary: "Say what tools your AI should reach. Get a safe MCP server with clear tool rules and tests."
+  task: connect-tools
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Tool contracts and permissions need careful design."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:agent-engineering/multi-agent-orchestration":
+  name: Multi-agent workflow planner
+  summary: "Give it a big task. Get a plan that splits it among AI agents with clear owners, handoffs and checks."
+  task: set-up-ai
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Splitting work well means thinking through dependencies and failures."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:agent-engineering/tool-schema-design":
+  name: AI tool definition writer
+  summary: "Describe what a tool does. Get a clear, safe definition your AI can call without guessing."
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows schema rules but judges each side effect."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:agent-security/agent-red-teaming":
+  name: AI agent attack tester
+  summary: "Give it your AI agent. Get a safe, authorized test plan and a report of where it can be tricked."
+  task: secure-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Finding weak spots takes creative, careful probing."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: security_report, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:agent-security/prompt-injection-defense":
+  name: Prompt injection defender
+  summary: "Describe your AI app. Get a threat map and fixes against hidden instructions in text it reads."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It must trace where untrusted text enters and what it can trigger."
+  inputs: [ { type: codebase, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: security_report, required: true } ]
+  needs: read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:ai-ml-operations/hyperparameter-tuning":
+  name: Model settings tuner
+  summary: "Give it a model and a compute budget. Get a tuning plan and the best settings found."
+  task: build-software
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: "It runs a set search but needs sound judgement on results."
+  inputs: [ { type: codebase, required: true }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:ai-ml-operations/ml-pipeline-creation":
+  name: Machine learning pipeline builder
+  summary: "Describe your data and goal. Get a repeatable pipeline from data prep to training, checks and release."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Many linked stages must work together and be repeatable."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:ai-ml-operations/model-deployment":
+  name: Model launch engineer
+  summary: "Give it a trained model. Get it running as a live service with an API and container."
+  task: ship-and-host
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: "It follows known deployment steps with some setup choices."
+  inputs: [ { type: codebase, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: deploy_url, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:ai-ml-operations/model-training":
+  name: Model training builder
+  summary: "Describe your data and goal. Get training code with data loading, checks and saved checkpoints."
+  task: build-software
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: "It follows standard training steps but picks designs per task."
+  inputs: [ { type: brief, required: true }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:api-and-integration/api-design":
+  name: REST API designer
+  summary: "Describe what your service does. Get a clean REST API plan with routes, status codes, paging and docs."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies design rules but weighs trade-offs for your case."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:api-and-integration/api-integration":
+  name: API connector builder
+  summary: "Name the service you need to reach. Get working code with sign-in, error handling and retries."
+  task: connect-tools
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows set patterns but depends on the other service."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and reach the internet
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:api-and-integration/graphql-api-design":
+  name: GraphQL schema designer
+  summary: "Describe your data. Get a GraphQL schema with fast resolvers, paging and performance patterns."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It applies known patterns to your data shape."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:api-and-integration/oauth-2-0-setup":
+  name: Sign-in flow setup helper
+  summary: "Say which app and service. Get a secure OAuth sign-in flow, with the right steps for your case."
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "Security steps are fixed but the right flow depends on your app."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:api-and-integration/webhook-setup":
+  name: Webhook receiver builder
+  summary: "Say which events to catch. Get a webhook receiver that checks signatures and handles repeats safely."
+  task: connect-tools
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows a known safe pattern with a few choices."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:code-and-development/code-documentation":
+  name: Code documentation writer
+  summary: "Point it at your code. Get docstrings, a README and usage guides that match what the code does."
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It reads code and writes standard docs."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  needs: read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:code-and-development/code-review":
+  name: Bug and security code reviewer
+  summary: "Give it a file or pull request. Get a review of bugs, security gaps, speed issues and style."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads carefully but follows a set checklist."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: feedback_notes, required: true } ]
+  needs: read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:code-and-development/debugging":
+  name: Error and log debugger
+  summary: "Give it an error, log or stack trace. Get the cause found and a fix that works."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "Finding root causes takes careful, step by step reasoning."
+  inputs: [ { type: codebase, required: true }, { type: question, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:code-and-development/refactoring":
+  name: Code cleanup planner
+  summary: "Point it at messy code. Get the problem spots named and cleaned up with proven patterns."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It spots known code smells and applies set fixes."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:code-and-development/testing":
+  name: Test suite writer
+  summary: "Point it at your code. Get unit, integration and end-to-end tests, run with a coverage report."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows test patterns but must understand your code."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: test_report, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:code-and-development/version-control":
+  name: Git workflow helper
+  summary: "Tell it your Git problem. Get branching, commits, merges and pull requests handled cleanly."
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "Git tasks follow well known steps."
+  inputs: [ { type: question, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:communication/chatbot-conversation-design":
+  name: Chatbot conversation designer
+  summary: "Describe your chatbot job. Get conversation flows with questions, error recovery and graceful fallbacks."
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans flows from a set method but needs good judgement."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:communication/email-drafting":
+  name: Email drafter
+  summary: "Say who it is for and what you need. Get one clear email with the right tone and a call to action."
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "One short message needs little planning."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:communication/meeting-transcription":
+  name: Meeting notes maker
+  summary: "Give it meeting audio. Get a transcript by speaker, with a summary, decisions and action items."
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It transcribes then summarises with a fixed format."
+  inputs: [ { type: audio, required: true } ]
+  outputs: [ { type: meeting_notes, required: true } ]
+  needs: run code and read audio files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:communication/presentation-creation":
+  name: Presentation builder
+  summary: "Give it an outline or document. Get a polished slide deck for your audience in Marp, reveal.js or PPTX."
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It plans the story, then builds slides to a format."
+  inputs: [ { type: document, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: slide_deck, required: true } ]
+  needs: run code and save files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:communication/report-generation":
+  name: Report builder
+  summary: "Give it your data. Get a clear report with charts, such as a sprint retro, financial summary or postmortem."
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks a template, then fills it from your data."
+  inputs: [ { type: spreadsheet, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: document, required: true } ]
+  needs: run code and save files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:context-engineering/context-compression":
+  name: Context shrinker
+  summary: "Give it long material and a size limit. Get a shorter version that keeps decisions, facts and open questions."
+  task: think-and-decide
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It trades detail for length and must keep what matters."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: source_text, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:context-engineering/context-optimization":
+  name: Context package cleaner
+  summary: "Give it a pile of notes and documents. Get a deduplicated, ordered set that fits your size limit."
+  task: think-and-decide
+  role: compress
+  level: advanced
+  thinking: medium
+  thinking_why: "It filters and orders material by what the task needs."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: source_text, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:customer-success/churn-analysis":
+  name: Churn risk finder
+  summary: "Give it usage, engagement and support data. Get at-risk accounts scored with ideas for how to step in."
+  task: understand-customers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs several signals per account."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:customer-success/customer-feedback-analysis":
+  name: Feedback theme finder
+  summary: "Give it NPS, CSAT or open comments. Get themes, trends and an insight report you can act on."
+  task: understand-customers
+  role: compress
+  level: beginner
+  thinking: medium
+  thinking_why: "It reads many comments and groups them into themes."
+  inputs: [ { type: voc_reviews, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:customer-success/knowledge-base-article-writing":
+  name: Help article writer
+  summary: "Give it support questions and product docs. Get clear, searchable help center articles and FAQs."
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It turns known facts into a standard article format."
+  inputs: [ { type: source_text, required: true }, { type: question, required: false } ]
+  outputs: [ { type: document, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:customer-success/onboarding-playbook-creation":
+  name: Customer onboarding planner
+  summary: "Describe your product and customers. Get phased onboarding steps, email templates, milestones and owners."
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It lays out a phased plan from a set structure."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:customer-success/ticket-triage":
+  name: Support ticket sorter
+  summary: "Give it incoming tickets. Get each one classified, ranked by severity, routed and given a first reply."
+  task: help-customers
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "Sorting tickets by clear rules needs little deep thought."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:data-and-analytics/data-analysis":
+  name: Data analyst
+  summary: "Give it a dataset and a question. Get evidence-based answers with trends, tests and correlations."
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks methods that fit the question and the data."
+  inputs: [ { type: spreadsheet, required: true }, { type: question, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  needs: run code and open spreadsheets
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:data-and-analytics/data-cleaning":
+  name: Data cleaner
+  summary: "Give it a messy dataset. Get missing values, duplicates, wrong types and outliers fixed."
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "Cleaning follows clear rules."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  needs: run code and open spreadsheets
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:data-and-analytics/data-visualization":
+  name: Chart maker
+  summary: "Give it your data. Get clear charts and dashboards made with matplotlib, seaborn or plotly."
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It picks a chart type, then draws it with code."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: image, required: true } ]
+  needs: run code and save files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:data-and-analytics/exploratory-data-analysis":
+  name: New dataset explorer
+  summary: "Give it a new dataset. Get its structure, spread, links and odd spots mapped before you use it."
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It profiles the data and judges what looks off."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run code and open spreadsheets
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:data-and-analytics/sql-query-generation":
+  name: SQL query writer
+  summary: "Describe what you want to know. Get a working SQL query, using joins, groups, windows and CTEs as needed."
+  task: track-numbers
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "Turning a clear question into SQL is a standard task."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:database/database-backup":
+  name: Database backup setter
+  summary: "Name your database. Get full, incremental and point-in-time backups set up and tested."
+  task: ship-and-host
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows set steps but must match your database."
+  inputs: [ { type: codebase, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and reach your database
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:database/database-migration":
+  name: Database migration writer
+  summary: "Describe the schema change. Get a versioned migration that runs forward and rolls back safely."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows migration tool rules and plans a safe rollback."
+  inputs: [ { type: codebase, required: true }, { type: brief, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:database/database-schema-design":
+  name: Database schema designer
+  summary: "Describe your app. Get tables, links, indexes and rules in a clean, normalized schema."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans a structure from your needs with set design rules."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:database/database-seeding":
+  name: Test data seeder
+  summary: "Describe your tables. Get realistic, repeatable test data loaded for development and staging."
+  task: test-and-fix-code
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It generates data from your schema by clear rules."
+  inputs: [ { type: codebase, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:database/query-optimization":
+  name: Slow query fixer
+  summary: "Give it a slow SQL query. Get the cause found and a faster version with indexes where needed."
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Reading plans and finding the real bottleneck is careful work."
+  inputs: [ { type: codebase, required: true }, { type: question, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and reach your database
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:design-and-ui-ux/accessibility-testing":
+  name: Accessibility auditor
+  summary: "Give it your web page. Get WCAG problems listed with severity and code fixes."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It checks against a fixed standard but judges each case."
+  inputs: [ { type: web_app, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run code and open a browser
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:design-and-ui-ux/frontend-design":
+  name: Interface builder
+  summary: "Describe the screens. Get responsive, accessible components with a design system and dark mode."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans a system first, then builds it."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: web_app, required: true } ]
+  needs: run code and open a browser
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:design-and-ui-ux/logo-design":
+  name: Logo and brand kit designer
+  summary: "Describe your brand. Get logo directions with colors, type, file formats and usage rules."
+  task: design-work
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It makes design choices, then sets rules around them."
+  inputs: [ { type: brief, required: true }, { type: brand_brain, required: false } ]
+  outputs: [ { type: brand_guide, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:design-and-ui-ux/user-flow-mapping":
+  name: User flow mapper
+  summary: "Describe what users do. Get a flow diagram with choices, error states and drop-off points."
+  task: build-product
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It maps paths and edge cases from your description."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_file, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:design-and-ui-ux/wireframing":
+  name: Wireframe drafter
+  summary: "Describe the screens. Get text wireframes at three detail levels, with parts, behavior and screen sizes."
+  task: design-work
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It lays out screens and notes how each part behaves."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_file, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:devops-and-infrastructure/ci-cd":
+  name: Build and release pipeline setter
+  summary: "Describe your project. Get a CI/CD pipeline that builds, tests and ships across environments."
+  task: ship-and-host
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows known pipeline patterns for your stack."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:devops-and-infrastructure/cloud-monitoring":
+  name: Cloud monitoring setter
+  summary: "Name your app and cloud. Get metrics, logs, traces and alerts set up to see health in real time."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows monitoring patterns, tuned to your setup."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:devops-and-infrastructure/docker-compose-setup":
+  name: Docker Compose setter
+  summary: "Describe your app services. Get a Docker Compose setup with networks, volumes and settings."
+  task: ship-and-host
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "Compose files follow a clear, known structure."
+  inputs: [ { type: codebase, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:devops-and-infrastructure/infrastructure-as-code":
+  name: Cloud setup coder
+  summary: "Describe the cloud setup you need. Get Terraform, Pulumi or CloudFormation code that builds it the same way every time."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It writes declarative code, with care for safe changes."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:devops-and-infrastructure/kubernetes-deployment":
+  name: Kubernetes deployer
+  summary: "Give it your app. Get manifests, Helm charts and autoscaling so it runs on Kubernetes."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows known manifest patterns for your app."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:documents-and-files/pdf-processing":
+  name: PDF toolkit
+  summary: "Give it a PDF. Get text pulled out, pages merged, split, filled, redacted or checked, with the original kept safe."
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "PDF jobs follow fixed steps."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  needs: run code and save files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:documents-and-files/spreadsheet-analysis":
+  name: Spreadsheet checker
+  summary: "Give it a spreadsheet. Get it cleaned, reconciled and analysed with formulas and formatting kept intact."
+  task: work-with-files
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It profiles data and takes care not to break formulas."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  needs: run code and open spreadsheets
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:finance-and-accounting/budget-planning":
+  name: Department budget planner
+  summary: "Give it past spending and targets. Get a phased budget by department, with variance reports and fixes."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It builds numbers from history and checks them against targets."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:finance-and-accounting/expense-categorization":
+  name: Expense sorter
+  summary: "Give it transactions. Get each sorted by category, department and tax treatment."
+  task: money-and-investing
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "Sorting follows clear category rules."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:finance-and-accounting/financial-modeling":
+  name: Financial model builder
+  summary: "Give it assumptions and past results. Get a P&L, DCF and valuation model you can adjust."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Linked numbers and assumptions need careful logic."
+  inputs: [ { type: spreadsheet, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  needs: run code and open spreadsheets
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:finance-and-accounting/financial-report-generation":
+  name: Financial statement builder
+  summary: "Give it your books. Get a balance sheet, cash flow statement, P&L and executive summary."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It assembles linked statements that must agree."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:finance-and-accounting/invoice-processing":
+  name: Invoice checker
+  summary: "Give it invoices and purchase orders. Get fields pulled out, matched, checked and coded to the right accounts."
+  task: track-numbers
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It matches fields by clear rules."
+  inputs: [ { type: document, required: true }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:legal-and-compliance/compliance-checklist-generation":
+  name: Compliance readiness checklist builder
+  summary: "Name the framework, such as SOC 2 or GDPR. Get an evidence checklist with gaps ranked by priority."
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It maps rules to evidence and ranks the gaps."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:legal-and-compliance/contract-review":
+  name: Contract risk reviewer
+  summary: "Give it a contract. Get key clauses, duties and risks rated by severity. Not legal advice."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "Spotting risky clauses takes close, careful reading."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:legal-and-compliance/eu-ai-act-readiness":
+  name: EU AI Act readiness checker
+  summary: "Describe your AI systems. Get a first read of your risk level, duties and gaps under the EU AI Act."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Rules depend on role, scope and risk class, so it reasons through each."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:legal-and-compliance/license-analysis":
+  name: Open-source license checker
+  summary: "Give it your project dependencies. Get license clashes, duties and risks flagged."
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads license terms and compares them."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:legal-and-compliance/privacy-policy-drafting":
+  name: Privacy policy drafter
+  summary: "Describe your business and data use. Get privacy policy wording and a review checklist. Have a lawyer check it."
+  task: check-contracts
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It adapts standard wording to your data practices."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:legal-and-compliance/terms-of-service-generation":
+  name: Terms of service drafter
+  summary: "Describe your web app or marketplace. Get a Terms of Service draft to review with a lawyer."
+  task: check-contracts
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It adapts standard terms to your product."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:marketing-and-seo/analytics-reporting":
+  name: Marketing results reporter
+  summary: "Give it your marketing numbers. Get a report on trends, funnel drop-offs and what to do next."
+  task: read-ad-results
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads trends and links them to actions."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:marketing-and-seo/content-strategy":
+  name: Content strategy planner
+  summary: "Describe your audience and goals. Get an editorial plan that maps content to funnel stages."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans a calendar from audience and goals."
+  inputs: [ { type: brief, required: true }, { type: brand_brain, required: false } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:marketing-and-seo/keyword-research":
+  name: Keyword researcher
+  summary: "Name your topic. Get high-value search terms, search intent and content gaps to target."
+  task: get-found-in-search
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It groups terms by intent and spots gaps."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:marketing-and-seo/seo-optimization":
+  name: Page SEO optimizer
+  summary: "Give it a web page. Get on-page, speed and structured data fixes to rank better."
+  task: get-found-in-search
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It checks a set list of factors on the page."
+  inputs: [ { type: landing_page, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run code and open a browser
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:marketing-and-seo/social-media-posting":
+  name: Multi-platform post planner
+  summary: "Say what you want to share. Get posts made for each platform, with hooks and a posting plan."
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "Posts follow platform norms with simple choices."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:productivity-and-workflow/file-organization":
+  name: File organizer
+  summary: "Point it at a messy folder. Get files sorted by type, date or project, with duplicates found."
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "Sorting by clear rules is simple."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:productivity-and-workflow/meeting-scheduler":
+  name: Meeting scheduler
+  summary: "Say who to meet and when. Get time zones sorted, calendars checked and the best slots offered."
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It resolves times by clear rules."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  needs: check your calendar
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:productivity-and-workflow/note-taking":
+  name: Note organizer
+  summary: "Give it ideas or meeting notes. Get them captured, tagged and filed so you can find them later."
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "Filing notes follows a simple structure."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: meeting_notes, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:productivity-and-workflow/project-management":
+  name: Software project manager
+  summary: "Describe your project. Get work split into tasks, sprints tracked and status reports written."
+  task: organise-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It breaks work down and tracks it over time."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:productivity-and-workflow/task-automation":
+  name: Task automation builder
+  summary: "Name a repetitive task. Get a script, schedule or trigger that does it for you."
+  task: set-up-ai
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks the right trigger and writes the script."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code and read your files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:research-and-knowledge/deep-research":
+  name: Deep research reporter
+  summary: "Give it a topic. Get a cross-checked report built from many sources, with findings and sources."
+  task: test-an-idea
+  role: source
+  level: advanced
+  thinking: high
+  thinking_why: "It splits the question, compares sources and synthesises."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  needs: search the web
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:research-and-knowledge/fact-checking":
+  name: Claim fact-checker
+  summary: "Give it a text. Get each claim checked against trusted sources and scored by confidence."
+  task: think-and-decide
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "Each claim needs separate sourcing and weighing."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: search the web
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:research-and-knowledge/knowledge-graph-creation":
+  name: Text-to-knowledge-graph builder
+  summary: "Give it unstructured text. Get people, things and links pulled out and drawn as a graph."
+  task: think-and-decide
+  role: compress
+  level: advanced
+  thinking: medium
+  thinking_why: "It extracts entities and links with a set method."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: design_file, required: true } ]
+  needs: run code and save files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:research-and-knowledge/literature-review":
+  name: Literature reviewer
+  summary: "Give it a topic. Get a structured review of sources chosen by clear rules, with findings synthesised."
+  task: test-an-idea
+  role: source
+  level: advanced
+  thinking: high
+  thinking_why: "It sets criteria, screens sources and synthesises."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  needs: search the web
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:research-and-knowledge/summarization":
+  name: Summarizer
+  summary: "Give it long text. Get a short summary at the detail level you choose, from one text or many."
+  task: think-and-decide
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: "Summarising is a standard task."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: source_text, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:sales/competitive-battlecard-creation":
+  name: Sales battlecard builder
+  summary: "Name your rival. Get a battlecard with comparisons, reply scripts, positioning and win themes."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares products and drafts replies."
+  inputs: [ { type: competitor_set, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: document, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:sales/crm-data-enrichment":
+  name: CRM record filler
+  summary: "Give it your CRM records. Get missing company and contact details filled in to help routing and outreach."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It fills fields from known sources."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  needs: search the web
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:sales/lead-scoring":
+  name: Lead prioritizer
+  summary: "Give it your leads. Get them scored on fit and activity and sorted into ranked tiers."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs fit and behavior signals."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:sales/proposal-generation":
+  name: Sales proposal writer
+  summary: "Give it the prospect needs. Get a proposal or RFP reply with value, price, timeline and proof."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It matches your offer to the buyer needs."
+  inputs: [ { type: brief, required: true }, { type: offer, required: false } ]
+  outputs: [ { type: document, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:sales/sales-email-sequences":
+  name: Outbound email sequence writer
+  summary: "Describe your prospect. Get a multi-step email sequence with timing and personal touches."
+  task: write-emails
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans a sequence from audience and goal."
+  inputs: [ { type: brief, required: true }, { type: persona, required: false } ]
+  outputs: [ { type: email_flow, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:security/dependency-scanning":
+  name: Dependency risk scanner
+  summary: "Point it at your project. Get known weak spots in packages found, plus a parts list and license check."
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "It runs scans and reads the output."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:security/dynamic-application-security-testing":
+  name: Live app security tester
+  summary: "Give it a running web app or API you own. Get weaknesses found by safe probing."
+  task: secure-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Active testing needs careful scoping and judgement."
+  inputs: [ { type: web_app, required: true } ]
+  outputs: [ { type: security_report, required: true } ]
+  needs: run code and open a browser
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:security/security-audit":
+  name: Security posture auditor
+  summary: "Describe your system. Get a scoped review of code, servers, sign-in and daily operations."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "A broad review needs many linked judgements."
+  inputs: [ { type: codebase, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: security_report, required: true } ]
+  needs: read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:security/static-application-security-testing":
+  name: Code security scanner
+  summary: "Point it at your source code. Get security flaws found with static tools and rules you can add to CI."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs tools and judges the findings."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report, required: true } ]
+  needs: run code and read your project files
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:writing-and-content/blog-post-writing":
+  name: Blog post writer
+  summary: "Give it a topic. Get a blog post with outline, hook and call to action, as how-to, list or story."
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "Posts follow standard formats."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:writing-and-content/copywriting":
+  name: Copywriting framework writer
+  summary: "Describe your offer. Get copy in AIDA, PAS or BAB form, with tone options and A/B variants."
+  task: write-ad-copy
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It picks a framework, then writes variants."
+  inputs: [ { type: brief, required: true }, { type: brand_brain, required: false } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:writing-and-content/proofreading":
+  name: Proofreader
+  summary: "Give it text. Get grammar, spelling, punctuation and style fixed against your style guide."
+  task: write-and-tell-stories
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "Proofreading follows clear rules."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:writing-and-content/technical-writing":
+  name: Technical writer
+  summary: "Give it a feature or API. Get clear docs, guides, tutorials or changelogs for your readers."
+  task: write-and-tell-stories
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must understand the topic and the reader."
+  inputs: [ { type: codebase, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: document, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n
+"seb1n/awesome-ai-agent-skills:writing-and-content/translation":
+  name: Translator
+  summary: "Give it text and a language. Get a natural translation with local tone and consistent terms."
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "Translation is a standard task."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: source_text, required: true } ]
+  author: Burhan Sebin
+  author_url: https://github.com/seb1n

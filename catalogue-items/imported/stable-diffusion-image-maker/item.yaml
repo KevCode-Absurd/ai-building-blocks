@@ -1,0 +1,32 @@
+slug: stable-diffusion-image-maker
+name: Stable Diffusion image maker
+summary: Describe a picture. Get generated images, edits to your own photos or code for a custom image pipeline.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 18-multimodal/stable-diffusion
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/18-multimodal/stable-diffusion
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: stable-diffusion-image-generation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: stable-diffusion-image-generation skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/18-multimodal/stable-diffusion
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

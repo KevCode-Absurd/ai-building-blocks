@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It walks a fixed checklist, then checks the live result.
+new_slug: deploy-verifier
+name: Deploy verifier
+summary: Run it before you deploy. Get silent failure modes checked, then proof that the live version is the new one.
+job: ship-and-host
+headline: Deploy verifier
+subhead: Run it before you deploy. Get silent failure modes checked, then proof that the live version is the new one.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run commands and reach your live site.

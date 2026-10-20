@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows a standard method and checks the design first.
+new_slug: rna-seq-group-difference-finder
+name: RNA-seq group difference finder
+summary: Give it gene counts for two or more groups. Get which genes changed, with checks, corrected p-values and plots.
+job: research-topics
+headline: RNA-seq group difference finder
+subhead: Give it gene counts for two or more groups. Get which genes changed, with checks, corrected p-values and plots.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

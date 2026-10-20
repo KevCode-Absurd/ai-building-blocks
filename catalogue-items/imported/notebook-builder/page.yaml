@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It fills a ready template with your topic.
+new_slug: notebook-builder
+name: Notebook builder
+summary: Say what to explore or teach. Get a clean Jupyter notebook, ready to run.
+job: work-with-files
+headline: Notebook builder
+subhead: Say what to explore or teach. Get a clean Jupyter notebook, ready to run.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

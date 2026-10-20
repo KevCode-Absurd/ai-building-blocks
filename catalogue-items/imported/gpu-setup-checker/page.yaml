@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It runs a short set of checks in order.
+new_slug: gpu-setup-checker
+name: GPU setup checker
+summary: Say your GPU is not working in MATLAB. Get it found, tested and ready for GPU code.
+job: build-software
+headline: GPU setup checker
+subhead: Say your GPU is not working in MATLAB. Get it found, tested and ready for GPU code.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB on a computer with a GPU.

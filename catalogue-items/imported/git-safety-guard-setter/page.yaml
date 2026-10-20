@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It sets up a fixed list of blocks.
+new_slug: git-safety-guard-setter
+name: Git safety guard setter
+summary: Say you want safe git. Get hooks that block risky commands like force push and hard reset before they run.
+job: build-software
+headline: Git safety guard setter
+subhead: Say you want safe git. Get hooks that block risky commands like force push and hard reset before they run.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and change your Claude Code settings.

@@ -1,0 +1,32 @@
+slug: oil-and-gas-reserves-valuer
+name: Oil and gas reserves valuer
+summary: Give it reserve and cost data. Get the present value of the reserves, such as PV-10.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/oil-gas-valuation
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/oil-gas-valuation
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: oil-gas-valuation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: oil-gas-valuation skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/oil-gas-valuation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,34 @@
+slug: x-post-reader
+name: X post reader
+summary: Give it an X post link. Get the text, author and numbers as clean data. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: source_text
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/adhx
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/adhx
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: adhx
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: adhx skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/adhx
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

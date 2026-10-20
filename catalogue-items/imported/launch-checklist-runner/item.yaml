@@ -1,0 +1,32 @@
+slug: launch-checklist-runner
+name: Launch checklist runner
+summary: Say what you are releasing. Get a pre-launch checklist, a staged rollout and a rollback plan.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Addy Osmani
+  repo: addyosmani/agent-skills
+  path: skills/shipping-and-launch
+  url: https://github.com/addyosmani/agent-skills/tree/main/skills/shipping-and-launch
+  licence: MIT
+  licence_file: LICENSE
+  commit: aeac41d
+  original_name: shipping-and-launch
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shipping-and-launch skill
+    by: Addy Osmani
+    url: https://github.com/addyosmani/agent-skills/tree/main/skills/shipping-and-launch
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

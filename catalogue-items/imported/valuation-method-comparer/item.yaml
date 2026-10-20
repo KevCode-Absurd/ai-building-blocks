@@ -1,0 +1,33 @@
+slug: valuation-method-comparer
+name: Valuation method comparer
+summary: Give it a company's numbers. Get a value range from DCF, peer multiples and past deals, with the key assumptions.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: document
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/company-valuation
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/company-valuation
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: company-valuation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: company-valuation skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/company-valuation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

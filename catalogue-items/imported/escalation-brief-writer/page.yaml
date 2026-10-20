@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It pulls scattered facts into one brief a busy person can act on.
+new_slug: escalation-brief-writer
+name: Escalation brief writer
+summary: Give it a stuck customer issue. Get a clear escalation brief for engineering or leadership, with impact and what was tried.
+job: help-customers
+headline: Escalation brief writer
+subhead: Give it a stuck customer issue. Get a clear escalation brief for engineering or leadership, with impact and what was tried.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your help desk, chat or tickets.

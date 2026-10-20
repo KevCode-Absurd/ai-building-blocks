@@ -1,0 +1,33 @@
+slug: cell-direction-velocity-analyst
+name: Cell direction velocity analyst
+summary: Give it single-cell counts with spliced reads. Get cell direction arrows, timing and the genes that drive them.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: image
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/scvelo
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scvelo
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: scvelo
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: scvelo skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scvelo
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

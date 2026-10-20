@@ -1,0 +1,32 @@
+slug: manuscript-peer-review-drafter
+name: Manuscript peer review drafter
+summary: Give it a paper or proposal. Get a fair, evidence-based review with claim checks, method critique and revision steps.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/peer-review
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/peer-review
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: peer-review
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: peer-review skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/peer-review
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

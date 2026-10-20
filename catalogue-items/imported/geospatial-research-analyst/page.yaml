@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks methods across many map tools, then runs them.
+new_slug: geospatial-research-analyst
+name: Geospatial research analyst
+summary: Give it maps, satellite images or location data. Get a worked analysis of terrain, change or spatial patterns.
+job: research-topics
+headline: Geospatial research analyst
+subhead: Give it maps, satellite images or location data. Get a worked analysis of terrain, change or spatial patterns.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and save files.

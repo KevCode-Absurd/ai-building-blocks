@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks a filter type and checks its response.
+new_slug: digital-filter-designer
+name: Digital filter designer
+summary: Say what to clean from a signal. Get a filter designed, checked and applied.
+job: build-software
+headline: Digital filter designer
+subhead: Say what to clean from a signal. Get a filter designed, checked and applied.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Signal Processing Toolbox.

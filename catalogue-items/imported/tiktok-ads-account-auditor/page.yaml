@@ -1,0 +1,13 @@
+thinking: high
+thinking_why: It weighs many settings at once and says where data is missing.
+new_slug: tiktok-ads-account-auditor
+name: TikTok ads account auditor
+summary: Give it your TikTok Ads exports. Get a checked audit of your pixel, creative, audiences, Smart+ and Shop campaigns, bids and budgets.
+job: read-ad-results
+headline: TikTok ads account auditor
+subhead: Give it your TikTok Ads exports. Get a checked audit of your pixel, creative, audiences, Smart+ and Shop campaigns, bids and budgets.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your ad exports, and optionally read your TikTok Ads account with your own read-only access. Changes stay as drafts for your approval.
+  - Where the skill points to ads/references/, use the ads/references/tiktok-audit.md folder inside it. We copied it in so the skill works on its own.

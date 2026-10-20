@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads components and writes matching tests.
+new_slug: react-test-writer
+name: React test writer
+summary: Point it at your React app. Get unit, integration and end-to-end tests for the parts that lack them.
+job: test-and-fix-code
+headline: React test writer
+subhead: Point it at your React app. Get unit, integration and end-to-end tests for the parts that lack them.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

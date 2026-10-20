@@ -1,0 +1,38 @@
+slug: user-flow-mapper
+name: User flow mapper
+summary: Describe what users do. Get a flow diagram with choices, error states and drop-off points.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: design_file
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: design-and-ui-ux/user-flow-mapping
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/design-and-ui-ux/user-flow-mapping
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: user-flow-mapping
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: user-flow-mapping skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/design-and-ui-ux/user-flow-mapping
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

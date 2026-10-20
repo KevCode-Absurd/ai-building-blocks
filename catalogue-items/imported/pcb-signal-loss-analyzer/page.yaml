@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Solver and mesh choices change the result.
+new_slug: pcb-signal-loss-analyzer
+name: PCB signal loss analyzer
+summary: Give it a PCB design. Get S-parameters, insertion loss and fields computed with the right solver.
+job: build-software
+headline: PCB signal loss analyzer
+subhead: Give it a PCB design. Get S-parameters, insertion loss and fields computed with the right solver.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Antenna Toolbox.

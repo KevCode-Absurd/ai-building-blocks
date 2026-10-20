@@ -1,0 +1,32 @@
+slug: brand-name-finder
+name: Brand name finder
+summary: Share your brand brief. Get name ideas, or scores and honest feedback on the names you already have.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: shortlist
+uses: []
+origin: imported
+source:
+  by: Arnab Bag
+  repo: arnabbagxd/Brand-building-skills
+  path: skills/brand-naming
+  url: https://github.com/arnabbagxd/Brand-building-skills/tree/main/skills/brand-naming
+  licence: MIT
+  licence_file: LICENSE
+  commit: 4a0a8b5
+  original_name: brand-naming
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: brand-naming skill
+    by: Arnab Bag
+    url: https://github.com/arnabbagxd/Brand-building-skills/tree/main/skills/brand-naming
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

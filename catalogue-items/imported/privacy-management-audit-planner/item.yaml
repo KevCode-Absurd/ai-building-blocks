@@ -1,0 +1,33 @@
+slug: privacy-management-audit-planner
+name: Privacy management audit planner
+summary: Describe how you handle personal data. Get gaps against ISO 27701, a privacy control list and an audit plan.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/iso27701/skills/iso27701
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/iso27701/skills/iso27701
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: iso27701
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: iso27701 skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/iso27701/skills/iso27701
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

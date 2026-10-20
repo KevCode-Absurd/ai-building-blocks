@@ -1,0 +1,32 @@
+slug: stock-count-program-planner
+name: Stock count program planner
+summary: Give it your item list. Get a rolling count schedule, who counts what, and how to trace count mismatches.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/cycle-counting
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/cycle-counting
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: cycle-counting
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cycle-counting skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/cycle-counting
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

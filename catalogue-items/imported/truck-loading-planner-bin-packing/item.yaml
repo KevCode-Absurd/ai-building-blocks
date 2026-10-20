@@ -1,0 +1,32 @@
+slug: truck-loading-planner-bin-packing
+name: Truck loading planner (bin packing)
+summary: Give it your box sizes and counts. Get a plan to pack them into the fewest trucks or containers.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/3d-bin-packing
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/3d-bin-packing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: 3d-bin-packing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: 3d-bin-packing skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/3d-bin-packing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

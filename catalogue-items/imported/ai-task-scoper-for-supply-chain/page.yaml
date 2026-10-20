@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It walks through gates that decide if AI is safe to use.
+new_slug: ai-task-scoper-for-supply-chain
+name: AI task scoper for supply chain
+summary: Describe a messy planning problem. Get one clear decision, an AI fit check and a safe hand-off plan.
+job: plan-supply-chain
+headline: AI task scoper for supply chain
+subhead: Describe a messy planning problem. Get one clear decision, an AI fit check and a safe hand-off plan.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,37 @@
+slug: careful-coding-rules
+name: Careful coding rules
+summary: Add four habits to your AI coder. Get smaller, simpler changes that state their assumptions and prove they work.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/andrej-karpathy
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/andrej-karpathy
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: andrej-karpathy
+  author: multica-ai
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: andrej-karpathy skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/andrej-karpathy
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: multica-ai
+    url: https://github.com/multica-ai/andrej-karpathy-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

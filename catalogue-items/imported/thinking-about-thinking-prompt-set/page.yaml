@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It writes short prompts for one task.
+new_slug: thinking-about-thinking-prompt-set
+name: Thinking-about-thinking prompt set
+summary: Give it a task. Get prompts for planning, checking and reviewing work that students can use alone.
+job: teach-and-train
+headline: Thinking-about-thinking prompt set
+subhead: Give it a task. Get prompts for planning, checking and reviewing work that students can use alone.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,37 @@
+slug: web-form-designer
+name: Web form designer
+summary: Name your form. Get fields, error messages, spam protection and a plan to raise completions.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: web_page
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/form-strategy
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/form-strategy
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: form-strategy
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: form-strategy skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/form-strategy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

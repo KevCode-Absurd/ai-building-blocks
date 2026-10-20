@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It filters and orders material by what the task needs.
+new_slug: context-package-cleaner
+name: Context package cleaner
+summary: Give it a pile of notes and documents. Get a deduplicated, ordered set that fits your size limit.
+job: think-and-decide
+headline: Context package cleaner
+subhead: Give it a pile of notes and documents. Get a deduplicated, ordered set that fits your size limit.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

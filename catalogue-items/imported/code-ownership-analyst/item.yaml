@@ -1,0 +1,32 @@
+slug: code-ownership-analyst
+name: Code ownership analyst
+summary: Point it at a git repo. Get who owns the sensitive code and where one person is the only owner.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/security-ownership-map
+  url: https://github.com/openai/skills/tree/main/skills/.curated/security-ownership-map
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: security-ownership-map
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: security-ownership-map skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/security-ownership-map
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

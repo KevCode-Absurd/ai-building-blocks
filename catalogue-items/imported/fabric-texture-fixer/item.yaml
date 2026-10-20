@@ -1,0 +1,37 @@
+slug: fabric-texture-fixer
+name: Fabric texture fixer
+summary: Give it a blurry clothing photo and a sharp product photo. Get clear, believable fabric. Your image model redraws it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: product_photos
+    required: true
+outputs:
+  - type: photo_set
+uses: []
+origin: imported
+source:
+  by: dLazy
+  repo: dlazy-ai/ecommerce-skills
+  path: skills/material-enhancement
+  url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/material-enhancement
+  licence: MIT
+  licence_file: LICENSE
+  commit: 87791a1
+  original_name: material-enhancement
+  author: dLazy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: material-enhancement skill
+    by: dLazy
+    url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/material-enhancement
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: dLazy
+    url: https://github.com/dlazy-ai
+    used: Wrote the skill; dLazy shared it in their collection.

@@ -1,0 +1,32 @@
+slug: job-ad-reader
+name: Job ad reader
+summary: Paste a job ad. Get what the job is, firm needs versus wishes, what is missing, and questions to ask.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Pro Skill Packs
+  repo: proskillpacks/skills
+  path: skills/careers/job-post-decoder
+  url: https://github.com/proskillpacks/skills/tree/main/skills/careers/job-post-decoder
+  licence: MIT
+  licence_file: LICENSE
+  commit: e8c3393
+  original_name: job-post-decoder
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: job-post-decoder skill
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/careers/job-post-decoder
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

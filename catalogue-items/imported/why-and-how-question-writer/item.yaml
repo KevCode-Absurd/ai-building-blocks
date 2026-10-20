@@ -1,0 +1,32 @@
+slug: why-and-how-question-writer
+name: Why and how question writer
+summary: Give it your content. Get why and how questions that push learners past memorising to understanding.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: question
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/memory-learning-science/elaborative-interrogation-generator
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/memory-learning-science/elaborative-interrogation-generator
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: elaborative-interrogation-generator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: elaborative-interrogation-generator skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/memory-learning-science/elaborative-interrogation-generator
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

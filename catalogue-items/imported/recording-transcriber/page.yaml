@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It runs a set tool and tidies the result.
+new_slug: recording-transcriber
+name: Recording transcriber
+summary: Give it audio or video. Get the words written out, with each speaker labelled.
+job: work-with-audio
+headline: Recording transcriber
+subhead: Give it audio or video. Get the words written out, with each speaker labelled.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and reach the OpenAI Audio API.

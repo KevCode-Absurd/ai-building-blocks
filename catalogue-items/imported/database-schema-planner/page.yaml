@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: Schema choices last, so it weighs trade-offs.
+new_slug: database-schema-planner
+name: Database schema planner
+summary: Describe your data. Get a clean schema, migration plan and query advice, with SQL or NoSQL guidance.
+job: build-software
+headline: Database schema planner
+subhead: Describe your data. Get a clean schema, migration plan and query advice, with SQL or NoSQL guidance.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

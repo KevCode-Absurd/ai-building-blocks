@@ -1,0 +1,33 @@
+slug: untrusted-input-checker
+name: Untrusted input checker
+summary: Point it at code. Get every place outside data enters found and checked before it reaches your logic.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/infinity
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/infinity
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: infinity
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: infinity skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/infinity
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

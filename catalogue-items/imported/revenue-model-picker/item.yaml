@@ -1,0 +1,32 @@
+slug: revenue-model-picker
+name: Revenue model picker
+summary: Describe your product and users. Get three to five ways to earn from it, with risks and tests.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-product-strategy/skills/monetization-strategy
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-product-strategy/skills/monetization-strategy
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: monetization-strategy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: monetization-strategy skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-product-strategy/skills/monetization-strategy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

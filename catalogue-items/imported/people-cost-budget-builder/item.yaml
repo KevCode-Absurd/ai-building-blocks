@@ -1,0 +1,40 @@
+slug: people-cost-budget-builder
+name: People cost budget builder
+summary: Give it your headcount plan. Get a budget by team, a month-by-month view and notes to explain gaps to finance.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+    required: true
+uses: []
+origin: imported
+source:
+  by: Tuan Duc Tran
+  repo: tuanductran/hr-skills
+  path: skills/hr-people-budgeting
+  url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-people-budgeting
+  licence: MIT
+  licence_file: LICENSE
+  commit: 078f2fb
+  original_name: hr-people-budgeting
+  author: Tuan Duc Tran
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hr-people-budgeting skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-people-budgeting
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

@@ -1,0 +1,34 @@
+slug: promotion-idea-planner
+name: Promotion idea planner
+summary: Say what you want to launch or clear. Get a gift, bundle or pre-order promotion that avoids plain price cuts.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: offer
+    required: false
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Checkout Page
+  repo: checkout-page/ecommerce-skills
+  path: skills/promotions
+  url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/promotions
+  licence: MIT
+  licence_file: LICENSE
+  commit: 8b85f63
+  original_name: promotions
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: promotions skill
+    by: Checkout Page
+    url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/promotions
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

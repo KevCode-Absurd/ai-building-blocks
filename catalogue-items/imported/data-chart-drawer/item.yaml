@@ -1,0 +1,32 @@
+slug: data-chart-drawer
+name: Data chart drawer
+summary: Give it your data. Get a clean chart with the right chart type, as an image or an interactive plot.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: data/skills/create-viz
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/create-viz
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: create-viz
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: create-viz skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/create-viz
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

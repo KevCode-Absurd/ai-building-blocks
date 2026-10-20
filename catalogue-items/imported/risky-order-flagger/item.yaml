@@ -1,0 +1,37 @@
+slug: risky-order-flagger
+name: Risky order flagger
+summary: Get orders Shopify marks as risky tagged for review, and held from shipping if you choose. Changes live orders.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/order-intelligence/shopify-admin-high-risk-order-tagger
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/order-intelligence/shopify-admin-high-risk-order-tagger
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-high-risk-order-tagger
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-high-risk-order-tagger skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/order-intelligence/shopify-admin-high-risk-order-tagger
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It looks up documents, then writes code that follows them.
+new_slug: docs-backed-coder
+name: Docs-backed coder
+summary: Name the framework you use. Get code checked against its official docs, with sources cited.
+job: build-software
+headline: Docs-backed coder
+subhead: Name the framework you use. Get code checked against its official docs, with sources cited.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can search the web and read your project files.

@@ -10,7 +10,12 @@ const words = (s: string) => s.toLowerCase().replace(/[^a-z0-9 ]+/g, " ").split(
 // Verbs that say how, not what. A goal has to match on what it's about, not only on these.
 const GENERIC = new Set("write find know turn check stop fix create build plan start run use show tell better more good best quick fast easy".split(" ").map(stem));
 const tokens = (goal: string) => [...new Set(words(goal).filter((w) => !STOP.has(w) && w.length > 1))];
-const hits = (toks: string[], text: string) => { const h = new Set(words(text)); return toks.filter((t) => h.has(t) || (t.length >= 4 && [...h].some((w) => w.startsWith(t)))).length; };
+const hits = (toks: string[], text: string) => {
+  const h = new Set(words(text));
+  let n = 0;
+  for (const t of toks) { if (h.has(t)) n++; else if (t.length >= 4) for (const w of h) if (w.startsWith(t)) { n++; break; } }
+  return n;
+};
 
 export type Plan = { slugs: string[]; name: string; from: { workflow: Block } | { target: Block } };
 

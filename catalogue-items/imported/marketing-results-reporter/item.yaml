@@ -1,0 +1,38 @@
+slug: marketing-results-reporter
+name: Marketing results reporter
+summary: Give it your marketing numbers. Get a report on trends, funnel drop-offs and what to do next.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: marketing-and-seo/analytics-reporting
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/marketing-and-seo/analytics-reporting
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: analytics-reporting
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: analytics-reporting skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/marketing-and-seo/analytics-reporting
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

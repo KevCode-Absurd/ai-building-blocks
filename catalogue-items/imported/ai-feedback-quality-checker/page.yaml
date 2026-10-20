@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It judges feedback against learning research, then rewrites it.
+new_slug: ai-feedback-quality-checker
+name: AI feedback quality checker
+summary: Paste the feedback your tool gives students. Get a check of its timing and wording, plus a better version.
+job: teach-and-train
+headline: AI feedback quality checker
+subhead: Paste the feedback your tool gives students. Get a check of its timing and wording, plus a better version.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

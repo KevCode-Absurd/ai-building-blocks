@@ -1,0 +1,37 @@
+slug: aesthetic-direction-brief-writer
+name: Aesthetic direction brief writer
+summary: Answer four questions about tone and feel. Get a brief that keeps copy, design and images in one style.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: design_direction
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/creative-direction
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/creative-direction
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: creative-direction
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: creative-direction skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/creative-direction
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

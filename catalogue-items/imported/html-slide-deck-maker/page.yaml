@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks a look first, then builds each slide.
+new_slug: html-slide-deck-maker
+name: HTML slide deck maker
+summary: Describe your talk or share a PowerPoint. Get an animated slide deck in one HTML file that opens in any browser.
+job: work-with-files
+headline: HTML slide deck maker
+subhead: Describe your talk or share a PowerPoint. Get an animated slide deck in one HTML file that opens in any browser.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and open a browser.

@@ -1,0 +1,32 @@
+slug: single-file-app-builder
+name: Single-file app builder
+summary: Describe the app. Get a working React web app bundled into one HTML file you can open or share.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/skills
+  path: skills/web-artifacts-builder
+  url: https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: dbd4588
+  original_name: web-artifacts-builder
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: web-artifacts-builder skill
+    by: Anthropic
+    url: https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

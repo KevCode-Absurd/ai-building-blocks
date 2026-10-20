@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It sends one photo to a set video recipe.
+new_slug: product-photo-to-clip-maker
+name: Product photo to clip maker
+summary: Give it a main product photo. Get a 3 to 5 second video for your listing. Your video model makes it.
+job: make-video-ads
+headline: Product photo to clip maker
+subhead: Give it a main product photo. Get a 3 to 5 second video for your listing. Your video model makes it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your own video model key (fal or Replicate). Add ffmpeg if you want captions.

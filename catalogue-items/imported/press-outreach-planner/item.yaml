@@ -1,0 +1,33 @@
+slug: press-outreach-planner
+name: Press outreach planner
+summary: Say your news. Get a media list, pitch emails and a press kit outline.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/public-relations
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/public-relations
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: public-relations
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: public-relations skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/public-relations
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

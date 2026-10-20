@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It weighs severity against likelihood.
+new_slug: legal-risk-rater
+name: Legal risk rater
+summary: Describe a deal or issue. Get each risk rated by how bad and how likely. Not legal advice.
+job: check-contracts
+headline: Legal risk rater
+subhead: Describe a deal or issue. Get each risk rated by how bad and how likely. Not legal advice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

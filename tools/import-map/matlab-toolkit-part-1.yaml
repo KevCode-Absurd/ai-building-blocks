@@ -1,0 +1,843 @@
+# MathWorks matlab-agentic-toolkit, part 1 of 2.
+"matlab/matlab-agentic-toolkit:skills-catalog/automotive/roadrunner-asset-mapping":
+  skip: "A lookup table of asset paths for the other RoadRunner skills, not a standalone job."
+"matlab/matlab-agentic-toolkit:skills-catalog/automotive/roadrunner-core":
+  skip: "Setup foundation that only serves the other RoadRunner skills in this repo."
+"matlab/matlab-agentic-toolkit:skills-catalog/automotive/roadrunner-build-scenario-from-osc":
+  skip: "Hands its work to the repo's roadrunner-scenario-authoring skill, so it only routes."
+"matlab/matlab-agentic-toolkit:skills-catalog/aerospace/matlab-compute-aerospace-environment":
+  name: Flight environment calculator
+  summary: "Give it a place, height and date. Get air, gravity, wind and magnetic field values, worked out in MATLAB."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It picks the right model for each value, then runs the calculation."
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Aerospace Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/aerospace/matlab-convert-aerospace-coordinates":
+  name: Aerospace unit and frame converter
+  summary: "Give it values in one unit, time or coordinate frame. Get them converted correctly, with MATLAB code you can rerun."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It maps each conversion to the right function and checks the result."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Aerospace Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/ai-and-statistics/matlab-analyze-reliability":
+  name: Product lifetime analyst
+  summary: "Give it failure or test data. Get life curves, failure rates and confidence ranges, worked out in MATLAB."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It must choose the right model and judge how well it fits."
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run MATLAB with the Statistics Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/ai-and-statistics/matlab-classify-tabular-data":
+  name: Data classifier comparer
+  summary: "Give it a data table. Get several classifiers trained and ranked by accuracy, with tests that show real differences."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It chooses models, then judges results with statistics."
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run MATLAB with the Statistics and Machine Learning Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/ai-and-statistics/matlab-deploy-embedded-ai":
+  name: Small-device AI deployer
+  summary: "Give it a trained AI model and a target chip. Get lean code that runs the model on that hardware."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Hardware limits and model rebuilds call for careful planning."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Embedded Coder
+"matlab/matlab-agentic-toolkit:skills-catalog/ai-and-statistics/matlab-engineer-tabular-features":
+  name: Prediction feature picker
+  summary: "Give it a data table and a target. Get the best input columns chosen, tested and delivered as a clean table."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It builds, scores and chooses among many candidate features."
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Statistics and Machine Learning Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/ai-and-statistics/matlab-fit-curve":
+  name: Curve fitting helper
+  summary: "Give it x and y data. Get the best curve or surface fit, with outliers handled and code to repeat it."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It tries several fit types and compares them."
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Curve Fitting Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/ai-and-statistics/matlab-import-external-ai-model":
+  name: Outside AI model importer
+  summary: "Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB and ready to run."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows set import routes and fixes input format errors."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB and Python
+"matlab/matlab-agentic-toolkit:skills-catalog/ai-and-statistics/matlab-interpret-machine-learning-model":
+  name: Model decision explainer
+  summary: "Give it a trained model. Get which inputs matter, why it made each call, and where it goes wrong."
+  task: build-software
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Explaining a model needs several methods and careful reading of results."
+  inputs: [{type: codebase, required: true}, {type: spreadsheet, required: false}]
+  outputs: [{type: test_report}]
+  needs: run MATLAB with the Statistics and Machine Learning Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/ai-and-statistics/matlab-train-network":
+  name: Neural network trainer
+  summary: "Give it data and a goal. Get a neural network trained, tested and exported, with old code moved to current methods."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Training choices and old-code fixes both need judgment."
+  inputs: [{type: spreadsheet, required: true}, {type: codebase, required: false}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Deep Learning Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/ai-and-statistics/matlab-use-experiment-manager":
+  name: Training experiment setup helper
+  summary: "Give it a training script. Get an experiment that sweeps settings, set up in MATLAB and kept in sync."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It turns a script into a set structure of experiment settings."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Experiment Manager open
+"matlab/matlab-agentic-toolkit:skills-catalog/ai-and-statistics/matlab-use-machine-learning-apps":
+  name: No-code model trainer
+  summary: "Give it a data table. Get models trained and compared in the Learner apps, and the best one exported."
+  task: build-software
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It drives an app with set steps and compares the results."
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Classification or Regression Learner app
+"matlab/matlab-agentic-toolkit:skills-catalog/automotive/matlab-cosimulate-sumo-simulink":
+  name: Traffic co-simulation builder
+  summary: "Describe the traffic test. Get a Simulink model joined to the SUMO traffic simulator and ready to run."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Many linked blocks and settings must agree."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Simulink and SUMO
+"matlab/matlab-agentic-toolkit:skills-catalog/automotive/matlab-import-driving-data":
+  name: Driving data importer
+  summary: "Give it recorded GPS, camera or lidar data. Get it loaded, synced and cleaned for building driving scenarios."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows set import and cleanup steps for each sensor type."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Automated Driving Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/automotive/matlab-use-ncap-protocol":
+  name: Car safety test scenario maker
+  summary: "Name the Euro NCAP test. Get its scenario and variants made, plotted and exported with scores."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows a defined test protocol with many variants."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: document}]
+  needs: run MATLAB with the Euro NCAP support package
+"matlab/matlab-agentic-toolkit:skills-catalog/automotive/matlab-use-scenario-builder":
+  name: Driving scenario builder
+  summary: "Give it recorded sensor data. Get a virtual driving scene with roads, vehicles and paths built from it."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It joins several sensor sources into one scene."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Scenario Builder
+"matlab/matlab-agentic-toolkit:skills-catalog/automotive/roadrunner-import-scene":
+  name: Road scene importer
+  summary: "Give it a map file. Get it loaded into RoadRunner as a driving scene you can check by eye."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It runs a short set of load steps."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with RoadRunner
+"matlab/matlab-agentic-toolkit:skills-catalog/automotive/roadrunner-convert-lanelet2-to-rrhd":
+  name: Road map converter
+  summary: "Give it a Lanelet2 map. Get a RoadRunner HD map built from it, ready for simulation."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It maps each road feature across formats and checks the result."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with RoadRunner
+"matlab/matlab-agentic-toolkit:skills-catalog/automotive/roadrunner-rrhd-authoring":
+  name: Road map author
+  summary: "Describe the road layout. Get lanes, junctions, signs and signals built as a RoadRunner HD map."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It builds many linked road parts from a clear layout."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with RoadRunner
+"matlab/matlab-agentic-toolkit:skills-catalog/automotive/roadrunner-scenario-authoring":
+  name: Driving test scenario writer
+  summary: "Describe the traffic event. Get a RoadRunner scenario with actors, routes and triggers, built in code."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It sequences actors and conditions into one scenario."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with RoadRunner
+"matlab/matlab-agentic-toolkit:skills-catalog/automotive/roadrunner-scenario-simulating":
+  name: Driving scenario simulator
+  summary: "Give it a RoadRunner scenario. Get it simulated step by step, with sensors attached and logs read back."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Live control and sensor setup need careful ordering."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run MATLAB with RoadRunner and Simulink
+"matlab/matlab-agentic-toolkit:skills-catalog/cloud-solutions/matlab-share-content":
+  name: MATLAB code sharer
+  summary: "Give it your MATLAB files. Get them uploaded to GitHub or MATLAB Drive, plus an Open in MATLAB Online link."
+  task: ship-and-host
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a short upload path and builds one link."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: deploy_url}]
+  needs: run MATLAB and use the GitHub tool
+"matlab/matlab-agentic-toolkit:skills-catalog/code-generation/matlab-deploy-ai-model":
+  name: AI model code generator
+  summary: "Give it a PyTorch or LiteRT model. Get C, C++ or CUDA code that runs it inside your app."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Code generation settings and model limits need careful choices."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with MATLAB Coder
+"matlab/matlab-agentic-toolkit:skills-catalog/code-generation/matlab-deploy-embedded-code":
+  name: Microcontroller code deployer
+  summary: "Give it MATLAB code and a chip. Get embedded code set up and tested on that hardware."
+  task: ship-and-host
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Memory limits and hardware tests call for planning."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run MATLAB with Embedded Coder
+"matlab/matlab-agentic-toolkit:skills-catalog/code-generation/matlab-generate-code":
+  name: MATLAB to C converter
+  summary: "Give it MATLAB code. Get C, C++ or CUDA code that is checked and tuned for speed."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows set rules for code that can be converted."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with MATLAB Coder
+"matlab/matlab-agentic-toolkit:skills-catalog/code-generation/matlab-optimize-gpu-codegen":
+  name: GPU code speed tuner
+  summary: "Give it MATLAB code bound for the GPU. Get faster generated CUDA code, measured after each change."
+  task: test-and-fix-code
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It profiles, rewrites and measures again in a loop."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run MATLAB with GPU Coder and a GPU
+"matlab/matlab-agentic-toolkit:skills-catalog/code-generation/matlab-review-fi-object-code":
+  name: Fixed-point code reviewer
+  summary: "Give it MATLAB fixed-point code. Get slow or risky patterns found, with cleaner replacements."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It checks code against a known list of patterns."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: feedback_notes}]
+  needs: run MATLAB with Fixed-Point Designer
+"matlab/matlab-agentic-toolkit:skills-catalog/computational-biology/simbiology-build-model":
+  name: Biology model builder
+  summary: "Describe the reactions and species. Get a SimBiology model built in code, with a clear diagram."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It builds many linked parts from a clear description."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with SimBiology
+"matlab/matlab-agentic-toolkit:skills-catalog/computational-biology/simbiology-fit-model":
+  name: Biology model fitter
+  summary: "Give it a model and measured data. Get parameters fitted, patients simulated and drug levels computed."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Fitting choices and statistics need careful judgment."
+  inputs: [{type: codebase, required: true}, {type: spreadsheet, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run MATLAB with SimBiology
+"matlab/matlab-agentic-toolkit:skills-catalog/computational-biology/simbiology-simulate-model":
+  name: Biology model simulator
+  summary: "Give it a model. Get it run for what-if cases, with the most influential settings found."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It picks a solver and runs set analyses."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run MATLAB with SimBiology
+"matlab/matlab-agentic-toolkit:skills-catalog/computational-finance/matlab-access-datafeed":
+  name: Market data connector
+  summary: "Name the data source and series. Get MATLAB code that pulls Bloomberg, FRED, Haver or Datastream data."
+  task: connect-tools
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "Each provider follows a set connection pattern."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with a data provider account
+"matlab/matlab-agentic-toolkit:skills-catalog/computational-finance/matlab-optimize-portfolio":
+  name: Portfolio mix optimizer
+  summary: "Give it asset returns. Get the best mix by risk and return, with an efficient frontier chart."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It sets up a standard method and checks the answer."
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: code_change}, {type: spreadsheet}]
+  needs: run MATLAB with the Financial Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/computational-finance/matlab-price-instrument":
+  name: Financial instrument pricer
+  summary: "Name the option or bond. Get it priced by the right method, with MATLAB code you can rerun."
+  task: money-and-investing
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Picking the pricing method needs finance knowledge."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Financial Instruments Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/computational-finance/matlab-use-spreadsheet-link":
+  name: Excel and MATLAB bridge writer
+  summary: "Say what to move between Excel and MATLAB. Get VBA macros that send data, run MATLAB and return results."
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows a small set of known macro calls."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Excel
+"matlab/matlab-agentic-toolkit:skills-catalog/control-systems/matlab-extract-battery-features":
+  name: Battery health feature extractor
+  summary: "Give it battery test data. Get health and wear features ready for life prediction."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows set steps for each test data type."
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: code_change}, {type: spreadsheet}]
+  needs: run MATLAB with the Predictive Maintenance Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/control-systems/matlab-extract-rotating-machinery-features":
+  name: Machine fault feature extractor
+  summary: "Give it vibration or sensor signals from a motor or pump. Get features ready for fault detection."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It picks features suited to each fault type."
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: code_change}, {type: spreadsheet}]
+  needs: run MATLAB with the Predictive Maintenance Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/control-systems/matlab-identify-linear-system":
+  name: System model estimator
+  summary: "Give it input and output data. Get a fitted model of how the system behaves, with fit checks."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Model choice and fit judgment need care."
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run MATLAB with the System Identification Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/image-processing-and-computer-vision/matlab-analyze-spectral-images":
+  name: Spectral image analyst
+  summary: "Give it a hyperspectral or satellite image. Get it cleaned, unmixed and checked for targets or anomalies."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Many specialist methods must be matched to the data."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}, {type: image}]
+  needs: run MATLAB with the Hyperspectral Imaging Library
+"matlab/matlab-agentic-toolkit:skills-catalog/image-processing-and-computer-vision/matlab-display-image":
+  name: Image viewer builder
+  summary: "Give it images and regions to mark. Get a viewer with overlays and masks in MATLAB."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It uses a few set viewer functions."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Image Processing Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/image-processing-and-computer-vision/matlab-display-volume":
+  name: 3D image viewer builder
+  summary: "Give it a 3D scan or mesh. Get a viewer with slices, overlays and marked regions."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It uses a few set viewer functions."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Image Processing Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/image-processing-and-computer-vision/matlab-integrate-pytorch-vision":
+  name: Python vision model connector
+  summary: "Give it a vision model repo on GitHub. Get a MATLAB function that runs it on your images."
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It reads the repo and wraps it step by step."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB and Python
+"matlab/matlab-agentic-toolkit:skills-catalog/image-processing-and-computer-vision/matlab-model-optics":
+  name: Optical system designer
+  summary: "Describe the lens setup. Get an optical system built, traced, toleranced and tuned in MATLAB."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Optical design needs expert choices and tradeoffs."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run MATLAB with the Optical Design and Simulation Library
+"matlab/matlab-agentic-toolkit:skills-catalog/image-processing-and-computer-vision/matlab-process-images":
+  name: Image processing coder
+  summary: "Say what to do to your pictures. Get MATLAB code that enhances, segments, counts or measures them."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks the right method for each image task."
+  inputs: [{type: image, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Image Processing Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/image-processing-and-computer-vision/matlab-process-large-images":
+  name: Huge image processor
+  summary: "Give it a very large image. Get it processed in blocks and in parallel without running out of memory."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows set block patterns for large data."
+  inputs: [{type: image, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Image Processing Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/image-processing-and-computer-vision/matlab-read-medical-data":
+  name: Medical scan reader
+  summary: "Give it DICOM, NIfTI or NRRD scans. Get them read, listed and ready to use in MATLAB."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows set read and write calls."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Medical Imaging Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/image-processing-and-computer-vision/matlab-read-write-point-cloud-file":
+  name: Point cloud file handler
+  summary: "Give it a lidar file. Get it read or saved in the right format, with its point details kept."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It matches each file type to a reader or writer."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Lidar Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/image-processing-and-computer-vision/matlab-recognize-text":
+  name: Image text reader
+  summary: "Give it a photo of a sign, meter or receipt. Get the text read out, with cleanup for hard images."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It tries preprocessing steps until the text reads well."
+  inputs: [{type: image, required: true}]
+  outputs: [{type: code_change}, {type: document}]
+  needs: run MATLAB with the Computer Vision Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/image-processing-and-computer-vision/matlab-register-point-clouds":
+  name: Point cloud aligner
+  summary: "Give it two 3D scans. Get them lined up and merged, with the right method chosen and tuned."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It compares several alignment methods and settings."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Lidar Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/image-processing-and-computer-vision/matlab-use-visual-inspection":
+  name: Machine vision inspector builder
+  summary: "Describe the inspection job. Get a system that finds defects, counts parts or measures them."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Picking the right method for the problem takes care."
+  inputs: [{type: image, required: true}, {type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Visual Inspection Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/math-and-optimization/matlab-solve-optimization":
+  name: Optimization problem solver
+  summary: "Describe what to minimise and your limits. Get the problem set up, solved and the result checked."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Solver choice and result checks need careful judgment."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Optimization Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/math-and-optimization/matlab-solve-pde":
+  name: Physics simulation builder
+  summary: "Describe the part and its loads. Get a finite element model built, solved and plotted."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Geometry, loads and meshing must all fit together."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: image}]
+  needs: run MATLAB with the PDE Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/math-and-optimization/matlab-use-symbolic-math":
+  name: Symbolic math coder
+  summary: "Describe the equation. Get exact solutions worked out in MATLAB, and turned into fast numeric functions."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks the right symbolic steps and checks them."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with the Symbolic Math Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-app-building/matlab-apply-theme":
+  name: Chart and app styler
+  summary: "Give it your charts or app. Get colour palettes, colormaps and dark mode applied the right way."
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It applies a set of styling calls."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-app-building/matlab-build-app":
+  name: MATLAB app builder
+  summary: "Describe the app you need. Get a working MATLAB app, built from a chosen layout."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It asks questions, picks a layout, then builds it."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-app-building/matlab-build-chart":
+  name: MATLAB chart maker
+  summary: "Describe the chart. Get working code for line, bar, heatmap or surface plots, with labels and layout."
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows common plotting patterns."
+  inputs: [{type: spreadsheet, required: false}, {type: brief, required: true}]
+  outputs: [{type: code_change}, {type: image}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-core/matlab-create-live-script":
+  name: Live script writer
+  summary: "Describe the analysis or lesson. Get a MATLAB live script with text, equations and figures you can run."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows a fixed file format with formatting rules."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: document}]
+  needs: run MATLAB R2025a or later
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-core/matlab-debug-code":
+  name: MATLAB bug tracer
+  summary: "Give it code that fails. Get the cause found, with breakpoints and variable checks to show it."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It traces the error step by step."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-core/matlab-install-products":
+  name: MATLAB installer
+  summary: "Name the MathWorks products. Get them installed from the command line, the same way each time."
+  task: set-up-ai
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows a fixed install script."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: tool_connection}]
+  needs: run MATLAB installer commands
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-core/matlab-list-products":
+  name: MATLAB product lister
+  summary: "Point it at a MATLAB install. Get a list of every product and add-on package in it."
+  task: set-up-ai
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It reads one list."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-core/matlab-read-documentation":
+  name: MATLAB docs lookup helper
+  summary: "Ask how a MATLAB function works. Get the right syntax from the official docs, with fewer wrong guesses."
+  task: build-software
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It looks up the official page and reports it."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+  needs: run MATLAB and read web pages
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-core/matlab-review-code":
+  name: MATLAB code reviewer
+  summary: "Give it MATLAB code. Get a review of style, speed and upkeep, checked against MathWorks standards."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It runs checks then judges what matters most."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: feedback_notes}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-data-import-and-analysis/matlab-analyze-data":
+  name: Data analysis coder
+  summary: "Ask a question about your table or sensor data. Get it cleaned, summarised and answered with MATLAB code."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It chooses steps to clean and answer from the data."
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: code_change}, {type: spreadsheet}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-data-import-and-analysis/matlab-choose-big-data-solution":
+  name: Big data tool chooser
+  summary: "Describe your large files. Get the right MATLAB tool picked for data too big for memory."
+  task: build-software
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs a few options against your data."
+  inputs: [{type: codebase, required: false}, {type: question, required: true}]
+  outputs: [{type: plan}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-data-import-and-analysis/matlab-import-export-data":
+  name: Data file reader and writer
+  summary: "Name your CSV, Excel, JSON or Parquet file. Get it read or saved correctly, with errors fixed."
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It uses a small set of well-known read calls."
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: code_change}, {type: spreadsheet}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-data-import-and-analysis/matlab-secure-credentials":
+  name: MATLAB secret keeper
+  summary: "Give it code with passwords or API keys. Get them moved into the MATLAB Vault, not left in the file."
+  task: secure-code
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows a set pattern to move secrets."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-external-language-interfaces/matlab-call-python":
+  name: MATLAB to Python bridge
+  summary: "Say which Python library you need. Get MATLAB code that calls it, with setup and errors fixed."
+  task: connect-tools
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Setup problems vary and need some diagnosis."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB and Python
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-external-language-interfaces/matlab-upgrade-mex-ic":
+  name: MEX file upgrader
+  summary: "Give it old C, C++ or Fortran MEX files. Get them moved to the newer complex number format."
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It maps old calls to new ones across files."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with a C or Fortran compiler
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-programming/matlab-validate-function-arguments":
+  name: Function argument checker writer
+  summary: "Give it a MATLAB function. Get its inputs checked with a clean arguments block, replacing older checks."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows syntax rules with a few edge cases."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-software-development/matlab-configure-toml-project":
+  name: MATLAB project setup helper
+  summary: "Say how your project is laid out. Get a matlab.toml with paths, dependencies and scripts set up."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It fills in a config file from set options."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-software-development/matlab-instrument-opentelemetry-tracing":
+  name: Code tracing adder
+  summary: "Give it MATLAB code. Get tracing added so you can see where time goes and where errors start."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It places spans and links them to each other."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-software-development/matlab-modernize-code":
+  name: Old MATLAB code updater
+  summary: "Give it code that uses removed or discouraged functions. Get current replacements in place."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It swaps known old calls for new ones."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-software-development/matlab-optimize-memory":
+  name: MATLAB memory saver
+  summary: "Give it code that runs out of memory. Get the cause found, fixed and measured, with a short report."
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It profiles, changes and measures in a set loop."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-software-development/matlab-optimize-performance":
+  name: MATLAB speed tuner
+  summary: "Give it slow code. Get the real slowdown found, fixed and measured, with no made-up speed claims."
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It profiles, changes and measures in a set loop."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-software-development/matlab-package-toolbox":
+  name: Toolbox packager
+  summary: "Give it MATLAB code. Get a published toolbox file, built in checked stages from scope to release."
+  task: ship-and-host
+  role: orchestrate
+  level: advanced
+  thinking: medium
+  thinking_why: "It walks eight stages in order with sign-offs."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-software-development/matlab-run-tests":
+  name: MATLAB test runner
+  summary: "Point it at your tests. Get them run and filtered, with failures, coverage gaps and CI set up."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It runs known test commands and reads the output."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: test_report}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-software-development/matlab-use-package-manager":
+  name: MATLAB package installer
+  summary: "Name the package. Get it installed, updated or removed, with dependency errors sorted."
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It runs a few package commands."
+  inputs: [{type: codebase, required: false}, {type: question, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB R2026b or later

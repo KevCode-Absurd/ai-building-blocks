@@ -1,0 +1,32 @@
+slug: lesson-barrier-spotter
+name: Lesson barrier spotter
+summary: Paste a lesson and describe your class. Get likely barriers and which ones design can fix. It does not diagnose anyone.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/inclusive-design/udl-barrier-anticipator
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/inclusive-design/udl-barrier-anticipator
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: udl-barrier-anticipator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: udl-barrier-anticipator skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/inclusive-design/udl-barrier-anticipator
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

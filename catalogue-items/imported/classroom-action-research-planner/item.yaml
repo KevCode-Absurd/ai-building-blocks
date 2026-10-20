@@ -1,0 +1,32 @@
+slug: classroom-action-research-planner
+name: Classroom action research planner
+summary: Give it a question about your teaching. Get a plan to collect evidence and act on what you find.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/professional-learning/teacher-inquiry-cycle-designer
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/professional-learning/teacher-inquiry-cycle-designer
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: teacher-inquiry-cycle-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: teacher-inquiry-cycle-designer skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/professional-learning/teacher-inquiry-cycle-designer
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

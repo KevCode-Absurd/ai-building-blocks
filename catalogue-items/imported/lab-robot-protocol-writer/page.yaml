@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows the robot's rules and checks the protocol in a simulator.
+new_slug: lab-robot-protocol-writer
+name: Lab robot protocol writer
+summary: Describe the liquid handling you need. Get an Opentrons protocol that is simulated, reviewed and ready to run.
+job: build-software
+headline: Lab robot protocol writer
+subhead: Describe the liquid handling you need. Get an Opentrons protocol that is simulated, reviewed and ready to run.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows a layout method with some design choices.
+new_slug: research-poster-maker
+name: Research poster maker
+summary: Give it your results and figures. Get a printable research poster in LaTeX as a PDF.
+job: work-with-files
+headline: Research poster maker
+subhead: Give it your results and figures. Get a printable research poster in LaTeX as a PDF.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run LaTeX and save files.

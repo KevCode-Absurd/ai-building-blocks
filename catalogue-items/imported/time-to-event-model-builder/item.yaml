@@ -1,0 +1,33 @@
+slug: time-to-event-model-builder
+name: Time-to-event model builder
+summary: Give it follow-up data with dropouts. Get survival models that avoid data leaks, with scores and risk curves.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+  - type: image
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/scikit-survival
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scikit-survival
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: scikit-survival
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: scikit-survival skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scikit-survival
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

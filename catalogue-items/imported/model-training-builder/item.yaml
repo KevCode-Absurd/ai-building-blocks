@@ -1,0 +1,40 @@
+slug: model-training-builder
+name: Model training builder
+summary: Describe your data and goal. Get training code with data loading, checks and saved checkpoints.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: ai-ml-operations/model-training
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/ai-ml-operations/model-training
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: model-training
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: model-training skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/ai-ml-operations/model-training
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

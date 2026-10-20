@@ -1,0 +1,33 @@
+slug: eu-sustainability-report-checker
+name: EU sustainability report checker
+summary: Describe your company. Get whether EU sustainability reporting applies, what to disclose and the gaps to close.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/csrd/skills/csrd
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/csrd/skills/csrd
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: csrd
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: csrd skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/csrd/skills/csrd
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

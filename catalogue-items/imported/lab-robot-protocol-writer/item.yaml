@@ -1,0 +1,33 @@
+slug: lab-robot-protocol-writer
+name: Lab robot protocol writer
+summary: Describe the liquid handling you need. Get an Opentrons protocol that is simulated, reviewed and ready to run.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/opentrons-integration
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/opentrons-integration
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: opentrons-integration
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: opentrons-integration skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/opentrons-integration
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

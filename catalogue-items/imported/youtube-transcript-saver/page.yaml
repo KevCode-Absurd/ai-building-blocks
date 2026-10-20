@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It runs a set tool and cleans the text.
+new_slug: youtube-transcript-saver
+name: YouTube transcript saver
+summary: Give it a YouTube link. Get a clean transcript saved as a markdown note you can search later.
+job: organise-work
+headline: YouTube transcript saver
+subhead: Give it a YouTube link. Get a clean transcript saved as a markdown note you can search later.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and save files.

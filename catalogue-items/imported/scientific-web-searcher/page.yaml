@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It runs searches and pulls out text with little judgement.
+new_slug: scientific-web-searcher
+name: Scientific web searcher
+summary: Name a research topic. Get papers and pages found by meaning, with text pulled out of the links. Uses Exa.
+job: research-topics
+headline: Scientific web searcher
+subhead: Name a research topic. Get papers and pages found by meaning, with text pulled out of the links. Uses Exa.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and call the Exa search service.

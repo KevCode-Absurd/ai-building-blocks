@@ -1,0 +1,32 @@
+slug: order-quantity-calculator
+name: Order quantity calculator
+summary: Give it demand, order cost and holding cost. Get the order size with the lowest total cost, with discounts compared.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/economic-order-quantity
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/economic-order-quantity
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: economic-order-quantity
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: economic-order-quantity skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/economic-order-quantity
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

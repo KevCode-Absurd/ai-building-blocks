@@ -1,0 +1,37 @@
+slug: schedule-timing-checker
+name: Schedule timing checker
+summary: Give it a cron schedule. Get a plain-English meaning, the next run times, and any silent mistakes that stop or repeat it.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/cron-doctor
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/cron-doctor
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: cron-doctor
+  author: takeaseat
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cron-doctor skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/cron-doctor
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: takeaseat
+    url: https://github.com/takeaseatventure/devops-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

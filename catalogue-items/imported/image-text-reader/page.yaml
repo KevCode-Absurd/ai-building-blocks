@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It tries preprocessing steps until the text reads well.
+new_slug: image-text-reader
+name: Image text reader
+summary: Give it a photo of a sign, meter or receipt. Get the text read out, with cleanup for hard images.
+job: build-software
+headline: Image text reader
+subhead: Give it a photo of a sign, meter or receipt. Get the text read out, with cleanup for hard images.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with the Computer Vision Toolbox.

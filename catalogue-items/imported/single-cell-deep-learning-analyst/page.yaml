@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It needs model choices and checks on results.
+new_slug: single-cell-deep-learning-analyst
+name: Single-cell deep learning analyst
+summary: Give it single-cell data. Get your datasets merged, batch effects fixed and cell types found with scvi-tools.
+job: build-software
+headline: Single-cell deep learning analyst
+subhead: Give it single-cell data. Get your datasets merged, batch effects fixed and cell types found with scvi-tools.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

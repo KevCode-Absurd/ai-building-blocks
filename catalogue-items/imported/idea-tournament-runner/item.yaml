@@ -1,0 +1,32 @@
+slug: idea-tournament-runner
+name: Idea tournament runner
+summary: Give it a pile of rough ideas. Get them scored, crossed and mutated until the strongest few are left.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: shortlist
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/idea-darwin
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/idea-darwin
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: idea-darwin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: idea-darwin skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/idea-darwin
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads logs, finds the cause and plans a fix.
+new_slug: ci-failure-fixer
+name: CI failure fixer
+summary: Point it at a failing pull request. Get the cause of the failed GitHub check and a fix plan.
+job: test-and-fix-code
+headline: CI failure fixer
+subhead: Point it at a failing pull request. Get the cause of the failed GitHub check and a fix plan.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run the GitHub CLI and reach your repo.

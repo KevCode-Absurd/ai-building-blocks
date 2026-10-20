@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It learns your style first and then measures the draft.
+new_slug: voice-matched-post-writer
+name: Voice-matched post writer
+summary: Share posts you already wrote. Get new Twitter/X or LinkedIn posts that sound like you, checked against your style.
+job: grow-social
+headline: Voice-matched post writer
+subhead: Share posts you already wrote. Get new Twitter/X or LinkedIn posts that sound like you, checked against your style.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

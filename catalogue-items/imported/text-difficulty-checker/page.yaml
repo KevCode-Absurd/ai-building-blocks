@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It weighs several kinds of difficulty together.
+new_slug: text-difficulty-checker
+name: Text difficulty checker
+summary: Paste a text. Get its difficulty by length, meaning and reader task, with support ideas for struggling readers.
+job: teach-and-train
+headline: Text difficulty checker
+subhead: Paste a text. Get its difficulty by length, meaning and reader task, with support ideas for struggling readers.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

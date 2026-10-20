@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It writes code that builds exact shapes and checks fit.
+new_slug: lab-hardware-designer
+name: Lab hardware designer
+summary: Describe a lab part, like a mount or chip mold. Get a parametric design and STEP, STL or DXF files.
+job: build-software
+headline: Lab hardware designer
+subhead: Describe a lab part, like a mount or chip mold. Get a parametric design and STEP, STL or DXF files.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and save files.

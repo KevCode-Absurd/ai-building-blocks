@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It must keep records short and true over time.
+new_slug: feature-memory-keeper
+name: Feature memory keeper
+summary: Point it at your project. Get one short file per feature with status, decisions and risks for the next session.
+job: build-software
+headline: Feature memory keeper
+subhead: Point it at your project. Get one short file per feature with status, decisions and risks for the next session.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read and write your project files.

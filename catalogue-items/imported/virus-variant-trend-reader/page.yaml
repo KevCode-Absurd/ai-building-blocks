@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It queries public data and must separate sampling gaps from real change.
+new_slug: virus-variant-trend-reader
+name: Virus variant trend reader
+summary: Name a virus and a region. Get current lineages, weekly sequence shares and mutation frequencies from public data.
+job: track-numbers
+headline: Virus variant trend reader
+subhead: Name a virus and a region. Get current lineages, weekly sequence shares and mutation frequencies from public data.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can call public web APIs and run code.

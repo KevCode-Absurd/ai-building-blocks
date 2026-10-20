@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: The steps are fixed, but you must check quality after.
+new_slug: model-size-reducer
+name: Model size reducer
+summary: Give it a large model. Get a 4-bit copy that is about 3 times faster and fits on a smaller GPU.
+job: build-software
+headline: Model size reducer
+subhead: Give it a large model. Get a 4-bit copy that is about 3 times faster and fits on a smaller GPU.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code on a computer with a GPU.

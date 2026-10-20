@@ -1,0 +1,38 @@
+slug: sql-query-writer
+name: SQL query writer
+summary: Describe what you want to know. Get a working SQL query, using joins, groups, windows and CTEs as needed.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: data-and-analytics/sql-query-generation
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/data-and-analytics/sql-query-generation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: sql-query-generation
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: sql-query-generation skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/data-and-analytics/sql-query-generation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

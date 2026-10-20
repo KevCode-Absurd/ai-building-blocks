@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads cost data and ranks the easy savings.
+new_slug: cloud-bill-waste-finder
+name: Cloud bill waste finder
+summary: Point it at your AWS account. Get idle and unused resources listed, with the savings for each fix.
+job: ship-and-host
+headline: Cloud bill waste finder
+subhead: Point it at your AWS account. Get idle and unused resources listed, with the savings for each fix.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and connect to your AWS account.

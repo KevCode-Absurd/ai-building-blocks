@@ -1,0 +1,37 @@
+slug: obsidian-note-writer
+name: Obsidian note writer
+summary: Give it your notes. Get Obsidian-ready Markdown with links, embeds, callouts and properties that show up right.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/obsidian-markdown
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/obsidian-markdown
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: obsidian-markdown
+  author: kepano
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: obsidian-markdown skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/obsidian-markdown
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: kepano
+    url: https://github.com/kepano
+    used: Wrote the skill; sickn33 shared it in their collection.

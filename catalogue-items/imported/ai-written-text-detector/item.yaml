@@ -1,0 +1,37 @@
+slug: ai-written-text-detector
+name: AI-written text detector
+summary: Paste a document. Get an honest estimate of whether AI wrote it, with the wording clues behind it.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: copy_draft
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/detect-ai-text
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/detect-ai-text
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: detect-ai-text
+  author: Sketchjar
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: detect-ai-text skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/detect-ai-text
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Sketchjar
+    url: https://github.com/Sketchjar
+    used: Wrote the skill; sickn33 shared it in their collection.

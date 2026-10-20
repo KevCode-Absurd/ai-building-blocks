@@ -1,0 +1,32 @@
+slug: cleanup-cost-liability-calculator
+name: Cleanup cost liability calculator
+summary: Give it an asset and its cleanup cost. Get the liability, yearly interest cost and journal entries worked out.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/aro-computation
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/aro-computation
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: aro-computation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: aro-computation skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/aro-computation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

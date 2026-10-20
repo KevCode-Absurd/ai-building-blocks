@@ -1,0 +1,32 @@
+slug: mixture-of-experts-trainer
+name: Mixture of experts trainer
+summary: Name your compute budget and goal. Get code to train a large model that only uses part of itself per word.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 19-emerging-techniques/moe-training
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/19-emerging-techniques/moe-training
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: moe-training
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: moe-training skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/19-emerging-techniques/moe-training
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

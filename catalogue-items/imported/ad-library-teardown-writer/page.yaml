@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It gathers ads, then reads the pattern in them.
+new_slug: ad-library-teardown-writer
+name: Ad library teardown writer
+summary: Give it a competitor. Get their live ads broken into hooks, offers, calls to action and test ideas. Collects data from websites.
+job: study-competitors
+headline: Ad library teardown writer
+subhead: Give it a competitor. Get their live ads broken into hooks, offers, calls to action and test ideas. Collects data from websites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your ScrapeCreators key.

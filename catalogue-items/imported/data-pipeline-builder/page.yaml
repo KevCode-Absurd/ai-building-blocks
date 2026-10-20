@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows known pipeline patterns with checks.
+new_slug: data-pipeline-builder
+name: Data pipeline builder
+summary: Describe your data sources and goal. Get a working pipeline with checks, scheduling and fixes for common faults.
+job: build-software
+headline: Data pipeline builder
+subhead: Describe your data sources and goal. Get a working pipeline with checks, scheduling and fixes for common faults.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

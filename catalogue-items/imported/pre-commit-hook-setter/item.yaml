@@ -1,0 +1,32 @@
+slug: pre-commit-hook-setter
+name: Pre-commit hook setter
+summary: Point it at your repo. Get checks for formatting, types and tests that run before every commit.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Matt Pocock
+  repo: mattpocock/skills
+  path: skills/misc/setup-pre-commit
+  url: https://github.com/mattpocock/skills/tree/main/skills/misc/setup-pre-commit
+  licence: MIT
+  licence_file: LICENSE
+  commit: 5beb35b
+  original_name: setup-pre-commit
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: setup-pre-commit skill
+    by: Matt Pocock
+    url: https://github.com/mattpocock/skills/tree/main/skills/misc/setup-pre-commit
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

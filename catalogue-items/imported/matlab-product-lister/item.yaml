@@ -1,0 +1,32 @@
+slug: matlab-product-lister
+name: MATLAB product lister
+summary: Point it at a MATLAB install. Get a list of every product and add-on package in it.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/matlab-core/matlab-list-products
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-core/matlab-list-products
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-list-products
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-list-products skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-core/matlab-list-products
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

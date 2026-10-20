@@ -1,0 +1,33 @@
+slug: model-internals-inspector
+name: Model internals inspector
+summary: "Give it a language model and a question. Get a look inside it: which parts pay attention to what, and why."
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 04-mechanistic-interpretability/transformer-lens
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/04-mechanistic-interpretability/transformer-lens
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: transformer-lens-interpretability
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: transformer-lens-interpretability skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/04-mechanistic-interpretability/transformer-lens
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

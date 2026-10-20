@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Handling censored data correctly needs careful choices.
+new_slug: time-to-event-model-builder
+name: Time-to-event model builder
+summary: Give it follow-up data with dropouts. Get survival models that avoid data leaks, with scores and risk curves.
+job: track-numbers
+headline: Time-to-event model builder
+subhead: Give it follow-up data with dropouts. Get survival models that avoid data leaks, with scores and risk curves.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

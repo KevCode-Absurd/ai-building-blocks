@@ -1,0 +1,34 @@
+slug: brand-health-auditor
+name: Brand health auditor
+summary: Describe your brand as it is today. Get a clear diagnosis of what works and what is off, with ranked fixes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brand_brain
+    required: false
+  - type: web_page
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Arnab Bag
+  repo: arnabbagxd/Brand-building-skills
+  path: skills/brand-audit
+  url: https://github.com/arnabbagxd/Brand-building-skills/tree/main/skills/brand-audit
+  licence: MIT
+  licence_file: LICENSE
+  commit: 4a0a8b5
+  original_name: brand-audit
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: brand-audit skill
+    by: Arnab Bag
+    url: https://github.com/arnabbagxd/Brand-building-skills/tree/main/skills/brand-audit
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

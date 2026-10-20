@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It searches, reads sources and sorts them by how well they support each point.
+new_slug: manuscript-evidence-gatherer
+name: Manuscript evidence gatherer
+summary: Name your paper topic. Get a packet of current sources, competing findings and background, each with its link.
+job: research-topics
+headline: Manuscript evidence gatherer
+subhead: Name your paper topic. Get a packet of current sources, competing findings and background, each with its link.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can search the web.

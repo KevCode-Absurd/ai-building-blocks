@@ -1,0 +1,38 @@
+slug: cost-per-funnel-stage-reporter
+name: Cost per funnel stage reporter
+summary: Give it your CRM stages and ad spend. Get a trusted funnel with the true cost of each stage.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+    required: true
+uses: []
+origin: imported
+source:
+  by: wizard7558
+  repo: wizard7558/attribution-skills
+  path: skills/funnel-truth-and-cost-per-stage
+  url: https://github.com/wizard7558/attribution-skills/tree/main/skills/funnel-truth-and-cost-per-stage
+  licence: MIT
+  licence_file: LICENSE
+  commit: bed5a8f
+  original_name: funnel-truth-and-cost-per-stage
+  author: Riley Sorenson
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: funnel-truth-and-cost-per-stage skill
+    by: wizard7558
+    url: https://github.com/wizard7558/attribution-skills/tree/main/skills/funnel-truth-and-cost-per-stage
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Riley Sorenson
+    url: https://github.com/wizard7558
+    used: Wrote the skill; wizard7558 shared it in their collection.

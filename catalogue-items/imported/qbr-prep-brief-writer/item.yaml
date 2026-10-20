@@ -1,0 +1,37 @@
+slug: qbr-prep-brief-writer
+name: QBR prep brief writer
+summary: Name a customer. Get a health read with risk signs, value delivered and an agenda for the review.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/customer-health
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/customer-health
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: customer-health
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: customer-health skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/customer-health
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

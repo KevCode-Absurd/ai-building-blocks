@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It reads sales against price to find patterns.
+new_slug: price-sensitivity-analyst
+name: Price sensitivity analyst
+summary: Get which products sell more or less as price changes, plus price points worth testing.
+job: set-prices
+headline: Price sensitivity analyst
+subhead: Get which products sell more or less as price changes, plus price points worth testing.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin (read only).

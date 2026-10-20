@@ -1,0 +1,32 @@
+slug: conference-talk-slide-maker
+name: Conference talk slide maker
+summary: Give it your finished paper. Get talk slides, speaker notes and a script for a conference talk.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: slide_deck
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 20-ml-paper-writing/presenting-conference-talks
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/20-ml-paper-writing/presenting-conference-talks
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: presenting-conference-talks
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: presenting-conference-talks skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/20-ml-paper-writing/presenting-conference-talks
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

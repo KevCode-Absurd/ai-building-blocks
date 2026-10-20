@@ -1,0 +1,32 @@
+slug: snowflake-data-builder
+name: Snowflake data builder
+summary: Describe your data job. Get Snowflake SQL, pipelines and tuning that follow good practice.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/snowflake-development
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/snowflake-development
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: snowflake-development
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: snowflake-development skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/snowflake-development
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

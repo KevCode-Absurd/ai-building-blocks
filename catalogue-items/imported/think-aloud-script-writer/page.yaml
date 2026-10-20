@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It writes the hidden thinking steps in plain speech.
+new_slug: think-aloud-script-writer
+name: Think-aloud script writer
+summary: Give it a task. Get a script of what you say out loud to show students how an expert thinks it through.
+job: teach-and-train
+headline: Think-aloud script writer
+subhead: Give it a task. Get a script of what you say out loud to show students how an expert thinks it through.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

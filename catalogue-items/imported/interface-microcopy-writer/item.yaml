@@ -1,0 +1,37 @@
+slug: interface-microcopy-writer
+name: Interface microcopy writer
+summary: Give it a screen. Get button labels, error messages, empty states and toasts in a friendly, polite voice.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/ux-copy
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ux-copy
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: ux-copy
+  author: bitjaru
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ux-copy skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ux-copy
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: bitjaru
+    url: https://github.com/bitjaru/styleseed
+    used: Wrote the skill; sickn33 shared it in their collection.

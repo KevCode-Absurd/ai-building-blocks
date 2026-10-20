@@ -1,0 +1,32 @@
+slug: incident-postmortem-writer
+name: Incident postmortem writer
+summary: Give it the facts of an outage. Get a blameless postmortem with timeline, causes and follow-up actions.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/postmortem-writing
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/postmortem-writing
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: postmortem-writing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: postmortem-writing skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/postmortem-writing
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

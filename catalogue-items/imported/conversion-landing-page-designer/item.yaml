@@ -1,0 +1,39 @@
+slug: conversion-landing-page-designer
+name: Conversion landing page designer
+summary: Tell it your offer and audience. Get a landing page plan, copy and strict design rules that turn visitors into buyers.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: brand_brain
+    required: false
+outputs:
+  - type: landing_page
+uses: []
+origin: imported
+source:
+  by: Elaya Design
+  repo: elayadesign/ai-design-skills
+  path: skills/landing-page-design
+  url: https://github.com/elayadesign/ai-design-skills/tree/main/skills/landing-page-design
+  licence: MIT
+  licence_file: LICENSE
+  commit: 1c1e97c
+  original_name: landing-page-design
+  author: Elaya Design
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: landing-page-design skill
+    by: Elaya Design
+    url: https://github.com/elayadesign/ai-design-skills/tree/main/skills/landing-page-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Elaya Design
+    url: https://github.com/elayadesign
+    used: Wrote the skill; Elaya Design shared it in their collection.

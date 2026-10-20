@@ -1,0 +1,14 @@
+# AgriciDaniel/claude-youtube (MIT)
+"AgriciDaniel/claude-youtube:skills/claude-youtube":
+  name: YouTube channel growth kit
+  summary: "The full kit: tell it your channel and goal. Get an audit, ideas, scripts, thumbnails, SEO and a calendar."
+  task: grow-social
+  role: orchestrate
+  level: intermediate
+  thinking: high
+  thinking_why: "It routes across 14 jobs and needs your channel's context."
+  needs: "run code and use your own YouTube API key (the keyword data parts are optional and need your own DataForSEO account)"
+  inputs: [ { type: brief, required: true }, { type: performance_sheet, required: false } ]
+  outputs: [ { type: audit_report, required: true }, { type: plan, required: true } ]
+  author: Daniel Agrici
+  author_url: https://github.com/AgriciDaniel

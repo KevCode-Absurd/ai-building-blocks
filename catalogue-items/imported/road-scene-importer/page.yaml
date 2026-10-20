@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It runs a short set of load steps.
+new_slug: road-scene-importer
+name: Road scene importer
+summary: Give it a map file. Get it loaded into RoadRunner as a driving scene you can check by eye.
+job: build-software
+headline: Road scene importer
+subhead: Give it a map file. Get it loaded into RoadRunner as a driving scene you can check by eye.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with RoadRunner.

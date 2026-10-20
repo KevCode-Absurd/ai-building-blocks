@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows set steps to pull the data out of pages.
+new_slug: web-page-data-extractor
+name: Web page data extractor
+summary: Give it page links. Get tables, lists and prices as a CSV or JSON file. Collects data from websites.
+job: work-with-files
+headline: Web page data extractor
+subhead: Give it page links. Get tables, lists and prices as a CSV or JSON file. Collects data from websites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and reach the web.

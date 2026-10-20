@@ -1,0 +1,32 @@
+slug: original-research-idea-generator
+name: Original research idea generator
+summary: Describe your problem. Get new directions from eight creative methods, such as borrowing ideas from other fields.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: shortlist
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 21-research-ideation/creative-thinking-for-research
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/21-research-ideation/creative-thinking-for-research
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: creative-thinking-for-research
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: creative-thinking-for-research skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/21-research-ideation/creative-thinking-for-research
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

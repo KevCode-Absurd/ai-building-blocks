@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It compares products to channels.
+new_slug: sales-channel-gap-finder
+name: Sales channel gap finder
+summary: Get live products that are not published to the sales channels you expect.
+job: run-your-store
+headline: Sales channel gap finder
+subhead: Get live products that are not published to the sales channels you expect.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin (read only).

@@ -1,0 +1,37 @@
+slug: fashion-scene-image-maker
+name: Fashion scene image maker
+summary: Describe a scene, with or without a reference photo. Get an image or a new pose. Your image model draws it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: image_plan
+    required: false
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: dLazy
+  repo: dlazy-ai/ecommerce-skills
+  path: skills/creative-scene
+  url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/creative-scene
+  licence: MIT
+  licence_file: LICENSE
+  commit: 87791a1
+  original_name: creative-scene
+  author: dLazy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: creative-scene skill
+    by: dLazy
+    url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/creative-scene
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: dLazy
+    url: https://github.com/dlazy-ai
+    used: Wrote the skill; dLazy shared it in their collection.

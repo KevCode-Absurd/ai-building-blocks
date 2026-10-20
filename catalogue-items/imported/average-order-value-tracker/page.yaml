@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It averages and charts order data.
+new_slug: average-order-value-tracker
+name: Average order value tracker
+summary: Pick a time range. Get average order value over time, split into new and returning customers.
+job: run-your-store
+headline: Average order value tracker
+subhead: Pick a time range. Get average order value over time, split into new and returning customers.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin.

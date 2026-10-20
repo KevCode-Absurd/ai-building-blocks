@@ -1,0 +1,37 @@
+slug: hypothesis-first-design-planner
+name: Hypothesis-first design planner
+summary: Describe a design problem. Get hypotheses, quick sketching steps and small experiments in place of heavy design documents.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Wondel.ai
+  repo: wondelai/skills
+  path: lean-ux
+  url: https://github.com/wondelai/skills/tree/main/lean-ux
+  licence: MIT
+  licence_file: LICENSE
+  commit: c172996
+  original_name: lean-ux
+  author: wondelai
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: lean-ux skill
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/lean-ux
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: wondelai
+    url: https://github.com/wondelai
+    used: Wrote the skill; Wondel.ai shared it in their collection.

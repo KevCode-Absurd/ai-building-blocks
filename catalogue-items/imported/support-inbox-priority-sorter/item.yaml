@@ -1,0 +1,32 @@
+slug: support-inbox-priority-sorter
+name: Support inbox priority sorter
+summary: Paste a support ticket. Get a category, a P1 to P4 priority, who should handle it, and any known duplicate.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: customer-support/skills/ticket-triage
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/customer-support/skills/ticket-triage
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: ticket-triage
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ticket-triage skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/customer-support/skills/ticket-triage
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

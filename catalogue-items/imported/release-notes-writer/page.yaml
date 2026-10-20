@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It reads commit messages and applies fixed rules.
+new_slug: release-notes-writer
+name: Release notes writer
+summary: Point it at your commits. Get tidy release notes and the right version bump from Conventional Commits.
+job: build-software
+headline: Release notes writer
+subhead: Point it at your commits. Get tidy release notes and the right version bump from Conventional Commits.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your git history.

@@ -1,0 +1,303 @@
+# nimrodfisher/data-analytics-skills (MIT)
+"nimrodfisher/data-analytics-skills:01-data-quality-validation/data-quality-audit":
+  name: Data quality scorecard maker
+  summary: "Give it a dataset and your rules. Get checks for blanks, duplicates, broken links and stale data, plus a scorecard."
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "The checks are set steps, but the severity calls need judgment."
+  inputs: [ { type: spreadsheet, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run code and open files
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:01-data-quality-validation/programmatic-eda":
+  skip: Same job as our Dataset profiler and New dataset explorer, so we keep those.
+"nimrodfisher/data-analytics-skills:01-data-quality-validation/query-validation":
+  name: SQL query launch reviewer
+  summary: "Give it a SQL query before it goes live. Get wrong-result risks, slow spots and rewrites ranked by impact."
+  task: track-numbers
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows a checklist, but each fix depends on your database."
+  inputs: [ { type: codebase, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run code
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:02-documentation-knowledge/analysis-assumptions-log":
+  name: Analysis assumptions logger
+  summary: "Tell it about your analysis. Get every assumption logged with its risk, so reviewers see what could change the answer."
+  task: document-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Spotting which assumptions matter most takes some judgment."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:02-documentation-knowledge/analysis-documentation":
+  name: Analysis write-up builder
+  summary: "Give it your finished analysis. Get a write-up with the question, data, method, results and steps to rerun it."
+  task: document-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It fills a set structure, but needs a clear read of your audience."
+  inputs: [ { type: codebase, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:02-documentation-knowledge/data-catalog-entry":
+  name: Data catalog entry writer
+  summary: "Give it a table and its owner. Get a plain entry with column meanings, quality notes, sources and who may use it."
+  task: document-work
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It fills a fixed template from facts you give it."
+  inputs: [ { type: spreadsheet, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: document, required: true } ]
+  needs: connect to your database
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:02-documentation-knowledge/metric-reconciliation":
+  name: Metric mismatch tracer
+  summary: "Tell it which number differs between two reports. Get the gap, the step where they split and a fix."
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "Finding the exact split point means reading two calculations closely."
+  inputs: [ { type: brief, required: true }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:02-documentation-knowledge/schema-mapper":
+  name: Column mapping document writer
+  summary: "Give it your source and target tables. Get a column-by-column map with rules, gaps and decisions to review."
+  task: document-work
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "Matching columns is mechanical, but odd fields need a judgment call."
+  inputs: [ { type: spreadsheet, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: document, required: true } ]
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:02-documentation-knowledge/semantic-model-builder":
+  name: Metric definition writer
+  summary: "Tell it how a metric is worked out. Get one agreed definition as checked YAML your team can reuse."
+  task: document-work
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "The format is strict, but the definition needs your business rules."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: document, required: true } ]
+  needs: run code
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:02-documentation-knowledge/sql-to-business-logic":
+  name: Plain-words SQL explainer
+  summary: "Paste a SQL query. Get what it counts, which rows it keeps and what each column means, in plain words."
+  task: document-work
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It reads the query step by step and explains each part."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:03-data-analysis-investigation/ab-test-analysis":
+  name: A/B test verdict maker
+  summary: "Give it your test data. Get a split check, the result with a confidence range, side effects and a ship call."
+  task: track-numbers
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Wrong statistics lead to wrong launches, so each check needs care."
+  inputs: [ { type: spreadsheet, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: test_report, required: true } ]
+  needs: run code
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:03-data-analysis-investigation/business-metrics-calculator":
+  skip: Same job as our SaaS metrics coach, so we keep that one.
+"nimrodfisher/data-analytics-skills:03-data-analysis-investigation/cohort-analysis":
+  name: Retention heatmap maker
+  summary: "Give it signup and activity dates. Get retention by group over time, as a colour-coded grid with a plain reading."
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "The maths is set, but reading the pattern takes some thought."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet, required: true }, { type: audit_report, required: false } ]
+  needs: run code
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:03-data-analysis-investigation/funnel-analysis":
+  name: Conversion funnel analyst
+  summary: "Give it an event log and your steps. Get conversion per step, drop-offs, time to convert and what to fix."
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "The counting is set, but picking the fix needs judgment."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run code
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:03-data-analysis-investigation/root-cause-investigation":
+  name: Metric drop investigator
+  summary: "Tell it which number moved. Get the change confirmed, split by group, the main driver ranked and next steps."
+  task: track-numbers
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Finding the real driver means testing several causes against the data."
+  inputs: [ { type: spreadsheet, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run code
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:03-data-analysis-investigation/segmentation-analysis":
+  name: Behaviour group finder
+  summary: "Give it customer data and a goal. Get natural groups found by behaviour, each profiled with a plan."
+  task: track-numbers
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Choosing and naming useful groups takes judgment on top of the math."
+  inputs: [ { type: spreadsheet, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run code
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:03-data-analysis-investigation/time-series-analysis":
+  name: Trend and forecast analyst
+  summary: "Give it numbers over time. Get trend, seasons and odd spikes found, plus a forecast table and plain insights."
+  task: track-numbers
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Picking a sound model and reading it fairly needs care."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report, required: true }, { type: spreadsheet, required: false } ]
+  needs: run code
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:04-data-storytelling-visualization/dashboard-specification":
+  skip: Same job as our KPI dashboard designer, so we keep that one.
+"nimrodfisher/data-analytics-skills:04-data-storytelling-visualization/data-narrative-builder":
+  skip: Same job as our Data story writer, so we keep that one.
+"nimrodfisher/data-analytics-skills:04-data-storytelling-visualization/executive-summary-generator":
+  name: Executive summary writer
+  summary: "Give it a long analysis. Get a one-page summary with the answer first, the impact in numbers and the decision needed."
+  task: write-and-tell-stories
+  role: compress
+  level: beginner
+  thinking: medium
+  thinking_why: "Cutting to what matters takes judgment about your reader."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:04-data-storytelling-visualization/insight-synthesis":
+  name: Insight brief writer
+  summary: "Give it your findings and goals. Get the top insights ranked by impact and confidence, each with an action."
+  task: track-numbers
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "Ranking insights needs judgment about impact and certainty."
+  inputs: [ { type: document, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: document, required: true } ]
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:04-data-storytelling-visualization/visualization-builder":
+  skip: Same job as our Data chart drawer and Chart maker, so we keep those.
+"nimrodfisher/data-analytics-skills:05-stakeholder-communication/analysis-qa-checklist":
+  skip: Same job as our Analysis checker, so we keep that one.
+"nimrodfisher/data-analytics-skills:05-stakeholder-communication/impact-quantification":
+  name: Opportunity size estimator
+  summary: "Give it a baseline and an expected change. Get a low, base and high estimate with every assumption listed."
+  task: track-numbers
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "The math is simple, but honest ranges need careful inputs."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:05-stakeholder-communication/methodology-explainer":
+  name: Method explainer
+  summary: "Tell it how you did your analysis and who reads it. Get a plain how-we-did-this section with limits."
+  task: document-work
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "Pitching the depth to each reader takes judgment."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:05-stakeholder-communication/stakeholder-requirements-gathering":
+  name: Analysis request scoper
+  summary: "Give it a vague request for data work. Get the right questions asked and a clear brief ready to hand over."
+  task: track-numbers
+  role: source
+  level: beginner
+  thinking: medium
+  thinking_why: "Good questions depend on what the requester really needs."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: brief, required: true } ]
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:05-stakeholder-communication/technical-to-business-translator":
+  name: Data jargon translator
+  summary: "Paste your technical findings and name the reader. Get jargon found and the text rewritten in plain business words."
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It swaps hard terms for plain ones without changing the facts."
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:06-workflow-optimization/analysis-planning":
+  name: Analysis plan builder
+  summary: "Give it a brief and your data. Get ordered steps with time estimates and a list of risks."
+  task: track-numbers
+  role: orchestrate
+  level: beginner
+  thinking: medium
+  thinking_why: "Ordering the steps well depends on your data and deadline."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:06-workflow-optimization/analysis-retrospective":
+  name: Analysis lessons review writer
+  summary: "Tell it how a data project went. Get what worked, what slipped, the causes and actions for next time."
+  task: track-numbers
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "Finding real causes takes honest reflection."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  author: Nimrod Fisher
+  author_url: https://github.com/nimrodfisher
+"nimrodfisher/data-analytics-skills:06-workflow-optimization/context-packager":
+  skip: Same job as our Context package cleaner and Context shrinker, so we keep those.
+"nimrodfisher/data-analytics-skills:06-workflow-optimization/peer-review-template":
+  skip: Same job as our Analysis checker, with little beyond a feedback template.

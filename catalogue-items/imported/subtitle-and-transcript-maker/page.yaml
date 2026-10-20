@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It sends your file to a set tool and saves the result.
+new_slug: subtitle-and-transcript-maker
+name: Subtitle and transcript maker
+summary: Give it a recording or video. Get a written transcript with who spoke, word timing and subtitles.
+job: work-with-audio
+headline: Subtitle and transcript maker
+subhead: Give it a recording or video. Get a written transcript with who spoke, word timing and subtitles.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your own ElevenLabs API key.

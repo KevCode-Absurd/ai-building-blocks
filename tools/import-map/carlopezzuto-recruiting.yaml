@@ -1,0 +1,149 @@
+# carlopezzuto/recruiting (MIT), by Carlo Pezzuto
+"carlopezzuto/recruiting:.claude/skills/boolean-search":
+  name: "Candidate search string writer"
+  summary: "Give it a role. Get ready-to-paste search strings for LinkedIn, Google, GitHub and more, which you run yourself."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It turns a role into precise search syntax for each site."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"carlopezzuto/recruiting:.claude/skills/candidate-comms":
+  name: "Candidate message drafter"
+  summary: "Say where the candidate is in your process. Get a clear email, rejection or update draft for you to send."
+  task: hire-people
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "The messages follow set patterns and a kind, clear tone."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+"carlopezzuto/recruiting:.claude/skills/candidate-evaluation":
+  name: "Fair candidate comparer"
+  summary: "Paste interview notes or transcripts. Get candidates compared on evidence, with bias checks. You make the hiring call."
+  task: hire-people
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs mixed feedback and must not let bias creep in."
+  inputs: [ { type: feedback_notes, required: true }, { type: transcript, required: false } ]
+  outputs: [ { type: audit_report } ]
+"carlopezzuto/recruiting:.claude/skills/candidate-outreach":
+  name: "Candidate outreach drafter"
+  summary: "Describe the role and the person you want. Get personal first messages and follow-ups to send yourself."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Good outreach needs a fresh angle for each person."
+  inputs: [ { type: persona, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: copy_draft }, { type: plan } ]
+"carlopezzuto/recruiting:.claude/skills/hiring-quality":
+  name: "Hiring quality reviewer"
+  summary: "Give it a finished search. Get surveys, a look back at what worked and a start-day checklist for the new hire."
+  task: hire-people
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts feedback into lessons you can act on."
+  inputs: [ { type: feedback_notes, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+"carlopezzuto/recruiting:.claude/skills/interview-design":
+  name: "Interview process planner"
+  summary: "Name the role and level. Get the interview stages, who runs each one and what each stage checks."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It matches each skill you need to a stage and a person."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"carlopezzuto/recruiting:.claude/skills/interview-kit":
+  name: "Interview scorecard builder"
+  summary: "Give it your interview stages. Get scorecards, question banks, a phone screen script and a rating guide."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It builds clear rating rules from the skills you need."
+  inputs: [ { type: plan, required: true } ]
+  outputs: [ { type: document } ]
+"carlopezzuto/recruiting:.claude/skills/jd-writing":
+  name: "Job post writer"
+  summary: "Describe the role and your team. Get a clear job description that attracts the right people and avoids biased wording."
+  task: hire-people
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It must pick the real needs and choose words carefully."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+"carlopezzuto/recruiting:.claude/skills/market-research":
+  name: "Hiring market researcher"
+  summary: "Name a role and place. Get pay ranges, talent supply and hiring difficulty. Reads public web pages."
+  task: hire-people
+  role: source
+  level: intermediate
+  thinking: high
+  thinking_why: "It must compare sources and judge how fresh each one is."
+  needs: "search the web"
+  scrapes: true
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+"carlopezzuto/recruiting:.claude/skills/offer-negotiation":
+  name: "Job offer planner"
+  summary: "Give it the role and what the candidate wants. Get an offer package, a negotiation plan and call scripts."
+  task: hire-people
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Pay, risk and the candidate's options all pull against each other."
+  inputs: [ { type: brief, required: true }, { type: feedback_notes, required: false } ]
+  outputs: [ { type: plan } ]
+"carlopezzuto/recruiting:.claude/skills/persona-research":
+  name: "Ideal candidate profiler"
+  summary: "Give it a job description. Get a profile of who fits: their motives, where they spend time, what moves them."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "It infers motives and habits that the job post never states."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: persona } ]
+"carlopezzuto/recruiting:.claude/skills/skill-creator":
+  skip: "Generic skill maker. We already have skill makers in the make-skills group."
+"carlopezzuto/recruiting:.claude/skills/sourcing-plan":
+  name: "Candidate sourcing planner"
+  summary: "Give it a role and candidate profile. Get the best places to look, target companies and a week-by-week plan."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It ranks channels for one role using a set method."
+  inputs: [ { type: persona, required: true } ]
+  outputs: [ { type: plan } ]
+"carlopezzuto/recruiting:.claude/skills/stakeholder-reporting":
+  name: "Hiring progress reporter"
+  summary: "Paste your pipeline numbers. Get a clear update or chart page for the hiring manager or your leaders."
+  task: hire-people
+  role: render
+  level: intermediate
+  thinking: medium
+  thinking_why: "It turns numbers into a short story for each reader."
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: document } ]
+"carlopezzuto/recruiting:.claude/skills/stop-slop":
+  skip: "Generic AI-writing cleaner. Repeats our Anti-AI slop copy editor."
+"carlopezzuto/recruiting:.claude/skills/talent-mapping":
+  name: "Talent pool mapper"
+  summary: "Describe who you need. Get target companies, pool sizes and ways in. Reads public web pages."
+  task: hire-people
+  role: source
+  level: advanced
+  thinking: high
+  thinking_why: "It sizes pools and judges competitors from patchy public facts."
+  needs: "search the web"
+  scrapes: true
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]

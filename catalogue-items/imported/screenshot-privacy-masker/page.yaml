@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It runs a tool that finds and covers text.
+new_slug: screenshot-privacy-masker
+name: Screenshot privacy masker
+summary: Give it a screenshot. Get phone numbers, emails, keys and IDs masked on your own computer before you share it.
+job: work-with-files
+headline: Screenshot privacy masker
+subhead: Give it a screenshot. Get phone numbers, emails, keys and IDs masked on your own computer before you share it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run a local command line tool.

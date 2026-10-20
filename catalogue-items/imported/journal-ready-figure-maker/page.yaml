@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks a fitting chart and checks it for honesty and access.
+new_slug: journal-ready-figure-maker
+name: Journal-ready figure maker
+summary: Give it your data. Get clear, honest, colour-safe figures with uncertainty shown, sized for journal export.
+job: research-topics
+headline: Journal-ready figure maker
+subhead: Give it your data. Get clear, honest, colour-safe figures with uncertainty shown, sized for journal export.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and save files.

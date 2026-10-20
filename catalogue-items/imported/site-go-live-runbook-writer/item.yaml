@@ -1,0 +1,34 @@
+slug: site-go-live-runbook-writer
+name: Site go-live runbook writer
+summary: Tell it what you are launching. Get a go-live runbook with checks, DNS cutover steps, post-launch watching and a rollback plan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: web_app
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/launch-runbook
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/launch-runbook
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: launch-runbook
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: launch-runbook skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/launch-runbook
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

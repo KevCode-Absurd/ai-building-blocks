@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Systems papers follow strict structures and reviewer habits.
+new_slug: systems-paper-writer
+name: Systems paper writer
+summary: Give it your systems work. Get a paper draft built to the structure that systems conferences expect.
+job: research-topics
+headline: Systems paper writer
+subhead: Give it your systems work. Get a paper draft built to the structure that systems conferences expect.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your files and run LaTeX.

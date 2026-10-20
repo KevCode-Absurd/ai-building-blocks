@@ -1,0 +1,37 @@
+slug: weekly-customer-call-planner
+name: Weekly customer call planner
+summary: Ask for your week. Get one brief covering every outside call in the next seven days. Needs your Common Room account.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: partner-built/common-room/skills/weekly-prep-brief
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/common-room/skills/weekly-prep-brief
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: weekly-prep-brief
+  author: Common Room
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: weekly-prep-brief skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/common-room/skills/weekly-prep-brief
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Common Room
+    url: ""
+    used: Wrote the skill; Anthropic shared it in their collection.

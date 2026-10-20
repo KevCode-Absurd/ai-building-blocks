@@ -1,0 +1,37 @@
+slug: lapsed-customer-finder
+name: Lapsed customer finder
+summary: Get a list of customers who stopped ordering, tagged for your win-back campaign. Adds tags to live customer records.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/marketing/shopify-admin-customer-win-back
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/marketing/shopify-admin-customer-win-back
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-customer-win-back
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-customer-win-back skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/marketing/shopify-admin-customer-win-back
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

@@ -1,0 +1,33 @@
+slug: draft-proofreader
+name: Draft proofreader
+summary: Give it a text or document. Get it back corrected in your own voice, with a log of every change.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: copy_draft
+    required: true
+outputs:
+  - type: copy_draft
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/professional-proofreader
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/professional-proofreader
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: professional-proofreader
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: professional-proofreader skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/professional-proofreader
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

@@ -1,0 +1,11 @@
+# zanwei/design-dna (MIT)
+"zanwei/design-dna:.":
+  name: Design style analyst
+  summary: Share screenshots or links of designs you like. Get their colors, type, feel and effects as a profile you can reuse.
+  task: design-work
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads many visual cues and fits them to a fixed profile.
+  inputs: [{type: image, required: true}]
+  outputs: [{type: design_direction}]

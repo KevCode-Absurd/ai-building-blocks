@@ -1,0 +1,35 @@
+slug: test-first-coach
+name: Test-first coach
+summary: Say what to build or fix. Get it done test first, in small steps from failing test to clean code.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: Matt Pocock
+  repo: mattpocock/skills
+  path: skills/engineering/tdd
+  url: https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd
+  licence: MIT
+  licence_file: LICENSE
+  commit: 5beb35b
+  original_name: tdd
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: tdd skill
+    by: Matt Pocock
+    url: https://github.com/mattpocock/skills/tree/main/skills/engineering/tdd
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

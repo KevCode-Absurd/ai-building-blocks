@@ -1,0 +1,32 @@
+slug: release-notes-writer
+name: Release notes writer
+summary: Point it at your commits. Get tidy release notes and the right version bump from Conventional Commits.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/changelog-generator
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/changelog-generator
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: changelog-generator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: changelog-generator skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/changelog-generator
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

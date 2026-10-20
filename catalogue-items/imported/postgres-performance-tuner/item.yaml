@@ -1,0 +1,37 @@
+slug: postgres-performance-tuner
+name: Postgres performance tuner
+summary: Give it your queries or schema. Get Postgres fixes for speed, indexes and security, ranked by impact.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/supabase-postgres-best-practices
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/supabase-postgres-best-practices
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: supabase-postgres-best-practices
+  author: Supabase
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: supabase-postgres-best-practices skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/supabase-postgres-best-practices
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Supabase
+    url: https://github.com/supabase
+    used: Wrote the skill; sickn33 shared it in their collection.

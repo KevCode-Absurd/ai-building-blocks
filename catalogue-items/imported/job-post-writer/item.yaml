@@ -1,0 +1,32 @@
+slug: job-post-writer
+name: Job post writer
+summary: Describe the role and your team. Get a clear job description that attracts the right people and avoids biased wording.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Carlo Pezzuto
+  repo: carlopezzuto/recruiting
+  path: .claude/skills/jd-writing
+  url: https://github.com/carlopezzuto/recruiting/tree/main/.claude/skills/jd-writing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 6e9716a
+  original_name: jd-writing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: jd-writing skill
+    by: Carlo Pezzuto
+    url: https://github.com/carlopezzuto/recruiting/tree/main/.claude/skills/jd-writing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

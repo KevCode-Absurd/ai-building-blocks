@@ -1,0 +1,34 @@
+slug: product-listing-writer
+name: Product listing writer
+summary: Give it your product facts. Get a title, bullets and description built for the marketplace you sell on.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: product_data
+    required: true
+  - type: competitor_set
+    required: false
+outputs:
+  - type: pdp_copy
+uses: []
+origin: imported
+source:
+  by: Nexscope AI
+  repo: nexscope-ai/eCommerce-Skills
+  path: product-description-generator
+  url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/product-description-generator
+  licence: MIT
+  licence_file: LICENSE
+  commit: ee0fb29
+  original_name: product-description-generator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: product-description-generator skill
+    by: Nexscope AI
+    url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/product-description-generator
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

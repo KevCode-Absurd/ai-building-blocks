@@ -1,0 +1,32 @@
+slug: electronics-parts-sourcing-planner
+name: Electronics parts sourcing planner
+summary: Give it your parts list. Get a plan for scarce parts, long lead times and leftover stock.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/electronics-supply-chain
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/electronics-supply-chain
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: electronics-supply-chain
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: electronics-supply-chain skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/electronics-supply-chain
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

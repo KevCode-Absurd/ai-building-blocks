@@ -1,0 +1,32 @@
+slug: soc-2-readiness-checker
+name: SOC 2 readiness checker
+summary: Name your scope. Answer six questions and get gaps to fix before the SOC 2 Type II watch period.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: compliance-os/skills/soc2-audit-prep
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/compliance-os/skills/soc2-audit-prep
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: soc2-audit-prep
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: soc2-audit-prep skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/compliance-os/skills/soc2-audit-prep
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

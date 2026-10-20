@@ -1,0 +1,32 @@
+slug: article-cover-maker
+name: Article cover maker
+summary: Give it an article. Get a cover image with a type, colours and mood that fit the piece.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: Jim Liu
+  repo: JimLiu/baoyu-skills
+  path: skills/baoyu-cover-image
+  url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-cover-image
+  licence: MIT
+  licence_file: LICENSE
+  commit: "1567581"
+  original_name: baoyu-cover-image
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: baoyu-cover-image skill
+    by: Jim Liu
+    url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-cover-image
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

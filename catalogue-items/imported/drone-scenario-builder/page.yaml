@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It builds a scene from set parts.
+new_slug: drone-scenario-builder
+name: Drone scenario builder
+summary: Describe the terrain, buildings and sensors. Get a drone simulation scene you can fly in MATLAB.
+job: build-software
+headline: Drone scenario builder
+subhead: Describe the terrain, buildings and sensors. Get a drone simulation scene you can fly in MATLAB.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with UAV Toolbox.

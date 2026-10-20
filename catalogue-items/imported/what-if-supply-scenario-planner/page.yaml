@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It builds linked cases and checks what each one costs.
+new_slug: what-if-supply-scenario-planner
+name: What-if supply scenario planner
+summary: Name a worry like a late shipment or a demand spike. Get three scenarios, their cost, and a response for each.
+job: plan-supply-chain
+headline: What-if supply scenario planner
+subhead: Name a worry like a late shipment or a demand spike. Get three scenarios, their cost, and a response for each.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

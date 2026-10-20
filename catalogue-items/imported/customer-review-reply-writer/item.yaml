@@ -1,0 +1,35 @@
+slug: customer-review-reply-writer
+name: Customer review reply writer
+summary: Give it your reviews and complaints. Get themes with quotes, a reply to each review, and customers at risk. Scrapes sites.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: voc_reviews
+  - type: copy_draft
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: small-business/skills/review-reputation
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/review-reputation
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: review-reputation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: review-reputation skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/review-reputation
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

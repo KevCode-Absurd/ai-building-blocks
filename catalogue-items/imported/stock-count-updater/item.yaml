@@ -1,0 +1,37 @@
+slug: stock-count-updater
+name: Stock count updater
+summary: Give it counts by product and location. Get live stock levels corrected. Wrong numbers can cause overselling.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/merchandising/shopify-admin-inventory-adjustment
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/merchandising/shopify-admin-inventory-adjustment
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-inventory-adjustment
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-inventory-adjustment skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/merchandising/shopify-admin-inventory-adjustment
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

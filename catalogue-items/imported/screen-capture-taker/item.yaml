@@ -1,0 +1,32 @@
+slug: screen-capture-taker
+name: Screen capture taker
+summary: Ask for a screen, a window or a part of one. Get a saved screenshot.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/screenshot
+  url: https://github.com/openai/skills/tree/main/skills/.curated/screenshot
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: screenshot
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: screenshot skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/screenshot
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

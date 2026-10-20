@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It runs set calculations and checks the results agree.
+new_slug: market-size-and-survey-planner
+name: Market size and survey planner
+summary: Give it your market. Get market size two ways, survey sample sizes and segments scored.
+job: understand-customers
+headline: Market size and survey planner
+subhead: Give it your market. Get market size two ways, survey sample sizes and segments scored.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

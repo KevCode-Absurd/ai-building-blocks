@@ -1,0 +1,35 @@
+slug: research-grant-proposal-coach
+name: Research grant proposal coach
+summary: Name the funder and your idea. Get aims, a compliance checklist, a budget outline and a critique of your draft.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/research-grants
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/research-grants
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: research-grants
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: research-grants skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/research-grants
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

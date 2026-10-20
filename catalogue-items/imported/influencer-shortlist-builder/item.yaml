@@ -1,0 +1,35 @@
+slug: influencer-shortlist-builder
+name: Influencer shortlist builder
+summary: Give it a niche. Get creators with follower counts, engagement and fit notes. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: shortlist
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:Apify
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/apify-influencer-discovery
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-influencer-discovery
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: apify-influencer-discovery
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: apify-influencer-discovery skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-influencer-discovery
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

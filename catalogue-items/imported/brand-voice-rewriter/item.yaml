@@ -1,0 +1,39 @@
+slug: brand-voice-rewriter
+name: Brand voice rewriter
+summary: Give it a draft or a topic. Get emails, posts or pitches written in your brand voice, with notes on each choice.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brand_guide
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: partner-built/brand-voice/skills/brand-voice-enforcement
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/brand-voice/skills/brand-voice-enforcement
+  licence: MIT
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: brand-voice-enforcement
+  author: Tribe AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: brand-voice-enforcement skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/brand-voice/skills/brand-voice-enforcement
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tribe AI
+    url: ""
+    used: Wrote the skill; Anthropic shared it in their collection.

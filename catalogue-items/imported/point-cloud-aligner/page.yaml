@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It compares several alignment methods and settings.
+new_slug: point-cloud-aligner
+name: Point cloud aligner
+summary: Give it two 3D scans. Get them lined up and merged, with the right method chosen and tuned.
+job: build-software
+headline: Point cloud aligner
+subhead: Give it two 3D scans. Get them lined up and merged, with the right method chosen and tuned.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with the Lidar Toolbox.

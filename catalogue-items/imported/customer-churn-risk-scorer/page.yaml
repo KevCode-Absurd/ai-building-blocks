@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It scores with set rules but needs sensible cutoffs.
+new_slug: customer-churn-risk-scorer
+name: Customer churn risk scorer
+summary: Run it on your customers. Get each one scored for churn risk from how often they buy and how long since.
+job: run-your-store
+headline: Customer churn risk scorer
+subhead: Run it on your customers. Get each one scored for churn risk from how often they buy and how long since.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin.

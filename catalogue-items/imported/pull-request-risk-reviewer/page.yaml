@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads the diff and judges risk.
+new_slug: pull-request-risk-reviewer
+name: Pull request risk reviewer
+summary: Give it a pull request. Get issues ranked by severity, security notes and clear review comments.
+job: test-and-fix-code
+headline: Pull request risk reviewer
+subhead: Give it a pull request. Get issues ranked by severity, security notes and clear review comments.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your git diff.

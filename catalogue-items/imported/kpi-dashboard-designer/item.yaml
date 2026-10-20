@@ -1,0 +1,34 @@
+slug: kpi-dashboard-designer
+name: KPI dashboard designer
+summary: Say who reads it and what they decide. Get the right metrics and a dashboard layout that fits.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: performance_sheet
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/kpi-dashboard-design
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/kpi-dashboard-design
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: kpi-dashboard-design
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: kpi-dashboard-design skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/kpi-dashboard-design
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

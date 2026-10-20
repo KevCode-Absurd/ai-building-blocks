@@ -1,0 +1,35 @@
+slug: rival-seo-comparer
+name: Rival SEO comparer
+summary: Name your site and rivals. Get a comparison of search overlap, content depth, backlinks, technical state and brand presence.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+  - type: competitor_set
+    required: false
+outputs:
+  - type: competitor_set
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/seo-competitor
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/seo-competitor
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: seo-competitor
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: seo-competitor skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/seo-competitor
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

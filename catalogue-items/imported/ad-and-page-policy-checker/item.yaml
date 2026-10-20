@@ -1,0 +1,32 @@
+slug: ad-and-page-policy-checker
+name: Ad and page policy checker
+summary: Paste your ad, page or email. Get policy risks flagged for each platform, with safer rewrites.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: copy_draft
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Rob Palmer
+  repo: robpalmer99/claude-code-copywriting-skills
+  path: compliance-checker
+  url: https://github.com/robpalmer99/claude-code-copywriting-skills/tree/main/compliance-checker
+  licence: CC-BY-4.0
+  licence_file: LICENSE
+  commit: 7dbfd61
+  original_name: compliance-checker
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: compliance-checker skill
+    by: Rob Palmer
+    url: https://github.com/robpalmer99/claude-code-copywriting-skills/tree/main/compliance-checker
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

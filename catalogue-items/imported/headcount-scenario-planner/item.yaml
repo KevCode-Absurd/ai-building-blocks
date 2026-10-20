@@ -1,0 +1,38 @@
+slug: headcount-scenario-planner
+name: Headcount scenario planner
+summary: Give it your hiring plan. Get base, best and worst cases with costs and signs it is time to switch plans.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Tuan Duc Tran
+  repo: tuanductran/hr-skills
+  path: skills/hr-workforce-scenario-planning
+  url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-workforce-scenario-planning
+  licence: MIT
+  licence_file: LICENSE
+  commit: 078f2fb
+  original_name: hr-workforce-scenario-planning
+  author: Tuan Duc Tran
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hr-workforce-scenario-planning skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-workforce-scenario-planning
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

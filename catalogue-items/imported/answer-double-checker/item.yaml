@@ -1,0 +1,32 @@
+slug: answer-double-checker
+name: Answer double-checker
+summary: Get two or three sharp follow-up questions after an answer, so you check the facts and the thinking.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/skills
+  path: skills/discernment-nudge
+  url: https://github.com/anthropics/skills/tree/main/skills/discernment-nudge
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: dbd4588
+  original_name: discernment-nudge
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: discernment-nudge skill
+    by: Anthropic
+    url: https://github.com/anthropics/skills/tree/main/skills/discernment-nudge
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It counts images per product.
+new_slug: missing-product-image-finder
+name: Missing product image finder
+summary: Get products and variants with no image or too few images, so no page goes live looking bare.
+job: product-photos
+headline: Missing product image finder
+subhead: Get products and variants with no image or too few images, so no page goes live looking bare.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin (read only).

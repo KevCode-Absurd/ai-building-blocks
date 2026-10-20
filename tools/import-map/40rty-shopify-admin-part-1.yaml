@@ -1,0 +1,735 @@
+# 40rty-ai/shopify-admin-skills, slice 1 of 2 (MIT)
+"40rty-ai/shopify-admin-skills:.":
+  skip: "Master router that only points to the repo's other skills, so it adds no job of its own."
+"40rty-ai/shopify-admin-skills:skills/conversion-optimization/shopify-admin-cross-sell-opportunity-finder":
+  skip: "Near-copy of the frequently bought together skill in this repo, with a thinner method based on category and price only."
+"40rty-ai/shopify-admin-skills:skills/finance/shopify-admin-gift-card-balance-report":
+  skip: "Near-copy of the gift card liability report in this repo, which covers the same balances with a finance view."
+"40rty-ai/shopify-admin-skills:skills/agentic/shopify-admin-agentic-crawler-access":
+  name: "AI crawler access editor"
+  summary: "Say which AI crawlers to allow. Get your robots.txt updated so AI assistants can read your catalog. Changes your live theme."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It edits one file with a fixed list of bots."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/agentic/shopify-admin-agentic-description-enrichment":
+  name: "Product description enricher"
+  summary: "Point it at thin product descriptions. Get fact-rich rewrites with materials, uses and shopper words. Updates live product pages."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It rewrites from product facts and needs judgment on tone."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: pdp_copy } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/agentic/shopify-admin-agentic-image-alt-text":
+  name: "Product image alt text writer"
+  summary: "Point it at your product images. Get alt text set on each, so AI knows what they show. Changes live files."
+  task: build-websites
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It writes a short line per image."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/agentic/shopify-admin-agentic-llms-txt":
+  name: "AI guide file publisher"
+  summary: "Give it your store. Get an llms.txt guide to your brand, products and policies for AI assistants. Changes your live theme."
+  task: get-found-in-search
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks what matters, then fills a fixed template."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/agentic/shopify-admin-agentic-metafields-setup":
+  name: "Product attribute field setter"
+  summary: "Say which product facts matter. Get fields for material, specs and sizing filled in, so AI can match products. Changes live data."
+  task: build-websites
+  role: orchestrate
+  level: advanced
+  thinking: medium
+  thinking_why: "It defines fields, then fills them from product data."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/agentic/shopify-admin-agentic-organization-schema":
+  name: "Brand identity markup adder"
+  summary: "Give it your brand details. Get markup added so AI can confirm your store is a real brand. Changes your live theme."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It fills a fixed markup template."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/agentic/shopify-admin-agentic-policy-readability":
+  name: "Store policy cleaner"
+  summary: "Check your shipping, returns and privacy policies. Get clean, plain text versions AI can quote to shoppers. Can update live policies."
+  task: build-websites
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It rewrites policies without changing their meaning."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/agentic/shopify-admin-agentic-product-jsonld-backfill":
+  name: "Product data gap filler"
+  summary: "Find products missing barcode, SKU, vendor or weight. Get the gaps filled so AI can quote exact items. Updates live products."
+  task: build-websites
+  role: orchestrate
+  level: intermediate
+  thinking: low
+  thinking_why: "It finds gaps and fills fields by set rules."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/agentic/shopify-admin-agentic-product-taxonomy":
+  name: "Product category assigner"
+  summary: "Give it your catalog. Get every product matched to a standard Shopify category, so AI can place it. Updates live products."
+  task: build-websites
+  role: orchestrate
+  level: intermediate
+  thinking: low
+  thinking_why: "It maps each product to a fixed category list."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/agentic/shopify-admin-agentic-readiness-audit":
+  name: "AI shopping readiness checker"
+  summary: "Run it on your store. Get a score for how easily AI shoppers find your products, plus the fix for each gap."
+  task: build-websites
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scores many signals and ranks the fixes."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/conversion-optimization/shopify-admin-checkout-abandonment-report":
+  name: "Abandoned checkout reader"
+  summary: "Pick a date range. Get abandoned checkouts split by cart value and hour, so you see when and where buyers drop."
+  task: run-your-store
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: "It adds up records into a table."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/conversion-optimization/shopify-admin-discount-ab-analysis":
+  name: "Discount code comparer"
+  summary: "Name two or more discount codes. Get redemption and revenue side by side, so you know which one earned more."
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares codes and judges what the gap means."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/conversion-optimization/shopify-admin-discount-roi-calculator":
+  name: "Discount payoff calculator"
+  summary: "Run it on your discounts. Get the real return of each code: extra revenue against what the discount cost."
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It estimates extra sales, which needs judgment."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/conversion-optimization/shopify-admin-frequently-bought-together":
+  name: "Bundle pair finder"
+  summary: "Run it on your orders. Get the product pairs and triples people buy together, as ideas for bundles and cross-sells."
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It counts patterns, then picks the useful ones."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/conversion-optimization/shopify-admin-gift-card-issuance":
+  name: "Gift card issuer"
+  summary: "Name the customers and amounts. Get gift cards issued as goodwill, return credit or rewards. Creates live gift cards."
+  task: run-your-store
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a fixed list of steps per card."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/conversion-optimization/shopify-admin-gift-message-extraction":
+  name: "Gift message collector"
+  summary: "Run it on recent orders. Get gift messages, recipients and gift flags in one list for packing slips."
+  task: run-your-store
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It pulls text from order fields."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/conversion-optimization/shopify-admin-post-purchase-survey-trigger":
+  name: "Survey-ready order finder"
+  summary: "Run it on your orders. Get the buyers 7 to 14 days after delivery who should get a survey, minus refunds."
+  task: run-your-store
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It filters orders by dates and status."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/conversion-optimization/shopify-admin-top-product-performance":
+  name: "Top product ranker"
+  summary: "Pick a date range. Get your products ranked by revenue, units sold and refund rate."
+  task: run-your-store
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: "It adds up and sorts order lines."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/conversion-optimization/shopify-admin-traffic-by-page-report":
+  name: "Page traffic and conversion reader"
+  summary: "Run it on your store. Get sessions, conversion and bounce rate for each product and collection page."
+  task: audit-landing-page
+  role: compress
+  level: intermediate
+  thinking: low
+  thinking_why: "It pulls analytics numbers into a table."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-ops/shopify-admin-b2b-company-overview":
+  name: "Wholesale account lister"
+  summary: "Run it on your store. Get your B2B companies with locations, catalogs and payment terms in one view."
+  task: run-your-store
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It lists records and formats them."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-ops/shopify-admin-chargeback-watchlist-tagger":
+  name: "Chargeback customer tagger"
+  summary: "Find customers with disputed orders. Get their records tagged so you review their next orders. Changes live customer tags."
+  task: run-your-store
+  role: orchestrate
+  level: intermediate
+  thinking: low
+  thinking_why: "It finds disputes and adds a fixed tag."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-ops/shopify-admin-churn-risk-scorer":
+  name: "Customer churn risk scorer"
+  summary: "Run it on your customers. Get each one scored for churn risk from how often they buy and how long since."
+  task: run-your-store
+  role: compress
+  level: advanced
+  thinking: medium
+  thinking_why: "It scores with set rules but needs sensible cutoffs."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-ops/shopify-admin-customer-acquisition-cost-by-source":
+  name: "Acquisition cost by source calculator"
+  summary: "Add your ad spend. Get the cost to win a customer from each traffic source."
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It joins spend to orders, with some guesswork on sources."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-ops/shopify-admin-customer-cohort-analysis":
+  name: "Customer cohort reader"
+  summary: "Run it on your customers. Get repeat-purchase rate and revenue for each first-purchase month."
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It groups data, then explains what changed."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-ops/shopify-admin-customer-note-bulk-annotator":
+  name: "Customer note bulk adder"
+  summary: "Give it a customer list and a note. Get the note added to each record in one go. Changes live customer data."
+  task: run-your-store
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: "It repeats one fixed step."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-ops/shopify-admin-customer-spend-tier-tagger":
+  name: "Customer spend tier tagger"
+  summary: "Set your spend levels. Get each customer tagged Bronze, Silver, Gold or Platinum from lifetime spend. Changes live customer tags."
+  task: run-your-store
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: "It applies set thresholds."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-ops/shopify-admin-duplicate-customer-finder":
+  name: "Duplicate customer finder"
+  summary: "Run it on your customers. Get likely duplicate records matched by email, phone or name, ready to review."
+  task: run-your-store
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "Matching names and emails needs judgment on near misses."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-ops/shopify-admin-email-deliverability-audit":
+  name: "Customer email list checker"
+  summary: "Run it on your customer emails. Get bad, role-based and throwaway addresses flagged to protect your sender reputation."
+  task: run-your-store
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It checks addresses against set patterns."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-ops/shopify-admin-marketing-consent-report":
+  name: "Marketing consent auditor"
+  summary: "Run it on your customers. Get who agreed to email and SMS marketing, and who did not, for compliance."
+  task: run-your-store
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It counts consent fields."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-ops/shopify-admin-rfm-customer-segmentation":
+  name: "Customer segment builder"
+  summary: "Run it on your customers. Get each one scored on recency, frequency and spend, then grouped from Champions to Lost."
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scores by set rules and names the groups."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-support/shopify-admin-address-correction":
+  name: "Order address fixer"
+  summary: "Give it an order and the right address. Get the shipping address changed before it ships. Changes a live order."
+  task: run-your-store
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: "It checks the order, then edits one field."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-support/shopify-admin-bulk-customer-tag-update":
+  name: "Customer tag bulk updater"
+  summary: "Pick customers and tags. Get tags added or removed across the whole group. Changes live customer data."
+  task: run-your-store
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: "It repeats one fixed step."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-support/shopify-admin-customer-merge":
+  name: "Customer record merger"
+  summary: "Name the duplicate and the one to keep. Get the records merged with tags and notes kept. Changes live customer data."
+  task: run-your-store
+  role: orchestrate
+  level: advanced
+  thinking: medium
+  thinking_why: "Merging cannot be undone, so it checks each step."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-support/shopify-admin-customer-timeline-export":
+  name: "Customer history exporter"
+  summary: "Name a customer. Get their orders, refunds, returns, notes and consent in one dated CSV."
+  task: run-your-store
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It gathers records into one file."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-support/shopify-admin-order-lookup-and-summary":
+  name: "Order lookup assistant"
+  summary: "Give an email, phone or order number. Get the full order summary: items, payment, shipping and history."
+  task: run-your-store
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It fetches and tidies one record."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-support/shopify-admin-refund-and-reorder":
+  name: "Refund and reorder processor"
+  summary: "Name the order and items. Get a full or partial refund, plus a replacement order if you want one. Moves real money."
+  task: help-customers
+  role: orchestrate
+  level: advanced
+  thinking: medium
+  thinking_why: "Refunds are costly to get wrong, so it checks each step."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-support/shopify-admin-return-initiation":
+  name: "Return request creator"
+  summary: "Name the order, items and reason. Get a formal return record opened in Shopify. Creates a live return."
+  task: run-your-store
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a fixed set of steps."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/customer-support/shopify-admin-wismo-bulk-status-report":
+  name: "Where-is-my-order risk finder"
+  summary: "Run it on open orders. Get shipped orders with stale tracking and late unshipped ones, before customers ask."
+  task: run-your-store
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "It flags orders against set time limits."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/finance/shopify-admin-average-order-value-trends":
+  name: "Average order value tracker"
+  summary: "Pick a time range. Get average order value over time, split into new and returning customers."
+  task: run-your-store
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: "It averages and charts order data."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/finance/shopify-admin-discount-cost-trend":
+  name: "Discount spend tracker"
+  summary: "Pick a time range. Get total discount dollars by week or month, split by discount type and code."
+  task: run-your-store
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: "It adds up discount totals over time."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/finance/shopify-admin-gift-card-liability-report":
+  name: "Gift card liability calculator"
+  summary: "Run it on your gift cards. Get the total balance you still owe, split by issue date and balance size."
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: low
+  thinking_why: "It adds balances into groups."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/finance/shopify-admin-payout-reconciliation":
+  name: "Payout reconciler"
+  summary: "Run it on your payouts. Get each one matched to the orders that funded it, with gaps flagged."
+  task: run-your-store
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It matches amounts and explains the gaps."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/finance/shopify-admin-profit-margin-calculator":
+  name: "Store profit margin calculator"
+  summary: "Run it on your orders. Get true profit per order and product after cost, shipping, fees, discounts, refunds and tax."
+  task: run-your-store
+  role: compress
+  level: advanced
+  thinking: medium
+  thinking_why: "It combines many cost sources that may be missing."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/finance/shopify-admin-refund-rate-analysis":
+  name: "Refund rate analyzer"
+  summary: "Pick products, collections or dates. Get refund rates that point to quality or listing problems."
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It finds the cause behind the numbers."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/finance/shopify-admin-revenue-by-location-report":
+  name: "Revenue by location reporter"
+  summary: "Run it on your orders. Get revenue for each warehouse or fulfillment location, ready for a split profit view."
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: low
+  thinking_why: "It adds up revenue by location."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/finance/shopify-admin-sales-by-channel-report":
+  name: "Sales channel reporter"
+  summary: "Pick a date range. Get revenue, units and average order value for each sales channel."
+  task: run-your-store
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: "It adds up orders by channel."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/finance/shopify-admin-shipping-cost-analysis":
+  name: "Shipping cost analyzer"
+  summary: "Run it on your orders. Get shipping you charged against shipping you paid, by carrier and method."
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares two money sources and explains the gap."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/finance/shopify-admin-subscription-mrr-tracker":
+  name: "Subscription revenue tracker"
+  summary: "Run it on your subscriptions. Get monthly and yearly recurring revenue, active subscribers and churn."
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows set formulas but needs clean contract data."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/finance/shopify-admin-tax-liability-summary":
+  name: "Sales tax summary builder"
+  summary: "Pick a filing period. Get tax collected by state, province and rate, ready for filing prep."
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: low
+  thinking_why: "It adds tax lines into groups."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/fulfillment-ops/shopify-admin-bulk-fulfillment-creation":
+  name: "Bulk order fulfiller"
+  summary: "Give it orders and tracking numbers. Get them fulfilled in one batch, with customer alerts if you choose. Changes live orders."
+  task: run-your-store
+  role: orchestrate
+  level: intermediate
+  thinking: low
+  thinking_why: "It repeats a fixed step for each order."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/fulfillment-ops/shopify-admin-bundle-availability-check":
+  name: "Bundle stock checker"
+  summary: "Run it on your bundles. Get a check that every part is in stock, and how many bundles you can really sell."
+  task: run-your-store
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "It compares stock counts by set rules."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/fulfillment-ops/shopify-admin-cancel-and-restock":
+  name: "Order canceller and restocker"
+  summary: "Name the order. Get it cancelled, stock put back and the customer told, as you choose. Cancels a live order."
+  task: run-your-store
+  role: orchestrate
+  level: intermediate
+  thinking: low
+  thinking_why: "It runs a short, checked set of steps."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/fulfillment-ops/shopify-admin-carrier-performance-comparison":
+  name: "Carrier performance comparer"
+  summary: "Run it on your shipments. Get delivery times and costs side by side by carrier, to guide your carrier mix."
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares carriers and judges the tradeoff."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/fulfillment-ops/shopify-admin-delivery-time-analysis":
+  name: "Delivery time analyzer"
+  summary: "Run it on your shipments. Get average days from shipment to delivery for each carrier."
+  task: run-your-store
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: "It averages dates by carrier."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/fulfillment-ops/shopify-admin-fulfillment-location-routing":
+  name: "Fulfillment location rerouter"
+  summary: "Name the orders and the new location. Get fulfillment moved between warehouses. Changes live orders."
+  task: run-your-store
+  role: orchestrate
+  level: intermediate
+  thinking: low
+  thinking_why: "It moves orders by set rules."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin and change it"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai
+"40rty-ai/shopify-admin-skills:skills/fulfillment-ops/shopify-admin-fulfillment-status-digest":
+  name: "Daily fulfillment digest writer"
+  summary: "Run it each morning. Get open orders grouped by age, with holds and exceptions flagged for action."
+  task: run-your-store
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: "It groups orders by age."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "access your Shopify admin"
+  author: "40rty AI"
+  author_url: https://github.com/40rty-ai

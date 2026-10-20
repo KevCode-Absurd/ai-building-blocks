@@ -1,0 +1,448 @@
+# tuanductran/hr-skills (MIT) by Tuan Duc Tran
+# Better under a future hire-and-manage-people job: interviewing, candidate-assessment, candidate-experience, job-description, job-analysis, competency-management, internal-mobility, demand-planning, compensation-benefits, employee-*, career-development, coaching-mentoring, leadership-development, diversity-inclusion.
+"tuanductran/hr-skills:skills/hr-accessibility-accommodation":
+  name: Workplace accommodation process builder
+  summary: "Describe your team. Get a clear accommodation request process and manager guidance. Not legal advice; check with a lawyer or HR adviser."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It must be fair, private and clear, so it needs care.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-agentic-ai":
+  skip: "Topic overview of agentic AI in HR, no usable output."
+"tuanductran/hr-skills:skills/hr-ai":
+  skip: "Topic overview of AI for HR, no usable output."
+"tuanductran/hr-skills:skills/hr-ai-adoption":
+  skip: "Generic change advice; overlaps the org change announcement writer."
+"tuanductran/hr-skills:skills/hr-ai-change-management":
+  skip: "Near copy of the org change announcement writer."
+"tuanductran/hr-skills:skills/hr-ai-ethics":
+  skip: "Near copy of the HR AI use policy writer."
+"tuanductran/hr-skills:skills/hr-ai-evaluation":
+  name: HR AI tool vendor checker
+  summary: "Name the HR job and the AI tool. Get a vendor test covering accuracy, bias and a small pilot with success rules."
+  task: hire-people
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It weighs risks and tests against set criteria.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-ai-governance":
+  name: HR AI use policy writer
+  summary: "Describe how you use AI in hiring. Get a use policy, a bias check and a staff notice. Not legal advice."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: A policy needs careful limits and plain wording.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-ai-privacy":
+  name: Employee data privacy checker
+  summary: "Name the AI tool using staff data. Get a privacy review, a shorter data list and a notice. Not legal advice."
+  task: hire-people
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It compares what is collected with what is needed.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report }, { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-analytics":
+  name: HR metrics and report builder
+  summary: "Share your people data and questions. Get the right metrics, a dashboard layout and a leadership report that tells the story."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks measures and reads patterns in your data.
+  inputs: [ { type: question, required: true }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: document }, { type: plan } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-ar-vr":
+  skip: "Thin topic overview for hiring AR/VR engineers."
+"tuanductran/hr-skills:skills/hr-audit":
+  name: HR compliance audit planner
+  summary: "Pick what to audit. Get a checklist, a file sampling plan, a findings report and a fix plan. Not legal advice."
+  task: hire-people
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans checks and ranks gaps by risk.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-automation":
+  name: HR process automation designer
+  summary: "Name your HR processes, like onboarding. Get which to automate, which tool fits each and a build order."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It weighs effort against gain for each chore.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-backend":
+  skip: "Thin topic overview of backend engineering for recruiters."
+"tuanductran/hr-skills:skills/hr-blockchain":
+  skip: "Thin topic overview of hiring blockchain engineers."
+"tuanductran/hr-skills:skills/hr-business-partner":
+  skip: "Role overview for HR business partners, no usable output."
+"tuanductran/hr-skills:skills/hr-candidate-assessment":
+  name: Work sample test designer
+  summary: "Name the role. Get a work test, a scoring guide and fairness checks. You make the hiring call, not the AI."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: A fair test needs clear scoring tied to the job.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-candidate-experience":
+  name: Candidate experience improver
+  summary: "Describe your hiring steps. Get a map of what candidates go through, where they struggle and messages for each stage."
+  task: hire-people
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It maps steps and finds where people drop off.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-candidate-sourcing":
+  skip: "Finds and profiles candidates, and overlaps carlopezzuto/recruiting."
+"tuanductran/hr-skills:skills/hr-career-development":
+  name: Career ladder and growth plan writer
+  summary: "Name a job family. Get career levels, growth plans and a manager guide for career talks."
+  task: hire-people
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It builds levels and talk guides from your roles.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document }, { type: plan } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-change-communication":
+  name: Org change announcement writer
+  summary: "Describe the change. Get the leader announcement, manager talking points, town hall script and hard-question answers."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: Tone matters when people worry about their jobs.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: script }, { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-change-management":
+  skip: "Mostly tool and job lists; the change announcement writer covers the usable part."
+"tuanductran/hr-skills:skills/hr-chatbot-design":
+  skip: "HR chatbot tooling for Slack and Teams, product-specific."
+"tuanductran/hr-skills:skills/hr-cloud":
+  skip: "Thin topic overview of hiring cloud engineers."
+"tuanductran/hr-skills:skills/hr-coaching-mentoring":
+  name: Mentoring program builder
+  summary: "Say who the program is for. Get matching rules, a six-month plan and coaching talk guides for managers."
+  task: hire-people
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills set formats from the facts you give.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-compensation-benefits":
+  name: Pay and benefits plan builder
+  summary: "Describe your roles and budget. Get a pay philosophy, pay bands, a bonus plan and a benefits list. Check the maths yourself."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: Pay design mixes market data, fairness and cost.
+  inputs: [ { type: brief, required: true }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: document }, { type: plan } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-competency-management":
+  name: Role skills framework builder
+  summary: "Name your roles. Get the key skills for each, what good looks like at each level, and matching interview questions."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It turns roles into clear, level-based skill lists.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-compliance":
+  name: Workplace policy and handbook writer
+  summary: "Name your country and company size. Get handbook sections, a harassment policy and a privacy policy. Not legal advice."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: Policies need care and local checks by a lawyer.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-conflict-resolution":
+  name: Workplace conflict mediation guide
+  summary: "Describe the conflict. Get its likely causes, a mediation plan with ground rules and what to say in the talk."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads a tense situation and plans a fair talk.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan }, { type: script } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-consulting":
+  skip: "Role overview for HR consultants, no usable output."
+"tuanductran/hr-skills:skills/hr-contingent-workforce":
+  name: Contractor program setup guide
+  summary: "Describe the work and workers. Get a classification risk check, an onboarding checklist and a vendor plan. Not legal advice."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: Worker status has legal risk, so it needs care.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-coordination":
+  skip: "Generic HR admin overview, no usable output."
+"tuanductran/hr-skills:skills/hr-crisis-management":
+  name: Workforce crisis playbook writer
+  summary: "Name the crisis type. Get roles, a first-hour staff message, a 24-hour action list and a review plan for your people."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: Speed and accuracy both matter in the first hours.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-culture":
+  skip: "Topic overview of culture; we already have a team culture memo writer."
+"tuanductran/hr-skills:skills/hr-data":
+  skip: "Thin topic overview of data roles for recruiters."
+"tuanductran/hr-skills:skills/hr-demand-planning":
+  name: Headcount plan builder
+  summary: "Share your growth goals. Get a role-by-role hiring plan, a priority order and a monthly report for leaders."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: It models demand against hiring capacity.
+  inputs: [ { type: brief, required: true }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: plan }, { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-design-thinking":
+  skip: "Generic design thinking overview applied to HR."
+"tuanductran/hr-skills:skills/hr-devops":
+  skip: "Thin topic overview of DevOps for recruiters."
+"tuanductran/hr-skills:skills/hr-digital-hr":
+  skip: "Generic HR tech overview, no usable output."
+"tuanductran/hr-skills:skills/hr-diversity-inclusion":
+  name: Inclusive workplace plan builder
+  summary: "Describe your team. Get an inclusion plan, fair hiring steps, group ideas and measures to track."
+  task: hire-people
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It builds a plan from your goals and team size.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-embedded":
+  skip: "Thin topic overview of hiring embedded engineers."
+"tuanductran/hr-skills:skills/hr-employee-communications":
+  name: Staff announcement writer
+  summary: "Say what is changing. Get a clear internal announcement, a rollout plan and answers to likely questions."
+  task: hire-people
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It shapes clear messages from facts you give.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-employee-engagement":
+  skip: "Near copy of the employee survey designer."
+"tuanductran/hr-skills:skills/hr-employee-experience":
+  skip: "Topic overview; overlaps the employee journey map builder."
+"tuanductran/hr-skills:skills/hr-employee-journey-mapping":
+  name: Employee experience map builder
+  summary: "Pick a stage, like first week or exit. Get a map of key moments, pain points and fixes."
+  task: hire-people
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It maps steps and finds where people struggle.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document }, { type: plan } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-employee-lifecycle":
+  skip: "Topic overview; overlaps the employee journey map builder."
+"tuanductran/hr-skills:skills/hr-employee-listening":
+  name: Employee survey designer
+  summary: "Say what you want to learn. Get survey questions, a focus group guide, a result reading and an action plan."
+  task: hire-people
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It designs questions and reads patterns in answers.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document }, { type: plan } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-employee-relations":
+  name: Exit interview and grievance guide
+  summary: "Describe the case. Get a fair step-by-step way to handle it, plus exit interview questions. Not legal advice."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: Fair handling of complaints needs careful steps.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-employee-self-service":
+  skip: "Mostly HR software tool lists, no usable output."
+"tuanductran/hr-skills:skills/hr-employer-branding":
+  skip: "Mostly tool and job lists, thin for use."
+"tuanductran/hr-skills:skills/hr-executive-assessment":
+  skip: "Judges senior candidates; overlaps recruiting sets."
+"tuanductran/hr-skills:skills/hr-executive-search":
+  skip: "Finds and approaches candidates, and overlaps carlopezzuto/recruiting."
+"tuanductran/hr-skills:skills/hr-frontend":
+  skip: "Thin topic overview of frontend engineering for recruiters."
+"tuanductran/hr-skills:skills/hr-fullstack":
+  skip: "Thin topic overview of fullstack engineering for recruiters."
+"tuanductran/hr-skills:skills/hr-future-of-work":
+  skip: "Generic trends overview, no usable output."
+"tuanductran/hr-skills:skills/hr-game-development":
+  skip: "Thin topic overview of hiring game developers."
+"tuanductran/hr-skills:skills/hr-genai":
+  skip: "Generic topic overview of generative AI for HR."
+"tuanductran/hr-skills:skills/hr-global-expansion":
+  name: New country hiring planner
+  summary: "Name the country. Get an own-entity or employer-of-record choice, a local rules list and a hiring plan. Not legal advice."
+  task: hire-people
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It weighs cost, risk and local law across options.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-global-hr":
+  skip: "Near copy of the new country hiring planner."
+"tuanductran/hr-skills:skills/hr-hris":
+  skip: "Topic overview of HR software, no usable output."
+"tuanductran/hr-skills:skills/hr-immigration":
+  skip: "Visa advice varies by country and needs a lawyer; too risky to list."
+"tuanductran/hr-skills:skills/hr-internal-mobility":
+  name: Internal job move program builder
+  summary: "Describe your company. Get a transfer process, forms for staff and managers, and measures to track."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It designs a process from your company size.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-interviewing":
+  name: Structured interview guide builder
+  summary: "Name the role. Get set questions, strong and weak answer signs and a scorecard. You make the hiring call, not the AI."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: Good questions need clear scoring tied to the job.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-iot":
+  skip: "Thin topic overview of hiring IoT engineers."
+"tuanductran/hr-skills:skills/hr-job-analysis":
+  name: Job duties and level analyst
+  summary: "Name a role. Get its duties, time split, required skills and a fair level, ready for pay and planning."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It breaks a role into parts and weighs each one.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-job-architecture":
+  skip: "Mostly tool and job lists, thin for use."
+"tuanductran/hr-skills:skills/hr-job-description":
+  name: Inclusive job post writer
+  summary: "Name the role. Get a clear job post with real requirements, plus a fix for biased or bloated wording."
+  task: hire-people
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows a set job post shape from your facts.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-knowledge-management":
+  skip: "Topic overview of HR knowledge bases, thin."
+"tuanductran/hr-skills:skills/hr-kpi":
+  skip: "Near copy of the HR metrics and report builder."
+"tuanductran/hr-skills:skills/hr-labor-relations":
+  skip: "Union and bargaining advice needs a lawyer; too risky to list."
+"tuanductran/hr-skills:skills/hr-leadership-development":
+  name: Leadership program designer
+  summary: "Say who you are training. Get a program, a 360 review form, a coaching guide and a succession plan."
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It builds a program from skills and your goals.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
+  author: Tuan Duc Tran
+  author_url: https://github.com/tuanductran
+"tuanductran/hr-skills:skills/hr-learning-development":
+  skip: "Mostly tool and job lists, thin for use."
+"tuanductran/hr-skills:skills/hr-learning-strategy":
+  skip: "Enterprise strategy overview; overlaps the leadership program designer."

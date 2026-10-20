@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It follows set steps but needs your setup details.
+new_slug: inbox-delivery-fixer
+name: Inbox delivery fixer
+summary: Name your sending domain. Get SPF, DKIM and DMARC set up and a plan to stop emails landing in spam.
+job: write-emails
+headline: Inbox delivery fixer
+subhead: Name your sending domain. Get SPF, DKIM and DMARC set up and a plan to stop emails landing in spam.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

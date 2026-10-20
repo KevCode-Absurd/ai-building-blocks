@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It follows a set review method for each vendor.
+new_slug: vendor-risk-reviewer
+name: Vendor risk reviewer
+summary: Give it a vendor and what they handle. Get a risk tier, tailored questions and a review of their SOC 2 report.
+job: check-contracts
+headline: Vendor risk reviewer
+subhead: Give it a vendor and what they handle. Get a risk tier, tailored questions and a review of their SOC 2 report.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

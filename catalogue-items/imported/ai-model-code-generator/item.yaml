@@ -1,0 +1,32 @@
+slug: ai-model-code-generator
+name: AI model code generator
+summary: Give it a PyTorch or LiteRT model. Get C, C++ or CUDA code that runs it inside your app.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/code-generation/matlab-deploy-ai-model
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/code-generation/matlab-deploy-ai-model
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-deploy-ai-model
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-deploy-ai-model skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/code-generation/matlab-deploy-ai-model
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

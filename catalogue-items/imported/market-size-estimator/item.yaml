@@ -1,0 +1,32 @@
+slug: market-size-estimator
+name: Market size estimator
+summary: Give it a market or product idea. Get a TAM, SAM and SOM estimate built top-down and bottom-up, with sources.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/market-sizing-analysis
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/market-sizing-analysis
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: market-sizing-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: market-sizing-analysis skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/market-sizing-analysis
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

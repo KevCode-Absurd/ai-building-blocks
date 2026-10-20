@@ -1,0 +1,32 @@
+slug: dspy-prompt-optimizer
+name: DSPy prompt optimizer
+summary: Describe your AI task and a few examples. Get a program that tunes its own prompts to score better.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 16-prompt-engineering/dspy
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/16-prompt-engineering/dspy
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: dspy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: dspy skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/16-prompt-engineering/dspy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

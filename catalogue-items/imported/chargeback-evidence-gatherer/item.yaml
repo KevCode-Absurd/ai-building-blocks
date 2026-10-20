@@ -1,0 +1,32 @@
+slug: chargeback-evidence-gatherer
+name: Chargeback evidence gatherer
+summary: Tell it the dispute reason. Get what proof to collect, where to find it in Shopify, and whether to accept instead.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Pro Skill Packs
+  repo: proskillpacks/skills
+  path: skills/ecommerce/chargeback-evidence-checklist
+  url: https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/chargeback-evidence-checklist
+  licence: MIT
+  licence_file: LICENSE
+  commit: e8c3393
+  original_name: chargeback-evidence-checklist
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: chargeback-evidence-checklist skill
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/chargeback-evidence-checklist
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

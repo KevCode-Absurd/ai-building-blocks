@@ -1,0 +1,32 @@
+slug: pcb-trace-designer
+name: PCB trace designer
+summary: Give it impedance and layer needs. Get microstrip, stripline or paired traces sized and checked.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/rf-and-mixed-signal/matlab-design-pcb-transmission-line
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-design-pcb-transmission-line
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-design-pcb-transmission-line
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-design-pcb-transmission-line skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-design-pcb-transmission-line
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

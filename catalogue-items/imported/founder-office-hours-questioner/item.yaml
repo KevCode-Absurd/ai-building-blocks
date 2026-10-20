@@ -1,0 +1,32 @@
+slug: founder-office-hours-questioner
+name: Founder office hours questioner
+summary: Share a fuzzy idea. Answer six sharp questions on customer, reach and defence before you get advice.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: c-level-agents/skills/office-hours
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-agents/skills/office-hours
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: office-hours
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: office-hours skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-agents/skills/office-hours
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

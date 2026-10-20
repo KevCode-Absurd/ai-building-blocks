@@ -1,0 +1,34 @@
+slug: amazon-product-edge-finder
+name: Amazon product edge finder
+summary: Give it rival listings and reviews. Get their weak spots, your best selling points, and a ranked fix list.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: voc_reviews
+    required: true
+  - type: competitor_set
+    required: false
+outputs:
+  - type: angle_library
+uses: []
+origin: imported
+source:
+  by: Nexscope AI
+  repo: nexscope-ai/eCommerce-Skills
+  path: product-differentiation/product-differentiation-amazon
+  url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/product-differentiation/product-differentiation-amazon
+  licence: MIT
+  licence_file: LICENSE
+  commit: ee0fb29
+  original_name: product-differentiation-amazon
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: product-differentiation-amazon skill
+    by: Nexscope AI
+    url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/product-differentiation/product-differentiation-amazon
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

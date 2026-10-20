@@ -1,0 +1,37 @@
+slug: youtube-transcript-saver
+name: YouTube transcript saver
+summary: Give it a YouTube link. Get a clean transcript saved as a markdown note you can search later.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: transcript
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/ingest-youtube
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ingest-youtube
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: ingest-youtube
+  author: adelaidasofia
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ingest-youtube skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ingest-youtube
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: adelaidasofia
+    url: https://github.com/adelaidasofia
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,37 @@
+slug: notes-wiki-builder
+name: Notes wiki builder
+summary: Give it what you learned. Get small linked notes and an index, so your AI remembers it next time.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/compile-knowledge
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/compile-knowledge
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: compile-knowledge
+  author: 5dive-ai
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: compile-knowledge skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/compile-knowledge
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: 5dive-ai
+    url: https://github.com/5dive-ai/skills
+    used: Wrote the skill; sickn33 shared it in their collection.

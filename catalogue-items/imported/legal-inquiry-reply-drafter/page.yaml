@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It must spot cases where a template is unsafe.
+new_slug: legal-inquiry-reply-drafter
+name: Legal inquiry reply drafter
+summary: Name the request, such as a data access request. Get a draft reply and a flag when a lawyer must review.
+job: check-contracts
+headline: Legal inquiry reply drafter
+subhead: Name the request, such as a data access request. Get a draft reply and a flag when a lawyer must review.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your legal reply templates.

@@ -1,0 +1,33 @@
+slug: research-project-runner
+name: Research project runner
+summary: Give it a research question. Get a run of tested ideas, a log of what you learned, and a findings write-up.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 0-autoresearch-skill
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/0-autoresearch-skill
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: autoresearch
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: autoresearch skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/0-autoresearch-skill
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

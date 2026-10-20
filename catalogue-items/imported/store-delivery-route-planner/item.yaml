@@ -1,0 +1,32 @@
+slug: store-delivery-route-planner
+name: Store delivery route planner
+summary: Give it your stores, order sizes and delivery windows. Get weekly truck routes that cover every store at less cost.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/dsd-route-optimization
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/dsd-route-optimization
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: dsd-route-optimization
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: dsd-route-optimization skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/dsd-route-optimization
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

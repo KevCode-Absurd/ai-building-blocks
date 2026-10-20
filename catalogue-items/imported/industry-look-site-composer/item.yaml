@@ -1,0 +1,32 @@
+slug: industry-look-site-composer
+name: Industry-look site composer
+summary: Name your industry, such as store, restaurant or manufacturer. Get page layouts that look like that kind of site.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: page_layout_spec
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/vertical-site-conventions
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/vertical-site-conventions
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: vertical-site-conventions
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: vertical-site-conventions skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/vertical-site-conventions
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

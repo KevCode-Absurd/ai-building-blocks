@@ -1,0 +1,40 @@
+slug: facebook-ad-library-collector
+name: Facebook ad library collector
+summary: Give it a brand or keyword. Get its live Facebook ads from the public Ad Library. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: ad_breakdowns
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:Apify
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/apify-facebook-ads-library-scraper
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-facebook-ads-library-scraper
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: apify-facebook-ads-library-scraper
+  author: harshmaur
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: apify-facebook-ads-library-scraper skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-facebook-ads-library-scraper
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: harshmaur
+    url: https://github.com/harshmaur/apify-facebook-ads-library-scraper
+    used: Wrote the skill; sickn33 shared it in their collection.

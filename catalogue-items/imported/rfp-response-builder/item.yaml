@@ -1,0 +1,37 @@
+slug: rfp-response-builder
+name: RFP response builder
+summary: Paste an RFP or security questionnaire. Get requirements sorted by must have, a fit score and draft answers.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: commercial/skills/rfp-responder
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/commercial/skills/rfp-responder
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: rfp-responder
+  author: claude-code-skills
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: rfp-responder skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/commercial/skills/rfp-responder
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: claude-code-skills
+    url: https://github.com/alirezarezvani/claude-code-skills
+    used: Wrote the skill; Alireza Rezvani shared it in their collection.

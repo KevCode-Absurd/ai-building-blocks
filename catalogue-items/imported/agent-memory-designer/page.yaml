@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It compares memory designs and trade-offs before it picks one.
+new_slug: agent-memory-designer
+name: Agent memory designer
+summary: Describe what your agent must remember. Get a memory design for short-term, long-term and graph storage.
+job: build-software
+headline: Agent memory designer
+subhead: Describe what your agent must remember. Get a memory design for short-term, long-term and graph storage.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

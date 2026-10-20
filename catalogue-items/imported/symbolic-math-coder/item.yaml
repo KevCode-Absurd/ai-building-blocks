@@ -1,0 +1,32 @@
+slug: symbolic-math-coder
+name: Symbolic math coder
+summary: Describe the equation. Get exact solutions worked out in MATLAB, and turned into fast numeric functions.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/math-and-optimization/matlab-use-symbolic-math
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/math-and-optimization/matlab-use-symbolic-math
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-use-symbolic-math
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-use-symbolic-math skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/math-and-optimization/matlab-use-symbolic-math
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

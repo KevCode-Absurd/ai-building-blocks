@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It weighs risks and tests against set criteria.
+new_slug: hr-ai-tool-vendor-checker
+name: HR AI tool vendor checker
+summary: Name the HR job and the AI tool. Get a vendor test covering accuracy, bias and a small pilot with success rules.
+job: hire-people
+headline: HR AI tool vendor checker
+subhead: Name the HR job and the AI tool. Get a vendor test covering accuracy, bias and a small pilot with success rules.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

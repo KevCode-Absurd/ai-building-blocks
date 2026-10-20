@@ -1,0 +1,32 @@
+slug: online-store-auditor
+name: Online store auditor
+summary: Describe your store. Get ranked calls on marketing channels, homepage layout, trust signals and marketplaces.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Checkout Page
+  repo: checkout-page/ecommerce-skills
+  path: skills/store-audit
+  url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/store-audit
+  licence: MIT
+  licence_file: LICENSE
+  commit: 8b85f63
+  original_name: store-audit
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: store-audit skill
+    by: Checkout Page
+    url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/store-audit
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

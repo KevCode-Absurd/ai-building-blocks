@@ -1,0 +1,14 @@
+# Leonxlnx/taste-skill: one big art direction skill with scripts that deal looks and check the page in a real browser. Kept: it does more than our Layout default breaker (advice only) or frontend-design (no checks).
+"Leonxlnx/taste-skill:skills/taste-skill":
+  name: Website art director
+  summary: Describe your site or app screen. Get a built page with a chosen look, checked in a browser, not a template.
+  task: build-websites
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It picks a look, builds the page, then looks at screenshots and fixes them.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: web_app}]
+  needs: run code and open a browser
+  author: Leonxlnx
+  author_url: https://github.com/Leonxlnx

@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It sorts notes into a set page format.
+new_slug: notion-wiki-writer
+name: Notion wiki writer
+summary: Give it a chat or notes. Get a linked Notion page for the decision, how-to or FAQ.
+job: organise-work
+headline: Notion wiki writer
+subhead: Give it a chat or notes. Get a linked Notion page for the decision, how-to or FAQ.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can reach your Notion workspace.

@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It opens up options first, then narrows to the best one.
+new_slug: idea-sharpener
+name: Idea sharpener
+summary: Share a rough idea. Get it widened, stress-tested and cut to a one-page concept worth acting on.
+job: test-an-idea
+headline: Idea sharpener
+subhead: Share a rough idea. Get it widened, stress-tested and cut to a one-page concept worth acting on.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

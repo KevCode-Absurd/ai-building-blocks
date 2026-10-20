@@ -1,0 +1,32 @@
+slug: student-led-project-planner
+name: Student-led project planner
+summary: Describe a student's project idea. Get a plan with mentor check-ins, links to your curriculum goals and reflection.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/original-frameworks/self-determined-project-design-protocol
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/original-frameworks/self-determined-project-design-protocol
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: self-determined-project-design-protocol
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: self-determined-project-design-protocol skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/original-frameworks/self-determined-project-design-protocol
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

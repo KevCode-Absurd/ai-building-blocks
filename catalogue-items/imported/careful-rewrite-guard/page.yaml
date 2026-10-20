@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It must prove a rewrite is needed and keep old behaviour.
+new_slug: careful-rewrite-guard
+name: Careful rewrite guard
+summary: Name a file too rotten to patch. Get a justified delete and rebuild that keeps the behaviour that worked.
+job: build-software
+headline: Careful rewrite guard
+subhead: Name a file too rotten to patch. Get a justified delete and rebuild that keeps the behaviour that worked.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read and write your project files.

@@ -1,0 +1,32 @@
+slug: security-focused-change-reviewer
+name: Security-focused change reviewer
+summary: Give it a pull request or commit. Get a security review of only what changed, with risks ranked.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/differential-review
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/differential-review
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: differential-review
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: differential-review skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/differential-review
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

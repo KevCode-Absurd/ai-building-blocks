@@ -1,0 +1,32 @@
+slug: growth-health-checker
+name: Growth health checker
+summary: Connect your sales and marketing data. Get a plain read on what is working and three actions for this week.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: small-business/skills/growth-pulse
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/growth-pulse
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: growth-pulse
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: growth-pulse skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/growth-pulse
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

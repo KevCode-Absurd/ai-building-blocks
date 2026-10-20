@@ -1,0 +1,37 @@
+slug: ai-citation-scorer
+name: AI citation scorer
+summary: Give it a page. Get each passage scored on how easily AI tools can quote it, with rewrites to try.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/geo-citability
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/geo-citability
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: geo-citability
+  author: zubair-trabzada
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: geo-citability skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/geo-citability
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: zubair-trabzada
+    url: https://github.com/zubair-trabzada/geo-seo-claude
+    used: Wrote the skill; sickn33 shared it in their collection.

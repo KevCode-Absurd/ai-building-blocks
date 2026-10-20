@@ -1,0 +1,32 @@
+slug: claude-power-user-coach
+name: Claude power-user coach
+summary: Tell it your work. Get lessons and exercises that make you faster with Claude, one step at a time.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/claude-coach/skills/claude-coach
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/claude-coach/skills/claude-coach
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: claude-coach
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: claude-coach skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/claude-coach/skills/claude-coach
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

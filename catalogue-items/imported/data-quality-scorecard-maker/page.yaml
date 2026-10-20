@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: The checks are set steps, but the severity calls need judgment.
+new_slug: data-quality-scorecard-maker
+name: Data quality scorecard maker
+summary: Give it a dataset and your rules. Get checks for blanks, duplicates, broken links and stale data, plus a scorecard.
+job: track-numbers
+headline: Data quality scorecard maker
+subhead: Give it a dataset and your rules. Get checks for blanks, duplicates, broken links and stale data, plus a scorecard.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and open files.

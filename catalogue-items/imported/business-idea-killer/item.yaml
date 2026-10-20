@@ -1,0 +1,37 @@
+slug: business-idea-killer
+name: Business idea killer
+summary: Give it a business idea. Get the one fact that kills it, or the cheapest test it still has to pass.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/idea-autopsy
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/idea-autopsy
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: idea-autopsy
+  author: hafiz-actyte
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: idea-autopsy skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/idea-autopsy
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: hafiz-actyte
+    url: https://github.com/hafiz-actyte
+    used: Wrote the skill; sickn33 shared it in their collection.

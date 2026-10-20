@@ -1,0 +1,37 @@
+slug: developer-quickstart-writer
+name: Developer quickstart writer
+summary: Describe your product. Get a quickstart, tutorial and sample app plan that gets a developer to Hello World fast.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/developer-onboarding
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/developer-onboarding
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: developer-onboarding
+  author: Jon Athimer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: developer-onboarding skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/developer-onboarding
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Jon Athimer
+    url: https://github.com/jonathimer
+    used: Wrote the skill; sickn33 shared it in their collection.

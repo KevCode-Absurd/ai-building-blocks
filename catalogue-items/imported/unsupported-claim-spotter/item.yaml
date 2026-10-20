@@ -1,0 +1,32 @@
+slug: unsupported-claim-spotter
+name: Unsupported claim spotter
+summary: Paste a draft. Get every claim that needs a source, ranked by risk, with the kind of source to find.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: copy_draft
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Pro Skill Packs
+  repo: proskillpacks/skills
+  path: skills/writing/fact-claim-checker
+  url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
+  licence: MIT
+  licence_file: LICENSE
+  commit: e8c3393
+  original_name: fact-claim-checker
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: fact-claim-checker skill
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/writing/fact-claim-checker
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

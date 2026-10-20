@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It sizes each task, then applies set formulas.
+new_slug: ai-assisted-work-estimator
+name: AI-assisted work estimator
+summary: Give it your tasks and how your team uses AI agents. Get time estimates with likely ranges you can plan on.
+job: build-software
+headline: AI-assisted work estimator
+subhead: Give it your tasks and how your team uses AI agents. Get time estimates with likely ranges you can plan on.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

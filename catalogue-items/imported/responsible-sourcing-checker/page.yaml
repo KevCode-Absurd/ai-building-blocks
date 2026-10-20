@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It checks each supplier against a set list of criteria.
+new_slug: responsible-sourcing-checker
+name: Responsible sourcing checker
+summary: Give it your suppliers. Get ethics and environment gaps found, a questionnaire to send, and an improvement plan.
+job: plan-supply-chain
+headline: Responsible sourcing checker
+subhead: Give it your suppliers. Get ethics and environment gaps found, a questionnaire to send, and an improvement plan.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

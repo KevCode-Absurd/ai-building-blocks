@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Equalizer tuning needs careful analysis.
+new_slug: serdes-link-modeler
+name: SerDes link modeler
+summary: Describe a high-speed serial link. Get a model with equalizers tuned and eye diagrams plotted.
+job: build-software
+headline: SerDes link modeler
+subhead: Describe a high-speed serial link. Get a model with equalizers tuned and eye diagrams plotted.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with SerDes Toolbox.

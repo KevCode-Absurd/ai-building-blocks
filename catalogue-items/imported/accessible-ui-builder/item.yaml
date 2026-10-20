@@ -1,0 +1,34 @@
+slug: accessible-ui-builder
+name: Accessible UI builder
+summary: Describe the screen. Get a responsive, accessible interface that follows your design system and looks hand made.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: Addy Osmani
+  repo: addyosmani/agent-skills
+  path: skills/frontend-ui-engineering
+  url: https://github.com/addyosmani/agent-skills/tree/main/skills/frontend-ui-engineering
+  licence: MIT
+  licence_file: LICENSE
+  commit: aeac41d
+  original_name: frontend-ui-engineering
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: frontend-ui-engineering skill
+    by: Addy Osmani
+    url: https://github.com/addyosmani/agent-skills/tree/main/skills/frontend-ui-engineering
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows API rules, but each query depends on your data.
+new_slug: shopify-data-connector
+name: Shopify data connector
+summary: Say what store data to read or change. Get working Shopify GraphQL queries, with paging and rate limits handled.
+job: build-software
+headline: Shopify data connector
+subhead: Say what store data to read or change. Get working Shopify GraphQL queries, with paging and rate limits handled.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and reach your Shopify store.

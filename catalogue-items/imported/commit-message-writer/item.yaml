@@ -1,0 +1,37 @@
+slug: commit-message-writer
+name: Commit message writer
+summary: Stage your changes. Get a short commit message that says what changed and why.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/git-commit-message
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/git-commit-message
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: git-commit-message
+  author: alapha888
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: git-commit-message skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/git-commit-message
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: alapha888
+    url: https://github.com/alapha888/agent-skills-en
+    used: Wrote the skill; sickn33 shared it in their collection.

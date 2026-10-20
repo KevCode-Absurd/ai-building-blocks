@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It picks the point, then shapes the numbers around it.
+new_slug: data-story-writer
+name: Data story writer
+summary: Give it your numbers. Get a clear story with the point, the proof and the next step for your readers.
+job: work-with-files
+headline: Data story writer
+subhead: Give it your numbers. Get a clear story with the point, the proof and the next step for your readers.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

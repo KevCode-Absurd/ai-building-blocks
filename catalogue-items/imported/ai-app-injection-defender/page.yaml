@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It must trace where untrusted text can reach the model.
+new_slug: ai-app-injection-defender
+name: AI app injection defender
+summary: Point it at your AI app. Get the weak spots found and layered defences added against hijacked instructions.
+job: secure-code
+headline: AI app injection defender
+subhead: Point it at your AI app. Get the weak spots found and layered defences added against hijacked instructions.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

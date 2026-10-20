@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It matches roles and prompts to the problem you name.
+new_slug: group-work-task-planner
+name: Group work task planner
+summary: Tell it where group work goes wrong. Get a group task with roles and AI prompts that spread participation.
+job: teach-and-train
+headline: Group work task planner
+subhead: Tell it where group work goes wrong. Get a group task with roles and AI prompts that spread participation.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,32 @@
+slug: applicant-shortlist-builder
+name: Applicant shortlist builder
+summary: Give it the job and the resumes. Get a ranked shortlist scored only on the job needs, with replies drafted.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: shortlist
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: small-business/skills/hiring-screener
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/hiring-screener
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: hiring-screener
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hiring-screener skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/hiring-screener
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

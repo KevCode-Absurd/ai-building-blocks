@@ -1,0 +1,32 @@
+slug: onboarding-document-reader
+name: Onboarding document reader
+summary: Give it an onboarding pack. Get identity, ownership, source of funds and a document list in set fields.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/operations/skills/kyc-doc-parse
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/operations/skills/kyc-doc-parse
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: kyc-doc-parse
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: kyc-doc-parse skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/operations/skills/kyc-doc-parse
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

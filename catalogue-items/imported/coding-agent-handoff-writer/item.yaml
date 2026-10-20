@@ -1,0 +1,39 @@
+slug: coding-agent-handoff-writer
+name: Coding agent handoff writer
+summary: Describe the change you want. Get a handoff note with scope, checks and stop rules for a coding agent.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: brief
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/dispatch-authoring
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/dispatch-authoring
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: dispatch-authoring
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: dispatch-authoring skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/dispatch-authoring
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

@@ -1,0 +1,32 @@
+slug: who-to-call-first-ranker
+name: Who to call first ranker
+summary: Give it your new leads. Get them ranked by fit and urgency, with talking points and follow-up drafts.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: shortlist
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: small-business/skills/lead-triage
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/lead-triage
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: lead-triage
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: lead-triage skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/lead-triage
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

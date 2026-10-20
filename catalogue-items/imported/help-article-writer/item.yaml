@@ -1,0 +1,40 @@
+slug: help-article-writer
+name: Help article writer
+summary: Give it support questions and product docs. Get clear, searchable help center articles and FAQs.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: customer-success/knowledge-base-article-writing
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/customer-success/knowledge-base-article-writing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: knowledge-base-article-writing
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: knowledge-base-article-writing skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/customer-success/knowledge-base-article-writing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

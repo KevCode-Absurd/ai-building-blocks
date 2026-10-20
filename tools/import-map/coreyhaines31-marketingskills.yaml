@@ -1,0 +1,559 @@
+# Corey Haines, marketingskills (MIT)
+"coreyhaines31/marketingskills:skills/ad-creative":
+  skip: Same job and format as our Ad headline writer and Image ad copy writer, which already make ad text variations.
+
+"coreyhaines31/marketingskills:skills/marketing-council":
+  skip: Same job as our Advisory council, which seats great marketing minds on a question.
+
+"coreyhaines31/marketingskills:skills/cro":
+  skip: Thin skill that points to other pages; our Landing page auditor and Landing page 30-point checker cover page conversion checks.
+
+"coreyhaines31/marketingskills:skills/competitor-profiling":
+  name: Competitor profile writer
+  summary: Give it competitor links. Get a profile of each with site, pricing and positioning. Collects data from websites.
+  task: study-competitors
+  role: source
+  level: intermediate
+  thinking: high
+  thinking_why: It must read each site and judge how rivals position themselves.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+  needs: run code and use your Firecrawl API key
+  scrapes: true
+
+"coreyhaines31/marketingskills:skills/ab-testing":
+  name: Experiment designer
+  summary: Describe the change you want to test. Get a clear hypothesis, test plan, sample size and a way to read the result.
+  task: plan-ad-tests
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It sets up a test with a few number checks.
+  inputs: [ { type: brief, required: true }, { type: performance_sheet, required: false } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/ads":
+  name: Paid campaign builder
+  summary: Name your goal and budget. Get campaign structure, targeting, bids and a plan to scale across Google, Meta and LinkedIn.
+  task: plan-ad-tests
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Budget and targeting choices depend on many linked numbers.
+  inputs: [ { type: brief, required: true }, { type: brand_brain, required: false }, { type: performance_sheet, required: false } ]
+  outputs: [ { type: plan } ]
+  needs: read your ad account exports
+
+"coreyhaines31/marketingskills:skills/ai-seo":
+  name: AI search visibility optimiser
+  summary: Give it a page or topic. Get edits that help ChatGPT, Perplexity and Google AI answers cite you.
+  task: get-found-in-search
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows set rules and picks edits per page.
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: browse the web
+
+"coreyhaines31/marketingskills:skills/analytics":
+  name: Tracking plan builder
+  summary: Say what you need to measure. Get a tracking plan with events, names and tags for GA4, Mixpanel or similar tools.
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It maps goals to events by set steps.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/aso":
+  name: App store listing optimiser
+  summary: Give it your app listing. Get a scored audit and a rewritten title, keywords, description and screenshots plan.
+  task: audit-landing-page
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It scores a listing against set rules, then rewrites it.
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: browse the web
+
+"coreyhaines31/marketingskills:skills/attribution":
+  name: Attribution model chooser
+  summary: Share your channels and numbers. Get the right attribution model and a way to settle conflicting reports.
+  task: read-ad-results
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: Tools disagree, so it must weigh messy data.
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"coreyhaines31/marketingskills:skills/churn-prevention":
+  name: Churn reducer
+  summary: Describe your product and why people leave. Get a cancel flow, save offers and a failed-payment recovery plan.
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It applies proven flows to your case.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/co-marketing":
+  name: Partner campaign planner
+  summary: Say who you serve. Get partner ideas and a joint campaign plan with a pitch you can send.
+  task: plan-strategy
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It finds fits, then drafts a plan.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/cold-email":
+  name: Cold email writer
+  summary: Name your buyer and offer. Get cold emails, follow-ups and a sending setup that gets replies.
+  task: write-emails
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a set format but tailors each message.
+  inputs: [ { type: persona, required: true }, { type: offer, required: false } ]
+  outputs: [ { type: email_flow } ]
+
+"coreyhaines31/marketingskills:skills/community-marketing":
+  name: Community growth planner
+  summary: Say who your community is for. Get a plan to start it, grow it and turn members into advocates.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It builds a plan from your audience.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/competitors":
+  name: Alternative page writer
+  summary: Name a rival. Get a fair comparison or alternative page built to rank and convince buyers.
+  task: write-landing-page
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a page format and must stay accurate.
+  inputs: [ { type: competitor_set, required: true }, { type: product_data, required: false } ]
+  outputs: [ { type: landing_page } ]
+
+"coreyhaines31/marketingskills:skills/content-strategy":
+  name: Content topic planner
+  summary: Describe your business. Get topic clusters, a content calendar and the pieces to write first.
+  task: plan-strategy
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It sorts many topics by set rules.
+  inputs: [ { type: brief, required: true }, { type: persona, required: false } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/conversion-tracking":
+  name: Conversion tracking fixer
+  summary: Say what counts as a sale or lead. Get tracking set up or repaired across GA4, Meta, Google Ads and more.
+  task: read-ad-results
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: Faults hide across tags, pixels and platforms.
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and open a browser
+
+"coreyhaines31/marketingskills:skills/copy-editing":
+  name: Marketing copy sweeper
+  summary: Paste your copy. Get it tightened in set passes for clarity, voice, proof and calls to action.
+  task: write-landing-page
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It runs fixed edit passes on text.
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: copy_draft } ]
+
+"coreyhaines31/marketingskills:skills/copywriting":
+  name: Page copywriter
+  summary: Describe the page and your buyer. Get clear page copy with headline, sections and calls to action.
+  task: write-landing-page
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a copy format but picks angles.
+  inputs: [ { type: brief, required: true }, { type: brand_brain, required: false } ]
+  outputs: [ { type: copy_draft } ]
+
+"coreyhaines31/marketingskills:skills/customer-research":
+  name: Customer research analyst
+  summary: Share interviews, surveys or tickets. Get the patterns, the words buyers use and clear personas.
+  task: understand-customers
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads long notes and groups them.
+  inputs: [ { type: transcript, required: true } ]
+  outputs: [ { type: persona }, { type: voc_reviews } ]
+
+"coreyhaines31/marketingskills:skills/directory-submissions":
+  name: Directory listing planner
+  summary: Give it your product. Get a ranked list of directories and ready listing text to submit by hand.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows a set order and fills templates.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/emails":
+  name: Email sequence writer
+  summary: Say the goal. Get a welcome, nurture or win-back sequence with timing, subject lines and full emails.
+  task: write-emails
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans timing, then writes each email.
+  inputs: [ { type: brief, required: true }, { type: brand_brain, required: false } ]
+  outputs: [ { type: email_flow } ]
+
+"coreyhaines31/marketingskills:skills/events":
+  name: Event marketing planner
+  summary: Say the event type and goal. Get a plan to fill seats, follow up and turn attendees into pipeline.
+  task: plan-strategy
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It builds a plan from set stages.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/free-tools":
+  name: Free tool idea planner
+  summary: Describe your buyers. Get free calculator or tool ideas that bring leads, with a build plan.
+  task: build-product
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It scores ideas, then outlines the best.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/image":
+  name: Marketing image maker
+  summary: Say what image you need. Get a prompt, size and file plan for blog heroes, social graphics and mockups.
+  task: make-images
+  role: render
+  level: beginner
+  thinking: low
+  thinking_why: It turns a brief into prompts and sizes.
+  inputs: [ { type: brief, required: true }, { type: brand_brain, required: false } ]
+  outputs: [ { type: image_prompt } ]
+  needs: call an image tool
+
+"coreyhaines31/marketingskills:skills/influencer-marketing":
+  name: Creator partnership planner
+  summary: Say what you sell. Get a plan to find creators, set deals, brief them and track results.
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans each stage of a partnership.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/launch":
+  name: Product launch planner
+  summary: Describe what you are launching. Get a launch plan with timing, channels and announcement copy.
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It lays out stages and drafts copy.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/lead-magnets":
+  name: Lead magnet planner
+  summary: Describe your buyer. Get lead magnet ideas, the best pick and the page and emails to go with it.
+  task: make-offer
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It ranks ideas and outlines the winner.
+  inputs: [ { type: persona, required: true } ]
+  outputs: [ { type: offer }, { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/link-building":
+  name: Backlink builder
+  summary: Give it your site. Get places to earn links, pitch text and a plan to win mentions.
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It finds targets and drafts pitches.
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/marketing-ideas":
+  name: Marketing idea picker
+  summary: Describe your product. Get tested marketing ideas matched to your stage and budget.
+  task: plan-strategy
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It picks from a fixed idea list.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/marketing-loops":
+  name: Recurring marketing routine builder
+  summary: Pick an outcome. Get a loop that runs weekly or daily, checks itself and stops when it should.
+  task: set-up-ai
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: It must plan safe repeat runs with stop rules.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run on a schedule
+
+"coreyhaines31/marketingskills:skills/marketing-plan":
+  name: Marketing plan writer
+  summary: Describe your business. Get a full marketing plan by funnel stage with a 90-day or 12-month roadmap.
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: It joins many parts into one plan.
+  inputs: [ { type: brand_brain, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/marketing-psychology":
+  name: Buyer psychology advisor
+  summary: Describe a page or offer. Get the mental models that apply and how to use them honestly.
+  task: understand-customers
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It matches principles to your case.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+
+"coreyhaines31/marketingskills:skills/offers":
+  name: Offer designer
+  summary: Say what you sell. Get an offer with value framing, bonuses, guarantee, name and payment terms.
+  task: make-offer
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It builds an offer in set parts.
+  inputs: [ { type: product_data, required: true }, { type: persona, required: false } ]
+  outputs: [ { type: offer } ]
+
+"coreyhaines31/marketingskills:skills/onboarding":
+  name: Onboarding improver
+  summary: Describe your product. Get a faster path to first value with a checklist, empty states and emails.
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It maps steps to the first win.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/paywalls":
+  name: Paywall designer
+  summary: Describe your plans. Get upgrade screens, trigger moments and copy that convert free users.
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks moments and writes short copy.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: design_direction }, { type: copy_draft } ]
+
+"coreyhaines31/marketingskills:skills/popups":
+  name: Popup optimiser
+  summary: Say what you want from visitors. Get popup type, timing and copy that gets signups without annoying them.
+  task: audit-landing-page
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows set rules for timing and copy.
+  inputs: [ { type: web_page, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: copy_draft }, { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/pricing":
+  name: Pricing strategist
+  summary: Describe your product and buyers. Get tiers, a value metric and a test plan for your prices.
+  task: set-prices
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Pricing choices carry big money risk.
+  inputs: [ { type: product_data, required: true }, { type: persona, required: false } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/product-marketing":
+  name: Product context builder
+  summary: Answer questions about your product. Get one context file every marketing skill reads first.
+  task: brand-file
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It gathers answers and writes one file.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: brand_brain } ]
+
+"coreyhaines31/marketingskills:skills/programmatic-seo":
+  name: Page-at-scale builder
+  summary: Give it a keyword pattern and data. Get a page template and plan for many useful search pages.
+  task: get-found-in-search
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Quality at scale needs careful design.
+  inputs: [ { type: brief, required: true }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: page_layout_spec }, { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/prospecting":
+  name: Prospect list builder
+  summary: Describe your ideal customer. Get a qualified list of accounts and the reason each one fits.
+  task: sell-and-negotiate
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It sets filters, then qualifies each lead.
+  inputs: [ { type: persona, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: browse the web
+
+"coreyhaines31/marketingskills:skills/public-relations":
+  name: Press outreach planner
+  summary: Say your news. Get a media list, pitch emails and a press kit outline.
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It finds angles and drafts pitches.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: copy_draft } ]
+
+"coreyhaines31/marketingskills:skills/referrals":
+  name: Referral program designer
+  summary: Describe your product. Get a referral or affiliate program with rewards, flow and launch plan.
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It designs rewards and flow in set steps.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/revops":
+  name: Lead handoff designer
+  summary: Describe your sales process. Get lead scoring, stages and handoff rules from marketing to sales.
+  task: sell-and-negotiate
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Rules must fit together without gaps.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/sales-enablement":
+  name: Sales collateral writer
+  summary: Name the deal or buyer. Get a pitch deck outline, one-pager, objection sheet or demo script.
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks the format and writes to it.
+  inputs: [ { type: product_data, required: true }, { type: persona, required: false } ]
+  outputs: [ { type: document } ]
+
+"coreyhaines31/marketingskills:skills/schema":
+  name: Structured data writer
+  summary: Give it a page. Get working JSON-LD markup for rich results, tested and ready to paste.
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It maps page content to set markup types.
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: code_change } ]
+
+"coreyhaines31/marketingskills:skills/seo-audit":
+  name: SEO site auditor
+  summary: Give it your site. Get a ranked list of SEO problems and fixes, from technical to content.
+  task: get-found-in-search
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It checks many items and ranks fixes.
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: browse the web
+
+"coreyhaines31/marketingskills:skills/signup":
+  name: Signup flow improver
+  summary: Describe your signup steps. Get fewer fields, clearer copy and a plan to cut drop-off.
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It trims steps by set rules.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+
+"coreyhaines31/marketingskills:skills/site-architecture":
+  name: Site map planner
+  summary: Describe your site. Get a page hierarchy, navigation, URL plan and internal linking map.
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It structures many pages into one plan.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: page_layout_spec } ]
+
+"coreyhaines31/marketingskills:skills/sms":
+  name: Text message campaign writer
+  summary: Say your goal. Get SMS or WhatsApp flows for welcome, cart, win-back and promos, with consent rules.
+  task: write-emails
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans flows and writes short messages.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: email_flow } ]
+
+"coreyhaines31/marketingskills:skills/social":
+  name: Social post planner
+  summary: Name your platforms. Get a content calendar and ready posts for LinkedIn, X, Instagram and TikTok.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It plans a calendar, then writes posts.
+  inputs: [ { type: brand_brain, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: copy_draft } ]
+
+"coreyhaines31/marketingskills:skills/video":
+  name: Marketing video producer
+  summary: Say the video you need. Get the right tool, a script and shot plan for AI, avatar or coded video.
+  task: make-video-ads
+  role: render
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks a method and plans shots.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: shot_list }, { type: video_prompt } ]
+  needs: call a video tool

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads carefully but follows a set checklist.
+new_slug: bug-and-security-code-reviewer
+name: Bug and security code reviewer
+summary: Give it a file or pull request. Get a review of bugs, security gaps, speed issues and style.
+job: test-and-fix-code
+headline: Bug and security code reviewer
+subhead: Give it a file or pull request. Get a review of bugs, security gaps, speed issues and style.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

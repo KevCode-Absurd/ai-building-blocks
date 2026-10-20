@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It adds up and sorts order lines.
+new_slug: top-product-ranker
+name: Top product ranker
+summary: Pick a date range. Get your products ranked by revenue, units sold and refund rate.
+job: run-your-store
+headline: Top product ranker
+subhead: Pick a date range. Get your products ranked by revenue, units sold and refund rate.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin.

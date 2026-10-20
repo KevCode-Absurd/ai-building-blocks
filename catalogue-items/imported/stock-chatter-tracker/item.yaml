@@ -1,0 +1,32 @@
+slug: stock-chatter-tracker
+name: Stock chatter tracker
+summary: Give it stock tickers. Get how much Reddit, X, news and Polymarket talk about each, and whether the mood is rising.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: himself65
+  repo: himself65/finance-skills
+  path: plugins/data-providers/skills/finance-sentiment
+  url: https://github.com/himself65/finance-skills/tree/main/plugins/data-providers/skills/finance-sentiment
+  licence: MIT
+  licence_file: LICENSE
+  commit: 73d554d
+  original_name: finance-sentiment
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: finance-sentiment skill
+    by: himself65
+    url: https://github.com/himself65/finance-skills/tree/main/plugins/data-providers/skills/finance-sentiment
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

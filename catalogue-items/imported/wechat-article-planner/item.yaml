@@ -1,0 +1,37 @@
+slug: wechat-article-planner
+name: WeChat article planner
+summary: Name your topic. Get a WeChat Official Account article plan with title options and layout built for the platform.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/wechat-official-account-strategist
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/wechat-official-account-strategist
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: wechat-official-account-strategist
+  author: yundu-ai
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: wechat-official-account-strategist skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/wechat-official-account-strategist
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: yundu-ai
+    url: https://github.com/demo112/yunqu-ai-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

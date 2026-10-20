@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It reads reviews and sites for patterns and turns them into choices.
+new_slug: store-product-edge-finder
+name: Store product edge finder
+summary: Give it rival stores and reviews. Get their gaps, your unique value, and a ranked list of what to change.
+job: run-your-store
+headline: Store product edge finder
+subhead: Give it rival stores and reviews. Get their gaps, your unique value, and a ranked list of what to change.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

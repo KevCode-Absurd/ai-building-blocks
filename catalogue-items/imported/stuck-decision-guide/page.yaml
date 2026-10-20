@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It adapts each question to your last answer.
+new_slug: stuck-decision-guide
+name: Stuck decision guide
+summary: Tell it what feels stuck. Get a few branching questions, then a clear next step you can take today.
+job: think-and-decide
+headline: Stuck decision guide
+subhead: Tell it what feels stuck. Get a few branching questions, then a clear next step you can take today.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

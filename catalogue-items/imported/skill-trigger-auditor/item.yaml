@@ -1,0 +1,37 @@
+slug: skill-trigger-auditor
+name: Skill trigger auditor
+summary: Give it your skills. Get a grade for each on when it fires, and which skills block each other.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: skill_files
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/skill-issue
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/skill-issue
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: skill-issue
+  author: mishanefedov
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: skill-issue skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/skill-issue
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: mishanefedov
+    url: https://github.com/mishanefedov/skill-issue
+    used: Wrote the skill; sickn33 shared it in their collection.

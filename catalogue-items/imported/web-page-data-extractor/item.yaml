@@ -1,0 +1,39 @@
+slug: web-page-data-extractor
+name: Web page data extractor
+summary: Give it page links. Get tables, lists and prices as a CSV or JSON file. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/web-scraper
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/web-scraper
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: web-scraper
+  author: renat
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: web-scraper skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/web-scraper
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: renat
+    url: ""
+    used: Wrote the skill; sickn33 shared it in their collection.

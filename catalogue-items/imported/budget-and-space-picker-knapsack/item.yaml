@@ -1,0 +1,32 @@
+slug: budget-and-space-picker-knapsack
+name: Budget and space picker (knapsack)
+summary: Give it items with values and costs. Get the best set to pick within your budget, weight or space limit.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/knapsack-problems
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/knapsack-problems
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: knapsack-problems
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: knapsack-problems skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/knapsack-problems
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

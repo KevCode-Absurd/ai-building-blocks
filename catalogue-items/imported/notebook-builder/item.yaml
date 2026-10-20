@@ -1,0 +1,32 @@
+slug: notebook-builder
+name: Notebook builder
+summary: Say what to explore or teach. Get a clean Jupyter notebook, ready to run.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/jupyter-notebook
+  url: https://github.com/openai/skills/tree/main/skills/.curated/jupyter-notebook
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: jupyter-notebook
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: jupyter-notebook skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/jupyter-notebook
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

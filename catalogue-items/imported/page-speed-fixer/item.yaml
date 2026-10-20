@@ -1,0 +1,39 @@
+slug: page-speed-fixer
+name: Page speed fixer
+summary: Paste your PageSpeed report. Get fixes for speed, access, best practice and SEO scores, in ordered batches.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: audit_report
+    required: false
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/pagespeed-enhancer
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pagespeed-enhancer
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: pagespeed-enhancer
+  author: WHOISABHISHEKADHIKARI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pagespeed-enhancer skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pagespeed-enhancer
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: WHOISABHISHEKADHIKARI
+    url: https://github.com/WHOISABHISHEKADHIKARI
+    used: Wrote the skill; sickn33 shared it in their collection.

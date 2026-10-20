@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It runs checks and scores results.
+new_slug: skill-quality-tester
+name: Skill quality tester
+summary: Give it a skill. Get its structure checked, scripts run and a score with fixes.
+job: make-skills
+headline: Skill quality tester
+subhead: Give it a skill. Get its structure checked, scripts run and a score with fixes.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read files.

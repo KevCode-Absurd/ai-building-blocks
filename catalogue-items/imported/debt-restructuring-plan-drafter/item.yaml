@@ -1,0 +1,32 @@
+slug: debt-restructuring-plan-drafter
+name: Debt restructuring plan drafter
+summary: Give it a company's debts and cash flow. Get a draft plan with creditor terms that fit what it can pay.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/debt-restructuring
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/debt-restructuring
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: debt-restructuring
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: debt-restructuring skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/debt-restructuring
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

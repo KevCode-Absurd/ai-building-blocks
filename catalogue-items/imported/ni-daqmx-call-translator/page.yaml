@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Types and arguments must match exactly.
+new_slug: ni-daqmx-call-translator
+name: NI-DAQmx call translator
+summary: Paste a DAQmx C call. Get the correct MATLAB calldaqlib call with argument types fixed.
+job: build-software
+headline: NI-DAQmx call translator
+subhead: Paste a DAQmx C call. Get the correct MATLAB calldaqlib call with argument types fixed.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with National Instruments drivers.

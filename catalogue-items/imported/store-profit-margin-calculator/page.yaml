@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It combines many cost sources that may be missing.
+new_slug: store-profit-margin-calculator
+name: Store profit margin calculator
+summary: Run it on your orders. Get true profit per order and product after cost, shipping, fees, discounts, refunds and tax.
+job: run-your-store
+headline: Store profit margin calculator
+subhead: Run it on your orders. Get true profit per order and product after cost, shipping, fees, discounts, refunds and tax.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin.

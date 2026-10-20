@@ -1,0 +1,299 @@
+# Bergside awesome-design-skills: 67 skills built from one template. Kept: 16 distinct style families. The rest only change colours, fonts or copy a brand.
+"bergside/awesome-design-skills:skills/.DS_Store":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/agentic":
+  name: AI assistant interface style guide writer
+  summary: Describe your AI product. Get a style guide for a chat-first screen with few controls and clear outcomes.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/ant":
+  skip: "Copies the Ant Design look, which has its own docs."
+"bergside/awesome-design-skills:skills/artistic":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/basic":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/bento":
+  name: Bento grid style guide writer
+  summary: Describe your product. Get a style guide for a tidy card-grid look, with tokens, states and checks.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/bold":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/brutalism":
+  name: Raw brutalist style guide writer
+  summary: Describe your product. Get a style guide for a raw, blunt look, with type, colour, states and checks.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/cafe":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/claude":
+  skip: "Copies one company's look (Claude's), so it suits that brand only."
+"bergside/awesome-design-skills:skills/claymorphism":
+  name: Soft clay style guide writer
+  summary: Describe your product. Get a style guide for a puffy, rounded look, with shapes, colour and states.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/clean":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/codex":
+  skip: "Copies one company's look (Codex's), so it suits that brand only."
+"bergside/awesome-design-skills:skills/colorful":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/contemporary":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/corporate":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/cosmic":
+  skip: "Same template as the kept styles, with only a sci-fi colour set."
+"bergside/awesome-design-skills:skills/creative":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/dithered":
+  name: Dot-pattern style guide writer
+  summary: Describe your product. Get a style guide with a dithered, limited-colour look and high-contrast rules.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/doodle":
+  name: Hand-drawn style guide writer
+  summary: Describe your product. Get a style guide with a sketchy, handwritten, playful look and rules for each part.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/dramatic":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/editorial":
+  name: Magazine layout style guide writer
+  summary: "Describe your product. Get a style guide with a magazine feel: serif type, tidy grids and easy reading."
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/enterprise":
+  skip: "Copies Heroku, Vercel and GitHub looks; a brand copy."
+"bergside/awesome-design-skills:skills/expressive":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/fantasy":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/fiction":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/flat":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/friendly":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/futuristic":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/geometric":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/glassmorphism":
+  name: Frosted glass style guide writer
+  summary: Describe your product. Get a style guide for a frosted, see-through look, with blur levels and contrast checks.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/gradient":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/immersive":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/impeccable":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/index.json":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/levels":
+  name: Conversion page style guide writer
+  summary: Describe the action you want. Get a style guide for a page that removes friction and builds trust.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/lingo":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/material":
+  skip: "Google's Material Design look; its own docs cover this better."
+"bergside/awesome-design-skills:skills/matrix":
+  skip: "Movie-inspired look; same template as the kept styles."
+"bergside/awesome-design-skills:skills/minimal":
+  name: Minimal style guide writer
+  summary: Describe your product. Get a style guide built on space, plain type and few colours, with checks.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/modern":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/mono":
+  skip: "Near-copy of the minimal and matrix styles; only the font differs."
+"bergside/awesome-design-skills:skills/neobrutalism":
+  name: Bold-border style guide writer
+  summary: Describe your product. Get a style guide with thick borders and vivid colour, plus rules for each part.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/neon":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/neumorphism":
+  name: Soft shadow style guide writer
+  summary: Describe your product. Get a style guide for a soft, pressed-in look, with shadow rules and contrast fixes.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/pacman":
+  skip: "Copies one game brand's look (Pac-Man), so it suits that brand only."
+"bergside/awesome-design-skills:skills/paper":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/perspective":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/power":
+  skip: "Dark premium style; near-copy of the minimal style with only colours changed."
+"bergside/awesome-design-skills:skills/premium":
+  skip: "Apple-inspired look that copies a brand's style."
+"bergside/awesome-design-skills:skills/professional":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/pulse":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/refined":
+  skip: "Near-copy of the minimal and editorial styles; only the serif differs."
+"bergside/awesome-design-skills:skills/retro":
+  name: Retro throwback style guide writer
+  summary: Describe your product. Get a style guide with a vintage look, nostalgic type and bold colour pairs.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/riso":
+  name: Risograph print style guide writer
+  summary: Describe your product. Get a style guide with a two-colour print look on warm paper, plus rules for each part.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/roku":
+  skip: "Copies one company's look (Roku's), so it suits that brand only."
+"bergside/awesome-design-skills:skills/sega":
+  skip: "Copies one company's look (Sega's), so it suits that brand only."
+"bergside/awesome-design-skills:skills/shadcn":
+  skip: "Copies the shadcn/ui look, which has its own docs."
+"bergside/awesome-design-skills:skills/sketch":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/skeumorphism":
+  name: Real-world texture style guide writer
+  summary: Describe your product. Get a style guide that copies real objects and textures, with rules for each part.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/sleek":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/spacious":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/square":
+  skip: "Near-copy of the minimal and refined styles; only the type differs."
+"bergside/awesome-design-skills:skills/stitch":
+  skip: "Copies one product's look (Stitch), so it suits that brand only."
+"bergside/awesome-design-skills:skills/storytelling":
+  name: Story-led page style guide writer
+  summary: Describe your story. Get a style guide for a page that walks visitors through it, with clear steps and tone.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set template with the style's rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: design_direction}]
+  author: typeui.sh
+  author_url: https://typeui.sh
+"bergside/awesome-design-skills:skills/terracotta":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/tetris":
+  skip: "Copies one game brand's look (Tetris), so it suits that brand only."
+"bergside/awesome-design-skills:skills/vibrant":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."
+"bergside/awesome-design-skills:skills/vintage":
+  skip: "Same template as the kept styles, with only colours and fonts changed, so it is a near-copy."

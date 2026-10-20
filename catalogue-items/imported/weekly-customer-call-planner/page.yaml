@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It repeats the same research for each call, then gathers it.
+new_slug: weekly-customer-call-planner
+name: Weekly customer call planner
+summary: Ask for your week. Get one brief covering every outside call in the next seven days. Needs your Common Room account.
+job: organise-work
+headline: Weekly customer call planner
+subhead: Ask for your week. Get one brief covering every outside call in the next seven days. Needs your Common Room account.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can connect to your Common Room account and your calendar.

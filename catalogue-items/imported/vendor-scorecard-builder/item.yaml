@@ -1,0 +1,37 @@
+slug: vendor-scorecard-builder
+name: Vendor scorecard builder
+summary: Give it your vendor list and uptime data. Get scorecards, missed-SLA credits and keep, review or replace calls.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: business-operations/skills/vendor-management
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/vendor-management
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: vendor-management
+  author: claude-code-skills
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: vendor-management skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/vendor-management
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: claude-code-skills
+    url: https://github.com/alirezarezvani/claude-code-skills
+    used: Wrote the skill; Alireza Rezvani shared it in their collection.

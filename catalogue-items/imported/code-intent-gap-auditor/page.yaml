@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It must trace rules through the code and prove each gap is real.
+new_slug: code-intent-gap-auditor
+name: Code intent gap auditor
+summary: Give it your docs and code. Get each place the code breaks its own rules, with a fix.
+job: secure-code
+headline: Code intent gap auditor
+subhead: Give it your docs and code. Get each place the code breaks its own rules, with a fix.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your code files.

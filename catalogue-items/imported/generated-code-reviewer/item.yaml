@@ -1,0 +1,37 @@
+slug: generated-code-reviewer
+name: Generated code reviewer
+summary: Give it code your AI just wrote. Get a pass for clean-code slips, repeated logic and common AI mistakes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: code_change
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/clean-code-guard
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/clean-code-guard
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: clean-code-guard
+  author: amElnagdy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: clean-code-guard skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/clean-code-guard
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: amElnagdy
+    url: https://github.com/amElnagdy/guard-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

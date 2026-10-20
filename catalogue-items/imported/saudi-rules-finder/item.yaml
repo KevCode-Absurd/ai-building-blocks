@@ -1,0 +1,33 @@
+slug: saudi-rules-finder
+name: Saudi rules finder
+summary: Describe your business in Saudi Arabia. Get which Saudi cyber and data rules apply, then the steps for each.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/saudi-arabia-grc/skills/saudi-arabia-grc
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/saudi-arabia-grc/skills/saudi-arabia-grc
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: saudi-arabia-grc
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: saudi-arabia-grc skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/saudi-arabia-grc/skills/saudi-arabia-grc
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

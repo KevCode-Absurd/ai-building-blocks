@@ -1,0 +1,40 @@
+slug: trend-and-forecast-analyst
+name: Trend and forecast analyst
+summary: Give it numbers over time. Get trend, seasons and odd spikes found, plus a forecast table and plain insights.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+  - type: spreadsheet
+    required: false
+uses: []
+origin: imported
+source:
+  by: Nimrod Fisher
+  repo: nimrodfisher/data-analytics-skills
+  path: 03-data-analysis-investigation/time-series-analysis
+  url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/03-data-analysis-investigation/time-series-analysis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9449d36
+  original_name: time-series-analysis
+  author: Nimrod Fisher
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: time-series-analysis skill
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/03-data-analysis-investigation/time-series-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher
+    used: Wrote the skill; Nimrod Fisher shared it in their collection.

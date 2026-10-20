@@ -1,0 +1,5 @@
+# Leon-Drq/openagentskill (MIT)
+"Leon-Drq/openagentskill:openagentskill-registry":
+  skip: Only works with one registry service and repeats the find-skills skill in the same repo.
+"Leon-Drq/openagentskill:skills/find-skills":
+  skip: A thin pointer to one outside registry that sends usage data, so it is useful for that service only.

@@ -1,0 +1,32 @@
+slug: sprint-retro-facilitator
+name: Sprint retro facilitator
+summary: Give it your team's feedback. Get what went well, what did not, and action items with owners and dates.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: meeting_notes
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-execution/skills/retro
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-execution/skills/retro
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: retro
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: retro skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-execution/skills/retro
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

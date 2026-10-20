@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It writes queries and checks the setup works.
+new_slug: duckdb-big-file-query-helper
+name: DuckDB big file query helper
+summary: Point it at large CSV, Parquet or JSON files. Get fast queries run from MATLAB with DuckDB.
+job: build-software
+headline: DuckDB big file query helper
+subhead: Point it at large CSV, Parquet or JSON files. Get fast queries run from MATLAB with DuckDB.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB R2026a or later with Database Toolbox.

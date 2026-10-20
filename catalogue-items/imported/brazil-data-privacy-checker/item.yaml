@@ -1,0 +1,33 @@
+slug: brazil-data-privacy-checker
+name: Brazil data privacy checker
+summary: Describe how you handle data about people in Brazil. Get your LGPD duties, gaps and a plan to fix them.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/lgpd/skills/lgpd
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/lgpd/skills/lgpd
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: lgpd
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: lgpd skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/lgpd/skills/lgpd
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

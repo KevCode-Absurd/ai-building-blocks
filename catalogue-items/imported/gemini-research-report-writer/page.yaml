@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Gemini does the searching; you set the question and check the sources.
+new_slug: gemini-research-report-writer
+name: Gemini research report writer
+summary: Give it a research question. Get a long report with cited sources from Google Gemini. Needs a paid Gemini API key.
+job: research-topics
+headline: Gemini research report writer
+subhead: Give it a research question. Get a long report with cited sources from Google Gemini. Needs a paid Gemini API key.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your Gemini API key.

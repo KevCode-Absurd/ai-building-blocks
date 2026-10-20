@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Good tests need careful choices about what counts as success.
+new_slug: ai-agent-tester
+name: AI agent tester
+summary: Describe your AI agent. Get a test set, scoring rules and a release decision memo you can trust.
+job: test-and-fix-code
+headline: AI agent tester
+subhead: Describe your AI agent. Get a test set, scoring rules and a release decision memo you can trust.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

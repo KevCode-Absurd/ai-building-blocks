@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It follows a set edit recipe using your sharp photo as the guide.
+new_slug: fabric-texture-fixer
+name: Fabric texture fixer
+summary: Give it a blurry clothing photo and a sharp product photo. Get clear, believable fabric. Your image model redraws it.
+job: product-photos
+headline: Fabric texture fixer
+subhead: Give it a blurry clothing photo and a sharp product photo. Get clear, believable fabric. Your image model redraws it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your own image model key (OpenAI, Gemini, fal or Replicate).

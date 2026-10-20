@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It reads many reviews and sorts them into themes.
+new_slug: review-insight-finder
+name: Review insight finder
+summary: Give it your product reviews. Get the pain points, praise and feature requests, ranked by how often they come up.
+job: run-your-store
+headline: Review insight finder
+subhead: Give it your product reviews. Get the pain points, praise and feature requests, ranked by how often they come up.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

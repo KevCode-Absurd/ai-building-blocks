@@ -1,0 +1,37 @@
+slug: investor-panel-pitch-tester
+name: Investor panel pitch tester
+summary: Pitch a business idea. Get a panel of tough investors who grill it and vote in or out.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/shark
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/shark
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: shark
+  author: Alex Chen
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shark skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/shark
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Alex Chen
+    url: https://github.com/alexyc9381/shark-skill
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,32 @@
+slug: invoice-totals-checker
+name: Invoice totals checker
+summary: Give it an invoice. Get every line and total recalculated, and any missing fields or date problems listed.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Pro Skill Packs
+  repo: proskillpacks/skills
+  path: skills/finance/invoice-checker
+  url: https://github.com/proskillpacks/skills/tree/main/skills/finance/invoice-checker
+  licence: MIT
+  licence_file: LICENSE
+  commit: e8c3393
+  original_name: invoice-checker
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: invoice-checker skill
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/finance/invoice-checker
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

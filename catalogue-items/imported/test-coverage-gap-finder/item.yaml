@@ -1,0 +1,32 @@
+slug: test-coverage-gap-finder
+name: Test coverage gap finder
+summary: Point it at your app. Get every page, part and endpoint listed with what is tested and what is not.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/playwright-pro/skills/coverage
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/playwright-pro/skills/coverage
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: coverage
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: coverage skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/playwright-pro/skills/coverage
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

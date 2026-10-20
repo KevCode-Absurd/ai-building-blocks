@@ -1,0 +1,32 @@
+slug: build-your-own-product-designer
+name: Build-your-own product designer
+summary: Describe your customisable product. Get a plan with option rules, live pricing, checks and saving.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/product-configurator-design
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/product-configurator-design
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: product-configurator-design
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: product-configurator-design skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/product-configurator-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

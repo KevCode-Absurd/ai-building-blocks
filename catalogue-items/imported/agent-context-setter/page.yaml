@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It judges what the AI needs to see, and when.
+new_slug: agent-context-setter
+name: Agent context setter
+summary: Describe your project. Get the right rules and files loaded so your AI stays accurate through long sessions.
+job: set-up-ai
+headline: Agent context setter
+subhead: Describe your project. Get the right rules and files loaded so your AI stays accurate through long sessions.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

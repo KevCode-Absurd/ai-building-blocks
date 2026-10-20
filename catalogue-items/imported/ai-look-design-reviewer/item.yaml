@@ -1,0 +1,37 @@
+slug: ai-look-design-reviewer
+name: AI-look design reviewer
+summary: Give it your UI code. Get a 0 to 100 score, why it looks AI-made and a ranked fix list.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/styleseed-design-review
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/styleseed-design-review
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: styleseed-design-review
+  author: bitjaru
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: styleseed-design-review skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/styleseed-design-review
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: bitjaru
+    url: https://github.com/bitjaru
+    used: Wrote the skill; sickn33 shared it in their collection.

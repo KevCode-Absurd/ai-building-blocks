@@ -1,0 +1,34 @@
+slug: offer-designer
+name: Offer designer
+summary: Say what you sell. Get an offer with value framing, bonuses, guarantee, name and payment terms.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: product_data
+    required: true
+  - type: persona
+    required: false
+outputs:
+  - type: offer
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/offers
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/offers
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: offers
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: offers skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/offers
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

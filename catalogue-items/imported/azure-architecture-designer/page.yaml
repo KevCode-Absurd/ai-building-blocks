@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows set patterns and tailors them to your app.
+new_slug: azure-architecture-designer
+name: Azure architecture designer
+summary: Describe your app. Get an Azure design with setup templates, a pipeline and cost cuts.
+job: ship-and-host
+headline: Azure architecture designer
+subhead: Describe your app. Get an Azure design with setup templates, a pipeline and cost cuts.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

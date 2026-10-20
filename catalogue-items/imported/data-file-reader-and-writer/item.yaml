@@ -1,0 +1,33 @@
+slug: data-file-reader-and-writer
+name: Data file reader and writer
+summary: Name your CSV, Excel, JSON or Parquet file. Get it read or saved correctly, with errors fixed.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: code_change
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/matlab-data-import-and-analysis/matlab-import-export-data
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-data-import-and-analysis/matlab-import-export-data
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-import-export-data
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-import-export-data skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-data-import-and-analysis/matlab-import-export-data
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

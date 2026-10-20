@@ -1,0 +1,32 @@
+slug: radio-transmit-and-capture-helper
+name: Radio transmit and capture helper
+summary: Give it a test signal. Get it sent over the air and the received IQ data captured.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/wireless-communications/matlab-transmit-capture-usrp
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/wireless-communications/matlab-transmit-capture-usrp
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-transmit-capture-usrp
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-transmit-capture-usrp skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/wireless-communications/matlab-transmit-capture-usrp
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

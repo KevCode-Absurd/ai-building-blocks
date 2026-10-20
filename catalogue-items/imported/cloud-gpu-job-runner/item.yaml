@@ -1,0 +1,35 @@
+slug: cloud-gpu-job-runner
+name: Cloud GPU job runner
+summary: Give it your Python code. Get it running on rented GPUs, or live as a web API, with no server to manage.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: deploy_url
+    required: true
+uses: []
+origin: imported
+warnings:
+  - paid:Modal
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 09-infrastructure/modal
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/09-infrastructure/modal
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: modal-serverless-gpu
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: modal-serverless-gpu skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/09-infrastructure/modal
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,39 @@
+slug: llm-fine-tuning-guide
+name: LLM fine-tuning guide
+summary: Say your model and GPU. Get a fine-tuning plan and code with Unsloth, sized to your memory, ready to export.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/unsloth-finetuning
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/unsloth-finetuning
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: unsloth-finetuning
+  author: A-ryanVAT-S
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: unsloth-finetuning skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/unsloth-finetuning
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: A-ryanVAT-S
+    url: https://github.com/unslothai/unsloth
+    used: Wrote the skill; sickn33 shared it in their collection.

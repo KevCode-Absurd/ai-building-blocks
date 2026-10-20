@@ -1,0 +1,32 @@
+slug: camera-image-fixer
+name: Camera image fixer
+summary: Say what looks wrong in your camera picture. Get settings and steps that improve it.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/test-and-measurement/matlab-enhance-camera-image
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/test-and-measurement/matlab-enhance-camera-image
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-enhance-camera-image
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-enhance-camera-image skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/test-and-measurement/matlab-enhance-camera-image
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

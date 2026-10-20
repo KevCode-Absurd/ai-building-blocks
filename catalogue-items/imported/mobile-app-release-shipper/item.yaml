@@ -1,0 +1,37 @@
+slug: mobile-app-release-shipper
+name: Mobile app release shipper
+summary: Point it at your Expo app. Get iOS and Android builds made and sent to the app stores.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: deploy_url
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/expo-deployment
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/expo-deployment
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: expo-deployment
+  author: Expo
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: expo-deployment skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/expo-deployment
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Expo
+    url: https://github.com/expo
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,39 @@
+slug: customer-quote-finder
+name: Customer quote finder
+summary: Name a topic. Get real customer quotes on it from your calls and emails, each tied to who said it.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: beginner
+inputs:
+  - type: transcript
+    required: false
+  - type: tool_connection
+    required: false
+outputs:
+  - type: voc_reviews
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/customer-voice
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/customer-voice
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: customer-voice
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: customer-voice skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/customer-voice
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

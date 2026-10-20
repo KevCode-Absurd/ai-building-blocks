@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Forecasts weigh sales speed and seasons.
+new_slug: reorder-quantity-planner
+name: Reorder quantity planner
+summary: Get a sales forecast for each product, plus when to reorder and how many to buy.
+job: run-your-store
+headline: Reorder quantity planner
+subhead: Get a sales forecast for each product, plus when to reorder and how many to buy.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin (read only).

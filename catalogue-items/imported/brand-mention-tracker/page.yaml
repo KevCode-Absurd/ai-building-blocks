@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It collects mentions, then judges tone and spots problems.
+new_slug: brand-mention-tracker
+name: Brand mention tracker
+summary: Give it a brand name. Get reviews, ratings and mentions from many sites in one report. Collects data from websites.
+job: understand-customers
+headline: Brand mention tracker
+subhead: Give it a brand name. Get reviews, ratings and mentions from many sites in one report. Collects data from websites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your Apify token.

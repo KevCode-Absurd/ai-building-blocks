@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It compares two money sources and explains the gap.
+new_slug: shipping-cost-analyzer
+name: Shipping cost analyzer
+summary: Run it on your orders. Get shipping you charged against shipping you paid, by carrier and method.
+job: run-your-store
+headline: Shipping cost analyzer
+subhead: Run it on your orders. Get shipping you charged against shipping you paid, by carrier and method.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin.

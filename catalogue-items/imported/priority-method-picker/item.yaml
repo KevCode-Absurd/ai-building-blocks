@@ -1,0 +1,32 @@
+slug: priority-method-picker
+name: Priority method picker
+summary: Describe your backlog and team. Get the best way to rank it from nine methods, with the steps to use it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-execution/skills/prioritization-frameworks
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-execution/skills/prioritization-frameworks
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: prioritization-frameworks
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: prioritization-frameworks skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-execution/skills/prioritization-frameworks
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

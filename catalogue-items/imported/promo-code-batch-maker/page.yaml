@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It repeats one code recipe many times.
+new_slug: promo-code-batch-maker
+name: Promo code batch maker
+summary: Say how many codes you need and what they give. Get unique single-use discount codes made live in your store.
+job: make-offer
+headline: Promo code batch maker
+subhead: Say how many codes you need and what they give. Get unique single-use discount codes made live in your store.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin and change live store data.

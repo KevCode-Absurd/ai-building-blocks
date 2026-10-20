@@ -1,0 +1,32 @@
+slug: new-teammate-guide-writer
+name: New teammate guide writer
+summary: Point it at a codebase. Get an onboarding guide for new engineers, leads or contractors.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/codebase-onboarding
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/codebase-onboarding
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: codebase-onboarding
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: codebase-onboarding skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/codebase-onboarding
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

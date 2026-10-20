@@ -1,0 +1,40 @@
+slug: logo-and-brand-kit-designer
+name: Logo and brand kit designer
+summary: Describe your brand. Get logo directions with colors, type, file formats and usage rules.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+  - type: brand_brain
+    required: false
+outputs:
+  - type: brand_guide
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: design-and-ui-ux/logo-design
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/design-and-ui-ux/logo-design
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: logo-design
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: logo-design skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/design-and-ui-ux/logo-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

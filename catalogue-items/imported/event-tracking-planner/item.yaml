@@ -1,0 +1,33 @@
+slug: event-tracking-planner
+name: Event tracking planner
+summary: Describe your product. Get an event list, naming rules, funnels, retention cohorts and one main metric to watch.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/product-analytics-setup
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/product-analytics-setup
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: product-analytics-setup
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: product-analytics-setup skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/product-analytics-setup
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

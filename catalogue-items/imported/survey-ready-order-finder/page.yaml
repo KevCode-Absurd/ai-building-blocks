@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It filters orders by dates and status.
+new_slug: survey-ready-order-finder
+name: Survey-ready order finder
+summary: Run it on your orders. Get the buyers 7 to 14 days after delivery who should get a survey, minus refunds.
+job: run-your-store
+headline: Survey-ready order finder
+subhead: Run it on your orders. Get the buyers 7 to 14 days after delivery who should get a survey, minus refunds.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin.

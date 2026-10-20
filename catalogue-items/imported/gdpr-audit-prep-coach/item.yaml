@@ -1,0 +1,32 @@
+slug: gdpr-audit-prep-coach
+name: GDPR audit prep coach
+summary: Name your scope. Answer six article-based questions and get gaps to fix before a review or regulator visit.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: compliance-os/skills/gdpr-audit-prep
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/compliance-os/skills/gdpr-audit-prep
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: gdpr-audit-prep
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: gdpr-audit-prep skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/compliance-os/skills/gdpr-audit-prep
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

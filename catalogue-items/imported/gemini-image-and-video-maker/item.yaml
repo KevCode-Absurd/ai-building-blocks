@@ -1,0 +1,41 @@
+slug: gemini-image-and-video-maker
+name: Gemini image and video maker
+summary: Give it a picture idea and reference images. Get images or short video drawn by Google Gemini.
+category: general
+boards: []
+type: skill
+role: render
+job: ops
+level: intermediate
+inputs:
+  - type: image_plan
+    required: true
+  - type: product_photos
+    required: false
+outputs:
+  - type: image
+uses: []
+origin: imported
+warnings:
+  - paid:Gemini API
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/generate-nanobanana
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/generate-nanobanana
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: generate-nanobanana
+  author: AntonioCardenas
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: generate-nanobanana skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/generate-nanobanana
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: AntonioCardenas
+    url: https://github.com/AntonioCardenas/generate-nanobanana
+    used: Wrote the skill; sickn33 shared it in their collection.

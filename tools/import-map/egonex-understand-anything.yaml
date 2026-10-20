@@ -1,0 +1,19 @@
+# Egonex-AI/Understand-Anything (MIT). All nine are parts of one plugin and need its code or its graph file, so none work alone after copying the folder.
+"Egonex-AI/Understand-Anything:understand-anything-plugin/skills/understand":
+  skip: Needs the plugin's own scripts, core package and agent files outside the skill folder, so it breaks when copied alone.
+"Egonex-AI/Understand-Anything:understand-anything-plugin/skills/understand-chat":
+  skip: Only reads the knowledge graph file that the plugin's understand skill builds, so it does nothing alone.
+"Egonex-AI/Understand-Anything:understand-anything-plugin/skills/understand-dashboard":
+  skip: Launches the plugin's own dashboard package from outside the skill folder, so it breaks when copied alone.
+"Egonex-AI/Understand-Anything:understand-anything-plugin/skills/understand-diff":
+  skip: Only reads the knowledge graph file that the plugin's understand skill builds, so it does nothing alone.
+"Egonex-AI/Understand-Anything:understand-anything-plugin/skills/understand-domain":
+  skip: Looks for the plugin root and reads its agent prompt files outside the skill folder, so it breaks when copied alone.
+"Egonex-AI/Understand-Anything:understand-anything-plugin/skills/understand-explain":
+  skip: Only reads the knowledge graph file that the plugin's understand skill builds, so it does nothing alone.
+"Egonex-AI/Understand-Anything:understand-anything-plugin/skills/understand-figma":
+  skip: Calls the plugin's built core package and design-analyzer agent outside the skill folder, so it breaks when copied alone.
+"Egonex-AI/Understand-Anything:understand-anything-plugin/skills/understand-knowledge":
+  skip: Hands work to the plugin's article-analyzer agent and its dashboard, which sit outside the skill folder.
+"Egonex-AI/Understand-Anything:understand-anything-plugin/skills/understand-onboard":
+  skip: Only reads the knowledge graph file that the plugin's understand skill builds, so it does nothing alone.

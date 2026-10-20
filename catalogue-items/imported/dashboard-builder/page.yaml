@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It builds a working page from data.
+new_slug: dashboard-builder
+name: Dashboard builder
+summary: Give it your data and what to track. Get one HTML dashboard with charts, filters and tables you can open and share.
+job: track-numbers
+headline: Dashboard builder
+subhead: Give it your data and what to track. Get one HTML dashboard with charts, filters and tables you can open and share.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and open a browser.

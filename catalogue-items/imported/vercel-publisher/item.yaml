@@ -1,0 +1,32 @@
+slug: vercel-publisher
+name: Vercel publisher
+summary: Say "deploy my app". Get it live on Vercel as a preview or production site, with the link.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: deploy_url
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/vercel-deploy
+  url: https://github.com/openai/skills/tree/main/skills/.curated/vercel-deploy
+  licence: MIT
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: vercel-deploy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: vercel-deploy skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/vercel-deploy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

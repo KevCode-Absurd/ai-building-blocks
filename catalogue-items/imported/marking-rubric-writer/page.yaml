@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It writes level descriptions that stay distinct from each other.
+new_slug: marking-rubric-writer
+name: Marking rubric writer
+summary: Describe the task and its goal. Get a rubric with clear descriptions for each level of work.
+job: teach-and-train
+headline: Marking rubric writer
+subhead: Describe the task and its goal. Get a rubric with clear descriptions for each level of work.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

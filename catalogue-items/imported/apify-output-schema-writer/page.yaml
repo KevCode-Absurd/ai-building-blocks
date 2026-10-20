@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads what the code saves, then writes matching schema files.
+new_slug: apify-output-schema-writer
+name: Apify output schema writer
+summary: Give it an Apify Actor. Get output schema files that show its results as a clear table. Needs a paid Apify account.
+job: build-software
+headline: Apify output schema writer
+subhead: Give it an Apify Actor. Get output schema files that show its results as a clear table. Needs a paid Apify account.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

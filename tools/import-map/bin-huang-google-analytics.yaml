@@ -1,0 +1,14 @@
+# Bin-Huang/google-analytics-cli, 1 skill
+"Bin-Huang/google-analytics-cli:skills/google-analytics-cli":
+  name: Google Analytics reader
+  summary: "Ask about your traffic, sign-ups or top pages. Get a clear Google Analytics report, pulled live and read only."
+  task: track-numbers
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: "It runs report commands and reads back the numbers."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: performance_sheet, required: true } ]
+  needs: run commands, with the Google Analytics CLI installed and your own Google Analytics access
+  author: Bin Huang
+  author_url: https://github.com/Bin-Huang

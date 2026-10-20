@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It profiles, rewrites and measures again in a loop.
+new_slug: gpu-code-speed-tuner
+name: GPU code speed tuner
+summary: Give it MATLAB code bound for the GPU. Get faster generated CUDA code, measured after each change.
+job: test-and-fix-code
+headline: GPU code speed tuner
+subhead: Give it MATLAB code bound for the GPU. Get faster generated CUDA code, measured after each change.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with GPU Coder and a GPU.

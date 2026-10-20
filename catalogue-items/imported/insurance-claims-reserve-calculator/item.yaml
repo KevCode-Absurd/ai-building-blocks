@@ -1,0 +1,33 @@
+slug: insurance-claims-reserve-calculator
+name: Insurance claims reserve calculator
+summary: Give it claims history. Get loss reserves, IBNR estimates and loss and combined ratios.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: document
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/insurance-reserving
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/insurance-reserving
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: insurance-reserving
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: insurance-reserving skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/insurance-reserving
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It asks varied questions, then files each answer in the right place.
+new_slug: readme-and-decision-interviewer
+name: README and decision interviewer
+summary: Answer a few quick questions at a time. Get a README and short decision records that hold your plans.
+job: build-software
+headline: README and decision interviewer
+subhead: Answer a few quick questions at a time. Get a README and short decision records that hold your plans.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read and save files in your project.

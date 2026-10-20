@@ -1,0 +1,33 @@
+slug: fluid-flow-simulation-planner
+name: Fluid flow simulation planner
+summary: Describe a flow to model. Get a checked solver setup, run plan and analysis of the results.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+  - type: document
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/fluidsim
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/fluidsim
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: fluidsim
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: fluidsim skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/fluidsim
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It scores set areas, then ranks fixes.
+new_slug: company-health-scorer
+name: Company health scorer
+summary: Give it signals from your teams. Get a traffic-light score on eight areas with what to fix first.
+job: lead-people
+headline: Company health scorer
+subhead: Give it signals from your teams. Get a traffic-light score on eight areas with what to fix first.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

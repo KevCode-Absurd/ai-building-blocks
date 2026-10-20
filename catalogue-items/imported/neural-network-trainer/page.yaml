@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Training choices and old-code fixes both need judgment.
+new_slug: neural-network-trainer
+name: Neural network trainer
+summary: Give it data and a goal. Get a neural network trained, tested and exported, with old code moved to current methods.
+job: build-software
+headline: Neural network trainer
+subhead: Give it data and a goal. Get a neural network trained, tested and exported, with old code moved to current methods.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with the Deep Learning Toolbox.

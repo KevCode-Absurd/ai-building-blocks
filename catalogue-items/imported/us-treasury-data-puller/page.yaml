@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It calls a public API and returns the figures.
+new_slug: us-treasury-data-puller
+name: US Treasury data puller
+summary: Ask about US debt, spending or interest rates. Get the latest official numbers from Treasury, no key needed.
+job: track-numbers
+headline: US Treasury data puller
+subhead: Ask about US debt, spending or interest rates. Get the latest official numbers from Treasury, no key needed.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can call public web APIs.

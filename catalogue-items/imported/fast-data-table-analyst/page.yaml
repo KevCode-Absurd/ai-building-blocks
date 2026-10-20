@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It writes data code in a specific style.
+new_slug: fast-data-table-analyst
+name: Fast data table analyst
+summary: Give it a large data file. Get fast cleaning, grouping and analysis with Polars code that you can rerun.
+job: work-with-files
+headline: Fast data table analyst
+subhead: Give it a large data file. Get fast cleaning, grouping and analysis with Polars code that you can rerun.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code.

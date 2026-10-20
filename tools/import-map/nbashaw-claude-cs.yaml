@@ -1,0 +1,14 @@
+# nbashaw/claude-cs (MIT). Builds support scripts; the skill requires approval before anything is sent.
+"nbashaw/claude-cs:.claude/skills/customer-support-builder":
+  name: Support desk automation builder
+  summary: Tell it your help desk and billing tool. Get scripts, reply templates and a triage routine that drafts replies for your approval.
+  task: help-customers
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It plans and writes working code for your own tools.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: skill_files }, { type: codebase } ]
+  needs: run code and use your help desk and billing API keys
+  author: nbashaw
+  author_url: https://github.com/nbashaw

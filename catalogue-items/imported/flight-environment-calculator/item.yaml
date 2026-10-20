@@ -1,0 +1,34 @@
+slug: flight-environment-calculator
+name: Flight environment calculator
+summary: Give it a place, height and date. Get air, gravity, wind and magnetic field values, worked out in MATLAB.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/aerospace/matlab-compute-aerospace-environment
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/aerospace/matlab-compute-aerospace-environment
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-compute-aerospace-environment
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-compute-aerospace-environment skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/aerospace/matlab-compute-aerospace-environment
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

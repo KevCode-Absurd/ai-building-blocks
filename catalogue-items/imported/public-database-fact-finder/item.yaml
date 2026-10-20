@@ -1,0 +1,32 @@
+slug: public-database-fact-finder
+name: Public database fact finder
+summary: Name the fact you need and the database. Get it retrieved the same way every time, with source and date.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/database-lookup
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/database-lookup
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: database-lookup
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: database-lookup skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/database-lookup
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

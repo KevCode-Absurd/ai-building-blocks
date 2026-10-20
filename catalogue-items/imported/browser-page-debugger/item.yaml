@@ -1,0 +1,32 @@
+slug: browser-page-debugger
+name: Browser page debugger
+summary: Point it at a page that misbehaves. Get the real errors, network calls and slow spots found in a live browser.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: web_app
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: Addy Osmani
+  repo: addyosmani/agent-skills
+  path: skills/browser-testing-with-devtools
+  url: https://github.com/addyosmani/agent-skills/tree/main/skills/browser-testing-with-devtools
+  licence: MIT
+  licence_file: LICENSE
+  commit: aeac41d
+  original_name: browser-testing-with-devtools
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: browser-testing-with-devtools skill
+    by: Addy Osmani
+    url: https://github.com/addyosmani/agent-skills/tree/main/skills/browser-testing-with-devtools
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

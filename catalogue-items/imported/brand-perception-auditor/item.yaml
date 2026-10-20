@@ -1,0 +1,39 @@
+slug: brand-perception-auditor
+name: Brand perception auditor
+summary: Describe your brand and who it is for. Get a list of mixed signals and changes to close the gap.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: brand_brain
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/brand-perception-psychologist
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/brand-perception-psychologist
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: brand-perception-psychologist
+  author: MMEHDI0606
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: brand-perception-psychologist skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/brand-perception-psychologist
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: MMEHDI0606
+    url: https://github.com/MMEHDI0606
+    used: Wrote the skill; sickn33 shared it in their collection.

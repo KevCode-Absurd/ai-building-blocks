@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It applies strict matching rules and must flag every unclear lead.
+new_slug: lead-to-ad-matcher
+name: Lead to ad matcher
+summary: Give it your CRM lead export. Get each lead linked to the paid channel and ad that brought it in.
+job: track-numbers
+headline: Lead to ad matcher
+subhead: Give it your CRM lead export. Get each lead linked to the paid channel and ad that brought it in.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Node code, or SQL on your own BigQuery data.

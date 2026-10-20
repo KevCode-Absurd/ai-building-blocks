@@ -1,0 +1,40 @@
+slug: bayesian-model-builder
+name: Bayesian model builder
+summary: Give it your data and the question. Get a Python model that estimates what drove your results, with ranges, not guesses.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: PyMC Labs
+  repo: pymc-labs/pymc-modeling
+  path: skills/pymc-modeling
+  url: https://github.com/pymc-labs/pymc-modeling/tree/main/skills/pymc-modeling
+  licence: MIT
+  licence_file: LICENSE
+  commit: 68cbe66
+  original_name: pymc-modeling
+  author: PyMC Labs
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pymc-modeling skill
+    by: PyMC Labs
+    url: https://github.com/pymc-labs/pymc-modeling/tree/main/skills/pymc-modeling
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: PyMC Labs
+    url: https://github.com/pymc-labs
+    used: Wrote the skill; PyMC Labs shared it in their collection.

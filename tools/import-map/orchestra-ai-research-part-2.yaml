@@ -1,0 +1,414 @@
+# orchestra-research/AI-research-SKILLs, part 2 of 2 (MIT)
+"orchestra-research/AI-research-SKILLs:12-inference-serving/vllm":
+  name: vLLM model server setup
+  summary: "Name your model and GPU. Get a fast model server running, with settings for speed and memory."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Tuning memory and speed needs careful tradeoffs.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code on a machine with an NVIDIA GPU
+"orchestra-research/AI-research-SKILLs:12-inference-serving/llama-cpp":
+  name: Local model runner for laptops
+  summary: "Name your model and computer. Get it running on a Mac, a plain CPU or a non-NVIDIA graphics card."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It picks the right model size for your hardware.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code on your computer
+"orchestra-research/AI-research-SKILLs:13-mlops/mlflow":
+  name: MLflow experiment tracker
+  summary: "Give it your training code. Get every run logged, compared and versioned, so you can repeat the best one."
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It adds logging to code you already have.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code
+"orchestra-research/AI-research-SKILLs:13-mlops/tensorboard":
+  name: Training curve viewer
+  summary: "Give it your training code. Get live charts of loss and accuracy, plus a way to compare runs."
+  task: track-numbers
+  role: render
+  level: intermediate
+  thinking: low
+  thinking_why: It follows a standard logging pattern.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code and open a browser
+"orchestra-research/AI-research-SKILLs:14-agents/a-evolve":
+  name: Agent self-improvement loop builder
+  summary: Give it an AI agent and a test set. Get a loop that rewrites its prompts and skills until scores rise.
+  task: build-software
+  role: orchestrate
+  level: expert
+  thinking: high
+  thinking_why: Self-improving loops need careful design and testing.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code and call an AI model
+  author: A-EVO Lab
+  author_url: https://github.com/A-EVO-Lab
+"orchestra-research/AI-research-SKILLs:14-agents/crewai":
+  name: Agent team builder
+  summary: "Describe the jobs your agents do. Get a team of AI agents with roles, tasks and shared memory."
+  task: build-software
+  role: orchestrate
+  level: advanced
+  thinking: medium
+  thinking_why: It splits one goal into roles and tasks.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code and call an AI model
+"orchestra-research/AI-research-SKILLs:14-agents/langchain":
+  name: AI app and chatbot builder
+  summary: "Describe the app you want. Get working code for a chatbot, question answerer or agent that uses tools."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It picks parts and wires them together.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code and call an AI model
+"orchestra-research/AI-research-SKILLs:14-agents/llamaindex":
+  name: Document question answerer builder
+  summary: Point it at your documents. Get code that answers questions from them and shows which pages it used.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It sets up reading, indexing and answering."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code and call an AI model
+"orchestra-research/AI-research-SKILLs:15-rag/chroma":
+  name: Chroma search database setup
+  summary: "Give it your text. Get a searchable store that finds passages by meaning, ready for question-answering."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows a short, fixed setup."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code
+"orchestra-research/AI-research-SKILLs:15-rag/faiss":
+  name: FAISS similarity search builder
+  summary: Give it your embeddings. Get a fast index that finds the closest matches among millions of items.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Choosing an index type trades speed against accuracy.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code
+"orchestra-research/AI-research-SKILLs:15-rag/sentence-transformers":
+  name: Text embedding maker
+  summary: "Give it sentences or documents. Get number versions of them for search, grouping and finding similar text."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It follows standard model calls.
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code
+"orchestra-research/AI-research-SKILLs:16-prompt-engineering/dspy":
+  name: DSPy prompt optimizer
+  summary: Describe your AI task and a few examples. Get a program that tunes its own prompts to score better.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Automatic tuning needs good metrics and judgement.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code and call an AI model
+"orchestra-research/AI-research-SKILLs:16-prompt-engineering/instructor":
+  name: Structured data extractor
+  summary: "Say what fields you need. Get code that pulls them from AI replies as checked data, retrying on errors."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It defines a data shape and checks replies.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code and call an AI model
+"orchestra-research/AI-research-SKILLs:16-prompt-engineering/outlines":
+  name: Guaranteed format generator
+  summary: Say what shape the output must take. Get a model setup that always returns valid JSON or matching text.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It sets format rules for a local model.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code
+"orchestra-research/AI-research-SKILLs:17-observability/phoenix":
+  name: Phoenix AI app tracer
+  summary: "Give it your AI app. Get traces of every step, plus tests that score answers and spot failures."
+  task: build-software
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It reads traces and finds what went wrong.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run Python code and open a browser
+"orchestra-research/AI-research-SKILLs:17-observability/langsmith":
+  name: LangSmith AI app monitor
+  summary: "Give it your AI app. Get traces, test sets and scores so you can find bad answers before users do."
+  task: build-software
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It reads traces and finds what went wrong.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run Python code and use a LangSmith account (paid beyond the free plan)
+"orchestra-research/AI-research-SKILLs:18-multimodal/audiocraft":
+  name: Text to music maker
+  summary: "Describe the music or sound you want. Get a generated clip, even one that follows a melody you give."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It follows a fixed generation recipe.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audio } ]
+  needs: run Python code on a computer with a GPU
+"orchestra-research/AI-research-SKILLs:18-multimodal/clip":
+  name: Image and text matcher
+  summary: "Give it pictures and words. Get image search, sorting by label and checks for what a picture shows."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It follows standard model calls.
+  inputs: [ { type: image, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code
+"orchestra-research/AI-research-SKILLs:18-multimodal/llava":
+  name: Picture chat assistant builder
+  summary: Give it images and questions. Get a chat that describes pictures and answers questions about them.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It sets up a vision model and tunes it.
+  inputs: [ { type: image, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code on a computer with a GPU
+"orchestra-research/AI-research-SKILLs:18-multimodal/segment-anything":
+  name: Image object cutter
+  summary: "Click a point or draw a box on a picture. Get the exact outline of that object, or of every object."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It follows standard model calls.
+  inputs: [ { type: image, required: true } ]
+  outputs: [ { type: image } ]
+  needs: run Python code
+"orchestra-research/AI-research-SKILLs:18-multimodal/stable-diffusion":
+  name: Stable Diffusion image maker
+  summary: "Describe a picture. Get generated images, edits to your own photos or code for a custom image pipeline."
+  task: make-images
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It follows standard model calls.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: image } ]
+  needs: run Python code on a computer with a GPU
+"orchestra-research/AI-research-SKILLs:18-multimodal/whisper":
+  name: Whisper speech transcriber
+  summary: "Give it an audio file. Get a written transcript in 99 languages, or an English translation."
+  task: work-with-audio
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a short, fixed recipe."
+  inputs: [ { type: audio, required: true } ]
+  outputs: [ { type: transcript } ]
+  needs: run Python code
+"orchestra-research/AI-research-SKILLs:18-multimodal/openpi":
+  name: Robot model fine-tuner
+  summary: "Give it your robot data. Get a pi0 robot model fine-tuned on it, and a server that runs it."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Robot model training has many fragile settings.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code on a computer with a strong GPU
+"orchestra-research/AI-research-SKILLs:19-emerging-techniques/knowledge-distillation":
+  name: Small model trainer from a big one
+  summary: "Name your large model. Get a plan and code to teach a smaller, cheaper model to match it."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Matching a teacher model needs careful tuning.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code on a computer with a GPU
+"orchestra-research/AI-research-SKILLs:19-emerging-techniques/long-context":
+  name: Longer context stretcher
+  summary: Name your model. Get a method and code to make it read much longer documents than it was trained for.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Changing how a model reads position is delicate.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code on a computer with a GPU
+"orchestra-research/AI-research-SKILLs:19-emerging-techniques/model-merging":
+  name: Model merger
+  summary: "Give it two or more tuned models. Get one model that blends their skills, with no new training."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It picks a merge method and settings.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code
+"orchestra-research/AI-research-SKILLs:19-emerging-techniques/moe-training":
+  name: Mixture of experts trainer
+  summary: Name your compute budget and goal. Get code to train a large model that only uses part of itself per word.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Routing and balancing experts is hard to get right.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code on several GPUs
+"orchestra-research/AI-research-SKILLs:19-emerging-techniques/speculative-decoding":
+  name: Faster model reply setup
+  summary: Name your model. Get a setup that makes replies 1.5 to 3.6 times faster without changing the answers.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Speed tricks need careful testing against quality.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run Python code on a computer with a GPU
+"orchestra-research/AI-research-SKILLs:20-ml-paper-writing/academic-plotting":
+  name: Research paper figure maker
+  summary: Give it your results or a method section. Get charts and architecture diagrams that look ready for a paper.
+  task: research-topics
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks chart types and builds clean figures.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: image } ]
+  needs: run Python code and use a Gemini API key for diagrams
+"orchestra-research/AI-research-SKILLs:20-ml-paper-writing/ml-paper-writing":
+  name: AI research paper writer
+  summary: "Give it your research code and results. Get a paper draft for a top AI conference, with citations checked."
+  task: research-topics
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: A strong paper needs a clear argument and checked claims.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "run code, read your files and search the web"
+"orchestra-research/AI-research-SKILLs:20-ml-paper-writing/systems-paper-writing":
+  name: Systems paper writer
+  summary: Give it your systems work. Get a paper draft built to the structure that systems conferences expect.
+  task: research-topics
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Systems papers follow strict structures and reviewer habits.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read your files and run LaTeX
+"orchestra-research/AI-research-SKILLs:20-ml-paper-writing/presenting-conference-talks":
+  name: Conference talk slide maker
+  summary: "Give it your finished paper. Get talk slides, speaker notes and a script for a conference talk."
+  task: research-topics
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It turns a long paper into a short talk.
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: slide_deck } ]
+  needs: "run code and LaTeX, and read your paper"
+"orchestra-research/AI-research-SKILLs:21-research-ideation/brainstorming-research-ideas":
+  name: Research idea finder
+  summary: "Describe your field or stuck project. Get ten ways to find research ideas worth chasing, with the best ones ranked."
+  task: research-topics
+  role: source
+  level: beginner
+  thinking: medium
+  thinking_why: It prompts you through steps and ranks ideas.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: shortlist } ]
+"orchestra-research/AI-research-SKILLs:21-research-ideation/creative-thinking-for-research":
+  name: Original research idea generator
+  summary: "Describe your problem. Get new directions from eight creative methods, such as borrowing ideas from other fields."
+  task: research-topics
+  role: source
+  level: intermediate
+  thinking: high
+  thinking_why: Finding truly new ideas needs deep reasoning.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: shortlist } ]
+"orchestra-research/AI-research-SKILLs:22-agent-native-research-artifact/compiler":
+  name: Paper and repo to structured notes
+  summary: "Give it a paper, repo or messy notes. Get claims, methods and evidence sorted into a clear research folder."
+  task: research-topics
+  role: compress
+  level: advanced
+  thinking: high
+  thinking_why: It reads closely and ties each claim to evidence.
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read your files and run code
+"orchestra-research/AI-research-SKILLs:12-inference-serving/sglang":
+  skip: Same job as the vLLM model server setup we list; kept the clearer one
+"orchestra-research/AI-research-SKILLs:12-inference-serving/tensorrt-llm":
+  skip: Same job as the vLLM model server setup; works only on NVIDIA datacenter GPUs
+"orchestra-research/AI-research-SKILLs:13-mlops/swanlab":
+  skip: Near-copy of the MLflow experiment tracker and Training curve viewer
+"orchestra-research/AI-research-SKILLs:13-mlops/weights-and-biases":
+  skip: Same job as the MLflow experiment tracker; needs a hosted account; kept the open-source one
+"orchestra-research/AI-research-SKILLs:14-agents/autogpt":
+  skip: Platform for its own visual agents; overlaps the Agent team builder
+"orchestra-research/AI-research-SKILLs:15-rag/pinecone":
+  skip: "Same job as the Chroma search database setup, and needs a paid hosted service"
+"orchestra-research/AI-research-SKILLs:15-rag/qdrant":
+  skip: Near-copy of the Chroma search database setup and FAISS builder
+"orchestra-research/AI-research-SKILLs:16-prompt-engineering/guidance":
+  skip: Same job as the Guaranteed format generator and Structured data extractor
+"orchestra-research/AI-research-SKILLs:18-multimodal/blip-2":
+  skip: Near-copy of the Image and text matcher and Picture chat assistant builder
+"orchestra-research/AI-research-SKILLs:18-multimodal/cosmos-policy":
+  skip: Narrow robot benchmark setup for one NVIDIA project; Robot model fine-tuner covers the job
+"orchestra-research/AI-research-SKILLs:18-multimodal/openvla-oft":
+  skip: Near-copy of the Robot model fine-tuner
+"orchestra-research/AI-research-SKILLs:19-emerging-techniques/model-pruning":
+  skip: "Same job as the Small model trainer from a big one: make a model smaller"
+"orchestra-research/AI-research-SKILLs:22-agent-native-research-artifact/research-manager":
+  skip: Only works inside the ara/ folder this set creates
+"orchestra-research/AI-research-SKILLs:22-agent-native-research-artifact/rigor-reviewer":
+  skip: Only works on the research folder format this set creates

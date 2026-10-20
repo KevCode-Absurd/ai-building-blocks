@@ -1,0 +1,32 @@
+slug: warehouse-automation-chooser
+name: Warehouse automation chooser
+summary: Give it your orders and space. Get which machines pay back, ranked, with cost, payback time and risks.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/warehouse-automation
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/warehouse-automation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: warehouse-automation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: warehouse-automation skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/warehouse-automation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

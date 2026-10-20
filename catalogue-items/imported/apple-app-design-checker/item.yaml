@@ -1,0 +1,37 @@
+slug: apple-app-design-checker
+name: Apple app design checker
+summary: Show it your iPhone, iPad or Mac app design. Get what to fix to match Apple's design rules.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: design_file
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/hig-foundations
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/hig-foundations
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: hig-foundations
+  author: Raintree Technology
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hig-foundations skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/hig-foundations
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Raintree Technology
+    url: https://raintree.technology
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,33 @@
+slug: data-classifier-comparer
+name: Data classifier comparer
+summary: Give it a data table. Get several classifiers trained and ranked by accuracy, with tests that show real differences.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: code_change
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/ai-and-statistics/matlab-classify-tabular-data
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-classify-tabular-data
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-classify-tabular-data
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-classify-tabular-data skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-classify-tabular-data
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

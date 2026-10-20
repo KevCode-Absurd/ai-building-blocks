@@ -1,0 +1,36 @@
+slug: brand-mention-tracker
+name: Brand mention tracker
+summary: Give it a brand name. Get reviews, ratings and mentions from many sites in one report. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: voc_reviews
+  - type: audit_report
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:Apify
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/apify-brand-reputation-monitoring
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-brand-reputation-monitoring
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: apify-brand-reputation-monitoring
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: apify-brand-reputation-monitoring skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-brand-reputation-monitoring
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: The outfit must stay the same while the scene changes.
+new_slug: social-post-photo-maker
+name: Social post photo maker
+summary: Give it an outfit photo. Get lifestyle shots with new models, scenes and poses for social posts. Your image model draws them.
+job: product-photos
+headline: Social post photo maker
+subhead: Give it an outfit photo. Get lifestyle shots with new models, scenes and poses for social posts. Your image model draws them.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your own image model key (OpenAI, Gemini, fal or Replicate).

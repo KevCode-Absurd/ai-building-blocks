@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It reads one ad and quotes it, with no outside research.
+new_slug: job-ad-reader
+name: Job ad reader
+summary: Paste a job ad. Get what the job is, firm needs versus wishes, what is missing, and questions to ask.
+job: think-and-decide
+headline: Job ad reader
+subhead: Paste a job ad. Get what the job is, firm needs versus wishes, what is missing, and questions to ask.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

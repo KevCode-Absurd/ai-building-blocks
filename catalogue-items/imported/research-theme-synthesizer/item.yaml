@@ -1,0 +1,37 @@
+slug: research-theme-synthesizer
+name: Research theme synthesizer
+summary: Give it interviews, surveys or tickets. Get themes ranked by how often they come up, with quotes.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: voc_reviews
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: product-management/skills/synthesize-research
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/synthesize-research
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: synthesize-research
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: synthesize-research skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/synthesize-research
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

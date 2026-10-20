@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It groups messy spend rows, then ranks the savings.
+new_slug: spend-savings-finder
+name: Spend savings finder
+summary: Give it a list of what you paid suppliers. Get spend grouped by type, the biggest savings chances and quick wins.
+job: track-numbers
+headline: Spend savings finder
+subhead: Give it a list of what you paid suppliers. Get spend grouped by type, the biggest savings chances and quick wins.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

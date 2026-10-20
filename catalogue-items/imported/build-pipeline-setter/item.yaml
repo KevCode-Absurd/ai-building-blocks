@@ -1,0 +1,32 @@
+slug: build-pipeline-setter
+name: Build pipeline setter
+summary: Describe how you ship. Get automatic checks and a deploy pipeline so bad changes never reach users.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Addy Osmani
+  repo: addyosmani/agent-skills
+  path: skills/ci-cd-and-automation
+  url: https://github.com/addyosmani/agent-skills/tree/main/skills/ci-cd-and-automation
+  licence: MIT
+  licence_file: LICENSE
+  commit: aeac41d
+  original_name: ci-cd-and-automation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ci-cd-and-automation skill
+    by: Addy Osmani
+    url: https://github.com/addyosmani/agent-skills/tree/main/skills/ci-cd-and-automation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

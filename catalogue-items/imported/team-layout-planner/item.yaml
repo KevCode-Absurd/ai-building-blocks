@@ -1,0 +1,37 @@
+slug: team-layout-planner
+name: Team layout planner
+summary: Describe your teams. Get a team structure for fast work, with clear owners and how teams hand off. Uses Team Topologies.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Wondel.ai
+  repo: wondelai/skills
+  path: team-topologies
+  url: https://github.com/wondelai/skills/tree/main/team-topologies
+  licence: MIT
+  licence_file: LICENSE
+  commit: c172996
+  original_name: team-topologies
+  author: wondelai
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: team-topologies skill
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/team-topologies
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: wondelai
+    url: https://github.com/wondelai
+    used: Wrote the skill; Wondel.ai shared it in their collection.

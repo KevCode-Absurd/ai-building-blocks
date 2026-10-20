@@ -1,0 +1,32 @@
+slug: structured-data-extractor
+name: Structured data extractor
+summary: Say what fields you need. Get code that pulls them from AI replies as checked data, retrying on errors.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 16-prompt-engineering/instructor
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/16-prompt-engineering/instructor
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: instructor
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: instructor skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/16-prompt-engineering/instructor
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

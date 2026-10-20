@@ -1,0 +1,32 @@
+slug: quarterly-roadmap-builder
+name: Quarterly roadmap builder
+summary: Give it your backlog and requests. Get a multi-quarter roadmap that balances build, improve and maintain, plus a not-doing list.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/roadmap-planning
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/roadmap-planning
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: roadmap-planning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: roadmap-planning skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/roadmap-planning
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

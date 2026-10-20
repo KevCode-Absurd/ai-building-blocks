@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows a set list of places where secrets leak.
+new_slug: exposed-secrets-finder
+name: Exposed secrets finder
+summary: Give it a site you own. Get a report of keys and private files visitors can read, with fixes.
+job: secure-code
+headline: Exposed secrets finder
+subhead: Give it a site you own. Get a report of keys and private files visitors can read, with fixes.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can open pages and run commands.

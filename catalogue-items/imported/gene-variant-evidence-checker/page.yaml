@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It weighs mixed evidence and must not overclaim.
+new_slug: gene-variant-evidence-checker
+name: Gene variant evidence checker
+summary: Name a gene variant. Get public evidence, expert gene-disease ratings and papers, each with its source.
+job: research-topics
+headline: Gene variant evidence checker
+subhead: Name a gene variant. Get public evidence, expert gene-disease ratings and papers, each with its source.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can reach public web data services.

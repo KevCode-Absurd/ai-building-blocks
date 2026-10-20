@@ -1,0 +1,66 @@
+# pymc-labs/pymc-modeling, 5 skills
+"pymc-labs/pymc-modeling:skills/pymc-modeling":
+  name: Bayesian model builder
+  summary: "Give it your data and the question. Get a Python model that estimates what drove your results, with ranges, not guesses."
+  task: track-numbers
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Picking the right model for your data takes careful judgement."
+  inputs: [ { type: spreadsheet, required: true }, { type: question, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run Python code and read your data files
+  author: PyMC Labs
+  author_url: https://github.com/pymc-labs
+"pymc-labs/pymc-modeling:skills/prior-elicitation":
+  name: Starting assumptions checker
+  summary: "Tell it what you already know about your numbers. Get starting assumptions in plain units, tested to see if they make sense."
+  task: track-numbers
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Turning expert hunches into numbers needs careful checking."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run Python code
+  author: PyMC Labs
+  author_url: https://github.com/pymc-labs
+"pymc-labs/pymc-modeling:skills/arviz-diagnostics":
+  name: Statistical model checker
+  summary: "Give it a fitted Bayesian model. Learn if you can trust its results, and where it breaks, in plain words."
+  task: track-numbers
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Reading model warning signs correctly takes real statistical judgement."
+  inputs: [ { type: code_change, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run Python code and read your saved model results
+  author: PyMC Labs
+  author_url: https://github.com/pymc-labs
+"pymc-labs/pymc-modeling:skills/pymc-mlflow":
+  name: Model run tracker
+  summary: "Point it at your PyMC models. Get every run saved with its settings and checks, so you can compare them later."
+  task: track-numbers
+  role: orchestrate
+  level: expert
+  thinking: medium
+  thinking_why: "It follows a set method but depends on your setup."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run Python code and have MLflow installed
+  author: PyMC Labs
+  author_url: https://github.com/pymc-labs
+"pymc-labs/pymc-modeling:skills/pytensor-workflows":
+  name: Model math debugger
+  summary: "Give it the PyTensor code that errors or runs slow. Get it fixed, with checks that the numbers still match."
+  task: test-and-fix-code
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Shape and gradient bugs need careful step by step reasoning."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run Python code
+  author: PyMC Labs
+  author_url: https://github.com/pymc-labs

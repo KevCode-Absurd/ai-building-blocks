@@ -1,0 +1,33 @@
+slug: pay-benchmark-and-equity-modeler
+name: Pay benchmark and equity modeler
+summary: Give it a role or pay data. Get market ranges, outliers and equity grant models. Not pay or tax advice.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: human-resources/skills/comp-analysis
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/human-resources/skills/comp-analysis
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: comp-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: comp-analysis skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/human-resources/skills/comp-analysis
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

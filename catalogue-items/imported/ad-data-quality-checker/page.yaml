@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Each check needs exact settings, and a wrong call hides bad data.
+new_slug: ad-data-quality-checker
+name: Ad data quality checker
+summary: Give it your ad and sales tables. Get nine checks that catch missing spend, duplicates and empty columns.
+job: track-numbers
+headline: Ad data quality checker
+subhead: Give it your ad and sales tables. Get nine checks that catch missing spend, duplicates and empty columns.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Node code and SQL on your own BigQuery data.

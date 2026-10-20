@@ -1,0 +1,38 @@
+slug: spot-the-ai-mistakes-activity-planner
+name: Spot the AI mistakes activity planner
+summary: Give it a subject students know well. Get an activity where they catch what AI gets wrong or leaves out.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/ai-literacy/ai-expertise-interrogation-designer
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/ai-literacy/ai-expertise-interrogation-designer
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: ai-expertise-interrogation-designer
+  author: Gareth Manning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ai-expertise-interrogation-designer skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/ai-literacy/ai-expertise-interrogation-designer
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Gareth Manning
+    url: https://github.com/GarethManning
+    used: Wrote the skill; Gareth Manning shared it in their collection.

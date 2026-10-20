@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It adapts a set change model to your situation.
+new_slug: change-rollout-planner
+name: Change rollout planner
+summary: Describe a re-org or tool switch. Get a rollout plan, message templates and a plan for pushback.
+job: lead-people
+headline: Change rollout planner
+subhead: Describe a re-org or tool switch. Get a rollout plan, message templates and a plan for pushback.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

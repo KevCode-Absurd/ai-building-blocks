@@ -1,0 +1,40 @@
+slug: content-strategy-planner
+name: Content strategy planner
+summary: Describe your audience and goals. Get an editorial plan that maps content to funnel stages.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: brand_brain
+    required: false
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: marketing-and-seo/content-strategy
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/marketing-and-seo/content-strategy
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: content-strategy
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: content-strategy skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/marketing-and-seo/content-strategy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

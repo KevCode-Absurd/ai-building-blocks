@@ -1,0 +1,32 @@
+slug: ai-app-and-chatbot-builder
+name: AI app and chatbot builder
+summary: Describe the app you want. Get working code for a chatbot, question answerer or agent that uses tools.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 14-agents/langchain
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/14-agents/langchain
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: langchain
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: langchain skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/14-agents/langchain
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

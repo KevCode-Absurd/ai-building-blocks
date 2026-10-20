@@ -1,0 +1,32 @@
+slug: research-results-report-builder
+name: Research results report builder
+summary: Give it your research files. Get one report with a contents list and every checked answer. Unsure ones are left out.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: shortlist
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Weizhena
+  repo: Weizhena/Deep-Research-skills
+  path: skills/research-en/research-report
+  url: https://github.com/Weizhena/Deep-Research-skills/tree/main/skills/research-en/research-report
+  licence: MIT
+  licence_file: LICENSE
+  commit: 6ce38f6
+  original_name: research-report
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: research-report skill
+    by: Weizhena
+    url: https://github.com/Weizhena/Deep-Research-skills/tree/main/skills/research-en/research-report
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

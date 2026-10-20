@@ -1,0 +1,32 @@
+slug: short-reply-mode
+name: Short reply mode
+summary: Switch it on. Get much shorter AI replies that drop filler but keep the facts, to save tokens.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/caveman/skills/caveman
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/caveman/skills/caveman
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: caveman
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: caveman skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/caveman/skills/caveman
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

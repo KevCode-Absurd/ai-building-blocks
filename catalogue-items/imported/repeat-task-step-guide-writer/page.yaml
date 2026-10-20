@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: Steps must be exact to be safe.
+new_slug: repeat-task-step-guide-writer
+name: Repeat task step guide writer
+summary: Name a repeat task. Get exact steps, fixes if it fails, how to roll back and who to call.
+job: document-work
+headline: Repeat task step guide writer
+subhead: Name a repeat task. Get exact steps, fixes if it fails, how to roll back and who to call.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

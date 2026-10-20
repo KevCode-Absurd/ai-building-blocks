@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It runs many scenarios through a set model.
+new_slug: deal-returns-sensitivity-builder
+name: Deal returns sensitivity builder
+summary: Give it deal terms. Get IRR and MOIC tables across entry price, debt, exit price and hold time.
+job: money-and-investing
+headline: Deal returns sensitivity builder
+subhead: Give it deal terms. Get IRR and MOIC tables across entry price, debt, exit price and hold time.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

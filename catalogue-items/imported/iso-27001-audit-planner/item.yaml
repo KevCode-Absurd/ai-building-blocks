@@ -1,0 +1,32 @@
+slug: iso-27001-audit-planner
+name: ISO 27001 audit planner
+summary: Describe your security setup. Get an audit plan, control checks and a list of findings to fix.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: ra-qm-team/skills/isms-audit-expert
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/isms-audit-expert
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: isms-audit-expert
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: isms-audit-expert skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/isms-audit-expert
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

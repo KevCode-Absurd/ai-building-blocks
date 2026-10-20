@@ -1,0 +1,37 @@
+slug: virtual-try-on-photo-maker
+name: Virtual try-on photo maker
+summary: Give it a clothing flat lay and a pose photo. Get a model-wearing shot. Your image model draws it, not Claude.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: product_photos
+    required: true
+outputs:
+  - type: photo_set
+uses: []
+origin: imported
+source:
+  by: dLazy
+  repo: dlazy-ai/ecommerce-skills
+  path: skills/flat-lay
+  url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/flat-lay
+  licence: MIT
+  licence_file: LICENSE
+  commit: 87791a1
+  original_name: flat-lay
+  author: dLazy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: flat-lay skill
+    by: dLazy
+    url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/flat-lay
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: dLazy
+    url: https://github.com/dlazy-ai
+    used: Wrote the skill; dLazy shared it in their collection.

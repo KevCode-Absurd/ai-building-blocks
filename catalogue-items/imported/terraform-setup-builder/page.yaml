@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows known infrastructure patterns.
+new_slug: terraform-setup-builder
+name: Terraform setup builder
+summary: Describe your cloud. Get Terraform modules with safe state, security checks and clean structure.
+job: ship-and-host
+headline: Terraform setup builder
+subhead: Describe your cloud. Get Terraform modules with safe state, security checks and clean structure.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

@@ -1,0 +1,32 @@
+slug: guaranteed-format-generator
+name: Guaranteed format generator
+summary: Say what shape the output must take. Get a model setup that always returns valid JSON or matching text.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 16-prompt-engineering/outlines
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/16-prompt-engineering/outlines
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: outlines
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: outlines skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/16-prompt-engineering/outlines
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

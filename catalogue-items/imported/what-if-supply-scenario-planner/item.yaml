@@ -1,0 +1,32 @@
+slug: what-if-supply-scenario-planner
+name: What-if supply scenario planner
+summary: Name a worry like a late shipment or a demand spike. Get three scenarios, their cost, and a response for each.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/scenario-planning
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/scenario-planning
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: scenario-planning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: scenario-planning skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/scenario-planning
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

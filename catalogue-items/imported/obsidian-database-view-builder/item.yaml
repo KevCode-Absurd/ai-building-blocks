@@ -1,0 +1,37 @@
+slug: obsidian-database-view-builder
+name: Obsidian database view builder
+summary: Say how you want your notes filtered and shown. Get a working Obsidian Base file with views, formulas and summaries.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/obsidian-bases
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/obsidian-bases
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: obsidian-bases
+  author: kepano
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: obsidian-bases skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/obsidian-bases
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: kepano
+    url: https://github.com/kepano
+    used: Wrote the skill; sickn33 shared it in their collection.

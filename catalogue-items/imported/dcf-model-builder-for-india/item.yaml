@@ -1,0 +1,36 @@
+slug: dcf-model-builder-for-india
+name: DCF model builder for India
+summary: Name a listed Indian company. Get a discounted cash flow Excel model with WACC, sensitivities and a summary.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: question
+    required: true
+  - type: source_text
+    required: false
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/financial-analysis/skills/dcf-model
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/dcf-model
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: dcf-model
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: dcf-model skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/dcf-model
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

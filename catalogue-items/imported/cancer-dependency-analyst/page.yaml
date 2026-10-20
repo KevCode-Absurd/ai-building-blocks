@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It joins several large tables and reads them with care.
+new_slug: cancer-dependency-analyst
+name: Cancer dependency analyst
+summary: Name a gene or cell line. Get which cancers depend on it and which drugs work, from DepMap data.
+job: research-topics
+headline: Cancer dependency analyst
+subhead: Name a gene or cell line. Get which cancers depend on it and which drugs work, from DepMap data.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and download public data.

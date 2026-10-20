@@ -1,0 +1,32 @@
+slug: picture-chat-assistant-builder
+name: Picture chat assistant builder
+summary: Give it images and questions. Get a chat that describes pictures and answers questions about them.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: image
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 18-multimodal/llava
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/18-multimodal/llava
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: llava
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: llava skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/18-multimodal/llava
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

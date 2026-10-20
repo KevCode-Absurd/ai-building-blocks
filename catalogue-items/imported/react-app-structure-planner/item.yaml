@@ -1,0 +1,37 @@
+slug: react-app-structure-planner
+name: React app structure planner
+summary: Point it at a React or React Native app. Get a clear folder layout and rules for what may import what.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/frontend-architecture
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/frontend-architecture
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: frontend-architecture
+  author: stareezy-1
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: frontend-architecture skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/frontend-architecture
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: stareezy-1
+    url: https://github.com/stareezy-1/frontend-architecture-skill
+    used: Wrote the skill; sickn33 shared it in their collection.

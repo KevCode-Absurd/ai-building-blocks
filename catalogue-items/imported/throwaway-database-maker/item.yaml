@@ -1,0 +1,37 @@
+slug: throwaway-database-maker
+name: Throwaway database maker
+summary: Ask for a database to test with. Get a Postgres link in seconds with no sign-up, kept 72 hours.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/claimable-postgres
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/claimable-postgres
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: claimable-postgres
+  author: Neon
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: claimable-postgres skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/claimable-postgres
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Neon
+    url: https://github.com/neondatabase/agent-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,37 @@
+slug: linkedin-ads-account-auditor
+name: LinkedIn ads account auditor
+summary: Give it your LinkedIn Ads exports. Get a checked audit of your Insight Tag, audiences, lead forms, creative, bids and budgets.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: performance_sheet
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Daniel Agrici
+  repo: AgriciDaniel/claude-ads
+  path: skills/ads-linkedin
+  url: https://github.com/AgriciDaniel/claude-ads/tree/main/skills/ads-linkedin
+  licence: MIT
+  licence_file: LICENSE
+  commit: fc3908e
+  original_name: ads-linkedin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ads-linkedin skill
+    by: Daniel Agrici
+    url: https://github.com/AgriciDaniel/claude-ads/tree/main/skills/ads-linkedin
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

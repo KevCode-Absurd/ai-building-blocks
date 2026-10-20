@@ -1,0 +1,32 @@
+slug: code-security-reviewer
+name: Code security reviewer
+summary: Point it at your Python, JavaScript, TypeScript or Go code. Get a ranked list of security gaps, each with a fix.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/security-best-practices
+  url: https://github.com/openai/skills/tree/main/skills/.curated/security-best-practices
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: security-best-practices
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: security-best-practices skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/security-best-practices
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

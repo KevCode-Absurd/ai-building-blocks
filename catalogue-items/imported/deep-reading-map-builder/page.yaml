@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It reads in full and tests understanding.
+new_slug: deep-reading-map-builder
+name: Deep reading map builder
+summary: Give it an article, book or PDF. Get a knowledge map of its ideas and a Feynman check that you understood it.
+job: think-and-decide
+headline: Deep reading map builder
+subhead: Give it an article, book or PDF. Get a knowledge map of its ideas and a Feynman check that you understood it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It runs set read-only checks and writes up the result.
+new_slug: advisory-exposure-checker
+name: Advisory exposure checker
+summary: Name a breach or package advisory. Get a read-only check of your machine and projects, saved as a report.
+job: secure-code
+headline: Advisory exposure checker
+subhead: Name a breach or package advisory. Get a read-only check of your machine and projects, saved as a report.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run read-only commands and save a file.

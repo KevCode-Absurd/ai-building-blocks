@@ -1,0 +1,37 @@
+slug: reorder-quantity-planner
+name: Reorder quantity planner
+summary: Get a sales forecast for each product, plus when to reorder and how many to buy.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: advanced
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/merchandising/shopify-admin-demand-forecast-reorder
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/merchandising/shopify-admin-demand-forecast-reorder
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-demand-forecast-reorder
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-demand-forecast-reorder skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/merchandising/shopify-admin-demand-forecast-reorder
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

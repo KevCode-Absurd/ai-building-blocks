@@ -1,0 +1,32 @@
+slug: ai-system-attack-tester
+name: AI system attack tester
+summary: Point it at an AI app. Get prompt injection, jailbreak and tool abuse risks found, ranked and mapped to known attacks.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/skills/ai-security
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/ai-security
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: ai-security
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ai-security skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/ai-security
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

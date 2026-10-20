@@ -1,0 +1,32 @@
+slug: research-poster-maker
+name: Research poster maker
+summary: Give it your results and figures. Get a printable research poster in LaTeX as a PDF.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/latex-posters
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/latex-posters
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: latex-posters
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: latex-posters skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/latex-posters
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

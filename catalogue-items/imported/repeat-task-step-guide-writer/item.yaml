@@ -1,0 +1,32 @@
+slug: repeat-task-step-guide-writer
+name: Repeat task step guide writer
+summary: Name a repeat task. Get exact steps, fixes if it fails, how to roll back and who to call.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: operations/skills/runbook
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/runbook
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: runbook
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: runbook skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/runbook
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

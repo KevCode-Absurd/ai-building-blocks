@@ -1,0 +1,32 @@
+slug: questionnaire-writer
+name: Questionnaire writer
+summary: Tell it who you need answers from. Get a questionnaire aimed at what they know and you do not.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Matt Pocock
+  repo: mattpocock/skills
+  path: skills/productivity/to-questionnaire
+  url: https://github.com/mattpocock/skills/tree/main/skills/productivity/to-questionnaire
+  licence: MIT
+  licence_file: LICENSE
+  commit: 5beb35b
+  original_name: to-questionnaire
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: to-questionnaire skill
+    by: Matt Pocock
+    url: https://github.com/mattpocock/skills/tree/main/skills/productivity/to-questionnaire
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

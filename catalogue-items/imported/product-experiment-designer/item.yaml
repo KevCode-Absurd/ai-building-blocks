@@ -1,0 +1,32 @@
+slug: product-experiment-designer
+name: Product experiment designer
+summary: Give it an idea to test. Get a clear hypothesis, sample size, test plan and how to read the result.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: product-team/skills/experiment-designer
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/experiment-designer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: experiment-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: experiment-designer skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/experiment-designer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

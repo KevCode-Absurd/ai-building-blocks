@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It runs one command per step from a reference list.
+new_slug: obsidian-vault-manager
+name: Obsidian vault manager
+summary: Tell it what to find, add or change in your vault. Get notes read, created and searched from the command line.
+job: organise-work
+headline: Obsidian vault manager
+subhead: Tell it what to find, add or change in your vault. Get notes read, created and searched from the command line.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run commands on your computer.

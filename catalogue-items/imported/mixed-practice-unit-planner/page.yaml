@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It reorders a plan while keeping coverage.
+new_slug: mixed-practice-unit-planner
+name: Mixed practice unit planner
+summary: Paste a topic order. Get a plan that mixes related topics through the unit for stronger recall.
+job: teach-and-train
+headline: Mixed practice unit planner
+subhead: Paste a topic order. Get a plan that mixes related topics through the unit for stronger recall.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

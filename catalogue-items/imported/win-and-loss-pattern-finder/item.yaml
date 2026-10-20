@@ -1,0 +1,39 @@
+slug: win-and-loss-pattern-finder
+name: Win and loss pattern finder
+summary: "Ask why you win and lose. Get patterns from closed deals: loss stage, common objections and deal traits."
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: advanced
+inputs:
+  - type: tool_connection
+    required: false
+  - type: transcript
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/win-loss-review
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/win-loss-review
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: win-loss-review
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: win-loss-review skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/win-loss-review
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

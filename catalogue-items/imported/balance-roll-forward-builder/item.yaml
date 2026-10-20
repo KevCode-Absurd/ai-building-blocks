@@ -1,0 +1,32 @@
+slug: balance-roll-forward-builder
+name: Balance roll-forward builder
+summary: Name an account. Get a schedule from opening to closing balance, with each movement tied to the ledger.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/fund-admin/skills/roll-forward
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/fund-admin/skills/roll-forward
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: roll-forward
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: roll-forward skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/fund-admin/skills/roll-forward
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

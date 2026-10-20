@@ -1,0 +1,32 @@
+slug: production-plan-builder
+name: Production plan builder
+summary: Give it your sales forecast and capacity. Get a week-by-week plan of what to make and when.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/master-production-scheduling
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/master-production-scheduling
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: master-production-scheduling
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: master-production-scheduling skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/master-production-scheduling
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

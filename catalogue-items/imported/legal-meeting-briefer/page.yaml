@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It gathers background and shapes it for the meeting.
+new_slug: legal-meeting-briefer
+name: Legal meeting briefer
+summary: Name a negotiation or review meeting. Get background, key issues, questions to ask, then action items. Not legal advice.
+job: check-contracts
+headline: Legal meeting briefer
+subhead: Name a negotiation or review meeting. Get background, key issues, questions to ask, then action items. Not legal advice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your email, calendar and files.

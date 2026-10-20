@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It follows a short set method.
+new_slug: meeting-agenda-and-cost-planner
+name: Meeting agenda and cost planner
+summary: Give it a meeting idea. Get a call on whether to hold it, its cost in dollars and a timed agenda.
+job: organise-work
+headline: Meeting agenda and cost planner
+subhead: Give it a meeting idea. Get a call on whether to hold it, its cost in dollars and a timed agenda.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

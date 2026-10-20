@@ -1,0 +1,37 @@
+slug: brand-materials-finder
+name: Brand materials finder
+summary: Point it at your tools. Get a report of style guides, decks and call notes you already have, plus gaps.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: brand_brain
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: partner-built/brand-voice/skills/discover-brand
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/brand-voice/skills/discover-brand
+  licence: MIT
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: discover-brand
+  author: Tribe AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: discover-brand skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/brand-voice/skills/discover-brand
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tribe AI
+    url: ""
+    used: Wrote the skill; Anthropic shared it in their collection.

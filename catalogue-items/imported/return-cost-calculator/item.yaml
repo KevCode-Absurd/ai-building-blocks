@@ -1,0 +1,37 @@
+slug: return-cost-calculator
+name: Return cost calculator
+summary: "Get the true cost of returns by reason and product: refunds, shipping lost and written-off stock."
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: advanced
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/returns/shopify-admin-return-cost-attribution
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/returns/shopify-admin-return-cost-attribution
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-return-cost-attribution
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-return-cost-attribution skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/returns/shopify-admin-return-cost-attribution
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

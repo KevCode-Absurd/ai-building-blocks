@@ -1,0 +1,32 @@
+slug: sourcing-plan-builder
+name: Sourcing plan builder
+summary: Name a spend category. Get a sourcing plan with supplier list, quote request, scoring rules and negotiation levers.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/strategic-sourcing
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/strategic-sourcing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: strategic-sourcing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: strategic-sourcing skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/strategic-sourcing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

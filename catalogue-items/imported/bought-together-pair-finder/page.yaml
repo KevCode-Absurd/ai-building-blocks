@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It runs basket math on your order history.
+new_slug: bought-together-pair-finder
+name: Bought-together pair finder
+summary: Get the products customers most often buy together, ranked, to build bundles and cross-sell offers.
+job: make-offer
+headline: Bought-together pair finder
+subhead: Get the products customers most often buy together, ranked, to build bundles and cross-sell offers.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin (read only).

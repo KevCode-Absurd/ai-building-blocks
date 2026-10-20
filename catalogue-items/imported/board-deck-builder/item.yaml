@@ -1,0 +1,32 @@
+slug: board-deck-builder
+name: Board deck builder
+summary: Give it your quarter. Get a board or investor deck outline with the story, numbers and bad news placed right.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: slide_deck
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: c-level-advisor/skills/board-deck-builder
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/board-deck-builder
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: board-deck-builder
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: board-deck-builder skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/board-deck-builder
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

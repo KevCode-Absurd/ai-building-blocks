@@ -1,0 +1,39 @@
+slug: deal-competitor-playbook-builder
+name: Deal competitor playbook builder
+summary: Name a rival. Get a plan for winning the deal against them, plus win and loss patterns. Reads public web pages.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: competitor_set
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/competitive-intelligence
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/competitive-intelligence
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: competitive-intelligence
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: competitive-intelligence skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/competitive-intelligence
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

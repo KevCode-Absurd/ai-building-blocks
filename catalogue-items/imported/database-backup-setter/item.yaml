@@ -1,0 +1,40 @@
+slug: database-backup-setter
+name: Database backup setter
+summary: Name your database. Get full, incremental and point-in-time backups set up and tested.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: database/database-backup
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/database/database-backup
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: database-backup
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: database-backup skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/database/database-backup
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

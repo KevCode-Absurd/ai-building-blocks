@@ -1,0 +1,32 @@
+slug: notion-research-writer
+name: Notion research writer
+summary: Ask a question. Get a cited brief or comparison built from your Notion pages.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/notion-research-documentation
+  url: https://github.com/openai/skills/tree/main/skills/.curated/notion-research-documentation
+  licence: MIT
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: notion-research-documentation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: notion-research-documentation skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/notion-research-documentation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It must trace code and spot hidden risks.
+new_slug: skill-safety-reviewer
+name: Skill safety reviewer
+summary: Point it at a skill, MCP server or add-on. Get a read-only safety review before you install it.
+job: secure-code
+headline: Skill safety reviewer
+subhead: Point it at a skill, MCP server or add-on. Get a read-only safety review before you install it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read files without running them.

@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It sizes pools and judges competitors from patchy public facts.
+new_slug: talent-pool-mapper
+name: Talent pool mapper
+summary: Describe who you need. Get target companies, pool sizes and ways in. Reads public web pages.
+job: hire-people
+headline: Talent pool mapper
+subhead: Describe who you need. Get target companies, pool sizes and ways in. Reads public web pages.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can search the web.

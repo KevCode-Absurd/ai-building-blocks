@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It scores each item and must suggest fitting tests.
+new_slug: assumption-test-ranker
+name: Assumption test ranker
+summary: Give it your list of assumptions. Get them ranked by impact and risk, with a test for each top one.
+job: test-an-idea
+headline: Assumption test ranker
+subhead: Give it your list of assumptions. Get them ranked by impact and risk, with a test for each top one.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

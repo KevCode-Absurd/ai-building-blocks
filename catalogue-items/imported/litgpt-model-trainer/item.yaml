@@ -1,0 +1,33 @@
+slug: litgpt-model-trainer
+name: LitGPT model trainer
+summary: Pick a small open model and your data. Get it downloaded, trained on your examples and ready to chat with.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 01-model-architecture/litgpt
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/01-model-architecture/litgpt
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: implementing-llms-litgpt
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: implementing-llms-litgpt skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/01-model-architecture/litgpt
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

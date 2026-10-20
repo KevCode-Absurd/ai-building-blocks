@@ -1,0 +1,37 @@
+slug: technical-doc-proofreader
+name: Technical doc proofreader
+summary: Give it an English technical doc. Get a list of typos, grammar slips, term clashes and jargon, with no rewrites.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/tech-writing-proofread
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/tech-writing-proofread
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: tech-writing-proofread
+  author: alapha888
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: tech-writing-proofread skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/tech-writing-proofread
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: alapha888
+    url: https://github.com/alapha888
+    used: Wrote the skill; sickn33 shared it in their collection.

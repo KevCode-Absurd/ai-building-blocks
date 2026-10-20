@@ -1,0 +1,39 @@
+slug: voice-matched-post-writer
+name: Voice-matched post writer
+summary: Share posts you already wrote. Get new Twitter/X or LinkedIn posts that sound like you, checked against your style.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/write-in-my-voice
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/write-in-my-voice
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: write-in-my-voice
+  author: prateeks367
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: write-in-my-voice skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/write-in-my-voice
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: prateeks367
+    url: https://github.com/prateeks367/voicemoat-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

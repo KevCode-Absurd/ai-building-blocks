@@ -1,0 +1,37 @@
+slug: html-slide-deck-maker
+name: HTML slide deck maker
+summary: Describe your talk or share a PowerPoint. Get an animated slide deck in one HTML file that opens in any browser.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: slide_deck
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/frontend-slides-frontend-slides
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/frontend-slides-frontend-slides
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: frontend-slides-frontend-slides
+  author: zarazhangrui
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: frontend-slides-frontend-slides skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/frontend-slides-frontend-slides
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: zarazhangrui
+    url: https://github.com/zarazhangrui/frontend-slides
+    used: Wrote the skill; sickn33 shared it in their collection.

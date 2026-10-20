@@ -1,0 +1,33 @@
+slug: ai-app-guardrails-builder
+name: AI app guardrails builder
+summary: Describe what your AI app must never do. Get rules that block jailbreaks, made-up facts and leaked personal details.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 07-safety-alignment/nemo-guardrails
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/07-safety-alignment/nemo-guardrails
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: nemo-guardrails
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: nemo-guardrails skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/07-safety-alignment/nemo-guardrails
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

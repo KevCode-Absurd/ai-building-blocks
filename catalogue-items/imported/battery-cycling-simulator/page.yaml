@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It runs a set simulation method and checks it is stable.
+new_slug: battery-cycling-simulator
+name: Battery cycling simulator
+summary: Describe a battery and a charge plan. Get simulated voltage curves, tested for solver error and compared with real data.
+job: research-topics
+headline: Battery cycling simulator
+subhead: Describe a battery and a charge plan. Get simulated voltage curves, tested for solver error and compared with real data.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

@@ -1,0 +1,32 @@
+slug: outside-ai-model-importer
+name: Outside AI model importer
+summary: Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB and ready to run.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/ai-and-statistics/matlab-import-external-ai-model
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-import-external-ai-model
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-import-external-ai-model
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-import-external-ai-model skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-import-external-ai-model
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

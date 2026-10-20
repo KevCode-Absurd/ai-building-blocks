@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It weighs costs, rival offers and brand position before it picks a price.
+new_slug: price-position-planner
+name: Price position planner
+summary: Give it your costs and rival offers. Get a price for each product, response rules for rival discounts, and a rollout plan.
+job: set-prices
+headline: Price position planner
+subhead: Give it your costs and rival offers. Get a price for each product, response rules for rival discounts, and a rollout plan.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

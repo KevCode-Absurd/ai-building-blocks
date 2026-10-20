@@ -1,0 +1,32 @@
+slug: india-modeling-rules-checker
+name: India modeling rules checker
+summary: Give it an Indian company model. Get April to March years, crore units, Ind AS and listing rules checked.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/financial-analysis/skills/india-market-conventions
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/india-market-conventions
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: india-market-conventions
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: india-market-conventions skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/india-market-conventions
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

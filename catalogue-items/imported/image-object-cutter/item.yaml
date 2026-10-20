@@ -1,0 +1,32 @@
+slug: image-object-cutter
+name: Image object cutter
+summary: Click a point or draw a box on a picture. Get the exact outline of that object, or of every object.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: image
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 18-multimodal/segment-anything
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/18-multimodal/segment-anything
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: segment-anything-model
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: segment-anything-model skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/18-multimodal/segment-anything
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

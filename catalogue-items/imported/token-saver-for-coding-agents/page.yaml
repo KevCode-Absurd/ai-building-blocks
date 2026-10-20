@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It is a short set of habits to follow.
+new_slug: token-saver-for-coding-agents
+name: Token saver for coding agents
+summary: Turn it on for coding sessions. Get fewer wasted tokens from big reads, noisy logs and repeat reads.
+job: set-up-ai
+headline: Token saver for coding agents
+subhead: Turn it on for coding sessions. Get fewer wasted tokens from big reads, noisy logs and repeat reads.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

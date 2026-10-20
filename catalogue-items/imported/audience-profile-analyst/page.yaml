@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It gathers figures, then reads the pattern behind them.
+new_slug: audience-profile-analyst
+name: Audience profile analyst
+summary: Give it a brand or account. Get who follows it, what they like and how engaged they are. Collects data from websites.
+job: understand-customers
+headline: Audience profile analyst
+subhead: Give it a brand or account. Get who follows it, what they like and how engaged they are. Collects data from websites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your Apify token.

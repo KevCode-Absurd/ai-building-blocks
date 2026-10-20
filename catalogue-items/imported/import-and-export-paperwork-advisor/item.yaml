@@ -1,0 +1,32 @@
+slug: import-and-export-paperwork-advisor
+name: Import and export paperwork advisor
+summary: Describe your goods and route. Get tariff codes, duty options and the papers customs will ask for.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/customs-trade-compliance
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/customs-trade-compliance
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: customs-trade-compliance
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: customs-trade-compliance skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/customs-trade-compliance
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

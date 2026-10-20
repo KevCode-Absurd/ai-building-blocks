@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Missed threats are costly, so it works through every part.
+new_slug: threat-modeler
+name: Threat modeler
+summary: Describe your system. Get threats found with STRIDE, rated by risk, each with a way to reduce it.
+job: secure-code
+headline: Threat modeler
+subhead: Describe your system. Get threats found with STRIDE, rated by risk, each with a way to reduce it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

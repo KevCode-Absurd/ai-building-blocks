@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks the right method for each image task.
+new_slug: image-processing-coder
+name: Image processing coder
+summary: Say what to do to your pictures. Get MATLAB code that enhances, segments, counts or measures them.
+job: build-software
+headline: Image processing coder
+subhead: Say what to do to your pictures. Get MATLAB code that enhances, segments, counts or measures them.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with the Image Processing Toolbox.

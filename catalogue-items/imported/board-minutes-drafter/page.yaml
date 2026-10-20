@@ -1,0 +1,13 @@
+thinking: medium
+thinking_why: It must record decisions correctly in a set form.
+new_slug: board-minutes-drafter
+name: Board minutes drafter
+summary: Give it a meeting agenda and notes. Get draft board or committee minutes in a proper format. Have a lawyer check them.
+job: document-work
+headline: Board minutes drafter
+subhead: Give it a meeting agenda and notes. Get draft board or committee minutes in a proper format. Have a lawyer check them.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your calendar.
+  - Where the skill points to /corporate-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.

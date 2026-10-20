@@ -1,0 +1,32 @@
+slug: cloud-bill-waste-finder
+name: Cloud bill waste finder
+summary: Point it at your AWS account. Get idle and unused resources listed, with the savings for each fix.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/aws-cost-optimizer
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/aws-cost-optimizer
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: aws-cost-optimizer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: aws-cost-optimizer skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/aws-cost-optimizer
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

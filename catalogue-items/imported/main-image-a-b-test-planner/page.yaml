@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: A fair test changes one thing at a time, so it plans each version with care.
+new_slug: main-image-a-b-test-planner
+name: Main image A/B test planner
+summary: Give it a product photo and selling points. Get test versions that change one thing each, plus a review sheet.
+job: plan-ad-tests
+headline: Main image A/B test planner
+subhead: Give it a product photo and selling points. Get test versions that change one thing each, plus a review sheet.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your own image model key (OpenAI, Gemini, fal or Replicate).

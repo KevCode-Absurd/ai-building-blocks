@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: The fixes follow known tag rules.
+new_slug: link-preview-fixer
+name: Link preview fixer
+summary: Share a link that looks wrong. Get the tags and image fixes so it shows a rich card everywhere.
+job: build-websites
+headline: Link preview fixer
+subhead: Share a link that looks wrong. Get the tags and image fixes so it shows a rich card everywhere.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

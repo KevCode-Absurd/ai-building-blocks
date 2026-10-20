@@ -1,0 +1,32 @@
+slug: logging-and-alerts-setter
+name: Logging and alerts setter
+summary: Say what must work in production. Get logs, metrics and alerts added so problems show up fast.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Addy Osmani
+  repo: addyosmani/agent-skills
+  path: skills/observability-and-instrumentation
+  url: https://github.com/addyosmani/agent-skills/tree/main/skills/observability-and-instrumentation
+  licence: MIT
+  licence_file: LICENSE
+  commit: aeac41d
+  original_name: observability-and-instrumentation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: observability-and-instrumentation skill
+    by: Addy Osmani
+    url: https://github.com/addyosmani/agent-skills/tree/main/skills/observability-and-instrumentation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

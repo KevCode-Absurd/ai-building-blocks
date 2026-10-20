@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It sets up code, data storage and privacy choices that are hard to undo.
+new_slug: first-party-tracking-pixel-builder
+name: First-party tracking pixel builder
+summary: Answer a few questions about your site. Get a tracking script and database that keep your visit data in your own hands.
+job: track-numbers
+headline: First-party tracking pixel builder
+subhead: Answer a few questions about your site. Get a tracking script and database that keep your visit data in your own hands.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code, and use your own hosting and Postgres database accounts.

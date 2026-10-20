@@ -1,0 +1,37 @@
+slug: price-sensitivity-analyst
+name: Price sensitivity analyst
+summary: Get which products sell more or less as price changes, plus price points worth testing.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: advanced
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/merchandising/shopify-admin-price-elasticity-analyzer
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/merchandising/shopify-admin-price-elasticity-analyzer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-price-elasticity-analyzer
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-price-elasticity-analyzer skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/merchandising/shopify-admin-price-elasticity-analyzer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

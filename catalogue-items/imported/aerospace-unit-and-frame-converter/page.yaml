@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It maps each conversion to the right function and checks the result.
+new_slug: aerospace-unit-and-frame-converter
+name: Aerospace unit and frame converter
+summary: Give it values in one unit, time or coordinate frame. Get them converted correctly, with MATLAB code you can rerun.
+job: build-software
+headline: Aerospace unit and frame converter
+subhead: Give it values in one unit, time or coordinate frame. Get them converted correctly, with MATLAB code you can rerun.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with the Aerospace Toolbox.

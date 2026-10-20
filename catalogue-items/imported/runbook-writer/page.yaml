@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It fills a fixed template from what you know.
+new_slug: runbook-writer
+name: Runbook writer
+summary: Name a service. Get runbooks for deploy, incidents, maintenance and rollback, ready to edit.
+job: ship-and-host
+headline: Runbook writer
+subhead: Name a service. Get runbooks for deploy, incidents, maintenance and rollback, ready to edit.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,37 @@
+slug: shared-field-change-checker
+name: Shared field change checker
+summary: Name a changed field or flag. Get the places it is missing or read differently, across database, API and apps.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/cross-platform-contract-propagation-audit
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/cross-platform-contract-propagation-audit
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: cross-platform-contract-propagation-audit
+  author: Whxuan0701
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cross-platform-contract-propagation-audit skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/cross-platform-contract-propagation-audit
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Whxuan0701
+    url: https://github.com/Whxuan0701
+    used: Wrote the skill; sickn33 shared it in their collection.

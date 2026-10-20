@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Power checks need careful setup per net.
+new_slug: pcb-power-network-checker
+name: PCB power network checker
+summary: Give it a PCB layout. Get voltage drop, current density and rule checks on its power nets.
+job: build-software
+headline: PCB power network checker
+subhead: Give it a PCB layout. Get voltage drop, current density and rule checks on its power nets.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with PCB Toolbox.

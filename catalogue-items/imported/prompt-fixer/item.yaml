@@ -1,0 +1,32 @@
+slug: prompt-fixer
+name: Prompt fixer
+summary: Give it a prompt that gives weak or uneven answers. Get a tighter version that works more reliably.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: copy_draft
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/llm-prompt-optimizer
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/llm-prompt-optimizer
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: llm-prompt-optimizer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: llm-prompt-optimizer skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/llm-prompt-optimizer
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

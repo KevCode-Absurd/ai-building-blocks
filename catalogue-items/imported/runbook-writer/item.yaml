@@ -1,0 +1,32 @@
+slug: runbook-writer
+name: Runbook writer
+summary: Name a service. Get runbooks for deploy, incidents, maintenance and rollback, ready to edit.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/runbook-generator
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/runbook-generator
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: runbook-generator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: runbook-generator skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/runbook-generator
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

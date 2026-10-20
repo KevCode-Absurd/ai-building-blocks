@@ -1,0 +1,33 @@
+slug: demand-forecast-planner
+name: Demand forecast planner
+summary: Give it your past sales. Get a forecast, the best-fit method and a way to track how far off it is.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/demand-forecasting
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/demand-forecasting
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: demand-forecasting
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: demand-forecasting skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/demand-forecasting
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,93 @@
+# dragnoir/Shopify-agent-skills (MIT)
+"dragnoir/Shopify-agent-skills:skills/api-graphql":
+  name: Shopify data connector
+  summary: Say what store data to read or change. Get working Shopify GraphQL queries, with paging and rate limits handled.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows API rules, but each query depends on your data.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and reach your Shopify store
+  author: dragnoir
+  author_url: https://github.com/dragnoir
+"dragnoir/Shopify-agent-skills:skills/app-development":
+  name: Shopify app builder
+  summary: Say what your Shopify app should do. Get a working app with admin screens, sign-in and extensions.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Apps mix sign-in, screens and store data, so choices ripple.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: web_app}]
+  needs: run code and use the Shopify CLI
+  author: dragnoir
+  author_url: https://github.com/dragnoir
+"dragnoir/Shopify-agent-skills:skills/checkout-customization":
+  name: Shopify checkout customizer
+  summary: Say what checkout should add, such as a field or upsell. Get working checkout extension code.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows the extension rules, with a few design choices.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: code_change}]
+  needs: run code and use the Shopify CLI
+  author: dragnoir
+  author_url: https://github.com/dragnoir
+"dragnoir/Shopify-agent-skills:skills/cli-tools":
+  skip: Mostly command lists that repeat the theme and app skills in this same repo.
+"dragnoir/Shopify-agent-skills:skills/headless-hydrogen":
+  name: Headless store builder
+  summary: Describe the store you want. Get a fast custom storefront on Hydrogen, ready to host on Oxygen.
+  task: build-websites
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: A custom storefront has many linked design and code choices.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: web_app}]
+  needs: run code and open a browser
+  author: dragnoir
+  author_url: https://github.com/dragnoir
+"dragnoir/Shopify-agent-skills:skills/liquid-templating":
+  name: Liquid snippet writer
+  summary: Paste your theme code or say what you need. Get correct Liquid for products, carts and loops.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It applies fixed Liquid rules to your own case.
+  inputs: [{type: theme_files, required: false}, {type: brief, required: true}]
+  outputs: [{type: theme_files}]
+  author: dragnoir
+  author_url: https://github.com/dragnoir
+"dragnoir/Shopify-agent-skills:skills/shopify-functions":
+  name: Store rules builder
+  summary: Say the discount, shipping or payment rule you want. Get a working Shopify Function that runs it.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Rule logic runs on every order, so mistakes cost money.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and use the Shopify CLI
+  author: dragnoir
+  author_url: https://github.com/dragnoir
+"dragnoir/Shopify-agent-skills:skills/theme-development":
+  name: Shopify theme developer
+  summary: Say how your store should look. Get a built or edited theme with sections, templates and speed fixes.
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows theme structure, with design choices on top.
+  inputs: [{type: brief, required: true}, {type: theme_files, required: false}]
+  outputs: [{type: theme_files}]
+  needs: run code and use the Shopify CLI
+  author: dragnoir
+  author_url: https://github.com/dragnoir

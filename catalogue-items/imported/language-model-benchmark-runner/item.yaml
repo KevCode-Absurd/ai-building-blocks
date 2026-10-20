@@ -1,0 +1,33 @@
+slug: language-model-benchmark-runner
+name: Language model benchmark runner
+summary: Give it a model. Get scores on 60 or more standard tests, so you can compare it with others.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 11-evaluation/lm-evaluation-harness
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/11-evaluation/lm-evaluation-harness
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: evaluating-llms-harness
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: evaluating-llms-harness skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/11-evaluation/lm-evaluation-harness
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

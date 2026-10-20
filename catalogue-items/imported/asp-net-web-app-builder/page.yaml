@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows official guidance but must fit your code.
+new_slug: asp-net-web-app-builder
+name: ASP.NET web app builder
+summary: Describe the web app or API. Get ASP.NET Core code that follows current official guidance.
+job: build-websites
+headline: ASP.NET web app builder
+subhead: Describe the web app or API. Get ASP.NET Core code that follows current official guidance.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

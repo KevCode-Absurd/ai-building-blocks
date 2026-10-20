@@ -1,0 +1,32 @@
+slug: supply-chain-dashboard-designer
+name: Supply chain dashboard designer
+summary: Tell it what you ship and from where. Get a one-screen design showing delays, low stock and orders at risk.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/control-tower-design
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/control-tower-design
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: control-tower-design
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: control-tower-design skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/control-tower-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

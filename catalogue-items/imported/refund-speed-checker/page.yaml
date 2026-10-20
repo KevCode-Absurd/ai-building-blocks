@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It measures time between two dates.
+new_slug: refund-speed-checker
+name: Refund speed checker
+summary: Get the average days from return request to refund, and the returns that ran late.
+job: run-your-store
+headline: Refund speed checker
+subhead: Get the average days from return request to refund, and the returns that ran late.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin (read only).

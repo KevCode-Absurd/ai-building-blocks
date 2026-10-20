@@ -1,0 +1,32 @@
+slug: paper-claim-evidence-finder
+name: Paper claim evidence finder
+summary: Name a topic or DOI. Get claims taken from full papers, with the numbers, limits and source for each.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/bgpt-paper-search
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/bgpt-paper-search
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: bgpt-paper-search
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: bgpt-paper-search skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/bgpt-paper-search
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

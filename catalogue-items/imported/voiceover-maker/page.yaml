@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It runs a set tool on text you provide.
+new_slug: voiceover-maker
+name: Voiceover maker
+summary: Give it your text. Get spoken audio in a built-in voice, for narration, voiceovers or batches.
+job: work-with-audio
+headline: Voiceover maker
+subhead: Give it your text. Get spoken audio in a built-in voice, for narration, voiceovers or batches.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and reach the OpenAI Audio API.

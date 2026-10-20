@@ -1,0 +1,32 @@
+slug: microsoft-365-admin-helper
+name: Microsoft 365 admin helper
+summary: Say what your company needs. Get Microsoft 365 setup scripts for users, mail, Teams and security.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/skills/ms365-tenant-manager
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/ms365-tenant-manager
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: ms365-tenant-manager
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ms365-tenant-manager skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/ms365-tenant-manager
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,35 @@
+slug: creator-profile-teardown-writer
+name: Creator profile teardown writer
+summary: Give it a social account. Get its positioning, content themes, top posts and what to test. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:ScrapeCreators
+source:
+  by: ScrapeCreators
+  repo: ScrapeCreators/social-media-research-skills
+  path: skills/creator-profile-teardown
+  url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/creator-profile-teardown
+  licence: MIT
+  licence_file: LICENSE
+  commit: 64ba7b4
+  original_name: creator-profile-teardown
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: creator-profile-teardown skill
+    by: ScrapeCreators
+    url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/creator-profile-teardown
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: one-time-stock-quantity-picker
+name: One-time stock quantity picker
+summary: Give it cost, price and demand range for a short-life item. Get the best order amount and the risk of each choice.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/newsvendor-problem
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/newsvendor-problem
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: newsvendor-problem
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: newsvendor-problem skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/newsvendor-problem
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

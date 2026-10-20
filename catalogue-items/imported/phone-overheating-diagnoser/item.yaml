@@ -1,0 +1,37 @@
+slug: phone-overheating-diagnoser
+name: Phone overheating diagnoser
+summary: Describe the heat or battery drain. Get safe, read-only checks run and the likely cause named.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/diagnose-android-overheating
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/diagnose-android-overheating
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: diagnose-android-overheating
+  author: Antigravity Awesome Skills maintainers
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: diagnose-android-overheating skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/diagnose-android-overheating
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Antigravity Awesome Skills maintainers
+    url: https://github.com/sickn33/agentic-awesome-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

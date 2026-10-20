@@ -1,0 +1,32 @@
+slug: medical-scan-reader
+name: Medical scan reader
+summary: Give it DICOM, NIfTI or NRRD scans. Get them read, listed and ready to use in MATLAB.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/image-processing-and-computer-vision/matlab-read-medical-data
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/image-processing-and-computer-vision/matlab-read-medical-data
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-read-medical-data
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-read-medical-data skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/image-processing-and-computer-vision/matlab-read-medical-data
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

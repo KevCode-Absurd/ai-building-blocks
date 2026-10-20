@@ -1,0 +1,37 @@
+slug: skill-file-validator
+name: Skill file validator
+summary: Give it a SKILL.md. Get a list of structure, wording and naming problems to fix before you share it.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: skill_files
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/skill-check
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/skill-check
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: skill-check
+  author: olgasafonova
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: skill-check skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/skill-check
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: olgasafonova
+    url: https://github.com/olgasafonova/SkillCheck-Free
+    used: Wrote the skill; sickn33 shared it in their collection.

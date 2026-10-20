@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It builds exact queries and traces each result.
+new_slug: biomedical-link-finder
+name: Biomedical link finder
+summary: Name a disease, gene or drug. Get linked facts from a biomedical knowledge graph, each with its source.
+job: research-topics
+headline: Biomedical link finder
+subhead: Name a disease, gene or drug. Get linked facts from a biomedical knowledge graph, each with its source.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can reach the NCATS Translator service.

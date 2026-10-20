@@ -1,0 +1,39 @@
+slug: search-indexing-auditor
+name: Search indexing auditor
+summary: Give it your site, folder or Search Console export. Get why pages are not indexed and a fix list.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: false
+  - type: source_text
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/indexing-issue-auditor
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/indexing-issue-auditor
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: indexing-issue-auditor
+  author: WHOISABHISHEKADHIKARI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: indexing-issue-auditor skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/indexing-issue-auditor
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: WHOISABHISHEKADHIKARI
+    url: https://github.com/WHOISABHISHEKADHIKARI
+    used: Wrote the skill; sickn33 shared it in their collection.

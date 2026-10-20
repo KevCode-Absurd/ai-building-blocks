@@ -1,0 +1,32 @@
+slug: django-access-control-auditor
+name: Django access control auditor
+summary: Point it at a Django project. Get a review of who can see or change what, with fixes for each gap.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/django-access-review
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/django-access-review
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: django-access-review
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: django-access-review skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/django-access-review
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

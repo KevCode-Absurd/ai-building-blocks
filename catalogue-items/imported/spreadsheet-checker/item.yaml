@@ -1,0 +1,38 @@
+slug: spreadsheet-checker
+name: Spreadsheet checker
+summary: Give it a spreadsheet. Get it cleaned, reconciled and analysed with formulas and formatting kept intact.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: documents-and-files/spreadsheet-analysis
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: spreadsheet-analysis
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: spreadsheet-analysis skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/documents-and-files/spreadsheet-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

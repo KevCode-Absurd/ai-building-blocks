@@ -1,0 +1,38 @@
+slug: employee-wellbeing-program-planner
+name: Employee wellbeing program planner
+summary: Give it your team's needs. Get a wellbeing plan, a manager guide and return-to-work steps. Not medical advice.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Tuan Duc Tran
+  repo: tuanductran/hr-skills
+  path: skills/hr-wellbeing
+  url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-wellbeing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 078f2fb
+  original_name: hr-wellbeing
+  author: Tuan Duc Tran
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hr-wellbeing skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-wellbeing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

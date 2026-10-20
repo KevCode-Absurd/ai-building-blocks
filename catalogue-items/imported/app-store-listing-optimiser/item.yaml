@@ -1,0 +1,32 @@
+slug: app-store-listing-optimiser
+name: App store listing optimiser
+summary: Give it your app listing. Get a scored audit and a rewritten title, keywords, description and screenshots plan.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/aso
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/aso
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: aso
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: aso skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/aso
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

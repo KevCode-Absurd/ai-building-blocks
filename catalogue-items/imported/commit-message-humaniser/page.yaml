@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It rewrites a short line.
+new_slug: commit-message-humaniser
+name: Commit message humaniser
+summary: Give it a commit message. Get a plain version that sounds like a careful engineer, with no AI filler.
+job: write-and-tell-stories
+headline: Commit message humaniser
+subhead: Give it a commit message. Get a plain version that sounds like a careful engineer, with no AI filler.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

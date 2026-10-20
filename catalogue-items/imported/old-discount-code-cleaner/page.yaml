@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Deletes are permanent, so it previews first.
+new_slug: old-discount-code-cleaner
+name: Old discount code cleaner
+summary: Get expired, unused and duplicate discount codes found, then switched off or deleted if you say so. Deletes cannot be undone.
+job: run-your-store
+headline: Old discount code cleaner
+subhead: Get expired, unused and duplicate discount codes found, then switched off or deleted if you say so. Deletes cannot be undone.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin and change live store data.

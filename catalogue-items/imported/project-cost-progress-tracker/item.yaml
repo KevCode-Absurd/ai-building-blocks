@@ -1,0 +1,32 @@
+slug: project-cost-progress-tracker
+name: Project cost progress tracker
+summary: Give it a project's budget, schedule and spend. Get cost and schedule indexes and a finish cost estimate.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/earned-value-mgmt
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/earned-value-mgmt
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: earned-value-mgmt
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: earned-value-mgmt skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/earned-value-mgmt
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

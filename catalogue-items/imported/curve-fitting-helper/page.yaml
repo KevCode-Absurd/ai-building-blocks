@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It tries several fit types and compares them.
+new_slug: curve-fitting-helper
+name: Curve fitting helper
+summary: Give it x and y data. Get the best curve or surface fit, with outliers handled and code to repeat it.
+job: build-software
+headline: Curve fitting helper
+subhead: Give it x and y data. Get the best curve or surface fit, with outliers handled and code to repeat it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with the Curve Fitting Toolbox.

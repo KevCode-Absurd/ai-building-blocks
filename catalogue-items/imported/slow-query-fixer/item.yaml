@@ -1,0 +1,40 @@
+slug: slow-query-fixer
+name: Slow query fixer
+summary: Give it a slow SQL query. Get the cause found and a faster version with indexes where needed.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: database/query-optimization
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/database/query-optimization
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: query-optimization
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: query-optimization skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/database/query-optimization
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

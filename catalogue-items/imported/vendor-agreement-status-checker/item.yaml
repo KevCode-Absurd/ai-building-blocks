@@ -1,0 +1,32 @@
+slug: vendor-agreement-status-checker
+name: Vendor agreement status checker
+summary: Name a vendor. Get what you signed, what is missing and what expires soon. Verify against the originals.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: legal/skills/vendor-check
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/legal/skills/vendor-check
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: vendor-check
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: vendor-check skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/legal/skills/vendor-check
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

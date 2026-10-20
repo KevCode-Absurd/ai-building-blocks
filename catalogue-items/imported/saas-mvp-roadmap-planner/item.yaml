@@ -1,0 +1,32 @@
+slug: saas-mvp-roadmap-planner
+name: SaaS MVP roadmap planner
+summary: Give it your SaaS idea. Get a stack choice, build order and launch checklist you can follow.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/saas-mvp-launcher
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/saas-mvp-launcher
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: saas-mvp-launcher
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: saas-mvp-launcher skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/saas-mvp-launcher
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

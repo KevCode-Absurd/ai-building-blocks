@@ -1,0 +1,37 @@
+slug: hr-process-automation-designer
+name: HR process automation designer
+summary: Name your HR processes, like onboarding. Get which to automate, which tool fits each and a build order.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Tuan Duc Tran
+  repo: tuanductran/hr-skills
+  path: skills/hr-automation
+  url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-automation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 078f2fb
+  original_name: hr-automation
+  author: Tuan Duc Tran
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hr-automation skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-automation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

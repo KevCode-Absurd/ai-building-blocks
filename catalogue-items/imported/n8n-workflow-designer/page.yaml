@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks a known pattern and fills it in.
+new_slug: n8n-workflow-designer
+name: n8n workflow designer
+summary: Describe the automation you want. Get an n8n workflow laid out with a proven pattern, from webhook to schedule.
+job: connect-tools
+headline: n8n workflow designer
+subhead: Describe the automation you want. Get an n8n workflow laid out with a proven pattern, from webhook to schedule.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can use the n8n MCP tools.

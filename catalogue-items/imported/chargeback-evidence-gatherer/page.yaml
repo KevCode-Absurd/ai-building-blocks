@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It matches the dispute reason to a fixed evidence list.
+new_slug: chargeback-evidence-gatherer
+name: Chargeback evidence gatherer
+summary: Tell it the dispute reason. Get what proof to collect, where to find it in Shopify, and whether to accept instead.
+job: help-customers
+headline: Chargeback evidence gatherer
+subhead: Tell it the dispute reason. Get what proof to collect, where to find it in Shopify, and whether to accept instead.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

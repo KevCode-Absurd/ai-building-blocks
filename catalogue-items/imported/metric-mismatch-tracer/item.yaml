@@ -1,0 +1,40 @@
+slug: metric-mismatch-tracer
+name: Metric mismatch tracer
+summary: Tell it which number differs between two reports. Get the gap, the step where they split and a fix.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Nimrod Fisher
+  repo: nimrodfisher/data-analytics-skills
+  path: 02-documentation-knowledge/metric-reconciliation
+  url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/02-documentation-knowledge/metric-reconciliation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9449d36
+  original_name: metric-reconciliation
+  author: Nimrod Fisher
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: metric-reconciliation skill
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/02-documentation-knowledge/metric-reconciliation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher
+    used: Wrote the skill; Nimrod Fisher shared it in their collection.

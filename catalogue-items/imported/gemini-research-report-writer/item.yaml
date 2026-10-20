@@ -1,0 +1,39 @@
+slug: gemini-research-report-writer
+name: Gemini research report writer
+summary: Give it a research question. Get a long report with cited sources from Google Gemini. Needs a paid Gemini API key.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+warnings:
+  - paid:Gemini API
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/gemini-deep-research
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/gemini-deep-research
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: gemini-deep-research
+  author: sanjay3290
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: gemini-deep-research skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/gemini-deep-research
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: sanjay3290
+    url: https://github.com/sanjay3290/ai-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

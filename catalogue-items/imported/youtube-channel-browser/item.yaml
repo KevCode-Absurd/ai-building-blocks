@@ -1,0 +1,35 @@
+slug: youtube-channel-browser
+name: YouTube channel browser
+summary: Give it a channel. Get its latest uploads and a search inside its videos. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: shortlist
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:TranscriptAPI
+source:
+  by: ZeroPoint
+  repo: ZeroPointRepo/youtube-skills
+  path: clawhub/youtube-channels
+  url: https://github.com/ZeroPointRepo/youtube-skills/tree/main/clawhub/youtube-channels
+  licence: MIT
+  licence_file: LICENSE
+  commit: 4f7994b
+  original_name: youtube-channels
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: youtube-channels skill
+    by: ZeroPoint
+    url: https://github.com/ZeroPointRepo/youtube-skills/tree/main/clawhub/youtube-channels
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

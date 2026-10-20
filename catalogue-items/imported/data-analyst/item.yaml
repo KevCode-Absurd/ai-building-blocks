@@ -1,0 +1,40 @@
+slug: data-analyst
+name: Data analyst
+summary: Give it a dataset and a question. Get evidence-based answers with trends, tests and correlations.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+  - type: question
+    required: true
+outputs:
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: data-and-analytics/data-analysis
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/data-and-analytics/data-analysis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: data-analysis
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: data-analysis skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/data-and-analytics/data-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

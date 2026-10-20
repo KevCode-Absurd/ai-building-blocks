@@ -1,0 +1,37 @@
+slug: product-attribute-field-setter
+name: Product attribute field setter
+summary: Say which product facts matter. Get fields for material, specs and sizing filled in, so AI can match products. Changes live data.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/agentic/shopify-admin-agentic-metafields-setup
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/agentic/shopify-admin-agentic-metafields-setup
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-agentic-metafields-setup
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-agentic-metafields-setup skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/agentic/shopify-admin-agentic-metafields-setup
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

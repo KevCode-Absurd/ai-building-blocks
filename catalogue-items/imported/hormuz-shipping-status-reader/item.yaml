@@ -1,0 +1,34 @@
+slug: hormuz-shipping-status-reader
+name: Hormuz shipping status reader
+summary: Ask about the Strait of Hormuz. Get open or closed status, ship counts and oil price impact. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: himself65
+  repo: himself65/finance-skills
+  path: plugins/data-providers/skills/hormuz-strait
+  url: https://github.com/himself65/finance-skills/tree/main/plugins/data-providers/skills/hormuz-strait
+  licence: MIT
+  licence_file: LICENSE
+  commit: 73d554d
+  original_name: hormuz-strait
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hormuz-strait skill
+    by: himself65
+    url: https://github.com/himself65/finance-skills/tree/main/plugins/data-providers/skills/hormuz-strait
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

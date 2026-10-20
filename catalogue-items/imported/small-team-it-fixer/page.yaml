@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It follows set fix steps.
+new_slug: small-team-it-fixer
+name: Small team IT fixer
+summary: Name the IT problem, like a lockout or Wi-Fi drop. Get steps to fix it, ranked by how many people it hits.
+job: organise-work
+headline: Small team IT fixer
+subhead: Name the IT problem, like a lockout or Wi-Fi drop. Get steps to fix it, ranked by how many people it hits.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

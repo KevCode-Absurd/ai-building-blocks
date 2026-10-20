@@ -1,0 +1,32 @@
+slug: feedback-pile-sorter
+name: Feedback pile sorter
+summary: Give it feedback from tickets, NPS and calls. Get one ranked signal of what customers need, not just the loudest voice.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: feedback_notes
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/user-feedback-aggregation
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/user-feedback-aggregation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: user-feedback-aggregation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: user-feedback-aggregation skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/user-feedback-aggregation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

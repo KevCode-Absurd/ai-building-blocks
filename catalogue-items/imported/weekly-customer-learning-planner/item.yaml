@@ -1,0 +1,37 @@
+slug: weekly-customer-learning-planner
+name: Weekly customer learning planner
+summary: Describe your product goal. Get an opportunity tree, risky assumptions to test and a weekly customer contact routine.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Wondel.ai
+  repo: wondelai/skills
+  path: continuous-discovery
+  url: https://github.com/wondelai/skills/tree/main/continuous-discovery
+  licence: MIT
+  licence_file: LICENSE
+  commit: c172996
+  original_name: continuous-discovery
+  author: wondelai
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: continuous-discovery skill
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/continuous-discovery
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: wondelai
+    url: https://github.com/wondelai
+    used: Wrote the skill; Wondel.ai shared it in their collection.

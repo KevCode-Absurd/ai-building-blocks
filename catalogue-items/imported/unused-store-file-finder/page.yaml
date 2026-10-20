@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It matches each file against where it is used.
+new_slug: unused-store-file-finder
+name: Unused store file finder
+summary: Get files in your store that no product, page or post uses, so you can clear out clutter.
+job: run-your-store
+headline: Unused store file finder
+subhead: Get files in your store that no product, page or post uses, so you can clear out clutter.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin (read only).

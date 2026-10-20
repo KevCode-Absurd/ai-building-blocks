@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: Each question depends on your last answer.
+new_slug: intent-interviewer
+name: Intent interviewer
+summary: Give it a vague request. Get asked one question at a time until what you really want is clear.
+job: think-and-decide
+headline: Intent interviewer
+subhead: Give it a vague request. Get asked one question at a time until what you really want is clear.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

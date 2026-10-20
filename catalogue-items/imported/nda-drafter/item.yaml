@@ -1,0 +1,32 @@
+slug: nda-drafter
+name: NDA drafter
+summary: Name the two parties and what is shared. Get a draft confidentiality agreement with the clauses a lawyer should check.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-toolkit/skills/draft-nda
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-toolkit/skills/draft-nda
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: draft-nda
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: draft-nda skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-toolkit/skills/draft-nda
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: ai-vendor-terms-checker
+name: AI vendor terms checker
+summary: Give it an AI tool's terms or addendum. Get data-training, liability and model-change risks flagged. A first check, not legal advice.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/claude-for-legal
+  path: ai-governance-legal/skills/vendor-ai-review
+  url: https://github.com/anthropics/claude-for-legal/tree/main/ai-governance-legal/skills/vendor-ai-review
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: 4a6c651
+  original_name: vendor-ai-review
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: vendor-ai-review skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/ai-governance-legal/skills/vendor-ai-review
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

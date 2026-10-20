@@ -1,0 +1,32 @@
+slug: pull-request-risk-scorer
+name: Pull request risk scorer
+summary: Point it at a pull request. Get complexity and risk scored, code smells flagged and review comments written.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/skills/code-reviewer
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/code-reviewer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: code-reviewer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: code-reviewer skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/code-reviewer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

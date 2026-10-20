@@ -1,0 +1,32 @@
+slug: pcb-signal-loss-analyzer
+name: PCB signal loss analyzer
+summary: Give it a PCB design. Get S-parameters, insertion loss and fields computed with the right solver.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/rf-and-mixed-signal/matlab-analyze-em
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-analyze-em
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-analyze-em
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-analyze-em skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-analyze-em
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

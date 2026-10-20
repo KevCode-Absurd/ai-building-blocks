@@ -1,0 +1,40 @@
+slug: outbound-email-sequence-writer
+name: Outbound email sequence writer
+summary: Describe your prospect. Get a multi-step email sequence with timing and personal touches.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: persona
+    required: false
+outputs:
+  - type: email_flow
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: sales/sales-email-sequences
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/sales/sales-email-sequences
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: sales-email-sequences
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: sales-email-sequences skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/sales/sales-email-sequences
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

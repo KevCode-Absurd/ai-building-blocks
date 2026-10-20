@@ -1,0 +1,35 @@
+slug: audience-profile-analyst
+name: Audience profile analyst
+summary: Give it a brand or account. Get who follows it, what they like and how engaged they are. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:Apify
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/apify-audience-analysis
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-audience-analysis
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: apify-audience-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: apify-audience-analysis skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-audience-analysis
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

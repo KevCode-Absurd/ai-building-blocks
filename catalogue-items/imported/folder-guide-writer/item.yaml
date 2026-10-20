@@ -1,0 +1,37 @@
+slug: folder-guide-writer
+name: Folder guide writer
+summary: Pick a folder. Get a short CLAUDE.md that tells future AI helpers how that folder works.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/folder-specific-claude-and-agents-md
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/folder-specific-claude-and-agents-md
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: folder-specific-claude-and-agents-md
+  author: davidondrej
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: folder-specific-claude-and-agents-md skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/folder-specific-claude-and-agents-md
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: davidondrej
+    url: https://github.com/davidondrej/skills
+    used: Wrote the skill; sickn33 shared it in their collection.

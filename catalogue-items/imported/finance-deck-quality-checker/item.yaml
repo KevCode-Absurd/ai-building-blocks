@@ -1,0 +1,32 @@
+slug: finance-deck-quality-checker
+name: Finance deck quality checker
+summary: Give it a client deck. Get number mismatches, weak wording and format slips found slide by slide.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: slide_deck
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/financial-analysis/skills/ib-check-deck
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/ib-check-deck
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: ib-check-deck
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ib-check-deck skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/ib-check-deck
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

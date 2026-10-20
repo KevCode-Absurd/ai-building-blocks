@@ -1,0 +1,39 @@
+slug: service-target-planner
+name: Service target planner
+summary: Describe your service. Get service level targets, error budgets and alert rules that fit.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: false
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/slo-architect
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/slo-architect
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: slo-architect
+  author: claude-code-skills collection
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: slo-architect skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/slo-architect
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: claude-code-skills collection
+    url: https://github.com/alirezarezvani/claude-skills
+    used: Wrote the skill; Alireza Rezvani shared it in their collection.

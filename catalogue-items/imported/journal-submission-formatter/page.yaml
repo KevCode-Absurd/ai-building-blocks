@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It applies set venue rules to your paper.
+new_slug: journal-submission-formatter
+name: Journal submission formatter
+summary: Name the journal or conference. Get its template, current page and anonymity rules checked, and your paper fitted to them.
+job: research-topics
+headline: Journal submission formatter
+subhead: Name the journal or conference. Get its template, current page and anonymity rules checked, and your paper fitted to them.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and search the web.

@@ -1,0 +1,200 @@
+# addyosmani/agent-skills (MIT)
+"addyosmani/agent-skills:skills/api-and-interface-design":
+  name: API designer
+  summary: Say what your code needs to offer. Get a clear, stable API or module design that is hard to misuse.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Interfaces are hard to change later, so each choice needs weighing.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: plan}]
+  needs: read your project files
+"addyosmani/agent-skills:skills/browser-testing-with-devtools":
+  name: Browser page debugger
+  summary: Point it at a page that misbehaves. Get the real errors, network calls and slow spots found in a live browser.
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a set routine of inspecting the page and reading what comes back.
+  inputs: [{type: web_app, required: true}]
+  outputs: [{type: test_report}]
+  needs: use Chrome DevTools and open a browser
+"addyosmani/agent-skills:skills/ci-cd-and-automation":
+  name: Build pipeline setter
+  summary: Describe how you ship. Get automatic checks and a deploy pipeline so bad changes never reach users.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows known pipeline patterns but must fit your project.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and read your project files
+"addyosmani/agent-skills:skills/code-simplification":
+  name: Code simplifier
+  summary: Point it at code that works but is hard to read. Get a simpler version that behaves the same.
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It must change structure without changing what the code does.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and read your project files
+"addyosmani/agent-skills:skills/constraint-driven-development":
+  name: Quality bar setter
+  summary: Answer a few questions. Get a written quality bar for your project and a watch for anyone lowering it.
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It interviews you, sets numbers, then compares each change against them.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: document}, {type: audit_report}]
+  needs: run code and read your project files
+"addyosmani/agent-skills:skills/context-engineering":
+  name: Agent context setter
+  summary: Describe your project. Get the right rules and files loaded so your AI stays accurate through long sessions.
+  task: set-up-ai
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It judges what the AI needs to see, and when.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: document}]
+  needs: read your project files
+"addyosmani/agent-skills:skills/debugging-and-error-recovery":
+  skip: Does the same job as our Bug diagnoser, in the same format.
+"addyosmani/agent-skills:skills/code-review-and-quality":
+  skip: Does the same job as our Code change reviewer, in the same format.
+"addyosmani/agent-skills:skills/deprecation-and-migration":
+  name: Migration planner
+  summary: Name the old system or feature. Get a plan to retire it and move users over without breaking them.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: A safe migration needs careful ordering and rollback thinking.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: plan}]
+  needs: read your project files
+"addyosmani/agent-skills:skills/documentation-and-adrs":
+  name: Decision record writer
+  summary: Tell it a design choice you made. Get a short record of why, with the options you passed on.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It captures a decision you already made in a fixed format.
+  inputs: [{type: codebase, required: false}, {type: question, required: true}]
+  outputs: [{type: document}]
+"addyosmani/agent-skills:skills/doubt-driven-development":
+  name: Second-opinion reviewer
+  summary: Give it a plan or change you feel sure about. Get a fresh reviewer's hardest objections, sorted by what matters.
+  task: think-and-decide
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: A fresh reviewer must attack the work, then the findings must be weighed.
+  inputs: [{type: plan, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run subagents and read your project files
+"addyosmani/agent-skills:skills/frontend-ui-engineering":
+  name: Accessible UI builder
+  summary: Describe the screen. Get a responsive, accessible interface that follows your design system and looks hand made.
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows set quality rules while making many layout choices.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: web_app}]
+  needs: run code and open a browser
+"addyosmani/agent-skills:skills/git-workflow-and-versioning":
+  skip: Overlaps our commit, pull request and review skills, which cover the same daily git work.
+"addyosmani/agent-skills:skills/idea-refine":
+  name: Idea sharpener
+  summary: Share a rough idea. Get it widened, stress-tested and cut to a one-page concept worth acting on.
+  task: test-an-idea
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It opens up options first, then narrows to the best one.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+"addyosmani/agent-skills:skills/incremental-implementation":
+  skip: A short method note that overlaps our Test-first coach and Spec builder.
+"addyosmani/agent-skills:skills/interview-me":
+  name: Intent interviewer
+  summary: Give it a vague request. Get asked one question at a time until what you really want is clear.
+  task: think-and-decide
+  role: source
+  level: beginner
+  thinking: medium
+  thinking_why: Each question depends on your last answer.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: brief}]
+"addyosmani/agent-skills:skills/observability-and-instrumentation":
+  name: Logging and alerts setter
+  summary: Say what must work in production. Get logs, metrics and alerts added so problems show up fast.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It picks the right signals, then follows known patterns.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and read your project files
+"addyosmani/agent-skills:skills/performance-optimization":
+  name: Speed tuner
+  summary: Name what feels slow. Get the real bottleneck measured, fixed and measured again.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It must measure first, then rule out guesses.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and read your project files
+"addyosmani/agent-skills:skills/planning-and-task-breakdown":
+  name: Task breakdown planner
+  summary: Give it a spec. Get small, ordered tasks, each with a clear way to check it is done.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It orders work and sets checks from a clear spec.
+  inputs: [{type: plan, required: true}]
+  outputs: [{type: plan}]
+"addyosmani/agent-skills:skills/security-and-hardening":
+  skip: Overlaps our Code security reviewer and Threat model writer.
+"addyosmani/agent-skills:skills/shipping-and-launch":
+  name: Launch checklist runner
+  summary: Say what you are releasing. Get a pre-launch checklist, a staged rollout and a rollback plan.
+  task: ship-and-host
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It walks a set checklist and adapts it to your release.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: plan}]
+  needs: read your project files
+"addyosmani/agent-skills:skills/source-driven-development":
+  name: Docs-backed coder
+  summary: Name the framework you use. Get code checked against its official docs, with sources cited.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It looks up documents, then writes code that follows them.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: code_change}]
+  needs: search the web and read your project files
+"addyosmani/agent-skills:skills/spec-driven-development":
+  skip: Does the same job as our Spec writer, in the same format.
+"addyosmani/agent-skills:skills/test-driven-development":
+  skip: Does the same job as our Test-first coach, in the same format.
+"addyosmani/agent-skills:skills/using-agent-skills":
+  skip: Only routes between this repo's own skills, so it needs the whole set.

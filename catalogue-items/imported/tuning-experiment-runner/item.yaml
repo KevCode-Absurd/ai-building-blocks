@@ -1,0 +1,39 @@
+slug: tuning-experiment-runner
+name: Tuning experiment runner
+summary: Name the setting to tune and the score to improve. Get a small tested search with a trial log and stop rule.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/optim-agent
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/optim-agent
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: optim-agent
+  author: Optim-Agent
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: optim-agent skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/optim-agent
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Optim-Agent
+    url: https://github.com/Optim-Agent
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -44,16 +44,18 @@ export type Block = {
   outputs: Port[];
   uses: string[];
   steps: { uses: string; note: string }[];
-  origin: "own" | "rebuilt";
+  origin: "own" | "rebuilt" | "imported";
+  /** For an imported skill: who made it, where it came from and its licence (item.yaml `source`). */
+  source?: { by: string; repo: string; url: string; licence: string; original?: string; commit?: string };
+  /** Things to know before using it, shown as labels: "scrapes" = it collects data from websites, "paid:<service>" = it needs a paid account with that service (item.yaml `warnings`). */
+  warnings?: string[];
   /** The last test run on the example business, if there was one. */
   tested: { on: string; result: "pass" | "fail"; business: string } | null;
   version: string;
-  words: number;
-  /** Extra files in the skill's folder, like references/types.md or LICENSE. */
-  files: string[];
+  /** True when the skill has extra files (references/, scripts/, LICENSE...). The list is fetched by loadFiles when someone downloads it. */
+  hasFiles?: boolean;
   /** The same look in the other format (image or video), if the library has it. */
   twin: string | null;
-  added: string;
   usedIn: number;
   task: string;
   headline: string;
@@ -89,12 +91,26 @@ export type Page = {
   pairs?: string[];
   /** What it needs first, the steps before it and the paths after it (tools/lib/needs.mjs). */
   plan?: Plan;
+  /** Facts only a block's own page needs (moved here from blocks.json to keep the library small). */
+  words?: number; added?: string; tested?: { on: string; result: "pass" | "fail"; business: string; model?: string; judge?: string };
   /** Why the block needs the thinking level it has (moved here from blocks.json to keep the library small). */
   thinkingWhy?: string;
   /** Markdown already turned into HTML by the index build. */
   html: { explain: string; skill: string };
 };
 export type RosterMind = { slug: string; name: string; area: string; seat: string; living: boolean; built: boolean; face?: Face; labels?: string[] };
+/** A block as blocks.json sends it: defaults and empty values left out (a headline equal to the name too), ports as "type" or "type?" (optional), steps as a slug or [slug, note]. */
+type Wire = Partial<Omit<Block, "inputs" | "outputs" | "steps" | "tested">> & { slug: string; inputs?: string[]; outputs?: string[]; steps?: (string | [string, string])[]; tested?: 1 };
+const port = (p: string): Port => (p.endsWith("?") ? { type: p.slice(0, -1), required: false } : { type: p, required: true });
+function unwire(w: Wire): Block {
+  const { inputs, outputs, steps, tested, ...rest } = w;
+  return {
+    name: "", summary: "", task: "set-up-ai", category: "general", type: "skill", role: "make", job: "ops", level: "intermediate", thinking: "medium",
+    boards: [], uses: [], origin: "own", version: "1.0.0", twin: null, minds: [], usedIn: 0, tested: tested ? { on: "", result: "pass", business: "" } : null,
+    ...rest, headline: rest.headline ?? rest.name,
+    inputs: (inputs ?? []).map(port), outputs: (outputs ?? []).map(port), steps: (steps ?? []).map((s) => (typeof s === "string" ? { uses: s, note: "" } : { uses: s[0], note: s[1] })),
+  } as Block;
+}
 export type Catalogue = { built: string; portTypes: Record<string, string | null>; renamed: Record<string, string>; minds?: { areas: Record<string, string>; roster: RosterMind[]; labels?: Record<string, string> }; blocks: Block[]; bySlug: Record<string, Block> };
 
 export const ROLES: { id: Role; name: string; does: string }[] = [
@@ -126,8 +142,9 @@ export function loadCatalogue(): Promise<Catalogue> {
       migrateSlugs(d.renamed ?? {});
       // A mind's face is sent once, on the roster, and copied onto its block here.
       const faces = new Map<string, Face | undefined>((d.minds?.roster ?? []).map((m: RosterMind) => [m.slug, m.face]));
-      for (const b of d.blocks as Block[]) if (b.type === "mind" && !b.face) b.face = faces.get(b.slug);
-      return { ...d, bySlug: Object.fromEntries(d.blocks.map((b: Block) => [b.slug, b])) };
+      const blocks: Block[] = (d.blocks as Wire[]).map(unwire);
+      for (const b of blocks) if (b.type === "mind" && !b.face) b.face = faces.get(b.slug);
+      return { ...d, blocks, bySlug: Object.fromEntries(blocks.map((b) => [b.slug, b])) };
     });
   return catalogue;
 }
@@ -143,13 +160,40 @@ export function loadSkillText(slug: string, file = "SKILL.md"): Promise<string |
   return textCache.get(key)!;
 }
 
+/** The extra files in a skill's folder (references/, scripts/, assets/, LICENSE...), listed at build time in skills/<slug>/_files.json. */
+const filesCache = new Map<string, Promise<string[]>>();
+export function loadFiles(b: Block): Promise<string[]> {
+  if (!b.hasFiles) return Promise.resolve([]);
+  if (!filesCache.has(b.slug)) filesCache.set(b.slug, fetch(`/skills/${b.slug}/_files.json`).then((r) => (r.ok ? r.json() : [])).then((l) => (Array.isArray(l) ? l : [])).catch(() => []));
+  return filesCache.get(b.slug)!;
+}
+/** One file of a skill as raw bytes, so images and other binaries survive a download. Null when it isn't there. */
+export async function loadSkillBytes(slug: string, file: string): Promise<Uint8Array | null> {
+  try {
+    const r = await fetch(`/skills/${slug}/${file}`);
+    if (!r.ok) return null;
+    const buf = new Uint8Array(await r.arrayBuffer());
+    // A missing file can come back as the site's own page; a real .html file in a skill is kept.
+    if ((r.headers.get("content-type") ?? "").includes("text/html") && new TextDecoder().decode(buf.subarray(0, 4000)).includes('id="root"')) return null;
+    return buf;
+  } catch { return null; }
+}
+
 /** Blocks whose outputs feed this block's inputs, and blocks this one can feed. */
+const portIndex = new WeakMap<Catalogue, { made: Map<string, Block[]>; taken: Map<string, Block[]> }>();
 export function neighbours(c: Catalogue, b: Block) {
-  const ins = new Set(b.inputs.map((p) => p.type));
-  const outs = new Set(b.outputs.map((p) => p.type));
-  const before = c.blocks.filter((x) => x.slug !== b.slug && x.category !== "orchestrator" && x.outputs.some((p) => ins.has(p.type)));
-  const after = c.blocks.filter((x) => x.slug !== b.slug && x.category !== "orchestrator" && x.inputs.some((p) => outs.has(p.type)));
-  return { before, after };
+  let ix = portIndex.get(c);
+  if (!ix) {
+    ix = { made: new Map(), taken: new Map() };
+    for (const x of c.blocks) {
+      if (x.category === "orchestrator") continue;
+      for (const t of new Set(x.outputs.map((p) => p.type))) (ix.made.get(t) ?? ix.made.set(t, []).get(t)!).push(x);
+      for (const t of new Set(x.inputs.map((p) => p.type))) (ix.taken.get(t) ?? ix.taken.set(t, []).get(t)!).push(x);
+    }
+    portIndex.set(c, ix);
+  }
+  const pick = (m: Map<string, Block[]>, types: string[]) => { const seen = new Set<Block>(); for (const t of new Set(types)) for (const x of m.get(t) ?? []) if (x.slug !== b.slug) seen.add(x); return c.blocks.filter((x) => seen.has(x)); };
+  return { before: pick(ix.made, b.inputs.map((p) => p.type)), after: pick(ix.taken, b.outputs.map((p) => p.type)) };
 }
 
 /** Wires an ordered list of blocks: each step reads from the latest earlier step that makes one of its inputs,
@@ -210,8 +254,31 @@ export const TASKS: { id: string; name: string }[] = [
   { id: "design-work", name: "Design things people love" },
   { id: "think-and-decide", name: "Think it through and decide" },
   { id: "money-and-investing", name: "Handle money and investing" },
+  { id: "work-with-files", name: "Make documents, sheets and slides" },
+  { id: "build-websites", name: "Build websites and web apps" },
+  { id: "test-and-fix-code", name: "Test and fix code" },
+  { id: "ship-and-host", name: "Ship and host your app" },
+  { id: "secure-code", name: "Keep your code secure" },
+  { id: "connect-tools", name: "Connect AI to your tools" },
+  { id: "make-skills", name: "Make your own skills" },
+  { id: "make-images", name: "Make images and art" },
+  { id: "organise-work", name: "Run meetings, notes and plans" },
+  { id: "work-with-audio", name: "Turn speech into text and back" },
+  { id: "run-your-store", name: "Run your online store" },
+  { id: "get-found-in-search", name: "Get found in search and AI answers" },
+  { id: "write-emails", name: "Write emails that get read" },
+  { id: "set-prices", name: "Set your prices" },
+  { id: "help-customers", name: "Help your customers" },
+  { id: "hire-people", name: "Hire and look after your people" },
+  { id: "check-contracts", name: "Check contracts and rules" },
+  { id: "track-numbers", name: "Track your numbers" },
+  { id: "document-work", name: "Write down how work gets done" },
+  { id: "research-topics", name: "Research a topic properly" },
+  { id: "teach-and-train", name: "Teach and train people" },
+  { id: "plan-supply-chain", name: "Plan stock, shipping and suppliers" },
 ];
-export const taskOf = (b: Block) => TASKS.find((t) => t.id === b.task) ?? TASKS[0];
+const TASK_BY_ID = new Map(TASKS.map((t) => [t.id, t]));
+export const taskOf = (b: Block) => TASK_BY_ID.get(b.task) ?? TASKS[0];
 
 const pageCache = new Map<string, Promise<Page | null>>();
 export function loadPage(slug: string): Promise<Page | null> {
@@ -222,7 +289,7 @@ export function loadPage(slug: string): Promise<Page | null> {
 /** The kinds of work, named by what gets done: the first way into the library.
  *  Each one groups a few jobs; a job can sit under more than one. */
 export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[] }[] = [
-  { id: "copywriter", name: "Write copy that sells", line: "Ads, landing pages and offers", tasks: ["write-ad-copy", "write-landing-page", "make-offer"] },
+  { id: "copywriter", name: "Write copy that sells", line: "Ads, landing pages and offers", tasks: ["write-ad-copy", "write-landing-page", "make-offer", "write-emails"] },
   { id: "media-buyer", name: "Run Meta ads", line: "Plan tests, get ads approved, read the results", tasks: ["plan-ad-tests", "check-ads", "read-ad-results", "study-competitors"] },
   { id: "ads", name: "Create ads", line: "Image ads and video ads, each with its own skills", tasks: ["make-image-ads", "make-video-ads"] },
   { id: "photos", name: "Make product photos", line: "Photos for your product pages", tasks: ["product-photos"] },
@@ -232,29 +299,50 @@ export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[
   { id: "founder", name: "Set up AI for your work", line: "Your brand file and AI, set up once for every job", tasks: ["set-up-ai", "brand-file"] },
   { id: "minds", name: "Think with great minds", line: "Borrow one mind's thinking, or seat a council", tasks: ["think-with-minds"] },
   { id: "validator", name: "Test your idea", line: "Talk to customers before you build", tasks: ["test-an-idea", "understand-customers"] },
-  { id: "strategy", name: "Plan your strategy", line: "Where to play, how to win, and the money", tasks: ["plan-strategy", "money-and-investing"] },
+  { id: "strategy", name: "Plan your strategy", line: "Where to play, how to win, and the money", tasks: ["plan-strategy", "money-and-investing", "set-prices"] },
   { id: "product", name: "Build a product", line: "Products and software people use", tasks: ["build-product", "build-software"] },
   { id: "seller", name: "Sell more", line: "Sell, negotiate and win people over", tasks: ["sell-and-negotiate", "speak-and-persuade"] },
   { id: "leader", name: "Lead people", line: "Run a team, a meeting or a company", tasks: ["lead-people", "speak-and-persuade"] },
   { id: "writer", name: "Write and tell stories", line: "Books, essays, scripts and talks", tasks: ["write-and-tell-stories"] },
-  { id: "maker", name: "Design things", line: "Products, brands and pages people love", tasks: ["design-work"] },
+  { id: "maker", name: "Design things", line: "Products, brands and pages people love", tasks: ["design-work", "make-images"] },
   { id: "thinker", name: "Think it through", line: "Hard problems, big decisions, new ideas", tasks: ["think-and-decide"] },
+  { id: "developer", name: "Build and code", line: "Websites, apps and the code behind them", tasks: ["build-software", "build-websites", "test-and-fix-code", "ship-and-host", "secure-code"] },
+  { id: "files", name: "Work with files", line: "Documents, sheets, slides and PDFs", tasks: ["work-with-files"] },
+  { id: "connector", name: "Connect your tools", line: "Plug AI into the apps you use, or make your own skills", tasks: ["connect-tools", "make-skills", "set-up-ai"] },
+  { id: "office", name: "Run your work", line: "Meetings, notes, plans and audio", tasks: ["organise-work", "work-with-audio", "document-work"] },
+  { id: "store", name: "Run your store", line: "Orders, stock, prices and payouts", tasks: ["run-your-store", "set-prices"] },
+  { id: "search", name: "Get found", line: "Search, AI answers and listings", tasks: ["get-found-in-search"] },
+  { id: "support", name: "Help your customers", line: "Replies, help pages and problems sorted fast", tasks: ["help-customers", "write-emails"] },
+  { id: "people", name: "Hire and look after people", line: "Job posts, interviews, pay and reviews", tasks: ["hire-people", "lead-people"] },
+  { id: "legal", name: "Check contracts and rules", line: "Contracts, NDAs and compliance, checked before a lawyer", tasks: ["check-contracts"] },
+  { id: "analyst", name: "Track your numbers", line: "Books, reports, dashboards and data", tasks: ["track-numbers", "read-ad-results", "money-and-investing"] },
+  { id: "researcher", name: "Research anything", line: "Sources found, read, checked and written up", tasks: ["research-topics"] },
+  { id: "teacher", name: "Teach and train", line: "Lessons, courses, quizzes and feedback", tasks: ["teach-and-train"] },
+  { id: "supply", name: "Run your supply chain", line: "Stock, suppliers, shipping and routes", tasks: ["plan-supply-chain", "run-your-store"] },
 ];
 
 /** The broad areas above the groups (docs/MINDS-PRD.md §3). A group can sit in more than one; a mind sits in its own areas. */
 export const AREAS: { id: string; name: string; fns: string[] }[] = [
-  { id: "marketing", name: "Marketing", fns: ["copywriter", "media-buyer", "ads", "cro", "strategist", "social"] },
+  { id: "marketing", name: "Marketing", fns: ["copywriter", "media-buyer", "ads", "cro", "strategist", "social", "search"] },
   { id: "design", name: "Design", fns: ["ads", "photos", "maker", "product"] },
-  { id: "business", name: "Business", fns: ["strategist", "founder", "validator", "strategy", "product", "minds"] },
-  { id: "sales", name: "Sales", fns: ["seller", "validator"] },
-  { id: "leadership", name: "Leadership", fns: ["leader", "strategy"] },
+  { id: "business", name: "Business", fns: ["strategist", "founder", "validator", "strategy", "product", "minds", "files", "office", "store", "support", "legal", "analyst", "supply"] },
+  { id: "sales", name: "Sales", fns: ["seller", "validator", "support"] },
+  { id: "leadership", name: "Leadership", fns: ["leader", "strategy", "people"] },
   { id: "writing", name: "Writing", fns: ["copywriter", "writer"] },
   { id: "arts", name: "Arts", fns: ["writer", "maker"] },
-  { id: "coding", name: "Coding", fns: ["product"] },
-  { id: "science", name: "Science", fns: ["thinker"] },
+  { id: "coding", name: "Coding", fns: ["product", "developer", "connector"] },
+  { id: "science", name: "Science", fns: ["thinker", "researcher"] },
+  { id: "teaching", name: "Teaching", fns: ["teacher", "researcher"] },
   { id: "thinking", name: "Thinking", fns: ["thinker", "minds"] },
 ];
-export const areasOf = (b: Block): string[] => (b.type === "mind" ? [b.area ?? "", ...(b.also ?? [])].filter(Boolean) : AREAS.filter((a) => a.fns.some((f) => FUNCTIONS.find((x) => x.id === f)?.tasks.includes(b.task))).map((a) => a.id));
+// Worked out once per job, not once per block per keystroke: the library asks these for every block, many times a second.
+const AREAS_BY_TASK = new Map<string, string[]>();
+export const areasOf = (b: Block): string[] => {
+  if (b.type === "mind") return [b.area ?? "", ...(b.also ?? [])].filter(Boolean);
+  let r = AREAS_BY_TASK.get(b.task);
+  if (!r) AREAS_BY_TASK.set(b.task, (r = AREAS.filter((a) => a.fns.some((f) => FUNCTIONS.find((x) => x.id === f)?.tasks.includes(b.task))).map((a) => a.id)));
+  return r;
+};
 /** Old links to the two functions that became "Create ads". */
 export const FUNCTION_MOVED: Record<string, string> = { designer: "ads", video: "ads" };
 /** Image or video: the two kinds of ad a block can make. Every ad-making block makes one, never both. */
@@ -265,5 +353,13 @@ const IMAGE_OUT = new Set(["image_prompt", "avatar_sheet", "static_ads", "photo_
  *  Same rule as tools/add-making-it.mjs, which adds the matching note to the SKILL.md. */
 export const rendersOf = (b: Block): "image" | "video" | null =>
   b.outputs.some((o) => VIDEO_OUT.has(o.type)) ? "video" : b.outputs.some((o) => IMAGE_OUT.has(o.type)) ? "image" : null;
-export const functionsOf = (b: Block) => FUNCTIONS.filter((f) => f.tasks.includes(b.task));
+const FNS_BY_TASK = new Map<string, typeof FUNCTIONS>();
+export const functionsOf = (b: Block) => {
+  let r = FNS_BY_TASK.get(b.task);
+  if (!r) FNS_BY_TASK.set(b.task, (r = FUNCTIONS.filter((f) => f.tasks.includes(b.task))));
+  return r;
+};
 
+
+/** The paid service a block needs, from its "paid:<service>" warning, or "". */
+export const paidService = (b: { warnings?: string[] }) => b.warnings?.find((w) => w.startsWith("paid:"))?.slice(5) ?? "";

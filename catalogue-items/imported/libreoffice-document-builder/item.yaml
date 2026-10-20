@@ -1,0 +1,32 @@
+slug: libreoffice-document-builder
+name: LibreOffice document builder
+summary: Describe the document. Get an ODT file, or a conversion to Word, PDF or HTML.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/libreoffice/writer
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/libreoffice/writer
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: writer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: writer skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/libreoffice/writer
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

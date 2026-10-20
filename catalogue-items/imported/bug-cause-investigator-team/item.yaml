@@ -1,0 +1,39 @@
+slug: bug-cause-investigator-team
+name: Bug cause investigator team
+summary: Give it a crash or odd behaviour. Get several parallel read-only investigations and one ranked list of likely causes.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+  - type: question
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/bug-hunt-swarm
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/bug-hunt-swarm
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: bug-hunt-swarm
+  author: Dimillian
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: bug-hunt-swarm skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/bug-hunt-swarm
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Dimillian
+    url: https://github.com/Dimillian/Skills
+    used: Wrote the skill; sickn33 shared it in their collection.

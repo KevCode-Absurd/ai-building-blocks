@@ -1,0 +1,38 @@
+slug: visitor-to-contact-matcher
+name: Visitor to contact matcher
+summary: Give it your site visit records and contact list. Get anonymous visits linked to known contacts, with unclear links flagged.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+    required: true
+uses: []
+origin: imported
+source:
+  by: wizard7558
+  repo: wizard7558/attribution-skills
+  path: skills/clickstream-identity-stitching
+  url: https://github.com/wizard7558/attribution-skills/tree/main/skills/clickstream-identity-stitching
+  licence: MIT
+  licence_file: LICENSE
+  commit: bed5a8f
+  original_name: clickstream-identity-stitching
+  author: Riley Sorenson
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: clickstream-identity-stitching skill
+    by: wizard7558
+    url: https://github.com/wizard7558/attribution-skills/tree/main/skills/clickstream-identity-stitching
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Riley Sorenson
+    url: https://github.com/wizard7558
+    used: Wrote the skill; wizard7558 shared it in their collection.

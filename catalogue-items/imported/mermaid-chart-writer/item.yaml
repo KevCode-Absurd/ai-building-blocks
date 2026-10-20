@@ -1,0 +1,32 @@
+slug: mermaid-chart-writer
+name: Mermaid chart writer
+summary: Describe a flow, system or database. Get a Mermaid diagram you can paste into docs, in the right style.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: design_file
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/mermaid-expert
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/mermaid-expert
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: mermaid-expert
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mermaid-expert skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/mermaid-expert
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

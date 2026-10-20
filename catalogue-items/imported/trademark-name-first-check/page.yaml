@@ -1,0 +1,13 @@
+thinking: high
+thinking_why: Look-alike marks need careful comparison.
+new_slug: trademark-name-first-check
+name: Trademark name first-check
+summary: Give it a name you want to use. Get a flag list of similar marks and risk factors. Not a clearance opinion.
+job: check-contracts
+headline: Trademark name first-check
+subhead: Give it a name you want to use. Get a flag list of similar marks and risk factors. Not a clearance opinion.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can search trademark registers.
+  - Where the skill points to /ip-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.

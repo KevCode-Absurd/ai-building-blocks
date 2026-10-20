@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It chooses the right library and handles the edge cases.
+new_slug: mobile-data-fetching-coder
+name: Mobile data fetching coder
+summary: Describe the data your app needs. Get fetch, cache, retry and offline code for React Native with Expo.
+job: build-software
+headline: Mobile data fetching coder
+subhead: Describe the data your app needs. Get fetch, cache, retry and offline code for React Native with Expo.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

@@ -1,0 +1,35 @@
+slug: video-dubbing-editor
+name: Video dubbing editor
+summary: Give it a video or podcast. Get versions in other languages that keep each speaker's voice, ready to correct.
+category: general
+boards: []
+type: skill
+role: render
+job: ops
+level: intermediate
+inputs:
+  - type: audio
+    required: true
+outputs:
+  - type: audio
+  - type: transcript
+uses: []
+origin: imported
+warnings:
+  - paid:ElevenLabs
+source:
+  by: ElevenLabs
+  repo: elevenlabs/skills
+  path: dubbing
+  url: https://github.com/elevenlabs/skills/tree/main/dubbing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 269e5f0
+  original_name: dubbing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: dubbing skill
+    by: ElevenLabs
+    url: https://github.com/elevenlabs/skills/tree/main/dubbing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,33 @@
+slug: eu-network-security-rules-checker
+name: EU network security rules checker
+summary: Describe your company. Get whether NIS2 covers you, your security duties, reporting deadlines and gaps.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/nis2/skills/nis2
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/nis2/skills/nis2
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: nis2
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: nis2 skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/nis2/skills/nis2
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

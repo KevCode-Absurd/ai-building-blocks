@@ -1,0 +1,561 @@
+# nighomni123/fsi-skills-india (Apache 2.0). Finance skills for India, forked from Anthropic's financial-services set. None give buy, sell or investment advice.
+
+"nighomni123/fsi-skills-india:src/equity-research/skills/catalyst-calendar":
+  name: Upcoming events calendar builder
+  summary: "Give it a list of companies. Get a dated calendar of earnings, conferences and decisions that could move them."
+  task: money-and-investing
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It collects dated events and sorts them."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+
+"nighomni123/fsi-skills-india:src/equity-research/skills/earnings-analysis":
+  name: Earnings update report writer
+  summary: "Give it a company's quarterly results. Get an 8 to 12 page update on beats, misses and key numbers."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It must weigh results against estimates and explain why."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+  needs: search the web and read files
+
+"nighomni123/fsi-skills-india:src/equity-research/skills/earnings-preview":
+  name: Earnings week briefing writer
+  summary: "Name a company about to report. Get what to watch, scenario cases and the numbers that matter."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It builds scenarios from known figures."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+
+"nighomni123/fsi-skills-india:src/equity-research/skills/idea-generation":
+  skip: "Its main output is long and short stock ideas, which is investment advice."
+
+"nighomni123/fsi-skills-india:src/equity-research/skills/initiating-coverage":
+  skip: "Produces ratings and price targets, which is investment advice, and is a very long five step workflow."
+
+"nighomni123/fsi-skills-india:src/equity-research/skills/model-update":
+  name: Financial model refresher
+  summary: "Give it a model and new results or guidance. Get estimates updated and the biggest changes flagged."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It changes linked numbers and checks the effects."
+  inputs: [ { type: spreadsheet, required: true }, { type: source_text, required: false } ]
+  outputs: [ { type: spreadsheet } ]
+
+"nighomni123/fsi-skills-india:src/equity-research/skills/morning-note":
+  skip: "Main output is trade ideas for the day, which is investment advice."
+
+"nighomni123/fsi-skills-india:src/equity-research/skills/sector-overview":
+  name: Sector landscape report writer
+  summary: "Name an industry. Get a report on its size, main players, competition and trends."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It gathers facts and structures a report."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+
+"nighomni123/fsi-skills-india:src/equity-research/skills/thesis-tracker":
+  skip: "Tracks why to hold investment positions, which leans on buy and sell calls."
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/3-statement-model":
+  name: Statement model template filler for India
+  summary: "Give it a blank income, balance sheet and cash flow template. Get it filled in, with Indian years and crore units handled."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It fills linked sheets and checks they balance."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: run code and read your files
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/audit-xls":
+  name: Spreadsheet formula auditor
+  summary: "Give it a spreadsheet. Get formula errors, broken links and model checks such as balance sheet tie-out listed."
+  task: work-with-files
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scans cells by rule, then judges what is wrong."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/clean-data-xls":
+  name: Messy spreadsheet cleaner
+  summary: "Give it messy data. Get spacing, text numbers, dates and duplicates fixed, with mixed columns flagged."
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It applies set cleaning rules."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: read and save spreadsheet files
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/competitive-analysis":
+  name: Competitor landscape deck builder
+  summary: "Name a company and its rivals. Get a deck on market position, side by side comparison and what it means."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares peers and pulls out a view."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: slide_deck } ]
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/comps-analysis":
+  name: Peer multiples table builder
+  summary: "Name a company. Get a table comparing its price multiples and key numbers with its peers."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It picks peers and computes standard multiples."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/dcf-model":
+  name: DCF model builder for India
+  summary: "Name a listed Indian company. Get a discounted cash flow Excel model with WACC, sensitivities and a summary."
+  task: money-and-investing
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It builds a long model with many linked assumptions."
+  inputs: [ { type: question, required: true }, { type: source_text, required: false } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: run code and read files
+  scrapes: true
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/deck-refresh":
+  name: Deck number refresher
+  summary: "Give it a deck and new figures. Get every number updated across the slides, with a list of changes."
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It swaps numbers by rule and lists changes."
+  inputs: [ { type: slide_deck, required: true }, { type: spreadsheet, required: true } ]
+  outputs: [ { type: slide_deck } ]
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/ib-check-deck":
+  name: Finance deck quality checker
+  summary: "Give it a client deck. Get number mismatches, weak wording and format slips found slide by slide."
+  task: work-with-files
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares slides and judges the writing."
+  inputs: [ { type: slide_deck, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/india-market-conventions":
+  name: India modeling rules checker
+  summary: "Give it an Indian company model. Get April to March years, crore units, Ind AS and listing rules checked."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies a fixed list of rules, then judges the fit."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/india-market-data":
+  skip: "Walks round NSE bot protection by warming session cookies, which we do not allow."
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/lbo-model":
+  name: Buyout model template filler
+  summary: "Give it a blank LBO template and deal facts. Get the debt, cash flow and returns model completed and checked."
+  task: money-and-investing
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It fills linked sheets with many assumptions."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: run code and read your files
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/market-data-sources":
+  skip: "Only a list of where to find free data, with no task of its own."
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/ppt-template-creator":
+  skip: "Makes skills from PowerPoint templates and needs a template and a separate pptx skill."
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/pptx-author":
+  skip: "Only works with the officecli command line tool."
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/skill-creator":
+  skip: "Built for one other product's harness and copies a skill-creator we already point to."
+
+"nighomni123/fsi-skills-india:src/financial-analysis/skills/xlsx-author":
+  skip: "Only works with the officecli command line tool."
+
+"nighomni123/fsi-skills-india:src/fund-admin/skills/accrual-schedule":
+  name: Accrual schedule drafter
+  summary: "Give it the period's expenses. Get an accrual schedule with each entry, its support and a draft journal entry."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It applies accrual rules to listed items."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"nighomni123/fsi-skills-india:src/fund-admin/skills/break-trace":
+  name: Reconciliation break tracer
+  summary: "Give it a break from a reconciliation. Get it traced to its source entries on both sides, and what differs."
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows records back and explains a gap."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"nighomni123/fsi-skills-india:src/fund-admin/skills/gl-recon":
+  name: Ledger to subledger reconciler
+  summary: "Give it ledger and subledger data. Get matches, breaks and a likely cause for each break."
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It matches by rule and judges likely causes."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report }, { type: spreadsheet } ]
+
+"nighomni123/fsi-skills-india:src/fund-admin/skills/nav-tieout":
+  name: Investor statement NAV checker
+  summary: "Give it an investor statement and the fund's NAV pack. Get the capital account recomputed and any mismatch flagged."
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It recomputes figures and compares them."
+  inputs: [ { type: document, required: true }, { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"nighomni123/fsi-skills-india:src/fund-admin/skills/roll-forward":
+  name: Balance roll-forward builder
+  summary: "Name an account. Get a schedule from opening to closing balance, with each movement tied to the ledger."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It lays out a standard schedule."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"nighomni123/fsi-skills-india:src/fund-admin/skills/variance-commentary":
+  name: Month-end variance commentary writer
+  summary: "Give it this period's and last period's numbers. Get a written reason for every line that moved past your limit."
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must explain causes from the underlying activity."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: document } ]
+
+"nighomni123/fsi-skills-india:src/investment-banking/skills/buyer-list":
+  name: Likely buyers list builder
+  summary: "Describe a company for sale. Get a ranked list of likely buyers, strategic and financial, with fit notes."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It judges fit across many possible buyers."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: shortlist } ]
+
+"nighomni123/fsi-skills-india:src/investment-banking/skills/cim-builder":
+  name: Sale memorandum drafter
+  summary: "Give it company facts. Get a draft sale memorandum with a clear structure and story."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It organises large facts into a long document."
+  inputs: [ { type: brief, required: true }, { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+
+"nighomni123/fsi-skills-india:src/investment-banking/skills/datapack-builder":
+  name: Financial data pack builder
+  summary: "Give it a deal document or filing. Get its financials pulled into a clean, standard Excel data pack."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It extracts numbers and standardises them."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: read files and save spreadsheets
+
+"nighomni123/fsi-skills-india:src/investment-banking/skills/deal-tracker":
+  skip: "Thin generic tracker with no calculation or draft."
+
+"nighomni123/fsi-skills-india:src/investment-banking/skills/merger-model":
+  name: Merger effect modeler
+  summary: "Give it two companies and deal terms. Get the effect on earnings per share, cost savings cases and price split."
+  task: money-and-investing
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It links deal terms to pro forma results."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"nighomni123/fsi-skills-india:src/investment-banking/skills/pitch-deck":
+  skip: "Needs a bank's own PowerPoint template, so it is useful inside that setup only."
+
+"nighomni123/fsi-skills-india:src/investment-banking/skills/process-letter":
+  name: Sale process letter drafter
+  summary: "Describe a sale process. Get a draft letter with bid instructions, deadlines and meeting details."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It fills a standard letter format."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+
+"nighomni123/fsi-skills-india:src/investment-banking/skills/strip-profile":
+  name: Company strip profile slide maker
+  summary: "Name a company. Get a one-slide profile with business, key numbers and ownership in a standard layout."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It collects facts and fits a slide."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: slide_deck } ]
+  needs: search the web and make slides
+
+"nighomni123/fsi-skills-india:src/investment-banking/skills/teaser":
+  name: Anonymous company teaser writer
+  summary: "Give it company facts. Get a one-page teaser that sells the business without naming it."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must hide identity while keeping the pitch strong."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+
+"nighomni123/fsi-skills-india:src/market-data/lseg/bond-futures-basis":
+  skip: "Built for trading futures positions, so it reads as trade advice."
+
+"nighomni123/fsi-skills-india:src/market-data/lseg/bond-relative-value":
+  skip: "Rates credit rich or cheap to trade, which reads as trade advice."
+
+"nighomni123/fsi-skills-india:src/market-data/lseg/equity-research":
+  name: Stock research snapshot writer
+  summary: "Name a stock. Get a note combining estimates, reported numbers, price history and the macro backdrop. It collects data from websites."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It gathers data and writes a structured note."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: run code and reach the web
+  scrapes: true
+
+"nighomni123/fsi-skills-india:src/market-data/lseg/fixed-income-portfolio":
+  name: Bond portfolio reviewer
+  summary: "Give it your bond holdings. Get yield, duration and mix by rating, plus a rate shock test. It collects data from websites."
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It computes portfolio measures and stress tests."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and reach the web
+  scrapes: true
+
+"nighomni123/fsi-skills-india:src/market-data/lseg/fx-carry-trade":
+  skip: "Sizes currency carry trades, which is trading advice."
+
+"nighomni123/fsi-skills-india:src/market-data/lseg/macro-rates-monitor":
+  name: Rates and economy dashboard builder
+  summary: "Name a region. Get a dashboard of key indicators, the yield curve and what they say about the cycle."
+  task: track-numbers
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It gathers indicators and reads them together."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: run code and reach the web
+
+"nighomni123/fsi-skills-india:src/market-data/lseg/option-vol-analysis":
+  skip: "Calls option volatility rich or cheap for positioning, which is trading advice."
+
+"nighomni123/fsi-skills-india:src/market-data/lseg/yield-curve-analysis":
+  name: Yield curve explainer
+  summary: "Name a government. Get its curve shape, key slopes and real rate split explained in plain words."
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It computes slopes and interprets the shape."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and reach the web
+
+"nighomni123/fsi-skills-india:src/market-data/spglobal/earnings-preview-beta":
+  name: Earnings preview report builder for India
+  summary: "Name an Indian stock. Get a short HTML earnings preview with consensus, past surprises and peers. It collects data from websites."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It combines many sources into one report."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: web_page } ]
+  needs: run code and reach the web
+  scrapes: true
+
+"nighomni123/fsi-skills-india:src/market-data/spglobal/funding-digest":
+  skip: "Covers only US Form D private placements, so it does not help for India."
+
+"nighomni123/fsi-skills-india:src/market-data/spglobal/tear-sheet":
+  name: Company one-page tear sheet maker
+  summary: "Name a company. Get a dense one-page Word profile with numbers, ratios and a business summary. It collects data from websites."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It collects facts and lays out one page."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: run code and reach the web
+  scrapes: true
+
+"nighomni123/fsi-skills-india:src/operations/skills/kyc-doc-parse":
+  name: Onboarding document reader
+  summary: "Give it an onboarding pack. Get identity, ownership, source of funds and a document list in set fields."
+  task: hire-people
+  role: compress
+  level: intermediate
+  thinking: low
+  thinking_why: "It pulls fields from documents into a fixed form."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: read your files
+
+"nighomni123/fsi-skills-india:src/operations/skills/kyc-rules":
+  name: Onboarding rules checker
+  summary: "Give it a parsed record and your rules. Get a risk rating, each rule result and missing items. It does not decide."
+  task: hire-people
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It applies your rules and cites each one."
+  inputs: [ { type: spreadsheet, required: true }, { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"nighomni123/fsi-skills-india:src/private-equity/skills/ai-readiness":
+  skip: "Ranks AI projects across a portfolio, which is not a finance task."
+
+"nighomni123/fsi-skills-india:src/private-equity/skills/dd-checklist":
+  name: Due diligence checklist builder
+  summary: "Describe the deal and sector. Get a request list by workstream with status tracking and red flag notes."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It tailors a standard list to the deal."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"nighomni123/fsi-skills-india:src/private-equity/skills/dd-meeting-prep":
+  name: Diligence meeting prep writer
+  summary: "Name the meeting and company. Get sharp questions, benchmarks and red flags to probe."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It tailors questions to the situation."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"nighomni123/fsi-skills-india:src/private-equity/skills/deal-screening":
+  name: Deal screening memo writer
+  summary: "Give it a teaser or CIM and your criteria. Get a one-page memo showing where it passes or fails each test."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It tests a deal against your set criteria."
+  inputs: [ { type: document, required: true }, { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"nighomni123/fsi-skills-india:src/private-equity/skills/deal-sourcing":
+  skip: "Finds founders and drafts outreach to them, which collects contact details."
+
+"nighomni123/fsi-skills-india:src/private-equity/skills/ic-memo":
+  name: Investment committee memo drafter
+  summary: "Give it diligence findings and deal terms. Get a structured committee memo with facts, risks and open questions."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It organises many findings into a formal memo."
+  inputs: [ { type: source_text, required: true }, { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+
+"nighomni123/fsi-skills-india:src/private-equity/skills/portfolio-monitoring":
+  name: Portfolio company tracker
+  summary: "Give it monthly or quarterly reports. Get KPIs pulled out, variances to budget flagged and a summary dashboard."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It extracts numbers and compares them to plan."
+  inputs: [ { type: spreadsheet, required: true }, { type: document, required: false } ]
+  outputs: [ { type: audit_report } ]
+
+"nighomni123/fsi-skills-india:src/private-equity/skills/returns-analysis":
+  name: Deal returns sensitivity builder
+  summary: "Give it deal terms. Get IRR and MOIC tables across entry price, debt, exit price and hold time."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs many scenarios through a set model."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"nighomni123/fsi-skills-india:src/private-equity/skills/unit-economics":
+  name: Subscription unit economics analyst
+  summary: "Give it customer and revenue data. Get cohorts, LTV to CAC, retention and payback worked out."
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It calculates standard measures and reads them."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"nighomni123/fsi-skills-india:src/private-equity/skills/value-creation-plan":
+  name: Value creation plan builder
+  summary: "Give it a company's numbers. Get revenue, cost and operating levers mapped to profit, with 100 day priorities."
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It must choose and size levers for a business."
+  inputs: [ { type: spreadsheet, required: true }, { type: brief, required: true } ]
+  outputs: [ { type: plan } ]

@@ -1,0 +1,32 @@
+slug: launch-channel-picker
+name: Launch channel picker
+summary: Describe your product and buyers. Get the best of seven ways to reach them, with tools and first steps.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-go-to-market/skills/gtm-motions
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-go-to-market/skills/gtm-motions
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: gtm-motions
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: gtm-motions skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-go-to-market/skills/gtm-motions
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

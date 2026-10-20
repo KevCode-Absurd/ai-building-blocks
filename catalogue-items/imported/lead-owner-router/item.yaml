@@ -1,0 +1,37 @@
+slug: lead-owner-router
+name: Lead owner router
+summary: Give it a new lead. Get who should own it by your rules, a routing card to accept and a handoff note.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: brief
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/route-lead
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/route-lead
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: route-lead
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: route-lead skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/route-lead
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

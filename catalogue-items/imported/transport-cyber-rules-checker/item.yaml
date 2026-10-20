@@ -1,0 +1,33 @@
+slug: transport-cyber-rules-checker
+name: Transport cyber rules checker
+summary: Describe your pipeline or rail operation. Get which TSA security rules apply, your gaps and required plans.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/tsa-compliance/skills/tsa-compliance
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/tsa-compliance/skills/tsa-compliance
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: tsa-compliance
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: tsa-compliance skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/tsa-compliance/skills/tsa-compliance
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

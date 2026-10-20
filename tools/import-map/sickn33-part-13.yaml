@@ -1,0 +1,613 @@
+# sickn33/agentic-awesome-skills, slice 13 of 14. Kept 23 distinct, well-made skills. The rest copy well-known sources, route to paid services, are too narrow, or are thin.
+"sickn33/agentic-awesome-skills:skills/startup-metrics-framework":
+  skip: "Thin or generic: a short overview with little a good AI does not already know."
+"sickn33/agentic-awesome-skills:skills/statsmodels":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/stellar-anchor-integration":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/stellar-asset-clawback-compliance":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/stellar-escrow-timelock":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/stellar-multisig-threshold-coordinator":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/steve-jobs":
+  skip: "Written in Chinese or Portuguese only, so most readers cannot use it."
+"sickn33/agentic-awesome-skills:skills/stitch-design-taste":
+  name: Design system file writer
+  summary: "Describe your product's feel. Get a DESIGN.md with type, colour, layout, motion and rules against generic UI."
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It makes many design choices but follows a set format."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
+  author: Leonxlnx
+  author_url: https://github.com/Leonxlnx
+"sickn33/agentic-awesome-skills:skills/stitch-loop":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/stitch-ui-design":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/story-bible-continuity":
+  name: Story continuity checker
+  summary: "Give it your manuscript and story facts. Get a list of name slips, age errors, anachronisms and loose plot threads."
+  task: write-and-tell-stories
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares prose to a fact list, then judges each hit."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  needs: run code and read your files
+  author: jiawood2006
+  author_url: https://github.com/jiawood2006
+"sickn33/agentic-awesome-skills:skills/stride-analysis-patterns":
+  skip: "Offensive or recon security tooling, or a copy of a well-known security skill."
+"sickn33/agentic-awesome-skills:skills/stripe-automation":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/stripe-integration":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/styleseed-design-review":
+  name: AI-look design reviewer
+  summary: "Give it your UI code. Get a 0 to 100 score, why it looks AI-made and a ranked fix list."
+  task: design-work
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scores against a set rubric."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: read your project files
+  author: bitjaru
+  author_url: https://github.com/bitjaru
+"sickn33/agentic-awesome-skills:skills/subagent-driven-development":
+  skip: "Copy of an obra/superpowers skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/subagent-orchestrator":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/subject-line-psychologist":
+  name: Subject line writer
+  summary: "Give it your email and audience. Get subject lines in several angles that earn opens without losing clarity."
+  task: write-ad-copy
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It asks a few questions, then writes short lines."
+  inputs: [ { type: brief, required: true }, { type: persona, required: false } ]
+  outputs: [ { type: copy_draft } ]
+  author: MMEHDI0606
+  author_url: https://github.com/MMEHDI0606
+"sickn33/agentic-awesome-skills:skills/suno-lyrics-to-song":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/supabase":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/supabase-automation":
+  skip: "Only routes to the paid Rube MCP (Composio) service, so it adds little beyond that product."
+"sickn33/agentic-awesome-skills:skills/supabase-postgres-best-practices":
+  name: Postgres performance tuner
+  summary: "Give it your queries or schema. Get Postgres fixes for speed, indexes and security, ranked by impact."
+  task: build-software
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It checks code against a ranked rule list."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read your project files
+  author: Supabase
+  author_url: https://github.com/supabase
+"sickn33/agentic-awesome-skills:skills/super-code":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/supercov":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/superpowers-lab":
+  skip: "Copy of an obra/superpowers skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/supply-chain-attack-recon":
+  skip: "Offensive or recon security tooling, or a copy of a well-known security skill."
+"sickn33/agentic-awesome-skills:skills/supply-chain-attack-response":
+  skip: "Offensive or recon security tooling, or a copy of a well-known security skill."
+"sickn33/agentic-awesome-skills:skills/supply-chain-risk-auditor":
+  skip: "Offensive or recon security tooling, or a copy of a well-known security skill."
+"sickn33/agentic-awesome-skills:skills/supply-chain-security":
+  skip: "Offensive or recon security tooling, or a copy of a well-known security skill."
+"sickn33/agentic-awesome-skills:skills/survey-generator":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/sveltekit":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/swift-concurrency-expert":
+  skip: "Copy of an openai/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/swiftui-expert-skill":
+  name: SwiftUI code reviewer
+  summary: "Give it your SwiftUI code. Get it written, reviewed or refactored with current APIs and fewer speed traps."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It checks current APIs, then applies set review steps."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read your project files
+  author: AvdLee
+  author_url: https://github.com/AvdLee
+"sickn33/agentic-awesome-skills:skills/swiftui-liquid-glass":
+  skip: "Copy of an openai/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/swiftui-performance-audit":
+  skip: "Copy of an openai/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/swiftui-ui-patterns":
+  skip: "Copy of an openai/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/swiftui-view-refactor":
+  skip: "Copy of an openai/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/sympy":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/system-prompt-lookup":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/systematic-debugging":
+  skip: "Copy of an obra/superpowers skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/systemd-services":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/systems-programming-rust-project":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/taasky":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/tailwind-design-system":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/tailwind-patterns":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/taisly-social-media-posting":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/takeout-coupon":
+  skip: "Calls coupon or deal APIs for shopping platforms, so it exists to push offers."
+"sickn33/agentic-awesome-skills:skills/talivia-agent-kit":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/talking-avatar-video":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/tanstack-query-expert":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/task-intelligence":
+  skip: "Written in Chinese or Portuguese only, so most readers cannot use it."
+"sickn33/agentic-awesome-skills:skills/tastegate":
+  name: Page design gate
+  summary: "Describe your page. Get one that looks designed, checked in a real browser at phone and desktop width."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans the look, builds it, then tests it."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: web_app } ]
+  needs: run code and open a browser
+  author: stas4000
+  author_url: https://github.com/stas4000
+"sickn33/agentic-awesome-skills:skills/tavily-web":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/tax-register":
+  skip: "Templated register skill for one ERP module, with little method beyond a field list."
+"sickn33/agentic-awesome-skills:skills/tcm-constitution-analyzer":
+  skip: "Written in Chinese or Portuguese only, so most readers cannot use it."
+"sickn33/agentic-awesome-skills:skills/tdd":
+  skip: "Copy of a mattpocock/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/tdd-orchestrator":
+  skip: "Near-copy of the other test-first skills; the red, green and refactor parts are split into stubs."
+"sickn33/agentic-awesome-skills:skills/tdd-workflow":
+  skip: "Near-copy of the other test-first skills; the red, green and refactor parts are split into stubs."
+"sickn33/agentic-awesome-skills:skills/tdd-workflows":
+  skip: "Near-copy of the other test-first skills; the red, green and refactor parts are split into stubs."
+"sickn33/agentic-awesome-skills:skills/tdd-workflows-tdd-cycle":
+  skip: "Near-copy of the other test-first skills; the red, green and refactor parts are split into stubs."
+"sickn33/agentic-awesome-skills:skills/tdd-workflows-tdd-green":
+  skip: "Near-copy of the other test-first skills; the red, green and refactor parts are split into stubs."
+"sickn33/agentic-awesome-skills:skills/tdd-workflows-tdd-red":
+  skip: "Near-copy of the other test-first skills; the red, green and refactor parts are split into stubs."
+"sickn33/agentic-awesome-skills:skills/tdd-workflows-tdd-refactor":
+  skip: "Near-copy of the other test-first skills; the red, green and refactor parts are split into stubs."
+"sickn33/agentic-awesome-skills:skills/tds-booking-payment":
+  skip: "Templated register skill for one ERP module, with little method beyond a field list."
+"sickn33/agentic-awesome-skills:skills/teach":
+  skip: "Copy of a mattpocock/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/team-calendar":
+  skip: "Templated register skill for one ERP module, with little method beyond a field list."
+"sickn33/agentic-awesome-skills:skills/team-collaboration-issue":
+  skip: "Thin or generic: a short overview with little a good AI does not already know."
+"sickn33/agentic-awesome-skills:skills/team-collaboration-standup-notes":
+  skip: "Thin or generic: a short overview with little a good AI does not already know."
+"sickn33/agentic-awesome-skills:skills/team-composition-analysis":
+  skip: "Thin or generic: a short overview with little a good AI does not already know."
+"sickn33/agentic-awesome-skills:skills/tech-writing-proofread":
+  name: Technical doc proofreader
+  summary: "Give it an English technical doc. Get a list of typos, grammar slips, term clashes and jargon, with no rewrites."
+  task: work-with-files
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It reads and flags, and does not rewrite."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  author: alapha888
+  author_url: https://github.com/alapha888
+"sickn33/agentic-awesome-skills:skills/technical-change-tracker":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/technical-tutorials":
+  skip: "Thin or generic: a short overview with little a good AI does not already know."
+"sickn33/agentic-awesome-skills:skills/telegram":
+  skip: "Written in Chinese or Portuguese only, so most readers cannot use it."
+"sickn33/agentic-awesome-skills:skills/telegram-automation":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/telegram-bot-builder":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/telegram-bot-messaging":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/telegram-channel-ads":
+  name: Telegram ad vetter
+  summary: "Give it a channel and its price. Get a verdict on audience, fake followers and fair cost per thousand."
+  task: check-ads
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It checks several signals against size benchmarks."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+  author: Courier-Britva
+  author_url: https://github.com/Courier-Britva
+"sickn33/agentic-awesome-skills:skills/telegram-mini-app":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/template-library":
+  skip: "Templated register skill for one ERP module, with little method beyond a field list."
+"sickn33/agentic-awesome-skills:skills/temporal-golang-pro":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/temporal-python-pro":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/temporal-python-testing":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/terraform-aws":
+  skip: "Near-copy of another Terraform skill in this repo."
+"sickn33/agentic-awesome-skills:skills/terraform-aws-modules":
+  skip: "Near-copy of another Terraform skill in this repo."
+"sickn33/agentic-awesome-skills:skills/terraform-azure":
+  skip: "Near-copy of another Terraform skill in this repo."
+"sickn33/agentic-awesome-skills:skills/terraform-gcp":
+  skip: "Near-copy of another Terraform skill in this repo."
+"sickn33/agentic-awesome-skills:skills/terraform-infrastructure":
+  skip: "Near-copy of another Terraform skill in this repo."
+"sickn33/agentic-awesome-skills:skills/terraform-module-library":
+  skip: "Near-copy of another Terraform skill in this repo."
+"sickn33/agentic-awesome-skills:skills/terraform-skill":
+  name: Terraform best-practice guide
+  summary: "Describe the cloud setup you need. Get Terraform or OpenTofu code with tested modules and CI steps."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows set patterns for modules and tests."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"sickn33/agentic-awesome-skills:skills/terraform-specialist":
+  skip: "Near-copy of another Terraform skill in this repo."
+"sickn33/agentic-awesome-skills:skills/test-automator":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/test-driven-development":
+  skip: "Copy of an obra/superpowers skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/test-fixing":
+  name: Failing test fixer
+  summary: "Point it at a broken test suite. Get failures grouped by cause and fixed one group at a time."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It groups errors, then fixes each group in turn."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change }, { type: test_report } ]
+  needs: run code and read your project files
+"sickn33/agentic-awesome-skills:skills/test-framework-migration-skill":
+  name: Test framework migrator
+  summary: "Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them converted to the framework you choose."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows a mapping table between frameworks."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read your project files
+  author: LambdaTest
+  author_url: https://github.com/LambdaTest
+"sickn33/agentic-awesome-skills:skills/test-guard":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/testdriver-e2e-testing":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/testing-patterns":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/testing-qa":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/testng-skill":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/the-honoured-one":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/theme-factory":
+  skip: "Copy of an anthropics/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/thick-client":
+  skip: "Offensive or recon security tooling, or a copy of a well-known security skill."
+"sickn33/agentic-awesome-skills:skills/threat-hunting":
+  skip: "Offensive or recon security tooling, or a copy of a well-known security skill."
+"sickn33/agentic-awesome-skills:skills/threat-intelligence":
+  skip: "Offensive or recon security tooling, or a copy of a well-known security skill."
+"sickn33/agentic-awesome-skills:skills/threat-mitigation-mapping":
+  skip: "Offensive or recon security tooling, or a copy of a well-known security skill."
+"sickn33/agentic-awesome-skills:skills/threat-modeling":
+  name: Threat modeler
+  summary: "Describe your system. Get threats found with STRIDE, rated by risk, each with a way to reduce it."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Missed threats are costly, so it works through every part."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: security_report } ]
+  author: devops-skills
+  author_url: https://github.com/devops-skills
+"sickn33/agentic-awesome-skills:skills/threat-modeling-expert":
+  skip: "Offensive or recon security tooling, or a copy of a well-known security skill."
+"sickn33/agentic-awesome-skills:skills/threejs-animation":
+  skip: "One of many near-identical Three.js reference stubs."
+"sickn33/agentic-awesome-skills:skills/threejs-fundamentals":
+  skip: "One of many near-identical Three.js reference stubs."
+"sickn33/agentic-awesome-skills:skills/threejs-geometry":
+  skip: "One of many near-identical Three.js reference stubs."
+"sickn33/agentic-awesome-skills:skills/threejs-interaction":
+  skip: "One of many near-identical Three.js reference stubs."
+"sickn33/agentic-awesome-skills:skills/threejs-lighting":
+  skip: "One of many near-identical Three.js reference stubs."
+"sickn33/agentic-awesome-skills:skills/threejs-loaders":
+  skip: "One of many near-identical Three.js reference stubs."
+"sickn33/agentic-awesome-skills:skills/threejs-materials":
+  skip: "One of many near-identical Three.js reference stubs."
+"sickn33/agentic-awesome-skills:skills/threejs-postprocessing":
+  skip: "One of many near-identical Three.js reference stubs."
+"sickn33/agentic-awesome-skills:skills/threejs-shaders":
+  skip: "One of many near-identical Three.js reference stubs."
+"sickn33/agentic-awesome-skills:skills/threejs-skills":
+  skip: "One of many near-identical Three.js reference stubs."
+"sickn33/agentic-awesome-skills:skills/threejs-textures":
+  skip: "One of many near-identical Three.js reference stubs."
+"sickn33/agentic-awesome-skills:skills/tiktok-automation":
+  skip: "Only routes to the paid Rube MCP (Composio) service, so it adds little beyond that product."
+"sickn33/agentic-awesome-skills:skills/time-ledger":
+  name: Time log keeper
+  summary: "Tell it what you did today in plain words. Get rows added to your Notion time log, asking when unsure."
+  task: track-numbers
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It turns short notes into rows."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: connect to Notion
+  author: cruisekkk
+  author_url: https://github.com/cruisekkk
+"sickn33/agentic-awesome-skills:skills/time-tracking":
+  skip: "Templated register skill for one ERP module, with little method beyond a field list."
+"sickn33/agentic-awesome-skills:skills/tmux":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/to-issues":
+  skip: "Copy of a mattpocock/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/to-prd":
+  skip: "Copy of a mattpocock/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/todoist-automation":
+  skip: "Only routes to the paid Rube MCP (Composio) service, so it adds little beyond that product."
+"sickn33/agentic-awesome-skills:skills/tokenleak":
+  name: Token saver for coding agents
+  summary: "Turn it on for coding sessions. Get fewer wasted tokens from big reads, noisy logs and repeat reads."
+  task: set-up-ai
+  role: orchestrate
+  level: intermediate
+  thinking: low
+  thinking_why: "It is a short set of habits to follow."
+  inputs: [ { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+  author: Pazificateur69
+  author_url: https://github.com/Pazificateur69
+"sickn33/agentic-awesome-skills:skills/tokenwise":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/tool-design":
+  name: Agent tool designer
+  summary: "Describe what your agent must do. Get tool definitions it can use well, with fewer and clearer tools."
+  task: connect-tools
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Tool design shapes how the whole agent behaves."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: tool_connection } ]
+"sickn33/agentic-awesome-skills:skills/tool-use-guardian":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/tools-page-seo-optimizer":
+  name: Tool pages SEO fixer
+  summary: "Point it at a site with many tool or feature pages. Get duplicate text found and unique titles and copy planned."
+  task: get-found-in-search
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It audits pages, then plans fixes for each."
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
+  author: whoisabhishekadhikari
+  author_url: https://github.com/whoisabhishekadhikari
+"sickn33/agentic-awesome-skills:skills/top-web-vulnerabilities":
+  skip: "Offensive or recon security tooling, or a copy of a well-known security skill."
+"sickn33/agentic-awesome-skills:skills/track-management":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/traderspy-market-briefing":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/traderspy-market-screener":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/traderspy-position-check":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/traderspy-smart-money":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/traderspy-technical-analysis":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/traderspy-trading-signals":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/trading-ledger":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/train-sentence-transformers":
+  name: Embedding model trainer
+  summary: "Say what your search or matching must do. Get an embedding or reranker model trained from a ready template."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It picks the model type and loss, then runs costly training."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code
+  author: Hugging Face
+  author_url: https://github.com/huggingface
+"sickn33/agentic-awesome-skills:skills/transformers-js":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/travel-health-analyzer":
+  skip: "Written in Chinese or Portuguese only, so most readers cannot use it."
+"sickn33/agentic-awesome-skills:skills/travel-planner":
+  skip: "Written in Chinese or Portuguese only, so most readers cannot use it."
+"sickn33/agentic-awesome-skills:skills/tree-ring-memory":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/trello-automation":
+  skip: "Only routes to the paid Rube MCP (Composio) service, so it adds little beyond that product."
+"sickn33/agentic-awesome-skills:skills/triage":
+  skip: "Copy of a mattpocock/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/triage-validation":
+  skip: "Offensive or recon security tooling, or a copy of a well-known security skill."
+"sickn33/agentic-awesome-skills:skills/trigger-dev":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/trip-coupon":
+  skip: "Calls coupon or deal APIs for shopping platforms, so it exists to push offers."
+"sickn33/agentic-awesome-skills:skills/trl-training":
+  name: Language model trainer
+  summary: "Name your model and data. Get a fine-tuning run set up with TRL, using the right method for your goal."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Training choices are costly and hard to undo."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code
+  author: Hugging Face
+  author_url: https://github.com/huggingface
+"sickn33/agentic-awesome-skills:skills/trpc-fullstack":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/trust-calibrator":
+  name: Trust barrier fixer
+  summary: "Give it your message and audience. Get the doubts they hold and the proof and claim strength that settle them."
+  task: understand-customers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs proof against doubts for one audience."
+  inputs: [ { type: copy_draft, required: true }, { type: persona, required: false } ]
+  outputs: [ { type: objection_map } ]
+"sickn33/agentic-awesome-skills:skills/tune-monitor":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/turborepo-caching":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/turn-this-into-a-thread":
+  name: X thread writer
+  summary: "Give it a long idea, transcript or draft. Get an X thread where every post stands on its own."
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a set thread shape."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: prateeks367
+  author_url: https://github.com/prateeks367
+"sickn33/agentic-awesome-skills:skills/tutorial-engineer":
+  skip: "Thin or generic: a short overview with little a good AI does not already know."
+"sickn33/agentic-awesome-skills:skills/twilio-communications":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/twitter-automation":
+  skip: "Only routes to the paid Rube MCP (Composio) service, so it adds little beyond that product."
+"sickn33/agentic-awesome-skills:skills/typescript-advanced-types":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/typescript-expert":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/typescript-pro":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/ui-a11y":
+  skip: "Only works with the StyleSeed design system's own files and commands."
+"sickn33/agentic-awesome-skills:skills/ui-component":
+  skip: "Only works with the StyleSeed design system's own files and commands."
+"sickn33/agentic-awesome-skills:skills/ui-from-screenshot":
+  name: Screenshot to interface builder
+  summary: "Give it a screenshot or mockup. Get matching UI built with your own parts, compared side by side with the image."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It measures the image, builds, then compares."
+  inputs: [ { type: image, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: web_app } ]
+  needs: run code and open a browser
+  author: UXKIN
+  author_url: https://github.com/uxkin
+"sickn33/agentic-awesome-skills:skills/ui-lint":
+  skip: "Only works with the StyleSeed design system's own files and commands."
+"sickn33/agentic-awesome-skills:skills/ui-motion":
+  skip: "Only works with the StyleSeed design system's own files and commands."
+"sickn33/agentic-awesome-skills:skills/ui-page":
+  skip: "Only works with the StyleSeed design system's own files and commands."
+"sickn33/agentic-awesome-skills:skills/ui-pattern":
+  skip: "Only works with the StyleSeed design system's own files and commands."
+"sickn33/agentic-awesome-skills:skills/ui-review":
+  skip: "Only works with the StyleSeed design system's own files and commands."
+"sickn33/agentic-awesome-skills:skills/ui-score":
+  skip: "Only works with the StyleSeed design system's own files and commands."
+"sickn33/agentic-awesome-skills:skills/ui-setup":
+  skip: "Only works with the StyleSeed design system's own files and commands."
+"sickn33/agentic-awesome-skills:skills/ui-skills":
+  skip: "Only works with the StyleSeed design system's own files and commands."
+"sickn33/agentic-awesome-skills:skills/ui-skills-root":
+  skip: "Only works with the StyleSeed design system's own files and commands."
+"sickn33/agentic-awesome-skills:skills/ui-states":
+  name: Screen states designer
+  summary: "Give it a screen. Get the states people hit first: empty, loading, error, offline, no results and success."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It lists each state, then builds each one."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read your project files
+  author: UXKIN
+  author_url: https://github.com/uxkin
+"sickn33/agentic-awesome-skills:skills/ui-tokens":
+  skip: "Only works with the StyleSeed design system's own files and commands."
+"sickn33/agentic-awesome-skills:skills/ui-update":
+  skip: "Only works with the StyleSeed design system's own files and commands."
+"sickn33/agentic-awesome-skills:skills/ui-ux-designer":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/ui-ux-pro-max":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/ui-visual-validator":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/uiverify-triage-visual-changes":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/uncle-bob-craft":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/understand-project-yylo":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/unified-ai-gateway":
+  skip: "Exists mainly to use one paid or hosted service."
+"sickn33/agentic-awesome-skills:skills/uniprot-database":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/unit-testing-test-generate":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/unity-ai-game-creator":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/unity-developer":
+  skip: "Too narrow: tied to one product, chain or stack."
+"sickn33/agentic-awesome-skills:skills/unity-ecs-patterns":
+  skip: "Too narrow: tied to one product, chain or stack."

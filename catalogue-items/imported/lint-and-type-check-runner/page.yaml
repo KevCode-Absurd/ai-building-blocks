@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It runs set commands and reads the results.
+new_slug: lint-and-type-check-runner
+name: Lint and type check runner
+summary: Run it after a change. It runs your project's checks, fixes real failures and reports what did not run.
+job: test-and-fix-code
+headline: Lint and type check runner
+subhead: Run it after a change. It runs your project's checks, fixes real failures and reports what did not run.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run commands in your project.

@@ -1,0 +1,37 @@
+slug: video-route-picker
+name: Video route picker
+summary: "Describe your video. Get the right way to make it chosen first: generate, compose, or edit your footage."
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/video-router
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/video-router
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: video-router
+  author: Orkas-AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: video-router skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/video-router
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Orkas-AI
+    url: https://github.com/Orkas-AI/Orkas-VideoStudio
+    used: Wrote the skill; sickn33 shared it in their collection.

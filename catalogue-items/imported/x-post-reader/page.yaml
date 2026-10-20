@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It fetches one post and formats it.
+new_slug: x-post-reader
+name: X post reader
+summary: Give it an X post link. Get the text, author and numbers as clean data. Collects data from websites.
+job: work-with-files
+headline: X post reader
+subhead: Give it an X post link. Get the text, author and numbers as clean data. Collects data from websites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run commands.

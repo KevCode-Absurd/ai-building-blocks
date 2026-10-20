@@ -1,0 +1,37 @@
+slug: marketplace-access-auditor
+name: Marketplace access auditor
+summary: Point it at a multi-role marketplace app. Get a report of who can see or change what, with evidence from the code.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/marketplace-rbac-audit
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/marketplace-rbac-audit
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: marketplace-rbac-audit
+  author: mosinlshaikh
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: marketplace-rbac-audit skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/marketplace-rbac-audit
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: mosinlshaikh
+    url: https://github.com/mosinlshaikh
+    used: Wrote the skill; sickn33 shared it in their collection.

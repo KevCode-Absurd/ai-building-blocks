@@ -1,0 +1,32 @@
+slug: experiment-result-analyst
+name: Experiment result analyst
+summary: Give it test numbers. Get the right test, sample size and whether the result is real, in plain words.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/statistical-analyst/skills/statistical-analyst
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/statistical-analyst/skills/statistical-analyst
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: statistical-analyst
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: statistical-analyst skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/statistical-analyst/skills/statistical-analyst
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

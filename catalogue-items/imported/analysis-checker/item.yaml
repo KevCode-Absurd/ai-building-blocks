@@ -1,0 +1,32 @@
+slug: analysis-checker
+name: Analysis checker
+summary: Give it an analysis before you share it. Get a check of the method, the math and any bias.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: data/skills/validate-data
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/validate-data
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: validate-data
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: validate-data skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/validate-data
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

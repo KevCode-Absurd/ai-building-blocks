@@ -1,0 +1,37 @@
+slug: mutual-action-plan-builder
+name: Mutual action plan builder
+summary: Name a deal. Get a why-buy case and a dated plan to signature that you can share with the customer.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: tool_connection
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/close-plan
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/close-plan
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: close-plan
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: close-plan skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/close-plan
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

@@ -1,0 +1,37 @@
+slug: forecast-narrative-writer
+name: Forecast narrative writer
+summary: "Ask for your forecast. Get a commit, best case and pipeline story: what is closing, at risk and changed."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/forecast
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/forecast
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: forecast
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: forecast skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/forecast
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

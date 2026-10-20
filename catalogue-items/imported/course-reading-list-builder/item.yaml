@@ -1,0 +1,34 @@
+slug: course-reading-list-builder
+name: Course reading list builder
+summary: Give it a course syllabus. Get a Word reading list of recent peer-reviewed papers for each section. Needs a paid Consensus account.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+warnings:
+  - paid:Consensus
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: research/syllabus/skills/syllabus
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/research/syllabus/skills/syllabus
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: syllabus
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: syllabus skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/research/syllabus/skills/syllabus
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: long-goal-coordinator
+name: Long-goal coordinator
+summary: Give it a goal that takes days. Get helpers and schedules set up to work on it.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Matt Pocock
+  repo: mattpocock/skills
+  path: skills/in-progress/chief-of-staff
+  url: https://github.com/mattpocock/skills/tree/main/skills/in-progress/chief-of-staff
+  licence: MIT
+  licence_file: LICENSE
+  commit: 5beb35b
+  original_name: chief-of-staff
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: chief-of-staff skill
+    by: Matt Pocock
+    url: https://github.com/mattpocock/skills/tree/main/skills/in-progress/chief-of-staff
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

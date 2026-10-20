@@ -1,0 +1,37 @@
+slug: simple-code-coach
+name: Simple code coach
+summary: Write code with it. Get assumptions stated, the smallest change made and only what you asked for.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: code_change
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/karpathy-coder/skills/karpathy-coder
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/karpathy-coder/skills/karpathy-coder
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: karpathy-coder
+  author: claude-code-skills collection
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: karpathy-coder skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/karpathy-coder/skills/karpathy-coder
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: claude-code-skills collection
+    url: https://github.com/alirezarezvani/claude-skills
+    used: Wrote the skill; Alireza Rezvani shared it in their collection.

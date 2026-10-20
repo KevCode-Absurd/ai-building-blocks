@@ -1,0 +1,37 @@
+slug: marketing-content-drafter
+name: Marketing content drafter
+summary: Say what you need. Get a blog post, social post, newsletter, page or press release with headline options.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: false
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: marketing/skills/draft-content
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing/skills/draft-content
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: draft-content
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: draft-content skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing/skills/draft-content
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

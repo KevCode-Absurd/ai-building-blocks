@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It infers roles and mood from records.
+new_slug: deal-stakeholder-mapper
+name: Deal stakeholder mapper
+summary: Name a deal. Get the people in it, their influence and mood, who is missing and how to reach them.
+job: sell-and-negotiate
+headline: Deal stakeholder mapper
+subhead: Name a deal. Get the people in it, their influence and mood, who is missing and how to reach them.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your CRM, email and calendar.

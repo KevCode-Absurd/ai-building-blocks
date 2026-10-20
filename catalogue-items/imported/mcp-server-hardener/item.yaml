@@ -1,0 +1,37 @@
+slug: mcp-server-hardener
+name: MCP server hardener
+summary: Point it at an MCP server you run. Get a checklist of fixes for transport, auth, access and logging.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/mcp-server-security
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/mcp-server-security
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: mcp-server-security
+  author: BagelHole
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mcp-server-security skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/mcp-server-security
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: BagelHole
+    url: https://github.com/BagelHole
+    used: Wrote the skill; sickn33 shared it in their collection.

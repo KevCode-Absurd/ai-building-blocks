@@ -1,0 +1,32 @@
+slug: jira-project-setup-helper
+name: Jira project setup helper
+summary: Say how your team works. Get Jira projects, workflows, JQL queries and automations set up for it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: project-management/skills/jira-expert
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/project-management/skills/jira-expert
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: jira-expert
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: jira-expert skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/project-management/skills/jira-expert
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

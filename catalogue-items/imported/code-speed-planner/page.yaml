@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It must reason about cost before writing any code.
+new_slug: code-speed-planner
+name: Code speed planner
+summary: Before it writes loops or queries, it states the best approach and cost. Get code that avoids slow patterns.
+job: build-software
+headline: Code speed planner
+subhead: Before it writes loops or queries, it states the best approach and cost. Get code that avoids slow patterns.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

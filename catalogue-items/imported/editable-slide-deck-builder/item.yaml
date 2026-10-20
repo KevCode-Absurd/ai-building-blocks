@@ -1,0 +1,39 @@
+slug: editable-slide-deck-builder
+name: Editable slide deck builder
+summary: Give it your story and sources. Get a PowerPoint deck with real editable text, tables and charts, plus a quality check.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: brief
+    required: true
+outputs:
+  - type: slide_deck
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/pptx-deck-creation
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pptx-deck-creation
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: pptx-deck-creation
+  author: kimtth
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pptx-deck-creation skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pptx-deck-creation
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: kimtth
+    url: https://github.com/kimtth
+    used: Wrote the skill; sickn33 shared it in their collection.

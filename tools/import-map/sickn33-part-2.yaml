@@ -1,0 +1,478 @@
+# sickn33/agentic-awesome-skills, part 2 of 14. Kept: 11 useful, distinct skills. The rest are single-product SDK notes, thin personas, copies of well-known sources or services.
+"sickn33/agentic-awesome-skills:skills/app-store-optimization":
+  skip: "Same job as the app store listing optimiser we take from coreyhaines31/marketingskills."
+"sickn33/agentic-awesome-skills:skills/appdeploy":
+  skip: "Built around one paid or hosted service, so it mainly sends you to that service."
+"sickn33/agentic-awesome-skills:skills/appium-skill":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/apple-container":
+  skip: "Works only with one product, server or private setup, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/apple-notes-search":
+  skip: "Works only with one product, server or private setup, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/application-performance-performance-optimization":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/applicationinsights-web-ts":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/architect-review":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/architecture":
+  skip: "Same job as the decision record writer we take from addyosmani/agent-skills."
+"sickn33/agentic-awesome-skills:skills/architecture-decision-records":
+  skip: "Same job as the decision record writer we take from addyosmani/agent-skills."
+"sickn33/agentic-awesome-skills:skills/architecture-patterns":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/architecture-review":
+  skip: "Works only with one product, server or private setup, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/arcmira-find-quotes":
+  skip: "Built around one paid or hosted service, so it mainly sends you to that service."
+"sickn33/agentic-awesome-skills:skills/argocd-gitops":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/arm-cortex-expert":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/arm-templates":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/arrowspace":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/article-illustrations":
+  skip: "Tied to one character brand (Grav), so it is not useful for other people."
+"sickn33/agentic-awesome-skills:skills/artifact-yylo":
+  skip: "Works only with one product, server or private setup, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/asana-automation":
+  skip: "Works only with one product, server or private setup, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/ask-copilot":
+  skip: "Works only with one product, server or private setup, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/ask-human-expert":
+  skip: "Built around one paid or hosted service, so it mainly sends you to that service."
+"sickn33/agentic-awesome-skills:skills/ask-matt":
+  skip: "Routes to Matt Pocock's own skills, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/asset-inventory":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/asset-it-management":
+  skip: "Generates a data register template (CSV, SQL, Notion) from a long fill-in list; thin and not a repeatable job."
+"sickn33/agentic-awesome-skills:skills/astro":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/astropy":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/async-python-patterns":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/atlas-cloud-media":
+  skip: "Built around one paid or hosted service, so it mainly sends you to that service."
+"sickn33/agentic-awesome-skills:skills/atlas-contract":
+  skip: "Works only with one product, server or private setup, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/atlas-ledger":
+  skip: "Works only with one product, server or private setup, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/attack-chain":
+  skip: "Offensive security playbook that needs written authorisation; not safe to list as a general skill."
+"sickn33/agentic-awesome-skills:skills/attack-tree-construction":
+  skip: "Offensive security playbook that needs written authorisation; not safe to list as a general skill."
+"sickn33/agentic-awesome-skills:skills/attendance":
+  skip: "Generates a data register template (CSV, SQL, Notion) from a long fill-in list; thin and not a repeatable job."
+"sickn33/agentic-awesome-skills:skills/audit-log":
+  skip: "Generates a data register template (CSV, SQL, Notion) from a long fill-in list; thin and not a repeatable job."
+"sickn33/agentic-awesome-skills:skills/audit-logging":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/audit-preparation":
+  skip: "Generates a data register template (CSV, SQL, Notion) from a long fill-in list; thin and not a repeatable job."
+"sickn33/agentic-awesome-skills:skills/auri-core":
+  skip: "Works only with one product, server or private setup, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/auto-research":
+  skip: "Mainly sends questions to ChatGPT through a browser; weak and risky for data leaving the machine."
+"sickn33/agentic-awesome-skills:skills/automated-triage":
+  skip: "Works only with one product, server or private setup, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/autonomous-agent-patterns":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/autonomous-agents":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/avalonia-layout-zafiro":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/avalonia-viewmodels-zafiro":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/avalonia-zafiro-development":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/avoid-ai-writing":
+  skip: "Same job as our anti-AI-slop copy editor, and the pattern list is not included."
+"sickn33/agentic-awesome-skills:skills/aws-agentic-ai":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-cdk-development":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-cloudtrail":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-cost-cleanup":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-cost-operations":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-cost-optimization":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-ec2":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-ecs-fargate":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-iam":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-lambda":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-mcp-setup":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-penetration-testing":
+  skip: "Offensive security playbook that needs written authorisation; not safe to list as a general skill."
+"sickn33/agentic-awesome-skills:skills/aws-rds":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-s3":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-secrets-manager":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-serverless":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-serverless-eda":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-skills":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-sst-development":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/aws-vpc":
+  skip: "Thin setup notes for one cloud or DevOps product, mostly generic commands."
+"sickn33/agentic-awesome-skills:skills/awt-e2e-testing":
+  skip: "Generic framework or language notes, or a thin persona prompt, with little a library user can act on."
+"sickn33/agentic-awesome-skills:skills/ax-extract-workflow":
+  skip: "Works only with one product, server or private setup, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/axonx":
+  skip: "Works only with one product, server or private setup, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/azd-deployment":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-agents-persistent-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-agents-persistent-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-anomalydetector-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-contentsafety-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-contentsafety-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-contentsafety-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-contentunderstanding-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-document-intelligence-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-document-intelligence-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-formrecognizer-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-language-conversations-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-ml-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-openai-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-projects-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-projects-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-projects-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-projects-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-textanalytics-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-transcription-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-translation-document-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-translation-text-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-translation-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-vision-imageanalysis-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-vision-imageanalysis-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-voicelive-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-voicelive-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-voicelive-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-ai-voicelive-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-aks":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-appconfiguration-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-appconfiguration-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-appconfiguration-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-communication-callautomation-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-communication-callingserver-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-communication-chat-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-communication-common-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-communication-sms-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-compute-batch-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-containerregistry-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-cosmos-db-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-cosmos-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-cosmos-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-cosmos-rust":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-cosmos-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-data-tables-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-data-tables-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-devops":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-eventgrid-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-eventgrid-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-eventgrid-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-eventhub-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-eventhub-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-eventhub-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-eventhub-rust":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-eventhub-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-functions":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-functions-devsec":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-identity-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-identity-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-identity-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-identity-rust":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-identity-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-keyvault":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-keyvault-certificates-rust":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-keyvault-keys-rust":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-keyvault-keys-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-keyvault-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-keyvault-secrets-rust":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-keyvault-secrets-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-maps-search-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-messaging-webpubsub-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-messaging-webpubsubservice-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-mgmt-apicenter-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-mgmt-apicenter-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-mgmt-apimanagement-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-mgmt-apimanagement-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-mgmt-applicationinsights-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-mgmt-arizeaiobservabilityeval-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-mgmt-botservice-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-mgmt-botservice-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-mgmt-fabric-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-mgmt-fabric-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-mgmt-mongodbatlas-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-mgmt-weightsandbiases-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-microsoft-playwright-testing-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-monitor-audit":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-monitor-ingestion-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-monitor-ingestion-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-monitor-opentelemetry-exporter-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-monitor-opentelemetry-exporter-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-monitor-opentelemetry-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-monitor-opentelemetry-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-monitor-query-java":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-monitor-query-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-networking":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-postgres-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-resource-manager-cosmosdb-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-resource-manager-durabletask-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-resource-manager-mysql-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-resource-manager-playwright-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-resource-manager-postgresql-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-resource-manager-redis-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-resource-manager-sql-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-search-documents-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-search-documents-py":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-search-documents-ts":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/azure-security-keyvault-keys-dotnet":
+  skip: "Reference notes for one Azure product or SDK, so it is useful inside that product only."
+"sickn33/agentic-awesome-skills:skills/app-store-changelog":
+  name: App Store release notes writer
+  summary: Point it at your app's code history. Get plain "What's New" notes users can read, based on real changes.
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It groups changes and rewrites them in plain words.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: document}]
+  needs: run code and read your project files
+  author: Dimillian
+  author_url: https://github.com/Dimillian
+"sickn33/agentic-awesome-skills:skills/ask-questions-if-underspecified":
+  name: Requirements question asker
+  summary: Give it a vague request. Get the few questions that matter, with default answers, before any work starts.
+  task: think-and-decide
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It spots gaps and asks a short list of questions.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: feedback_notes}]
+"sickn33/agentic-awesome-skills:skills/assay":
+  name: Web page control tester
+  summary: Point it at a page you just built. Get a report of buttons and controls that do not work.
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: A tool does the testing and the AI reports one result.
+  inputs: [{type: web_app, required: true}]
+  outputs: [{type: test_report}]
+  needs: run code and open a browser
+  author: awss1i
+  author_url: https://github.com/awss1i
+"sickn33/agentic-awesome-skills:skills/audio-transcriber":
+  name: Audio meeting notes writer
+  summary: Give it a recording. Get a written transcript, a short summary and clear meeting notes.
+  task: work-with-audio
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: A speech tool does the hard part and the AI tidies the text.
+  inputs: [{type: audio, required: true}]
+  outputs: [{type: transcript}, {type: meeting_notes}]
+  needs: run code and save files
+"sickn33/agentic-awesome-skills:skills/audit-agent-run-evidence":
+  name: Agent run evidence auditor
+  summary: Give it logs from an AI agent run. Get each success claim checked against real proof, with gaps marked.
+  task: test-and-fix-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: It weighs many records and must not trust the agent's own summary.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: audit_report}]
+"sickn33/agentic-awesome-skills:skills/audit-context-building":
+  name: Code deep reader
+  summary: Point it at code you need to understand. Get a line-by-line map of how it works before you hunt bugs.
+  task: secure-code
+  role: source
+  level: expert
+  thinking: high
+  thinking_why: It reads code closely and builds one mental model.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: document}]
+  needs: read your project files
+"sickn33/agentic-awesome-skills:skills/audit-skills":
+  name: Skill safety checker
+  summary: Give it a skill or bundle before you add it. Get a list of risky code, data leaks and hidden payloads.
+  task: make-skills
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It scans files against a list of risky patterns.
+  inputs: [{type: skill_files, required: true}]
+  outputs: [{type: security_report}]
+  needs: read your project files
+  author: MAIOStudio
+  author_url: https://github.com/MAIOStudio
+"sickn33/agentic-awesome-skills:skills/awareness-stage-mapper":
+  name: Buyer awareness stage mapper
+  summary: Describe your audience and offer. Get where buyers sit, from unaware to ready, and what to say to each.
+  task: understand-customers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It reasons about the buyer's state and picks the message.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"sickn33/agentic-awesome-skills:skills/axiom":
+  name: Hidden assumption auditor
+  summary: Describe a decision or idea. Get its hidden assumptions sorted by how fragile they are, then a rebuilt conclusion.
+  task: think-and-decide
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It must separate fact from belief and rebuild the argument.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: feedback_notes}]
+"sickn33/agentic-awesome-skills:skills/aws-cost-optimizer":
+  name: Cloud bill waste finder
+  summary: Point it at your AWS account. Get idle and unused resources listed, with the savings for each fix.
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It reads cost data and ranks the easy savings.
+  inputs: [{type: spreadsheet, required: false}]
+  outputs: [{type: audit_report}]
+  needs: run code and connect to your AWS account
+"sickn33/agentic-awesome-skills:skills/auth-implementation-patterns":
+  name: Login and access builder
+  summary: Describe your app's users. Get a login and permissions plan, or a review of the one you have.
+  task: secure-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Auth mistakes are costly, so it weighs token, session and access choices.
+  inputs: [{type: codebase, required: false}, {type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: read your project files

@@ -1,0 +1,33 @@
+slug: investor-pitch-scriptwriter
+name: Investor pitch scriptwriter
+summary: Share your startup details. Get pitch scripts from one minute to ten, plus likely investor questions and answers.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: script
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Ferdinando Bons
+  repo: ferdinandobons/startup-skill
+  path: startup-pitch
+  url: https://github.com/ferdinandobons/startup-skill/tree/main/startup-pitch
+  licence: MIT
+  licence_file: LICENSE
+  commit: a5f97c3
+  original_name: startup-pitch
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: startup-pitch skill
+    by: Ferdinando Bons
+    url: https://github.com/ferdinandobons/startup-skill/tree/main/startup-pitch
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

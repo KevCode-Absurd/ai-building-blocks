@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It uses a few set viewer functions.
+new_slug: image-viewer-builder
+name: Image viewer builder
+summary: Give it images and regions to mark. Get a viewer with overlays and masks in MATLAB.
+job: build-software
+headline: Image viewer builder
+subhead: Give it images and regions to mark. Get a viewer with overlays and masks in MATLAB.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with the Image Processing Toolbox.

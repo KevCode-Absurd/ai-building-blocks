@@ -1,0 +1,37 @@
+slug: one-page-marketing-plan-builder
+name: One-page marketing plan builder
+summary: Describe your business. Get a one-page plan that takes people from stranger to loyal fan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Wondel.ai
+  repo: wondelai/skills
+  path: one-page-marketing
+  url: https://github.com/wondelai/skills/tree/main/one-page-marketing
+  licence: MIT
+  licence_file: LICENSE
+  commit: c172996
+  original_name: one-page-marketing
+  author: wondelai
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: one-page-marketing skill
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/one-page-marketing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: wondelai
+    url: https://github.com/wondelai
+    used: Wrote the skill; Wondel.ai shared it in their collection.

@@ -1,0 +1,33 @@
+slug: standing-social-calendar-maker
+name: Standing social calendar maker
+summary: Give it your brand and products. Get a rolling post calendar, captions in your voice and posts ready for approval.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brand_brain
+    required: false
+outputs:
+  - type: plan
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: small-business/skills/social-content-engine
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/social-content-engine
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: social-content-engine
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: social-content-engine skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/social-content-engine
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

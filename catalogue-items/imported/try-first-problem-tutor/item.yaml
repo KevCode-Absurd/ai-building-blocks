@@ -1,0 +1,32 @@
+slug: try-first-problem-tutor
+name: Try-first problem tutor
+summary: Try a hard problem two ways before any teaching. Your AI then builds the lesson from your attempts.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/student-learning/productive-failure-protocol
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/student-learning/productive-failure-protocol
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: productive-failure-protocol
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: productive-failure-protocol skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/student-learning/productive-failure-protocol
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

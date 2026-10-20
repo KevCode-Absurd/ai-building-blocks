@@ -1,0 +1,32 @@
+slug: n8n-workflow-designer
+name: n8n workflow designer
+summary: Describe the automation you want. Get an n8n workflow laid out with a proven pattern, from webhook to schedule.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: tool_connection
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/n8n-workflow-patterns
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/n8n-workflow-patterns
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: n8n-workflow-patterns
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: n8n-workflow-patterns skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/n8n-workflow-patterns
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

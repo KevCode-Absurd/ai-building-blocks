@@ -1,0 +1,32 @@
+slug: assembly-line-balancer
+name: Assembly line balancer
+summary: Give it your work steps and times. Get steps split across stations so none waits or overloads.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/assembly-line-balancing
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/assembly-line-balancing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: assembly-line-balancing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: assembly-line-balancing skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/assembly-line-balancing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

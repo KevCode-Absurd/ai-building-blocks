@@ -1,0 +1,33 @@
+slug: clinical-report-draft-checker
+name: Clinical report draft checker
+summary: Give it de-identified case or trial data. Get a structured report draft and checks for gaps.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: document
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/clinical-reports
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/clinical-reports
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: clinical-reports
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: clinical-reports skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/clinical-reports
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

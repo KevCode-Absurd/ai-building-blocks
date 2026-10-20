@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows set checks but weighs how bad each problem is.
+new_slug: accessibility-checker
+name: Accessibility checker
+summary: Point it at a page or code. Get a ranked list of accessibility problems against WCAG 2.2, and fixes if you ask.
+job: test-and-fix-code
+headline: Accessibility checker
+subhead: Point it at a page or code. Get a ranked list of accessibility problems against WCAG 2.2, and fixes if you ask.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and open a browser.

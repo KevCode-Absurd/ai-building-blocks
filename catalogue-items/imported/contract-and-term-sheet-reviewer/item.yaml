@@ -1,0 +1,32 @@
+slug: contract-and-term-sheet-reviewer
+name: Contract and term sheet reviewer
+summary: Paste a contract or term sheet. Get the risky terms flagged, plain-English meaning and when to call a lawyer.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: c-level-advisor/general-counsel-advisor/skills/general-counsel-advisor
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/general-counsel-advisor/skills/general-counsel-advisor
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: general-counsel-advisor
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: general-counsel-advisor skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/general-counsel-advisor/skills/general-counsel-advisor
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

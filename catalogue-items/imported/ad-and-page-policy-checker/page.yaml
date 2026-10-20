@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It checks copy against a long set of rules.
+new_slug: ad-and-page-policy-checker
+name: Ad and page policy checker
+summary: Paste your ad, page or email. Get policy risks flagged for each platform, with safer rewrites.
+job: check-ads
+headline: Ad and page policy checker
+subhead: Paste your ad, page or email. Get policy risks flagged for each platform, with safer rewrites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

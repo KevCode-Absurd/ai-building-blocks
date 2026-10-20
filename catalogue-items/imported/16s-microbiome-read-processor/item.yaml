@@ -1,0 +1,33 @@
+slug: 16s-microbiome-read-processor
+name: 16S microbiome read processor
+summary: Give it paired 16S reads. Get checked sequence variants and species labels, with the steps kept so you can repeat them.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/qiime2-amplicon
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/qiime2-amplicon
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: qiime2-amplicon
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: qiime2-amplicon skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/qiime2-amplicon
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

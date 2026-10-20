@@ -1,0 +1,37 @@
+slug: backup-and-recovery-planner
+name: Backup and recovery planner
+summary: Describe your systems. Get how much loss you can take, a backup plan and a restore drill to run.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/backup-and-disaster-recovery
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/backup-and-disaster-recovery
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: backup-and-disaster-recovery
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: backup-and-disaster-recovery skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/backup-and-disaster-recovery
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

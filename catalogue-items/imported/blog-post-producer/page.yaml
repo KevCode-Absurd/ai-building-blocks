@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It follows a set pipeline but makes many writing choices.
+new_slug: blog-post-producer
+name: Blog post producer
+summary: Give it a topic. Get a researched, edited blog post or guide that is ready to publish.
+job: write-and-tell-stories
+headline: Blog post producer
+subhead: Give it a topic. Get a researched, edited blog post or guide that is ready to publish.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

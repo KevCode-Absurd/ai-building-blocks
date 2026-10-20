@@ -1,0 +1,37 @@
+slug: paper-research-assistant
+name: Paper research assistant
+summary: Name a topic or paper. Get a literature scan, a deep read or a reading list from Semantic Scholar and arXiv.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/papers-skill
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/papers-skill
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: papers-skill
+  author: xwmxcz
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: papers-skill skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/papers-skill
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: xwmxcz
+    url: https://github.com/xwmxcz
+    used: Wrote the skill; sickn33 shared it in their collection.

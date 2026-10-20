@@ -1,0 +1,32 @@
+slug: docker-setup-builder
+name: Docker setup builder
+summary: Point it at your app. Get a lean, safe Dockerfile and compose file that run your project.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/docker-development/skills/docker-development
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/docker-development/skills/docker-development
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: docker-development
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: docker-development skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/docker-development/skills/docker-development
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: event-marketing-planner
+name: Event marketing planner
+summary: Say the event type and goal. Get a plan to fill seats, follow up and turn attendees into pipeline.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/events
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/events
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: events
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: events skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/events
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

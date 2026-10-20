@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It runs several methods and must judge which assumptions matter.
+new_slug: valuation-method-comparer
+name: Valuation method comparer
+summary: Give it a company's numbers. Get a value range from DCF, peer multiples and past deals, with the key assumptions.
+job: money-and-investing
+headline: Valuation method comparer
+subhead: Give it a company's numbers. Get a value range from DCF, peer multiples and past deals, with the key assumptions.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

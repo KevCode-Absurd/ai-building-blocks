@@ -1,0 +1,596 @@
+# sickn33/agentic-awesome-skills, part 4 of 14. Strict pick: only distinct, well-made skills kept.
+"sickn33/agentic-awesome-skills:skills/cloudflare-r2":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/cloudflare-security-audit":
+  name: Code vulnerability auditor
+  summary: "Point it at code you own. Get proven, exploitable bugs with steps to reproduce and fixes."
+  task: secure-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "It must test each finding before reporting it."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run code and read your project files
+  author: Cloudflare
+  author_url: https://github.com/cloudflare/security-audit-skill
+"sickn33/agentic-awesome-skills:skills/cloudflare-workers":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/cloudflare-workers-expert":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/cloudflare-zero-trust":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/cloudformation":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/cloudformation-best-practices":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/cloudish":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/cmux":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/co-marketing":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/cockney":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/coda-automation":
+  skip: "Thin wrapper that routes through the Composio Rube connector for one app."
+"sickn33/agentic-awesome-skills:skills/code-audit":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/code-documentation-code-explain":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/code-documentation-doc-generate":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/code-of-conduct":
+  skip: "One of a family of fill-in registers for one product, thin on method."
+"sickn33/agentic-awesome-skills:skills/code-polish":
+  name: Code comment cleaner
+  summary: "Give it a code file. Get clear, professional comments and tidy-ups, with the logic left untouched."
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It rewrites comments under one strict rule: never change behaviour."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read and edit your project files
+"sickn33/agentic-awesome-skills:skills/code-refactoring-context-restore":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/code-refactoring-refactor-clean":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/code-refactoring-tech-debt":
+  name: Tech debt prioritiser
+  summary: "Point it at your code. Get a ranked list of debt that slows you down, with cost and small fixes."
+  task: build-software
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs code and change history to rank what to fix."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: read your project files and history
+"sickn33/agentic-awesome-skills:skills/code-review-ai-ai-review":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/code-review-and-quality":
+  skip: "Copy of a skill from a well-known source (addyosmani, mattpocock or obra), which we take from the source."
+"sickn33/agentic-awesome-skills:skills/code-review-checklist":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/code-review-excellence":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/code-review-sensei":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/code-reviewer":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/code-showcase-core-components":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/code-showcase-react-ui-patterns":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/code-showcase-systematic-debugging":
+  skip: "Copy of a skill from a well-known source (addyosmani, mattpocock or obra), which we take from the source."
+"sickn33/agentic-awesome-skills:skills/code-showcase-testing-patterns":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/code-simplification":
+  skip: "Copy of a skill from a well-known source (addyosmani, mattpocock or obra), which we take from the source."
+"sickn33/agentic-awesome-skills:skills/code-simplifier":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/codebase-audit-pre-push":
+  name: Pre-push repo cleaner
+  summary: "Point it at your project. Get junk files, dead code and leaked secrets found and fixed before you publish."
+  task: ship-and-host
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads each file against a set checklist."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read and edit your project files
+"sickn33/agentic-awesome-skills:skills/codebase-cleanup-deps-audit":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/codebase-cleanup-refactor-clean":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/codebase-cleanup-tech-debt":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/codebase-design":
+  skip: "Copy of a skill from a well-known source (addyosmani, mattpocock or obra), which we take from the source."
+"sickn33/agentic-awesome-skills:skills/codebase-onboarding":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/codebase-to-wordpress-converter":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/codex-delegate":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/codex-fable5":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/codex-profiles":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/codex-review":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/codex-subagent":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/cohesivity":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/cold-email":
+  skip: "Copy of a coreyhaines31/marketingskills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/comfyui-gateway":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/commandcode-delegate":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/commit":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/community-building":
+  name: Developer community builder
+  summary: "Describe your developers. Get a plan for channels, onboarding and events that grows a Discord or forum."
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It fits known community methods to your audience."
+  inputs: [ { type: persona, required: false }, { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  author: jonathimer
+  author_url: https://github.com/jonathimer/devmarketing-skills
+"sickn33/agentic-awesome-skills:skills/company-email-accounts":
+  skip: "One of a family of fill-in registers for one product, thin on method."
+"sickn33/agentic-awesome-skills:skills/competency-matrix":
+  skip: "One of a family of fill-in registers for one product, thin on method."
+"sickn33/agentic-awesome-skills:skills/competitive-landscape":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/competitor-ad-intelligence":
+  name: Competitor ad teardown writer
+  summary: Name your rivals. Get a report on their public ads and landing pages, with proof apart from guesses. Collects data from websites.
+  task: study-competitors
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It has to judge patterns and keep facts apart from guesses."
+  inputs: [ { type: competitor_set, required: true } ]
+  outputs: [ { type: ad_breakdowns }, { type: audit_report } ]
+  needs: browse the web
+  author: gooseworks-ai
+  author_url: https://github.com/gooseworks-ai/goose-skills
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/competitor-alternatives":
+  skip: "Copy of a coreyhaines31/marketingskills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/competitor-analysis":
+  skip: Relies on paid remote browser sessions to get past bot-detecting pages, which breaks our bot-check rule.
+"sickn33/agentic-awesome-skills:skills/competitor-profiling":
+  skip: "Copy of a coreyhaines31/marketingskills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/competitor-tracking":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/compile-knowledge":
+  name: Notes wiki builder
+  summary: "Give it what you learned. Get small linked notes and an index, so your AI remembers it next time."
+  task: organise-work
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It decides what is worth keeping and where each fact goes."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read and save files
+  author: 5dive-ai
+  author_url: https://github.com/5dive-ai/skills
+"sickn33/agentic-awesome-skills:skills/complexity-cuts":
+  name: Slow code speeder
+  summary: "Give it slow code. Get a faster version, one change at a time, with tests run before and after."
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows a strict loop of change, test and undo."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+  author: morsechimwai
+  author_url: https://github.com/morsechimwai/lemmaly
+"sickn33/agentic-awesome-skills:skills/composition-patterns":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/comprehensive-review-full-review":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/comprehensive-review-pr-enhance":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/computer-use-agents":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/computer-vision-expert":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/concise-planning":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/conductor-implement":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/conductor-manage":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/conductor-new-track":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/conductor-revert":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/conductor-setup":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/conductor-status":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/conductor-validator":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/confluence-automation":
+  skip: "Thin wrapper that routes through the Composio Rube connector for one app."
+"sickn33/agentic-awesome-skills:skills/connection-auth-rules":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/constant-time-analysis":
+  name: Timing leak checker
+  summary: "Point it at crypto code. Get a list of spots where run time could leak secret keys, with fixes."
+  task: secure-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "It needs close reading of low-level code and compiled output."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run code and read your project files
+  author: Trail of Bits
+  author_url: https://github.com/trailofbits/skills
+"sickn33/agentic-awesome-skills:skills/constraint-driven-development":
+  skip: "Copy of a skill from a well-known source (addyosmani, mattpocock or obra), which we take from the source."
+"sickn33/agentic-awesome-skills:skills/container-hardening":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/container-registries":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/container-scanning":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/container-security-hardening":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/content-creator":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/content-marketer":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/content-strategy":
+  skip: "Copy of a coreyhaines31/marketingskills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/context-agent":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/context-compression":
+  name: Long chat summariser
+  summary: "Give it a long AI session. Get a structured summary that keeps files, decisions and next steps."
+  task: set-up-ai
+  role: compress
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows a set summary shape but must judge what matters."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+  author: Agent Skills for Context Engineering Contributors
+  author_url: https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering
+"sickn33/agentic-awesome-skills:skills/context-degradation":
+  name: Long chat failure diagnoser
+  summary: "Describe how your AI gets worse in long chats. Get the likely cause and a fix to try."
+  task: set-up-ai
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It matches symptoms to known failure patterns."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  author: Agent Skills for Context Engineering Contributors
+  author_url: https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering
+"sickn33/agentic-awesome-skills:skills/context-driven-development":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/context-engineering":
+  skip: "Copy of a skill from a well-known source (addyosmani, mattpocock or obra), which we take from the source."
+"sickn33/agentic-awesome-skills:skills/context-fundamentals":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/context-guardian":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/context-kit":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/context-management-context-restore":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/context-management-context-save":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/context-manager":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/context-optimization":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/context-window-management":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/context7-auto-research":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/contract-document-renewal":
+  skip: "One of a family of fill-in registers for one product, thin on method."
+"sickn33/agentic-awesome-skills:skills/conversation-memory":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/convertkit-automation":
+  skip: "Thin wrapper that routes through the Composio Rube connector for one app."
+"sickn33/agentic-awesome-skills:skills/convex":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/convex-backend":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/copilot-delegate":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/copilot-sdk":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/copy-editing":
+  skip: "Copy of a coreyhaines31/marketingskills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/copywriting":
+  name: Honest conversion copywriter
+  summary: "Give it your offer and reader. Get landing page or email copy with clear next steps and no made-up claims."
+  task: write-landing-page
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It confirms a brief first, then writes within set rules."
+  inputs: [ { type: brief, required: true }, { type: brand_brain, required: false } ]
+  outputs: [ { type: copy_draft } ]
+"sickn33/agentic-awesome-skills:skills/copywriting-psychologist":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/core-components":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/cost-optimization":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/course-upskilling-requests":
+  skip: "One of a family of fill-in registers for one product, thin on method."
+"sickn33/agentic-awesome-skills:skills/court":
+  name: Idea trial jury
+  summary: "Give it a plan or claim. Get a verdict from a prosecutor, a defender and 12 jurors, plus what would flip it."
+  task: think-and-decide
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It runs many separate arguments and weighs them against each other."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  needs: run code and start helper agents
+  author: Alex Chen
+  author_url: https://github.com/alexyc9381/court-skill
+"sickn33/agentic-awesome-skills:skills/cowork-to-code-bridge":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/cpp-pro":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/cqrs-implementation":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/create-branch":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/create-issue-gate":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/create-pr":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/cred-omega":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/credit-cycle-analysis":
+  skip: "One of a family of fill-in registers for one product, thin on method."
+"sickn33/agentic-awesome-skills:skills/crewai":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/cro":
+  skip: "Copy of a coreyhaines31/marketingskills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/cron-doctor":
+  name: Schedule timing checker
+  summary: "Give it a cron schedule. Get a plain-English meaning, the next run times, and any silent mistakes that stop or repeat it."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "It runs a set check and reports what it finds."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: test_report } ]
+  needs: run code
+  author: takeaseat
+  author_url: https://github.com/takeaseatventure/devops-skills
+"sickn33/agentic-awesome-skills:skills/cross-chain-relayer-audit":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/cross-platform-contract-propagation-audit":
+  name: Shared field change checker
+  summary: "Name a changed field or flag. Get the places it is missing or read differently, across database, API and apps."
+  task: test-and-fix-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "It traces one change through many systems and compares them."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: read your project files
+  author: Whxuan0701
+  author_url: https://github.com/Whxuan0701
+"sickn33/agentic-awesome-skills:skills/crossframe":
+  skip: "Chinese-language suite built around one author's own method, so it is too narrow to list."
+"sickn33/agentic-awesome-skills:skills/crossframe-casebook":
+  skip: "Chinese-language suite built around one author's own method, so it is too narrow to list."
+"sickn33/agentic-awesome-skills:skills/crossframe-critical":
+  skip: "Chinese-language suite built around one author's own method, so it is too narrow to list."
+"sickn33/agentic-awesome-skills:skills/crossframe-debate":
+  skip: "Chinese-language suite built around one author's own method, so it is too narrow to list."
+"sickn33/agentic-awesome-skills:skills/crossframe-dialogue":
+  skip: "Chinese-language suite built around one author's own method, so it is too narrow to list."
+"sickn33/agentic-awesome-skills:skills/crossframe-essay":
+  skip: "Chinese-language suite built around one author's own method, so it is too narrow to list."
+"sickn33/agentic-awesome-skills:skills/crossframe-notebook":
+  skip: "Chinese-language suite built around one author's own method, so it is too narrow to list."
+"sickn33/agentic-awesome-skills:skills/crossframe-org":
+  skip: "Chinese-language suite built around one author's own method, so it is too narrow to list."
+"sickn33/agentic-awesome-skills:skills/crossframe-public":
+  skip: "Chinese-language suite built around one author's own method, so it is too narrow to list."
+"sickn33/agentic-awesome-skills:skills/crossframe-review":
+  skip: "Chinese-language suite built around one author's own method, so it is too narrow to list."
+"sickn33/agentic-awesome-skills:skills/crossframe-suite":
+  skip: "Chinese-language suite built around one author's own method, so it is too narrow to list."
+"sickn33/agentic-awesome-skills:skills/crossframe-teach":
+  skip: "Chinese-language suite built around one author's own method, so it is too narrow to list."
+"sickn33/agentic-awesome-skills:skills/crypto-bd-agent":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/csharp-pro":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/csv-manual-export":
+  skip: "One of a family of fill-in registers for one product, thin on method."
+"sickn33/agentic-awesome-skills:skills/cucumber-skill":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/culture-retention":
+  skip: "One of a family of fill-in registers for one product, thin on method."
+"sickn33/agentic-awesome-skills:skills/curlshot":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/cursor-delegate":
+  skip: "Only works with one coding tool's internals, or hands work to that tool."
+"sickn33/agentic-awesome-skills:skills/customer-psychographic-profiler":
+  name: Customer motivation profiler
+  summary: "Describe your buyer. Get a profile of their wants, fears, identity and trust doubts to use in copy and offers."
+  task: understand-customers
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads what you know and infers the deeper drivers."
+  inputs: [ { type: voc_reviews, required: false }, { type: brand_brain, required: false } ]
+  outputs: [ { type: persona } ]
+"sickn33/agentic-awesome-skills:skills/customer-research":
+  skip: "Copy of a coreyhaines31/marketingskills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/customer-support":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/customs-trade-compliance":
+  name: Import and export paperwork advisor
+  summary: "Describe your goods and route. Get tariff codes, duty options and the papers customs will ask for."
+  task: check-contracts
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Rules vary by country and each answer needs careful reasoning."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/cv-generator":
+  name: CV writer
+  summary: "Give it your background and a job post. Get a paste-ready CV that passes applicant filters, plus a flaw report."
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It merges sources and rewrites to fit the job."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+  author: WHOISABHISHEKADHIKARI
+  author_url: https://github.com/WHOISABHISHEKADHIKARI
+"sickn33/agentic-awesome-skills:skills/cyber-audit":
+  name: Advisory exposure checker
+  summary: "Name a breach or package advisory. Get a read-only check of your machine and projects, saved as a report."
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It runs set read-only checks and writes up the result."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run read-only commands and save a file
+  author: davidondrej
+  author_url: https://github.com/davidondrej/skills
+"sickn33/agentic-awesome-skills:skills/cypress-skill":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/daily":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/daily-gift":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/daily-news-report":
+  name: Daily news digest writer
+  summary: Give it a list of news sites. Get a daily report of the best items. Collects data from websites.
+  task: think-and-decide
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It gathers pages, then picks the items worth your time.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: run code and open a browser
+  author: renat
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/dali-short-address-commissioner":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/darkmoon-pentest":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/dast-scanning":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/data-engineer":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/data-engineering-data-driven-feature":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/data-engineering-data-pipeline":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/data-export-engine":
+  skip: "One of a family of fill-in registers for one product, thin on method."
+"sickn33/agentic-awesome-skills:skills/data-privacy-controls":
+  skip: "One of a family of fill-in registers for one product, thin on method."
+"sickn33/agentic-awesome-skills:skills/data-quality-frameworks":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/data-scientist":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/data-storytelling":
+  name: Data story writer
+  summary: "Give it your numbers. Get a clear story with the point, the proof and the next step for your readers."
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks the point, then shapes the numbers around it."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: document } ]
+"sickn33/agentic-awesome-skills:skills/data-structure-protocol":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/database":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/database-admin":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/database-architect":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/database-backups":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/database-cloud-optimization-cost-optimize":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/database-design":
+  name: Database design guide
+  summary: "Describe your app. Get a database pick, a schema, indexes and a safe migration plan."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads only the guide parts your request needs, then decides."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read your project files
+"sickn33/agentic-awesome-skills:skills/database-migration":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/database-migrations-migration-observability":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/database-migrations-sql-migrations":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/database-optimizer":
+  skip: "Persona prompt, scraper, niche tool or near-copy of a better skill we list, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/database-security":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/datacircle":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/datadog":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/datadog-automation":
+  skip: "Thin wrapper that routes through the Composio Rube connector for one app."
+"sickn33/agentic-awesome-skills:skills/day-book":
+  skip: "One of a family of fill-in registers for one product, thin on method."
+"sickn33/agentic-awesome-skills:skills/dbos-golang":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/dbos-python":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/dbos-typescript":
+  skip: "Tied to one vendor product, or a general summary of it, so it adds little beyond the product's own guides."
+"sickn33/agentic-awesome-skills:skills/dbt-transformation-patterns":
+  skip: "Thin, generic or too narrow, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/ddd-context-mapping":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/ddd-strategic-design":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/ddd-tactical-patterns":
+  skip: "Thin, generic, or a near-copy of another skill in this repo, so it is not worth listing."

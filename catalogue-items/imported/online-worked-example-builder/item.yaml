@@ -1,0 +1,38 @@
+slug: online-worked-example-builder
+name: Online worked example builder
+summary: Give it a skill. Get step-by-step worked examples for online lessons, with help that fades as students learn.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/ai-learning-science/digital-worked-example-sequence
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/ai-learning-science/digital-worked-example-sequence
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: digital-worked-example-sequence
+  author: Gareth Manning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: digital-worked-example-sequence skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/ai-learning-science/digital-worked-example-sequence
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Gareth Manning
+    url: https://github.com/GarethManning
+    used: Wrote the skill; Gareth Manning shared it in their collection.

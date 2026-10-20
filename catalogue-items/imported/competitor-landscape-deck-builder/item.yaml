@@ -1,0 +1,32 @@
+slug: competitor-landscape-deck-builder
+name: Competitor landscape deck builder
+summary: Name a company and its rivals. Get a deck on market position, side by side comparison and what it means.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: slide_deck
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/financial-analysis/skills/competitive-analysis
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/competitive-analysis
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: competitive-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: competitive-analysis skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/competitive-analysis
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

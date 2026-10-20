@@ -1,0 +1,32 @@
+slug: interface-designer
+name: Interface designer
+summary: Describe the page or app. Get a built interface with a clear look that does not feel like a template.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/skills
+  path: skills/frontend-design
+  url: https://github.com/anthropics/skills/tree/main/skills/frontend-design
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: dbd4588
+  original_name: frontend-design
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: frontend-design skill
+    by: Anthropic
+    url: https://github.com/anthropics/skills/tree/main/skills/frontend-design
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

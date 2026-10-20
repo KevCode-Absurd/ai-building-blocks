@@ -1,0 +1,35 @@
+slug: product-demand-researcher
+name: Product demand researcher
+summary: Give it a product idea. Get the pain points, objections and buying signals people post, with links. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: voc_reviews
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:ScrapeCreators
+source:
+  by: ScrapeCreators
+  repo: ScrapeCreators/social-media-research-skills
+  path: skills/product-demand-research
+  url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/product-demand-research
+  licence: MIT
+  licence_file: LICENSE
+  commit: 64ba7b4
+  original_name: product-demand-research
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: product-demand-research skill
+    by: ScrapeCreators
+    url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/product-demand-research
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

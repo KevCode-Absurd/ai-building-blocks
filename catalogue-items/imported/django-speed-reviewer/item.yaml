@@ -1,0 +1,32 @@
+slug: django-speed-reviewer
+name: Django speed reviewer
+summary: Point it at a Django project. Get slow queries and N+1 problems found, with the fix for each.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/django-perf-review
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/django-perf-review
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: django-perf-review
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: django-perf-review skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/django-perf-review
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

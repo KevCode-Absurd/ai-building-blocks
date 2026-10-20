@@ -1,0 +1,32 @@
+slug: merger-effect-modeler
+name: Merger effect modeler
+summary: Give it two companies and deal terms. Get the effect on earnings per share, cost savings cases and price split.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/investment-banking/skills/merger-model
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/investment-banking/skills/merger-model
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: merger-model
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: merger-model skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/investment-banking/skills/merger-model
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: socratic-explainer
+name: Socratic explainer
+summary: Name a topic. Get it taught through questions, so you reach the idea yourself and remember it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/explain-like-socrates
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/explain-like-socrates
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: explain-like-socrates
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: explain-like-socrates skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/explain-like-socrates
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

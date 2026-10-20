@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It turns a loose idea into a structured spec.
+new_slug: feature-spec-writer
+name: Feature spec writer
+summary: Describe a feature idea. Get a spec with goals, non-goals, success measures and acceptance checks.
+job: build-product
+headline: Feature spec writer
+subhead: Describe a feature idea. Get a spec with goals, non-goals, success measures and acceptance checks.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

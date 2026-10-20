@@ -1,0 +1,37 @@
+slug: crm-deal-updater
+name: CRM deal updater
+summary: Say what changed on a deal. Get a before and after, then the update saved when you accept.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/update-opportunity
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/update-opportunity
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: update-opportunity
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: update-opportunity skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/update-opportunity
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

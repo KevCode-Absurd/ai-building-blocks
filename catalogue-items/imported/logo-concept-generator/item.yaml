@@ -1,0 +1,35 @@
+slug: logo-concept-generator
+name: Logo concept generator
+summary: Describe your brand. Get several logo directions, from wordmarks to symbols, each with the reasoning and how to use it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brand_guide
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: design_direction
+  - type: document
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/logo-design
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/logo-design
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: logo-design
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: logo-design skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/logo-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

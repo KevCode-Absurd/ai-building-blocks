@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It gathers from many pages and writes one clear brief.
+new_slug: notion-research-writer
+name: Notion research writer
+summary: Ask a question. Get a cited brief or comparison built from your Notion pages.
+job: organise-work
+headline: Notion research writer
+subhead: Ask a question. Get a cited brief or comparison built from your Notion pages.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can reach your Notion workspace.

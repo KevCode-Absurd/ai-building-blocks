@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It judges which moments stand alone.
+new_slug: shorts-clip-finder
+name: Shorts clip finder
+summary: Give it a long video transcript. Get the best five moments to clip, each with a new first line.
+job: grow-social
+headline: Shorts clip finder
+subhead: Give it a long video transcript. Get the best five moments to clip, each with a new first line.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

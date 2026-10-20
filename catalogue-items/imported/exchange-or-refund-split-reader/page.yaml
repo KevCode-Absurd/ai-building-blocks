@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It counts returns by outcome.
+new_slug: exchange-or-refund-split-reader
+name: Exchange or refund split reader
+summary: Get how many returns become exchanges, refunds or store credit, and how much revenue you keep.
+job: run-your-store
+headline: Exchange or refund split reader
+subhead: Get how many returns become exchanges, refunds or store credit, and how much revenue you keep.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin (read only).

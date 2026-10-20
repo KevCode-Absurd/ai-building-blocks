@@ -1,0 +1,32 @@
+slug: drug-docking-pose-ranker
+name: Drug docking pose ranker
+summary: Give it a protein and a molecule. Get predicted binding poses ranked by confidence, with checks on each.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/diffdock
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/diffdock
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: diffdock
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: diffdock skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/diffdock
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

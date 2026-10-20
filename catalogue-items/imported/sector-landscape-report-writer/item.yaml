@@ -1,0 +1,32 @@
+slug: sector-landscape-report-writer
+name: Sector landscape report writer
+summary: Name an industry. Get a report on its size, main players, competition and trends.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/equity-research/skills/sector-overview
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/equity-research/skills/sector-overview
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: sector-overview
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: sector-overview skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/equity-research/skills/sector-overview
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

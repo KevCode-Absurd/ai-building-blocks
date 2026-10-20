@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Antenna design balances many linked limits.
+new_slug: antenna-designer
+name: Antenna designer
+summary: Name the frequency and goal. Get an antenna or array designed, with its pattern and fit checked.
+job: build-software
+headline: Antenna designer
+subhead: Name the frequency and goal. Get an antenna or array designed, with its pattern and fit checked.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Antenna Toolbox.

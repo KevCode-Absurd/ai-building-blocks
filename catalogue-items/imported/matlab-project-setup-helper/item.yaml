@@ -1,0 +1,32 @@
+slug: matlab-project-setup-helper
+name: MATLAB project setup helper
+summary: Say how your project is laid out. Get a matlab.toml with paths, dependencies and scripts set up.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/matlab-software-development/matlab-configure-toml-project
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-software-development/matlab-configure-toml-project
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-configure-toml-project
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-configure-toml-project skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-software-development/matlab-configure-toml-project
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

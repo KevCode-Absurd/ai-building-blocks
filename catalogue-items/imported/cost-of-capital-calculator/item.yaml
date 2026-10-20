@@ -1,0 +1,32 @@
+slug: cost-of-capital-calculator
+name: Cost of capital calculator
+summary: Give it a company's debt, equity and market inputs. Get its WACC with cost of equity and debt shown.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/wacc-computation
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/wacc-computation
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: wacc-computation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: wacc-computation skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/wacc-computation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

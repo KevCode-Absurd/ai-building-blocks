@@ -1,0 +1,38 @@
+slug: prototype-to-production-guide
+name: Prototype to production guide
+summary: Give it a working prototype. Get tests, cleaner structure and a plan to make it ready for real users.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Wondel.ai
+  repo: wondelai/skills
+  path: improve-code-quality
+  url: https://github.com/wondelai/skills/tree/main/improve-code-quality
+  licence: MIT
+  licence_file: LICENSE
+  commit: c172996
+  original_name: improve-code-quality
+  author: wondelai
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: improve-code-quality skill
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/improve-code-quality
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: wondelai
+    url: https://github.com/wondelai
+    used: Wrote the skill; Wondel.ai shared it in their collection.

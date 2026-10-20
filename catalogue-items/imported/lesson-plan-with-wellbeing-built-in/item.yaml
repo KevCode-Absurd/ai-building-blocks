@@ -1,0 +1,32 @@
+slug: lesson-plan-with-wellbeing-built-in
+name: Lesson plan with wellbeing built in
+summary: Give it a topic and goals. Get a lesson that teaches the content and builds student wellbeing. Not medical advice.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/wellbeing-motivation-agency/perma-based-lesson-designer
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/wellbeing-motivation-agency/perma-based-lesson-designer
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: perma-based-lesson-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: perma-based-lesson-designer skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/wellbeing-motivation-agency/perma-based-lesson-designer
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

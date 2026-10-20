@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It scores many signals and ranks the fixes.
+new_slug: ai-shopping-readiness-checker
+name: AI shopping readiness checker
+summary: Run it on your store. Get a score for how easily AI shoppers find your products, plus the fix for each gap.
+job: build-websites
+headline: AI shopping readiness checker
+subhead: Run it on your store. Get a score for how easily AI shoppers find your products, plus the fix for each gap.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin.

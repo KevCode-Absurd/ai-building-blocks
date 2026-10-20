@@ -1,0 +1,32 @@
+slug: revenue-recognition-checker
+name: Revenue recognition checker
+summary: Give it a customer contract. Get its promises, price split and timing of revenue under IFRS 15 or ASC 606.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/revenue-recognition
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/revenue-recognition
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: revenue-recognition
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: revenue-recognition skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/revenue-recognition
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

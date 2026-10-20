@@ -1,0 +1,38 @@
+slug: ad-data-quality-checker
+name: Ad data quality checker
+summary: Give it your ad and sales tables. Get nine checks that catch missing spend, duplicates and empty columns.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: wizard7558
+  repo: wizard7558/attribution-skills
+  path: skills/attribution-data-quality-tripwires
+  url: https://github.com/wizard7558/attribution-skills/tree/main/skills/attribution-data-quality-tripwires
+  licence: MIT
+  licence_file: LICENSE
+  commit: bed5a8f
+  original_name: attribution-data-quality-tripwires
+  author: Riley Sorenson
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: attribution-data-quality-tripwires skill
+    by: wizard7558
+    url: https://github.com/wizard7558/attribution-skills/tree/main/skills/attribution-data-quality-tripwires
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Riley Sorenson
+    url: https://github.com/wizard7558
+    used: Wrote the skill; wizard7558 shared it in their collection.

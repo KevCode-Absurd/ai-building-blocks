@@ -1,0 +1,39 @@
+slug: test-plan-writer
+name: Test plan writer
+summary: Describe what you are building. Get a test plan with what to test, at what level and where the gaps are.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: engineering/skills/testing-strategy
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/engineering/skills/testing-strategy
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: testing-strategy
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: testing-strategy skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/engineering/skills/testing-strategy
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

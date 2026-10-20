@@ -1,0 +1,39 @@
+slug: code-correctness-planner
+name: Code correctness planner
+summary: Give it a tricky function. It writes the rules and edge cases first, then code that keeps them.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/invariant-guard
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/invariant-guard
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: invariant-guard
+  author: morsechimwai
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: invariant-guard skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/invariant-guard
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: morsechimwai
+    url: https://github.com/morsechimwai
+    used: Wrote the skill; sickn33 shared it in their collection.

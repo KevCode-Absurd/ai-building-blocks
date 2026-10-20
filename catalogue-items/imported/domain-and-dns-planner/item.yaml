@@ -1,0 +1,37 @@
+slug: domain-and-dns-planner
+name: Domain and DNS planner
+summary: List your domains and sites. Get a DNS layout, redirect rules and a plan for unused names.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/domain-strategy
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/domain-strategy
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: domain-strategy
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: domain-strategy skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/domain-strategy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

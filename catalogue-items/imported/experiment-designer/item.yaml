@@ -1,0 +1,34 @@
+slug: experiment-designer
+name: Experiment designer
+summary: Describe the change you want to test. Get a clear hypothesis, test plan, sample size and a way to read the result.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/ab-testing
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/ab-testing
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: ab-testing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ab-testing skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/ab-testing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

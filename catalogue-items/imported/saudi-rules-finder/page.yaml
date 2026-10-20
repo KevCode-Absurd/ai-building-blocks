@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It picks the rules first, then applies them.
+new_slug: saudi-rules-finder
+name: Saudi rules finder
+summary: Describe your business in Saudi Arabia. Get which Saudi cyber and data rules apply, then the steps for each.
+job: check-contracts
+headline: Saudi rules finder
+subhead: Describe your business in Saudi Arabia. Get which Saudi cyber and data rules apply, then the steps for each.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

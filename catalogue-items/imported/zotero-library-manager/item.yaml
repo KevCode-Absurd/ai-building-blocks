@@ -1,0 +1,32 @@
+slug: zotero-library-manager
+name: Zotero library manager
+summary: Say what to find or tidy in your Zotero library. Get references searched, tagged, sorted or exported as citations.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: source_text
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/pyzotero
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/pyzotero
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: pyzotero
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pyzotero skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/pyzotero
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

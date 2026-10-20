@@ -1,0 +1,32 @@
+slug: marketing-idea-picker
+name: Marketing idea picker
+summary: Describe your product. Get tested marketing ideas matched to your stage and budget.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/marketing-ideas
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-ideas
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: marketing-ideas
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: marketing-ideas skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-ideas
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

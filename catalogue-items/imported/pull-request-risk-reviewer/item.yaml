@@ -1,0 +1,32 @@
+slug: pull-request-risk-reviewer
+name: Pull request risk reviewer
+summary: Give it a pull request. Get issues ranked by severity, security notes and clear review comments.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: code_change
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/pr-review-expert
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/pr-review-expert
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: pr-review-expert
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pr-review-expert skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/pr-review-expert
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

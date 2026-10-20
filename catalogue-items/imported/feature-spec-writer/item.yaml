@@ -1,0 +1,37 @@
+slug: feature-spec-writer
+name: Feature spec writer
+summary: Describe a feature idea. Get a spec with goals, non-goals, success measures and acceptance checks.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: product-management/skills/write-spec
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/write-spec
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: write-spec
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: write-spec skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management/skills/write-spec
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

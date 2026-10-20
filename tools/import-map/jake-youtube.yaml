@@ -1,0 +1,140 @@
+# Jakeschincariol/youtube-agent-skill (MIT)
+"Jakeschincariol/youtube-agent-skill:skills/yt-audit":
+  name: YouTube channel auditor
+  summary: "Give it your channel link or three videos. Get the one fix that matters most, plus what to keep doing."
+  task: grow-social
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It weighs titles, thumbnails and openings to pick one fix."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Jake Schincariol
+  author_url: https://github.com/Jakeschincariol
+"Jakeschincariol/youtube-agent-skill:skills/yt-chapters":
+  name: YouTube chapter writer
+  summary: "Give it your video transcript. Get a chapter list that follows YouTube's rules and shows up on the video."
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It finds the section breaks and writes short titles."
+  needs: run Python code
+  inputs: [ { type: transcript, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Jake Schincariol
+  author_url: https://github.com/Jakeschincariol
+"Jakeschincariol/youtube-agent-skill:skills/yt-comment":
+  name: YouTube comment reply writer
+  summary: "Paste your comments. Get them sorted by what to answer, short replies in your voice, and one comment to pin."
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "Replies are short and follow simple sorting rules."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Jake Schincariol
+  author_url: https://github.com/Jakeschincariol
+"Jakeschincariol/youtube-agent-skill:skills/yt-edit":
+  name: Dead air and retake cutter
+  summary: "Give it your recording transcript. Get a timed list of pauses, fillers and retakes to cut."
+  task: grow-social
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "A script finds the cuts, and the AI only explains them."
+  needs: run Python code
+  inputs: [ { type: transcript, required: true } ]
+  outputs: [ { type: edit_plan, required: true } ]
+  author: Jake Schincariol
+  author_url: https://github.com/Jakeschincariol
+"Jakeschincariol/youtube-agent-skill:skills/yt-package":
+  name: YouTube title and thumbnail checker
+  summary: "Give it your video idea. Get ten titles checked for length and repeats, plus a thumbnail brief for the best."
+  task: grow-social
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It writes options, then picks between them."
+  needs: run Python code
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Jake Schincariol
+  author_url: https://github.com/Jakeschincariol
+"Jakeschincariol/youtube-agent-skill:skills/yt-plan":
+  name: YouTube upload planner
+  summary: "Tell it your free hours. Get a week of uploads with titles, formats and what to drop first."
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It fits ideas to the time you really have."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Jake Schincariol
+  author_url: https://github.com/Jakeschincariol
+"Jakeschincariol/youtube-agent-skill:skills/yt-retention":
+  name: YouTube retention reader
+  summary: "Give it your retention export. Get where viewers leave, what you said then, and the one change to make."
+  task: grow-social
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads a chart and links each drop to your words."
+  needs: run Python code
+  inputs: [ { type: performance_sheet, required: true }, { type: transcript, required: false } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Jake Schincariol
+  author_url: https://github.com/Jakeschincariol
+"Jakeschincariol/youtube-agent-skill:skills/yt-script":
+  name: YouTube script writer
+  summary: "Give it a video idea. Get scored hook options and a full spoken script with what shows on screen."
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: high
+  thinking_why: "A strong opening and clear beats take careful writing."
+  needs: run Python code
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: script, required: true }, { type: hooks, required: true } ]
+  author: Jake Schincariol
+  author_url: https://github.com/Jakeschincariol
+"Jakeschincariol/youtube-agent-skill:skills/yt-seo":
+  name: YouTube description and tags writer
+  summary: "Give it your video. Get a description and tags built around the searches you want to win."
+  task: get-found-in-search
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a fixed layout and checks it against three searches."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Jake Schincariol
+  author_url: https://github.com/Jakeschincariol
+"Jakeschincariol/youtube-agent-skill:skills/yt-shorts":
+  name: Shorts clip finder
+  summary: "Give it a long video transcript. Get the best five moments to clip, each with a new first line."
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It judges which moments stand alone."
+  inputs: [ { type: transcript, required: true } ]
+  outputs: [ { type: shot_list, required: true } ]
+  author: Jake Schincariol
+  author_url: https://github.com/Jakeschincariol
+"Jakeschincariol/youtube-agent-skill:skills/yt-viral":
+  name: YouTube viral video finder
+  summary: "Name your niche. It reads public YouTube pages and ranks videos that beat their channel's usual views."
+  task: grow-social
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It ranks videos by a number, then looks for what they share."
+  needs: run Python code and read public YouTube pages
+  scrapes: true
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: reference_set, required: true } ]
+  author: Jake Schincariol
+  author_url: https://github.com/Jakeschincariol

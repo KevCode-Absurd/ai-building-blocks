@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It checks records against simple rules.
+new_slug: crm-hygiene-auditor
+name: CRM hygiene auditor
+summary: Give it your CRM deals. Get a fix list of missing fields, stale dates and stage mismatches. Changes nothing.
+job: sell-and-negotiate
+headline: CRM hygiene auditor
+subhead: Give it your CRM deals. Get a fix list of missing fields, stale dates and stage mismatches. Changes nothing.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your CRM.

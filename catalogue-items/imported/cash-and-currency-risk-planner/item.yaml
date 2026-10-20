@@ -1,0 +1,32 @@
+slug: cash-and-currency-risk-planner
+name: Cash and currency risk planner
+summary: Give it your cash, debts and currency exposure. Get a liquidity plan and ways to cut rate and exchange risk.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/treasury-management
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/treasury-management
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: treasury-management
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: treasury-management skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/treasury-management
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

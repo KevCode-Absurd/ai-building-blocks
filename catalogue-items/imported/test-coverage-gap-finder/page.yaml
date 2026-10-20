@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It maps the app, then compares it to your tests.
+new_slug: test-coverage-gap-finder
+name: Test coverage gap finder
+summary: Point it at your app. Get every page, part and endpoint listed with what is tested and what is not.
+job: test-and-fix-code
+headline: Test coverage gap finder
+subhead: Point it at your app. Get every page, part and endpoint listed with what is tested and what is not.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

@@ -1,0 +1,37 @@
+slug: research-problem-picker
+name: Research problem picker
+summary: Describe your research ideas. Get help choosing a problem worth pursuing, or why a project is stuck.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: bio-research/skills/scientific-problem-selection
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/bio-research/skills/scientific-problem-selection
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: a266ab8
+  original_name: scientific-problem-selection
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: scientific-problem-selection skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/bio-research/skills/scientific-problem-selection
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

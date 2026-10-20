@@ -1,0 +1,13 @@
+thinking: high
+thinking_why: Small clauses can cost real money, so it reads closely.
+new_slug: software-subscription-terms-checker
+name: Software subscription terms checker
+summary: Give it a software subscription contract. Get renewal traps, price rises, uptime and data terms flagged. A first check, not legal advice.
+job: check-contracts
+headline: Software subscription terms checker
+subhead: Give it a software subscription contract. Get renewal traps, price rises, uptime and data terms flagged. A first check, not legal advice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your own rules for what you will accept.
+  - Where the skill points to /commercial-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.

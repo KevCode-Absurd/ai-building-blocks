@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It asks questions and fills files one at a time.
+new_slug: new-project-planner
+name: New project planner
+summary: Give it a vague app idea. Get eight planning files your AI reads each session to stay on track.
+job: build-product
+headline: New project planner
+subhead: Give it a vague app idea. Get eight planning files your AI reads each session to stay on track.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

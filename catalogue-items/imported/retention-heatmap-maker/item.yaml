@@ -1,0 +1,40 @@
+slug: retention-heatmap-maker
+name: Retention heatmap maker
+summary: Give it signup and activity dates. Get retention by group over time, as a colour-coded grid with a plain reading.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+    required: true
+  - type: audit_report
+    required: false
+uses: []
+origin: imported
+source:
+  by: Nimrod Fisher
+  repo: nimrodfisher/data-analytics-skills
+  path: 03-data-analysis-investigation/cohort-analysis
+  url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/03-data-analysis-investigation/cohort-analysis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9449d36
+  original_name: cohort-analysis
+  author: Nimrod Fisher
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cohort-analysis skill
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/03-data-analysis-investigation/cohort-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher
+    used: Wrote the skill; Nimrod Fisher shared it in their collection.

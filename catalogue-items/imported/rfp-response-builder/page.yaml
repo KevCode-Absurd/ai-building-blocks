@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It sorts requirements by set rules, then drafts answers.
+new_slug: rfp-response-builder
+name: RFP response builder
+summary: Paste an RFP or security questionnaire. Get requirements sorted by must have, a fit score and draft answers.
+job: sell-and-negotiate
+headline: RFP response builder
+subhead: Paste an RFP or security questionnaire. Get requirements sorted by must have, a fit score and draft answers.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

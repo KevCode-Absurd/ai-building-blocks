@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It groups changes and rewrites them in plain words.
+new_slug: app-store-release-notes-writer
+name: App Store release notes writer
+summary: Point it at your app's code history. Get plain "What's New" notes users can read, based on real changes.
+job: write-and-tell-stories
+headline: App Store release notes writer
+subhead: Point it at your app's code history. Get plain "What's New" notes users can read, based on real changes.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

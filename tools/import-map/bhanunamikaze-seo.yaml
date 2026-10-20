@@ -1,0 +1,13 @@
+# Bhanunamikaze/Agentic-SEO-Skill (MIT)
+"Bhanunamikaze/Agentic-SEO-Skill:.":
+  name: SEO auditor
+  summary: Give it a site or page. Get a scored SEO report and ranked fixes. Collects data from websites.
+  task: get-found-in-search
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: A full audit spans many areas and needs careful ranking.
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  needs: run code and reach the web
+  scrapes: true

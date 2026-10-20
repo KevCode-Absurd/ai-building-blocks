@@ -1,0 +1,32 @@
+slug: whisper-speech-transcriber
+name: Whisper speech transcriber
+summary: Give it an audio file. Get a written transcript in 99 languages, or an English translation.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: audio
+    required: true
+outputs:
+  - type: transcript
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 18-multimodal/whisper
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/18-multimodal/whisper
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: whisper
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: whisper skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/18-multimodal/whisper
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

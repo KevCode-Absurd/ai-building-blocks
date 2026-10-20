@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Memory limits and hardware tests call for planning.
+new_slug: microcontroller-code-deployer
+name: Microcontroller code deployer
+summary: Give it MATLAB code and a chip. Get embedded code set up and tested on that hardware.
+job: ship-and-host
+headline: Microcontroller code deployer
+subhead: Give it MATLAB code and a chip. Get embedded code set up and tested on that hardware.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Embedded Coder.

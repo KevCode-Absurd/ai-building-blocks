@@ -1,0 +1,32 @@
+slug: food-supply-chain-planner
+name: Food supply chain planner
+summary: Describe your food business. Get a plan for shelf life, safe handling, tracing and cold storage.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/food-beverage-supply-chain
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/food-beverage-supply-chain
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: food-beverage-supply-chain
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: food-beverage-supply-chain skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/food-beverage-supply-chain
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

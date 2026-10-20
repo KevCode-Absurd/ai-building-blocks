@@ -1,0 +1,40 @@
+slug: docker-compose-setter
+name: Docker Compose setter
+summary: Describe your app services. Get a Docker Compose setup with networks, volumes and settings.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: devops-and-infrastructure/docker-compose-setup
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/devops-and-infrastructure/docker-compose-setup
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: docker-compose-setup
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: docker-compose-setup skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/devops-and-infrastructure/docker-compose-setup
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

@@ -1,0 +1,37 @@
+slug: class-roster-file-checker
+name: Class roster file checker
+summary: Give it a OneRoster CSV set. Get broken links, bad encodings and manifest errors found, with fixes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/oneroster-csv-validator
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/oneroster-csv-validator
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: oneroster-csv-validator
+  author: wwewtech
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: oneroster-csv-validator skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/oneroster-csv-validator
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: wwewtech
+    url: https://github.com/wwewtech
+    used: Wrote the skill; sickn33 shared it in their collection.

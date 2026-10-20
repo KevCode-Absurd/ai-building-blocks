@@ -1,0 +1,594 @@
+# sickn33/agentic-awesome-skills, slice 11 of 14 (product-design to screenshots).
+"sickn33/agentic-awesome-skills:skills/repurpose-into-a-post":
+  name: Long-form post repurposer
+  summary: Give it an article, newsletter or transcript. Get an X or LinkedIn post that works even if nobody clicks.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It picks one strong idea, then writes it for the platform.
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: prateeks367
+  author_url: https://github.com/prateeks367
+"sickn33/agentic-awesome-skills:skills/same-idea-both-platforms":
+  name: Cross-platform post writer
+  summary: Give it one idea. Get an X post and a LinkedIn post that read as written separately.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It rewrites one idea twice, each in its own platform style.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: prateeks367
+  author_url: https://github.com/prateeks367
+"sickn33/agentic-awesome-skills:skills/scarcity-urgency-psychologist":
+  skip: Near-copy of our Honest scarcity and urgency planner, same job and format.
+"sickn33/agentic-awesome-skills:skills/research-prompt":
+  name: Research brief writer
+  summary: Give it a vague research need. Get one clear paragraph a deep-research tool can act on without questions.
+  task: think-and-decide
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows a short set of rules to write one paragraph.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: brief } ]
+  author: davidondrej
+  author_url: https://github.com/davidondrej
+"sickn33/agentic-awesome-skills:skills/rich-elicitation":
+  name: Request clarifier
+  summary: Give it a loose request. Get a few rounds of sharp questions first, so the first draft lands.
+  task: think-and-decide
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: It asks short questions and stops after three rounds.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: brief } ]
+  author: abubakar
+  author_url: https://github.com/abubakar
+"sickn33/agentic-awesome-skills:skills/professional-proofreader":
+  name: Draft proofreader
+  summary: Give it a text or document. Get it back corrected in your own voice, with a log of every change.
+  task: write-and-tell-stories
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It fixes errors line by line without changing meaning.
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: copy_draft }, { type: feedback_notes } ]
+"sickn33/agentic-awesome-skills:skills/progressive-estimation":
+  name: AI-assisted work estimator
+  summary: Give it your tasks and how your team uses AI agents. Get time estimates with likely ranges you can plan on.
+  task: build-software
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It sizes each task, then applies set formulas.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: Enreign
+  author_url: https://github.com/Enreign
+"sickn33/agentic-awesome-skills:skills/runbook-creation":
+  name: On-call runbook writer
+  summary: Describe a service or process. Get a step-by-step runbook that anyone on call can follow under pressure.
+  task: document-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It fills a fixed template with exact steps and checks.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: BagelHole
+  author_url: https://github.com/BagelHole
+"sickn33/agentic-awesome-skills:skills/prompt-injection-defense":
+  name: AI app injection defender
+  summary: Point it at your AI app. Get the weak spots found and layered defences added against hijacked instructions.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It must trace where untrusted text can reach the model.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report }, { type: code_change } ]
+  needs: read your project files
+  author: BagelHole
+  author_url: https://github.com/BagelHole
+"sickn33/agentic-awesome-skills:skills/review-animations":
+  name: Animation reviewer
+  summary: Give it a code change with motion. Get a table of fixes and a clear approve or block verdict.
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It checks each animation against ten fixed standards.
+  inputs: [ { type: code_change, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  needs: read your project files
+  author: Emil Kowalski
+  author_url: https://github.com/emilkowalski
+"sickn33/agentic-awesome-skills:skills/review-swarm":
+  name: Parallel code reviewer
+  summary: Point it at a code change. Get four reviewers working at once and one short list of issues that matter.
+  task: test-and-fix-code
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: It runs several reviewers, then filters their findings.
+  inputs: [ { type: code_change, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  needs: run sub-agents and read your project files
+  author: Dimillian
+  author_url: https://github.com/Dimillian
+"sickn33/agentic-awesome-skills:skills/redesign-existing-projects":
+  name: Interface upgrader
+  summary: Point it at an existing site or app. Get generic design patterns found and fixed, without a rewrite.
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It audits the look first, then applies targeted fixes.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read your project files
+  author: Leonxlnx
+  author_url: https://github.com/Leonxlnx
+"sickn33/agentic-awesome-skills:skills/runaway-guard":
+  name: AI spend limit checker
+  summary: Point it at code that calls paid AI services. Get spending caps and loop limits added before a surprise bill.
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows one fixed rule, no paid call without a written cap.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change }, { type: audit_report } ]
+  needs: read your project files
+  author: morsechimwai
+  author_url: https://github.com/morsechimwai
+"sickn33/agentic-awesome-skills:skills/screenshots":
+  name: App screenshot maker
+  summary: Point it at your running app. Get sharp, high-resolution screenshots ready for Product Hunt, social or your site.
+  task: make-images
+  role: render
+  level: intermediate
+  thinking: low
+  thinking_why: It runs a set script to capture each screen.
+  inputs: [ { type: web_app, required: true } ]
+  outputs: [ { type: image } ]
+  needs: run code and open a browser
+"sickn33/agentic-awesome-skills:skills/resumable-implementation-contracts":
+  name: Multi-session build plan writer
+  summary: Give it a big build request. Get a plan in your repo that any fresh agent can pick up and finish.
+  task: build-software
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: It must split work into tasks with proof of done.
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: plan } ]
+  needs: read and write your project files
+  author: ShianMike
+  author_url: https://github.com/ShianMike
+"sickn33/agentic-awesome-skills:skills/saas-mvp-launcher":
+  name: SaaS MVP roadmap planner
+  summary: Give it your SaaS idea. Get a stack choice, build order and launch checklist you can follow.
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It walks a fixed roadmap and makes a few stack choices.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/saas-pricing-strategist":
+  name: SaaS pricing designer
+  summary: Give it your product and customers. Get a value metric, tier layout and pricing tests to run.
+  task: set-prices
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It applies a pricing framework to your facts.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: yundu-ai
+  author_url: https://github.com/demo112/yunqu-ai-skills
+"sickn33/agentic-awesome-skills:skills/project-skill-audit":
+  name: Project skill finder
+  summary: Point it at a project. Get a short list of skills worth adding or updating, based on how you really work.
+  task: make-skills
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads project history and weighs which routines repeat.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: read your project files and notes
+"sickn33/agentic-awesome-skills:skills/re-create":
+  name: Careful rewrite guard
+  summary: Name a file too rotten to patch. Get a justified delete and rebuild that keeps the behaviour that worked.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It must prove a rewrite is needed and keep old behaviour.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read and write your project files
+"sickn33/agentic-awesome-skills:skills/production-runtime-certification":
+  name: Release proof checker
+  summary: Point it at a deployed service. Get fresh proof across code, CI, database and live routes before you call it ready.
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It gathers evidence from several systems and judges it.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and reach your deployed service
+  author: mosinlshaikh
+  author_url: https://github.com/mosinlshaikh
+"sickn33/agentic-awesome-skills:skills/production-audit":
+  name: Shipped app gap finder
+  summary: Point it at a shipped repo. Get gaps found in database rules, webhooks, secrets, payments and mobile use.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It checks many areas and ranks what could break live.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: read your project files
+  author: commitshow
+  author_url: https://github.com/commitshow
+"sickn33/agentic-awesome-skills:skills/prompt-engineer":
+  name: Prompt improver
+  summary: Give it a rough prompt. Get it rebuilt into a clear, structured prompt using a fitting framework.
+  task: set-up-ai
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It picks a framework and fills it from your request.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: brief } ]
+"sickn33/agentic-awesome-skills:skills/scientific-writing":
+  name: Research paper writer
+  summary: Give it your findings. Get a manuscript in standard sections with checked citations and reporting rules applied.
+  task: write-and-tell-stories
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It needs careful sourcing and strict reporting formats.
+  inputs: [ { type: brief, required: true }, { type: source_text, required: false } ]
+  outputs: [ { type: document } ]
+"sickn33/agentic-awesome-skills:skills/product-design":
+  skip: Persona, wellness or niche skill with no clear repeatable method for our library.
+"sickn33/agentic-awesome-skills:skills/product-inventor":
+  skip: Persona, wellness or niche skill with no clear repeatable method for our library.
+"sickn33/agentic-awesome-skills:skills/product-manager":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/product-manager-toolkit":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/product-marketing":
+  skip: Copy or near-copy of a skill in coreyhaines31/marketingskills, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/product-marketing-context":
+  skip: Copy or near-copy of a skill in coreyhaines31/marketingskills, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/product-photo-studio":
+  skip: Mainly routes to a paid or hosted service, or is promotional.
+"sickn33/agentic-awesome-skills:skills/production-code-audit":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/production-scheduling":
+  skip: Narrow domain skill (science, finance or manufacturing) that needs specialist tools.
+"sickn33/agentic-awesome-skills:skills/programmatic-seo":
+  skip: Copy or near-copy of a skill in coreyhaines31/marketingskills, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/progressive-web-app":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/project-based-performance":
+  skip: Thin small-business register template, region-specific, no distinct method.
+"sickn33/agentic-awesome-skills:skills/project-development":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/project-memory-log":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/project-state-governor":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/projection-patterns":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/projects-work-management":
+  skip: Thin small-business register template, region-specific, no distinct method.
+"sickn33/agentic-awesome-skills:skills/prometheus-configuration":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/prometheus-grafana":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/promotion-upgrade-requests":
+  skip: Thin small-business register template, region-specific, no distinct method.
+"sickn33/agentic-awesome-skills:skills/prompt-caching":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/prompt-engineering":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/prompt-engineering-patterns":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/prompt-library":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/protect-mcp-governance":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/protocol-reverse":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/protocol-reverse-engineering":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/prototype":
+  skip: Copy of a skill from mattpocock/skills, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/public-relations":
+  skip: Copy or near-copy of a skill in coreyhaines31/marketingskills, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/pubmed-database":
+  skip: Narrow domain skill (science, finance or manufacturing) that needs specialist tools.
+"sickn33/agentic-awesome-skills:skills/puppeteer-skill":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/purchase-accounting":
+  skip: Thin small-business register template, region-specific, no distinct method.
+"sickn33/agentic-awesome-skills:skills/push-skill-to-github":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/puzzle-activity-planner":
+  skip: Persona, wellness or niche skill with no clear repeatable method for our library.
+"sickn33/agentic-awesome-skills:skills/pwn-chain":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/pydantic-ai":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/pydantic-models-py":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/pypict-skill":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/pytest-skill":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/python-development":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/python-development-python-scaffold":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/python-fastapi-development":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/python-packaging":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/python-patterns":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/python-performance-optimization":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/python-pptx-generator":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/python-pro":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/python-testing-patterns":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/qiskit":
+  skip: Narrow domain skill (science, finance or manufacturing) that needs specialist tools.
+"sickn33/agentic-awesome-skills:skills/qoder-delegate":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/qrx":
+  skip: Mainly routes to a paid or hosted service, or is promotional.
+"sickn33/agentic-awesome-skills:skills/quality-nonconformance":
+  skip: Narrow domain skill (science, finance or manufacturing) that needs specialist tools.
+"sickn33/agentic-awesome-skills:skills/quant-analyst":
+  skip: Narrow domain skill (science, finance or manufacturing) that needs specialist tools.
+"sickn33/agentic-awesome-skills:skills/quit-sponsor":
+  skip: Persona, wellness or niche skill with no clear repeatable method for our library.
+"sickn33/agentic-awesome-skills:skills/radar-satellite-analysis":
+  skip: Narrow domain skill (science, finance or manufacturing) that needs specialist tools.
+"sickn33/agentic-awesome-skills:skills/radare2":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/radio-sdr":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/radix-ui-design-system":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/rag-engineer":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/rag-implementation":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/rag-infrastructure":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/rag-observability-evals":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/ralph-loop-yylo":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/rayden-code":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/rayden-use":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/rclone-cli":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/react-best-practices":
+  skip: Copy of a well-known vendor skill (Vercel, OpenAI or Remotion), or Remotion-only.
+"sickn33/agentic-awesome-skills:skills/react-component-performance":
+  skip: Copy of a well-known vendor skill (Vercel, OpenAI or Remotion), or Remotion-only.
+"sickn33/agentic-awesome-skills:skills/react-flow-architect":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/react-flow-node-ts":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/react-modernization":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/react-native-architecture":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/react-native-skills":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/react-nextjs-development":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/react-patterns":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/react-state-management":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/react-ui-patterns":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/read-all-adrs":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/readme":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/recallmax":
+  skip: Mainly routes to a paid or hosted service, or is promotional.
+"sickn33/agentic-awesome-skills:skills/receipt-accounting":
+  skip: Thin small-business register template, region-specific, no distinct method.
+"sickn33/agentic-awesome-skills:skills/receiving-code-review":
+  skip: Near-copy of a skill from obra/superpowers, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/recognition-rewards":
+  skip: Thin small-business register template, region-specific, no distinct method.
+"sickn33/agentic-awesome-skills:skills/recon-scope-triage":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/recruitment-pipeline":
+  skip: Thin small-business register template, region-specific, no distinct method.
+"sickn33/agentic-awesome-skills:skills/recsys-pipeline-architect":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/recursive-context-pruning-token-budgeting":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/red-team-tactics":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/red-team-tools":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/reddit-automation":
+  skip: Mainly routes to a paid or hosted service, or is promotional.
+"sickn33/agentic-awesome-skills:skills/redis":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/redis-cli":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/redteam-mindset":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/redteam-report-template":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/reference-builder":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/referral-program":
+  skip: Copy or near-copy of a skill in coreyhaines31/marketingskills, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/rehabilitation-analyzer":
+  skip: Persona, wellness or niche skill with no clear repeatable method for our library.
+"sickn33/agentic-awesome-skills:skills/remote-gpu-trainer":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/remote-work-tracker":
+  skip: Thin small-business register template, region-specific, no distinct method.
+"sickn33/agentic-awesome-skills:skills/remotion":
+  skip: Copy of a well-known vendor skill (Vercel, OpenAI or Remotion), or Remotion-only.
+"sickn33/agentic-awesome-skills:skills/remotion-best-practices":
+  skip: Copy of a well-known vendor skill (Vercel, OpenAI or Remotion), or Remotion-only.
+"sickn33/agentic-awesome-skills:skills/remotion-captions":
+  skip: Copy of a well-known vendor skill (Vercel, OpenAI or Remotion), or Remotion-only.
+"sickn33/agentic-awesome-skills:skills/remotion-create":
+  skip: Copy of a well-known vendor skill (Vercel, OpenAI or Remotion), or Remotion-only.
+"sickn33/agentic-awesome-skills:skills/remotion-docs":
+  skip: Copy of a well-known vendor skill (Vercel, OpenAI or Remotion), or Remotion-only.
+"sickn33/agentic-awesome-skills:skills/remotion-interactivity":
+  skip: Copy of a well-known vendor skill (Vercel, OpenAI or Remotion), or Remotion-only.
+"sickn33/agentic-awesome-skills:skills/remotion-render":
+  skip: Copy of a well-known vendor skill (Vercel, OpenAI or Remotion), or Remotion-only.
+"sickn33/agentic-awesome-skills:skills/render-automation":
+  skip: Mainly routes to a paid or hosted service, or is promotional.
+"sickn33/agentic-awesome-skills:skills/repo-foundation":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/repo-maintainer":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/repo-native-refactor":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/report-writing":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/reports-analytics":
+  skip: Thin small-business register template, region-specific, no distinct method.
+"sickn33/agentic-awesome-skills:skills/requesting-code-review":
+  skip: Near-copy of a skill from obra/superpowers, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/resolving-merge-conflicts":
+  skip: Copy of a skill from mattpocock/skills, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/returns-reverse-logistics":
+  skip: Narrow domain skill (science, finance or manufacturing) that needs specialist tools.
+"sickn33/agentic-awesome-skills:skills/reverse-browser-automation":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/reverse-engineer":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/reverse-engineer-anything":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/reverse-engineering":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/reverse-proxy":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/review-and-simplify-changes":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/review-multi-agent-orchestration":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/revops":
+  skip: Copy or near-copy of a skill in coreyhaines31/marketingskills, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/riffkit":
+  skip: Mainly routes to a paid or hosted service, or is promotional.
+"sickn33/agentic-awesome-skills:skills/risk-manager":
+  skip: Narrow domain skill (science, finance or manufacturing) that needs specialist tools.
+"sickn33/agentic-awesome-skills:skills/risk-metrics-calculation":
+  skip: Narrow domain skill (science, finance or manufacturing) that needs specialist tools.
+"sickn33/agentic-awesome-skills:skills/robius-app-architecture":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/robius-event-action":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/robius-matrix-integration":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/robius-state-management":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/robius-widget-patterns":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/robot-framework-skill":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/routerbase-model-gateway":
+  skip: Mainly routes to a paid or hosted service, or is promotional.
+"sickn33/agentic-awesome-skills:skills/ruby-pro":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/run-deep-swe":
+  skip: Mainly routes to a paid or hosted service, or is promotional.
+"sickn33/agentic-awesome-skills:skills/runapi-cli":
+  skip: Mainly routes to a paid or hosted service, or is promotional.
+"sickn33/agentic-awesome-skills:skills/rust-async-patterns":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/rust-pro":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/saas-multi-tenant":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/saas-security-posture":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/saga-orchestration":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/salary-benchmarking":
+  skip: Thin small-business register template, region-specific, no distinct method.
+"sickn33/agentic-awesome-skills:skills/salary-wage-accounting":
+  skip: Thin small-business register template, region-specific, no distinct method.
+"sickn33/agentic-awesome-skills:skills/sales-accounting":
+  skip: Thin small-business register template, region-specific, no distinct method.
+"sickn33/agentic-awesome-skills:skills/sales-automator":
+  skip: Copy or near-copy of a skill in coreyhaines31/marketingskills, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/sales-enablement":
+  skip: Copy or near-copy of a skill in coreyhaines31/marketingskills, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/salesforce-automation":
+  skip: Mainly routes to a paid or hosted service, or is promotional.
+"sickn33/agentic-awesome-skills:skills/salesforce-development":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/sam-altman":
+  skip: Persona, wellness or niche skill with no clear repeatable method for our library.
+"sickn33/agentic-awesome-skills:skills/sandbase-mcp":
+  skip: Mainly routes to a paid or hosted service, or is promotional.
+"sickn33/agentic-awesome-skills:skills/sankhya-dashboard-html-jsp-custom-best-pratices":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/sast-configuration":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/sast-scanning":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/satori":
+  skip: Persona, wellness or niche skill with no clear repeatable method for our library.
+"sickn33/agentic-awesome-skills:skills/sbom-supply-chain":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/scala-pro":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.
+"sickn33/agentic-awesome-skills:skills/scanning-tools":
+  skip: Offensive security or reverse engineering tooling, not for general work.
+"sickn33/agentic-awesome-skills:skills/scanpy":
+  skip: Narrow domain skill (science, finance or manufacturing) that needs specialist tools.
+"sickn33/agentic-awesome-skills:skills/scarf-single-cell":
+  skip: Narrow domain skill (science, finance or manufacturing) that needs specialist tools.
+"sickn33/agentic-awesome-skills:skills/schema-markup":
+  skip: Copy or near-copy of a skill in coreyhaines31/marketingskills, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/schema-markup-generator":
+  skip: Copy or near-copy of a skill in coreyhaines31/marketingskills, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/scikit-learn":
+  skip: Narrow domain skill (science, finance or manufacturing) that needs specialist tools.
+"sickn33/agentic-awesome-skills:skills/score-eval":
+  skip: Works only inside one product, repo or workflow, or is too thin to stand alone.
+"sickn33/agentic-awesome-skills:skills/screen-adverse-media":
+  skip: Mainly routes to a paid or hosted service, or is promotional.
+"sickn33/agentic-awesome-skills:skills/screen-reader-testing":
+  skip: Generic language, framework or tooling guide, or overlaps a better skill we list.

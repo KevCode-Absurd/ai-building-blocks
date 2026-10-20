@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It calculates costs with set formulas, then grades them.
+new_slug: stock-trading-cost-checker
+name: Stock trading cost checker
+summary: Give it a stock. Get how easy it is to trade and what a big order may cost. Collects data from websites.
+job: money-and-investing
+headline: Stock trading cost checker
+subhead: Give it a stock. Get how easy it is to trade and what a big order may cost. Collects data from websites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

@@ -1,0 +1,32 @@
+slug: zero-downtime-migration-planner
+name: Zero-downtime migration planner
+summary: Name what you are moving. Get a zero-downtime plan with checks and a rollback for each step.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/migration-architect
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/migration-architect
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: migration-architect
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: migration-architect skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/migration-architect
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

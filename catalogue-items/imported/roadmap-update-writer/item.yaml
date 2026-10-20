@@ -1,0 +1,32 @@
+slug: roadmap-update-writer
+name: Roadmap update writer
+summary: Give it your plans. Get a roadmap story, release notes or changelog written for executives, engineers or customers.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: product-team/skills/roadmap-communicator
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/roadmap-communicator
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: roadmap-communicator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: roadmap-communicator skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/roadmap-communicator
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

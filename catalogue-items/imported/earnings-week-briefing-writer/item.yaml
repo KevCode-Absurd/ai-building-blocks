@@ -1,0 +1,32 @@
+slug: earnings-week-briefing-writer
+name: Earnings week briefing writer
+summary: Name a company about to report. Get what to watch, scenario cases and the numbers that matter.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/equity-research/skills/earnings-preview
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/equity-research/skills/earnings-preview
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: earnings-preview
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: earnings-preview skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/equity-research/skills/earnings-preview
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

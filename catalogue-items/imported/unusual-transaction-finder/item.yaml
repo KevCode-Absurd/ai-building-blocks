@@ -1,0 +1,32 @@
+slug: unusual-transaction-finder
+name: Unusual transaction finder
+summary: Give it a large set of transactions. Get the odd ones flagged, with a short reason for each.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/ai-anomaly-detection
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/ai-anomaly-detection
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: ai-anomaly-detection
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ai-anomaly-detection skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/ai-anomaly-detection
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

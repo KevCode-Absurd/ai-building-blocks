@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: Stock rules differ by item risk.
+new_slug: hospital-supply-stock-planner
+name: Hospital supply stock planner
+summary: Give it your supply usage. Get par levels, expiry rules and an emergency stock plan.
+job: plan-supply-chain
+headline: Hospital supply stock planner
+subhead: Give it your supply usage. Get par levels, expiry rules and an emergency stock plan.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

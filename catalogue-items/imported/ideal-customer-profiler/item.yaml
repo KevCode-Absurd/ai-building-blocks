@@ -1,0 +1,32 @@
+slug: ideal-customer-profiler
+name: Ideal customer profiler
+summary: Give it survey or customer data. Get a profile of your best customers and what they need.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: voc_reviews
+    required: true
+outputs:
+  - type: persona
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-go-to-market/skills/ideal-customer-profile
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-go-to-market/skills/ideal-customer-profile
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: ideal-customer-profile
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ideal-customer-profile skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-go-to-market/skills/ideal-customer-profile
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: The steps are standard but order and risk calls depend on your setup.
+new_slug: site-go-live-runbook-writer
+name: Site go-live runbook writer
+summary: Tell it what you are launching. Get a go-live runbook with checks, DNS cutover steps, post-launch watching and a rollback plan.
+job: ship-and-host
+headline: Site go-live runbook writer
+subhead: Tell it what you are launching. Get a go-live runbook with checks, DNS cutover steps, post-launch watching and a rollback plan.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

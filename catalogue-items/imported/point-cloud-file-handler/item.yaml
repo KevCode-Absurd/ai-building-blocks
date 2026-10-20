@@ -1,0 +1,32 @@
+slug: point-cloud-file-handler
+name: Point cloud file handler
+summary: Give it a lidar file. Get it read or saved in the right format, with its point details kept.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/image-processing-and-computer-vision/matlab-read-write-point-cloud-file
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/image-processing-and-computer-vision/matlab-read-write-point-cloud-file
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-read-write-point-cloud-file
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-read-write-point-cloud-file skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/image-processing-and-computer-vision/matlab-read-write-point-cloud-file
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

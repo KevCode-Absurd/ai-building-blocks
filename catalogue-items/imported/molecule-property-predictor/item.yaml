@@ -1,0 +1,33 @@
+slug: molecule-property-predictor
+name: Molecule property predictor
+summary: Give it molecules and measured results. Get a tested model that predicts a property, with fair train and test splits.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: code_change
+  - type: document
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/deepchem
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/deepchem
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: deepchem
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: deepchem skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/deepchem
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

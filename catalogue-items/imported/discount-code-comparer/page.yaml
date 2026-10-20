@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It compares codes and judges what the gap means.
+new_slug: discount-code-comparer
+name: Discount code comparer
+summary: Name two or more discount codes. Get redemption and revenue side by side, so you know which one earned more.
+job: run-your-store
+headline: Discount code comparer
+subhead: Name two or more discount codes. Get redemption and revenue side by side, so you know which one earned more.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin.

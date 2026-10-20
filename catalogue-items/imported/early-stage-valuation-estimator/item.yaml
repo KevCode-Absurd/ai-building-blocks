@@ -1,0 +1,32 @@
+slug: early-stage-valuation-estimator
+name: Early-stage valuation estimator
+summary: Give it a young company's facts. Get a value range from methods such as Berkus, scorecard and the VC method.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/startup-valuation
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/startup-valuation
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: startup-valuation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: startup-valuation skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/startup-valuation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

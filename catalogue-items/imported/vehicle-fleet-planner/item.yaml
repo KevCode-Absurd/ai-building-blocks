@@ -1,0 +1,32 @@
+slug: vehicle-fleet-planner
+name: Vehicle fleet planner
+summary: Give it your vehicles and costs. Get how many you need and when to replace each one.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/fleet-management
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/fleet-management
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: fleet-management
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: fleet-management skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/fleet-management
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

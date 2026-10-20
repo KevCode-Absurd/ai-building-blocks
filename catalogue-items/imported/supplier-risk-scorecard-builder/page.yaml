@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It scores a fixed set of risk areas for each supplier.
+new_slug: supplier-risk-scorecard-builder
+name: Supplier risk scorecard builder
+summary: Give it your suppliers. Get a risk score for each, warning signs to watch, and a backup supplier plan.
+job: plan-supply-chain
+headline: Supplier risk scorecard builder
+subhead: Give it your suppliers. Get a risk score for each, warning signs to watch, and a backup supplier plan.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It walks a set checklist and adapts it to your release.
+new_slug: launch-checklist-runner
+name: Launch checklist runner
+summary: Say what you are releasing. Get a pre-launch checklist, a staged rollout and a rollback plan.
+job: ship-and-host
+headline: Launch checklist runner
+subhead: Say what you are releasing. Get a pre-launch checklist, a staged rollout and a rollback plan.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

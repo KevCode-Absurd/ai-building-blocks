@@ -1,0 +1,37 @@
+slug: tiktok-ads-account-auditor
+name: TikTok ads account auditor
+summary: Give it your TikTok Ads exports. Get a checked audit of your pixel, creative, audiences, Smart+ and Shop campaigns, bids and budgets.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: performance_sheet
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Daniel Agrici
+  repo: AgriciDaniel/claude-ads
+  path: skills/ads-tiktok
+  url: https://github.com/AgriciDaniel/claude-ads/tree/main/skills/ads-tiktok
+  licence: MIT
+  licence_file: LICENSE
+  commit: fc3908e
+  original_name: ads-tiktok
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ads-tiktok skill
+    by: Daniel Agrici
+    url: https://github.com/AgriciDaniel/claude-ads/tree/main/skills/ads-tiktok
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

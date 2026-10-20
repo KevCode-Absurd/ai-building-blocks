@@ -1,0 +1,766 @@
+# Map for sickn33/agentic-awesome-skills, slice 14 of 14.
+
+"sickn33/agentic-awesome-skills:skills/unpaid-intern":
+  skip: "Only a short summary that points to an outside repo for the real skill."
+"sickn33/agentic-awesome-skills:skills/unreal-engine-cpp-pro":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/unship":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/unslop":
+  skip: "Near copy of the unslop skills we keep, or needs the unslop command line tool."
+"sickn33/agentic-awesome-skills:skills/unslop-commit":
+  name: "Commit message humaniser"
+  summary: "Give it a commit message. Get a plain version that sounds like a careful engineer, with no AI filler."
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It rewrites a short line."
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: "MohamedAbdallah-14"
+  author_url: "https://github.com/MohamedAbdallah-14/unslop"
+"sickn33/agentic-awesome-skills:skills/unslop-file":
+  skip: "Near copy of the unslop skills we keep, or needs the unslop command line tool."
+"sickn33/agentic-awesome-skills:skills/unslop-review":
+  name: "Review comment humaniser"
+  summary: "Give it a code review comment. Get a direct version that reads like a teammate wrote it."
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It rewrites short comments."
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: "MohamedAbdallah-14"
+  author_url: "https://github.com/MohamedAbdallah-14/unslop"
+"sickn33/agentic-awesome-skills:skills/unsloth-finetuning":
+  name: "LLM fine-tuning guide"
+  summary: "Say your model and GPU. Get a fine-tuning plan and code with Unsloth, sized to your memory, ready to export."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Training choices need careful reasoning about limits."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: "run code"
+  author: "A-ryanVAT-S"
+  author_url: "https://github.com/unslothai/unsloth"
+"sickn33/agentic-awesome-skills:skills/unsplash-integration":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/update-swiftui-apis":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/upgrading-expo":
+  name: "Expo upgrade helper"
+  summary: "Say which Expo version to reach. Get your app upgraded and broken dependencies fixed."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows upgrade notes and fixes errors."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "run code and edit your project files"
+  author: "Expo"
+  author_url: "https://github.com/expo/skills"
+"sickn33/agentic-awesome-skills:skills/upstash-qstash":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/upstash-ratelimit":
+  name: "API rate limit adder"
+  summary: "Point it at your API. Get rate limiting added with Upstash, using the right window type for each route."
+  task: secure-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks an algorithm and wires it in."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "edit your project files"
+  author: "CahidArda"
+  author_url: "https://github.com/CahidArda"
+"sickn33/agentic-awesome-skills:skills/upstash-redis":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/url-to-markdown":
+  skip: Near-copy of Web page to clean text converter, and it relies on one hosted service.
+"sickn33/agentic-awesome-skills:skills/us-property-data":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/usage-based-pricing":
+  name: "Usage pricing designer"
+  summary: "Describe your product. Get a pay-as-you-go pricing model users understand, accept and can predict, with no surprise bills."
+  task: set-prices
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs trade-offs between price models."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "jonathimer"
+  author_url: "https://github.com/jonathimer/devmarketing-skills"
+"sickn33/agentic-awesome-skills:skills/use-dom":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/user-management":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/user-thoughts":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/using-agent-skills":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/using-git-worktrees":
+  skip: "Copy of an obra/superpowers skill; we take those from the source."
+"sickn33/agentic-awesome-skills:skills/using-lwc":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/using-n8n-mcp-skills":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/using-neon":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/using-superpowers":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/uv-package-manager":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/ux-audit":
+  skip: "Same job as our Usability heuristic reviewer, which checks screens against Nielsen heuristics."
+"sickn33/agentic-awesome-skills:skills/ux-copy":
+  name: "Interface microcopy writer"
+  summary: "Give it a screen. Get button labels, error messages, empty states and toasts in a friendly, polite voice."
+  task: design-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It writes short lines from a set voice."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: "bitjaru"
+  author_url: "https://github.com/bitjaru/styleseed"
+"sickn33/agentic-awesome-skills:skills/ux-feedback":
+  name: "Loading and error state designer"
+  summary: "Give it a component or page. Get loading, success, error and empty states added, so users always know what is happening."
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It adds a standard set of states and fits them to the page."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "read and edit your project files"
+  author: "bitjaru"
+  author_url: "https://github.com/bitjaru/styleseed"
+"sickn33/agentic-awesome-skills:skills/ux-flow":
+  name: "User flow designer"
+  summary: "Describe a goal. Get a step-by-step user flow and navigation layout built on proven patterns."
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks patterns and lays out the steps."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "bitjaru"
+  author_url: "https://github.com/bitjaru/styleseed"
+"sickn33/agentic-awesome-skills:skills/ux-persuasion-engineer":
+  name: "Decision friction auditor"
+  summary: "Give it a page or flow. Get the spots where layout, defaults or order stop people acting, with clearer fixes."
+  task: audit-landing-page
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It looks for friction and then redesigns the order of steps."
+  inputs: [ { type: landing_page, required: false }, { type: brief, required: false } ]
+  outputs: [ { type: audit_report } ]
+"sickn33/agentic-awesome-skills:skills/uxkin-research":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/uxui-principles":
+  name: "Interface principles checker"
+  summary: "Describe or share an interface. Get it scored against 168 research-backed UX principles, with common mistakes flagged."
+  task: design-work
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It matches the design against a large list of rules."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+  author: "uxuiprinciples"
+  author_url: "https://github.com/uxuiprinciples/agent-skills"
+"sickn33/agentic-awesome-skills:skills/variant-analysis":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/varlock":
+  name: "Safe secrets manager"
+  summary: "Get API keys and env variables checked and loaded without ever showing the values in logs or chat."
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows strict rules around secrets."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: "run code and read your project files"
+  author: "dmno-dev"
+  author_url: "https://github.com/dmno-dev/varlock"
+"sickn33/agentic-awesome-skills:skills/varlock-claude-skill":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/vector-database-engineer":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/vector-database-ops":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/vector-index-tuning":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/vendor-contractor-management":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/vendor-management":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/vercel-ai-sdk-expert":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/vercel-automation":
+  skip: "Only works through one hosted connector (Rube MCP) for one product."
+"sickn33/agentic-awesome-skills:skills/vercel-cli-with-tokens":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/vercel-deployment":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/vercel-deployments":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/vercel-optimize":
+  name: "Vercel cost and speed auditor"
+  summary: "Point it at a Vercel app. Get cost and speed problems found from real production metrics, with fixes."
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It follows data gates and checks many signals."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "run code and read your project files"
+  author: "Vercel"
+  author_url: "https://github.com/vercel-labs/agent-skills"
+"sickn33/agentic-awesome-skills:skills/vercel-react-view-transitions":
+  name: "Page transition animator"
+  summary: "Describe the motion you want. Get smooth React page and element transitions that respect reduced-motion settings."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies animation patterns to the existing code."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "edit your project files"
+  author: "Vercel"
+  author_url: "https://github.com/vercel-labs/agent-skills"
+"sickn33/agentic-awesome-skills:skills/verification-before-completion":
+  skip: "Copy of an obra/superpowers skill; we take those from the source."
+"sickn33/agentic-awesome-skills:skills/verify-citations":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/verify-document":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/vexor":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/vexor-cli":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/vibe-code-auditor":
+  name: "AI-written code reviewer"
+  summary: "Give it code an AI wrote fast. Get the real risks that will hurt later, with the smallest fix for each."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It reads the code closely to find hidden weak spots."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your project files"
+"sickn33/agentic-awesome-skills:skills/vibe-code-cleanup":
+  name: "Vibe-coded app cleaner"
+  summary: "Point it at a fast-built app. Get dead code and broken imports removed without breaking routes or APIs."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It works in small safe steps and checks as it goes."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "run code and edit your project files"
+  author: "Whoisabhishekadhikari"
+  author_url: "https://github.com/Whoisabhishekadhikari"
+"sickn33/agentic-awesome-skills:skills/vibe-delegate":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/vibecode-production-qa-validator":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/vibers-code-review":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/viboscope":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/video-content-extractor":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/video-router":
+  name: "Video route picker"
+  summary: "Describe your video. Get the right way to make it chosen first: generate, compose, or edit your footage."
+  task: make-video-ads
+  role: orchestrate
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs options and locks one path."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "Orkas-AI"
+  author_url: "https://github.com/Orkas-AI/Orkas-VideoStudio"
+"sickn33/agentic-awesome-skills:skills/videodb":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/videodb-skills":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/viral-generator-builder":
+  name: "Shareable tool builder"
+  summary: "Say what to build. Get a quiz, name generator or calculator designed so people share it."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It mixes sharing ideas with a build plan."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: web_app } ]
+"sickn33/agentic-awesome-skills:skills/viral-video-teardown-remake":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/visual-emotion-engineer":
+  name: "Emotion-led design brief writer"
+  summary: "Name the feeling you want. Get colour, type, imagery and layout choices that support it."
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It links design choices to a goal, which takes some judgement."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
+"sickn33/agentic-awesome-skills:skills/vitest-skill":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/vizcom":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/vllm-server":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/vmware-vcenter-attack":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/voice-agents":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/voice-ai-development":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/voice-ai-engine-development":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/voice-cloning-studio":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/voiceover-narration-studio":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/vpn-setup":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/vps-server-management":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/vscode-extension-guide-en":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/vulnerability-scanner":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/vulnerability-scanning":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/waf-setup":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/warehouse":
+  name: "Data warehouse query reviewer"
+  summary: "Share your business question or SQL. Get a safe, read-only analysis plan and a check for join and privacy errors."
+  task: read-ad-results
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Data mistakes are subtle, so it checks each step."
+  inputs: [ { type: question, required: true }, { type: performance_sheet, required: false } ]
+  outputs: [ { type: audit_report } ]
+  author: "Rudra-G-23"
+  author_url: "https://github.com/Rudra-G-23"
+"sickn33/agentic-awesome-skills:skills/warp-delegate":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/warren-buffett":
+  skip: "Expert persona; our Minds section covers people like this."
+"sickn33/agentic-awesome-skills:skills/wcag-audit-patterns":
+  name: "Accessibility audit checker"
+  summary: "Give it a page or component. Get problems against WCAG 2.2 and a way to fix each one."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It checks against a published list of rules."
+  inputs: [ { type: web_page, required: false }, { type: codebase, required: false } ]
+  outputs: [ { type: audit_report } ]
+"sickn33/agentic-awesome-skills:skills/weather-data-lifecycle-management":
+  skip: "Very narrow weather data engineering."
+"sickn33/agentic-awesome-skills:skills/weather-data-reproducibility":
+  skip: "Very narrow weather data engineering."
+"sickn33/agentic-awesome-skills:skills/weather-model-data-fetching":
+  skip: "Very narrow weather data engineering."
+"sickn33/agentic-awesome-skills:skills/weather-model-run-discovery":
+  skip: "Very narrow weather data engineering."
+"sickn33/agentic-awesome-skills:skills/weather-observation-fetching":
+  skip: "Very narrow weather data engineering."
+"sickn33/agentic-awesome-skills:skills/weather-pipeline-performance-diagnosis":
+  skip: "Very narrow weather data engineering."
+"sickn33/agentic-awesome-skills:skills/weaviate":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/weaviate-cookbooks":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/web-artifacts-builder":
+  skip: "Copy of an anthropics/skills skill; we take it from the source."
+"sickn33/agentic-awesome-skills:skills/web-design-guidelines":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/web-media-getter":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/web-performance-optimization":
+  name: "Website speed tuner"
+  summary: "Point it at a slow site. Get Core Web Vitals, bundle size and caching problems fixed."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It measures first and then applies known fixes."
+  inputs: [ { type: web_page, required: false }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: "run code and open a browser"
+"sickn33/agentic-awesome-skills:skills/web-project-brainstorming":
+  name: "Web project scoper"
+  summary: "Describe a web project. Get its goals, users, features, design tokens and page plan in one scoped brief."
+  task: build-product
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It asks structured questions and organises answers."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "Rsmiyani"
+  author_url: "https://github.com/Rsmiyani"
+"sickn33/agentic-awesome-skills:skills/web-scraper":
+  name: Web page data extractor
+  summary: Give it page links. Get tables, lists and prices as a CSV or JSON file. Collects data from websites.
+  task: work-with-files
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows set steps to pull the data out of pages.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: spreadsheet}]
+  needs: run code and reach the web
+  author: renat
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/web-security-testing":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/web2-recon":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/web3-audit":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/web3-rate-limiting-circuit-breaker":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/web3-testing":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/web3-transaction-relayer-pool":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/webapp-testing":
+  skip: "Copy of an anthropics/skills skill; we take it from the source."
+"sickn33/agentic-awesome-skills:skills/webdriverio-skill":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/webflow-automation":
+  skip: "Only works through one hosted connector (Rube MCP) for one product."
+"sickn33/agentic-awesome-skills:skills/wechat-official-account-strategist":
+  name: "WeChat article planner"
+  summary: "Name your topic. Get a WeChat Official Account article plan with title options and layout built for the platform."
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It adapts content to one platform."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "yundu-ai"
+  author_url: "https://github.com/demo112/yunqu-ai-skills"
+"sickn33/agentic-awesome-skills:skills/weightloss-analyzer":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/wellally-tech":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/wgm":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/what-could-break":
+  name: "Change impact checker"
+  summary: "Describe a code change. Get what it could break outside its own diff, and one proof it is safe."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It must trace real use of the code, then prove one claim."
+  inputs: [ { type: codebase, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: test_report } ]
+  needs: "run code and read your project files"
+  author: "stas4000"
+  author_url: "https://github.com/stas4000/what-could-break"
+"sickn33/agentic-awesome-skills:skills/whatsapp-automation":
+  skip: "Only works through one hosted connector (Rube MCP) for one product."
+"sickn33/agentic-awesome-skills:skills/whatsapp-cloud-api":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/why-did-this-post-flop":
+  name: "Flop post diagnoser"
+  summary: "Paste a post that did badly. Get why it failed, whether unseen, skipped or ignored, and what to change."
+  task: grow-social
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It sorts the failure type first, then picks the fix."
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  author: "prateeks367"
+  author_url: "https://github.com/prateeks367/voicemoat-skills"
+"sickn33/agentic-awesome-skills:skills/wifi-wireless":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/wiki-architect":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/wiki-builder":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/wiki-changelog":
+  name: "Changelog writer"
+  summary: "Point it at a repo. Get a clear changelog built from the git history."
+  task: build-software
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: "It sorts commits into groups."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "run code and read your project files"
+"sickn33/agentic-awesome-skills:skills/wiki-onboarding":
+  name: "Codebase onboarding guide writer"
+  summary: "Point it at a codebase. Get two guides that take a new engineer from first day to deep knowledge."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads code widely and writes for two audiences."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "read your project files"
+"sickn33/agentic-awesome-skills:skills/wiki-page-writer":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/wiki-qa":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/wiki-researcher":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/wiki-vitepress":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/wiki-yylo":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/windows-ad":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/windows-hardening":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/windows-privilege-escalation":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/windows-server":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/windows-shell-reliability":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/wireshark-analysis":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/wjttc-builder":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/wjttc-tester":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/woo-guard":
+  name: "WooCommerce code checker"
+  summary: "Give it new WooCommerce code. Get common AI mistakes caught, like broken order storage and missed checkout checks."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It applies a fixed checklist to the code."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your project files"
+  author: "amElnagdy"
+  author_url: "https://github.com/amElnagdy/guard-skills"
+"sickn33/agentic-awesome-skills:skills/wordpress":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/wordpress-centric-high-seo-optimized-blogwriting-skill":
+  name: "WordPress blog writer"
+  summary: "Give it a keyword. Get a full SEO blog post with tables, FAQ and optional Yoast fields, ready for WordPress."
+  task: get-found-in-search
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It follows a set structure and writes long copy."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: "Whoisabhishekadhikari"
+  author_url: "https://github.com/Whoisabhishekadhikari"
+"sickn33/agentic-awesome-skills:skills/wordpress-penetration-testing":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/wordpress-plugin-development":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/wordpress-theme-development":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/wordpress-woocommerce-development":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/workflow-automation":
+  skip: "Only works through one hosted connector (Rube MCP) for one product."
+"sickn33/agentic-awesome-skills:skills/workflow-orchestration-patterns":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/workflow-patterns":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/workflow-yylo":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/workorai":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/wp-guard":
+  name: "WordPress code checker"
+  summary: "Give it a new WordPress plugin or theme. Get security, translation and speed problems found before you ship."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It applies a fixed checklist to the code."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your project files"
+  author: "amElnagdy"
+  author_url: "https://github.com/amElnagdy/guard-skills"
+"sickn33/agentic-awesome-skills:skills/wp-site-health-auditor":
+  name: "WordPress health fixer"
+  summary: "Paste your WordPress Site Health report. Get a ranked, backup-first fix plan with exact commands."
+  task: build-websites
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts issues by risk and writes steps."
+  inputs: [ { type: audit_report, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "Whoisabhishekadhikari"
+  author_url: "https://github.com/Whoisabhishekadhikari"
+"sickn33/agentic-awesome-skills:skills/wrike-automation":
+  skip: "Only works through one hosted connector (Rube MCP) for one product."
+"sickn33/agentic-awesome-skills:skills/write-design-md":
+  name: "Design rules file writer"
+  summary: "Point it at your project. Get a DESIGN.md that lists the colours, type, spacing and parts your product really uses."
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads real code and summarises the style."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: design_direction } ]
+  needs: "read your project files"
+  author: "UXKIN"
+  author_url: "https://github.com/uxkin/agent"
+"sickn33/agentic-awesome-skills:skills/write-in-my-voice":
+  name: "Voice-matched post writer"
+  summary: "Share posts you already wrote. Get new Twitter/X or LinkedIn posts that sound like you, checked against your style."
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It learns your style first and then measures the draft."
+  inputs: [ { type: source_text, required: true }, { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: "prateeks367"
+  author_url: "https://github.com/prateeks367/voicemoat-skills"
+"sickn33/agentic-awesome-skills:skills/writing-great-skills":
+  skip: "Copy of a mattpocock/skills skill; we take it from the source."
+"sickn33/agentic-awesome-skills:skills/writing-guidelines":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/writing-plans":
+  skip: "Copy of an obra/superpowers skill; we take those from the source."
+"sickn33/agentic-awesome-skills:skills/writing-skills":
+  skip: "Copy of an obra/superpowers skill; we take those from the source."
+"sickn33/agentic-awesome-skills:skills/x-article-publisher-skill":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/x-twitter-scraper":
+  skip: Exports followers and sends DMs and other actions on a live X account, which breaks our live-account rule.
+"sickn33/agentic-awesome-skills:skills/x402-express-wrapper":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/xiaohongshu-content-strategist":
+  name: "Xiaohongshu post planner"
+  summary: "Name your topic. Get a Xiaohongshu post plan with cover, title and layout aimed at saves and sales."
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It adapts content to one platform."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "yundu-ai"
+  author_url: "https://github.com/demo112/yunqu-ai-skills"
+"sickn33/agentic-awesome-skills:skills/xss-html-injection":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/xvary-stock-research":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/yann-lecun":
+  skip: "Expert persona; our Minds section covers people like this."
+"sickn33/agentic-awesome-skills:skills/yann-lecun-debate":
+  skip: "Expert persona; our Minds section covers people like this."
+"sickn33/agentic-awesome-skills:skills/yann-lecun-filosofia":
+  skip: "Expert persona; our Minds section covers people like this."
+"sickn33/agentic-awesome-skills:skills/yann-lecun-tecnico":
+  skip: "Expert persona; our Minds section covers people like this."
+"sickn33/agentic-awesome-skills:skills/yao-meta-skill":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/yes-md":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/yield-intelligence":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/youtube-automation":
+  skip: "Only works through one hosted connector (Rube MCP) for one product."
+"sickn33/agentic-awesome-skills:skills/youtube-full":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/youtube-notetaker":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/youtube-seo-optimizer":
+  name: "YouTube title and tags writer"
+  summary: "Give it a video or podcast topic. Get title, description, tags and timestamps, or an audit of one that is stuck."
+  task: get-found-in-search
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It fills a standard package from the topic."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: "whoisabhishekadhikari"
+  author_url: "https://github.com/Whoisabhishekadhikari"
+"sickn33/agentic-awesome-skills:skills/youtube-summarizer":
+  name: "YouTube video summariser"
+  summary: "Give it a YouTube link. Get a detailed summary of the talk or lesson, taken from its transcript."
+  task: organise-work
+  role: compress
+  level: beginner
+  thinking: medium
+  thinking_why: "It reads a long transcript and condenses it."
+  inputs: [ { type: source_text, required: false }, { type: brief, required: false } ]
+  outputs: [ { type: document } ]
+  needs: "run code and fetch web pages"
+"sickn33/agentic-awesome-skills:skills/youtube-transcript":
+  skip: Uses a scraping service to avoid YouTube bot flagging, which breaks our bot-check rule.
+"sickn33/agentic-awesome-skills:skills/youtube-transcript-skills":
+  skip: "Mainly sends you to a paid or hosted service, scrapes sites, or works with one product."
+"sickn33/agentic-awesome-skills:skills/zapier-make-patterns":
+  name: "No-code automation planner"
+  summary: "Describe a task to automate. Get the right Zapier or Make setup, built to hold up, and when to switch to code."
+  task: connect-tools
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It weighs two tools and plans reliable steps."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "vibeship"
+  author_url: "https://github.com/vibeforge1111/vibeship-spawner-skills"
+"sickn33/agentic-awesome-skills:skills/zcode-delegate":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/zendesk-automation":
+  skip: "Only works through one hosted connector (Rube MCP) for one product."
+"sickn33/agentic-awesome-skills:skills/zero-trust":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/zeroize-audit":
+  skip: "Security or server admin work that is offensive, risky or too niche for the library."
+"sickn33/agentic-awesome-skills:skills/zipai-optimizer":
+  skip: "Works only with one tool or routes to the repo's own other skills."
+"sickn33/agentic-awesome-skills:skills/zk-proof-verification-pipeline":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/zod-validation-expert":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."
+"sickn33/agentic-awesome-skills:skills/zoho-crm-automation":
+  skip: "Only works through one hosted connector (Rube MCP) for one product."
+"sickn33/agentic-awesome-skills:skills/zoom-automation":
+  skip: "Only works through one hosted connector (Rube MCP) for one product."
+"sickn33/agentic-awesome-skills:skills/zustand-store-ts":
+  skip: "Too narrow, too thin, a near copy, or a tool-specific stack guide, so not worth listing."

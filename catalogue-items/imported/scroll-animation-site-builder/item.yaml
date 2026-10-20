@@ -1,0 +1,37 @@
+slug: scroll-animation-site-builder
+name: Scroll animation site builder
+summary: Describe the site. Get a scroll-driven page with layered depth, motion and smooth reveals, built in code.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/skills/epic-design
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/epic-design
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: epic-design
+  author: Abbas Mir
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: epic-design skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/epic-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Abbas Mir
+    url: ""
+    used: Wrote the skill; Alireza Rezvani shared it in their collection.

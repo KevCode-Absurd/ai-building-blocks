@@ -1,0 +1,32 @@
+slug: subject-writing-frame-maker
+name: Subject writing frame maker
+summary: Name a text type, like a lab report. Get a frame that teaches the writing rules of that subject.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/literacy-critical-thinking/disciplinary-writing-scaffold
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/literacy-critical-thinking/disciplinary-writing-scaffold
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: disciplinary-writing-scaffold
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: disciplinary-writing-scaffold skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/literacy-critical-thinking/disciplinary-writing-scaffold
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

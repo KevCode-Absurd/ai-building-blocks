@@ -1,0 +1,34 @@
+slug: direct-response-copywriter
+name: Direct response copywriter
+summary: Describe your offer. Get headlines, emails, calls to action or a full sales page that sells.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Rob Palmer
+  repo: robpalmer99/claude-code-copywriting-skills
+  path: direct-response-copy
+  url: https://github.com/robpalmer99/claude-code-copywriting-skills/tree/main/direct-response-copy
+  licence: CC-BY-4.0
+  licence_file: LICENSE
+  commit: 7dbfd61
+  original_name: direct-response-copy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: direct-response-copy skill
+    by: Rob Palmer
+    url: https://github.com/robpalmer99/claude-code-copywriting-skills/tree/main/direct-response-copy
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

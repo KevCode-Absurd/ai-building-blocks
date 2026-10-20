@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It follows set design patterns but weighs cost and scale trade-offs.
+new_slug: google-cloud-architect
+name: Google Cloud architect
+summary: Describe your app. Get a Google Cloud design with services, cost estimate and deploy steps.
+job: ship-and-host
+headline: Google Cloud architect
+subhead: Describe your app. Get a Google Cloud design with services, cost estimate and deploy steps.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

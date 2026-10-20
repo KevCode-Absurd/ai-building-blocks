@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: Legal wording needs care, but the structure is set.
+new_slug: nda-drafter
+name: NDA drafter
+summary: Name the two parties and what is shared. Get a draft confidentiality agreement with the clauses a lawyer should check.
+job: check-contracts
+headline: NDA drafter
+subhead: Name the two parties and what is shared. Get a draft confidentiality agreement with the clauses a lawyer should check.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

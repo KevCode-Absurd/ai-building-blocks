@@ -1,0 +1,13 @@
+thinking: medium
+thinking_why: It pulls from several sources and picks what matters most.
+new_slug: business-snapshot-writer
+name: Business snapshot writer
+summary: Connect what you use. Get a one-page view of cash, sales and open leads, plus the one thing to handle today.
+job: plan-strategy
+headline: Business snapshot writer
+subhead: Connect what you use. Get a one-page view of cash, sales and open leads, plus the one thing to handle today.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your accounts and files.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.

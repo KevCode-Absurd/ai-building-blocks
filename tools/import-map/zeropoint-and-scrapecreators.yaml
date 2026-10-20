@@ -1,0 +1,233 @@
+"ZeroPointRepo/youtube-skills:clawhub/youtube-search":
+  name: YouTube video finder
+  summary: "Say a topic. Get matching videos and channels, with transcripts for the ones you pick. Collects data from websites."
+  task: grow-social
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It runs searches and lists the results."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: shortlist}]
+  needs: "run code and use your TranscriptAPI key"
+  paid: "TranscriptAPI"
+  scrapes: true
+
+"ZeroPointRepo/youtube-skills:clawhub/youtube-channels":
+  name: YouTube channel browser
+  summary: "Give it a channel. Get its latest uploads and a search inside its videos. Collects data from websites."
+  task: grow-social
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It fetches public lists and shows them."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: shortlist}]
+  needs: "run code and use your TranscriptAPI key"
+  paid: "TranscriptAPI"
+  scrapes: true
+
+"ZeroPointRepo/youtube-skills:clawhub/youtube-playlist":
+  name: YouTube playlist reader
+  summary: "Give it a playlist. Get every video listed, with transcripts for the ones you want. Collects data from websites."
+  task: research-topics
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It pulls a list and fetches text for each item."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: transcript}]
+  needs: "run code and use your TranscriptAPI key"
+  paid: "TranscriptAPI"
+  scrapes: true
+
+"ZeroPointRepo/youtube-skills:clawhub/captions":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:clawhub/subtitles":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:clawhub/transcript":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:clawhub/transcriptapi":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:clawhub/video-transcript":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:clawhub/youtube-api":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:clawhub/youtube-data":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:clawhub/youtube-full":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:clawhub/yt":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ScrapeCreators/social-media-research-skills:skills/ad-library-teardown":
+  name: Ad library teardown writer
+  summary: "Give it a competitor. Get their live ads broken into hooks, offers, calls to action and test ideas. Collects data from websites."
+  task: study-competitors
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It gathers ads, then reads the pattern in them."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: ad_breakdowns}]
+  needs: "run code and use your ScrapeCreators key"
+  paid: "ScrapeCreators"
+  scrapes: true
+
+"ScrapeCreators/social-media-research-skills:skills/audience-research":
+  name: Creator audience checker
+  summary: "Give it a creator. Get who their audience is, where they live and if they fit a sponsorship. Collects data from websites."
+  task: understand-customers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs public signals to judge fit."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: audit_report}]
+  needs: "run code and use your ScrapeCreators key"
+  paid: "ScrapeCreators"
+  scrapes: true
+
+"ScrapeCreators/social-media-research-skills:skills/comment-mining":
+  name: Comment mining analyst
+  summary: "Give it social posts. Get what people ask, complain about and want, in their own words. Collects data from websites."
+  task: understand-customers
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads many comments and groups the themes."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: voc_reviews}]
+  needs: "run code and use your ScrapeCreators key"
+  paid: "ScrapeCreators"
+  scrapes: true
+
+"ScrapeCreators/social-media-research-skills:skills/competitor-social-research":
+  name: Competitor social strategy researcher
+  summary: "Name your competitors. Get what content works for them, the gaps, and a short social plan. Collects data from websites."
+  task: study-competitors
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares accounts and draws a plan from the gaps."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: plan}]
+  needs: "run code and use your ScrapeCreators key"
+  paid: "ScrapeCreators"
+  scrapes: true
+
+"ScrapeCreators/social-media-research-skills:skills/creator-profile-teardown":
+  name: Creator profile teardown writer
+  summary: "Give it a social account. Get its positioning, content themes, top posts and what to test. Collects data from websites."
+  task: study-competitors
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It samples posts, then reads what drives them."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: audit_report}]
+  needs: "run code and use your ScrapeCreators key"
+  paid: "ScrapeCreators"
+  scrapes: true
+
+"ScrapeCreators/social-media-research-skills:skills/outlier-post-finder":
+  name: Outlier post finder
+  summary: "Give it accounts. Get the posts that beat their normal reach, why they worked, and a swipe file. Collects data from websites."
+  task: grow-social
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sets a baseline, then explains the winners."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: reference_set}]
+  needs: "run code and use your ScrapeCreators key"
+  paid: "ScrapeCreators"
+  scrapes: true
+
+"ScrapeCreators/social-media-research-skills:skills/product-demand-research":
+  name: Product demand researcher
+  summary: "Give it a product idea. Get the pain points, objections and buying signals people post, with links. Collects data from websites."
+  task: test-an-idea
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It gathers posts, then judges how strong demand is."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: voc_reviews}]
+  needs: "run code and use your ScrapeCreators key"
+  paid: "ScrapeCreators"
+  scrapes: true
+
+"ScrapeCreators/social-media-research-skills:skills/social-listening-brief":
+  name: Social listening brief writer
+  summary: "Name a brand or topic. Get what people say about it, grouped by theme, with notable posts. Collects data from websites."
+  task: research-topics
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It collects mentions and sorts them into themes."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: audit_report}]
+  needs: "run code and use your ScrapeCreators key"
+  paid: "ScrapeCreators"
+  scrapes: true
+
+"ScrapeCreators/social-media-research-skills:skills/transcript-intelligence":
+  name: Social video transcript analyst
+  summary: "Give it video posts. Get the hooks, claims, quotes and themes pulled from what was said. Collects data from websites."
+  task: research-topics
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads long transcripts and pulls out the key parts."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: transcript}]
+  needs: "run code and use your ScrapeCreators key"
+  paid: "ScrapeCreators"
+  scrapes: true
+
+"ScrapeCreators/social-media-research-skills:skills/influencer-prospecting":
+  skip: "Builds creator lists with a contact column, which breaks our contact-details rule."
+
+"ScrapeCreators/social-media-research-skills:skills/scrapecreators-api":
+  skip: "An API reference for one paid service, not a job; the other skills here use it."
+
+"ScrapeCreators/social-media-research-skills:skills/content-repurposing":
+  skip: "Thin, and the same job as our Long-form post repurposer."
+
+"ScrapeCreators/social-media-research-skills:skills/trend-discovery":
+  skip: "Same job as our Rising trend spotter."
+
+"ZeroPointRepo/youtube-skills:skills/captions":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:skills/subtitles":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:skills/transcript":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:skills/transcriptapi":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:skills/video-transcript":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:skills/youtube-api":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:skills/youtube-data":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:skills/youtube-full":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."
+
+"ZeroPointRepo/youtube-skills:skills/yt":
+  skip: "Same job as our YouTube transcript and channel reader, which came from the same TranscriptAPI skill."

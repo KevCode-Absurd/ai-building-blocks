@@ -1,0 +1,32 @@
+slug: personal-budget-builder
+name: Personal budget builder
+summary: List your income and spending. Get a budget plan, such as zero-based or 50/30/20, and where money leaks.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/personal-budgeting
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/personal-budgeting
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: personal-budgeting
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: personal-budgeting skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/personal-budgeting
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

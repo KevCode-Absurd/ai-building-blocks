@@ -1,0 +1,33 @@
+slug: molecular-simulation-runner
+name: Molecular simulation runner
+summary: Give it a protein or molecule. Get a simulation run and an analysis of how it moves.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/molecular-dynamics
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/molecular-dynamics
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: molecular-dynamics
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: molecular-dynamics skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/molecular-dynamics
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

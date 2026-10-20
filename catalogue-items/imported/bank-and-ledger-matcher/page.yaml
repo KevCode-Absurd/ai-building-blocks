@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It matches by rule, then judges the close calls.
+new_slug: bank-and-ledger-matcher
+name: Bank and ledger matcher
+summary: Give it a bank statement and your ledger. Get matched items, near matches and a list of what is left over.
+job: track-numbers
+headline: Bank and ledger matcher
+subhead: Give it a bank statement and your ledger. Get matched items, near matches and a list of what is left over.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your files.

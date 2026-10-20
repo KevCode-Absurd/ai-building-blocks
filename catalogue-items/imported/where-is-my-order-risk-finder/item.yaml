@@ -1,0 +1,37 @@
+slug: where-is-my-order-risk-finder
+name: Where-is-my-order risk finder
+summary: Run it on open orders. Get shipped orders with stale tracking and late unshipped ones, before customers ask.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/customer-support/shopify-admin-wismo-bulk-status-report
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/customer-support/shopify-admin-wismo-bulk-status-report
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-wismo-bulk-status-report
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-wismo-bulk-status-report skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/customer-support/shopify-admin-wismo-bulk-status-report
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

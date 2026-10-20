@@ -1,0 +1,148 @@
+# wizard7558/attribution-skills, 13 skills
+"wizard7558/attribution-skills:skills/attribution-audit":
+  skip: Only runs the other skills in this repo together and needs them all installed. Use each one on its own.
+"wizard7558/attribution-skills:skills/capi-match-keys":
+  skip: Builds and queues conversion events to send to ad platforms on its own, which changes ad account data.
+"wizard7558/attribution-skills:skills/attribution-data-quality-tripwires":
+  name: Ad data quality checker
+  summary: "Give it your ad and sales tables. Get nine checks that catch missing spend, duplicates and empty columns."
+  task: track-numbers
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Each check needs exact settings, and a wrong call hides bad data."
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run Node code and SQL on your own BigQuery data
+  author: Riley Sorenson
+  author_url: https://github.com/wizard7558
+"wizard7558/attribution-skills:skills/budget-scenario-planning":
+  name: Marketing budget scenario planner
+  summary: "Give it past spend and results by channel. Get low and high forecasts for a new budget, with diminishing returns built in."
+  task: track-numbers
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It fits curves and weighs uncertainty, so it needs careful maths."
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  needs: run code and read your spreadsheet
+  author: Riley Sorenson
+  author_url: https://github.com/wizard7558
+"wizard7558/attribution-skills:skills/channel-taxonomy":
+  name: Traffic channel classifier
+  summary: "Give it your visits and orders. Get every one sorted into the same 11 channels, whatever tool it came from."
+  task: track-numbers
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows fixed rules, but odd source data needs judgement."
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  needs: run Node code, or SQL on your own BigQuery data
+  author: Riley Sorenson
+  author_url: https://github.com/wizard7558
+"wizard7558/attribution-skills:skills/clickstream-identity-stitching":
+  name: Visitor to contact matcher
+  summary: "Give it your site visit records and contact list. Get anonymous visits linked to known contacts, with unclear links flagged."
+  task: track-numbers
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Wrong matches mislead you, so it weighs each link with care."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  needs: run Node code and read your own visit and contact data
+  author: Riley Sorenson
+  author_url: https://github.com/wizard7558
+"wizard7558/attribution-skills:skills/crm-attribution-profiler":
+  name: Lead source field checker
+  summary: "Give it your CRM leads and ad history. Learn if your lead source fields are good enough to link leads to ads."
+  task: track-numbers
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "It needs exact rules and careful reading of the match rates."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run Node code and read your CRM export
+  author: Riley Sorenson
+  author_url: https://github.com/wizard7558
+"wizard7558/attribution-skills:skills/crm-paid-attribution":
+  name: Lead to ad matcher
+  summary: "Give it your CRM lead export. Get each lead linked to the paid channel and ad that brought it in."
+  task: track-numbers
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It applies strict matching rules and must flag every unclear lead."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  needs: run Node code, or SQL on your own BigQuery data
+  author: Riley Sorenson
+  author_url: https://github.com/wizard7558
+"wizard7558/attribution-skills:skills/first-party-pixel":
+  name: First-party tracking pixel builder
+  summary: "Answer a few questions about your site. Get a tracking script and database that keep your visit data in your own hands."
+  task: track-numbers
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It sets up code, data storage and privacy choices that are hard to undo."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: run code, and use your own hosting and Postgres database accounts
+  author: Riley Sorenson
+  author_url: https://github.com/wizard7558
+"wizard7558/attribution-skills:skills/funnel-truth-and-cost-per-stage":
+  name: Cost per funnel stage reporter
+  summary: "Give it your CRM stages and ad spend. Get a trusted funnel with the true cost of each stage."
+  task: track-numbers
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Spend must be counted once, which takes careful reconciling."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  needs: run SQL on your own BigQuery data
+  author: Riley Sorenson
+  author_url: https://github.com/wizard7558
+"wizard7558/attribution-skills:skills/ga4-bigquery-export":
+  name: GA4 raw data analyst
+  summary: "Point it at your GA4 export in BigQuery. Get sessions, channels and sign-ups, plus why they differ from the GA4 screen."
+  task: track-numbers
+  role: source
+  level: expert
+  thinking: high
+  thinking_why: "Raw export tables are tricky, and a wrong query gives wrong numbers."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: performance_sheet, required: true } ]
+  needs: run SQL on your own Google BigQuery data
+  author: Riley Sorenson
+  author_url: https://github.com/wizard7558
+"wizard7558/attribution-skills:skills/mmm-and-incrementality-framing":
+  name: Weekly spend impact modeler
+  summary: "Give it weekly spend and sales by channel. Get a simple model of what each channel adds, with honest limits."
+  task: track-numbers
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Spend and sales move together, so it must avoid overclaiming."
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: run Python code and read your spreadsheet
+  author: Riley Sorenson
+  author_url: https://github.com/wizard7558
+"wizard7558/attribution-skills:skills/multi-touch-models-sql":
+  name: Multi-touch credit calculator
+  summary: "Give it your touches and sales. Get credit split by first, last, linear or decay rules, plus cost per sale."
+  task: track-numbers
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Credit rules need exact settings and a careful reading of results."
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  needs: run SQL on your own BigQuery data
+  author: Riley Sorenson
+  author_url: https://github.com/wizard7558

@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It lays out a standard schedule.
+new_slug: balance-roll-forward-builder
+name: Balance roll-forward builder
+summary: Name an account. Get a schedule from opening to closing balance, with each movement tied to the ledger.
+job: money-and-investing
+headline: Balance roll-forward builder
+subhead: Name an account. Get a schedule from opening to closing balance, with each movement tied to the ledger.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

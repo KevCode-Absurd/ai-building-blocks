@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It first checks what kind of PDF this is, then picks a route.
+new_slug: pdf-converter
+name: PDF converter
+summary: Give it a PDF and the format you want. Get a faithful Markdown, HTML, Word or JSON copy with tables kept intact.
+job: work-with-files
+headline: PDF converter
+subhead: Give it a PDF and the format you want. Get a faithful Markdown, HTML, Word or JSON copy with tables kept intact.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read files.

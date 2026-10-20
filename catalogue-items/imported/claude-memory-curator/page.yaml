@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reviews notes against a set method.
+new_slug: claude-memory-curator
+name: Claude memory curator
+summary: Point it at Claude Code memory. Get what it learned reviewed, kept rules moved up and stale notes cut.
+job: set-up-ai
+headline: Claude memory curator
+subhead: Point it at Claude Code memory. Get what it learned reviewed, kept rules moved up and stale notes cut.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read and change your project files.

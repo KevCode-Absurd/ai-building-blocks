@@ -1,0 +1,37 @@
+slug: company-wiki-planner
+name: Company wiki planner
+summary: Describe your business. Get the smallest useful process wiki set-up, with a register of each process.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/sop-company-wiki
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/sop-company-wiki
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: sop-company-wiki
+  author: WHOISABHISHEKADHIKARI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: sop-company-wiki skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/sop-company-wiki
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: WHOISABHISHEKADHIKARI
+    url: https://github.com/WHOISABHISHEKADHIKARI/sme-ops-system-builder
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,34 @@
+slug: brand-voice-rules-writer
+name: Brand voice rules writer
+summary: Describe your brand and who you write for. Get tone, word choices and writing rules any writer can follow.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brand_brain
+    required: false
+  - type: persona
+    required: false
+outputs:
+  - type: brand_brain
+uses: []
+origin: imported
+source:
+  by: Arnab Bag
+  repo: arnabbagxd/Brand-building-skills
+  path: skills/brand-voice
+  url: https://github.com/arnabbagxd/Brand-building-skills/tree/main/skills/brand-voice
+  licence: MIT
+  licence_file: LICENSE
+  commit: 4a0a8b5
+  original_name: brand-voice
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: brand-voice skill
+    by: Arnab Bag
+    url: https://github.com/arnabbagxd/Brand-building-skills/tree/main/skills/brand-voice
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

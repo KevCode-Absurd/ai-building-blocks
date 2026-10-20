@@ -1,0 +1,37 @@
+slug: online-store-profit-calculator
+name: Online store profit calculator
+summary: Give it your price, costs and ad spend. Get your margin per sale and whether your cost to win a customer works.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Nexscope AI
+  repo: nexscope-ai/eCommerce-Skills
+  path: profit-margin-calculator/profit-margin-calculator-shopify
+  url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/profit-margin-calculator/profit-margin-calculator-shopify
+  licence: MIT
+  licence_file: LICENSE
+  commit: ee0fb29
+  original_name: profit-margin-calculator-shopify
+  author: Nexscope AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: profit-margin-calculator-shopify skill
+    by: Nexscope AI
+    url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/profit-margin-calculator/profit-margin-calculator-shopify
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Nexscope AI
+    url: https://github.com/nexscope-ai/eCommerce-Skills
+    used: Wrote the skill; Nexscope AI shared it in their collection.

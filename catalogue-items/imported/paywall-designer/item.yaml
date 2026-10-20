@@ -1,0 +1,33 @@
+slug: paywall-designer
+name: Paywall designer
+summary: Describe your plans. Get upgrade screens, trigger moments and copy that convert free users.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: design_direction
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/paywalls
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/paywalls
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: paywalls
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: paywalls skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/paywalls
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

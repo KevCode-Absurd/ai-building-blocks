@@ -1,0 +1,38 @@
+slug: multi-touch-credit-calculator
+name: Multi-touch credit calculator
+summary: Give it your touches and sales. Get credit split by first, last, linear or decay rules, plus cost per sale.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: spreadsheet
+    required: true
+uses: []
+origin: imported
+source:
+  by: wizard7558
+  repo: wizard7558/attribution-skills
+  path: skills/multi-touch-models-sql
+  url: https://github.com/wizard7558/attribution-skills/tree/main/skills/multi-touch-models-sql
+  licence: MIT
+  licence_file: LICENSE
+  commit: bed5a8f
+  original_name: multi-touch-models-sql
+  author: Riley Sorenson
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: multi-touch-models-sql skill
+    by: wizard7558
+    url: https://github.com/wizard7558/attribution-skills/tree/main/skills/multi-touch-models-sql
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Riley Sorenson
+    url: https://github.com/wizard7558
+    used: Wrote the skill; wizard7558 shared it in their collection.

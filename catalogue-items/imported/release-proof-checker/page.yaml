@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It gathers evidence from several systems and judges it.
+new_slug: release-proof-checker
+name: Release proof checker
+summary: Point it at a deployed service. Get fresh proof across code, CI, database and live routes before you call it ready.
+job: ship-and-host
+headline: Release proof checker
+subhead: Point it at a deployed service. Get fresh proof across code, CI, database and live routes before you call it ready.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and reach your deployed service.

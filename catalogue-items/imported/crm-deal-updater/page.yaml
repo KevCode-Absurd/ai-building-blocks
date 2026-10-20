@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It makes one small, shown change.
+new_slug: crm-deal-updater
+name: CRM deal updater
+summary: Say what changed on a deal. Get a before and after, then the update saved when you accept.
+job: sell-and-negotiate
+headline: CRM deal updater
+subhead: Say what changed on a deal. Get a before and after, then the update saved when you accept.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read and write to your CRM.

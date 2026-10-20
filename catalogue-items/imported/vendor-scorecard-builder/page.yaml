@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It scores with set formulas, then recommends per vendor.
+new_slug: vendor-scorecard-builder
+name: Vendor scorecard builder
+summary: Give it your vendor list and uptime data. Get scorecards, missed-SLA credits and keep, review or replace calls.
+job: organise-work
+headline: Vendor scorecard builder
+subhead: Give it your vendor list and uptime data. Get scorecards, missed-SLA credits and keep, review or replace calls.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

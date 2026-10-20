@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It follows accounting rules with a few judgment calls.
+new_slug: cleanup-cost-liability-calculator
+name: Cleanup cost liability calculator
+summary: Give it an asset and its cleanup cost. Get the liability, yearly interest cost and journal entries worked out.
+job: money-and-investing
+headline: Cleanup cost liability calculator
+subhead: Give it an asset and its cleanup cost. Get the liability, yearly interest cost and journal entries worked out.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

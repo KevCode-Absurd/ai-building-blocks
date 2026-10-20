@@ -1,0 +1,34 @@
+slug: store-email-flow-writer
+name: Store email flow writer
+summary: Describe your store. Get ten email flows with full copy, who gets each one, and a year of campaigns.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: product_data
+    required: true
+  - type: brand_brain
+    required: false
+outputs:
+  - type: email_flow
+uses: []
+origin: imported
+source:
+  by: Nexscope AI
+  repo: nexscope-ai/eCommerce-Skills
+  path: ecommerce-email-marketing-builder
+  url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/ecommerce-email-marketing-builder
+  licence: MIT
+  licence_file: LICENSE
+  commit: ee0fb29
+  original_name: ecommerce-email-marketing-builder
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ecommerce-email-marketing-builder skill
+    by: Nexscope AI
+    url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/ecommerce-email-marketing-builder
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

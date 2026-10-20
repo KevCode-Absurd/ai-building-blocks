@@ -1,0 +1,32 @@
+slug: site-map-planner
+name: Site map planner
+summary: Describe your site. Get a page hierarchy, navigation, URL plan and internal linking map.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: page_layout_spec
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/site-architecture
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/site-architecture
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: site-architecture
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: site-architecture skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/site-architecture
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

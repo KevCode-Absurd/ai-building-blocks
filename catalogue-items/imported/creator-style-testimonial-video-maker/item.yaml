@@ -1,0 +1,39 @@
+slug: creator-style-testimonial-video-maker
+name: Creator-style testimonial video maker
+summary: Give it a product and a persona. Get a spoken recommendation script and a handheld, creator-style video. Your video model makes it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: script
+  - type: video_ads
+    required: true
+uses: []
+origin: imported
+source:
+  by: dLazy
+  repo: dlazy-ai/ecommerce-skills
+  path: skills/ugc-testimonial
+  url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/ugc-testimonial
+  licence: MIT
+  licence_file: LICENSE
+  commit: 87791a1
+  original_name: ugc-testimonial
+  author: dLazy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ugc-testimonial skill
+    by: dLazy
+    url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/ugc-testimonial
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: dLazy
+    url: https://github.com/dlazy-ai
+    used: Wrote the skill; dLazy shared it in their collection.

@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It matches each skill you need to a stage and a person.
+new_slug: interview-process-planner
+name: Interview process planner
+summary: Name the role and level. Get the interview stages, who runs each one and what each stage checks.
+job: hire-people
+headline: Interview process planner
+subhead: Name the role and level. Get the interview stages, who runs each one and what each stage checks.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

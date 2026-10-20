@@ -1,0 +1,32 @@
+slug: session-credit-reviewer
+name: Session credit reviewer
+summary: Finish a work session. Get a record of what you drove, what Claude did and where you steered.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/collab-proof/skills/collab-proof
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/collab-proof/skills/collab-proof
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: collab-proof
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: collab-proof skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/collab-proof/skills/collab-proof
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

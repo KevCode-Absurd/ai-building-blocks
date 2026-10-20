@@ -1,0 +1,32 @@
+slug: task-engagement-tuner
+name: Task engagement tuner
+summary: Give it a task students find dull or stressful. Get changes to challenge, goals and feedback that improve focus.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/wellbeing-motivation-agency/flow-state-condition-designer
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/wellbeing-motivation-agency/flow-state-condition-designer
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: flow-state-condition-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: flow-state-condition-designer skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/wellbeing-motivation-agency/flow-state-condition-designer
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

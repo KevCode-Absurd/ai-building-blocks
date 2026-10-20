@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: One change can quietly clash with other rules.
+new_slug: handbook-change-checker
+name: Handbook change checker
+summary: Give it a proposed handbook change. Get what it affects elsewhere, including state differences. A first check, not legal advice.
+job: hire-people
+headline: Handbook change checker
+subhead: Give it a proposed handbook change. Get what it affects elsewhere, including state differences. A first check, not legal advice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Where the skill points to /employment-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.

@@ -1,0 +1,33 @@
+slug: federal-accessibility-checker
+name: Federal accessibility checker
+summary: Describe your site, app or documents. Get Section 508 gaps, a fix plan and notes for an accessibility report.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/section-508/skills/section-508
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/section-508/skills/section-508
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: section-508
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: section-508 skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/section-508/skills/section-508
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

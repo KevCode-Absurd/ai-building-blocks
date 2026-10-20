@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks a solver, runs it and checks the answers are sound.
+new_slug: trade-off-optimizer
+name: Trade-off optimizer
+summary: Describe goals that pull against each other. Get a set of best trade-off answers, checked against known test problems.
+job: build-software
+headline: Trade-off optimizer
+subhead: Describe goals that pull against each other. Get a set of best trade-off answers, checked against known test problems.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

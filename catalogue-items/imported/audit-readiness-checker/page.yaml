@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It tests records against a set list but must judge the gaps.
+new_slug: audit-readiness-checker
+name: Audit readiness checker
+summary: Give it your records and controls. Get a checklist of gaps to fix before an audit.
+job: money-and-investing
+headline: Audit readiness checker
+subhead: Give it your records and controls. Get a checklist of gaps to fix before an audit.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It builds a cast first, then draws each sticker.
+new_slug: brand-sticker-set-maker
+name: Brand sticker set maker
+summary: Give it your logo. Get a set of playful die-cut character stickers on clear backgrounds.
+job: make-images
+headline: Brand sticker set maker
+subhead: Give it your logo. Get a set of playful die-cut character stickers on clear backgrounds.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can draw images.

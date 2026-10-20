@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It checks code against a fixed rule list.
+new_slug: generated-code-reviewer
+name: Generated code reviewer
+summary: Give it code your AI just wrote. Get a pass for clean-code slips, repeated logic and common AI mistakes.
+job: test-and-fix-code
+headline: Generated code reviewer
+subhead: Give it code your AI just wrote. Get a pass for clean-code slips, repeated logic and common AI mistakes.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

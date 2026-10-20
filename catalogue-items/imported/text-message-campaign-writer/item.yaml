@@ -1,0 +1,32 @@
+slug: text-message-campaign-writer
+name: Text message campaign writer
+summary: Say your goal. Get SMS or WhatsApp flows for welcome, cart, win-back and promos, with consent rules.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: email_flow
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/sms
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/sms
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: sms
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: sms skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/sms
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

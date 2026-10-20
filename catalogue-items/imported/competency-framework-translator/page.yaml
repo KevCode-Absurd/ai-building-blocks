@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It must turn broad standards into specific activities.
+new_slug: competency-framework-translator
+name: Competency framework translator
+summary: Give it a framework like DigComp or ISTE. Get classroom activities that teach each skill in it.
+job: teach-and-train
+headline: Competency framework translator
+subhead: Give it a framework like DigComp or ISTE. Get classroom activities that teach each skill in it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

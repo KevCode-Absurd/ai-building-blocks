@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It compares options against your traffic and tools.
+new_slug: image-and-video-pipeline-planner
+name: Image and video pipeline planner
+summary: Tell it your site's media. Get a plan for formats, responsive images, video hosting and a tidy brand asset library.
+job: build-websites
+headline: Image and video pipeline planner
+subhead: Tell it your site's media. Get a plan for formats, responsive images, video hosting and a tidy brand asset library.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can look at your site's files.

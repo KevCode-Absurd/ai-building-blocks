@@ -1,7 +1,7 @@
 import { memo, useEffect, useRef, useState, type CSSProperties, type KeyboardEvent as ReactKeyEvent, type ReactNode } from "react";
 import { B8, ICONS } from "./lib/pixel";
 import { useScrollTyped, useSeen, useTyped } from "./lib/typing";
-import { type Block, formatOf, kindInfo, loadPage, pathOf, taskOf } from "./lib/data";
+import { type Block, formatOf, kindInfo, loadPage, paidService, pathOf, taskOf } from "./lib/data";
 import { Link } from "./lib/router";
 import { ThinkBars } from "./Gauge";
 import PixelFace from "./PixelFace";
@@ -146,6 +146,19 @@ function Decode({ text, round }: { text: string; round: number }) {
   return <span className="decode"><span className="visually-hidden">{text}</span><span aria-hidden="true">{shown}</span></span>;
 }
 
+/** Who made a block: us (own or rebuilt), or the company an imported skill came from. Anyone else counts as the community. */
+export type Maker = "ai-blocks" | "anthropic" | "openai" | "community";
+export const makerOf = (b: Block): Maker => {
+  if (b.origin !== "imported") return "ai-blocks";
+  const by = (b.source?.by ?? "").trim().toLowerCase();
+  return by === "anthropic" ? "anthropic" : by === "openai" ? "openai" : "community";
+};
+export const MAKERS: { id: Maker; name: string }[] = [
+  { id: "ai-blocks", name: "AI Blocks" }, { id: "anthropic", name: "Anthropic" }, { id: "openai", name: "OpenAI" }, { id: "community", name: "Community" },
+];
+/** "From Anthropic", "From OpenAI" or "From the community"; nothing for our own blocks. */
+export const fromLabel = (b: Block) => { const m = makerOf(b); return m === "ai-blocks" ? "" : m === "community" ? "From the community" : `From ${m === "openai" ? "OpenAI" : "Anthropic"}`; };
+
 // Memoised: typing in the search box redraws the list, not every card in it.
 export const BlockCard = memo(function BlockCard({ b }: { b: Block }) {
   const kind = kindInfo(b);
@@ -157,7 +170,7 @@ export const BlockCard = memo(function BlockCard({ b }: { b: Block }) {
   return (
     <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake}
       style={{ "--pat": `var(--pat-${taskOf(b).id})` } as CSSProperties}>
-      <span className="meta"><span className="kind">{kind.name}</span>{b.thinking && <ThinkBars level={b.thinking} />}<span className="type">{fmt ? (fmt === "image" ? "Image ad" : "Video ad") : taskOf(b).name}</span></span>
+      <span className="meta"><span className="kind">{kind.name}</span>{b.thinking && <ThinkBars level={b.thinking} />}{b.origin === "imported" && <span className="from" data-testid="from-label">{fromLabel(b)}</span>}{b.warnings?.includes("scrapes") && <span className="from warn" data-testid="scrapes-label" title="Collects data from websites">Scrapes sites</span>}{paidService(b) && <span className="from warn" data-testid="paid-label" title={`Needs a paid ${paidService(b)} account`}>Needs a paid account</span>}<span className="type">{fmt ? (fmt === "image" ? "Image ad" : "Video ad") : taskOf(b).name}</span></span>
       <span className="nm">{b.type === "mind" && <PixelFace face={b.face} area={b.area} slug={b.slug} size={32} className="card-face" />}{b.name}</span>
       <Peek text={b.summary} round={round} />
       <span className="view"><Decode text={view} round={round} /><ArrowIcon size={12} /></span>

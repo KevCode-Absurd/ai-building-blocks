@@ -1,0 +1,32 @@
+slug: brain-dump-organizer
+name: Brain dump organizer
+summary: Dump everything on your mind. Get it sorted into tasks, ideas and notes with nothing lost.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: productivity/capture/skills/capture
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/productivity/capture/skills/capture
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: capture
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: capture skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/productivity/capture/skills/capture
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

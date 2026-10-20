@@ -1,0 +1,37 @@
+slug: real-world-texture-style-guide-writer
+name: Real-world texture style guide writer
+summary: Describe your product. Get a style guide that copies real objects and textures, with rules for each part.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: design_direction
+uses: []
+origin: imported
+source:
+  by: Bergside
+  repo: bergside/awesome-design-skills
+  path: skills/skeumorphism
+  url: https://github.com/bergside/awesome-design-skills/tree/main/skills/skeumorphism
+  licence: MIT
+  licence_file: LICENSE
+  commit: f631a09
+  original_name: skeumorphism
+  author: typeui.sh
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: skeumorphism skill
+    by: Bergside
+    url: https://github.com/bergside/awesome-design-skills/tree/main/skills/skeumorphism
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: typeui.sh
+    url: https://typeui.sh
+    used: Wrote the skill; Bergside shared it in their collection.

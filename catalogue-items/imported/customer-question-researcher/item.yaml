@@ -1,0 +1,32 @@
+slug: customer-question-researcher
+name: Customer question researcher
+summary: Ask a customer question. Get an answer found across your docs, past tickets and chats, with each source named.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: customer-support/skills/customer-research
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/customer-support/skills/customer-research
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: customer-research
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: customer-research skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/customer-support/skills/customer-research
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

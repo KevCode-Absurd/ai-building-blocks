@@ -1,0 +1,32 @@
+slug: own-voice-outreach-writer
+name: Own-voice outreach writer
+summary: Give it your prospects. Get emails and follow-ups that sound like you, each tied to something specific about them.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: email_flow
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: small-business/skills/outreach-composer
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/outreach-composer
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: outreach-composer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: outreach-composer skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/outreach-composer
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

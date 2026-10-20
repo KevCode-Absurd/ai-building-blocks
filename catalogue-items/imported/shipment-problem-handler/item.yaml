@@ -1,0 +1,38 @@
+slug: shipment-problem-handler
+name: Shipment problem handler
+summary: Describe a late, lost or damaged shipment. Get the right steps, claim paperwork and carrier messages.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/logistics-exception-management
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/logistics-exception-management
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: logistics-exception-management
+  author: ai-evos
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: logistics-exception-management skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/logistics-exception-management
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: ai-evos
+    url: https://github.com/ai-evos
+    used: Wrote the skill; sickn33 shared it in their collection.

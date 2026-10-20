@@ -1,0 +1,32 @@
+slug: article-translator
+name: Article translator
+summary: Give it an article. Get a translation in your language, quick or polished with review, using consistent terms.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Jim Liu
+  repo: JimLiu/baoyu-skills
+  path: skills/baoyu-translate
+  url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-translate
+  licence: MIT
+  licence_file: LICENSE
+  commit: "1567581"
+  original_name: baoyu-translate
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: baoyu-translate skill
+    by: Jim Liu
+    url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-translate
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: science-dataset-and-model-finder
+name: Science dataset and model finder
+summary: Name your science field and task. Get datasets, models and tools worth trying, with notes on fit.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/hugging-science
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/hugging-science
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: hugging-science
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hugging-science skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/hugging-science
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

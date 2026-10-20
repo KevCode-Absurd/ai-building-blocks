@@ -1,0 +1,32 @@
+slug: article-formatter
+name: Article formatter
+summary: Give it plain text or rough markdown. Get a tidy article with title, summary, headings and lists, same words.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Jim Liu
+  repo: JimLiu/baoyu-skills
+  path: skills/baoyu-format-markdown
+  url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-format-markdown
+  licence: MIT
+  licence_file: LICENSE
+  commit: "1567581"
+  original_name: baoyu-format-markdown
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: baoyu-format-markdown skill
+    by: Jim Liu
+    url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-format-markdown
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

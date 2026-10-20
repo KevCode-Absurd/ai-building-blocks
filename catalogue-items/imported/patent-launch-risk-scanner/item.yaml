@@ -1,0 +1,32 @@
+slug: patent-launch-risk-scanner
+name: Patent launch-risk scanner
+summary: Describe a product or feature. Get patents that might block it and a first claim comparison. Not a legal opinion.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/claude-for-legal
+  path: ip-legal/skills/fto-triage
+  url: https://github.com/anthropics/claude-for-legal/tree/main/ip-legal/skills/fto-triage
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: 4a6c651
+  original_name: fto-triage
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: fto-triage skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/ip-legal/skills/fto-triage
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

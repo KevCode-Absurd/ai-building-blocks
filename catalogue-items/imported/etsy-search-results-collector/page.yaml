@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It fetches listed facts and tabulates them.
+new_slug: etsy-search-results-collector
+name: Etsy search results collector
+summary: Give it a keyword. Get Etsy listings with rank, price and shop. Collects data from websites.
+job: run-your-store
+headline: Etsy search results collector
+subhead: Give it a keyword. Get Etsy listings with rank, price and shop. Collects data from websites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your Apify token.

@@ -1,0 +1,32 @@
+slug: why-it-works-story-builder
+name: Why-it-works story builder
+summary: Say what people tried before and why it failed. Get a named new method and the reason it works now.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: offer
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Kim Barrett
+  repo: realkimbarrett/advertising-skills
+  path: skills/copy-chief/mechanism-builder
+  url: https://github.com/realkimbarrett/advertising-skills/tree/main/skills/copy-chief/mechanism-builder
+  licence: MIT
+  licence_file: README.md
+  commit: 45f4a4a
+  original_name: mechanism-builder
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mechanism-builder skill
+    by: Kim Barrett
+    url: https://github.com/realkimbarrett/advertising-skills/tree/main/skills/copy-chief/mechanism-builder
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

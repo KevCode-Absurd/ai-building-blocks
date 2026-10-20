@@ -1,0 +1,32 @@
+slug: earnings-update-report-writer
+name: Earnings update report writer
+summary: Give it a company's quarterly results. Get an 8 to 12 page update on beats, misses and key numbers.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/equity-research/skills/earnings-analysis
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/equity-research/skills/earnings-analysis
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: earnings-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: earnings-analysis skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/equity-research/skills/earnings-analysis
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

@@ -1,0 +1,391 @@
+# Hemant Naik, Claude Skills Governance Risk and Compliance (MIT). Folders are plugins/<id>/skills/<id>.
+# Kim Barrett, advertising-skills. No LICENSE file; README License section says MIT, so licence_file: README.md.
+
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/ccpa/skills/ccpa":
+  name: California privacy law checker
+  summary: "Describe how you use customer data. Get California privacy duties, gaps and a plan for consumer requests."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies a set rule list to your facts."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/cis-controls/skills/cis-controls":
+  name: Security safeguards planner
+  summary: "Describe your setup and size. Get which CIS safeguards you need first, your gaps and a fix order."
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scopes your size, then checks set safeguards."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/cmmc/skills/cmmc":
+  name: Defense contractor security checker
+  summary: "Describe your defense work and systems. Get your CMMC level, gaps and the plan papers an assessor expects."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "The rules are dense and tie to many linked controls."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/csrd/skills/csrd":
+  name: EU sustainability report checker
+  summary: "Describe your company. Get whether EU sustainability reporting applies, what to disclose and the gaps to close."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Scope and materiality calls need careful reasoning."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/cyber-essentials/skills/cyber-essentials":
+  name: UK Cyber Essentials checker
+  summary: "Describe your devices and cloud services. Get gaps against Cyber Essentials and what to fix before you apply."
+  task: secure-code
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It walks five fixed control themes."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/dora/skills/dora":
+  name: Financial IT resilience checker
+  summary: "Describe your finance firm and IT suppliers. Get DORA gaps, incident reporting steps and supplier contract checks."
+  task: check-contracts
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "It weighs many linked EU rules and supplier terms."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/dpdpa/skills/dpdpa":
+  name: India data privacy checker
+  summary: "Describe how you handle personal data in India. Get your duties, gaps and a plan under the DPDP Act."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies a set law to your facts."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/ear/skills/ear":
+  name: US export rules checker
+  summary: "Describe your product and buyer. Get its export class, whether you need a licence and which exceptions fit."
+  task: check-contracts
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Classing items and buyers takes careful step by step logic."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/eu-cra/skills/eu-cra":
+  name: Connected product security checker
+  summary: "Describe your product with software. Get its EU risk class, security duties, parts list needs and reporting steps."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It sorts the product, then lists set duties."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/fedramp/skills/fedramp":
+  name: Federal cloud approval planner
+  summary: "Describe your cloud service. Get a FedRAMP path, the papers you need and the gaps to close first."
+  task: check-contracts
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Approval paths and papers are long and linked."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/hipaa-compliance/skills/hipaa-compliance":
+  name: Health data privacy checker
+  summary: "Describe your health data use or app. Get HIPAA gaps, safeguards to add and draft notices or agreements."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies set rules to your data flows."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/ism/skills/ism":
+  name: Australian government security checker
+  summary: "Describe your system and its data level. Get which ISM controls apply, your gaps and what assessors will ask."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Control choice depends on classification and many notes."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/iso27701/skills/iso27701":
+  name: Privacy management audit planner
+  summary: "Describe how you handle personal data. Get gaps against ISO 27701, a privacy control list and an audit plan."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It maps your practice to a fixed control list."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/itar/skills/itar":
+  name: Defense export rules checker
+  summary: "Describe your defense product or data. Get whether it is controlled, which licences apply and how to stay compliant."
+  task: check-contracts
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Jurisdiction and licence calls need careful reasoning."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/lgpd/skills/lgpd":
+  name: Brazil data privacy checker
+  summary: "Describe how you handle data about people in Brazil. Get your LGPD duties, gaps and a plan to fix them."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies a set law to your facts."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/nis2/skills/nis2":
+  name: EU network security rules checker
+  summary: "Describe your company. Get whether NIS2 covers you, your security duties, reporting deadlines and gaps."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It sorts your type first, then lists set duties."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/nist-800-53/skills/nist-800-53":
+  name: Federal security controls planner
+  summary: "Describe your system. Get the right control baseline, tailoring choices and draft control write-ups."
+  task: secure-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Control choice and write-ups need careful detail."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/nist-ai-rmf/skills/nist-ai-rmf":
+  name: AI risk framework planner
+  summary: "Describe your AI system. Get risks mapped, measured and managed under the NIST AI framework, with a plan."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows four fixed steps across your system."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/nist-csf/skills/nist-csf":
+  name: Cybersecurity profile builder
+  summary: "Describe your security today and your goals. Get a NIST CSF profile, gaps and a step by step plan."
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares your setup with a fixed function list."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/nzism/skills/nzism":
+  name: New Zealand government security checker
+  summary: "Describe your agency system. Get which NZISM controls apply, your gaps and what certification needs."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Control choice depends on classification and many notes."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/pci-compliance/skills/pci-compliance":
+  name: Card payment security checker
+  summary: "Describe how you take card payments. Get your PCI level, the right self-check form and gaps to fix."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts your setup, then applies set rules."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/saudi-arabia-grc/skills/saudi-arabia-grc":
+  name: Saudi rules finder
+  summary: "Describe your business in Saudi Arabia. Get which Saudi cyber and data rules apply, then the steps for each."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks the rules first, then applies them."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/section-508/skills/section-508":
+  name: Federal accessibility checker
+  summary: "Describe your site, app or documents. Get Section 508 gaps, a fix plan and notes for an accessibility report."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It tests against a fixed list of success criteria."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/sox-itgc/skills/sox-itgc":
+  name: IT controls audit planner
+  summary: "Describe your finance systems. Get controls matrix rows, test steps and a rating for any IT control gaps."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Rating gaps against audit rules takes careful judgement."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/swift-csp/skills/swift-csp":
+  name: Bank messaging security checker
+  summary: "Describe how you connect to SWIFT. Get your architecture type, control gaps and what your yearly attestation needs."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It sorts your setup, then checks set controls."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/tisax/skills/tisax":
+  name: Car supplier security checker
+  summary: "Describe your work for car makers. Get the right TISAX level, labels and gaps before the assessment."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It picks levels and labels, then checks set controls."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/tprm/skills/tprm":
+  name: Vendor risk reviewer
+  summary: "Give it a vendor and what they handle. Get a risk tier, tailored questions and a review of their SOC 2 report."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows a set review method for each vendor."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/tsa-compliance/skills/tsa-compliance":
+  name: Transport cyber rules checker
+  summary: "Describe your pipeline or rail operation. Get which TSA security rules apply, your gaps and required plans."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Rules vary by operator type and need careful reading."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/uae-grc/skills/uae-grc":
+  name: UAE rules finder
+  summary: "Describe where your business sits in the UAE. Get which data and cyber rules apply, then the steps for each."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "Location picks the law first, then steps follow."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/vn-pdpl/skills/vn-pdpl":
+  name: Vietnam data privacy checker
+  summary: "Describe how you handle Vietnamese personal data. Get your duties, transfer checks and a plan under the new law."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies a set law to your facts."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/wcag/skills/wcag":
+  name: Accessibility standards checker
+  summary: "Describe your site or app. Get WCAG gaps by level, what to fix first and notes for an accessibility statement."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It tests against a fixed list of success criteria."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/iso27001/skills/iso27001":
+  skip: "Same job as our ISO 27001 audit planner (gap analysis, controls, audit plan)."
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/soc2/skills/soc2":
+  skip: "Same job as our SOC 2 readiness planner (controls, gaps, evidence)."
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/eu-ai-act/skills/eu-ai-act":
+  skip: "Same job as our EU AI Act risk classifier and readiness checker."
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/iso42001/skills/iso42001":
+  skip: "Same job as our AI management audit planner (ISO 42001 gaps and plan)."
+"Sushegaad/Claude-Skills-Governance-Risk-and-Compliance:plugins/gdpr-compliance/skills/gdpr-compliance":
+  skip: "Same job as our GDPR privacy checker (code and data audit, privacy documents)."
+"realkimbarrett/advertising-skills:skills/operator-os/ad-angle-multiplier":
+  licence_file: README.md
+  name: Ad angle multiplier
+  summary: "Give it one winning ad idea. Get 10 to 15 different angles with hooks, ready to test side by side."
+  task: plan-ad-tests
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It spins a set list of angles from one idea."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: angle_library}, {type: hooks}]
+"realkimbarrett/advertising-skills:skills/copy-chief/mechanism-builder":
+  licence_file: README.md
+  name: Why-it-works story builder
+  summary: "Say what people tried before and why it failed. Get a named new method and the reason it works now."
+  task: make-offer
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It builds a believable story from a few facts."
+  inputs: [{type: offer, required: true}]
+  outputs: [{type: copy_draft}]
+"realkimbarrett/advertising-skills:skills/foundations/avatar-extraction":
+  licence_file: README.md
+  name: Ideal buyer profiler
+  summary: "Describe who you sell to. Get one specific buyer with pains, goals, failed attempts and what drives their choices."
+  task: understand-customers
+  role: source
+  level: beginner
+  thinking: medium
+  thinking_why: "It turns a few facts into one clear person."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: persona}]
+"realkimbarrett/advertising-skills:skills/operator-os/performance-diagnosis":
+  licence_file: README.md
+  name: Ad performance diagnoser
+  summary: "Give it your underperforming campaign. Get the main cause across offer, audience, creative, funnel and sales, plus the fix."
+  task: read-ad-results
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It checks five set areas in order."
+  inputs: [{type: performance_sheet, required: true}]
+  outputs: [{type: audit_report}]
+"realkimbarrett/advertising-skills:skills/copy-chief/headline-matrix":
+  licence_file: README.md
+  skip: "Thin list of headline types; our Headline option writer does the same job."
+"realkimbarrett/advertising-skills:skills/copy-chief/objection-crusher":
+  licence_file: README.md
+  skip: "Thin; our objection answer sheet and hardest objections skills already do this."
+"realkimbarrett/advertising-skills:skills/copy-chief/schwartz-awareness-mapper":
+  licence_file: README.md
+  skip: "Same job as our Buyer awareness stage mapper."
+"realkimbarrett/advertising-skills:skills/foundations/offer-extraction":
+  licence_file: README.md
+  skip: "Thin; our Offer designer and Value proposition builder do the same job."
+"realkimbarrett/advertising-skills:skills/operator-os/conversion-path-builder":
+  licence_file: README.md
+  skip: "Stub of about 30 lines with no real method."
+"realkimbarrett/advertising-skills:skills/operator-os/scroll-stopping-creative":
+  licence_file: README.md
+  skip: "Stub of about 20 lines with no real method."
+"realkimbarrett/advertising-skills:skills/orchestrators/full-funnel-campaign-orchestrator":
+  licence_file: README.md
+  skip: "Only routes to the other skills in its own repo."
+"realkimbarrett/advertising-skills:skills/qa/generic-language-killer":
+  licence_file: README.md
+  skip: "Thin; our brand voice and humaniser skills already do this."

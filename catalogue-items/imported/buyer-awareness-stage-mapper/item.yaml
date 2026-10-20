@@ -1,0 +1,32 @@
+slug: buyer-awareness-stage-mapper
+name: Buyer awareness stage mapper
+summary: Describe your audience and offer. Get where buyers sit, from unaware to ready, and what to say to each.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/awareness-stage-mapper
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/awareness-stage-mapper
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: awareness-stage-mapper
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: awareness-stage-mapper skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/awareness-stage-mapper
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

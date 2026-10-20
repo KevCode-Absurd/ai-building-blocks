@@ -1,0 +1,437 @@
+# anthropics/knowledge-work-plugins (Anthropic, Apache 2.0): support, HR, legal, operations, finance, data. Skills draft or read; a person approves every send.
+"anthropics/knowledge-work-plugins:customer-support/skills/customer-escalation":
+  name: Escalation brief writer
+  summary: Give it a stuck customer issue. Get a clear escalation brief for engineering or leadership, with impact and what was tried.
+  task: help-customers
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It pulls scattered facts into one brief a busy person can act on.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read your help desk, chat or tickets
+"anthropics/knowledge-work-plugins:customer-support/skills/customer-research":
+  name: Customer question researcher
+  summary: Ask a customer question. Get an answer found across your docs, past tickets and chats, with each source named.
+  task: help-customers
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It searches several places and says how sure it is.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: read your help desk, docs and chat
+"anthropics/knowledge-work-plugins:customer-support/skills/draft-response":
+  name: Customer reply drafter
+  summary: Describe the customer's situation. Get a reply in the right tone, plus notes on what to check before you send it.
+  task: help-customers
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: The tone has to fit the person and the news.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  needs: read your help desk or email
+"anthropics/knowledge-work-plugins:customer-support/skills/kb-article":
+  name: Solved-ticket help page writer
+  summary: Give it a solved ticket. Get a help article with steps, what you should see, and a fix for next time.
+  task: help-customers
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It turns a known answer into a standard layout.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+"anthropics/knowledge-work-plugins:customer-support/skills/ticket-triage":
+  name: Support inbox priority sorter
+  summary: Paste a support ticket. Get a category, a P1 to P4 priority, who should handle it, and any known duplicate.
+  task: help-customers
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It sorts by clear rules.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: read your help desk
+"anthropics/knowledge-work-plugins:human-resources/skills/comp-analysis":
+  name: Pay benchmark and equity modeler
+  summary: Give it a role or pay data. Get market ranges, outliers and equity grant models. Not pay or tax advice.
+  task: hire-people
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: Pay numbers need careful math and honest caveats.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: audit_report } ]
+  needs: run code and read a pay file you upload
+"anthropics/knowledge-work-plugins:human-resources/skills/draft-offer":
+  name: Offer letter drafter
+  summary: Give it a role and level. Get an offer letter, pay package and talking points. Have HR or a lawyer check it.
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It combines pay terms with a careful tone.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+"anthropics/knowledge-work-plugins:human-resources/skills/onboarding":
+  name: New hire plan builder
+  summary: Give it a name, role and start date. Get a pre-start checklist, a first week plan, and 30/60/90 day goals.
+  task: hire-people
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a standard plan with your details.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+"anthropics/knowledge-work-plugins:human-resources/skills/people-report":
+  name: Headcount and turnover reporter
+  summary: Give it your people data. Get headcount, turnover and team health reports. Use your own data only.
+  task: hire-people
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It counts and compares, then explains the trends.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read a people data file you upload
+"anthropics/knowledge-work-plugins:human-resources/skills/performance-review":
+  name: Performance review helper
+  summary: Pick your review cycle. Get a self-review template, a manager review draft and calibration prep with specific examples.
+  task: hire-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: Fair reviews need careful, specific wording.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+"anthropics/knowledge-work-plugins:human-resources/skills/policy-lookup":
+  name: Company policy explainer
+  summary: Ask about leave, travel or expenses. Get the rule in plain words from your handbook. Check with HR for big decisions.
+  task: hire-people
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: It finds a rule and restates it.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read your handbook or wiki
+"anthropics/knowledge-work-plugins:legal/skills/brief":
+  name: Legal daily and incident briefer
+  summary: Pick a daily scan, a topic or an incident. Get a short briefing from your email, calendar and files. Not legal advice.
+  task: check-contracts
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads many sources and picks what matters.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read your email, calendar and files
+"anthropics/knowledge-work-plugins:legal/skills/compliance-check":
+  name: Rules and approvals checker
+  summary: Describe a new feature or plan. Get the rules that may apply, approvals needed and risk areas. Not legal advice.
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: Rules vary by place and the stakes are real.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+"anthropics/knowledge-work-plugins:legal/skills/legal-response":
+  name: Legal inquiry reply drafter
+  summary: Name the request, such as a data access request. Get a draft reply and a flag when a lawyer must review.
+  task: check-contracts
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: It must spot cases where a template is unsafe.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  needs: read your legal reply templates
+"anthropics/knowledge-work-plugins:legal/skills/legal-risk-assessment":
+  name: Legal risk rater
+  summary: Describe a deal or issue. Get each risk rated by how bad and how likely. Not legal advice.
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It weighs severity against likelihood.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+"anthropics/knowledge-work-plugins:legal/skills/meeting-briefing":
+  name: Legal meeting briefer
+  summary: Name a negotiation or review meeting. Get background, key issues, questions to ask, then action items. Not legal advice.
+  task: check-contracts
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It gathers background and shapes it for the meeting.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: meeting_notes } ]
+  needs: read your email, calendar and files
+"anthropics/knowledge-work-plugins:legal/skills/review-contract":
+  name: Contract reviewer
+  summary: Give it a contract and your rules. Get a clause by clause review and suggested edits. Have a lawyer check it.
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: Contract wording hides risks that need close reading.
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report }, { type: document } ]
+"anthropics/knowledge-work-plugins:legal/skills/triage-nda":
+  name: NDA quick checker
+  summary: Give it an NDA. Get a green, yellow or red rating and the odd clauses. Have a lawyer check yellow or red.
+  task: check-contracts
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: It checks a set list of known trouble spots.
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
+"anthropics/knowledge-work-plugins:legal/skills/vendor-check":
+  name: Vendor agreement status checker
+  summary: Name a vendor. Get what you signed, what is missing and what expires soon. Verify against the originals.
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It combines facts from several places.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: read your contract files, email and CRM
+"anthropics/knowledge-work-plugins:operations/skills/capacity-plan":
+  name: Team capacity planner
+  summary: Give it your team and projects. Get workload against people, who is overloaded, and whether you can take on more.
+  task: organise-work
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It compares load to capacity.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code and read a workload file you upload
+"anthropics/knowledge-work-plugins:operations/skills/change-request":
+  name: Change request writer
+  summary: Describe a system or process change. Get a change request with impact, risks, rollback steps and who to tell.
+  task: document-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It must think through what could go wrong.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+"anthropics/knowledge-work-plugins:operations/skills/process-doc":
+  name: Process and SOP writer
+  summary: Describe how work gets done. Get a flowchart, who does what, and a written procedure with the edge cases.
+  task: document-work
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It turns what is in your head into steps.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+"anthropics/knowledge-work-plugins:operations/skills/runbook":
+  name: Repeat task step guide writer
+  summary: Name a repeat task. Get exact steps, fixes if it fails, how to roll back and who to call.
+  task: document-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: Steps must be exact to be safe.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+"anthropics/knowledge-work-plugins:operations/skills/status-report":
+  name: Status report writer
+  summary: Give it your project updates. Get a weekly or monthly report with status, risks and decisions needed.
+  task: document-work
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: It summarizes updates in a fixed layout.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read your project tracker or chat
+"anthropics/knowledge-work-plugins:operations/skills/vendor-review":
+  name: Vendor comparison writer
+  summary: Name a vendor or two proposals. Get the cost, risks and a clear pick, with points to negotiate.
+  task: think-and-decide
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It weighs cost against risk.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+"anthropics/knowledge-work-plugins:finance/skills/close-management":
+  name: Month-end close day planner
+  summary: Give it your close tasks. Get a day by day schedule and what is blocking. Review with your accountant.
+  task: track-numbers
+  role: orchestrate
+  level: intermediate
+  thinking: medium
+  thinking_why: It orders tasks by what must finish first.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+"anthropics/knowledge-work-plugins:finance/skills/financial-statements":
+  name: P&L and balance sheet writer
+  summary: Give it your books. Get an income statement, balance sheet or cash flow with big swings flagged. Review with an accountant.
+  task: track-numbers
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Numbers must tie and the notes must be right.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: document } ]
+  needs: run code and read your accounting file
+"anthropics/knowledge-work-plugins:finance/skills/journal-entry":
+  name: Journal entry preparer
+  summary: Name an accrual or adjustment. Get the debits, credits and support ready for review. An accountant should check it.
+  task: track-numbers
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Entries must balance and follow accounting rules.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+"anthropics/knowledge-work-plugins:finance/skills/reconciliation":
+  name: Account reconciler
+  summary: Give it a ledger and a bank statement. Get matched items, the gaps and a note on each. Have an accountant check.
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It matches rows and explains what is left.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: audit_report } ]
+  needs: run code and read the files you upload
+"anthropics/knowledge-work-plugins:finance/skills/sox-testing":
+  name: Control testing workpaper builder
+  summary: Name a control area. Get a test sample, a workpaper and a rating for any gap. Not audit advice.
+  task: track-numbers
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Audit work follows strict rules.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document }, { type: spreadsheet } ]
+"anthropics/knowledge-work-plugins:finance/skills/variance-analysis":
+  name: Budget variance explainer
+  summary: Give it actual and budget numbers. Get what moved, why, and a short note for leadership.
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It breaks changes into causes and writes them up.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your numbers file
+"anthropics/knowledge-work-plugins:data/skills/analyze":
+  name: Data question answerer
+  summary: Ask a data question. Get a quick lookup or a full analysis with the numbers and what they mean.
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It chooses how deep to go.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and connect to your data
+"anthropics/knowledge-work-plugins:data/skills/build-dashboard":
+  name: Dashboard builder
+  summary: Give it your data and what to track. Get one HTML dashboard with charts, filters and tables you can open and share.
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It builds a working page from data.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: web_page } ]
+  needs: run code and open a browser
+"anthropics/knowledge-work-plugins:data/skills/create-viz":
+  name: Data chart drawer
+  summary: Give it your data. Get a clean chart with the right chart type, as an image or an interactive plot.
+  task: track-numbers
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It picks a chart and draws it.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: image } ]
+  needs: run code
+"anthropics/knowledge-work-plugins:data/skills/data-context-extractor":
+  name: Data skill builder
+  summary: Describe your data warehouse and terms. Get a custom data analysis skill that knows your tables and metrics.
+  task: track-numbers
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It must learn your data from your answers.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: skill_files } ]
+  needs: connect to your data warehouse
+"anthropics/knowledge-work-plugins:data/skills/explore-data":
+  name: Dataset profiler
+  summary: Give it a table or file. Get its shape, missing values, odd entries and which columns are worth analyzing.
+  task: track-numbers
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It runs standard checks and lists the results.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+"anthropics/knowledge-work-plugins:data/skills/statistical-analysis":
+  name: Statistics helper
+  summary: Give it data and a question. Get trends, outliers, correlations and tests, explained in plain words.
+  task: track-numbers
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: Statistics need the right method and honest limits.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+"anthropics/knowledge-work-plugins:data/skills/validate-data":
+  name: Analysis checker
+  summary: Give it an analysis before you share it. Get a check of the method, the math and any bias.
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It must catch subtle mistakes.
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+"anthropics/knowledge-work-plugins:data/skills/write-query":
+  name: Plain-words SQL writer
+  summary: Describe the data you need. Get a working SQL query for your database type, with a note on how it runs.
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: Queries must be correct for your dialect.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: connect to your database
+"anthropics/knowledge-work-plugins:human-resources/skills/interview-prep":
+  skip: "too thin: a short template with no steps of its own"
+"anthropics/knowledge-work-plugins:human-resources/skills/org-planning":
+  skip: "too thin: a few lines of general advice"
+"anthropics/knowledge-work-plugins:human-resources/skills/recruiting-pipeline":
+  skip: "too thin: a few lines, and its job is tracking candidates in a tool"
+"anthropics/knowledge-work-plugins:legal/skills/signature-request":
+  skip: its main job is sending documents out for signature through an e-signature tool
+"anthropics/knowledge-work-plugins:operations/skills/compliance-tracking":
+  skip: "too thin: a few lines of general advice"
+"anthropics/knowledge-work-plugins:operations/skills/process-optimization":
+  skip: "too thin: a few lines of general advice"
+"anthropics/knowledge-work-plugins:operations/skills/risk-assessment":
+  skip: "too thin: a few lines of general advice"
+"anthropics/knowledge-work-plugins:finance/skills/audit-support":
+  skip: near-copy of sox-testing and only background knowledge for it
+"anthropics/knowledge-work-plugins:finance/skills/journal-entry-prep":
+  skip: near-copy of journal-entry
+"anthropics/knowledge-work-plugins:data/skills/data-visualization":
+  skip: near-copy of create-viz
+"anthropics/knowledge-work-plugins:data/skills/sql-queries":
+  skip: near-copy of write-query

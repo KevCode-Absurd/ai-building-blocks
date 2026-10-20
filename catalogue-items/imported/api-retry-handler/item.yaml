@@ -1,0 +1,37 @@
+slug: api-retry-handler
+name: API retry handler
+summary: Name the API. Get safe code for waiting, retrying and backing off when it says slow down.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/api-rate-limit-handler
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/api-rate-limit-handler
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: api-rate-limit-handler
+  author: Prajeeth-12
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: api-rate-limit-handler skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/api-rate-limit-handler
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Prajeeth-12
+    url: https://github.com/Prajeeth-12
+    used: Wrote the skill; sickn33 shared it in their collection.

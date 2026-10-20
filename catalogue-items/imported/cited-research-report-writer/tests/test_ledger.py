@@ -1,0 +1,175 @@
+#!/usr/bin/env python3
+"""Offline unit tests for ledger.py using a stub fetch script. Run: python3 tests/test_ledger.py"""
+import json, os, subprocess, sys, tempfile, unittest
+from pathlib import Path
+
+S = Path(__file__).resolve().parent.parent / "scripts"
+STUB = '''import sys, json, argparse
+p=argparse.ArgumentParser(); p.add_argument("url"); p.add_argument("--out"); p.add_argument("--id"); p.add_argument("--json",action="store_true"); p.add_argument("--ignore-robots",action="store_true"); p.add_argument("--fresh",action="store_true")
+a=p.parse_args()
+text="Page about "+a.url+". The global market reached USD 4.2 billion in 2024, according to the report. Another sentence. A third sentence about growth. A fourth sentence about risk. A fifth sentence about regulation. A sixth sentence about history."
+open(a.out,"w").write(text)
+print(json.dumps({"url":a.url,"final_url":a.url,"title":"T","status":"ok","fetch_method":"raw-http","http_status":200,"content_type":"text/html","accessed":"2026-09-03T00:00:00Z","snapshot_date":None,"extracted_chars":len(text),"gate":"passed","robots":"allowed","evidence_strength":"primary","quote_safe":True,"published":None,"publisher":"x","attempts":[],"text_path":"raw/%s.txt"%a.id,"fabrication_check":None}))
+'''
+
+
+class LedgerTest(unittest.TestCase):
+    def setUp(self):
+        self.d = Path(tempfile.mkdtemp())
+        self.stub = self.d / "stub_fetch.py"
+        self.stub.write_text(STUB)
+        self.env = dict(os.environ, DEEP_RESEARCH_FETCH=str(self.stub))
+        self.run = self.d / "run"
+        self.L(["init", "--question", "What is the market size?", "--preset", "quick"], run=str(self.run))
+
+    def L(self, args, run=None, env=None):
+        p = subprocess.run([sys.executable, str(S / "ledger.py"), "--run", run or str(self.run), *args], capture_output=True, text=True, env=env or self.env)
+        return p.returncode, p.stdout, p.stderr
+
+    def add(self, source, text, quote, imp, env=None):
+        return self.L(["claim", "add", "--source", str(source), "--angle", "a", "--text", text, "--quote", quote, "--importance", imp], env=env)
+
+    def test_dedup_and_quote_check(self):
+        self.L(["add-url", "https://www.Example.com/a/?utm_source=x", "--angle", "m"])
+        code, out, _ = self.L(["add-url", "https://example.com/a", "--angle", "m"])
+        self.assertIn('"duplicate": true', out)
+        code, _, err = self.add(1, "bad", "not there at all", "central")
+        self.assertEqual(code, 3)
+        self.assertIn("nearest", err)
+        code, out, _ = self.add(1, "ok", "reached USD 4.2 billion in 2024", "central")
+        self.assertEqual(code, 0)
+
+    def test_mirror_hosts_fold(self):
+        self.L(["add-url", "https://www.rfc-editor.org/rfc/rfc9111.html", "--angle", "m"])
+        for u in ["https://httpwg.org/specs/rfc9111.html", "https://datatracker.ietf.org/doc/html/rfc9111",
+                  "https://datatracker.ietf.org/doc/rfc9111/", "https://tools.ietf.org/html/rfc9111", "https://www.rfc-editor.org/rfc/rfc9111.txt", "https://www.rfc-editor.org/rfc/rfc9111",
+                  "https://greenbytes.de/tech/webdav/rfc9111.html", "https://www.ietf.org/rfc/rfc9111.txt"]:
+            code, out, _ = self.L(["add-url", u, "--angle", "m"])
+            self.assertIn('"duplicate": true', out, u)
+            self.assertIn('"n": 1', out, u)
+        code, out, _ = self.L(["add-url", "https://datatracker.ietf.org/doc/html/rfc9110", "--angle", "m"])
+        self.assertNotIn('"duplicate": true', out)  # a different RFC is a new source
+        self.L(["add-url", "https://en.wikipedia.org/wiki/HTTP", "--angle", "m"])
+        code, out, _ = self.L(["add-url", "https://en.m.wikipedia.org/wiki/HTTP", "--angle", "m"])
+        self.assertIn('"duplicate": true', out)
+        rows = json.loads((self.run / "sources.json").read_text())["sources"]
+        self.assertEqual(rows[0]["url"], "https://www.rfc-editor.org/rfc/rfc9111.html")  # stored as given
+
+    def test_central_cap(self):
+        self.L(["add-url", "https://example.com/a", "--angle", "m"])
+        quotes = ["reached USD 4.2 billion in 2024", "Another sentence", "A third sentence about growth", "A fourth sentence about risk", "A fifth sentence about regulation", "A sixth sentence about history"]
+        for i, q in enumerate(quotes):
+            code, out, _ = self.add(1, f"fact {i}", q, "central")
+            self.assertEqual(code, 0)
+        claims = json.loads((self.run / "claims.json").read_text())["claims"]
+        self.assertEqual(sum(1 for c in claims if c["importance"] == "central"), 4)
+        self.assertEqual(sum(1 for c in claims if c["importance"] == "supporting"), 2)
+        self.assertTrue(any("importance-capped" in n for c in claims for n in c["notes"]))
+        # cap disabled via env
+        env = dict(self.env, DEEP_RESEARCH_CENTRAL_CAP="0")
+        code, out, _ = self.add(1, "fact 7", "Page about", "central", env=env)
+        claims = json.loads((self.run / "claims.json").read_text())["claims"]
+        self.assertEqual(sum(1 for c in claims if c["importance"] == "central"), 5)
+
+    def test_angle_cap_and_state(self):
+        for i in range(6):
+            self.L(["add-url", f"https://example.com/p{i}", "--angle", "m"])
+        quotes = ["reached USD 4.2 billion in 2024", "Another sentence", "A third sentence about growth", "A fourth sentence about risk"]
+        env = dict(self.env, DEEP_RESEARCH_ANGLE_CENTRAL_CAP="10")
+        n = 0
+        for src in range(1, 7):
+            for q in quotes:
+                code, out, _ = self.add(src, f"fact {n}", q, "central", env=env)
+                self.assertEqual(code, 0)
+                n += 1
+        claims = json.loads((self.run / "claims.json").read_text())["claims"]
+        self.assertEqual(sum(1 for c in claims if c["importance"] == "central"), 10)
+        self.assertEqual(sum(1 for c in claims if c["importance"] == "supporting"), 14)
+        self.assertTrue(any("angle 'a' already has 10" in note for c in claims for n_ in [0] for note in c["notes"]))
+        code, out, _ = self.L(["state"], env=env)
+        st = json.loads(out)
+        self.assertEqual(st["claims"]["central_by_angle"], {"a": 10})
+        self.assertEqual(st["claims"]["angle_central_cap"], 10)
+        # a different angle has its own budget
+        code, out, _ = self.L(["claim", "add", "--source", "6", "--angle", "b", "--text", "x", "--quote", "Another sentence", "--importance", "central"], env=env)
+        self.assertEqual(code, 0)
+        self.assertEqual(json.loads(out)["importance"], "central")
+
+    def test_round_precedence_from_json(self):
+        self.L(["add-url", "https://example.com/a", "--angle", "m", "--round", "1"])
+        f = self.d / "claims-r2.json"
+        f.write_text(json.dumps([
+            {"source": 1, "angle": "b", "text": "no round given", "quote": "Another sentence", "importance": "supporting"},
+            {"source": 1, "angle": "b", "text": "item round wins", "quote": "A third sentence about growth", "importance": "supporting", "round": 3},
+        ]))
+        code, out, _ = self.L(["claim", "add", "--from-json", str(f), "--round", "2"])
+        self.assertEqual(code, 0)
+        rounds = {c["text"]: c["round"] for c in json.loads((self.run / "claims.json").read_text())["claims"]}
+        self.assertEqual(rounds["no round given"], 2)
+        self.assertEqual(rounds["item round wins"], 3)
+        # without --round the source's round is used
+        f.write_text(json.dumps([{"source": 1, "angle": "b", "text": "source round", "quote": "A fourth sentence about risk", "importance": "supporting"}]))
+        self.L(["claim", "add", "--from-json", str(f)])
+        rounds = {c["text"]: c["round"] for c in json.loads((self.run / "claims.json").read_text())["claims"]}
+        self.assertEqual(rounds["source round"], 1)
+        self.assertEqual(len(json.loads(self.L(["claims", "list", "--round", "2"])[1])), 1)
+
+    def test_unevidence(self):
+        for u in ["https://example.com/a", "https://news.bbc.co.uk/c", "https://other.org/d"]:
+            self.L(["add-url", u, "--angle", "m"])
+        self.add(1, "t", "reached USD 4.2 billion in 2024", "central")
+        self.L(["claim", "evidence", "c001", "--supports", "2", "--note", "bbc", "--by", "v1"])
+        self.L(["claim", "evidence", "c001", "--supports", "3", "--note", "other", "--by", "v2"])
+        self.assertEqual(json.loads(self.L(["claims", "list"])[1])[0]["label"], "corroborated")
+        code, out, _ = self.L(["claim", "unevidence", "c001", "--source", "2", "--by", "v9"])
+        self.assertEqual(code, 2)  # label mismatch: nothing removed
+        code, out, _ = self.L(["claim", "unevidence", "c001", "--source", "2", "--by", "v1"])
+        self.assertEqual(code, 0)
+        res = json.loads(out)
+        self.assertEqual([r["source"] for r in res["removed"]], [2])
+        self.assertEqual(res["claim"]["label"], "corroborated")  # [3] still there
+        self.assertTrue(any(n.startswith("unevidence: [2]") for n in res["claim"]["notes"]))
+        code, out, _ = self.L(["claim", "unevidence", "c001", "--source", "3", "--uncheck"])
+        res = json.loads(out)
+        self.assertEqual(res["claim"]["supports"], [])
+        self.assertFalse(res["claim"]["checked"])
+        self.assertEqual(res["claim"]["label"], "unverified")
+
+    def test_grade_clear_published(self):
+        self.L(["add-url", "https://example.com/a", "--angle", "m"])
+        code, out, _ = self.L(["grade", "1", "--grade", "secondary", "--published", "2026-09-10", "--publisher", "Example"])
+        self.assertEqual(code, 0)
+        res = json.loads(out)
+        self.assertEqual((res["published"], res["publisher"]), ("2026-09-10", "Example"))
+        # omitted options keep their fields
+        res = json.loads(self.L(["grade", "1", "--grade", "primary"])[1])
+        self.assertEqual((res["grade"], res["published"], res["publisher"]), ("primary", "2026-09-10", "Example"))
+        # an empty string clears the field, the other field is untouched
+        code, out, _ = self.L(["grade", "1", "--grade", "primary", "--published", ""])
+        self.assertEqual(code, 0)
+        res = json.loads(out)
+        self.assertIsNone(res["published"])
+        self.assertEqual(res["publisher"], "Example")
+        res = json.loads(self.L(["grade", "1", "--grade", "primary", "--publisher", ""])[1])
+        self.assertIsNone(res["publisher"])
+        row = json.loads((self.run / "sources.json").read_text())["sources"][0]
+        self.assertIsNone(row["published"]); self.assertIsNone(row["publisher"]); self.assertEqual(row["grade"], "primary")
+
+    def test_independence_and_labels(self):
+        for u in ["https://example.com/a", "https://sub.example.com/b", "https://news.bbc.co.uk/c", "https://pubmed.ncbi.nlm.nih.gov/12345678/", "https://europepmc.org/article/MED/12345678"]:
+            self.L(["add-url", u, "--angle", "m"])
+        self.add(1, "t", "reached USD 4.2 billion in 2024", "central")
+        self.L(["claim", "evidence", "c001", "--supports", "2", "--note", "same domain", "--by", "v"])
+        c = json.loads(self.L(["claims", "list"])[1])[0]
+        self.assertEqual(c["label"], "single-source")
+        self.L(["claim", "evidence", "c001", "--supports", "3", "--note", "bbc", "--by", "v"])
+        self.assertEqual(json.loads(self.L(["claims", "list"])[1])[0]["label"], "corroborated")
+        self.add(4, "rfc fact", "reached USD 4.2 billion in 2024", "central")
+        self.L(["claim", "evidence", "c002", "--supports", "5", "--note", "mirror", "--by", "v"])
+        self.assertEqual(json.loads(self.L(["claims", "list"])[1])[1]["label"], "single-source")  # same PMID: one work, not independent
+        self.L(["claim", "evidence", "c002", "--contradicts", "3", "--note", "x", "--by", "v"])
+        self.assertEqual(json.loads(self.L(["claims", "list"])[1])[1]["label"], "contradicted")
+
+
+if __name__ == "__main__":
+    unittest.main()

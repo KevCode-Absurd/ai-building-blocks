@@ -1,0 +1,33 @@
+slug: federal-cloud-approval-planner
+name: Federal cloud approval planner
+summary: Describe your cloud service. Get a FedRAMP path, the papers you need and the gaps to close first.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/fedramp/skills/fedramp
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/fedramp/skills/fedramp
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: fedramp
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: fedramp skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/fedramp/skills/fedramp
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

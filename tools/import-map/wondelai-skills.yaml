@@ -1,0 +1,672 @@
+# wondelai/skills (MIT). Top-level skills only; plugins/ holds copies.
+# Affiliate note: 51 skills end with a Further Reading list of Amazon links tagged wondelai00-20. Plain references, no instruction to buy.
+"wondelai/skills:37signals-way":
+  name: "Lean product shaping coach"
+  summary: "Describe your product plan. Get a smaller scope, a six-week bet and features to say no to. Uses Shape Up."
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Cutting scope needs judgment about what your users truly need."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:blue-ocean-strategy":
+  name: "Uncontested market finder"
+  summary: "Describe your market. Get a strategy canvas showing what to cut, raise and add to stand apart."
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It has to weigh your whole market and find gaps nobody is serving."
+  inputs: [ { type: competitor_set, required: false }, { type: brief, required: false } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:clean-architecture":
+  name: "Software structure planner"
+  summary: "Give it your codebase. Get a plan to keep business rules apart from frameworks and databases. Uses the Clean Architecture method."
+  task: build-software
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Good boundaries depend on understanding how the whole code fits together."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:clean-code":
+  name: "Readable code reviewer"
+  summary: "Give it code. Get clearer names, smaller functions and tidier error handling, each with a reason. Uses Clean Code."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads code and applies known rules, and you approve the edits."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:cold-start-problem":
+  name: "Network launch planner"
+  summary: "Describe your product that needs many users to work. Get a plan to win the first small group and grow from there."
+  task: test-an-idea
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Network effects depend on your market, so the plan needs careful reasoning."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:contagious":
+  name: "Word of mouth planner"
+  summary: "Describe your product or message. Get ideas for making people talk about it, scored on six sharing triggers. Uses the STEPPS method."
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scores your idea against six clear triggers and suggests changes."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:continuous-discovery":
+  name: "Weekly customer learning planner"
+  summary: "Describe your product goal. Get an opportunity tree, risky assumptions to test and a weekly customer contact routine."
+  task: understand-customers
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Mapping goals to opportunities and tests takes careful reasoning."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:conversion-optimization":
+  name: "Leaky funnel fixer"
+  summary: "Give it your landing page, signup or checkout. Get the leaks ranked, plus tests to run in order."
+  task: audit-landing-page
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It chains several methods and needs you to confirm each phase."
+  inputs: [ { type: web_page, required: true }, { type: performance_sheet, required: false } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:create-business":
+  name: "Idea to business guide"
+  summary: "Describe your idea. Get a tested customer, a position, a price and a first market to win, step by step."
+  task: test-an-idea
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It runs a long chain of decisions that depend on one another."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:create-website":
+  name: "Message-first website guide"
+  summary: "Describe your business. Get a website plan that starts with your message, then design, then conversion, step by step."
+  task: write-landing-page
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It runs a long chain of choices from message to page layout."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: page_layout_spec } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:cro-methodology":
+  name: "Conversion problem finder"
+  summary: "Give it a landing page. Get the conversion problems found and a set of tests worth running, each with a clear reason."
+  task: audit-landing-page
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It audits a page against known patterns and proposes tests for you to pick."
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:crossing-the-chasm":
+  name: "Beachhead market picker"
+  summary: "Describe your product and early users. Get one starting segment and a plan to reach the mainstream. Uses Crossing the Chasm."
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Choosing one segment means weighing your market and trade-offs."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:ddia-systems":
+  name: "Data system designer"
+  summary: "Describe what your app stores and serves. Get picks for storage, copies, splitting data and consistency, with trade-offs."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Data trade-offs are subtle and depend on your load and failure needs."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:design-everyday-things":
+  name: "Everyday usability reviewer"
+  summary: "Give it a product or screen. Get what confuses people and fixes for clues, limits and feedback. Uses Don Norman's principles."
+  task: design-work
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies a known set of principles to what you show it."
+  inputs: [ { type: design_file, required: false }, { type: web_page, required: false } ]
+  outputs: [ { type: audit_report } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:design-sprint":
+  name: "Five-day idea test planner"
+  summary: "Describe an idea. Get a five-day plan to map, sketch, prototype and test it with real users."
+  task: test-an-idea
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "The plan follows a fixed five-day shape, fitted to your idea."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:domain-driven-design":
+  name: "Business model code designer"
+  summary: "Describe your business rules. Get areas, shared terms and clusters of data that map to your code. Uses domain-driven design."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Modelling a domain needs real judgment about where concepts split."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:drive-motivation":
+  name: "Motivation designer"
+  summary: "Describe your team or product. Get ways to raise drive through choice, skill growth and purpose."
+  task: lead-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies three clear ideas to your situation and suggests changes."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:good-strategy-bad-strategy":
+  name: "Real strategy checker"
+  summary: "Give it a strategy. Get an honest diagnosis, a guiding policy and coherent actions, or a list of what is hollow."
+  task: plan-strategy
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Telling real strategy from wishes needs careful, honest reasoning."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:grow-app":
+  name: "App stickiness guide"
+  summary: "Describe your app. Get a retention plan with a habit loop, a better first run and one metric to watch."
+  task: understand-customers
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It chains several methods and relies on your answers at each step."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:grow-business":
+  name: "Repeatable growth guide"
+  summary: "Describe your business. Get a growth plan with a forecast, built step by step from your marketing to your numbers."
+  task: plan-strategy
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It chains many methods and builds one forecast from your answers."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:grow-website":
+  name: "Website growth guide"
+  summary: "Give it your site and traffic. Get a plan to capture more leads and sales through research, message and tests."
+  task: audit-landing-page
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It chains several methods across research, copy and tests."
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:high-output-management":
+  name: "Manager output coach"
+  summary: "Describe your team and role. Get meeting rhythms, one-on-ones and the tasks that most raise your team's output."
+  task: lead-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies known management ideas to your team and week."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:high-perf-browser":
+  name: "Web page speed tuner"
+  summary: "Give it a slow site. Get fixes for network, loading and rendering, ranked by gain. Uses High Performance Browser Networking."
+  task: build-websites
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It reads clear speed signals and ranks well-known fixes."
+  inputs: [ { type: web_page, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:hooked-ux":
+  name: "Habit loop designer"
+  summary: "Describe your product. Get a loop of trigger, action, reward and investment that brings users back. Uses the Hook Model."
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It maps four named steps onto your product with some judgment."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:improve-app":
+  name: "App polish guide"
+  summary: "Describe your shipped app. Get fixes for fit, flow, clarity and honest persuasion, step by step."
+  task: build-product
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It chains several design methods and needs your input at each phase."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:improve-business":
+  name: "Stalled business turnaround guide"
+  summary: "Describe your business. Get an honest diagnosis, a working rhythm and offers repriced to real value, step by step."
+  task: plan-strategy
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It chains diagnosis, operations and pricing and needs your numbers."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:improve-code-quality":
+  name: "Prototype to production guide"
+  summary: "Give it a working prototype. Get tests, cleaner structure and a plan to make it ready for real users."
+  task: test-and-fix-code
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It chains several code methods and changes a lot of code."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan }, { type: code_change } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:improve-retention":
+  name: "Retention problem fixer"
+  summary: "Describe why users drop off. Get the cause found and fixes to onboarding and habits. Uses behavior design."
+  task: understand-customers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It diagnoses against a clear model and suggests fixes for you to pick."
+  inputs: [ { type: brief, required: true }, { type: performance_sheet, required: false } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:improve-website":
+  name: "Website fix backlog builder"
+  summary: "Give it your live site. Get a ranked list of fixes for conversion, usability, message and speed, each with evidence."
+  task: audit-landing-page
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs many kinds of problems and ranks them with evidence."
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:influence-psychology":
+  name: "Honest persuasion advisor"
+  summary: "Give it a page or pitch. Get where to add proof, scarcity or reciprocity, using Cialdini's seven principles, without trickery."
+  task: speak-and-persuade
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies seven known principles and must keep the tone honest."
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:inspired-product":
+  name: "Product team discovery coach"
+  summary: "Describe your product team. Get a plan for finding what to build, testing ideas first and working with empowered teams."
+  task: build-product
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It needs judgment about how your team and product fit the method."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:lean-analytics":
+  name: "Startup metrics picker"
+  summary: "Describe your business stage. Get the one metric to focus on and a short list of numbers to track. Uses Lean Analytics."
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Picking the right metric for your stage takes some reasoning."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:lean-ux":
+  name: "Hypothesis-first design planner"
+  summary: "Describe a design problem. Get hypotheses, quick sketching steps and small experiments in place of heavy design documents."
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It turns design problems into testable guesses with some judgment."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:made-to-stick":
+  name: "Memorable message writer"
+  summary: "Give it a message. Get a rewrite that is simple, surprising, concrete, believable and emotional. Uses the SUCCESs checklist."
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It checks a message against six traits and rewrites it."
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:microinteractions":
+  name: "Small interface details designer"
+  summary: "Give it a screen or feature. Get the triggers, rules, feedback and loops for its small moments, so it feels polished."
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Small details need taste and context about how people use the screen."
+  inputs: [ { type: design_file, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:mom-test":
+  name: "Customer interview coach"
+  summary: "Describe your idea. Get questions that draw honest answers from customers and a way to spot polite lies. Uses The Mom Test."
+  task: understand-customers
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "Good questions need thought about what your customers have really done."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: question } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:monetizing-innovation":
+  name: "Willingness to pay pricing planner"
+  summary: "Describe your product. Get a pricing survey, plan tiers and a price built on what buyers will actually pay."
+  task: set-prices
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Pricing depends on buyer value and many linked choices."
+  inputs: [ { type: product_data, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:negotiation":
+  name: "Negotiation prep coach"
+  summary: "Describe a deal or salary talk. Get an opening, calibrated questions and a fallback plan. Uses tactical empathy."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies known tactics to your case and you choose the lines."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:one-page-marketing":
+  name: "One-page marketing plan builder"
+  summary: "Describe your business. Get a one-page plan that takes people from stranger to loyal fan."
+  task: plan-strategy
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It fills a fixed nine-box plan from your answers."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:pragmatic-programmer":
+  name: "Code habits reviewer"
+  summary: "Give it code. Get duplication, tight coupling and weak contracts flagged, with fixes. Uses Pragmatic Programmer principles."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies a set of known principles to code and suggests edits."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report }, { type: code_change } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:predictable-revenue":
+  name: "Outbound sales team planner"
+  summary: "Describe your sales. Get roles, a lead flow and a repeatable outreach process for outbound B2B sales."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It fits a known model of roles and steps to your business."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:refactoring-patterns":
+  name: "Code refactor planner"
+  summary: "Give it messy code. Get named refactoring moves to apply in small safe steps, without changing what it does."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It matches code smells to known moves and you review the changes."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:refactoring-ui":
+  name: "Visual hierarchy fixer"
+  summary: "Give it a web page or screen. Get fixes for spacing, color, type and depth so it looks professional."
+  task: design-work
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It checks a design against clear visual rules and suggests changes."
+  inputs: [ { type: design_file, required: false }, { type: web_page, required: false } ]
+  outputs: [ { type: audit_report }, { type: design_direction } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:release-it":
+  name: "Production stability reviewer"
+  summary: "Give it a service. Get weak spots found and fixes like timeouts, retries and circuit breakers, so outages stay small."
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Failure patterns are subtle and depend on how your system fits together."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:remove-technical-debt":
+  name: "Old code paydown guide"
+  summary: "Give it a large old codebase. Get a safe plan to make it legible, bounded and resilient, step by step."
+  task: test-and-fix-code
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It chains many code methods and the risks grow with the size of the code."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:scorecard-marketing":
+  name: "Quiz funnel builder"
+  summary: "Describe your audience. Get a scored quiz that sorts people, captures leads and leads into the right next offer."
+  task: write-landing-page
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It designs quiz questions and scoring bands around your offer."
+  inputs: [ { type: brief, required: true }, { type: offer, required: false } ]
+  outputs: [ { type: plan }, { type: copy_draft } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:software-design-philosophy":
+  name: "Simple software designer"
+  summary: "Give it code or a design. Get complexity spotted and simpler, deeper modules suggested. Uses A Philosophy of Software Design."
+  task: build-software
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Judging complexity takes careful reading of how code fits together."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:steve-jobs-design-review":
+  name: "Ruthless simplicity reviewer"
+  summary: "Give it a product or feature. Get a blunt review on focus, simplicity and end-to-end quality, with what to cut."
+  task: design-work
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies one strong point of view and you decide what to keep."
+  inputs: [ { type: brief, required: true }, { type: design_file, required: false } ]
+  outputs: [ { type: audit_report } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:storybrand-messaging":
+  name: "Customer-as-hero message planner"
+  summary: "Describe your brand. Get a clear message with the customer as the hero, plus a website and elevator pitch. Uses StoryBrand."
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It fills a seven-part story frame from your answers."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: brand_guide }, { type: copy_draft } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:team-topologies":
+  name: "Team layout planner"
+  summary: "Describe your teams. Get a team structure for fast work, with clear owners and how teams hand off. Uses Team Topologies."
+  task: lead-people
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Team structure is tied to your product and needs careful trade-offs."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:technical-documentation":
+  name: "Developer docs writer"
+  summary: "Give it your product or draft docs. Get clear developer documentation that follows Google's style guide."
+  task: document-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It writes and edits to a known style guide and you review it."
+  inputs: [ { type: codebase, required: false }, { type: source_text, required: false } ]
+  outputs: [ { type: document } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:top-design":
+  name: "Standout website designer"
+  summary: "Describe your site. Get a bold, award-level design plan with motion, layout and effects."
+  task: design-work
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Distinctive design needs taste and a lot of creative decisions."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction }, { type: page_layout_spec } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:web-typography":
+  name: "Web font pairing picker"
+  summary: "Describe your site. Get font pairs, sizes and line spacing that read well on every screen."
+  task: build-websites
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "Font pairing and sizing follow clear rules you can check quickly."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:working-with-legacy-code":
+  name: "Untested code change guide"
+  summary: "Give it code with no tests. Get safe steps to add tests and change it without breaking anything."
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Safe changes in tangled code need careful reasoning about side effects."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan }, { type: code_change } ]
+  author: wondelai
+  author_url: https://github.com/wondelai
+"wondelai/skills:traction-eos":
+  skip: "Near-copy of our Company operating system setter, which also sets up EOS tools."
+"wondelai/skills:lean-startup":
+  skip: "Same job as our MVP experiment planner: riskiest guess, smallest test, pivot rule."
+"wondelai/skills:ios-hig-design":
+  skip: "Our Apple app design checker and iPhone screen designer already cover Apple's design guidelines."
+"wondelai/skills:obviously-awesome":
+  skip: "Same job as our Product positioning planner (rivals, best-fit customers, market category)."
+"wondelai/skills:jobs-to-be-done":
+  skip: "Same method as our Customer job mapper (the jobs customers hire a product for)."
+"wondelai/skills:ux-heuristics":
+  skip: "Same job as our Usability heuristic reviewer: a usability audit against ten heuristics."
+"wondelai/skills:hundred-million-offers":
+  skip: "Same job as our Offer designer: value framing, bonuses, guarantee."
+"wondelai/skills:system-design":
+  skip: "Same job as our System design planner: architecture choices and trade-offs."
+"wondelai/skills:architecture-optimization":
+  skip: "Guided journey that mostly routes to this repo's other skills (clean code, system design, speed). Those are listed on their own."
+"wondelai/skills:design-code-architecture":
+  skip: "Guided journey that mostly routes to this repo's other skills (domain design, data systems, clean architecture). Those are listed on their own."
+"wondelai/skills:create-app":
+  skip: "Guided journey that mostly routes to this repo's other skills. Those are listed on their own."

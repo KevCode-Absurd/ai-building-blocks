@@ -1,0 +1,32 @@
+slug: risky-design-reviewer
+name: Risky design reviewer
+summary: Give it an API or config design. Get the easy-to-misuse parts that lead to security mistakes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/sharp-edges
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/sharp-edges
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: sharp-edges
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: sharp-edges skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/sharp-edges
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

@@ -1,0 +1,33 @@
+slug: ci-failure-fixer
+name: CI failure fixer
+summary: Point it at a failing pull request. Get the cause of the failed GitHub check and a fix plan.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/gh-fix-ci
+  url: https://github.com/openai/skills/tree/main/skills/.curated/gh-fix-ci
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: gh-fix-ci
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: gh-fix-ci skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/gh-fix-ci
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

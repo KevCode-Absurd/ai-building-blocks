@@ -1,0 +1,37 @@
+slug: narrated-video-maker
+name: Narrated video maker
+summary: Give it a Markdown document. Get a narrated MP4 with slides and a voiceover.
+category: general
+boards: []
+type: skill
+role: render
+job: ops
+level: advanced
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: video_ads
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/md2video-audio
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/md2video-audio
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: md2video-audio
+  author: 70v-Yoyo
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: md2video-audio skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/md2video-audio
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: 70v-Yoyo
+    url: https://github.com/70v-Yoyo
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,32 @@
+slug: units-and-error-margin-checker
+name: Units and error margin checker
+summary: Give it a calculation. Get units checked, error margins carried through and an uncertainty budget you can show.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/uncertainty-and-units
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/uncertainty-and-units
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: uncertainty-and-units
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: uncertainty-and-units skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/uncertainty-and-units
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

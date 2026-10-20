@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It changes layout only and never rewrites the content.
+new_slug: article-formatter
+name: Article formatter
+summary: Give it plain text or rough markdown. Get a tidy article with title, summary, headings and lists, same words.
+job: work-with-files
+headline: Article formatter
+subhead: Give it plain text or rough markdown. Get a tidy article with title, summary, headings and lists, same words.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and save files.

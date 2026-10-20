@@ -1,0 +1,34 @@
+slug: content-calendar-builder
+name: Content calendar builder
+summary: Give it your product and platforms. Get topics from real customer words, rival content gaps, and a ready calendar.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: product_data
+    required: true
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Nexscope AI
+  repo: nexscope-ai/eCommerce-Skills
+  path: ecommerce-content-marketing
+  url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/ecommerce-content-marketing
+  licence: MIT
+  licence_file: LICENSE
+  commit: ee0fb29
+  original_name: ecommerce-content-marketing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ecommerce-content-marketing skill
+    by: Nexscope AI
+    url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/ecommerce-content-marketing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

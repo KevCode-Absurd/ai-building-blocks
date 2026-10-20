@@ -1,0 +1,37 @@
+slug: desktop-app-tester
+name: Desktop app tester
+summary: Point it at your Electron app. Get it launched and driven by clicks and typing, with screenshots and logs.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/electron-drive-skill
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/electron-drive-skill
+  licence: MIT
+  licence_file: LICENSE
+  commit: 0c10eb8
+  original_name: electron-drive-skill
+  author: Search-3D
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: electron-drive-skill skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/electron-drive-skill
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Search-3D
+    url: https://github.com/Search-3D
+    used: Wrote the skill; sickn33 shared it in their collection.

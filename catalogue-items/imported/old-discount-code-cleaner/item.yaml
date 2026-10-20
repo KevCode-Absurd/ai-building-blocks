@@ -1,0 +1,37 @@
+slug: old-discount-code-cleaner
+name: Old discount code cleaner
+summary: Get expired, unused and duplicate discount codes found, then switched off or deleted if you say so. Deletes cannot be undone.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/store-management/shopify-admin-discount-hygiene-cleanup
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/store-management/shopify-admin-discount-hygiene-cleanup
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-discount-hygiene-cleanup
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-discount-hygiene-cleanup skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/store-management/shopify-admin-discount-hygiene-cleanup
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

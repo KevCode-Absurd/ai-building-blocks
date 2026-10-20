@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It generates data from your schema by clear rules.
+new_slug: test-data-seeder
+name: Test data seeder
+summary: Describe your tables. Get realistic, repeatable test data loaded for development and staging.
+job: test-and-fix-code
+headline: Test data seeder
+subhead: Describe your tables. Get realistic, repeatable test data loaded for development and staging.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

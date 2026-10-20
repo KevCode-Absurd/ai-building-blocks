@@ -1,0 +1,39 @@
+slug: documentation-checker
+name: Documentation checker
+summary: Give it a README or doc. Get false claims, drift from the code and weak spots listed before you publish.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: false
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/docs-guard
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/docs-guard
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: docs-guard
+  author: amElnagdy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: docs-guard skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/docs-guard
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: amElnagdy
+    url: https://github.com/amElnagdy
+    used: Wrote the skill; sickn33 shared it in their collection.

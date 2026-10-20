@@ -1,0 +1,34 @@
+slug: ai-shopper-store-scorecard
+name: AI shopper store scorecard
+summary: Give it your Shopify store link. Get a 6-point scorecard of what AI shopping tools can read. Scrapes sites.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: Pro Skill Packs
+  repo: proskillpacks/skills
+  path: skills/ecommerce/agent-ready-quick-check
+  url: https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/agent-ready-quick-check
+  licence: MIT
+  licence_file: LICENSE
+  commit: e8c3393
+  original_name: agent-ready-quick-check
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: agent-ready-quick-check skill
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/agent-ready-quick-check
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

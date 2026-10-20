@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It matches the design against a large list of rules.
+new_slug: interface-principles-checker
+name: Interface principles checker
+summary: Describe or share an interface. Get it scored against 168 research-backed UX principles, with common mistakes flagged.
+job: design-work
+headline: Interface principles checker
+subhead: Describe or share an interface. Get it scored against 168 research-backed UX principles, with common mistakes flagged.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

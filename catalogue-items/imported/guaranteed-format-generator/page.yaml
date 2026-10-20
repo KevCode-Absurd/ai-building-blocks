@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It sets format rules for a local model.
+new_slug: guaranteed-format-generator
+name: Guaranteed format generator
+summary: Say what shape the output must take. Get a model setup that always returns valid JSON or matching text.
+job: build-software
+headline: Guaranteed format generator
+subhead: Say what shape the output must take. Get a model setup that always returns valid JSON or matching text.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code.

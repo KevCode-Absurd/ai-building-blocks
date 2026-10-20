@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It applies one status change to many products.
+new_slug: product-launch-and-retire-manager
+name: Product launch and retire manager
+summary: Pick products and a status. Get them moved between draft, live and archived. Changes what shoppers can see and buy.
+job: run-your-store
+headline: Product launch and retire manager
+subhead: Pick products and a status. Get them moved between draft, live and archived. Changes what shoppers can see and buy.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin and change live store data.

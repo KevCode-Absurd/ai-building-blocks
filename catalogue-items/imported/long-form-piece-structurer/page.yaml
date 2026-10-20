@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It picks a structure by piece type, then shapes your points to fit.
+new_slug: long-form-piece-structurer
+name: Long-form piece structurer
+summary: Say what you are writing, such as a case study or whitepaper. Get a clear outline and structure that avoids padding.
+job: write-and-tell-stories
+headline: Long-form piece structurer
+subhead: Say what you are writing, such as a case study or whitepaper. Get a clear outline and structure that avoids padding.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

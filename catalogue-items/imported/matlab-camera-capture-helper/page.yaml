@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It follows a short connect routine.
+new_slug: matlab-camera-capture-helper
+name: MATLAB camera capture helper
+summary: Say which camera. Get it connected and images or video captured in MATLAB.
+job: build-software
+headline: MATLAB camera capture helper
+subhead: Say which camera. Get it connected and images or video captured in MATLAB.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB and reach a camera.

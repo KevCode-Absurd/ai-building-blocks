@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It lists entry points, then checks each one in turn.
+new_slug: untrusted-input-checker
+name: Untrusted input checker
+summary: Point it at code. Get every place outside data enters found and checked before it reaches your logic.
+job: secure-code
+headline: Untrusted input checker
+subhead: Point it at code. Get every place outside data enters found and checked before it reaches your logic.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read and edit your project files.

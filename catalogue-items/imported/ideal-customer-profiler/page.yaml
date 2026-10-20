@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It must find patterns in your data before writing the profile.
+new_slug: ideal-customer-profiler
+name: Ideal customer profiler
+summary: Give it survey or customer data. Get a profile of your best customers and what they need.
+job: understand-customers
+headline: Ideal customer profiler
+subhead: Give it survey or customer data. Get a profile of your best customers and what they need.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

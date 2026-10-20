@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It writes routes from a documented pattern.
+new_slug: expo-api-route-builder
+name: Expo API route builder
+summary: Say what your mobile app needs from a server. Get API routes built in Expo Router and set up to host.
+job: build-software
+headline: Expo API route builder
+subhead: Say what your mobile app needs from a server. Get API routes built in Expo Router and set up to host.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

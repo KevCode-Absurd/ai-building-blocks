@@ -1,0 +1,33 @@
+slug: lead-magnet-planner
+name: Lead magnet planner
+summary: Describe your buyer. Get lead magnet ideas, the best pick and the page and emails to go with it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: persona
+    required: true
+outputs:
+  - type: offer
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/lead-magnets
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/lead-magnets
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: lead-magnets
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: lead-magnets skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/lead-magnets
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,33 @@
+slug: expected-credit-loss-calculator
+name: Expected credit loss calculator
+summary: Give it loan data. Get expected credit losses worked out under IFRS 9 or CECL.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: document
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/ecl-computation
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/ecl-computation
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: ecl-computation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ecl-computation skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/ecl-computation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

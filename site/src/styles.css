@@ -157,6 +157,11 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .card:hover { transform: translate(-3px, -3px); box-shadow: var(--hard); border-color: var(--text); }
 .card .meta { display: flex; align-items: center; gap: 8px; width: 100%; }
 .card .meta .type { margin-left: auto; font-size: 12px; color: var(--faint); text-align: right; }
+.card .meta { flex-wrap: wrap; row-gap: 2px; }
+.card .meta .from { padding: 0 7px; border: 1px solid var(--line-2); border-radius: 999px; font: 400 11px/1.6 var(--mono); color: var(--muted); }
+.card .meta .from.warn { border-style: dashed; color: var(--text); }
+.bp-warn { max-width: 62ch; margin: 14px 0 0; padding: 10px 14px; border: 1px dashed var(--text); border-radius: 6px; font: 400 13px/1.6 var(--mono); color: var(--text-2); }
+.bp-warn b { color: var(--text); }
 .card .nm { font-size: 16.5px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.3; margin: 14px 0 6px; }
 .card .peek { display: block; margin: 0 0 18px; padding: 12px 14px; border: 1px dashed var(--line-2); border-radius: 6px; background: var(--bg-2); font: 400 13.5px/1.6 var(--mono); color: var(--text-2); }
 .card .view { margin-top: auto; display: inline-flex; align-items: center; gap: 6px; font: 500 12.5px var(--mono); color: var(--text); }
@@ -191,6 +196,24 @@ code { font: 400 0.88em var(--mono); background: var(--raise); border-radius: 4p
 .fmt { display: inline-block; padding: 2px 8px; border: 1px solid var(--line-2); border-radius: 4px; color: var(--text); font-weight: 600; }
 .bp-sub { margin: 26px 0 0; max-width: 44em; font: 400 clamp(15px, 1.4vw, 17px)/1.75 var(--mono); color: var(--text-2); letter-spacing: -0.01em; text-wrap: pretty; }
 .bp-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 34px; }
+/* Credit for an imported skill: a pill to its GitHub folder, then its first name turning into ours, block by block. */
+.bp-credit { max-width: 62ch; margin: 20px 0 0; display: grid; gap: 10px; justify-items: start; font: 400 13px/1.6 var(--mono); color: var(--muted); }
+.gh-pill { display: inline-flex; align-items: center; gap: 8px; padding: 5px 6px 5px 11px; border: 1px solid var(--text); border-radius: 999px; background: var(--bg); color: var(--text); text-decoration: none; font: 500 13px var(--mono); transition: transform .15s, box-shadow .15s, background .15s, color .15s; }
+.gh-pill:hover, .gh-pill:focus-visible { background: var(--text); color: var(--bg); transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--text); }
+.gh-pill:hover .gh-mark { animation: gh-wink .5s steps(2) 1; }
+.gh-repo { overflow-wrap: anywhere; }
+.gh-lic { padding: 2px 8px; border-radius: 999px; background: var(--text); color: var(--bg); font-size: 11.5px; }
+.gh-pill:hover .gh-lic, .gh-pill:focus-visible .gh-lic { background: var(--bg); color: var(--text); }
+.gh-rename { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0; }
+.gh-rename code { color: var(--faint); }
+.gh-rename b { color: var(--text); font-weight: 600; }
+.gh-blocks { display: inline-flex; gap: 3px; }
+.gh-blocks i { width: 6px; height: 6px; background: var(--text); opacity: .15; animation: gh-build 1.8s steps(1) infinite; }
+.gh-note { margin: 0; }
+.gh-note code { color: var(--text-2); }
+@keyframes gh-build { 0% { opacity: .15; } 20%, 70% { opacity: 1; } 100% { opacity: .15; } }
+@keyframes gh-wink { 50% { transform: scale(1.25) rotate(-12deg); } }
+@media (prefers-reduced-motion: reduce) { .gh-blocks i { animation: none; opacity: .7; } .gh-pill, .gh-pill:hover .gh-mark { transition: none; animation: none; } }
 .bp-file { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 26px 0 0; font: 400 12.5px var(--mono); color: var(--faint); }
 .bp-missing { padding-top: 96px; min-height: 60vh; }
 .bp-missing .btn { margin-top: 32px; }

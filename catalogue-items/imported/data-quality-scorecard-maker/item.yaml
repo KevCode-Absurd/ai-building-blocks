@@ -1,0 +1,40 @@
+slug: data-quality-scorecard-maker
+name: Data quality scorecard maker
+summary: Give it a dataset and your rules. Get checks for blanks, duplicates, broken links and stale data, plus a scorecard.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Nimrod Fisher
+  repo: nimrodfisher/data-analytics-skills
+  path: 01-data-quality-validation/data-quality-audit
+  url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/01-data-quality-validation/data-quality-audit
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9449d36
+  original_name: data-quality-audit
+  author: Nimrod Fisher
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: data-quality-audit skill
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/01-data-quality-validation/data-quality-audit
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher
+    used: Wrote the skill; Nimrod Fisher shared it in their collection.

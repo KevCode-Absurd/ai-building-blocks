@@ -1,0 +1,32 @@
+slug: mcp-tool-set-designer
+name: MCP tool set designer
+summary: Say what your AI should do through MCP. Get a small set of clearly named tools with plain descriptions.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Paldom
+  repo: Paldom/mcp-server-skills
+  path: skills/mcp-server-design
+  url: https://github.com/Paldom/mcp-server-skills/tree/main/skills/mcp-server-design
+  licence: MIT
+  licence_file: LICENSE
+  commit: 17ce2a4
+  original_name: mcp-server-design
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mcp-server-design skill
+    by: Paldom
+    url: https://github.com/Paldom/mcp-server-skills/tree/main/skills/mcp-server-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

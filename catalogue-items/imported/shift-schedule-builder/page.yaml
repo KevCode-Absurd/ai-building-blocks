@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It fits cover and staff rules together.
+new_slug: shift-schedule-builder
+name: Shift schedule builder
+summary: Give it your busy hours and staff limits. Get a shift plan that covers demand and respects time-off rules.
+job: plan-supply-chain
+headline: Shift schedule builder
+subhead: Give it your busy hours and staff limits. Get a shift plan that covers demand and respects time-off rules.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code (Python).

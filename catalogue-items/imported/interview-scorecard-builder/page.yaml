@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It builds clear rating rules from the skills you need.
+new_slug: interview-scorecard-builder
+name: Interview scorecard builder
+summary: Give it your interview stages. Get scorecards, question banks, a phone screen script and a rating guide.
+job: hire-people
+headline: Interview scorecard builder
+subhead: Give it your interview stages. Get scorecards, question banks, a phone screen script and a rating guide.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

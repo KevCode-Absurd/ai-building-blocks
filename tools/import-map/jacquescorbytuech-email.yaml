@@ -1,0 +1,14 @@
+# jacquescorbytuech/email-marketing-skill (MIT)
+"jacquescorbytuech/email-marketing-skill:email-marketing":
+  name: CRM and email strategist
+  summary: "Ask any email or CRM question. Get expert advice on audits, deliverability, flows, tests and measuring what email earns."
+  task: write-emails
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Good advice depends on your list, your tools and how you measure."
+  needs: "open web pages, so it can read the linked wiki. It also works offline from the notes inside"
+  inputs: [ { type: brief, required: false } ]
+  outputs: [ { type: audit_report, required: true }, { type: plan, required: false } ]
+  author: jacquescorbytuech
+  author_url: https://github.com/jacquescorbytuech

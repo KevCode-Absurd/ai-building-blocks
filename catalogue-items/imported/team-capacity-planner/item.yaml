@@ -1,0 +1,32 @@
+slug: team-capacity-planner
+name: Team capacity planner
+summary: Give it your team and projects. Get workload against people, who is overloaded, and whether you can take on more.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: operations/skills/capacity-plan
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/capacity-plan
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: capacity-plan
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: capacity-plan skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/capacity-plan
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

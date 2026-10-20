@@ -1,0 +1,32 @@
+slug: requirements-question-asker
+name: Requirements question asker
+summary: Give it a vague request. Get the few questions that matter, with default answers, before any work starts.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/ask-questions-if-underspecified
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ask-questions-if-underspecified
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: ask-questions-if-underspecified
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ask-questions-if-underspecified skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ask-questions-if-underspecified
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: A speech tool does the hard part and the AI tidies the text.
+new_slug: audio-meeting-notes-writer
+name: Audio meeting notes writer
+summary: Give it a recording. Get a written transcript, a short summary and clear meeting notes.
+job: work-with-audio
+headline: Audio meeting notes writer
+subhead: Give it a recording. Get a written transcript, a short summary and clear meeting notes.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and save files.

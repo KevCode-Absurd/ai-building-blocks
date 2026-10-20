@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It steps through pages and reacts to what it sees.
+new_slug: browser-task-runner
+name: Browser task runner
+summary: Describe a browser task. Get pages visited, forms filled, and screenshots or data saved.
+job: test-and-fix-code
+headline: Browser task runner
+subhead: Describe a browser task. Get pages visited, forms filled, and screenshots or data saved.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run commands and open a browser.

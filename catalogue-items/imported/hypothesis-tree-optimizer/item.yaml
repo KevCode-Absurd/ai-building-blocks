@@ -1,0 +1,35 @@
+slug: hypothesis-tree-optimizer
+name: Hypothesis tree optimizer
+summary: Give it a result you want to improve. Get ranked hypotheses tested one by one, with a record of what worked.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+  - type: question
+    required: true
+outputs:
+  - type: document
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/arbor
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/arbor
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: arbor
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: arbor skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/arbor
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

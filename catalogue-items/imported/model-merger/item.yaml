@@ -1,0 +1,32 @@
+slug: model-merger
+name: Model merger
+summary: Give it two or more tuned models. Get one model that blends their skills, with no new training.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 19-emerging-techniques/model-merging
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/19-emerging-techniques/model-merging
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: model-merging
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: model-merging skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/19-emerging-techniques/model-merging
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

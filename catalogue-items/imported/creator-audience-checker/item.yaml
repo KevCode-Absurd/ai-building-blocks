@@ -1,0 +1,35 @@
+slug: creator-audience-checker
+name: Creator audience checker
+summary: Give it a creator. Get who their audience is, where they live and if they fit a sponsorship. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:ScrapeCreators
+source:
+  by: ScrapeCreators
+  repo: ScrapeCreators/social-media-research-skills
+  path: skills/audience-research
+  url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/audience-research
+  licence: MIT
+  licence_file: LICENSE
+  commit: 64ba7b4
+  original_name: audience-research
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: audience-research skill
+    by: ScrapeCreators
+    url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/audience-research
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

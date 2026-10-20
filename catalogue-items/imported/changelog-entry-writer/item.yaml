@@ -1,0 +1,37 @@
+slug: changelog-entry-writer
+name: Changelog entry writer
+summary: Give it a commit range or pull request. Get a clean changelog entry grouped into added, changed and fixed.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/changelog-entry
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/changelog-entry
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: changelog-entry
+  author: sickn33
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: changelog-entry skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/changelog-entry
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

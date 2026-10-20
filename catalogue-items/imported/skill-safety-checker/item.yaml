@@ -1,0 +1,37 @@
+slug: skill-safety-checker
+name: Skill safety checker
+summary: Give it a skill or bundle before you add it. Get a list of risky code, data leaks and hidden payloads.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: skill_files
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/audit-skills
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/audit-skills
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: audit-skills
+  author: MAIOStudio
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: audit-skills skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/audit-skills
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: MAIOStudio
+    url: https://github.com/MAIOStudio
+    used: Wrote the skill; sickn33 shared it in their collection.

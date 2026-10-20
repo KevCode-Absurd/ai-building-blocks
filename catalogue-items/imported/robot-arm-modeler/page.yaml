@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It loads or builds a known model type.
+new_slug: robot-arm-modeler
+name: Robot arm modeler
+summary: Name your robot arm. Get a MATLAB model ready for moves, reach checks and drawing.
+job: build-software
+headline: Robot arm modeler
+subhead: Name your robot arm. Get a MATLAB model ready for moves, reach checks and drawing.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Robotics System Toolbox.

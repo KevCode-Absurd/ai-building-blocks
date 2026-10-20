@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Each file builds on the last, so the plan only holds if the thinking is careful.
+new_slug: saas-blueprint-planner
+name: SaaS blueprint planner
+summary: "Give it a one-line SaaS idea. Get eight files: research, analysis, architecture, features, screens, phases and a step-by-step build plan."
+job: build-product
+headline: SaaS blueprint planner
+subhead: "Give it a one-line SaaS idea. Get eight files: research, analysis, architecture, features, screens, phases and a step-by-step build plan."
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can save files to a folder. It ends with a pointer to the author's paid web app, which you can ignore.

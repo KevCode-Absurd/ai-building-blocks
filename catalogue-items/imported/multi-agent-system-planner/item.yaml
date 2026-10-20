@@ -1,0 +1,37 @@
+slug: multi-agent-system-planner
+name: Multi-agent system planner
+summary: Describe the job. Get a choice of supervisor, swarm or handoff design for several agents, with the trade-offs.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/multi-agent-patterns
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/multi-agent-patterns
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: multi-agent-patterns
+  author: Muratcan Koylan
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: multi-agent-patterns skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/multi-agent-patterns
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Muratcan Koylan
+    url: https://github.com/muratcankoylan
+    used: Wrote the skill; sickn33 shared it in their collection.

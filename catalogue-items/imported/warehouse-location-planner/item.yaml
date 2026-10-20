@@ -1,0 +1,32 @@
+slug: warehouse-location-planner
+name: Warehouse location planner
+summary: Give it your customers and demand. Get how many warehouses you need and where to put them.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/distribution-center-network
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/distribution-center-network
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: distribution-center-network
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: distribution-center-network skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/distribution-center-network
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

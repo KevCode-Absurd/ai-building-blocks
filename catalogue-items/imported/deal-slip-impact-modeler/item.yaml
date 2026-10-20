@@ -1,0 +1,39 @@
+slug: deal-slip-impact-modeler
+name: Deal slip impact modeler
+summary: Name a deal that may slip. Get the hit to your number, new coverage and the pipeline you need to replace it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: false
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/deal-slip-scenario
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/deal-slip-scenario
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: deal-slip-scenario
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: deal-slip-scenario skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/deal-slip-scenario
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

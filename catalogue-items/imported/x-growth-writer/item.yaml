@@ -1,0 +1,32 @@
+slug: x-growth-writer
+name: X growth writer
+summary: Give it your topic and past posts. Get tweets, threads and a plan to grow your audience on X.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: marketing-skill/skills/x-twitter-growth
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/x-twitter-growth
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: x-twitter-growth
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: x-twitter-growth skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/x-twitter-growth
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

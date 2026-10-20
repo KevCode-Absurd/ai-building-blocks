@@ -1,0 +1,32 @@
+slug: hiring-packet-builder
+name: Hiring packet builder
+summary: Give it your hiring brief. Get a job post, interview guide with scoring rubric, and an offer letter template.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: small-business/skills/job-post-builder
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/job-post-builder
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: job-post-builder
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: job-post-builder skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/job-post-builder
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

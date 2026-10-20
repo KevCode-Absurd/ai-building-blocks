@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows a set pattern but must fit your code.
+new_slug: safe-shutdown-code-writer
+name: Safe shutdown code writer
+summary: Point it at your server or worker. Get code that finishes live work and exits cleanly when stopped.
+job: build-software
+headline: Safe shutdown code writer
+subhead: Point it at your server or worker. Get code that finishes live work and exits cleanly when stopped.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read and edit your project files.

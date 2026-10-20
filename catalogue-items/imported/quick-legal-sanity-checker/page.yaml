@@ -1,0 +1,13 @@
+thinking: low
+thinking_why: It matches your question to a short list of patterns.
+new_slug: quick-legal-sanity-checker
+name: Quick legal sanity checker
+summary: Ask a quick question, like using customer logos. Get fine, needs a look or hold, with a reason. Not legal advice.
+job: check-contracts
+headline: Quick legal sanity checker
+subhead: Ask a quick question, like using customer logos. Get fine, needs a look or hold, with a reason. Not legal advice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your saved product legal setup notes.
+  - Where the skill points to /product-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.

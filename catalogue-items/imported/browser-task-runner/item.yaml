@@ -1,0 +1,32 @@
+slug: browser-task-runner
+name: Browser task runner
+summary: Describe a browser task. Get pages visited, forms filled, and screenshots or data saved.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: web_app
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/playwright
+  url: https://github.com/openai/skills/tree/main/skills/.curated/playwright
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: playwright
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: playwright skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/playwright
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

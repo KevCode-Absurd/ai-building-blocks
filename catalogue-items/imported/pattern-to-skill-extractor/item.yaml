@@ -1,0 +1,32 @@
+slug: pattern-to-skill-extractor
+name: Pattern to skill extractor
+summary: Name a fix you keep repeating. Get it packaged as a reusable skill with notes and examples.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: skill_files
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/self-improving-agent/skills/extract
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/self-improving-agent/skills/extract
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: extract
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: extract skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/self-improving-agent/skills/extract
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: machine-job-scheduler
+name: Machine job scheduler
+summary: Give it your jobs and machines. Get a job order that finishes everything sooner.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/job-shop-scheduling
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/job-shop-scheduling
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: job-shop-scheduling
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: job-shop-scheduling skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/job-shop-scheduling
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

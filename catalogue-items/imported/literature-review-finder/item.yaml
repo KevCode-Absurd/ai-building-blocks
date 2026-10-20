@@ -1,0 +1,32 @@
+slug: literature-review-finder
+name: Literature review finder
+summary: Give it a topic. Get the key academic papers found from open databases and sorted by theme.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: research/litreview/skills/litreview
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/research/litreview/skills/litreview
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: litreview
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: litreview skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/research/litreview/skills/litreview
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

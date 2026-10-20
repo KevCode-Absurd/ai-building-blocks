@@ -1,0 +1,33 @@
+slug: model-size-reducer
+name: Model size reducer
+summary: Give it a large model. Get a 4-bit copy that is about 3 times faster and fits on a smaller GPU.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 10-optimization/awq
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/10-optimization/awq
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: awq-quantization
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: awq-quantization skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/10-optimization/awq
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

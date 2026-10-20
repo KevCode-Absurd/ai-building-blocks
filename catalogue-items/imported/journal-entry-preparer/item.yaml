@@ -1,0 +1,32 @@
+slug: journal-entry-preparer
+name: Journal entry preparer
+summary: Name an accrual or adjustment. Get the debits, credits and support ready for review. An accountant should check it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: finance/skills/journal-entry
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/finance/skills/journal-entry
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: journal-entry
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: journal-entry skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/finance/skills/journal-entry
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

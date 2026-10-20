@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It compares running cost against replacement cost.
+new_slug: vehicle-fleet-planner
+name: Vehicle fleet planner
+summary: Give it your vehicles and costs. Get how many you need and when to replace each one.
+job: plan-supply-chain
+headline: Vehicle fleet planner
+subhead: Give it your vehicles and costs. Get how many you need and when to replace each one.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

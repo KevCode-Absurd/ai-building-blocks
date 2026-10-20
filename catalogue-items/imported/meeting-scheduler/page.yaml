@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It resolves times by clear rules.
+new_slug: meeting-scheduler
+name: Meeting scheduler
+summary: Say who to meet and when. Get time zones sorted, calendars checked and the best slots offered.
+job: organise-work
+headline: Meeting scheduler
+subhead: Say who to meet and when. Get time zones sorted, calendars checked and the best slots offered.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can check your calendar.

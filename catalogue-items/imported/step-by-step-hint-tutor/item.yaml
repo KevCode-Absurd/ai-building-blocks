@@ -1,0 +1,32 @@
+slug: step-by-step-hint-tutor
+name: Step-by-step hint tutor
+summary: Get help in small steps, from a nudge to a full step. You reflect before each bigger hint.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/student-learning/progressive-hint-ladder
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/student-learning/progressive-hint-ladder
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: progressive-hint-ladder
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: progressive-hint-ladder skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/student-learning/progressive-hint-ladder
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

@@ -1,0 +1,568 @@
+# sickn33/agentic-awesome-skills, part 3 of 14
+"sickn33/agentic-awesome-skills:skills/azure-security-keyvault-keys-java":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-security-keyvault-secrets-java":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-servicebus-dotnet":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-servicebus-py":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-servicebus-rust":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-servicebus-ts":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-speech-to-text-rest-py":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-sql":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-storage-blob-java":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-storage-blob-py":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-storage-blob-rust":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-storage-blob-ts":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-storage-file-datalake-py":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-storage-file-share-py":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-storage-file-share-ts":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-storage-queue-py":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-storage-queue-rust":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-storage-queue-ts":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-vms":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/azure-web-pubsub-ts":
+  skip: Microsoft cloud SDK guide for one language; we take Microsoft skills from the source, and it only helps one cloud product.
+"sickn33/agentic-awesome-skills:skills/babysit-pr":
+  skip: Copy of a skill from anthropics/skills, openai/skills, obra/superpowers, coreyhaines31 or addyosmani; we take it from the source.
+"sickn33/agentic-awesome-skills:skills/backend-architect":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/backend-dev-guidelines":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/backend-development-feature-development":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/backend-security-coder":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/backtesting-frameworks":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/backup-recovery":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/bamboohr-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/basecamp-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/baseline-ui":
+  name: Interface polish checker
+  summary: Give it your page or component code. Get a list of spacing, type and layout slips with a fix for each.
+  task: build-websites
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It checks code against a short list of rules.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: feedback_notes}]
+  author: ibelick
+  author_url: https://github.com/ibelick/ui-skills
+"sickn33/agentic-awesome-skills:skills/bash-defensive-patterns":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/bash-linux":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/bash-pro":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/bash-scripting":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/bats-testing-patterns":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/bazel-build-optimization":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/bb-methodology":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/bdi-mental-states":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/bdistill-behavioral-xray":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/bdistill-knowledge-extraction":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/beatra":
+  skip: Exists mainly to use one paid or hosted service, or moves money; not listed.
+"sickn33/agentic-awesome-skills:skills/beatra-ai-video-studio":
+  skip: Exists mainly to use one paid or hosted service, or moves money; not listed.
+"sickn33/agentic-awesome-skills:skills/beautiful-prose":
+  name: Forceful prose writer
+  summary: Give it a topic or a draft. Get clean, concrete writing with no filler and none of the usual AI habits.
+  task: write-and-tell-stories
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows strict style rules while it writes.
+  inputs: [{type: brief, required: true}, {type: copy_draft, required: false}]
+  outputs: [{type: copy_draft}]
+"sickn33/agentic-awesome-skills:skills/before-you-build":
+  name: Build risk reviewer
+  summary: Describe what you plan to build. Get the biggest risks on demand and switching, plus the smallest test to run first.
+  task: test-an-idea
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: It weighs several risks and picks a first test.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+  author: bin1874
+  author_url: https://github.com/bin1874/before-you-build-skill
+"sickn33/agentic-awesome-skills:skills/behavioral-modes":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/bevy-ecs-expert":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/bilig-workpaper":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/bill-gates":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/billing-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/binary-analysis-patterns":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/binary-diff":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/biopython":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/bitbucket-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/block-storage":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/blockchain-developer":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/blockrun":
+  skip: Exists mainly to use one paid or hosted service, or moves money; not listed.
+"sickn33/agentic-awesome-skills:skills/blog-writing-guide":
+  skip: Works only for one company's style or one product's own setup, or is a thin helper for it.
+"sickn33/agentic-awesome-skills:skills/blue-green-deploy":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/blueprint":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/board-governance":
+  skip: One of nine near-identical register template skills; thin on method, and it makes empty templates only.
+"sickn33/agentic-awesome-skills:skills/boost-asio-pro":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/box-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/brain-to-docs":
+  name: README and decision interviewer
+  summary: Answer a few quick questions at a time. Get a README and short decision records that hold your plans.
+  task: build-software
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It asks varied questions, then files each answer in the right place.
+  inputs: [{type: question, required: false}, {type: codebase, required: false}]
+  outputs: [{type: document}]
+  needs: read and save files in your project
+  author: davidondrej
+  author_url: https://github.com/davidondrej
+"sickn33/agentic-awesome-skills:skills/brainstorming":
+  skip: Copy of a skill from anthropics/skills, openai/skills, obra/superpowers, coreyhaines31 or addyosmani; we take it from the source.
+"sickn33/agentic-awesome-skills:skills/brand-growth-system-builder":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/brand-guidelines":
+  skip: Works only for one company's style or one product's own setup, or is a thin helper for it.
+"sickn33/agentic-awesome-skills:skills/brand-guidelines-anthropic":
+  skip: Copy of a skill from anthropics/skills, openai/skills, obra/superpowers, coreyhaines31 or addyosmani; we take it from the source.
+"sickn33/agentic-awesome-skills:skills/brand-guidelines-community":
+  skip: Copy of a skill from anthropics/skills, openai/skills, obra/superpowers, coreyhaines31 or addyosmani; we take it from the source.
+"sickn33/agentic-awesome-skills:skills/brand-kit-print-collateral":
+  skip: One of nine near-identical register template skills; thin on method, and it makes empty templates only.
+"sickn33/agentic-awesome-skills:skills/brand-perception-psychologist":
+  name: Brand perception auditor
+  summary: Describe your brand and who it is for. Get a list of mixed signals and changes to close the gap.
+  task: brand-file
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It reads many small signals and judges what they add up to.
+  inputs: [{type: brief, required: true}, {type: brand_brain, required: false}]
+  outputs: [{type: audit_report}]
+  author: MMEHDI0606
+  author_url: https://github.com/MMEHDI0606
+"sickn33/agentic-awesome-skills:skills/brave-man":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/break-ai-fix-loops":
+  name: Fix loop breaker
+  summary: Give it a bug your AI keeps failing to fix. Get a three-try repair plan, proof it works and a way back.
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It must tell real progress from repeated guesses.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: test_report}, {type: code_change}]
+  needs: run code and read your project files
+  author: twoicewoo
+  author_url: https://github.com/twoicewoo/awesome-copilot
+"sickn33/agentic-awesome-skills:skills/brendangregg-use-tsa":
+  name: Slow system investigator
+  summary: Describe a slow or failing system. Get a checked list of causes and a clear incident report.
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It weighs evidence across many possible causes.
+  inputs: [{type: question, required: true}, {type: codebase, required: false}]
+  outputs: [{type: audit_report}]
+  needs: run commands on your machine
+  author: Brendan Gregg
+  author_url: https://www.brendangregg.com
+"sickn33/agentic-awesome-skills:skills/brevo-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/broken-authentication":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/brooks-audit":
+  skip: Depends on shared reference files in the brooks-lint repo and overlaps our code review skills; not listed on its own.
+"sickn33/agentic-awesome-skills:skills/brooks-debt":
+  skip: Depends on shared reference files in the brooks-lint repo and overlaps our code review skills; not listed on its own.
+"sickn33/agentic-awesome-skills:skills/brooks-harness":
+  skip: Depends on shared reference files in the brooks-lint repo and overlaps our code review skills; not listed on its own.
+"sickn33/agentic-awesome-skills:skills/brooks-lint":
+  skip: Depends on shared reference files in the brooks-lint repo and overlaps our code review skills; not listed on its own.
+"sickn33/agentic-awesome-skills:skills/brooks-review":
+  skip: Depends on shared reference files in the brooks-lint repo and overlaps our code review skills; not listed on its own.
+"sickn33/agentic-awesome-skills:skills/brooks-sweep":
+  skip: Depends on shared reference files in the brooks-lint repo and overlaps our code review skills; not listed on its own.
+"sickn33/agentic-awesome-skills:skills/brooks-test":
+  skip: Depends on shared reference files in the brooks-lint repo and overlaps our code review skills; not listed on its own.
+"sickn33/agentic-awesome-skills:skills/browser-act":
+  skip: Drives signed-in browsers or scans sites in ways we do not list.
+"sickn33/agentic-awesome-skills:skills/browser-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/browser-bridge":
+  skip: Drives signed-in browsers or scans sites in ways we do not list.
+"sickn33/agentic-awesome-skills:skills/browser-extension-builder":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/browser-extension-launch":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/browser-extension-reverse":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/browser-harness":
+  skip: Drives signed-in browsers or scans sites in ways we do not list.
+"sickn33/agentic-awesome-skills:skills/browser-testing-with-devtools":
+  skip: Copy of a skill from anthropics/skills, openai/skills, obra/superpowers, coreyhaines31 or addyosmani; we take it from the source.
+"sickn33/agentic-awesome-skills:skills/buddy-program-manager":
+  skip: One of nine near-identical register template skills; thin on method, and it makes empty templates only.
+"sickn33/agentic-awesome-skills:skills/budget-cash-flow":
+  skip: One of nine near-identical register template skills; thin on method, and it makes empty templates only.
+"sickn33/agentic-awesome-skills:skills/bug-bounty":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/bug-hunt-swarm":
+  name: Bug cause investigator team
+  summary: Give it a crash or odd behaviour. Get several parallel read-only investigations and one ranked list of likely causes.
+  task: test-and-fix-code
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: It splits the search, then compares what each helper found.
+  inputs: [{type: codebase, required: true}, {type: question, required: true}]
+  outputs: [{type: feedback_notes}]
+  needs: run several helper agents and read your project files
+  author: Dimillian
+  author_url: https://github.com/Dimillian/Skills
+"sickn33/agentic-awesome-skills:skills/bug-hunter":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/bugcrowd-reporting":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/bugs-are-annoying":
+  name: Hidden bug hunter
+  summary: Point it at your code. Get a hard line-by-line hunt for logic errors and gaps, sorted by how bad they are.
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It checks every kind of bug against the real code.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: test_report}]
+  needs: read your project files
+"sickn33/agentic-awesome-skills:skills/build":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/build-ui":
+  skip: Works only for one company's style or one product's own setup, or is a thin helper for it.
+"sickn33/agentic-awesome-skills:skills/building-native-ui":
+  name: Expo app interface builder
+  summary: Describe the mobile screens you want. Get Expo Router code with native tabs, styling and motion.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows Expo guides for each part of the app.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: code_change}]
+  needs: run code and read your project files
+  author: Expo
+  author_url: https://github.com/expo/skills
+"sickn33/agentic-awesome-skills:skills/bulletmind":
+  name: Bullet note maker
+  summary: Paste messy notes or an article. Get tidy nested bullets that are quick to scan and revise.
+  task: organise-work
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: It reshapes text into a fixed layout.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: document}]
+  author: tejasashinde
+  author_url: https://github.com/tejasashinde
+"sickn33/agentic-awesome-skills:skills/bullmq-specialist":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/bumblebee":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/bun-development":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/burp-suite-testing":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/burpsuite-project-parser":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/busabase":
+  skip: Exists mainly to use one paid or hosted service, or moves money; not listed.
+"sickn33/agentic-awesome-skills:skills/business-analyst":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/business-continuity":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/business-email-template":
+  skip: One of nine near-identical register template skills; thin on method, and it makes empty templates only.
+"sickn33/agentic-awesome-skills:skills/business-website-setup":
+  skip: One of nine near-identical register template skills; thin on method, and it makes empty templates only.
+"sickn33/agentic-awesome-skills:skills/busybox-on-windows":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/buywhere-product-catalog":
+  skip: Exists mainly to use one paid or hosted service, or moves money; not listed.
+"sickn33/agentic-awesome-skills:skills/byagent":
+  skip: Exists mainly to use one paid or hosted service, or moves money; not listed.
+"sickn33/agentic-awesome-skills:skills/c-pro":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/c4-architecture-c4-architecture":
+  skip: Part of a multi-agent C4 workflow that needs its companion agents; not usable alone.
+"sickn33/agentic-awesome-skills:skills/c4-code":
+  skip: Part of a multi-agent C4 workflow that needs its companion agents; not usable alone.
+"sickn33/agentic-awesome-skills:skills/c4-component":
+  skip: Part of a multi-agent C4 workflow that needs its companion agents; not usable alone.
+"sickn33/agentic-awesome-skills:skills/c4-container":
+  skip: Part of a multi-agent C4 workflow that needs its companion agents; not usable alone.
+"sickn33/agentic-awesome-skills:skills/c4-context":
+  skip: Part of a multi-agent C4 workflow that needs its companion agents; not usable alone.
+"sickn33/agentic-awesome-skills:skills/cal-com-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/calendly-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/candidate-talent-pool":
+  skip: One of nine near-identical register template skills; thin on method, and it makes empty templates only.
+"sickn33/agentic-awesome-skills:skills/canva-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/canvas-design":
+  skip: Copy of a skill from anthropics/skills, openai/skills, obra/superpowers, coreyhaines31 or addyosmani; we take it from the source.
+"sickn33/agentic-awesome-skills:skills/capacity-workload-planner":
+  skip: One of nine near-identical register template skills; thin on method, and it makes empty templates only.
+"sickn33/agentic-awesome-skills:skills/career-ops":
+  skip: Drives signed-in browsers or scans sites in ways we do not list.
+"sickn33/agentic-awesome-skills:skills/carrier-relationship-management":
+  name: Freight carrier manager
+  summary: Describe your shipping lanes and carriers. Get a bid plan, rate talking points and a carrier scorecard.
+  task: sell-and-negotiate
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It balances cost, service and carrier relationships.
+  inputs: [{type: brief, required: true}, {type: spreadsheet, required: false}]
+  outputs: [{type: plan}]
+"sickn33/agentic-awesome-skills:skills/case-review":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/cc-skill-backend-patterns":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/cc-skill-clickhouse-io":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/cc-skill-coding-standards":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/cc-skill-continuous-learning":
+  name: Session lesson writer
+  summary: Give it a fixed problem from your session. Get one short, tested how-to your AI can reuse next time.
+  task: make-skills
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It must judge what is worth keeping.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: skill_files}]
+"sickn33/agentic-awesome-skills:skills/cc-skill-frontend-patterns":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/cc-skill-project-guidelines-example":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/cc-skill-security-review":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/cc-skill-strategic-compact":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/cdk-patterns":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/cdn-setup":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/change-management":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/changelog-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/changelog-entry":
+  name: Changelog entry writer
+  summary: Give it a commit range or pull request. Get a clean changelog entry grouped into added, changed and fixed.
+  task: ship-and-host
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It sorts commits into a fixed format.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: document}]
+  needs: read your git history
+  author: sickn33
+  author_url: https://github.com/sickn33/agentic-awesome-skills
+"sickn33/agentic-awesome-skills:skills/changelog-updates":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/chat-widget":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/chatexport-need-miner":
+  name: Chat export need finder
+  summary: Give it a Telegram group export. Get a ranked list of unmet needs, each backed by real quotes.
+  task: understand-customers
+  role: compress
+  level: advanced
+  thinking: high
+  thinking_why: It reads huge files in parts and checks every claim against a quote.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: feedback_notes}]
+  needs: run code and read large files
+  author: wwewtech
+  author_url: https://github.com/wwewtech/chatexport-need-miner
+"sickn33/agentic-awesome-skills:skills/check-identity-pack":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/chord-onchain-trading":
+  skip: Exists mainly to use one paid or hosted service, or moves money; not listed.
+"sickn33/agentic-awesome-skills:skills/chrome-extension-developer":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/churn-prevention":
+  skip: Copy of a skill from anthropics/skills, openai/skills, obra/superpowers, coreyhaines31 or addyosmani; we take it from the source.
+"sickn33/agentic-awesome-skills:skills/ci-cd-and-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/cicd-automation-workflow-automate":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/circleci":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/circleci-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/cirq":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/cis-benchmarks":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/citation-management":
+  name: Citation and BibTeX fixer
+  summary: Give it DOIs, paper titles or a messy bibliography. Get clean, checked BibTeX entries with duplicates removed.
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It looks up each source and checks the details.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: document}]
+  needs: search the web and save files
+"sickn33/agentic-awesome-skills:skills/ckw-design":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/claimable-postgres":
+  name: Throwaway database maker
+  summary: Ask for a database to test with. Get a Postgres link in seconds with no sign-up, kept 72 hours.
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It makes one request and saves the result.
+  inputs: [{type: brief, required: false}]
+  outputs: [{type: code_change}]
+  needs: run commands and reach the internet
+  author: Neon
+  author_url: https://github.com/neondatabase/agent-skills
+"sickn33/agentic-awesome-skills:skills/clarity-gate":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/clarvia-aeo-check":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/claude-ally-health":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/claude-api":
+  skip: Copy of a skill from anthropics/skills, openai/skills, obra/superpowers, coreyhaines31 or addyosmani; we take it from the source.
+"sickn33/agentic-awesome-skills:skills/claude-code-expert":
+  skip: Works only for one company's style or one product's own setup, or is a thin helper for it.
+"sickn33/agentic-awesome-skills:skills/claude-code-guide":
+  skip: Works only for one company's style or one product's own setup, or is a thin helper for it.
+"sickn33/agentic-awesome-skills:skills/claude-d3js-skill":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/claude-delegate":
+  skip: Works only for one company's style or one product's own setup, or is a thin helper for it.
+"sickn33/agentic-awesome-skills:skills/claude-in-chrome-troubleshooting":
+  skip: Works only for one company's style or one product's own setup, or is a thin helper for it.
+"sickn33/agentic-awesome-skills:skills/claude-monitor":
+  skip: Works only for one company's style or one product's own setup, or is a thin helper for it.
+"sickn33/agentic-awesome-skills:skills/claude-scientific-skills":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/claude-settings-audit":
+  skip: Works only for one company's style or one product's own setup, or is a thin helper for it.
+"sickn33/agentic-awesome-skills:skills/claude-speed-reader":
+  skip: Works only for one company's style or one product's own setup, or is a thin helper for it.
+"sickn33/agentic-awesome-skills:skills/claude-win11-speckit-update-skill":
+  skip: Works only for one company's style or one product's own setup, or is a thin helper for it.
+"sickn33/agentic-awesome-skills:skills/clean-code":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/clean-code-guard":
+  name: Generated code reviewer
+  summary: Give it code your AI just wrote. Get a pass for clean-code slips, repeated logic and common AI mistakes.
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It checks code against a fixed rule list.
+  inputs: [{type: code_change, required: true}]
+  outputs: [{type: feedback_notes}]
+  author: amElnagdy
+  author_url: https://github.com/amElnagdy/guard-skills
+"sickn33/agentic-awesome-skills:skills/clerk-auth":
+  skip: Narrow or niche (one language, library, tool or field) or too thin to list well.
+"sickn33/agentic-awesome-skills:skills/clickup-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/client-secret-exposure-audit":
+  name: Exposed secrets finder
+  summary: Give it a site you own. Get a report of keys and private files visitors can read, with fixes.
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a set list of places where secrets leak.
+  inputs: [{type: deploy_url, required: true}]
+  outputs: [{type: security_report}]
+  needs: open pages and run commands
+  author: siddanta-ar1
+  author_url: https://github.com/siddanta-ar1
+"sickn33/agentic-awesome-skills:skills/clients-accounts":
+  skip: One of nine near-identical register template skills; thin on method, and it makes empty templates only.
+"sickn33/agentic-awesome-skills:skills/cline-delegate":
+  skip: Works only for one company's style or one product's own setup, or is a thin helper for it.
+"sickn33/agentic-awesome-skills:skills/cline-pilot":
+  skip: Works only for one company's style or one product's own setup, or is a thin helper for it.
+"sickn33/agentic-awesome-skills:skills/close-automation":
+  skip: Only drives one SaaS app through Rube MCP (Composio); we take Composio skills from the source.
+"sickn33/agentic-awesome-skills:skills/closed-loop-delivery":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/cloud-architect":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/cloud-devops":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).
+"sickn33/agentic-awesome-skills:skills/cloud-iam-deep":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/cloud-k8s":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/cloud-penetration-testing":
+  skip: Offensive security or reverse-engineering workflow; not something we list for general work.
+"sickn33/agentic-awesome-skills:skills/cloudflare-pages":
+  skip: Generic or thin, or close to a skill we already list (bug diagnoser, plan and spec writers, code reviewers, publishers).

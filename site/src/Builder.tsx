@@ -1,5 +1,5 @@
 import { spaceKey, spaces } from "./lib/space";
-import { createContext, memo, useCallback, useContext, useEffect, useMemo, useRef, useState, type CSSProperties, type DragEvent } from "react";
+import { createContext, memo, useCallback, useContext, useDeferredValue, useEffect, useMemo, useRef, useState, type CSSProperties, type DragEvent } from "react";
 import {
   Background, BackgroundVariant, Handle, Panel, Position, ReactFlow, ReactFlowProvider, addEdge, useEdgesState, useNodesState, useReactFlow,
   type Connection, type Node, type NodeProps,
@@ -140,19 +140,28 @@ function PalItem({ b, why, onAdd }: { b: Block; why?: string; onAdd: (slug: stri
   );
 }
 
+/** How many blocks the palette draws at a time. */
+const PALETTE_PAGE = 60;
+
 function Palette({ c, anchor, inFlow, onAdd, onTemplate, onPlan, showGoal }: {
   c: Catalogue; anchor: string | null; inFlow: Set<string>; onAdd: (slug: string) => void; onTemplate: (b: Block) => void; onPlan: (goal: string) => boolean; showGoal: boolean;
 }) {
   const [q, setQ] = useState("");
   const [cat, setCat] = useState<"next" | "all" | "kits">("next");
   const userKits = useStore((s) => s.kits);
+  // The search text is built once per block, and the list follows the typing a beat behind, so thousands of blocks stay quick.
+  const hays = useMemo(() => new Map(c.blocks.map((b) => [b.slug, `${b.name} ${b.slug} ${b.summary} ${b.headline} ${taskOf(b).name}`.toLowerCase()])), [c]);
+  const dq = useDeferredValue(q);
+  const [limit, setLimit] = useState(PALETTE_PAGE);
+  useEffect(() => setLimit(PALETTE_PAGE), [dq, cat]);
   const list = useMemo(() => {
-    const words = q.toLowerCase().split(/\s+/).filter(Boolean);
+    const words = dq.toLowerCase().split(/\s+/).filter(Boolean);
     const kitSlugs = new Set(userKits.flatMap((k) => k.slugs));
     return c.blocks.filter((b) => b.category !== "orchestrator" &&
       (cat !== "kits" || kitSlugs.has(b.slug)) &&
-      words.every((w) => `${b.name} ${b.slug} ${b.summary} ${b.headline} ${taskOf(b).name}`.toLowerCase().includes(w)));
-  }, [c, q, cat, userKits]);
+      words.every((w) => hays.get(b.slug)!.includes(w)));
+  }, [c, dq, cat, userKits, hays]);
+  const groups = useMemo(() => TASKS.map((t) => ({ t, items: list.filter((b) => taskOf(b).id === t.id) })).filter((g) => g.items.length), [list]);
   const next = useMemo(() => suggestNext(c, anchor, inFlow), [c, anchor, inFlow]);
   const templates = c.blocks.filter((b) => b.category === "orchestrator");
   const showNext = cat === "next" && !q;
@@ -175,16 +184,22 @@ function Palette({ c, anchor, inFlow, onAdd, onTemplate, onPlan, showGoal }: {
             {templates.map((t) => <button key={t.slug} className="tpl" onClick={() => onTemplate(t)}>{t.name}<small>{t.steps.length} steps</small></button>)}
           </div>
         )}
-        {!showNext && TASKS.map((t) => {
-          const items = list.filter((b) => taskOf(b).id === t.id);
-          if (!items.length) return null;
-          return (
-            <div key={t.id}>
-              <div className="pal-group">{t.name} · {items.length}</div>
-              {items.map((b) => <PalItem key={b.slug} b={b} onAdd={onAdd} />)}
-            </div>
-          );
-        })}
+        {!showNext && (() => {
+          // Only the first `limit` blocks are drawn; "Show more" adds the next batch.
+          let left = limit;
+          return groups.map(({ t, items }) => {
+            if (left <= 0) return null;
+            const shown = items.slice(0, left);
+            left -= shown.length;
+            return (
+              <div key={t.id}>
+                <div className="pal-group">{t.name} · {items.length}</div>
+                {shown.map((b) => <PalItem key={b.slug} b={b} onAdd={onAdd} />)}
+              </div>
+            );
+          });
+        })()}
+        {!showNext && list.length > limit && <button className="btn btn-ghost btn-sm" style={{ margin: "8px" }} onClick={() => setLimit((n) => n + PALETTE_PAGE)} data-testid="palette-more">Show {Math.min(PALETTE_PAGE, list.length - limit)} more of {list.length - limit}</button>}
         {!showNext && list.length === 0 && <p className="small" style={{ padding: "16px 8px" }}>{cat === "kits" ? "Nothing saved yet. Open any skill and press Save to kit." : "No blocks match. Try another word."}</p>}
       </div>
     </aside>

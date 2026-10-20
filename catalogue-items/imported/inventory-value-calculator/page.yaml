@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It applies set costing formulas.
+new_slug: inventory-value-calculator
+name: Inventory value calculator
+summary: Give it your stock purchases and counts. Get inventory valued by FIFO or average cost, with write-downs flagged.
+job: run-your-store
+headline: Inventory value calculator
+subhead: Give it your stock purchases and counts. Get inventory valued by FIFO or average cost, with write-downs flagged.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

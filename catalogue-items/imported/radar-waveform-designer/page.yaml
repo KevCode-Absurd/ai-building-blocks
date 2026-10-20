@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Waveform choices trade off many technical limits.
+new_slug: radar-waveform-designer
+name: Radar waveform designer
+summary: Give it radar or sonar needs. Get a chosen waveform, its settings and plots of how well it performs.
+job: build-software
+headline: Radar waveform designer
+subhead: Give it radar or sonar needs. Get a chosen waveform, its settings and plots of how well it performs.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with the Phased Array System Toolbox.

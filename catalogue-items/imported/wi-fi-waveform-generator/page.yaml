@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Standards give exact settings.
+new_slug: wi-fi-waveform-generator
+name: Wi-Fi waveform generator
+summary: Pick an 802.11 format. Get a standard-compliant Wi-Fi waveform ready for link tests.
+job: build-software
+headline: Wi-Fi waveform generator
+subhead: Pick an 802.11 format. Get a standard-compliant Wi-Fi waveform ready for link tests.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with WLAN Toolbox.

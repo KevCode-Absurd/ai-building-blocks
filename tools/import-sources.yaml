@@ -1,0 +1,65 @@
+# Every repo we import skills from, with the settings its import needs (tools/import-all.mjs runs them in order).
+# clone: the folder name under the clones folder (default C:/Users/kevin/ab-sources, or --clones <dir>).
+# Repos sent but not imported, and why, are in reports/2026-10-21-import-queue.md.
+- {clone: anthropics-skills, by: Anthropic, repo: anthropics/skills}
+- {clone: openai-skills, by: OpenAI, repo: openai/skills}
+- {clone: mattpocock_skills, by: Matt Pocock, repo: mattpocock/skills}
+- {clone: coreyhaines31_marketingskills, by: Corey Haines, repo: coreyhaines31/marketingskills}
+- {clone: bergside_awesome-design-skills, by: Bergside, repo: bergside/awesome-design-skills}
+- {clone: addyosmani_agent-skills, by: Addy Osmani, repo: addyosmani/agent-skills}
+- {clone: robpalmer99_copywriting, by: Rob Palmer, repo: robpalmer99/claude-code-copywriting-skills}
+- {clone: zanwei_design-dna, by: zanwei, repo: zanwei/design-dna}
+- {clone: bhanu_seo, by: Bhanunamikaze, repo: Bhanunamikaze/Agentic-SEO-Skill}
+- {clone: ferdinandobons_startup-skill, by: Ferdinando Bons, repo: ferdinandobons/startup-skill}
+- {clone: Leonxlnx_taste-skill, by: Leonxlnx, repo: Leonxlnx/taste-skill}
+- {clone: elaya_design, by: Elaya Design, repo: elayadesign/ai-design-skills}
+- {clone: bear2u_my-skills, by: bear2u, repo: bear2u/my-skills, path: skills, only: workthrough}
+- {clone: jimliu_baoyu-skills, by: Jim Liu, repo: JimLiu/baoyu-skills}
+- {clone: composio_codex-skills, by: Composio community, repo: composio-community/awesome-codex-skills, only: "create-plan,paperjsx"}
+- {clone: nexscope-ai_eCommerce-Skills, by: Nexscope AI, repo: nexscope-ai/eCommerce-Skills}
+- {clone: dragnoir_shopify, by: dragnoir, repo: dragnoir/Shopify-agent-skills}
+- {clone: 40rty_shopify-admin, by: 40rty AI, repo: 40rty-ai/shopify-admin-skills}
+- {clone: matlab_toolkit, by: MathWorks, repo: matlab/matlab-agentic-toolkit}
+- {clone: seb1n_awesome-ai-agent-skills, by: Burhan Sebin, repo: seb1n/awesome-ai-agent-skills}
+- {clone: alirezarezvani_claude-skills, by: Alireza Rezvani, repo: alirezarezvani/claude-skills, exclude: ".gemini,.codex,.cursor"}
+- {clone: sickn33_agentic-awesome-skills, by: sickn33, repo: sickn33/agentic-awesome-skills, path: skills}
+- {clone: himself65_finance, by: himself65, repo: himself65/finance-skills}
+- {clone: gajetoso_finance, by: GAJETOso, repo: GAJETOso/financeskills}
+- {clone: nighomni_fsi-india, by: nighomni123, repo: nighomni123/fsi-skills-india}
+- {clone: jake_youtube, by: Jake Schincariol, repo: Jakeschincariol/youtube-agent-skill, path: skills}
+- {clone: agrici_youtube, by: Daniel Agrici, repo: AgriciDaniel/claude-youtube, path: skills}
+- {clone: nbashaw_claude-cs, by: nbashaw, repo: nbashaw/claude-cs}
+- {clone: anthropics_knowledge-work-plugins, by: Anthropic, repo: anthropics/knowledge-work-plugins}
+- {clone: tuanductran_hr-skills, by: Tuan Duc Tran, repo: tuanductran/hr-skills, path: skills}
+- {clone: carlopezzuto_recruiting, by: Carlo Pezzuto, repo: carlopezzuto/recruiting, path: .claude/skills}
+- {clone: nimrodfisher_data-analytics-skills, by: Nimrod Fisher, repo: nimrodfisher/data-analytics-skills}
+- {clone: pymc-labs_pymc-modeling, by: PyMC Labs, repo: pymc-labs/pymc-modeling, path: skills}
+- {clone: Bin-Huang_google-analytics-cli, by: Bin Huang, repo: Bin-Huang/google-analytics-cli, path: skills}
+- {clone: wizard7558_attribution-skills, by: wizard7558, repo: wizard7558/attribution-skills, path: skills}
+- {clone: AgriciDaniel_claude-ads, by: Daniel Agrici, repo: AgriciDaniel/claude-ads}
+- {clone: TheMattBerman_meta-ads-kit, by: Matt Berman, repo: TheMattBerman/meta-ads-kit, path: skills}
+- {clone: orchestra-research_AI-research-SKILLs, by: Orchestra Research, repo: orchestra-research/AI-research-SKILLs}
+- {clone: Weizhena_Deep-Research-skills, by: Weizhena, repo: Weizhena/Deep-Research-skills, path: skills/research-en}
+- {clone: GarethManning_education-agent-skills, by: Gareth Manning, repo: GarethManning/education-agent-skills, path: skills}
+- {clone: kishorkukreja_awesome-supply-chain, by: Kishor Kukreja, repo: kishorkukreja/awesome-supply-chain, path: skills}
+- {clone: CosmoBlk_email-marketing-bible, by: CosmoBlk, repo: CosmoBlk/email-marketing-bible}
+- {clone: jacquescorbytuech_email-marketing-skill, by: jacquescorbytuech, repo: jacquescorbytuech/email-marketing-skill}
+- {clone: ThomasPraun_saas-pipeline, by: Thomas Praun, repo: ThomasPraun/saas-pipeline}
+- {clone: creationskiro_planmysaas-claude-skill, by: creationskiro, repo: creationskiro/planmysaas-claude-skill}
+- {clone: zeropoint_youtube, by: ZeroPoint, repo: ZeroPointRepo/youtube-skills}
+- {clone: ScrapeCreators_social-media-research-skills, by: ScrapeCreators, repo: ScrapeCreators/social-media-research-skills}
+- {clone: checkout-page_ecommerce-skills, by: Checkout Page, repo: checkout-page/ecommerce-skills, path: skills}
+- {clone: proskillpacks_skills, by: Pro Skill Packs, repo: proskillpacks/skills, path: skills}
+- {clone: rampstackco_claude-skills, by: RampStack, repo: rampstackco/claude-skills, path: skills}
+- {clone: anthropics_claude-for-legal, by: Anthropic, repo: anthropics/claude-for-legal}
+- {clone: arnabbagxd_Brand-building-skills, by: Arnab Bag, repo: arnabbagxd/Brand-building-skills, path: skills}
+- {clone: strands-agents_agent-sop, by: Strands Agents, repo: strands-agents/agent-sop, path: skills}
+- {clone: ZhongHanLoo_deep-research-skill, by: ZhongHanLoo, repo: ZhongHanLoo/deep-research-skill, path: skill}
+- {clone: Paldom_mcp-server-skills, by: Paldom, repo: Paldom/mcp-server-skills}
+- {clone: elevenlabs_skills, by: ElevenLabs, repo: elevenlabs/skills}
+- {clone: dlazy-ai_ecommerce-skills, by: dLazy, repo: dlazy-ai/ecommerce-skills, path: skills}
+- {clone: phuryn_pm-skills, by: Pawel Huryn, repo: phuryn/pm-skills}
+- {clone: wondelai_skills, by: Wondel.ai, repo: wondelai/skills, exclude: "plugins,docs,scripts"}
+- {clone: Sushegaad_Claude-Skills-Governance-Risk-and-Compliance, by: Hemant Naik, repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance, path: plugins}
+- {clone: realkimbarrett_advertising-skills, by: Kim Barrett, repo: realkimbarrett/advertising-skills, path: skills}
+- {clone: K-Dense-AI_scientific-agent-skills, by: K-Dense, repo: K-Dense-AI/scientific-agent-skills, path: skills}

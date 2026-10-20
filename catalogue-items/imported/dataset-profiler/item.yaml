@@ -1,0 +1,32 @@
+slug: dataset-profiler
+name: Dataset profiler
+summary: Give it a table or file. Get its shape, missing values, odd entries and which columns are worth analyzing.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: data/skills/explore-data
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/explore-data
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: explore-data
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: explore-data skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/explore-data
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

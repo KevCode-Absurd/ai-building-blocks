@@ -1,0 +1,38 @@
+slug: claim-fact-checker
+name: Claim fact-checker
+summary: Give it a text. Get each claim checked against trusted sources and scored by confidence.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: research-and-knowledge/fact-checking
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/research-and-knowledge/fact-checking
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: fact-checking
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: fact-checking skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/research-and-knowledge/fact-checking
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

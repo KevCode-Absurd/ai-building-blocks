@@ -1,0 +1,275 @@
+# orchestra-research/AI-research-SKILLs, part 1 of 2 (49 skills: 19 kept, 30 skipped)
+"orchestra-research/AI-research-SKILLs:0-autoresearch-skill":
+  name: Research project runner
+  summary: "Give it a research question. Get a run of tested ideas, a log of what you learned, and a findings write-up."
+  task: research-topics
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It must pick the next test from what the last one showed."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document, required: true } ]
+  needs: "run code, search the web and keep working on its own"
+"orchestra-research/AI-research-SKILLs:01-model-architecture/litgpt":
+  name: LitGPT model trainer
+  summary: "Pick a small open model and your data. Get it downloaded, trained on your examples and ready to chat with."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "The steps are set, but sizing the run to your computer takes care."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: "run Python code on a computer with a GPU"
+"orchestra-research/AI-research-SKILLs:01-model-architecture/nanogpt":
+  name: Tiny GPT trainer
+  summary: "Give it any text file. Get a small GPT trained from scratch that writes in that style, plus how it works."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows a short, known set of steps."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: "run Python code"
+"orchestra-research/AI-research-SKILLs:02-tokenization/huggingface-tokenizers":
+  name: Tokenizer trainer
+  summary: "Give it your text. Get a custom word-splitting tokenizer trained on it, with padding and length limits set up."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "Vocabulary choices change how well the model learns."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: "run Python code"
+"orchestra-research/AI-research-SKILLs:03-fine-tuning/peft":
+  name: Low-memory fine-tuning guide
+  summary: "Give it a big model and your GPU size. Get a fine-tune that trains under 1 percent of the model and fits."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Fitting a large model into limited memory needs careful trade-offs."
+  inputs: [ { type: spreadsheet, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: "run Python code on a computer with a GPU"
+"orchestra-research/AI-research-SKILLs:04-mechanistic-interpretability/saelens":
+  name: Model feature finder
+  summary: "Give it a language model. Get a small network trained to show which ideas its inner activity stands for."
+  task: research-topics
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Reading what the features mean takes research judgment."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: "run Python code on a computer with a GPU"
+"orchestra-research/AI-research-SKILLs:04-mechanistic-interpretability/transformer-lens":
+  name: Model internals inspector
+  summary: "Give it a language model and a question. Get a look inside it: which parts pay attention to what, and why."
+  task: research-topics
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Tracing how a model reaches an answer needs careful testing."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  needs: "run Python code on a computer with a GPU"
+"orchestra-research/AI-research-SKILLs:05-data-processing/nemo-curator":
+  name: Training data cleaner
+  summary: "Give it a pile of text, images or video. Get a clean set with copies, junk and personal details removed."
+  task: build-software
+  role: compress
+  level: expert
+  thinking: medium
+  thinking_why: "Filters are set up by rule, but you must check what they drop."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet, required: true } ]
+  needs: "run Python code on a computer with an NVIDIA GPU"
+"orchestra-research/AI-research-SKILLs:06-post-training/trl-fine-tuning":
+  name: Model preference tuning guide
+  summary: "Give it a model and examples of good and bad answers. Get a model tuned to answer the way you prefer."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Choosing the method and data takes careful judgment."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: "run Python code on a computer with a GPU"
+"orchestra-research/AI-research-SKILLs:07-safety-alignment/nemo-guardrails":
+  name: AI app guardrails builder
+  summary: "Describe what your AI app must never do. Get rules that block jailbreaks, made-up facts and leaked personal details."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "Rules follow a set pattern, but each needs testing."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: "run Python code"
+"orchestra-research/AI-research-SKILLs:07-safety-alignment/prompt-guard":
+  name: Prompt attack detector
+  summary: "Point it at your AI app's inputs. Get a small filter that flags tricks and hidden instructions before they land."
+  task: build-software
+  role: check
+  level: advanced
+  thinking: low
+  thinking_why: "It adds a ready-made detector and checks its scores."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: "run Python code"
+"orchestra-research/AI-research-SKILLs:08-distributed-training/accelerate":
+  name: Multi-GPU training setup helper
+  summary: "Give it a training script. Get it running on one GPU, many GPUs or several machines with a few added lines."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "The change is small and follows a known pattern."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: "run Python code"
+"orchestra-research/AI-research-SKILLs:08-distributed-training/pytorch-lightning":
+  name: Training loop tidier
+  summary: "Give it a messy training script. Get a clean one with checkpoints, logging and multi-GPU support built in."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Moving old code across needs care so results stay the same."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: "run Python code"
+"orchestra-research/AI-research-SKILLs:09-infrastructure/lambda-labs":
+  name: Rented GPU server setup helper
+  summary: "Say what you need to train. Get a rented GPU server chosen, set up, loaded with your files and shut down after."
+  task: build-software
+  role: orchestrate
+  level: intermediate
+  thinking: medium
+  thinking_why: "It matches the job to a server and tracks cost."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  needs: "run commands and use a Lambda Labs account (paid)"
+  paid: "Lambda Labs"
+"orchestra-research/AI-research-SKILLs:09-infrastructure/modal":
+  name: Cloud GPU job runner
+  summary: "Give it your Python code. Get it running on rented GPUs, or live as a web API, with no server to manage."
+  task: ship-and-host
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Wrapping code for the cloud is routine but needs testing."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: deploy_url, required: true } ]
+  needs: "run commands and use a Modal account (paid)"
+  paid: "Modal"
+"orchestra-research/AI-research-SKILLs:10-optimization/awq":
+  name: Model size reducer
+  summary: "Give it a large model. Get a 4-bit copy that is about 3 times faster and fits on a smaller GPU."
+  task: build-software
+  role: compress
+  level: advanced
+  thinking: medium
+  thinking_why: "The steps are fixed, but you must check quality after."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: "run Python code on a computer with a GPU"
+"orchestra-research/AI-research-SKILLs:10-optimization/gguf":
+  name: Local model converter
+  summary: "Give it a model. Get a smaller file that runs on your laptop or Mac with no GPU, plus the run steps."
+  task: build-software
+  role: compress
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows a set convert-and-test routine."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: "run commands and build llama.cpp"
+"orchestra-research/AI-research-SKILLs:10-optimization/ml-training-recipes":
+  name: Model training recipe finder
+  summary: "Say what you are training. Get the right settings, a safe training loop and a checklist for when the loss goes wrong."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Picking settings and finding silent faults takes judgment."
+  inputs: [ { type: question, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change, required: true } ]
+  needs: "run Python code"
+  author: dailycafi
+  author_url: https://github.com/dailycafi
+"orchestra-research/AI-research-SKILLs:11-evaluation/lm-evaluation-harness":
+  name: Language model benchmark runner
+  summary: "Give it a model. Get scores on 60 or more standard tests, so you can compare it with others."
+  task: build-software
+  role: check
+  level: advanced
+  thinking: low
+  thinking_why: "It runs set tests and reports the numbers."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: test_report, required: true } ]
+  needs: "run Python code on a computer with a GPU"
+# Skipped (30)
+"orchestra-research/AI-research-SKILLs:01-model-architecture/mamba":
+  skip: "Library overview for one model type, no clear job for you."
+"orchestra-research/AI-research-SKILLs:01-model-architecture/rwkv":
+  skip: "Library overview for one model type, no clear job for you."
+"orchestra-research/AI-research-SKILLs:01-model-architecture/torchtitan":
+  skip: "Large-scale pretraining on hundreds of GPUs; very narrow, and overlaps the other distributed training guides."
+"orchestra-research/AI-research-SKILLs:02-tokenization/sentencepiece":
+  skip: "Near-copy of the Tokenizer trainer job; kept the Hugging Face one."
+"orchestra-research/AI-research-SKILLs:03-fine-tuning/axolotl":
+  skip: "Near-copy of the fine-tuning guides; kept PEFT and TRL."
+"orchestra-research/AI-research-SKILLs:03-fine-tuning/llama-factory":
+  skip: "Thin wrapper around a library's docs; near-copy of other fine-tuning guides."
+"orchestra-research/AI-research-SKILLs:03-fine-tuning/unsloth":
+  skip: "Thin, and we already list an Unsloth fine-tuning guide from another source."
+"orchestra-research/AI-research-SKILLs:04-mechanistic-interpretability/nnsight":
+  skip: "Near-copy of the Model internals inspector; also leans on a remote service."
+"orchestra-research/AI-research-SKILLs:04-mechanistic-interpretability/pyvene":
+  skip: "Near-copy of the Model internals inspector job."
+"orchestra-research/AI-research-SKILLs:05-data-processing/ray-data":
+  skip: "General data-processing library guide; thin on a clear job."
+"orchestra-research/AI-research-SKILLs:06-post-training/grpo-rl-training":
+  skip: "Near-copy of the TRL guide, which already covers GRPO."
+"orchestra-research/AI-research-SKILLs:06-post-training/miles":
+  skip: "Niche reinforcement-learning framework; fork of slime; near-copy."
+"orchestra-research/AI-research-SKILLs:06-post-training/openrlhf":
+  skip: "Near-copy of the TRL guide for large clusters."
+"orchestra-research/AI-research-SKILLs:06-post-training/simpo":
+  skip: "One training method already covered by the TRL guide."
+"orchestra-research/AI-research-SKILLs:06-post-training/slime":
+  skip: "Niche reinforcement-learning framework; near-copy of the TRL guide."
+"orchestra-research/AI-research-SKILLs:06-post-training/torchforge":
+  skip: "Niche reinforcement-learning framework; near-copy of the TRL guide."
+"orchestra-research/AI-research-SKILLs:06-post-training/verl":
+  skip: "Near-copy of the TRL guide for large clusters."
+"orchestra-research/AI-research-SKILLs:07-safety-alignment/constitutional-ai":
+  skip: "Describes a training method; no clear job for you beyond the TRL guide."
+"orchestra-research/AI-research-SKILLs:07-safety-alignment/llamaguard":
+  skip: "Near-copy of the AI app guardrails builder job."
+"orchestra-research/AI-research-SKILLs:08-distributed-training/deepspeed":
+  skip: "Near-copy of the multi-GPU setup helper; kept the simplest."
+"orchestra-research/AI-research-SKILLs:08-distributed-training/megatron-core":
+  skip: "Very large-scale training only; near-copy of other multi-GPU guides."
+"orchestra-research/AI-research-SKILLs:08-distributed-training/pytorch-fsdp2":
+  skip: "Near-copy of the multi-GPU setup helper."
+"orchestra-research/AI-research-SKILLs:08-distributed-training/ray-train":
+  skip: "Near-copy of the multi-GPU setup helper."
+"orchestra-research/AI-research-SKILLs:09-infrastructure/skypilot":
+  skip: "Near-copy of the cloud GPU guides, and needs paid cloud accounts."
+"orchestra-research/AI-research-SKILLs:10-optimization/bitsandbytes":
+  skip: "Near-copy of the Model size reducer job."
+"orchestra-research/AI-research-SKILLs:10-optimization/flash-attention":
+  skip: "Thin guide to one speed-up library."
+"orchestra-research/AI-research-SKILLs:10-optimization/gptq":
+  skip: "Near-copy of the Model size reducer job."
+"orchestra-research/AI-research-SKILLs:10-optimization/hqq":
+  skip: "Near-copy of the Model size reducer job."
+"orchestra-research/AI-research-SKILLs:11-evaluation/bigcode-evaluation-harness":
+  skip: "Near-copy of the benchmark runner, for code models only."
+"orchestra-research/AI-research-SKILLs:11-evaluation/nemo-evaluator":
+  skip: "Near-copy of the benchmark runner; heavier setup."

@@ -1,0 +1,32 @@
+slug: last-mile-delivery-planner
+name: Last-mile delivery planner
+summary: Describe your local deliveries. Get ways to cut cost per drop, speed up delivery and plan same-day service.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/last-mile-delivery
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/last-mile-delivery
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: last-mile-delivery
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: last-mile-delivery skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/last-mile-delivery
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It follows a standard counting routine.
+new_slug: stock-count-program-planner
+name: Stock count program planner
+summary: Give it your item list. Get a rolling count schedule, who counts what, and how to trace count mismatches.
+job: plan-supply-chain
+headline: Stock count program planner
+subhead: Give it your item list. Get a rolling count schedule, who counts what, and how to trace count mismatches.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

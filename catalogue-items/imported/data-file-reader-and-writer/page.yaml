@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It uses a small set of well-known read calls.
+new_slug: data-file-reader-and-writer
+name: Data file reader and writer
+summary: Name your CSV, Excel, JSON or Parquet file. Get it read or saved correctly, with errors fixed.
+job: work-with-files
+headline: Data file reader and writer
+subhead: Name your CSV, Excel, JSON or Parquet file. Get it read or saved correctly, with errors fixed.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB.

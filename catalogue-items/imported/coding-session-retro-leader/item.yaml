@@ -1,0 +1,32 @@
+slug: coding-session-retro-leader
+name: Coding session retro leader
+summary: Finish a coding session. Get what slowed your AI down and the changes that would help next time.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: false
+outputs:
+  - type: lessons_register
+uses: []
+origin: imported
+source:
+  by: Matt Pocock
+  repo: mattpocock/skills
+  path: skills/engineering/retro
+  url: https://github.com/mattpocock/skills/tree/main/skills/engineering/retro
+  licence: MIT
+  licence_file: LICENSE
+  commit: 5beb35b
+  original_name: retro
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: retro skill
+    by: Matt Pocock
+    url: https://github.com/mattpocock/skills/tree/main/skills/engineering/retro
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

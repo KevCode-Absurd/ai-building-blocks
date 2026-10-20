@@ -1,0 +1,32 @@
+slug: signal-data-cleaner
+name: Signal data cleaner
+summary: Give it raw signals. Get gaps filled, drift removed, noise cut and labels added for analysis.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/signal-processing/matlab-prepare-signal-data
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/signal-processing/matlab-prepare-signal-data
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-prepare-signal-data
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-prepare-signal-data skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/signal-processing/matlab-prepare-signal-data
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: ni-daqmx-call-translator
+name: NI-DAQmx call translator
+summary: Paste a DAQmx C call. Get the correct MATLAB calldaqlib call with argument types fixed.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/test-and-measurement/matlab-call-nidaqmx
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/test-and-measurement/matlab-call-nidaqmx
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-call-nidaqmx
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-call-nidaqmx skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/test-and-measurement/matlab-call-nidaqmx
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

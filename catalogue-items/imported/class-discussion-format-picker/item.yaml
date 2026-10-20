@@ -1,0 +1,32 @@
+slug: class-discussion-format-picker
+name: Class discussion format picker
+summary: Give it your topic and group. Get the discussion format that fits, with steps to run it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/questioning-discussion/discussion-protocol-selector
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/questioning-discussion/discussion-protocol-selector
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: discussion-protocol-selector
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: discussion-protocol-selector skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/questioning-discussion/discussion-protocol-selector
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

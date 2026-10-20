@@ -1,0 +1,37 @@
+slug: 3d-website-builder
+name: 3D website builder
+summary: Describe the site. Get a 3D web page with shaders, smooth motion, a preloader and phone-friendly tuning.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/premium-3d-website
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/premium-3d-website
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: premium-3d-website
+  author: Rsmiyani
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: premium-3d-website skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/premium-3d-website
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Rsmiyani
+    url: https://github.com/Rsmiyani
+    used: Wrote the skill; sickn33 shared it in their collection.

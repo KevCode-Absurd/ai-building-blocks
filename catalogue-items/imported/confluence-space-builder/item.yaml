@@ -1,0 +1,32 @@
+slug: confluence-space-builder
+name: Confluence space builder
+summary: Say what your team needs. Get a Confluence space set up with page templates, permissions and a clear layout.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: project-management/skills/confluence-expert
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/project-management/skills/confluence-expert
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: confluence-expert
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: confluence-expert skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/project-management/skills/confluence-expert
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

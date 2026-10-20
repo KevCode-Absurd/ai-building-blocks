@@ -1,0 +1,32 @@
+slug: chart-and-app-styler
+name: Chart and app styler
+summary: Give it your charts or app. Get colour palettes, colormaps and dark mode applied the right way.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/matlab-app-building/matlab-apply-theme
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-app-building/matlab-apply-theme
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-apply-theme
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-apply-theme skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-app-building/matlab-apply-theme
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

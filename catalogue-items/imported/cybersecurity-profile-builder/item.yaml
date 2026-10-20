@@ -1,0 +1,33 @@
+slug: cybersecurity-profile-builder
+name: Cybersecurity profile builder
+summary: Describe your security today and your goals. Get a NIST CSF profile, gaps and a step by step plan.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/nist-csf/skills/nist-csf
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/nist-csf/skills/nist-csf
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: nist-csf
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: nist-csf skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/nist-csf/skills/nist-csf
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

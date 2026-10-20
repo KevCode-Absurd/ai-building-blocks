@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It edits one small file.
+new_slug: task-list-keeper
+name: Task list keeper
+summary: Tell it your tasks. Get a simple TASKS file kept up to date as you add, finish and review work.
+job: organise-work
+headline: Task list keeper
+subhead: Tell it your tasks. Get a simple TASKS file kept up to date as you add, finish and review work.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read and write files.

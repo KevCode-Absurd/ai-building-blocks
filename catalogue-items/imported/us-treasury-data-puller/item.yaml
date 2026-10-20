@@ -1,0 +1,32 @@
+slug: us-treasury-data-puller
+name: US Treasury data puller
+summary: Ask about US debt, spending or interest rates. Get the latest official numbers from Treasury, no key needed.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/usfiscaldata
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/usfiscaldata
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: usfiscaldata
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: usfiscaldata skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/usfiscaldata
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

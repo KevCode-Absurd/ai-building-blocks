@@ -1,0 +1,13 @@
+thinking: medium
+thinking_why: It sorts by urgency and writes replies in your voice.
+new_slug: email-backlog-clearer
+name: Email backlog clearer
+summary: Point it at your inbox. Get what needs you, drafted replies in your voice, and deadlines pulled from long threads.
+job: write-emails
+headline: Email backlog clearer
+subhead: Point it at your inbox. Get what needs you, drafted replies in your voice, and deadlines pulled from long threads.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your accounts and files.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.

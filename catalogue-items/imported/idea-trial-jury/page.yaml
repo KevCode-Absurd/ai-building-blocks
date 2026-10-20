@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It runs many separate arguments and weighs them against each other.
+new_slug: idea-trial-jury
+name: Idea trial jury
+summary: Give it a plan or claim. Get a verdict from a prosecutor, a defender and 12 jurors, plus what would flip it.
+job: think-and-decide
+headline: Idea trial jury
+subhead: Give it a plan or claim. Get a verdict from a prosecutor, a defender and 12 jurors, plus what would flip it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and start helper agents.

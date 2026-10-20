@@ -1,0 +1,286 @@
+# Four small repos: Arnab Bag brand skills, Strands Agents SOP author, ZhongHanLoo deep research, Paldom MCP server skills (all MIT or Apache 2.0).
+
+# ---------- arnabbagxd/Brand-building-skills (MIT) ----------
+"arnabbagxd/Brand-building-skills:skills/brand-voice":
+  name: Brand voice rules writer
+  summary: "Describe your brand and who you write for. Get tone, word choices and writing rules any writer can follow."
+  task: brand-file
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It turns your brand traits into clear rules and examples."
+  inputs: [{type: brand_brain, required: false}, {type: persona, required: false}]
+  outputs: [{type: brand_brain}]
+"arnabbagxd/Brand-building-skills:skills/brand-audit":
+  name: Brand health auditor
+  summary: "Describe your brand as it is today. Get a clear diagnosis of what works and what is off, with ranked fixes."
+  task: brand-file
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares your identity, voice and position, then ranks what to fix first."
+  inputs: [{type: brand_brain, required: false}, {type: web_page, required: false}]
+  outputs: [{type: audit_report}]
+"arnabbagxd/Brand-building-skills:skills/brand-strategy":
+  name: Brand strategy report writer
+  summary: "Answer a set of brand questions. Get a full brand strategy report for your business or your client."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "It joins many answers into one strategy that must hold together."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]
+"arnabbagxd/Brand-building-skills:skills/brand-messaging":
+  name: Brand messaging builder
+  summary: "Give it your brand facts. Get a tagline, key messages and proof points for each audience."
+  task: brand-file
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It builds a message ladder from your facts and audience."
+  inputs: [{type: brand_brain, required: false}, {type: persona, required: false}]
+  outputs: [{type: brand_brain}]
+"arnabbagxd/Brand-building-skills:skills/brand-naming":
+  name: Brand name finder
+  summary: "Share your brand brief. Get name ideas, or scores and honest feedback on the names you already have."
+  task: brand-file
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It picks between making names and judging names, then weighs each one."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: shortlist}]
+"arnabbagxd/Brand-building-skills:skills/brand-architecture":
+  name: Brand family planner
+  summary: "List your brands and products. Get a clear structure for how they relate and what each one is called."
+  task: brand-file
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "It weighs trade-offs between brand structures before choosing one."
+  inputs: [{type: brand_brain, required: false}, {type: brief, required: true}]
+  outputs: [{type: plan}]
+"arnabbagxd/Brand-building-skills:skills/brand-manifesto":
+  name: Brand manifesto writer
+  summary: "Say what your brand believes and fights for. Get a bold manifesto that rallies your team and customers."
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It needs a strong point of view and careful word choice."
+  inputs: [{type: brand_brain, required: false}, {type: brief, required: true}]
+  outputs: [{type: copy_draft}]
+"arnabbagxd/Brand-building-skills:skills/brand-story":
+  name: Brand origin story writer
+  summary: "Tell it how you started and why. Get an origin story and an About page that sound human."
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It finds the human truth first, then writes the story."
+  inputs: [{type: brand_brain, required: false}, {type: brief, required: true}]
+  outputs: [{type: copy_draft}]
+"arnabbagxd/Brand-building-skills:skills/brand-launch":
+  name: Brand launch planner
+  summary: "Say when and where you launch. Get a rollout plan with the message and steps for each stage."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It lays out a dated sequence from a set method."
+  inputs: [{type: brand_brain, required: false}, {type: brief, required: true}]
+  outputs: [{type: plan}]
+"arnabbagxd/Brand-building-skills:skills/brand-measurement":
+  name: Brand health metrics planner
+  summary: "Say what your brand should achieve. Get the numbers to track, how to collect them and how to read them."
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks measures to fit your goals and size."
+  inputs: [{type: brand_brain, required: false}, {type: brief, required: true}]
+  outputs: [{type: plan}]
+"arnabbagxd/Brand-building-skills:skills/brand-packaging":
+  name: Packaging brief writer
+  summary: "Describe your product and brand. Get a packaging brief a designer can follow, from materials to unboxing."
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It turns your brand look into specific packaging choices."
+  inputs: [{type: brand_brain, required: false}, {type: brief, required: true}]
+  outputs: [{type: brief}]
+"arnabbagxd/Brand-building-skills:skills/rebranding":
+  name: Rebrand planner
+  summary: "Say why your brand must change. Get what to keep, what to change and a rollout plan."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "It judges what to keep and what to drop, which takes careful thought."
+  inputs: [{type: brand_brain, required: false}, {type: brief, required: true}]
+  outputs: [{type: plan}]
+"arnabbagxd/Brand-building-skills:skills/personal-brand":
+  name: Personal brand planner
+  summary: "Say who you want to be known as. Get your focus, your audience and a plan to show up steadily."
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It shapes a focus from your goals, then builds a routine around it."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"arnabbagxd/Brand-building-skills:skills/target-audience":
+  name: Ideal customer profile writer
+  summary: "Describe what you sell. Get detailed buyer personas with motivations, doubts and habits."
+  task: understand-customers
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It builds specific people from what you tell it."
+  inputs: [{type: brand_brain, required: false}, {type: voc_reviews, required: false}]
+  outputs: [{type: persona}]
+"arnabbagxd/Brand-building-skills:skills/ugc-strategy":
+  name: Customer content planner
+  summary: "Say what you sell. Get ways to get customers posting, a creator brief and ideas to reuse their posts in ads."
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows a set plan and fits it to your product."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"arnabbagxd/Brand-building-skills:skills/whatsapp-marketing":
+  name: WhatsApp marketing planner
+  summary: "Describe your business. Get a WhatsApp setup with broadcasts, automatic replies and support flows."
+  task: help-customers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans message flows from a set method and your customer habits."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"arnabbagxd/Brand-building-skills:skills/b2b-brand-marketing":
+  name: Business buyer trust builder
+  summary: "Say who buys from you. Get a plan for thought leadership and trust with slow, careful business buyers."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It fits a trust plan to a long sales cycle."
+  inputs: [{type: brand_brain, required: false}, {type: brief, required: true}]
+  outputs: [{type: plan}]
+"arnabbagxd/Brand-building-skills:skills/aso":
+  skip: "Our App store listing optimiser does the same job."
+"arnabbagxd/Brand-building-skills:skills/google-ads":
+  skip: "Our Paid campaign builder and Google Ads account auditor cover this."
+"arnabbagxd/Brand-building-skills:skills/meta-ads":
+  skip: "Our Paid campaign builder and Meta ad copywriter cover this."
+"arnabbagxd/Brand-building-skills:skills/email-marketing":
+  skip: "Our Email program lead covers email lists, flows and sends."
+"arnabbagxd/Brand-building-skills:skills/d2c-marketing":
+  skip: "Our Online store marketing planner does the same job."
+"arnabbagxd/Brand-building-skills:skills/influencer-marketing":
+  skip: "Our Creator partnership planner and Influencer shortlist builder do the same job."
+"arnabbagxd/Brand-building-skills:skills/competitor-branding":
+  skip: "Our Competitor messaging comparer and Rival store comparer cover this."
+"arnabbagxd/Brand-building-skills:skills/brand-guidelines":
+  skip: "Our Brand guide builder does the same job."
+"arnabbagxd/Brand-building-skills:skills/brand-identity":
+  skip: "Our Logo and brand kit designer does the same job."
+"arnabbagxd/Brand-building-skills:skills/brand-positioning":
+  skip: "Our Positioning statement writer and Product positioning planner do the same job."
+"arnabbagxd/Brand-building-skills:skills/brand-context":
+  skip: "Our Product context builder writes the same shared context file."
+"arnabbagxd/Brand-building-skills:skills/brand-partnerships":
+  skip: "Our Partner campaign planner covers co-branding and joint campaigns."
+
+# ---------- strands-agents/agent-sop (Apache 2.0) ----------
+"strands-agents/agent-sop:skills/agent-sop-author":
+  name: Agent procedure writer
+  summary: "Describe a repeatable job. Get a step-by-step procedure file for your AI, with firm rules and a format check."
+  task: make-skills
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows a strict file format and fixes what the checker finds."
+  needs: run shell scripts and save files
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: skill_files}]
+
+# ---------- ZhongHanLoo/deep-research-skill (MIT) ----------
+"ZhongHanLoo/deep-research-skill:skill/deep-research":
+  name: Cited research report writer
+  summary: "Ask a question. Get a cited report with each claim checked against its source quote. Uses many tokens. Scrapes sites."
+  task: research-topics
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It runs several research rounds and checks every claim against its quote."
+  needs: search the web, run Python and save files
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+  scrapes: true
+
+# ---------- Paldom/mcp-server-skills (MIT) ----------
+"Paldom/mcp-server-skills:skills/mcp-server-design":
+  name: MCP tool set designer
+  summary: "Say what your AI should do through MCP. Get a small set of clearly named tools with plain descriptions."
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Good design here decides whether an AI picks the right tool."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"Paldom/mcp-server-skills:skills/mcp-server-auth":
+  name: MCP server sign-in builder
+  summary: "Say how people will connect to your MCP server. Get correct OAuth sign-in built into it."
+  task: connect-tools
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Small mistakes in sign-in create real security holes."
+  needs: read and edit your code
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+"Paldom/mcp-server-skills:skills/mcp-server-security":
+  name: MCP attack defence reviewer
+  summary: "Point it at an MCP server. Get a ranked list of attack risks, each with a fix."
+  task: secure-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "It must think like an attacker and tell real risks from noise."
+  needs: read your code
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: security_report}]
+"Paldom/mcp-server-skills:skills/mcp-server-testing":
+  name: MCP server test runner
+  summary: "Point it at your MCP server. Get realistic task tests and a report on whether an AI picks the right tool."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It writes tests with checkable answers, then reads the results."
+  needs: run code and save files
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: test_report}]
+"Paldom/mcp-server-skills:skills/mcp-server-deployment":
+  name: MCP server publisher
+  summary: "Point it at your MCP server. Get it hosted, scaled and packaged so others can install it."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows set steps for hosting and packaging."
+  needs: run commands and edit your code
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: deploy_url}]
+"Paldom/mcp-server-skills:skills/mcp-server-implementation":
+  skip: "Our MCP tool server builder and API to MCP server builder do the same job."
+"Paldom/mcp-server-skills:.claude/skills/add-skill":
+  skip: "Maintainer tool for this repo, only for writing its own skills."
+"Paldom/mcp-server-skills:.claude/skills/publish-repo":
+  skip: "Maintainer tool that publishes this repo to skills.sh, so only useful for its own repo."

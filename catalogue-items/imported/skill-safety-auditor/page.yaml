@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It scans for known dangerous patterns.
+new_slug: skill-safety-auditor
+name: Skill safety auditor
+summary: Give it a skill before you install it. Get risky code and hidden commands flagged.
+job: secure-code
+headline: Skill safety auditor
+subhead: Give it a skill before you install it. Get risky code and hidden commands flagged.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read files.

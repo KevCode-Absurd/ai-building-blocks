@@ -1,0 +1,33 @@
+slug: matlab-speed-tuner
+name: MATLAB speed tuner
+summary: Give it slow code. Get the real slowdown found, fixed and measured, with no made-up speed claims.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/matlab-software-development/matlab-optimize-performance
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-software-development/matlab-optimize-performance
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-optimize-performance
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-optimize-performance skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-software-development/matlab-optimize-performance
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

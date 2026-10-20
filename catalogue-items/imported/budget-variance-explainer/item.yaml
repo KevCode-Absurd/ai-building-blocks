@@ -1,0 +1,32 @@
+slug: budget-variance-explainer
+name: Budget variance explainer
+summary: Give it actual and budget numbers. Get what moved, why, and a short note for leadership.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: finance/skills/variance-analysis
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/finance/skills/variance-analysis
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: variance-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: variance-analysis skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/finance/skills/variance-analysis
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

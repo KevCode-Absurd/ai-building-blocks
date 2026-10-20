@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It fits a forecast model to your data.
+new_slug: startup-runway-forecaster
+name: Startup runway forecaster
+summary: Give it your monthly cash data. Get a forecast of burn and the month cash runs out.
+job: money-and-investing
+headline: Startup runway forecaster
+subhead: Give it your monthly cash data. Get a forecast of burn and the month cash runs out.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your files.

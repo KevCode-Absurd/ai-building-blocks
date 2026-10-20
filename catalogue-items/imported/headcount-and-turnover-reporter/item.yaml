@@ -1,0 +1,32 @@
+slug: headcount-and-turnover-reporter
+name: Headcount and turnover reporter
+summary: Give it your people data. Get headcount, turnover and team health reports. Use your own data only.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: human-resources/skills/people-report
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/human-resources/skills/people-report
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: people-report
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: people-report skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/human-resources/skills/people-report
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

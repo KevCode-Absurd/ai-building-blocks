@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows a set method but depends on your setup.
+new_slug: model-run-tracker
+name: Model run tracker
+summary: Point it at your PyMC models. Get every run saved with its settings and checks, so you can compare them later.
+job: track-numbers
+headline: Model run tracker
+subhead: Point it at your PyMC models. Get every run saved with its settings and checks, so you can compare them later.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and have MLflow installed.

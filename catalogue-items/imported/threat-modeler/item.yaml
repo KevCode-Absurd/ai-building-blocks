@@ -1,0 +1,39 @@
+slug: threat-modeler
+name: Threat modeler
+summary: Describe your system. Get threats found with STRIDE, rated by risk, each with a way to reduce it.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/threat-modeling
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/threat-modeling
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: threat-modeling
+  author: devops-skills
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: threat-modeling skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/threat-modeling
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: devops-skills
+    url: https://github.com/devops-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

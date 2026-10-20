@@ -1,0 +1,39 @@
+slug: deploy-verifier
+name: Deploy verifier
+summary: Run it before you deploy. Get silent failure modes checked, then proof that the live version is the new one.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+  - type: deploy_url
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/pre-ship-gate
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pre-ship-gate
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: pre-ship-gate
+  author: Sharrmavishal
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pre-ship-gate skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pre-ship-gate
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Sharrmavishal
+    url: https://github.com/Sharrmavishal
+    used: Wrote the skill; sickn33 shared it in their collection.

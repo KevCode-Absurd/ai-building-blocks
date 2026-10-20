@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Retry rules need care to avoid doubled actions.
+new_slug: api-retry-handler
+name: API retry handler
+summary: Name the API. Get safe code for waiting, retrying and backing off when it says slow down.
+job: build-software
+headline: API retry handler
+subhead: Name the API. Get safe code for waiting, retrying and backing off when it says slow down.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

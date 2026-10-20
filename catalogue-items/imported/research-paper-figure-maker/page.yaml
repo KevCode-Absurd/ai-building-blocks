@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks chart types and builds clean figures.
+new_slug: research-paper-figure-maker
+name: Research paper figure maker
+summary: Give it your results or a method section. Get charts and architecture diagrams that look ready for a paper.
+job: research-topics
+headline: Research paper figure maker
+subhead: Give it your results or a method section. Get charts and architecture diagrams that look ready for a paper.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and use a Gemini API key for diagrams.

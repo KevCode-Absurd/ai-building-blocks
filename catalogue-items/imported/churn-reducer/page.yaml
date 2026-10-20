@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It applies proven flows to your case.
+new_slug: churn-reducer
+name: Churn reducer
+summary: Describe your product and why people leave. Get a cancel flow, save offers and a failed-payment recovery plan.
+job: build-product
+headline: Churn reducer
+subhead: Describe your product and why people leave. Get a cancel flow, save offers and a failed-payment recovery plan.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

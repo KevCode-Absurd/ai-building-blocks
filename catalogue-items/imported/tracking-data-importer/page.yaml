@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It maps messy columns into a strict format.
+new_slug: tracking-data-importer
+name: Tracking data importer
+summary: Give it a CSV or Excel file of tracks or detections. Get data ready for MATLAB tracking tools.
+job: build-software
+headline: Tracking data importer
+subhead: Give it a CSV or Excel file of tracks or detections. Get data ready for MATLAB tracking tools.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Sensor Fusion and Tracking Toolbox.

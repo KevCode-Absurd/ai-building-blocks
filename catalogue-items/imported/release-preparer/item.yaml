@@ -1,0 +1,33 @@
+slug: release-preparer
+name: Release preparer
+summary: Point it at your project. Get the version bumped, a changelog written and a tagged release ready to publish.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Jim Liu
+  repo: JimLiu/baoyu-skills
+  path: .claude/skills/release-skills
+  url: https://github.com/JimLiu/baoyu-skills/tree/main/.claude/skills/release-skills
+  licence: MIT
+  licence_file: LICENSE
+  commit: "1567581"
+  original_name: release-skills
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: release-skills skill
+    by: Jim Liu
+    url: https://github.com/JimLiu/baoyu-skills/tree/main/.claude/skills/release-skills
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

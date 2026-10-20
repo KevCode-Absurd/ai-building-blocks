@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It lists each state, then builds each one.
+new_slug: screen-states-designer
+name: Screen states designer
+summary: "Give it a screen. Get the states people hit first: empty, loading, error, offline, no results and success."
+job: build-websites
+headline: Screen states designer
+subhead: "Give it a screen. Get the states people hit first: empty, loading, error, offline, no results and success."
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

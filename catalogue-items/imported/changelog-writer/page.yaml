@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It sorts commits into groups.
+new_slug: changelog-writer
+name: Changelog writer
+summary: Point it at a repo. Get a clear changelog built from the git history.
+job: build-software
+headline: Changelog writer
+subhead: Point it at a repo. Get a clear changelog built from the git history.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

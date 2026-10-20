@@ -1,0 +1,32 @@
+slug: audio-streamer-code-writer
+name: Audio streamer code writer
+summary: Say what to play or record. Get modern MATLAB audio code, not the old methods.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/signal-processing/matlab-play-record-audio
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/signal-processing/matlab-play-record-audio
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-play-record-audio
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-play-record-audio skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/signal-processing/matlab-play-record-audio
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows a set setup but must fit your repo.
+new_slug: typescript-module-guard-setter
+name: TypeScript module guard setter
+summary: Point it at a TypeScript repo. Get dependency-cruiser set up so each package is reached only through its front door.
+job: build-software
+headline: TypeScript module guard setter
+subhead: Point it at a TypeScript repo. Get dependency-cruiser set up so each package is reached only through its front door.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

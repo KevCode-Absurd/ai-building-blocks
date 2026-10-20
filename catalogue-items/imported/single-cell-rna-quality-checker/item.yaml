@@ -1,0 +1,37 @@
+slug: single-cell-rna-quality-checker
+name: Single-cell RNA quality checker
+summary: Give it an h5ad or h5 file. Get low-quality cells filtered and plots showing data quality.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: bio-research/skills/single-cell-rna-qc
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/bio-research/skills/single-cell-rna-qc
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: a266ab8
+  original_name: single-cell-rna-qc
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: single-cell-rna-qc skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/bio-research/skills/single-cell-rna-qc
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

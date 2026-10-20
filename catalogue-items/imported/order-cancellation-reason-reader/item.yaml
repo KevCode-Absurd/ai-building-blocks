@@ -1,0 +1,37 @@
+slug: order-cancellation-reason-reader
+name: Order cancellation reason reader
+summary: Get your cancellation rate over time and why orders were cancelled, such as fraud, stock or declined payment.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/order-intelligence/shopify-admin-order-cancellation-analysis
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/order-intelligence/shopify-admin-order-cancellation-analysis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-order-cancellation-analysis
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-order-cancellation-analysis skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/order-intelligence/shopify-admin-order-cancellation-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

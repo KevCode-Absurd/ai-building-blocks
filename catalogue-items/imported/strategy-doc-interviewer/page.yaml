@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It asks one question and adds your answer to the file.
+new_slug: strategy-doc-interviewer
+name: Strategy doc interviewer
+summary: Name the doc you want. Get it written from your own answers, one question at a time.
+job: think-and-decide
+headline: Strategy doc interviewer
+subhead: Name the doc you want. Get it written from your own answers, one question at a time.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can save and edit files.

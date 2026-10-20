@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It weighs repair cost against downtime.
+new_slug: equipment-maintenance-planner
+name: Equipment maintenance planner
+summary: Give it your machines and repair history. Get a service schedule and spare parts list that cut breakdowns.
+job: plan-supply-chain
+headline: Equipment maintenance planner
+subhead: Give it your machines and repair history. Get a service schedule and spare parts list that cut breakdowns.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

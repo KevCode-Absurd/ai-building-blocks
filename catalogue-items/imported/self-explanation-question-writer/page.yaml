@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It picks the key ideas and writes a question for each.
+new_slug: self-explanation-question-writer
+name: Self-explanation question writer
+summary: Give it a text, example or diagram. Get questions that make students explain the why behind each step.
+job: teach-and-train
+headline: Self-explanation question writer
+subhead: Give it a text, example or diagram. Get questions that make students explain the why behind each step.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,37 @@
+slug: long-chat-summariser
+name: Long chat summariser
+summary: Give it a long AI session. Get a structured summary that keeps files, decisions and next steps.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: advanced
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/context-compression
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/context-compression
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: context-compression
+  author: Agent Skills for Context Engineering Contributors
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: context-compression skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/context-compression
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Agent Skills for Context Engineering Contributors
+    url: https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering
+    used: Wrote the skill; sickn33 shared it in their collection.

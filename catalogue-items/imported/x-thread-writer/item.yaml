@@ -1,0 +1,37 @@
+slug: x-thread-writer
+name: X thread writer
+summary: Give it a long idea, transcript or draft. Get an X thread where every post stands on its own.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/turn-this-into-a-thread
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/turn-this-into-a-thread
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: turn-this-into-a-thread
+  author: prateeks367
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: turn-this-into-a-thread skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/turn-this-into-a-thread
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: prateeks367
+    url: https://github.com/prateeks367
+    used: Wrote the skill; sickn33 shared it in their collection.

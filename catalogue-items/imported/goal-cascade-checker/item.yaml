@@ -1,0 +1,32 @@
+slug: goal-cascade-checker
+name: Goal cascade checker
+summary: Give it company goals and team plans. Find orphan goals, silos and gaps between strategy and work.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: plan
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: c-level-advisor/skills/strategic-alignment
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/strategic-alignment
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: strategic-alignment
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: strategic-alignment skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/strategic-alignment
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

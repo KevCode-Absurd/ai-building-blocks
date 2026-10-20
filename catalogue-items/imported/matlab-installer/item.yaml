@@ -1,0 +1,32 @@
+slug: matlab-installer
+name: MATLAB installer
+summary: Name the MathWorks products. Get them installed from the command line, the same way each time.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: tool_connection
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/matlab-core/matlab-install-products
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-core/matlab-install-products
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-install-products
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-install-products skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-core/matlab-install-products
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

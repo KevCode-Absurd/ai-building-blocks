@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It maps each road feature across formats and checks the result.
+new_slug: road-map-converter
+name: Road map converter
+summary: Give it a Lanelet2 map. Get a RoadRunner HD map built from it, ready for simulation.
+job: build-software
+headline: Road map converter
+subhead: Give it a Lanelet2 map. Get a RoadRunner HD map built from it, ready for simulation.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with RoadRunner.

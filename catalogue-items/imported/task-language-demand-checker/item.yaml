@@ -1,0 +1,38 @@
+slug: task-language-demand-checker
+name: Task language demand checker
+summary: Paste a task or text. Get the words and sentence types that may block students still learning English.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/eal-language-development/language-demand-analyser
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/eal-language-development/language-demand-analyser
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: language-demand-analyser
+  author: Gareth Manning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: language-demand-analyser skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/eal-language-development/language-demand-analyser
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Gareth Manning
+    url: https://github.com/GarethManning
+    used: Wrote the skill; Gareth Manning shared it in their collection.

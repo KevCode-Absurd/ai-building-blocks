@@ -1,0 +1,38 @@
+slug: tiktok-shop-content-planner
+name: TikTok Shop content planner
+summary: Tell it your products. Get video formats, hooks, hashtags and a content calendar.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: plan
+  - type: hooks
+uses: []
+origin: imported
+source:
+  by: Nexscope AI
+  repo: nexscope-ai/eCommerce-Skills
+  path: tiktok-shop-content-strategy
+  url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/tiktok-shop-content-strategy
+  licence: MIT
+  licence_file: LICENSE
+  commit: ee0fb29
+  original_name: tiktok-shop-content-strategy
+  author: Nexscope AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: tiktok-shop-content-strategy skill
+    by: Nexscope AI
+    url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/tiktok-shop-content-strategy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Nexscope AI
+    url: https://github.com/nexscope-ai/eCommerce-Skills
+    used: Wrote the skill; Nexscope AI shared it in their collection.

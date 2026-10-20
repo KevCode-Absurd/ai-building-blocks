@@ -1,0 +1,40 @@
+slug: ai-agent-monitoring-planner
+name: AI agent monitoring planner
+summary: Describe your AI agent. Get a plan to trace its steps, costs and errors without logging private data.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: agent-engineering/agent-observability
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/agent-engineering/agent-observability
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: agent-observability
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: agent-observability skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/agent-engineering/agent-observability
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

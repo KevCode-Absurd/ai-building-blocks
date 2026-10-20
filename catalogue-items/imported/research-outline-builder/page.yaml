@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It plans the list of items and fields, then checks them online.
+new_slug: research-outline-builder
+name: Research outline builder
+summary: Give it a topic. Get a list of items to compare and questions to answer for each, found online. Scrapes sites.
+job: research-topics
+headline: Research outline builder
+subhead: Give it a topic. Get a list of items to compare and questions to answer for each, found online. Scrapes sites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can search the web and save files.

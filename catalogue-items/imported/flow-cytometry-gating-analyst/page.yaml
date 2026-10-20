@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It applies set methods but needs choices on gates.
+new_slug: flow-cytometry-gating-analyst
+name: Flow cytometry gating analyst
+summary: Give it flow cytometry files. Get compensated, gated cell populations and a gating plan you can repeat.
+job: research-topics
+headline: Flow cytometry gating analyst
+subhead: Give it flow cytometry files. Get compensated, gated cell populations and a gating plan you can repeat.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code.

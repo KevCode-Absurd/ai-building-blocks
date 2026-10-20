@@ -1,0 +1,335 @@
+# Nexscope eCommerce Skills, part 2 of 2. Names, summaries and jobs for kept skills; skip reasons for the rest.
+"nexscope-ai/eCommerce-Skills:product-page-seo":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:product-review-analysis":
+  name: Review insight finder
+  summary: "Give it your product reviews. Get the pain points, praise and feature requests, ranked by how often they come up."
+  task: run-your-store
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads many reviews and sorts them into themes.
+  inputs: [ { type: voc_reviews, required: true } ]
+  outputs: [ { type: audit_report }, { type: persona } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:product-title-optimization":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:profit-margin-calculator/profit-margin-calculator-amazon":
+  name: Amazon seller profit calculator
+  summary: "Give it your product cost and price. Get fees, profit margin, break-even point and a price to charge."
+  task: run-your-store
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It follows set cost formulas on your numbers.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and save files
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:profit-margin-calculator/profit-margin-calculator-shopify":
+  name: Online store profit calculator
+  summary: "Give it your price, costs and ad spend. Get your margin per sale and whether your cost to win a customer works."
+  task: run-your-store
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It follows set cost formulas on your numbers.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and save files
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:profit-margin-calculator/profit-margin-calculator-tiktok":
+  skip: "Near-copy of the Amazon or Shopify version of the same skill kept from this repo, with only platform fees changed."
+"nexscope-ai/eCommerce-Skills:profit-margin-calculator/profit-margin-calculator-walmart":
+  skip: "Near-copy of the Amazon or Shopify version of the same skill kept from this repo, with only platform fees changed."
+"nexscope-ai/eCommerce-Skills:public-status-page":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:restock-alert":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:review-checker/amazon-review-checker":
+  name: Fake review spotter
+  summary: "Give it a product's reviews. Get a trust rating and the red flags that point to fake or bought reviews."
+  task: run-your-store
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It weighs several weak signals before it judges.
+  inputs: [ { type: voc_reviews, required: true } ]
+  outputs: [ { type: audit_report } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:review-checker/ebay-review-checker":
+  skip: "Near-copy of the Amazon or Shopify version of the same skill kept from this repo, with only platform fees changed."
+"nexscope-ai/eCommerce-Skills:review-checker/walmart-review-checker":
+  skip: "Near-copy of the Amazon or Shopify version of the same skill kept from this repo, with only platform fees changed."
+"nexscope-ai/eCommerce-Skills:review-monitoring":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:sales-tracking-tool":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:share-of-shelf":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-ab-testing":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-analytics-guide":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-app-recommendations":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-blog-strategy":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-cart-abandonment":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-checkout-customization":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-conversion-optimization":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-dropshipping":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-email-flows":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-facebook-instagram-shop":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-google-channel":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-international":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-inventory-management":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-landing-page-builder":
+  skip: "Thin template. Our Shopify landing page builder already does this job."
+"nexscope-ai/eCommerce-Skills:shopify-loyalty-program":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-marketing":
+  name: Online store marketing planner
+  summary: "Describe your store. Get a marketing plan covering search, email, paid ads, conversion and keeping customers."
+  task: run-your-store
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It builds a plan from several marketing frameworks.
+  inputs: [ { type: brand_brain, required: false }, { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:shopify-migration":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-page-speed":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-product-photography-guide":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-seo":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-speed-optimization":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-store-setup":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-subscription-setup":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-tax-compliance":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-theme-optimization":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-upsell-cross-sell":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shopify-wholesale-channel":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:shoppable-video":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:social-media-monitor":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:supply-chain-optimization/supply-chain-optimization-amazon":
+  name: Amazon cost cutting advisor
+  summary: "Tell it how you source and ship. Get the biggest cost bottlenecks and ways to cut them."
+  task: run-your-store
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It diagnoses a business from a chat.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:supply-chain-optimization/supply-chain-optimization-shopify":
+  name: Online store bottleneck finder
+  summary: "Give it your cash, stock and shipping numbers. Get the bottleneck holding your store back and fixes ranked by payoff."
+  task: run-your-store
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It weighs cash, stock and cost against benchmarks.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:supply-chain-optimization/supply-chain-optimization-tiktok":
+  skip: "Near-copy of the Amazon or Shopify version of the same skill kept from this repo, with only platform fees changed."
+"nexscope-ai/eCommerce-Skills:supply-chain-optimization/supply-chain-optimization-walmart":
+  skip: "Near-copy of the Amazon or Shopify version of the same skill kept from this repo, with only platform fees changed."
+"nexscope-ai/eCommerce-Skills:synthetic-monitoring":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-creator-marketplace":
+  name: TikTok creator outreach planner
+  summary: "Tell it your product and budget. Get how to find creators, what to offer, and how to track results."
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans outreach and tracking from set steps.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:tiktok-influencer-marketing":
+  skip: "Near-copy of the TikTok creator outreach skill kept from this repo."
+"nexscope-ai/eCommerce-Skills:tiktok-live-selling":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-shop-ads":
+  name: TikTok Shop ad planner
+  summary: "Tell it your products and budget. Get a plan for shopping ads, video ads, bids and tracking."
+  task: plan-ad-tests
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans a campaign from set frameworks.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:tiktok-shop-affiliate-program":
+  name: TikTok Shop affiliate planner
+  summary: "Tell it your products and margins. Get a commission setup, creator outreach plan and sample process."
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It designs a program from set steps.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:tiktok-shop-analytics":
+  name: TikTok Shop results reader
+  summary: "Give it your shop numbers. Get what is working across video, live sales, affiliates and ads, and what to change."
+  task: read-ad-results
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads data against metric benchmarks.
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:tiktok-shop-branding":
+  name: TikTok Shop brand builder
+  summary: "Describe your shop. Get your brand voice, content pillars, story and ways to build a community."
+  task: brand-file
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It shapes a brand from your answers.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: brand_guide } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:tiktok-shop-compliance":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-shop-content-strategy":
+  name: TikTok Shop content planner
+  summary: "Tell it your products. Get video formats, hooks, hashtags and a content calendar."
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It plans content from trends and set formats.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan }, { type: hooks } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:tiktok-shop-conversion":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-shop-creator-management":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-shop-cross-border":
+  name: TikTok Shop overseas expansion planner
+  summary: "Tell it your products and target countries. Get which markets to enter first, plus shipping, rules and localizing steps."
+  task: run-your-store
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It weighs markets, shipping and rules together.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:tiktok-shop-customer-service":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-shop-fulfillment":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-shop-inventory":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-shop-listing-optimization":
+  name: TikTok Shop listing writer
+  summary: "Give it your product details. Get a title, description, image and video plan that fits TikTok Shop search."
+  task: write-landing-page
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills set listing templates.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: pdp_copy } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:tiktok-shop-pricing":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-shop-product-research":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-shop-promotions":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-shop-returns":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-shop-reviews":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-shop-seller-guide":
+  name: TikTok Shop launch planner
+  summary: "Tell it where you are starting. Get a week-by-week plan to set up, list, create content and scale."
+  task: run-your-store
+  role: orchestrate
+  level: beginner
+  thinking: medium
+  thinking_why: It builds a phased plan from your situation.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:tiktok-shop-shipping":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:tiktok-shop-trending-products":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:visual-regression-testing":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:walmart-advertising-strategy":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:walmart-listing-optimization":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:walmart-price-tracker":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:walmart-seller-guide":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:walmart-seller-tools":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."
+"nexscope-ai/eCommerce-Skills:warehouse-optimization":
+  name: Stock and reorder planner
+  summary: "Give it your stock and sales numbers. Get safety stock, reorder points, an ABC ranking and fulfillment cost checks."
+  task: run-your-store
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It runs stock formulas and explains the results.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+  author: Nexscope AI
+  author_url: https://github.com/nexscope-ai/eCommerce-Skills
+"nexscope-ai/eCommerce-Skills:woocommerce-seo":
+  skip: "Thin template skill with no worked method, only a topic list and sample prompts, and it points to the maker's paid Nexscope service."

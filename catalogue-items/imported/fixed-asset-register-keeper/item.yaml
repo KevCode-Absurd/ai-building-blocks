@@ -1,0 +1,32 @@
+slug: fixed-asset-register-keeper
+name: Fixed asset register keeper
+summary: Give it your purchases and disposals. Get what to capitalise, yearly depreciation and impairment checks.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/fixed-asset-accounting
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/fixed-asset-accounting
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: fixed-asset-accounting
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: fixed-asset-accounting skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/fixed-asset-accounting
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

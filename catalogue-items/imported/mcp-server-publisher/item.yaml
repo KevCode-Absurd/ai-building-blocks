@@ -1,0 +1,32 @@
+slug: mcp-server-publisher
+name: MCP server publisher
+summary: Point it at your MCP server. Get it hosted, scaled and packaged so others can install it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: deploy_url
+uses: []
+origin: imported
+source:
+  by: Paldom
+  repo: Paldom/mcp-server-skills
+  path: skills/mcp-server-deployment
+  url: https://github.com/Paldom/mcp-server-skills/tree/main/skills/mcp-server-deployment
+  licence: MIT
+  licence_file: LICENSE
+  commit: 17ce2a4
+  original_name: mcp-server-deployment
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mcp-server-deployment skill
+    by: Paldom
+    url: https://github.com/Paldom/mcp-server-skills/tree/main/skills/mcp-server-deployment
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

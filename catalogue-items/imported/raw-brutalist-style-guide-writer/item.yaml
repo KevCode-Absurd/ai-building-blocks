@@ -1,0 +1,37 @@
+slug: raw-brutalist-style-guide-writer
+name: Raw brutalist style guide writer
+summary: Describe your product. Get a style guide for a raw, blunt look, with type, colour, states and checks.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: design_direction
+uses: []
+origin: imported
+source:
+  by: Bergside
+  repo: bergside/awesome-design-skills
+  path: skills/brutalism
+  url: https://github.com/bergside/awesome-design-skills/tree/main/skills/brutalism
+  licence: MIT
+  licence_file: LICENSE
+  commit: f631a09
+  original_name: brutalism
+  author: typeui.sh
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: brutalism skill
+    by: Bergside
+    url: https://github.com/bergside/awesome-design-skills/tree/main/skills/brutalism
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: typeui.sh
+    url: https://typeui.sh
+    used: Wrote the skill; Bergside shared it in their collection.

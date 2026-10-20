@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It drafts, tests and improves a skill in rounds.
+new_slug: skill-writer
+name: Skill writer
+summary: Describe the job. Get a new skill with test prompts and a description that makes it trigger well.
+job: make-skills
+headline: Skill writer
+subhead: Describe the job. Get a new skill with test prompts and a description that makes it trigger well.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

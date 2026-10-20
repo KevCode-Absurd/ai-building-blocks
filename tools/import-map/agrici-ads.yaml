@@ -1,0 +1,90 @@
+# AgriciDaniel/claude-ads (MIT)
+"AgriciDaniel/claude-ads:ads":
+  name: Twelve-platform ad account auditor
+  summary: "Give it your ad exports and goal. Get an evidence-based audit across Google, Meta, TikTok, LinkedIn and more, with next steps."
+  task: read-ad-results
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs evidence across many platforms and flags what data is missing."
+  needs: "read your ad exports and files, and optionally read your ad accounts with your own read-only tokens. Account changes stay as drafts for your approval"
+  inputs: [ { type: performance_sheet, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: audit_report, required: true }, { type: plan, required: true } ]
+  author: Daniel Agrici
+  author_url: https://github.com/AgriciDaniel
+"AgriciDaniel/claude-ads:skills/ads-attribution":
+  name: Cross-platform conversion reconciler
+  summary: "Give it your Meta and Google conversion reports. Get why the numbers differ and a plan to make them match."
+  task: track-numbers
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Windows, counting rules and duplicates all change what the numbers mean."
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: audit_report, required: true }, { type: plan, required: false } ]
+  author: Daniel Agrici
+  author_url: https://github.com/AgriciDaniel
+"AgriciDaniel/claude-ads:skills/ads-amazon":
+  skip: "Thin shell that points to reference files kept in the ads folder, which a single skill copy does not carry. Amazon checks are inside the all-in-one ad auditor."
+"AgriciDaniel/claude-ads:skills/ads-apple":
+  skip: "Thin shell that points to reference files kept in the ads folder, which a single skill copy does not carry. Apple checks are inside the all-in-one ad auditor."
+"AgriciDaniel/claude-ads:skills/ads-audit":
+  skip: "Routes to the repo's own platform workers and scoring engine, which we do not copy. The all-in-one ad auditor covers the job."
+"AgriciDaniel/claude-ads:skills/ads-budget":
+  skip: "Short outline of a budget review. Our Ad spend analyst and Brand and sales budget splitter cover it."
+"AgriciDaniel/claude-ads:skills/ads-competitor":
+  skip: "Short outline. Our Competitor ad gap finder, Competitor ad swipe file builder and Competitor ad teardown writer cover it."
+"AgriciDaniel/claude-ads:skills/ads-create":
+  skip: "Short outline that depends on the repo's brief files. Our Ad angle planner and Meta ad copywriter cover it."
+"AgriciDaniel/claude-ads:skills/ads-creative":
+  skip: "Short outline. Our Pre-launch ad checker, Ad distraction checker and Ad reading-flow checker cover it."
+"AgriciDaniel/claude-ads:skills/ads-dna":
+  skip: "Short outline that depends on the repo's page fetcher. Our Website brand brain builder covers it."
+"AgriciDaniel/claude-ads:skills/ads-generate":
+  skip: "Needs a paid image service and the repo's own scripts. Our image ad makers cover it."
+"AgriciDaniel/claude-ads:skills/ads-google":
+  skip: "Thin shell that points to reference files kept in the ads folder. Our Google Ads report auditor covers it, and the all-in-one ad auditor carries the Google checks."
+"AgriciDaniel/claude-ads:skills/ads-landing":
+  skip: "Depends on the repo's page fetcher script. Our Landing page auditor and Landing page 30-point checker cover it."
+"AgriciDaniel/claude-ads:skills/ads-launch":
+  skip: "Can push campaigns live in an ad account. We list only read and draft skills."
+"AgriciDaniel/claude-ads:skills/ads-linkedin":
+  skip: "Thin shell that points to reference files kept in the ads folder, which a single skill copy does not carry. LinkedIn checks are inside the all-in-one ad auditor."
+"AgriciDaniel/claude-ads:skills/ads-math":
+  skip: "Short outline. Our Cost per customer calculator and Customer value spend limit calculator cover it."
+"AgriciDaniel/claude-ads:skills/ads-meta":
+  skip: "Thin shell that points to reference files kept in the ads folder. Our Meta ads compliance checker and the Meta ads daily checker cover it."
+"AgriciDaniel/claude-ads:skills/ads-microsoft":
+  skip: "Thin shell that points to reference files kept in the ads folder, which a single skill copy does not carry. Microsoft checks are inside the all-in-one ad auditor."
+"AgriciDaniel/claude-ads:skills/ads-monitor":
+  skip: "Short outline that depends on the repo's saved snapshots. Our Ad sales drop analyst and Ad pull diagnoser cover it."
+"AgriciDaniel/claude-ads:skills/ads-optimize":
+  skip: "Can change live campaigns, budgets and bids when applied. We list only read and draft skills."
+"AgriciDaniel/claude-ads:skills/ads-photoshoot":
+  skip: "Needs a paid image service and the repo's own scripts. Our Product photo shoot planner covers it."
+"AgriciDaniel/claude-ads:skills/ads-pinterest":
+  skip: "Thin shell that points to reference files kept in the ads folder, which a single skill copy does not carry. Pinterest checks are inside the all-in-one ad auditor."
+"AgriciDaniel/claude-ads:skills/ads-plan":
+  skip: "Short outline that depends on the repo's templates and run files. Our Paid campaign builder and One-goal marketing plan builder cover it."
+"AgriciDaniel/claude-ads:skills/ads-reddit":
+  skip: "Thin shell that points to reference files kept in the ads folder, which a single skill copy does not carry. Reddit checks are inside the all-in-one ad auditor."
+"AgriciDaniel/claude-ads:skills/ads-report":
+  skip: "Only renders the repo's own saved audit files into reports. Needs its run bundle, so it is no use alone."
+"AgriciDaniel/claude-ads:skills/ads-research":
+  skip: "Maintains the repo's own source list. No use outside that repo."
+"AgriciDaniel/claude-ads:skills/ads-server-side-tracking":
+  skip: "Short outline. Our Conversion tracking fixer and the Meta pixel and server events fixer cover it."
+"AgriciDaniel/claude-ads:skills/ads-setup":
+  skip: "Sets up the repo's own profile and install. No use outside that repo."
+"AgriciDaniel/claude-ads:skills/ads-snapchat":
+  skip: "Thin shell that points to reference files kept in the ads folder, which a single skill copy does not carry. Snapchat checks are inside the all-in-one ad auditor."
+"AgriciDaniel/claude-ads:skills/ads-test":
+  skip: "Short outline. Our Split-run test planner, One-change experiment planner and Ad test brief writer cover it."
+"AgriciDaniel/claude-ads:skills/ads-tiktok":
+  skip: "Thin shell that points to reference files kept in the ads folder, which a single skill copy does not carry. TikTok checks are inside the all-in-one ad auditor."
+"AgriciDaniel/claude-ads:skills/ads-validate":
+  skip: "Checks the repo's own install and release files. No use outside that repo."
+"AgriciDaniel/claude-ads:skills/ads-x":
+  skip: "Thin shell that points to reference files kept in the ads folder, which a single skill copy does not carry. X checks are inside the all-in-one ad auditor."
+"AgriciDaniel/claude-ads:skills/ads-youtube":
+  skip: "Thin shell that points to reference files kept in the ads folder, which a single skill copy does not carry. YouTube ad checks are inside the all-in-one ad auditor."

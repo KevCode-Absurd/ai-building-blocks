@@ -1,0 +1,32 @@
+slug: plain-words-sql-writer
+name: Plain-words SQL writer
+summary: Describe the data you need. Get a working SQL query for your database type, with a note on how it runs.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: data/skills/write-query
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/write-query
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: write-query
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: write-query skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/write-query
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: diagram-maker
+name: Diagram maker
+summary: Describe a system, process or idea. Get a clean dark-themed SVG diagram you can open and reuse.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: Jim Liu
+  repo: JimLiu/baoyu-skills
+  path: skills/baoyu-diagram
+  url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-diagram
+  licence: MIT
+  licence_file: LICENSE
+  commit: "1567581"
+  original_name: baoyu-diagram
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: baoyu-diagram skill
+    by: Jim Liu
+    url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-diagram
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

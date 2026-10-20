@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It follows a standard logging pattern.
+new_slug: training-curve-viewer
+name: Training curve viewer
+summary: Give it your training code. Get live charts of loss and accuracy, plus a way to compare runs.
+job: track-numbers
+headline: Training curve viewer
+subhead: Give it your training code. Get live charts of loss and accuracy, plus a way to compare runs.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and open a browser.

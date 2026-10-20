@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It tries, checks and compares many versions before it stops.
+new_slug: detail-polisher
+name: Detail polisher
+summary: Name one UI detail or slow function. Get several checked attempts, with the best version kept inside a set budget.
+job: build-software
+headline: Detail polisher
+subhead: Name one UI detail or slow function. Get several checked attempts, with the best version kept inside a set budget.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and open a browser.

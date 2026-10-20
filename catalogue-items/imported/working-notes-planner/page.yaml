@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It keeps three simple files up to date.
+new_slug: working-notes-planner
+name: Working notes planner
+summary: Give it a long task. Get a plan, findings and progress kept in files so your AI stays on track.
+job: organise-work
+headline: Working notes planner
+subhead: Give it a long task. Get a plan, findings and progress kept in files so your AI stays on track.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read and write files.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads traces and finds what went wrong.
+new_slug: phoenix-ai-app-tracer
+name: Phoenix AI app tracer
+summary: Give it your AI app. Get traces of every step, plus tests that score answers and spot failures.
+job: build-software
+headline: Phoenix AI app tracer
+subhead: Give it your AI app. Get traces of every step, plus tests that score answers and spot failures.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and open a browser.

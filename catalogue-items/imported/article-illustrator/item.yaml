@@ -1,0 +1,32 @@
+slug: article-illustrator
+name: Article illustrator
+summary: Give it an article. Get a plan for where pictures belong and a matching set of illustrations.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: Jim Liu
+  repo: JimLiu/baoyu-skills
+  path: skills/baoyu-article-illustrator
+  url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-article-illustrator
+  licence: MIT
+  licence_file: LICENSE
+  commit: "1567581"
+  original_name: baoyu-article-illustrator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: baoyu-article-illustrator skill
+    by: Jim Liu
+    url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-article-illustrator
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,33 @@
+slug: ad-angle-multiplier
+name: Ad angle multiplier
+summary: Give it one winning ad idea. Get 10 to 15 different angles with hooks, ready to test side by side.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: angle_library
+  - type: hooks
+uses: []
+origin: imported
+source:
+  by: Kim Barrett
+  repo: realkimbarrett/advertising-skills
+  path: skills/operator-os/ad-angle-multiplier
+  url: https://github.com/realkimbarrett/advertising-skills/tree/main/skills/operator-os/ad-angle-multiplier
+  licence: MIT
+  licence_file: README.md
+  commit: 45f4a4a
+  original_name: ad-angle-multiplier
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ad-angle-multiplier skill
+    by: Kim Barrett
+    url: https://github.com/realkimbarrett/advertising-skills/tree/main/skills/operator-os/ad-angle-multiplier
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

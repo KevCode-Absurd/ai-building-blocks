@@ -1,0 +1,32 @@
+slug: code-deep-reader
+name: Code deep reader
+summary: Point it at code you need to understand. Get a line-by-line map of how it works before you hunt bugs.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/audit-context-building
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/audit-context-building
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: audit-context-building
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: audit-context-building skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/audit-context-building
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

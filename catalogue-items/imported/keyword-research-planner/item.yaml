@@ -1,0 +1,32 @@
+slug: keyword-research-planner
+name: Keyword research planner
+summary: Name your site and topic. Get a ranked keyword list, including question searches, grouped by what people want.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: shortlist
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/seo-aeo-keyword-research
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/seo-aeo-keyword-research
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: seo-aeo-keyword-research
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: seo-aeo-keyword-research skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/seo-aeo-keyword-research
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

@@ -1,0 +1,37 @@
+slug: interface-principles-checker
+name: Interface principles checker
+summary: Describe or share an interface. Get it scored against 168 research-backed UX principles, with common mistakes flagged.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/uxui-principles
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/uxui-principles
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: uxui-principles
+  author: uxuiprinciples
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: uxui-principles skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/uxui-principles
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: uxuiprinciples
+    url: https://github.com/uxuiprinciples/agent-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

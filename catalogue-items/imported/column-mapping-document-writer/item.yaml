@@ -1,0 +1,40 @@
+slug: column-mapping-document-writer
+name: Column mapping document writer
+summary: Give it your source and target tables. Get a column-by-column map with rules, gaps and decisions to review.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: Nimrod Fisher
+  repo: nimrodfisher/data-analytics-skills
+  path: 02-documentation-knowledge/schema-mapper
+  url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/02-documentation-knowledge/schema-mapper
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9449d36
+  original_name: schema-mapper
+  author: Nimrod Fisher
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: schema-mapper skill
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/02-documentation-knowledge/schema-mapper
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher
+    used: Wrote the skill; Nimrod Fisher shared it in their collection.

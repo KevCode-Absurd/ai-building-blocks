@@ -1,0 +1,68 @@
+# Review decisions made after the map files were written (2026-10-21). Loaded last, so an entry here replaces the one in the repo's map file.
+
+
+# Same job in two or more repos: we keep the fuller one.
+"alirezarezvani/claude-skills:compliance-os/skills/ai-act-readiness": {skip: "Same job as seb1n's EU AI Act readiness checker, which is fuller (6 files to 1)"}
+"seb1n/awesome-ai-agent-skills:design-and-ui-ux/accessibility-testing": {skip: "Same job as Alireza's WCAG accessibility fixer, which comes with its scripts"}
+"sickn33/agentic-awesome-skills:skills/wcag-audit-patterns": {skip: "Thin, and the same job as Alireza's WCAG accessibility fixer"}
+"sickn33/agentic-awesome-skills:skills/fixing-accessibility": {skip: "Same job as Alireza's WCAG accessibility fixer"}
+
+# Places trades through Alpaca and Interactive Brokers and links bank accounts through Plaid: it moves money, so it stays out.
+"6missedcalls/personal-finance-skill:.": {skip: "Places trades and links bank accounts, so it can move money"}
+
+# We copy skills as they are, so the text has to pass our rules, not just our summary.
+"carlopezzuto/recruiting:.claude/skills/boolean-search": {skip: "Its text tells you to bulk-scrape LinkedIn profiles and find people's emails"}
+
+# Daniel Agrici's per-platform audits read notes from ads/references/ at the repo top, so we copy the ones each needs into the skill.
+# They fill gaps: we had no Google (beyond exports), TikTok, LinkedIn or Microsoft account audit.
+"AgriciDaniel/claude-ads:skills/ads-google":
+  name: Google Ads account auditor
+  summary: "Give it your Google Ads exports. Get a checked audit of tracking, search terms, Shopping, Performance Max, bids and budgets."
+  task: read-ad-results
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs many settings at once and says where data is missing."
+  needs: "read your ad exports, and optionally read your Google Ads account with your own read-only access. Changes stay as drafts for your approval"
+  inputs: [ { type: performance_sheet, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: audit_report, required: true }, { type: plan, required: true } ]
+  bring: [ { from: ads/references/google-audit.md, to: ads/references/google-audit.md, link: ads/references/ }, { from: ads/references/gaql-notes.md, to: ads/references/gaql-notes.md } ]
+"AgriciDaniel/claude-ads:skills/ads-tiktok":
+  name: TikTok ads account auditor
+  summary: "Give it your TikTok Ads exports. Get a checked audit of your pixel, creative, audiences, Smart+ and Shop campaigns, bids and budgets."
+  task: read-ad-results
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs many settings at once and says where data is missing."
+  needs: "read your ad exports, and optionally read your TikTok Ads account with your own read-only access. Changes stay as drafts for your approval"
+  inputs: [ { type: performance_sheet, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: audit_report, required: true }, { type: plan, required: true } ]
+  bring: [ { from: ads/references/tiktok-audit.md, to: ads/references/tiktok-audit.md, link: ads/references/ } ]
+"AgriciDaniel/claude-ads:skills/ads-linkedin":
+  name: LinkedIn ads account auditor
+  summary: "Give it your LinkedIn Ads exports. Get a checked audit of your Insight Tag, audiences, lead forms, creative, bids and budgets."
+  task: read-ad-results
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs many settings at once and says where data is missing."
+  needs: "read your ad exports, and optionally read your LinkedIn Ads account with your own read-only access. Changes stay as drafts for your approval"
+  inputs: [ { type: performance_sheet, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: audit_report, required: true }, { type: plan, required: true } ]
+  bring: [ { from: ads/references/linkedin-audit.md, to: ads/references/linkedin-audit.md, link: ads/references/ } ]
+"AgriciDaniel/claude-ads:skills/ads-microsoft":
+  name: Microsoft ads account auditor
+  summary: "Give it your Microsoft Ads exports. Get a checked audit of tracking, keywords, Google imports, audiences, bids and budgets."
+  task: read-ad-results
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs many settings at once and says where data is missing."
+  needs: "read your ad exports, and optionally read your Microsoft Ads account with your own read-only access. Changes stay as drafts for your approval"
+  inputs: [ { type: performance_sheet, required: true }, { type: brief, required: false } ]
+  outputs: [ { type: audit_report, required: true }, { type: plan, required: true } ]
+  bring: [ { from: ads/references/microsoft-audit.md, to: ads/references/microsoft-audit.md, link: ads/references/ } ]
+
+# The same skill as CosmoBlk's, but a copy without its references folder: we take the fuller one from CosmoBlk.
+"sickn33/agentic-awesome-skills:skills/email-marketing-bible": {skip: "Copy of CosmoBlk's Email program lead without its references; we take the fuller one"}

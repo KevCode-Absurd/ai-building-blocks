@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks tests and reads numbers carefully.
+new_slug: experiment-result-analyst
+name: Experiment result analyst
+summary: Give it test numbers. Get the right test, sample size and whether the result is real, in plain words.
+job: track-numbers
+headline: Experiment result analyst
+subhead: Give it test numbers. Get the right test, sample size and whether the result is real, in plain words.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

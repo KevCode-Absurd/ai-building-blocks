@@ -1,0 +1,32 @@
+slug: cash-forecast-builder
+name: Cash forecast builder
+summary: Give it your invoices, bills and fixed costs. Get a 30, 60 and 90 day cash forecast with risks named.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: small-business/skills/cash-flow-snapshot
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/cash-flow-snapshot
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: cash-flow-snapshot
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cash-flow-snapshot skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/cash-flow-snapshot
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

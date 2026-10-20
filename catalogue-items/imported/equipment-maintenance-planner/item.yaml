@@ -1,0 +1,32 @@
+slug: equipment-maintenance-planner
+name: Equipment maintenance planner
+summary: Give it your machines and repair history. Get a service schedule and spare parts list that cut breakdowns.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/maintenance-planning
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/maintenance-planning
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: maintenance-planning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: maintenance-planning skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/maintenance-planning
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

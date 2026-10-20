@@ -1,0 +1,32 @@
+slug: north-star-metric-picker
+name: North star metric picker
+summary: Describe your product. Get the one metric to steer by, plus 3 to 5 supporting numbers that feed it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-marketing-growth/skills/north-star-metric
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-marketing-growth/skills/north-star-metric
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: north-star-metric
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: north-star-metric skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-marketing-growth/skills/north-star-metric
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

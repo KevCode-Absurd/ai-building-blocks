@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Wrong setup choices quietly ruin the final comparison.
+new_slug: rna-seq-comparison-preparer
+name: RNA-seq comparison preparer
+summary: Give it sequencing output. Get counts ready to compare gene activity between groups, with replicate and setup checks.
+job: research-topics
+headline: RNA-seq comparison preparer
+subhead: Give it sequencing output. Get counts ready to compare gene activity between groups, with replicate and setup checks.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python and command line tools.

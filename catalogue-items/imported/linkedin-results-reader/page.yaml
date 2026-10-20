@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It reads patterns in your numbers and weighs if they are real.
+new_slug: linkedin-results-reader
+name: LinkedIn results reader
+summary: Paste your own LinkedIn numbers. Get which posts worked, why reach changed and a test to run next.
+job: grow-social
+headline: LinkedIn results reader
+subhead: Paste your own LinkedIn numbers. Get which posts worked, why reach changed and a test to run next.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

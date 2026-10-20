@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It matches rows and explains what is left.
+new_slug: account-reconciler
+name: Account reconciler
+summary: Give it a ledger and a bank statement. Get matched items, the gaps and a note on each. Have an accountant check.
+job: track-numbers
+headline: Account reconciler
+subhead: Give it a ledger and a bank statement. Get matched items, the gaps and a note on each. Have an accountant check.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read the files you upload.

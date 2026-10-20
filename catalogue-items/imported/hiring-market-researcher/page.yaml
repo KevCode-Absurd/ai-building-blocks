@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It must compare sources and judge how fresh each one is.
+new_slug: hiring-market-researcher
+name: Hiring market researcher
+summary: Name a role and place. Get pay ranges, talent supply and hiring difficulty. Reads public web pages.
+job: hire-people
+headline: Hiring market researcher
+subhead: Name a role and place. Get pay ranges, talent supply and hiring difficulty. Reads public web pages.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can search the web.

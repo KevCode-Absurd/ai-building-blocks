@@ -1,0 +1,40 @@
+slug: succession-plan-builder
+name: Succession plan builder
+summary: Give it your key roles. Get a coverage map, a possible successors list and development plans. The final calls stay yours.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Tuan Duc Tran
+  repo: tuanductran/hr-skills
+  path: skills/hr-succession-planning
+  url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-succession-planning
+  licence: MIT
+  licence_file: LICENSE
+  commit: 078f2fb
+  original_name: hr-succession-planning
+  author: Tuan Duc Tran
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hr-succession-planning skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-succession-planning
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

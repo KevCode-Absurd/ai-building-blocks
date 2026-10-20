@@ -1,0 +1,32 @@
+slug: flaky-test-fixer
+name: Flaky test fixer
+summary: Give it a failing or flaky Playwright test. Get the cause found and the fix made.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/playwright-pro/skills/fix
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/playwright-pro/skills/fix
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: fix
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: fix skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/playwright-pro/skills/fix
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

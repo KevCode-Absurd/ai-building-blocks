@@ -1,0 +1,37 @@
+slug: vercel-cost-and-speed-auditor
+name: Vercel cost and speed auditor
+summary: Point it at a Vercel app. Get cost and speed problems found from real production metrics, with fixes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/vercel-optimize
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/vercel-optimize
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: vercel-optimize
+  author: Vercel
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: vercel-optimize skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/vercel-optimize
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Vercel
+    url: https://github.com/vercel-labs/agent-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

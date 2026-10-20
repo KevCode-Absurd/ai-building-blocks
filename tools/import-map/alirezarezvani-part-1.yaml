@@ -1,0 +1,979 @@
+# alirezarezvani/claude-skills, part 1 of 3 (MIT). Names are job titles.
+
+"alirezarezvani/claude-skills:business-growth/skills/contract-and-proposal-writer":
+  name: Contract and proposal drafter
+  summary: "Say the deal and where you work. Get a contract, proposal, SOW or NDA draft with the right clauses."
+  task: check-contracts
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks clauses for the place and deal, then writes them out."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+
+"alirezarezvani/claude-skills:business-growth/skills/customer-success-manager":
+  name: Customer health and churn scorer
+  summary: "Give it your customer data. Get health scores, churn risk and upsell chances for each account."
+  task: understand-customers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scores with set formulas, then you read what they mean."
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+
+"alirezarezvani/claude-skills:business-growth/skills/revenue-operations":
+  name: Pipeline and forecast checker
+  summary: "Give it your deals and quota. Get pipeline cover, forecast accuracy and sales cost numbers."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It runs set formulas, then explains what the numbers say."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+
+"alirezarezvani/claude-skills:business-growth/skills/sales-engineer":
+  name: Pre-sales proof of concept planner
+  summary: "Give it a buyer request. Get a requirement gap score, a rival feature table and a trial plan."
+  task: sell-and-negotiate
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It works through five set phases with a score check at each."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+
+"alirezarezvani/claude-skills:business-growth/skills/business-growth-skills":
+  skip: "Only an index that points to four other skills in this repo."
+
+"alirezarezvani/claude-skills:business-operations/skills/capacity-planner":
+  name: Ops capacity planner
+  summary: "Give it your demand and team size. Get staffing levels, overload risk and a 12-month hiring plan."
+  task: lead-people
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It does queueing maths and has to weigh hiring trade-offs."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:business-operations/skills/internal-comms":
+  name: Internal change announcement writer
+  summary: "Describe a re-org, tool change or layoff. Get the announcement, FAQ, manager talking points and a send plan."
+  task: lead-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sizes the change, then drafts each message to match."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:business-operations/skills/knowledge-ops":
+  name: SOP and runbook checker
+  summary: "Give it your SOPs or wiki export. Get missing owners, stale pages and gaps, plus new SOPs to fix them."
+  task: document-work
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It checks each step against a fixed list, then writes fixes."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:business-operations/skills/process-mapper":
+  name: Process bottleneck finder
+  summary: "Describe a business process. Get a swim-lane map, cycle times and the one stage holding everything up."
+  task: organise-work
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It measures each stage, then names the main constraint."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:business-operations/skills/procurement-optimizer":
+  name: Software spend auditor
+  summary: "Give it your spend list. Get spend by category, duplicate tools and a plan to cut suppliers."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts spend by set rules, then you judge the cuts."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:business-operations/skills/vendor-management":
+  name: Vendor scorecard builder
+  summary: "Give it your vendor list and uptime data. Get scorecards, missed-SLA credits and keep, review or replace calls."
+  task: organise-work
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scores with set formulas, then recommends per vendor."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:business-operations/skills/business-operations-skills":
+  skip: "Only an index that points to the other business operations skills."
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:c-level-advisor/executive-mentor/skills/board-prep":
+  name: Hard-questions board prep coach
+  summary: "Give it your board update. Get the toughest questions, cold-number drills and a story that owns the weak spots."
+  task: speak-and-persuade
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It has to play a hostile board and judge your answers."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/executive-mentor/skills/challenge":
+  name: Plan pre-mortem runner
+  summary: "Give it a plan. Imagine it failed in a year and get the hidden assumptions and risks found now."
+  task: think-and-decide
+  role: check
+  level: beginner
+  thinking: high
+  thinking_why: "Finding weak spots needs real reasoning about the plan."
+  inputs: [ { type: plan, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/executive-mentor/skills/hard-call":
+  name: No-good-options decider
+  summary: "Describe a choice where every option hurts. Get a 10/10/10 and regret check, and a clear pick."
+  task: think-and-decide
+  role: make
+  level: beginner
+  thinking: high
+  thinking_why: "It weighs painful trade-offs across time."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/executive-mentor/skills/postmortem":
+  name: Failure postmortem writer
+  summary: "Describe what went wrong. Get a blame-free five-whys review and a list of changes to make."
+  task: think-and-decide
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It follows a set review method on your account of events."
+  inputs: [ { type: meeting_notes, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/executive-mentor/skills/stress-test":
+  name: Business assumption stress tester
+  summary: "Give it a plan and its key bets. Find which assumptions break first and what to test."
+  task: test-an-idea
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It has to find which assumptions carry the plan."
+  inputs: [ { type: plan, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/board-deck-builder":
+  name: Board deck builder
+  summary: "Give it your quarter. Get a board or investor deck outline with the story, numbers and bad news placed right."
+  task: speak-and-persuade
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows a set deck structure and fills it from your facts."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: slide_deck } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/change-management":
+  name: Change rollout planner
+  summary: "Describe a re-org or tool switch. Get a rollout plan, message templates and a plan for pushback."
+  task: lead-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It adapts a set change model to your situation."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/competitive-intel":
+  name: Competitor battlecard builder
+  summary: "Name your rivals. Get a tracking plan, sales battlecards and where to position against them."
+  task: study-competitors
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows a set tracking method and writes cards."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/culture-architect":
+  name: Company values and culture builder
+  summary: "Describe your team. Get values written as behaviours, a culture code and a simple health check."
+  task: lead-people
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It turns workshop answers into set outputs."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/intl-expansion":
+  name: New country expansion planner
+  summary: "Name the markets you eye. Get a market pick, entry route, localisation list and rules to check."
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs many markets and routes before it recommends."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/ma-playbook":
+  name: Acquisition due diligence planner
+  summary: "Describe the deal. Get a due diligence list, valuation checks and an integration plan."
+  task: money-and-investing
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "Deals have many risks to weigh, so it needs deep reasoning."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/org-health-diagnostic":
+  name: Company health scorer
+  summary: "Give it signals from your teams. Get a traffic-light score on eight areas with what to fix first."
+  task: lead-people
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scores set areas, then ranks fixes."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/scenario-war-room":
+  name: Compound scenario modeler
+  summary: "Describe several things going wrong at once. Get how each team feels it and a response plan."
+  task: plan-strategy
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It must trace knock-on effects across the whole business."
+  inputs: [ { type: plan, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/strategic-alignment":
+  name: Goal cascade checker
+  summary: "Give it company goals and team plans. Find orphan goals, silos and gaps between strategy and work."
+  task: plan-strategy
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It maps goals down and checks each link."
+  inputs: [ { type: plan, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/founder-coach":
+  name: Founder leadership coach
+  summary: "Describe how you spend your week. Get a delegation plan, calendar audit and your blind spots named."
+  task: lead-people
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It coaches with set frameworks on what you share."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/internal-narrative":
+  name: Company story aligner
+  summary: "Give it what you tell each group. Find contradictions and get one story framed for each audience."
+  task: write-and-tell-stories
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares messages, then rewrites per audience."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: document } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/company-os":
+  name: Company operating system setter
+  summary: "Describe your company. Get a way of running it: scorecard, accountability chart, meetings and 90-day goals."
+  task: organise-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks from known systems and fills in the parts."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/general-counsel-advisor/skills/general-counsel-advisor":
+  name: Contract and term sheet reviewer
+  summary: "Paste a contract or term sheet. Get the risky terms flagged, plain-English meaning and when to call a lawyer."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "Legal terms need careful reading. It is not legal advice."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/cfo-advisor":
+  name: Startup finance advisor
+  summary: "Give it your numbers. Get unit economics, runway, fundraising steps and a finance pack for the board."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies set finance methods to your figures."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/cmo-advisor":
+  name: Marketing strategy advisor
+  summary: "Describe your growth stage. Get a positioning check, growth model choice and a budget split by channel."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows set frameworks and tailors them to you."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/cto-advisor":
+  name: Tech leadership advisor
+  summary: "Describe your tech team and stack. Get a tech debt review, a hiring plan and architecture calls."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It applies known engineering frameworks to your case."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/chief-ai-officer-advisor/skills/chief-ai-officer-advisor":
+  name: AI build-or-buy advisor
+  summary: "Describe an AI plan. Get an API vs fine-tune call, AI risk class under EU rules and cost break-even."
+  task: set-up-ai
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs set decisions and cost maths for your plan."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/arquiteto-de-empresa":
+  skip: "same skill as c-level-advisor/arquiteto-de-empresa/skills/arquiteto-de-empresa"
+  author: leoal
+  author_url: https://github.com/leoal
+
+"alirezarezvani/claude-skills:c-level-advisor/arquiteto-de-empresa/skills/arquiteto-de-empresa":
+  skip: "Builds a company as a tree of linked files through a 12-phase interview in its own file format, so it fits best inside that format."
+  author: leoal
+  author_url: https://github.com/leoal
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/chief-ai-officer-advisor":
+  skip: "same skill as c-level-advisor/chief-ai-officer-advisor/skills/chief-ai-officer-advisor"
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/chief-customer-officer-advisor":
+  skip: "same skill as c-level-advisor/chief-customer-officer-advisor/skills/chief-customer-officer-advisor"
+
+"alirezarezvani/claude-skills:c-level-advisor/chief-customer-officer-advisor/skills/chief-customer-officer-advisor":
+  skip: "Generic role advisor, close to the customer health scorer we keep."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/chief-data-officer-advisor":
+  skip: "same skill as c-level-advisor/chief-data-officer-advisor/skills/chief-data-officer-advisor"
+
+"alirezarezvani/claude-skills:c-level-advisor/chief-data-officer-advisor/skills/chief-data-officer-advisor":
+  skip: "Generic role advisor with little we can use on its own."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/general-counsel-advisor":
+  skip: "same skill as c-level-advisor/general-counsel-advisor/skills/general-counsel-advisor"
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/vpe-advisor":
+  skip: "Generic role advisor; the code and team skills in other libraries cover this."
+
+"alirezarezvani/claude-skills:c-level-advisor/vpe-advisor/skills/vpe-advisor":
+  skip: "same skill as c-level-advisor/skills/vpe-advisor"
+
+"alirezarezvani/claude-skills:c-level-advisor/executive-mentor/skills/executive-mentor":
+  skip: "Only routes to the executive mentor commands, which are listed on their own."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/agent-protocol":
+  skip: "Rules for how this repo's own C-suite agents talk to each other, so useful only inside it."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/board-meeting":
+  skip: "Runs this repo's own C-suite agents as a panel, so useful only inside it. Our minds and council do this job."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/c-level-skills":
+  skip: "Only an index that points to other skills in this repo."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/ceo-advisor":
+  skip: "Generic role advisor with broad advice that the strategy and board skills here cover better."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/chief-of-staff":
+  skip: "Only routes questions to this repo's other advisor skills."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/chro-advisor":
+  skip: "Generic role advisor; hiring and people skills from other libraries cover this."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/ciso-advisor":
+  skip: "Generic role advisor; the cloud security and compliance skills kept here are more specific."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/context-engine":
+  skip: "Stores company context for this repo's own advisor skills, so useful only inside it."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/coo-advisor":
+  skip: "Generic role advisor, near-copy of the company operating system and process skills kept here."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/cpo-advisor":
+  skip: "Generic role advisor; product skills in our library cover this."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/cro-advisor":
+  skip: "Generic role advisor, near-copy of the pricing and revenue skills kept here."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/cs-onboard":
+  skip: "Setup interview that feeds this repo's own advisor skills, so useful only inside it."
+
+"alirezarezvani/claude-skills:c-level-advisor/skills/decision-logger":
+  skip: "Memory store for this repo's own board meeting skill, so useful only inside it."
+
+"alirezarezvani/claude-skills:agent-launcher/skills/agent-launcher-orchestrator":
+  skip: "Only works for building Claude Managed Agents with your own Anthropic account, and routes to its own phase skills."
+
+"alirezarezvani/claude-skills:agent-launcher/skills/grade-iterate":
+  skip: "Phase of the Claude Managed Agent launcher, useful only inside that product."
+
+"alirezarezvani/claude-skills:agent-launcher/skills/interview":
+  skip: "Phase of the Claude Managed Agent launcher, useful only inside that product."
+
+"alirezarezvani/claude-skills:agent-launcher/skills/run-without-you":
+  skip: "Phase of the Claude Managed Agent launcher, useful only inside that product."
+
+"alirezarezvani/claude-skills:agent-launcher/skills/stage-launch":
+  skip: "Phase of the Claude Managed Agent launcher, useful only inside that product."
+
+"alirezarezvani/claude-skills:agent-launcher/skills/wrap-up":
+  skip: "Phase of the Claude Managed Agent launcher, useful only inside that product."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/office-hours":
+  name: Founder office hours questioner
+  summary: "Share a fuzzy idea. Answer six sharp questions on customer, reach and defence before you get advice."
+  task: test-an-idea
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It asks set questions and reacts to each answer."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+
+"alirezarezvani/claude-skills:c-level-agents/skills/execute":
+  name: 90-day plan builder
+  summary: "Give it a decision you made. Get a 90-day plan with weekly steps, owners and check-in times."
+  task: plan-strategy
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It turns one decision into a set plan format."
+  inputs: [ { type: plan, required: true } ]
+  outputs: [ { type: plan } ]
+
+"alirezarezvani/claude-skills:c-level-agents/skills/boardroom":
+  skip: "Command or router for this repo's own C-suite agent team, so useful only inside it."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/brief":
+  skip: "Command or router for this repo's own C-suite agent team, so useful only inside it."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/c-level-agents":
+  skip: "Command or router for this repo's own C-suite agent team, so useful only inside it."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/decide":
+  skip: "Command or router for this repo's own C-suite agent team, so useful only inside it."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/founder-mode":
+  skip: "Command or router for this repo's own C-suite agent team, so useful only inside it."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/onboard":
+  skip: "Command or router for this repo's own C-suite agent team, so useful only inside it."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/freeze":
+  skip: "Command or router for this repo's own C-suite agent team, so useful only inside it."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/caio-review":
+  skip: "Near-copy of the AI role advisor, packaged as a command for this repo's own agent team."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/cco-review":
+  skip: "Near-copy of the customer role advisor, packaged as a command for this repo's own agent team."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/cdo-review":
+  skip: "Near-copy of the data role advisor, packaged as a command for this repo's own agent team."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/cfo-review":
+  skip: "Near-copy of the finance role advisor, packaged as a command for this repo's own agent team."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/ciso-review":
+  skip: "Near-copy of the security role advisor, packaged as a command for this repo's own agent team."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/cmo-review":
+  skip: "Near-copy of the marketing role advisor, packaged as a command for this repo's own agent team."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/cpo-review":
+  skip: "Near-copy of the product role advisor, packaged as a command for this repo's own agent team."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/cro-review":
+  skip: "Near-copy of the revenue role advisor, packaged as a command for this repo's own agent team."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/cto-review":
+  skip: "Near-copy of the tech role advisor, packaged as a command for this repo's own agent team."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/vpe-review":
+  skip: "Near-copy of the engineering role advisor, packaged as a command for this repo's own agent team."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/gc-review":
+  skip: "Near-copy of the legal role advisor, packaged as a command for this repo's own agent team."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/post-mortem":
+  skip: "Near-copy of the postmortem skill we keep, tied to this repo's decision log."
+
+"alirezarezvani/claude-skills:c-level-agents/skills/cross-eval":
+  skip: "Needs Codex and Gemini set up beside Claude, so it works only in this repo's setup."
+
+"alirezarezvani/claude-skills:commercial/skills/channel-economics":
+  name: Channel cost and ROI comparer
+  summary: "Give it direct and partner sales costs. Get cost to serve, ROI by channel and the best mix."
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs set maths, then you judge the mix."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:commercial/skills/commercial-forecaster":
+  name: Bookings forecast builder
+  summary: "Give it your pipeline and cohorts. Get a commit, best case and pipe-only forecast with the maths shown."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs set funnel maths, then explains the forecast."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:commercial/skills/commercial-policy":
+  name: Discount policy designer
+  summary: "Describe how you sell. Get a discount matrix, approval limits and a clear route for exceptions."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It builds set policy parts around your deal sizes."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:commercial/skills/deal-desk":
+  name: Deal desk reviewer
+  summary: "Give it a deal with a big discount or redlined terms. Get margin after discount and a clear yes, no or counter."
+  task: sell-and-negotiate
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs money, risk and terms before it advises."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:commercial/skills/partnerships-architect":
+  name: Partner deal evaluator
+  summary: "Describe a partner who approached you. Get a sign or pass call, the right tier and terms to ask for."
+  task: sell-and-negotiate
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs reach, cost and risk across partner types."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:commercial/skills/pricing-strategist":
+  name: Pricing model designer
+  summary: "Give it your product and price survey data. Get a pricing model, price points and good, better, best tiers."
+  task: set-prices
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs set price methods and writes up the tiers."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:commercial/skills/rfp-responder":
+  name: RFP response builder
+  summary: "Paste an RFP or security questionnaire. Get requirements sorted by must have, a fit score and draft answers."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts requirements by set rules, then drafts answers."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: document } ]
+  needs: run code
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:commercial/skills/commercial-skills":
+  skip: "Only an index that points to the other commercial skills."
+  author: claude-code-skills
+  author_url: https://github.com/alirezarezvani/claude-code-skills
+
+"alirezarezvani/claude-skills:compliance-os/skills/gdpr-audit-prep":
+  name: GDPR audit prep coach
+  summary: "Name your scope. Answer six article-based questions and get gaps to fix before a review or regulator visit."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It checks you against legal articles and has to judge each answer."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"alirezarezvani/claude-skills:compliance-os/skills/soc2-audit-prep":
+  name: SOC 2 readiness checker
+  summary: "Name your scope. Answer six questions and get gaps to fix before the SOC 2 Type II watch period."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It checks you against controls and judges each answer."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"alirezarezvani/claude-skills:compliance-os/skills/iso27001-audit-prep":
+  name: ISO 27001 audit prep coach
+  summary: "Name your scope. Answer six questions and get gaps to fix before an internal or outside ISO 27001 audit."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It checks you against clauses and judges each answer."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"alirezarezvani/claude-skills:compliance-os/skills/ai-act-readiness":
+  name: EU AI Act duty checker
+  summary: "Name your AI system. Answer six questions and get its risk class, due dates and gaps to close."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It maps your system to legal duties and dates."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"alirezarezvani/claude-skills:compliance-os/skills/aims-audit":
+  skip: "Niche ISO 42001 audit prep; the same six-question method as the audit skills kept here."
+
+"alirezarezvani/claude-skills:compliance-os/skills/compliance-os":
+  skip: "Orchestrator that picks among this repo's own audit skills, so useful only inside it."
+
+"alirezarezvani/claude-skills:compliance-os/skills/compliance-readiness":
+  skip: "Generic version of the six-question audit prep skills kept here."
+
+"alirezarezvani/claude-skills:compliance-os/skills/fda-qsr-audit-prep":
+  skip: "Narrow medical device audit prep with the same six-question method as the audit skills kept here."
+
+"alirezarezvani/claude-skills:compliance-os/skills/iso13485-audit-prep":
+  skip: "Narrow medical device audit prep with the same six-question method as the audit skills kept here."
+
+"alirezarezvani/claude-skills:engineering-team/a11y-audit/skills/a11y-audit":
+  name: WCAG accessibility fixer
+  summary: "Point it at your site code. Get WCAG 2.2 problems found, fixed and checked again."
+  task: build-websites
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scans with set rules, then fixes and rechecks."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change }, { type: audit_report } ]
+  needs: read and change your project files
+
+"alirezarezvani/claude-skills:engineering-team/google-workspace-cli/skills/google-workspace-cli":
+  name: Google Workspace command-line operator
+  summary: "Say what to do in Gmail, Drive, Sheets or Calendar. Get the commands set up and run for you."
+  task: connect-tools
+  role: orchestrate
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows the tool's command guide for each job."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: tool_connection } ]
+  needs: run commands on your computer
+
+"alirezarezvani/claude-skills:engineering-team/playwright-pro/skills/generate":
+  name: Browser test writer
+  summary: "Describe a user story or page. Get Playwright tests written for it that you can run."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads your code first, then writes tests in a set style."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+
+"alirezarezvani/claude-skills:engineering-team/playwright-pro/skills/fix":
+  name: Flaky test fixer
+  summary: "Give it a failing or flaky Playwright test. Get the cause found and the fix made."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts the cause by a set list, then fixes it."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+
+"alirezarezvani/claude-skills:engineering-team/playwright-pro/skills/migrate":
+  name: Browser test migrator
+  summary: "Point it at Cypress or Selenium tests. Get them moved to Playwright file by file."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It converts by set rules and fixes odd cases."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+
+"alirezarezvani/claude-skills:engineering-team/playwright-pro/skills/pw-init":
+  name: Browser test setup builder
+  summary: "Point it at your project. Get Playwright installed with a config, a sample test and a CI file."
+  task: test-and-fix-code
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a set setup path for your framework."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+
+"alirezarezvani/claude-skills:engineering-team/playwright-pro/skills/pw-review":
+  name: Browser test reviewer
+  summary: "Point it at your Playwright tests. Get each one checked against 20 bad habits with fixes."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It checks each file against a set list."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  needs: read your project files
+
+"alirezarezvani/claude-skills:engineering-team/playwright-pro/skills/coverage":
+  name: Test coverage gap finder
+  summary: "Point it at your app. Get every page, part and endpoint listed with what is tested and what is not."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It maps the app, then compares it to your tests."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: test_report } ]
+  needs: read your project files
+
+"alirezarezvani/claude-skills:engineering-team/playwright-pro/skills/browserstack":
+  name: "BrowserStack test runner"
+  summary: "Give it your Playwright tests. Get them run on many browsers and devices, with a pass and fail report."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It sets up the browser list, runs tests and reads failures."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: test_report}]
+  needs: "run code and use a BrowserStack tool you set up yourself"
+  paid: "BrowserStack"
+
+"alirezarezvani/claude-skills:engineering-team/playwright-pro/skills/testrail":
+  name: "TestRail test syncer"
+  summary: "Give it your TestRail project. Get its test cases turned into Playwright tests, and results sent back."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It maps cases to tests, then reports results back."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: test_report}]
+  needs: "run code and use a TestRail tool you set up yourself"
+  paid: "TestRail"
+
+"alirezarezvani/claude-skills:engineering-team/playwright-pro/skills/pw":
+  skip: "Router that points to the other Playwright skills in this set."
+
+"alirezarezvani/claude-skills:engineering-team/playwright-pro/skills/report":
+  skip: "Thin: runs tests and summarises the output."
+
+"alirezarezvani/claude-skills:engineering-team/self-improving-agent/skills/self-improving-agent":
+  name: Claude memory curator
+  summary: "Point it at Claude Code memory. Get what it learned reviewed, kept rules moved up and stale notes cut."
+  task: set-up-ai
+  role: orchestrate
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reviews notes against a set method."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: skill_files } ]
+  needs: read and change your project files
+
+"alirezarezvani/claude-skills:engineering-team/self-improving-agent/skills/extract":
+  name: Pattern to skill extractor
+  summary: "Name a fix you keep repeating. Get it packaged as a reusable skill with notes and examples."
+  task: make-skills
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It picks what to keep, then writes the skill files."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: skill_files } ]
+  needs: save files
+
+"alirezarezvani/claude-skills:engineering-team/self-improving-agent/skills/memory-review":
+  skip: "One command of the memory curator skill, which is listed whole."
+
+"alirezarezvani/claude-skills:engineering-team/self-improving-agent/skills/memory-status":
+  skip: "One command of the memory curator skill, which is listed whole."
+
+"alirezarezvani/claude-skills:engineering-team/self-improving-agent/skills/promote":
+  skip: "One command of the memory curator skill, which is listed whole."
+
+"alirezarezvani/claude-skills:engineering-team/self-improving-agent/skills/remember":
+  skip: "One command of the memory curator skill, which is listed whole."
+
+"alirezarezvani/claude-skills:engineering-team/skills/adversarial-reviewer":
+  name: Hostile code reviewer
+  summary: "Point it at recent changes. Get a tough review from three hostile reviewers, with each finding ranked."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It must argue against code it may have helped write."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  needs: read your project files
+  author: ekreloff
+  author_url: https://github.com/ekreloff
+
+"alirezarezvani/claude-skills:engineering-team/skills/ai-security":
+  name: AI system attack tester
+  summary: "Point it at an AI app. Get prompt injection, jailbreak and tool abuse risks found, ranked and mapped to known attacks."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It must think like an attacker across many paths."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run code
+
+"alirezarezvani/claude-skills:engineering-team/skills/aws-solution-architect":
+  name: AWS architecture designer
+  summary: "Describe your app. Get an AWS design with serverless parts, setup templates and cost cuts."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows set patterns and tailors them to your app."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code
+
+"alirezarezvani/claude-skills:engineering-team/skills/azure-cloud-architect":
+  name: Azure architecture designer
+  summary: "Describe your app. Get an Azure design with setup templates, a pipeline and cost cuts."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows set patterns and tailors them to your app."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code
+
+"alirezarezvani/claude-skills:engineering-team/skills/cloud-security":
+  name: Cloud misconfiguration finder
+  summary: "Point it at your cloud setup files. Get open buckets, loose access rules and gaps ranked with fixes."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It must reason about access paths an attacker could use."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run code
+
+"alirezarezvani/claude-skills:engineering-team/skills/code-reviewer":
+  name: Pull request risk scorer
+  summary: "Point it at a pull request. Get complexity and risk scored, code smells flagged and review comments written."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scores with set checks, then writes comments."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  needs: run code
+
+"alirezarezvani/claude-skills:engineering-team/skills/email-template-builder":
+  name: Transactional email builder
+  summary: "Say which emails your app sends. Get coded templates, a sending setup, preview and dark mode."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It builds from set parts and checks each in the preview."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code
+
+"alirezarezvani/claude-skills:engineering-team/skills/embedded-iot-mentor":
+  name: Hardware project mentor
+  summary: "Describe your sensor or device idea. Get a board pick, where readings go and a phased build plan."
+  task: build-product
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It guides choices with a set method."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]

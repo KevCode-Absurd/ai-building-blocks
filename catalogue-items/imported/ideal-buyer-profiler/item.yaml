@@ -1,0 +1,32 @@
+slug: ideal-buyer-profiler
+name: Ideal buyer profiler
+summary: Describe who you sell to. Get one specific buyer with pains, goals, failed attempts and what drives their choices.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: persona
+uses: []
+origin: imported
+source:
+  by: Kim Barrett
+  repo: realkimbarrett/advertising-skills
+  path: skills/foundations/avatar-extraction
+  url: https://github.com/realkimbarrett/advertising-skills/tree/main/skills/foundations/avatar-extraction
+  licence: MIT
+  licence_file: README.md
+  commit: 45f4a4a
+  original_name: avatar-extraction
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: avatar-extraction skill
+    by: Kim Barrett
+    url: https://github.com/realkimbarrett/advertising-skills/tree/main/skills/foundations/avatar-extraction
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

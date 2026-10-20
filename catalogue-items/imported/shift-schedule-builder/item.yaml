@@ -1,0 +1,32 @@
+slug: shift-schedule-builder
+name: Shift schedule builder
+summary: Give it your busy hours and staff limits. Get a shift plan that covers demand and respects time-off rules.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/workforce-scheduling
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/workforce-scheduling
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: workforce-scheduling
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: workforce-scheduling skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/workforce-scheduling
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

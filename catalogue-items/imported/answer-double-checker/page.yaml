@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It adds a few short questions to an answer.
+new_slug: answer-double-checker
+name: Answer double-checker
+summary: Get two or three sharp follow-up questions after an answer, so you check the facts and the thinking.
+job: think-and-decide
+headline: Answer double-checker
+subhead: Get two or three sharp follow-up questions after an answer, so you check the facts and the thinking.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

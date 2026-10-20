@@ -1,0 +1,37 @@
+slug: wordpress-health-fixer
+name: WordPress health fixer
+summary: Paste your WordPress Site Health report. Get a ranked, backup-first fix plan with exact commands.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: audit_report
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/wp-site-health-auditor
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/wp-site-health-auditor
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: wp-site-health-auditor
+  author: Whoisabhishekadhikari
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: wp-site-health-auditor skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/wp-site-health-auditor
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Whoisabhishekadhikari
+    url: https://github.com/Whoisabhishekadhikari
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It sorts the failure type first, then picks the fix.
+new_slug: flop-post-diagnoser
+name: Flop post diagnoser
+summary: Paste a post that did badly. Get why it failed, whether unseen, skipped or ignored, and what to change.
+job: grow-social
+headline: Flop post diagnoser
+subhead: Paste a post that did badly. Get why it failed, whether unseen, skipped or ignored, and what to change.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

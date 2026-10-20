@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Setup choices change the results.
+new_slug: wireless-network-simulator
+name: Wireless network simulator
+summary: Describe nodes and traffic. Get a system-level wireless network run with throughput results.
+job: build-software
+headline: Wireless network simulator
+subhead: Describe nodes and traffic. Get a system-level wireless network run with throughput results.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Wireless Network Toolbox.

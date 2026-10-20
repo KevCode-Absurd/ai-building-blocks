@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It runs a tool and then reads the results.
+new_slug: library-change-finder
+name: Library change finder
+summary: Point it at a Python project. Get which library changes came after the AI's training and where your code uses them.
+job: test-and-fix-code
+headline: Library change finder
+subhead: Point it at a Python project. Get which library changes came after the AI's training and where your code uses them.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

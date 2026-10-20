@@ -1,0 +1,37 @@
+slug: ai-memory-habit-setter
+name: AI memory habit setter
+summary: Connect any memory tool. Get clear rules for when your AI recalls and saves decisions, so it stops repeating itself.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: false
+outputs:
+  - type: skill_files
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/agent-memory-discipline
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/agent-memory-discipline
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: agent-memory-discipline
+  author: mnemoverse
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: agent-memory-discipline skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/agent-memory-discipline
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: mnemoverse
+    url: https://github.com/mnemoverse/agent-memory-discipline
+    used: Wrote the skill; sickn33 shared it in their collection.

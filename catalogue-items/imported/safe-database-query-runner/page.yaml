@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It writes a query and blocks any write.
+new_slug: safe-database-query-runner
+name: Safe database query runner
+summary: Ask a question about your Postgres data. Get a read-only query run with write protection and the results back.
+job: work-with-files
+headline: Safe database query runner
+subhead: Ask a question about your Postgres data. Get a read-only query run with write protection and the results back.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can connect to your database.

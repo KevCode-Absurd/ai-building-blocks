@@ -1,0 +1,40 @@
+slug: report-builder
+name: Report builder
+summary: Give it your data. Get a clear report with charts, such as a sprint retro, financial summary or postmortem.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: communication/report-generation
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/communication/report-generation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: report-generation
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: report-generation skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/communication/report-generation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

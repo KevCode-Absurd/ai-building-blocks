@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It applies fixed Liquid rules to your own case.
+new_slug: liquid-snippet-writer
+name: Liquid snippet writer
+summary: Paste your theme code or say what you need. Get correct Liquid for products, carts and loops.
+job: build-software
+headline: Liquid snippet writer
+subhead: Paste your theme code or say what you need. Get correct Liquid for products, carts and loops.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

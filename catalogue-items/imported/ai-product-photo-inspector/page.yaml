@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It judges flaws like warped hands or fabric, which takes careful looking.
+new_slug: ai-product-photo-inspector
+name: AI product photo inspector
+summary: Give it an AI-made product photo. Get a risk rating, eight checks and lines to add to your prompt before you retry.
+job: product-photos
+headline: AI product photo inspector
+subhead: Give it an AI-made product photo. Get a risk rating, eight checks and lines to add to your prompt before you retry.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can look at images, and run code if you want it to retry for you.

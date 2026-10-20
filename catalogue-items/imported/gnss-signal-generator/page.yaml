@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Signal options are set but numerous.
+new_slug: gnss-signal-generator
+name: GNSS signal generator
+summary: Pick a GPS or Galileo signal. Get a baseband waveform with realistic channel effects.
+job: build-software
+headline: GNSS signal generator
+subhead: Pick a GPS or Galileo signal. Get a baseband waveform with realistic channel effects.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Satellite Communications Toolbox.

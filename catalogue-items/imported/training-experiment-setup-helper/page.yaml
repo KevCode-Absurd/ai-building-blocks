@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It turns a script into a set structure of experiment settings.
+new_slug: training-experiment-setup-helper
+name: Training experiment setup helper
+summary: Give it a training script. Get an experiment that sweeps settings, set up in MATLAB and kept in sync.
+job: build-software
+headline: Training experiment setup helper
+subhead: Give it a training script. Get an experiment that sweeps settings, set up in MATLAB and kept in sync.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Experiment Manager open.

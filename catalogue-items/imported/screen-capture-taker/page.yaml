@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It runs one simple capture.
+new_slug: screen-capture-taker
+name: Screen capture taker
+summary: Ask for a screen, a window or a part of one. Get a saved screenshot.
+job: work-with-files
+headline: Screen capture taker
+subhead: Ask for a screen, a window or a part of one. Get a saved screenshot.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can capture your screen.

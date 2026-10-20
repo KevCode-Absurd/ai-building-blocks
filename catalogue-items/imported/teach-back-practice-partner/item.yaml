@@ -1,0 +1,32 @@
+slug: teach-back-practice-partner
+name: Teach-back practice partner
+summary: Teach an idea to your AI, which plays a curious beginner. Get the gaps shown by its honest questions.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/student-learning/teach-back-evaluator
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/student-learning/teach-back-evaluator
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: teach-back-evaluator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: teach-back-evaluator skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/student-learning/teach-back-evaluator
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

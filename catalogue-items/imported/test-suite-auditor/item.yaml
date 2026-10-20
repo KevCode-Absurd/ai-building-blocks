@@ -1,0 +1,37 @@
+slug: test-suite-auditor
+name: Test suite auditor
+summary: Point it at a Python project. Get a list of weak, flaky, slow and useless tests, checked by mutation.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/agentic-test-audit
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/agentic-test-audit
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: agentic-test-audit
+  author: Tim Richardson
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: agentic-test-audit skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/agentic-test-audit
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Tim Richardson
+    url: https://github.com/timini/agentic-verification
+    used: Wrote the skill; sickn33 shared it in their collection.

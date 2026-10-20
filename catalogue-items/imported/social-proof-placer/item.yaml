@@ -1,0 +1,34 @@
+slug: social-proof-placer
+name: Social proof placer
+summary: Describe your buyer's doubts. Get which testimonials, numbers or case studies to use and where to place them.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: persona
+    required: true
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/social-proof-architect
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/social-proof-architect
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: social-proof-architect
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: social-proof-architect skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/social-proof-architect
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

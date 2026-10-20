@@ -1,0 +1,32 @@
+slug: legal-meeting-briefer
+name: Legal meeting briefer
+summary: Name a negotiation or review meeting. Get background, key issues, questions to ask, then action items. Not legal advice.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: meeting_notes
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: legal/skills/meeting-briefing
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/legal/skills/meeting-briefing
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: meeting-briefing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: meeting-briefing skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/legal/skills/meeting-briefing
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

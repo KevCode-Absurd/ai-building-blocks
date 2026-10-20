@@ -1,0 +1,37 @@
+slug: x-reply-writer
+name: X reply writer
+summary: Paste a tweet. Get a reply worth reading on its own, or a clear call to skip it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/get-seen-in-replies
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/get-seen-in-replies
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: get-seen-in-replies
+  author: prateeks367
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: get-seen-in-replies skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/get-seen-in-replies
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: prateeks367
+    url: https://github.com/prateeks367/voicemoat-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

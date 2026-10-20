@@ -1,0 +1,37 @@
+slug: timing-leak-checker
+name: Timing leak checker
+summary: Point it at crypto code. Get a list of spots where run time could leak secret keys, with fixes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/constant-time-analysis
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/constant-time-analysis
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: constant-time-analysis
+  author: Trail of Bits
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: constant-time-analysis skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/constant-time-analysis
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Trail of Bits
+    url: https://github.com/trailofbits/skills
+    used: Wrote the skill; sickn33 shared it in their collection.

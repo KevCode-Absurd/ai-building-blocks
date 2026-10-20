@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It captures a decision you already made in a fixed format.
+new_slug: decision-record-writer
+name: Decision record writer
+summary: Tell it a design choice you made. Get a short record of why, with the options you passed on.
+job: build-software
+headline: Decision record writer
+subhead: Tell it a design choice you made. Get a short record of why, with the options you passed on.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,32 @@
+slug: referral-program-designer
+name: Referral program designer
+summary: Describe your product. Get a referral or affiliate program with rewards, flow and launch plan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/referrals
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/referrals
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: referrals
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: referrals skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/referrals
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

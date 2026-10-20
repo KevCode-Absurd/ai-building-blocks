@@ -1,0 +1,32 @@
+slug: code-change-reviewer
+name: Code change reviewer
+summary: Point it at a set of changes. Get a review against your coding standards and your spec, side by side.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: code_change
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Matt Pocock
+  repo: mattpocock/skills
+  path: skills/engineering/code-review
+  url: https://github.com/mattpocock/skills/tree/main/skills/engineering/code-review
+  licence: MIT
+  licence_file: LICENSE
+  commit: 5beb35b
+  original_name: code-review
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: code-review skill
+    by: Matt Pocock
+    url: https://github.com/mattpocock/skills/tree/main/skills/engineering/code-review
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

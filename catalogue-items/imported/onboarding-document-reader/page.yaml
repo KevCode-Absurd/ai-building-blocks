@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It pulls fields from documents into a fixed form.
+new_slug: onboarding-document-reader
+name: Onboarding document reader
+summary: Give it an onboarding pack. Get identity, ownership, source of funds and a document list in set fields.
+job: hire-people
+headline: Onboarding document reader
+subhead: Give it an onboarding pack. Get identity, ownership, source of funds and a document list in set fields.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your files.

@@ -1,0 +1,32 @@
+slug: new-country-expansion-planner
+name: New country expansion planner
+summary: Name the markets you eye. Get a market pick, entry route, localisation list and rules to check.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: c-level-advisor/skills/intl-expansion
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/intl-expansion
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: intl-expansion
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: intl-expansion skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/intl-expansion
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: Summarising is a standard task.
+new_slug: summarizer
+name: Summarizer
+summary: Give it long text. Get a short summary at the detail level you choose, from one text or many.
+job: think-and-decide
+headline: Summarizer
+subhead: Give it long text. Get a short summary at the detail level you choose, from one text or many.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,40 @@
+slug: amazon-market-researcher
+name: Amazon market researcher
+summary: Give it a product or category. Get Amazon sales rank, reviews and seller data in a report. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:Pangolinfo
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/pangolinfo-amazon-data-research
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pangolinfo-amazon-data-research
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: pangolinfo-amazon-data-research
+  author: Pangolinfo
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pangolinfo-amazon-data-research skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pangolinfo-amazon-data-research
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Pangolinfo
+    url: ""
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,32 @@
+slug: critical-thinking-task-writer
+name: Critical thinking task writer
+summary: Name a subject and a skill. Get a task where learners weigh evidence, spot bias or test an argument.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/literacy-critical-thinking/critical-thinking-task-designer
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/literacy-critical-thinking/critical-thinking-task-designer
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: critical-thinking-task-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: critical-thinking-task-designer skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/literacy-critical-thinking/critical-thinking-task-designer
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

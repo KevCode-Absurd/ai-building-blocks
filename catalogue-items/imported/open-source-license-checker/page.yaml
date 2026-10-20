@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads license terms and compares them.
+new_slug: open-source-license-checker
+name: Open-source license checker
+summary: Give it your project dependencies. Get license clashes, duties and risks flagged.
+job: secure-code
+headline: Open-source license checker
+subhead: Give it your project dependencies. Get license clashes, duties and risks flagged.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

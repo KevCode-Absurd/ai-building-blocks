@@ -1,0 +1,40 @@
+slug: youtube-retention-reader
+name: YouTube retention reader
+summary: Give it your retention export. Get where viewers leave, what you said then, and the one change to make.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: performance_sheet
+    required: true
+  - type: transcript
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Jake Schincariol
+  repo: Jakeschincariol/youtube-agent-skill
+  path: skills/yt-retention
+  url: https://github.com/Jakeschincariol/youtube-agent-skill/tree/main/skills/yt-retention
+  licence: MIT
+  licence_file: LICENSE
+  commit: a2feb21
+  original_name: yt-retention
+  author: Jake Schincariol
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: yt-retention skill
+    by: Jake Schincariol
+    url: https://github.com/Jakeschincariol/youtube-agent-skill/tree/main/skills/yt-retention
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Jake Schincariol
+    url: https://github.com/Jakeschincariol
+    used: Wrote the skill; Jake Schincariol shared it in their collection.

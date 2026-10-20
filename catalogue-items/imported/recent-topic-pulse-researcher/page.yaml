@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It must weigh many sources and keep claims tied to links.
+new_slug: recent-topic-pulse-researcher
+name: Recent topic pulse researcher
+summary: Give it a topic. Get a cited briefing of what Reddit, Hacker News and the web say lately. Collects data from websites.
+job: understand-customers
+headline: Recent topic pulse researcher
+subhead: Give it a topic. Get a cited briefing of what Reddit, Hacker News and the web say lately. Collects data from websites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can search the web.

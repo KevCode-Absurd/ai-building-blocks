@@ -1,0 +1,37 @@
+slug: polished-interface-builder
+name: Polished interface builder
+summary: Describe the interface. Get a built page with careful colour, layout and motion, not a stock template look.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/design-taste-frontend
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/design-taste-frontend
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: design-taste-frontend
+  author: Leonxlnx
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: design-taste-frontend skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/design-taste-frontend
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Leonxlnx
+    url: https://github.com/Leonxlnx
+    used: Wrote the skill; sickn33 shared it in their collection.

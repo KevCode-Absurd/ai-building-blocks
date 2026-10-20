@@ -1,0 +1,37 @@
+slug: free-plan-designer
+name: Free plan designer
+summary: Describe your product. Get a free tier with limits that win paid users without anger or abuse.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/free-tier-strategy
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/free-tier-strategy
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: free-tier-strategy
+  author: jonathimer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: free-tier-strategy skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/free-tier-strategy
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: jonathimer
+    url: https://github.com/jonathimer/devmarketing-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

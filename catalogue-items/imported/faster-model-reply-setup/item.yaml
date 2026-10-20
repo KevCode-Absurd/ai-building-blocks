@@ -1,0 +1,32 @@
+slug: faster-model-reply-setup
+name: Faster model reply setup
+summary: Name your model. Get a setup that makes replies 1.5 to 3.6 times faster without changing the answers.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 19-emerging-techniques/speculative-decoding
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/19-emerging-techniques/speculative-decoding
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: speculative-decoding
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: speculative-decoding skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/19-emerging-techniques/speculative-decoding
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

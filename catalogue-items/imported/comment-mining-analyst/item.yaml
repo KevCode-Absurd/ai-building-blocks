@@ -1,0 +1,35 @@
+slug: comment-mining-analyst
+name: Comment mining analyst
+summary: Give it social posts. Get what people ask, complain about and want, in their own words. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: voc_reviews
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:ScrapeCreators
+source:
+  by: ScrapeCreators
+  repo: ScrapeCreators/social-media-research-skills
+  path: skills/comment-mining
+  url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/comment-mining
+  licence: MIT
+  licence_file: LICENSE
+  commit: 64ba7b4
+  original_name: comment-mining
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: comment-mining skill
+    by: ScrapeCreators
+    url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/comment-mining
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

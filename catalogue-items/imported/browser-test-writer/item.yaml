@@ -1,0 +1,32 @@
+slug: browser-test-writer
+name: Browser test writer
+summary: Describe a user story or page. Get Playwright tests written for it that you can run.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/playwright-pro/skills/generate
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/playwright-pro/skills/generate
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: generate
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: generate skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/playwright-pro/skills/generate
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

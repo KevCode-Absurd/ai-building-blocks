@@ -1,0 +1,32 @@
+slug: financial-data-pack-builder
+name: Financial data pack builder
+summary: Give it a deal document or filing. Get its financials pulled into a clean, standard Excel data pack.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/investment-banking/skills/datapack-builder
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/investment-banking/skills/datapack-builder
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: datapack-builder
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: datapack-builder skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/investment-banking/skills/datapack-builder
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

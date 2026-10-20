@@ -1,0 +1,455 @@
+# Gareth Manning education-agent-skills, part 3 of 3. CC BY-SA 4.0, copies kept as they are.
+"GarethManning/education-agent-skills:skills/professional-learning/panel-review":
+  skip: "Scores the repo's own framework files with a seven-role panel, so it only works inside that set of skills."
+"GarethManning/education-agent-skills:skills/original-frameworks/three-horizons-learning-transition-mapper":
+  skip: "Early-stage theory framework with thin evidence, and the repo marks it emerging."
+"GarethManning/education-agent-skills:skills/systems-thinking/aspirational-systems-iceberg":
+  skip: "Near-copy of the systems awareness iceberg skill, run toward a future goal."
+"GarethManning/education-agent-skills:skills/systems-thinking/systems-wellbeing-impact-mapper":
+  skip: "Early-stage framework for wellbeing concerns with thin evidence, and it edges toward advice on individuals."
+"GarethManning/education-agent-skills:skills/systems-thinking/ladder-of-inference-reflection":
+  skip: "Overlaps the mental model mapper, which covers the same job with more output."
+"GarethManning/education-agent-skills:skills/systems-thinking/hexagon-complexity-mapper":
+  skip: "Early-stage classroom activity with thin evidence and no document output."
+"GarethManning/education-agent-skills:skills/student-learning/weekly-agency-review":
+  skip: "Needs records built up by other skills in this repo, so it does not work alone."
+"GarethManning/education-agent-skills:skills/student-learning/fading-manager":
+  skip: "Needs performance tracked across sessions by other skills in this repo, so it does not work alone."
+"GarethManning/education-agent-skills:skills/student-learning/unassisted-evidence-checkpoint":
+  skip: "Only a step inside the repo's own tutoring flow, with no output of its own."
+"GarethManning/education-agent-skills:skills/self-regulated-learning/self-regulation-scaffold-generator":
+  skip: "Near-copy of the metacognitive prompt library and session wrapper skills."
+"GarethManning/education-agent-skills:skills/wellbeing-motivation-agency/trauma-informed-practice-designer":
+  skip: "Works from a student's possible trauma, which edges into diagnosing a child. Left out on purpose."
+"GarethManning/education-agent-skills:skills/wellbeing-motivation-agency/awe-wonder-experience-designer":
+  skip: "Early-stage idea with thin evidence and little a teacher can use beyond a prompt."
+"GarethManning/education-agent-skills:skills/original-frameworks/single-point-rubric-designer":
+  name: Single-point rubric builder
+  summary: "Give it a learning goal. Get a one-criterion rubric with open columns for evidence, ready for feedback or self-assessment."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must turn a goal into clear, checkable criteria."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]
+"GarethManning/education-agent-skills:skills/professional-learning/competency-framework-translator":
+  name: Competency framework translator
+  summary: "Give it a framework like DigComp or ISTE. Get classroom activities that teach each skill in it."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must turn broad standards into specific activities."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/professional-learning/instructional-coaching-conversation-guide":
+  name: Teaching coach conversation guide
+  summary: "Give it a teaching focus. Get questions, a conversation flow and follow-up actions for a coaching session."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It shapes the questions around one focus."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/professional-learning/lesson-observation-protocol-designer":
+  name: Lesson observation form builder
+  summary: "Give it what you want to learn from a visit. Get look-fors and a way to record evidence."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must pick look-fors that match the goal."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]
+"GarethManning/education-agent-skills:skills/professional-learning/lesson-study-cycle-designer":
+  name: Lesson study cycle planner
+  summary: "Give it a teaching question. Get a full lesson study plan, from shared planning to the research lesson."
+  task: teach-and-train
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It sequences a long cycle with many linked steps."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/professional-learning/pedagogical-content-knowledge-developer":
+  name: Hard topic teaching guide
+  summary: "Give it a topic you find hard to teach. Get common mistakes and the best ways to explain it."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must name real misconceptions and match examples to them."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]
+"GarethManning/education-agent-skills:skills/professional-learning/professional-development-session-designer":
+  name: Staff training session planner
+  summary: "Give it a training goal. Get a session plan for teachers that uses adult learning methods."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It balances time, activities and goals."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/professional-learning/reflective-practice-prompt-generator":
+  name: Teaching reflection prompt writer
+  summary: "Give it a lesson or a challenge. Get questions that help you reflect on it and decide what to change."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It writes prompts from one clear situation."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: question}]
+"GarethManning/education-agent-skills:skills/professional-learning/teacher-inquiry-cycle-designer":
+  name: Classroom action research planner
+  summary: "Give it a question about your teaching. Get a plan to collect evidence and act on what you find."
+  task: teach-and-train
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It links a question, data and action into a sound plan."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/professional-learning/technological-pedagogical-content-knowledge-developer":
+  name: Classroom tech fit checker
+  summary: "Give it a tool or AI app and a subject. Get a check of how well it fits your teaching, with changes."
+  task: teach-and-train
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs the tool against the teaching goal."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]
+"GarethManning/education-agent-skills:skills/questioning-discussion/dialogic-teaching-move-generator":
+  name: Follow-up question writer
+  summary: "Give it what a student just said. Get follow-up moves that push their thinking further."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It reacts to one short answer."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: question}]
+"GarethManning/education-agent-skills:skills/questioning-discussion/discussion-protocol-selector":
+  name: Class discussion format picker
+  summary: "Give it your topic and group. Get the discussion format that fits, with steps to run it."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It matches a format to the purpose and group."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/questioning-discussion/hinge-question-designer":
+  name: Check-for-understanding question writer
+  summary: "Give it a lesson point. Get a quick question that shows who understands and who needs more help."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Wrong answers must reveal specific mistakes."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: question}]
+"GarethManning/education-agent-skills:skills/questioning-discussion/perspective-taking-designer":
+  name: Perspective-taking activity builder
+  summary: "Give it a topic in history, social science or literature. Get an activity that builds real understanding of other views."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must avoid guessing at what others feel."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/questioning-discussion/socratic-questioning-sequence-generator":
+  name: Socratic question sequence writer
+  summary: "Give it an idea to explore. Get a series of questions that leads learners to work out the answer."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Each question must build on the last."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: question}]
+"GarethManning/education-agent-skills:skills/self-regulated-learning/error-analysis-protocol":
+  name: Student mistake analyser
+  summary: "Give it a set of student errors. Get the likely causes and the feedback or teaching that fixes each one."
+  task: teach-and-train
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It looks for patterns and root causes in mistakes."
+  inputs: [{type: document, required: true}]
+  outputs: [{type: feedback_notes}]
+"GarethManning/education-agent-skills:skills/self-regulated-learning/goal-setting-protocol-designer":
+  name: Student goal-setting routine builder
+  summary: "Give it a unit or project. Get a routine where students set clear goals and plan to reach them."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It adapts a goal-setting method to your class."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/self-regulated-learning/metacognitive-prompt-library":
+  name: Thinking-about-thinking prompt set
+  summary: "Give it a task. Get prompts for planning, checking and reviewing work that students can use alone."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It writes short prompts for one task."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: question}]
+"GarethManning/education-agent-skills:skills/self-regulated-learning/study-strategy-selector":
+  name: Study strategy picker
+  summary: "Give it the material and the goal. Get study methods that fit, with steps for how to use them."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It matches known methods to the material."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/student-learning/ai-claim-checker":
+  name: AI answer doubt check
+  summary: "After any AI explanation, you name one place it could be wrong, one thing to check and one source to try."
+  task: research-topics
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It asks short questions after each answer."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: question}]
+"GarethManning/education-agent-skills:skills/student-learning/confidence-calibration-check":
+  name: Confidence check coach
+  summary: "Rate how sure you are before and after you try something. See where you guess too high or too low."
+  task: teach-and-train
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It compares two ratings with the result."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: feedback_notes}]
+"GarethManning/education-agent-skills:skills/student-learning/explain-first-interrogator":
+  name: Explain-it-first tutor
+  summary: "Explain an idea in your own words first. Your AI then builds on what you said, not a stock lesson."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It must respond to what you actually understood."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: feedback_notes}]
+"GarethManning/education-agent-skills:skills/student-learning/productive-failure-protocol":
+  name: Try-first problem tutor
+  summary: "Try a hard problem two ways before any teaching. Your AI then builds the lesson from your attempts."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It uses your attempts to shape the teaching."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: feedback_notes}]
+"GarethManning/education-agent-skills:skills/student-learning/progressive-hint-ladder":
+  name: Step-by-step hint tutor
+  summary: "Get help in small steps, from a nudge to a full step. You reflect before each bigger hint."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It gives one small hint at a time."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: feedback_notes}]
+"GarethManning/education-agent-skills:skills/student-learning/retrieve-first-gate":
+  name: Recall-first study tutor
+  summary: "Write what you remember and rate your confidence first. Your AI then fills gaps instead of repeating what you know."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It reads your recall before it explains."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: feedback_notes}]
+"GarethManning/education-agent-skills:skills/student-learning/srl-session-wrapper":
+  name: Study session planner and review
+  summary: "Set goals at the start, check your method halfway, and note what changed at the end of a study session."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a fixed plan, check and review loop."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/student-learning/stuck-and-error-diagnosis-coach":
+  name: Stuck-point diagnosis coach
+  summary: "When you are stuck or wrong, work out why first. Then get help aimed at the real gap."
+  task: teach-and-train
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It must find the real gap behind an error."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: feedback_notes}]
+"GarethManning/education-agent-skills:skills/student-learning/teach-back-evaluator":
+  name: Teach-back practice partner
+  summary: "Teach an idea to your AI, which plays a curious beginner. Get the gaps shown by its honest questions."
+  task: teach-and-train
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It asks natural questions that expose gaps."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: feedback_notes}]
+"GarethManning/education-agent-skills:skills/student-learning/transfer-bridge":
+  name: Skill transfer challenge writer
+  summary: "Give it something a learner has mastered. Get near and far challenges that show if it carries to new tasks."
+  task: teach-and-train
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must design tasks at two distances."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: question}]
+"GarethManning/education-agent-skills:skills/systems-thinking/agency-circles-for-systems-action":
+  name: Control and influence circles map
+  summary: "Give it a big problem. Get what students control, can influence or only care about, so they act where it counts."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts each factor into the right circle."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]
+"GarethManning/education-agent-skills:skills/systems-thinking/leverage-and-response-design":
+  name: Intervention impact planner
+  summary: "Give it a systems analysis and ideas for action. Get each ranked by impact, with side effects and better options."
+  task: teach-and-train
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It must test ideas for knock-on effects."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/systems-thinking/mental-model-mapper":
+  name: Hidden belief mapper
+  summary: "Give it a topic or system. Get the beliefs, stories and values that shape it, each checked against evidence."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "It separates assumptions from evidence with care."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]
+"GarethManning/education-agent-skills:skills/systems-thinking/systems-awareness-iceberg":
+  name: Event-to-pattern iceberg builder
+  summary: "Give it a current event. Get the patterns, structures and beliefs under it, laid out as an iceberg."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It digs through levels from event to belief."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]
+"GarethManning/education-agent-skills:skills/wellbeing-motivation-agency/agency-scaffold-generator":
+  name: Student choice and ownership planner
+  summary: "Give it a task students rely on you for. Get steps that hand over more choice and voice over time."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must raise student ownership in small steps."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/wellbeing-motivation-agency/belonging-classroom-culture-designer":
+  name: Classroom belonging planner
+  summary: "Describe a class dynamic like cliques or new students. Get actions that help everyone feel part of the group."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It matches actions to the situation."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/wellbeing-motivation-agency/flow-state-condition-designer":
+  name: Task engagement tuner
+  summary: "Give it a task students find dull or stressful. Get changes to challenge, goals and feedback that improve focus."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It balances challenge against skill."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/wellbeing-motivation-agency/implementation-intention-designer":
+  name: If-then habit plan writer
+  summary: "Give it a goal a student struggles to follow through on. Get if-then plans and a simple obstacle plan."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It writes short plans from one goal."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/wellbeing-motivation-agency/motivation-diagnostic-task-redesign":
+  name: Low-motivation task redesigner
+  summary: "Give it a task students resist. Get why it drains motivation and a redesign built on choice, success and connection."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads the task, not the students, to find the cause."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/wellbeing-motivation-agency/perma-based-lesson-designer":
+  name: Lesson plan with wellbeing built in
+  summary: "Give it a topic and goals. Get a lesson that teaches the content and builds student wellbeing. Not medical advice."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must weave content and wellbeing into one lesson."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/wellbeing-motivation-agency/restorative-practice-protocol-designer":
+  name: Restorative conversation planner
+  summary: "Describe a conflict between students. Get steps to repair trust and relationships. Not legal or medical advice."
+  task: teach-and-train
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It must handle harm and fairness with care."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/wellbeing-motivation-agency/ruler-emotional-literacy-sequence":
+  name: Emotional skills lesson sequence
+  summary: "Give it your class and goal. Get lessons on naming and handling feelings. Not medical or clinical advice."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It builds a lesson sequence in a set order."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/wellbeing-motivation-agency/self-efficacy-builder-sequence":
+  name: Confidence-building task ladder
+  summary: "Give it a skill students avoid. Get a ladder of small wins that builds confidence. Not medical advice."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Each step must be hard enough to matter and easy enough to win."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"GarethManning/education-agent-skills:skills/wellbeing-motivation-agency/wellbeing-learning-connection-mapper":
+  name: Wellbeing and learning link mapper
+  summary: "Give it a wellbeing programme. Get the evidence linking it to academic results, for reports and funding cases. Not medical advice."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must link claims to real evidence."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]

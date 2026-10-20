@@ -1,0 +1,39 @@
+slug: brand-voice-guide-builder
+name: Brand voice guide builder
+summary: Give it your documents or call transcripts. Get a brand voice guide with rules, examples and open questions.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: brand_guide
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: partner-built/brand-voice/skills/guideline-generation
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/brand-voice/skills/guideline-generation
+  licence: MIT
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: guideline-generation
+  author: Tribe AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: guideline-generation skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/brand-voice/skills/guideline-generation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tribe AI
+    url: ""
+    used: Wrote the skill; Anthropic shared it in their collection.

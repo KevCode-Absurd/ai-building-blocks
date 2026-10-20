@@ -1,0 +1,208 @@
+# himself65/finance-skills. Tools that explain or calculate; none give buy or sell advice.
+"himself65/finance-skills:plugins/data-providers/skills/finance-sentiment":
+  name: Stock chatter tracker
+  summary: Give it stock tickers. Get how much Reddit, X, news and Polymarket talk about each, and whether the mood is rising.
+  task: money-and-investing
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It fetches numbers and reports them side by side.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and use your Adanos API key
+"himself65/finance-skills:plugins/data-providers/skills/fintel-data":
+  name: Ownership and short interest lookup
+  summary: Ask about a stock. Get short interest, big fund owners, insider filings, analyst targets and dividend dates from Fintel.
+  task: money-and-investing
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It looks up facts and lists them clearly.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: use your Fintel API key or MCP connection
+"himself65/finance-skills:plugins/data-providers/skills/hormuz-strait":
+  name: Hormuz shipping status reader
+  summary: Ask about the Strait of Hormuz. Get open or closed status, ship counts and oil price impact. Collects data from websites.
+  task: money-and-investing
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It fetches set figures and reports them.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run commands
+  scrapes: true
+"himself65/finance-skills:plugins/data-providers/skills/hyperliquid-reader":
+  name: Hyperliquid market data reader
+  summary: Give it a coin. Get prices, funding rates, open interest and the order book. Collects data from websites.
+  task: money-and-investing
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It fetches market numbers and lays them out.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run commands
+  scrapes: true
+"himself65/finance-skills:plugins/data-providers/skills/tradingview-mcp":
+  skip: Its main output is buy and sell ratings from an unofficial TradingView route, so we leave it out.
+"himself65/finance-skills:plugins/data-providers/skills/tradingview-reader":
+  skip: Reads the TradingView desktop app through opencli, a logged-in app route.
+"himself65/finance-skills:plugins/market-analysis/skills/company-valuation":
+  name: Company fair value modeler
+  summary: Give it a stock ticker. Get a fair value range from three methods, with a sensitivity grid. Collects data from websites.
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It blends three models and the answer depends on careful assumptions.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: audit_report } ]
+  needs: run code
+  scrapes: true
+"himself65/finance-skills:plugins/market-analysis/skills/earnings-preview":
+  name: Earnings preview writer
+  summary: Give it a stock ticker. Get the report date, what analysts expect, past surprises and what to watch. Collects data from websites.
+  task: money-and-investing
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It gathers set figures, then explains what they mean.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: run code
+  scrapes: true
+"himself65/finance-skills:plugins/market-analysis/skills/earnings-recap":
+  name: Earnings recap writer
+  summary: Give it a stock ticker. Get actual versus expected results, margin trends and how the share price reacted. Collects data from websites.
+  task: money-and-investing
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It compares set figures, then explains the gap.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: run code
+  scrapes: true
+"himself65/finance-skills:plugins/market-analysis/skills/estimate-analysis":
+  name: Analyst estimate reader
+  summary: Give it a stock ticker. Get how analyst profit and sales forecasts are changing and where they differ. Collects data from websites.
+  task: money-and-investing
+  role: compress
+  level: advanced
+  thinking: medium
+  thinking_why: It reads trends across many periods and sources.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: run code
+  scrapes: true
+"himself65/finance-skills:plugins/market-analysis/skills/etf-premium":
+  name: ETF price gap calculator
+  summary: Give it an ETF ticker. Get how far its price sits above or below its holdings, and why. Collects data from websites.
+  task: set-prices
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It calculates a gap, then weighs the likely causes.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+  scrapes: true
+"himself65/finance-skills:plugins/market-analysis/skills/options-payoff":
+  name: Options payoff chart maker
+  summary: Give it your option strikes and prices. Get a chart of what the trade earns or loses. Collects data from websites.
+  task: money-and-investing
+  role: render
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows set pricing formulas and builds a chart.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: web_app } ]
+  needs: run code and open a browser
+  scrapes: true
+"himself65/finance-skills:plugins/market-analysis/skills/saas-valuation-compression":
+  name: Funding round multiple analyst
+  summary: Give it a software company. Get how its value multiple changed across funding rounds and what drove the shift.
+  task: money-and-investing
+  role: compress
+  level: advanced
+  thinking: high
+  thinking_why: It researches several rounds and weighs many possible causes.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: search the web
+"himself65/finance-skills:plugins/market-analysis/skills/sepa-strategy":
+  skip: Built to say when to buy a stock, so its main output is trade advice.
+"himself65/finance-skills:plugins/market-analysis/skills/stock-correlation":
+  name: Stock co-movement checker
+  summary: Give it a stock or group. Get which stocks move with it and how closely that link holds. Collects data from websites.
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It runs set statistics and explains the pattern.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+  scrapes: true
+"himself65/finance-skills:plugins/market-analysis/skills/stock-liquidity":
+  name: Stock trading cost checker
+  summary: Give it a stock. Get how easy it is to trade and what a big order may cost. Collects data from websites.
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It calculates costs with set formulas, then grades them.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+  scrapes: true
+"himself65/finance-skills:plugins/market-analysis/skills/yfinance-data":
+  name: Stock data fetcher
+  summary: Give it a ticker. Get prices, statements, options and holdings from Yahoo Finance. Collects data from websites.
+  task: money-and-investing
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It fetches set figures and tables.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: run code
+  scrapes: true
+"himself65/finance-skills:plugins/skill-creator/skills/skill-creator":
+  skip: Repeats Anthropic's skill creator, which we already list as Skill writer.
+"himself65/finance-skills:plugins/social-readers/skills/discord-reader":
+  skip: Reads Discord through a logged-in app route, which breaks our no-logins rule.
+"himself65/finance-skills:plugins/social-readers/skills/linkedin-reader":
+  skip: Reads LinkedIn through a logged-in browser route, which breaks our no-logins rule.
+"himself65/finance-skills:plugins/social-readers/skills/opencli-reader":
+  skip: Reads many sites through a logged-in browser route, which breaks our no-logins rule.
+"himself65/finance-skills:plugins/social-readers/skills/telegram-reader":
+  skip: Exports messages from a logged-in Telegram account, which breaks our no-logins rule.
+"himself65/finance-skills:plugins/social-readers/skills/twitter-reader":
+  skip: Reads X through a logged-in browser route, which breaks our no-logins rule.
+"himself65/finance-skills:plugins/social-readers/skills/yc-reader":
+  skip: A social reader pack skill, left out with the rest of that group.
+"himself65/finance-skills:plugins/startup-tools/skills/startup-analysis":
+  name: Startup due diligence reviewer
+  summary: Name a startup. Get its market, traction, money and team reviewed from an investor, job seeker and founder view.
+  task: money-and-investing
+  role: compress
+  level: intermediate
+  thinking: high
+  thinking_why: It researches many areas and weighs them from three views.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: search the web
+"himself65/finance-skills:plugins/ui-tools/skills/generative-ui":
+  name: Interactive visual builder
+  summary: Describe what to show. Get a chart, diagram or explainer with sliders and toggles, ready to open in a browser.
+  task: design-work
+  role: render
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a set design system but makes many layout choices.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: web_app } ]
+  needs: open a browser

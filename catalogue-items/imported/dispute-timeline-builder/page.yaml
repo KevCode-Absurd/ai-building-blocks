@@ -1,0 +1,13 @@
+thinking: medium
+thinking_why: It pulls dates from many files and removes repeats.
+new_slug: dispute-timeline-builder
+name: Dispute timeline builder
+summary: Give it your emails and documents. Get a dated timeline of what happened, with key events marked. First check, not legal advice.
+job: check-contracts
+headline: Dispute timeline builder
+subhead: Give it your emails and documents. Get a dated timeline of what happened, with key events marked. First check, not legal advice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your saved legal setup notes and your files.
+  - Where the skill points to /litigation-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.

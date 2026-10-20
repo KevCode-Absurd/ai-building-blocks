@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It must read details out of a design.
+new_slug: developer-handoff-spec-writer
+name: Developer handoff spec writer
+summary: Share a finished design. Get a spec for layout, tokens, component props, states, breakpoints and edge cases.
+job: design-work
+headline: Developer handoff spec writer
+subhead: Share a finished design. Get a spec for layout, tokens, component props, states, breakpoints and edge cases.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can open images or Figma links.

@@ -1,0 +1,37 @@
+slug: agent-prompt-writer
+name: Agent prompt writer
+summary: Paste a rough request. Answer a few questions. Get one clear prompt to give an AI agent.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/kernel-prompt
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/kernel-prompt
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: kernel-prompt
+  author: codegiveness
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: kernel-prompt skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/kernel-prompt
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: codegiveness
+    url: https://github.com/codegiveness
+    used: Wrote the skill; sickn33 shared it in their collection.

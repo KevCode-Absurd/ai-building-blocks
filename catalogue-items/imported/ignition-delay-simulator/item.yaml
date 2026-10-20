@@ -1,0 +1,33 @@
+slug: ignition-delay-simulator
+name: Ignition delay simulator
+summary: Give it a fuel mix, heat and pressure. Get an ignition delay with checks that the result is sound.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/cantera
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/cantera
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: cantera
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cantera skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/cantera
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,40 @@
+# Weizhena/Deep-Research-skills, English set only (MIT). The Chinese and Codex copies are the same five skills.
+"Weizhena/Deep-Research-skills:skills/research-en/research":
+  name: Research outline builder
+  summary: "Give it a topic. Get a list of items to compare and questions to answer for each, found online. Scrapes sites."
+  task: research-topics
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans the list of items and fields, then checks them online.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: search the web and save files
+  scrapes: true
+"Weizhena/Deep-Research-skills:skills/research-en/research-deep":
+  name: Item-by-item researcher
+  summary: "Give it your research outline. Get a checked file for every item, with each answer filled in or marked unsure. Scrapes sites."
+  task: research-topics
+  role: source
+  level: advanced
+  thinking: high
+  thinking_why: It runs many searches and marks what it could not confirm.
+  inputs: [ { type: plan, required: true } ]
+  outputs: [ { type: shortlist } ]
+  needs: search the web, run code and save files
+  scrapes: true
+"Weizhena/Deep-Research-skills:skills/research-en/research-report":
+  name: Research results report builder
+  summary: Give it your research files. Get one report with a contents list and every checked answer. Unsure ones are left out.
+  task: research-topics
+  role: compress
+  level: intermediate
+  thinking: low
+  thinking_why: It follows a fixed recipe to merge files.
+  inputs: [ { type: shortlist, required: true } ]
+  outputs: [ { type: document } ]
+  needs: run Python code and save files
+"Weizhena/Deep-Research-skills:skills/research-en/research-add-items":
+  skip: Thin helper that only edits the outline file made by the research skill
+"Weizhena/Deep-Research-skills:skills/research-en/research-add-fields":
+  skip: Thin helper that only edits the fields file made by the research skill

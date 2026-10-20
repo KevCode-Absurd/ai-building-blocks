@@ -1,0 +1,32 @@
+slug: ship-ready-docs-writer
+name: Ship-ready docs writer
+summary: "Point it at an AI-built app. Get the short set of docs a reviewer needs: architecture, permissions, secrets and test map."
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-ai-shipping/skills/shipping-artifacts
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-ai-shipping/skills/shipping-artifacts
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: shipping-artifacts
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shipping-artifacts skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-ai-shipping/skills/shipping-artifacts
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

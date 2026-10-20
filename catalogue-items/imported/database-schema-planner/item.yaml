@@ -1,0 +1,32 @@
+slug: database-schema-planner
+name: Database schema planner
+summary: Describe your data. Get a clean schema, migration plan and query advice, with SQL or NoSQL guidance.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/database-designer
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/database-designer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: database-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: database-designer skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/database-designer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

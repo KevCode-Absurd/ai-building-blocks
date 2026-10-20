@@ -1,0 +1,37 @@
+slug: interactive-chart-maker
+name: Interactive chart maker
+summary: Give it your data. Get an interactive Plotly chart with hover, zoom and pan that you can embed in a page.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/plotly
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/plotly
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: plotly
+  author: K-Dense Inc.
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: plotly skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/plotly
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: K-Dense Inc.
+    url: https://github.com/K-Dense-AI
+    used: Wrote the skill; sickn33 shared it in their collection.

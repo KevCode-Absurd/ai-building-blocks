@@ -1,0 +1,40 @@
+slug: sales-battlecard-builder
+name: Sales battlecard builder
+summary: Name your rival. Get a battlecard with comparisons, reply scripts, positioning and win themes.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: competitor_set
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: sales/competitive-battlecard-creation
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/sales/competitive-battlecard-creation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: competitive-battlecard-creation
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: competitive-battlecard-creation skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/sales/competitive-battlecard-creation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

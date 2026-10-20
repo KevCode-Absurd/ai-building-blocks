@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It defines fields, then fills them from product data.
+new_slug: product-attribute-field-setter
+name: Product attribute field setter
+summary: Say which product facts matter. Get fields for material, specs and sizing filled in, so AI can match products. Changes live data.
+job: build-websites
+headline: Product attribute field setter
+subhead: Say which product facts matter. Get fields for material, specs and sizing filled in, so AI can match products. Changes live data.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin and change it.

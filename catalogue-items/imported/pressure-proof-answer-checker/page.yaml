@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It must spot pressure tactics and weigh the evidence.
+new_slug: pressure-proof-answer-checker
+name: Pressure-proof answer checker
+summary: Use it when someone pushes your AI to agree or sign off. Get answers that separate evidence from pressure.
+job: think-and-decide
+headline: Pressure-proof answer checker
+subhead: Use it when someone pushes your AI to agree or sign off. Get answers that separate evidence from pressure.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

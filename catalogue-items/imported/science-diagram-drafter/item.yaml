@@ -1,0 +1,34 @@
+slug: science-diagram-drafter
+name: Science diagram drafter
+summary: Describe a diagram. Get a draft of a network, pathway or flowchart, reviewed and refined once or twice.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+warnings:
+  - paid:OpenRouter
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/scientific-schematics
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scientific-schematics
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: scientific-schematics
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: scientific-schematics skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scientific-schematics
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

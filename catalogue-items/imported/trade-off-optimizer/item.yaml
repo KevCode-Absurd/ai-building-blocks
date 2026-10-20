@@ -1,0 +1,33 @@
+slug: trade-off-optimizer
+name: Trade-off optimizer
+summary: Describe goals that pull against each other. Get a set of best trade-off answers, checked against known test problems.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+  - type: image
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/pymoo
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/pymoo
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: pymoo
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pymoo skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/pymoo
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

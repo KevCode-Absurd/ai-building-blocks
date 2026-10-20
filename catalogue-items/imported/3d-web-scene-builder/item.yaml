@@ -1,0 +1,32 @@
+slug: 3d-web-scene-builder
+name: 3D web scene builder
+summary: Describe the scene or product viewer. Get a working 3D page with fast loading and a fallback.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/3d-web-experience
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/3d-web-experience
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: 3d-web-experience
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: 3d-web-experience skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/3d-web-experience
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

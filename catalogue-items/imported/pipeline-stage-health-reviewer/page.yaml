@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It checks numbers and flags what looks off.
+new_slug: pipeline-stage-health-reviewer
+name: Pipeline stage health reviewer
+summary: Ask for a pipeline review. Get coverage, aging, conversion and at-risk deals stage by stage.
+job: sell-and-negotiate
+headline: Pipeline stage health reviewer
+subhead: Ask for a pipeline review. Get coverage, aging, conversion and at-risk deals stage by stage.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your CRM.

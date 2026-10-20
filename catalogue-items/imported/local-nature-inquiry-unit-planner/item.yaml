@@ -1,0 +1,38 @@
+slug: local-nature-inquiry-unit-planner
+name: Local nature inquiry unit planner
+summary: Name a nearby garden, pond or hedge. Get a unit that teaches your science or geography goals through it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/environmental-experiential-learning/ecological-inquiry-anchor-designer
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/environmental-experiential-learning/ecological-inquiry-anchor-designer
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: ecological-inquiry-anchor-designer
+  author: Gareth Manning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ecological-inquiry-anchor-designer skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/environmental-experiential-learning/ecological-inquiry-anchor-designer
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Gareth Manning
+    url: https://github.com/GarethManning
+    used: Wrote the skill; Gareth Manning shared it in their collection.

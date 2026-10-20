@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It plans the stack, then builds from set steps.
+new_slug: spec-to-starter-repo-builder
+name: Spec to starter repo builder
+summary: Give it a written spec. Get a new project folder with the structure, setup and first working code.
+job: build-software
+headline: Spec to starter repo builder
+subhead: Give it a written spec. Get a new project folder with the structure, setup and first working code.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and save files.

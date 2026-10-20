@@ -1,0 +1,41 @@
+slug: competitor-messaging-comparer
+name: Competitor messaging comparer
+summary: Name your rivals. Get a messaging and positioning comparison with content gaps. Reads public web pages.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: competitor_set
+    required: false
+  - type: question
+    required: false
+outputs:
+  - type: competitor_set
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: marketing/skills/competitive-brief
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing/skills/competitive-brief
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: competitive-brief
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: competitive-brief skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing/skills/competitive-brief
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

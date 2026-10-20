@@ -1,0 +1,39 @@
+slug: slow-system-investigator
+name: Slow system investigator
+summary: Describe a slow or failing system. Get a checked list of causes and a clear incident report.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/brendangregg-use-tsa
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/brendangregg-use-tsa
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: brendangregg-use-tsa
+  author: Brendan Gregg
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: brendangregg-use-tsa skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/brendangregg-use-tsa
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Brendan Gregg
+    url: https://www.brendangregg.com
+    used: Wrote the skill; sickn33 shared it in their collection.

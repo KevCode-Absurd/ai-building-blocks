@@ -1,0 +1,32 @@
+slug: security-incident-triager
+name: Security incident triager
+summary: Give it a security alert. Get severity, who to tell, what to preserve and the next steps.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/skills/incident-response
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/incident-response
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: incident-response
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: incident-response skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/incident-response
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

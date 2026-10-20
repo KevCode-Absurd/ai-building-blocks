@@ -1,0 +1,33 @@
+slug: sample-size-planner
+name: Sample size planner
+summary: Say what effect you want to detect. Get how many subjects you need, with power curves you can put in a grant.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+  - type: image
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/statistical-power
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/statistical-power
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: statistical-power
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: statistical-power skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/statistical-power
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

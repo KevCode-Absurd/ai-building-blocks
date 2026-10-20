@@ -1,0 +1,32 @@
+slug: demand-letter-fact-gatherer
+name: Demand letter fact gatherer
+summary: Answer its questions about a dispute. Get a fact sheet ready for a demand letter. First check, not legal advice.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/claude-for-legal
+  path: litigation-legal/skills/demand-intake
+  url: https://github.com/anthropics/claude-for-legal/tree/main/litigation-legal/skills/demand-intake
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: 4a6c651
+  original_name: demand-intake
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: demand-intake skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/litigation-legal/skills/demand-intake
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

@@ -1,0 +1,33 @@
+slug: delivery-team-sprint-runner
+name: Delivery team sprint runner
+summary: Tell it your team and sprint. Get metrics, capacity plans, ceremony agendas and a sprint report for your PMO routine.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+  - type: document
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/sprint-operations
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/sprint-operations
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: sprint-operations
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: sprint-operations skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/sprint-operations
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

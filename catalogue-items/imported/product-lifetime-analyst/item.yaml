@@ -1,0 +1,33 @@
+slug: product-lifetime-analyst
+name: Product lifetime analyst
+summary: Give it failure or test data. Get life curves, failure rates and confidence ranges, worked out in MATLAB.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: code_change
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/ai-and-statistics/matlab-analyze-reliability
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-analyze-reliability
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-analyze-reliability
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-analyze-reliability skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-analyze-reliability
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

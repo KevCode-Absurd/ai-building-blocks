@@ -1,0 +1,32 @@
+slug: policy-page-drafter
+name: Policy page drafter
+summary: Give your business facts and country. Get a draft privacy policy, terms or cookie notice to send to a lawyer.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/legal-advisor
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/legal-advisor
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: legal-advisor
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: legal-advisor skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/legal-advisor
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

@@ -1,0 +1,37 @@
+slug: prospect-outreach-drafter
+name: Prospect outreach drafter
+summary: Name a prospect. Get a short personal email or sequence saved as a draft for you to review. You send it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/draft-outreach
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/draft-outreach
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: draft-outreach
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: draft-outreach skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/draft-outreach
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

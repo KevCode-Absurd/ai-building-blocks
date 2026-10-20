@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It plans how much help to remove at each step.
+new_slug: online-worked-example-builder
+name: Online worked example builder
+summary: Give it a skill. Get step-by-step worked examples for online lessons, with help that fades as students learn.
+job: teach-and-train
+headline: Online worked example builder
+subhead: Give it a skill. Get step-by-step worked examples for online lessons, with help that fades as students learn.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

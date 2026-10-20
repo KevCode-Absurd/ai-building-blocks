@@ -1,0 +1,33 @@
+slug: 30-60-90-day-onboarding-planner
+name: 30-60-90 day onboarding planner
+summary: Tell it the role and team. Get a 30, 60 and 90 day plan that gets a new person productive.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+  - type: document
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/team-onboarding-playbook
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/team-onboarding-playbook
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: team-onboarding-playbook
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: team-onboarding-playbook skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/team-onboarding-playbook
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

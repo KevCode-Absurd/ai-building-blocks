@@ -1,0 +1,32 @@
+slug: intercompany-balance-matcher
+name: Intercompany balance matcher
+summary: Give it each entity's balances. Get mismatches found, settlement netted and elimination entries drafted.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/intercompany-accounting
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/intercompany-accounting
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: intercompany-accounting
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: intercompany-accounting skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/intercompany-accounting
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

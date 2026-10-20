@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Forecast method choices change the answer.
+new_slug: headcount-forecast-builder
+name: Headcount forecast builder
+summary: Give it past headcount and goals. Get a forecast of hires and exits with a clear method and a range of error.
+job: hire-people
+headline: Headcount forecast builder
+subhead: Give it past headcount and goals. Get a forecast of hires and exits with a clear method and a range of error.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

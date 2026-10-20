@@ -1,0 +1,32 @@
+slug: buyout-returns-modeler
+name: Buyout returns modeler
+summary: Give it a company and deal terms. Get a buyout model with debt paydown and exit returns, IRR and MOIC.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/lbo-modeling
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/lbo-modeling
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: lbo-modeling
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: lbo-modeling skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/lbo-modeling
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

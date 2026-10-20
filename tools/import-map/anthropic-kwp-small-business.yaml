@@ -1,0 +1,366 @@
+# anthropics/knowledge-work-plugins, small-business (Anthropic, Apache 2.0). Most skills read ../../shared/*.md, a folder outside each skill, so copy shared/ next to the skills.
+
+"anthropics/knowledge-work-plugins:small-business/skills/ap-processor":
+  name: Vendor bill coder
+  summary: "Give it your vendor bills. Get each one read, coded and matched, with a payment run ready for your approval."
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads messy bills and judges where each one belongs."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/business-pulse":
+  name: Business snapshot writer
+  summary: "Connect what you use. Get a one-page view of cash, sales and open leads, plus the one thing to handle today."
+  task: plan-strategy
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It pulls from several sources and picks what matters most."
+  inputs: [ { type: spreadsheet, required: false } ]
+  outputs: [ { type: document } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/cash-flow-snapshot":
+  name: Cash forecast builder
+  summary: "Give it your invoices, bills and fixed costs. Get a 30, 60 and 90 day cash forecast with risks named."
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It projects timing from history and flags risks."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/content-strategy":
+  name: Sales-led content planner
+  summary: "Give it your sales data. Get a 30 day plan of what to push, what offers to run and what to hold."
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads sales patterns and turns them into priorities."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/crm-autopilot":
+  name: Deal notes and CRM updater
+  summary: "Give it your emails, calls and meetings. Get contacts and deals updated, quiet deals flagged and follow-ups drafted."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows set steps and judges what is worth logging."
+  inputs: [ { type: meeting_notes, required: false }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/grant-rfp-writer":
+  name: Grant and bid response writer
+  summary: "Say who you are. Get grants and bids worth chasing, a go or no-go call, and a draft response. Scrapes sites."
+  task: sell-and-negotiate
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It must judge fit and write a persuasive, accurate response."
+  inputs: [ { type: document, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "read your accounts and files"
+  scrapes: true
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/growth-pulse":
+  name: Growth health checker
+  summary: "Connect your sales and marketing data. Get a plain read on what is working and three actions for this week."
+  task: read-ad-results
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares channels and picks the actions that matter."
+  inputs: [ { type: spreadsheet, required: false } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/hiring-screener":
+  name: Applicant shortlist builder
+  summary: "Give it the job and the resumes. Get a ranked shortlist scored only on the job needs, with replies drafted."
+  task: hire-people
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It must score fairly and back every score with evidence."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: shortlist } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/inbox-manager":
+  name: Email backlog clearer
+  summary: "Point it at your inbox. Get what needs you, drafted replies in your voice, and deadlines pulled from long threads."
+  task: write-emails
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts by urgency and writes replies in your voice."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/inventory-planner":
+  name: Purchase order and reorder drafter
+  summary: "Give it sales and stock numbers. Get what to reorder and when, draft orders and slow movers to clear."
+  task: run-your-store
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It does the math but judges seasonality and risk."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/invoice-chase":
+  name: Unpaid invoice chaser
+  summary: "Give it your unpaid invoices. Get a reminder for each, gentle or firm to suit the customer. Nothing sends alone."
+  task: track-numbers
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a clear pattern and matches tone to payment history."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/job-post-builder":
+  name: Hiring packet builder
+  summary: "Give it your hiring brief. Get a job post, interview guide with scoring rubric, and an offer letter template."
+  task: hire-people
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It writes several linked documents from one brief."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/lead-triage":
+  name: Who to call first ranker
+  summary: "Give it your new leads. Get them ranked by fit and urgency, with talking points and follow-up drafts."
+  task: sell-and-negotiate
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs several signals and explains the order."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: shortlist } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/month-end-prep":
+  name: Books reconciler and P&L narrator
+  summary: "Give it your ledger and payment reports. Get mismatches, duplicates and missing receipts flagged, plus a plain P&L story."
+  task: track-numbers
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It must judge which differences matter and explain them."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report }, { type: document } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/outreach-composer":
+  name: Own-voice outreach writer
+  summary: "Give it your prospects. Get emails and follow-ups that sound like you, each tied to something specific about them."
+  task: write-emails
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It learns your voice and personalises each message."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: email_flow } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/payroll-prep":
+  name: Payroll timesheet checker
+  summary: "Give it your timesheets. Get hours totalled by person, every oddity flagged, and a run ready for your line by line approval."
+  task: hire-people
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Mistakes cost people money, so it checks carefully."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/proposal-builder":
+  name: Quote and proposal builder
+  summary: "Give it your call notes, photos or an RFP. Get a branded, costed proposal or quote in your own template."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "It prices from your history and writes to win."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/report-builder":
+  name: Recurring KPI report maker
+  summary: "Describe the report you want in plain words. Get the numbers pulled, a workbook, and a saved report to rerun."
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It defines metrics clearly and builds a repeatable sheet."
+  inputs: [ { type: spreadsheet, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/review-reputation":
+  name: Customer review reply writer
+  summary: "Give it your reviews and complaints. Get themes with quotes, a reply to each review, and customers at risk. Scrapes sites."
+  task: help-customers
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It finds themes and writes replies in your voice."
+  inputs: [ { type: voc_reviews, required: false } ]
+  outputs: [ { type: voc_reviews }, { type: copy_draft } ]
+  needs: "read your accounts and files"
+  scrapes: true
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/seo-ai-visibility":
+  name: Search and AI answer visibility auditor
+  summary: "Give it your website. Get what blocks you in Google and AI answers, with fixes. Scrapes sites."
+  task: get-found-in-search
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It tests many technical and content points."
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your accounts and files"
+  scrapes: true
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/social-content-engine":
+  name: Standing social calendar maker
+  summary: "Give it your brand and products. Get a rolling post calendar, captions in your voice and posts ready for approval."
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans ahead and writes in your voice."
+  inputs: [ { type: brand_brain, required: false } ]
+  outputs: [ { type: plan }, { type: copy_draft } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/speed-to-lead":
+  name: New inquiry reply drafter
+  summary: "Give it new inquiries. Get each one qualified and answered with a draft reply and real meeting times. You send it."
+  task: write-emails
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It judges lead quality and writes a fitting reply."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/ticket-deflector":
+  name: Customer reply and order checker
+  summary: "Forward a customer email. Get order status checked and a reply in your voice. Refunds only on your yes."
+  task: help-customers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It matches facts to policy and writes in your tone."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  needs: "read your accounts and files"
+  bring: [ { from: small-business/shared, to: shared, link: ../../shared/ } ]
+
+"anthropics/knowledge-work-plugins:small-business/skills/ad-manager":
+  skip: "Changes live ad accounts and ad spend, and overlaps the Ad spend analyst skill we already have."
+
+"anthropics/knowledge-work-plugins:small-business/skills/build-agent":
+  skip: "Builds and registers skills inside this plugin's router and team setup; needs the plugin around it."
+
+"anthropics/knowledge-work-plugins:small-business/skills/build-connector":
+  skip: "Sets up Zapier connections and handles credentials for the owner; plugin internals."
+
+"anthropics/knowledge-work-plugins:small-business/skills/brand-style":
+  skip: "Saves look and output settings to this plugin's business profile; works only inside the plugin."
+
+"anthropics/knowledge-work-plugins:small-business/skills/call-list":
+  skip: "Chains lead-triage and then books calendar time; lead-triage is listed on its own."
+
+"anthropics/knowledge-work-plugins:small-business/skills/canva-creator":
+  skip: "Runs a brief through Canva and stages sends in HubSpot; close to the standing social calendar skill listed here."
+
+"anthropics/knowledge-work-plugins:small-business/skills/close-month":
+  skip: "Chains month-end-prep, cash-flow-snapshot and report-builder; those are listed on their own."
+
+"anthropics/knowledge-work-plugins:small-business/skills/contract-review":
+  skip: "Legal review, and close to our Contract risk reviewer."
+
+"anthropics/knowledge-work-plugins:small-business/skills/grow-pipeline":
+  skip: "Chains lead-finder, outreach-composer and crm-autopilot; the useful parts are listed on their own."
+
+"anthropics/knowledge-work-plugins:small-business/skills/lead-finder":
+  skip: "Finds named contacts at other companies and collects their contact details."
+
+"anthropics/knowledge-work-plugins:small-business/skills/marketing-monday":
+  skip: "Chains growth-pulse and review-reputation with a competitor scan; the parts are listed on their own."
+
+"anthropics/knowledge-work-plugins:small-business/skills/monday-brief":
+  skip: "Chains business-pulse and report-builder; the parts are listed on their own."
+
+"anthropics/knowledge-work-plugins:small-business/skills/pay-the-bills":
+  skip: "Chains ap-processor and cash-flow-snapshot toward a payment run; the parts are listed on their own."
+
+"anthropics/knowledge-work-plugins:small-business/skills/plan-payroll":
+  skip: "Chains cash-flow-snapshot, invoice-chase and payroll-prep; the parts are listed on their own."
+
+"anthropics/knowledge-work-plugins:small-business/skills/reactivate":
+  skip: "Chains review-reputation, outreach-composer and crm-autopilot; the parts are listed on their own."
+
+"anthropics/knowledge-work-plugins:small-business/skills/report-pack":
+  skip: "Only reruns report-builder on a schedule with business-pulse; both are listed on their own."
+
+"anthropics/knowledge-work-plugins:small-business/skills/restock":
+  skip: "Near-copy of inventory-planner, which is listed."
+
+"anthropics/knowledge-work-plugins:small-business/skills/smb-onboard":
+  skip: "Setup tour for this plugin; works only inside it."
+
+"anthropics/knowledge-work-plugins:small-business/skills/smb-router":
+  skip: "Routes to this plugin's other skills; works only inside it."
+
+"anthropics/knowledge-work-plugins:small-business/skills/tax-prep":
+  skip: "Tax preparation with US tax math; skipped as tax advice territory."
+
+"anthropics/knowledge-work-plugins:small-business/skills/tax-season-organizer":
+  skip: "Works out estimated tax payments and contractor 1099 lists with W-9 data; skipped as tax advice territory."

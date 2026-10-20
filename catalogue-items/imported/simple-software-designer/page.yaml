@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Judging complexity takes careful reading of how code fits together.
+new_slug: simple-software-designer
+name: Simple software designer
+summary: Give it code or a design. Get complexity spotted and simpler, deeper modules suggested. Uses A Philosophy of Software Design.
+job: build-software
+headline: Simple software designer
+subhead: Give it code or a design. Get complexity spotted and simpler, deeper modules suggested. Uses A Philosophy of Software Design.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

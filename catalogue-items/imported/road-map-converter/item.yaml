@@ -1,0 +1,32 @@
+slug: road-map-converter
+name: Road map converter
+summary: Give it a Lanelet2 map. Get a RoadRunner HD map built from it, ready for simulation.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/automotive/roadrunner-convert-lanelet2-to-rrhd
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/automotive/roadrunner-convert-lanelet2-to-rrhd
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: roadrunner-convert-lanelet2-to-rrhd
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: roadrunner-convert-lanelet2-to-rrhd skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/automotive/roadrunner-convert-lanelet2-to-rrhd
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: cloud-misconfiguration-finder
+name: Cloud misconfiguration finder
+summary: Point it at your cloud setup files. Get open buckets, loose access rules and gaps ranked with fixes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/skills/cloud-security
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/cloud-security
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: cloud-security
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cloud-security skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/cloud-security
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

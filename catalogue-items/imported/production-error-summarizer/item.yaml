@@ -1,0 +1,32 @@
+slug: production-error-summarizer
+name: Production error summarizer
+summary: Ask about recent errors. Get the Sentry issues and events summed up with the key details.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/sentry
+  url: https://github.com/openai/skills/tree/main/skills/.curated/sentry
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: sentry
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: sentry skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/sentry
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

@@ -1,0 +1,37 @@
+slug: developer-onboarding-improver
+name: Developer onboarding improver
+summary: Describe your API sign-up path. Get a plan that cuts the time to a developer's first working call.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/api-onboarding
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/api-onboarding
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: api-onboarding
+  author: jonathimer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: api-onboarding skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/api-onboarding
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: jonathimer
+    url: https://github.com/jonathimer/devmarketing-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

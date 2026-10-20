@@ -1,0 +1,37 @@
+slug: linkedin-hook-post-writer
+name: LinkedIn hook post writer
+summary: Give a topic and angle. Get a LinkedIn post built on a tested opening line for your goal.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/linkedin-post-writer
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/linkedin-post-writer
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: linkedin-post-writer
+  author: sergebulaev
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: linkedin-post-writer skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/linkedin-post-writer
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: sergebulaev
+    url: https://github.com/sergebulaev
+    used: Wrote the skill; sickn33 shared it in their collection.

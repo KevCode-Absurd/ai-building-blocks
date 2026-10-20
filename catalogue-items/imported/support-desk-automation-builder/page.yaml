@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It plans and writes working code for your own tools.
+new_slug: support-desk-automation-builder
+name: Support desk automation builder
+summary: Tell it your help desk and billing tool. Get scripts, reply templates and a triage routine that drafts replies for your approval.
+job: help-customers
+headline: Support desk automation builder
+subhead: Tell it your help desk and billing tool. Get scripts, reply templates and a triage routine that drafts replies for your approval.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your help desk and billing API keys.

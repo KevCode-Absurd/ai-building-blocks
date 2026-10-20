@@ -1,0 +1,508 @@
+# K-Dense scientific-agent-skills, part 2 of 2 (skills nwb-conversion to zarr-python).
+
+"K-Dense-AI/scientific-agent-skills:skills/nwb-conversion":
+  skip: "Converts one narrow neuroscience file format, so it helps very few people."
+"K-Dense-AI/scientific-agent-skills:skills/omero-integration":
+  skip: "Only works with one microscopy server product."
+"K-Dense-AI/scientific-agent-skills:skills/onekgpd":
+  skip: "Queries one genome dataset, so it is a data lookup for a tiny audience."
+"K-Dense-AI/scientific-agent-skills:skills/open-notebook":
+  skip: "Only works with one self-hosted app."
+"K-Dense-AI/scientific-agent-skills:skills/optimize-for-gpu":
+  skip: "Near-copy of our GPU code speed tuner."
+"K-Dense-AI/scientific-agent-skills:skills/pacsomatic":
+  skip: "Runs one genomics pipeline, so it helps very few people."
+"K-Dense-AI/scientific-agent-skills:skills/paperclip":
+  skip: "Only works with one vendor's paper search tool."
+"K-Dense-AI/scientific-agent-skills:skills/paperzilla":
+  skip: "Only works with one vendor's command line tool."
+"K-Dense-AI/scientific-agent-skills:skills/parallel-web":
+  skip: "Mainly points to one paid search service, and research-lookup already covers it."
+"K-Dense-AI/scientific-agent-skills:skills/pathml":
+  skip: "Thin library wrapper for one pathology toolkit."
+"K-Dense-AI/scientific-agent-skills:skills/pennylane":
+  skip: "Thin library wrapper that lists calls for quantum circuits."
+"K-Dense-AI/scientific-agent-skills:skills/phylogenetics":
+  skip: "Licence listed as Unknown, so we cannot copy it."
+"K-Dense-AI/scientific-agent-skills:skills/pi-agent":
+  skip: "Only works inside one coding tool's internals."
+"K-Dense-AI/scientific-agent-skills:skills/polars":
+  skip: "Near-copy of our Fast data table analyst, and mostly an API list."
+"K-Dense-AI/scientific-agent-skills:skills/polars-bio":
+  skip: "Thin library wrapper for genomic file handling."
+"K-Dense-AI/scientific-agent-skills:skills/primekg":
+  skip: "Licence listed as Unknown, so we cannot copy it."
+"K-Dense-AI/scientific-agent-skills:skills/protocolsio-integration":
+  skip: "Only works with one protocol website's API."
+"K-Dense-AI/scientific-agent-skills:skills/pufferlib":
+  skip: "Thin library wrapper that lists calls for reinforcement learning."
+"K-Dense-AI/scientific-agent-skills:skills/pycalphad":
+  skip: "Thin wrapper for one materials library."
+"K-Dense-AI/scientific-agent-skills:skills/pydicom":
+  skip: "Thin library wrapper for medical image files."
+"K-Dense-AI/scientific-agent-skills:skills/pyhealth":
+  skip: "No licence line in the file, so we cannot confirm we may copy it. Also a thin library wrapper."
+"K-Dense-AI/scientific-agent-skills:skills/pylabrobot":
+  skip: "Thin library wrapper, and the Opentrons skill covers the same lab robot job."
+"K-Dense-AI/scientific-agent-skills:skills/pymatgen":
+  skip: "Thin library wrapper for one materials library."
+"K-Dense-AI/scientific-agent-skills:skills/pymc":
+  skip: "Near-copy of our Bayesian model builder from PyMC Labs."
+"K-Dense-AI/scientific-agent-skills:skills/pyopenms":
+  skip: "Thin library wrapper for mass spectrometry files."
+"K-Dense-AI/scientific-agent-skills:skills/pysam":
+  skip: "Thin library wrapper that lists calls for genomic files."
+"K-Dense-AI/scientific-agent-skills:skills/pytdc":
+  skip: "Thin dataset wrapper, and some of its datasets have non-commercial terms."
+"K-Dense-AI/scientific-agent-skills:skills/pytorch-lightning":
+  skip: "Near-copy of our Training loop tidier."
+"K-Dense-AI/scientific-agent-skills:skills/qiskit":
+  skip: "Thin library wrapper that lists calls for quantum circuits."
+"K-Dense-AI/scientific-agent-skills:skills/rdkit":
+  skip: "Thin library wrapper that lists chemistry calls."
+"K-Dense-AI/scientific-agent-skills:skills/relion":
+  skip: "Runs one cryo-EM program, so it helps very few people."
+"K-Dense-AI/scientific-agent-skills:skills/rowan":
+  skip: "Licence listed as Proprietary, so we cannot copy it."
+"K-Dense-AI/scientific-agent-skills:skills/scientific-slides":
+  skip: "Near-copy of our Conference talk slide maker."
+"K-Dense-AI/scientific-agent-skills:skills/scikit-bio":
+  skip: "Thin library wrapper that lists calls for microbiome data."
+"K-Dense-AI/scientific-agent-skills:skills/scikit-learn":
+  skip: "Mostly an API reference with no method of its own."
+"K-Dense-AI/scientific-agent-skills:skills/scvi-tools":
+  skip: "Near-copy of our Single-cell deep learning analyst."
+"K-Dense-AI/scientific-agent-skills:skills/seaborn":
+  skip: "Thin library wrapper, and our chart makers cover the job."
+"K-Dense-AI/scientific-agent-skills:skills/stable-baselines3":
+  skip: "Thin library wrapper that lists calls for reinforcement learning."
+"K-Dense-AI/scientific-agent-skills:skills/sympy":
+  skip: "Thin library wrapper, and our Symbolic math coder covers the job."
+"K-Dense-AI/scientific-agent-skills:skills/tamarind":
+  skip: "Mainly sells access to one paid platform."
+"K-Dense-AI/scientific-agent-skills:skills/tellurium":
+  skip: "Thin wrapper for one biochemistry modelling library."
+"K-Dense-AI/scientific-agent-skills:skills/tiledbvcf":
+  skip: "Thin wrapper for one genomics storage tool."
+"K-Dense-AI/scientific-agent-skills:skills/torch-geometric":
+  skip: "Thin library wrapper that lists calls for graph networks."
+"K-Dense-AI/scientific-agent-skills:skills/torchdrug":
+  skip: "Thin library wrapper for one drug discovery library."
+"K-Dense-AI/scientific-agent-skills:skills/transformers":
+  skip: "Thin library wrapper, and we already have model skills for this."
+"K-Dense-AI/scientific-agent-skills:skills/treatment-plans":
+  skip: "Formats clinical records, which is too risky to offer as a general skill."
+"K-Dense-AI/scientific-agent-skills:skills/umap-learn":
+  skip: "Thin library wrapper that lists calls."
+"K-Dense-AI/scientific-agent-skills:skills/vaex":
+  skip: "Near-copy of our Fast data table analyst."
+"K-Dense-AI/scientific-agent-skills:skills/waypoint-bio":
+  skip: "Only works with one company's models."
+"K-Dense-AI/scientific-agent-skills:skills/what-if-oracle":
+  skip: "Licence is CC BY-NC-SA, which blocks commercial use."
+"K-Dense-AI/scientific-agent-skills:skills/zarr-python":
+  skip: "Thin library wrapper that lists array storage calls."
+
+"K-Dense-AI/scientific-agent-skills:skills/ontology-term-resolution":
+  name: Science label to ontology ID matcher
+  summary: Give it lab terms like tissue or disease names. Get the matching ontology IDs, checked against the public lookup service.
+  task: research-topics
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It matches terms by lookup and checks each match, so little judgment is needed.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: spreadsheet}]
+  needs: call public web APIs and run code
+"K-Dense-AI/scientific-agent-skills:skills/openpiv":
+  name: Flow image velocity analyst
+  summary: Give it pairs of flow images. Get velocity fields, bad vectors fixed, and vorticity and turbulence numbers.
+  task: research-topics
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: It follows a set method but needs care when it rejects bad vectors.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: document}, {type: image}]
+  needs: run code and save files
+"K-Dense-AI/scientific-agent-skills:skills/opentrons-integration":
+  name: Lab robot protocol writer
+  summary: Describe the liquid handling you need. Get an Opentrons protocol that is simulated, reviewed and ready to run.
+  task: build-software
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: It follows the robot's rules and checks the protocol in a simulator.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/paper-lookup":
+  name: Scholarly database searcher
+  summary: Ask a research question. Get papers, preprints, citations and open full text from 18 free sources, with the search shown.
+  task: research-topics
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It runs searches across set sources and lists what each returned.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: source_text}, {type: shortlist}]
+  needs: call public web APIs
+"K-Dense-AI/scientific-agent-skills:skills/pathogen-variant-surveillance":
+  name: Virus variant trend reader
+  summary: Name a virus and a region. Get current lineages, weekly sequence shares and mutation frequencies from public data.
+  task: track-numbers
+  role: source
+  level: advanced
+  thinking: medium
+  thinking_why: It queries public data and must separate sampling gaps from real change.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: audit_report}]
+  needs: call public web APIs and run code
+"K-Dense-AI/scientific-agent-skills:skills/pathway-enrichment":
+  name: Gene list pathway finder
+  summary: Give it a gene list or ranked genes. Get the biological pathways that stand out, explained in plain terms.
+  task: research-topics
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It picks a method for the data, runs it and interprets the results.
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: audit_report}, {type: image}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/peer-review":
+  name: Manuscript peer review drafter
+  summary: Give it a paper or proposal. Get a fair, evidence-based review with claim checks, method critique and revision steps.
+  task: research-topics
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It must weigh claims against evidence and stay fair.
+  inputs: [{type: document, required: true}]
+  outputs: [{type: audit_report}]
+"K-Dense-AI/scientific-agent-skills:skills/pkpd-modeling":
+  name: Drug exposure model builder
+  summary: Give it concentration-over-time data. Get fitted drug exposure models, dose estimates and a clear write-up of what holds.
+  task: research-topics
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Choosing and checking the model takes careful reasoning.
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: document}, {type: image}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/pptx-posters":
+  name: Research poster builder
+  summary: Give it your approved text and images. Get an editable PowerPoint poster at print size, checked for access and file safety.
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It lays out content you already approved, then runs set checks.
+  inputs: [{type: document, required: true}]
+  outputs: [{type: slide_deck}]
+  needs: run code and save files
+"K-Dense-AI/scientific-agent-skills:skills/primer-design":
+  name: PCR primer designer
+  summary: Give it a target sequence. Get primer pairs checked for temperature, off-target matches and clear coordinates.
+  task: research-topics
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It runs a design tool, then checks each pair against set rules.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: spreadsheet}, {type: audit_report}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/pybamm":
+  name: Battery cycling simulator
+  summary: Describe a battery and a charge plan. Get simulated voltage curves, tested for solver error and compared with real data.
+  task: research-topics
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: It runs a set simulation method and checks it is stable.
+  inputs: [{type: brief, required: true}, {type: spreadsheet, required: false}]
+  outputs: [{type: image}, {type: document}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/pydeseq2":
+  name: RNA-seq group difference finder
+  summary: Give it gene counts for two or more groups. Get which genes changed, with checks, corrected p-values and plots.
+  task: research-topics
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows a standard method and checks the design first.
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: spreadsheet}, {type: image}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/pymoo":
+  name: Trade-off optimizer
+  summary: Describe goals that pull against each other. Get a set of best trade-off answers, checked against known test problems.
+  task: build-software
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: It picks a solver, runs it and checks the answers are sound.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: image}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/pyzotero":
+  name: Zotero library manager
+  summary: Say what to find or tidy in your Zotero library. Get references searched, tagged, sorted or exported as citations.
+  task: research-topics
+  role: orchestrate
+  level: intermediate
+  thinking: low
+  thinking_why: It runs simple library requests one after another.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: source_text}]
+  needs: run code and use your Zotero key
+"K-Dense-AI/scientific-agent-skills:skills/qiime2-amplicon":
+  name: 16S microbiome read processor
+  summary: Give it paired 16S reads. Get checked sequence variants and species labels, with the steps kept so you can repeat them.
+  task: research-topics
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: It runs a fixed pipeline but checks primers and overlap first.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: spreadsheet}, {type: audit_report}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/qutip":
+  name: Quantum system simulator
+  summary: Describe a quantum system. Get a simulation with stated assumptions and checks that the numbers have settled.
+  task: research-topics
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: The physics assumptions need careful thought before and after the run.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}, {type: image}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/relsa-severity-assessment":
+  name: Animal study severity scorer
+  summary: Give it welfare readings from an animal study. Get one severity score over time and an early forecast.
+  task: track-numbers
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It combines measures with a set formula and a basic forecast.
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: audit_report}, {type: image}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/research-grants":
+  name: Research grant proposal coach
+  summary: Name the funder and your idea. Get aims, a compliance checklist, a budget outline and a critique of your draft.
+  task: research-topics
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Proposals need fit to each funder's rules and a convincing argument.
+  inputs: [{type: brief, required: true}, {type: document, required: false}]
+  outputs: [{type: document}, {type: plan}]
+"K-Dense-AI/scientific-agent-skills:skills/research-lookup":
+  name: Manuscript evidence gatherer
+  summary: Name your paper topic. Get a packet of current sources, competing findings and background, each with its link.
+  task: research-topics
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It searches, reads sources and sorts them by how well they support each point.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: source_text}, {type: shortlist}]
+  needs: search the web
+  paid: Parallel
+"K-Dense-AI/scientific-agent-skills:skills/scanpy":
+  name: Single-cell RNA analysis pipeline
+  summary: Give it single-cell counts. Get cleaned data, cell clusters, marker genes and plots from start to finish.
+  task: research-topics
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: It follows the standard steps and checks each before moving on.
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: spreadsheet}, {type: image}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/scholar-evaluation":
+  name: Scholarly work reviewer
+  summary: Give it a paper or thesis. Get a fair review of what is strong, what is weak and what to fix next.
+  task: research-topics
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It has to judge quality fairly and back each point with evidence.
+  inputs: [{type: document, required: true}]
+  outputs: [{type: audit_report}]
+"K-Dense-AI/scientific-agent-skills:skills/scientific-brainstorming":
+  name: Research idea workshop
+  summary: Name your research area. Get ideas built, challenged and ranked, with assumptions and a decision log.
+  task: research-topics
+  role: make
+  level: beginner
+  thinking: high
+  thinking_why: It needs creative ideas and tough challenge of each.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: shortlist}, {type: plan}]
+"K-Dense-AI/scientific-agent-skills:skills/scientific-critical-thinking":
+  name: Study claim checker
+  summary: Give it a study or claim. Get its biases, flaws, weak statistics and evidence grade, explained in plain words.
+  task: research-topics
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It must spot subtle flaws and weigh how strong the evidence is.
+  inputs: [{type: document, required: true}]
+  outputs: [{type: audit_report}]
+"K-Dense-AI/scientific-agent-skills:skills/scientific-schematics":
+  name: Science diagram drafter
+  summary: Describe a diagram. Get a draft of a network, pathway or flowchart, reviewed and refined once or twice.
+  task: make-images
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It drafts, reviews and improves in a short fixed loop.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: image}]
+  needs: run code and save files
+  paid: OpenRouter
+"K-Dense-AI/scientific-agent-skills:skills/scientific-visualization":
+  name: Journal-ready figure maker
+  summary: Give it your data. Get clear, honest, colour-safe figures with uncertainty shown, sized for journal export.
+  task: research-topics
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks a fitting chart and checks it for honesty and access.
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: image}]
+  needs: run code and save files
+"K-Dense-AI/scientific-agent-skills:skills/scientific-writing":
+  name: Scientific manuscript drafter
+  summary: Give it your results and notes. Get manuscript sections with sources tracked, guideline gaps flagged and references checked.
+  task: research-topics
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It must stay true to the evidence while writing clearly.
+  inputs: [{type: source_text, required: true}, {type: spreadsheet, required: false}]
+  outputs: [{type: document}]
+"K-Dense-AI/scientific-agent-skills:skills/scikit-survival":
+  name: Time-to-event model builder
+  summary: Give it follow-up data with dropouts. Get survival models that avoid data leaks, with scores and risk curves.
+  task: track-numbers
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Handling censored data correctly needs careful choices.
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: audit_report}, {type: image}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/scvelo":
+  name: Cell direction velocity analyst
+  summary: Give it single-cell counts with spliced reads. Get cell direction arrows, timing and the genes that drive them.
+  task: research-topics
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: It fits set models and checks if the picture is believable.
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: image}, {type: spreadsheet}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/shap":
+  name: Prediction driver explainer
+  summary: Give it a trained model and data. Get which inputs drove each prediction and overall, with checked plots.
+  task: track-numbers
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It picks the right explainer and checks the results hold up.
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: audit_report}, {type: image}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/simpy":
+  name: Queue and process simulator
+  summary: Describe a process with queues and limited resources. Get a simulation with repeated runs and a clear summary of results.
+  task: track-numbers
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It builds a model, tests it and runs it many times.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: audit_report}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/statistical-analysis":
+  name: Research test picker and reporter
+  summary: Give it your data and question. Get the right test, assumption checks, effect sizes and a write-up in APA style.
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a clear guide to choose and check the test.
+  inputs: [{type: spreadsheet, required: true}, {type: question, required: true}]
+  outputs: [{type: document}, {type: image}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/statistical-power":
+  name: Sample size planner
+  summary: Say what effect you want to detect. Get how many subjects you need, with power curves you can put in a grant.
+  task: track-numbers
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It applies set formulas to numbers you give it.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}, {type: image}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/statsmodels":
+  name: Regression and forecast modeller
+  summary: Give it a data table. Get a fitted regression or time series model with checks and a plain read of the results.
+  task: track-numbers
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It picks a model, fits it and checks the fit.
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: audit_report}, {type: image}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/timesfm-forecasting":
+  name: Quick time series forecaster
+  summary: Give it a CSV of past values. Get a forecast with ranges and a test on held-back data, with no model training.
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: A pre-trained model does the forecast, so little judgment is needed.
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: spreadsheet}, {type: image}]
+  needs: run code and download a model
+"K-Dense-AI/scientific-agent-skills:skills/uncertainty-and-units":
+  name: Units and error margin checker
+  summary: Give it a calculation. Get units checked, error margins carried through and an uncertainty budget you can show.
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It tracks units and errors by set rules and flags what breaks them.
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run code
+"K-Dense-AI/scientific-agent-skills:skills/usfiscaldata":
+  name: US Treasury data puller
+  summary: Ask about US debt, spending or interest rates. Get the latest official numbers from Treasury, no key needed.
+  task: track-numbers
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: It calls a public API and returns the figures.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: spreadsheet}]
+  needs: call public web APIs
+"K-Dense-AI/scientific-agent-skills:skills/venue-templates":
+  name: Journal submission formatter
+  summary: Name the journal or conference. Get its template, current page and anonymity rules checked, and your paper fitted to them.
+  task: research-topics
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It applies set venue rules to your paper.
+  inputs: [{type: document, required: true}]
+  outputs: [{type: document}]
+  needs: run code and search the web

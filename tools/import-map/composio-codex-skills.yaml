@@ -1,0 +1,23 @@
+# composio-community/awesome-codex-skills (Apache-2.0). Only create-plan and paperjsx are mapped.
+"composio-community/awesome-codex-skills:create-plan":
+  name: Coding task planner
+  summary: Describe a coding task. Get a short plan with scope, ordered action items, tests and open questions.
+  task: build-software
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: It skims the project, then fills a fixed plan template.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: plan}]
+  needs: read your project files
+"composio-community/awesome-codex-skills:paperjsx":
+  name: Document file generator
+  summary: Describe the slides, report, sheet or PDF. Get a new PPTX, DOCX, XLSX or PDF file built from a JSON spec.
+  task: work-with-files
+  role: render
+  level: intermediate
+  thinking: medium
+  thinking_why: It builds a structured spec, then runs a set tool to render it.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}, {type: slide_deck}, {type: spreadsheet}]
+  needs: run code and save files

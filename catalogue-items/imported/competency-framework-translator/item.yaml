@@ -1,0 +1,32 @@
+slug: competency-framework-translator
+name: Competency framework translator
+summary: Give it a framework like DigComp or ISTE. Get classroom activities that teach each skill in it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/professional-learning/competency-framework-translator
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/professional-learning/competency-framework-translator
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: competency-framework-translator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: competency-framework-translator skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/professional-learning/competency-framework-translator
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

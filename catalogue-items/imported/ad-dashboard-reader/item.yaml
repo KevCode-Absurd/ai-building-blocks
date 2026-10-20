@@ -1,0 +1,37 @@
+slug: ad-dashboard-reader
+name: Ad dashboard reader
+summary: Paste your ad numbers. Get what each metric really means, where platforms disagree, and whether to scale or cut.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/ads-performance-analytics
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/ads-performance-analytics
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: ads-performance-analytics
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ads-performance-analytics skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/ads-performance-analytics
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

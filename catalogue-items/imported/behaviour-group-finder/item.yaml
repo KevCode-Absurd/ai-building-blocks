@@ -1,0 +1,40 @@
+slug: behaviour-group-finder
+name: Behaviour group finder
+summary: Give it customer data and a goal. Get natural groups found by behaviour, each profiled with a plan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Nimrod Fisher
+  repo: nimrodfisher/data-analytics-skills
+  path: 03-data-analysis-investigation/segmentation-analysis
+  url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/03-data-analysis-investigation/segmentation-analysis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9449d36
+  original_name: segmentation-analysis
+  author: Nimrod Fisher
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: segmentation-analysis skill
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/03-data-analysis-investigation/segmentation-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher
+    used: Wrote the skill; Nimrod Fisher shared it in their collection.

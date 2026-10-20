@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It runs a parser and returns text with little judgement.
+new_slug: scanned-pdf-text-reader
+name: Scanned PDF text reader
+summary: Give it PDFs, Office files or scans. Get text with page positions, read with OCR when needed, all on your computer.
+job: work-with-files
+headline: Scanned PDF text reader
+subhead: Give it PDFs, Office files or scans. Get text with page positions, read with OCR when needed, all on your computer.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and save files.

@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It fetches and tidies one record.
+new_slug: order-lookup-assistant
+name: Order lookup assistant
+summary: "Give an email, phone or order number. Get the full order summary: items, payment, shipping and history."
+job: run-your-store
+headline: Order lookup assistant
+subhead: "Give an email, phone or order number. Get the full order summary: items, payment, shipping and history."
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin.

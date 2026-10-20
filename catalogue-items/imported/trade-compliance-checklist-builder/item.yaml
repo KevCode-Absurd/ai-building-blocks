@@ -1,0 +1,32 @@
+slug: trade-compliance-checklist-builder
+name: Trade compliance checklist builder
+summary: Give it what you make, import and export. Get a checklist of the rules that apply and who owns each.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/compliance-management
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/compliance-management
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: compliance-management
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: compliance-management skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/compliance-management
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

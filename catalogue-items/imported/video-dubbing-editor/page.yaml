@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: You review and fix the transcript and translation before each new dub.
+new_slug: video-dubbing-editor
+name: Video dubbing editor
+summary: Give it a video or podcast. Get versions in other languages that keep each speaker's voice, ready to correct.
+job: work-with-audio
+headline: Video dubbing editor
+subhead: Give it a video or podcast. Get versions in other languages that keep each speaker's voice, ready to correct.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your own ElevenLabs API key.

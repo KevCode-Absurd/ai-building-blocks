@@ -1,0 +1,35 @@
+slug: data-extraction-pipeline-builder
+name: Data extraction pipeline builder
+summary: Give it a site and the data you want. Get a checked script and a clean data file. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: code_change
+  - type: spreadsheet
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/universal-scraping-architect/skills/universal-scraping-architect
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/universal-scraping-architect/skills/universal-scraping-architect
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: universal-scraping-architect
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: universal-scraping-architect skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/universal-scraping-architect/skills/universal-scraping-architect
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

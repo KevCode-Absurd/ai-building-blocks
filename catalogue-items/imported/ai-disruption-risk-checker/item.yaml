@@ -1,0 +1,33 @@
+slug: ai-disruption-risk-checker
+name: AI disruption risk checker
+summary: Name your business or industry. Get your exposure to AI on ten points and a 90-day plan to defend.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/moatmri
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/moatmri
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: moatmri
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: moatmri skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/moatmri
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

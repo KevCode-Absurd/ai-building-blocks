@@ -1,0 +1,32 @@
+slug: local-nature-inquiry-cycle-planner
+name: Local nature inquiry cycle planner
+summary: Name a local habitat. Get an inquiry cycle for young learners that links place, nature and community.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/original-frameworks/seeds-regenerative-inquiry-cycle
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/original-frameworks/seeds-regenerative-inquiry-cycle
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: seeds-regenerative-inquiry-cycle
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: seeds-regenerative-inquiry-cycle skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/original-frameworks/seeds-regenerative-inquiry-cycle
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

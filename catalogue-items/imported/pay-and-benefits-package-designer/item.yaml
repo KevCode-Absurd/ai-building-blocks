@@ -1,0 +1,40 @@
+slug: pay-and-benefits-package-designer
+name: Pay and benefits package designer
+summary: Give it your pay goals and team size. Get pay bands, bonus ideas and a total pay statement outline. Not legal advice.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: document
+    required: true
+uses: []
+origin: imported
+source:
+  by: Tuan Duc Tran
+  repo: tuanductran/hr-skills
+  path: skills/hr-total-rewards
+  url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-total-rewards
+  licence: MIT
+  licence_file: LICENSE
+  commit: 078f2fb
+  original_name: hr-total-rewards
+  author: Tuan Duc Tran
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hr-total-rewards skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-total-rewards
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

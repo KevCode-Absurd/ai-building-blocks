@@ -1,0 +1,39 @@
+slug: business-model-code-designer
+name: Business model code designer
+summary: Describe your business rules. Get areas, shared terms and clusters of data that map to your code. Uses domain-driven design.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Wondel.ai
+  repo: wondelai/skills
+  path: domain-driven-design
+  url: https://github.com/wondelai/skills/tree/main/domain-driven-design
+  licence: MIT
+  licence_file: LICENSE
+  commit: c172996
+  original_name: domain-driven-design
+  author: wondelai
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: domain-driven-design skill
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/domain-driven-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: wondelai
+    url: https://github.com/wondelai
+    used: Wrote the skill; Wondel.ai shared it in their collection.

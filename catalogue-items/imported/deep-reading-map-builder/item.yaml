@@ -1,0 +1,37 @@
+slug: deep-reading-map-builder
+name: Deep reading map builder
+summary: Give it an article, book or PDF. Get a knowledge map of its ideas and a Feynman check that you understood it.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/dsh-deepread
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/dsh-deepread
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: dsh-deepread
+  author: xiehuan123
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: dsh-deepread skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/dsh-deepread
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: xiehuan123
+    url: https://github.com/xiehuan123
+    used: Wrote the skill; sickn33 shared it in their collection.

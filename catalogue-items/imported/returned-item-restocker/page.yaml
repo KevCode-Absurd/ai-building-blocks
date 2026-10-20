@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Restocking damaged items inflates your stock.
+new_slug: returned-item-restocker
+name: Returned item restocker
+summary: Get returned items added back to stock at the right location. Changes live stock, so skip damaged goods.
+job: run-your-store
+headline: Returned item restocker
+subhead: Get returned items added back to stock at the right location. Changes live stock, so skip damaged goods.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin and change live store data.

@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It splits costs and calculates margins.
+new_slug: product-profit-analyst
+name: Product profit analyst
+summary: Give it revenue and costs by product. Get each product's margin and which ones lose money.
+job: run-your-store
+headline: Product profit analyst
+subhead: Give it revenue and costs by product. Get each product's margin and which ones lose money.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

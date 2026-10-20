@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It sorts issues by risk and writes steps.
+new_slug: wordpress-health-fixer
+name: WordPress health fixer
+summary: Paste your WordPress Site Health report. Get a ranked, backup-first fix plan with exact commands.
+job: build-websites
+headline: WordPress health fixer
+subhead: Paste your WordPress Site Health report. Get a ranked, backup-first fix plan with exact commands.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows known deployment steps with some setup choices.
+new_slug: model-launch-engineer
+name: Model launch engineer
+summary: Give it a trained model. Get it running as a live service with an API and container.
+job: ship-and-host
+headline: Model launch engineer
+subhead: Give it a trained model. Get it running as a live service with an API and container.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

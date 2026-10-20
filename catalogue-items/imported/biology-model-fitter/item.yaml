@@ -1,0 +1,35 @@
+slug: biology-model-fitter
+name: Biology model fitter
+summary: Give it a model and measured data. Get parameters fitted, patients simulated and drug levels computed.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: code_change
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/computational-biology/simbiology-fit-model
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/computational-biology/simbiology-fit-model
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: simbiology-fit-model
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: simbiology-fit-model skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/computational-biology/simbiology-fit-model
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

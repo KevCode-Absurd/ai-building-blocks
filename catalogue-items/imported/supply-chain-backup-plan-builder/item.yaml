@@ -1,0 +1,32 @@
+slug: supply-chain-backup-plan-builder
+name: Supply chain backup plan builder
+summary: Describe your supply chain. Get the top risks ranked, a backup for each, and who does what if it breaks.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/risk-mitigation
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/risk-mitigation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: risk-mitigation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: risk-mitigation skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/risk-mitigation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

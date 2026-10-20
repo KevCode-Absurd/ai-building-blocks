@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Many linked stages must work together and be repeatable.
+new_slug: machine-learning-pipeline-builder
+name: Machine learning pipeline builder
+summary: Describe your data and goal. Get a repeatable pipeline from data prep to training, checks and release.
+job: build-software
+headline: Machine learning pipeline builder
+subhead: Describe your data and goal. Get a repeatable pipeline from data prep to training, checks and release.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

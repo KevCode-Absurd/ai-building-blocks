@@ -1,0 +1,37 @@
+slug: token-saver-for-coding-agents
+name: Token saver for coding agents
+summary: Turn it on for coding sessions. Get fewer wasted tokens from big reads, noisy logs and repeat reads.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/tokenleak
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/tokenleak
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: tokenleak
+  author: Pazificateur69
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: tokenleak skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/tokenleak
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Pazificateur69
+    url: https://github.com/Pazificateur69
+    used: Wrote the skill; sickn33 shared it in their collection.

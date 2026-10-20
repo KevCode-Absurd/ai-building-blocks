@@ -1,0 +1,510 @@
+# GAJETOso/financeskills (MIT, KOMVIA). Tools that explain, calculate, check or draft; none give buy, sell or investment advice.
+
+"GAJETOso/financeskills:skills/ai-anomaly-detection":
+  name: Unusual transaction finder
+  summary: "Give it a large set of transactions. Get the odd ones flagged, with a short reason for each."
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows set steps but must judge what looks unusual."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your files
+
+"GAJETOso/financeskills:skills/aro-computation":
+  name: Cleanup cost liability calculator
+  summary: "Give it an asset and its cleanup cost. Get the liability, yearly interest cost and journal entries worked out."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows accounting rules with a few judgment calls."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/audit-checklist":
+  name: Audit readiness checker
+  summary: "Give it your records and controls. Get a checklist of gaps to fix before an audit."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It tests records against a set list but must judge the gaps."
+  inputs: [ { type: spreadsheet, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"GAJETOso/financeskills:skills/automated-reconciliation":
+  name: Bank and ledger matcher
+  summary: "Give it a bank statement and your ledger. Get matched items, near matches and a list of what is left over."
+  task: track-numbers
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It matches by rule, then judges the close calls."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: audit_report } ]
+  needs: run code and read your files
+
+"GAJETOso/financeskills:skills/banking-compliance":
+  name: Bank capital rules checker
+  summary: "Give it a bank's balance sheet. Get its Basel III capital and liquidity ratios checked against the limits."
+  task: check-contracts
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "It applies detailed capital rules and needs careful judgment."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"GAJETOso/financeskills:skills/budget-forecast":
+  name: Budget and forecast builder
+  summary: "Give it your past numbers and plans. Get a budget, a forecast and a note on gaps against actuals."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It builds from set steps but needs sensible assumptions."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: plan } ]
+
+"GAJETOso/financeskills:skills/close-management":
+  name: Month-end close planner
+  summary: "Say what must be done to close the books. Get a dated task list with owners and blockers."
+  task: track-numbers
+  role: orchestrate
+  level: intermediate
+  thinking: low
+  thinking_why: "It orders known tasks into a calendar."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"GAJETOso/financeskills:skills/company-valuation":
+  name: Valuation method comparer
+  summary: "Give it a company's numbers. Get a value range from DCF, peer multiples and past deals, with the key assumptions."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It runs several methods and must judge which assumptions matter."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: document } ]
+
+"GAJETOso/financeskills:skills/corporate-consolidation":
+  name: Group accounts combiner
+  summary: "Give it each company's accounts. Get one set of group statements with the cancelled internal items shown."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows consolidation rules step by step."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/credit-analysis":
+  name: Borrower credit memo writer
+  summary: "Give it a borrower's accounts. Get a credit memo on repayment ability, debt capacity and covenant room."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs many signs of repayment risk."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: document } ]
+
+"GAJETOso/financeskills:skills/crypto-accounting":
+  name: Crypto asset bookkeeper
+  summary: "Describe your coin or NFT holdings. Get them classified, valued and recorded under accounting standards."
+  task: track-numbers
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It applies standards to unusual assets."
+  inputs: [ { type: brief, required: true }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: spreadsheet }, { type: document } ]
+
+"GAJETOso/financeskills:skills/cvp-breakeven":
+  name: Breakeven point calculator
+  summary: "Give it your prices and costs. Get the breakeven volume, margin of safety and the effect of price changes."
+  task: run-your-store
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It is a set of standard formulas."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/debt-payoff":
+  name: Debt payoff planner
+  summary: "List your debts. Get a payoff timeline comparing the snowball and avalanche methods, with total interest for each."
+  task: money-and-investing
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It runs standard payoff maths."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"GAJETOso/financeskills:skills/debt-restructuring":
+  name: Debt restructuring plan drafter
+  summary: "Give it a company's debts and cash flow. Get a draft plan with creditor terms that fit what it can pay."
+  task: money-and-investing
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It balances creditor claims against cash that may not cover them."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+
+"GAJETOso/financeskills:skills/deferred-tax":
+  name: Deferred tax calculator
+  summary: "Give it asset and liability figures. Get deferred tax, whether it can be used, and a tax rate reconciliation."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows IAS 12 and ASC 740 steps."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: document } ]
+
+"GAJETOso/financeskills:skills/earned-value-mgmt":
+  name: Project cost progress tracker
+  summary: "Give it a project's budget, schedule and spend. Get cost and schedule indexes and a finish cost estimate."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "It applies standard earned value formulas."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"GAJETOso/financeskills:skills/ecl-computation":
+  name: Expected credit loss calculator
+  summary: "Give it loan data. Get expected credit losses worked out under IFRS 9 or CECL."
+  task: money-and-investing
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It models default risk with many judgment calls."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: document } ]
+  needs: run code and read your files
+
+"GAJETOso/financeskills:skills/esg-reporting":
+  name: ESG report preparer
+  summary: "Give it your environmental, social and governance data. Get a draft sustainability report or a check of an existing one."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows reporting frameworks but needs judgment on what counts."
+  inputs: [ { type: spreadsheet, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+
+"GAJETOso/financeskills:skills/financial-analysis":
+  name: Company financial health reviewer
+  summary: "Give it a company's filings. Get ratios, cash flow and balance sheet health explained in plain words."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It computes standard ratios, then interprets them."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"GAJETOso/financeskills:skills/fixed-asset-accounting":
+  name: Fixed asset register keeper
+  summary: "Give it your purchases and disposals. Get what to capitalise, yearly depreciation and impairment checks."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows standard asset rules with some judgment."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/forensic-accounting":
+  name: Suspicious money trail reviewer
+  summary: "Give it records that do not add up. Get a structured review of red flags and evidence to follow up."
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It must spot subtle patterns and weigh evidence."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"GAJETOso/financeskills:skills/insurance-reserving":
+  name: Insurance claims reserve calculator
+  summary: "Give it claims history. Get loss reserves, IBNR estimates and loss and combined ratios."
+  task: money-and-investing
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It models claims that have not yet been reported."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: document } ]
+  needs: run code and read your files
+
+"GAJETOso/financeskills:skills/intercompany-accounting":
+  name: Intercompany balance matcher
+  summary: "Give it each entity's balances. Get mismatches found, settlement netted and elimination entries drafted."
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It matches by rule and drafts entries."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/inventory-costing":
+  name: Inventory value calculator
+  summary: "Give it your stock purchases and counts. Get inventory valued by FIFO or average cost, with write-downs flagged."
+  task: run-your-store
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It applies set costing formulas."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/investment-analysis":
+  skip: "Its main output is a buy or sell recommendation, which we do not list."
+
+"GAJETOso/financeskills:skills/journal-entry":
+  name: Journal entry drafter
+  summary: "Describe the transaction. Get a balanced journal entry with debits, credits and support notes."
+  task: track-numbers
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows double entry rules."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/lbo-modeling":
+  name: Buyout returns modeler
+  summary: "Give it a company and deal terms. Get a buyout model with debt paydown and exit returns, IRR and MOIC."
+  task: money-and-investing
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It links debt, cash and returns across many assumptions."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/lease-accounting":
+  name: Lease accounting calculator
+  summary: "Give it a lease contract. Get the lease liability, right-of-use asset and yearly entries under IFRS 16 or ASC 842."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows set lease rules and a payment schedule."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/net-worth-tracker":
+  name: Net worth calculator
+  summary: "List your assets and debts. Get your net worth, how it splits, and a monthly view to track."
+  task: money-and-investing
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It adds and subtracts your numbers."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/nlp-earnings-sentiment":
+  name: Earnings call tone reader
+  summary: "Give it an earnings call transcript. Get shifts in management tone and confidence flagged, with quotes."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads for tone and cites the lines."
+  inputs: [ { type: transcript, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"GAJETOso/financeskills:skills/oil-gas-valuation":
+  name: Oil and gas reserves valuer
+  summary: "Give it reserve and cost data. Get the present value of the reserves, such as PV-10."
+  task: money-and-investing
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It models uncertain reserves and prices."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/personal-budgeting":
+  name: Personal budget builder
+  summary: "List your income and spending. Get a budget plan, such as zero-based or 50/30/20, and where money leaks."
+  task: money-and-investing
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It sorts spending into a standard plan."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"GAJETOso/financeskills:skills/predictive-burn-rate":
+  name: Startup runway forecaster
+  summary: "Give it your monthly cash data. Get a forecast of burn and the month cash runs out."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It fits a forecast model to your data."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet }, { type: plan } ]
+  needs: run code and read your files
+
+"GAJETOso/financeskills:skills/product-profitability":
+  name: Product profit analyst
+  summary: "Give it revenue and costs by product. Get each product's margin and which ones lose money."
+  task: run-your-store
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "It splits costs and calculates margins."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"GAJETOso/financeskills:skills/retirement-planning":
+  name: Retirement savings projector
+  summary: "Give it your age, savings and goals. Get a projected nest egg and the gap to your target."
+  task: money-and-investing
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It runs compound growth maths on your inputs."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/revenue-recognition":
+  name: Revenue recognition checker
+  summary: "Give it a customer contract. Get its promises, price split and timing of revenue under IFRS 15 or ASC 606."
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It applies a five step standard to varied contracts."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"GAJETOso/financeskills:skills/risk-assessment":
+  name: Financial risk mapper
+  summary: "Describe your exposures. Get risks listed and sized, with stress test scenarios and ways to limit each."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It lists risks and judges their size."
+  inputs: [ { type: brief, required: true }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: audit_report } ]
+
+"GAJETOso/financeskills:skills/sox-compliance":
+  name: Internal controls testing planner
+  summary: "Give it your key controls. Get a test plan, sample sizes and a way to rate any control gaps."
+  task: check-contracts
+  role: orchestrate
+  level: advanced
+  thinking: medium
+  thinking_why: "It sets a test method and rates findings."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+
+"GAJETOso/financeskills:skills/startup-valuation":
+  name: Early-stage valuation estimator
+  summary: "Give it a young company's facts. Get a value range from methods such as Berkus, scorecard and the VC method."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies several methods to thin data."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+
+"GAJETOso/financeskills:skills/statement-preparation":
+  name: Financial statement preparer
+  summary: "Give it a trial balance. Get a balance sheet, income statement and cash flow statement."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It maps accounts into standard statements."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/tax-efficient-investing":
+  skip: "Tells people which accounts to hold investments in, which is personal investment advice."
+
+"GAJETOso/financeskills:skills/tax-planning":
+  skip: "Main output is a personal tax strategy that tells people what to do, so it reads as advice."
+
+"GAJETOso/financeskills:skills/three-statement-modeling":
+  name: Linked financial model builder
+  summary: "Give it your past accounts and drivers. Get income, balance sheet and cash flow models that tie together."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It builds linked sheets and checks they balance."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/treasury-management":
+  name: Cash and currency risk planner
+  summary: "Give it your cash, debts and currency exposure. Get a liquidity plan and ways to cut rate and exchange risk."
+  task: money-and-investing
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It plans cash and weighs risk options."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: plan } ]
+
+"GAJETOso/financeskills:skills/variance-analysis":
+  name: Production cost variance explainer
+  summary: "Give it standard and actual production costs. Get the gap split into price, volume and efficiency causes."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "It applies standard variance formulas."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"GAJETOso/financeskills:skills/venture-debt":
+  name: Venture loan terms reviewer
+  summary: "Give it a startup loan offer. Get the cost, warrants and covenants explained, with points to question."
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It weighs loan terms against a startup's profile."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
+
+"GAJETOso/financeskills:skills/wacc-computation":
+  name: Cost of capital calculator
+  summary: "Give it a company's debt, equity and market inputs. Get its WACC with cost of equity and debt shown."
+  task: money-and-investing
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It runs the standard WACC formula steps."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+
+"GAJETOso/financeskills:skills/working-capital-analysis":
+  name: Cash tied-up finder
+  summary: "Give it your receivables, payables and stock. Get days outstanding, the cash cycle and where cash is stuck."
+  task: money-and-investing
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "It calculates standard day counts."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]

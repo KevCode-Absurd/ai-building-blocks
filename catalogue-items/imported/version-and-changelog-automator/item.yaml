@@ -1,0 +1,37 @@
+slug: version-and-changelog-automator
+name: Version and changelog automator
+summary: Point it at your repo. Get release numbers and a changelog worked out from your commits.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/semantic-versioning
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/semantic-versioning
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: semantic-versioning
+  author: BagelHole
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: semantic-versioning skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/semantic-versioning
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: BagelHole
+    url: https://github.com/BagelHole/DevOps-Security-Agent-Skills
+    used: Wrote the skill; sickn33 shared it in their collection.

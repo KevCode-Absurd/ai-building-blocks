@@ -1,0 +1,32 @@
+slug: multi-step-form-designer
+name: Multi-step form designer
+summary: Describe the data you must collect. Get a staged form plan with progress cues, conditional questions and save-and-resume.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/multi-step-form-design
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/multi-step-form-design
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: multi-step-form-design
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: multi-step-form-design skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/multi-step-form-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

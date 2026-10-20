@@ -1,0 +1,40 @@
+slug: youtube-script-writer
+name: YouTube script writer
+summary: Give it a video idea. Get scored hook options and a full spoken script with what shows on screen.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: script
+    required: true
+  - type: hooks
+    required: true
+uses: []
+origin: imported
+source:
+  by: Jake Schincariol
+  repo: Jakeschincariol/youtube-agent-skill
+  path: skills/yt-script
+  url: https://github.com/Jakeschincariol/youtube-agent-skill/tree/main/skills/yt-script
+  licence: MIT
+  licence_file: LICENSE
+  commit: a2feb21
+  original_name: yt-script
+  author: Jake Schincariol
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: yt-script skill
+    by: Jake Schincariol
+    url: https://github.com/Jakeschincariol/youtube-agent-skill/tree/main/skills/yt-script
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Jake Schincariol
+    url: https://github.com/Jakeschincariol
+    used: Wrote the skill; Jake Schincariol shared it in their collection.

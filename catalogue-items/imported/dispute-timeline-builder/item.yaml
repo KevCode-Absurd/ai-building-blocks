@@ -1,0 +1,32 @@
+slug: dispute-timeline-builder
+name: Dispute timeline builder
+summary: Give it your emails and documents. Get a dated timeline of what happened, with key events marked. First check, not legal advice.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/claude-for-legal
+  path: litigation-legal/skills/chronology
+  url: https://github.com/anthropics/claude-for-legal/tree/main/litigation-legal/skills/chronology
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: 4a6c651
+  original_name: chronology
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: chronology skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/litigation-legal/skills/chronology
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

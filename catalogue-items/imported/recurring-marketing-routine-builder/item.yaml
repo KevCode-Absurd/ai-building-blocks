@@ -1,0 +1,32 @@
+slug: recurring-marketing-routine-builder
+name: Recurring marketing routine builder
+summary: Pick an outcome. Get a loop that runs weekly or daily, checks itself and stops when it should.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/marketing-loops
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-loops
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: marketing-loops
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: marketing-loops skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/marketing-loops
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

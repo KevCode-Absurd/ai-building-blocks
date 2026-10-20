@@ -1,0 +1,32 @@
+slug: sheet-cutting-planner
+name: Sheet cutting planner
+summary: Give it your sheet size and the panels you need. Get cutting layouts that waste the least material.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/2d-cutting-stock
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/2d-cutting-stock
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: 2d-cutting-stock
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: 2d-cutting-stock skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/2d-cutting-stock
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

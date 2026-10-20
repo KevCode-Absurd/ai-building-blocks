@@ -1,0 +1,40 @@
+slug: competitor-ad-teardown-writer
+name: Competitor ad teardown writer
+summary: Name your rivals. Get a report on their public ads and landing pages, with proof apart from guesses. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: competitor_set
+    required: true
+outputs:
+  - type: ad_breakdowns
+  - type: audit_report
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/competitor-ad-intelligence
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/competitor-ad-intelligence
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: competitor-ad-intelligence
+  author: gooseworks-ai
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: competitor-ad-intelligence skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/competitor-ad-intelligence
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: gooseworks-ai
+    url: https://github.com/gooseworks-ai/goose-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

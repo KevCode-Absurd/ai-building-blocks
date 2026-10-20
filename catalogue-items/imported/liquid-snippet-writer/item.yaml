@@ -1,0 +1,39 @@
+slug: liquid-snippet-writer
+name: Liquid snippet writer
+summary: Paste your theme code or say what you need. Get correct Liquid for products, carts and loops.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: theme_files
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: theme_files
+uses: []
+origin: imported
+source:
+  by: dragnoir
+  repo: dragnoir/Shopify-agent-skills
+  path: skills/liquid-templating
+  url: https://github.com/dragnoir/Shopify-agent-skills/tree/main/skills/liquid-templating
+  licence: MIT
+  licence_file: LICENSE
+  commit: f76a09f
+  original_name: liquid-templating
+  author: dragnoir
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: liquid-templating skill
+    by: dragnoir
+    url: https://github.com/dragnoir/Shopify-agent-skills/tree/main/skills/liquid-templating
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: dragnoir
+    url: https://github.com/dragnoir
+    used: Wrote the skill; dragnoir shared it in their collection.

@@ -1,0 +1,32 @@
+slug: ai-build-or-buy-advisor
+name: AI build-or-buy advisor
+summary: Describe an AI plan. Get an API vs fine-tune call, AI risk class under EU rules and cost break-even.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: c-level-advisor/chief-ai-officer-advisor/skills/chief-ai-officer-advisor
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/chief-ai-officer-advisor/skills/chief-ai-officer-advisor
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: chief-ai-officer-advisor
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: chief-ai-officer-advisor skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/chief-ai-officer-advisor/skills/chief-ai-officer-advisor
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

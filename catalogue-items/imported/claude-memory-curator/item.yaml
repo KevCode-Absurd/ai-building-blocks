@@ -1,0 +1,32 @@
+slug: claude-memory-curator
+name: Claude memory curator
+summary: Point it at Claude Code memory. Get what it learned reviewed, kept rules moved up and stale notes cut.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: skill_files
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/self-improving-agent/skills/self-improving-agent
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/self-improving-agent/skills/self-improving-agent
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: self-improving-agent
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: self-improving-agent skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/self-improving-agent/skills/self-improving-agent
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

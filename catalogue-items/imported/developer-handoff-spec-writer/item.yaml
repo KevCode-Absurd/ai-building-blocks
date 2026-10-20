@@ -1,0 +1,37 @@
+slug: developer-handoff-spec-writer
+name: Developer handoff spec writer
+summary: Share a finished design. Get a spec for layout, tokens, component props, states, breakpoints and edge cases.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: design_file
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: design/skills/design-handoff
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/design/skills/design-handoff
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: design-handoff
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: design-handoff skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/design/skills/design-handoff
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

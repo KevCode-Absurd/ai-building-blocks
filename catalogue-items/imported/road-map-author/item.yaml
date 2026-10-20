@@ -1,0 +1,32 @@
+slug: road-map-author
+name: Road map author
+summary: Describe the road layout. Get lanes, junctions, signs and signals built as a RoadRunner HD map.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/automotive/roadrunner-rrhd-authoring
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/automotive/roadrunner-rrhd-authoring
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: roadrunner-rrhd-authoring
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: roadrunner-rrhd-authoring skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/automotive/roadrunner-rrhd-authoring
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

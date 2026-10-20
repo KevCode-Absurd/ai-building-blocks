@@ -1,0 +1,33 @@
+slug: production-capacity-checker
+name: Production capacity checker
+summary: Give it demand and what you can make. Get your bottlenecks and a plan to close the gap.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/capacity-planning
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/capacity-planning
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: capacity-planning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: capacity-planning skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/capacity-planning
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

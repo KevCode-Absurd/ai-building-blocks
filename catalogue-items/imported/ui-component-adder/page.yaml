@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It runs a set command line tool.
+new_slug: ui-component-adder
+name: UI component adder
+summary: Say which components you need. Get them added to your project with the right setup and usage.
+job: build-websites
+headline: UI component adder
+subhead: Say which components you need. Get them added to your project with the right setup and usage.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

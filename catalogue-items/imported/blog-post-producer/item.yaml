@@ -1,0 +1,32 @@
+slug: blog-post-producer
+name: Blog post producer
+summary: Give it a topic. Get a researched, edited blog post or guide that is ready to publish.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: marketing-skill/skills/content-production
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/content-production
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: content-production
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: content-production skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/content-production
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

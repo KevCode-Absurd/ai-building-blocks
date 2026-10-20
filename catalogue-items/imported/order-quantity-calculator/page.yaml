@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It is a clear formula with a few variations.
+new_slug: order-quantity-calculator
+name: Order quantity calculator
+summary: Give it demand, order cost and holding cost. Get the order size with the lowest total cost, with discounts compared.
+job: plan-supply-chain
+headline: Order quantity calculator
+subhead: Give it demand, order cost and holding cost. Get the order size with the lowest total cost, with discounts compared.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

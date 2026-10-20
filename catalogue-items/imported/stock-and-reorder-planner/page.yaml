@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It runs stock formulas and explains the results.
+new_slug: stock-and-reorder-planner
+name: Stock and reorder planner
+summary: Give it your stock and sales numbers. Get safety stock, reorder points, an ABC ranking and fulfillment cost checks.
+job: run-your-store
+headline: Stock and reorder planner
+subhead: Give it your stock and sales numbers. Get safety stock, reorder points, an ABC ranking and fulfillment cost checks.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

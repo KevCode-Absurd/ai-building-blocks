@@ -1,0 +1,33 @@
+slug: genome-position-converter
+name: Genome position converter
+summary: Give it gene positions or variants. Get them converted between conventions, with assembly and naming mismatches caught.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/genomic-coordinates
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/genomic-coordinates
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: genomic-coordinates
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: genomic-coordinates skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/genomic-coordinates
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It maps each product to a fixed category list.
+new_slug: product-category-assigner
+name: Product category assigner
+summary: Give it your catalog. Get every product matched to a standard Shopify category, so AI can place it. Updates live products.
+job: build-websites
+headline: Product category assigner
+subhead: Give it your catalog. Get every product matched to a standard Shopify category, so AI can place it. Updates live products.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin and change it.

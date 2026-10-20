@@ -1,0 +1,32 @@
+slug: invention-idea-screener
+name: Invention idea screener
+summary: Describe your invention. Get a first screen on novelty, deadlines and value, and whether to see a patent lawyer. Not legal advice.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/claude-for-legal
+  path: ip-legal/skills/invention-intake
+  url: https://github.com/anthropics/claude-for-legal/tree/main/ip-legal/skills/invention-intake
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: 4a6c651
+  original_name: invention-intake
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: invention-intake skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/ip-legal/skills/invention-intake
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

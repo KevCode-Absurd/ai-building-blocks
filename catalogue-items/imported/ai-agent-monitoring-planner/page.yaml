@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It follows a set method but depends on your setup.
+new_slug: ai-agent-monitoring-planner
+name: AI agent monitoring planner
+summary: Describe your AI agent. Get a plan to trace its steps, costs and errors without logging private data.
+job: build-software
+headline: AI agent monitoring planner
+subhead: Describe your AI agent. Get a plan to trace its steps, costs and errors without logging private data.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

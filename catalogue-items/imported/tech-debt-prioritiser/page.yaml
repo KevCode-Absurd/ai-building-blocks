@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It weighs code and change history to rank what to fix.
+new_slug: tech-debt-prioritiser
+name: Tech debt prioritiser
+summary: Point it at your code. Get a ranked list of debt that slows you down, with cost and small fixes.
+job: build-software
+headline: Tech debt prioritiser
+subhead: Point it at your code. Get a ranked list of debt that slows you down, with cost and small fixes.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files and history.

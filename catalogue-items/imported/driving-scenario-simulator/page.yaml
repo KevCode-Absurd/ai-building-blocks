@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Live control and sensor setup need careful ordering.
+new_slug: driving-scenario-simulator
+name: Driving scenario simulator
+summary: Give it a RoadRunner scenario. Get it simulated step by step, with sensors attached and logs read back.
+job: build-software
+headline: Driving scenario simulator
+subhead: Give it a RoadRunner scenario. Get it simulated step by step, with sensors attached and logs read back.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with RoadRunner and Simulink.

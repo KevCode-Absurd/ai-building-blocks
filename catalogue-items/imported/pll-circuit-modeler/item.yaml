@@ -1,0 +1,32 @@
+slug: pll-circuit-modeler
+name: PLL circuit modeler
+summary: Give it a PLL datasheet. Get a working phase-locked loop model with the right solver set.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/rf-and-mixed-signal/matlab-model-ams-systems
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-model-ams-systems
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-model-ams-systems
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-model-ams-systems skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-model-ams-systems
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

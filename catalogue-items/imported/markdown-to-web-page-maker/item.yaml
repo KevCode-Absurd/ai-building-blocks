@@ -1,0 +1,32 @@
+slug: markdown-to-web-page-maker
+name: Markdown to web page maker
+summary: Give it a long markdown file. Get one HTML page with a contents bar, search and light interactivity.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: markdown-html/skills/md-document
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/markdown-html/skills/md-document
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: md-document
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: md-document skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/markdown-html/skills/md-document
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It follows set steps and checks each page.
+new_slug: pdf-maker-and-reader
+name: PDF maker and reader
+summary: Give it a PDF or a brief. Get the text pulled out or a new PDF with its layout checked.
+job: work-with-files
+headline: PDF maker and reader
+subhead: Give it a PDF or a brief. Get the text pulled out or a new PDF with its layout checked.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

@@ -1,0 +1,35 @@
+slug: store-product-data-collector
+name: Store product data collector
+summary: Give it a product search or store link. Get prices, reviews and seller details in a table. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:Apify
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/apify-ecommerce
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-ecommerce
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: apify-ecommerce
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: apify-ecommerce skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-ecommerce
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

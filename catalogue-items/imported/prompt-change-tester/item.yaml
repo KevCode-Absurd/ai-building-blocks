@@ -1,0 +1,37 @@
+slug: prompt-change-tester
+name: Prompt change tester
+summary: Give it a prompt change and a fixed set of cases. Get a clear report of what got better or worse.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/ai-prompt-regression-testing
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ai-prompt-regression-testing
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: ai-prompt-regression-testing
+  author: Ranjeet2063
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ai-prompt-regression-testing skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ai-prompt-regression-testing
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Ranjeet2063
+    url: https://github.com/Ranjeet2063/agentic-awesome-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

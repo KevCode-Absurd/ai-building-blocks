@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks a template, then fills it from your data.
+new_slug: report-builder
+name: Report builder
+summary: Give it your data. Get a clear report with charts, such as a sprint retro, financial summary or postmortem.
+job: work-with-files
+headline: Report builder
+subhead: Give it your data. Get a clear report with charts, such as a sprint retro, financial summary or postmortem.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and save files.

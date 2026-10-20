@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: The risky wording is easy to miss.
+new_slug: ai-vendor-terms-checker
+name: AI vendor terms checker
+summary: Give it an AI tool's terms or addendum. Get data-training, liability and model-change risks flagged. A first check, not legal advice.
+job: check-contracts
+headline: AI vendor terms checker
+subhead: Give it an AI tool's terms or addendum. Get data-training, liability and model-change risks flagged. A first check, not legal advice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Where the skill points to /ai-governance-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.

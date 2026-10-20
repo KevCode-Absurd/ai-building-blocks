@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: Git tasks follow well known steps.
+new_slug: git-workflow-helper
+name: Git workflow helper
+summary: Tell it your Git problem. Get branching, commits, merges and pull requests handled cleanly.
+job: build-software
+headline: Git workflow helper
+subhead: Tell it your Git problem. Get branching, commits, merges and pull requests handled cleanly.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

@@ -1,0 +1,155 @@
+# anthropics/knowledge-work-plugins, partner-built folder (apollo, brand-voice, common-room, slack, zoom-plugin)
+# Licences: Apollo MIT, Tribe AI (brand-voice) MIT, Common Room Apache 2.0, Slack MIT, Zoom MIT. Each partner wrote its own skills.
+
+# ---- Apollo (MIT): finds and enriches people's contact details, loads sequences. All skipped.
+"anthropics/knowledge-work-plugins:partner-built/apollo/skills/enrich-lead": {skip: "Looks up people's emails and phone numbers, and spends paid Apollo credits"}
+"anthropics/knowledge-work-plugins:partner-built/apollo/skills/prospect": {skip: "Builds lead lists with people's emails and phone numbers from a paid Apollo service"}
+"anthropics/knowledge-work-plugins:partner-built/apollo/skills/sequence-load": {skip: "Enrolls people into Apollo outreach sequences, which sends messages for you"}
+
+# ---- Brand voice (Tribe AI, MIT)
+"anthropics/knowledge-work-plugins:partner-built/brand-voice/skills/brand-voice-enforcement":
+  name: Brand voice rewriter
+  summary: Give it a draft or a topic. Get emails, posts or pitches written in your brand voice, with notes on each choice.
+  task: brand-file
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It applies set guidelines to new writing and checks the result.
+  inputs: [{type: brand_guide, required: false}, {type: brief, required: true}]
+  outputs: [{type: copy_draft}]
+  needs: "read your saved brand guidelines file"
+  author: Tribe AI
+"anthropics/knowledge-work-plugins:partner-built/brand-voice/skills/discover-brand":
+  name: Brand materials finder
+  summary: Point it at your tools. Get a report of style guides, decks and call notes you already have, plus gaps.
+  task: brand-file
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It searches many places and ranks what it finds.
+  inputs: [{type: brand_brain, required: false}]
+  outputs: [{type: audit_report}]
+  needs: "search your connected tools, such as Notion, Google Drive and Slack"
+  author: Tribe AI
+"anthropics/knowledge-work-plugins:partner-built/brand-voice/skills/guideline-generation":
+  name: Brand voice guide builder
+  summary: Give it your documents or call transcripts. Get a brand voice guide with rules, examples and open questions.
+  task: brand-file
+  role: compress
+  level: intermediate
+  thinking: high
+  thinking_why: It finds the pattern across many sources and rates how sure it is.
+  inputs: [{type: source_text, required: true}, {type: voc_reviews, required: false}]
+  outputs: [{type: brand_guide}]
+  needs: "read your documents and call transcripts"
+  author: Tribe AI
+
+# ---- Common Room (Apache 2.0): these read data in your own Common Room account.
+"anthropics/knowledge-work-plugins:partner-built/common-room/skills/account-research":
+  name: Account snapshot writer
+  summary: Name a company. Get a short briefing from your Common Room data. Needs your Common Room account.
+  task: sell-and-negotiate
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It pulls the right facts and says plainly when data is thin.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: audit_report}]
+  needs: "connect to your Common Room account"
+  author: Common Room
+"anthropics/knowledge-work-plugins:partner-built/common-room/skills/call-prep":
+  name: Customer call prep writer
+  summary: Name the company and who is on the call. Get a one-page brief with signals and talking points. Needs Common Room.
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It combines account facts into talking points for one call.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: plan}]
+  needs: "connect to your Common Room account and your calendar"
+  author: Common Room
+"anthropics/knowledge-work-plugins:partner-built/common-room/skills/weekly-prep-brief":
+  name: Weekly customer call planner
+  summary: Ask for your week. Get one brief covering every outside call in the next seven days. Needs your Common Room account.
+  task: organise-work
+  role: orchestrate
+  level: intermediate
+  thinking: medium
+  thinking_why: It repeats the same research for each call, then gathers it.
+  inputs: [{type: question, required: false}]
+  outputs: [{type: plan}]
+  needs: "connect to your Common Room account and your calendar"
+  author: Common Room
+"anthropics/knowledge-work-plugins:partner-built/common-room/skills/compose-outreach":
+  name: Account-based outreach drafter
+  summary: Name a company or contact. Get an email, call script and LinkedIn message built from your Common Room data. You send them.
+  task: write-emails
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks the best hooks from the data and writes three versions.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: copy_draft}]
+  needs: "connect to your Common Room account"
+  author: Common Room
+"anthropics/knowledge-work-plugins:partner-built/common-room/skills/contact-research": {skip: "Builds a profile of one person, including enrichment of their background and role, so it works as contact lookup"}
+"anthropics/knowledge-work-plugins:partner-built/common-room/skills/prospect": {skip: "Finds and enriches lead lists of people; Apollo's copy of this skill is skipped for the same reason"}
+
+# ---- Slack (MIT)
+"anthropics/knowledge-work-plugins:partner-built/slack/skills/slack-messaging":
+  name: Slack message writer
+  summary: Give it your point. Get a short, well-formatted Slack message, thread reply or canvas that leads with the news. Needs Slack.
+  task: write-emails
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows a short set of formatting and tone rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: copy_draft}]
+  needs: "connect to your Slack account"
+  author: Slack
+"anthropics/knowledge-work-plugins:partner-built/slack/skills/slack-search":
+  name: Slack message finder
+  summary: Ask what was said and where. Get the right messages, files and people from your Slack, found with smart searches. Needs Slack.
+  task: organise-work
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: It runs several searches and narrows them down.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: source_text}]
+  needs: "connect to your Slack account"
+  author: Slack
+
+# ---- Zoom (MIT): developer guides for building apps on Zoom, not for using your own meetings. All skipped.
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/build-zoom-bot": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/build-zoom-meeting-app": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/choose-zoom-approach": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/cobrowse-sdk": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/contact-center": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/debug-zoom": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/debug-zoom-integration": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/design-mcp-workflow": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/general": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/meeting-sdk": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/oauth": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/phone": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/plan-zoom-integration": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/plan-zoom-product": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/probe-sdk": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/rest-api": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/rivet-sdk": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/rtms": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/scribe": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/setup-zoom-mcp": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/setup-zoom-oauth": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/start": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/team-chat": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/ui-toolkit": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/video-sdk": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/virtual-agent": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/webhooks": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/websockets": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/zoom-apps-sdk": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}
+"anthropics/knowledge-work-plugins:partner-built/zoom-plugin/skills/zoom-mcp": {skip: "Developer guide for building Zoom apps and integrations, not for using your own meetings"}

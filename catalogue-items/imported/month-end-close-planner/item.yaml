@@ -1,0 +1,32 @@
+slug: month-end-close-planner
+name: Month-end close planner
+summary: Say what must be done to close the books. Get a dated task list with owners and blockers.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/close-management
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/close-management
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: close-management
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: close-management skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/close-management
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

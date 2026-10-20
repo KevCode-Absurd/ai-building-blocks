@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It fills in a config file from set options.
+new_slug: matlab-project-setup-helper
+name: MATLAB project setup helper
+summary: Say how your project is laid out. Get a matlab.toml with paths, dependencies and scripts set up.
+job: build-software
+headline: MATLAB project setup helper
+subhead: Say how your project is laid out. Get a matlab.toml with paths, dependencies and scripts set up.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB.

@@ -1,0 +1,33 @@
+slug: customer-research-analyst
+name: Customer research analyst
+summary: Share interviews, surveys or tickets. Get the patterns, the words buyers use and clear personas.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: transcript
+    required: true
+outputs:
+  - type: persona
+  - type: voc_reviews
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/customer-research
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/customer-research
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: customer-research
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: customer-research skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/customer-research
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

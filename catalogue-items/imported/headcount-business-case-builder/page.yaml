@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It mixes cost maths with a written argument.
+new_slug: headcount-business-case-builder
+name: Headcount business case builder
+summary: Give it a role you want to add. Get its yearly cost, a hire or contract comparison and a case to present.
+job: hire-people
+headline: Headcount business case builder
+subhead: Give it a role you want to add. Get its yearly cost, a hire or contract comparison and a case to present.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

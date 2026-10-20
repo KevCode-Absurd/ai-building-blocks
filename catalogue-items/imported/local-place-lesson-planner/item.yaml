@@ -1,0 +1,32 @@
+slug: local-place-lesson-planner
+name: Local place lesson planner
+summary: Name a place near your learners. Get lessons that tie your content to that place, its community and its heritage.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/global-cross-cultural-pedagogies/place-based-inquiry-anchor
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/global-cross-cultural-pedagogies/place-based-inquiry-anchor
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: place-based-inquiry-anchor
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: place-based-inquiry-anchor skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/global-cross-cultural-pedagogies/place-based-inquiry-anchor
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

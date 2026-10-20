@@ -1,0 +1,32 @@
+slug: recall-first-study-tutor
+name: Recall-first study tutor
+summary: Write what you remember and rate your confidence first. Your AI then fills gaps instead of repeating what you know.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/student-learning/retrieve-first-gate
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/student-learning/retrieve-first-gate
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: retrieve-first-gate
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: retrieve-first-gate skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/student-learning/retrieve-first-gate
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

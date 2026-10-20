@@ -1,0 +1,32 @@
+slug: store-stock-allocator
+name: Store stock allocator
+summary: Give it a new buy and store sales. Get how many units of each size and style go to each store.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/retail-allocation
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/retail-allocation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: retail-allocation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: retail-allocation skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/retail-allocation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

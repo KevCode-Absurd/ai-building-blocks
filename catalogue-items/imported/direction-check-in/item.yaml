@@ -1,0 +1,32 @@
+slug: direction-check-in
+name: Direction check-in
+summary: Ask it to pause. Get an honest look at your direction, assumptions and bias before you go on.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: productivity/reflect/skills/reflect
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/productivity/reflect/skills/reflect
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: reflect
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: reflect skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/productivity/reflect/skills/reflect
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

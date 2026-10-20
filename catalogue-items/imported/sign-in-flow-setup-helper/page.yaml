@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Security steps are fixed but the right flow depends on your app.
+new_slug: sign-in-flow-setup-helper
+name: Sign-in flow setup helper
+summary: Say which app and service. Get a secure OAuth sign-in flow, with the right steps for your case.
+job: connect-tools
+headline: Sign-in flow setup helper
+subhead: Say which app and service. Get a secure OAuth sign-in flow, with the right steps for your case.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

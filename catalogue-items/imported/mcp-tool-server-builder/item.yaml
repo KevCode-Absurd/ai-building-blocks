@@ -1,0 +1,40 @@
+slug: mcp-tool-server-builder
+name: MCP tool server builder
+summary: Say what tools your AI should reach. Get a safe MCP server with clear tool rules and tests.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: agent-engineering/mcp-server-building
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/agent-engineering/mcp-server-building
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: mcp-server-building
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mcp-server-building skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/agent-engineering/mcp-server-building
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It follows a fixed install script.
+new_slug: matlab-installer
+name: MATLAB installer
+summary: Name the MathWorks products. Get them installed from the command line, the same way each time.
+job: set-up-ai
+headline: MATLAB installer
+subhead: Name the MathWorks products. Get them installed from the command line, the same way each time.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB installer commands.

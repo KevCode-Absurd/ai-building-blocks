@@ -1,0 +1,32 @@
+slug: chroma-search-database-setup
+name: Chroma search database setup
+summary: Give it your text. Get a searchable store that finds passages by meaning, ready for question-answering.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 15-rag/chroma
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/15-rag/chroma
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: chroma
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: chroma skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/15-rag/chroma
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

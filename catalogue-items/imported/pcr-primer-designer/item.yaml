@@ -1,0 +1,33 @@
+slug: pcr-primer-designer
+name: PCR primer designer
+summary: Give it a target sequence. Get primer pairs checked for temperature, off-target matches and clear coordinates.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/primer-design
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/primer-design
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: primer-design
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: primer-design skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/primer-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

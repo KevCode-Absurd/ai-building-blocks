@@ -1,0 +1,32 @@
+slug: statistics-helper
+name: Statistics helper
+summary: Give it data and a question. Get trends, outliers, correlations and tests, explained in plain words.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: data/skills/statistical-analysis
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/statistical-analysis
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: statistical-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: statistical-analysis skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/statistical-analysis
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

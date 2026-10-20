@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows syntax rules with a few edge cases.
+new_slug: function-argument-checker-writer
+name: Function argument checker writer
+summary: Give it a MATLAB function. Get its inputs checked with a clean arguments block, replacing older checks.
+job: build-software
+headline: Function argument checker writer
+subhead: Give it a MATLAB function. Get its inputs checked with a clean arguments block, replacing older checks.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB.

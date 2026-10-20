@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It skims the project, then fills a fixed plan template.
+new_slug: coding-task-planner
+name: Coding task planner
+summary: Describe a coding task. Get a short plan with scope, ordered action items, tests and open questions.
+job: build-software
+headline: Coding task planner
+subhead: Describe a coding task. Get a short plan with scope, ordered action items, tests and open questions.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

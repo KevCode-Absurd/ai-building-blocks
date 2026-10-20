@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It turns design problems into testable guesses with some judgment.
+new_slug: hypothesis-first-design-planner
+name: Hypothesis-first design planner
+summary: Describe a design problem. Get hypotheses, quick sketching steps and small experiments in place of heavy design documents.
+job: design-work
+headline: Hypothesis-first design planner
+subhead: Describe a design problem. Get hypotheses, quick sketching steps and small experiments in place of heavy design documents.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

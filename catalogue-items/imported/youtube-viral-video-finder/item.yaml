@@ -1,0 +1,40 @@
+slug: youtube-viral-video-finder
+name: YouTube viral video finder
+summary: Name your niche. It reads public YouTube pages and ranks videos that beat their channel's usual views.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: reference_set
+    required: true
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: Jake Schincariol
+  repo: Jakeschincariol/youtube-agent-skill
+  path: skills/yt-viral
+  url: https://github.com/Jakeschincariol/youtube-agent-skill/tree/main/skills/yt-viral
+  licence: MIT
+  licence_file: LICENSE
+  commit: a2feb21
+  original_name: yt-viral
+  author: Jake Schincariol
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: yt-viral skill
+    by: Jake Schincariol
+    url: https://github.com/Jakeschincariol/youtube-agent-skill/tree/main/skills/yt-viral
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Jake Schincariol
+    url: https://github.com/Jakeschincariol
+    used: Wrote the skill; Jake Schincariol shared it in their collection.

@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Model choice and fit judgment need care.
+new_slug: system-model-estimator
+name: System model estimator
+summary: Give it input and output data. Get a fitted model of how the system behaves, with fit checks.
+job: build-software
+headline: System model estimator
+subhead: Give it input and output data. Get a fitted model of how the system behaves, with fit checks.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with the System Identification Toolbox.

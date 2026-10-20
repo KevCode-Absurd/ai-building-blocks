@@ -1,0 +1,32 @@
+slug: earnings-call-tone-reader
+name: Earnings call tone reader
+summary: Give it an earnings call transcript. Get shifts in management tone and confidence flagged, with quotes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: transcript
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/nlp-earnings-sentiment
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/nlp-earnings-sentiment
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: nlp-earnings-sentiment
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: nlp-earnings-sentiment skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/nlp-earnings-sentiment
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

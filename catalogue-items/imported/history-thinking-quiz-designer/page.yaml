@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It matches checks to specific skills.
+new_slug: history-thinking-quiz-designer
+name: History thinking quiz designer
+summary: Say which history skills you teach. Get short checks that show how your learners source, read, place and compare evidence.
+job: teach-and-train
+headline: History thinking quiz designer
+subhead: Say which history skills you teach. Get short checks that show how your learners source, read, place and compare evidence.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

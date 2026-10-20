@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads camera settings before changing them.
+new_slug: camera-image-fixer
+name: Camera image fixer
+summary: Say what looks wrong in your camera picture. Get settings and steps that improve it.
+job: build-software
+headline: Camera image fixer
+subhead: Say what looks wrong in your camera picture. Get settings and steps that improve it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB and reach a camera.

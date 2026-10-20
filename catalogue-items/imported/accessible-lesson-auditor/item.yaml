@@ -1,0 +1,32 @@
+slug: accessible-lesson-auditor
+name: Accessible lesson auditor
+summary: Paste a lesson. Get a check against Universal Design for Learning, with fixes ranked by impact.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/inclusive-design/udl-lesson-auditor
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/inclusive-design/udl-lesson-auditor
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: udl-lesson-auditor
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: udl-lesson-auditor skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/inclusive-design/udl-lesson-auditor
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

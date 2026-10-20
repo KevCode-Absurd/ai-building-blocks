@@ -1,0 +1,32 @@
+slug: warehouse-slot-assigner
+name: Warehouse slot assigner
+summary: Give it your products and their pick counts. Get which item goes in which spot so fast sellers sit closest.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/warehouse-slotting-optimization
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/warehouse-slotting-optimization
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: warehouse-slotting-optimization
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: warehouse-slotting-optimization skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/warehouse-slotting-optimization
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

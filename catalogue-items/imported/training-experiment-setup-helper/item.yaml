@@ -1,0 +1,32 @@
+slug: training-experiment-setup-helper
+name: Training experiment setup helper
+summary: Give it a training script. Get an experiment that sweeps settings, set up in MATLAB and kept in sync.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/ai-and-statistics/matlab-use-experiment-manager
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-use-experiment-manager
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-use-experiment-manager
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-use-experiment-manager skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-use-experiment-manager
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

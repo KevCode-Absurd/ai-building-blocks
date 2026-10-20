@@ -1,0 +1,32 @@
+slug: local-model-runner-for-laptops
+name: Local model runner for laptops
+summary: Name your model and computer. Get it running on a Mac, a plain CPU or a non-NVIDIA graphics card.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 12-inference-serving/llama-cpp
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/12-inference-serving/llama-cpp
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: llama-cpp
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: llama-cpp skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/12-inference-serving/llama-cpp
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

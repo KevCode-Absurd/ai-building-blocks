@@ -1,0 +1,32 @@
+slug: animated-landing-page-builder
+name: Animated landing page builder
+summary: Answer a few questions about your product. Get a one-page site with 3D motion and scroll effects.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: web_page
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: marketing/landing/skills/landing
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/marketing/landing/skills/landing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: landing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: landing skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/marketing/landing/skills/landing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,37 @@
+slug: fake-data-finder
+name: Fake data finder
+summary: Give it a live page. Get a report of which numbers are real, mocked, hardcoded or broken.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: web_app
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/mock-hunter
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/mock-hunter
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: mock-hunter
+  author: CodeShuX
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mock-hunter skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/mock-hunter
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: CodeShuX
+    url: https://github.com/CodeShuX
+    used: Wrote the skill; sickn33 shared it in their collection.

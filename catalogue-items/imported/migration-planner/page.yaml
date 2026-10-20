@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: A safe migration needs careful ordering and rollback thinking.
+new_slug: migration-planner
+name: Migration planner
+summary: Name the old system or feature. Get a plan to retire it and move users over without breaking them.
+job: build-software
+headline: Migration planner
+subhead: Name the old system or feature. Get a plan to retire it and move users over without breaking them.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

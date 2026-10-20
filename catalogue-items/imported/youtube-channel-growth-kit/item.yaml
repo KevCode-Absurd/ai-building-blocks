@@ -1,0 +1,42 @@
+slug: youtube-channel-growth-kit
+name: YouTube channel growth kit
+summary: "The full kit: tell it your channel and goal. Get an audit, ideas, scripts, thumbnails, SEO and a calendar."
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Daniel Agrici
+  repo: AgriciDaniel/claude-youtube
+  path: skills/claude-youtube
+  url: https://github.com/AgriciDaniel/claude-youtube/tree/main/skills/claude-youtube
+  licence: MIT
+  licence_file: LICENSE
+  commit: 84c3fa6
+  original_name: youtube
+  author: Daniel Agrici
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: youtube skill
+    by: Daniel Agrici
+    url: https://github.com/AgriciDaniel/claude-youtube/tree/main/skills/claude-youtube
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Daniel Agrici
+    url: https://github.com/AgriciDaniel
+    used: Wrote the skill; Daniel Agrici shared it in their collection.

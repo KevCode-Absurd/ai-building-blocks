@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Several linked cases need careful thought.
+new_slug: headcount-scenario-planner
+name: Headcount scenario planner
+summary: Give it your hiring plan. Get base, best and worst cases with costs and signs it is time to switch plans.
+job: hire-people
+headline: Headcount scenario planner
+subhead: Give it your hiring plan. Get base, best and worst cases with costs and signs it is time to switch plans.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

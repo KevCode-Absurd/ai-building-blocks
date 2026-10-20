@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It checks if the data is good enough before it recommends any price.
+new_slug: price-test-planner
+name: Price test planner
+summary: Give it your costs and sales data. Get the best price to try, three outcome cases, and a test you can undo.
+job: set-prices
+headline: Price test planner
+subhead: Give it your costs and sales data. Get the best price to try, three outcome cases, and a test you can undo.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

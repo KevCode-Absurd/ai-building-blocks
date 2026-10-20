@@ -1,0 +1,32 @@
+slug: hotel-room-pricing-planner
+name: Hotel room pricing planner
+summary: Give it your bookings and rates. Get room prices, overbooking limits and a channel mix that fill rooms at the best rate.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/hotel-inventory-management
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/hotel-inventory-management
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: hotel-inventory-management
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hotel-inventory-management skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/hotel-inventory-management
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

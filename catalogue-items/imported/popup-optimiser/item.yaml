@@ -1,0 +1,35 @@
+slug: popup-optimiser
+name: Popup optimiser
+summary: Say what you want from visitors. Get popup type, timing and copy that gets signups without annoying them.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: web_page
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/popups
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/popups
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: popups
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: popups skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/popups
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: pcb-layout-file-reader
+name: PCB layout file reader
+summary: Give it a Gerber, ODB++ or Allegro file. Get its nets, layers and stack listed and ready to use.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/rf-and-mixed-signal/matlab-read-pcb-layout
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-read-pcb-layout
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-read-pcb-layout
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-read-pcb-layout skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-read-pcb-layout
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

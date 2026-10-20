@@ -1,0 +1,32 @@
+slug: work-ticket-writer
+name: Work ticket writer
+summary: Give it a bug, task or idea. Get a complete Jira, Linear or GitHub ticket with fields and a clear done test.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/ticket-authoring
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/ticket-authoring
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: ticket-authoring
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ticket-authoring skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/ticket-authoring
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

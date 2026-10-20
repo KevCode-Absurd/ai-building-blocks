@@ -1,0 +1,32 @@
+slug: human-sounding-reply-writer
+name: Human-sounding reply writer
+summary: Ask for it once. Get AI replies that sound like a person, with less listing and fewer stock phrases.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/behuman/skills/behuman
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/behuman/skills/behuman
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: behuman
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: behuman skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/behuman/skills/behuman
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

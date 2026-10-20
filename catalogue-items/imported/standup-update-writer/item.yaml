@@ -1,0 +1,37 @@
+slug: standup-update-writer
+name: Standup update writer
+summary: Ask for your standup. Get yesterday, today and blockers from your commits, PRs and tickets.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: tool_connection
+    required: false
+outputs:
+  - type: meeting_notes
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: engineering/skills/standup
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/engineering/skills/standup
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: standup
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: standup skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/engineering/skills/standup
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

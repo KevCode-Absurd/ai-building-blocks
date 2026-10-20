@@ -1,0 +1,37 @@
+slug: channel-cost-and-roi-comparer
+name: Channel cost and ROI comparer
+summary: Give it direct and partner sales costs. Get cost to serve, ROI by channel and the best mix.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: commercial/skills/channel-economics
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/commercial/skills/channel-economics
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: channel-economics
+  author: claude-code-skills
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: channel-economics skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/commercial/skills/channel-economics
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: claude-code-skills
+    url: https://github.com/alirezarezvani/claude-code-skills
+    used: Wrote the skill; Alireza Rezvani shared it in their collection.

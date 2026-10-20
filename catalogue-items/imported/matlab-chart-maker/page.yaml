@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It follows common plotting patterns.
+new_slug: matlab-chart-maker
+name: MATLAB chart maker
+summary: Describe the chart. Get working code for line, bar, heatmap or surface plots, with labels and layout.
+job: build-software
+headline: MATLAB chart maker
+subhead: Describe the chart. Get working code for line, bar, heatmap or surface plots, with labels and layout.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB.

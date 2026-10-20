@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Overwrites have no merge, so it previews first.
+new_slug: product-field-bulk-editor
+name: Product field bulk editor
+summary: Pick products and a custom field value. Get it set or removed on all of them. Overwrites live store data.
+job: run-your-store
+headline: Product field bulk editor
+subhead: Pick products and a custom field value. Get it set or removed on all of them. Overwrites live store data.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin and change live store data.

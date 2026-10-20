@@ -1,0 +1,33 @@
+slug: quality-bar-setter
+name: Quality bar setter
+summary: Answer a few questions. Get a written quality bar for your project and a watch for anyone lowering it.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: document
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Addy Osmani
+  repo: addyosmani/agent-skills
+  path: skills/constraint-driven-development
+  url: https://github.com/addyosmani/agent-skills/tree/main/skills/constraint-driven-development
+  licence: MIT
+  licence_file: LICENSE
+  commit: aeac41d
+  original_name: constraint-driven-development
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: constraint-driven-development skill
+    by: Addy Osmani
+    url: https://github.com/addyosmani/agent-skills/tree/main/skills/constraint-driven-development
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

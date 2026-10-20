@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It keeps code changes small and checks each one.
+new_slug: simple-code-coach
+name: Simple code coach
+summary: Write code with it. Get assumptions stated, the smallest change made and only what you asked for.
+job: build-software
+headline: Simple code coach
+subhead: Write code with it. Get assumptions stated, the smallest change made and only what you asked for.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

@@ -1,0 +1,32 @@
+slug: ofdm-system-builder
+name: OFDM system builder
+summary: Describe your OFDM link. Get a correct simulation using the proper modulation functions.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/wireless-communications/matlab-design-ofdm-system
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/wireless-communications/matlab-design-ofdm-system
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-design-ofdm-system
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-design-ofdm-system skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/wireless-communications/matlab-design-ofdm-system
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

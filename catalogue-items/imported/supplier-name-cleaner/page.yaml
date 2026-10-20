@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It groups near-matching names.
+new_slug: supplier-name-cleaner
+name: Supplier name cleaner
+summary: Get supplier name typos and case variants grouped, with one proper name suggested for each.
+job: run-your-store
+headline: Supplier name cleaner
+subhead: Get supplier name typos and case variants grouped, with one proper name suggested for each.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin (read only).

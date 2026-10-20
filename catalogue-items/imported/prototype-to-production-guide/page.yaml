@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It chains several code methods and changes a lot of code.
+new_slug: prototype-to-production-guide
+name: Prototype to production guide
+summary: Give it a working prototype. Get tests, cleaner structure and a plan to make it ready for real users.
+job: test-and-fix-code
+headline: Prototype to production guide
+subhead: Give it a working prototype. Get tests, cleaner structure and a plan to make it ready for real users.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

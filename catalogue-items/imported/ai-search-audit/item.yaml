@@ -1,0 +1,39 @@
+slug: ai-search-audit
+name: AI search audit
+summary: Give it a website. Get a score for how likely AI search is to cite it, plus fixes. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/geo-audit
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/geo-audit
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: geo-audit
+  author: zubair-trabzada
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: geo-audit skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/geo-audit
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: zubair-trabzada
+    url: https://github.com/zubair-trabzada/geo-seo-claude
+    used: Wrote the skill; sickn33 shared it in their collection.

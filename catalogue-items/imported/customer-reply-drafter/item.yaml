@@ -1,0 +1,32 @@
+slug: customer-reply-drafter
+name: Customer reply drafter
+summary: Describe the customer's situation. Get a reply in the right tone, plus notes on what to check before you send it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: customer-support/skills/draft-response
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/customer-support/skills/draft-response
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: draft-response
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: draft-response skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/customer-support/skills/draft-response
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

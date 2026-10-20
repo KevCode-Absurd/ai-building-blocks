@@ -1,0 +1,33 @@
+slug: vendor-risk-reviewer
+name: Vendor risk reviewer
+summary: Give it a vendor and what they handle. Get a risk tier, tailored questions and a review of their SOC 2 report.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/tprm/skills/tprm
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/tprm/skills/tprm
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: tprm
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: tprm skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/tprm/skills/tprm
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

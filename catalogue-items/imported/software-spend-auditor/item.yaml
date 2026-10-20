@@ -1,0 +1,37 @@
+slug: software-spend-auditor
+name: Software spend auditor
+summary: Give it your spend list. Get spend by category, duplicate tools and a plan to cut suppliers.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: business-operations/skills/procurement-optimizer
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/procurement-optimizer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: procurement-optimizer
+  author: claude-code-skills
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: procurement-optimizer skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/business-operations/skills/procurement-optimizer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: claude-code-skills
+    url: https://github.com/alirezarezvani/claude-code-skills
+    used: Wrote the skill; Alireza Rezvani shared it in their collection.

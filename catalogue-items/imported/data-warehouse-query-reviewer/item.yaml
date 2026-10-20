@@ -1,0 +1,39 @@
+slug: data-warehouse-query-reviewer
+name: Data warehouse query reviewer
+summary: Share your business question or SQL. Get a safe, read-only analysis plan and a check for join and privacy errors.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/warehouse
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/warehouse
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: warehouse
+  author: Rudra-G-23
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: warehouse skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/warehouse
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Rudra-G-23
+    url: https://github.com/Rudra-G-23
+    used: Wrote the skill; sickn33 shared it in their collection.

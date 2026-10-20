@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It scans for set risks and then writes them up.
+new_slug: gdpr-privacy-checker
+name: GDPR privacy checker
+summary: Point it at your code and data use. Get privacy risks, an impact assessment and a tracker for data requests.
+job: secure-code
+headline: GDPR privacy checker
+subhead: Point it at your code and data use. Get privacy risks, an impact assessment and a tracker for data requests.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

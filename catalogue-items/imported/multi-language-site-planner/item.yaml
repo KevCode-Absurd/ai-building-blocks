@@ -1,0 +1,34 @@
+slug: multi-language-site-planner
+name: Multi-language site planner
+summary: Tell it your site and target markets. Get a plan for language URLs, hreflang, translation steps, currencies and right-to-left layouts.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: web_app
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/internationalization
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/internationalization
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: internationalization
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: internationalization skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/internationalization
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

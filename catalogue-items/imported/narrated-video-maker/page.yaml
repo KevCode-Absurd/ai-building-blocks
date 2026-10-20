@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows a fixed pipeline from slides to speech to video.
+new_slug: narrated-video-maker
+name: Narrated video maker
+summary: Give it a Markdown document. Get a narrated MP4 with slides and a voiceover.
+job: make-video-ads
+headline: Narrated video maker
+subhead: Give it a Markdown document. Get a narrated MP4 with slides and a voiceover.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and save files.

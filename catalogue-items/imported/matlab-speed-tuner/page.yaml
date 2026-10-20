@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It profiles, changes and measures in a set loop.
+new_slug: matlab-speed-tuner
+name: MATLAB speed tuner
+summary: Give it slow code. Get the real slowdown found, fixed and measured, with no made-up speed claims.
+job: test-and-fix-code
+headline: MATLAB speed tuner
+subhead: Give it slow code. Get the real slowdown found, fixed and measured, with no made-up speed claims.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB.

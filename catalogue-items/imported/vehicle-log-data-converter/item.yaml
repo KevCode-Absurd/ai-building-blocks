@@ -1,0 +1,32 @@
+slug: vehicle-log-data-converter
+name: Vehicle log data converter
+summary: Give it MDF, BLF or CAN log files. Get signals decoded and written to the format you need.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: advanced
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/test-and-measurement/matlab-import-export-vehicle-data
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/test-and-measurement/matlab-import-export-vehicle-data
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-import-export-vehicle-data
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-import-export-vehicle-data skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/test-and-measurement/matlab-import-export-vehicle-data
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

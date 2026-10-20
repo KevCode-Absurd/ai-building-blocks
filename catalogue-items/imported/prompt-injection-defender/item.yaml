@@ -1,0 +1,40 @@
+slug: prompt-injection-defender
+name: Prompt injection defender
+summary: Describe your AI app. Get a threat map and fixes against hidden instructions in text it reads.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: security_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: agent-security/prompt-injection-defense
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/agent-security/prompt-injection-defense
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: prompt-injection-defense
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: prompt-injection-defense skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/agent-security/prompt-injection-defense
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

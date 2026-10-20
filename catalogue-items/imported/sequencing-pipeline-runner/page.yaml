@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It must pick, set up and check heavy pipelines.
+new_slug: sequencing-pipeline-runner
+name: Sequencing pipeline runner
+summary: Point it at sequencing data or a public set. Get an nf-core pipeline run for RNA-seq, variants or ATAC-seq.
+job: build-software
+headline: Sequencing pipeline runner
+subhead: Point it at sequencing data or a public set. Get an nf-core pipeline run for RNA-seq, variants or ATAC-seq.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and download public data.

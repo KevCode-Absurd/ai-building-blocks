@@ -2,7 +2,7 @@
 // PRD §6: HANDOFF.md, workflow.json, skills/<slug>/SKILL.md, README.txt.
 // The zip library loads only when someone downloads.
 import type { Zippable } from "fflate";
-import { type Catalogue, loadSkillText, portLabel, taskOf } from "./data";
+import { type Catalogue, loadFiles, loadSkillBytes, loadSkillText, portLabel, taskOf } from "./data";
 import type { Flow, FlowNode } from "./store";
 import { type Business, businessText } from "./business";
 import { crewSlugs, isMind, leadsOf, mindName } from "./crew";
@@ -270,10 +270,8 @@ export async function buildSkillZip(slug: string, skill: string, files: string[]
   const { strToU8, zipSync } = await import("fflate");
   const tree: Zippable = {};
   tree[`${slug}/SKILL.md`] = strToU8(skill);
-  for (const f of files) {
-    const t = await loadSkillText(slug, f);
-    if (t) tree[`${slug}/${f}`] = strToU8(t);
-  }
+  // Bytes, not text: scripts, images and other binaries must come out of the zip exactly as they went in.
+  for (const [f, bytes] of await Promise.all(files.map(async (f) => [f, await loadSkillBytes(slug, f)] as const))) if (bytes) tree[`${slug}/${f}`] = bytes;
   return new Blob([zipSync(tree)], { type: "application/zip" });
 }
 
@@ -290,7 +288,7 @@ export async function buildMindPack(c: Catalogue, mindSlug: string, skillSlugs: 
   const root = `${mindSlug}-pack`;
   const tree: Zippable = {};
   tree[`${root}/${mindSlug}/SKILL.md`] = strToU8(mindSkill);
-  for (const f of m.files ?? []) {
+  for (const f of await loadFiles(m)) {
     const t = await loadSkillText(mindSlug, f);
     if (t) tree[`${root}/${mindSlug}/${f}`] = strToU8(t);
   }
@@ -301,9 +299,9 @@ export async function buildMindPack(c: Catalogue, mindSlug: string, skillSlugs: 
     if (!b || !t) continue;
     const way = `\n\n## Done the way of ${first}\nIf the \`${mindSlug}\` skill is added too, do this job the way ${first} would: read it first, ask their questions, follow their method and use their voice. Mark anything that goes beyond their public record. Without it, run this skill as written.\n`;
     tree[`${root}/${s}/SKILL.md`] = strToU8(t.replace(/\s*$/, "") + way);
-    for (const f of b.files ?? []) {
-      const x = await loadSkillText(s, f);
-      if (x) tree[`${root}/${s}/${f}`] = strToU8(x);
+    for (const f of await loadFiles(b)) {
+      const x = await loadSkillBytes(s, f);
+      if (x) tree[`${root}/${s}/${f}`] = x;
     }
     got.push({ slug: s, name: b.name, summary: b.summary });
   }

@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Setup choices change results and need expert care.
+new_slug: molecular-simulation-runner
+name: Molecular simulation runner
+summary: Give it a protein or molecule. Get a simulation run and an analysis of how it moves.
+job: research-topics
+headline: Molecular simulation runner
+subhead: Give it a protein or molecule. Get a simulation run and an analysis of how it moves.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and use computing power.

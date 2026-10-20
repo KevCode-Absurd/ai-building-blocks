@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads a few numbers and flags patterns, and you make the call.
+new_slug: meta-ads-daily-checker
+name: Meta ads daily checker
+summary: Connect your Meta ad account read-only. Get a daily check of spend, winners, money wasters and tired ads.
+job: read-ad-results
+headline: Meta ads daily checker
+subhead: Connect your Meta ad account read-only. Get a daily check of spend, winners, money wasters and tired ads.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run commands with the official Meta Ads command line tool and your own read-only access token. It only drafts changes for your approval.

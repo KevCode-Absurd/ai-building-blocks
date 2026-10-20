@@ -1,0 +1,12 @@
+"elayadesign/ai-design-skills:skills/landing-page-design":
+  name: Conversion landing page designer
+  summary: Tell it your offer and audience. Get a landing page plan, copy and strict design rules that turn visitors into buyers.
+  task: write-landing-page
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It asks a set list of questions, then applies fixed layout and style rules.
+  inputs: [{type: brief, required: true}, {type: brand_brain, required: false}]
+  outputs: [{type: landing_page}]
+  author: Elaya Design
+  author_url: https://github.com/elayadesign

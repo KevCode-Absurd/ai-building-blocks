@@ -1,0 +1,32 @@
+slug: goal-to-task-loop-runner
+name: Goal-to-task loop runner
+summary: Give it a goal and a folder of skills. Get a checked task plan that runs one task at a time.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/agent-harness/skills/agent-harness
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/agent-harness/skills/agent-harness
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: agent-harness
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: agent-harness skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/agent-harness/skills/agent-harness
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

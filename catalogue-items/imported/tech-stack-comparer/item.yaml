@@ -1,0 +1,32 @@
+slug: tech-stack-comparer
+name: Tech stack comparer
+summary: Name the options. Get a side-by-side of cost, security, team fit and long-term support, with a pick.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/skills/tech-stack-evaluator
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/tech-stack-evaluator
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: tech-stack-evaluator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: tech-stack-evaluator skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/tech-stack-evaluator
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

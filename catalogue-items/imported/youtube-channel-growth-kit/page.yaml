@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It routes across 14 jobs and needs your channel's context.
+new_slug: youtube-channel-growth-kit
+name: YouTube channel growth kit
+summary: "The full kit: tell it your channel and goal. Get an audit, ideas, scripts, thumbnails, SEO and a calendar."
+job: grow-social
+headline: YouTube channel growth kit
+subhead: "The full kit: tell it your channel and goal. Get an audit, ideas, scripts, thumbnails, SEO and a calendar."
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your own YouTube API key (the keyword data parts are optional and need your own DataForSEO account).

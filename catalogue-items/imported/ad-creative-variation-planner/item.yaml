@@ -1,0 +1,40 @@
+slug: ad-creative-variation-planner
+name: Ad creative variation planner
+summary: Give it your offer and audience. Get hooks, formats and a testing plan that spots tired ads early.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brand_brain
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: hooks
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/ads-creative-development
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/ads-creative-development
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: ads-creative-development
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ads-creative-development skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/ads-creative-development
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

@@ -1,0 +1,32 @@
+slug: seawater-carbonate-calculator
+name: Seawater carbonate calculator
+summary: Give it two seawater measures like alkalinity and pH. Get the full carbonate chemistry worked out.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/marine-carbonate-chemistry
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/marine-carbonate-chemistry
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: marine-carbonate-chemistry
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: marine-carbonate-chemistry skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/marine-carbonate-chemistry
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

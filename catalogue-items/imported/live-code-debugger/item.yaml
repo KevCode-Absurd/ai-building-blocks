@@ -1,0 +1,37 @@
+slug: live-code-debugger
+name: Live code debugger
+summary: Point it at a bug. Get the program run with breakpoints, so you see exact values and where it goes wrong.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/debugging-code
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/debugging-code
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: debugging-code
+  author: Almog Baku
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: debugging-code skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/debugging-code
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Almog Baku
+    url: https://github.com/AlmogBaku
+    used: Wrote the skill; sickn33 shared it in their collection.

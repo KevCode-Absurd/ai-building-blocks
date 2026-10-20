@@ -1,0 +1,39 @@
+slug: shopify-theme-developer
+name: Shopify theme developer
+summary: Say how your store should look. Get a built or edited theme with sections, templates and speed fixes.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: theme_files
+    required: false
+outputs:
+  - type: theme_files
+uses: []
+origin: imported
+source:
+  by: dragnoir
+  repo: dragnoir/Shopify-agent-skills
+  path: skills/theme-development
+  url: https://github.com/dragnoir/Shopify-agent-skills/tree/main/skills/theme-development
+  licence: MIT
+  licence_file: LICENSE
+  commit: f76a09f
+  original_name: theme-development
+  author: dragnoir
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: theme-development skill
+    by: dragnoir
+    url: https://github.com/dragnoir/Shopify-agent-skills/tree/main/skills/theme-development
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: dragnoir
+    url: https://github.com/dragnoir
+    used: Wrote the skill; dragnoir shared it in their collection.

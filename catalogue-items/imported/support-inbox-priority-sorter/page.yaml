@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It sorts by clear rules.
+new_slug: support-inbox-priority-sorter
+name: Support inbox priority sorter
+summary: Paste a support ticket. Get a category, a P1 to P4 priority, who should handle it, and any known duplicate.
+job: help-customers
+headline: Support inbox priority sorter
+subhead: Paste a support ticket. Get a category, a P1 to P4 priority, who should handle it, and any known duplicate.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your help desk.

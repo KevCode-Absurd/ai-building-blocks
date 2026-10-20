@@ -1,0 +1,788 @@
+# alirezarezvani/claude-skills, slice 3 of 3.
+"alirezarezvani/claude-skills:marketing-skill/skills/ab-test-setup":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/ad-creative":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/analytics-tracking":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/churn-prevention":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/cold-email":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/competitor-alternatives":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/content-strategy":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/copy-editing":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/copywriting":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/email-sequence":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/form-cro":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/free-tool-strategy":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/launch-strategy":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/marketing-ideas":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/marketing-psychology":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/marketing-context":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/onboarding-cro":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/page-cro":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/paid-ads":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/paywall-upgrade-cro":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/popup-cro":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/pricing-strategy":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/programmatic-seo":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/referral-program":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/schema-markup":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/seo-audit":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/signup-flow-cro":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/site-architecture":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/social-content":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/aeo":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/app-store-optimization":
+  skip: Copy of a skill from coreyhaines31/marketingskills, which we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/brand-guidelines":
+  skip: Same job as our Brand guide builder.
+"alirezarezvani/claude-skills:marketing-skill/skills/content-creator":
+  skip: Only a deprecated redirect to other skills.
+"alirezarezvani/claude-skills:marketing-skill/skills/content-humanizer":
+  skip: Same job as our Anti-AI-slop copy editor.
+"alirezarezvani/claude-skills:marketing-skill/skills/marketing-demand-acquisition":
+  skip: Broad and generic; overlaps the ad and SEO skills we already take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/marketing-ops":
+  skip: Only routes to the repo's other marketing skills.
+"alirezarezvani/claude-skills:marketing-skill/skills/marketing-skills":
+  skip: Only an index of the repo's other marketing skills.
+"alirezarezvani/claude-skills:marketing-skill/skills/social-media-manager":
+  skip: Overlaps our Platform-native content planner and the social skills we take from the source.
+"alirezarezvani/claude-skills:marketing-skill/skills/youtube-full":
+  name: YouTube transcript and channel reader
+  summary: Give it a video or channel. Get transcripts, video lists and new uploads. Collects data from websites.
+  task: grow-social
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It fetches public data and lists it.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: transcript } ]
+  needs: run code and use your TranscriptAPI key
+  paid: "TranscriptAPI"
+  scrapes: true
+"alirezarezvani/claude-skills:marketing/linkedin/skills/linkedin-skills":
+  skip: Only routes to the five LinkedIn skills, which we list one by one.
+"alirezarezvani/claude-skills:product-team/skills/product-skills":
+  skip: Only routes to the repo's other product skills.
+"alirezarezvani/claude-skills:productivity/andreessen/skills/andreessen":
+  skip: A persona skill; our Minds library covers this ground.
+"alirezarezvani/claude-skills:productivity/fable-goal/skills/fable-goal":
+  skip: Only writes /goal prompts for one Claude Code feature.
+"alirezarezvani/claude-skills:productivity/handoff/skills/handoff":
+  skip: Same job as our Handoff note writer.
+"alirezarezvani/claude-skills:productivity/swedish-mentor":
+  skip: Narrow language-learning skill built on YouTube clip picking.
+"alirezarezvani/claude-skills:project-management/skills/atlassian-admin":
+  skip: Only works inside Atlassian admin settings.
+"alirezarezvani/claude-skills:project-management/skills/atlassian-templates":
+  skip: Only works inside Jira and Confluence template internals.
+"alirezarezvani/claude-skills:project-management/skills/pm-skills":
+  skip: Only routes to the repo's other project skills.
+"alirezarezvani/claude-skills:project-management/skills/team-communications":
+  skip: Same job as our Internal update writer.
+"alirezarezvani/claude-skills:ra-qm-team/skills/agent-decision-receipts":
+  skip: Depends on one signing service and its certificates.
+"alirezarezvani/claude-skills:ra-qm-team/skills/capa-officer":
+  skip: Medical device regulation, too narrow for most readers.
+"alirezarezvani/claude-skills:ra-qm-team/skills/fda-consultant-specialist":
+  skip: Medical device regulation, too narrow for most readers.
+"alirezarezvani/claude-skills:ra-qm-team/skills/mdr-745-specialist":
+  skip: Medical device regulation, too narrow for most readers.
+"alirezarezvani/claude-skills:ra-qm-team/skills/qms-audit-expert":
+  skip: Medical device regulation, too narrow for most readers.
+"alirezarezvani/claude-skills:ra-qm-team/skills/quality-documentation-manager":
+  skip: Medical device regulation, too narrow for most readers.
+"alirezarezvani/claude-skills:ra-qm-team/skills/quality-manager-qmr":
+  skip: Medical device regulation, too narrow for most readers.
+"alirezarezvani/claude-skills:ra-qm-team/skills/quality-manager-qms-iso13485":
+  skip: Medical device regulation, too narrow for most readers.
+"alirezarezvani/claude-skills:ra-qm-team/skills/regulatory-affairs-head":
+  skip: Medical device regulation, too narrow for most readers.
+"alirezarezvani/claude-skills:ra-qm-team/skills/risk-management-specialist":
+  skip: Medical device regulation, too narrow for most readers.
+"alirezarezvani/claude-skills:ra-qm-team/skills/information-security-manager-iso27001":
+  skip: Medical-tech ISO 27001 setup; our ISO 27001 audit skill covers the core.
+"alirezarezvani/claude-skills:ra-qm-team/skills/ra-qm-skills":
+  skip: Only routes to the repo's other quality skills.
+"alirezarezvani/claude-skills:research-ops/skills/clinical-research":
+  skip: Clinical study design, too narrow for most readers.
+  author: claude-code-skills
+"alirezarezvani/claude-skills:research-ops/skills/research-finance":
+  skip: R&D program budgeting, too narrow for most readers.
+  author: claude-code-skills
+"alirezarezvani/claude-skills:research-ops/skills/research-ops-skills":
+  skip: Only routes to the repo's other research-ops skills.
+"alirezarezvani/claude-skills:research/grants/skills/grants":
+  skip: NIH grant writing only, too narrow for most readers.
+"alirezarezvani/claude-skills:research/notebooklm/skills/notebooklm":
+  skip: Drives a signed-in Google NotebookLM account through browser automation.
+"alirezarezvani/claude-skills:research/pulse/skills/pulse":
+  name: Recent topic pulse researcher
+  summary: Give it a topic. Get a cited briefing of what Reddit, Hacker News and the web say lately. Collects data from websites.
+  task: understand-customers
+  role: source
+  level: intermediate
+  thinking: high
+  thinking_why: It must weigh many sources and keep claims tied to links.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: search the web
+  scrapes: true
+"alirezarezvani/claude-skills:research/research/skills/research":
+  skip: Only routes to the repo's other research skills.
+"alirezarezvani/claude-skills:research/syllabus/skills/syllabus":
+  name: "Course reading list builder"
+  summary: "Give it a course syllabus. Get a Word reading list of recent peer-reviewed papers for each section. Needs a paid Consensus account."
+  task: teach-and-train
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It groups topics, searches papers and only lists what it found."
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: document}]
+  needs: "run code and connect Consensus"
+  paid: "Consensus"
+"alirezarezvani/claude-skills:markdown-html/skills/md-slides":
+  name: Markdown slide deck maker
+  summary: Give it a markdown outline. Get one HTML slide deck you present with arrow keys, with speaker notes.
+  task: work-with-files
+  role: render
+  level: beginner
+  thinking: low
+  thinking_why: It turns a written outline into a page with set rules.
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: slide_deck } ]
+  needs: run code and save files
+"alirezarezvani/claude-skills:marketing-skill/skills/business-name-fit":
+  name: Origin-true business name picker
+  summary: Give it your roots and target markets. Get business names that stay true to you and still work for buyers.
+  task: brand-file
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It weighs culture and market fit for each name.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: shortlist } ]
+"alirezarezvani/claude-skills:marketing-skill/skills/campaign-analytics":
+  name: Campaign attribution analyst
+  summary: Give it your campaign data. Get attribution by channel, funnel drop-offs and ROI, with what to change.
+  task: read-ad-results
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It runs set calculations, then explains what they mean.
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your files
+"alirezarezvani/claude-skills:marketing-skill/skills/content-production":
+  name: Blog post producer
+  summary: Give it a topic. Get a researched, edited blog post or guide that is ready to publish.
+  task: write-and-tell-stories
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a set pipeline but makes many writing choices.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+"alirezarezvani/claude-skills:marketing-skill/skills/local-seo-manager":
+  name: Local search listing manager
+  summary: Describe your service business and area. Get a local search audit, listing fixes and a plan for more reviews.
+  task: get-found-in-search
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It checks many set items, then ranks the fixes.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+  author: Stan Varashilov (Steffonet)
+"alirezarezvani/claude-skills:marketing-skill/skills/marketing-strategy-pmm":
+  name: Go-to-market positioning planner
+  summary: Give it your product and rivals. Get positioning, a go-to-market plan and launch steps.
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: Positioning needs real judgement about your market.
+  inputs: [ { type: brief, required: true }, { type: competitor_set, required: false } ]
+  outputs: [ { type: plan } ]
+  needs: run code and read your files
+"alirezarezvani/claude-skills:marketing-skill/skills/prompt-engineer-toolkit":
+  name: Marketing prompt tester
+  summary: Give it your prompts and test cases. Get scored comparisons of each version and a saved version history.
+  task: set-up-ai
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It runs set tests and compares the results.
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: test_report } ]
+  needs: run code and save files
+"alirezarezvani/claude-skills:marketing-skill/skills/social-media-analyzer":
+  name: Social media results analyst
+  summary: Give it your post numbers. Get engagement rates, ROI and platform benchmarks, plus what to post next.
+  task: grow-social
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It runs set calculations on your numbers.
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your files
+"alirezarezvani/claude-skills:marketing-skill/skills/webinar-marketing":
+  name: Webinar promotion planner
+  summary: Give it your webinar topic and audience. Get a plan to promote it, run it and follow up.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It builds a plan from your topic and audience.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:marketing-skill/skills/x-twitter-growth":
+  name: X growth writer
+  summary: Give it your topic and past posts. Get tweets, threads and a plan to grow your audience on X.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It writes posts and reads your numbers.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+"alirezarezvani/claude-skills:marketing-skill/video-content-strategist/skills/video-content-strategist":
+  name: Video content planner
+  summary: Give it your channel goal. Get a video plan, scripts and ways to turn one long video into short clips.
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans content and writes scripts in set formats.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan }, { type: script } ]
+"alirezarezvani/claude-skills:marketing/landing/skills/landing":
+  name: Animated landing page builder
+  summary: Answer a few questions about your product. Get a one-page site with 3D motion and scroll effects.
+  task: write-landing-page
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It asks set questions, then builds with a fixed method.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: web_page } ]
+  needs: run code and open a browser
+"alirezarezvani/claude-skills:marketing/linkedin/skills/linkedin-analytics":
+  name: LinkedIn results reader
+  summary: Paste your own LinkedIn numbers. Get which posts worked, why reach changed and a test to run next.
+  task: grow-social
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: It reads patterns in your numbers and weighs if they are real.
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+"alirezarezvani/claude-skills:marketing/linkedin/skills/linkedin-content":
+  name: LinkedIn post writer
+  summary: Give it a story or idea. Get a LinkedIn post, carousel script or poll that you post yourself.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It writes in set formats and checks the draft.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+"alirezarezvani/claude-skills:marketing/linkedin/skills/linkedin-engagement":
+  name: LinkedIn comment and outreach planner
+  summary: Say who you want to reach. Get a commenting list, connection notes and a plan, all sent by you.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It writes short messages in your voice with set rules.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:marketing/linkedin/skills/linkedin-profile":
+  name: LinkedIn profile rewriter
+  summary: Describe your profile. Get a stronger headline, About section and experience bullets.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It rewrites each section with set checks.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+"alirezarezvani/claude-skills:marketing/linkedin/skills/linkedin-strategy":
+  name: LinkedIn content strategy planner
+  summary: Say your goal. Get content pillars, positioning and a posting rhythm you can keep.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It plans across your goals and time.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:product-team/agile-product-owner/skills/agile-product-owner":
+  name: User story writer
+  summary: Give it a feature idea. Get user stories with acceptance criteria and a sprint plan.
+  task: build-product
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows a set story format.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"alirezarezvani/claude-skills:product-team/apple-hig-expert/skills/apple-hig-expert":
+  name: Apple interface reviewer
+  summary: Describe or share your iOS or Mac screen. Get fixes checked against Apple's design rules, including Liquid Glass.
+  task: design-work
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It checks a design against many written rules.
+  inputs: [ { type: design_file, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+"alirezarezvani/claude-skills:product-team/code-to-prd/skills/code-to-prd":
+  name: Code to requirements writer
+  summary: Point it at a codebase. Get a product requirements document built from its screens, data and flows.
+  task: build-product
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It reads a lot of code and works out what it does.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read your project files
+"alirezarezvani/claude-skills:product-team/research-summarizer/skills/research-summarizer":
+  name: Research paper summarizer
+  summary: Give it a paper, article or report. Get the key findings, plain summaries and a comparison across sources.
+  task: think-and-decide
+  role: compress
+  level: beginner
+  thinking: medium
+  thinking_why: It reads long sources and pulls out what matters.
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+"alirezarezvani/claude-skills:product-team/skills/competitive-teardown":
+  name: Competitor product analyst
+  summary: Give it facts on a rival. Get their pricing, features and strengths set against yours, with gaps to act on.
+  task: study-competitors
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It compares many facts and picks the gaps that matter.
+  inputs: [ { type: competitor_set, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+"alirezarezvani/claude-skills:product-team/skills/experiment-designer":
+  name: Product experiment designer
+  summary: Give it an idea to test. Get a clear hypothesis, sample size, test plan and how to read the result.
+  task: test-an-idea
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It uses set statistics and a fixed plan format.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"alirezarezvani/claude-skills:product-team/skills/landing-page-generator":
+  name: React landing page builder
+  summary: Describe your product. Get a landing page as React code with hero, pricing, FAQ and proof sections.
+  task: write-landing-page
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It builds from set parts with choices about layout.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and save files
+"alirezarezvani/claude-skills:product-team/skills/product-analytics":
+  name: Product metrics planner
+  summary: Say your product stage. Get the KPIs to track, a dashboard layout and how to read retention and adoption.
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks metrics that fit your stage.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:product-team/skills/product-discovery":
+  name: Opportunity validation planner
+  summary: Give it a product bet. Get your riskiest assumptions mapped and a short plan to test them before you build.
+  task: test-an-idea
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It weighs which doubts matter most.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:product-team/skills/product-manager-toolkit":
+  name: Feature priority scorer
+  summary: Give it your feature list. Get each scored with RICE and ranked, plus interview analysis and a requirements template.
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It scores with a fixed formula.
+  inputs: [ { type: spreadsheet, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: shortlist } ]
+  needs: run code
+"alirezarezvani/claude-skills:product-team/skills/product-strategist":
+  name: Product vision and OKR planner
+  summary: Give it your product and team. Get a vision, quarterly plan and a goal cascade for each team.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Strategy needs judgement across many trade-offs.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"alirezarezvani/claude-skills:product-team/skills/roadmap-communicator":
+  name: Roadmap update writer
+  summary: Give it your plans. Get a roadmap story, release notes or changelog written for executives, engineers or customers.
+  task: build-product
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It rewrites known facts for each reader.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+"alirezarezvani/claude-skills:product-team/skills/saas-scaffolder":
+  name: SaaS starter builder
+  summary: Describe your app. Get a Next.js project with sign-in, database, billing, API routes and a dashboard.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows a set build with some choices.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: codebase } ]
+  needs: run code and save files
+"alirezarezvani/claude-skills:product-team/skills/spec-to-repo":
+  name: Spec to starter repo builder
+  summary: Give it a written spec. Get a new project folder with the structure, setup and first working code.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It plans the stack, then builds from set steps.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: codebase } ]
+  needs: run code and save files
+"alirezarezvani/claude-skills:product-team/skills/ui-design-system":
+  name: Design token builder
+  summary: Give it your brand colours and fonts. Get design tokens, component notes, responsive sizes and a developer handoff.
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows set rules but picks values.
+  inputs: [ { type: brand_guide, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: design_file } ]
+  needs: run code
+"alirezarezvani/claude-skills:product-team/skills/ux-researcher-designer":
+  name: User persona and path mapper
+  summary: Give it your research notes. Get personas, a path map and a usability test plan.
+  task: understand-customers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It builds personas from what people said.
+  inputs: [ { type: voc_reviews, required: true } ]
+  outputs: [ { type: persona } ]
+  needs: run code
+"alirezarezvani/claude-skills:productivity/capture/skills/capture":
+  name: Brain dump organizer
+  summary: Dump everything on your mind. Get it sorted into tasks, ideas and notes with nothing lost.
+  task: organise-work
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: It sorts your notes into set groups.
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan } ]
+"alirezarezvani/claude-skills:productivity/deep-work/skills/deep-work":
+  name: Deep work day planner
+  summary: Give it your tasks and calendar. Get a day with protected focus hours and shallow work cut back.
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fits tasks into set time blocks.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"alirezarezvani/claude-skills:productivity/email/skills/inbox-setup":
+  name: Inbox rules interviewer
+  summary: Answer questions about your email. Get a saved guide to your senders, reply voice and rules for triage.
+  task: hire-people
+  role: source
+  level: beginner
+  thinking: medium
+  thinking_why: It asks questions and writes what it learns.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: brief } ]
+"alirezarezvani/claude-skills:productivity/email/skills/inbox-triage":
+  name: Inbox triager
+  summary: Run it on your recent email. Get messages sorted, senders checked and reply drafts. It never sends.
+  task: organise-work
+  role: orchestrate
+  level: intermediate
+  thinking: medium
+  thinking_why: It sorts many messages and drafts replies.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: read your email and save files
+"alirezarezvani/claude-skills:productivity/meetings/skills/meetings":
+  name: Meeting agenda and cost planner
+  summary: Give it a meeting idea. Get a call on whether to hold it, its cost in dollars and a timed agenda.
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows a short set method.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: meeting_notes } ]
+  needs: run code
+"alirezarezvani/claude-skills:productivity/reflect/skills/reflect":
+  name: Direction check-in
+  summary: Ask it to pause. Get an honest look at your direction, assumptions and bias before you go on.
+  task: think-and-decide
+  role: check
+  level: beginner
+  thinking: high
+  thinking_why: It questions its own thinking in the middle of work.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+"alirezarezvani/claude-skills:productivity/roast/skills/roast":
+  name: Idea stress-test panel
+  summary: Give it your idea. Get a blunt panel review of what is weak, with what to fix before you build.
+  task: test-an-idea
+  role: check
+  level: beginner
+  thinking: high
+  thinking_why: It argues against the idea from several sides.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+"alirezarezvani/claude-skills:productivity/weekly-review/skills/weekly-review":
+  name: Weekly review guide
+  summary: Run it each week. Get open loops closed, stalled projects found and a clear plan for next week.
+  task: organise-work
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: It walks through the same steps each week.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"alirezarezvani/claude-skills:project-management/skills/confluence-expert":
+  name: Confluence space builder
+  summary: Say what your team needs. Get a Confluence space set up with page templates, permissions and a clear layout.
+  task: organise-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans a structure, then sets it up.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  needs: connect to Confluence
+"alirezarezvani/claude-skills:project-management/skills/jira-expert":
+  name: Jira project setup helper
+  summary: Say how your team works. Get Jira projects, workflows, JQL queries and automations set up for it.
+  task: organise-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans a setup, then builds it step by step.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: connect to Jira
+"alirezarezvani/claude-skills:project-management/skills/meeting-analyzer":
+  name: Meeting coaching analyst
+  summary: Give it a meeting transcript. Get speaking patterns, habits that hurt and coaching you can act on.
+  task: organise-work
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads a long transcript for patterns.
+  inputs: [ { type: transcript, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+"alirezarezvani/claude-skills:project-management/skills/scrum-master":
+  name: Sprint coach
+  summary: Give it your sprint data. Get velocity trends, retro themes and fixes for your team's habits.
+  task: lead-people
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads numbers and turns them into coaching.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+"alirezarezvani/claude-skills:project-management/skills/senior-pm":
+  name: Project risk and portfolio manager
+  summary: Give it your projects. Get risks scored, resources balanced and a clear status for stakeholders.
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It weighs risk across several projects at once.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+"alirezarezvani/claude-skills:ra-qm-team/compliance-team-eu-ai-act/skills/eu-ai-act-specialist":
+  name: EU AI Act risk classifier
+  summary: Describe your AI system. Get its risk tier under the EU AI Act and the duties that follow.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: Legal tiers need careful reading of each article.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+"alirezarezvani/claude-skills:ra-qm-team/compliance-team-iso42001/skills/iso42001-specialist":
+  name: AI management audit planner
+  summary: Describe how you run AI. Get gaps against ISO 42001 and a plan to close them.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It weighs each clause against your setup.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+"alirezarezvani/claude-skills:ra-qm-team/skills/gdpr-dsgvo-expert":
+  name: GDPR privacy checker
+  summary: Point it at your code and data use. Get privacy risks, an impact assessment and a tracker for data requests.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It scans for set risks and then writes them up.
+  inputs: [ { type: codebase, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run code and read your project files
+"alirezarezvani/claude-skills:ra-qm-team/skills/isms-audit-expert":
+  name: ISO 27001 audit planner
+  summary: Describe your security setup. Get an audit plan, control checks and a list of findings to fix.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It judges each control against evidence.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+"alirezarezvani/claude-skills:ra-qm-team/skills/soc2-compliance":
+  name: SOC 2 readiness planner
+  summary: Describe your systems. Get your controls mapped, gaps found and the evidence an auditor will ask for.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It maps many controls to your setup.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code
+"alirezarezvani/claude-skills:research-ops/skills/market-research":
+  name: Market size and survey planner
+  summary: Give it your market. Get market size two ways, survey sample sizes and segments scored.
+  task: understand-customers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It runs set calculations and checks the results agree.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+  author: claude-code-skills
+"alirezarezvani/claude-skills:research-ops/skills/product-research":
+  name: User research planner
+  summary: Say what you need to learn. Get the right research method, a plan and a way to store what you find.
+  task: understand-customers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks a method that fits your question.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code
+  author: claude-code-skills
+"alirezarezvani/claude-skills:research/deep-research/skills/deep-research":
+  name: Decision research investigator
+  summary: Ask a high-stakes question. Get a sourced answer checked across many sources, with doubts flagged.
+  task: think-and-decide
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: It runs many searches and weighs conflicting sources.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: search the web and run helper agents
+"alirezarezvani/claude-skills:research/deepread":
+  name: Deep reading guide
+  summary: Give it a book, paper or document. Get its claims and evidence mapped, then quizzed back to you.
+  task: think-and-decide
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads closely and builds questions from the text.
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+"alirezarezvani/claude-skills:research/dossier/skills/dossier":
+  name: Organization dossier researcher
+  summary: Name a company, person or group. Get a tested research file with sources. Collects data from websites.
+  task: think-and-decide
+  role: source
+  level: advanced
+  thinking: high
+  thinking_why: It forms ideas, then tests them against sources.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: search the web
+  scrapes: true
+"alirezarezvani/claude-skills:research/litreview/skills/litreview":
+  name: Literature review finder
+  summary: Give it a topic. Get the key academic papers found from open databases and sorted by theme.
+  task: think-and-decide
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It searches, then groups papers by theme.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: search the web
+"alirezarezvani/claude-skills:research/patent/skills/patent":
+  name: Patent prior-art searcher
+  summary: Describe your invention or rival. Get patents found for novelty, freedom to operate or a landscape view.
+  task: study-competitors
+  role: source
+  level: advanced
+  thinking: high
+  thinking_why: Patent claims need close reading and judgement.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: search the web

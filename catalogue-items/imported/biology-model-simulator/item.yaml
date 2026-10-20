@@ -1,0 +1,33 @@
+slug: biology-model-simulator
+name: Biology model simulator
+summary: Give it a model. Get it run for what-if cases, with the most influential settings found.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/computational-biology/simbiology-simulate-model
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/computational-biology/simbiology-simulate-model
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: simbiology-simulate-model
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: simbiology-simulate-model skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/computational-biology/simbiology-simulate-model
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

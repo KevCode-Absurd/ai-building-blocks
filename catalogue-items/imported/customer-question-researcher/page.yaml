@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It searches several places and says how sure it is.
+new_slug: customer-question-researcher
+name: Customer question researcher
+summary: Ask a customer question. Get an answer found across your docs, past tickets and chats, with each source named.
+job: help-customers
+headline: Customer question researcher
+subhead: Ask a customer question. Get an answer found across your docs, past tickets and chats, with each source named.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your help desk, docs and chat.

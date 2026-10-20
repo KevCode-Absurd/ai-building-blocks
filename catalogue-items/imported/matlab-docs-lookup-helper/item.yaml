@@ -1,0 +1,32 @@
+slug: matlab-docs-lookup-helper
+name: MATLAB docs lookup helper
+summary: Ask how a MATLAB function works. Get the right syntax from the official docs, with fewer wrong guesses.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/matlab-core/matlab-read-documentation
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-core/matlab-read-documentation
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-read-documentation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-read-documentation skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-core/matlab-read-documentation
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

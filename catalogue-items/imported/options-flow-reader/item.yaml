@@ -1,0 +1,37 @@
+slug: options-flow-reader
+name: Options flow reader
+summary: Give it options data. Get real bets told apart from cheap lottery calls, so the put-call ratio is not misleading.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/options-flow-analyzer
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/options-flow-analyzer
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: options-flow-analyzer
+  author: tellmefrankie
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: options-flow-analyzer skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/options-flow-analyzer
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: tellmefrankie
+    url: https://github.com/tellmefrankie
+    used: Wrote the skill; sickn33 shared it in their collection.

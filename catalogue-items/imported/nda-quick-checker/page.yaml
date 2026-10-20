@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It checks a set list of known trouble spots.
+new_slug: nda-quick-checker
+name: NDA quick checker
+summary: Give it an NDA. Get a green, yellow or red rating and the odd clauses. Have a lawyer check yellow or red.
+job: check-contracts
+headline: NDA quick checker
+subhead: Give it an NDA. Get a green, yellow or red rating and the odd clauses. Have a lawyer check yellow or red.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

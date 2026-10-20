@@ -1,0 +1,32 @@
+slug: unpaid-invoice-chaser
+name: Unpaid invoice chaser
+summary: Give it your unpaid invoices. Get a reminder for each, gentle or firm to suit the customer. Nothing sends alone.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: small-business/skills/invoice-chase
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/invoice-chase
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: invoice-chase
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: invoice-chase skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/invoice-chase
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

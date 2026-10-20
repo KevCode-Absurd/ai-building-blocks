@@ -1,0 +1,37 @@
+slug: page-design-standards-checker
+name: Page design standards checker
+summary: Give it a page or component. Get checks on colour contrast, spacing, hierarchy and mobile, with fixes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/design-standards
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/design-standards
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: design-standards
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: design-standards skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/design-standards
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

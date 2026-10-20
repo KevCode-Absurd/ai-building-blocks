@@ -1,0 +1,37 @@
+slug: account-catch-up-brief-writer
+name: Account catch-up brief writer
+summary: Name a customer. Get one brief from your CRM, email, docs and calls on what is going on with them.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: false
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/account-context
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/account-context
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: account-context
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: account-context skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/account-context
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

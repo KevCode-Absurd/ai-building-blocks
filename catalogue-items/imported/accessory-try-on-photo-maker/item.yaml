@@ -1,0 +1,37 @@
+slug: accessory-try-on-photo-maker
+name: Accessory try-on photo maker
+summary: Give it a shoe, bag, watch or necklace photo. Get a person wearing it. Your image model draws it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: product_photos
+    required: true
+outputs:
+  - type: photo_set
+uses: []
+origin: imported
+source:
+  by: dLazy
+  repo: dlazy-ai/ecommerce-skills
+  path: skills/wear-everything
+  url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/wear-everything
+  licence: MIT
+  licence_file: LICENSE
+  commit: 87791a1
+  original_name: wear-everything
+  author: dLazy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: wear-everything skill
+    by: dLazy
+    url: https://github.com/dlazy-ai/ecommerce-skills/tree/main/skills/wear-everything
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: dLazy
+    url: https://github.com/dlazy-ai
+    used: Wrote the skill; dLazy shared it in their collection.

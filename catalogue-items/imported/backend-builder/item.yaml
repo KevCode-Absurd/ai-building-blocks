@@ -1,0 +1,34 @@
+slug: backend-builder
+name: Backend builder
+summary: Say what the service must do. Get API routes, database design and secure login written for you.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/skills/senior-backend
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/senior-backend
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: senior-backend
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: senior-backend skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/senior-backend
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

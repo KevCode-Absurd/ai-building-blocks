@@ -1,0 +1,37 @@
+slug: frosted-glass-style-guide-writer
+name: Frosted glass style guide writer
+summary: Describe your product. Get a style guide for a frosted, see-through look, with blur levels and contrast checks.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: design_direction
+uses: []
+origin: imported
+source:
+  by: Bergside
+  repo: bergside/awesome-design-skills
+  path: skills/glassmorphism
+  url: https://github.com/bergside/awesome-design-skills/tree/main/skills/glassmorphism
+  licence: MIT
+  licence_file: LICENSE
+  commit: f631a09
+  original_name: glassmorphism
+  author: typeui.sh
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: glassmorphism skill
+    by: Bergside
+    url: https://github.com/bergside/awesome-design-skills/tree/main/skills/glassmorphism
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: typeui.sh
+    url: https://typeui.sh
+    used: Wrote the skill; Bergside shared it in their collection.

@@ -1,0 +1,12 @@
+"bear2u/my-skills:skills/workthrough":
+  name: Dev work report writer
+  summary: Finish a coding task. Get a clear write-up of what changed, why, and proof that it works.
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows one fixed report layout from work already done.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: document}]
+  author: bear2u
+  author_url: https://github.com/bear2u

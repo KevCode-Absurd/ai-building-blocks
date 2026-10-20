@@ -1,0 +1,34 @@
+slug: job-offer-planner
+name: Job offer planner
+summary: Give it the role and what the candidate wants. Get an offer package, a negotiation plan and call scripts.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: feedback_notes
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Carlo Pezzuto
+  repo: carlopezzuto/recruiting
+  path: .claude/skills/offer-negotiation
+  url: https://github.com/carlopezzuto/recruiting/tree/main/.claude/skills/offer-negotiation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 6e9716a
+  original_name: offer-negotiation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: offer-negotiation skill
+    by: Carlo Pezzuto
+    url: https://github.com/carlopezzuto/recruiting/tree/main/.claude/skills/offer-negotiation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

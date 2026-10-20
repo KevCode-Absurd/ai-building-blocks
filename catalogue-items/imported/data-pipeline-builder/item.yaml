@@ -1,0 +1,32 @@
+slug: data-pipeline-builder
+name: Data pipeline builder
+summary: Describe your data sources and goal. Get a working pipeline with checks, scheduling and fixes for common faults.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/skills/senior-data-engineer
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/senior-data-engineer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: senior-data-engineer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: senior-data-engineer skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/senior-data-engineer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

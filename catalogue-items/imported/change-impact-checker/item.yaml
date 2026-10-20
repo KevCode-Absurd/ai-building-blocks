@@ -1,0 +1,39 @@
+slug: change-impact-checker
+name: Change impact checker
+summary: Describe a code change. Get what it could break outside its own diff, and one proof it is safe.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/what-could-break
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/what-could-break
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: what-could-break
+  author: stas4000
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: what-could-break skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/what-could-break
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: stas4000
+    url: https://github.com/stas4000/what-could-break
+    used: Wrote the skill; sickn33 shared it in their collection.

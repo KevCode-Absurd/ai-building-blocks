@@ -1,0 +1,38 @@
+slug: employee-experience-map-builder
+name: Employee experience map builder
+summary: Pick a stage, like first week or exit. Get a map of key moments, pain points and fixes.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Tuan Duc Tran
+  repo: tuanductran/hr-skills
+  path: skills/hr-employee-journey-mapping
+  url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-employee-journey-mapping
+  licence: MIT
+  licence_file: LICENSE
+  commit: 078f2fb
+  original_name: hr-employee-journey-mapping
+  author: Tuan Duc Tran
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hr-employee-journey-mapping skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-employee-journey-mapping
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

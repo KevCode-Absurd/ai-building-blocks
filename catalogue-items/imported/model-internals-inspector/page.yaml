@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Tracing how a model reaches an answer needs careful testing.
+new_slug: model-internals-inspector
+name: Model internals inspector
+summary: "Give it a language model and a question. Get a look inside it: which parts pay attention to what, and why."
+job: research-topics
+headline: Model internals inspector
+subhead: "Give it a language model and a question. Get a look inside it: which parts pay attention to what, and why."
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code on a computer with a GPU.

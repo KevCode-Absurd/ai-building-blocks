@@ -1,0 +1,33 @@
+slug: training-loop-tidier
+name: Training loop tidier
+summary: Give it a messy training script. Get a clean one with checkpoints, logging and multi-GPU support built in.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 08-distributed-training/pytorch-lightning
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/08-distributed-training/pytorch-lightning
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: pytorch-lightning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pytorch-lightning skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/08-distributed-training/pytorch-lightning
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

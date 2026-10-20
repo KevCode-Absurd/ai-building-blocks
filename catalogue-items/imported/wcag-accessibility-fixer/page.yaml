@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It scans with set rules, then fixes and rechecks.
+new_slug: wcag-accessibility-fixer
+name: WCAG accessibility fixer
+summary: Point it at your site code. Get WCAG 2.2 problems found, fixed and checked again.
+job: build-websites
+headline: WCAG accessibility fixer
+subhead: Point it at your site code. Get WCAG 2.2 problems found, fixed and checked again.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read and change your project files.

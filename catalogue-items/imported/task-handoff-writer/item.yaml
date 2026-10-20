@@ -1,0 +1,37 @@
+slug: task-handoff-writer
+name: Task handoff writer
+summary: Describe work to pass on. Get a clear handoff to another AI agent, with checks along the way.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/delegating-to-agents
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/delegating-to-agents
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: delegating-to-agents
+  author: David Ondrej
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: delegating-to-agents skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/delegating-to-agents
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: David Ondrej
+    url: https://github.com/davidondrej
+    used: Wrote the skill; sickn33 shared it in their collection.

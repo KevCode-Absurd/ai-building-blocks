@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It designs a process from known loop patterns.
+new_slug: repeatable-ai-loop-designer
+name: Repeatable AI loop designer
+summary: Describe a recurring job. Get a loop with triggers, checks, stop rules and handoffs.
+job: set-up-ai
+headline: Repeatable AI loop designer
+subhead: Describe a recurring job. Get a loop with triggers, checks, stop rules and handoffs.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,591 @@
+# GarethManning/education-agent-skills (CC BY-SA 4.0), part 1 of 3
+"GarethManning/education-agent-skills:skills/ai-learning-science/adaptive-hint-sequence-designer":
+  name: Step-by-step hint writer
+  summary: "Give it a problem type. Get hints that reveal help bit by bit without giving away the answer."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It orders hints from light nudge to strong help."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-learning-science/ai-facilitated-collaborative-learning-designer":
+  name: Group work task planner
+  summary: "Tell it where group work goes wrong. Get a group task with roles and AI prompts that spread participation."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It matches roles and prompts to the problem you name."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-learning-science/ai-feedback-design-principles":
+  name: AI feedback quality checker
+  summary: "Paste the feedback your tool gives students. Get a check of its timing and wording, plus a better version."
+  task: teach-and-train
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It judges feedback against learning research, then rewrites it."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-learning-science/digital-worked-example-sequence":
+  name: Online worked example builder
+  summary: "Give it a skill. Get step-by-step worked examples for online lessons, with help that fades as students learn."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans how much help to remove at each step."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-learning-science/erroneous-example-designer":
+  name: Flawed example writer
+  summary: "Name a common student mistake. Get examples with that mistake built in, so students practise spotting it."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It builds realistic errors and checks they teach the right point."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-learning-science/intelligent-tutoring-dialogue-designer":
+  name: Tutor chat script writer
+  summary: "Give it a topic and where students get stuck. Get a back-and-forth tutoring script with replies for each difficulty."
+  task: teach-and-train
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It plans branching replies for many kinds of confusion."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-learning-science/learning-analytics-interpretation-guide":
+  name: Quiz and dashboard data reader
+  summary: "Paste your quiz results or LMS numbers. Get what they say and what to do in class next."
+  task: teach-and-train
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs the numbers before it suggests teaching moves."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-learning-science/metacognitive-monitoring-ai-contexts":
+  name: AI-use understanding check planner
+  summary: "Tell it how students use AI on a task. Get checkpoints that show whether they really understand the work."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It finds where AI use hides gaps and adds checks."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-learning-science/productive-failure-desirable-difficulty-designer":
+  name: Struggle-first lesson reshaper
+  summary: "Give it a lesson that starts with the explanation. Get a version where students try the problem first."
+  task: teach-and-train
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It rebuilds the lesson order and the starter problem."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-learning-science/self-explanation-prompt-designer":
+  name: Self-explanation question writer
+  summary: "Give it a text, example or diagram. Get questions that make students explain the why behind each step."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It picks the key ideas and writes a question for each."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-learning-science/worked-example-to-problem-solving-transition-designer":
+  name: Example to solo practice planner
+  summary: "Describe where students can follow examples but not solve alone. Get a path from examples to independent problems."
+  task: teach-and-train
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It sets how fast help is removed for your students."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-literacy/ai-expertise-interrogation-designer":
+  name: Spot the AI mistakes activity planner
+  summary: "Give it a subject students know well. Get an activity where they catch what AI gets wrong or leaves out."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It builds a task around known AI weak spots."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-literacy/ai-hallucination-fact-check-protocol":
+  name: AI claim fact-check lesson builder
+  summary: "Give it a topic. Get a step-by-step way for students to check AI claims and citations before they trust them."
+  task: research-topics
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It adapts a source-checking method to AI errors."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-literacy/ai-learning-boundary-mapper":
+  name: Assignment AI-use boundary mapper
+  summary: "Give it an assignment. Get which parts AI can help with and which parts it would ruin, plus a clear rule."
+  task: teach-and-train
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It weighs each part of the task against what students must learn."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-literacy/ai-output-critical-audit-designer":
+  name: AI answer critique activity builder
+  summary: "Give it a subject. Get a worksheet that has students judge an AI answer on clarity, evidence and fairness."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It turns critical thinking standards into plain questions."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-literacy/ai-socratic-dialogue-designer":
+  name: AI questioning sequence planner
+  summary: "Give it a topic. Get rounds of questions students put to a chatbot, to see if it gives in or truly updates."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans follow-up questions that test the chatbot answers."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-literacy/disciplinary-ai-literacy-sequence-designer":
+  name: Subject-by-subject AI reliability lesson planner
+  summary: "Name two or more subjects. Get lessons that show where AI is reliable and where it distorts, subject by subject."
+  task: teach-and-train
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It compares the same question across kinds of knowledge."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-literacy/prompt-literacy-sequence-designer":
+  name: Prompt quality lesson planner
+  summary: "Give it a task. Get lessons where students compare vague and clear prompts and see why detail changes the result."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It builds paired prompts that show the difference."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/curriculum-alignment/coverage-audit":
+  name: Curriculum requirements gap checker
+  summary: "Give it your curriculum and a list of requirements. Get a table showing what is covered, what is missing and a CSV."
+  task: teach-and-train
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It matches each requirement to content across long documents."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/curriculum-assessment/assessment-validity-checker":
+  name: Assessment fit and fairness checker
+  summary: "Paste a quiz or task and its goals. Get a check that it tests the right things and marks fairly."
+  task: teach-and-train
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It tests the assessment against its goals and marking."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/curriculum-assessment/backwards-design-unit-planner":
+  name: Backwards unit planner
+  summary: "Give it your standards. Get a unit planned from the end result, then the proof of learning, then the activities."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "It plans in a set order and keeps each step linked."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/curriculum-assessment/competency-unpacker":
+  name: Standard to success criteria writer
+  summary: "Paste a broad standard. Get clear, checkable success criteria and the small skills inside it."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It splits one broad goal into testable parts."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/curriculum-assessment/criterion-referenced-rubric-generator":
+  name: Marking rubric writer
+  summary: "Describe the task and its goal. Get a rubric with clear descriptions for each level of work."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It writes level descriptions that stay distinct from each other."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/curriculum-assessment/differentiation-adapter":
+  name: Task adapter for different learners
+  summary: "Give it a task and a learner need. Get an adapted task with the same goal. It does not diagnose anyone."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It changes the support but keeps the learning goal the same."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/curriculum-assessment/discipline-specific-critical-thinking-task-designer":
+  name: Subject thinking task writer
+  summary: "Give it a subject topic. Get tasks that build thinking using that subject's own facts and methods."
+  task: teach-and-train
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It ties each thinking skill to the subject knowledge."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/curriculum-assessment/formative-assessment-technique-selector":
+  name: Understanding check picker
+  summary: "Describe the lesson moment and age group. Get the best quick check to use and how to run it."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It matches a known technique to your moment and goal."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/curriculum-assessment/gap-analysis-from-student-work":
+  name: Student work gap finder
+  summary: "Paste a piece of student work and the criteria. Get exactly what is missing, why, and what feedback to give."
+  task: teach-and-train
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It compares the work to each criterion and sorts the gaps."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/curriculum-assessment/kud-knowledge-type-mapper":
+  name: Know, understand, do sorter
+  summary: "Paste your unit content. Get it sorted into what students know, understand and do, with the matching test types."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts content by type before it picks how to test."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/curriculum-assessment/learning-progression-builder":
+  name: Skill progression map builder
+  summary: "Name a skill. Get the steps from first prerequisite to mastery, with checks to find where a student is stuck."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "It orders steps by what each one depends on."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/curriculum-assessment/project-brief-designer":
+  name: Project-based unit brief writer
+  summary: "Give it a topic. Get a project brief with a driving question, milestones and marking criteria."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It builds the question, milestones and criteria to fit together."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/curriculum-assessment/scope-and-sequence-designer":
+  name: Course scope and sequence planner
+  summary: "Describe your course or year. Get what to teach and in what order, so each year builds on the last."
+  task: teach-and-train
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It balances order across subjects and years."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/eal-language-development/academic-language-sentence-frame-generator":
+  name: Sentence frame writer for language learners
+  summary: "Give it a classroom task. Get sentence starters at several English levels so every student can join in."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It writes short frames and grades them by difficulty."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/eal-language-development/language-demand-analyser":
+  name: Task language demand checker
+  summary: "Paste a task or text. Get the words and sentence types that may block students still learning English."
+  task: teach-and-train
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads the task for hard language, not hard ideas."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/eal-language-development/scaffolded-task-modifier":
+  name: Task scaffold adder for language learners
+  summary: "Give it a task. Get a version with language help added that keeps the thinking just as hard."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It adds language support without making the task easier."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/eal-language-development/sheltered-instruction-lesson-modifier":
+  name: Lesson adapter for language learners
+  summary: "Paste your lesson plan. Get a version that supports students learning English in reading, writing, speaking and listening."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reviews each lesson stage and adds support."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/eal-language-development/vocabulary-tiering-tool":
+  name: Vocabulary tier sorter
+  summary: "Paste a text or topic. Get its words sorted into everyday, school and subject words, with what to teach first."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It sorts words by type and ranks them for teaching."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/environmental-experiential-learning/biophilic-learning-environment-designer":
+  name: Classroom nature layout planner
+  summary: "Describe your room and what feels off. Get layout, light and plant ideas for a calmer room. Not medical advice."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It suggests low-cost changes based on design research."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/environmental-experiential-learning/ecological-inquiry-anchor-designer":
+  name: Local nature inquiry unit planner
+  summary: "Name a nearby garden, pond or hedge. Get a unit that teaches your science or geography goals through it."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It links what students can observe to the curriculum."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/environmental-experiential-learning/experiential-learning-cycle-designer":
+  name: Field trip learning cycle planner
+  summary: "Describe a trip, simulation or practical. Get the before, during and after steps that turn it into lasting learning."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It adds reflection and transfer around the experience."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/environmental-experiential-learning/interdisciplinary-real-world-connection-mapper":
+  name: Cross-subject project mapper
+  summary: "Name a real-world problem. Get which subjects connect to it and what each one can teach."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It maps curriculum links across several subjects."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/environmental-experiential-learning/outdoor-learning-sequence-designer":
+  name: Outdoor lesson sequence planner
+  summary: "Describe your outdoor space and goals. Get a run of outdoor lessons that cover your curriculum."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It fits curriculum goals to the space you have."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/environmental-experiential-learning/service-learning-project-designer":
+  name: Community project unit planner
+  summary: "Name a community need. Get a project plan where students help and also meet your curriculum goals."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It joins a real need to the learning goals."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/explicit-instruction/checking-for-understanding-protocol-designer":
+  name: Lesson understanding check planner
+  summary: "Give it your lesson stages. Get a check for each stage, so you know who has it before moving on."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It picks a check for each stage of the lesson."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/explicit-instruction/explicit-instruction-sequence-builder":
+  name: Direct teaching lesson builder
+  summary: "Give it a skill. Get a lesson that moves from you showing it, to practice together, to practice alone."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It follows a fixed lesson order and fills in each part."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/explicit-instruction/lesson-opening-designer":
+  name: Lesson starter writer
+  summary: "Give it today's topic and last lesson. Get a starter that brings back what students know and links to the new content."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It writes a short opener from two topics."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/explicit-instruction/practice-problem-sequence-designer":
+  name: Practice problem set writer
+  summary: "Give it a skill. Get practice problems that rise in difficulty and vary just enough, for worksheets or homework."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It orders problems by difficulty and checks variety."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/explicit-instruction/think-aloud-script-generator":
+  name: Think-aloud script writer
+  summary: "Give it a task. Get a script of what you say out loud to show students how an expert thinks it through."
+  task: teach-and-train
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It writes the hidden thinking steps in plain speech."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/global-cross-cultural-pedagogies/cpa-sequence-designer":
+  name: Concrete to abstract maths lesson planner
+  summary: "Name a maths idea. Get lessons from hands-on objects to pictures to symbols, as in the Singapore method."
+  task: teach-and-train
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans three linked stages with the right materials."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: Gareth Manning
+  author_url: https://github.com/GarethManning
+"GarethManning/education-agent-skills:skills/ai-learning-science/cognitive-tutoring-architecture-designer":
+  skip: "software design for building tutoring systems, not something a teacher uses in class"
+"GarethManning/education-agent-skills:skills/ai-learning-science/individual-spacing-algorithm-explainer":
+  skip: "explains and configures algorithms inside adaptive learning platforms, not classroom planning"
+"GarethManning/education-agent-skills:skills/ai-learning-science/formative-assessment-loop-designer":
+  skip: "near-copy of the understanding check picker and the lesson understanding check planner, built for software"
+"GarethManning/education-agent-skills:skills/curriculum-alignment/curriculum-crosswalk":
+  skip: "needs frameworks pre-tagged by the repo's own band translator, so it only works inside that toolchain"
+"GarethManning/education-agent-skills:skills/curriculum-alignment/developmental-band-translator":
+  skip: "only works inside the repo's own curriculum toolchain and its band schema"
+"GarethManning/education-agent-skills:skills/curriculum-alignment/kud-chart-author":
+  skip: "routes to other skills in the repo for stronger inputs; the Know, understand, do sorter covers the same job"
+"GarethManning/education-agent-skills:skills/curriculum-assessment/curriculum-knowledge-architecture-designer":
+  skip: "overlaps the scope and sequence planner and the Know, understand, do sorter, and leans on theory"

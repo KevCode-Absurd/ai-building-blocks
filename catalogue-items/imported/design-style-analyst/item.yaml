@@ -1,0 +1,32 @@
+slug: design-style-analyst
+name: Design style analyst
+summary: Share screenshots or links of designs you like. Get their colors, type, feel and effects as a profile you can reuse.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: image
+    required: true
+outputs:
+  - type: design_direction
+uses: []
+origin: imported
+source:
+  by: zanwei
+  repo: zanwei/design-dna
+  path: .
+  url: https://github.com/zanwei/design-dna
+  licence: MIT
+  licence_file: LICENSE
+  commit: 593e39b
+  original_name: design-dna
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: design-dna skill
+    by: zanwei
+    url: https://github.com/zanwei/design-dna
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

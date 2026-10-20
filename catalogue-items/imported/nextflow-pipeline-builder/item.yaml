@@ -1,0 +1,34 @@
+slug: nextflow-pipeline-builder
+name: Nextflow pipeline builder
+summary: Describe your data steps. Get a Nextflow or nf-core pipeline built, run and fixed when it fails.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/nextflow
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/nextflow
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: nextflow
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: nextflow skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/nextflow
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,37 @@
+slug: website-art-director
+name: Website art director
+summary: Describe your site or app screen. Get a built page with a chosen look, checked in a browser, not a template.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: Leonxlnx
+  repo: Leonxlnx/taste-skill
+  path: skills/taste-skill
+  url: https://github.com/Leonxlnx/taste-skill/tree/main/skills/taste-skill
+  licence: MIT
+  licence_file: LICENSE
+  commit: 6010f91
+  original_name: design-taste-frontend
+  author: Leonxlnx
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: design-taste-frontend skill
+    by: Leonxlnx
+    url: https://github.com/Leonxlnx/taste-skill/tree/main/skills/taste-skill
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Leonxlnx
+    url: https://github.com/Leonxlnx
+    used: Wrote the skill; Leonxlnx shared it in their collection.

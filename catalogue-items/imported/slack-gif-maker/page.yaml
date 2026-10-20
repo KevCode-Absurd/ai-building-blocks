@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It follows set size rules and a few animation steps.
+new_slug: slack-gif-maker
+name: Slack GIF maker
+summary: Describe the animation. Get a GIF sized and checked to work in Slack.
+job: make-images
+headline: Slack GIF maker
+subhead: Describe the animation. Get a GIF sized and checked to work in Slack.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and save files.

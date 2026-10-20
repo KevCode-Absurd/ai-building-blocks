@@ -1,0 +1,37 @@
+slug: n8n-ai-agent-builder
+name: n8n AI agent builder
+summary: Say what your n8n agent should do. Get the agent, tools, memory and review steps set up the right way.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: tool_connection
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/n8n-agents
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/n8n-agents
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: n8n-agents
+  author: Romuald Czlonkowski
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: n8n-agents skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/n8n-agents
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Romuald Czlonkowski
+    url: https://github.com/czlonkowski
+    used: Wrote the skill; sickn33 shared it in their collection.

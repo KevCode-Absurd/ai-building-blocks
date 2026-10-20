@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It rewrites one message more simply.
+new_slug: plain-message-re-pitcher
+name: Plain message re-pitcher
+summary: Say you are lost. Get the last message said again in simple words, with a little context.
+job: think-and-decide
+headline: Plain message re-pitcher
+subhead: Say you are lost. Get the last message said again in simple words, with a little context.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

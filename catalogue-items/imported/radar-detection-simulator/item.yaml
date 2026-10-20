@@ -1,0 +1,33 @@
+slug: radar-detection-simulator
+name: Radar detection simulator
+summary: Give it a radar datasheet. Get a simulated scene, fixes for missed detections and result plots.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+  - type: document
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/radar/matlab-simulate-radar-detections
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/radar/matlab-simulate-radar-detections
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-simulate-radar-detections
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-simulate-radar-detections skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/radar/matlab-simulate-radar-detections
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

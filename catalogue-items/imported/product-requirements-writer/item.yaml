@@ -1,0 +1,32 @@
+slug: product-requirements-writer
+name: Product requirements writer
+summary: Describe a product or feature. Get a short product requirements document with goal, audience, value and release plan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-execution/skills/create-prd
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-execution/skills/create-prd
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: create-prd
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: create-prd skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-execution/skills/create-prd
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

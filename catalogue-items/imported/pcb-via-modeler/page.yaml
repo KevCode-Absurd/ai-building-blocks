@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Via behavior depends on many linked settings.
+new_slug: pcb-via-modeler
+name: PCB via modeler
+summary: Describe a via transition. Get a via modeled with pads and return vias and its signal quality checked.
+job: build-software
+headline: PCB via modeler
+subhead: Describe a via transition. Get a via modeled with pads and return vias and its signal quality checked.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with PCB Toolbox.

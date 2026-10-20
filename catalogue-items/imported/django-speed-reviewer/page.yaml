@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It scans for known slow patterns and proposes fixes.
+new_slug: django-speed-reviewer
+name: Django speed reviewer
+summary: Point it at a Django project. Get slow queries and N+1 problems found, with the fix for each.
+job: test-and-fix-code
+headline: Django speed reviewer
+subhead: Point it at a Django project. Get slow queries and N+1 problems found, with the fix for each.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

@@ -1,0 +1,40 @@
+slug: headcount-plan-builder
+name: Headcount plan builder
+summary: Share your growth goals. Get a role-by-role hiring plan, a priority order and a monthly report for leaders.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: plan
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Tuan Duc Tran
+  repo: tuanductran/hr-skills
+  path: skills/hr-demand-planning
+  url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-demand-planning
+  licence: MIT
+  licence_file: LICENSE
+  commit: 078f2fb
+  original_name: hr-demand-planning
+  author: Tuan Duc Tran
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hr-demand-planning skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-demand-planning
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

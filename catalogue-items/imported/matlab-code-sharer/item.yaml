@@ -1,0 +1,32 @@
+slug: matlab-code-sharer
+name: MATLAB code sharer
+summary: Give it your MATLAB files. Get them uploaded to GitHub or MATLAB Drive, plus an Open in MATLAB Online link.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: deploy_url
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/cloud-solutions/matlab-share-content
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/cloud-solutions/matlab-share-content
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-share-content
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-share-content skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/cloud-solutions/matlab-share-content
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

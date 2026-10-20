@@ -1,0 +1,32 @@
+slug: startup-due-diligence-reviewer
+name: Startup due diligence reviewer
+summary: Name a startup. Get its market, traction, money and team reviewed from an investor, job seeker and founder view.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: himself65
+  repo: himself65/finance-skills
+  path: plugins/startup-tools/skills/startup-analysis
+  url: https://github.com/himself65/finance-skills/tree/main/plugins/startup-tools/skills/startup-analysis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 73d554d
+  original_name: startup-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: startup-analysis skill
+    by: himself65
+    url: https://github.com/himself65/finance-skills/tree/main/plugins/startup-tools/skills/startup-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

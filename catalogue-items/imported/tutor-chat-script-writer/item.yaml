@@ -1,0 +1,38 @@
+slug: tutor-chat-script-writer
+name: Tutor chat script writer
+summary: Give it a topic and where students get stuck. Get a back-and-forth tutoring script with replies for each difficulty.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: copy_draft
+    required: true
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/ai-learning-science/intelligent-tutoring-dialogue-designer
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/ai-learning-science/intelligent-tutoring-dialogue-designer
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: intelligent-tutoring-dialogue-designer
+  author: Gareth Manning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: intelligent-tutoring-dialogue-designer skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/ai-learning-science/intelligent-tutoring-dialogue-designer
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Gareth Manning
+    url: https://github.com/GarethManning
+    used: Wrote the skill; Gareth Manning shared it in their collection.

@@ -1,0 +1,32 @@
+slug: process-and-sop-writer
+name: Process and SOP writer
+summary: Describe how work gets done. Get a flowchart, who does what, and a written procedure with the edge cases.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: operations/skills/process-doc
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: process-doc
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: process-doc skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/process-doc
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

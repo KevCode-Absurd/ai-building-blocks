@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It fits set models and checks if the picture is believable.
+new_slug: cell-direction-velocity-analyst
+name: Cell direction velocity analyst
+summary: Give it single-cell counts with spliced reads. Get cell direction arrows, timing and the genes that drive them.
+job: research-topics
+headline: Cell direction velocity analyst
+subhead: Give it single-cell counts with spliced reads. Get cell direction arrows, timing and the genes that drive them.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

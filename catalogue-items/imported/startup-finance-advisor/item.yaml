@@ -1,0 +1,32 @@
+slug: startup-finance-advisor
+name: Startup finance advisor
+summary: Give it your numbers. Get unit economics, runway, fundraising steps and a finance pack for the board.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: c-level-advisor/skills/cfo-advisor
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/cfo-advisor
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: cfo-advisor
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cfo-advisor skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/cfo-advisor
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

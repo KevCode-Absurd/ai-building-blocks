@@ -1,0 +1,33 @@
+slug: rna-seq-comparison-preparer
+name: RNA-seq comparison preparer
+summary: Give it sequencing output. Get counts ready to compare gene activity between groups, with replicate and setup checks.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/bulk-rnaseq
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/bulk-rnaseq
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: bulk-rnaseq
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: bulk-rnaseq skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/bulk-rnaseq
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

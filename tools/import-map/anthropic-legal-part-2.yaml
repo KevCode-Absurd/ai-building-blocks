@@ -1,0 +1,387 @@
+# anthropics/claude-for-legal, part 2 of 2 (Anthropic, Apache 2.0). Kept skills read a saved setup file made by each plugin's setup interview. Every kept skill is a first check, not legal advice.
+
+"anthropics/claude-for-legal:litigation-legal/skills/demand-received":
+  name: Incoming demand letter reviewer
+  summary: "Give it a demand letter you got. Get the claims, how strong they look and your reply options. Not legal advice."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It weighs the merit of a claim and the stakes are real."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your saved legal setup notes and your files"
+  bring:
+    - from: litigation-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /litigation-legal:cold-start-interview
+"anthropics/claude-for-legal:litigation-legal/skills/demand-intake":
+  name: Demand letter fact gatherer
+  summary: "Answer its questions about a dispute. Get a fact sheet ready for a demand letter. First check, not legal advice."
+  task: check-contracts
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It asks follow-up questions and files your answers."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "read your saved legal setup notes and save files"
+  bring:
+    - from: litigation-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /litigation-legal:cold-start-interview
+"anthropics/claude-for-legal:litigation-legal/skills/demand-draft":
+  name: Demand letter drafter
+  summary: "Give it your finished fact sheet. Get a demand letter draft and a send checklist. A first draft, not legal advice."
+  task: check-contracts
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "A careless demand can hurt your case, so it checks what you may admit."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  needs: "read your saved legal setup notes and make Word files"
+  bring:
+    - from: litigation-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /litigation-legal:cold-start-interview
+"anthropics/claude-for-legal:litigation-legal/skills/chronology":
+  name: Dispute timeline builder
+  summary: "Give it your emails and documents. Get a dated timeline of what happened, with key events marked. First check, not legal advice."
+  task: check-contracts
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: "It pulls dates from many files and removes repeats."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "read your saved legal setup notes and your files"
+  bring:
+    - from: litigation-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /litigation-legal:cold-start-interview
+"anthropics/claude-for-legal:litigation-legal/skills/subpoena-triage":
+  name: Subpoena first-look reviewer
+  summary: "Give it a subpoena. Get what it asks for, the deadline and a plan for your lawyer. Not legal advice."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Deadlines are short and a wrong move is costly."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your saved legal setup notes and your files"
+  bring:
+    - from: litigation-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /litigation-legal:cold-start-interview
+"anthropics/claude-for-legal:litigation-legal/skills/legal-hold":
+  name: Records preservation notice drafter
+  summary: "Tell it about a dispute. Get a notice telling staff which records to keep. A first draft, not legal advice."
+  task: check-contracts
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows a set notice format and fills in your facts."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  needs: "read your saved legal setup notes and make Word files"
+  bring:
+    - from: litigation-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /litigation-legal:cold-start-interview
+"anthropics/claude-for-legal:privacy-legal/skills/dpa-review":
+  name: Data processing agreement reviewer
+  summary: "Give it a data processing agreement. Get each term checked, with edits to ask for. First check, not legal advice."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Reviewing from the wrong side flips every call."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your saved privacy setup notes and your files"
+  bring:
+    - from: privacy-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /privacy-legal:cold-start-interview
+"anthropics/claude-for-legal:privacy-legal/skills/dsar-response":
+  name: Data request reply drafter
+  summary: "Paste a request for someone's data. Get steps to find it and a draft reply. First check, not legal advice."
+  task: check-contracts
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Deadlines and exemptions differ by law."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  needs: "read your saved privacy setup notes"
+  bring:
+    - from: privacy-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /privacy-legal:cold-start-interview
+"anthropics/claude-for-legal:privacy-legal/skills/pia-generation":
+  name: Privacy impact assessment writer
+  summary: "Describe a new feature that uses personal data. Get a privacy impact assessment with conditions and owners. First check, not legal advice."
+  task: check-contracts
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It must spot data risks and tie them to rules."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "read your saved privacy setup notes and your files"
+  bring:
+    - from: privacy-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /privacy-legal:cold-start-interview
+"anthropics/claude-for-legal:privacy-legal/skills/policy-monitor":
+  name: Privacy policy drift checker
+  summary: "Describe a data plan. Get where your privacy policy no longer matches, with fix wording. Not legal advice."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares two texts line by line."
+  inputs: [ { type: question, required: true }, { type: document, required: false } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your saved privacy setup notes and your policy file"
+  bring:
+    - from: privacy-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /privacy-legal:cold-start-interview
+"anthropics/claude-for-legal:privacy-legal/skills/reg-gap-analysis":
+  name: Privacy law gap finder
+  summary: "Name a privacy law. Get if it applies to you, what you lack and a fix plan. Not legal advice."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Rules vary by place and size, and it must judge fit."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: "read your saved privacy setup notes and search the web"
+  bring:
+    - from: privacy-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /privacy-legal:cold-start-interview
+"anthropics/claude-for-legal:privacy-legal/skills/use-case-triage":
+  name: New data use screener
+  summary: "Describe a new use of customer data. Get a quick call on whether it needs full privacy review. Not legal advice."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts a case into a few clear outcomes."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your saved privacy setup notes"
+  bring:
+    - from: privacy-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /privacy-legal:cold-start-interview
+"anthropics/claude-for-legal:product-legal/skills/feature-risk-assessment":
+  name: Feature legal risk assessor
+  summary: "Name a risky feature. Get what could go wrong, how likely, how bad and fixes. First check, not legal advice."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs likelihood against harm for new issues."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your saved product legal setup notes"
+  bring:
+    - from: product-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /product-legal:cold-start-interview
+"anthropics/claude-for-legal:product-legal/skills/is-this-a-problem":
+  name: Quick legal sanity checker
+  summary: "Ask a quick question, like using customer logos. Get fine, needs a look or hold, with a reason. Not legal advice."
+  task: check-contracts
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It matches your question to a short list of patterns."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your saved product legal setup notes"
+  bring:
+    - from: product-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /product-legal:cold-start-interview
+"anthropics/claude-for-legal:product-legal/skills/launch-review":
+  name: Launch legal reviewer
+  summary: "Give it your product plan. Get a memo that checks each legal area before you ship. First check, not legal advice."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It covers many risk areas in one pass."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your saved product legal setup notes and your files"
+  bring:
+    - from: product-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /product-legal:cold-start-interview
+"anthropics/claude-for-legal:product-legal/skills/marketing-claims-review":
+  name: Marketing claims checker
+  summary: "Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording. Not legal advice."
+  task: check-contracts
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It must tell puffery from claims that need proof."
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your saved product legal setup notes and search the web"
+  bring:
+    - from: product-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /product-legal:cold-start-interview
+"anthropics/claude-for-legal:regulatory-legal/skills/policy-diff":
+  name: Rule change policy comparer
+  summary: "Paste a rule that changed. Get which of your policies it touches and what to change. First check, not legal advice."
+  task: check-contracts
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It pulls duties from rule text and matches them to policies."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your saved setup notes and your policy files"
+  bring:
+    - from: regulatory-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /regulatory-legal:cold-start-interview
+"anthropics/claude-for-legal:regulatory-legal/skills/policy-redraft":
+  name: Policy redraft proposer
+  summary: "Give it a policy gap and the current policy. Get a marked-up draft with small edits. Not legal advice."
+  task: check-contracts
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It must change policy text without breaking its other parts."
+  inputs: [ { type: audit_report, required: true }, { type: document, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  needs: "read your saved setup notes and your policy files"
+  bring:
+    - from: regulatory-legal/skills/cold-start-interview
+      to: setup-interview
+      link: /regulatory-legal:cold-start-interview
+
+"anthropics/claude-for-legal:law-student/skills/legal-writing":
+  skip: "law-student coursework drill"
+"anthropics/claude-for-legal:law-student/skills/outline-builder":
+  skip: "law-student course outline tool"
+"anthropics/claude-for-legal:law-student/skills/session":
+  skip: "law-student study session router"
+"anthropics/claude-for-legal:law-student/skills/socratic-drill":
+  skip: "law-student classroom drill"
+"anthropics/claude-for-legal:law-student/skills/study-plan":
+  skip: "law-student exam study plan"
+"anthropics/claude-for-legal:legal-builder-hub/skills/auto-updater":
+  skip: "only manages this legal plugin set's own skills"
+"anthropics/claude-for-legal:legal-builder-hub/skills/cold-start-interview":
+  skip: "only manages this legal plugin set's own skills"
+"anthropics/claude-for-legal:legal-builder-hub/skills/customize":
+  skip: "only manages this legal plugin set's own skills"
+"anthropics/claude-for-legal:legal-builder-hub/skills/disable":
+  skip: "only manages this legal plugin set's own skills"
+"anthropics/claude-for-legal:legal-builder-hub/skills/registry-browser":
+  skip: "only manages this legal plugin set's own skills"
+"anthropics/claude-for-legal:legal-builder-hub/skills/related-skills-surfacer":
+  skip: "only manages this legal plugin set's own skills"
+"anthropics/claude-for-legal:legal-builder-hub/skills/skill-installer":
+  skip: "only manages this legal plugin set's own skills"
+"anthropics/claude-for-legal:legal-builder-hub/skills/skill-manager":
+  skip: "only manages this legal plugin set's own skills"
+"anthropics/claude-for-legal:legal-builder-hub/skills/skills-qa":
+  skip: "only manages this legal plugin set's own skills"
+"anthropics/claude-for-legal:legal-builder-hub/skills/uninstall":
+  skip: "only manages this legal plugin set's own skills"
+"anthropics/claude-for-legal:legal-clinic/skills/build-guide":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/client-comms-log":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/client-intake":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/client-letter":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/cold-start-interview":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/customize":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/deadlines":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/draft":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/form-generation":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/memo":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/plain-language-letters":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/ramp":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/research-start":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/semester-handoff":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/status":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:legal-clinic/skills/supervisor-review-queue":
+  skip: "law school clinic workflow for supervised students, needs a supervising attorney and case files"
+"anthropics/claude-for-legal:litigation-legal/skills/brief-section-drafter":
+  skip: "court brief drafting for litigators"
+"anthropics/claude-for-legal:litigation-legal/skills/claim-chart":
+  skip: "patent and court claim charts for litigators"
+"anthropics/claude-for-legal:litigation-legal/skills/cold-start-interview":
+  skip: "same setup interview as legal-builder-hub"
+"anthropics/claude-for-legal:litigation-legal/skills/customize":
+  skip: "plugin settings only"
+"anthropics/claude-for-legal:litigation-legal/skills/deposition-prep":
+  skip: "needs an eDiscovery platform and is for trial lawyers"
+"anthropics/claude-for-legal:litigation-legal/skills/matter-briefing":
+  skip: "law-firm matter portfolio tracking"
+"anthropics/claude-for-legal:litigation-legal/skills/matter-close":
+  skip: "law-firm matter portfolio tracking"
+"anthropics/claude-for-legal:litigation-legal/skills/matter-intake":
+  skip: "law-firm matter intake"
+"anthropics/claude-for-legal:litigation-legal/skills/matter-update":
+  skip: "law-firm matter portfolio tracking"
+"anthropics/claude-for-legal:litigation-legal/skills/matter-workspace":
+  skip: "law-firm matter workspaces"
+"anthropics/claude-for-legal:litigation-legal/skills/oc-status":
+  skip: "outside counsel status emails, a law-firm portfolio workflow"
+"anthropics/claude-for-legal:litigation-legal/skills/portfolio-status":
+  skip: "law-firm matter portfolio tracking"
+"anthropics/claude-for-legal:litigation-legal/skills/privilege-log-review":
+  skip: "eDiscovery privilege log review for litigators"
+"anthropics/claude-for-legal:privacy-legal/skills/cold-start-interview":
+  skip: "same setup interview as legal-builder-hub"
+"anthropics/claude-for-legal:privacy-legal/skills/customize":
+  skip: "plugin settings only"
+"anthropics/claude-for-legal:privacy-legal/skills/matter-workspace":
+  skip: "law-firm matter workspaces"
+"anthropics/claude-for-legal:product-legal/skills/cold-start-interview":
+  skip: "same setup interview as legal-builder-hub"
+"anthropics/claude-for-legal:product-legal/skills/customize":
+  skip: "plugin settings only"
+"anthropics/claude-for-legal:product-legal/skills/matter-workspace":
+  skip: "law-firm matter workspaces"
+"anthropics/claude-for-legal:regulatory-legal/skills/cold-start-interview":
+  skip: "same setup interview as legal-builder-hub"
+"anthropics/claude-for-legal:regulatory-legal/skills/comments":
+  skip: "tracks agency comment periods for regulatory counsel"
+"anthropics/claude-for-legal:regulatory-legal/skills/customize":
+  skip: "plugin settings only"
+"anthropics/claude-for-legal:regulatory-legal/skills/gap-surfacer":
+  skip: "reference file for other skills, not usable alone"
+"anthropics/claude-for-legal:regulatory-legal/skills/gaps":
+  skip: "stub that only routes to the gap tracker"
+"anthropics/claude-for-legal:regulatory-legal/skills/matter-workspace":
+  skip: "law-firm matter workspaces"
+"anthropics/claude-for-legal:regulatory-legal/skills/reg-feed-watcher":
+  skip: "needs set-up regulatory feeds and a scheduled agent"

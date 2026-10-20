@@ -1,0 +1,32 @@
+slug: price-digits-and-placement-planner
+name: Price digits and placement planner
+summary: Give it a price you are weighing. Get whether to round it, how to price add-ons, and where to place it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Checkout Page
+  repo: checkout-page/ecommerce-skills
+  path: skills/pricing
+  url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/pricing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 8b85f63
+  original_name: pricing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pricing skill
+    by: Checkout Page
+    url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/pricing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

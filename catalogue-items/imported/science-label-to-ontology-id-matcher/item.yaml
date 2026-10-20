@@ -1,0 +1,32 @@
+slug: science-label-to-ontology-id-matcher
+name: Science label to ontology ID matcher
+summary: Give it lab terms like tissue or disease names. Get the matching ontology IDs, checked against the public lookup service.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/ontology-term-resolution
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/ontology-term-resolution
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: ontology-term-resolution
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ontology-term-resolution skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/ontology-term-resolution
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

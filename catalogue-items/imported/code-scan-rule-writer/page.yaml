@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Good rules need careful pattern design and testing.
+new_slug: code-scan-rule-writer
+name: Code scan rule writer
+summary: Describe a bug pattern. Get a tested Semgrep rule that finds it across your code.
+job: secure-code
+headline: Code scan rule writer
+subhead: Describe a bug pattern. Get a tested Semgrep rule that finds it across your code.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

@@ -1,0 +1,33 @@
+slug: physics-simulation-builder
+name: Physics simulation builder
+summary: Describe the part and its loads. Get a finite element model built, solved and plotted.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+  - type: image
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/math-and-optimization/matlab-solve-pde
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/math-and-optimization/matlab-solve-pde
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-solve-pde
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-solve-pde skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/math-and-optimization/matlab-solve-pde
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

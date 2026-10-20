@@ -1,0 +1,38 @@
+slug: code-security-scanner
+name: Code security scanner
+summary: Point it at your source code. Get security flaws found with static tools and rules you can add to CI.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: security/static-application-security-testing
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/security/static-application-security-testing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: static-application-security-testing
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: static-application-security-testing skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/security/static-application-security-testing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

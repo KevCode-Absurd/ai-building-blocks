@@ -1,0 +1,37 @@
+slug: llms-txt-writer
+name: llms.txt writer
+summary: Give it your site. Get an llms.txt file that tells AI tools which pages and facts matter most.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/geo-llmstxt
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/geo-llmstxt
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: geo-llmstxt
+  author: zubair-trabzada
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: geo-llmstxt skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/geo-llmstxt
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: zubair-trabzada
+    url: https://github.com/zubair-trabzada/geo-seo-claude
+    used: Wrote the skill; sickn33 shared it in their collection.

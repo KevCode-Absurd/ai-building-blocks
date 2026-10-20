@@ -1,0 +1,32 @@
+slug: ownership-and-short-interest-lookup
+name: Ownership and short interest lookup
+summary: Ask about a stock. Get short interest, big fund owners, insider filings, analyst targets and dividend dates from Fintel.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: himself65
+  repo: himself65/finance-skills
+  path: plugins/data-providers/skills/fintel-data
+  url: https://github.com/himself65/finance-skills/tree/main/plugins/data-providers/skills/fintel-data
+  licence: MIT
+  licence_file: LICENSE
+  commit: 73d554d
+  original_name: fintel-data
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: fintel-data skill
+    by: himself65
+    url: https://github.com/himself65/finance-skills/tree/main/plugins/data-providers/skills/fintel-data
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

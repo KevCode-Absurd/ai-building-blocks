@@ -1,0 +1,37 @@
+slug: advisory-exposure-checker
+name: Advisory exposure checker
+summary: Name a breach or package advisory. Get a read-only check of your machine and projects, saved as a report.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/cyber-audit
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/cyber-audit
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: cyber-audit
+  author: davidondrej
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cyber-audit skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/cyber-audit
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: davidondrej
+    url: https://github.com/davidondrej/skills
+    used: Wrote the skill; sickn33 shared it in their collection.

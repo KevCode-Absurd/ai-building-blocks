@@ -1,0 +1,32 @@
+slug: knowledge-comic-maker
+name: Knowledge comic maker
+summary: Give it a topic or story. Get a finished comic with panel layouts, a chosen art style and drawn pages.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: Jim Liu
+  repo: JimLiu/baoyu-skills
+  path: skills/baoyu-comic
+  url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-comic
+  licence: MIT
+  licence_file: LICENSE
+  commit: "1567581"
+  original_name: baoyu-comic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: baoyu-comic skill
+    by: Jim Liu
+    url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-comic
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

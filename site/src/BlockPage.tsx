@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import Comments from "./Comments";
 import { Look, MakeIt, MakeNote, makeTitle } from "./MakeIt";
 import { ArrowIcon, KitMenu } from "./ui";
-import { type Catalogue, type Page, cap, formatOf, kindInfo, rendersOf, kindOf, loadPage, loadSkillText, pathOf, taskOf, wireSteps } from "./lib/data";
+import { type Block, type Catalogue, type Page, cap, formatOf, kindInfo, rendersOf, kindOf, loadPage, loadSkillText, paidService, pathOf, taskOf, wireSteps } from "./lib/data";
 import { markViewed } from "./lib/store";
 import { buildHandoffZip, download, finalOutputs, needsOf, orderFlow, zipName } from "./lib/handoff";
 import { businessText, getBusiness, hasBusiness, useBusiness, withBusiness } from "./lib/business";
@@ -22,6 +22,36 @@ import { useSeen, useTyped } from "./lib/typing";
 
 // A list item that YAML read as a small map ("Check: this") still shows as text.
 const txt = (x: unknown): string => (typeof x === "string" ? x : x && typeof x === "object" ? Object.entries(x as Record<string, unknown>).map(([k, v]) => (v == null ? k : `${k}: ${txt(v)}`)).join(" ") : String(x ?? ""));
+
+/** "Apache-2.0" reads as "Apache 2.0" in a sentence. */
+const licenceName = (l: string) => l.replace(/-/g, " ");
+
+/** GitHub's mark, drawn in the text colour. */
+const GitHubMark = () => (
+  <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" className="gh-mark">
+    <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+  </svg>
+);
+
+/** Who made an imported skill: a pill to its GitHub folder, and its original name turning into ours, block by block. */
+function Credit({ b, source }: { b: Block; source: NonNullable<Block["source"]> }) {
+  const { original, commit } = source as typeof source & { original?: string; commit?: string };
+  return (
+    <div className="bp-credit" data-testid="credit-line">
+      <a className="gh-pill" href={source.url} target="_blank" rel="noopener noreferrer" data-testid="gh-pill" aria-label={`See the original on GitHub: ${source.repo}`}>
+        <GitHubMark /><span className="gh-repo">{source.repo}</span><span className="gh-lic">{licenceName(source.licence)}</span>
+      </a>
+      {original && original !== b.name && (
+        <p className="gh-rename" aria-label={`First called ${original}, now ${b.name}`}>
+          <code>{original}</code>
+          <span className="gh-blocks" aria-hidden="true">{[0, 1, 2, 3, 4].map((i) => <i key={i} style={{ animationDelay: `${i * 0.14}s` }} />)}</span>
+          <b>{b.name}</b>
+        </p>
+      )}
+      <p className="gh-note">Made by {source.by}. We copied it as it is, with its licence, and gave it a plain name.{commit && <> Copied at <code>{commit}</code>.</>}</p>
+    </div>
+  );
+}
 
 type Props = { c: Catalogue; slug: string; toast: (m: string) => void; toBuilder: (slugs: string[], asNew?: string) => void };
 
@@ -168,7 +198,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     ["flows", "Workflows from their work", b.type === "mind" && inFlows.length > 0],
     ["ideas", "Their big ideas", has(p?.ideas)],
     ["seats", "On a council", has(p?.seats)],
-    ["io", "What you give it, what you get", true],
+    ["io", "What you give it, what you get", give.length > 0 || get.length > 0 || !!renders],
     ["before", "Before you start", !!p?.plan && (has(p.plan.needed) || has(p.plan.helps))],
     ["steps", "The steps", isFlow],
     ["install", "Add it to your AI", !isFlow],
@@ -198,6 +228,17 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
         <p className="bp-kicker"><span className="kind">{kind.name}</span><Link to={`/?job=${task.id}#library`}>{task.name}</Link></p>
         <h1 className="bp-h1">{p?.headline || b.name}</h1>
         <p className="bp-sub">{p?.subhead || b.summary}</p>
+        {b.origin === "imported" && b.source && <Credit b={b} source={b.source} />}
+        {b.warnings?.includes("scrapes") && (
+          <p className="bp-warn" data-testid="scrapes-note" role="note">
+            <b>This skill scrapes websites.</b> It collects data from web pages. Before you run it, check each site's terms, follow its robots.txt and go slowly so you don't overload it. Don't collect people's personal details.
+          </p>
+        )}
+        {paidService(b) && (
+          <p className="bp-warn" data-testid="paid-note" role="note">
+            <b>You need a paid {paidService(b)} account.</b> This skill sends its work to {paidService(b)}, so it only runs once you add your own key. Check their prices before you start.
+          </p>
+        )}
         {b.type === "mind" && <LabelBadges c={c} labels={b.labels} />}
         {format && (
           <p className="bp-format" data-testid="format-note">
@@ -224,7 +265,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           )}
         </div>
         <BusinessNote />
-        <Gauge level={b.thinking} why={p?.thinkingWhy ?? b.thinkingWhy ?? ""} />
+        {b.thinking && <Gauge level={b.thinking} why={p?.thinkingWhy ?? b.thinkingWhy ?? ""} />}
         <p className="bp-file"><span>{b.name}</span><code>{b.slug}</code><span>{cap(b.level)}</span>{b.tested?.result === "pass" && <span data-testid="tested" title="Run on a real business's files and graded by a second AI against this page's checks">Tested</span>}</p>
       </header>
 
@@ -311,13 +352,17 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             </Section>
           )}
 
-          <Section id="io" title="What you give it, what you get">
-            <div className="give-get">
-              <div><h3>You give it</h3><ul>{give.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>
-              <div><h3>You get</h3><ul>{get.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>
-            </div>
-            <Look b={b} kind={renders} />
-          </Section>
+          {(give.length > 0 || get.length > 0 || !!renders) && (
+            <Section id="io" title="What you give it, what you get">
+              {(give.length > 0 || get.length > 0) && (
+                <div className="give-get">
+                  {give.length > 0 && <div><h3>You give it</h3><ul>{give.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
+                  {get.length > 0 && <div><h3>You get</h3><ul>{get.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>}
+                </div>
+              )}
+              <Look b={b} kind={renders} />
+            </Section>
+          )}
 
           {p?.plan && (has(p.plan.needed) || has(p.plan.helps)) && (
             <Section id="before" title="Before you start" lead="It runs on its own. These make the result better, and none is required.">

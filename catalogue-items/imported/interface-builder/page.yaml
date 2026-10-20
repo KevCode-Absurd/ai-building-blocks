@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It plans a system first, then builds it.
+new_slug: interface-builder
+name: Interface builder
+summary: Describe the screens. Get responsive, accessible components with a design system and dark mode.
+job: build-websites
+headline: Interface builder
+subhead: Describe the screens. Get responsive, accessible components with a design system and dark mode.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and open a browser.

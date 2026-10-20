@@ -1,0 +1,37 @@
+slug: account-snapshot-writer
+name: Account snapshot writer
+summary: Name a company. Get a short briefing from your Common Room data. Needs your Common Room account.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: partner-built/common-room/skills/account-research
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/common-room/skills/account-research
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: account-research
+  author: Common Room
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: account-research skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/common-room/skills/account-research
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Common Room
+    url: ""
+    used: Wrote the skill; Anthropic shared it in their collection.

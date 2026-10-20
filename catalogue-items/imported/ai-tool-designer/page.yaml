@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: Good descriptions and error handling take careful drafting.
+new_slug: ai-tool-designer
+name: AI tool designer
+summary: Describe what your AI needs to do. Get clear tool definitions it can call without guessing or failing silently.
+job: connect-tools
+headline: AI tool designer
+subhead: Describe what your AI needs to do. Get clear tool definitions it can call without guessing or failing silently.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

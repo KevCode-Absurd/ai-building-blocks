@@ -1,0 +1,32 @@
+slug: growth-option-mapper
+name: Growth option mapper
+summary: Describe your business. Get four growth paths mapped, from selling more to new markets, with risks.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-product-strategy/skills/ansoff-matrix
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-product-strategy/skills/ansoff-matrix
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: ansoff-matrix
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ansoff-matrix skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-product-strategy/skills/ansoff-matrix
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

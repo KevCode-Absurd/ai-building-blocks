@@ -1,0 +1,33 @@
+slug: cold-email-pre-send-checker
+name: Cold email pre-send checker
+summary: Paste a cold email and what you know of the prospect. Get claims tested, legal basics checked, and a tighter version.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: copy_draft
+    required: true
+outputs:
+  - type: copy_draft
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Pro Skill Packs
+  repo: proskillpacks/skills
+  path: skills/sales/cold-email-checker
+  url: https://github.com/proskillpacks/skills/tree/main/skills/sales/cold-email-checker
+  licence: MIT
+  licence_file: LICENSE
+  commit: e8c3393
+  original_name: cold-email-checker
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: cold-email-checker skill
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/sales/cold-email-checker
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

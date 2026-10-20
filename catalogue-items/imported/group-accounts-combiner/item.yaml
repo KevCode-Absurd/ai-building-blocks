@@ -1,0 +1,32 @@
+slug: group-accounts-combiner
+name: Group accounts combiner
+summary: Give it each company's accounts. Get one set of group statements with the cancelled internal items shown.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/corporate-consolidation
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/corporate-consolidation
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: corporate-consolidation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: corporate-consolidation skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/corporate-consolidation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

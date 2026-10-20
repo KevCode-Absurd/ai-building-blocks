@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It reads the diff and fills a fixed layout.
+new_slug: pull-request-description-writer
+name: Pull request description writer
+summary: Commit your branch. Get a clear pull request that says what changed, why, and what reviewers should check.
+job: build-software
+headline: Pull request description writer
+subhead: Commit your branch. Get a clear pull request that says what changed, why, and what reviewers should check.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run git and the GitHub CLI.

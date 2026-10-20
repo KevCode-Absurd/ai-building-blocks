@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It collects a few choices into a style file.
+new_slug: brand-style-setup-wizard
+name: Brand style setup wizard
+summary: Answer ten questions once. Get your colours, fonts and style saved for every page that follows.
+job: brand-file
+headline: Brand style setup wizard
+subhead: Answer ten questions once. Get your colours, fonts and style saved for every page that follows.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

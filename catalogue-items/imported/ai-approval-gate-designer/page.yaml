@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Wrong gates cause harm or friction, so it weighs each action.
+new_slug: ai-approval-gate-designer
+name: AI approval gate designer
+summary: Describe what your AI agent does. Get clear rules for which actions need a person to approve and when to escalate.
+job: build-software
+headline: AI approval gate designer
+subhead: Describe what your AI agent does. Get clear rules for which actions need a person to approve and when to escalate.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

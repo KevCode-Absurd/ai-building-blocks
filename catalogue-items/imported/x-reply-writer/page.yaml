@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It writes one short reply from a few clear tests.
+new_slug: x-reply-writer
+name: X reply writer
+summary: Paste a tweet. Get a reply worth reading on its own, or a clear call to skip it.
+job: grow-social
+headline: X reply writer
+subhead: Paste a tweet. Get a reply worth reading on its own, or a clear call to skip it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

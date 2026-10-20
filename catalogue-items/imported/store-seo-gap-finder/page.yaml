@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It checks for blank fields.
+new_slug: store-seo-gap-finder
+name: Store SEO gap finder
+summary: Get products, collections and pages with no search title or description, so search results stop looking blank.
+job: get-found-in-search
+headline: Store SEO gap finder
+subhead: Get products, collections and pages with no search title or description, so search results stop looking blank.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin (read only).

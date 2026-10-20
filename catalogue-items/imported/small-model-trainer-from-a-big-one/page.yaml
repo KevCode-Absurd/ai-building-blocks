@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Matching a teacher model needs careful tuning.
+new_slug: small-model-trainer-from-a-big-one
+name: Small model trainer from a big one
+summary: Name your large model. Get a plan and code to teach a smaller, cheaper model to match it.
+job: build-software
+headline: Small model trainer from a big one
+subhead: Name your large model. Get a plan and code to teach a smaller, cheaper model to match it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code on a computer with a GPU.

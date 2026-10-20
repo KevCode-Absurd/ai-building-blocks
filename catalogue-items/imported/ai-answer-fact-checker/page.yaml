@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It checks each claim and its source one by one.
+new_slug: ai-answer-fact-checker
+name: AI answer fact-checker
+summary: Paste one or more AI answers. Get each claim checked against public sources, with links and a short verdict.
+job: think-and-decide
+headline: AI answer fact-checker
+subhead: Paste one or more AI answers. Get each claim checked against public sources, with links and a short verdict.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can search the web and open pages.

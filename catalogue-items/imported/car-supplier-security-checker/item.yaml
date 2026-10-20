@@ -1,0 +1,33 @@
+slug: car-supplier-security-checker
+name: Car supplier security checker
+summary: Describe your work for car makers. Get the right TISAX level, labels and gaps before the assessment.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/tisax/skills/tisax
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/tisax/skills/tisax
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: tisax
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: tisax skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/tisax/skills/tisax
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

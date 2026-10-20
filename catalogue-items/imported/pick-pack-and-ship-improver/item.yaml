@@ -1,0 +1,32 @@
+slug: pick-pack-and-ship-improver
+name: Pick, pack and ship improver
+summary: Describe how orders move through your space. Get the slow steps found and a fix plan with expected time saved.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/order-fulfillment
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/order-fulfillment
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: order-fulfillment
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: order-fulfillment skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/order-fulfillment
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

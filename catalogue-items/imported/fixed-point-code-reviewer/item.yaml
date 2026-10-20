@@ -1,0 +1,32 @@
+slug: fixed-point-code-reviewer
+name: Fixed-point code reviewer
+summary: Give it MATLAB fixed-point code. Get slow or risky patterns found, with cleaner replacements.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/code-generation/matlab-review-fi-object-code
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/code-generation/matlab-review-fi-object-code
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-review-fi-object-code
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-review-fi-object-code skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/code-generation/matlab-review-fi-object-code
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

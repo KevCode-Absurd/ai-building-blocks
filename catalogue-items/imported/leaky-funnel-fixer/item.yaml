@@ -1,0 +1,40 @@
+slug: leaky-funnel-fixer
+name: Leaky funnel fixer
+summary: Give it your landing page, signup or checkout. Get the leaks ranked, plus tests to run in order.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: web_page
+    required: true
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Wondel.ai
+  repo: wondelai/skills
+  path: conversion-optimization
+  url: https://github.com/wondelai/skills/tree/main/conversion-optimization
+  licence: MIT
+  licence_file: LICENSE
+  commit: c172996
+  original_name: conversion-optimization
+  author: wondelai
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: conversion-optimization skill
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/conversion-optimization
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: wondelai
+    url: https://github.com/wondelai
+    used: Wrote the skill; Wondel.ai shared it in their collection.

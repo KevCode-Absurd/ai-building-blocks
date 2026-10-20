@@ -1,0 +1,35 @@
+# TheMattBerman/meta-ads-kit (MIT)
+"TheMattBerman/meta-ads-kit:skills/meta-ads":
+  name: Meta ads daily checker
+  summary: "Connect your Meta ad account read-only. Get a daily check of spend, winners, money wasters and tired ads."
+  task: read-ad-results
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads a few numbers and flags patterns, and you make the call."
+  needs: "run commands with the official Meta Ads command line tool and your own read-only access token. It only drafts changes for your approval"
+  inputs: [ { type: performance_sheet, required: false } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: Matt Berman
+  author_url: https://github.com/TheMattBerman
+"TheMattBerman/meta-ads-kit:skills/pixel-capi":
+  name: Meta pixel and server events fixer
+  summary: "Give it your site and Meta pixel. Get a tracking audit, a match quality score and step-by-step fixes for your platform."
+  task: track-numbers
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "Fixes depend on your site platform and which customer details you can send."
+  needs: "run shell scripts and use your own Meta access token. Test events go to Meta only when you ask"
+  inputs: [ { type: web_page, required: false }, { type: brief, required: false } ]
+  outputs: [ { type: audit_report, required: true }, { type: plan, required: false } ]
+  author: Matt Berman
+  author_url: https://github.com/TheMattBerman
+"TheMattBerman/meta-ads-kit:skills/ad-copy-generator":
+  skip: "Copy for Meta image ads. Our Image ad copy writer and Meta ad copywriter do the same job."
+"TheMattBerman/meta-ads-kit:skills/ad-creative-monitor":
+  skip: "Tired-ad checks that the Meta ads daily checker already includes."
+"TheMattBerman/meta-ads-kit:skills/ad-upload":
+  skip: "Creates ads in a live ad account and has an activate step. We list only read and draft skills."
+"TheMattBerman/meta-ads-kit:skills/budget-optimizer":
+  skip: "Short outline of budget shifts. Our Ad spend analyst covers it, and the Meta ads daily checker covers pacing."

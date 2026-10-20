@@ -1,0 +1,32 @@
+slug: repeatable-ai-loop-designer
+name: Repeatable AI loop designer
+summary: Describe a recurring job. Get a loop with triggers, checks, stop rules and handoffs.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: loop-library
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/loop-library
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: loop-library
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: loop-library skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/loop-library
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,33 @@
+slug: microcontroller-code-deployer
+name: Microcontroller code deployer
+summary: Give it MATLAB code and a chip. Get embedded code set up and tested on that hardware.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/code-generation/matlab-deploy-embedded-code
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/code-generation/matlab-deploy-embedded-code
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-deploy-embedded-code
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-deploy-embedded-code skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/code-generation/matlab-deploy-embedded-code
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

@@ -1,0 +1,37 @@
+slug: shopify-data-connector
+name: Shopify data connector
+summary: Say what store data to read or change. Get working Shopify GraphQL queries, with paging and rate limits handled.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: dragnoir
+  repo: dragnoir/Shopify-agent-skills
+  path: skills/api-graphql
+  url: https://github.com/dragnoir/Shopify-agent-skills/tree/main/skills/api-graphql
+  licence: MIT
+  licence_file: LICENSE
+  commit: f76a09f
+  original_name: api-graphql
+  author: dragnoir
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: api-graphql skill
+    by: dragnoir
+    url: https://github.com/dragnoir/Shopify-agent-skills/tree/main/skills/api-graphql
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: dragnoir
+    url: https://github.com/dragnoir
+    used: Wrote the skill; dragnoir shared it in their collection.

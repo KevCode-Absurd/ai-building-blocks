@@ -1,0 +1,32 @@
+slug: browser-automation-scripter
+name: Browser automation scripter
+summary: Say what to do in a web browser. Get Playwright code written and run for it, with results and screenshots.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/playwright-skill
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/playwright-skill
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: playwright-skill
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: playwright-skill skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/playwright-skill
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It models uncertain reserves and prices.
+new_slug: oil-and-gas-reserves-valuer
+name: Oil and gas reserves valuer
+summary: Give it reserve and cost data. Get the present value of the reserves, such as PV-10.
+job: money-and-investing
+headline: Oil and gas reserves valuer
+subhead: Give it reserve and cost data. Get the present value of the reserves, such as PV-10.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

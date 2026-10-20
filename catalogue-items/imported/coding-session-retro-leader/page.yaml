@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It reads a whole session log and finds patterns.
+new_slug: coding-session-retro-leader
+name: Coding session retro leader
+summary: Finish a coding session. Get what slowed your AI down and the changes that would help next time.
+job: build-software
+headline: Coding session retro leader
+subhead: Finish a coding session. Get what slowed your AI down and the changes that would help next time.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your session logs.

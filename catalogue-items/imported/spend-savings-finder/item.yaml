@@ -1,0 +1,32 @@
+slug: spend-savings-finder
+name: Spend savings finder
+summary: Give it a list of what you paid suppliers. Get spend grouped by type, the biggest savings chances and quick wins.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/spend-analysis
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/spend-analysis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: spend-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: spend-analysis skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/spend-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

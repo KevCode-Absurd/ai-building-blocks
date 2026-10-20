@@ -1,0 +1,40 @@
+slug: a-b-test-verdict-maker
+name: A/B test verdict maker
+summary: Give it your test data. Get a split check, the result with a confidence range, side effects and a ship call.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: test_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Nimrod Fisher
+  repo: nimrodfisher/data-analytics-skills
+  path: 03-data-analysis-investigation/ab-test-analysis
+  url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/03-data-analysis-investigation/ab-test-analysis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9449d36
+  original_name: ab-test-analysis
+  author: Nimrod Fisher
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ab-test-analysis skill
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher/data-analytics-skills/tree/main/03-data-analysis-investigation/ab-test-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Nimrod Fisher
+    url: https://github.com/nimrodfisher
+    used: Wrote the skill; Nimrod Fisher shared it in their collection.

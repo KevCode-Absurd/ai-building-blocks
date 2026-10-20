@@ -1,0 +1,34 @@
+slug: amazon-brand-protection-planner
+name: Amazon brand protection planner
+summary: Give it your brand and listings. Get checks for hijackers and fakes, plus complaint letters ready to send.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brand_brain
+    required: true
+  - type: product_data
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Nexscope AI
+  repo: nexscope-ai/eCommerce-Skills
+  path: brand-protection/brand-protection-amazon
+  url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/brand-protection/brand-protection-amazon
+  licence: MIT
+  licence_file: LICENSE
+  commit: ee0fb29
+  original_name: brand-protection-amazon
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: brand-protection-amazon skill
+    by: Nexscope AI
+    url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/brand-protection/brand-protection-amazon
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

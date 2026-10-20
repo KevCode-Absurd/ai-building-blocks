@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It sets how fast help is removed for your students.
+new_slug: example-to-solo-practice-planner
+name: Example to solo practice planner
+summary: Describe where students can follow examples but not solve alone. Get a path from examples to independent problems.
+job: teach-and-train
+headline: Example to solo practice planner
+subhead: Describe where students can follow examples but not solve alone. Get a path from examples to independent problems.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

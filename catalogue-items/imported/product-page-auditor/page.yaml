@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It checks the page against a set list and ranks the fixes.
+new_slug: product-page-auditor
+name: Product page auditor
+summary: Give it a product page. Get ranked changes to variants, social proof, buttons and price, each with the research behind it.
+job: audit-landing-page
+headline: Product page auditor
+subhead: Give it a product page. Get ranked changes to variants, social proof, buttons and price, each with the research behind it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It plans lanes, manages helpers and checks the combined work.
+new_slug: parallel-work-coordinator
+name: Parallel work coordinator
+summary: Give it a large task. Get it split across helper agents with clear ownership, then merged into one checked result.
+job: set-up-ai
+headline: Parallel work coordinator
+subhead: Give it a large task. Get it split across helper agents with clear ownership, then merged into one checked result.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run helper agents in parallel.

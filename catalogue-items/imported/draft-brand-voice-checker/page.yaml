@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It compares text to a written style guide.
+new_slug: draft-brand-voice-checker
+name: Draft brand voice checker
+summary: Paste a draft. Get deviations from your voice and style guide ranked by severity, each with a before and after fix.
+job: brand-file
+headline: Draft brand voice checker
+subhead: Paste a draft. Get deviations from your voice and style guide ranked by severity, each with a before and after fix.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

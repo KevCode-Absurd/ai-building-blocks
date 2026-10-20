@@ -1,0 +1,37 @@
+slug: claim-stress-tester
+name: Claim stress tester
+summary: Give it a hard question. Get a clear guess, a fair attempt to break it, the evidence and a tested answer.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/falsify
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/falsify
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: falsify
+  author: 263311487-ux
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: falsify skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/falsify
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: 263311487-ux
+    url: https://github.com/263311487-ux/falsify
+    used: Wrote the skill; sickn33 shared it in their collection.

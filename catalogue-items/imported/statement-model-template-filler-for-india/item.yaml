@@ -1,0 +1,32 @@
+slug: statement-model-template-filler-for-india
+name: Statement model template filler for India
+summary: Give it a blank income, balance sheet and cash flow template. Get it filled in, with Indian years and crore units handled.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/financial-analysis/skills/3-statement-model
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/3-statement-model
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: 3-statement-model
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: 3-statement-model skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/3-statement-model
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

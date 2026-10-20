@@ -1,0 +1,32 @@
+slug: repeated-work-skill-finder
+name: Repeated work skill finder
+summary: Point it at your screen history. Get a list of tasks you repeat and draft skills to automate them.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: advanced
+inputs:
+  - type: transcript
+    required: true
+outputs:
+  - type: skill_files
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/autoskill
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/autoskill
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: autoskill
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: autoskill skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/autoskill
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

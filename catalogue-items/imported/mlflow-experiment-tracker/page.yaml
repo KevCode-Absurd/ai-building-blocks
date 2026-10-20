@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It adds logging to code you already have.
+new_slug: mlflow-experiment-tracker
+name: MLflow experiment tracker
+summary: Give it your training code. Get every run logged, compared and versioned, so you can repeat the best one.
+job: track-numbers
+headline: MLflow experiment tracker
+subhead: Give it your training code. Get every run logged, compared and versioned, so you can repeat the best one.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code.

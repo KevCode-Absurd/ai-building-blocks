@@ -1,0 +1,32 @@
+slug: site-qa-sweep-runner
+name: Site QA sweep runner
+summary: Name a page or site and a depth. Get a smoke, standard or full test pass with a list of problems found.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/qa-testing
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/qa-testing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: qa-testing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: qa-testing skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/qa-testing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

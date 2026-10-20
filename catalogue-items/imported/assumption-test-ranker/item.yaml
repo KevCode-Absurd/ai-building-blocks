@@ -1,0 +1,32 @@
+slug: assumption-test-ranker
+name: Assumption test ranker
+summary: Give it your list of assumptions. Get them ranked by impact and risk, with a test for each top one.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: shortlist
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-product-discovery/skills/prioritize-assumptions
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-product-discovery/skills/prioritize-assumptions
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: prioritize-assumptions
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: prioritize-assumptions skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-product-discovery/skills/prioritize-assumptions
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

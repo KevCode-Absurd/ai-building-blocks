@@ -1,0 +1,35 @@
+slug: usability-test-runner
+name: Usability test runner
+summary: Give it a design or prototype. Get a test plan, task scripts, moderator notes and a findings summary.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: design_file
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+  - type: document
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/usability-testing
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/usability-testing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: usability-testing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: usability-testing skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/usability-testing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It gathers signals, then judges which trends will last.
+new_slug: rising-trend-spotter
+name: Rising trend spotter
+summary: Give it a topic. Get what is rising on Google Trends and social sites. Collects data from websites.
+job: plan-strategy
+headline: Rising trend spotter
+subhead: Give it a topic. Get what is rising on Google Trends and social sites. Collects data from websites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your Apify token.

@@ -1,0 +1,32 @@
+slug: public-review-reply-drafter
+name: Public review reply drafter
+summary: Paste your store reviews. Get a specific reply to each, with risky ones flagged and no refunds promised.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: voc_reviews
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Pro Skill Packs
+  repo: proskillpacks/skills
+  path: skills/ecommerce/review-reply-drafter
+  url: https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/review-reply-drafter
+  licence: MIT
+  licence_file: LICENSE
+  commit: e8c3393
+  original_name: review-reply-drafter
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: review-reply-drafter skill
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/review-reply-drafter
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Spend and sales move together, so it must avoid overclaiming.
+new_slug: weekly-spend-impact-modeler
+name: Weekly spend impact modeler
+summary: Give it weekly spend and sales by channel. Get a simple model of what each channel adds, with honest limits.
+job: track-numbers
+headline: Weekly spend impact modeler
+subhead: Give it weekly spend and sales by channel. Get a simple model of what each channel adds, with honest limits.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and read your spreadsheet.

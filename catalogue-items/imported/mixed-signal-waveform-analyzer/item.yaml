@@ -1,0 +1,32 @@
+slug: mixed-signal-waveform-analyzer
+name: Mixed-signal waveform analyzer
+summary: Give it circuit waveform data. Get phase noise, jitter, timing and ADC accuracy measured.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/rf-and-mixed-signal/matlab-analyze-ams-waveform
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-analyze-ams-waveform
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-analyze-ams-waveform
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-analyze-ams-waveform skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-analyze-ams-waveform
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

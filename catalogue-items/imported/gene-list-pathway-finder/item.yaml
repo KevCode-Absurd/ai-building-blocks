@@ -1,0 +1,33 @@
+slug: gene-list-pathway-finder
+name: Gene list pathway finder
+summary: Give it a gene list or ranked genes. Get the biological pathways that stand out, explained in plain terms.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+  - type: image
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/pathway-enrichment
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/pathway-enrichment
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: pathway-enrichment
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pathway-enrichment skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/pathway-enrichment
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

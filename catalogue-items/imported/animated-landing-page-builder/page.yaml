@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It asks set questions, then builds with a fixed method.
+new_slug: animated-landing-page-builder
+name: Animated landing page builder
+summary: Answer a few questions about your product. Get a one-page site with 3D motion and scroll effects.
+job: write-landing-page
+headline: Animated landing page builder
+subhead: Answer a few questions about your product. Get a one-page site with 3D motion and scroll effects.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and open a browser.

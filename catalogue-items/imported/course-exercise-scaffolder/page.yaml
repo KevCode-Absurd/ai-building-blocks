@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It builds a fixed folder layout.
+new_slug: course-exercise-scaffolder
+name: Course exercise scaffolder
+summary: Describe your course section. Get exercise folders with problems, solutions and explainers that pass linting.
+job: build-software
+headline: Course exercise scaffolder
+subhead: Describe your course section. Get exercise folders with problems, solutions and explainers that pass linting.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

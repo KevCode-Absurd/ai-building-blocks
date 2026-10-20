@@ -1,0 +1,33 @@
+slug: biomedical-link-finder
+name: Biomedical link finder
+summary: Name a disease, gene or drug. Get linked facts from a biomedical knowledge graph, each with its source.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: document
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/ncats-arax
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/ncats-arax
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: ncats-arax
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ncats-arax skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/ncats-arax
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

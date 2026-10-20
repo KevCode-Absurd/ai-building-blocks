@@ -1,0 +1,32 @@
+slug: secure-development-checker
+name: Secure development checker
+summary: Give it your project. Get a scan for code flaws, weak packages and exposed secrets, with fixes ranked.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/skills/senior-secops
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/senior-secops
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: senior-secops
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: senior-secops skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/senior-secops
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

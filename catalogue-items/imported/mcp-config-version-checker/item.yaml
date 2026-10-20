@@ -1,0 +1,37 @@
+slug: mcp-config-version-checker
+name: MCP config version checker
+summary: Give it your MCP config files. Get a list of server packages that can change under you, before you approve them.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/mcp-dependency-drift-audit
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/mcp-dependency-drift-audit
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: mcp-dependency-drift-audit
+  author: tomelias10
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mcp-dependency-drift-audit skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/mcp-dependency-drift-audit
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: tomelias10
+    url: https://github.com/tomelias10
+    used: Wrote the skill; sickn33 shared it in their collection.

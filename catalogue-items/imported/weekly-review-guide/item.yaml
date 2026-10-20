@@ -1,0 +1,32 @@
+slug: weekly-review-guide
+name: Weekly review guide
+summary: Run it each week. Get open loops closed, stalled projects found and a clear plan for next week.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: productivity/weekly-review/skills/weekly-review
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/productivity/weekly-review/skills/weekly-review
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: weekly-review
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: weekly-review skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/productivity/weekly-review/skills/weekly-review
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

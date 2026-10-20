@@ -1,0 +1,32 @@
+slug: careful-rewrite-guard
+name: Careful rewrite guard
+summary: Name a file too rotten to patch. Get a justified delete and rebuild that keeps the behaviour that worked.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/re-create
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/re-create
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: re-create
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: re-create skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/re-create
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

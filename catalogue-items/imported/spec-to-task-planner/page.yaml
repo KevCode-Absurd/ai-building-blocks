@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It breaks a spec into ordered steps.
+new_slug: spec-to-task-planner
+name: Spec to task planner
+summary: Point it at a spec in Notion. Get an implementation plan and tracked tasks.
+job: organise-work
+headline: Spec to task planner
+subhead: Point it at a spec in Notion. Get an implementation plan and tracked tasks.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can reach your Notion workspace.

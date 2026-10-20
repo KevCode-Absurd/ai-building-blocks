@@ -1,0 +1,32 @@
+slug: user-persona-and-path-mapper
+name: User persona and path mapper
+summary: Give it your research notes. Get personas, a path map and a usability test plan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: voc_reviews
+    required: true
+outputs:
+  - type: persona
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: product-team/skills/ux-researcher-designer
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/ux-researcher-designer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: ux-researcher-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ux-researcher-designer skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/ux-researcher-designer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

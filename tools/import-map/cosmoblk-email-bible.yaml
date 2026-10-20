@@ -1,0 +1,18 @@
+# CosmoBlk/email-marketing-bible (MIT)
+"CosmoBlk/email-marketing-bible:skills/email-marketing-bible":
+  name: Email program lead
+  summary: "Say your email goal. Get flows, copy, deliverability fixes and compliance checks, with a hard stop before any real send."
+  task: write-emails
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It weighs list health, rules and send risk before it suggests anything."
+  needs: "read your email platform through a connector if you want drafts built there. It always asks you before any send"
+  inputs: [ { type: brief, required: true }, { type: brand_brain, required: false } ]
+  outputs: [ { type: email_flow, required: true }, { type: audit_report, required: false } ]
+  author: George Hartley
+  author_url: https://github.com/CosmoBlk
+"CosmoBlk/email-marketing-bible:.":
+  skip: "Identical copy of the skill in skills/email-marketing-bible, which we keep."
+  author: George Hartley
+  author_url: https://github.com/CosmoBlk

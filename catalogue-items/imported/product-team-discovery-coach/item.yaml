@@ -1,0 +1,37 @@
+slug: product-team-discovery-coach
+name: Product team discovery coach
+summary: Describe your product team. Get a plan for finding what to build, testing ideas first and working with empowered teams.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Wondel.ai
+  repo: wondelai/skills
+  path: inspired-product
+  url: https://github.com/wondelai/skills/tree/main/inspired-product
+  licence: MIT
+  licence_file: LICENSE
+  commit: c172996
+  original_name: inspired-product
+  author: wondelai
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: inspired-product skill
+    by: Wondel.ai
+    url: https://github.com/wondelai/skills/tree/main/inspired-product
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: wondelai
+    url: https://github.com/wondelai
+    used: Wrote the skill; Wondel.ai shared it in their collection.

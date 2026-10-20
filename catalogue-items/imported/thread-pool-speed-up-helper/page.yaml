@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It tests whether code is safe for threads before switching.
+new_slug: thread-pool-speed-up-helper
+name: Thread pool speed-up helper
+summary: Give it slow local parallel code. Get it switched to a thread pool and timed to prove the gain.
+job: build-software
+headline: Thread pool speed-up helper
+subhead: Give it slow local parallel code. Get it switched to a thread pool and timed to prove the gain.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB.

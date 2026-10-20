@@ -1,0 +1,37 @@
+slug: customer-interview-synthesizer
+name: Customer interview synthesizer
+summary: Paste interviews, tickets or survey notes. Get clear patterns and what each means for your product.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: voc_reviews
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/discovery-research-synthesis
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/discovery-research-synthesis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: discovery-research-synthesis
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: discovery-research-synthesis skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/discovery-research-synthesis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

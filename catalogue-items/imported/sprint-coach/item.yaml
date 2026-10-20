@@ -1,0 +1,32 @@
+slug: sprint-coach
+name: Sprint coach
+summary: Give it your sprint data. Get velocity trends, retro themes and fixes for your team's habits.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: project-management/skills/scrum-master
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/project-management/skills/scrum-master
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: scrum-master
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: scrum-master skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/project-management/skills/scrum-master
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

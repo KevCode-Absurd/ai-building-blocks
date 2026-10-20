@@ -1,0 +1,32 @@
+slug: workflow-spec-interviewer
+name: Workflow spec interviewer
+summary: Tell it the workflows you want to build. Get grilled with questions until each one is clear.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Matt Pocock
+  repo: mattpocock/skills
+  path: skills/in-progress/loop-me
+  url: https://github.com/mattpocock/skills/tree/main/skills/in-progress/loop-me
+  licence: MIT
+  licence_file: LICENSE
+  commit: 5beb35b
+  original_name: loop-me
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: loop-me skill
+    by: Matt Pocock
+    url: https://github.com/mattpocock/skills/tree/main/skills/in-progress/loop-me
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

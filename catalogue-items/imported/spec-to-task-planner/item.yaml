@@ -1,0 +1,32 @@
+slug: spec-to-task-planner
+name: Spec to task planner
+summary: Point it at a spec in Notion. Get an implementation plan and tracked tasks.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/notion-spec-to-implementation
+  url: https://github.com/openai/skills/tree/main/skills/.curated/notion-spec-to-implementation
+  licence: MIT
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: notion-spec-to-implementation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: notion-spec-to-implementation skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/notion-spec-to-implementation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

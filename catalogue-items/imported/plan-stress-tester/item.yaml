@@ -1,0 +1,32 @@
+slug: plan-stress-tester
+name: Plan stress-tester
+summary: Give it a plan or idea. Get a tough round of questions with a suggested answer to each.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Matt Pocock
+  repo: mattpocock/skills
+  path: skills/productivity/grilling
+  url: https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling
+  licence: MIT
+  licence_file: LICENSE
+  commit: 5beb35b
+  original_name: grilling
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: grilling skill
+    by: Matt Pocock
+    url: https://github.com/mattpocock/skills/tree/main/skills/productivity/grilling
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

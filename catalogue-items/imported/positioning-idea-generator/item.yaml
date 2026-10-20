@@ -1,0 +1,34 @@
+slug: positioning-idea-generator
+name: Positioning idea generator
+summary: Give it your product and rivals. Get several ways to stand apart, each with a positioning statement and a reason.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+  - type: competitor_set
+    required: false
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-marketing-growth/skills/positioning-ideas
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-marketing-growth/skills/positioning-ideas
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: positioning-ideas
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: positioning-ideas skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-marketing-growth/skills/positioning-ideas
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

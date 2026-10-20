@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: Worker status has legal risk, so it needs care.
+new_slug: contractor-program-setup-guide
+name: Contractor program setup guide
+summary: Describe the work and workers. Get a classification risk check, an onboarding checklist and a vendor plan. Not legal advice.
+job: hire-people
+headline: Contractor program setup guide
+subhead: Describe the work and workers. Get a classification risk check, an onboarding checklist and a vendor plan. Not legal advice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

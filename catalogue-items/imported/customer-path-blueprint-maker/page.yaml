@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It follows a set map format but needs judgment on where the friction sits.
+new_slug: customer-path-blueprint-maker
+name: Customer path blueprint maker
+summary: Describe your customer and their goal. Get a map of each step with touchpoints, feelings, friction and the systems behind it.
+job: understand-customers
+headline: Customer path blueprint maker
+subhead: Describe your customer and their goal. Get a map of each step with touchpoints, feelings, friction and the systems behind it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Data trade-offs are subtle and depend on your load and failure needs.
+new_slug: data-system-designer
+name: Data system designer
+summary: Describe what your app stores and serves. Get picks for storage, copies, splitting data and consistency, with trade-offs.
+job: build-software
+headline: Data system designer
+subhead: Describe what your app stores and serves. Get picks for storage, copies, splitting data and consistency, with trade-offs.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

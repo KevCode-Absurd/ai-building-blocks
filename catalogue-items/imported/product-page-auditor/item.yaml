@@ -1,0 +1,32 @@
+slug: product-page-auditor
+name: Product page auditor
+summary: Give it a product page. Get ranked changes to variants, social proof, buttons and price, each with the research behind it.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Checkout Page
+  repo: checkout-page/ecommerce-skills
+  path: skills/product-page
+  url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/product-page
+  licence: MIT
+  licence_file: LICENSE
+  commit: 8b85f63
+  original_name: product-page
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: product-page skill
+    by: Checkout Page
+    url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/product-page
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

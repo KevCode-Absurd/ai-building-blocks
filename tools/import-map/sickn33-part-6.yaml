@@ -1,0 +1,685 @@
+# sickn33/agentic-awesome-skills, slice 6 of 14.
+"sickn33/agentic-awesome-skills:skills/expo-module":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/expo-observe":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/expo-tailwind-setup":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/expo-ui":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/expo-ui-jetpack-compose":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/expo-ui-swift-ui":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/extract-document-data":
+  skip: Needs a paid third-party API (Stipple) with an API key.
+"sickn33/agentic-awesome-skills:skills/fable-safe-prompt":
+  skip: Aims to avoid safety triggers, so it is not safe to list.
+"sickn33/agentic-awesome-skills:skills/fact-check-x-complete":
+  name: AI answer fact-checker
+  summary: Paste one or more AI answers. Get each claim checked against public sources, with links and a short verdict.
+  task: think-and-decide
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It checks each claim and its source one by one.
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: search the web and open pages
+  author: ASI2030
+  author_url: https://github.com/ASI2030/Fact-Check-X
+"sickn33/agentic-awesome-skills:skills/fact-check-x-unified":
+  skip: Chinese-only orchestration of the Fact-Check-X flow; the English complete skill covers it.
+"sickn33/agentic-awesome-skills:skills/faf-context":
+  skip: Only works with one product's .faf format.
+"sickn33/agentic-awesome-skills:skills/faf-expert":
+  skip: Only works with one product's .faf format.
+"sickn33/agentic-awesome-skills:skills/faf-go":
+  skip: Only works with one product's .faf format.
+"sickn33/agentic-awesome-skills:skills/faf-wizard":
+  skip: Only works with one product's .faf format.
+"sickn33/agentic-awesome-skills:skills/fal-audio":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fal-generate":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fal-image-edit":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fal-platform":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fal-upscale":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fal-workflow":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/falsify":
+  name: Claim stress tester
+  summary: Give it a hard question. Get a clear guess, a fair attempt to break it, the evidence and a tested answer.
+  task: think-and-decide
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It must try to prove itself wrong before it answers.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  author: 263311487-ux
+  author_url: https://github.com/263311487-ux/falsify
+"sickn33/agentic-awesome-skills:skills/family-health-analyzer":
+  skip: Medical record analysis in Chinese; not safe to list.
+"sickn33/agentic-awesome-skills:skills/famulor-skill":
+  skip: Only works with one product (Famulor).
+"sickn33/agentic-awesome-skills:skills/fastapi-pro":
+  skip: Generic stack persona.
+"sickn33/agentic-awesome-skills:skills/fastapi-router-py":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fastapi-templates":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/favicon":
+  name: Favicon maker
+  summary: Give it a logo image. Get a full set of favicons and the link tags added to your site.
+  task: build-websites
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It resizes one image by fixed steps.
+  inputs: [ { type: image, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and save files
+  author: Shpigford
+  author_url: https://github.com/Shpigford
+"sickn33/agentic-awesome-skills:skills/fda-food-safety-auditor":
+  skip: Narrow regulatory persona prompt.
+"sickn33/agentic-awesome-skills:skills/fda-medtech-compliance-auditor":
+  skip: Narrow regulatory persona prompt.
+"sickn33/agentic-awesome-skills:skills/feature-flags":
+  skip: Generic setup guide.
+"sickn33/agentic-awesome-skills:skills/feature-tracking":
+  name: Feature memory keeper
+  summary: Point it at your project. Get one short file per feature with status, decisions and risks for the next session.
+  task: build-software
+  role: orchestrate
+  level: intermediate
+  thinking: medium
+  thinking_why: It must keep records short and true over time.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read and write your project files
+  author: JunsW
+  author_url: https://github.com/JunsW/feature-track
+"sickn33/agentic-awesome-skills:skills/fedora-hyprland-installer":
+  skip: Changes system settings for one Linux setup.
+"sickn33/agentic-awesome-skills:skills/fedramp-compliance":
+  skip: Generic compliance setup guide.
+"sickn33/agentic-awesome-skills:skills/ffuf-claude-skill":
+  skip: Offensive fuzzing tool guide.
+"sickn33/agentic-awesome-skills:skills/ffuf-web-fuzzing":
+  skip: Offensive fuzzing tool guide.
+"sickn33/agentic-awesome-skills:skills/figma-automation":
+  skip: Routes through a Rube MCP connector.
+"sickn33/agentic-awesome-skills:skills/file-organizer":
+  name: Folder tidier
+  summary: Point it at a messy folder. Get a clean folder plan and duplicates found. Files move only when you say yes.
+  task: organise-work
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: Sorting files follows simple, repeatable rules.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: read your files and move them
+"sickn33/agentic-awesome-skills:skills/file-path-traversal":
+  skip: Exploit guide for attackers.
+"sickn33/agentic-awesome-skills:skills/file-uploads":
+  skip: Generic setup guide.
+"sickn33/agentic-awesome-skills:skills/filesystem-context":
+  skip: Agent-builder theory with no clear output for a user.
+"sickn33/agentic-awesome-skills:skills/film-crew":
+  name: AI video shot planner
+  summary: Give it a one-line video idea. Get a shot list, a ready prompt per shot and fixes for failed clips.
+  task: make-video-ads
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows set steps but makes many small creative calls.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: shot_list }, { type: video_prompt } ]
+  author: HEOJUNFO
+  author_url: https://github.com/HEOJUNFO/ai-film-crew
+"sickn33/agentic-awesome-skills:skills/find-bugs":
+  skip: Overlaps our code change and security reviewers.
+"sickn33/agentic-awesome-skills:skills/find-complementary-founders":
+  skip: Posts an agent profile to an outside matching service.
+"sickn33/agentic-awesome-skills:skills/find-matching-tenders":
+  skip: Narrow to AU/NZ tenders and a paid third-party service.
+"sickn33/agentic-awesome-skills:skills/finishing-a-development-branch":
+  skip: Copy of an obra/superpowers skill; we take those from the source.
+"sickn33/agentic-awesome-skills:skills/firebase":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/firebase-app-platform":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/firecrawl-scraper":
+  skip: Thin stub that points to another repo and bundles no method of its own.
+"sickn33/agentic-awesome-skills:skills/firewall-config":
+  skip: System security settings guide.
+"sickn33/agentic-awesome-skills:skills/firmware-analyst":
+  skip: Niche reverse engineering persona.
+"sickn33/agentic-awesome-skills:skills/firmware-pentest":
+  skip: Offensive security guide.
+"sickn33/agentic-awesome-skills:skills/fitness-analyzer":
+  skip: Health data analysis in Chinese tied to a separate health system.
+"sickn33/agentic-awesome-skills:skills/five-axis-code-review":
+  skip: Near-copy of a code review skill we already list.
+"sickn33/agentic-awesome-skills:skills/fix-review":
+  skip: Thin stub that restates its own title.
+"sickn33/agentic-awesome-skills:skills/fixing-accessibility":
+  name: Accessibility fixer
+  summary: Point it at a page or file. Get each accessibility problem quoted with a short reason and a small fix.
+  task: build-websites
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It checks code against a long list of rules.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report }, { type: code_change } ]
+  needs: read your project files
+  author: ibelick
+  author_url: https://github.com/ibelick/ui-skills
+"sickn33/agentic-awesome-skills:skills/fixing-metadata":
+  name: Page metadata fixer
+  summary: Point it at your pages. Get missing titles, share cards, canonical links and page data found and fixed.
+  task: build-websites
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It checks a fixed list of tags and repairs them.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report }, { type: code_change } ]
+  needs: read your project files
+  author: ibelick
+  author_url: https://github.com/ibelick/ui-skills
+"sickn33/agentic-awesome-skills:skills/fixing-motion-performance":
+  name: Animation speed fixer
+  summary: Point it at stuttering animations. Get each slow spot found and a small fix that smooths it.
+  task: build-websites
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It must spot which code makes the screen redraw.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report }, { type: code_change } ]
+  needs: read your project files
+  author: ibelick
+  author_url: https://github.com/ibelick/ui-skills
+"sickn33/agentic-awesome-skills:skills/flowhunt-skill":
+  skip: Exists to sell a paid service (FlowHunt).
+"sickn33/agentic-awesome-skills:skills/flutter-expert":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/folder-specific-claude-and-agents-md":
+  name: Folder guide writer
+  summary: Pick a folder. Get a short CLAUDE.md that tells future AI helpers how that folder works.
+  task: set-up-ai
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It reads a folder and writes one short file.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: read and write your project files
+  author: davidondrej
+  author_url: https://github.com/davidondrej/skills
+"sickn33/agentic-awesome-skills:skills/food-database-query":
+  skip: Stub with almost no content.
+"sickn33/agentic-awesome-skills:skills/form-cro":
+  skip: Copy of a coreyhaines31/marketingskills skill; we take those from the source.
+"sickn33/agentic-awesome-skills:skills/formik-patterns":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-async":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-backend":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-data-transforms":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-either-ref":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-errors":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-option-ref":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-pipe-ref":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-pragmatic":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-react":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-refactor":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-taskeither-ref":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-ts-errors":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-ts-pragmatic":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-ts-react":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fp-types-ref":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/framework-migration-code-migrate":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/framework-migration-deps-upgrade":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/framework-migration-legacy-modernize":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/free-design-resources":
+  skip: Register template, thin and unusual format.
+"sickn33/agentic-awesome-skills:skills/free-tier-strategy":
+  name: Free plan designer
+  summary: Describe your product. Get a free tier with limits that win paid users without anger or abuse.
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: Limits and pricing trade off against each other.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: jonathimer
+  author_url: https://github.com/jonathimer/devmarketing-skills
+"sickn33/agentic-awesome-skills:skills/free-tool-strategy":
+  skip: Copy of a coreyhaines31/marketingskills skill; we take those from the source.
+"sickn33/agentic-awesome-skills:skills/freshdesk-automation":
+  skip: Routes through a Rube MCP connector.
+"sickn33/agentic-awesome-skills:skills/freshservice-automation":
+  skip: Routes through a Rube MCP connector.
+"sickn33/agentic-awesome-skills:skills/frontend-api-integration-patterns":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/frontend-architecture":
+  name: React app structure planner
+  summary: Point it at a React or React Native app. Get a clear folder layout and rules for what may import what.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: Structure choices affect the whole codebase.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: read your project files
+  author: stareezy-1
+  author_url: https://github.com/stareezy-1/frontend-architecture-skill
+"sickn33/agentic-awesome-skills:skills/frontend-data-contracts":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/frontend-design":
+  skip: Copy of a skill from anthropics/skills; we take those from the source.
+"sickn33/agentic-awesome-skills:skills/frontend-dev-guidelines":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/frontend-developer":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/frontend-lighthouse":
+  name: Page speed gate builder
+  summary: Point it at your web app. Get a Lighthouse check in CI that blocks slow or weak pages.
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It sets budgets and a workflow from a fixed pattern.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+  author: stareezy-1
+  author_url: https://github.com/stareezy-1/frontend-architecture-skill
+"sickn33/agentic-awesome-skills:skills/frontend-mobile-development-component-scaffold":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/frontend-mobile-security-xss-scan":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/frontend-observability":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/frontend-optimistic-mutations":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/frontend-security-coder":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/frontend-seo":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/frontend-slides":
+  skip: Near-copy of frontend-slides-frontend-slides, which we keep.
+"sickn33/agentic-awesome-skills:skills/frontend-slides-frontend-slides":
+  name: HTML slide deck maker
+  summary: Describe your talk or share a PowerPoint. Get an animated slide deck in one HTML file that opens in any browser.
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks a look first, then builds each slide.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: slide_deck } ]
+  needs: run code and open a browser
+  author: zarazhangrui
+  author_url: https://github.com/zarazhangrui/frontend-slides
+"sickn33/agentic-awesome-skills:skills/frontend-ui-dark-ts":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/frontend-ui-engineering":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/fsi-compliance-checker":
+  skip: Narrow to PCI-DSS and Singapore rules.
+"sickn33/agentic-awesome-skills:skills/full-output-enforcement":
+  name: Full answer enforcer
+  summary: Ask for a full file or list. Get every line, with no placeholders, skipped parts or half answers.
+  task: set-up-ai
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It is a short rule set, not a method.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  author: Leonxlnx
+  author_url: https://github.com/Leonxlnx/taste-skill
+"sickn33/agentic-awesome-skills:skills/full-stack-orchestration-full-stack-feature":
+  skip: Empty template that only says to use itself.
+"sickn33/agentic-awesome-skills:skills/fxmacrodata":
+  skip: Not distinct or useful enough to list.
+"sickn33/agentic-awesome-skills:skills/game-development":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gamification-engine":
+  skip: Register template, thin and unusual format.
+"sickn33/agentic-awesome-skills:skills/gbp-local-seo-intent":
+  skip: Register template, thin and unusual format.
+"sickn33/agentic-awesome-skills:skills/gcp-audit-logs":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gcp-cloud-functions":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gcp-cloud-run":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gcp-cloud-sql":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gcp-compute":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gcp-gke":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gcp-networking":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gcp-secret-manager":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gdb-cli":
+  skip: Not distinct or useful enough to list.
+"sickn33/agentic-awesome-skills:skills/gdpr-compliance":
+  skip: Generic compliance setup guide.
+"sickn33/agentic-awesome-skills:skills/gdpr-data-handling":
+  skip: Thin generic guide.
+"sickn33/agentic-awesome-skills:skills/gemini-api-dev":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gemini-api-integration":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gemini-deep-research":
+  name: "Gemini research report writer"
+  summary: "Give it a research question. Get a long report with cited sources from Google Gemini. Needs a paid Gemini API key."
+  task: research-topics
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "Gemini does the searching; you set the question and check the sources."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+  needs: "run code and use your Gemini API key"
+  paid: "Gemini API"
+  author: sanjay3290
+  author_url: https://github.com/sanjay3290/ai-skills
+"sickn33/agentic-awesome-skills:skills/gemini-interactions-api":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gemini-live-api-dev":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gemini-omni-flash-api":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/geminiignore-finops":
+  skip: Only for one tool's ignore file.
+"sickn33/agentic-awesome-skills:skills/generate-nanobanana":
+  name: "Gemini image and video maker"
+  summary: "Give it a picture idea and reference images. Get images or short video drawn by Google Gemini."
+  task: make-images
+  role: render
+  level: intermediate
+  thinking: low
+  thinking_why: "Gemini draws the picture; the skill picks the model and checks cost."
+  inputs: [{type: image_plan, required: true}, {type: product_photos, required: false}]
+  outputs: [{type: image}]
+  needs: "run code and use your Gemini API key"
+  paid: "Gemini API"
+  author: AntonioCardenas
+  author_url: https://github.com/AntonioCardenas/generate-nanobanana
+"sickn33/agentic-awesome-skills:skills/geo-audit":
+  name: AI search audit
+  summary: Give it a website. Get a score for how likely AI search is to cite it, plus fixes. Collects data from websites.
+  task: get-found-in-search
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It combines many checks into one scored report.
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: open web pages
+  author: zubair-trabzada
+  author_url: https://github.com/zubair-trabzada/geo-seo-claude
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/geo-brand-mentions":
+  name: AI brand mention scanner
+  summary: Give it a brand name. Get a score for where it is mentioned online. Collects data from websites.
+  task: get-found-in-search
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It judges each platform by clear rules.
+  inputs: [ { type: brand_brain, required: false } ]
+  outputs: [ { type: audit_report } ]
+  needs: search the web
+  author: zubair-trabzada
+  author_url: https://github.com/zubair-trabzada/geo-seo-claude
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/geo-citability":
+  name: AI citation scorer
+  summary: Give it a page. Get each passage scored on how easily AI tools can quote it, with rewrites to try.
+  task: get-found-in-search
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It scores passages against a clear rubric.
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: open web pages
+  author: zubair-trabzada
+  author_url: https://github.com/zubair-trabzada/geo-seo-claude
+"sickn33/agentic-awesome-skills:skills/geo-compare":
+  skip: Agency reporting for one client workflow.
+"sickn33/agentic-awesome-skills:skills/geo-content":
+  skip: Overlaps our SEO auditor and the AI citation scorer.
+"sickn33/agentic-awesome-skills:skills/geo-crawlers":
+  skip: Overlaps the AI search audit.
+"sickn33/agentic-awesome-skills:skills/geo-fundamentals":
+  skip: General overview; the geo skills we list cover the jobs.
+"sickn33/agentic-awesome-skills:skills/geo-llmstxt":
+  name: llms.txt writer
+  summary: Give it your site. Get an llms.txt file that tells AI tools which pages and facts matter most.
+  task: get-found-in-search
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It studies the site, then fills a set file format.
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: document } ]
+  needs: open web pages
+  author: zubair-trabzada
+  author_url: https://github.com/zubair-trabzada/geo-seo-claude
+"sickn33/agentic-awesome-skills:skills/geo-platform-optimizer":
+  name: AI search platform checker
+  summary: Give it a site. Get a score and fix list for Google AI Overviews, ChatGPT, Perplexity and more.
+  task: get-found-in-search
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It runs one checklist per AI search tool.
+  inputs: [ { type: web_page, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: open web pages
+  author: zubair-trabzada
+  author_url: https://github.com/zubair-trabzada/geo-seo-claude
+"sickn33/agentic-awesome-skills:skills/geo-proposal":
+  skip: Agency sales proposal tied to the geo skill set.
+"sickn33/agentic-awesome-skills:skills/geo-prospect":
+  skip: Agency CRM tied to the geo skill set.
+"sickn33/agentic-awesome-skills:skills/geo-report":
+  skip: Agency reporting tied to the geo skill set.
+"sickn33/agentic-awesome-skills:skills/geo-report-pdf":
+  skip: Agency reporting tied to the geo skill set.
+"sickn33/agentic-awesome-skills:skills/geo-schema":
+  skip: Overlaps the page metadata fixer and SEO auditor.
+"sickn33/agentic-awesome-skills:skills/geo-technical":
+  skip: Overlaps our SEO auditor.
+"sickn33/agentic-awesome-skills:skills/geoffrey-hinton":
+  skip: Persona that imitates a real person.
+"sickn33/agentic-awesome-skills:skills/get-seen-in-replies":
+  name: X reply writer
+  summary: Paste a tweet. Get a reply worth reading on its own, or a clear call to skip it.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It writes one short reply from a few clear tests.
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: prateeks367
+  author_url: https://github.com/prateeks367/voicemoat-skills
+"sickn33/agentic-awesome-skills:skills/gh-attach":
+  skip: Needs a GitHub session cookie and an unofficial upload route.
+"sickn33/agentic-awesome-skills:skills/gh-image":
+  skip: Needs a GitHub session cookie and an unofficial upload route.
+"sickn33/agentic-awesome-skills:skills/gh-review-requests":
+  skip: Only for one team's notification setup.
+"sickn33/agentic-awesome-skills:skills/gha-security-review":
+  name: GitHub Actions attack finder
+  summary: Point it at your workflows. Get only the holes an outsider could use, each with the exact attack.
+  task: secure-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: Each finding needs a worked attack path.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: read your project files
+"sickn33/agentic-awesome-skills:skills/ghidra-reverse":
+  skip: Niche reverse engineering guide.
+"sickn33/agentic-awesome-skills:skills/git-advanced-workflows":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/git-commit-message":
+  name: Commit message writer
+  summary: Stage your changes. Get a short commit message that says what changed and why.
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It reads a diff and fills a short fixed format.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: run git commands
+  author: alapha888
+  author_url: https://github.com/alapha888/agent-skills-en
+"sickn33/agentic-awesome-skills:skills/git-hooks-automation":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/git-pr-review":
+  skip: Overlaps our pull request writer.
+"sickn33/agentic-awesome-skills:skills/git-pr-workflows-git-workflow":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/git-pr-workflows-onboard":
+  skip: Role prompt that repeats an onboarding guide.
+"sickn33/agentic-awesome-skills:skills/git-pr-workflows-pr-enhance":
+  skip: Overlaps our pull request writer.
+"sickn33/agentic-awesome-skills:skills/git-pushing":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/git-workflow":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/git-workflow-and-versioning":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/github":
+  skip: Thin wrapper on the gh command.
+"sickn33/agentic-awesome-skills:skills/github-actions":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/github-actions-advanced":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/github-actions-debugger":
+  name: Failed workflow diagnoser
+  summary: Paste a failed GitHub Actions log. Get the root cause and a fix for your workflow file.
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads long logs and traces one cause.
+  inputs: [ { type: source_text, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  author: Owais
+  author_url: https://github.com/Owais
+"sickn33/agentic-awesome-skills:skills/github-actions-templates":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/github-automation":
+  skip: Routes through a Rube MCP connector.
+"sickn33/agentic-awesome-skills:skills/github-issue-creator":
+  name: Bug report writer
+  summary: Paste error logs, notes or a screenshot. Get a clear GitHub issue with steps to repeat, impact and proof.
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It sorts rough notes into a set template.
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+"sickn33/agentic-awesome-skills:skills/github-presence":
+  name: GitHub README improver
+  summary: Give it your repo or profile. Get a stronger README, profile and topics so developers try your project.
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a known structure but tunes the words.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  author: jonathimer
+  author_url: https://github.com/jonathimer/devmarketing-skills
+"sickn33/agentic-awesome-skills:skills/github-workflow-automation":
+  skip: Thin pattern list with little detail.
+"sickn33/agentic-awesome-skills:skills/gitlab-automation":
+  skip: Routes through a Rube MCP connector.
+"sickn33/agentic-awesome-skills:skills/gitlab-ci":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gitlab-ci-patterns":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/gitops-workflow":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/glasser":
+  skip: Routes to a third-party data CLI.
+"sickn33/agentic-awesome-skills:skills/global-chat-agent-discovery":
+  skip: Only works with one directory service.
+"sickn33/agentic-awesome-skills:skills/gmail-automation":
+  skip: Logs in to a mailbox with its own OAuth setup.
+"sickn33/agentic-awesome-skills:skills/go-concurrency-patterns":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/go-in-depth":
+  skip: Not distinct or useful enough to list.
+"sickn33/agentic-awesome-skills:skills/go-playwright":
+  skip: Built around stealth browser automation to avoid bot checks.
+"sickn33/agentic-awesome-skills:skills/go-rod-master":
+  skip: Browser scraping with anti-bot-detection evasion.
+"sickn33/agentic-awesome-skills:skills/go-rust-reverse":
+  skip: Niche reverse engineering guide.
+"sickn33/agentic-awesome-skills:skills/goal-analyzer":
+  skip: Health goal analysis tied to a separate health system.
+"sickn33/agentic-awesome-skills:skills/goal-instruction-writer":
+  name: Agent goal writer
+  summary: Give it a vague job. Get a goal an AI agent can finish, with proof of done, limits and stop rules.
+  task: set-up-ai
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It must foresee drift and write guard rules.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: wu736139669
+  author_url: https://github.com/wu736139669/goal-instruction-writer
+"sickn33/agentic-awesome-skills:skills/goal-loop":
+  skip: Near-copy of the goal skill we list.
+"sickn33/agentic-awesome-skills:skills/godot-4-migration":
+  skip: Narrow to one game engine upgrade.
+"sickn33/agentic-awesome-skills:skills/godot-gdscript-patterns":
+  skip: Generic stack guide or thin copy; not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/golang-pro":
+  skip: Generic stack guide or thin copy; not distinct enough to list.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It runs profilers and reads their output.
+new_slug: slow-code-finder
+name: Slow code finder
+summary: Point it at slow code. Get CPU, memory and I/O hot spots found, with flame graphs and fixes.
+job: test-and-fix-code
+headline: Slow code finder
+subhead: Point it at slow code. Get CPU, memory and I/O hot spots found, with flame graphs and fixes.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

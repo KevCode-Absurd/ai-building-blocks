@@ -1,0 +1,35 @@
+slug: scientific-web-searcher
+name: Scientific web searcher
+summary: Name a research topic. Get papers and pages found by meaning, with text pulled out of the links. Uses Exa.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: source_text
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:Exa
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/exa-search
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/exa-search
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: exa-search
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: exa-search skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/exa-search
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

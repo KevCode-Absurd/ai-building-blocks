@@ -1,0 +1,32 @@
+slug: hospital-supply-stock-planner
+name: Hospital supply stock planner
+summary: Give it your supply usage. Get par levels, expiry rules and an emergency stock plan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/hospital-logistics
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/hospital-logistics
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: hospital-logistics
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hospital-logistics skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/hospital-logistics
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

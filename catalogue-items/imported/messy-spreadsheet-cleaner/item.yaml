@@ -1,0 +1,32 @@
+slug: messy-spreadsheet-cleaner
+name: Messy spreadsheet cleaner
+summary: Give it messy data. Get spacing, text numbers, dates and duplicates fixed, with mixed columns flagged.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/financial-analysis/skills/clean-data-xls
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/clean-data-xls
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: clean-data-xls
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: clean-data-xls skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/clean-data-xls
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

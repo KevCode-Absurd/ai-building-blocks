@@ -1,0 +1,34 @@
+slug: analyst-estimate-reader
+name: Analyst estimate reader
+summary: Give it a stock ticker. Get how analyst profit and sales forecasts are changing and where they differ. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: himself65
+  repo: himself65/finance-skills
+  path: plugins/market-analysis/skills/estimate-analysis
+  url: https://github.com/himself65/finance-skills/tree/main/plugins/market-analysis/skills/estimate-analysis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 73d554d
+  original_name: estimate-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: estimate-analysis skill
+    by: himself65
+    url: https://github.com/himself65/finance-skills/tree/main/plugins/market-analysis/skills/estimate-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

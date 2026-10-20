@@ -1,0 +1,32 @@
+slug: matlab-app-builder
+name: MATLAB app builder
+summary: Describe the app you need. Get a working MATLAB app, built from a chosen layout.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/matlab-app-building/matlab-build-app
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-app-building/matlab-build-app
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-build-app
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-build-app skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-app-building/matlab-build-app
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

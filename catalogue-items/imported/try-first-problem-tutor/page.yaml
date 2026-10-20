@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It uses your attempts to shape the teaching.
+new_slug: try-first-problem-tutor
+name: Try-first problem tutor
+summary: Try a hard problem two ways before any teaching. Your AI then builds the lesson from your attempts.
+job: teach-and-train
+headline: Try-first problem tutor
+subhead: Try a hard problem two ways before any teaching. Your AI then builds the lesson from your attempts.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

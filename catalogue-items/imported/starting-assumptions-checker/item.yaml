@@ -1,0 +1,38 @@
+slug: starting-assumptions-checker
+name: Starting assumptions checker
+summary: Tell it what you already know about your numbers. Get starting assumptions in plain units, tested to see if they make sense.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: PyMC Labs
+  repo: pymc-labs/pymc-modeling
+  path: skills/prior-elicitation
+  url: https://github.com/pymc-labs/pymc-modeling/tree/main/skills/prior-elicitation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 68cbe66
+  original_name: prior-elicitation
+  author: PyMC Labs
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: prior-elicitation skill
+    by: PyMC Labs
+    url: https://github.com/pymc-labs/pymc-modeling/tree/main/skills/prior-elicitation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: PyMC Labs
+    url: https://github.com/pymc-labs
+    used: Wrote the skill; PyMC Labs shared it in their collection.

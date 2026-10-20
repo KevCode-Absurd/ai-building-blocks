@@ -1,0 +1,37 @@
+slug: store-rules-builder
+name: Store rules builder
+summary: Say the discount, shipping or payment rule you want. Get a working Shopify Function that runs it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: dragnoir
+  repo: dragnoir/Shopify-agent-skills
+  path: skills/shopify-functions
+  url: https://github.com/dragnoir/Shopify-agent-skills/tree/main/skills/shopify-functions
+  licence: MIT
+  licence_file: LICENSE
+  commit: f76a09f
+  original_name: shopify-functions
+  author: dragnoir
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-functions skill
+    by: dragnoir
+    url: https://github.com/dragnoir/Shopify-agent-skills/tree/main/skills/shopify-functions
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: dragnoir
+    url: https://github.com/dragnoir
+    used: Wrote the skill; dragnoir shared it in their collection.

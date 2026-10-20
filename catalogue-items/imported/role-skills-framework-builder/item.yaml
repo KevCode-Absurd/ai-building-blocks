@@ -1,0 +1,37 @@
+slug: role-skills-framework-builder
+name: Role skills framework builder
+summary: Name your roles. Get the key skills for each, what good looks like at each level, and matching interview questions.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Tuan Duc Tran
+  repo: tuanductran/hr-skills
+  path: skills/hr-competency-management
+  url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-competency-management
+  licence: MIT
+  licence_file: LICENSE
+  commit: 078f2fb
+  original_name: hr-competency-management
+  author: Tuan Duc Tran
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hr-competency-management skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-competency-management
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It follows your column list and invents plausible values.
+new_slug: sample-data-file-maker
+name: Sample data file maker
+summary: Say which columns and rules you need. Get a realistic fake dataset as CSV, JSON, SQL or a script.
+job: test-and-fix-code
+headline: Sample data file maker
+subhead: Say which columns and rules you need. Get a realistic fake dataset as CSV, JSON, SQL or a script.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

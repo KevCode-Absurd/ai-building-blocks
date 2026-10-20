@@ -1,0 +1,32 @@
+slug: phoenix-ai-app-tracer
+name: Phoenix AI app tracer
+summary: Give it your AI app. Get traces of every step, plus tests that score answers and spot failures.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 17-observability/phoenix
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/17-observability/phoenix
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: phoenix-observability
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: phoenix-observability skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/17-observability/phoenix
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

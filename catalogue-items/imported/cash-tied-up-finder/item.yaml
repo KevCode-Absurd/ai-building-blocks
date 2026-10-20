@@ -1,0 +1,32 @@
+slug: cash-tied-up-finder
+name: Cash tied-up finder
+summary: Give it your receivables, payables and stock. Get days outstanding, the cash cycle and where cash is stuck.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/working-capital-analysis
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/working-capital-analysis
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: working-capital-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: working-capital-analysis skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/working-capital-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

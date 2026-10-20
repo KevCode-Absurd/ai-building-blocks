@@ -1,0 +1,35 @@
+slug: workplace-investigation-guide
+name: Workplace investigation guide
+summary: Describe a workplace complaint. Get a plan, evidence log and draft memo. Not legal advice.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: document
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/claude-for-legal
+  path: employment-legal/skills/internal-investigation
+  url: https://github.com/anthropics/claude-for-legal/tree/main/employment-legal/skills/internal-investigation
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: 4a6c651
+  original_name: internal-investigation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: internal-investigation skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/employment-legal/skills/internal-investigation
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

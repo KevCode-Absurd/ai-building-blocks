@@ -1,0 +1,37 @@
+slug: repeat-buyer-rate-calculator
+name: Repeat buyer rate calculator
+summary: Get the share of customers who order again within your chosen days, split by product or collection.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: beginner
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/order-intelligence/shopify-admin-repeat-purchase-rate
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/order-intelligence/shopify-admin-repeat-purchase-rate
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-repeat-purchase-rate
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-repeat-purchase-rate skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/order-intelligence/shopify-admin-repeat-purchase-rate
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

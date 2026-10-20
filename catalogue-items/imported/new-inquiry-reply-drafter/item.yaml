@@ -1,0 +1,32 @@
+slug: new-inquiry-reply-drafter
+name: New inquiry reply drafter
+summary: Give it new inquiries. Get each one qualified and answered with a draft reply and real meeting times. You send it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: small-business/skills/speed-to-lead
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/speed-to-lead
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: speed-to-lead
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: speed-to-lead skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/speed-to-lead
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

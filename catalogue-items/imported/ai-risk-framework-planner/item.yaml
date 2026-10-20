@@ -1,0 +1,33 @@
+slug: ai-risk-framework-planner
+name: AI risk framework planner
+summary: Describe your AI system. Get risks mapped, measured and managed under the NIST AI framework, with a plan.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/nist-ai-rmf/skills/nist-ai-rmf
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/nist-ai-rmf/skills/nist-ai-rmf
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: nist-ai-rmf
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: nist-ai-rmf skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/nist-ai-rmf/skills/nist-ai-rmf
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

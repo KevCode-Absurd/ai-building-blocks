@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It sets targets from known methods.
+new_slug: service-target-planner
+name: Service target planner
+summary: Describe your service. Get service level targets, error budgets and alert rules that fit.
+job: ship-and-host
+headline: Service target planner
+subhead: Describe your service. Get service level targets, error budgets and alert rules that fit.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

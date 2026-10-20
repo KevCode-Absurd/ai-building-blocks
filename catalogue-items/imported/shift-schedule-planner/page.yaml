@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It balances cover, cost and fairness.
+new_slug: shift-schedule-planner
+name: Shift schedule planner
+summary: Give it your demand and staff. Get a shift pattern, a weekly schedule and a fair rotation for nights and weekends.
+job: hire-people
+headline: Shift schedule planner
+subhead: Give it your demand and staff. Get a shift pattern, a weekly schedule and a fair rotation for nights and weekends.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

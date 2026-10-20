@@ -1,0 +1,32 @@
+slug: creator-partnership-planner
+name: Creator partnership planner
+summary: Say what you sell. Get a plan to find creators, set deals, brief them and track results.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/influencer-marketing
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/influencer-marketing
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: influencer-marketing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: influencer-marketing skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/influencer-marketing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

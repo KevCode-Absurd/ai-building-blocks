@@ -1,0 +1,37 @@
+slug: research-report-writer
+name: Research report writer
+summary: Give it a question. Get a conclusion-first report with sources ranked and cross-checked.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/deep-research-framework
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/deep-research-framework
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: deep-research-framework
+  author: alapha888
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: deep-research-framework skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/deep-research-framework
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: alapha888
+    url: https://github.com/alapha888
+    used: Wrote the skill; sickn33 shared it in their collection.

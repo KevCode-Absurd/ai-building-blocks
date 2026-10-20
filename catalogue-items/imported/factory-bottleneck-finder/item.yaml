@@ -1,0 +1,32 @@
+slug: factory-bottleneck-finder
+name: Factory bottleneck finder
+summary: Describe your production steps and times. Get the slowest step found and ranked fixes with expected output gains.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/process-optimization
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/process-optimization
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: process-optimization
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: process-optimization skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/process-optimization
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

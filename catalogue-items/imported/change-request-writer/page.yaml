@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It must think through what could go wrong.
+new_slug: change-request-writer
+name: Change request writer
+summary: Describe a system or process change. Get a change request with impact, risks, rollback steps and who to tell.
+job: document-work
+headline: Change request writer
+subhead: Describe a system or process change. Get a change request with impact, risks, rollback steps and who to tell.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

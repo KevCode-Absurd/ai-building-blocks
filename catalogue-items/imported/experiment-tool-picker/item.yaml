@@ -1,0 +1,37 @@
+slug: experiment-tool-picker
+name: Experiment tool picker
+summary: Describe your team and traffic. Get which testing tool fits, how to switch tools, and when to use more than one.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/experimentation-platform-orchestrator
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/experimentation-platform-orchestrator
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: experimentation-platform-orchestrator
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: experimentation-platform-orchestrator skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/experimentation-platform-orchestrator
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It fixes errors line by line without changing meaning.
+new_slug: draft-proofreader
+name: Draft proofreader
+summary: Give it a text or document. Get it back corrected in your own voice, with a log of every change.
+job: write-and-tell-stories
+headline: Draft proofreader
+subhead: Give it a text or document. Get it back corrected in your own voice, with a log of every change.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

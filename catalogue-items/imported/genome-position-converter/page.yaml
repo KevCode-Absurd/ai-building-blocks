@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Off-by-one and naming errors need careful rule checks.
+new_slug: genome-position-converter
+name: Genome position converter
+summary: Give it gene positions or variants. Get them converted between conventions, with assembly and naming mismatches caught.
+job: research-topics
+headline: Genome position converter
+subhead: Give it gene positions or variants. Get them converted between conventions, with assembly and naming mismatches caught.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code.

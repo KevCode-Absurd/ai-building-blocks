@@ -1,0 +1,32 @@
+slug: funding-round-multiple-analyst
+name: Funding round multiple analyst
+summary: Give it a software company. Get how its value multiple changed across funding rounds and what drove the shift.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: himself65
+  repo: himself65/finance-skills
+  path: plugins/market-analysis/skills/saas-valuation-compression
+  url: https://github.com/himself65/finance-skills/tree/main/plugins/market-analysis/skills/saas-valuation-compression
+  licence: MIT
+  licence_file: LICENSE
+  commit: 73d554d
+  original_name: saas-valuation-compression
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: saas-valuation-compression skill
+    by: himself65
+    url: https://github.com/himself65/finance-skills/tree/main/plugins/market-analysis/skills/saas-valuation-compression
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

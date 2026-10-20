@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It reads the task for hard language, not hard ideas.
+new_slug: task-language-demand-checker
+name: Task language demand checker
+summary: Paste a task or text. Get the words and sentence types that may block students still learning English.
+job: teach-and-train
+headline: Task language demand checker
+subhead: Paste a task or text. Get the words and sentence types that may block students still learning English.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

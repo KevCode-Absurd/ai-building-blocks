@@ -1,0 +1,37 @@
+slug: customer-call-prep-writer
+name: Customer call prep writer
+summary: Name the company and who is on the call. Get a one-page brief with signals and talking points. Needs Common Room.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: partner-built/common-room/skills/call-prep
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/common-room/skills/call-prep
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: call-prep
+  author: Common Room
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: call-prep skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/common-room/skills/call-prep
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Common Room
+    url: ""
+    used: Wrote the skill; Anthropic shared it in their collection.

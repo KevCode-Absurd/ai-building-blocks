@@ -1,0 +1,32 @@
+slug: pcb-rf-filter-designer
+name: PCB RF filter designer
+summary: Give it pass band and rejection needs. Get a PCB filter designed and its response plotted.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/rf-and-mixed-signal/matlab-design-pcb-filter
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-design-pcb-filter
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-design-pcb-filter
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-design-pcb-filter skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-design-pcb-filter
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

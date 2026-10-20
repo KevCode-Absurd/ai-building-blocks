@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: The maths is set, but reading the pattern takes some thought.
+new_slug: retention-heatmap-maker
+name: Retention heatmap maker
+summary: Give it signup and activity dates. Get retention by group over time, as a colour-coded grid with a plain reading.
+job: track-numbers
+headline: Retention heatmap maker
+subhead: Give it signup and activity dates. Get retention by group over time, as a colour-coded grid with a plain reading.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

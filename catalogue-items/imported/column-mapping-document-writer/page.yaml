@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: Matching columns is mechanical, but odd fields need a judgment call.
+new_slug: column-mapping-document-writer
+name: Column mapping document writer
+summary: Give it your source and target tables. Get a column-by-column map with rules, gaps and decisions to review.
+job: document-work
+headline: Column mapping document writer
+subhead: Give it your source and target tables. Get a column-by-column map with rules, gaps and decisions to review.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

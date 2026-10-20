@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It sums up a chat in a set format.
+new_slug: handoff-note-writer
+name: Handoff note writer
+summary: Finish a chat. Get it boiled down to a handoff note that another AI can pick up.
+job: organise-work
+headline: Handoff note writer
+subhead: Finish a chat. Get it boiled down to a handoff note that another AI can pick up.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

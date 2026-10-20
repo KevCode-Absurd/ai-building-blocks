@@ -1,0 +1,32 @@
+slug: history-inquiry-question-checker
+name: History inquiry question checker
+summary: Paste your main history question. Get a verdict on whether it drives real inquiry, with sharper rewrites.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/historical-thinking/central-historical-question-evaluator
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/historical-thinking/central-historical-question-evaluator
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: central-historical-question-evaluator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: central-historical-question-evaluator skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/historical-thinking/central-historical-question-evaluator
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

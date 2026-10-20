@@ -1,0 +1,33 @@
+slug: model-feature-finder
+name: Model feature finder
+summary: Give it a language model. Get a small network trained to show which ideas its inner activity stands for.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 04-mechanistic-interpretability/saelens
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/04-mechanistic-interpretability/saelens
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: sparse-autoencoder-training
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: sparse-autoencoder-training skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/04-mechanistic-interpretability/saelens
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

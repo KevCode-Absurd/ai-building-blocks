@@ -1,0 +1,32 @@
+slug: ai-cost-cutter
+name: AI cost cutter
+summary: Describe your AI app. Get where the tokens go and changes that cut the bill without hurting quality.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/llm-cost-optimizer/skills/llm-cost-optimizer
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/llm-cost-optimizer/skills/llm-cost-optimizer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: llm-cost-optimizer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: llm-cost-optimizer skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/llm-cost-optimizer/skills/llm-cost-optimizer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

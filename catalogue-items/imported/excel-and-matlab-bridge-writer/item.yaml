@@ -1,0 +1,32 @@
+slug: excel-and-matlab-bridge-writer
+name: Excel and MATLAB bridge writer
+summary: Say what to move between Excel and MATLAB. Get VBA macros that send data, run MATLAB and return results.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/computational-finance/matlab-use-spreadsheet-link
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/computational-finance/matlab-use-spreadsheet-link
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-use-spreadsheet-link
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-use-spreadsheet-link skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/computational-finance/matlab-use-spreadsheet-link
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

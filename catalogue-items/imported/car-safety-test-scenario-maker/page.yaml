@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows a defined test protocol with many variants.
+new_slug: car-safety-test-scenario-maker
+name: Car safety test scenario maker
+summary: Name the Euro NCAP test. Get its scenario and variants made, plotted and exported with scores.
+job: build-software
+headline: Car safety test scenario maker
+subhead: Name the Euro NCAP test. Get its scenario and variants made, plotted and exported with scores.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with the Euro NCAP support package.

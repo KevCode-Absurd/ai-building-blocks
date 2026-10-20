@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It follows double entry rules.
+new_slug: journal-entry-drafter
+name: Journal entry drafter
+summary: Describe the transaction. Get a balanced journal entry with debits, credits and support notes.
+job: track-numbers
+headline: Journal entry drafter
+subhead: Describe the transaction. Get a balanced journal entry with debits, credits and support notes.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

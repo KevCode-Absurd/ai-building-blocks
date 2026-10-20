@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It sets up the browser list, runs tests and reads failures.
+new_slug: browserstack-test-runner
+name: BrowserStack test runner
+summary: Give it your Playwright tests. Get them run on many browsers and devices, with a pass and fail report.
+job: test-and-fix-code
+headline: BrowserStack test runner
+subhead: Give it your Playwright tests. Get them run on many browsers and devices, with a pass and fail report.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use a BrowserStack tool you set up yourself.

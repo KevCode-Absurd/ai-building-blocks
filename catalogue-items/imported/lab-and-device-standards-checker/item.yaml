@@ -1,0 +1,32 @@
+slug: lab-and-device-standards-checker
+name: Lab and device standards checker
+summary: Name the standard and share your records. Get an evidence gap list for ISO 13485, 14971 or 17025.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/iso-standards-readiness
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/iso-standards-readiness
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: iso-standards-readiness
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: iso-standards-readiness skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/iso-standards-readiness
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Turning expert hunches into numbers needs careful checking.
+new_slug: starting-assumptions-checker
+name: Starting assumptions checker
+summary: Tell it what you already know about your numbers. Get starting assumptions in plain units, tested to see if they make sense.
+job: track-numbers
+headline: Starting assumptions checker
+subhead: Tell it what you already know about your numbers. Get starting assumptions in plain units, tested to see if they make sense.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code.

@@ -1,0 +1,32 @@
+slug: build-pipeline-writer
+name: Build pipeline writer
+summary: Point it at your project. Get a CI/CD pipeline file for your stack with test and deploy stages.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/ci-cd-pipeline-builder
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/ci-cd-pipeline-builder
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: ci-cd-pipeline-builder
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ci-cd-pipeline-builder skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/ci-cd-pipeline-builder
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

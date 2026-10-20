@@ -1,0 +1,130 @@
+---
+name: merger-model
+description: Build accretion/dilution analysis for M&A transactions. Models pro forma EPS impact, synergy sensitivities, and purchase price allocation. Use when evaluating a potential acquisition, preparing merger consequences analysis for a pitch, or advising on deal terms. Triggers on "merger model", "accretion dilution", "M&A model", "pro forma EPS", "merger consequences", or "deal impact analysis".
+---
+
+# Merger Model
+
+## India
+
+This skill operates on **Indian markets**. Load **`india-market-conventions`**
+before building anything, and **`india-market-data`** for sources. Two rules cause
+most Indian errors:
+
+- **Fiscal year is April–March.** `FY2025` = year ending **31 Mar 2025**; `Q1 FY26` =
+  Apr–Jun 2025. Label periods `Q3 FY26 (Oct–Dec 25)`, never a bare calendar year.
+  Never annualise a quarter without stating the fiscal offset.
+- **Units are lakh (10⁵) and crore (10⁷).** Never use the Excel format
+  `#,##0,," Cr"` — each trailing comma divides by 1,000, so that format displays
+  **lakh under a crore label: a 100× error**. Divide by `10000000` in a live
+  formula and label the column `Total Revenue (₹ Cr)`.
+
+What has no Indian equivalent is listed in `NOT-ADAPTABLE.md`. Name the gap —
+never substitute a proxy and present it as the real thing.
+
+## Workflow
+
+### Step 1: Gather Inputs
+
+**Acquirer:**
+- Company name, current share price, shares outstanding
+- LTM and NTM EPS (GAAP and adjusted)
+- P/E multiple
+- Pre-tax cost of debt, tax rate
+- Cash on balance sheet, existing debt
+
+**Target:**
+- Company name, current share price, shares outstanding (if public)
+- LTM and NTM EPS or net income
+- Enterprise value or equity value
+
+**Deal Terms:**
+- Offer price per share (or premium to current)
+- Consideration mix: % cash vs. % stock
+- New debt raised to fund cash portion
+- Expected synergies (revenue and cost) and phase-in timeline
+- Transaction fees and financing costs
+- Expected close date
+
+### Step 2: Purchase Price Analysis
+
+| Item | Value |
+|------|-------|
+| Offer price per share | |
+| Premium to current | |
+| Equity value | |
+| Plus: net debt assumed | |
+| Enterprise value | |
+| EV / EBITDA implied | |
+| P/E implied | |
+
+### Step 3: Sources & Uses
+
+| Sources | $ | Uses | $ |
+|---------|---|------|---|
+| New debt | | Equity purchase price | |
+| Cash on hand | | Refinance target debt | |
+| New equity issued | | Transaction fees | |
+| | | Financing fees | |
+| **Total** | | **Total** | |
+
+### Step 4: Pro Forma EPS (Accretion / Dilution)
+
+Calculate year-by-year (Year 1-3):
+
+| | Standalone | Pro Forma | Accretion/(Dilution) |
+|---|-----------|-----------|---------------------|
+| Acquirer net income | | | |
+| Target net income | | | |
+| Synergies (after tax) | | | |
+| Foregone interest on cash (after tax) | | | |
+| New debt interest (after tax) | | | |
+| Intangible amortization (after tax) | | | |
+| Pro forma net income | | | |
+| Pro forma shares | | | |
+| **Pro forma EPS** | | | |
+| **Accretion / (Dilution) %** | | | |
+
+### Step 5: Sensitivity Analysis
+
+**Accretion/Dilution vs. Synergies and Offer Premium:**
+
+| | $0M syn | $25M syn | $50M syn | $75M syn | $100M syn |
+|---|---------|----------|----------|----------|-----------|
+| 15% premium | | | | | |
+| 20% premium | | | | | |
+| 25% premium | | | | | |
+| 30% premium | | | | | |
+
+**Accretion/Dilution vs. Cash/Stock Mix:**
+
+| | 100% cash | 75/25 | 50/50 | 25/75 | 100% stock |
+|---|-----------|-------|-------|-------|------------|
+| Year 1 | | | | | |
+| Year 2 | | | | | |
+
+### Step 6: Breakeven Synergies
+
+Calculate the minimum synergies needed for the deal to be EPS-neutral in Year 1.
+
+### Step 7: Output
+
+- Excel workbook with:
+  - Assumptions tab
+  - Sources & uses
+  - Pro forma income statement
+  - Accretion/dilution summary
+  - Sensitivity tables
+  - Breakeven analysis
+- One-page merger consequences summary for pitch book
+
+## Important Notes
+
+- Always show both GAAP and adjusted (cash) EPS where relevant
+- Stock deals: use acquirer's current price for exchange ratio, note dilution from new shares
+- Include purchase price allocation — goodwill and intangible amortization matter for GAAP EPS
+- Synergy phase-in is critical — Year 1 is often only 25-50% of run-rate synergies
+- Don't forget foregone interest income on cash used and new interest expense on debt raised
+- Tax rate on synergies and interest adjustments should match the acquirer's marginal rate
+
+- **Runbook:** [`references/runbook-merger-model.md`](references/runbook-merger-model.md) — the end-to-end walkthrough (which skills to load in what order, and the output contract).

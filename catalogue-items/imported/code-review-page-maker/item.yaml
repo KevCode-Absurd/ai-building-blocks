@@ -1,0 +1,32 @@
+slug: code-review-page-maker
+name: Code review page maker
+summary: Give it a markdown code review. Get one HTML page with severity tags and diffs that are easy to read.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: markdown-html/skills/md-review
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/markdown-html/skills/md-review
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: md-review
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: md-review skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/markdown-html/skills/md-review
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

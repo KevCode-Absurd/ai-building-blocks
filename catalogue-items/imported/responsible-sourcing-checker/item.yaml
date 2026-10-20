@@ -1,0 +1,32 @@
+slug: responsible-sourcing-checker
+name: Responsible sourcing checker
+summary: Give it your suppliers. Get ethics and environment gaps found, a questionnaire to send, and an improvement plan.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/sustainable-sourcing
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/sustainable-sourcing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: sustainable-sourcing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: sustainable-sourcing skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/sustainable-sourcing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

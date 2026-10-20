@@ -1,0 +1,32 @@
+slug: migration-planner
+name: Migration planner
+summary: Name the old system or feature. Get a plan to retire it and move users over without breaking them.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Addy Osmani
+  repo: addyosmani/agent-skills
+  path: skills/deprecation-and-migration
+  url: https://github.com/addyosmani/agent-skills/tree/main/skills/deprecation-and-migration
+  licence: MIT
+  licence_file: LICENSE
+  commit: aeac41d
+  original_name: deprecation-and-migration
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: deprecation-and-migration skill
+    by: Addy Osmani
+    url: https://github.com/addyosmani/agent-skills/tree/main/skills/deprecation-and-migration
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

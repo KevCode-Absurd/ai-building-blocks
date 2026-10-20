@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It splits the search, then compares what each helper found.
+new_slug: bug-cause-investigator-team
+name: Bug cause investigator team
+summary: Give it a crash or odd behaviour. Get several parallel read-only investigations and one ranked list of likely causes.
+job: test-and-fix-code
+headline: Bug cause investigator team
+subhead: Give it a crash or odd behaviour. Get several parallel read-only investigations and one ranked list of likely causes.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run several helper agents and read your project files.

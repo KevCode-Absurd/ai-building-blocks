@@ -1,0 +1,32 @@
+slug: second-opinion-reviewer
+name: Second-opinion reviewer
+summary: Give it a plan or change you feel sure about. Get a fresh reviewer's hardest objections, sorted by what matters.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: plan
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Addy Osmani
+  repo: addyosmani/agent-skills
+  path: skills/doubt-driven-development
+  url: https://github.com/addyosmani/agent-skills/tree/main/skills/doubt-driven-development
+  licence: MIT
+  licence_file: LICENSE
+  commit: aeac41d
+  original_name: doubt-driven-development
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: doubt-driven-development skill
+    by: Addy Osmani
+    url: https://github.com/addyosmani/agent-skills/tree/main/skills/doubt-driven-development
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

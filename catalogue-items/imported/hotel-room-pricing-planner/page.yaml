@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Price, demand and no-shows interact.
+new_slug: hotel-room-pricing-planner
+name: Hotel room pricing planner
+summary: Give it your bookings and rates. Get room prices, overbooking limits and a channel mix that fill rooms at the best rate.
+job: set-prices
+headline: Hotel room pricing planner
+subhead: Give it your bookings and rates. Get room prices, overbooking limits and a channel mix that fill rooms at the best rate.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,32 @@
+slug: slide-and-page-styler
+name: Slide and page styler
+summary: Pick one of ten themes or ask for a new one. Get your slides, docs or page restyled to match.
+category: general
+boards: []
+type: skill
+role: render
+job: ops
+level: beginner
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/skills
+  path: skills/theme-factory
+  url: https://github.com/anthropics/skills/tree/main/skills/theme-factory
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: dbd4588
+  original_name: theme-factory
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: theme-factory skill
+    by: Anthropic
+    url: https://github.com/anthropics/skills/tree/main/skills/theme-factory
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

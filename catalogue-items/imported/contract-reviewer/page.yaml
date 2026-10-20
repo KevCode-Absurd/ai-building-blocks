@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Contract wording hides risks that need close reading.
+new_slug: contract-reviewer
+name: Contract reviewer
+summary: Give it a contract and your rules. Get a clause by clause review and suggested edits. Have a lawyer check it.
+job: check-contracts
+headline: Contract reviewer
+subhead: Give it a contract and your rules. Get a clause by clause review and suggested edits. Have a lawyer check it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

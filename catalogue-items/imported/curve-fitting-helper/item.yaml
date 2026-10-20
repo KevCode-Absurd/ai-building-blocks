@@ -1,0 +1,32 @@
+slug: curve-fitting-helper
+name: Curve fitting helper
+summary: Give it x and y data. Get the best curve or surface fit, with outliers handled and code to repeat it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/ai-and-statistics/matlab-fit-curve
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-fit-curve
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-fit-curve
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-fit-curve skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-fit-curve
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

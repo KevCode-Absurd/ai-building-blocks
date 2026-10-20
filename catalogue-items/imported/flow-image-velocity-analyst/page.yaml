@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows a set method but needs care when it rejects bad vectors.
+new_slug: flow-image-velocity-analyst
+name: Flow image velocity analyst
+summary: Give it pairs of flow images. Get velocity fields, bad vectors fixed, and vorticity and turbulence numbers.
+job: research-topics
+headline: Flow image velocity analyst
+subhead: Give it pairs of flow images. Get velocity fields, bad vectors fixed, and vorticity and turbulence numbers.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and save files.

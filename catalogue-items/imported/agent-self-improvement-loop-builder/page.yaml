@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Self-improving loops need careful design and testing.
+new_slug: agent-self-improvement-loop-builder
+name: Agent self-improvement loop builder
+summary: Give it an AI agent and a test set. Get a loop that rewrites its prompts and skills until scores rise.
+job: build-software
+headline: Agent self-improvement loop builder
+subhead: Give it an AI agent and a test set. Get a loop that rewrites its prompts and skills until scores rise.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and call an AI model.

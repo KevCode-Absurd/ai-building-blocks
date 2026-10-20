@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks parts and wires them together.
+new_slug: ai-app-and-chatbot-builder
+name: AI app and chatbot builder
+summary: Describe the app you want. Get working code for a chatbot, question answerer or agent that uses tools.
+job: build-software
+headline: AI app and chatbot builder
+subhead: Describe the app you want. Get working code for a chatbot, question answerer or agent that uses tools.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and call an AI model.

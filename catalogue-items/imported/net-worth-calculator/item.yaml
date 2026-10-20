@@ -1,0 +1,32 @@
+slug: net-worth-calculator
+name: Net worth calculator
+summary: List your assets and debts. Get your net worth, how it splits, and a monthly view to track.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/net-worth-tracker
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/net-worth-tracker
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: net-worth-tracker
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: net-worth-tracker skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/net-worth-tracker
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

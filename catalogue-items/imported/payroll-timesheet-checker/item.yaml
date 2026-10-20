@@ -1,0 +1,32 @@
+slug: payroll-timesheet-checker
+name: Payroll timesheet checker
+summary: Give it your timesheets. Get hours totalled by person, every oddity flagged, and a run ready for your line by line approval.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: small-business/skills/payroll-prep
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/payroll-prep
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: payroll-prep
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: payroll-prep skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/payroll-prep
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

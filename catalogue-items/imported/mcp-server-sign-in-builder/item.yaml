@@ -1,0 +1,32 @@
+slug: mcp-server-sign-in-builder
+name: MCP server sign-in builder
+summary: Say how people will connect to your MCP server. Get correct OAuth sign-in built into it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Paldom
+  repo: Paldom/mcp-server-skills
+  path: skills/mcp-server-auth
+  url: https://github.com/Paldom/mcp-server-skills/tree/main/skills/mcp-server-auth
+  licence: MIT
+  licence_file: LICENSE
+  commit: 17ce2a4
+  original_name: mcp-server-auth
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mcp-server-auth skill
+    by: Paldom
+    url: https://github.com/Paldom/mcp-server-skills/tree/main/skills/mcp-server-auth
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Hardware limits and model rebuilds call for careful planning.
+new_slug: small-device-ai-deployer
+name: Small-device AI deployer
+summary: Give it a trained AI model and a target chip. Get lean code that runs the model on that hardware.
+job: build-software
+headline: Small-device AI deployer
+subhead: Give it a trained AI model and a target chip. Get lean code that runs the model on that hardware.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Embedded Coder.

@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It fills a fixed sentence format from your description.
+new_slug: job-story-writer
+name: Job story writer
+summary: Describe a customer situation. Get job stories in the when, I want, so I can format, with checks for done.
+job: build-product
+headline: Job story writer
+subhead: Describe a customer situation. Get job stories in the when, I want, so I can format, with checks for done.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

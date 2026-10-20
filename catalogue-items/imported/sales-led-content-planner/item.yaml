@@ -1,0 +1,32 @@
+slug: sales-led-content-planner
+name: Sales-led content planner
+summary: Give it your sales data. Get a 30 day plan of what to push, what offers to run and what to hold.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: small-business/skills/content-strategy
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/content-strategy
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: content-strategy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: content-strategy skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business/skills/content-strategy
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: generative-art-maker
+name: Generative art maker
+summary: Describe the look you want. Get an interactive generative art piece you can tweak and repeat.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/skills
+  path: skills/algorithmic-art
+  url: https://github.com/anthropics/skills/tree/main/skills/algorithmic-art
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: dbd4588
+  original_name: algorithmic-art
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: algorithmic-art skill
+    by: Anthropic
+    url: https://github.com/anthropics/skills/tree/main/skills/algorithmic-art
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

@@ -1,0 +1,794 @@
+# anthropics/knowledge-work-plugins, sales, marketing, product-management, productivity, design, engineering, enterprise-search, bio-research and others (Apache-2.0)
+"anthropics/knowledge-work-plugins:sales/skills/account-context":
+  name: "Account catch-up brief writer"
+  summary: "Name a customer. Get one brief from your CRM, email, docs and calls on what is going on with them."
+  task: sell-and-negotiate
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It pulls several sources together and picks what matters."
+  inputs: [ { type: tool_connection, required: false } ]
+  outputs: [ { type: document } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/account-plan":
+  name: "Account plan builder"
+  summary: "Name an account. Get a plan with goals, key people, open deals, risks and next steps, ready for your CRM."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "It weighs many facts to set goals and a plan."
+  inputs: [ { type: tool_connection, required: false } ]
+  outputs: [ { type: plan } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/account-research":
+  name: "Company research brief writer"
+  summary: "Name a company. Get a brief on what they do, recent news, likely priorities and fit. Reads public web pages."
+  task: sell-and-negotiate
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It gathers facts and marks what is a guess."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "search the web"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+  scrapes: true
+"anthropics/knowledge-work-plugins:sales/skills/account-tiering":
+  name: "Account tier ranker"
+  summary: "Give it your accounts. Get each scored on fit and activity and sorted into tiers, so you know where to spend time."
+  task: sell-and-negotiate
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scores many accounts against a set of rules."
+  inputs: [ { type: spreadsheet, required: false }, { type: tool_connection, required: false } ]
+  outputs: [ { type: shortlist } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/call-prep":
+  name: "Meeting prep brief writer"
+  summary: "Name the meeting. Get a one-page brief with who is coming, deal status, last call notes and questions to ask."
+  task: sell-and-negotiate
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It gathers known facts into a fixed page."
+  inputs: [ { type: tool_connection, required: false } ]
+  outputs: [ { type: brief } ]
+  needs: "read your CRM, calendar and call notes"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/call-summary":
+  name: "Call follow-up drafter"
+  summary: "Give it call notes or a transcript. Get a follow-up email draft, a team summary and CRM updates to approve."
+  task: sell-and-negotiate
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It turns notes into three short drafts."
+  inputs: [ { type: transcript, required: true } ]
+  outputs: [ { type: copy_draft }, { type: meeting_notes } ]
+  needs: "read your CRM and email"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/close-plan":
+  name: "Mutual action plan builder"
+  summary: "Name a deal. Get a why-buy case and a dated plan to signature that you can share with the customer."
+  task: sell-and-negotiate
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It must build a case and a believable timeline."
+  inputs: [ { type: tool_connection, required: false } ]
+  outputs: [ { type: plan } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/competitive-intelligence":
+  name: "Deal competitor playbook builder"
+  summary: "Name a rival. Get a plan for winning the deal against them, plus win and loss patterns. Reads public web pages."
+  task: sell-and-negotiate
+  role: source
+  level: advanced
+  thinking: high
+  thinking_why: "It must compare sources and tie claims to evidence."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: competitor_set } ]
+  needs: "search the web and read your CRM"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+  scrapes: true
+"anthropics/knowledge-work-plugins:sales/skills/create-an-asset":
+  name: "Customer one-pager and deck builder"
+  summary: "Give it your account notes. Get a customer deck, one-pager or leave-behind with no made-up numbers."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It writes from approved facts and must not invent."
+  inputs: [ { type: meeting_notes, required: false }, { type: tool_connection, required: false } ]
+  outputs: [ { type: slide_deck }, { type: document } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/crm-hygiene-check":
+  name: "CRM hygiene auditor"
+  summary: "Give it your CRM deals. Get a fix list of missing fields, stale dates and stage mismatches. Changes nothing."
+  task: sell-and-negotiate
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It checks records against simple rules."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your CRM"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/customer-health":
+  name: "QBR prep brief writer"
+  summary: "Name a customer. Get a health read with risk signs, value delivered and an agenda for the review."
+  task: sell-and-negotiate
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs mixed signs of how the account is doing."
+  inputs: [ { type: tool_connection, required: false } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/customer-voice":
+  name: "Customer quote finder"
+  summary: "Name a topic. Get real customer quotes on it from your calls and emails, each tied to who said it."
+  task: understand-customers
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It searches and quotes; it does not interpret."
+  inputs: [ { type: transcript, required: false }, { type: tool_connection, required: false } ]
+  outputs: [ { type: voc_reviews } ]
+  needs: "read your call notes and email"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/daily-briefing":
+  name: "Sales day briefing writer"
+  summary: "Ask for your day. Get today's meetings with context, deals closing soon, waiting emails and your top actions."
+  task: organise-work
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It reads known sources into a fixed layout."
+  inputs: [ { type: tool_connection, required: false } ]
+  outputs: [ { type: brief } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/deal-advance-gap":
+  name: "Deal next-stage gap finder"
+  summary: "Name a deal. Get what is missing to reach the next stage and to close, who does what and by when."
+  task: sell-and-negotiate
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares the deal to what the next stage needs."
+  inputs: [ { type: tool_connection, required: false } ]
+  outputs: [ { type: plan } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/deal-review":
+  name: "Deal health reviewer"
+  summary: "Name a deal. Get a health score, risks, gaps in how it is qualified and the next actions to take."
+  task: sell-and-negotiate
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: "It must judge risk from partial and mixed signals."
+  inputs: [ { type: tool_connection, required: false } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/deal-signals":
+  name: "Deal watch digest writer"
+  summary: "Ask what changed in your deals. Get a short alert list of quiet deals, slipping dates and renewals opening."
+  task: sell-and-negotiate
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It scans many deals for set warning signs."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/deal-slip-scenario":
+  name: "Deal slip impact modeler"
+  summary: "Name a deal that may slip. Get the hit to your number, new coverage and the pipeline you need to replace it."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It runs a small what-if with your numbers."
+  inputs: [ { type: tool_connection, required: false }, { type: spreadsheet, required: false } ]
+  outputs: [ { type: plan } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/draft-outreach":
+  name: "Prospect outreach drafter"
+  summary: "Name a prospect. Get a short personal email or sequence saved as a draft for you to review. You send it."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must pick a real hook and keep the message short."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  needs: "read your CRM and save email drafts"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/expansion-whitespace":
+  name: "Expansion whitespace finder"
+  summary: "Name an account. Get what they own, what they could add, the proof for each and the deals to open."
+  task: sell-and-negotiate
+  role: source
+  level: advanced
+  thinking: high
+  thinking_why: "It must reason about gaps from limited data."
+  inputs: [ { type: tool_connection, required: false } ]
+  outputs: [ { type: shortlist } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/forecast":
+  name: "Forecast narrative writer"
+  summary: "Ask for your forecast. Get a commit, best case and pipeline story: what is closing, at risk and changed."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It summarizes deal data into a clear story."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "read your CRM"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/handle-objection":
+  name: "Live objection responder"
+  summary: "Paste what the buyer said. Get what it really means, a reply that has worked before and proof to use."
+  task: sell-and-negotiate
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It matches a new objection to past wins."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  needs: "read your CRM and call notes"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/inbox-sweep":
+  name: "Customer email reply drafter"
+  summary: "Ask what needs a reply. Get unread customer emails sorted by priority, each with a draft reply. You send them."
+  task: write-emails
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It sorts emails and drafts short replies."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  needs: "read your email and save drafts"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/log-activity":
+  name: "CRM activity logger"
+  summary: "Describe a call or email. Get a ready entry on the right account and deal, saved when you say so."
+  task: sell-and-negotiate
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It fills a fixed record from your notes."
+  inputs: [ { type: meeting_notes, required: false }, { type: transcript, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: "read and write to your CRM"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/pipeline-review":
+  name: "Pipeline stage health reviewer"
+  summary: "Ask for a pipeline review. Get coverage, aging, conversion and at-risk deals stage by stage."
+  task: sell-and-negotiate
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It checks numbers and flags what looks off."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your CRM"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/renewal-radar":
+  name: "Renewal watch planner"
+  summary: "Ask what is renewing. Get upcoming renewals with timing, risk and room to raise the price."
+  task: sell-and-negotiate
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs risk signs against dates and value."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/route-lead":
+  name: "Lead owner router"
+  summary: "Give it a new lead. Get who should own it by your rules, a routing card to accept and a handoff note."
+  task: sell-and-negotiate
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: "It applies your written routing rules."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: brief } ]
+  needs: "read your CRM"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/stakeholder-map":
+  name: "Deal stakeholder mapper"
+  summary: "Name a deal. Get the people in it, their influence and mood, who is missing and how to reach them."
+  task: sell-and-negotiate
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It infers roles and mood from records."
+  inputs: [ { type: tool_connection, required: false } ]
+  outputs: [ { type: document } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/team-pipeline":
+  name: "Team pipeline roll-up writer"
+  summary: "Ask for your team's pipeline. Get a view by rep and stage, at-risk deals and coaching points."
+  task: lead-people
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It rolls up many deals and picks what needs help."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "read your CRM"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/update-opportunity":
+  name: "CRM deal updater"
+  summary: "Say what changed on a deal. Get a before and after, then the update saved when you accept."
+  task: sell-and-negotiate
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It makes one small, shown change."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "read and write to your CRM"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/weekly-wrap":
+  name: "Weekly sales wrap-up writer"
+  summary: "Ask for your week. Get what closed, moved and slipped, plus Monday's plan and an optional team post draft."
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It summarizes known activity into a fixed layout."
+  inputs: [ { type: tool_connection, required: false } ]
+  outputs: [ { type: document } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/win-loss-review":
+  name: "Win and loss pattern finder"
+  summary: "Ask why you win and lose. Get patterns from closed deals: loss stage, common objections and deal traits."
+  task: sell-and-negotiate
+  role: source
+  level: advanced
+  thinking: high
+  thinking_why: "It must find patterns across many deals."
+  inputs: [ { type: tool_connection, required: false }, { type: transcript, required: false } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your CRM, email and calendar"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:sales/skills/end-of-day":
+  skip: "Overlaps the daily briefing, call follow-up and CRM activity logger skills in this set, and is a routine wrapper for the plugin."
+"anthropics/knowledge-work-plugins:sales/skills/lead-triage":
+  skip: "Does the same job as the Lead prioritizer we already list (score and rank leads on fit)."
+"anthropics/knowledge-work-plugins:sales/skills/rep-context":
+  skip: "Niche leader-only prep that reads a rep's chat and calendar; the team pipeline roll-up covers the useful part."
+"anthropics/knowledge-work-plugins:sales/skills/schedule-meeting":
+  skip: "Books meetings and sends invites on its own, so its main job is acting for you rather than drafting."
+"anthropics/knowledge-work-plugins:sales/skills/setup":
+  skip: "First-run setup for the Anthropic sales plugin only; it adds no job of its own."
+"anthropics/knowledge-work-plugins:marketing/skills/brand-review":
+  name: "Draft brand voice checker"
+  summary: "Paste a draft. Get deviations from your voice and style guide ranked by severity, each with a before and after fix."
+  task: brand-file
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It compares text to a written style guide."
+  inputs: [ { type: copy_draft, required: true }, { type: brand_brain, required: false } ]
+  outputs: [ { type: audit_report } ]
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:marketing/skills/campaign-plan":
+  name: "Campaign brief and calendar builder"
+  summary: "Describe your launch or push. Get a brief with goals, audience, messages, channels and a week-by-week calendar."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It builds a full plan from a short brief."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: brief }, { type: plan } ]
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:marketing/skills/competitive-brief":
+  name: "Competitor messaging comparer"
+  summary: "Name your rivals. Get a messaging and positioning comparison with content gaps. Reads public web pages."
+  task: study-competitors
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It gathers public pages and compares them."
+  inputs: [ { type: competitor_set, required: false }, { type: question, required: false } ]
+  outputs: [ { type: competitor_set } ]
+  needs: "search the web"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+  scrapes: true
+"anthropics/knowledge-work-plugins:marketing/skills/draft-content":
+  name: "Marketing content drafter"
+  summary: "Say what you need. Get a blog post, social post, newsletter, page or press release with headline options."
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It writes a draft in a known format."
+  inputs: [ { type: brief, required: false } ]
+  outputs: [ { type: copy_draft } ]
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:marketing/skills/performance-report":
+  name: "Marketing performance report writer"
+  summary: "Give it your campaign numbers. Get a report with trends, wins, misses and what to change next."
+  task: read-ad-results
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads numbers and explains what they mean."
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: document } ]
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:marketing/skills/content-creation":
+  skip: "Same job as Marketing content drafter (draft-content) in this folder, with more length but no new output."
+"anthropics/knowledge-work-plugins:marketing/skills/email-sequence":
+  skip: "Same job as the Email sequence writer we already list."
+"anthropics/knowledge-work-plugins:marketing/skills/seo-audit":
+  skip: "Same job as the SEO auditor and SEO site auditor we already list."
+"anthropics/knowledge-work-plugins:product-management/skills/competitive-brief":
+  name: "Competitor feature brief writer"
+  summary: "Name your rivals or a feature area. Get a feature-level comparison and where to stand apart. Reads public web pages."
+  task: study-competitors
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It gathers features and compares them."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: competitor_set } ]
+  needs: "search the web"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+  scrapes: true
+"anthropics/knowledge-work-plugins:product-management/skills/metrics-review":
+  name: "Product metrics review writer"
+  summary: "Give it your product numbers. Get trends against targets, what moved and what to do about it."
+  task: build-product
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads numbers and explains the causes."
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:product-management/skills/product-brainstorming":
+  name: "Product idea brainstorm partner"
+  summary: "Describe a problem. Get ideas explored, assumptions challenged and the strongest options narrowed down."
+  task: test-an-idea
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It needs open ideas and fair pushback."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: shortlist } ]
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:product-management/skills/sprint-planning":
+  name: "Sprint plan writer"
+  summary: "Give it your backlog and team time off. Get sprint scope, goals and a stretch list sized to real capacity."
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It balances scope against capacity."
+  inputs: [ { type: spreadsheet, required: false }, { type: question, required: false } ]
+  outputs: [ { type: plan } ]
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:product-management/skills/stakeholder-update":
+  name: "Stakeholder update writer"
+  summary: "Give it your progress. Get an update for leaders, engineers or customers at the right depth and cadence."
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It rewrites known facts for an audience."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:product-management/skills/synthesize-research":
+  name: "Research theme synthesizer"
+  summary: "Give it interviews, surveys or tickets. Get themes ranked by how often they come up, with quotes."
+  task: understand-customers
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must group notes and rank the findings."
+  inputs: [ { type: voc_reviews, required: true } ]
+  outputs: [ { type: audit_report } ]
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:product-management/skills/write-spec":
+  name: "Feature spec writer"
+  summary: "Describe a feature idea. Get a spec with goals, non-goals, success measures and acceptance checks."
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It turns a loose idea into a structured spec."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:product-management/skills/roadmap-update":
+  skip: "Same job as the Roadmap update writer we already list."
+"anthropics/knowledge-work-plugins:productivity/skills/task-management":
+  name: "Task list keeper"
+  summary: "Tell it your tasks. Get a simple TASKS file kept up to date as you add, finish and review work."
+  task: organise-work
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: "It edits one small file."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: "read and write files"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:productivity/skills/memory-management":
+  name: "Workplace shorthand memory builder"
+  summary: "Share your nicknames and codes. Get a memory so Claude knows who and what you mean in short requests."
+  task: set-up-ai
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It decides what to remember and where."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: skill_files } ]
+  needs: "read and write files"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:productivity/skills/start":
+  skip: "Setup for the Anthropic productivity plugin and its dashboard only."
+"anthropics/knowledge-work-plugins:productivity/skills/update":
+  skip: "Syncs one plugin's task file with a tracker; the Task list keeper covers the core job."
+"anthropics/knowledge-work-plugins:design/skills/design-critique":
+  name: "Design feedback giver"
+  summary: "Share a mockup or Figma link. Get feedback on usability, hierarchy and consistency, with fixes."
+  task: design-work
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It judges a design from what it sees."
+  inputs: [ { type: design_file, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "open images or Figma links"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:design/skills/design-handoff":
+  name: "Developer handoff spec writer"
+  summary: "Share a finished design. Get a spec for layout, tokens, component props, states, breakpoints and edge cases."
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must read details out of a design."
+  inputs: [ { type: design_file, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "open images or Figma links"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:design/skills/design-system":
+  name: "Design system auditor"
+  summary: "Point it at your components. Get naming and hardcoded value problems, docs for variants, or a new pattern."
+  task: design-work
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares parts to find mismatches."
+  inputs: [ { type: design_file, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "open Figma or code files"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:design/skills/accessibility-review":
+  skip: "Same job as the Accessibility checker and Accessibility auditor we already list."
+"anthropics/knowledge-work-plugins:design/skills/research-synthesis":
+  skip: "Same job as the Research theme synthesizer (product-management) in this set."
+"anthropics/knowledge-work-plugins:design/skills/user-research":
+  skip: "Same job as the User research planner we already list."
+"anthropics/knowledge-work-plugins:design/skills/ux-copy":
+  skip: "Same job as the Interface microcopy writer and Error message rewriter we already list."
+"anthropics/knowledge-work-plugins:engineering/skills/standup":
+  name: "Standup update writer"
+  summary: "Ask for your standup. Get yesterday, today and blockers from your commits, PRs and tickets."
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It lists recent work in a fixed layout."
+  inputs: [ { type: tool_connection, required: false } ]
+  outputs: [ { type: meeting_notes } ]
+  needs: "read your code host and ticket tool"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:engineering/skills/testing-strategy":
+  name: "Test plan writer"
+  summary: "Describe what you are building. Get a test plan with what to test, at what level and where the gaps are."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must choose where tests give the most value."
+  inputs: [ { type: codebase, required: false }, { type: question, required: false } ]
+  outputs: [ { type: plan } ]
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:engineering/skills/architecture":
+  skip: "Same job as the Decision record writer we already list."
+"anthropics/knowledge-work-plugins:engineering/skills/code-review":
+  skip: "Many code review skills are already listed (Code change reviewer, Pull request risk reviewer)."
+"anthropics/knowledge-work-plugins:engineering/skills/debug":
+  skip: "Same job as the Error and log debugger and Live code debugger we already list."
+"anthropics/knowledge-work-plugins:engineering/skills/deploy-checklist":
+  skip: "Same job as the Release readiness reviewer we already list."
+"anthropics/knowledge-work-plugins:engineering/skills/documentation":
+  skip: "Same job as the Code documentation writer and GitHub README improver we already list."
+"anthropics/knowledge-work-plugins:engineering/skills/incident-response":
+  skip: "Same job as the Outage incident leader and Incident postmortem writer we already list."
+"anthropics/knowledge-work-plugins:engineering/skills/system-design":
+  skip: "Same job as the System design planner we already list."
+"anthropics/knowledge-work-plugins:engineering/skills/tech-debt":
+  skip: "Same job as the Tech debt tracker we already list."
+"anthropics/knowledge-work-plugins:enterprise-search/skills/search":
+  name: "Cross-tool search finder"
+  summary: "Ask where a decision or doc lives. Get one search across your chat, email and files, with sources."
+  task: organise-work
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It runs searches and lists what it finds."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: shortlist } ]
+  needs: "search your chat, email and docs"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:enterprise-search/skills/digest":
+  name: "Activity digest writer"
+  summary: "Ask what you missed. Get a daily or weekly digest of mentions, action items and decisions by topic."
+  task: organise-work
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: "It collects and groups recent items."
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: brief } ]
+  needs: "read your chat, email and docs"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:enterprise-search/skills/knowledge-synthesis":
+  skip: "Helper step inside the search skill; adds no job on its own."
+"anthropics/knowledge-work-plugins:enterprise-search/skills/search-strategy":
+  skip: "Helper step inside the search skill; adds no job on its own."
+"anthropics/knowledge-work-plugins:enterprise-search/skills/source-management":
+  skip: "Manages Anthropic plugin connections only."
+"anthropics/knowledge-work-plugins:bio-research/skills/instrument-data-to-allotrope":
+  name: "Lab instrument data converter"
+  summary: "Give it instrument output files. Get them converted to Allotrope JSON or flat CSV for your lab systems."
+  task: work-with-files
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It maps messy files to a strict format."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: "run code"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:bio-research/skills/nextflow-development":
+  name: "Sequencing pipeline runner"
+  summary: "Point it at sequencing data or a public set. Get an nf-core pipeline run for RNA-seq, variants or ATAC-seq."
+  task: build-software
+  role: orchestrate
+  level: expert
+  thinking: high
+  thinking_why: "It must pick, set up and check heavy pipelines."
+  inputs: [ { type: codebase, required: false }, { type: question, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "run code and download public data"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:bio-research/skills/scientific-problem-selection":
+  name: "Research problem picker"
+  summary: "Describe your research ideas. Get help choosing a problem worth pursuing, or why a project is stuck."
+  task: think-and-decide
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It guides a hard choice with a method."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:bio-research/skills/scvi-tools":
+  name: "Single-cell deep learning analyst"
+  summary: "Give it single-cell data. Get your datasets merged, batch effects fixed and cell types found with scvi-tools."
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It needs model choices and checks on results."
+  inputs: [ { type: codebase, required: false } ]
+  outputs: [ { type: document } ]
+  needs: "run code"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:bio-research/skills/single-cell-rna-qc":
+  name: "Single-cell RNA quality checker"
+  summary: "Give it an h5ad or h5 file. Get low-quality cells filtered and plots showing data quality."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It applies set filter rules and shows plots."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: test_report } ]
+  needs: "run code"
+  author: Anthropic
+  author_url: https://github.com/anthropics
+"anthropics/knowledge-work-plugins:bio-research/skills/start":
+  skip: "Orientation for the Anthropic bio-research plugin and its connectors only."
+"anthropics/knowledge-work-plugins:pdf-viewer/skills/view-pdf":
+  skip: "Only works through the plugin's own PDF viewer app, and PDF work is covered by the anthropics/skills PDF skill."
+"anthropics/knowledge-work-plugins:cowork-plugin-management/skills/cowork-plugin-customizer":
+  skip: "Only manages Cowork plugins."
+"anthropics/knowledge-work-plugins:cowork-plugin-management/skills/create-cowork-plugin":
+  skip: "Only builds Cowork plugins."

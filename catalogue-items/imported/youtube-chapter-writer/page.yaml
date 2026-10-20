@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It finds the section breaks and writes short titles.
+new_slug: youtube-chapter-writer
+name: YouTube chapter writer
+summary: Give it your video transcript. Get a chapter list that follows YouTube's rules and shows up on the video.
+job: grow-social
+headline: YouTube chapter writer
+subhead: Give it your video transcript. Get a chapter list that follows YouTube's rules and shows up on the video.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code.

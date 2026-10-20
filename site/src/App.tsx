@@ -1,6 +1,6 @@
 import { spaceKey, spaces } from "./lib/space";
 import { Suspense, lazy, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { ArrowIcon, BlockCard, Drawer, Logo, PixelIcon, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
+import { ArrowIcon, BlockCard, Drawer, Logo, MAKERS, makerOf, PixelIcon, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
 import { type Block, type Catalogue, type Kind, AREAS, areasOf, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, loadPage, pathOf, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
 import { Link, navigate, setPrefetch, setSearch, useLocation } from "./lib/router";
@@ -81,6 +81,7 @@ function useIdlePrefetch() {
 }
 
 // Shown first: things most people can use this week.
+const byName = new Intl.Collator("en");
 const START_HERE = ["fact-based-ad-copy-writer", "website-brand-brain-builder", "customer-buying-reasons-finder", "brand-voice-editor", "landing-page-30-point-checker", "video-ad-script-writer-from-customer-quotes", "meta-ads-compliance-checker"];
 const PAGE = 12;
 const KIND_PATHS: Record<string, Kind> = Object.fromEntries(KINDS.map((k) => [k.path, k.id]));
@@ -136,8 +137,8 @@ function Header({ onKits }: { onKits: () => void }) {
   );
 }
 
-type Filters = { q: string; area: string; fn: string; task: string; kind: Kind | "all"; level: string };
-const NONE: Filters = { q: "", area: "", fn: "", task: "", kind: "all", level: "" };
+type Filters = { q: string; area: string; fn: string; task: string; kind: Kind | "all"; level: string; by: string };
+const NONE: Filters = { q: "", area: "", fn: "", task: "", kind: "all", level: "", by: "" };
 
 function Library({ c }: { c: Catalogue }) {
   const { search } = useLocation();
@@ -147,7 +148,7 @@ function Library({ c }: { c: Catalogue }) {
     const fn = FUNCTIONS.find((x) => x.id === fnId)?.id ?? (task ? FUNCTIONS.find((x) => x.tasks.includes(task))!.id : "");
     const kind = KINDS.some((k) => k.id === search.get("kind")) ? (search.get("kind") as Kind) : "all";
     const area = AREAS.some((a) => a.id === search.get("area")) ? search.get("area")! : "";
-    return { ...NONE, q: search.get("q") ?? "", area, fn, task, kind, level: search.get("level") ?? "" };
+    return { ...NONE, q: search.get("q") ?? "", area, fn, task, kind, level: search.get("level") ?? "", by: MAKERS.some((m) => m.id === search.get("by")) ? search.get("by")! : "" };
   });
   const set = (patch: Partial<Filters>) => setF((x) => ({ ...x, ...patch }));
   const [limit, setLimit] = useState(PAGE);
@@ -163,7 +164,7 @@ function Library({ c }: { c: Catalogue }) {
     window.addEventListener("keydown", on);
     return () => window.removeEventListener("keydown", on);
   }, []);
-  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, area: f.area, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level }); }, [f]);
+  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, area: f.area, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level, by: f.by }); }, [f]);
 
   // Every count reflects all the other choices, so a zero is never a surprise.
   // The list and the counts follow the typing a beat behind, so the search box never waits on them.
@@ -171,23 +172,30 @@ function Library({ c }: { c: Catalogue }) {
   const words = df.q.toLowerCase().split(/\s+/).filter(Boolean);
   const hays = useMemo(() => new Map(c.blocks.map((b) => [b.slug, `${b.name} ${b.slug} ${b.summary} ${b.headline} ${taskOf(b).name} ${functionsOf(b).map((x) => x.name).join(" ")}`.toLowerCase().replace(/[_-]/g, " ")])), [c]);
   const hay = (b: Block) => hays.get(b.slug)!;
+  // Each block's areas, groups, kind and maker, worked out once, so a few thousand blocks still count fast.
+  const facts = useMemo(() => new Map(c.blocks.map((b) => [b.slug, { areas: new Set(areasOf(b)), fns: new Set(functionsOf(b).map((x) => x.id)), kind: kindOf(b), maker: makerOf(b) }])), [c]);
+  const fact = (b: Block) => facts.get(b.slug)!;
   const tests: Record<keyof Filters, (b: Block, v: string) => boolean> = {
     q: (b) => words.every((w) => hay(b).includes(w)),
-    area: (b, v) => !v || areasOf(b).includes(v),
-    fn: (b, v) => !v || functionsOf(b).some((x) => x.id === v),
+    area: (b, v) => !v || fact(b).areas.has(v),
+    fn: (b, v) => !v || fact(b).fns.has(v),
     task: (b, v) => !v || b.task === v,
-    kind: (b, v) => v === "all" || kindOf(b) === v,
+    kind: (b, v) => v === "all" || fact(b).kind === v,
     level: (b, v) => !v || b.level === v,
+    by: (b, v) => !v || fact(b).maker === v,
   };
   const keys = Object.keys(tests) as (keyof Filters)[];
   // Counts are worked out once per settled search, not on every redraw.
   const counted = useMemo(() => new Map<string, number>(), [c, df]); // eslint-disable-line react-hooks/exhaustive-deps
+  // The counts never change the search words, so the search runs once and every count works on what it matched.
+  const matched = useMemo(() => (words.length ? c.blocks.filter((b) => tests.q(b, df.q)) : c.blocks), [c, df]); // eslint-disable-line react-hooks/exhaustive-deps
+  const facets = keys.filter((k) => k !== "q");
   const count = (over: Partial<Filters>) => {
     const key = JSON.stringify(over);
-    if (!counted.has(key)) { const g = { ...df, ...over }; counted.set(key, c.blocks.filter((b) => keys.every((k) => tests[k](b, g[k] as string))).length); }
+    if (!counted.has(key)) { const g = { ...df, ...over }; counted.set(key, matched.filter((b) => facets.every((k) => tests[k](b, g[k] as string))).length); }
     return counted.get(key)!;
   };
-  const order = (a: Block, b: Block) => Number(START_HERE.includes(b.slug)) - Number(START_HERE.includes(a.slug)) || Number(!!b.headline) - Number(!!a.headline) || KINDS.findIndex((k) => k.id === kindOf(a)) - KINDS.findIndex((k) => k.id === kindOf(b)) || a.name.localeCompare(b.name);
+  const order = (a: Block, b: Block) => Number(START_HERE.includes(b.slug)) - Number(START_HERE.includes(a.slug)) || Number(!!b.headline) - Number(!!a.headline) || KINDS.findIndex((k) => k.id === fact(a).kind) - KINDS.findIndex((k) => k.id === fact(b).kind) || byName.compare(a.name, b.name);
   const results = useMemo(() => c.blocks.filter((b) => keys.every((k) => tests[k](b, df[k] as string))).sort(order), [c, df]); // eslint-disable-line react-hooks/exhaustive-deps
   const filtered = JSON.stringify(f) !== JSON.stringify(NONE);
   const clear = () => setF(NONE);
@@ -249,6 +257,8 @@ function Library({ c }: { c: Catalogue }) {
           ))}
         </div>
         <div className="filters">
+          <Select label="Made by" value={f.by} onChange={(v) => set({ by: v })} testId="filter-by"
+            options={[{ value: "", label: "All", count: count({ by: "" }) }, ...MAKERS.map((m) => ({ value: m.id, label: m.name, count: count({ by: m.id }) }))]} />
           <Select label="Level" value={f.level} onChange={(v) => set({ level: v })} testId="filter-level"
             options={[{ value: "", label: "Any", count: count({ level: "" }) }, ...LEVELS.map((l) => ({ value: l, label: cap(l), count: count({ level: l }) }))]} />
         </div>

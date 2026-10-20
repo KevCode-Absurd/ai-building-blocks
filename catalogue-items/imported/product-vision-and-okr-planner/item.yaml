@@ -1,0 +1,32 @@
+slug: product-vision-and-okr-planner
+name: Product vision and OKR planner
+summary: Give it your product and team. Get a vision, quarterly plan and a goal cascade for each team.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: product-team/skills/product-strategist
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/product-strategist
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: product-strategist
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: product-strategist skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/product-team/skills/product-strategist
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

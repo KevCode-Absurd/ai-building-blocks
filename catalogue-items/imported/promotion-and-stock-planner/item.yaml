@@ -1,0 +1,32 @@
+slug: promotion-and-stock-planner
+name: Promotion and stock planner
+summary: Give it past promotions and stock. Get a promo calendar with expected sales lift and the extra stock to have ready.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/promotional-planning
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/promotional-planning
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: promotional-planning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: promotional-planning skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/promotional-planning
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

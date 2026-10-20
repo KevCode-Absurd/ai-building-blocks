@@ -1,0 +1,32 @@
+slug: ai-agent-workflow-designer
+name: AI agent workflow designer
+summary: Describe the job. Get a multi-agent design with handoffs, failure handling and cost limits.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/agent-workflow-designer
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/agent-workflow-designer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: agent-workflow-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: agent-workflow-designer skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/agent-workflow-designer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,13 @@
+thinking: medium
+thinking_why: It plans ahead and writes in your voice.
+new_slug: standing-social-calendar-maker
+name: Standing social calendar maker
+summary: Give it your brand and products. Get a rolling post calendar, captions in your voice and posts ready for approval.
+job: grow-social
+headline: Standing social calendar maker
+subhead: Give it your brand and products. Get a rolling post calendar, captions in your voice and posts ready for approval.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your accounts and files.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.

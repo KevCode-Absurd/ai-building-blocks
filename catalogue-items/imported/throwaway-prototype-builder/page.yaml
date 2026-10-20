@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks a branch, then builds a small demo.
+new_slug: throwaway-prototype-builder
+name: Throwaway prototype builder
+summary: Ask a design question. Get a quick prototype of the logic or the screen that answers it.
+job: build-software
+headline: Throwaway prototype builder
+subhead: Ask a design question. Get a quick prototype of the logic or the screen that answers it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and open a browser.

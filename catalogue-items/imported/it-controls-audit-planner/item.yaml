@@ -1,0 +1,33 @@
+slug: it-controls-audit-planner
+name: IT controls audit planner
+summary: Describe your finance systems. Get controls matrix rows, test steps and a rating for any IT control gaps.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/sox-itgc/skills/sox-itgc
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/sox-itgc/skills/sox-itgc
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: sox-itgc
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: sox-itgc skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/sox-itgc/skills/sox-itgc
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

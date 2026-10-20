@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It runs many searches and marks what it could not confirm.
+new_slug: item-by-item-researcher
+name: Item-by-item researcher
+summary: Give it your research outline. Get a checked file for every item, with each answer filled in or marked unsure. Scrapes sites.
+job: research-topics
+headline: Item-by-item researcher
+subhead: Give it your research outline. Get a checked file for every item, with each answer filled in or marked unsure. Scrapes sites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can search the web, run code and save files.

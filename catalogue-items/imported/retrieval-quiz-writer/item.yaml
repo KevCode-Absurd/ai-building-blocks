@@ -1,0 +1,32 @@
+slug: retrieval-quiz-writer
+name: Retrieval quiz writer
+summary: Give it a topic. Get low-stakes recall questions at easy, medium and hard levels for starters or revision.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: question
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/memory-learning-science/retrieval-practice-generator
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/memory-learning-science/retrieval-practice-generator
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: retrieval-practice-generator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: retrieval-practice-generator skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/memory-learning-science/retrieval-practice-generator
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

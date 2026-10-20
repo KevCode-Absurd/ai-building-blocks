@@ -1,0 +1,680 @@
+# sickn33/agentic-awesome-skills, slice 8 of 14. Kept: 30. Skipped: 158.
+"sickn33/agentic-awesome-skills:skills/intercom-automation":
+  skip: "Wraps Composio Rube tools for one service, so it is vendor-specific."
+"sickn33/agentic-awesome-skills:skills/intern-program":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/internal-comms":
+  skip: "Copy of a skill from a well-known source, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/internal-comms-anthropic":
+  skip: "Copy of a skill from a well-known source, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/internal-comms-community":
+  skip: "Copy of a skill from a well-known source, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/internal-communication":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/interview-coach":
+  skip: "The coaching system is an external package; this copy is only a short outline."
+"sickn33/agentic-awesome-skills:skills/interview-me":
+  skip: "Copy of a skill from addyosmani/agent-skills, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/interview-style-doc-building":
+  name: "Strategy doc interviewer"
+  summary: "Name the doc you want. Get it written from your own answers, one question at a time."
+  task: think-and-decide
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It asks one question and adds your answer to the file."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "save and edit files"
+  author: "davidondrej"
+  author_url: https://github.com/davidondrej
+"sickn33/agentic-awesome-skills:skills/invariant-guard":
+  name: "Code correctness planner"
+  summary: "Give it a tricky function. It writes the rules and edge cases first, then code that keeps them."
+  task: test-and-fix-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "It proves the logic step by step before coding."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  author: "morsechimwai"
+  author_url: https://github.com/morsechimwai
+"sickn33/agentic-awesome-skills:skills/inventory-demand-planning":
+  name: "Demand and stock planner"
+  summary: "Give it sales history and lead times. Get a demand forecast, safety stock levels and a restock plan."
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It picks forecast methods and checks the maths on real numbers."
+  inputs: [ { type: performance_sheet, required: true } ]
+  outputs: [ { type: plan }, { type: spreadsheet } ]
+  author: "ai-evos"
+  author_url: https://github.com/ai-evos
+"sickn33/agentic-awesome-skills:skills/inventory-stock-reconciliation":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/invoices-billing":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/invokely-statistics":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/ios-debugger-agent":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/ios-developer":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/ios-redteam-pipeline":
+  skip: "Offensive security tooling, not a fit for the library."
+"sickn33/agentic-awesome-skills:skills/ios-screens":
+  name: "iPhone screen designer"
+  summary: "Describe your app screens. Get native-feeling iPhone screens, checked on small and large sizes."
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows Apple rules but makes design choices."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: web_app }, { type: code_change } ]
+  needs: "run code"
+  author: "UXKIN"
+  author_url: https://github.com/uxkin
+"sickn33/agentic-awesome-skills:skills/iso27001-compliance":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/issue-grievance-tracker":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/issues":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/istio-traffic-management":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/it-manager-hospital":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/it-manager-pro":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/iterate-pr":
+  skip: "Sentry skill that repeats our CI failure fixer, and its scripts are not included."
+"sickn33/agentic-awesome-skills:skills/itil-expert":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/java-pro":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/javascript-mastery":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/javascript-pro":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/javascript-testing-patterns":
+  skip: "Short generic list of testing tips."
+"sickn33/agentic-awesome-skills:skills/javascript-typescript-typescript-scaffold":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/jenkins":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/jest-skill":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/jet-browser":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/jev-social":
+  skip: "Reads social sites or scrapes pages, so we leave it out."
+"sickn33/agentic-awesome-skills:skills/jev-use":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/jira-automation":
+  skip: "Wraps Composio Rube tools for one service, so it is vendor-specific."
+"sickn33/agentic-awesome-skills:skills/jobgpt":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/jobs-to-be-done-analyst":
+  name: "Customer job mapper"
+  summary: "Describe your product and buyer. Get the functional, emotional and social jobs they hire it for."
+  task: understand-customers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows set steps but needs judgement about people."
+  inputs: [ { type: persona, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+"sickn33/agentic-awesome-skills:skills/jq":
+  name: "JSON query helper"
+  summary: "Describe the JSON data and what you need. Get a working jq command that filters, reshapes or sums it."
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It matches the request to known jq patterns."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "run commands"
+  author: "kostakost2"
+  author_url: https://github.com/kostakost2
+"sickn33/agentic-awesome-skills:skills/js-reverse":
+  skip: "Offensive security tooling, not a fit for the library."
+"sickn33/agentic-awesome-skills:skills/json-canvas":
+  name: "Obsidian canvas maker"
+  summary: "Describe a map or flow. Get an Obsidian canvas file with boxes, links and groups ready to open."
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a fixed file format."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "save files"
+  author: "kepano"
+  author_url: https://github.com/kepano
+"sickn33/agentic-awesome-skills:skills/json-schema-manual":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/julia-pro":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/junit-5-skill":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/junta-leiloeiros":
+  skip: "Too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/k6-load-testing":
+  skip: "Thin vendor tutorial for one tool; the real guide is in a separate file."
+"sickn33/agentic-awesome-skills:skills/k8s-manifest-generator":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/k8s-security-policies":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/kaizen":
+  skip: "Very thin: a short outline that points to a separate guide."
+"sickn33/agentic-awesome-skills:skills/keenable-search-mcp":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/kernel-prompt":
+  name: "Agent prompt writer"
+  summary: "Paste a rough request. Answer a few questions. Get one clear prompt to give an AI agent."
+  task: set-up-ai
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It asks a round of questions, then writes one prompt."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: "codegiveness"
+  author_url: https://github.com/codegiveness
+"sickn33/agentic-awesome-skills:skills/keyword-extractor":
+  name: "Keyword list maker"
+  summary: "Paste any text. Get one line of up to 50 ranked keywords, ready for SEO or tags."
+  task: get-found-in-search
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows strict output rules on one text."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: copy_draft } ]
+"sickn33/agentic-awesome-skills:skills/kimi-delegate":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/klaviyo-automation":
+  skip: "Wraps Composio Rube tools for one service, so it is vendor-specific."
+"sickn33/agentic-awesome-skills:skills/knowledge-base":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/kotler-macro-analyzer":
+  skip: "Thin: a short PESTEL outline that relies on live web search."
+"sickn33/agentic-awesome-skills:skills/kotlin-coroutines-expert":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/kpi-dashboard-design":
+  name: "KPI dashboard designer"
+  summary: "Say who reads it and what they decide. Get the right metrics and a dashboard layout that fits."
+  task: read-ad-results
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It chooses metrics for a purpose."
+  inputs: [ { type: performance_sheet, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/kpi-tracker":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/krexa":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/kubernetes-architect":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/kubernetes-deployment":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/kubernetes-hardening":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/kubernetes-ops":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/kubestellar-console":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/kustomize":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/lambda-lang":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/lambdatest-agent-skills":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/landing-page-generator":
+  skip: "Copy of a skill from alirezarezvani/claude-skills, which is already mapped there."
+"sickn33/agentic-awesome-skills:skills/langchain-architecture":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/langfuse":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/langgraph":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/laravel-development-workflow":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/laravel-expert":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/laravel-security-audit":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/last30days":
+  skip: "Reads social sites or scrapes pages, so we leave it out."
+"sickn33/agentic-awesome-skills:skills/latex-paper-conversion":
+  name: "LaTeX paper converter"
+  summary: "Give it your paper and a new journal template. Get the paper rebuilt in that format."
+  task: work-with-files
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It moves content step by step and checks it builds."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "run code and save files"
+"sickn33/agentic-awesome-skills:skills/launch-strategy":
+  skip: "Copy of a skill from coreyhaines31/marketingskills, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/lead-magnets":
+  skip: "Copy of a skill from coreyhaines31/marketingskills, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/learn":
+  name: "Adaptive tutor"
+  summary: "Name a topic. It checks your level, then teaches in small steps with practice and feedback."
+  task: think-and-decide
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It adapts each lesson to your answers."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "DAIR.AI"
+  author_url: https://github.com/dair-ai
+"sickn33/agentic-awesome-skills:skills/learning-career-development":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/leave-management":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/ledger-tasks-yylo":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/legacy-modernizer":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/legal-advisor":
+  name: "Policy page drafter"
+  summary: "Give your business facts and country. Get a draft privacy policy, terms or cookie notice to send to a lawyer."
+  task: check-contracts
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It must match each clause to your real data practices."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+"sickn33/agentic-awesome-skills:skills/legal-compliance-vault":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/leiloeiro-avaliacao":
+  skip: "Too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/leiloeiro-edital":
+  skip: "Too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/leiloeiro-ia":
+  skip: "Too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/leiloeiro-juridico":
+  skip: "Too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/leiloeiro-mercado":
+  skip: "Too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/leiloeiro-risco":
+  skip: "Too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/lemmaly":
+  name: "Code speed planner"
+  summary: "Before it writes loops or queries, it states the best approach and cost. Get code that avoids slow patterns."
+  task: build-software
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It must reason about cost before writing any code."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: "read your project files"
+  author: "morsechimwai"
+  author_url: https://github.com/morsechimwai
+"sickn33/agentic-awesome-skills:skills/lesson-generator":
+  name: "Mini-course builder"
+  summary: "Name a topic. Get a web mini-course with lessons, flashcards and quizzes in one page."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans the course, then builds a page."
+  inputs: [ { type: source_text, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: web_app } ]
+  needs: "save files and open a browser"
+  author: "DAIR.AI"
+  author_url: https://github.com/dair-ai
+"sickn33/agentic-awesome-skills:skills/lex":
+  skip: "Too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/libreoffice/base":
+  skip: "Too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/libreoffice/calc":
+  name: "LibreOffice spreadsheet builder"
+  summary: "Describe the sheet. Get an ODS file with formulas and charts, or a conversion to Excel or CSV."
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows known file steps."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: "run code and save files"
+"sickn33/agentic-awesome-skills:skills/libreoffice/draw":
+  skip: "Too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/libreoffice/impress":
+  name: "LibreOffice slide builder"
+  summary: "Describe the slides. Get an ODP deck, or a conversion to PowerPoint or PDF."
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows known file steps."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: slide_deck } ]
+  needs: "run code and save files"
+"sickn33/agentic-awesome-skills:skills/libreoffice/writer":
+  name: "LibreOffice document builder"
+  summary: "Describe the document. Get an ODT file, or a conversion to Word, PDF or HTML."
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows known file steps."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "run code and save files"
+"sickn33/agentic-awesome-skills:skills/lightning-architecture-review":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/lightning-channel-factories":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/lightning-factory-explainer":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/linear-automation":
+  skip: "Wraps Composio Rube tools for one service, so it is vendor-specific."
+"sickn33/agentic-awesome-skills:skills/linear-claude-skill":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/linkdigest-social-link-reader":
+  skip: Uses a paid service to read posts behind app and login walls, which breaks our login rule.
+"sickn33/agentic-awesome-skills:skills/linkedin-automation":
+  skip: "Wraps Composio Rube tools for one service, so it is vendor-specific."
+"sickn33/agentic-awesome-skills:skills/linkedin-cli":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/linkedin-content-generator":
+  skip: "Near-copy of the LinkedIn post writer we kept, with extra bulk."
+"sickn33/agentic-awesome-skills:skills/linkedin-post-writer":
+  name: "LinkedIn hook post writer"
+  summary: "Give a topic and angle. Get a LinkedIn post built on a tested opening line for your goal."
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It picks a hook pattern and fills it in."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: "sergebulaev"
+  author_url: https://github.com/sergebulaev
+"sickn33/agentic-awesome-skills:skills/linkedin-profile-optimizer":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/linkerd-patterns":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/linktree-link-hub":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/lint-and-validate":
+  name: "Lint and type check runner"
+  summary: "Run it after a change. It runs your project's checks, fixes real failures and reports what did not run."
+  task: test-and-fix-code
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It runs set commands and reads the results."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: test_report } ]
+  needs: "run commands in your project"
+"sickn33/agentic-awesome-skills:skills/lintlang-audit":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/linux-administration":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/linux-hardening":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/linux-privilege-escalation":
+  skip: "Offensive security tooling, not a fit for the library."
+"sickn33/agentic-awesome-skills:skills/linux-shell-scripting":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/linux-troubleshooting":
+  skip: "Short generic checklist of standard Linux commands."
+"sickn33/agentic-awesome-skills:skills/liuguang-banlan-ui":
+  skip: "Too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/llm-app-patterns":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/llm-app-security":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/llm-application-dev-ai-assistant":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/llm-application-dev-langchain-agent":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/llm-application-dev-prompt-optimize":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/llm-caching":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/llm-cost-optimization":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/llm-council":
+  name: "Multi-model answer panel"
+  summary: "Ask one question. Get answers from several open AI models, ranked, plus one final answer."
+  task: think-and-decide
+  role: orchestrate
+  level: intermediate
+  thinking: medium
+  thinking_why: "Several models answer, then a chair model weighs them."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+  needs: "run code and use your Fireworks API key"
+  paid: "Fireworks"
+  author: DAIR.AI
+  author_url: https://github.com/dair-ai/dair-academy-plugins
+"sickn33/agentic-awesome-skills:skills/llm-evaluation":
+  name: "AI answer testing planner"
+  summary: "Describe your AI feature. Get a test plan with scores, human review and A/B checks to catch weak answers."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It is a playbook of methods you pick from."
+  inputs: [ { type: codebase, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: test_report }, { type: plan } ]
+  needs: "run code"
+"sickn33/agentic-awesome-skills:skills/llm-fine-tuning":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/llm-gateway":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/llm-inference-scaling":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/llm-ops":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/llm-prompt-optimizer":
+  name: "Prompt fixer"
+  summary: "Give it a prompt that gives weak or uneven answers. Get a tighter version that works more reliably."
+  task: set-up-ai
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It tries known prompt fixes and picks what fits."
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: copy_draft } ]
+"sickn33/agentic-awesome-skills:skills/llm-security":
+  skip: "Offensive security tooling, not a fit for the library."
+"sickn33/agentic-awesome-skills:skills/llm-structured-output":
+  name: "AI data extractor builder"
+  summary: "Say what data to pull from AI answers. Get code that returns checked, typed results instead of free text."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It picks one of a few known methods and writes code."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: "run code and read your project files"
+"sickn33/agentic-awesome-skills:skills/llmops-platform-engineering":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/load-balancing":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/local-legal-seo-audit":
+  skip: "Narrow to law firm sites; a general SEO audit covers the job."
+"sickn33/agentic-awesome-skills:skills/local-llm-expert":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/logic-diff":
+  skip: "Needs shared files that are not in the copy, so it cannot run on its own."
+"sickn33/agentic-awesome-skills:skills/logic-explain":
+  skip: "Needs shared files that are not in the copy, so it cannot run on its own."
+"sickn33/agentic-awesome-skills:skills/logic-fix-all":
+  skip: "Needs shared files that are not in the copy, so it cannot run on its own."
+"sickn33/agentic-awesome-skills:skills/logic-lens":
+  skip: "Needs shared files that are not in the copy, so it cannot run on its own."
+"sickn33/agentic-awesome-skills:skills/logic-locate":
+  skip: "Needs shared files that are not in the copy, so it cannot run on its own."
+"sickn33/agentic-awesome-skills:skills/logic-review":
+  skip: "Needs shared files that are not in the copy, so it cannot run on its own."
+"sickn33/agentic-awesome-skills:skills/logistics-exception-management":
+  name: "Shipment problem handler"
+  summary: "Describe a late, lost or damaged shipment. Get the right steps, claim paperwork and carrier messages."
+  task: plan-strategy
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It sorts the problem type, then follows a set claim process."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan }, { type: document } ]
+  author: "ai-evos"
+  author_url: https://github.com/ai-evos
+"sickn33/agentic-awesome-skills:skills/lognorm":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/logo-image-design":
+  skip: "Fill-in register template for small-business admin, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/logo-to-stickers":
+  name: "Brand sticker set maker"
+  summary: "Give it your logo. Get a set of playful die-cut character stickers on clear backgrounds."
+  task: make-images
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It builds a cast first, then draws each sticker."
+  inputs: [ { type: brand_brain, required: false }, { type: image, required: true } ]
+  outputs: [ { type: image } ]
+  needs: "draw images"
+  author: "huyanxius"
+  author_url: https://github.com/huyanxius
+"sickn33/agentic-awesome-skills:skills/loki-logging":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/loki-mode":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/longbridge":
+  skip: "Trading integration for one broker."
+"sickn33/agentic-awesome-skills:skills/longbridge-content":
+  skip: "Trading integration for one broker."
+"sickn33/agentic-awesome-skills:skills/longbridge-derivatives":
+  skip: "Trading integration for one broker."
+"sickn33/agentic-awesome-skills:skills/longbridge-fundamentals":
+  skip: "Trading integration for one broker."
+"sickn33/agentic-awesome-skills:skills/longbridge-market-data":
+  skip: "Trading integration for one broker."
+"sickn33/agentic-awesome-skills:skills/longbridge-quant":
+  skip: "Trading integration for one broker."
+"sickn33/agentic-awesome-skills:skills/longbridge-research":
+  skip: "Trading integration for one broker."
+"sickn33/agentic-awesome-skills:skills/lookdev":
+  name: "Look tuning studio builder"
+  summary: "Name what to tune. Get a local page with sliders and pickers to adjust the look by eye."
+  task: design-work
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It builds a custom control page for each task."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: web_app } ]
+  needs: "run code and open a browser"
+  author: "Conner K Ward"
+  author_url: https://github.com/connerkward
+"sickn33/agentic-awesome-skills:skills/lookdev-auto":
+  skip: "Near-copy of the look tuning studio we kept, and needs a vision model loop."
+"sickn33/agentic-awesome-skills:skills/looot":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/loop-library":
+  name: "Agent loop designer"
+  summary: "Say the job you want repeated. Get a bounded AI loop with checks, stop rules and handoffs."
+  task: set-up-ai
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It must set safe stop rules for an agent that repeats work."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "Forward Future"
+  author_url: https://github.com/Forward-Future
+"sickn33/agentic-awesome-skills:skills/loopy":
+  skip: "Near-copy of a skill kept in this slice."
+"sickn33/agentic-awesome-skills:skills/lore":
+  name: "Project memory keeper"
+  summary: "Work on a codebase. Get a notes folder of decisions, design and rules that any AI can read later."
+  task: build-software
+  role: orchestrate
+  level: intermediate
+  thinking: medium
+  thinking_why: "It decides what is worth saving and files it."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "read and write your project files"
+  author: "TheaDust"
+  author_url: https://github.com/TheaDust
+"sickn33/agentic-awesome-skills:skills/loss-aversion-designer":
+  name: "Loss framing writer"
+  summary: "Describe your offer. Get honest wording that shows what people lose by waiting, without fear tactics."
+  task: write-ad-copy
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs gain and loss framing against your audience."
+  inputs: [ { type: offer, required: true }, { type: persona, required: false } ]
+  outputs: [ { type: copy_draft } ]
+"sickn33/agentic-awesome-skills:skills/lovable-cleanup":
+  name: "Lovable project cleaner"
+  summary: "Point it at a Lovable export. Get the Lovable tags, branding and filler files removed so the project is yours."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It checks 15 known spots and fixes each one."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "read and change your project files"
+  author: "whoisabhishekadhikari"
+  author_url: https://github.com/WHOISABHISHEKADHIKARI
+"sickn33/agentic-awesome-skills:skills/m365-agents-dotnet":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/m365-agents-py":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/m365-agents-ts":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/m365-entra-attack":
+  skip: "Offensive security tooling, not a fit for the library."
+"sickn33/agentic-awesome-skills:skills/mac-mini-llm-lab":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/machine-learning-ops-ml-pipeline":
+  skip: "Generic infrastructure guide that restates standard docs, with no method of its own."
+"sickn33/agentic-awesome-skills:skills/macos-menubar-tuist-app":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/macos-reverse":
+  skip: "Offensive security tooling, not a fit for the library."
+"sickn33/agentic-awesome-skills:skills/macos-screen-recorder":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/macos-spm-app-packaging":
+  skip: "Role-play persona prompt or short stub with little method of its own."
+"sickn33/agentic-awesome-skills:skills/magic-animator":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/magic-ui-generator":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/mailchimp-automation":
+  skip: "Wraps Composio Rube tools for one service, so it is vendor-specific."
+"sickn33/agentic-awesome-skills:skills/mailtrap-managing-contacts":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/mailtrap-sending-emails":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/mailtrap-setting-up-sending-domain":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/mailtrap-testing-with-sandbox":
+  skip: "Works only with one vendor's service or tool."
+"sickn33/agentic-awesome-skills:skills/maintain-codex-wiki":
+  skip: "Built around one tool's wiki format, with a heavy setup."
+"sickn33/agentic-awesome-skills:skills/make-automation":
+  skip: "Wraps Composio Rube tools for one service, so it is vendor-specific."

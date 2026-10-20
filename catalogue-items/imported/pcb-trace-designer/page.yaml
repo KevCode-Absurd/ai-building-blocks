@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It uses set formulas with checks.
+new_slug: pcb-trace-designer
+name: PCB trace designer
+summary: Give it impedance and layer needs. Get microstrip, stripline or paired traces sized and checked.
+job: build-software
+headline: PCB trace designer
+subhead: Give it impedance and layer needs. Get microstrip, stripline or paired traces sized and checked.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with PCB Toolbox.

@@ -1,0 +1,32 @@
+slug: interactive-visual-builder
+name: Interactive visual builder
+summary: Describe what to show. Get a chart, diagram or explainer with sliders and toggles, ready to open in a browser.
+category: general
+boards: []
+type: skill
+role: render
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: himself65
+  repo: himself65/finance-skills
+  path: plugins/ui-tools/skills/generative-ui
+  url: https://github.com/himself65/finance-skills/tree/main/plugins/ui-tools/skills/generative-ui
+  licence: MIT
+  licence_file: LICENSE
+  commit: 73d554d
+  original_name: generative-ui
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: generative-ui skill
+    by: himself65
+    url: https://github.com/himself65/finance-skills/tree/main/plugins/ui-tools/skills/generative-ui
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

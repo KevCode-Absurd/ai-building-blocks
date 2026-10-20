@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It balances due dates, setup time and machine load.
+new_slug: production-schedule-planner
+name: Production schedule planner
+summary: Give it your jobs, machines and due dates. Get a job order that meets deadlines and keeps machines busy.
+job: plan-supply-chain
+headline: Production schedule planner
+subhead: Give it your jobs, machines and due dates. Get a job order that meets deadlines and keeps machines busy.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code (Python).

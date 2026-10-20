@@ -1,0 +1,35 @@
+slug: ai-answer-testing-planner
+name: AI answer testing planner
+summary: Describe your AI feature. Get a test plan with scores, human review and A/B checks to catch weak answers.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: test_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/llm-evaluation
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/llm-evaluation
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: llm-evaluation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: llm-evaluation skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/llm-evaluation
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

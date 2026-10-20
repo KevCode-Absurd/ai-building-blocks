@@ -1,0 +1,37 @@
+slug: meeting-minutes-writer
+name: Meeting minutes writer
+summary: Paste rough meeting notes. Get short minutes with decisions, action items with owners and dates, and open questions.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: beginner
+inputs:
+  - type: transcript
+    required: true
+outputs:
+  - type: meeting_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/meeting-notes
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/meeting-notes
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: meeting-notes
+  author: alapha888
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: meeting-notes skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/meeting-notes
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: alapha888
+    url: https://github.com/alapha888
+    used: Wrote the skill; sickn33 shared it in their collection.

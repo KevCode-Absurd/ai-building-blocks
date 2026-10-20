@@ -1,0 +1,35 @@
+slug: ad-library-teardown-writer
+name: Ad library teardown writer
+summary: Give it a competitor. Get their live ads broken into hooks, offers, calls to action and test ideas. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: ad_breakdowns
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:ScrapeCreators
+source:
+  by: ScrapeCreators
+  repo: ScrapeCreators/social-media-research-skills
+  path: skills/ad-library-teardown
+  url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/ad-library-teardown
+  licence: MIT
+  licence_file: LICENSE
+  commit: 64ba7b4
+  original_name: ad-library-teardown
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ad-library-teardown skill
+    by: ScrapeCreators
+    url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/ad-library-teardown
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

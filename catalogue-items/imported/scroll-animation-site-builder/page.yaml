@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It plans the motion first, then writes the page.
+new_slug: scroll-animation-site-builder
+name: Scroll animation site builder
+summary: Describe the site. Get a scroll-driven page with layered depth, motion and smooth reveals, built in code.
+job: build-websites
+headline: Scroll animation site builder
+subhead: Describe the site. Get a scroll-driven page with layered depth, motion and smooth reveals, built in code.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and open a browser.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks a method for the data, runs it and interprets the results.
+new_slug: gene-list-pathway-finder
+name: Gene list pathway finder
+summary: Give it a gene list or ranked genes. Get the biological pathways that stand out, explained in plain terms.
+job: research-topics
+headline: Gene list pathway finder
+subhead: Give it a gene list or ranked genes. Get the biological pathways that stand out, explained in plain terms.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

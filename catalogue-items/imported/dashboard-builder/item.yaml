@@ -1,0 +1,32 @@
+slug: dashboard-builder
+name: Dashboard builder
+summary: Give it your data and what to track. Get one HTML dashboard with charts, filters and tables you can open and share.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: web_page
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: data/skills/build-dashboard
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/build-dashboard
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: build-dashboard
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: build-dashboard skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/data/skills/build-dashboard
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

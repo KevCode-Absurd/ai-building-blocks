@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: Many linked choices affect answer quality.
+new_slug: rag-pipeline-designer
+name: RAG pipeline designer
+summary: Describe your documents. Get chunking, embedding and vector database choices, with ways to test results.
+job: build-software
+headline: RAG pipeline designer
+subhead: Describe your documents. Get chunking, embedding and vector database choices, with ways to test results.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

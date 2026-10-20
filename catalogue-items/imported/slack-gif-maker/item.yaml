@@ -1,0 +1,32 @@
+slug: slack-gif-maker
+name: Slack GIF maker
+summary: Describe the animation. Get a GIF sized and checked to work in Slack.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/skills
+  path: skills/slack-gif-creator
+  url: https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: dbd4588
+  original_name: slack-gif-creator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: slack-gif-creator skill
+    by: Anthropic
+    url: https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

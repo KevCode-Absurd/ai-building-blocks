@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Many linked blocks and settings must agree.
+new_slug: traffic-co-simulation-builder
+name: Traffic co-simulation builder
+summary: Describe the traffic test. Get a Simulink model joined to the SUMO traffic simulator and ready to run.
+job: build-software
+headline: Traffic co-simulation builder
+subhead: Describe the traffic test. Get a Simulink model joined to the SUMO traffic simulator and ready to run.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Simulink and SUMO.

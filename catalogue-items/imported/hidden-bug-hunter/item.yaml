@@ -1,0 +1,32 @@
+slug: hidden-bug-hunter
+name: Hidden bug hunter
+summary: Point it at your code. Get a hard line-by-line hunt for logic errors and gaps, sorted by how bad they are.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/bugs-are-annoying
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/bugs-are-annoying
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: bugs-are-annoying
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: bugs-are-annoying skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/bugs-are-annoying
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

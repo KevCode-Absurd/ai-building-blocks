@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It follows a fixed lesson order and fills in each part.
+new_slug: direct-teaching-lesson-builder
+name: Direct teaching lesson builder
+summary: Give it a skill. Get a lesson that moves from you showing it, to practice together, to practice alone.
+job: teach-and-train
+headline: Direct teaching lesson builder
+subhead: Give it a skill. Get a lesson that moves from you showing it, to practice together, to practice alone.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

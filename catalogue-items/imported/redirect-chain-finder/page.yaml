@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It follows each redirect to its end.
+new_slug: redirect-chain-finder
+name: Redirect chain finder
+summary: Get redirects that chain from one to another or share a target, so shoppers and search get there fast.
+job: audit-landing-page
+headline: Redirect chain finder
+subhead: Get redirects that chain from one to another or share a target, so shoppers and search get there fast.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin (read only).

@@ -1,0 +1,32 @@
+slug: buyout-model-template-filler
+name: Buyout model template filler
+summary: Give it a blank LBO template and deal facts. Get the debt, cash flow and returns model completed and checked.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/financial-analysis/skills/lbo-model
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/lbo-model
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: lbo-model
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: lbo-model skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/financial-analysis/skills/lbo-model
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

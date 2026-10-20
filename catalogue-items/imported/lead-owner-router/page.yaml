@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It applies your written routing rules.
+new_slug: lead-owner-router
+name: Lead owner router
+summary: Give it a new lead. Get who should own it by your rules, a routing card to accept and a handoff note.
+job: sell-and-negotiate
+headline: Lead owner router
+subhead: Give it a new lead. Get who should own it by your rules, a routing card to accept and a handoff note.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your CRM.

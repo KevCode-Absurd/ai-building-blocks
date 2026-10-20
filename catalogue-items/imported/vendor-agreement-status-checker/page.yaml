@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It combines facts from several places.
+new_slug: vendor-agreement-status-checker
+name: Vendor agreement status checker
+summary: Name a vendor. Get what you signed, what is missing and what expires soon. Verify against the originals.
+job: check-contracts
+headline: Vendor agreement status checker
+subhead: Name a vendor. Get what you signed, what is missing and what expires soon. Verify against the originals.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your contract files, email and CRM.

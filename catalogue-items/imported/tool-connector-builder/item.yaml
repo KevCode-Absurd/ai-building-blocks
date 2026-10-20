@@ -1,0 +1,32 @@
+slug: tool-connector-builder
+name: Tool connector builder
+summary: Name the service. Get an MCP server that lets your AI use its tools, built and ready to test.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: tool_connection
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/skills
+  path: skills/mcp-builder
+  url: https://github.com/anthropics/skills/tree/main/skills/mcp-builder
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: dbd4588
+  original_name: mcp-builder
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mcp-builder skill
+    by: Anthropic
+    url: https://github.com/anthropics/skills/tree/main/skills/mcp-builder
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

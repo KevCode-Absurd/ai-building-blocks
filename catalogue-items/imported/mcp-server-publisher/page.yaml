@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows set steps for hosting and packaging.
+new_slug: mcp-server-publisher
+name: MCP server publisher
+summary: Point it at your MCP server. Get it hosted, scaled and packaged so others can install it.
+job: ship-and-host
+headline: MCP server publisher
+subhead: Point it at your MCP server. Get it hosted, scaled and packaged so others can install it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run commands and edit your code.

@@ -1,0 +1,32 @@
+slug: etsy-listing-seo-scorer
+name: Etsy listing SEO scorer
+summary: Give it your Etsy listing. Get a score out of 100, better title and tags, and a ranked fix list.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: pdp_copy
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Nexscope AI
+  repo: nexscope-ai/eCommerce-Skills
+  path: etsy-seo
+  url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/etsy-seo
+  licence: MIT
+  licence_file: LICENSE
+  commit: ee0fb29
+  original_name: etsy-seo
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: etsy-seo skill
+    by: Nexscope AI
+    url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/etsy-seo
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,37 @@
+slug: build-risk-reviewer
+name: Build risk reviewer
+summary: Describe what you plan to build. Get the biggest risks on demand and switching, plus the smallest test to run first.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/before-you-build
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/before-you-build
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: before-you-build
+  author: bin1874
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: before-you-build skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/before-you-build
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: bin1874
+    url: https://github.com/bin1874/before-you-build-skill
+    used: Wrote the skill; sickn33 shared it in their collection.

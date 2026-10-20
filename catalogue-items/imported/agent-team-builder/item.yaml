@@ -1,0 +1,32 @@
+slug: agent-team-builder
+name: Agent team builder
+summary: Describe the jobs your agents do. Get a team of AI agents with roles, tasks and shared memory.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 14-agents/crewai
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/14-agents/crewai
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: crewai-multi-agent
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: crewai-multi-agent skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/14-agents/crewai
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

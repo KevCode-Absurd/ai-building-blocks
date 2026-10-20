@@ -1,0 +1,33 @@
+slug: queue-and-process-simulator
+name: Queue and process simulator
+summary: Describe a process with queues and limited resources. Get a simulation with repeated runs and a clear summary of results.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/simpy
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/simpy
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: simpy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: simpy skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/simpy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

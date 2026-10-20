@@ -1,0 +1,32 @@
+slug: codebase-onboarding-guide-writer
+name: Codebase onboarding guide writer
+summary: Point it at a codebase. Get two guides that take a new engineer from first day to deep knowledge.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/wiki-onboarding
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/wiki-onboarding
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: wiki-onboarding
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: wiki-onboarding skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/wiki-onboarding
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

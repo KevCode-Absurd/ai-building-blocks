@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It tests the idea on several patent hurdles.
+new_slug: invention-idea-screener
+name: Invention idea screener
+summary: Describe your invention. Get a first screen on novelty, deadlines and value, and whether to see a patent lawyer. Not legal advice.
+job: check-contracts
+headline: Invention idea screener
+subhead: Describe your invention. Get a first screen on novelty, deadlines and value, and whether to see a patent lawyer. Not legal advice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Where the skill points to /ip-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.

@@ -1,0 +1,35 @@
+slug: new-ai-rule-gap-checker
+name: New AI rule gap checker
+summary: Give it a new AI law. Get gaps against what you do now and a fix plan. Not legal advice.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: source_text
+    required: true
+  - type: question
+    required: false
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/claude-for-legal
+  path: ai-governance-legal/skills/reg-gap-analysis
+  url: https://github.com/anthropics/claude-for-legal/tree/main/ai-governance-legal/skills/reg-gap-analysis
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: 4a6c651
+  original_name: reg-gap-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: reg-gap-analysis skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/ai-governance-legal/skills/reg-gap-analysis
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

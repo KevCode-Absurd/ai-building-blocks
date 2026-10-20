@@ -1,0 +1,32 @@
+slug: okr-writer
+name: OKR writer
+summary: Give it your goals for the quarter. Get clear objectives and measurable key results, plus a scoring and mid-quarter check routine.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/okr-design
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/okr-design
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: okr-design
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: okr-design skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/okr-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

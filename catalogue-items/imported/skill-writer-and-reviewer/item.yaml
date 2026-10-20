@@ -1,0 +1,39 @@
+slug: skill-writer-and-reviewer
+name: Skill writer and reviewer
+summary: Describe a skill or paste one. Get a well-built version with clear triggers and safety notes.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: skill_files
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: skill_files
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/effective-agent-skills
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/effective-agent-skills
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: effective-agent-skills
+  author: David Ondrej
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: effective-agent-skills skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/effective-agent-skills
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: David Ondrej
+    url: https://github.com/davidondrej
+    used: Wrote the skill; sickn33 shared it in their collection.

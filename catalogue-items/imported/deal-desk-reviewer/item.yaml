@@ -1,0 +1,37 @@
+slug: deal-desk-reviewer
+name: Deal desk reviewer
+summary: Give it a deal with a big discount or redlined terms. Get margin after discount and a clear yes, no or counter.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: commercial/skills/deal-desk
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/commercial/skills/deal-desk
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: deal-desk
+  author: claude-code-skills
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: deal-desk skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/commercial/skills/deal-desk
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: claude-code-skills
+    url: https://github.com/alirezarezvani/claude-code-skills
+    used: Wrote the skill; Alireza Rezvani shared it in their collection.

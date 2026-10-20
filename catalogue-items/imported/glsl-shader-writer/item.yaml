@@ -1,0 +1,32 @@
+slug: glsl-shader-writer
+name: GLSL shader writer
+summary: Describe the visual effect. Get an efficient vertex and fragment shader for the web or a game.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/shader-programming-glsl
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/shader-programming-glsl
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: shader-programming-glsl
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shader-programming-glsl skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/shader-programming-glsl
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

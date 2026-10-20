@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks the right model size for your hardware.
+new_slug: local-model-runner-for-laptops
+name: Local model runner for laptops
+summary: Name your model and computer. Get it running on a Mac, a plain CPU or a non-NVIDIA graphics card.
+job: build-software
+headline: Local model runner for laptops
+subhead: Name your model and computer. Get it running on a Mac, a plain CPU or a non-NVIDIA graphics card.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code on your computer.

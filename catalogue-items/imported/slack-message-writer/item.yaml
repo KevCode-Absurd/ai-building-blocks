@@ -1,0 +1,37 @@
+slug: slack-message-writer
+name: Slack message writer
+summary: Give it your point. Get a short, well-formatted Slack message, thread reply or canvas that leads with the news. Needs Slack.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: partner-built/slack/skills/slack-messaging
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/slack/skills/slack-messaging
+  licence: MIT
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: slack-messaging
+  author: Slack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: slack-messaging skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/partner-built/slack/skills/slack-messaging
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Slack
+    url: ""
+    used: Wrote the skill; Anthropic shared it in their collection.

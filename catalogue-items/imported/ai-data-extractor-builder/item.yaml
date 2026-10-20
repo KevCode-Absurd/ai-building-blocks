@@ -1,0 +1,34 @@
+slug: ai-data-extractor-builder
+name: AI data extractor builder
+summary: Say what data to pull from AI answers. Get code that returns checked, typed results instead of free text.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/llm-structured-output
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/llm-structured-output
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: llm-structured-output
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: llm-structured-output skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/llm-structured-output
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

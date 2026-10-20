@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It adds a ready-made detector and checks its scores.
+new_slug: prompt-attack-detector
+name: Prompt attack detector
+summary: Point it at your AI app's inputs. Get a small filter that flags tricks and hidden instructions before they land.
+job: build-software
+headline: Prompt attack detector
+subhead: Point it at your AI app's inputs. Get a small filter that flags tricks and hidden instructions before they land.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code.

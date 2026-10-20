@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It must match the estimator to the signal.
+new_slug: signal-spectrum-analyzer
+name: Signal spectrum analyzer
+summary: Give it a signal. Get its frequency content, peaks and bandwidth worked out with the right method.
+job: build-software
+headline: Signal spectrum analyzer
+subhead: Give it a signal. Get its frequency content, peaks and bandwidth worked out with the right method.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Signal Processing Toolbox.

@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It applies detailed capital rules and needs careful judgment.
+new_slug: bank-capital-rules-checker
+name: Bank capital rules checker
+summary: Give it a bank's balance sheet. Get its Basel III capital and liquidity ratios checked against the limits.
+job: check-contracts
+headline: Bank capital rules checker
+subhead: Give it a bank's balance sheet. Get its Basel III capital and liquidity ratios checked against the limits.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

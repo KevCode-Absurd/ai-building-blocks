@@ -1,0 +1,38 @@
+slug: lesson-adapter-for-language-learners
+name: Lesson adapter for language learners
+summary: Paste your lesson plan. Get a version that supports students learning English in reading, writing, speaking and listening.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/eal-language-development/sheltered-instruction-lesson-modifier
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/eal-language-development/sheltered-instruction-lesson-modifier
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: sheltered-instruction-lesson-modifier
+  author: Gareth Manning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: sheltered-instruction-lesson-modifier skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/eal-language-development/sheltered-instruction-lesson-modifier
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Gareth Manning
+    url: https://github.com/GarethManning
+    used: Wrote the skill; Gareth Manning shared it in their collection.

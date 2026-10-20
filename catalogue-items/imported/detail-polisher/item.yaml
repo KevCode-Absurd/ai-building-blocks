@@ -1,0 +1,39 @@
+slug: detail-polisher
+name: Detail polisher
+summary: Name one UI detail or slow function. Get several checked attempts, with the best version kept inside a set budget.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/obsess
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/obsess
+  licence: MIT
+  licence_file: LICENSE
+  commit: 0c10eb8
+  original_name: obsess
+  author: UmarSiddiqui
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: obsess skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/obsess
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: UmarSiddiqui
+    url: https://github.com/UmarSiddiqui
+    used: Wrote the skill; sickn33 shared it in their collection.

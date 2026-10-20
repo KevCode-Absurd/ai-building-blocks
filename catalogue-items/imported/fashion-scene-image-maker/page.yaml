@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It turns one description into a prompt with ready-made templates.
+new_slug: fashion-scene-image-maker
+name: Fashion scene image maker
+summary: Describe a scene, with or without a reference photo. Get an image or a new pose. Your image model draws it.
+job: make-images
+headline: Fashion scene image maker
+subhead: Describe a scene, with or without a reference photo. Get an image or a new pose. Your image model draws it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your own image model key (OpenAI, Gemini, fal or Replicate).

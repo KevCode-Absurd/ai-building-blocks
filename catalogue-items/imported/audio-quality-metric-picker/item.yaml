@@ -1,0 +1,32 @@
+slug: audio-quality-metric-picker
+name: Audio quality metric picker
+summary: Give it a sound file. Get loudness, noise and speech quality scores with the right metric chosen.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/signal-processing/matlab-evaluate-acoustic-metrics
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/signal-processing/matlab-evaluate-acoustic-metrics
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-evaluate-acoustic-metrics
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-evaluate-acoustic-metrics skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/signal-processing/matlab-evaluate-acoustic-metrics
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

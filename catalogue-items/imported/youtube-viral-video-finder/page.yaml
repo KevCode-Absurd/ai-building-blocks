@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It ranks videos by a number, then looks for what they share.
+new_slug: youtube-viral-video-finder
+name: YouTube viral video finder
+summary: Name your niche. It reads public YouTube pages and ranks videos that beat their channel's usual views.
+job: grow-social
+headline: YouTube viral video finder
+subhead: Name your niche. It reads public YouTube pages and ranks videos that beat their channel's usual views.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and read public YouTube pages.

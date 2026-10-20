@@ -1,0 +1,566 @@
+# sickn33/agentic-awesome-skills, slice 7 of 14 (google-analytics-automation to interactive-portfolio).
+# Kept: 19 distinct, well-made skills. The rest are skipped with a reason.
+"sickn33/agentic-awesome-skills:skills/headline-psychologist":
+  name: Headline option writer
+  summary: Give it your audience and goal. Get several headline angles that earn the click without clickbait or false promises.
+  task: write-ad-copy
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It picks a mindset first, then drafts and compares angles.
+  inputs: [{type: persona, required: false}, {type: brief, required: true}]
+  outputs: [{type: hooks}]
+  author: MMEHDI0606
+  author_url: https://github.com/MMEHDI0606
+"sickn33/agentic-awesome-skills:skills/identity-mirror":
+  name: Customer identity messaging mapper
+  summary: Give it your audience. Get a map of who they are and want to be, plus copy that reflects it.
+  task: understand-customers
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads people's self-image and turns it into wording.
+  inputs: [{type: persona, required: false}, {type: brief, required: true}]
+  outputs: [{type: angle_library}]
+  author: MMEHDI0606
+  author_url: https://github.com/MMEHDI0606
+"sickn33/agentic-awesome-skills:skills/idea-autopsy":
+  name: Business idea killer
+  summary: Give it a business idea. Get the one fact that kills it, or the cheapest test it still has to pass.
+  task: test-an-idea
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It has to hunt for the fatal flaw, not just agree.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: audit_report}]
+  needs: search the web
+  author: hafiz-actyte
+  author_url: https://github.com/hafiz-actyte
+"sickn33/agentic-awesome-skills:skills/idea-darwin":
+  name: Idea tournament runner
+  summary: Give it a pile of rough ideas. Get them scored, crossed and mutated until the strongest few are left.
+  task: think-and-decide
+  role: orchestrate
+  level: intermediate
+  thinking: high
+  thinking_why: It runs several rounds of scoring and combining ideas.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: shortlist}]
+"sickn33/agentic-awesome-skills:skills/idea-evaluator":
+  name: Idea debate judge
+  summary: Give it an idea. Get a three-round debate between a fan and a critic, then a clear verdict.
+  task: think-and-decide
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: It plays two sides and then weighs both.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: feedback_notes}]
+  author: Prince-1652
+  author_url: https://github.com/Prince-1652
+"sickn33/agentic-awesome-skills:skills/idea-os":
+  name: Idea to plan pipeline runner
+  summary: Give it a raw idea. Get clarifying questions, research, a product brief and a phased plan, as four files.
+  task: build-product
+  role: orchestrate
+  level: intermediate
+  thinking: high
+  thinking_why: Each of five phases feeds the next and needs real research.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}, {type: document}]
+  needs: search the web and save files
+  author: Slashworks-biz
+  author_url: https://github.com/Slashworks-biz
+"sickn33/agentic-awesome-skills:skills/idea-to-blueprint":
+  name: Build blueprint writer
+  summary: Give it a product idea. Get one researched build document with stack, steps and tests an AI can build from.
+  task: build-product
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It researches, picks a stack and writes testable steps with no guessing.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+  needs: search the web and save files
+  author: iniesohidham
+  author_url: https://github.com/iniesohidham
+"sickn33/agentic-awesome-skills:skills/i-have-adhd":
+  name: Focus-friendly answer style setter
+  summary: Turn it on once. Get every reply with the next action first, short numbered steps and time estimates.
+  task: set-up-ai
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It only changes how answers are shaped.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+  author: ayghri
+  author_url: https://github.com/ayghri
+"sickn33/agentic-awesome-skills:skills/hr-pro":
+  name: HR partner
+  summary: Describe the people task. Get job posts, interview kits, onboarding lists, review plans or policy drafts to check with counsel.
+  task: lead-people
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It drafts careful documents and flags legal limits.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]
+"sickn33/agentic-awesome-skills:skills/incident-runbook-templates":
+  name: Incident runbook writer
+  summary: Name your service. Get a runbook with severity levels, first steps, fixes and who to tell.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It fills proven templates with your service details.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: document}]
+"sickn33/agentic-awesome-skills:skills/graceful-shutdown":
+  name: Safe shutdown code writer
+  summary: Point it at your server or worker. Get code that finishes live work and exits cleanly when stopped.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows a set pattern but must fit your code.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: read and edit your project files
+  author: Prajeeth-12
+  author_url: https://github.com/Prajeeth-12
+"sickn33/agentic-awesome-skills:skills/indexing-issue-auditor":
+  name: Search indexing auditor
+  summary: Give it your site, folder or Search Console export. Get why pages are not indexed and a fix list.
+  task: build-websites
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It traces crawl and redirect problems across a whole site.
+  inputs: [{type: codebase, required: false}, {type: source_text, required: false}]
+  outputs: [{type: audit_report}]
+  needs: read your files or open your site
+  author: WHOISABHISHEKADHIKARI
+  author_url: https://github.com/WHOISABHISHEKADHIKARI
+"sickn33/agentic-awesome-skills:skills/ingest-youtube":
+  name: YouTube transcript saver
+  summary: Give it a YouTube link. Get a clean transcript saved as a markdown note you can search later.
+  task: organise-work
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It runs a set tool and cleans the text.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: transcript}]
+  needs: run code and save files
+  author: adelaidasofia
+  author_url: https://github.com/adelaidasofia
+"sickn33/agentic-awesome-skills:skills/hierarchical-agent-memory":
+  name: Project memory organizer
+  summary: Point it at your project. Get small context files per folder so your AI reads less and costs less.
+  task: set-up-ai
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads the project layout and writes short notes for each part.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: skill_files}]
+  needs: read and edit your project files
+"sickn33/agentic-awesome-skills:skills/infinity":
+  name: Untrusted input checker
+  summary: Point it at code. Get every place outside data enters found and checked before it reaches your logic.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It lists entry points, then checks each one in turn.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: security_report}, {type: code_change}]
+  needs: read and edit your project files
+"sickn33/agentic-awesome-skills:skills/i18n-localization":
+  name: App translation setup helper
+  summary: Point it at your app. Get hardcoded text found and a plan for translations, locale files and right-to-left support.
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It scans code for text and applies standard patterns.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: read and edit your project files
+"sickn33/agentic-awesome-skills:skills/google-no-code":
+  name: Google Forms automator
+  summary: Say what should happen on each form reply. Get a form plan and Apps Script that emails alerts or logs rows.
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows a short recipe and fills in the script.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]
+  author: WHOISABHISHEKADHIKARI
+  author_url: https://github.com/WHOISABHISHEKADHIKARI
+"sickn33/agentic-awesome-skills:skills/high-end-visual-design":
+  name: Premium interface designer
+  summary: Describe the page or app. Get a polished design with premium type, depth and smooth motion, not a template look.
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks a look then builds it with careful detail.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: web_page}]
+  needs: run code and open a browser
+  author: Leonxlnx
+  author_url: https://github.com/Leonxlnx
+"sickn33/agentic-awesome-skills:skills/hig-foundations":
+  name: Apple app design checker
+  summary: Show it your iPhone, iPad or Mac app design. Get what to fix to match Apple's design rules.
+  task: design-work
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It compares your design against a set of known rules.
+  inputs: [{type: design_file, required: true}]
+  outputs: [{type: feedback_notes}]
+  author: Raintree Technology
+  author_url: https://raintree.technology
+"sickn33/agentic-awesome-skills:skills/google-analytics-automation":
+  skip: "A thin wrapper around one product connector or Composio tool list, with little method of its own."
+"sickn33/agentic-awesome-skills:skills/google-calendar-automation":
+  skip: "A thin wrapper around one product connector or Composio tool list, with little method of its own."
+"sickn33/agentic-awesome-skills:skills/google-docs-automation":
+  skip: "A thin wrapper around one product connector or Composio tool list, with little method of its own."
+"sickn33/agentic-awesome-skills:skills/google-drive-automation":
+  skip: "A thin wrapper around one product connector or Composio tool list, with little method of its own."
+"sickn33/agentic-awesome-skills:skills/google-sheets-automation":
+  skip: "A thin wrapper around one product connector or Composio tool list, with little method of its own."
+"sickn33/agentic-awesome-skills:skills/google-slides-automation":
+  skip: "A thin wrapper around one product connector or Composio tool list, with little method of its own."
+"sickn33/agentic-awesome-skills:skills/googlesheets-automation":
+  skip: "A thin wrapper around one product connector or Composio tool list, with little method of its own."
+"sickn33/agentic-awesome-skills:skills/gpt-taste":
+  skip: "Near-copy of a kept design skill, one narrow style, or needs a paid image API key."
+"sickn33/agentic-awesome-skills:skills/gpu-kubernetes-operations":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/gpu-server-management":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/grafana-dashboards":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/graphql":
+  skip: "Language or framework reference that is thin or generic, with better sources elsewhere."
+"sickn33/agentic-awesome-skills:skills/graphql-architect":
+  skip: "Language or framework reference that is thin or generic, with better sources elsewhere."
+"sickn33/agentic-awesome-skills:skills/graphql-schema":
+  skip: "Language or framework reference that is thin or generic, with better sources elsewhere."
+"sickn33/agentic-awesome-skills:skills/grill-me":
+  skip: "Copy of a mattpocock/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/grill-with-docs":
+  skip: "Copy of a mattpocock/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/grilling":
+  skip: "Copy of a mattpocock/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/grok-build":
+  skip: "Thin pointer to an outside tool, tied to one product, or needs a paid service."
+"sickn33/agentic-awesome-skills:skills/grok-delegate":
+  skip: "Thin pointer to an outside tool, tied to one product, or needs a paid service."
+"sickn33/agentic-awesome-skills:skills/growth-engine":
+  skip: "Written for a narrow language, region or topic, or a persona our minds already cover."
+"sickn33/agentic-awesome-skills:skills/grpc-golang":
+  skip: "Language or framework reference that is thin or generic, with better sources elsewhere."
+"sickn33/agentic-awesome-skills:skills/handoff":
+  skip: "Copy of a mattpocock/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/hardware-security":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hasdata":
+  skip: Includes steps for collecting business phones, emails and contact details, which breaks our contact-details rule.
+"sickn33/agentic-awesome-skills:skills/hasdata-cli":
+  skip: Includes finding people's emails, phones and LinkedIn details, which breaks our contact-details rule.
+"sickn33/agentic-awesome-skills:skills/hashicorp-vault":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/haskell-pro":
+  skip: "Language or framework reference that is thin or generic, with better sources elsewhere."
+"sickn33/agentic-awesome-skills:skills/health-trend-analyzer":
+  skip: "Written for a narrow language, region or topic, or a persona our minds already cover."
+"sickn33/agentic-awesome-skills:skills/health-wellness":
+  skip: "Written for a narrow language, region or topic, or a persona our minds already cover."
+"sickn33/agentic-awesome-skills:skills/healthcare-job-search":
+  skip: "Written for a narrow language, region or topic, or a persona our minds already cover."
+"sickn33/agentic-awesome-skills:skills/helium-mcp":
+  skip: "Thin pointer to an outside tool, tied to one product, or needs a paid service."
+"sickn33/agentic-awesome-skills:skills/helm-chart-scaffolding":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/helm-charts":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/helpdesk-automation":
+  skip: "A thin wrapper around one product connector or Composio tool list, with little method of its own."
+"sickn33/agentic-awesome-skills:skills/hf-cli":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hf-cloud-aws-context-discovery":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hf-mcp":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hf-mem":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hig-components-content":
+  skip: "One of a family of Apple design guideline skills. We keep only the foundations one."
+"sickn33/agentic-awesome-skills:skills/hig-components-controls":
+  skip: "One of a family of Apple design guideline skills. We keep only the foundations one."
+"sickn33/agentic-awesome-skills:skills/hig-components-dialogs":
+  skip: "One of a family of Apple design guideline skills. We keep only the foundations one."
+"sickn33/agentic-awesome-skills:skills/hig-components-layout":
+  skip: "One of a family of Apple design guideline skills. We keep only the foundations one."
+"sickn33/agentic-awesome-skills:skills/hig-components-menus":
+  skip: "One of a family of Apple design guideline skills. We keep only the foundations one."
+"sickn33/agentic-awesome-skills:skills/hig-components-search":
+  skip: "One of a family of Apple design guideline skills. We keep only the foundations one."
+"sickn33/agentic-awesome-skills:skills/hig-components-status":
+  skip: "One of a family of Apple design guideline skills. We keep only the foundations one."
+"sickn33/agentic-awesome-skills:skills/hig-components-system":
+  skip: "One of a family of Apple design guideline skills. We keep only the foundations one."
+"sickn33/agentic-awesome-skills:skills/hig-inputs":
+  skip: "One of a family of Apple design guideline skills. We keep only the foundations one."
+"sickn33/agentic-awesome-skills:skills/hig-patterns":
+  skip: "One of a family of Apple design guideline skills. We keep only the foundations one."
+"sickn33/agentic-awesome-skills:skills/hig-platforms":
+  skip: "One of a family of Apple design guideline skills. We keep only the foundations one."
+"sickn33/agentic-awesome-skills:skills/hig-project-context":
+  skip: "One of a family of Apple design guideline skills. We keep only the foundations one."
+"sickn33/agentic-awesome-skills:skills/hig-technologies":
+  skip: "One of a family of Apple design guideline skills. We keep only the foundations one."
+"sickn33/agentic-awesome-skills:skills/hipaa-compliance":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/hono":
+  skip: "Language or framework reference that is thin or generic, with better sources elsewhere."
+"sickn33/agentic-awesome-skills:skills/hosted-agents":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/hosted-agents-v2-py":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/html-injection-testing":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hubspot-automation":
+  skip: "A thin wrapper around one product connector or Composio tool list, with little method of its own."
+"sickn33/agentic-awesome-skills:skills/hubspot-integration":
+  skip: "A thin wrapper around one product connector or Composio tool list, with little method of its own."
+"sickn33/agentic-awesome-skills:skills/hugging-face-cli":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hugging-face-community-evals":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hugging-face-dataset-viewer":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hugging-face-datasets":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hugging-face-evaluation":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hugging-face-gradio":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hugging-face-jobs":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hugging-face-model-trainer":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hugging-face-paper-publisher":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hugging-face-papers":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hugging-face-tool-builder":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hugging-face-trackio":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hugging-face-vision-trainer":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/huggingface-best":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/huggingface-community-evals":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/huggingface-datasets":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/huggingface-local-models":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/huggingface-lora-space-builder":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/huggingface-spaces":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/huggingface-tool-builder":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/huggingface-zerogpu":
+  skip: "Works only with the Hugging Face platform and its tools, so it is too narrow."
+"sickn33/agentic-awesome-skills:skills/hugo-to-markdown":
+  skip: "Language or framework reference that is thin or generic, with better sources elsewhere."
+"sickn33/agentic-awesome-skills:skills/humanize-chinese":
+  skip: "Written for a narrow language, region or topic, or a persona our minds already cover."
+"sickn33/agentic-awesome-skills:skills/hunt-api-misconfig":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-aspnet":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-ato":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-auth-bypass":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-brute-force":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-business-logic":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-cache-poison":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-captcha-bypass":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-cicd":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-clickjacking":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-cloud-misconfig":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-cors":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-csrf":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-deserialization":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-dispatch":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-dom":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-exceptional-conditions":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-file-upload":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-fintech-graphql":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-forgot-password":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-graphql":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-grpc":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-host-header":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-html-injection":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-http-smuggling":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-idor":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-jwt-crypto":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-k8s":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-laravel":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-ldap":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-lfi":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-llm-ai":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-mfa-bypass":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-misc":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-nextjs":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-nodejs":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-nosqli":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-ntlm-info":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-oauth":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-open-redirect":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-race-condition":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-rag-vector":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-rce":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-saml":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-session":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-shadow-api":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-sharepoint":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-source-leak":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-spa-api":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-springboot":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-sqli":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-ssrf":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-ssti":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-subdomain":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-tls-network":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-websocket":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-xss":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hunt-xxe":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/hybrid-cloud-architect":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/hybrid-cloud-networking":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/hybrid-search-implementation":
+  skip: "Language or framework reference that is thin or generic, with better sources elsewhere."
+"sickn33/agentic-awesome-skills:skills/hyperexecute-skill":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/iconsax-library":
+  skip: "Near-copy of a kept design skill, one narrow style, or needs a paid image API key."
+"sickn33/agentic-awesome-skills:skills/ida-reverse":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/idea-refine":
+  skip: "Copy of an addyosmani/agent-skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/identity-access-management":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/identity-federation":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/idor-testing":
+  skip: "Offensive security hunting built from one template with many near-copies, aimed at bug bounty work, so not listed."
+"sickn33/agentic-awesome-skills:skills/ii-commons":
+  skip: "Thin pointer to an outside tool, tied to one product, or needs a paid service."
+"sickn33/agentic-awesome-skills:skills/ilya-sutskever":
+  skip: "Written for a narrow language, region or topic, or a persona our minds already cover."
+"sickn33/agentic-awesome-skills:skills/image-generator":
+  skip: "Near-copy of a kept design skill, one narrow style, or needs a paid image API key."
+"sickn33/agentic-awesome-skills:skills/image-studio":
+  skip: "Near-copy of a kept design skill, one narrow style, or needs a paid image API key."
+"sickn33/agentic-awesome-skills:skills/imagen":
+  skip: "Near-copy of a kept design skill, one narrow style, or needs a paid image API key."
+"sickn33/agentic-awesome-skills:skills/implement":
+  skip: "Copy of a mattpocock/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/improve-codebase-architecture":
+  skip: "Copy of a mattpocock/skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/incident-management":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/incident-responder":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/incident-response":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/incident-response-incident-response":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/incident-response-smart-fix":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/incremental-implementation":
+  skip: "Copy of an addyosmani/agent-skills skill, which we take from the source."
+"sickn33/agentic-awesome-skills:skills/industrial-brutalist-ui":
+  skip: "Near-copy of a kept design skill, one narrow style, or needs a paid image API key."
+"sickn33/agentic-awesome-skills:skills/infinite-gratitude":
+  skip: "Thin pointer to an outside tool, tied to one product, or needs a paid service."
+"sickn33/agentic-awesome-skills:skills/inngest":
+  skip: "Generic or vendor-tied infrastructure skill, thin or overlapping with skills we already have."
+"sickn33/agentic-awesome-skills:skills/instagram":
+  skip: "Thin pointer to an outside tool, tied to one product, or needs a paid service."
+"sickn33/agentic-awesome-skills:skills/instagram-automation":
+  skip: "A thin wrapper around one product connector or Composio tool list, with little method of its own."
+"sickn33/agentic-awesome-skills:skills/instructree":
+  skip: "Thin pointer to an outside tool, tied to one product, or needs a paid service."
+"sickn33/agentic-awesome-skills:skills/interactive-portfolio":
+  skip: "Near-copy of a kept design skill, one narrow style, or needs a paid image API key."

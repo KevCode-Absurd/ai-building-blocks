@@ -1,0 +1,143 @@
+# JimLiu/baoyu-skills (MIT). Skipped: the two "danger" skills, anything that posts to or works with WeChat, Weibo or Xiaohongshu, and anything that scrapes.
+"JimLiu/baoyu-skills:.claude/skills/release-skills":
+  name: Release preparer
+  summary: Point it at your project. Get the version bumped, a changelog written and a tagged release ready to publish.
+  task: ship-and-host
+  role: orchestrate
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads your changes, sorts them, then follows set release steps.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}, {type: document}]
+  needs: run code and read your project files
+"JimLiu/baoyu-skills:skills/baoyu-article-illustrator":
+  name: Article illustrator
+  summary: Give it an article. Get a plan for where pictures belong and a matching set of illustrations.
+  task: make-images
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans each picture first, then follows set steps to draw them.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: image}]
+  needs: draw images with an image tool
+"JimLiu/baoyu-skills:skills/baoyu-comic":
+  name: Knowledge comic maker
+  summary: Give it a topic or story. Get a finished comic with panel layouts, a chosen art style and drawn pages.
+  task: make-images
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans the story and panels, then follows set steps to draw them.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: image}]
+  needs: draw images with an image tool
+"JimLiu/baoyu-skills:skills/baoyu-compress-image":
+  name: Image compressor
+  summary: Give it images. Get smaller WebP or PNG files that look the same and load faster.
+  task: make-images
+  role: render
+  level: beginner
+  thinking: low
+  thinking_why: It runs a fixed tool on each file.
+  inputs: [{type: image, required: true}]
+  outputs: [{type: image}]
+  needs: run code and save files
+"JimLiu/baoyu-skills:skills/baoyu-cover-image":
+  name: Article cover maker
+  summary: Give it an article. Get a cover image with a type, colours and mood that fit the piece.
+  task: make-images
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It picks a look from set options, then draws it.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: image}]
+  needs: draw images with an image tool
+"JimLiu/baoyu-skills:skills/baoyu-diagram":
+  name: Diagram maker
+  summary: Describe a system, process or idea. Get a clean dark-themed SVG diagram you can open and reuse.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It chooses a diagram type, then lays it out with set rules.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: image}]
+  needs: run code and save files
+"JimLiu/baoyu-skills:skills/baoyu-format-markdown":
+  name: Article formatter
+  summary: Give it plain text or rough markdown. Get a tidy article with title, summary, headings and lists, same words.
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It changes layout only and never rewrites the content.
+  inputs: [{type: document, required: true}]
+  outputs: [{type: document}]
+  needs: run code and save files
+"JimLiu/baoyu-skills:skills/baoyu-image-gen":
+  name: Multi-provider image maker
+  summary: Give it a prompt. Get an image from the image service you choose, in the size you pick.
+  task: make-images
+  role: render
+  level: intermediate
+  thinking: low
+  thinking_why: It sends your saved prompt to an image service and saves the result.
+  inputs: [{type: image_prompt, required: true}]
+  outputs: [{type: image}]
+  needs: run code and use an image service account or API key
+"JimLiu/baoyu-skills:skills/baoyu-infographic":
+  name: Infographic maker
+  summary: Give it your content. Get an infographic with a layout and style picked to fit the message.
+  task: make-images
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It analyses the content, suggests layouts and styles, then draws one.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: image}]
+  needs: draw images with an image tool
+"JimLiu/baoyu-skills:skills/baoyu-slide-deck":
+  name: Slide deck image maker
+  summary: Give it your content. Get a slide deck outline and one drawn image per slide, ready to share or read.
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It writes the outline first, then draws each slide with set steps.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: slide_deck}]
+  needs: draw images with an image tool
+"JimLiu/baoyu-skills:skills/baoyu-translate":
+  name: Article translator
+  summary: Give it an article. Get a translation in your language, quick or polished with review, using consistent terms.
+  task: write-and-tell-stories
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: The polished mode adds analysis and review passes.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: document}]
+"JimLiu/baoyu-skills:skills/baoyu-danger-gemini-web":
+  skip: Marked danger by its maker. It uses unofficial Gemini web access with browser cookies, which we do not copy.
+"JimLiu/baoyu-skills:skills/baoyu-danger-x-to-markdown":
+  skip: Marked danger by its maker. It uses a reverse-engineered X interface with saved login cookies, which breaks our no-logins rule.
+"JimLiu/baoyu-skills:skills/baoyu-electron-extract":
+  skip: Takes apart other companies' installed desktop apps to read their source, so it is not a safe skill to list.
+"JimLiu/baoyu-skills:skills/baoyu-markdown-to-html":
+  skip: Built around WeChat Official Account themes and styling, so it mainly serves a Chinese app.
+"JimLiu/baoyu-skills:skills/baoyu-post-to-wechat":
+  skip: Only posts to WeChat Official Accounts, a Chinese app.
+"JimLiu/baoyu-skills:skills/baoyu-post-to-weibo":
+  skip: Only posts to Weibo, a Chinese app.
+"JimLiu/baoyu-skills:skills/baoyu-wechat-summary":
+  skip: Only works on WeChat group chats through a local WeChat tool.
+"JimLiu/baoyu-skills:skills/baoyu-xhs-images":
+  skip: Made for Xiaohongshu and WeChat image posts, so it mainly serves Chinese apps.
+"JimLiu/baoyu-skills:skills/baoyu-post-to-x":
+  skip: Posts by driving your real logged-in Chrome with scripts, not an official API. It acts on a live social account, which breaks our rules.
+"JimLiu/baoyu-skills:skills/baoyu-url-to-markdown":
+  skip: Scrapes pages with a scripted Chrome, handles logins and CAPTCHAs, and has site adapters, so it breaks our logins and CAPTCHA rules.
+"JimLiu/baoyu-skills:skills/baoyu-youtube-transcript":
+  skip: Pulls captions through an unofficial YouTube interface, retries around bot detection and can use browser cookies, so it breaks our bot-check rule.

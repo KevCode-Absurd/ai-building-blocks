@@ -1,0 +1,32 @@
+slug: commit-and-pull-request-sender
+name: Commit and pull request sender
+summary: Say the word. Get your changes committed, pushed and opened as a GitHub pull request in one go.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/yeet
+  url: https://github.com/openai/skills/tree/main/skills/.curated/yeet
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: yeet
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: yeet skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/yeet
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

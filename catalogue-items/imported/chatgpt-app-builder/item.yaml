@@ -1,0 +1,32 @@
+slug: chatgpt-app-builder
+name: ChatGPT app builder
+summary: Describe the tool you want inside ChatGPT. Get a working Apps SDK project with its server and screen.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: tool_connection
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/chatgpt-apps
+  url: https://github.com/openai/skills/tree/main/skills/.curated/chatgpt-apps
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: chatgpt-apps
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: chatgpt-apps skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/chatgpt-apps
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

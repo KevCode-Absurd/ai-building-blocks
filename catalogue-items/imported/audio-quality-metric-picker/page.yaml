@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It matches each metric to the question.
+new_slug: audio-quality-metric-picker
+name: Audio quality metric picker
+summary: Give it a sound file. Get loudness, noise and speech quality scores with the right metric chosen.
+job: build-software
+headline: Audio quality metric picker
+subhead: Give it a sound file. Get loudness, noise and speech quality scores with the right metric chosen.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Audio Toolbox.

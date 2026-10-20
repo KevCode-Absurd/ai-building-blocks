@@ -1,0 +1,37 @@
+slug: safe-database-query-runner
+name: Safe database query runner
+summary: Ask a question about your Postgres data. Get a read-only query run with write protection and the results back.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/postgres-readonly-queries
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/postgres-readonly-queries
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: postgres-readonly-queries
+  author: sanjay3290
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: postgres-readonly-queries skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/postgres-readonly-queries
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: sanjay3290
+    url: https://github.com/sanjay3290
+    used: Wrote the skill; sickn33 shared it in their collection.

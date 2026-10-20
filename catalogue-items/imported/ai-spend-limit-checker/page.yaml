@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows one fixed rule, no paid call without a written cap.
+new_slug: ai-spend-limit-checker
+name: AI spend limit checker
+summary: Point it at code that calls paid AI services. Get spending caps and loop limits added before a surprise bill.
+job: secure-code
+headline: AI spend limit checker
+subhead: Point it at code that calls paid AI services. Get spending caps and loop limits added before a surprise bill.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

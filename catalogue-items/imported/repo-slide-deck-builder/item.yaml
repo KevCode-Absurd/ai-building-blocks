@@ -1,0 +1,37 @@
+slug: repo-slide-deck-builder
+name: Repo slide deck builder
+summary: Point it at a repo. Get a slide deck with cited facts that warns you when the code changes.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: slide_deck
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/slideops
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/slideops
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: slideops
+  author: glukicov
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: slideops skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/slideops
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: glukicov
+    url: https://github.com/glukicov/slideops
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,32 @@
+slug: review-comment-fixer
+name: Review comment fixer
+summary: Point it at your open pull request. Get each reviewer comment handled and the code updated.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/gh-address-comments
+  url: https://github.com/openai/skills/tree/main/skills/.curated/gh-address-comments
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: gh-address-comments
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: gh-address-comments skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/gh-address-comments
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

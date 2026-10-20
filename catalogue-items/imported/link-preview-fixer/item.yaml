@@ -1,0 +1,37 @@
+slug: link-preview-fixer
+name: Link preview fixer
+summary: Share a link that looks wrong. Get the tags and image fixes so it shows a rich card everywhere.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/social-metadata-hardening
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/social-metadata-hardening
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: social-metadata-hardening
+  author: Whoisabhishekadhikari
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: social-metadata-hardening skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/social-metadata-hardening
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Whoisabhishekadhikari
+    url: https://github.com/WHOISABHISHEKADHIKARI
+    used: Wrote the skill; sickn33 shared it in their collection.

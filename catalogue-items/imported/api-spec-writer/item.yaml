@@ -1,0 +1,39 @@
+slug: api-spec-writer
+name: API spec writer
+summary: Describe your API or paste its code. Get a complete OpenAPI or Swagger spec ready for docs and SDKs.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/openapi-spec-generator
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/openapi-spec-generator
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: openapi-spec-generator
+  author: LambdaTest
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: openapi-spec-generator skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/openapi-spec-generator
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: LambdaTest
+    url: https://github.com/LambdaTest
+    used: Wrote the skill; sickn33 shared it in their collection.

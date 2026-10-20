@@ -1,0 +1,718 @@
+# sickn33/agentic-awesome-skills, part 1 of 14 (CC BY 4.0)
+"sickn33/agentic-awesome-skills:skills/00-andruia-consultant":
+  skip: Written for one country or language, or tied to one author's own setup.
+"sickn33/agentic-awesome-skills:skills/007":
+  skip: Offensive or hacking-focused security work, or generic security material we will not list.
+"sickn33/agentic-awesome-skills:skills/10-andruia-skill-smith":
+  skip: Written for one country or language, or tied to one author's own setup.
+"sickn33/agentic-awesome-skills:skills/20-andruia-niche-intelligence":
+  skip: Written for one country or language, or tied to one author's own setup.
+"sickn33/agentic-awesome-skills:skills/2slides-ppt-generator":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/360-feedback-system":
+  skip: One of a set of near-identical record templates for small business databases.
+"sickn33/agentic-awesome-skills:skills/3d-web-experience":
+  name: 3D web scene builder
+  summary: Describe the scene or product viewer. Get a working 3D page with fast loading and a fallback.
+  task: build-websites
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It picks a stack, then builds with performance limits in mind.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: web_app}]
+  needs: run code and open a browser
+"sickn33/agentic-awesome-skills:skills/aas-compose-stack":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/aas-discover":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/aas-review-stack":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/ab-test-setup":
+  skip: Copy of a skill from anthropics/skills, marketingskills or addyosmani, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/ab-testing":
+  skip: Copy of a skill from anthropics/skills, marketingskills or addyosmani, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/acceptance-orchestrator":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/access-matrix":
+  skip: One of a set of near-identical record templates for small business databases.
+"sickn33/agentic-awesome-skills:skills/access-review":
+  skip: One of a set of near-identical record templates for small business databases.
+"sickn33/agentic-awesome-skills:skills/accessibility-compliance-accessibility-audit":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/accesslint-audit":
+  name: Accessibility checker
+  summary: Point it at a page or code. Get a ranked list of accessibility problems against WCAG 2.2, and fixes if you ask.
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows set checks but weighs how bad each problem is.
+  inputs: [{type: web_page, required: false}, {type: codebase, required: false}]
+  outputs: [{type: audit_report}, {type: code_change}]
+  needs: run code and open a browser
+  author: AccessLint
+  author_url: https://github.com/AccessLint/skills
+"sickn33/agentic-awesome-skills:skills/accesslint-diff":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/accesslint-scan":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/accint-commitments":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/accint-frames":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/accint-solve":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/accounting-audit-system-builder":
+  skip: One of a set of near-identical record templates for small business databases.
+"sickn33/agentic-awesome-skills:skills/accounting-software-selection":
+  skip: One of a set of near-identical record templates for small business databases.
+"sickn33/agentic-awesome-skills:skills/active-directory-attacks":
+  skip: Offensive or hacking-focused security work, or generic security material we will not list.
+"sickn33/agentic-awesome-skills:skills/activecampaign-automation":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/ad-campaign-analyzer":
+  name: Ad spend analyst
+  summary: Give it your ad exports. Get what is working, what is wasted, and small budget tests to run next.
+  task: read-ad-results
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It must tell real results from luck and avoid overclaiming.
+  inputs: [{type: performance_sheet, required: true}]
+  outputs: [{type: audit_report}, {type: plan}]
+  author: gooseworks-ai
+  author_url: https://github.com/gooseworks-ai/goose-skills
+"sickn33/agentic-awesome-skills:skills/ad-creative":
+  skip: Copy of a skill from anthropics/skills, marketingskills or addyosmani, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/add-app-clip":
+  skip: Thin, narrow or not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/address-github-comments":
+  skip: Copy of a skill from openai/skills (gh-address-comments), which we take from the source.
+"sickn33/agentic-awesome-skills:skills/adhx":
+  name: X post reader
+  summary: Give it an X post link. Get the text, author and numbers as clean data. Collects data from websites.
+  task: work-with-files
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It fetches one post and formats it.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: source_text}]
+  needs: run commands
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/admin-access-register":
+  skip: One of a set of near-identical record templates for small business databases.
+"sickn33/agentic-awesome-skills:skills/advanced-analytics-dashboard":
+  skip: One of a set of near-identical record templates for small business databases.
+"sickn33/agentic-awesome-skills:skills/advanced-evaluation":
+  name: AI answer judge designer
+  summary: Say what good looks like. Get a scoring guide an AI can use to grade answers fairly, with bias checks.
+  task: test-and-fix-code
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Judge bias is subtle and the setup needs careful choices.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+"sickn33/agentic-awesome-skills:skills/advogado-criminal":
+  skip: Written for one country or language, or tied to one author's own setup.
+"sickn33/agentic-awesome-skills:skills/advogado-especialista":
+  skip: Written for one country or language, or tied to one author's own setup.
+"sickn33/agentic-awesome-skills:skills/aegisops-ai":
+  skip: Offensive or hacking-focused security work, or generic security material we will not list.
+"sickn33/agentic-awesome-skills:skills/agent-creator":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/agent-evals":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/agent-evaluation":
+  skip: Same skill name and job as a copy in another library we import; keep one.
+"sickn33/agentic-awesome-skills:skills/agent-evaluation-reporting":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/agent-framework-azure-ai-py":
+  skip: Thin, narrow or not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/agent-harness-fault-injection":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/agent-manager-skill":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/agent-memory":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/agent-memory-discipline":
+  name: AI memory habit setter
+  summary: Connect any memory tool. Get clear rules for when your AI recalls and saves decisions, so it stops repeating itself.
+  task: set-up-ai
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: It is a short set of standing rules, not a long analysis.
+  inputs: [{type: brief, required: false}]
+  outputs: [{type: skill_files}]
+  needs: use a memory tool or a notes folder
+  author: mnemoverse
+  author_url: https://github.com/mnemoverse/agent-memory-discipline
+"sickn33/agentic-awesome-skills:skills/agent-memory-mcp":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/agent-memory-systems":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/agent-observability":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/agent-orchestration-improve-agent":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/agent-orchestration-multi-agent-optimize":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/agent-orchestrator":
+  skip: Written for one country or language, or tied to one author's own setup.
+"sickn33/agentic-awesome-skills:skills/agent-qa-authoring":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/agent-qa-debug-fix":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/agent-qa-result-triage":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/agent-reels":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/agent-self-scheduling":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/agent-squad":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/agent-tool-builder":
+  name: AI tool designer
+  summary: Describe what your AI needs to do. Get clear tool definitions it can call without guessing or failing silently.
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Good descriptions and error handling take careful drafting.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: tool_connection}]
+"sickn33/agentic-awesome-skills:skills/agentflow":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/agentfolio":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/agentic-actions-auditor":
+  name: AI workflow security checker
+  summary: Point it at a repo. Get a report on where outside text could reach an AI agent in your GitHub workflows.
+  task: secure-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: It traces how untrusted data flows through several files.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: security_report}]
+  needs: read your project files
+"sickn33/agentic-awesome-skills:skills/agentic-test-audit":
+  name: Test suite auditor
+  summary: Point it at a Python project. Get a list of weak, flaky, slow and useless tests, checked by mutation.
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It runs many code variants and judges which results matter.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: test_report}]
+  needs: run code and read your project files
+  author: Tim Richardson
+  author_url: https://github.com/timini/agentic-verification
+"sickn33/agentic-awesome-skills:skills/agentic-verify":
+  name: Change test prover
+  summary: Give it a Python change. Get tests that fail whenever that change is broken, proven by code mutations.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It loops between mutating code and writing tests until they bite.
+  inputs: [{type: code_change, required: true}]
+  outputs: [{type: test_report}]
+  needs: run code and read your project files
+  author: Tim Richardson
+  author_url: https://github.com/timini/agentic-verification
+"sickn33/agentic-awesome-skills:skills/agentmail":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/agentphone":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/agents-generator":
+  skip: Thin, narrow or not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/agents-md":
+  name: Agent instructions auditor
+  summary: Point it at your repo. Get a short, checked AGENTS.md with real commands and no guesses.
+  task: set-up-ai
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It checks each command against the repo before writing it.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: skill_files}]
+  needs: read your project files
+"sickn33/agentic-awesome-skills:skills/agents-v2-py":
+  skip: Thin, narrow or not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/agenttrace-session-audit":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/agy-auto":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/agy-delegate":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/ai-agent-development":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/ai-agent-evaluation-benchmarking":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/ai-agent-security":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/ai-agent-tool-routing":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/ai-agents-architect":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/ai-analyzer":
+  skip: Thin, narrow or not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/ai-code-generation-guardrails":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/ai-coding-agent-guardrails":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/ai-dev-jobs-mcp":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/ai-engineer":
+  skip: Thin, narrow or not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/ai-engineering-toolkit":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/ai-headshot-studio":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/ai-image-generation-studio":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/ai-inference-service-mesh":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/ai-logo-maker":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/ai-loop":
+  skip: Thin, narrow or not distinct enough to list.
+"sickn33/agentic-awesome-skills:skills/ai-md":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/ai-ml":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/ai-multilingual-dubbing":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/ai-native-cli":
+  name: Agent-friendly CLI designer
+  summary: Describe your command-line tool. Get rules and a check so AI agents can run it safely with clean output.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It applies a long rule set but each rule is checkable.
+  inputs: [{type: codebase, required: false}, {type: brief, required: true}]
+  outputs: [{type: plan}]
+  author: ChaosRealmsAI
+  author_url: https://github.com/ChaosRealmsAI/agent-cli-spec
+"sickn33/agentic-awesome-skills:skills/ai-photo-restyler":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/ai-pipeline-orchestration":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/ai-podcast-voiceover":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/ai-product":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/ai-prompt-regression-testing":
+  name: Prompt change tester
+  summary: Give it a prompt change and a fixed set of cases. Get a clear report of what got better or worse.
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It follows a set method but must read mixed results with care.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: test_report}]
+  author: Ranjeet2063
+  author_url: https://github.com/Ranjeet2063/agentic-awesome-skills
+"sickn33/agentic-awesome-skills:skills/ai-red-teaming":
+  skip: Offensive or hacking-focused security work, or generic security material we will not list.
+"sickn33/agentic-awesome-skills:skills/ai-security-hardening":
+  skip: Offensive or hacking-focused security work, or generic security material we will not list.
+"sickn33/agentic-awesome-skills:skills/ai-seo":
+  skip: Copy of a skill from anthropics/skills, marketingskills or addyosmani, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/ai-sre-incident-response":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/ai-studio-image":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/ai-wrapper-product":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/aident-loadout":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/aider-delegate":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/airflow-dag-patterns":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/airtable-automation":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/akf-trust-metadata":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/alerting-oncall":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/algolia-search":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/algorithmic-art":
+  skip: Copy of a skill from anthropics/skills, marketingskills or addyosmani, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/alpha-vantage":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/alternatives-pages":
+  skip: Near-copy of the competitor pages skill in coreyhaines31/marketingskills, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/altorank":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/alumni-re-hire-tracker":
+  skip: One of a set of near-identical record templates for small business databases.
+"sickn33/agentic-awesome-skills:skills/amazon-alexa":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/amplitude-automation":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/analytics":
+  skip: Copy of a skill from anthropics/skills, marketingskills or addyosmani, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/analytics-product":
+  skip: Written for one country or language, or tied to one author's own setup.
+"sickn33/agentic-awesome-skills:skills/analytics-tracking":
+  skip: Copy of a skill from anthropics/skills, marketingskills or addyosmani, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/analyze-project":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/andrej-karpathy":
+  name: Careful coding rules
+  summary: Add four habits to your AI coder. Get smaller, simpler changes that state their assumptions and prove they work.
+  task: build-software
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: It is a short set of habits, not a long process.
+  inputs: [{type: codebase, required: false}]
+  outputs: [{type: code_change}]
+  author: multica-ai
+  author_url: https://github.com/multica-ai/andrej-karpathy-skills
+"sickn33/agentic-awesome-skills:skills/android-cli":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/android-dev":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/android-jetpack-compose-expert":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/android-ui-journey-testing":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/android_ui_verification":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/angular":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/angular-best-practices":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/angular-migration":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/angular-state-management":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/angular-ui-patterns":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/animejs-animation":
+  name: Web animation builder
+  summary: Describe the motion. Get staggered, timed and SVG animations built with Anime.js.
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans the timeline, then writes the code.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: web_app}]
+  needs: run code and open a browser
+"sickn33/agentic-awesome-skills:skills/announcement-board":
+  skip: One of a set of near-identical record templates for small business databases.
+"sickn33/agentic-awesome-skills:skills/anti-deception":
+  name: Pressure-proof answer checker
+  summary: Use it when someone pushes your AI to agree or sign off. Get answers that separate evidence from pressure.
+  task: think-and-decide
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It must spot pressure tactics and weigh the evidence.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: feedback_notes}]
+  author: Ejentum
+  author_url: https://github.com/ejentum/ejentum-mcp
+"sickn33/agentic-awesome-skills:skills/anti-reversing-techniques":
+  skip: Offensive or hacking-focused security work, or generic security material we will not list.
+"sickn33/agentic-awesome-skills:skills/anti-sleep":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/anti-slop-design":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/anti-sycophancy":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/anti-ui-slop":
+  name: Product-true UI designer
+  summary: Give it your product and screen. Get an interface built from your own design system, with every state covered.
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans the screen job first, then builds and inspects it.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: web_page}, {type: design_direction}]
+  needs: read your project files and open a browser
+  author: UIZZE
+  author_url: https://github.com/uizze/uizze
+"sickn33/agentic-awesome-skills:skills/antigravity-agent-manager":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/antigravity-design-expert":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/antigravity-maintainer-batch-release":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/antigravity-skill-orchestrator":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/antigravity-workflows":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.
+"sickn33/agentic-awesome-skills:skills/anywrite":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/aomi-transact":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/api-analyzer":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/api-and-interface-design":
+  skip: Copy of a skill from anthropics/skills, marketingskills or addyosmani, which we take from the source.
+"sickn33/agentic-awesome-skills:skills/api-contract-testing":
+  name: API contract tester
+  summary: Give it an API and its users. Get tests that catch breaking changes between the two before they ship.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It maps both sides of the contract, then writes targeted tests.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: test_report}]
+  needs: run code and read your project files
+"sickn33/agentic-awesome-skills:skills/api-design-principles":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/api-designer":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/api-documentation":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/api-documentation-generator":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/api-documenter":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/api-endpoint-builder":
+  skip: One of a set of near-identical record templates for small business databases.
+"sickn33/agentic-awesome-skills:skills/api-fuzzing-bug-bounty":
+  skip: Offensive or hacking-focused security work, or generic security material we will not list.
+"sickn33/agentic-awesome-skills:skills/api-integration":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/api-integration-architect":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/api-onboarding":
+  name: Developer onboarding improver
+  summary: Describe your API sign-up path. Get a plan that cuts the time to a developer's first working call.
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It audits each step and ranks fixes.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+  author: jonathimer
+  author_url: https://github.com/jonathimer/devmarketing-skills
+"sickn33/agentic-awesome-skills:skills/api-patterns":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/api-rate-limit-handler":
+  name: API retry handler
+  summary: Name the API. Get safe code for waiting, retrying and backing off when it says slow down.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: Retry rules need care to avoid doubled actions.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and read your project files
+  author: Prajeeth-12
+  author_url: https://github.com/Prajeeth-12
+"sickn33/agentic-awesome-skills:skills/api-sdk-generator":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/api-security":
+  skip: Offensive or hacking-focused security work, or generic security material we will not list.
+"sickn33/agentic-awesome-skills:skills/api-security-best-practices":
+  name: API security checker
+  summary: Point it at your API routes. Get a check of sign-in, access rules and input, with fixes for each gap.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: Access rules fail in subtle ways that need careful reading.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: security_report}, {type: code_change}]
+  needs: read your project files
+"sickn33/agentic-awesome-skills:skills/api-security-testing":
+  skip: Offensive or hacking-focused security work, or generic security material we will not list.
+"sickn33/agentic-awesome-skills:skills/api-testing-observability-api-mock":
+  skip: Thin, generic or a near-copy of another skill in this set or one we have.
+"sickn33/agentic-awesome-skills:skills/apify-actor-development":
+  name: "Apify Actor builder"
+  summary: "Describe the task to automate. Get an Apify Actor project with inputs, outputs and deploy steps. Needs a paid Apify account."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It picks a template, then writes and tests the Actor code."
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: "run code and use the Apify command line tool"
+  paid: "Apify"
+"sickn33/agentic-awesome-skills:skills/apify-actorization":
+  name: "Apify Actor converter"
+  summary: "Give it an existing script or project. Get it ready to run as an Apify Actor."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It reads your code, then wraps it the way Apify expects."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: "run code and use the Apify command line tool"
+  paid: "Apify"
+"sickn33/agentic-awesome-skills:skills/apify-audience-analysis":
+  name: Audience profile analyst
+  summary: Give it a brand or account. Get who follows it, what they like and how engaged they are. Collects data from websites.
+  task: understand-customers
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It gathers figures, then reads the pattern behind them.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run code and use your Apify token
+  paid: "Apify"
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/apify-brand-reputation-monitoring":
+  name: Brand mention tracker
+  summary: Give it a brand name. Get reviews, ratings and mentions from many sites in one report. Collects data from websites.
+  task: understand-customers
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It collects mentions, then judges tone and spots problems.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: voc_reviews}, {type: audit_report}]
+  needs: run code and use your Apify token
+  paid: "Apify"
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/apify-competitor-intelligence":
+  skip: Includes email extraction for competitor contacts, which breaks our contact-details rule.
+"sickn33/agentic-awesome-skills:skills/apify-content-analytics":
+  name: Social content results reader
+  summary: Give it social accounts. Get engagement figures and which posts did best. Collects data from websites.
+  task: grow-social
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It compares figures across posts and explains what worked.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run code and use your Apify token
+  paid: "Apify"
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/apify-ecommerce":
+  name: Store product data collector
+  summary: Give it a product search or store link. Get prices, reviews and seller details in a table. Collects data from websites.
+  task: study-competitors
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It pulls listed facts into a table without much judgment.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: spreadsheet}]
+  needs: run code and use your Apify token
+  paid: "Apify"
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/apify-facebook-ads-library-scraper":
+  name: Facebook ad library collector
+  summary: Give it a brand or keyword. Get its live Facebook ads from the public Ad Library. Collects data from websites.
+  task: study-competitors
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It fetches public ads and lists them.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: ad_breakdowns}]
+  needs: run code and use your Apify token
+  paid: "Apify"
+  author: harshmaur
+  author_url: https://github.com/harshmaur/apify-facebook-ads-library-scraper
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/apify-generate-output-schema":
+  name: "Apify output schema writer"
+  summary: "Give it an Apify Actor. Get output schema files that show its results as a clear table. Needs a paid Apify account."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads what the code saves, then writes matching schema files."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: "read your project files"
+  paid: "Apify"
+"sickn33/agentic-awesome-skills:skills/apify-influencer-discovery":
+  name: Influencer shortlist builder
+  summary: Give it a niche. Get creators with follower counts, engagement and fit notes. Collects data from websites.
+  task: grow-social
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It gathers public figures, then weighs which creators fit.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: shortlist}]
+  needs: run code and use your Apify token
+  paid: "Apify"
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/apify-integration-development":
+  skip: Works only with one paid or hosted service, or scrapes sites.
+"sickn33/agentic-awesome-skills:skills/apify-lead-generation":
+  skip: Collects business emails, phones and other contact details, which breaks our contact-details rule.
+"sickn33/agentic-awesome-skills:skills/apify-linkedin-jobs-scraper":
+  skip: Exports recruiter names and profile links from LinkedIn, which breaks our people-details rule.
+"sickn33/agentic-awesome-skills:skills/apify-market-research":
+  skip: Includes pulling contact details from business pages, which breaks our contact-details rule.
+"sickn33/agentic-awesome-skills:skills/apify-reddit-scraper":
+  name: Reddit thread collector
+  summary: Give it a topic or subreddit. Get posts and comments in a table you can study. Collects data from websites.
+  task: understand-customers
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It fetches public posts and lists them.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: voc_reviews}]
+  needs: run code and use your Apify token
+  paid: "Apify"
+  author: harshmaur
+  author_url: https://github.com/harshmaur/apify-reddit-scraper-skill
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/apify-tiktok-scraper":
+  name: TikTok research collector
+  summary: Give it a hashtag or account. Get public videos, comments and stats. Collects data from websites.
+  task: grow-social
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It fetches public posts and lists them.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: spreadsheet}]
+  needs: run code and use your Apify token
+  paid: "Apify"
+  author: harshmaur
+  author_url: https://github.com/harshmaur/apify-tiktok-scraper
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/apify-trend-analysis":
+  name: Rising trend spotter
+  summary: Give it a topic. Get what is rising on Google Trends and social sites. Collects data from websites.
+  task: plan-strategy
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It gathers signals, then judges which trends will last.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run code and use your Apify token
+  paid: "Apify"
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/apify-ultimate-scraper":
+  skip: Built around contact and email scraping tools, which breaks our contact-details rule.
+"sickn33/agentic-awesome-skills:skills/apk-redteam-pipeline":
+  skip: Offensive or hacking-focused security work, or generic security material we will not list.
+"sickn33/agentic-awesome-skills:skills/apk-reverse":
+  skip: Offensive or hacking-focused security work, or generic security material we will not list.
+"sickn33/agentic-awesome-skills:skills/app-builder":
+  skip: Only works inside one product's internals, routes to the repo's own skills, or is too narrow.

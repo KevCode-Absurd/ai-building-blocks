@@ -1,0 +1,42 @@
+slug: twelve-platform-ad-account-auditor
+name: Twelve-platform ad account auditor
+summary: Give it your ad exports and goal. Get an evidence-based audit across Google, Meta, TikTok, LinkedIn and more, with next steps.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: performance_sheet
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: audit_report
+    required: true
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Daniel Agrici
+  repo: AgriciDaniel/claude-ads
+  path: ads
+  url: https://github.com/AgriciDaniel/claude-ads/tree/main/ads
+  licence: MIT
+  licence_file: LICENSE
+  commit: fc3908e
+  original_name: ads
+  author: Daniel Agrici
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ads skill
+    by: Daniel Agrici
+    url: https://github.com/AgriciDaniel/claude-ads/tree/main/ads
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Daniel Agrici
+    url: https://github.com/AgriciDaniel
+    used: Wrote the skill; Daniel Agrici shared it in their collection.

@@ -1,0 +1,32 @@
+slug: api-to-mcp-server-builder
+name: API to MCP server builder
+summary: Give it an API spec. Get an MCP server in Python or TypeScript that lets your AI use that API.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: tool_connection
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/mcp-server-builder
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/mcp-server-builder
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: mcp-server-builder
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mcp-server-builder skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/mcp-server-builder
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

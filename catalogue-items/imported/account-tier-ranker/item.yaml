@@ -1,0 +1,39 @@
+slug: account-tier-ranker
+name: Account tier ranker
+summary: Give it your accounts. Get each scored on fit and activity and sorted into tiers, so you know where to spend time.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: false
+  - type: tool_connection
+    required: false
+outputs:
+  - type: shortlist
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/account-tiering
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/account-tiering
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: account-tiering
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: account-tiering skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/account-tiering
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

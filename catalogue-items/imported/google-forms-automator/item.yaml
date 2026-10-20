@@ -1,0 +1,37 @@
+slug: google-forms-automator
+name: Google Forms automator
+summary: Say what should happen on each form reply. Get a form plan and Apps Script that emails alerts or logs rows.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/google-no-code
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/google-no-code
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: google-no-code
+  author: WHOISABHISHEKADHIKARI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: google-no-code skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/google-no-code
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: WHOISABHISHEKADHIKARI
+    url: https://github.com/WHOISABHISHEKADHIKARI
+    used: Wrote the skill; sickn33 shared it in their collection.

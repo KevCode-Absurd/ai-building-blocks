@@ -1,0 +1,32 @@
+slug: vendor-comparison-writer
+name: Vendor comparison writer
+summary: Name a vendor or two proposals. Get the cost, risks and a clear pick, with points to negotiate.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: operations/skills/vendor-review
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: vendor-review
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: vendor-review skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/vendor-review
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

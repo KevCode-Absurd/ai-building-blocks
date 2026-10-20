@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It matches code against a fixed list of risky patterns.
+new_slug: insecure-code-catcher
+name: Insecure code catcher
+summary: Turn it on. Get a warning when your AI writes risky code, like injection, XSS or unsafe commands.
+job: secure-code
+headline: Insecure code catcher
+subhead: Turn it on. Get a warning when your AI writes risky code, like injection, XSS or unsafe commands.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run hooks in Claude Code.

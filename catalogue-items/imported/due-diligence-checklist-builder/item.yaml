@@ -1,0 +1,32 @@
+slug: due-diligence-checklist-builder
+name: Due diligence checklist builder
+summary: Describe the deal and sector. Get a request list by workstream with status tracking and red flag notes.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/private-equity/skills/dd-checklist
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/private-equity/skills/dd-checklist
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: dd-checklist
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: dd-checklist skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/private-equity/skills/dd-checklist
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

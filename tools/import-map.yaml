@@ -1,0 +1,854 @@
+# Our name, job and summary for each imported skill (tools/import-skills.mjs), keyed "<repo>:<folder in the repo>".
+# Names are job titles. Summaries say what you get, in 22 words or fewer, grade 10 or below.
+# skip: <reason> leaves a skill out even when its licence allows it.
+
+# ---------- anthropics/skills ----------
+"anthropics/skills:skills/academy-guide":
+  skip: Only points people to Claude Academy courses, so it is useful inside Anthropic's own products only.
+"anthropics/skills:skills/brand-guidelines":
+  skip: Applies Anthropic's own brand colours and fonts, so it is useful for Anthropic's look only.
+"anthropics/skills:skills/algorithmic-art":
+  name: Generative art maker
+  summary: Describe the look you want. Get an interactive generative art piece you can tweak and repeat.
+  task: make-images
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a set method but makes many small design choices.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: web_app}]
+  needs: run code and open a browser
+"anthropics/skills:skills/canvas-design":
+  name: Poster designer
+  summary: Describe the poster or artwork. Get a finished PNG or PDF design with its own clear look.
+  task: design-work
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It plans a look first, then draws it with set steps.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: image}, {type: document}]
+  needs: run code and save files
+"anthropics/skills:skills/claude-api":
+  name: Claude app builder
+  summary: Say what to build with Claude. Get working code that calls the Claude API the right way.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It picks the right setup, then follows reference docs.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: code_change}]
+  needs: run code and read your project files
+"anthropics/skills:skills/discernment-nudge":
+  name: Answer double-checker
+  summary: Get two or three sharp follow-up questions after an answer, so you check the facts and the thinking.
+  task: think-and-decide
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It adds a few short questions to an answer.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: feedback_notes}]
+"anthropics/skills:skills/frontend-design":
+  name: Interface designer
+  summary: Describe the page or app. Get a built interface with a clear look that does not feel like a template.
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks a look first, then builds it with a few checks.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: web_app}]
+  needs: run code and open a browser
+"anthropics/skills:skills/internal-comms":
+  name: Internal update writer
+  summary: Give it the facts. Get a status report, leadership update, newsletter or incident note in a clear format.
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a set format with the facts you give it.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]
+"anthropics/skills:skills/mcp-builder":
+  name: Tool connector builder
+  summary: Name the service. Get an MCP server that lets your AI use its tools, built and ready to test.
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It plans the tools, builds a server and tests it.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: tool_connection}]
+  needs: run code and reach the service's API docs
+"anthropics/skills:skills/skill-creator":
+  name: Skill writer
+  summary: Describe the job. Get a new skill with test prompts and a description that makes it trigger well.
+  task: make-skills
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It drafts, tests and improves a skill in rounds.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: skill_files}]
+  needs: run code
+"anthropics/skills:skills/slack-gif-creator":
+  name: Slack GIF maker
+  summary: Describe the animation. Get a GIF sized and checked to work in Slack.
+  task: make-images
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows set size rules and a few animation steps.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: image}]
+  needs: run code and save files
+"anthropics/skills:skills/theme-factory":
+  name: Slide and page styler
+  summary: Pick one of ten themes or ask for a new one. Get your slides, docs or page restyled to match.
+  task: design-work
+  role: render
+  level: beginner
+  thinking: low
+  thinking_why: It applies a ready theme to work that already exists.
+  inputs: [{type: document, required: true}]
+  outputs: [{type: document}]
+"anthropics/skills:skills/web-artifacts-builder":
+  name: Single-file app builder
+  summary: Describe the app. Get a working React web app bundled into one HTML file you can open or share.
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It sets up a project, builds it and bundles it with set steps.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: web_app}]
+  needs: run code
+"anthropics/skills:skills/webapp-testing":
+  name: Web app tester
+  summary: Point it at your local app. Get its screens tried in a real browser, with screenshots and error logs.
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a set test method and reads what the browser shows.
+  inputs: [{type: web_app, required: true}]
+  outputs: [{type: test_report}]
+  needs: run code and open a browser
+
+# ---------- openai/skills ----------
+"openai/skills:skills/.curated/aspnet-core":
+  name: ASP.NET web app builder
+  summary: Describe the web app or API. Get ASP.NET Core code that follows current official guidance.
+  task: build-websites
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows official guidance but must fit your code.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: code_change}]
+  needs: run code and read your project files
+"openai/skills:skills/.curated/chatgpt-apps":
+  name: ChatGPT app builder
+  summary: Describe the tool you want inside ChatGPT. Get a working Apps SDK project with its server and screen.
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It designs tools, a server and a widget that must work together.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: tool_connection}]
+  needs: run code and open a browser
+"openai/skills:skills/.curated/cli-creator":
+  name: Command-line tool builder
+  summary: Give it an API doc or script. Get a command-line tool that returns clean JSON and handles sign-in.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows a set build method but must fit the API.
+  inputs: [{type: brief, required: true}, {type: codebase, required: false}]
+  outputs: [{type: code_change}]
+  needs: run code and read API docs
+"openai/skills:skills/.curated/cloudflare-deploy":
+  name: Cloudflare publisher
+  summary: Point it at your project. Get it live on Cloudflare, with the link to open.
+  task: ship-and-host
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It follows a set deploy path.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: deploy_url}]
+  needs: run commands and reach your Cloudflare account
+"openai/skills:skills/.curated/define-goal":
+  name: Goal sharpener
+  summary: Give it a fuzzy aim. Get a clear goal with a number to hit and a finish line.
+  task: plan-strategy
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It asks a few questions and writes the goal.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: plan}]
+"openai/skills:skills/.curated/gh-address-comments":
+  name: Review comment fixer
+  summary: Point it at your open pull request. Get each reviewer comment handled and the code updated.
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads each comment and judges the right change.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run the GitHub CLI and reach your repo
+"openai/skills:skills/.curated/gh-fix-ci":
+  name: CI failure fixer
+  summary: Point it at a failing pull request. Get the cause of the failed GitHub check and a fix plan.
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads logs, finds the cause and plans a fix.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: test_report}, {type: code_change}]
+  needs: run the GitHub CLI and reach your repo
+"openai/skills:skills/.curated/hatch-pet":
+  skip: Builds animated pets for the Codex app only, so it is useful inside one product only.
+"openai/skills:skills/.curated/jupyter-notebook":
+  name: Notebook builder
+  summary: Say what to explore or teach. Get a clean Jupyter notebook, ready to run.
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It fills a ready template with your topic.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]
+  needs: run code
+"openai/skills:skills/.curated/linear":
+  name: Linear ticket manager
+  summary: Tell it the work. Get Linear issues read, created or updated for you.
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It turns a request into a few ticket changes.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+  needs: reach your Linear workspace
+"openai/skills:skills/.curated/migrate-to-codex":
+  skip: Moves settings into the Codex app only, so it is useful inside one product only.
+"openai/skills:skills/.curated/netlify-deploy":
+  name: Netlify publisher
+  summary: Point it at your site. Get it live on Netlify as a preview or production deploy, with the link.
+  task: ship-and-host
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It follows a set deploy path.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: deploy_url}]
+  needs: run commands and reach your Netlify account
+"openai/skills:skills/.curated/notion-knowledge-capture":
+  name: Notion wiki writer
+  summary: Give it a chat or notes. Get a linked Notion page for the decision, how-to or FAQ.
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It sorts notes into a set page format.
+  inputs: [{type: meeting_notes, required: true}]
+  outputs: [{type: document}]
+  needs: reach your Notion workspace
+"openai/skills:skills/.curated/notion-meeting-intelligence":
+  name: Meeting pre-read writer
+  summary: Name the meeting. Get an agenda and pre-read built from your Notion pages and research.
+  task: organise-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It gathers context, then shapes it for the people attending.
+  inputs: [{type: brief, required: true}, {type: meeting_notes, required: false}]
+  outputs: [{type: meeting_notes}]
+  needs: reach your Notion workspace
+"openai/skills:skills/.curated/notion-research-documentation":
+  name: Notion research writer
+  summary: Ask a question. Get a cited brief or comparison built from your Notion pages.
+  task: organise-work
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It gathers from many pages and writes one clear brief.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+  needs: reach your Notion workspace
+"openai/skills:skills/.curated/notion-spec-to-implementation":
+  name: Spec to task planner
+  summary: Point it at a spec in Notion. Get an implementation plan and tracked tasks.
+  task: organise-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It breaks a spec into ordered steps.
+  inputs: [{type: document, required: true}]
+  outputs: [{type: plan}]
+  needs: reach your Notion workspace
+"openai/skills:skills/.curated/openai-docs":
+  name: OpenAI docs guide
+  summary: Ask how to build with OpenAI. Get current answers with citations and the right model for the job.
+  task: build-software
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: It looks up official docs and reports them.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+  needs: search the web or reach the OpenAI docs
+"openai/skills:skills/.curated/pdf":
+  name: PDF maker and reader
+  summary: Give it a PDF or a brief. Get the text pulled out or a new PDF with its layout checked.
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows set steps and checks each page.
+  inputs: [{type: document, required: false}, {type: brief, required: false}]
+  outputs: [{type: document}]
+  needs: run code
+"openai/skills:skills/.curated/playwright":
+  name: Browser task runner
+  summary: Describe a browser task. Get pages visited, forms filled, and screenshots or data saved.
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It steps through pages and reacts to what it sees.
+  inputs: [{type: web_app, required: true}]
+  outputs: [{type: test_report}]
+  needs: run commands and open a browser
+"openai/skills:skills/.curated/playwright-interactive":
+  name: Live screen debugger
+  summary: Describe the screen bug. Get your web or Electron app opened, tried out and fixed step by step.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It loops through trying, looking and fixing.
+  inputs: [{type: web_app, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and open a browser
+"openai/skills:skills/.curated/render-deploy":
+  name: Render publisher
+  summary: Point it at your project. Get it deployed on Render, with a setup file and the link.
+  task: ship-and-host
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It follows a set deploy path.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: deploy_url}]
+  needs: run commands and reach your Render account
+"openai/skills:skills/.curated/screenshot":
+  name: Screen capture taker
+  summary: Ask for a screen, a window or a part of one. Get a saved screenshot.
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It runs one simple capture.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: image}]
+  needs: capture your screen
+"openai/skills:skills/.curated/security-best-practices":
+  name: Code security reviewer
+  summary: Point it at your Python, JavaScript, TypeScript or Go code. Get a ranked list of security gaps, each with a fix.
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It checks code against a known list and ranks what it finds.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: security_report}]
+  needs: read your project files
+"openai/skills:skills/.curated/security-ownership-map":
+  name: Code ownership analyst
+  summary: Point it at a git repo. Get who owns the sensitive code and where one person is the only owner.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It runs a set analysis, then explains the findings.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: security_report}]
+  needs: run code and read your git history
+"openai/skills:skills/.curated/security-threat-model":
+  name: Threat model writer
+  summary: Point it at your code. Get a short threat model of what attackers could reach, how, and how to stop them.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It reasons about attackers across the whole codebase.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: security_report}]
+  needs: read your project files
+"openai/skills:skills/.curated/sentry":
+  name: Production error summarizer
+  summary: Ask about recent errors. Get the Sentry issues and events summed up with the key details.
+  task: test-and-fix-code
+  role: compress
+  level: intermediate
+  thinking: low
+  thinking_why: It reads data and reports it.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: test_report}]
+  needs: run the Sentry CLI and reach your Sentry account
+"openai/skills:skills/.curated/speech":
+  name: Voiceover maker
+  summary: Give it your text. Get spoken audio in a built-in voice, for narration, voiceovers or batches.
+  task: work-with-audio
+  role: render
+  level: beginner
+  thinking: low
+  thinking_why: It runs a set tool on text you provide.
+  inputs: [{type: copy_draft, required: true}]
+  outputs: [{type: audio}]
+  needs: run code and reach the OpenAI Audio API
+"openai/skills:skills/.curated/transcribe":
+  name: Recording transcriber
+  summary: Give it audio or video. Get the words written out, with each speaker labelled.
+  task: work-with-audio
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: It runs a set tool and tidies the result.
+  inputs: [{type: audio, required: true}]
+  outputs: [{type: transcript}]
+  needs: run code and reach the OpenAI Audio API
+  paid: "OpenAI API"
+"openai/skills:skills/.curated/vercel-deploy":
+  name: Vercel publisher
+  summary: Say "deploy my app". Get it live on Vercel as a preview or production site, with the link.
+  task: ship-and-host
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows a set deploy path.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: deploy_url}]
+  needs: run commands and reach your Vercel account
+"openai/skills:skills/.curated/winui-app":
+  name: Windows app builder
+  summary: Describe the Windows desktop app. Get a WinUI 3 project set up and built to Microsoft guidance.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows official guidance but must fit your app.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code on Windows
+"openai/skills:skills/.curated/yeet":
+  name: Commit and pull request sender
+  summary: Say the word. Get your changes committed, pushed and opened as a GitHub pull request in one go.
+  task: ship-and-host
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It runs a fixed git sequence.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run git and the GitHub CLI
+"openai/skills:skills/.system/imagegen":
+  name: Image maker and editor
+  summary: Describe a picture or give one to change. Get new images, variants or transparent cutouts.
+  task: make-images
+  role: render
+  level: beginner
+  thinking: low
+  thinking_why: It turns a clear description into one image request.
+  inputs: [{type: brief, required: true}, {type: image, required: false}]
+  outputs: [{type: image}]
+  needs: make images
+"openai/skills:skills/.system/openai-docs":
+  skip: Copy of the openai-docs skill in skills/.curated, which we keep.
+"openai/skills:skills/.system/plugin-creator":
+  skip: Builds plugins for the Codex app only, so it is useful inside one product only.
+"openai/skills:skills/.system/skill-creator":
+  name: Skill builder
+  summary: Describe what your AI should learn. Get a skill folder with clear instructions and helper files.
+  task: make-skills
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a set method with a few design choices.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: skill_files}]
+  needs: run code
+"openai/skills:skills/.system/skill-installer":
+  skip: Installs skills into the Codex app only, so it is useful inside one product only.
+
+# ---------- mattpocock/skills ----------
+"mattpocock/skills:skills/engineering/ask-matt":
+  skip: Only routes between Matt Pocock's own skills, so it needs the whole set.
+"mattpocock/skills:skills/engineering/code-review":
+  name: Code change reviewer
+  summary: Point it at a set of changes. Get a review against your coding standards and your spec, side by side.
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It runs two reviews at once and compares them.
+  inputs: [{type: code_change, required: true}]
+  outputs: [{type: audit_report}]
+  needs: read your project files and run subagents
+"mattpocock/skills:skills/engineering/codebase-design":
+  name: Module design coach
+  summary: Name the part you want to improve. Get a simpler design with clear boundaries that is easier to test.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Good design needs weighing trade-offs across the code.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: plan}]
+  needs: read your project files
+"mattpocock/skills:skills/engineering/diagnosing-bugs":
+  name: Bug diagnoser
+  summary: Describe what is broken or slow. Get the cause found step by step and the fix checked.
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: Hard bugs need a loop of guessing, testing and ruling out.
+  inputs: [{type: codebase, required: true}, {type: question, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and read your project files
+"mattpocock/skills:skills/engineering/domain-modeling":
+  name: Project glossary writer
+  summary: Talk through your project's terms. Get a glossary and decision records so everyone uses the same words.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It asks about terms and writes them down.
+  inputs: [{type: codebase, required: false}, {type: question, required: true}]
+  outputs: [{type: document}]
+"mattpocock/skills:skills/engineering/grill-with-docs":
+  name: Design interviewer
+  summary: Give it a plan. Get tough questions until it holds, plus a glossary and decision records.
+  task: think-and-decide
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It probes every branch of a plan.
+  inputs: [{type: plan, required: true}]
+  outputs: [{type: document}]
+"mattpocock/skills:skills/engineering/implement":
+  skip: Only a short chain that calls the tdd and code-review skills, which we list on their own.
+"mattpocock/skills:skills/engineering/implement-spec":
+  name: Spec builder
+  summary: Give it a spec and tickets. Get the work built in code, tested and reviewed.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It builds across many files and checks as it goes.
+  inputs: [{type: document, required: true}, {type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and read your project files
+"mattpocock/skills:skills/engineering/improve-codebase-architecture":
+  name: Codebase architecture reviewer
+  summary: Point it at your code. Get an HTML report of design improvements, then work through the one you pick.
+  task: build-software
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: It scans a whole codebase and weighs design options.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: audit_report}]
+  needs: read your project files
+"mattpocock/skills:skills/engineering/pr":
+  name: Pull request writer
+  summary: Give it your changes. Get a clear pull request description a reviewer can follow.
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It summarises changes in a set format.
+  inputs: [{type: code_change, required: true}]
+  outputs: [{type: document}]
+"mattpocock/skills:skills/engineering/prototype":
+  name: Throwaway prototype builder
+  summary: Ask a design question. Get a quick prototype of the logic or the screen that answers it.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks a branch, then builds a small demo.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: web_app}]
+  needs: run code and open a browser
+"mattpocock/skills:skills/engineering/research":
+  name: Source-based researcher
+  summary: Ask a question. Get answers from trusted primary sources, saved as a Markdown file in your project.
+  task: build-software
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads sources and writes up what they say.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+  needs: search the web and save files
+"mattpocock/skills:skills/engineering/retro":
+  name: Coding session retro leader
+  summary: Finish a coding session. Get what slowed your AI down and the changes that would help next time.
+  task: build-software
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: It reads a whole session log and finds patterns.
+  inputs: [{type: codebase, required: false}]
+  outputs: [{type: lessons_register}]
+  needs: read your session logs
+"mattpocock/skills:skills/engineering/setup-matt-pocock-skills":
+  skip: Only sets up Matt Pocock's own skills, so it is no use on its own.
+"mattpocock/skills:skills/engineering/tdd":
+  name: Test-first coach
+  summary: Say what to build or fix. Get it done test first, in small steps from failing test to clean code.
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a set loop of test, code and tidy.
+  inputs: [{type: brief, required: true}, {type: codebase, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run code and tests
+"mattpocock/skills:skills/engineering/to-spec":
+  name: Spec writer
+  summary: Talk through your idea. Get the conversation turned into a spec and posted to your issue tracker.
+  task: build-software
+  role: compress
+  level: intermediate
+  thinking: low
+  thinking_why: It sums up a chat in a set format.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+  needs: reach your issue tracker
+"mattpocock/skills:skills/engineering/to-tickets":
+  name: Ticket planner
+  summary: Give it a plan or spec. Get small tickets that each say what blocks them, posted to your tracker.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It splits work into ordered pieces.
+  inputs: [{type: document, required: true}]
+  outputs: [{type: plan}]
+  needs: reach your issue tracker
+"mattpocock/skills:skills/engineering/triage":
+  name: Issue triager
+  summary: Point it at open issues and outside pull requests. Get each one sorted, checked and written up as a clear brief.
+  task: build-software
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It moves each issue through set steps.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: plan}]
+  needs: reach your issue tracker
+"mattpocock/skills:skills/engineering/wayfinder":
+  name: Big project mapper
+  summary: Give it a project too big for one session. Get a map of decisions, resolved one at a time.
+  task: plan-strategy
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: It plans a long project across many decisions.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+  needs: reach your issue tracker
+"mattpocock/skills:skills/engineering/wizard":
+  name: Setup wizard builder
+  summary: Describe a manual setup job. Get a script that walks you through each step and saves what you enter.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It scopes the steps, then builds a script.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code
+"mattpocock/skills:skills/in-progress/chief-of-staff":
+  name: Long-goal coordinator
+  summary: Give it a goal that takes days. Get helpers and schedules set up to work on it.
+  task: plan-strategy
+  role: orchestrate
+  level: expert
+  thinking: high
+  thinking_why: It plans short and long term at once.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: plan}]
+  needs: run subagents and set schedules
+"mattpocock/skills:skills/in-progress/claude-handoff":
+  skip: Hands work to a Claude Code background agent only, so it is useful inside one product only.
+"mattpocock/skills:skills/in-progress/loop-me":
+  name: Workflow spec interviewer
+  summary: Tell it the workflows you want to build. Get grilled with questions until each one is clear.
+  task: make-skills
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It asks questions and writes the answers down.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: plan}]
+"mattpocock/skills:skills/in-progress/setup-ts-deep-modules":
+  name: TypeScript module guard setter
+  summary: Point it at a TypeScript repo. Get dependency-cruiser set up so each package is reached only through its front door.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows a set setup but must fit your repo.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and read your project files
+"mattpocock/skills:skills/in-progress/writing-beats":
+  name: Article beat planner
+  summary: Give it raw notes. Get them arranged into a story of beats, with each term explained first.
+  task: write-and-tell-stories
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It orders ideas and checks each one is explained.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: plan}]
+"mattpocock/skills:skills/in-progress/writing-fragments":
+  name: Idea fragment miner
+  summary: Talk through a topic. Get raw fragments and ideas pulled out, with no structure yet.
+  task: write-and-tell-stories
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: It collects ideas without shaping them.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: source_text}]
+"mattpocock/skills:skills/in-progress/writing-shape":
+  name: Article shaper
+  summary: Give it raw material. Get it shaped into an article, paragraph by paragraph.
+  task: write-and-tell-stories
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It builds a draft in steps and checks each one.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: copy_draft}]
+"mattpocock/skills:skills/misc/git-guardrails-claude-code":
+  name: Git safety guard setter
+  summary: Say you want safe git. Get hooks that block risky commands like force push and hard reset before they run.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It sets up a fixed list of blocks.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and change your Claude Code settings
+"mattpocock/skills:skills/misc/migrate-to-shoehorn":
+  name: Test type fixer
+  summary: Point it at your tests. Get unsafe type casts swapped for shoehorn so test data stays typed.
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: low
+  thinking_why: It repeats one clear change across files.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and read your project files
+"mattpocock/skills:skills/misc/scaffold-exercises":
+  name: Course exercise scaffolder
+  summary: Describe your course section. Get exercise folders with problems, solutions and explainers that pass linting.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It builds a fixed folder layout.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code
+"mattpocock/skills:skills/misc/setup-pre-commit":
+  name: Pre-commit hook setter
+  summary: Point it at your repo. Get checks for formatting, types and tests that run before every commit.
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It follows a fixed setup.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run code and read your project files
+"mattpocock/skills:skills/productivity/grill-me":
+  skip: Only a short note that calls the grilling skill, which we list.
+"mattpocock/skills:skills/productivity/grilling":
+  name: Plan stress-tester
+  summary: Give it a plan or idea. Get a tough round of questions with a suggested answer to each.
+  task: think-and-decide
+  role: check
+  level: beginner
+  thinking: high
+  thinking_why: It works out which questions come first and why.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: feedback_notes}]
+"mattpocock/skills:skills/productivity/handoff":
+  name: Handoff note writer
+  summary: Finish a chat. Get it boiled down to a handoff note that another AI can pick up.
+  task: organise-work
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: It sums up a chat in a set format.
+  inputs: [{type: question, required: false}]
+  outputs: [{type: document}]
+"mattpocock/skills:skills/productivity/teach":
+  name: Skill teacher
+  summary: Say what you want to learn. Get lessons and cheat sheets that build over many sessions toward your goal.
+  task: think-and-decide
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans lessons around your goal and tracks progress.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+  needs: save files
+"mattpocock/skills:skills/productivity/to-questionnaire":
+  name: Questionnaire writer
+  summary: Tell it who you need answers from. Get a questionnaire aimed at what they know and you do not.
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It finds the knowledge gap before it writes questions.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+"mattpocock/skills:skills/productivity/wait-what":
+  name: Plain message re-pitcher
+  summary: Say you are lost. Get the last message said again in simple words, with a little context.
+  task: think-and-decide
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It rewrites one message more simply.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: document}]
+"mattpocock/skills:skills/productivity/writing-for-agents":
+  name: AI instruction writer
+  summary: Say which skill or instruction file you are writing. Get it written so your AI follows it well.
+  task: make-skills
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It applies a style guide to your draft.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: skill_files}]

@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It reads one list.
+new_slug: matlab-product-lister
+name: MATLAB product lister
+summary: Point it at a MATLAB install. Get a list of every product and add-on package in it.
+job: set-up-ai
+headline: MATLAB product lister
+subhead: Point it at a MATLAB install. Get a list of every product and add-on package in it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB.

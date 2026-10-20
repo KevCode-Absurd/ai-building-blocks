@@ -1,0 +1,37 @@
+slug: agent-self-improvement-loop-builder
+name: Agent self-improvement loop builder
+summary: Give it an AI agent and a test set. Get a loop that rewrites its prompts and skills until scores rise.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 14-agents/a-evolve
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/14-agents/a-evolve
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: evolving-ai-agents
+  author: A-EVO Lab
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: evolving-ai-agents skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/14-agents/a-evolve
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: A-EVO Lab
+    url: https://github.com/A-EVO-Lab
+    used: Wrote the skill; Orchestra Research shared it in their collection.

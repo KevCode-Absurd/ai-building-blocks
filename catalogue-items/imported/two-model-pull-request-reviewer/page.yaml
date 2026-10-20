@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Two models must challenge each other over many rounds.
+new_slug: two-model-pull-request-reviewer
+name: Two-model pull request reviewer
+summary: Give it a pull request. Get a review where two AI models argue over the code and agree on what to fix.
+job: test-and-fix-code
+headline: Two-model pull request reviewer
+subhead: Give it a pull request. Get a review where two AI models argue over the code and agree on what to fix.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your repo and call a second AI model.

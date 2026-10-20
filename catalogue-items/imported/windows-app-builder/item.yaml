@@ -1,0 +1,32 @@
+slug: windows-app-builder
+name: Windows app builder
+summary: Describe the Windows desktop app. Get a WinUI 3 project set up and built to Microsoft guidance.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/winui-app
+  url: https://github.com/openai/skills/tree/main/skills/.curated/winui-app
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: winui-app
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: winui-app skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/winui-app
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

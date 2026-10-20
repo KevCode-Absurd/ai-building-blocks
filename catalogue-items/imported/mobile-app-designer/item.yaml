@@ -1,0 +1,32 @@
+slug: mobile-app-designer
+name: Mobile app designer
+summary: Describe the app screen. Get a touch-first design that fits iOS or Android, with a risk score before you build.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: design_direction
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/mobile-design
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/mobile-design
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: mobile-design
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mobile-design skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/mobile-design
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

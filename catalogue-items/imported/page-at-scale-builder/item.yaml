@@ -1,0 +1,35 @@
+slug: page-at-scale-builder
+name: Page-at-scale builder
+summary: Give it a keyword pattern and data. Get a page template and plan for many useful search pages.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: page_layout_spec
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/programmatic-seo
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/programmatic-seo
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: programmatic-seo
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: programmatic-seo skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/programmatic-seo
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

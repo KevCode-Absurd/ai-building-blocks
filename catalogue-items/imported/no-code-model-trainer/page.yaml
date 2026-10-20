@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It drives an app with set steps and compares the results.
+new_slug: no-code-model-trainer
+name: No-code model trainer
+summary: Give it a data table. Get models trained and compared in the Learner apps, and the best one exported.
+job: build-software
+headline: No-code model trainer
+subhead: Give it a data table. Get models trained and compared in the Learner apps, and the best one exported.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with the Classification or Regression Learner app.

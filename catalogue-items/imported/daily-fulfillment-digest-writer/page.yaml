@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It groups orders by age.
+new_slug: daily-fulfillment-digest-writer
+name: Daily fulfillment digest writer
+summary: Run it each morning. Get open orders grouped by age, with holds and exceptions flagged for action.
+job: run-your-store
+headline: Daily fulfillment digest writer
+subhead: Run it each morning. Get open orders grouped by age, with holds and exceptions flagged for action.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin.

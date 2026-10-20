@@ -1,0 +1,32 @@
+slug: image-compressor
+name: Image compressor
+summary: Give it images. Get smaller WebP or PNG files that look the same and load faster.
+category: general
+boards: []
+type: skill
+role: render
+job: ops
+level: beginner
+inputs:
+  - type: image
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: Jim Liu
+  repo: JimLiu/baoyu-skills
+  path: skills/baoyu-compress-image
+  url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-compress-image
+  licence: MIT
+  licence_file: LICENSE
+  commit: "1567581"
+  original_name: baoyu-compress-image
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: baoyu-compress-image skill
+    by: Jim Liu
+    url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-compress-image
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

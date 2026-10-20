@@ -1,0 +1,33 @@
+slug: research-idea-workshop
+name: Research idea workshop
+summary: Name your research area. Get ideas built, challenged and ranked, with assumptions and a decision log.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: shortlist
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/scientific-brainstorming
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scientific-brainstorming
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: scientific-brainstorming
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: scientific-brainstorming skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/scientific-brainstorming
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

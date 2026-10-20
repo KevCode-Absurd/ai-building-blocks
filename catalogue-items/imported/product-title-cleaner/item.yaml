@@ -1,0 +1,32 @@
+slug: product-title-cleaner
+name: Product title cleaner
+summary: Give it your product list. Get tidy, consistent titles as a CSV for Shopify, plus a before and after sheet.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: Pro Skill Packs
+  repo: proskillpacks/skills
+  path: skills/ecommerce/product-title-cleaner
+  url: https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/product-title-cleaner
+  licence: MIT
+  licence_file: LICENSE
+  commit: e8c3393
+  original_name: product-title-cleaner
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: product-title-cleaner skill
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/product-title-cleaner
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: ai-task-scoper-for-supply-chain
+name: AI task scoper for supply chain
+summary: Describe a messy planning problem. Get one clear decision, an AI fit check and a safe hand-off plan.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/supply-chain-decision-to-delegation
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/supply-chain-decision-to-delegation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: supply-chain-decision-to-delegation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: supply-chain-decision-to-delegation skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/supply-chain-decision-to-delegation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

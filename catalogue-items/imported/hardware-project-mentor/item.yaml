@@ -1,0 +1,32 @@
+slug: hardware-project-mentor
+name: Hardware project mentor
+summary: Describe your sensor or device idea. Get a board pick, where readings go and a phased build plan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/skills/embedded-iot-mentor
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/embedded-iot-mentor
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: embedded-iot-mentor
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: embedded-iot-mentor skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/skills/embedded-iot-mentor
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

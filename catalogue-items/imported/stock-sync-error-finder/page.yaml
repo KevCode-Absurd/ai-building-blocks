@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It must tell real drift from normal moves.
+new_slug: stock-sync-error-finder
+name: Stock sync error finder
+summary: Get products with negative or impossible stock across your locations, a sign your counts have drifted.
+job: run-your-store
+headline: Stock sync error finder
+subhead: Get products with negative or impossible stock across your locations, a sign your counts have drifted.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin (read only).

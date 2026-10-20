@@ -1,0 +1,32 @@
+slug: deal-returns-sensitivity-builder
+name: Deal returns sensitivity builder
+summary: Give it deal terms. Get IRR and MOIC tables across entry price, debt, exit price and hold time.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/private-equity/skills/returns-analysis
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/private-equity/skills/returns-analysis
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: returns-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: returns-analysis skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/private-equity/skills/returns-analysis
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

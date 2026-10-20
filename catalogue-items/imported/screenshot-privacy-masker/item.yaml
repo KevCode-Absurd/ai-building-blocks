@@ -1,0 +1,37 @@
+slug: screenshot-privacy-masker
+name: Screenshot privacy masker
+summary: Give it a screenshot. Get phone numbers, emails, keys and IDs masked on your own computer before you share it.
+category: general
+boards: []
+type: skill
+role: render
+job: ops
+level: beginner
+inputs:
+  - type: image
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/privacy-mask
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/privacy-mask
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: privacy-mask
+  author: fullstackcrew-alpha
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: privacy-mask skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/privacy-mask
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: fullstackcrew-alpha
+    url: https://github.com/fullstackcrew-alpha
+    used: Wrote the skill; sickn33 shared it in their collection.

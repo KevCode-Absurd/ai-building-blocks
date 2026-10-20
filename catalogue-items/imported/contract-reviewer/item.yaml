@@ -1,0 +1,33 @@
+slug: contract-reviewer
+name: Contract reviewer
+summary: Give it a contract and your rules. Get a clause by clause review and suggested edits. Have a lawyer check it.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: legal/skills/review-contract
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/legal/skills/review-contract
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: review-contract
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: review-contract skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/legal/skills/review-contract
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

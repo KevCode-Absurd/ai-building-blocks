@@ -1,0 +1,32 @@
+slug: nosql-data-modeler
+name: NoSQL data modeler
+summary: Describe your queries and scale. Get a Cassandra or DynamoDB table design that avoids hot partitions.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/nosql-expert
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/nosql-expert
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: nosql-expert
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: nosql-expert skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/nosql-expert
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

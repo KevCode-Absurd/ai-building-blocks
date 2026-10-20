@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It fetches set figures and tables.
+new_slug: stock-data-fetcher
+name: Stock data fetcher
+summary: Give it a ticker. Get prices, statements, options and holdings from Yahoo Finance. Collects data from websites.
+job: money-and-investing
+headline: Stock data fetcher
+subhead: Give it a ticker. Get prices, statements, options and holdings from Yahoo Finance. Collects data from websites.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

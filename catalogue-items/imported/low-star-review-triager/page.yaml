@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It sorts many reviews and ranks them by harm.
+new_slug: low-star-review-triager
+name: Low-star review triager
+summary: Paste 1 to 3 star app reviews. Get a ranked brief of risks, repeat problems and what to fix first.
+job: understand-customers
+headline: Low-star review triager
+subhead: Paste 1 to 3 star app reviews. Get a ranked brief of risks, repeat problems and what to fix first.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

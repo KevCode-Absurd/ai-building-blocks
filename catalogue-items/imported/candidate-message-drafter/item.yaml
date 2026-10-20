@@ -1,0 +1,32 @@
+slug: candidate-message-drafter
+name: Candidate message drafter
+summary: Say where the candidate is in your process. Get a clear email, rejection or update draft for you to send.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Carlo Pezzuto
+  repo: carlopezzuto/recruiting
+  path: .claude/skills/candidate-comms
+  url: https://github.com/carlopezzuto/recruiting/tree/main/.claude/skills/candidate-comms
+  licence: MIT
+  licence_file: LICENSE
+  commit: 6e9716a
+  original_name: candidate-comms
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: candidate-comms skill
+    by: Carlo Pezzuto
+    url: https://github.com/carlopezzuto/recruiting/tree/main/.claude/skills/candidate-comms
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

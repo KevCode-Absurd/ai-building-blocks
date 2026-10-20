@@ -1,0 +1,33 @@
+slug: budget-and-forecast-builder
+name: Budget and forecast builder
+summary: Give it your past numbers and plans. Get a budget, a forecast and a note on gaps against actuals.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/budget-forecast
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/budget-forecast
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: budget-forecast
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: budget-forecast skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/budget-forecast
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

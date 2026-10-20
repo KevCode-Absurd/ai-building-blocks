@@ -1,0 +1,37 @@
+slug: release-readiness-reviewer
+name: Release readiness reviewer
+summary: "Point it at a release. Get a read-only report of real deploy risks: migrations, config, order and rollback."
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/pre-release-review
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pre-release-review
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: pre-release-review
+  author: chaunsin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pre-release-review skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pre-release-review
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: chaunsin
+    url: https://github.com/chaunsin
+    used: Wrote the skill; sickn33 shared it in their collection.

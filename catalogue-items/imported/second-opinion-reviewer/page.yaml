@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: A fresh reviewer must attack the work, then the findings must be weighed.
+new_slug: second-opinion-reviewer
+name: Second-opinion reviewer
+summary: Give it a plan or change you feel sure about. Get a fresh reviewer's hardest objections, sorted by what matters.
+job: think-and-decide
+headline: Second-opinion reviewer
+subhead: Give it a plan or change you feel sure about. Get a fresh reviewer's hardest objections, sorted by what matters.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run subagents and read your project files.

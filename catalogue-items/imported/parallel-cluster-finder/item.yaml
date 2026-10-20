@@ -1,0 +1,32 @@
+slug: parallel-cluster-finder
+name: Parallel cluster finder
+summary: Ask what parallel clusters you can use. Get a list, with profiles checked and set as default.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: false
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/parallel-computing/matlab-discover-clusters
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/parallel-computing/matlab-discover-clusters
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-discover-clusters
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-discover-clusters skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/parallel-computing/matlab-discover-clusters
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

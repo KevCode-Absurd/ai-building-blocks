@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: Sorting tickets by clear rules needs little deep thought.
+new_slug: support-ticket-sorter
+name: Support ticket sorter
+summary: Give it incoming tickets. Get each one classified, ranked by severity, routed and given a first reply.
+job: help-customers
+headline: Support ticket sorter
+subhead: Give it incoming tickets. Get each one classified, ranked by severity, routed and given a first reply.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

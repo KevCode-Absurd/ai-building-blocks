@@ -1,0 +1,32 @@
+slug: structured-data-writer
+name: Structured data writer
+summary: Give it a page. Get working JSON-LD markup for rich results, tested and ready to paste.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/schema
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/schema
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: schema
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: schema skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/schema
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

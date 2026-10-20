@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Mixing drop-offs and pickups adds hard limits.
+new_slug: return-pickup-route-planner
+name: Return pickup route planner
+summary: Give it your deliveries and returns to collect. Get routes that bring returns back on the same trip.
+job: plan-supply-chain
+headline: Return pickup route planner
+subhead: Give it your deliveries and returns to collect. Get routes that bring returns back on the same trip.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code (Python).

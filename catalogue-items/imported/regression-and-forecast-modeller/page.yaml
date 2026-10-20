@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks a model, fits it and checks the fit.
+new_slug: regression-and-forecast-modeller
+name: Regression and forecast modeller
+summary: Give it a data table. Get a fitted regression or time series model with checks and a plain read of the results.
+job: track-numbers
+headline: Regression and forecast modeller
+subhead: Give it a data table. Get a fitted regression or time series model with checks and a plain read of the results.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

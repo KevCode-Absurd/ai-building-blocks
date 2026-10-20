@@ -1,0 +1,34 @@
+slug: loss-framing-writer
+name: Loss framing writer
+summary: Describe your offer. Get honest wording that shows what people lose by waiting, without fear tactics.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: offer
+    required: true
+  - type: persona
+    required: false
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/loss-aversion-designer
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/loss-aversion-designer
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: loss-aversion-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: loss-aversion-designer skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/loss-aversion-designer
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

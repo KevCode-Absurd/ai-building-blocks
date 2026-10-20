@@ -1,0 +1,32 @@
+slug: browser-test-reviewer
+name: Browser test reviewer
+summary: Point it at your Playwright tests. Get each one checked against 20 bad habits with fixes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/playwright-pro/skills/pw-review
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/playwright-pro/skills/pw-review
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: pw-review
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pw-review skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/playwright-pro/skills/pw-review
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

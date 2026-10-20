@@ -1,0 +1,35 @@
+slug: social-video-transcript-analyst
+name: Social video transcript analyst
+summary: Give it video posts. Get the hooks, claims, quotes and themes pulled from what was said. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: transcript
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:ScrapeCreators
+source:
+  by: ScrapeCreators
+  repo: ScrapeCreators/social-media-research-skills
+  path: skills/transcript-intelligence
+  url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/transcript-intelligence
+  licence: MIT
+  licence_file: LICENSE
+  commit: 64ba7b4
+  original_name: transcript-intelligence
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: transcript-intelligence skill
+    by: ScrapeCreators
+    url: https://github.com/ScrapeCreators/social-media-research-skills/tree/main/skills/transcript-intelligence
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

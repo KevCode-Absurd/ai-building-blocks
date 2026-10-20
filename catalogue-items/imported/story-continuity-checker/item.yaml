@@ -1,0 +1,37 @@
+slug: story-continuity-checker
+name: Story continuity checker
+summary: Give it your manuscript and story facts. Get a list of name slips, age errors, anachronisms and loose plot threads.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/story-bible-continuity
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/story-bible-continuity
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: story-bible-continuity
+  author: jiawood2006
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: story-bible-continuity skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/story-bible-continuity
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: jiawood2006
+    url: https://github.com/jiawood2006
+    used: Wrote the skill; sickn33 shared it in their collection.

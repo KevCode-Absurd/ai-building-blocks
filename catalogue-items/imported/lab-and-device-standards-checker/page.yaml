@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It maps your evidence to exact clauses and finds the gaps.
+new_slug: lab-and-device-standards-checker
+name: Lab and device standards checker
+summary: Name the standard and share your records. Get an evidence gap list for ISO 13485, 14971 or 17025.
+job: check-contracts
+headline: Lab and device standards checker
+subhead: Name the standard and share your records. Get an evidence gap list for ISO 13485, 14971 or 17025.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

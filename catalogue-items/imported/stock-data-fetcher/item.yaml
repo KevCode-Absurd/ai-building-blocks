@@ -1,0 +1,34 @@
+slug: stock-data-fetcher
+name: Stock data fetcher
+summary: Give it a ticker. Get prices, statements, options and holdings from Yahoo Finance. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: himself65
+  repo: himself65/finance-skills
+  path: plugins/market-analysis/skills/yfinance-data
+  url: https://github.com/himself65/finance-skills/tree/main/plugins/market-analysis/skills/yfinance-data
+  licence: MIT
+  licence_file: LICENSE
+  commit: 73d554d
+  original_name: yfinance-data
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: yfinance-data skill
+    by: himself65
+    url: https://github.com/himself65/finance-skills/tree/main/plugins/market-analysis/skills/yfinance-data
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

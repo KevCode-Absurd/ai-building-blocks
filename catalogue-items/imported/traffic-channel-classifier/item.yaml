@@ -1,0 +1,38 @@
+slug: traffic-channel-classifier
+name: Traffic channel classifier
+summary: Give it your visits and orders. Get every one sorted into the same 11 channels, whatever tool it came from.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: spreadsheet
+    required: true
+uses: []
+origin: imported
+source:
+  by: wizard7558
+  repo: wizard7558/attribution-skills
+  path: skills/channel-taxonomy
+  url: https://github.com/wizard7558/attribution-skills/tree/main/skills/channel-taxonomy
+  licence: MIT
+  licence_file: LICENSE
+  commit: bed5a8f
+  original_name: channel-taxonomy
+  author: Riley Sorenson
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: channel-taxonomy skill
+    by: wizard7558
+    url: https://github.com/wizard7558/attribution-skills/tree/main/skills/channel-taxonomy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Riley Sorenson
+    url: https://github.com/wizard7558
+    used: Wrote the skill; wizard7558 shared it in their collection.

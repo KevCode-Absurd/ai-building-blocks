@@ -1,0 +1,37 @@
+slug: agent-memory-designer
+name: Agent memory designer
+summary: Describe what your agent must remember. Get a memory design for short-term, long-term and graph storage.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/memory-systems
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/memory-systems
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: memory-systems
+  author: Muratcan Koylan
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: memory-systems skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/memory-systems
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Muratcan Koylan
+    url: https://github.com/muratcankoylan
+    used: Wrote the skill; sickn33 shared it in their collection.

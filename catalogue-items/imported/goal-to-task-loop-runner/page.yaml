@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It plans, runs and verifies in a loop.
+new_slug: goal-to-task-loop-runner
+name: Goal-to-task loop runner
+summary: Give it a goal and a folder of skills. Get a checked task plan that runs one task at a time.
+job: set-up-ai
+headline: Goal-to-task loop runner
+subhead: Give it a goal and a folder of skills. Get a checked task plan that runs one task at a time.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

@@ -1,0 +1,13 @@
+thinking: medium
+thinking_why: It compares two texts line by line.
+new_slug: privacy-policy-drift-checker
+name: Privacy policy drift checker
+summary: Describe a data plan. Get where your privacy policy no longer matches, with fix wording. Not legal advice.
+job: check-contracts
+headline: Privacy policy drift checker
+subhead: Describe a data plan. Get where your privacy policy no longer matches, with fix wording. Not legal advice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your saved privacy setup notes and your policy file.
+  - Where the skill points to /privacy-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.

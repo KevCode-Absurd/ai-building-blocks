@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It makes many design choices but follows a set format.
+new_slug: design-system-file-writer
+name: Design system file writer
+summary: Describe your product's feel. Get a DESIGN.md with type, colour, layout, motion and rules against generic UI.
+job: design-work
+headline: Design system file writer
+subhead: Describe your product's feel. Get a DESIGN.md with type, colour, layout, motion and rules against generic UI.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

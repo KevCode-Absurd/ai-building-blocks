@@ -1,0 +1,32 @@
+slug: privacy-impact-assessment-writer
+name: Privacy impact assessment writer
+summary: Describe a new feature that uses personal data. Get a privacy impact assessment with conditions and owners. First check, not legal advice.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/claude-for-legal
+  path: privacy-legal/skills/pia-generation
+  url: https://github.com/anthropics/claude-for-legal/tree/main/privacy-legal/skills/pia-generation
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: 4a6c651
+  original_name: pia-generation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pia-generation skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/privacy-legal/skills/pia-generation
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

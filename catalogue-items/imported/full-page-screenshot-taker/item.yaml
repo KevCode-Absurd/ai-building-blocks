@@ -1,0 +1,32 @@
+slug: full-page-screenshot-taker
+name: Full-page screenshot taker
+summary: Give it a page address. Get one long image of the whole page, even with scroll areas and lazy images.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/full-page-screenshot
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/full-page-screenshot
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: full-page-screenshot
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: full-page-screenshot skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/full-page-screenshot
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

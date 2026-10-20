@@ -1,0 +1,32 @@
+slug: origin-true-business-name-picker
+name: Origin-true business name picker
+summary: Give it your roots and target markets. Get business names that stay true to you and still work for buyers.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: shortlist
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: marketing-skill/skills/business-name-fit
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/business-name-fit
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: business-name-fit
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: business-name-fit skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/business-name-fit
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

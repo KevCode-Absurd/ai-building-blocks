@@ -1,0 +1,38 @@
+slug: contractor-program-setup-guide
+name: Contractor program setup guide
+summary: Describe the work and workers. Get a classification risk check, an onboarding checklist and a vendor plan. Not legal advice.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Tuan Duc Tran
+  repo: tuanductran/hr-skills
+  path: skills/hr-contingent-workforce
+  url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-contingent-workforce
+  licence: MIT
+  licence_file: LICENSE
+  commit: 078f2fb
+  original_name: hr-contingent-workforce
+  author: Tuan Duc Tran
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hr-contingent-workforce skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-contingent-workforce
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

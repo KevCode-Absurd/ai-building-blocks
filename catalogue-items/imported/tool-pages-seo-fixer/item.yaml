@@ -1,0 +1,37 @@
+slug: tool-pages-seo-fixer
+name: Tool pages SEO fixer
+summary: Point it at a site with many tool or feature pages. Get duplicate text found and unique titles and copy planned.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/tools-page-seo-optimizer
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/tools-page-seo-optimizer
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: tools-page-seo-optimizer
+  author: whoisabhishekadhikari
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: tools-page-seo-optimizer skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/tools-page-seo-optimizer
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: whoisabhishekadhikari
+    url: https://github.com/whoisabhishekadhikari
+    used: Wrote the skill; sickn33 shared it in their collection.

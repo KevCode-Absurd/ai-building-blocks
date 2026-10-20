@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It builds a structured spec, then runs a set tool to render it.
+new_slug: document-file-generator
+name: Document file generator
+summary: Describe the slides, report, sheet or PDF. Get a new PPTX, DOCX, XLSX or PDF file built from a JSON spec.
+job: work-with-files
+headline: Document file generator
+subhead: Describe the slides, report, sheet or PDF. Get a new PPTX, DOCX, XLSX or PDF file built from a JSON spec.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and save files.

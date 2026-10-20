@@ -1,0 +1,32 @@
+slug: netlify-publisher
+name: Netlify publisher
+summary: Point it at your site. Get it live on Netlify as a preview or production deploy, with the link.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: deploy_url
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/netlify-deploy
+  url: https://github.com/openai/skills/tree/main/skills/.curated/netlify-deploy
+  licence: Apache-2.0
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: netlify-deploy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: netlify-deploy skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/netlify-deploy
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

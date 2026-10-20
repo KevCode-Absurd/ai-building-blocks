@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It researches, picks a stack and writes testable steps with no guessing.
+new_slug: build-blueprint-writer
+name: Build blueprint writer
+summary: Give it a product idea. Get one researched build document with stack, steps and tests an AI can build from.
+job: build-product
+headline: Build blueprint writer
+subhead: Give it a product idea. Get one researched build document with stack, steps and tests an AI can build from.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can search the web and save files.

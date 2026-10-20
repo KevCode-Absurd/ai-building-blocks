@@ -1,0 +1,37 @@
+slug: wordpress-blog-writer
+name: WordPress blog writer
+summary: Give it a keyword. Get a full SEO blog post with tables, FAQ and optional Yoast fields, ready for WordPress.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/wordpress-centric-high-seo-optimized-blogwriting-skill
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/wordpress-centric-high-seo-optimized-blogwriting-skill
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: wordpress-centric-high-seo-optimized-blogwriting-skill
+  author: Whoisabhishekadhikari
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: wordpress-centric-high-seo-optimized-blogwriting-skill skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/wordpress-centric-high-seo-optimized-blogwriting-skill
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Whoisabhishekadhikari
+    url: https://github.com/Whoisabhishekadhikari
+    used: Wrote the skill; sickn33 shared it in their collection.

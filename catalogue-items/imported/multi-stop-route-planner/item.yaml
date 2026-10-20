@@ -1,0 +1,32 @@
+slug: multi-stop-route-planner
+name: Multi-stop route planner
+summary: Give it your stops and vehicles. Get the shortest routes for each driver with total miles and time.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/route-optimization
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/route-optimization
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: route-optimization
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: route-optimization skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/route-optimization
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows a set procedure but must fit your setup.
+new_slug: secrets-setup-helper
+name: Secrets setup helper
+summary: Name your pipeline and secret store. Get a safe plan for storing, reading and rotating secrets.
+job: secure-code
+headline: Secrets setup helper
+subhead: Name your pipeline and secret store. Get a safe plan for storing, reading and rotating secrets.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

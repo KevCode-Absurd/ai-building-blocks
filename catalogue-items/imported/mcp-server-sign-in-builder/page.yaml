@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Small mistakes in sign-in create real security holes.
+new_slug: mcp-server-sign-in-builder
+name: MCP server sign-in builder
+summary: Say how people will connect to your MCP server. Get correct OAuth sign-in built into it.
+job: connect-tools
+headline: MCP server sign-in builder
+subhead: Say how people will connect to your MCP server. Get correct OAuth sign-in built into it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read and edit your code.

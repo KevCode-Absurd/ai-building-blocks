@@ -1,0 +1,32 @@
+slug: reconciliation-break-tracer
+name: Reconciliation break tracer
+summary: Give it a break from a reconciliation. Get it traced to its source entries on both sides, and what differs.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/fund-admin/skills/break-trace
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/fund-admin/skills/break-trace
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: break-trace
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: break-trace skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/fund-admin/skills/break-trace
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

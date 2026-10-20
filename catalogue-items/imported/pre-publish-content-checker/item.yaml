@@ -1,0 +1,39 @@
+slug: pre-publish-content-checker
+name: Pre-publish content checker
+summary: Give it a draft and its brief. Get checks on facts, voice, structure, AI sound and search readiness.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: copy_draft
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/editorial-qa
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/editorial-qa
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: editorial-qa
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: editorial-qa skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/editorial-qa
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

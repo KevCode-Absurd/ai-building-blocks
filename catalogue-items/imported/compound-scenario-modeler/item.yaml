@@ -1,0 +1,32 @@
+slug: compound-scenario-modeler
+name: Compound scenario modeler
+summary: Describe several things going wrong at once. Get how each team feels it and a response plan.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: plan
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: c-level-advisor/skills/scenario-war-room
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/scenario-war-room
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: scenario-war-room
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: scenario-war-room skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/scenario-war-room
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

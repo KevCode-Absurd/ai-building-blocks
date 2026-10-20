@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It assigns steps under order rules.
+new_slug: assembly-line-balancer
+name: Assembly line balancer
+summary: Give it your work steps and times. Get steps split across stations so none waits or overloads.
+job: plan-supply-chain
+headline: Assembly line balancer
+subhead: Give it your work steps and times. Get steps split across stations so none waits or overloads.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

@@ -1,0 +1,32 @@
+slug: history-source-set-picker
+name: History source set picker
+summary: Give it a history question. Get a chosen, ordered set of sources that pull in different directions.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/historical-thinking/historical-document-set-curator
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/historical-thinking/historical-document-set-curator
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: historical-document-set-curator
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: historical-document-set-curator skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/historical-thinking/historical-document-set-curator
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

@@ -68,9 +68,9 @@ test("header links jump to the library and the builder", async ({ page }) => {
 
 test("the library opens on job functions, and is sorted into prompts, skills and workflows", async ({ page }) => {
   await page.goto("/#library");
-  await expect(page.locator(".fns .fn")).toHaveCount(17);
+  await expect(page.locator(".fns .fn")).toHaveCount(30);
   await expect(page.getByTestId("fn-media-buyer")).toContainText("Run Meta ads");
-  await expect(page.locator(".fns .fn .px")).toHaveCount(17); // every function has its pixel icon
+  await expect(page.locator(".fns .fn .px")).toHaveCount(30); // every function has its pixel icon
   await expect(page.getByRole("tab")).toHaveText([/^All/, /^Prompts/, /^Skills/, /^Workflows/, /^Minds/]);
   // Broad areas sit above the groups; picking one shows only its groups.
   await page.getByTestId("area-design").click();

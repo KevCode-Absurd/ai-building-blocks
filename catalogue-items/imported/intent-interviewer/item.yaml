@@ -1,0 +1,32 @@
+slug: intent-interviewer
+name: Intent interviewer
+summary: Give it a vague request. Get asked one question at a time until what you really want is clear.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: brief
+uses: []
+origin: imported
+source:
+  by: Addy Osmani
+  repo: addyosmani/agent-skills
+  path: skills/interview-me
+  url: https://github.com/addyosmani/agent-skills/tree/main/skills/interview-me
+  licence: MIT
+  licence_file: LICENSE
+  commit: aeac41d
+  original_name: interview-me
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: interview-me skill
+    by: Addy Osmani
+    url: https://github.com/addyosmani/agent-skills/tree/main/skills/interview-me
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

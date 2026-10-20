@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It makes one request and saves the result.
+new_slug: throwaway-database-maker
+name: Throwaway database maker
+summary: Ask for a database to test with. Get a Postgres link in seconds with no sign-up, kept 72 hours.
+job: build-software
+headline: Throwaway database maker
+subhead: Ask for a database to test with. Get a Postgres link in seconds with no sign-up, kept 72 hours.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run commands and reach the internet.

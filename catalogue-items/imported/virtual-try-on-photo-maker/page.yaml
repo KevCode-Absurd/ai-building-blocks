@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Garment details must match, so it checks the result against your photo.
+new_slug: virtual-try-on-photo-maker
+name: Virtual try-on photo maker
+summary: Give it a clothing flat lay and a pose photo. Get a model-wearing shot. Your image model draws it, not Claude.
+job: product-photos
+headline: Virtual try-on photo maker
+subhead: Give it a clothing flat lay and a pose photo. Get a model-wearing shot. Your image model draws it, not Claude.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and use your own image model key (OpenAI, Gemini, fal or Replicate).

@@ -1,0 +1,32 @@
+slug: change-rollout-planner
+name: Change rollout planner
+summary: Describe a re-org or tool switch. Get a rollout plan, message templates and a plan for pushback.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: c-level-advisor/skills/change-management
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/change-management
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: change-management
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: change-management skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/skills/change-management
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

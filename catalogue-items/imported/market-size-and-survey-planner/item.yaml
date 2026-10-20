@@ -1,0 +1,37 @@
+slug: market-size-and-survey-planner
+name: Market size and survey planner
+summary: Give it your market. Get market size two ways, survey sample sizes and segments scored.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: research-ops/skills/market-research
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/research-ops/skills/market-research
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: market-research
+  author: claude-code-skills
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: market-research skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/research-ops/skills/market-research
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: claude-code-skills
+    url: ""
+    used: Wrote the skill; Alireza Rezvani shared it in their collection.

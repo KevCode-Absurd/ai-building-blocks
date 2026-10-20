@@ -1,0 +1,32 @@
+slug: image-viewer-builder
+name: Image viewer builder
+summary: Give it images and regions to mark. Get a viewer with overlays and masks in MATLAB.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/image-processing-and-computer-vision/matlab-display-image
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/image-processing-and-computer-vision/matlab-display-image
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-display-image
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-display-image skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/image-processing-and-computer-vision/matlab-display-image
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: data-story-writer
+name: Data story writer
+summary: Give it your numbers. Get a clear story with the point, the proof and the next step for your readers.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/data-storytelling
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/data-storytelling
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: data-storytelling
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: data-storytelling skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/data-storytelling
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

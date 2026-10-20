@@ -1,0 +1,32 @@
+slug: job-story-writer
+name: Job story writer
+summary: Describe a customer situation. Get job stories in the when, I want, so I can format, with checks for done.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Pawel Huryn
+  repo: phuryn/pm-skills
+  path: pm-execution/skills/job-stories
+  url: https://github.com/phuryn/pm-skills/tree/main/pm-execution/skills/job-stories
+  licence: MIT
+  licence_file: LICENSE
+  commit: 07b34f6
+  original_name: job-stories
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: job-stories skill
+    by: Pawel Huryn
+    url: https://github.com/phuryn/pm-skills/tree/main/pm-execution/skills/job-stories
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

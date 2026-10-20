@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It asks the next question from your answer.
+new_slug: socratic-explainer
+name: Socratic explainer
+summary: Name a topic. Get it taught through questions, so you reach the idea yourself and remember it.
+job: think-and-decide
+headline: Socratic explainer
+subhead: Name a topic. Get it taught through questions, so you reach the idea yourself and remember it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

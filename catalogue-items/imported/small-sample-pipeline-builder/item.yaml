@@ -1,0 +1,40 @@
+slug: small-sample-pipeline-builder
+name: Small-sample pipeline builder
+summary: Describe a data or AI workflow. Get it working end to end on a tiny sample, then scaled with cost checks.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/skeleton-first
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/skeleton-first
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: skeleton-first
+  author: Dan He
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: skeleton-first skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/skeleton-first
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Dan He
+    url: https://github.com/sickn33/agentic-awesome-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

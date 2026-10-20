@@ -1,0 +1,37 @@
+slug: competitor-site-experience-auditor
+name: Competitor site experience auditor
+summary: Name your market. Get what leading sites do well and badly, and the bar your own site must meet.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: competitor_set
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/competitor-experience-audit
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/competitor-experience-audit
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: competitor-experience-audit
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: competitor-experience-audit skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/competitor-experience-audit
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

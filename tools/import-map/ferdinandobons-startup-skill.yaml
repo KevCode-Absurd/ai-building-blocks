@@ -1,0 +1,45 @@
+# ferdinandobons/startup-skill (MIT)
+"ferdinandobons/startup-skill:startup-competitors":
+  name: Competitor battle card builder
+  summary: Name your market. Get each rival's product, pricing and customer views with battle cards and a feature grid.
+  task: study-competitors
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: It gathers many sources, then compares rivals with care.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: competitor_set}, {type: document}]
+  needs: search the web and save files
+"ferdinandobons/startup-skill:startup-design":
+  name: Startup business planner
+  summary: Describe your startup idea. Get market sizing, a business model, brand basics and tests to run first.
+  task: test-an-idea
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It runs many linked phases of research and judgment.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: plan}, {type: document}]
+  needs: search the web and save files
+"ferdinandobons/startup-skill:startup-pitch":
+  name: Investor pitch scriptwriter
+  summary: Share your startup details. Get pitch scripts from one minute to ten, plus likely investor questions and answers.
+  task: speak-and-persuade
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It shapes a story from facts you supply, in set formats.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: script}, {type: document}]
+  needs: save files
+"ferdinandobons/startup-skill:startup-positioning":
+  name: Product positioning planner
+  summary: Describe your product and its rivals. Get the best market to compete in and a clear line on why you win.
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: Good positioning means weighing real alternatives and customer value.
+  inputs: [{type: question, required: true}, {type: competitor_set, required: false}]
+  outputs: [{type: document}]
+  needs: save files

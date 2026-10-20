@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It sorts what was said into a fixed template.
+new_slug: interview-summary-writer
+name: Interview summary writer
+summary: Paste a customer interview transcript. Get a one-page summary of needs, satisfaction and next steps.
+job: understand-customers
+headline: Interview summary writer
+subhead: Paste a customer interview transcript. Get a one-page summary of needs, satisfaction and next steps.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

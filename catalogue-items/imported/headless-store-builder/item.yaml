@@ -1,0 +1,39 @@
+slug: headless-store-builder
+name: Headless store builder
+summary: Describe the store you want. Get a fast custom storefront on Hydrogen, ready to host on Oxygen.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: dragnoir
+  repo: dragnoir/Shopify-agent-skills
+  path: skills/headless-hydrogen
+  url: https://github.com/dragnoir/Shopify-agent-skills/tree/main/skills/headless-hydrogen
+  licence: MIT
+  licence_file: LICENSE
+  commit: f76a09f
+  original_name: headless-hydrogen
+  author: dragnoir
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: headless-hydrogen skill
+    by: dragnoir
+    url: https://github.com/dragnoir/Shopify-agent-skills/tree/main/skills/headless-hydrogen
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: dragnoir
+    url: https://github.com/dragnoir
+    used: Wrote the skill; dragnoir shared it in their collection.

@@ -1,0 +1,37 @@
+slug: web-project-scoper
+name: Web project scoper
+summary: Describe a web project. Get its goals, users, features, design tokens and page plan in one scoped brief.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/web-project-brainstorming
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/web-project-brainstorming
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: web-project-brainstorming
+  author: Rsmiyani
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: web-project-brainstorming skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/web-project-brainstorming
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Rsmiyani
+    url: https://github.com/Rsmiyani
+    used: Wrote the skill; sickn33 shared it in their collection.

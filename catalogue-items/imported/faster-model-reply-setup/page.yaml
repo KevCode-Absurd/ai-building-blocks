@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Speed tricks need careful testing against quality.
+new_slug: faster-model-reply-setup
+name: Faster model reply setup
+summary: Name your model. Get a setup that makes replies 1.5 to 3.6 times faster without changing the answers.
+job: build-software
+headline: Faster model reply setup
+subhead: Name your model. Get a setup that makes replies 1.5 to 3.6 times faster without changing the answers.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code on a computer with a GPU.

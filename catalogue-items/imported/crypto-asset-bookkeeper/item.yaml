@@ -1,0 +1,35 @@
+slug: crypto-asset-bookkeeper
+name: Crypto asset bookkeeper
+summary: Describe your coin or NFT holdings. Get them classified, valued and recorded under accounting standards.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: spreadsheet
+  - type: document
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/crypto-accounting
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/crypto-accounting
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: crypto-accounting
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: crypto-accounting skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/crypto-accounting
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

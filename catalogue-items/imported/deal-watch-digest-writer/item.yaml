@@ -1,0 +1,37 @@
+slug: deal-watch-digest-writer
+name: Deal watch digest writer
+summary: Ask what changed in your deals. Get a short alert list of quiet deals, slipping dates and renewals opening.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/deal-signals
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/deal-signals
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: deal-signals
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: deal-signals skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/deal-signals
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

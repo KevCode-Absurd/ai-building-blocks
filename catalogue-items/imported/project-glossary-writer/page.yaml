@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It asks about terms and writes them down.
+new_slug: project-glossary-writer
+name: Project glossary writer
+summary: Talk through your project's terms. Get a glossary and decision records so everyone uses the same words.
+job: build-software
+headline: Project glossary writer
+subhead: Talk through your project's terms. Get a glossary and decision records so everyone uses the same words.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

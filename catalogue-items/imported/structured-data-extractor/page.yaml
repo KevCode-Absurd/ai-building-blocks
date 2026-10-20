@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It defines a data shape and checks replies.
+new_slug: structured-data-extractor
+name: Structured data extractor
+summary: Say what fields you need. Get code that pulls them from AI replies as checked data, retrying on errors.
+job: build-software
+headline: Structured data extractor
+subhead: Say what fields you need. Get code that pulls them from AI replies as checked data, retrying on errors.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code and call an AI model.

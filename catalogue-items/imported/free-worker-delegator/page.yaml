@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It splits work and reviews it, with set steps.
+new_slug: free-worker-delegator
+name: Free worker delegator
+summary: Hand off routine coding. Get free helper models doing scout, code and test jobs while Claude reviews.
+job: build-software
+headline: Free worker delegator
+subhead: Hand off routine coding. Get free helper models doing scout, code and test jobs while Claude reviews.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code, use git and the opencode tool.

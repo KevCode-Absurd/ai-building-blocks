@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It must test the metric against seven checks.
+new_slug: north-star-metric-picker
+name: North star metric picker
+summary: Describe your product. Get the one metric to steer by, plus 3 to 5 supporting numbers that feed it.
+job: track-numbers
+headline: North star metric picker
+subhead: Describe your product. Get the one metric to steer by, plus 3 to 5 supporting numbers that feed it.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

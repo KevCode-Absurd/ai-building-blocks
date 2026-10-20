@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It filters noise before it reads the signal.
+new_slug: options-flow-reader
+name: Options flow reader
+summary: Give it options data. Get real bets told apart from cheap lottery calls, so the put-call ratio is not misleading.
+job: money-and-investing
+headline: Options flow reader
+subhead: Give it options data. Get real bets told apart from cheap lottery calls, so the put-call ratio is not misleading.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can reach the Polygon data service with your key.

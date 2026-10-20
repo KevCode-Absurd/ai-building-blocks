@@ -1,0 +1,32 @@
+slug: thinking-about-thinking-prompt-set
+name: Thinking-about-thinking prompt set
+summary: Give it a task. Get prompts for planning, checking and reviewing work that students can use alone.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: question
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/self-regulated-learning/metacognitive-prompt-library
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/self-regulated-learning/metacognitive-prompt-library
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: metacognitive-prompt-library
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: metacognitive-prompt-library skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/self-regulated-learning/metacognitive-prompt-library
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: pdf-converter
+name: PDF converter
+summary: Give it a PDF and the format you want. Get a faithful Markdown, HTML, Word or JSON copy with tables kept intact.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/pdf-conversion-router
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pdf-conversion-router
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: pdf-conversion-router
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pdf-conversion-router skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/pdf-conversion-router
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: link-and-pr-outreach-planner
+name: Link and PR outreach planner
+summary: Describe your site. Get a plan for link building, digital PR, brand mentions and local listings, with linkable ideas.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/seo-offpage
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/seo-offpage
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: seo-offpage
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: seo-offpage skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/seo-offpage
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

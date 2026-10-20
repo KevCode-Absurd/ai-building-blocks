@@ -1,0 +1,32 @@
+slug: rag-pipeline-designer
+name: RAG pipeline designer
+summary: Describe your documents. Get chunking, embedding and vector database choices, with ways to test results.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/rag-architect
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/rag-architect
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: rag-architect
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: rag-architect skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/rag-architect
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

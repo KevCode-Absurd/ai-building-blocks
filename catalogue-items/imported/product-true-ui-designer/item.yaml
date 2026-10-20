@@ -1,0 +1,40 @@
+slug: product-true-ui-designer
+name: Product-true UI designer
+summary: Give it your product and screen. Get an interface built from your own design system, with every state covered.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: web_page
+  - type: design_direction
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/anti-ui-slop
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/anti-ui-slop
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: anti-ui-slop
+  author: UIZZE
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: anti-ui-slop skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/anti-ui-slop
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: UIZZE
+    url: https://github.com/uizze/uizze
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,32 @@
+slug: hiring-interview-designer
+name: Hiring interview designer
+summary: Name the role. Get an interview plan with questions, scoring guides and a way to compare candidates.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/interview-system-designer
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/interview-system-designer
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: interview-system-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: interview-system-designer skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/interview-system-designer
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

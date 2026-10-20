@@ -1,0 +1,32 @@
+slug: skill-safety-auditor
+name: Skill safety auditor
+summary: Give it a skill before you install it. Get risky code and hidden commands flagged.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: skill_files
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/skills/skill-security-auditor
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/skill-security-auditor
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: skill-security-auditor
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: skill-security-auditor skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/skills/skill-security-auditor
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

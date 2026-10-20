@@ -1,0 +1,35 @@
+slug: rising-trend-spotter
+name: Rising trend spotter
+summary: Give it a topic. Get what is rising on Google Trends and social sites. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:Apify
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/apify-trend-analysis
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-trend-analysis
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: apify-trend-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: apify-trend-analysis skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-trend-analysis
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

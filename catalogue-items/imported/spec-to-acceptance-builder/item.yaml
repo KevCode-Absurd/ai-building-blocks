@@ -1,0 +1,39 @@
+slug: spec-to-acceptance-builder
+name: Spec to acceptance builder
+summary: Describe a big software request. Get an approved spec, a controlled build and proof it meets the criteria.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/spec-driven-loop
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/spec-driven-loop
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: spec-driven-loop
+  author: Linji-x
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: spec-driven-loop skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/spec-driven-loop
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Linji-x
+    url: https://github.com/Linji-x/spec-driven-loop
+    used: Wrote the skill; sickn33 shared it in their collection.

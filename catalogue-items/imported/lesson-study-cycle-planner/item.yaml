@@ -1,0 +1,32 @@
+slug: lesson-study-cycle-planner
+name: Lesson study cycle planner
+summary: Give it a teaching question. Get a full lesson study plan, from shared planning to the research lesson.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/professional-learning/lesson-study-cycle-designer
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/professional-learning/lesson-study-cycle-designer
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: lesson-study-cycle-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: lesson-study-cycle-designer skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/professional-learning/lesson-study-cycle-designer
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

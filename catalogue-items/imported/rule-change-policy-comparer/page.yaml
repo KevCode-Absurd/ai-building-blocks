@@ -1,0 +1,13 @@
+thinking: high
+thinking_why: It pulls duties from rule text and matches them to policies.
+new_slug: rule-change-policy-comparer
+name: Rule change policy comparer
+summary: Paste a rule that changed. Get which of your policies it touches and what to change. First check, not legal advice.
+job: check-contracts
+headline: Rule change policy comparer
+subhead: Paste a rule that changed. Get which of your policies it touches and what to change. First check, not legal advice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your saved setup notes and your policy files.
+  - Where the skill points to /regulatory-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.

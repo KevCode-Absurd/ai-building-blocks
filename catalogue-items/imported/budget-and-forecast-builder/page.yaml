@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It builds from set steps but needs sensible assumptions.
+new_slug: budget-and-forecast-builder
+name: Budget and forecast builder
+summary: Give it your past numbers and plans. Get a budget, a forecast and a note on gaps against actuals.
+job: money-and-investing
+headline: Budget and forecast builder
+subhead: Give it your past numbers and plans. Get a budget, a forecast and a note on gaps against actuals.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

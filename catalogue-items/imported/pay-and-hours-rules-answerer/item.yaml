@@ -1,0 +1,32 @@
+slug: pay-and-hours-rules-answerer
+name: Pay and hours rules answerer
+summary: Ask a pay, overtime or break question and where you are. Get the rule with its source. Not legal advice.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/claude-for-legal
+  path: employment-legal/skills/wage-hour-qa
+  url: https://github.com/anthropics/claude-for-legal/tree/main/employment-legal/skills/wage-hour-qa
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: 4a6c651
+  original_name: wage-hour-qa
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: wage-hour-qa skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/employment-legal/skills/wage-hour-qa
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

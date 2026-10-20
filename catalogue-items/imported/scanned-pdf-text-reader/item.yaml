@@ -1,0 +1,32 @@
+slug: scanned-pdf-text-reader
+name: Scanned PDF text reader
+summary: Give it PDFs, Office files or scans. Get text with page positions, read with OCR when needed, all on your computer.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: source_text
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/liteparse
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/liteparse
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: liteparse
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: liteparse skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/liteparse
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

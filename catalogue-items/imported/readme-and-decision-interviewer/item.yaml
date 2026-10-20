@@ -1,0 +1,39 @@
+slug: readme-and-decision-interviewer
+name: README and decision interviewer
+summary: Answer a few quick questions at a time. Get a README and short decision records that hold your plans.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: false
+  - type: codebase
+    required: false
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/brain-to-docs
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/brain-to-docs
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: brain-to-docs
+  author: davidondrej
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: brain-to-docs skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/brain-to-docs
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: davidondrej
+    url: https://github.com/davidondrej
+    used: Wrote the skill; sickn33 shared it in their collection.

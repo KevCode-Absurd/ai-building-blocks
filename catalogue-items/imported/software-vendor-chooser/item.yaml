@@ -1,0 +1,33 @@
+slug: software-vendor-chooser
+name: Software vendor chooser
+summary: Give it your needs and options. Get vendors scored against your criteria, RFP questions, risk notes and a contract checklist.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: shortlist
+  - type: document
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/vendor-evaluation
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/vendor-evaluation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: vendor-evaluation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: vendor-evaluation skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/vendor-evaluation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

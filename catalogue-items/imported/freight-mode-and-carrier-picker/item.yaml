@@ -1,0 +1,32 @@
+slug: freight-mode-and-carrier-picker
+name: Freight mode and carrier picker
+summary: Give it your shipments. Get the cheapest mix of modes and carriers, and where to combine loads.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/freight-optimization
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/freight-optimization
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: freight-optimization
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: freight-optimization skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/freight-optimization
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

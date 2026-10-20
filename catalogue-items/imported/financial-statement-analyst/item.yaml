@@ -1,0 +1,32 @@
+slug: financial-statement-analyst
+name: Financial statement analyst
+summary: Give it your numbers. Get ratio analysis, a valuation, budget variances and a rolling forecast.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: finance/skills/financial-analyst
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/finance/skills/financial-analyst
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: financial-analyst
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: financial-analyst skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/finance/skills/financial-analyst
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

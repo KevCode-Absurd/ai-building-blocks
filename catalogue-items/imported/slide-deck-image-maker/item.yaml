@@ -1,0 +1,32 @@
+slug: slide-deck-image-maker
+name: Slide deck image maker
+summary: Give it your content. Get a slide deck outline and one drawn image per slide, ready to share or read.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: slide_deck
+uses: []
+origin: imported
+source:
+  by: Jim Liu
+  repo: JimLiu/baoyu-skills
+  path: skills/baoyu-slide-deck
+  url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-slide-deck
+  licence: MIT
+  licence_file: LICENSE
+  commit: "1567581"
+  original_name: baoyu-slide-deck
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: baoyu-slide-deck skill
+    by: Jim Liu
+    url: https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-slide-deck
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

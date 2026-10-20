@@ -1,0 +1,33 @@
+slug: video-content-planner
+name: Video content planner
+summary: Give it your channel goal. Get a video plan, scripts and ways to turn one long video into short clips.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+  - type: script
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: marketing-skill/video-content-strategist/skills/video-content-strategist
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/video-content-strategist/skills/video-content-strategist
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: video-content-strategist
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: video-content-strategist skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/video-content-strategist/skills/video-content-strategist
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,37 @@
+slug: mobile-data-fetching-coder
+name: Mobile data fetching coder
+summary: Describe the data your app needs. Get fetch, cache, retry and offline code for React Native with Expo.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/native-data-fetching
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/native-data-fetching
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: native-data-fetching
+  author: Expo
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: native-data-fetching skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/native-data-fetching
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Expo
+    url: https://github.com/expo
+    used: Wrote the skill; sickn33 shared it in their collection.

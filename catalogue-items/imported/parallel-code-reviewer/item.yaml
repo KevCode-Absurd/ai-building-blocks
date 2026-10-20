@@ -1,0 +1,37 @@
+slug: parallel-code-reviewer
+name: Parallel code reviewer
+summary: Point it at a code change. Get four reviewers working at once and one short list of issues that matter.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: code_change
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/review-swarm
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/review-swarm
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: review-swarm
+  author: Dimillian
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: review-swarm skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/review-swarm
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Dimillian
+    url: https://github.com/Dimillian
+    used: Wrote the skill; sickn33 shared it in their collection.

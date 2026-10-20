@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It picks the model type and loss, then runs costly training.
+new_slug: embedding-model-trainer
+name: Embedding model trainer
+summary: Say what your search or matching must do. Get an embedding or reranker model trained from a ready template.
+job: build-software
+headline: Embedding model trainer
+subhead: Say what your search or matching must do. Get an embedding or reranker model trained from a ready template.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

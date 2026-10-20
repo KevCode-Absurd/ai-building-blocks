@@ -1,0 +1,34 @@
+slug: c-network-code-helper
+name: C++ network code helper
+summary: Describe the networking job. Get safe Boost.Asio code for servers, clients, timers and secure connections.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering/boost-asio-pro
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/boost-asio-pro
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: boost-asio-pro
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: boost-asio-pro skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering/boost-asio-pro
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

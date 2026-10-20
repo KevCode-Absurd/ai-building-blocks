@@ -1,0 +1,32 @@
+slug: agent-instructions-auditor
+name: Agent instructions auditor
+summary: Point it at your repo. Get a short, checked AGENTS.md with real commands and no guesses.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: skill_files
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/agents-md
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/agents-md
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: agents-md
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: agents-md skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/agents-md
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

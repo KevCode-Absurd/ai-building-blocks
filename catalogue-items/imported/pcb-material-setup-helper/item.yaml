@@ -1,0 +1,32 @@
+slug: pcb-material-setup-helper
+name: PCB material setup helper
+summary: Name your board material. Get a substrate, conductor and layer stack set up with loss included.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/rf-and-mixed-signal/matlab-manage-pcb-material
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-manage-pcb-material
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-manage-pcb-material
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-manage-pcb-material skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/rf-and-mixed-signal/matlab-manage-pcb-material
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

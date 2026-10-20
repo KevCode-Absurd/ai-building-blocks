@@ -1,0 +1,32 @@
+slug: design-review-panel
+name: Design review panel
+summary: Give it a design or plan. Get it tested by reviewers in turn for hidden assumptions and ways it could fail.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/multi-agent-brainstorming
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/multi-agent-brainstorming
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: multi-agent-brainstorming
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: multi-agent-brainstorming skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/multi-agent-brainstorming
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

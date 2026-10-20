@@ -1,0 +1,32 @@
+slug: linked-financial-model-builder
+name: Linked financial model builder
+summary: Give it your past accounts and drivers. Get income, balance sheet and cash flow models that tie together.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/three-statement-modeling
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/three-statement-modeling
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: three-statement-modeling
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: three-statement-modeling skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/three-statement-modeling
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

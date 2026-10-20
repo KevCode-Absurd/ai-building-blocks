@@ -1,0 +1,424 @@
+# elevenlabs/skills (MIT) and dlazy-ai/ecommerce-skills (MIT)
+"elevenlabs/skills:text-to-speech":
+  name: Multilingual narrator
+  summary: "Give it your text. Get spoken audio in a natural voice in 90+ languages, saved as a sound file."
+  task: work-with-audio
+  role: render
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows a set recipe to turn text into audio."
+  needs: "run code and use your own ElevenLabs API key"
+  paid: "ElevenLabs"
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: audio } ]
+"elevenlabs/skills:speech-to-text":
+  name: Subtitle and transcript maker
+  summary: "Give it a recording or video. Get a written transcript with who spoke, word timing and subtitles."
+  task: work-with-audio
+  role: render
+  level: intermediate
+  thinking: low
+  thinking_why: "It sends your file to a set tool and saves the result."
+  needs: "run code and use your own ElevenLabs API key"
+  paid: "ElevenLabs"
+  inputs: [ { type: audio, required: true } ]
+  outputs: [ { type: transcript } ]
+"elevenlabs/skills:sound-effects":
+  name: Sound effects designer
+  summary: "Describe a sound. Get a clip such as rain, an impact or a button click, with the length you set."
+  task: work-with-audio
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It turns a short description into a clip with a set tool."
+  needs: "run code and use your own ElevenLabs API key"
+  paid: "ElevenLabs"
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audio } ]
+"elevenlabs/skills:music":
+  name: Music composer
+  summary: "Describe the track you want. Get background music, a jingle or a song with lyrics, as an audio file."
+  task: work-with-audio
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows a set recipe to turn a description into a track."
+  needs: "run code and use your own ElevenLabs API key"
+  paid: "ElevenLabs"
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audio } ]
+"elevenlabs/skills:dubbing":
+  name: Video dubbing editor
+  summary: "Give it a video or podcast. Get versions in other languages that keep each speaker's voice, ready to correct."
+  task: work-with-audio
+  role: render
+  level: intermediate
+  thinking: medium
+  thinking_why: "You review and fix the transcript and translation before each new dub."
+  needs: "run code and use your own ElevenLabs API key"
+  paid: "ElevenLabs"
+  inputs: [ { type: audio, required: true } ]
+  outputs: [ { type: audio }, { type: transcript } ]
+"elevenlabs/skills:voice-changer":
+  name: Voice swap editor
+  summary: "Give it a recording. Get the same performance in a different voice, with your timing and emotion kept."
+  task: work-with-audio
+  role: render
+  level: intermediate
+  thinking: low
+  thinking_why: "It sends one recording to a set tool and saves the result."
+  needs: "run code and use your own ElevenLabs API key"
+  paid: "ElevenLabs"
+  inputs: [ { type: audio, required: true } ]
+  outputs: [ { type: audio } ]
+"elevenlabs/skills:voice-isolator":
+  name: Noisy audio cleaner
+  summary: "Give it a noisy recording. Get clean speech with the background noise and music removed."
+  task: work-with-audio
+  role: render
+  level: beginner
+  thinking: low
+  thinking_why: "It sends one file to a set tool and saves the result."
+  needs: "run code and use your own ElevenLabs API key"
+  paid: "ElevenLabs"
+  inputs: [ { type: audio, required: true } ]
+  outputs: [ { type: audio } ]
+"elevenlabs/skills:agents":
+  name: Voice assistant builder
+  summary: "Say what your voice assistant should do. Get a working agent that talks with customers, with tools and a web embed."
+  task: help-customers
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It sets up conversation flow, tools and testing, and mistakes show up in live calls."
+  needs: "run code and commands, and use your own ElevenLabs API key"
+  paid: "ElevenLabs"
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: tool_connection } ]
+"elevenlabs/skills:.agents/skills/update-skills-from-changelog":
+  skip: "A tool for ElevenLabs staff to update their own skills from their changelog. It only works inside their repo."
+"elevenlabs/skills:onboarding":
+  skip: "Signs you up and sets up an ElevenLabs account and key for a project. It only exists to start using their service."
+"elevenlabs/skills:setup-api-key":
+  skip: "Only fixes or places an ElevenLabs API key. It has no job of its own outside their service."
+"elevenlabs/skills:realtime":
+  skip: "Narrow guide to ElevenLabs Realtime model settings and moving apps off OpenAI's Realtime API. Our Voice assistant builder covers agents."
+"elevenlabs/skills:speech-engine":
+  skip: "Developer guide to wiring a custom server into ElevenLabs voice. Too narrow, and the Voice assistant builder covers the main job."
+
+"dlazy-ai/ecommerce-skills:skills/flat-lay":
+  name: Virtual try-on photo maker
+  summary: "Give it a clothing flat lay and a pose photo. Get a model-wearing shot. Your image model draws it, not Claude."
+  task: product-photos
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Garment details must match, so it checks the result against your photo."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/item-change-background":
+  name: Product background swapper
+  summary: "Give it a white-background product photo. Get it placed in a real-looking scene with matching light. Your image model draws it."
+  task: product-photos
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a set prompt recipe for one photo at a time."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/item-repair":
+  name: Product photo retoucher
+  summary: "Give it a phone photo of a product. Get a cleaner listing photo with fewer wrinkles. Your image model edits it."
+  task: product-photos
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a set edit recipe for one photo."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/item-selling-point":
+  name: Main product image designer
+  summary: "Give it a product photo and selling points. Get a main image with the copy laid on. Your image model draws it."
+  task: product-photos
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a set layout recipe, and you choose the words."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true }, { type: pdp_copy, required: false } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/item-detail":
+  name: Product detail image maker
+  summary: "Give it a product photo and selling points. Get detail page pictures with the text built in. Your image model draws them."
+  task: product-photos
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Text in the picture must be readable, so it checks each block."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate). The sample layouts are in Chinese"
+  inputs: [ { type: product_photos, required: true }, { type: pdp_copy, required: false } ]
+  outputs: [ { type: pdp_images } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/fission-pattern":
+  name: Product photo set builder
+  summary: "Give it one product photo. Get a full set of new angles and scenes. Your image model draws them."
+  task: product-photos
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans the set, then checks that the product stays the same."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/batch-image":
+  name: Product photo batch maker
+  summary: "Give it a spreadsheet of products. Get one matching photo per product, with a cost limit. Your image model draws them."
+  task: product-photos
+  role: orchestrate
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs many jobs and watches cost, and you choose the shared style."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/platform-compliance":
+  name: Marketplace photo rule checker
+  summary: "Give it a product photo. Get a pass or reject check for Amazon, TikTok Shop, Temu and Shopee rules, and a fix."
+  task: product-photos
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "It measures the picture against fixed platform rules."
+  needs: "run Python code on your computer"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/detect-task":
+  name: AI product photo inspector
+  summary: "Give it an AI-made product photo. Get a risk rating, eight checks and lines to add to your prompt before you retry."
+  task: product-photos
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It judges flaws like warped hands or fabric, which takes careful looking."
+  needs: "look at images, and run code if you want it to retry for you"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: audit_report, required: true } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/listing-optimizer":
+  name: Main image A/B test planner
+  summary: "Give it a product photo and selling points. Get test versions that change one thing each, plus a review sheet."
+  task: plan-ad-tests
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "A fair test changes one thing at a time, so it plans each version with care."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: plan, required: true } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/brand-kit":
+  name: Store photo style locker
+  summary: "Describe your store look once. Get a style file that keeps models, light and layout the same across every product photo."
+  task: brand-file
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It fills in a fixed style file from your answers."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: brand_brain, required: false } ]
+  outputs: [ { type: brand_guide } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/clothing-detail":
+  name: Fabric close-up maker
+  summary: "Give it a clothing photo. Get close-ups of fabric, stitching and weave for the product page. Your image model draws them."
+  task: product-photos
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a set prompt recipe for each close-up."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/material-enhancement":
+  name: Fabric texture fixer
+  summary: "Give it a blurry clothing photo and a sharp product photo. Get clear, believable fabric. Your image model redraws it."
+  task: product-photos
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows a set edit recipe using your sharp photo as the guide."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/one-shot":
+  name: Model and scene swapper
+  summary: "Give it a model photo. Get versions with other models and backgrounds, same clothes. Your image model draws them."
+  task: product-photos
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "The product must stay exact, so each version needs a check."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/image-fusion":
+  name: Outfit photo composer
+  summary: "Give it up to eight single items. Get one photo of a model wearing the full outfit. Your image model draws it."
+  task: product-photos
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Each item must stay true to your photo, so it checks them one by one."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/wear-everything":
+  name: Accessory try-on photo maker
+  summary: "Give it a shoe, bag, watch or necklace photo. Get a person wearing it. Your image model draws it."
+  task: product-photos
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Where the item sits on the body decides if the photo looks real."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/fabric-on-body":
+  name: Fabric swap sample maker
+  summary: "Give it a garment shape and a fabric swatch. Get a sample photo in the new fabric. Your image model draws it."
+  task: product-photos
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows a set recipe that swaps the material and keeps the cut."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/to-3d":
+  name: Ghost mannequin photo maker
+  summary: "Give it a clothing flat lay. Get a photo shaped as if worn by an invisible model. Your image model draws it."
+  task: product-photos
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a set prompt recipe for one garment."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/clothing-grass-planting":
+  name: Social post photo maker
+  summary: "Give it an outfit photo. Get lifestyle shots with new models, scenes and poses for social posts. Your image model draws them."
+  task: product-photos
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "The outfit must stay the same while the scene changes."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: photo_set } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/creative-scene":
+  name: Fashion scene image maker
+  summary: "Describe a scene, with or without a reference photo. Get an image or a new pose. Your image model draws it."
+  task: make-images
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It turns one description into a prompt with ready-made templates."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: image_plan, required: false } ]
+  outputs: [ { type: image } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/cross-border-localize":
+  name: Overseas listing localizer
+  summary: "Give it your product images and copy. Get versions for other countries with local language, sizes and required labels."
+  task: run-your-store
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "Sizes and labels differ by country, so each market needs checking."
+  needs: "run code and use your own image model key (OpenAI, Gemini, fal or Replicate)"
+  inputs: [ { type: pdp_copy, required: true } ]
+  outputs: [ { type: pdp_copy, required: true } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/main-image-video":
+  name: Product photo to clip maker
+  summary: "Give it a main product photo. Get a 3 to 5 second video for your listing. Your video model makes it."
+  task: make-video-ads
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It sends one photo to a set video recipe."
+  needs: "run code and use your own video model key (fal or Replicate). Add ffmpeg if you want captions"
+  inputs: [ { type: product_photos, required: true } ]
+  outputs: [ { type: video_ads } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/product-video-ad":
+  name: Product video ad producer
+  summary: "Give it your selling points. Get a shot script and a 15 to 30 second captioned ad. Your video model makes it."
+  task: make-video-ads
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It plans shots, makes each clip and joins them, so one weak shot hurts the ad."
+  needs: "run code and use your own video model key (fal or Replicate). Add ffmpeg to join clips"
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: script }, { type: video_ads, required: true } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/ugc-testimonial":
+  name: Creator-style testimonial video maker
+  summary: "Give it a product and a persona. Get a spoken recommendation script and a handheld, creator-style video. Your video model makes it."
+  task: make-video-ads
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "The script must sound like a real person, and clips need a check."
+  needs: "run code and use your own video model key (fal or Replicate). Add ffmpeg to join clips"
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: script }, { type: video_ads, required: true } ]
+  author: dLazy
+  author_url: https://github.com/dlazy-ai
+"dlazy-ai/ecommerce-skills:skills/remove-watermark":
+  skip: "Removes watermarks, logos and text from any picture. It can be used to strip someone else's mark, so we skip it."
+"dlazy-ai/ecommerce-skills:skills/clothing-extraction":
+  skip: "Pulls a garment out of other people's photos, such as buyer shots and competitor screenshots, to reuse it. We skip lifting from others' images."

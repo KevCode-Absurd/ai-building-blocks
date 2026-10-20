@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Time windows and visit rules add many limits.
+new_slug: store-delivery-route-planner
+name: Store delivery route planner
+summary: Give it your stores, order sizes and delivery windows. Get weekly truck routes that cover every store at less cost.
+job: plan-supply-chain
+headline: Store delivery route planner
+subhead: Give it your stores, order sizes and delivery windows. Get weekly truck routes that cover every store at less cost.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

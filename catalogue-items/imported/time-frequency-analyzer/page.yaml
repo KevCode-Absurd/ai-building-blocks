@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Several methods fit; it picks one per signal.
+new_slug: time-frequency-analyzer
+name: Time-frequency analyzer
+summary: Give it a signal that changes over time. Get plots and measures of how its frequencies shift.
+job: build-software
+headline: Time-frequency analyzer
+subhead: Give it a signal that changes over time. Get plots and measures of how its frequencies shift.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Wavelet Toolbox.

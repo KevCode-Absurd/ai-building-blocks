@@ -1,0 +1,37 @@
+slug: split-shipment-planner
+name: Split shipment planner
+summary: Say which items ship from where. Get one order split into separate shipments. Changes a live order and cannot be undone.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/fulfillment-ops/shopify-admin-split-shipment-planner
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/fulfillment-ops/shopify-admin-split-shipment-planner
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-split-shipment-planner
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-split-shipment-planner skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/fulfillment-ops/shopify-admin-split-shipment-planner
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

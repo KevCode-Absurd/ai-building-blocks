@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It models flow to find what limits output.
+new_slug: factory-bottleneck-finder
+name: Factory bottleneck finder
+summary: Describe your production steps and times. Get the slowest step found and ranked fixes with expected output gains.
+job: plan-supply-chain
+headline: Factory bottleneck finder
+subhead: Describe your production steps and times. Get the slowest step found and ranked fixes with expected output gains.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code (Python).

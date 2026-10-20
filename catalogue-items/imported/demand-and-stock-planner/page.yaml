@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It picks forecast methods and checks the maths on real numbers.
+new_slug: demand-and-stock-planner
+name: Demand and stock planner
+summary: Give it sales history and lead times. Get a demand forecast, safety stock levels and a restock plan.
+job: plan-strategy
+headline: Demand and stock planner
+subhead: Give it sales history and lead times. Get a demand forecast, safety stock levels and a restock plan.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

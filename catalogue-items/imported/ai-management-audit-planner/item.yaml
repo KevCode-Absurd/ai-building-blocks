@@ -1,0 +1,32 @@
+slug: ai-management-audit-planner
+name: AI management audit planner
+summary: Describe how you run AI. Get gaps against ISO 42001 and a plan to close them.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: ra-qm-team/compliance-team-iso42001/skills/iso42001-specialist
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/compliance-team-iso42001/skills/iso42001-specialist
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: iso42001-specialist
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: iso42001-specialist skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/compliance-team-iso42001/skills/iso42001-specialist
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,35 @@
+slug: rank-tracking-set-up-helper
+name: Rank tracking set-up helper
+summary: Connect Ahrefs. Get the keywords worth tracking, grouped by purpose, with baselines, alert limits and a reporting routine.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: plan
+  - type: spreadsheet
+uses: []
+origin: imported
+warnings:
+  - paid:Ahrefs
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/seo-rank-tracking
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/seo-rank-tracking
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: seo-rank-tracking
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: seo-rank-tracking skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/seo-rank-tracking
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

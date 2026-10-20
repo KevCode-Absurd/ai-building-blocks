@@ -1,0 +1,32 @@
+slug: wi-fi-waveform-generator
+name: Wi-Fi waveform generator
+summary: Pick an 802.11 format. Get a standard-compliant Wi-Fi waveform ready for link tests.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/wireless-communications/matlab-generate-wlan-waveform
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/wireless-communications/matlab-generate-wlan-waveform
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-generate-wlan-waveform
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-generate-wlan-waveform skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/wireless-communications/matlab-generate-wlan-waveform
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

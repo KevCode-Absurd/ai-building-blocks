@@ -1,0 +1,37 @@
+slug: small-team-it-fixer
+name: Small team IT fixer
+summary: Name the IT problem, like a lockout or Wi-Fi drop. Get steps to fix it, ranked by how many people it hits.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/startup-it-troubleshooting
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/startup-it-troubleshooting
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: startup-it-troubleshooting
+  author: BagelHole
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: startup-it-troubleshooting skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/startup-it-troubleshooting
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: BagelHole
+    url: https://github.com/BagelHole/DevOps-Security-Agent-Skills
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,32 @@
+slug: team-ai-use-policy-drafter
+name: Team AI use policy drafter
+summary: Describe how your team uses AI. Get a first-draft AI use policy based on public model policies. Have a lawyer review it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/claude-for-legal
+  path: ai-governance-legal/skills/policy-starter
+  url: https://github.com/anthropics/claude-for-legal/tree/main/ai-governance-legal/skills/policy-starter
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: 4a6c651
+  original_name: policy-starter
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: policy-starter skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/ai-governance-legal/skills/policy-starter
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

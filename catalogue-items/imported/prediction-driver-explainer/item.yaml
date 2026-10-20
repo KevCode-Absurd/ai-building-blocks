@@ -1,0 +1,33 @@
+slug: prediction-driver-explainer
+name: Prediction driver explainer
+summary: Give it a trained model and data. Get which inputs drove each prediction and overall, with checked plots.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+  - type: image
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/shap
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/shap
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: shap
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shap skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/shap
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

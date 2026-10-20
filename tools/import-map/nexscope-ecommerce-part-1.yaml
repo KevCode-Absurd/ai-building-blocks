@@ -1,0 +1,287 @@
+# nexscope-ai/eCommerce-Skills, slice 1 of 2
+"nexscope-ai/eCommerce-Skills:api-monitoring":
+  skip: Generic template with no real steps, and it covers monitoring that needs live data the skill cannot reach.
+"nexscope-ai/eCommerce-Skills:domain-monitoring":
+  skip: Generic template with no real steps, and it covers monitoring that needs live data the skill cannot reach.
+"nexscope-ai/eCommerce-Skills:file-integrity-monitoring":
+  skip: Generic template with no real steps, and it covers monitoring that needs live data the skill cannot reach.
+"nexscope-ai/eCommerce-Skills:localization-testing":
+  skip: Generic template with no real steps, and it covers monitoring that needs live data the skill cannot reach.
+"nexscope-ai/eCommerce-Skills:ecommerce-feed-management":
+  skip: Generic template with no real steps, and it covers monitoring that needs live data the skill cannot reach.
+"nexscope-ai/eCommerce-Skills:inventory-tracking-software":
+  skip: Generic template with no real steps, and it covers monitoring that needs live data the skill cannot reach.
+"nexscope-ai/eCommerce-Skills:minimum-advertised-price":
+  skip: Generic template with no real steps, and it covers monitoring that needs live data the skill cannot reach.
+"nexscope-ai/eCommerce-Skills:online-reputation-management":
+  skip: Generic template with no real steps, and it covers monitoring that needs live data the skill cannot reach.
+"nexscope-ai/eCommerce-Skills:customer-feedback-analysis":
+  skip: Generic template with no real steps, and it covers monitoring that needs live data the skill cannot reach.
+"nexscope-ai/eCommerce-Skills:ebay-seller-tools":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:ebay-product-research":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:ebay-seo":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:ebay-seller-guide":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:ebay-advertising":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-seller-guide":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-seo-tags":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-shop-setup":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-offsite-ads":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-print-on-demand":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-shop-branding":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-review-strategy":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-shop-analytics":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-star-seller":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-custom-orders":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-advertising":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-multi-shop":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-competitor-analysis":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-keyword-research":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-product-description":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-digital-products":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-shipping-strategy":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-seasonal-strategy":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-listing-photography":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-social-media-marketing":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:etsy-pricing-strategy":
+  skip: Thin stub. Marketplace outline with the same generic steps as its sister skills and no real method.
+"nexscope-ai/eCommerce-Skills:ecommerce-customer-retention":
+  skip: Thin stub. A short capability list with no steps, and our library already has fuller skills for this job.
+"nexscope-ai/eCommerce-Skills:ecommerce-subscription-model":
+  skip: Thin stub. A short capability list with no steps, and our library already has fuller skills for this job.
+"nexscope-ai/eCommerce-Skills:omnichannel-ecommerce":
+  skip: Thin stub. A short capability list with no steps, and our library already has fuller skills for this job.
+"nexscope-ai/eCommerce-Skills:ecommerce-ab-testing":
+  skip: Thin stub. A short capability list with no steps, and our library already has fuller skills for this job.
+"nexscope-ai/eCommerce-Skills:conversion-rate-optimization":
+  skip: Thin stub. A short capability list with no steps, and our library already has fuller skills for this job.
+"nexscope-ai/eCommerce-Skills:affiliate-marketing-strategy":
+  skip: Thin stub. A short capability list with no steps, and our library already has fuller skills for this job.
+"nexscope-ai/eCommerce-Skills:ecommerce-video-marketing":
+  skip: Thin stub. A short capability list with no steps, and our library already has fuller skills for this job.
+"nexscope-ai/eCommerce-Skills:influencer-outreach":
+  skip: Thin stub. A short capability list with no steps, and our library already has fuller skills for this job.
+"nexscope-ai/eCommerce-Skills:multichannel-ecommerce":
+  skip: Thin stub. A short capability list with no steps, and our library already has fuller skills for this job.
+"nexscope-ai/eCommerce-Skills:ecommerce-checkout-optimization":
+  skip: Thin stub. A short generic template that asks questions then gives general advice, with no method of its own.
+"nexscope-ai/eCommerce-Skills:ecommerce-returns-management":
+  skip: Thin stub. A short generic template that asks questions then gives general advice, with no method of its own.
+"nexscope-ai/eCommerce-Skills:ecommerce-shipping-rates":
+  skip: Thin stub. A short generic template that asks questions then gives general advice, with no method of its own.
+"nexscope-ai/eCommerce-Skills:ecommerce-business-plan":
+  skip: Thin stub. A short generic template that asks questions then gives general advice, with no method of its own.
+"nexscope-ai/eCommerce-Skills:ecommerce-branding":
+  skip: Thin stub. A short generic template that asks questions then gives general advice, with no method of its own.
+"nexscope-ai/eCommerce-Skills:ecommerce-personalization":
+  skip: Thin stub. A short generic template that asks questions then gives general advice, with no method of its own.
+"nexscope-ai/eCommerce-Skills:dropshipping-product-research":
+  skip: Thin stub. A short generic template that asks questions then gives general advice, with no method of its own.
+"nexscope-ai/eCommerce-Skills:product-launch-strategy":
+  skip: Thin stub. A short generic template that asks questions then gives general advice, with no method of its own.
+"nexscope-ai/eCommerce-Skills:google-shopping-optimization":
+  skip: Thin stub. A short generic template that asks questions then gives general advice, with no method of its own.
+"nexscope-ai/eCommerce-Skills:ecommerce-keyword-research":
+  skip: Thin stub. A short generic template that asks questions then gives general advice, with no method of its own.
+"nexscope-ai/eCommerce-Skills:market-gap-analysis":
+  skip: Thin stub. A short generic template that asks questions then gives general advice, with no method of its own.
+"nexscope-ai/eCommerce-Skills:competitor-price-tracker":
+  skip: Thin stub. A short generic template that asks questions then gives general advice, with no method of its own.
+"nexscope-ai/eCommerce-Skills:ecommerce-landing-page":
+  skip: Our landing page audit and builder skills already do this job in more depth.
+"nexscope-ai/eCommerce-Skills:brand-monitoring":
+  skip: Its live fetch calls are switched off in the script, so it only shows demo output.
+"nexscope-ai/eCommerce-Skills:competitor-price-analysis":
+  skip: Near-copy of competitive pricing strategy in the same repo, which is the stronger one.
+"nexscope-ai/eCommerce-Skills:brand-protection/brand-protection-ebay":
+  skip: Near-copy of the Amazon and Shopify brand protection skills with only the marketplace name changed.
+"nexscope-ai/eCommerce-Skills:brand-protection/brand-protection-walmart":
+  skip: Near-copy of the Amazon and Shopify brand protection skills with only the marketplace name changed.
+"nexscope-ai/eCommerce-Skills:brand-protection/brand-protection-tiktok":
+  skip: Near-copy of the Amazon and Shopify brand protection skills with only the marketplace name changed.
+"nexscope-ai/eCommerce-Skills:product-differentiation/product-differentiation-ebay":
+  skip: Near-copy of the Amazon and Shopify differentiation skills with only the marketplace name changed.
+"nexscope-ai/eCommerce-Skills:product-differentiation/product-differentiation-tiktok":
+  skip: Near-copy of the Amazon and Shopify differentiation skills with only the marketplace name changed.
+"nexscope-ai/eCommerce-Skills:ecommerce-ppc-strategy-planner":
+  skip: Plans Google, Meta and TikTok ads and writes ad copy, which our ads set already covers more deeply.
+"nexscope-ai/eCommerce-Skills:competitive-pricing-strategy":
+  name: Price position planner
+  summary: Give it your costs and rival offers. Get a price for each product, response rules for rival discounts, and a rollout plan.
+  task: set-prices
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: It weighs costs, rival offers and brand position before it picks a price.
+  inputs: [ { type: product_data, required: true }, { type: competitor_set, required: false } ]
+  outputs: [ { type: plan } ]
+"nexscope-ai/eCommerce-Skills:dynamic-pricing-ecommerce":
+  name: Repricing rules designer
+  summary: Give it your margins and stock. Get safe automatic price rules, test cases, and a kill switch you can trust.
+  task: set-prices
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: One bad rule can cost real money, so each rule needs checking.
+  inputs: [ { type: product_data, required: true }, { type: performance_sheet, required: false } ]
+  outputs: [ { type: plan } ]
+"nexscope-ai/eCommerce-Skills:price-optimization-tool":
+  name: Price test planner
+  summary: Give it your costs and sales data. Get the best price to try, three outcome cases, and a test you can undo.
+  task: set-prices
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It checks if the data is good enough before it recommends any price.
+  inputs: [ { type: performance_sheet, required: true }, { type: product_data, required: false } ]
+  outputs: [ { type: plan } ]
+"nexscope-ai/eCommerce-Skills:ecommerce-competitor-analysis":
+  name: Rival store comparer
+  summary: Name your top rivals. Get a side-by-side of their channels, prices and messages, plus the gaps you can win.
+  task: study-competitors
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It gathers public facts and sorts them into clear gaps.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: competitor_set } ]
+  needs: search the web and open pages
+"nexscope-ai/eCommerce-Skills:product-description-generator":
+  name: Product listing writer
+  summary: Give it your product facts. Get a title, bullets and description built for the marketplace you sell on.
+  task: write-landing-page
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It follows a set copy method and fits each site's limits.
+  inputs: [ { type: product_data, required: true }, { type: competitor_set, required: false } ]
+  outputs: [ { type: pdp_copy } ]
+  needs: open web pages
+"nexscope-ai/eCommerce-Skills:ecommerce-marketing-strategy-builder":
+  name: Ninety day marketing plan builder
+  summary: Describe your store. Get a buyer profile, your best channels, a budget split, and a 90 day action plan.
+  task: run-your-store
+  role: orchestrate
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows set steps but picks channels to fit your business.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+"nexscope-ai/eCommerce-Skills:ecommerce-social-media-marketing":
+  skip: Our platform-native content planner already builds the monthly calendar by platform, and the rest is generic outline.
+"nexscope-ai/eCommerce-Skills:ecommerce-content-marketing":
+  name: Content calendar builder
+  summary: Give it your product and platforms. Get topics from real customer words, rival content gaps, and a ready calendar.
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It mines customer words and rival posts, then builds the calendar.
+  inputs: [ { type: product_data, required: true }, { type: voc_reviews, required: false } ]
+  outputs: [ { type: plan } ]
+  needs: search the web and open pages
+"nexscope-ai/eCommerce-Skills:ecommerce-growth-strategy":
+  name: Growth roadmap builder
+  summary: Tell it your stage and numbers. Get the growth lever that pays most now, plus a step by step roadmap.
+  task: run-your-store
+  role: orchestrate
+  level: intermediate
+  thinking: high
+  thinking_why: It weighs five growth levers against your stage and numbers.
+  inputs: [ { type: product_data, required: true }, { type: performance_sheet, required: false } ]
+  outputs: [ { type: plan } ]
+"nexscope-ai/eCommerce-Skills:ecommerce-email-marketing-builder":
+  name: Store email flow writer
+  summary: Describe your store. Get ten email flows with full copy, who gets each one, and a year of campaigns.
+  task: write-emails
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows a fixed set of flows and writes copy for each.
+  inputs: [ { type: product_data, required: true }, { type: brand_brain, required: false } ]
+  outputs: [ { type: email_flow } ]
+"nexscope-ai/eCommerce-Skills:cross-border-ecommerce":
+  name: Overseas market planner
+  summary: Name your store and goals. Get ranked countries, shipping and tax costs, and a phased plan to sell abroad.
+  task: run-your-store
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: Tax, shipping and law choices differ by country and carry real cost.
+  inputs: [ { type: product_data, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: search the web
+"nexscope-ai/eCommerce-Skills:brand-protection/brand-protection-amazon":
+  name: Amazon brand protection planner
+  summary: Give it your brand and listings. Get checks for hijackers and fakes, plus complaint letters ready to send.
+  task: run-your-store
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows set checks and fills in complaint templates.
+  inputs: [ { type: brand_brain, required: true }, { type: product_data, required: false } ]
+  outputs: [ { type: audit_report } ]
+"nexscope-ai/eCommerce-Skills:brand-protection/brand-protection-shopify":
+  name: Store brand protection planner
+  summary: Give it your brand and store. Get a check for fake stores and misuse, plus takedown and legal letters.
+  task: run-your-store
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It follows set checks and fills in takedown templates.
+  inputs: [ { type: brand_brain, required: true } ]
+  outputs: [ { type: audit_report } ]
+"nexscope-ai/eCommerce-Skills:product-differentiation/product-differentiation-amazon":
+  name: Amazon product edge finder
+  summary: Give it rival listings and reviews. Get their weak spots, your best selling points, and a ranked fix list.
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads reviews for patterns and turns them into choices.
+  inputs: [ { type: voc_reviews, required: true }, { type: competitor_set, required: false } ]
+  outputs: [ { type: angle_library } ]
+"nexscope-ai/eCommerce-Skills:product-differentiation/product-differentiation-shopify":
+  name: Store product edge finder
+  summary: Give it rival stores and reviews. Get their gaps, your unique value, and a ranked list of what to change.
+  task: run-your-store
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads reviews and sites for patterns and turns them into choices.
+  inputs: [ { type: voc_reviews, required: true }, { type: competitor_set, required: false } ]
+  outputs: [ { type: angle_library } ]
+"nexscope-ai/eCommerce-Skills:etsy-seo":
+  name: Etsy listing SEO scorer
+  summary: Give it your Etsy listing. Get a score out of 100, better title and tags, and a ranked fix list.
+  task: get-found-in-search
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It scores a listing against set rules.
+  inputs: [ { type: pdp_copy, required: true } ]
+  outputs: [ { type: audit_report } ]

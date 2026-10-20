@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It writes and checks SQL against your schema.
+new_slug: sql-query-helper
+name: SQL query helper
+summary: Describe the data you need. Get a tested SQL query, a faster version, or a migration.
+job: build-software
+headline: SQL query helper
+subhead: Describe the data you need. Get a tested SQL query, a faster version, or a migration.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

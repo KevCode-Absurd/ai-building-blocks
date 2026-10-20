@@ -1,0 +1,34 @@
+slug: competitor-profile-writer
+name: Competitor profile writer
+summary: Give it competitor links. Get a profile of each with site, pricing and positioning. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/competitor-profiling
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/competitor-profiling
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: competitor-profiling
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: competitor-profiling skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/competitor-profiling
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

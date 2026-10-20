@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It picks a planner and checks the path.
+new_slug: robot-arm-motion-planner
+name: Robot arm motion planner
+summary: Give it a start and goal pose. Get a smooth path and timed moves for the arm.
+job: build-software
+headline: Robot arm motion planner
+subhead: Give it a start and goal pose. Get a smooth path and timed moves for the arm.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Robotics System Toolbox.

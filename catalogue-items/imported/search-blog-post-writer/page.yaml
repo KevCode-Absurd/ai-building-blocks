@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It follows a set structure but needs sound writing.
+new_slug: search-blog-post-writer
+name: Search blog post writer
+summary: Give a topic and target keyword. Get a long post with an answer first, FAQs and internal links.
+job: get-found-in-search
+headline: Search blog post writer
+subhead: Give a topic and target keyword. Get a long post with an answer first, FAQs and internal links.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

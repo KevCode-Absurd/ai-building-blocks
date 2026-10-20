@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It compares load to capacity.
+new_slug: team-capacity-planner
+name: Team capacity planner
+summary: Give it your team and projects. Get workload against people, who is overloaded, and whether you can take on more.
+job: organise-work
+headline: Team capacity planner
+subhead: Give it your team and projects. Get workload against people, who is overloaded, and whether you can take on more.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read a workload file you upload.

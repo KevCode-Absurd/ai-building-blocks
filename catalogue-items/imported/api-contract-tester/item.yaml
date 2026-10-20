@@ -1,0 +1,32 @@
+slug: api-contract-tester
+name: API contract tester
+summary: Give it an API and its users. Get tests that catch breaking changes between the two before they ship.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/api-contract-testing
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/api-contract-testing
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: api-contract-testing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: api-contract-testing skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/api-contract-testing
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

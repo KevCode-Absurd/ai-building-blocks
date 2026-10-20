@@ -1,0 +1,37 @@
+slug: telegram-ad-vetter
+name: Telegram ad vetter
+summary: Give it a channel and its price. Get a verdict on audience, fake followers and fair cost per thousand.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/telegram-channel-ads
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/telegram-channel-ads
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: telegram-channel-ads
+  author: Courier-Britva
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: telegram-channel-ads skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/telegram-channel-ads
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Courier-Britva
+    url: https://github.com/Courier-Britva
+    used: Wrote the skill; sickn33 shared it in their collection.

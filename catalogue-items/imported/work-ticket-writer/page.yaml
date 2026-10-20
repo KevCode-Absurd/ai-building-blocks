@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It fills a fixed ticket format from what you give it.
+new_slug: work-ticket-writer
+name: Work ticket writer
+summary: Give it a bug, task or idea. Get a complete Jira, Linear or GitHub ticket with fields and a clear done test.
+job: build-software
+headline: Work ticket writer
+subhead: Give it a bug, task or idea. Get a complete Jira, Linear or GitHub ticket with fields and a clear done test.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

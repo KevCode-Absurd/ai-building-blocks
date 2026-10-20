@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It scores pages and applies decision rules.
+new_slug: old-content-refresher
+name: Old content refresher
+summary: Give it your existing posts. Get which to update, merge or delete, and how deep each update goes.
+job: get-found-in-search
+headline: Old content refresher
+subhead: Give it your existing posts. Get which to update, merge or delete, and how deep each update goes.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

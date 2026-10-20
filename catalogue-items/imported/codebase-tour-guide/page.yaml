@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads the code and orders it into a story.
+new_slug: codebase-tour-guide
+name: Codebase tour guide
+summary: Name your audience. Get a step-by-step tour file that links real files and lines for a new teammate.
+job: build-software
+headline: Codebase tour guide
+subhead: Name your audience. Get a step-by-step tour file that links real files and lines for a new teammate.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

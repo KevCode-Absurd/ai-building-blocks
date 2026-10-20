@@ -1,0 +1,32 @@
+slug: course-exercise-scaffolder
+name: Course exercise scaffolder
+summary: Describe your course section. Get exercise folders with problems, solutions and explainers that pass linting.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Matt Pocock
+  repo: mattpocock/skills
+  path: skills/misc/scaffold-exercises
+  url: https://github.com/mattpocock/skills/tree/main/skills/misc/scaffold-exercises
+  licence: MIT
+  licence_file: LICENSE
+  commit: 5beb35b
+  original_name: scaffold-exercises
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: scaffold-exercises skill
+    by: Matt Pocock
+    url: https://github.com/mattpocock/skills/tree/main/skills/misc/scaffold-exercises
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

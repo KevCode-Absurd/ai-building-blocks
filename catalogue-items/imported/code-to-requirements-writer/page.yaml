@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It reads a lot of code and works out what it does.
+new_slug: code-to-requirements-writer
+name: Code to requirements writer
+summary: Point it at a codebase. Get a product requirements document built from its screens, data and flows.
+job: build-product
+headline: Code to requirements writer
+subhead: Point it at a codebase. Get a product requirements document built from its screens, data and flows.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

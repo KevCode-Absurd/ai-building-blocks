@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Stock at one site changes what the others need.
+new_slug: warehouse-stock-level-planner
+name: Warehouse stock level planner
+summary: Give it your warehouses and demand. Get how much stock to hold at each level of your network.
+job: plan-supply-chain
+headline: Warehouse stock level planner
+subhead: Give it your warehouses and demand. Get how much stock to hold at each level of your network.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

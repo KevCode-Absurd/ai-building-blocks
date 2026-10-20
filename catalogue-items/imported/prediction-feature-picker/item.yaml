@@ -1,0 +1,32 @@
+slug: prediction-feature-picker
+name: Prediction feature picker
+summary: Give it a data table and a target. Get the best input columns chosen, tested and delivered as a clean table.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/ai-and-statistics/matlab-engineer-tabular-features
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-engineer-tabular-features
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-engineer-tabular-features
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-engineer-tabular-features skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-engineer-tabular-features
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

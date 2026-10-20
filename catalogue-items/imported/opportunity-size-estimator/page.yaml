@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: The math is simple, but honest ranges need careful inputs.
+new_slug: opportunity-size-estimator
+name: Opportunity size estimator
+summary: Give it a baseline and an expected change. Get a low, base and high estimate with every assumption listed.
+job: track-numbers
+headline: Opportunity size estimator
+subhead: Give it a baseline and an expected change. Get a low, base and high estimate with every assumption listed.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

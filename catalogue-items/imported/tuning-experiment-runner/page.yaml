@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It plans trials, compares results and decides when to stop.
+new_slug: tuning-experiment-runner
+name: Tuning experiment runner
+summary: Name the setting to tune and the score to improve. Get a small tested search with a trial log and stop rule.
+job: test-and-fix-code
+headline: Tuning experiment runner
+subhead: Name the setting to tune and the score to improve. Get a small tested search with a trial log and stop rule.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

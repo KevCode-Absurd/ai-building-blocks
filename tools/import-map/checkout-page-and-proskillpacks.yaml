@@ -1,0 +1,327 @@
+# Map for checkout-page/ecommerce-skills (--path skills) and proskillpacks/skills (--path skills).
+
+# ---------- checkout-page/ecommerce-skills ----------
+"checkout-page/ecommerce-skills:skills/checkout-ux":
+  name: Checkout page auditor
+  summary: "Give it your cart and checkout. Get a ranked list of fixes for guest checkout, fields, wallets and surprise costs."
+  task: run-your-store
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It walks a set list of checks and ranks what it finds."
+  inputs: [{type: web_page, required: true}]
+  outputs: [{type: audit_report}]
+"checkout-page/ecommerce-skills:skills/digital-product-pricing":
+  name: Digital product pricer
+  summary: "Tell it what you sell, such as a course or ebook. Get the price digits, labels and launch discount to use."
+  task: set-prices
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It applies a short set of pricing rules to your product."
+  inputs: [{type: product_data, required: true}]
+  outputs: [{type: plan}]
+"checkout-page/ecommerce-skills:skills/discounts":
+  name: Discount wording planner
+  summary: "Give it the discount you plan. Get the percent or amount form, sale price display and banner wording that look biggest."
+  task: set-prices
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It turns a planned discount into numbers and words with set rules."
+  inputs: [{type: offer, required: true}]
+  outputs: [{type: copy_draft}]
+"checkout-page/ecommerce-skills:skills/event-pricing":
+  name: Event ticket pricer
+  summary: "Tell it about your class, workshop or event. Get ticket prices, early-bird terms and how to show seats and dates."
+  task: set-prices
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It applies a short set of pricing rules to your event."
+  inputs: [{type: offer, required: true}]
+  outputs: [{type: plan}]
+"checkout-page/ecommerce-skills:skills/post-purchase":
+  name: After-purchase experience planner
+  summary: "Give it your shipping, returns and loyalty setup. Get a plan for what happens after checkout so customers order again."
+  task: run-your-store
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs timing and wording choices across several steps."
+  inputs: [{type: offer, required: false}, {type: question, required: true}]
+  outputs: [{type: plan}]
+"checkout-page/ecommerce-skills:skills/price-research":
+  name: Willingness-to-pay survey designer
+  summary: "Tell it what you sell. Get two survey questions to send customers and a way to turn answers into a best price."
+  task: set-prices
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It sets up a survey and corrects the answers with careful math."
+  inputs: [{type: product_data, required: true}]
+  outputs: [{type: plan}]
+"checkout-page/ecommerce-skills:skills/pricing":
+  name: Price digits and placement planner
+  summary: "Give it a price you are weighing. Get whether to round it, how to price add-ons, and where to place it."
+  task: set-prices
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It applies a short set of pricing rules to one price."
+  inputs: [{type: product_data, required: true}]
+  outputs: [{type: plan}]
+"checkout-page/ecommerce-skills:skills/product-copy":
+  name: Product description writer
+  summary: "Give it your product facts. Get a description with the right number of claims, units and tone to lift sales."
+  task: run-your-store
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It picks claims and units, then writes with set rules."
+  inputs: [{type: product_data, required: true}]
+  outputs: [{type: pdp_copy}]
+"checkout-page/ecommerce-skills:skills/product-page":
+  name: Product page auditor
+  summary: "Give it a product page. Get ranked changes to variants, social proof, buttons and price, each with the research behind it."
+  task: audit-landing-page
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It checks the page against a set list and ranks the fixes."
+  inputs: [{type: web_page, required: true}]
+  outputs: [{type: audit_report}]
+"checkout-page/ecommerce-skills:skills/product-visuals":
+  name: Product shoot brief writer
+  summary: "Tell it your product. Get a shot list for photos and video, with a reason for each shot."
+  task: product-photos
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It chooses shots by what research says helps sales."
+  inputs: [{type: product_data, required: true}]
+  outputs: [{type: shot_list}]
+"checkout-page/ecommerce-skills:skills/promotions":
+  name: Promotion idea planner
+  summary: "Say what you want to launch or clear. Get a gift, bundle or pre-order promotion that avoids plain price cuts."
+  task: make-offer
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It matches a promotion type to your goal and words it well."
+  inputs: [{type: offer, required: false}, {type: question, required: true}]
+  outputs: [{type: plan}]
+"checkout-page/ecommerce-skills:skills/reviews":
+  name: Review request and reply planner
+  summary: "Tell it about your reviews. Get when to ask, how to word the request, and how to answer a bad review."
+  task: help-customers
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It applies a few clear rules to timing and replies."
+  inputs: [{type: voc_reviews, required: false}, {type: question, required: true}]
+  outputs: [{type: plan}]
+"checkout-page/ecommerce-skills:skills/store-audit":
+  name: Online store auditor
+  summary: "Describe your store. Get ranked calls on marketing channels, homepage layout, trust signals and marketplaces."
+  task: run-your-store
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts your store into a type first, then applies the right rules."
+  inputs: [{type: web_page, required: true}]
+  outputs: [{type: audit_report}]
+"checkout-page/ecommerce-skills:skills/subscription-pricing":
+  name: Membership plan pricer
+  summary: "Tell it your plans or membership. Get tier prices, flat or pay-per-use advice, and ways to win upgrades."
+  task: set-prices
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs tier layout and price choices with set rules."
+  inputs: [{type: product_data, required: true}]
+  outputs: [{type: plan}]
+"checkout-page/ecommerce-skills:skills/increase-aov":
+  skip: Only ranks levers and sends you to the repo's other skills for the how-to, so it adds no work of its own.
+"checkout-page/ecommerce-skills:skills/increase-conversion":
+  skip: Only ranks levers and sends you to the repo's other skills for the how-to, so it adds no work of its own.
+"checkout-page/ecommerce-skills:skills/increase-repeat-purchases":
+  skip: Only ranks levers and sends you to the repo's other skills for the how-to, so it adds no work of its own.
+"checkout-page/ecommerce-skills:skills/raise-prices":
+  skip: Only ranks levers and sends you to the repo's other skills for the how-to, so it adds no work of its own.
+"checkout-page/ecommerce-skills:skills/referrals":
+  skip: Same job as the Referral program designer we already take from coreyhaines31/marketingskills.
+
+# ---------- proskillpacks/skills ----------
+"proskillpacks/skills:skills/careers/job-post-decoder":
+  name: Job ad reader
+  summary: "Paste a job ad. Get what the job is, firm needs versus wishes, what is missing, and questions to ask."
+  task: think-and-decide
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: "It reads one ad and quotes it, with no outside research."
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: feedback_notes}]
+"proskillpacks/skills:skills/data/csv-profile-and-sanity-check":
+  skip: Near copy of the Data quality auditor and Messy spreadsheet cleaner we already list.
+"proskillpacks/skills:skills/developers/accessibility-quick-audit":
+  skip: Near copy of the Accessibility checker and Accessibility auditor we already list.
+"proskillpacks/skills:skills/developers/agent-browse":
+  skip: Near copy of the Browser task runner we already list, and it needs a separate agent-browser tool installed.
+"proskillpacks/skills:skills/developers/agent-browse-qwen":
+  skip: Near copy of agent-browse, tuned for one local model, and it needs a separate agent-browser tool installed.
+"proskillpacks/skills:skills/developers/changelog-from-commits":
+  skip: Near copy of the Changelog entry writer we already list.
+"proskillpacks/skills:skills/developers/pr-description-and-review-prep":
+  skip: Near copy of the Pull request description writer we already list.
+"proskillpacks/skills:skills/developers/readme-first-run-check":
+  name: README first-run tester
+  summary: "Point it at a project. Get each README step marked working or broken, with proof, and the edits that fix it."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It checks each step against the project files."
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: test_report}]
+  needs: read your project files
+"proskillpacks/skills:skills/developers/skill-portability-check":
+  name: Skill portability checker
+  summary: "Point it at your skill folder. Get a list of mistakes that stop it loading in other AI tools, with fixes."
+  task: make-skills
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "A script finds the problems and the AI explains the fixes."
+  inputs: [{type: skill_files, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run code and read your files
+"proskillpacks/skills:skills/developers/test-gap-finder":
+  name: Test gap finder
+  summary: "Give it a code change and your tests. Get each new behaviour marked covered or not, plus test cases for the gaps."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It traces each change against the tests."
+  inputs: [{type: code_change, required: true}, {type: codebase, required: true}]
+  outputs: [{type: test_report}]
+  needs: read your project files
+"proskillpacks/skills:skills/ecommerce/agent-ready-quick-check":
+  name: AI shopper store scorecard
+  summary: "Give it your Shopify store link. Get a 6-point scorecard of what AI shopping tools can read. Scrapes sites."
+  task: get-found-in-search
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "A script runs six fixed checks and the AI reports them."
+  inputs: [{type: web_page, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run code
+  scrapes: true
+"proskillpacks/skills:skills/ecommerce/chargeback-evidence-checklist":
+  name: Chargeback evidence gatherer
+  summary: "Tell it the dispute reason. Get what proof to collect, where to find it in Shopify, and whether to accept instead."
+  task: help-customers
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It matches the dispute reason to a fixed evidence list."
+  inputs: [{type: question, required: true}]
+  outputs: [{type: plan}]
+"proskillpacks/skills:skills/ecommerce/product-title-cleaner":
+  name: Product title cleaner
+  summary: "Give it your product list. Get tidy, consistent titles as a CSV for Shopify, plus a before and after sheet."
+  task: run-your-store
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It applies one naming pattern to every title."
+  inputs: [{type: spreadsheet, required: true}]
+  outputs: [{type: spreadsheet}]
+"proskillpacks/skills:skills/ecommerce/review-reply-drafter":
+  name: Public review reply drafter
+  summary: "Paste your store reviews. Get a specific reply to each, with risky ones flagged and no refunds promised."
+  task: help-customers
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It writes a fitting reply per review and flags risky ones."
+  inputs: [{type: voc_reviews, required: true}]
+  outputs: [{type: copy_draft}]
+"proskillpacks/skills:skills/ecommerce/shopify-alt-text-writer":
+  skip: Same job and format as the Product image alt text writer we already list.
+"proskillpacks/skills:skills/ecommerce/shopify-policy-checker":
+  name: Store policy checker
+  summary: "Give it your store link or policy text. Get gaps, clashes and unclear wording, with fixes to paste in."
+  task: check-contracts
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It compares several policies and ranks what could cost you."
+  inputs: [{type: web_page, required: false}, {type: source_text, required: false}]
+  outputs: [{type: audit_report}]
+"proskillpacks/skills:skills/finance/invoice-checker":
+  name: Invoice totals checker
+  summary: "Give it an invoice. Get every line and total recalculated, and any missing fields or date problems listed."
+  task: track-numbers
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It recomputes sums and checks a short list of fields."
+  inputs: [{type: document, required: true}]
+  outputs: [{type: audit_report}]
+"proskillpacks/skills:skills/freelancers/late-payment-chaser-uk":
+  name: UK late payment chaser
+  summary: "Give it an overdue invoice. Get the legal interest and fixed fee worked out, plus reminder emails ready to send."
+  task: track-numbers
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "A script does the sums and the AI writes staged emails."
+  inputs: [{type: document, required: true}]
+  outputs: [{type: copy_draft}]
+  needs: run code
+"proskillpacks/skills:skills/marketing-seo/ai-search-readiness-check":
+  skip: Same job as the AI search platform checker we already list (a score and fix list for AI search).
+"proskillpacks/skills:skills/marketing-seo/search-intent-page-brief":
+  name: Search page brief writer
+  summary: "Give it a keyword and the pages that rank. Get a brief with search intent, gaps to fill, and an outline."
+  task: get-found-in-search
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It compares ranking pages, then plans an outline."
+  inputs: [{type: web_page, required: true}]
+  outputs: [{type: brief}]
+"proskillpacks/skills:skills/sales/cold-email-checker":
+  name: Cold email pre-send checker
+  summary: "Paste a cold email and what you know of the prospect. Get claims tested, legal basics checked, and a tighter version."
+  task: write-emails
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It checks a short draft against a fixed list."
+  inputs: [{type: copy_draft, required: true}]
+  outputs: [{type: copy_draft}, {type: feedback_notes}]
+"proskillpacks/skills:skills/support/angry-customer-reply-check":
+  name: Angry customer reply checker
+  summary: "Paste the complaint and your draft reply. Get promises, facts and tone checked, plus a repaired draft."
+  task: help-customers
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It tests a draft against the message and your rules."
+  inputs: [{type: copy_draft, required: true}, {type: voc_reviews, required: true}]
+  outputs: [{type: copy_draft}, {type: feedback_notes}]
+"proskillpacks/skills:skills/writing/fact-claim-checker":
+  name: Unsupported claim spotter
+  summary: "Paste a draft. Get every claim that needs a source, ranked by risk, with the kind of source to find."
+  task: research-topics
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It sorts each claim by risk but does not verify them."
+  inputs: [{type: copy_draft, required: true}]
+  outputs: [{type: audit_report}]

@@ -1,0 +1,32 @@
+slug: tracking-data-importer
+name: Tracking data importer
+summary: Give it a CSV or Excel file of tracks or detections. Get data ready for MATLAB tracking tools.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: advanced
+inputs:
+  - type: source_text
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/radar/matlab-import-tracking-data
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/radar/matlab-import-tracking-data
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-import-tracking-data
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-import-tracking-data skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/radar/matlab-import-tracking-data
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

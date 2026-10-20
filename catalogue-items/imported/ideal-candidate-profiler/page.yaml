@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It infers motives and habits that the job post never states.
+new_slug: ideal-candidate-profiler
+name: Ideal candidate profiler
+summary: "Give it a job description. Get a profile of who fits: their motives, where they spend time, what moves them."
+job: hire-people
+headline: Ideal candidate profiler
+subhead: "Give it a job description. Get a profile of who fits: their motives, where they spend time, what moves them."
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

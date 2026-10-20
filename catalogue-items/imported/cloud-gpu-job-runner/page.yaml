@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Wrapping code for the cloud is routine but needs testing.
+new_slug: cloud-gpu-job-runner
+name: Cloud GPU job runner
+summary: Give it your Python code. Get it running on rented GPUs, or live as a web API, with no server to manage.
+job: ship-and-host
+headline: Cloud GPU job runner
+subhead: Give it your Python code. Get it running on rented GPUs, or live as a web API, with no server to manage.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run commands and use a Modal account (paid).

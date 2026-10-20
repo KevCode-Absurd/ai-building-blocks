@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It sizes the lift from past promos, then plans stock.
+new_slug: promotion-and-stock-planner
+name: Promotion and stock planner
+summary: Give it past promotions and stock. Get a promo calendar with expected sales lift and the extra stock to have ready.
+job: plan-supply-chain
+headline: Promotion and stock planner
+subhead: Give it past promotions and stock. Get a promo calendar with expected sales lift and the extra stock to have ready.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

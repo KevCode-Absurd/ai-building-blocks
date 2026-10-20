@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It builds a model, tests it and runs it many times.
+new_slug: queue-and-process-simulator
+name: Queue and process simulator
+summary: Describe a process with queues and limited resources. Get a simulation with repeated runs and a clear summary of results.
+job: track-numbers
+headline: Queue and process simulator
+subhead: Describe a process with queues and limited resources. Get a simulation with repeated runs and a clear summary of results.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

@@ -1,0 +1,37 @@
+slug: youtube-title-and-tags-writer
+name: YouTube title and tags writer
+summary: Give it a video or podcast topic. Get title, description, tags and timestamps, or an audit of one that is stuck.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/youtube-seo-optimizer
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/youtube-seo-optimizer
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: youtube-seo-optimizer
+  author: whoisabhishekadhikari
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: youtube-seo-optimizer skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/youtube-seo-optimizer
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: whoisabhishekadhikari
+    url: https://github.com/Whoisabhishekadhikari
+    used: Wrote the skill; sickn33 shared it in their collection.

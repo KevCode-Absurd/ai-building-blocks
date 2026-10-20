@@ -1,0 +1,39 @@
+slug: multi-model-answer-panel
+name: Multi-model answer panel
+summary: Ask one question. Get answers from several open AI models, ranked, plus one final answer.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+warnings:
+  - paid:Fireworks
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/llm-council
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/llm-council
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: llm-council
+  author: DAIR.AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: llm-council skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/llm-council
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: DAIR.AI
+    url: https://github.com/dair-ai/dair-academy-plugins
+    used: Wrote the skill; sickn33 shared it in their collection.

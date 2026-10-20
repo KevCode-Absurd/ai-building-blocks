@@ -1,0 +1,32 @@
+slug: product-shoot-brief-writer
+name: Product shoot brief writer
+summary: Tell it your product. Get a shot list for photos and video, with a reason for each shot.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: shot_list
+uses: []
+origin: imported
+source:
+  by: Checkout Page
+  repo: checkout-page/ecommerce-skills
+  path: skills/product-visuals
+  url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/product-visuals
+  licence: MIT
+  licence_file: LICENSE
+  commit: 8b85f63
+  original_name: product-visuals
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: product-visuals skill
+    by: Checkout Page
+    url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/product-visuals
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

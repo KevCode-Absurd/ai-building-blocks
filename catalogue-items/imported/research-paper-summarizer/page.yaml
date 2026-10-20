@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It reads long sources and pulls out what matters.
+new_slug: research-paper-summarizer
+name: Research paper summarizer
+summary: Give it a paper, article or report. Get the key findings, plain summaries and a comparison across sources.
+job: think-and-decide
+headline: Research paper summarizer
+subhead: Give it a paper, article or report. Get the key findings, plain summaries and a comparison across sources.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

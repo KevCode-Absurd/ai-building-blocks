@@ -1,0 +1,35 @@
+slug: rented-gpu-server-setup-helper
+name: Rented GPU server setup helper
+summary: Say what you need to train. Get a rented GPU server chosen, set up, loaded with your files and shut down after.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+warnings:
+  - paid:Lambda Labs
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 09-infrastructure/lambda-labs
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/09-infrastructure/lambda-labs
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: lambda-labs-gpu-cloud
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: lambda-labs-gpu-cloud skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/09-infrastructure/lambda-labs
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,34 @@
+slug: business-buyer-trust-builder
+name: Business buyer trust builder
+summary: Say who buys from you. Get a plan for thought leadership and trust with slow, careful business buyers.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brand_brain
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Arnab Bag
+  repo: arnabbagxd/Brand-building-skills
+  path: skills/b2b-brand-marketing
+  url: https://github.com/arnabbagxd/Brand-building-skills/tree/main/skills/b2b-brand-marketing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 4a0a8b5
+  original_name: b2b-brand-marketing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: b2b-brand-marketing skill
+    by: Arnab Bag
+    url: https://github.com/arnabbagxd/Brand-building-skills/tree/main/skills/b2b-brand-marketing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

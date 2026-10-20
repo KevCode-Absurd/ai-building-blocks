@@ -1,0 +1,34 @@
+slug: testrail-test-syncer
+name: TestRail test syncer
+summary: Give it your TestRail project. Get its test cases turned into Playwright tests, and results sent back.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+warnings:
+  - paid:TestRail
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: engineering-team/playwright-pro/skills/testrail
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/playwright-pro/skills/testrail
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: testrail
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: testrail skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/engineering-team/playwright-pro/skills/testrail
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

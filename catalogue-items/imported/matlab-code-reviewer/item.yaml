@@ -1,0 +1,32 @@
+slug: matlab-code-reviewer
+name: MATLAB code reviewer
+summary: Give it MATLAB code. Get a review of style, speed and upkeep, checked against MathWorks standards.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/matlab-core/matlab-review-code
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-core/matlab-review-code
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-review-code
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-review-code skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/matlab-core/matlab-review-code
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

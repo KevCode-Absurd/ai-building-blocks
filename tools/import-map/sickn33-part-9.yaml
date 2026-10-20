@@ -1,0 +1,652 @@
+# sickn33/agentic-awesome-skills, slice 9 of 14 (makepad to observability).
+"sickn33/agentic-awesome-skills:skills/market-sizing-analysis":
+  name: Market size estimator
+  summary: Give it a market or product idea. Get a TAM, SAM and SOM estimate built top-down and bottom-up, with sources.
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: It builds the numbers two ways and checks that they agree.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: search the web for market data
+"sickn33/agentic-awesome-skills:skills/marketing-mindset":
+  name: Marketing decision coach
+  summary: Ask whether a marketing move will work. Get a straight verdict with the reasons, including "not worth doing".
+  task: plan-strategy
+  role: check
+  level: beginner
+  thinking: high
+  thinking_why: It weighs your numbers and rivals before it gives a verdict.
+  inputs: [ { type: question, required: true }, { type: offer, required: false } ]
+  outputs: [ { type: feedback_notes } ]
+  author: Axel Freeman
+  author_url: https://github.com/axelfreeman
+"sickn33/agentic-awesome-skills:skills/marketplace-rbac-audit":
+  name: Marketplace access auditor
+  summary: Point it at a multi-role marketplace app. Get a report of who can see or change what, with evidence from the code.
+  task: secure-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: It traces roles, owners and order states across the whole codebase.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: read your project files
+  author: mosinlshaikh
+  author_url: https://github.com/mosinlshaikh
+"sickn33/agentic-awesome-skills:skills/mcp-dependency-drift-audit":
+  name: MCP config version checker
+  summary: Give it your MCP config files. Get a list of server packages that can change under you, before you approve them.
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: low
+  thinking_why: It reads config files and flags unpinned package versions.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: read your project files
+  author: tomelias10
+  author_url: https://github.com/tomelias10
+"sickn33/agentic-awesome-skills:skills/mcp-server-security":
+  name: MCP server hardener
+  summary: Point it at an MCP server you run. Get a checklist of fixes for transport, auth, access and logging.
+  task: secure-code
+  role: check
+  level: expert
+  thinking: medium
+  thinking_why: It works through a set checklist against your setup.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: read your project files
+  author: BagelHole
+  author_url: https://github.com/BagelHole
+"sickn33/agentic-awesome-skills:skills/memory-systems":
+  name: Agent memory designer
+  summary: Describe what your agent must remember. Get a memory design for short-term, long-term and graph storage.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: It compares memory designs and trade-offs before it picks one.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: Muratcan Koylan
+  author_url: https://github.com/muratcankoylan
+"sickn33/agentic-awesome-skills:skills/multi-agent-patterns":
+  name: Multi-agent system planner
+  summary: Describe the job. Get a choice of supervisor, swarm or handoff design for several agents, with the trade-offs.
+  task: build-software
+  role: orchestrate
+  level: expert
+  thinking: high
+  thinking_why: It weighs several architectures against your needs.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: Muratcan Koylan
+  author_url: https://github.com/muratcankoylan
+"sickn33/agentic-awesome-skills:skills/meeting-notes":
+  name: Meeting minutes writer
+  summary: Paste rough meeting notes. Get short minutes with decisions, action items with owners and dates, and open questions.
+  task: organise-work
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: It sorts notes into three lists and flags what is missing.
+  inputs: [ { type: transcript, required: true } ]
+  outputs: [ { type: meeting_notes } ]
+  author: alapha888
+  author_url: https://github.com/alapha888
+"sickn33/agentic-awesome-skills:skills/mermaid-expert":
+  name: Mermaid chart writer
+  summary: Describe a flow, system or database. Get a Mermaid diagram you can paste into docs, in the right style.
+  task: work-with-files
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It turns a description into diagram syntax.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_file } ]
+"sickn33/agentic-awesome-skills:skills/moatmri":
+  name: AI disruption risk checker
+  summary: Name your business or industry. Get your exposure to AI on ten points and a 90-day plan to defend.
+  task: plan-strategy
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It scores ten threats and turns them into a ranked plan.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: audit_report }, { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/mock-hunter":
+  name: Fake data finder
+  summary: Give it a live page. Get a report of which numbers are real, mocked, hardcoded or broken.
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It clicks through the page and traces each value to its source.
+  inputs: [ { type: web_app, required: true } ]
+  outputs: [ { type: test_report } ]
+  needs: run code and open a browser
+  author: CodeShuX
+  author_url: https://github.com/CodeShuX
+"sickn33/agentic-awesome-skills:skills/moyu":
+  name: Small change keeper
+  summary: Turn it on while you code. Your AI changes only what you asked for and picks the simplest fix.
+  task: build-software
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: It is a short set of rules your AI follows while it works.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read your project files
+"sickn33/agentic-awesome-skills:skills/multi-source-search":
+  name: Fact cross-checker
+  summary: Give it a claim to check. Get an evidence table with sources, confidence, conflicts and gaps.
+  task: think-and-decide
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It compares many sources and weighs where they disagree.
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: search the web
+  author: sandbaseai
+  author_url: https://github.com/sandbaseai
+"sickn33/agentic-awesome-skills:skills/multi-agent-brainstorming":
+  name: Design review panel
+  summary: Give it a design or plan. Get it tested by reviewers in turn for hidden assumptions and ways it could fail.
+  task: think-and-decide
+  role: check
+  level: intermediate
+  thinking: high
+  thinking_why: It runs several review rounds with set roles.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+"sickn33/agentic-awesome-skills:skills/n8n-agents":
+  name: n8n AI agent builder
+  summary: Say what your n8n agent should do. Get the agent, tools, memory and review steps set up the right way.
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows set patterns but must fit your workflow.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: tool_connection } ]
+  needs: use the n8n MCP tools
+  author: Romuald Czlonkowski
+  author_url: https://github.com/czlonkowski
+"sickn33/agentic-awesome-skills:skills/n8n-error-handling":
+  name: n8n failure handler
+  summary: Give it an n8n workflow that breaks quietly. Get clear errors, retries and alerts so you see and fix failures.
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It adds error paths and checks each step.
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: tool_connection } ]
+  needs: use the n8n MCP tools
+  author: Romuald Czlonkowski
+  author_url: https://github.com/czlonkowski
+"sickn33/agentic-awesome-skills:skills/n8n-subworkflows":
+  name: n8n sub-workflow builder
+  summary: Give it a long n8n workflow. Get reusable sub-workflows with clear inputs that your agents can also call.
+  task: connect-tools
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It splits a workflow by set rules and wires the parts.
+  inputs: [ { type: tool_connection, required: true } ]
+  outputs: [ { type: tool_connection } ]
+  needs: use the n8n MCP tools
+  author: Romuald Czlonkowski
+  author_url: https://github.com/czlonkowski
+"sickn33/agentic-awesome-skills:skills/n8n-workflow-patterns":
+  name: n8n workflow designer
+  summary: Describe the automation you want. Get an n8n workflow laid out with a proven pattern, from webhook to schedule.
+  task: connect-tools
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks a known pattern and fills it in.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: tool_connection } ]
+  needs: use the n8n MCP tools
+"sickn33/agentic-awesome-skills:skills/native-data-fetching":
+  name: Mobile data fetching coder
+  summary: Describe the data your app needs. Get fetch, cache, retry and offline code for React Native with Expo.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It chooses the right library and handles the edge cases.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+  author: Expo
+  author_url: https://github.com/expo
+"sickn33/agentic-awesome-skills:skills/newman-cicd-integration":
+  name: API test pipeline writer
+  summary: Give it your Postman collection. Get a ready CI pipeline file that runs your API tests on every push.
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It fills in a known pipeline file for your CI tool.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read your project files
+  author: LambdaTest
+  author_url: https://github.com/LambdaTest
+"sickn33/agentic-awesome-skills:skills/nextjs-seo-indexing":
+  name: Next.js indexing fixer
+  summary: Give it your Next.js site and a Search Console error. Get the canonical, sitemap and rendering fixes.
+  task: get-found-in-search
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It matches each indexing error to a known cause and fix.
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: read your project files
+  author: Whoisabhishekadhikari
+  author_url: https://github.com/Whoisabhishekadhikari
+"sickn33/agentic-awesome-skills:skills/nosql-expert":
+  name: NoSQL data modeler
+  summary: Describe your queries and scale. Get a Cassandra or DynamoDB table design that avoids hot partitions.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: It designs from your queries and checks for hot spots.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/not-a-vibe-coder":
+  name: New project planner
+  summary: Give it a vague app idea. Get eight planning files your AI reads each session to stay on track.
+  task: build-product
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: It asks questions and fills files one at a time.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/objection-preemptor":
+  skip: Same job and format as Objection answer sheet writer and Hardest objections answer writer, which we already have.
+"sickn33/agentic-awesome-skills:skills/nodejs-best-practices":
+  name: Node.js code advisor
+  summary: Describe your Node.js project. Get picks for framework, async style and structure, with the reasons.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It weighs choices against what your project needs.
+  inputs: [ { type: codebase, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+"sickn33/agentic-awesome-skills:skills/matplotlib":
+  name: Python chart maker
+  summary: Give it your data. Get a clean Matplotlib chart, static, animated or interactive, ready to save as an image.
+  task: work-with-files
+  role: render
+  level: intermediate
+  thinking: low
+  thinking_why: It follows library patterns to draw the chart.
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: image } ]
+  needs: run code and save files
+"sickn33/agentic-awesome-skills:skills/md2video-audio":
+  name: Narrated video maker
+  summary: Give it a Markdown document. Get a narrated MP4 with slides and a voiceover.
+  task: make-video-ads
+  role: render
+  level: advanced
+  thinking: medium
+  thinking_why: It follows a fixed pipeline from slides to speech to video.
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: video_ads } ]
+  needs: run code and save files
+  author: 70v-Yoyo
+  author_url: https://github.com/70v-Yoyo
+"sickn33/agentic-awesome-skills:skills/minimalist-ui":
+  name: Editorial web designer
+  summary: Describe the interface. Get a calm, document-style design with warm greys, crisp borders and quiet motion.
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It applies a strict style guide with a few design choices.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: web_app } ]
+  author: Leonxlnx
+  author_url: https://github.com/Leonxlnx
+"sickn33/agentic-awesome-skills:skills/mobile-design":
+  name: Mobile app designer
+  summary: Describe the app screen. Get a touch-first design that fits iOS or Android, with a risk score before you build.
+  task: design-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It scores risk first, then designs within clear rules.
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: design_direction } ]
+
+"sickn33/agentic-awesome-skills:skills/makepad-2-0-animation":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-2-0-dsl":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-2-0-events":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-2-0-layout":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-2-0-widgets":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-animation":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-basics":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-deployment":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-dsl":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-event-action":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-font":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-layout":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-platform":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-reference":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-shaders":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-skills":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-splash":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/makepad-widgets":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/malware-analysis":
+  skip: Offensive or specialist security work; not safe or useful enough for a general library.
+"sickn33/agentic-awesome-skills:skills/malware-analyst":
+  skip: Offensive or specialist security work; not safe or useful enough for a general library.
+"sickn33/agentic-awesome-skills:skills/manage-skills":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/manifest":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/markdown-rendering":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/marketing-ideas":
+  skip: Copy of a coreyhaines31/marketingskills skill; we take those from the source.
+"sickn33/agentic-awesome-skills:skills/marketing-plan":
+  skip: Copy of a coreyhaines31/marketingskills skill; we take those from the source.
+"sickn33/agentic-awesome-skills:skills/marketing-psychology":
+  skip: Copy of a coreyhaines31/marketingskills skill; we take those from the source.
+"sickn33/agentic-awesome-skills:skills/markstream-angular":
+  skip: Setup notes for one Markdown library; product docs, not a reusable skill.
+"sickn33/agentic-awesome-skills:skills/markstream-custom-components":
+  skip: Setup notes for one Markdown library; product docs, not a reusable skill.
+"sickn33/agentic-awesome-skills:skills/markstream-install":
+  skip: Setup notes for one Markdown library; product docs, not a reusable skill.
+"sickn33/agentic-awesome-skills:skills/markstream-migration":
+  skip: Setup notes for one Markdown library; product docs, not a reusable skill.
+"sickn33/agentic-awesome-skills:skills/markstream-nuxt":
+  skip: Setup notes for one Markdown library; product docs, not a reusable skill.
+"sickn33/agentic-awesome-skills:skills/markstream-react":
+  skip: Setup notes for one Markdown library; product docs, not a reusable skill.
+"sickn33/agentic-awesome-skills:skills/markstream-svelte":
+  skip: Setup notes for one Markdown library; product docs, not a reusable skill.
+"sickn33/agentic-awesome-skills:skills/markstream-vue":
+  skip: Setup notes for one Markdown library; product docs, not a reusable skill.
+"sickn33/agentic-awesome-skills:skills/markstream-vue2":
+  skip: Setup notes for one Markdown library; product docs, not a reusable skill.
+"sickn33/agentic-awesome-skills:skills/markstream-vue2-cli":
+  skip: Setup notes for one Markdown library; product docs, not a reusable skill.
+"sickn33/agentic-awesome-skills:skills/markstream-vue2-vite":
+  skip: Setup notes for one Markdown library; product docs, not a reusable skill.
+"sickn33/agentic-awesome-skills:skills/marlin-bed-leveling":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/matematico-tao":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/mathguard":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/maxia":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/mcd-secret-menu-lab":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/mcp-builder":
+  skip: Copy of the Anthropic mcp-builder skill; we take it from anthropics/skills.
+"sickn33/agentic-awesome-skills:skills/mcp-builder-ms":
+  skip: Near-copy of the MCP builder skill; one MCP builder is enough.
+"sickn33/agentic-awesome-skills:skills/mcp-tool-developer":
+  skip: Near-copy of the MCP builder skill; one MCP builder is enough.
+"sickn33/agentic-awesome-skills:skills/mdm-device-management":
+  skip: Generic ops checklist; thin and close to what any AI already knows.
+"sickn33/agentic-awesome-skills:skills/mdpr-skill":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/meeting-distiller-pro":
+  skip: Near-copy of the meeting minutes skill we keep.
+"sickn33/agentic-awesome-skills:skills/meme-coin-audit":
+  skip: Offensive or specialist security work; not safe or useful enough for a general library.
+"sickn33/agentic-awesome-skills:skills/memory-forensics":
+  skip: Offensive or specialist security work; not safe or useful enough for a general library.
+"sickn33/agentic-awesome-skills:skills/memory-safety-patterns":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/mental-health-analyzer":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/mentorship-program":
+  skip: A register template for one app module, not a standalone skill.
+"sickn33/agentic-awesome-skills:skills/mercury-mcp":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/mesh-memory":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/metasploit-framework":
+  skip: Offensive or specialist security work; not safe or useful enough for a general library.
+"sickn33/agentic-awesome-skills:skills/meteora-dlmm-pool-screening":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/micro-saas-launcher":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/microservices-patterns":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/microsoft-azure-webjobs-extensions-authentication-events-dotnet":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/microsoft-teams-automation":
+  skip: Routes through Composio Rube MCP; Composio skills are listed from their own source.
+"sickn33/agentic-awesome-skills:skills/mid-engagement-ir-detection":
+  skip: Offensive or specialist security work; not safe or useful enough for a general library.
+"sickn33/agentic-awesome-skills:skills/minecraft-bukkit-pro":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/miro-automation":
+  skip: Routes through Composio Rube MCP; Composio skills are listed from their own source.
+"sickn33/agentic-awesome-skills:skills/mirrord":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/mise-configurator":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/mixpanel-automation":
+  skip: Routes through Composio Rube MCP; Composio skills are listed from their own source.
+"sickn33/agentic-awesome-skills:skills/ml-engineer":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/ml-pipeline-workflow":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/mlops-engineer":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/mmx-cli":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/mobile-developer":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/mobile-reverse":
+  skip: Offensive or specialist security work; not safe or useful enough for a general library.
+"sickn33/agentic-awesome-skills:skills/mobile-security-coder":
+  skip: Offensive or specialist security work; not safe or useful enough for a general library.
+"sickn33/agentic-awesome-skills:skills/model-registry-governance":
+  skip: Generic ops checklist; thin and close to what any AI already knows.
+"sickn33/agentic-awesome-skills:skills/model-serving-kubernetes":
+  skip: Generic ops checklist; thin and close to what any AI already knows.
+"sickn33/agentic-awesome-skills:skills/model-supply-chain-security":
+  skip: Generic ops checklist; thin and close to what any AI already knows.
+"sickn33/agentic-awesome-skills:skills/modellix":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/modern-javascript-patterns":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/moltnode-chain-reader":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/molykit":
+  skip: Only for Makepad, a narrow Rust UI framework; too specialised to list.
+"sickn33/agentic-awesome-skills:skills/monday-automation":
+  skip: Routes through Composio Rube MCP; Composio skills are listed from their own source.
+"sickn33/agentic-awesome-skills:skills/monetization":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/mongodb":
+  skip: Generic ops checklist; thin and close to what any AI already knows.
+"sickn33/agentic-awesome-skills:skills/monopoly":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/monorepo-architect":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/monorepo-management":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/monte-carlo-analyze-root-cause":
+  skip: Works only with Monte Carlo, one paid data tool.
+"sickn33/agentic-awesome-skills:skills/monte-carlo-asset-health":
+  skip: Works only with Monte Carlo, one paid data tool.
+"sickn33/agentic-awesome-skills:skills/monte-carlo-context-detection":
+  skip: Works only with Monte Carlo, one paid data tool.
+"sickn33/agentic-awesome-skills:skills/monte-carlo-monitor-creation":
+  skip: Works only with Monte Carlo, one paid data tool.
+"sickn33/agentic-awesome-skills:skills/monte-carlo-monitoring-advisor":
+  skip: Works only with Monte Carlo, one paid data tool.
+"sickn33/agentic-awesome-skills:skills/monte-carlo-performance-diagnosis":
+  skip: Works only with Monte Carlo, one paid data tool.
+"sickn33/agentic-awesome-skills:skills/monte-carlo-prevent":
+  skip: Works only with Monte Carlo, one paid data tool.
+"sickn33/agentic-awesome-skills:skills/monte-carlo-push-ingestion":
+  skip: Works only with Monte Carlo, one paid data tool.
+"sickn33/agentic-awesome-skills:skills/monte-carlo-remediation":
+  skip: Works only with Monte Carlo, one paid data tool.
+"sickn33/agentic-awesome-skills:skills/monte-carlo-storage-cost-analysis":
+  skip: Works only with Monte Carlo, one paid data tool.
+"sickn33/agentic-awesome-skills:skills/monte-carlo-validation-notebook":
+  skip: Works only with Monte Carlo, one paid data tool.
+"sickn33/agentic-awesome-skills:skills/monthly-closing-statements":
+  skip: A register template for one app module, not a standalone skill.
+"sickn33/agentic-awesome-skills:skills/moodle-external-api-development":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/movie-coupon":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/mtls-configuration":
+  skip: Offensive or specialist security work; not safe or useful enough for a general library.
+"sickn33/agentic-awesome-skills:skills/muapi-media":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/multi-advisor":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/multi-agent-architect":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/multi-agent-task-orchestrator":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/multi-cloud-architecture":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/multi-platform-apps-multi-platform":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/multi-tenant-llm-hosting":
+  skip: Generic ops checklist; thin and close to what any AI already knows.
+"sickn33/agentic-awesome-skills:skills/music-generation-studio":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/mysql":
+  skip: Generic ops checklist; thin and close to what any AI already knows.
+"sickn33/agentic-awesome-skills:skills/n8n-binary-and-data":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/n8n-code-javascript":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/n8n-code-python":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/n8n-code-tool":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/n8n-expression-syntax":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/n8n-mcp-tools-expert":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/n8n-multi-instance":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/n8n-node-configuration":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/n8n-validation-expert":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/nanobanana-ppt-skills":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/neon-ai-gateway":
+  skip: Works only with Neon, one hosted database product.
+"sickn33/agentic-awesome-skills:skills/neon-functions":
+  skip: Works only with Neon, one hosted database product.
+"sickn33/agentic-awesome-skills:skills/neon-object-storage":
+  skip: Works only with Neon, one hosted database product.
+"sickn33/agentic-awesome-skills:skills/neon-postgres":
+  skip: Works only with Neon, one hosted database product.
+"sickn33/agentic-awesome-skills:skills/neon-postgres-branches":
+  skip: Works only with Neon, one hosted database product.
+"sickn33/agentic-awesome-skills:skills/neon-postgres-egress-optimizer":
+  skip: Works only with Neon, one hosted database product.
+"sickn33/agentic-awesome-skills:skills/nerdzao-elite":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/nerdzao-elite-gemini-high":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/nestjs-expert":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/network-101":
+  skip: Offensive or specialist security work; not safe or useful enough for a general library.
+"sickn33/agentic-awesome-skills:skills/network-engineer":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/networkx":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/new-rails-project":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/new-relic":
+  skip: Generic ops checklist; thin and close to what any AI already knows.
+"sickn33/agentic-awesome-skills:skills/news-sentiment-engine":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/nexrad-mosaic-access":
+  skip: Weather radar data niche; too narrow for the library.
+"sickn33/agentic-awesome-skills:skills/nexrad-mosaic-construction":
+  skip: Weather radar data niche; too narrow for the library.
+"sickn33/agentic-awesome-skills:skills/nexrad-product-access":
+  skip: Weather radar data niche; too narrow for the library.
+"sickn33/agentic-awesome-skills:skills/nexrad-radar-visualization":
+  skip: Weather radar data niche; too narrow for the library.
+"sickn33/agentic-awesome-skills:skills/nextjs-app-router-patterns":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/nextjs-best-practices":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/nextjs-supabase-auth":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/nfs-storage":
+  skip: Generic ops checklist; thin and close to what any AI already knows.
+"sickn33/agentic-awesome-skills:skills/nft-standards":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/nika":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/noaa-radar-satellite-fetching":
+  skip: Weather radar data niche; too narrow for the library.
+"sickn33/agentic-awesome-skills:skills/nodejs-backend-patterns":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/not-human-search-mcp":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/notebooklm":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/notification-reminder-hub":
+  skip: A register template for one app module, not a standalone skill.
+"sickn33/agentic-awesome-skills:skills/notion-automation":
+  skip: Routes through Composio Rube MCP; Composio skills are listed from their own source.
+"sickn33/agentic-awesome-skills:skills/notion-manual-import":
+  skip: A register template for one app module, not a standalone skill.
+"sickn33/agentic-awesome-skills:skills/notion-template-business":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/nsfw-ai-spicyapi":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/nutrition-analyzer":
+  skip: Tied to one paid service or product, a niche use, health advice, a thin stub, or not in English; not worth listing.
+"sickn33/agentic-awesome-skills:skills/nx-workspace-patterns":
+  skip: Thin, generic or stack-specific coding advice, or a near-copy of a stronger skill we keep.
+"sickn33/agentic-awesome-skills:skills/object-storage":
+  skip: Generic ops checklist; thin and close to what any AI already knows.
+"sickn33/agentic-awesome-skills:skills/observability-and-instrumentation":
+  skip: Copy of an addyosmani/agent-skills skill; we take those from the source.

@@ -1,0 +1,39 @@
+slug: web-page-to-clean-text-converter
+name: Web page to clean text converter
+summary: Give it a web page link. Get the article as clean text without clutter. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: false
+outputs:
+  - type: source_text
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/defuddle
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/defuddle
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: defuddle
+  author: Steph Ango
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: defuddle skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/defuddle
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Steph Ango
+    url: https://github.com/kepano
+    used: Wrote the skill; sickn33 shared it in their collection.

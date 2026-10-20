@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It looks things up in a catalogue and lists them.
+new_slug: science-dataset-and-model-finder
+name: Science dataset and model finder
+summary: Name your science field and task. Get datasets, models and tools worth trying, with notes on fit.
+job: research-topics
+headline: Science dataset and model finder
+subhead: Name your science field and task. Get datasets, models and tools worth trying, with notes on fit.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can browse the Hugging Face catalogue.

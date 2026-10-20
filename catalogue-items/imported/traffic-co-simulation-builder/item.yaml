@@ -1,0 +1,32 @@
+slug: traffic-co-simulation-builder
+name: Traffic co-simulation builder
+summary: Describe the traffic test. Get a Simulink model joined to the SUMO traffic simulator and ready to run.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/automotive/matlab-cosimulate-sumo-simulink
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/automotive/matlab-cosimulate-sumo-simulink
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-cosimulate-sumo-simulink
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-cosimulate-sumo-simulink skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/automotive/matlab-cosimulate-sumo-simulink
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

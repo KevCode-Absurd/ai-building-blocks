@@ -1,0 +1,37 @@
+slug: two-model-pull-request-reviewer
+name: Two-model pull request reviewer
+summary: Give it a pull request. Get a review where two AI models argue over the code and agree on what to fix.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/debate-review
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/debate-review
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: debate-review
+  author: amElnagdy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: debate-review skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/debate-review
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: amElnagdy
+    url: https://github.com/amElnagdy
+    used: Wrote the skill; sickn33 shared it in their collection.

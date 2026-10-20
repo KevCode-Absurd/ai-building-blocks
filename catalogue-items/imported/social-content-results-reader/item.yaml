@@ -1,0 +1,35 @@
+slug: social-content-results-reader
+name: Social content results reader
+summary: Give it social accounts. Get engagement figures and which posts did best. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:Apify
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/apify-content-analytics
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-content-analytics
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: apify-content-analytics
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: apify-content-analytics skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/apify-content-analytics
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

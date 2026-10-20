@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Cleaning steps depend on the data.
+new_slug: signal-data-cleaner
+name: Signal data cleaner
+summary: Give it raw signals. Get gaps filled, drift removed, noise cut and labels added for analysis.
+job: build-software
+headline: Signal data cleaner
+subhead: Give it raw signals. Get gaps filled, drift removed, noise cut and labels added for analysis.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Signal Processing Toolbox.

@@ -1,0 +1,32 @@
+slug: notion-wiki-writer
+name: Notion wiki writer
+summary: Give it a chat or notes. Get a linked Notion page for the decision, how-to or FAQ.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: meeting_notes
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: OpenAI
+  repo: openai/skills
+  path: skills/.curated/notion-knowledge-capture
+  url: https://github.com/openai/skills/tree/main/skills/.curated/notion-knowledge-capture
+  licence: MIT
+  licence_file: LICENSE.txt
+  commit: 49f948f
+  original_name: notion-knowledge-capture
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: notion-knowledge-capture skill
+    by: OpenAI
+    url: https://github.com/openai/skills/tree/main/skills/.curated/notion-knowledge-capture
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

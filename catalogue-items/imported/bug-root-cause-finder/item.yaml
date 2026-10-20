@@ -1,0 +1,34 @@
+slug: bug-root-cause-finder
+name: Bug root cause finder
+summary: Describe the bug. Get the cause proven with evidence before any code is changed, so fixes stop being guesses.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/phase-gated-debugging
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/phase-gated-debugging
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: phase-gated-debugging
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: phase-gated-debugging skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/phase-gated-debugging
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

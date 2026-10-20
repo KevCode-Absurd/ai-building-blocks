@@ -1,0 +1,35 @@
+slug: candidate-outreach-drafter
+name: Candidate outreach drafter
+summary: Describe the role and the person you want. Get personal first messages and follow-ups to send yourself.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: persona
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: copy_draft
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Carlo Pezzuto
+  repo: carlopezzuto/recruiting
+  path: .claude/skills/candidate-outreach
+  url: https://github.com/carlopezzuto/recruiting/tree/main/.claude/skills/candidate-outreach
+  licence: MIT
+  licence_file: LICENSE
+  commit: 6e9716a
+  original_name: candidate-outreach
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: candidate-outreach skill
+    by: Carlo Pezzuto
+    url: https://github.com/carlopezzuto/recruiting/tree/main/.claude/skills/candidate-outreach
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: eu-ai-act-risk-classifier
+name: EU AI Act risk classifier
+summary: Describe your AI system. Get its risk tier under the EU AI Act and the duties that follow.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: ra-qm-team/compliance-team-eu-ai-act/skills/eu-ai-act-specialist
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/compliance-team-eu-ai-act/skills/eu-ai-act-specialist
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: eu-ai-act-specialist
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: eu-ai-act-specialist skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/compliance-team-eu-ai-act/skills/eu-ai-act-specialist
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

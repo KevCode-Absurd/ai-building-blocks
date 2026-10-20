@@ -1,0 +1,37 @@
+slug: email-mistake-fixer
+name: Email mistake fixer
+summary: Paste an email. Get small errors fixed in your own voice, and tracking bits removed from links if you ask.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: copy_draft
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/email-issue-fixer
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/email-issue-fixer
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: email-issue-fixer
+  author: whoisabhishekadhikari
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: email-issue-fixer skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/email-issue-fixer
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: whoisabhishekadhikari
+    url: https://github.com/whoisabhishekadhikari
+    used: Wrote the skill; sickn33 shared it in their collection.

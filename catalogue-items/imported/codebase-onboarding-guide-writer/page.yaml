@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads code widely and writes for two audiences.
+new_slug: codebase-onboarding-guide-writer
+name: Codebase onboarding guide writer
+summary: Point it at a codebase. Get two guides that take a new engineer from first day to deep knowledge.
+job: build-software
+headline: Codebase onboarding guide writer
+subhead: Point it at a codebase. Get two guides that take a new engineer from first day to deep knowledge.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files.

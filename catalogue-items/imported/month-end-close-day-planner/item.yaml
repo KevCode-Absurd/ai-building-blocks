@@ -1,0 +1,32 @@
+slug: month-end-close-day-planner
+name: Month-end close day planner
+summary: Give it your close tasks. Get a day by day schedule and what is blocking. Review with your accountant.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: finance/skills/close-management
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/finance/skills/close-management
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: close-management
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: close-management skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/finance/skills/close-management
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

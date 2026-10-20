@@ -1,0 +1,40 @@
+slug: copywriting-framework-writer
+name: Copywriting framework writer
+summary: Describe your offer. Get copy in AIDA, PAS or BAB form, with tone options and A/B variants.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+  - type: brand_brain
+    required: false
+outputs:
+  - type: copy_draft
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: writing-and-content/copywriting
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/copywriting
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: copywriting
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: copywriting skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/writing-and-content/copywriting
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

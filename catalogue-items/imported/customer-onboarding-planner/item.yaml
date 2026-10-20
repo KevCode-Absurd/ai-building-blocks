@@ -1,0 +1,38 @@
+slug: customer-onboarding-planner
+name: Customer onboarding planner
+summary: Describe your product and customers. Get phased onboarding steps, email templates, milestones and owners.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: customer-success/onboarding-playbook-creation
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/customer-success/onboarding-playbook-creation
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: onboarding-playbook-creation
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: onboarding-playbook-creation skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/customer-success/onboarding-playbook-creation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

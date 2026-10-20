@@ -1,0 +1,40 @@
+slug: org-structure-and-role-map-builder
+name: Org structure and role map builder
+summary: Give it your goals and team. Get an org structure plan, a spans check and a chart of who decides what.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Tuan Duc Tran
+  repo: tuanductran/hr-skills
+  path: skills/hr-organizational-design
+  url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-organizational-design
+  licence: MIT
+  licence_file: LICENSE
+  commit: 078f2fb
+  original_name: hr-organizational-design
+  author: Tuan Duc Tran
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hr-organizational-design skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-organizational-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

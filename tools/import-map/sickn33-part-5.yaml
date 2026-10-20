@@ -1,0 +1,754 @@
+# sickn33/agentic-awesome-skills, part 5 of 14 (188 skills). Kept: 36. The rest are skipped for the reasons given.
+"sickn33/agentic-awesome-skills:skills/de-ai-writer":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/debate-review":
+  name: Two-model pull request reviewer
+  summary: "Give it a pull request. Get a review where two AI models argue over the code and agree on what to fix."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "Two models must challenge each other over many rounds."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: feedback_notes } ]
+  needs: read your repo and call a second AI model
+  author: "amElnagdy"
+  author_url: https://github.com/amElnagdy
+"sickn33/agentic-awesome-skills:skills/debug-buttercup":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/debugger":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/debugging-and-error-recovery":
+  skip: "Copy of a skill from addyosmani/agent-skills, which we take from the original."
+"sickn33/agentic-awesome-skills:skills/debugging-code":
+  name: Live code debugger
+  summary: "Point it at a bug. Get the program run with breakpoints, so you see exact values and where it goes wrong."
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It steps through live state and reasons about each finding."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and a debugger
+  author: "Almog Baku"
+  author_url: https://github.com/AlmogBaku
+"sickn33/agentic-awesome-skills:skills/debugging-strategies":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/debugging-toolkit":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/debugging-toolkit-smart-debug":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/decision-navigator":
+  name: Stuck decision guide
+  summary: "Tell it what feels stuck. Get a few branching questions, then a clear next step you can take today."
+  task: think-and-decide
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It adapts each question to your last answer."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/deed-page":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/deep-research":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/deep-research-framework":
+  name: Research report writer
+  summary: "Give it a question. Get a conclusion-first report with sources ranked and cross-checked."
+  task: think-and-decide
+  role: orchestrate
+  level: intermediate
+  thinking: high
+  thinking_why: "It plans, checks sources against each other, then writes."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: search the web
+  author: "alapha888"
+  author_url: https://github.com/alapha888
+"sickn33/agentic-awesome-skills:skills/deepapi":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/defi-protocol-templates":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/defi-yield-strategy-allocator":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/define-my-content-pillars":
+  name: Content pillar finder
+  summary: "Share what you have posted and know first-hand. Get three to five subjects you can post about again and again."
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It looks for patterns in your own work."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "prateeks367"
+  author_url: https://github.com/prateeks367
+"sickn33/agentic-awesome-skills:skills/defuddle":
+  name: Web page to clean text converter
+  summary: Give it a web page link. Get the article as clean text without clutter. Collects data from websites.
+  task: work-with-files
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: "It runs one tool and returns the text."
+  inputs: [ { type: source_text, required: false } ]
+  outputs: [ { type: source_text } ]
+  needs: run commands
+  author: "Steph Ango"
+  author_url: https://github.com/kepano
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/dei-dashboard":
+  skip: "One of many register templates built from the same pattern, with only the fields changed."
+"sickn33/agentic-awesome-skills:skills/delegate-setup":
+  skip: "Works only inside one tool’s own setup, or just routes to other skills."
+"sickn33/agentic-awesome-skills:skills/delegating-to-agents":
+  name: Task handoff writer
+  summary: "Describe work to pass on. Get a clear handoff to another AI agent, with checks along the way."
+  task: set-up-ai
+  role: orchestrate
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans what to hand off and how to check it."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "David Ondrej"
+  author_url: https://github.com/davidondrej
+"sickn33/agentic-awesome-skills:skills/dependency-analysis":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/dependency-management-deps-audit":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/dependency-scanning":
+  skip: "Same job as the Dependency risk scanner we take from seb1n/awesome-ai-agent-skills."
+"sickn33/agentic-awesome-skills:skills/dependency-upgrade":
+  name: Major upgrade planner
+  summary: "Name the package to upgrade. Get a staged plan that checks what breaks and tests each step."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Upgrades hide many links between parts."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: run code and read your project files
+"sickn33/agentic-awesome-skills:skills/deploy-to-vercel":
+  name: Vercel deployer
+  summary: "Say \"deploy my app\". Get it live on Vercel and a link you can share."
+  task: ship-and-host
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It follows a fixed deploy path."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: deploy_url } ]
+  needs: run commands and sign in to Vercel
+  author: "Vercel"
+  author_url: https://github.com/vercel-labs
+"sickn33/agentic-awesome-skills:skills/deployment-engineer":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/deployment-pipeline-design":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/deployment-procedures":
+  name: Safe release planner
+  summary: "Describe your release. Get a deploy plan with checks, rollback steps and how to know it worked."
+  task: ship-and-host
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs risk to pick a safe path."
+  inputs: [ { type: codebase, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/deployment-validation-config-validate":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/deprecation-and-migration":
+  skip: "Copy of a skill from addyosmani/agent-skills, which we take from the original."
+"sickn33/agentic-awesome-skills:skills/design-it":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/design-md":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/design-orchestration":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/design-philosophy":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/design-spatial":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/design-spells":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/design-system":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/design-taste-frontend":
+  name: Polished interface builder
+  summary: "Describe the interface. Get a built page with careful colour, layout and motion, not a stock template look."
+  task: build-websites
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows style rules while making design choices."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: web_app } ]
+  needs: run code and read your project files
+  author: "Leonxlnx"
+  author_url: https://github.com/Leonxlnx
+"sickn33/agentic-awesome-skills:skills/design-theme-guide":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/design-thinking":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/design-token-contrast":
+  name: Colour contrast checker
+  summary: "Give it your colour tokens. Get light and dark theme pairs checked for readability, with the closest passing colours."
+  task: design-work
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It calculates ratios and follows fixed rules."
+  inputs: [ { type: design_direction, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your project files
+  author: "Clagoss"
+  author_url: https://github.com/Clagoss
+"sickn33/agentic-awesome-skills:skills/design-ux":
+  skip: "Same job as our Usability heuristic reviewer (Nielsen rules, ranked fixes), so we keep ours."
+"sickn33/agentic-awesome-skills:skills/detect-ai-text":
+  name: AI-written text detector
+  summary: "Paste a document. Get an honest estimate of whether AI wrote it, with the wording clues behind it."
+  task: write-and-tell-stories
+  role: check
+  level: beginner
+  thinking: medium
+  thinking_why: "It weighs language clues and says when it cannot tell."
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: audit_report } ]
+  author: "Sketchjar"
+  author_url: https://github.com/Sketchjar
+"sickn33/agentic-awesome-skills:skills/deterministic-design":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/dev-to-hashnode":
+  skip: "Narrow or low-value for our library."
+"sickn33/agentic-awesome-skills:skills/devcontainer-setup":
+  name: Dev container setup builder
+  summary: "Name your project and language. Get a ready dev container with tools and saved volumes, so setup is the same each time."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows a set recipe for each language."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+"sickn33/agentic-awesome-skills:skills/devcontainers-nix":
+  skip: "Narrow or low-value for our library."
+"sickn33/agentic-awesome-skills:skills/developer-advocacy":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/developer-audience-context":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/developer-churn":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/developer-listening":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/developer-newsletter":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/developer-onboarding":
+  name: Developer quickstart writer
+  summary: "Describe your product. Get a quickstart, tutorial and sample app plan that gets a developer to Hello World fast."
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans steps for a new user and writes them."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: "Jon Athimer"
+  author_url: https://github.com/jonathimer
+"sickn33/agentic-awesome-skills:skills/developer-sandbox":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/developer-seo":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/developer-signup-flow":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/development":
+  skip: "Narrow or low-value for our library."
+"sickn33/agentic-awesome-skills:skills/devops-deploy":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/devops-pipeline-builder":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/devops-troubleshooter":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/devrel-content":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/diagnose-android-overheating":
+  name: Phone overheating diagnoser
+  summary: "Describe the heat or battery drain. Get safe, read-only checks run and the likely cause named."
+  task: think-and-decide
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads device data and reasons about causes."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run commands on your phone link
+  author: "Antigravity Awesome Skills maintainers"
+  author_url: https://github.com/sickn33/agentic-awesome-skills
+"sickn33/agentic-awesome-skills:skills/diagnosing-bugs":
+  skip: "Copy of a skill from a well-known source we take from the original."
+"sickn33/agentic-awesome-skills:skills/diagram-generator":
+  skip: "Same job as the Diagram maker we take from JimLiu/baoyu-skills."
+"sickn33/agentic-awesome-skills:skills/diary":
+  skip: "Works only inside one tool’s own setup, or just routes to other skills."
+"sickn33/agentic-awesome-skills:skills/differential-review":
+  name: Security-focused change reviewer
+  summary: "Give it a pull request or commit. Get a security review of only what changed, with risks ranked."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It traces how each change affects code that was already safe."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run code and read your project files
+"sickn33/agentic-awesome-skills:skills/digital-forensics":
+  skip: "Security attack or reverse-engineering material, not a safe everyday skill for our library."
+"sickn33/agentic-awesome-skills:skills/disaster-recovery":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/disciplinary-pip-tracker":
+  skip: "One of many register templates built from the same pattern, with only the fields changed."
+"sickn33/agentic-awesome-skills:skills/discord-automation":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/discord-bot-architect":
+  skip: "Too thin or too narrow to be worth listing."
+"sickn33/agentic-awesome-skills:skills/dispatch":
+  skip: "Works only inside one tool’s own setup, or just routes to other skills."
+"sickn33/agentic-awesome-skills:skills/dispatching-parallel-agents":
+  skip: "Copy of a skill from a well-known source we take from the original."
+"sickn33/agentic-awesome-skills:skills/distribute-skill-to-all-agents":
+  skip: "Works only inside one tool’s own setup, or just routes to other skills."
+"sickn33/agentic-awesome-skills:skills/distributed-debugging-debug-trace":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/distributed-tracing":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/ditto":
+  skip: "Works only inside one tool’s own setup, or just routes to other skills."
+"sickn33/agentic-awesome-skills:skills/django-access-review":
+  name: Django access control auditor
+  summary: "Point it at a Django project. Get a review of who can see or change what, with fixes for each gap."
+  task: secure-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It traces permission paths through the code."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: security_report } ]
+  needs: run code and read your project files
+"sickn33/agentic-awesome-skills:skills/django-perf-review":
+  name: Django speed reviewer
+  summary: "Point it at a Django project. Get slow queries and N+1 problems found, with the fix for each."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It scans for known slow patterns and proposes fixes."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your project files
+"sickn33/agentic-awesome-skills:skills/django-pro":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/dns-management":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/doc-coauthoring":
+  skip: "Copy of a skill from a well-known source we take from the original."
+"sickn33/agentic-awesome-skills:skills/doc2math":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/docker-compose":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/docker-expert":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/docker-management":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/docs-architect":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/docs-as-marketing":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/docs-generator":
+  skip: "Narrow or low-value for our library."
+"sickn33/agentic-awesome-skills:skills/docs-guard":
+  name: Documentation checker
+  summary: "Give it a README or doc. Get false claims, drift from the code and weak spots listed before you publish."
+  task: test-and-fix-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It compares each claim to the real code."
+  inputs: [ { type: codebase, required: false }, { type: document, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run code and read your project files
+  author: "amElnagdy"
+  author_url: https://github.com/amElnagdy
+"sickn33/agentic-awesome-skills:skills/document-management-system":
+  skip: "One of many register templates built from the same pattern, with only the fields changed."
+"sickn33/agentic-awesome-skills:skills/documentation":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/documentation-and-adrs":
+  skip: "Copy of a skill from addyosmani/agent-skills, which we take from the original."
+"sickn33/agentic-awesome-skills:skills/documentation-generation-doc-generate":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/documentation-templates":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/docusign-automation":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/docx-official":
+  skip: "Copy of a skill from a well-known source we take from the original."
+"sickn33/agentic-awesome-skills:skills/domain-driven-design":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/domain-modeling":
+  skip: "Copy of a skill from a well-known source we take from the original."
+"sickn33/agentic-awesome-skills:skills/dos-verify-done-claims":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/dotnet-architect":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/dotnet-backend":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/dotnet-backend-patterns":
+  skip: "Too thin or too narrow to be worth listing."
+"sickn33/agentic-awesome-skills:skills/dotnet-reverse":
+  skip: "Security attack or reverse-engineering material, not a safe everyday skill for our library."
+"sickn33/agentic-awesome-skills:skills/doubt-driven-development":
+  skip: "Copy of a skill from addyosmani/agent-skills, which we take from the original."
+"sickn33/agentic-awesome-skills:skills/draft-my-comments":
+  name: LinkedIn comment writer
+  summary: "Paste a post. Get a comment that adds something new instead of agreeing, in your voice."
+  task: grow-social
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It writes a short piece from a clear rule."
+  inputs: [ { type: source_text, required: true }, { type: brand_brain, required: false } ]
+  outputs: [ { type: copy_draft } ]
+  author: "prateeks367"
+  author_url: https://github.com/prateeks367
+"sickn33/agentic-awesome-skills:skills/drizzle-migration-conflict":
+  name: Database migration conflict fixer
+  summary: "Describe the Drizzle migration clash. Get it diagnosed and repaired, with steps to stop it coming back."
+  task: test-and-fix-code
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It follows a diagnosis path with known fixes."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+  author: "chaunsin"
+  author_url: https://github.com/chaunsin
+"sickn33/agentic-awesome-skills:skills/drizzle-orm-expert":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/dropbox-automation":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/dropthehassle-publish":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/dsh-deepread":
+  name: Deep reading map builder
+  summary: "Give it an article, book or PDF. Get a knowledge map of its ideas and a Feynman check that you understood it."
+  task: think-and-decide
+  role: compress
+  level: intermediate
+  thinking: high
+  thinking_why: "It reads in full and tests understanding."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+  author: "xiehuan123"
+  author_url: https://github.com/xiehuan123
+"sickn33/agentic-awesome-skills:skills/dwarf-expert":
+  skip: "Security attack or reverse-engineering material, not a safe everyday skill for our library."
+"sickn33/agentic-awesome-skills:skills/dx-optimizer":
+  skip: "Too thin or too narrow to be worth listing."
+"sickn33/agentic-awesome-skills:skills/e2e-testing":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/e2e-testing-patterns":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/earllm-build":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/eas-app-stores":
+  skip: "Too thin or too narrow to be worth listing."
+"sickn33/agentic-awesome-skills:skills/eas-hosting":
+  skip: "Too thin or too narrow to be worth listing."
+"sickn33/agentic-awesome-skills:skills/eas-observe":
+  skip: "Too thin or too narrow to be worth listing."
+"sickn33/agentic-awesome-skills:skills/eas-simulator":
+  skip: "Too thin or too narrow to be worth listing."
+"sickn33/agentic-awesome-skills:skills/eas-update-insights":
+  name: App update health checker
+  summary: "Name your Expo app. Get crash rates, installs and update sizes for each published update."
+  task: ship-and-host
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: "It reads numbers and reports them."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: run commands and sign in to Expo
+  author: "Expo"
+  author_url: https://github.com/expo
+"sickn33/agentic-awesome-skills:skills/eas-workflows":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/ebpf-observability":
+  skip: "Security attack or reverse-engineering material, not a safe everyday skill for our library."
+"sickn33/agentic-awesome-skills:skills/ecl-harness-engineer":
+  skip: "Works only inside one tool’s own setup, or just routes to other skills."
+"sickn33/agentic-awesome-skills:skills/ecommerce-listing-image-set":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/edr-bypass-re":
+  skip: "Security attack or reverse-engineering material, not a safe everyday skill for our library."
+"sickn33/agentic-awesome-skills:skills/effective-agent-skills":
+  name: Skill writer and reviewer
+  summary: "Describe a skill or paste one. Get a well-built version with clear triggers and safety notes."
+  task: make-skills
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It applies a set of authoring rules."
+  inputs: [ { type: skill_files, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: skill_files } ]
+  author: "David Ondrej"
+  author_url: https://github.com/davidondrej
+"sickn33/agentic-awesome-skills:skills/efficient-web-research":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/ejentum-reasoning-harness":
+  skip: "Works only inside one tool’s own setup, or just routes to other skills."
+"sickn33/agentic-awesome-skills:skills/electron-development":
+  skip: "Too thin or too narrow to be worth listing."
+"sickn33/agentic-awesome-skills:skills/electron-drive-skill":
+  name: Desktop app tester
+  summary: "Point it at your Electron app. Get it launched and driven by clicks and typing, with screenshots and logs."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It runs the app and decides what to try next."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: test_report } ]
+  needs: run code and take screenshots
+  author: "Search-3D"
+  author_url: https://github.com/Search-3D
+"sickn33/agentic-awesome-skills:skills/elixir-pro":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/elk-stack":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/elon-musk":
+  skip: "Role-play persona with no clear job."
+"sickn33/agentic-awesome-skills:skills/email-issue-fixer":
+  name: Email mistake fixer
+  summary: "Paste an email. Get small errors fixed in your own voice, and tracking bits removed from links if you ask."
+  task: write-emails
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It makes small edits and keeps your wording."
+  inputs: [ { type: copy_draft, required: true } ]
+  outputs: [ { type: copy_draft } ]
+  author: "whoisabhishekadhikari"
+  author_url: https://github.com/whoisabhishekadhikari
+"sickn33/agentic-awesome-skills:skills/email-marketing-bible":
+  name: Email marketing playbook
+  summary: "Say what email goal you have. Get flows, deliverability fixes and copy without AI-sounding filler."
+  task: write-emails
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It draws on a large guide and adapts it."
+  inputs: [ { type: brief, required: true }, { type: brand_brain, required: false } ]
+  outputs: [ { type: email_flow } ]
+  author: "George Hartley"
+  author_url: https://github.com/CosmoBlk
+"sickn33/agentic-awesome-skills:skills/email-security":
+  skip: "Security attack or reverse-engineering material, not a safe everyday skill for our library."
+"sickn33/agentic-awesome-skills:skills/email-sequence":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/email-systems":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/embedding-strategies":
+  skip: "Too thin or too narrow to be worth listing."
+"sickn33/agentic-awesome-skills:skills/emblemai-crypto-wallet":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/emergency-card":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/emil-design-eng":
+  name: Interface polish reviewer
+  summary: "Give it a screen or component. Get notes on animation, feel and small details that make it feel finished."
+  task: design-work
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It judges craft details against known principles."
+  inputs: [ { type: web_page, required: false }, { type: codebase, required: false } ]
+  outputs: [ { type: feedback_notes } ]
+  author: "Emil Kowalski"
+  author_url: https://github.com/emilkowalski
+"sickn33/agentic-awesome-skills:skills/emotional-arc-designer":
+  name: Emotional arc mapper
+  summary: "Give it a story, page or campaign. Get the feeling you want at each step, from attention to action."
+  task: write-and-tell-stories
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It plans a path of feelings, then checks the flow."
+  inputs: [ { type: copy_draft, required: false }, { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "MMEHDI0606"
+  author_url: https://github.com/MMEHDI0606
+"sickn33/agentic-awesome-skills:skills/employee-suggestion-hub":
+  skip: "One of many register templates built from the same pattern, with only the fields changed."
+"sickn33/agentic-awesome-skills:skills/employment-contract-templates":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/energy-procurement":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/enhance-prompt":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/enterprise-vpn-attack":
+  skip: "Security attack or reverse-engineering material, not a safe everyday skill for our library."
+"sickn33/agentic-awesome-skills:skills/entropy-box":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/environment-setup-guide":
+  skip: "Too thin or too narrow to be worth listing."
+"sickn33/agentic-awesome-skills:skills/eol-resistor-calculator":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/equibles":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/error-debugging-error-analysis":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/error-debugging-error-trace":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/error-debugging-multi-agent-review":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/error-detective":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/error-diagnostics-error-analysis":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/error-diagnostics-error-trace":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/error-diagnostics-smart-debug":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/error-handling-patterns":
+  skip: "Near-copy of a better skill kept from this repo, or an alias of it."
+"sickn33/agentic-awesome-skills:skills/esl-price-sync":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/esop-equity-tracker":
+  skip: "One of many register templates built from the same pattern, with only the fields changed."
+"sickn33/agentic-awesome-skills:skills/ethical-hacking-methodology":
+  skip: "Security attack or reverse-engineering material, not a safe everyday skill for our library."
+"sickn33/agentic-awesome-skills:skills/etsy-search-listings":
+  name: Etsy search results collector
+  summary: Give it a keyword. Get Etsy listings with rank, price and shop. Collects data from websites.
+  task: run-your-store
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It fetches listed facts and tabulates them.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: spreadsheet}]
+  needs: run code and use your Apify token
+  paid: "Apify"
+  author: GeminiGeorge22
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/etsy-shop-sales-history":
+  skip: Reads a paid actor's hosted sales snapshot rather than public pages, and mainly promotes that service.
+"sickn33/agentic-awesome-skills:skills/evaluation":
+  name: Agent system tester
+  summary: "Describe your AI agent. Get a way to measure how well it works and compare changes."
+  task: test-and-fix-code
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: "Designing fair measures needs careful reasoning."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: test_report } ]
+  author: "Muratcan Koylan"
+  author_url: https://github.com/muratcankoylan
+"sickn33/agentic-awesome-skills:skills/event-sourcing-architect":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/event-staffing-compliance":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/event-staffing-ordering":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/event-store-design":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/events-activities":
+  skip: "One of many register templates built from the same pattern, with only the fields changed."
+"sickn33/agentic-awesome-skills:skills/evidence-hygiene":
+  skip: "Security attack or reverse-engineering material, not a safe everyday skill for our library."
+"sickn33/agentic-awesome-skills:skills/evolution":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/exa-search":
+  skip: "Works with one paid service or product, or exists mainly to use it."
+"sickn33/agentic-awesome-skills:skills/examprep-ai":
+  name: Exam study roadmap builder
+  summary: "Give it your syllabus, past papers or notes. Get a ranked roadmap of what to study first for the best score."
+  task: think-and-decide
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It ranks topics by weight and likelihood."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "WHOISABHISHEKADHIKARI"
+  author_url: https://github.com/WHOISABHISHEKADHIKARI
+"sickn33/agentic-awesome-skills:skills/executing-plans":
+  skip: "Copy of a skill from a well-known source we take from the original."
+"sickn33/agentic-awesome-skills:skills/expense-accounting":
+  skip: "One of many register templates built from the same pattern, with only the fields changed."
+"sickn33/agentic-awesome-skills:skills/expense-management":
+  skip: "One of many register templates built from the same pattern, with only the fields changed."
+"sickn33/agentic-awesome-skills:skills/explain-like-socrates":
+  name: Socratic explainer
+  summary: "Name a topic. Get it taught through questions, so you reach the idea yourself and remember it."
+  task: think-and-decide
+  role: make
+  level: beginner
+  thinking: medium
+  thinking_why: "It asks the next question from your answer."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+"sickn33/agentic-awesome-skills:skills/expo-animation":
+  skip: "Too thin or too narrow to be worth listing."
+"sickn33/agentic-awesome-skills:skills/expo-api-routes":
+  name: Expo API route builder
+  summary: "Say what your mobile app needs from a server. Get API routes built in Expo Router and set up to host."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It writes routes from a documented pattern."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+  author: "Expo"
+  author_url: https://github.com/expo
+"sickn33/agentic-awesome-skills:skills/expo-brownfield":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/expo-cicd-workflows":
+  name: Expo build workflow writer
+  summary: "Say how you want your app built and released. Get a working EAS workflow file that does it."
+  task: ship-and-host
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It checks the schema, then writes the file."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: run code and read your project files
+  author: "Expo"
+  author_url: https://github.com/expo
+"sickn33/agentic-awesome-skills:skills/expo-deployment":
+  name: Mobile app release shipper
+  summary: "Point it at your Expo app. Get iOS and Android builds made and sent to the app stores."
+  task: ship-and-host
+  role: orchestrate
+  level: intermediate
+  thinking: medium
+  thinking_why: "It follows a set release path with a few choices."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: deploy_url } ]
+  needs: run commands and sign in to Expo
+  author: "Expo"
+  author_url: https://github.com/expo
+"sickn33/agentic-awesome-skills:skills/expo-dev-client":
+  skip: "Only useful for one niche stack, product or language."
+"sickn33/agentic-awesome-skills:skills/expo-examples":
+  skip: "Too thin or too narrow to be worth listing."

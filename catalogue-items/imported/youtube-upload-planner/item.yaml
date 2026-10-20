@@ -1,0 +1,38 @@
+slug: youtube-upload-planner
+name: YouTube upload planner
+summary: Tell it your free hours. Get a week of uploads with titles, formats and what to drop first.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Jake Schincariol
+  repo: Jakeschincariol/youtube-agent-skill
+  path: skills/yt-plan
+  url: https://github.com/Jakeschincariol/youtube-agent-skill/tree/main/skills/yt-plan
+  licence: MIT
+  licence_file: LICENSE
+  commit: a2feb21
+  original_name: yt-plan
+  author: Jake Schincariol
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: yt-plan skill
+    by: Jake Schincariol
+    url: https://github.com/Jakeschincariol/youtube-agent-skill/tree/main/skills/yt-plan
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Jake Schincariol
+    url: https://github.com/Jakeschincariol
+    used: Wrote the skill; Jake Schincariol shared it in their collection.

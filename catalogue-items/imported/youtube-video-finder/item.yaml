@@ -1,0 +1,35 @@
+slug: youtube-video-finder
+name: YouTube video finder
+summary: Say a topic. Get matching videos and channels, with transcripts for the ones you pick. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: source
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: shortlist
+uses: []
+origin: imported
+warnings:
+  - scrapes
+  - paid:TranscriptAPI
+source:
+  by: ZeroPoint
+  repo: ZeroPointRepo/youtube-skills
+  path: clawhub/youtube-search
+  url: https://github.com/ZeroPointRepo/youtube-skills/tree/main/clawhub/youtube-search
+  licence: MIT
+  licence_file: LICENSE
+  commit: 4f7994b
+  original_name: youtube-search
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: youtube-search skill
+    by: ZeroPoint
+    url: https://github.com/ZeroPointRepo/youtube-skills/tree/main/clawhub/youtube-search
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

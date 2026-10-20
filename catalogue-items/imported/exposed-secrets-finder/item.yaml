@@ -1,0 +1,37 @@
+slug: exposed-secrets-finder
+name: Exposed secrets finder
+summary: Give it a site you own. Get a report of keys and private files visitors can read, with fixes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: deploy_url
+    required: true
+outputs:
+  - type: security_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/client-secret-exposure-audit
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/client-secret-exposure-audit
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: client-secret-exposure-audit
+  author: siddanta-ar1
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: client-secret-exposure-audit skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/client-secret-exposure-audit
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: siddanta-ar1
+    url: https://github.com/siddanta-ar1
+    used: Wrote the skill; sickn33 shared it in their collection.

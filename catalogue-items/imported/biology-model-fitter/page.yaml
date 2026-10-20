@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Fitting choices and statistics need careful judgment.
+new_slug: biology-model-fitter
+name: Biology model fitter
+summary: Give it a model and measured data. Get parameters fitted, patients simulated and drug levels computed.
+job: build-software
+headline: Biology model fitter
+subhead: Give it a model and measured data. Get parameters fitted, patients simulated and drug levels computed.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with SimBiology.

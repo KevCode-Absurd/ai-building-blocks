@@ -1,0 +1,34 @@
+slug: api-designer
+name: API designer
+summary: Say what your code needs to offer. Get a clear, stable API or module design that is hard to misuse.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Addy Osmani
+  repo: addyosmani/agent-skills
+  path: skills/api-and-interface-design
+  url: https://github.com/addyosmani/agent-skills/tree/main/skills/api-and-interface-design
+  licence: MIT
+  licence_file: LICENSE
+  commit: aeac41d
+  original_name: api-and-interface-design
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: api-and-interface-design skill
+    by: Addy Osmani
+    url: https://github.com/addyosmani/agent-skills/tree/main/skills/api-and-interface-design
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

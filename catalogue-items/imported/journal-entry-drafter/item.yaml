@@ -1,0 +1,32 @@
+slug: journal-entry-drafter
+name: Journal entry drafter
+summary: Describe the transaction. Get a balanced journal entry with debits, credits and support notes.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/journal-entry
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/journal-entry
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: journal-entry
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: journal-entry skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/journal-entry
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

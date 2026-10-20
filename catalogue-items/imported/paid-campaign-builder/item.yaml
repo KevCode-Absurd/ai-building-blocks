@@ -1,0 +1,36 @@
+slug: paid-campaign-builder
+name: Paid campaign builder
+summary: Name your goal and budget. Get campaign structure, targeting, bids and a plan to scale across Google, Meta and LinkedIn.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+  - type: brand_brain
+    required: false
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/ads
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/ads
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: ads
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ads skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/ads
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

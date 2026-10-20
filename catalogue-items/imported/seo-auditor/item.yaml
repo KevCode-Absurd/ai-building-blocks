@@ -1,0 +1,35 @@
+slug: seo-auditor
+name: SEO auditor
+summary: Give it a site or page. Get a scored SEO report and ranked fixes. Collects data from websites.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: web_page
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+warnings:
+  - scrapes
+source:
+  by: Bhanunamikaze
+  repo: Bhanunamikaze/Agentic-SEO-Skill
+  path: .
+  url: https://github.com/Bhanunamikaze/Agentic-SEO-Skill
+  licence: MIT
+  licence_file: LICENSE
+  commit: 445c46c
+  original_name: seo
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: seo skill
+    by: Bhanunamikaze
+    url: https://github.com/Bhanunamikaze/Agentic-SEO-Skill
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

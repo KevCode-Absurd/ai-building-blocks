@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It runs two reviews at once and compares them.
+new_slug: code-change-reviewer
+name: Code change reviewer
+summary: Point it at a set of changes. Get a review against your coding standards and your spec, side by side.
+job: test-and-fix-code
+headline: Code change reviewer
+subhead: Point it at a set of changes. Get a review against your coding standards and your spec, side by side.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your project files and run subagents.

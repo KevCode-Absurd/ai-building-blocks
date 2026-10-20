@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Choosing a design that answers the question is hard to reverse.
+new_slug: study-design-and-randomizer
+name: Study design and randomizer
+summary: Describe your study. Get a design, random group assignment and run order that avoid confounded results.
+job: research-topics
+headline: Study design and randomizer
+subhead: Describe your study. Get a design, random group assignment and run order that avoid confounded results.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code.

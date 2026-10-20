@@ -1,0 +1,37 @@
+slug: project-memory-keeper
+name: Project memory keeper
+summary: Work on a codebase. Get a notes folder of decisions, design and rules that any AI can read later.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/lore
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/lore
+  licence: MIT
+  licence_file: LICENSE
+  commit: 0c10eb8
+  original_name: lore
+  author: TheaDust
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: lore skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/lore
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: TheaDust
+    url: https://github.com/TheaDust
+    used: Wrote the skill; sickn33 shared it in their collection.

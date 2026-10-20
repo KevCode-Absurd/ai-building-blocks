@@ -1,0 +1,32 @@
+slug: systematic-review-writer
+name: Systematic review writer
+summary: Name a research question. Get a reproducible search, screened papers, a PRISMA flow and a cited review.
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/literature-review
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/literature-review
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: literature-review
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: literature-review skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/literature-review
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

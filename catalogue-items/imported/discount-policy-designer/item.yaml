@@ -1,0 +1,37 @@
+slug: discount-policy-designer
+name: Discount policy designer
+summary: Describe how you sell. Get a discount matrix, approval limits and a clear route for exceptions.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: commercial/skills/commercial-policy
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/commercial/skills/commercial-policy
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: commercial-policy
+  author: claude-code-skills
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: commercial-policy skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/commercial/skills/commercial-policy
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: claude-code-skills
+    url: https://github.com/alirezarezvani/claude-code-skills
+    used: Wrote the skill; Alireza Rezvani shared it in their collection.

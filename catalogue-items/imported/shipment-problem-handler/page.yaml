@@ -1,0 +1,11 @@
+thinking: medium
+thinking_why: It sorts the problem type, then follows a set claim process.
+new_slug: shipment-problem-handler
+name: Shipment problem handler
+summary: Describe a late, lost or damaged shipment. Get the right steps, claim paperwork and carrier messages.
+job: plan-strategy
+headline: Shipment problem handler
+subhead: Describe a late, lost or damaged shipment. Get the right steps, claim paperwork and carrier messages.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -1,0 +1,32 @@
+slug: tech-debt-prioritiser
+name: Tech debt prioritiser
+summary: Point it at your code. Get a ranked list of debt that slows you down, with cost and small fixes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/code-refactoring-tech-debt
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/code-refactoring-tech-debt
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: code-refactoring-tech-debt
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: code-refactoring-tech-debt skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/code-refactoring-tech-debt
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

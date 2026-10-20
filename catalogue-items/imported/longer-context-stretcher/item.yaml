@@ -1,0 +1,32 @@
+slug: longer-context-stretcher
+name: Longer context stretcher
+summary: Name your model. Get a method and code to make it read much longer documents than it was trained for.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 19-emerging-techniques/long-context
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/19-emerging-techniques/long-context
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: long-context
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: long-context skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/19-emerging-techniques/long-context
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

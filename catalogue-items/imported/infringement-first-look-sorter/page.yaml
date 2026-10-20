@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Each type of claim has factors cutting both ways.
+new_slug: infringement-first-look-sorter
+name: Infringement first-look sorter
+summary: Describe a possible copy or a claim against you. Get a flag list of factors. Not legal advice.
+job: check-contracts
+headline: Infringement first-look sorter
+subhead: Describe a possible copy or a claim against you. Get a flag list of factors. Not legal advice.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Where the skill points to /ip-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.

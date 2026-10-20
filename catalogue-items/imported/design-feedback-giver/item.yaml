@@ -1,0 +1,37 @@
+slug: design-feedback-giver
+name: Design feedback giver
+summary: Share a mockup or Figma link. Get feedback on usability, hierarchy and consistency, with fixes.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: design_file
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: design/skills/design-critique
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/design/skills/design-critique
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: design-critique
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: design-critique skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/design/skills/design-critique
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

@@ -1,0 +1,40 @@
+slug: offboarding-plan-builder
+name: Offboarding plan builder
+summary: Give it a role and leave date. Get a checklist, exit interview questions and handover plan. Not legal advice; check local rules.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: plan
+    required: true
+uses: []
+origin: imported
+source:
+  by: Tuan Duc Tran
+  repo: tuanductran/hr-skills
+  path: skills/hr-offboarding
+  url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-offboarding
+  licence: MIT
+  licence_file: LICENSE
+  commit: 078f2fb
+  original_name: hr-offboarding
+  author: Tuan Duc Tran
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hr-offboarding skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-offboarding
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

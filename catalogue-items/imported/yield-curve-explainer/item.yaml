@@ -1,0 +1,32 @@
+slug: yield-curve-explainer
+name: Yield curve explainer
+summary: Name a government. Get its curve shape, key slopes and real rate split explained in plain words.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: nighomni123
+  repo: nighomni123/fsi-skills-india
+  path: src/market-data/lseg/yield-curve-analysis
+  url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/market-data/lseg/yield-curve-analysis
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: "10233e6"
+  original_name: yield-curve-analysis
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: yield-curve-analysis skill
+    by: nighomni123
+    url: https://github.com/nighomni123/fsi-skills-india/tree/main/src/market-data/lseg/yield-curve-analysis
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.

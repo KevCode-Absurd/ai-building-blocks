@@ -1,0 +1,32 @@
+slug: meeting-agenda-and-cost-planner
+name: Meeting agenda and cost planner
+summary: Give it a meeting idea. Get a call on whether to hold it, its cost in dollars and a timed agenda.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: meeting_notes
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: productivity/meetings/skills/meetings
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/productivity/meetings/skills/meetings
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: meetings
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: meetings skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/productivity/meetings/skills/meetings
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

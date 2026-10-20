@@ -1,0 +1,38 @@
+slug: feedback-theme-finder
+name: Feedback theme finder
+summary: Give it NPS, CSAT or open comments. Get themes, trends and an insight report you can act on.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: beginner
+inputs:
+  - type: voc_reviews
+    required: true
+outputs:
+  - type: audit_report
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: customer-success/customer-feedback-analysis
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/customer-success/customer-feedback-analysis
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: customer-feedback-analysis
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: customer-feedback-analysis skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/customer-success/customer-feedback-analysis
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

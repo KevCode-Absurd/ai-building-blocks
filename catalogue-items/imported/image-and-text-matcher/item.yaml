@@ -1,0 +1,32 @@
+slug: image-and-text-matcher
+name: Image and text matcher
+summary: Give it pictures and words. Get image search, sorting by label and checks for what a picture shows.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: image
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 18-multimodal/clip
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/18-multimodal/clip
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: clip
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: clip skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/18-multimodal/clip
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

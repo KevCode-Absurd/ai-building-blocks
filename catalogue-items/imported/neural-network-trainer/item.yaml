@@ -1,0 +1,34 @@
+slug: neural-network-trainer
+name: Neural network trainer
+summary: Give it data and a goal. Get a neural network trained, tested and exported, with old code moved to current methods.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/ai-and-statistics/matlab-train-network
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-train-network
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-train-network
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-train-network skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/ai-and-statistics/matlab-train-network
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

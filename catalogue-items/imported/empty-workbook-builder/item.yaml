@@ -1,0 +1,37 @@
+slug: empty-workbook-builder
+name: Empty workbook builder
+summary: Give a confirmed field list. Get a formatted empty Excel or CSV file, with no invented rows.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/spreadsheet-manual-build
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/spreadsheet-manual-build
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: spreadsheet-manual-build
+  author: WHOISABHISHEKADHIKARI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: spreadsheet-manual-build skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/spreadsheet-manual-build
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: WHOISABHISHEKADHIKARI
+    url: https://github.com/WHOISABHISHEKADHIKARI/sme-ops-system-builder
+    used: Wrote the skill; sickn33 shared it in their collection.

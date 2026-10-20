@@ -1,0 +1,34 @@
+slug: test-gap-finder
+name: Test gap finder
+summary: Give it a code change and your tests. Get each new behaviour marked covered or not, plus test cases for the gaps.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: code_change
+    required: true
+  - type: codebase
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: Pro Skill Packs
+  repo: proskillpacks/skills
+  path: skills/developers/test-gap-finder
+  url: https://github.com/proskillpacks/skills/tree/main/skills/developers/test-gap-finder
+  licence: MIT
+  licence_file: LICENSE
+  commit: e8c3393
+  original_name: test-gap-finder
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: test-gap-finder skill
+    by: Pro Skill Packs
+    url: https://github.com/proskillpacks/skills/tree/main/skills/developers/test-gap-finder
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

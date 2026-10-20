@@ -1,0 +1,852 @@
+# matlab/matlab-agentic-toolkit, part 2 of 2 (MathWorks, BSD). Every entry needs MATLAB.
+"matlab/matlab-agentic-toolkit:skills-catalog/radar/matlab-design-radar":
+  skip: Only drives the MATLAB Radar Designer app through its own tool, so it is useful inside that product only.
+"matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-configure-scope-object":
+  skip: A guardrail for Simulink scope internals, so it is useful inside that product only.
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-software-development/matlab-write-help":
+  name: MATLAB help text writer
+  summary: Give it a MATLAB function. Get clear help text with a summary line, syntax lines and See Also links.
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows a fixed help format.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-software-development/matlab-write-performance-tests":
+  name: MATLAB speed test writer
+  summary: Give it MATLAB code to time. Get repeatable performance tests that measure run time with sound statistics.
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks what to measure, then follows a set test pattern.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/matlab-software-development/matlab-write-tests":
+  name: MATLAB unit test writer
+  summary: Give it MATLAB code. Get class-based unit tests with fixtures, mocks and app tests that you can run.
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans cases, then writes them in a set style.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}, {type: test_report}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/parallel-computing/matlab-diagnose-parfor":
+  name: Parfor error fixer
+  summary: Paste a failing parfor loop. Get the cause of the error and a fixed loop that runs in parallel.
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: Finding why a loop fails needs careful reasoning about variables.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/parallel-computing/matlab-discover-clusters":
+  name: Parallel cluster finder
+  summary: Ask what parallel clusters you can use. Get a list, with profiles checked and set as default.
+  task: build-software
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It lists and checks settings with simple commands.
+  inputs: [{type: brief, required: false}]
+  outputs: [{type: document}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/parallel-computing/matlab-set-up-worker-state":
+  name: Parallel worker setup helper
+  summary: Give it code that fails on workers. Get paths, variables and shared objects set up on each worker.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It must match setup to how each worker starts.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/parallel-computing/matlab-setup-gpu":
+  name: GPU setup checker
+  summary: Say your GPU is not working in MATLAB. Get it found, tested and ready for GPU code.
+  task: build-software
+  role: check
+  level: intermediate
+  thinking: low
+  thinking_why: It runs a short set of checks in order.
+  inputs: [{type: brief, required: false}]
+  outputs: [{type: audit_report}]
+  needs: run MATLAB on a computer with a GPU
+"matlab/matlab-agentic-toolkit:skills-catalog/parallel-computing/matlab-use-thread-pool":
+  name: Thread pool speed-up helper
+  summary: Give it slow local parallel code. Get it switched to a thread pool and timed to prove the gain.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It tests whether code is safe for threads before switching.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/radar/matlab-design-radar-waveform":
+  name: Radar waveform designer
+  summary: Give it radar or sonar needs. Get a chosen waveform, its settings and plots of how well it performs.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Waveform choices trade off many technical limits.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: document}]
+  needs: run MATLAB with the Phased Array System Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/radar/matlab-import-tracking-data":
+  name: Tracking data importer
+  summary: Give it a CSV or Excel file of tracks or detections. Get data ready for MATLAB tracking tools.
+  task: build-software
+  role: compress
+  level: advanced
+  thinking: medium
+  thinking_why: It maps messy columns into a strict format.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Sensor Fusion and Tracking Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/radar/matlab-simulate-radar-detections":
+  name: Radar detection simulator
+  summary: Give it a radar datasheet. Get a simulated scene, fixes for missed detections and result plots.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Debugging missed detections takes careful technical reasoning.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: document}]
+  needs: run MATLAB with Radar Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/reporting-and-database-access/matlab-connect-databricks":
+  name: Databricks connection setup helper
+  summary: Say you want MATLAB linked to Databricks. Get sign-in, Spark or JDBC set up and tested.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Several sign-in options need the right match.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with a Databricks account
+"matlab/matlab-agentic-toolkit:skills-catalog/reporting-and-database-access/matlab-generate-report":
+  name: MATLAB report builder
+  summary: Give it your results. Get a PDF, Word or HTML report built with titles, chapters, tables and charts.
+  task: work-with-files
+  role: render
+  level: intermediate
+  thinking: medium
+  thinking_why: It lays out content with a set report toolkit.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: document}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/reporting-and-database-access/matlab-use-database":
+  name: MATLAB database helper
+  summary: Say which database and table. Get working code to read, filter, write and update rows from MATLAB.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks the right query pattern for each task.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Database Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/reporting-and-database-access/matlab-use-duckdb":
+  name: DuckDB big file query helper
+  summary: Point it at large CSV, Parquet or JSON files. Get fast queries run from MATLAB with DuckDB.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It writes queries and checks the setup works.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB R2026a or later with Database Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-analyze-ams-waveform":
+  name: Mixed-signal waveform analyzer
+  summary: Give it circuit waveform data. Get phase noise, jitter, timing and ADC accuracy measured.
+  task: build-software
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: Measurements need exact method choices.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run MATLAB with Mixed-Signal Blockset
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-analyze-antenna-structures":
+  name: Large antenna analyzer
+  summary: Describe a dish or reflector antenna. Get a built model with patterns and performance checked.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Large structures need careful solver choices.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: document}]
+  needs: run MATLAB with Antenna Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-analyze-em":
+  name: PCB signal loss analyzer
+  summary: Give it a PCB design. Get S-parameters, insertion loss and fields computed with the right solver.
+  task: build-software
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: Solver and mesh choices change the result.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run MATLAB with Antenna Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-analyze-pcb-pdn":
+  name: PCB power network checker
+  summary: Give it a PCB layout. Get voltage drop, current density and rule checks on its power nets.
+  task: build-software
+  role: check
+  level: expert
+  thinking: high
+  thinking_why: Power checks need careful setup per net.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run MATLAB with PCB Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-assemble-pcb-layout":
+  name: Custom PCB shape builder
+  summary: Describe a PCB shape. Get a custom layout with shapes, feeds and layers built from code.
+  task: build-software
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: It follows a set build pattern with exact geometry.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with PCB Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-design-antenna":
+  name: Antenna designer
+  summary: Name the frequency and goal. Get an antenna or array designed, with its pattern and fit checked.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Antenna design balances many linked limits.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: document}]
+  needs: run MATLAB with Antenna Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-design-pcb-coupler":
+  name: PCB coupler designer
+  summary: Name the band and split. Get a power divider or coupler designed and its response plotted.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Tuning needs careful technical reasoning.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with PCB Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-design-pcb-filter":
+  name: PCB RF filter designer
+  summary: Give it pass band and rejection needs. Get a PCB filter designed and its response plotted.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Tuning needs careful technical reasoning.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with PCB Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-design-pcb-passive":
+  name: PCB passive part designer
+  summary: Say which part you need, such as an inductor or balun. Get it designed and checked.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Each part needs its own tuning.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with PCB Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-design-pcb-transmission-line":
+  name: PCB trace designer
+  summary: Give it impedance and layer needs. Get microstrip, stripline or paired traces sized and checked.
+  task: build-software
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: It uses set formulas with checks.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with PCB Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-export-session-script":
+  name: Session to script exporter
+  summary: Ask to save your session. Get one clean MATLAB script that reruns the work from start to end.
+  task: build-software
+  role: compress
+  level: beginner
+  thinking: low
+  thinking_why: It gathers working code and tidies it.
+  inputs: [{type: codebase, required: false}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-integrate-antenna":
+  name: Antenna matching helper
+  summary: Give it an antenna. Get a matching network and system model that connect it to your RF chain.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Matching needs careful design trade-offs.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Antenna Toolbox and RF Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-integrate-pcb-circuit":
+  name: PCB circuit combiner
+  summary: Give it several RF PCB parts. Get them cascaded with extra parts added and S-parameters exported.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It joins parts with a set method.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with PCB Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-manage-pcb-material":
+  name: PCB material setup helper
+  summary: Name your board material. Get a substrate, conductor and layer stack set up with loss included.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It maps material data to the right settings.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with PCB Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-model-ams-systems":
+  name: PLL circuit modeler
+  summary: Give it a PLL datasheet. Get a working phase-locked loop model with the right solver set.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Wrong solver choices break the model.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Mixed-Signal Blockset
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-model-rf":
+  name: RF system modeler
+  summary: Give it S-parameter files or a spec. Get RF chains modeled, with gain, noise and stability checked.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: RF modeling needs deep technical judgement.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: document}]
+  needs: run MATLAB with RF Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-model-serdes-systems":
+  name: SerDes link modeler
+  summary: Describe a high-speed serial link. Get a model with equalizers tuned and eye diagrams plotted.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Equalizer tuning needs careful analysis.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: document}]
+  needs: run MATLAB with SerDes Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-model-via":
+  name: PCB via modeler
+  summary: Describe a via transition. Get a via modeled with pads and return vias and its signal quality checked.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Via behavior depends on many linked settings.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with PCB Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-optimize-pcb-design":
+  name: PCB design optimizer
+  summary: Set a goal such as wider bandwidth or smaller area. Get PCB sizes tuned by search to meet it.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: It sets limits and judges search results.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with PCB Toolbox and Global Optimization Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-read-pcb-layout":
+  name: PCB layout file reader
+  summary: Give it a Gerber, ODB++ or Allegro file. Get its nets, layers and stack listed and ready to use.
+  task: build-software
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It reads files with fixed commands.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: document}]
+  needs: run MATLAB with PCB Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/rf-and-mixed-signal/matlab-write-pcb-layout":
+  name: PCB Gerber exporter
+  summary: Give it a finished PCB design. Get Gerber files with connectors, ready to send to a maker.
+  task: build-software
+  role: render
+  level: intermediate
+  thinking: low
+  thinking_why: It writes files with set commands.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: document}]
+  needs: run MATLAB with PCB Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/robotics-and-autonomous-systems/matlab-compute-gnss-position":
+  name: GNSS position calculator
+  summary: Give it RINEX satellite data. Get receiver positions worked out from chosen satellite groups.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows set steps with a few choices.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: code_change}, {type: document}]
+  needs: run MATLAB with Navigation Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/robotics-and-autonomous-systems/matlab-connect-mavlink":
+  name: Drone autopilot connector
+  summary: Say which drone or flight controller. Get MATLAB connected over MAVLink and reading its data.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Setup needs matching dialects and ports.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB and reach a PX4 or ArduPilot autopilot
+"matlab/matlab-agentic-toolkit:skills-catalog/robotics-and-autonomous-systems/matlab-create-uav-scenario":
+  name: Drone scenario builder
+  summary: Describe the terrain, buildings and sensors. Get a drone simulation scene you can fly in MATLAB.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It builds a scene from set parts.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with UAV Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/robotics-and-autonomous-systems/matlab-fuse-inertial-sensors":
+  name: Inertial sensor fusion builder
+  summary: Describe your sensors. Get the right fusion filter chosen and built to track orientation or position.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Choosing a filter needs technical judgement.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Navigation Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/robotics-and-autonomous-systems/matlab-model-robot-kinematics":
+  name: Robot arm modeler
+  summary: Name your robot arm. Get a MATLAB model ready for moves, reach checks and drawing.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It loads or builds a known model type.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Robotics System Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/robotics-and-autonomous-systems/matlab-plan-robot-motion":
+  name: Robot arm motion planner
+  summary: Give it a start and goal pose. Get a smooth path and timed moves for the arm.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It picks a planner and checks the path.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Robotics System Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-analyze-spectrum":
+  name: Signal spectrum analyzer
+  summary: Give it a signal. Get its frequency content, peaks and bandwidth worked out with the right method.
+  task: build-software
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It must match the estimator to the signal.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run MATLAB with Signal Processing Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-analyze-time-frequency-content":
+  name: Time-frequency analyzer
+  summary: Give it a signal that changes over time. Get plots and measures of how its frequencies shift.
+  task: build-software
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: Several methods fit; it picks one per signal.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run MATLAB with Wavelet Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-design-adaptive-filter":
+  name: Adaptive filter designer
+  summary: Describe noise or echo to remove. Get an adaptive filter built and tested on your signal.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Filter choice depends on the signal.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with DSP System Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-design-digital-filter":
+  name: Digital filter designer
+  summary: Say what to clean from a signal. Get a filter designed, checked and applied.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: It picks a filter type and checks its response.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Signal Processing Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-design-dsphdl-ddc":
+  name: FPGA down converter designer
+  summary: Describe the rates and bands. Get a digital down converter built for FPGA or ASIC use.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Hardware rate limits make it exacting.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with DSP HDL Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-evaluate-acoustic-metrics":
+  name: Audio quality metric picker
+  summary: Give it a sound file. Get loudness, noise and speech quality scores with the right metric chosen.
+  task: build-software
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: It matches each metric to the question.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run MATLAB with Audio Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-extract-signal-features":
+  name: Signal feature extractor
+  summary: Give it signals. Get time and frequency features ready for analysis or machine learning.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It applies set extractors.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Signal Processing Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-play-record-audio":
+  name: Audio streamer code writer
+  summary: Say what to play or record. Get modern MATLAB audio code, not the old methods.
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows one current API.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB R2025a or later with Audio Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-prepare-signal-data":
+  name: Signal data cleaner
+  summary: Give it raw signals. Get gaps filled, drift removed, noise cut and labels added for analysis.
+  task: build-software
+  role: compress
+  level: intermediate
+  thinking: medium
+  thinking_why: Cleaning steps depend on the data.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Signal Processing Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-process-streaming-audio":
+  name: Live audio processing builder
+  summary: Describe the effect. Get a frame-by-frame audio chain with filters, EQ and level meters.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Real-time loops need careful design.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Audio Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/signal-processing/matlab-write-audio-plugin":
+  name: Audio plugin writer
+  summary: Describe the effect or sound. Get a tested audio plugin you can export as VST or AU.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows a strict class pattern and a validator.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Audio Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-build-industrial-hmi":
+  name: Industrial dashboard builder
+  summary: Describe your plant data. Get a control-room dashboard with alarms, trends and safe controls.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: It applies strict design rules and safety choices.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: web_app}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-call-nidaqmx":
+  name: NI-DAQmx call translator
+  summary: Paste a DAQmx C call. Get the correct MATLAB calldaqlib call with argument types fixed.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Types and arguments must match exactly.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with National Instruments drivers
+"matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-connect-arduino":
+  name: Arduino connector
+  summary: Plug in a board. Get it found, set up and connected to MATLAB.
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows a short connect routine.
+  inputs: [{type: brief, required: false}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB and reach an Arduino board
+"matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-connect-bluetooth-low-energy-device":
+  name: Bluetooth device connector
+  summary: Name a Bluetooth Low Energy device. Get it scanned, connected and its data read or written.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It runs a set scan and connect routine.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB and reach a Bluetooth device
+"matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-create-custom-arduino-library":
+  name: Arduino sensor library builder
+  summary: Name a sensor MATLAB lacks. Get a custom Arduino library so you can use it from MATLAB.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It wraps device code in a set format.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB and reach an Arduino board
+"matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-discover-hardware":
+  name: Connected hardware finder
+  summary: Ask what devices are plugged in. Get them listed with the add-ons each one needs.
+  task: build-software
+  role: source
+  level: beginner
+  thinking: low
+  thinking_why: It lists and matches devices.
+  inputs: [{type: brief, required: false}]
+  outputs: [{type: document}]
+  needs: run MATLAB on a computer with the hardware
+"matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-enhance-camera-image":
+  name: Camera image fixer
+  summary: Say what looks wrong in your camera picture. Get settings and steps that improve it.
+  task: build-software
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: It reads camera settings before changing them.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB and reach a camera
+"matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-find-pi-assets":
+  name: PI asset finder
+  summary: Give it a tag name or description. Get the matching PI data points found from MATLAB.
+  task: build-software
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: It runs set lookups.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: document}]
+  needs: run MATLAB and reach an OSIsoft PI server
+"matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-import-export-vehicle-data":
+  name: Vehicle log data converter
+  summary: Give it MDF, BLF or CAN log files. Get signals decoded and written to the format you need.
+  task: build-software
+  role: compress
+  level: advanced
+  thinking: medium
+  thinking_why: Decoding needs the right signal database.
+  inputs: [{type: source_text, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Vehicle Network Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-modernize-daq":
+  name: Data acquisition code updater
+  summary: Give it old session-based data acquisition code. Get it ported to the current interface.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: Each old call maps to a new pattern.
+  inputs: [{type: codebase, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Data Acquisition Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-use-cameras":
+  name: MATLAB camera capture helper
+  summary: Say which camera. Get it connected and images or video captured in MATLAB.
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: It follows a short connect routine.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB and reach a camera
+"matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-use-opcua-client":
+  name: OPC UA client connector
+  summary: Name an industrial server. Get MATLAB connected securely and its nodes browsed.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Security setup needs care.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB and reach an OPC UA server
+"matlab/matlab-agentic-toolkit:skills-catalog/test-and-measurement/matlab-use-vehicle-network":
+  name: Vehicle network setup helper
+  summary: Say which CAN device you have. Get channels set up and messages sent and received.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Hardware setup needs matching settings.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Vehicle Network Toolbox and CAN hardware
+"matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-add-awgn":
+  name: Noise level code helper
+  summary: Say your SNR target. Get noise added right, with SNR, Eb/No and Es/No converted correctly.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It applies set conversions.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB
+"matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-design-ofdm-system":
+  name: OFDM system builder
+  summary: Describe your OFDM link. Get a correct simulation using the proper modulation functions.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Small setup errors give wrong results.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Communications Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-detect-capture-usrp":
+  name: Triggered radio capture helper
+  summary: Say which signal to catch. Get a radio that records only when it appears.
+  task: build-software
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: Triggers need tuning to the signal.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Wireless Testbench and a USRP radio
+"matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-generate-5g-waveform":
+  name: 5G waveform generator
+  summary: Pick a 5G test model or channel. Get a standard-compliant baseband waveform.
+  task: build-software
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: Standards give exact settings.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with 5G Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-generate-ble-waveform":
+  name: Bluetooth LE waveform generator
+  summary: Name the packet type. Get a Bluetooth Low Energy waveform built with correct functions.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: It follows a set API.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Bluetooth Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-generate-gnss-waveform":
+  name: GNSS signal generator
+  summary: Pick a GPS or Galileo signal. Get a baseband waveform with realistic channel effects.
+  task: build-software
+  role: make
+  level: expert
+  thinking: medium
+  thinking_why: Signal options are set but numerous.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Satellite Communications Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-generate-wlan-waveform":
+  name: Wi-Fi waveform generator
+  summary: Pick an 802.11 format. Get a standard-compliant Wi-Fi waveform ready for link tests.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Standards give exact settings.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with WLAN Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-set-up-usrp-radio":
+  name: USRP radio setup helper
+  summary: Name your USRP model. Get it connected, set up and verified for use in MATLAB.
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: It follows a set connect routine.
+  inputs: [{type: brief, required: false}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Wireless Testbench and a USRP radio
+"matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-simulate-bluetooth-network":
+  name: Bluetooth network simulator
+  summary: Describe your devices and links. Get a system-level Bluetooth network run with results.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Network setups vary by topology.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: document}]
+  needs: run MATLAB with Bluetooth Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-simulate-wireless-network":
+  name: Wireless network simulator
+  summary: Describe nodes and traffic. Get a system-level wireless network run with throughput results.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Setup choices change the results.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}, {type: document}]
+  needs: run MATLAB with Wireless Network Toolbox
+"matlab/matlab-agentic-toolkit:skills-catalog/wireless-communications/matlab-transmit-capture-usrp":
+  name: Radio transmit and capture helper
+  summary: Give it a test signal. Get it sent over the air and the received IQ data captured.
+  task: build-software
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: Radio timing needs care.
+  inputs: [{type: brief, required: true}]
+  outputs: [{type: code_change}]
+  needs: run MATLAB with Wireless Testbench and a USRP radio

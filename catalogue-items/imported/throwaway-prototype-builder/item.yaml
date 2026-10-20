@@ -1,0 +1,32 @@
+slug: throwaway-prototype-builder
+name: Throwaway prototype builder
+summary: Ask a design question. Get a quick prototype of the logic or the screen that answers it.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: Matt Pocock
+  repo: mattpocock/skills
+  path: skills/engineering/prototype
+  url: https://github.com/mattpocock/skills/tree/main/skills/engineering/prototype
+  licence: MIT
+  licence_file: LICENSE
+  commit: 5beb35b
+  original_name: prototype
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: prototype skill
+    by: Matt Pocock
+    url: https://github.com/mattpocock/skills/tree/main/skills/engineering/prototype
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

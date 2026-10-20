@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It maps messy files to a strict format.
+new_slug: lab-instrument-data-converter
+name: Lab instrument data converter
+summary: Give it instrument output files. Get them converted to Allotrope JSON or flat CSV for your lab systems.
+job: work-with-files
+headline: Lab instrument data converter
+subhead: Give it instrument output files. Get them converted to Allotrope JSON or flat CSV for your lab systems.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

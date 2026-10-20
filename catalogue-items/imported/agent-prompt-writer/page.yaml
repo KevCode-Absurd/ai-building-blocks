@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It asks a round of questions, then writes one prompt.
+new_slug: agent-prompt-writer
+name: Agent prompt writer
+summary: Paste a rough request. Answer a few questions. Get one clear prompt to give an AI agent.
+job: set-up-ai
+headline: Agent prompt writer
+subhead: Paste a rough request. Answer a few questions. Get one clear prompt to give an AI agent.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

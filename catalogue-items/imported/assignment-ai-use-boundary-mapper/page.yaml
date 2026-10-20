@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It weighs each part of the task against what students must learn.
+new_slug: assignment-ai-use-boundary-mapper
+name: Assignment AI-use boundary mapper
+summary: Give it an assignment. Get which parts AI can help with and which parts it would ruin, plus a clear rule.
+job: teach-and-train
+headline: Assignment AI-use boundary mapper
+subhead: Give it an assignment. Get which parts AI can help with and which parts it would ruin, plus a clear rule.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

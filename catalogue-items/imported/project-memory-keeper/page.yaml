@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It decides what is worth saving and files it.
+new_slug: project-memory-keeper
+name: Project memory keeper
+summary: Work on a codebase. Get a notes folder of decisions, design and rules that any AI can read later.
+job: build-software
+headline: Project memory keeper
+subhead: Work on a codebase. Get a notes folder of decisions, design and rules that any AI can read later.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read and write your project files.

@@ -1,0 +1,39 @@
+slug: screenshot-to-interface-builder
+name: Screenshot to interface builder
+summary: Give it a screenshot or mockup. Get matching UI built with your own parts, compared side by side with the image.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: image
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: web_app
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/ui-from-screenshot
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ui-from-screenshot
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: ui-from-screenshot
+  author: UXKIN
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: ui-from-screenshot skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/ui-from-screenshot
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: UXKIN
+    url: https://github.com/uxkin
+    used: Wrote the skill; sickn33 shared it in their collection.

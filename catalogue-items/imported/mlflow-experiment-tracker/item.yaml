@@ -1,0 +1,32 @@
+slug: mlflow-experiment-tracker
+name: MLflow experiment tracker
+summary: Give it your training code. Get every run logged, compared and versioned, so you can repeat the best one.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 13-mlops/mlflow
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/13-mlops/mlflow
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: mlflow
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: mlflow skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/13-mlops/mlflow
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

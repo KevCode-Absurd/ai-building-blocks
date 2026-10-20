@@ -1,0 +1,32 @@
+slug: systems-paper-writer
+name: Systems paper writer
+summary: Give it your systems work. Get a paper draft built to the structure that systems conferences expect.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 20-ml-paper-writing/systems-paper-writing
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/20-ml-paper-writing/systems-paper-writing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: systems-paper-writing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: systems-paper-writing skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/20-ml-paper-writing/systems-paper-writing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: It splits the question, compares sources and synthesises.
+new_slug: deep-research-reporter
+name: Deep research reporter
+summary: Give it a topic. Get a cross-checked report built from many sources, with findings and sources.
+job: test-an-idea
+headline: Deep research reporter
+subhead: Give it a topic. Get a cross-checked report built from many sources, with findings and sources.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can search the web.

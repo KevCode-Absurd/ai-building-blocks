@@ -1,0 +1,33 @@
+slug: marketing-video-producer
+name: Marketing video producer
+summary: Say the video you need. Get the right tool, a script and shot plan for AI, avatar or coded video.
+category: general
+boards: []
+type: skill
+role: render
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: shot_list
+  - type: video_prompt
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/video
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/video
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: video
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: video skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/video
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,805 @@
+# sickn33/agentic-awesome-skills, part 10 of 14. Kept the distinct skills; the rest are copies, registers, product-bound or too thin.
+"sickn33/agentic-awesome-skills:skills/observability-cloud-planning":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/observability-engineer":
+  name: "Monitoring system planner"
+  summary: "Describe your service. Get a plan for metrics, logs, traces, SLOs and alerts that you can build step by step."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It designs several linked systems for a real service."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/observability-monitoring-monitor-setup":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/observability-monitoring-slo-implement":
+  name: "Error budget planner"
+  summary: "Name your service. Get service level targets, error budgets and alert rules that match what users feel."
+  task: ship-and-host
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It turns user needs into numbers and alert rules."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/obsess":
+  name: "Detail polisher"
+  summary: "Name one UI detail or slow function. Get several checked attempts, with the best version kept inside a set budget."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "It tries, checks and compares many versions before it stops."
+  inputs: [ { type: codebase, required: true }, { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "run code and open a browser"
+  author: "UmarSiddiqui"
+  author_url: https://github.com/UmarSiddiqui
+"sickn33/agentic-awesome-skills:skills/obsidian-bases":
+  name: "Obsidian database view builder"
+  summary: "Say how you want your notes filtered and shown. Get a working Obsidian Base file with views, formulas and summaries."
+  task: organise-work
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It follows a fixed file format with clear rules."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  author: "kepano"
+  author_url: https://github.com/kepano
+"sickn33/agentic-awesome-skills:skills/obsidian-cli":
+  name: "Obsidian vault manager"
+  summary: "Tell it what to find, add or change in your vault. Get notes read, created and searched from the command line."
+  task: organise-work
+  role: orchestrate
+  level: intermediate
+  thinking: low
+  thinking_why: "It runs one command per step from a reference list."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "run commands on your computer"
+  author: "kepano"
+  author_url: https://github.com/kepano
+"sickn33/agentic-awesome-skills:skills/obsidian-clipper-template-creator":
+  name: "Web clipper template maker"
+  summary: "Name the site you clip from. Get a tested Obsidian Web Clipper template that saves clean, well-labelled notes."
+  task: organise-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reads a real page and checks each selector against it."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "open web pages"
+"sickn33/agentic-awesome-skills:skills/obsidian-markdown":
+  name: "Obsidian note writer"
+  summary: "Give it your notes. Get Obsidian-ready Markdown with links, embeds, callouts and properties that show up right."
+  task: organise-work
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It applies known syntax rules to your text."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+  author: "kepano"
+  author_url: https://github.com/kepano
+"sickn33/agentic-awesome-skills:skills/obtain-coupons-all-in-one":
+  skip: "Built around one paid service or scraping of people or sites, or very thin, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/occupational-health-analyzer":
+  skip: "Written in Chinese only, so it does not suit our English library."
+"sickn33/agentic-awesome-skills:skills/odoo-accounting-setup":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-automated-tests":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-backup-strategy":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-docker-deployment":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-ecommerce-configurator":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-edi-connector":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-hr-payroll-setup":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-inventory-optimizer":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-l10n-compliance":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-manufacturing-advisor":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-migration-helper":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-module-developer":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-orm-expert":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-performance-tuner":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-project-timesheet":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-purchase-workflow":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-qweb-templates":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-rpc-api":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-sales-crm-expert":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-security-rules":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-shopify-integration":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-upgrade-advisor":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-woocommerce-bridge":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odoo-xml-views-builder":
+  skip: "Odoo ERP guides for one niche product, so too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/odw":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/offboarding-exit":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/offensive-osint":
+  skip: "Attack and red-team material for offensive security, which does not fit the library."
+"sickn33/agentic-awesome-skills:skills/offer-appointment":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/offers":
+  skip: "Copy of a skill from coreyhaines31/marketingskills or a close rewrite of one, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/office-productivity":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/okr-system":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/okta-attack":
+  skip: "Attack and red-team material for offensive security, which does not fit the library."
+"sickn33/agentic-awesome-skills:skills/ollama-stack":
+  name: "Local AI model setup"
+  summary: "Say what hardware you have. Get Ollama and Open WebUI running local models, tuned for your graphics card."
+  task: set-up-ai
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It adapts a fixed setup to your machine."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "run commands on your computer"
+  author: "BagelHole"
+  author_url: https://github.com/BagelHole
+"sickn33/agentic-awesome-skills:skills/omentir-linkedin-outreach":
+  skip: "Built around one paid service or scraping of people or sites, or very thin, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/omp-delegate":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/on-call-handoff-patterns":
+  name: "On-call handoff writer"
+  summary: "Give it your shift alerts and open issues. Get a handoff note the next person can act on at once."
+  task: organise-work
+  role: compress
+  level: intermediate
+  thinking: low
+  thinking_why: "It condenses facts into a set template."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+"sickn33/agentic-awesome-skills:skills/onboarding":
+  skip: "Copy of a skill from coreyhaines31/marketingskills or a close rewrite of one, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/onboarding-cro":
+  skip: "Copy of a skill from coreyhaines31/marketingskills or a close rewrite of one, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/onboarding-playbook":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/onboarding-psychologist":
+  name: "First-use onboarding designer"
+  summary: "Describe your product and its first win. Get an onboarding flow that cuts setup and builds a habit."
+  task: build-product
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It designs a flow around one early win."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/one-drive-automation":
+  skip: "Thin wrapper for the Rube MCP (Composio) service that asks the AI to look up tools first, so it adds little."
+"sickn33/agentic-awesome-skills:skills/oneroster-csv-validator":
+  name: "Class roster file checker"
+  summary: "Give it a OneRoster CSV set. Get broken links, bad encodings and manifest errors found, with fixes."
+  task: work-with-files
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It checks many linked files against strict rules."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "run code and read files"
+  author: "wwewtech"
+  author_url: https://github.com/wwewtech
+"sickn33/agentic-awesome-skills:skills/ontoly-software-graph":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/open-dynamic-workflows":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/open-source-marketing":
+  name: "Open source promoter"
+  summary: "Give it your open source project. Get a plan to win stars, users and contributors without sounding pushy."
+  task: grow-social
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It matches advice to the project and its audience."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "jonathimer"
+  author_url: https://github.com/jonathimer
+"sickn33/agentic-awesome-skills:skills/openapi-spec-generation":
+  skip: "Near-copy of a skill we keep from this set, or too thin to list."
+"sickn33/agentic-awesome-skills:skills/openapi-spec-generator":
+  name: "API spec writer"
+  summary: "Describe your API or paste its code. Get a complete OpenAPI or Swagger spec ready for docs and SDKs."
+  task: build-software
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It asks a few questions, then fills a strict format."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: document } ]
+  author: "LambdaTest"
+  author_url: https://github.com/LambdaTest
+"sickn33/agentic-awesome-skills:skills/openclaw-deployment-hardening":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/openclaw-github-repo-commander":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/openclaw-local-mac-mini":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/openclaw-security-hardening":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/opencode-delegate":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/openhook":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/openshift":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/opentelemetry":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/opentofu-migration":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/optim-agent":
+  name: "Tuning experiment runner"
+  summary: "Name the setting to tune and the score to improve. Get a small tested search with a trial log and stop rule."
+  task: test-and-fix-code
+  role: orchestrate
+  level: expert
+  thinking: high
+  thinking_why: "It plans trials, compares results and decides when to stop."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: test_report } ]
+  needs: "run code"
+  author: "Optim-Agent"
+  author_url: https://github.com/Optim-Agent
+"sickn33/agentic-awesome-skills:skills/options-flow-analyzer":
+  name: "Options flow reader"
+  summary: "Give it options data. Get real bets told apart from cheap lottery calls, so the put-call ratio is not misleading."
+  task: money-and-investing
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It filters noise before it reads the signal."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "reach the Polygon data service with your key"
+  author: "tellmefrankie"
+  author_url: https://github.com/tellmefrankie
+"sickn33/agentic-awesome-skills:skills/oral-health-analyzer":
+  skip: "Written in Chinese only, so it does not suit our English library."
+"sickn33/agentic-awesome-skills:skills/orca-replay":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/orchestrate":
+  name: "Parallel work coordinator"
+  summary: "Give it a large task. Get it split across helper agents with clear ownership, then merged into one checked result."
+  task: set-up-ai
+  role: orchestrate
+  level: advanced
+  thinking: high
+  thinking_why: "It plans lanes, manages helpers and checks the combined work."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: "run helper agents in parallel"
+  author: "provencher"
+  author_url: https://github.com/provencher
+"sickn33/agentic-awesome-skills:skills/orchestrate-batch-refactor":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/organization-design":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/os-scripting":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/osint-methodology":
+  skip: "Attack and red-team material for offensive security, which does not fit the library."
+"sickn33/agentic-awesome-skills:skills/oss-hunter":
+  skip: "Built around one paid service or scraping of people or sites, or very thin, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/osterwalder-canvas-architect":
+  name: "Business model canvas builder"
+  summary: "Describe your business. Get a nine-block Business Model Canvas checked for gaps between customers, costs and revenue."
+  task: plan-strategy
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "It asks questions and checks that every block fits the others."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  author: "justmiroslav"
+  author_url: https://github.com/justmiroslav
+"sickn33/agentic-awesome-skills:skills/ot-ics":
+  skip: "Attack and red-team material for offensive security, which does not fit the library."
+"sickn33/agentic-awesome-skills:skills/outlook-automation":
+  skip: "Thin wrapper for the Rube MCP (Composio) service that asks the AI to look up tools first, so it adds little."
+"sickn33/agentic-awesome-skills:skills/outlook-calendar-automation":
+  skip: "Thin wrapper for the Rube MCP (Composio) service that asks the AI to look up tools first, so it adds little."
+"sickn33/agentic-awesome-skills:skills/outreachagent":
+  skip: "Built around one paid service or scraping of people or sites, or very thin, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/outreachgenie-list-audit":
+  skip: "Built around one paid service or scraping of people or sites, or very thin, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/page-cro":
+  skip: "Copy of a skill from coreyhaines31/marketingskills or a close rewrite of one, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/pagerduty-automation":
+  skip: "Thin wrapper for the Rube MCP (Composio) service that asks the AI to look up tools first, so it adds little."
+"sickn33/agentic-awesome-skills:skills/pagespeed-enhancer":
+  name: "Page speed fixer"
+  summary: "Paste your PageSpeed report. Get fixes for speed, access, best practice and SEO scores, in ordered batches."
+  task: build-websites
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts issues into batches and fixes each one in order."
+  inputs: [ { type: audit_report, required: false }, { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  author: "WHOISABHISHEKADHIKARI"
+  author_url: https://github.com/WHOISABHISHEKADHIKARI
+"sickn33/agentic-awesome-skills:skills/paid-ads":
+  skip: "Copy of a skill from coreyhaines31/marketingskills or a close rewrite of one, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/pakistan-payments-stack":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/pangolinfo-amazon-data-research":
+  name: Amazon market researcher
+  summary: Give it a product or category. Get Amazon sales rank, reviews and seller data in a report. Collects data from websites.
+  task: study-competitors
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: It plans a narrow data request, then reads the results.
+  inputs: [{type: question, required: true}]
+  outputs: [{type: audit_report}]
+  needs: run code and use your Pangolinfo API key
+  paid: "Pangolinfo"
+  author: Pangolinfo
+  scrapes: true
+"sickn33/agentic-awesome-skills:skills/papers-skill":
+  name: "Paper research assistant"
+  summary: "Name a topic or paper. Get a literature scan, a deep read or a reading list from Semantic Scholar and arXiv."
+  task: think-and-decide
+  role: source
+  level: intermediate
+  thinking: medium
+  thinking_why: "It searches, reads and then pulls the findings together."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "run code and reach the internet"
+  author: "xwmxcz"
+  author_url: https://github.com/xwmxcz
+"sickn33/agentic-awesome-skills:skills/parallel-agents":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/parallel-search-mcp":
+  skip: Only works with one provider's search connector and is not a scraping skill of its own.
+"sickn33/agentic-awesome-skills:skills/parcel-coupon":
+  skip: "Built around one paid service or scraping of people or sites, or very thin, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/party-ledger-reconciliation":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/patch-diff-exploit":
+  skip: "Attack and red-team material for offensive security, which does not fit the library."
+"sickn33/agentic-awesome-skills:skills/payment-accounting":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/payment-integration":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/payments-received":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/paypal-integration":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/payroll-finance":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/paywall-upgrade-cro":
+  skip: "Copy of a skill from coreyhaines31/marketingskills or a close rewrite of one, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/pci-compliance":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/pci-dss-compliance":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/pdf-conversion-router":
+  name: "PDF converter"
+  summary: "Give it a PDF and the format you want. Get a faithful Markdown, HTML, Word or JSON copy with tables kept intact."
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It first checks what kind of PDF this is, then picks a route."
+  inputs: [ { type: document, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "run code and read files"
+"sickn33/agentic-awesome-skills:skills/pdf-official":
+  skip: "Copy of a skill from anthropics/skills or obra/superpowers, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/penetration-testing":
+  skip: "Attack and red-team material for offensive security, which does not fit the library."
+"sickn33/agentic-awesome-skills:skills/pentest-checklist":
+  skip: "Attack and red-team material for offensive security, which does not fit the library."
+"sickn33/agentic-awesome-skills:skills/pentest-commands":
+  skip: "Attack and red-team material for offensive security, which does not fit the library."
+"sickn33/agentic-awesome-skills:skills/pentest-tools":
+  skip: "Attack and red-team material for offensive security, which does not fit the library."
+"sickn33/agentic-awesome-skills:skills/people-data":
+  skip: "Built around one paid service or scraping of people or sites, or very thin, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/people-directory":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/performance-engineer":
+  skip: "Near-copy of a skill we keep from this set, or too thin to list."
+"sickn33/agentic-awesome-skills:skills/performance-management":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/performance-optimization":
+  skip: "Copy of a skill from addyosmani/agent-skills, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/performance-optimizer":
+  name: "Slow code fixer"
+  summary: "Describe what feels slow. Get the bottleneck found, fixed, and proven faster with before and after numbers."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It measures first, then changes one thing at a time."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "run code and read your project files"
+"sickn33/agentic-awesome-skills:skills/performance-profiling":
+  skip: "Near-copy of a skill we keep from this set, or too thin to list."
+"sickn33/agentic-awesome-skills:skills/performance-testing-review-ai-review":
+  skip: "Near-copy of a skill we keep from this set, or too thin to list."
+"sickn33/agentic-awesome-skills:skills/performance-testing-review-multi-agent-review":
+  skip: "Near-copy of a skill we keep from this set, or too thin to list."
+"sickn33/agentic-awesome-skills:skills/performance-tuning":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/permission-manager":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/personal-tool-builder":
+  skip: "Near-copy of a skill we keep from this set, or too thin to list."
+"sickn33/agentic-awesome-skills:skills/petty-cash-management":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/phase-gated-debugging":
+  name: "Bug root cause finder"
+  summary: "Describe the bug. Get the cause proven with evidence before any code is changed, so fixes stop being guesses."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It follows five strict phases and pauses for your OK."
+  inputs: [ { type: codebase, required: true }, { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "run code and read your project files"
+"sickn33/agentic-awesome-skills:skills/photopea-embedded-editor":
+  name: "Photopea editor embedder"
+  summary: "Say what image editing your app needs. Get Photopea embedded and scripted to open, edit and export files."
+  task: build-websites
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It needs a web page plus the Photopea scripting rules."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: code_change } ]
+  needs: "run code and open a browser"
+"sickn33/agentic-awesome-skills:skills/php-pro":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/pi-custom-model":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/pi-delegate":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/pi-web-search":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/pilot-protocol":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/pipecat-friday-agent":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/pipedrive-automation":
+  skip: "Thin wrapper for the Rube MCP (Composio) service that asks the AI to look up tools first, so it adds little."
+"sickn33/agentic-awesome-skills:skills/pitch-psychologist":
+  name: "Pitch arc planner"
+  summary: "Give it your audience and your goal. Get a pitch or deck outline that builds belief, then asks for a clear decision."
+  task: speak-and-persuade
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sequences ideas to fit what the audience believes."
+  inputs: [ { type: brief, required: true }, { type: persona, required: false } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/placecall":
+  skip: "Built around one paid service or scraping of people or sites, or very thin, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/plaid-fintech":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/plan-ledger-tasks-yylo":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/plan-writing":
+  skip: "Copy of a skill from anthropics/skills or obra/superpowers, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/planetscale":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/planning-and-task-breakdown":
+  skip: "Copy of a skill from addyosmani/agent-skills, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/planning-with-files":
+  name: "Working notes planner"
+  summary: "Give it a long task. Get a plan, findings and progress kept in files so your AI stays on track."
+  task: organise-work
+  role: orchestrate
+  level: beginner
+  thinking: low
+  thinking_why: "It keeps three simple files up to date."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: plan } ]
+  needs: "read and write files"
+"sickn33/agentic-awesome-skills:skills/platform-engineering":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/playwright-java":
+  skip: "Too narrow for the library."
+"sickn33/agentic-awesome-skills:skills/playwright-skill":
+  name: "Browser automation scripter"
+  summary: "Say what to do in a web browser. Get Playwright code written and run for it, with results and screenshots."
+  task: test-and-fix-code
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It writes and runs code, then fixes what breaks."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: test_report } ]
+  needs: "run code and open a browser"
+"sickn33/agentic-awesome-skills:skills/plotly":
+  name: "Interactive chart maker"
+  summary: "Give it your data. Get an interactive Plotly chart with hover, zoom and pan that you can embed in a page."
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: low
+  thinking_why: "It picks a chart type and fills in known code."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: web_app } ]
+  needs: "run Python code"
+  author: "K-Dense Inc."
+  author_url: https://github.com/K-Dense-AI
+"sickn33/agentic-awesome-skills:skills/podcast-generation":
+  skip: "Near-copy of a skill we keep from this set, or too thin to list."
+"sickn33/agentic-awesome-skills:skills/podman":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/poka-yoke":
+  name: "Mistake-proofing designer"
+  summary: "Point it at code, a form or a process. Get changes that make the wrong move impossible or loud."
+  task: test-and-fix-code
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It must find a design fix, not just a reminder."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  author: "rainmanjam"
+  author_url: https://github.com/rainmanjam
+"sickn33/agentic-awesome-skills:skills/polars":
+  name: "Fast data table analyst"
+  summary: "Give it a large data file. Get fast cleaning, grouping and analysis with Polars code that you can rerun."
+  task: work-with-files
+  role: make
+  level: advanced
+  thinking: medium
+  thinking_why: "It writes data code in a specific style."
+  inputs: [ { type: spreadsheet, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "run Python code"
+  author: "K-Dense Inc."
+  author_url: https://github.com/K-Dense-AI
+"sickn33/agentic-awesome-skills:skills/policy-acknowledgement":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/policy-as-code":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/policy-library":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/polis-protocol":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/polis-protocol-a-self-optimizing-city-of-agents":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/popup-cro":
+  skip: "Copy of a skill from coreyhaines31/marketingskills or a close rewrite of one, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/posix-shell-pro":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/poster-design-studio":
+  skip: "Built around one paid service or scraping of people or sites, or very thin, so it is not worth listing."
+"sickn33/agentic-awesome-skills:skills/postgres-best-practices":
+  name: "Postgres query tuner"
+  summary: "Share your queries or schema. Get faster Postgres with better indexes, types and settings, ranked by impact."
+  task: build-software
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It applies ranked rules to your queries and schema."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  author: "Supabase"
+  author_url: https://github.com/supabase
+"sickn33/agentic-awesome-skills:skills/postgres-readonly-queries":
+  name: "Safe database query runner"
+  summary: "Ask a question about your Postgres data. Get a read-only query run with write protection and the results back."
+  task: work-with-files
+  role: source
+  level: intermediate
+  thinking: low
+  thinking_why: "It writes a query and blocks any write."
+  inputs: [ { type: question, required: true } ]
+  outputs: [ { type: spreadsheet } ]
+  needs: "connect to your database"
+  author: "sanjay3290"
+  author_url: https://github.com/sanjay3290
+"sickn33/agentic-awesome-skills:skills/postgresql":
+  name: "Postgres schema designer"
+  summary: "Describe your data. Get a Postgres schema with the right types, keys, indexes and rules for speed and safety."
+  task: build-software
+  role: make
+  level: advanced
+  thinking: high
+  thinking_why: "Schema choices are hard to undo, so it weighs each one."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: code_change } ]
+"sickn33/agentic-awesome-skills:skills/postgresql-cli":
+  skip: "Near-copy of a skill we keep from this set, or too thin to list."
+"sickn33/agentic-awesome-skills:skills/postgresql-devsec":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/postgresql-optimization":
+  skip: "Near-copy of a skill we keep from this set, or too thin to list."
+"sickn33/agentic-awesome-skills:skills/posthog-automation":
+  skip: "Thin wrapper for the Rube MCP (Composio) service that asks the AI to look up tools first, so it adds little."
+"sickn33/agentic-awesome-skills:skills/postman-collection-generator":
+  name: "Postman collection maker"
+  summary: "Describe your API or paste cURL commands. Get a Postman collection file that imports and runs straight away."
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It converts descriptions into a fixed file format."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: document } ]
+"sickn33/agentic-awesome-skills:skills/postman-newman-automation":
+  skip: "Thin wrapper for the Rube MCP (Composio) service that asks the AI to look up tools first, so it adds little."
+"sickn33/agentic-awesome-skills:skills/postman-openapi-converter":
+  skip: "Near-copy of a skill we keep from this set, or too thin to list."
+"sickn33/agentic-awesome-skills:skills/postmark-automation":
+  skip: "Thin wrapper for the Rube MCP (Composio) service that asks the AI to look up tools first, so it adds little."
+"sickn33/agentic-awesome-skills:skills/postmortem-writing":
+  name: "Incident postmortem writer"
+  summary: "Give it the facts of an outage. Get a blameless postmortem with timeline, causes and follow-up actions."
+  task: organise-work
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It sorts facts into causes without blaming people."
+  inputs: [ { type: source_text, required: true } ]
+  outputs: [ { type: document } ]
+"sickn33/agentic-awesome-skills:skills/power-user-cultivation":
+  skip: "Near-copy of a skill we keep from this set, or too thin to list."
+"sickn33/agentic-awesome-skills:skills/powershell-windows":
+  name: "PowerShell pitfall checker"
+  summary: "Give it a Windows script. Get operator, quoting and error handling mistakes caught and fixed."
+  task: test-and-fix-code
+  role: check
+  level: beginner
+  thinking: low
+  thinking_why: "It checks the script against known pitfalls."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: code_change } ]
+  needs: "run PowerShell"
+"sickn33/agentic-awesome-skills:skills/ppl-personal-crm":
+  skip: "Only works with one product, tool or agent runtime, or only routes between agents, so it is not useful on its own."
+"sickn33/agentic-awesome-skills:skills/pptx-deck-creation":
+  name: "Editable slide deck builder"
+  summary: "Give it your story and sources. Get a PowerPoint deck with real editable text, tables and charts, plus a quality check."
+  task: work-with-files
+  role: make
+  level: intermediate
+  thinking: high
+  thinking_why: "It plans the story, then each slide layout, then checks them."
+  inputs: [ { type: source_text, required: true }, { type: brief, required: true } ]
+  outputs: [ { type: slide_deck } ]
+  author: "kimtth"
+  author_url: https://github.com/kimtth
+"sickn33/agentic-awesome-skills:skills/pptx-official":
+  skip: "Copy of a skill from anthropics/skills or obra/superpowers, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/pr-merge-champion":
+  skip: "Near-copy of a skill we keep from this set, or too thin to list."
+"sickn33/agentic-awesome-skills:skills/pr-writer":
+  name: "Pull request description writer"
+  summary: "Commit your branch. Get a clear pull request that says what changed, why, and what reviewers should check."
+  task: build-software
+  role: make
+  level: beginner
+  thinking: low
+  thinking_why: "It reads the diff and fills a fixed layout."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: document } ]
+  needs: "run git and the GitHub CLI"
+"sickn33/agentic-awesome-skills:skills/pre-boarding":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/pre-release-review":
+  name: "Release readiness reviewer"
+  summary: "Point it at a release. Get a read-only report of real deploy risks: migrations, config, order and rollback."
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: high
+  thinking_why: "It traces many hidden risks across files and settings."
+  inputs: [ { type: codebase, required: true } ]
+  outputs: [ { type: audit_report } ]
+  needs: "read your project files"
+  author: "chaunsin"
+  author_url: https://github.com/chaunsin
+"sickn33/agentic-awesome-skills:skills/pre-ship-gate":
+  name: "Deploy verifier"
+  summary: "Run it before you deploy. Get silent failure modes checked, then proof that the live version is the new one."
+  task: ship-and-host
+  role: check
+  level: advanced
+  thinking: medium
+  thinking_why: "It walks a fixed checklist, then checks the live result."
+  inputs: [ { type: codebase, required: true }, { type: deploy_url, required: false } ]
+  outputs: [ { type: audit_report } ]
+  needs: "run commands and reach your live site"
+  author: "Sharrmavishal"
+  author_url: https://github.com/Sharrmavishal
+"sickn33/agentic-awesome-skills:skills/premium-3d-website":
+  name: "3D website builder"
+  summary: "Describe the site. Get a 3D web page with shaders, smooth motion, a preloader and phone-friendly tuning."
+  task: build-websites
+  role: make
+  level: expert
+  thinking: high
+  thinking_why: "It balances many visual effects against speed."
+  inputs: [ { type: brief, required: true } ]
+  outputs: [ { type: web_app } ]
+  needs: "run code and open a browser"
+  author: "Rsmiyani"
+  author_url: https://github.com/Rsmiyani
+"sickn33/agentic-awesome-skills:skills/presentation-deck":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/price-psychology-strategist":
+  name: "Price presentation planner"
+  summary: "Give it your product and prices. Get a tier and anchor layout that makes value clear without tricks."
+  task: set-prices
+  role: make
+  level: intermediate
+  thinking: medium
+  thinking_why: "It weighs how people judge price against your goal."
+  inputs: [ { type: offer, required: true } ]
+  outputs: [ { type: plan } ]
+"sickn33/agentic-awesome-skills:skills/pricing":
+  skip: "Copy of a skill from coreyhaines31/marketingskills or a close rewrite of one, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/pricing-strategy":
+  skip: "Copy of a skill from coreyhaines31/marketingskills or a close rewrite of one, so we take it from the source."
+"sickn33/agentic-awesome-skills:skills/prisma-expert":
+  skip: "Generic infrastructure or coding guide that repeats common knowledge, or a bundle that only points to other skills, so not distinct enough."
+"sickn33/agentic-awesome-skills:skills/privacy-by-design":
+  name: "Privacy-first app designer"
+  summary: "Describe the data your app collects. Get privacy controls designed in: less data kept, clear consent, safe storage."
+  task: secure-code
+  role: check
+  level: intermediate
+  thinking: medium
+  thinking_why: "It reviews your design against known privacy rules."
+  inputs: [ { type: brief, required: true }, { type: codebase, required: false } ]
+  outputs: [ { type: security_report } ]
+"sickn33/agentic-awesome-skills:skills/privacy-mask":
+  name: "Screenshot privacy masker"
+  summary: "Give it a screenshot. Get phone numbers, emails, keys and IDs masked on your own computer before you share it."
+  task: work-with-files
+  role: render
+  level: beginner
+  thinking: low
+  thinking_why: "It runs a tool that finds and covers text."
+  inputs: [ { type: image, required: true } ]
+  outputs: [ { type: image } ]
+  needs: "run a local command line tool"
+  author: "fullstackcrew-alpha"
+  author_url: https://github.com/fullstackcrew-alpha
+"sickn33/agentic-awesome-skills:skills/privilege-escalation-methods":
+  skip: "Attack and red-team material for offensive security, which does not fit the library."
+"sickn33/agentic-awesome-skills:skills/probation-tracker":
+  skip: "One of a set of spreadsheet-style register templates (HR or accounts) that mostly lists column names, so not a distinct skill."
+"sickn33/agentic-awesome-skills:skills/product-decision-agent":
+  skip: "Written in Chinese only, so it does not suit our English library."

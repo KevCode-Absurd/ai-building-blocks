@@ -1,0 +1,32 @@
+slug: truck-load-builder
+name: Truck load builder
+summary: Give it your orders and truck sizes. Get orders grouped into full truck loads that cost less to ship.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/load-building-optimization
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/load-building-optimization
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: load-building-optimization
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: load-building-optimization skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/load-building-optimization
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

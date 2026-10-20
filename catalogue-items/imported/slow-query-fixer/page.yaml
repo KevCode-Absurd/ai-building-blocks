@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Reading plans and finding the real bottleneck is careful work.
+new_slug: slow-query-fixer
+name: Slow query fixer
+summary: Give it a slow SQL query. Get the cause found and a faster version with indexes where needed.
+job: test-and-fix-code
+headline: Slow query fixer
+subhead: Give it a slow SQL query. Get the cause found and a faster version with indexes where needed.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and reach your database.

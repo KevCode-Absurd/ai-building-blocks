@@ -1,0 +1,37 @@
+slug: abandoned-cart-code-maker
+name: Abandoned cart code maker
+summary: Get a unique discount code for each shopper who left a cart, and tag them. Creates live codes you cannot bulk delete.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: email_flow
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/marketing/shopify-admin-abandoned-cart-recovery
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/marketing/shopify-admin-abandoned-cart-recovery
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-abandoned-cart-recovery
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-abandoned-cart-recovery skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/marketing/shopify-admin-abandoned-cart-recovery
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

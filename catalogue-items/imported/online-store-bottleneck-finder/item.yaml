@@ -1,0 +1,38 @@
+slug: online-store-bottleneck-finder
+name: Online store bottleneck finder
+summary: Give it your cash, stock and shipping numbers. Get the bottleneck holding your store back and fixes ranked by payoff.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Nexscope AI
+  repo: nexscope-ai/eCommerce-Skills
+  path: supply-chain-optimization/supply-chain-optimization-shopify
+  url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/supply-chain-optimization/supply-chain-optimization-shopify
+  licence: MIT
+  licence_file: LICENSE
+  commit: ee0fb29
+  original_name: supply-chain-optimization-shopify
+  author: Nexscope AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: supply-chain-optimization-shopify skill
+    by: Nexscope AI
+    url: https://github.com/nexscope-ai/eCommerce-Skills/tree/main/supply-chain-optimization/supply-chain-optimization-shopify
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Nexscope AI
+    url: https://github.com/nexscope-ai/eCommerce-Skills
+    used: Wrote the skill; Nexscope AI shared it in their collection.

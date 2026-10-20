@@ -1,0 +1,32 @@
+slug: financial-statement-preparer
+name: Financial statement preparer
+summary: Give it a trial balance. Get a balance sheet, income statement and cash flow statement.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: spreadsheet
+uses: []
+origin: imported
+source:
+  by: GAJETOso
+  repo: GAJETOso/financeskills
+  path: skills/statement-preparation
+  url: https://github.com/GAJETOso/financeskills/tree/main/skills/statement-preparation
+  licence: MIT
+  licence_file: LICENSE
+  commit: b0c6239
+  original_name: statement-preparation
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: statement-preparation skill
+    by: GAJETOso
+    url: https://github.com/GAJETOso/financeskills/tree/main/skills/statement-preparation
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

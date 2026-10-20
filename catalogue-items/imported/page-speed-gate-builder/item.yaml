@@ -1,0 +1,37 @@
+slug: page-speed-gate-builder
+name: Page speed gate builder
+summary: Point it at your web app. Get a Lighthouse check in CI that blocks slow or weak pages.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/frontend-lighthouse
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/frontend-lighthouse
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: frontend-lighthouse
+  author: stareezy-1
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: frontend-lighthouse skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/frontend-lighthouse
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: stareezy-1
+    url: https://github.com/stareezy-1/frontend-architecture-skill
+    used: Wrote the skill; sickn33 shared it in their collection.

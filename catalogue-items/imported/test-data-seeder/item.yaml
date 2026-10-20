@@ -1,0 +1,40 @@
+slug: test-data-seeder
+name: Test data seeder
+summary: Describe your tables. Get realistic, repeatable test data loaded for development and staging.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: true
+  - type: brief
+    required: false
+outputs:
+  - type: code_change
+    required: true
+uses: []
+origin: imported
+source:
+  by: Burhan Sebin
+  repo: seb1n/awesome-ai-agent-skills
+  path: database/database-seeding
+  url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/database/database-seeding
+  licence: MIT
+  licence_file: LICENSE
+  commit: 75865a5
+  original_name: database-seeding
+  author: Burhan Sebin
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: database-seeding skill
+    by: Burhan Sebin
+    url: https://github.com/seb1n/awesome-ai-agent-skills/tree/main/database/database-seeding
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: Burhan Sebin
+    url: https://github.com/seb1n
+    used: Wrote the skill; Burhan Sebin shared it in their collection.

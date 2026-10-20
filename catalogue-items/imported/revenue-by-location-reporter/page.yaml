@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It adds up revenue by location.
+new_slug: revenue-by-location-reporter
+name: Revenue by location reporter
+summary: Run it on your orders. Get revenue for each warehouse or fulfillment location, ready for a split profit view.
+job: run-your-store
+headline: Revenue by location reporter
+subhead: Run it on your orders. Get revenue for each warehouse or fulfillment location, ready for a split profit view.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin.

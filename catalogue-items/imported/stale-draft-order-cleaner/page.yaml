@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It filters drafts by age.
+new_slug: stale-draft-order-cleaner
+name: Stale draft order cleaner
+summary: Get draft orders older than your set days found, and deleted if you say so. Deletes cannot be undone.
+job: run-your-store
+headline: Stale draft order cleaner
+subhead: Get draft orders older than your set days found, and deleted if you say so. Deletes cannot be undone.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can access your Shopify admin and change live store data.

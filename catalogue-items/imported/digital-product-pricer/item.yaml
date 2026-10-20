@@ -1,0 +1,32 @@
+slug: digital-product-pricer
+name: Digital product pricer
+summary: Tell it what you sell, such as a course or ebook. Get the price digits, labels and launch discount to use.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Checkout Page
+  repo: checkout-page/ecommerce-skills
+  path: skills/digital-product-pricing
+  url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/digital-product-pricing
+  licence: MIT
+  licence_file: LICENSE
+  commit: 8b85f63
+  original_name: digital-product-pricing
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: digital-product-pricing skill
+    by: Checkout Page
+    url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/digital-product-pricing
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

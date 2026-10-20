@@ -1,0 +1,35 @@
+slug: battery-cycling-simulator
+name: Battery cycling simulator
+summary: Describe a battery and a charge plan. Get simulated voltage curves, tested for solver error and compared with real data.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+  - type: spreadsheet
+    required: false
+outputs:
+  - type: image
+  - type: document
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/pybamm
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/pybamm
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: pybamm
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: pybamm skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/pybamm
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

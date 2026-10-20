@@ -1,0 +1,37 @@
+slug: woocommerce-code-checker
+name: WooCommerce code checker
+summary: Give it new WooCommerce code. Get common AI mistakes caught, like broken order storage and missed checkout checks.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/woo-guard
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/woo-guard
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: woo-guard
+  author: amElnagdy
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: woo-guard skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/woo-guard
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: amElnagdy
+    url: https://github.com/amElnagdy/guard-skills
+    used: Wrote the skill; sickn33 shared it in their collection.

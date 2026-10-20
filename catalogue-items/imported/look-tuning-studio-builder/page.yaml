@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It builds a custom control page for each task.
+new_slug: look-tuning-studio-builder
+name: Look tuning studio builder
+summary: Name what to tune. Get a local page with sliders and pickers to adjust the look by eye.
+job: design-work
+headline: Look tuning studio builder
+subhead: Name what to tune. Get a local page with sliders and pickers to adjust the look by eye.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and open a browser.

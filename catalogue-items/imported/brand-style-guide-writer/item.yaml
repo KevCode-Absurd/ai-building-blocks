@@ -1,0 +1,39 @@
+slug: brand-style-guide-writer
+name: Brand style guide writer
+summary: Give it your logo, colours and fonts. Get a full style guide others can follow without guessing.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brand_brain
+    required: false
+  - type: design_direction
+    required: false
+outputs:
+  - type: brand_guide
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/brand-style-guide
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/brand-style-guide
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: brand-style-guide
+  author: RampStack
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: brand-style-guide skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/brand-style-guide
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills
+    used: Wrote the skill; RampStack shared it in their collection.

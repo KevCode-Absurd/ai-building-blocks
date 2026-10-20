@@ -1,0 +1,32 @@
+slug: page-keep-or-cut-auditor
+name: Page keep-or-cut auditor
+summary: Give it your site's content list. Get each page marked keep, update, merge, redirect or delete, with reasons.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/seo-content-audit
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/seo-content-audit
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: seo-content-audit
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: seo-content-audit skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/seo-content-audit
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

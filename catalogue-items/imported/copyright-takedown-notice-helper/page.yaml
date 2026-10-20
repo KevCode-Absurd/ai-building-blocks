@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Sworn statements and fair use need care.
+new_slug: copyright-takedown-notice-helper
+name: Copyright takedown notice helper
+summary: Describe a copy of your work online, or paste a notice. Get a draft or options. Have a lawyer review.
+job: check-contracts
+headline: Copyright takedown notice helper
+subhead: Describe a copy of your work online, or paste a notice. Get a draft or options. Have a lawyer review.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - Where the skill points to /ip-legal:cold-start-interview, use the setup-interview folder inside it. We copied it in so the skill works on its own.

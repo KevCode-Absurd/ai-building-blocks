@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It follows a strict class pattern and a validator.
+new_slug: audio-plugin-writer
+name: Audio plugin writer
+summary: Describe the effect or sound. Get a tested audio plugin you can export as VST or AU.
+job: build-software
+headline: Audio plugin writer
+subhead: Describe the effect or sound. Get a tested audio plugin you can export as VST or AU.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Audio Toolbox.

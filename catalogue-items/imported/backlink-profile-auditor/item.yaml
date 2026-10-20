@@ -1,0 +1,36 @@
+slug: backlink-profile-auditor
+name: Backlink profile auditor
+summary: Connect Ahrefs. Get a backlink health report with anchor text spread, toxic links, lost links to win back and rival gaps.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: web_page
+    required: true
+  - type: competitor_set
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+warnings:
+  - paid:Ahrefs
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/seo-backlink-audit
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/seo-backlink-audit
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: seo-backlink-audit
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: seo-backlink-audit skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/seo-backlink-audit
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: high
+thinking_why: Cost and delivery speed pull in different directions.
+new_slug: warehouse-location-planner
+name: Warehouse location planner
+summary: Give it your customers and demand. Get how many warehouses you need and where to put them.
+job: plan-supply-chain
+headline: Warehouse location planner
+subhead: Give it your customers and demand. Get how many warehouses you need and where to put them.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code.

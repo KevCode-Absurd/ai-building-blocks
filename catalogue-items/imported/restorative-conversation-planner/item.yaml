@@ -1,0 +1,32 @@
+slug: restorative-conversation-planner
+name: Restorative conversation planner
+summary: Describe a conflict between students. Get steps to repair trust and relationships. Not legal or medical advice.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/wellbeing-motivation-agency/restorative-practice-protocol-designer
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/wellbeing-motivation-agency/restorative-practice-protocol-designer
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: restorative-practice-protocol-designer
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: restorative-practice-protocol-designer skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/wellbeing-motivation-agency/restorative-practice-protocol-designer
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

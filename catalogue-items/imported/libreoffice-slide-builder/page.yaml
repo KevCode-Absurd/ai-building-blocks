@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It follows known file steps.
+new_slug: libreoffice-slide-builder
+name: LibreOffice slide builder
+summary: Describe the slides. Get an ODP deck, or a conversion to PowerPoint or PDF.
+job: work-with-files
+headline: LibreOffice slide builder
+subhead: Describe the slides. Get an ODP deck, or a conversion to PowerPoint or PDF.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and save files.

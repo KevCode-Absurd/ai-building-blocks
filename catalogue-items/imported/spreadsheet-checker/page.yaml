@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It profiles data and takes care not to break formulas.
+new_slug: spreadsheet-checker
+name: Spreadsheet checker
+summary: Give it a spreadsheet. Get it cleaned, reconciled and analysed with formulas and formatting kept intact.
+job: work-with-files
+headline: Spreadsheet checker
+subhead: Give it a spreadsheet. Get it cleaned, reconciled and analysed with formulas and formatting kept intact.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and open spreadsheets.

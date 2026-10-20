@@ -1,0 +1,32 @@
+slug: small-change-keeper
+name: Small change keeper
+summary: Turn it on while you code. Your AI changes only what you asked for and picks the simplest fix.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/moyu
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/moyu
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: moyu
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: moyu skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/moyu
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

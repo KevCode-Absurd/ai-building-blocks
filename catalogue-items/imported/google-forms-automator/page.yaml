@@ -1,0 +1,11 @@
+thinking: low
+thinking_why: It follows a short recipe and fills in the script.
+new_slug: google-forms-automator
+name: Google Forms automator
+summary: Say what should happen on each form reply. Get a form plan and Apps Script that emails alerts or logs rows.
+job: organise-work
+headline: Google Forms automator
+subhead: Say what should happen on each form reply. Get a form plan and Apps Script that emails alerts or logs rows.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

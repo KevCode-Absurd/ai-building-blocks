@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It weighs biased numbers against each other before advising.
+new_slug: ad-dashboard-reader
+name: Ad dashboard reader
+summary: Paste your ad numbers. Get what each metric really means, where platforms disagree, and whether to scale or cut.
+job: read-ad-results
+headline: Ad dashboard reader
+subhead: Paste your ad numbers. Get what each metric really means, where platforms disagree, and whether to scale or cut.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

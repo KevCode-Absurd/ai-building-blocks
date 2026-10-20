@@ -1,0 +1,34 @@
+slug: long-form-piece-structurer
+name: Long-form piece structurer
+summary: Say what you are writing, such as a case study or whitepaper. Get a clear outline and structure that avoids padding.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: source_text
+    required: false
+  - type: brief
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: imported
+source:
+  by: RampStack
+  repo: rampstackco/claude-skills
+  path: skills/long-form-content-frameworks
+  url: https://github.com/rampstackco/claude-skills/tree/main/skills/long-form-content-frameworks
+  licence: MIT
+  licence_file: LICENSE
+  commit: 9b90db2
+  original_name: long-form-content-frameworks
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: long-form-content-frameworks skill
+    by: RampStack
+    url: https://github.com/rampstackco/claude-skills/tree/main/skills/long-form-content-frameworks
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

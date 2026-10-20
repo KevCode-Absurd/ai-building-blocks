@@ -1,0 +1,37 @@
+slug: gift-card-liability-calculator
+name: Gift card liability calculator
+summary: Run it on your gift cards. Get the total balance you still owe, split by issue date and balance size.
+category: general
+boards: []
+type: skill
+role: compress
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: 40rty AI
+  repo: 40rty-ai/shopify-admin-skills
+  path: skills/finance/shopify-admin-gift-card-liability-report
+  url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/finance/shopify-admin-gift-card-liability-report
+  licence: MIT
+  licence_file: LICENSE
+  commit: 60c6945
+  original_name: shopify-admin-gift-card-liability-report
+  author: 40rty AI
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: shopify-admin-gift-card-liability-report skill
+    by: 40rty AI
+    url: https://github.com/40rty-ai/shopify-admin-skills/tree/main/skills/finance/shopify-admin-gift-card-liability-report
+    used: Copied as it is, under the MIT licence. We gave it a plain name.
+  - title: Original author
+    by: 40rty AI
+    url: https://github.com/40rty-ai
+    used: Wrote the skill; 40rty AI shared it in their collection.

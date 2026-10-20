@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It reads a folder and writes one short file.
+new_slug: folder-guide-writer
+name: Folder guide writer
+summary: Pick a folder. Get a short CLAUDE.md that tells future AI helpers how that folder works.
+job: set-up-ai
+headline: Folder guide writer
+subhead: Pick a folder. Get a short CLAUDE.md that tells future AI helpers how that folder works.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read and write your project files.

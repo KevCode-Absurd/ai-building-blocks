@@ -1,0 +1,37 @@
+slug: account-plan-builder
+name: Account plan builder
+summary: Name an account. Get a plan with goals, key people, open deals, risks and next steps, ready for your CRM.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/account-plan
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/account-plan
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: account-plan
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: account-plan skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/account-plan
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Standards give exact settings.
+new_slug: 5g-waveform-generator
+name: 5G waveform generator
+summary: Pick a 5G test model or channel. Get a standard-compliant baseband waveform.
+job: build-software
+headline: 5G waveform generator
+subhead: Pick a 5G test model or channel. Get a standard-compliant baseband waveform.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with 5G Toolbox.

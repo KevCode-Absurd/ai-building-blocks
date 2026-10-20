@@ -1,0 +1,33 @@
+slug: optical-system-designer
+name: Optical system designer
+summary: Describe the lens setup. Get an optical system built, traced, toleranced and tuned in MATLAB.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/image-processing-and-computer-vision/matlab-model-optics
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/image-processing-and-computer-vision/matlab-model-optics
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-model-optics
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-model-optics skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/image-processing-and-computer-vision/matlab-model-optics
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

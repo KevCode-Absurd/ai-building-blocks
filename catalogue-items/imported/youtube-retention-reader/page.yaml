@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads a chart and links each drop to your words.
+new_slug: youtube-retention-reader
+name: YouTube retention reader
+summary: Give it your retention export. Get where viewers leave, what you said then, and the one change to make.
+job: grow-social
+headline: YouTube retention reader
+subhead: Give it your retention export. Get where viewers leave, what you said then, and the one change to make.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run Python code.

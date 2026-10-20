@@ -1,0 +1,13 @@
+thinking: medium
+thinking_why: It follows set steps and judges what is worth logging.
+new_slug: deal-notes-and-crm-updater
+name: Deal notes and CRM updater
+summary: Give it your emails, calls and meetings. Get contacts and deals updated, quiet deals flagged and follow-ups drafted.
+job: sell-and-negotiate
+headline: Deal notes and CRM updater
+subhead: Give it your emails, calls and meetings. Get contacts and deals updated, quiet deals flagged and follow-ups drafted.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can read your accounts and files.
+  - Where the skill points to ../../shared/, use the shared folder inside it. We copied it in so the skill works on its own.

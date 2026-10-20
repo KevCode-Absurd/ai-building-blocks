@@ -1,0 +1,33 @@
+slug: defense-export-rules-checker
+name: Defense export rules checker
+summary: Describe your defense product or data. Get whether it is controlled, which licences apply and how to stay compliant.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/itar/skills/itar
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/itar/skills/itar
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: itar
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: itar skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/itar/skills/itar
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

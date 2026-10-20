@@ -1,0 +1,32 @@
+slug: marketing-prompt-tester
+name: Marketing prompt tester
+summary: Give it your prompts and test cases. Get scored comparisons of each version and a saved version history.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: copy_draft
+    required: true
+outputs:
+  - type: test_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: marketing-skill/skills/prompt-engineer-toolkit
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/prompt-engineer-toolkit
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: prompt-engineer-toolkit
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: prompt-engineer-toolkit skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/marketing-skill/skills/prompt-engineer-toolkit
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

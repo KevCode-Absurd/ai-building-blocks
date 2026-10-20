@@ -1,0 +1,32 @@
+slug: seasonal-buy-planner
+name: Seasonal buy planner
+summary: Give it last season sales. Get how much to buy early, how much to hold back, and when to mark down.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Kishor Kukreja
+  repo: kishorkukreja/awesome-supply-chain
+  path: skills/seasonal-planning
+  url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/seasonal-planning
+  licence: MIT
+  licence_file: LICENSE
+  commit: 397d951
+  original_name: seasonal-planning
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: seasonal-planning skill
+    by: Kishor Kukreja
+    url: https://github.com/kishorkukreja/awesome-supply-chain/tree/main/skills/seasonal-planning
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Small setup errors give wrong results.
+new_slug: ofdm-system-builder
+name: OFDM system builder
+summary: Describe your OFDM link. Get a correct simulation using the proper modulation functions.
+job: build-software
+headline: OFDM system builder
+subhead: Describe your OFDM link. Get a correct simulation using the proper modulation functions.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB with Communications Toolbox.

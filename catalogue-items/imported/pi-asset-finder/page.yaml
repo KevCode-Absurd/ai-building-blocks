@@ -1,0 +1,12 @@
+thinking: low
+thinking_why: It runs set lookups.
+new_slug: pi-asset-finder
+name: PI asset finder
+summary: Give it a tag name or description. Get the matching PI data points found from MATLAB.
+job: build-software
+headline: PI asset finder
+subhead: Give it a tag name or description. Get the matching PI data points found from MATLAB.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB and reach an OSIsoft PI server.

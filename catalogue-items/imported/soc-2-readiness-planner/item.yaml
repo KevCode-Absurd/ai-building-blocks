@@ -1,0 +1,32 @@
+slug: soc-2-readiness-planner
+name: SOC 2 readiness planner
+summary: Describe your systems. Get your controls mapped, gaps found and the evidence an auditor will ask for.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: ra-qm-team/skills/soc2-compliance
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/soc2-compliance
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: soc2-compliance
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: soc2-compliance skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/soc2-compliance
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

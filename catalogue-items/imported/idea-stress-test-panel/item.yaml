@@ -1,0 +1,32 @@
+slug: idea-stress-test-panel
+name: Idea stress-test panel
+summary: Give it your idea. Get a blunt panel review of what is weak, with what to fix before you build.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: feedback_notes
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: productivity/roast/skills/roast
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/productivity/roast/skills/roast
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: roast
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: roast skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/productivity/roast/skills/roast
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

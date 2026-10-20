@@ -1,0 +1,32 @@
+slug: gpu-setup-checker
+name: GPU setup checker
+summary: Say your GPU is not working in MATLAB. Get it found, tested and ready for GPU code.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/parallel-computing/matlab-setup-gpu
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/parallel-computing/matlab-setup-gpu
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-setup-gpu
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-setup-gpu skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/parallel-computing/matlab-setup-gpu
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

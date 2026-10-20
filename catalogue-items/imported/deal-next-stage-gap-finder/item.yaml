@@ -1,0 +1,37 @@
+slug: deal-next-stage-gap-finder
+name: Deal next-stage gap finder
+summary: Name a deal. Get what is missing to reach the next stage and to close, who does what and by when.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: tool_connection
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Anthropic
+  repo: anthropics/knowledge-work-plugins
+  path: sales/skills/deal-advance-gap
+  url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/deal-advance-gap
+  licence: Apache-2.0
+  licence_file: LICENSE
+  commit: a266ab8
+  original_name: deal-advance-gap
+  author: Anthropic
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: deal-advance-gap skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/sales/skills/deal-advance-gap
+    used: Copied as it is, under the Apache 2.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Anthropic
+    url: https://github.com/anthropics
+    used: Wrote the skill; Anthropic shared it in their collection.

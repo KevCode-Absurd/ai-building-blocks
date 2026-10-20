@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: Setup problems vary and need some diagnosis.
+new_slug: matlab-to-python-bridge
+name: MATLAB to Python bridge
+summary: Say which Python library you need. Get MATLAB code that calls it, with setup and errors fixed.
+job: connect-tools
+headline: MATLAB to Python bridge
+subhead: Say which Python library you need. Get MATLAB code that calls it, with setup and errors fixed.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run MATLAB and Python.

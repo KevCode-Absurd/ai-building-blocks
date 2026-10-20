@@ -1,0 +1,33 @@
+slug: connected-product-security-checker
+name: Connected product security checker
+summary: Describe your product with software. Get its EU risk class, security duties, parts list needs and reporting steps.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/eu-cra/skills/eu-cra
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/eu-cra/skills/eu-cra
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: eu-cra
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: eu-cra skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/eu-cra/skills/eu-cra
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

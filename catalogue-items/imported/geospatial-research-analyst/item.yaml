@@ -1,0 +1,33 @@
+slug: geospatial-research-analyst
+name: Geospatial research analyst
+summary: Give it maps, satellite images or location data. Get a worked analysis of terrain, change or spatial patterns.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: spreadsheet
+    required: true
+outputs:
+  - type: document
+  - type: image
+uses: []
+origin: imported
+source:
+  by: K-Dense
+  repo: K-Dense-AI/scientific-agent-skills
+  path: skills/geomaster
+  url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/geomaster
+  licence: MIT
+  licence_file: LICENSE.md
+  commit: 593377b
+  original_name: geomaster
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: geomaster skill
+    by: K-Dense
+    url: https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/geomaster
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

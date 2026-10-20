@@ -1,0 +1,32 @@
+slug: faiss-similarity-search-builder
+name: FAISS similarity search builder
+summary: Give it your embeddings. Get a fast index that finds the closest matches among millions of items.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: Orchestra Research
+  repo: orchestra-research/AI-research-SKILLs
+  path: 15-rag/faiss
+  url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/15-rag/faiss
+  licence: MIT
+  licence_file: LICENSE
+  commit: 773a529
+  original_name: faiss
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: faiss skill
+    by: Orchestra Research
+    url: https://github.com/orchestra-research/AI-research-SKILLs/tree/main/15-rag/faiss
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

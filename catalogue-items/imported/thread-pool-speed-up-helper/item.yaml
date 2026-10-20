@@ -1,0 +1,32 @@
+slug: thread-pool-speed-up-helper
+name: Thread pool speed-up helper
+summary: Give it slow local parallel code. Get it switched to a thread pool and timed to prove the gain.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: codebase
+    required: true
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/parallel-computing/matlab-use-thread-pool
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/parallel-computing/matlab-use-thread-pool
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-use-thread-pool
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-use-thread-pool skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/parallel-computing/matlab-use-thread-pool
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: churn-reducer
+name: Churn reducer
+summary: Describe your product and why people leave. Get a cancel flow, save offers and a failed-payment recovery plan.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Corey Haines
+  repo: coreyhaines31/marketingskills
+  path: skills/churn-prevention
+  url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/churn-prevention
+  licence: MIT
+  licence_file: LICENSE
+  commit: e85f3cb
+  original_name: churn-prevention
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: churn-prevention skill
+    by: Corey Haines
+    url: https://github.com/coreyhaines31/marketingskills/tree/main/skills/churn-prevention
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

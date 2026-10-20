@@ -1,0 +1,32 @@
+slug: ai-instruction-writer
+name: AI instruction writer
+summary: Say which skill or instruction file you are writing. Get it written so your AI follows it well.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: skill_files
+uses: []
+origin: imported
+source:
+  by: Matt Pocock
+  repo: mattpocock/skills
+  path: skills/productivity/writing-for-agents
+  url: https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents
+  licence: MIT
+  licence_file: LICENSE
+  commit: 5beb35b
+  original_name: writing-for-agents
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: writing-for-agents skill
+    by: Matt Pocock
+    url: https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

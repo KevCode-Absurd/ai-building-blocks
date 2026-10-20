@@ -1,0 +1,32 @@
+slug: no-good-options-decider
+name: No-good-options decider
+summary: Describe a choice where every option hurts. Get a 10/10/10 and regret check, and a clear pick.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Alireza Rezvani
+  repo: alirezarezvani/claude-skills
+  path: c-level-advisor/executive-mentor/skills/hard-call
+  url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/executive-mentor/skills/hard-call
+  licence: MIT
+  licence_file: LICENSE
+  commit: 19392f7
+  original_name: hard-call
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: hard-call skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/c-level-advisor/executive-mentor/skills/hard-call
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

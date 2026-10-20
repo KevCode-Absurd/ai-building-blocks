@@ -1,0 +1,12 @@
+thinking: medium
+thinking_why: It reads your code first, then writes tests in a set style.
+new_slug: browser-test-writer
+name: Browser test writer
+summary: Describe a user story or page. Get Playwright tests written for it that you can run.
+job: test-and-fix-code
+headline: Browser test writer
+subhead: Describe a user story or page. Get Playwright tests written for it that you can run.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.
+  - It works best when your AI can run code and read your project files.

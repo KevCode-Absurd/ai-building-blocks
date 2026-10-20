@@ -1,0 +1,32 @@
+slug: app-screenshot-maker
+name: App screenshot maker
+summary: Point it at your running app. Get sharp, high-resolution screenshots ready for Product Hunt, social or your site.
+category: general
+boards: []
+type: skill
+role: render
+job: ops
+level: intermediate
+inputs:
+  - type: web_app
+    required: true
+outputs:
+  - type: image
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/screenshots
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/screenshots
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: screenshots
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: screenshots skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/screenshots
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.

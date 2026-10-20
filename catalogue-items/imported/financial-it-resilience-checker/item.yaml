@@ -1,0 +1,33 @@
+slug: financial-it-resilience-checker
+name: Financial IT resilience checker
+summary: Describe your finance firm and IT suppliers. Get DORA gaps, incident reporting steps and supplier contract checks.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: expert
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: audit_report
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Hemant Naik
+  repo: Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
+  path: plugins/dora/skills/dora
+  url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/dora/skills/dora
+  licence: MIT
+  licence_file: LICENSE
+  commit: aab13e1
+  original_name: dora
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: dora skill
+    by: Hemant Naik
+    url: https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/tree/main/plugins/dora/skills/dora
+    used: Copied as it is, under the MIT licence. We gave it a plain name.

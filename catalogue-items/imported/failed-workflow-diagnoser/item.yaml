@@ -1,0 +1,39 @@
+slug: failed-workflow-diagnoser
+name: Failed workflow diagnoser
+summary: Paste a failed GitHub Actions log. Get the root cause and a fix for your workflow file.
+category: general
+boards: []
+type: skill
+role: check
+job: ops
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: codebase
+    required: false
+outputs:
+  - type: code_change
+uses: []
+origin: imported
+source:
+  by: sickn33
+  repo: sickn33/agentic-awesome-skills
+  path: skills/github-actions-debugger
+  url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/github-actions-debugger
+  licence: CC-BY-4.0
+  licence_file: LICENSE-CONTENT
+  commit: 0c10eb8
+  original_name: github-actions-debugger
+  author: Owais
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: github-actions-debugger skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/github-actions-debugger
+    used: Copied as it is, under the CC BY-4.0 licence. We gave it a plain name.
+  - title: Original author
+    by: Owais
+    url: https://github.com/Owais
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,11 @@
+thinking: high
+thinking_why: It tests the assessment against its goals and marking.
+new_slug: assessment-fit-and-fairness-checker
+name: Assessment fit and fairness checker
+summary: Paste a quiz or task and its goals. Get a check that it tests the right things and marks fairly.
+job: teach-and-train
+headline: Assessment fit and fairness checker
+subhead: Paste a quiz or task and its goals. Get a check that it tests the right things and marks fairly.
+how_to_use:
+  - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
+  - Ask for the job in your own words. Your AI opens the skill when it fits.

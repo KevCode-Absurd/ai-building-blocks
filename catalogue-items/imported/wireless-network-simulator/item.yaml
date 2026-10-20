@@ -1,0 +1,33 @@
+slug: wireless-network-simulator
+name: Wireless network simulator
+summary: Describe nodes and traffic. Get a system-level wireless network run with throughput results.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: advanced
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: code_change
+  - type: document
+uses: []
+origin: imported
+source:
+  by: MathWorks
+  repo: matlab/matlab-agentic-toolkit
+  path: skills-catalog/wireless-communications/matlab-simulate-wireless-network
+  url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/wireless-communications/matlab-simulate-wireless-network
+  licence: BSD-2-Clause
+  licence_file: LICENSE.md
+  commit: dc9507d
+  original_name: matlab-simulate-wireless-network
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: matlab-simulate-wireless-network skill
+    by: MathWorks
+    url: https://github.com/matlab/matlab-agentic-toolkit/tree/main/skills-catalog/wireless-communications/matlab-simulate-wireless-network
+    used: Copied as it is, under the BSD 2-Clause licence. We gave it a plain name.

@@ -1,0 +1,32 @@
+slug: confidence-building-task-ladder
+name: Confidence-building task ladder
+summary: Give it a skill students avoid. Get a ladder of small wins that builds confidence. Not medical advice.
+category: general
+boards: []
+type: skill
+role: make
+job: ops
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: imported
+source:
+  by: Gareth Manning
+  repo: GarethManning/education-agent-skills
+  path: skills/wellbeing-motivation-agency/self-efficacy-builder-sequence
+  url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/wellbeing-motivation-agency/self-efficacy-builder-sequence
+  licence: CC-BY-SA-4.0
+  licence_file: LICENSE
+  commit: 6bbbce4
+  original_name: self-efficacy-builder-sequence
+  imported: 2026-10-20
+version: 1.0.0
+credits:
+  - title: self-efficacy-builder-sequence skill
+    by: Gareth Manning
+    url: https://github.com/GarethManning/education-agent-skills/tree/main/skills/wellbeing-motivation-agency/self-efficacy-builder-sequence
+    used: Copied as it is, under the CC BY-SA-4.0 licence. We gave it a plain name.

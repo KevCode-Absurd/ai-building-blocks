@@ -12,3 +12,6 @@ runs/
 traces/
 # intake engine: raw downloads and full transcripts stay private
 intake/*/raw/
+# mind source material (books, transcripts) stays local
+mind-sources/*
+!mind-sources/README.md

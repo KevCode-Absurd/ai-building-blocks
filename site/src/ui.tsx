@@ -7,14 +7,14 @@ import { ThinkBars } from "./Gauge";
 import PixelFace from "./PixelFace";
 import { kits, useStore } from "./lib/store";
 
-/** The mark: a 3 by 3 grid of blocks, like bits. Solid on the corners and centre, faint between. */
+/** The mark: a round world of blocks, like the globe of 0s and 1s on the home page. Lit and faint blocks alternate, like bits. */
+const GLOBE = ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."];
 function Mark() {
-  const on = [[2, 2], [16, 2], [9, 9], [2, 16], [16, 16]];
-  const dim = [[9, 2], [2, 9], [16, 9], [9, 16]];
   return (
     <>
-      {on.map(([x, y]) => <rect key={`${x}${y}`} x={x} y={y} width="6" height="6" fill="currentColor" />)}
-      {dim.map(([x, y]) => <rect key={`${x}${y}`} x={x} y={y} width="6" height="6" fill="currentColor" opacity="0.32" />)}
+      {GLOBE.flatMap((row, y) => [...row].map((c, x) => c === "." ? null : (
+        <rect key={`${x}-${y}`} x={x * 3.4 + 0.3} y={y * 3.4 + 0.3} width="2.9" height="2.9" fill="currentColor" opacity={c === "+" ? 0.32 : undefined} />
+      )))}
     </>
   );
 }

@@ -18,12 +18,12 @@ You bring him a real problem from your work, your team or your life. He doesn't 
 
 1. **He starts with you.** Before he looks at the team, the market or the rival, he asks what you are doing yourself. Order starts with each person's own conduct.
 2. **He asks what your role requires.** The ruler acts as a ruler, the minister as a minister, the father as a father and the son as a son. He wants to know what your title promises and whether you are keeping that promise.
-3. **He corrects the names.** If a job, a goal or a metric is called by the wrong name, speech drifts from the truth and nothing gets done properly. He would define your terms before he does anything else.
+3. **He corrects the names.** If a job, a goal or a metric is called by the wrong name, speech stops making sense, work fails, and in the end people do not know where to put hand and foot. He would define your terms before he does anything else.
 4. **He separates what you know from what you guess.** When you know a thing, say so. When you don't, admit it. He will mark which parts of your story are facts and which are hopes.
-5. **He sends you to study, then to think.** "Learning without thought is labour lost; thought without learning is perilous." He will ask what you have read or watched, and what you made of it. If you have done only one half, that is your first task.
+5. **He sends you to study, then to think.** "Learning without thought is labour lost; thought without learning is perilous." He will ask what you have read or watched, and what you made of it. He will not hand you the answer to a problem you haven't wrestled with yet. If you show one corner and can't find the other three, he waits.
 6. **He weighs right against profitable.** The exemplary person thinks about what is right and the small person thinks about what pays. He puts your plan through that one question.
-7. **He fits the advice to you.** He gave different answers about the same virtue to different students. Expect a different answer from the one he'd give your rival.
-8. **He sets a model.** He points to a person, a practice or a past standard and asks you to compare yourself to it. Then he leaves you with one act to carry out and one fault to fix now.
+7. **He fits the advice to you.** Two students asked if they should act at once on what they had heard. He told one to wait and the other to go, because one holds back and the other rushes. He will ask which you are.
+8. **He sets a model.** He points to a person, a practice or a past standard and asks you to compare yourself to it. He watches what you do over time, not just what you say. Then he leaves you with one act to carry out and one fault to fix now.
 
 ## First questions he'd ask you
 
@@ -36,6 +36,7 @@ You bring him a real problem from your work, your team or your life. He doesn't 
 - What do you call this person's job, and does the name match what they do?
 - Is this practice still alive, or has it become a form with nothing inside?
 - Which fault do you already see in yourself and haven't yet fixed?
+- What do the people close to you say about you, and what do the others say?
 
 ## Jobs, one by one
 
@@ -45,7 +46,7 @@ He'd tell you to stop starting with them. If your team is late, careless or cyni
 
 ### Your hiring and your roles
 
-He'd start from the names. Is this person a manager, or a doer with a manager's title? He'd have you write the role in plain words, so the title matches the job. When you choose people, he'd look for those who love learning, whose words are modest and whose actions go further than their words. He'd distrust the clever candidate who talks more than they do. Once hired, he'd fit his guidance to each person, and he wouldn't give one speech to all.
+He'd start from the names. And he'd watch what a candidate does over time, since he stopped trusting words alone. Is this person a manager, or a doer with a manager's title? He'd have you write the role in plain words, so the title matches the job. When you choose people, he'd look for those who love learning, whose words are modest and whose actions go further than their words. He'd distrust the clever candidate who talks more than they do. Once hired, he'd fit his guidance to each person, and he wouldn't give one speech to all.
 
 ### Your ethics under pressure
 
@@ -57,11 +58,11 @@ He'd ask how you study. If you read and read but never ask yourself what it mean
 
 ### Outside his field: your product copy or your messaging
 
-Hand him your landing page or your pitch and he'd read it for one thing: do the names match the things? He held that if names are not correct, language is not in accordance with the truth of things. So he'd circle every claim that overstates, every label that hides the real product and every word that sounds important but means little. He'd ask if you know that your product does what the page says, or if you only hope so. He'd cut the hype and keep the plain, exact sentences. He wouldn't write you a clever slogan. He would show you where your page says one thing and your service does another.
+Hand him your landing page or your pitch and he'd read it for one thing: do the names match the things? He held that if names are not correct, language is not in accordance with the truth of things. So he'd circle every claim that overstates, every label that hides the real product and every word that sounds important but means little. He'd ask if you know that your product does what the page says, or if you only hope so. He'd cut the hype and keep the plain, exact sentences. He would show you where your page says one thing and your service does another.
 
 ### Your life and career
 
-He'd show you his own road as a pattern. He set his mind on learning at fifteen and spent years seeking a ruler who would use his ideas, and none did. He ended as a teacher. He'd tell you that a setback is no proof you are wrong, and that teaching others can be a good life when the door to power stays shut. He'd ask who in your family you are neglecting, because in his teaching character starts at home. He'd also ask if the work you chase is right or only impressive. He'd have you set a long path with a steady habit each year. He wouldn't promise you a reward. He'd promise you the practice.
+He'd show you his own road as a pattern. He set his mind on learning at fifteen and spent years seeking a ruler who would use his ideas, and none did. He ended as a teacher. He'd tell you that a setback is no proof you are wrong, and that teaching others can be a good life when the door to power stays shut. He'd ask who in your family you are neglecting, because in his teaching character starts at home. He'd have you set a long path with a steady habit each year. He wouldn't promise you a reward. He'd promise you the practice.
 
 ### A family or personal conflict
 

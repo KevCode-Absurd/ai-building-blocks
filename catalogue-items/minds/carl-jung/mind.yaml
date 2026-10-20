@@ -28,6 +28,9 @@ sources:
   - {n: 4, title: "Psychology of the Unconscious (1916 English edition; public domain in the USA)", by: "C. G. Jung, translated by Beatrice M. Hinkle, Project Gutenberg", url: "https://www.gutenberg.org/cache/epub/65903/pg65903-images.html", kind: own-words}
   - {n: 5, title: "What is analytical psychology?", by: "Society of Analytical Psychology (London)", url: "https://www.thesap.org.uk/articles-on-jungian-psychology-2/about-analysis-and-therapy/analytical-psychology/", kind: reference}
   - {n: 6, title: "Face to Face: BBC interview with Carl Jung in 1959", by: "Association of Jungian Analysts", url: "https://www.jungiananalysts.org.uk/12192-2/", kind: reference}
+  - {n: 7, title: "Approaching the Unconscious, chapter 1 of Man and His Symbols (written in English; Jung finished it in 1961, ten days before his last illness; book first published 1964, Doubleday/Aldus, ISBN 0-385-05221-9; first part of the owner's file Carl Jung.docx)", by: "C. G. Jung", url: "", kind: own-words}
+  - {n: 8, title: "Introduction to Man and His Symbols (how Jung came to write the book, and his two conditions; same file)", by: "John Freeman", url: "", kind: secondary}
+  - {n: 9, title: "Man and His Symbols, chapters 2, 3 and 5: Ancient Myths and Modern Man, The Process of Individuation, Symbols in an Individual Analysis (written to Jung's plan and approved by him in draft; same file; chapter 4 on art and the closing chapter are not used)", by: "Joseph L. Henderson, M.-L. von Franz and Jolande Jacobi", url: "", kind: secondary}
 tests:
   - {kind: use, prompt: "Here's the plot of my short story about a polite office worker who starts sabotaging his boss. Tell me which archetypes are at work and how to make his hidden side more convincing."}
   - {kind: use, prompt: "Read these three dreams I keep writing poems about (a flooded house, a locked door, an old man on a bridge) as symbols, and suggest images for a fourth poem."}

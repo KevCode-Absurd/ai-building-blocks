@@ -39,6 +39,9 @@ sources:
   - {n: 13, title: "Facts Are Not Enough (listing and abstract of his 1980 speech to the 4A's; full text behind a paywall, not read)", by: "WARC", url: "https://www.warc.com/en/article/facts-are-not-enough-5b85f7e8804848adaf60a7aab4e1900e", kind: reference}
   - {n: 14, title: "Nothing kills a bad product faster than good advertising (quote history, citing the Wall Street Journal of August 12, 1965)", by: "Barry Popik", url: "https://barrypopik.com/blog/nothing_kills_a_bad_product_faster_than_good_advertising_advertising_adage", kind: secondary}
   - {n: 15, title: "Facts Are Not Enough (Bernbach's speech to the 4A's annual meeting, 1980, text as posted by Derrick Daye, 2011)", by: "Bill Bernbach, via Branding Strategy Insider", url: "https://brandingstrategyinsider.com/bill-bernbach-facts-are-not-enough/", kind: own-words}
+  - {n: 16, title: "Facts Are Not Enough (Bernbach's 1980 speech to the 4A's, full transcript with section headings; first part of the owner's file Bill Bernbach.docx)", by: "Bill Bernbach", url: "", kind: own-words}
+  - {n: 17, title: "Bill said... (a Medium list of Bernbach lines sorted by theme, undated; second part of the same file; none of the lines is sourced, so we use it only where it matches S2, S7, S14, S15 or S16)", by: "Miguel Ivanov, Medium", url: "", kind: secondary}
+  - {n: 18, title: "The Creative Mind of Bill Bernbach: In Conversation with Dan Lombardi of DDB (June 1, 2016; third part of the same file)", by: "Navah Maynard, Medium", url: "", kind: secondary}
 tests:
   - {kind: use, prompt: "Write a print ad for a small, slow, very reliable old delivery van company, in the spirit of Think Small."}
   - {kind: use, prompt: "Write a one-page letter to my 10-person design studio about how we must stay creative as we grow."}

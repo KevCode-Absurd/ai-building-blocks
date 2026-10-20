@@ -35,6 +35,7 @@ sources:
   - {n: 10, title: "Barbie never went to Harvard, but papers of Ruth Handler, her creator, did (18 July 2023), quoting her letters, journal, speeches and interviews", by: "Boston Globe", url: "https://www.bostonglobe.com/2023/07/18/arts/barbie-never-went-harvard-that-we-know-papers-ruth-handler-her-creator-did", kind: secondary}
   - {n: 11, title: "Who was Barbie modeled after? (quoting her 1994 Lilith interview)", by: "The Mary Sue", url: "https://www.themarysue.com/who-was-barbie-modeled-after-explained/", kind: secondary}
   - {n: 12, title: "Ruth Handler was creator of Barbie doll (obituary, 28 April 2002)", by: "The Seattle Times", url: "https://archive.seattletimes.com/archive/20020428/handlerobit28/ruth-handler-was-creator-of-barbie-doll", kind: secondary}
+  - {n: 13, title: "Barbie and Ruth (2009), a chapter-by-chapter reader summary of the biography, with quotes from Ruth Handler; not the book itself", by: "Robin Gerber, summarised by Bookey", url: "", kind: secondary}
 tests:
   - {kind: use, prompt: "I'm designing a board game for 8 to 12 year olds. Write a plan to watch how kids really play with it before we finalise the rules."}
   - {kind: use, prompt: "Write a short pitch for a new product to the people who will use it, not the store buyers, in a few lines."}

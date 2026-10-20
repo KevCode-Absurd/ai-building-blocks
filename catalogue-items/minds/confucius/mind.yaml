@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "The Chinese Classics, Volume 1: Confucian Analects, translated by James Legge (Project Gutenberg eBook #4094)", by: "Confucius and his followers", url: "https://www.gutenberg.org/cache/epub/4094/pg4094-images.html", kind: own-words}
   - {n: 5, title: "The Sayings of Confucius, translated by Lionel Giles, E. P. Dutton, 1910 (Project Gutenberg eBook #46389)", by: "Confucius and his followers", url: "https://gutenberg.org/cache/epub/46389/pg46389-images.html", kind: own-words}
   - {n: 6, title: "James Legge", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/James_Legge", kind: reference}
+  - {n: 7, title: "The Analects (Lun yu), translated by D. C. Lau, Penguin Classics, 1979, ISBN 0-14-044348-7 (the owner's file the-analects.pdf: the whole text with the translator's footnotes, cover notes and Legge verse markers; cited here by book and chapter, as Lau 2:15)", by: "Confucius and his followers, translated by D. C. Lau", url: "", kind: own-words}
 tests:
   - {kind: use, prompt: "Write five short sayings, in the style of the Analects, for a new manager on how to treat their team."}
   - {kind: use, prompt: "Our team uses the word 'owner' for three different jobs, and nobody knows who decides what. Show how Confucius's idea of getting the names right would sort this out."}

@@ -3,8 +3,8 @@ name: "Eugene Schwartz"
 area: marketing
 also: [writing, sales]
 years: "1927–1995"
-thin_record: "Little of their own words is online; the voice rests on short quotes others recorded."
 living: false
+thin_record: "Only two of his own-word sources are online: excerpts of the book introduction and one 1993 lecture transcript; the book itself is in copyright."
 known_for: "Direct-response copywriter who wrote Breakthrough Advertising (1966), the book on channelling desire that already exists, and wrote mail-order winners for Boardroom and Rodale."
 summary: "Write copy the way Eugene Schwartz taught it: find the desire your market already has, show that your product is the way to it, and speak to how aware and how jaded your buyers already are."
 use_cases:
@@ -33,6 +33,7 @@ sources:
   - {n: 8, title: "Socrates, Alexander the Great, and Gene Schwartz walk into a bar", by: "Brian Kurtz", url: "https://www.briankurtz.net/socrates-alexander-the-great-and-gene-schwartz-walked-into-a-bar/", kind: secondary}
   - {n: 9, title: "Eugene M. Schwartz (author record)", by: "Open Library", url: "https://openlibrary.org/search/authors.json?q=Eugene%20M.%20Schwartz", kind: reference}
   - {n: 10, title: "Breakthrough Advertising: How to Write Ads, a recorded Schwartz workshop lecture (AI-generated summary of the video, not a transcript; the video itself could not be read)", by: "YouTube Summary, of a lecture by Eugene Schwartz", url: "https://youtubesummary.com/summary/ESdLgLleAaM", kind: secondary}
+  - {n: 11, title: "The Lost Secrets of Breakthrough Advertising (transcript of a lecture to Phillips Publishing, October 8, 1993, with staff questions; e-book edition with added foreword and headings)", by: "Eugene Schwartz", url: "", kind: own-words}
 tests:
   - {kind: use, prompt: "I sell a course that teaches parents to cook quick healthy dinners. Name the mass desire it taps, then write five headlines that channel it."}
   - {kind: use, prompt: "Rewrite this headline for buyers who have seen every weight-loss promise already: 'Lose 10 pounds fast!'"}

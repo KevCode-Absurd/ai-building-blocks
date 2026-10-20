@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "How to Stop Worrying and Start Living", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/How_to_Stop_Worrying_and_Start_Living", kind: reference}
   - {n: 5, title: "Dale Carnegie (Research Starters)", by: "EBSCO", url: "https://www.ebsco.com/research-starters/history/dale-carnegie", kind: reference}
   - {n: 6, title: "How to Stop Worrying and Start Living (1948 text, Digital Library of India scan)", by: "Dale Carnegie, via Internet Archive", url: "https://archive.org/stream/in.ernet.dli.2015.188253/2015.188253.How-To-Stop-Worrying-And-Start-Living_djvu.txt", kind: own-words}
+  - {n: 7, title: "How to Win Friends and Influence People (1936; revised 1981 edition, full PDF, with Lowell Thomas's introduction)", by: "Dale Carnegie", url: "", kind: own-words}
 tests:
   - {kind: use, prompt: "Rewrite this message to a neighbour whose dog keeps barking at night, so they want to fix it: 'Your dog is driving us crazy. Please do something.'"}
   - {kind: use, prompt: "Write a two-minute opening for a nervous first-time speaker at a local business club."}

@@ -2,150 +2,156 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on the record: Ruth Handler died in 2002 [S1]. Her own long accounts, a 1994 memoir and her papers at Harvard’s Schlesinger Library, were not open to us [S7]. We could not open a full transcript of any interview with her. What we have in her own words is her 1964 statement on Barbie [S5]. Her voice otherwise reaches us through articles that quote her memoir, a 1959 newspaper interview, her letters, speeches and a 1994 magazine interview [S9][S10][S11][S12]. Those are news and magazine pieces, so each line is a quote chosen by someone else, and we mark the paraphrase. The rest rests on reference pages, a 1962 news report and a 2004 documentary transcript [S1][S2][S3][S4][S6][S7][S8]. She told some stories in more than one way, such as where she first bought the Lilli doll, so treat details of the Barbie origin story with care [S1][S10]. One obituary headline gives her birth year as 1917, but the reference pages say 1916 [S1][S2].
+A note on the record: Ruth Handler died in 2002 [S1]. Her own long accounts, a 1994 memoir called *Dream Doll* and her papers at Harvard's Schlesinger Library, were not open to us [S7]. The fullest account we now hold is a chapter-by-chapter reader summary of Robin Gerber's 2009 biography *Barbie and Ruth*, which includes lines the biography quotes from Handler's memoir, letters and interviews [S13]. It is a summary of a book, not the book. It also has a few muddles, such as confusing her son Ken with her husband Elliot in one chapter, and some of its "best quotes" lists near the end read as generic, so we use only the lines tied to a chapter story. Her own words in full are limited to her 1964 statement on Barbie [S5]. Her voice otherwise reaches us through quoted lines in articles [S9][S10][S11][S12] and reference pages [S1][S2][S3][S4][S6][S7][S8]. She told some stories in more than one way, such as where she first bought the Lilli doll, so treat details of the Barbie origin story with care [S1][S10]. One obituary headline gives her birth year as 1917, but the reference pages say 1916 [S1][S2].
 
 ## In one paragraph
 
-Handler was born Ruth Mosko in Denver in 1916, the youngest of ten children of Polish-Jewish immigrants [S1]. She married Elliot Handler in 1938, and together they built a furniture business, then Mattel, founded in 1945 with Harold Matson [S1][S2]. Elliot designed. Ruth ran sales and much of the business, and was president from 1967 to 1973 [S1][S2]. In 1955 she bet about the company's whole net worth on a year of ads during the Mickey Mouse Club, reaching children directly on TV, and it paid off [S3][S4]. In 1959 she launched Barbie, an adult fashion doll based on her daughter's play, and it became the best-selling toy of its time [S1][S3]. In the 1970s, Mattel's false financial reports led to her exit and a fraud charge, to which she pleaded no contest [S1][S6]. After breast cancer, she built Nearly Me, a company making realistic breast prostheses [S1][S6].
+Handler was born Ruth Mosko in Denver in 1916, the youngest of ten children of Polish-Jewish immigrants, and was raised by her older sister Sarah and brother-in-law Louie, who both worked [S1][S13]. She met Elliot Handler at a dance at sixteen, worked at Paramount Studios and married him in 1938 [S13]. They started in a garage making Plexiglas items, and in 1945 founded Mattel with a partner, Harold Matson [S1][S2][S13]. Elliot designed. Ruth sold, handled the money and ran the company, and she was president from 1967 to 1973 [S1][S2][S13]. In 1955 she put half a million dollars, about all of Mattel's worth, into year-round TV ads on the Mickey Mouse Club [S3][S4][S13]. In 1959 she launched Barbie, an adult fashion doll based on her daughter's play [S1][S3][S13]. In the 1970s, after a mastectomy and a slide in sales, Mattel's leaders sent out false financial reports; she was forced out and later pleaded no contest to fraud charges [S1][S6][S13]. She then built Nearly Me, a company making natural-looking breast prostheses [S1][S6][S13].
 
 ## Core ideas
 
 ### Watch what people really do
 
-Handler's best idea came from watching her daughter Barbara and her friends play [S1]. The girls used paper dolls to act out adult lives: jobs, clothes, dates. The dolls on sale were mostly babies and toddlers [S1][S2]. She saw a gap that adults in the toy trade had missed [S1].
+Handler's best idea came from watching. Her daughter Barbara and friends used paper dolls to act out adult lives, while the dolls on sale were mostly babies and toddlers [S1][S2][S13]. She said she knew that if she could turn this play pattern into a three-dimensional toy, she would have something special [S13]. She also said she was a tomboy, not a doll child, and thought "girl talk" was stupid [S9][S10].
 
-She said she was not a doll child. She was a tomboy who was not interested in dolls, and she thought "girl talk" was stupid [S9][S10].
+How she applied it: on a 1956 trip to Europe she found the German Lilli doll and brought it back to be reworked, with designer Jack Ryan, into a toy for American girls [S1][S2][S13]. She hired fashion designers so the doll's clothes had real detail [S13].
 
-How she applied it: on a 1956 trip to Europe she bought Lilli dolls, a German adult doll, and brought them back to Mattel to rework as a toy for American girls [S1][S2]. With designer Jack Ryan she redesigned the doll [S1].
+### Sell the dream, not the object
 
-### Sell the dream
+Handler argued that a doll should let a girl imagine her future [S2]. A 2004 documentary quotes her saying girls dream of being curvaceous, exciting and dressed like movie stars [S3]. Her memoir, as quoted later, says Barbie always stood for a woman having choices [S6]. In 1994 she told an audience that her daughter always picked teenage paper dolls, never babies [S11].
 
-Handler argued that a doll should let a girl imagine her future. In a 1994 interview she said an adult doll lets a girl dream about where her life could go, and use the doll to make sense of the adult world around her [S2]. A 2004 documentary quotes her saying girls dreamed of clothes, glamour and looking like movie stars [S3]. Her memoir, as quoted later, said Barbie always stood for a woman having choices [S6].
-
-In her 1994 interview, as quoted by others, she said her daughter always chose teenage paper dolls, never babies [S11]. At her 35th anniversary speech she said the crude German Lilli doll showed that the adult doll she wanted could be made [S10].
-
-How she applied it: Barbie came with a wardrobe sold separately, such as a $5 wedding gown in 1962, so the play was about the life around the doll [S4].
+How she applied it: she hired psychologist Ernest Dichter, who studied what people want without saying, and he helped position Barbie as a lifestyle with fashion and fantasy, not just a toy [S13]. Barbie also came with a wardrobe sold separately, such as a $5 wedding gown in 1962 [S4].
 
 ### Reach the user directly
 
-Before 1955, toy makers advertised mainly at Christmas and relied on shops to sell [S4]. Handler and Mattel bought a full year of sponsorship of Disney's Mickey Mouse Club for about $500,000, close to the company's whole value [S3][S4]. The bet was that TV could reach children directly, and they would ask their parents [S3][S7].
+Before 1955, toy makers advertised mainly at Christmas and relied on shops to sell [S4]. Handler and her husband asked their controller, then committed about $500,000, close to Mattel's whole net worth, to a year of Mickey Mouse Club sponsorship [S3][S4][S13]. She changed the key consumer from the parent to the child [S13].
 
-How she applied it: the ads aired for weeks with no sign of sales, then orders flooded in. The company learned that the toy trade had a six-week lag [S4]. The Burp Gun sold out by Christmas [S3]. TIME wrote in 1962 that Mattel's year-round TV ads, which pushed the Mattel name as well as each toy, had changed the toy industry [S4].
+How she applied it: the ads aired for weeks with no sign of sales, and an ad man on the campaign called it a desperation move before orders flooded in [S4][S13]. The Burp Gun sold out by Christmas [S3]. TIME wrote in 1962 that Mattel's year-round TV ads had changed the toy industry [S4]. She later called it the easiest sale ABC ever made [S13].
 
 ### Don't take the first no
 
-At the New York Toy Fair in 1959, adult buyers and chain stores turned Barbie down [S3]. Even her husband, she later wrote, feared no mother would buy a doll with a chest [S3]. Handler went around the buyers. Mattel ran TV ads aimed at children within weeks [S3].
+At the New York Toy Fair in 1959, buyers resisted Barbie and Mattel feared it was stuck with unsold stock [S3][S13]. Male colleagues said parents would find an adult doll improper, and her husband, she later wrote, feared no mother would buy a doll with a chest [S3][S13]. Handler had pushed the idea for years inside Mattel [S13]. She went around the buyers: TV ads aimed at children ran within weeks [S3].
 
-About half the buyers at the 1959 Toy Fair rejected the doll. She was shaken but kept pushing, and later wrote that she has the courage of her convictions and can be very persuasive [S9]. In 1994 she said most buyers were men, and some doubted women would want their daughters to have a doll with breasts [S11].
+How she applied it: she later said she has the courage of her convictions and the guts to take a position [S9][S13]. Demand rose after the TV debut, and orders from buyers then poured in [S3][S13]. About 300,000 sold in the first year at $3 each [S1].
 
-How she applied it: within a year, Barbie drew about 10,000 fan letters a week, and Mattel took three years to catch up with demand [S3]. About 300,000 sold in the first year at $3 each [S1].
+### Build a line around a basic idea
 
-### Build a line, not a single product
+Handler's rule, as her biography quotes it: develop a basic mechanism or concept, introduce a few items around it, then add new products around it every year [S13]. A hit is the start of a family [S4][S13]. Barbie got a boyfriend, Ken, named after her son, then friends, and a stream of outfits [S1][S4][S13]. Mattel's music-box mechanism, built with inventor Ted Duncan, ended up in 60 million toys [S4][S13].
 
-Handler treated a hit as the start of a family of products [S4]. Barbie got a boyfriend, Ken, named after her son, and friends, and a stream of outfits [S1][S4]. Mattel's broader range in 1962 included a talking doll and a music-box mechanism used in 60 million toys [S4].
+How she applied it: sales went from about $6 million in 1955 to $49.4 million in 1961 [S4]. She also said anyone can manage the upside of a hit toy, and the real skill is managing a product down its life cycle [S13]. Mattel guaranteed every toy and kept returns of defective goods very low [S13].
 
-How she applied it: Mattel's sales went from about $6 million in 1955 to $49.4 million in 1961 [S4]. She called Barbie the biggest thing ever to hit the toy business [S4].
+### Sell it, control the money, split the work
 
-### Love the sale
+Handler loved selling. In the first business she ran sales and won contracts, including one with Douglas Aircraft [S1][S3]. Her saying about Elliot was that if he can make it, she can sell it [S13]. She took the business lead in the marriage and, in her biographer's account, Elliot gave her room [S13].
 
-Handler said she loved selling. The documentary quotes her recalling the thrill of walking into a store with samples and walking out with an order [S3]. In the couple's first business she ran sales and won contracts, including one with Douglas Aircraft [S1].
+How she applied it: she rented a truck to deliver the first picture-frame orders herself, though she had never driven one, and talked bystanders into unloading it [S13]. She kept tight control of Mattel's finances and guarded her ground against competitors [S13]. She was also loyal to early suppliers as the company grew [S13].
 
-How she applied it: as Mattel grew, she kept the commercial side, while Elliot led design [S1][S2]. Historians call her a "genius marketer" [S7].
+### Hold high standards and a culture of speed
 
-### Make the product for the user's real life
+Handler recruited from top business schools and drove a culture of boldness [S13]. Her biography reports a saying from her Mattel years that you were expected to knock a wall down, not just go through it [S13]. She built rigorous product-planning and monitoring systems, and the marketing group put on theatrical shows for toy dealers [S13]. Her own standards, she said, were her toughest problem because hers were higher than anyone's [S13].
 
-Her 1964 statement told parents what Barbie did for daughters: she claimed educational value, and said the doll's neat hair, clean face and matching accessories helped girls learn to groom themselves [S5]. Later, Handler applied the same user-first eye to her own illness [S6].
+How she applied it: she rejected products that were below Mattel's quality bar [S13]. She also brought in outside financial managers as the company grew and moved Mattel to a divisional structure, which brought turf fights [S13].
 
-How she applied it: after a mastectomy in 1970, her doctor suggested stuffing her bra with nylon stockings, which she refused to accept [S6]. She worked with a specialist to make a silicone form in many sizes, made separately for left and right sides [S6]. She hired women who had had mastectomies to fit customers, and appeared in department stores herself [S6]. Betty Ford was later fitted with one [S1][S6].
+### Make the product for the real person: solve your own problem
 
-### Business as freedom
+After her mastectomy in 1970, her doctor suggested stuffing her bra with nylon stockings, which she refused to accept [S6]. A mastectomy at that time was, in her words, a secret, unspeakable brutality [S13]. She worked with a sculptor, Peyton Massey, and a specialist to make a silicone form in many sizes, made separately for left and right [S6][S13]. She hired women who had had mastectomies to fit customers, and appeared in department stores herself [S6][S13].
 
-Researchers who studied her papers describe her career as entrepreneurship as emancipation: business gave her a way out of the limits of her time [S8]. Historians at Harvard say she did not enjoy being a stay-at-home mother and was drawn to business from a young age [S7].
-
-How she applied it: she was one of very few prominent women business leaders in the 1960s and early 1970s [S7]. Her honours included Woman of the Year in Business from the Los Angeles Times in 1968 [S2].
+How she applied it: she presented Nearly Me to Neiman Marcus and other stores in 1977 and opened by telling her own story [S13]. She said every product has to have a reason to be, and that its name meant it was not her, but a great improvement [S13]. She trained sales staff and attended fittings, and kept the letters women sent her [S13].
 
 ## How she decided
 
-- Watch what users do on their own, not what the trade expects [S1].
+- Watch what users do on their own, not what the trade expects [S1][S13].
 - Look for the product nobody makes yet [S1][S2].
-- Sell the dream the product opens up [S2][S6].
+- Sell the dream the product opens up [S2][S6][S13].
 - Go straight to the user when buyers in the middle say no [S3].
-- Be willing to bet big on reaching people, and expect a lag before it works [S4].
-- Turn one hit into a family of products [S4].
-- If you've lived the problem, you may be the best person to solve it [S6].
+- Bet big on reaching people, and expect a lag before it works [S4].
+- Turn one hit into a family of products, then plan its decline [S4][S13].
+- Treat setbacks as lessons: bad judgments hold a kernel of good judgment [S13].
+- If you've lived the problem, you may be the one to solve it [S6].
 
 ## Real decisions
 
-### Betting a year of ads on children
+### Betting the company on a year of TV ads, 1955
 
-In 1955 she put about the company’s whole worth into a year of Mickey Mouse Club ads, and waited weeks for orders [S3][S4]. See the record above.
+ABC's president wanted advertisers for The Mickey Mouse Club, and toy makers had never advertised all year. She and Elliot asked their controller, Yasuo Yoshida, then committed half a million dollars, about all of Mattel's worth [S13]. Orders did not come for weeks. When they did, the bet had changed who the toy business sold to [S4][S13].
 
-### Going around the buyers with Barbie
+### Hiring a psychologist to frame Barbie
 
-When about half the Toy Fair buyers said no in 1959, she kept the doll and took it to children through TV [S3][S9]. She said the buyers were mostly men and doubted women would want a doll with breasts, yet once shipped, the doll sold quickly [S11].
+Facing doubt from parents and the trade, she brought in Ernest Dichter, known for studying hidden consumer motives [S13]. The campaign sold fashion and fantasy, with Barbie as a role model for girls. After the TV debut, girls asked for the doll and buyers placed orders [S13].
 
-### Fighting for a body on the doll
+### Cutting costs in a price war, 1947
 
-She wanted a realistic adult body for Barbie. In one interview she said the all-male board resisted the breasts, and male executives refused her idea of an anatomically correct Ken. She accepted those limits and still launched Barbie as an adult doll [S10].
+A rival, Knickerbocker Plastics, sold a similar toy at lower prices on Mattel's first big seller, the Uke-A-Doodle [S13]. She moved fast to cut production costs without cutting quality and pushed hard to flood the market, and it sold millions [S13]. Her biographer notes that she had gone to Butler Brothers over the head of Mattel's sales team, the Caryl brothers, who then left, and that she did not admit the mistake [S13].
 
-### Buying Lilli and rebuilding her
+### Giving Ken a neutered body
 
-She bought Lilli dolls in Europe and had Mattel rework them [S1][S2]. She told the place of purchase in different ways over the years, including Lucerne [S1][S10]. In her 35th anniversary speech she said Lilli showed an adult doll could be made [S10].
+Her team wanted a realistic boyfriend for Barbie and argued about his anatomy. A neutered design was chosen for marketing reasons [S13]. In a later interview she said the all-male board had resisted Barbie's breasts and refused an anatomically correct Ken, and she accepted those limits and launched [S10].
 
 ### Pleading no contest while keeping her innocence
 
-When Mattel faced a 1978 fraud charge, she publicly kept her innocence but pleaded no contest and took a fine and community service [S10][S1].
+In 1978 she was charged with mail fraud and false statements. She said publicly she was innocent but, with her lawyer's agreement, pleaded no contest, which prosecutors called an equivalent of a guilty plea [S13][S1]. She was fined $57,000 and given 2,500 hours of community service [S1].
 
-### Starting Nearly Me instead of accepting poor options
+### Building Nearly Me instead of accepting poor options
 
-After her mastectomy she found the prostheses on offer very unsatisfactory. She started her own company to change the field [S10][S6]. She wanted the form to be so realistic that a woman could feel proud wearing it [S12].
+After her surgery she found the prostheses on offer bulky and poorly fitting [S6][S13]. She started Ruthton to sell Nearly Me over the counter in several sizes, focusing on high-end retailers and personal service [S13]. By 1980 her company reported millions in sales, and in 1991 she sold it to Kimberly-Clark [S6].
+
+### Turning forced service into a new purpose
+
+Ordered to do community service, she found filing tasks humiliating and quit the first placement [S13]. A probation officer, Steve Wishny, recognised her skills and steered her toward a programme for probationers, and she became involved in the Foundation for People [S13]. She said the work gave her a reason for the hard years [S13].
 
 ## Where she stood
 
 **Who decides what children want?** Children do. She watched them play and marketed to them directly [S1][S3].
 
-**Should a doll for girls be a baby?** No. She believed girls also wanted adult dolls to imagine their futures [S1][S2].
+**Should a doll for girls be a baby?** No. She believed girls also wanted adult dolls to imagine their futures [S1][S2][S13].
 
-**What did Barbie stand for?** As she put it later, a woman's choices [S6].
+**What did Barbie stand for?** In her words, a woman's choices and the things girls could aspire to [S6][S13].
+
+**Is Barbie harmful to girls?** She rejected the gender-stereotype critique and called Barbie an educational toy that taught grooming, fashion and manners [S5][S13].
 
 **How should a prosthesis fit?** Like the person. She insisted on left and right forms in many sizes [S6].
 
-**What went wrong at Mattel?** She blamed her lack of focus on her illness, while the SEC charged her with fraud [S1].
+**What did adversity teach?** She said the best people have known a lot of adversity and dealt with it, and that making peace with yourself is harder than making money [S13].
 
-## Her work and record
+**What went wrong at Mattel?** She blamed her lack of focus on her illness and ordinary pressures, while prosecutors charged fraud [S1][S13].
+
+## Their work and record
 
 - November 4, 1916: born in Denver, Colorado [S1].
-- 1938: married Elliot Handler [S1][S2].
+- 1938: married Elliot Handler [S1][S2][S13].
 - 1945: Mattel founded, named for Matson and Elliot [S1].
-- 1955: year-long Mickey Mouse Club sponsorship and the Burp Gun [S3][S4].
+- 1955: year-long Mickey Mouse Club sponsorship and the Burp Gun [S3][S4][S13].
 - March 9, 1959: Barbie premiered at the American International Toy Fair [S1].
 - 1961: Mattel earned $4 million on $49.4 million in sales [S4].
-- 1963: Barbie went on sale abroad [S3].
+- 1964: Mattel went public at $10 a share [S13].
 - 1967 to 1973: president of Mattel [S2].
-- 1970: breast cancer and mastectomy [S1][S6].
+- 1970: breast cancer and mastectomy [S1][S6][S13].
 - 1975: left Mattel during an SEC inquiry [S1][S6].
-- 1978: charged with fraud and false reporting. Pleaded no contest [S1][S6].
-- By 1980: her prosthesis company reported millions in sales. 1991: sold it to Kimberly-Clark [S6].
+- 1978: charged with fraud and false reporting; pleaded no contest [S1][S6][S13].
+- 1994: *Dream Doll* memoir; welcomed back to Mattel's Barbie events [S13].
 - April 27, 2002: died in California, aged 85 [S1].
 
 ## Where she was wrong or criticised
 
-- **Fraud.** Mattel's leaders, including the Handlers, were accused of hiding the true figures in company reports. When the truth came out, the stock fell to $2 a share [S2]. She was charged with fraud, pleaded no contest, was fined $57,000 and given 2,500 hours of community service [S1].
-- **Barbie and body image.** Historians note that Barbie's body-conscious fashions stood for a kind of freedom, but feminists later warned of its downside [S7]. Her own 1964 pitch tied the doll to grooming and matching outfits for girls [S5], a narrow standard many now question.
-- **Where the doll came from.** Lilli, the doll she adapted, was based on a racy European cartoon character [S2]. Her accounts of where she bought it varied [S1].
-- **Her own story.** A 1995 review called her memoir relentlessly optimistic [S2].
+- **Fraud.** Mattel's leaders, including the Handlers, sent out false reports. Her biography describes a "bill-and-hold" practice that inflated sales, and an executive who pleaded guilty and was set to testify against her [S13]. When the truth came out, the stock fell to $2 a share [S2]. She was charged with fraud, pleaded no contest, was fined $57,000 and given 2,500 hours of community service [S1]. Her biographer says there is little to her credit in the wrongdoing but much to admire in her redemption [S13].
+- **Growth she could not slow.** She said Mattel believed it had to grow or die and did not know how to slow down [S13]. Reports on growth outran honest controls.
+- **Barbie and body image.** Historians note Barbie's fashions stood for a kind of freedom, but feminists later warned of its downside [S7]. Her 1964 pitch to parents tied the doll to grooming [S5].
+- **Where the doll came from.** Lilli was based on a racy European cartoon character [S2], and her accounts of where she bought it varied [S1].
+- **Her own story.** A 1995 review called her memoir relentlessly optimistic [S2]. She also called herself not a very good mother, and her daughter resented her work [S13].
+- **Hard to work for.** Her standards were punishing for some employees [S13].
 
 ## Blind spots to watch
 
 - Marketing straight to children raises ethical questions she didn't dwell on.
-- Her focus on growth and sales left gaps in financial control, which ended her time at Mattel [S1].
+- Her push for growth and sales left gaps in financial control, which ended her time at Mattel [S1][S13].
 - Her view of what girls want reflected the 1950s. Check it against today's users.
 - She worked from instinct and observation. Pair her with someone who checks the numbers and the ethics.
+- Her biography is a sympathetic book, so some stories lean in her favour.
 
 ## Short phrases on the record
 
-- "the greatest phenomenon that ever hit the toy business" (on Barbie, TIME, 1962) [S4]
-- "Parents thank us for the educational value in the world of Barbie." (1964 statement) [S5]
-- "gives a little girl the ability to dream about her future" (Lilith, 1994, as quoted by Encyclopedia.com) [S2]
-- "I found that I loved the challenge of selling" (as quoted in They Made America) [S3]
+- "Every product has to have a reason to be." (as quoted in Gerber's biography) [S13]
+- "Setbacks were lessons." (as quoted in Gerber's biography) [S13]
+- "Anyone can manage the upside cycle of hit toys." (as quoted in Gerber's biography) [S13]
 - "Barbie always represented the fact that a woman has choices." (memoir, 1994, as quoted by History.com) [S6]
+- "I found that I loved the challenge of selling" (as quoted in They Made America) [S3]

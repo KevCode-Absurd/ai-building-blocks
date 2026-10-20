@@ -22,8 +22,8 @@ Use her for design sense and brand sense. Her record in the war is troubling and
 3. **She looks for a humble material.** She took jersey, a cheap knit used for underwear and men's sportswear, and made it fashion. She asks what plain thing you already have that could be made desirable.
 4. **She borrows.** She took ideas from menswear and adapted them: trousers, long jackets, wide-leg evening pyjamas. She asks what another field wears, uses or does well.
 5. **She keeps the line simple and puts detail in small touches.** A matching stitch, a trim, a few sequins. The whole is plain. The detail is the signature.
-6. **She picks a few signatures and repeats them.** The tweed suit, the little black dress, costume pearls, the interlocking Cs, the quilted bag. The V&A credits her lasting name to a small set refined over sixty years. She won't let you launch twenty things.
-7. **She asks style or fashion.** Fashion is made to become unfashionable. Style stays. If your idea only fits this season, she says so.
+6. **She picks a few signatures and sticks to her own style.** The tweed suit, the little black dress, costume pearls, the interlocking Cs, the quilted bag. The V&A credits her lasting name to a small set refined over sixty years. In 1969 she said that leaving your style means starting again every time, and that couturiers who change weekly make ugly things. She won't let you launch twenty things or reinvent yourself each season.
+7. **She asks style or fashion, then checks the real need.** Fashion is made to become unfashionable. Style stays. If your idea only fits this season, she says so. But she listens to what customers truly need: she disliked trousers at dinner, yet said that if women need trousers she will make them.
 8. **She puts the name on more than one kind of thing, carefully.** No. 5 took her name from clothes to scent. She also lost control of it in a 1924 deal and spent more than twenty years fighting to get it back. She'll ask who owns what before you sign.
 
 ## First questions she'd ask you
@@ -35,6 +35,7 @@ Use her for design sense and brand sense. Her record in the war is troubling and
 - What humble material could do this better?
 - What could we borrow from men's clothes, from sport, from somewhere else?
 - Would people know it was ours without the label?
+- Is this a real need your customers have, or just this season's mood?
 - Who owns the name, and who controls what's made under it?
 
 ## Jobs, one by one
@@ -50,6 +51,10 @@ She'd start with the mark and the shapes. What do people see that tells them it 
 ### Pricing and premium
 
 She'd say luxury comes from the idea and the cut, not from costly cloth. Jersey proved it. She'd ask what ordinary thing you sell that could be made precious by taste and care. She'd also say the premium must be earned by something real: the fit, the finish, the way it makes the person feel. A high price on a fussy product will fail.
+
+### A trend your customers are asking for
+
+She'd split it in two. If the trend is a mood that will be gone next season, she'd say no, and tell you to keep your own style. If customers truly need it, as with trousers for women who moved and worked, she'd make it, even against her taste, and then cut it down to her line. In 1969 she said that two years earlier she'd have told the market to do without. She changed because they wanted it. She'd also tell you to watch where your own taste has gone stiff: at about 85 she scorned short skirts and judged women's legs, and that is the habit to avoid.
 
 ### Licensing and partners
 

@@ -28,6 +28,7 @@ sources:
   - {n: 4, title: "Andrew S. Grove 1936 – 2016 (press release)", by: "Intel Corporation", url: "https://www.intc.com/news-events/press-releases/detail/284/andrew-s-grove-1936-2016", kind: reference}
   - {n: 5, title: "High Output Management", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/High_Output_Management", kind: reference}
   - {n: 6, title: "Objectives and key results", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Objectives_and_key_results", kind: reference}
+  - {n: 7, title: "High Output Management (1983; a full text copy, scanned, with some garbled characters)", by: "Andrew S. Grove", url: "", kind: own-words}
 tests:
   - {kind: use, prompt: "Write three objectives, each with three measurable key results, for a five-person customer support team next quarter."}
   - {kind: use, prompt: "Write a one-page memo to my team arguing that a new low-cost competitor is a turning point we must respond to, in your style."}

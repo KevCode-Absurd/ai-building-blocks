@@ -29,6 +29,8 @@ sources:
   - {n: 5, title: "Lord & Thomas (Foote, Cone & Belding)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Lord_%26_Thomas", kind: reference}
   - {n: 6, title: "Scientific Advertising", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Scientific_Advertising", kind: reference}
   - {n: 7, title: "My Life in Advertising (1927, public domain; Internet Archive scan)", by: "Claude C. Hopkins", url: "https://archive.org/details/mylifeinadverti00unkngoog", kind: own-words}
+  - {n: 8, title: "My Life in Advertising (1927; full PDF copy, Harper & Brothers text)", by: "Claude C. Hopkins", url: "", kind: own-words}
+  - {n: 9, title: "Scientific Advertising (1923; full PDF e-book copy with a foreword by Victor Urbach)", by: "Claude C. Hopkins", url: "", kind: own-words}
 tests:
   - {kind: use, prompt: "Write a print ad for a small bakery's sourdough bread, in Hopkins's style, with a specific claim and a coupon for a free sample."}
   - {kind: use, prompt: "Give me 12 headlines for a home insurance comparison website, each aimed at a different kind of buyer, so I can test them."}

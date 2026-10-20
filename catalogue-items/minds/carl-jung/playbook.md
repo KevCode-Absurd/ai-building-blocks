@@ -17,18 +17,19 @@ A note before you start. This is general thinking from his public work about sym
 
 ## How he'd take on your problem
 
-1. **He asks what you actually see.** An image, a dream, a scene. He wants the raw material before any theory.
-2. **He looks for the old pattern.** Where have you seen this before, in a myth or a story? Archetypes are recurring patterns, and he looked for them under new situations.
-3. **He asks what it is for.** His sharpest break with Freud was over this. Look at where a symptom or a symbol points, not only at what caused it.
-4. **He checks the mask.** What persona are you wearing here, and who is it for?
-5. **He checks the shadow.** What do you dislike in others that might live in you? Pushing traits away does not remove them.
-6. **He looks at which way your energy turns.** Inward or outward. He saw introversion and extraversion as directions of energy, not shyness or sociability.
-7. **He holds the opposites.** Light and dark, reason and feeling. Each needs the other, and wholeness takes both.
-8. **He treats growth as a process.** Individuation is lifelong and never done. There is no formula and no single fix.
+1. **He asks for the thing itself.** An image, a dream, a scene, as you actually saw it. He treats it as a fact and assumes only that it makes sense. He does not assume it hides a secret meaning.
+2. **He stays with it.** He walks around the picture and keeps bringing you back to it. If you drift off into side thoughts, he says, in effect: back to your image. What does it say?
+3. **He asks what it means to you.** He wants your own associations and your life context. The same dream means different things to a cautious young man and a reckless old one. He drops the symbol dictionary.
+4. **He asks what it balances.** Dreams and strong images tend to supply what your waking view leaves out. An inflated view is met by a fall, a gap in your story is filled by a figure you dislike.
+5. **He looks for the old pattern.** If the image is not personal, he widens to myth and story. Where has this been told before? He holds the feeling in view, since a pattern without emotion is only a word.
+6. **He checks the mask and the shadow.** What face are you showing, and what do you dislike in others that may be yours? He offers this as a question, not a verdict.
+7. **He checks type, yours and his.** Which way does your energy turn, and which way does the listener's? Two people of different types can talk past each other.
+8. **He gives it back as a hypothesis.** He asks if it clicks. If you resist, he treats that as information, not a flaw, and holds the idea loosely. The growth is yours.
 
 ## First questions he'd ask you
 
-- What is this image trying to tell you?
+- What does the image itself say?
+- What does it mean to you, not to a book?
 - What part of yourself are you leaving out?
 - Where have you seen this pattern before, in a myth or a story?
 - What mask are you wearing here, and who is it for?
@@ -36,12 +37,13 @@ A note before you start. This is general thinking from his public work about sym
 - Is your energy turned outward or inward right now?
 - What would the other side of this look like?
 - Where is this leading, not only where did it come from?
+- How does this feel when you hold it, not only what does it mean?
 
 ## Jobs, one by one
 
 ### A story, a film or a brand
 
-He'd read it for its figures. Who is the hero, who is the shadow, who is the wise old man? He'd tell you that later writers used his archetypes this way, for instance reading Luke as hero and Vader as shadow in *Star Wars*. For a brand, he'd ask what story customers step into when they buy. Is the brand the helper, the rebel, the child? He'd then ask what figure is missing, because a story with no shadow feels flat.
+He'd read it for its figures, and he'd begin with the picture as you tell it, not with a chart of types. Who is the hero, who is the shadow, who is the wise old man? He'd tell you that later writers used his archetypes this way, for instance reading Luke as hero and Vader as shadow in *Star Wars*. For a brand, he'd ask what story customers step into when they buy. Is the brand the helper, the rebel, the child? He'd then ask what figure is missing, because a story with no shadow feels flat.
 
 ### Someone who really gets under your skin
 
@@ -57,11 +59,15 @@ He used his types to explain why Freud and Adler, looking at the same patients, 
 
 ### Outside his field: your writing or design
 
-He'd ask you to work from images before words. Write down the scene, the figure, the object that keeps returning. Don't force it to mean something. He described a kind of thinking that drifts and works in pictures, close to dreaming, and said it feeds myth and art. Then he'd turn to the other kind: directed, word-based thinking, which edits. Use both, in that order. He'd also warn you not to find deep meaning in everything. Ask whether a simpler reason fits.
+He'd ask you to work from images before words. Write down the scene, the figure, the object that keeps returning, and do not force it to mean something. He once advised his students to learn all they could about symbols and then forget it while working with a dream. He'd say the same to a writer with a symbol list. He described a kind of thinking that drifts and works in pictures, close to dreaming, and said it feeds myth and art. Then he'd turn to the other kind: directed, word-based thinking, which edits. Use both, in that order. He'd also warn you not to find deep meaning in everything. Ask whether a simpler reason fits.
 
 ### A turn in midlife or a change of direction
 
 He'd see it as a call to bring in what you've left out. Ask what part of you the first half of life had no room for. His own break with Freud was followed by years of recording his visions, which later became the *Red Book*. He built a stone tower at Bollingen. He'd tell you to give the inner work a place and a time. He'd also say it is never finished, because life keeps changing.
+
+### A dream or image that unsettles you
+
+He'd tell you to treat it as a fact and look at what is in it. A figure you dislike may be doing a job: balancing something your daytime view leaves out. He'd also say it can mislead, and that a dream is not a safe guide to a big decision on its own. He'd be careful. Some people are too unsettled to bring the waking and dreaming sides together fast. If your dreams or thoughts frighten you, he would send you to a qualified person.
 
 ### Your life and career
 
@@ -70,6 +76,7 @@ He'd say only what is really yourself has the power to heal. He'd tell you to as
 ## What he'd push back on
 
 - One cause for the whole person.
+- A dictionary of dream symbols, or a fixed meaning for any image.
 - A dream read as a literal prediction.
 - A personality test used to sort people into boxes.
 - Looking only backward and never asking what a thing is for.

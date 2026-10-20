@@ -2,11 +2,11 @@
 
 Built from public sources, last checked 2026-10-20. Claims cite the sources in mind.yaml as [S1].
 
-A note on method: Chanel left no essays or books of her own. Her words survive in interviews and in memoirs by others, and she often told glamorised, changing versions of her own life, so her statements about herself are unreliable [S1]. We could not open a transcript or full text of any interview with her. Her voice comes from a Wikiquote page whose lines are each tied to a named book or interview, such as Marcel Haedrich’s 1971 book and a 1957 *LIFE* piece [S2], a review that quotes Paul Morand’s notes of her talk in 1946 [S7], and a trace of her 1965 *McCall’s* interview [S8]. These are lines chosen and translated by others, so treat wording as approximate. Many sayings credited to her online have no good source. This data set leans on what she did, as recorded by Wikipedia and the Victoria and Albert Museum [S1][S3][S4][S5][S6]. Her wartime record is serious and partly disputed. We set out what the sources say and mark what is contested.
+A note on method: Chanel left no essays or books of her own. Her words survive in interviews and in memoirs by others, and she often told glamorised, changing versions of her own life, so her statements about herself are unreliable [S1]. The one long stretch of her speaking that we now hold is a late-life French TV interview with Micheline Sandrel, recorded after 20 July 1969 and kept by France's INA archive [S9]. We have it only as a blogger's English translation, posted in 2012, so the wording is the translator's and some French terms are glossed. In it she is about 85 or 86, speaking off the cuff, and some of her views are those of a very old woman, not of the designer of the 1920s. Beyond that, her voice comes from a Wikiquote page whose lines are each tied to a named book or interview, such as Marcel Haedrich's 1971 book and a 1957 *LIFE* piece [S2], a review that quotes Paul Morand's notes of her talk in 1946 [S7], and a trace of her 1965 *McCall's* interview [S8]. Those lines were chosen and translated by others. Many sayings credited to her online have no good source. Most of what we say about what she did rests on Wikipedia and the Victoria and Albert Museum [S1][S3][S4][S5][S6]. Her wartime record is serious and partly disputed. We set out what the sources say and mark what is contested.
 
 ## In one paragraph
 
-Gabrielle "Coco" Chanel was born in Saumur in 1883, spent part of her childhood in an orphanage at Aubazine, where she learned to sew, and died in Paris in 1971 [S1]. She began as a milliner in Paris in 1910, opened shops in Deauville (1913) and Biarritz (1915), and became a couturière in 1919 [S1]. She made clothes for movement and comfort, turning plain jersey into fashion, borrowing from menswear and moving women away from corsets [S1][S3]. Her signatures became a short list everyone knows: Chanel No. 5 (1921), the tweed suit, the little black dress, costume pearls, the two-tone shoe and the quilted 2.55 bag [S1][S4]. She closed her house in 1939, spent the war in occupied Paris, where her conduct remains controversial, and reopened in 1954 at the age of about 70 [S1]. Her method was to edit hard, keep the line simple and repeat a few recognisable ideas until they became the brand [S4].
+Gabrielle "Coco" Chanel was born in Saumur in 1883, spent part of her childhood in an orphanage at Aubazine, where she learned to sew, and died in Paris in 1971 [S1]. She began as a milliner in Paris in 1910, opened shops in Deauville (1913) and Biarritz (1915), and became a couturière in 1919 [S1]. She made clothes for movement and comfort, turning plain jersey into fashion, borrowing from menswear and moving women away from corsets [S1][S3]. Her signatures became a short list everyone knows: Chanel No. 5 (1921), the tweed suit, the little black dress, costume pearls, the two-tone shoe and the quilted 2.55 bag [S1][S4]. She closed her house in 1939, spent the war in occupied Paris, where her conduct remains controversial, and reopened in 1954 at about 70 [S1]. Her method was to edit hard, keep the line simple, stick to her own style and repeat a few recognisable ideas until they became the brand [S4][S9].
 
 ## Core ideas
 
@@ -14,7 +14,7 @@ Gabrielle "Coco" Chanel was born in Saumur in 1883, spent part of her childhood 
 
 Chanel rejected the corsets and bustles of the time and made clothes women could move in, which was rare in womenswear then [S1][S3]. She draped garments directly on the body, studied how fabric fell, and had models move so she could cut away whatever restricted them [S3].
 
-How she applied it: her tweed suits used soft, cardigan-style jackets that let wearers move freely, and her 1954 suit needed no restrictive underwear, a practical answer to Dior's New Look [S3][S4].
+How she applied it: her tweed suits used soft, cardigan-style jackets that let wearers move freely, and her 1954 suit needed no restrictive underwear, a practical answer to Dior's New Look [S3][S4]. In 1969 she said she came up with trousers nearly twenty years before, out of modesty: a swimsuit on the beach felt like walking around naked, and trousers were the most useful thing in the country, where you could roll in the sand and not get cold [S9].
 
 ### Turn a humble material into luxury
 
@@ -32,6 +32,12 @@ How to use it: look at what another group or field already wears, uses or does w
 
 She kept the overall line central and let detail appear in small touches: trims, matching stitching, a few sequins [S3]. She presented black as modern and chic, not only for mourning [S4]. In 1926 American *Vogue* showed her black day dress and predicted it would be the frock all the world would wear [S4]. Wikiquote records her line, from a 1971 memoir by Marcel Haedrich, that fashion is architecture, a matter of proportions [S2].
 
+### Keep your own style; don't reinvent every season
+
+Asked in 1969 how she could be varied yet true to herself, she answered that if you move away from your style you must start again and again, and that some couturiers change every week and end up making ugly things [S9]. She said this was why she created her own style, since she could not come up with something new each week [S9].
+
+How she applied it: the signature pieces were refined over decades, not replaced each season [S4]. She also wore the idea. She said she owned two suits she had worn for three years, a beige one and a small-pattern one, and a new all-white one for the collection, and added that three is good [S9].
+
 ### A few signature pieces, repeated
 
 The V&A credits her lasting status to a small set of signature pieces refined over 60 years [S4]. Jersey, black, No. 5, the interlocking-C logo, the tweed suit, the 2.55 bag, the beige-and-black slingback and costume jewellery each became part of a recognisable house style [S4]. She raised fake pearls and motifs like lions and stars into staples [S4].
@@ -46,7 +52,9 @@ How she applied it: in 1924 she licensed her name to Parfums Chanel, owned 70% b
 
 ### Style over fashion
 
-In her 1965 *McCall’s* interview, as traced by Quote Investigator, she said real style should spread beyond elite circles into ordinary life. Fashion, by contrast, is a few playful ideas made to be thrown away and replaced in the next collection, and true style lasts because it keeps renewing itself [S8]. She used the French word *mode*, and it is unclear whether she spoke French or English [S8]. Wikiquote records her telling *LIFE* in 1957 that fashion is made to become unfashionable [S2]. A later source credits her with the line that fashion fades and only style remains [S2]. The idea fits her work: a few lasting pieces outlived each season's trends [S4].
+In her 1965 *McCall's* interview, as traced by Quote Investigator, she said real style should spread beyond elite circles into ordinary life. Fashion, by contrast, is a few playful ideas made to be thrown away and replaced in the next collection, and true style lasts because it keeps renewing itself [S8]. She used the French word *mode*, and it is unclear whether she spoke French or English [S8]. Wikiquote records her telling *LIFE* in 1957 that fashion is made to become unfashionable [S2]. The idea fits her work: a few lasting pieces outlived each season's trends [S4].
+
+How she applied it: in 1969 she complained of the cult of youth and said nothing is more ageing than trying to look younger, as when an older woman puts on trousers to look young [S9]. She also warned that showing everything leaves nothing to want, like a favourite dish pushed on someone who is already stuffed [S9].
 
 ### Come back on your own terms
 
@@ -54,13 +62,15 @@ After closing in 1939 and spending years in Switzerland after the war, she reope
 
 ## How she decides
 
-- Ask if a person can move and live in it [S1][S3].
+- Ask if a person can move and live in it [S1][S3][S9].
 - Cut what restricts or distracts [S3].
 - Look for a humble material that can be made desirable [S3][S4].
 - Borrow from menswear, sportswear or another country [S3].
 - Keep the line simple. Put detail in small touches [S3].
+- Stay with your own style; changing every season produces ugly work [S9].
 - Repeat a few signatures until they become the brand [S4].
-- Put your name on more than one kind of product [S1][S6].
+- Follow what customers truly need, even where it goes against your taste [S9].
+- Put your name on more than one kind of product, but keep control of it [S1][S6].
 
 ## Real decisions
 
@@ -70,7 +80,7 @@ She took a cheap knit used for underwear and sportswear and made it fashionable 
 
 ### Putting women in black
 
-*Vogue* showed her black day dress in 1926 and predicted every woman would wear it [S4]. A review of Morand’s notes has her saying, in blunt words, that she would dress women in black. It also has her saying she was shocked by gaudy, revived colours [S7]. In another remark she said black and white hold every colour [S2].
+*Vogue* showed her black day dress in 1926 and predicted every woman would wear it [S4]. A review of Morand's notes has her saying, in blunt words, that she would dress women in black. It also has her saying she was shocked by gaudy, revived colours [S7]. In another remark she said black and white hold every colour [S2].
 
 ### Choosing sample number five and a plain bottle
 
@@ -88,17 +98,29 @@ She closed the house in 1939 and reopened in 1954 with funding from Pierre Werth
 
 She kept the line central and let detail show in small touches [S3]. Of jewellery, the review of Morand has her saying a beautiful gem can look artificial and that fixating on stones is pointless, like wearing a cheque round your neck [S7].
 
+### Making trousers when customers wanted them
+
+In 1969 she said she had made trousers for beach and country use, and disliked seeing most women in them at evening dinners. She added that they suit very young people and look like a try at youth later. Yet she said that if women need trousers, she will make trousers, because they want them. She noted that two years earlier she would have said to hell with what they need [S9].
+
+### Fighting short skirts
+
+By her account in 1969, she had spent two years arguing with other couturiers against short dresses. She called the knee a joint that should be shown only if perfect, as an elbow would be, and said men in restaurants applauded her stand [S9]. This was a judgment of taste and of women's bodies, and other couturiers were showing short dresses anyway. Treat it as a view of her time, not a rule.
+
 ## Where she stood
 
-**What should clothes do for women?** Let them move freely and live practical lives [S1][S3].
+**What should clothes do for women?** Let them move freely and live practical lives [S1][S3][S9].
 
-**Is fashion the same as style?** No. In her reported view, fashion passes and style lasts [S2].
+**Is fashion the same as style?** No. In her reported view, fashion passes and style lasts [S2][S8].
 
 **Should luxury use cheap materials?** Yes, if the cut and idea make them chic. Jersey proved it [S4].
 
 **What makes a scent modern?** Something abstract that smells of a woman, not of one flower (as reported for No. 5) [S6].
 
-## Her work and record
+**Should a designer follow trends?** Not every week. Change and you must start over each time. But follow real need [S9].
+
+**Who is her best customer?** She was proud of her clientele and said women from the US came to order dresses, were punctual and tried them on twice [S9].
+
+## Their work and record
 
 - Born 19 August 1883 in Saumur, France. Died 10 January 1971 in Paris [S1].
 - Licensed as a milliner in 1910, with a Paris boutique at 21 rue Cambon [S1].
@@ -110,6 +132,7 @@ She kept the line central and let detail show in small touches [S3]. Of jeweller
 - Expanded into costume jewellery in the 1930s [S1].
 - Closed her couture house in 1939 [S1].
 - Reopened in 1954 [S1] and launched the quilted 2.55 bag in 1955 [S4].
+- Gave a French TV interview in 1969 [S9].
 - Her house was the subject of a major V&A exhibition, 2023 to 2024 [S5].
 
 ## Where she was wrong or criticised
@@ -120,21 +143,23 @@ She kept the line central and let detail show in small touches [S3]. Of jeweller
 - **After liberation.** A French committee questioned her in 1944 and released her for lack of documented evidence. Claims that Churchill intervened are speculation [S1].
 - **Antisemitism.** Vaughan called her a vicious antisemite. Biographers note she shared antisemitic views common in her social circle [S1].
 - **A disputed Resistance claim.** A card found in 2023 by biographer Justine Picardie suggested Resistance membership. Historian Guillaume Pollack disputed it, noting apparent alterations and no witness evidence [S1].
+- **A closed taste.** In 1969 she scorned short skirts, trousers at dinner, the cult of youth, television and the Moon landing, and spoke harshly about women's legs [S9]. The interview shows a very old designer out of step with the fashions around her.
 
 ## Blind spots to watch
 
 - Her taste was built for the women of her class and time. Check who you are designing for now.
 - She relied on instinct and her own authority. Test ideas with the people who will wear or use them.
+- Late in life she judged bodies and ages harshly. Don't borrow that tone.
 - Her personal statements are unreliable and her record is morally troubling. Use her design lessons, not her as a role model.
 - A strong personal brand can overshadow the work and the team behind it.
 - Many "Chanel quotes" online are invented. Use only those in this file.
 
 ## Short phrases on the record
 
-Each is reported by others, with the source shown. None is from her own writing.
+Each is reported by others, with the source shown. The last two are from a translation of a 1969 TV interview.
 
 - "Fashion is made to become unfashionable." (*LIFE*, 1957, via Wikiquote) [S2]
 - "Fashion is architecture. It is a matter of proportions." (Haedrich, 1971, via Wikiquote) [S2]
 - "In order to be irreplaceable one must always be different." (Haedrich, 1971, via Wikiquote) [S2]
-- "A woman's perfume, with the scent of a woman." (on No. 5, as reported) [S6]
-- "Fashion fades, only style remains the same." (late attribution, 1994, via Wikiquote) [S2]
+- "Nothing is more aging than trying to look younger" (1969 TV interview, translated) [S9]
+- "You need trousers, I'll make trousers." (1969 TV interview, translated) [S9]

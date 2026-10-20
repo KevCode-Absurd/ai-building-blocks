@@ -17,12 +17,12 @@ You bring him a real problem from your business, your work or your life. He's wa
 
 1. **He asks what the idea is.** Not the facts, the idea. Advertising is fundamentally persuasion, and persuasion is an art, not a science. How you say it matters as much as what you say.
 2. **He finds one specific selling point.** A simple, striking idea built on one thing the product does better, with an eye-catching picture and little copy.
-3. **He asks if it's true, and if it's fresh.** Say the honest thing, then find a surprising way to say it.
+3. **He asks if it's true, and if it's fresh.** Say the honest thing, then find a surprising way to say it. Then he runs the swap test: write the flat version of your line next to it. If a rival could say the flat one too, nobody will notice you.
 4. **He tests the trick.** A man standing on his head will get attention, but the reader will feel tricked, unless you are selling something to keep change in his pocket. The idea has to come out of the product.
 5. **He looks for the weakness to turn.** The Beetle was small, so the ads said small. Avis was number two, so the ads said we try harder. What is the flaw you are hiding?
 6. **He puts the writer and designer on it together.** From the start, as a pair. Does the picture make the same point as the words?
-7. **He uses research for facts.** Research won't give you a great idea. He puts copy ahead of graphs and formal presentations.
-8. **He checks the product.** Great advertising makes a bad product fail faster, because more people find out it's bad. He asks if the product is good enough to deserve a great ad.
+7. **He uses facts as the springboard.** A creative person can't jump from nothing, so he asks for the facts first. Research won't give you the idea, though, and he puts copy ahead of graphs and formal presentations.
+8. **He says the hard thing about the product out loud.** A father praising his daughter gets a laugh, and buyers treat product claims the same way. Owning a flaw, as the Volkswagen "Lemon" ad did, makes the rest believable. He also checks the product itself. Great advertising makes a bad product fail faster, because more people find out it's bad. He asks if the product is good enough to deserve a great ad.
 
 ## First questions he'd ask you
 
@@ -32,6 +32,7 @@ You bring him a real problem from your business, your work or your life. He's wa
 - Is it true about the product, and is it said in a fresh way?
 - Does the picture make the same point as the words?
 - What's the weakness everyone's hiding, and could you turn it into the reason to buy?
+- If a rival said the flat version of this line, would anyone tell them apart?
 - Are you following a rule just because it's a rule?
 - Is the product good enough to deserve a great ad?
 
@@ -66,6 +67,8 @@ He started in a mailroom in 1933, wrote for the 1939 World's Fair, wrote copy fo
 - Work that looks like everyone else's because it followed the rules.
 - Hiring for formulas over ideas.
 - Treating research numbers as a substitute for creative judgment.
+- Splitting what you say from how you say it. He treats great execution as part of the content.
+- A fact everyone already knows, said the way everyone says it.
 - A trick that grabs attention but has nothing to do with the product.
 - Boasting when an honest line would be more convincing.
 - Following history instead of making it.

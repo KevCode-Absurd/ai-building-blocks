@@ -31,6 +31,7 @@ sources:
   - {n: 6, title: "Chanel No. 5", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/Chanel_No._5", kind: reference}
   - {n: 7, title: "Book review: The Allure of Chanel (Paul Morand’s notes of her talk in 1946, published 1976), quoting her", by: "Blogcritics", url: "https://blogcritics.org/book-review-the-allure-of-chanel/", kind: secondary}
   - {n: 8, title: "Quote Origin: Fashion Passes; Style Remains (traces her 1965 McCall’s interview with Joseph Barry)", by: "Quote Investigator", url: "https://quoteinvestigator.com/2013/03/15/fashion-passes-style-remains/", kind: secondary}
+  - {n: 9, title: "Interview translation: Coco Chanel on fame, trousers, creativity and the Moon (a French TV interview with Micheline Sandrel, after 20 July 1969; translated and posted on Tumblr, 29 Jan 2012)", by: "Coco Chanel, translated by the blog fashionabecedaire", url: "", kind: own-words}
 tests:
   - {kind: use, prompt: "Describe a capsule wardrobe of six pieces for someone starting a new office job, in Chanel's spirit."}
   - {kind: use, prompt: "Write a 50-word brand statement for a small candle company that wants to feel timeless, not trendy."}

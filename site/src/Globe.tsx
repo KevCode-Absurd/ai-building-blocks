@@ -50,12 +50,14 @@ export default function Globe() {
     const sprites = new Map<string, HTMLCanvasElement>();
 
     const SIZES = [8, 10.5, 13, 15.5];
+    // Digits shrink with the globe, so a small screen doesn't pile them on top of each other.
+    let fs = 0.9;
     // Each digit is drawn once per size and colour, then stamped, so thousands of digits stay cheap.
     const sprite = (ch: string, band: number, hueStep: number) => {
       const key = `${ch}${band}:${hueStep}`;
       let s = sprites.get(key);
       if (!s) {
-        const size = SIZES[band];
+        const size = SIZES[band] * fs;
         s = document.createElement("canvas");
         s.width = s.height = Math.ceil(size * 1.3 * dpr);
         const g = s.getContext("2d")!;
@@ -83,6 +85,8 @@ export default function Globe() {
       dpr = next; w = box.width; h = box.height;
       canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const f = Math.max(0.55, Math.min(0.9, (geom().R / 430) * 0.9 + 0.2));
+      if (Math.abs(f - fs) > 0.01) { fs = f; sprites.clear(); }
     };
     const geom = () => ({ R: Math.min(w * 0.46, h * 0.56, 430), cx: w / 2, cy: h * 0.54 });
 

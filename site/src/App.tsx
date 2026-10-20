@@ -196,6 +196,7 @@ function Library({ c }: { c: Catalogue }) {
   const pickFn = (id: string) => set({ fn: f.fn === id ? "" : id, task: "" });
   const area = AREAS.find((a) => a.id === f.area);
   // An area shows its own groups; areas that so far hold only minds show the minds group.
+  const fnsRef = useRef<HTMLDivElement>(null);
   const fnsShown = area ? FUNCTIONS.filter((x) => area.fns.includes(x.id) || (x.id === "minds" && count({ area: area.id, fn: "minds", task: "" }) > 0)) : FUNCTIONS;
 
   return (
@@ -209,8 +210,14 @@ function Library({ c }: { c: Catalogue }) {
           return <button key={a.id} className="chip" aria-pressed={f.area === a.id} disabled={!n && f.area !== a.id} onClick={() => set({ area: f.area === a.id ? "" : a.id, fn: "", task: "" })} data-testid={`area-${a.id}`}>{a.name}<span className="count">{n}</span></button>;
         })}
       </div>
-      <h2 className="fn-h">Pick the work you do, or want done</h2>
-      <div className="fns" role="group" aria-label="Pick the work">
+      <div className="fn-head">
+        <h2 className="fn-h">Pick the work you do, or want done</h2>
+        <span className="fn-arrows">
+          <button type="button" className="btn btn-ghost btn-sm" aria-label="Scroll back" onClick={() => fnsRef.current?.scrollBy({ left: -fnsRef.current.clientWidth * 0.8, behavior: "smooth" })} data-testid="fns-prev">←</button>
+          <button type="button" className="btn btn-ghost btn-sm" aria-label="Scroll on" onClick={() => fnsRef.current?.scrollBy({ left: fnsRef.current.clientWidth * 0.8, behavior: "smooth" })} data-testid="fns-next">→</button>
+        </span>
+      </div>
+      <div className="fns" role="group" aria-label="Pick the work" ref={fnsRef}>
         {fnsShown.map((x) => {
           const n = count({ fn: x.id, task: "" });
           return (

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root { --bg: #fff; --panel: #fafafa; --text: #0a0a0a; --muted: #6b6b6b; --line: #e3e3e3; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #000; --panel: #0d0d0d; --text: #f5f5f5; --muted: #9a9a9a; --line: #262626; } }
+  :root[data-theme="dark"] { --bg: #000; --panel: #0d0d0d; --text: #f5f5f5; --muted: #9a9a9a; --line: #262626; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 400 15px/1.5 "Space Grotesk", system-ui, sans-serif; }
+  main { max-width: 1180px; margin: 0 auto; padding: 40px 16px 80px; }
+  h1 { font: 700 34px/1.1 "Space Grotesk"; letter-spacing: -0.03em; margin: 0 0 8px; }
+  .intro { color: var(--muted); max-width: 60ch; margin: 0 0 12px; }
+  .bar { display: flex; gap: 8px; margin: 0 0 28px; }
+  .bar button { font: 500 13px "JetBrains Mono", monospace; padding: 6px 12px; border: 1px solid var(--text); background: var(--bg); color: var(--text); border-radius: 999px; cursor: pointer; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+  .opt { border: 1px solid var(--line); border-radius: 10px; background: var(--panel); padding: 18px; display: grid; gap: 14px; }
+  .opt:hover { border-color: var(--text); box-shadow: 4px 4px 0 var(--text); transform: translate(-2px, -2px); }
+  .big { display: grid; place-items: center; height: 120px; }
+  .big svg { width: 96px; height: 96px; }
+  .lock { display: flex; align-items: center; gap: 10px; font: 700 20px "Space Grotesk"; letter-spacing: -0.02em; }
+  .lock svg { width: 26px; height: 26px; }
+  .tiny { display: flex; gap: 10px; align-items: center; }
+  .tiny svg { width: 16px; height: 16px; }
+  .n { font: 500 12px "JetBrains Mono", monospace; color: var(--muted); }
+  .name { font: 700 17px/1.2 "Space Grotesk"; margin: 2px 0 2px; }
+  .why { font-size: 13.5px; color: var(--muted); margin: 0; }
+  svg rect.d { opacity: 0.32; }
+  .pick { outline: 2px solid var(--text); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>20 logo options</h1>
+  <p class="intro">Each one is drawn on a pixel grid in black and white, like the rest of the site. You see it big, next to the name, and at favicon size. Option 1 is the logo we have now. Any of them can do the building animation in the header.</p>
+  <div class="bar"><button data-t="light">Light</button><button data-t="dark">Dark</button></div>
+  <div class="grid" id="grid"></div>
+</main>
+<script>
+// '#' is a solid block, '+' is a dim block, '.' is empty.
+const OPTIONS = [
+  ["Bits", "The logo now: five lit blocks and four dim ones, like a 0 and 1 pattern.", ["#.+.#", ".....", "+.#.+", ".....", "#.+.#"]],
+  ["One brick", "A single toy brick with two studs. The plainest way to say blocks.", [".#..#.", "######", "######", "######", "......", "......"].slice(0, 4)],
+  ["Brick stack", "Three bricks, each set off from the one below, like a wall going up.", [".##.##..", "######..", "######..", "..#.##.#", "..######", "..######", "#.##.##.", "########"]],
+  ["Staircase", "Blocks climbing one step at a time, like the ladder from by hand to agents.", ["....##", "....##", "..####", "..####", "######", "######"]],
+  ["A of blocks", "A letter A built from square blocks, for AI.", ["..##..", ".####.", "##..##", "######", "##..##", "##..##"]],
+  ["AI pixels", "The letters AI in chunky pixels, with a dim gap block between them.", [".#..###", "#.#..#.", "###+.#.", "#.#..#.", "#.#.###"]],
+  ["Tetris drop", "An L block about to land on a stack. Shows things fitting together.", ["..#...", "..###.", "......", "##..##", "######", "######"]],
+  ["Pixel cube", "A cube in flat pixels, light top and dark side, like a 3D block.", ["..###..", ".#+++#.", "#+++++#", "##+++##", "#.###.#", "#..#..#", ".#.#.#.", "..###.."]],
+  ["Chain", "Three blocks joined by a line: a workflow, one step after another.", ["......", "##.##.", "#####.", "##.##.", "...##+", "...+++"].map(r => r)],
+  ["Linked steps", "Three blocks in a row, joined, the last one dim to say there's more to add.", [".......", "##.##.+", "#######", "##.##.+", "......."]],
+  ["Plus node", "Four blocks around a centre, like parts plugging into one hub.", ["..#..", "..#..", "#####", "..#..", "..#.."].map(r => r.replace(/#/g, "#"))],
+  ["Puzzle", "A square with a tab and a slot, so blocks clip into each other.", ["..##...", "#######", "######.", ".#####.", "######.", "#######", "..##..."]],
+  ["Brick b", "A small b built from bricks. Short for blocks, reads at tiny sizes.", ["##....", "##....", "#####.", "##..##", "##..##", "#####."]],
+  ["Grid with a gap", "A 3 by 3 grid with one block missing, waiting for you to add yours.", ["##.##.##", "##.##.##", "........", "##.++.##", "##.++.##", "........", "##.##.##", "##.##.##"]],
+  ["Globe of bits", "A round world made of blocks, like the globe of 0s and 1s on the home page.", ["..###..", ".#+#+#.", "#+#+#+#", "##+#+##", "#+#+#+#", ".#+#+#.", "..###.."]],
+  ["Spark", "A pixel spark: the moment the AI does the work for you.", ["...#...", "...#...", "..###..", "#######", "..###..", "...#...", "...#..."]],
+  ["Cursor block", "A pointer clicking a block. Pick a skill, and it runs.", ["#......", "##.....", "###....", "####...", "##.....", "#..###.", "...###.", "...###."]],
+  ["Tower", "A tall stack that's still being built, the top block falling into place.", ["..##..", "......", "######", "######", "######", "######"]],
+  ["Brackets", "A block held in code brackets: a skill you can copy and reuse.", ["##...##", "#.....#", "#.###.#", "#.###.#", "#.###.#", "#.....#", "##...##"]],
+  ["Sprout", "A plant growing from a block: start small and it grows into more.", [".##.##.", "..###..", "...#...", "...#...", "#######", "#######"]],
+];
+const svg = (rows) => {
+  const h = rows.length, w = Math.max(...rows.map(r => r.length)), s = Math.max(w, h);
+  const ox = (s - w) / 2, oy = (s - h) / 2;
+  let out = `<svg viewBox="-0.5 -0.5 ${s + 1} ${s + 1}" shape-rendering="crispEdges" aria-hidden="true">`;
+  rows.forEach((r, y) => [...r].forEach((c, x) => {
+    if (c === "#" || c === "+") out += `<rect ${c === "+" ? 'class="d" ' : ""}x="${x + ox + 0.06}" y="${y + oy + 0.06}" width="0.88" height="0.88" fill="currentColor"/>`;
+  }));
+  return out + "</svg>";
+};
+document.getElementById("grid").innerHTML = OPTIONS.map(([name, why, rows], i) => `
+  <article class="opt">
+    <div class="big">${svg(rows)}</div>
+    <div class="lock">${svg(rows)}AI Blocks</div>
+    <div class="tiny">${svg(rows)}<span class="n">favicon size</span></div>
+    <div><div class="n">${String(i + 1).padStart(2, "0")}</div><div class="name">${name}</div><p class="why">${why}</p></div>
+  </article>`).join("");
+document.querySelectorAll(".bar button").forEach(b => b.onclick = () => document.documentElement.dataset.theme = b.dataset.t);
+</script>
+</body>
+</html>

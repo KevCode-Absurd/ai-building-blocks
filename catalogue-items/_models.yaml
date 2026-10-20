@@ -12,3 +12,9 @@ media:
   video_understanding:  {candidates: ["Gemini family (ad breakdowns)"]}
 # No router (decided 2026-10-18): direct accounts with Anthropic, OpenAI, Google and DeepSeek.
 rule: "The judge's lab wrote no part of the work (doc 10 §7.3)."
+# Added 2026-10-20: the thinking level each block shows (page.yaml `thinking`) maps to these classes.
+# Who builds and tests with what, task by task: docs/MODELS.md.
+thinking:
+  low:    C1_cheap
+  medium: C2_mid
+  high:   C3_top

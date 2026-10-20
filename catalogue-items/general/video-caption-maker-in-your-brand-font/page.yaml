@@ -2,6 +2,8 @@ name: "Video caption maker in your brand font"
 new_slug: video-caption-maker-in-your-brand-font
 summary: "Attach clips, script and font. Get timed brand-font captions, a subtitle file and a fault list."
 job: make-video-ads
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Video caption maker in your brand font"
 subhead: Give it your finished clips, the approved script and your font file. It splits the words into short caption groups, times each to the speech and keeps them clear of the app's buttons. You get a timing table, a fault list, a subtitle file and any check it couldn't pass.

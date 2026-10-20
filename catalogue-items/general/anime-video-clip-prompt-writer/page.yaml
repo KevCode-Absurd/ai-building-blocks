@@ -2,6 +2,8 @@ new_slug: anime-video-clip-prompt-writer
 name: "Anime video clip prompt writer"
 summary: "Paste your anime script and attach product photos. Get hand-drawn clip prompts and an edit list."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Anime video clip prompt writer"
 subhead: Give it an approved anime-style ad script and real product photos. It writes the hero's card, builds sheets and a storyboard of key poses and holds, and writes the clip prompts, stopping three times for your OK. You get every prompt and an edit list, with any check still missed.

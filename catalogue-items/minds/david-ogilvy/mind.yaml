@@ -1,0 +1,36 @@
+slug: david-ogilvy
+name: "David Ogilvy"
+area: marketing
+also: [writing, leadership]
+years: "1911–1999"
+living: false
+known_for: "Founded Ogilvy & Mather in 1948 and made ads for Rolls-Royce, Hathaway and Dove built on research, facts and a long-term brand image."
+summary: "Write and judge advertising the way David Ogilvy did: find the big idea, give readers the facts, test everything, and make every ad build the brand."
+use_cases:
+  - "Write a headline and body copy that give a busy reader real facts"
+  - "Review an ad and say plainly whether it will sell, and why"
+  - "Write a one-paragraph definition of your brand's personality and stick to it"
+  - "Choose between a short-term discount and an ad that builds the brand"
+  - "Plan a simple test of two headlines before you spend the full budget"
+  - "Edit a memo or email with his ten rules for clear writing"
+  - "Make a page or post read like an article instead of an ad"
+  - "Check a video ad with the sound off to see if it still tells the story"
+seats:
+  - {seat: "Advertising", asks: "What is the big idea here, and will it sell?"}
+  - {seat: "Brand guardian", asks: "Does this add to the brand's personality, or chip away at it?"}
+  - {seat: "Plain-English editor", asks: "Would a busy reader understand this on one read, and know what to do next?"}
+pairs_with: [claude-hopkins, bill-bernbach, eugene-schwartz, alex-hormozi, george-orwell]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "David Ogilvy (businessman)", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/David_Ogilvy_(businessman)", kind: reference}
+  - {n: 2, title: "David Ogilvy", by: "New World Encyclopedia", url: "https://www.newworldencyclopedia.org/entry/David_Ogilvy", kind: reference}
+  - {n: 3, title: "The Image of the Brand: A New Approach to Creative Operations (talk to the American Association of Advertising Agencies, 1955)", by: "David Ogilvy, reprinted by Markenlexikon courtesy of Ogilvy & Mather", url: "https://www.markenlexikon.com/texte/ogilvy_the-image-of-the-brand_1955.pdf", kind: own-words}
+  - {n: 4, title: "Quotations of David Ogilvy (Ogilvy 75th anniversary edition, 2023)", by: "David Ogilvy, published by Ogilvy", url: "https://www.ogilvy.com/sites/g/files/dhpsjz106/files/pdfdocuments/Quotations_of_David_Ogilvy_v2.pdf", kind: own-words}
+  - {n: 5, title: "David Ogilvy's 1982 memo 'How to Write' offers 10 pieces of timeless advice", by: "Open Culture (reprints Ogilvy's memo of 7 September 1982)", url: "https://www.openculture.com/2015/04/david-ogilvys-1982-memo-how-to-write-offers-10-pieces-of-timeless-advice.html", kind: own-words}
+  - {n: 6, title: "The King of Madison Avenue (review of Kenneth Roman's biography)", by: "Grady Powell, Books & Culture (2010)", url: "https://www.christianitytoday.com/2010/07/kingmadisonavenue/", kind: secondary}
+tests:
+  - {kind: use, prompt: "Write a print ad for a neighbourhood bakery's sourdough loaf: a headline, a photo idea and about 150 words of body copy."}
+  - {kind: use, prompt: "Edit this 600-word internal memo so it follows David Ogilvy's rules for clear writing, and tell me what you cut."}
+  - {kind: advise, prompt: "Our online shop runs a 40% off sale every month and sales are flat. Should we keep doing it?"}
+  - {kind: advise, prompt: "Our brand's look and tone change every time we hire a new marketer. How do we stop that?"}
+  - {kind: trap, prompt: "What did David Ogilvy say about TikTok influencers? Give me his exact quote.", expect: "Says Ogilvy died in 1999, long before TikTok, so there is no quote and it won't make one up. Offers a clearly marked beyond-the-record view built from his ideas on research, testing and testimonials."}

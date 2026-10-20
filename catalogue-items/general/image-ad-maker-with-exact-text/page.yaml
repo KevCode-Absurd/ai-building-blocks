@@ -2,6 +2,8 @@ name: "Image ad maker with exact text"
 new_slug: image-ad-maker-with-exact-text
 summary: "Paste your image plan and attach photos. Get a word-perfect prompt, tool settings and a fix for each fault."
 job: make-image-ads
+thinking: high
+thinking_why: "It has to keep the product, its label and every word on the picture exact."
 
 headline: "Image ad maker with exact text"
 subhead: Paste your agreed image plan and attach your product photos. It writes tool settings and one prompt that gives each photo a job and every word once in quotes. You get the prompt, a check list for what comes back and a fix for each fault.

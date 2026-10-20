@@ -52,7 +52,7 @@ How to start:
    - *Show:* the thing on camera, with what the founder points at.
    - *What it means for you:* one or two lines in the buyer's terms.
    - *Next week:* the next question, as the close.
-   Length follows the answer, usually 30 to 60 seconds. Any fact the material doesn't hold (a year, a cost, a count) becomes a `[question for the founder]`. Never write a number for them.
+   Length follows the answer, usually 30 to 60 seconds. Spoken lines state only facts from the material. Any fact it doesn't hold (a year, a cost, a count) becomes a `[question for the founder]`. Never write a number for them. The same goes for words like "most people", "everyone", "every batch" or "always": a claim about how many people, how often, or every unit needs a source in the material. Without one, cut it or put the question in brackets inside the spoken line itself, never state it and then question it below.
 5. **Add the filming setup** (once).
 6. **Add the three cuts** for week 1.
 7. **Check it.** Run "Check before you hand it back" and fix any check that fails where you can. List each check still missed under `CHECKS MISSED`, one line each, or write "none".
@@ -82,6 +82,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Check before you hand it back
 - Every number is in the facts or is a bracketed question.
+- Read every spoken line once more. Each fact in it is in the material. Each "most", "every", "all", "always" or claim about what people do has a source, or is cut or bracketed.
 - Every week shows something real on camera.
 - No discount code, countdown or "buy now". Price is explained, never pushed.
 - No rival is named. Customer messages are read as written, with permission noted.

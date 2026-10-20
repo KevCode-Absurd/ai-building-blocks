@@ -2,6 +2,8 @@ new_slug: product-page-screenshot-auditor
 name: "Product page screenshot auditor"
 summary: "Attach product page screenshots. Get what blocks shoppers, changes to test and a score out of 100."
 job: audit-landing-page
+thinking: high
+thinking_why: "It judges work against many checks, so a stronger model catches more."
 
 headline: "Product page screenshot auditor"
 subhead: Attach phone and desktop screenshots of a product page, and say the one thing a shopper must do there. It records what it sees and what each problem might mean. You get an evidence table, changes to test, what it couldn't check and a score out of 100.

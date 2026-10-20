@@ -2,6 +2,8 @@ new_slug: shopify-landing-page-builder
 name: "Shopify landing page builder"
 summary: "Paste your page copy and theme. Get Shopify files with your copy loaded in, and install steps."
 job: write-landing-page
+thinking: high
+thinking_why: "It writes code that has to work the first time."
 
 headline: "Shopify landing page builder"
 subhead: Give it your finished page copy, your product's handle and your theme. It writes a section file and a page template with your copy loaded in. You get the files, an image list and six install steps.

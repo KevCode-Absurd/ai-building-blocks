@@ -2,6 +2,8 @@ new_slug: brand-guide-builder
 name: "Brand guide builder"
 summary: "Attach your brand file. Get a printable brand guide and a values file to paste into any tool."
 job: brand-file
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Brand guide builder"
 subhead: Attach your brand file, plus logo rules and site styles if you have them. It builds a printable guide with a one-page quick sheet and only readable colour pairs. You get the guide, a copy-paste values file and a list of gaps to fill.

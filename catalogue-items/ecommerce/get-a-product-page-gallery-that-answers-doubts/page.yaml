@@ -2,6 +2,8 @@ new_slug: get-a-product-page-gallery-that-answers-doubts
 name: "A product gallery that answers shoppers' doubts"
 summary: "Give it your product, photos, reviews and current gallery. You get a checked set of images, ready to upload."
 job: product-photos
+thinking: high
+thinking_why: "It runs several skills in a row. Give it your strongest model."
 
 headline: "A product gallery that answers shoppers' doubts"
 subhead: Give it your product, facts, photos, reviews and current gallery. It reads the gallery like a shopper, sorts every customer worry into five fears, plans each image around one question, and stops twice for your OK before handing over checked files with alt text.

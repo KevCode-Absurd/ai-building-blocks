@@ -2,6 +2,8 @@ new_slug: ab-test-traffic-checker
 name: "A/B test traffic checker"
 summary: "Paste visits, orders and revenue. Get the test size, weeks needed and a readiness score out of 100."
 job: audit-landing-page
+thinking: high
+thinking_why: "It reads a lot of data or many customer words, and the numbers and quotes must be right."
 
 headline: "A/B test traffic checker"
 subhead: Paste your visits, orders or sign-ups and revenue for a set of dates. It works out revenue per visitor for each traffic source and sizes a fair test with the standard sum. You get the visitors and weeks needed, a verdict and a test readiness score out of 100.

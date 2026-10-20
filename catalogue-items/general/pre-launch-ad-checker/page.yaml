@@ -2,6 +2,8 @@ new_slug: pre-launch-ad-checker
 name: "Pre-launch ad checker"
 summary: "Attach your finished ad. Get stop-ship mistakes, each fix, a verdict and a score out of 100."
 job: check-ads
+thinking: high
+thinking_why: "It judges work against many checks, so a stronger model catches more."
 
 headline: "Pre-launch ad checker"
 subhead: Attach the finished ad and paste its words, who it's for and your live offer. It checks every fact and walks the ad as a viewer meets it on a phone. You get stop-ship fixes, things worth a look, a verdict and a score out of 100.

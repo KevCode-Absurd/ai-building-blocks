@@ -2,6 +2,8 @@ new_slug: sales-copy-readiness-checker
 name: "Sales copy readiness checker"
 summary: "Paste finished copy and facts. Get ship, fix or rewrite, three fixes and a score out of 100."
 job: check-ads
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Sales copy readiness checker"
 subhead: Paste a finished ad, page or email and your facts. It checks every claim against your facts, measures the reading grade and runs twelve yes or no checks. You get ship, fix or rewrite, up to three fixes and a score out of 100.

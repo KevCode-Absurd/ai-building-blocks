@@ -68,7 +68,7 @@ Make 3 or 4 reference images of the doll alone, full length, against a plain kni
 
 ## Stage 3: Sheets and lock lines (approval 2)
 - **Material sentence,** pasted word for word into every image prompt from here: "A small handmade world made entirely of wool", then the fabric for each kind of surface (stockinette walls, a garter rug, rib-knit wood, crocheted objects, felted steam), one yarn thickness for everything, the colours, soft window light from one side, and shallow focus so the set reads small.
-- **Doll card:** the doll in one fixed description (build, yarn hair, clothes with fabric and colour, features), pasted whole into every prompt the doll is in, and left out of shots without her.
+- **Doll card:** the doll in one fixed description (build, yarn hair, clothes with fabric and colour, features), pasted whole into every prompt where any part of her is in frame, close-ups of only her hands or cuff included, and left out of shots with no part of her.
 - **Motion sentence,** opening every clip prompt: "Wool stop-motion animated on twos: each pose holds for two frames, about 12 new poses a second; stitches stay in place and the fuzz stays soft."
 - **Character sheet** from the picked image: front, three-quarter left and right, side and back, the poses and feelings the script needs (shown in the whole pose), and the doll's size next to the product.
 - **Product sheet** from the real photos: front, side and top, crocheted at true shape and colours, large logo areas in intarsia, the 1 to 3 biggest label lines in quotes. Write the full label word for word beside it, for the edit.
@@ -87,7 +87,7 @@ Attach the sheets to later prompts and name each by its job ("image 1 is the wom
 **Stop here.** Show the whole storyboard and wait for a yes.
 
 ## Stage 5: Storyboard to video
-1. **Clips.** Each approved frame is a clip's start frame. For the turn, add the end state as an end frame if your tool takes one. Open with the motion sentence, then give one camera move (locked-off by default, or a slow dolly in), the change in time order sized to the clip, what stays fixed, and the end state.
+1. **Clips.** Each approved frame is a clip's start frame. For the turn, add the end state as an end frame if your tool takes one. Open with the motion sentence, then give one camera move (locked-off by default, or a slow dolly in), the change in time order sized to the clip, what stays fixed, and the end state. One change means one moving part: one arm, one head turn, or one yarn technique. If a second limb or the torso also moves ("her arm straightens while she leans back"), cut the second move or split it into its own clip.
 
    | Technique | How to say it to a video tool |
    |---|---|
@@ -118,7 +118,7 @@ Attach the sheets to later prompts and name each by its job ("image 1 is the wom
 Run the same prompt once more before rewriting it; one miss is often chance.
 
 ## Run the checks
-Before the final hand-back, check the run against the 6 checks under "Check before you hand it back". Fix any failed check you can, then check again. List any check still missed on a `CHECKS MISSED:` line, one line each, or write "none".
+Before the final hand-back, check the run against the 7 checks under "Check before you hand it back". Fix any failed check you can, then check again. List any check still missed on a `CHECKS MISSED:` line, one line each, or write "none".
 
 ## What you hand back
 One file per stage:
@@ -141,7 +141,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 - You stopped for approval after stages 1, 3 and 4, unless the person approved them ahead.
 - The material sentence is word for word the same in every image prompt, and the doll card in every frame the doll is in.
 - Every object names its material and a real colour.
-- Every clip has one camera move and at most one yarn change, written as yarn moves.
+- Check each clip on its own: one camera move, and one moving part (one limb, the head, or one yarn technique), written as yarn moves. Two body parts moving at once is a missed check.
+- Check each frame and clip on its own: if any part of the doll is in frame, hands only included, the doll card is pasted in.
 - No face close-ups; no child, real person, speaking doll or cloned voice.
 - The product has its true shape and only its real label lines; nothing shown beyond the brand's claims, and no body getting better.
 

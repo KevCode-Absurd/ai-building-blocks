@@ -2,6 +2,8 @@ new_slug: ad-first-line-writer-and-scorer
 name: "Ad first line writer and scorer"
 summary: "Paste your buyer and proof. Get ten first lines, or fixes for yours, and a score out of 100."
 job: write-ad-copy
+thinking: high
+thinking_why: "It judges work against many checks, so a stronger model catches more."
 
 headline: "Ad first line writer and scorer"
 subhead: Give it a brief on your buyer, your proof and who speaks, then say write or score. It writes about ten first lines that each make a different move, or scores yours on four checks. You get the lines, what comes after each and a score out of 100.

@@ -1,0 +1,126 @@
+name: "Advisory council"
+new_slug: advisory-council
+summary: "Ask a hard question. Get several great minds arguing it, then a brief you can act on."
+job: think-with-minds
+thinking: high
+thinking_why: "It keeps several voices apart through rounds of argument, then weighs them."
+
+headline: "Advisory council"
+subhead: Give it a decision and up to seven minds, each with a role, such as Bezos on operations or Munger as devil's advocate. They argue it in rounds and rank each other's answers blind. You get the decision, the strongest dissent, what would change the call and your first three steps.
+
+explain: |
+  Asking one AI for advice gets you one confident answer. Real decisions go better when people who think differently argue first. Then the person who has to live with the choice makes the call.
+
+  This skill runs that meeting. You're the chair. Each member is a mind from the library, played from their public work, or anyone you describe. Each takes a seat, either the one you give or the one we suggest. They open with a recommendation, challenge the answer they disagree with most, and rank everyone's answers without knowing whose they are, so a famous name can't win on its own. Then you get a short brief. The strongest dissent stays in it at full strength, not smoothed over.
+
+when:
+  - You're stuck between two or more good options, and getting it wrong would cost you.
+  - You want your plan attacked from several sides before you spend money on it.
+  - You want to hear how people who think very differently would handle your problem.
+
+you_give:
+  - The question or decision, and what a good outcome looks like
+  - Up to seven minds, each with a role (optional; it suggests a council if you don't)
+  - Each mind's skill file from the minds library (optional; it makes their voices sharper)
+  - Your facts, numbers or brand brain (optional)
+you_get:
+  - The council, with each member's seat and the question they always ask
+  - An opening view from each member, then a round of challenges
+  - A blind ranking of the answers
+  - The chair's brief, with the decision, the strongest dissent, what would change the call and the first three steps
+
+how_to_use:
+  - Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in.
+  - Say what you're deciding and what a good outcome looks like.
+  - Name the minds you want and the role for each, or let it suggest a council.
+  - Attach each mind's skill file if you have it, and any numbers that matter.
+  - Read the brief, then ask a member to go deeper or run a second round on the dissent.
+
+how_it_works:
+  - title: Restates the question
+    text: One line, with what good looks like and any hard limits. A question with one right answer gets answered, not debated.
+  - title: Seats the council
+    text: Your roles, kept exactly, or a suggested seat for each. It checks that someone pushes for action and someone looks for risk.
+  - title: Opening round
+    text: Each member gives a recommendation first, then the reason from their own ideas, then the risk they'd watch. 150 words each.
+  - title: Cross-examination
+    text: Each one challenges the answer they disagree with most, and the challenged member replies.
+  - title: Blind ranking
+    text: The answers are relabelled A, B, C. Each member ranks them, then the names are revealed.
+  - title: The chair's brief
+    text: The decision and who backs it, the strongest dissent, what would flip it, and three first steps.
+
+output_shape: |
+  QUESTION
+  <the decision in one line> · Good outcome: <…> · Limits: <…>
+
+  THE COUNCIL
+  - <mind> · <seat> · always asks: "<their question>"
+  - …
+
+  OPENING ROUND
+  <mind> (<seat>): <recommendation>. <reason>. Watch: <risk>.
+  …
+
+  CROSS-EXAMINATION
+  <mind> → <mind>: <challenge>
+    <mind>: <reply>
+
+  BLIND RANKING
+  A <points> · B <points> · … → A was <mind>, B was <mind>
+
+  CHAIR'S BRIEF
+  Recommended decision: <…> (backed by <minds>)
+  The strongest dissent: <…> (<mind>)
+  What would change the call: <fact> → check by <how>
+  First three steps: 1. <…> 2. <…> 3. <…>
+
+  MISSING: <facts the council needed, or none>
+
+example:
+  business: sprout
+  input: |
+    [the skill]
+
+    Question: should we add a cheaper one-off pack next to the
+    subscription, or keep subscription only?
+    Good outcome: more first orders without hurting repeat buying.
+    Council: Alex Hormozi (offers and pricing), Jeff Bezos (the
+    customer), Charlie Munger (devil's advocate).
+
+tweaks:
+  - what: The question
+    how: Name the options and what good looks like. "Should we add a one-off pack or keep subscription only, aiming for more first orders?" beats "how do we grow?".
+  - what: The seats
+    how: Give each member a job that pulls against another's. Three people who all push growth will agree, and you learn nothing.
+  - what: The facts
+    how: Paste the two or three numbers that matter, such as price, margin and repeat rate. Members argue from them instead of guessing.
+
+judge:
+  - Does every opening start with a recommendation, not background?
+  - Do the voices read differently, each using that mind's own ideas?
+  - Did a real disagreement survive into "The strongest dissent"?
+  - Are all numbers either from you or marked MISSING?
+  - Are the first three steps concrete enough to start tomorrow?
+
+test:
+  - Run it on a decision you've already made, and see if the brief raises what you learned the hard way.
+  - Swap one member for someone who thinks the opposite, and check the dissent changes.
+  - Run it twice. The decision may differ, but the strongest dissent should be close both times.
+
+improve:
+  - Add your standing council to the skill, with each mind and their seat, so you only type the question.
+  - Add your hard limits (budget, values, things you won't do) so every member respects them.
+  - Add a rule for when to escalate, such as "if two members say stop, list what it would take to go ahead".
+
+works_best_with:
+  tools:
+    - {name: "Claude Code", why: "Each member can run as its own subagent, reading its own mind file, so the voices stay apart."}
+    - {name: "Any good chat AI", why: "One model plays every member in turn. Use your strongest model for this one."}
+  inputs:
+    - Each member's skill file from the minds library
+    - Your numbers for the decision
+
+terms:
+  - {term: "Seat", meaning: "The job a member does on this council, such as devil's advocate or the customer's voice."}
+  - {term: "Blind ranking", meaning: "Members rank each other's answers without knowing who wrote which."}

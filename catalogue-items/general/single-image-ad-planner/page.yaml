@@ -2,6 +2,8 @@ new_slug: single-image-ad-planner
 name: "Single image ad planner"
 summary: "Paste your facts. Get the layout, image words, feed copy and an image prompt."
 job: make-image-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Single image ad planner"
 subhead: Paste your facts and the buyer, or a script to turn into one image. It settles the one point the ad argues and the type your proof allows. You get the layout, image words, feed copy and an image prompt.

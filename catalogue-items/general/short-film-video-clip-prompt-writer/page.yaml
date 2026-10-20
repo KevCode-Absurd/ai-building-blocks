@@ -2,6 +2,8 @@ new_slug: short-film-video-clip-prompt-writer
 name: "Short film video clip prompt writer"
 summary: "Paste your short-film script and attach product photos. Get steady clip prompts and an edit list."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Short film video clip prompt writer"
 subhead: Give it an approved short-film script and real product photos. It draws a floor plan, casts each person, builds sheets and a storyboard with a prop log, and writes the clips, stopping three times for your OK. You get the floor plan, every prompt and an edit list.

@@ -2,6 +2,8 @@ new_slug: video-ad-shot-list-maker
 name: "Video ad shot list maker"
 summary: "Paste your script and storyboard. Get timed shots, clip prompts and an edit list."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Video ad shot list maker"
 subhead: Give it your approved script, storyboard and product photos. It times the script into clips and writes 3 to 8 shots per clip, each with a size, camera position, one move and one action. You get shot tables to approve, start and end frames, clip prompts and an edit list.

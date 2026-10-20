@@ -2,6 +2,8 @@ name: "Overhead portrait image maker"
 new_slug: overhead-portrait-image-maker
 summary: "Paste a brief and attach photos. Get one overhead portrait image prompt with the camera and light set."
 job: make-image-ads
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Overhead portrait image maker"
 subhead: Paste a short brief and attach photos of the person and product if you have them. It sets the camera distance and light so the face looks big but human. You get one prompt, the role of each photo and a list of any step that didn't run.

@@ -2,6 +2,8 @@ new_slug: motion-graphics-video-build-planner
 name: "Motion graphics video build planner"
 summary: "Paste your graphic script and attach cutouts. Get an exact build plan and a text table with sources."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Motion graphics video build planner"
 subhead: Give it a motion graphics script and product cutouts. It checks every number, draws a style frame per shot, and plans the build in code or an editor, stopping three times for your OK. You get the build plan and a text table with sources.

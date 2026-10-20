@@ -2,6 +2,8 @@ name: "AI image and video fix rule writer"
 new_slug: ai-image-and-video-fix-rule-writer
 summary: "Paste feedback on AI work. Get each fix as a reusable rule with a prompt line and a check line."
 job: check-ads
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
 
 headline: "AI image and video fix rule writer"
 subhead: Paste the feedback on a finished image or clip, and attach the piece. It sorts each point into a lasting rule or a one-off and finds where the mistake slipped in. You get a prompt line and a check line per rule, and the lines your piece fails.

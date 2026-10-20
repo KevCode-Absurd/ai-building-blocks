@@ -15,10 +15,25 @@ import { DownloadDialog } from "./DownloadDialog";
 import { flowFrom, passLabel, planFromGoal, shareUrl, tidy, unpackFlow } from "./lib/plan";
 import { applySteps } from "./lib/flowEdit";
 import { setSearch } from "./lib/router";
-import { FlowEdge, type FlowEdgeT, GoalBox, STEP_S, Sample, StepList, StepPanel, sampleOf } from "./BuilderParts";
+import { EndPanel, FlowEdge, type FlowEdgeT, GoalBox, STEP_S, Sample, StartPanel, StepList, StepPanel, sampleOf } from "./BuilderParts";
 
-type NodeData = { slug: string; ecommerce?: boolean; step?: number; run?: number; delay?: number };
+type NodeData = { slug: string; ecommerce?: boolean; step?: number; run?: number; delay?: number; role?: string; notes?: string };
 type BlockNode = Node<NodeData, "block">;
+// Start and End aren't steps. They're drawn from the steps each time, so they can't be dragged off, deleted or saved wrong.
+const START = "__start", END = "__end";
+type EndData = { which: "start" | "end"; line: string };
+type EndNode = Node<EndData, "terminal">;
+const TerminalView = memo(function TerminalView({ data }: NodeProps<EndNode>) {
+  const start = data.which === "start";
+  return (
+    <div className={`terminal t-${data.which}`} data-testid={`flow-${data.which}`}>
+      {!start && <Handle type="target" position={Position.Left} isConnectable={false} />}
+      <b>{start ? "Start" : "End"}</b>
+      <span>{data.line}</span>
+      {start && <Handle type="source" position={Position.Right} isConnectable={false} />}
+    </div>
+  );
+});
 const CatalogueCtx = createContext<Catalogue | null>(null);
 const NodeActions = createContext<{ remove: (id: string) => void }>({ remove: () => {} });
 
@@ -31,6 +46,7 @@ const BlockNodeView = memo(function BlockNodeView({ id, data }: NodeProps<BlockN
       <Handle type="target" position={Position.Left} />
       <div className="top">{b ? <span className="kind">{KINDS.find((k) => k.id === kindOf(b))!.name}</span> : <span className="small">Missing block</span>}<span className="step-n">{data.step ? `Step ${data.step}` : ""}</span></div>
       <div className="nm">{b?.name ?? data.slug}</div>
+      {(data.role || data.notes) && <div className="node-role" data-testid="node-role">{data.role ? `Role: ${data.role}` : "Has your notes"}</div>}
       {b && (
         <div className="io">
           <div><b>In</b> {b.inputs.map((p) => portLabel(p.type)).join(", ") || "your request"}</div>
@@ -42,7 +58,7 @@ const BlockNodeView = memo(function BlockNodeView({ id, data }: NodeProps<BlockN
     </div>
   );
 });
-const nodeTypes = { block: BlockNodeView };
+const nodeTypes = { block: BlockNodeView, terminal: TerminalView };
 const edgeTypes = { flow: FlowEdge };
 
 const Ico = ({ d }: { d: string }) => <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square" aria-hidden="true"><path d={d} /></svg>;
@@ -77,15 +93,18 @@ function ViewControls({ full, onFull, edit, onTidy }: { full: boolean; onFull: (
 }
 
 const fromFlow = (f: Pick<Flow, "nodes" | "edges">) => ({
-  nodes: f.nodes.map((n): BlockNode => ({ id: n.id, type: "block", position: { x: n.x, y: n.y }, data: { slug: n.slug, ecommerce: n.ecommerce } })),
+  nodes: f.nodes.map((n): BlockNode => ({ id: n.id, type: "block", position: { x: n.x, y: n.y }, data: { slug: n.slug, ecommerce: n.ecommerce, role: n.role, notes: n.notes } })),
   edges: f.edges.map((e): FlowEdgeT => ({ id: e.id, source: e.from, target: e.to, type: "flow" })),
 });
-const toFlow = (id: string, name: string, nodes: BlockNode[], edges: FlowEdgeT[]): Flow => ({
+type Ends = { goal: string; notes: string; ended: boolean };
+const toFlow = (id: string, name: string, nodes: BlockNode[], edges: FlowEdgeT[], ends: Ends): Flow => ({
   id, name, updated: 0,
-  nodes: nodes.map((n) => ({ id: n.id, slug: n.data.slug, x: Math.round(n.position.x), y: Math.round(n.position.y), ...(n.data.ecommerce ? { ecommerce: true } : {}) })),
+  nodes: nodes.map((n) => ({ id: n.id, slug: n.data.slug, x: Math.round(n.position.x), y: Math.round(n.position.y), ...(n.data.ecommerce ? { ecommerce: true } : {}), ...(n.data.role ? { role: n.data.role } : {}), ...(n.data.notes ? { notes: n.data.notes } : {}) })),
   edges: edges.map((e) => ({ id: e.id, from: e.source, to: e.target })),
+  ...(ends.goal ? { goal: ends.goal } : {}), ...(ends.notes ? { notes: ends.notes } : {}), ...(ends.ended ? { ended: true } : {}),
 });
-const sameFlow = (a: Flow, b: Flow) => a.name === b.name && JSON.stringify([a.nodes.map((n) => [n.id, n.slug, n.x, n.y, !!n.ecommerce]), a.edges.map((e) => [e.from, e.to])]) === JSON.stringify([b.nodes.map((n) => [n.id, n.slug, n.x, n.y, !!n.ecommerce]), b.edges.map((e) => [e.from, e.to])]);
+const shape = (f: Flow) => JSON.stringify([f.name, f.goal ?? "", f.notes ?? "", f.nodes.map((n) => [n.id, n.slug, n.x, n.y, !!n.ecommerce, n.role ?? "", n.notes ?? ""]), f.edges.map((e) => [e.from, e.to])]);
+const sameFlow = (a: Flow, b: Flow) => shape(a) === shape(b);
 function chain(c: Catalogue, slugs: string[], start = { x: 40, y: 110 }) {
   const nodes: BlockNode[] = slugs.map((slug, i) => ({ id: uid(), type: "block", position: { x: start.x + (i % 3) * 360, y: start.y + Math.floor(i / 3) * 190 }, data: { slug } }));
   const edges: FlowEdgeT[] = wireSteps(c, slugs).map(([a, b]) => ({ id: uid(), source: nodes[a].id, target: nodes[b].id, type: "flow" }));
@@ -174,6 +193,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
   const initial = useMemo(() => shared ?? flows.draft(), [shared]);
   const [flowId, setFlowId] = useState(initial?.id ?? uid());
   const [name, setName] = useState(initial?.name ?? "Untitled workflow");
+  const [ends, setEnds] = useState<Ends>({ goal: initial?.goal ?? "", notes: initial?.notes ?? "", ended: !!initial?.ended });
   const start = useMemo(() => (initial ? fromFlow(initial) : { nodes: [], edges: [] }), [initial]);
   const [nodes, setNodes, onNodesChange] = useNodesState<BlockNode>(start.nodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState<FlowEdgeT>(start.edges);
@@ -225,7 +245,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     setFull(true); refit();
   };
 
-  const load = (f: Flow) => { const g = fromFlow(f); setFlowId(f.id); setName(f.name); setNodes(g.nodes); setEdges(g.edges); setInspect(null); refit(); };
+  const load = (f: Flow) => { const g = fromFlow(f); setFlowId(f.id); setName(f.name); setEnds({ goal: f.goal ?? "", notes: f.notes ?? "", ended: !!f.ended }); setNodes(g.nodes); setEdges(g.edges); setInspect(null); refit(); };
 
   // Blocks, workflows and kits sent here from anywhere on the page.
   useEffect(() => {
@@ -235,7 +255,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
       if (!known.length) return;
       if (q.name) {
         const g = chain(c, known);
-        setFlowId(uid()); setName(q.name); setNodes(g.nodes); setEdges(g.edges);
+        setFlowId(uid()); setName(q.name); setEnds({ goal: "", notes: "", ended: false }); setNodes(g.nodes); setEdges(g.edges);
       } else {
         const maxY = nodesRef.current.reduce((m, n) => Math.max(m, n.position.y), -80);
         const added = chain(c, known, { x: 40, y: maxY + 190 });
@@ -249,7 +269,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     return () => window.removeEventListener(QUEUED, take);
   }, [c]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const flow = useMemo(() => toFlow(flowId, name, nodes, edges), [flowId, name, nodes, edges]);
+  const flow = useMemo(() => toFlow(flowId, name, nodes, edges, ends), [flowId, name, nodes, edges, ends]);
   const order = useMemo(() => orderFlow(flow), [flow]);
   const mismatched = useMemo(() => new Set(typeMismatches(c, flow)), [c, flow]);
   const savedVersion = saved.find((f) => f.id === flowId);
@@ -267,7 +287,8 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     window.addEventListener("pagehide", flush);
     return () => { window.removeEventListener("pagehide", flush); flush(); };
   }, []);
-  const save = () => { flows.save({ ...flow, name: name.trim() || "Untitled workflow" }); toast(`Saved “${name.trim() || "Untitled workflow"}”. Open it again from Saved workflows.`); };
+  // Saving adds the End node, wired to every last step.
+  const save = () => { flows.save({ ...flow, name: name.trim() || "Untitled workflow", ended: true }); setEnds((e) => ({ ...e, ended: true })); toast(`Saved “${name.trim() || "Untitled workflow"}”. Open it again from Saved workflows.`); };
 
   // Undo and redo: a snapshot of the steps and connections once each change settles.
   const snap = useMemo(() => JSON.stringify([flow.nodes, flow.edges]), [flow]);
@@ -329,9 +350,9 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     if (run) { stopRun(); return; }
     if (!order?.length) { toast(order ? "Add a step first." : "This workflow loops back on itself. Remove one connection first."); return; }
     setInspect(null);
-    // Each step shows a few lines of what it made in a real run, so you see what you'd get.
+    // Each step shows the first lines of what it hands back, so you see what you'd get.
     const pages = await Promise.all(order.map((o) => loadPage(o.node.slug)));
-    setSamples(Object.fromEntries(order.map((o, i) => [o.node.slug, sampleOf(pages[i]?.example?.output)])));
+    setSamples(Object.fromEntries(order.map((o, i) => [o.node.slug, sampleOf(pages[i]?.output_shape)])));
     setRun(Date.now()); setRunStep(1);
     order.forEach((_, i) => { if (i) timers.current.push(window.setTimeout(() => setRunStep(i + 1), i * STEP_S * 1000)); });
     timers.current.push(window.setTimeout(() => { stopRun(); toast("That's the order your AI runs it in, with a real result from each step. Each one hands its work to the next."); }, (order.length * STEP_S + 0.4) * 1000));
@@ -346,6 +367,23 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     const want = { step, run: run || undefined, delay: run && step ? (step - 1) * STEP_S : undefined };
     return n.data.step === want.step && n.data.run === want.run && n.data.delay === want.delay ? n : { ...n, data: { ...n.data, ...want } };
   }), [nodes, stepOf, run]);
+  const finalsNow = useMemo(() => (order ? finalOutputs(c, flow, order) : []), [c, flow, order]);
+  const showEnd = ends.ended && nodes.length > 0;
+  // React Flow measures every node it draws; Start and End aren't in the saved nodes, so their sizes are kept here.
+  const [termSize, setTermSize] = useState<Record<string, { width: number; height: number }>>({});
+  const allNodes = useMemo((): (BlockNode | EndNode)[] => {
+    const into = new Set(edges.map((e) => e.target)), outOf = new Set(edges.map((e) => e.source));
+    const avgY = (ns: BlockNode[]) => (ns.length ? ns.reduce((s, n) => s + n.position.y, 0) / ns.length : 110);
+    const xs = nodes.map((n) => n.position.x);
+    const goal = ends.goal.trim();
+    const start: EndNode = { id: START, type: "terminal", draggable: false, deletable: false, connectable: false, measured: termSize[START],
+      position: { x: (xs.length ? Math.min(...xs) : 240) - 220, y: avgY(nodes.filter((n) => !into.has(n.id))) + 18 },
+      data: { which: "start", line: goal ? (goal.length > 42 ? `${goal.slice(0, 40)}…` : goal) : "Say what it's for" } };
+    const end: EndNode = { id: END, type: "terminal", draggable: false, deletable: false, connectable: false, measured: termSize[END],
+      position: { x: Math.max(...xs, 0) + 320, y: avgY(nodes.filter((n) => !outOf.has(n.id))) + 18 },
+      data: { which: "end", line: finalsNow.length ? `Hands back ${finalsNow.length} thing${finalsNow.length > 1 ? "s" : ""}` : "What you get" } };
+    return [start, ...viewNodes, ...(showEnd ? [end] : [])];
+  }, [nodes, edges, viewNodes, ends.goal, showEnd, finalsNow, termSize]);
   const liveNode = run && order ? order[runStep - 1]?.node : undefined;
   const liveSample = liveNode ? samples[liveNode.slug] : "";
   const viewEdges = useMemo(() => {
@@ -356,8 +394,18 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     }));
   }, [c, nodes, edges, mismatched, run, stepOf]);
 
+  const allEdges = useMemo(() => {
+    const into = new Set(edges.map((e) => e.target)), outOf = new Set(edges.map((e) => e.source));
+    const fixed = (id: string, source: string, target: string): FlowEdgeT => ({ id, source, target, type: "flow", deletable: false, selectable: false, className: "end-edge", data: {} });
+    return [
+      ...nodes.filter((n) => !into.has(n.id)).map((n) => fixed(`__s${n.id}`, START, n.id)),
+      ...viewEdges,
+      ...(showEnd ? nodes.filter((n) => !outOf.has(n.id)).map((n) => fixed(`__e${n.id}`, n.id, END)) : []),
+    ];
+  }, [nodes, edges, viewEdges, showEnd]);
+  const fixedId = (id: string) => id.startsWith("__");
   const onConnect = useCallback((conn: Connection) => {
-    if (conn.source === conn.target) return;
+    if (conn.source === conn.target || fixedId(conn.source) || fixedId(conn.target)) return;
     setEdges((es) => (es.some((e) => e.source === conn.source && e.target === conn.target) ? es : addEdge({ ...conn, id: uid(), type: "flow" }, es)));
   }, [setEdges]);
   const addNext = (slug: string) => {
@@ -388,6 +436,9 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     setNodes(fromFlow(t).nodes.map((n) => ({ ...n, selected: nodes.find((x) => x.id === n.id)?.selected })));
     refit();
   };
+  const setNotes = useCallback((id: string, patch: { role?: string; notes?: string }) => {
+    setNodes((ns) => ns.map((n) => (n.id === id ? { ...n, data: { ...n.data, ...patch } } : n)));
+  }, [setNodes]);
   const actions = useMemo(() => ({
     remove: (id: string) => { setNodes((ns) => ns.filter((n) => n.id !== id)); setEdges((es) => es.filter((e) => e.source !== id && e.target !== id)); },
   }), [setNodes, setEdges]);
@@ -399,7 +450,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     const g = fromFlow(applySteps(c, flow, name, steps, true));
     setNodes(g.nodes); setEdges(g.edges);
   };
-  const newFlow = () => { stopRun(); setFlowId(uid()); setName("Untitled workflow"); setNodes([]); setEdges([]); setInspect(null); flows.open(null); };
+  const newFlow = () => { stopRun(); setFlowId(uid()); setName("Untitled workflow"); setEnds({ goal: "", notes: "", ended: false }); setNodes([]); setEdges([]); setInspect(null); flows.open(null); };
   const openFlow = (id: string) => { const f = flows.get(id); if (!f) return; stopRun(); load(f); flows.open(f.id); };
   const share = async () => {
     const url = shareUrl({ ...flow, name: name.trim() || "Shared workflow" });
@@ -416,7 +467,7 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
     if (!spaceKey()) { toast("Make your space first. It's free and takes one click."); window.location.assign("/space"); return; }
     const title = name.trim() || "Untitled workflow";
     try {
-      await spaces.add({ kind: "workflow", title, summary: `${nodes.length} steps`, data: { name: title, nodes: flow.nodes, edges: flow.edges, localId: flowId } });
+      await spaces.add({ kind: "workflow", title, summary: `${nodes.length} steps`, data: { name: title, nodes: flow.nodes, edges: flow.edges, goal: flow.goal, notes: flow.notes, localId: flowId } });
       toast(`Saved “${title}” to your space`);
     } catch (e) { toast(e instanceof Error ? e.message : "That didn't save. Try again."); }
   };
@@ -479,16 +530,22 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
                   <span className="small">Steps run top to bottom. Use the arrows to reorder.</span>
                 </div>
               )}
+              <button className="sl-end" onClick={() => setInspect(START)} data-testid="list-start"><b>Start</b><small>{ends.goal.trim() || "Tap to say what it's for"}</small></button>
               {nodes.length ? <StepList c={c} order={listOrder} run={run} live={run ? runStep : 0} samples={samples} onOpen={setInspect} onMove={moveStep} onRemove={actions.remove} /> : (
                 <div className="list-empty"><GoalBox onPlan={planGoal} big /><p className="small">Or press + on a suggestion above, or pick a ready workflow.</p></div>
               )}
+              {showEnd && <button className="sl-end" onClick={() => setInspect(END)} data-testid="list-end"><b>End</b><small>{finalsNow.length ? `Hands back ${finalsNow.join(", ").toLowerCase()}` : "What you get"}</small></button>}
               {bottom}
             </div>
           ) : (
             <>
               <ReactFlow
-                nodes={viewNodes} edges={viewEdges} nodeTypes={nodeTypes} edgeTypes={edgeTypes}
-                onNodesChange={onNodesChange} onEdgesChange={onEdgesChange} onConnect={onConnect} onNodeClick={(_, n) => setInspect(n.id)} onPaneClick={() => setInspect(null)}
+                nodes={allNodes} edges={allEdges} nodeTypes={nodeTypes} edgeTypes={edgeTypes}
+                onNodesChange={(ch) => {
+                  for (const x of ch) if (x.type === "dimensions" && fixedId(x.id) && x.dimensions) { const d = x.dimensions; setTermSize((s) => (s[x.id]?.width === d.width && s[x.id]?.height === d.height ? s : { ...s, [x.id]: d })); }
+                  onNodesChange(ch.filter((x) => !("id" in x) || !fixedId(x.id)) as Parameters<typeof onNodesChange>[0]);
+                }}
+                onEdgesChange={(ch) => onEdgesChange(ch.filter((x) => !("id" in x) || !fixedId(x.id)))} onConnect={onConnect} onNodeClick={(_, n) => setInspect(n.id)} onPaneClick={() => setInspect(null)}
                 fitView fitViewOptions={{ padding: 0.3, maxZoom: 1 }} minZoom={0.3} maxZoom={1.6} preventScrolling={false}
                 defaultEdgeOptions={{ type: "flow" }} deleteKeyCode={["Backspace", "Delete"]} proOptions={{ hideAttribution: true }}
               >
@@ -508,7 +565,9 @@ function Stage({ c, toast }: { c: Catalogue; toast: (m: string) => void }) {
               {bottom}
             </>
           )}
-          {inspect && <StepPanel c={c} flow={flow} order={order} nodeId={inspect} onClose={() => setInspect(null)} onRemove={actions.remove} />}
+          {inspect === START ? <StartPanel goal={ends.goal} notes={ends.notes} onChange={(p) => setEnds((e) => ({ ...e, ...p }))} onClose={() => setInspect(null)} />
+            : inspect === END ? <EndPanel finals={finalsNow} onClose={() => setInspect(null)} />
+            : inspect && <StepPanel c={c} flow={flow} order={order} nodeId={inspect} onClose={() => setInspect(null)} onRemove={actions.remove} onNotes={setNotes} />}
         </div>
       </div>
       {needsOpen && <DownloadDialog name={name} zip={zipName(name)} needs={needs} finals={finals} onDownload={exportPack} onClose={() => setNeedsOpen(false)} />}

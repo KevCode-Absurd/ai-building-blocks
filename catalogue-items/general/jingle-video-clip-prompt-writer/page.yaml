@@ -2,6 +2,8 @@ new_slug: jingle-video-clip-prompt-writer
 name: "Jingle video clip prompt writer"
 summary: "Paste your song script and attach product photos. Get the music prompt and clip prompts cut on the beat."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Jingle video clip prompt writer"
 subhead: Give it a bar-by-bar song script and product photos. It writes the lead's card and sheets, then the music prompt, then a storyboard and clip prompts cut on the beat, stopping three times for your OK. You get every prompt, lip-sync notes and an edit list.

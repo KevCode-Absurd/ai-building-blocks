@@ -2,6 +2,8 @@ new_slug: animated-film-video-clip-prompt-writer
 name: "Animated film video clip prompt writer"
 summary: "Paste your animated-movie script and attach product photos. Get steady clip prompts and an edit list."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Animated film video clip prompt writer"
 subhead: Give it an animated-movie ad script and product photos. It casts the character, plans the light for each story part, builds sheets and a storyboard, and writes the clips, stopping three times for your OK. You get every prompt and an edit list, with any check still missed.

@@ -2,6 +2,8 @@ new_slug: selfie-style-video-clip-prompt-writer
 name: "Selfie-style video clip prompt writer"
 summary: "Paste your selfie-style script and attach product photos. Get phone-style clip prompts and an edit list."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Selfie-style video clip prompt writer"
 subhead: Give it an approved selfie-style script and real product photos. It designs one made-up AI presenter, builds sheets and a storyboard with one action per clip, and writes phone-style clip prompts, stopping three times for your OK. You get the presenter card, every prompt and an edit list.

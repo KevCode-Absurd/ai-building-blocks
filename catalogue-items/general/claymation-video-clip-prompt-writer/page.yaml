@@ -2,6 +2,8 @@ new_slug: claymation-video-clip-prompt-writer
 name: "Claymation video clip prompt writer"
 summary: "Paste your clay script and attach product photos. Get matching clip prompts and an edit list."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Claymation video clip prompt writer"
 subhead: Give it a claymation ad script and photos of your product. It fixes one clay character, set and product, then builds reference images, sheets, a storyboard and stop-motion clip prompts, stopping three times for your OK. You get every prompt, an edit list and any check it missed.

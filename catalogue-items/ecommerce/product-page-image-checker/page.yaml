@@ -2,6 +2,8 @@ new_slug: product-page-image-checker
 name: "Product page image checker"
 summary: "Attach your product images and plan. Get every fault, one fix each and a score out of 100."
 job: product-photos
+thinking: high
+thinking_why: "It judges work against many checks, so a stronger model catches more."
 
 headline: "Product page image checker"
 subhead: Attach your finished product page images, their plan and your real product photos. It checks the set as thumbnails, each image at phone size, then every word and figure up close. You get a verdict per image, one fix per fault and a score out of 100.

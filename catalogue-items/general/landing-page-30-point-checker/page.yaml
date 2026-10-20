@@ -2,6 +2,8 @@ new_slug: landing-page-30-point-checker
 name: "Landing page 30-point checker"
 summary: "Paste your page and ad. Get 30 yes-or-no checks, five fixes and a score out of 100."
 job: audit-landing-page
+thinking: high
+thinking_why: "It judges work against many checks, so a stronger model catches more."
 
 headline: "Landing page 30-point checker"
 subhead: Paste your page text, attach phone screenshots, and add the ad that sends people there if you have it. It runs 30 yes-or-no checks at the five stops a buyer makes. You get the evidence for each no, five fixes to make first and a score out of 100.

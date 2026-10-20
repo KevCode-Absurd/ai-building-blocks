@@ -2,6 +2,8 @@ new_slug: video-ad-script-point-of-view-editor
 name: "Video ad script point-of-view editor"
 summary: "Paste a working script. Get it in a new voice, with every fact, line and length kept."
 job: make-video-ads
+thinking: low
+thinking_why: "It reshapes what you give it, with few judgement calls."
 
 headline: "Video ad script point-of-view editor"
 subhead: Give it a script you trust, and say who tells it (I, you or she) and when (past, present or future). It moves only the voice, keeping every fact, line and length. You get the new script, moved openings and notes on lines it kept.

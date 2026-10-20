@@ -2,6 +2,8 @@ new_slug: talking-object-video-clip-prompt-writer
 name: "Talking object video clip prompt writer"
 summary: "Paste your talking-object script and attach a product photo. Get a character card, clip prompts and edit notes."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Talking object video clip prompt writer"
 subhead: Give it a talking object script and a product photo. It writes one fixed character card, builds sheets and a storyboard, and writes timed clip prompts with every line in quotes, stopping three times for your OK. You get the character card, every prompt and edit notes.

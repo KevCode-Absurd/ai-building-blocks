@@ -5,7 +5,7 @@ import path from "node:path";
 import YAML from "../site/node_modules/yaml/dist/index.js";
 
 const REQUIRED = ["new_slug", "name", "summary", "job", "headline", "subhead", "explain", "when", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "example", "tweaks", "judge", "test", "improve"];
-const JOBS = ["write-ad-copy", "make-image-ads", "make-video-ads", "plan-ad-tests", "check-ads", "read-ad-results", "audit-landing-page", "write-landing-page", "product-photos", "understand-customers", "brand-file", "study-competitors", "make-offer", "grow-social", "set-up-ai"];
+const JOBS = ["write-ad-copy", "make-image-ads", "make-video-ads", "plan-ad-tests", "check-ads", "read-ad-results", "audit-landing-page", "write-landing-page", "product-photos", "understand-customers", "brand-file", "study-competitors", "make-offer", "grow-social", "set-up-ai", "think-with-minds"];
 const BANNED = ["delve", "foster", "leverage", "utilize", "facilitate", "empower", "streamline", "robust", "cutting-edge", "game changer", "game-changer", "unlock", "supercharge", "harness", "elevate", "seamless", "effortless", "transformative", "revolutionize", "paradigm", "synergy", "holistic", "journey", "ecosystem", "best-in-class", "world-class", "next-level", "morrow", "ledgerly", "hale studio"];
 const words = (s) => String(s ?? "").trim().split(/\s+/).filter(Boolean).length;
 
@@ -27,7 +27,8 @@ for (const { slug, file } of pages) {
   for (const f of ["when", "you_give", "you_get", "how_to_use", "judge", "test", "improve"]) if (Array.isArray(p[f]) && p[f].some((x) => typeof x !== "string")) issues.push(`${f} has an item that is not plain text (quote lines containing ": ")`);
   if (p.job && !JOBS.includes(p.job)) issues.push(`unknown job "${p.job}"`);
   if (p.example && p.example.business !== "sprout") issues.push(`example uses "${p.example.business}", not sprout`);
-  if (p.example && !String(p.example.output ?? "").trim()) issues.push("empty example output");
+  // The example is test data now (tools/test-blocks.mjs runs its input); the page shows output_shape instead (docs/MINDS-PRD.md §2).
+  if (p.example && !String(p.example.input ?? "").trim()) issues.push("empty example input");
   if (words(p.headline) > 18) issues.push(`headline ${words(p.headline)} words`);
   if (words(p.subhead) > 60) issues.push(`subhead ${words(p.subhead)} words`);
   if (words(p.summary) > 22) issues.push(`summary ${words(p.summary)} words`);

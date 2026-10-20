@@ -68,10 +68,15 @@ test("header links jump to the library and the builder", async ({ page }) => {
 
 test("the library opens on job functions, and is sorted into prompts, skills and workflows", async ({ page }) => {
   await page.goto("/#library");
-  await expect(page.locator(".fns .fn")).toHaveCount(8);
+  await expect(page.locator(".fns .fn")).toHaveCount(9);
   await expect(page.getByTestId("fn-media-buyer")).toContainText("Run Meta ads");
-  await expect(page.locator(".fns .fn .px")).toHaveCount(8); // every function has its pixel icon
-  await expect(page.getByRole("tab")).toHaveText([/^All/, /^Prompts/, /^Skills/, /^Workflows/]);
+  await expect(page.locator(".fns .fn .px")).toHaveCount(9); // every function has its pixel icon
+  await expect(page.getByRole("tab")).toHaveText([/^All/, /^Prompts/, /^Skills/, /^Workflows/, /^Minds/]);
+  // Broad areas sit above the groups; picking one shows only its groups.
+  await page.getByTestId("area-design").click();
+  await expect(page.getByTestId("fn-photos")).toBeVisible();
+  await expect(page.getByTestId("fn-copywriter")).toHaveCount(0);
+  await page.getByTestId("area-design").click();
   for (const kind of ["prompt", "skill", "workflow"]) {
     await page.getByTestId(`tab-${kind}`).click();
     await expect(cards(page).first()).toHaveAttribute("data-kind", kind);
@@ -135,7 +140,7 @@ test("create ads: image ads and video ads sit apart, and a page links to the sam
   await expect(page.getByTestId("twin-link")).toHaveAttribute("href", "/skills/watercolor-video-ad-script-writer");
 });
 
-test("a card opens the block's own page, with the outcome, a real example and the steps", async ({ page }) => {
+test("a card opens the block's own page, with the outcome, the shape of what you get and the steps", async ({ page }) => {
   await page.goto("/#library");
   const card = cards(page).filter({ has: page.locator(`[data-slug="${MODEL}"]`) }).or(page.locator(`[data-slug="${MODEL}"]`)).first();
   await card.click();
@@ -143,23 +148,21 @@ test("a card opens the block's own page, with the outcome, a real example and th
   const bp = page.getByTestId("block-page");
   await expect(bp.getByRole("heading", { level: 1 })).toContainText("Fact-based ad copy writer");
   await expect(bp.locator(".bp-sub")).toContainText("product facts");
-  await expect(bp.locator("#example .code")).toHaveCount(2);
-  await expect(bp.locator("#example")).toContainText("Sprout");
-  // The sample output writes itself out once it is on screen, then can be replayed.
-  const out = bp.locator("#example .code").first();
-  await out.scrollIntoViewIfNeeded();
-  await expect(out.getByTestId("code-replay")).toHaveText("Replay", { timeout: 8000 });
-  await expect(out.locator(".ln.ghost")).toHaveCount(0);
-  await out.getByTestId("code-replay").click();
-  await expect(out.locator(".code-meta")).toContainText("writing");
-  await out.getByTestId("code-replay").click(); // Skip
-  await expect(out.locator(".ln.ghost")).toHaveCount(0);
-  for (const id of ["what", "io", "use", "most", "test", "improve", "file"]) await expect(bp.locator(`#${id}`)).toBeVisible();
-  // What it does comes first, then what goes in and out, then adding it to your AI. A real run comes near the end.
+  // How much thinking it needs, as a dial, with no model names.
+  await expect(bp.getByTestId("thinking")).toContainText("Thinking it needs");
+  await expect(bp.getByTestId("thinking")).not.toContainText(/Opus|Sonnet|Haiku|GPT/);
+  // The shape of what you get comes first: what makes it better, the output with <gaps>, then what you could do next.
+  // No sample run made for the test brand.
+  const get = bp.getByTestId("what-you-get");
+  await expect(get).toContainText("Better with");
+  await expect(get.locator(".code")).toHaveCount(1);
+  await expect(get.locator(".code")).toContainText("<");
+  await expect(bp.locator("#example")).toHaveCount(0);
+  await expect(bp.locator(".bp-main")).not.toContainText("A real run on Sprout");
+  for (const id of ["get", "what", "io", "use", "most", "test", "improve", "file"]) await expect(bp.locator(`#${id}`)).toBeVisible();
   const order = await bp.locator(".bp-main > section[id]").evaluateAll((els) => els.map((e) => e.id));
   // "Before you start" (what to have ready, and the steps before this one) sits between what goes in and adding it.
-  expect(order.slice(0, 4)).toEqual(["what", "io", "before", "install"]);
-  expect(order.indexOf("example")).toBeGreaterThan(order.indexOf("test"));
+  expect(order.slice(0, 5)).toEqual(["get", "what", "io", "before", "install"]);
   expect(await bp.locator(".bp-toc a").evaluateAll((els) => els.map((e) => e.getAttribute("href")))).toEqual([...order.map((id) => `#${id}`), "#comments"]);
   await expect(bp.getByText("Extra steps for online stores")).toHaveCount(0);
   await expect(bp.locator(".prose").first()).not.toContainText("name: ");
@@ -218,7 +221,7 @@ test("blocks can be added from the palette and auto-connect", async ({ page }) =
   await builder.getByTestId("palette-search").fill("brand voice");
   await builder.locator('.pal-item[data-slug="brand-voice-editor"] .add').click();
   await expect(builder.getByTestId("flow-node")).toHaveCount(2);
-  await expect(builder.locator(".react-flow__edge")).toHaveCount(1);
+  await expect(builder.locator(".react-flow__edge:not(.end-edge)")).toHaveCount(1);
 });
 
 test("the builder goes full screen and back, with zoom controls", async ({ page }) => {
@@ -244,7 +247,7 @@ test("the builder suggests where to start, then what comes next", async ({ page 
   await expect(sug.locator(".pal-item").first()).toBeVisible();
   await sug.locator(".pal-item .add").first().click();
   await expect(builder.getByTestId("flow-node")).toHaveCount(2);
-  await expect(builder.locator(".react-flow__edge")).toHaveCount(1);
+  await expect(builder.locator(".react-flow__edge:not(.end-edge)")).toHaveCount(1);
 });
 
 test("from a skill: start a workflow, then add another skill to it and reorder", async ({ page }) => {
@@ -451,7 +454,7 @@ test("preview runs the steps in order; undo, redo and tidy work", async ({ page 
   await expect(builder.getByTestId("flow-node")).toHaveCount(4);
 
   // Drag a step out of line, then tidy puts it back in its column.
-  const node = builder.locator(".react-flow__node").first();
+  const node = builder.locator(".react-flow__node-block").first();
   const before = await node.boundingBox();
   await node.hover();
   await page.mouse.down();
@@ -490,7 +493,7 @@ test("save a workflow, open it again, and share it by link", async ({ page, cont
   await theirs.goto(link.replace(/^https?:\/\/[^/]+/, "http://localhost:5180"));
   await expect(theirs.getByTestId("builder").getByTestId("flow-node")).toHaveCount(7);
   await expect(theirs.locator(".flow-name")).toHaveValue("Sprout video ads");
-  await expect(theirs.getByTestId("builder").locator(".react-flow__edge")).toHaveCount(await builder.locator(".react-flow__edge").count());
+  await expect(theirs.getByTestId("builder").locator(".react-flow__edge:not(.end-edge)")).toHaveCount(await builder.locator(".react-flow__edge:not(.end-edge)").count());
   await expect(theirs).not.toHaveURL(/flow=/);
   await other.close();
 });
@@ -644,20 +647,20 @@ test("after the download: how to run it in your AI, the first message to paste, 
   await expect(page.getByTestId("install").getByRole("tab", { selected: true })).toHaveText("Claude Code");
 });
 
-test("preview shows a few lines of what each step made in a real run, and the step panel shows more", async ({ page }) => {
+test("preview shows the first lines of what each step hands back, and the step panel shows more", async ({ page }) => {
   const builder = await planGoal(page, "a landing page for my best ad");
   await builder.getByTestId("preview").click();
   const sample = builder.getByTestId("step-sample");
-  await expect(sample).toContainText("step 1: what it made for Sprout");
-  await expect(sample).toContainText("Sprout");
-  await expect(sample).toContainText("step 2: what it made for Sprout", { timeout: 6000 });
+  await expect(sample).toContainText("step 1: what it hands back");
+  await expect(sample).toContainText("<");
+  await expect(sample).toContainText("step 2: what it hands back", { timeout: 6000 });
   await expect(sample).toContainText("PAGE BRIEF");
   // Readable size: it sits outside the zoomed canvas.
   expect(await sample.evaluate((el) => !el.closest(".react-flow__viewport") && parseFloat(getComputedStyle(el.querySelector("pre")!).fontSize))).toBeGreaterThanOrEqual(12);
   await builder.getByTestId("preview").click();
   await expect(sample).toHaveCount(0);
   await builder.getByTestId("flow-node").first().click();
-  await expect(builder.getByTestId("panel-sample")).toContainText("Sprout");
+  await expect(builder.getByTestId("panel-sample")).toContainText("<");
 });
 
 test("phone width: the header fits, and the step list shows each result as it runs @mobile", async ({ page }) => {
@@ -666,7 +669,7 @@ test("phone width: the header fits, and the step list shows each result as it ru
   expect(right).toBeLessThanOrEqual(0);
   const builder = await planGoal(page, "a landing page for my best ad");
   await builder.getByTestId("preview").click();
-  await expect(builder.getByTestId("step-list").getByTestId("step-sample")).toContainText("what it made for Sprout");
+  await expect(builder.getByTestId("step-list").getByTestId("step-sample")).toContainText("what it hands back");
 });
 
 test("anyone can ask for a skill tailored to their work, and it becomes an email to us", async ({ page }) => {
@@ -745,4 +748,45 @@ test("every skill has questions and comments on the side, kept on that skill", a
   await page.goto("/skills/watercolor-image-ad-maker#comments");
   await expect(page.getByTestId("comments")).toBeVisible();
   await expect(page.getByTestId("comment").filter({ hasText: q })).toHaveCount(0);
+});
+
+test("start and end: every workflow begins at Start, saving adds End, and your notes on a step go into the pack", async ({ page }, info) => {
+  const builder = await planGoal(page, "a landing page for my best ad");
+  await expect(builder.getByTestId("flow-start")).toBeVisible();
+  await expect(builder.getByTestId("flow-end"), "End comes with the first save").toHaveCount(0);
+
+  // The Start node holds what the workflow is for.
+  await builder.getByTestId("flow-start").click();
+  await builder.getByTestId("start-goal").fill("Win back buyers who left at checkout");
+  await builder.getByTestId("start-notes").fill("Keep every answer short.");
+
+  // Tap a step: a role and extra instructions of your own.
+  await builder.getByTestId("flow-node").first().click();
+  const panel = builder.getByTestId("step-panel");
+  await panel.getByTestId("step-role").fill("My brand researcher");
+  await panel.getByTestId("step-instructions").fill("Read the reviews first.");
+  await expect(builder.getByTestId("node-role").first()).toHaveText("Role: My brand researcher");
+
+  await builder.getByTestId("save-flow").click();
+  await expect(builder.getByTestId("flow-end")).toBeVisible();
+  await expect(builder.getByTestId("flow-status")).toContainText("saved");
+
+  await builder.getByTestId("download-handoff").click();
+  const [dl] = await Promise.all([page.waitForEvent("download"), page.getByTestId("needs-download").click()]);
+  const path = info.outputPath(dl.suggestedFilename());
+  await dl.saveAs(path);
+  const files = unzipSync(new Uint8Array(fs.readFileSync(path)));
+  const handoff = strFromU8(files["HANDOFF.md"]);
+  expect(handoff).toContain("## Start");
+  expect(handoff).toContain("**What this workflow is for:** Win back buyers who left at checkout");
+  expect(handoff).toContain("Keep every answer short.");
+  expect(handoff).toContain("- **Role:** My brand researcher");
+  expect(handoff).toContain("## End");
+  const wf = JSON.parse(strFromU8(files["workflow.json"]));
+  expect(wf.start.goal).toBe("Win back buyers who left at checkout");
+  const noted = wf.steps.find((s: { your_role: string | null }) => s.your_role === "My brand researcher");
+  expect(noted.your_notes).toBe("Read the reviews first.");
+  const skill = strFromU8(files[`skills/${noted.skill}/SKILL.md`]);
+  expect(skill).toMatch(/^---[\s\S]*?---\s*\n## Your notes for this step/);
+  expect(skill).toContain("- **Instructions:** Read the reviews first.");
 });

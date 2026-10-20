@@ -2,6 +2,8 @@ new_slug: skeleton-video-clip-prompt-writer
 name: "Skeleton video clip prompt writer"
 summary: "Paste your skeleton script and attach product photos. Get every image and clip prompt, plus an edit list."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Skeleton video clip prompt writer"
 subhead: Give it a skeleton ad script and real product photos. It writes the skeleton's card, sheets, a storyboard on one fixed camera and short beat-counted clip prompts, with three points to OK before you make the next pictures. You get every prompt and an edit list.

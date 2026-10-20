@@ -2,6 +2,8 @@ new_slug: image-upscale-checker
 name: "Image upscale checker"
 summary: "Attach your image and size needed. Get upscale settings, a change check and a score out of 100."
 job: make-image-ads
+thinking: high
+thinking_why: "It has to keep the product, its label and every word on the picture exact."
 
 headline: "Image upscale checker"
 subhead: Attach the approved image and say the size you need and your upscaler. It picks the safest upscale and settings, then checks the returned file against the original. You get the settings, a size and difference check, and a fidelity score out of 100.

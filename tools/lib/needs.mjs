@@ -45,6 +45,8 @@ export const INPUTS = {
   footage: { label: "Video clips", what: "the clips you want to edit" },
   approved_image: { label: "An approved picture", what: "the picture you've chosen to use" },
   feedback_notes: { label: "Your notes", what: "what to keep, change or drop" },
+  question: { label: "Your question", what: "the decision or problem, and what a good outcome looks like" },
+  mind_view: { label: "Views from great minds", what: "each mind's answer from the steps before this one, or their skill files from the minds library" },
 };
 
 /** Which brand brain files a task reads (from the brand file builder's "which file for which task" and its slices). */
@@ -68,7 +70,7 @@ function brainUse(b) {
   return BRAIN_FILES.writing;
 }
 
-const pathOf = (b) => (b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
+const pathOf = (b) => (b.type === "mind" ? "minds" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
 export const urlOf = (b) => `${SITE}/${pathOf(b)}/${b.slug}`;
 const ref = (b) => ({ slug: b.slug, name: b.name, url: urlOf(b) });
 const lower = (s) => s.charAt(0).toLowerCase() + s.slice(1);
@@ -156,6 +158,7 @@ export const NEXT_JOB = {
   "make-offer": "Make an offer people want",
   "grow-social": "Grow on social",
   "set-up-ai": "Set up AI to work for you",
+  "think-with-minds": "Talk it through with great minds",
 };
 const START_HERE = ["fact-based-ad-copy-writer", "website-brand-brain-builder", "customer-buying-reasons-finder", "brand-voice-editor", "landing-page-30-point-checker", "video-ad-script-writer-from-customer-quotes", "meta-ads-compliance-checker", "buyer-brief-writer", "hidden-offer-finder"];
 

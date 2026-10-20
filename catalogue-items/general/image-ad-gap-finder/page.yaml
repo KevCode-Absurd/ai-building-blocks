@@ -2,6 +2,8 @@ new_slug: image-ad-gap-finder
 name: "Image ad gap finder"
 summary: "Attach your image ads. Get the types you're missing, test briefs and a score out of 100."
 job: plan-ad-tests
+thinking: high
+thinking_why: "It studies ads or pages closely and works out why they work."
 
 headline: "Image ad gap finder"
 subhead: Attach screenshots of your image ads, with results and the claims you can back. It maps each ad by type and look, reads where buyers get stuck, and briefs up to three new tests. You get a gap grid, ad cards and a score out of 100.

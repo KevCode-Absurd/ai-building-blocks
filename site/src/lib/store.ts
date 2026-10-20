@@ -3,9 +3,11 @@
 import { useSyncExternalStore } from "react";
 
 export type Kit = { id: string; name: string; slugs: string[]; updated: number };
-export type FlowNode = { id: string; slug: string; x: number; y: number; ecommerce?: boolean };
+/** role and notes are the person's own instructions for one step ("Act as my investor"); they travel with the download. */
+export type FlowNode = { id: string; slug: string; x: number; y: number; ecommerce?: boolean; role?: string; notes?: string };
 export type FlowEdge = { id: string; from: string; to: string; fromPort?: string; toPort?: string };
-export type Flow = { id: string; name: string; nodes: FlowNode[]; edges: FlowEdge[]; updated: number };
+/** The Start node holds the goal and notes for every step. The End node shows once the workflow is saved (ended). */
+export type Flow = { id: string; name: string; nodes: FlowNode[]; edges: FlowEdge[]; updated: number; goal?: string; notes?: string; ended?: boolean };
 /** `flows` are the workflows the person saved; `draft` is what the builder has open right now, kept as they work. */
 type State = { kits: Kit[]; flows: Flow[]; recent: string[]; currentFlow: string | null; draft: Flow | null };
 

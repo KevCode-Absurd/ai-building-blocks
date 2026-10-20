@@ -2,6 +2,8 @@ new_slug: reference-style-product-photo-maker
 name: "Reference-style product photo maker"
 summary: "Attach your product and a photo you like. Get a matching prompt and ranked pictures."
 job: product-photos
+thinking: high
+thinking_why: "It has to keep the product, its label and every word on the picture exact."
 
 headline: "Reference-style product photo maker"
 subhead: Attach your product photos and one photo whose look you like. It reads that photo's light, camera and set, and moves them onto your real product. You get an image prompt, and pictures ranked for where they'll go if your chat makes them.

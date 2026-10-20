@@ -2,6 +2,8 @@ new_slug: product-photo-shoot-planner
 name: "Product photo shoot planner"
 summary: "Attach your product photos and colours. Get a style sheet and 9 matching photo prompts."
 job: product-photos
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Product photo shoot planner"
 subhead: Attach your product photos and give your brand colours. It writes one style sheet that every prompt repeats, then plans about 9 frames that each differ in job, distance or angle. You get the style sheet, a frame list and one prompt per frame.

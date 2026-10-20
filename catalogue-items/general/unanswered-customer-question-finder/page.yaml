@@ -2,6 +2,8 @@ new_slug: unanswered-customer-question-finder
 name: "Unanswered customer question finder"
 summary: "Paste customer questions and page screenshots. Get unanswered doubts, answers to add and a score out of 100."
 job: audit-landing-page
+thinking: high
+thinking_why: "It reads a lot of data or many customer words, and the numbers and quotes must be right."
 
 headline: "Unanswered customer question finder"
 subhead: Paste reviews, support questions or call notes, and attach phone screenshots of your page. It finds each real doubt and where the page answers it, if anywhere. You get a doubt table, the answers to add and where, and a coverage score out of 100.

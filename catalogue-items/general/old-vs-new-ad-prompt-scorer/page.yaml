@@ -2,6 +2,8 @@ name: "Old vs new ad prompt scorer"
 new_slug: old-vs-new-ad-prompt-scorer
 summary: "Paste old and new prompt ads. Get a blind test, a decision and a score out of 100."
 job: set-up-ai
+thinking: high
+thinking_why: "It judges work against many checks, so a stronger model catches more."
 
 headline: "Old vs new ad prompt scorer"
 subhead: Give it the ads your old and new prompt made from the same briefs, plus the facts they had to follow. It checks every ad pass or fail and picks winners blind, twice. You get a switch-or-keep decision, cost per usable ad and a score out of 100.

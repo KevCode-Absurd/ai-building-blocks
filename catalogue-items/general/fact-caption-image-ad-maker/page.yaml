@@ -2,6 +2,8 @@ new_slug: fact-caption-image-ad-maker
 name: "Fact caption image ad maker"
 summary: "Paste your story ad and sourced fact. Get the caption, source line and image prompt."
 job: make-image-ads
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Fact caption image ad maker"
 subhead: Paste your story ad and the one fact it turns on, with its source. It checks the fact against the source and keeps its exact number. You get a caption, a source line and a phone photo prompt.

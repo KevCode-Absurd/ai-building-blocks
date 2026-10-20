@@ -2,6 +2,8 @@ new_slug: shopify-theme-code-writer
 name: "Shopify theme code writer"
 summary: "Name the section you need and your theme. Get installable code and what to upload."
 job: write-landing-page
+thinking: high
+thinking_why: "It writes code that has to work the first time."
 
 headline: "Shopify theme code writer"
 subhead: Describe the section, block or snippet you need, or paste the file to fix, and name your theme. It writes the code to Shopify's current rules, with editable words kept in settings. You get the files, what to upload and any check still missed.

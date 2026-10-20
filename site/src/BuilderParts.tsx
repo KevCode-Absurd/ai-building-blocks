@@ -12,7 +12,7 @@ import type { Flow } from "./lib/store";
 /** How long each step lights up for in a preview, in seconds: long enough to read a few lines of its result. */
 export const STEP_S = 2.4;
 
-/** The first few lines of a real run's result, for showing on a step. */
+/** The first few lines of a step's output shape, for showing on a step. */
 export function sampleOf(output: string | undefined, lines = 5): string {
   if (!output) return "";
   const rows = output.replace(/\r/g, "").split("\n");
@@ -25,8 +25,8 @@ export function sampleOf(output: string | undefined, lines = 5): string {
 export function Sample({ text, name, step }: { text: string; name: string; step?: number }) {
   const { n } = useTyped(text, true, STEP_S * 650);
   return (
-    <figure className={`node-out${step ? " run-out" : ""}`} aria-label={`What ${name} made in a real run`} data-testid="step-sample">
-      <figcaption>{step ? `step ${step}: what it made for Sprout` : "what it made for Sprout"}</figcaption>
+    <figure className={`node-out${step ? " run-out" : ""}`} aria-label={`What ${name} hands back`} data-testid="step-sample">
+      <figcaption>{step ? `step ${step}: what it hands back` : "what it hands back"}</figcaption>
       <pre>{text.slice(0, n)}<span className="cursor" /></pre>
     </figure>
   );
@@ -55,8 +55,72 @@ export const FlowEdge = memo(function FlowEdge({ id, sourceX, sourceY, targetX, 
 });
 
 /** What one step needs and gives back, and where each comes from or goes. */
-export function StepPanel({ c, flow, order, nodeId, onClose, onRemove }: {
+/** The person's own instructions for one step: a role and free notes. They go into the download (lib/handoff.ts withNotes). */
+function StepNotes({ id, role, notes, seats, onNotes }: { id: string; role: string; notes: string; seats: string[]; onNotes: (id: string, patch: { role?: string; notes?: string }) => void }) {
+  const list = `seats-${id}`;
+  return (
+    <div className="sp-notes" data-testid="step-notes">
+      <h4 className="sp-h">Your notes for this step</h4>
+      <p className="small">Optional. They go into the download, at the top of this step's skill file.</p>
+      <label className="sp-field">
+        <span>Role</span>
+        <input value={role} maxLength={120} list={seats.length ? list : undefined} placeholder={seats[0] ? `Suggested: ${seats[0]}` : "For example: My investor"} onChange={(e) => onNotes(id, { role: e.target.value })} data-testid="step-role" />
+        {seats.length > 0 && <datalist id={list}>{seats.map((s) => <option key={s} value={s} />)}</datalist>}
+      </label>
+      {seats.length > 0 && !role && (
+        <div className="sp-seats">{seats.map((s) => <button key={s} type="button" className="chip" onClick={() => onNotes(id, { role: s })}>{s}</button>)}</div>
+      )}
+      <label className="sp-field">
+        <span>Extra instructions</span>
+        <textarea value={notes} maxLength={2000} rows={4} placeholder="For example: Push back hard on the price. Keep it under 200 words." onChange={(e) => onNotes(id, { notes: e.target.value })} data-testid="step-instructions" />
+      </label>
+    </div>
+  );
+}
+
+/** The Start node: what the whole workflow is for, and notes every step should follow. */
+export function StartPanel({ goal, notes, onChange, onClose }: { goal: string; notes: string; onChange: (patch: { goal?: string; notes?: string }) => void; onClose: () => void }) {
+  const ref = useRef<HTMLElement>(null);
+  useEffect(() => { ref.current?.focus(); }, []);
+  return (
+    <aside className="step-panel" aria-label="Start" tabIndex={-1} ref={ref} data-testid="start-panel">
+      <div className="sp-top"><span className="kind">Start</span><button className="icon-btn" onClick={onClose} aria-label="Close">×</button></div>
+      <div className="sp-body">
+        <h3 className="sp-name">Where every run begins</h3>
+        <p className="sp-sum">It's always first. Say what this workflow is for, so every step works toward the same thing.</p>
+        <label className="sp-field">
+          <span>What it's for</span>
+          <textarea value={goal} maxLength={2000} rows={3} placeholder="For example: Decide whether to raise our price to $49" onChange={(e) => onChange({ goal: e.target.value })} data-testid="start-goal" />
+        </label>
+        <label className="sp-field">
+          <span>Notes for every step</span>
+          <textarea value={notes} maxLength={2000} rows={3} placeholder="For example: We sell to small gyms. Keep every answer short." onChange={(e) => onChange({ notes: e.target.value })} data-testid="start-notes" />
+        </label>
+      </div>
+    </aside>
+  );
+}
+
+/** The End node: what the workflow hands back. It appears once the workflow is saved. */
+export function EndPanel({ finals, onClose }: { finals: string[]; onClose: () => void }) {
+  const ref = useRef<HTMLElement>(null);
+  useEffect(() => { ref.current?.focus(); }, []);
+  return (
+    <aside className="step-panel" aria-label="End" tabIndex={-1} ref={ref} data-testid="end-panel">
+      <div className="sp-top"><span className="kind">End</span><button className="icon-btn" onClick={onClose} aria-label="Close">×</button></div>
+      <div className="sp-body">
+        <h3 className="sp-name">What you get at the end</h3>
+        <p className="sp-sum">Every last step leads here. Steps that run side by side all finish before it.</p>
+        <ul className="sp-list">{finals.length ? finals.map((f) => <li key={f}><b>{f}</b></li>) : <li><small>Add a step to see what it hands back.</small></li>}</ul>
+        <p className="small sp-job">Then your AI suggests what you could do next. You can stop there.</p>
+      </div>
+    </aside>
+  );
+}
+
+export function StepPanel({ c, flow, order, nodeId, onClose, onRemove, onNotes }: {
   c: Catalogue; flow: Flow; order: Ordered[] | null; nodeId: string; onClose: () => void; onRemove: (id: string) => void;
+  onNotes: (id: string, patch: { role?: string; notes?: string }) => void;
 }) {
   const node = flow.nodes.find((n) => n.id === nodeId);
   const b = node && c.bySlug[node.slug];
@@ -112,10 +176,11 @@ export function StepPanel({ c, flow, order, nodeId, onClose, onRemove }: {
               );
             })}
           </ul>
-          {page?.example?.output && (
+          <StepNotes id={node.id} role={node.role ?? ""} notes={node.notes ?? ""} seats={b.seats ?? []} onNotes={onNotes} />
+          {page?.output_shape && (
             <>
-              <h4 className="sp-h">What it made in a real run</h4>
-              <pre className="sp-sample" data-testid="panel-sample">{sampleOf(page.example.output, 9)}</pre>
+              <h4 className="sp-h">What it hands back</h4>
+              <pre className="sp-sample" data-testid="panel-sample">{sampleOf(page.output_shape, 9)}</pre>
             </>
           )}
           <div className="sp-actions">
@@ -171,7 +236,7 @@ export function StepList({ c, order, run, live, samples, onOpen, onMove, onRemov
               <span className="sl-n">{o.step}</span>
               <button className="sl-txt" onClick={() => onOpen(o.node.id)} data-testid="step-open">
                 <b>{b?.name ?? o.node.slug}</b>
-                <small>{b ? `${taskOf(b).name}. Tap to see what it needs` : "No longer in the library"}</small>
+                <small>{o.node.role ? `Role: ${o.node.role}` : b ? `${taskOf(b).name}. Tap to see what it needs or add notes` : "No longer in the library"}</small>
               </button>
               <span className="sl-ctl">
                 <button className="icon-btn" onClick={() => onMove(i, i - 1)} disabled={i === 0} aria-label={`Move ${b?.name ?? "step"} up`} data-testid="step-up">↑</button>

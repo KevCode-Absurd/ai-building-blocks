@@ -2,6 +2,8 @@ new_slug: ad-script-read-aloud-editor
 name: "Ad script read-aloud editor"
 summary: "Paste your script. Get every line that trips when spoken, fixed, with the rule it broke."
 job: make-video-ads
+thinking: low
+thinking_why: "It reshapes what you give it, with few judgement calls."
 
 headline: "Ad script read-aloud editor"
 subhead: Paste a script or ad text. It says every line the way it will be delivered and finds the ones that trip, run out of breath or sound like a slogan. You get each fix with the rule it broke, the lines it left alone, and any line still failing.

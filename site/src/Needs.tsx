@@ -1,5 +1,6 @@
 // "Before you start" and "What to do next" on a block page: the same chain the skill file carries
 // (tools/lib/needs.mjs, built into each page's data by scripts/build-index.mjs).
+import type { ReactNode } from "react";
 import type { Plan, PlanItem } from "./lib/data";
 import { Link } from "./lib/router";
 
@@ -54,5 +55,37 @@ export function Next({ plan }: { plan: Plan }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+/** "What you'll get", near the top of a block page: what makes it better, the shape of the output, then what you could do next.
+ *  The first and last parts are suggestions; the skill runs on its own. */
+export function WhatYouGet({ plan, tools, children }: { plan?: Plan; tools: { name: string; why: string }[]; children: ReactNode }) {
+  const better = [...(plan?.needed ?? []), ...(plan?.helps ?? [])];
+  const next = plan?.next ?? [];
+  return (
+    <ol className="wyg" data-testid="what-you-get">
+      {(better.length > 0 || tools.length > 0) && (
+        <li className="wyg-part">
+          <h3 className="wyg-h">Better with <span>suggested, not required</span></h3>
+          <ul className="wyg-chips">
+            {better.map((i) => (
+              <li key={i.key}>{i.maker ? <Link to={local(i.maker.url)}>{i.label}</Link> : <span>{i.label}</span>}</li>
+            ))}
+            {tools.map((t) => <li key={t.name} className="tool" title={t.why}><span>{t.name}</span></li>)}
+          </ul>
+        </li>
+      )}
+      <li className="wyg-part wyg-out">
+        <h3 className="wyg-h">What it hands back</h3>
+        {children}
+      </li>
+      {next.length > 0 && (
+        <li className="wyg-part">
+          <h3 className="wyg-h">Then you could <span>if you want to</span></h3>
+          <ul className="wyg-chips">{next.map((x) => <li key={x.slug}><Link to={local(x.url)}>{x.label}</Link></li>)}</ul>
+        </li>
+      )}
+    </ol>
   );
 }

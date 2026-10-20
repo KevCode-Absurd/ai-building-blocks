@@ -53,3 +53,8 @@ production:
   photo_set:       {desc: "A set of generated product photos in one style, checked against the truth sheet."}
   gallery_plan:    {desc: "The planned frames of a product page image gallery, one job per frame."}
   pdp_images:      {desc: "Finished product page gallery images with QA notes."}
+# Added 2026-10-20 for minds and the council (docs/MINDS-PRD.md).
+minds:
+  question:      {desc: "The problem, decision or piece of work you want help with, and what a good outcome looks like."}
+  mind_view:     {desc: "One mind's answer or piece of work, in their voice, built from their public record, with anything beyond the record marked."}
+  council_brief: {desc: "The chair's brief: the recommended decision, the strongest dissent, what would change the call and the first three steps."}

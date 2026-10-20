@@ -2,6 +2,8 @@ name: "Video format picker for ad scripts"
 new_slug: video-format-picker-for-ad-scripts
 summary: "Paste a finished script. Get formats ranked by fit score out of 100, plus the skills to use."
 job: make-video-ads
+thinking: high
+thinking_why: "It judges work against many checks, so a stronger model catches more."
 
 headline: "Video format picker for ad scripts"
 subhead: Paste a finished script. It finds the part doing the persuading, marks what that part needs from a format, and ranks the formats that can carry it. You get the formats ranked with a fit score out of 100 each, the skills that make them and a length check.

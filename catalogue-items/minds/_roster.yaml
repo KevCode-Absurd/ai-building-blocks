@@ -1,0 +1,188 @@
+# The 151 minds, by broad area. Spec: docs/MINDS-PRD.md.
+# seat = the role we suggest when someone puts this person on a council. People can pick their own.
+# living: true means extra care (no invented quotes, no endorsement, no private life). See the PRD §5.
+# Folder per mind: catalogue-items/minds/<slug>/ with mind.yaml, knowledge.md, personality.md.
+
+areas:
+  business:   "Business"
+  sales:      "Sales"
+  marketing:  "Marketing"
+  leadership: "Leadership"
+  design:     "Design"
+  writing:    "Writing"
+  arts:       "Arts"
+  coding:     "Coding"
+  science:    "Science"
+  thinking:   "Thinking"
+
+minds:
+  # Business (21)
+  - {slug: jeff-bezos, name: "Jeff Bezos", area: business, living: true, seat: "Operations and the customer"}
+  - {slug: steve-jobs, name: "Steve Jobs", area: business, living: false, seat: "Product and taste"}
+  - {slug: elon-musk, name: "Elon Musk", area: business, living: true, seat: "First principles and speed"}
+  - {slug: bill-gates, name: "Bill Gates", area: business, living: true, seat: "Software business and scale"}
+  - {slug: warren-buffett, name: "Warren Buffett", area: business, living: true, seat: "Capital and the long game"}
+  - {slug: charlie-munger, name: "Charlie Munger", area: business, living: false, seat: "Devil's advocate (invert it)"}
+  - {slug: sam-walton, name: "Sam Walton", area: business, living: false, seat: "Retail and thrift"}
+  - {slug: henry-ford, name: "Henry Ford", area: business, living: false, seat: "Production and cost"}
+  - {slug: walt-disney, name: "Walt Disney", area: business, living: false, seat: "Experience and story"}
+  - {slug: sara-blakely, name: "Sara Blakely", area: business, living: true, seat: "Bootstrapping a product"}
+  - {slug: phil-knight, name: "Phil Knight", area: business, living: true, seat: "Building a brand from nothing"}
+  - {slug: richard-branson, name: "Richard Branson", area: business, living: true, seat: "Brand stretch and boldness"}
+  - {slug: ratan-tata, name: "Ratan Tata", area: business, living: false, seat: "Values and long-term trust"}
+  - {slug: indra-nooyi, name: "Indra Nooyi", area: business, living: true, seat: "Portfolio and purpose"}
+  - {slug: oprah-winfrey, name: "Oprah Winfrey", area: business, living: true, seat: "Audience and connection"}
+  - {slug: paul-graham, name: "Paul Graham", area: business, living: true, seat: "Startups and early users"}
+  - {slug: naval-ravikant, name: "Naval Ravikant", area: business, living: true, seat: "Leverage and judgement"}
+  - {slug: jensen-huang, name: "Jensen Huang", area: business, living: true, seat: "Technology bets"}
+  - {slug: ray-dalio, name: "Ray Dalio", area: business, living: true, seat: "Principles and decision rules"}
+  - {slug: benjamin-graham, name: "Benjamin Graham", area: business, living: false, seat: "Margin of safety"}
+  - {slug: peter-thiel, name: "Peter Thiel", area: business, living: true, seat: "Investor (contrarian bets)"}
+
+  # Sales (10)
+  - {slug: alex-hormozi, name: "Alex Hormozi", area: sales, living: true, seat: "Offers and pricing"}
+  - {slug: dale-carnegie, name: "Dale Carnegie", area: sales, living: false, seat: "People and rapport"}
+  - {slug: zig-ziglar, name: "Zig Ziglar", area: sales, living: false, seat: "Closing and motivation"}
+  - {slug: robert-cialdini, name: "Robert Cialdini", area: sales, living: true, seat: "Persuasion science"}
+  - {slug: chris-voss, name: "Chris Voss", area: sales, living: true, seat: "Negotiation"}
+  - {slug: brian-tracy, name: "Brian Tracy", area: sales, living: true, seat: "Sales process and goals"}
+  - {slug: joe-girard, name: "Joe Girard", area: sales, living: false, seat: "Repeat customers and referrals"}
+  - {slug: mary-kay-ash, name: "Mary Kay Ash", area: sales, living: false, seat: "Sales teams and recognition"}
+  - {slug: neil-rackham, name: "Neil Rackham", area: sales, living: true, seat: "Big-ticket sales questions"}
+  - {slug: jim-rohn, name: "Jim Rohn", area: sales, living: false, seat: "Discipline and self-growth"}
+
+  # Marketing (14)
+  - {slug: david-ogilvy, name: "David Ogilvy", area: marketing, living: false, seat: "Advertising"}
+  - {slug: claude-hopkins, name: "Claude Hopkins", area: marketing, living: false, seat: "Testing and measured ads"}
+  - {slug: eugene-schwartz, name: "Eugene Schwartz", area: marketing, living: false, seat: "Desire and awareness"}
+  - {slug: gary-halbert, name: "Gary Halbert", area: marketing, living: false, seat: "Direct response copy"}
+  - {slug: bill-bernbach, name: "Bill Bernbach", area: marketing, living: false, seat: "Creative ideas"}
+  - {slug: joseph-sugarman, name: "Joseph Sugarman", area: marketing, living: false, seat: "Long copy that gets read"}
+  - {slug: seth-godin, name: "Seth Godin", area: marketing, living: true, seat: "Remarkable products and tribes"}
+  - {slug: al-ries, name: "Al Ries", area: marketing, living: false, seat: "Positioning"}
+  - {slug: rory-sutherland, name: "Rory Sutherland", area: marketing, living: true, seat: "Behavioural angles"}
+  - {slug: byron-sharp, name: "Byron Sharp", area: marketing, living: true, seat: "Evidence on how brands grow"}
+  - {slug: gary-vaynerchuk, name: "Gary Vaynerchuk", area: marketing, living: true, seat: "Social attention"}
+  - {slug: russell-brunson, name: "Russell Brunson", area: marketing, living: true, seat: "Funnels"}
+  - {slug: mrbeast, name: "MrBeast (Jimmy Donaldson)", area: marketing, living: true, seat: "Video that holds attention"}
+  - {slug: mary-wells-lawrence, name: "Mary Wells Lawrence", area: marketing, living: false, seat: "Brand campaigns"}
+
+  # Leadership and strategy (12)
+  - {slug: sun-tzu, name: "Sun Tzu", area: leadership, living: false, seat: "Competitive strategy"}
+  - {slug: winston-churchill, name: "Winston Churchill", area: leadership, living: false, seat: "Leading through a crisis"}
+  - {slug: abraham-lincoln, name: "Abraham Lincoln", area: leadership, living: false, seat: "Uniting a divided team"}
+  - {slug: nelson-mandela, name: "Nelson Mandela", area: leadership, living: false, seat: "Reconciliation and patience"}
+  - {slug: mahatma-gandhi, name: "Mahatma Gandhi", area: leadership, living: false, seat: "Principled persuasion"}
+  - {slug: peter-drucker, name: "Peter Drucker", area: leadership, living: false, seat: "Management"}
+  - {slug: andy-grove, name: "Andy Grove", area: leadership, living: false, seat: "Execution and paranoia"}
+  - {slug: clayton-christensen, name: "Clayton Christensen", area: leadership, living: false, seat: "Disruption and jobs to be done"}
+  - {slug: michael-porter, name: "Michael Porter", area: leadership, living: true, seat: "Competitive position"}
+  - {slug: jim-collins, name: "Jim Collins", area: leadership, living: true, seat: "Good to great"}
+  - {slug: simon-sinek, name: "Simon Sinek", area: leadership, living: true, seat: "Purpose and the why"}
+  - {slug: john-wooden, name: "John Wooden", area: leadership, living: false, seat: "Coaching and habits"}
+
+  # Design (11)
+  - {slug: dieter-rams, name: "Dieter Rams", area: design, living: true, seat: "Design critique (less but better)"}
+  - {slug: jony-ive, name: "Jony Ive", area: design, living: true, seat: "Industrial design and care"}
+  - {slug: paul-rand, name: "Paul Rand", area: design, living: false, seat: "Logos and identity"}
+  - {slug: saul-bass, name: "Saul Bass", area: design, living: false, seat: "Posters and title design"}
+  - {slug: massimo-vignelli, name: "Massimo Vignelli", area: design, living: false, seat: "Grids and type systems"}
+  - {slug: charles-and-ray-eames, name: "Charles and Ray Eames", area: design, living: false, seat: "Design by constraint"}
+  - {slug: zaha-hadid, name: "Zaha Hadid", area: design, living: false, seat: "Bold form"}
+  - {slug: frank-lloyd-wright, name: "Frank Lloyd Wright", area: design, living: false, seat: "Space and place"}
+  - {slug: don-norman, name: "Don Norman", area: design, living: true, seat: "Usability"}
+  - {slug: coco-chanel, name: "Coco Chanel", area: design, living: false, seat: "Fashion and brand style"}
+  - {slug: paula-scher, name: "Paula Scher", area: design, living: true, seat: "Typography and identity"}
+
+  # Writing (16)
+  - {slug: william-shakespeare, name: "William Shakespeare", area: writing, living: false, seat: "Drama and language"}
+  - {slug: jane-austen, name: "Jane Austen", area: writing, living: false, seat: "Character and irony"}
+  - {slug: ernest-hemingway, name: "Ernest Hemingway", area: writing, living: false, seat: "Cutting to the bone"}
+  - {slug: mark-twain, name: "Mark Twain", area: writing, living: false, seat: "Humour and plain speech"}
+  - {slug: maya-angelou, name: "Maya Angelou", area: writing, living: false, seat: "Voice and dignity"}
+  - {slug: charles-dickens, name: "Charles Dickens", area: writing, living: false, seat: "Serial stories and cliffhangers"}
+  - {slug: george-orwell, name: "George Orwell", area: writing, living: false, seat: "Clear prose (the plain-English check)"}
+  - {slug: agatha-christie, name: "Agatha Christie", area: writing, living: false, seat: "Plot and suspense"}
+  - {slug: stephen-king, name: "Stephen King", area: writing, living: true, seat: "Writing habit and horror"}
+  - {slug: toni-morrison, name: "Toni Morrison", area: writing, living: false, seat: "Voice and memory"}
+  - {slug: rumi, name: "Rumi", area: writing, living: false, seat: "Poetry and meaning"}
+  - {slug: emily-dickinson, name: "Emily Dickinson", area: writing, living: false, seat: "Compression in poetry"}
+  - {slug: oscar-wilde, name: "Oscar Wilde", area: writing, living: false, seat: "Wit"}
+  - {slug: edgar-allan-poe, name: "Edgar Allan Poe", area: writing, living: false, seat: "Mood and the single effect"}
+  - {slug: jrr-tolkien, name: "J.R.R. Tolkien", area: writing, living: false, seat: "Worldbuilding"}
+  - {slug: rabindranath-tagore, name: "Rabindranath Tagore", area: writing, living: false, seat: "Lyric and song"}
+
+  # Arts: art, film, music, comedy (20)
+  - {slug: leonardo-da-vinci, name: "Leonardo da Vinci", area: arts, living: false, seat: "Observation and invention"}
+  - {slug: pablo-picasso, name: "Pablo Picasso", area: arts, living: false, seat: "Breaking the form"}
+  - {slug: vincent-van-gogh, name: "Vincent van Gogh", area: arts, living: false, seat: "Colour and feeling"}
+  - {slug: frida-kahlo, name: "Frida Kahlo", area: arts, living: false, seat: "Personal truth in art"}
+  - {slug: salvador-dali, name: "Salvador Dalí", area: arts, living: false, seat: "The surreal idea"}
+  - {slug: andy-warhol, name: "Andy Warhol", area: arts, living: false, seat: "Pop and repetition"}
+  - {slug: katsushika-hokusai, name: "Katsushika Hokusai", area: arts, living: false, seat: "Series and craft"}
+  - {slug: alfred-hitchcock, name: "Alfred Hitchcock", area: arts, living: false, seat: "Suspense on screen"}
+  - {slug: stanley-kubrick, name: "Stanley Kubrick", area: arts, living: false, seat: "Control of every frame"}
+  - {slug: akira-kurosawa, name: "Akira Kurosawa", area: arts, living: false, seat: "Staging and movement"}
+  - {slug: hayao-miyazaki, name: "Hayao Miyazaki", area: arts, living: true, seat: "Animation and wonder"}
+  - {slug: christopher-nolan, name: "Christopher Nolan", area: arts, living: true, seat: "Structure and time"}
+  - {slug: jerry-seinfeld, name: "Jerry Seinfeld", area: arts, living: true, seat: "Comedy and the bit"}
+  - {slug: wolfgang-amadeus-mozart, name: "Wolfgang Amadeus Mozart", area: arts, living: false, seat: "Melody and form"}
+  - {slug: ludwig-van-beethoven, name: "Ludwig van Beethoven", area: arts, living: false, seat: "Drama in music"}
+  - {slug: quincy-jones, name: "Quincy Jones", area: arts, living: false, seat: "Producing and arranging"}
+  - {slug: rick-rubin, name: "Rick Rubin", area: arts, living: true, seat: "Creative taste (strip it back)"}
+  - {slug: ar-rahman, name: "A. R. Rahman", area: arts, living: true, seat: "Film music and fusion"}
+  - {slug: david-bowie, name: "David Bowie", area: arts, living: false, seat: "Reinvention"}
+  - {slug: robert-mckee, name: "Robert McKee", area: arts, living: true, seat: "Story structure"}
+
+  # Science (14)
+  - {slug: albert-einstein, name: "Albert Einstein", area: science, living: false, seat: "Thought experiments"}
+  - {slug: isaac-newton, name: "Isaac Newton", area: science, living: false, seat: "Laws from observation"}
+  - {slug: marie-curie, name: "Marie Curie", area: science, living: false, seat: "Persistence in research"}
+  - {slug: richard-feynman, name: "Richard Feynman", area: science, living: false, seat: "First-principles check (explain it simply)"}
+  - {slug: charles-darwin, name: "Charles Darwin", area: science, living: false, seat: "Patient evidence"}
+  - {slug: nikola-tesla, name: "Nikola Tesla", area: science, living: false, seat: "Invention"}
+  - {slug: carl-sagan, name: "Carl Sagan", area: science, living: false, seat: "Wonder and doubt (the baloney check)"}
+  - {slug: galileo-galilei, name: "Galileo Galilei", area: science, living: false, seat: "Test it, don't trust authority"}
+  - {slug: stephen-hawking, name: "Stephen Hawking", area: science, living: false, seat: "Big questions made clear"}
+  - {slug: jane-goodall, name: "Jane Goodall", area: science, living: false, seat: "Field observation"}
+  - {slug: srinivasa-ramanujan, name: "Srinivasa Ramanujan", area: science, living: false, seat: "Pattern and intuition"}
+  - {slug: thomas-edison, name: "Thomas Edison", area: science, living: false, seat: "Trial and error at scale"}
+  - {slug: katherine-johnson, name: "Katherine Johnson", area: science, living: false, seat: "Checking the numbers"}
+  - {slug: rosalind-franklin, name: "Rosalind Franklin", area: science, living: false, seat: "Rigour and data"}
+
+  # Coding and tech (13)
+  - {slug: alan-turing, name: "Alan Turing", area: coding, living: false, seat: "Computing from first principles"}
+  - {slug: ada-lovelace, name: "Ada Lovelace", area: coding, living: false, seat: "What machines could do"}
+  - {slug: grace-hopper, name: "Grace Hopper", area: coding, living: false, seat: "Making tech usable"}
+  - {slug: linus-torvalds, name: "Linus Torvalds", area: coding, living: true, seat: "Code review (blunt)"}
+  - {slug: donald-knuth, name: "Donald Knuth", area: coding, living: true, seat: "Algorithms and care"}
+  - {slug: steve-wozniak, name: "Steve Wozniak", area: coding, living: true, seat: "Elegant hardware"}
+  - {slug: john-carmack, name: "John Carmack", area: coding, living: true, seat: "Performance and focus"}
+  - {slug: andrej-karpathy, name: "Andrej Karpathy", area: coding, living: true, seat: "AI from scratch"}
+  - {slug: margaret-hamilton, name: "Margaret Hamilton", area: coding, living: true, seat: "Software that can't fail"}
+  - {slug: tim-berners-lee, name: "Tim Berners-Lee", area: coding, living: true, seat: "The open web"}
+  - {slug: kent-beck, name: "Kent Beck", area: coding, living: true, seat: "Tests and small steps"}
+  - {slug: demis-hassabis, name: "Demis Hassabis", area: coding, living: true, seat: "AI research strategy"}
+  - {slug: fei-fei-li, name: "Fei-Fei Li", area: coding, living: true, seat: "Human-centred AI"}
+
+  # Thinking: philosophy, psychology, economics (20)
+  - {slug: socrates, name: "Socrates", area: thinking, living: false, seat: "Questioning (asks why until it holds)"}
+  - {slug: aristotle, name: "Aristotle", area: thinking, living: false, seat: "Logic and rhetoric"}
+  - {slug: confucius, name: "Confucius", area: thinking, living: false, seat: "Duty and relationships"}
+  - {slug: lao-tzu, name: "Lao Tzu", area: thinking, living: false, seat: "Doing less"}
+  - {slug: marcus-aurelius, name: "Marcus Aurelius", area: thinking, living: false, seat: "Calm under pressure"}
+  - {slug: seneca, name: "Seneca", area: thinking, living: false, seat: "Time and priorities"}
+  - {slug: friedrich-nietzsche, name: "Friedrich Nietzsche", area: thinking, living: false, seat: "Challenge the assumptions"}
+  - {slug: niccolo-machiavelli, name: "Niccolò Machiavelli", area: thinking, living: false, seat: "Power and realism"}
+  - {slug: benjamin-franklin, name: "Benjamin Franklin", area: thinking, living: false, seat: "Practical improvement"}
+  - {slug: adam-smith, name: "Adam Smith", area: thinking, living: false, seat: "Markets and incentives"}
+  - {slug: john-maynard-keynes, name: "John Maynard Keynes", area: thinking, living: false, seat: "The big economic picture"}
+  - {slug: daniel-kahneman, name: "Daniel Kahneman", area: thinking, living: false, seat: "Bias check"}
+  - {slug: carl-jung, name: "Carl Jung", area: thinking, living: false, seat: "Archetypes and motives"}
+  - {slug: viktor-frankl, name: "Viktor Frankl", area: thinking, living: false, seat: "Meaning"}
+  - {slug: nassim-taleb, name: "Nassim Nicholas Taleb", area: thinking, living: true, seat: "Risk and fragility"}
+  - {slug: yuval-noah-harari, name: "Yuval Noah Harari", area: thinking, living: true, seat: "The long view of history"}
+  - {slug: brene-brown, name: "Brené Brown", area: thinking, living: true, seat: "Trust and courage at work"}
+  - {slug: joseph-campbell, name: "Joseph Campbell", area: thinking, living: false, seat: "The hero's journey"}
+  - {slug: thich-nhat-hanh, name: "Thich Nhat Hanh", area: thinking, living: false, seat: "Mindful attention"}
+  - {slug: bruce-lee, name: "Bruce Lee", area: thinking, living: false, seat: "Adapt (be like water)"}

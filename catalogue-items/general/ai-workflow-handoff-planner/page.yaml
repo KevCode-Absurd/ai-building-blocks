@@ -2,6 +2,8 @@ name: "AI workflow handoff planner"
 new_slug: ai-workflow-handoff-planner
 summary: "List your AI steps. Get handoff cards, claim cards and run rules that keep every fact whole."
 job: set-up-ai
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "AI workflow handoff planner"
 subhead: Give it the steps of your AI process, in order, and the claims it uses. It locks each claim as a card that travels word for word and writes a handoff card for every step. You get the cards, run rules and any check it missed.

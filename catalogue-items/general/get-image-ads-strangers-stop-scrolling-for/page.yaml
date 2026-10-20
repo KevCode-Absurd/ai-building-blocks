@@ -2,6 +2,8 @@ new_slug: get-image-ads-strangers-stop-scrolling-for
 name: "Image ads that stop strangers scrolling"
 summary: "Give it your reviews and product photos. You get a set of image ads, each with a different reason to buy."
 job: make-image-ads
+thinking: high
+thinking_why: "It runs several skills in a row. Give it your strongest model."
 
 headline: "Image ads that stop strangers scrolling"
 subhead: Give it your brand facts, customer reviews and product photos. It finds what buyers repeat, cuts the reasons any rival could claim, spreads the set across different ad types, then plans one picture and short words per ad, stopping twice for your approval.
@@ -33,7 +35,7 @@ how_to_use:
   - Paste your brand file, then your reviews and any past ad results underneath.
   - List the product photos you actually have and what each one shows. Say plainly if you only have one or two.
   - Say how many ads and which sizes, for example "4 ads, 4:5 and 9:16".
-  - When it stops, pick the reasons or approve the concepts yourself. It won't make the rest of the pictures until you do.
+  - It pauses twice so you can pick the reasons and approve the concepts. Say "go ahead" at the start and it does both stops for you, marking each one (approve).
 
 how_it_works:
   - title: Builds the buyer sheets

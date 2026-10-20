@@ -2,6 +2,8 @@ new_slug: 3d-how-it-works-video-clip-prompt-writer
 name: "3D how-it-works video clip prompt writer"
 summary: "Paste your 3D script or product facts. Get matching how-it-works clip prompts and an edit list."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "3D how-it-works video clip prompt writer"
 subhead: Give it a 3D how-it-works script, or product facts with sources. It locks each part's colour and shape, storyboards a dive into the hidden process and back, and writes the clips, stopping three times for your OK. You get every prompt, an edit list and any check it missed.

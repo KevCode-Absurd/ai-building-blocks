@@ -1,0 +1,20 @@
+slug: advisory-council
+name: "Advisory council"
+summary: "Ask a hard question. Get several great minds arguing it, then a brief you can act on."
+category: general
+boards: []
+type: skill
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: mind_view, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: council_brief}
+uses: []
+origin: own
+version: 1.0.0
+credits:
+  - {title: "LLM Council", by: "Andrej Karpathy", url: "https://github.com/karpathy/llm-council", used: "Members rank each other's answers without knowing whose they are, then a chair writes the final answer"}

@@ -71,7 +71,7 @@ Write 3 or 4 reference image prompts of the character on a plain backdrop, the c
 - **Character sheet** from the picked image: front, three-quarter left, three-quarter right, side and back; the held poses the script needs (arm out, head tilted); and the character standing beside the product at its true size (a pouch shoulder high).
 - **Product sheet**, following the script's choice. Clay prop: the product sculpted at its true shape and colours, wrapped in a printed paper label, every label line in quotes, front, side and top; a line you don't have means that side faces away. Real photo: the product exactly as in its photos, lit by the set's key light, no letter redrawn in clay.
 - **Set sheet**: the empty set with the changing object in its before state, and again in its after state, same camera and light.
-Then write the **lock lines**, pasted word for word into every later prompt: CHARACTER (the card), SET, LIGHT, LENS, PALETTES and the PRODUCT line. The product opens only in the brand's real steps, whatever comes out keeps its real colour, and the character touches its side or top, never its label. Name each attached image by its job ("image 1 is the man, image 2 is the kitchen set, image 3 is the pouch"). **Stop. Show the sheets and lock lines and wait for approval.**
+Then write the **lock lines**, pasted word for word into every later prompt: CHARACTER (the card), SET, LIGHT, LENS, PALETTES and the PRODUCT line. The product opens only in the brand's real steps, whatever comes out keeps its real colour, and the character touches its side or top, never its label. The PRODUCT line holds confirmed facts only: what the photos, label lines or brand file show. If you haven't seen the photo, or the script's open, tear or pour could mean more than one package or part (an outer box or pouch, or a single pack inside it), never pick one. Keep the photographed product closed and unchanged in every shot, write `MISSING: which part is opened, and how`, and leave any opening step out of the lock line until it's confirmed. Name each attached image by its job ("image 1 is the man, image 2 is the kitchen set, image 3 is the pouch"). **Stop. Show the sheets and lock lines and wait for approval.**
 
 ## Stage 4: Storyboard (approval 3)
 One still per shot, built from the sheets, never from an earlier clip, written in this order: camera and framing; who or what; the one held pose or state; the place; then the lock lines. A pose has a clear outline. The changing object is in the state the script gives that shot. Each shot card adds the mover (only the character or the object; everything else holds or does one small repeat, like a blink), the action in counted beats, one camera instruction, the narration line, seconds and sound. Plan the **one morph**, if the script uses it, at the swap: a first frame (the old thing) and a last frame (the new state) with the same camera and light. Then check continuity: the object's state carries shot to shot, the product's size against the character never changes, its label faces the same way, and the same hand holds the pack. **Stop. Show the storyboard and wait for approval.**
@@ -90,7 +90,7 @@ One still per shot, built from the sheets, never from an earlier clip, written i
 5. **Final check** against the script and claims: the change reads with the sound off and shows nothing beyond the approved claims.
 
 ## Check it
-Before the final hand-back, check the run against the 6 checks under "Check before you hand it back". Fix any failed check you can, then check again. Show `CHECKS MISSED:` with one line for each check still missed, or "none".
+Before the final hand-back, check the run against the 7 checks under "Check before you hand it back". Fix any failed check you can, then check again. Show `CHECKS MISSED:` with one line for each check still missed, or "none".
 
 ## What you hand back
 1. **Fixed lines** and the **avatar card** (stages 0 and 1).
@@ -114,10 +114,11 @@ If they pick one and that skill is added here, carry straight on with what you j
 - One finish and one palette plan across the ad.
 - One mover and one camera instruction per clip; one morph at most, at the swap.
 - Label lines appear exactly; no clay letters and no other words.
+- The PRODUCT line has no guess in it: no opening step, and no choice of which package or part is opened, unless the photo, label or brand file confirms it. A guess there is a missed check, even if a `MISSING:` line sits below it.
 - No child, real person, known character or human hand.
 
 ## If something is missing
-Write `MISSING: <what>`. No product photo or label lines: ask once, then write the product sheet from what you have, with any unknown side facing away and `MISSING: product photo` or `MISSING: label lines`. No use steps: the product stands closed. No mover column: pick the one thing the line is about.
+Write `MISSING: <what>`. No product photo or label lines: ask once, then write the product sheet from what you have, with any unknown side facing away and `MISSING: product photo` or `MISSING: label lines`. No use steps, an unseen photo, or a script that doesn't say which part is opened: the product stands closed, and the shot shows the action without changing the product (for example, the hand rests on the top), with `MISSING: which part is opened, and how`. No mover column: pick the one thing the line is about.
 
 ## Avoid
 - "Same style as before". Paste the lock lines.

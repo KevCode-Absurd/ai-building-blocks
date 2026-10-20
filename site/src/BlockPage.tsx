@@ -13,15 +13,12 @@ import type { Flow } from "./lib/store";
 import { Link } from "./lib/router";
 import AddToFlow from "./AddToFlow";
 import Install from "./Install";
-import { Before, Next } from "./Needs";
+import { Before, Next, WhatYouGet } from "./Needs";
+import { Gauge } from "./Gauge";
 import { useSeen, useTyped } from "./lib/typing";
 
 // A list item that YAML read as a small map ("Check: this") still shows as text.
 const txt = (x: unknown): string => (typeof x === "string" ? x : x && typeof x === "object" ? Object.entries(x as Record<string, unknown>).map(([k, v]) => (v == null ? k : `${k}: ${txt(v)}`)).join(" ") : String(x ?? ""));
-
-const BUSINESSES: Record<string, string> = {
-  sprout: "A real run on Sprout, a US greens-gummy brand with its name changed. Built from its public website, ads and reviews.",
-};
 
 type Props = { c: Catalogue; slug: string; toast: (m: string) => void; toBuilder: (slugs: string[], asNew?: string) => void };
 
@@ -159,7 +156,10 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
 
   const has = (x?: unknown[]) => !!x && x.length > 0;
   const toc: [string, string, boolean][] = [
-    ["what", "What it does", !!p?.explain],
+    ["get", "What you'll get", !!p?.output_shape],
+    ["what", kindOf(b) === "mind" ? "Who they are" : "What it does", !!p?.explain],
+    ["ideas", "Their big ideas", has(p?.ideas)],
+    ["seats", "On a council", has(p?.seats)],
     ["io", "What you give it, what you get", true],
     ["before", "Before you start", !!p?.plan && (has(p.plan.needed) || has(p.plan.helps))],
     ["steps", "The steps", isFlow],
@@ -170,7 +170,6 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     ["test", "Test it", has(p?.judge) || has(p?.test)],
     ["best", "Works best with", has(p?.works_best_with?.tools) || has(p?.works_best_with?.inputs)],
     ["improve", "Make it fit your work", has(p?.improve)],
-    ["example", "See it work", !!p?.example],
     ["file", isFlow ? "The workflow file" : "The skill file", true],
     ["next", "What to do next", has(p?.plan?.next)],
   ];
@@ -213,6 +212,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           )}
         </div>
         <BusinessNote />
+        <Gauge level={b.thinking} why={b.thinkingWhy} />
         <p className="bp-file"><span>{b.name}</span><code>{b.slug}</code><span>{cap(b.level)}</span>{b.tested?.result === "pass" && <span data-testid="tested" title="Run on a real business's files and graded by a second AI against this page's checks">Tested</span>}</p>
       </header>
 
@@ -226,8 +226,14 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
         <div className="bp-main">
           {page === undefined && <p className="small">Loading…</p>}
 
+          {p?.output_shape && (
+            <Section id="get" title="What you'll get" lead="Every run hands it back in this order. Your details fill each <gap>." wide>
+              <WhatYouGet plan={p.plan} tools={p.works_best_with?.tools ?? []}><Code name="what-you-get.txt" text={p.output_shape} toast={toast} /></WhatYouGet>
+            </Section>
+          )}
+
           {p?.explain && (
-            <Section id="what" title="What it does">
+            <Section id="what" title={kindOf(b) === "mind" ? "Who they are" : "What it does"}>
               <div className="prose big" dangerouslySetInnerHTML={{ __html: p.html.explain }} />
               {has(p.when) && (
                 <div className="when-box">
@@ -244,13 +250,31 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
             </Section>
           )}
 
+          {has(p?.ideas) && (
+            <Section id="ideas" title="Their big ideas" lead={`What it draws on when it answers. Each comes from ${b.name.split(" (")[0]}'s own work, with sources at the end of the skill file.`}>
+              <ul className="ideas" data-testid="mind-ideas">{p!.ideas!.map((x, i) => <li key={i}><b>{x.title}</b>{x.text && <p>{x.text}</p>}</li>)}</ul>
+            </Section>
+          )}
+
+          {has(p?.seats) && (
+            <Section id="seats" title="On a council" lead="Put them on an advisory council with other minds, and they argue your decision. These are the seats we suggest. You can give them any role.">
+              <ul className="seats">{p!.seats!.map((s, i) => <li key={i}><b>{s.seat}</b><span>Always asks: “{s.asks}”</span></li>)}</ul>
+              <div className="bp-actions">
+                <button className="btn btn-primary" data-testid="start-council" onClick={() => {
+                  const with_ = [b.slug, ...(p!.pairs ?? []).filter((s) => c.bySlug[s]).slice(0, 2)];
+                  toBuilder([...with_, ...(c.bySlug["advisory-council"] ? ["advisory-council"] : [])], `Council: ${with_.map((s) => c.bySlug[s].name.split(" (")[0]).join(", ")}`);
+                }}>Start a council with {b.name.split(" (")[0]}</button>
+                <Link to="/minds" className="btn btn-dark">Pick other minds</Link>
+              </div>
+            </Section>
+          )}
+
           <Section id="io" title="What you give it, what you get">
             <div className="give-get">
               <div><h3>You give it</h3><ul>{give.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>
               <div><h3>You get</h3><ul>{get.map((x, i) => <li key={i}>{txt(x)}</li>)}</ul></div>
             </div>
             <Look b={b} kind={renders} />
-            {p?.output_shape && <><p className="bp-note">Every run hands back the same parts, filled in for you:</p><Code name="the-shape.txt" text={p.output_shape} toast={toast} /></>}
           </Section>
 
           {p?.plan && (has(p.plan.needed) || has(p.plan.helps)) && (
@@ -341,17 +365,6 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           {has(p?.improve) && (
             <Section id="improve" title="Make it fit your work" lead="The skill is a plain text file. Change it once and every run after that fits you better.">
               <ul className="plain-list">{p!.improve.map((j, i) => <li key={i}>{txt(j)}</li>)}</ul>
-            </Section>
-          )}
-
-          {p?.example && (
-            <Section id="example" title="See it work" lead={BUSINESSES[p.example.business] ?? "A real run of this skill."} wide>
-              <Code name="what-you-get.txt" text={p.example.output} toast={toast} tall typed />
-              <details className="went-in">
-                <summary>See what went in</summary>
-                <p className="bp-note">This is what was pasted after the skill. Swap in your own details and you get the same kind of result for your own work.</p>
-                <Code name="what-went-in.txt" text={p.example.input} toast={toast} />
-              </details>
             </Section>
           )}
 

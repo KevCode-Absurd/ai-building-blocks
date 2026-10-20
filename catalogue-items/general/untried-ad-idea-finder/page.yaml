@@ -2,6 +2,8 @@ new_slug: untried-ad-idea-finder
 name: "Untried ad idea finder"
 summary: "Paste your past ads and brand file. Get a gap map and five untried ad ideas to test."
 job: plan-ad-tests
+thinking: high
+thinking_why: "It judges work against many checks, so a stronger model catches more."
 
 headline: "Untried ad idea finder"
 subhead: Give it your past ads and your brand file. It maps every ad through five lenses, ranks the five biggest gaps and writes one idea per gap, each a test. You get a gap map, five ideas and the proof worth collecting.

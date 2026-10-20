@@ -97,7 +97,7 @@ Take the approved lines as they are. Split them into clips at sentence ends: one
    | spectacle (made worlds and big shoots only) | crane, orbit, fly-over |
 
    The tighter the crop, the smaller the move.
-9. **One action per shot,** finished inside it: who, which hand, how much force, where it ends up. "Tears the top and tips it out" is two shots. Describe what moves; "stays" or "remains" can freeze the whole shot.
+9. **One action per shot,** finished inside it: who, which hand, how much force, where it ends up. "Tears the top and tips it out" is two shots. A body move (stepping, turning, walking, sitting) is an action of its own, so a hand action plus a body move is two shots: "pulls the door open and steps through" becomes two. Describe what moves; "stays" or "remains" can freeze the whole shot, in the shot table as much as in the clip prompts.
 10. **Build each frame in three layers:** a foreground thing near the lens, the subject, a background, with one layer in motion (steam, a curtain, passing light).
 11. **Bring the product in on its words,** used the way the brand says it opens or works. Before that it's out of frame and its photo isn't attached. Show the thing the words mean (one serving, not the shipping box). It enters by a cut, already in frame when its shot opens.
 12. **One voice track over the cuts.** We see a speaker say some of a line and hear them over the rest. A cutaway pictures what was just said and names whose hand we see.
@@ -112,7 +112,7 @@ Take the approved lines as they are. Split them into clips at sentence ends: one
 5. **Real camera:** the shot tables become the crew's shoot list, with at least two takes per shot.
 6. **Edit list:** clip order, cuts, captions for every spoken word, music or none, the end card, and words kept out of the app's covered areas. Hold still only on the final shot of the finished ad.
 7. **Final check** against the script and claims: every word said as written, nothing added.
-8. **Check it.** Run the checks in "Check before you hand it back" and fix any that fail. List any check still missed under CHECKS MISSED, one line each, or write "none".
+8. **Check it.** Run the checks in "Check before you hand it back" and fix any that fail. Check one action per shot shot by shot: read each action cell, count the verbs that move something, and look for "and", "while", "then", "stays" and "remains". List any check still missed under CHECKS MISSED, one line each, naming the shot. Write "none" only after that read finds nothing.
 
 ## What you hand back
 1. **Cast in:** the lock lines used, or the casting and wardrobe note or product sheet written here.
@@ -159,7 +159,7 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Approval points are marked after stages 1, 3 and 4; no face was invented inside a clip prompt.
 - Shot times add up to the words at the stated pace, within 10%.
 - Every cut changes both angle and size; 3 sizes and 3 positions at least.
-- One action per shot, no "stays" or "remains".
+- One action per shot, checked shot by shot: one moving verb, no hand action joined to a body move, no "stays" or "remains". Any shot that fails and wasn't split is named under CHECKS MISSED.
 - The product is absent until its line, and nothing appears from hiding mid-shot.
 - Shot 1 is mid-action; only the final shot of the video holds.
 

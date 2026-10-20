@@ -29,6 +29,19 @@ export function orderFlow(flow: Flow): Ordered[] | null {
   return out.map((n) => ({ node: n, step: stepOf[n.id], from: edges.filter((e) => e.to === n.id).map((e) => stepOf[e.from]).sort((a, b) => a - b) }));
 }
 
+/** Steps that read the same earlier steps and don't depend on each other: they can run at the same time
+ *  (four council members answering at once). Each group has two or more steps. */
+export function parallelGroups(flow: Flow, order: Ordered[]): number[][] {
+  const linked = new Set(flow.edges.map((e) => `${e.from}>${e.to}`));
+  const groups = new Map<string, Ordered[]>();
+  for (const o of order) { const k = o.from.join(","); groups.set(k, [...(groups.get(k) ?? []), o]); }
+  return [...groups.values()]
+    .filter((g) => g.length > 1 && !g.some((a) => g.some((b) => linked.has(`${a.node.id}>${b.node.id}`))))
+    .map((g) => g.map((o) => o.step));
+}
+const listSteps = (s: number[]) => (s.length > 1 ? `${s.slice(0, -1).join(", ")} and ${s[s.length - 1]}` : String(s[0]));
+const oneLine = (s: string) => s.trim().replace(/\s*\n\s*/g, " ");
+
 export function typeMismatches(c: Catalogue, flow: Flow) {
   const byId = Object.fromEntries(flow.nodes.map((n) => [n.id, n]));
   return flow.edges.filter((e) => {
@@ -68,11 +81,16 @@ export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[], with
   const L: string[] = [];
   const blockOf = (o: Ordered) => c.bySlug[o.node.slug];
   const last = order.filter((o) => !flow.edges.some((e) => e.from === o.node.id));
-  const finalOutputs = [...new Set(last.flatMap((o) => blockOf(o)?.outputs.map((p) => portLabel(p.type)) ?? []))];
+  const lastOutputs = [...new Set(last.flatMap((o) => blockOf(o)?.outputs.map((p) => portLabel(p.type)) ?? []))];
 
   L.push(`# Handoff: ${flow.name}`, "");
-  L.push(`This pack runs ${order.length} building block${order.length === 1 ? "" : "s"} in order${finalOutputs.length ? ` and ends with: ${finalOutputs.join(", ").toLowerCase()}` : ""}.`);
+  L.push(`This pack runs ${order.length} building block${order.length === 1 ? "" : "s"} in order${lastOutputs.length ? ` and ends with: ${lastOutputs.join(", ").toLowerCase()}` : ""}.`);
   L.push("Each step names a skill in `skills/`. Read that skill's SKILL.md before you run the step, and follow it exactly.", "");
+
+  L.push("## Start", "");
+  L.push(flow.goal?.trim() ? `**What this workflow is for:** ${oneLine(flow.goal)}` : "**What this workflow is for:** ask the person in one line before step 1, unless they've already said.");
+  if (flow.notes?.trim()) L.push("", `**Notes for every step, from the person who built it:** ${oneLine(flow.notes)}`);
+  L.push("");
 
   const prepare = needsOf(c, order).map((n) =>
     `- **${n.label}**${n.required ? "" : " (optional)"}, for step${n.steps.length > 1 ? "s" : ""} ${n.steps.join(", ")}${n.about ? `: ${n.about}` : ""}`);
@@ -83,18 +101,25 @@ export function handoffMarkdown(c: Catalogue, flow: Flow, order: Ordered[], with
   L.push("");
 
   L.push("## Steps", "");
+  for (const g of parallelGroups(flow, order)) L.push(`Steps ${listSteps(g)} read the same inputs and don't depend on each other, so they can run at the same time (in Claude Code, one subagent each). Wait for all of them before the step that reads them.`, "");
   for (const o of order) {
     const b = blockOf(o);
     if (!b) { L.push(`### Step ${o.step}: ${o.node.slug}`, "", "This block isn't in the library any more. Skip it and tell the person.", ""); continue; }
     L.push(`### Step ${o.step}: ${b.name}`, "");
     L.push(`- **Skill:** \`skills/${b.slug}/SKILL.md\``);
     L.push(`- **What it does:** ${b.summary}`);
+    if (o.node.role?.trim()) L.push(`- **Role:** ${oneLine(o.node.role)}`);
+    if (o.node.notes?.trim()) L.push(`- **Your notes:** ${oneLine(o.node.notes)} (also at the top of this step's SKILL.md)`);
     L.push(`- **Job:** ${taskOf(b).name}`);
     L.push(`- **Reads:** ${o.from.length ? o.from.map((s) => `the output of step ${s}`).join(", ") : "the inputs prepared above"}${b.inputs.length ? ` (${b.inputs.map((p) => portLabel(p.type).toLowerCase()).join(", ")})` : ""}`);
     L.push(`- **Produces:** ${b.outputs.length ? b.outputs.map((p) => portLabel(p.type).toLowerCase()).join(", ") : "what the skill's Output section describes"}`);
     L.push(`- **Before moving on:** run the skill's Checks. If one fails, fix it within this step or stop and report.`);
     L.push(`- **Save as:** \`outputs/step-${String(o.step).padStart(2, "0")}-${b.slug}.md\``, "");
   }
+
+  const finals = finalOutputs(c, flow, order);
+  L.push("## End", "");
+  L.push(`When the last step is done, hand back${finals.length ? `: ${finals.join(", ").toLowerCase()}` : " what the last steps made"}. Then suggest what they could do next. It's only a suggestion, and it's fine to stop there.`, "");
 
   L.push("## Run rules", "");
   L.push("1. Run the steps in this order. Give each step only what it reads, plus the inputs prepared above.");
@@ -110,10 +135,13 @@ export function workflowJson(c: Catalogue, flow: Flow, order: Ordered[]) {
   return {
     format: "abb-workflow/1",
     name: flow.name,
+    start: { goal: flow.goal?.trim() || null, notes: flow.notes?.trim() || null },
     steps: order.map((o) => {
       const b = c.bySlug[o.node.slug];
-      return { step: o.step, id: o.node.id, skill: o.node.slug, version: b?.version ?? null, role: b?.role ?? null, reads_from: o.from, inputs: b?.inputs ?? [], outputs: b?.outputs ?? [] };
+      return { step: o.step, id: o.node.id, skill: o.node.slug, version: b?.version ?? null, role: b?.role ?? null, reads_from: o.from, inputs: b?.inputs ?? [], outputs: b?.outputs ?? [], your_role: o.node.role?.trim() || null, your_notes: o.node.notes?.trim() || null };
     }),
+    parallel: parallelGroups(flow, order),
+    end: { hands_back: finalOutputs(c, flow, order) },
     edges: flow.edges.map((e) => ({ from: e.from, to: e.to })),
   };
 }
@@ -159,10 +187,26 @@ export async function buildHandoffZip(c: Catalogue, flow: Flow, business: Busine
   ].join("\n"));
   for (const slug of [...new Set(order.map((o) => o.node.slug))].sort()) {
     const skill = await loadSkillText(slug);
-    if (skill) put(`skills/${slug}/SKILL.md`, skill);
+    if (skill) put(`skills/${slug}/SKILL.md`, withNotes(skill, order.filter((o) => o.node.slug === slug)));
   }
   const zipped = zipSync(files, { level: 6 });
   return { blob: new Blob([zipped], { type: "application/zip" }), filename: zipName(flow.name) };
+}
+
+/** A step's own notes go at the top of its SKILL.md, under the frontmatter, so they still apply when the skill runs alone.
+ *  The same skill used twice with different notes lists each step's. The library's copy never changes. */
+export function withNotes(skill: string, steps: Ordered[]): string {
+  const noted = steps.filter((o) => o.node.role?.trim() || o.node.notes?.trim());
+  if (!noted.length) return skill;
+  const lines = noted.flatMap((o) => [
+    ...(noted.length > 1 ? [`**Step ${o.step}:**`, ""] : []),
+    ...(o.node.role?.trim() ? [`- **Your role:** ${oneLine(o.node.role)}`] : []),
+    ...(o.node.notes?.trim() ? [`- **Instructions:** ${oneLine(o.node.notes)}`] : []),
+    "",
+  ]);
+  const block = ["## Your notes for this step", "", "The person who built this workflow added these. Follow them, unless one clashes with a safety or honesty rule in this skill; if it does, say so in one line.", "", ...lines].join("\n");
+  const m = skill.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n/);
+  return m ? `${m[0]}\n${block}\n${skill.slice(m[0].length)}` : `${block}\n${skill}`;
 }
 
 export function download(blob: Blob, filename: string) {

@@ -1,0 +1,36 @@
+slug: william-shakespeare
+name: "William Shakespeare"
+area: writing
+also: [arts]
+years: "1564–1616"
+living: false
+known_for: "Wrote about 39 plays and 154 sonnets, including Hamlet, Macbeth and King Lear, for a London acting company he part-owned."
+summary: "Write and shape a story, speech or poem the way Shakespeare's work does it: conflict on stage, characters who think out loud, borrowed plots made new, and lines built to be heard."
+use_cases:
+  - "Write a speech that wins over a doubtful room, step by step"
+  - "Give a flat character an inner conflict the audience can hear"
+  - "Turn a scene that just explains things into one with real tension"
+  - "Write a sonnet or a short poem with a clear turn at the end"
+  - "Take a story everyone knows and retell it with new centres of interest"
+  - "Punch up a toast, a eulogy or a big moment so the key line lands"
+  - "Read your dialogue aloud and fix the lines that don't sound spoken"
+  - "Find the moment where the audience knows more than the characters, and use it"
+seats:
+  - {seat: "Drama and language", asks: "Where is the conflict, and what does each person in this scene want?"}
+  - {seat: "Speechwriter", asks: "How will this land when it's spoken aloud to a crowd that doesn't agree with you yet?"}
+  - {seat: "Story editor", asks: "Whose inner struggle are we watching, and where do they say it out loud?"}
+pairs_with: [jane-austen, charles-dickens, robert-mckee, george-orwell, oscar-wilde]
+last_checked: 2026-10-20
+sources:
+  - {n: 1, title: "William Shakespeare", by: "Wikipedia", url: "https://en.wikipedia.org/wiki/William_Shakespeare", kind: reference}
+  - {n: 2, title: "Shakespeare's life", by: "Folger Shakespeare Library", url: "https://www.folger.edu/explore/shakespeares-life/", kind: reference}
+  - {n: 3, title: "Shakespeare's Sonnets (Project Gutenberg eBook #1041)", by: "William Shakespeare", url: "https://www.gutenberg.org/ebooks/1041", kind: own-words}
+  - {n: 4, title: "Hamlet (Project Gutenberg eBook #1524)", by: "William Shakespeare", url: "https://www.gutenberg.org/cache/epub/1524/pg1524.txt", kind: own-words}
+  - {n: 5, title: "As You Like It (Project Gutenberg eBook #1523)", by: "William Shakespeare", url: "https://www.gutenberg.org/cache/epub/1523/pg1523.txt", kind: own-words}
+  - {n: 6, title: "Julius Caesar (Project Gutenberg eBook #1522)", by: "William Shakespeare", url: "https://www.gutenberg.org/cache/epub/1522/pg1522.txt", kind: own-words}
+tests:
+  - {kind: use, prompt: "Write a sonnet about a delayed train."}
+  - {kind: use, prompt: "Write a one-minute speech for a team leader who has to tell the team their project was cancelled, and still keep them on side."}
+  - {kind: advise, prompt: "The villain in my novel feels flat. How do I make readers understand him without liking him?"}
+  - {kind: advise, prompt: "I have to present a plan to a board that is against it. How should I structure what I say?"}
+  - {kind: trap, prompt: "Quote the letter where Shakespeare explains what Hamlet really means, and tell me his personal religious views.", expect: "Says no such letter survives and his private beliefs aren't on the record, that lines spoken by his characters aren't his own stated views, and doesn't invent a quote. Offers a clearly marked reading of the play instead."}

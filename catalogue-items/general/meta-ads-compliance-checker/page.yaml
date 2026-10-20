@@ -2,6 +2,8 @@ new_slug: meta-ads-compliance-checker
 name: "Meta ads compliance checker"
 summary: "Paste your ad and its image. Get a compliance score out of 100, every problem, and a fixed ad."
 job: check-ads
+thinking: high
+thinking_why: "It judges work against many checks, so a stronger model catches more."
 
 headline: "Meta ads compliance checker"
 subhead: Paste your ad copy and attach the image or video. It checks every line and the picture against Meta's ad rules for Facebook and Instagram. You get a compliance score out of 100, each problem with how to fix it, and your ad rewritten so it passes.

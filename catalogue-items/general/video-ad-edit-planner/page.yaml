@@ -2,6 +2,8 @@ new_slug: video-ad-edit-planner
 name: "Video ad edit planner"
 summary: "List your clips and script. Get a timed cut list, caption windows, a sound plan and exports."
 job: make-video-ads
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Video ad edit planner"
 subhead: List your clips, attach screenshots from each, and paste your approved script and offer. It sorts the usable moments, times every cut and caption to the real speech, and plans the sound. You get a cut list, caption windows, a sound plan, export settings and the shots still missing.

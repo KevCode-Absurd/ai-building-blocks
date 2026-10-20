@@ -2,6 +2,8 @@ new_slug: podcast-style-video-clip-prompt-writer
 name: "Podcast-style video clip prompt writer"
 summary: "Paste your podcast-style script and attach a product photo. Get cast cards, a storyboard and clip prompts."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Podcast-style video clip prompt writer"
 subhead: Give it a Host-and-Guest script and a product photo. It casts two people nobody could mix up, builds sheets and a storyboard of timed turns, and writes the clip prompts, stopping three times for your OK. You get every prompt and finishing notes with the disclosure line.

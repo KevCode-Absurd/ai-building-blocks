@@ -2,6 +2,8 @@ new_slug: clay-town-video-clip-prompt-writer
 name: "Clay town video clip prompt writer"
 summary: "Paste your clay-town script and attach product photos. Get stop-motion image and clip prompts, stage by stage."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Clay town video clip prompt writer"
 subhead: Give it a narrated clay-town script and product photos. It casts a lead and crowd, builds sheets and a storyboard with one mover per shot, and writes stop-motion clips, stopping three times for your OK. You get every prompt and an edit list.

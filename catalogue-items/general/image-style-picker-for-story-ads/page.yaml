@@ -2,6 +2,8 @@ name: "Image style picker for story ads"
 new_slug: image-style-picker-for-story-ads
 summary: "Paste your story ad. Get the right picture brief, its image prompt and a runner-up to test."
 job: make-image-ads
+thinking: high
+thinking_why: "It reads a lot of data or many customer words, and the numbers and quotes must be right."
 
 headline: "Image style picker for story ads"
 subhead: Paste your approved story ad. It finds the moment the old way stopped working and where that moment leaves evidence, then picks the picture that shows it. You get the brief with its image prompt, the line under the picture and a runner-up to test.

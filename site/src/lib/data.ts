@@ -1,18 +1,34 @@
 import { useEffect, useState } from "react";
 import { migrateSlugs } from "./store";
 
+export type Thinking = "low" | "medium" | "high";
+export const THINKING: Record<Thinking, { name: string; line: string }> = {
+  low: { name: "Low", line: "A fast, low-cost model does this well." },
+  medium: { name: "Medium", line: "A mid-level model is enough. Use your best one for big launches." },
+  high: { name: "High", line: "Use your strongest model, with extended thinking on if you have it." },
+};
 export type Port = { type: string; required: boolean };
 export type Role = "source" | "compress" | "make" | "render" | "check" | "orchestrate";
 export type Block = {
   slug: string;
   name: string;
   summary: string;
-  category: "general" | "ecommerce" | "orchestrator";
+  category: "general" | "ecommerce" | "orchestrator" | "mind";
   boards: string[];
-  type: "prompt" | "skill" | "workflow" | "routine" | "agent";
+  type: "prompt" | "skill" | "workflow" | "routine" | "agent" | "mind";
   role: Role;
   job: string;
   level: "beginner" | "intermediate" | "advanced" | "expert";
+  /** How much thinking it needs, so people can pick a cheaper model when that's enough (docs/MINDS-PRD.md §1). */
+  thinking: Thinking;
+  thinkingWhy: string;
+  /** For a mind: the council seats we suggest (catalogue-items/minds/<slug>/mind.yaml). */
+  seats?: string[];
+  /** For a mind: its broad area, any others, its years, and whether the person is alive. */
+  area?: string;
+  also?: string[];
+  years?: string;
+  living?: boolean;
   inputs: Port[];
   outputs: Port[];
   uses: string[];
@@ -55,12 +71,17 @@ export type Page = {
   works_best_with?: { tools?: { name: string; why: string }[]; inputs?: string[] };
   /** Public sources the block was built from (item.yaml credits). */
   credits?: { title: string; by: string; url: string; used: string }[];
+  /** For a mind: their big ideas, suggested council seats and the minds they pair well with. */
+  ideas?: { title: string; text: string }[];
+  seats?: { seat: string; asks: string }[];
+  pairs?: string[];
   /** What it needs first, the steps before it and the paths after it (tools/lib/needs.mjs). */
   plan?: Plan;
   /** Markdown already turned into HTML by the index build. */
   html: { explain: string; skill: string };
 };
-export type Catalogue = { built: string; portTypes: Record<string, string | null>; renamed: Record<string, string>; blocks: Block[]; bySlug: Record<string, Block> };
+export type RosterMind = { slug: string; name: string; area: string; seat: string; living: boolean; built: boolean };
+export type Catalogue = { built: string; portTypes: Record<string, string | null>; renamed: Record<string, string>; minds?: { areas: Record<string, string>; roster: RosterMind[] }; blocks: Block[]; bySlug: Record<string, Block> };
 
 export const ROLES: { id: Role; name: string; does: string }[] = [
   { id: "source", name: "Source", does: "Brings information in" },
@@ -129,13 +150,14 @@ export function wireSteps(c: Catalogue, slugs: string[]): [number, number][] {
 }
 
 /** What a person sees: three kinds, in order of how much they do. */
-export type Kind = "prompt" | "skill" | "workflow";
+export type Kind = "prompt" | "skill" | "workflow" | "mind";
 export const KINDS: { id: Kind; name: string; plural: string; path: string; what: string }[] = [
   { id: "prompt", name: "Prompt", plural: "Prompts", path: "prompts", what: "One message you paste into your AI for a quick result." },
   { id: "skill", name: "Skill", plural: "Skills", path: "skills", what: "Instructions you add to your AI once. It follows them step by step and checks its own work." },
   { id: "workflow", name: "Workflow", plural: "Workflows", path: "workflows", what: "Several skills in order. Each one hands its work to the next." },
+  { id: "mind", name: "Mind", plural: "Minds", path: "minds", what: "A great mind's ideas and voice, from their public work. Use one alone, or seat several on a council." },
 ];
-export const kindOf = (b: Block): Kind => (b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflow" : b.type === "prompt" ? "prompt" : "skill");
+export const kindOf = (b: Block): Kind => (b.type === "mind" ? "mind" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflow" : b.type === "prompt" ? "prompt" : "skill");
 export const kindInfo = (b: Block) => KINDS.find((k) => k.id === kindOf(b))!;
 export const pathOf = (b: Block) => `/${kindInfo(b).path}/${b.slug}`;
 
@@ -156,6 +178,7 @@ export const TASKS: { id: string; name: string }[] = [
   { id: "make-offer", name: "Make an offer people want" },
   { id: "grow-social", name: "Grow on social" },
   { id: "set-up-ai", name: "Set up AI to work for you" },
+  { id: "think-with-minds", name: "Talk it through with great minds" },
 ];
 export const taskOf = (b: Block) => TASKS.find((t) => t.id === b.task) ?? TASKS[0];
 
@@ -176,7 +199,23 @@ export const FUNCTIONS: { id: string; name: string; line: string; tasks: string[
   { id: "strategist", name: "Know your market", line: "Your customers, your brand and your rivals", tasks: ["understand-customers", "brand-file", "study-competitors", "make-offer"] },
   { id: "social", name: "Grow on social", line: "Posts that build an audience", tasks: ["grow-social"] },
   { id: "founder", name: "Set up AI for your work", line: "Your brand file and AI, set up once for every job", tasks: ["set-up-ai", "brand-file"] },
+  { id: "minds", name: "Think with great minds", line: "Borrow one mind's thinking, or seat a council", tasks: ["think-with-minds"] },
 ];
+
+/** The broad areas above the groups (docs/MINDS-PRD.md §3). A group can sit in more than one; a mind sits in its own areas. */
+export const AREAS: { id: string; name: string; fns: string[] }[] = [
+  { id: "marketing", name: "Marketing", fns: ["copywriter", "media-buyer", "ads", "cro", "strategist", "social"] },
+  { id: "design", name: "Design", fns: ["ads", "photos"] },
+  { id: "business", name: "Business", fns: ["strategist", "founder", "minds"] },
+  { id: "sales", name: "Sales", fns: [] },
+  { id: "leadership", name: "Leadership", fns: [] },
+  { id: "writing", name: "Writing", fns: ["copywriter"] },
+  { id: "arts", name: "Arts", fns: [] },
+  { id: "coding", name: "Coding", fns: [] },
+  { id: "science", name: "Science", fns: [] },
+  { id: "thinking", name: "Thinking", fns: ["minds"] },
+];
+export const areasOf = (b: Block): string[] => (b.type === "mind" ? [b.area ?? "", ...(b.also ?? [])].filter(Boolean) : AREAS.filter((a) => a.fns.some((f) => FUNCTIONS.find((x) => x.id === f)?.tasks.includes(b.task))).map((a) => a.id));
 /** Old links to the two functions that became "Create ads". */
 export const FUNCTION_MOVED: Record<string, string> = { designer: "ads", video: "ads" };
 /** Image or video: the two kinds of ad a block can make. Every ad-making block makes one, never both. */

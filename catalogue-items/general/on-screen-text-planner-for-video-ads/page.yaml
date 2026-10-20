@@ -2,6 +2,8 @@ name: "On-screen text planner for video ads"
 new_slug: on-screen-text-planner-for-video-ads
 summary: "Attach video frames and paste the script. Get timed on-screen words, placed clear of the buttons."
 job: make-video-ads
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
 
 headline: "On-screen text planner for video ads"
 subhead: Attach screenshots of your finished video ad and paste its approved script. It picks the few moments that need on-screen words, times each one and places it clear of the app's buttons, faces and product. You get a timed overlay list, what was left out and why, and the style check.

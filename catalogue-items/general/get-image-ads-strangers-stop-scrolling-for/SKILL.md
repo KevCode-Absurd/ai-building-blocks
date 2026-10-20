@@ -9,6 +9,8 @@ You make a batch of image ads for strangers. Each ad is one argument to one buye
 
 The work goes into the argument and the words first. Creative quality drives about half of the sales lift from advertising, more than targeting or reach (Nielsen and Nielsen Catalina Solutions, 2017). Variety is counted in arguments and types, never in colours, because near-copies add little (Loomer, on Meta's creative variety). This workflow uses "Stop the scroll with your buyer's problem" for concepts, `image-ad-copy-writer` for the words and "Pre-launch ad checker" for the last check.
 
+**Two stops, unless they approved ahead.** In a live chat, stop at Stop 1 and Stop 2 and wait for a yes. If their message says go ahead, do it all, run it through, or "go ahead with what I've given you", that counts as approval for both stops. Then run every step in one reply: pick the arguments yourself by the rules in step 2, mark each stop "(approve)" so they can swap a pick later, and hand back the full set, from the buyer sheets to the checked ads. Never end on a question at a stop they already approved.
+
 <!-- needs: written by tools/add-needs.mjs from the blocks' inputs. Edit that tool, not this section. -->
 ## Before you start
 This skill runs on its own. What's below makes the result better, but none of it is required.
@@ -73,7 +75,7 @@ Dress: **Camera**, **Designed** or **Lo-fi** (phone-made, always your own design
 
 ## Steps
 1. **Build a buyer sheet** for each buyer with a different core problem. Fields: what they want, what they tried and why it let them down, the moment that makes them look today, their phrases word for word, their doubts. An insight is **used** when 3 or more separate buyers say it, or 1 buyer says it and an ad on that argument beat the account's cost per purchase. Anything less goes on a hunch list and stays out of copy. One buyer is an anecdote and two can be a coincidence. Three is the smallest repeat worth building on.
-2. **Write the arguments.** One line each: `buyer | the problem | what only this product does | the proof`. Write at least 3 more than the batch needs, so the cuts have room. Cut any a rival brand could say word for word: add a fact only this product has, or drop it. Cut any whose proof isn't on file. Two lines with the same problem and the same answer are one argument. **Stop 1: the owner picks the arguments.** If they asked for everything in one go, or approved ahead, carry on through both stops and mark each "(approve)".
+2. **Write the arguments.** One line each: `buyer | the problem | what only this product does | the proof`. Write at least 3 more than the batch needs, so the cuts have room. Cut any a rival brand could say word for word: add a fact only this product has, or drop it. Cut any whose proof isn't on file. Two lines with the same problem and the same answer are one argument. **Stop 1: the owner picks the arguments.** If they asked for everything in one go, or approved ahead (a "go ahead" counts), pick the strongest arguments yourself, mark this stop "(approve)" and carry straight on through step 9.
 3. **Spread the batch on the map.** For strangers, "What is it?" and "Is it for me?" types carry the batch and "Can I believe it?" types support it. "Why now?" types are at most 1 in 5, because a stranger can't judge a price for something they can't place yet. In a batch of 6 or more, use at least 3 types and 2 dresses, so results can be read by type. No two ads share a code and an argument.
 4. **Write a concept per ad.** Code, argument, what the picture must show, which product photo and view it uses, the dress in a line (light, setting, style), and a draft headline and support line. Then the honesty and product rules below. **Stop 2: the owner approves the concepts and the first picture of each dress** before the rest are made, so a wrong look is caught once, not on every ad.
 5. **Make the pictures.** No words in the picture, only type that belongs to the scene. Attach the product's own photos, named by view, even for drawn styles. Leave calm space where the layout puts the words. For 9:16, keep the subject and the calm space inside the safe zone. Look at each one at full size, since a small tile hides flaws.
@@ -97,7 +99,7 @@ Dress: **Camera**, **Designed** or **Lo-fi** (phone-made, always your own design
 - Quotes are word for word, with the source and no generated face beside them. The usual way in a comparison is unbranded.
 
 ## What you hand back
-Finished images in each size, and a table with one row per ad: file, code, buyer, argument, headline word count. Plus the buyer sheets, the arguments with the cuts, and the check record.
+In this order: SOURCES, BUYER SHEET, REASONS TO BUY with the cuts, STOP 1 with the picks, THE SET ON THE MAP, one CONCEPT per ad (code, picture, product photo, headline options with word counts, support line), STOP 2, then the finished images or picture prompts in each size, a table with one row per ad (file, code, buyer, argument, headline word count), the check record and the `MISSING:` list. When they approved ahead, each stop line reads "STOP 1 (approve). Picks: ..." and the reply goes on to the next part.
 
 <!-- next: written by tools/add-needs.mjs from the blocks' outputs. Edit that tool, not this section. -->
 ## After this
@@ -112,7 +114,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 - Every used insight has 3 buyers, or 1 buyer and a result. Hunches stay out of copy.
 - "Why now?" types are at most 1 in 5, and a batch of 6 or more has 3 types and 2 dresses.
 - No two ads share a code and an argument.
-- Both stops were shown to the owner, or marked "(approve)" when asked to run in one go.
+- Both stops were shown to the owner, or marked "(approve)" when they said go ahead or asked to run in one go.
+- If they approved ahead, the reply holds every part: the set on the map, a concept, picture prompt and headlines with word counts for each ad, and the check record. Stopping early is a missed check.
 
 ## If something is missing
 Write `MISSING: <buyer research | proof | product view | brand look>`. Mark any argument without research as a "hunch", and let it state no fact.
@@ -121,4 +124,4 @@ Write `MISSING: <buyer research | proof | product view | brand look>`. Mark any 
 - Type made inside a generated picture.
 - A discount on a product shot as the plan for winning strangers.
 - Six looks of one claim counted as six ads.
-- Letting the AI pick the arguments. The owner picks them.
+- Letting the AI pick the arguments when the owner hasn't approved ahead. When they have, pick by the rules and mark the stop "(approve)".

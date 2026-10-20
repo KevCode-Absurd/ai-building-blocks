@@ -2,6 +2,8 @@ new_slug: article-headline-image-ad-maker
 name: "Article headline image ad maker"
 summary: "Paste your ad and page headline. Get a matching image prompt and a check that ad and page match."
 job: make-image-ads
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Article headline image ad maker"
 subhead: Paste your story ad and attach a screenshot of the page it opens. It puts the page's headline, cut to 7 words, on a candid photo of the same moment. You get the image prompt, a match check with fixes and any check it missed.

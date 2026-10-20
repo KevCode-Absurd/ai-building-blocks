@@ -1,7 +1,7 @@
 import { spaceKey, spaces } from "./lib/space";
 import { Suspense, lazy, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { ArrowIcon, BlockCard, Drawer, Logo, PixelIcon, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
-import { type Block, type Catalogue, type Kind, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, pathOf, taskOf, useCatalogue } from "./lib/data";
+import { type Block, type Catalogue, type Kind, AREAS, areasOf, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, pathOf, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
 import { Link, navigate, setSearch, useLocation } from "./lib/router";
 import { BusinessDrawer, openBusiness, useBusinessOpener } from "./Business";
@@ -32,6 +32,7 @@ const PAGES = {
   tools: () => import("./tools/ToolsPage"),
   apps: () => import("./apps/AppsPage"),
   space: () => import("./space/SpacePage"),
+  minds: () => import("./MindsPage"),
   builder: () => import("./Builder"),
 };
 const BlockPage = lazy(PAGES.block);
@@ -39,6 +40,7 @@ const HowItWorks = lazy(PAGES.guide);
 const ToolsPage = lazy(PAGES.tools);
 const AppsPage = lazy(PAGES.apps);
 const SpacePage = lazy(PAGES.space);
+const MindsPage = lazy(PAGES.minds);
 /**
  * An in-page link (#install) scrolls smoothly, and a page loading in the background can cut that scroll short.
  * Once it has had time to land, finish the jump if the target still isn't on screen.
@@ -90,6 +92,7 @@ function Header({ onKits }: { onKits: () => void }) {
           <Link to="/how-it-works" className="nav-hiw">How it works</Link>
           <Link to="/#library">Library</Link>
           <Link to="/#build">Builder</Link>
+          <Link to="/minds" data-testid="nav-minds">Minds</Link>
           <Link to="/tools">Tools</Link>
           <Link to="/apps">Apps</Link>
           <Link to="/space" data-testid="nav-space">My space</Link>
@@ -104,8 +107,8 @@ function Header({ onKits }: { onKits: () => void }) {
   );
 }
 
-type Filters = { q: string; fn: string; task: string; kind: Kind | "all"; level: string };
-const NONE: Filters = { q: "", fn: "", task: "", kind: "all", level: "" };
+type Filters = { q: string; area: string; fn: string; task: string; kind: Kind | "all"; level: string };
+const NONE: Filters = { q: "", area: "", fn: "", task: "", kind: "all", level: "" };
 
 function Library({ c }: { c: Catalogue }) {
   const { search } = useLocation();
@@ -114,7 +117,8 @@ function Library({ c }: { c: Catalogue }) {
     const fnId = FUNCTION_MOVED[search.get("fn") ?? ""] ?? search.get("fn");
     const fn = FUNCTIONS.find((x) => x.id === fnId)?.id ?? (task ? FUNCTIONS.find((x) => x.tasks.includes(task))!.id : "");
     const kind = KINDS.some((k) => k.id === search.get("kind")) ? (search.get("kind") as Kind) : "all";
-    return { ...NONE, q: search.get("q") ?? "", fn, task, kind, level: search.get("level") ?? "" };
+    const area = AREAS.some((a) => a.id === search.get("area")) ? search.get("area")! : "";
+    return { ...NONE, q: search.get("q") ?? "", area, fn, task, kind, level: search.get("level") ?? "" };
   });
   const set = (patch: Partial<Filters>) => setF((x) => ({ ...x, ...patch }));
   const [limit, setLimit] = useState(PAGE);
@@ -130,7 +134,7 @@ function Library({ c }: { c: Catalogue }) {
     window.addEventListener("keydown", on);
     return () => window.removeEventListener("keydown", on);
   }, []);
-  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level }); }, [f]);
+  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, area: f.area, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level }); }, [f]);
 
   // Every count reflects all the other choices, so a zero is never a surprise.
   // The list and the counts follow the typing a beat behind, so the search box never waits on them.
@@ -140,6 +144,7 @@ function Library({ c }: { c: Catalogue }) {
   const hay = (b: Block) => hays.get(b.slug)!;
   const tests: Record<keyof Filters, (b: Block, v: string) => boolean> = {
     q: (b) => words.every((w) => hay(b).includes(w)),
+    area: (b, v) => !v || areasOf(b).includes(v),
     fn: (b, v) => !v || functionsOf(b).some((x) => x.id === v),
     task: (b, v) => !v || b.task === v,
     kind: (b, v) => v === "all" || kindOf(b) === v,
@@ -160,14 +165,24 @@ function Library({ c }: { c: Catalogue }) {
   const fn = FUNCTIONS.find((x) => x.id === f.fn);
   const activeTask = TASKS.find((t) => t.id === f.task);
   const pickFn = (id: string) => set({ fn: f.fn === id ? "" : id, task: "" });
+  const area = AREAS.find((a) => a.id === f.area);
+  // An area shows its own groups; areas that so far hold only minds show the minds group.
+  const fnsShown = area ? FUNCTIONS.filter((x) => area.fns.includes(x.id) || (x.id === "minds" && count({ area: area.id, fn: "minds", task: "" }) > 0)) : FUNCTIONS;
 
   return (
     <section className="section wrap" id="library" aria-label="Library">
       <label className="search big"><SearchIcon /><span className="visually-hidden">Search</span><input value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="What do you want to get done?" data-testid="library-search" /><kbd className="kbd" aria-hidden="true">/</kbd></label>
 
+      <div className="areas" role="group" aria-label="Pick an area" data-testid="areas">
+        <button className="chip" aria-pressed={!f.area} onClick={() => set({ area: "", fn: "", task: "" })}>Everything</button>
+        {AREAS.map((a) => {
+          const n = count({ area: a.id, fn: "", task: "" });
+          return <button key={a.id} className="chip" aria-pressed={f.area === a.id} disabled={!n && f.area !== a.id} onClick={() => set({ area: f.area === a.id ? "" : a.id, fn: "", task: "" })} data-testid={`area-${a.id}`}>{a.name}<span className="count">{n}</span></button>;
+        })}
+      </div>
       <h2 className="fn-h">Pick the work you do, or want done</h2>
       <div className="fns" role="group" aria-label="Pick the work">
-        {FUNCTIONS.map((x) => {
+        {fnsShown.map((x) => {
           const n = count({ fn: x.id, task: "" });
           return (
             <button key={x.id} className="fn" aria-pressed={f.fn === x.id} disabled={!n && f.fn !== x.id} onClick={() => pickFn(x.id)} data-testid={`fn-${x.id}`}>
@@ -359,6 +374,8 @@ export default function App() {
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><AppsPage path={path} toast={setToast} /></Suspense>
       ) : path === "/space" || path === "/people" || path.startsWith("/s/") ? (
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><SpacePage path={path} c={c} toast={setToast} /></Suspense>
+      ) : path === "/minds" ? (
+        c ? <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><MindsPage c={c} toBuilder={toBuilder} /></Suspense> : <main className="wrap bp-hero"><p className="small">Loading…</p></main>
       ) : path === "/how-it-works" ? (
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><HowItWorks toast={setToast} /></Suspense>
       ) : pageSlug ? (

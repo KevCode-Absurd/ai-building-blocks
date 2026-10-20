@@ -2,6 +2,8 @@ name: "Competitor ad swipe file builder"
 new_slug: competitor-ad-swipe-file-builder
 summary: "Paste ads from Meta's Ad Library. Get them sorted into 9 types, with what to study in each."
 job: study-competitors
+thinking: high
+thinking_why: "It studies ads or pages closely and works out why they work."
 
 headline: "Competitor ad swipe file builder"
 subhead: Give it competitor ads you collected from Meta's Ad Library, each with its ID, start date and a screenshot. It files every ad under one of nine types. You get a study board with three examples per type, what to study in each, and the gaps to fill.

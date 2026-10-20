@@ -2,6 +2,8 @@ new_slug: motion-comic-video-clip-prompt-writer
 name: "Motion comic video clip prompt writer"
 summary: "Paste your comic script and attach product photos. Get panel clip prompts and an edit list."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Motion comic video clip prompt writer"
 subhead: Give it a comic ad script and product photos. It draws one simple hero, builds sheets and a storyboard, and writes one clip per panel, stopping three times for your OK. You get every prompt and an edit list.

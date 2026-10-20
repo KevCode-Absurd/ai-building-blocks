@@ -2,6 +2,8 @@ new_slug: competitor-ad-gap-finder
 name: "Competitor ad gap finder"
 summary: "Paste competitor ads from the Ad Library. Get the gaps, briefs and a score out of 100."
 job: study-competitors
+thinking: high
+thinking_why: "It studies ads or pages closely and works out why they work."
 
 headline: "Competitor ad gap finder"
 subhead: Give it competitor ads you collected by hand from Meta's Ad Library, with screenshots, plus your facts and reviews. It maps where the category crowds and checks that against buyers. You get the gaps, a brief for each and a score out of 100.

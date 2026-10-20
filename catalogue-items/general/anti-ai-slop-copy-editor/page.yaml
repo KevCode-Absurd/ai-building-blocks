@@ -2,6 +2,8 @@ name: "Anti-AI-slop copy editor"
 new_slug: anti-ai-slop-copy-editor
 summary: "Paste your copy. Get each machine-sounding line fixed, the full rewrite and a score out of 100."
 job: check-ads
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Anti-AI-slop copy editor"
 subhead: Paste finished copy. It scans every line for 16 signs of machine writing, from inflated meaning to chatbot leftovers, and checks the rhythm. You get each hit with a plain fix, the full rewrite and a score out of 100, before and after.

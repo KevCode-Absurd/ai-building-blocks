@@ -52,7 +52,8 @@ export { planFromGoal, type Plan } from "./goal";
 
 // ---- Share by link ----
 
-type Packed = { v: 1; n: string; s: string[]; p: [number, number][]; e: [number, number][]; m: number[] };
+// r and o are each step's role and notes; g and gn the Start node's goal and notes. All optional, so old links still open.
+type Packed = { v: 1; n: string; s: string[]; p: [number, number][]; e: [number, number][]; m: number[]; r?: string[]; o?: string[]; g?: string; gn?: string };
 const b64 = (u: Uint8Array) => btoa(String.fromCharCode(...u)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 const unb64 = (s: string) => Uint8Array.from(atob(s.replace(/-/g, "+").replace(/_/g, "/")), (ch) => ch.charCodeAt(0));
 
@@ -65,8 +66,14 @@ export function packFlow(flow: Flow): string {
     e: flow.edges.filter((e) => e.from in idx && e.to in idx).map((e) => [idx[e.from], idx[e.to]]),
     m: flow.nodes.flatMap((n, i) => (n.ecommerce ? [i] : [])),
   };
+  if (flow.nodes.some((n) => n.role)) data.r = flow.nodes.map((n) => n.role ?? "");
+  if (flow.nodes.some((n) => n.notes)) data.o = flow.nodes.map((n) => n.notes ?? "");
+  if (flow.goal) data.g = flow.goal;
+  if (flow.notes) data.gn = flow.notes;
   return b64(deflateSync(strToU8(JSON.stringify(data)), { level: 9 }));
 }
+
+const clip = (s: unknown, n: number) => (typeof s === "string" && s.trim() ? s.slice(0, n) : undefined);
 
 /** Opens a packed workflow as a new one. Steps no longer in the library are dropped. Null if the link is broken. */
 export function unpackFlow(c: Catalogue, code: string): Flow | null {
@@ -74,11 +81,11 @@ export function unpackFlow(c: Catalogue, code: string): Flow | null {
     const d = JSON.parse(strFromU8(inflateSync(unb64(code)))) as Packed;
     if (d.v !== 1 || !Array.isArray(d.s)) return null;
     const ids = d.s.slice(0, 40).map(() => uid());
-    const nodes: FlowNode[] = d.s.slice(0, 40).flatMap((slug, i) => (c.bySlug[slug] ? [{ id: ids[i], slug, x: (d.p?.[i]?.[0] ?? i * 30) * 10, y: (d.p?.[i]?.[1] ?? 11) * 10, ecommerce: d.m?.includes(i) || undefined }] : []));
+    const nodes: FlowNode[] = d.s.slice(0, 40).flatMap((slug, i) => (c.bySlug[slug] ? [{ id: ids[i], slug, x: (d.p?.[i]?.[0] ?? i * 30) * 10, y: (d.p?.[i]?.[1] ?? 11) * 10, ecommerce: d.m?.includes(i) || undefined, role: clip(d.r?.[i], 120), notes: clip(d.o?.[i], 2000) }] : []));
     if (!nodes.length) return null;
     const kept = new Set(nodes.map((n) => n.id));
     const edges: FlowEdge[] = (d.e ?? []).filter(([a, b]) => kept.has(ids[a]) && kept.has(ids[b]) && a !== b).map(([a, b]) => ({ id: uid(), from: ids[a], to: ids[b] }));
-    return { id: uid(), name: String(d.n || "Shared workflow").slice(0, 80), nodes, edges, updated: Date.now() };
+    return { id: uid(), name: String(d.n || "Shared workflow").slice(0, 80), nodes, edges, updated: Date.now(), goal: clip(d.g, 2000), notes: clip(d.gn, 2000) };
   } catch {
     return null;
   }

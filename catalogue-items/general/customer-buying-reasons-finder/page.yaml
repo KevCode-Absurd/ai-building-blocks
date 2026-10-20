@@ -2,6 +2,8 @@ new_slug: customer-buying-reasons-finder
 name: "Customer buying reasons finder"
 summary: "Paste reviews or support emails. Get buying reasons in customers' exact words and a score out of 100."
 job: understand-customers
+thinking: high
+thinking_why: "It reads a lot of data or many customer words, and the numbers and quotes must be right."
 
 headline: "Customer buying reasons finder"
 subhead: Give it your reviews, support tickets, call notes or survey answers. It copies out every phrase that shows why people switched or nearly didn't, and counts separate people. You get the reasons ranked in their exact words, risky quotes flagged and a score out of 100.

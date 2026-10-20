@@ -2,6 +2,8 @@ new_slug: watercolor-video-clip-prompt-writer
 name: "Watercolor video clip prompt writer"
 summary: "Paste your watercolor script and photos. Get every painted image and clip prompt, plus an edit list."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Watercolor video clip prompt writer"
 subhead: Give it a narrated watercolor ad script and product photos. It writes an avatar card, sheets, a storyboard and clip prompts that describe only what the paint does, stopping three times for your OK. You get every prompt and an edit list.

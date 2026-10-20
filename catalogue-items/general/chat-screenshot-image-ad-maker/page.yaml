@@ -2,6 +2,8 @@ new_slug: chat-screenshot-image-ad-maker
 name: "Chat screenshot image ad maker"
 summary: "Paste your story ad. Get the chat messages and a ready-to-paste screenshot image prompt."
 job: make-image-ads
+thinking: medium
+thinking_why: "It writes or plans with a handful of checks."
 
 headline: "Chat screenshot image ad maker"
 subhead: Paste your story ad. It picks a one-to-one text or a group chat, casts the people who noticed the problem, and writes a short thread that leaves the narrator on the spot. You get the messages, an image prompt and a line to run under it.

@@ -16,7 +16,7 @@ fs.mkdirSync(OUT_PAGES, { recursive: true });
 
 // Until a block has its page written, it is filed under the job closest to its old group.
 const TASK_FROM_JOB = { copy: "write-ad-copy", email: "write-ad-copy", ads: "make-image-ads", image: "make-image-ads", video: "make-video-ads", page: "write-landing-page", analysis: "read-ad-results", research: "understand-customers", brand: "brand-file", offer: "make-offer", organic: "grow-social", ops: "set-up-ai" };
-const PAGE_FIELDS = ["headline", "subhead", "explain", "when", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "example", "tweaks", "judge", "test", "improve", "terms", "works_best_with"];
+const PAGE_FIELDS = ["headline", "subhead", "explain", "when", "you_give", "you_get", "how_to_use", "how_it_works", "output_shape", "tweaks", "judge", "test", "improve", "terms", "works_best_with"];
 
 const types = YAML.parse(fs.readFileSync(path.join(ROOT, "_types.yaml"), "utf8"));
 const typeDesc = {};
@@ -75,6 +75,9 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
       role: item.role ?? "make",
       job: item.job ?? "ops",
       level: item.level ?? "intermediate",
+      // Workflows run several skills in a row, so they always ask for the strongest model.
+      thinking: ["low", "medium", "high"].includes(page?.thinking) ? page.thinking : category === "orchestrators" || item.type === "workflow" ? "high" : "medium",
+      thinkingWhy: page?.thinking_why ?? (category === "orchestrators" || item.type === "workflow" ? "It runs several skills in a row. Give it your strongest model." : ""),
       inputs: asPorts(item.inputs),
       outputs: asPorts(item.outputs),
       uses: item.uses ?? [],
@@ -90,6 +93,55 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
       added: fs.statSync(yamlPath).mtime.toISOString().slice(0, 10),
     });
   }
+}
+
+// Minds (catalogue-items/minds, docs/MINDS-PRD.md): a public figure's ideas and voice. Each built one has a mind.yaml and
+// a SKILL.md made by tools/build-minds.mjs; its page is put together here from mind.yaml and knowledge.md.
+const MINDS = path.join(ROOT, "minds");
+const roster = fs.existsSync(path.join(MINDS, "_roster.yaml")) ? YAML.parse(fs.readFileSync(path.join(MINDS, "_roster.yaml"), "utf8")) : { areas: {}, minds: [] };
+for (const r of roster.minds) {
+  const folder = path.join(MINDS, r.slug);
+  const yamlPath = path.join(folder, "mind.yaml"), skillPath = path.join(folder, "SKILL.md");
+  if (!fs.existsSync(yamlPath) || !fs.existsSync(skillPath)) continue;
+  let m;
+  try { m = YAML.parse(fs.readFileSync(yamlPath, "utf8")); } catch (e) { problems.push(`minds/${r.slug}: ${e.message.split("\n")[0]}`); continue; }
+  const skill = fs.readFileSync(skillPath, "utf8");
+  fs.mkdirSync(path.join(OUT_SKILLS, r.slug), { recursive: true });
+  fs.copyFileSync(skillPath, path.join(OUT_SKILLS, r.slug, "SKILL.md"));
+  const first = m.name.split(" (")[0];
+  const knowledge = fs.existsSync(path.join(folder, "knowledge.md")) ? fs.readFileSync(path.join(folder, "knowledge.md"), "utf8").replace(/\r\n?/g, "\n") : "";
+  // Their big ideas: the ### headings under "Core ideas", each with its first sentence, tags removed.
+  const core = knowledge.split(/^## /m).find((s) => /^Core ideas/i.test(s)) ?? "";
+  const ideas = core.split(/^### /m).slice(1).map((s) => {
+    const [title, ...rest] = s.split("\n");
+    const text = rest.join(" ").replace(/\[S\d+\]/g, "").replace(/\s+/g, " ").trim();
+    return { title: title.trim(), text: (text.match(/^.*?[.!?](\s|$)/)?.[0] ?? text).trim() };
+  }).filter((x) => x.title);
+  const page = {
+    headline: m.name,
+    subhead: m.summary,
+    explain: `${m.known_for}\n\nThis is an AI playing ${first} from their public work: ${m.sources.length} public sources, listed below, written into a data set of what they knew and believed and a profile of how they think and talk. It isn't ${first}, and ${first} hasn't endorsed it.${m.living ? ` ${first} is alive, so views can change; it was last checked on ${String(m.last_checked).slice(0, 10)}.` : ""}`,
+    when: m.use_cases,
+    you_give: ["Your task or question", "Your facts, numbers or draft (optional; it asks once if they matter)", "A role for them, such as \"my investor\" (optional)"],
+    you_get: [`The answer or the work, in ${first}'s voice, using their ideas by name`, "Anything that goes beyond their public record, marked", "One suggested next step"],
+    how_to_use: ["Add the skill to your AI, or copy it and paste it into a chat.", `Ask your question or give the task, such as "${m.use_cases[0]}".`, "Paste the facts that matter.", `To hear ${first} argue with other minds, put them on an advisory council.`],
+    output_shape: `<the answer or the piece of work, in ${first}'s voice>\n  <the recommendation, or the work itself, first>\n  <the reasoning, using ${first}'s ideas by name>\n  <[beyond the record] wherever it goes past what they said or did>\n\nMISSING: <facts you didn't give, or none>\nNEXT: <one suggested next step>`,
+    ideas,
+    seats: m.seats,
+    pairs: (m.pairs_with ?? []).filter((s) => roster.minds.some((x) => x.slug === s)),
+    credits: m.sources.filter((s) => s.title).map((s) => ({ title: String(s.title), by: s.by ? String(s.by) : "", url: s.url && /^https?:\/\//.test(s.url) ? String(s.url) : "", used: "" })),
+  };
+  page.html = { explain: md.parse(page.explain), skill: md.parse(bodyOf(skill)) };
+  fs.writeFileSync(path.join(OUT_PAGES, `${r.slug}.json`), JSON.stringify(page));
+  blocks.push({
+    slug: r.slug, name: m.name, summary: m.summary, headline: m.name,
+    task: "think-with-minds", category: "mind", boards: [], type: "mind", role: "make", job: "minds", level: "beginner",
+    thinking: "medium", thinkingWhy: "It plays one voice from a written data set. Use your strongest model when the stakes are high.",
+    seats: m.seats.map((s) => s.seat), area: m.area, also: m.also ?? [], years: m.years ?? "", living: !!m.living,
+    inputs: [{ type: "question", required: true }], outputs: [{ type: "mind_view", required: true }],
+    uses: [], steps: [], origin: "own", tested: null, version: String(m.version ?? "1.0.0"), words: skill.split(/\s+/).length,
+    twin: null, files: [], added: fs.statSync(yamlPath).mtime.toISOString().slice(0, 10),
+  });
 }
 
 // How many workflows use each block: the honest "popular" signal until people can vote.
@@ -137,16 +189,18 @@ const portTypes = Object.fromEntries([...usedTypes].sort().map((t) => [t, typeDe
 // Old names still work: the site sends an old link to the block's new page.
 const renamedFile = path.join(ROOT, "renamed.json");
 const renamed = fs.existsSync(renamedFile) ? Object.fromEntries(Object.entries(JSON.parse(fs.readFileSync(renamedFile, "utf8"))).filter(([, to]) => blocks.some((b) => b.slug === to))) : {};
-fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new Date().toISOString().slice(0, 10), portTypes, renamed, blocks }));
+// The whole roster goes too, so /minds can show who's coming before their files are built.
+const minds = { areas: roster.areas ?? {}, roster: roster.minds.map((m) => ({ slug: m.slug, name: m.name, area: m.area, seat: m.seat, living: !!m.living, built: !!bySlug[m.slug] })) };
+fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new Date().toISOString().slice(0, 10), portTypes, renamed, minds, blocks }));
 // Every page, for search engines: the home page, each block, the mini tools and the apps. The saved example app
 // (public/example-app) is left out: it's a copy of another app, marked noindex.
 const SITE = "https://useaiblocks.com";
-const kindPath = (b) => (b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
+const kindPath = (b) => (b.type === "mind" ? "minds" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
 const { TOOLS } = await import("../../mini-tools/index.mjs");
-const urls = ["/", "/how-it-works", "/tools", ...TOOLS.map((t) => `/tools/${t.slug}`), "/apps", "/apps/starter-pack", ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
+const urls = ["/", "/how-it-works", "/minds", "/tools", ...TOOLS.map((t) => `/tools/${t.slug}`), "/apps", "/apps/starter-pack", ...blocks.filter((b) => b.headline).map((b) => `/${kindPath(b)}/${b.slug}`)];
 fs.writeFileSync("public/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`);
 fs.writeFileSync("public/robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`);
 console.log(`sitemap: ${urls.length} pages`);
 console.log(`${blocks.filter((b) => b.headline).length} of ${blocks.length} have a page`);
-console.log(`${blocks.length} blocks (${blocks.filter((b) => b.category === "general").length} general, ${blocks.filter((b) => b.category === "ecommerce").length} ecommerce, ${blocks.filter((b) => b.category === "orchestrator").length} orchestrators)`);
+console.log(`${blocks.length} blocks (${blocks.filter((b) => b.category === "general").length} general, ${blocks.filter((b) => b.category === "ecommerce").length} ecommerce, ${blocks.filter((b) => b.category === "orchestrator").length} orchestrators, ${blocks.filter((b) => b.category === "mind").length} minds)`);
 if (problems.length) console.log("Problems:\n  " + problems.join("\n  "));

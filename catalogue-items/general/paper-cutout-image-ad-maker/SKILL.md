@@ -64,14 +64,14 @@ If an image tool is connected, offer to make the picture with it, and ask before
    - a number: a chart only from a sourced figure, with shapes cut to the real proportions; with no source, drop the number
 4. **Set the paper kit**, the same one the cutout video would use.
    - Material: one ground paper and one way of cutting (scissor-cut, torn, or clean die-cut edges), with visible paper thickness and soft short shadows.
-   - Signal: one colour and one pointer shape (an arrow, a ring or a strip), used once, on the exact part that matters.
+   - Signal: one colour and one pointer shape (an arrow, a ring or a strip), used once, on the exact part that matters. Nothing else points: no step arrows, dashed lines, numbers in circles or connecting lines between pieces. To show order, set the pieces in a row and let the layout carry it.
    - Photos: the product always in full colour from its real photo. Any other photo shares one treatment (black and white, say).
    No words are drawn on the paper. Type is set afterwards in a design tool, in the brand's typefaces.
 5. **Lay out the frame.** 4:5 (1080 x 1350) for feeds, or 1:1 (1080 x 1080). The proof is the largest piece, off centre, and fills at least a third of the frame. The product is easy to find, front on. Keep one calm band of paper for the headline. Write a zone map, top to bottom in percent: headline, proof, labels, product, small line.
 6. **Write the words on the image** and run the image-ad rules below.
-7. **Write the image prompt.** A paper cutout collage photographed flat from above, filling the frame. Name the ground, the cut style, each piece and where it sits, the signal and its target, and even overhead light. Name each attached photo by its job ("photo 1 is the pouch; keep its shape, colour and printing exactly"). Ask for no text anywhere; strips stay blank.
+7. **Write the image prompt.** A paper cutout collage photographed flat from above, filling the frame. Name the ground, the cut style, each piece and where it sits, the signal and its target, and even overhead light. Name each attached photo by its job ("photo 1 is the pouch; keep its shape, colour and printing exactly"). Ask for no text anywhere; strips stay blank. Show the product only as its photo shows it. If you haven't seen the photo, or the brand's facts mention more than one package or part (an outer box or pouch, and a single pack inside it), never decide which one is opened, torn, poured or used. Keep the photographed product closed and unchanged, point the signal at a part you can confirm, and write `MISSING: photo of <the part that opens>` with a labelled empty slot for it.
 8. **Write the feed copy.** The first line carries the point and makes sense alone (under 125 characters, better under 90) and never repeats the headline. The headline under the image is 27 characters or fewer. The full offer terms go in the text, never only in the description. One button that says what happens next.
-9. **Check it.** Go through the six checks under "Check before you hand it back" and fix any that fail where you can. List each check still missed under `CHECKS MISSED`, one line each, or write "none".
+9. **Check it.** Go through the seven checks under "Check before you hand it back" and fix any that fail where you can. List each check still missed under `CHECKS MISSED`, one line each, or write "none".
 
 ## Image-ad rules
 - **Glance test:** a stranger gets the point in under two seconds, about what a phone feed gives a post.
@@ -103,7 +103,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Check before you hand it back
 - One point, with one "but", and one proof picture that matches the claim's verb.
-- One signal, on the part that matters.
+- One signal, on the part that matters, and no other arrow, dashed line or pointer in the frame.
+- Nothing shows a package or part opened, torn or used unless a photo or fact confirms that exact part. An unseen photo means the product stays closed.
 - Headline 7 words or fewer, at most 3 other things to read, nothing under 30 px, every word at 4.5:1 or more.
 - Every figure has a source, or isn't there.
 - The product comes from its photo with no letter redrawn.

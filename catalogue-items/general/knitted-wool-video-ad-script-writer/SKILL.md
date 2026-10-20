@@ -84,7 +84,7 @@ For each change, write the sentence a viewer would take from it. Keep it only if
 ### 6. Write the script
 - One narrator, off screen, in the brand's voice, about the doll ("she") or to the viewer ("you").
 - Plan words by time: calm narration runs about 2.2 words a second, so 30 seconds is about 65 words.
-- Each line is one yarn picture. Put "knitted", "crocheted" or "felted" and a real colour on every object ("a teal knitted sofa", "a felted puff of steam"); an object without its material comes out real. Keep a room list: every object with its material and colour. Repeat the material word and colour on every mention in the picture column, the doll and her hands included, even when the room list already has them. Never write a bare "the glass", "the counter" or "she" where the picture needs the object; write "the pale blue crocheted glass", "the crocheted doll in her mustard jumper".
+- Each line is one yarn picture. Put "knitted", "crocheted" or "felted" and a real colour on every object ("a teal knitted sofa", "a felted puff of steam"); an object without its material comes out real. Keep a room list: every object with one material word and its colour. That word never changes: if the room list says the pouch is crocheted, every mention says "crocheted", never "knitted". Repeat the material word and colour on every mention in the picture and move columns, the doll and her hands included, even when the room list already has them. A hand always carries its material and the doll's skin colour ("her warm tan crocheted hand"), not only "her crocheted hand". Never write a bare "the glass", "the counter" or "she" where the picture needs the object; write "the pale blue crocheted glass", "the crocheted doll in her mustard jumper".
 - One move per shot: a slow gesture or one camera move, at stop-motion pace. No running or falling.
 - The turn runs at least 2 seconds, with 5 narrated words or fewer over it (or none).
 - The product arrives inside the story, in the doll's hands, in the shot where the words reach it. Close with the offer as narration and on-screen text over the still product.
@@ -96,7 +96,7 @@ For each change, write the sentence a viewer would take from it. Keep it only if
 Say who should carry the ad and why: one crocheted doll, hands only, or the product alone. For a doll, add a plain sketch (rough age, build, hair colour, clothes with fabric and colour) so the picture notes agree. The video block turns this into the avatar card, then locks the doll card in its character sheet.
 
 ### 8. Run the checks
-Run the checks in "Check before you hand it back" and fix any that fail. List any check still missed on a `CHECKS MISSED:` line, one line each, or write "none".
+Run the checks in "Check before you hand it back" and fix any that fail. Check by searching, not by memory: go through every row and look at each mention of an object, "hand", "hands", "she" and "her". List any check still missed on a `CHECKS MISSED:` line, one line each. Write "none" only after that search finds nothing; if you didn't fix a slip, name it there.
 
 ## What you hand back
 1. **Show plan:** selling idea, show job, technique, fabrics, what changes, the sentence it implies and its source.
@@ -118,7 +118,8 @@ If they pick one and that skill is added here, carry straight on with what you j
 
 ## Check before you hand it back
 - One turn; its technique fits the show job; at most one yarn-made scene change.
-- Every object has a material word and a colour.
+- Every object, in the picture and move columns, has a material word and a colour. Every hand has its material and the skin colour.
+- Each object uses the same material word as in the room list on every mention.
 - Every change has a backed sentence; nothing shows a body getting better.
 - One main doll, the same sketch every time; none speaks; no child or real person; no face close-ups.
 - The product has its true shape and only real label words.

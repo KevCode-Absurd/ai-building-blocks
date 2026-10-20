@@ -2,6 +2,8 @@ new_slug: paper-craft-video-clip-prompt-writer
 name: "Paper craft video clip prompt writer"
 summary: "Paste your paper-craft script and attach product photos. Get cut-paper image and clip prompts and an edit list."
 job: make-video-ads
+thinking: high
+thinking_why: "It runs several stages and keeps many rules at once across a long output."
 
 headline: "Paper craft video clip prompt writer"
 subhead: Give it a narrated paper-craft script and product photos. It writes an avatar card, sheets, a storyboard and clip prompts where paper moves only as paper can, stopping three times for your OK. You get every prompt and an edit list for putting the video together.

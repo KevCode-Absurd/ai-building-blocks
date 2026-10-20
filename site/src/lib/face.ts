@@ -47,13 +47,13 @@ export function drawFace(f: Face) {
   const white = CLOTH.white;
   const ink = "#1b1720";
   const style = f.hair ?? "short";
-  const longBack = style === "long" || style === "bob" || style === "ponytail";
+  const longBack = style === "long" || style === "bob" || style === "ponytail" || style === "locs";
 
   // Hair that falls behind the head and shoulders.
   if (longBack) {
     const end = style === "bob" ? 10 : 13;
     rect(3, 4, 4, end, hairD); rect(11, 4, 12, end, hairD);
-    if (style === "long") { row(13, 2, 4, hairD); row(13, 11, 13, hairD); }
+    if (style === "long" || style === "locs") { row(13, 2, 4, hairD); row(13, 11, 13, hairD); }
   }
   if (style === "afro") { rect(2, 1, 13, 9, hair); row(0, 5, 10, hair); row(10, 3, 12, hairD); }
   if (style === "curly") { rect(3, 2, 12, 8, hair); row(1, 5, 10, hair); }
@@ -123,6 +123,10 @@ export function drawFace(f: Face) {
     case "afro": row(3, 4, 11, hair); for (let x = 4; x <= 11; x++) if (x % 3 === 0) put(x, 4, hair); [3, 6, 9, 12].forEach((x) => put(x, 2, hairD)); break;
     case "wild": row(2, 3, 12, hair); row(3, 2, 13, hair); rect(2, 4, 3, 8, hair); rect(12, 4, 13, 8, hair);
       [2, 5, 8, 11, 13].forEach((x) => put(x, 1, hair)); put(1, 4, hair); put(14, 4, hair); put(1, 6, hair); put(14, 7, hair); put(5, 4, hair); put(9, 4, hair); break;
+    case "locs": // long hair in ropes: alternating light and dark strands down each side
+      row(2, 5, 10, hair); row(3, 4, 11, hair); put(4, 4, hair); put(11, 4, hair);
+      for (let y = 4; y <= 13; y++) for (const x of [2, 3, 4, 11, 12, 13]) if (y > 4 || x === 4 || x === 11) put(x, y, x % 2 ? hair : hairD);
+      [5, 7, 9].forEach((x) => put(x, 4, hairD)); break;
     case "long": case "bob": row(2, 5, 10, hair); row(3, 4, 11, hair); row(4, 4, 6, hair); put(11, 4, hair); rect(4, 5, 4, 7, hair); rect(11, 5, 11, 7, hair); break;
     case "bun": row(2, 5, 10, hair); row(3, 4, 11, hair); put(4, 4, hair); put(11, 4, hair); rect(6, 0, 9, 1, hair); put(6, 0, null); put(9, 0, null); break;
     case "ponytail": row(2, 5, 10, hair); row(3, 4, 11, hair); put(4, 4, hair); put(11, 4, hair); rect(12, 4, 13, 9, hair); put(13, 10, hair); break;

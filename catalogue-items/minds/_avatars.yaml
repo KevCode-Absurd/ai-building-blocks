@@ -254,3 +254,57 @@ ed-catmull: {skin: 1, hair: receding, hairColor: white, beard: beard, glasses: r
 kim-scott: {skin: 1, hair: long, hairColor: brown, top: blouse, color: green, mouth: smile}
 patty-mccord: {skin: 1, hair: bob, hairColor: white, glasses: square, top: jacket, color: maroon, mouth: grin}
 hamilton-helmer: {skin: 1, hair: receding, hairColor: white, glasses: square, top: sweater, color: brown}
+
+# The third group: copywriters, marketers, designers and authors
+john-caples: {skin: 1, hair: part, hairColor: dark, glasses: square, top: suit, color: navy, color2: grey}
+robert-collier: {skin: 1, hair: part, hairColor: dark, top: suit, color: grey, color2: maroon}
+victor-schwab: {skin: 1, hair: receding, hairColor: grey, glasses: round, top: suit, color: brown, color2: navy}
+john-e-kennedy: {skin: 1, hair: part, hairColor: dark, beard: mustache, top: suit, color: charcoal, color2: grey}
+bill-jayme: {skin: 1, hair: receding, hairColor: grey, glasses: thick, top: sweater, color: maroon, mouth: smile}
+david-abbott: {skin: 1, hair: part, hairColor: silver, top: suit-open, color: navy, color2: white, mouth: smile}
+howard-gossage: {skin: 1, hair: receding, hairColor: dark, top: suit-open, color: grey, color2: white, extra: bowtie}
+phyllis-k-robinson: {skin: 1, hair: bob, hairColor: dark, top: blouse, color: navy, extra: pearls, mouth: smile}
+shirley-polykoff: {skin: 1, hair: bob, hairColor: blonde, top: blouse, color: red, extra: earrings, mouth: smile}
+gary-bencivenga: {skin: 1, hair: receding, hairColor: grey, glasses: square, top: shirt, color: blue}
+clayton-makepeace: {skin: 1, hair: receding, hairColor: grey, beard: mustache, glasses: square, top: shirt, color: white, mouth: smile}
+john-carlton: {skin: 1, hair: buzz, hairColor: grey, beard: goatee, glasses: sun, top: jacket, mouth: grin}
+drayton-bird: {skin: 1, hair: receding, hairColor: white, glasses: square, top: suit-open, color: navy, color2: blue, mouth: smile}
+joanna-wiebe: {skin: 1, hair: long, hairColor: brown, top: blouse, color: teal, extra: earrings, mouth: smile}
+luke-sullivan: {skin: 1, hair: receding, hairColor: grey, glasses: square, color: green, mouth: smile}
+mark-ritson: {skin: 1, hair: buzz, hairColor: grey, beard: stubble, top: suit-open, color: charcoal, color2: white}
+les-binet: {skin: 1, hair: receding, hairColor: grey, beard: beard, glasses: round, top: jacket, color: brown}
+paul-feldwick: {skin: 1, hair: receding, hairColor: white, glasses: square, top: suit-open, color: tan, color2: blue, mouth: smile}
+bob-hoffman: {skin: 1, hair: bald, hairColor: grey, glasses: square, top: sweater, color: grey}
+jonah-berger: {skin: 1, hairColor: dark, top: shirt, color: blue, mouth: smile}
+chip-heath: {skin: 1, hair: receding, hairColor: brown, glasses: square, top: sweater, color: navy, mouth: smile}
+dharmesh-shah: {skin: 3, hair: bald, glasses: square, top: hoodie, color: orange, mouth: smile}
+scott-galloway: {skin: 1, hair: bald, hairColor: grey, top: jacket, mouth: grin}
+peep-laja: {skin: 1, hair: buzz, hairColor: brown, beard: stubble}
+herb-lubalin: {skin: 1, hair: receding, hairColor: grey, beard: mustache, glasses: thick, top: suit-open, color: grey, color2: white}
+alan-fletcher: {skin: 1, hair: curly, hairColor: grey, beard: beard, top: shirt, color: red, mouth: smile}
+otl-aicher: {skin: 1, hair: receding, hairColor: grey, glasses: round, top: turtleneck, color: charcoal}
+wim-crouwel: {skin: 1, hair: slick, hairColor: white, top: suit, color: grey, color2: black}
+april-greiman: {skin: 1, hair: spiky, hairColor: blonde, top: jacket, extra: earrings, mouth: smile}
+david-carson: {skin: 1, hair: long, hairColor: sandy, beard: stubble, color: blue, mouth: grin}
+neville-brody: {skin: 1, hair: bald, glasses: square}
+ellen-lupton: {skin: 1, hair: bob, hairColor: grey, glasses: thick, top: blouse, color: purple, extra: earrings, mouth: smile}
+erik-spiekermann: {skin: 1, hair: buzz, hairColor: white, beard: beard, glasses: square, top: shirt, color: red}
+jakob-nielsen: {skin: 1, hair: receding, hairColor: grey, glasses: round, top: shirt, color: white}
+steve-krug: {skin: 1, hair: receding, hairColor: white, beard: beard, glasses: square, top: sweater, color: green, mouth: smile}
+malcolm-gladwell: {skin: 3, hair: afro, hairColor: grey, top: shirt, color: grey, mouth: smile}
+daniel-pink: {skin: 1, hair: bald, glasses: square, top: suit-open, color: navy, color2: white, mouth: smile}
+cal-newport: {skin: 1, hair: part, hairColor: brown, top: sweater, color: navy}
+james-clear: {skin: 1, hairColor: dark, color: grey, mouth: smile}
+adam-grant: {skin: 1, hair: bald, top: suit-open, color: charcoal, color2: blue, mouth: grin}
+stephen-covey: {skin: 1, hair: bald, hairColor: grey, top: suit, color: navy, color2: red, mouth: smile}
+robert-greene: {skin: 1, hair: bald, hairColor: grey, top: jacket, color: charcoal}
+ryan-holiday: {skin: 1, hairColor: brown, beard: beard, top: shirt, color: green}
+morgan-housel: {skin: 1, hairColor: brown, top: sweater, color: grey, mouth: smile}
+william-zinsser: {skin: 1, hair: part, hairColor: white, glasses: round, top: suit, color: tan, color2: navy}
+anne-lamott: {skin: 1, hair: locs, hairColor: blonde, top: sweater, color: maroon, mouth: smile}
+steven-pressfield: {skin: 1, hair: receding, hairColor: white, top: shirt, color: tan}
+julia-cameron: {skin: 1, hair: long, hairColor: sandy, top: blouse, color: white, extra: earrings, mouth: smile}
+kurt-vonnegut: {skin: 1, hair: curly, hairColor: grey, beard: mustache, top: jacket, color: brown}
+virginia-woolf: {skin: 1, hair: bun, hairColor: brown, top: blouse, color: cream}
+leo-tolstoy: {skin: 1, hair: receding, hairColor: grey, beard: longbeard, beardColor: white, top: robe, color: cream}
+ursula-k-le-guin: {skin: 1, hair: bob, hairColor: white, top: sweater, color: teal, extra: earrings, mouth: smile}

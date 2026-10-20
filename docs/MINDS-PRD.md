@@ -182,6 +182,8 @@ Most people come here to run or grow something, so the next 100 are people who b
 
 That brings the roster to 251. Same files, rules and tests as the first 151.
 
+Then 52 more on the craft side (added the same day): **15 copywriters** (John Caples, Robert Collier, Victor Schwab, John E. Kennedy, Bill Jayme, David Abbott, Howard Gossage, Phyllis K. Robinson, Shirley Polykoff, Gary Bencivenga, Clayton Makepeace, John Carlton, Drayton Bird, Joanna Wiebe, Luke Sullivan), **9 marketers** (Mark Ritson, Les Binet, Paul Feldwick, Bob Hoffman, Jonah Berger, Chip Heath, Dharmesh Shah, Scott Galloway, Peep Laja), **11 designers** (Herb Lubalin, Alan Fletcher, Otl Aicher, Wim Crouwel, April Greiman, David Carson, Neville Brody, Ellen Lupton, Erik Spiekermann, Jakob Nielsen, Steve Krug) and **17 authors** (Malcolm Gladwell, Daniel Pink, Cal Newport, James Clear, Adam Grant, Stephen Covey, Robert Greene, Ryan Holiday, Morgan Housel, William Zinsser, Anne Lamott, Steven Pressfield, Julia Cameron, Kurt Vonnegut, Virginia Woolf, Leo Tolstoy, Ursula K. Le Guin). The roster is now 303.
+
 ## 6c · Faces
 
 Every mind has a 16 by 16 pixel portrait in black and white, drawn by the site from a few traits (`catalogue-items/minds/_avatars.yaml`, renderer `site/src/lib/face.ts`). It shows the look people picture from public photos, like a turtleneck, round glasses or wild white hair. It's never a likeness or a joke. Each face is outlined in black so every skin tone reads on the pale backdrop. It shows on the minds wall and cards, on the mind's page, on the council bar and on builder nodes. Faces blink now and then, except for people who turn motion off.

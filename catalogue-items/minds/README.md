@@ -105,7 +105,7 @@ steve-jobs: {skin: 2, hair: receding, hairColor: grey, beard: stubble, glasses: 
 | Key | Values (default first) |
 |---|---|
 | `skin` | 1 to 6, light to deep |
-| `hair` | `short`, `bald`, `receding`, `buzz`, `part`, `quiff`, `slick`, `spiky`, `curly`, `afro`, `wild`, `long`, `bob`, `bun`, `ponytail` |
+| `hair` | `short`, `bald`, `receding`, `buzz`, `part`, `quiff`, `slick`, `spiky`, `curly`, `afro`, `wild`, `long`, `bob`, `bun`, `ponytail`, `locs` |
 | `hairColor` | `black`, `dark`, `brown`, `auburn`, `red`, `blonde`, `sandy`, `grey`, `silver`, `white`, or a hex like `"#5a3a22"` |
 | `beard` | `none`, `stubble`, `mustache`, `goatee`, `beard`, `longbeard` |
 | `beardColor` | same as `hairColor`; defaults to it |

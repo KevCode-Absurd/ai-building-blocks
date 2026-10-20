@@ -794,7 +794,8 @@ test("start and end: every workflow begins at Start, saving adds End, and your n
 test("minds: every person on the roster has a black and white pixel face, and seating them puts their faces on the council bar", async ({ page }) => {
   await page.goto("/minds");
   const wall = page.getByTestId("face-wall");
-  await expect(wall.locator("svg.pface")).toHaveCount(251);
+  await expect(page.getByTestId("mind-card")).not.toHaveCount(0);
+  await expect(wall.locator("svg.pface")).toHaveCount(await page.getByTestId("mind-card").count());
   const card = page.getByTestId("mind-card").filter({ has: page.getByRole("button", { name: "Seat on council" }) }).first();
   await expect(card.locator("svg.mind-face")).toBeVisible();
   // Black and white only: every fill on a face is a grey.

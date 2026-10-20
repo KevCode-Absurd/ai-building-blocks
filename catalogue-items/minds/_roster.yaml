@@ -1,4 +1,4 @@
-# The 251 minds, by broad area. The first 151 cover every field; the second 100 are business builders. Spec: docs/MINDS-PRD.md.
+# The 303 minds, by broad area. The first 151 cover every field, the next 100 are business builders, and the last 52 are copywriters, marketers, designers and authors. Spec: docs/MINDS-PRD.md.
 # seat = the role we suggest when someone puts this person on a council. People can pick their own.
 # living: true means extra care (no invented quotes, no endorsement, no private life). See the PRD §5.
 # Folder per mind: catalogue-items/minds/<slug>/ with mind.yaml, knowledge.md, personality.md.
@@ -293,3 +293,61 @@ minds:
   - {slug: kim-scott, name: "Kim Scott", area: leadership, living: true, seat: "Radical candor"}
   - {slug: patty-mccord, name: "Patty McCord", area: leadership, living: true, seat: "Hiring and honest culture"}
   - {slug: hamilton-helmer, name: "Hamilton Helmer", area: leadership, living: true, seat: "Lasting advantage"}
+
+  # ---- The third group: copywriters, marketers, designers and authors (added 2026-10-20)
+  # Copywriters (15, area marketing)
+  - {slug: john-caples, name: "John Caples", area: marketing, living: false, seat: "Headlines that get tested"}
+  - {slug: robert-collier, name: "Robert Collier", area: marketing, living: false, seat: "Join the conversation in their head"}
+  - {slug: victor-schwab, name: "Victor Schwab", area: marketing, living: false, seat: "Copy that pulls replies"}
+  - {slug: john-e-kennedy, name: "John E. Kennedy", area: marketing, living: false, seat: "Salesmanship in print"}
+  - {slug: bill-jayme, name: "Bill Jayme", area: marketing, living: false, seat: "The envelope that gets opened"}
+  - {slug: david-abbott, name: "David Abbott", area: marketing, living: false, seat: "Wit and restraint"}
+  - {slug: howard-gossage, name: "Howard Gossage", area: marketing, living: false, seat: "Ads people want to read"}
+  - {slug: phyllis-k-robinson, name: "Phyllis K. Robinson", area: marketing, living: false, seat: "Plain, human copy"}
+  - {slug: shirley-polykoff, name: "Shirley Polykoff", area: marketing, living: false, seat: "The line people repeat"}
+  - {slug: gary-bencivenga, name: "Gary Bencivenga", area: marketing, living: true, seat: "Proof and believability"}
+  - {slug: clayton-makepeace, name: "Clayton Makepeace", area: marketing, living: false, seat: "Emotion in long copy"}
+  - {slug: john-carlton, name: "John Carlton", area: marketing, living: true, seat: "Sell like a person talks"}
+  - {slug: drayton-bird, name: "Drayton Bird", area: marketing, living: true, seat: "Direct marketing basics"}
+  - {slug: joanna-wiebe, name: "Joanna Wiebe", area: marketing, living: true, seat: "Conversion copy"}
+  - {slug: luke-sullivan, name: "Luke Sullivan", area: marketing, living: true, seat: "Creative work that isn't boring"}
+  # Marketers (9)
+  - {slug: mark-ritson, name: "Mark Ritson", area: marketing, living: true, seat: "Diagnosis before tactics"}
+  - {slug: les-binet, name: "Les Binet", area: marketing, living: true, seat: "Brand and short-term balance"}
+  - {slug: paul-feldwick, name: "Paul Feldwick", area: marketing, living: true, seat: "Fame and showmanship"}
+  - {slug: bob-hoffman, name: "Bob Hoffman", area: marketing, living: true, seat: "The skeptic of ad hype"}
+  - {slug: jonah-berger, name: "Jonah Berger", area: marketing, living: true, seat: "Why things catch on"}
+  - {slug: chip-heath, name: "Chip Heath", area: marketing, living: true, seat: "Ideas that stick"}
+  - {slug: dharmesh-shah, name: "Dharmesh Shah", area: marketing, living: true, seat: "Inbound and culture"}
+  - {slug: scott-galloway, name: "Scott Galloway", area: marketing, living: true, seat: "Brand and big-tech strategy"}
+  - {slug: peep-laja, name: "Peep Laja", area: marketing, living: true, seat: "Conversion research"}
+  # Designers (11)
+  - {slug: herb-lubalin, name: "Herb Lubalin", area: design, living: false, seat: "Type as the idea"}
+  - {slug: alan-fletcher, name: "Alan Fletcher", area: design, living: false, seat: "Playful, clever design"}
+  - {slug: otl-aicher, name: "Otl Aicher", area: design, living: false, seat: "Systems and signs"}
+  - {slug: wim-crouwel, name: "Wim Crouwel", area: design, living: false, seat: "Grids and modern type"}
+  - {slug: april-greiman, name: "April Greiman", area: design, living: true, seat: "Design and new tools"}
+  - {slug: david-carson, name: "David Carson", area: design, living: true, seat: "Break the layout"}
+  - {slug: neville-brody, name: "Neville Brody", area: design, living: true, seat: "Type with attitude"}
+  - {slug: ellen-lupton, name: "Ellen Lupton", area: design, living: true, seat: "Thinking with type"}
+  - {slug: erik-spiekermann, name: "Erik Spiekermann", area: design, living: true, seat: "Type that works"}
+  - {slug: jakob-nielsen, name: "Jakob Nielsen", area: design, living: true, seat: "Usability"}
+  - {slug: steve-krug, name: "Steve Krug", area: design, living: true, seat: "Don't make them think"}
+  # Authors (17, area writing)
+  - {slug: malcolm-gladwell, name: "Malcolm Gladwell", area: writing, living: true, seat: "The story behind the data"}
+  - {slug: daniel-pink, name: "Daniel Pink", area: writing, living: true, seat: "What really motivates people"}
+  - {slug: cal-newport, name: "Cal Newport", area: writing, living: true, seat: "Deep work and focus"}
+  - {slug: james-clear, name: "James Clear", area: writing, living: true, seat: "Habits and small gains"}
+  - {slug: adam-grant, name: "Adam Grant", area: writing, living: true, seat: "Rethinking and givers"}
+  - {slug: stephen-covey, name: "Stephen Covey", area: writing, living: false, seat: "Principles and priorities"}
+  - {slug: robert-greene, name: "Robert Greene", area: writing, living: true, seat: "Power and mastery"}
+  - {slug: ryan-holiday, name: "Ryan Holiday", area: writing, living: true, seat: "Stoic calm under pressure"}
+  - {slug: morgan-housel, name: "Morgan Housel", area: writing, living: true, seat: "Money and behaviour"}
+  - {slug: william-zinsser, name: "William Zinsser", area: writing, living: false, seat: "Clear, simple writing"}
+  - {slug: anne-lamott, name: "Anne Lamott", area: writing, living: true, seat: "Messy first drafts, bird by bird"}
+  - {slug: steven-pressfield, name: "Steven Pressfield", area: writing, living: true, seat: "Beating resistance"}
+  - {slug: julia-cameron, name: "Julia Cameron", area: writing, living: true, seat: "Creative recovery"}
+  - {slug: kurt-vonnegut, name: "Kurt Vonnegut", area: writing, living: false, seat: "Story shapes and plain style"}
+  - {slug: virginia-woolf, name: "Virginia Woolf", area: writing, living: false, seat: "Inner life on the page"}
+  - {slug: leo-tolstoy, name: "Leo Tolstoy", area: writing, living: false, seat: "The big human story"}
+  - {slug: ursula-k-le-guin, name: "Ursula K. Le Guin", area: writing, living: false, seat: "Worlds with rules"}

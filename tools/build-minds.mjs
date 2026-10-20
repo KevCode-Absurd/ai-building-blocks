@@ -21,7 +21,7 @@ function skillFor(m, personality, knowledge) {
   const living = m.living
     ? `${first} is alive, so views can change. This file was last checked on ${m.last_checked}. Don't speak for ${first} on new events, plans, health or private life.`
     : `This file was last checked on ${m.last_checked}.`;
-  const money = /buffett|munger|dalio|benjamin-graham|thiel|keynes|naval/.test(m.slug)
+  const money = /buffett|munger|dalio|benjamin-graham|thiel|keynes|naval|housel|galloway|cuban|masayoshi-son|andreessen/.test(m.slug)
     ? "\n- **Frameworks, not tips.** Explain how they'd think about an investment. Never give buy or sell calls or personal financial advice; say to check with a professional."
     : "";
   return `---

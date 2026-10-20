@@ -170,6 +170,22 @@ The machine list is `catalogue-items/minds/_roster.yaml`, with a suggested seat 
 
 The mix: 99 who have died (many in the public domain) and 52 living, about 25 women, and people from every continent but Antarctica. Living flags and years are checked again as each mind is built.
 
+## 6a · The second 100: business builders (added 2026-10-20)
+
+Most people come here to run or grow something, so the next 100 are people who built businesses, mostly founders:
+
+- **Entrepreneurs (55, area business):** Howard Schultz, Ray Kroc, Estée Lauder, Madam C.J. Walker, Andrew Carnegie, John D. Rockefeller, Konosuke Matsushita, Akio Morita, Soichiro Honda, Kazuo Inamori, Masayoshi Son, Jack Ma, Reed Hastings, Brian Chesky, Patrick Collison, Tobi Lütke, Marc Andreessen, Reid Hoffman, Mark Zuckerberg, Larry Page, Sam Altman, Yvon Chouinard, Anita Roddick, Ingvar Kamprad, Herb Kelleher, Arianna Huffington, Whitney Wolfe Herd, Melanie Perkins, Daniel Ek, N. R. Narayana Murthy, Aliko Dangote, Strive Masiyiwa, Stewart Butterfield, Drew Houston, Michael Dell, Tony Hsieh, Dietrich Mateschitz, Mark Cuban, Daymond John, Barbara Corcoran, Jason Fried, Pieter Levels, Sahil Lavingia, Tim Ferriss, Noah Kagan, Ben Horowitz, Eric Ries, Steve Blank, Guy Kawasaki, Ruth Handler, Milton Hershey, Taiichi Ohno, Brunello Cucinelli, Bernard Arnault, Marty Cagan
+- **Marketers (17):** Philip Kotler, Jack Trout, Leo Burnett, Lee Clow, Dan Wieden, George Lois, Helen Lansdowne Resor, Rosser Reeves, Ann Handley, Neil Patel, Rand Fishkin, April Dunford, Donald Miller, Dan Kennedy, Jay Abraham, Sean Ellis, Andrew Chen
+- **Designers (14):** Milton Glaser, Stefan Sagmeister, Jessica Walsh, Tibor Kalman, Susan Kare, Raymond Loewy, Michael Bierut, Debbie Millman, Aaron Draplin, Marty Neumeier, Tinker Hatfield, Virgil Abloh, Kenya Hara, Josef Müller-Brockmann
+- **Sellers (7):** Jeffrey Gitomer, Mark Roberge, Aaron Ross, Jill Konrath, Matthew Dixon, Jeb Blount, Elmer Wheeler
+- **Operators and strategists (7, area leadership):** Satya Nadella, Lisa Su, Mary Barra, Ed Catmull, Kim Scott, Patty McCord, Hamilton Helmer
+
+That brings the roster to 251. Same files, rules and tests as the first 151.
+
+## 6c · Faces
+
+Every mind has a 16 by 16 pixel portrait in black and white, drawn by the site from a few traits (`catalogue-items/minds/_avatars.yaml`, renderer `site/src/lib/face.ts`). It shows the look people picture from public photos, like a turtleneck, round glasses or wild white hair. It's never a likeness or a joke. Each face is outlined in black so every skin tone reads on the pale backdrop. It shows on the minds wall and cards, on the mind's page, on the council bar and on builder nodes. Faces blink now and then, except for people who turn motion off.
+
 ## 6b · Start, end and your own notes in the builder
 
 Kevin, 20 Oct: "you have a start node in the beginning and an end node … once you save the workflow, the end node automatically gets appended", and "if they tap it, they can add more stuff to the skill … that gets pushed as instructions when they download the workflow".

@@ -4,6 +4,7 @@ import { useScrollTyped, useSeen, useTyped } from "./lib/typing";
 import { type Block, formatOf, kindInfo, loadPage, pathOf, taskOf } from "./lib/data";
 import { Link } from "./lib/router";
 import { ThinkBars } from "./Gauge";
+import PixelFace from "./PixelFace";
 import { kits, useStore } from "./lib/store";
 
 /** The mark: a 3 by 3 grid of blocks, like bits. Solid on the corners and centre, faint between. */
@@ -112,7 +113,7 @@ export const BlockCard = memo(function BlockCard({ b }: { b: Block }) {
     <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake}
       style={{ "--pat": `var(--pat-${taskOf(b).id})` } as CSSProperties}>
       <span className="meta"><span className="kind">{kind.name}</span>{b.thinking && <ThinkBars level={b.thinking} />}<span className="type">{fmt ? (fmt === "image" ? "Image ad" : "Video ad") : taskOf(b).name}</span></span>
-      <span className="nm">{b.name}</span>
+      <span className="nm">{b.type === "mind" && <PixelFace face={b.face} area={b.area} slug={b.slug} size={32} className="card-face" />}{b.name}</span>
       <Peek text={b.summary} round={round} />
       <span className="view"><Decode text={view} round={round} /><ArrowIcon size={12} /></span>
     </Link>

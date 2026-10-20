@@ -7,6 +7,7 @@ import {
 import "@xyflow/react/dist/base.css";
 import { SearchIcon } from "./ui";
 import { type Block, type Catalogue, KINDS, TASKS, kindOf, loadPage, portLabel, taskOf, wireSteps } from "./lib/data";
+import PixelFace from "./PixelFace";
 import { suggestNext } from "./lib/suggest";
 import { type Flow, QUEUED, flows, takeQueued, uid, useStore } from "./lib/store";
 import { buildHandoffZip, download, finalOutputs, needsOf, orderFlow, typeMismatches, zipName } from "./lib/handoff";
@@ -45,7 +46,7 @@ const BlockNodeView = memo(function BlockNodeView({ id, data }: NodeProps<BlockN
     <div key={data.run ?? 0} className={`node${data.run ? " running" : ""}`} style={{ "--d": `${data.delay ?? 0}s`, "--t": `${STEP_S}s` } as CSSProperties} data-testid="flow-node">
       <Handle type="target" position={Position.Left} />
       <div className="top">{b ? <span className="kind">{KINDS.find((k) => k.id === kindOf(b))!.name}</span> : <span className="small">Missing block</span>}<span className="step-n">{data.step ? `Step ${data.step}` : ""}</span></div>
-      <div className="nm">{b?.name ?? data.slug}</div>
+      <div className="nm">{b?.type === "mind" && <PixelFace face={b.face} area={b.area} slug={b.slug} size={28} className="node-face" />}{b?.name ?? data.slug}</div>
       {(data.role || data.notes) && <div className="node-role" data-testid="node-role">{data.role ? `Role: ${data.role}` : "Has your notes"}</div>}
       {b && (
         <div className="io">

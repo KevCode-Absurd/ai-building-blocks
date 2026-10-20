@@ -1,0 +1,256 @@
+# A pixel portrait for every mind on the roster, drawn in black and white by site/src/lib/face.ts.
+# Traits and defaults: README.md, "Avatars". The look people picture from public photos, never a likeness or a joke.
+
+jeff-bezos: {skin: 1, hair: bald, top: shirt, color: blue, mouth: grin}
+steve-jobs: {skin: 2, hair: receding, hairColor: grey, beard: stubble, glasses: round, top: turtleneck}
+elon-musk: {skin: 1, hairColor: dark}
+bill-gates: {skin: 1, hair: part, hairColor: sandy, glasses: square, top: sweater, color: blue, mouth: smile}
+warren-buffett: {skin: 1, hair: part, hairColor: white, glasses: thick, top: suit, color: navy, color2: red, mouth: grin}
+charlie-munger: {skin: 1, hair: bald, hairColor: grey, glasses: thick, top: suit, color: charcoal, color2: navy}
+sam-walton: {skin: 1, hair: receding, hairColor: grey, hat: cap, hatColor: blue, top: shirt, color: white, mouth: grin}
+henry-ford: {skin: 1, hair: part, hairColor: grey, top: suit, color: grey, color2: black}
+walt-disney: {skin: 1, hair: slick, hairColor: dark, beard: mustache, top: suit, color: tan, color2: maroon, mouth: smile}
+sara-blakely: {skin: 1, hair: long, hairColor: blonde, top: blouse, color: red, extra: earrings, mouth: grin}
+phil-knight: {skin: 1, hair: receding, hairColor: silver, glasses: sun, top: jacket}
+richard-branson: {skin: 1, hair: long, hairColor: blonde, beard: goatee, beardColor: white, top: shirt, color: white, mouth: grin}
+ratan-tata: {skin: 3, hair: receding, hairColor: white, glasses: square, top: suit, color: navy, color2: grey, mouth: smile}
+indra-nooyi: {skin: 4, hair: bob, hairColor: dark, top: suit-open, color: maroon, extra: earrings, mouth: smile}
+oprah-winfrey: {skin: 5, hair: curly, hairColor: dark, top: blouse, color: purple, extra: earrings, mouth: grin}
+paul-graham: {skin: 1, hair: receding, hairColor: grey, color: grey}
+naval-ravikant: {skin: 3, hair: buzz, beard: stubble, color: navy, mouth: smile}
+jensen-huang: {skin: 2, hair: part, hairColor: silver, top: jacket, mouth: smile}
+ray-dalio: {skin: 1, hair: receding, hairColor: white, top: suit-open, color: navy, color2: white}
+benjamin-graham: {skin: 1, hair: part, hairColor: grey, top: suit, color: brown, color2: navy}
+peter-thiel: {skin: 1, hair: part, hairColor: brown, top: suit-open, color: navy, color2: white}
+alex-hormozi: {skin: 2, hair: slick, hairColor: dark, beard: beard}
+dale-carnegie: {skin: 1, hair: part, hairColor: dark, glasses: round, top: suit, color: grey, color2: navy, mouth: smile}
+zig-ziglar: {skin: 1, hair: receding, hairColor: grey, top: suit, color: blue, color2: red, mouth: grin}
+robert-cialdini: {skin: 1, hair: part, hairColor: silver, top: suit-open, color: charcoal, color2: blue, mouth: smile}
+chris-voss: {skin: 1, hair: buzz, hairColor: grey, beard: goatee, top: suit-open, mouth: smile}
+brian-tracy: {skin: 1, hair: receding, hairColor: white, top: suit, color: navy, color2: red, mouth: smile}
+joe-girard: {skin: 1, hair: slick, hairColor: dark, top: suit, color: grey, color2: red, mouth: grin}
+mary-kay-ash: {skin: 1, hair: bob, hairColor: blonde, top: blouse, color: pink, extra: pearls, mouth: smile}
+neil-rackham: {skin: 1, hair: receding, hairColor: white, glasses: square, top: suit-open, color: grey}
+jim-rohn: {skin: 1, hair: part, hairColor: silver, top: suit, color: navy, color2: maroon, mouth: smile}
+david-ogilvy: {skin: 1, hair: part, hairColor: sandy, top: suit, color: brown, color2: red}
+claude-hopkins: {skin: 1, hair: part, hairColor: dark, glasses: round, top: suit, color2: grey}
+eugene-schwartz: {skin: 1, hair: receding, hairColor: dark, glasses: thick, top: suit, color: grey, color2: navy}
+gary-halbert: {skin: 1, hair: part, hairColor: grey, beard: mustache, top: shirt, color: blue}
+bill-bernbach: {skin: 1, hair: receding, hairColor: grey, top: suit, color: grey, color2: navy, mouth: smile}
+joseph-sugarman: {skin: 1, hair: receding, hairColor: grey, glasses: sun, top: shirt, color: teal, mouth: smile}
+seth-godin: {skin: 1, hair: bald, glasses: thick, top: shirt, color: yellow, mouth: smile}
+al-ries: {skin: 1, hair: part, hairColor: white, glasses: square, top: suit, color: navy, color2: red}
+rory-sutherland: {skin: 1, hair: receding, hairColor: sandy, glasses: round, top: suit-open, color: purple, color2: pink, mouth: grin}
+byron-sharp: {skin: 1, hairColor: grey, glasses: square, top: shirt, color: blue}
+gary-vaynerchuk: {skin: 1, hair: buzz, hairColor: dark, beard: stubble, top: hoodie, color: navy, mouth: grin}
+russell-brunson: {skin: 1, hair: quiff, hairColor: brown, top: suit-open, color: blue, color2: white, mouth: grin}
+mrbeast: {skin: 1, hairColor: brown, beard: beard, top: hoodie, color: blue, mouth: grin}
+mary-wells-lawrence: {skin: 1, hair: bob, hairColor: blonde, top: blouse, color: cream, extra: pearls, mouth: smile}
+sun-tzu: {skin: 3, hair: bun, beard: longbeard, top: robe, color: maroon}
+winston-churchill: {skin: 1, hair: bald, hairColor: sandy, top: suit-open, color: charcoal, color2: navy, extra: bowtie}
+abraham-lincoln: {skin: 1, hairColor: dark, beard: beard, hat: tophat, hatColor: black, top: suit-open, color2: black, extra: bowtie}
+nelson-mandela: {skin: 5, hairColor: white, top: shirt, color: gold, mouth: grin}
+mahatma-gandhi: {skin: 4, hair: bald, hairColor: white, beard: mustache, glasses: round, top: robe, color: cream, mouth: smile}
+peter-drucker: {skin: 1, hair: bald, hairColor: grey, glasses: thick, top: suit, color: grey, color2: navy}
+andy-grove: {skin: 1, hair: curly, hairColor: grey, glasses: square, top: suit-open, color: navy}
+clayton-christensen: {skin: 1, hair: part, hairColor: grey, glasses: square, top: suit, color: navy, color2: red, mouth: smile}
+michael-porter: {skin: 1, hair: receding, hairColor: grey, top: suit, color: charcoal, color2: blue}
+jim-collins: {skin: 1, hairColor: grey, top: shirt, color: green, mouth: smile}
+simon-sinek: {skin: 1, hairColor: dark, top: jacket, color: navy, mouth: smile}
+john-wooden: {skin: 1, hair: part, hairColor: white, glasses: square, top: suit, color: blue, color2: gold, mouth: smile}
+dieter-rams: {skin: 1, hair: part, hairColor: white, top: sweater, color: grey}
+jony-ive: {skin: 1, hair: bald, beard: stubble, beardColor: grey, color: grey}
+paul-rand: {skin: 1, hair: bald, hairColor: grey, glasses: thick, top: suit-open, color: grey, color2: red, extra: bowtie}
+saul-bass: {skin: 1, hair: receding, hairColor: grey, beard: beard, glasses: square, top: sweater, color: orange}
+massimo-vignelli: {skin: 1, hair: receding, hairColor: white, glasses: round, top: suit-open}
+charles-and-ray-eames: {skin: 1, hair: part, hairColor: dark, top: suit-open, color: tan, color2: navy, extra: bowtie, mouth: smile}
+zaha-hadid: {skin: 3, hair: long, hairColor: dark, top: blouse, extra: earrings}
+frank-lloyd-wright: {skin: 1, hairColor: white, hat: fedora, hatColor: tan, top: suit-open, color: brown, color2: cream, extra: bowtie}
+don-norman: {skin: 1, hair: receding, hairColor: white, beard: beard, glasses: square, top: shirt, color: blue, mouth: smile}
+coco-chanel: {skin: 1, hair: bob, hairColor: dark, top: jacket, color: cream, color2: black, extra: pearls}
+paula-scher: {skin: 1, hair: curly, hairColor: grey, top: blouse, color: red, mouth: smile}
+william-shakespeare: {skin: 1, hair: receding, hairColor: brown, beard: goatee, top: ruff, extra: earrings}
+jane-austen: {skin: 1, hair: curly, hairColor: brown, hat: wrap, hatColor: white, top: blouse, color: cream}
+ernest-hemingway: {skin: 1, hairColor: white, beard: beard, top: sweater, color: cream, mouth: smile}
+mark-twain: {skin: 1, hair: wild, hairColor: white, beard: mustache, top: suit-open, color: white, color2: black, extra: bowtie}
+maya-angelou: {skin: 5, hairColor: grey, hat: wrap, hatColor: orange, top: blouse, color: teal, extra: earrings, mouth: smile}
+charles-dickens: {skin: 1, hair: part, hairColor: brown, beard: beard, top: suit, color: brown, color2: maroon}
+george-orwell: {skin: 1, hair: quiff, hairColor: dark, beard: mustache, top: suit, color: brown, color2: tan}
+agatha-christie: {skin: 1, hair: curly, hairColor: grey, top: blouse, color: blue, extra: pearls, mouth: smile}
+stephen-king: {skin: 1, hair: part, hairColor: grey, glasses: square, top: shirt, color: green}
+toni-morrison: {skin: 5, hair: long, hairColor: silver, top: blouse, color: maroon, extra: scarf, mouth: smile}
+rumi: {skin: 3, beard: longbeard, hat: turban, hatColor: tan, top: robe, color: brown}
+emily-dickinson: {skin: 1, hair: bun, hairColor: auburn, top: blouse, color: white}
+oscar-wilde: {skin: 1, hair: long, hairColor: brown, top: suit-open, color: green, color2: cream, extra: scarf}
+edgar-allan-poe: {skin: 1, hair: wild, hairColor: dark, beard: mustache, top: suit-open, color2: black, extra: bowtie}
+jrr-tolkien: {skin: 1, hair: part, hairColor: grey, top: suit, color: brown, color2: green, mouth: smile}
+rabindranath-tagore: {skin: 3, hair: long, hairColor: white, beard: longbeard, top: robe, color: brown}
+leonardo-da-vinci: {skin: 1, hair: long, hairColor: white, beard: longbeard, top: robe, color: maroon}
+pablo-picasso: {skin: 2, hair: bald, color: white}
+vincent-van-gogh: {skin: 1, hair: buzz, hairColor: red, beard: beard, top: jacket, color: blue}
+frida-kahlo: {skin: 3, hair: bun, hat: headband, hatColor: red, top: blouse, color: teal, extra: earrings}
+salvador-dali: {skin: 2, hair: slick, hairColor: dark, beard: mustache, top: suit, color: navy, color2: gold}
+andy-warhol: {skin: 1, hair: spiky, hairColor: silver, top: turtleneck}
+katsushika-hokusai: {skin: 2, hair: bald, hairColor: grey, top: kimono, color: navy}
+alfred-hitchcock: {skin: 1, hair: receding, hairColor: dark, top: suit, color2: black}
+stanley-kubrick: {skin: 1, hair: wild, hairColor: dark, beard: beard, top: jacket, color: green}
+akira-kurosawa: {skin: 2, hair: part, hairColor: grey, glasses: sun, hat: cap, hatColor: cream, top: jacket, color: grey}
+hayao-miyazaki: {skin: 2, hair: part, hairColor: white, beard: beard, glasses: thick, top: shirt, color: white, mouth: smile}
+christopher-nolan: {skin: 1, hair: part, hairColor: sandy, top: suit-open, color: navy, color2: blue}
+jerry-seinfeld: {skin: 1, hair: part, hairColor: dark, top: suit-open, color: grey, mouth: grin}
+wolfgang-amadeus-mozart: {skin: 1, hair: ponytail, hairColor: white, top: jacket, color: red, color2: white, extra: scarf}
+ludwig-van-beethoven: {skin: 2, hair: wild, hairColor: dark, top: jacket, color: charcoal, color2: red, extra: scarf}
+quincy-jones: {skin: 5, hair: buzz, hairColor: grey, beard: mustache, top: suit-open, color: purple, mouth: smile}
+rick-rubin: {skin: 1, hair: long, hairColor: white, beard: longbeard, glasses: sun, color: white}
+ar-rahman: {skin: 4, hair: curly, hairColor: dark, beard: stubble, top: shirt, mouth: smile}
+david-bowie: {skin: 1, hair: spiky, hairColor: red, top: suit-open, color: teal}
+robert-mckee: {skin: 1, hair: part, hairColor: white, glasses: square, top: suit-open, color: grey}
+albert-einstein: {skin: 1, hair: wild, hairColor: white, beard: mustache, top: sweater, color: grey, mouth: smile}
+isaac-newton: {skin: 1, hair: long, hairColor: silver, top: robe, color: maroon}
+marie-curie: {skin: 1, hair: bun, hairColor: brown, top: blouse}
+richard-feynman: {skin: 1, hair: part, hairColor: brown, top: shirt, color: white, mouth: grin}
+charles-darwin: {skin: 1, hair: bald, hairColor: white, beard: longbeard, top: suit-open}
+nikola-tesla: {skin: 1, hair: part, beard: mustache, top: suit, color: charcoal, color2: black}
+carl-sagan: {skin: 1, hair: part, hairColor: dark, top: turtleneck, color: maroon, mouth: smile}
+galileo-galilei: {skin: 1, hair: receding, hairColor: grey, beard: beard, top: robe}
+stephen-hawking: {skin: 1, hair: part, hairColor: brown, glasses: square, top: shirt, color: blue, mouth: smile}
+jane-goodall: {skin: 1, hair: ponytail, hairColor: silver, top: shirt, color: tan, mouth: smile}
+srinivasa-ramanujan: {skin: 4, top: suit-open, color: grey}
+thomas-edison: {skin: 1, hair: part, hairColor: grey, top: suit-open, color: charcoal, color2: black, extra: bowtie}
+katherine-johnson: {skin: 4, hair: curly, hairColor: dark, glasses: thick, top: blouse, color: blue, extra: pearls, mouth: smile}
+rosalind-franklin: {skin: 1, hair: bob, hairColor: dark, top: labcoat, color: white}
+alan-turing: {skin: 1, hair: part, hairColor: dark, top: suit, color: tan, color2: navy}
+ada-lovelace: {skin: 1, hair: bun, hairColor: dark, top: blouse, color: blue}
+grace-hopper: {skin: 1, hairColor: white, top: suit, color: navy, color2: black, mouth: smile}
+linus-torvalds: {skin: 1, hair: receding, hairColor: sandy, glasses: square, color: blue}
+donald-knuth: {skin: 1, hair: bald, hairColor: white, glasses: square, top: sweater, color: green, mouth: smile}
+steve-wozniak: {skin: 1, hair: curly, hairColor: grey, beard: beard, glasses: square, top: shirt, color: blue, mouth: grin}
+john-carmack: {skin: 1, hair: receding, hairColor: sandy, glasses: square}
+andrej-karpathy: {skin: 1, hairColor: dark, top: hoodie, color: grey, mouth: smile}
+margaret-hamilton: {skin: 1, hair: long, hairColor: brown, glasses: thick, top: blouse, color: cream, mouth: smile}
+tim-berners-lee: {skin: 1, hair: receding, hairColor: sandy, top: suit-open, color: navy, mouth: smile}
+kent-beck: {skin: 1, hair: receding, hairColor: grey, beard: beard, glasses: square, top: shirt, color: orange, mouth: smile}
+demis-hassabis: {skin: 2, hairColor: dark, top: suit-open, color: grey, mouth: smile}
+fei-fei-li: {skin: 2, hair: long, top: blouse, color: teal, mouth: smile}
+socrates: {skin: 2, hair: bald, hairColor: grey, beard: longbeard, top: robe, color: green}
+aristotle: {skin: 2, hairColor: grey, beard: longbeard, top: robe, color: blue}
+confucius: {skin: 2, hair: bun, hairColor: grey, beard: longbeard, top: robe, color: navy}
+lao-tzu: {skin: 2, hair: bald, hairColor: white, beard: longbeard, top: robe, color: yellow}
+marcus-aurelius: {skin: 1, hair: curly, hairColor: brown, beard: beard, top: robe, color: purple}
+seneca: {skin: 1, hair: receding, hairColor: grey, beard: beard, top: robe, color: cream}
+friedrich-nietzsche: {skin: 1, hair: part, hairColor: brown, beard: mustache, top: suit, color2: black}
+niccolo-machiavelli: {skin: 1, hairColor: dark, top: robe, color: maroon}
+benjamin-franklin: {skin: 1, hair: long, hairColor: grey, glasses: round, top: jacket, color: brown, mouth: smile}
+adam-smith: {skin: 1, hair: ponytail, hairColor: white, top: suit-open, color: navy, color2: white, extra: scarf}
+john-maynard-keynes: {skin: 1, hair: part, hairColor: dark, beard: mustache, top: suit, color: grey, color2: navy}
+daniel-kahneman: {skin: 1, hair: receding, hairColor: grey, glasses: square, top: shirt, color: blue, mouth: smile}
+carl-jung: {skin: 1, hair: receding, hairColor: white, beard: mustache, glasses: round, top: suit, color: grey, color2: black}
+viktor-frankl: {skin: 1, hair: receding, hairColor: grey, glasses: thick, top: suit, color: charcoal, color2: blue, mouth: smile}
+nassim-taleb: {skin: 2, hair: bald, beard: beard, beardColor: grey, top: shirt, color: white}
+yuval-noah-harari: {skin: 1, hair: buzz, hairColor: grey, top: shirt, color: grey}
+brene-brown: {skin: 1, hair: long, hairColor: blonde, top: jacket, color: blue, mouth: grin}
+joseph-campbell: {skin: 1, hair: part, hairColor: white, top: suit, color: grey, color2: maroon, mouth: smile}
+thich-nhat-hanh: {skin: 2, hair: bald, hat: beanie, hatColor: brown, top: robe, color: brown, mouth: smile}
+bruce-lee: {skin: 2, top: jacket, color: yellow}
+
+# The second 100: business builders
+howard-schultz: {skin: 2, hairColor: grey, top: suit-open, color: navy, mouth: smile}
+ray-kroc: {skin: 2, hair: slick, hairColor: grey, top: suit, color: grey, color2: red, mouth: smile}
+estee-lauder: {skin: 1, hair: bob, hairColor: blonde, top: blouse, color: blue, extra: pearls, mouth: smile}
+madam-cj-walker: {skin: 5, hair: bun, top: blouse, color: cream, extra: pearls}
+andrew-carnegie: {skin: 2, hair: receding, hairColor: white, beard: beard, top: suit, color2: black}
+john-d-rockefeller: {skin: 2, hair: bald, hairColor: white, top: suit, color2: grey}
+konosuke-matsushita: {skin: 3, hair: part, hairColor: grey, glasses: round, top: suit, color: charcoal, color2: navy, mouth: smile}
+akio-morita: {skin: 3, hair: slick, hairColor: silver, top: suit, color: navy, color2: red, mouth: smile}
+soichiro-honda: {skin: 3, hairColor: grey, glasses: round, top: jacket, color: white, mouth: grin}
+kazuo-inamori: {skin: 3, hair: bald, hairColor: grey, glasses: square, top: suit, color: grey, color2: navy}
+masayoshi-son: {skin: 3, hair: bald, top: suit, color2: blue, mouth: smile}
+jack-ma: {skin: 3, top: suit-open, color: navy, mouth: grin}
+reed-hastings: {skin: 2, hairColor: grey, top: shirt, color: blue, mouth: smile}
+brian-chesky: {skin: 2, hairColor: dark, top: jacket, color: charcoal, mouth: smile}
+patrick-collison: {skin: 1, hairColor: auburn, top: sweater, color: navy, mouth: smile}
+tobi-lutke: {skin: 1, hair: buzz, hairColor: sandy, beard: stubble, top: hoodie, color: charcoal, mouth: smile}
+marc-andreessen: {skin: 1, hair: bald, hairColor: sandy, top: shirt, color: blue}
+reid-hoffman: {skin: 2, hair: receding, hairColor: brown, top: sweater, color: maroon, mouth: smile}
+mark-zuckerberg: {skin: 1, hairColor: brown, color: grey}
+larry-page: {skin: 2, hairColor: grey, top: shirt, color: charcoal}
+sam-altman: {skin: 2, hairColor: brown, top: sweater, color: green}
+yvon-chouinard: {skin: 2, hairColor: grey, top: shirt, color: maroon, mouth: smile}
+anita-roddick: {skin: 2, hair: curly, hairColor: dark, top: blouse, color: green, mouth: grin}
+ingvar-kamprad: {skin: 1, hair: part, hairColor: white, top: sweater, color: blue, mouth: smile}
+herb-kelleher: {skin: 2, hair: slick, hairColor: white, top: suit-open, color: navy, mouth: grin}
+arianna-huffington: {skin: 2, hair: long, hairColor: auburn, top: blouse, extra: earrings, mouth: smile}
+whitney-wolfe-herd: {skin: 1, hair: long, hairColor: blonde, top: blouse, color: yellow, mouth: smile}
+melanie-perkins: {skin: 1, hair: long, hairColor: brown, top: blouse, color: purple, mouth: smile}
+daniel-ek: {skin: 1, hair: bald, hairColor: brown, beard: stubble, color: green}
+narayana-murthy: {skin: 4, hair: part, hairColor: white, glasses: square, top: suit, color: grey, color2: navy}
+aliko-dangote: {skin: 6, hair: buzz, top: robe, color: white, mouth: smile}
+strive-masiyiwa: {skin: 6, hair: buzz, hairColor: grey, glasses: square, top: suit, color: navy, color2: red, mouth: smile}
+stewart-butterfield: {skin: 1, hairColor: brown, beard: stubble, top: shirt, color: purple, mouth: grin}
+drew-houston: {skin: 1, hairColor: brown, color: blue, mouth: smile}
+michael-dell: {skin: 1, hairColor: grey, top: suit-open, color: navy, mouth: smile}
+tony-hsieh: {skin: 3, hair: buzz, color: teal, mouth: smile}
+dietrich-mateschitz: {skin: 1, hair: long, hairColor: grey, beard: stubble, top: jacket, color: navy}
+mark-cuban: {skin: 1, hairColor: dark, color: blue, mouth: grin}
+daymond-john: {skin: 6, hair: bald, beard: goatee, top: suit-open, mouth: smile}
+barbara-corcoran: {skin: 1, hair: bob, hairColor: blonde, top: blouse, color: red, mouth: grin}
+jason-fried: {skin: 1, hairColor: dark, glasses: round, top: sweater, color: grey}
+pieter-levels: {skin: 2, hair: long, hairColor: brown, beard: beard, color: white, mouth: grin}
+sahil-lavingia: {skin: 4, color: pink, mouth: smile}
+tim-ferriss: {skin: 1, hair: buzz, hairColor: brown, color: charcoal, mouth: smile}
+noah-kagan: {skin: 1, hair: buzz, hairColor: dark, beard: stubble, color: orange, mouth: grin}
+ben-horowitz: {skin: 2, hair: bald, hairColor: dark, top: suit-open}
+eric-ries: {skin: 1, hairColor: dark, glasses: square, top: shirt, color: blue, mouth: smile}
+steve-blank: {skin: 1, hair: receding, hairColor: grey, glasses: square, top: shirt, color: navy, mouth: smile}
+guy-kawasaki: {skin: 3, hair: receding, hairColor: grey, top: shirt, color: teal, mouth: grin}
+ruth-handler: {skin: 1, hair: curly, hairColor: brown, top: blouse, color: pink, extra: pearls, mouth: smile}
+milton-hershey: {skin: 1, hair: receding, hairColor: grey, beard: mustache, top: suit, color: brown, color2: black}
+taiichi-ohno: {skin: 3, hair: buzz, hairColor: grey, glasses: square, top: jacket, color: tan}
+brunello-cucinelli: {skin: 2, hair: curly, hairColor: silver, top: sweater, color: cream, mouth: smile}
+bernard-arnault: {skin: 1, hair: part, hairColor: grey, top: suit, color: navy, color2: navy}
+marty-cagan: {skin: 1, hairColor: grey, glasses: square, top: shirt, color: white, mouth: smile}
+philip-kotler: {skin: 1, hair: receding, hairColor: white, glasses: square, top: suit, color: grey, color2: red, mouth: smile}
+jack-trout: {skin: 1, hair: part, hairColor: grey, glasses: square, top: suit, color: navy, color2: blue}
+leo-burnett: {skin: 1, hair: receding, hairColor: grey, glasses: thick, top: suit, color: charcoal, color2: navy}
+lee-clow: {skin: 1, hair: long, hairColor: white, beard: beard, top: shirt, color: orange, mouth: smile}
+dan-wieden: {skin: 1, hairColor: white, beard: beard, glasses: round, top: jacket}
+george-lois: {skin: 2, hairColor: white, top: suit, color2: red, mouth: grin}
+helen-lansdowne-resor: {skin: 1, hair: bun, hairColor: brown, top: blouse, color: cream, extra: pearls}
+rosser-reeves: {skin: 1, hair: slick, hairColor: dark, top: suit, color: grey, color2: maroon}
+ann-handley: {skin: 1, hair: bob, hairColor: blonde, top: blouse, color: teal, mouth: grin}
+neil-patel: {skin: 4, top: shirt, color: white, mouth: smile}
+rand-fishkin: {skin: 1, hair: receding, hairColor: dark, beard: mustache, top: sweater, color: yellow, mouth: grin}
+april-dunford: {skin: 1, hair: bob, hairColor: blonde, glasses: thick, top: blouse, mouth: smile}
+donald-miller: {skin: 1, hairColor: brown, beard: beard, top: sweater, color: navy, mouth: smile}
+dan-kennedy: {skin: 1, hair: receding, hairColor: grey, beard: goatee, glasses: square, top: suit, color2: red}
+jay-abraham: {skin: 2, hair: slick, hairColor: grey, top: suit-open, mouth: smile}
+sean-ellis: {skin: 1, hairColor: brown, top: shirt, color: green, mouth: smile}
+andrew-chen: {skin: 3, glasses: square, top: jacket, color: grey, mouth: smile}
+milton-glaser: {skin: 1, hair: receding, hairColor: white, glasses: round, top: suit-open, color2: red, mouth: smile}
+stefan-sagmeister: {skin: 1, hair: bald, hairColor: dark, beard: beard, color: white}
+jessica-walsh: {skin: 1, hair: long, hairColor: dark, top: blouse, color: pink, mouth: smile}
+tibor-kalman: {skin: 1, hair: curly, hairColor: dark, glasses: round, top: shirt, color: white}
+susan-kare: {skin: 1, hair: bob, hairColor: brown, top: sweater, color: red, mouth: smile}
+raymond-loewy: {skin: 1, hair: slick, hairColor: dark, beard: mustache, top: suit, color: tan, color2: navy}
+michael-bierut: {skin: 1, hair: receding, hairColor: grey, glasses: thick, top: suit-open, color: navy, mouth: smile}
+debbie-millman: {skin: 1, hair: bob, hairColor: blonde, top: jacket, mouth: smile}
+aaron-draplin: {skin: 1, hairColor: brown, beard: longbeard, hat: cap, hatColor: orange, color: navy, mouth: grin}
+marty-neumeier: {skin: 1, hairColor: white, beard: goatee, top: jacket}
+tinker-hatfield: {skin: 1, hairColor: silver, beard: goatee, glasses: square, hat: fedora, hatColor: black, top: jacket, color: brown, mouth: smile}
+virgil-abloh: {skin: 6, hair: buzz, beard: stubble, top: hoodie, color: white, mouth: smile}
+kenya-hara: {skin: 3, hairColor: grey, glasses: round, top: shirt, color: white}
+josef-muller-brockmann: {skin: 1, hair: receding, hairColor: grey, glasses: thick, top: suit, color: grey, color2: black}
+jeffrey-gitomer: {skin: 1, hair: receding, hairColor: grey, beard: goatee, top: suit-open, color: red, mouth: grin}
+mark-roberge: {skin: 1, hairColor: brown, top: suit-open, color: navy, mouth: smile}
+aaron-ross: {skin: 1, hairColor: brown, top: shirt, color: green, mouth: smile}
+jill-konrath: {skin: 1, hair: bob, hairColor: silver, top: blouse, color: teal, extra: earrings, mouth: smile}
+matthew-dixon: {skin: 1, hairColor: brown, glasses: square, top: suit-open, color: grey}
+jeb-blount: {skin: 1, hair: bald, hairColor: grey, beard: goatee, top: suit-open, mouth: smile}
+elmer-wheeler: {skin: 1, hair: slick, hairColor: dark, glasses: round, top: suit, color: brown, color2: maroon, mouth: smile}
+satya-nadella: {skin: 4, hair: bald, beard: stubble, beardColor: grey, glasses: square, top: sweater, color: blue, mouth: smile}
+lisa-su: {skin: 3, hair: bob, top: jacket, color: red, mouth: smile}
+mary-barra: {skin: 1, hair: bob, hairColor: sandy, top: jacket, extra: earrings, mouth: smile}
+ed-catmull: {skin: 1, hair: receding, hairColor: white, beard: beard, glasses: round, top: shirt, color: tan, mouth: smile}
+kim-scott: {skin: 1, hair: long, hairColor: brown, top: blouse, color: green, mouth: smile}
+patty-mccord: {skin: 1, hair: bob, hairColor: white, glasses: square, top: jacket, color: maroon, mouth: grin}
+hamilton-helmer: {skin: 1, hair: receding, hairColor: white, glasses: square, top: sweater, color: brown}

@@ -15,6 +15,7 @@ import AddToFlow from "./AddToFlow";
 import Install from "./Install";
 import { Before, Next, WhatYouGet } from "./Needs";
 import { Gauge } from "./Gauge";
+import PixelFace from "./PixelFace";
 import { useSeen, useTyped } from "./lib/typing";
 
 // A list item that YAML read as a small map ("Check: this") still shows as text.
@@ -184,6 +185,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
           <Link to="/#library" className="back"><span aria-hidden="true">←</span> Library</Link>
           <button className="link-btn tailor-link" onClick={() => openTailor(b.name)} data-testid="tailor-open">Want this skill tailored for you?</button>
         </div>
+        {b.type === "mind" && <PixelFace face={b.face} area={b.area} slug={b.slug} size={112} className="bp-face" />}
         <p className="bp-kicker"><span className="kind">{kind.name}</span><Link to={`/?job=${task.id}#library`}>{task.name}</Link></p>
         <h1 className="bp-h1">{p?.headline || b.name}</h1>
         <p className="bp-sub">{p?.subhead || b.summary}</p>

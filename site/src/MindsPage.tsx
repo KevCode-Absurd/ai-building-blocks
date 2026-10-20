@@ -1,8 +1,9 @@
 // /minds: the people you can borrow a way of thinking from (docs/MINDS-PRD.md §4). Use one alone from its page,
 // or seat a few here and open the council in the builder: Start → the minds side by side → Advisory council → End.
-import { useEffect, useMemo, useState } from "react";
+import { type CSSProperties, useEffect, useMemo, useState } from "react";
 import { type Catalogue, type RosterMind, pathOf } from "./lib/data";
 import { Link } from "./lib/router";
+import PixelFace from "./PixelFace";
 
 const MAX = 7;
 const COUNCIL = "advisory-council";
@@ -28,6 +29,7 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
         <h1 className="bp-h1">Borrow a great mind</h1>
         <p className="bp-sub">Ask Bezos about your operations, have Shakespeare write your toast, or put Munger, Hormozi and Jobs on a council and let them argue your decision. Each one is built from their public work, and they're AI voices, not the real people.</p>
         <p className="bp-file"><span>{built} of {roster.length} ready</span><span>The rest are being built</span></p>
+        <FaceWall roster={roster} />
       </header>
 
       <section className="wrap minds-body">
@@ -46,6 +48,7 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
 
       <div className={`council-bar${seated.length ? " open" : ""}`} aria-live="polite" data-testid="council-bar">
         <div className="wrap council-in">
+          <span className="council-faces" aria-hidden="true">{seated.map((s) => { const r = roster.find((m) => m.slug === s); return <PixelFace key={s} face={r?.face} area={r?.area} slug={s} size={28} />; })}</span>
           <span className="council-names">{seated.length ? <><b>Your council:</b> {seated.map((s) => c.bySlug[s]?.name.split(" (")[0] ?? s).join(", ")}</> : "Seat up to seven minds to start a council."}</span>
           {seated.length > 0 && <button className="link-btn" onClick={() => setSeated([])}>Clear</button>}
           <button className="btn btn-primary btn-sm" disabled={!seated.length} onClick={open} data-testid="open-council">Open the council in the builder</button>
@@ -60,8 +63,8 @@ function MindCard({ m, c, on, full, onToggle }: { m: RosterMind; c: Catalogue; o
   return (
     <li className={`mind${m.built ? "" : " soon"}${on ? " on" : ""}`} data-testid="mind-card" data-slug={m.slug}>
       <div className="mind-top">
-        <span className="mind-area">{c.minds?.areas[m.area] ?? m.area}</span>
-        {b?.years && <span className="mind-years">{b.years}</span>}
+        <PixelFace face={m.face} area={m.area} slug={m.slug} size={56} className="mind-face" />
+        <span className="mind-meta"><span className="mind-area">{c.minds?.areas[m.area] ?? m.area}</span>{b?.years && <span className="mind-years">{b.years}</span>}</span>
       </div>
       {b ? <Link to={pathOf(b)} className="mind-name">{m.name}</Link> : <span className="mind-name">{m.name}</span>}
       <span className="mind-seat">Seat: {m.seat}</span>
@@ -69,5 +72,18 @@ function MindCard({ m, c, on, full, onToggle }: { m: RosterMind; c: Catalogue; o
         ? <button className="btn btn-ghost btn-sm mind-seat-btn" aria-pressed={on} disabled={!on && full} onClick={() => onToggle(m.slug)} data-testid="seat-mind">{on ? "Seated" : "Seat on council"}</button>
         : <span className="mind-soon">Being built</span>}
     </li>
+  );
+}
+
+/** Every face on the roster in one pixel wall, so you can see who's in the room before you pick an area. */
+function FaceWall({ roster }: { roster: RosterMind[] }) {
+  return (
+    <div className="face-wall" aria-hidden="true" data-testid="face-wall">
+      {roster.map((m, i) => (
+        <span key={m.slug} className={m.built ? "" : "soon"} style={{ "--w": `${((i * 37) % roster.length) / roster.length}s` } as CSSProperties}>
+          <PixelFace face={m.face} area={m.area} slug={m.slug} size={24} />
+        </span>
+      ))}
+    </div>
   );
 }

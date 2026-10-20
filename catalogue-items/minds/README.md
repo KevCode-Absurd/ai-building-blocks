@@ -93,3 +93,27 @@ How to sound like them without caricature: what to keep, what to overdo less. On
 - **Political and religious figures:** their leadership and ideas from the record. Nothing on today's politics.
 - **Plain English, grade 10 or below, no em dashes, no AI tells** (see `brand/COPYWRITING.md`).
 - **General use cases:** "a small business", "a team", "a writer", not one industry.
+
+## Avatars (`_avatars.yaml`)
+
+Every mind on the roster, built or not, gets a small pixel portrait: a 16 by 16 face drawn by the site from a few traits in `_avatars.yaml` (renderer: `site/src/lib/face.ts`). One line per person, keyed by slug. Pick the traits from how the person is best known in public photos: the look people picture, not a likeness. Draw what's iconic (Jobs's black turtleneck and round glasses, Einstein's wild white hair, Shakespeare's ruff, Bezos bald with a grin). Never anything mocking.
+
+```yaml
+steve-jobs: {skin: 2, hair: receding, hairColor: grey, beard: stubble, glasses: round, top: turtleneck, color: black, mouth: neutral}
+```
+
+| Key | Values (default first) |
+|---|---|
+| `skin` | 1 to 6, light to deep |
+| `hair` | `short`, `bald`, `receding`, `buzz`, `part`, `quiff`, `slick`, `spiky`, `curly`, `afro`, `wild`, `long`, `bob`, `bun`, `ponytail` |
+| `hairColor` | `black`, `dark`, `brown`, `auburn`, `red`, `blonde`, `sandy`, `grey`, `silver`, `white`, or a hex like `"#5a3a22"` |
+| `beard` | `none`, `stubble`, `mustache`, `goatee`, `beard`, `longbeard` |
+| `beardColor` | same as `hairColor`; defaults to it |
+| `glasses` | `none`, `round`, `square`, `thick`, `sun` |
+| `hat` | `none`, `cap`, `beanie`, `beret`, `fedora`, `tophat`, `laurel`, `headband`, `turban`, `wrap` |
+| `hatColor` | a colour name or hex |
+| `top` | `tee`, `shirt`, `suit` (with tie), `suit-open`, `turtleneck`, `hoodie`, `sweater`, `robe`, `ruff`, `blouse`, `kimono`, `labcoat`, `jacket` |
+| `color` | main clothing colour: `black`, `white`, `navy`, `grey`, `charcoal`, `red`, `blue`, `green`, `brown`, `tan`, `purple`, `pink`, `yellow`, `orange`, `teal`, `cream`, `gold`, `maroon`, or a hex |
+| `color2` | tie, bow tie or inner layer colour |
+| `extra` | `none`, `pearls`, `earrings`, `chain`, `bowtie`, `scarf` |
+| `mouth` | `neutral`, `smile`, `grin` |

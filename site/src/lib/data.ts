@@ -1,3 +1,4 @@
+import type { Face } from "./face";
 import { useEffect, useState } from "react";
 import { migrateSlugs } from "./store";
 
@@ -29,6 +30,7 @@ export type Block = {
   also?: string[];
   years?: string;
   living?: boolean;
+  face?: Face;
   inputs: Port[];
   outputs: Port[];
   uses: string[];
@@ -80,7 +82,7 @@ export type Page = {
   /** Markdown already turned into HTML by the index build. */
   html: { explain: string; skill: string };
 };
-export type RosterMind = { slug: string; name: string; area: string; seat: string; living: boolean; built: boolean };
+export type RosterMind = { slug: string; name: string; area: string; seat: string; living: boolean; built: boolean; face?: Face };
 export type Catalogue = { built: string; portTypes: Record<string, string | null>; renamed: Record<string, string>; minds?: { areas: Record<string, string>; roster: RosterMind[] }; blocks: Block[]; bySlug: Record<string, Block> };
 
 export const ROLES: { id: Role; name: string; does: string }[] = [

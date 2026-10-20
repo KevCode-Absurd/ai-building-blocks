@@ -99,6 +99,9 @@ for (const category of ["general", "ecommerce", "orchestrators"]) {
 // a SKILL.md made by tools/build-minds.mjs; its page is put together here from mind.yaml and knowledge.md.
 const MINDS = path.join(ROOT, "minds");
 const roster = fs.existsSync(path.join(MINDS, "_roster.yaml")) ? YAML.parse(fs.readFileSync(path.join(MINDS, "_roster.yaml"), "utf8")) : { areas: {}, minds: [] };
+// Pixel portraits, one line per mind (catalogue-items/minds/_avatars.yaml), drawn by src/lib/face.ts.
+const faces = fs.existsSync(path.join(MINDS, "_avatars.yaml")) ? YAML.parse(fs.readFileSync(path.join(MINDS, "_avatars.yaml"), "utf8")) ?? {} : {};
+for (const r of roster.minds) if (!faces[r.slug]) problems.push(`minds/_avatars.yaml has no face for ${r.slug}`);
 for (const r of roster.minds) {
   const folder = path.join(MINDS, r.slug);
   const yamlPath = path.join(folder, "mind.yaml"), skillPath = path.join(folder, "SKILL.md");
@@ -137,7 +140,7 @@ for (const r of roster.minds) {
     slug: r.slug, name: m.name, summary: m.summary, headline: m.name,
     task: "think-with-minds", category: "mind", boards: [], type: "mind", role: "make", job: "minds", level: "beginner",
     thinking: "medium", thinkingWhy: "It plays one voice from a written data set. Use your strongest model when the stakes are high.",
-    seats: m.seats.map((s) => s.seat), area: m.area, also: m.also ?? [], years: m.years ?? "", living: !!m.living,
+    seats: m.seats.map((s) => s.seat), area: m.area, also: m.also ?? [], years: m.years ?? "", living: !!m.living, face: faces[r.slug] ?? {},
     inputs: [{ type: "question", required: true }], outputs: [{ type: "mind_view", required: true }],
     uses: [], steps: [], origin: "own", tested: null, version: String(m.version ?? "1.0.0"), words: skill.split(/\s+/).length,
     twin: null, files: [], added: fs.statSync(yamlPath).mtime.toISOString().slice(0, 10),
@@ -190,7 +193,7 @@ const portTypes = Object.fromEntries([...usedTypes].sort().map((t) => [t, typeDe
 const renamedFile = path.join(ROOT, "renamed.json");
 const renamed = fs.existsSync(renamedFile) ? Object.fromEntries(Object.entries(JSON.parse(fs.readFileSync(renamedFile, "utf8"))).filter(([, to]) => blocks.some((b) => b.slug === to))) : {};
 // The whole roster goes too, so /minds can show who's coming before their files are built.
-const minds = { areas: roster.areas ?? {}, roster: roster.minds.map((m) => ({ slug: m.slug, name: m.name, area: m.area, seat: m.seat, living: !!m.living, built: !!bySlug[m.slug] })) };
+const minds = { areas: roster.areas ?? {}, roster: roster.minds.map((m) => ({ slug: m.slug, name: m.name, area: m.area, seat: m.seat, living: !!m.living, built: !!bySlug[m.slug], face: faces[m.slug] ?? {} })) };
 fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new Date().toISOString().slice(0, 10), portTypes, renamed, minds, blocks }));
 // Every page, for search engines: the home page, each block, the mini tools and the apps. The saved example app
 // (public/example-app) is left out: it's a copy of another app, marked noindex.

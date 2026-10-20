@@ -1,4 +1,4 @@
-# The 151 minds, by broad area. Spec: docs/MINDS-PRD.md.
+# The 251 minds, by broad area. The first 151 cover every field; the second 100 are business builders. Spec: docs/MINDS-PRD.md.
 # seat = the role we suggest when someone puts this person on a council. People can pick their own.
 # living: true means extra care (no invented quotes, no endorsement, no private life). See the PRD §5.
 # Folder per mind: catalogue-items/minds/<slug>/ with mind.yaml, knowledge.md, personality.md.
@@ -159,7 +159,7 @@ minds:
   - {slug: steve-wozniak, name: "Steve Wozniak", area: coding, living: true, seat: "Elegant hardware"}
   - {slug: john-carmack, name: "John Carmack", area: coding, living: true, seat: "Performance and focus"}
   - {slug: andrej-karpathy, name: "Andrej Karpathy", area: coding, living: true, seat: "AI from scratch"}
-  - {slug: margaret-hamilton, name: "Margaret Hamilton", area: coding, living: true, seat: "Software that can't fail"}
+  - {slug: margaret-hamilton, name: "Margaret Hamilton", area: coding, living: false, seat: "Software that can't fail"}
   - {slug: tim-berners-lee, name: "Tim Berners-Lee", area: coding, living: true, seat: "The open web"}
   - {slug: kent-beck, name: "Kent Beck", area: coding, living: true, seat: "Tests and small steps"}
   - {slug: demis-hassabis, name: "Demis Hassabis", area: coding, living: true, seat: "AI research strategy"}
@@ -186,3 +186,110 @@ minds:
   - {slug: joseph-campbell, name: "Joseph Campbell", area: thinking, living: false, seat: "The hero's journey"}
   - {slug: thich-nhat-hanh, name: "Thich Nhat Hanh", area: thinking, living: false, seat: "Mindful attention"}
   - {slug: bruce-lee, name: "Bruce Lee", area: thinking, living: false, seat: "Adapt (be like water)"}
+
+  # ---- The second 100: business builders (added 2026-10-20). Mostly founders, then marketers, designers, sellers and operators.
+  # Entrepreneurs (55)
+  - {slug: howard-schultz, name: "Howard Schultz", area: business, living: true, seat: "Customer experience at scale"}
+  - {slug: ray-kroc, name: "Ray Kroc", area: business, living: false, seat: "Systems and franchising"}
+  - {slug: estee-lauder, name: "Estée Lauder", area: business, living: false, seat: "Selling face to face"}
+  - {slug: madam-cj-walker, name: "Madam C.J. Walker", area: business, living: false, seat: "Building from the ground up"}
+  - {slug: andrew-carnegie, name: "Andrew Carnegie", area: business, living: false, seat: "Cost control and reinvestment"}
+  - {slug: john-d-rockefeller, name: "John D. Rockefeller", area: business, living: false, seat: "Efficiency and consolidation"}
+  - {slug: konosuke-matsushita, name: "Konosuke Matsushita", area: business, living: false, seat: "Purpose and patience"}
+  - {slug: akio-morita, name: "Akio Morita", area: business, living: false, seat: "Making a market that isn't there yet"}
+  - {slug: soichiro-honda, name: "Soichiro Honda", area: business, living: false, seat: "Engineering and failure"}
+  - {slug: kazuo-inamori, name: "Kazuo Inamori", area: business, living: false, seat: "Unit economics for every team"}
+  - {slug: masayoshi-son, name: "Masayoshi Son", area: business, living: true, seat: "The 300-year bet"}
+  - {slug: jack-ma, name: "Jack Ma", area: business, living: true, seat: "Small businesses and the long haul"}
+  - {slug: reed-hastings, name: "Reed Hastings", area: business, living: true, seat: "Culture and reinvention"}
+  - {slug: brian-chesky, name: "Brian Chesky", area: business, living: true, seat: "Founder mode and design"}
+  - {slug: patrick-collison, name: "Patrick Collison", area: business, living: true, seat: "Speed and craft"}
+  - {slug: tobi-lutke, name: "Tobi Lütke", area: business, living: true, seat: "Tools for merchants"}
+  - {slug: marc-andreessen, name: "Marc Andreessen", area: business, living: true, seat: "Product-market fit"}
+  - {slug: reid-hoffman, name: "Reid Hoffman", area: business, living: true, seat: "Networks and blitzscaling"}
+  - {slug: mark-zuckerberg, name: "Mark Zuckerberg", area: business, living: true, seat: "Speed and long bets"}
+  - {slug: larry-page, name: "Larry Page", area: business, living: true, seat: "10x thinking"}
+  - {slug: sam-altman, name: "Sam Altman", area: business, living: true, seat: "Startup advice and ambition"}
+  - {slug: yvon-chouinard, name: "Yvon Chouinard", area: business, living: true, seat: "Mission over growth"}
+  - {slug: anita-roddick, name: "Anita Roddick", area: business, living: false, seat: "Values as the brand"}
+  - {slug: ingvar-kamprad, name: "Ingvar Kamprad", area: business, living: false, seat: "Low prices by design"}
+  - {slug: herb-kelleher, name: "Herb Kelleher", area: business, living: false, seat: "People first, low cost"}
+  - {slug: arianna-huffington, name: "Arianna Huffington", area: business, living: true, seat: "Media and wellbeing"}
+  - {slug: whitney-wolfe-herd, name: "Whitney Wolfe Herd", area: business, living: true, seat: "Building for women"}
+  - {slug: melanie-perkins, name: "Melanie Perkins", area: business, living: true, seat: "Making hard things simple"}
+  - {slug: daniel-ek, name: "Daniel Ek", area: business, living: true, seat: "Platforms and creators"}
+  - {slug: narayana-murthy, name: "N. R. Narayana Murthy", area: business, living: true, seat: "Integrity and discipline"}
+  - {slug: aliko-dangote, name: "Aliko Dangote", area: business, living: true, seat: "Building in hard markets"}
+  - {slug: strive-masiyiwa, name: "Strive Masiyiwa", area: business, living: true, seat: "Rules and resilience"}
+  - {slug: stewart-butterfield, name: "Stewart Butterfield", area: business, living: true, seat: "What you're really selling"}
+  - {slug: drew-houston, name: "Drew Houston", area: business, living: true, seat: "Simple products for everyone"}
+  - {slug: michael-dell, name: "Michael Dell", area: business, living: true, seat: "Selling direct"}
+  - {slug: tony-hsieh, name: "Tony Hsieh", area: business, living: false, seat: "Service as the product"}
+  - {slug: dietrich-mateschitz, name: "Dietrich Mateschitz", area: business, living: false, seat: "Creating a category"}
+  - {slug: mark-cuban, name: "Mark Cuban", area: business, living: true, seat: "Sales effort and hustle"}
+  - {slug: daymond-john, name: "Daymond John", area: business, living: true, seat: "Doing more with less"}
+  - {slug: barbara-corcoran, name: "Barbara Corcoran", area: business, living: true, seat: "Bouncing back from rejection"}
+  - {slug: jason-fried, name: "Jason Fried", area: business, living: true, seat: "Calm, small and profitable"}
+  - {slug: pieter-levels, name: "Pieter Levels", area: business, living: true, seat: "Ship it solo"}
+  - {slug: sahil-lavingia, name: "Sahil Lavingia", area: business, living: true, seat: "The minimalist founder"}
+  - {slug: tim-ferriss, name: "Tim Ferriss", area: business, living: true, seat: "Doing less, better"}
+  - {slug: noah-kagan, name: "Noah Kagan", area: business, living: true, seat: "Validate before you build"}
+  - {slug: ben-horowitz, name: "Ben Horowitz", area: business, living: true, seat: "When things go wrong"}
+  - {slug: eric-ries, name: "Eric Ries", area: business, living: true, seat: "Test the idea first"}
+  - {slug: steve-blank, name: "Steve Blank", area: business, living: true, seat: "Get out of the building"}
+  - {slug: guy-kawasaki, name: "Guy Kawasaki", area: business, living: true, seat: "Pitching and evangelism"}
+  - {slug: ruth-handler, name: "Ruth Handler", area: business, living: false, seat: "Toys and what kids want"}
+  - {slug: milton-hershey, name: "Milton Hershey", area: business, living: false, seat: "Trying again after failure"}
+  - {slug: taiichi-ohno, name: "Taiichi Ohno", area: business, living: false, seat: "Waste and flow"}
+  - {slug: brunello-cucinelli, name: "Brunello Cucinelli", area: business, living: true, seat: "Craft and dignity at work"}
+  - {slug: bernard-arnault, name: "Bernard Arnault", area: business, living: true, seat: "Luxury and desire"}
+  - {slug: marty-cagan, name: "Marty Cagan", area: business, living: true, seat: "Product discovery"}
+  # Marketing (17)
+  - {slug: philip-kotler, name: "Philip Kotler", area: marketing, living: true, seat: "Marketing strategy"}
+  - {slug: jack-trout, name: "Jack Trout", area: marketing, living: false, seat: "Positioning against rivals"}
+  - {slug: leo-burnett, name: "Leo Burnett", area: marketing, living: false, seat: "Characters and warmth"}
+  - {slug: lee-clow, name: "Lee Clow", area: marketing, living: true, seat: "Big brand ideas"}
+  - {slug: dan-wieden, name: "Dan Wieden", area: marketing, living: false, seat: "Brave work"}
+  - {slug: george-lois, name: "George Lois", area: marketing, living: false, seat: "The big idea, fast"}
+  - {slug: helen-lansdowne-resor, name: "Helen Lansdowne Resor", area: marketing, living: false, seat: "Writing for women buyers"}
+  - {slug: rosser-reeves, name: "Rosser Reeves", area: marketing, living: false, seat: "The one selling point"}
+  - {slug: ann-handley, name: "Ann Handley", area: marketing, living: true, seat: "Content people want"}
+  - {slug: neil-patel, name: "Neil Patel", area: marketing, living: true, seat: "Search and traffic"}
+  - {slug: rand-fishkin, name: "Rand Fishkin", area: marketing, living: true, seat: "Audience research"}
+  - {slug: april-dunford, name: "April Dunford", area: marketing, living: true, seat: "Positioning for products"}
+  - {slug: donald-miller, name: "Donald Miller", area: marketing, living: true, seat: "Clear brand message"}
+  - {slug: dan-kennedy, name: "Dan Kennedy", area: marketing, living: true, seat: "Direct response"}
+  - {slug: jay-abraham, name: "Jay Abraham", area: marketing, living: true, seat: "Hidden growth levers"}
+  - {slug: sean-ellis, name: "Sean Ellis", area: marketing, living: true, seat: "Growth experiments"}
+  - {slug: andrew-chen, name: "Andrew Chen", area: marketing, living: true, seat: "Network effects and growth"}
+  # Design (14)
+  - {slug: milton-glaser, name: "Milton Glaser", area: design, living: false, seat: "Ideas you can see"}
+  - {slug: stefan-sagmeister, name: "Stefan Sagmeister", area: design, living: true, seat: "Design that makes you feel"}
+  - {slug: jessica-walsh, name: "Jessica Walsh", area: design, living: true, seat: "Bold brand identity"}
+  - {slug: tibor-kalman, name: "Tibor Kalman", area: design, living: false, seat: "Breaking the rules"}
+  - {slug: susan-kare, name: "Susan Kare", area: design, living: true, seat: "Icons and small screens"}
+  - {slug: raymond-loewy, name: "Raymond Loewy", area: design, living: false, seat: "Most advanced yet acceptable"}
+  - {slug: michael-bierut, name: "Michael Bierut", area: design, living: true, seat: "Logos and identity systems"}
+  - {slug: debbie-millman, name: "Debbie Millman", area: design, living: true, seat: "Brands and meaning"}
+  - {slug: aaron-draplin, name: "Aaron Draplin", area: design, living: true, seat: "Simple, honest marks"}
+  - {slug: marty-neumeier, name: "Marty Neumeier", area: design, living: true, seat: "Brand strategy"}
+  - {slug: tinker-hatfield, name: "Tinker Hatfield", area: design, living: true, seat: "Product with a story"}
+  - {slug: virgil-abloh, name: "Virgil Abloh", area: design, living: false, seat: "Culture and remix"}
+  - {slug: kenya-hara, name: "Kenya Hara", area: design, living: true, seat: "Emptiness and restraint"}
+  - {slug: josef-muller-brockmann, name: "Josef Müller-Brockmann", area: design, living: false, seat: "Grids and order"}
+  # Sales (7)
+  - {slug: jeffrey-gitomer, name: "Jeffrey Gitomer", area: sales, living: true, seat: "Why people buy"}
+  - {slug: mark-roberge, name: "Mark Roberge", area: sales, living: true, seat: "Sales as a science"}
+  - {slug: aaron-ross, name: "Aaron Ross", area: sales, living: true, seat: "Predictable pipeline"}
+  - {slug: jill-konrath, name: "Jill Konrath", area: sales, living: true, seat: "Selling to busy buyers"}
+  - {slug: matthew-dixon, name: "Matthew Dixon", area: sales, living: true, seat: "Teach, tailor, take control"}
+  - {slug: jeb-blount, name: "Jeb Blount", area: sales, living: true, seat: "Prospecting every day"}
+  - {slug: elmer-wheeler, name: "Elmer Wheeler", area: sales, living: false, seat: "Sell the sizzle"}
+  # Leadership and strategy (7)
+  - {slug: satya-nadella, name: "Satya Nadella", area: leadership, living: true, seat: "Turnaround and culture"}
+  - {slug: lisa-su, name: "Lisa Su", area: leadership, living: true, seat: "Execution and roadmaps"}
+  - {slug: mary-barra, name: "Mary Barra", area: leadership, living: true, seat: "Big change in an old company"}
+  - {slug: ed-catmull, name: "Ed Catmull", area: leadership, living: true, seat: "Creative teams"}
+  - {slug: kim-scott, name: "Kim Scott", area: leadership, living: true, seat: "Radical candor"}
+  - {slug: patty-mccord, name: "Patty McCord", area: leadership, living: true, seat: "Hiring and honest culture"}
+  - {slug: hamilton-helmer, name: "Hamilton Helmer", area: leadership, living: true, seat: "Lasting advantage"}

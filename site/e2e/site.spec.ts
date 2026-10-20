@@ -790,3 +790,20 @@ test("start and end: every workflow begins at Start, saving adds End, and your n
   expect(skill).toMatch(/^---[\s\S]*?---\s*\n## Your notes for this step/);
   expect(skill).toContain("- **Instructions:** Read the reviews first.");
 });
+
+test("minds: every person on the roster has a black and white pixel face, and seating them puts their faces on the council bar", async ({ page }) => {
+  await page.goto("/minds");
+  const wall = page.getByTestId("face-wall");
+  await expect(wall.locator("svg.pface")).toHaveCount(251);
+  const card = page.getByTestId("mind-card").filter({ has: page.getByRole("button", { name: "Seat on council" }) }).first();
+  await expect(card.locator("svg.mind-face")).toBeVisible();
+  // Black and white only: every fill on a face is a grey.
+  const fills = await card.locator("svg.mind-face path").evaluateAll((ps) => ps.map((p) => p.getAttribute("fill") ?? ""));
+  expect(fills.length).toBeGreaterThan(3);
+  for (const f of fills) expect(f).toMatch(/^#([0-9a-f]{2})\1\1$/);
+  await card.getByTestId("seat-mind").click();
+  await expect(page.getByTestId("council-bar").locator(".council-faces svg")).toHaveCount(1);
+  const slug = await card.getAttribute("data-slug");
+  await page.goto(`/minds/${slug}`);
+  await expect(page.locator("svg.bp-face")).toBeVisible();
+});

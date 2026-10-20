@@ -880,3 +880,25 @@ a.mind-name:hover { text-decoration: underline; text-underline-offset: 3px; }
 .seats { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .seats li { padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); }
 .seats li span { display: block; font-size: 14px; color: var(--muted); }
+
+/* Pixel portraits for minds (PixelFace.tsx): black and white, hard edges, and a blink now and then. */
+.pface { display: block; flex: none; image-rendering: pixelated; outline: 1px solid var(--text); outline-offset: -1px; }
+.pface-eyes { transform-box: fill-box; transform-origin: center; animation: pf-blink 7s steps(1) infinite; animation-delay: var(--blink-delay, 0s); }
+@keyframes pf-blink { 0%, 95% { transform: none; } 96% { transform: scaleY(0); } 98% { transform: none; } }
+.card-face, .node-face { display: inline-block; vertical-align: middle; margin: -4px 8px 0 0; }
+.bp-face { margin: 0 0 18px; box-shadow: var(--hard); }
+.mind-top { align-items: flex-start; }
+.mind-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.mind:hover .pface-eyes { animation-duration: 1.4s; }
+.face-wall { display: flex; flex-wrap: wrap; gap: 0; margin-top: 28px; max-width: 100%; }
+@media (max-width: 640px) { .face-wall { max-height: 144px; overflow: hidden; } }
+.face-wall > span { animation: pf-in 0.5s steps(4) both; animation-delay: calc(var(--w, 0s) * 1.4); }
+.face-wall > span.soon { opacity: 0.4; }
+.face-wall > span.soon .pface { filter: contrast(0.7); }
+.face-wall .pface { outline: none; }
+@keyframes pf-in { from { opacity: 0; } }
+.face-wall > span.soon { animation-name: pf-in-soon; }
+@keyframes pf-in-soon { from { opacity: 0; } to { opacity: 0.4; } }
+.council-faces { display: flex; gap: 4px; }
+.council-faces:empty { display: none; }
+@media (prefers-reduced-motion: reduce) { .pface-eyes, .face-wall > span { animation: none; } }

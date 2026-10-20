@@ -228,6 +228,17 @@ Kevin, 20 Oct: the point of a mind is "basically hiring them". For example, hiri
   The after version won 48 of 70 head to head, lost 6 and tied 16. Bernbach gained no new sources and still won 6 of 7, so the playbook alone moves the score. Voice gained least, so the thin-voice minds get a further pass.
 - **Cost rule (Kevin, 20 Oct):** no Claude API credits. Tests and judging run as subagents on the subscription. Each job gets the cheapest model that does it well: Haiku for checks and sweeps, Sonnet for writing, research and judging, and Opus only for design work.
 
+## 6e · Later: minds on steps, overseers and team councils (Kevin, 20 Oct)
+
+Not built yet. This is the next builder round, after 6b.
+
+- **A mind on any step.** Assign a person to a step: the copy step written like Claude Hopkins, the prompt designed by a great prompt writer, the script by Shakespeare. The step's skill does the job, and the mind's playbook and voice shape how it's done. Steps connect as they do now.
+- **An overseer for a whole workflow.** One mind sits above the workflow, checks each step's output against its method and sends weak work back once before it moves on.
+- **Team councils.** You sit at the top with up to six minds below you. A council runs in one of two modes, chosen when you set it up:
+  - **Split by expertise.** The task is broken into parts, each part goes to the mind best suited to it, and one final answer pulls the parts together.
+  - **Decide together.** Every mind gets the whole task, they argue it among themselves (the current Advisory council rounds) and hand you one agreed output.
+- **In the pack.** The assigned mind, the overseer and the council mode go into `workflow.json` and `HANDOFF.md`, and the mind's folder ships with the step, so it still works in any chat.
+
 ## 7 · Build order
 
 | Step | What | Who |

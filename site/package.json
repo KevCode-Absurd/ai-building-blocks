@@ -8,6 +8,7 @@
     "dev": "npm run index && vite",
     "build": "npm run index && tsc -b && vite build",
     "preview": "vite preview",
+    "crawl": "node scripts/crawl.mjs",
     "test:e2e": "playwright test",
     "test:unit": "node --test test/comments.test.mjs test/spaces.test.mjs"
   },

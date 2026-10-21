@@ -35,12 +35,12 @@ const GitHubMark = () => (
 
 /** Who made an imported skill: a pill to its GitHub folder, and its original name turning into ours, block by block. */
 function Credit({ b, source }: { b: Block; source: NonNullable<Block["source"]> }) {
-  const { original, commit } = source as typeof source & { original?: string; commit?: string };
+  const { original, commit } = source;
   return (
     <div className="bp-credit" data-testid="credit-line">
-      <a className="gh-pill" href={source.url} target="_blank" rel="noopener noreferrer" data-testid="gh-pill" aria-label={`See the original on GitHub: ${source.repo}`}>
-        <GitHubMark /><span className="gh-repo">{source.repo}</span><span className="gh-lic">{licenceName(source.licence)}</span>
-      </a>
+      {source.url && <a className="gh-pill" href={source.url} target="_blank" rel="noopener noreferrer" data-testid="gh-pill" aria-label={`See the original on GitHub: ${source.repo}`}>
+        <GitHubMark /><span className="gh-repo">{source.repo}</span><span className="gh-lic">{licenceName(source.licence ?? "")}</span>
+      </a>}
       {original && original !== b.name && (
         <p className="gh-rename" aria-label={`First called ${original}, now ${b.name}`}>
           <code>{original}</code>
@@ -228,7 +228,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
         <p className="bp-kicker"><span className="kind">{kind.name}</span><Link to={`/?job=${task.id}#library`}>{task.name}</Link></p>
         <h1 className="bp-h1">{p?.headline || b.name}</h1>
         <p className="bp-sub">{p?.subhead || b.summary}</p>
-        {b.origin === "imported" && b.source && <Credit b={b} source={b.source} />}
+        {b.origin === "imported" && b.source && <Credit b={b} source={{ ...b.source, ...p?.source }} />}
         {b.warnings?.includes("scrapes") && (
           <p className="bp-warn" data-testid="scrapes-note" role="note">
             <b>This skill scrapes websites.</b> It collects data from web pages. Before you run it, check each site's terms, follow its robots.txt and go slowly so you don't overload it. Don't collect people's personal details.

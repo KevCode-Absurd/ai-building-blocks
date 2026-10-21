@@ -46,7 +46,7 @@ export type Block = {
   steps: { uses: string; note: string }[];
   origin: "own" | "rebuilt" | "imported";
   /** For an imported skill: who made it, where it came from and its licence (item.yaml `source`). */
-  source?: { by: string; repo: string; url: string; licence: string; original?: string; commit?: string };
+  source?: Source;
   /** Things to know before using it, shown as labels: "scrapes" = it collects data from websites, "paid:<service>" = it needs a paid account with that service (item.yaml `warnings`). */
   warnings?: string[];
   /** The last test run on the example business, if there was one. */
@@ -95,6 +95,8 @@ export type Page = {
   words?: number; added?: string; tested?: { on: string; result: "pass" | "fail"; business: string; model?: string; judge?: string };
   /** Why the block needs the thinking level it has (moved here from blocks.json to keep the library small). */
   thinkingWhy?: string;
+  /** An imported skill's full source: blocks.json keeps only `by`, to stay small. */
+  source?: Source;
   /** Markdown already turned into HTML by the index build. */
   html: { explain: string; skill: string };
 };
@@ -363,3 +365,6 @@ export const functionsOf = (b: Block) => {
 
 /** The paid service a block needs, from its "paid:<service>" warning, or "". */
 export const paidService = (b: { warnings?: string[] }) => b.warnings?.find((w) => w.startsWith("paid:"))?.slice(5) ?? "";
+
+/** Where an imported skill came from (item.yaml `source`). The library list only carries `by`; the rest comes with the page. */
+export type Source = { by: string; repo?: string; url?: string; licence?: string; original?: string; commit?: string };

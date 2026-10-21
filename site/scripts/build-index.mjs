@@ -232,6 +232,8 @@ for (const b of blocks) {
   delete b.thinkingWhy;
   // Facts only the block's own page shows (or nothing does) travel with the page, not in blocks.json.
   pageData.words = b.words; pageData.added = b.added; if (b.tested) pageData.tested = b.tested;
+  // An imported skill's GitHub link, licence, first name and commit are only shown on its page; the list keeps just the maker.
+  if (b.source) pageData.source = b.source;
   fs.writeFileSync(f, JSON.stringify(pageData));
 }
 
@@ -247,14 +249,14 @@ const minds = { areas: roster.areas ?? {}, roster: roster.minds.map((m) => ({ sl
 for (const b of blocks) if (b.files.length) fs.writeFileSync(path.join(OUT_SKILLS, b.slug, "_files.json"), JSON.stringify(b.files));
 // blocks.json is loaded by every page, so each block is sent as small as it can be: fields the list, search, home page and
 // builder never read are left out, and a value equal to its default is left out too. loadCatalogue (lib/data.ts) puts them back.
-const DEFAULTS = { category: "general", type: "skill", role: "make", level: "intermediate", thinking: "medium", origin: "own", version: "1.0.0", usedIn: 0 };
+const DEFAULTS = { category: "general", type: "skill", role: "make", job: "ops", level: "intermediate", thinking: "medium", origin: "own", version: "1.0.0", usedIn: 0 };
 const wire = (b) => {
   const o = {};
   for (const [k, v] of Object.entries(b)) {
     if (["words", "added", "files", "tested"].includes(k)) continue; // page JSON, or _files.json
     if (k === "headline") { if (v === b.name) continue; } // same as the name: left out; no page at all: sent as ""
     else if (k in DEFAULTS ? v === DEFAULTS[k] : v == null || v === "" || (Array.isArray(v) && !v.length)) continue;
-    o[k] = k === "inputs" || k === "outputs" ? v.map((p) => (p.required ? p.type : `${p.type}?`)) : k === "steps" ? v.map((x) => (x.note ? [x.uses, x.note] : x.uses)) : v;
+    o[k] = k === "inputs" || k === "outputs" ? v.map((p) => (p.required ? p.type : `${p.type}?`)) : k === "steps" ? v.map((x) => (x.note ? [x.uses, x.note] : x.uses)) : k === "source" ? { by: v.by } : v;
   }
   if (b.files.length) o.hasFiles = true;
   if (b.tested?.result === "pass") o.tested = 1;

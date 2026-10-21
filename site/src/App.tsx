@@ -60,34 +60,29 @@ const AppsPage = lazy(PAGES.apps);
 const SpacePage = lazy(PAGES.space);
 const MindsPage = lazy(PAGES.minds);
 const IntakePage = lazy(PAGES.intake);
-/**
- * An in-page link (#install) scrolls smoothly, and a page loading in the background can cut that scroll short.
- * Once it has had time to land, finish the jump if the target still isn't on screen.
- */
+/** Finish an anchor landing once. Any user scroll cancels the correction. */
 function useHashLanding() {
   useEffect(() => {
-    let t = 0;
-    let end = 0;
-    let observer: ResizeObserver | null = null;
+    let timer = 0;
+    const cancel = () => window.clearTimeout(timer);
     const land = () => {
-      window.clearTimeout(t);
-      window.clearTimeout(end);
-      observer?.disconnect();
-      const align = () => {
-        const el = location.hash.length > 1 ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
-        if (el) window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top, behavior: "instant" as ScrollBehavior });
-      };
-      t = window.setTimeout(() => {
-        align();
-        // Rows can arrive while the smooth scroll crosses the library.
-        // Follow those layout changes only for this landing, then release it.
-        observer = new ResizeObserver(align);
-        observer.observe(document.body);
-        end = window.setTimeout(() => { observer?.disconnect(); align(); }, 1800);
+      cancel();
+      timer = window.setTimeout(() => {
+        const id = location.hash.slice(1);
+        const el = id ? document.getElementById(decodeURIComponent(id)) : null;
+        if (el && Math.abs(el.getBoundingClientRect().top) > 80) el.scrollIntoView({ behavior: "instant" as ScrollBehavior });
       }, 900);
     };
+    const key = (e: KeyboardEvent) => { if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(e.key)) cancel(); };
     addEventListener("hashchange", land);
-    return () => { window.clearTimeout(t); window.clearTimeout(end); observer?.disconnect(); removeEventListener("hashchange", land); };
+    addEventListener("wheel", cancel, { passive: true });
+    addEventListener("touchstart", cancel, { passive: true });
+    addEventListener("pointerdown", cancel, { passive: true });
+    addEventListener("keydown", key);
+    return () => {
+      cancel(); removeEventListener("hashchange", land); removeEventListener("wheel", cancel);
+      removeEventListener("touchstart", cancel); removeEventListener("pointerdown", cancel); removeEventListener("keydown", key);
+    };
   }, []);
 }
 
@@ -117,30 +112,9 @@ function useIdlePrefetch() {
 
 // Shown first: things most people can use this week.
 const byName = new Intl.Collator("en");
-const START_HERE = ["fact-based-ad-copy-writer", "website-brand-brain-builder", "customer-buying-reasons-finder", "brand-voice-editor", "landing-page-30-point-checker", "quote-video-ad-script", "meta-ads-compliance-checker"];
-const PAGE = 12;
-// Scrolling near the end of the list loads the next cards on its own, a few at a time, up to AUTO_UNTIL.
-// After that the button stays, so the page footer can still be reached.
-const AUTO_UNTIL = 120;
-function MoreOnScroll({ left, limit, onMore }: { left: number; limit: number; onMore: () => void }) {
-  const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el || limit >= AUTO_UNTIL || typeof IntersectionObserver === "undefined") return;
-    // Only below the screen, and only once scrolling has settled there: a jump to a section further down passes
-    // the end of the list without loading more, so the place it lands on doesn't move.
-    let near = false;
-    let timer = 0;
-    const io = new IntersectionObserver((e) => {
-      near = e.some((x) => x.isIntersecting);
-      clearTimeout(timer);
-      if (near) timer = window.setTimeout(() => { if (near) onMore(); }, 300);
-    }, { rootMargin: "0px 0px 600px 0px" });
-    io.observe(el);
-    return () => { io.disconnect(); clearTimeout(timer); };
-  }, [limit, onMore]);
-  return <div className="more" ref={ref}><button className="btn btn-dark" onClick={onMore}>Show {Math.min(24, left)} more</button></div>;
-}
+const START_HERE = ["website-brand-brain-builder", "landing-page-30-point-checker", "ad-opening-line-batch-writer", "ad-claim-proof-gap-finder", "plain-english-editor", "rough-notes-to-minutes-writer", "executive-email-draft", "week-plan-from-task-list-maker", "customer-buying-reasons-finder", "faq-page-from-questions-writer", "code-explainer-for-newcomers", "bug-evidence-plan-writer", "copilot-eval-driven-dev", "copilot-gtm-0-to-1-launch", "advisory-council", "fact-based-ad-copy-writer"];
+const startRank = (slug: string) => { const index = START_HERE.indexOf(slug); return index < 0 ? START_HERE.length : index; };
+const PAGE = 16;
 const KIND_PATHS: Record<string, Kind> = Object.fromEntries(KINDS.map((k) => [k.path, k.id]));
 
 function Header({ onKits }: { onKits: () => void }) {
@@ -180,13 +154,13 @@ function Header({ onKits }: { onKits: () => void }) {
             <span className="nav-more-list" id="nav-more-list" onClick={() => { setMore(false); setMenu(false); }}>
               <Link to="/ai-tools" data-testid="nav-ai-tools">AI tools</Link>
               <Link to="/traction">Growth channels</Link>
-              <Link to="/from-a-source" data-testid="nav-intake">From a source</Link>
+              <Link to="/from-a-source" data-testid="nav-intake">Create skills from content</Link>
               <Link to="/space" data-testid="nav-space">My space</Link>
             </span>
           </span>
         </nav>
         <div className="header-end">
-          <button className="btn btn-ghost btn-sm" onClick={openBusiness} data-testid="open-business"><span>Your context</span>{biz && <span className="dot" aria-label="filled in" />}</button>
+          <button className="btn btn-ghost btn-sm" onClick={openBusiness} data-testid="open-business"><span className="context-full">Your context</span><span className="context-short">Context</span>{biz && <span className="dot" aria-label="filled in" />}</button>
           <button className="btn btn-ghost btn-sm" onClick={onKits} data-testid="open-kits"><span className="wide-only">My kits</span><span className="narrow-only">Kits</span>{kitCount > 0 && <span className="badge">{kitCount}</span>}</button>
           <ThemeToggle />
           <button className="btn btn-ghost btn-sm menu-btn" aria-expanded={menu} aria-controls="site-nav" onClick={() => setMenu((m) => !m)} data-testid="menu-btn">{menu ? "Close" : "Menu"}</button>
@@ -230,7 +204,7 @@ function Library({ c }: { c: Catalogue }) {
   // The list and the counts follow the typing a beat behind, so the search box never waits on them.
   const df = useDeferredValue(f);
   const words = df.q.toLowerCase().replace(/[_-]/g, " ").split(/\s+/).filter(Boolean);
-  const hays = useMemo(() => new Map(c.blocks.map((b) => [b.slug, `${b.name} ${b.slug} ${b.summary} ${b.headline} ${taskOf(b).name} ${functionsOf(b).map((x) => x.name).join(" ")}`.toLowerCase().replace(/[_-]/g, " ")])), [c]);
+  const hays = useMemo(() => new Map(c.blocks.map((b) => [b.slug, `${b.name} ${(b.aliases ?? []).join(" ")} ${b.slug} ${b.summary} ${b.headline} ${taskOf(b).name} ${functionsOf(b).map((x) => x.name).join(" ")}`.toLowerCase().replace(/[_-]/g, " ")])), [c]);
   const hay = (b: Block) => hays.get(b.slug)!;
   // Each block's areas, groups and kind, worked out once, so a few thousand blocks still count fast.
   const facts = useMemo(() => new Map(c.blocks.map((b) => [b.slug, { areas: new Set(areasOf(b)), fns: new Set(functionsOf(b).map((x) => x.id)), kind: kindOf(b) }])), [c]);
@@ -254,7 +228,7 @@ function Library({ c }: { c: Catalogue }) {
     if (!counted.has(key)) { const g = { ...df, ...over }; counted.set(key, matched.filter((b) => facets.every((k) => tests[k](b, g[k] as string))).length); }
     return counted.get(key)!;
   };
-  const order = (a: Block, b: Block) => Number(START_HERE.includes(b.slug)) - Number(START_HERE.includes(a.slug)) || Number(!!b.headline) - Number(!!a.headline) || KINDS.findIndex((k) => k.id === fact(a).kind) - KINDS.findIndex((k) => k.id === fact(b).kind) || byName.compare(a.name, b.name);
+  const order = (a: Block, b: Block) => startRank(a.slug) - startRank(b.slug) || Number(!!b.headline) - Number(!!a.headline) || KINDS.findIndex((k) => k.id === fact(a).kind) - KINDS.findIndex((k) => k.id === fact(b).kind) || byName.compare(a.name, b.name);
   const results = useMemo(() => c.blocks.filter((b) => keys.every((k) => tests[k](b, df[k] as string))).sort(order), [c, df]); // eslint-disable-line react-hooks/exhaustive-deps
   const filtered = JSON.stringify(f) !== JSON.stringify(NONE);
   const clear = () => setF(NONE);
@@ -277,7 +251,7 @@ function Library({ c }: { c: Catalogue }) {
   return (
     <section className="section wrap" id="library" aria-label="Library">
       <div className="library-search-head"><h2>What do you want to get done?</h2><Link to="/how-it-works">How it works <span aria-hidden="true">→</span></Link></div>
-      <label className="search big"><SearchIcon /><span className="visually-hidden">Search</span><input value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="What do you want to get done?" data-testid="library-search" /><kbd className="kbd" aria-hidden="true">/</kbd></label>
+      <label className="search big"><SearchIcon /><span className="visually-hidden">Search</span><input value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="Search for a job, such as writing an ad or fixing code" data-testid="library-search" /><kbd className="kbd" aria-hidden="true">/</kbd></label>
 
       <div className="library-formats" role="tablist" aria-label="Format" onKeyDown={(e) => {
         if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(e.key)) return;
@@ -312,7 +286,7 @@ function Library({ c }: { c: Catalogue }) {
       {results.length ? (
         <>
           <div className="grid">{results.slice(0, limit).map((b) => <BlockCard key={b.slug} b={b} />)}</div>
-          {results.length > limit && <MoreOnScroll left={results.length - limit} limit={limit} onMore={() => setLimit((n) => n + 24)} />}
+          {results.length > limit && <div className="more library-more"><button type="button" className="btn btn-dark" onClick={() => setLimit((n) => n + PAGE)} data-testid="show-more">Show {Math.min(PAGE, results.length - limit)} more</button><a href="#build" className="library-builder-link">Build a workflow <ArrowIcon size={12} /></a></div>}
         </>
       ) : (
         <div className="empty"><h3 className="h3">Nothing matches that yet</h3><p>Try fewer words, or <button className="link-btn" onClick={clear}>clear all</button>.</p></div>
@@ -380,7 +354,7 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
   useEffect(() => {
     if (!c || !location.hash) return;
     const id = location.hash.slice(1);
-    requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView());
+    requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView({ behavior: "instant" as ScrollBehavior }));
   }, [c]);
   return (
     <main id="top">
@@ -403,6 +377,7 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
           <h2 className="h2" id="build-h">Line up skills once, and your AI does the whole job</h2>
           <p className="lede">Add skills in the order they should run, or start from a ready workflow. Download one folder, upload it to Claude, ChatGPT or any AI that reads files, and it works through every step for you.</p>
         </div>
+        <p className="builder-app-link">Want a screen your team can use? <Link to="/apps/starter-pack">Turn your workflow into an app <ArrowIcon size={12} /></Link> <Link to="/apps">See the Mercatura example</Link></p>
         <WhenNear id="build" fallback={<div className="builder" />}>{c && <Suspense fallback={<div className="builder" />}><Builder c={c} toast={toast} /></Suspense>}</WhenNear>
       </section>
     </main>
@@ -486,7 +461,7 @@ export default function App() {
             <Link to="/tools">Mini tools</Link>
             <Link to="/ai-tools">AI tools</Link>
             <Link to="/traction">Growth channels</Link>
-            <Link to="/from-a-source">Turn a source into a workflow</Link>
+            <Link to="/from-a-source">Create skills from content</Link>
             <Link to="/apps">Apps</Link>
             <Link to="/apps/starter-pack">App starter pack</Link>
             <Link to="/space">My space</Link>

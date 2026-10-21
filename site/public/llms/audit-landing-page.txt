@@ -7,21 +7,20 @@
 - [Advertorial story and belief checker](https://useaiblocks.com/skills/advertorial-story-and-belief-checker): Paste your advertorial. Get each spot the story turns pitchy, fixes and a score out of 100.
 - [App store listing optimiser](https://useaiblocks.com/skills/app-store-listing-optimiser): Give it your app listing. Get a scored audit and a rewritten title, keywords, description and screenshots plan.
 - [Build a landing page, fix it, prove the top change](https://useaiblocks.com/workflows/build-a-landing-page-fix-it-and-prove-the-top-change): Give it your offer and buyer. Get a page, a review, a test design and a ship or stop call.
-- [Buyer doubt gap finder](https://useaiblocks.com/prompts/buyer-doubt-gap-finder): Paste customer questions and your page text. Get each doubt matched to the page, plus a score out of 100.
-- [Click choice clarity checker](https://useaiblocks.com/skills/click-choice-clarity-checker): Paste your menu and labels. Get a score out of 100, each choice rated and rewritten.
+- [Button and link clarity review](https://useaiblocks.com/skills/click-choice-clarity-checker): Paste your menu and labels. Get a score out of 100, each choice rated and rewritten.
 - [Collection page fixer](https://useaiblocks.com/skills/collection-page-fixer): Paste your collection page and stock by size. Get which products to feature and a daily check.
 - [Conversion problem finder](https://useaiblocks.com/skills/conversion-problem-finder): Give it a landing page. Get the conversion problems found and a set of tests worth running, each with a clear reason.
 - [Conversion research planner](https://useaiblocks.com/skills/conversion-research-planner): Paste your page and analytics. Get a research order that finds where, what and why before you test anything.
+- [Customer objection coverage checker](https://useaiblocks.com/prompts/buyer-doubt-gap-finder): Share customer questions and page copy. Find unanswered objections and get a coverage score out of 100.
 - [Decision friction auditor](https://useaiblocks.com/skills/decision-friction-auditor): Give it a page or flow. Get the spots where layout, defaults or order stop people, with fixes.
 - [Email sequence auditor](https://useaiblocks.com/skills/email-sequence-auditor): Paste your email flow and its numbers. Get a green, yellow and red list of what to protect and fix.
 - [Find what's wrong with your page and pick tests](https://useaiblocks.com/workflows/page-problems-test-picks): Give it your page and analytics. Get a research plan, ranked page problems and a check that you can test.
 - [Find where your page loses buyers and prove the fix](https://useaiblocks.com/workflows/find-where-your-page-loses-buyers-and-prove-the-fix): Give it page captures and your funnel numbers. Get a ranked test list and a clear verdict on the first fix.
 - [Find where your page loses buyers and test the fix](https://useaiblocks.com/workflows/page-drop-off-fix): Give it your page and step numbers. Get the worst drop-off, the unanswered doubts and how long a fair test needs.
 - [Fix your landing page's top problems and check again](https://useaiblocks.com/workflows/fix-your-landing-pages-top-problems-and-check-again): Give it your page. Get ranked problems, a fix-now list and a second check once you've fixed them.
-- [Fix-now or test sorter](https://useaiblocks.com/prompts/fix-now-or-test-sorter): Paste your list of page problems. Get each one sorted into fix now, look into or test, then ranked.
-- [Landing page 30-point checker](https://useaiblocks.com/prompts/landing-page-30-point-checker): Paste your page and ad. Get 30 yes-or-no checks, five fixes and a score out of 100.
-- [Landing page auditor](https://useaiblocks.com/skills/landing-page-auditor): Paste your page and attach screenshots. Get ranked fixes, quick wins first, and a score out of 100.
-- [Landing page fix loop](https://useaiblocks.com/agents/landing-page-fix-loop): Give it your page, ad and facts. It audits, rewrites what fails, checks again, and stops when the page passes.
+- [Landing page audit](https://useaiblocks.com/prompts/landing-page-30-point-checker): Share your page and screenshots. Get a 30-point audit, a score and five fixes to make first.
+- [Landing page conversion review](https://useaiblocks.com/skills/landing-page-auditor): Share your page and screenshots. Get conversion problems ranked by impact, with recommended fixes and a score.
+- [Landing page improvement agent](https://useaiblocks.com/agents/landing-page-fix-loop): Give it your page, ad and facts. It audits, rewrites what fails, checks again, and stops when the page passes.
 - [Leaky funnel fixer](https://useaiblocks.com/skills/leaky-funnel-fixer): Give it your landing page, signup or checkout. Get the leaks ranked, plus tests to run in order.
 - [Page issue sorter](https://useaiblocks.com/skills/page-issue-sorter): Paste a list of site problems. Get each one sorted into fix now, investigate, test or tracking, with a ranked order.
 - [Page traffic and conversion reader](https://useaiblocks.com/skills/page-traffic-conversion): Run it on your store. Get sessions, conversion and bounce rate for each product and collection page.
@@ -36,4 +35,5 @@
 - [Thin page finder](https://useaiblocks.com/skills/thin-page-finder): Get store pages and blog posts that are empty, short or missing search fields.
 - [Unanswered customer question finder](https://useaiblocks.com/skills/customer-question-finder): Paste customer questions and page screenshots. Get unanswered doubts, answers to add and a score out of 100.
 - [Website fix backlog builder](https://useaiblocks.com/skills/website-fix-backlog-builder): Give it your live site. Get a ranked list of fixes for conversion, usability, message and speed, each with evidence.
+- [Website fix priority planner](https://useaiblocks.com/prompts/fix-now-or-test-sorter): Paste your list of page problems. Get each one sorted into fix now, look into or test, then ranked.
 - [Website growth guide](https://useaiblocks.com/skills/website-growth-guide): Give it your site and traffic. Get a plan to capture more leads and sales through research, message and tests.

@@ -114,24 +114,6 @@ function Peek({ text }: { text: string }) {
   return <span className="peek" data-done="true">{text}</span>;
 }
 
-/** Text that flickers through 0s and 1s and settles, left to right. */
-function Decode({ text, round }: { text: string; round: number }) {
-  const [shown, setShown] = useState(text);
-  useEffect(() => {
-    if (!round || matchMedia("(prefers-reduced-motion: reduce)").matches) { setShown(text); return; }
-    let raf = 0;
-    const t0 = performance.now();
-    const step = (now: number) => {
-      const fixed = Math.floor(((now - t0) / 380) * text.length);
-      setShown([...text].map((ch, i) => (i < fixed || ch === " " ? ch : Math.random() < 0.5 ? "0" : "1")).join(""));
-      if (fixed < text.length) raf = requestAnimationFrame(step);
-    };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [text, round]);
-  return <span className="decode"><span className="visually-hidden">{text}</span><span aria-hidden="true">{shown}</span></span>;
-}
-
 /** Who made a block: us (own or rebuilt), or the company an imported skill came from. Anyone else counts as the community. */
 export type Maker = "ai-blocks" | "anthropic" | "openai" | "community";
 export const makerOf = (b: Block): Maker => {
@@ -149,9 +131,8 @@ export const fromLabel = (b: Block) => { const m = makerOf(b); return m === "ai-
 export const BlockCard = memo(function BlockCard({ b }: { b: Block }) {
   const kind = kindInfo(b);
   const fmt = formatOf(b);
-  const [round, setRound] = useState(0);
   // Pointing at a card starts fetching its page, so the click opens it without a wait.
-  const wake = () => { setRound((r) => r + 1); void loadPage(b.slug); };
+  const wake = () => { void loadPage(b.slug); };
   const view = b.category === "orchestrator" || b.type === "agent" ? `View the ${b.steps.length} steps` : `View the ${kind.name.toLowerCase()}`;
   return (
     <Link to={pathOf(b)} className="card" data-testid="block-card" data-slug={b.slug} data-kind={kind.id} onMouseEnter={wake} onFocus={wake}
@@ -159,7 +140,7 @@ export const BlockCard = memo(function BlockCard({ b }: { b: Block }) {
       <span className="meta"><span className="kind">{kind.name}</span>{b.thinking && <ThinkBars level={b.thinking} />}{b.origin === "imported" && <span className="from" data-testid="from-label">{fromLabel(b)}</span>}{b.warnings?.includes("scrapes") && <span className="from warn" data-testid="scrapes-label" title="Collects data from websites">Scrapes sites</span>}{paidService(b) && <span className="from warn" data-testid="paid-label" title={`Needs a paid ${paidService(b)} account`}>Needs a paid account</span>}<span className="type">{fmt ? (fmt === "image" ? "Image ad" : "Video ad") : taskOf(b).name}</span></span>
       <span className="nm">{b.type === "mind" && <PixelFace face={b.face} area={b.area} slug={b.slug} size={32} className="card-face" />}{b.name}</span>
       <Peek text={b.summary} />
-      <span className="view"><Decode text={view} round={round} /><ArrowIcon size={12} /></span>
+      <span className="view">{view}<ArrowIcon size={12} /></span>
     </Link>
   );
 });

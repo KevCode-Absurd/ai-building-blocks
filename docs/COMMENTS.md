@@ -9,15 +9,9 @@ Every skill, prompt and workflow page has a **Questions** tab on the side. Anyon
 - On the dev server (`npm run dev`), the same code runs with a memory store that empties when the server stops. The team key there is `dev-team-token`.
 - Tests: `npm --prefix site run test:unit` for the rules, and the Playwright tests post, reply and answer in the browser.
 
-## Switch it on for useaiblocks.com (once, after the Pages launch)
+## Switch it on
 
-1. Make the database: `npx wrangler d1 create ai-blocks-comments`
-2. Make the table: `npx wrangler d1 migrations apply ai-blocks-comments --remote` (run inside `site/`; it reads `site/migrations/`).
-3. In the Cloudflare dashboard, open the Pages project, then **Settings → Bindings**, and add a D1 binding named `COMMENTS` that points to `ai-blocks-comments`.
-4. Under **Settings → Variables and secrets**, add two secrets:
-   - `COMMENTS_TEAM_TOKEN`: a long random string. It lets you post answers marked "Answer from us" and remove comments.
-   - `COMMENTS_SALT`: another long random string, used for the visitor hash.
-5. Deploy again. Until the binding exists, the panel says comments aren't switched on yet, and nothing breaks.
+Follow [the Cloudflare launch handoff](CLOUDFLARE-LAUNCH-2026-10-22.md). Both COMMENTS and SPACES can share the migrated ai-blocks D1 database. The handoff covers bindings, separate server-side secrets, preview checks and deployment.
 
 ## Answer questions as the team
 

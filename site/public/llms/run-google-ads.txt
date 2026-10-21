@@ -17,9 +17,8 @@
 - [Google Ads dip investigator](https://useaiblocks.com/skills/google-ads-dip-investigator): Give it your results and recent changes. Get the likely cause and a fix-or-wait call.
 - [Google Ads launch planner](https://useaiblocks.com/skills/google-ads-launch-planner): Give it your store, budget and sales so far. Get the launch order, campaign settings and budget split.
 - [Google Ads purchase tracking checker](https://useaiblocks.com/skills/google-ads-purchase-tracking-checker): Paste your conversion actions. Get a pass or fail on double counting, a score out of 100 and the fix for each.
-- [Google Ads scale gate checker](https://useaiblocks.com/skills/google-ads-scale-gate-checker): Give it your account facts. Get pass or fail on five gates and a score out of 100.
+- [Google Ads scaling readiness review](https://useaiblocks.com/skills/google-ads-scale-gate-checker): Give it your account facts. Get pass or fail on five gates and a score out of 100.
 - [Google Ads store account auditor](https://useaiblocks.com/skills/google-ads-store-account-auditor): Give it your exports and settings. Get brand leakage, a score out of 100 and a 90-day fix order.
-- [Google Ads weekly account keeper](https://useaiblocks.com/agents/google-ads-weekly-account-keeper): Give it your weekly Google Ads exports. Get waste cut, a scale-or-hold call and a change list to approve.
 - [Google bid strategy chooser](https://useaiblocks.com/skills/google-bid-strategy-chooser): Give it campaign results and targets. Get the right bid strategy, a target, a ROAS spiral check and a score.
 - [Google ratings and store badge planner](https://useaiblocks.com/skills/google-ratings-and-store-badge-planner): Tell it your reviews and policies. Get a score and a plan for star ratings and the top store badge.
 - [Google remarketing campaign builder](https://useaiblocks.com/skills/google-remarketing-campaign-builder): Give it your audiences and offer. Get remarketing setups with budgets, caps and five doubt-led ad concepts.
@@ -40,5 +39,6 @@
 - [Shopping feed title writer](https://useaiblocks.com/skills/shopping-feed-title-writer): Give it your products and converting search terms. Get search-led titles, descriptions and image fixes.
 - [Shopping title rewriter](https://useaiblocks.com/prompts/shopping-title-rewriter): Paste product facts and search terms. Get Google Shopping titles in one order, plus a rollout.
 - [Turn converting searches into Search campaigns and matching pages](https://useaiblocks.com/workflows/turn-converting-searches-into-search-campaigns-and-matching-pages): Give it your Google search terms and products. Get winners and negatives sorted, new Search campaigns with ads, and page plans.
+- [Weekly Google Ads review](https://useaiblocks.com/agents/google-ads-weekly-account-keeper): Give it your weekly Google Ads exports. Get waste cut, a scale-or-hold call and a change list to approve.
 - [YouTube ad results reader](https://useaiblocks.com/skills/youtube-ad-results-reader): Give it your YouTube ad results. Get a scale, keep or pause call per ad, with a score out of 100.
 - [YouTube readiness checker](https://useaiblocks.com/skills/youtube-readiness-checker): Tell it your AOV, ad stack and Meta winners. Get a yes or wait on YouTube, with a score out of 100.

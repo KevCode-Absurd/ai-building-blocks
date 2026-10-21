@@ -14,6 +14,8 @@ export type Block = {
   slug: string;
   name: string;
   summary: string;
+  /** Earlier display names still work in library searches. */
+  aliases?: string[];
   category: "general" | "ecommerce" | "orchestrator" | "agent" | "mind";
   boards: string[];
   type: "prompt" | "skill" | "workflow" | "routine" | "agent" | "mind";

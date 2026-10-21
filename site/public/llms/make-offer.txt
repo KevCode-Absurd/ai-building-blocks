@@ -4,72 +4,72 @@
 
 - [Abandoned cart code maker](https://useaiblocks.com/skills/abandoned-cart-code-maker): Connect your Shopify store. Get one discount code per shopper who left a cart, plus a tag.
 - [After-sale offer planner](https://useaiblocks.com/skills/after-sale-offer-planner): Paste your product and customer list. Get follow-on offers to try, each with a small test.
-- [Bonus idea matcher](https://useaiblocks.com/prompts/bonus-idea-matcher): Paste your offer and buyer doubts. Get one named bonus for each doubt, with a value reason.
-- [Bonus stack builder](https://useaiblocks.com/skills/bonus-stack-builder): Paste your offer and the doubts buyers have. Get named bonuses that each answer one doubt, with a value and proof.
+- [Best-selling product positioning planner](https://useaiblocks.com/skills/hero-product-repositioner): Give it one hero product and its reviews. Get several buyer angles, each with its own offer.
 - [Bought-together pair finder](https://useaiblocks.com/skills/bought-together-pair-finder): Get the products customers most often buy together, ranked, to build bundles and cross-sell offers.
 - [Build an offer from your buyer's problems](https://useaiblocks.com/workflows/offer-from-buyer-problems): Give it your product and buyer. Get every problem they face turned into a stacked, scored, priced offer.
 - [Build an offer that sells without cutting your margin](https://useaiblocks.com/workflows/build-an-offer-that-sells-without-cutting-your-margin): Give it your product, buyer and costs. Get a priced offer with a gift or tier, and the ad return it needs.
+- [Bulk discount code creator](https://useaiblocks.com/skills/promo-code-batch-maker): Say how many codes you need and what they give. Get unique single-use discount codes made live in your store.
 - [Bundle and quantity-break builder](https://useaiblocks.com/skills/bundle-and-quantity-break-builder): Give it a hero product, cost and price. Get bundle tiers, a default, gifts and price lines.
 - [Bundle tier layout planner](https://useaiblocks.com/skills/bundle-tier-layout-planner): Give it your product and costs. Get a 3-tier bundle layout, savings wording and a test plan.
 - [Buyer problem list builder](https://useaiblocks.com/skills/buyer-problem-list-builder): Paste your buyer and product. Get every problem they face from start to result, each turned into a promise.
 - [Cart and checkout upsell planner](https://useaiblocks.com/skills/cart-and-checkout-upsell-planner): Give it products and margins. Get cart and checkout offers, ranked by profit added per order.
 - [Cart bundle and gift planner](https://useaiblocks.com/skills/cart-bundle-and-gift-planner): Give it products, margins and shipping costs. Get a cart bundle, gift and shipping line that hold margin.
 - [Commodity trap checker](https://useaiblocks.com/skills/commodity-trap-checker): Paste your offer and the options buyers compare it with. Get a verdict on price comparison and the first thing to change.
+- [Customer offer builder](https://useaiblocks.com/skills/offer-builder): Paste your buyer's doubt and costs. Get an offer that answers it, its wording and a profit check.
 - [Delivery option generator](https://useaiblocks.com/skills/delivery-option-generator): Paste your buyer's problems and promises. Get many ways to deliver each one, rated for your cost and their value.
 - [Discount impact checker](https://useaiblocks.com/skills/discount-impact-checker): Add price, costs and a discount. Get the ROAS to hit and a score out of 100.
+- [Educational lead magnet planner](https://useaiblocks.com/skills/lead-offer-planner): Paste your product and who has the costly problem. Get a useful-information offer, a reply step and a plan to route replies.
 - [Find the hungriest buyers and test a deal on them](https://useaiblocks.com/workflows/hungriest-buyers-test): Give it the groups you could sell to. Get the hungriest group, a deal with a believable reason and a small test.
 - [Find your best offer and write the page and ad](https://useaiblocks.com/workflows/best-offer-page-and-ad): Give it your brand file and live prices. Get an offer to try, an article-style page, a check and a matching ad.
+- [First purchase offer planner](https://useaiblocks.com/skills/front-end-offer-picker): Paste your offer and lead numbers. Get a pick of premium, free or discount first step, with the reason and tests.
 - [Free diagnostic tool planner](https://useaiblocks.com/skills/free-diagnostic-tool-planner): Describe your business and buyer. Get a free checker that shows the problem you fix, with a score and a sign-up step.
 - [Free giveaway designer](https://useaiblocks.com/skills/free-giveaway-designer): Tell it your audience and what you sell next. Get a free guide or checklist idea worth an email address.
 - [Free sample offer planner](https://useaiblocks.com/skills/free-sample-offer-planner): Paste your product and price. Get a free sample offer, who gets it, how to claim it and a cost-per-customer check.
-- [Front-end offer picker](https://useaiblocks.com/skills/front-end-offer-picker): Paste your offer and lead numbers. Get a pick of premium, free or discount first step, with the reason and tests.
 - [Funnel flow planner](https://useaiblocks.com/skills/funnel-flow-planner): Describe your audience and offer. Get the path from page to lead magnet to emails to sale.
 - [Gift-with-purchase planner](https://useaiblocks.com/skills/gift-with-purchase-planner): Give it your catalogue, AOV and margins. Get spend-to-earn gift tiers with a margin check.
 - [Guarantee designer](https://useaiblocks.com/skills/guarantee-designer): Paste your offer and costs. Get a guarantee that fits your risk, with the refund sums and a name.
-- [Hero product repositioner](https://useaiblocks.com/skills/hero-product-repositioner): Give it one hero product and its reviews. Get several buyer angles, each with its own offer.
-- [Hidden offer finder](https://useaiblocks.com/prompts/hidden-offer-finder): Paste your prices and deals. Get clashes flagged and new offers to try first.
 - [Honest scarcity and urgency planner](https://useaiblocks.com/skills/honest-urgency-planner): Paste your offer and what you can handle. Get real limits and dates, plus the lines to say them.
-- [Information-led lead offer planner](https://useaiblocks.com/skills/lead-offer-planner): Paste your product and who has the costly problem. Get a useful-information offer, a reply step and a plan to route replies.
 - [Launch a subscription offer you can afford to fund](https://useaiblocks.com/workflows/launch-a-subscription-offer-you-can-afford-to-fund): Give it your product and order data. Get a subscription offer, its payback time and a cancel flow that saves sign-ups.
 - [Launch with a free sample and learn what customers cost](https://useaiblocks.com/workflows/free-sample-launch): Give it your product and price. Get a sample offer, a small test plan and the true cost of each customer.
-- [Lead cost and friction planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner): Paste your campaign numbers. Get cost per qualified lead, the friction to add one step at a time and a stop rule.
+- [Lead generation cost planner](https://useaiblocks.com/skills/lead-cost-and-friction-planner): Paste your campaign numbers. Get cost per qualified lead, the friction to add one step at a time and a stop rule.
 - [Lead magnet planner](https://useaiblocks.com/skills/lead-magnet-planner): Describe your buyer. Get lead magnet ideas, the best pick and the page and emails to go with it.
 - [Make visitors who hesitate at the price say yes](https://useaiblocks.com/workflows/make-visitors-who-hesitate-at-the-price-say-yes): Give it your offer and what buyers say about price. Get a value case, a guarantee, honest urgency and a closing line.
 - [Make your offer harder to refuse](https://useaiblocks.com/workflows/make-your-offer-harder-to-refuse): Give it your offer. Get honest limits and deadlines, bonuses, a guarantee and a name, ready to use.
-- [Mechanism namer](https://useaiblocks.com/skills/mechanism-namer): Give it your product and rivals. Get a named, true mechanism and three pillars that sell the reason.
-- [Niche price ladder builder](https://useaiblocks.com/skills/niche-price-ladder-builder): Paste your offer and price. Get it rewritten for narrower buyers, each with a price and size check.
-- [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder): Paste your buyer's doubt and costs. Get an offer that answers it, its wording and a profit check.
+- [Market demand scorer](https://useaiblocks.com/skills/starving-crowd-market-scorer): Paste the markets you could serve. Get each scored on pain, money, reach and growth, and the one to commit to.
+- [New offer opportunity finder](https://useaiblocks.com/prompts/hidden-offer-finder): Paste your prices and deals. Get clashes flagged and new offers to try first.
+- [Niche offer pricing planner](https://useaiblocks.com/skills/niche-price-ladder-builder): Paste your offer and price. Get it rewritten for narrower buyers, each with a price and size check.
+- [Offer bonus package builder](https://useaiblocks.com/skills/bonus-stack-builder): Paste your offer and the doubts buyers have. Get named bonuses that each answer one doubt, with a value and proof.
+- [Offer bonus planner](https://useaiblocks.com/prompts/bonus-idea-matcher): Paste your offer and buyer doubts. Get one named bonus for each doubt, with a value reason.
 - [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer): Paste your offer, price and guarantee. Get a checklist review, a score and three changes to test first.
 - [Offer designer](https://useaiblocks.com/skills/offer-designer): Say what you sell. Get an offer with value framing, bonuses, guarantee, name and payment terms.
-- [Offer name batch writer](https://useaiblocks.com/prompts/offer-name-batch-writer): Paste your offer and buyer. Get ten offer names built from five parts, with three to test.
+- [Offer name ideas](https://useaiblocks.com/prompts/offer-name-batch-writer): Paste your offer and buyer. Get ten offer names built from five parts, with three to test.
 - [Offer name writer](https://useaiblocks.com/skills/offer-name-writer): Paste your offer and buyer. Get ten names from five parts, three to test and a renaming order.
+- [Offer package planner](https://useaiblocks.com/skills/offer-trim-and-stack-builder): Paste your delivery options and promises. Get named bundles, a value for each and a total.
+- [Offer performance review agent](https://useaiblocks.com/agents/offer-refresh-keeper): Give it your offers and their numbers each quarter. It finds the profit winner, tests what is weak, and plans one change.
 - [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker): Paste offer variants, costs and sessions. Get profit per visitor, a winner and a trust score.
-- [Offer refresh keeper](https://useaiblocks.com/agents/offer-refresh-keeper): Give it your offers and their numbers each quarter. It finds the profit winner, tests what is weak, and plans one change.
 - [Offer test planner](https://useaiblocks.com/skills/offer-test-planner): Give it your offers and buyer types. Get separate funnel tests, tags to track and a read-out rule.
-- [Offer trim and stack builder](https://useaiblocks.com/skills/offer-trim-and-stack-builder): Paste your delivery options and promises. Get named bundles, a value for each and a total.
 - [Offer useful information first and follow up with stalled leads](https://useaiblocks.com/workflows/lead-nurture-follow-up): Give it your product and who has the costly problem. Get an information offer and follow-up emails for stalled leads.
+- [Offer value review](https://useaiblocks.com/skills/value-equation-scorer): Paste your offer. Get a 1 to 10 score on outcome, likelihood, delay and effort, the weakest driver and the cheapest fix.
 - [Order page and upsell funnel planner](https://useaiblocks.com/skills/order-page-and-upsell-funnel-planner): Give it your product and margin. Get the page flow, order bump, one-time offers and what to measure.
 - [Order threshold planner](https://useaiblocks.com/skills/order-threshold-planner): Paste your order sizes. Get free-shipping and bundle thresholds set at your real order peaks.
 - [Paid first step planner](https://useaiblocks.com/skills/paid-first-step-planner): Paste your offer and lead plan. Get a cheap first piece, a booked second meeting and the upsell to your main offer.
 - [Pick a market worth selling to and its price](https://useaiblocks.com/workflows/market-and-price-picker): Give it your offer and who might buy. Get the best narrow market and a price that fits what it is worth.
 - [Pick a sale offer, check profit, set an honest deadline](https://useaiblocks.com/workflows/pick-a-sale-offer-check-profit-set-an-honest-deadline): Give it your margins. Get a sale offer, its needed ad return and a real deadline.
-- [Price-first cost planner](https://useaiblocks.com/skills/price-first-cost-squeeze-planner): Name the price you want to sell at. Get a plan that works backward from it to cut cost.
 - [Pricing decision planner](https://useaiblocks.com/skills/pricing-decision-planner): Paste your product, costs and the buyer's gain. Get three test prices, your pick and a plan to raise it.
-- [Promo code batch maker](https://useaiblocks.com/skills/promo-code-batch-maker): Say how many codes you need and what they give. Get unique single-use discount codes made live in your store.
+- [Product explanation name ideas](https://useaiblocks.com/skills/mechanism-namer): Give it your product and rivals. Get a named, true mechanism and three pillars that sell the reason.
+- [Promotion explanation writer](https://useaiblocks.com/skills/reason-why-deal-writer): Paste your product and the deal you want to run. Get the deal with a believable reason why, in three versions.
 - [Promotion idea planner](https://useaiblocks.com/skills/promotion-idea-planner): Say what you want to launch or clear. Get a gift, bundle or pre-order promotion that avoids plain price cuts.
 - [Quiz and recommender designer](https://useaiblocks.com/skills/quiz-and-recommender-designer): Describe who you want to sort. Get quiz questions, scoring, result groups and matching recommendations that can capture leads.
 - [Raise order value with bundles and add-ons you can check](https://useaiblocks.com/workflows/raise-order-value-with-bundles-and-add-ons-you-can-check): Give it your sales export and product list. Get a free-shipping line, bundles and an after-sale offer that keeps profit.
-- [Reason-why deal writer](https://useaiblocks.com/skills/reason-why-deal-writer): Paste your product and the deal you want to run. Get the deal with a believable reason why, in three versions.
 - [Sale offer ladder planner](https://useaiblocks.com/skills/sale-offer-ladder-planner): Give it stock, margin, subscribers and a sale goal. Get a main offer, backups and a subscriber plan.
-- [Starving crowd market scorer](https://useaiblocks.com/skills/starving-crowd-market-scorer): Paste the markets you could serve. Get each scored on pain, money, reach and growth, and the one to commit to.
 - [Store drop and urgency planner](https://useaiblocks.com/skills/store-urgency-and-drop-planner): Give it stock, dates and your email list. Get drop, deadline and early-access plans, truth-checked.
 - [Store guarantee planner](https://useaiblocks.com/skills/store-guarantee-planner): Give it sales, refund rate and product type. Get guarantee settings, a net-sales test and placement.
 - [Store offer picker](https://useaiblocks.com/skills/store-offer-picker): Give it margin, order mix and repeat rate. Get the offer types to test first, with the maths.
 - [Subscription offer designer](https://useaiblocks.com/skills/subscription-offer-designer): Give it price, margin and cash. Get a subscription offer and your max CAC.
 - [Subscription payback checker](https://useaiblocks.com/skills/subscription-payback-checker): Give it LTV, margin, CAC and cash. Get max CAC, a score out of 100 and a call.
+- [Target price cost planner](https://useaiblocks.com/skills/price-first-cost-squeeze-planner): Name the price you want to sell at. Get a plan that works backward from it to cut cost.
 - [Turn a free checker into leads and a first sale](https://useaiblocks.com/workflows/turn-a-free-checker-into-leads-and-a-paid-first-step): Give it your business and buyer. Get a free checker, a cost-per-lead rule and a paid first step.
 - [Upsell and downsell sequencer](https://useaiblocks.com/skills/upsell-and-downsell-sequencer): Give it prices and checkout steps. Get the offer order, a fallback for each no, and post-purchase rules.
-- [Value equation scorer](https://useaiblocks.com/skills/value-equation-scorer): Paste your offer. Get a 1 to 10 score on outcome, likelihood, delay and effort, the weakest driver and the cheapest fix.
 - [Value ladder planner](https://useaiblocks.com/skills/value-ladder-planner): Paste your product, prices and what buyers do next. Get a ladder from a free first step to a top tier.
 - [Value proposition builder](https://useaiblocks.com/skills/value-proposition-builder): Paste your offer and customer facts. Get a value pitch in five and a half parts that ends with proof of profit.
 - [Value statement writer](https://useaiblocks.com/skills/value-statement-writer): Give it your value proposition. Get versions for marketing, sales and onboarding, ready to use.

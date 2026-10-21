@@ -14,6 +14,7 @@
 - [AI app and chatbot builder](https://useaiblocks.com/skills/ai-app-and-chatbot-builder): Describe the app you want. Get working code for a chatbot, question answerer or agent that uses tools.
 - [AI app guardrails builder](https://useaiblocks.com/skills/ai-app-guardrails-builder): Describe what your AI app must never do. Get rules that block jailbreaks, made-up facts and leaked personal details.
 - [AI approval gate designer](https://useaiblocks.com/skills/ai-approval-gate-designer): Describe what your AI agent does. Get clear rules for which actions need a person to approve and when to escalate.
+- [AI coding task brief writer](https://useaiblocks.com/skills/coding-agent-handoff-writer): Describe the change you want. Get a handoff note with scope, checks and stop rules for a coding agent.
 - [AI cost cutter](https://useaiblocks.com/skills/ai-cost-cutter): Describe your AI app. Get where the tokens go and changes that cut the bill without hurting quality.
 - [AI data extractor builder](https://useaiblocks.com/skills/ai-data-extractor-builder): Say what data to pull from AI answers. Get code that returns checked, typed results instead of free text.
 - [AI model code generator](https://useaiblocks.com/skills/ai-model-code-generator): Give it a PyTorch or LiteRT model. Get C, C++ or CUDA code that runs it inside your app.
@@ -26,6 +27,7 @@
 - [Apify Actor builder](https://useaiblocks.com/skills/apify-actor-builder): Describe the task to automate. Get an Apify Actor project with inputs, outputs and deploy steps. Needs a paid Apify account.
 - [Apify Actor converter](https://useaiblocks.com/skills/apify-actor-converter): Give it an existing script or project. Get it ready to run as an Apify Actor.
 - [Apify output schema writer](https://useaiblocks.com/skills/apify-output-schema-writer): Give it an Apify Actor. Get output schema files that show its results as a clear table. Needs a paid Apify account.
+- [App performance investigation planner](https://useaiblocks.com/skills/measure-first-slowdown-finder): Describe what feels slow. Get a measurement plan, the worst-case view and a ranked fix list.
 - [Arduino connector](https://useaiblocks.com/skills/arduino-connector): Plug in a board. Get it found, set up and connected to MATLAB.
 - [Arduino sensor library builder](https://useaiblocks.com/skills/arduino-sensor-library-builder): Name a sensor MATLAB lacks. Get a custom Arduino library so you can use it from MATLAB.
 - [Audio plugin writer](https://useaiblocks.com/skills/audio-plugin-writer): Describe the effect or sound. Get a tested audio plugin you can export as VST or AU.
@@ -57,14 +59,13 @@
 - [Claude app builder](https://useaiblocks.com/skills/claude-app-builder): Say what to build with Claude. Get working code that calls the Claude API the right way.
 - [Code comment cleaner](https://useaiblocks.com/skills/code-comment-cleaner): Give it a code file. Get clear, professional comments and tidy-ups, with the logic left untouched.
 - [Code documentation writer](https://useaiblocks.com/skills/code-documentation-writer): Point it at your code. Get docstrings, a README and usage guides that match what the code does.
-- [Code explainer for newcomers](https://useaiblocks.com/prompts/code-explainer-for-newcomers): Paste working code. Get it explained in reading order for someone new, with what each part is for.
+- [Code explainer for beginners](https://useaiblocks.com/prompts/code-explainer-for-newcomers): Paste working code. Get it explained in reading order for someone new, with what each part is for.
 - [Code speed planner](https://useaiblocks.com/skills/code-speed-planner): Before it writes loops or queries, it states the best approach and cost. Get code that avoids slow patterns.
 - [Code tracing adder](https://useaiblocks.com/skills/code-tracing-adder): Give it MATLAB code. Get tracing added so you can see where time goes and where errors start.
 - [Code walkthrough writer](https://useaiblocks.com/skills/code-walkthrough-writer): Paste working code. Get an explanation for people, with each piece of code placed in reading order.
 - [Codebase architecture reviewer](https://useaiblocks.com/skills/codebase-architecture-reviewer): Point it at your code. Get an HTML report of design improvements, then work through the one you pick.
 - [Codebase onboarding guide writer](https://useaiblocks.com/skills/codebase-onboarding-guide-writer): Point it at a codebase. Get two guides that take a new engineer from first day to deep knowledge.
 - [Codebase tour guide](https://useaiblocks.com/skills/codebase-tour-guide): Name your audience. Get a step-by-step tour file that links real files and lines for a new teammate.
-- [Coding agent handoff writer](https://useaiblocks.com/skills/coding-agent-handoff-writer): Describe the change you want. Get a handoff note with scope, checks and stop rules for a coding agent.
 - [Coding session retro leader](https://useaiblocks.com/skills/coding-session-retro-leader): Finish a coding session. Get what slowed your AI down and the changes that would help next time.
 - [Coding task planner](https://useaiblocks.com/skills/coding-task-planner): Describe a coding task. Get a short plan with scope, ordered action items, tests and open questions.
 - [Command-line tool builder](https://useaiblocks.com/skills/command-line-tool-builder): Give it an API doc or script. Get a command-line tool that returns clean JSON and handles sign-in.
@@ -103,20 +104,19 @@
 - [DSPy prompt optimizer](https://useaiblocks.com/skills/dspy-prompt-optimizer): Describe your AI task and a few examples. Get a program that tunes its own prompts to score better.
 - [DuckDB big file query helper](https://useaiblocks.com/skills/duckdb-big-file-query-helper): Point it at large CSV, Parquet or JSON files. Get fast queries run from MATLAB with DuckDB.
 - [Edge case list maker](https://useaiblocks.com/prompts/edge-case-list-maker): Paste a change you plan to make. Get the cases to check, smallest first, before you write any code.
-- [Edge Redis cache and limit builder](https://useaiblocks.com/skills/copilot-upstash-redis): Share your serverless app. Get Redis caching or rate limits over HTTP with the required setup explained.
 - [Embedding model trainer](https://useaiblocks.com/skills/embedding-model-trainer): Say what your search or matching must do. Get an embedding or reranker model trained from a ready template.
-- [Error warning and recovery designer](https://useaiblocks.com/skills/error-message-designer): Describe a system and its operators. Get what the alarm says, what the person decides and how it recovers.
+- [Error and recovery message writer](https://useaiblocks.com/skills/error-message-designer): Describe a system and its operators. Get what the alarm says, what the person decides and how it recovers.
 - [Expo API route builder](https://useaiblocks.com/skills/expo-api-route-builder): Say what your mobile app needs from a server. Get API routes built in Expo Router and set up to host.
 - [Expo app interface builder](https://useaiblocks.com/skills/expo-app-interface-builder): Describe the mobile screens you want. Get Expo Router code with native tabs, styling and motion.
 - [Expo upgrade helper](https://useaiblocks.com/skills/expo-upgrade-helper): Say which Expo version to reach. Get your app upgraded and broken dependencies fixed.
 - [FAISS similarity search builder](https://useaiblocks.com/skills/faiss-similarity-search-builder): Give it your embeddings. Get a fast index that finds the closest matches among millions of items.
 - [Faster model reply setup](https://useaiblocks.com/skills/faster-model-reply-setup): Name your model. Get a setup that makes replies 1.5 to 3.6 times faster without changing the answers.
-- [Feature memory keeper](https://useaiblocks.com/skills/feature-memory-keeper): Point it at your project. Get one short file per feature with status, decisions and risks for the next session.
+- [Feature decision notes organizer](https://useaiblocks.com/skills/feature-memory-keeper): Point it at your project. Get one short file per feature with status, decisions and risks for the next session.
 - [Flight environment calculator](https://useaiblocks.com/skills/flight-environment-calculator): Give it a place, height and date. Get air, gravity, wind and magnetic field values, worked out in MATLAB.
+- [Focused code change guard](https://useaiblocks.com/skills/small-change-keeper): Turn it on while you code. Your AI changes only what you asked for and picks the simplest fix.
 - [FPGA down converter designer](https://useaiblocks.com/skills/fpga-down-converter-designer): Describe the rates and bands. Get a digital down converter built for FPGA or ASIC use.
 - [Free worker delegator](https://useaiblocks.com/skills/free-worker-delegator): Hand off routine coding. Get free helper models doing scout, code and test jobs while Claude reviews.
 - [Function argument checker writer](https://useaiblocks.com/skills/function-argument-checker-writer): Give it a MATLAB function. Get its inputs checked with a clean arguments block, replacing older checks.
-- [Function purity refactor planner](https://useaiblocks.com/skills/function-purity-refactor-planner): Paste a messy function. Get its hidden state listed, a safer version that uses only its inputs, and tests.
 - [Git safety guard setter](https://useaiblocks.com/skills/git-safety-guard-setter): Say you want safe git. Get hooks that block risky commands like force push and hard reset before they run.
 - [Git workflow helper](https://useaiblocks.com/skills/git-workflow-helper): Tell it your Git problem. Get branching, commits, merges and pull requests handled cleanly.
 - [GNSS position calculator](https://useaiblocks.com/skills/gnss-position-calculator): Give it RINEX satellite data. Get receiver positions worked out from chosen satellite groups.
@@ -141,7 +141,7 @@
 - [Language model benchmark runner](https://useaiblocks.com/skills/language-model-benchmark-runner): Give it a model. Get scores on 60 or more standard tests, so you can compare it with others.
 - [Language model trainer](https://useaiblocks.com/skills/language-model-trainer): Name your model and data. Get a fine-tuning run set up with TRL, using the right method for your goal.
 - [Large antenna analyzer](https://useaiblocks.com/skills/large-antenna-analyzer): Describe a dish or reflector antenna. Get a built model with patterns and performance checked.
-- [Launch readiness seam checker](https://useaiblocks.com/skills/launch-readiness-seam-checker): Describe a launch, migration or release. Get a readiness score, the joins between parts and a run-through plan.
+- [Launch integration checklist](https://useaiblocks.com/skills/launch-readiness-seam-checker): Describe a launch, migration or release. Get a readiness score, the joins between parts and a run-through plan.
 - [Liquid snippet writer](https://useaiblocks.com/skills/liquid-snippet-writer): Paste your theme code or say what you need. Get correct Liquid for products, carts and loops.
 - [LitGPT model trainer](https://useaiblocks.com/skills/litgpt-model-trainer): Pick a small open model and your data. Get it downloaded, trained on your examples and ready to chat with.
 - [Live audio processing builder](https://useaiblocks.com/skills/live-audio-processing-builder): Describe the effect. Get a frame-by-frame audio chain with filters, EQ and level meters.
@@ -167,7 +167,6 @@
 - [MATLAB package installer](https://useaiblocks.com/skills/matlab-package-installer): Name the package. Get it installed, updated or removed, with dependency errors sorted.
 - [MATLAB project setup helper](https://useaiblocks.com/skills/matlab-project-setup-helper): Say how your project is laid out. Get a matlab.toml with paths, dependencies and scripts set up.
 - [MATLAB to C converter](https://useaiblocks.com/skills/matlab-to-c-converter): Give it MATLAB code. Get C, C++ or CUDA code that is checked and tuned for speed.
-- [Measure first slowdown finder](https://useaiblocks.com/skills/measure-first-slowdown-finder): Describe what feels slow. Get a measurement plan, the worst-case view and a ranked fix list.
 - [Medical scan reader](https://useaiblocks.com/skills/medical-scan-reader): Give it DICOM, NIfTI or NRRD scans. Get them read, listed and ready to use in MATLAB.
 - [Migration planner](https://useaiblocks.com/skills/migration-planner): Name the old system or feature. Get a plan to retire it and move users over without breaking them.
 - [Mixed-signal waveform analyzer](https://useaiblocks.com/skills/mixed-signal-waveform-analyzer): Give it circuit waveform data. Get phase noise, jitter, timing and ADC accuracy measured.
@@ -182,7 +181,7 @@
 - [Model training recipe finder](https://useaiblocks.com/skills/model-training-recipe-finder): Say what you are training. Get the right settings, a safe training loop and a checklist for when the loss goes wrong.
 - [Module design coach](https://useaiblocks.com/skills/module-design-coach): Name the part you want to improve. Get a simpler design with clear boundaries that is easier to test.
 - [Monorepo helper](https://useaiblocks.com/skills/monorepo-helper): Point it at a monorepo. Get what a change affects and the tests to run, in Turborepo, Nx or pnpm.
-- [Monthly tech debt keeper](https://useaiblocks.com/agents/monthly-tech-debt-keeper): Point it at your code each month. Get new debt found, last month's clean-up checked and the next small fixes ranked.
+- [Monthly technical debt review](https://useaiblocks.com/agents/monthly-tech-debt-keeper): Point it at your code each month. Get new debt found, last month's clean-up checked and the next small fixes ranked.
 - [Multi-agent system planner](https://useaiblocks.com/skills/multi-agent-system-planner): Describe the job. Get a choice of supervisor, swarm or handoff design for several agents, with the trade-offs.
 - [Multi-GPU training setup helper](https://useaiblocks.com/skills/multi-gpu-training-setup-helper): Give it a training script. Get it running on one GPU, many GPUs or several machines with a few added lines.
 - [Multi-session build plan writer](https://useaiblocks.com/skills/multi-session-build-plan-writer): Give it a big build request. Get a plan in your repo that any fresh agent can pick up and finish.
@@ -235,6 +234,7 @@
 - [Postgres schema designer](https://useaiblocks.com/skills/postgres-schema-designer): Describe your data. Get a Postgres schema with the right types, keys, indexes and rules for speed and safety.
 - [Postman collection maker](https://useaiblocks.com/skills/postman-collection-maker): Describe your API or paste cURL commands. Get a Postman collection file that imports and runs straight away.
 - [Prediction feature picker](https://useaiblocks.com/skills/prediction-feature-picker): Give it a data table and a target. Get the best input columns chosen, tested and delivered as a clean table.
+- [Process and behavior change planner](https://useaiblocks.com/skills/structure-behaviour-split): Paste a messy change. Get tidy-up steps and new-behaviour steps, each small enough to review alone.
 - [Product lifetime analyst](https://useaiblocks.com/skills/product-lifetime-analyst): Give it failure or test data. Get life curves, failure rates and confidence ranges, worked out in MATLAB.
 - [Project glossary writer](https://useaiblocks.com/skills/project-glossary-writer): Talk through your project's terms. Get a glossary and decision records so everyone uses the same words.
 - [Project memory keeper](https://useaiblocks.com/skills/project-memory-keeper): Work on a codebase. Get a notes folder of decisions, design and rules that any AI can read later.
@@ -242,6 +242,7 @@
 - [Protobuf compatibility reviewer](https://useaiblocks.com/skills/copilot-protobuf-grpc-api-review): Share your schema change. Get wire compatibility risks, rollout hazards and safe field changes.
 - [Pull request description writer](https://useaiblocks.com/skills/pull-request-description-writer): Commit your branch. Get a clear pull request that says what changed, why, and what reviewers should check.
 - [Pull request writer](https://useaiblocks.com/skills/pull-request-writer): Give it your changes. Get a clear pull request description a reviewer can follow.
+- [Pure function refactoring planner](https://useaiblocks.com/skills/function-purity-refactor-planner): Paste a messy function. Get its hidden state listed, a safer version that uses only its inputs, and tests.
 - [Radar detection simulator](https://useaiblocks.com/skills/radar-detection-simulator): Give it a radar datasheet. Get a simulated scene, fixes for missed detections and result plots.
 - [Radar waveform designer](https://useaiblocks.com/skills/radar-waveform-designer): Give it radar or sonar needs. Get a chosen waveform, its settings and plots of how well it performs.
 - [Radio transmit and capture helper](https://useaiblocks.com/skills/radio-transmit-capture): Give it a test signal. Get it sent over the air and the received IQ data captured.
@@ -264,6 +265,7 @@
 - [Safe shutdown code writer](https://useaiblocks.com/skills/safe-shutdown-code-writer): Point it at your server or worker. Get code that finishes live work and exits cleanly when stopped.
 - [Sequencing pipeline runner](https://useaiblocks.com/skills/sequencing-pipeline-runner): Point it at sequencing data or a public set. Get an nf-core pipeline run for RNA-seq, variants or ATAC-seq.
 - [SerDes link modeler](https://useaiblocks.com/skills/serdes-link-modeler): Describe a high-speed serial link. Get a model with equalizers tuned and eye diagrams plotted.
+- [Serverless Redis cache builder](https://useaiblocks.com/skills/copilot-upstash-redis): Share your serverless app. Get Redis caching or rate limits over HTTP with the required setup explained.
 - [Session to script exporter](https://useaiblocks.com/skills/session-to-script-exporter): Ask to save your session. Get one clean MATLAB script that reruns the work from start to end.
 - [Setup wizard builder](https://useaiblocks.com/skills/setup-wizard-builder): Describe a manual setup job. Get a script that walks you through each step and saves what you enter.
 - [Shopify app builder](https://useaiblocks.com/skills/shopify-app-builder): Say what your Shopify app should do. Get a working app with admin screens, sign-in and extensions.
@@ -276,7 +278,6 @@
 - [Simple software designer](https://useaiblocks.com/skills/simple-software-designer): Give it code or a design. Get complexity spotted and simpler, deeper modules suggested. Uses A Philosophy of Software Design.
 - [Single-cell deep learning analyst](https://useaiblocks.com/skills/single-cell-deep-learning): Give it single-cell data. Get your datasets merged, batch effects fixed and cell types found with scvi-tools.
 - [Slack bot builder](https://useaiblocks.com/skills/slack-bot-builder): Say what the bot should do. Get a Slack app with commands, events and rich messages.
-- [Small change keeper](https://useaiblocks.com/skills/small-change-keeper): Turn it on while you code. Your AI changes only what you asked for and picks the simplest fix.
 - [Small model trainer from a big one](https://useaiblocks.com/skills/small-model-distillation): Name your large model. Get a plan and code to teach a smaller, cheaper model to match it.
 - [Small-device AI deployer](https://useaiblocks.com/skills/small-device-ai-deployer): Give it a trained AI model and a target chip. Get lean code that runs the model on that hardware.
 - [Small-sample pipeline builder](https://useaiblocks.com/skills/small-sample-pipeline-builder): Describe a data or AI workflow. Get it working end to end on a tiny sample, then scaled with cost checks.
@@ -293,7 +294,6 @@
 - [SQL query helper](https://useaiblocks.com/skills/sql-query-helper): Describe the data you need. Get a tested SQL query, a faster version, or a migration.
 - [Store rules builder](https://useaiblocks.com/skills/store-rules-builder): Say the discount, shipping or payment rule you want. Get a working Shopify Function that runs it.
 - [Stripe payments builder](https://useaiblocks.com/skills/stripe-payments-builder): Say how you charge. Get Stripe checkout, subscriptions and webhooks built safely, with test steps.
-- [Structure and behaviour change splitter](https://useaiblocks.com/skills/structure-behaviour-split): Paste a messy change. Get tidy-up steps and new-behaviour steps, each small enough to review alone.
 - [Structured data extractor](https://useaiblocks.com/skills/structured-data-extractor): Say what fields you need. Get code that pulls them from AI replies as checked data, retrying on errors.
 - [SwiftUI code reviewer](https://useaiblocks.com/skills/swiftui-code-reviewer): Give it your SwiftUI code. Get it written, reviewed or refactored with current APIs and fewer speed traps.
 - [Symbolic math coder](https://useaiblocks.com/skills/symbolic-math-coder): Describe the equation. Get exact solutions worked out in MATLAB, and turned into fast numeric functions.

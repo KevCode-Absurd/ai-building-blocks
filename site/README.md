@@ -1,29 +1,27 @@
-# Site
+# AI Building Blocks site
 
-The AI Building Blocks website: one page, light by default with a dark mode. Header, "Use AI like the top 1%" and two buttons, then the library (Prompts, Skills, Workflows, Agents; anything opens in a side drawer, `?block=<slug>`) and the builder (drag-and-drop canvas with the handoff download). See `docs/PRD.md`.
+Preact, TypeScript and Vite, with React Flow for the workflow builder. The library has searchable prompts, skills, workflows, agents and minds. Items have permanent pages, source downloads and deterministic workflow packs. Kits, business context and council drafts are saved in the browser.
 
-Vite + React + TypeScript, built to static files. No server; what people save (kits, workflows) is kept in their browser by `src/lib/store.ts`, the one file to change when free accounts arrive.
+Cloudflare Pages serves the prerendered site, calculators and saved Mercatura tour. Pages Functions handle comments and shared spaces through D1. Development uses the same handlers with temporary memory stores; restarting the development server clears those stores.
 
-```bash
-npm install
-npm run dev        # builds the data index from ../catalogue-items, then serves on http://localhost:5180
-npm run build      # static site in dist/
-npm run test:e2e   # Playwright end-to-end tests (uses the installed Chrome; PW_CHANNEL=msedge for Edge)
+```sh
+npm ci
+npm run dev
+npm run build
+npm run preview
+npm run test:unit
+npm run test:e2e
+npm run seo
 ```
 
-| Path | What it is |
-|---|---|
-| `scripts/build-index.mjs` | Reads `catalogue-items/**` into `public/data/blocks.json` and copies each SKILL.md to `public/skills/` (both generated, not committed) |
-| `src/lib/handoff.ts` | The deterministic handoff export: order, HANDOFF.md, workflow.json, zip |
-| `src/App.tsx` | The page and its sections |
-| `src/Builder.tsx` | The drag-and-drop canvas (React Flow), loaded after the page |
-| `src/BlockDrawer.tsx` | A block or workflow in the side drawer |
-| `src/tools/` | The Tools pages (`/tools`, `/tools/<slug>`), loaded on demand. They read the mini tools' formula files in `../mini-tools/` directly; `npm run index` also runs `../tools/build-mini-tool.mjs`, which builds each tool's download, embed, spreadsheet and AI skill into `public/mini-tools/` (generated, not committed) |
-| `e2e/site.spec.ts` | End-to-end tests: hero, no brands or jargon, theme, navigation, type tabs, search and filters, drawer, kits, builder, handoff zip, phone width |
-| `e2e/tools.spec.ts` | End-to-end tests for the mini tools: every worked example typed into each page, the offline download, the spreadsheet, the AI skill and prompt, the embed, reading level and phone width |
+Use Node 22 from `.nvmrc`. Generated indexes, skill assets and `dist/` are rebuilt from the repository. Display copy comes from `../catalogue-items/display-copy.yaml`; imported source instructions remain unchanged. Playwright uses installed Chrome; `PW_CHANNEL=msedge` selects Edge.
 
-The page shows no brand names or brand pictures (decided 18 Oct).
+The library initially renders 16 cards. Show more adds 16. Builder and other large pages load separately. The production build includes a real 404 page, search metadata, job hubs and `/example-app/`; that saved tour is excluded from search.
 
-## Deploy
+## Cloudflare integration
 
-Live at https://useaiblocks.com on Cloudflare Pages (free), built from `main` on every push. Pages project settings: root directory `site`, build command `npm run build`, output directory `dist`; Node comes from `site/.nvmrc`. Cloudflare serves `index.html` for any path the site doesn't have, so links like `/blocks/<slug>` open the app; that's why the build makes no `404.html`.
+Integration is pending. A GitHub push does not prove that a live deployment or domain is configured. Follow [the launch handoff](../docs/CLOUDFLARE-LAUNCH-2026-10-22.md) for project settings, D1 migrations, secrets, preview verification and rollback.
+
+`wrangler.example.jsonc` is a template. Copy it to ignored `wrangler.jsonc` and replace its database IDs before using account commands. Never commit salts, team tokens, local state or a populated configuration. Only `/api/*` invokes Functions, as defined in `public/_routes.json`.
+
+Key code: `scripts/build-index.mjs` (catalogue), `scripts/prerender.mjs` (HTML and tour), `src/lib/handoff.ts` (exports), `src/Builder.tsx` (canvas), `src/server/` (API rules), `functions/api/` (Cloudflare adapters), and `e2e/` (browser tests).

@@ -24,11 +24,14 @@ export function navigate(to: string, opts: { replace?: boolean } = {}) {
   // pushState does not emit hashchange. Lazy sections and the landing correction
   // need the same signal as a native anchor, even when the path stayed the same.
   if (u.hash) window.dispatchEvent(new Event("hashchange"));
-  requestAnimationFrame(() => {
+  const land = () => {
     const el = u.hash ? document.getElementById(u.hash.slice(1)) : null;
-    if (el) el.scrollIntoView({ behavior: same ? "smooth" : "auto" });
-    else if (!same) window.scrollTo(0, 0);
-  });
+    if (el) el.scrollIntoView({ behavior: "instant" as ScrollBehavior });
+    else if (!same) window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+  };
+  // Existing sections land now. A queued smooth scroll can otherwise restart after
+  // the visitor has already scrolled away. New pages wait for their first render.
+  if (same) land(); else requestAnimationFrame(land);
 }
 
 /** Replace the query string without adding a history entry (filters, search). */

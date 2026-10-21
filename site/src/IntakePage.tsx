@@ -14,7 +14,7 @@ export default function IntakePage({ c, toast }: { c: Catalogue; toast: (m: stri
   const [v, setV] = useState<IntakeInput>(() => { try { return { ...empty, ...JSON.parse(localStorage.getItem(DRAFT) ?? "{}") }; } catch { return empty; } });
   const [busy, setBusy] = useState(false);
   const biz = hasBusiness(useBusiness());
-  useEffect(() => { document.title = "Turn a source into a workflow · AI Blocks"; }, []);
+  useEffect(() => { document.title = "Create skills from content · AI Blocks"; }, []);
   useEffect(() => { try { localStorage.setItem(DRAFT, JSON.stringify(v)); } catch { /* private window */ } }, [v]);
   const set = (k: keyof IntakeInput) => (e: { target: { value: string } }) => setV((x) => ({ ...x, [k]: e.target.value }));
   const words = wordCount(v.text);
@@ -57,7 +57,7 @@ export default function IntakePage({ c, toast }: { c: Catalogue; toast: (m: stri
         <p className="small" data-testid="intake-words">
           {words ? `${words.toLocaleString()} words.` : "Nothing pasted yet."}
           {words > 0 && words < SHORT && " That's short. If it's a summary, your AI will mark the steps it can't find."}
-          {biz ? " Your about-me note goes in the pack too." : ""}
+          {biz ? " Your saved context goes in the pack too." : ""}
         </p>
         <div className="bp-actions">
           <button type="submit" className="btn btn-primary" disabled={!words || busy} data-testid="intake-download">{busy ? "Making the pack…" : "Download the pack"}</button>

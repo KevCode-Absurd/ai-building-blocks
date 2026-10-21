@@ -23,9 +23,8 @@
 - [Image ad maker from customer quotes](https://useaiblocks.com/skills/customer-quote-image-ad): Paste review lines. Get quote image ads, feed text and flags for quotes to check first.
 - [Image ad maker with exact text](https://useaiblocks.com/skills/image-ad-maker-with-exact-text): Paste your image plan and attach photos. Get a word-perfect prompt, tool settings and a fix for each fault.
 - [Image ad remake planner](https://useaiblocks.com/skills/image-ad-remake-planner): Paste your best ad. Get a carousel or still with image prompts, every word unchanged and in order.
-- [Image ad settings picker](https://useaiblocks.com/prompts/image-ad-settings-picker): Paste your brief and choices. Get a fixed-line brief, a conflict check and any missing material.
+- [Image ad visual brief writer](https://useaiblocks.com/prompts/image-ad-settings-picker): Paste your brief and choices. Get a fixed-line brief, a conflict check and any missing material.
 - [Image ads that stop strangers scrolling](https://useaiblocks.com/workflows/scroll-stopping-image-ads): Give it your reviews and product photos. You get a set of image ads, each with a different reason to buy.
-- [Image style picker for story ads](https://useaiblocks.com/skills/image-style-picker-for-story-ads): Paste your story ad. Get the right picture brief, its image prompt and a runner-up to test.
 - [Image upscale checker](https://useaiblocks.com/skills/image-upscale-checker): Attach your image and size needed. Get upscale settings, a change check and a score out of 100.
 - [Knitted wool image ad maker](https://useaiblocks.com/skills/knitted-wool-image-ad-maker): Paste your idea, attach photos. Get a knitted-wool image prompt, the ad words and a layout.
 - [Leftover mess image ad maker](https://useaiblocks.com/skills/leftover-mess-image-ad-maker): Paste your story ad. Get a close-up mess photo prompt and a caption.
@@ -42,7 +41,8 @@
 - [Review quote ad card planner](https://useaiblocks.com/prompts/review-quote-ad-card-planner): Paste review lines. Get quote image ad cards with picture prompts and feed text that keep the words exact.
 - [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner): Paste your facts. Get the layout, image words, feed copy and an image prompt.
 - [Sticky-note image ad maker](https://useaiblocks.com/skills/sticky-note-image-ad-maker): Paste your story ad. Get a sticky-note photo brief, an image prompt and a blank version.
-- [Story ad picture brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer): Paste your story ad. Get one picture brief, a ready image prompt and a short line to run under it.
+- [Story ad image brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer): Paste your story ad. Get one picture brief, a ready image prompt and a short line to run under it.
+- [Story ad visual style planner](https://useaiblocks.com/skills/image-style-picker-for-story-ads): Paste your story ad. Get the right picture brief, its image prompt and a runner-up to test.
 - [Talking object image ad maker](https://useaiblocks.com/skills/talking-object-image-ad-maker): Paste your buyer's moment. Get a talking object image prompt, the bubble line and the ad words.
 - [Three-way offer image ad planner](https://useaiblocks.com/skills/three-way-offer-image-ad-planner): Paste your offer. Get three offer image ads in two sizes and one offer block.
 - [Tracker chart image ad maker](https://useaiblocks.com/skills/tracker-chart-image-ad-maker): Paste your story ad and claims. Get a tracker-photo image prompt, one mark and the line under it.
@@ -54,5 +54,5 @@
 - [Visible symptom image ad maker](https://useaiblocks.com/skills/visible-symptom-image-ad-maker): Paste your story ad. Get a body-safety check and a close-up photo prompt, or a safer idea.
 - [Visual twist image ad maker](https://useaiblocks.com/skills/visual-twist-image-ad-maker): Paste a buyer's words. Get a one-twist image ad, its words, layout and image prompt.
 - [Watercolor image ad maker](https://useaiblocks.com/skills/watercolor-image-ad-maker): Paste your idea, attach photos. Get a watercolor image prompt, a layout and the ad words.
-- [Weekly image ad batch maker](https://useaiblocks.com/agents/weekly-image-ad-batch-maker): Give it last week's ad results. Get a checked batch of new image ad plans, words and prompts to approve.
+- [Weekly image ad planner](https://useaiblocks.com/agents/weekly-image-ad-batch-maker): Give it last week's ad results. Get a checked batch of new image ad plans, words and prompts to approve.
 - [Winning image ad style finder](https://useaiblocks.com/skills/winning-image-ad-style-finder): Attach ads with results. Get the style your winners share and new ad plans that test one change.

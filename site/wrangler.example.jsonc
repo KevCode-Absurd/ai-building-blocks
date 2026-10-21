@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ai-building-blocks",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-10-21",
+  "d1_databases": [
+    { "binding": "COMMENTS", "database_name": "ai-blocks", "database_id": "REPLACE_WITH_D1_DATABASE_ID", "migrations_dir": "migrations" },
+    { "binding": "SPACES", "database_name": "ai-blocks", "database_id": "REPLACE_WITH_D1_DATABASE_ID", "migrations_dir": "migrations" }
+  ]
+}

@@ -4,15 +4,15 @@
 
 - [Agent procedure writer](https://useaiblocks.com/skills/agent-procedure-writer): Describe a repeatable job. Get a step-by-step procedure file for your AI, with firm rules and a format check.
 - [AI instruction writer](https://useaiblocks.com/skills/ai-instruction-writer): Say which skill or instruction file you are writing. Get it written so your AI follows it well.
+- [AI skill review](https://useaiblocks.com/prompts/skill-file-problem-spotter): Paste a SKILL.md. Get a ranked list of problems to fix before you share it.
 - [Book to skill converter](https://useaiblocks.com/skills/book-to-skill-converter): Give it a book or a folder of documents. Get skill files that put its method to work.
-- [Monthly skill library keeper](https://useaiblocks.com/agents/monthly-skill-library-keeper): Point it at your skills folder each month. Get weak, clashing and unsafe skills found, and gaps worth a new skill.
+- [Monthly AI skill library review](https://useaiblocks.com/agents/monthly-skill-library-keeper): Point it at your skills folder each month. Get weak, clashing and unsafe skills found, and gaps worth a new skill.
 - [Pattern to skill extractor](https://useaiblocks.com/skills/pattern-to-skill-extractor): Name a fix you keep repeating. Get it packaged as a reusable skill with notes and examples.
 - [Project skill finder](https://useaiblocks.com/skills/project-skill-finder): Point it at a project. Get a short list of skills worth adding or updating, based on how you really work.
-- [Repeat job skill drafter](https://useaiblocks.com/prompts/repeat-job-skill-drafter): Paste a job you repeat. Get a draft skill file with a trigger line and test prompts.
 - [Repeated work skill finder](https://useaiblocks.com/skills/repeated-work-skill-finder): Point it at your screen history. Get a list of tasks you repeat and draft skills to automate them.
+- [Reusable AI skill writer](https://useaiblocks.com/prompts/repeat-job-skill-drafter): Paste a job you repeat. Get a draft skill file with a trigger line and test prompts.
 - [Session lesson writer](https://useaiblocks.com/skills/session-lesson-writer): Give it a fixed problem from your session. Get one short, tested how-to your AI can reuse next time.
 - [Skill builder](https://useaiblocks.com/skills/skill-builder): Describe what your AI should learn. Get a skill folder with clear instructions and helper files.
-- [Skill file problem spotter](https://useaiblocks.com/prompts/skill-file-problem-spotter): Paste a SKILL.md. Get a ranked list of problems to fix before you share it.
 - [Skill file validator](https://useaiblocks.com/skills/skill-file-validator): Give it a SKILL.md. Get a list of structure, wording and naming problems to fix before you share it.
 - [Skill portability checker](https://useaiblocks.com/skills/skill-portability-checker): Point it at your skill folder. Get a list of mistakes that stop it loading in other AI tools, with fixes.
 - [Skill quality tester](https://useaiblocks.com/skills/skill-quality-tester): Give it a skill. Get its structure checked, scripts run and a score with fixes.

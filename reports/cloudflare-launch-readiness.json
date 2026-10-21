@@ -1,0 +1,67 @@
+{
+  "preparedOn": "2026-10-22",
+  "launchTarget": "2026-10-22",
+  "status": "local-build-ready-for-cloudflare-integration",
+  "productionDeploymentPerformed": false,
+  "files": 18547,
+  "freeFileLimit": 20000,
+  "buildBuffer": 19000,
+  "remainingBeforeBuffer": 453,
+  "totalBytes": 450917379,
+  "largestFiles": [
+    {
+      "path": "example-app/costs/other/other.html",
+      "bytes": 5569469
+    },
+    {
+      "path": "example-app/api/assets/job_018/video_motion.mp4",
+      "bytes": 4582872
+    },
+    {
+      "path": "example-app/_q/ed05621bbef7f42b.html",
+      "bytes": 3372128
+    },
+    {
+      "path": "skills/saas-blueprint-planner.zip",
+      "bytes": 3198064
+    },
+    {
+      "path": "example-app/landing/pages/new.html",
+      "bytes": 2965180
+    }
+  ],
+  "publishedEntries": 4345,
+  "checks": {
+    "requiredFiles": true,
+    "exampleSameOrigin": true,
+    "exampleNoindex": true,
+    "apiOnlyFunctions": true,
+    "maximumFileSize": true,
+    "editorialNames": true
+  },
+  "criticalAssets": [
+    {
+      "path": "index.html",
+      "sha256": "1484d7e2de539cf89e9f9632ff1374a9b5f5dc3572bc4a4c2f0e62632c944916"
+    },
+    {
+      "path": "_routes.json",
+      "sha256": "924efc005e6bb33358e33e8363a29bf7ca9ece23673b3b35045dc439ccd3eea6"
+    },
+    {
+      "path": "data/blocks.json",
+      "sha256": "d25c976774516f67d6e8fac3eda8cc801e74f172e893e9a3fee564a6c741fa17"
+    },
+    {
+      "path": "example-app/index.html",
+      "sha256": "ab7a24f1b3196148813e33f1f3fc8729ce14fa3e7f4a2e1c7db83c741c6c6173"
+    }
+  ],
+  "requiredAtIntegration": [
+    "Cloudflare account and Pages project",
+    "D1 database, both migrations and COMMENTS/SPACES bindings",
+    "Four separate server-side salts/team secrets",
+    "Custom domain association and DNS",
+    "Preview URL verification before production promotion"
+  ]
+}

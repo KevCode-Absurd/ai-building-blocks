@@ -3,8 +3,8 @@
 // what you type is kept only in this browser. Loaded on demand, so the home page never waits for it.
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import "./tools.css";
-import { ArrowIcon } from "../ui";
-import { Link } from "../lib/router";
+import { ArrowIcon, SearchIcon } from "../ui";
+import { Link, setSearch, useLocation } from "../lib/router";
 import { monthOf, pathOf, useCatalogue } from "../lib/data";
 import { E, EXAMPLES, SITE, TOOLS, filesOf, saveSteps, shelfLabel, type Input, type Line, type Tool } from "./registry";
 
@@ -275,6 +275,25 @@ function ToolPage({ tool, toast }: { tool: Tool; toast: (m: string) => void }) {
 }
 
 function ToolsIndex() {
+  const { search } = useLocation();
+  const [q, setQ] = useState(() => search.get("q") ?? "");
+  const [category, setCategory] = useState("");
+  useEffect(() => { setSearch({ q }); }, [q]);
+  const categories = [
+    { id: "", name: "All tools" },
+    { id: "ads", name: "Ads" },
+    { id: "pricing", name: "Profit and cash" },
+    { id: "customers", name: "Customers" },
+    { id: "work", name: "People and AI" },
+  ];
+  const topics: Record<string, string[]> = {
+    ads: ["creative-volume-planner", "page-test-calculator", "ad-budget-planner", "creator-deal-calculator", "ad-test-size", "launch-revenue-planner", "content-cost-per-piece", "agency-or-in-house"],
+    customers: ["repeat-customer-profit", "customer-payback", "email-list-value", "subscription-revenue-forecast", "subscriber-lifetime-value", "email-frequency-planner"],
+    work: ["ai-run-cost", "hourly-rate", "meeting-cost", "hire-or-freelance", "new-hire-break-even", "hire-runway-cost", "ai-time-saved"],
+  };
+  const group = (t: Tool) => Object.keys(topics).find((key) => topics[key].includes(t.slug)) ?? "pricing";
+  const words = q.toLowerCase().replace(/[_-]/g, " ").split(/\s+/).filter(Boolean);
+  const shown = TOOLS.filter((t) => (!category || group(t) === category) && words.every((w) => `${t.name} ${t.summary} ${t.question} ${t.slug}`.toLowerCase().replace(/[_-]/g, " ").includes(w)));
   useEffect(() => { document.title = "Free mini tools · AI Blocks"; return () => { document.title = TITLE; }; }, []);
   return (
     <main className="bp mt" data-testid="tools-index">
@@ -285,8 +304,12 @@ function ToolsIndex() {
         <p className="bp-sub">Calculators for discounts, deals, ads, repeat customers, page tests, AI costs and your hourly rate. Type your numbers and see the answer and every line of the sum. No sign-up, and what you type stays in your browser.</p>
       </header>
       <div className="wrap mt-index">
+        <label className="search tools-search"><SearchIcon /><span className="visually-hidden">Find a calculator</span><input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search tools by name or what you want to calculate" data-testid="tools-search" /></label>
+        <div className="tools-categories" role="group" aria-label="Calculator topic">{categories.map((x) => <button type="button" className="chip" key={x.id} aria-pressed={category === x.id} onClick={() => setCategory(x.id)}>{x.name}</button>)}</div>
+        <p className="result-line" role="status">{shown.length} tool{shown.length === 1 ? "" : "s"}{(q || category) && <button className="link-btn" onClick={() => { setQ(""); setCategory(""); }}>Clear filters</button>}</p>
+        {!shown.length && <p className="empty">No tools match. Try fewer words or choose another topic.</p>}
         <div className="grid">
-          {TOOLS.map((t) => (
+          {shown.map((t) => (
             <Link key={t.slug} to={`/tools/${t.slug}`} className="card mt-card" data-testid="tool-card" data-slug={t.slug}>
               <span className="meta"><span className="kind">{t.short}</span><span className="type">{shelfLabel(t)}</span></span>
               <span className="nm">{t.name}</span>

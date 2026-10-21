@@ -5,16 +5,16 @@
 - [Category and trend risk checker](https://useaiblocks.com/skills/category-and-trend-risk-checker): Name a category to enter. Get a score out of 100 on market size, trend risk and fit.
 - [Competitor revenue estimator](https://useaiblocks.com/skills/competitor-revenue-estimator): Give a rival's visits and price. Get low, mid and high monthly revenue, a score and a verdict.
 - [Competitor saturation checker](https://useaiblocks.com/skills/competitor-saturation-checker): Give it a product name. Get store counts, rival strength, a score out of 100 and a go.
-- [Crowded category white space finder](https://useaiblocks.com/skills/crowded-category-white-space-finder): Name a crowded category and its leaders. Get the gaps in price, reach, taste or buyer.
+- [Crowded market opportunity finder](https://useaiblocks.com/skills/crowded-category-white-space-finder): Name a crowded category and its leaders. Get the gaps in price, reach, taste or buyer.
 - [Find a product idea in buyer complaints and score it](https://useaiblocks.com/workflows/find-a-product-idea-in-buyer-complaints-and-score-it): Give it a category. Get complaints that sell, the gap to own and a score out of 100.
 - [Find a product that sells in a gap rivals miss](https://useaiblocks.com/workflows/find-a-product-that-sells-and-a-gap-rivals-leave-open): Give it your market. Get proven products, a gap rivals leave open, a score out of 100 and a small first test.
 - [Monthly product opportunity scout](https://useaiblocks.com/agents/monthly-product-opportunity-scout): Name your market each month. Get a short list of products scored and checked, with one pick and a small test plan.
+- [New customer segment finder](https://useaiblocks.com/prompts/open-buyer-group-finder): Paste your product and rival ads. Get buyer groups nobody targets, ranked, with a hook for each.
 - [New product line checker](https://useaiblocks.com/skills/new-product-line-checker): Name a product to add. Get CAC or LTV, a score out of 100, a test cap.
-- [Open buyer group finder](https://useaiblocks.com/prompts/open-buyer-group-finder): Paste your product and rival ads. Get buyer groups nobody targets, ranked, with a hook for each.
 - [Pain point niche finder](https://useaiblocks.com/skills/pain-point-niche-finder): Pick a market. Get 30 buyer problems, your best 5 and the brands already selling to them.
-- [Product niche problem picker](https://useaiblocks.com/prompts/product-niche-problem-picker): Name a market. Get 20 buyer problems, the best 5, and what to search to see who sells to each.
+- [Product niche problem finder](https://useaiblocks.com/prompts/product-niche-problem-picker): Name a market. Get 20 buyer problems, the best 5, and what to search to see who sells to each.
+- [Product opportunity review](https://useaiblocks.com/skills/rating-gap-product-finder): Name a category. Get pain points ranked by urgency and sub-categories with weak ratings but strong search.
 - [Proven product scout](https://useaiblocks.com/skills/proven-product-scout): Name your market. Get ad spy filters, a reading routine and a short list of proven products.
-- [Rating gap product finder](https://useaiblocks.com/skills/rating-gap-product-finder): Name a category. Get pain points ranked by urgency and sub-categories with weak ratings but strong search.
 - [Taster event planner](https://useaiblocks.com/skills/taster-event-planner): Give it your product versions and buyer. Get a one-day tasting plan, taster card and decision rule.
 - [TikTok Shop breakout finder](https://useaiblocks.com/skills/tiktok-shop-breakout-finder): Attach TikTok Shop product graphs. Get a score out of 100 for each, and test or drop.
 - [Untapped buyer finder](https://useaiblocks.com/skills/untapped-buyer-finder): Give it a crowded product. Get the buyer groups nobody targets, ranked, with a test for each.

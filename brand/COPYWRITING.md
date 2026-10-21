@@ -137,3 +137,9 @@ Say exactly what happens: "Copy the skill", "Download the workflow", "Open in th
 Run `CHECKLIST.md`. For a line-by-line edit, use the copy editing skill in the library ("Edit a draft so it reads clean and sells").
 
 Everything a visitor reads stays at a grade 10 reading level or below. The `plain-writing` skill (`.claude/skills/plain-writing/SKILL.md`) has the voice, the word swaps and the steps for importing a block. Check any text with `node tools/reading-level.mjs`.
+
+## Natural names come first (21 October 2026)
+
+Kevin's latest review takes priority over the mechanical job-title formula above. Use the familiar name of the job: “Landing page audit”, “Ad hook writer”, “Brand profile builder”. A role suffix is optional when it makes the name harder to say. Avoid stacks of internal nouns such as “ad claim proof gap finder” and vague roles such as “keeper”. Keep the meaningful difference between similar jobs.
+
+A card description says what the person provides and what useful result they get. Keep specialist names when they identify the actual tool or method the reader needs. Never imply a draft was sent, a live account changed, or an outcome proved unless the skill actually does that. Approved display edits live in `catalogue-items/display-copy.yaml`; the build applies them across cards, pages, packs and search metadata while preserving licensed skill source files and stable URLs.

@@ -90,7 +90,7 @@ test("the library leads with six formats and keeps domains in a filter", async (
 
 test("an agent's page shows what it runs, how to add it, and what it asks before", async ({ page }) => {
   await page.goto("/agents/google-ads-weekly-account-keeper");
-  await expect(page.locator("h1")).toHaveText("Google Ads weekly account keeper");
+  await expect(page.locator("h1")).toHaveText("Weekly Google Ads review");
   const runs = page.locator("#steps");
   await expect(runs).toContainText("What it runs");
   await expect(runs.locator(".flow-steps > li")).toHaveCount(6);

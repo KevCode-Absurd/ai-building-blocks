@@ -3,102 +3,104 @@
 > 130 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Adaptive tutor](https://useaiblocks.com/skills/adaptive-tutor): Name a topic and your goal. Get a level check, then short lessons with practice and feedback.
-- [Advice skin-in-the-game checker](https://useaiblocks.com/skills/advice-skin-in-the-game-checker): Paste advice or a pitch. Get who loses if it is wrong, who gains, and a trust level.
+- [Advice credibility checker](https://useaiblocks.com/skills/advice-skin-in-the-game-checker): Paste advice or a pitch. Get who loses if it is wrong, who gains, and a trust level.
 - [AI answer fact-checker](https://useaiblocks.com/skills/ai-answer-fact-checker): Paste one or more AI answers. Get each claim checked against public sources, with links and a short verdict.
 - [AI work grader](https://useaiblocks.com/skills/ai-work-grader): Finish a task. Get an honest score on quality and effort, with the weak spots named.
 - [Answer double-checker](https://useaiblocks.com/skills/answer-double-checker): Get two or three sharp follow-up questions after an answer, so you check the facts and the thinking.
-- [Bold bet downside checker](https://useaiblocks.com/skills/bold-bet-downside-checker): Paste a bold plan. Get the worst case, how to cap it, and a clear go or no-go.
+- [Assumption evidence tracker](https://useaiblocks.com/skills/contrary-evidence-log-keeper): Describe the belief you are building. Get a log of every fact against it, plus a weekly review.
 - [Book notes and margin system builder](https://useaiblocks.com/skills/book-notes-system): Name what you want to learn. Get a slow reading routine with margin notes, a notes file and one action per book.
 - [Build a checklist for a decision you keep making](https://useaiblocks.com/workflows/decision-checklist): Name a decision you repeat. Get your mistakes logged, a one-page checklist, a run on a live case, and upkeep.
-- [Case-against writer](https://useaiblocks.com/skills/case-against-writer): Paste your plan or opinion. Get the best case against it, in the other side's words, and what would change your mind.
-- [Challenge circle feedback planner](https://useaiblocks.com/skills/challenge-circle-feedback): Paste your draft or plan. Get who to ask for early support, who to ask for attack, and the questions to send.
+- [Business bet risk review](https://useaiblocks.com/skills/bold-bet-downside-checker): Paste a bold plan. Get the worst case, how to cap it, and a clear go or no-go.
+- [Business metric quality review](https://useaiblocks.com/skills/vanity-metric-fixer): Paste the numbers you report. Get which are vanity, per-customer numbers that show cause, and the one number to track.
+- [Business resilience planner](https://useaiblocks.com/prompts/slack-and-backup-planner): Share your business operations or budget. Find stress points and get practical backup capacity to add first.
+- [Campaign lessons reviewer](https://useaiblocks.com/skills/copy-or-skip-lesson-writer): Paste why something worked. Get what carries over to your case, what was luck, and a small test of each idea.
 - [Check a plan for bias, bad incentives and failure](https://useaiblocks.com/workflows/plan-bias-check): Describe a decision. Get the pressures behind it, who is rewarded for what, and how the plan could fail.
 - [Check you know enough before you act](https://useaiblocks.com/workflows/enough-info-check): Describe what you are about to do. Get what you know tested with hard questions, and a learn, borrow or pass plan.
-- [Checklist upkeep planner](https://useaiblocks.com/skills/checklist-upkeep-planner): Paste what happened after a decision. Get it judged by the process, not the result, plus checklist changes and practice cases.
+- [Checklist review planner](https://useaiblocks.com/skills/checklist-upkeep-planner): Paste what happened after a decision. Get it judged by the process, not the result, plus checklist changes and practice cases.
 - [Circle of competence mapper](https://useaiblocks.com/skills/circle-of-competence-mapper): Describe a topic or decision. Get what you know, half know and don't, and a verdict: in, learn first or pass.
 - [Claim fact-checker](https://useaiblocks.com/skills/claim-fact-checker): Give it a text. Get each claim checked against trusted sources and scored by confidence.
-- [Claim skepticism kit](https://useaiblocks.com/skills/claim-skepticism-kit): Paste a claim you were told. Get the questions to ask, the weak links, and what evidence would be enough.
 - [Claim stress tester](https://useaiblocks.com/skills/claim-stress-tester): Give it a hard question. Get a clear guess, a fair attempt to break it, the evidence and a tested answer.
-- [Client fee and cap setter](https://useaiblocks.com/skills/client-fee-and-cap-setter): Paste your floor and what others charge. Get a fee, billing terms and a client cap that covers your costs.
+- [Claim verification checklist](https://useaiblocks.com/skills/claim-skepticism-kit): Paste a claim you were told. Get the questions to ask, the weak links, and what evidence would be enough.
+- [Client pricing planner](https://useaiblocks.com/skills/client-fee-and-cap-setter): Paste your floor and what others charge. Get a fee, billing terms and a client cap that covers your costs.
 - [Context package cleaner](https://useaiblocks.com/skills/context-package-cleaner): Give it a pile of notes and documents. Get a deduplicated, ordered set that fits your size limit.
 - [Context shrinker](https://useaiblocks.com/skills/context-shrinker): Give it long material and a size limit. Get a shorter version that keeps decisions, facts and open questions.
-- [Contrary evidence log keeper](https://useaiblocks.com/skills/contrary-evidence-log-keeper): Describe the belief you are building. Get a log of every fact against it, plus a weekly review.
-- [Copy-or-skip lesson writer](https://useaiblocks.com/skills/copy-or-skip-lesson-writer): Paste why something worked. Get what carries over to your case, what was luck, and a small test of each idea.
 - [Daily news digest writer](https://useaiblocks.com/skills/daily-news-digest-writer): Give it a list of news sites. Get a daily report of the best items. Collects data from websites.
 - [Decide whether to drop a rule and trial it safely](https://useaiblocks.com/workflows/decide-whether-to-drop-a-rule-and-trial-it-safely): Give it a rule nobody can explain. Get where it came from, what it quietly does and a small trial.
 - [Decide whether to quit and set the evidence bar](https://useaiblocks.com/workflows/decide-whether-to-quit-a-project-and-set-the-evidence-bar): Give it the project you want to quit. Get a push, change or stop call that survived an attack.
-- [Decision bias pile-up checker](https://useaiblocks.com/skills/decision-bias-pileup-checker): Describe a decision you are about to make. Get the pressures bending your judgment, and a calmer version of the choice.
+- [Decision backup plan](https://useaiblocks.com/skills/decision-tripwire-planner): Share a decision. Get alternative options, a test of your assumptions and a clear point to reconsider.
+- [Decision bias checker](https://useaiblocks.com/skills/decision-bias-pileup-checker): Describe a decision you are about to make. Get the pressures bending your judgment, and a calmer version of the choice.
 - [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder): Paste your mistake log. Get a one-page checklist of up to twelve questions, each with a pass or fail line.
-- [Decision checklist keeper](https://useaiblocks.com/agents/decision-checklist-keeper): Give it each big decision and, later, how it turned out. Get a checked call now and a sharper checklist over time.
 - [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner): Paste your checklist and a decision. Get each item answered with evidence, a pass, fail or unknown, and a clear call.
-- [Decision evidence bar setter](https://useaiblocks.com/skills/decision-evidence-bar-setter): Paste a decision and what you know. Get how much evidence is enough, what to get next and a date to decide.
+- [Decision consequence planner](https://useaiblocks.com/skills/second-order-effects-tracer): Paste a change you plan to make. Get what it causes, what that causes, and how much of the gain you keep.
+- [Decision counterargument writer](https://useaiblocks.com/skills/case-against-writer): Paste your plan or opinion. Get the best case against it, in the other side's words, and what would change your mind.
+- [Decision evidence checklist](https://useaiblocks.com/skills/decision-evidence-bar-setter): Paste a decision and what you know. Get how much evidence is enough, what to get next and a date to decide.
+- [Decision method planner](https://useaiblocks.com/skills/math-or-judgment-call-sorter): Paste a decision and your numbers. Get it sorted as math or judgment call, with the next step.
 - [Decision mistake collector](https://useaiblocks.com/skills/decision-mistake-collector): Name a decision you keep making. Get your past mistakes and others' logged by cause, and the repeat offenders.
-- [Decision options and tripwire planner](https://useaiblocks.com/skills/decision-tripwire-planner): Paste a yes-or-no choice. Get three real options, a test of your hunch and a stop line set in advance.
 - [Decision research investigator](https://useaiblocks.com/skills/decision-research-investigator): Ask a high-stakes question. Get a sourced report, scored sources and the counter-arguments.
+- [Decision reversibility checker](https://useaiblocks.com/prompts/one-way-or-two-way-choice-sorter): Paste a choice you are stuck on. Get it sorted as hard or easy to undo, with the right speed to decide.
+- [Decision review tracker](https://useaiblocks.com/agents/decision-checklist-keeper): Give it each big decision and, later, how it turned out. Get a checked call now and a sharper checklist over time.
+- [Decision thinking checklist](https://useaiblocks.com/skills/mental-model-checklist-runner): Paste a plan or problem. Get it checked through maths, engineering, biology, psychology and economics in turn.
 - [Deep reading guide](https://useaiblocks.com/skills/deep-reading-guide): Give it a book, paper or document. Get its claims and evidence mapped, then recall questions.
 - [Deep reading map builder](https://useaiblocks.com/skills/deep-reading-map-builder): Give it an article, book or PDF. Get a knowledge map of its ideas and a check that you understood.
-- [Definition tester](https://useaiblocks.com/skills/definition-tester): Paste a claim that uses a big word like fair or loyal. Get tested definitions and the counter-cases that break them.
 - [Design interviewer](https://useaiblocks.com/skills/design-interviewer): Give it a plan. Get tough questions until it holds, plus a glossary and decision records.
 - [Design review panel](https://useaiblocks.com/skills/design-review-panel): Give it a design or plan. Get it tested by reviewers in turn for hidden assumptions and ways it could fail.
 - [Digital tool audit planner](https://useaiblocks.com/skills/digital-tool-audit-planner): List the apps and habits you use. Get each kept, cut or limited by two questions: what value, and is it best.
-- [Dip or dead end checker](https://useaiblocks.com/skills/dip-or-dead-end-checker): Paste a project you are tempted to quit. Get a call: push through, change course or stop, with the reason.
 - [Direction check-in](https://useaiblocks.com/skills/direction-check-in): Ask it to pause. Get an honest look at your direction, assumptions and bias before you go on.
-- [Estimate gap auditor](https://useaiblocks.com/skills/estimate-gap-auditor): Paste two teams' odds for the same thing. Get the gap, what each side bases it on and a quick sanity estimate.
+- [Disagreement evidence test planner](https://useaiblocks.com/skills/fair-disagreement-test-planner): Describe a dispute where each side thinks it is right. Get a test both accept in advance and written predictions.
 - [Eulogy values finder](https://useaiblocks.com/skills/eulogy-values-finder): Say where you are in life. Get the five values you most want remembered for, and which you are not living yet.
 - [Exam study roadmap builder](https://useaiblocks.com/skills/exam-study-roadmap-builder): Give it your syllabus, past papers or notes. Get a ranked roadmap of what to study first for the best score.
 - [Face the decision you keep avoiding and clear your week](https://useaiblocks.com/workflows/avoided-decision-week): Paste the decision you keep putting off. Get the worst case, a stop list and the few big tasks for the week.
 - [Fact cross-checker](https://useaiblocks.com/skills/fact-cross-checker): Give it a claim to check. Get an evidence table with sources, confidence, conflicts and gaps.
 - [Failure postmortem writer](https://useaiblocks.com/skills/failure-postmortem-writer): Describe what went wrong. Get a blame-free five-whys review and a list of changes to make.
-- [Fair disagreement test planner](https://useaiblocks.com/skills/fair-disagreement-test-planner): Describe a dispute where each side thinks it is right. Get a test both accept in advance and written predictions.
 - [Fear-setting planner](https://useaiblocks.com/skills/fear-setting-planner): Paste a decision you keep putting off. Get the worst case, how to repair it and what waiting costs.
 - [Find your specific knowledge and build something you own](https://useaiblocks.com/workflows/specific-knowledge-business): Tell it what you do well. Get your specific knowledge, a plan to earn without trading hours and a partner check.
-- [Findings and guesses separator](https://useaiblocks.com/skills/findings-and-guesses-separator): Paste a report or analysis. Get every line sorted into proven, likely or guess, plus the open questions left over.
-- [Five-step problem runner](https://useaiblocks.com/prompts/five-step-problem-runner): Paste a problem that keeps coming back. Get it run through goal, problem, cause, design and doing.
+- [Forecast disagreement reviewer](https://useaiblocks.com/skills/estimate-gap-auditor): Paste two teams' odds for the same thing. Get the gap, what each side bases it on and a quick sanity estimate.
 - [Habit plan builder](https://useaiblocks.com/skills/habit-plan-builder): Say a habit to start or stop. Get a two-minute first step, a cue, ways to add friction and a restart plan.
 - [Hidden assumption auditor](https://useaiblocks.com/skills/hidden-assumption-auditor): Describe a decision or idea. Get its hidden assumptions sorted by how fragile they are, then a rebuilt conclusion.
 - [Hidden value check](https://useaiblocks.com/skills/hidden-value-check): Paste a job, step or rule you want to cut or automate. Get what it quietly does besides the obvious task.
 - [Idea debate judge](https://useaiblocks.com/skills/idea-debate-judge): Give it an idea. Get a three-round debate between a fan and a critic, then a clear verdict.
+- [Idea sharing decision brief](https://useaiblocks.com/skills/share-or-protect-brief): Describe something you made. Get a one-page choice between keeping it, licensing it or giving it away, with who gains and pays.
 - [Idea tournament runner](https://useaiblocks.com/skills/idea-tournament-runner): Give it a pile of rough ideas. Get them scored, crossed and mutated until the strongest few are left.
 - [Idea trial jury](https://useaiblocks.com/skills/idea-trial-jury): Give it a plan or claim. Get a verdict from a prosecutor, a defender and 12 jurors, plus what would flip it.
 - [Incentive checker](https://useaiblocks.com/skills/incentive-checker): Describe a team, plan or deal. Get who is rewarded for what, where it pulls the wrong way, and a fix.
 - [Independent income floor calculator](https://useaiblocks.com/skills/income-floor-calculator): Paste your costs and ways to earn. Get a monthly income floor, the steady streams and what a sick month costs.
 - [Intent interviewer](https://useaiblocks.com/skills/intent-interviewer): Give it a vague request. Get asked one question at a time until what you really want is clear.
+- [Investment decision brief](https://useaiblocks.com/skills/yes-no-too-hard-call-writer): Paste your four filter results. Get a yes, no or too-hard call, how big to go, and what would change it.
 - [Job ad reader](https://useaiblocks.com/skills/job-ad-reader): Paste a job ad. Get what the job is, firm needs versus wishes, what is missing, and questions to ask.
 - [Job exit plan writer](https://useaiblocks.com/skills/job-exit-plan-writer): Paste your job, notice terms and first clients. Get a notice letter, a talking order and income lined up for three months.
 - [Knock-on effects tracer](https://useaiblocks.com/prompts/knock-on-effects-tracer): Paste a change you plan to make. Get what it causes, what that causes, and what to watch.
 - [Lean-year cash rules writer](https://useaiblocks.com/skills/lean-year-cash-rules-writer): Paste your plan and monthly numbers. Get a cash buffer, who to ask early and a clear request to send.
 - [Learn, borrow or pass planner](https://useaiblocks.com/skills/learn-borrow-or-pass-planner): Paste where your knowledge ends. Get a choice to learn, borrow help, start small or pass, with a first-week plan.
 - [Leave a steady job and earn from your own work](https://useaiblocks.com/workflows/leave-job-own-income): Give it your job, pay and skills. Get an income floor, fees, a safety plan and a way to leave.
+- [Lessons learned principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer): Describe a mistake and what happened. Get the root cause and a rule you can check next time.
 - [Literature review finder](https://useaiblocks.com/skills/literature-review-finder): Give it a topic. Get the key academic papers found from open databases and sorted by theme.
 - [Loyalty claim checker](https://useaiblocks.com/skills/loyalty-claim-checker): Paste a loyalty plan or claim with its numbers. Get the sums tested against what it costs and who it reaches.
 - [Make a fast, committed decision with the right evidence](https://useaiblocks.com/workflows/fast-decision-evidence): Paste a choice you keep debating. Get its door type, how much evidence is enough, and a note that commits the team.
-- [Many-field model checklist runner](https://useaiblocks.com/skills/mental-model-checklist-runner): Paste a plan or problem. Get it checked through maths, engineering, biology, psychology and economics in turn.
-- [Math or judgment call sorter](https://useaiblocks.com/skills/math-or-judgment-call-sorter): Paste a decision and your numbers. Get it sorted as math or judgment call, with the next step.
 - [Mission choice tester](https://useaiblocks.com/skills/mission-choice-tester): Paste your mission and five choices. Get how many it settles, a score out of 100 and fixes.
-- [Mistake-to-principle writer](https://useaiblocks.com/skills/mistake-to-principle-writer): Describe a mistake and what happened. Get the root cause and a rule you can check next time.
-- [Monthly belief and evidence keeper](https://useaiblocks.com/agents/monthly-belief-evidence-keeper): Give it the beliefs your plan rests on. Each month get the evidence for and against, and what to test next.
+- [Monthly assumption evidence review](https://useaiblocks.com/agents/monthly-belief-evidence-keeper): Give it the beliefs your plan rests on. Each month get the evidence for and against, and what to test next.
 - [Multi-model answer panel](https://useaiblocks.com/skills/multi-model-answer-panel): Ask one question. Get answers from several open AI models, ranked, plus one final answer.
-- [No-brainer question settler](https://useaiblocks.com/skills/no-brainer-question-settler): Describe a hard problem. Get the obvious questions settled, a rough target sum and a smaller problem left.
 - [No-good-options decider](https://useaiblocks.com/skills/no-good-options-decider): Describe a choice where every option hurts. Get a 10/10/10 and regret check, and a clear pick.
 - [Not-to-do list builder](https://useaiblocks.com/skills/not-to-do-list-builder): Paste your week and habits. Get a stop list, with a rule and a swap for each.
-- [One-way or two-way choice sorter](https://useaiblocks.com/prompts/one-way-or-two-way-choice-sorter): Paste a choice you are stuck on. Get it sorted as hard or easy to undo, with the right speed to decide.
 - [Organization dossier researcher](https://useaiblocks.com/skills/organization-dossier-researcher): Name a company, person or group. Get a tested research file with sources. Collects data from websites.
 - [Outside view timeline estimator](https://useaiblocks.com/prompts/outside-view-timeline-estimator): Paste your project and your estimate. Get the estimate corrected by how projects like it really went.
 - [Paper research assistant](https://useaiblocks.com/skills/paper-research-assistant): Name a topic or paper. Get a literature scan, a deep read or a reading list from Semantic Scholar and arXiv.
 - [Pattern from cases finder](https://useaiblocks.com/skills/pattern-from-cases-finder): Paste your first ten or twenty cases. Get the pattern, a one-line rule and a test of it on unseen cases.
-- [People trust checker](https://useaiblocks.com/skills/people-trust-checker): Name the people behind a deal or hire. Get how able, honest and owner-minded they are, and what to verify.
+- [Peer feedback group planner](https://useaiblocks.com/skills/challenge-circle-feedback): Paste your draft or plan. Get who to ask for early support, who to ask for attack, and the questions to send.
+- [Personal expertise finder](https://useaiblocks.com/skills/specific-knowledge-finder): Say what came easily to you and what people ask you for. Get your specific knowledge, with a cheap test for each.
 - [Personal mission statement writer](https://useaiblocks.com/skills/personal-mission-statement): Paste your roles, goals and values. Get a mission statement in three lengths, and a one-line version you can say from memory.
 - [Phone overheating diagnoser](https://useaiblocks.com/skills/phone-overheating-diagnoser): Describe the heat or battery drain. Get safe, read-only checks run and the likely cause named.
 - [Plain message re-pitcher](https://useaiblocks.com/skills/plain-message-re-pitcher): Say you are lost. Get the last message said again in simple words, with a little context.
-- [Plan inversion checker](https://useaiblocks.com/prompts/plan-inversion-checker): Paste a plan. Get every way it fails, ranked, with the guard for each and the ones you cannot guard.
+- [Plan failure risk review](https://useaiblocks.com/prompts/plan-inversion-checker): Paste a plan. Get every way it fails, ranked, with the guard for each and the ones you cannot guard.
 - [Plan pre-mortem runner](https://useaiblocks.com/skills/plan-pre-mortem-runner): Give it a plan. Imagine it failed in a year and get the hidden assumptions and risks found now.
 - [Plan stress-tester](https://useaiblocks.com/skills/plan-stress-tester): Give it a plan or idea. Get a tough round of questions with a suggested answer to each.
 - [Pressure-proof answer checker](https://useaiblocks.com/skills/pressure-proof-answer-checker): Use it when someone pushes your AI to agree or sign off. Get answers that separate evidence from pressure.
+- [Problem-solving plan](https://useaiblocks.com/prompts/five-step-problem-runner): Paste a problem that keeps coming back. Get it run through goal, problem, cause, design and doing.
+- [Project continue-or-stop review](https://useaiblocks.com/skills/dip-or-dead-end-checker): Paste a project you are tempted to quit. Get a call: push through, change course or stop, with the reason.
 - [Pros and cons decision planner](https://useaiblocks.com/skills/pros-and-cons-decision-planner): Describe a choice you cannot settle. Get a two-column list built over days, matched pairs struck out, and a call after sleep.
-- [Real knowledge tester](https://useaiblocks.com/skills/real-knowledge-tester): Name a topic and your claim. Get the hardest follow-up questions, which you can answer, and where you only sound right.
 - [Request clarifier](https://useaiblocks.com/skills/request-clarifier): Give it a loose request. Get a few rounds of sharp questions first, so the first draft lands.
 - [Requirements question asker](https://useaiblocks.com/skills/requirements-question-asker): Give it a vague request. Get the few questions that matter, with default answers, before any work starts.
 - [Research brief writer](https://useaiblocks.com/skills/research-brief-writer): Give it a vague research need. Get one clear paragraph a deep-research tool can act on without questions.
+- [Research evidence checker](https://useaiblocks.com/skills/findings-and-guesses-separator): Paste a report or analysis. Get every line sorted into proven, likely or guess, plus the open questions left over.
 - [Research paper summarizer](https://useaiblocks.com/skills/research-paper-summarizer): Give it a paper, article or report. Get the key findings, plain summaries and a comparison across sources.
 - [Research problem picker](https://useaiblocks.com/skills/research-problem-picker): Describe your research ideas. Get help choosing a problem worth pursuing, or why a project is stuck.
 - [Research report writer](https://useaiblocks.com/skills/research-report-writer): Give it a question. Get a conclusion-first report with sources ranked and cross-checked.
@@ -108,27 +110,25 @@
 - [Ruin risk stress tester](https://useaiblocks.com/skills/ruin-risk-stress-tester): Paste a plan with money, time or your name at stake. Get the outcome that could ruin it and a capped-downside version.
 - [Rule origin tracer](https://useaiblocks.com/skills/rule-origin-tracer): Paste a rule or habit your team follows. Get where it came from, who it served and if it earns its place.
 - [Second-opinion reviewer](https://useaiblocks.com/skills/second-opinion-reviewer): Give it a plan or change you feel sure about. Get a fresh reviewer's hardest objections, sorted by what matters.
-- [Second-order effects tracer](https://useaiblocks.com/skills/second-order-effects-tracer): Paste a change you plan to make. Get what it causes, what that causes, and how much of the gain you keep.
 - [Session credit reviewer](https://useaiblocks.com/skills/session-credit-reviewer): Finish a work session. Get a record of what you drove, what Claude did and where you steered.
-- [Share or protect decision brief writer](https://useaiblocks.com/skills/share-or-protect-brief): Describe something you made. Get a one-page choice between keeping it, licensing it or giving it away, with who gains and pays.
 - [Shortlist and running-order planner](https://useaiblocks.com/skills/shortlist-running-order): Paste a long list of ideas, songs, headlines or slides. Get a cut shortlist and an order that reads as one flow.
+- [Simple decision checker](https://useaiblocks.com/skills/no-brainer-question-settler): Describe a hard problem. Get the obvious questions settled, a rough target sum and a smaller problem left.
 - [Skill teacher](https://useaiblocks.com/skills/skill-teacher): Say what you want to learn. Get lessons and cheat sheets that build over many sessions toward your goal.
-- [Slack and backup planner](https://useaiblocks.com/prompts/slack-and-backup-planner): Paste how your business or budget runs. Get where it breaks under stress and the slack to add first.
 - [Socratic explainer](https://useaiblocks.com/skills/socratic-explainer): Name a topic. Get it taught through questions, so you reach the idea yourself and remember it.
 - [Software vendor chooser](https://useaiblocks.com/skills/software-vendor-chooser): Give it your needs and options. Get vendors scored against your criteria, RFP questions, risk notes and a contract checklist.
-- [Specific knowledge finder](https://useaiblocks.com/skills/specific-knowledge-finder): Say what came easily to you and what people ask you for. Get your specific knowledge, with a cheap test for each.
 - [Strategy doc interviewer](https://useaiblocks.com/skills/strategy-doc-interviewer): Name the doc you want. Get it written from your own answers, one question at a time.
 - [Strongest objection finder](https://useaiblocks.com/prompts/strongest-objection-finder): Paste a plan you feel sure about. Get the three best arguments against it and a go, change or wait call.
 - [Stuck decision guide](https://useaiblocks.com/skills/stuck-decision-guide): Tell it what feels stuck. Get a few branching questions, then a clear next step you can take today.
+- [Subject knowledge self-check](https://useaiblocks.com/skills/real-knowledge-tester): Name a topic and your claim. Get the hardest follow-up questions, which you can answer, and where you only sound right.
 - [Summarizer](https://useaiblocks.com/skills/summarizer): Give it long text. Get a short summary at the detail level you choose, from one text or many.
-- [Surprise cause ranker](https://useaiblocks.com/skills/surprise-cause-ranker): Describe a result that surprised you. Get ranked likely causes, how to test each, and what the facts rule out.
+- [Term definition checker](https://useaiblocks.com/skills/definition-tester): Paste a claim that uses a big word like fair or loyal. Get tested definitions and the counter-cases that break them.
 - [Text-to-knowledge-graph builder](https://useaiblocks.com/skills/text-to-knowledge-graph-builder): Give it unstructured text. Get people, things and links pulled out and drawn as a graph.
 - [Think a hard decision through with models from many fields](https://useaiblocks.com/workflows/mental-models-decision): Describe a hard decision. Get the obvious questions settled, many fields checked, pressures and rewards tested, and the case against it.
 - [Third option finder](https://useaiblocks.com/skills/third-option-finder): Paste the two plans people are stuck on. Get a third option that beats both, and a small test of it.
-- [Vanity metric fixer](https://useaiblocks.com/skills/vanity-metric-fixer): Paste the numbers you report. Get which are vanity, per-customer numbers that show cause, and the one number to track.
+- [Unexpected result investigation planner](https://useaiblocks.com/skills/surprise-cause-ranker): Describe a result that surprised you. Get ranked likely causes, how to test each, and what the facts rule out.
 - [Vendor comparison writer](https://useaiblocks.com/skills/vendor-comparison-writer): Name a vendor or two proposals. Get the cost, risks and a clear pick, with points to negotiate.
 - [Wartime or peacetime check](https://useaiblocks.com/skills/wartime-or-peacetime-check): Describe your company's position. Get a call on which mode you are in and how to lead in it.
 - [Weekly time audit planner](https://useaiblocks.com/skills/weekly-time-audit-planner): Paste last week's calendar. Get a count of what you chose and what was taken, and one hour won back.
 - [Work out why something worked or failed](https://useaiblocks.com/workflows/success-failure-analysis): Describe a surprising result. Get ranked causes, a check through many fields and rewards, and what to copy or skip.
+- [Working relationship trust review](https://useaiblocks.com/skills/people-trust-checker): Name the people behind a deal or hire. Get how able, honest and owner-minded they are, and what to verify.
 - [Write a mission statement and test it on real choices](https://useaiblocks.com/workflows/mission-choice-test): Describe what matters to you. Get a mission statement built from your roles and a test of it on real choices.
-- [Yes, no or too-hard call writer](https://useaiblocks.com/skills/yes-no-too-hard-call-writer): Paste your four filter results. Get a yes, no or too-hard call, how big to go, and what would change it.

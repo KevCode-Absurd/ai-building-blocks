@@ -143,7 +143,7 @@ function Crew({ c, overseer, team, onChange }: { c: Catalogue; overseer: string;
       </div>
       <div className="sp-crew" data-testid="team">
         <h4 className="sp-h">Your team</h4>
-        <p className="small">Optional. You sit on top with the final say. Add up to {TEAM_MAX} minds below you.</p>
+        <p className="small">Optional. Add up to {TEAM_MAX} minds with different strengths. Split the job between them, or have them review the same decision. You make the final call.</p>
         {minds.length > 0 && <ul className="team-list">{minds.map((s) => <Member key={s} c={c} slug={s} onRemove={() => setTeam(minds.filter((x) => x !== s))} />)}</ul>}
         {minds.length < TEAM_MAX
           ? <MindPick c={c} value={null} exclude={minds} onPick={(s) => s && setTeam([...minds, s])} label={minds.length ? "Add another" : "Add a mind"} placeholder="For example: Ratan Tata" testid="team-input" />

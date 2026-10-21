@@ -766,4 +766,4 @@
 # App pages with no page file of their own.
 /space /index.html 200
 /people /index.html 200
-/s/* /index.html 200
+/s/* /shared-space-shell.html 200

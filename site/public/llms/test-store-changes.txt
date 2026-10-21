@@ -2,9 +2,9 @@
 
 > 12 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Big swing test picker](https://useaiblocks.com/skills/big-swing-test-picker): Give it your store size and page data. Get five bold tests your traffic can prove, in order.
 - [Find the store change most worth testing](https://useaiblocks.com/workflows/find-the-store-change-most-worth-testing): Give it your store numbers and what shoppers do on key pages. Get a profit baseline and a ranked list of tests.
 - [Heatmap and recording reader](https://useaiblocks.com/skills/heatmap-and-recording-reader): Paste your heatmap and recording notes. Get the friction found, a test idea for each, and a friction score.
+- [High-impact experiment planner](https://useaiblocks.com/skills/big-swing-test-picker): Give it your store size and page data. Get five bold tests your traffic can prove, in order.
 - [Read a finished store test and pick the next one](https://useaiblocks.com/workflows/read-a-finished-store-test-and-pick-the-next-one): Give it your test numbers and dates. Get a ship call, ranked ideas and the next bold tests.
 - [Run one store test and know whether to ship](https://useaiblocks.com/workflows/run-one-store-test-and-know-whether-to-ship-the-change): Give it your orders and traffic. Get a test sized to your store and a clear ship call.
 - [Shopify test setup picker](https://useaiblocks.com/skills/shopify-test-setup-picker): Give it your Shopify plan and test idea. Get what you can test, the right route, and a setup score.

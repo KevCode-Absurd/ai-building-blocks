@@ -1,0 +1,17 @@
+{
+  "checkedOn": "2026-10-22",
+  "environment": "local Pages emulator with migrated D1",
+  "productionTouched": false,
+  "passed": 9,
+  "checks": [
+    "comment persisted in D1",
+    "comment moderation requires team token",
+    "space owner authorization",
+    "space item persisted in D1",
+    "private item excluded from public listing",
+    "shared space is read only",
+    "share rotation invalidates prior link",
+    "static, skill, example and shared deep links",
+    "unknown page returns 404"
+  ]
+}

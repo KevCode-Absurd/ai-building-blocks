@@ -20,11 +20,11 @@
 - [Model and scene swapper](https://useaiblocks.com/skills/model-and-scene-swapper): Give it a model photo. Get versions with other models and backgrounds, same clothes. Your image model draws them.
 - [Outfit photo composer](https://useaiblocks.com/skills/outfit-photo-composer): Give it up to eight single items. Get one photo of a model wearing the full outfit. Your image model draws it.
 - [Product background swapper](https://useaiblocks.com/skills/product-background-swapper): Give it a white-background product photo. Get it placed in a real-looking scene with matching light. Your image model draws it.
+- [Product catalogue photo maker](https://useaiblocks.com/skills/product-photo-batch-maker): Give it a spreadsheet of products. Get one matching photo per product, with a cost limit. Your image model draws them.
 - [Product detail image maker](https://useaiblocks.com/skills/product-detail-image-maker): Give it a product photo and selling points. Get detail page pictures with the text built in. Your image model draws them.
 - [Product image spec writer](https://useaiblocks.com/skills/product-image-spec-writer): Attach your product photos. Get a sourced truth sheet, lock lines and the next photo to take.
 - [Product page gallery planner](https://useaiblocks.com/skills/product-page-gallery-planner): Attach your product photos and facts. Get an 8-image gallery plan with sourced words and a gaps list.
 - [Product page image checker](https://useaiblocks.com/skills/product-page-image-checker): Attach your product images and plan. Get every fault, one fix each and a score out of 100.
-- [Product photo batch maker](https://useaiblocks.com/skills/product-photo-batch-maker): Give it a spreadsheet of products. Get one matching photo per product, with a cost limit. Your image model draws them.
 - [Product photo retoucher](https://useaiblocks.com/skills/product-photo-retoucher): Give it a phone photo of a product. Get a cleaner listing photo with fewer wrinkles. Your image model edits it.
 - [Product photo set builder](https://useaiblocks.com/skills/product-photo-set-builder): Give it one product photo. Get a full set of new angles and scenes. Your image model draws them.
 - [Product photo set maker](https://useaiblocks.com/agents/product-photo-set-maker): Give it photos of one real product. Get a planned photo set, checked frame by frame, with every failed frame redone.

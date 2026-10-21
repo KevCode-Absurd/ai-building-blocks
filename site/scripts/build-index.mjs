@@ -6,9 +6,13 @@ import YAML from "yaml";
 import { markdown as md } from "./lib/safe-markdown.mjs";
 import { zipSync } from "fflate";
 import { quarantineClosure } from "../../tools/lib/quarantine.mjs";
+import { applyDisplayCopy } from "../../tools/lib/display-copy.mjs";
 
 // CATALOGUE_ROOT points the build at another folder (tools/make-fake-catalogue.mjs makes one for load tests).
 const ROOT = path.resolve(process.env.CATALOGUE_ROOT || "../catalogue-items");
+const copyFile = path.join(ROOT, "display-copy.yaml");
+const copyEdits = fs.existsSync(copyFile) ? YAML.parse(fs.readFileSync(copyFile, "utf8")) ?? {} : {};
+const copyUsed = new Set();
 const OUT_DATA = "public/data";
 const OUT_SKILLS = "public/skills";
 // One fixed date inside every zip, so the same files always make the same zip.
@@ -83,6 +87,9 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
     const pagePath = [path.join(folder, "page.yaml"), path.join(WORKFLOW_PAGES, `${slug}.yaml`)].find((p) => fs.existsSync(p));
     let page = null;
     if (pagePath) { try { page = YAML.parse(fs.readFileSync(pagePath, "utf8")); } catch (e) { problems.push(`${category}/${slug}: page: ${e.message.split(/\r?\n/)[0]}`); } }
+    const edited = applyDisplayCopy(item, page, copyEdits[slug]);
+    item = edited.item; page = edited.page;
+    if (copyEdits[slug]) copyUsed.add(slug);
     if (page) {
       const out = Object.fromEntries(PAGE_FIELDS.filter((f) => page[f] != null).map((f) => [f, page[f]]));
       // Public sources a block was built from, shown on its page. Only http(s) links are kept.
@@ -94,6 +101,7 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
     blocks.push({
       slug,
       name: page?.name ?? item.name ?? slug,
+      ...(edited.aliases.length ? { aliases: edited.aliases } : {}),
       summary: page?.summary ?? item.summary ?? "",
       headline: page?.headline ?? "",
       task: page?.job ?? TASK_FROM_JOB[item.job] ?? "set-up-ai",
@@ -203,6 +211,8 @@ for (const r of roster.minds) {
   });
 }
 
+for (const slug of Object.keys(copyEdits)) if (!copyUsed.has(slug)) problems.push(`display-copy.yaml: unknown or unsupported block "${slug}"`);
+
 // Exclude reviewed risks and their dependents from every published asset. Keep sources intact for review.
 const quarantineFile = path.join(ROOT, "quarantine.yaml");
 const quarantine = fs.existsSync(quarantineFile) ? YAML.parse(fs.readFileSync(quarantineFile, "utf8")) ?? {} : {};
@@ -297,7 +307,7 @@ const wire = (b) => {
 };
 fs.writeFileSync(path.join(OUT_DATA, "blocks.json"), JSON.stringify({ built: new Date().toISOString().slice(0, 10), portTypes, renamed, minds, blocks: blocks.map(wire) }));
 // Every page, for search engines: the home page, each block, the mini tools and the apps. The saved example app
-// (example-app-site, its own Pages project) is left out: it's a copy of another app, marked noindex.
+// (copied from example-app-site during prerender) is left out because the saved tour is marked noindex.
 const SITE = "https://useaiblocks.com";
 const kindPath = (b) => (b.type === "mind" ? "minds" : b.type === "agent" ? "agents" : b.category === "orchestrator" || b.type === "workflow" || b.type === "routine" ? "workflows" : b.type === "prompt" ? "prompts" : "skills");
 const { TOOLS } = await import("../../mini-tools/index.mjs");
@@ -367,7 +377,7 @@ fs.writeFileSync("public/llms-full.txt", [...intro, "## Every job", "", ...[...t
 // over. A rename never changes a block's kind, so one rule each. The app's own routes with no page file come last
 // (rewrites, status 200), because dist/404.html turns off Cloudflare's fall back to the app for unknown addresses.
 const redirects = Object.entries(renamed).map(([from, to]) => [from, bySlug[to]]).filter(([, b]) => b?.headline).map(([from, b]) => `/${kindPath(b)}/${from} /${kindPath(b)}/${b.slug} 301`);
-const appRoutes = ["/space /index.html 200", "/people /index.html 200", "/s/* /index.html 200"];
+const appRoutes = ["/space /index.html 200", "/people /index.html 200", "/s/* /shared-space-shell.html 200"];
 fs.writeFileSync("public/_redirects", `# Old block names, moved to shorter ones (catalogue-items/renamed.json). Made by scripts/build-index.mjs.\n${redirects.join("\n")}\n\n# App pages with no page file of their own.\n${appRoutes.join("\n")}\n`);
 if (redirects.length + appRoutes.length > 2000) problems.push(`_redirects has ${redirects.length + appRoutes.length} rules; Cloudflare Pages allows 2,000`);
 console.log(`sitemap: ${urls.length} pages`);

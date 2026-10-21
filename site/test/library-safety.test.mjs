@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {markdown,safeHref} from '../scripts/lib/safe-markdown.mjs';
 import {quarantineClosure} from '../../tools/lib/quarantine.mjs';
+import {applyDisplayCopy} from '../../tools/lib/display-copy.mjs';
 
 test('source Markdown cannot create active scripts, executable links or credential URLs',()=>{
   for(const href of ['javascript:alert(1)','java&#x73;cript:alert(1)','javascript&colon;alert(1)','data:text/html,test','vbscript:msgbox(1)','file:///c:/secret','https://user:pass@example.com','//example.com','java\nscript:alert(1)'])assert.equal(safeHref(href),false,href);
@@ -35,4 +36,15 @@ test('every published block has complete assets and no dependency on withheld sk
       for(const match of html.matchAll(/\b(href|src)="([^"]*)"/g))assert.ok(safeHref(match[2],match[1]==='src'),`${b.slug}: unsafe rendered URL`);
     }
   }
+});
+
+
+test('editorial names preserve source metadata and searchable prior names',()=>{
+  const item={slug:'example',name:'Original name',source:{licence:'MIT'}},page={name:'Original public name',headline:'Original public name',summary:'Original summary'};
+  const result=applyDisplayCopy(item,page,{name:'Clear job name',summary:'Share facts. Get the result.',reason:'clarity'});
+  assert.equal(result.page.headline,'Clear job name');
+  assert.deepEqual(result.aliases,['Original public name']);
+  assert.equal(item.name,'Original name');assert.equal(page.name,'Original public name');
+  assert.deepEqual(result.item.source,{licence:'MIT'});
+  assert.throws(()=>applyDisplayCopy(item,page,{source:'replace licence'}),/Invalid display copy/);
 });

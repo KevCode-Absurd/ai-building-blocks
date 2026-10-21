@@ -14,7 +14,9 @@
 - [Competitor landing page layout planner](https://useaiblocks.com/skills/competitor-landing-layout): Attach a page screenshot and facts. Get its layout filled with your own words and facts.
 - [Conversion landing page designer](https://useaiblocks.com/skills/conversion-landing-page-designer): Tell it your offer and audience. Get a landing page plan, copy and strict design rules that turn visitors into buyers.
 - [Conversion page writer](https://useaiblocks.com/skills/conversion-page-writer): Give it your offer and audience. Get landing page copy with hero, value points, proof, answers to doubts and clear buttons.
+- [Customer evidence placement planner](https://useaiblocks.com/skills/social-proof-placer): Describe customer concerns. Choose relevant testimonials, figures or case studies and decide where to show them.
 - [Direct response copywriter](https://useaiblocks.com/skills/direct-response-copywriter): Describe your offer. Get headlines, emails, calls to action or a full sales page that sells.
+- [Evidence-based sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer): Paste your opening and proof. Get the body and close, with proof beside every claim.
 - [Future press release writer](https://useaiblocks.com/skills/future-press-release-writer): Paste your need statement. Get a one-page press release written as if the product launched today.
 - [Get a reasons-to-switch page that answers doubts](https://useaiblocks.com/workflows/reasons-to-switch-page): Give it a buyer's doubt and your costs. Get an offer, a reasons-to-switch page and the doubts it still leaves open.
 - [Honest conversion copywriter](https://useaiblocks.com/skills/honest-conversion-copywriter): Give it your offer and reader. Get landing page or email copy with clear next steps and no made-up claims.
@@ -25,8 +27,6 @@
 - [Page type and layout planner](https://useaiblocks.com/skills/page-type-and-layout-planner): Give it your ads, buyers and awareness stages. Get which page each ad needs and its section order.
 - [Pick a lead magnet, then build its path and page](https://useaiblocks.com/workflows/pick-a-lead-magnet-then-build-its-path-and-page): Give it your buyer. Get a lead magnet, its path to a sale, a signup page and a review.
 - [Product listing writer](https://useaiblocks.com/skills/product-listing-writer): Give it your product facts. Get a title, bullets and description built for the marketplace you sell on.
-- [Proof spot mapper](https://useaiblocks.com/prompts/proof-spot-mapper): Paste your reviews, quotes and buyer doubts. Get which proof to show, where it goes and what to drop.
-- [Proof-backed sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer): Paste your opening and proof. Get the body and close, with proof beside every claim.
 - [Quiz funnel builder](https://useaiblocks.com/skills/quiz-funnel-builder): Describe your audience. Get a scored quiz that sorts people, captures leads and leads into the right next offer.
 - [React landing page builder](https://useaiblocks.com/skills/react-landing-page-builder): Describe your product. Get a landing page as React code with hero, pricing, FAQ and proof sections.
 - [Reasons-to-switch page writer](https://useaiblocks.com/skills/reasons-to-switch-page-writer): Paste your facts and offer. Get 3 to 7 reasons to switch, the offer, questions and headlines.
@@ -36,12 +36,12 @@
 - [Sales letter outline planner](https://useaiblocks.com/skills/sales-letter-outline-planner): Paste your research and chosen theme. Get a full outline, with headline ideas and the proof each claim needs.
 - [Shopify landing page builder](https://useaiblocks.com/skills/shopify-landing-page-builder): Paste your page copy and theme. Get Shopify files with your copy loaded in, and install steps.
 - [Shopify theme code writer](https://useaiblocks.com/skills/shopify-theme-code-writer): Name the section you need and your theme. Get installable code and what to upload.
-- [Social proof placer](https://useaiblocks.com/skills/social-proof-placer): Describe your buyer's doubts. Get which testimonials, numbers or case studies to use and where to place them.
 - [Store advertorial writer](https://useaiblocks.com/skills/store-advertorial-writer): Give it your angle, mechanism, product facts and ad. Get a full advertorial, labelled as an ad.
 - [Store hero section writer](https://useaiblocks.com/skills/store-hero-section-writer): Give it your offer and proof. Get five headlines, a subhead, button, proof and a test plan.
 - [Store quiz funnel builder](https://useaiblocks.com/skills/store-quiz-funnel-builder): Give it your customer research and offer. Get a quiz, info cards, summary page and a drop-off check.
-- [Store social proof placer](https://useaiblocks.com/skills/store-social-proof-placer): Give it buyer doubts and reviews. Get which proof to show, from whom and where.
+- [Store testimonial placement planner](https://useaiblocks.com/skills/store-social-proof-placer): Share customer concerns and reviews. Choose credible evidence for each concern and decide where it belongs in your store.
+- [Testimonial placement planner](https://useaiblocks.com/prompts/proof-spot-mapper): Share customer doubts, reviews and testimonials. Get recommendations on which evidence to show and where to place it.
 - [TikTok Shop listing writer](https://useaiblocks.com/skills/tiktok-shop-listing-writer): Give it your product details. Get a title, description, image and video plan that fits TikTok Shop search.
-- [Top-of-page headline writer](https://useaiblocks.com/prompts/top-of-page-headline-writer): Paste your offer, buyer, proof and ad. Get five headlines with a pick, a subhead, a button and proof.
+- [Website headline writer](https://useaiblocks.com/prompts/top-of-page-headline-writer): Paste your offer, buyer, proof and ad. Get five headlines with a pick, a subhead, a button and proof.
 - [Write an advertorial that turns cold traffic into sales](https://useaiblocks.com/workflows/write-an-advertorial-that-turns-cold-traffic-into-sales): Give it your product facts and customer reviews. Get an advertorial built on one big idea and checked for story and claims.
 - [Write sales copy with proof beside every claim](https://useaiblocks.com/workflows/proof-sales-copy): Give it customer reviews and product facts. Get a buyer brief, two openings to test and a body with proof.

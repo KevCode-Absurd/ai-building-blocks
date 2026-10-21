@@ -59,15 +59,15 @@
 - [Job duties and level analyst](https://useaiblocks.com/skills/job-duties-and-level-analyst): Name a role. Get its duties, time split, required skills and a fair level, ready for pay and planning.
 - [Job offer planner](https://useaiblocks.com/skills/job-offer-planner): Give it the role and what the candidate wants. Get an offer package, a negotiation plan and call scripts.
 - [Job post writer](https://useaiblocks.com/skills/job-post-writer): Describe the role and your team. Get a clear job description that attracts the right people and avoids biased wording.
-- [Key hire gap finder](https://useaiblocks.com/skills/key-hire-gap-finder): Give your numbers and skills. Get the one hire that unblocks growth, how to pay them and a readiness score.
 - [Leadership program designer](https://useaiblocks.com/skills/leadership-program-designer): Say who you are training. Get a program, a 360 review form, a coaching guide and a succession plan.
 - [Let someone go fairly and tell the team well](https://useaiblocks.com/workflows/let-someone-go-fairly-and-tell-the-team-well): Give it the situation. Get a fair exit plan, risk flags, a handover checklist and the announcement.
 - [Manager quality review planner](https://useaiblocks.com/skills/manager-quality-review-planner): Give it your management team. Get skill standards, a 360 feedback form and a plan to support managers who struggle.
 - [Mentoring program builder](https://useaiblocks.com/skills/mentoring-program-builder): Say who the program is for. Get matching rules, a six-month plan and coaching talk guides for managers.
-- [Monthly contractor roster keeper](https://useaiblocks.com/agents/monthly-contractor-roster-keeper): Give it your contractor roster and invoices each month. Get who to keep, whose terms to fix and the agreements to redo.
+- [Monthly contractor review](https://useaiblocks.com/agents/monthly-contractor-roster-keeper): Give it your contractor roster and invoices each month. Get who to keep, whose terms to fix and the agreements to redo.
 - [New country hiring planner](https://useaiblocks.com/skills/new-country-hiring-planner): Name the country. Get an own-entity or employer-of-record choice, a local rules list and a hiring plan. Not legal advice.
 - [New hire first week planner](https://useaiblocks.com/prompts/new-hire-first-week-planner): Paste the role and your team. Get a day-by-day first week with one small real task and who they meet.
 - [New hire plan builder](https://useaiblocks.com/skills/new-hire-plan-builder): Give it a name, role and start date. Get a pre-start checklist, a first week plan, and 30/60/90 day goals.
+- [Next hire priority planner](https://useaiblocks.com/skills/key-hire-gap-finder): Give your numbers and skills. Get the one hire that unblocks growth, how to pay them and a readiness score.
 - [Offboarding plan builder](https://useaiblocks.com/skills/offboarding-plan-builder): Give it a role and leave date. Get a checklist, exit interview questions and handover plan. Not legal advice; check local rules.
 - [Offer letter and non-compete checker](https://useaiblocks.com/skills/offer-letter-check): Give it an offer letter and work location. Get risky terms and non-compete limits flagged. Not legal advice.
 - [Offer letter drafter](https://useaiblocks.com/skills/offer-letter-drafter): Give it a role and level. Get an offer letter, pay package and talking points. Have HR or a lawyer check it.
@@ -75,6 +75,7 @@
 - [Onboarding rules checker](https://useaiblocks.com/skills/onboarding-rules-checker): Give it a parsed record and your rules. Get a risk rating, each rule result and missing items. It does not decide.
 - [Org change announcement writer](https://useaiblocks.com/skills/org-change-announcement-writer): Describe the change. Get the leader announcement, manager talking points, town hall script and hard-question answers.
 - [Org structure and role map builder](https://useaiblocks.com/skills/org-structure-map): Give it your goals and team. Get an org structure plan, a spans check and a chart of who decides what.
+- [Outcome-focused job description writer](https://useaiblocks.com/prompts/problem-first-job-description-writer): Paste the problem the hire must solve. Get a job description built around it, with success at six months.
 - [Pay and benefits package designer](https://useaiblocks.com/skills/pay-benefits-package): Give it your pay goals and team size. Get pay bands, bonus ideas and a total pay statement outline. Not legal advice.
 - [Pay and benefits plan builder](https://useaiblocks.com/skills/pay-and-benefits-plan-builder): Describe your roles and budget. Get a pay philosophy, pay bands, a bonus plan and a benefits list. Check the maths yourself.
 - [Pay and hours rules answerer](https://useaiblocks.com/skills/pay-and-hours-rules-answerer): Ask a pay, overtime or break question and where you are. Get the rule with its source. Not legal advice.
@@ -86,9 +87,8 @@
 - [Performance review helper](https://useaiblocks.com/skills/performance-review-helper): Pick your review cycle. Get a self-review template, a manager review draft and calibration prep with specific examples.
 - [Plain job post drafter](https://useaiblocks.com/prompts/plain-job-post-drafter): Paste the role and what it needs. Get a clear job post with real requirements.
 - [Plan a year of hiring and what it will cost](https://useaiblocks.com/workflows/plan-a-year-of-hiring-and-what-it-will-cost): Give it past headcount and goals. Get a forecast, a hiring plan and a monthly cost budget.
-- [Problem-first job description writer](https://useaiblocks.com/prompts/problem-first-job-description-writer): Paste the problem the hire must solve. Get a job description built around it, with success at six months.
 - [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer): Share your resume and target job. Get ten resume checks, specific fixes and a draft suited to the role.
-- [Quarterly headcount plan keeper](https://useaiblocks.com/agents/quarterly-headcount-plan-keeper): Give it each quarter's people numbers. Get the plan checked against what happened, the scenario to follow and the budget gap.
+- [Quarterly hiring plan review](https://useaiblocks.com/agents/quarterly-headcount-plan-keeper): Give it each quarter's people numbers. Get the plan checked against what happened, the scenario to follow and the budget gap.
 - [Reference check question writer](https://useaiblocks.com/skills/reference-check-question-writer): Give it a role. Get fair reference questions, a call script and a sheet to record answers. Check local rules first.
 - [Review cycle form builder](https://useaiblocks.com/skills/review-cycle-form-builder): Give it your team and goals. Get review forms, goal templates and a guide for fair rating meetings. Not legal advice.
 - [Role skills framework builder](https://useaiblocks.com/skills/role-skills-framework-builder): Name your roles. Get the key skills for each, what good looks like at each level, and matching interview questions.

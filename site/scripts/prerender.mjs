@@ -263,12 +263,22 @@ for (const url of urls) {
   wrote++;
 }
 
+// A dedicated shell avoids Pages' wildcard-to-index rewrite loop for shared links.
+write("/shared-space-shell", render("/shared-space-shell", { title: "Shared space", desc: "Read a shared collection of AI skills and workflows.", h1: "Shared space", body: "" }, { noindex: true }));
 // A real 404: Cloudflare Pages answers unknown addresses with it (and a 404 status) instead of the home page.
 fs.writeFileSync(path.join(DIST, "404.html"), render("/404", { title: "Page not found", desc: "This page doesn't exist. Find the skill you need by job.", h1: "This page doesn't exist",
   body: `<p class="bp-sub">The address may have a typo, or the page may have moved. Start from a job:</p>${list(tasks.map(([t]) => `<a href="${jobHref(t)}">${esc(TASK_NAMES[t] ?? t)}</a>`))}` }, { plain: true, noindex: true }));
 // The hub addresses go into their own sitemap, read by build-index's sitemap index.
 fs.writeFileSync(path.join(DIST, "sitemap-jobs.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${hubUrls.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`);
 console.log(`prerender: ${wrote} pages, ${hubUrls.length} job hubs, a 404 page${problems.length ? `\n  ${problems.slice(0, 20).join("\n  ")}` : ""}`);
+// The saved, non-writing example is part of this deployment. This avoids a
+// separate unconfigured host; its files count against the same capacity guard.
+const exampleSource = path.resolve("../example-app-site/example-app");
+if (!fs.existsSync(path.join(exampleSource, "index.html"))) {
+  throw new Error("The Mercatura example is missing; refusing to build a broken example link.");
+}
+fs.cpSync(exampleSource, path.join(DIST, "example-app"), { recursive: true });
+console.log("example app: saved tour included at /example-app/ (excluded from search)");
 // Pages Free allows 20,000 files. Pages paid plans allow 100,000 with Wrangler v4.
 // Workers Paid is a different product; buying it alone does not upgrade a Pages project.
 // Default to the confirmed free capacity. Only set pages-paid after changing the Pages plan.

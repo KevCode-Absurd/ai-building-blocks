@@ -5,6 +5,7 @@
 - [Accessibility standards checker](https://useaiblocks.com/skills/accessibility-standards-checker): Describe your site or app. Get WCAG gaps by level, fixes ranked first, and accessibility statement notes.
 - [Ad claim sorter](https://useaiblocks.com/prompts/ad-claim-sorter): Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording.
 - [AI impact assessment writer](https://useaiblocks.com/skills/ai-impact-assessment-writer): Describe an AI use at work. Get risks, rules that apply and conditions to meet. Not legal advice.
+- [AI regulation compliance review](https://useaiblocks.com/skills/new-ai-rule-gap-checker): Give it a new AI law. Get gaps against what you do now and a fix plan. Not legal advice.
 - [AI risk framework planner](https://useaiblocks.com/skills/ai-risk-framework-planner): Describe your AI system. Get risks mapped, measured and managed under the NIST AI framework, with a plan.
 - [AI vendor terms checker](https://useaiblocks.com/skills/ai-vendor-terms-checker): Give it an AI tool's terms or addendum. Get data-training, liability and model-change risks flagged. A first check, not legal advice.
 - [Australian government security checker](https://useaiblocks.com/skills/australia-gov-security-check): Describe your system and its data level. Get which ISM controls apply, your gaps and what assessors will ask.
@@ -19,8 +20,8 @@
 - [Company filing deadline tracker](https://useaiblocks.com/skills/company-filing-deadline-tracker): List your companies and where they are registered. Get annual filings and due dates. Not legal advice.
 - [Contract and proposal drafter](https://useaiblocks.com/skills/contract-and-proposal-drafter): Say the deal and where you work. Get a contract, proposal, SOW or NDA draft with the right clauses.
 - [Contract and term sheet reviewer](https://useaiblocks.com/skills/contract-and-term-sheet-reviewer): Paste a contract or term sheet. Get the risky terms flagged, plain-English meaning and when to call a lawyer.
-- [Contract batch review grid builder](https://useaiblocks.com/skills/contract-review-grid): Give it contracts and points to find. Get one cited spreadsheet row per contract. Verify before relying on it.
 - [Contract change tracer](https://useaiblocks.com/skills/contract-change-tracer): Give it a contract and its amendments. Get what changed and each clause's latest wording. Not legal advice.
+- [Contract comparison spreadsheet builder](https://useaiblocks.com/skills/contract-review-grid): Give it contracts and points to find. Get one cited spreadsheet row per contract. Verify before relying on it.
 - [Contract intake reviewer](https://useaiblocks.com/agents/contract-intake-reviewer): Give it each new contract. Get a risk rating, clauses to question and questions to ask. A lawyer still checks.
 - [Contract plain-words summary writer](https://useaiblocks.com/skills/contract-plain-summary): Give it a reviewed contract. Get a two-minute summary of what to know before signing. A first check, not legal advice.
 - [Contract reviewer](https://useaiblocks.com/skills/contract-reviewer): Give it a contract and your rules. Get a clause by clause review and suggested edits. Have a lawyer check it.
@@ -55,15 +56,15 @@
 - [Legal meeting briefer](https://useaiblocks.com/skills/legal-meeting-briefer): Name a negotiation or review meeting. Get background, key issues, questions to ask, then action items. Not legal advice.
 - [Legal risk rater](https://useaiblocks.com/skills/legal-risk-rater): Describe a deal or issue. Get each risk rated by how bad and how likely. Not legal advice.
 - [Marketing claims checker](https://useaiblocks.com/skills/marketing-claims-checker): Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording. Not legal advice.
-- [Monthly contract renewal keeper](https://useaiblocks.com/agents/monthly-contract-renewal-keeper): Give it your vendor contracts each month. Get renewals and notice dates due, the traps in each and the asks to make.
+- [Monthly contract renewal review](https://useaiblocks.com/agents/monthly-contract-renewal-keeper): Give it your vendor contracts each month. Get renewals and notice dates due, the traps in each and the asks to make.
 - [NDA drafter](https://useaiblocks.com/skills/nda-drafter): Name the two parties and what is shared. Get a draft confidentiality agreement with the clauses a lawyer should check.
 - [NDA quick checker](https://useaiblocks.com/skills/nda-quick-checker): Give it an NDA. Get a green, yellow or red rating and the odd clauses. Have a lawyer check yellow or red.
-- [NDA traffic-light checker](https://useaiblocks.com/prompts/nda-traffic-light-checker): Paste an NDA. Get a green, yellow or red rating and the odd clauses explained.
-- [New AI rule gap checker](https://useaiblocks.com/skills/new-ai-rule-gap-checker): Give it a new AI law. Get gaps against what you do now and a fix plan. Not legal advice.
+- [NDA risk review](https://useaiblocks.com/prompts/nda-traffic-light-checker): Paste an NDA. Get a green, yellow or red rating and the odd clauses explained.
 - [New data use screener](https://useaiblocks.com/skills/new-data-use-screener): Describe a new use of customer data. Get a quick call on whether it needs full privacy review. Not legal advice.
 - [New Zealand government security checker](https://useaiblocks.com/skills/nz-gov-security-check): Describe your agency system. Get which NZISM controls apply, your gaps and what certification needs.
 - [Patent launch-risk scanner](https://useaiblocks.com/skills/patent-launch-risk-scanner): Describe a product or feature. Get patents that might block it and a first claim comparison. Not a legal opinion.
 - [Plain-words contract summary](https://useaiblocks.com/prompts/plain-words-contract-summary): Paste a contract. Get a two-minute summary of what you owe, what they owe and the risky clauses.
+- [Policy change review agent](https://useaiblocks.com/agents/rule-change-policy-keeper): Give it a rule that changed and your policies. Get gaps found and small redrafts checked for review. A lawyer still checks.
 - [Policy page drafter](https://useaiblocks.com/skills/policy-page-drafter): Give your business facts and country. Get a draft privacy policy, terms or cookie notice to send to a lawyer.
 - [Policy redraft proposer](https://useaiblocks.com/skills/policy-redraft-proposer): Give it a policy gap and the current policy. Get a marked-up draft with small edits. Not legal advice.
 - [Privacy impact assessment writer](https://useaiblocks.com/skills/privacy-impact-assessment-writer): Describe a new feature that uses personal data. Get a privacy impact assessment with conditions and owners. First check, not legal advice.
@@ -74,7 +75,6 @@
 - [Records preservation notice drafter](https://useaiblocks.com/skills/legal-hold-notice): Tell it about a dispute. Get a notice telling staff which records to keep. A first draft, not legal advice.
 - [Review a contract and get edits and a plain summary](https://useaiblocks.com/workflows/review-a-contract-and-get-edits-and-a-plain-summary): Give it a contract. Get risky clauses flagged, edits to ask for and a summary to take to a lawyer.
 - [Rule change policy comparer](https://useaiblocks.com/skills/rule-change-policy-comparer): Paste a rule that changed. Get which of your policies it touches and what to change. First check, not legal advice.
-- [Rule change policy keeper](https://useaiblocks.com/agents/rule-change-policy-keeper): Give it a rule that changed and your policies. Get gaps found and small redrafts checked for review. A lawyer still checks.
 - [Rules and approvals checker](https://useaiblocks.com/skills/rules-and-approvals-checker): Describe a new feature or plan. Get the rules that may apply, approvals needed and risk areas. Not legal advice.
 - [Saudi rules finder](https://useaiblocks.com/skills/saudi-rules-finder): Describe your business in Saudi Arabia. Get which Saudi cyber and data rules apply, then the steps for each.
 - [Software subscription terms checker](https://useaiblocks.com/skills/saas-terms-check): Give it a software subscription contract. Get renewal traps, price rises, uptime and data terms flagged. A first check, not legal advice.

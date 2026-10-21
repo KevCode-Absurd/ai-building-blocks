@@ -55,7 +55,8 @@
 - [Loyalty customer list builder](https://useaiblocks.com/skills/loyalty-customer-list-builder): Get your top-spending customers tagged and exported, ready for a loyalty program. Adds tags to live customer records.
 - [Marketing consent auditor](https://useaiblocks.com/skills/marketing-consent-auditor): Run it on your customers. Get who agreed to email and SMS marketing, and who did not, for compliance.
 - [Missing product cost finder](https://useaiblocks.com/skills/missing-product-cost-finder): Get a list of products with no cost set, so your margin and stock value reports stay right.
-- [Monthly catalogue clean-up keeper](https://useaiblocks.com/agents/monthly-catalogue-clean-up-keeper): Run it monthly. Get missing costs, clashing SKUs and hidden products found, and a short fix list in the right order.
+- [Missing shipping rate checker](https://useaiblocks.com/skills/shipping-rate-gap-finder): Point it at your store. Get a list of shipping zones with no rate or only manual rates.
+- [Monthly product catalogue review](https://useaiblocks.com/agents/monthly-catalogue-clean-up-keeper): Run it monthly. Get missing costs, clashing SKUs and hidden products found, and a short fix list in the right order.
 - [Monthly returns and refunds reviewer](https://useaiblocks.com/agents/monthly-returns-and-refunds-reviewer): Run it monthly. Get the products driving refunds, why, what returns cost and the one fix to make first.
 - [Ninety day marketing plan builder](https://useaiblocks.com/skills/90-day-marketing-plan): Describe your store and budget. Get a buyer profile, ranked channels, a budget split and a 90 day plan.
 - [Old discount code cleaner](https://useaiblocks.com/skills/old-discount-code-cleaner): Get expired, unused and duplicate discount codes found, then switched off or deleted if you say so. Deletes cannot be undone.
@@ -80,6 +81,7 @@
 - [Product field bulk editor](https://useaiblocks.com/skills/product-field-bulk-editor): Pick products and a custom field value. Get it set or removed on all of them. Overwrites live store data.
 - [Product launch and retire manager](https://useaiblocks.com/skills/product-launch-retire): Pick products and a status. Get them moved between draft, live and archived. Changes what shoppers can see and buy.
 - [Product profit analyst](https://useaiblocks.com/skills/product-profit-analyst): Give it revenue and costs by product. Get each product's margin and which ones lose money.
+- [Product sales channel availability checker](https://useaiblocks.com/skills/sales-channel-gap-finder): Get live products that are not published to the sales channels you expect.
 - [Product tag bulk editor](https://useaiblocks.com/skills/product-tag-bulk-editor): Pick products and a tag. Get it added or removed on all of them. Changes your live catalog; preview first.
 - [Product title cleaner](https://useaiblocks.com/skills/product-title-cleaner): Give it your product list. Get tidy, consistent titles as a CSV for Shopify, plus a before and after sheet.
 - [Purchase order and reorder drafter](https://useaiblocks.com/skills/purchase-order-reorder): Give it sales and stock numbers. Get what to reorder and when, draft orders and slow movers to clear.
@@ -98,11 +100,9 @@
 - [Revenue by location reporter](https://useaiblocks.com/skills/revenue-by-location-reporter): Run it on your orders. Get revenue for each warehouse or fulfillment location, ready for a split profit view.
 - [Review insight finder](https://useaiblocks.com/skills/review-insight-finder): Give it your product reviews. Get the pain points, praise and feature requests, ranked by how often they come up.
 - [Risky order flagger](https://useaiblocks.com/skills/risky-order-flagger): Get orders Shopify marks as risky tagged for review, and held from shipping if you choose. Changes live orders.
-- [Sales channel gap finder](https://useaiblocks.com/skills/sales-channel-gap-finder): Get live products that are not published to the sales channels you expect.
 - [Sales channel reporter](https://useaiblocks.com/skills/sales-channel-reporter): Pick a date range. Get revenue, units and average order value for each sales channel.
 - [Sales tax summary builder](https://useaiblocks.com/skills/sales-tax-summary-builder): Pick a filing period. Get tax collected by state, province and rate, ready for filing prep.
 - [Shipping cost analyzer](https://useaiblocks.com/skills/shipping-cost-analyzer): Run it on your orders. Get shipping you charged against shipping you paid, by carrier and method.
-- [Shipping rate gap finder](https://useaiblocks.com/skills/shipping-rate-gap-finder): Point it at your store. Get a list of shipping zones with no rate or only manual rates.
 - [Split shipment planner](https://useaiblocks.com/skills/split-shipment-planner): Say which items ship from where. Get one order split into separate shipments. Changes a live order and cannot be undone.
 - [Stale draft order cleaner](https://useaiblocks.com/skills/stale-draft-order-cleaner): Get draft orders older than your set days found, and deleted if you say so. Deletes cannot be undone.
 - [Stock age report builder](https://useaiblocks.com/skills/stock-age-report-builder): Get your stock sorted by how long it has sat unsold: under 30, 60, 90 days and over.

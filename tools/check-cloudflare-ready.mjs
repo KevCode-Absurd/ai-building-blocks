@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
+const root=path.resolve('site/dist'),files=[];
+function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())walk(p);else files.push({path:path.relative(root,p).replaceAll('\\','/'),bytes:fs.statSync(p).size});}}
+walk(root);
+assert(files.length<=19000,`Too many files: ${files.length}`);
+const large=files.filter(f=>f.bytes>25*1024*1024);assert.equal(large.length,0,'Files exceed the Pages per-file limit');
+for(const f of ['index.html','404.html','shared-space-shell.html','_routes.json','_headers','_redirects','robots.txt','data/blocks.json','example-app/index.html','apps.html','apps/starter-pack.html','skills/website-brand-brain-builder/SKILL.md'])assert(fs.existsSync(path.join(root,f)),`Missing ${f}`);
+assert(fs.readFileSync(path.join(root,'_redirects'),'utf8').includes('/s/* /shared-space-shell.html 200'));
+const routes=JSON.parse(fs.readFileSync(path.join(root,'_routes.json'),'utf8').replace(/^\uFEFF/,''));assert.deepEqual(routes.include,['/api/*']);
+assert(fs.readFileSync(path.join(root,'example-app/index.html'),'utf8').includes('noindex'));
+assert(fs.readFileSync(path.join(root,'robots.txt'),'utf8').includes('Disallow: /example-app/'));
+assert(!fs.readFileSync(path.join(root,'sitemap-pages.xml'),'utf8').includes('example-app'));
+for(const f of ['site/functions/api/comments.ts','site/functions/api/spaces/[[path]].ts','site/migrations/0001_comments.sql','site/migrations/0002_spaces.sql'])assert(fs.existsSync(f),`Missing ${f}`);
+const cat=JSON.parse(fs.readFileSync(path.join(root,'data/blocks.json'),'utf8'));
+const expected={'landing-page-30-point-checker':'Landing page audit','website-brand-brain-builder':'Brand profile builder','ad-claim-proof-gap-finder':'Ad claims checker','ad-opening-line-batch-writer':'Ad hook writer'};
+for(const [slug,name]of Object.entries(expected))assert.equal(cat.blocks.find(b=>b.slug===slug)?.name,name);
+const critical=['index.html','_routes.json','data/blocks.json','example-app/index.html'].map(f=>({path:f,sha256:crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex')}));
+const report={preparedOn:'2026-10-22',launchTarget:'2026-10-22',status:'local-build-ready-for-cloudflare-integration',productionDeploymentPerformed:false,files:files.length,freeFileLimit:20000,buildBuffer:19000,remainingBeforeBuffer:19000-files.length,totalBytes:files.reduce((n,f)=>n+f.bytes,0),largestFiles:files.sort((a,b)=>b.bytes-a.bytes).slice(0,5),publishedEntries:cat.blocks.length,checks:{requiredFiles:true,exampleSameOrigin:true,exampleNoindex:true,apiOnlyFunctions:true,maximumFileSize:true,editorialNames:true},criticalAssets:critical,requiredAtIntegration:['Cloudflare account and Pages project','D1 database, both migrations and COMMENTS/SPACES bindings','Four separate server-side salts/team secrets','Custom domain association and DNS','Preview URL verification before production promotion']};
+fs.writeFileSync('reports/cloudflare-launch-readiness.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({status:report.status,files:report.files,remainingBeforeBuffer:report.remainingBeforeBuffer}));

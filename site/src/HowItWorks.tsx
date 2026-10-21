@@ -80,6 +80,7 @@ const TOC: [string, string][] = [
   ["workflow", "Workflows"],
   ["agent", "Agents"],
   ["app", "Apps"],
+  ["council", "Advisory councils"],
   ["choose", "Which one to use"],
   ["builder", "Using the builder"],
   ["results", "Getting good results"],
@@ -219,6 +220,18 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
             <p className="hiw-now"><Status here /> <Link to="/apps">Take the tour of a finished app</Link>, or <Link to="/apps/starter-pack">get the app starter pack</Link> to build your own.</p>
           </Section>
 
+          <Section id="council" title="An advisory council: different views on one decision">
+            <p>Choose three to five minds with different strengths, such as customers, money and design. Each uses ideas from their public work to review the same facts. The council compares their answers, keeps the strongest disagreement and gives you a recommendation with next steps.</p>
+            <Steps items={[
+              <>Go to <Link to="/minds">Minds</Link> and use “Seat on council” on the people you want.</>,
+              "Open your council in the builder. Set one question, the options, the facts and your limits.",
+              "Download the workflow. Give the folder to your AI and ask it to follow HANDOFF.md.",
+              "Read what they disagree about and what facts would change the recommendation. You have the final say.",
+            ]} />
+            <p className="small">Minds are AI interpretations, not the people themselves. Several voices in one AI are not independent evidence. You can also put a mind on one workflow step, or add a team in Start to split the work or review it together.</p>
+            <p><Link to="/minds" className="btn btn-primary">Choose your council <ArrowIcon /></Link></p>
+          </Section>
+
           <Section id="choose" title="Which one to use" lead="Start with the smallest one that does the job. You can always move up.">
             <div className="hiw-choose" role="table" aria-label="Which one to use">
               <div role="row" className="hiw-choose-head"><span role="columnheader">If you…</span><span role="columnheader">Use</span></div>
@@ -239,7 +252,7 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
               <>Press <b>Download the workflow</b>. Gather what the list asks for, then upload the folder to your AI.</>,
             ]} />
             <Box title="Tips" items={[
-              "Put “Teach AI your brand, straight from your website” first. Most steps read your brand file.",
+              "Put “Brand profile builder” first. Most steps read your brand file.",
               "End with a check, like “Meta ads compliance checker”.",
               "Start with three to five steps. Add more once it works.",
               "Made a mistake? Press Ctrl+Z to undo it.",
@@ -250,8 +263,9 @@ export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
 
           <Section id="results" title="Get better results from all of them">
             <ul className="checks">
+              <li>Try one skill on a small real job first. Check whether it uses your facts, gives the promised result and follows its own checklist. Keep it if the result helps; adapt it if it misses your needs.</li>
               <li>Give it real facts. Your AI only knows what you tell it. When it has to guess, it can make things up.</li>
-              <li>Set up your brand file once. Run “Teach AI your brand, straight from your website” first, and every later step can use it.</li>
+              <li>Set up your brand file once. Run “Brand profile builder” first, and every later step can use it.</li>
               <li>Start a new chat for a new job. Long chats about many things get muddled.</li>
               <li>Read the result before you use it, most of all prices, claims and anything legal.</li>
               <li>When a workflow writes MISSING, add what's missing and run that step again.</li>

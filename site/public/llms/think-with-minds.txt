@@ -4,4 +4,4 @@
 
 - [Advisory council](https://useaiblocks.com/skills/advisory-council): Ask a hard question. Get several great minds arguing it, then a brief you can act on.
 - [Settle a hard decision with a council, then commit](https://useaiblocks.com/workflows/settle-a-hard-decision-with-a-council-then-commit-the-team): Give it a hard decision. Get a council's call, a stress-tested plan and a note that commits the team.
-- [Three-mind debate brief](https://useaiblocks.com/prompts/three-mind-debate-brief): Paste a hard decision. Get three thinkers arguing it and a brief with three first steps.
+- [Three-viewpoint decision brief](https://useaiblocks.com/prompts/three-mind-debate-brief): Paste a hard decision. Get three thinkers arguing it and a brief with three first steps.

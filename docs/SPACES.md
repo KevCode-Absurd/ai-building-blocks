@@ -19,14 +19,9 @@ The code: `src/server/spaces.ts` (one handler for live and dev), `functions/api/
 
 `npm run dev` keeps spaces in memory, so they're gone when it stops. The team token there is `dev-team-token`.
 
-## Switching it on for the live site (not done yet)
+## Switching it on
 
-The site isn't deployed yet. Until these steps are done, `/space` says spaces aren't switched on.
-
-1. Create the database. Run `npx wrangler d1 create ai-blocks`. Comments can use the same database.
-2. Apply the tables. Run `npx wrangler d1 migrations apply ai-blocks --remote` from `site/`. This applies `migrations/0002_spaces.sql` (and `0001_comments.sql`).
-3. Bind it. In the Pages project, go to Settings, then Functions, then D1 bindings, and add `SPACES` pointing at `ai-blocks`.
-4. Add two secrets: `SPACES_SALT` (any long random text) and `SPACES_TEAM_TOKEN` (for taking public items down).
+Follow [the Cloudflare launch handoff](CLOUDFLARE-LAUNCH-2026-10-22.md). It applies both migrations to the shared D1 database, binds COMMENTS and SPACES, and configures separate salts and moderation tokens. Production integration remains pending.
 
 ## Later
 

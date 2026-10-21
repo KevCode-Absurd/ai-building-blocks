@@ -3,79 +3,80 @@
 > 95 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI-written text detector](https://useaiblocks.com/skills/ai-written-text-detector): Paste a document. Get an honest estimate of whether AI wrote it, with the wording clues behind it.
+- [Antagonist behavior planner](https://useaiblocks.com/skills/volatile-antagonist-mood-mapper): Paste your setting plan and the person in power. Get a mood scale with warning signs, triggers and costs.
 - [App Store release notes writer](https://useaiblocks.com/skills/app-store-release-notes-writer): Point it at your app's code history. Get plain "What's New" notes users can read, based on real changes.
 - [Article beat planner](https://useaiblocks.com/skills/article-beat-planner): Give it raw notes. Get them arranged into a story of beats, with each term explained first.
 - [Article shaper](https://useaiblocks.com/skills/article-shaper): Give it raw material. Get it shaped into an article, paragraph by paragraph.
 - [Article translator](https://useaiblocks.com/skills/article-translator): Give it an article. Get a translation in your language, quick or polished with review, using consistent terms.
 - [Blog post producer](https://useaiblocks.com/skills/blog-post-producer): Give it a topic. Get a researched, edited blog post or guide that is ready to publish.
-- [Blog post publish check loop](https://useaiblocks.com/agents/blog-post-publish-check-loop): Give it a finished draft. Get every claim matched to proof, the words made plain and the page fixed until it passes.
 - [Blog post writer](https://useaiblocks.com/skills/blog-post-writer): Give it a topic. Get a blog post with outline, hook and call to action, as how-to, list or story.
+- [Blog publishing review agent](https://useaiblocks.com/agents/blog-post-publish-check-loop): Give it a finished draft. Get every claim matched to proof, the words made plain and the page fixed until it passes.
 - [Brand manifesto writer](https://useaiblocks.com/skills/brand-manifesto-writer): Say what your brand believes and fights for. Get a bold manifesto that rallies your team and customers.
 - [Brand origin story writer](https://useaiblocks.com/skills/brand-origin-story-writer): Tell it how you started and why. Get an origin story and an About page that sound human.
 - [Build suspense in a story where your character cannot leave](https://useaiblocks.com/workflows/trapped-character-suspense): Tell it who is stuck and who holds them. Get a sealed setting, mood map, cost ladder and fair-escape check.
-- [Case-first story builder](https://useaiblocks.com/skills/case-first-story-builder): Give it your topic and notes. Get the one case to build on, the surprise underneath and an outline.
+- [Case study story planner](https://useaiblocks.com/skills/case-first-story-builder): Give it your topic and notes. Get the one case to build on, the surprise underneath and an outline.
+- [Character motivation scene editor](https://useaiblocks.com/skills/scene-want-and-tactic-rewriter): Paste a scene that only explains. Get it rebuilt so each person wants something and uses words to get it.
+- [Character thought scene writer](https://useaiblocks.com/skills/inside-the-mind-scene-writer): Paste a character and a small errand. Get a scene told from inside their head, with time marked.
 - [Closed setting planner](https://useaiblocks.com/skills/closed-setting-planner): Tell it who is stuck and where. Get a sealed world with every exit shut for a reason.
-- [Cold re-read marker](https://useaiblocks.com/skills/cold-reread-marker): Paste a rested draft. Get every page that needs a change, the big holes, and a score out of 100.
 - [Commit message humaniser](https://useaiblocks.com/skills/commit-message-humaniser): Give it a commit message. Get a plain version that sounds like a careful engineer, with no AI filler.
 - [Company story aligner](https://useaiblocks.com/skills/company-story-aligner): Give it what you tell each group. Find contradictions and get one story framed for each audience.
 - [Content growth experiment planner](https://useaiblocks.com/skills/traction-content-marketing): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [Customer-as-hero message planner](https://useaiblocks.com/skills/customer-as-hero-message-planner): Describe your brand. Get a clear message with the customer as the hero, plus a website and elevator pitch. Uses StoryBrand.
-- [Customer-hero message writer](https://useaiblocks.com/skills/customer-hero-message-writer): Paste your offer and buyer. Get a one-line message, a short page script and a first step, with the customer as hero.
+- [Customer-focused message writer](https://useaiblocks.com/skills/customer-hero-message-writer): Paste your offer and buyer. Get a one-line message, a short page script and a first step, with the customer as hero.
 - [Daily word quota planner](https://useaiblocks.com/skills/daily-word-quota-planner): Say your length and writing days. Get a daily word count, a finish date and a closed-door routine for one first draft.
 - [Daily writing session planner](https://useaiblocks.com/skills/daily-writing-session-planner): Say what you write and when you can sit down. Get a lasting habit: fixed session, draft day, rewrite day, hours log.
 - [Data jargon translator](https://useaiblocks.com/skills/data-jargon-translator): Paste your technical findings and name the reader. Get jargon found and the text rewritten in plain business words.
-- [Dialogue ear checker](https://useaiblocks.com/skills/dialogue-ear-checker): Paste your scene. Get each line of talk tested, the worst fixed and a score out of 100.
+- [Dialogue editor](https://useaiblocks.com/skills/dialogue-ear-checker): Paste your scene. Get each line of talk tested, the worst fixed and a score out of 100.
 - [Draft a scene that makes readers need the next one](https://useaiblocks.com/workflows/page-turner-scene): Tell it what happens in the scene. Get a hook plan, a fair way out, a drafted scene and a find-the-lull check.
 - [Draft proofreader](https://useaiblocks.com/skills/draft-proofreader): Give it a text or document. Get it back corrected in your own voice, with a log of every change.
+- [Draft shortening editor](https://useaiblocks.com/skills/ten-percent-cutter): Paste your draft. Get it cut to 90% of its length, with a log of every cut and a story check.
 - [Email drafter](https://useaiblocks.com/skills/email-drafter): Say who it is for and what you need. Get one clear email with the right tone and a call to action.
 - [Emotional arc mapper](https://useaiblocks.com/skills/emotional-arc-mapper): Give it a story, page or campaign. Get the feeling you want at each step, from attention to action.
+- [Emotional scene editor](https://useaiblocks.com/prompts/feeling-to-action-rewriter): Paste a paragraph that names the feeling. Get it rewritten in short sentences with things and actions.
 - [Ending-first story planner](https://useaiblocks.com/skills/ending-first-story-planner): Tell it the one feeling you want. Get a story or talk plan built backward from the last line.
 - [Executive summary writer](https://useaiblocks.com/skills/executive-summary-writer): Give it a long analysis. Get a one-page summary with the answer first, the impact in numbers and the decision needed.
-- [Expert and newcomer test planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner): Paste your draft. Get who to try it on, the questions to ask each, and a pass line for both.
 - [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker): Paste your plan and how your character escapes. Get each escape tested for fairness, with fixes for cheats.
-- [Feeling-to-action rewriter](https://useaiblocks.com/prompts/feeling-to-action-rewriter): Paste a paragraph that names the feeling. Get it rewritten in short sentences with things and actions.
-- [First reader question writer](https://useaiblocks.com/skills/first-reader-question-writer): Paste your draft. Get your ideal reader named and a short question sheet to send with it.
 - [Forceful prose writer](https://useaiblocks.com/skills/forceful-prose-writer): Give it a topic or a draft. Get clean, concrete writing with no filler and none of the usual AI habits.
+- [Fresh draft review](https://useaiblocks.com/skills/cold-reread-marker): Paste a rested draft. Get every page that needs a change, the big holes, and a score out of 100.
 - [Help article writer](https://useaiblocks.com/skills/help-article-writer): Give it support questions and product docs. Get clear, searchable help center articles and FAQs.
 - [Hero story mapper](https://useaiblocks.com/skills/hero-story-mapper): Paste the facts of a founder, project or life change. Get it mapped as a call, threshold, trial, change and return.
 - [Hidden theme finder](https://useaiblocks.com/skills/hidden-theme-finder): Paste a finished draft. Get what it seems to be about, and the scenes to add, sharpen or cut for it.
 - [Honest draft feedback giver](https://useaiblocks.com/skills/honest-draft-feedback-giver): Paste a draft. Get feedback that names the weak lines, asks if you are fine with them and says what to keep.
 - [Human-sounding reply writer](https://useaiblocks.com/skills/human-sounding-reply-writer): Ask for it once. Get AI replies that sound like a person, with less listing and fewer stock phrases.
 - [Idea fragment miner](https://useaiblocks.com/skills/idea-fragment-miner): Talk through a topic. Get raw fragments and ideas pulled out, with no structure yet.
-- [Inside-the-mind scene writer](https://useaiblocks.com/skills/inside-the-mind-scene-writer): Paste a character and a small errand. Get a scene told from inside their head, with time marked.
 - [Interview transcript trimmer](https://useaiblocks.com/skills/interview-transcript-trimmer): Paste a long interview transcript. Get it cut in passes to the few truly interesting passages, with the order to use them.
 - [Invented society planner](https://useaiblocks.com/skills/invented-society-planner): Paste your world idea. Get a working society: food, homes, quarrels, customs and one strange rule, all fitted together.
 - [Layered draft writer](https://useaiblocks.com/skills/layered-draft-writer): Paste your two-audience brief. Get a draft with a plain surface anyone enjoys and marked touches only experts catch.
+- [Long draft editor](https://useaiblocks.com/skills/overstuffed-draft-cutter): Paste your draft. Get the one main idea named, what fights it cut, and a list of every cut with its reason.
 - [Long-form draft editor](https://useaiblocks.com/agents/long-form-draft-editor): Give it a finished draft. Get it checked, edited and checked again until it passes, with every change logged.
 - [Long-form piece structurer](https://useaiblocks.com/skills/long-form-piece-structurer): Say what you are writing, such as a case study or whitepaper. Get a clear outline and structure that avoids padding.
 - [Make a daily writing habit that lasts](https://useaiblocks.com/workflows/daily-writing-habit): Tell it your hours. Get a daily word count, a reading plan, a restart rule and a weekly check on your log.
+- [Memorable message editor](https://useaiblocks.com/prompts/message-stickiness-rewriter): Share a tagline, pitch or paragraph. Get three versions to compare for clarity and memorability.
 - [Memorable message writer](https://useaiblocks.com/skills/memorable-message-writer): Give it a message. Get a rewrite that is simple, surprising, concrete, believable and emotional. Uses the SUCCESs checklist.
-- [Message stickiness rewriter](https://useaiblocks.com/prompts/message-stickiness-rewriter): Paste a tagline, pitch line or short paragraph. Get three versions that people will remember.
-- [Mistakes letter to partners writer](https://useaiblocks.com/skills/mistakes-letter-partners): Paste your year's results and slip-ups. Get an owners' letter naming each mistake, its cost and the change.
 - [Mystery plot planner](https://useaiblocks.com/skills/mystery-plot-planner): Tell it the crime or puzzle. Get a clue map, a timeline and a reveal that plays fair.
-- [Name family planner](https://useaiblocks.com/skills/name-family-planner): Describe your world, brand or product range. Get names from one root, each with a meaning and history.
+- [Naming system planner](https://useaiblocks.com/skills/name-family-planner): Describe your brand, product range or fictional world. Get related names with a shared root, meanings and background.
 - [Next-page hook planner](https://useaiblocks.com/skills/next-page-hook-planner): Tell it your scene. Get the question readers must want answered, where to stop and a fair answer.
-- [Outcome-first positioning memo writer](https://useaiblocks.com/skills/positioning-memo): Paste your product facts. Get a team memo that names the outcome you sell, who users become and a relatable example user.
-- [Overstuffed draft cutter](https://useaiblocks.com/skills/overstuffed-draft-cutter): Paste your draft. Get the one main idea named, what fights it cut, and a list of every cut with its reason.
-- [Page-pull scene checker](https://useaiblocks.com/skills/page-pull-scene-checker): Paste your scene. Get the paragraph where a reader would put it down, the fix, and a verdict on its pull.
 - [Page-turner scene drafter](https://useaiblocks.com/skills/page-turner-scene-drafter): Paste your hook plan. Get a drafted scene in plain, concrete prose that ends on the line you planned.
+- [Partner update about mistakes](https://useaiblocks.com/skills/mistakes-letter-partners): Paste your year's results and slip-ups. Get an owners' letter naming each mistake, its cost and the change.
 - [Plain English editor](https://useaiblocks.com/skills/plain-english-editor): Paste a draft. Get it back in plain words, with each cut explained and a check that you would still say it.
 - [Pre-publish content checker](https://useaiblocks.com/skills/pre-publish-content-checker): Give it a draft and its brief. Get checks on facts, voice, structure, AI sound and search readiness.
+- [Product positioning brief](https://useaiblocks.com/skills/positioning-memo): Paste your product facts. Get a team memo that names the outcome you sell, who users become and a relatable example user.
 - [Proofreader](https://useaiblocks.com/skills/proofreader): Give it text. Get grammar, spelling, punctuation and style fixed against your style guide.
+- [Reader feedback question writer](https://useaiblocks.com/skills/first-reader-question-writer): Share your draft. Identify the right test reader and get questions that uncover where they struggle.
 - [Reader feedback sorter](https://useaiblocks.com/skills/reader-feedback-sorter): Paste what several readers said. Get what to fix, what to leave alone and a ranked rewrite list.
 - [Research paper writer](https://useaiblocks.com/skills/research-paper-writer): Give it your findings. Get a manuscript in standard sections with checked citations and reporting rules applied.
 - [Review comment humaniser](https://useaiblocks.com/skills/review-comment-humaniser): Give it a code review comment. Get a direct version that reads like a teammate wrote it.
 - [Revise a draft with the door open](https://useaiblocks.com/workflows/draft-revision): Paste a rested draft. Get its holes marked, its meaning found, a cut of 10%, plain wording and a reader plan.
 - [Rising cost ladder builder](https://useaiblocks.com/skills/rising-cost-ladder-builder): Paste your story plan. Get attempts that each cost more than the last, and a clock over all of it.
 - [Scene detail picker](https://useaiblocks.com/skills/scene-detail-picker): Paste your story's key places. Get a few first-to-mind details for each, one fresh comparison and what to leave out.
+- [Scene suspense reviewer](https://useaiblocks.com/skills/page-pull-scene-checker): Paste your scene. Get the paragraph where a reader would put it down, the fix, and a verdict on its pull.
 - [Scene turn checker](https://useaiblocks.com/skills/scene-turn-checker): Paste a scene list or outline. Get each scene marked for what changes and which choice changes it, with weak scenes flagged.
-- [Scene want-and-tactic rewriter](https://useaiblocks.com/skills/scene-want-and-tactic-rewriter): Paste a scene that only explains. Get it rebuilt so each person wants something and uses words to get it.
 - [Serial story planner](https://useaiblocks.com/skills/serial-story-planner): Tell it your story or content idea. Get a plan in parts, each with a job and a hook.
 - [Short piece reporter](https://useaiblocks.com/skills/short-piece-reporter): Name a place or person and a word limit. Get a reporting plan and a tight piece in three jobs.
 - [Show-don't-tell scene rewriter](https://useaiblocks.com/skills/show-dont-tell-scene-rewriter): Paste a paragraph that names the feeling. Get it rewritten in short, plain sentences where things carry it.
-- [Single-effect draft checker](https://useaiblocks.com/skills/single-effect-draft-checker): Paste your draft and the feeling you meant. Get each line checked against it, where attention slips and what to cut.
 - [Small working example explainer](https://useaiblocks.com/skills/small-working-example-explainer): Name a mechanism you need to teach. Get the smallest example that shows it, with traced values and predictions to check.
 - [Story continuity checker](https://useaiblocks.com/skills/story-continuity-checker): Give it your manuscript and story facts. Get a list of name slips, age errors, anachronisms and loose plot threads.
+- [Story impact reviewer](https://useaiblocks.com/skills/single-effect-draft-checker): Paste your draft and the feeling you meant. Get each line checked against it, where attention slips and what to cut.
 - [Story premise tester](https://useaiblocks.com/skills/story-premise-tester): Paste your story idea. Get the controlling idea, the idea that argues back, and a verdict on its strength.
 - [Story rules checker](https://useaiblocks.com/skills/story-rules-checker): Paste a story. Get it checked against 18 plain-fiction rules, each fault named with its line, and a score out of 100.
 - [Story shape mapper](https://useaiblocks.com/skills/story-shape-mapper): Paste your story, talk or pitch. Get its fortune line drawn in text, the flat spots, and a fix.
@@ -83,12 +84,11 @@
 - [Storyboard-first story builder](https://useaiblocks.com/skills/storyboard-first-story-builder): Paste your places, memories and hero. Get a rough board that finds the story before you write.
 - [Teaching story writer](https://useaiblocks.com/skills/teaching-story-writer): Give it a lesson you want to teach. Get a short funny story that carries it, with a turn to the reader.
 - [Technical writer](https://useaiblocks.com/skills/technical-writer): Give it a feature or API. Get clear docs, guides, tutorials or changelogs for your readers.
-- [Ten percent cutter](https://useaiblocks.com/skills/ten-percent-cutter): Paste your draft. Get it cut to 90% of its length, with a log of every cut and a story check.
 - [Test a story idea and make every scene turn](https://useaiblocks.com/workflows/story-idea-test): Paste your story idea. Get a premise verdict, every scene marked for what changes, and a line-by-line voice-over test.
 - [Translator](https://useaiblocks.com/skills/translator): Give it text and a language. Get a natural translation with local tone and consistent terms.
 - [Two-audience brief writer](https://useaiblocks.com/skills/two-audience-brief-writer): Paste your project and its audience. Get a brief with two audiences, two ways to fail and a promise to each.
 - [Unplotted first-draft writer](https://useaiblocks.com/skills/unplotted-first-draft-writer): Paste your situation and word count. Get today's pages written in order, a facts sheet and tomorrow's first question.
-- [Volatile antagonist mood mapper](https://useaiblocks.com/skills/volatile-antagonist-mood-mapper): Paste your setting plan and the person in power. Get a mood scale with warning signs, triggers and costs.
+- [Usability test audience planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner): Paste your draft. Get who to try it on, the questions to ask each, and a pass line for both.
 - [What-if situation finder](https://useaiblocks.com/skills/what-if-situation-finder): Paste your story idea. Get one what-if question, the people stuck in it and the unknowns to leave open.
 - [World detail consistency checker](https://useaiblocks.com/skills/world-detail-consistency-checker): Paste your world notes and drafts. Get every clash between details, a fix for each and a score.
 - [Write a first draft fast with the door closed](https://useaiblocks.com/workflows/fast-first-draft): Tell it your idea. Get a what-if situation, a daily word plan, scene details and a first draft written without an outline.

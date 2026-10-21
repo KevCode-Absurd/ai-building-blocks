@@ -8,3 +8,9 @@ test-results
 playwright-report
 public/sitemap.xml
 public/robots.txt
+.wrangler/
+.dev.vars
+.dev.vars.*
+wrangler.local.jsonc
+wrangler.production.jsonc
+wrangler.jsonc

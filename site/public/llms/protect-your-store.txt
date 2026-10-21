@@ -7,11 +7,11 @@
 - [Domain and certificate watch checker](https://useaiblocks.com/skills/domain-and-certificate-watch-checker): List your domains and subdomains. Get leftover records and weak registrar access flagged, a score out of 100 and fixes.
 - [Fraud rules setter](https://useaiblocks.com/skills/fraud-rules-setter): Give it your order volume and payment setup. Get fraud rules, a review routine and a chargeback watch line.
 - [Lock down your store logins and staff against takeover](https://useaiblocks.com/workflows/lock-down-your-store-logins-and-staff-against-takeover): Describe your team and apps. Get a security score, a fix list, a sign-in policy and a phishing rule sheet.
-- [Quarterly store security keeper](https://useaiblocks.com/agents/quarterly-store-security-keeper): Give it your staff, apps and chargeback numbers each quarter. Get your score against last quarter and fixes to do first.
+- [Quarterly store security review](https://useaiblocks.com/agents/quarterly-store-security-keeper): Give it your staff, apps and chargeback numbers each quarter. Get your score against last quarter and fixes to do first.
 - [Risky order rule writer](https://useaiblocks.com/prompts/risky-order-rule-writer): Paste your order volume and chargebacks. Get rules by risk level and a chargeback watch line.
 - [Sign-in policy drafter](https://useaiblocks.com/prompts/sign-in-policy-drafter): Paste how staff and customers sign in. Get ranked gaps, a score and a one-page policy.
 - [Sign-in security checker](https://useaiblocks.com/skills/store-sign-in-security-checker): Describe how staff and customers sign in. Get gaps ranked, a score out of 100 and a password and second-step policy.
-- [Staff phishing rules briefer](https://useaiblocks.com/skills/staff-phishing-rules-briefer): Give it your tools and team size. Get a one-page phishing rule sheet and a ten-minute drill with answers.
+- [Staff phishing awareness brief](https://useaiblocks.com/skills/staff-phishing-rules-briefer): Give it your tools and team size. Get a one-page phishing rule sheet and a ten-minute drill with answers.
 - [Stop fake orders, card testing and bot abuse](https://useaiblocks.com/workflows/stop-fake-orders-card-testing-and-bot-abuse): Give it your orders and payment setup. Get fraud rules, a review routine and a bot access plan.
 - [Store script and app risk auditor](https://useaiblocks.com/skills/store-script-and-app-risk-auditor): List the scripts, apps and packages your store loads. Get risky ones ranked, a score out of 100 and what to remove.
 - [Store security checkup](https://useaiblocks.com/skills/store-security-checkup): Describe your admin team and apps. Get a ranked security fix list, a score out of 100 and a quarterly routine.

@@ -30,7 +30,7 @@ function AppsIndex() {
         <Link to="/" className="back"><span aria-hidden="true">←</span> Home</Link>
         <p className="bp-kicker"><span className="kind">Apps</span>The top of the ladder</p>
         <h1 className="bp-h1">See a finished AI app, then build your own</h1>
-        <p className="bp-sub">Mercatura is the app we built from these skills to make ads, landing pages and SEO for one brand. Click through all of it with its real example data: customer research, scripts, image ads, avatars, reference ads and pages. Then build yours with the starter pack.</p>
+        <p className="bp-sub">Mercatura is the app we built from these skills to make ads, landing pages and SEO for one brand. Click through all of it with its saved study data: customer research, scripts, image ads, avatars, reference ads and pages. Then build yours with the starter pack.</p>
         <div className="bp-actions">
           <a href={TOUR} target="_blank" rel="noopener" className="btn btn-primary" data-testid="tour-open">Open the example app <ArrowIcon /></a>
           <Link to="/apps/starter-pack" className="btn btn-dark">Get the app starter pack</Link>
@@ -41,6 +41,17 @@ function AppsIndex() {
           <img src="/example-app-shots/home.webp" alt="The home screen of the example app: what to make next for the brand, and the work waiting for you" width={1440} height={900} />
         </a>
         <p className="ap-example" data-testid="example-note">The app opens in a new tab and works like the real thing, but nothing runs: you can click every screen, and nothing is made or saved. Its example brand is Grüns, a greens gummy we used as a study brand. The customer research is simulated; the scripts, ads and pages are what the app made from it. We're not connected with Grüns.</p>
+
+        <Section id="workflow-to-app" title="Put your workflow behind a form and a button" lead="Use the builder to choose the job first. The starter pack then gives your AI a plan for the software around it." wide>
+          <ol className="num-list">{[
+            ["Choose and try the workflow.", "Download it from the builder. Run it with a small set of your own facts and check that the result is useful."],
+            ["Build the smallest screen.", "Put that workflow folder next to the app starter pack. Ask your coding AI to read HANDOFF.md and workflow.json, then make one form and a results screen."],
+            ["Save and run the steps.", "The app stores your inputs, runs the skills on its server and shows each result. Failed steps can be retried; actions that need approval wait."],
+            ["Connect one data source.", "Start with an uploaded file. Later, connect an account through the service's supported API. The app reads the data it needs and records when it was refreshed."],
+          ].map(([title, text], n) => <li key={title}><span className="n">{n + 1}</span><span><b>{title}</b> {text}</span></li>)}</ol>
+          <p className="bp-note">Mercatura shows what this can look like for marketing. Its example is a saved tour. Your own app needs a running server and your own connections before it can make work or read live data.</p>
+          <div className="bp-actions"><Link to="/#build" className="btn btn-dark">Choose a workflow</Link><Link to="/apps/starter-pack" className="btn btn-primary">Build your app</Link></div>
+        </Section>
 
         <Section id="inside" title="What's inside" lead="Open any part of the app straight away." wide>
           <div className="ap-areas">{AREAS.map((a) => <AreaCard key={a.id} a={a} />)}</div>

@@ -1,0 +1,2389 @@
+# Customer-facing copy. Source skill files and stable slugs stay unchanged.
+{
+  "landing-page-30-point-checker": {
+    "name": "Landing page audit",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your page and screenshots. Get a 30-point audit, a score and five fixes to make first.",
+    "subhead": "Share your landing page, screenshots and the ad that sends people there. Get 30 checks covering clarity, trust and buying friction, a score out of 100 and five fixes to make first. Missing evidence is marked so you know what still needs checking."
+  },
+  "landing-page-auditor": {
+    "name": "Landing page conversion review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your page and screenshots. Get conversion problems ranked by impact, with recommended fixes and a score.",
+    "subhead": "Share your page text and screenshots. It reviews the page for problems that could stop visitors from taking the next step. Get a score out of 100, a ranked fix list and quick changes to try first."
+  },
+  "website-brand-brain-builder": {
+    "name": "Brand profile builder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your website. Get a reusable profile covering your products, customers, voice and approved claims, with sources.",
+    "subhead": "Share your website and any product, customer or brand documents you already have. It builds eight reusable files covering what you sell, who buys, your voice and the claims you can support. Every fact has a source, and unanswered questions stay visible."
+  },
+  "ad-claim-proof-gap-finder": {
+    "name": "Ad claims checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your ad and evidence. Find unsupported claims and get specific fixes with a score out of 100.",
+    "subhead": "Share your ad or page copy with the evidence behind its claims. It checks direct promises and what the wording implies. Get a claim-by-claim review, unsupported statements flagged, suggested fixes and a score out of 100."
+  },
+  "ad-opening-line-batch-writer": {
+    "name": "Ad hook writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Describe your buyer and share product facts. Get ten different ad openings, follow-up lines and three to test first.",
+    "subhead": "Describe your customer and share the product facts you can support. Get ten different ways to open the ad, the line that follows each one and short versions for on-screen text. It recommends three openings to test first."
+  },
+  "ad-ask-line-writer": {
+    "name": "Ad call to action writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your ad and offer. Get two calls to action with a real reason to respond.",
+    "subhead": "Share your ad, offer and any real reason to act now. Get two calls to action that tell the reader what to do next. Each uses your actual terms and addresses doubts that could stop a response."
+  },
+  "ad-first-line-writer-and-scorer": {
+    "name": "Ad opening writer and reviewer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your buyer and product facts. Get ten ad openings, or a scored review of your own."
+  },
+  "ad-pull-diagnoser": {
+    "name": "Ad response troubleshooter",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "ad-recall-and-pull-calculator": {
+    "name": "Ad survey results calculator",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share ad survey results. Get recall and purchase response calculations, with an explanation of what they mean."
+  },
+  "ad-reading-flow-checker": {
+    "name": "Ad layout readability review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share a print ad layout. Find where attention gets lost and what to move, simplify or cut."
+  },
+  "advice-skin-in-the-game-checker": {
+    "name": "Advice credibility checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "ai-image-fix-rules": {
+    "name": "AI visual feedback editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "ai-workflow-handoff-planner": {
+    "name": "AI workflow instructions planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "List your AI workflow steps. Get clear instructions for passing facts and results between them."
+  },
+  "almost-buyer-follow-up-writer": {
+    "name": "Sales follow-up writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "anger-pause-and-repair-planner": {
+    "name": "Difficult conversation repair planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "ask-which-closing-planner": {
+    "name": "Sales closing question planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "asset-floor-estimator": {
+    "name": "Business asset value estimator",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "audience-hangout-finder": {
+    "name": "Customer community finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "average-earnings-coverage-tester": {
+    "name": "Debt payment coverage checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "bargain-group-rules-writer": {
+    "name": "Bargain investment portfolio planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "before-you-meet-brief-writer": {
+    "name": "Meeting brief writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "behaviour-and-fix-notes-writer": {
+    "name": "Employee feedback writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "belief-ladder-builder": {
+    "name": "Sales argument editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "big-decisions-first-sorter": {
+    "name": "Decision priority planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "blitzscale-readiness-checker": {
+    "name": "Rapid growth readiness review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "bold-bet-downside-checker": {
+    "name": "Business bet risk review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "bonus-idea-matcher": {
+    "name": "Offer bonus planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "bonus-stack-builder": {
+    "name": "Offer bonus package builder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "brand-name-stretch-checker": {
+    "name": "Brand expansion checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "brief-reframer": {
+    "name": "Creative brief editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "bug-evidence-plan-writer": {
+    "name": "Bug investigation planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "business-model-guess-tester": {
+    "name": "Business model assumption tester",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "business-tenet-scorecard-writer": {
+    "name": "Business investment scorecard",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "buy-in-conversation-planner": {
+    "name": "Proposal discussion planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "buyer-doubt-gap-finder": {
+    "name": "Customer objection coverage checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share customer questions and page copy. Find unanswered objections and get a coverage score out of 100.",
+    "subhead": "Share customer questions and your page copy. It checks whether the page answers each concern with enough detail to be useful. Get unanswered objections, evidence for each finding and a coverage score out of 100."
+  },
+  "buyer-instinct-brief-writer": {
+    "name": "Buyer motivation brief writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share product facts and customer comments. Get a brief explaining what motivates buyers and what your message should address."
+  },
+  "buyer-matched-argument-planner": {
+    "name": "Sales argument planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "buyer-wants-finder": {
+    "name": "Customer needs finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share product facts. Find the customer need to lead with, the evidence behind it and claims to avoid."
+  },
+  "buying-habit-stack-designer": {
+    "name": "Repeat purchase habit planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "buying-path-rebuilder": {
+    "name": "Customer buying journey planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "buying-story-interview-guide": {
+    "name": "Customer purchase interview guide",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "campaign-fame-checker": {
+    "name": "Brand campaign recognition review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your campaign plan. Get a scored review of recognition, reach and distinctiveness, with the first improvement to make."
+  },
+  "campaign-keep-or-change-checker": {
+    "name": "Campaign performance reviewer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "can-they-pay-deal-checker": {
+    "name": "Customer payment risk checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "candid-line-writer": {
+    "name": "Product flaw copy writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share a real product weakness. Get three honest ways to acknowledge it while explaining a supported strength."
+  },
+  "capability-pitch-letter-writer": {
+    "name": "Sales introduction letter writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "case-against-writer": {
+    "name": "Decision counterargument writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "case-first-story-builder": {
+    "name": "Case study story planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "challenge-circle-feedback": {
+    "name": "Peer feedback group planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "channel-decay-checker": {
+    "name": "Marketing channel performance review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "checklist-upkeep-planner": {
+    "name": "Checklist review planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "claim-and-proof-matcher": {
+    "name": "Marketing claim evidence checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your copy and evidence. See which claims are supported, which go too far and how to fix them."
+  },
+  "claim-skepticism-kit": {
+    "name": "Claim verification checklist",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "clear-before-clever-copy-checker": {
+    "name": "Copy clarity checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share a draft. Get confusing lines rewritten in plain language and a clarity score out of 100."
+  },
+  "click-choice-clarity-checker": {
+    "name": "Button and link clarity review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "client-fee-and-cap-setter": {
+    "name": "Client pricing planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "code-explainer-for-newcomers": {
+    "name": "Code explainer for beginners",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "cold-reread-marker": {
+    "name": "Fresh draft review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "commitment-ask-planner": {
+    "name": "Sales next-step planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "competitor-ad-gap-finder": {
+    "name": "Competitor ad opportunity finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share competitor ads. Find messages and formats they overlook, with briefs for ads you could test."
+  },
+  "competitor-idea-video-script": {
+    "name": "Competitor-inspired video script writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "competitor-video-ad-script": {
+    "name": "Competitor video script adapter",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "competitor-white-space-mapper": {
+    "name": "Market opportunity finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "complaint-reply-promise-checker": {
+    "name": "Customer reply commitment checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "contact-memory-card-writer": {
+    "name": "Contact notes organizer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "contrary-evidence-log-keeper": {
+    "name": "Assumption evidence tracker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "copy-or-skip-lesson-writer": {
+    "name": "Campaign lessons reviewer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "cost-revenue-reset": {
+    "name": "Cost and revenue review planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "counter-demo-script-writer": {
+    "name": "Product demonstration script writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Describe your product and audience. Get a short demonstration script that explains it and shows the result."
+  },
+  "counter-positioning-finder": {
+    "name": "Competitive business model planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "customer-hero-message-writer": {
+    "name": "Customer-focused message writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "customer-progress-measure-picker": {
+    "name": "Customer success metric planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "customer-success-signals": {
+    "name": "Customer success milestone planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Describe customer behavior after purchase. Choose one early success milestone with a measurable action and deadline."
+  },
+  "customer-watching-plan": {
+    "name": "Customer observation planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "decision-bias-pileup-checker": {
+    "name": "Decision bias checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "decision-evidence-bar-setter": {
+    "name": "Decision evidence checklist",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "decision-tripwire-planner": {
+    "name": "Decision backup plan",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share a decision. Get alternative options, a test of your assumptions and a clear point to reconsider."
+  },
+  "defensive-price-ceiling-tester": {
+    "name": "Stock purchase price checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "definition-tester": {
+    "name": "Term definition checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "deliverer-fit-planner": {
+    "name": "Presenter fit planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your brief and presenter. Get an approach that suits their strengths, with pitfalls and a standout moment."
+  },
+  "design-ten-principles-reviewer": {
+    "name": "Design principles review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "desire-section-writer": {
+    "name": "Product benefit copy writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "dialogue-ear-checker": {
+    "name": "Dialogue editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "diff-security-skimmer": {
+    "name": "Code change security review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "dip-or-dead-end-checker": {
+    "name": "Project continue-or-stop review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "disagree-and-commit-note-writer": {
+    "name": "Team decision announcement writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "disagreement-calming-line-writer": {
+    "name": "Disagreement response writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "dominant-emotion-finder": {
+    "name": "Buyer emotion researcher",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "early-or-broken-checker": {
+    "name": "Startup progress reviewer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "earnings-padding-detector": {
+    "name": "Earnings quality checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "email-cadence-planner": {
+    "name": "Email schedule planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "email-send-readiness-scorer": {
+    "name": "Email launch checklist",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "enterprising-bargain-screener": {
+    "name": "Undervalued stock screener",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "equity-cushion-ratio-tester": {
+    "name": "Debt protection ratio checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "error-message-designer": {
+    "name": "Error and recovery message writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "estimate-gap-auditor": {
+    "name": "Forecast disagreement reviewer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "executive-action-register": {
+    "name": "Action item tracker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share meeting notes or email threads. Get action items with owners, deadlines and unresolved commitments."
+  },
+  "executive-daily-digest": {
+    "name": "Daily executive briefing",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "executive-due-task-drafts": {
+    "name": "Task follow-up writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share tasks and related messages. Get follow-up drafts with recipients, missing facts and send status made clear."
+  },
+  "executive-email-draft": {
+    "name": "Executive email reply writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "executive-meeting-brief": {
+    "name": "Executive meeting briefing",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "experience-drift-auditor": {
+    "name": "Customer experience consistency review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "expert-and-newcomer-test-planner": {
+    "name": "Usability test audience planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "fair-disagreement-test-planner": {
+    "name": "Disagreement evidence test planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "faq-page-from-questions-writer": {
+    "name": "Customer FAQ writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "feature-request-no-writer": {
+    "name": "Feature request reply writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share a feature request you will not build. Get a respectful reply explaining the real reason."
+  },
+  "feeling-to-action-rewriter": {
+    "name": "Emotional scene editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "figures-to-plain-pictures-writer": {
+    "name": "Numbers explainer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "findings-and-guesses-separator": {
+    "name": "Research evidence checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "first-customers-by-hand-planner": {
+    "name": "First customer outreach planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "first-reader-question-writer": {
+    "name": "Reader feedback question writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your draft. Identify the right test reader and get questions that uncover where they struggle."
+  },
+  "five-colour-feeling-palette-picker": {
+    "name": "Colour palette planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "five-step-problem-runner": {
+    "name": "Problem-solving plan",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "fix-now-or-test-sorter": {
+    "name": "Website fix priority planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "four-kind-proof-finder": {
+    "name": "Ad evidence planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "front-end-offer-picker": {
+    "name": "First purchase offer planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "function-purity-refactor-planner": {
+    "name": "Pure function refactoring planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "get-them-talking-plan": {
+    "name": "Conversation question planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "give-before-ask-sequence-planner": {
+    "name": "Relationship outreach planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "give-up-list-planner": {
+    "name": "Brand focus trade-off planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your brand positioning and products. Get a focused list of what to cut, prioritize and protect."
+  },
+  "good-note-sharpener": {
+    "name": "Draft feedback editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "growth-lever-audit": {
+    "name": "Business growth opportunities review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "guide-outreach-list-planner": {
+    "name": "Industry guide outreach planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "hard-no-planner": {
+    "name": "Request refusal planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "hard-questions-faq-writer": {
+    "name": "Product launch FAQ writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your launch press release. Get answers to difficult customer and team questions, with weak answers flagged."
+  },
+  "hard-to-use-thing-diagnoser": {
+    "name": "Product usability review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "hardest-objections-answer-writer": {
+    "name": "Sales objection answer writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "headline-cover-test-ranker": {
+    "name": "Headline shortlist reviewer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share headline options. Get each reviewed on five rules and a shortlist of the strongest three."
+  },
+  "headline-reader-and-reward-checker": {
+    "name": "Headline relevance checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "hedgehog-focus-finder": {
+    "name": "Business focus planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "hidden-offer-finder": {
+    "name": "New offer opportunity finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "hostile-room-speech-planner": {
+    "name": "Skeptical audience speech planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "hours-to-assets-planner": {
+    "name": "Scalable income plan",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "how-question-counter-writer": {
+    "name": "Negotiation response writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "hungry-audience-ranker": {
+    "name": "Market demand reviewer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "idea-buy-in-pitch-planner": {
+    "name": "Internal proposal pitch planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "image-ad-gap-finder": {
+    "name": "Image ad variety review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "image-ad-settings-picker": {
+    "name": "Image ad visual brief writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "image-style-picker-for-story-ads": {
+    "name": "Story ad visual style planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "informed-captain-decisions": {
+    "name": "Team decision ownership planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "input-metric-picker": {
+    "name": "Business activity metric planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "inquiry-problem-diagnoser": {
+    "name": "Lead quality diagnosis",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share ad results. Find whether you need more leads or better leads, with the calculations behind the recommendation."
+  },
+  "inside-the-mind-scene-writer": {
+    "name": "Character thought scene writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "investor-type-quiz": {
+    "name": "Investment approach questionnaire",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "job-hunting-spot-finder": {
+    "name": "Unmet customer need researcher",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Describe what you sell. Find places to research unmet customer needs and what to observe at each."
+  },
+  "job-rival-mapper": {
+    "name": "Customer alternatives researcher",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "job-to-agent-goal-writer": {
+    "name": "AI task brief writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "keyed-ad-results-log-keeper": {
+    "name": "Ad test results tracker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share ad results. Get a dated test record with the ad identifier, conditions, findings and next test."
+  },
+  "keyed-headline-test-planner": {
+    "name": "Headline test tracking planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "know-it-or-skip-it-sorter": {
+    "name": "Decision knowledge checklist",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "launch-readiness-seam-checker": {
+    "name": "Launch integration checklist",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "launch-scope-halver": {
+    "name": "Minimum launch scope planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "lead-cost-and-friction-planner": {
+    "name": "Lead generation cost planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "lead-offer-planner": {
+    "name": "Educational lead magnet planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "lead-offer-tuner": {
+    "name": "Lead magnet reviewer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "leap-of-faith-assumption-finder": {
+    "name": "Startup assumption checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "lifetime-punch-card-bet-ranker": {
+    "name": "Investment priority planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "listen-first-talk-planner": {
+    "name": "Listening conversation planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "long-source-to-workflow": {
+    "name": "Content to workflow builder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "subhead": "Paste an article, transcript or book notes that teach a repeatable method. Get a pack your AI can use to map the steps, write a reusable skill for each one and build the workflow. You review the method before it writes the files."
+  },
+  "marketing-plan-law-checker": {
+    "name": "Marketing strategy review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your marketing plan. Get a scored review against published marketing principles, with supporting references and fixes."
+  },
+  "math-or-judgment-call-sorter": {
+    "name": "Decision method planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "measure-first-slowdown-finder": {
+    "name": "App performance investigation planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "mental-model-checklist-runner": {
+    "name": "Decision thinking checklist",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "message-stickiness-rewriter": {
+    "name": "Memorable message editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share a tagline, pitch or paragraph. Get three versions to compare for clarity and memorability."
+  },
+  "mistake-to-principle-writer": {
+    "name": "Lessons learned principle writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "mistakes-letter-partners": {
+    "name": "Partner update about mistakes",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "money-first-business-cut-planner": {
+    "name": "Revenue-focused task planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "List weekly tasks and what they earn. Decide what to keep, delegate, drop or postpone."
+  },
+  "must-have-survey-planner": {
+    "name": "Product demand survey planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "name-family-planner": {
+    "name": "Naming system planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Describe your brand, product range or fictional world. Get related names with a shared root, meanings and background."
+  },
+  "nda-traffic-light-checker": {
+    "name": "NDA risk review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "network-launch-plan": {
+    "name": "Audience network launch planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Describe your product and audience. Get a launch plan that uses an existing network to reach them."
+  },
+  "new-idea-protection-planner": {
+    "name": "New idea development planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "niche-price-ladder-builder": {
+    "name": "Niche offer pricing planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "no-brainer-question-settler": {
+    "name": "Simple decision checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "no-question-email-rewriter": {
+    "name": "Low-pressure email editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share an email that pressures the reader to agree. Get a lower-pressure version that makes refusal useful."
+  },
+  "number-to-picture-translator": {
+    "name": "Visual numbers explainer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "offer-builder": {
+    "name": "Customer offer builder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "offer-name-batch-writer": {
+    "name": "Offer name ideas",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "offer-trim-and-stack-builder": {
+    "name": "Offer package planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "old-vs-new-ad-prompt-scorer": {
+    "name": "Ad prompt comparison review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "one-ask-email-tightener": {
+    "name": "Email call to action editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "one-goal-marketing-plan-builder": {
+    "name": "Focused marketing plan",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "one-line-position-writer": {
+    "name": "Brand positioning sentence writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "one-way-or-two-way-choice-sorter": {
+    "name": "Decision reversibility checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "onliness-statement-writer": {
+    "name": "Brand differentiation statement writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "open-word-finder": {
+    "name": "Brand positioning word finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "opponent-favour-request-writer": {
+    "name": "Relationship repair request writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "order-to-request-rewriter": {
+    "name": "Polite request editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "outcome-based-roadmap": {
+    "name": "Product outcome roadmap planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "overstuffed-draft-cutter": {
+    "name": "Long draft editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "owned-word-mapper": {
+    "name": "Competitor brand association map",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "page-grid-and-type-planner": {
+    "name": "Website typography and layout planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "page-pull-scene-checker": {
+    "name": "Scene suspense reviewer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "page-tree-url-sketcher": {
+    "name": "Website page structure planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "paid-work-case-writer": {
+    "name": "Freelance project proposal writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "people-trust-checker": {
+    "name": "Working relationship trust review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "pitch-deck-checker-10-20-30": {
+    "name": "Pitch deck presentation review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your pitch deck. Get a scored review of slide count, timing, text size and opening, with fixes."
+  },
+  "plan-guess-ranker": {
+    "name": "Project assumption priority planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "plan-inversion-checker": {
+    "name": "Plan failure risk review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "positioning-memo": {
+    "name": "Product positioning brief",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "post-flop-reason-finder": {
+    "name": "Social post performance review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "power-and-fear-map-builder": {
+    "name": "Stakeholder concerns map",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "practice-session-minute-planner": {
+    "name": "Timed practice session planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "price-first-cost-squeeze-planner": {
+    "name": "Target price cost planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "price-versus-value-gap-judge": {
+    "name": "Investment margin of safety review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "problem-cost-question-writer": {
+    "name": "Sales discovery question writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "problem-first-job-description-writer": {
+    "name": "Outcome-focused job description writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "process-and-meeting-cull-planner": {
+    "name": "Process and meeting cleanup planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "product-handicap-reframer": {
+    "name": "Product weakness messaging planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "product-line-cutter": {
+    "name": "Product range review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "product-vocabulary-sheet-builder": {
+    "name": "Product terminology guide",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "proof-backed-sales-copy-writer": {
+    "name": "Evidence-based sales copy writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "proof-spot-mapper": {
+    "name": "Testimonial placement planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share customer doubts, reviews and testimonials. Get recommendations on which evidence to show and where to place it.",
+    "subhead": "Share your reviews, testimonials and the concerns buyers raise. It matches each concern to the evidence you have and recommends where to show it. Get a placement plan and a list of evidence that is missing or too weak."
+  },
+  "proportional-fix-planner": {
+    "name": "Problem response planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "prospecting-block-planner": {
+    "name": "Sales prospecting schedule planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "reach-before-repeat-planner": {
+    "name": "Ad reach planning review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "real-feeling-checker": {
+    "name": "Emotional authenticity reviewer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "real-knowledge-tester": {
+    "name": "Subject knowledge self-check",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "reason-to-join-pitch-writer": {
+    "name": "Team recruitment pitch writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "reason-why-deal-writer": {
+    "name": "Promotion explanation writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "recall-and-pull-survey-planner": {
+    "name": "Ad response survey planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "repeat-chore-automation-planner": {
+    "name": "Routine task automation planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "repeat-job-skill-drafter": {
+    "name": "Reusable AI skill writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "reply-getting-fix-writer": {
+    "name": "Ad response improvement writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "results-agreement-writer": {
+    "name": "Work expectations agreement writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "review-reply-batch-writer": {
+    "name": "Store review reply writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "rival-gap-message-writer": {
+    "name": "Competitive sales message writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "rival-matchup-scorer": {
+    "name": "Competitor comparison reviewer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "role-task-breakdown-for-ai-help": {
+    "name": "AI task opportunity review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "rough-notes-to-minutes-writer": {
+    "name": "Meeting minutes from rough notes",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "rough-prompt-rebuilder": {
+    "name": "AI prompt editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your rough prompt. Get a clearer version with the task, facts and requested result stated plainly."
+  },
+  "rough-text-to-article-tidier": {
+    "name": "Article draft editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "sales-opener-trio-writer": {
+    "name": "Sales opening line writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "sales-route-plan-builder": {
+    "name": "Sales channel plan",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "scene-want-and-tactic-rewriter": {
+    "name": "Character motivation scene editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "second-order-effects-tracer": {
+    "name": "Decision consequence planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "share-or-protect-brief": {
+    "name": "Idea sharing decision brief",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "shared-want-hook-mapper": {
+    "name": "Buyer motivation hook planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "single-effect-draft-checker": {
+    "name": "Story impact reviewer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "skill-file-problem-spotter": {
+    "name": "AI skill review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "slack-and-backup-planner": {
+    "name": "Business resilience planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your business operations or budget. Find stress points and get practical backup capacity to add first."
+  },
+  "slippery-slide-copy-checker": {
+    "name": "Sales copy flow review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your ad or page. Find lines that break the reading flow and get fixes that keep the argument moving."
+  },
+  "smallest-audience-picker": {
+    "name": "Target audience focus planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "smallest-test-picker": {
+    "name": "Minimum experiment planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "specific-knowledge-finder": {
+    "name": "Personal expertise finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "split-run-result-reader": {
+    "name": "A/B test results reader",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "split-run-test-planner": {
+    "name": "A/B test design planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "starving-crowd-market-scorer": {
+    "name": "Market demand scorer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "staying-power-checker": {
+    "name": "Competitive advantage durability review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "story-ad-picture-brief-writer": {
+    "name": "Story ad image brief writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "stranger-first-message-writer": {
+    "name": "First outreach message writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "structure-behaviour-split": {
+    "name": "Process and behavior change planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "summing-up-paragraph-writer": {
+    "name": "Closing paragraph writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "surprise-cause-ranker": {
+    "name": "Unexpected result investigation planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "switch-friction-remover": {
+    "name": "Customer switching barrier planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "switch-story-mapper": {
+    "name": "Customer switching journey map",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "talk-tension-planner": {
+    "name": "Speech tension planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "target-size-back-solver": {
+    "name": "Business target calculator",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "ten-percent-cutter": {
+    "name": "Draft shortening editor",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "test-reply-offer-planner": {
+    "name": "Ad response incentive planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "three-mind-debate-brief": {
+    "name": "Three-viewpoint decision brief",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "top-of-page-headline-writer": {
+    "name": "Website headline writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "tree-to-web-knowledge-mapper": {
+    "name": "Knowledge connection map",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "trust-deposit-planner": {
+    "name": "Relationship trust building planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "two-day-paid-ask-planner": {
+    "name": "Paid idea test planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "typed-headline-batch-writer": {
+    "name": "Ad headline ideas",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "unlikely-pairing-idea-generator": {
+    "name": "Creative combination ideas",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "usability-heuristic-reviewer": {
+    "name": "Website usability review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "value-created-tally-builder": {
+    "name": "Stakeholder value calculator",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "value-equation-scorer": {
+    "name": "Offer value review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "values-to-week-planner": {
+    "name": "Values-based weekly plan",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "vanity-metric-fixer": {
+    "name": "Business metric quality review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "video-ad-script-angle-chooser": {
+    "name": "Video ad message planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "video-ad-script-type-picker": {
+    "name": "Video ad format planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "video-opening-line-batch-writer": {
+    "name": "Video hook ideas",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "voice-over-stripping-test": {
+    "name": "Silent video story review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "volatile-antagonist-mood-mapper": {
+    "name": "Antagonist behavior planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "weak-part-design-out-planner": {
+    "name": "Product weak point redesign",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "week-plan-from-task-list-maker": {
+    "name": "Weekly task planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "what-you-really-sell-finder": {
+    "name": "Core customer benefit finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "who-keeps-the-gain-tester": {
+    "name": "Business value capture review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "word-for-word-no-writer": {
+    "name": "Polite refusal writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "work-flow-layout-planner": {
+    "name": "Workplace layout planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "yes-ladder-question-writer": {
+    "name": "Sales agreement question planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "yes-later-no-request-sorter": {
+    "name": "Feature request priority planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share feature requests and product priorities. Get a build, defer or decline recommendation, with a reply for each."
+  },
+  "yes-no-too-hard-call-writer": {
+    "name": "Investment decision brief",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "ad-awareness-stage-checker": {
+    "name": "Buyer awareness review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "ad-concept-matrix-builder": {
+    "name": "Ad concept testing planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your product and reviews. Get buyer groups, messages and offers arranged into an ad testing plan."
+  },
+  "ad-library-teardown-counter": {
+    "name": "Competitor ad format analysis",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "ai-recommendation-gap-finder": {
+    "name": "AI search recommendation review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share AI search test results. Find why your store is overlooked and get fixes ranked by type."
+  },
+  "ai-recommendation-panel-runner": {
+    "name": "AI search visibility test",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your store and customer questions. Test AI recommendations and see named brands, cited sources and a visibility score."
+  },
+  "ai-shortlist-readiness-checker": {
+    "name": "AI search readiness review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "amazon-search-gap-finder": {
+    "name": "Amazon product opportunity finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "app-script-auditor": {
+    "name": "Store app script audit",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "avatar-fit-checker": {
+    "name": "Buyer profile review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "big-idea-and-mechanism-builder": {
+    "name": "Product message and explanation planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "big-swing-test-picker": {
+    "name": "High-impact experiment planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "brand-ladder-survey-builder": {
+    "name": "Brand perception survey planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "brand-stylescape-planner": {
+    "name": "Brand mood board planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share brand traits and customer details. Get three visual directions, a recommended combination and photography guidance."
+  },
+  "cancel-reason-save-planner": {
+    "name": "Subscription cancellation response planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "cash-lever-ranker": {
+    "name": "Cash flow improvement planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your profit and loss figures and stock. Get six ways to free cash, ranked by potential impact."
+  },
+  "cogs-line-sorter": {
+    "name": "Product cost category organizer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "comment-keyword-dm-funnel-builder": {
+    "name": "Comment-to-message funnel planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "copy-foundation-docs-builder": {
+    "name": "Marketing copy brief builder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "creative-hit-rate-planner": {
+    "name": "Ad testing success rate planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share an ad export. Calculate how often new concepts meet your profit target and identify ideas to develop."
+  },
+  "creative-portfolio-mix-planner": {
+    "name": "Ad creative mix planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "creative-team-pod-designer": {
+    "name": "Ad creative team planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "creative-test-reader": {
+    "name": "Ad creative test results reader",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "creative-volume-planner": {
+    "name": "Monthly ad production planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "crowded-category-white-space-finder": {
+    "name": "Crowded market opportunity finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "customer-stage-flow-mapper": {
+    "name": "Customer email journey planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "customer-wow-budget-planner": {
+    "name": "Customer experience budget planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "existing-customer-ad-budget-sizer": {
+    "name": "Returning customer ad budget planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "first-use-gap-checker": {
+    "name": "New customer experience review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "forum-and-review-avatar-digger": {
+    "name": "Buyer research from forums",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your product and buyer group. Get a forum research plan, quote file and customer profile."
+  },
+  "google-ads-scale-gate-checker": {
+    "name": "Google Ads scaling readiness review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "heavy-feature-trimmer": {
+    "name": "Slow website feature review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "hero-product-repositioner": {
+    "name": "Best-selling product positioning planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "inbox-placement-recovery-planner": {
+    "name": "Email deliverability recovery planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "job-based-avatar-builder": {
+    "name": "Customer needs profile builder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share purchase stories and reviews. Get customer profiles based on their needs, buying triggers and actual quotes."
+  },
+  "job-test-product-line-cutter": {
+    "name": "Product range focus review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "key-hire-gap-finder": {
+    "name": "Next hire priority planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "ltgp-to-cac-checker": {
+    "name": "Customer acquisition profitability review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "marketing-vector-writer": {
+    "name": "Brand message guide",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share your brand and ad plans. Get a clear message direction and examples of ideas that fit or stray.",
+    "subhead": "Share your brand positioning, customer needs and ad plans. It writes one message direction to guide future work. Get examples of ideas that fit, ideas that drift and the reasons behind each call."
+  },
+  "mechanism-namer": {
+    "name": "Product explanation name ideas",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "next-dollar-budget-allocator": {
+    "name": "Marketing budget allocation planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "open-buyer-group-finder": {
+    "name": "New customer segment finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "order-record-buyer-interview-guide": {
+    "name": "Purchase history interview guide",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "pack-and-thumbnail-glance-tester": {
+    "name": "Packaging first-impression review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "persona-script-multiplier": {
+    "name": "Video scripts for buyer groups",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "platform-roas-reality-check": {
+    "name": "Ad return accuracy checker",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "positioning-grid-builder": {
+    "name": "Competitor positioning map",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "process-fact-finder": {
+    "name": "Product process fact researcher",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "product-niche-problem-picker": {
+    "name": "Product niche problem finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "product-page-doubt-mapper": {
+    "name": "Product page answer planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share product facts and customer concerns. Get page sections that answer each concern using evidence you have."
+  },
+  "quiz-answers-to-ad-angles-reader": {
+    "name": "Ad ideas from quiz answers",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "rating-gap-product-finder": {
+    "name": "Product opportunity review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "sale-break-even-and-cac-allowance-modeler": {
+    "name": "Sale profitability calculator",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "say-do-gap-checker": {
+    "name": "Customer survey reliability review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "shopper-question-and-fan-out-mapper": {
+    "name": "Customer search question map",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share products and customer questions. Map what shoppers ask AI, its follow-up searches and questions your pages miss."
+  },
+  "sku-ad-money-planner": {
+    "name": "Product ad budget planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "sold-out-proof-line-writer": {
+    "name": "Sales evidence copy writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "speed-budget-and-sale-check": {
+    "name": "Sale website speed review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "staff-phishing-rules-briefer": {
+    "name": "Staff phishing awareness brief",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "star-rating-review-miner": {
+    "name": "Competitor review insight finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share competitor reviews grouped by rating. Find unmet needs, trust problems and language that shows buying intent."
+  },
+  "static-ad-critic": {
+    "name": "Image ad review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "store-brand-signal-auditor": {
+    "name": "Store brand consistency review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "store-link-gap-planner": {
+    "name": "Store backlink opportunity planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "store-ltv-payback-reader": {
+    "name": "Customer value and payback review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "store-page-conversion-reader": {
+    "name": "Store page conversion review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "store-pl-builder": {
+    "name": "Store profit and loss builder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "store-promise-writer": {
+    "name": "Store value proposition writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "store-sales-drop-splitter": {
+    "name": "Store sales decline investigation",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "store-social-proof-placer": {
+    "name": "Store testimonial placement planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share customer concerns and reviews. Choose credible evidence for each concern and decide where it belongs in your store."
+  },
+  "store-unmet-job-finder": {
+    "name": "Unmet customer need finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "subscription-page-take-rate-checker": {
+    "name": "Subscription signup page review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "sunset-flow-and-list-cleaner": {
+    "name": "Inactive subscriber cleanup planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "supplier-payment-terms-planner": {
+    "name": "Supplier payment terms planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "top-customer-touch-planner": {
+    "name": "Best customer relationship planner",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "untapped-avatar-finder": {
+    "name": "New buyer profile finder",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "video-ad-bridge-checker": {
+    "name": "Video ad transition review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "vsl-ad-scripter": {
+    "name": "Video sales letter writer",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "waterfall-price-setter": {
+    "name": "Minimum viable price calculator",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share costs, sales targets and acquisition spend. Calculate the lowest viable price or identify a product that cannot pay."
+  },
+  "winning-ad-dna-mapper": {
+    "name": "Successful ad pattern analysis",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share successful ads. Get a breakdown of their messages and visuals, with single-element changes to test."
+  },
+  "winning-hook-rubric-builder": {
+    "name": "Video hook review checklist",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope."
+  },
+  "wrong-buyer-review-checker": {
+    "name": "Customer fit review",
+    "reason": "Replace a stacked label or specialist shorthand with the familiar job; keep the original scope.",
+    "summary": "Share negative reviews. Separate poor customer fit from product problems and get clearer expectation-setting copy."
+  },
+  "code-intent-gap-auditor": {
+    "name": "Code and documentation consistency review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Share code and documentation. Find behavior that contradicts your stated rules, with recommended fixes."
+  },
+  "coding-agent-handoff-writer": {
+    "name": "AI coding task brief writer",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "content-gap-and-decay-finder": {
+    "name": "Content opportunity and update review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Connect Ahrefs. Find missing topics and outdated or declining pages, with recommendations to update or replace them."
+  },
+  "contract-review-grid": {
+    "name": "Contract comparison spreadsheet builder",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "crawl-error-triage-planner": {
+    "name": "Website crawl fix planner",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "curriculum-gap-check": {
+    "name": "Curriculum coverage checker",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "deal-next-stage-gap-finder": {
+    "name": "Sales deal next-step planner",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Share a sales deal. Get the missing steps needed to advance it, with an owner and deadline for each."
+  },
+  "developer-handoff-spec-writer": {
+    "name": "Design specification writer",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "ell-task-scaffolds": {
+    "name": "English learner task support planner",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "feature-memory-keeper": {
+    "name": "Feature decision notes organizer",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "handoff-note-writer": {
+    "name": "AI session handover writer",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "lead-handoff-designer": {
+    "name": "Marketing-to-sales handover planner",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "lead-owner-router": {
+    "name": "Sales lead assignment planner",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "new-ai-rule-gap-checker": {
+    "name": "AI regulation compliance review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "picking-batch-planner": {
+    "name": "Warehouse order picking planner",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "product-data-gap-filler": {
+    "name": "Missing product details updater",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Find missing product details such as barcodes and weight. Fill available fields in your live store. Updates live products."
+  },
+  "product-photo-batch-maker": {
+    "name": "Product catalogue photo maker",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "promo-code-batch-maker": {
+    "name": "Bulk discount code creator",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "release-proof-checker": {
+    "name": "Live release verification review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Share a deployed service. Check code, build results, database behavior and live routes before calling the release ready."
+  },
+  "rival-keyword-gap-finder": {
+    "name": "Competitor keyword opportunity finder",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "sales-channel-gap-finder": {
+    "name": "Product sales channel availability checker",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "shipped-app-gap-finder": {
+    "name": "Live app readiness review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Share a deployed app's code. Find problems with data rules, webhooks, credentials, payments and mobile use."
+  },
+  "shipping-rate-gap-finder": {
+    "name": "Missing shipping rate checker",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "site-qa-sweep-runner": {
+    "name": "Website test runner",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Share a website and test depth. Get browser checks and a report of problems found."
+  },
+  "small-change-keeper": {
+    "name": "Focused code change guard",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "social-proof-placer": {
+    "name": "Customer evidence placement planner",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Describe customer concerns. Choose relevant testimonials, figures or case studies and decide where to show them."
+  },
+  "store-seo-gap-finder": {
+    "name": "Missing store SEO details checker",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Share your store. Find products, collections and pages missing search titles or descriptions."
+  },
+  "student-work-gap-finder": {
+    "name": "Student work criteria review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "task-handoff-writer": {
+    "name": "AI task handover writer",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "task-list-keeper": {
+    "name": "Task list manager",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "test-coverage-gap-finder": {
+    "name": "App test coverage review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "test-gap-finder": {
+    "name": "Code change test coverage review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "time-log-keeper": {
+    "name": "Notion time log updater",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "amazon-monthly-account-keeper": {
+    "name": "Monthly Amazon account review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "blog-post-publish-check-loop": {
+    "name": "Blog publishing review agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "class-quiz-reteach-keeper": {
+    "name": "Quiz results and reteaching planner",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "cold-outreach-batch-runner": {
+    "name": "Cold email outreach agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "customer-inbox-triage-and-reply-drafter": {
+    "name": "Customer email reply assistant",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Share customer emails. Get priorities and checked reply drafts to approve. It does not send them."
+  },
+  "customer-interview-program-keeper": {
+    "name": "Customer interview research coordinator",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "customer-onboarding-keeper": {
+    "name": "Customer onboarding review agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "data-file-clean-up-loop": {
+    "name": "Data file cleanup agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "decision-checklist-keeper": {
+    "name": "Decision review tracker",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "engineering-evidence-keeper": {
+    "name": "Engineering change verification agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "executive-work-keeper": {
+    "name": "Executive follow-up assistant",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "experiment-readout-desk": {
+    "name": "Experiment results review agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "google-ads-weekly-account-keeper": {
+    "name": "Weekly Google Ads review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "handbook-change-desk": {
+    "name": "Employee handbook update agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "landing-page-fix-loop": {
+    "name": "Landing page improvement agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "meta-ads-weekly-account-keeper": {
+    "name": "Weekly Meta Ads review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-belief-evidence-keeper": {
+    "name": "Monthly assumption evidence review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-budget-versus-actual-keeper": {
+    "name": "Monthly budget variance review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-catalogue-clean-up-keeper": {
+    "name": "Monthly product catalogue review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-cloud-and-ai-bill-keeper": {
+    "name": "Monthly cloud and AI cost review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Share monthly cloud and AI bills. Find growing costs and waste, with spending limits to consider."
+  },
+  "monthly-content-decay-keeper": {
+    "name": "Monthly content performance review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-contract-renewal-keeper": {
+    "name": "Monthly contract renewal review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-contractor-roster-keeper": {
+    "name": "Monthly contractor review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-course-lesson-keeper": {
+    "name": "Monthly course content review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-customer-voice-keeper": {
+    "name": "Monthly customer feedback review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-design-system-keeper": {
+    "name": "Monthly design consistency review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-developer-docs-keeper": {
+    "name": "Monthly developer documentation review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-email-flow-keeper": {
+    "name": "Monthly email automation review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-help-centre-keeper": {
+    "name": "Monthly help centre review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Share recent support tickets. Get drafts for missing help articles and updates for outdated ones."
+  },
+  "monthly-repeat-buyer-keeper": {
+    "name": "Monthly repeat customer review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-review-proof-keeper": {
+    "name": "Monthly testimonial evidence review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Share new customer reviews. Check approved quotes against evidence and identify gaps for the next review request."
+  },
+  "monthly-search-console-keeper": {
+    "name": "Monthly Search Console review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-skill-library-keeper": {
+    "name": "Monthly AI skill library review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-store-seo-keeper": {
+    "name": "Monthly store SEO review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-store-speed-keeper": {
+    "name": "Monthly store speed review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-tech-debt-keeper": {
+    "name": "Monthly technical debt review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "monthly-tracking-health-keeper": {
+    "name": "Monthly analytics tracking review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "new-hire-onboarding-keeper": {
+    "name": "New hire onboarding coordinator",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "offer-refresh-keeper": {
+    "name": "Offer performance review agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "pre-launch-ad-check-and-fix-loop": {
+    "name": "Ad launch review agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "price-test-keeper": {
+    "name": "Pricing experiment coordinator",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "process-doc-freshness-keeper": {
+    "name": "Process documentation update agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "product-sample-approval-loop": {
+    "name": "Product sample review coordinator",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "public-review-reply-desk": {
+    "name": "Public review reply assistant",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "quarterly-accessibility-keeper": {
+    "name": "Quarterly accessibility review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "quarterly-battle-card-keeper": {
+    "name": "Quarterly competitor sales guide update",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "quarterly-compliance-readiness-keeper": {
+    "name": "Quarterly compliance readiness review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "quarterly-headcount-plan-keeper": {
+    "name": "Quarterly hiring plan review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "quarterly-performance-review-keeper": {
+    "name": "Quarterly employee review writer",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "quarterly-store-security-keeper": {
+    "name": "Quarterly store security review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "rule-change-policy-keeper": {
+    "name": "Policy change review agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "social-comment-and-reply-desk": {
+    "name": "Social comment reply assistant",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "stalled-deal-revival-desk": {
+    "name": "Stalled sales deal follow-up assistant",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "student-work-marking-desk": {
+    "name": "Student work marking assistant",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "test-failure-repair-loop": {
+    "name": "Failed test repair agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "tiktok-ads-weekly-account-keeper": {
+    "name": "Weekly TikTok Ads review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "traction-experiment-keeper": {
+    "name": "Growth experiment review agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "traction-research-agent": {
+    "name": "Growth channel research agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "website-quality-keeper": {
+    "name": "Website quality review agent",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "weekly-community-keeper": {
+    "name": "Weekly community response assistant",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "weekly-image-ad-batch-maker": {
+    "name": "Weekly image ad planner",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "weekly-meeting-actions-keeper": {
+    "name": "Weekly meeting action tracker",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "weekly-newsletter-keeper": {
+    "name": "Weekly newsletter writer",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "weekly-one-on-one-prep-keeper": {
+    "name": "Weekly one-on-one meeting planner",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "weekly-product-feedback-triager": {
+    "name": "Weekly product feedback reviewer",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "weekly-review-keeper": {
+    "name": "Weekly planning assistant",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "weekly-saas-numbers-keeper": {
+    "name": "Weekly SaaS performance review",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role.",
+    "summary": "Share weekly revenue and customer data. Review recurring revenue, churn and acquisition payback, then choose one growth priority."
+  },
+  "weekly-video-ad-batch-maker": {
+    "name": "Weekly video ad planner",
+    "reason": "Name the actual deliverable or recurring review in words customers can read without decoding an internal role."
+  },
+  "advisory-council": {
+    "subhead": "Bring one decision, the facts and the options you are considering. Choose minds with different strengths. Your AI applies their public ideas, challenges the recommendations and writes a final brief with the strongest disagreement, facts to check and three next steps.",
+    "reason": "Explain the supplied inputs, method and real deliverable in plain language."
+  },
+  "quote-video-ad-script": {
+    "subhead": "Share real customer quotes and product facts. Get a video ad script that uses those words accurately, with sources for its claims. It also gives you opening lines to compare and a first test plan.",
+    "reason": "Explain the supplied inputs, method and real deliverable in plain language."
+  },
+  "copilot-acreadiness-assess": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Point it at your repo. Get a dashboard showing what stops coding agents from working well. Use the findings to decide which repository setup problems to fix before assigning more work to an agent."
+  },
+  "copilot-acreadiness-generate-instructions": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Point it at your repo. Get project rules for coding agents, with a preview before files change. The preview lets you check the proposed instructions before they are written into your project."
+  },
+  "copilot-acreadiness-policy": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your repo's needs. Get scoring rules that fit the project and show which checks matter. Adjust the criteria to your project so the readiness score reflects the way your team actually works.",
+    "name": "Coding agent readiness criteria planner"
+  },
+  "copilot-agent-architecture": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Describe the agent you need. Get a system design and the trade-offs to settle before building. Use the design to choose how the agent handles state, calls tools and coordinates its work."
+  },
+  "copilot-agent-governance": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share how your agent uses tools. Get controls for permissions, trust and risky actions. The design makes permission boundaries and risky actions explicit before the agent gets access to real tools."
+  },
+  "copilot-agent-owasp-compliance": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your agent code. Get findings against the OWASP agent risks, with evidence and fixes. Use the evidence to prioritize agent security fixes and identify which risks still need a closer review."
+  },
+  "copilot-agent-supply-chain": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your agent tools and packages. Get file checks and a record of supply chain risks. Review the checks before trusting an added tool or package with access to the agent's work."
+  },
+  "copilot-agentic-eval": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share an agent task. Get checks and feedback loops to improve the quality of its answers. Use the checks to spot weak answers and decide when an agent should revise its work."
+  },
+  "copilot-ai-prompt-engineering-safety-review": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Paste your prompt. Get risks in its wording, likely failure cases and a safer draft. Review the suggested wording and test cases before using the prompt with real users."
+  },
+  "copilot-api-breaking-change-detector": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your C# API and web client. Get mismatched fields and breaking changes traced to their consumers. Use the findings to update affected client code before an API change reaches users.",
+    "name": "C# API compatibility checker"
+  },
+  "copilot-audit-integrity": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share a security audit. Get claims without proof, missing facts and failed checks called out. Each unsupported conclusion stays visible so the audit does not treat missing evidence as a passed check."
+  },
+  "copilot-aws-cloudwatch-investigation": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share an AWS incident and time window. Get useful log queries, deployment links and the likely affected services. Use the evidence to narrow the incident before choosing a recovery action."
+  },
+  "copilot-aws-cost-optimize": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your AWS setup. Get cost findings and proposed fixes tied to the resources your app uses. The recommendations help you compare savings with the operational effect of each proposed change."
+  },
+  "copilot-aws-resource-health-diagnose": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your AWS resources and symptoms. Get health findings, log evidence and a recovery plan. Use the resource and log evidence to decide which recovery step to investigate first."
+  },
+  "copilot-aws-well-architected-review": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your AWS design. Get architecture gaps and proposed fixes against AWS workload guidance. The review helps you connect each architecture concern to a practical change in the workload.",
+    "name": "AWS architecture review"
+  },
+  "copilot-az-cost-optimize": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Azure setup. Get waste findings and proposed fixes tied to your app's resources. The recommendations show where to investigate waste before changing capacity or service settings."
+  },
+  "copilot-azure-deployment-preflight": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Bicep deployment. Get syntax, permission and proposed-change checks before it goes live. Compare the proposed changes with the intended release before applying the deployment."
+  },
+  "copilot-azure-pricing": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Name the Azure services you need. Get current retail prices and an estimate with its assumptions shown. Use the assumptions to adjust the estimate for your own region, capacity and usage."
+  },
+  "copilot-azure-resource-health-diagnose": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Azure resources and symptoms. Get health findings, log evidence and a recovery plan. Use the health and log findings to choose a recovery step grounded in the affected resources."
+  },
+  "copilot-azure-resource-visualizer": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Azure resource group. Get a diagram of the resources and how they connect. Use the map to understand dependencies before planning a change or investigating a failure."
+  },
+  "copilot-azure-role-selector": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Describe what an identity must do. Get the narrow Azure role that fits, with reasons. Use the recommendation to request the access the task needs without adding unrelated permissions."
+  },
+  "copilot-azure-well-architected-review": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Azure design. Get architecture gaps and proposed fixes against Azure workload guidance. The findings help you turn architecture concerns into a prioritized improvement plan.",
+    "name": "Azure architecture review"
+  },
+  "copilot-bigquery-pipeline-audit": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Python data pipeline. Get costly queries, repeat-run risks and failure cases with code references. Use the code references to address cost and reliability risks before running the pipeline again.",
+    "name": "BigQuery pipeline cost and reliability review"
+  },
+  "copilot-brag-sheet": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your work notes. Get evidence-backed impact statements for a review, promotion or weekly update. Use the source notes to check each statement before including it in a performance review."
+  },
+  "copilot-bug-receipt": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share a fix and its checks. Get a dated record of what is verified, partial or blocked. The record separates completed checks from unresolved ones so the next person can verify the fix."
+  },
+  "copilot-bug-reproduction-brief": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share an unclear bug report. Get repeatable steps, a minimal case and the evidence still needed. Use the brief to reproduce the failure and collect the missing details before attempting a fix."
+  },
+  "copilot-build-evidence-map": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share a disputed choice and sources. Get claims linked to evidence, counterarguments and the facts still missing. Use the map to compare the strongest case for each option and the unanswered questions."
+  },
+  "copilot-codeql": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your repo and languages. Get CodeQL scanning set up in Actions or the command line. Use the scanning setup to find code security issues and keep checks in the development process."
+  },
+  "copilot-copilot-sdk": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Describe the agent app you need. Get Copilot SDK sessions, tools and streaming code suited to your project. Use the implementation as a starting point for an app that calls tools and shows agent responses."
+  },
+  "copilot-copilot-usage-metrics": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Name your organization and date range. Get usage metrics from GitHub, with access needs and limits explained. Use the report to understand adoption while keeping account access and reporting limits visible."
+  },
+  "copilot-creating-oracle-to-postgres-master-migration-plan": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your .NET solution. Get a project inventory, migration scope and a master plan to track the work. Use the inventory to divide the migration into projects and track what still needs attention."
+  },
+  "copilot-creating-oracle-to-postgres-migration-bug-report": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share a migration defect and evidence. Get a reproducible report with expected behavior and the affected code. Use the report to reproduce a behavior change and give the next developer the evidence needed to investigate."
+  },
+  "copilot-creating-oracle-to-postgres-migration-integration-tests": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Oracle data access code. Get tests that record what the code does before you change databases. Keep these tests as a baseline when checking whether the PostgreSQL version preserves the original behavior."
+  },
+  "copilot-cypress-flake-fixer": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Cypress suite. Get fragile waits and old APIs found, then fixes for the affected tests. Compare the updated tests with the original failure so a passing run reflects the behavior you meant to check."
+  },
+  "copilot-daily-prep": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Connect your work calendar and task context. Get meeting preparation, conflicts and a plan for tomorrow. Use the brief to prepare for meetings and decide which conflicts or unfinished work to address first."
+  },
+  "copilot-data-breach-blast-radius": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your system design or code. Get sensitive data paths, likely exposure and fixes ranked by impact. Use the map to see which parts of the system could expose sensitive information and where safeguards matter most."
+  },
+  "copilot-devops-rollout-plan": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share a release or infrastructure change. Get preflight checks, rollout stages, health signals and a rollback plan. Use the health signals to decide whether each stage can continue or should roll back."
+  },
+  "copilot-diagnose": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share a workflow that disappoints. Get its weak points ranked, with causes and practical fixes. Use the ranked findings to choose one change and check whether it improves the next run."
+  },
+  "copilot-docs-sync-audit": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share a feature or code change. Get outdated docs and missing instructions traced to the changed behavior. Use the findings to update instructions alongside the feature so readers can follow the behavior that actually ships.",
+    "name": "Code and documentation consistency checker"
+  },
+  "copilot-dotnet-mcp-builder": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your C# project and tools to expose. Get MCP server code using current package patterns. Use the server code to expose your selected tools through MCP and check their behavior in your project."
+  },
+  "copilot-dotnet-timezone": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your scheduling code. Get safer time conversions and fixes for daylight saving and timezone errors. Use the review to catch scheduling behavior that changes across regions or daylight saving transitions."
+  },
+  "copilot-email-drafter": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your email goal and style samples. Get a professional draft and a check against your usual voice. Check the facts and recipients in the draft before using it in your email client."
+  },
+  "copilot-eval-driven-dev": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your AI app and goal. Get test cases and a way to compare changes with real results. Use the test cases as a baseline so changes are judged by results rather than a convincing demo."
+  },
+  "copilot-gdpr-compliant": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share the way your app handles personal data. Get engineering gaps and changes to support privacy requirements. Use the engineering findings to plan changes and identify questions that need a privacy or legal review."
+  },
+  "copilot-github-actions-efficiency": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Actions workflows. Get wasted build minutes, slow jobs and ways to cut repeat work. Use the findings to reduce duplicated work while preserving the checks your release depends on."
+  },
+  "copilot-github-actions-hardening": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your build workflows. Get risky permissions, unsafe inputs and dependency trust problems with fixes. Review the proposed fixes before giving build jobs access to repository data or credentials."
+  },
+  "copilot-github-actions-runtime-upgrade-conventions": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your GitHub Actions workflows. Get updated action versions that keep the build's behavior intact. The checks show what changed and help you confirm that the build still does the same job."
+  },
+  "copilot-github-codespaces-efficiency": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your dev container setup. Get faster startup and ways to reduce idle costs and repeated setup. Use the recommendations to reduce repeated development setup and identify resources that can be stopped when idle."
+  },
+  "copilot-go-mcp-server-generator": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Describe your tools and data. Get a Go MCP server project with working structure and tests. Use the generated project as a starting point, then test the tools against the data you intend to expose."
+  },
+  "copilot-gtm-0-to-1-launch": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Describe your new product. Get early buyer targets, a launch sequence and tests for reaching first customers. Use the sequence to choose a small first audience and learn from actual buyer responses."
+  },
+  "copilot-gtm-ai-gtm": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Describe your AI product and buyer. Get positioning, trust questions and a plan for reaching customers. Use the plan to test buyer demand and explain the product's value and trust requirements clearly."
+  },
+  "copilot-gtm-board-and-investor-communication": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share company facts and decisions due. Get a board story, investor update and questions to prepare for. Use the material to prepare the decisions, evidence and difficult questions for your next update."
+  },
+  "copilot-gtm-developer-ecosystem": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your developer product. Get a plan for app links, outside coders and wider use, with ways to track results. Use the program to make integrations and developer participation part of a measurable adoption plan.",
+    "name": "Developer adoption program planner"
+  },
+  "copilot-gtm-enterprise-account-planning": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share an account and deal context. Get buyer roles, deal risks and next steps for a complex sale. Use the account plan to coordinate the next actions and avoid relying on a single contact or assumption."
+  },
+  "copilot-gtm-enterprise-onboarding": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share a signed customer and success goals. Get onboarding stages, owners and checks for reaching first value. Use the milestones to align your team and the customer on what a successful start looks like."
+  },
+  "copilot-gtm-operating-cadence": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your team and goals. Get meeting rhythms, metric reviews and decision rules that fit your stage. Use the schedule to make progress reviews and ownership clear without creating meetings for their own sake.",
+    "name": "Company meeting and review planner"
+  },
+  "copilot-gtm-partnership-architecture": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your product and potential partners. Get partner types, incentives and a plan to test shared revenue. Use the experiments to check whether a partnership creates value before investing in a larger program."
+  },
+  "copilot-gtm-positioning-strategy": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your product and rivals. Get a distinct market position, buyer reasons and messages to test. Use the messages to test whether customers understand why they would choose you over an alternative."
+  },
+  "copilot-gtm-product-led-growth": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your product funnel. Get activation and expansion changes, with tests to see whether self serve growth fits. Use the experiments to check how customers reach useful results and choose to expand their use."
+  },
+  "copilot-gtm-technical-product-pricing": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your product costs and buyers. Get pricing units, free tier limits and trade-offs to test. Use the trade-offs to compare prices with customer value, product cost and how usage grows."
+  },
+  "copilot-impediment-prioritization": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your blockers and possible fixes. Get a ranked list based on value, effort and delay costs. Use the ranking to decide which obstacle to remove first and which fixes can wait."
+  },
+  "copilot-incident-postmortem": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share an outage timeline and evidence. Get a blameless report with causes, follow-up owners and unresolved facts. Use the report to agree on practical follow-up work while keeping uncertain causes separate from established facts."
+  },
+  "copilot-mcp-implementation-security-review": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your MCP code. Get risks traced through tool handlers, with evidence and fixes. Use the code-level findings to address unsafe tool behavior before making the server available."
+  },
+  "copilot-mcp-release-qa": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your MCP server. Get a real session check of its tools, errors and advertised features. Use the results to compare what the server advertises with what a client can actually do."
+  },
+  "copilot-mcp-security-audit": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your MCP settings. Get risks in permissions, trust and server access, with fixes. Use the review to check which servers and permissions are trusted before connecting them to your work."
+  },
+  "copilot-meeting-minutes": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your meeting notes. Get decisions, action items, owners and open questions in a concise record. Use the record to confirm who agreed to do what and which questions remain unresolved."
+  },
+  "copilot-migrating-oracle-to-postgres-data-access-code": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your .NET data access code. Get PostgreSQL changes for drivers, queries and database calls. Use the migration checks to compare query behavior rather than assuming a changed driver is enough."
+  },
+  "copilot-migrating-oracle-to-postgres-stored-procedures": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Oracle procedures. Get PostgreSQL code with changed behavior and checks called out. Use the behavior notes to review translated procedures and design checks for differences between the databases."
+  },
+  "copilot-performance-review-writer": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your work history and writing samples. Get a self review or feedback draft grounded in evidence. Use the supporting examples to keep the review specific and faithful to the work that happened."
+  },
+  "copilot-pester-migration": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your PowerShell tests. Get changes for the next Pester version and checks for lost test behavior. Use the checks to confirm that updated syntax still tests the same PowerShell behavior."
+  },
+  "copilot-planning-oracle-to-postgres-migration-integration-testing": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your data access code. Get test scope and parity checks for an Oracle to Postgres migration. Use the plan to decide which behaviors need evidence before and after the database change."
+  },
+  "copilot-protobuf-grpc-api-review": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your schema change. Get wire compatibility risks, rollout hazards and safe field changes. Use the review to preserve communication between clients and servers during a staged API change."
+  },
+  "copilot-python-mcp-server-generator": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Describe your tools and data. Get a Python MCP server project with clear handlers and tests. Use the generated project as a base for your own tools, then test each handler against its intended inputs."
+  },
+  "copilot-qdrant-deployment-options": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your search workload. Get a comparison of local, Docker and cloud hosting that fits your needs. Use the trade-offs to choose a hosting approach before committing to infrastructure or operating costs."
+  },
+  "copilot-qdrant-model-migration": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your current and new models. Get a search migration plan with validation and rollback steps. Use the validation steps to compare search results before switching traffic to the new embeddings."
+  },
+  "copilot-qdrant-monitoring": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Qdrant setup. Get useful health metrics, alerts and checks for slow or unhealthy search. Use the checks to notice service health and search performance changes before deciding what to tune."
+  },
+  "copilot-qdrant-performance-optimization": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your search workload. Get index, query and hardware changes to test against a clear baseline. Measure the proposed changes against the original workload so a faster query does not conceal worse results."
+  },
+  "copilot-qdrant-scaling": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your data size and traffic. Get a scaling plan and the evidence needed before adding nodes. Use the capacity evidence to decide when a larger cluster is justified and which constraint to address first."
+  },
+  "copilot-qdrant-search-quality": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share queries and weak results. Get likely relevance problems and tests to compare proposed fixes. Compare candidate fixes on representative queries so relevance changes are judged by actual results."
+  },
+  "copilot-qdrant-version-upgrade": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Qdrant version and setup. Get upgrade, backup and validation steps that protect availability. Use the backup and validation plan to check the new version before relying on it for normal traffic."
+  },
+  "copilot-quarkus-dev-services-and-testing": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Quarkus app. Get tests with local service containers and checks for real API behavior. Use the integration checks to test how the application behaves with the services it depends on."
+  },
+  "copilot-react18-batching-patterns": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share a React class component. Get fixes for state updates that break under automatic batching. Use the regression checks to confirm that grouped updates preserve the component's intended behavior."
+  },
+  "copilot-react18-enzyme-to-rtl": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Enzyme tests. Get React Testing Library replacements suited to a React 18 upgrade. Use behavior-focused replacement tests to check the component as a user would experience it."
+  },
+  "copilot-react18-legacy-context": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share old React context code. Get a migration to modern context with the affected consumers checked. Use the consumer checks to verify that context values still reach the components that need them."
+  },
+  "copilot-react18-lifecycle-patterns": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your React class components. Get replacements for unsafe lifecycle methods and notes on changed behavior. Use the behavior notes to review how data loading and component updates change during the migration."
+  },
+  "copilot-react18-string-refs": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share components that use string refs. Get modern refs with their call sites updated. Use the call-site changes to keep references working when the component moves to supported patterns."
+  },
+  "copilot-react19-source-patterns": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your React code. Get source changes for React 19 APIs, refs and context. Use the migration notes to check the effect of new APIs on your existing components."
+  },
+  "copilot-react19-test-patterns": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your React tests. Get updates for React 19 test APIs and render behavior. Use the updated tests to confirm that rendering and test helpers still exercise the intended behavior."
+  },
+  "copilot-resx-source-generator-migration": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your resource files and project. Get a move from checked-in designer files to a source generator. Use the project changes to generate resource access code during the build rather than maintaining designer files."
+  },
+  "copilot-reviewing-oracle-to-postgres-migration": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your migrated code. Get Oracle and PostgreSQL behavior gaps checked before release. Use the findings to prioritize compatibility tests and unresolved differences before the new database goes live."
+  },
+  "copilot-roslyn-analyzers": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Describe a C# code rule. Get an analyzer, code fix and tests for the cases it should catch. Use the tests to show which code patterns should trigger the rule and which should be left alone."
+  },
+  "copilot-roundup": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your sources and audience. Get a dated status brief with progress, blockers and source links. Use the source links to verify updates and distinguish confirmed progress from unresolved blockers."
+  },
+  "copilot-roundup-setup": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Describe your readers and work sources. Get saved briefing preferences for future status updates. Save the audience and source choices so later briefings follow the same expectations.",
+    "name": "Status briefing setup"
+  },
+  "copilot-scaffolding-oracle-to-postgres-migration-test-project": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your .NET solution. Get an xUnit test project with database rollback and migration test setup. Use the setup to run migration checks while keeping database changes isolated between tests."
+  },
+  "copilot-secret-scanning": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your repo setup. Get secret scanning and push protection configured, with an alert response plan. Use the response plan to decide what to do when a scan finds a credential in repository history."
+  },
+  "copilot-sql-object-impact-analysis": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Name the SQL object you plan to change. Get its callers and downstream dependencies before editing. Use the dependency list to identify affected code and queries before changing the database object."
+  },
+  "copilot-sql-server-table-reconciliation": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share two SQL Server tables. Get schema and row differences to check a data migration. Use the reported differences to investigate missing rows, changed values or schema mismatches."
+  },
+  "copilot-test-gap-audit": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your repo or change. Get missing, weak and stale tests ranked by the behavior at risk. Use the ranking to add tests for important uncovered behavior before spending time on lower-risk cases."
+  },
+  "copilot-threat-model-analyst": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your system or change. Get threats, trust boundaries and safeguards, with a record of new risks. Use the model to connect threats to practical safeguards and make unresolved security questions visible."
+  },
+  "copilot-tm7-threat-model": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Describe your system and data paths. Get a threat model file for Microsoft's modeling tool. Open the file in Microsoft's modeling tool to review the system and its trust boundaries."
+  },
+  "copilot-typescript-mcp-server-generator": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Describe your tools and data. Get a TypeScript MCP server project with tools, resources and tests. Use the project as a starting point, then test its handlers with the tools and data you intend to expose."
+  },
+  "copilot-unit-test-vue-pinia": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your Vue components and stores. Get focused tests for user behavior, state and failure cases. Use the tests to check what users see and how the store responds when operations succeed or fail."
+  },
+  "copilot-upstash-redis": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share your serverless app. Get Redis caching or rate limits over HTTP with the required setup explained. Use the setup notes to check the connection and the limits before adding the cache to a live service.",
+    "name": "Serverless Redis cache builder"
+  },
+  "copilot-verify-agent-action": {
+    "reason": "Replace the generic introduction with the specific job, deliverable and use of its result.",
+    "subhead": "Share a proposed agent action. Get its scope, risks and missing evidence checked before execution. Use the review to decide whether the proposed action is ready for approval or needs a narrower scope."
+  }
+}

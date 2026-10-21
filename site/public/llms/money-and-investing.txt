@@ -6,21 +6,21 @@
 - [Acquisition due diligence planner](https://useaiblocks.com/skills/acquisition-due-diligence): Describe the deal. Get a due diligence checklist, valuation checks, red flags and an integration plan.
 - [Analyst estimate reader](https://useaiblocks.com/skills/analyst-estimate-reader): Give it a stock ticker. Get how analyst profit and sales forecasts are changing and where they differ. Collects data from websites.
 - [Anonymous company teaser writer](https://useaiblocks.com/skills/anonymous-company-teaser-writer): Give it company facts. Get a one-page teaser that sells the business without naming it.
-- [Asset floor estimator](https://useaiblocks.com/skills/asset-floor-estimator): Paste a balance sheet and share price. Get book value, net current assets, sale value and a cash strength rating.
 - [Audit readiness checker](https://useaiblocks.com/skills/audit-readiness-checker): Give it your records and controls. Get a checklist of gaps to fix before an audit.
-- [Average earnings coverage tester](https://useaiblocks.com/skills/average-earnings-coverage-tester): Paste a borrower's debts and earnings. Get cover against all charges, in a bad year too, and a pass or fail.
 - [Bad year plan stress tester](https://useaiblocks.com/prompts/bad-year-plan-stress-tester): Paste a budget or plan. Get three bad-year tests, your breaking point and a survival score.
 - [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester): Paste a business and its worst risks. Get how big a loss one year can bring before it stops earning.
 - [Balance roll-forward builder](https://useaiblocks.com/skills/balance-roll-forward-builder): Name an account. Get a schedule from opening to closing balance, with each movement tied to the ledger.
-- [Bargain group rules writer](https://useaiblocks.com/skills/bargain-group-rules-writer): Paste your bargain candidates. Get group size, caps, an exit rule and a scorecard that judges the method, not one stock.
+- [Bargain investment portfolio planner](https://useaiblocks.com/skills/bargain-group-rules-writer): Paste your bargain candidates. Get group size, caps, an exit rule and a scorecard that judges the method, not one stock.
 - [Big purchase pause check](https://useaiblocks.com/prompts/big-purchase-pause-check): Paste what you want to buy and why. Get the real cost, what drives it and a small test.
 - [Bond portfolio reviewer](https://useaiblocks.com/skills/bond-portfolio-reviewer): Give it your bond holdings. Get yield, duration and mix by rating, plus a rate shock test. It collects data from websites.
 - [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser): Paste your split and tax rate. Get the bond kind that fits, taxable or tax-free, short or long, with the sums.
 - [Bookings forecast builder](https://useaiblocks.com/skills/bookings-forecast-builder): Give it your pipeline and cohorts. Get a commit, best case and pipe-only forecast with the maths shown.
 - [Borrower credit memo writer](https://useaiblocks.com/skills/borrower-credit-memo-writer): Give it a borrower's accounts. Get a credit memo on repayment ability, debt capacity and covenant room.
 - [Budget and forecast builder](https://useaiblocks.com/skills/budget-and-forecast-builder): Give it your past numbers and plans. Get a budget, a forecast and a note on gaps against actuals.
+- [Business asset value estimator](https://useaiblocks.com/skills/asset-floor-estimator): Paste a balance sheet and share price. Get book value, net current assets, sale value and a cash strength rating.
 - [Business investment analyst](https://useaiblocks.com/skills/business-investment-analyst): Describe a purchase. Get payback, return and risk worked out, so you can decide whether to invest.
-- [Business tenet scorecard writer](https://useaiblocks.com/skills/business-tenet-scorecard-writer): Paste your findings on a business. Get ten tests marked pass, fail or unknown, and whether a price check is worthwhile.
+- [Business investment scorecard](https://useaiblocks.com/skills/business-tenet-scorecard-writer): Paste your findings on a business. Get ten tests marked pass, fail or unknown, and whether a price check is worthwhile.
+- [Business value capture review](https://useaiblocks.com/skills/who-keeps-the-gain-tester): Describe a business and a way it could improve. Get who keeps the gain, and whether rivals fight it away.
 - [Business value range calculator](https://useaiblocks.com/skills/business-value-range-calculator): Paste a business's owner earnings. Get a no-growth floor value and low, middle and high growth values, with what each assumes.
 - [Buyout model template filler](https://useaiblocks.com/skills/buyout-model-template-filler): Give it a blank buyout template and deal facts. Get the model filled with live formulas and checked.
 - [Buyout returns modeler](https://useaiblocks.com/skills/buyout-returns-modeler): Give it a company and deal terms. Get a buyout model with debt paydown, IRR and MOIC.
@@ -45,10 +45,11 @@
 - [DCF model builder for India](https://useaiblocks.com/skills/dcf-model-builder-for-india): Name a listed Indian company. Get a discounted cash flow Excel model with WACC, sensitivities and a summary.
 - [Deal returns sensitivity builder](https://useaiblocks.com/skills/deal-returns-sensitivity-builder): Give it deal terms. Get IRR and MOIC tables across entry price, debt, exit price and hold time.
 - [Deal screening memo writer](https://useaiblocks.com/skills/deal-screening-memo-writer): Give it a teaser or CIM and your criteria. Get a one-page memo marking each test pass or fail.
+- [Debt payment coverage checker](https://useaiblocks.com/skills/average-earnings-coverage-tester): Paste a borrower's debts and earnings. Get cover against all charges, in a bad year too, and a pass or fail.
 - [Debt payoff planner](https://useaiblocks.com/skills/debt-payoff-planner): List your debts and extra cash. Get snowball and avalanche timelines with total interest for each.
+- [Debt protection ratio checker](https://useaiblocks.com/skills/equity-cushion-ratio-tester): Paste a borrower's debts and its owners' stake value. Get the cushion behind your claim and whether it clears the bar.
 - [Debt restructuring plan drafter](https://useaiblocks.com/skills/debt-restructuring-plan-drafter): Give it a company's debts and cash flow. Get a draft plan with new terms for each creditor.
-- [Defensive or enterprising investor sorter](https://useaiblocks.com/skills/investor-type-quiz): Tell it your time, skill and nerve. Get sorted as a defensive or enterprising investor, with the paths to skip.
-- [Defensive price ceiling tester](https://useaiblocks.com/skills/defensive-price-ceiling-tester): Paste a company's earnings, book value and share price. Get a pass or fail on three price ceilings, with every sum shown.
+- [Decision knowledge checklist](https://useaiblocks.com/prompts/know-it-or-skip-it-sorter): Describe a business or bet. Get it sorted yes, no or too tough, based on what you know.
 - [Defensive stock list builder](https://useaiblocks.com/skills/defensive-stock-list-builder): Paste the companies that passed your tests. Get a spread list of 10 to 30, size limits and a yearly review date.
 - [Defensive stock quality screener](https://useaiblocks.com/skills/defensive-stock-quality-screener): Paste a company's ten-year figures. Get it passed or failed on size, strength, profit record, dividends and growth.
 - [Deferred tax calculator](https://useaiblocks.com/skills/deferred-tax-calculator): Give it asset and liability figures. Get deferred tax, whether it can be used, and a tax rate reconciliation.
@@ -57,16 +58,14 @@
 - [Due diligence checklist builder](https://useaiblocks.com/skills/due-diligence-checklist-builder): Describe the deal and sector. Get a request list by workstream with status tracking and red flag notes.
 - [Early-stage valuation estimator](https://useaiblocks.com/skills/early-stage-valuation-estimator): Give it a young company's facts. Get a value range from methods such as Berkus, scorecard and the VC method.
 - [Earnings call tone reader](https://useaiblocks.com/skills/earnings-call-tone-reader): Give it an earnings call transcript. Get shifts in management tone and confidence flagged, with quotes.
-- [Earnings padding detector](https://useaiblocks.com/skills/earnings-padding-detector): Paste a company's statements and one-off table. Get accounting choices that lift profit, their size, and a clean, adjusted or avoid call.
 - [Earnings preview report builder for India](https://useaiblocks.com/skills/india-earnings-preview): Name an Indian stock. Get a short HTML earnings preview with consensus, past surprises and peers. It collects data from websites.
 - [Earnings preview writer](https://useaiblocks.com/skills/earnings-preview-writer): Give it a stock ticker. Get the report date, what analysts expect, past surprises and what to watch. Collects data from websites.
+- [Earnings quality checker](https://useaiblocks.com/skills/earnings-padding-detector): Paste a company's statements and one-off table. Get accounting choices that lift profit, their size, and a clean, adjusted or avoid call.
 - [Earnings recap writer](https://useaiblocks.com/skills/earnings-recap-writer): Give it a stock ticker. Get actual versus expected results, margin trends and how the share price reacted. Collects data from websites.
 - [Earnings record reliability checker](https://useaiblocks.com/skills/earnings-reliability-check): Paste cleaned earnings by year and a note on the business. Get whether the record can guide the future, and how much.
 - [Earnings update report writer](https://useaiblocks.com/skills/earnings-update-report-writer): Give it a company's quarterly results. Get an 8 to 12 page update on beats, misses and key numbers.
 - [Earnings value range builder](https://useaiblocks.com/skills/earnings-value-range-builder): Paste normal earnings and the share price. Get a low, middle and high value and how much of the price is hope.
 - [Earnings week briefing writer](https://useaiblocks.com/skills/earnings-week-briefing-writer): Name a company about to report. Get what to watch, scenario cases and the numbers that matter.
-- [Enterprising bargain screener](https://useaiblocks.com/skills/enterprising-bargain-screener): Paste a table of listed companies. Get the cheap ones that pass five safety tests, with the failed test beside every cut.
-- [Equity cushion ratio tester](https://useaiblocks.com/skills/equity-cushion-ratio-tester): Paste a borrower's debts and its owners' stake value. Get the cushion behind your claim and whether it clears the bar.
 - [ESG report preparer](https://useaiblocks.com/skills/esg-report-preparer): Give it your environmental, social and governance data. Get a draft sustainability report or a check of an existing one.
 - [Expected credit loss calculator](https://useaiblocks.com/skills/expected-credit-loss-calculator): Give it loan data. Get expected credit losses worked out under IFRS 9 or CECL.
 - [Expense sorter](https://useaiblocks.com/skills/expense-sorter): Give it transactions. Get each sorted by category, department and tax treatment.
@@ -94,11 +93,13 @@
 - [Insurance claims reserve calculator](https://useaiblocks.com/skills/claims-reserve-calculator): Give it claims history. Get loss reserves, IBNR estimates and loss and combined ratios.
 - [Intercompany balance matcher](https://useaiblocks.com/skills/intercompany-balance-matcher): Give it each entity's balances. Get mismatches found, settlement netted and elimination entries drafted.
 - [Investing policy page writer](https://useaiblocks.com/skills/investing-policy-page-writer): Paste your type, split and bond choice. Get one page with your plan, what you won't do and a review date.
+- [Investment approach questionnaire](https://useaiblocks.com/skills/investor-type-quiz): Tell it your time, skill and nerve. Get sorted as a defensive or enterprising investor, with the paths to skip.
 - [Investment committee memo drafter](https://useaiblocks.com/skills/investment-committee-memo): Give it diligence findings and deal terms. Get a structured committee memo with facts, risks and open questions.
+- [Investment margin of safety review](https://useaiblocks.com/skills/price-versus-value-gap-judge): Paste your value range, asset floor and the price. Get whether there is a real margin of safety and what removes it.
 - [Investment or speculation sorter](https://useaiblocks.com/skills/investment-or-speculation-sorter): Paste a purchase you are weighing and why. Get it sorted as investment or speculation, with the questions a careful buyer asks.
+- [Investment priority planner](https://useaiblocks.com/skills/lifetime-punch-card-bet-ranker): List your bet ideas. Get the top one to three ranked and sized, and a written no for the rest.
 - [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker): Give it an investor statement and the fund's NAV pack. Get the capital account recomputed and any mismatch flagged.
 - [Judge if a business is great enough to hold](https://useaiblocks.com/workflows/great-business-judge): Describe a business. Get its edge tested, who keeps the gain, and a keep, wait or pass call.
-- [Know-it-or-skip-it sorter](https://useaiblocks.com/prompts/know-it-or-skip-it-sorter): Describe a business or bet. Get it sorted yes, no or too tough, based on what you know.
 - [Lease accounting calculator](https://useaiblocks.com/skills/lease-accounting-calculator): Give it a lease contract. Get the lease liability, right-of-use asset and yearly entries under IFRS 16 or ASC 842.
 - [Lender safety verdict writer](https://useaiblocks.com/skills/lender-safety-verdict-writer): Paste your coverage and cushion results. Get a meets-the-bar, speculative or reject call, with reasons and what would change it.
 - [Likely buyers list builder](https://useaiblocks.com/skills/likely-buyers-list-builder): Describe a company for sale. Get a ranked list of likely buyers, strategic and financial, with fit notes.
@@ -125,7 +126,6 @@
 - [Portfolio mix optimizer](https://useaiblocks.com/skills/portfolio-mix-optimizer): Give it asset returns. Get the best mix by risk and return, with an efficient frontier chart.
 - [Price against value checker](https://useaiblocks.com/skills/price-against-value-checker): Paste what you would get and what it costs. Get a value range, a walk-away price and the best alternative to beat.
 - [Price drop rules writer](https://useaiblocks.com/skills/price-drop-rules-writer): Paste your holdings plan. Get a one-page set of rules for when prices fall or jump, written before it happens.
-- [Price versus value gap judge](https://useaiblocks.com/skills/price-versus-value-gap-judge): Paste your value range, asset floor and the price. Get whether there is a real margin of safety and what removes it.
 - [Production cost variance explainer](https://useaiblocks.com/skills/production-cost-variance): Give it standard and actual production costs. Get the gap split into price, volume and efficiency causes.
 - [Project cost progress tracker](https://useaiblocks.com/skills/project-cost-progress-tracker): Give it a project's budget, schedule and spend. Get cost and schedule indexes and a finish cost estimate.
 - [Retirement savings projector](https://useaiblocks.com/skills/retirement-savings-projector): Give it your age, savings and goals. Get a projected nest egg and the gap to your target.
@@ -152,17 +152,17 @@
 - [Stock chatter tracker](https://useaiblocks.com/skills/stock-chatter-tracker): Give it stock tickers. Get how much Reddit, X, news and Polymarket talk about each, and whether the mood is rising.
 - [Stock co-movement checker](https://useaiblocks.com/skills/stock-co-movement-checker): Give it a stock or group. Get which stocks move with it and how closely that link holds. Collects data from websites.
 - [Stock data fetcher](https://useaiblocks.com/skills/stock-data-fetcher): Give it a ticker. Get prices, statements, options and holdings from Yahoo Finance. Collects data from websites.
+- [Stock purchase price checker](https://useaiblocks.com/skills/defensive-price-ceiling-tester): Paste a company's earnings, book value and share price. Get a pass or fail on three price ceilings, with every sum shown.
 - [Stock research snapshot writer](https://useaiblocks.com/skills/stock-research-snapshot-writer): Name a stock. Get a note combining estimates, reported numbers, price history and the macro backdrop. It collects data from websites.
 - [Stock trading cost checker](https://useaiblocks.com/skills/stock-trading-cost-checker): Give it a stock. Get how easy it is to trade and what a big order may cost. Collects data from websites.
 - [Subscription unit economics analyst](https://useaiblocks.com/skills/subscription-unit-economics): Give it customer and revenue data. Get cohorts, LTV to CAC, retention and payback worked out.
 - [Suspicious money trail reviewer](https://useaiblocks.com/skills/suspicious-money-trail-reviewer): Give it records that do not add up. Get red flags, money flow traces and what to check next.
-- [Twenty-punch bet ranker](https://useaiblocks.com/skills/lifetime-punch-card-bet-ranker): List your bet ideas. Get the top one to three ranked and sized, and a written no for the rest.
+- [Undervalued stock screener](https://useaiblocks.com/skills/enterprising-bargain-screener): Paste a table of listed companies. Get the cheap ones that pass five safety tests, with the failed test beside every cut.
 - [Unusual transaction finder](https://useaiblocks.com/skills/unusual-transaction-finder): Give it a large set of transactions. Get the odd ones flagged, with a short reason for each.
 - [Upcoming events calendar builder](https://useaiblocks.com/skills/upcoming-events-calendar-builder): Give it a list of companies. Get a dated calendar of earnings, conferences and decisions that could move them.
 - [Valuation method comparer](https://useaiblocks.com/skills/valuation-method-comparer): Give it a company's numbers. Get a value range from DCF, peer multiples and past deals, with the key assumptions.
 - [Value a business and the discount to ask for](https://useaiblocks.com/workflows/business-valuation-discount): Give it a business, its figures and a price. Get a value range, a bad-year test and a discount verdict.
 - [Value a stock with a margin of safety](https://useaiblocks.com/workflows/stock-margin-of-safety): Paste a company's results, its balance sheet and the share price. Get an earnings value, an asset floor and the gap.
 - [Venture loan terms reviewer](https://useaiblocks.com/skills/venture-loan-terms-reviewer): Give it a startup loan offer. Get the cost, warrants and covenants explained, with points to question.
-- [Who-keeps-the-gain tester](https://useaiblocks.com/skills/who-keeps-the-gain-tester): Describe a business and a way it could improve. Get who keeps the gain, and whether rivals fight it away.
 - [Write your plan for a falling market before it happens](https://useaiblocks.com/workflows/falling-market-plan): Paste your holdings and what you paid. Get the market's mood read, each holding checked for real change, and a written plan.
 - [Yield curve explainer](https://useaiblocks.com/skills/yield-curve-explainer): Name a government. Get its curve shape, key slopes and real rate split explained in plain words.

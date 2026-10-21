@@ -43,3 +43,7 @@ The final metadata scan has one heuristic flag: `teaching-reflection-prompts` us
 ## Limits of this evidence
 
 This is a static security review and application regression pass, not a guarantee that arbitrary model executions are safe or useful. Imported scripts were not executed. Remote installers, external services, model behavior and future dependency changes are outside this snapshot. No paid model evaluation across every skill was run, and static/structural checks were not represented as golden-set performance tests.
+
+## Final refresh, 22 October 2026
+
+Reran the static scan after the display-copy changes. It produced the same counts and candidate set: 4,349 folders, 25,664 files, 338 candidates and no structural findings. Source instruction files remain unchanged. All 4,345 published entries pass the generated-asset, dependency-closure and sanitized-HTML checks. The final dependency audit reports zero known npm advisories; neither result certifies arbitrary future execution as safe.

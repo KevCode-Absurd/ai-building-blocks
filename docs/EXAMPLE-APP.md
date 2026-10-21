@@ -4,12 +4,11 @@
 
 ## Where it lives
 
-The saved app is about 2,230 files, too many to share the main site's 20,000-file limit on Cloudflare Pages' free plan. So it is its own Pages project:
+The source files live in `example-app-site/example-app/`. The production build copies that folder to `dist/example-app/`, and `/apps` opens `/example-app/` on the same origin. The Vite development and preview servers serve the same saved folder. This replaced the separate `example.useaiblocks.com` address on 21 October 2026 after that address failed to resolve.
 
-- The files are in `example-app-site/` (the app itself under `example-app/`, plus `_redirects` and a `robots.txt` that blocks crawlers).
-- Deploy it as a second Pages project with `example-app-site` as the output folder and no build command, and give it the custom domain `example.useaiblocks.com`. The tour opens at `https://example.useaiblocks.com/example-app/`; the root sends you there.
-- The /apps page links there in the built site, and to `/example-app/` on the dev server, which serves the same folder (`vite.config.ts`, `exampleApp()`).
-- The tour bar's links ("Build your own", "Back to AI Blocks") go to useaiblocks.com when the tour runs on the `example.` address.
+The tour has 2,230 files, about 179 MB in total; its largest file is about 5.6 MB. Its files count toward the main deployment's capacity guard. The combined build is expected to be 18,547 files, below the configured 19,000-file buffer. The build refuses to ship without the example's index page, so it cannot silently publish a broken tour link.
+
+The main `robots.txt` excludes `/example-app/`, every saved page has a noindex tag, and the tour stays out of the sitemap. Its bar links back to `/apps` and the starter pack on this site. The old standalone `example-app-site` project layout can still be used if the example is deliberately moved to a separate deployment later, but it is not required now.
 
 It's a saved copy of the real app (the Creative Engine repo), not a mock-up. Each screen is the HTML the app sent, with the app's own scripts, so tabs, menus and filters work. The tour keeps every main screen and a few of each kind of detail page (scripts, references, guides, lessons), so it stays small.
 

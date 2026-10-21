@@ -3,22 +3,22 @@
 > 20 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Clean up your Meta account and rebuild it to scale](https://useaiblocks.com/workflows/clean-up-your-meta-account-and-rebuild-it-to-scale): Give it your campaigns and results. Get campaigns kept or cut, a simpler layout and a spend ladder.
-- [Existing customer ad budget sizer](https://useaiblocks.com/skills/existing-customer-ad-budget-sizer): Give customer count, CPM and frequency. Get a monthly dollar cap and a test to prove it.
 - [Fatigued ad reviver](https://useaiblocks.com/skills/fatigued-ad-reviver): Give it a fading winner's numbers. Get the cause, ranked revival moves and 10 hook briefs.
 - [GMV Max campaign setup planner](https://useaiblocks.com/skills/gmv-max-campaign-setup-planner): Give top products and target cost per order. Get GMV Max settings, an ROI target and creator offers.
 - [Launch TikTok ads and read your first test](https://useaiblocks.com/workflows/launch-tiktok-ads-and-read-your-first-test): Give it store screenshots, videos and results. Get a setup score, a starter campaign, ad verdicts and Spark picks.
+- [Marketing budget allocation planner](https://useaiblocks.com/skills/next-dollar-budget-allocator): Give it spend and new-customer returns by channel. Get where the next $10,000 goes and a test plan.
 - [Meta account structure planner](https://useaiblocks.com/skills/meta-account-structure-planner): Give your spend, products and margins. Get a Meta campaign and ad set layout with budgets and KPIs.
-- [Meta Ads weekly account keeper](https://useaiblocks.com/agents/meta-ads-weekly-account-keeper): Give it your weekly Meta Ads exports. Get a true-return check, a scale-or-hold call and a change list to approve.
 - [Meta scaling campaign planner](https://useaiblocks.com/skills/meta-scaling-campaign-planner): Give your winning ads, margins and cash. Get a break-even ROAS, spend ladder and scaling campaign plan.
-- [Next-dollar budget allocator](https://useaiblocks.com/skills/next-dollar-budget-allocator): Give it spend and new-customer returns by channel. Get where the next $10,000 goes and a test plan.
+- [Product ad budget planner](https://useaiblocks.com/skills/sku-ad-money-planner): Give it sales, stock days and costs per SKU. Get each one's grade, ad target and clearance plan.
 - [Retargeting ad sequence planner](https://useaiblocks.com/skills/retargeting-ad-sequence-planner): Give your products and why visitors do not buy. Get retargeting ads in order, ending with a cross-sell.
+- [Returning customer ad budget planner](https://useaiblocks.com/skills/existing-customer-ad-budget-sizer): Give customer count, CPM and frequency. Get a monthly dollar cap and a test to prove it.
 - [Scale Meta spend while it still pays](https://useaiblocks.com/workflows/scale-meta-spend-while-it-still-pays): Give it your ad results and costs. Get your true return, a spend ladder and a budget split.
-- [SKU ad money planner](https://useaiblocks.com/skills/sku-ad-money-planner): Give it sales, stock days and costs per SKU. Get each one's grade, ad target and clearance plan.
 - [Social ads experiment planner](https://useaiblocks.com/skills/traction-social-and-display-ads): Paste your product link. Get a focused growth test, its costs, measures and decision rules.
 - [TikTok ads account setup checker](https://useaiblocks.com/skills/tiktok-ads-account-setup-checker): Say what you set up on TikTok. Get missing steps and a score out of 100.
-- [TikTok Ads weekly account keeper](https://useaiblocks.com/agents/tiktok-ads-weekly-account-keeper): Give it your weekly TikTok Ads exports. Get each ad called keep, fix or kill and a change list to approve.
 - [TikTok Spark ad picker](https://useaiblocks.com/skills/tiktok-spark-ad-picker): Give your organic or creator posts and their results. Get which to boost as Spark ads, and how.
 - [TikTok starter campaign builder](https://useaiblocks.com/skills/tiktok-starter-campaign-builder): Give your budget and target CPA. Get a TikTok campaign layout, budgets and a four-week targeting ladder.
 - [Tired ad hook refresher](https://useaiblocks.com/prompts/tired-ad-hook-refresher): Paste a fading winner's numbers. Get the cause, a pace, and ten new opening briefs on the same ad.
 - [Turn your best posts and creator videos into ads](https://useaiblocks.com/workflows/turn-your-best-organic-posts-and-creator-videos-into-meta-ads): Give it your posts with views and your product facts. Get ranked posts, checked scripts, creator briefs and a test layout.
+- [Weekly Meta Ads review](https://useaiblocks.com/agents/meta-ads-weekly-account-keeper): Give it your weekly Meta Ads exports. Get a true-return check, a scale-or-hold call and a change list to approve.
+- [Weekly TikTok Ads review](https://useaiblocks.com/agents/tiktok-ads-weekly-account-keeper): Give it your weekly TikTok Ads exports. Get each ad called keep, fix or kill and a change list to approve.
 - [Win back visitors who did not buy on Meta](https://useaiblocks.com/workflows/win-back-visitors-who-did-not-buy-on-meta): Give it your reviews and store results. Get an ad for each objection, a three-ad sequence and a retargeting budget cap.

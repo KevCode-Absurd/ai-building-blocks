@@ -1,10 +1,10 @@
 // The one example app on /apps: Mercatura, the app we built on these skills (the Creative Engine repo), saved as
-// a static click-through with its Grüns study data (tools/example-app, docs/EXAMPLE-APP.md). It is its own Cloudflare Pages
-// project (example-app-site/), so its 2,000-odd files don't count against the main site's limit; the dev server serves it here.
+// a static click-through with its Grüns study data (tools/example-app, docs/EXAMPLE-APP.md). Its saved
+// source is in this folder (example-app-site/). Production and preview serve it under the same site; the build checks its file budget.
 // Nothing in it runs. The open-source starter people install is the separate mercatura-client-starter repo.
 
 export const REPO = "https://github.com/KevCode-Absurd/mercatura-client-starter";
-export const TOUR = import.meta.env.DEV ? "/example-app/" : "https://example.useaiblocks.com/example-app/";
+export const TOUR = "/example-app/";
 
 export type Area = { id: string; name: string; line: string; path: string };
 

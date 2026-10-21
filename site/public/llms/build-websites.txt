@@ -27,6 +27,7 @@
 - [Interface upgrader](https://useaiblocks.com/skills/interface-upgrader): Point it at an existing site or app. Get generic design patterns found and fixed, without a rewrite.
 - [Link preview fixer](https://useaiblocks.com/skills/link-preview-fixer): Share a link that looks wrong. Get the tags and image fixes so it shows a rich card everywhere.
 - [Mini-course builder](https://useaiblocks.com/skills/mini-course-builder): Name a topic. Get a web mini-course with lessons, flashcards and quizzes in one page.
+- [Missing product details updater](https://useaiblocks.com/skills/product-data-gap-filler): Find missing product details such as barcodes and weight. Fill available fields in your live store. Updates live products.
 - [Multi-language site planner](https://useaiblocks.com/skills/multi-language-site-planner): Tell it your site and target markets. Get a plan for language URLs, hreflang, translation steps, currencies and right-to-left layouts.
 - [Multi-step form designer](https://useaiblocks.com/skills/multi-step-form-designer): Describe the data you must collect. Get a staged form plan with progress cues, conditional questions and save-and-resume.
 - [Online calculator designer](https://useaiblocks.com/skills/online-calculator-designer): Name what your visitors want to work out. Get a calculator design that gives a real answer and gathers leads fairly.
@@ -34,12 +35,10 @@
 - [Page metadata fixer](https://useaiblocks.com/skills/page-metadata-fixer): Point it at your pages. Get missing titles, share cards, canonical links and page data found and fixed.
 - [Page speed fixer](https://useaiblocks.com/skills/page-speed-fixer): Paste your PageSpeed report. Get fixes for speed, access, best practice and SEO scores, in ordered batches.
 - [Page transition animator](https://useaiblocks.com/skills/page-transition-animator): Describe the motion you want. Get smooth React page and element transitions that respect reduced-motion settings.
-- [Page tree and URL sketcher](https://useaiblocks.com/prompts/page-tree-url-sketcher): Paste what your site does and who it is for. Get a page tree, menu and web addresses.
 - [Photopea editor embedder](https://useaiblocks.com/skills/photopea-editor-embedder): Say what image editing your app needs. Get Photopea embedded and scripted to open, edit and export files.
 - [Polished interface builder](https://useaiblocks.com/skills/polished-interface-builder): Describe the interface. Get a built page with careful colour, layout and motion, not a stock template look.
 - [Product attribute field setter](https://useaiblocks.com/skills/product-attribute-field-setter): Say which product facts matter. Get fields for material, specs and sizing filled in, so AI can match products. Changes live data.
 - [Product category assigner](https://useaiblocks.com/skills/product-category-assigner): Give it your catalog. Get every product matched to a standard Shopify category, so AI can place it. Updates live products.
-- [Product data gap filler](https://useaiblocks.com/skills/product-data-gap-filler): Find products missing barcode, SKU, vendor or weight. Get the gaps filled so AI can quote exact items. Updates live products.
 - [Product description enricher](https://useaiblocks.com/skills/product-description-enricher): Point it at thin product descriptions. Get fact-rich rewrites with materials, uses and shopper words. Updates live product pages.
 - [Product image alt text writer](https://useaiblocks.com/skills/product-image-alt-text-writer): Point it at your product images. Get alt text set on each, so AI knows what they show. Changes live files.
 - [React and Next.js builder](https://useaiblocks.com/skills/react-and-next-js-builder): Describe the screen. Get React and Next.js components with fast loading, Tailwind styling and bundle checks.
@@ -61,6 +60,7 @@
 - [Web page speed tuner](https://useaiblocks.com/skills/web-page-speed-tuner): Give it a slow site. Get fixes for network, loading and rendering, ranked by gain. Uses High Performance Browser Networking.
 - [Website art director](https://useaiblocks.com/skills/website-art-director): Describe your site or app screen. Get a built page with a chosen look, checked in a browser, not a template.
 - [Website content mover](https://useaiblocks.com/skills/website-content-mover): Name your old and new site. Get a move plan that keeps search rank, links and bookmarks working.
-- [Website quality keeper](https://useaiblocks.com/agents/website-quality-keeper): Check your site each week. See what got slower or harder to find since last time, with a ranked fix list.
+- [Website page structure planner](https://useaiblocks.com/prompts/page-tree-url-sketcher): Paste what your site does and who it is for. Get a page tree, menu and web addresses.
+- [Website quality review agent](https://useaiblocks.com/agents/website-quality-keeper): Check your site each week. See what got slower or harder to find since last time, with a ranked fix list.
 - [Website speed tuner](https://useaiblocks.com/skills/website-speed-tuner): Point it at a slow site. Get Core Web Vitals, bundle size and caching problems fixed.
 - [WordPress health fixer](https://useaiblocks.com/skills/wordpress-health-fixer): Paste your WordPress Site Health report. Get a ranked, backup-first fix plan with exact commands.

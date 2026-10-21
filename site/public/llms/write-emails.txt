@@ -1,11 +1,12 @@
 # Write emails that get read: AI Blocks
 
-> 52 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 60 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Account-based outreach drafter](https://useaiblocks.com/skills/account-based-outreach-drafter): Name a company or contact. Get an email, call script and LinkedIn message built from your Common Room data. You send them.
+- [Account-based outreach drafter](https://useaiblocks.com/skills/account-based-outreach-drafter): Name a company or contact. Get an email, call script and LinkedIn message built from real signals.
 - [Browse abandonment flow builder](https://useaiblocks.com/skills/browse-abandonment-flow-builder): Give it your best sellers and proof. Get a site-visit email and a browse flow that offers a discount last.
 - [Campaign email writer](https://useaiblocks.com/skills/campaign-email-writer): Give it a campaign goal and product facts. Get email copy by block, with subject lines.
 - [Cart recovery flow builder](https://useaiblocks.com/skills/cart-recovery-flow-builder): Give it your margin, shipping terms and proof. Get cart and checkout recovery flows with filters, timing and a code rule.
+- [Clear an email backlog and set triage rules that stick](https://useaiblocks.com/workflows/clear-an-email-backlog-and-set-triage-rules-that-stick): Give it your inbox rules and the backlog. Get a saved triage guide, drafted replies and fixes.
 - [Cold email claim checker](https://useaiblocks.com/prompts/cold-email-claim-checker): Paste a cold email and their page text. Get each claim tested, the basics checked and a tighter version.
 - [Cold email pre-send checker](https://useaiblocks.com/skills/cold-email-pre-send-checker): Paste a cold email and what you know of the prospect. Get claims tested, legal basics checked, and a tighter version.
 - [Cold email writer](https://useaiblocks.com/skills/cold-email-writer): Name your buyer and offer. Get cold emails, follow-ups and a sending setup that gets replies.
@@ -13,6 +14,7 @@
 - [CRM and email strategist](https://useaiblocks.com/skills/crm-and-email-strategist): Ask any email or CRM question. Get expert advice on audits, deliverability, flows, tests and measuring what email earns.
 - [Customer email reply drafter](https://useaiblocks.com/skills/customer-email-reply-drafter): Ask what needs a reply. Get unread customer emails sorted by priority, each with a draft reply. You send them.
 - [Customer stage flow mapper](https://useaiblocks.com/skills/customer-stage-flow-mapper): Describe your flows. Get each split into new, returning and loyal paths with their own goals.
+- [Dull update email rewriter](https://useaiblocks.com/prompts/dull-update-email-rewriter): Paste a flat company update. Get an email people open, with the reader's gain first.
 - [Dynamic email block planner](https://useaiblocks.com/skills/dynamic-email-block-planner): Give it your customer data and apps. Get show-hide rules, product feeds and app-triggered flows.
 - [Email and SMS performance reader](https://useaiblocks.com/skills/email-and-sms-performance-reader): Paste last month's numbers. Get what broke, what to repeat and a score out of 100.
 - [Email backlog clearer](https://useaiblocks.com/skills/email-backlog-clearer): Point it at your inbox. Get what needs you, drafted replies in your voice, and deadlines pulled from long threads.
@@ -31,11 +33,14 @@
 - [Email topic bank builder](https://useaiblocks.com/skills/email-topic-bank-builder): Give it your product and customer questions. Get 10 topics, 100 one-point email ideas and formats.
 - [Engaged list expander](https://useaiblocks.com/skills/engaged-list-expander): Give it your list and send results. Get a plan to bring quiet contacts back safely.
 - [Fix inbox placement and win back your opens](https://useaiblocks.com/workflows/fix-inbox-placement-and-win-back-your-opens): Give it your sending setup and results. Get a recovery plan, a wider engaged list and a sunset flow.
+- [Follow-up email sequence writer](https://useaiblocks.com/prompts/follow-up-email-sequence-writer): Paste one email you planned to send once. Get a four-step sequence with timing and one ask.
 - [Inbox delivery fixer](https://useaiblocks.com/skills/inbox-delivery-fixer): Name your sending domain. Get SPF, DKIM and DMARC set up and a plan to stop emails landing in spam.
 - [Inbox placement recovery planner](https://useaiblocks.com/skills/inbox-placement-recovery-planner): Give it your open rates and engaged counts. Get a score out of 100 and a recovery plan.
 - [Launch email sequence planner](https://useaiblocks.com/skills/launch-email-sequence-planner): Give it your product, list and close date. Get a 10-email launch plan with resends and a triple close.
 - [Monthly email flow keeper](https://useaiblocks.com/agents/monthly-email-flow-keeper): Give it last month's email numbers. Get the weakest flow found and rebuilt, with the copy checked.
 - [New inquiry reply drafter](https://useaiblocks.com/skills/new-inquiry-reply-drafter): Give it new inquiries. Get each one qualified and answered with a draft reply and real meeting times. You send it.
+- [No-oriented question email rewriter](https://useaiblocks.com/prompts/no-question-email-rewriter): Paste an email that pushes for yes. Get it rewritten so a 'no' moves things forward.
+- [One-ask email tightener](https://useaiblocks.com/prompts/one-ask-email-tightener): Paste an email before you send it. Get it cut to one clear ask the reader can act on.
 - [Outbound email sequence writer](https://useaiblocks.com/skills/outbound-email-sequence-writer): Describe your prospect. Get a multi-step email sequence with timing and personal touches.
 - [Own-voice outreach writer](https://useaiblocks.com/skills/own-voice-outreach-writer): Give it your prospects. Get emails and follow-ups that sound like you, each tied to something specific about them.
 - [Plan a month of campaign emails that sell without discounts](https://useaiblocks.com/workflows/plan-a-month-of-campaign-emails-that-sell-without-discounts): Give it your products and brand file. Get 100 email ideas, a month calendar, a written email and a layout brief.
@@ -50,7 +55,10 @@
 - [Store email flow writer](https://useaiblocks.com/skills/store-email-flow-writer): Describe your store. Get ten email flows with full copy, who gets each one, and a year of campaigns.
 - [Story email writer](https://useaiblocks.com/skills/story-email-writer): Give it your list and one true story. Get three personal email drafts.
 - [Sunset flow and list cleaner](https://useaiblocks.com/skills/sunset-flow-and-list-cleaner): Give it your engagement rule and email volume. Get a three-email sunset flow and a monthly routine that suppresses non-openers.
+- [Tense email softener](https://useaiblocks.com/prompts/tense-email-softener): Paste an email you are angry about. Get a version the reader wants to help with.
 - [Text message campaign writer](https://useaiblocks.com/skills/text-message-campaign-writer): Say your goal. Get SMS or WhatsApp flows for welcome, cart, win-back and promos, with consent rules.
+- [Weekly newsletter keeper](https://useaiblocks.com/agents/weekly-newsletter-keeper): Give it your notes each week. Get this issue drafted, edited, checked against your voice and scored before it goes out.
 - [Welcome flow builder](https://useaiblocks.com/skills/welcome-flow-builder): Give it your offer, best sellers and brand story. Get a welcome flow with timing, filters, email outlines and tests.
 - [Win-back flow builder](https://useaiblocks.com/skills/win-back-flow-builder): Give it your order gaps and discount room. Get a win-back flow timed to how your buyers actually reorder.
 - [Write a personal story email and read how it did](https://useaiblocks.com/workflows/write-a-personal-story-email-and-read-how-it-did): Give it a true story. Get a clean email to send, then a read of results.
+- [Write a welcome email sequence that teaches, then sells](https://useaiblocks.com/workflows/write-a-welcome-email-sequence-that-teaches-then-sells): Give it your offer and reader. Get a five-email sequence, a Hopkins-style review, fixes and a send check.

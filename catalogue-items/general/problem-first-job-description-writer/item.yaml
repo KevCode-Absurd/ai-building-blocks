@@ -1,0 +1,18 @@
+slug: problem-first-job-description-writer
+name: "Problem-first job description writer"
+summary: "Paste the problem the hire must solve. Get a job description built around it, with success at six months."
+category: general
+boards: []
+type: prompt
+role: make
+job: people
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [patty-mccord]

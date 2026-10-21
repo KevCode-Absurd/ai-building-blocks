@@ -1,0 +1,45 @@
+slug: otter
+name: Otter
+maker: Otter.ai
+url: https://otter.ai
+promise: Live meeting transcripts and summaries, with action items assigned for you.
+use_cases: [meeting-notes]
+categories: [productivity, voice]
+what_it_does:
+  - Transcribes calls live and tells speakers apart.
+  - Writes a summary with decisions and action items after each meeting.
+  - Answers questions about your meetings through a chat.
+  - Gives a short briefing before a call from past conversations.
+  - Joins Zoom, Google Meet and Teams from your calendar, or records without a bot.
+benefits:
+  - Leave a meeting with notes and tasks already written.
+  - Look up a decision from last month without replaying the recording.
+  - Send call insights to your CRM without typing them.
+  - Try it free on a few meetings before you pay.
+best_for:
+  - Managers and sales teams with many back-to-back calls.
+  - Students and researchers who record lectures and interviews.
+  - Anyone who needs a transcript they can search and share.
+not_for:
+  - Long recordings on the free plan, which caps each conversation at 30 minutes.
+  - Teams that need many file imports on the free plan.
+pricing:
+  model: freemium
+  from: US$8.33 per month
+  note: Basic is free with 300 minutes a month. Pro is US$8.33 per user billed yearly, or US$16.99 billed monthly. Business and Enterprise cost more. Promotional prices may show lower.
+works_with:
+  - Zoom
+  - Google Meet
+  - Microsoft Teams
+  - Slack
+  - HubSpot
+  - Salesforce
+runs_in: [web, desktop, mobile, browser-extension]
+blocks:
+  - meeting-coaching-analyst
+  - interview-transcript-trimmer
+alternatives: [fireflies, granola, notion-ai, whisper]
+last_checked: 2026-10-21
+sources:
+  - https://otter.ai
+  - https://otter.ai/pricing

@@ -1,11 +1,11 @@
 new_slug: one-off-items-separator
 name: "One-off items separator"
-summary: "Paste several years of a company's income statements. Get each year's profit rebuilt without gains and losses that will not repeat."
+summary: "Paste several years of income statements. Get each year's profit rebuilt without one-off gains and losses."
 job: money-and-investing
 thinking: high
 thinking_why: "It reads many lines across years, pairs items that are booked in different places and must not invent a missing amount. That needs careful reasoning."
 
-headline: "Strip the one-time gains and losses out of a company's profit, year by year"
+headline: "One-off items separator"
 subhead: "Paste several years of income statements and the notes. It lists each sale, refund, write-off and investment gain, pairs gains with the losses booked elsewhere and rebuilds each year's ordinary earnings. You get a table with an ordinary average and an all-in average."
 
 explain: |

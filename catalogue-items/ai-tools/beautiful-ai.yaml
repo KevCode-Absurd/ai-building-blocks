@@ -1,0 +1,39 @@
+slug: beautiful-ai
+name: Beautiful.ai
+maker: Beautiful.ai
+url: https://www.beautiful.ai
+promise: Slides that fix their own layout, with AI to draft the deck.
+use_cases: [slides-and-docs]
+categories: [productivity, design]
+what_it_does:
+  - Drafts a deck from a topic, a pasted outline or a source document.
+  - Shows an outline first, so you can edit it before it designs the slides.
+  - Re-aligns spacing and layout on its own as you edit with Smart Slides.
+  - Builds charts and timelines, and links a spreadsheet for updates.
+  - Exports to PowerPoint and PDF, and shares through a protected link.
+benefits:
+  - Stop fixing misaligned boxes and spend the time on the message.
+  - Keep a whole team's decks on one set of colours, fonts and logos.
+  - See which slides people viewed after you share a deck.
+  - Edit in PowerPoint when a colleague needs the file.
+best_for:
+  - Teams that make pitch decks, reports and proposals often.
+  - Companies that need every deck to follow the brand.
+  - People who want tidy slides without design skills.
+not_for:
+  - Free-form designs where you place every shape yourself.
+  - Anyone who wants a permanent free plan, since it offers a 14-day trial.
+pricing:
+  model: subscription
+  from: US$14.50 per month
+  note: Pro is US$14.50 a month billed yearly, with a 14-day trial that needs a card. Team is US$40 per user billed yearly. A single presentation costs US$45 for one month.
+works_with:
+  - PowerPoint
+  - Google Sheets
+runs_in: [web]
+blocks: []
+alternatives: [gamma, canva, figma-ai]
+last_checked: 2026-10-21
+sources:
+  - https://www.beautiful.ai
+  - https://www.beautiful.ai/pricing

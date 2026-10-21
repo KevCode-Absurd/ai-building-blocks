@@ -1,0 +1,117 @@
+new_slug: week-plan-from-task-list-maker
+name: "Week plan maker from a task list"
+summary: "Paste your task list and your hours. Get a week plan with three big tasks placed and the rest parked."
+job: organise-work
+thinking: low
+thinking_why: "It sizes and sorts a given list against given hours."
+
+headline: "Week plan maker from a task list"
+subhead: "Paste everything you think you should do this week and the focused hours you really have. The prompt sizes each task, shows the gap, picks the three that matter most, places them in real slots with a quarter of the time left open, and parks, batches or drops the rest."
+
+explain: |
+  A task list is a wish. Twenty items, forty hours of work, fifteen hours of real focus, and on Friday the list is the same with three new things on it. The problem is never effort. It is that nothing was ever measured against the time.
+
+  This prompt sizes every task, adds them up against your hours and says the gap out loud. It picks the three tasks that most move the results you named or have a hard deadline, places them in specific slots with the hardest early in the week, and leaves a quarter of your time open for what will come up anyway. The rest is batched if small, pushed to next week with its deadline risk, dropped if you would not start it today, or handed to a named person. You end with one line to check on Friday.
+
+when:
+  - "It is Sunday night and the list is longer than the week."
+  - "You keep finishing the small things and never starting the big one."
+  - "You want to tell your manager or your team what will and will not happen this week."
+
+you_give:
+  - "Your task list with any deadlines"
+  - "The focused hours you really have"
+  - "The one or two results this week should move (advised)"
+  - "Fixed meetings and their times (optional)"
+you_get:
+  - "Every task sized and the gap stated"
+  - "The big three placed in real slots"
+  - "The rest batched, pushed, dropped or handed off"
+  - "A one-line Friday test"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your list under it."
+  - "Be honest about your hours. Count focus time, not time at a desk."
+  - "Read the BIG THREE. If one is wrong, say which should replace it and run again."
+  - "Put the slots in your calendar and send the NEXT WEEK and ASK lines to whoever needs them."
+
+how_it_works:
+  - title: "Sizes every task"
+    text: "Hours per task marked as estimates, with big tasks split into a first finishable piece."
+  - title: "Adds up the gap"
+    text: "Estimated hours against available hours, stated plainly."
+  - title: "Picks the big three"
+    text: "The tasks that most move your results or have a hard deadline, with one line of why each."
+  - title: "Places them"
+    text: "Specific slots, hardest early, a quarter of the hours left open."
+  - title: "Sorts the rest"
+    text: "Small batch, next week with deadline risk, drop, or ask a named person."
+  - title: "Writes the Friday test"
+    text: "One line that will be true if the week went to plan."
+
+output_shape: |
+  HOURS           available | estimated | gap
+  BIG THREE       1 <task, why, slot> 2 3
+  THE WEEK        Mon to Fri
+  SMALL BATCH     <tasks, slot>
+  NEXT WEEK       <tasks, risk>
+  DROP            <tasks, why>
+  ASK             <task, who>
+  FRIDAY TEST     <one line>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    I run marketing at Sprout. Focused hours this week: about 3 a day, 15
+    total. Results that matter: get the Raspberry Lemonade launch ads live by
+    Thursday; start one habit-angle ad test.
+    Tasks:
+    - Write 5 launch ad headlines for Raspberry Lemonade (deadline Thu)
+    - Brief the designer on launch images (needs to happen Mon or Tue)
+    - Write the habit-angle ad from the review "the one thing I stuck to"
+    - Rebuild the weekly ad report deck
+    - Reply to 12 influencer emails
+    - Fix the "20+" vs "21 vitamins" wording on the home page
+    - Plan the VIP perks email for November
+    - Check why cancel complaints rose last month with support
+    - Update the competitor price spreadsheet
+    - Review the new Kids page copy the developer shipped
+    - Set up the Thursday launch post schedule on four social accounts
+  output: pending
+
+tweaks:
+  - what: "Your hours"
+    how: "The whole plan rests on this number. Count only the hours you can think."
+  - what: "Results"
+    how: "Name them and the big three almost pick themselves."
+  - what: "Fixed events"
+    how: "Give meeting times and the slots avoid them."
+
+judge:
+  - "Planned hours are under three quarters of your available hours."
+  - "Every task appears once."
+  - "Each big three task names a result or a deadline."
+  - "Nothing over four hours is placed in one piece."
+  - "You believe the Friday test."
+
+test:
+  - "Follow the plan for a week and score the Friday test. Then run it again with what you learned."
+  - "Run it twice. The big three should match."
+  - "Leave out your hours. It should size the tasks and ask for the hours, not place them."
+
+improve:
+  - "Add your real focus pattern (for example, mornings only) so slots land where you can think."
+  - "Add your standing weekly tasks once, so they are sized every time."
+  - "Pair it with the Stop doing list writer when the DROP section is the same every week."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message plan works in any strong chat AI."}
+    - {name: "Your calendar", why: "Put the big three slots in before Monday so they survive the week."}
+  inputs:
+    - "Last week's plan and what actually got done"
+    - "Your meeting calendar for the week"

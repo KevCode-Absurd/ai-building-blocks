@@ -1,0 +1,31 @@
+slug: build-a-prospect-list-rank-it-and-send-first-messages
+name: "Build a prospect list, rank it and send first messages"
+summary: "Give it your ideal customer. Get a qualified list, a ranking, checked first messages and a daily block."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: persona, required: true}
+  - {type: offer, required: true}
+  - {type: question, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: spreadsheet}
+  - {type: copy_draft}
+  - {type: plan}
+uses: [prospect-list-builder, lead-prioritizer, stranger-first-message-writer, cold-email-pre-send-checker, prospecting-block-planner]
+steps:
+  - {uses: prospect-list-builder, note: "A qualified list of accounts that match your ideal customer, with the reason each one fits and the right person to contact."}
+  - {uses: lead-prioritizer, note: "Each account scored on fit and activity and sorted into tiers, so the first hour goes to the best twenty."}
+  - {uses: stranger-first-message-writer, note: "A first message and one follow-up a stranger can answer in a line, in Aaron Ross's manner: short, about them, asking for a referral or a short answer, never a meeting."}
+  - {uses: cold-email-pre-send-checker, note: "Every claim checked against your facts, every line checked for length and tone, spam triggers removed, and a repaired version."}
+  - {uses: prospecting-block-planner, note: "A protected daily block in your calendar, a two-minute research batch per prospect and one real reason to reach out, the way Jeb Blount teaches."}
+origin: own
+version: 1.0.0
+minds: [aaron-ross, jeb-blount]
+credits:
+  - {title: "Why Salespeople Don't Prospect (2011)", by: "Aaron Ross, Predictable Revenue", url: "https://predictablerevenue.com/why-salespeople-dont-prospect/", used: "Prospecting as its own daily job, and a first email that asks for a referral, not a meeting"}
+  - {title: "How Much Research Preparation Should You Do Before a Cold Call (Ask Jeb)", by: "Jeb Blount, Sales Gravy", url: "https://salesgravy.com/how-much-research-should-you-do-before-a-cold-call-ask-jeb/", used: "The protected block, the short research batch and one reason to reach out"}
+example_pending: true

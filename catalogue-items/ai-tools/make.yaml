@@ -1,0 +1,44 @@
+slug: make
+name: Make
+maker: Make (formerly Integromat)
+url: https://make.com
+promise: Build visual automations and AI agents that connect your apps.
+use_cases: [automate]
+categories: [automation]
+what_it_does:
+  - Lets you build automations by dragging steps onto a canvas.
+  - Connects more than 3,000 apps, plus any app with an API.
+  - Builds AI agents with the goals, apps and limits you set.
+  - Adds JavaScript or Python when a step needs code.
+  - Lets Claude, ChatGPT or Gemini run your automations through an MCP server.
+  - Shows each run live, so you can find and fix a failure.
+benefits:
+  - See your whole process on one canvas, not a list of rules.
+  - Handle branches, loops and filters that basic connectors cannot.
+  - Start on a free plan with no credit card.
+  - Let a developer add code only where it is needed.
+best_for:
+  - Operators who want more control than a basic app connector.
+  - Teams that run larger or branching automations.
+  - Agencies building automations for several clients.
+not_for:
+  - People who want the simplest possible first automation.
+  - Teams that need a fixed price, since cost depends on credits used.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: Free plan with 1,000 credits a month. Paid plans are Core, Pro, Teams and Enterprise, priced by monthly credits and cheaper billed yearly. Sites that quote the prices disagree, so check the live page.
+works_with:
+  - claude
+  - chatgpt
+  - gemini
+  - Google Sheets
+  - Slack
+runs_in: [web, api]
+blocks: []
+alternatives: [zapier, n8n, gumloop, lindy]
+last_checked: 2026-10-21
+sources:
+  - https://www.make.com/en/pricing
+  - https://www.make.com
+  - https://www.jetadmin.io/blog/make-pricing/

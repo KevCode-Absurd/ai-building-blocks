@@ -1,0 +1,28 @@
+slug: monthly-roles-and-goals-reviewer
+name: "Monthly roles and goals reviewer"
+summary: "Give it your roles and last month's calendar. Get the role crowding out the rest, your goals re-set and next month protected."
+category: agent
+type: agent
+role: orchestrate
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+  - {type: source_text, required: false}
+outputs:
+  - {type: plan}
+uses: [roles-and-goals-mapper, values-to-week-planner, okr-goal-writer, weekly-big-task-sorter, habit-plan-builder, digital-tool-audit-planner]
+steps:
+  - {uses: roles-and-goals-mapper, note: "Once, and again each quarter: your roles, what you are about in each, one or two lasting results per role, and the role crowding out the rest."}
+  - {uses: okr-goal-writer, note: "Every quarter: a few objectives with dated key results, written from the roles and the lasting results."}
+  - {uses: values-to-week-planner, note: "Every month: the plan from values to quarter, month and week, with protected hours for hard work, rebuilt from last month's calendar."}
+  - {uses: weekly-big-task-sorter, note: "Every month, for the first week: the few big tasks that matter, the small ones to batch or drop."}
+  - {uses: habit-plan-builder, note: "Only when a role has been crowded out two months running: one two-minute habit that gives it a foothold, with a cue and a restart plan."}
+  - {uses: digital-tool-audit-planner, note: "Once a quarter, or when the calendar shows more than a fifth of the month lost to tools: each app kept, cut or limited."}
+schedule: "On the last Sunday of each month, with a longer pass at the end of each quarter"
+asks_before: [creating, moving or deleting calendar events, dropping a role or a goal, sending a message to anyone, deleting or uninstalling an app, changing a commitment you made to someone else]
+minds: [stephen-covey, cal-newport]
+origin: own
+version: 1.0.0
+example_pending: true

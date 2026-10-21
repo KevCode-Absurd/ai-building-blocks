@@ -1,11 +1,11 @@
 new_slug: ad-distraction-checker
 name: "Ad distraction checker"
-summary: "Paste your ad and what ten viewers said it said. Get the playback count, what stole their attention and what to cut."
+summary: "Paste your ad and ten viewers' takes on it. Get what stole their attention and what to cut."
 job: check-ads
 thinking: medium
 thinking_why: "The counts and thresholds are fixed, but sorting what viewers said into causes takes judgment."
 
-headline: "Find out what people took from your ad, and what stole it from your claim"
+headline: "Ad distraction checker"
 subhead: "Show your ad to ten people, write down what each says it said, and paste the answers with the ad. It counts how many repeat your claim, finds the second claim or striking picture that took the rest, and lists what to cut."
 
 explain: |

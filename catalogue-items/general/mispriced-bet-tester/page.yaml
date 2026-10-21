@@ -1,12 +1,12 @@
 new_slug: mispriced-bet-tester
 name: "Mispriced bet tester"
-summary: "List your bets. Get which have the odds truly in your favour after the price, and which are only favourites."
+summary: "List your bets and prices. Get each called near cinch, fair bet or no bet, with the odds."
 job: money-and-investing
 thinking: high
 thinking_why: "It turns prices into odds, runs sums at three estimates and checks you are not fooling yourself about your edge. That takes careful judgement."
 
 headline: "Mispriced bet tester"
-subhead: "List the bets you are weighing and what each costs and pays. It turns the price into the odds the crowd gives, asks for your low, middle and high estimate, and runs the payoff sum at all three. You get each bet called near cinch, fair bet or no bet. It is a method of analysis, not personal financial advice."
+subhead: "List your bets and what each costs and pays. It turns the price into odds the crowd gives, asks for your low, middle and high estimate, and runs the payoff sum at all three. Each bet comes back near cinch, fair bet or no bet. Analysis, not personal financial advice."
 
 explain: |
   A favourite at the track wins most often and is still a poor bet, because the crowd has already priced it. Businesses, deals and plans work the same way. Being likely to win is not enough. The odds must be better than the price says.

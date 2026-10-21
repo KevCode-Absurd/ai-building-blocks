@@ -1,6 +1,6 @@
 new_slug: ai-shortlist-readiness-checker
 name: "AI shortlist readiness checker"
-summary: "Give it your store address and product pages. Get a found, matched, chosen check with fixes and a score out of 100."
+summary: "Give it your product pages. Get found, matched and chosen checks, fixes and a score out of 100."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It checks many items on live pages and ranks the fixes. A mid-level model is enough if it can browse. Use a stronger one for a large store."

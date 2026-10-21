@@ -1,0 +1,17 @@
+slug: skill-breakdown-teaching-planner
+name: "Skill breakdown teaching planner"
+summary: "Paste a skill you know well. Get it broken into teachable steps with the mistake and check for each."
+category: general
+boards: []
+type: prompt
+role: plan
+job: ops
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

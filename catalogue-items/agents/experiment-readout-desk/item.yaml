@@ -1,0 +1,29 @@
+slug: experiment-readout-desk
+name: "Experiment readout desk"
+summary: "Give it each test before it starts and when it ends. Get a readiness check, an honest verdict and the lesson saved."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: plan, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: test_report}
+  - {type: lessons_register}
+  - {type: plan}
+uses: [one-change-experiment-planner, ab-test-traffic-checker, a-b-test-verdict-maker, split-run-result-reader, mistake-to-principle-writer]
+steps:
+  - {uses: one-change-experiment-planner, note: "Before each test: the plan checked so it changes one thing, names the rate it should move and says what result would prove it wrong."}
+  - {uses: ab-test-traffic-checker, note: "Before each test: the sample size, the weeks needed and a readiness score out of 100. A low score sends the test back to the planner."}
+  - {uses: a-b-test-verdict-maker, note: "When a test ends: the split check, the result with a confidence range, side effects and a ship call."}
+  - {uses: split-run-result-reader, note: "When a test ends, for a two-version test with simple counts: the percentage gap, a luck check and a keep, rerun or stop call, as a second opinion."}
+  - {uses: mistake-to-principle-writer, note: "Only when a test was stopped early, read before its date, or changed two things: the root cause and a written rule for next time."}
+schedule: "Each time a test is proposed, and the day it reaches its read date"
+asks_before: [starting, stopping or extending a test, shipping or reverting a change, changing who is in the test, reading a result before its date, sending the readout to anyone]
+minds: [isaac-newton]
+origin: own
+version: 1.0.0
+example_pending: true

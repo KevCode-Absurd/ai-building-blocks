@@ -1,0 +1,107 @@
+new_slug: set-up-a-documentation-system-and-write-sops-that-pass-a-check
+name: Set up a documentation system and write procedures that pass
+summary: Give it how your team works. Get a documentation system, procedures, runbooks and a check of each.
+job: document-work
+thinking: high
+thinking_why: It must capture how work really happens and judge whether a stranger could follow it. Give it your strongest model.
+headline: Set up a documentation system and write procedures that pass
+subhead: Give it how your team works. It plans where documentation lives and who owns it, writes the standard procedures for your repeat tasks, writes the runbooks for when things break, then checks every procedure and runbook as a newcomer would and lists what a stranger could not follow.
+explain: |
+  Teams write documentation twice: once in a burst, then never again. The pages live in three places, nobody owns them, and the procedure that matters is out of date by the second week. When something breaks at night, the runbook says "ask Sam".
+
+  This workflow sets up a system before it writes a word. It plans where documentation lives, how it is named, who owns each page and when it is reviewed. It writes the standard procedures for your repeat tasks, step by step, with what good looks like. It writes the runbooks for when things break: what to check, in what order, who to call. Then it checks each procedure and runbook as a newcomer would, step by step, and lists every place a stranger would get stuck or need to ask.
+when:
+  - The same task is done differently by everyone who does it.
+  - Something broke at night and the only person who could fix it was asleep.
+  - You have docs, but nobody can find them or trusts them.
+you_give:
+  - "How your team works: the repeat tasks, who does them, where notes live today"
+  - What goes wrong and how it gets fixed now
+  - Your tools and systems
+  - Existing docs, however rough (optional)
+you_get:
+  - "A documentation system: where pages live, how they are named, who owns each, when they are reviewed"
+  - A standard procedure for each repeat task
+  - A runbook for each thing that breaks
+  - A check of every procedure and runbook with what a stranger could not follow
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste how your team works and what goes wrong. It plans the system and writes the procedures.
+  - Read the runbooks with the person who fixes things today. Correct what they know differently.
+  - Read the check and fix every step a stranger could not follow. Put the pages in the system.
+how_it_works:
+  - title: Plan the system
+    text: Plans where documentation lives, how pages are named, who owns each and how often it is reviewed.
+  - title: Write the procedures
+    text: Writes a step-by-step procedure for each repeat task, with what good looks like.
+  - title: Write the runbooks
+    text: "Writes a runbook for each thing that breaks: signs, checks in order, the fix and who to call."
+  - title: Check every page
+    text: Follows each procedure and runbook as a newcomer and lists every place they would get stuck.
+output_shape: |-
+  STEP 1: DOCUMENTATION SYSTEM
+    Lives in: <...> | Naming: <...> | Owner per page: <...> | Reviewed: <how often> | Stale page caught by: <...>
+
+  STEP 2: PROCEDURES
+    <task>: Step <n>: <what, who> | Good looks like: <...> | If it fails: <...>
+
+  STEP 3: RUNBOOKS
+    <what breaks>: Signs <...> | Check 1 <...> | Check 2 <...> | Fix <...> | Call <...> | Escalate when <...>
+
+  STEP 4: CHECK
+    <page>: Step <n>: <a stranger would ... > | Missing: <...> | Fix: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand, nine people.
+    Repeat tasks: launching a limited flavour on the site (product page, announcement bar, emails, ads), weekly stock count and reorder, monthly discount audit across the site (we once had four percentages live at once), replying to retailer purchase orders, updating the subscription price table.
+    Who does them: operations manager for stock and retailer orders; the social lead and I do flavour launches; nobody owns the discount audit, which is the problem.
+    Where notes live: a shared drive with 40 loose documents, two chat channels, the ops manager's notebook.
+    What goes wrong: the site's checkout stops applying a discount code (happened three times, fixed by our developer each time by hand); a retailer order gets shipped short; the email tool sends a flavour launch to the whole list including people who already bought it.
+    Tools: our store platform, the subscription app, the email tool, the help desk, a spreadsheet for stock.
+  output: pending
+tweaks:
+  - what: How it is fixed today
+    how: Describe the fix as the person does it, clicks and all. The runbook writes down what they actually do.
+  - what: The owner
+    how: Name an owner for each page, or say nobody. The system plan makes the gap visible.
+  - what: Your tools
+    how: Give the exact names of screens and settings. The check catches a step that names them wrong.
+  - what: Existing docs
+    how: Paste them. The procedures keep what is true and drop what is not.
+judge:
+  - Every page in the system has an owner and a review date.
+  - Each procedure says who does each step and what good looks like.
+  - Each runbook has the checks in order and says when to stop and escalate.
+  - The check names a specific stuck point, not "could be clearer".
+  - A new team member could do one of the repeat tasks from its procedure alone.
+test:
+  - Give one procedure to someone who has never done the task. Where do they stop?
+  - Give step 4 a runbook that says "ask Sam". It should flag it as a missing step.
+  - Run step 1 twice. The naming rule should be the same.
+  - After a month, check which pages were reviewed on their date.
+improve:
+  - When something breaks and the runbook did not cover it, add the fix the same day.
+  - Keep the check's stuck points. They show which steps you tend to skip when writing.
+  - Save your tools' screen and setting names in one file for the checker.
+  - Pair it with "Write a procedure, test it and build a training deck" when a procedure needs teaching.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Your wiki or shared drive
+      why: The system plan says where pages live; this is where they go.
+  inputs:
+    - Chat threads where fixes were worked out
+    - Past incidents and how they were resolved
+    - Screenshots of the tools' key screens
+terms:
+  - term: Runbook
+    meaning: A page that says what to check and do, in order, when a specific thing breaks.
+  - term: Standard procedure
+    meaning: The agreed step-by-step way a repeat task is done, written down.

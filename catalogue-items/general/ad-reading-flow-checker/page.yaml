@@ -1,6 +1,6 @@
 new_slug: ad-reading-flow-checker
 name: "Ad reading-flow checker"
-summary: "Paste or describe a print ad layout. Get notes on where the eye goes first, what to move and what to cut."
+summary: "Paste or describe a print ad layout. Get where the eye goes first, what to move and what to cut."
 job: check-ads
 thinking: low
 thinking_why: "The checks are fixed layout questions that can be answered by looking at the ad."

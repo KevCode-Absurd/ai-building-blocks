@@ -1,6 +1,6 @@
 slug: support-inbox-priority-sorter
 name: Support inbox priority sorter
-summary: Paste a support ticket. Get a category, a P1 to P4 priority, who should handle it, and any known duplicate.
+summary: Paste a support ticket. Get its category, P1 to P4 priority, owning team and any known duplicate.
 category: general
 boards: []
 type: skill

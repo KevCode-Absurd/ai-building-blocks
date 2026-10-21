@@ -1,0 +1,103 @@
+new_slug: no-question-email-rewriter
+name: "No-oriented question email rewriter"
+summary: "Paste an email that pushes for yes. Get it rewritten so a 'no' moves things forward."
+job: write-emails
+thinking: low
+thinking_why: "It rewrites one short email around a single question."
+
+headline: "No-oriented question email rewriter"
+subhead: "Paste an email that asks for a call, a yes or a confirmation and has gone unanswered. The prompt rewrites it around one question the reader can answer 'no' to, labels how they may feel, and cuts it under 80 words. You get the email and two spare questions."
+
+explain: |
+  "Just checking in, can we hop on a quick call?" is the easiest email in the world to ignore. It asks the reader to commit, and people guard their yes. The same reader will happily tell you no, because no feels safe. That is the idea Chris Voss explains in public, and it works in email as well as in a hostage talk.
+
+  This prompt finds every line that pushes for a yes and says why it gets ignored. Then it rewrites the email around one question where a "no" is the answer you want, such as "Have you given up on fixing this?" or "Would it be a bad idea to send the draft Friday?". It adds one line that names what the reader may be feeling, cuts everything else, and gives you two spare questions and what to say when the no comes back.
+
+when:
+  - "A prospect went quiet after a good first call."
+  - "A colleague has not answered three polite nudges."
+  - "You are about to send 'just checking in' for the second time."
+
+you_give:
+  - "The draft email or the thread so far"
+  - "What you want to happen next"
+  - "Who they are and how long since they replied (advised)"
+you_get:
+  - "The lines that push for yes, with why each gets ignored"
+  - "The rewritten email under 80 words, with a subject line"
+  - "Two spare no-oriented questions and what to reply when the no comes"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your email under it."
+  - "Say what you want to happen and who the reader is."
+  - "Pick the question that fits the relationship. The marked one is the AI's pick, not yours."
+  - "Send it, and when the no arrives, use the IF THEY SAY NO line."
+
+how_it_works:
+  - title: "Names the push"
+    text: "Quotes each line that presses for yes and says why it is easy to ignore."
+  - title: "Writes the no-oriented question"
+    text: "Three questions where 'no' is the answer you want, with the best fit marked."
+  - title: "Labels the feeling"
+    text: "One line that names what the reader may be going through, marked GUESS unless the thread shows it."
+  - title: "Cuts the rest"
+    text: "Label, one or two lines of context, the question. Under 80 words, no apology, no threat."
+  - title: "Plans the reply"
+    text: "One line for what to send when the no comes back."
+
+output_shape: |
+  THE PUSH        <quoted lines, each with why it is ignored>
+  SUBJECT         <under seven words>
+  EMAIL           <label, context, one no-oriented question>
+  OTHER QUESTIONS <two more to choose from>
+  IF THEY SAY NO  <what to reply next>
+  MISSING         <facts not given>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Who: a buyer at a grocery chain who asked Sprout for samples of the kids
+    gummies three weeks ago and has not replied since the samples arrived.
+    What I want: to know whether they are still considering stocking it,
+    and if so when they decide.
+    Draft:
+    Subject: Following up
+    Hi, just checking in to see if you had a chance to try the samples. We'd
+    love to hop on a quick call to discuss next steps. Let me know what works
+    for you. Thanks so much!
+  output: pending
+
+tweaks:
+  - what: "The relationship"
+    how: "A boss gets a softer label and a question about priorities. A prospect gets a question about whether the project is dead."
+  - what: "The thread"
+    how: "Paste the whole thread. The label stops being a guess and the question can point at a real sticking point."
+  - what: "Length"
+    how: "Ask for under 50 words when the reader is senior or busy."
+
+judge:
+  - "You could answer the question with 'no' and the conversation would still move."
+  - "There is no 'call', 'confirm' or 'checking in' left."
+  - "The label is marked GUESS unless the thread showed it."
+  - "The email is under 80 words."
+  - "Nothing in it would make you cringe if you were the reader."
+
+test:
+  - "Rewrite a nudge you sent that got no reply, send the new version to the next similar contact, and compare."
+  - "Run it twice. The marked question should aim at the same thing."
+  - "Give it an email with no clear outcome. It should write MISSING: the outcome rather than guess."
+
+improve:
+  - "Add two no-oriented questions that already worked for you, so the options match your field."
+  - "Add your rule for when to stop following up, so the IF THEY SAY NO line respects it."
+  - "Pair it with the Negotiation call opening planner when the no turns into a meeting."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message rewrite works in any strong chat AI."}
+  inputs:
+    - "The full thread, so the label is based on what they said"
+    - "What happened the last time this person went quiet"

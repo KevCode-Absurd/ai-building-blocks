@@ -1,0 +1,29 @@
+slug: monthly-belief-evidence-keeper
+name: "Monthly belief and evidence keeper"
+summary: "Give it the beliefs your plan rests on. Each month get the evidence for and against, and what to test next."
+category: agent
+type: agent
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: lessons_register, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: lessons_register}
+  - {type: audit_report}
+  - {type: plan}
+uses: [prediction-and-bet-planner, contrary-evidence-log-keeper, idea-evidence-review, real-knowledge-tester, learn-borrow-or-pass-planner]
+steps:
+  - {uses: prediction-and-bet-planner, note: "Once per belief, when it is added: what it predicts, what would prove it wrong, a small bet and a date to check."}
+  - {uses: contrary-evidence-log-keeper, note: "Every month: every fact against each belief logged at once, plus the facts for it, so nothing against slips from memory."}
+  - {uses: idea-evidence-review, note: "Every month, for each belief with new evidence: a keep going, change or stop call and the next thing to learn."}
+  - {uses: real-knowledge-tester, note: "Only when a belief has had no evidence either way for three months: the hardest follow-up questions, which you can answer, and which you cannot."}
+  - {uses: learn-borrow-or-pass-planner, note: "Only when the knowledge test shows a gap: learn it, borrow help, start small or pass, with a first-week plan."}
+schedule: "On the first Friday of each month, and the day any belief reaches its check date"
+asks_before: [changing the plan or strategy, dropping a belief from the list, spending money or time on a bet, telling the team a belief has changed, contacting customers for evidence]
+minds: [charles-darwin]
+origin: own
+version: 1.0.0
+example_pending: true

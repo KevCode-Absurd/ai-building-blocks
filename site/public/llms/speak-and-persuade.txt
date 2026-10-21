@@ -12,7 +12,7 @@
 - [Figures to plain pictures writer](https://useaiblocks.com/prompts/figures-to-plain-pictures-writer): Paste your key figures and who will hear them. Get each one as a comparison the room can picture.
 - [Funny speech planner](https://useaiblocks.com/skills/funny-speech-planner): Give one true story and the room. Get a deadpan speech with the wander, the dropped remark and the pause marked.
 - [Get-them-talking conversation planner](https://useaiblocks.com/skills/get-them-talking-plan): Paste your brief on the person. Get a warm start, questions they enjoy answering and where to stop and listen.
-- [Hard-questions board prep coach](https://useaiblocks.com/skills/hard-questions-board-prep-coach): Give it your board update. Get the toughest questions, cold-number drills and a story that owns the weak spots.
+- [Hard-questions board prep coach](https://useaiblocks.com/skills/hard-questions-board-prep-coach): Give it your board update. Get the toughest questions, number drills and a story that owns the weak spots.
 - [Hardest objections answer writer](https://useaiblocks.com/skills/hardest-objections-answer-writer): Paste your argument or pitch. Get the hardest objections, your answers, and a plain note on what your evidence cannot show.
 - [Honest appreciation note writer](https://useaiblocks.com/skills/honest-appreciation-note-writer): Paste what you valued about someone. Get one short thank-you note with one specific, true appreciation and no ask.
 - [Honest persuasion advisor](https://useaiblocks.com/skills/honest-persuasion-advisor): Give it a page or pitch. Get where to add proof, scarcity or reciprocity, using Cialdini's seven principles, without trickery.
@@ -23,8 +23,8 @@
 - [Launch talk writer](https://useaiblocks.com/skills/launch-talk-writer): Describe your product and who it is for. Get a short launch talk built on one story.
 - [Lesson talk writer](https://useaiblocks.com/skills/lesson-talk-writer): Paste your stories and their lessons. Get a short talk that builds each lesson on a story, ending on a next step.
 - [Make a strong first impression and build the relationship](https://useaiblocks.com/workflows/first-impression-plan): Name who you are about to meet. Get a brief, a meeting plan, a memory card and an honest thank-you note.
-- [Narrative memo checker](https://useaiblocks.com/skills/narrative-memo-checker): Paste your memo. Get a score out of 100, the weak spots and the three fixes that matter most.
-- [Number-to-picture translator](https://useaiblocks.com/skills/number-to-picture-translator): Paste the key figures and who will hear them. Get each number turned into a picture the room can feel.
+- [Narrative memo checker](https://useaiblocks.com/skills/narrative-memo-checker): Paste your memo. Get a score out of 100, the weak spots and the three fixes that matter.
+- [Number-to-picture translator](https://useaiblocks.com/skills/number-to-picture-translator): Paste your key figures and audience. Get each number turned into a picture the room can feel.
 - [Pitch arc planner](https://useaiblocks.com/skills/pitch-arc-planner): Give it your audience and your goal. Get a pitch or deck outline that builds belief, then asks for a clear decision.
 - [Pitch deck 10/20/30 checker](https://useaiblocks.com/skills/pitch-deck-checker-10-20-30): Paste your pitch deck. Get a score out of 100 on slide count, length, text size and opening, with fixes.
 - [Pitch revision log](https://useaiblocks.com/skills/pitch-revision-log): Paste your pitch and each no you heard. Get the doubts ranked, a revised pitch and the next advice questions to ask.

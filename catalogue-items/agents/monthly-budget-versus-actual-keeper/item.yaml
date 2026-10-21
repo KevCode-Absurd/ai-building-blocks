@@ -1,0 +1,30 @@
+slug: monthly-budget-versus-actual-keeper
+name: "Monthly budget versus actual keeper"
+summary: "Give it the month's spend by team. Get what moved against budget, why, and cash levers if the year is off."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: plan, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: spreadsheet}
+  - {type: plan}
+uses: [department-budget-planner, budget-variance-explainer, budget-and-forecast-builder, cash-forecast-builder, cash-lever-ranker, room-for-error-plan-checker]
+steps:
+  - {uses: department-budget-planner, note: "Once, at the start of the year or when no budget exists: the phased budget by team that every month is measured against."}
+  - {uses: budget-variance-explainer, note: "Every month: what moved against the budget by team and line, why, and a short note for whoever owns the number."}
+  - {uses: budget-and-forecast-builder, note: "Every month: the full-year forecast refreshed from actuals so far, and the gap against the budget."}
+  - {uses: cash-forecast-builder, note: "Every month: the 30, 60 and 90 day cash view from the forecast, bills and what is owed."}
+  - {uses: cash-lever-ranker, note: "Only when the full-year forecast is more than a tenth off budget, or cash falls under your floor within 90 days: six levers ranked by cash freed."}
+  - {uses: room-for-error-plan-checker, note: "Once a quarter, or when the forecast is cut: whether the plan survives a bad quarter and what gives it room."}
+schedule: "On the 5th working day of each month, once last month's actuals are in"
+asks_before: [moving budget between teams, cutting or freezing any spend, changing a hiring plan, sending the numbers to the team or the board, changing the budget file]
+minds: [morgan-housel]
+origin: own
+version: 1.0.0
+example_pending: true

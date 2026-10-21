@@ -1,0 +1,130 @@
+new_slug: monthly-content-repurposer
+name: Monthly content repurposer
+summary: Give it last month's content results. Get your best pieces picked and turned into posts, emails and clips to approve.
+job: grow-social
+thinking: high
+thinking_why: It ranks pieces from several signals, decides which platforms earn more and reshapes one idea for each format without changing its facts. Give it your strongest model.
+headline: Monthly content repurposer
+subhead: Give it last month's content results and the pieces themselves. It picks the one or two that earned the most attention, turns each into posts that work without a click, emails and clip ideas shaped for each platform, builds the month's calendar and checks the voice. You approve every post.
+explain: |
+  Most content is seen once. The article that earned twelve replies sits in the archive while next week's piece gets written from scratch. The platforms that quietly do nothing keep getting posts, and the one where readers reply gets the leftovers.
+
+  This agent reads last month's results and ranks every piece by what it earned, replies and shares first. It picks the top one or two, breaks each into the formats your readers use, and writes posts that give the whole idea without a link. It keeps a keep, grow or drop call on each platform, so you show up in proportion to where your audience is. Every post is checked against your voice and every fact comes from the original. It never publishes.
+when:
+  - You publish articles, a newsletter or videos and most pieces get one day of attention.
+  - You post on four platforms and cannot say which ones earn it.
+  - You want a month of posts from work you have already done.
+you_give:
+  - Last month's results per piece, with views, completion, replies, shares and any traced sales
+  - The full text or transcript of the pieces you might repurpose
+  - Your brand brain, with voice and where your buyers spend time (advised)
+  - Your platforms and posting rhythm (advised)
+  - Last month's calendar, once it exists
+you_get:
+  - A keep, grow or drop call for each platform, with the number behind it
+  - The one or two pieces picked and why
+  - Posts, emails and clip ideas for each pick, grouped by platform and ready to paste
+  - Video or podcast titles, descriptions and timestamps where they apply
+  - A month's calendar with the posts in place
+  - Voice fixes, so you learn the pattern
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run last month.
+  - Export last month's results per piece from your platforms and email tool. Put them in one folder with the pieces, or attach them in the chat.
+  - Tell it your platforms and how often you post. It saves them.
+  - Read the calendar and the posts. Schedule the ones you agree with in your own tools.
+  - Run it again on the first Tuesday of next month. It reads how the repurposed posts did.
+how_it_works:
+  - title: Read last month
+    text: Checks how last month's repurposed posts did and updates the keep, grow or drop call on each platform.
+  - title: Pick the pieces
+    text: Ranks originals by replies and shares, then completion, then views, and picks the top one or two not already used.
+  - title: Break each piece down
+    text: Turns each pick into a blog series, emails, posts and clip ideas, each adapted to its format.
+  - title: Write the no-click posts
+    text: Writes a post per pick that gives the whole idea on X or LinkedIn, with any link in the first reply.
+  - title: Handle video and audio
+    text: For a video or podcast pick, writes the title, description, tags and timestamps.
+  - title: Build the calendar
+    text: Spreads the posts across the month and the platforms that earn them.
+  - title: Check the voice
+    text: Ranks off-voice lines against your brand brain and fixes them.
+  - title: Log and hand back
+    text: Records every format made so nothing is repurposed twice, then stops.
+output_shape: |-
+  LAST MONTH
+    <n> pieces | earned most: <piece>, <piece> | platform that moved: <platform>
+
+  PLATFORM CALLS
+    <platform> | <keep | grow | drop> | <replies, shares or views over 3 months>
+
+  THE PICKS
+    1. <piece> | <replies> replies, <shares> shares, <completion>% | why: <one line>
+
+  FORMATS FOR <piece>
+    LinkedIn: <post, no link>
+    X: <post, no link> | reply: <link>
+    Email: <subject> | <body>
+    Clip ideas: <timestamp> <idea>
+    Video: <title> | <description> | <tags>
+
+  THE CALENDAR
+    <date> | <platform> | <post title or first line>
+
+  VOICE FIXES
+    <line> -> <fix> because <reason>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run September for Sprout. Practice numbers, not Sprout's real figures.
+    Results:
+    - Blog: "Why you quit greens powders (and what finally stuck)". 4,100
+      reads, 61% completion, 38 comments, 92 shares, 140 subscribers traced.
+    - Newsletter: "Rip. Tip. Enjoy. A week on the counter". 44% opens, 19
+      replies.
+    - YouTube: founder talk "Making a supplement people want to eat", 18 min,
+      2,300 views, 31% completion, 14 comments.
+    - Instagram: 12 posts, average 180 likes, 3 comments each.
+    - TikTok: 8 posts, average 900 views, 1 comment each, no sales traced.
+    Platforms: LinkedIn (founder), X, Instagram, TikTok, newsletter.
+    Posting rhythm: 3 posts a week per platform.
+    Full texts and the talk transcript attached. Brand brain attached.
+    Facts allowed: 60+ ingredients, 21 vitamins and minerals, 6 g fiber.
+  output: pending
+tweaks:
+  - what: What counts as earning
+    how: The agent ranks replies and shares first. Tell it to rank traced sales first if you track them.
+  - what: Your platforms
+    how: Name the ones you have decided to skip. The agent will not write for them even if the breakdown suggests it.
+  - what: Drop rule
+    how: A platform quiet for three months is a drop candidate. Set your own number of months.
+  - what: Brand brain
+    how: With it, the voice check runs and claims are checked. Without it, posts are shaped for format only.
+judge:
+  - The picks match the top of your results, replies and shares first.
+  - Each post gives its idea without a click.
+  - No fact appears that is not in the original piece or your brand brain.
+  - No piece was repurposed twice.
+  - Nothing was published or scheduled.
+test:
+  - Give it a month where you know which piece landed. It should pick the same one.
+  - Run it twice on the same results. The picks and platform calls should match.
+  - Give it a piece with a stale price in it. The posts should not repeat the price unless the brand brain confirms it.
+improve:
+  - Add traced sales or sign-ups per piece to your results, so the ranking follows money and not just attention.
+  - Write your platform list and posting rhythm into the platforms file before the first run.
+  - Save which repurposed posts did best, so next month's calendar leans on what worked.
+  - Pair it with the Weekly newsletter keeper, whose best issues are good picks.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the pieces and platforms files between months and run on a schedule.
+    - name: Your platform analytics
+      why: Export per-post results from each platform and your email tool. A CSV each is fine.
+  inputs:
+    - Comments and replies on your best piece, pasted as written
+    - The clip-cutting tool you use, so clip ideas match its limits

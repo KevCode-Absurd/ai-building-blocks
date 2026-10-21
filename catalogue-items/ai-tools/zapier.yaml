@@ -1,0 +1,47 @@
+slug: zapier
+name: Zapier
+maker: Zapier
+url: https://zapier.com
+promise: Connect your apps and run steps for you whenever something happens.
+use_cases: [automate]
+categories: [automation]
+what_it_does:
+  - Links more than 9,000 apps so one can start work in another.
+  - Runs multi-step automations (called Zaps) when a trigger fires.
+  - Adds AI steps where they help, and plain rules elsewhere.
+  - Builds AI agents that score leads, sort tickets and process documents.
+  - Lets AI assistants use your apps through MCP.
+  - Gives admins control over which apps and actions are allowed.
+benefits:
+  - Stop copying data between your store, inbox and spreadsheet.
+  - Send each new lead to the right person without a manual step.
+  - Build a first automation without writing code.
+  - Keep track of what runs, with logs and admin controls on paid plans.
+best_for:
+  - Operators who connect many apps and have no developer.
+  - Small teams automating lead, order and support hand-offs.
+  - Companies that need central control over automations.
+not_for:
+  - High-volume jobs, since cost rises with the number of tasks.
+  - Free users who need multi-step automations, which need a paid plan.
+pricing:
+  model: freemium
+  from: US$19.99 per month
+  note: Free plan with 100 tasks a month and two-step Zaps. Pro starts at US$19.99 per month billed yearly (US$29.99 billed monthly) for 750 tasks. Team starts at US$69 per month billed yearly.
+works_with:
+  - chatgpt
+  - claude
+  - Google Sheets
+  - Slack
+  - HubSpot
+runs_in: [web, api]
+blocks:
+  - automation-flow-sketcher
+  - no-code-automation-planner
+  - lead-handoff-designer
+  - recurring-kpi-report-maker
+alternatives: [make, n8n, gumloop, lindy]
+last_checked: 2026-10-21
+sources:
+  - https://zapier.com/pricing
+  - https://zapier.com

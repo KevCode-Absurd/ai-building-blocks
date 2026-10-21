@@ -1,0 +1,40 @@
+slug: intercom-fin
+name: Intercom Fin
+maker: Intercom
+url: https://www.intercom.com/fin
+promise: An AI agent that answers customer questions and charges only when it solves one
+use_cases: [sell-and-support]
+categories: [sales-and-support]
+what_it_does:
+  - Answers customer questions from your help articles and past answers.
+  - Works in Intercom or on top of a helpdesk you already use.
+  - Hands the chat to a person when it cannot solve it.
+  - Can take actions in other systems, such as looking up an order.
+benefits:
+  - Cut repeat questions that fill your inbox.
+  - Pay for answers that solved the question, not for seats.
+  - Keep your current helpdesk and add Fin on top.
+best_for:
+  - Support teams with many repeat questions and good help articles.
+  - Teams that want a cost that moves with volume.
+  - Stores with a busy inbox and a small team.
+not_for:
+  - Businesses with few support questions and a thin help centre.
+  - Teams that want a flat monthly bill.
+pricing:
+  model: usage
+  from: US$0.99 per resolution
+  note: No seat cost for Fin itself, with a minimum monthly commitment (the page's example is 50 outcomes). Intercom's own helpdesk starts at US$29 per seat per month.
+works_with:
+  - Salesforce
+  - zendesk-ai
+  - Slack
+runs_in: [web, mobile, api]
+blocks:
+  - support-desk-automation-builder
+  - chat-export-need-finder
+  - support-capacity-planner
+alternatives: [zendesk-ai, gorgias, hubspot-breeze]
+last_checked: 2026-10-21
+sources:
+  - https://www.intercom.com/pricing

@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It follows set checks but weighs how bad each problem is.
 new_slug: accessibility-checker
 name: Accessibility checker
-summary: Point it at a page or code. Get a ranked list of accessibility problems against WCAG 2.2, and fixes if you ask.
+summary: Point it at a page or code. Get ranked WCAG 2.2 problems, with fixes if you ask.
 job: test-and-fix-code
 headline: Accessibility checker
-subhead: Point it at a page or code. Get a ranked list of accessibility problems against WCAG 2.2, and fixes if you ask.
+subhead: Point it at a web address or code folder and say whether you want a report or fixes. It audits the live page where it can, otherwise the code, and ranks every finding against WCAG 2.2. You get the ranked list, the place of each problem, fixes if asked and a note on what automated checks miss.
 explain: |
   Accessibility problems on a page or in your code come back as a ranked list, checked against WCAG 2.2. Ask for fixes and it repairs them and checks again.
 

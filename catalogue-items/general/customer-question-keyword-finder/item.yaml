@@ -1,0 +1,17 @@
+slug: customer-question-keyword-finder
+name: "Customer question keyword finder"
+summary: "Paste reviews, tickets and comments. Get the questions people search for and the page each one needs."
+category: general
+boards: []
+type: prompt
+role: research
+job: research
+level: beginner
+inputs:
+  - {type: voc_reviews, required: true}
+outputs:
+  - {type: shortlist}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,129 @@
+new_slug: weekly-product-funnel-watcher
+name: Weekly product funnel watcher
+summary: Give it your product events each week. Get the step that lost the most, the cause and one experiment to run.
+job: build-product
+thinking: high
+thinking_why: It tells a real move from a normal swing, reads groups against a changes log and reasons to a cause. Give it your strongest model.
+headline: Weekly product funnel watcher
+subhead: Give it last week's product events every Monday. It reads the funnel step by step and each sign-up week as its own group, tells a real move from a normal swing, finds the cause when a loss repeats and plans one experiment with one rate to move. You approve every change to the product.
+explain: |
+  Product numbers get read on Tuesday, in a meeting, from a dashboard that averages everyone together. A rate dipped, someone has a theory, two things change at once, and nobody can say a month later what worked. The dashboard also reports total sign-ups, which goes up whatever happens.
+
+  This agent reads the same numbers the same way every Monday. It sets a tracking plan once, marks the vanity numbers, and names the input metrics the team controls. Each week it reads conversion per step against the step's normal swing, so a move inside the swing is called noise. It reads each sign-up week as its own group beside a dated changes log, so a release on Tuesday shows in Tuesday's group. When a step moves past its swing or loses the most two weeks running, it asks why against the facts and plans one experiment with one change and one rate. It changes nothing.
+when:
+  - Your product tracks events and the weekly review is a dashboard and a debate.
+  - A rate moved and nobody can say which of last week's three changes did it.
+  - You report numbers that only go up and want the ones that show cause.
+you_give:
+  - Last week's event log or per-step counts with user id, event, time and sign-up date
+  - The numbers your team reports today (advised)
+  - What changed last week, with dates (advised)
+  - Your tracking plan and experiment log, once they exist
+you_get:
+  - A tracking plan with steps, groups, one main metric and the input metrics you control
+  - Conversion per step against its normal swing, with real moves marked
+  - Each sign-up week's path beside the changes that moved it
+  - A verdict on any experiment that reached its read date
+  - The cause behind a repeated loss, or "unknown" with the fact that would settle it
+  - One experiment with one change, one rate and a read date
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week.
+  - Export last week's events in the same shape each week. Put the file in one folder, or attach it in the chat.
+  - On the first run, describe the product and the numbers you report. Approve the tracking plan it builds.
+  - Each week, paste what changed, with dates. Read the funnel and the one experiment. Run the experiment you agree with in your own tools.
+  - Run it again next Monday. It reads the new groups and judges any experiment that is due.
+how_it_works:
+  - title: Build the plan once
+    text: Sets the events, steps, groups and main metric, marks the vanity numbers and picks the inputs you control.
+  - title: Log what changed
+    text: Adds last week's releases, campaigns and outages to a dated log, because a move with no change behind it is a mystery.
+  - title: Read the funnel
+    text: Conversion per step and the change, each compared with the step's normal swing from the last six weeks.
+  - title: Read the groups
+    text: Each sign-up week's path beside the changes log, so a change shows in the group that got it.
+  - title: Decide
+    text: A quiet week reports inputs against output and stops. A move past the swing or a repeated loss goes on to a cause.
+  - title: Find the cause
+    text: A chain of whys checked against the facts, ending in a fixable cause or an honest unknown.
+  - title: Plan one experiment
+    text: One change, the rate it should move, who gets it and the date to read it.
+  - title: Log and hand back
+    text: Adds the week's row and stops for your yes.
+output_shape: |-
+  THIS WEEK
+    <main metric> <value> (<change>) | inputs: <input> <value>, <input> <value> | output check: <holds | drifting> | moves past swing: <n>
+
+  THE FUNNEL
+    <step> -> <step> | <%> (last week <%>) | swing <%> to <%> | <noise | MOVED>
+
+  THE GROUPS
+    week of <date> | <step %> | <step %> | <step %> | change that week: <release or none>
+
+  EXPERIMENTS READ
+    <experiment> | rate: <name> | expected <move> | got <move> | verdict: <keep | stop | rerun>
+
+  THE CAUSE
+    <step> | why: <chain> | fixable cause: <what> | or unknown, settle with: <fact>
+
+  ONE EXPERIMENT
+    change: <one thing> | should move: <rate> from <%> by <amount> | who: <group> | read on: <date>
+
+  VANITY WATCH
+    <number reported> | why it is vanity | use instead: <per-customer number>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run this week for Sprout's online store funnel. Practice numbers, not
+    Sprout's real figures.
+    Steps in the plan: product page view -> plan selected (one-time or
+    subscription) -> cart -> checkout started -> order placed -> day 7
+    check-in text answered.
+    Event export attached, 6 weeks, grouped by first-visit week.
+    This week vs last: page view to plan selected 38% (41%); plan to cart
+    62% (63%); cart to checkout 71% (70%); checkout to order 54% (61%);
+    order to day 7 reply 22% (21%).
+    Six-week swing on checkout to order: 58% to 63%.
+    Changes last week: new rotating announcement bar went live Tuesday
+    ("Save 52%" / "Save 55%" alternating); the birthday price-cut ads
+    started Wednesday; a checkout app update Thursday.
+    Numbers the team reports: total visits, total sign-ups, ad impressions,
+    revenue, cost per new subscriber.
+  output: pending
+tweaks:
+  - what: What changed last week
+    how: One dated line per release, campaign or outage. Without it, every move is a mystery and the cause chain stops early.
+  - what: Normal swing
+    how: The agent uses the last six weeks' range per step. Set your own if your product is seasonal.
+  - what: Group size
+    how: Under about 200 users a week through the funnel, read two weeks together.
+  - what: The main metric
+    how: Pick one. The whole weekly read is against it. Change it only at a quarter.
+judge:
+  - Every move is compared with the step's swing before it is called a move.
+  - Groups are read as groups, not as an all-users average.
+  - A cause was sought only when a step moved past its swing or lost the most twice.
+  - One experiment at most, with one change and one rate.
+  - Nothing in the product or tracking was changed.
+test:
+  - Give it six weeks where you know a release broke a step in week four. The groups should show it from week four.
+  - Give it a week where a step moved inside its swing. It should call it noise.
+  - Run it twice on the same export. The cause and the experiment should match.
+improve:
+  - Write the changes log every week, even when nothing shipped. "Nothing" is a fact the cause chain needs.
+  - Set your swing rule and group size before the first run.
+  - Record every experiment's verdict in the experiments file. The next cause chain reads it.
+  - Pair it with the Experiment readout desk when a test ends, for the full readout.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the plan, weeks, changes and experiments files between weeks and run every Monday.
+    - name: Your product analytics tool
+      why: Export events with user id, event name, time and sign-up date. Any tool that exports a CSV will do.
+  inputs:
+    - Your release notes for the week, with dates
+    - Support tickets that mention a step in the funnel

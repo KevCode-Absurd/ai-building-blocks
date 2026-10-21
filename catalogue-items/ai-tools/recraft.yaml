@@ -1,0 +1,39 @@
+slug: recraft
+name: Recraft
+maker: Recraft
+url: https://www.recraft.ai
+promise: Brand-ready images, icons and vector graphics from a written description.
+use_cases: [make-images, design]
+categories: [image, design]
+what_it_does:
+  - Makes images from a written description.
+  - Makes vector graphics that stay sharp at any size.
+  - Applies a style you set so images match your brand.
+  - Edits and upscales images you already have.
+  - Puts readable text into posters and graphics.
+benefits:
+  - Get icons and illustrations you can resize for any placement.
+  - Keep a whole set of graphics in one brand style.
+  - Test logo and poster ideas before a designer starts.
+best_for:
+  - Icons, illustrations and posters for a brand.
+  - Designers who want vector files from a prompt.
+  - Marketing teams that need a steady look across images.
+not_for:
+  - Photo-real people and product shots.
+  - Free commercial use, which the free plan does not allow.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: Free plan images are public and not licensed for commercial use. Paid Basic, Pro and Teams plans add credits that reset monthly and do not roll over. Third-party pages disagree on the price.
+works_with:
+  - figma-ai
+  - canva
+runs_in: [web, api]
+blocks:
+  - marketing-image-maker
+alternatives: [ideogram, midjourney, adobe-firefly, canva]
+last_checked: 2026-10-21
+sources:
+  - https://www.recraft.ai/pricing
+  - https://costbench.com/software/ai-image-generators/recraft/

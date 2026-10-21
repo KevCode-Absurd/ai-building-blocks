@@ -1,0 +1,124 @@
+new_slug: deal-win-reason-finder
+name: "Deal win reason finder"
+summary: "Paste notes on deals you won and lost. Get why you really win, and the message built on it."
+job: sell-and-negotiate
+thinking: high
+thinking_why: "It finds patterns across many deals from buyer words and must not invent a reason the quotes do not support."
+
+headline: "Deal win reason finder"
+subhead: "Paste notes on six or more deals you won and lost, with what buyers said and what they compared you with. The prompt tables them, finds the pattern in the wins and the losses, separates win reasons from objections you handled, names your best-fit buyer and writes the value line with proof."
+
+explain: |
+  Most companies describe themselves by their features and wonder why the pitch does not land. The buyers who already chose you know why they did, and it is rarely the feature list. April Dunford's public method starts there: look at who you won, find what they valued that only you had, and build the message on that.
+
+  This prompt tables your deals with the buyer's words for why and for doubts. It finds what the winning buyers had in common and what they said they valued, quoting them, and marks anything that appears only once as thin. It does the same for losses. It separates win reasons, the things buyers chose you for, from objections you had to get past, because the first makes headlines and the second needs answers. It names your best-fit buyer, writes the value line in buyer words with three proof points from the deals, and shows where your current message talks about things no winner mentioned.
+
+when:
+  - "Your pitch lists features and buyers' eyes glaze."
+  - "You win some deals and lose others and cannot say why."
+  - "You are rewriting your home page and want it built on real win reasons."
+
+you_give:
+  - "Six or more deals, won and lost, with buyer words"
+  - "What you sell, in a paragraph"
+  - "The alternatives buyers weigh (advised)"
+  - "Your current message (optional)"
+you_get:
+  - "A deal table with quoted reasons and doubts"
+  - "Win and loss patterns, with thin ones marked"
+  - "Win reasons separated from objections handled"
+  - "Your best-fit buyer, the value line and three proof points"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your deal notes under it."
+  - "Include losses. The pattern needs both sides."
+  - "Read WIN REASONS. If one surprises you, check the quotes behind it."
+  - "Test the VALUE LINE on your next three calls before you put it on the site."
+
+how_it_works:
+  - title: "Tables the deals"
+    text: "Won or lost, buyer type, alternative, why and doubts in the buyer's words."
+  - title: "Finds the win pattern"
+    text: "Shared situation, trigger and valued things, quoted, with thin ones marked."
+  - title: "Finds the loss pattern"
+    text: "What losing buyers valued that you lacked, and which alternative won."
+  - title: "Separates reasons from objections"
+    text: "What buyers chose you for versus what you had to get past."
+  - title: "Names the best-fit buyer"
+    text: "Who cares most about what only you do, in a paragraph."
+  - title: "Writes the value line and compares"
+    text: "Buyer words, three proof points from the deals, and where the current message misses."
+
+output_shape: |
+  DEALS           <won/lost | buyer | alternative | why | doubts>
+  WIN PATTERN     <...>
+  LOSS PATTERN    <...>
+  WIN REASONS     <list>   OBJECTIONS HANDLED <list>
+  BEST-FIT BUYER  <paragraph>
+  VALUE LINE      <...> + PROOF <3>
+  CURRENT MESSAGE <...>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Sprout, greens gummies, selling to retail buyers. Illustrative deal
+    notes for practice:
+    1. Won, regional grocery chain, compared with a greens powder brand.
+       "Powders sit on our shelf. People buy once." Doubt: "Is it just
+       candy?"
+    2. Won, warehouse club, compared with a doctor-backed greens gummy.
+       "Your limited flavours give us something new every two months."
+       Doubt: price per serving.
+    3. Lost, natural foods chain, compared with a vegan family vitamin
+       brand. "We want clean-label and the sugar-free had sugar alcohols."
+    4. Won, big-box chain, compared with doing nothing (no greens gummy).
+       "Parents told us they want one thing for them and the kids." Doubt:
+       "Can you keep 400 stores in stock?"
+    5. Lost, pharmacy chain, compared with a clinical greens tablet. "We
+       need stronger clinical claims for our shelf talkers."
+    6. Won, online grocer, compared with a TikTok-famous brand. "Your
+       customers reorder. Theirs don't." Doubt: subscription on our own site
+       competing with them.
+    7. Lost, discount chain, compared with a drugstore multivitamin gummy.
+       "Too expensive for our shopper."
+    Alternatives: greens powders, rival greens gummies, drugstore
+    multivitamin gummies, stocking nothing in the category.
+    Current message: "60+ potent ingredients to revive whole body vitality
+    in great tasting gummies. Clinically tested."
+  output: pending
+
+tweaks:
+  - what: "Buyer words"
+    how: "Quote what buyers said, not your summary. The patterns are only as real as the quotes."
+  - what: "Losses"
+    how: "Include as many losses as wins. They show which alternative really beats you."
+  - what: "The alternatives"
+    how: "Name doing nothing as one. It often wins more deals than any rival."
+
+judge:
+  - "Every pattern has quotes from at least two deals or is marked thin."
+  - "Win reasons and objections are separate lists."
+  - "The value line sounds like a buyer, not a brochure."
+  - "No rival is named in anything you would publish."
+  - "The proof points come from the deals."
+
+test:
+  - "Show the VALUE LINE to two buyers who chose you. They should recognise themselves."
+  - "Run it twice. The win reasons should match."
+  - "Give it four deals. It should mark MISSING: more deals and call every pattern thin."
+
+improve:
+  - "Add a deal to the notes every time one closes or dies, and re-run each quarter."
+  - "Add your win-loss interview questions so the notes capture the right words."
+  - "Pair it with the One line position writer to turn the value line into a headline."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a pattern search across deals in one message."}
+  inputs:
+    - "Win-loss interview transcripts"
+    - "The reasons given in your sales tool for each closed deal"

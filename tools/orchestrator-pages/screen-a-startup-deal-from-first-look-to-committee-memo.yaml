@@ -1,0 +1,111 @@
+new_slug: screen-a-startup-deal-from-first-look-to-committee-memo
+name: Screen a startup deal from first look to committee memo
+summary: Give it the pitch and the numbers. Get a diligence review, a valuation range and the committee memo.
+job: money-and-investing
+thinking: high
+thinking_why: It judges a company from thin evidence and writes a memo other people will act on. Give it your strongest model.
+headline: Screen a startup deal from first look to committee memo
+subhead: Give it the pitch and the numbers. It reviews the startup as a diligence lead would, estimates a valuation range for its stage, writes a screening memo with a clear call, then drafts the investment committee memo with the case, the risks and what would change your mind.
+explain: |
+  Early-stage deals are decided on thin evidence under time pressure, so the usual failure is a memo that restates the pitch with a recommendation at the end. The questions that would have killed the deal were never asked, the valuation was taken from the founder, and the committee heard enthusiasm.
+
+  This workflow puts the deal through four honest steps. It reviews the company as a diligence lead would: team, market, product, traction, the claims that need checking and the questions to ask the founders. It estimates a valuation range for the stage, with the method shown, so the founder's number is one input among several. It writes a screening memo with a clear call: pass, proceed or wait for a named piece of evidence. Then it drafts the committee memo: the case for, the strongest case against, the terms, and what would change your mind.
+when:
+  - A founder sent you a deck and wants an answer in two weeks.
+  - You want your memos to say no more often, and to say why.
+  - Your committee complains that memos repeat the pitch.
+you_give:
+  - The pitch deck and any data room files, as text
+  - What the founders told you in calls, and their asking valuation and terms
+  - Your fund's thesis, cheque size and the stage you invest at
+  - Market facts you already trust (optional)
+you_get:
+  - "A diligence review: team, market, product, traction, claims to check and questions to ask"
+  - A valuation range for the stage with the method shown
+  - A screening memo with a clear pass, proceed or wait call
+  - An investment committee memo with the case for, the case against, terms and what would change your mind
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the deck, the numbers and your call notes. It reviews the company and estimates a valuation range.
+  - Ask the founders the open questions it lists. Paste their answers.
+  - Read the screening memo. If it says proceed, take the committee memo to your partners.
+how_it_works:
+  - title: Review the company
+    text: Reviews team, market, product and traction, lists the claims to check and the questions to ask the founders.
+  - title: Estimate a valuation range
+    text: Estimates a valuation range for the stage with the method shown next to the founder's number.
+  - title: Ask the founders
+    text: A pause. Ask the founders the open questions. Paste their answers before going on.
+  - title: Write the screening memo
+    text: Writes a short memo with a pass, proceed or wait call and the facts it rests on.
+  - title: Draft the committee memo
+    text: Drafts the committee memo with the case for, the case against, terms, risks and what would change your mind.
+output_shape: |-
+  STEP 1: DILIGENCE REVIEW
+    Team: <...> | Market: <...> | Product: <...> | Traction: <...>
+    Claims to check: <claim, how> | Questions for the founders: <...>
+
+  STEP 2: VALUATION RANGE
+    Method: <...> | Range: <low to high> | Founder's ask: <...> | Gap: <...>
+
+  PAUSE: ask the founders, paste their answers
+
+  STEP 3: SCREENING MEMO
+    Call: <pass / proceed / wait for ...> | Rests on: <three facts> | Open risk: <...>
+
+  STEP 4: COMMITTEE MEMO (if proceed)
+    Case for: <...> | Case against: <...> | Terms: <...> | Risks: <...> | Would change my mind: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    I'm a small angel investor. Sprout, a daily greens gummy brand, is raising a $1.5M seed round at a $9M valuation.
+    From the deck: pouches of 28 daily packs, adults and kids lines; sold on their own site and in big-box retail, warehouse clubs and grocery; trailing twelve months revenue stated as $6.2M, with retail now over half; gross margin 58%; a 2025 placebo-controlled study on vitamin absorption; "4.8 stars from 100,000 reviews".
+    From calls: subscription churn is high after the first discounted month; they run several first-order discounts at once (52% to 61% off) and admit it confuses buyers; the founder makes every decision; two hires left inside a year. Use of funds: retail displays and a kids 12-pack.
+    My thesis: consumer brands with proof of repeat purchase, cheques of $50k to $100k, seed stage.
+    Things I trust: the retail sell-through numbers they showed from one chain.
+  output: pending
+tweaks:
+  - what: Your thesis
+    how: Say what you look for and what you refuse. The review and the memos judge against it.
+  - what: The founders' answers
+    how: Paste them word for word. The screening memo quotes them, and a dodge is itself evidence.
+  - what: The stage
+    how: Say the round and your usual range. Step 2 picks the method for that stage.
+  - what: What you trust
+    how: Name the numbers you have checked yourself. The memo marks the rest as unverified.
+judge:
+  - The review lists the claims to check and does not take the deck's numbers as fact.
+  - The valuation range shows its method and sits next to the founder's ask.
+  - The screening call is one word, with three facts under it.
+  - The committee memo's case against is as long as its case for.
+  - The memo says what would change your mind.
+test:
+  - Give it a deck with a market size and no source. Step 1 should mark it as a claim to check.
+  - Give step 3 a review where two of the three key facts are unverified. It should say wait, not proceed.
+  - Run step 2 twice. The method should be the same.
+  - Ask it to write the committee memo after a pass call. It should decline and say why.
+improve:
+  - Save your thesis and your refusals in one file and paste it every run.
+  - Keep every screening memo. After ten, read the pass calls against what happened to those companies.
+  - Add your committee's memo template once so step 4 fills it.
+  - Pair it with "Review a contract and get edits and a plain summary" when the term sheet arrives.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Your data room
+      why: Export the files as text so every step can read them.
+  inputs:
+    - Reference calls with customers
+    - Public filings or funding records for comparable companies
+    - Your past memos on similar deals
+terms:
+  - term: Data room
+    meaning: The folder of documents a company shares with investors doing diligence.
+  - term: Investment committee
+    meaning: The group at a fund that approves or rejects a deal after reading the memo.

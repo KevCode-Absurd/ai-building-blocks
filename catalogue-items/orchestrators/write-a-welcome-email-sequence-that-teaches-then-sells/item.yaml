@@ -1,0 +1,26 @@
+slug: write-a-welcome-email-sequence-that-teaches-then-sells
+name: "Write a welcome email sequence that teaches, then sells"
+summary: "Give it your offer and reader. Get a five-email sequence, a Hopkins-style review, fixes and a send check."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: email
+level: beginner
+inputs:
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: email_flow}
+  - {type: audit_report}
+uses: [email-sequence-writer, email-draft-reviewer, email-mistake-fixer, email-send-readiness-scorer]
+steps:
+  - {uses: email-sequence-writer, note: "Five emails with timing, each teaching one useful thing before any ask, in your voice, with the sale asked for only after the reader has had something from you."}
+  - {uses: email-draft-reviewer, note: "Each email reviewed against Claude Hopkins's tests: a specific claim, a reason why, proof, one clear action, and nothing clever that hides the offer."}
+  - {uses: email-mistake-fixer, note: "Each flagged line fixed: the vague subject, the claim without proof, the two asks in one email, the paragraph that says nothing."}
+  - {uses: email-send-readiness-scorer, note: "Each email scored for send readiness: links, names, length, spam triggers, the missing unsubscribe, with what to fix before it goes live. You switch it on."}
+origin: own
+version: 1.0.0
+minds: [claude-hopkins]
+credits:
+  - {title: "Scientific Advertising (1923)", by: "Claude C. Hopkins", url: "http://www.scientificadvertising.com/ScientificAdvertising.pdf", used: "Judge every message by its specific claim, its reason why, its proof and its one call to act"}
+example_pending: true

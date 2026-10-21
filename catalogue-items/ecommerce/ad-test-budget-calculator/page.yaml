@@ -1,12 +1,12 @@
 new_slug: ad-test-budget-calculator
 name: "Ad test budget calculator"
-summary: "Give it your target CPA and test days. Get a test budget, a keep or cut rule and a read window."
+summary: "Give it your target CPA and test days. Get a budget, a keep or cut rule and read window."
 job: plan-ad-tests
 thinking: low
 thinking_why: "It is mostly simple arithmetic and clear rules, so a fast, small model is enough."
 
 headline: "Ad test budget calculator"
-subhead: Give it your target cost per sale, how many sales you need to call a test, and how many days you have. It works out the daily budget, how much to spend before you judge, and a keep or cut rule. Stores with a high order value get a plan for weak signal.
+subhead: Give it your target cost per sale, the sales you need to call a test, and your days. It works out the daily budget, how much to spend before you judge, and a keep or cut rule. High order value stores get a plan for weak signal.
 
 explain: |
   Most new-ad tests fail for money reasons, not creative reasons. The ad gets cut after a day, or the budget is sized to Meta's advice of 50 sales in 7 days. At a $100 cost per sale that is about $714 a day for one test, which almost no store can afford.

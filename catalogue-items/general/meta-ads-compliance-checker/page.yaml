@@ -1,6 +1,6 @@
 new_slug: meta-ads-compliance-checker
 name: "Meta ads compliance checker"
-summary: "Paste your ad and its image. Get a compliance score out of 100, every problem, and a fixed ad."
+summary: "Paste your ad and image. Get a compliance score out of 100, every problem and a fixed ad."
 job: check-ads
 thinking: high
 thinking_why: "It judges work against many checks, so a stronger model catches more."

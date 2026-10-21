@@ -5,7 +5,7 @@ name: Systematic review writer
 summary: Name a research question. Get a reproducible search, screened papers, a PRISMA flow and a cited review.
 job: research-topics
 headline: Systematic review writer
-subhead: Name a research question. Get a reproducible search, screened papers, a PRISMA flow and a cited review.
+subhead: Give it a research question and your inclusion rules. It builds search strings, runs them across sources such as PubMed and arXiv, logs every query and screens the papers. You get a repeatable search, a screened paper list, a PRISMA flow diagram and a themed review with checked citations.
 explain: |
   A literature review you can defend: a recorded search, papers screened with clear rules, a PRISMA flow diagram, and a written synthesis whose citations have been checked. Reviewers can repeat your steps and get the same papers.
 

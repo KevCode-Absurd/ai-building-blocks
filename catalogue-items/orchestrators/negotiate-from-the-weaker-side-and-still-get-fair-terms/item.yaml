@@ -1,0 +1,27 @@
+slug: negotiate-from-the-weaker-side-and-still-get-fair-terms
+name: "Negotiate from the weaker side and still get fair terms"
+summary: "Give it the deal. Get their view, your terms, a call plan and calming lines."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: objection_map, required: false}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+uses: [other-person-view-mapper, weak-position-negotiation, negotiation-call-prep-planner, disagreement-calming-line-writer]
+steps:
+  - {uses: other-person-view-mapper, note: "Their side only: what they want, why they act as they do, what they fear losing and how they would describe this deal to their boss."}
+  - {uses: weak-position-negotiation, note: "Your terms, your walk-away point, the two or three things you will not give, and what you can give freely, planned for the side with less power."}
+  - {uses: negotiation-call-prep-planner, note: "The opening, the feeling labels to use, the calibrated how and what questions, and the question that tests whether the deal is real."}
+  - {uses: disagreement-calming-line-writer, note: "Short lines for each point of dispute that lower the heat without giving ground, in the manner of Dale Carnegie and Benjamin Franklin."}
+origin: own
+version: 1.0.0
+minds: [dale-carnegie, nelson-mandela, chris-voss, benjamin-franklin]
+credits:
+  - {title: "How to Win Friends and Influence People (1936)", by: "Dale Carnegie", used: "See the matter from the other person's point of view before you ask for anything"}
+  - {title: "Thou Shalt Not Split The Difference: 7 Reasons Why (March 18, 2025)", by: "Chris Voss, The Black Swan Group", url: "https://www.blackswanltd.com/newsletter/thou-shalt-not-split-the-difference-7-reasons-why", used: "Labels, calibrated questions and the refusal to meet in the middle by habit"}
+example_pending: true

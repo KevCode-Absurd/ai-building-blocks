@@ -1,0 +1,18 @@
+slug: refund-request-reply-writer
+name: "Refund request reply writer"
+summary: "Paste a refund request and your policy. Get a clear yes, no or partial reply that keeps the customer."
+category: general
+boards: []
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

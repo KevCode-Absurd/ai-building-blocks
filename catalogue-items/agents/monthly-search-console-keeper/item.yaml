@@ -1,0 +1,32 @@
+slug: monthly-search-console-keeper
+name: "Monthly Search Console keeper"
+summary: "Give it your Search Console export each month. Get pages to push, thin pages to fix and the next posts to write."
+category: agent
+type: agent
+role: orchestrate
+job: organic
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: web_page, required: true}
+  - {type: tool_connection, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: shortlist}
+  - {type: brief}
+  - {type: plan}
+uses: [site-search-basics-checker, search-console-quick-win-finder, thin-page-finder, topic-cluster-mapper, keyword-to-post-outline-writer, answer-first-page-rewriter]
+steps:
+  - {uses: site-search-basics-checker, note: "Once a quarter, or when pages were added or moved: duplicate titles, a missing sitemap and dead links."}
+  - {uses: search-console-quick-win-finder, note: "Every month: the pages sitting just off the first page or losing clicks, ranked by what pushing them is worth."}
+  - {uses: thin-page-finder, note: "Every month, if the site is connected read-only: pages that are empty, short or missing search fields."}
+  - {uses: topic-cluster-mapper, note: "Once a quarter, or when the quick wins run out: the main page and supporting posts to write next, ranked."}
+  - {uses: keyword-to-post-outline-writer, note: "Only for the two or three posts chosen this month: a one-page outline with intent, headings and what the post must cover."}
+  - {uses: answer-first-page-rewriter, note: "Only for a quick-win page whose problem is the writing, not the links: sections rewritten answer first."}
+schedule: "On the second Monday of each month, once last month's search data is final"
+asks_before: [publishing or changing any page, deleting or redirecting a page, changing a title or description live, submitting anything to a search engine, buying links or tools]
+minds: [neil-patel]
+origin: own
+version: 1.0.0
+example_pending: true

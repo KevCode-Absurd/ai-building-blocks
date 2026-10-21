@@ -1,9 +1,10 @@
 # Build a product people want: AI Blocks
 
-> 55 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 59 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [App polish guide](https://useaiblocks.com/skills/app-polish-guide): Describe your shipped app. Get fixes for fit, flow, clarity and honest persuasion, step by step.
 - [Beta program planner](https://useaiblocks.com/skills/beta-program-planner): Describe your launch. Get who to invite, what to ask them, and clear rules for when the beta ends.
+- [Build an outcome-based roadmap and write the update](https://useaiblocks.com/workflows/build-an-outcome-based-roadmap-and-write-the-update): Give it your goals. Get an opportunity tree, an outcome roadmap, a quarter plan and the update.
 - [Build blueprint writer](https://useaiblocks.com/skills/build-blueprint-writer): Give it a product idea. Get one researched build document with stack, steps and tests an AI can build from.
 - [Build-your-own product designer](https://useaiblocks.com/skills/build-your-own-product-designer): Describe your customisable product. Get a plan with option rules, live pricing, checks and saving.
 - [Chatbot conversation designer](https://useaiblocks.com/skills/chatbot-conversation-designer): Describe your chatbot job. Get conversation flows with questions, error recovery and graceful fallbacks.
@@ -21,18 +22,20 @@
 - [First-run wizard designer](https://useaiblocks.com/skills/first-run-wizard-designer): Describe your product's first minutes. Get a step-by-step setup wizard with skip options, rewards and drop-off tracking.
 - [First-use onboarding designer](https://useaiblocks.com/skills/first-use-onboarding-designer): Describe your product and its first win. Get an onboarding flow that cuts setup and builds a habit.
 - [Free tool idea planner](https://useaiblocks.com/skills/free-tool-idea-planner): Describe your buyers. Get free calculator or tool ideas that bring leads, with a build plan.
-- [Habit loop designer](https://useaiblocks.com/skills/habit-loop-designer): Describe your product. Get a loop of trigger, action, reward and investment that brings users back. Uses the Hook Model.
+- [Habit loop designer](https://useaiblocks.com/skills/habit-loop-designer): Describe your product. Get a four step loop that brings users back, with the weak steps scored.
 - [Hardware project mentor](https://useaiblocks.com/skills/hardware-project-mentor): Describe your sensor or device idea. Get a board pick, where readings go and a phased build plan.
 - [Idea to dev brief writer](https://useaiblocks.com/skills/idea-to-dev-brief-writer): Give it a rough idea or feature request. Get a clear brief a developer can build from, with scope and open questions.
 - [Idea to plan pipeline runner](https://useaiblocks.com/skills/idea-to-plan-pipeline-runner): Give it a raw idea. Get clarifying questions, research, a product brief and a phased plan, as four files.
 - [In-app tour designer](https://useaiblocks.com/skills/in-app-tour-designer): Describe your product and what new users must learn. Get a short tour plan with triggers, tips and completion tracking.
 - [Job story writer](https://useaiblocks.com/skills/job-story-writer): Describe a customer situation. Get job stories in the when, I want, so I can format, with checks for done.
+- [Launch a feature through a beta and read the numbers](https://useaiblocks.com/workflows/launch-a-feature-through-a-beta-and-read-the-numbers): Give it the feature. Get a launch plan, a beta, pre-set metrics, release notes and a results read.
+- [Launch a smaller product on the date you set](https://useaiblocks.com/workflows/launch-a-smaller-product-on-the-date-you-set): Give it your launch plan, date and budget. Get half the scope, a screened request list and a teaser plan.
 - [Launch a smaller product on the date you set](https://useaiblocks.com/workflows/smaller-product-launch): Give it your launch plan, date and budget. Get half the scope, a screened request list and a teaser plan.
 - [Launch scope cutter](https://useaiblocks.com/skills/launch-scope-cutter): Paste your launch plan, date and budget. Get the same date with half the scope, the core first and the rest parked.
 - [Launch scope halver](https://useaiblocks.com/prompts/launch-scope-halver): Paste your launch list, date and budget. Get the same date with half the scope: a core and a parked list.
 - [Lean product shaping coach](https://useaiblocks.com/skills/lean-product-shaping-coach): Describe your product plan. Get a smaller scope, a six-week bet and features to say no to. Uses Shape Up.
 - [New project planner](https://useaiblocks.com/skills/new-project-planner): Give it a vague app idea. Get eight planning files your AI reads each session to stay on track.
-- [New user drop-off finder](https://useaiblocks.com/skills/new-user-drop-off-finder): Paste visits, sign-ups and 30-day users. Get where new people leave and the first-visit fix to try before any new feature.
+- [New user drop-off finder](https://useaiblocks.com/skills/new-user-drop-off-finder): Paste visits, sign-ups and 30-day users. Get the biggest drop-off, a first-visit fix and a measure.
 - [Onboarding improver](https://useaiblocks.com/skills/onboarding-improver): Describe your product. Get a faster path to first value with a checklist, empty states and emails.
 - [Opportunity solution tree builder](https://useaiblocks.com/skills/opportunity-solution-tree): Give it the outcome you want. Get a tree of customer opportunities, solution ideas and the tests for each.
 - [Paywall designer](https://useaiblocks.com/skills/paywall-designer): Describe your plans. Get upgrade screens, trigger moments and copy that convert free users.
@@ -54,6 +57,7 @@
 - [Weak part design-out planner](https://useaiblocks.com/skills/weak-part-design-out-planner): Describe what keeps breaking. Get the part causing most trouble and ways to design it out.
 - [Web project scoper](https://useaiblocks.com/skills/web-project-scoper): Describe a web project. Get its goals, users, features, design tokens and page plan in one scoped brief.
 - [Weekly product feedback triager](https://useaiblocks.com/agents/weekly-product-feedback-triager): Give it each week's feedback. Get every request counted, ruled yes, later or no, and a roadmap change to approve.
+- [Weekly product funnel watcher](https://useaiblocks.com/agents/weekly-product-funnel-watcher): Give it your product events each week. Get the step that lost the most, the cause and one experiment to run.
 - [Work flow layout planner](https://useaiblocks.com/skills/work-flow-layout-planner): Describe a repeated job. Get a layout where the work moves to the person, with fewer steps and less walking.
 - [Write the press release and six-page memo before you build](https://useaiblocks.com/workflows/press-release-memo): Paste your idea. Get a future press release, the hard questions, a six-page memo and a check of that memo.
 - [Yes-later-no request sorter](https://useaiblocks.com/prompts/yes-later-no-request-sorter): Paste your feature requests, who asked and your product focus. Get yes, later or no on each, with a kind reply.

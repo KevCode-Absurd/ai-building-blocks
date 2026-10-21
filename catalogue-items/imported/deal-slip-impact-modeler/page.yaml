@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It runs a small what-if with your numbers.
 new_slug: deal-slip-impact-modeler
 name: Deal slip impact modeler
-summary: Name a deal that may slip. Get the hit to your number, new coverage and the pipeline you need to replace it.
+summary: Name a deal that may slip. Get the hit to your number, new coverage and pipeline to backfill.
 job: sell-and-negotiate
 headline: Deal slip impact modeler
-subhead: Name a deal that may slip. Get the hit to your number, new coverage and the pipeline you need to replace it.
+subhead: "Name the deal and the scenario: it slips, shrinks or is lost. Give it your pipeline export and quota. It groups your quarter into commit, best case and pipeline, then moves the deal. You get the forecast impact, your new coverage ratio, the gap to quota and the pipeline needed to backfill."
 explain: |
   See what a slipping deal does to your number before it happens. You name the deal and the scenario, and you get the hit to your forecast, your new coverage ratio, and how much pipeline you need to replace it.
 

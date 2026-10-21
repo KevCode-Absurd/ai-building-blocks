@@ -1,0 +1,39 @@
+slug: freepik
+name: Freepik
+maker: Freepik
+url: https://www.freepik.com
+promise: Stock graphics and AI image, video and upscaling in one account.
+use_cases: [make-images, design, make-video]
+categories: [image, design, video]
+what_it_does:
+  - Makes images from a written description, with many models to pick from.
+  - Makes video clips from text or a still image.
+  - Makes small images bigger and sharper with its upscaler.
+  - Edits images, including background and object changes.
+  - Offers stock photos, vectors and templates alongside the AI.
+benefits:
+  - Find a stock image, or make one, without switching accounts.
+  - Sharpen a low-quality image before it goes into an ad.
+  - Compare several models on the same idea.
+best_for:
+  - Marketers and designers who already use stock graphics.
+  - Upscaling and cleaning up product images.
+  - Teams who want image and video models under one plan.
+not_for:
+  - A fixed cost per image, since each model uses credits at a different rate.
+  - Long videos with one continuous take.
+pricing:
+  model: subscription
+  from: Check the maker's site
+  note: Freepik now runs as Magnific, and its pricing page redirects there. Plans seen were Premium, Premium+ and Pro Starter on yearly billing, priced in local currency. Credits last one year and do not reset monthly. No free plan was shown.
+works_with:
+  - nano-banana
+  - flux
+  - kling
+runs_in: [web, api]
+blocks:
+  - image-upscale-checker
+alternatives: [krea, higgsfield, canva, adobe-firefly]
+last_checked: 2026-10-21
+sources:
+  - https://www.magnific.com/pricing

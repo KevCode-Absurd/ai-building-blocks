@@ -1,12 +1,12 @@
 new_slug: ad-pull-diagnoser
 name: "Ad pull diagnoser"
-summary: "Paste an ad that gets few replies. Get causes ranked by likelihood and cost to fix, starting with the headline."
+summary: "Paste an ad that gets few replies. Get its causes ranked by likelihood and cost to fix."
 job: check-ads
 thinking: high
 thinking_why: "It weighs several possible causes against thin evidence, so it benefits from your strongest model."
 
-headline: "Why your ad is not getting replies, ranked from most likely to least"
-subhead: Give it the ad, your results and where it ran. It checks in order whether the ad is counted, what the headline says alone, whether the appeal is right and believable, whether the offer is clear, and whether the place or size is the problem. You get the causes ranked, cheapest fix first.
+headline: "Ad pull diagnoser"
+subhead: Give it the ad, your results and where it ran. It checks whether the ad is counted, what the headline says alone, whether the appeal is right and believable, whether the offer is clear, and if the place or size is wrong. You get the causes ranked, cheapest fix first.
 
 explain: |
   When an ad does not pull, the usual response is to change the picture, the colour or the whole campaign. Those are costly changes, and they are rarely the cause. Most weak ads fail in the same few places. The headline offers nothing. The reason to buy is wrong for the product. The claim is too big to believe or too vague to picture. The offer is hidden or the reply is hard to make.

@@ -1,0 +1,50 @@
+slug: cursor
+name: Cursor
+maker: Anysphere
+url: https://cursor.com
+promise: A code editor with an AI agent that writes and reviews code.
+use_cases: [code, build-apps]
+categories: [coding]
+what_it_does:
+  - Writes and changes code across your files when you describe the task.
+  - Drafts a plan first, so you can check it before it builds.
+  - Suggests the next lines as you type, and edits a selection on command.
+  - Lets you pick the AI model, from OpenAI, Anthropic, Google and others.
+  - Runs cloud agents that build, test and hand work back.
+  - Reviews pull requests on GitHub.
+benefits:
+  - Hand off a bug fix and review the result instead of typing it.
+  - Keep your own rules and context in files so every session starts informed.
+  - Try a different AI model on the same task without changing editors.
+  - Get a second review of a pull request before a teammate reads it.
+best_for:
+  - People who already work in a code editor and want an AI pair inside it.
+  - Small teams shipping software who want agents to take the routine tickets.
+  - Founders who can read code and want to move faster on a real codebase.
+not_for:
+  - Anyone who wants to describe an app and never see code (try Lovable or Bolt).
+  - Teams that need a Windows or Linux download confirmed before they commit.
+pricing:
+  model: freemium
+  from: US$8 per month
+  note: Free plan, then Plus (US$8), Premium (US$30), Super (US$100) and Ultra (US$200) per month. Plus covers Grok models only, so check which models each plan includes. Teams start at US$30 per user.
+works_with:
+  - claude
+  - chatgpt
+  - gemini
+  - GitHub
+  - Slack
+runs_in: [desktop, web, mobile, slack]
+blocks:
+  - agent-context-setter
+  - ai-coding-agent-rules-writer
+  - mcp-config-version-checker
+  - mcp-tool-set-designer
+  - mcp-server-hardener
+  - simple-code-coach
+  - slow-code-speeder
+alternatives: [claude-code, github-copilot, windsurf, codex]
+last_checked: 2026-10-21
+sources:
+  - https://cursor.com/pricing
+  - https://cursor.com

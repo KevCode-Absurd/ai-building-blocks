@@ -1,0 +1,47 @@
+slug: claude
+name: Claude
+maker: Anthropic
+url: https://claude.ai
+promise: An assistant for writing, analysis and code that works from your files.
+use_cases: [ask-an-assistant, write-copy, code, analyse-data]
+categories: [chat-assistant, coding]
+what_it_does:
+  - Writes and edits long text in a voice you describe.
+  - Reads documents, spreadsheets and images you upload.
+  - Searches the web and keeps your facts in projects.
+  - Makes documents, slides and small apps you can open and edit.
+  - Connects to apps such as Slack, Google Drive and Microsoft 365.
+benefits:
+  - Hand it your brand notes once and get drafts that sound like you.
+  - Turn a long report into a short summary you can check against the source.
+  - Build a working page or script without writing code yourself.
+  - Reuse a skill from this site in any new chat.
+best_for:
+  - Long documents, careful writing and edits.
+  - Owners who want to add reusable skills to their assistant.
+  - Writing and fixing code in the same account.
+not_for:
+  - Drawing pictures, since it does not make images on its own.
+  - Heavy daily use on the free plan, which has usage limits.
+pricing:
+  model: freemium
+  from: US$20 per month
+  note: Free plan with limits. Pro costs US$20 per month, or US$17 per month billed yearly. Max starts at US$100 per month, and Team seats start at US$20.
+works_with:
+  - claude-code
+  - Slack
+  - Google Drive
+  - Microsoft 365
+runs_in: [web, desktop, mobile, api, chrome]
+blocks:
+  - claude-app-builder
+  - claude-memory-curator
+  - claude-power-user-coach
+  - folder-guide-writer
+  - workplace-shorthand-memory
+  - free-worker-delegator
+  - session-credit-reviewer
+alternatives: [chatgpt, gemini, perplexity, microsoft-copilot]
+last_checked: 2026-10-21
+sources:
+  - https://claude.com/pricing

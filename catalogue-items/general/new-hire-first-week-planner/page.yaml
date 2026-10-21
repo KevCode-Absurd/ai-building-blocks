@@ -1,0 +1,110 @@
+new_slug: new-hire-first-week-planner
+name: "New hire first week planner"
+summary: "Paste the role and your team. Get a day-by-day first week with one small real task and who they meet."
+job: hire-people
+thinking: low
+thinking_why: "It arranges given people, tools and one task across five days."
+
+headline: "New hire first week planner"
+subhead: "Paste the role, the people the new hire works with, the tools they need and one small real task. The prompt plans five days with a purpose per half day, the meetings and the one question to leave each with, the task and its done line, and the check-ins."
+
+explain: |
+  A new hire's first week is often a laptop that is not ready, four hours of forms and a vague "settle in". By Friday they have met nobody who matters and done nothing real. The good first week is the opposite: people and the problem on day one, tools on day two, and a small useful task finished by Friday.
+
+  This prompt sets the Friday outcome, lists what must happen before day one with an owner for each item, and plans each half day with one purpose. It names each meeting with its length and the one question the hire should leave with, including hearing from a customer. It picks the real task or proposes one, says what done looks like and who checks it, and ends the week with a 30-minute look back using three questions you can act on.
+
+when:
+  - "Someone starts on Monday and you have not planned past the welcome coffee."
+  - "Your last hire said the first week was confusing."
+  - "You are the only manager and want a plan you can hand to a colleague to run."
+
+you_give:
+  - "The role and the problem it solves"
+  - "Who they report to and work with"
+  - "The tools and accounts they need"
+  - "One small real task with a clear done (advised)"
+you_get:
+  - "The Friday outcome and the before-day-one list with owners"
+  - "Five days planned by half day, with meetings and questions"
+  - "The real task with its done line, and the check-ins"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the role and team under it."
+  - "Add the tools and a real task if you have one."
+  - "Do the BEFORE DAY ONE list this week."
+  - "Share the plan with the hire on day one, and run the day 5 look back."
+
+how_it_works:
+  - title: "Sets the Friday outcome"
+    text: "One line on what the hire will have done and can say by day five."
+  - title: "Lists before-day-one items"
+    text: "Accounts, laptop, the one document, who greets them, each with an owner and a date."
+  - title: "Plans five days by half day"
+    text: "People and the problem first, tools second, the real task from day three, no more than three meetings a day."
+  - title: "Names the meetings"
+    text: "Who, how long, and the one question to leave with, including a customer."
+  - title: "Picks the real task"
+    text: "Useful, finishable by Friday, with a done line and a checker. Proposed if you gave none."
+  - title: "Plans the check-ins"
+    text: "Short end-of-day talks and a day 5 look back with three questions."
+
+output_shape: |
+  FRIDAY OUTCOME  <one line>
+  BEFORE DAY ONE  <item | owner | by when>
+  DAY 1 to 5      <morning> <afternoon>
+  MEETINGS        <who | minutes | question>
+  THE REAL TASK   <what, done, who checks>
+  CHECK-INS       <when, how long, questions>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Role: customer experience lead at Sprout, hired to fix cancellation
+    complaints and build a help centre.
+    Team: reports to the founder. Works with three support agents, the web
+    developer, and the person who runs the subscription tool. Customers are
+    subscribers to the greens gummies, many of them parents.
+    Tools: the help desk, the subscription tool, the store admin, the shared
+    drive with the brand file, Slack.
+    Real task: write the help article "How do I cancel or pause my Sprout
+    subscription?" from the top tickets, get it checked by the developer for
+    accuracy, and publish it by Friday.
+    Start: Monday, remote, US hours.
+  output: pending
+
+tweaks:
+  - what: "The real task"
+    how: "Give one that someone is waiting for. A task nobody needs teaches the hire that nothing here matters."
+  - what: "The customer"
+    how: "Say how the hire can hear a customer in week one: a call, a review set, a visit."
+  - what: "Meetings"
+    how: "List who really needs to meet them. The plan caps it at three a day."
+
+judge:
+  - "The real task can be finished by Friday and someone needs it."
+  - "No day has more than three meetings."
+  - "There is a customer contact in the week."
+  - "Every before-day-one item has a name beside it."
+  - "You could hand this to a colleague and they could run it."
+
+test:
+  - "Run the plan with your next hire and ask the three look-back questions on Friday. Change the plan from the answers."
+  - "Run it twice. The real task and the Friday outcome should match."
+  - "Leave out the real task. It should propose one marked PROPOSED, not leave the week empty."
+
+improve:
+  - "Add your standard before-day-one list once, so it is never rebuilt."
+  - "Add the one document every hire should read, so it is in day one every time."
+  - "Pair it with the Repeat task how-to writer so the hire's task leaves a how-to behind."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message plan works in any strong chat AI."}
+    - {name: "Your calendar tool", why: "Put the meetings in before day one so nobody has to chase."}
+  inputs:
+    - "What your last hire said was confusing in their first week"
+    - "The one document that explains how your team works"

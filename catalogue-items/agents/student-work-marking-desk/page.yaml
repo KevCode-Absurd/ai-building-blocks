@@ -1,0 +1,125 @@
+new_slug: student-work-marking-desk
+name: Student work marking desk
+summary: Give it each batch of student work. Get every piece marked against one rubric, feedback that names the problem, and class patterns.
+job: teach-and-train
+thinking: high
+thinking_why: It must apply one rubric evenly across thirty pieces, write notes that teach without dictating and know when to leave a call to the teacher. Give it your strongest model.
+headline: Student work marking desk
+subhead: Give it the task, its goal and each batch of student work. It builds one rubric and marks every piece against it, writes feedback that names the problem and leaves the fix to the student, flags the pieces on the edge of a level for you, and shows what a third of the class got wrong. You send the grades.
+explain: |
+  Marking a batch is where good teaching goes to die. The first essay gets twenty minutes and a thoughtful note. The thirtieth gets a tick and "good effort". The same mistake appears in half the pile and gets written out fifteen times instead of becoming Monday's lesson. And the notes drift from naming the problem to writing the fix, so the student learns to wait for it.
+
+  This agent marks every piece the same way. It builds one rubric per task in words a student can read, and you approve it before marking starts. It marks each piece against it, names the weak lines in written work, and sharpens every note so it names a problem and offers a fix only as an example. It leaves the pieces between two levels to you. Then it reads across the batch and tells you which criterion a third of the class missed, with two quotes, and whose level fell since last time. It never sends a grade or a note.
+when:
+  - You teach a class or run a course and a batch of thirty pieces is waiting.
+  - Your feedback has drifted into writing the fix for the student.
+  - You want to know what half the class got wrong before you plan the next lesson.
+you_give:
+  - The task and what a good piece shows the student learned
+  - Each piece of work as text or a file, with a student id
+  - The saved rubric, after the first batch
+  - Your grade scale and anything the school requires in a comment (advised)
+  - Past batches, so growth shows
+you_get:
+  - A rubric per task with clear wording at each level, for you to approve
+  - A level per criterion and sharpened feedback for every piece
+  - The two or three edge cases, with the case for each level
+  - Class patterns with two quoted examples each, pointing at the next lesson
+  - Students whose level rose or fell since their last piece
+  - Anything that looks copied, as a question for you, never a finding
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then describe the task and attach the batch.
+  - On the first batch, read the rubric hard and approve it. It is saved for every later batch of this task.
+  - Read the edge cases and settle them. Read the patterns before you read the pieces.
+  - Approve the feedback. Send grades and notes yourself through your school's system.
+  - Run it on the next batch. Growth per student shows from the second one.
+how_it_works:
+  - title: Build the rubric once per task
+    text: Clear wording at each level, written for a student to read, approved by you before any marking.
+  - title: Mark each piece
+    text: A level per criterion and the gaps, with pieces on the edge between two levels marked for you.
+  - title: Read the writing
+    text: For essays and stories, names the weak lines and asks whether the student is fine with them.
+  - title: Sharpen every note
+    text: Each note names a problem, offers any fix only as an example, and cuts anything generic.
+  - title: Find the patterns
+    text: Any criterion a third or more missed becomes a class pattern with two quotes and the lesson it points to.
+  - title: Log and hand back
+    text: Saves each piece and the student rows, then stops. You send.
+output_shape: |-
+  THE BATCH
+    <n> pieces | levels: <n> at <level>, <n> at <level> ... | edge cases <n> | patterns <n>
+
+  PER PIECE
+    <student id> | <criterion>: <level> | <criterion>: <level> | gaps: <what>
+      Feedback: <note that names the problem> | example of a fix: <optional>
+      Weak lines (written work): "<line>" - are you fine with this?
+
+  EDGE CASES (for the teacher)
+    <student id> | between <level> and <level> | case for each: <two lines>
+
+  CLASS PATTERNS
+    <criterion> missed by <n> of <n> | "<example>" | "<example>" | next lesson: <what>
+
+  GROWTH
+    <student id> | <level> -> <level> since <last task>
+
+  QUESTIONS FOR THE TEACHER
+    <student id> | <looks out of character because ...> (a question, not a finding)
+
+  FILES AND MISSING
+    <each file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Mark this batch for a retail training course run by Sprout for new
+    store partners (practice course and practice learners).
+    Task: "Write a 150-word shelf talker that a shopper reads in ten
+    seconds and that makes no claim the label does not back." Goal:
+    learners can turn label facts into plain, honest shopper copy.
+    Allowed facts: 28 daily packs; 21 vitamins and minerals; 6 g prebiotic
+    fiber; vegan pectin base; third-party tested; "supports digestion",
+    never "fixes" or "cures".
+    Batch: 12 pieces attached, ids L01 to L12. Examples:
+    - L03: "Fixes bloating fast. 100% of your vitamins in every gummy."
+    - L07: "Rip. Tip. Enjoy. 21 vitamins and minerals and 6 g of fiber in
+      one small handful. Supports digestion. Vegan." (148 words total)
+    - L11: 310 words, accurate facts, no headline.
+    Rubric: none yet. Grade scale: pass / merit / not yet. Past batch:
+    task 1, attached.
+  output: pending
+tweaks:
+  - what: The goal
+    how: Say what a good piece shows the student learned. The rubric is built from it, and the rubric decides everything after.
+  - what: Pattern rule
+    how: A third of the batch missing a criterion makes a pattern. Set a quarter for a large class.
+  - what: Fix examples
+    how: Tell it whether notes may include an example of a fix, or must name the problem only.
+  - what: Student ids
+    how: Use ids, not names. The files stay useful and the risk stays low.
+judge:
+  - Every piece was marked against the same rubric.
+  - No note tells the student what to write.
+  - Edge cases were left to you.
+  - Patterns are counted and quoted.
+  - Nothing was sent or recorded.
+test:
+  - Give it two pieces that deserve the same level. It should give them the same level.
+  - Give it a batch where you know half made the same mistake. It should name the pattern with quotes.
+  - Run it twice on the same batch. The levels should match.
+improve:
+  - Write the goal in one sentence before the first batch, and read the rubric hard before approving it.
+  - Set the pattern rule and the fix-example rule for your class.
+  - Keep the student rows between tasks, so growth shows.
+  - Pair it with the Class quiz reteach keeper, which turns the patterns into the next lesson.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep one folder per task, one file per piece and the student rows between batches.
+    - name: Any good chat AI
+      why: Paste the agent, the task and a few pieces at a time. Keep the rubric in a note.
+  inputs:
+    - Your school or programme's required comment wording
+    - Exemplars at each level from a past batch, so the rubric has anchors

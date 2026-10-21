@@ -1,0 +1,111 @@
+new_slug: turn-repeat-customer-questions-into-help-pages-people-understand
+name: Turn repeat customer questions into help pages people understand
+summary: Give it the questions you answer every week. Get checked help pages a stranger can follow.
+job: help-customers
+thinking: high
+thinking_why: It turns scattered answers into pages that must be accurate and easy to read. Give it your strongest model.
+headline: Turn repeat customer questions into help pages people understand
+subhead: Give it the questions you answer every week and how you answer them. It finds what your docs and tickets already say, writes a help page per question, checks the reading level, rewrites any page that reads hard in plain English, then checks every step is accurate and complete.
+explain: |
+  Every business has ten questions that make up most of its support. The answers exist, scattered across sent emails, a chat log and one person's head. New staff answer them differently. Customers who could have helped themselves write in instead, and the help page that does exist reads like a terms sheet.
+
+  This workflow turns those questions into pages people can follow. It first gathers what your docs and tickets already say about each question, with gaps marked. It writes a help page per question: the steps, what the reader should see, and what to do if it fails. It checks the reading level of each page and rewrites any that read hard, following George Orwell's rules for plain English. Then it checks each page as a reader would, for a missing step or a wrong button name. You publish pages that answer the question the first time.
+when:
+  - Ten questions make up most of your support inbox.
+  - Your help pages exist but customers write in anyway, because they could not follow them.
+  - You are training someone new and want the answers written down once, correctly.
+you_give:
+  - The questions you answer every week, and how you answer them today
+  - Your current docs, FAQ or help pages (optional)
+  - Who the readers are and what they already know
+you_get:
+  - What your records already say about each question, with gaps marked
+  - A help page per question, with steps, what the reader should see and what to do if it fails
+  - A reading-level check and a plain rewrite of any page that reads hard
+  - An accuracy check on every page, with the fixes applied
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the questions, how you answer them and any docs you have. It writes a page per question.
+  - Read the reading-level report and the plain rewrites. Confirm the button names and steps are right.
+  - Publish the checked pages and link them in your replies.
+how_it_works:
+  - title: Gather what is known
+    text: Finds the answer your docs and tickets already give for each question, names the sources and marks gaps.
+  - title: Write a page per question
+    text: Writes one help page per question with steps, what the reader should see and what to do if it fails.
+  - title: Check the reading level
+    text: Measures each page's reading level and lists the sentences and words that make it hard.
+  - title: Rewrite the hard pages
+    text: Rewrites the flagged pages in plain English with the same meaning, following Orwell's rules.
+  - title: Check every page is right
+    text: Checks each page for missing steps, wrong button or screen names and promises your docs do not back, and applies the fixes.
+output_shape: |-
+  STEP 1: WHAT IS KNOWN
+    <question>: Answer today: <...> (source: <...>) | Gap or contradiction: <...>
+
+  STEP 2: HELP PAGES
+    <question>: Title <...> | Steps 1 to <n> | After each: what you should see | If it fails: <...>
+
+  STEP 3: READING LEVEL
+    <page>: grade <n> | Hard sentences: <...> | Hard words: <...> | Rewrite: <yes / no>
+
+  STEP 4: PLAIN REWRITES
+    <page>: <rewritten page> | Changed: <what, why>
+
+  STEP 5: ACCURACY CHECK
+    <page>: Missing step: <...> | Wrong name: <...> | Unbacked promise: <...> | Fixed: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, daily greens gummies sold by subscription. Readers: customers, mostly on their phones, who have never emailed us.
+    The questions we answer every week:
+    1. "How do I pause or skip my next pouch?" (we answer: log in, Manage subscription, Skip next order or Pause)
+    2. "I signed up for the first-order discount but was charged the normal price." (the discount needs the text-message sign-up; the small print in our footer says so)
+    3. "Can my kids have the adult gummies?" (no; the kids line is 15 g packs for ages 2 to 13; adults are 20 g)
+    4. "I picked a limited flavour. Why did my next pouch go back to Original?" (limited flavours are one month, then it switches back automatically)
+    5. "How do I use the 30-day money-back guarantee?" (first order only; email us within 30 days of delivery)
+    Our current FAQ is on the product page. It is one long block of text and uses "initial purchase" where customers say "first order".
+  output: pending
+tweaks:
+  - what: How you answer today
+    how: Paste your real reply for each question. The page keeps your facts and fixes the reading.
+  - what: The readers
+    how: Say who they are and what they already know. A page for store buyers reads differently from a page for new subscribers.
+  - what: Screen and button names
+    how: Give the exact names from your app. Step 5 checks every page against them.
+  - what: Target reading level
+    how: Say the grade you want (grade 8 is a good default). Step 3 flags pages above it.
+judge:
+  - Each page answers one question and starts with the first thing the reader does.
+  - After every step, the page says what the reader should see.
+  - Every page is at or below the reading level you asked for.
+  - The rewritten pages say the same things as the originals, in fewer and shorter words.
+  - No page promises something your docs do not back, and the button names match your app.
+test:
+  - Give a page to someone who has never used your product. Can they do the task without asking you?
+  - Paste your current FAQ as the source. Step 3 should flag the long block and step 4 should break it up.
+  - Change a button name in your docs and run step 5. It should catch the page that still uses the old name.
+  - Run step 2 twice on the same question. The steps should be the same both times.
+improve:
+  - Keep the exact names of your screens and buttons in one file and paste it every run.
+  - Add your voice rules (first name, say sorry once) so the pages sound like your replies.
+  - Set your target grade once in step 3 and keep it for every page.
+  - Pair it with "Clear your support inbox and turn fixes into help pages" so new fixes get pages too.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Writing, checking and rewriting are all text.
+    - name: Your help centre or website editor
+      why: Where the finished pages are published and linked.
+  inputs:
+    - Your real replies to each question
+    - Screenshots or exact names of your screens and buttons
+    - Your current FAQ or help pages
+terms:
+  - term: Reading level
+    meaning: A grade score for how hard a text is to read. Grade 8 means most adults read it with ease.

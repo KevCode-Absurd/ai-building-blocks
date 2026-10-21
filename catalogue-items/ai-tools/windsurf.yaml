@@ -1,0 +1,44 @@
+slug: windsurf
+name: Windsurf
+maker: Cognition
+url: https://windsurf.com
+promise: A code editor with an AI agent that edits code across your project.
+use_cases: [code, build-apps]
+categories: [coding]
+what_it_does:
+  - Writes and changes code across several files from a plain request.
+  - Suggests the next lines as you type, with unlimited completions on the free plan.
+  - Makes quick inline edits to a selection.
+  - Runs cloud agents on paid plans.
+  - Lets you choose between several AI models, including open-source ones.
+benefits:
+  - Hand a feature to the agent and review the change instead of writing it.
+  - Start free with a light daily quota before you pay.
+  - Keep one editor for quick edits and bigger agent jobs.
+best_for:
+  - Developers who want an AI editor and are happy to try a newer one.
+  - Solo builders and small teams with a real codebase.
+  - Teams that need admin and billing controls on a paid plan.
+not_for:
+  - Anyone who wants an app with no code visible (try Lovable or Bolt).
+  - Anyone who needs stable plan names, since Windsurf moved under Cognition and its pricing page now redirects.
+pricing:
+  model: freemium
+  from: US$20 per month
+  note: Free plan, then Pro at US$20 per month and Max at US$200 per month, per a July 2026 article. Windsurf's own pricing page now redirects to Devin and could not be read, so check the maker's site.
+works_with:
+  - claude
+  - chatgpt
+  - gemini
+  - GitHub
+runs_in: [desktop, web]
+blocks:
+  - agent-context-setter
+  - mcp-config-version-checker
+  - docker-setup-builder
+  - react-app-structure-planner
+alternatives: [cursor, claude-code, github-copilot, codex]
+last_checked: 2026-10-21
+sources:
+  - https://windsurf.com/pricing
+  - https://automationatlas.io/answers/windsurf-pricing-explained-2026/

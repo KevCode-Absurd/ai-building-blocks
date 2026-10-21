@@ -1,0 +1,137 @@
+new_slug: monthly-tracking-health-keeper
+name: Monthly tracking health keeper
+summary: Give it your analytics setup and platform numbers each month. Get broken tracking found, double counts caught and a fix list.
+job: track-numbers
+thinking: high
+thinking_why: It reasons from gaps between numbers to the broken piece behind them and must not blame the wrong tag. Give it your strongest model.
+headline: Monthly tracking health keeper
+subhead: Give it your analytics setup, last month's platform reports and your real totals. It checks that every planned event still fires under the same name, that each conversion counts once, that every campaign ran with a tagged link, and that the platforms' claims add up against reality. You approve every tag change.
+explain: |
+  Tracking breaks quietly. A theme update drops a tag and the chart goes to zero for three weeks before anyone looks. A developer renames an event and the funnel splits in two. A campaign goes out with no link tag and its visits land in "direct". Meanwhile two ad platforms each claim the same sale, and together report more orders than the store took.
+
+  This agent checks the plumbing every month, the same way. It writes a tracking plan once and checks every event against it. It scores the analytics setup and the paid social tracking out of 100 and compares with last month. It updates the link register and marks any campaign that ran untagged. Then it sets each platform's claims against your real totals for the same dates, gives a truer return and a trust level, and names the likely cause when the platforms claim more than reality. It never touches a tag.
+when:
+  - A chart went to zero last month and nobody noticed for weeks.
+  - Your ad platforms together claim more sales than your store recorded.
+  - You launch campaigns often and "direct" traffic keeps growing.
+you_give:
+  - Which analytics and ad platforms you use, how tags are installed and which events you track
+  - Last month's platform reports and your store or billing totals for the same dates
+  - Your campaign link register (advised)
+  - What changed last month, such as theme updates, new apps or new campaigns (advised)
+  - Your tracking plan, after the first run
+you_get:
+  - A tracking plan with events, naming rules and one main metric
+  - Setup scores out of 100 for analytics and paid social, against last month
+  - Every planned event that stopped firing or changed name, with the fix
+  - Double counts found, with the fix
+  - The link register updated, with untagged campaigns marked
+  - Each platform's claim against your real total, a truer return and a trust level
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run last month.
+  - Describe your setup once. On the first run, approve the tracking plan it writes.
+  - Each month, export each platform's report and your store totals for the same dates. Put them in one folder, or attach them in the chat.
+  - Say what changed last month. Read the broken items first, then the fix list.
+  - Make the fixes you agree with and have someone fire a test event. Run it again next month; it re-checks what you fixed.
+how_it_works:
+  - title: Write the plan once
+    text: The event list, naming rules and one main metric that every month is checked against.
+  - title: Read last month
+    text: Picks up the scores and the fixes marked done, to re-check first.
+  - title: Check the analytics setup
+    text: Missing settings, events that stopped or were renamed, and a score out of 100 against last month.
+  - title: Check the paid social tracking
+    text: The server route, proof each event counts once or the double counts found, and a score.
+  - title: Check the links when campaigns launched
+    text: Tagged links against the register, with any untagged campaign marked as a gap.
+  - title: Check the claims against reality
+    text: Each platform's conversions and revenue against your store totals for the same dates, a truer return and a trust level.
+  - title: Set up AI traffic
+    text: On the first run or when an AI assistant starts sending visits, the channel, post-purchase question and redirect list.
+  - title: Log and hand back
+    text: Updates the health and link files, then stops for your yes.
+output_shape: |-
+  THIS MONTH
+    analytics <n>/100 (last <n>) | paid social <n>/100 (last <n>) | platforms claim <n> conversions, store recorded <n> | gap <%>
+
+  BROKEN FIRST
+    <event> | zero hits since <date> | likely cause: <change> | fix: <what> | who: <role>
+    <double count> | <platform> | fix: <what>
+    <campaign> ran untagged | traffic landed in direct | fix: <link>
+
+  ANALYTICS SETUP
+    <missing setting | renamed event> | fix: <what>
+
+  PAID SOCIAL TRACKING
+    route: <browser | server | both> | counts once: <yes | no: where> | fix: <what>
+
+  LINK REGISTER
+    <campaign> | <channel> | <tagged link> | <ok | gap>
+
+  CLAIMS AGAINST REALITY
+    <platform> | claims <n> conversions, <revenue> | store total <n>, <revenue> | truer return <x> | trust <low | medium | high>
+
+  AI TRAFFIC (when it ran)
+    channel: <definition> | post-purchase question: <text> | redirects: <list>
+
+  FIX LIST (ranked by main metric protected)
+    1. <fix> | protects <what> | who: <role>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run September for sprout.example. Practice numbers, not Sprout's real
+    figures.
+    Setup: GA4 through a tag manager on the storefront theme; paid social
+    pixel in the theme plus a server connection through the store
+    platform; a text-message tool with its own pixel; a cashback app
+    partner that sets a cookie.
+    Events in the plan: view_item, select_plan, add_to_cart,
+    begin_checkout, purchase, day7_checkin_reply.
+    Last month: select_plan sent 0 hits from 12 Sep; a new event
+    "plan_selected" appeared from 12 Sep. The theme was updated 11 Sep.
+    Platform reports (Sept): paid social claims 6,420 purchases,
+    $319,000; search ads claim 1,180 purchases, $58,900; text tool claims
+    2,900 purchases; cashback partner claims 1,650.
+    Store total (Sept): 8,310 orders, $367,000.
+    Campaigns launched: birthday price-cut (paid social, tagged), limited
+    flavour email (tagged), a creator post on 20 Sep (no tag).
+    Link register attached.
+  output: pending
+tweaks:
+  - what: Same dates
+    how: Export every platform and the store for the same date range and time zone. Most false gaps come from mismatched dates.
+  - what: Changes log
+    how: One line per theme update, app install or campaign. Without it the cause of a break is unknown.
+  - what: Gap rule
+    how: A fifth over the store total flags the platforms. Set a tenth if your budgets move on these numbers.
+  - what: Your main metric
+    how: Pick one. The fix list is ranked by how much of it each fix protects.
+judge:
+  - Every event checked is in the plan.
+  - Last month's fixes were re-checked.
+  - Platform claims and store totals cover the same dates.
+  - Every broken item has a fix and a person who can make it.
+  - Nothing was changed or sent.
+test:
+  - Give it a month where you know an event was renamed. It should find the zero-hit event and the new name side by side.
+  - Give it platform reports that together exceed the store total. It should flag the gap and name a likely cause.
+  - Run it twice on the same reports. The scores and the gap should match.
+improve:
+  - Approve the tracking plan with your developer before the first run.
+  - Keep the link register in the folder and add every campaign's link before it launches.
+  - Record each fix and the date it was made. Re-checks depend on it.
+  - Pair it with the Weekly product funnel watcher, which reads the events this one keeps honest.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the plan, health and link files between months and run on the first working day.
+    - name: Your tag manager
+      why: Export the container or list the tags, so the setup check knows what should fire.
+  inputs:
+    - A screenshot of each platform's conversion settings
+    - Your developer's release notes for the month

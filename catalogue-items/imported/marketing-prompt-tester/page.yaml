@@ -5,7 +5,7 @@ name: Marketing prompt tester
 summary: Give it your prompts and test cases. Get scored comparisons of each version and a saved version history.
 job: set-up-ai
 headline: Marketing prompt tester
-subhead: Give it your prompts and test cases. Get scored comparisons of each version and a saved version history.
+subhead: Give it two or more versions of a prompt, a set of test cases and any words the answer must never contain. It runs every prompt on every case and scores the results. You get the scores, a named winner with evidence, a saved version history and a change log.
 explain: |
   Stop picking the prompt that looked best once. Give it two or more versions of a prompt and a set of test cases, and it scores each version, then tells you which wins and why.
 

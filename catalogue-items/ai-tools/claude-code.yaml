@@ -1,0 +1,54 @@
+slug: claude-code
+name: Claude Code
+maker: Anthropic
+url: https://claude.com/product/claude-code
+promise: An AI coding agent that fixes bugs and writes tests in your project.
+use_cases: [code, build-apps]
+categories: [coding]
+what_it_does:
+  - Plans a task, writes the code and runs the tests in your own files.
+  - Fixes bugs, refactors code and moves a project to a new setup.
+  - Maps and explains a codebase you have never seen.
+  - Opens pull requests for the changes it makes.
+  - Asks before it edits files or runs commands.
+  - Runs in the terminal, your editor, the web, the desktop app and Slack.
+benefits:
+  - Get a first pass at a bug fix while you work on something else.
+  - Understand an unfamiliar project in an afternoon instead of a week.
+  - Keep project rules in a file so the agent follows them every time.
+  - Review every change before it lands, because it asks first.
+best_for:
+  - Developers who want an agent that works across a whole project.
+  - Founders with a codebase who need bugs fixed and tests written.
+  - Teams that already use Claude and want coding included.
+not_for:
+  - Anyone who wants to build an app with no code at all (try Lovable or Bolt).
+  - People who want a fixed bill, since heavy use can hit plan limits.
+pricing:
+  model: subscription
+  from: US$20 per month
+  note: Comes with the Claude Pro plan (about US$17 per month billed yearly), Max from US$100 per month, and Team and Enterprise. You can also pay by API usage through a Claude Console account. The free Claude plan does not include it.
+works_with:
+  - claude
+  - cursor
+  - GitHub
+  - Slack
+  - VS Code
+  - JetBrains
+runs_in: [desktop, web, mobile, api, slack]
+blocks:
+  - ai-store-build-planner
+  - plan-your-store-pages-and-get-a-safe-ai-build-plan
+  - claude-memory-curator
+  - ai-coding-agent-rules-writer
+  - agent-context-setter
+  - coding-agent-handoff-writer
+  - token-saver-for-coding-agents
+  - competing-agent-racer
+  - claude-app-builder
+  - generated-code-reviewer
+alternatives: [cursor, codex, github-copilot, windsurf]
+last_checked: 2026-10-21
+sources:
+  - https://claude.com/pricing
+  - https://claude.com/product/claude-code

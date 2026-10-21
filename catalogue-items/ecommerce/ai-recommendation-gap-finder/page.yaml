@@ -1,6 +1,6 @@
 new_slug: ai-recommendation-gap-finder
 name: "AI recommendation gap finder"
-summary: "Paste your AI panel results. Get six gaps ranked into fix, build or influence, and a score out of 100."
+summary: "Paste AI panel results. Get six gaps marked fix, build or influence, and a score out of 100."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It reads a table of results and ranks gaps with reasons, so a mid-level model is enough."

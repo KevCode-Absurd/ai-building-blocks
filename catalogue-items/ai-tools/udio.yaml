@@ -1,0 +1,36 @@
+slug: udio
+name: Udio
+maker: Udio
+url: https://www.udio.com
+promise: Songs with vocals from a text description of the sound you want.
+use_cases: [voice-and-audio]
+categories: [voice]
+what_it_does:
+  - Makes a song with vocals from a text description.
+  - Writes lyrics, or uses the lyrics you paste in.
+  - Makes several versions so you can pick the best.
+  - Lets you extend a track to make it longer.
+benefits:
+  - Get a draft song for an idea without hiring a composer.
+  - Try many styles of one track in an afternoon.
+  - Hear a jingle idea before you spend on a final version.
+best_for:
+  - Song ideas and drafts.
+  - Creators who want to try music styles for a video.
+  - Anyone comparing music makers, alongside Suno.
+not_for:
+  - Commercial use until you confirm the current licence terms for your plan.
+  - Downloading songs, which sources found in 2026 say may be limited.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: There is a free plan with daily credits, and paid Standard and Pro plans. The pricing page text did not show prices, and sources disagree on downloads and commercial rights, so check before you pay.
+works_with:
+  - capcut
+runs_in: [web]
+blocks: []
+alternatives: [suno, elevenlabs]
+last_checked: 2026-10-21
+sources:
+  - https://www.udio.com/pricing
+  - https://dupple.com/learn/suno-vs-udio

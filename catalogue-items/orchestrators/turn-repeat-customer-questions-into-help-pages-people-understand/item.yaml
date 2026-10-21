@@ -1,0 +1,27 @@
+slug: turn-repeat-customer-questions-into-help-pages-people-understand
+name: "Turn repeat customer questions into help pages people understand"
+summary: "Give it the questions you answer every week. Get checked help pages a stranger can follow."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: source_text, required: false}
+outputs:
+  - {type: document}
+  - {type: audit_report}
+uses: [customer-question-researcher, solved-ticket-help-page-writer, text-difficulty-checker, plain-english-editor, documentation-checker]
+steps:
+  - {uses: customer-question-researcher, note: "For each question, the answer your docs, tickets and chats already give, each source named, with gaps and contradictions marked."}
+  - {uses: solved-ticket-help-page-writer, note: "A help page for each question: the steps in order, what the reader should see after each, and what to do if it fails. Written for someone who has never written in."}
+  - {uses: text-difficulty-checker, note: "The reading level of each page, the sentences and words that push it up, and which pages need a rewrite."}
+  - {uses: plain-english-editor, note: "Each flagged page rewritten in plain English with the same substance, following George Orwell's rules: short words, active voice, cut what adds nothing."}
+  - {uses: documentation-checker, note: "Each page checked as a reader would use it: missing steps, wrong names for buttons or screens, promises your docs do not back. Fixes listed and applied."}
+origin: own
+version: 1.0.0
+minds: [george-orwell, william-zinsser]
+credits:
+  - {title: "Politics and the English Language (1946)", by: "George Orwell", url: "https://www.orwellfoundation.com/the-orwell-foundation/orwell/essays-and-other-works/politics-and-the-english-language/", used: "The six rules for plain writing applied in the rewrite step: short words, active voice, cut any word that can be cut"}
+example_pending: true

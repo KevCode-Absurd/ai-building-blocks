@@ -1,0 +1,22 @@
+slug: clear-an-email-backlog-and-set-triage-rules-that-stick
+name: "Clear an email backlog and set triage rules that stick"
+summary: "Give it your inbox rules and the backlog. Get a saved triage guide, drafted replies and fixes."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: source_text, required: true}
+outputs:
+  - {type: brief}
+  - {type: copy_draft}
+uses: [inbox-rules-interviewer, email-backlog-clearer, email-mistake-fixer]
+steps:
+  - {uses: inbox-rules-interviewer, note: "An interview about your email: who your senders are, what you always say yes or no to, how you sound, what goes to someone else, saved as a guide you reuse."}
+  - {uses: email-backlog-clearer, note: "Every email given a call from the guide: a drafted reply, a forward with a note, a one-line decision or an archive, oldest first, with the ones only you can answer marked."}
+  - {uses: email-mistake-fixer, note: "Each draft checked for a wrong name, a promise you did not make, a date you cannot keep or a tone that is off, and fixed. Nothing is sent until you say so."}
+origin: own
+version: 1.0.0
+example_pending: true

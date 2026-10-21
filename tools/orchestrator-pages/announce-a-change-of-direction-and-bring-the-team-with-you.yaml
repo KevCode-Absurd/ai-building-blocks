@@ -1,0 +1,106 @@
+new_slug: announce-a-change-of-direction-and-bring-the-team-with-you
+name: Announce a change of direction and keep the team
+summary: Give it the change and why. Get the memo, a rollout plan, the announcement script and listening talks.
+job: lead-people
+thinking: high
+thinking_why: It writes the words a team will judge you by and plans how they hear them. Give it your strongest model.
+headline: Announce a change of direction and keep the team
+subhead: Give it the change, the reason and who it touches. It writes the priority-shift memo in the manner of Bill Gates's 1995 memo, plans the rollout order and timing, writes the announcement and the hard-question answers, then plans the listen-first talks with the people who will push back.
+explain: |
+  A change of direction announced badly produces nodding in the room and nothing afterwards. The reason is vague, the people most affected hear it last, the hard questions get a "we'll come back to you", and three months later the old priorities are still running because nobody said what stops.
+
+  This workflow announces the change in the order that makes it stick. It writes a short memo that names the shift, the reason and what stops, in the manner of Bill Gates's 1995 memo that turned a company toward the internet. It plans the rollout: who hears first, in what setting, how far apart. It writes the leader announcement, the talking points for managers and honest answers to the hard questions. Then it plans the listen-first talks with the people who will push back, so their objections are heard before they harden.
+when:
+  - You are moving the company's main effort from one thing to another.
+  - A past change was announced once and quietly ignored.
+  - A few senior people will dislike the change and you need them on side.
+you_give:
+  - "The change: what starts, what stops and why"
+  - Who it touches most and who will push back
+  - The timeline you have
+  - Your notes or a draft, if you have one (optional)
+you_get:
+  - A priority-shift memo that names the change, the reason and what stops
+  - "A rollout plan: who hears first, where and when"
+  - The announcement, manager talking points and hard-question answers
+  - A listen-first talk plan for each person who will push back
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the change, the reason and who it touches. It writes the memo and the rollout plan.
+  - Read the announcement and the hard-question answers. Cut anything you would not stand behind.
+  - Hold the listen-first talks before the all-hands, then announce.
+how_it_works:
+  - title: Write the memo
+    text: Writes a short memo that names the shift, the reason, what stops and what each team does differently, in the manner of Gates's 1995 memo.
+  - title: Plan the rollout
+    text: Plans who hears first, where, how far apart, and what each group needs the week after.
+  - title: Write the announcement
+    text: Writes the leader announcement, manager talking points, the town hall script and hard-question answers.
+  - title: Plan the listening talks
+    text: Plans a listen-first talk with each person who will push back, to hold before the announcement.
+output_shape: |-
+  STEP 1: MEMO
+    The shift: <from, to> | Why now: <...> | What stops: <...> | Each team now: <...>
+
+  STEP 2: ROLLOUT
+    First: <who, setting, date> | Then: <...> | All-hands: <date> | Week after: <what each group can do>
+
+  STEP 3: ANNOUNCEMENT
+    Leader message: <...> | Manager points: <...> | Town hall script: <...>
+    Hard questions: <question> / <honest answer>
+
+  STEP 4: LISTENING TALKS
+    <person>: Likely objection <...> | Open with <...> | Listen for <...> | Before: <date>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand, nine people. The change: for the next year we stop launching a new limited flavour every four to eight weeks and put that effort into retail: more big-box and grocery shelves, store displays, a kids 12-pack.
+    Why: limited flavours drive a spike then churn; retail now brings more than our site; our site's discount mess has hurt trust.
+    What stops: the flavour calendar, the tie-in deals, the monthly flavour launch emails.
+    Who it touches: our product developer (flavours are her whole job and she loves it), our social lead (flavour launches are her best content), our operations manager (welcomes it).
+    Push back: the product developer, strongly. The social lead, quietly.
+    Timeline: I want this live by 1 December.
+  output: pending
+tweaks:
+  - what: What stops
+    how: Name it. A change with nothing stopping is a wish, and the memo will say so.
+  - what: Who pushes back
+    how: Name them and why. Each gets a listening talk before the room hears.
+  - what: The reason
+    how: Give the numbers behind it. The memo and the hard-question answers use them.
+  - what: Your voice
+    how: Paste a past memo you were happy with. The new one matches it.
+judge:
+  - The memo fits on one page and says what stops.
+  - The people most affected hear it first, in person, before the all-hands.
+  - Every hard-question answer is one you would say out loud with the questioner in the room.
+  - Each listening talk opens with their view, not your case.
+  - The announcement promises nothing the memo does not.
+test:
+  - Give it a change where nothing stops. Step 1 should push back and ask what stops.
+  - Read the hard-question answers as the product developer. Does one of them answer what she would ask?
+  - Run step 2 twice. The first group to hear should be the same.
+  - Remove the push-back names. Step 4 should ask for them rather than skip the talks.
+improve:
+  - Keep every memo in one folder. The next shift's memo reads what the last one promised.
+  - Add your team's names and roles to your about-me note so the rollout plan uses them.
+  - After the announcement, record which hard questions were asked. Step 3 learns what your team worries about.
+  - Pair it with "Set team goals, run one-on-ones and settle decisions" to turn the shift into goals.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Your calendar
+      why: Book the listening talks before the all-hands.
+  inputs:
+    - The numbers behind the change
+    - A past memo in your voice
+    - Your team list with roles
+terms:
+  - term: Listen-first talk
+    meaning: A one-to-one where you hear the other person's view in full before you make your case.

@@ -1,0 +1,42 @@
+slug: notebooklm
+name: NotebookLM
+maker: Google
+url: https://notebooklm.google.com
+promise: Answers, summaries and audio overviews drawn only from the sources you add.
+use_cases: [research, organise-work]
+categories: [chat-assistant, productivity]
+what_it_does:
+  - Reads documents, links, videos and notes you add as sources.
+  - Answers questions with citations back to your own sources.
+  - Makes study guides, briefs and mind maps from them.
+  - Turns your sources into a spoken audio overview.
+  - Lets you share a notebook with other people.
+benefits:
+  - Check each answer against the page it came from.
+  - Turn a stack of reports into one short brief.
+  - Listen to a summary of a long document on the move.
+  - Keep one topic's papers, notes and links in one notebook.
+best_for:
+  - Reading a pile of papers, reports or transcripts.
+  - Study guides and briefings from your own material.
+  - Research you need to cite.
+not_for:
+  - Questions about topics outside the sources you add.
+  - Writing marketing copy from scratch.
+pricing:
+  model: freemium
+  from: US$4.99 per month
+  note: Free with a Google account. Paid tiers come with Google AI Plus (US$4.99 per month), AI Pro and AI Ultra, and raise the limits on notebooks and sources.
+works_with:
+  - gemini
+  - Google Drive
+  - Google Docs
+runs_in: [web, mobile]
+blocks:
+  - deep-reading-guide
+  - deep-reading-map-builder
+alternatives: [perplexity, chatgpt, claude, gemini]
+last_checked: 2026-10-21
+sources:
+  - https://support.google.com/notebooklm/answer/16213268
+  - https://gemini.google/us/subscriptions/

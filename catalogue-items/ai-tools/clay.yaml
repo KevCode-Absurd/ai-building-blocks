@@ -1,0 +1,41 @@
+slug: clay
+name: Clay
+maker: Clay
+url: https://www.clay.com
+promise: Lead lists with emails, phones and company details filled in from many data sources
+use_cases: [find-leads]
+categories: [sales-and-support, data]
+what_it_does:
+  - Builds a table of leads from your list or a search.
+  - Fills in emails, phones and company details by checking several data providers in turn.
+  - Runs an AI research agent called Claygent that reads a company's website.
+  - Syncs enriched leads to your CRM on the Growth plan.
+  - Sends emails from the Launch plan.
+benefits:
+  - Get a lead list ready to contact, with details already filled in.
+  - Find an email through several providers instead of one.
+  - Write outreach that mentions something real about each company.
+best_for:
+  - Sales and growth teams building targeted outbound lists.
+  - Agencies that research many accounts for clients.
+  - Anyone who wants lead research tied to their own CRM fields.
+not_for:
+  - First-time users who want a ready list without building a table.
+  - Teams that need phone numbers on the free plan, which does not include them.
+pricing:
+  model: freemium
+  from: US$167 per month
+  note: The free plan has 500 actions and 100 data credits a month. Launch is shown from US$167 per month on the pricing page, though its FAQ says US$185, so confirm the billing term.
+works_with:
+  - Salesforce
+  - HubSpot
+  - Slack
+  - apollo
+runs_in: [web, api]
+blocks:
+  - prospect-list-builder
+  - who-to-call-first-ranker
+alternatives: [apollo, hubspot-breeze]
+last_checked: 2026-10-21
+sources:
+  - https://www.clay.com/pricing

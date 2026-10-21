@@ -1,0 +1,111 @@
+new_slug: build-a-lesson-from-explanation-to-practice-and-a-quiz
+name: Build a lesson from explanation to practice and a quiz
+summary: Give it the topic and learners. Get a lesson plan, worked examples, a practice set and a quiz.
+job: teach-and-train
+thinking: high
+thinking_why: It must get the content right and judge how much a learner can take in. Give it your strongest model.
+headline: Build a lesson from explanation to practice and a quiz
+subhead: Give it the topic, the source material and who the learners are. It plans a direct teaching lesson, builds worked examples that fade into practice, writes a practice set and a recall quiz, then checks the whole lesson for overload and cuts what a learner cannot hold.
+explain: |
+  Hard topics are usually taught by explaining them well and hoping. The explanation is clear, the learners nod, and a week later they cannot do the thing. The lesson had no worked examples, the practice came too late or not at all, and the quiz tested the words rather than the skill.
+
+  This workflow builds the lesson in the order evidence supports. It plans direct teaching: what to say, what to show, in what order, with checks for understanding built in. It builds worked examples that fade step by step into the learner doing it alone. It writes a practice set that moves from easy to hard, and a short quiz that asks learners to recall, not recognise. Then it checks the whole lesson for overload: too many new ideas at once, too much text, too few pauses, and cuts or splits what a learner cannot hold.
+when:
+  - You teach a topic learners keep getting wrong.
+  - You are training staff on something technical and have one session.
+  - Your lessons explain well but learners cannot do the task afterwards.
+you_give:
+  - The topic and the source material you teach from
+  - Who the learners are and what they already know
+  - How long the lesson is and how many learners
+  - A common mistake learners make (optional)
+you_get:
+  - A direct teaching lesson plan with checks for understanding
+  - Worked examples that fade into independent practice
+  - A practice set and a recall quiz with answers
+  - An overload check with what was cut or split
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the topic, the source material and who the learners are. It plans the lesson and builds the examples.
+  - Read the practice set and the quiz. Check the answers yourself.
+  - Read the overload check and teach the trimmed version.
+how_it_works:
+  - title: Plan the teaching
+    text: Plans what to say and show, in order, with a check for understanding after each new idea.
+  - title: Build worked examples
+    text: Builds worked examples that fade from fully shown to learner-completed, with the thinking shown.
+  - title: Write the practice set
+    text: Writes a practice set from easy to hard, with answers.
+  - title: Write the recall quiz
+    text: Writes a short quiz that asks learners to recall and do, with answers and the misconception each question catches.
+  - title: Check for overload
+    text: Checks the lesson for too many ideas, too much text and too few pauses, and says what to cut or split.
+output_shape: |-
+  STEP 1: LESSON PLAN
+    Learners: <...> | Time: <...> | Idea <n>: Say <...> | Show <...> | Check: <question>
+
+  STEP 2: WORKED EXAMPLES
+    Example 1 (full): <steps with thinking> | Example 2 (gaps): <...> | Example 3 (yours): <...>
+
+  STEP 3: PRACTICE SET
+    Q<n> (<easy / medium / hard>): <...> | Answer: <...>
+
+  STEP 4: RECALL QUIZ
+    Q<n>: <...> | Answer: <...> | Catches: <misconception>
+
+  STEP 5: OVERLOAD CHECK
+    New ideas: <n> | Text: <...> | Pauses: <...> | Cut: <...> | Split: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. I'm training our three support staff and two new retail reps on how to read our supplement label and answer customer questions about doses truthfully.
+    Source material: our science page and label. Per pack: about 100% of daily value for the vitamins, about 25% for the minerals; vitamin C 93 mg, D3 20 mcg, B12 2.4 mcg as methylcobalamin, folate 400 mcg DFE as methylfolate, iron 4.5 mg, zinc 2.75 mg; 6 g prebiotic fibre. Doses are per pack, not per gummy.
+    Learners: five adults, no science background. They know the product and the customers.
+    Time: one 60-minute session.
+    Common mistake: saying "each gummy gives you 100% of your vitamins", which our own science page once said and which is wrong.
+  output: pending
+tweaks:
+  - what: What learners already know
+    how: Say it. The lesson skips it and spends the time on what is new.
+  - what: The common mistake
+    how: Name it. The worked examples and the quiz are built to catch it.
+  - what: Time
+    how: Give the real minutes. The overload check cuts to fit them.
+  - what: Setting
+    how: Say if it is in person, online or self-paced. The examples and pauses change.
+judge:
+  - Each new idea in the plan has a check for understanding after it.
+  - The worked examples fade from fully shown to learner-completed.
+  - The practice set goes from easy to hard and the answers are correct.
+  - Each quiz question asks the learner to recall or do, and names the misconception it catches.
+  - The overload check cut or split something, or says why nothing needed cutting.
+test:
+  - Teach the lesson once. Did the learners get the quiz right a week later?
+  - Give it a 20-minute slot for a 60-minute topic. Step 5 should split it, not cram it.
+  - Check three practice answers by hand. They should be right.
+  - Run step 2 twice. The fading pattern should be the same.
+improve:
+  - Keep the quiz results. Questions everyone gets wrong show where the lesson needs work.
+  - Save your learners' common mistakes in one file and paste it every time.
+  - Add your source material once per topic and reuse it.
+  - Pair it with "Mark student work against a rubric and sharpen your feedback" for the practice set.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Slides or a whiteboard
+      why: The plan says what to show at each step.
+  inputs:
+    - Past quiz or test results on this topic
+    - Questions learners asked last time
+    - Your slides, if you have them
+terms:
+  - term: Worked example
+    meaning: A problem solved in full in front of the learner, with the thinking shown, before they try one.
+  - term: Recall quiz
+    meaning: A quiz where learners produce the answer from memory instead of picking it from a list.

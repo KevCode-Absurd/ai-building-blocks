@@ -1,8 +1,9 @@
 # Lead and manage people: AI Blocks
 
-> 69 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 75 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Anger pause and repair planner](https://useaiblocks.com/skills/anger-pause-and-repair-planner): Describe a fight or hurt at work or home. Get a pause routine and a calm first message.
+- [Announce a change of direction and keep the team](https://useaiblocks.com/workflows/announce-a-change-of-direction-and-bring-the-team-with-you): Give it the change and why. Get the memo, a rollout plan, the announcement script and listening talks.
 - [Ask for feedback, then give it](https://useaiblocks.com/workflows/ask-for-feedback-then-give-it): Say who you manage. Get a go-to question to ask for feedback and a plan for the next conversation you lead.
 - [Behaviour and fix notes writer](https://useaiblocks.com/skills/behaviour-and-fix-notes-writer): Describe what keeps going wrong and who does it. Get one watchable behaviour, their likely reason, true strengths and a small fix.
 - [Believability-weighted decision helper](https://useaiblocks.com/skills/believability-weighted-decisions): Paste a decision and the views on it. Get each view weighed by track record on this topic, and a clear call.
@@ -39,9 +40,9 @@
 - [Manager output coach](https://useaiblocks.com/skills/manager-output-coach): Describe your team and role. Get meeting rhythms, one-on-ones and the tasks that most raise your team's output.
 - [Motivation designer](https://useaiblocks.com/skills/motivation-designer): Describe your team or product. Get ways to raise drive through choice, skill growth and purpose.
 - [New hire onboarding keeper](https://useaiblocks.com/agents/new-hire-onboarding-keeper): Give it a name, role and start date. Get the plan, then a weekly check on progress and what to fix.
-- [New idea protection planner](https://useaiblocks.com/skills/new-idea-protection-planner): Paste your rough idea and its pressures. Get who sees it, what they may ask, funded time and an end date.
-- [New leader first message writer](https://useaiblocks.com/skills/new-leader-first-message-writer): Paste your background and your team's situation. Get a first-week message: who you are, why you are here, what happens next.
-- [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner): Name the person who reports to you and their job. Get a meeting plan with agenda rules, timing and follow-up.
+- [New idea protection planner](https://useaiblocks.com/skills/new-idea-protection-planner): Paste your rough idea and its pressures. Get who sees it, allowed questions, funding and an end date.
+- [New leader first message writer](https://useaiblocks.com/skills/new-leader-first-message-writer): Paste your background and team situation. Get a first-week message saying who you are and what happens next.
+- [One-on-one meeting planner](https://useaiblocks.com/skills/one-on-one-meeting-planner): Name who reports to you and their job. Get a meeting plan with agenda rules, timing and follow-up.
 - [Ops capacity planner](https://useaiblocks.com/skills/ops-capacity-planner): Give it your demand and team size. Get staffing levels, overload risk and a 12-month hiring plan.
 - [Order-to-request rewriter](https://useaiblocks.com/skills/order-to-request-rewriter): Paste a message full of orders. Get each turned into a question or request with their gain and an easy first step.
 - [Peer feedback session planner](https://useaiblocks.com/skills/peer-feedback-session-planner): Paste the stuck project and who could review it. Get a session plan with rules so notes stay honest.
@@ -51,6 +52,7 @@
 - [Project review prep planner](https://useaiblocks.com/skills/project-review-prep-planner): Name a finished project. Get prep: a fresh format, a two-list form, numbers to pull and who hears the lessons.
 - [Proportional fix planner](https://useaiblocks.com/skills/proportional-fix-planner): Paste a chain of whys. Get a fix at each level, sized to the pain, with an owner, date and check.
 - [Protect a rough new idea until it is ready](https://useaiblocks.com/workflows/protect-new-idea): Describe your new idea and the pressure on it. Get a verdict on early or broken, and a plan that shields it.
+- [Quarterly performance review keeper](https://useaiblocks.com/agents/quarterly-performance-review-keeper): Give it the quarter's goals and notes per person. Get each review drafted from evidence, with next quarter's goals to approve.
 - [Recognition plan designer](https://useaiblocks.com/skills/recognition-plan-designer): Describe your team and goals. Get a reward plan where anyone who reaches a set level wins, with a public moment.
 - [Repeatable standards sheet writer](https://useaiblocks.com/skills/standards-sheet-writer): Describe your product or service. Get a one-page sheet of checkable standards so it feels the same every time.
 - [Results agreement writer](https://useaiblocks.com/skills/results-agreement-writer): Describe a job to hand off or a deal to settle. Get a one-page agreement on results, limits, help, review and consequences.
@@ -60,14 +62,18 @@
 - [Sales hiring scorecard builder](https://useaiblocks.com/skills/sales-hiring-scorecard-builder): Describe your sale and past hires. Get a 1 to 10 scorecard with a test for each trait.
 - [Sales pay plan checker](https://useaiblocks.com/skills/sales-pay-plan-checker): Paste your commission plan and churn by rep. Get what it rewards and ignores, plus one change to test.
 - [Sales role splitter](https://useaiblocks.com/skills/sales-role-splitter): List who does which sales job. Get which job to split out first, who owns it and what to track.
+- [Set team goals, run one-on-ones and settle decisions](https://useaiblocks.com/workflows/set-team-goals-run-one-on-ones-and-settle-decisions): Describe your team and the quarter. Get goals with dated key results, a one-on-one plan and a way to settle disputes.
 - [Set team goals, run one-on-ones and settle decisions](https://useaiblocks.com/workflows/team-goals-one-on-ones): Describe your team and the quarter. Get goals with dated key results, a one-on-one plan and a way to settle disputes.
 - [Small win praise planner](https://useaiblocks.com/skills/small-win-praise-planner): Describe the change you want from someone. Get what counts as a win, the exact praise to give and when.
 - [Sprint coach](https://useaiblocks.com/skills/sprint-coach): Give it your sprint data. Get velocity trends, retro themes and fixes for your team's habits.
+- [Take over a team as its new leader](https://useaiblocks.com/workflows/take-over-a-team-as-its-new-leader): Give it the team and your brief. Get a first message, a listening tour and results agreements.
 - [Team culture memo writer](https://useaiblocks.com/skills/team-culture-memo-writer): Describe your team and how you want it to work. Get a short culture memo with a keeper test and feedback rules.
 - [Team experiment week planner](https://useaiblocks.com/skills/team-experiment-week-planner): Paste your team size and work. Get a protected experiment week, a change of setting and a way to share results.
 - [Team layout planner](https://useaiblocks.com/skills/team-layout-planner): Describe your teams. Get a team structure for fast work, with clear owners and how teams hand off. Uses Team Topologies.
 - [Team pipeline roll-up writer](https://useaiblocks.com/skills/team-pipeline-roll-up-writer): Ask for your team's pipeline. Get a view by rep and stage, at-risk deals and coaching points.
 - [Top-priority shift memo writer](https://useaiblocks.com/skills/top-priority-shift-memo-writer): Describe a change that breaks your plan. Get a one-page memo that resets the top priority and each person's next step.
 - [Tough feedback note drafter](https://useaiblocks.com/prompts/tough-feedback-note-drafter): Paste what went wrong and who needs to hear it. Get a note that changes the behaviour.
+- [Weekly one-on-one prep keeper](https://useaiblocks.com/agents/weekly-one-on-one-prep-keeper): Give it last week's notes on each person you manage. Get this week's agenda, the praise and the hard point to raise.
 - [Word-for-word no writer](https://useaiblocks.com/prompts/word-for-word-no-writer): Paste the request you must turn down and why. Get a no you can say, with another way forward.
+- [Write a culture memo your team lives by](https://useaiblocks.com/workflows/write-your-team-culture-memo-and-make-it-real-in-daily-habits): Give it how your team works. Get a culture memo, a standards sheet and a rule to drop.
 - [Write an annual letter with long-term priorities and metrics](https://useaiblocks.com/workflows/annual-letter): Paste your year's numbers. Get principles, input metrics, a cash check, a value tally and a draft letter.

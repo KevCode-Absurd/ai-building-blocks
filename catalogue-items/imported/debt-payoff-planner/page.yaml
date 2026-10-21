@@ -2,10 +2,10 @@ thinking: low
 thinking_why: It runs standard payoff maths.
 new_slug: debt-payoff-planner
 name: Debt payoff planner
-summary: List your debts. Get a payoff timeline comparing the snowball and avalanche methods, with total interest for each.
+summary: List your debts and extra cash. Get snowball and avalanche timelines with total interest for each.
 job: money-and-investing
 headline: Debt payoff planner
-subhead: List your debts. Get a payoff timeline comparing the snowball and avalanche methods, with total interest for each.
+subhead: List each debt with its balance, rate and minimum payment, and say how much extra you can pay each month. It runs the snowball and the avalanche side by side. You get a month-by-month timeline for each, the total interest, your debt-free date and a pick that fits your habits.
 explain: |
   A payoff schedule that shows the day you become debt-free, and what each method costs you. You get a month-by-month timeline for the snowball and the avalanche, with total interest and finish date side by side.
 

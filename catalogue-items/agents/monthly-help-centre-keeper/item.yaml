@@ -1,0 +1,29 @@
+slug: monthly-help-centre-keeper
+name: "Monthly help centre keeper"
+summary: "Give it last month's support tickets each month. Get the questions your help pages miss, new articles drafted and stale ones fixed."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: source_text, required: true}
+  - {type: document, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: document}
+  - {type: plan}
+uses: [support-ticket-sorter, customer-question-researcher, solved-ticket-help-page-writer, help-article-writer, answer-first-page-rewriter, draft-brand-voice-checker]
+steps:
+  - {uses: support-ticket-sorter, note: "Every month: each ticket classified and ranked, so the same question asked forty times is counted as one topic."}
+  - {uses: customer-question-researcher, note: "Every month, for each top topic: whether the help centre already answers it, where, and whether the answer matches what support actually said."}
+  - {uses: solved-ticket-help-page-writer, note: "Only for a top topic with no article: a help page built from the best solved ticket, with steps and what the customer should see."}
+  - {uses: help-article-writer, note: "Only for a topic that needs more than one solved ticket, such as a set-up guide or an FAQ section: the article from the tickets and the product docs."}
+  - {uses: answer-first-page-rewriter, note: "Only for an existing article that customers found and still wrote in about: sections rewritten to give the answer first."}
+  - {uses: draft-brand-voice-checker, note: "Every month, last, when a brand brain exists: every new or rewritten article checked against your voice."}
+schedule: "On the first Monday of each month, after last month's tickets are exported"
+asks_before: [publishing, changing or removing any help article, replying to any customer, changing a support macro or auto-reply, changing the help centre's structure, sharing ticket contents outside the support team]
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,125 @@
+new_slug: daily-shutdown-planner
+name: Daily shutdown planner
+summary: Give it your task list and tomorrow's calendar each evening. Get the day closed, three priorities set and focus hours protected.
+job: organise-work
+thinking: medium
+thinking_why: The daily pass is short and well bounded. A fast model handles most evenings. Use a stronger one on Friday, when it reads the week for patterns.
+headline: Daily shutdown planner
+subhead: Give it today's task list and tomorrow's calendar at the end of each day. It closes the day, carries what is open, picks three priorities against the real free hours, places protected focus blocks and boxes shallow work into two windows. On Friday it writes the stop rules and your status update. You approve every change.
+explain: |
+  Days end without ending. The list is half ticked, three new things arrived at five, and the mind keeps working through dinner because nothing was closed. Then the morning starts with the inbox, the first focus hour goes to whatever is loudest, and the thing that mattered carries to Thursday.
+
+  This agent runs the shutdown. It marks each task done, carried or proposed drop and writes one line that the day is closed. It picks three priorities for tomorrow against the hours the calendar really leaves, places focus blocks in the longest gap, and boxes the shallow work. It flags anything carried three days and offers three ways out. On Friday, or after three days of broken focus blocks, it writes at most two stop rules with swaps, and when the same thing keeps breaking a block it proposes one two-minute habit to guard it. It never moves a meeting or sends a word.
+when:
+  - Your evenings leak into work because nothing was closed.
+  - Your mornings start with the inbox and the real work starts at eleven.
+  - The same task has carried for a week and you keep rolling it forward.
+you_give:
+  - Today's task list with what got done and what came in
+  - Tomorrow's calendar with times
+  - The one or two outcomes that matter most this week (advised)
+  - Today's notes and loose thoughts (optional)
+  - The shutdown log, once it exists
+you_get:
+  - The day closed, with done, carried and proposed drops
+  - Three priorities for tomorrow that fit the real free hours, each with a first step
+  - Protected focus blocks in the longest gap and shallow work in two windows
+  - Stuck items with three ways out
+  - On Friday, at most two stop rules with swaps, and a one-page status update if you ask
+  - One two-minute habit to guard a block that keeps breaking
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to close the day.
+  - Paste today's list and tomorrow's calendar, or keep them in a folder it can read.
+  - Say the one or two outcomes that matter this week. It saves them.
+  - Read tomorrow's three and add the blocks to your own calendar. Then stop working.
+  - Run it again tomorrow evening. After three days it starts seeing patterns.
+how_it_works:
+  - title: Close the day
+    text: Marks each task done, carried or proposed drop, records whether the focus blocks held, and writes the day closed.
+  - title: Pick tomorrow's three
+    text: Picks the big tasks against the real free hours, three at most, and flags anything carried three days.
+  - title: Lay out the day
+    text: Places protected focus hours in the longest gap and boxes shallow work into two windows, four deep hours at most.
+  - title: Cut on Friday or after three broken days
+    text: At most two stop rules, each with a swap, proposed for next week.
+  - title: Guard the blocks
+    text: When the same interruption breaks the focus hours three days running, one two-minute habit with a cue.
+  - title: Write the update on Friday
+    text: A one-page status update from the week's closed days, when asked.
+  - title: Log and hand back
+    text: Saves the day and the row, then stops for your yes.
+output_shape: |-
+  TODAY, CLOSED
+    done <n> | carried <n> | proposed drops: <task>, <task> | focus blocks held: <yes | no, broken by <what>>
+
+  TOMORROW'S THREE
+    1. <task> | block <time> | first step: <under 30 min>
+    2. ...
+    3. ...
+
+  THE DAY'S SHAPE
+    focus <time to time> | shallow window 1 <time> | shallow window 2 <time> | morning list: <three lines>
+
+  STUCK (carried 3 days)
+    <task> | drop | shrink to: <first step> | block on <date>
+
+  FRIDAY
+    stop: <rule> -> swap: <what> | stop: <rule> -> swap: <what>
+    status update: <one page, if asked>
+
+  THE GUARD
+    <interruption> broke blocks <n> days | habit: <two minutes> | cue: <when> | restart: <how>
+
+  FILES AND MISSING
+    <the day's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Close today for the marketing lead at Sprout. Practice list, not a
+    real person's.
+    Today's list: write the hook test plan (not done, carried 3 days);
+    review 6 new ad images (done); reply to the creator coordinator about
+    the roster (done); brief the photographer on the October shoot (not
+    done); approve the Thursday newsletter (done, late); new today: the
+    founder wants a one-pager on the habit angle by Friday.
+    Tomorrow: 9:00 to 9:30 stand-up; 11:00 to 12:00 agency call; 14:00 to
+    15:30 retail partner review; nothing after 15:30.
+    Focus goal this week: the hook test plan and the habit-angle one-pager.
+    Log so far this week: Mon focus block broken by Slack pings; Tue broken
+    by Slack pings; Wed broken by a surprise founder request.
+  output: pending
+tweaks:
+  - what: Tomorrow's calendar
+    how: Give the real one. A focus block in a 45-minute gap is a wish.
+  - what: The focus goal
+    how: One or two outcomes for the week. Without them the three priorities come from the carry list alone.
+  - what: Deep work cap
+    how: Four hours a day is the default. Set two if your days are meeting-heavy.
+  - what: Stuck rule
+    how: Three days carried flags a task. Set two for a short week.
+judge:
+  - Every task today is marked done, carried or proposed drop.
+  - The three priorities fit the free hours in the calendar you gave.
+  - No more than four focus hours are planned.
+  - Stop rules appear only on Friday or after three broken days.
+  - Nothing in the calendar was changed.
+test:
+  - Give it a day with one task carried three times. It should flag it and offer three ways out.
+  - Give it a calendar with no gap over an hour. It should say the day is shallow and not fake a block.
+  - Run it twice on the same list and calendar. The three should match.
+improve:
+  - Set your deep work cap and stuck rule before the first run.
+  - Record each morning whether the blocks held and what broke them, in three words. The guard step depends on it.
+  - Give it your team's status update format once, so Friday's update needs no editing.
+  - Pair it with the Weekly review keeper on Friday, which closes the week this one closes day by day.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read the task file and calendar export, keep the daily files and log, and run at shutdown time.
+    - name: Any good chat AI
+      why: Paste the agent, today's list and tomorrow's calendar. Keep the log in a note.
+  inputs:
+    - A three-word note each morning on what broke yesterday's blocks
+    - Your team's status update format

@@ -1,0 +1,31 @@
+slug: monthly-design-system-keeper
+name: "Monthly design system keeper"
+summary: "Give it your product's code each month. Get the drift from your design rules found, contrast checked and a spec to approve."
+category: agent
+type: agent
+role: orchestrate
+job: design
+level: advanced
+inputs:
+  - {type: codebase, required: true}
+  - {type: design_file, required: false}
+  - {type: brand_guide, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: design_direction}
+  - {type: document}
+uses: [design-rules-file-writer, design-system-auditor, colour-contrast-checker, interface-polish-checker, design-ten-principles-reviewer, developer-handoff-spec-writer, design-token-builder]
+steps:
+  - {uses: design-rules-file-writer, note: "Once, and again when the rules change: the DESIGN.md that lists the colours, type, spacing and parts the product really uses, as the base every month is measured against."}
+  - {uses: design-token-builder, note: "Once, when no tokens exist: design tokens, component notes and responsive sizes from the brand colours and fonts."}
+  - {uses: design-system-auditor, note: "Every month: naming problems, hardcoded values and undocumented variants in the components, compared with last month's count."}
+  - {uses: colour-contrast-checker, note: "Only when a token changed or a new colour appeared in the code: every light and dark pair checked, with the closest passing colours."}
+  - {uses: interface-polish-checker, note: "Every month, for screens changed since last time: spacing, type and layout slips, each with a fix proposed."}
+  - {uses: design-ten-principles-reviewer, note: "Once a quarter: the product reviewed against ten principles, with what no longer earns its place."}
+  - {uses: developer-handoff-spec-writer, note: "Only for a new or reworked pattern that passed review: the spec for layout, tokens, states and edge cases."}
+schedule: "On the first Wednesday of each month, after the month's releases"
+asks_before: [changing any code, token, colour or component, publishing the design rules or a spec to the team, removing or renaming a component, changing the brand guide, buying a tool or a font licence]
+minds: [dieter-rams]
+origin: own
+version: 1.0.0
+example_pending: true

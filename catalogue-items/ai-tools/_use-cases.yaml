@@ -1,0 +1,62 @@
+# The jobs people pick an AI product for. Every product in this folder lists 1 to 4 of these ids.
+# A use case is a verb phrase in plain words. The blurb says the outcome first.
+- id: ask-an-assistant
+  name: Ask an AI assistant
+  blurb: Get answers, drafts and plans by typing a question in plain words.
+- id: write-copy
+  name: Write copy
+  blurb: Get ads, emails, product pages and posts written in your voice.
+- id: make-images
+  name: Make images
+  blurb: Turn a written description into product shots, ad images and illustrations.
+- id: make-video
+  name: Make video
+  blurb: Turn a script or a still image into short video clips.
+- id: edit-video
+  name: Edit video
+  blurb: Cut, caption and resize footage you already have in a fraction of the time.
+- id: voice-and-audio
+  name: Make voice and audio
+  blurb: Get narration, voice-overs, music and transcripts from text or recordings.
+- id: research
+  name: Research and answer questions
+  blurb: Get sourced answers and summaries of long documents in minutes.
+- id: build-apps
+  name: Build apps and sites
+  blurb: Describe what you want and get a working app or website to test.
+- id: automate
+  name: Automate work between apps
+  blurb: Move data between the apps you use, with no one copying and pasting.
+- id: run-ads
+  name: Run ads
+  blurb: Plan, make and measure paid ads on Meta, Google and TikTok.
+- id: email-and-sms
+  name: Email and text customers
+  blurb: Send campaigns and automatic flows that bring customers back.
+- id: sell-and-support
+  name: Sell and support customers
+  blurb: Answer customer questions and close deals faster with AI drafting the replies.
+- id: find-leads
+  name: Find leads
+  blurb: Build lists of the right people to contact, with their details filled in.
+- id: meeting-notes
+  name: Take meeting notes
+  blurb: Get a transcript, a summary and the action points from every call.
+- id: slides-and-docs
+  name: Make slides and documents
+  blurb: Turn notes into a finished deck or document in a few minutes.
+- id: analyse-data
+  name: Analyse data
+  blurb: Ask questions of a spreadsheet or database and get charts and answers.
+- id: design
+  name: Design
+  blurb: Make social posts, brand assets and interface mock-ups without a designer.
+- id: code
+  name: Code
+  blurb: Write, fix and ship software with an AI pair that works in your files.
+- id: organise-work
+  name: Organise notes and tasks
+  blurb: Keep notes, docs and tasks in one place and let AI find and summarise them.
+- id: legal
+  name: Do legal work
+  blurb: Review contracts and draft legal documents with an AI built for lawyers.

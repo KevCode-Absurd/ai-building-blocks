@@ -1,6 +1,6 @@
 slug: deal-health-reviewer
 name: Deal health reviewer
-summary: Name a deal. Get a health score, risks, gaps in how it is qualified and the next actions to take.
+summary: Name a deal. Get a health score, ranked risks, qualification gaps and next actions.
 category: general
 boards: []
 type: skill

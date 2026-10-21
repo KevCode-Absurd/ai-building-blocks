@@ -5,7 +5,7 @@ name: Deal returns sensitivity builder
 summary: Give it deal terms. Get IRR and MOIC tables across entry price, debt, exit price and hold time.
 job: money-and-investing
 headline: Deal returns sensitivity builder
-subhead: Give it deal terms. Get IRR and MOIC tables across entry price, debt, exit price and hold time.
+subhead: "Enter the deal: entry EBITDA and multiple, net debt, growth, margins and exit year. It builds the base case with live formulas, then changes one assumption at a time. You get a returns model, an IRR table, a MOIC table and notes on which assumptions matter most."
 explain: |
   Tables that show what a deal returns if the price, the debt or the exit changes. You get IRR and MOIC grids across entry multiple, debt level, exit multiple and hold period, so you can see which assumption matters most.
 

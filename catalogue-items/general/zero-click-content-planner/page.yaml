@@ -1,0 +1,114 @@
+new_slug: zero-click-content-planner
+name: "Zero-click content planner"
+summary: "Paste what your buyers ask and where they hang out. Get a content plan that helps them without a click."
+job: get-found-in-search
+thinking: medium
+thinking_why: "It matches questions to places and designs native answers, which takes judgement about each platform."
+
+headline: "Zero-click content planner"
+subhead: "Paste the questions buyers ask and the places they spend time. The prompt picks the questions worth answering in full, matches each to a place, writes the complete answer in that place's native form with one memory hook, sets what to measure instead of clicks and orders six weeks of pieces."
+
+explain: |
+  Most searches end without a click. Most social posts are read in the feed and never opened. Content built to drag people to your site fights that, and loses. Rand Fishkin's public case is to stop fighting: give the full answer where people already are, name the brand as the source, and earn the memory that turns into a brand search later.
+
+  This prompt takes the questions your buyers really ask and the places you know they spend time. It picks eight to twelve questions worth answering completely, matches each to a place with a reason, and writes the answer in that place's native form, under 120 words, with the brand named once and one fact a reader would repeat. It sets the signals to watch per place, with clicks last, orders six weeks of pieces, and notes the few that will earn a visit anyway.
+
+when:
+  - "Your blog traffic is falling and your posts get read in the feed instead."
+  - "You want AI assistants and search snippets to quote your answers."
+  - "You have expertise your buyers need and no plan for giving it away."
+
+you_give:
+  - "The questions buyers ask, as written"
+  - "Where they spend time, with evidence"
+  - "What you know that they do not (advised)"
+  - "Your claims and voice (optional)"
+you_get:
+  - "Eight to twelve questions matched to places"
+  - "A complete native answer per piece with a memory hook"
+  - "What to measure instead of clicks, and a six-week order"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the questions under it."
+  - "List the places with evidence, such as where your customers say they found you."
+  - "Read QUESTIONS CHOSEN. Swap any that are sales questions in disguise."
+  - "Publish week one's pieces and track the MEASURE signals, not clicks."
+
+how_it_works:
+  - title: "Picks the questions"
+    text: "Eight to twelve that a buyer would be glad to have answered without visiting you."
+  - title: "Matches each to a place"
+    text: "Search snippet, social post, community reply, podcast segment or assistant answer, with why."
+  - title: "Writes the complete answer"
+    text: "Native to the place, under 120 words, brand named once as the source."
+  - title: "Adds the memory hook"
+    text: "One fact a reader would repeat, from your input, or MISSING."
+  - title: "Sets the measures"
+    text: "Saves, shares, replies, brand searches and mentions, with clicks last."
+  - title: "Orders six weeks"
+    text: "Most asked and cheapest first, two pieces a week at most, and the few that earn a click."
+
+output_shape: |
+  QUESTIONS CHOSEN  <question | evidence | place | why>
+  PIECES            <n. place: answer | hook>
+  MEASURE           <place: signals>
+  SIX WEEKS         <week: pieces>
+  EARNS A CLICK     <pieces, links>
+  MISSING           <...>
+  CHECKS MISSED     <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Sprout, daily greens gummies.
+    Questions buyers ask: "do greens gummies actually do anything"; "how much
+    fiber is in greens gummies"; "can gummies replace a greens powder"; "is
+    sugar-free gummy bad for your stomach"; "what age can kids have greens
+    gummies"; "how long until I notice anything"; "methylfolate vs folic
+    acid, does it matter"; "why do I quit every supplement I start"; "are
+    greens gummies just candy".
+    Where they spend time: the review themes show former greens-powder users
+    who listened to health podcasts; parents in Facebook groups about picky
+    eaters; TikTok for the gut-health crowd (a rival brand grew there);
+    Google searches for "greens gummies vs powder".
+    What we know: 6 g prebiotic fiber per pack, 21 vitamins and minerals,
+    pectin base, a clinical study showing vitamin C +40.1% and folate +20.5%
+    absorption, Sugar-Free uses sugar alcohols and some people find Low
+    Sugar gentler, Kids line is for ages 2 to 13, our survey of 3,000+
+    customers found 95% take it at least 4 to 6 times a week.
+    Claims: "supports", never "fixes" or "treats"; no weight-loss claims.
+  output: pending
+
+tweaks:
+  - what: "Evidence of places"
+    how: "Say how you know buyers are there. The plan only uses places with evidence."
+  - what: "What you know"
+    how: "Give the facts and numbers. The memory hooks are built from them and nothing else."
+  - what: "Your claims"
+    how: "Paste what you can and cannot say. Health and money answers stay inside it."
+
+judge:
+  - "Each piece answers the question without needing a click."
+  - "The brand appears once per piece, as the source."
+  - "Every hook is a fact you gave."
+  - "The places are ones you have evidence for."
+  - "Clicks are not the first measure anywhere."
+
+test:
+  - "Publish two pieces and watch the MEASURE signals for a month alongside brand searches."
+  - "Run it twice. The questions chosen should mostly match."
+  - "Give it no places. It should plan search snippets only and mark the gap."
+
+improve:
+  - "Add the places your 'how did you hear about us' answers name, with the caveat that those answers skew."
+  - "Keep the memory hooks in your brand file as the facts worth repeating."
+  - "Pair it with the Keyword to post outline writer for the pieces that earn a click."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message plan works in any strong chat AI."}
+  inputs:
+    - "Your brand search volume over time, as the slow measure"
+    - "Comments and replies on past posts, for the questions you missed"

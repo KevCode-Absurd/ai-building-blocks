@@ -1,0 +1,39 @@
+slug: northbeam
+name: Northbeam
+maker: Northbeam
+url: https://www.northbeam.io
+promise: Find out which ads and channels drive your sales, across every platform
+use_cases: [run-ads, analyse-data]
+categories: [marketing, data]
+what_it_does:
+  - Tracks each customer's path across ads using your own first-party data.
+  - Shows results for every ad channel side by side in custom dashboards.
+  - Counts people who saw an ad and bought later.
+  - Connects to AI assistants through an MCP connection so you can ask about results.
+  - Offers incrementality testing on higher plans.
+benefits:
+  - Move budget to the channels that bring in sales, not the ones that claim credit.
+  - Compare Meta, Google and TikTok on one set of numbers.
+  - Back a budget decision with data you can show a partner.
+best_for:
+  - Ecommerce brands with a meaningful monthly ad budget.
+  - Media buyers who need more than each platform's own reporting.
+  - Teams that want a strategist to help read the numbers.
+not_for:
+  - Stores with a small ad budget, since plans start at US$1,500.
+  - Owners who want a quick look and no setup.
+pricing:
+  model: subscription
+  from: US$1,500 per month
+  note: Starter plan, shown as an estimate that depends on your pageview volume. Professional starts at US$3,500 per month, and Growth and Enterprise are quoted on request.
+works_with:
+  - Shopify
+  - claude
+  - triple-whale
+runs_in: [web, api]
+blocks:
+  - channel-budget-mix-planner
+alternatives: [triple-whale, klaviyo]
+last_checked: 2026-10-21
+sources:
+  - https://www.northbeam.io/pricing

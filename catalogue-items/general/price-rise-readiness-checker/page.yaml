@@ -1,0 +1,113 @@
+new_slug: price-rise-readiness-checker
+name: "Price rise readiness checker"
+summary: "Paste your offer, price and what buyers say. Get a readiness score out of 100 and what to add first."
+job: set-prices
+thinking: high
+thinking_why: "It judges an offer on four parts with evidence and has to resist scoring without proof."
+
+headline: "Price rise readiness checker"
+subhead: "Paste your offer, its price, the new price you have in mind and what buyers say. The prompt scores the offer on result, certainty, speed and effort, gives a readiness score out of 100, names the weakest part and lists what to add before the price moves."
+
+explain: |
+  Raising a price feels like a gamble because nobody can see the thing that decides it: whether the buyer thinks the offer is worth more than they pay. Alex Hormozi describes that worth in public as four parts, the size of the result, how sure the buyer is of getting it, how fast it comes and how little effort it takes. Raise those, and the price can follow.
+
+  This prompt scores each part out of 25 with one line of evidence from your reviews and offer, marks any guess as a guess, and adds them to a readiness score out of 100 with what the band means. It names the weakest part in the buyer's own words, lists three to five things to add (a guarantee, a faster first result, a done-for-you step), each with its cost to you, checks your margin and where rivals sit, and gives the smallest honest test to run.
+
+when:
+  - "Costs went up and you are not sure the offer can carry a higher price."
+  - "You have not changed your price in two years and suspect you are leaving money on the table."
+  - "You want to raise the price and add something so it still feels fair."
+
+you_give:
+  - "The offer, price, terms and guarantee"
+  - "The new price or a range (advised)"
+  - "Reviews, support questions and cancel reasons (advised)"
+  - "What rivals charge and include, described (optional)"
+you_get:
+  - "A readiness score out of 100 with the sum shown and evidence per part"
+  - "The weakest part in buyer words"
+  - "Three to five things to add first, with cost and effect"
+  - "A margin check, a rival check and the smallest test"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your offer under it."
+  - "Paste twenty or more reviews or support messages, including the complaints."
+  - "Read the band. Under 75, do the ADD FIRST items before changing the price."
+  - "Run the TEST on one group for one month before you change the price for everyone."
+
+how_it_works:
+  - title: "Scores the four parts"
+    text: "Result, certainty, speed and effort, 0 to 25 each, with one line of evidence or a GUESS mark."
+  - title: "Adds up the score"
+    text: "Shows the sum out of 100 and what the band means for your decision."
+  - title: "Finds the weakest part"
+    text: "Names it and quotes the buyer words that show it."
+  - title: "Lists what to add"
+    text: "Three to five real additions with their cost to you and the part each lifts."
+  - title: "Checks floor and rivals"
+    text: "Margin at the old and new price, and where the new price sits against described rivals."
+  - title: "Designs the test"
+    text: "One group, one change, one number to watch."
+
+output_shape: |
+  READINESS SCORE  <a>/25 + <b>/25 + <c>/25 + <d>/25 = <n>/100   <band>
+  EVIDENCE         <one line per part>
+  WEAKEST PART     <which, buyer words>
+  ADD FIRST        <what, cost, part lifted> x3 to 5
+  FLOOR AND RIVALS <margins; rival position> or MISSING
+  TEST             <group, change, number>
+  MISSING          <...>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Offer: Sprout greens gummies, 28 daily packs every 4 weeks on
+    subscription. First box $29.99, renews at $49.99. Free shipping, pause
+    or cancel any time, 30-day money-back guarantee on the first order.
+    New price in mind: $54.99 renewal.
+    Buyer words: "the one thing I've been able to stick to"; "tastes like
+    fruit snacks I ate as a kid"; "my bowel movements are normal for the
+    first time in 15 years"; "will the price jump after the first order?";
+    "I hate subscriptions because I feel like they are a trap"; "a gummy
+    can't hold enough to replace my powder"; "after the third day they
+    started tasting better"; cancelling is the loudest complaint on public
+    review sites.
+    Rivals: a big-name greens powder at about $79 a month, 90-day guarantee,
+    now with its own gummies at $49 a month; a doctor-backed greens gummy at
+    $25 to $30 for 50 in grocery stores.
+    Costs: not shared.
+  output: pending
+
+tweaks:
+  - what: "Buyer words"
+    how: "Include complaints and cancel reasons. Certainty and effort scores depend on them."
+  - what: "Costs"
+    how: "Give the cost per unit and the floor check becomes real instead of MISSING."
+  - what: "The new price"
+    how: "Give a range and the test picks the lower end for the first group."
+
+judge:
+  - "Each of the four scores has a quoted line of evidence or a GUESS mark."
+  - "The sum is right."
+  - "The weakest part matches what your customers actually complain about."
+  - "Every ADD FIRST item is something you could really do."
+  - "The test changes one thing for one group."
+
+test:
+  - "Run it on an offer where you already raised the price and know what happened. The band should fit the outcome."
+  - "Run it twice. The weakest part should match."
+  - "Give it an offer with no reviews. Certainty and effort should be marked GUESS."
+
+improve:
+  - "Add your unit cost and target margin, so the floor check always runs."
+  - "Paste your proof-and-claims file so certainty is scored on what you can really claim."
+  - "Pair it with the Price rise letter writer once the score says go."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a scored review in one message."}
+  inputs:
+    - "Cancel reasons from your subscription tool"
+    - "Your unit cost and the margin you need"

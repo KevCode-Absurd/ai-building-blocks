@@ -1,6 +1,6 @@
 slug: cancer-dependency-analyst
 name: Cancer dependency analyst
-summary: Name a gene or cell line. Get which cancers depend on it and which drugs work, from DepMap data.
+summary: Name a gene or cell line. Get which cancers depend on it and which drugs hit them.
 category: general
 boards: []
 type: skill

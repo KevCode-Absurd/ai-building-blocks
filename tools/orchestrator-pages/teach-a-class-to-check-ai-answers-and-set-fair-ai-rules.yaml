@@ -1,0 +1,105 @@
+new_slug: teach-a-class-to-check-ai-answers-and-set-fair-ai-rules
+name: Teach students to check AI answers and set fair rules
+summary: Give it the subject and age group. Get lessons on AI reliability, a spot-the-mistake activity and assignment rules.
+job: teach-and-train
+thinking: high
+thinking_why: It must get the subject right and judge what counts as fair use. Give it your strongest model.
+headline: Teach students to check AI answers and set fair rules
+subhead: Give it the subject, the age group and an assignment. It plans lessons on where AI answers go wrong, builds an activity where students find mistakes in a real AI answer, plans a lesson on critiquing an answer, then rewrites your assignment's AI rules so they are clear and fair.
+explain: |
+  Students already use AI. Banning it teaches them to hide it, and allowing it without skill teaches them to trust whatever comes back. The gap is a lesson nobody has planned: how to tell when an AI answer is wrong, and what counts as fair use on this assignment.
+
+  This workflow plans that teaching. It starts with lessons on AI reliability: where answers go wrong, why they sound confident anyway, and how to check. It builds a spot-the-mistake activity from a real AI answer on your subject, with mistakes planted or found, so students practise catching them. It plans a critique lesson where students grade an AI answer against a rubric. Then it reads your assignment and its AI rules, flags what is vague or unfair, and rewrites the rules so a student knows exactly what is allowed and how to show their own work.
+when:
+  - Your students hand in AI answers with confident errors in them.
+  - Your school asked for an AI policy and nobody knows what to write.
+  - You want students to use AI as a tool and still learn the subject.
+you_give:
+  - The subject, the age group and what they already know
+  - An assignment you set, with its current AI rules if any
+  - A real AI answer on the subject, or let it produce one to work from (optional)
+  - How many lessons you can give to this
+you_get:
+  - Lessons on where AI answers go wrong and how to check them
+  - A spot-the-mistake activity built from a real AI answer
+  - A lesson where students critique an AI answer against a rubric
+  - Your assignment's AI rules checked and rewritten to be clear and fair
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the subject, the age group and the assignment. It plans the lessons and builds the activity.
+  - Check the planted mistakes yourself. Teach the lessons.
+  - Read the rewritten AI rules and put them on the assignment.
+how_it_works:
+  - title: Plan the reliability lessons
+    text: Plans lessons on where AI answers go wrong and how to check them, with examples from the subject.
+  - title: Build the mistake hunt
+    text: Builds an activity where students find mistakes in a real AI answer, with a worksheet and answer key.
+  - title: Plan the critique lesson
+    text: Plans a lesson where students grade an AI answer against a rubric and write the better version.
+  - title: Fix the assignment rules
+    text: Checks your assignment's AI rules for vagueness and unfairness and rewrites them so students know what is allowed.
+output_shape: |-
+  STEP 1: RELIABILITY LESSONS
+    Lesson <n>: <idea> | Example from <subject>: <...> | How to check: <...> | Check for understanding: <...>
+
+  STEP 2: MISTAKE HUNT
+    The AI answer: <...> | Mistakes (key): <line, what's wrong, how to check> | Worksheet: <...>
+
+  STEP 3: CRITIQUE LESSON
+    Rubric: <criteria> | Students grade: <answer> | Then write: <the better version> | Discussion: <...>
+
+  STEP 4: ASSIGNMENT RULES
+    Was vague or unfair: <...> | Allowed: <...> | Not allowed: <...> | Show your work by: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    I teach a high-school nutrition and health class (ages 15 to 16, 28 students). Sprout, the greens gummy brand, gave us permission to use its public pages as a case.
+    Subject for this unit: reading supplement labels and claims.
+    Assignment: "Pick a supplement product. Write 600 words on what its label claims, what the evidence supports, and what a careful buyer should ask." Current AI rule: "Do not use AI."
+    What they know: basic nutrients, what a daily value is. They have all used chat AI.
+    A real AI answer I got when I asked about this brand said "each gummy delivers 100% of your daily vitamins" (the dose is per pack, not per gummy) and "clinically proven to boost energy" (the brand's study measured vitamin absorption only).
+    I can give three 50-minute lessons to this.
+  output: pending
+tweaks:
+  - what: The real AI answer
+    how: Bring one you got yourself. Students take a real answer more seriously than an invented one.
+  - what: The age group
+    how: Say it exactly. The examples and the worksheet change between 12 and 17.
+  - what: What you want to allow
+    how: Say if brainstorming, outlining or checking grammar with AI is fine. The rules allow it clearly.
+  - what: Lesson time
+    how: Give the real minutes. The plan fits them.
+judge:
+  - Each reliability lesson uses an example from your subject, not a generic one.
+  - Every planted mistake is in the key with how a student could check it.
+  - The critique rubric has criteria a student can apply, not only "accuracy".
+  - The rewritten rules say what is allowed as well as what is not.
+  - A student could follow the rules without guessing.
+test:
+  - Try the mistake hunt yourself before class. Can you find every mistake using only the checks taught?
+  - Give step 4 a rule that says only "Do not use AI". It should flag it as unenforceable and rewrite it.
+  - Run step 2 twice. The planted mistakes should be the same kind.
+  - Ask a student to read the rules. Can they say in one line what is allowed?
+improve:
+  - Keep the AI answers students bring in. Next year's mistake hunt starts from the real ones.
+  - Save your rubric and reuse it across assignments.
+  - Add your school's policy once so the rules fit inside it.
+  - Pair it with "Mark student work against a rubric and sharpen your feedback" when the assignments come in.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Your class's chat AI
+      why: Students need the same tool in class that they use at home.
+  inputs:
+    - Your school's AI policy
+    - Past student work with AI errors in it
+    - Your marking rubric
+terms:
+  - term: Rubric
+    meaning: A grid of criteria and levels used to grade work the same way every time.

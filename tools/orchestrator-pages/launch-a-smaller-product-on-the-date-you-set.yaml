@@ -1,0 +1,134 @@
+new_slug: launch-a-smaller-product-on-the-date-you-set
+name: Launch a smaller product on the date you set
+summary: Give it your launch plan, date and budget. Get half the scope, a
+  screened request list and a teaser plan.
+job: build-product
+thinking: high
+thinking_why: It makes hard cuts, judges requests and plans a launch in order.
+  Give it your strongest model.
+headline: Launch a smaller product on the date you set
+subhead: Give it your launch plan, your date and your budget. It locks the date,
+  cuts the plan down to its core and parks the rest. It then screens the feature
+  requests you have, ruling yes, later or no on each. Last, it plans a teaser, a
+  preview and a launch message to your list.
+explain: >
+  Launches slip because the plan keeps growing. Each extra feature feels small,
+  but every one adds screens, help text, testing and promises to keep. The date
+  moves, the budget stretches and the launch gets less sharp, not more.
+
+
+  This workflow holds the date and the budget still and lets only the scope
+  move. It cuts the feature list in half, then in half again, until the core is
+  left, and parks the rest in a later list. It then answers every request with
+  not now, counts only repeats from different people, and lists the hidden cost
+  of each yes. The last step works back from the date to plan hints, an email
+  list, a preview for insiders and the launch message. The approach comes from
+  Getting Real by Jason Fried and 37signals.
+when:
+  - A launch is running late or has grown too big, and the date matters more
+    than the extras.
+  - You have a long list of feature requests and no clear way to say no without
+    losing goodwill.
+  - You have a product close to ready but no plan to build an audience before
+    launch day.
+you_give:
+  - Your launch plan with the full feature list
+  - Your launch date and budget, which the workflow treats as fixed
+  - Feature requests from customers, such as reviews or messages (optional)
+  - Your brand file, for the teaser and the preview (optional)
+you_get:
+  - "A smaller launch for the same date: the core first, a ranked list and a
+    later list of what was cut"
+  - A ruling of yes, later or no on each request, with the full cost of every
+    yes and a short reply for the customer
+  - "A teaser, preview and launch plan: a sign-up page, a handful of insiders, a
+    free sample and the launch message"
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file
+    this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project)
+    and say "Follow HANDOFF.md".
+  - Give it your plan, date and budget, and paste any feature requests.
+  - It works step by step and saves each result. Check the cut list before you
+    read the rest, since the later steps use it.
+  - Tell your team what is cut before anyone builds, and keep the later list
+    somewhere safe.
+how_it_works:
+  - title: Cut the scope
+    text: Locks the date and budget, names the heart of the product and cuts the
+      list in half until the core remains. Parks the rest and checks the launch
+      promise.
+  - title: Screen the requests
+    text: Takes the cut plan and answers every request with not now. Counts repeats
+      from different people, lists hidden costs and rules yes, later or no.
+  - title: Plan the teaser and launch
+    text: Works back from the date. Plans hints and a sign-up page, a preview for a
+      few insiders, a free sample and the message to your list.
+output_shape: >-
+  STEP 1: SMALLER LAUNCH
+    Fixed: <date> and <budget>
+    Heart of the product: <one sentence>
+    Launch list: <what stays, ranked, with the line where time runs out>
+    Later list: <what was cut>
+    Promise check: <what the launch still promises, none needs a cut item>
+
+  STEP 2: REQUEST SCREEN
+    Requests: <request | repeats from different people | hidden costs | yes / later / no | reason>
+    Reply: <short note that reminds the customer why they like the focused product>
+
+  STEP 3: TEASER AND LAUNCH PLAN
+    Months out: <hints and sign-up page>
+    Insiders: <a handful and what they get>
+    Weeks out: <preview and a few early passes>
+    Promo site: <overview, tour, screens, pricing, sign-up>
+    Free sample and teaching piece: <...>
+    Launch message: <to the list>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: Your date and budget
+    how: State both as fixed. If you leave them open, the plan will let them grow
+      back.
+  - what: Your list of requests
+    how: Include who asked and when. Repeat requests from different people mean more
+      than one loud voice.
+  - what: What the product is for
+    how: Tell it the heart of the product in your own words, so it cuts toward the
+      right core.
+judge:
+  - The date and budget are the same at the end as at the start.
+  - The core can be stated in one sentence, and nothing left depends on a cut
+    item.
+  - Cut ideas are parked in a later list, not deleted.
+  - Each yes names its full cost, including screens, help text, terms and
+    promises.
+  - The teaser plan works back from the date, with something to do now, in
+    months and in weeks.
+test:
+  - Give it a plan you know is too big. The cut should leave a launch that could
+    be built in time.
+  - Add a request from one person and a request from five. The repeat should
+    rank higher.
+  - Check that the launch promise still holds after the cuts, line by line.
+improve:
+  - Keep the later list, and review it after launch, not before.
+  - Add your standard reply for a no to the request step, so it sounds like you
+    each time.
+  - After launch, run step 2 again with the requests that came in.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Holds the plan, the requests and the launch dates in one run.
+    - name: An email list tool
+      why: Collects sign-ups from the teaser page and sends the launch message.
+  inputs:
+    - A full list of feature requests, with who asked
+    - Your brand file, with your voice and offer
+    - A short list of people who would like an early look
+terms:
+  - term: Scope
+    meaning: Everything the launch includes, such as features, pages and tasks.
+  - term: Teaser
+    meaning: A hint about the product, put out before launch to collect email
+      addresses and build interest.

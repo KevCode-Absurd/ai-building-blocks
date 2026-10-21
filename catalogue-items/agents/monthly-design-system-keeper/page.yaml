@@ -1,0 +1,128 @@
+new_slug: monthly-design-system-keeper
+name: Monthly design system keeper
+summary: Give it your product's code each month. Get the drift from your design rules found, contrast checked and a spec to approve.
+job: design-work
+thinking: high
+thinking_why: It reads code against design intent, judges which drift is a mistake and which is a lesson, and must propose few fixes well. Give it your strongest model.
+headline: Monthly design system keeper
+subhead: Give it your product's code and design file on the first Wednesday of each month. It writes the design rules from what the code really uses, finds where new code drifted, checks contrast when a colour moves, catches spacing and type slips on changed screens and writes the spec for any new pattern. You approve every change.
+explain: |
+  A design system is written once and then the code moves on. A new screen hardcodes a green that is almost the token. A button grows a fourth variant nobody documented. A spacing value appears that is close enough. Each is small. After a year the product has three shades of the brand colour and nobody can say which is right.
+
+  This agent reads the code every month. It writes the rules from what the product really uses and you approve them. Then it counts the drift, hardcoded values, naming problems and undocumented variants, with the file and line for each, and says when the count has risen two months running. It checks every colour pair when a token moves, catches spacing and type slips on the screens that changed, and once a quarter reviews the whole against ten principles, proposing removals before additions. Any new pattern that passes review gets a spec, because a pattern without one drifts next. It never changes code.
+when:
+  - You have a design system and suspect the code has drifted from it.
+  - A brand refresh changed a colour and you are not sure every pair still passes.
+  - New screens ship every month and nobody checks them against the rules until a designer notices.
+you_give:
+  - Your repo or front-end folder with components and styles
+  - Your design file, so intent can be compared with code (advised)
+  - Your brand guide with colours, type and rules (advised)
+  - The screens or releases that changed this month (advised)
+  - Last month's keeper file, once it exists
+you_get:
+  - A DESIGN.md of the colours, type, spacing and parts the product really uses, for you to approve
+  - Every drift item with file, line and the token or name it should use, counted against last month
+  - Failing colour pairs with the closest passing colours
+  - Spacing, type and layout slips on changed screens, each with a fix
+  - A quarterly ten-principles review with what to remove
+  - A spec for each new pattern, and a fix list of at most fifteen
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then point it at the repo.
+  - On the first run, read and approve the design rules it writes from the code. They are saved.
+  - Each month, tell it which screens or releases changed. Attach the design file if you have one.
+  - Read the drift and the fix list. Make the changes you agree with, then tell the agent which were done.
+  - Run it again on the first Wednesday of next month. It tracks the drift count over time.
+how_it_works:
+  - title: Write the rules once
+    text: A DESIGN.md from the colours, type, spacing and parts the code really uses, and tokens from the brand guide if none exist.
+  - title: Read last month
+    text: Picks up which fixes were proposed and which were done.
+  - title: Measure the drift
+    text: Counts hardcoded values, naming problems and undocumented variants with file and line, and flags a count that rose two months running.
+  - title: Check the colours when they moved
+    text: Tests every light and dark pair after a token change and names the closest passing colour for each failure.
+  - title: Check the changed screens
+    text: Spacing, type and layout slips on this month's screens, each with a fix.
+  - title: Review the whole quarterly
+    text: Ten principles, with what no longer earns its place proposed for removal first.
+  - title: Spec the new patterns
+    text: For a pattern that passed review, the spec for layout, tokens, props, states, breakpoints and edge cases.
+  - title: Log and hand back
+    text: Updates the drift file and stops for your yes.
+output_shape: |-
+  THIS MONTH
+    drift <n> (last month <n>) | <rising 2 months | steady | falling> | screens checked <n> | failing pairs <n> | new specs <n>
+
+  DRIFT
+    <file>:<line> | <hardcoded value | naming | undocumented variant> | found: <value> | should be: <token or name>
+
+  COLOUR PAIRS
+    <foreground> on <background> | ratio <n> | fails <AA | AAA> | closest passing: <colour>
+
+  POLISH SLIPS (changed screens)
+    <screen> | <spacing | type | layout> | <what> | fix: <what>
+
+  QUARTERLY REVIEW
+    <principle> | <verdict> | remove: <what no longer earns its place>
+
+  SPECS
+    <pattern> | layout, tokens, props, states, breakpoints, edge cases | for review
+
+  FIX LIST (max 15, ranked by screens touched)
+    1. <fix> | touches <n> screens | where: <files>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run October on Sprout's storefront theme (practice repo, not Sprout's
+    real one). Repo attached: 41 components, a tokens file and 9 page
+    templates.
+    Brand guide: forest green #00582D, deep green #002C17, cream #FFF7DF,
+    kelly green #007E40 (buttons), sunflower yellow #FFCC2E, plum #581E5A;
+    Work Sans bold for headings, Work Sans medium for body, DM Mono for
+    small uppercase tags.
+    Changed this month: new product page template with the limited
+    flavour tile; the rotating announcement bar; a quiz funnel at /quiz
+    (12 new components); the plan box badge.
+    Design file: attached, product page and quiz frames.
+    Last month: drift 23 (14 hardcoded colours, 6 naming, 3 undocumented
+    variants). Fixes done: 4 of 12 proposed.
+  output: pending
+tweaks:
+  - what: Changed screens
+    how: Name them each month. The polish check looks where the drift is, not everywhere.
+  - what: Fix cap
+    how: Fifteen a month is the default. Set what your team ships.
+  - what: Design file
+    how: With it, intent and code are compared. Without it, the code is the only truth.
+  - what: Drift rule
+    how: Two months rising flags the system. Set one if the team is small and drift is costly.
+judge:
+  - Every drift item has a file, a line and what it should be.
+  - Counts come from the audit, not memory.
+  - Polish checks covered the changed screens.
+  - No spec exists for a pattern that failed review.
+  - Nothing in the code was changed.
+test:
+  - Add one hardcoded brand colour to a component. The next run should find it with file and line.
+  - Change one token to a lighter shade. The contrast check should run and name any failing pair.
+  - Run it twice on the same repo. The drift count should match.
+improve:
+  - Approve the DESIGN.md with a designer in the room before the first month.
+  - Set the fix cap to what your team ships, and record which fixes were done.
+  - Add every pattern that passes review to the specs folder. The next audit reads them.
+  - Pair it with the Quarterly accessibility keeper, which reads the same colour tokens for a different reason.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read the repo, keep the rules, drift and specs files and run on the first Wednesday.
+    - name: Figma
+      why: Export or link the frames for changed screens, so intent can be compared with code.
+  inputs:
+    - A list of components a designer already knows are wrong, so the first audit confirms rather than discovers
+    - Your release notes for the month

@@ -1,0 +1,106 @@
+new_slug: cut-your-product-line-to-the-few-that-pay-and-commit-the-team
+name: Cut your product line to the few that pay
+summary: Give it your products and their numbers. Get the cut list, a give-up list and a commit note.
+job: plan-strategy
+thinking: high
+thinking_why: It kills products people love and must defend each cut with numbers. Give it your strongest model.
+headline: Cut your product line to the few that pay
+subhead: Give it your products, programmes and their numbers. It cuts the line to the few that pay in the manner of Steve Jobs's 1997 cull, reviews every programme as keep or cut, writes the list of what you give up, then writes the disagree-and-commit note that brings the team along.
+explain: |
+  Product lines grow by addition. Every launch adds a product and no review ever removes one. Soon the team spends most of its time on products that make a tenth of the money, and the two that matter get what is left.
+
+  This workflow does the cutting with numbers and a clear order. It ranks the products by what they really earn and what they cost in attention, and cuts the line in the manner of Steve Jobs's 1997 cull at Apple. It reviews every programme the same way, keep or cut, as Jeff Bezos and Warren Buffett judge what to stop. It writes the give-up list: what you will no longer do, said plainly, following Al Ries and Jack Trout's rule that focus means sacrifice. Then it writes the disagree-and-commit note, in Bezos's manner, so people who argued against a cut can still commit to it.
+when:
+  - You have thirty products and five of them make most of the money.
+  - Every meeting is about a product nobody would launch today.
+  - You tried to cut before and the team quietly kept the old products alive.
+you_give:
+  - Your products and programmes with revenue, margin and the attention each takes
+  - What you believe the business is for
+  - Who on the team owns which product
+  - Your brand file (optional)
+you_get:
+  - The product line cut to the few that pay, with the numbers behind each cut
+  - Every programme reviewed as keep or cut
+  - "A give-up list: what you will no longer do, said plainly"
+  - A disagree-and-commit note for the team
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your products, programmes and their numbers. It ranks and cuts.
+  - Read the cuts and the give-up list. Argue with any, then decide.
+  - Read the commit note with the people who disagreed, then send it.
+how_it_works:
+  - title: Cut the line
+    text: Ranks products by what they earn and the attention they take, and cuts to the few that pay, in the manner of Jobs's 1997 cull.
+  - title: Review every programme
+    text: Reviews each programme as keep or cut on its results, in the manner of Bezos and Buffett.
+  - title: Write the give-up list
+    text: Writes what you will no longer do, sell or chase, naming the customers and revenue given up, following Ries and Trout.
+  - title: Write the commit note
+    text: Writes a note that states the decision, records the disagreement and asks everyone to commit, in Bezos's manner.
+output_shape: |-
+  STEP 1: THE CUT LINE
+    Keep: <product> | Earns: <...> | Attention: <...> | Why: <...>
+    Cut: <product> | Earns: <...> | Attention: <...> | Why: <...>
+
+  STEP 2: PROGRAMMES
+    <programme>: <keep / cut> | Result: <...> | Because: <...>
+
+  STEP 3: GIVE-UP LIST
+    We no longer: <...> | Customers we give up: <...> | Revenue we give up: <...> | For: <...>
+
+  STEP 4: COMMIT NOTE
+    Decision: <...> | Who disagreed and why: <...> | We commit to: <...> | Monday: <team, does>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand, nine people.
+    Products: Adult Original (Low Sugar, Sugar-Free; 28 and 84 packs); Kids (28 and 84 packs); limited flavours, one every four to eight weeks (currently five live, each in Low Sugar and Sugar-Free); an electrolyte variety pack; merch (hoodie, tee, tote, caps).
+    Numbers, last 12 months (practice numbers): Adult Original 64% of revenue, 58% margin; Kids 15%, 52% margin; limited flavours 17% of revenue, 44% margin, and about half the team's time; electrolytes 3%, 31% margin; merch 1%, and a warehouse shelf.
+    Programmes: the limited-flavour calendar; cartoon and soda brand tie-ins; a monthly smartwatch giveaway; a cashback app partnership (20% cash back); a referral programme; a VIP programme.
+    What the business is for: a daily greens habit people keep.
+    Owners: the product developer owns flavours and loves them; the social lead owns the tie-ins; the ops manager runs the rest.
+  output: pending
+tweaks:
+  - what: Attention, not only revenue
+    how: Say how much team time each product takes. A product that earns little and eats half the team is the first cut.
+  - what: What the business is for
+    how: One line. Every keep is checked against it.
+  - what: Who owns what
+    how: Name them. The commit note is written knowing who will grieve.
+  - what: Margin after everything
+    how: Give margin after discounts and returns if you can. Gross margin flatters.
+judge:
+  - Every cut has revenue, margin and attention next to it.
+  - The kept products fit what you said the business is for.
+  - Each programme has a keep or cut and a result behind it.
+  - The give-up list names the customers and revenue you lose, in numbers.
+  - The commit note records who disagreed and still asks for commitment.
+test:
+  - Give it a product with high revenue and negative margin after discounts. Step 1 should flag it, not keep it for the revenue.
+  - Read the give-up list as the person whose product was cut. Is it fair?
+  - Run step 1 twice. The kept products should match.
+  - Give step 4 a decision with no disagreement recorded. It should ask who argued against it.
+improve:
+  - Run it once a year with the new numbers, and keep the cut lines to see what crept back.
+  - Save what the business is for in your brand file so the keeps stay consistent.
+  - Add margin after discounts and returns to your product sheet.
+  - Pair it with "Announce a change of direction and keep the team" to roll the decision out.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: A spreadsheet
+      why: Holds revenue, margin and attention per product so the cut is a sort, not a fight.
+  inputs:
+    - Margin after discounts and returns by product
+    - Team hours by product, even rough
+    - Customer words about which products they would miss
+terms:
+  - term: Disagree and commit
+    meaning: Jeff Bezos's phrase for recording an honest disagreement and then backing the decision fully.

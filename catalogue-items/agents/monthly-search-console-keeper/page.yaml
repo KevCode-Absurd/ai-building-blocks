@@ -1,0 +1,126 @@
+new_slug: monthly-search-console-keeper
+name: Monthly Search Console keeper
+summary: Give it your Search Console export each month. Get pages to push, thin pages to fix and the next posts to write.
+job: get-found-in-search
+thinking: high
+thinking_why: It ranks pages by value, sorts each problem into rewrite, fix or expand, and judges last month's pushes against slow-moving data. Give it your strongest model.
+headline: Monthly Search Console keeper
+subhead: Give it last month's Search Console export and your page list. It judges last month's pushes, finds at most three pages worth pushing now, lists the thin pages to fix and writes outlines for the next two or three posts. You approve every change to the site.
+explain: |
+  Search Console has the answers, and almost nobody reads it monthly. Pages sit at position eleven for a year. Thin pages get impressions and no clicks. Posts get planned by the dozen and written by the one. The data is there; the routine is not.
+
+  This agent is the routine. On the second Monday of each month it reads the export the same way, judges whether last month's pushes moved, and picks at most three pages worth pushing, ranked by what a visitor is worth to you. It sorts each problem into rewrite, fix or expand, writes the answer-first rewrite where the words are the problem, and outlines two or three posts from the queries people really type. Once a quarter it checks the basics and refreshes the topic plan. It never changes the site.
+when:
+  - Your site gets visitors from search and nobody looks at the data more than twice a year.
+  - You have pages stuck just off the first page and do not know which ones are worth the push.
+  - You plan posts by instinct and want them to come from what people search for.
+you_give:
+  - Last month's Search Console export with queries, pages, clicks, impressions and position
+  - Your site address and page list
+  - What a sign-up or sale is worth to you (advised)
+  - A read-only connection to your site, for the thin-page check (optional)
+  - Your brand brain, for rewrites (optional)
+you_get:
+  - A verdict on each page you pushed last month
+  - At most three quick wins, each with what to do and what it is worth
+  - Thin pages with the queries each should answer
+  - An answer-first rewrite for any page where the writing is the problem
+  - Two or three post outlines with their target queries
+  - A quarterly basics fix list and a refreshed topic plan
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run last month.
+  - Export last month from Search Console with the same date range each month. Put it in one folder with your page list, or attach them in the chat.
+  - Tell it what a visitor is worth once. It saves it.
+  - Read the quick wins. Make the changes you agree with on your site, then tell the agent which were done.
+  - Run it again on the second Monday of next month. It judges what you changed.
+how_it_works:
+  - title: Read last month
+    text: Compares each pushed page with the month before and marks it moved, no change or fell.
+  - title: Check the basics quarterly
+    text: Finds duplicate titles, a missing sitemap and dead links, which come before new writing.
+  - title: Find the quick wins
+    text: Ranks pages just off the first page or losing clicks by what a push is worth.
+  - title: Find the thin pages
+    text: Lists pages that are empty, short or missing search fields, or that get impressions and no clicks.
+  - title: Sort each quick win
+    text: Rewrite when the words are the problem, fix when the basics are, expand when the page is thin. Three pushes at most.
+  - title: Plan the posts
+    text: Refreshes the topic plan each quarter and outlines two or three posts a month from real queries.
+  - title: Log and hand back
+    text: Saves the page and post rows, then stops for your yes.
+output_shape: |-
+  LAST MONTH
+    <clicks> clicks (<change>) | <impressions> impressions (<change>) | pushes: <n> moved, <n> no change, <n> fell
+
+  BASICS FIRST (quarterly)
+    <duplicate title | missing sitemap | dead link> | <page> | fix: <what>
+
+  QUICK WINS (max 3)
+    <page> | query: "<query>" | position <n> | clicks <n> | do: <rewrite | fix | expand> | worth: <amount or clicks>
+
+  THIN PAGES
+    <page> | impressions <n> | click rate <%> | should answer: "<query>", "<query>"
+
+  REWRITES
+    <page>: <answer-first sections>
+
+  POSTS TO WRITE
+    <title> | query: "<query>" | intent: <what> | headings: <list> | must cover: <list>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run September for sprout.example. Practice numbers, not Sprout's real
+    figures.
+    Search Console export (top rows):
+    - "greens gummies" | /products/sprout | pos 9.4 | 1,850 clicks | 61,000 imp
+    - "greens powder alternative" | /blog/quit-greens-powders | pos 11.2 |
+      310 clicks | 18,400 imp
+    - "is sugar free gummy ok for ibs" | /faq | pos 6.1 | 95 clicks |
+      9,800 imp | click rate 0.9%
+    - "sprout gummies cancel subscription" | /help/cancel | pos 2.3 |
+      1,200 clicks | 4,100 imp
+    - "kids greens gummies" | /products/kids | pos 14.8 | 120 clicks | 22,000 imp
+    - "methylfolate vs folic acid gummies" | no page | 0 clicks | 6,200 imp
+    Last month's push: /blog/quit-greens-powders title rewritten on 12 Aug
+    (was pos 13.5).
+    Visitor value: a new subscriber is worth about $50 first order.
+    Page list and brand brain attached.
+  output: pending
+tweaks:
+  - what: Visitor value
+    how: Give the value of a sign-up or sale. Without it the agent ranks by clicks and says so.
+  - what: Pushes per month
+    how: Three is the default. A team of one should set two.
+  - what: Thin page line
+    how: A click rate under 1 percent with many impressions marks a thin suspect. Set your own line.
+  - what: Date range
+    how: Use the same range each month, or the comparison lies.
+judge:
+  - Every quick win shows its position and clicks from your export.
+  - No more than three pushes were proposed.
+  - Each post outline targets a query people typed, in their words.
+  - Last month's pushes were judged first.
+  - Nothing on the site was changed.
+test:
+  - Run it on a month where you know which page you pushed and what happened. It should judge it the same way.
+  - Run it twice on the same export. The quick wins should match.
+  - Give it an export with one query that has no page. It should propose a post for it.
+improve:
+  - Add your visitor value and your pushes-per-month limit before the first run.
+  - Keep the tracked page list current, so the basics check sees new pages.
+  - Record the date each change went live in the pages file. Verdicts depend on it.
+  - Pair it with the Blog post publish check loop for the posts it outlines.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the page and post files between months and run on the second Monday.
+    - name: Google Search Console
+      why: Export queries and pages with clicks, impressions and position for the month.
+  inputs:
+    - A list of pages added, moved or removed last month
+    - Your sign-up or sales numbers by landing page, so value is real

@@ -1,0 +1,17 @@
+slug: new-hire-first-week-planner
+name: "New hire first week planner"
+summary: "Paste the role and your team. Get a day-by-day first week with one small real task and who they meet."
+category: general
+boards: []
+type: prompt
+role: plan
+job: people
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

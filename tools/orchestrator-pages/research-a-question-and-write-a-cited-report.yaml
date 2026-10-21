@@ -1,0 +1,108 @@
+new_slug: research-a-question-and-write-a-cited-report
+name: Research a question and write a fully cited report
+summary: Give it the question. Get an outline, the sources, a cited report and a check of every claim.
+job: research-topics
+thinking: high
+thinking_why: It must judge sources and refuse to state what they do not support. Give it your strongest model.
+headline: Research a question and write a fully cited report
+subhead: Give it the question and what the answer is for. It outlines the sub-questions, searches scholarly and public databases for sources, writes a report where every claim carries its citation, then checks the report for any claim the sources do not actually support and fixes or cuts it.
+explain: |
+  Research reports fail quietly. The question was never broken down, so the search found the easy sources and missed the key one. The report reads well, and three of its claims rest on nothing, including the one the reader will quote. Nobody checks, because checking means reading every source again.
+
+  This workflow builds the report so it can be checked. It outlines the question into sub-questions and says what evidence would answer each. It searches scholarly databases and public sources and keeps a shortlist with a note on each. It writes the report with a citation on every claim, in a format the reader can follow back. Then a separate pass reads the report against the sources and flags every claim they do not support, so it is fixed, softened or cut before anyone reads it.
+when:
+  - A decision rests on a factual question and you want an answer you can defend.
+  - You write for people who check sources.
+  - Your last report had a claim that turned out to be unsupported.
+you_give:
+  - The question, in your words
+  - What the answer is for and who will read it
+  - Sources you already have or trust (optional)
+  - Sources or kinds of sources to avoid (optional)
+you_get:
+  - A research outline with sub-questions and the evidence that would answer each
+  - A shortlist of sources with a note on each
+  - A report with a citation on every claim
+  - A check of every claim against its source, with fixes applied
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the question and what the answer is for. It outlines the research and searches for sources.
+  - Read the shortlist. Add sources you trust or strike ones you do not.
+  - Read the report and the claim check. Publish or file the corrected version.
+how_it_works:
+  - title: Outline the question
+    text: Breaks the question into sub-questions and says what evidence would answer each.
+  - title: Find the sources
+    text: Searches scholarly and public databases per sub-question and shortlists sources with a note on each.
+  - title: Write the cited report
+    text: Writes the report with a citation on every claim, answering each sub-question in turn.
+  - title: Check every claim
+    text: Reads every claim against its source, flags what is not supported and fixes, softens or cuts it.
+output_shape: |-
+  STEP 1: OUTLINE
+    Sub-question <n>: <...> | Evidence that would answer it: <...> | Counts as a source: <...>
+
+  STEP 2: SOURCES
+    <source>: Answers sub-question <n> | Shows: <...> | Strength: <strong / moderate / weak> | Link: <...>
+
+  STEP 3: REPORT
+    <sub-question>: <answer> [<citation>] ...
+    Where the sources disagree: <...> | What is not known: <...>
+
+  STEP 4: CLAIM CHECK
+    <claim>: Source says <...> | Supported: <yes / partly / no> | Action: <kept / softened / cut>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. Our science page says the product "supports digestion" because of 6 g of a prebiotic fibre blend per pack. Before we write a new page, I want an honest report.
+    Question: what does published research say about daily prebiotic fibre at around 6 g for digestive regularity in healthy adults, and what does it not say?
+    For: our team and our regulatory adviser. The reader will check sources.
+    Trust: peer-reviewed trials and reviews, official dietary guidance.
+    Avoid: supplement brand blogs, press releases.
+    We have one source: the 2025 absorption study the brand ran, which measured vitamin C and folate, not fibre. Note that it does not answer this question.
+  output: pending
+tweaks:
+  - what: The reader
+    how: Say who checks. A regulator, a customer and a journalist need different kinds of sources.
+  - what: Sources to avoid
+    how: Name them. The search skips them and the report never cites them.
+  - what: What you want to be true
+    how: Say it. The claim check is told to be hardest on that part.
+  - what: Your own sources
+    how: Paste them with a note on what they do and do not show. Step 1 fits them into the outline.
+judge:
+  - Each sub-question says what evidence would answer it.
+  - Every source on the shortlist has a note on what it shows and how strong it is.
+  - Every claim in the report has a citation you can open.
+  - The claim check flagged at least the claims you most wanted to be true.
+  - The report says what is not known.
+test:
+  - Ask a question where the honest answer is "the evidence is thin". The report should say so.
+  - Plant a claim in a draft that goes beyond its source. Step 4 should flag it.
+  - Run step 2 twice. The strongest sources should appear both times.
+  - Give it a source to avoid, then check the report never cites it.
+improve:
+  - Keep a file of sources you trust by topic and paste it into step 1.
+  - Save every claim check. The claims that get cut show where you tend to overreach.
+  - Add your citation format once so the report matches your other documents.
+  - Pair it with "Draft a paper, review it and fit your journal's rules" when the report becomes a paper.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: A reference manager
+      why: Holds the shortlisted sources and formats the citations.
+    - name: Scholarly databases
+      why: The search step works best with access to full texts.
+  inputs:
+    - Sources you already trust
+    - Your citation format
+    - Past reports on the topic
+terms:
+  - term: Citation
+    meaning: A reference next to a claim that says exactly which source supports it.

@@ -1,0 +1,28 @@
+slug: monthly-freelancer-books-closer
+name: "Monthly freelancer books closer"
+summary: "Give it the month's transactions. Get them sorted, checked against your budget and a cash forecast with the tax set aside."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: beginner
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: document, required: false}
+  - {type: plan, required: false}
+outputs:
+  - {type: spreadsheet}
+  - {type: audit_report}
+  - {type: document}
+uses: [expense-sorter, invoice-checker, budget-variance-explainer, cash-forecast-builder, financial-statement-builder]
+steps:
+  - {uses: expense-sorter, note: "Every month: each transaction sorted by category and tax treatment, with last month's rules reused and new ones flagged."}
+  - {uses: invoice-checker, note: "Only when receipts or supplier invoices are attached: fields pulled out, matched to the bank lines and coded."}
+  - {uses: budget-variance-explainer, note: "Every month once a budget is on file: what moved against the budget and why, in plain words."}
+  - {uses: cash-forecast-builder, note: "Every month: the 30, 60 and 90 day cash view, with the tax set-aside taken out first."}
+  - {uses: financial-statement-builder, note: "Only at quarter end, or when you ask: a P&L, balance sheet and cash flow statement for your accountant."}
+schedule: "On the 3rd of each month, once the bank export for last month is complete"
+asks_before: [posting or changing any entry in your accounts, filing or paying any tax, moving money between accounts, sending the numbers to your accountant or anyone else, deleting a transaction, adding a new category rule]
+origin: own
+version: 1.0.0
+example_pending: true

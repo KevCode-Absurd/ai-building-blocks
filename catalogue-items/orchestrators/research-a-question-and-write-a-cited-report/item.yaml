@@ -1,0 +1,23 @@
+slug: research-a-question-and-write-a-cited-report
+name: "Research a question and write a fully cited report"
+summary: "Give it the question. Get an outline, the sources, a cited report and a check of every claim."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: source_text, required: false}
+outputs:
+  - {type: document}
+  - {type: audit_report}
+uses: [research-question-outliner, scholarly-database-searcher, cited-research-report-writer, unsupported-claim-spotter]
+steps:
+  - {uses: research-question-outliner, note: "The sub-questions, what evidence would answer each, and what kind of source counts for this reader."}
+  - {uses: scholarly-database-searcher, note: "Searches of scholarly and public databases for each sub-question, with a shortlist of sources and a note on what each one shows and how strong it is."}
+  - {uses: cited-research-report-writer, note: "The report, answering each sub-question in turn, with a citation on every claim in a format the reader can follow back."}
+  - {uses: unsupported-claim-spotter, note: "Every claim read against its cited source. Claims the source does not support are flagged and then fixed, softened or cut."}
+origin: own
+version: 1.0.0
+example_pending: true

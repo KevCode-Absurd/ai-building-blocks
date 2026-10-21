@@ -1,0 +1,18 @@
+slug: candidate-comparison-table-builder
+name: "Candidate comparison table builder"
+summary: "Paste your interview notes on several people. Get a side-by-side on agreed criteria, with the stories flagged."
+category: general
+boards: []
+type: prompt
+role: check
+job: people
+level: intermediate
+inputs:
+  - {type: meeting_notes, required: true}
+outputs:
+  - {type: shortlist}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [daniel-kahneman]

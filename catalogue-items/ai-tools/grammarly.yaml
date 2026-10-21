@@ -1,0 +1,40 @@
+slug: grammarly
+name: Grammarly
+maker: Grammarly
+url: https://www.grammarly.com
+promise: Cleaner, clearer writing in every app you type in, with AI rewrites.
+use_cases: [write-copy]
+categories: [writing]
+what_it_does:
+  - Checks spelling, grammar and clarity as you type.
+  - Rewrites a sentence or paragraph for clarity and flow in one click.
+  - Suggests a tone that fits the message, such as friendly or confident.
+  - Shows how a reader might react to your draft.
+  - Flags text that reads as written by AI, and helps you revise it.
+benefits:
+  - Send emails and posts with fewer typos and clearer sentences.
+  - Fix the tone of a message before the customer sees it.
+  - Edit in the app you already use, with no copy and paste.
+  - Keep a team writing in one brand tone with shared style guides.
+best_for:
+  - Anyone who writes emails, product pages and posts all day.
+  - Teams that want one tone across support, sales and marketing.
+  - Non-native English writers who want a second pair of eyes.
+not_for:
+  - Writing a long piece from a blank page. A chat assistant does that better.
+  - Checking languages other than English in depth.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: The free plan includes spelling and grammar checks and 100 AI prompts a month. A paid individual plan adds full rewrites and more prompts. Enterprise is priced on request. The page showed local currency, so no US dollar price was confirmed.
+works_with:
+  - Google Docs
+  - Microsoft Office
+  - Zendesk
+runs_in: [web, desktop, mobile, browser-extension]
+blocks: []
+alternatives: [jasper, copy-ai, chatgpt, claude]
+last_checked: 2026-10-21
+sources:
+  - https://www.grammarly.com
+  - https://www.grammarly.com/plans

@@ -2,9 +2,9 @@
 
 > 62 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [3D web scene builder](https://useaiblocks.com/skills/3d-web-scene-builder): Describe the scene or product viewer. Get a working 3D page with fast loading and a fallback.
-- [3D website builder](https://useaiblocks.com/skills/3d-website-builder): Describe the site. Get a 3D web page with shaders, smooth motion, a preloader and phone-friendly tuning.
-- [Accessible UI builder](https://useaiblocks.com/skills/accessible-ui-builder): Describe the screen. Get a responsive, accessible interface that follows your design system and looks hand made.
+- [3D web scene builder](https://useaiblocks.com/skills/3d-web-scene-builder): Describe the scene or product viewer. Get working 3D page code with fast loading and a fallback.
+- [3D website builder](https://useaiblocks.com/skills/3d-website-builder): Describe the site and its mood. Get 3D page code with shaders, motion, a preloader and phone tuning.
+- [Accessible UI builder](https://useaiblocks.com/skills/accessible-ui-builder): Describe the screen. Get accessible, responsive component code that follows your design system.
 - [AI crawler access editor](https://useaiblocks.com/skills/ai-crawler-access-editor): Say which AI crawlers to allow. Get your robots.txt updated so AI assistants can read your catalog. Changes your live theme.
 - [AI shopping readiness checker](https://useaiblocks.com/skills/ai-shopping-readiness-checker): Run it on your store. Get a score for how easily AI shoppers find your products, plus the fix for each gap.
 - [Animation speed fixer](https://useaiblocks.com/skills/animation-speed-fixer): Point it at stuttering animations. Get each slow spot found and a small fix that smooths it.
@@ -18,7 +18,7 @@
 - [Font pair shortlist maker](https://useaiblocks.com/prompts/font-pair-shortlist-maker): Paste your brand feel and who reads the site. Get three font pairs with sizes and line spacing that read well.
 - [Full-page screenshot taker](https://useaiblocks.com/skills/full-page-screenshot-taker): Give it a page address. Get one long image of the whole page, even with scroll areas and lazy images.
 - [GLSL shader writer](https://useaiblocks.com/skills/glsl-shader-writer): Describe the visual effect. Get an efficient vertex and fragment shader for the web or a game.
-- [Headless store builder](https://useaiblocks.com/skills/headless-store-builder): Describe the store you want. Get a fast custom storefront on Hydrogen, ready to host on Oxygen.
+- [Headless store builder](https://useaiblocks.com/skills/headless-store-builder): Describe the store you want. Get a fast custom Shopify storefront built on Hydrogen, with deploy steps.
 - [Image and video pipeline planner](https://useaiblocks.com/skills/image-and-video-pipeline-planner): Tell it your site's media. Get a plan for formats, responsive images, video hosting and a tidy brand asset library.
 - [Industry-look site composer](https://useaiblocks.com/skills/industry-look-site-composer): Name your industry, such as store, restaurant or manufacturer. Get page layouts that look like that kind of site.
 - [Interface builder](https://useaiblocks.com/skills/interface-builder): Describe the screens. Get responsive, accessible components with a design system and dark mode.

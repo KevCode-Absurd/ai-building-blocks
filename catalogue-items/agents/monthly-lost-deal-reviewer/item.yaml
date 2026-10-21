@@ -1,0 +1,30 @@
+slug: monthly-lost-deal-reviewer
+name: "Monthly lost deal reviewer"
+summary: "Give it last month's lost deals and your pitch. Get the real reasons, a revised pitch and the objection answers to add."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: copy_draft, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: lessons_register}
+  - {type: copy_draft}
+  - {type: objection_map}
+uses: [lead-grader, root-cause-finder, pitch-revision-log, objection-answer-sheet-writer, product-differentiation-checker, mistake-to-principle-writer]
+steps:
+  - {uses: lead-grader, note: "Every month, first: each lost deal graded A, B or C by how soon the buyer needed to act, so a C that was never going to close is not read as a lesson."}
+  - {uses: root-cause-finder, note: "Every month, for the A and B losses: a chain of whys checked against the notes, ending in the fixable cause, not the reason the buyer gave."}
+  - {uses: pitch-revision-log, note: "Every month: the doubts behind the losses ranked, the pitch revised, and the next advice question to ask the next buyer."}
+  - {uses: objection-answer-sheet-writer, note: "Only when a doubt appeared in three or more losses: an answer with proof, added to the sheet."}
+  - {uses: product-differentiation-checker, note: "Once a quarter: from the quarter's won and lost deals, whether the edge is real and which claims buyers chose you for."}
+  - {uses: mistake-to-principle-writer, note: "Only when a loss came from the seller's own mistake, such as a late proposal or a wrong price: the root cause and a rule."}
+schedule: "On the first Monday of each month, after last month's deals are closed out"
+asks_before: [contacting any lost buyer, changing the live pitch, pricing or offer, sending the revised pitch to the team, sharing deal notes outside the sales team, marking a reason as the official one in the CRM]
+minds: [melanie-perkins]
+origin: own
+version: 1.0.0
+example_pending: true

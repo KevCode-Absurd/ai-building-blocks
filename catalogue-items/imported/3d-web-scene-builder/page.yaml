@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It picks a stack, then builds with performance limits in mind.
 new_slug: 3d-web-scene-builder
 name: 3D web scene builder
-summary: Describe the scene or product viewer. Get a working 3D page with fast loading and a fallback.
+summary: Describe the scene or product viewer. Get working 3D page code with fast loading and a fallback.
 job: build-websites
 headline: 3D web scene builder
-subhead: Describe the scene or product viewer. Get a working 3D page with fast loading and a fallback.
+subhead: Describe the scene, product viewer or portfolio piece and the devices it must run on. It picks a tool (Spline, React Three Fiber or Three.js), prepares your models and sets up loading, controls and a fallback. You get the scene as code, the tool choice with reasons and a performance checklist.
 explain: |
   A product viewer, configurator or portfolio scene can run in the browser, load quickly, and fall back to a plain view on devices that cannot run it.
 

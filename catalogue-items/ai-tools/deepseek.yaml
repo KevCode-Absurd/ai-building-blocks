@@ -1,0 +1,36 @@
+slug: deepseek
+name: DeepSeek
+maker: DeepSeek
+url: https://www.deepseek.com
+promise: A free chat assistant and a low-cost model for your own apps.
+use_cases: [ask-an-assistant, write-copy, code]
+categories: [chat-assistant, coding]
+what_it_does:
+  - Answers questions and drafts text in a chat.
+  - Writes and explains code.
+  - Works through maths and logic problems step by step.
+  - Reads files you upload.
+  - Gives developers an API to build it into their own apps.
+benefits:
+  - Try a capable assistant at no cost in the chat app.
+  - Cut the cost of an app that calls an AI model many times a day.
+  - Get code written and explained in one chat.
+  - Run lower-cost tests before you pick a bigger model.
+best_for:
+  - Developers who watch cost per call.
+  - Code and reasoning questions.
+  - Teams that want to test a second model.
+not_for:
+  - Sensitive company data, since the hosted service runs on the maker's servers.
+  - Topics where answers need a full check before you use them.
+pricing:
+  model: usage
+  from: US$0.15 per 1 million input tokens
+  note: The chat app is free. The API charges by use, and this price is for the deepseek-flash model off peak. Peak hours cost double, and the larger deepseek-v4-pro costs more.
+works_with: []
+runs_in: [web, mobile, api]
+blocks: []
+alternatives: [chatgpt, claude, gemini, grok]
+last_checked: 2026-10-21
+sources:
+  - https://api-docs.deepseek.com/quick_start/pricing/

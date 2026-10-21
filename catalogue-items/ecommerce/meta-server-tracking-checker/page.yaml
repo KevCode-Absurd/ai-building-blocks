@@ -1,12 +1,12 @@
 new_slug: meta-server-tracking-checker
 name: "Meta server tracking checker"
-summary: "Describe your Meta setup. Get the right server route, proof each event counts once and a score out of 100."
+summary: "Describe your Meta setup. Get the best server route, a double-count check and a score out of 100."
 job: track-numbers
 thinking: high
 thinking_why: "It weighs a route against your budget and skills and checks IDs and consent rules, so a stronger model avoids a wrong recommendation. Confirm every setup step on Meta's own pages."
 
 headline: "Meta server tracking checker"
-subhead: "Tell it how your store sends events to Meta and what you spend. It picks the server route that fits your team, checks that each event counts once, and flags consent rules and test-ID leaks. You get a route with a realistic gain, setup steps and a score out of 100."
+subhead: "Tell it how your store sends events to Meta and what you spend. It picks the server route that fits your team, checks each event counts once, and flags consent rules and test-ID leaks. You get a route with a realistic gain, setup steps and a score out of 100."
 
 explain: |
   When the Meta pixel runs only in the browser, blockers and privacy settings lose some sales events. The fix is to send the same event from your server too. But if both copies reach Meta without the same event ID, Meta can count one sale twice. Many stores also pick a route they do not need, or leave a test code in live tracking so real sales land on the test screen.

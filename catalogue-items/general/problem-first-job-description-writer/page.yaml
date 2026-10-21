@@ -1,0 +1,113 @@
+new_slug: problem-first-job-description-writer
+name: "Problem-first job description writer"
+summary: "Paste the problem the hire must solve. Get a job description built around it, with success at six months."
+job: hire-people
+thinking: low
+thinking_why: "It shapes one document from the problem and facts you give it."
+
+headline: "Problem-first job description writer"
+subhead: "Paste the problem the new hire must solve, what done looks like in six months and how the work happens. The prompt writes the job description with the problem first, a checkable six-month picture, the past situations that prepare someone for it, and only the skills the problem needs."
+
+explain: |
+  Most job descriptions are a wish list of skills copied from the last one. The people who could solve your problem skim past them, and the people who apply match the keywords. Patty McCord has said in public that the better question is what problem this person will solve, and what will be true if they solve it.
+
+  This prompt puts that problem in the first paragraph, with the evidence you gave. It writes three to five lines you could check in six months, describes the right person by what they have done before rather than years or degrees, and lists only the skills the problem needs, each marked must or helps. It adds how the work happens, from pay to tools, and asks applicants for one short note on a similar problem they fixed instead of a cover letter.
+
+when:
+  - "You are hiring for the first time and the role is really a problem with a name."
+  - "The last posting brought fifty applicants who could not do the job."
+  - "You want the right person to recognise themselves in the first paragraph."
+
+you_give:
+  - "The problem and how you know it is a problem"
+  - "What done looks like in six months"
+  - "Who they work with and what tools they use (advised)"
+  - "Pay range, place and hours (advised)"
+you_get:
+  - "A plain title and a problem-first opening"
+  - "A checkable six-month picture"
+  - "The person described by past situations, and only the needed skills"
+  - "How the work happens and how to apply"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your problem under it."
+  - "Add what will be true in six months and the practical facts."
+  - "Read THE PROBLEM aloud. If a good candidate would not recognise it, sharpen your input and run again."
+  - "Check local posting rules, then post it."
+
+how_it_works:
+  - title: "Opens with the problem"
+    text: "Two to four sentences with your evidence, written so the right person thinks they have fixed this before."
+  - title: "Writes the six-month picture"
+    text: "Three to five lines you could check, each from your input."
+  - title: "Describes the person by what they did"
+    text: "Two or three past situations, not years or degrees."
+  - title: "Lists only needed skills"
+    text: "Each marked MUST or HELPS. Nice-to-haves dressed as musts are cut."
+  - title: "Says how the work happens"
+    text: "Reports to, works with, tools, hours, place and pay, with MISSING where not given."
+  - title: "Asks for one thing"
+    text: "A short note on a similar problem they solved, instead of a cover letter."
+
+output_shape: |
+  TITLE                <plain, under six words>
+  THE PROBLEM          <2 to 4 sentences>
+  SIX MONTHS FROM NOW  <3 to 5 checkable lines>
+  YOU HAVE PROBABLY    <2 to 3 past situations>
+  SKILLS               <MUST> <HELPS>
+  HOW THE WORK HAPPENS <reports to, tools, hours, place, pay>
+  HOW TO APPLY         <one thing to send>
+  MISSING              <...>
+  CHECKS MISSED        <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Company: Sprout, daily greens gummies sold online and in stores.
+    Problem: cancelling is the loudest complaint on public review sites.
+    Customers say they cannot find where to cancel, and a public review site
+    shows us at 4.0 from 2,411 reviews while our own widget says 4.75. The
+    renewal charge of $49.99 after a $29.99 first box surprises people.
+    Support is three people answering the same questions.
+    Six months from now: cancel and pause are found without writing in;
+    public review score moving up; renewal surprise complaints down; a help
+    centre that answers the top ten questions; support time spent on
+    cancellation under a quarter of today's.
+    Team: reports to the founder, works with support (3), the web developer
+    and the subscription tool.
+    Pay and place: remote, US hours, MISSING range.
+  output: pending
+
+tweaks:
+  - what: "The evidence"
+    how: "A number or a quote in the problem paragraph is what makes the right person stop scrolling."
+  - what: "Six months"
+    how: "Make each line checkable. 'Complaints about X down' beats 'improve customer experience'."
+  - what: "Skills"
+    how: "List what you think you need and let the prompt cut it. Argue with the cuts, not the list."
+
+judge:
+  - "The first paragraph is about the problem, not the company."
+  - "Each six-month line could be checked."
+  - "The skills list is shorter than the one you would have written."
+  - "No 'rockstar', 'ninja' or 'fast-paced'."
+  - "Pay is there or marked MISSING."
+
+test:
+  - "Show it to someone who has done this kind of job. Ask if they would apply, and what is unclear."
+  - "Run it twice. THE PROBLEM should match in meaning."
+  - "Leave out the pay range. It should mark MISSING, not invent a figure."
+
+improve:
+  - "Add your company's two-line description and values once, so every posting matches."
+  - "Add the legal lines your location requires, so they are never forgotten."
+  - "Pair it with the Interview question set maker, using the six-month lines as the source."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message document works in any strong chat AI."}
+  inputs:
+    - "The last three support tickets or complaints that show the problem"
+    - "The job titles people in this field actually search for"

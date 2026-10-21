@@ -1,6 +1,6 @@
 new_slug: 3pl-bill-auditor
 name: "3PL bill auditor"
-summary: "Paste your 3PL invoice, rate card and orders. Get overcharges found, a score out of 100 and a dispute note."
+summary: "Paste your 3PL bill, rates and orders. Get overcharges, a dispute note and a score out of 100."
 job: run-your-store
 thinking: high
 thinking_why: "It does sums on every line and compares them with your orders, so a stronger model makes fewer slips."

@@ -1,0 +1,49 @@
+slug: veo
+name: Veo
+maker: Google
+url: https://deepmind.google/models/veo/
+promise: Short video clips with sound from a text prompt or a still image.
+use_cases: [make-video]
+categories: [video]
+what_it_does:
+  - Makes short video clips from a written description.
+  - Turns a still image into a moving clip.
+  - Adds sound, speech and music to the clip.
+  - Works inside Gemini, Google Flow and the Gemini API.
+benefits:
+  - Test a video ad idea before you pay for a shoot.
+  - Get a clip with its own sound, so you skip a separate audio step.
+  - Start from your product photo to keep the product looking the same.
+best_for:
+  - Short ad clips for Reels, TikTok and Shorts.
+  - People who already pay for a Google AI plan.
+  - Developers who want video inside their own app through the API.
+not_for:
+  - Long videos with one continuous take.
+  - Exact on-screen text, which still comes out wrong often.
+pricing:
+  model: subscription
+  from: Check the maker's site
+  note: Sold through Google AI Plus, Pro and Ultra plans with usage limits, and per second through the Gemini API. Prices differ by country and Google changes plans often.
+works_with:
+  - gemini
+  - elevenlabs
+  - capcut
+runs_in: [web, mobile, api]
+blocks:
+  - video-ad-shot-list-maker
+  - weekly-video-ad-batch-maker
+  - avatar-storyboard-planner
+  - talking-object-video-prompts
+  - selfie-style-video-prompts
+  - podcast-style-video-prompts
+  - short-film-video-prompts
+  - 3d-explainer-video-prompts
+  - offer-reel-real-product
+  - wordless-video-ad-opening-writer
+alternatives: [kling, runway, seedance]
+last_checked: 2026-10-21
+sources:
+  - https://gemini.google/subscriptions/
+  - https://one.google.com/about/google-ai-plans/
+  - https://deepmind.google/models/veo/

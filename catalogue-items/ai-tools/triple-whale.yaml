@@ -1,0 +1,41 @@
+slug: triple-whale
+name: Triple Whale
+maker: Triple Whale
+url: https://www.triplewhale.com
+promise: See which ads make your store money, in one dashboard with AI
+use_cases: [run-ads, analyse-data]
+categories: [marketing, data]
+what_it_does:
+  - Pulls ad spend and store sales into one dashboard.
+  - Tracks which ads and channels lead to orders.
+  - Lets you ask questions of your numbers with its Moby AI assistant.
+  - Reports profit per order once you add your costs.
+  - Sends daily and weekly summaries of your key numbers.
+benefits:
+  - Check your ad results in one place each morning.
+  - Spot a channel that stopped paying back before it eats the budget.
+  - Get answers about your numbers without building a report.
+best_for:
+  - Shopify brands that spend on Meta, Google and TikTok.
+  - Owners who want one view of ads and profit.
+  - Media buyers who report to a founder each week.
+not_for:
+  - Stores that sell off Shopify and do not run paid ads.
+  - Teams that need a published, flat price before they talk to sales.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: Third-party pages from 2026 describe a free tier and paid plans priced by store size, but the maker's page showed no figures and sources disagree. Ask Triple Whale for a quote.
+works_with:
+  - Shopify
+  - klaviyo
+  - northbeam
+runs_in: [web, mobile]
+blocks:
+  - weekly-store-ad-pulse-checker
+  - sale-season-pacing-sheet-builder
+alternatives: [northbeam, klaviyo]
+last_checked: 2026-10-21
+sources:
+  - https://www.triplewhale.com/pricing
+  - https://venon.io/blog/triple-whale-pricing

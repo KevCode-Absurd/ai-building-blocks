@@ -9,7 +9,7 @@
 - [Agent prompt writer](https://useaiblocks.com/skills/agent-prompt-writer): Paste a rough request. Answer a few questions. Get one clear prompt to give an AI agent.
 - [AI agent workflow designer](https://useaiblocks.com/skills/ai-agent-workflow-designer): Describe the job. Get a multi-agent design with handoffs, failure handling and cost limits.
 - [AI build-or-buy advisor](https://useaiblocks.com/skills/ai-build-or-buy-advisor): Describe an AI plan. Get an API vs fine-tune call, AI risk class under EU rules and cost break-even.
-- [AI coding agent rules writer](https://useaiblocks.com/skills/ai-coding-agent-rules-writer): Describe your project. Get a plan file and standing rules that make an AI coding agent work one test at a time.
+- [AI coding agent rules writer](https://useaiblocks.com/skills/ai-coding-agent-rules-writer): Describe your project. Get a plan file and agent rules for working one test at a time.
 - [AI memory habit setter](https://useaiblocks.com/skills/ai-memory-habit-setter): Connect any memory tool. Get clear rules for when your AI recalls and saves decisions, so it stops repeating itself.
 - [AI model training debugger](https://useaiblocks.com/skills/ai-model-training-debugger): Describe your model, data and what goes wrong. Get a check order that finds silent bugs before tuning.
 - [AI workflow handoff planner](https://useaiblocks.com/skills/ai-workflow-handoff-planner): List your AI steps. Get handoff cards, claim cards and run rules that keep every fact whole.

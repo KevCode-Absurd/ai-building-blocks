@@ -1,0 +1,111 @@
+new_slug: process-change-note-writer
+name: "Process change note writer"
+summary: "Paste what is changing and why. Get the note that tells the team what to do differently, from when."
+job: document-work
+thinking: low
+thinking_why: "It arranges given facts into one short note."
+
+headline: "Process change note writer"
+subhead: "Paste the old way, the new way, the date and the honest reason. The prompt writes a note with the change and date in the first line, the reason once, a block for each affected role starting 'If you are', what happens to work already started, and who to ask."
+
+explain: |
+  A process changes and half the team keeps doing it the old way for a month. The note that announced it was three paragraphs of background with the actual change in the middle, and nobody could tell whether it applied to them.
+
+  This prompt puts the change and the date in the first line. It says the reason once, plainly, even when the reason is a mistake. It writes one short block per affected role, each starting "If you are", so people find their part and stop reading. It covers work already in flight, names the owner and where to ask, and gives you a subject line and a chat line under twelve words. The old-versus-new table at the end is for the people who want the detail.
+
+when:
+  - "You changed how refunds, orders or handovers work and need everyone doing it the new way from Monday."
+  - "A mistake happened and the fix is a new step."
+  - "A new tool replaces an old one and people need to know what to do on day one."
+
+you_give:
+  - "The old way and the new way"
+  - "The date it starts"
+  - "The honest reason"
+  - "Who is affected and who owns it (advised)"
+you_get:
+  - "A note under 300 words with the change in the first line"
+  - "A block per affected role"
+  - "A subject line, a chat line and an old-versus-new table"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the change under it."
+  - "Add the date, the reason and the roles affected."
+  - "Read the first line. If someone reading only that would still do the wrong thing, fix your input."
+  - "Send the note, post the chat line, and pin the old-versus-new table where the work happens."
+
+how_it_works:
+  - title: "Writes old and new side by side"
+    text: "Only the steps that change."
+  - title: "Writes the first line"
+    text: "What changes and from when, in one sentence."
+  - title: "Says why once"
+    text: "The honest reason, plainly, with no names if it was a mistake."
+  - title: "Writes a block per role"
+    text: "If you are this role, from this date you do this instead of that. Unaffected roles told in one line."
+  - title: "Covers work in flight"
+    text: "What happens to things already started the old way."
+  - title: "Names the owner"
+    text: "Who to ask, where, and when questions get answered."
+
+output_shape: |
+  SUBJECT         <under twelve words>
+  CHAT LINE       <under twelve words>
+  NOTE            <first line, why, per-role blocks, not affected, in flight, owner>
+  OLD v NEW       <step | old | new>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Change at Sprout: damaged-pouch replacements. Old way: the support agent
+    fills a replacement form in a spreadsheet and messages the ops manager,
+    who approves and creates the order by hand. New way: support agents
+    create the replacement order themselves in the store admin using the
+    "Replacement" order type, no approval needed up to one pouch per case,
+    and the address is taken from the subscription tool, not the store admin.
+    From: Monday the 3rd.
+    Why: replacements were waiting up to two days for approval, and one in
+    ten went to an old address because the two systems disagreed.
+    Affected: the three support agents, the ops manager (no longer approves
+    single replacements, still approves multi-pouch cases), the warehouse
+    (will see Replacement orders arrive directly).
+    Owner: the ops manager, questions in the #support channel.
+    In flight: cases already in the spreadsheet this week are finished the
+    old way.
+  output: pending
+
+tweaks:
+  - what: "Roles"
+    how: "List every role that touches the process, including the ones that stop doing something."
+  - what: "The reason"
+    how: "Say the real one. People follow a change they understand."
+  - what: "In flight"
+    how: "Say what happens to work already started. It is the first question people ask."
+
+judge:
+  - "The first line tells you the change and the date."
+  - "Your role has a block, or you are told you are not affected."
+  - "The reason appears once and is the real one."
+  - "Work in flight is covered."
+  - "It is under 300 words."
+
+test:
+  - "Send it and count the questions you get in the first week against the last change you announced."
+  - "Run it twice. The role blocks should match."
+  - "Leave out the date. The first line should say MISSING, not pick a day."
+
+improve:
+  - "Add your team's roles once, so every note uses the same names."
+  - "Keep the old-versus-new tables together. They become your process history."
+  - "Pair it with the Repeat task how-to writer to update the how-to the note changes."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message note works in any strong chat AI."}
+  inputs:
+    - "The current how-to for the process, so the old way is exact"
+    - "Where your team reads announcements, so the chat line lands there"

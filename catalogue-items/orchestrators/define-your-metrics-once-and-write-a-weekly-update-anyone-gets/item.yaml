@@ -1,0 +1,27 @@
+slug: define-your-metrics-once-and-write-a-weekly-update-anyone-gets
+name: "Define your metrics once and write a weekly update"
+summary: "Give it your numbers. Get metric definitions, an assumptions log, the weekly update and plain pictures."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: brief, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: document}
+  - {type: copy_draft}
+uses: [metric-definition-writer, analysis-assumptions-logger, weekly-status-update-writer, number-to-picture-translator]
+steps:
+  - {uses: metric-definition-writer, note: "For each metric: what it counts, what it excludes, where it comes from, how often it updates and who owns it, so every report means the same thing."}
+  - {uses: analysis-assumptions-logger, note: "Every assumption behind this week's analysis, in one place: time windows, exclusions, estimates and anything taken for granted."}
+  - {uses: weekly-status-update-writer, note: "The update in a fixed shape: what changed, why, what we do about it, what we are watching, with each number tied to its definition."}
+  - {uses: number-to-picture-translator, note: "The two or three figures that matter most, translated into pictures a reader can hold in their head, in the manner of Chip Heath, and placed at the top of the update."}
+origin: own
+version: 1.0.0
+minds: [chip-heath]
+credits:
+  - {title: "The Curse of Knowledge (Harvard Business Review, December 2006)", by: "Chip Heath and Dan Heath", url: "https://hbr.org/2006/12/the-curse-of-knowledge", used: "Turn abstract figures into concrete pictures the reader can hold"}
+example_pending: true

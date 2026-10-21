@@ -1,0 +1,104 @@
+new_slug: refund-request-reply-writer
+name: "Refund request reply writer"
+summary: "Paste a refund request and your policy. Get a clear yes, no or partial reply that keeps the customer."
+job: help-customers
+thinking: low
+thinking_why: "It applies written rules to given facts and writes one short reply."
+
+headline: "Refund request reply writer"
+subhead: "Paste the customer's refund request, your published policy and the order facts. The prompt checks each rule against the facts, reaches a yes, partial or no, and writes a reply that leads with the decision, gives the timing and keeps the customer's goodwill."
+
+explain: |
+  Refund replies go wrong in two ways. The agent argues, and a $30 refund turns into a public review. Or the agent avoids the decision, writes three paragraphs about the policy, and the customer still does not know whether they are getting their money back.
+
+  This prompt lays your policy against the order facts, one rule per line, and reaches a decision. It writes the decision in the first line of the reply, then what happens next with the timing from your input. For a no, it quotes the rule once and offers only what you said you can offer instead. It never invents a rule, a discount or a timeline. Where the request raises a legal right, a fault or a chargeback, it adds a note that a person should look, because consumer rules differ by place.
+
+when:
+  - "Refund requests pile up and each one takes ten minutes of careful wording."
+  - "You are saying no and want to say it once, kindly, without an argument."
+  - "A new support hire needs a model reply for the common cases."
+
+you_give:
+  - "The customer's request as written"
+  - "Your refund and return policy as published"
+  - "The order facts: dates, amount, what was bought, condition"
+  - "Any goodwill credit you can offer (optional)"
+you_get:
+  - "Each rule checked against the facts"
+  - "A clear decision and the reply that leads with it"
+  - "A note for the owner when a person should step in"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the request under it."
+  - "Paste your policy exactly as it appears on your site, and the order facts."
+  - "Read FACTS v POLICY. If a fact is wrong, correct it and run again."
+  - "Check the OWNER NOTE, then send the reply."
+
+how_it_works:
+  - title: "Lays facts against policy"
+    text: "One line per rule, pass or fail, with missing facts marked and which way they would swing it."
+  - title: "Reaches the decision"
+    text: "Yes, partial or no. A clear yes gets no added conditions. A no names the rule."
+  - title: "Writes the reply"
+    text: "Decision first, then timing, then the reason if no, then what you can do instead."
+  - title: "Keeps the door open"
+    text: "One true line that treats them as a customer you want back."
+  - title: "Flags edge cases"
+    text: "Legal rights, faults, chargebacks and health issues get a note for a person."
+
+output_shape: |
+  FACTS v POLICY   <rule | fact | pass or fail>
+  DECISION         <yes | partial | no, because <rule>>
+  REPLY            <decision, next step, reason if no, door open>
+  OWNER NOTE       <edge cases or none>
+  MISSING          <...>
+  CHECKS MISSED    <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Request: "I ordered the Sugar-Free pouch and after four days my stomach
+    was in knots. I've read this happens with sugar alcohols. I've used 4 of
+    the 28 packs. Can I get a refund? Order placed 19 days ago."
+    Policy (from the site): 30-Day Money-Back Guarantee on your first order.
+    Refunds are issued to the original payment method within 5 to 7 business
+    days. Opened pouches are covered under the guarantee.
+    Order facts: first order, one-time purchase, $66.65 plus $5 Sugar-Free
+    upcharge, delivered 16 days ago, no previous refunds.
+    Room to move: we can also offer a swap to the Low Sugar pouch at no cost
+    instead of a refund, if they prefer.
+  output: pending
+
+tweaks:
+  - what: "The policy"
+    how: "Paste it word for word. The decision is only as good as the rules you give."
+  - what: "Room to move"
+    how: "Say what you can offer instead of a refund. Without it, a no is just a no."
+  - what: "Customer history"
+    how: "Past refunds and how long they have been a customer change the door-open line."
+
+judge:
+  - "The decision is in the first line."
+  - "Every rule in FACTS v POLICY is from your policy."
+  - "The timing matches your input."
+  - "A no does not lecture and offers only what you allowed."
+  - "The owner note flags anything legal or health-related."
+
+test:
+  - "Run it on three past requests where you know what you decided. The decisions should match, or the difference should be explainable by the policy."
+  - "Run it twice on the same request. The decision should match."
+  - "Leave out the order date. It should write both versions and ask you to pick."
+
+improve:
+  - "Add the exceptions you always make (first order, damaged in transit) so they are applied every time."
+  - "Add your most common refund reasons and what you say for each."
+  - "Pair it with the Complaint reply promise checker before sending a reply that mentions money."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message reply works in any strong chat AI."}
+  inputs:
+    - "The customer's full order history"
+    - "A list of past exceptions you approved and why"

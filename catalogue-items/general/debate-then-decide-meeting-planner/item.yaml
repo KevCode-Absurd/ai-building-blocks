@@ -1,0 +1,18 @@
+slug: debate-then-decide-meeting-planner
+name: "Debate then decide meeting planner"
+summary: "Paste a decision your team keeps circling. Get a one-meeting plan that argues it out and closes it."
+category: general
+boards: []
+type: prompt
+role: plan
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [andy-grove]

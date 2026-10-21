@@ -1,0 +1,36 @@
+slug: luma
+name: Luma
+maker: Luma AI
+url: https://lumalabs.ai
+promise: Video clips and images from a text prompt or a still picture.
+use_cases: [make-video, make-images]
+categories: [video, image]
+what_it_does:
+  - Makes video clips from a written description in Dream Machine.
+  - Turns a still image into a moving clip.
+  - Makes images from the same account.
+  - Shares credits across a team on business plans.
+benefits:
+  - Test a video ad idea before you pay for a shoot.
+  - Turn a product photo into a moving clip.
+  - Work with teammates from one pool of credits.
+best_for:
+  - Short clips for social posts and ads.
+  - Creative teams that want video and images in one place.
+  - Developers who want video in their own app through the API.
+not_for:
+  - Long videos with one continuous take.
+  - People who want a free plan, since the pricing page lists none.
+pricing:
+  model: subscription
+  from: "US$30 per month"
+  note: Plus is US$25 per month billed yearly and includes 10,000 credits. Pro and Ultra give more credits. Team and Enterprise are by quote.
+works_with:
+  - elevenlabs
+  - capcut
+runs_in: [web, mobile, api]
+blocks: []
+alternatives: [kling, runway, pika, veo]
+last_checked: 2026-10-21
+sources:
+  - https://lumalabs.ai/pricing

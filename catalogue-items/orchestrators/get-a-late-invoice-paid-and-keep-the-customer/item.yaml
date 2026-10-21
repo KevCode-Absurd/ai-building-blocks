@@ -1,0 +1,27 @@
+slug: get-a-late-invoice-paid-and-keep-the-customer
+name: "Get a late invoice paid and keep the customer"
+summary: "Give it the late invoice. Get a warm reminder, a range they can meet and a firm follow-up."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: brief, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: plan}
+uses: [payment-reminder-letter-writer, can-they-pay-deal-checker, late-invoice-reminder-writer]
+steps:
+  - {uses: payment-reminder-letter-writer, note: "A reminder that assumes good faith, makes paying easy and gives a reason to do it now, in Robert Collier's manner."}
+  - {uses: can-they-pay-deal-checker, note: "A range they can realistically pay and when, and proposed terms (a plan, a part payment, a date), following Keynes's rule to ask only for what can be paid."}
+  - {uses: late-invoice-reminder-writer, note: "A firmer follow-up that states the consequence plainly, restates the terms and leaves the door open. You decide whether to send it."}
+origin: own
+version: 1.0.0
+minds: [robert-collier, john-maynard-keynes]
+credits:
+  - {title: "The Robert Collier Letter Book (1931)", by: "Robert Collier", url: "https://content.e-bookshelf.de/media/reading/L-17843583-ce18e885eb.pdf", used: "Collection letters that assume good faith, make paying easy and give a reason to act now"}
+  - {title: "The Economic Consequences of the Peace (1919)", by: "John Maynard Keynes", url: "https://www.gutenberg.org/cache/epub/15776/pg15776.txt", used: "Ask only for what the other side can pay; a demand they cannot meet brings nothing"}
+example_pending: true

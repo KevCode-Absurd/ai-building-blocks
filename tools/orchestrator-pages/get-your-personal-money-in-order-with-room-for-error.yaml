@@ -1,0 +1,113 @@
+new_slug: get-your-personal-money-in-order-with-room-for-error
+name: Get your money in order with room for error
+summary: Give it your income, spending and debts. Get a budget, a debt plan and a savings forecast.
+job: money-and-investing
+thinking: high
+thinking_why: It works with your real numbers and judges the plan's margin for error. Give it your strongest model.
+headline: Get your money in order with room for error
+subhead: Give it your income, your spending and your debts. It builds a monthly budget, plans the debt payoff order, checks the story you tell yourself about spending in Morgan Housel's manner, tests whether the plan has room for error, and projects what your savings become over time.
+explain: |
+  Most money plans fail for a reason that has nothing to do with maths. The budget assumes a normal month, and no month is normal. The debt plan picks the wrong order. The spending that hurts is the spending with a story attached, and nobody checks the story.
+
+  This workflow builds a plan that bends without breaking. It sets a monthly budget from your real numbers. It orders the debts so the payoff is fastest or cheapest, your choice. It reads the story behind your spending, in the manner of Morgan Housel: what you are really buying when you buy it. It then tests the plan for room for error: what happens in a bad month, a lost job, a surprise bill, following Housel and Benjamin Graham. Last it projects your savings forward with plain assumptions you can change.
+when:
+  - You have no idea where the money goes each month.
+  - You have three debts and pay the minimum on all of them.
+  - You have saved before and spent it in one bad month.
+you_give:
+  - Your monthly income after tax
+  - Your spending for the last two or three months, as it really was
+  - "Your debts: balance, rate and minimum payment for each"
+  - Your goals and when you want them
+you_get:
+  - A monthly budget with a buffer built in
+  - A debt payoff order and the months it takes
+  - A plain read of your spending story and the room-for-error test, with what to change
+  - A savings projection with assumptions you can change
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your income, spending and debts. It builds the budget and the debt plan.
+  - Read the spending story and the room-for-error test. Decide what you will change.
+  - Set up the payments. Come back each quarter with the new numbers.
+how_it_works:
+  - title: Build the budget
+    text: Builds a monthly budget from your real numbers, with fixed and flexible costs, savings and a buffer.
+  - title: Plan the debt payoff
+    text: Orders the debts, sets the monthly amount and shows the month each one ends.
+  - title: Read your spending story
+    text: Reads what you are really buying with each kind of spending, in Housel's manner, and says which to keep.
+  - title: Test for room for error
+    text: Tests the plan against a bad month, a lost job and a surprise bill, and says what to change so it survives.
+  - title: Project your savings
+    text: Projects your savings over time with plain assumptions you can change.
+output_shape: |-
+  STEP 1: BUDGET
+    Income: <...> | Fixed: <...> | Flexible: <...> | Savings: <...> | Buffer: <...>
+
+  STEP 2: DEBT PAYOFF
+    Order: <debt, why> | Monthly: <...> | Ends: <debt, month>
+
+  STEP 3: SPENDING STORY
+    <kind of spending>: You are buying <status / comfort / time / ...> | Keep: <yes / cut / change>
+
+  STEP 4: ROOM FOR ERROR
+    Bad month: <what breaks> | Lost job: <months covered> | Surprise bill: <...> | Change: <...>
+
+  STEP 5: SAVINGS PROJECTION
+    Assumptions: <saving, return, years> | At <year>: <...> | If you change <x>: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    I run Sprout, a daily greens gummy brand, and pay myself a salary. These are my own numbers, not the company's.
+    Income after tax: $6,400 a month.
+    Spending, average of the last three months: rent $2,100; groceries $650; eating out $540; car (loan, fuel, insurance) $780; subscriptions and software $210; gym $90; clothes $230; travel to see family $300; everything else $450.
+    Debts: car loan $14,200 at 6.9%, minimum $410; credit card $5,800 at 24.9%, minimum $175; a loan from my parents $8,000 at 0%, no fixed payment, they'd like it back within two years.
+    Savings now: $3,100.
+    Goals: three months of costs saved within a year; the card gone; parents paid back in two years; start saving for a house deposit after that.
+    I eat out when the week has been hard. I know that.
+  output: pending
+tweaks:
+  - what: Real spending
+    how: Use what you spent, not what you meant to spend. Three months of statements is enough.
+  - what: Fastest or cheapest
+    how: Say whether you want the smallest debt gone first for the win, or the dearest first to save money. Step 2 plans it your way.
+  - what: Your bad month
+    how: Describe your last bad month. Step 4 tests the plan against it.
+  - what: Assumptions
+    how: Change the saving rate or the years in step 5 and see what moves.
+judge:
+  - The budget adds up to your income and includes a buffer.
+  - The debt plan names the order and the month each debt ends, and the payments fit the budget.
+  - The spending story names what you are buying without judging you for it.
+  - The room-for-error test says how many months a lost job is covered.
+  - The projection states its assumptions and you can change each one.
+test:
+  - Give it spending that exceeds income. Step 1 should say so first, not hide it in the buffer.
+  - Give step 4 a plan with no buffer. It should fail it and say what to change.
+  - Run step 2 twice with the same choice. The order should match.
+  - Change the return assumption in step 5 from 6% to 3%. The result should move and the step should say by how much.
+improve:
+  - Re-run each quarter with the new numbers and keep the budgets in one folder to see the trend.
+  - Save your bad-month description so step 4 tests against something real every time.
+  - Add your fixed dates (rent, loan payments) so the budget shows the cash by week.
+  - Pair it with "Choose your investing style and your stock and bond split" once the buffer is built.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: A spreadsheet
+      why: Holds the budget and the projection so you can change the numbers.
+    - name: Your bank's export
+      why: Gives real spending instead of memory.
+  inputs:
+    - Three months of bank statements
+    - Your last bad month, described
+    - Any raise or cost change you know is coming
+terms:
+  - term: Room for error
+    meaning: The gap between what your plan needs and what you have, so a bad month does not break it.

@@ -1,0 +1,110 @@
+new_slug: turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature
+name: Turn a sales call into a checked proposal
+summary: Give it the call notes. Get the follow-up, a costed proposal, a margin check and a dated plan.
+job: sell-and-negotiate
+thinking: high
+thinking_why: It turns a conversation into a priced document and checks the margin before it goes out. Give it your strongest model.
+headline: Turn a sales call into a checked proposal
+subhead: Give it the call transcript or your notes. It writes the follow-up email and the team summary, drafts a proposal with value, price, timeline and proof, checks the margin and the terms before anything goes out, and writes a mutual action plan to signature you can share with the buyer.
+explain: |
+  The day after a good call is where deals die. The follow-up goes out late, the proposal takes a week, and when it arrives it quotes a discount nobody approved and a timeline nobody checked. The buyer, who was warm on Tuesday, is weighing a rival by Friday.
+
+  This workflow gets the proposal out the same day, checked. From the call it drafts the follow-up email, a summary for your team and the CRM updates. It then writes the proposal: the buyer's needs in their words, the value, the price, the timeline and proof. Before anything is sent, a deal desk review checks the margin after discount and every redlined term, and gives a clear yes, no or counter. Last it writes a mutual action plan: the why-buy case and a dated path to signature with tasks for both sides. You send the follow-up and the proposal yourself.
+when:
+  - You just finished a call and the buyer asked for a proposal.
+  - Your proposals take days and quote terms nobody checked.
+  - Deals stall after the proposal because nobody set the next step.
+you_give:
+  - The call transcript or your notes
+  - Your price list, discount limits and standard terms
+  - Your offer and what you can promise on timeline
+  - "Proof you can use: results, quotes with permission (optional)"
+you_get:
+  - A follow-up email, a team summary and CRM updates from the call
+  - A proposal with the buyer's needs, value, price, timeline and proof
+  - A margin and terms check with a clear yes, no or counter
+  - A mutual action plan to signature to share with the buyer
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the transcript or notes and your price and discount rules. It drafts the follow-up and the proposal.
+  - Read the deal desk review. If it says counter, change the proposal before sending.
+  - Send the follow-up and the proposal yourself. Share the action plan and agree the dates with the buyer.
+how_it_works:
+  - title: Write the follow-up
+    text: Drafts the follow-up email, a team summary and the CRM updates from the call.
+  - title: Draft the proposal
+    text: Writes the proposal with the buyer's needs, value, price, timeline and proof.
+  - title: Check margin and terms
+    text: Checks the margin after discount and every term, and gives a clear yes, no or counter.
+  - title: Send the proposal
+    text: A pause. Send the follow-up and the corrected proposal yourself.
+  - title: Plan the path to signature
+    text: Writes the why-buy case and a dated plan to signature with tasks for both sides, to share with the buyer.
+output_shape: |-
+  STEP 1: FOLLOW-UP
+    Email: <...> | Team summary: <needs, who decides, next step> | CRM: <stage, date, notes>
+
+  STEP 2: PROPOSAL
+    Their needs: <in their words> | Value: <...> | Price: <...> | Timeline: <...> | Proof: <...>
+
+  STEP 3: DEAL DESK REVIEW
+    Margin after discount: <%> | Terms: <each, ok or flagged> | Call: <yes / no / counter> | Change: <...>
+
+  PAUSE: send the follow-up and the corrected proposal
+
+  STEP 4: MUTUAL ACTION PLAN
+    Why buy: <...> | Step <n>: <task> | Who: <us / them> | By: <date> | Signature: <date>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. Call today with the wellness director of a company that wants gummies in its 14 office kitchens as a staff perk.
+    Notes from the call: 1,100 staff. They tried a greens powder last year; it sat unused because nobody wanted to mix it at a desk. She wants single packs in a counter box, refilled monthly, billed centrally. Budget "around $3 a head a month". Decision by her and the procurement lead. Wants to start in January. Asked for a proposal by Friday. She said: "If people actually take it, that's the whole point."
+    Our offer: 28-pack pouches at $49.99 subscription or bulk 12-pack cases. We could do a counter box of 60 single packs for $48 wholesale (our cost $21). Monthly refill by courier.
+    Rules: discount up to 10% without my sign-off; 30-day terms; no exclusivity; a 90-day pilot before any annual deal.
+    Proof: a 2025 study on absorption, our 95% of surveyed users take it at least four times a week (brand survey, say so).
+  output: pending
+tweaks:
+  - what: Your discount limits
+    how: Give the exact limits. Step 3 checks the proposal against them, not against guesses.
+  - what: Your template
+    how: Paste your proposal template. Step 2 fills it instead of inventing a layout.
+  - what: Proof
+    how: Give proof with its source. The proposal names the source; a brand survey is labelled as one.
+  - what: The buyer's words
+    how: A transcript beats notes. The proposal quotes the buyer's own phrases for their needs.
+judge:
+  - The follow-up goes out the same day and names the next step and its date.
+  - The proposal's needs section uses the buyer's words, not your product's.
+  - The deal desk review states the margin as a number and flags every non-standard term.
+  - The proposal sent is the one the review approved or corrected.
+  - The action plan gives the buyer a task in the first week.
+test:
+  - Put a 20% discount in the notes when your limit is 10%. Step 3 should say counter and name the limit.
+  - Give step 2 notes that never mention timeline. It should mark MISSING rather than invent one.
+  - Read the proposal as the procurement lead. Can you find the price and the terms in ten seconds?
+  - Run step 1 twice. The team summary should name the same decision makers.
+improve:
+  - Save your price list, discount limits and standard terms in one file and paste it every run.
+  - Add your proposal template once. Every proposal then looks like yours.
+  - Keep won and lost proposals with their outcomes. Step 2 learns what wins.
+  - Pair it with "Win a deal against a named rival" when the buyer names a competitor on the call.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: A call recorder with transcripts
+      why: A transcript gives the buyer's exact words to quote in the proposal.
+    - name: Your CRM
+      why: Takes the updates and the action plan dates.
+  inputs:
+    - Your proposal template
+    - Past proposals that won
+    - The buyer's procurement rules, if they shared them
+terms:
+  - term: Deal desk
+    meaning: The check a company runs on a deal's price and terms before it goes to the customer.

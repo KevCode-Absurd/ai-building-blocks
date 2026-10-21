@@ -27,7 +27,7 @@
 - [Launch Performance Max, keep it clean, know when to scale](https://useaiblocks.com/workflows/launch-performance-max-keep-it-clean-and-know-when-to-scale): Give it your catalogue and break-even numbers. Get a Performance Max build, a clean-up list and a scaling call.
 - [Margin-tier Shopping builder](https://useaiblocks.com/skills/margin-tier-shopping-builder): Give it products with margin and ROAS history. Get a Shopping structure and a target for each tier.
 - [Merchant Center feed health checker](https://useaiblocks.com/skills/merchant-center-feed-health-checker): Give it your Merchant Center diagnostics. Get problems ranked by lost sales and a score out of 100.
-- [Merchant Center suspension checker](https://useaiblocks.com/skills/merchant-center-suspension-checker): Walk through your Merchant Center and store. Get a pass or fail list by suspension risk and a score out of 100.
+- [Merchant Center suspension checker](https://useaiblocks.com/skills/merchant-center-suspension-checker): Paste your Merchant Center settings. Get each gap ranked by suspension risk and a score out of 100.
 - [Non-brand Search campaign builder](https://useaiblocks.com/skills/non-brand-search-campaign-builder): Give it your products and search terms. Get themed ad groups, keywords, ad copy and extensions.
 - [Performance Max launch planner](https://useaiblocks.com/skills/performance-max-launch-planner): Give it your catalogue, budget and break-even numbers. Get a fit verdict and a Performance Max build.
 - [Performance Max routine keeper](https://useaiblocks.com/skills/performance-max-routine-keeper): Give it your Performance Max exports. Get this week's checks, exclusions, a budget move and a waste score.

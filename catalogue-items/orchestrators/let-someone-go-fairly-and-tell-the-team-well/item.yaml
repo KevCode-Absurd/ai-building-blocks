@@ -1,0 +1,27 @@
+slug: let-someone-go-fairly-and-tell-the-team-well
+name: "Let someone go fairly and tell the team well"
+summary: "Give it the situation. Get a fair exit plan, risk flags, a handover checklist and the announcement."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+  - {type: document}
+uses: [layoff-plan-writer, termination-risk-checker, offboarding-plan-builder, staff-announcement-writer]
+steps:
+  - {uses: layoff-plan-writer, note: "Who decides, the order of events, what the person is offered, where and when they hear it, and the plain words to use, in the order Ben Horowitz and Brian Chesky set out."}
+  - {uses: termination-risk-checker, note: "Risk flags on notice, final pay timing, severance and release points, and anything in the reasons that could be read as unfair. A first check, not legal advice."}
+  - {uses: offboarding-plan-builder, note: "The handover checklist, the access and kit list with dates, and the exit interview questions."}
+  - {uses: staff-announcement-writer, note: "The announcement for the rest of the team, a rollout order (who hears first) and honest answers to the questions they will ask. Nothing goes out until you say so."}
+origin: own
+version: 1.0.0
+minds: [ben-horowitz, brian-chesky]
+credits:
+  - {title: "The Right Way to Lay People Off (September 21, 2010)", by: "Ben Horowitz", url: "https://a16z.com/the-right-way-to-lay-people-off/", used: "Get your head right, don't delay, be clear on why, train the managers, address the whole company, be present"}
+  - {title: "A message from co-founder and CEO Brian Chesky (5 May 2020)", by: "Brian Chesky, Airbnb Newsroom", url: "https://news.airbnb.com/a-message-from-co-founder-and-ceo-brian-chesky/", used: "Say the decision, the reasons and the help plainly, in the leader's own words, to everyone at once"}
+example_pending: true

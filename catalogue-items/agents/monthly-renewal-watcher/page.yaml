@@ -1,0 +1,123 @@
+new_slug: monthly-renewal-watcher
+name: Monthly renewal watcher
+summary: Give it your contracts each month. Get renewals due in 90 days, the risk on each and a plan for every call.
+job: keep-customers
+thinking: high
+thinking_why: It rates risk from notes and usage, decides between a success plan, a health review and a thank-you, and sets a price stance. Give it your strongest model.
+headline: Monthly renewal watcher
+subhead: Give it your contract register on the first of each month. It lists every renewal in the next 90 days, rates the risk, writes a brief for each one inside 60 days, plans the call and proposes a price stance. You approve every contact and every change.
+explain: |
+  A renewal that arrives as a surprise ends in one of two ways. A discount, because there is no time to fix anything, or a lapse, because the notice window closed while everyone was busy. Both were avoidable a month earlier.
+
+  This agent looks 90 days ahead every month. It puts contracts whose notice window closes within 30 days at the top whatever their risk. For every renewal inside 60 days it builds a brief from your notes and asks one question first: did the customer reach the result they bought the product for? If not, it writes the plan to get them there before the date. If the account is healthy, it plans the thank-you and an early conversation. It proposes a price stance from your rules and never a discount before the health review. Nothing reaches a customer without your yes.
+when:
+  - Your customers are on yearly plans or contracts and renewals keep arriving unprepared.
+  - You lost a renewal last quarter and only found out why afterwards.
+  - You want to raise prices at renewal without losing the accounts that matter.
+you_give:
+  - Your contract register with start date, renewal date, value, plan, notice period and contact
+  - Recent emails, call notes and tickets for accounts renewing soon (advised)
+  - A read-only connection to your account or billing tool (optional)
+  - Survey answers or complaints from the last quarter (optional)
+  - Your price rules at renewal (optional)
+you_get:
+  - Every renewal in the next 90 days with value, risk and the notice deadline
+  - Last month's results, with repeated loss reasons called out
+  - A one-page brief for each renewal inside 60 days
+  - A success plan for each at-risk account that has not reached its result
+  - A price stance and the first line for each call
+  - A list of contacts and changes to approve
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month.
+  - Export your contract register from your billing or CRM tool. Put it in one folder with recent account notes, or attach them in the chat.
+  - Tell it your price rules once. It saves them.
+  - Read the briefs and the stances. Make the calls you agree with, then tell the agent the outcome of each.
+  - Run it again on the first of next month. It records the results and tracks the risk over time.
+how_it_works:
+  - title: Read last month
+    text: Records how each renewal ended and flags a reason that repeated three times in a quarter.
+  - title: List what renews
+    text: Finds every renewal in the next 90 days with timing, risk and room to raise, and puts closing notice windows first.
+  - title: Prepare each one inside 60 days
+    text: Builds a brief per account from your notes, emails and calls, covering what they bought for, what happened and who decides.
+  - title: Sort each renewal
+    text: At risk gets a health review and, if the result was not reached, a success plan. Healthy gets a thank-you and an early conversation.
+  - title: Set the price stance
+    text: Hold, raise by the allowed amount, or hold with a plan, from your rules. Never a discount before the review.
+  - title: Log and hand back
+    text: Updates the register and stops for your yes.
+output_shape: |-
+  THIS MONTH
+    <n> renewals in 90 days | <value> | <n> at risk | <n> notice windows close in 30 days
+
+  LAST MONTH
+    Renewed <n> | raised <n> | cut <n> | lost <n> | repeated reason: <reason or none>
+
+  NOTICE WINDOWS CLOSING
+    <account> | notice by <date> | risk <low | medium | high> | do first: <action>
+
+  RENEWALS INSIDE 60 DAYS
+    <account> | renews <date> | <value> | risk <level> | bought for: <result> | reached: <yes | no> | stance: <hold | raise <amount> | hold with plan> | first line: <one sentence>
+
+  SUCCESS PLANS
+    <account> | result to reach: <what> | by <date> | steps: <three lines>
+
+  60 TO 90 DAYS OUT
+    <account> | renews <date> | start preparing on <date>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run October for Sprout's retail and partner contracts. Practice
+    numbers, not Sprout's real figures.
+    Register:
+    - Big-box retailer: shelf agreement renews 1 Dec, $420,000 a year,
+      90 days notice (window closed 2 Sep, auto-renews unless either side
+      objects), buyer changed in August.
+    - Warehouse club: renews 15 Jan, $260,000, 60 days notice, bought for
+      "a 12-pack that moves 40 units a week per store", currently 31.
+    - Grocery chain: renews 10 Nov, $95,000, 30 days notice, reorders
+      slowing, no complaints.
+    - Cashback app partnership: renews 20 Dec, $18,000 fee, 30 days notice.
+    Notes attached: last 3 emails with each buyer, two call summaries.
+    Price rules: may raise up to 4% at renewal; no discounts below 8%
+    margin impact without a founder's yes.
+    Last month: fitness app partnership renewed flat.
+  output: pending
+tweaks:
+  - what: Your price rules
+    how: Say how much you may raise and your discount floor. Without them every stance is hold.
+  - what: Account notes
+    how: The brief is only as good as the notes. Three recent emails and one call summary per account is enough.
+  - what: Notice window warning
+    how: The agent flags windows closing in 30 days. Set 45 if your approvals are slow.
+  - what: What they bought for
+    how: Write one line per account on the result they expected. The success plan depends on it.
+judge:
+  - Every renewal date and notice period matches your register.
+  - Every renewal inside 60 days has a brief.
+  - No discount was proposed before the health review.
+  - Closing notice windows are at the top.
+  - Nothing was sent or changed without your yes.
+test:
+  - Run it on last quarter's register, where you know which renewals were lost. See if it would have rated them at risk.
+  - Give it one healthy account and one that never reached its result. It should plan a success plan only for the second.
+  - Run it twice on the same register. The risk ratings should match.
+improve:
+  - Add the result each customer bought for to the register before the first run.
+  - Set your notice window warning and price rules to match how your company approves changes.
+  - Record every renewal outcome and reason in the outcomes file. Repeated reasons are the most useful thing it finds.
+  - Pair it with the Weekly customer health watcher, which feeds the risk ratings week by week.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the register and outcomes files between months and run on the first working day.
+    - name: Your CRM or billing tool
+      why: Export contracts with renewal dates, notice periods and value. A read-only connection lets the renewal step read them directly.
+  inputs:
+    - A note when a customer's buyer or champion changes
+    - Usage or order data for accounts renewing soon

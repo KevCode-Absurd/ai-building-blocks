@@ -1,0 +1,17 @@
+slug: training-handout-writer
+name: "Training handout writer"
+summary: "Paste your session notes or slides. Get a one-page handout people can use at their desk a month later."
+category: general
+boards: []
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

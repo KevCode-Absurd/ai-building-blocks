@@ -1,0 +1,26 @@
+slug: launch-a-feature-through-a-beta-and-read-the-numbers
+name: "Launch a feature through a beta and read the numbers"
+summary: "Give it the feature. Get a launch plan, a beta, pre-set metrics, release notes and a results read."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: codebase, required: false}
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: plan}
+  - {type: document}
+  - {type: audit_report}
+uses: [feature-launch-planner, beta-program-planner, product-metrics-planner, release-notes-writer, product-metrics-review-writer]
+steps:
+  - {uses: feature-launch-planner, note: "Who gets it first and in what order, what could go wrong, the rollback, and the dates, from the feature and your users."}
+  - {uses: beta-program-planner, note: "The beta users (who feel the problem most), how many, how to invite them, what to ask them each week and how to close the beta."}
+  - {uses: product-metrics-planner, note: "Before anything ships: what success looks like in numbers, the guardrail metrics that must not fall, and the number that would make you pull the feature."}
+  - {uses: release-notes-writer, note: "Release notes in plain words: what changed for the user, why, and what to do if something looks different. You approve before they are published."}
+  - {uses: product-metrics-review-writer, note: "The numbers against the metrics you set: success, guardrails, the pull number, with what they mean and what they cannot yet say."}
+origin: own
+version: 1.0.0
+example_pending: true

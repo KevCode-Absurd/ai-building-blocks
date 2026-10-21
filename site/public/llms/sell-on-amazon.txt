@@ -2,7 +2,7 @@
 
 > 16 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Amazon brand registry planner](https://useaiblocks.com/skills/amazon-brand-registry-planner): Give it your brand name and listing. Get a trademark choice, a registry pack and a list of tools to turn on.
+- [Amazon brand registry planner](https://useaiblocks.com/skills/amazon-brand-registry-planner): Give it your brand name and listing. Get a trademark choice, a registry pack and tools to turn on.
 - [Amazon fee and margin checker](https://useaiblocks.com/skills/amazon-fee-and-margin-checker): Give it price, landed cost and size. Get profit per unit, all fees and a score out of 100.
 - [Amazon inbound stock planner](https://useaiblocks.com/skills/amazon-inbound-stock-planner): Give it sales, lead times and case sizes. Get how much to send, when, and a shipment checklist.
 - [Amazon keyword picker](https://useaiblocks.com/skills/amazon-keyword-picker): Give it your product and a keyword export. Get the phrases for your title, bullets and backend.

@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It reads camera settings before changing them.
 new_slug: camera-image-fixer
 name: Camera image fixer
-summary: Say what looks wrong in your camera picture. Get settings and steps that improve it.
+summary: Say what looks wrong in your camera picture. Get the cause, camera settings and processing steps.
 job: build-software
 headline: Camera image fixer
-subhead: Say what looks wrong in your camera picture. Get settings and steps that improve it.
+subhead: Say what looks wrong in your camera image, such as dark, blurry or washed out, and name the camera if you know it. It measures the image and finds the likely cause, fixing the camera before the pixels. You get a diagnosis, camera settings to change first, processing steps in order and a before and after check.
 explain: |
   A dark, blurry or washed-out camera picture gets better, starting with the camera and ending with software. Tell it what looks wrong and it checks the image, works out the likely cause, and gives you camera settings and processing steps to fix it.
 

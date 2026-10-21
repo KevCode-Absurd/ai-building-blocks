@@ -1,6 +1,6 @@
 slug: market-mood-reader
 name: "Market mood reader"
-summary: "Paste your holdings and how prices moved. Get each move sorted as business or mood, and a take, ignore or wait read."
+summary: "Paste holdings and price moves. Get each move sorted as business or mood, plus take, ignore or wait."
 category: general
 type: skill
 role: check

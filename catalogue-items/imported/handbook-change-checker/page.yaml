@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: One change can quietly clash with other rules.
 new_slug: handbook-change-checker
 name: Handbook change checker
-summary: Give it a proposed handbook change. Get what it affects elsewhere, including state differences. A first check, not legal advice.
+summary: Give it a proposed handbook change. Get the other policies it breaks and state differences. Not legal advice.
 job: hire-people
 headline: Handbook change checker
-subhead: Give it a proposed handbook change. Get what it affects elsewhere, including state differences. A first check, not legal advice.
+subhead: Give it the handbook section, the new wording and your current handbook. It finds other policies and state pages the change touches. You get old and new side by side, cross-references that may break, a state by state check and a flag if a promised benefit is cut.
 explain: |
   Before you change a line of your handbook, see what else it breaks. Change the paid leave policy and you may also affect final pay, the leave cross-reference and several state add-on pages. This skill finds those ripples while the change is still a draft.
 

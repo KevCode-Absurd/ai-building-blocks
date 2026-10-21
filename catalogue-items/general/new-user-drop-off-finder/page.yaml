@@ -1,12 +1,12 @@
 new_slug: new-user-drop-off-finder
 name: "New user drop-off finder"
-summary: "Paste visits, sign-ups and 30-day users. Get where new people leave and the first-visit fix to try before any new feature."
+summary: "Paste visits, sign-ups and 30-day users. Get the biggest drop-off, a first-visit fix and a measure."
 job: build-product
 thinking: medium
 thinking_why: "It does simple funnel arithmetic and then judges which step to fix. The steps are fixed."
 
 headline: "New user drop-off finder"
-subhead: "Paste your counts of visits, sign-ups and people still active after 30 days. It finds the biggest drop in share terms, estimates how many people a proposed feature could reach and looks at the first visit for the missing step. You get the drop-off, a fix for new users and a measure."
+subhead: "Paste your visits, sign-ups and people still active after 30 days. It finds the biggest drop in share terms, estimates how many people a proposed feature could reach and looks at the first visit for the missing step. You get the drop-off, a fix for new users and a measure."
 
 explain: |
   When people stop using a product, the usual answer is to build another feature. But features mostly reach people who already use the product a lot, and they are few. The bigger loss happens earlier, in the first visit, when new people leave before they see why it is worth their time.

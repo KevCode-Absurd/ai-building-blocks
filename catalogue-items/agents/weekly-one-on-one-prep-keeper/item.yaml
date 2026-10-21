@@ -1,0 +1,30 @@
+slug: weekly-one-on-one-prep-keeper
+name: "Weekly one-on-one prep keeper"
+summary: "Give it last week's notes on each person you manage. Get this week's agenda, the praise and the hard point to raise."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: meeting_notes, required: true}
+  - {type: question, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+  - {type: feedback_notes}
+uses: [one-on-one-meeting-planner, feedback-request-script-writer, feedback-conversation-planner, small-win-praise-planner, behaviour-and-fix-notes-writer, weekly-status-update-writer]
+steps:
+  - {uses: one-on-one-meeting-planner, note: "Once per person, and again when their job changes: the meeting rhythm, agenda rules and follow-up for that person."}
+  - {uses: feedback-request-script-writer, note: "Once per person, then every quarter: your go-to question for asking them what you should change, and how to handle silence."}
+  - {uses: small-win-praise-planner, note: "Every week, for each person: the specific win to praise and when, from last week's notes."}
+  - {uses: behaviour-and-fix-notes-writer, note: "Only when the same problem showed up in two weeks of notes: one watchable behaviour and its likely reason."}
+  - {uses: feedback-conversation-planner, note: "Only when a behaviour note exists for this week: what to praise, what to say and how to say it."}
+  - {uses: weekly-status-update-writer, note: "Only when you ask for one: a one-page update for your own manager from the week's notes."}
+schedule: "Every Monday morning, before the first one-on-one of the week"
+asks_before: [sending any message to the person or anyone else, changing their goals, pay, title or role, sharing their notes with anyone, recording anything in an HR system, cancelling or moving a meeting]
+minds: [andy-grove, kim-scott]
+origin: own
+version: 1.0.0
+example_pending: true

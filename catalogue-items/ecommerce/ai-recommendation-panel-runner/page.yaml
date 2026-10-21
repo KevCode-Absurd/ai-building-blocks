@@ -1,12 +1,12 @@
 new_slug: ai-recommendation-panel-runner
 name: "AI recommendation panel runner"
-summary: "Give it your store and shopper questions. Get a record of who AI names, sources cited and a score out of 100."
+summary: "Give it your store and shopper questions. Get who AI names, sources cited and a score out of 100."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It sorts many answers into a table and counts them. A mid-level model is enough. The questions must be run by you or by an AI that can browse."
 
 headline: "AI recommendation panel runner"
-subhead: Give it your store name, your rivals and a fixed list of shopper questions. It sets up a repeatable test on each AI assistant and records who gets named, linked and cited. You get a results table, share of voice, a visibility score out of 100 and the sources AI cites instead of you.
+subhead: Give it your store name, rivals and a list of shopper questions. It runs a repeatable test on each AI assistant and records who gets named, linked and cited. You get a results table, share of voice, a score out of 100 and the sources cited instead of you.
 
 explain: |
   Ask an AI assistant "best running shoes for flat feet" three times and you may get three different lists. One run proves nothing. To know if your store is gaining or losing ground, you need the same questions, asked the same way, on a schedule.

@@ -1,12 +1,12 @@
 new_slug: normal-earnings-estimator
 name: "Normal earnings estimator"
-summary: "Paste cleaned earnings and how far the record can be trusted. Get low, normal and high earnings for an ordinary year."
+summary: "Paste cleaned earnings and a reliability rating. Get low, normal and high earnings for an ordinary year."
 job: money-and-investing
 thinking: high
 thinking_why: "It chooses a window, applies rules about when the latest year can stand alone and builds a range from judgment. That needs careful reasoning."
 
-headline: "Work out what a company earns in an ordinary year, as a range you can defend"
-subhead: "Paste cleaned earnings for five to ten years and the reliability rating. It restates per share, averages with loss years in and at zero, refuses to lean on the latest year without three tests and caps the result at what a normal year has shown. You get low, normal and high earnings per share."
+headline: "Normal earnings estimator"
+subhead: "Paste cleaned earnings for five to ten years and the reliability rating. It restates per share, averages with loss years in and at zero, tests the latest year before leaning on it and caps the result at a normal year. You get low, normal and high earnings per share."
 
 explain: |
   Value that follows last year's profit swings with the economy. Value that follows a normal year's profit follows the business. The hard part is deciding which years count and what to do with the bad ones and the best one.

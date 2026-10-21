@@ -1,0 +1,27 @@
+slug: monthly-contract-renewal-keeper
+name: "Monthly contract renewal keeper"
+summary: "Give it your vendor contracts each month. Get renewals and notice dates due, the traps in each and the asks to make."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: document, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+  - {type: document}
+uses: [supplier-contract-manager, contract-change-tracer, saas-terms-check, contract-plain-summary, supplier-payment-terms-planner]
+steps:
+  - {uses: supplier-contract-manager, note: "Every month: the renewal calendar, the terms worth pushing for and the broken promises tracked, across every supplier and vendor deal."}
+  - {uses: contract-change-tracer, note: "Only when a vendor sent new terms, an amendment or a price notice: what changed and each clause's latest wording."}
+  - {uses: saas-terms-check, note: "Only for a software subscription renewing within 90 days: renewal traps, price rises, uptime and data terms flagged."}
+  - {uses: contract-plain-summary, note: "Only for a contract renewing within 60 days, or one you plan to renegotiate: a two-minute summary to read before the call."}
+  - {uses: supplier-payment-terms-planner, note: "Only for a supplier renewal where cash timing matters: the float, the terms to ask for and the cost split."}
+schedule: "On the first Monday of each month"
+asks_before: [renewing, cancelling or sending notice on any contract, contacting a vendor or supplier, agreeing to new terms or a price, paying anything, signing anything, sharing a contract outside your team]
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,11 +1,11 @@
 new_slug: math-or-judgment-call-sorter
 name: Math or judgment call sorter
-summary: Paste a decision and your numbers. Get it sorted as a math or judgment call, with the next step.
+summary: Paste a decision and your numbers. Get it sorted as math or judgment call, with the next step.
 job: think-and-decide
 thinking: high
 thinking_why: It has to judge whether the numbers can really settle a choice, and what they cannot see.
 headline: Math or judgment call sorter
-subhead: Paste a decision, your options and the numbers you have. It tests whether your own history can settle the choice. If yes, it sets up the model. If no, it writes your judgment down, states what the short-term math says against it and names what the math cannot see. You get a clear path either way.
+subhead: Paste a decision, your options and your numbers. It tests whether your own history can settle the choice. If yes, it sets up the model. If no, it writes your judgment down, states what the short-term math says against it and names what the math cannot see.
 explain: |
   Some decisions have a right answer you can calculate, such as how much stock to hold. Others cannot be calculated because the effect shows up over years, or you have no history to measure. Teams often pretend the second kind is the first, or let the loudest voice settle the first kind.
 

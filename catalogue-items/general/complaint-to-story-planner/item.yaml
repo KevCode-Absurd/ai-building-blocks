@@ -1,0 +1,18 @@
+slug: complaint-to-story-planner
+name: "Complaint to story planner"
+summary: "Paste a complaint and your fix. Get the one surprise that turns it into a story customers retell."
+category: general
+boards: []
+type: prompt
+role: plan
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [tony-hsieh]

@@ -1,0 +1,126 @@
+new_slug: weekly-newsletter-keeper
+name: Weekly newsletter keeper
+summary: Give it your notes each week. Get this issue drafted, edited, checked against your voice and scored before it goes out.
+job: write-emails
+thinking: high
+thinking_why: It drafts for one reader, edits for voice, judges a readiness score and loops on its own work until it passes. Give it your strongest model.
+headline: Weekly newsletter keeper
+subhead: Give it your rough notes every Thursday. It drafts the issue for one named reader, edits it into plain words, checks it against your voice, writes the subject lines and scores it out of 100, looping until it passes. You read it, then you send it.
+explain: |
+  A weekly newsletter dies the same way every time. The notes are good, the week fills up, and Thursday night becomes a rushed draft that sounds like everyone else's. Readers can tell. Replies dry up, then opens.
+
+  This agent runs the same routine every week. It keeps a plan of the next 12 issues, each for one reader with one worry. It drafts from your notes, opening with the moment you noticed. It edits plain, cuts any sentence that could sit in anyone's newsletter, checks the voice against your brand brain and writes subject lines that stay true to the issue. Then it scores the issue and goes back to the editor if the score says fix, up to three times. You get an issue ready to paste. It never sends.
+when:
+  - You send a weekly newsletter and the writing eats the day before it goes out.
+  - Your issues have started to sound generic and replies have dried up.
+  - You have good notes every week and no time to shape them.
+you_give:
+  - This week's notes, the moment you noticed and the one reader it is for
+  - Your brand brain, for the voice check (advised)
+  - Opens, clicks and replies from past issues (optional)
+  - Reader replies from last week (optional)
+  - Your topic plan, once it exists
+you_get:
+  - The issue, ready to paste, with the subject line chosen and alternatives
+  - A readiness score out of 100 with the ship or fix call
+  - The main cuts, so you learn the pattern
+  - A plan of the next 12 issues, each with a reader and a worry
+  - Reader replies worth turning into future issues
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to write this week's issue.
+  - Paste your notes for the week and name the one reader it is for. Attach your brand brain if you have one.
+  - On the first run, approve the 12-issue topic plan. It saves it.
+  - Read the issue. Change anything that is not you, then paste it into your email tool and send it yourself.
+  - Next week, paste the replies and the open and click numbers. The plan learns from them.
+how_it_works:
+  - title: Check the topic plan
+    text: Keeps 12 issues ahead, each with one reader and one worry, and refills the list when it runs low.
+  - title: Draft the issue
+    text: Writes from your notes for the named reader, opening with the moment you noticed and ending with a question.
+  - title: Edit it plain
+    text: Cuts clutter, explains each cut, and removes any sentence that could appear in anyone else's newsletter.
+  - title: Check the voice
+    text: Ranks off-voice lines against your brand brain and fixes them, leaving claims alone unless the brain backs them.
+  - title: Write the subject lines
+    text: Three to five angles, the first naming the worry in the reader's words, all true to the issue.
+  - title: Score it and loop
+    text: Scores the issue out of 100. A fix call sends it back to the editor, up to three times.
+  - title: Log and hand back
+    text: Ticks the topic, records the score and stops. You send.
+output_shape: |-
+  FOR
+    <the one reader> | worry: <one line>
+
+  SUBJECT LINE
+    <chosen> | also: <alt 1> | <alt 2> | <alt 3>
+
+  THE ISSUE
+    <opening moment>
+    <the one idea, in plain words>
+    <the reply question>
+
+  SCORE
+    <n>/100 | measured: <counts, clarity, subject> | call: <ship | fix after 3 loops, gaps: ...>
+
+  WHAT CHANGED
+    <cut> because <reason>
+    <voice fix> because <reason>
+
+  TOPICS LEFT
+    <n> issues | next: <topic> for <reader>
+
+  REPLIES TO READ
+    "<reply>" -> future issue: <topic>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Write this week's issue of Sprout's subscriber newsletter.
+    Reader: the quitter who wants to stick. Office job, has given up on
+    greens powders and pill stacks before, three weeks into Sprout.
+    Notes: a reviewer wrote "Sprout has been the one thing I've been able
+    to stick to." The thing I noticed this week: the days people skip
+    are the days the pouch is not on the counter. Rip. Tip. Enjoy. is on
+    the pouch for a reason. Mention the new limited flavour (raspberry
+    lemonade) once, no hard sell. Facts allowed: 21 vitamins and
+    minerals, 6 g prebiotic fiber per pack, pectin base, vegan.
+    Brand brain attached. Last issue: 41% opens, 12 replies, most about
+    where people keep the pouch.
+  output: pending
+tweaks:
+  - what: The one reader
+    how: Name one real person each week. An issue for everyone reads like an issue for no one.
+  - what: Your notes
+    how: One moment you noticed beats a list of updates. The agent opens with it.
+  - what: Brand brain
+    how: With it, the voice check runs and claims are checked. Without it, the issue is edited for plainness only.
+  - what: Loop limit
+    how: The agent stops after three edit loops. Lower it to one if you prefer to finish by hand.
+judge:
+  - The issue opens with a moment, not a topic, and is for one named reader.
+  - Every fact and claim is in your notes or brand brain.
+  - The subject line is true to the issue.
+  - The score passed, or the gaps are listed.
+  - Nothing was sent or scheduled.
+test:
+  - Give it last week's notes and compare the issue with the one you sent. Which one would you rather receive?
+  - Run it twice on the same notes. The opening moment and the worry should match.
+  - Give it notes with no moment, only updates. It should ask for one rather than invent it.
+improve:
+  - Write your reader profiles into the topic file, so each issue starts with the right person.
+  - Add the words readers use in replies to your brand brain. The voice check will catch when you stop sounding like them.
+  - Record opens, clicks and replies per issue in the issues file. The topic plan learns from it.
+  - Pair it with the Monthly content repurposer, which turns the best issues into posts.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the topics and issues files between weeks and run every Thursday.
+    - name: Any good chat AI
+      why: Paste the agent and your notes. Keep the topic plan in a note yourself.
+  inputs:
+    - Reader replies from last week, pasted as written
+    - Opens and clicks per issue from your email tool

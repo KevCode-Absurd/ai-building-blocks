@@ -2,10 +2,10 @@ thinking: high
 thinking_why: It reads in full and tests understanding.
 new_slug: deep-reading-map-builder
 name: Deep reading map builder
-summary: Give it an article, book or PDF. Get a knowledge map of its ideas and a Feynman check that you understood it.
+summary: Give it an article, book or PDF. Get a knowledge map of its ideas and a check that you understood.
 job: think-and-decide
 headline: Deep reading map builder
-subhead: Give it an article, book or PDF. Get a knowledge map of its ideas and a Feynman check that you understood it.
+subhead: Give it an article, book, PDF or web page and choose a map, notes or a comparison of several sources. It links each idea to the evidence behind it and keeps the page locations attached. You get a knowledge map, a comparison matrix for several sources and a plain-language recall check.
 explain: |
   A knowledge map of an article, book or PDF, with each idea linked to the evidence behind it, followed by a plain-language check that you understood. It turns long reading into a structure you can study from.
 

@@ -1,22 +1,23 @@
 # Get found in search and AI answers: AI Blocks
 
-> 87 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 94 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI answer visibility tracker](https://useaiblocks.com/agents/ai-answer-visibility-tracker): Run the same shopper questions through AI assistants each month. Get your share against last month and the fix for the gap.
 - [AI brand mention scanner](https://useaiblocks.com/skills/ai-brand-mention-scanner): Give it a brand name. Get a score for where it is mentioned online. Collects data from websites.
 - [AI citation scorer](https://useaiblocks.com/skills/ai-citation-scorer): Give it a page. Get each passage scored on how easily AI tools can quote it, with rewrites to try.
 - [AI citation source finder](https://useaiblocks.com/skills/ai-citation-source-finder): Give it five buyer questions. Get the sites AI tools keep citing, ranked, with who to contact.
 - [AI guide file publisher](https://useaiblocks.com/skills/ai-guide-file-publisher): Give it your store. Get an llms.txt guide to your brand, products and policies for AI assistants. Changes your live theme.
-- [AI recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder): Paste your AI panel results. Get six gaps ranked into fix, build or influence, and a score out of 100.
-- [AI recommendation panel runner](https://useaiblocks.com/skills/ai-recommendation-panel-runner): Give it your store and shopper questions. Get a record of who AI names, sources cited and a score out of 100.
+- [AI recommendation gap finder](https://useaiblocks.com/skills/ai-recommendation-gap-finder): Paste AI panel results. Get six gaps marked fix, build or influence, and a score out of 100.
+- [AI recommendation panel runner](https://useaiblocks.com/skills/ai-recommendation-panel-runner): Give it your store and shopper questions. Get who AI names, sources cited and a score out of 100.
 - [AI search audit](https://useaiblocks.com/skills/ai-search-audit): Give it a website. Get a score for how likely AI search is to cite it, plus fixes. Collects data from websites.
 - [AI search platform checker](https://useaiblocks.com/skills/ai-search-platform-checker): Give it a site. Get a score and fix list for Google AI Overviews, ChatGPT, Perplexity and more.
 - [AI search visibility optimiser](https://useaiblocks.com/skills/ai-search-visibility-optimiser): Give it a page or topic. Get edits that help ChatGPT, Perplexity and Google AI answers cite you.
 - [AI shopper store scorecard](https://useaiblocks.com/skills/ai-shopper-store-scorecard): Give it your Shopify store link. Get a 6-point scorecard of what AI shopping tools can read. Scrapes sites.
-- [AI shortlist readiness checker](https://useaiblocks.com/skills/ai-shortlist-readiness-checker): Give it your store address and product pages. Get a found, matched, chosen check with fixes and a score out of 100.
+- [AI shortlist readiness checker](https://useaiblocks.com/skills/ai-shortlist-readiness-checker): Give it your product pages. Get found, matched and chosen checks, fixes and a score out of 100.
 - [AI traffic tracking set-up](https://useaiblocks.com/skills/ai-traffic-tracking-setup): Give it your analytics and checkout. Get an AI traffic channel, a post-purchase question and a redirect list.
-- [AI-ready product page editor](https://useaiblocks.com/skills/ai-ready-product-page-editor): Give it a product or collection page. Get the facts, spec table, FAQs and markup checklist AI tools can use.
+- [AI-ready product page editor](https://useaiblocks.com/skills/ai-ready-product-page-editor): Give it a product page. Get the facts, spec table, FAQs and markup checklist AI tools can use.
 - [Answer-first page rewriter](https://useaiblocks.com/skills/answer-first-page-rewriter): Give it a blog, guide or FAQ page. Get sections rewritten answer first, with a list of facts still needing a source.
+- [Audit your site's SEO and fix what matters first](https://useaiblocks.com/workflows/audit-your-sites-seo-and-fix-titles-tags-and-markup-first): Give it your site. Get a ranked audit, on-page fixes, new titles and tags, and schema markup.
 - [Backlink profile auditor](https://useaiblocks.com/skills/backlink-profile-auditor): Connect Ahrefs. Get a backlink health report with anchor text spread, toxic links, lost links to win back and rival gaps.
 - [Best-of page writer](https://useaiblocks.com/skills/best-of-page-writer): Give it a buyer question and your rivals. Get a fair best-of page with real numbers.
 - [Brand facts accuracy fixer](https://useaiblocks.com/skills/brand-facts-accuracy-fixer): Paste what AI says about your store. Get wrong facts, the fix for each and a fact accuracy score out of 100.
@@ -28,7 +29,10 @@
 - [Content gap and decay finder](https://useaiblocks.com/skills/content-gap-and-decay-finder): Connect Ahrefs. Get missing topics, thin pages, outdated posts and decaying pages, sorted into update or replace.
 - [Content hub planner](https://useaiblocks.com/skills/content-hub-planner): Give it your topic area. Get pillar pages, supporting cluster pages, URL structure and an internal link map.
 - [Crawl error triage planner](https://useaiblocks.com/skills/crawl-error-triage-planner): Give it your crawler's issue list. Get fixes ranked by effect on rankings and traffic, not by raw severity.
+- [Customer question keyword finder](https://useaiblocks.com/prompts/customer-question-keyword-finder): Paste reviews, tickets and comments. Get the questions people search for and the page each one needs.
 - [Etsy listing SEO scorer](https://useaiblocks.com/skills/etsy-listing-seo-scorer): Give it your Etsy listing. Get a score out of 100, better title and tags, and a ranked fix list.
+- [FAQ page writer from customer questions](https://useaiblocks.com/prompts/faq-page-from-questions-writer): Paste real customer questions and your answers. Get an FAQ page people and search engines find.
+- [Find old posts losing traffic and refresh or cut them](https://useaiblocks.com/workflows/find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it): Give it your traffic by page. Get the decaying pages, keep or cut calls, refresh plans and tracking.
 - [Fix a drop in search traffic and check it recovers](https://useaiblocks.com/workflows/fix-a-drop-in-search-traffic-and-check-it-recovers): Give it your Search Console export. Get the pages that lost clicks, a ranked fix list and a recovery report.
 - [Get your store named on the pages AI quotes](https://useaiblocks.com/workflows/get-your-store-named-on-the-pages-ai-quotes): Give it your category and rivals. Get the sources AI cites instead of you and a plan to show up on them.
 - [Get your store recommended by AI assistants](https://useaiblocks.com/workflows/get-your-store-recommended-by-ai-assistants): Give it your products and rivals. Get a baseline of who AI names, the gaps, and product pages rewritten to be quoted.
@@ -43,8 +47,9 @@
 - [llms.txt writer](https://useaiblocks.com/skills/llms-txt-writer): Give it your site. Get an llms.txt file that tells AI tools which pages and facts matter most.
 - [Local search listing manager](https://useaiblocks.com/skills/local-search-listing-manager): Describe your service business and area. Get a local search audit, listing fixes and a plan for more reviews.
 - [Monthly content decay keeper](https://useaiblocks.com/agents/monthly-content-decay-keeper): Give it your page list and traffic each month. Get the pages losing ground, a call on each and drafts to approve.
+- [Monthly Search Console keeper](https://useaiblocks.com/agents/monthly-search-console-keeper): Give it your Search Console export each month. Get pages to push, thin pages to fix and the next posts to write.
 - [Monthly store SEO keeper](https://useaiblocks.com/agents/monthly-store-seo-keeper): Give it your monthly Search Console numbers. Get a search report, the pages to push and a short fix list to approve.
-- [Monthly store SEO planner](https://useaiblocks.com/skills/monthly-store-seo-planner): Give it your store and monthly hours. Get a first 30 days plan and a monthly SEO cycle to repeat.
+- [Monthly store SEO planner](https://useaiblocks.com/skills/monthly-store-seo-planner): Give it your store and monthly hours. Get a first 30 days plan and a monthly SEO cycle.
 - [Next.js indexing fixer](https://useaiblocks.com/skills/next-js-indexing-fixer): Give it your Next.js site and a Search Console error. Get the canonical, sitemap and rendering fixes.
 - [Old content refresher](https://useaiblocks.com/skills/old-content-refresher): Give it your existing posts. Get which to update, merge or delete, and how deep each update goes.
 - [On-page SEO tuner](https://useaiblocks.com/skills/on-page-seo-tuner): Give it a page. Get fixes for titles, descriptions, headings, content, internal links, images, URLs and schema.
@@ -52,6 +57,7 @@
 - [Page keep-or-cut auditor](https://useaiblocks.com/skills/page-keep-or-cut-auditor): Give it your site's content list. Get each page marked keep, update, merge, redirect or delete, with reasons.
 - [Page SEO optimizer](https://useaiblocks.com/skills/page-seo-optimizer): Give it a web page. Get on-page, speed and structured data fixes to rank better.
 - [Page-at-scale builder](https://useaiblocks.com/skills/page-at-scale-builder): Give it a keyword pattern and data. Get a page template and plan for many useful search pages.
+- [Plan a topic cluster from keywords to briefs and links](https://useaiblocks.com/workflows/plan-a-topic-cluster-from-keywords-to-post-briefs-and-links): Give it your topic and site. Get keyword research, a cluster plan, post briefs and links.
 - [Plan collection pages that rank for buying searches](https://useaiblocks.com/workflows/plan-collection-pages-that-rank-for-buying-searches): Give it your products and a keyword export. Get kept keywords, a collection page plan and one finished page.
 - [Product page SEO builder](https://useaiblocks.com/skills/product-page-seo-builder): Give it a product and target term. Get page layout, copy, image names, markup and an index call.
 - [Publish comparison and best-of pages that shoppers and AI quote](https://useaiblocks.com/workflows/publish-comparison-and-best-of-pages-that-shoppers-and-ai-quote): Give it your rivals and product facts. Get a comparison page plan and a fair best-of page that answers first.
@@ -89,3 +95,4 @@
 - [Write a post that beats the pages ranking today](https://useaiblocks.com/workflows/write-a-post-that-beats-the-pages-ranking-today): Give it a keyword and the pages that rank. Get a brief, a full post and fixes for its page.
 - [YouTube description and tags writer](https://useaiblocks.com/skills/youtube-description-tags): Give it your video. Get a description and tags built around the searches you want to win.
 - [YouTube title and tags writer](https://useaiblocks.com/skills/youtube-title-and-tags-writer): Give it a video or podcast topic. Get title, description, tags and timestamps, or an audit of one that is stuck.
+- [Zero-click content planner](https://useaiblocks.com/prompts/zero-click-content-planner): Paste what your buyers ask and where they hang out. Get a content plan that helps them without a click.

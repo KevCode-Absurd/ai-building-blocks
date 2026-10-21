@@ -1,0 +1,17 @@
+slug: help-article-from-ticket-writer
+name: "Help article writer from support tickets"
+summary: "Paste tickets about the same problem. Get a short help article in the customer's words, with its title."
+category: general
+boards: []
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: voc_reviews, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

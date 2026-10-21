@@ -1,0 +1,121 @@
+new_slug: weekly-invoice-and-cash-chaser
+name: Weekly invoice and cash chaser
+summary: Give it your open invoices each week. Get who to chase, a reminder for each and a 90-day cash view.
+job: track-numbers
+thinking: high
+thinking_why: It compares each invoice with its history, picks the tone for each customer and judges when a plan beats a reminder. Give it your strongest model.
+headline: Weekly invoice and cash chaser
+subhead: Give it your open invoices every Monday. It checks new invoices for mistakes, works out who is late and by how much, writes a reminder in the right tone for each, and keeps a 30, 60 and 90 day cash view. You approve every send.
+explain: |
+  Late payments rarely come from one bad customer. They come from an invoice with a wrong total, a reminder that never went out, and a cash view that counted a promise as money. By the time the gap shows, you are chasing five people at once in the same cross tone.
+
+  This agent runs the chase every week. It checks each new invoice before it counts as owed, tracks days late per customer, and chooses the reminder from the history. Warm for a customer who normally pays, a letter that starts where they are for one over 30 days, and a plan to offer for one who has gone quiet. It keeps a cash view that marks doubtful amounts as doubtful. Nothing is sent until you say so.
+when:
+  - You invoice clients or retailers and the chasing keeps slipping to the end of the month.
+  - One or two slow payers hold a large share of what you are owed.
+  - You want to know, each Monday, whether the next 90 days of cash hold up.
+you_give:
+  - Your open invoices with customer, amount, invoice date, due date and payments received
+  - New invoices sent this week, as PDFs or text (advised)
+  - Your bills and fixed costs for the cash view (advised)
+  - Notes on how each customer usually pays and which ones you most want to keep (optional)
+  - Your payment terms, late fee rules and floor for a plan (optional)
+you_get:
+  - Fixes for any new invoice with a wrong total, date or missing field
+  - Days late per invoice and per customer, against last week
+  - A reminder draft for each late invoice, in the tone that fits the customer
+  - A payment plan to offer anyone who has gone quiet
+  - A 30, 60 and 90 day cash forecast with doubtful amounts marked
+  - A list of sends and offers to approve
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week's chase.
+  - Export your open invoices from your invoicing tool. Put the file in one folder, or attach it in the chat.
+  - Add your bills and fixed costs once. Update them when they change.
+  - Read the reminder drafts. Send the ones you agree with from your own email, then tell the agent which went out.
+  - Run it again next Monday. It compares with its saved rows and checks which promises were kept.
+how_it_works:
+  - title: Read last week
+    text: Marks what was paid, adds new invoices and works out days late for each from the due date.
+  - title: Check new invoices
+    text: Recalculates totals and dates on anything sent this week, so a wrong invoice is fixed before it becomes a late one.
+  - title: See where cash is stuck
+    text: Works out days outstanding and the cash cycle, and flags when they climb two weeks running.
+  - title: Sort each late invoice
+    text: A warm reminder for a normal payer, a letter that meets them where they are past 30 days, and a plan to offer past 45 days.
+  - title: Build the cash view
+    text: Puts what is owed, what you owe and fixed costs into a 30, 60 and 90 day forecast, with doubtful amounts marked.
+  - title: Log and hand back
+    text: Saves the rows and drafts, then stops for your yes on every send.
+output_shape: |-
+  THIS WEEK
+    Owed <amount> | late <amount> across <n> invoices | days outstanding <n> (last week <n>)
+
+  INVOICE FIXES
+    <invoice> | <wrong total | wrong date | missing field> | fix: <what>
+
+  REMINDERS TO SEND
+    <customer> | <invoice>, <amount>, <n> days late | tone: <warm | firm | starts where they are> | draft below
+
+  PLANS TO OFFER
+    <customer> | quiet <n> days | can likely pay <range> | plan: <terms>
+
+  CASH VIEW
+    30 days <amount> | 60 days <amount> | 90 days <amount> | doubtful: <amount>, <who>
+
+  WATCH NEXT WEEK
+    <the two or three invoices that decide the view>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run this week's chase. Practice numbers, not Sprout's real figures.
+    Open invoices (wholesale accounts):
+    - Big-box retailer, INV-2041, $18,400, sent 2 Sept, due 2 Oct, unpaid
+    - Warehouse club, INV-2044, $9,900, sent 15 Sept, due 15 Oct, unpaid
+    - Grocery chain, INV-2048, $6,200, sent 1 Oct, due 31 Oct, unpaid
+    - Grocery chain, INV-2033, $5,800, sent 10 Aug, due 9 Sept, unpaid,
+      buyer said "processing" on 1 Oct, no reply since
+    New invoice sent this week: INV-2052 to the warehouse club, $11,000,
+    30-day terms, attached.
+    Bills: co-packer $22,000 due 28 Oct; freight $4,100 due 25 Oct;
+    fixed costs $31,000 a month.
+    Notes: the big-box retailer always pays 10 to 15 days late. We want
+    to keep the grocery chain. Terms: net 30, no late fees in our deals.
+  output: pending
+tweaks:
+  - what: Your late lines
+    how: The agent starts at 30 days for a firmer letter and 45 for a plan. Set your own if your trade pays slower or faster.
+  - what: Customer notes
+    how: One line per customer on how they pay changes the tone the agent picks. Without notes it stays warm.
+  - what: Bills and fixed costs
+    how: The cash view is only half a picture without them. Add them once and update when they change.
+  - what: Doubtful rule
+    how: Tell it when an owed amount stops counting as sure. The default is 60 days late with no reply.
+judge:
+  - Every days-late figure matches the due date in your file.
+  - Each reminder names the invoice, the amount and one way to pay.
+  - No reminder was drafted for an invoice still inside its terms.
+  - The cash view marks doubtful amounts instead of counting them.
+  - Nothing was sent without your clear yes.
+test:
+  - Give it last month's invoices, where you know who paid late. See if it flags the same people.
+  - Include one invoice with a wrong total on purpose. It should catch it in step 2.
+  - Run it twice on the same file. The reminder list and tones should match.
+improve:
+  - Add your payment terms and any late fee you are allowed to charge, so the drafts never promise what you cannot do.
+  - Save the tone that worked for each customer in the customers file. The agent reads it before drafting.
+  - Set your own doubtful rule in step 5 to match how your customers behave.
+  - Pair it with the Monthly profit close so the cash view and the P&L use the same numbers.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the invoice and customer files between runs and run every Monday on a timer.
+    - name: Your invoicing tool
+      why: Export open invoices with due dates and payments received. Any of the common ones will do.
+  inputs:
+    - A note of every payment that landed this week
+    - Each customer's usual pay time, from your last six months of invoices

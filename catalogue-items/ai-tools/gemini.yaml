@@ -1,0 +1,42 @@
+slug: gemini
+name: Gemini
+maker: Google
+url: https://gemini.google.com
+promise: Answers, research reports and images from an assistant built into Google apps.
+use_cases: [ask-an-assistant, research, make-images]
+categories: [chat-assistant]
+what_it_does:
+  - Answers questions and drafts text from a message you type or say.
+  - Runs Deep Research and writes a report with sources.
+  - Makes and edits images from a written description.
+  - Reads files and links you share with it.
+  - Works inside Gmail, Docs, Drive and other Google apps.
+benefits:
+  - Get a sourced research report on a market or product while you work.
+  - Pull answers from your own Gmail and Drive without leaving the chat.
+  - Make an image or a short clip from one description.
+  - Try the free plan with only a Google account.
+best_for:
+  - People who already live in Gmail, Docs and Drive.
+  - Research that needs sources and a written summary.
+  - Quick images for posts and mock-ups.
+not_for:
+  - Work that needs the exact same answer every time.
+  - Teams outside the Google account system.
+pricing:
+  model: freemium
+  from: US$4.99 per month
+  note: Free with a Google account. Google AI Plus costs US$4.99 per month, AI Pro US$19.99 and AI Ultra from US$99.99. Higher plans add usage and storage.
+works_with:
+  - notebooklm
+  - Gmail
+  - Google Docs
+  - Google Drive
+runs_in: [web, mobile, api]
+blocks:
+  - gemini-image-and-video-maker
+  - gemini-research-report-writer
+alternatives: [chatgpt, claude, perplexity, microsoft-copilot]
+last_checked: 2026-10-21
+sources:
+  - https://gemini.google/us/subscriptions/

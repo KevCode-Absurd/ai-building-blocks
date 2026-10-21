@@ -1,0 +1,29 @@
+slug: quarterly-performance-review-keeper
+name: "Quarterly performance review keeper"
+summary: "Give it the quarter's goals and notes per person. Get each review drafted from evidence, with next quarter's goals to approve."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: plan, required: true}
+  - {type: meeting_notes, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: document}
+  - {type: plan}
+  - {type: copy_draft}
+uses: [okr-goal-writer, feedback-conversation-planner, hard-feedback-message-writer, recognition-plan-designer, hr-partner]
+steps:
+  - {uses: hr-partner, note: "Once, and when the company changes: the review format, the questions and what counsel says must and must not be written down."}
+  - {uses: feedback-conversation-planner, note: "Every quarter, for each person: the review conversation, what to praise, what to say and how, from the quarter's evidence."}
+  - {uses: hard-feedback-message-writer, note: "Only for a person whose results missed and whose notes show a repeated problem: the written message that changes the behaviour and keeps the person."}
+  - {uses: recognition-plan-designer, note: "Once a year, or when the team grows past about eight: the reward plan where anyone who reaches the level wins."}
+  - {uses: okr-goal-writer, note: "Every quarter, last, per person: next quarter's objectives and dated key results, drafted from this quarter's results."}
+schedule: "In the last two weeks of each quarter, before review meetings are booked"
+asks_before: [sending or sharing any review, changing pay, title, role or employment, recording anything in an HR system, booking a review meeting, sharing a person's notes with anyone, telling anyone they are at risk]
+minds: [kim-scott, patty-mccord]
+origin: own
+version: 1.0.0
+example_pending: true

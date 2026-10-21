@@ -5,7 +5,7 @@ name: MATLAB code reviewer
 summary: Give it MATLAB code. Get a review of style, speed and upkeep, checked against MathWorks standards.
 job: test-and-fix-code
 headline: MATLAB code reviewer
-subhead: Give it MATLAB code. Get a review of style, speed and upkeep, checked against MathWorks standards.
+subhead: "Give it your MATLAB files and any style rules your team uses. It runs the built-in code analyser, then checks against MathWorks coding standards: naming, argument blocks, function length, nesting, vectorisation and preallocation. You get findings sorted by severity, the exact lines, suggested fixes and a quality summary."
 explain: |
   A written review of your MATLAB code that sorts problems by how much they matter: errors first, then warnings, then suggestions. It checks against MathWorks coding standards, not personal taste.
 

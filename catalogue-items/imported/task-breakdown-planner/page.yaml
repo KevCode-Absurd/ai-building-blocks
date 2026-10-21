@@ -5,7 +5,7 @@ name: Task breakdown planner
 summary: Give it a spec. Get small, ordered tasks, each with a clear way to check it is done.
 job: build-software
 headline: Task breakdown planner
-subhead: Give it a spec. Get small, ordered tasks, each with a clear way to check it is done.
+subhead: Give it the spec, and the codebase if there is one. It reads both, writes no code, and maps what depends on what before cutting the work into small ordered tasks. You get the dependency map, the task list, a done check for each task, checkpoints and risks.
 explain: |
   A spec turned into small ordered tasks, each with a plain test for when it is done. Big vague work becomes a plan that you or an AI agent can follow one step at a time without a tangle.
 

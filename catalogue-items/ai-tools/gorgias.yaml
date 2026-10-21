@@ -1,0 +1,41 @@
+slug: gorgias
+name: Gorgias
+maker: Gorgias
+url: https://www.gorgias.com
+promise: Online store support in one inbox, with an AI Agent that answers order questions
+use_cases: [sell-and-support]
+categories: [sales-and-support]
+what_it_does:
+  - Brings email, chat, social, SMS and voice into one inbox.
+  - Shows each customer's orders next to their message.
+  - Runs an AI Agent that answers common questions on its own.
+  - Offers a Shopping Assistant that helps visitors choose products.
+  - Applies rules and flows to sort and answer tickets.
+benefits:
+  - Answer where-is-my-order questions without typing each one.
+  - Handle returns and edits from the same screen as the chat.
+  - Pick a ticket plan that fits your store size, and add AI by use.
+best_for:
+  - Online stores on Shopify, BigCommerce, Magento or WooCommerce.
+  - Small support teams with many order questions.
+  - Owners who want support and sales chat in one place.
+not_for:
+  - Businesses that are not selling products online.
+  - Teams that want AI answers with no per-interaction charge.
+pricing:
+  model: subscription
+  from: US$10 per month
+  note: Starter includes 50 tickets a month. Basic is US$50 a month on yearly billing. The AI Agent costs US$0.90 per automated interaction on annual contracts, or US$1.00 monthly. The page also shows a second set of figures, so confirm before buying.
+works_with:
+  - Shopify
+  - klaviyo
+  - Recharge
+runs_in: [web, mobile, api]
+blocks:
+  - support-capacity-planner
+  - delivery-update-flow-builder
+  - customer-wow-budget-planner
+alternatives: [intercom-fin, zendesk-ai, hubspot-breeze]
+last_checked: 2026-10-21
+sources:
+  - https://www.gorgias.com/pricing

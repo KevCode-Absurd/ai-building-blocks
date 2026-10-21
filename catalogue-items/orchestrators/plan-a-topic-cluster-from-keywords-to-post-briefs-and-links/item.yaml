@@ -1,0 +1,25 @@
+slug: plan-a-topic-cluster-from-keywords-to-post-briefs-and-links
+name: "Plan a topic cluster from keywords to briefs and links"
+summary: "Give it your topic and site. Get keyword research, a cluster plan, post briefs and links."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: organic
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: web_page, required: true}
+  - {type: spreadsheet, required: false}
+outputs:
+  - {type: plan}
+  - {type: brief}
+uses: [keyword-researcher, search-intent-keyword-mapper, topic-cluster-mapper, content-brief-writer, internal-link-mapper]
+steps:
+  - {uses: keyword-researcher, note: "The searches around your topic, how often they are made and how hard they are, grouped so the pattern shows."}
+  - {uses: search-intent-keyword-mapper, note: "What the searcher wants behind each keyword (learn, compare, buy, fix) and the kind of page that answers it."}
+  - {uses: topic-cluster-mapper, note: "One main page for the broad search and supporting posts for the specific ones, each search given to exactly one page, with your current pages placed or retired."}
+  - {uses: content-brief-writer, note: "A brief for each post: the search it answers, the questions to cover, the length, the proof to include and the page it links to."}
+  - {uses: internal-link-mapper, note: "Which page links to which, with the anchor text, so every post points to the main page and related posts point to each other."}
+origin: own
+version: 1.0.0
+example_pending: true

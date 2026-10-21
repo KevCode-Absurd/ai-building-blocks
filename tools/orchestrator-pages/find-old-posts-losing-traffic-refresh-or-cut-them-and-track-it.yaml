@@ -1,0 +1,118 @@
+new_slug: find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it
+name: Find old posts losing traffic and refresh or cut them
+summary: Give it your traffic by page. Get the decaying pages, keep or cut calls, refresh plans and tracking.
+job: get-found-in-search
+thinking: high
+thinking_why: It decides which pages live or die from data and must track whether it was right. Give it your strongest model.
+headline: Find old posts losing traffic and refresh or cut them
+subhead: Give it your site and traffic by page. It finds the pages losing traffic and the gaps rivals have filled, makes a keep, refresh, merge or cut call for each, plans the refresh for the keepers, writes new titles and snippets, and sets up tracking to show whether it worked.
+explain: |
+  Old content decays. A post that ranked two years ago has slipped to page two, a rival wrote a better one, and three of your posts now compete for one search. Most teams write new posts instead, because nobody is watching the old ones.
+
+  This workflow looks after the old ones. It finds the pages losing traffic and the topics where rivals now rank above you. It makes a call for each page: keep, refresh, merge with another or cut, with the reason and the numbers. For the refreshers, it plans what to update: facts, structure, the questions the page now misses. It writes new titles and search snippets for the refreshed pages. Then it sets up tracking so you can see, page by page, whether the refresh brought the traffic back.
+when:
+  - Your blog traffic is slowly falling and you do not know which pages are to blame.
+  - You have a hundred posts and suspect twenty do the work.
+  - You refreshed posts last year and never checked whether it helped.
+you_give:
+  - Your site address
+  - Traffic by page for the last twelve months or more
+  - Your competitors, if you know them (optional)
+  - "What you can commit to: how many refreshes a month"
+you_get:
+  - The pages losing traffic and the topics rivals have taken
+  - A keep, refresh, merge or cut call for each page, with reasons
+  - A refresh plan for each page you keep, and new titles and snippets
+  - Tracking set up to show whether each refresh worked
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your site and your traffic by page. It finds the decaying pages and makes the calls.
+  - Read the calls. Change any you disagree with. Refresh the keepers as planned.
+  - Check the tracking after six to eight weeks.
+how_it_works:
+  - title: Find the decay
+    text: Finds the pages losing traffic, the searches they are losing and where rivals now rank above you.
+  - title: Make the call per page
+    text: Makes a keep, refresh, merge or cut call for each page, with the reason and the numbers.
+  - title: Plan each refresh
+    text: "Plans each refresh: facts to update, structure to change, questions to add."
+  - title: Write new titles and snippets
+    text: Writes a new title and search snippet for each refreshed page.
+  - title: Publish the refreshes
+    text: A pause. Make the refreshes and the merges. Publish the new titles and snippets.
+  - title: Track the result
+    text: Sets up tracking per changed page, with the date, the searches to watch and a read at six to eight weeks.
+output_shape: |-
+  STEP 1: DECAY
+    <page>: Traffic <then> -> <now> | Losing searches: <...> | Rival now above: <...>
+
+  STEP 2: CALLS
+    <page>: <keep / refresh / merge into ... / cut, redirect to ...> | Because: <...> | Numbers: <...>
+
+  STEP 3: REFRESH PLANS
+    <page>: Update facts <...> | Change structure <...> | Add questions <...>
+
+  STEP 4: TITLES AND SNIPPETS
+    <page>: Title <...> | Snippet <...>
+
+  PAUSE: make the refreshes, publish
+
+  STEP 5: TRACKING
+    <page>: Changed <date> | Watch: <searches> | Read at: <date> | Worked if: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand, sprout.example. We have 38 blog posts from the last three years.
+    Traffic by page, last 12 months, attached as a sheet. Highlights: "Why greens powders taste bad" went from 4,200 visits a month to 1,100; "Gummy vitamins vs pills" and "Are greens gummies worth it" each get about 600 and overlap; "Best greens powders 2024" gets 90 and is out of date; "How much fibre do adults need" holds steady at 2,000; eleven posts get under 20 visits a month.
+    Competitors: two greens powder brands with big blogs and a health site that now ranks for most of our questions.
+    Commitment: two refreshes a month.
+    Claims we can make: 21 vitamins and minerals, 6 g fibre, third-party tested, supports digestion. Avoid: weight loss, energy, immunity.
+    These traffic numbers are practice numbers.
+  output: pending
+tweaks:
+  - what: Months of data
+    how: Twelve months beats three. Decay only shows over time.
+  - what: Your capacity
+    how: Say how many refreshes a month you can do. The calls prioritise within it.
+  - what: Competitors
+    how: Name them. Step 1 can then say who took which search.
+  - what: Claims you avoid
+    how: List them. The refresh plans and snippets never add them.
+judge:
+  - Each decaying page has its traffic then and now and the searches it is losing.
+  - Each call has a reason and a number, and each cut has a redirect target.
+  - Each refresh plan names facts to update and questions to add, not "improve the content".
+  - Each new title fits the length limit and says what the page gives.
+  - The tracking has a date and a definition of "worked" for every changed page.
+test:
+  - Give it two posts on the same question. Step 2 should merge them and say which URL stays.
+  - Give it a page with 15 visits a month that ranks for a search you need. Step 2 should keep it and say why.
+  - Run step 2 twice. The cut list should match.
+  - At the read date, compare the tracking's prediction with what happened.
+improve:
+  - Run it twice a year with fresh data and keep the calls, so you can see which refreshes paid.
+  - Save your claims list and voice for the snippets.
+  - Record each change date in your CMS so the tracking is exact.
+  - Pair it with "Plan a topic cluster from keywords to post briefs and links" to place the keepers in a cluster.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Your analytics and search console
+      why: Traffic by page and by search is the input for every step.
+    - name: Your CMS
+      why: Where the refreshes, merges and redirects happen.
+  inputs:
+    - Search console queries by page
+    - Publish and last-updated dates for each post
+    - Rival pages that rank for your lost searches
+terms:
+  - term: Content decay
+    meaning: A page slowly losing search traffic as it ages and rivals publish better pages.
+  - term: Redirect
+    meaning: Sending visitors and search engines from a cut page to the page that replaces it.

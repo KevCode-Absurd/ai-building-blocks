@@ -1,0 +1,111 @@
+new_slug: clear-your-support-inbox-and-turn-fixes-into-help-pages
+name: Clear your support inbox and turn fixes into help pages
+summary: Give it your open tickets. Get them sorted, checked replies to send and a help page per fix.
+job: help-customers
+thinking: high
+thinking_why: It writes replies that make promises to real customers and checks every one. Give it your strongest model.
+headline: Clear your support inbox and turn fixes into help pages
+subhead: Give it the open tickets as they came in. It sorts and ranks them, drafts a reply for each in your voice, checks every promise and line of tone, and waits while you send the ones you approve. Then it turns each solved problem into a help page.
+explain: |
+  A support inbox fills faster than one person can empty it. The urgent ticket sits under twenty routine ones, replies get shorter and colder as the day goes on, and a promise gets made in one email that nobody can keep. Next week the same twenty questions are back, because the answer lives only in a sent folder.
+
+  This workflow clears the pile in order. It sorts every ticket and ranks it by how much harm a slow reply would do. It drafts a full reply for each in your voice, then checks every promise against what you can actually do and every line for tone, and repairs the ones that fail. You read and send. Then it writes a help page for each solved problem: the steps, what the customer should see, and what to do if it fails.
+when:
+  - You have more than thirty open tickets and no idea which to answer first.
+  - The same five questions make up half your inbox.
+  - You are about to hand support to someone new and want answers written down.
+you_give:
+  - The open tickets, pasted as they came in, with dates
+  - How you want to sound, or two replies you were happy with
+  - What you can and cannot offer (refunds, replacements, discounts)
+  - Reviews or complaints that give the full customer story (optional)
+you_get:
+  - Every ticket classified, ranked and routed, with a first line
+  - A full reply per ticket, checked for promises, facts and tone, ready for you to send
+  - A help page for each solved problem
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the tickets and what you can offer. It sorts them and drafts and checks a reply for each.
+  - Read the replies, change any you want, and send the ones you approve. Mark which are solved.
+  - Say which tickets are solved. It writes a help page for each problem.
+how_it_works:
+  - title: Sort and rank the tickets
+    text: Classifies every ticket, ranks it by the harm of a slow reply, routes it and writes a first line.
+  - title: Draft every reply
+    text: Writes a full reply per ticket in your voice, with what to check in your systems before sending.
+  - title: Check promises and tone
+    text: Checks each promise against what you can do, each fact against the ticket and each line for tone, and repairs what fails.
+  - title: Send what you approve
+    text: A pause. Read the replies and send the ones you approve. Mark which tickets are now solved.
+  - title: Write the help pages
+    text: Turns each solved problem into a help page with steps, what the customer should see and what to do if it fails.
+output_shape: |-
+  STEP 1: SORTED TICKETS
+    #<id> | <category> | Priority <P1 to P4> | Route: <who> | First line: <...>
+
+  STEP 2: REPLIES
+    #<id>: <full reply in your voice> | Check first: <order, subscription, stock>
+
+  STEP 3: CHECKED REPLIES
+    #<id>: Promises: <kept / changed> | Facts: <match / fixed> | Tone: <ok / repaired> | Final reply: <...>
+
+  PAUSE: send the replies you approve, mark the solved tickets
+
+  STEP 4: HELP PAGES
+    <problem>: Title <...> | Steps <...> | What you should see <...> | If it fails <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, daily greens gummies in 28-pack pouches, sold on our site by subscription and one-time, and in big-box stores.
+    How we sound: warm, plain, first name, no corporate phrases. Say sorry once, then fix it.
+    We can: refund the first order within 30 days (first order only), replace a damaged pouch, pause or cancel a subscription, honour a first-order discount we advertised. We cannot: refund a second or later order, give medical advice.
+    Open tickets (31 in all; first five below, the rest attached):
+    1. Oct 14: "I signed up for the 55% off but was charged $49.99. Where's my discount?"
+    2. Oct 14: "My kid's pouch arrived with the packs stuck together and melted. Photo attached."
+    3. Oct 15: "I keep forgetting to cancel before the renewal. Can I pause for two months?"
+    4. Oct 15: "Can I take these if I'm on a GLP-1 medication?"
+    5. Oct 16: "Third email. Nobody has answered me about my missing order. I'm calling my bank."
+  output: pending
+tweaks:
+  - what: What you can offer
+    how: List it exactly, including the limits (first order only). Step 3 checks every promise against this list.
+  - what: Your voice
+    how: Paste two replies you were proud of. Step 2 matches them.
+  - what: The routing
+    how: Say who handles orders, who handles medical or legal questions, and what goes to you. Step 1 routes to those names.
+  - what: Which fixes get a page
+    how: Say if you only want pages for questions that came up more than once.
+judge:
+  - The P1 tickets are the ones where a slow reply loses money or a customer, and they are at the top.
+  - Each reply answers the actual question in the ticket, by name, in your voice.
+  - No reply promises anything outside the list you gave, and medical questions are not answered with advice.
+  - Each help page has steps, what the customer should see and what to do if it fails.
+  - A stranger could follow the help page without writing in.
+test:
+  - Paste a ticket asking for a refund on a third order. The reply should decline kindly and offer what you can do.
+  - Paste the same ticket twice with different wording. Step 1 should give both the same category and priority.
+  - Read one help page as a customer who has never emailed you. Is anything missing?
+  - Paste a draft reply that promises a refund you did not allow. Step 3 should catch it.
+improve:
+  - Save your offer rules and voice samples in one file and paste it every time, so the checks stay consistent.
+  - Add your help desk's category names to step 1 so the sorted list drops straight in.
+  - Keep the help pages in one folder and link them in step 2's replies next time.
+  - Pair it with "Reply to reviews safely and plan how to get more" for public reviews.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Sorting, drafting and checking are all text.
+    - name: Your help desk
+      why: Holds the tickets and lets you send the approved replies.
+  inputs:
+    - Order and subscription data for the tickets in question
+    - Your current help pages, so new ones match
+    - Past replies that went well or badly
+terms:
+  - term: P1 to P4
+    meaning: Priority levels. P1 is a slow reply that loses money or a customer; P4 can wait a few days.

@@ -1,0 +1,41 @@
+slug: adobe-firefly
+name: Adobe Firefly
+maker: Adobe
+url: https://www.adobe.com/products/firefly.html
+promise: Images, video and audio from text, with Adobe's editing apps beside it.
+use_cases: [make-images, make-video, design]
+categories: [image, video, design]
+what_it_does:
+  - Makes images from a written description.
+  - Makes video clips and audio from a prompt or a still image.
+  - Lets you choose between Adobe's own model and partner models.
+  - Fills in or expands a photo from a written request.
+  - Works with Photoshop, Illustrator and Adobe Express.
+benefits:
+  - Fix and extend photos without leaving the Adobe apps you use.
+  - Pick the model that suits each job from one account.
+  - Try it free each day before you pay.
+best_for:
+  - Designers and marketers who already use Adobe apps.
+  - Editing and extending existing photos.
+  - Teams that want Adobe's terms for commercial use.
+not_for:
+  - People who only need a few quick images and no editing apps.
+  - Heavy video use on the smallest plan.
+pricing:
+  model: freemium
+  from: US$9.99 per month
+  note: Free plan gives a limited daily allowance. Standard includes 2,000 generative credits a month, Pro 4,000, Pro Plus 10,000 and Premium 50,000. Credits reset each month and do not roll over.
+works_with:
+  - Photoshop
+  - Illustrator
+  - Adobe Express
+  - nano-banana
+runs_in: [web, desktop, mobile, api]
+blocks: []
+alternatives: [canva, midjourney, nano-banana, recraft]
+last_checked: 2026-10-21
+sources:
+  - https://www.adobe.com/products/firefly/plans.html
+  - https://www.adobe.com/cc-shared/fragments/products/firefly/plans/faq
+  - https://dupple.com/learn/is-adobe-firefly-free

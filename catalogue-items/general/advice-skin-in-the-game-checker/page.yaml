@@ -1,6 +1,6 @@
 new_slug: advice-skin-in-the-game-checker
 name: "Advice skin-in-the-game checker"
-summary: "Paste advice or a pitch. Get who pays if it is wrong, who gains, and how far to trust it."
+summary: "Paste advice or a pitch. Get who loses if it is wrong, who gains, and a trust level."
 job: think-and-decide
 thinking: medium
 thinking_why: "It weighs motives and evidence in someone else's advice, but the questions are fixed."

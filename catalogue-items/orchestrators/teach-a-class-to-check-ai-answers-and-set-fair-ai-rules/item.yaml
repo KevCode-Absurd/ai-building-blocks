@@ -1,0 +1,24 @@
+slug: teach-a-class-to-check-ai-answers-and-set-fair-ai-rules
+name: "Teach students to check AI answers and set fair rules"
+summary: "Give it the subject and age group. Get lessons on AI reliability, a spot-the-mistake activity and assignment rules."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: document, required: true}
+  - {type: source_text, required: false}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+uses: [ai-reliability-lessons, spot-ai-mistakes-activity, ai-answer-critique-lesson, assignment-ai-boundaries]
+steps:
+  - {uses: ai-reliability-lessons, note: "Lessons for this age group on where AI answers go wrong, why they sound confident, and how to check a claim, with examples from the subject."}
+  - {uses: spot-ai-mistakes-activity, note: "A real AI answer on the subject with mistakes found or planted, a worksheet for students to find them, and the answer key."}
+  - {uses: ai-answer-critique-lesson, note: "A lesson where students grade an AI answer against a rubric, say what is missing or wrong, and write the better version."}
+  - {uses: assignment-ai-boundaries, note: "Your assignment's AI rules checked for what is vague, unfair or unenforceable, and rewritten so a student knows what is allowed and how to show their own work."}
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,113 @@
+new_slug: candidate-comparison-table-builder
+name: "Candidate comparison table builder"
+summary: "Paste your interview notes on several people. Get a side-by-side on agreed criteria, with the stories flagged."
+job: hire-people
+thinking: high
+thinking_why: "It scores many cells from evidence and must resist the overall impression until the end."
+
+headline: "Candidate comparison table builder"
+subhead: "Paste the criteria you set before interviewing and your notes on each candidate. The prompt scores every criterion from quoted evidence, holds the total until the end, flags notes that are verdicts rather than observations, and shows what is still unknown about each person."
+
+explain: |
+  After three interviews, everyone has a favourite, and the debrief becomes a search for reasons. Daniel Kahneman has described in public why that goes wrong: one strong impression colours every other judgement, and a confident story beats a careful tally. The fix he describes is to score each trait separately from evidence and only add up at the end.
+
+  This prompt does that tally. It fixes the criteria as behaviours you could observe, scores criterion by criterion across all candidates with a quote beside every score, and adds up last. It quotes any note that is a verdict ("great energy", "not a leader") and labels it a story. It shows where two interviewers read the same answer differently, lists what is still unknown per candidate with the one question that would fill the gap, and gives a ranking with an honest caveat.
+
+when:
+  - "The team has a favourite and you are not sure why."
+  - "Three interviewers wrote notes and they disagree."
+  - "You want to be able to explain the decision to the people who did not get the job."
+
+you_give:
+  - "The criteria set before the interviews"
+  - "Notes on each candidate, per interviewer if possible"
+  - "The problem the hire must solve (advised)"
+you_get:
+  - "A table scored from quoted evidence, totals last"
+  - "Verdict-style notes flagged as stories"
+  - "Split readings between interviewers"
+  - "What is still unknown and the ranking with its caveat"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your criteria and notes under it."
+  - "Say who wrote which notes if you can."
+  - "Read STORIES first. Decide as a team whether each one is evidence or impression."
+  - "Ask the STILL UNKNOWN questions in a follow-up before you decide."
+
+how_it_works:
+  - title: "Fixes the criteria"
+    text: "Lists them as observable behaviours, rewriting vague ones and saying so."
+  - title: "Scores one criterion at a time"
+    text: "Across all candidates, 1 to 5, with a quote or action beside every score. No evidence, no score."
+  - title: "Adds up last"
+    text: "Totals and the count of no-evidence cells, only after every cell is filled."
+  - title: "Flags the stories"
+    text: "Quotes any verdict-style note, who wrote it, and the criterion it stood in for."
+  - title: "Shows split readings"
+    text: "Where two interviewers scored the same answer differently."
+  - title: "Ranks with a caveat"
+    text: "Order by sum, plus whether the unknowns could change it."
+
+output_shape: |
+  CRITERIA        <observable behaviours>
+  TABLE           <criteria x candidates, score + evidence>
+  TOTALS          <sum / no-evidence cells>
+  STORIES         <note | author | criterion>
+  SPLIT READINGS  <same answer, different scores>
+  STILL UNKNOWN   <gaps and one question each>
+  RANKING         <order, caveat>
+  MISSING         <...>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Role at Sprout: customer experience lead to fix the cancellation
+    complaints and build a help centre.
+    Criteria set before: has reduced repeat tickets before; can write plain
+    help articles; works with a developer on account flows; handles angry
+    customers calmly; can read support data and pick what to fix first.
+    Candidate A, notes from the founder: "Ran support at a meal-kit company,
+    cut 'where is my order' tickets by building a tracking page. Writing
+    sample was clear. Great energy, felt like one of us." Notes from the
+    developer: "Could not describe how she would brief me on a cancel flow
+    change. Said she would 'figure it out'."
+    Candidate B, notes from the founder: "Quiet. Took a while to answer.
+    Showed a help centre he built with 40 articles and the ticket graph
+    before and after. Not sure he's a leader." Notes from the developer:
+    "Walked me through exactly how he'd spec the cancel button, with a
+    sketch. Asked good questions about our subscription tool."
+  output: pending
+
+tweaks:
+  - what: "Per-interviewer notes"
+    how: "Keep them separate and named. Split readings and stories only show up when you do."
+  - what: "Criteria set in advance"
+    how: "If you wrote them before interviewing, say so. If not, the table is labelled weaker, and it is."
+  - what: "Evidence"
+    how: "Paste what the candidate said and did, not your summary of it. Summaries are where stories hide."
+
+judge:
+  - "Every score has a quote or an action beside it."
+  - "Your favourite's stories are flagged like everyone else's."
+  - "The totals were added after the cells, not before."
+  - "Nothing protected by law is mentioned."
+  - "The ranking says whether the unknowns could change it."
+
+test:
+  - "Run it on a past hire where you know how it turned out. See whether the table would have ranked them first."
+  - "Run it twice with the same notes. The totals should match."
+  - "Give it notes with no criteria. It should build them and label the table as weaker."
+
+improve:
+  - "Write your criteria once per role and keep them, so every search starts from the same list."
+  - "Add your interview questions beside each criterion so evidence maps cleanly."
+  - "Pair it with the Candidate reply drafter to tell the others, with the same care."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a scored table in one message."}
+  inputs:
+    - "Work samples, so the writing criterion is scored on work, not on talk"
+    - "The questions you asked, so answers can be compared like for like"

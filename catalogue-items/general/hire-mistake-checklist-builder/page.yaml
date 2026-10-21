@@ -1,0 +1,108 @@
+new_slug: hire-mistake-checklist-builder
+name: "Hiring mistake checklist builder"
+summary: "Paste the role and your past hiring misses. Get a checklist of mistakes to rule out before you offer."
+job: hire-people
+thinking: medium
+thinking_why: "It has to reason about failure modes, incentives and your own biases, not just list traits."
+
+headline: "Hiring mistake checklist builder"
+subhead: "Paste the role, the hires that went wrong before and how the new hire will be paid. The prompt lists the ways this hire fails in a year, maps your past misses onto them, checks the incentive, names your likely biases and gives a checklist with the evidence that rules each mistake out."
+
+explain: |
+  Most hiring advice is about finding the great candidate. Charlie Munger's public advice is the reverse: work out how it fails, then avoid that. For a hire, the failures are few and repeat: the skill was not there, the problem was not what you said it was, the manager had no time, or the pay rewarded the wrong thing.
+
+  This prompt writes the "this hire fails if" list in three groups, person, fit and incentive. It maps each past miss you describe onto a line, so your history becomes a rule. It checks whether the pay plan matches the problem, names the three biases most likely in your search and how each would show up, and turns every failure into a checklist line with the evidence that rules it out and who gathers it. If you name a candidate, it runs the list against what you know.
+
+when:
+  - "The last two hires for this role did not work out and you are about to make a third."
+  - "You have a favourite candidate and want to check yourself before the offer."
+  - "The seat has been empty for months and you can feel the hurry."
+
+you_give:
+  - "The role and the problem it solves"
+  - "Past hires that went wrong and why (advised)"
+  - "What you know about the candidate (optional)"
+  - "How the hire is paid and measured (optional)"
+you_get:
+  - "Eight to twelve ways the hire fails, with your history mapped on"
+  - "An incentive check and your three likely biases"
+  - "A checklist with evidence and an owner per line"
+  - "The list run against your candidate, if given"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the role under it."
+  - "Describe past misses plainly. The patterns are the point."
+  - "Add the pay plan and what you know about the candidate."
+  - "Gather the evidence for each open or risk line before you make the offer."
+
+how_it_works:
+  - title: "Inverts the question"
+    text: "Lists eight to twelve ways the hire fails in a year, grouped by person, fit and incentive."
+  - title: "Adds your history"
+    text: "Maps each past miss onto a line and adds any that are missing, marked FROM HISTORY."
+  - title: "Checks the incentive"
+    text: "Compares what the hire is paid for with the problem they must solve."
+  - title: "Names your biases"
+    text: "The three most likely in this search and how each would show up."
+  - title: "Writes the checklist"
+    text: "Mistake, the evidence that rules it out, who checks it. Only evidence you could really get."
+  - title: "Runs it"
+    text: "If a candidate is given, each line is ruled out, open or risk, with the fact."
+
+output_shape: |
+  THIS HIRE FAILS IF  <8 to 12 lines, grouped>
+  INCENTIVE CHECK     <paid for v problem>
+  OUR BIASES          <3 lines>
+  CHECKLIST           <mistake | evidence | who checks>
+  RUN                 <ruled out | open | risk>
+  MISSING             <...>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Role: customer experience lead at Sprout, to fix cancellation complaints
+    and build a help centre. Reports to the founder, who is also running
+    marketing and has little time.
+    Past misses: a support manager who was great with customers but never
+    changed anything, just answered faster; a growth hire who built
+    dashboards nobody read and left after seven months when the founder
+    stopped meeting him.
+    Pay: salary plus a bonus on support response time.
+    Candidate in mind: ran support at a meal-kit company, cut repeat tickets
+    with a tracking page, strong interview, could not explain how she would
+    brief the developer.
+  output: pending
+
+tweaks:
+  - what: "Past misses"
+    how: "Describe what actually went wrong, not the person. The patterns become checklist lines."
+  - what: "The pay plan"
+    how: "Give it. A bonus on response time for a role meant to cut tickets is a mismatch the list will catch."
+  - what: "Your time"
+    how: "Say how much manager time the hire will really get. Fit failures often start there."
+
+judge:
+  - "Every failure line has evidence you could actually gather."
+  - "Your past misses appear as lines, not as stories."
+  - "The incentive check names what the hire is paid for."
+  - "The biases named are ones you recognise."
+  - "Nothing touches a protected characteristic."
+
+test:
+  - "Run it on a past hire that failed, with the candidate section filled from what you knew then. The list should have flagged the risk."
+  - "Run it twice. The grouped failure lines should match in substance."
+  - "Give it no past misses. It should label the list 'no history yet'."
+
+improve:
+  - "Keep the FROM HISTORY lines in one file and paste them into every search."
+  - "Add your reference-check questions beside the lines they answer."
+  - "Pair it with the Candidate comparison table builder when you have more than one candidate."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message checklist works in any strong chat AI."}
+  inputs:
+    - "Exit notes or reasons from hires who left"
+    - "The pay plan document"

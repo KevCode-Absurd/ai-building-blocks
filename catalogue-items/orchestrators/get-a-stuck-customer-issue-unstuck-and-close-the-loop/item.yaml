@@ -1,0 +1,25 @@
+slug: get-a-stuck-customer-issue-unstuck-and-close-the-loop
+name: "Get a stuck customer issue unstuck and close the loop"
+summary: "Give it the stuck issue. Get the facts, an escalation brief and a reply that keeps its promises."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: voc_reviews, required: true}
+  - {type: source_text, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: document}
+  - {type: copy_draft}
+uses: [customer-question-researcher, escalation-brief-writer, customer-reply-drafter, complaint-reply-promise-checker]
+steps:
+  - {uses: customer-question-researcher, note: "What your docs, past tickets and chats say about this issue, each source named, and the question nobody has answered yet."}
+  - {uses: escalation-brief-writer, note: "A brief for engineering, operations or leadership: the customer's impact, what was tried, what you need from them and by when."}
+  - {uses: customer-reply-drafter, note: "The reply to the customer with the real answer or the real date, in your voice, and what to check before sending."}
+  - {uses: complaint-reply-promise-checker, note: "Every promise checked against what the owner actually agreed, tone flags, and a repaired reply. Nothing is sent until you say so."}
+origin: own
+version: 1.0.0
+example_pending: true

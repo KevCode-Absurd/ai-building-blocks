@@ -1,0 +1,37 @@
+# What kind of product it is. Every product lists at least one of these ids.
+- id: chat-assistant
+  name: Chat assistant
+  blurb: A general assistant you talk to. It writes, reads, plans and answers.
+- id: image
+  name: Image maker
+  blurb: Makes or edits pictures from a written description.
+- id: video
+  name: Video maker and editor
+  blurb: Makes video clips from text or images, or edits footage you already have.
+- id: voice
+  name: Voice and audio
+  blurb: Turns text into speech, speech into text, or makes music.
+- id: coding
+  name: Coding
+  blurb: Writes and fixes code, or builds a whole app from a description.
+- id: automation
+  name: Automation
+  blurb: Connects your apps and runs steps for you when something happens.
+- id: writing
+  name: Writing helper
+  blurb: Drafts, edits and checks text as you write.
+- id: marketing
+  name: Marketing
+  blurb: Email, ads, tracking and store tools with AI built in.
+- id: sales-and-support
+  name: Sales and support
+  blurb: Finds leads, drafts replies and answers customers for you.
+- id: data
+  name: Data
+  blurb: Answers questions about your numbers and makes the charts.
+- id: productivity
+  name: Productivity
+  blurb: Notes, meetings, slides and company knowledge, with AI doing the busywork.
+- id: design
+  name: Design
+  blurb: Makes posts, brand assets and interface designs.

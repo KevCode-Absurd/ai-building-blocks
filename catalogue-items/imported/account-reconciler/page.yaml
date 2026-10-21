@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It matches rows and explains what is left.
 new_slug: account-reconciler
 name: Account reconciler
-summary: Give it a ledger and a bank statement. Get matched items, the gaps and a note on each. Have an accountant check.
+summary: Give it a ledger and a bank statement. Get matched items, the gaps sorted by type and a next step each.
 job: track-numbers
 headline: Account reconciler
-subhead: Give it a ledger and a bank statement. Get matched items, the gaps and a note on each. Have an accountant check.
+subhead: Give it a ledger or trial balance extract, the bank statement or other record to compare, and the period you are closing. It matches the items that agree and sorts each gap into timing, adjustment or needs a look. You get the matched list, the differences by type, an aging view and a next action for each. Have an accountant check it.
 explain: |
   Differences between your books and a bank statement, subledger or partner records are matched, sorted and explained. Have an accountant check the result before you rely on it.
 

@@ -1,0 +1,26 @@
+slug: audit-your-sites-seo-and-fix-titles-tags-and-markup-first
+name: "Audit your site's SEO and fix what matters first"
+summary: "Give it your site. Get a ranked audit, on-page fixes, new titles and tags, and schema markup."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: web_page, required: true}
+  - {type: question, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: copy_draft}
+  - {type: code_change}
+uses: [seo-site-auditor, technical-seo-auditor, on-page-seo-tuner, title-and-meta-tag-writer, schema-markup-writer]
+steps:
+  - {uses: seo-site-auditor, note: "The site as a whole: structure, what is indexed, duplicate pages, what ranks today and the problems ranked by how much they block ranking."}
+  - {uses: technical-seo-auditor, note: "Speed, crawl errors, mobile, redirects, sitemaps and robots rules, with each fix in the order that pays."}
+  - {uses: on-page-seo-tuner, note: "Each key page's headings, content, images and links reviewed against its target search, with the fixes written out."}
+  - {uses: title-and-meta-tag-writer, note: "A title and meta description for each key page, in your voice, within the length limits, each saying what the page gives the searcher."}
+  - {uses: schema-markup-writer, note: "Schema markup for your main page types (product, article, organisation, FAQ) as code ready to paste, with what each piece tells search engines. You approve before it goes live."}
+origin: own
+version: 1.0.0
+example_pending: true

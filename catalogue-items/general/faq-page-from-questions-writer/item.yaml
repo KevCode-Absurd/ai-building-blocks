@@ -1,0 +1,18 @@
+slug: faq-page-from-questions-writer
+name: "FAQ page writer from customer questions"
+summary: "Paste real customer questions and your answers. Get an FAQ page people and search engines find."
+category: general
+boards: []
+type: prompt
+role: make
+job: page
+level: beginner
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: landing_page}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

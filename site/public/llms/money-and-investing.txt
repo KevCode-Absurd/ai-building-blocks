@@ -1,9 +1,9 @@
 # Handle money and investing: AI Blocks
 
-> 160 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 164 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Accrual schedule drafter](https://useaiblocks.com/skills/accrual-schedule-drafter): Give it the period's expenses. Get an accrual schedule with each entry, its support and a draft journal entry.
-- [Acquisition due diligence planner](https://useaiblocks.com/skills/acquisition-due-diligence): Describe the deal. Get a due diligence list, valuation checks and an integration plan.
+- [Accrual schedule drafter](https://useaiblocks.com/skills/accrual-schedule-drafter): Give it the period's expenses and accrual policy. Get a schedule with each entry, its support and a draft journal entry.
+- [Acquisition due diligence planner](https://useaiblocks.com/skills/acquisition-due-diligence): Describe the deal. Get a due diligence checklist, valuation checks, red flags and an integration plan.
 - [Analyst estimate reader](https://useaiblocks.com/skills/analyst-estimate-reader): Give it a stock ticker. Get how analyst profit and sales forecasts are changing and where they differ. Collects data from websites.
 - [Anonymous company teaser writer](https://useaiblocks.com/skills/anonymous-company-teaser-writer): Give it company facts. Get a one-page teaser that sells the business without naming it.
 - [Asset floor estimator](https://useaiblocks.com/skills/asset-floor-estimator): Paste a balance sheet and share price. Get book value, net current assets, sale value and a cash strength rating.
@@ -22,12 +22,13 @@
 - [Business investment analyst](https://useaiblocks.com/skills/business-investment-analyst): Describe a purchase. Get payback, return and risk worked out, so you can decide whether to invest.
 - [Business tenet scorecard writer](https://useaiblocks.com/skills/business-tenet-scorecard-writer): Paste your findings on a business. Get ten tests marked pass, fail or unknown, and whether a price check is worthwhile.
 - [Business value range calculator](https://useaiblocks.com/skills/business-value-range-calculator): Paste a business's owner earnings. Get a no-growth floor value and low, middle and high growth values, with what each assumes.
-- [Buyout model template filler](https://useaiblocks.com/skills/buyout-model-template-filler): Give it a blank LBO template and deal facts. Get the debt, cash flow and returns model completed and checked.
-- [Buyout returns modeler](https://useaiblocks.com/skills/buyout-returns-modeler): Give it a company and deal terms. Get a buyout model with debt paydown and exit returns, IRR and MOIC.
+- [Buyout model template filler](https://useaiblocks.com/skills/buyout-model-template-filler): Give it a blank buyout template and deal facts. Get the model filled with live formulas and checked.
+- [Buyout returns modeler](https://useaiblocks.com/skills/buyout-returns-modeler): Give it a company and deal terms. Get a buyout model with debt paydown, IRR and MOIC.
 - [Cash and currency risk planner](https://useaiblocks.com/skills/cash-and-currency-risk-planner): Give it your cash, debts and currency exposure. Get a liquidity plan and ways to cut rate and exchange risk.
 - [Cash tied-up finder](https://useaiblocks.com/skills/cash-tied-up-finder): Give it your receivables, payables and stock. Get days outstanding, the cash cycle and where cash is stuck.
 - [Cash versus earnings checker](https://useaiblocks.com/skills/cash-versus-earnings-checker): Paste your profit and cash figures. Get free cash flow beside earnings, what growth costs and a score out of 100.
 - [Channel cost and ROI comparer](https://useaiblocks.com/skills/channel-cost-and-roi-comparer): Give it direct and partner sales costs. Get cost to serve, ROI by channel and the best mix.
+- [Check a small business before you buy it](https://useaiblocks.com/workflows/check-a-small-business-before-you-buy-it): Give it the listing and the books. Get a checklist, seller questions, owner earnings and a value range.
 - [Check if a bond or loan is safe to hold](https://useaiblocks.com/workflows/bond-safety-check): Paste the debt terms and the borrower's statements. Get coverage and cushion tests and a safe, speculative or reject call.
 - [Choose your investing style and your stock and bond split](https://useaiblocks.com/workflows/investing-style-split): Tell it your time, skill and nerve. Get your investor type, a stock and bond split with rules, and a one-page policy.
 - [Circle of competence sorter](https://useaiblocks.com/skills/circle-of-competence-sorter): Describe a business or bet. Get it sorted as yes, no or too tough, with your real edge written down.
@@ -40,11 +41,12 @@
 - [Company stock analyst](https://useaiblocks.com/skills/company-stock-analyst): Name a listed company. Get a sector-relative review of its numbers, strengths and risks.
 - [Company strip profile slide maker](https://useaiblocks.com/skills/company-profile-slide): Name a company. Get a one-slide profile with business, key numbers and ownership in a standard layout.
 - [Cost of capital calculator](https://useaiblocks.com/skills/cost-of-capital-calculator): Give it a company's debt, equity and market inputs. Get its WACC with cost of equity and debt shown.
+- [Cover an earnings release from preview to written update](https://useaiblocks.com/workflows/cover-an-earnings-release-from-preview-to-written-update): Give it the company and the release. Get a preview, a tone read, a recap and an update.
 - [DCF model builder for India](https://useaiblocks.com/skills/dcf-model-builder-for-india): Name a listed Indian company. Get a discounted cash flow Excel model with WACC, sensitivities and a summary.
 - [Deal returns sensitivity builder](https://useaiblocks.com/skills/deal-returns-sensitivity-builder): Give it deal terms. Get IRR and MOIC tables across entry price, debt, exit price and hold time.
-- [Deal screening memo writer](https://useaiblocks.com/skills/deal-screening-memo-writer): Give it a teaser or CIM and your criteria. Get a one-page memo showing where it passes or fails each test.
-- [Debt payoff planner](https://useaiblocks.com/skills/debt-payoff-planner): List your debts. Get a payoff timeline comparing the snowball and avalanche methods, with total interest for each.
-- [Debt restructuring plan drafter](https://useaiblocks.com/skills/debt-restructuring-plan-drafter): Give it a company's debts and cash flow. Get a draft plan with creditor terms that fit what it can pay.
+- [Deal screening memo writer](https://useaiblocks.com/skills/deal-screening-memo-writer): Give it a teaser or CIM and your criteria. Get a one-page memo marking each test pass or fail.
+- [Debt payoff planner](https://useaiblocks.com/skills/debt-payoff-planner): List your debts and extra cash. Get snowball and avalanche timelines with total interest for each.
+- [Debt restructuring plan drafter](https://useaiblocks.com/skills/debt-restructuring-plan-drafter): Give it a company's debts and cash flow. Get a draft plan with new terms for each creditor.
 - [Defensive or enterprising investor sorter](https://useaiblocks.com/skills/investor-type-quiz): Tell it your time, skill and nerve. Get sorted as a defensive or enterprising investor, with the paths to skip.
 - [Defensive price ceiling tester](https://useaiblocks.com/skills/defensive-price-ceiling-tester): Paste a company's earnings, book value and share price. Get a pass or fail on three price ceilings, with every sum shown.
 - [Defensive stock list builder](https://useaiblocks.com/skills/defensive-stock-list-builder): Paste the companies that passed your tests. Get a spread list of 10 to 30, size limits and a yearly review date.
@@ -82,6 +84,7 @@
 - [Fixed asset register keeper](https://useaiblocks.com/skills/fixed-asset-register-keeper): Give it your purchases and disposals. Get what to capitalise, yearly depreciation and impairment checks.
 - [Forecast your startup runway and prepare a finance pack](https://useaiblocks.com/workflows/forecast-your-startup-runway-and-prepare-a-finance-pack): Give it your plan. Get a cash model, a cash-out date with ranges and a board finance plan.
 - [Funding round multiple analyst](https://useaiblocks.com/skills/funding-round-multiple-analyst): Give it a software company. Get how its value multiple changed across funding rounds and what drove the shift.
+- [Get your money in order with room for error](https://useaiblocks.com/workflows/get-your-personal-money-in-order-with-room-for-error): Give it your income, spending and debts. Get a budget, a debt plan and a savings forecast.
 - [Group accounts combiner](https://useaiblocks.com/skills/group-accounts-combiner): Give it each company's accounts. Get one set of group statements with the cancelled internal items shown.
 - [Holding value change checker](https://useaiblocks.com/skills/holding-value-change-checker): Paste a holding and why you bought it. Get what changed in the business and a keep, watch or weak mark.
 - [Holdings business results reviewer](https://useaiblocks.com/skills/holdings-results-review): List your holdings and what you know of each. Get every one sorted keeper, watch or weak by business results.
@@ -101,14 +104,14 @@
 - [Likely buyers list builder](https://useaiblocks.com/skills/likely-buyers-list-builder): Describe a company for sale. Get a ranked list of likely buyers, strategic and financial, with fit notes.
 - [Linked financial model builder](https://useaiblocks.com/skills/linked-financial-model-builder): Give it your past accounts and drivers. Get income, balance sheet and cash flow models that tie together.
 - [Long-hold return calculator](https://useaiblocks.com/skills/long-hold-return-calculator): Paste what you know about a business and its price. Get the long-run sums and a keep, wait or pass call.
-- [Market mood reader](https://useaiblocks.com/skills/market-mood-reader): Paste your holdings and how prices moved. Get each move sorted as business or mood, and a take, ignore or wait read.
+- [Market mood reader](https://useaiblocks.com/skills/market-mood-reader): Paste holdings and price moves. Get each move sorted as business or mood, plus take, ignore or wait.
 - [Match bank to books and issue a clean P&L](https://useaiblocks.com/workflows/reconcile-the-bank-to-your-books-and-issue-a-clean-p-and-l): Give it a bank statement and your ledger. Get matches, causes for the gaps and clean statements.
 - [Merger effect modeler](https://useaiblocks.com/skills/merger-effect-modeler): Give it two companies and deal terms. Get the effect on earnings per share, cost savings cases and price split.
-- [Mispriced bet tester](https://useaiblocks.com/skills/mispriced-bet-tester): List your bets. Get which have the odds truly in your favour after the price, and which are only favourites.
+- [Mispriced bet tester](https://useaiblocks.com/skills/mispriced-bet-tester): List your bets and prices. Get each called near cinch, fair bet or no bet, with the odds.
 - [Net worth calculator](https://useaiblocks.com/skills/net-worth-calculator): List your assets and debts. Get your net worth, how it splits, and a monthly view to track.
-- [Normal earnings estimator](https://useaiblocks.com/skills/normal-earnings-estimator): Paste cleaned earnings and how far the record can be trusted. Get low, normal and high earnings for an ordinary year.
+- [Normal earnings estimator](https://useaiblocks.com/skills/normal-earnings-estimator): Paste cleaned earnings and a reliability rating. Get low, normal and high earnings for an ordinary year.
 - [Oil and gas reserves valuer](https://useaiblocks.com/skills/oil-and-gas-reserves-valuer): Give it reserve and cost data. Get the present value of the reserves, such as PV-10.
-- [One-off items separator](https://useaiblocks.com/skills/one-off-items-separator): Paste several years of a company's income statements. Get each year's profit rebuilt without gains and losses that will not repeat.
+- [One-off items separator](https://useaiblocks.com/skills/one-off-items-separator): Paste several years of income statements. Get each year's profit rebuilt without one-off gains and losses.
 - [Options flow reader](https://useaiblocks.com/skills/options-flow-reader): Give it options data. Get real bets told apart from cheap lottery calls, so the put-call ratio is not misleading.
 - [Options payoff chart maker](https://useaiblocks.com/skills/options-payoff-chart-maker): Give it your option strikes and prices. Get a chart of what the trade earns or loses. Collects data from websites.
 - [Owner earnings calculator](https://useaiblocks.com/skills/owner-earnings-calculator): Paste a company's profit, depreciation and spending. Get the cash an owner could take out each year, as a range.
@@ -133,6 +136,7 @@
 - [SaaS metrics coach](https://useaiblocks.com/skills/saas-metrics-coach): Share your revenue and customers. Get your ARR, churn, CAC and LTV read, with what to fix first.
 - [Sale memorandum drafter](https://useaiblocks.com/skills/sale-memorandum-drafter): Give it company facts. Get a draft sale memorandum with a clear structure and story.
 - [Sale process letter drafter](https://useaiblocks.com/skills/sale-process-letter-drafter): Describe a sale process. Get a draft letter with bid instructions, deadlines and meeting details.
+- [Screen a startup deal from first look to committee memo](https://useaiblocks.com/workflows/screen-a-startup-deal-from-first-look-to-committee-memo): Give it the pitch and the numbers. Get a diligence review, a valuation range and the committee memo.
 - [Screen stocks with a defensive investor's seven tests](https://useaiblocks.com/workflows/defensive-stock-screen): Paste company figures. Get each company passed or failed on seven tests, with the price sums shown, and a short list.
 - [Sector landscape report writer](https://useaiblocks.com/skills/sector-landscape-report-writer): Name an industry. Get a report on its size, main players, competition and trends.
 - [Sit-still rule writer](https://useaiblocks.com/skills/sit-still-rule-writer): Paste your picks. Get one page of holding rules: what must stay true, review dates and the only reasons to act.
@@ -151,7 +155,7 @@
 - [Stock research snapshot writer](https://useaiblocks.com/skills/stock-research-snapshot-writer): Name a stock. Get a note combining estimates, reported numbers, price history and the macro backdrop. It collects data from websites.
 - [Stock trading cost checker](https://useaiblocks.com/skills/stock-trading-cost-checker): Give it a stock. Get how easy it is to trade and what a big order may cost. Collects data from websites.
 - [Subscription unit economics analyst](https://useaiblocks.com/skills/subscription-unit-economics): Give it customer and revenue data. Get cohorts, LTV to CAC, retention and payback worked out.
-- [Suspicious money trail reviewer](https://useaiblocks.com/skills/suspicious-money-trail-reviewer): Give it records that do not add up. Get a structured review of red flags and evidence to follow up.
+- [Suspicious money trail reviewer](https://useaiblocks.com/skills/suspicious-money-trail-reviewer): Give it records that do not add up. Get red flags, money flow traces and what to check next.
 - [Twenty-punch bet ranker](https://useaiblocks.com/skills/lifetime-punch-card-bet-ranker): List your bet ideas. Get the top one to three ranked and sized, and a written no for the rest.
 - [Unusual transaction finder](https://useaiblocks.com/skills/unusual-transaction-finder): Give it a large set of transactions. Get the odd ones flagged, with a short reason for each.
 - [Upcoming events calendar builder](https://useaiblocks.com/skills/upcoming-events-calendar-builder): Give it a list of companies. Get a dated calendar of earnings, conferences and decisions that could move them.

@@ -1,9 +1,9 @@
 # Track your numbers: AI Blocks
 
-> 123 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 132 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [A/B test verdict maker](https://useaiblocks.com/skills/a-b-test-verdict-maker): Give it your test data. Get a split check, the result with a confidence range, side effects and a ship call.
-- [Account reconciler](https://useaiblocks.com/skills/account-reconciler): Give it a ledger and a bank statement. Get matched items, the gaps and a note on each. Have an accountant check.
+- [A/B test verdict maker](https://useaiblocks.com/skills/a-b-test-verdict-maker): Give it your A/B test data. Get a split check, results with confidence ranges and a ship call.
+- [Account reconciler](https://useaiblocks.com/skills/account-reconciler): Give it a ledger and a bank statement. Get matched items, the gaps sorted by type and a next step each.
 - [Ad data quality checker](https://useaiblocks.com/skills/ad-data-quality-checker): Give it your ad and sales tables. Get nine checks that catch missing spend, duplicates and empty columns.
 - [Analysis checker](https://useaiblocks.com/skills/analysis-checker): Give it an analysis before you share it. Get a check of the method, the math and any bias.
 - [Analysis lessons review writer](https://useaiblocks.com/skills/analysis-lessons-review-writer): Tell it how a data project went. Get what worked, what slipped, the causes and actions for next time.
@@ -57,7 +57,7 @@
 - [Lifetime gross profit to CAC checker](https://useaiblocks.com/skills/ltgp-to-cac-checker): Give it ad spend, new customers and cohort revenue. Get your ratio, its band and a score.
 - [Marketing budget scenario planner](https://useaiblocks.com/skills/marketing-budget-scenarios): Give it past spend and results by channel. Get low and high forecasts for a new budget, with diminishing returns built in.
 - [Meta pixel and server events fixer](https://useaiblocks.com/skills/meta-pixel-capi-fix): Give it your site and Meta pixel. Get a tracking audit, a match quality score and step-by-step fixes for your platform.
-- [Meta server tracking checker](https://useaiblocks.com/skills/meta-server-tracking-checker): Describe your Meta setup. Get the right server route, proof each event counts once and a score out of 100.
+- [Meta server tracking checker](https://useaiblocks.com/skills/meta-server-tracking-checker): Describe your Meta setup. Get the best server route, a double-count check and a score out of 100.
 - [Metric drop investigator](https://useaiblocks.com/skills/metric-drop-investigator): Tell it which number moved. Get the change confirmed, split by group, the main driver ranked and next steps.
 - [Metric mismatch tracer](https://useaiblocks.com/skills/metric-mismatch-tracer): Tell it which number differs between two reports. Get the gap, the step where they split and a fix.
 - [MLflow experiment tracker](https://useaiblocks.com/skills/mlflow-experiment-tracker): Give it your training code. Get every run logged, compared and versioned, so you can repeat the best one.
@@ -65,14 +65,19 @@
 - [Month-end close day planner](https://useaiblocks.com/skills/month-end-close-day-planner): Give it your close tasks. Get a day by day schedule and what is blocking. Review with your accountant.
 - [Month-end close planner](https://useaiblocks.com/skills/month-end-close-planner): Say what must be done to close the books. Get a dated task list with owners and blockers.
 - [Month-end variance commentary writer](https://useaiblocks.com/skills/variance-commentary): Give it this period's and last period's numbers. Get a written reason for every line that moved past your limit.
+- [Monthly budget versus actual keeper](https://useaiblocks.com/agents/monthly-budget-versus-actual-keeper): Give it the month's spend by team. Get what moved against budget, why, and cash levers if the year is off.
+- [Monthly freelancer books closer](https://useaiblocks.com/agents/monthly-freelancer-books-closer): Give it the month's transactions. Get them sorted, checked against your budget and a cash forecast with the tax set aside.
 - [Monthly profit close](https://useaiblocks.com/agents/monthly-profit-close): Give it the month's sales and costs. Get a P&L set against last month and what to fix first.
+- [Monthly tracking health keeper](https://useaiblocks.com/agents/monthly-tracking-health-keeper): Give it your analytics setup and platform numbers each month. Get broken tracking found, double counts caught and a fix list.
 - [Multi-touch credit calculator](https://useaiblocks.com/skills/multi-touch-credit-calculator): Give it your touches and sales. Get credit split by first, last, linear or decay rules, plus cost per sale.
 - [New and returning P&L splitter](https://useaiblocks.com/skills/new-and-returning-pl-splitter): Paste your monthly P&L and order tags. Get one P&L for first-time and one for returning customers, scored.
 - [New dataset explorer](https://useaiblocks.com/skills/new-dataset-explorer): Give it a new dataset. Get its structure, spread, links and odd spots mapped before you use it.
 - [New-customer profit dashboard builder](https://useaiblocks.com/skills/new-customer-profit-dashboard-builder): Give it Shopify and ad exports. Get a daily sheet of new-customer MER, CAC and profit.
 - [North star metric picker](https://useaiblocks.com/skills/north-star-metric-picker): Describe your product. Get the one metric to steer by, plus 3 to 5 supporting numbers that feed it.
+- [Numbers drop explainer](https://useaiblocks.com/prompts/numbers-drop-explainer): Paste the numbers before and after a drop. Get the likely causes ranked by evidence, and what to check.
 - [Opportunity size estimator](https://useaiblocks.com/skills/opportunity-size-estimator): Give it a baseline and an expected change. Get a low, base and high estimate with every assumption listed.
 - [P&L and balance sheet writer](https://useaiblocks.com/skills/p-l-and-balance-sheet-writer): Give it your books. Get an income statement, balance sheet or cash flow with big swings flagged. Review with an accountant.
+- [Per-order profit calculator](https://useaiblocks.com/prompts/per-order-profit-calculator): Paste your price and every cost per order. Get the profit per order, the break-even and what moves it most.
 - [Plain-words SQL writer](https://useaiblocks.com/skills/plain-words-sql-writer): Describe the data you need. Get a working SQL query for your database type, with a note on how it runs.
 - [Prediction driver explainer](https://useaiblocks.com/skills/prediction-driver-explainer): Give it a trained model and data. Get which inputs drove each prediction and overall, with checked plots.
 - [Product margin checker](https://useaiblocks.com/skills/product-margin-checker): Give it a price and every cost. Get true margin, break-even ROAS and CAC, scored out of 100.
@@ -90,6 +95,7 @@
 - [Seawater carbonate calculator](https://useaiblocks.com/skills/seawater-carbonate-calculator): Give it two seawater measures like alkalinity and pH. Get the full carbonate chemistry worked out.
 - [Set up product tracking and build a retention dashboard](https://useaiblocks.com/workflows/set-up-product-tracking-and-build-a-retention-dashboard): Describe your product. Get an event plan to ship, then a retention grid and dashboard from real use.
 - [Set up tracking you can trust before scaling](https://useaiblocks.com/workflows/set-up-tracking-you-can-trust-before-you-scale): Give it your GA4, Meta and campaign setup. Get fix lists, tagged links and a truer ROAS.
+- [Share of search tracker planner](https://useaiblocks.com/prompts/share-of-search-tracker-planner): Paste your brand and your rivals. Get a monthly share-of-search tracker and how to read it.
 - [Shopify dashboard reader](https://useaiblocks.com/skills/shopify-dashboard-reader): Paste your Shopify analytics numbers. Get which tiles to trust, your cash collected and a score out of 100.
 - [Spend savings finder](https://useaiblocks.com/skills/spend-savings-finder): Give it a list of what you paid suppliers. Get spend grouped by type, the biggest savings chances and quick wins.
 - [SQL query launch reviewer](https://useaiblocks.com/skills/sql-query-launch-reviewer): Give it a SQL query before it goes live. Get wrong-result risks, slow spots and rewrites ranked by impact.
@@ -122,6 +128,9 @@
 - [Virus variant trend reader](https://useaiblocks.com/skills/virus-variant-trend-reader): Name a virus and a region. Get current lineages, weekly sequence shares and mutation frequencies from public data.
 - [Visitor to contact matcher](https://useaiblocks.com/skills/visitor-to-contact-matcher): Give it your site visit records and contact list. Get anonymous visits linked to known contacts, with unclear links flagged.
 - [Warehouse A/B test runner](https://useaiblocks.com/skills/warehouse-a-b-test-runner): Describe your data setup. Get SQL steps to split users, log exposure and read results with proper stats.
+- [Weekly invoice and cash chaser](https://useaiblocks.com/agents/weekly-invoice-and-cash-chaser): Give it your open invoices each week. Get who to chase, a reminder for each and a 90-day cash view.
+- [Weekly numbers sheet designer](https://useaiblocks.com/prompts/weekly-numbers-sheet-designer): Paste what your business does and what you can measure. Get a one-page weekly sheet of seven numbers.
+- [Weekly SaaS numbers keeper](https://useaiblocks.com/agents/weekly-saas-numbers-keeper): Give it your revenue and customers each week. Get recurring revenue, churn and payback read, one growth target and what to skip.
 - [Weekly spend impact modeler](https://useaiblocks.com/skills/weekly-spend-impact-modeler): Give it weekly spend and sales by channel. Get a simple model of what each channel adds, with honest limits.
 - [Weekly store ad pulse checker](https://useaiblocks.com/skills/weekly-store-ad-pulse-checker): Give weekly spend, sales, emails and discounts. Get a health score out of 100 and what to pull.
 - [Weekly store numbers watcher](https://useaiblocks.com/agents/weekly-store-numbers-watcher): Give it weekly Shopify and GA4 numbers. Get which to trust, any sharp drop explained, and the funnel step to fix.

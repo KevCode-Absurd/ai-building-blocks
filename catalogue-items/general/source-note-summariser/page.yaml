@@ -1,0 +1,112 @@
+new_slug: source-note-summariser
+name: "Source note summariser"
+summary: "Paste an article, talk or chapter. Get its claims, evidence, gaps and the three lines worth keeping."
+job: research-topics
+thinking: medium
+thinking_why: "It has to rate evidence honestly and keep claims separate from its own inference."
+
+headline: "Source note summariser"
+subhead: "Paste a long article, a talk transcript or a book chapter, and the question you are reading it for. The prompt lists each claim with its quote, rates the evidence behind it, names the gaps, says what it adds to your question and keeps three short quotes you can use later."
+
+explain: |
+  A summary tells you what a source said. A week later you cannot remember whether the big claim rested on a study or a story, and you have to read it again. Research notes that last keep the claims, the evidence and the gaps apart.
+
+  This prompt reads the whole source and records who wrote it and what they might gain. It pulls every claim in one line with a short quote and its location, rates the evidence for each as data, example, assertion or opinion, and names what the source leaves out or assumes. If you give your question, it says what the source adds and what it does not settle. It keeps three short quotes with locations and writes an 80-word summary that claims no more than the evidence allows.
+
+when:
+  - "You are reading ten sources for one decision and need notes you can compare."
+  - "A long article is being quoted at you and you want to know what it actually shows."
+  - "You are building a course or a report and need to cite accurately."
+
+you_give:
+  - "The full source with its title, author and date"
+  - "The question you are reading it for (advised)"
+  - "What you already believe, in one line (optional)"
+you_get:
+  - "Every claim with a quote and location, and the evidence behind each rated"
+  - "The gaps and assumptions"
+  - "What it adds to your question, three quotes to keep, and an 80-word summary"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the source under it."
+  - "Add the question you are reading for."
+  - "Read EVIDENCE. Any claim rated ASSERTION or OPINION is one you cannot repeat as fact."
+  - "File the note with the source link so you can go back to the quotes."
+
+how_it_works:
+  - title: "Records the source"
+    text: "Title, author, date, where it appeared, and what the author may gain from the claim."
+  - title: "Pulls the claims"
+    text: "One line each with a short quote and its location, near-duplicates grouped."
+  - title: "Rates the evidence"
+    text: "Data, example, assertion or opinion, from what the source actually offers."
+  - title: "Names the gaps"
+    text: "What is left out, assumed or unrepresented, and what must be true for the main claim."
+  - title: "Answers your question"
+    text: "What the source adds and what it does not settle."
+  - title: "Keeps three quotes and summarises"
+    text: "Short exact quotes with locations, and a summary under 80 words."
+
+output_shape: |
+  SOURCE          <title | author | date | where | possible gain>
+  CLAIMS          <n> <claim | quote, location>
+  EVIDENCE        <claim n | offered | rating>
+  GAPS            <...>
+  FOR MY QUESTION <adds, does not settle>
+  KEEP            <three quotes>
+  SUMMARY         <under 80 words>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    My question: can Sprout say "clinically tested" in ads, and what exactly
+    does the study support?
+    Source: the text of Sprout's own science page, read 13 October, author
+    the brand, no date on the page. Main lines:
+    "Clinically tested for nutrient absorption." "In a clinical study,
+    participants saw vitamin C levels rise 40.1% and folate 20.5%."
+    "Clinically backed formula for energy, immunity, and daily wellness."
+    "The results are in. Sprout works." "Backed by 35,000+ studies." "Each
+    gummy delivers 100% of your daily needs for key vitamins." "Gummies
+    begin breaking down almost immediately for fast and efficient
+    bioavailability." "Most fiber-focused supplements contain only 5g of
+    fiber." "95% of surveyed users take Sprout at least 4-6x per week"
+    (brand survey, 3,000+ customers). Third-party tested for 70 pesticides,
+    4 heavy metals, 16 contaminants, 9 microbial contaminants.
+  output: pending
+
+tweaks:
+  - what: "The full text"
+    how: "Paste all of it. A note from an excerpt misses the caveats authors bury at the end."
+  - what: "Your question"
+    how: "Give it and the note weighs claims by what matters to you."
+  - what: "Several sources"
+    how: "Run one per source with the same question, then compare the EVIDENCE sections side by side."
+
+judge:
+  - "Every claim has a quote you can find in the source."
+  - "The evidence ratings match what is really offered, with stories rated as examples."
+  - "The gaps are things the source does not address."
+  - "The summary is no stronger than the evidence."
+  - "The author's possible gain is named."
+
+test:
+  - "Run it on a source you know well. The claims and ratings should match your own reading."
+  - "Run it twice. The claims list should match."
+  - "Paste a cut-off source. It should say where it was cut and that later claims are not covered."
+
+improve:
+  - "Add your own evidence rules (for example, what counts as data in your field)."
+  - "Keep the notes in one folder with a shared heading set so they compare cleanly."
+  - "Pair it with the Study headline claim checker when the source is a study being quoted."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a long source in one message. Claude takes the longest texts."}
+  inputs:
+    - "The source's own references, so data ratings can be checked"
+    - "Notes from a source that disagrees, for comparison"

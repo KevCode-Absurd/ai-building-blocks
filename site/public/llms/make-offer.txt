@@ -2,7 +2,7 @@
 
 > 75 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Abandoned cart code maker](https://useaiblocks.com/skills/abandoned-cart-code-maker): Get a unique discount code for each shopper who left a cart, and tag them. Creates live codes you cannot bulk delete.
+- [Abandoned cart code maker](https://useaiblocks.com/skills/abandoned-cart-code-maker): Connect your Shopify store. Get one discount code per shopper who left a cart, plus a tag.
 - [After-sale offer planner](https://useaiblocks.com/skills/after-sale-offer-planner): Paste your product and customer list. Get follow-on offers to try, each with a small test.
 - [Bonus idea matcher](https://useaiblocks.com/prompts/bonus-idea-matcher): Paste your offer and buyer doubts. Get one named bonus for each doubt, with a value reason.
 - [Bonus stack builder](https://useaiblocks.com/skills/bonus-stack-builder): Paste your offer and the doubts buyers have. Get named bonuses that each answer one doubt, with a value and proof.
@@ -37,16 +37,16 @@
 - [Make visitors who hesitate at the price say yes](https://useaiblocks.com/workflows/make-visitors-who-hesitate-at-the-price-say-yes): Give it your offer and what buyers say about price. Get a value case, a guarantee, honest urgency and a closing line.
 - [Make your offer harder to refuse](https://useaiblocks.com/workflows/make-your-offer-harder-to-refuse): Give it your offer. Get honest limits and deadlines, bonuses, a guarantee and a name, ready to use.
 - [Mechanism namer](https://useaiblocks.com/skills/mechanism-namer): Give it your product and rivals. Get a named, true mechanism and three pillars that sell the reason.
-- [Niche price ladder builder](https://useaiblocks.com/skills/niche-price-ladder-builder): Paste your offer and its going price. Get it rewritten for narrower buyers, each with a price and a size check.
+- [Niche price ladder builder](https://useaiblocks.com/skills/niche-price-ladder-builder): Paste your offer and price. Get it rewritten for narrower buyers, each with a price and size check.
 - [Offer builder that answers buyer doubts](https://useaiblocks.com/skills/offer-builder): Paste your buyer's doubt and costs. Get an offer that answers it, its wording and a profit check.
-- [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer): Paste your offer, price and guarantee. Get a review against a tested offer checklist, and the three changes worth testing first.
+- [Offer checklist reviewer](https://useaiblocks.com/skills/offer-checklist-reviewer): Paste your offer, price and guarantee. Get a checklist review, a score and three changes to test first.
 - [Offer designer](https://useaiblocks.com/skills/offer-designer): Say what you sell. Get an offer with value framing, bonuses, guarantee, name and payment terms.
 - [Offer name batch writer](https://useaiblocks.com/prompts/offer-name-batch-writer): Paste your offer and buyer. Get ten offer names built from five parts, with three to test.
-- [Offer name writer](https://useaiblocks.com/skills/offer-name-writer): Paste your offer and buyer. Get ten names built from five parts, three to test and a plan for renaming it.
-- [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker): Give it offer variants, costs and sessions. Get profit per visitor for each, a winner and a trust score.
+- [Offer name writer](https://useaiblocks.com/skills/offer-name-writer): Paste your offer and buyer. Get ten names from five parts, three to test and a renaming order.
+- [Offer profit-per-session checker](https://useaiblocks.com/skills/offer-profit-per-session-checker): Paste offer variants, costs and sessions. Get profit per visitor, a winner and a trust score.
 - [Offer refresh keeper](https://useaiblocks.com/agents/offer-refresh-keeper): Give it your offers and their numbers each quarter. It finds the profit winner, tests what is weak, and plans one change.
 - [Offer test planner](https://useaiblocks.com/skills/offer-test-planner): Give it your offers and buyer types. Get separate funnel tests, tags to track and a read-out rule.
-- [Offer trim and stack builder](https://useaiblocks.com/skills/offer-trim-and-stack-builder): Paste your delivery options and promises. Get a trimmed offer of named bundles, each with a value, and a total.
+- [Offer trim and stack builder](https://useaiblocks.com/skills/offer-trim-and-stack-builder): Paste your delivery options and promises. Get named bundles, a value for each and a total.
 - [Offer useful information first and follow up with stalled leads](https://useaiblocks.com/workflows/lead-nurture-follow-up): Give it your product and who has the costly problem. Get an information offer and follow-up emails for stalled leads.
 - [Order page and upsell funnel planner](https://useaiblocks.com/skills/order-page-and-upsell-funnel-planner): Give it your product and margin. Get the page flow, order bump, one-time offers and what to measure.
 - [Order threshold planner](https://useaiblocks.com/skills/order-threshold-planner): Paste your order sizes. Get free-shipping and bundle thresholds set at your real order peaks.

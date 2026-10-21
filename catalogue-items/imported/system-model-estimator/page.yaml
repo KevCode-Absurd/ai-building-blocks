@@ -5,7 +5,7 @@ name: System model estimator
 summary: Give it input and output data. Get a fitted model of how the system behaves, with fit checks.
 job: build-software
 headline: System model estimator
-subhead: Give it input and output data. Get a fitted model of how the system behaves, with fit checks.
+subhead: Give it measured input and output data and what the model is for. It checks the data is rich enough, tries several model types and picks an order. You get a fitted MATLAB model, fit percentages on validation data, a comparison of candidates and warnings about weak data.
 explain: |
   A mathematical model of how your system reacts, fitted from measured input and output data, with proof of how well it fits. You can then simulate it, predict from it or tune a controller against it.
 

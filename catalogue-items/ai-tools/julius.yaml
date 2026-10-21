@@ -1,0 +1,41 @@
+slug: julius
+name: Julius AI
+maker: Julius AI
+url: https://julius.ai
+promise: Upload a spreadsheet, ask a question in plain words, and get charts and answers.
+use_cases: [analyse-data]
+categories: [data]
+what_it_does:
+  - Reads spreadsheets and files you upload.
+  - Answers questions about your numbers in plain words.
+  - Makes charts and tables from your data.
+  - Cleans messy columns before it analyses them.
+  - Connects to databases on higher plans.
+benefits:
+  - Find out which products or ads earn the most without writing formulas.
+  - Turn a raw export into a chart you can paste into a report.
+  - Clean up a messy file in a single chat.
+  - Check a result by reading the steps behind it.
+best_for:
+  - Owners and marketers with exports from ads, sales or surveys.
+  - People who know their data but not code.
+  - Quick looks at a file before a meeting.
+not_for:
+  - Large live reporting for a whole team.
+  - Numbers you cannot check, since you still need to read the steps it ran.
+pricing:
+  model: freemium
+  from: US$35 per month
+  note: Free plan with 15 messages per month. Plus costs US$35 per month, or about US$29 billed yearly. Pro, Max and Business cost more, as reported in April 2026.
+works_with:
+  - Google Sheets
+  - PostgreSQL
+  - Snowflake
+  - BigQuery
+runs_in: [web]
+blocks: []
+alternatives: [hex, chatgpt, claude, gemini]
+last_checked: 2026-10-21
+sources:
+  - https://coefficient.io/julius-ai-pricing
+  - https://www.eesel.ai/blog/julius-ai-pricing

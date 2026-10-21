@@ -31,7 +31,7 @@
 - [Knitted wool video ad script writer](https://useaiblocks.com/skills/knitted-wool-ad-script): Paste your brief and product facts. Get a knitted-wool video script, a room list and a cast note.
 - [Knitted wool video clip prompt writer](https://useaiblocks.com/skills/knitted-wool-video-prompts): Paste your knitted script and attach product photos. Get sheets, a storyboard and wool clip prompts.
 - [Long-form video ad script writer](https://useaiblocks.com/skills/long-form-video-ad-script-writer): Paste research and proof. Get a 1 to 10 minute narrated script with a picture for every line.
-- [Marketing video producer](https://useaiblocks.com/skills/marketing-video-producer): Say the video you need. Get the right tool, a script and shot plan for AI, avatar or coded video.
+- [Marketing video producer](https://useaiblocks.com/skills/marketing-video-producer): Say the video you need. Get the right tool, a script and a shot plan.
 - [Motion comic video ad script writer](https://useaiblocks.com/skills/motion-comic-ad-script): Paste your idea and product facts. Get a motion-comic panel list, captions and a cast note.
 - [Motion comic video clip prompt writer](https://useaiblocks.com/skills/motion-comic-video-prompts): Paste your comic script and attach product photos. Get panel clip prompts and an edit list.
 - [Motion graphics video ad script writer](https://useaiblocks.com/skills/motion-graphics-ad-script): Paste your facts and offer. Get a motion-graphics video script and a sourced fact sheet.

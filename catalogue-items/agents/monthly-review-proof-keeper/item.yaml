@@ -1,0 +1,58 @@
+slug: monthly-review-proof-keeper
+name: Monthly review proof keeper
+summary: Share new reviews. Get approved quotes checked, claims linked to
+  evidence and gaps for the next request.
+category: agent
+type: agent
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - type: voc_reviews
+    required: true
+  - type: tool_connection
+    required: false
+  - type: copy_draft
+    required: false
+  - type: product_data
+    required: false
+outputs:
+  - type: objection_map
+  - type: audit_report
+  - type: plan
+uses:
+  - survey-ready-order-finder
+  - feedback-theme-finder
+  - four-kind-proof-finder
+  - proof-spot-mapper
+  - claim-and-proof-matcher
+steps:
+  - uses: survey-ready-order-finder
+    note: "Every month, if the store is connected read-only: the buyers 7 to 14 days
+      after delivery who could be asked for a review, minus refunds. A list to
+      approve, never a send."
+  - uses: feedback-theme-finder
+    note: "Every month: the themes in the month's new reviews, with quotes, compared
+      with last month's themes."
+  - uses: four-kind-proof-finder
+    note: "Every month: each claim on your pages paired with its strongest proof
+      from the reviews, and the claims that have none."
+  - uses: proof-spot-mapper
+    note: "Every month: which proof to show, where it goes on the page, and what to
+      drop, from the new reviews and the buyer doubts."
+  - uses: claim-and-proof-matcher
+    note: "Only for a page whose proof changed, or a claim the new reviews no longer
+      back: the page checked line by line against the proof you have."
+schedule: On the first working day of each month, after last month's reviews are in
+asks_before:
+  - asking any customer for a review
+  - publishing or changing a quote on any page
+  - changing a claim or a rating shown
+  - replying to a reviewer
+  - paying or rewarding anyone for a review
+  - sharing a review outside your own pages
+minds:
+  - robert-cialdini
+origin: own
+version: 1.0.0
+example_pending: true

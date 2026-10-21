@@ -1,0 +1,111 @@
+new_slug: pre-sell-your-idea-to-three-buyers-then-launch-in-thirty-days
+name: Pre-sell to three buyers, then launch in thirty days
+summary: Give it your idea. Get a three-buyer test, a paid ask, a launch plan and a trial log.
+job: test-an-idea
+thinking: high
+thinking_why: It must design an honest test and read a no as a no. Give it your strongest model.
+headline: Pre-sell to three buyers, then launch in thirty days
+subhead: Give it the idea and who it is for. It plans how to get three real buyers to pay in Noah Kagan's manner, scripts a two-day paid ask, plans a thirty-day launch the way Pieter Levels shipped, and sets up a trial log so every attempt teaches you something.
+explain: |
+  Ideas die in two ways: never tested, or tested with a question. "Would you buy this?" gets a polite yes from everyone. The honest test is money changing hands before the thing exists.
+
+  This workflow runs that test in a week and then ships in a month. It plans how to get three real buyers to pay, following Noah Kagan's rule from Million Dollar Weekend: three customers before you build. It scripts a two-day paid ask: who to ask, what to say, how to take the money and what to promise. If three pay, it plans a thirty-day launch in the manner of Pieter Levels and Sara Blakely: the smallest version that works, shipped on a date. Throughout, a trial log records each attempt, what you expected and what happened, in the manner of Edison and Galileo, so a no teaches as much as a yes.
+when:
+  - You have an idea and have been thinking about it for months.
+  - Friends say it is great and none of them has paid.
+  - You want to ship something this month instead of planning something this year.
+you_give:
+  - The idea, in a few lines
+  - Who it is for and how you can reach ten of them this week
+  - What you could deliver in thirty days with what you have
+  - What you have tried before (optional)
+you_get:
+  - "A three-buyer test plan: who to ask, in what order, what counts as a yes"
+  - A two-day paid ask script and how to take the money
+  - A thirty-day launch plan with the smallest version that works
+  - A trial log that records every attempt and what it taught
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the idea and who it is for. It plans the three-buyer test and the paid ask.
+  - Run the ask over two days. Record every answer in the trial log.
+  - If three pay, follow the thirty-day plan. If not, read the log and decide what to change.
+how_it_works:
+  - title: Plan the three-buyer test
+    text: Plans who to ask, in what order, and what counts as a real yes, in Noah Kagan's manner.
+  - title: Script the paid ask
+    text: Scripts the two-day ask with the message, the price, how to take the money and what to say to a no.
+  - title: Run the ask
+    text: A pause. Run the ask for two days. Record who said yes, who said no and why, and the money taken.
+  - title: Plan the thirty-day launch
+    text: If three paid, plans the smallest version that works, shipped in thirty days, in the manner of Levels and Blakely. If not, says what to change.
+  - title: Set up the trial log
+    text: Sets up a log that records each attempt, what you expected, what happened and what it taught.
+output_shape: |-
+  STEP 1: THREE-BUYER TEST
+    Ask first: <who, why> | Then: <...> | One line: <...> | Real yes: <money taken, amount>
+
+  STEP 2: PAID ASK
+    Day 1: <message, to whom, price, how to pay> | Day 2: <follow-up> | Promise: <what, when> | To a no: <...>
+
+  PAUSE: run the ask for two days, record every answer
+
+  STEP 3: THIRTY-DAY LAUNCH (or the change)
+    Paid: <n> | Smallest version: <...> | Ship date: <...> | Week <n>: <...>
+    Or: Change <...> | Try again: <yes / no>
+
+  STEP 4: TRIAL LOG
+    Attempt <n>: Expected <...> | Happened <...> | Taught <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. Idea: a paid "discount sanity check" for other subscription brands. We send them a one-page report of every discount line live across their site, pop-ups and ads, with the contradictions marked, because we found 52%, 55%, 58% and 61% off live on our own site at once.
+    Who it is for: founders and marketing leads of subscription brands doing $1M to $20M a year. I know about 25 of them from founder groups and can message ten this week.
+    What I could deliver in thirty days: the report, done by hand by me and our ops manager, for up to ten brands, with a short call to walk through it.
+    Price I'm thinking: $300 per report.
+    Tried before: I mentioned it in a founder group and six people said "great idea". Nobody asked to buy.
+  output: pending
+tweaks:
+  - what: Who you can reach this week
+    how: Name ten real people. The test plan orders them; a vague audience gets a vague plan.
+  - what: The price
+    how: Give one. The ask takes money at that price, and a no at $300 is information.
+  - what: What you can deliver
+    how: Say what you can do by hand in thirty days. The launch plan never promises more.
+  - what: What was tried
+    how: Tell it about the polite yeses. The test is designed so they cannot happen again.
+judge:
+  - The test counts money, not kind words.
+  - The ask says how to pay today and what the buyer gets by when.
+  - The thirty-day version is something you could actually deliver by hand.
+  - The log has a line for every attempt, including the nos.
+  - No promise in the ask goes beyond the launch plan.
+test:
+  - Give step 1 an idea where "yes" means joining a waitlist. It should insist on payment.
+  - Give step 3 two paid buyers out of ten asks. It should not plan the launch as if three had paid.
+  - Run step 2 twice. The price and the promise should match.
+  - After the two days, read the log. Does each no have a reason recorded?
+improve:
+  - Keep the trial log across ideas. The pattern in the nos is your market research.
+  - Save your reachable list by audience so the next test starts with names.
+  - Record what you could deliver by hand so the launch plan starts realistic.
+  - Pair it with "Find your first customers, interview them and pick the smallest test" if the ask brings nos you do not understand.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: A payment link
+      why: The real yes is a payment. Have the link ready before day one.
+    - name: A spreadsheet
+      why: The trial log lives here.
+  inputs:
+    - Names of ten people you can message this week
+    - A payment link you already have
+    - Past polite yeses and who gave them
+terms:
+  - term: Pre-sell
+    meaning: Taking payment for something before it exists, to prove people want it.

@@ -5,7 +5,7 @@ name: Ad data quality checker
 summary: Give it your ad and sales tables. Get nine checks that catch missing spend, duplicates and empty columns.
 job: track-numbers
 headline: Ad data quality checker
-subhead: Give it your ad and sales tables. Get nine checks that catch missing spend, duplicates and empty columns.
+subhead: Give it your ad and sales tables, the date window, the time zone and the systems you are comparing. It runs nine checks, including that spend adds up across buckets, leads are not double counted and columns are filled. You get the result of each check, the rows that failed, a column fill report and a repeatable record.
 explain: |
   Nine checks run on your ad and sales tables and catch missing spend, duplicates, double-counted leads and empty columns before they distort a report.
 

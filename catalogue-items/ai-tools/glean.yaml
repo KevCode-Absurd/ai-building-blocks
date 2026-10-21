@@ -1,0 +1,41 @@
+slug: glean
+name: Glean
+maker: Glean
+url: https://www.glean.com
+promise: One search and chat across your work apps, with answers from your own files.
+use_cases: [organise-work, research]
+categories: [productivity, chat-assistant]
+what_it_does:
+  - Searches your connected work apps from one box.
+  - Answers questions in chat with links to the source files.
+  - Respects who can see which documents.
+  - Builds agents that take routine steps for you.
+  - Shows up inside the apps your team already uses.
+benefits:
+  - Find the right document without asking three people.
+  - Get new hires up to speed from your own files.
+  - Stop re-answering the same internal questions.
+  - Keep results limited to what each person may see.
+best_for:
+  - Large companies with files spread over many apps.
+  - Teams that lose hours to searching.
+  - Companies that need access controls on AI answers.
+not_for:
+  - Small teams or solo owners, since it is sold to companies by demo.
+  - Anyone who wants a free plan or a quick trial.
+pricing:
+  model: enterprise
+  from: Check the maker's site
+  note: No public prices. The site offers a demo, and sellers report a minimum contract for companies.
+works_with:
+  - Slack
+  - Google Drive
+  - Microsoft 365
+  - Jira
+runs_in: [web, browser-extension, slack, api]
+blocks: []
+alternatives: [guru, notion-ai, microsoft-copilot, notebooklm]
+last_checked: 2026-10-21
+sources:
+  - https://www.glean.com/pricing
+  - https://www.eesel.ai/blog/glean-ai-pricing

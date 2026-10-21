@@ -1,6 +1,6 @@
 slug: adaptive-filter-designer
 name: Adaptive filter designer
-summary: Describe noise or echo to remove. Get an adaptive filter built and tested on your signal.
+summary: Describe the noise or echo to remove. Get MATLAB filter code, a convergence check and a cleaned signal.
 category: general
 boards: []
 type: skill

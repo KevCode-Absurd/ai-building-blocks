@@ -1,0 +1,41 @@
+slug: v0
+name: v0
+maker: Vercel
+url: https://v0.app
+promise: Describe a screen or app and get working code and a live preview.
+use_cases: [build-apps, design, code]
+categories: [coding]
+what_it_does:
+  - Builds user interfaces and full apps from a plain-words prompt.
+  - Turns a wireframe or mock-up into a high-fidelity screen.
+  - Shows a live preview as it builds.
+  - Fixes errors in the code on its own.
+  - Deploys to Vercel in one click.
+  - Opens a pull request for review.
+benefits:
+  - Get a clickable screen to show a client before any developer starts.
+  - Hand a developer real code to build on, not a picture.
+  - Change copy and layout by asking for it.
+  - Publish a prototype to a live link in one step.
+best_for:
+  - Designers and product people who want to test a screen as real code.
+  - Developers who build with React and Vercel.
+  - Teams that want a quick prototype before a full build.
+not_for:
+  - Anyone who wants a full back-end system without technical help.
+  - Free users who need more than 7 messages a day.
+pricing:
+  model: freemium
+  from: US$30 per month
+  note: Free plan with a limit of 7 messages a day. Plus is US$30 per user per month and includes US$30 of credits and US$2 of free daily credits. Business is US$100 per user per month.
+works_with:
+  - GitHub
+  - Vercel
+  - Figma
+runs_in: [web, api]
+blocks: []
+alternatives: [lovable, bolt, replit, cursor]
+last_checked: 2026-10-21
+sources:
+  - https://v0.app/pricing
+  - https://v0.app

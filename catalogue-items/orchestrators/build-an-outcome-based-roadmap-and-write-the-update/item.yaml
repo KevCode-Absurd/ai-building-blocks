@@ -1,0 +1,27 @@
+slug: build-an-outcome-based-roadmap-and-write-the-update
+name: "Build an outcome-based roadmap and write the update"
+summary: "Give it your goals. Get an opportunity tree, an outcome roadmap, a quarter plan and the update."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+  - {type: document}
+uses: [opportunity-solution-tree, outcome-based-roadmap, quarterly-roadmap-builder, roadmap-update-writer]
+steps:
+  - {uses: opportunity-solution-tree, note: "Under each outcome, the customer problems that would move it if solved, from your research and tickets, and the solutions worth considering under each, in a tree."}
+  - {uses: outcome-based-roadmap, note: "A roadmap of outcomes, not features, in Marty Cagan's manner: each outcome with the bets under it, the team that owns it and the measure, with features only as examples."}
+  - {uses: quarterly-roadmap-builder, note: "The next quarter: which bets, what each should move and by how much, how you will know, and what you are not doing."}
+  - {uses: roadmap-update-writer, note: "The update for stakeholders: the outcomes, the bets, what changed since last time and why, and what you are not doing, in plain words."}
+origin: own
+version: 1.0.0
+minds: [marty-cagan]
+credits:
+  - {title: "Product Discovery (2007)", by: "Marty Cagan, Silicon Valley Product Group", url: "https://www.svpg.com/product-discovery/", used: "Give the team an outcome to own and let discovery decide the features"}
+example_pending: true

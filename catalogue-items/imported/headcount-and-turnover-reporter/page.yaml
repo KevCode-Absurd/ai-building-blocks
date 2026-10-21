@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It counts and compares, then explains the trends.
 new_slug: headcount-and-turnover-reporter
 name: Headcount and turnover reporter
-summary: Give it your people data. Get headcount, turnover and team health reports. Use your own data only.
+summary: Give it your people data. Get headcount, turnover and team health reports with a metrics table and trends.
 job: hire-people
 headline: Headcount and turnover reporter
-subhead: Give it your people data. Get headcount, turnover and team health reports. Use your own data only.
+subhead: "Upload a spreadsheet of employees with team, level, location and dates, plus exits if you have them. Pick the report: headcount, turnover, representation or org health. You get a summary of findings, a metrics table with trends, detail by team or level, recommended actions and a note on method."
 explain: |
   A report on who works for you and who is leaving, built from your own people data. Pick the type: headcount, turnover, representation, or org health. Upload a spreadsheet or describe the data.
 

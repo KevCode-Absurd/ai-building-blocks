@@ -5,7 +5,7 @@ name: System design planner
 summary: Describe what you are building. Get an architecture choice with diagrams and the trade-offs behind it.
 job: build-software
 headline: System design planner
-subhead: Describe what you are building. Get an architecture choice with diagrams and the trade-offs behind it.
+subhead: Describe what you are building, with expected users, traffic and team size. It works through decision flows for monolith or microservices, which database fits and how the system should grow. You get a recommended architecture, a diagram, a dependency check and a trade-off summary for each choice.
 explain: |
   Pick an architecture before you build it, with a diagram and a clear record of what you give up for each choice. You get a recommendation on monolith or microservices, which database fits, and how the system should grow, so the decision is written down and not guessed.
 

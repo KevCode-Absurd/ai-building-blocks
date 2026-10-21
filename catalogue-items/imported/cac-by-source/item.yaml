@@ -1,7 +1,7 @@
 slug: cac-by-source
 renamed_from: acquisition-cost-by-source-calculator
 name: "Acquisition cost by source calculator"
-summary: "Add your ad spend. Get the cost to win a customer from each traffic source."
+summary: "Add ad spend per source. Get the cost to win one new customer from each traffic source."
 category: general
 boards: []
 type: skill

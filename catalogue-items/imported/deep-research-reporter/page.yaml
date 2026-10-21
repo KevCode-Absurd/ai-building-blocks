@@ -2,10 +2,10 @@ thinking: high
 thinking_why: It splits the question, compares sources and synthesises.
 new_slug: deep-research-reporter
 name: Deep research reporter
-summary: Give it a topic. Get a cross-checked report built from many sources, with findings and sources.
+summary: Give it a topic. Get a report cross-checked across many sources, with conflicts noted and sources listed.
 job: test-an-idea
 headline: Deep research reporter
-subhead: Give it a topic. Get a cross-checked report built from many sources, with findings and sources.
+subhead: Give it a topic or question and any focus areas or source types you prefer. It splits the question into three to six sub-questions and searches academic, official, news and industry sources for each. You get an executive summary, sections by theme, the conflicts and gaps it found and a source list.
 explain: |
   A report on any topic that has been checked against many sources, with the findings and the sources listed. It aims to replace a single search result with a cross-checked answer.
 

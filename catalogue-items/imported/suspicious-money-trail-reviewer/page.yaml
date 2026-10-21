@@ -2,10 +2,10 @@ thinking: high
 thinking_why: It must spot subtle patterns and weigh evidence.
 new_slug: suspicious-money-trail-reviewer
 name: Suspicious money trail reviewer
-summary: Give it records that do not add up. Get a structured review of red flags and evidence to follow up.
+summary: Give it records that do not add up. Get red flags, money flow traces and what to check next.
 job: money-and-investing
 headline: Suspicious money trail reviewer
-subhead: Give it records that do not add up. Get a structured review of red flags and evidence to follow up.
+subhead: Give it the financial records and say what looks wrong. It runs a Benford's Law digit test, looks for vendor and staff links, round-trip payments and money flow traces. You get the red flags and a report outline with next steps. It does not prove fraud.
 explain: |
   A structured look at financial records that do not add up, with the red flags listed and the evidence worth following up. It points where to dig. It does not prove fraud.
 

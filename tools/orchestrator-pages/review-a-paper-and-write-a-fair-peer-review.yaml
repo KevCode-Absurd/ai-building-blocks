@@ -1,0 +1,106 @@
+new_slug: review-a-paper-and-write-a-fair-peer-review
+name: Check a paper's claims and write a fair peer review
+summary: Give it the manuscript. Get a claim check, a methods review and a fair, kind peer review.
+job: research-topics
+thinking: high
+thinking_why: It must judge evidence, methods and claims without being swayed by the writing. Give it your strongest model.
+headline: Check a paper's claims and write a fair peer review
+subhead: Give it the manuscript. It checks every claim against the paper's own results, reviews the methods and the writing as a scholar would, drafts the peer review with major and minor points, then rewrites the comments so they are clear, specific and kind to the authors.
+explain: |
+  Peer review is done at night, unpaid, and it shows. Reviews repeat the abstract, miss the claim the results do not support, and come in two tones: vague praise or wounding. Authors cannot tell what to fix, editors cannot tell what matters, and the paper's weakest claim survives.
+
+  This workflow reviews in four passes. The first checks every claim in the abstract and discussion against the paper's own results and methods, and flags the ones that go further than the data. The second reviews the work as a scholar would: design, analysis, novelty, the literature it ignores, the writing. The third drafts the review in the standard shape: a summary, major points, minor points, a recommendation. The fourth rewrites the comments to be specific and kind, so an author knows exactly what to do and does not spend the evening hurt.
+when:
+  - An editor has sent you a manuscript and a deadline.
+  - You want to catch the claim that overreaches, which is the one that gets quoted.
+  - Your past reviews were called harsh or vague.
+you_give:
+  - The manuscript, including figures and tables as text
+  - The journal's review form or criteria, if there is one (optional)
+  - Your field and what you can and cannot judge
+you_get:
+  - "A claim check: every claim against the results, with the ones that overreach flagged"
+  - A methods and writing review
+  - A drafted peer review with summary, major and minor points and a recommendation
+  - The review rewritten to be specific and kind
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the manuscript and the journal's criteria. It checks the claims and reviews the methods.
+  - Read the draft review. Remove any point you cannot stand behind and add what you saw yourself.
+  - Read the kind version once more and submit it.
+how_it_works:
+  - title: Check the claims
+    text: Reads every claim against the paper's own results and flags the ones that go further than the data.
+  - title: Review methods and writing
+    text: Reviews design, analysis, novelty, missing literature and writing, leaving out what you said you cannot judge.
+  - title: Draft the review
+    text: Drafts the review with a summary, major and minor points and a recommendation, each tied to a page or figure.
+  - title: Make it specific and kind
+    text: Rewrites each comment so the author knows exactly what to change, in a tone you would use to a colleague.
+output_shape: |-
+  STEP 1: CLAIM CHECK
+    <claim> (abstract / discussion): Results show <...> | Supported: <yes / partly / no>
+
+  STEP 2: METHODS AND WRITING
+    Design: <...> | Analysis: <...> | Novelty: <...> | Missing literature: <...> | Writing: <...>
+    Outside my judgement: <...>
+
+  STEP 3: DRAFT REVIEW
+    Summary: <...> | Major: <point, page / figure> | Minor: <...> | Recommendation: <...>
+
+  STEP 4: FINAL REVIEW
+    <each comment, specific and kind> | Confidential note to the editor: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    I'm a nutrition researcher reviewing for a journal. The manuscript is from Sprout, a daily greens gummy brand, reporting a 12-week randomised, double-blind, placebo-controlled trial in 120 healthy adults aged 23 to 59.
+    The abstract claims: blood vitamin C rose 40.1% (2.7 times placebo) and folate 20.5% (2.9 times placebo); and that the product "supports energy, immunity and daily wellness".
+    Methods as written: two arms, one pack a day, bloods at baseline and week 12, no diet control reported, dropouts not stated, funded by the company.
+    Discussion: says the results "demonstrate the clinical effectiveness of the formula".
+    Journal criteria: sound methods, claims supported by data, conflicts declared, reporting per trial guidelines.
+    I can judge the nutrition and trial design. I cannot judge the statistics beyond the basics; say so.
+    Full manuscript text attached.
+  output: pending
+tweaks:
+  - what: What you can judge
+    how: Say it. The review leaves the rest out or marks it for another reviewer.
+  - what: The journal's criteria
+    how: Paste the form. The review follows its headings.
+  - what: Your tone
+    how: Paste a review you were proud of. Step 4 matches it.
+  - what: Figures and tables
+    how: Give them as text or numbers. The claim check needs the results, not the words about them.
+judge:
+  - The claim check names the claims that go further than the results.
+  - The methods review says what the paper did not report, not only what it did.
+  - Every major point is tied to a page, figure or table.
+  - The recommendation follows from the major points.
+  - An author could read the final review and know what to do first.
+test:
+  - Give it an abstract that claims an outcome the methods never measured. Step 1 should flag it.
+  - Give step 2 a paper outside your field and say so. It should leave that judgement out.
+  - Compare the draft and the final review. The points should be the same; only the tone should change.
+  - Run step 1 twice. The flagged claims should match.
+improve:
+  - Save the journal forms you review for, so step 3 follows their shape.
+  - Keep a file of your own past reviews to set the tone in step 4.
+  - Add a checklist of trial reporting rules for your field to step 2.
+  - Pair it with "Draft a paper, review it and fit your journal's rules" for your own manuscripts.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: The journal's reviewer system
+      why: Where the final review and the confidential note go.
+  inputs:
+    - The trial registration, if there is one
+    - The reporting guideline for this study type
+    - Your past reviews for the same journal
+terms:
+  - term: Major and minor points
+    meaning: In a peer review, major points must be fixed for the paper to be sound; minor points improve it.

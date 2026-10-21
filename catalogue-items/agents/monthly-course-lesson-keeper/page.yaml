@@ -1,0 +1,128 @@
+new_slug: monthly-course-lesson-keeper
+name: Monthly course lesson keeper
+summary: Give it your course lessons each month. Get stale or hard-to-follow lessons found, each fixed with an example, opener and quiz.
+job: teach-and-train
+thinking: high
+thinking_why: It reads learner questions for patterns, checks lesson claims against a changing tool and rewrites so a learner can check their own result. Give it your strongest model.
+headline: Monthly course lesson keeper
+subhead: Give it your lessons and the month's learner questions. It finds the lessons that went stale or that learners get stuck on, checks each claim against what is true today, and rewrites the ones that need it with a five-minute opener, the smallest working example and a recall quiz. You publish.
+explain: |
+  A course is finished the day it launches and wrong a month later. The tool it teaches moves a button. A step stops working. The same question arrives under the same lesson every week, and each one is answered as a ticket instead of fixed in the lesson. Learners who get stuck blame themselves and leave quietly.
+
+  This agent reads the questions first. It counts them per lesson, flags a lesson when the same question repeats or the count doubles, and adds any lesson past its review date. It checks each flagged lesson against the current docs or code for claims that are now false, and against learning design for fixes ranked by impact. A lesson that needs a rewrite gets an opener that brings back what learners know, the smallest example that shows the mechanism with values the learner can check, and a quiz with answers. It changes one thing at a time and sets the next review date. It never publishes.
+when:
+  - You run a course or training that teaches a tool or process that keeps changing.
+  - The same learner question keeps arriving under the same lesson.
+  - You want every lesson re-checked on a schedule instead of when someone complains.
+you_give:
+  - Your lessons as text, with the date each was last updated
+  - The month's learner questions, complaints and quiz results, tagged by lesson (advised)
+  - The current docs or code for what the lessons teach (advised)
+  - Your review rule, or accept six months
+  - Last month's keeper file, once it exists
+you_get:
+  - Questions per lesson, this month against last, with the repeated question quoted
+  - Every claim that is now false, with what is true and its source
+  - A rewrite per flagged lesson with an opener, the smallest working example and a three-level quiz
+  - Design fixes ranked by impact for lessons that do not need a rewrite
+  - The lessons due for review next month
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month.
+  - Put your lessons in one folder with their last-updated dates. Add the month's learner questions, tagged by lesson.
+  - Point it at the current docs or code for the tool you teach.
+  - Read the stale claims and the rewrites. Publish the ones you approve in your course platform.
+  - Run it again on the first Monday of next month. It tracks questions and review dates over time.
+how_it_works:
+  - title: Look at the data
+    text: Counts questions per lesson by hand, flags repeats and jumps, and adds lessons past their review date.
+  - title: Check what is still true
+    text: Tests each flagged lesson against the current docs or code for false claims and drifted steps.
+  - title: Check the learning design
+    text: Audits each flagged lesson against Universal Design for Learning, with fixes ranked by impact.
+  - title: Decide per lesson
+    text: Rewrite for false claims or a repeated how question; list fixes for design alone; mark reviewed when nothing is wrong.
+  - title: Rewrite the lesson
+    text: The smallest example with traced values first, a five-minute opener, the body fixed one thing at a time, and a quiz with answers.
+  - title: Set the next review
+    text: Updates last reviewed and the next date for every lesson touched.
+  - title: Log and hand back
+    text: Saves the lesson and question files, then stops. You publish.
+output_shape: |-
+  THIS MONTH
+    <n> lessons | <n> questions | flagged <n> | rewritten <n> | due next month <n>
+
+  THE QUESTION MAP
+    <lesson> | questions <n> (last month <n>) | repeated: "<question>" x<n>
+
+  STALE LESSONS
+    <lesson> | claim: "<what the lesson says>" | now: <what is true> (<source>) | step drifted: <which>
+
+  REWRITES
+    <lesson>
+      Opener (5 min): <what learners already know, how to bring it back>
+      Smallest example: <setup> -> <traced values> -> <prediction the learner checks>
+      Body changes: <false claim fixed>, <step updated> | next month: <what else>
+      Quiz: level 1 <q> | level 2 <q> | level 3 <q> | answers: <...>
+
+  DESIGN FIXES (no rewrite)
+    <lesson> | <fix> | impact: <high | medium | low>
+
+  DUE NEXT MONTH
+    <lesson> | last reviewed <date>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run October for Sprout's internal training course for new retail
+    partners (practice course, not Sprout's real one). 9 lessons,
+    attached, last updated between March and August.
+    Learner questions this month, tagged:
+    - Lesson 3 "Reading the label": "is it 100% of daily value per gummy
+      or per pack?" asked 5 times; "how many gummies in a pack?" 2 times.
+    - Lesson 5 "Setting up the shelf display": "the display box in the
+      photo is the old green one, which do we use?" 3 times.
+    - Lesson 7 "Answering the sugar question": 1 question.
+    - Lesson 8 "Ordering through the portal": "the Reorder button is not
+      where the video shows" 4 times.
+    Current facts: doses are per pack (about 20 g), not per gummy; the
+    display box changed to the yellow Kids-and-Adults unit in September;
+    the ordering portal moved Reorder under Account in August.
+    Review rule: six months.
+  output: pending
+tweaks:
+  - what: Tagged questions
+    how: Tag each learner question with its lesson. The flagging is only as good as the tags.
+  - what: Flag rule
+    how: Three of the same question flags a lesson. Set two for a small cohort.
+  - what: Review rule
+    how: Six months by default. Set three for lessons about a tool that changes often.
+  - what: Current docs
+    how: Point it at the live docs or code. Without them the truth check is skipped.
+judge:
+  - Every flagged lesson has a question count or a review date behind it.
+  - Every false claim names what is true now and its source.
+  - Every rewrite has an opener, a checkable example and a quiz with answers.
+  - No lesson was rewritten for design fixes alone.
+  - Nothing was published or sent.
+test:
+  - Give it a lesson you know has a stale screenshot step. It should name the drifted step.
+  - Give it a lesson with the same question five times. It should put a working example before the explanation.
+  - Run it twice on the same questions. The flagged list should match.
+improve:
+  - Add last-updated dates to every lesson before the first run.
+  - Tag learner questions by lesson in your support tool, so the export is ready each month.
+  - Set a shorter review rule for lessons about tools that change often.
+  - Pair it with the Class quiz reteach keeper, which reads quiz results after each test; this one keeps the lessons themselves true.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read the lessons folder and the current docs or code, and keep the lesson and question files between months.
+    - name: Your course platform
+      why: Export learner questions and quiz results by lesson each month.
+  inputs:
+    - Quiz results by lesson, so quiet lessons with low scores are seen
+    - Release notes for the tool the course teaches

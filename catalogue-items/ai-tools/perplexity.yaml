@@ -1,0 +1,41 @@
+slug: perplexity
+name: Perplexity
+maker: Perplexity AI
+url: https://www.perplexity.ai
+promise: Sourced answers to questions, with links you can check.
+use_cases: [ask-an-assistant, research]
+categories: [chat-assistant]
+what_it_does:
+  - Searches the web and answers in plain words with numbered sources.
+  - Runs longer research and writes a report.
+  - Lets you ask follow-up questions on the same topic.
+  - Reads files you upload and answers from them.
+  - Groups related searches into shared spaces.
+benefits:
+  - Check every claim by clicking the source next to it.
+  - Get a first read on a market or competitor in minutes.
+  - Keep research on one topic in one place.
+  - Find out how AI search describes your own brand.
+best_for:
+  - Research where you need to see the source.
+  - Fact checks and quick market scans.
+  - People who would otherwise open ten browser tabs.
+not_for:
+  - Long creative writing or brand copy.
+  - Anything that rests on stale or thin sources, so open the links.
+pricing:
+  model: freemium
+  from: US$20 per month
+  note: Free plan with limits. Pro costs US$20 per month. Max costs US$200 per month, and business plans are priced per user.
+works_with: []
+runs_in: [web, desktop, mobile, api]
+blocks:
+  - ai-search-platform-checker
+  - ai-search-visibility-optimiser
+  - ai-citation-scorer
+  - reddit-answer-planner
+alternatives: [chatgpt, gemini, claude, notebooklm]
+last_checked: 2026-10-21
+sources:
+  - https://www.eesel.ai/blog/perplexity-pricing
+  - https://www.finout.io/blog/perplexity-pricing-in-2026

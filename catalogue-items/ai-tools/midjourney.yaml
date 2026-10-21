@@ -1,0 +1,40 @@
+slug: midjourney
+name: Midjourney
+maker: Midjourney
+url: https://www.midjourney.com
+promise: Striking, artistic images from a written description, in a web app.
+use_cases: [make-images]
+categories: [image]
+what_it_does:
+  - Makes four image options from each written description.
+  - Varies, zooms and re-draws any option you like.
+  - Copies a look from a reference image you upload.
+  - Saves a personal style so later images match it.
+  - Keeps your images in a gallery you can search.
+benefits:
+  - Find a visual direction for a campaign before you brief a designer.
+  - Get mood boards and concept art in minutes.
+  - Reuse one saved style so a batch of images feels like one set.
+best_for:
+  - Mood boards, concept art and eye-catching social images.
+  - Brand looks built from reference pictures.
+  - Illustrations for blog posts, decks and covers.
+not_for:
+  - Exact on-screen text, which still comes out wrong often.
+  - Accurate product photos where the packaging must be perfect.
+pricing:
+  model: subscription
+  from: US$10 per month
+  note: Basic gives about 3.3 hours of fast image time. There is no free plan. Standard, Pro and Mega cost more and add more hours. Unused hours expire each month.
+works_with:
+  - stable-diffusion
+  - ideogram
+  - canva
+runs_in: [web]
+blocks:
+  - marketing-image-maker
+  - stable-diffusion-image-maker
+alternatives: [nano-banana, flux, ideogram, leonardo]
+last_checked: 2026-10-21
+sources:
+  - https://eesel.ai/blog/midjourney-pricing

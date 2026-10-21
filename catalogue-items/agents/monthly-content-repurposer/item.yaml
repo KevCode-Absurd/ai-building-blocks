@@ -1,0 +1,28 @@
+slug: monthly-content-repurposer
+name: "Monthly content repurposer"
+summary: "Give it last month's content results. Get your best pieces picked and turned into posts, emails and clips to approve."
+category: agent
+type: agent
+role: orchestrate
+job: organic
+level: beginner
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: source_text, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: plan}
+uses: [content-repurposer, long-form-post-repurposer, social-post-planner, youtube-title-and-tags-writer, draft-brand-voice-checker]
+steps:
+  - {uses: content-repurposer, note: "Every month, for the one or two pieces that did best: a blog series, emails, posts and clip ideas, each adapted to its format."}
+  - {uses: long-form-post-repurposer, note: "Every month, for each piece picked: a post for X or LinkedIn that works even if nobody clicks."}
+  - {uses: social-post-planner, note: "Every month: the month's calendar built from the repurposed pieces, with ready posts per platform."}
+  - {uses: youtube-title-and-tags-writer, note: "Only when a picked piece is a video or podcast, or a clip is planned: title, description, tags and timestamps."}
+  - {uses: draft-brand-voice-checker, note: "Every month, last, when a brand brain exists: every post and email checked against your voice, with fixes."}
+schedule: "On the first Tuesday of each month, once last month's content results are in"
+asks_before: [publishing or scheduling any post, email or clip, changing a published piece, replying to comments, paying to promote anything, posting on a platform you have not used before]
+minds: [rand-fishkin]
+origin: own
+version: 1.0.0
+example_pending: true

@@ -44,7 +44,7 @@
 - [ISO 27001 audit prep coach](https://useaiblocks.com/skills/iso-27001-audit-prep-coach): Name your scope. Answer six questions and get gaps to fix before an internal or outside ISO 27001 audit.
 - [Live app security tester](https://useaiblocks.com/skills/live-app-security-tester): Give it a running web app or API you own. Get weaknesses found by safe probing.
 - [Login and access builder](https://useaiblocks.com/skills/login-and-access-builder): Describe your app's users. Get a login and permissions plan, or a review of the one you have.
-- [Marketplace access auditor](https://useaiblocks.com/skills/marketplace-access-auditor): Point it at a multi-role marketplace app. Get a report of who can see or change what, with evidence from the code.
+- [Marketplace access auditor](https://useaiblocks.com/skills/marketplace-access-auditor): Point it at a marketplace app's code. Get a report of who can see or change what.
 - [MATLAB secret keeper](https://useaiblocks.com/skills/matlab-secret-keeper): Give it code with passwords or API keys. Get them moved into the MATLAB Vault, not left in the file.
 - [MCP attack defence reviewer](https://useaiblocks.com/skills/mcp-attack-defence-reviewer): Point it at an MCP server. Get a ranked list of attack risks, each with a fix.
 - [MCP config version checker](https://useaiblocks.com/skills/mcp-config-version-checker): Give it your MCP config files. Get a list of server packages that can change under you, before you approve them.

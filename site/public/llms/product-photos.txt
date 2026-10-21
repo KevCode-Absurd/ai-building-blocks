@@ -4,7 +4,7 @@
 
 - [A full product photoshoot from your phone photos](https://useaiblocks.com/workflows/phone-product-photoshoot): Give it your product photos and brand look. You get 8 to 12 photos, each with a job and its own light.
 - [A product gallery that answers shoppers' doubts](https://useaiblocks.com/workflows/product-gallery-answers): Give it your product, photos, reviews and current gallery. You get a checked set of images, ready to upload.
-- [Accessory try-on photo maker](https://useaiblocks.com/skills/accessory-try-on-photo-maker): Give it a shoe, bag, watch or necklace photo. Get a person wearing it. Your image model draws it.
+- [Accessory try-on photo maker](https://useaiblocks.com/skills/accessory-try-on-photo-maker): Give it a shoe, bag, watch or necklace photo. Get a prompt that puts it on a person.
 - [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector): Give it an AI-made product photo. Get a risk rating, eight checks and lines to add to your prompt before you retry.
 - [Eight-picture product page planner](https://useaiblocks.com/prompts/eight-picture-product-page-planner): Paste your product facts and photos you have. Get a plan for the eight pictures on your product page.
 - [Fabric close-up maker](https://useaiblocks.com/skills/fabric-close-up-maker): Give it a clothing photo. Get close-ups of fabric, stitching and weave for the product page. Your image model draws them.
@@ -15,7 +15,7 @@
 - [Ghost mannequin photo maker](https://useaiblocks.com/skills/ghost-mannequin-photo-maker): Give it a clothing flat lay. Get a photo shaped as if worn by an invisible model. Your image model draws it.
 - [Main product image designer](https://useaiblocks.com/skills/main-product-image-designer): Give it a product photo and selling points. Get a main image with the copy laid on. Your image model draws it.
 - [Make matching photos for a product sheet and check them](https://useaiblocks.com/workflows/make-matching-photos-for-a-product-sheet-and-check-them): Give it a product sheet. Get matching photos, a faults report and a marketplace rules check.
-- [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker): Give it a product photo. Get a pass or reject check for Amazon, TikTok Shop, Temu and Shopee rules, and a fix.
+- [Marketplace photo rule checker](https://useaiblocks.com/skills/marketplace-photo-rule-checker): Give it product photos and your platform. Get a pass or reject per photo, and fixed copies.
 - [Missing product image finder](https://useaiblocks.com/skills/missing-product-image-finder): Get products and variants with no image or too few images, so no page goes live looking bare.
 - [Model and scene swapper](https://useaiblocks.com/skills/model-and-scene-swapper): Give it a model photo. Get versions with other models and backgrounds, same clothes. Your image model draws them.
 - [Outfit photo composer](https://useaiblocks.com/skills/outfit-photo-composer): Give it up to eight single items. Get one photo of a model wearing the full outfit. Your image model draws it.

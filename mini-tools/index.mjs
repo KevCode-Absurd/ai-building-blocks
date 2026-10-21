@@ -59,7 +59,36 @@ import t_meeting_cost_ex from "./meeting-cost/examples.mjs";
 import t_hire_or_freelance from "./hire-or-freelance/tool.mjs";
 import t_hire_or_freelance_ex from "./hire-or-freelance/examples.mjs";
 
-export const TOOLS = [discount, deal, margin, repeat, volume, pageTest, aiCost, hourly, t_ad_budget_planner, t_customer_payback, t_price_increase_calculator, t_free_shipping_threshold, t_bundle_price_calculator, t_returns_cost_calculator, t_landed_cost, t_reorder_point, t_email_list_value, t_creator_deal_calculator, t_subscription_revenue_forecast, t_cash_runway, t_meeting_cost, t_hire_or_freelance];
+import t_new_hire_break_even from "./new-hire-break-even/tool.mjs";
+import t_new_hire_break_even_ex from "./new-hire-break-even/examples.mjs";
+import t_hire_runway_cost from "./hire-runway-cost/tool.mjs";
+import t_hire_runway_cost_ex from "./hire-runway-cost/examples.mjs";
+import t_agency_or_in_house from "./agency-or-in-house/tool.mjs";
+import t_agency_or_in_house_ex from "./agency-or-in-house/examples.mjs";
+import t_subscriber_lifetime_value from "./subscriber-lifetime-value/tool.mjs";
+import t_subscriber_lifetime_value_ex from "./subscriber-lifetime-value/examples.mjs";
+import t_launch_revenue_planner from "./launch-revenue-planner/tool.mjs";
+import t_launch_revenue_planner_ex from "./launch-revenue-planner/examples.mjs";
+import t_three_tier_pricing from "./three-tier-pricing/tool.mjs";
+import t_three_tier_pricing_ex from "./three-tier-pricing/examples.mjs";
+import t_early_payment_discount from "./early-payment-discount/tool.mjs";
+import t_early_payment_discount_ex from "./early-payment-discount/examples.mjs";
+import t_ad_test_size from "./ad-test-size/tool.mjs";
+import t_ad_test_size_ex from "./ad-test-size/examples.mjs";
+import t_email_frequency_planner from "./email-frequency-planner/tool.mjs";
+import t_email_frequency_planner_ex from "./email-frequency-planner/examples.mjs";
+import t_content_cost_per_piece from "./content-cost-per-piece/tool.mjs";
+import t_content_cost_per_piece_ex from "./content-cost-per-piece/examples.mjs";
+import t_ai_time_saved from "./ai-time-saved/tool.mjs";
+import t_ai_time_saved_ex from "./ai-time-saved/examples.mjs";
+import t_marketplace_unit_margin from "./marketplace-unit-margin/tool.mjs";
+import t_marketplace_unit_margin_ex from "./marketplace-unit-margin/examples.mjs";
+import t_store_or_marketplace from "./store-or-marketplace/tool.mjs";
+import t_store_or_marketplace_ex from "./store-or-marketplace/examples.mjs";
+import t_stock_weeks_of_cover from "./stock-weeks-of-cover/tool.mjs";
+import t_stock_weeks_of_cover_ex from "./stock-weeks-of-cover/examples.mjs";
+
+export const TOOLS = [discount, deal, margin, repeat, volume, pageTest, aiCost, hourly, t_ad_budget_planner, t_customer_payback, t_price_increase_calculator, t_free_shipping_threshold, t_bundle_price_calculator, t_returns_cost_calculator, t_landed_cost, t_reorder_point, t_email_list_value, t_creator_deal_calculator, t_subscription_revenue_forecast, t_cash_runway, t_meeting_cost, t_hire_or_freelance, t_new_hire_break_even, t_hire_runway_cost, t_agency_or_in_house, t_subscriber_lifetime_value, t_launch_revenue_planner, t_three_tier_pricing, t_early_payment_discount, t_ad_test_size, t_email_frequency_planner, t_content_cost_per_piece, t_ai_time_saved, t_marketplace_unit_margin, t_store_or_marketplace, t_stock_weeks_of_cover];
 export const EXAMPLES = {
   [discount.slug]: discountExamples,
   [deal.slug]: dealExamples,
@@ -83,6 +112,20 @@ export const EXAMPLES = {
   [t_cash_runway.slug]: t_cash_runway_ex,
   [t_meeting_cost.slug]: t_meeting_cost_ex,
   [t_hire_or_freelance.slug]: t_hire_or_freelance_ex,
+  [t_new_hire_break_even.slug]: t_new_hire_break_even_ex,
+  [t_hire_runway_cost.slug]: t_hire_runway_cost_ex,
+  [t_agency_or_in_house.slug]: t_agency_or_in_house_ex,
+  [t_subscriber_lifetime_value.slug]: t_subscriber_lifetime_value_ex,
+  [t_launch_revenue_planner.slug]: t_launch_revenue_planner_ex,
+  [t_three_tier_pricing.slug]: t_three_tier_pricing_ex,
+  [t_early_payment_discount.slug]: t_early_payment_discount_ex,
+  [t_ad_test_size.slug]: t_ad_test_size_ex,
+  [t_email_frequency_planner.slug]: t_email_frequency_planner_ex,
+  [t_content_cost_per_piece.slug]: t_content_cost_per_piece_ex,
+  [t_ai_time_saved.slug]: t_ai_time_saved_ex,
+  [t_marketplace_unit_margin.slug]: t_marketplace_unit_margin_ex,
+  [t_store_or_marketplace.slug]: t_store_or_marketplace_ex,
+  [t_stock_weeks_of_cover.slug]: t_stock_weeks_of_cover_ex,
 };
 /** Where the site lives, for credit links in the download and the embed. */
 export const SITE = "https://useaiblocks.com";

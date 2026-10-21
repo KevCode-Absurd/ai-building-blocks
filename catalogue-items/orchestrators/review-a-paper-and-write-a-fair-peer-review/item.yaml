@@ -1,0 +1,23 @@
+slug: review-a-paper-and-write-a-fair-peer-review
+name: "Check a paper's claims and write a fair peer review"
+summary: "Give it the manuscript. Get a claim check, a methods review and a fair, kind peer review."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: advanced
+inputs:
+  - {type: document, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: copy_draft}
+uses: [study-claim-checker, scholarly-work-reviewer, manuscript-peer-review-drafter, review-comment-humaniser]
+steps:
+  - {uses: study-claim-checker, note: "Every claim in the abstract and discussion read against the paper's own results and methods, with the claims that go further than the data flagged."}
+  - {uses: scholarly-work-reviewer, note: "Design, analysis, novelty, the literature it ignores and the writing, reviewed as a scholar in the field would, with what you said you cannot judge left out."}
+  - {uses: manuscript-peer-review-drafter, note: "The review in the standard shape: a summary in your words, major points, minor points and a recommendation, each point tied to a page or figure."}
+  - {uses: review-comment-humaniser, note: "Each comment rewritten so the author knows exactly what to change and why, in a tone you would use to a colleague. Nothing is submitted until you say so."}
+origin: own
+version: 1.0.0
+example_pending: true

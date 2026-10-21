@@ -1,0 +1,18 @@
+slug: meeting-to-written-update-converter
+name: "Meeting to written update converter"
+summary: "Paste a recurring meeting's purpose and agenda. Get the written update that replaces it, with a template."
+category: general
+boards: []
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: meeting_notes, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [jason-fried]

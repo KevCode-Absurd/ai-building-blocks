@@ -1,0 +1,55 @@
+slug: monthly-developer-docs-keeper
+name: Monthly developer docs keeper
+summary: Share your docs and recent changes. Get stale pages fixed, broken steps
+  flagged and a clearer start guide.
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - type: codebase
+    required: true
+  - type: document
+    required: false
+outputs:
+  - type: audit_report
+  - type: test_report
+  - type: document
+uses:
+  - readme-first-run-tester
+  - documentation-checker
+  - changelog-entry-writer
+  - code-documentation-writer
+  - api-spec-writer
+  - project-glossary-writer
+steps:
+  - uses: readme-first-run-tester
+    note: "Every month: each README step tried in order and marked working or
+      broken, with proof and the edit that fixes it."
+  - uses: documentation-checker
+    note: "Every month, for every doc that describes code changed since last time:
+      false claims, drift from the code and weak spots."
+  - uses: changelog-entry-writer
+    note: "Every month: the month's commits or pull requests grouped into added,
+      changed and fixed, as a draft entry."
+  - uses: code-documentation-writer
+    note: "Only for a module changed this month whose docstrings or usage guide no
+      longer match: the rewrite, as a proposal."
+  - uses: api-spec-writer
+    note: "Only when a public endpoint was added, changed or removed this month: the
+      OpenAPI spec updated to match the code."
+  - uses: project-glossary-writer
+    note: "Only when a new term appears in the month's code or docs, or a term is
+      used two ways: the glossary entry and the decision record."
+schedule: On the first Tuesday of each month, after the month's releases are tagged
+asks_before:
+  - committing or merging any change
+  - publishing docs or a changelog
+  - deleting or renaming a doc
+  - changing the public API or its spec
+  - tagging a release
+  - sending anything to users
+origin: own
+version: 1.0.0
+example_pending: true

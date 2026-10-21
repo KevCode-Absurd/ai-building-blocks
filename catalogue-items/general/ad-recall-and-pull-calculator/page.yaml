@@ -1,11 +1,11 @@
 new_slug: ad-recall-and-pull-calculator
 name: "Ad recall and pull calculator"
-summary: "Paste your survey answers. Get recall, buyers in each group, the pull as a number and what it means."
+summary: "Paste your survey answers. Get recall, buyers in each group, the pull as a number and its meaning."
 job: read-ad-results
 thinking: low
 thinking_why: "The sums are fixed. The only judgment is scoring vague answers and reading the pattern."
 
-headline: "Your ad's recall and pull, worked out from your survey answers"
+headline: "Ad recall and pull calculator"
 subhead: "Paste the filled-in answer sheet from your survey. It scores who knows the ad, works out how many in each group buy, subtracts to find the pull, checks whether the gap is bigger than chance, and says which of four patterns you have."
 
 explain: |

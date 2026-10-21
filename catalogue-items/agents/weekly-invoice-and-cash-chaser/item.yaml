@@ -1,0 +1,30 @@
+slug: weekly-invoice-and-cash-chaser
+name: "Weekly invoice and cash chaser"
+summary: "Give it your open invoices each week. Get who to chase, a reminder for each and a 90-day cash view."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: beginner
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: document, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: copy_draft}
+  - {type: spreadsheet}
+uses: [invoice-totals-checker, cash-tied-up-finder, late-invoice-reminder-writer, payment-reminder-letter-writer, can-they-pay-deal-checker, cash-forecast-builder]
+steps:
+  - {uses: invoice-totals-checker, note: "Only for invoices sent this week, before they count as owed: totals, dates and missing fields checked."}
+  - {uses: cash-tied-up-finder, note: "Every week: days outstanding per customer, the cash cycle and where cash is stuck, compared with last week."}
+  - {uses: late-invoice-reminder-writer, note: "For each invoice 1 to 30 days late with a customer who usually pays: a warm reminder and a firmer follow-up."}
+  - {uses: payment-reminder-letter-writer, note: "Only for an invoice over 30 days late, a repeat late payer or a customer you want to keep: a reminder that starts where they are."}
+  - {uses: can-they-pay-deal-checker, note: "Only when a customer has gone quiet past 45 days or asked for more time: what they can pay and a plan to offer."}
+  - {uses: cash-forecast-builder, note: "Every week, last: the 30, 60 and 90 day cash view from what is owed, what you owe and fixed costs."}
+schedule: "Every Monday morning, before the week's work starts"
+asks_before: [sending any reminder or letter, offering a payment plan or discount, pausing work for a client, passing a debt to a collector or lawyer, writing off an invoice]
+minds: [robert-collier]
+origin: own
+version: 1.0.0
+example_pending: true

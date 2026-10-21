@@ -1,0 +1,112 @@
+new_slug: size-up-an-industry-before-you-enter-it
+name: Size up an industry before you enter it
+summary: Give it the industry. Get a five forces read, a counter-position, a first market and a call.
+job: plan-strategy
+thinking: high
+thinking_why: It judges an industry's structure and makes a go or no-go call with money behind it. Give it your strongest model.
+headline: Size up an industry before you enter it
+subhead: Give it the industry and what you would offer. It reads the industry with Michael Porter's five forces, tests which of Hamilton Helmer's powers you could build, finds a counter-position incumbents cannot copy, picks a first small market in Peter Thiel's manner, and makes a go or no-go call.
+explain: |
+  People enter industries because the market is big. They find out later that nobody in it makes money, that the incumbents can match any move, and that the first customers they chose were the hardest to win. The decision was made on the size of the prize, not on the structure of the fight.
+
+  This workflow reads the structure first. It applies Michael Porter's five forces: who has the power, buyers or suppliers, how easy it is to enter, what substitutes exist and how hard the rivals fight. It tests which of Hamilton Helmer's seven powers you could realistically build. It looks for a counter-position: a way of operating that incumbents cannot copy without hurting themselves. It picks the first small market to win, in Peter Thiel's manner. Then it makes a go or no-go call from all of it, with what would change the call.
+when:
+  - You are weighing a move into a new industry or category.
+  - The market is big and you suspect that is why everyone is in it.
+  - You want a plan that names the first customers and the power you would hold.
+you_give:
+  - The industry and what you would offer
+  - What you know about the rivals, the buyers and the suppliers
+  - Your strengths, your money and your time
+  - A list of competitors, if you have one (optional)
+you_get:
+  - A five forces read of the industry, with where the profit sits
+  - A test of which powers you could build and which you could not
+  - A counter-position incumbents cannot copy, or the finding that there is none
+  - A first small market to win, and a go or no-go call with what would change it
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the industry, your offer and what you know. It reads the forces and tests the powers.
+  - Read the counter-position. If there is none, take the finding seriously.
+  - Read the call. If it is go, start with the first market it names.
+how_it_works:
+  - title: Read the five forces
+    text: Scores buyer power, supplier power, ease of entry, substitutes and rivalry, and says where the profit sits.
+  - title: Test the powers
+    text: Tests which of Helmer's seven powers you could build here and which to aim for first.
+  - title: Find the counter-position
+    text: Finds a way to operate that incumbents cannot copy without hurting themselves, or says there is none.
+  - title: Pick the first market
+    text: Picks a first market small enough to dominate, with buyers who feel the problem most, in Thiel's manner.
+  - title: Make the call
+    text: Makes a go or no-go call with the facts it rests on, the weak joints and what would change it.
+output_shape: |-
+  STEP 1: FIVE FORCES
+    Buyers: <power, evidence> | Suppliers: <...> | Entry: <...> | Substitutes: <...> | Rivalry: <...>
+    Profit sits with: <...>
+
+  STEP 2: POWERS
+    <power>: Could build <yes / no> | Because: <...> | Aim first: <...>
+
+  STEP 3: COUNTER-POSITION
+    We would: <...> | Incumbents can't copy because: <...> | Or: none found, because <...>
+
+  STEP 4: FIRST MARKET
+    Win first: <who, size> | Feel the problem because: <...> | Then: <next markets>
+
+  STEP 5: CALL
+    <go / no go> | Rests on: <three facts> | Weak joints: <...> | Would change the call: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. We are weighing a move into the pet supplement industry: a daily greens and fibre chew for dogs, sold online and through independent pet stores.
+    What we know: a few large pet brands own most shelf space; vets recommend a handful of clinical brands; many small online brands come and go; two big contract manufacturers make most of the chews; buyers are devoted to their dogs and switch on a vet's word.
+    Our strengths: we know single-serve daily formats, subscriptions and retail displays; our co-packer can make chews; we have a brand people trust for themselves.
+    Money and time: $400k and one year to prove it.
+    Rivals I can name: three large brands, two vet-recommended brands, a dozen online-only brands.
+  output: pending
+tweaks:
+  - what: What you know about the rivals
+    how: Say how they win and what they could not give up. The counter-position is found there.
+  - what: Your strengths
+    how: Be honest about what carries over and what does not. The power test uses only what is real.
+  - what: Money and time
+    how: Give the real numbers. The call weighs them against the first market.
+  - what: The buyers
+    how: Describe who decides and whose word they take. The first market picker needs it.
+judge:
+  - Each force has a score and evidence, and the read says where the profit sits.
+  - The power test says no to the powers you could not build.
+  - The counter-position names why incumbents cannot copy it, or says plainly that there is none.
+  - The first market is small enough to win and names who feels the problem most.
+  - The call rests on three facts and says what would change it.
+test:
+  - Give it an industry where buyers hold all the power. Step 1 should say the profit sits with buyers and step 5 should lean no go.
+  - Give step 3 an idea incumbents could copy tomorrow. It should say there is no counter-position.
+  - Run step 1 twice. The force with the most power should match.
+  - Give step 5 a weak joint you know about. It should appear in the call.
+improve:
+  - Save your strengths and your limits in one file for every industry you look at.
+  - Keep each call. In a year, compare it with what happened to the industry.
+  - Add a competitor list once and update it.
+  - Pair it with "Find which of seven powers you hold or can build" for a deeper power read once you are in.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Trade and industry reports
+      why: The forces read is sharper with real numbers on margins and share.
+  inputs:
+    - Public filings of the largest rivals
+    - Interviews with buyers in the industry
+    - Your own cost and margin numbers
+terms:
+  - term: Five forces
+    meaning: "Michael Porter's five pressures that set an industry's profit: buyers, suppliers, new entrants, substitutes and rivalry."
+  - term: Counter-positioning
+    meaning: Hamilton Helmer's term for a way of operating that incumbents cannot copy without damaging their existing business.

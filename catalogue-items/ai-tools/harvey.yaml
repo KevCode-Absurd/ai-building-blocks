@@ -1,0 +1,37 @@
+slug: harvey
+name: Harvey
+maker: Harvey
+url: https://www.harvey.ai
+promise: An AI built for lawyers that reviews contracts, researches law and drafts documents.
+use_cases: [legal]
+categories: [productivity, writing]
+what_it_does:
+  - Researches legal, regulatory and tax questions.
+  - Reviews contracts and supports negotiation.
+  - Stores large sets of documents and answers questions about them.
+  - Runs multi-step legal tasks through agents.
+  - Tracks regulatory changes that affect a client.
+benefits:
+  - Review a stack of contracts faster than by hand.
+  - Get answers that point back to their sources.
+  - Keep client work in separate spaces with ethical walls.
+  - See how your firm uses AI.
+best_for:
+  - Law firms.
+  - In-house legal teams.
+  - Teams with large volumes of contracts.
+not_for:
+  - Small businesses without a legal team, since it is sold to firms by demo.
+  - Final legal advice, which still needs a lawyer to review it.
+pricing:
+  model: enterprise
+  from: Check the maker's site
+  note: No public prices. The maker asks you to request a demo.
+works_with:
+  - Microsoft Word
+runs_in: [web]
+blocks: []
+alternatives: [claude, chatgpt, microsoft-copilot, glean]
+last_checked: 2026-10-21
+sources:
+  - https://www.harvey.ai/

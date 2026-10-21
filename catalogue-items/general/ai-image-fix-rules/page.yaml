@@ -1,6 +1,6 @@
 name: "AI image and video fix rule writer"
 new_slug: ai-image-fix-rules
-summary: "Paste feedback on AI work. Get each fix as a reusable rule with a prompt line and a check line."
+summary: "Paste feedback on AI work. Get each fix as a rule with a prompt line and a check line."
 job: check-ads
 thinking: medium
 thinking_why: "It writes or plans with a handful of checks."

@@ -15,7 +15,7 @@
 - [Knowledge comic maker](https://useaiblocks.com/skills/knowledge-comic-maker): Give it a topic or story. Get a finished comic with panel layouts, a chosen art style and drawn pages.
 - [Make a marketing image and shrink it for the web](https://useaiblocks.com/workflows/make-a-marketing-image-and-shrink-it-for-the-web): Say what the image is for. Get a prompt, the picture and a smaller file.
 - [Make generative art and export sharp, small images](https://useaiblocks.com/workflows/make-generative-art-and-export-sharp-small-images): Describe the look. Get a coded art piece, sharp stills of it and smaller files.
-- [Marketing image maker](https://useaiblocks.com/skills/marketing-image-maker): Say what image you need. Get a prompt, size and file plan for blog heroes, social graphics and mockups.
+- [Marketing image maker](https://useaiblocks.com/skills/marketing-image-maker): Say what the image is for. Get a prompt to paste, exact size and a file plan.
 - [Marketing image prompt writer](https://useaiblocks.com/prompts/marketing-image-prompt-writer): Paste what the image is for. Get one prompt, a size and a file name to paste into an image maker.
 - [Multi-provider image maker](https://useaiblocks.com/skills/multi-provider-image-maker): Give it a prompt. Get an image from the image service you choose, in the size you pick.
 - [Product demo video maker](https://useaiblocks.com/skills/product-demo-video-maker): Give it screenshots or a page. Get a short demo video or GIF that walks through the product.

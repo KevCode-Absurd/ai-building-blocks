@@ -1,0 +1,29 @@
+slug: weekly-saas-numbers-keeper
+name: "Weekly SaaS numbers keeper"
+summary: "Give it your revenue and customers each week. Get recurring revenue, churn and payback read, one growth target and what to skip."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: tool_connection, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [subscription-revenue-tracker, saas-metrics-coach, cac-payback-checker, ltgp-to-cac-checker, bookings-forecast-builder, weekly-growth-target-setter]
+steps:
+  - {uses: subscription-revenue-tracker, note: "Every week, if billing is connected read-only: monthly and yearly recurring revenue, active subscribers and churn, straight from the source."}
+  - {uses: saas-metrics-coach, note: "Every week: recurring revenue, churn, cost to win a customer and lifetime value read together, with what to fix first."}
+  - {uses: cac-payback-checker, note: "Every month, or when ad spend changed by more than a fifth: profit to cost ratios, a scale-or-fix call, scored out of 100."}
+  - {uses: ltgp-to-cac-checker, note: "Every month: lifetime gross profit against the cost to win a customer, its band and a score."}
+  - {uses: bookings-forecast-builder, note: "Only when you sell with a pipeline: commit, best case and pipe-only forecast with the maths shown."}
+  - {uses: weekly-growth-target-setter, note: "Every week, last: one growth target for the week, what it means in sign-ups or revenue, and what to skip."}
+schedule: "Every Monday morning, from last week's billing export"
+asks_before: [changing a price or a plan, changing ad or sales spend, sending the numbers to investors, the board or the team, contacting any customer, changing what counts as churn or revenue]
+minds: [paul-graham]
+origin: own
+version: 1.0.0
+example_pending: true

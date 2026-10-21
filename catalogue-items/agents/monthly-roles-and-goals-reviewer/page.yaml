@@ -1,0 +1,128 @@
+new_slug: monthly-roles-and-goals-reviewer
+name: Monthly roles and goals reviewer
+summary: Give it your roles and last month's calendar. Get the role crowding out the rest, your goals re-set and next month protected.
+job: organise-work
+thinking: high
+thinking_why: It weighs a month of hours against what someone said matters and plans a month that must survive real life. Give it your strongest model.
+headline: Monthly roles and goals reviewer
+subhead: Give it the roles you hold and last month's calendar on the last Sunday of each month. It counts where the hours went by role, names the role being crowded out, checks the quarter's goals, and plans next month from your values down to protected hours. You approve every calendar change.
+explain: |
+  Weeks fill with the urgent. The roles that matter most, a craft, your health, the people at home, get the hours left over, and a monthly look back shows a month that was busy and not what you meant. Goals set in January are not wrong; they never got a slot.
+
+  This agent steps back once a month. It maps your roles and the one or two lasting results you want in each, and you approve them. Each month it counts last month's hours by role from your calendar, names the role crowded out, and flags it when it happens two months running. It checks each key result for moved, stuck or no time made, and re-sets the goals at quarter end. Then it plans next month from values down to the week, with protected hours for hard work, and gives a crowded role one two-minute habit as a foothold. It never moves a meeting.
+when:
+  - Your months are busy and the things you said mattered keep getting the leftovers.
+  - You set goals each quarter and lose track of them by week three.
+  - You want a monthly habit that asks whether the time went where you meant.
+you_give:
+  - Your four to seven roles, with one line on what you are about in each
+  - Last month's calendar as an export or a list of hours by day (advised)
+  - The quarter's objectives and key results, once set
+  - A journal or loose notes from the month (optional)
+  - Last month's review, once it exists
+you_get:
+  - Hours by role, this month against last, with the crowded role named
+  - Each key result marked moved, stuck or no time made, and a new set at quarter end
+  - One two-minute habit for a role crowded out two months running
+  - Next month's plan from values to week, with protected hours marked
+  - The first week's big tasks and the small ones to batch or drop
+  - A quarterly call on each app, kept, cut or limited
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run the month.
+  - List your roles once and approve the map it builds. It is saved and reviewed each quarter.
+  - Export last month's calendar, or list the hours by day. Attach it or put it in the folder.
+  - Read the crowded role and the plan. Add the protected blocks to your own calendar.
+  - Run it again on the last Sunday of next month. It compares the rows.
+how_it_works:
+  - title: Map the roles once and each quarter
+    text: Your roles, what you are about in each, one or two lasting results, and the role crowding out the rest.
+  - title: Read last month
+    text: Counts the calendar hours by role, adds the month's row and flags a role crowded out two months running.
+  - title: Set or check the goals
+    text: At quarter end writes a few objectives with dated key results; other months marks each as moved, stuck or no time made.
+  - title: Give the crowded role a foothold
+    text: One two-minute habit with a cue, friction for what crowds it, and a restart plan.
+  - title: Plan next month
+    text: From values to month to week with protected hours, then the first week's big tasks and what to batch or drop.
+  - title: Audit the tools
+    text: Quarterly, or when a fifth of the month went to apps, each tool kept, cut or limited.
+  - title: Log and hand back
+    text: Updates the roles and goals files, then stops for your yes.
+output_shape: |-
+  LAST MONTH
+    <hours> tracked | by role: <role> <h>, <role> <h>, ... | crowded out: <role> (<n> months running) | took most: <role>
+
+  THE ROLES
+    <role> | about: <one line> | lasting result: <what> | hours <h> (last month <h>) | <fine | crowded>
+
+  THE GOALS
+    <objective> | KR: <measure> by <date> | <moved | stuck | no time made>
+    (quarter end) new set: <objective> | KR ...
+
+  THE FOOTHOLD
+    <role> | habit: <two minutes> | cue: <when> | friction on: <what crowds it> | restart: <how>
+
+  NEXT MONTH
+    Values -> month: <focus> | week 1: <protected hours, quiet stretch> | big tasks: <three> | batch or drop: <list>
+
+  TOOLS (quarterly)
+    <app> | <kept | cut | limited> | why
+
+  CHANGES TO APPROVE
+    <calendar block> | <thing to decline> | <habit to start>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run September for the founder of Sprout. Practice scenario, not the
+    real founder's calendar.
+    Roles: founder (keep the company honest and growing), product person
+    (the gummy and the next flavour), partner, parent of two, runner,
+    friend to four people I rarely call.
+    Last month's calendar, exported, 212 hours tracked. Rough split from
+    the export: investor and board 38 h, ads and growth meetings 61 h,
+    product and flavour work 9 h, family 48 h (mostly evenings), runs 6 h,
+    friends 0 h, feeds and inbox 31 h, sleep and admin the rest.
+    Goals this quarter (set July): launch the Kids line in two retailers
+    (done); cut first-30-day cancels by a fifth (stuck at 8%); run three
+    times a week (missed most weeks); taste-test two flavours (none).
+    Last month's review: product crowded out, friends crowded out.
+    Journal note: "I have not tasted a new flavour since June."
+  output: pending
+tweaks:
+  - what: Your roles
+    how: Four to seven. Fewer hides a role; more makes none protected.
+  - what: The calendar
+    how: An export beats memory. Tag events by role once and the counting is exact.
+  - what: Crowded rule
+    how: Two months running flags a role. Set one if a role is fragile.
+  - what: Pace
+    how: Tell it what pace you could keep for ten years. The plan is built to it.
+judge:
+  - Hours by role are counted from the calendar.
+  - The crowded role rests on two months of rows.
+  - One habit at most was proposed.
+  - Protected hours are real blocks in the plan.
+  - Nothing in the calendar was changed.
+test:
+  - Give it a month where you know one role got nothing. It should name it.
+  - Run it twice on the same calendar. The counts and the plan should match.
+  - Give it roles with no calendar. It should ask for estimates and mark them.
+improve:
+  - Tag your calendar events by role, so the count is exact each month.
+  - Write your ten-year pace into the roles file.
+  - Record which protected blocks survived the month. The next plan learns how many you can hold.
+  - Pair it with the Weekly review keeper, which closes each week inside the month this one plans.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the roles and goals files between months and run on the last Sunday.
+    - name: Google Calendar or Outlook
+      why: Export last month with event titles, so hours can be counted by role.
+  inputs:
+    - A one-line journal note per week on what the month felt like
+    - Your commitments to others next month, so the plan does not collide with them

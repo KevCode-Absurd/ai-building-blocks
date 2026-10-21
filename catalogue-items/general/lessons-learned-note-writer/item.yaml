@@ -1,0 +1,17 @@
+slug: lessons-learned-note-writer
+name: "Lessons learned note writer"
+summary: "Paste what happened on a finished project. Get a one-page note with what to repeat and what to change."
+category: general
+boards: []
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: meeting_notes, required: true}
+outputs:
+  - {type: lessons_register}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

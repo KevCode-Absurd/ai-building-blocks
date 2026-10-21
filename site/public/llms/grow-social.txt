@@ -1,6 +1,6 @@
 # Grow on social: AI Blocks
 
-> 95 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 97 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker): Give it your accounts and posts. Get a score out of 100 and a fix per rule.
 - [Clipper program planner](https://useaiblocks.com/skills/clipper-program-planner): Give it a brief and budget cap. Get pay-on-approval terms, a review checklist and a seeding plan.
@@ -40,6 +40,7 @@
 - [LinkedIn results reader](https://useaiblocks.com/skills/linkedin-results-reader): Paste your own LinkedIn numbers. Get which posts worked, why reach changed and a test to run next.
 - [Long-form post repurposer](https://useaiblocks.com/skills/long-form-post-repurposer): Give it an article, newsletter or transcript. Get an X or LinkedIn post that works even if nobody clicks.
 - [Marketing content drafter](https://useaiblocks.com/skills/marketing-content-drafter): Say what you need. Get a blog post, social post, newsletter, page or press release with headline options.
+- [Monthly content repurposer](https://useaiblocks.com/agents/monthly-content-repurposer): Give it last month's content results. Get your best pieces picked and turned into posts, emails and clips to approve.
 - [Multi-platform post planner](https://useaiblocks.com/skills/multi-platform-post-planner): Say what you want to share. Get posts made for each platform, with hooks and a posting plan.
 - [Network launch distribution planner](https://useaiblocks.com/skills/network-launch-plan): Describe the product and who already hosts your audience. Get a launch route that borrows an existing network.
 - [Open source promoter](https://useaiblocks.com/skills/open-source-promoter): Give it your open source project. Get a plan to win stars, users and contributors without sounding pushy.
@@ -79,6 +80,7 @@
 - [Voice-matched post writer](https://useaiblocks.com/skills/voice-matched-post-writer): Share posts you already wrote. Get new Twitter/X or LinkedIn posts that sound like you, checked against your style.
 - [Webinar promotion planner](https://useaiblocks.com/skills/webinar-promotion-planner): Give it your webinar topic and audience. Get a plan to promote it, run it and follow up.
 - [WeChat article planner](https://useaiblocks.com/skills/wechat-article-planner): Name your topic. Get a WeChat Official Account article plan with title options and layout built for the platform.
+- [Weekly community keeper](https://useaiblocks.com/agents/weekly-community-keeper): Share community posts and questions. Get useful replies, repeat questions and a plan for the next week.
 - [Weekly social content planner](https://useaiblocks.com/agents/weekly-social-content-planner): Give it last week's post numbers. Get next week's posts planned from what worked, with hooks checked.
 - [Word of mouth planner](https://useaiblocks.com/skills/word-of-mouth-planner): Describe your product or message. Get ideas for making people talk about it, scored on six sharing triggers. Uses the STEPPS method.
 - [X and LinkedIn post pair writer](https://useaiblocks.com/prompts/x-and-linkedin-post-pair-writer): Paste one idea. Get an X post and a LinkedIn post that read as written separately.

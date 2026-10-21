@@ -1,0 +1,123 @@
+new_slug: customer-onboarding-keeper
+name: Customer onboarding keeper
+summary: Give it each week's new-customer cohort. Get where they stall in the first 30 days and one fix to approve.
+job: keep-customers
+thinking: high
+thinking_why: It reads groups against each other, judges whether a fix moved a rate and picks one fix from the cause. Give it your strongest model.
+headline: Customer onboarding keeper
+subhead: Give it each week's new customers and the steps they reached. It reads every sign-up week as its own group, finds the step that loses the most, says whether last week's fix helped, and writes the one fix for that step. You approve every message and product change.
+explain: |
+  New customers decide in their first 30 days. If they do not reach the first win, the thing the product promised, they drift and cancel later. Most teams look at one average number, so a fix made on Tuesday is blurred across everyone who signed up before it. Nobody can say whether it worked.
+
+  This agent reads each sign-up week as its own row, so the weeks after a fix sit beside the weeks before it. It names the step that loses the most, waits for it to repeat before acting, hears what new customers said about it, and runs one skill to fix that step. A stall before the first win gets a redesigned first-use flow. A stall after it gets a 14-day email and text plan. One change, one rate it should move, a date to check. Nothing goes live without your yes.
+when:
+  - You sell a product people must set up or use for the first time before they see the point.
+  - Cancels cluster in the first month and you fix the welcome email every time.
+  - You made an onboarding change and cannot tell whether it worked.
+you_give:
+  - Each sign-up week's count at every onboarding step, from your product, store or email tool
+  - What the product does and what the first win is (advised)
+  - Support messages, survey answers or cancel notes from the first 30 days (optional)
+  - Your brand brain, for any email or text (optional)
+  - Last week's plan and chart, once they exist
+you_get:
+  - A chart of each sign-up week's share at each step
+  - The step that loses the most, and whether it repeated
+  - A verdict on last week's fix, with the numbers
+  - The themes behind the stall, in customers' words
+  - One fix, a first-use flow or a 14-day sequence, with the one rate it should move
+  - A list of messages and changes to approve
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week.
+  - Export each sign-up week's counts at each onboarding step. Put the file in one folder, or attach it in the chat.
+  - On the first run, describe the product and the first win. It builds the plan and saves it after you approve it.
+  - Read the fix. Make the change in your tools, then tell the agent the date it went live.
+  - Run it again next Monday. It judges the fix against the groups that came after it.
+how_it_works:
+  - title: Build the plan once
+    text: Turns the product and its customers into onboarding steps, milestones and owners, saved after you approve them.
+  - title: Read the groups
+    text: Adds this week's row, finds the step that lost the most and judges any live fix against the groups before it.
+  - title: Hear the customers
+    text: Pulls the themes behind the losing step from new-customer messages, with quotes.
+  - title: Decide
+    text: Waits for a step to lose the most two weeks running. Keeps a fix that helped. Calls a fix that did nothing by name.
+  - title: Fix the one step
+    text: Finds the cause, then redesigns the first-use flow or rewrites the 14-day sequence, depending on where the stall is.
+  - title: Log and hand back
+    text: Writes the fix with its rate and check date, then stops for your yes.
+output_shape: |-
+  THIS WEEK
+    <n> sign-ups | <%> reached the first win | losing step: <step> (<second week running | new this week>)
+
+  THE CHART (share reaching each step)
+    week of <date> | setup <%> | first use <%> | first win <%> | week 2 active <%> | reorder <%>
+    ...
+
+  LAST FIX
+    <fix> for <step> | meant to move <rate> | before <%> -> after <%> | verdict: <helped | no change | worse>
+
+  WHAT CUSTOMERS SAID
+    <theme> | "<quote>" | touches: <step>
+
+  THE ONE FIX
+    Step: <step> | cause: <what> | skill run: <name> | changes: <what> | should move: <rate> from <%> | check on: <date>
+
+  CHANGES TO APPROVE
+    1. <email, text or flow change> | where: <tool>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run this week for Sprout's new subscribers. Practice numbers, not
+    Sprout's real figures.
+    Steps: order placed -> first pouch delivered -> opened the "how to
+    start" email -> day 7 check-in text answered -> still subscribed at
+    day 28 -> second pouch shipped (not skipped or cancelled).
+    Sign-up weeks (share reaching each step):
+    - 8 Sep: 100 / 96 / 48 / 22 / 71 / 64
+    - 15 Sep: 100 / 95 / 51 / 24 / 69 / 61
+    - 22 Sep: 100 / 97 / 47 / 21 / 66 / 58
+    - 29 Sep: 100 / 94 / 46 / 20 / 64 / (too early)
+    Fix live from 22 Sep: new subject line on the "how to start" email.
+    First win: a daily pack eaten most days in week one.
+    Cancel notes this month: "forgot it was a subscription", "the price
+    jumped after the first box", "sugar-free upset my stomach".
+  output: pending
+tweaks:
+  - what: The first win
+    how: Say what the customer must do or feel to get the point. The whole chart is built around that step.
+  - what: Your repeat rule
+    how: The agent waits for a step to lose the most two weeks running. Set one week if your groups are large.
+  - what: Group size
+    how: Under about 50 sign-ups a week, read two or three weeks together. Tell it, and it will.
+  - what: New-customer words
+    how: Cancel notes and day-7 replies turn the cause from a guess into a quote.
+judge:
+  - Every rate comes from a sign-up week, not an average of everyone.
+  - Last week's fix was judged before a new one was proposed.
+  - Only one fix was proposed, aimed at one step and one rate.
+  - Every email uses only your facts and claims.
+  - Nothing was sent or changed without your yes.
+test:
+  - Give it four weeks where you know a change went live in week three. It should judge the change from weeks three and four alone.
+  - Run it twice on the same export. The losing step and the fix should match.
+  - Give it a stall before the first win and one after. It should pick a different skill for each.
+improve:
+  - Write the first win and the steps into the plan file before the first run, so the chart is right from week one.
+  - Add your normal week-to-week swing, so a small move is not called a result.
+  - Save every fix with its live date in the fixes file. The verdicts depend on it.
+  - Pair it with the Weekly customer health watcher once customers pass 30 days.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the plan, chart and fixes files between weeks and run every Monday.
+    - name: Your email or product tool
+      why: Export counts per sign-up week at each step. Most tools can group by sign-up date.
+  inputs:
+    - Day-7 replies or survey answers from new customers
+    - The date each onboarding change went live, so the verdicts are honest

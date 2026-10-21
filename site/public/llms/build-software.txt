@@ -2,10 +2,10 @@
 
 > 316 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [3D image viewer builder](https://useaiblocks.com/skills/3d-image-viewer-builder): Give it a 3D scan or mesh. Get a viewer with slices, overlays and marked regions.
-- [5G waveform generator](https://useaiblocks.com/skills/5g-waveform-generator): Pick a 5G test model or channel. Get a standard-compliant baseband waveform.
-- [Adaptive filter designer](https://useaiblocks.com/skills/adaptive-filter-designer): Describe noise or echo to remove. Get an adaptive filter built and tested on your signal.
-- [Aerospace unit and frame converter](https://useaiblocks.com/skills/aerospace-unit-converter): Give it values in one unit, time or coordinate frame. Get them converted correctly, with MATLAB code you can rerun.
+- [3D image viewer builder](https://useaiblocks.com/skills/3d-image-viewer-builder): Give it a 3D scan or mesh. Get MATLAB viewer code with slices, overlays and marked regions.
+- [5G waveform generator](https://useaiblocks.com/skills/5g-waveform-generator): Pick a 5G test model or your own settings. Get MATLAB code that builds a standard 5G waveform.
+- [Adaptive filter designer](https://useaiblocks.com/skills/adaptive-filter-designer): Describe the noise or echo to remove. Get MATLAB filter code, a convergence check and a cleaned signal.
+- [Aerospace unit and frame converter](https://useaiblocks.com/skills/aerospace-unit-converter): Give it values in one unit, time system or frame. Get them converted, with MATLAB code you can rerun.
 - [Agent memory designer](https://useaiblocks.com/skills/agent-memory-designer): Describe what your agent must remember. Get a memory design for short-term, long-term and graph storage.
 - [Agent self-improvement loop builder](https://useaiblocks.com/skills/agent-improvement-loop): Give it an AI agent and a test set. Get a loop that rewrites its prompts and skills until scores rise.
 - [Agent team builder](https://useaiblocks.com/skills/agent-team-builder): Describe the jobs your agents do. Get a team of AI agents with roles, tasks and shared memory.
@@ -43,9 +43,9 @@
 - [Breaking change reviewer](https://useaiblocks.com/skills/breaking-change-reviewer): Paste a change you plan to ship. Get a safety score, who it breaks, what to keep and a safer rollout.
 - [Bug report writer](https://useaiblocks.com/skills/bug-report-writer): Paste error logs, notes or a screenshot. Get a clear GitHub issue with steps to repeat, impact and proof.
 - [Build a paid app with billing, emails, alerts and tests](https://useaiblocks.com/workflows/build-a-paid-app-with-billing-emails-alerts-and-tests): Give it your app idea. Get a starter with sign-in, billing, emails, alerts and tests.
-- [Business model code designer](https://useaiblocks.com/skills/business-model-code-designer): Describe your business rules. Get areas, shared terms and clusters of data that map to your code. Uses domain-driven design.
-- [C++ network code helper](https://useaiblocks.com/skills/c-network-code-helper): Describe the networking job. Get safe Boost.Asio code for servers, clients, timers and secure connections.
-- [Camera image fixer](https://useaiblocks.com/skills/camera-image-fixer): Say what looks wrong in your camera picture. Get settings and steps that improve it.
+- [Business model code designer](https://useaiblocks.com/skills/business-model-code-designer): Describe your business rules. Get a glossary, a map of business areas and the data that belongs together.
+- [C++ network code helper](https://useaiblocks.com/skills/c-network-code-helper): Describe the networking job. Get C++ Boost.Asio code that compiles on your version of Boost.
+- [Camera image fixer](https://useaiblocks.com/skills/camera-image-fixer): Say what looks wrong in your camera picture. Get the cause, camera settings and processing steps.
 - [Car safety test scenario maker](https://useaiblocks.com/skills/car-safety-test-scenario-maker): Name the Euro NCAP test. Get its scenario and variants made, plotted and exported with scores.
 - [Careful coding rules](https://useaiblocks.com/skills/careful-coding-rules): Add four habits to your AI coder. Get smaller, simpler changes that state their assumptions and prove they work.
 - [Careful rewrite guard](https://useaiblocks.com/skills/careful-rewrite-guard): Name a file too rotten to patch. Get a justified delete and rebuild that keeps the behaviour that worked.
@@ -120,7 +120,7 @@
 - [GNSS signal generator](https://useaiblocks.com/skills/gnss-signal-generator): Pick a GPS or Galileo signal. Get a baseband waveform with realistic channel effects.
 - [GPU setup checker](https://useaiblocks.com/skills/gpu-setup-checker): Say your GPU is not working in MATLAB. Get it found, tested and ready for GPU code.
 - [GraphQL schema designer](https://useaiblocks.com/skills/graphql-schema-designer): Describe your data. Get a GraphQL schema with fast resolvers, paging and performance patterns.
-- [Guaranteed format generator](https://useaiblocks.com/skills/guaranteed-format-generator): Say what shape the output must take. Get a model setup that always returns valid JSON or matching text.
+- [Guaranteed format generator](https://useaiblocks.com/skills/guaranteed-format-generator): Say what shape the result must take. Get Python code that always returns valid JSON or matching text.
 - [Huge image processor](https://useaiblocks.com/skills/huge-image-processor): Give it a very large image. Get it processed in blocks and in parallel without running out of memory.
 - [Image and text matcher](https://useaiblocks.com/skills/image-and-text-matcher): Give it pictures and words. Get image search, sorting by label and checks for what a picture shows.
 - [Image object cutter](https://useaiblocks.com/skills/image-object-cutter): Click a point or draw a box on a picture. Get the exact outline of that object, or of every object.
@@ -164,7 +164,7 @@
 - [MATLAB package installer](https://useaiblocks.com/skills/matlab-package-installer): Name the package. Get it installed, updated or removed, with dependency errors sorted.
 - [MATLAB project setup helper](https://useaiblocks.com/skills/matlab-project-setup-helper): Say how your project is laid out. Get a matlab.toml with paths, dependencies and scripts set up.
 - [MATLAB to C converter](https://useaiblocks.com/skills/matlab-to-c-converter): Give it MATLAB code. Get C, C++ or CUDA code that is checked and tuned for speed.
-- [Measure first slowdown finder](https://useaiblocks.com/skills/measure-first-slowdown-finder): Describe what feels slow. Get a measurement plan, the worst-case view and a ranked list of what to fix.
+- [Measure first slowdown finder](https://useaiblocks.com/skills/measure-first-slowdown-finder): Describe what feels slow. Get a measurement plan, the worst-case view and a ranked fix list.
 - [Medical scan reader](https://useaiblocks.com/skills/medical-scan-reader): Give it DICOM, NIfTI or NRRD scans. Get them read, listed and ready to use in MATLAB.
 - [Migration planner](https://useaiblocks.com/skills/migration-planner): Name the old system or feature. Get a plan to retire it and move users over without breaking them.
 - [Mixed-signal waveform analyzer](https://useaiblocks.com/skills/mixed-signal-waveform-analyzer): Give it circuit waveform data. Get phase noise, jitter, timing and ADC accuracy measured.

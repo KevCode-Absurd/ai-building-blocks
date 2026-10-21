@@ -1,0 +1,17 @@
+slug: source-note-summariser
+name: "Source note summariser"
+summary: "Paste an article, talk or chapter. Get its claims, evidence, gaps and the three lines worth keeping."
+category: general
+boards: []
+type: prompt
+role: research
+job: research
+level: beginner
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

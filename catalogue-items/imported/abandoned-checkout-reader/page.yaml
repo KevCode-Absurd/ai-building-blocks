@@ -2,10 +2,10 @@ thinking: low
 thinking_why: It adds up records into a table.
 new_slug: abandoned-checkout-reader
 name: Abandoned checkout reader
-summary: Pick a date range. Get abandoned checkouts split by cart value and hour, so you see when and where buyers drop.
+summary: Pick a date range. Get abandoned checkouts counted by cart value and hour of day.
 job: run-your-store
 headline: Abandoned checkout reader
-subhead: Pick a date range. Get abandoned checkouts split by cart value and hour, so you see when and where buyers drop.
+subhead: Give it your Shopify store and a start and end date. It pulls every abandoned checkout in that range and counts them by cart value band and by hour of the day. You get both tables, the total found and plain notes on where and when buyers drop off most.
 explain: |
   Shoppers who leave at checkout do it at certain prices and certain hours, and this report shows both. It splits abandoned checkouts by cart value and by hour of day.
 

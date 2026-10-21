@@ -1,0 +1,110 @@
+new_slug: outside-view-timeline-estimator
+name: "Outside view timeline estimator"
+summary: "Paste your project and your estimate. Get the estimate corrected by how projects like it really went."
+job: think-and-decide
+thinking: medium
+thinking_why: "It has to build a reference class from history and resist the plan's own optimism."
+
+headline: "Outside view timeline estimator"
+subhead: "Paste the project plan, your estimate and how past projects of the same kind actually went. The prompt names the reference class, computes the typical overrun from your record, applies it, tests each reason this time is different, marks the steps usually underestimated and gives the number to promise."
+
+explain: |
+  Every project estimate is made from the inside: this task, these people, this plan, and it feels like six weeks. Daniel Kahneman has described in public why that view is almost always too hopeful, and the fix: ask how long projects like this one took, and start from that number instead.
+
+  This prompt takes your estimate and the plan's reasoning, names the class of project it belongs to, and builds the record from your own history, with the ratio of actual to estimate for each past project and the median. It multiplies your estimate by that ratio and shows the range. It then tests each reason you think this time is different, accepting only the ones that truly change the class, marks the steps that usually run long, and gives you the number to promise with the sentence to say. With no history, it says so and labels its ratio a guess you must replace.
+
+when:
+  - "You are about to promise a launch date to a customer, a board or your team."
+  - "Your last three projects all ran late and this estimate looks like the last three."
+  - "Someone says 'this time is different' and you want to check."
+
+you_give:
+  - "The project and your estimate, with the plan's reasoning"
+  - "Past projects of the same kind, with estimate and actual (advised)"
+  - "Why this time is different (optional)"
+you_get:
+  - "The reference class and your record with the median overrun"
+  - "The outside estimate with its range, arithmetic shown"
+  - "Each 'different this time' reason rated"
+  - "The steps to watch and the number to promise"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your plan and estimate under it."
+  - "Dig out three to five past projects with their estimates and actuals."
+  - "Read THIS TIME IS DIFFERENT. Argue only with the ACCEPT lines."
+  - "Promise the PROMISE number, not the inside one."
+
+how_it_works:
+  - title: "Writes the inside estimate"
+    text: "As given, with the plan's own reasoning."
+  - title: "Names the reference class"
+    text: "What kind of project this is and what makes a past one comparable."
+  - title: "Builds the record"
+    text: "Estimate, actual and ratio per past project, with the median and range, or a labelled guess."
+  - title: "Applies it"
+    text: "Inside estimate times the median ratio, with the range, arithmetic shown."
+  - title: "Tests the differences"
+    text: "Each reason this time is different, rated accept, discount or reject."
+  - title: "Marks the steps and the promise"
+    text: "Steps usually underestimated, and the number and sentence to give."
+
+output_shape: |
+  INSIDE ESTIMATE  <...>
+  REFERENCE CLASS  <...>
+  THE RECORD       <project | estimate | actual | ratio> median, range
+  OUTSIDE ESTIMATE <arithmetic> range
+  THIS TIME IS DIFFERENT <reason | rating | why> adjusted
+  WATCH THESE STEPS <...>
+  PROMISE          <number, range, sentence>
+  MISSING          <...>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Project: Sprout help centre with the top 20 articles, a new cancel and
+    pause flow in the account area, and a redesigned FAQ page. Team: the new
+    customer experience lead, the web developer at half time, the designer
+    for one week. Estimate: 6 weeks, launching 15 December. Reasoning: the
+    articles come from tickets we already have, the developer says the
+    cancel flow is "two days", the designer has a template.
+    Past projects (illustrative, for practice): Kids page rebuild, estimated
+    3 weeks, took 7; science page rewrite, estimated 2 weeks, took 3;
+    subscription tool migration, estimated 4 weeks, took 11; Raspberry
+    Lemonade launch page, estimated 1 week, took 1.
+    Why this time is different: the content already exists in tickets; the
+    lead has done a help centre before at another company.
+  output: pending
+
+tweaks:
+  - what: "Your history"
+    how: "Three to five past projects with estimate and actual make the ratio yours. Without them it is a labelled guess."
+  - what: "Comparable projects"
+    how: "Say what made each past project similar or not. The class gets tighter."
+  - what: "Your reasons"
+    how: "List every reason you think this one is faster. Each gets rated, and most get discounted."
+
+judge:
+  - "The ratio comes from your history or is clearly marked a guess."
+  - "The arithmetic is shown."
+  - "Each 'different' reason has a rating and a reason."
+  - "The promise is the outside number."
+  - "No statistic appears without a source you gave."
+
+test:
+  - "Run it on a project that already finished, using only what you knew at the start. The outside estimate should be closer than the inside one."
+  - "Run it twice. The median ratio and the promise should match."
+  - "Give it no history. It should mark MISSING and label the ratio a guess."
+
+improve:
+  - "Keep a file of every project's estimate and actual. Paste it in every time and the class gets stronger."
+  - "Add your own list of steps that always run long."
+  - "Pair it with the Plan inversion checker before you commit to the date."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message estimate check works in any strong chat AI."}
+  inputs:
+    - "Dates from past project plans and their launch posts, for real estimate-versus-actual pairs"
+    - "The calendar of who is away during the project"

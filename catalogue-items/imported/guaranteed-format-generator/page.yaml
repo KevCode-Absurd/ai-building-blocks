@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It sets format rules for a local model.
 new_slug: guaranteed-format-generator
 name: Guaranteed format generator
-summary: Say what shape the output must take. Get a model setup that always returns valid JSON or matching text.
+summary: Say what shape the result must take. Get Python code that always returns valid JSON or matching text.
 job: build-software
 headline: Guaranteed format generator
-subhead: Say what shape the output must take. Get a model setup that always returns valid JSON or matching text.
+subhead: Say what shape the result must take, as a schema, a fixed list of choices or a text pattern, and which local model you run. It uses the Outlines library to block any token that would break that shape. You get the schema, working Python code, setup steps for your model and tips to keep it fast.
 explain: |
   A model setup that cannot return broken output. Instead of asking a model nicely for JSON and hoping, this uses a Python library called Outlines to block every token that would break your format. A reply can only be valid JSON, one of a fixed list of choices, text matching a pattern, or an object that fits your Pydantic class.
 

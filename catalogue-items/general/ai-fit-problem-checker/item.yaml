@@ -1,6 +1,6 @@
 slug: ai-fit-problem-checker
 name: "AI-fit problem checker"
-summary: "Describe a problem. Get a verdict on whether AI suits it, using three tests, and the data or simulator you would need."
+summary: "Describe a problem. Get a three-test verdict on whether AI suits it, and the data you would need."
 category: general
 type: skill
 role: check

@@ -1,0 +1,30 @@
+slug: stalled-deal-revival-desk
+name: "Stalled deal revival desk"
+summary: "Give it a deal that went quiet. Get the real reason it stalled, a firm recommendation and the follow-up to send."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: offer, required: false}
+  - {type: tool_connection, required: false}
+  - {type: objection_map, required: false}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+  - {type: email_flow}
+uses: [deal-health-reviewer, stalled-deal-indecision-checker, can-they-pay-deal-checker, almost-buyer-follow-up-writer, ask-which-closing-planner]
+steps:
+  - {uses: deal-health-reviewer, note: "Every stalled deal, first: health, risks, gaps in how it was qualified and whether it was ever a real deal."}
+  - {uses: stalled-deal-indecision-checker, note: "Every stalled deal: whether the buyer doubts you or fears making a mistake, and a firm recommendation that fits."}
+  - {uses: can-they-pay-deal-checker, note: "Only when the stall is about money, or the buyer asked for a smaller option: what they can pay and a sum they can meet."}
+  - {uses: almost-buyer-follow-up-writer, note: "Only when the buyer fears a mistake or went quiet after a proposal: a short follow-up series that takes risk off the table."}
+  - {uses: ask-which-closing-planner, note: "Only when the buyer doubts which option fits, or asked for more time twice: closing questions that offer two ways to say yes."}
+schedule: "Each time a deal has had no reply for 14 days, and again at 30 days"
+asks_before: [sending any message to the buyer, changing the price, scope or terms, offering a discount or a smaller option, marking the deal lost or closed, contacting anyone else at the buyer's company]
+minds: [matthew-dixon]
+origin: own
+version: 1.0.0
+example_pending: true

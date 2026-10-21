@@ -1,0 +1,19 @@
+slug: outside-view-timeline-estimator
+name: "Outside view timeline estimator"
+summary: "Paste your project and your estimate. Get the estimate corrected by how projects like it really went."
+category: general
+boards: []
+type: prompt
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: plan, required: true}
+  - {type: lessons_register, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [daniel-kahneman]

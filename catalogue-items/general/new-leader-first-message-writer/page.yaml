@@ -1,6 +1,6 @@
 new_slug: new-leader-first-message-writer
 name: "New leader first message writer"
-summary: "Paste your background and your team's situation. Get a first-week message: who you are, why you are here, what happens next."
+summary: "Paste your background and team situation. Get a first-week message saying who you are and what happens next."
 job: lead-people
 thinking: low
 thinking_why: "It follows a fixed shape with your own facts."
@@ -10,7 +10,7 @@ subhead: "Paste your background and describe your team's situation. It builds a 
 
 explain: |
   Your first message is read closely and remembered. A speech full of goals reads like every other, and a title list tells people nothing about how you will lead.
-  
+
   This skill writes a one-page message in a fixed order. It opens with a personal moment and thanks to the people before you, names the shift in your field and answers four questions: who you are, why you are here, why the team is here and what happens next. It also admits what you do not know and ends with one ask. Facts it lacks are marked, never invented.
 
 when:
@@ -54,26 +54,26 @@ how_it_works:
 
 output_shape: |
   <Opening: a personal memory, thanks to the people before you>
-  
+
   <The shift in the field and what it means for the team>
-  
+
   Who am I
   <four sentences>
-  
+
   Why am I here
   <what drew you>
-  
+
   Why are we here, and what do we do next
   <purpose, first thirty days, what changes, what stays>
-  
+
   <What I do not know>
-  
+
   <One ask>
   <First name>
-  
+
   MISSING
   <facts to fill>
-  
+
   CHECKS MISSED
   <one line per check still missed, or none>
 
@@ -114,4 +114,5 @@ works_best_with:
     - "A date for your first team meeting"
 
 terms:
+
 

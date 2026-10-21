@@ -1,0 +1,113 @@
+new_slug: let-someone-go-fairly-and-tell-the-team-well
+name: Let someone go fairly and tell the team well
+summary: Give it the situation. Get a fair exit plan, risk flags, a handover checklist and the announcement.
+job: hire-people
+thinking: high
+thinking_why: It handles a decision about a person's livelihood, with legal risk and a team watching. Give it your strongest model.
+headline: Let someone go fairly and tell the team well
+subhead: Give it the situation. It plans the exit the way Ben Horowitz and Brian Chesky set out, flags the legal risks for a lawyer to check, builds the handover checklist, and writes the team announcement with answers to the questions people will ask. You hold the conversation.
+explain: |
+  Letting someone go is the hardest thing a manager does, and most do it badly in the same ways: the reasons are blurred, the person hears it from the wrong people, final pay or notice is wrong, and the rest of the team learns about it from an empty desk.
+
+  This workflow plans the exit in the right order. It sets who decides, the sequence of events, what the person is offered and the plain words to use, following Ben Horowitz's rule to tell the truth and prepare the managers, and Brian Chesky's rule to say the decision, the reasons and the help in your own words. It flags notice, final pay, severance and release points for a lawyer or HR to check. It builds the handover checklist. After you have held the conversation, it writes the announcement for the team and the honest answers to what they will ask.
+when:
+  - Money has run short and you have to cut one or more roles.
+  - Someone has not met a clear standard after real feedback and a fair chance, and it is time.
+  - You have never let anyone go and do not want to learn by making the mistakes.
+you_give:
+  - "The situation: who, why, and whether it is a layoff or a dismissal"
+  - Where they work (country and state), their contract type and start date
+  - "What you can offer: notice, severance, references, help finding work"
+  - Any plan or notes you already have (optional)
+you_get:
+  - "An exit plan: who decides, the order of events, the offer and the words to use"
+  - Risk flags on notice, final pay timing, severance and release terms, for a lawyer or HR to check
+  - A handover, access and exit interview checklist
+  - The team announcement and answers to likely questions, sent only when you say so
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the situation, the location and what you can offer. It plans the exit and flags the risks.
+  - Have a lawyer or HR check the plan and the flags. Then hold the conversation yourself, in person.
+  - Come back for the announcement. Read it, change what needs changing, then send it.
+how_it_works:
+  - title: Plan the exit
+    text: Sets who decides, the order of events, the offer, and the plain words to use, following Horowitz and Chesky.
+  - title: Flag the legal risks
+    text: Flags notice, final pay timing, severance and release points, and reasons that could read as unfair, for a lawyer to check.
+  - title: Build the handover
+    text: Builds the handover checklist, the access and kit list with dates, and the exit interview questions.
+  - title: Check, then hold the conversation
+    text: A pause. Have a lawyer or HR check the plan and the flags. Hold the conversation yourself, in person, with the offer in writing. Only then go on.
+  - title: Write the announcement
+    text: Writes the team announcement, who hears it first, and honest answers to the questions people will ask. You decide when it goes out.
+output_shape: |-
+  STEP 1: EXIT PLAN
+    Decides: <who> | Order of events: <...> | Offer: <notice, severance, references, help>
+    Where and when they hear it: <...> | Words to use: <...> | Words to avoid: <...>
+
+  STEP 2: RISK FLAGS (not legal advice)
+    Notice: <...> | Final pay timing: <...> | Severance and release: <...>
+    Reasons that could read as unfair: <...> | Check with: <lawyer / HR>
+
+  STEP 3: HANDOVER
+    Handover: <task, to whom, by when> | Access and kit: <item, date> | Exit interview: <questions>
+
+  PAUSE: legal check, then the conversation, in person
+
+  STEP 4: ANNOUNCEMENT
+    Who hears first: <...> | The message: <...> | Likely questions and honest answers: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. Team of nine. Sales from our own site are down after a retailer deal took over much of our volume, and I have to cut the paid social role.
+    The person: our paid social manager, 14 months with us, full-time employee, works from home in Texas. Good person, no performance problem. This is a layoff, not a dismissal.
+    What I can offer: four weeks' pay beyond notice, health cover through the end of the following month, a written reference, and introductions to two agencies we work with.
+    Who knows so far: me and the operations manager.
+    The rest of the team will worry their roles are next. Two of them are close friends with the person leaving.
+    I have no plan written yet. I want to do this in the next ten days.
+  output: pending
+tweaks:
+  - what: Layoff or dismissal
+    how: Say which. The reasons, the offer and the risk flags are different for each.
+  - what: Location and contract
+    how: Give the country, the state and the contract type. Notice and final pay rules depend on them.
+  - what: What you can offer
+    how: List everything, including references and introductions. A fair offer is the main thing the person will remember.
+  - what: The team
+    how: Say who is close to the person and who will worry about their own role. The announcement order and the answers change.
+judge:
+  - The plan has the person hearing it from you, in person, before anyone else knows.
+  - The reasons are plain and true, and none would surprise the person if they had been given feedback before.
+  - Every risk flag names the rule in question and says to check it with a lawyer or HR.
+  - The handover list has an owner and a date for every item, including access removal.
+  - The announcement says the decision, the reason and the help in your own words, and promises nothing untrue about other roles.
+test:
+  - Give it a dismissal where no feedback was ever given. Step 2 should flag the risk and step 1 should ask whether the person has had a fair chance.
+  - Read the announcement as the person's closest friend on the team. Does it respect the person leaving?
+  - Check the final pay timing flag against your state's rule yourself. It should match or say it is unsure.
+  - Run step 1 twice. The order of events should be the same both times.
+improve:
+  - Add your standard offer (notice, severance, references) to step 1's brief once, so every exit starts from the same fair floor.
+  - Keep the handover checklist and reuse it for planned leavers too.
+  - Save the lawyer's corrections next to the risk flags, so the next run knows your local rules.
+  - Pair it with "Run a project review where people tell the truth" if the exit follows a failed project.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a document for you to check.
+    - name: A lawyer or HR adviser
+      why: The risk flags are a first check, never the final word.
+  inputs:
+    - The person's contract and your handbook
+    - Any feedback notes or reviews on file
+    - Your state or country's final pay rule, if you know it
+terms:
+  - term: Release
+    meaning: A document in which a leaver agrees not to bring claims, usually in exchange for severance pay.
+  - term: Severance
+    meaning: Pay given to someone when they leave, beyond what their notice period requires.

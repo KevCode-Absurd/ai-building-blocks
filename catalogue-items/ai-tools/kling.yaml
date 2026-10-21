@@ -1,0 +1,49 @@
+slug: kling
+name: Kling
+maker: Kuaishou
+url: https://klingai.com
+promise: Short video clips from a text prompt or a still image.
+use_cases: [make-video]
+categories: [video]
+what_it_does:
+  - Makes 5 to 10 second video clips from a written description.
+  - Turns a still image into a moving clip, with a start and end frame if you want.
+  - Adds lip-synced speech to a character in a clip.
+  - Extends a clip so a scene runs longer.
+  - Makes images too, from the same account.
+benefits:
+  - Test a video ad idea before you pay for a shoot.
+  - Keep the product looking the same across clips by starting from your photo.
+  - Make several versions of one scene in an afternoon.
+best_for:
+  - Product ads that start from a real product photo.
+  - Short clips for Reels, TikTok and Shorts.
+  - Trying many styles (clay, anime, paper cut-out) of the same script.
+not_for:
+  - Long videos with one continuous take.
+  - Exact on-screen text, which still comes out wrong often.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: Free daily credits, then Standard, Pro and Premier plans sold as monthly credits. Prices change with offers and region, so check the page.
+works_with:
+  - higgsfield
+  - elevenlabs
+  - capcut
+runs_in: [web, mobile, api]
+blocks:
+  - anime-video-clip-prompt-writer
+  - clay-town-video-prompts
+  - claymation-video-prompts
+  - paper-cutout-video-prompts
+  - watercolor-video-prompts
+  - selfie-style-video-prompts
+  - talking-object-video-prompts
+  - video-ad-shot-list-maker
+  - weekly-video-ad-batch-maker
+  - avatar-storyboard-planner
+alternatives: [veo, runway, seedance, pika]
+last_checked: 2026-10-21
+sources:
+  - https://klingai.com/membership/membership-plan
+  - https://eesel.ai/blog/kling-ai-pricing

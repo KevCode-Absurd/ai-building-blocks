@@ -1,0 +1,110 @@
+new_slug: per-order-profit-calculator
+name: "Per-order profit calculator"
+summary: "Paste your price and every cost per order. Get the profit per order, the break-even and what moves it most."
+job: track-numbers
+thinking: low
+thinking_why: "It is arithmetic on given numbers, shown line by line."
+
+headline: "Per-order profit calculator"
+subhead: "Paste the price a customer pays and every cost that goes into one order, including fees, shipping, refunds and the cost to win it. The prompt shows the profit per order with the sum written out, the break-even if you give fixed costs, and ranks which cost or price change moves the result most."
+
+explain: |
+  Most owners know their price and their product cost and call the gap their margin. Then shipping, payment fees, the discount, the refunds and the ad spend per order take their share, and the real number is a third of what they thought. The arithmetic is simple. Doing it line by line, with nothing left out, is what people skip.
+
+  This prompt lists every line from your input, converts percent fees and refund rates into money per order, and writes the profit per order with the sum shown. If a cost that almost every business has is missing, it marks it and says the profit is before that cost. It gives the break-even in orders from your fixed costs, shows what a ten percent change in each line does to the profit and ranks them, and if a discount is in play, shows how many extra orders the discount has to bring to pay for itself.
+
+when:
+  - "You are about to run a discount and want to know what each discounted order leaves you."
+  - "Sales are up and the bank balance is not."
+  - "You are pricing a new product or service and need the floor."
+
+you_give:
+  - "The price, including any discount actually given"
+  - "Every cost per order, including fees, shipping, refunds and the cost to win it"
+  - "Fixed monthly costs (optional)"
+  - "Orders per month (optional)"
+you_get:
+  - "Profit per order with the arithmetic shown"
+  - "Break-even in orders a month"
+  - "Each cost ranked by how much a ten percent change moves the profit"
+  - "A discount check and the costs it does not cover"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your price and costs under it."
+  - "Include payment fees as percent plus fixed, and your refund rate."
+  - "Read MISSING. Find those costs and run again."
+  - "Work on the top line in WHAT MOVES IT first."
+
+how_it_works:
+  - title: "Lists every line"
+    text: "Price, then each cost per order, with percents and rates converted to money."
+  - title: "Computes the profit"
+    text: "Price minus every cost, sum written out, as money and percent of price."
+  - title: "Finds the break-even"
+    text: "Fixed costs divided by profit per order, against your volume."
+  - title: "Tests what moves it"
+    text: "A ten percent change in each line, ranked by effect."
+  - title: "Runs the discount check"
+    text: "Profit with and without the discount, and the extra orders needed."
+  - title: "Says what it does not cover"
+    text: "One-off costs, tax and anything that does not scale with orders."
+
+output_shape: |
+  PER ORDER       <line | amount> ... PROFIT PER ORDER <arithmetic> (<n>%)
+  BREAK-EVEN      <orders a month, against volume>
+  WHAT MOVES IT   <line | effect of 10% | rank>
+  DISCOUNT CHECK  <with | without | extra orders>
+  NOT COVERED     <...>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Illustrative figures for Sprout, not the brand's real numbers.
+    One subscription order, first box: price $29.99 (one-time price $66.65,
+    renewal $49.99).
+    Costs per order: product $14.00; pouch and mailer $1.20; shipping $6.00
+    (free to the customer); payment processing 2.9% plus $0.30; refund and
+    guarantee rate 3% of orders; ad spend per first order $22.00; the 30-day
+    money-back guarantee refunds are included in the 3%.
+    Fixed costs per month: $38,000 (team, tools, warehouse minimum).
+    Orders per month: about 4,800 first orders.
+    Also show the renewal order at $49.99 with no ad cost and a 1.5% refund
+    rate.
+  output: pending
+
+tweaks:
+  - what: "The cost to win the order"
+    how: "Include ad spend per order or sales time. It is the cost most people forget and often the biggest."
+  - what: "Refund rate"
+    how: "Give it as a percent of orders. It becomes a cost per order."
+  - what: "Two order types"
+    how: "Ask for a first order and a repeat order side by side, as in the example, to see where the money is."
+
+judge:
+  - "Every number is one you gave, and the sum is written out."
+  - "Fees are computed on your price."
+  - "Missing costs are marked, not guessed."
+  - "The WHAT MOVES IT ranking makes sense."
+  - "The not-covered note is there."
+
+test:
+  - "Compare the profit per order with your accountant's margin for the same product. Differences should be explainable by a listed line."
+  - "Run it twice. The numbers should match exactly."
+  - "Leave out shipping. It should mark MISSING: shipping and say the profit is before it."
+
+improve:
+  - "Save your cost lines once so every new price is tested against the same list."
+  - "Add your target profit per order so the prompt can say how far off you are."
+  - "Pair it with the Discount sanity checker when the discount lines disagree."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message calculation works in any strong chat AI."}
+    - {name: "A spreadsheet", why: "Paste the PER ORDER table in and change one cell at a time."}
+  inputs:
+    - "Your payment processor's statement for the real fee rate"
+    - "Ad spend and first orders for the same month, for the real cost to win an order"

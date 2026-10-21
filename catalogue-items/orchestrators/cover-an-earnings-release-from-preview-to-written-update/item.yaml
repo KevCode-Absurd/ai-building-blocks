@@ -1,0 +1,24 @@
+slug: cover-an-earnings-release-from-preview-to-written-update
+name: "Cover an earnings release from preview to written update"
+summary: "Give it the company and the release. Get a preview, a tone read, a recap and an update."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: source_text, required: true}
+  - {type: transcript, required: true}
+outputs:
+  - {type: document}
+  - {type: audit_report}
+uses: [earnings-preview-writer, earnings-call-tone-reader, earnings-recap-writer, earnings-update-report-writer]
+steps:
+  - {uses: earnings-preview-writer, note: "What matters for this company this quarter, the numbers to watch, what would count as a surprise and the questions you hope analysts ask."}
+  - {uses: earnings-call-tone-reader, note: "Where management was confident, where they hedged, which questions they dodged and how the tone compares with last quarter."}
+  - {uses: earnings-recap-writer, note: "The quarter against the preview: what beat, what missed, what surprised, with every number sourced to the release."}
+  - {uses: earnings-update-report-writer, note: "The written update: what changed in the picture, what did not, what to watch next quarter, in your format. No advice on buying or selling."}
+origin: own
+version: 1.0.0
+example_pending: true

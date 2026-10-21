@@ -1,0 +1,46 @@
+slug: capcut
+name: CapCut
+maker: ByteDance
+url: https://www.capcut.com
+promise: Cut, caption and finish short videos on your phone or computer.
+use_cases: [edit-video, make-video]
+categories: [video]
+what_it_does:
+  - Cuts and arranges clips on a timeline.
+  - Adds captions to speech in your video automatically.
+  - Resizes a video for TikTok, Reels and Shorts.
+  - Offers templates, effects and music for short videos.
+  - Makes AI clips and images with its AI features.
+benefits:
+  - Finish a short video from your phone in one sitting.
+  - Add captions without typing every line.
+  - Reuse one edit in several sizes for different feeds.
+best_for:
+  - Short videos for TikTok, Reels and Shorts.
+  - Creators and small teams who edit their own footage.
+  - Product reels with captions and text overlays.
+not_for:
+  - Long films or broadcast-level colour work.
+  - People who want every export free of a watermark on the free plan.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: A free plan covers core editing. Pro was listed at US$19.99 per month on the web in an October 2026 check. Prices differ by country and app store.
+works_with:
+  - kling
+  - seedance
+  - elevenlabs
+runs_in: [desktop, mobile, web]
+blocks:
+  - captioned-product-reel
+  - short-video-format-picker
+  - phone-style-video-ad
+  - founder-video-series-planner
+  - paper-cutout-video-prompts
+  - motion-comic-video-prompts
+  - marketing-video-producer
+alternatives: [descript, veed, opus-clip, canva]
+last_checked: 2026-10-21
+sources:
+  - https://www.capcut.com/pricing
+  - https://dupple.com/learn/is-capcut-free

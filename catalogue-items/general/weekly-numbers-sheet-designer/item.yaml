@@ -1,0 +1,17 @@
+slug: weekly-numbers-sheet-designer
+name: "Weekly numbers sheet designer"
+summary: "Paste what your business does and what you can measure. Get a one-page weekly sheet of seven numbers."
+category: general
+boards: []
+type: prompt
+role: plan
+job: analysis
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: spreadsheet}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

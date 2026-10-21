@@ -1,0 +1,28 @@
+slug: get-your-personal-money-in-order-with-room-for-error
+name: "Get your money in order with room for error"
+summary: "Give it your income, spending and debts. Get a budget, a debt plan and a savings forecast."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: beginner
+inputs:
+  - {type: brief, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+  - {type: spreadsheet}
+uses: [personal-budget-builder, debt-payoff-planner, spending-story-reviewer, room-for-error-plan-checker, retirement-savings-projector]
+steps:
+  - {uses: personal-budget-builder, note: "A monthly budget from your real income and spending, with fixed costs, flexible costs, savings and a buffer for the bad months."}
+  - {uses: debt-payoff-planner, note: "The payoff order (fastest or cheapest, your choice), the monthly amount and the month each debt ends."}
+  - {uses: spending-story-reviewer, note: "What you are really buying when you buy it, in Morgan Housel's manner: status, comfort, time, and which of these the budget should keep."}
+  - {uses: room-for-error-plan-checker, note: "What happens to the plan in a bad month, a lost job or a surprise bill, and what to change so it survives, following Housel and Benjamin Graham."}
+  - {uses: retirement-savings-projector, note: "Where your savings end up over the years with plain assumptions you can change, and what each change does to the result."}
+origin: own
+version: 1.0.0
+minds: [morgan-housel, benjamin-graham]
+credits:
+  - {title: "The Psychology of Money (June 1, 2018)", by: "Morgan Housel, Collaborative Fund", url: "https://collabfund.com/blog/the-psychology-of-money/", used: "Spending has a story; room for error beats a precise plan"}
+example_pending: true

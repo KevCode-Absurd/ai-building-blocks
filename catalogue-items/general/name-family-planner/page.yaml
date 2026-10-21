@@ -1,6 +1,6 @@
 new_slug: name-family-planner
 name: "Name family planner"
-summary: "Describe your world, brand or product range. Get names that share one root, each with a meaning and a short history."
+summary: "Describe your world, brand or product range. Get names from one root, each with a meaning and history."
 job: write-and-tell-stories
 thinking: medium
 thinking_why: "It must keep sound rules consistent across many names and judge how they read aloud."
@@ -14,28 +14,28 @@ explain: |
   This skill starts from one source: a language, a region or a set of sound habits that fit the tone and the people. It writes down the sounds that source likes and avoids, and a short list of root words with meanings. Every name is built from those roots, never from unrelated sources. Each gets a short meaning and an older form behind it. The set is read aloud and checked as a whole, so it sounds like one people or one house.
 
 when:
-- "You are naming characters, places or a fictional world and want them to feel connected."
-- "You are naming a product range or a set of plans and want them to sound like one family."
-- "Your current names clash in sound or came from different places."
+  - "You are naming characters, places or a fictional world and want them to feel connected."
+  - "You are naming a product range or a set of plans and want them to sound like one family."
+  - "Your current names clash in sound or came from different places."
 
 you_give:
-- "The world, brand or range in a few sentences, and its tone"
-- "How many names you need and what each names"
-- "A source language or region you like (optional)"
-- "Your brand file (optional)"
-- "Names you already have (optional)"
+  - "The world, brand or range in a few sentences, and its tone"
+  - "How many names you need and what each names"
+  - "A source language or region you like (optional)"
+  - "Your brand file (optional)"
+  - "Names you already have (optional)"
 you_get:
-- "The root language or sound style and its sound rules"
-- "A small word list with meanings"
-- "Each name with its meaning and older form"
-- "A note on which names to leave half-explained"
+  - "The root language or sound style and its sound rules"
+  - "A small word list with meanings"
+  - "Each name with its meaning and older form"
+  - "A note on which names to leave half-explained"
 
 how_to_use:
-- "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
-- "Describe the world or range and its tone."
-- "Say how many names you need and what each is for."
-- "Read the names aloud and mark any you dislike."
-- "Ask it to rebuild only the ones you marked, from the same roots."
+  - "Start a chat with the skill. Open it if you added it to your AI, or copy it and paste it in."
+  - "Describe the world or range and its tone."
+  - "Say how many names you need and what each is for."
+  - "Read the names aloud and mark any you dislike."
+  - "Ask it to rebuild only the ones you marked, from the same roots."
 
 how_it_works:
   - title: "Choose one root"
@@ -91,23 +91,23 @@ tweaks:
     how: "Say if they are spoken, printed or used in search."
 
 judge:
-- "You can hear the same sound habits in every name."
-- "Each name has a meaning you can say in a few words."
-- "No name feels like it came from another place."
-- "You can say them all out loud without tripping."
-- "The word list is short enough to keep."
+  - "You can hear the same sound habits in every name."
+  - "Each name has a meaning you can say in a few words."
+  - "No name feels like it came from another place."
+  - "You can say them all out loud without tripping."
+  - "The word list is short enough to keep."
 
 test:
-- "Cover the meanings and read the names aloud to a friend. Ask if they sound like one place."
-- "Add one name from outside the set. Check how it stands out."
-- "Run it twice with the same facts. The sound rules should stay close."
-- "Search each name before you use it in public."
+  - "Cover the meanings and read the names aloud to a friend. Ask if they sound like one place."
+  - "Add one name from outside the set. Check how it stands out."
+  - "Run it twice with the same facts. The sound rules should stay close."
+  - "Search each name before you use it in public."
 
 improve:
-- "Add the words your world uses for common things to the word list."
-- "Add sounds you dislike to the sound rules."
-- "Save the word list so later names use the same roots."
-- "Pair it with \"Invented society planner\" so names fit the customs and places."
+  - "Add the words your world uses for common things to the word list."
+  - "Add sounds you dislike to the sound rules."
+  - "Save the word list so later names use the same roots."
+  - "Pair it with \"Invented society planner\" so names fit the customs and places."
 
 works_best_with:
   tools:

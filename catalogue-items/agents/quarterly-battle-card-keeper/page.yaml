@@ -1,0 +1,129 @@
+new_slug: quarterly-battle-card-keeper
+name: Quarterly battle card keeper
+summary: Give it your won and lost deals each quarter. Get each rival's card refreshed, your edge checked and the objection answers updated.
+job: sell-and-negotiate
+thinking: high
+thinking_why: It must separate what buyers said from why they chose, judge whether an edge is real and keep every rival fact sourced. Give it your strongest model.
+headline: Quarterly battle card keeper
+subhead: Give it the quarter's won and lost deals, your product facts and your current cards. It counts which rivals really show up, refreshes each active card with sourced facts, checks whether your edge is still real, and rewrites the answers to the doubts buyers raised. You decide what the team sees.
+explain: |
+  Battle cards are written in a burst and then rot. The rival changed its pricing, the feature on the card stopped mattering, a new rival took a tenth of the lost deals, and the team keeps quoting last year's page. Meanwhile the real competitor in most lost deals is "we decided to do nothing", and nobody has a card for that.
+
+  This agent reads the quarter's deals first. It counts who actually appeared on shortlists, including doing nothing, and archives cards for rivals nobody met. It refreshes each active card with facts that carry a source and a date, checks your edge against both won and lost deals, and asks of each claim whether a buyer would pick you for that one thing alone. Then it rewrites the objection answers with proof behind each, marking any answer that still lacks it. It never sends a card or says a word about a rival to a buyer.
+when:
+  - You sell against named rivals and the cards were last updated at a sales kickoff.
+  - You lost deals last quarter and the reasons are in a spreadsheet nobody read.
+  - A new rival keeps appearing and the team has nothing to say about them.
+you_give:
+  - The quarter's won and lost deals with buyer type, rivals on the shortlist, reason, price and date
+  - Your product facts, pricing and what you can claim with proof
+  - Your current battle cards and feature grid (advised)
+  - Call notes, lost-deal emails or reviews that mention a rival (optional)
+  - Last quarter's keeper file, once it exists
+you_get:
+  - The real shortlist, with each rival's appearances, wins and losses against last quarter
+  - A refreshed card per active rival, every fact sourced and dated
+  - A verdict on your edge and which claims buyers chose you for
+  - The white-space grid, yearly or when a new rival appears
+  - An objection sheet with proof behind each answer, and the answers still missing proof
+  - An archive list for rivals nobody met this year
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run last quarter.
+  - Export the quarter's closed deals from your CRM with the rivals and reasons. Put the file in one folder with your cards and facts, or attach them in the chat.
+  - Read the shortlist first. If "did nothing" is at the top, that is the card to read next.
+  - Review each refreshed card and the objection sheet. Share with the team what you approve.
+  - Run it again next quarter. It tracks each rival over time.
+how_it_works:
+  - title: Count the shortlist
+    text: Counts each rival's appearances, wins and losses from the deals, with doing nothing as a rival, and archives the ones nobody met.
+  - title: Build missing cards
+    text: For a rival first seen this quarter, builds the card and feature grid from public facts, each with a source and date.
+  - title: Refresh the active cards
+    text: For each rival in three or more deals, sets their pricing, features and strengths against yours and marks what changed.
+  - title: Check your edge
+    text: From won and lost deals, says whether the edge is real and which claims pass the "that one thing alone" test.
+  - title: Map the white space
+    text: Yearly, or when a new rival takes a tenth of lost deals, grids what buyers value against where nobody is strong.
+  - title: Rewrite the objection answers
+    text: Each doubt from lost deals with an answer and the proof behind it, or a missing-proof mark.
+  - title: Log and hand back
+    text: Updates the cards and objection sheet, then stops for your yes.
+output_shape: |-
+  THE QUARTER
+    <n> deals | win rate <%> | met most: <rival> | lost most to: <rival or did nothing> | top reason: <reason>
+
+  THE REAL SHORTLIST
+    <rival> | appeared <n> (last q <n>) | won <n> | lost <n> | top reason: <reason>
+    Did nothing | appeared <n> | ...
+
+  CARDS REFRESHED
+    <rival> | changed: <pricing | feature | message> (source, date) | could not re-check: <what> | gaps to act on: <list>
+
+  YOUR EDGE
+    <claim> | buyers chose you for it: <n> deals | alone test: <passes | objection handling> | verdict: <real | thin>
+
+  WHITE SPACE (yearly)
+    <what buyers value> x <rivals> | nobody strong at: <cell>
+
+  OBJECTION ANSWERS
+    "<doubt>" | answer: <one line> | proof: <what> | or MISSING: proof
+
+  ARCHIVE
+    <rival> | last met <date>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run Q3 for Sprout's retail and wholesale deals. Practice deals, not
+    Sprout's real ones. Rivals described, never named, per our rules.
+    Deals: 14 closed.
+    - Won 8: 5 regional grocery chains (reason: "customers ask for a
+      greens gummy, yours has the trial study"), 2 gyms (taste, single
+      packs), 1 pharmacy chain (third-party testing).
+    - Lost 6: 2 to a big-name greens powder brand that now sells gummies
+      at $49 a month (reason: "their brand pulls more shoppers");
+      2 to a doctor-backed grocery gummy at $25 to $30 a bottle
+      (reason: price per bottle); 2 did nothing (reason: "category is
+      new, come back next year").
+    Our facts: 28 daily packs; 21 vitamins and minerals; 6 g prebiotic
+    fiber; 2025 study of 120 adults, vitamin C up 40.1%, folate up 20.5%;
+    third-party tested; vegan pectin base; $66.65 one-time, $49.99 sub.
+    Current cards: two, from January, attached. Buyer words: 9 call notes.
+  output: pending
+tweaks:
+  - what: Deal reasons
+    how: Ask every lost deal for one line in the buyer's words. The edge check and the objection sheet are built from them.
+  - what: Active rival rule
+    how: Three deals in a quarter makes a rival active. Set two if your deal count is low.
+  - what: Did nothing
+    how: Keep it as a rival in every export. It is often the one you lose to most.
+  - what: Proof file
+    how: Give the agent your proof for each claim. Answers without proof are marked, not invented.
+judge:
+  - Every rival fact has a source and a date.
+  - Every rival on a card appeared in a deal this year.
+  - The edge check used won deals, not only lost ones.
+  - Every objection answer has proof or a missing mark.
+  - Nothing was sent, claimed or changed.
+test:
+  - Give it deals where you know a rival changed price. The refreshed card should show the change with a source.
+  - Give it a claim buyers never mentioned. The edge check should mark it as objection handling or thin.
+  - Run it twice on the same deals. The shortlist and the verdict should match.
+improve:
+  - Add a "rivals on shortlist" and "reason" field to every deal in your CRM, so the export is ready each quarter.
+  - Keep your proof per claim in one file. The objection sheet reads it.
+  - Set the active rival rule to fit your deal volume.
+  - Pair it with the Monthly competitor watcher, which reads rival ads and pages; this one reads your deals.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep one card per rival and the rivals and objections files between quarters.
+    - name: Your CRM
+      why: Export closed deals with rivals, reason, price and date. Add the rival field if you do not have one.
+  inputs:
+    - Lost-deal emails in the buyer's words
+    - Your proof for each claim, with where it comes from

@@ -1,0 +1,38 @@
+slug: leonardo
+name: Leonardo AI
+maker: Leonardo.Ai
+url: https://leonardo.ai
+promise: Game art, product visuals and ad images made from text, with steady characters.
+use_cases: [make-images, design]
+categories: [image, design]
+what_it_does:
+  - Makes images from a written description with a choice of models.
+  - Keeps a character looking the same across images.
+  - Makes bigger, sharper versions of images you like.
+  - Edits part of an image in a canvas.
+  - Keeps your generations private on paid plans.
+benefits:
+  - Build a set of images that feature one character or product.
+  - Pick the model that suits each job instead of living with one look.
+  - Test image ideas daily on the free plan.
+best_for:
+  - Game art, characters and concept art.
+  - Ad images and product visuals made in batches.
+  - Teams who want several image models in one place.
+not_for:
+  - Exact text inside an image.
+  - Long videos.
+pricing:
+  model: freemium
+  from: US$12 per month
+  note: Free plan gives 150 tokens a day, and free generations are public. Apprentice costs about US$12 a month, with Artisan and Maestro above it. Price is from an article dated 2026, so check the page.
+works_with:
+  - canva
+  - stable-diffusion
+runs_in: [web, mobile, api]
+blocks:
+  - stable-diffusion-image-maker
+alternatives: [midjourney, ideogram, recraft, krea]
+last_checked: 2026-10-21
+sources:
+  - https://dailyaifixs.com/blog/leonardo-ai-pricing-2026-the-150-token-daily-cap

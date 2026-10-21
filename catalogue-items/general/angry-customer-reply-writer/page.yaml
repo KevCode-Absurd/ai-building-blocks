@@ -1,0 +1,109 @@
+new_slug: angry-customer-reply-writer
+name: "Angry customer reply writer"
+summary: "Paste an angry message. Get a reply that names the feeling, fixes what you can and promises nothing false."
+job: help-customers
+thinking: low
+thinking_why: "It writes one short reply from the facts and the fixes you give it."
+
+headline: "Angry customer reply writer"
+subhead: "Paste the customer's angry message and the list of what you can actually do. The prompt finds the real complaint and the fear under it, writes a reply that names the feeling, states the facts and makes the fix with a timing, and gives a short public version."
+
+explain: |
+  An angry message makes people write one of two bad replies. The cold one ("We apologise for any inconvenience") makes the customer angrier. The over-generous one promises a refund or a timeline the business cannot keep, and the second complaint is worse than the first.
+
+  This prompt reads for the one problem and the one fear under the anger. It opens with a sentence that proves you read the message, states what happened in plain facts without blaming anyone, makes the fix you told it you can make with its real timing, and asks the customer for at most one thing. Every amount, policy and date comes from your list, never from the AI. You also get a version under 80 words for a public review and a list of lines not to say.
+
+when:
+  - "A customer was charged twice and is threatening a chargeback."
+  - "A one-star review just landed and you want to reply within the hour."
+  - "You are the owner and the agent, it is late, and you are too tired to be kind."
+
+you_give:
+  - "The customer's message as written and the channel"
+  - "What you can do, with limits and timings"
+  - "The order facts with dates (advised)"
+  - "How your business talks to customers (optional)"
+you_get:
+  - "The real complaint and the fear under it"
+  - "The reply with the fix and its timing"
+  - "A public version under 80 words"
+  - "Lines not to say, and missing facts"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the customer's message under it."
+  - "List what you can really do, with limits and how long each takes."
+  - "Read THE REAL COMPLAINT. If it missed the point, say what the point is and run it again."
+  - "Check the fix line against your policy, then send."
+
+how_it_works:
+  - title: "Finds the real complaint"
+    text: "One problem and one fear, written in one line each."
+  - title: "Names the feeling"
+    text: "Opens with a sentence that shows the message was read, with no stock apology."
+  - title: "States what happened"
+    text: "One or two sentences of fact, blaming nobody."
+  - title: "Makes the fix"
+    text: "The action from your list, with its exact timing, and at most one ask of the customer."
+  - title: "Promises only what was given"
+    text: "If they want something not on your list, it says what you can do instead and gives a reply-by date."
+  - title: "Writes the public version"
+    text: "Under 80 words, details moved to private, signed by a person."
+
+output_shape: |
+  THE REAL COMPLAINT  <problem> / <fear>
+  REPLY               <named feeling, facts, fix with timing, one ask, sign-off>
+  IF PUBLIC           <under 80 words>
+  DO NOT SAY          <lines that would make it worse>
+  MISSING             <...>
+  CHECKS MISSED       <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Channel: email to Sprout support.
+    Message: "I signed up for the $29.99 first box and now I've been charged
+    $49.99 without any warning. I tried to cancel on the site and couldn't
+    find where. This feels like a trap. I want my money back and I want this
+    cancelled today or I'm disputing it with my bank."
+    What we can do: cancel the subscription immediately; refund the $49.99
+    renewal in full if the pouch has not shipped, or once it is returned if
+    it has (refunds take 5 to 7 business days to show); send the cancel link
+    for next time. We cannot refund the first box. The renewal price is on
+    the product page under the button.
+    Facts: subscription started on the 3rd, renewal charged on the 31st, the
+    renewal pouch shipped this morning.
+  output: pending
+
+tweaks:
+  - what: "What you can do"
+    how: "The more exact your list, the more exact the reply. Include what you cannot do, so the AI never offers it."
+  - what: "The channel"
+    how: "Say public review and the reply shortens and moves details to private."
+  - what: "Your voice"
+    how: "Paste two replies you were proud of. The tone follows them."
+
+judge:
+  - "The first sentence is about the customer."
+  - "Every amount and timing is in your list."
+  - "Nobody is blamed."
+  - "There is one ask of the customer at most."
+  - "You would be calmer after reading it, if you were them."
+
+test:
+  - "Run it on a complaint you already answered well. Compare the two replies."
+  - "Run it twice. THE REAL COMPLAINT should match."
+  - "Give it a message demanding something not on your list. It should offer what it can and a reply-by date, never the thing you cannot do."
+
+improve:
+  - "Paste your refund and cancel policy once, so the fix list is always complete."
+  - "Add your five most common complaints and the fix for each, so first replies are faster."
+  - "Pair it with the Complaint reply promise checker before sending anything that mentions money."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message reply works in any strong chat AI."}
+  inputs:
+    - "The customer's order history, so the facts are right"
+    - "Your refund and cancellation policy as written on the site"

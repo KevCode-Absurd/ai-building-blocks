@@ -1,0 +1,114 @@
+new_slug: lessons-learned-note-writer
+name: "Lessons learned note writer"
+summary: "Paste what happened on a finished project. Get a one-page note with what to repeat and what to change."
+job: document-work
+thinking: medium
+thinking_why: "It separates facts from judgements and traces causes before writing rules."
+
+headline: "Lessons learned note writer"
+subhead: "Paste your notes from a finished project, launch or event, with the goal and the result. The prompt sorts facts from feelings, writes what to repeat and what to change as rules with a role and a verb, names the one lesson that matters most and lists what is still unknown. One page."
+
+explain: |
+  The project ends, everyone has opinions for a week, and then the next project starts and makes the same mistakes. Review meetings produce feelings ("the brief was bad") and the feelings do not survive the month. What survives is a fact, a cause and a rule with an owner.
+
+  This prompt takes your notes and separates what happened from what people thought about it. Each lesson gets the fact that shows it, and each thing to change gets a likely cause after asking why twice. Rules name a role and start with a verb, so nobody is blamed and the next team knows who does what. It names the one lesson that matters most, lists the questions nobody can answer yet, and gives you a two-line summary for chat. The whole thing fits on a page.
+
+when:
+  - "A launch just finished and you want to capture it before the details fade."
+  - "The same problem happened on two projects in a row."
+  - "A new team is about to run the same kind of project."
+
+you_give:
+  - "Notes on what happened, good and bad"
+  - "The goal and the result, with numbers"
+  - "Planned versus actual dates (advised)"
+  - "Roles involved (optional)"
+you_get:
+  - "Goal versus result with the gap"
+  - "What to repeat and what to change, each with a fact and a rule"
+  - "The one lesson that matters most, and what is still unknown"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your notes under it."
+  - "Add the goal and the result with the numbers you have."
+  - "Read CHANGE. If a cause is wrong, say what the real one was and run again."
+  - "File the note where the next project will start, and share the SUMMARY in chat."
+
+how_it_works:
+  - title: "States goal and result"
+    text: "Two lines with the gap, numbers only from your input."
+  - title: "Sorts facts from feelings"
+    text: "Dated, numbered facts in one pile, judgements in another, both kept and labelled."
+  - title: "Writes what to repeat"
+    text: "Three to five things that worked, each with a fact and a rule."
+  - title: "Writes what to change"
+    text: "Three to five things that went wrong, with the fact, the cause after two whys, and the rule."
+  - title: "Names the one lesson"
+    text: "The single change that would matter most next time."
+  - title: "Lists the unknowns"
+    text: "Questions nobody can answer yet, and who could."
+
+output_shape: |
+  SUMMARY         <two lines>
+  GOAL v RESULT   <goal | result | gap>
+  REPEAT          <worked | fact | rule>
+  CHANGE          <went wrong | fact | cause | rule>
+  THE ONE LESSON  <which, why>
+  STILL UNKNOWN   <question | who>
+  FEELINGS NOTED  <labelled>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Project: the Raspberry Lemonade limited flavour launch at Sprout.
+    Goal: launch on the 13th with ads live the same day and sell through the
+    first batch in 4 weeks.
+    Result: launched on the 15th. Ads went live on the 13th, two days before
+    the product could be ordered. First batch sold through in 3 weeks.
+    Notes from the review: stock landed on the 12th as planned but the SKU
+    was not set up in the subscription tool until the 15th because ops was
+    away and the cover did not know how; marketing was not told the launch
+    had slipped and 2 days of ad spend went to a page where you could not
+    buy; the kids-style "The Lemon Aid Stand is open" headline got the most
+    comments we have ever had; the designer got the brief on the Monday and
+    delivered Wednesday, which everyone said was the smoothest part; support
+    got 40 emails asking why the add-to-cart button was greyed out; the
+    lemon-slice gummy shape got photographed by customers and shared more
+    than the pouch.
+  output: pending
+
+tweaks:
+  - what: "Numbers"
+    how: "Give the result in numbers and the gap becomes a fact instead of a feeling."
+  - what: "The good parts"
+    how: "Include what went well. A note that is only failures teaches the next team to hide things."
+  - what: "Roles"
+    how: "Name roles, not people, and the rules will have owners without blame."
+
+judge:
+  - "Every lesson has a fact under it."
+  - "Each rule starts with a verb and names a role."
+  - "Nobody is blamed by name."
+  - "There are things to repeat as well as things to change."
+  - "It fits on one page."
+
+test:
+  - "Write the note for the last project, then check it against what went wrong on the one before. The rules should have caught it."
+  - "Run it twice. THE ONE LESSON should match."
+  - "Give it notes with no numbers. GOAL v RESULT should say MISSING, not invent a figure."
+
+improve:
+  - "Keep all notes in one folder and paste the last one in, so repeat lessons get flagged."
+  - "Add your project types so the REPEAT rules build into a checklist per type."
+  - "Pair it with the Process change note writer when a rule changes how the team works."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message note works in any strong chat AI."}
+  inputs:
+    - "The original plan with dates, so planned versus actual is exact"
+    - "Support tickets or customer comments from the project window"

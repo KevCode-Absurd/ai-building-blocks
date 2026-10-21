@@ -1,0 +1,50 @@
+slug: canva
+name: Canva
+maker: Canva
+url: https://www.canva.com
+promise: Social posts, decks and documents designed fast, with AI help built in.
+use_cases: [design, make-images, slides-and-docs]
+categories: [design, image, productivity]
+what_it_does:
+  - Gives you templates for posts, ads, decks, documents and video.
+  - Makes images from a written description.
+  - Removes backgrounds and resizes a design for each placement.
+  - Drafts text and presentations from a short prompt.
+  - Stores your logo, colours and fonts so every design matches.
+benefits:
+  - Make a week of social posts without a designer.
+  - Resize one ad design for every placement in a few clicks.
+  - Keep every design in your brand colours and fonts.
+  - Share a design with your team and edit it together.
+best_for:
+  - Owners and small teams who make their own designs.
+  - Social posts, ad images, flyers and slide decks.
+  - Finishing an image from another AI product with text and a logo.
+not_for:
+  - Detailed interface design for apps.
+  - Photo-real images that need careful control.
+pricing:
+  model: freemium
+  from: US$18 per month
+  note: Free plan has a monthly limit on AI use. Pro costs US$18 a month, or about US$12 a month billed yearly, and is for one person. Business is priced per person. Prices are from a June 2026 review, so check the page.
+works_with:
+  - chatgpt
+  - claude
+  - Google Drive
+  - Dropbox
+runs_in: [web, desktop, mobile, api]
+blocks:
+  - single-image-ad-planner
+  - marketing-image-maker
+  - image-upscale-checker
+  - sale-creative-volume-planner
+  - standing-social-calendar-maker
+  - phone-note-image-ad
+  - comic-strip-image-ad-maker
+  - small-budget-ad-test-planner
+  - quote-and-proposal-builder
+  - recurring-kpi-report-maker
+alternatives: [figma-ai, adobe-firefly, recraft, gamma]
+last_checked: 2026-10-21
+sources:
+  - https://designrr.io/canva-pricing/

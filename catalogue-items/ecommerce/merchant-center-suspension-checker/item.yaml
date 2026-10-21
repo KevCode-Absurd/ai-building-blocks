@@ -1,6 +1,6 @@
 slug: merchant-center-suspension-checker
 name: "Merchant Center suspension checker"
-summary: "Walk through your Merchant Center and store. Get a pass or fail list by suspension risk and a score out of 100."
+summary: "Paste your Merchant Center settings. Get each gap ranked by suspension risk and a score out of 100."
 category: ecommerce
 type: skill
 role: check

@@ -1,0 +1,19 @@
+slug: problem-cost-question-writer
+name: "Problem cost question writer"
+summary: "Paste what you sell and a buyer's situation. Get the questions that make the cost of their problem clear."
+category: general
+boards: []
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: brief, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [neil-rackham]

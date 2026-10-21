@@ -5,7 +5,7 @@ name: MATLAB bug tracer
 summary: Give it code that fails. Get the cause found, with breakpoints and variable checks to show it.
 job: test-and-fix-code
 headline: MATLAB bug tracer
-subhead: Give it code that fails. Get the cause found, with breakpoints and variable checks to show it.
+subhead: Give it the MATLAB script that fails or returns a wrong answer, the error message and what you expected. It decides whether reading the code is enough or runs it with breakpoints. You get the line and cause, the variable values that prove it and a suggested fix.
 explain: |
   The cause of a MATLAB error found by running the code, not by guessing. You give it a script that fails or returns a wrong answer, and it shows you the line, the variable and the value that went wrong.
 

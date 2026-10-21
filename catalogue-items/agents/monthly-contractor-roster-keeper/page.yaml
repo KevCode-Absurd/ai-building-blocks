@@ -1,0 +1,125 @@
+new_slug: monthly-contractor-roster-keeper
+name: Monthly contractor roster keeper
+summary: Give it your contractor roster and invoices each month. Get who to keep, whose terms to fix and the agreements to redo.
+job: hire-people
+thinking: high
+thinking_why: It matches invoices to agreements, weighs risk signs and judges working relationships from notes. Give it your strongest model.
+headline: Monthly contractor roster keeper
+subhead: Give it your roster of freelancers and contractors, this month's invoices and your notes. It checks each invoice against what was agreed, flags classification questions for counsel, screens each relationship once a quarter and drafts the agreements that are missing. You approve every payment and every send.
+explain: |
+  A contractor roster grows one person at a time, and so do the gaps. An invoice at a rate nobody agreed. A freelancer who has worked set hours on your equipment for a year. Scope that drifted past the statement of work three projects ago. None of it is anyone's job until it becomes a problem.
+
+  This agent makes it a monthly job. It matches every invoice to the agreement behind it and lists each mismatch. It watches the signs that a contractor is being treated like an employee and raises a question for counsel when two appear. Once a quarter it screens each relationship on ability, energy and integrity, and says repeat, fix terms or wind down when the work ends. It drafts the results agreements and contracts that are missing, each marked for counsel. It pays nothing and sends nothing.
+when:
+  - You work with five or more freelancers or contractors and the terms live in old emails.
+  - An invoice surprised you last month and you could not find what was agreed.
+  - You are not sure which contractors are worth keeping and which are costing you.
+you_give:
+  - Your roster with work, agreed rate, terms, start date and whether an agreement exists
+  - This month's contractor invoices (advised)
+  - Your notes on what was delivered, late or wrong (optional)
+  - Where you and each contractor are based
+  - Last month's keeper file, once it exists
+you_get:
+  - Every invoice mismatch with the agreement line it breaks
+  - Classification questions for counsel, with the signs behind each
+  - A quarterly verdict per contractor, repeat, fix terms or wind down
+  - A one-page results agreement for anyone you keep without one
+  - Contract and statement of work drafts, marked for counsel
+  - A list of payments, sends and endings to approve
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month.
+  - Put your roster, this month's invoices and your notes in one private folder, or attach them in the chat.
+  - On the first run, approve the program setup and have counsel check the classification part.
+  - Read the mismatches and the screens. Pay, dispute or change what you decide, then tell the agent.
+  - Run it again at the end of next month. It tracks drift over time.
+how_it_works:
+  - title: Set up the program once
+    text: Builds the classification risk check, onboarding checklist and vendor plan for the kinds of work you buy.
+  - title: Read last month
+    text: Picks up open mismatches and last month's flags.
+  - title: Check the invoices
+    text: Matches each invoice to the agreed rate, hours and deliverables and lists every gap, approving nothing.
+  - title: Watch the classification signs
+    text: Counts the signs per contractor and raises a question for counsel when two or more appear.
+  - title: Screen each relationship
+    text: Once a quarter, or when a problem repeats, judges ability, energy and integrity and says repeat, fix or wind down.
+  - title: Fix the paperwork
+    text: Drafts a one-page results agreement for anyone kept without one, and a contract for anyone new, marked for counsel.
+  - title: Log and hand back
+    text: Updates the roster and screens, then stops for your yes.
+output_shape: |-
+  THIS MONTH
+    <n> contractors | invoiced <amount> vs agreed <amount> | <n> mismatches | <n> flags
+
+  INVOICE MISMATCHES
+    <contractor> | invoice <id> | <rate | hours | deliverable | no agreement> | invoiced <x>, agreed <y>
+
+  CLASSIFICATION FLAGS (questions for counsel)
+    <contractor> | signs: <set hours>, <your equipment>, <only client> | since <date> | question: <one line>
+
+  SCREENS
+    <contractor> | able <note> | energy <note> | integrity <note> | verdict: <repeat | fix terms | wind down after <deliverable>>
+
+  PAPERWORK
+    <contractor> | <results agreement | contract | SOW> | for counsel | draft below
+
+  WIND-DOWNS
+    <contractor> | after <deliverable> on <date> | why: <reason>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run September for Sprout's marketing contractors. Practice numbers and
+    people, not real ones.
+    Roster:
+    - Video editor, US, $85/hour, cap 40 hours a month, agreement signed
+      Jan. Works set hours Mon to Fri in our editing suite since March.
+      Only client as far as we know.
+    - Ad copywriter, US, $9,000 a month flat, SOW from June covering 12
+      ads a month. Delivered 16 this month, invoiced $12,000.
+    - Photographer, US, per shoot $2,400, no written agreement, 5 shoots
+      this year, always on time.
+    - UGC creator coordinator, Canada, $45/hour, cap 60 hours, agreement
+      Feb. Invoiced 71 hours. Late on the creator roster twice (Aug, Sep).
+    Invoices attached. Based: Sprout in the US.
+    Notes: the editor is excellent; the coordinator is friendly but
+    missed two deadlines and blamed the creators both times.
+  output: pending
+tweaks:
+  - what: Your notes
+    how: One line per contractor per month on what went well or wrong turns the quarterly screen from a guess into a judgment.
+  - what: Flag rule
+    how: Two classification signs raise a question. Set one if your counsel wants to see everything.
+  - what: Screen rhythm
+    how: Quarterly by default. Monthly for anyone new or anyone flagged.
+  - what: Agreement template
+    how: Give your own contract template and the drafter follows it.
+judge:
+  - Every mismatch names the invoice and the agreement line.
+  - No flag is written as a finding.
+  - No one is wound down mid-deliverable.
+  - Every contract draft is marked for counsel.
+  - Nothing was paid, sent or ended.
+test:
+  - Give it one invoice over the cap on purpose. It should list the mismatch and approve nothing.
+  - Give it a contractor with three classification signs. It should raise a question, not a verdict.
+  - Run it twice on the same roster. The screens should match.
+improve:
+  - Put every agreed rate, cap and deliverable in the roster before the first run. Mismatches are only as good as the roster.
+  - Have counsel check the program setup once, and record what they said in the program file.
+  - Record each screen verdict and what you did. The next quarter reads it.
+  - Pair it with the Weekly invoice and cash chaser, which handles what you are owed; this one handles what you owe.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the roster and screens files between months and run on the last working day.
+    - name: Your invoicing or payments tool
+      why: Export contractor invoices with dates, hours and amounts.
+  inputs:
+    - Your contract template, so drafts match it
+    - What counsel said about classification where you are based

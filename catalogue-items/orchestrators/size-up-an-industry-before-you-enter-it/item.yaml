@@ -1,0 +1,29 @@
+slug: size-up-an-industry-before-you-enter-it
+name: "Size up an industry before you enter it"
+summary: "Give it the industry. Get a five forces read, a counter-position, a first market and a call."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: advanced
+inputs:
+  - {type: question, required: true}
+  - {type: competitor_set, required: false}
+  - {type: persona, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: shortlist}
+uses: [five-forces-industry-checker, business-power-tester, counter-positioning-finder, first-market-picker, go-or-no-go-launch-checker]
+steps:
+  - {uses: five-forces-industry-checker, note: "Buyer power, supplier power, ease of entry, substitutes and rivalry, each scored with the evidence, and where the profit in the industry sits."}
+  - {uses: business-power-tester, note: "Which of Hamilton Helmer's seven powers you could build here, which you could not, and the one to aim for first."}
+  - {uses: counter-positioning-finder, note: "A way of operating that incumbents cannot copy without hurting their own business, or the honest finding that there is none here."}
+  - {uses: first-market-picker, note: "The first small market to win, in Peter Thiel's manner: small enough to dominate, with buyers who feel the problem most, and the markets after it."}
+  - {uses: go-or-no-go-launch-checker, note: "Go or no go, with the three facts the call rests on, the weak joints, and what would change the call, in Sun Tzu's manner of weighing the odds before the fight."}
+origin: own
+version: 1.0.0
+minds: [michael-porter, hamilton-helmer, peter-thiel, sun-tzu]
+credits:
+  - {title: "The Five Competitive Forces That Shape Strategy (Harvard Business Review, January 2008)", by: "Michael E. Porter", url: "https://hbr.org/2008/01/the-five-competitive-forces-that-shape-strategy", used: "Read the industry's structure before deciding to enter"}
+  - {title: "7 Powers synopsis", by: "Hamilton Helmer", url: "https://7powers.com/synopsis/", used: "Test which sources of lasting advantage you could build, counter-positioning among them"}
+example_pending: true

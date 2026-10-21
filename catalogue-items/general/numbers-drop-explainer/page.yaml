@@ -1,0 +1,115 @@
+new_slug: numbers-drop-explainer
+name: "Numbers drop explainer"
+summary: "Paste the numbers before and after a drop. Get the likely causes ranked by evidence, and what to check."
+job: track-numbers
+thinking: high
+thinking_why: "It reasons about timing, parts of a metric and competing causes, and must not pick the convenient story."
+
+headline: "Numbers drop explainer"
+subhead: "Paste the metric that fell, by day or week, the numbers that feed it and everything that changed in the window. The prompt sizes the drop, finds which part moved, lines changes up against the timeline, ranks causes by evidence, names the one check to run and writes the explanation for your audience."
+
+explain: |
+  Sales fell twenty percent and everyone has a theory by lunchtime. The marketing lead blames the platform, the founder blames the price change, and the number that would settle it sits in a dashboard nobody opened. Eric Ries has argued in public that the honest version is to show cause and effect with evidence, and to say what you do not know.
+
+  This prompt sizes the drop against the usual swing, breaks the metric into its parts to find which one moved, and puts every change in the window on the same timeline, because a change that came after the drop cannot have caused it. It ranks the causes with evidence for and against, always including normal variation and broken measurement, flags the vanity numbers that do not answer the question, names the one check that would settle the top cause, and writes six to ten lines for your audience with no blame in them.
+
+when:
+  - "A weekly number fell and you have to explain it on Monday."
+  - "Two people on the team are sure of two different causes."
+  - "You suspect the drop is inside normal variation and want to say so with evidence."
+
+you_give:
+  - "The metric by day or week, before and after"
+  - "The numbers that feed it"
+  - "Everything that changed in the window, with dates"
+  - "Who the explanation is for, and the usual swing (advised)"
+you_get:
+  - "The drop sized, with where it sits"
+  - "Changes on the timeline and causes ranked by evidence"
+  - "Vanity numbers flagged, and the one check to run"
+  - "A six to ten line explanation for your audience"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the numbers under it."
+  - "List every change in the window with its date, including the ones you think are irrelevant."
+  - "Read CAUSES RANKED. If a LIKELY cause started after the drop, something in your dates is wrong."
+  - "Run THE ONE CHECK before you send the explanation."
+
+how_it_works:
+  - title: "Sizes the drop"
+    text: "From what to what, over what period, against the usual swing."
+  - title: "Finds where it sits"
+    text: "Breaks the metric into parts and says which moved."
+  - title: "Lines up the timeline"
+    text: "Every change dated against the drop, before or after it began."
+  - title: "Ranks the causes"
+    text: "Evidence for and against each, including normal variation and broken measurement."
+  - title: "Flags vanity numbers"
+    text: "Numbers in the input that look fine and do not answer the question."
+  - title: "Writes the check and the explanation"
+    text: "One check with an owner and a date, and the lines for your audience."
+
+output_shape: |
+  THE DROP        <from, to, period, size>
+  WHERE IT SITS   <part | before | after | moved?>
+  TIMELINE        <date | change | before / after>
+  CAUSES RANKED   <cause | for | against | rating>
+  VANITY NUMBERS  <...>
+  THE ONE CHECK   <what, who, when>
+  EXPLANATION     <6 to 10 lines>
+  MISSING         <...>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Practice numbers for Sprout, not the brand's real results.
+    First orders per week: 1,240; 1,190; 1,260; 1,210; then 980; 940; 1,010.
+    Site visits per week: 61,000; 59,500; 62,000; 60,800; 60,200; 58,900;
+    61,500.
+    Ad spend per week: flat at about $48,000 throughout.
+    Subscription first-box price: $29.99 throughout. One-time price $66.65.
+    Refunds per week: 60; 58; 64; 61; 59; 63; 60.
+    Changes in the window: week 4, the "4 FREE gifts" ad was paused after a
+    compliance review; week 4, the home page banner changed from "Save 52%"
+    to "Save up to 55%"; week 5, a cartoon tie-in limited flavour sold out;
+    week 5, a rival brand launched its own greens gummies at $49 a month;
+    week 6, the review widget was moved below the fold in a redesign; week 6,
+    a public holiday on the Monday.
+    Audience: the founder, in a written Monday update.
+    Usual swing: first orders normally move 5 to 7 percent week to week.
+  output: pending
+
+tweaks:
+  - what: "The parts"
+    how: "Give visits, conversion, order value and refunds. Without them the drop cannot be located."
+  - what: "Every change"
+    how: "List changes you think are irrelevant too. The timeline rules them in or out."
+  - what: "The usual swing"
+    how: "Give it and the first line can say whether this is a real drop at all."
+
+judge:
+  - "The drop arithmetic is shown and right."
+  - "No LIKELY cause started after the drop."
+  - "Normal variation and measurement error are both rated."
+  - "The explanation says what is unknown."
+  - "Nobody is blamed."
+
+test:
+  - "Run it on a past drop where you later learned the cause. The cause should be rated LIKELY or POSSIBLE."
+  - "Run it twice. The top-ranked cause should match."
+  - "Leave out the parts of the metric. It should say the drop cannot be located and list what it needs."
+
+improve:
+  - "Add your metric's normal swing once so every drop is measured against it."
+  - "Keep a dated change log. Paste it in every time and the timeline is instant."
+  - "Pair it with the Two version result reader when the drop coincides with a test."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a numbers-and-timeline analysis in one message."}
+    - {name: "A spreadsheet", why: "Export the weekly numbers and paste them as a table."}
+  inputs:
+    - "A dated change log for the window"
+    - "The same weeks last year, to spot seasonal drops"

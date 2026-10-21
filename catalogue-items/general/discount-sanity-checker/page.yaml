@@ -1,0 +1,113 @@
+new_slug: discount-sanity-checker
+name: "Discount sanity checker"
+summary: "Paste every discount you show. Get a consistency score out of 100, each clash, and one true offer line."
+job: set-prices
+thinking: medium
+thinking_why: "It recomputes every percent and compares many lines against each other."
+
+headline: "Discount sanity checker"
+subhead: "Paste every price and discount a buyer can see, from ads to checkout, and the real prices behind them. The prompt recomputes each percent, finds where the lines disagree, scores consistency out of 100 and writes the one offer line that is true everywhere."
+
+explain: |
+  Discounts drift. The ad says 61% off, the badge says up to 55%, the banner says 52%, and the footer says the whole thing needs an SMS sign-up. Each line was true for someone on some day. Together they read as a trick, and the buyer who notices goes to check the renewal price with suspicion.
+
+  This prompt puts every offer line in one table with where it appears and the maths it implies, then recomputes the real percent for each case from your prices. It lists each clash with how serious it is, scores consistency out of 100 with the sum shown, and writes the one true line in a short version for ads and a full version for the page, with the condition and the renewal price in it. It also tells you what words to use in each place.
+
+when:
+  - "Your ads, badges and banners were written at different times by different people."
+  - "A customer wrote in asking which discount is the real one."
+  - "You are about to launch a sale and want every number to agree before it goes live."
+
+you_give:
+  - "Every price and discount shown, quoted, with where it appears"
+  - "The real prices and conditions"
+  - "Footers and terms (advised)"
+you_get:
+  - "A table of every offer line with its implied maths"
+  - "The true discount for each case, arithmetic shown"
+  - "Each clash rated, and a consistency score out of 100 now and after fixes"
+  - "One true offer line for ads and for the page, and what to change where"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini."
+  - "Under it, quote every discount line you can find and say where each appears."
+  - "Add the real prices: list, first order, renewal, shipping, and every condition."
+  - "Fix the severe clashes first, then paste the ONE TRUE LINE where the CHANGE WHERE list says."
+
+how_it_works:
+  - title: "Builds the table"
+    text: "One row per offer line: where, exact words, the number, the implied maths, and whether that price is ever charged."
+  - title: "Recomputes the discounts"
+    text: "The real percent for each case from your prices, with the arithmetic shown."
+  - title: "Finds the clashes"
+    text: "Different numbers for the same thing, prices never charged, conditions hidden in footers, a 'free' with strings."
+  - title: "Rates and scores"
+    text: "Severe, medium or minor. 100 minus 25, 10 or 3 each, sum shown, and the score after fixes."
+  - title: "Writes the one true line"
+    text: "Discount, what it applies to, the condition and the renewal price, in an ad version and a page version."
+  - title: "Says what to change where"
+    text: "One line per place with the words to use there."
+
+output_shape: |
+  OFFER LINES        <where | words | claimed | implied maths | ever charged?>
+  TRUE DISCOUNTS     <case | from | to | percent>
+  CLASHES            <n> <what v what | severity | why it matters>
+  CONSISTENCY SCORE  100 - <deductions> = <n>   After fixes: <n>
+  ONE TRUE LINE      Ad: <...>   Page: <...>
+  CHANGE WHERE       <place: new words>
+  MISSING            <...>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Lines a buyer can see for Sprout greens gummies:
+    - Ad headline: "Get up to 61% OFF + 4 FREE gifts: online exclusive"
+    - Ad headline: "'Sprout is too expensive': here's 61% off to prove otherwise"
+    - Announcement bar: "Limited Time Sale. Save 52% + free shipping on your
+      first order"
+    - Product page badge: "MOST POPULAR: GET UP TO 55% OFF"
+    - Subscribe and Save tile: $66.65 struck through, $29.99, "$1.07/day",
+      "Free Shipping Today"
+    - One Time Purchase tile: $66.65, "No Free Shipping. No First Order
+      Discount"
+    - Under the button: "DISCOUNT AUTO-APPLIED. Renews at $49.99 each 4 weeks."
+    - Footer: "Offer assumes customer has received and uses promotional SMS
+      discount"
+    Real prices: one-time $66.65; subscription first box $29.99; renewal
+    $49.99 every 4 weeks; free shipping on subscription only. No gifts are
+    shown anywhere on the page.
+  output: pending
+
+tweaks:
+  - what: "Completeness"
+    how: "Include the cart and checkout screens. Clashes often hide between the page and the final price."
+  - what: "The conditions"
+    how: "Paste footers and terms word for word. A condition the headline leaves out is a clash."
+  - what: "The channel"
+    how: "Say whether a line is an ad or on-site. Ad lines get the short version of the true line."
+
+judge:
+  - "Every percent is recomputed and the arithmetic is shown."
+  - "Each clash quotes both lines and says where they are."
+  - "The deductions add up to the score."
+  - "The one true line has the condition and the renewal price in it."
+  - "The note to check local rules is there."
+
+test:
+  - "Run it on your live pages today. Then fix the clashes and run it again a week later. The score should rise."
+  - "Run it twice on the same input. The severe clashes should match."
+  - "Leave out the renewal price. The lines that depend on it should be marked cannot verify, not scored."
+
+improve:
+  - "Paste your offers file from your brand file so the real prices are always loaded."
+  - "Add your pricing rules (for example, every discount shows the renewal price beside it) as extra checks."
+  - "Pair it with the Meta ads compliance checker when the lines are in ads."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a table-and-score check in one message."}
+  inputs:
+    - "Screenshots of the cart and checkout, so the final price is in the table"
+    - "The dates each offer line was written, to see how they drifted"

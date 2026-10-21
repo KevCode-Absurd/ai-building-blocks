@@ -1,0 +1,18 @@
+slug: numbers-drop-explainer
+name: "Numbers drop explainer"
+summary: "Paste the numbers before and after a drop. Get the likely causes ranked by evidence, and what to check."
+category: general
+boards: []
+type: prompt
+role: research
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [eric-ries]

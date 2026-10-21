@@ -1,0 +1,41 @@
+slug: copy-ai
+name: Copy.ai
+maker: Copy.ai
+url: https://www.copy.ai
+promise: Turn your sales and marketing routines into AI workflows your team can run.
+use_cases: [write-copy, automate]
+categories: [writing, marketing, automation]
+what_it_does:
+  - Chains AI steps into workflows for research, writing and updating records.
+  - Saves your brand voice and company facts so every draft starts informed.
+  - Keeps account and lead data in tables the workflows can read.
+  - Lets you chat with several AI models from one account.
+  - Connects to sales and marketing apps your team already uses.
+benefits:
+  - Repeat a good sales or content process the same way every time.
+  - Write outreach and content that already uses your company facts.
+  - Fill in lead and account details without copying between apps.
+  - Let people who are not technical run an AI workflow.
+best_for:
+  - Sales and marketing teams with a process they repeat daily.
+  - Operations people who keep lead and customer records up to date.
+  - Teams that want one place to try several AI models.
+not_for:
+  - Solo writers who want a quick draft. A chat assistant is simpler.
+  - Small teams, since the workflow plans start at US$1,000 a month.
+pricing:
+  model: subscription
+  from: US$24 per month
+  note: The Chat plan is US$24 a month billed yearly, or US$29 billed monthly, for 5 seats. Workflow plans start at US$1,000 a month billed yearly. Enterprise is priced on request.
+works_with:
+  - Salesforce
+  - HubSpot
+  - Gong
+  - zapier
+runs_in: [web, api]
+blocks: []
+alternatives: [jasper, clay, gumloop, chatgpt]
+last_checked: 2026-10-21
+sources:
+  - https://www.copy.ai
+  - https://www.copy.ai/prices

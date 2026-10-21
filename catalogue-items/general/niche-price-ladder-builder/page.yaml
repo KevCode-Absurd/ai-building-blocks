@@ -1,6 +1,6 @@
 new_slug: niche-price-ladder-builder
 name: Niche price ladder builder
-summary: Paste your offer and its going price. Get it rewritten for narrower buyers, each with a price and a size check.
+summary: Paste your offer and price. Get it rewritten for narrower buyers, each with a price and size check.
 job: make-offer
 thinking: medium
 thinking_why: It rewrites the same offer for several levels and sizes each. The sums are small but the buyer wording needs care.

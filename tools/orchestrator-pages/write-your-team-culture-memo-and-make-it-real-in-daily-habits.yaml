@@ -1,0 +1,105 @@
+new_slug: write-your-team-culture-memo-and-make-it-real-in-daily-habits
+name: Write a culture memo your team lives by
+summary: Give it how your team works. Get a culture memo, a standards sheet and a rule to drop.
+job: lead-people
+thinking: high
+thinking_why: It turns values into rules people can follow and judge each other by. Give it your strongest model.
+headline: Write a culture memo your team lives by
+subhead: Give it how your team really works. It writes a culture memo in the manner of the Netflix culture deck, turns it into a standards sheet, designs public praise the way Mary Kay Ash did, and picks one rule to drop and trial without it, following Patty McCord.
+explain: |
+  Most culture documents are a list of nouns: integrity, ownership, excellence. Nobody disagrees and nothing changes, because the words do not say what to do when two good things collide.
+
+  This workflow writes culture as behaviour. The memo says what the team does, what it refuses to do, and what it does when two good things collide, in the manner of the Netflix culture deck Reed Hastings and Patty McCord wrote. The standards sheet turns the memo into checks anyone can run, the way Ray Kroc wrote standards that made every store the same. The recognition plan makes the behaviour visible, with public, specific praise the way Mary Kay Ash ran her company. Then it picks one rule the memo makes unnecessary and plans a safe trial without it, following Patty McCord's rule to remove rules adults do not need.
+when:
+  - Your team has grown past ten and new people cannot tell how things are done here.
+  - You have values on the wall and behaviour that does not match them.
+  - You want to drop a rule but fear what happens without it.
+you_give:
+  - "How your team really works: what gets praised, what gets ignored, the unwritten rules"
+  - Where it falls short and the behaviour you want instead
+  - Your current rules and policies
+  - Your brand file or a past memo in your voice (optional)
+you_get:
+  - A culture memo that says what the team does and refuses to do
+  - A standards sheet with checks anyone can run
+  - A recognition plan with public, specific praise
+  - One rule to drop and a safe trial plan without it
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste how the team really works and where it falls short. It writes the memo and the standards.
+  - Read the memo with two people you trust. Cut any line that is a wish rather than a practice.
+  - Start the praise plan this week. Run the rule trial for the time it sets and review.
+how_it_works:
+  - title: Write the culture memo
+    text: "Writes the memo as behaviour: what the team does, refuses to do, and does when good things collide, in the manner of the Netflix culture deck."
+  - title: Write the standards sheet
+    text: Turns each behaviour into a standard with what good looks like and how often it is checked, the way Ray Kroc did.
+  - title: Design the praise
+    text: Designs public, specific, frequent praise tied to the standards, in Mary Kay Ash's manner.
+  - title: Drop one rule
+    text: Picks one rule the memo makes unnecessary and plans a safe trial without it, with the sign to bring it back, following Patty McCord.
+output_shape: |-
+  STEP 1: CULTURE MEMO
+    We do: <behaviour> | We refuse: <...> | When <good thing> meets <good thing>: <we choose ...>
+
+  STEP 2: STANDARDS SHEET
+    Standard: <...> | Good looks like: <...> | Checked: <how, how often> | Owner: <...>
+
+  STEP 3: PRAISE PLAN
+    Noticed by: <...> | Praised where: <public setting> | How often: <...> | Example: <specific line>
+
+  STEP 4: RULE TRIAL
+    Drop: <rule> | Risk: <...> | Trial: <how long, who> | Bring back if: <sign>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand, nine people, half remote.
+    How we really work: fast, friendly, a bit chaotic. Praise goes to whoever launched the latest flavour. Support replies are warm but promise things we can't keep. Nobody checks the discount lines across the site, which is how we ended up with four different percentages live at once. People say yes in meetings and don't do it.
+    What I want instead: we check before we promise; we say the real number; we say no out loud; we finish what we start before launching the next thing.
+    Current rules: expenses over $50 need my approval; all customer refunds need my approval; everyone in the office Tuesday and Thursday; a weekly all-hands.
+    Rule I suspect we don't need: refund approval. Our support lead has never once asked for a refund I'd refuse.
+    Voice: plain, warm, a bit dry. No corporate words.
+  output: pending
+tweaks:
+  - what: The real behaviour
+    how: Tell it what is praised and what is ignored today. The memo is written against that, not against a wish.
+  - what: The collisions
+    how: Name two good things that fight (speed and checking, warmth and honesty). The memo says which wins.
+  - what: The rule to drop
+    how: If you already suspect one, say so. Step 4 tests your suspicion rather than guessing.
+  - what: Your voice
+    how: Paste a memo you were proud of. The culture memo matches it.
+judge:
+  - Every line of the memo is something a new hire could do or refuse to do on Monday.
+  - Each standard has a check and an owner.
+  - The praise plan names the setting and gives a specific example line, not "great job".
+  - The rule trial names the sign that says bring the rule back.
+  - Nothing in the memo is a noun on its own.
+test:
+  - Give it a value like "integrity". Step 1 should turn it into a behaviour or drop it.
+  - Read the standards sheet as a new hire. Could you run one check this week?
+  - Give step 4 a rule that protects a legal duty. It should refuse to drop it.
+  - Run step 1 twice. The refusals should be the same both times.
+improve:
+  - Review the memo every six months with the praise log and the rule trials next to it.
+  - Add the standards sheet to onboarding so new people see how things are checked.
+  - Keep a log of praise given. If a standard never gets praised, it is not real yet.
+  - Pair it with "Get a new hire to full speed in 90 days" so new people learn the memo in week one.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: A shared document
+      why: The memo and standards live where everyone reads them.
+  inputs:
+    - Your current rules and policies
+    - Examples of behaviour you praised and behaviour you let slide
+    - Exit interview notes, which show the real culture
+terms:
+  - term: Standards sheet
+    meaning: A list of behaviours with what good looks like and how each is checked.

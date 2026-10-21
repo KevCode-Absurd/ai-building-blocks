@@ -1,0 +1,119 @@
+new_slug: run-fair-interviews-and-choose-on-evidence
+name: Run fair interviews and choose the candidate on evidence
+summary: Give it the role. Get an interview plan, scorecards, a work test, a fair comparison and the replies.
+job: hire-people
+thinking: high
+thinking_why: It designs a fair process and then weighs people against each other on evidence. Give it your strongest model.
+headline: Run fair interviews and choose the candidate on evidence
+subhead: Give it the role and what it needs. It plans the interview stages, writes one scorecard per stage and a short work test, then waits while you interview. It compares the candidates on the scorecards alone, flags any note that rests on feel, and drafts a reply for every person.
+explain: |
+  Most hiring calls are made on a feeling after a chat. Each interviewer asks different questions, the notes say "good energy" and "not sure about fit", and the loudest voice in the debrief wins. The person hired is the one who interviewed best, which is a different skill from doing the job.
+
+  This workflow makes every candidate face the same test. It plans the stages so none repeats another, gives each stage a scorecard with the questions and what a strong or weak answer sounds like, and adds a work sample from the real job. You run the interviews and fill in the scorecards. Then it compares the candidates on that evidence, marks any note that rests on feel or on something unrelated to the job, and drafts the offer call and the rejections. You make the hiring call.
+when:
+  - You have four or more candidates for one role and the team disagrees about them.
+  - Your last hire interviewed well and struggled in the job.
+  - You want a process you can show a candidate who asks how the decision was made.
+you_give:
+  - The role, its level and what the person must be able to do
+  - Who will interview and how much time you have
+  - After the interviews, every interviewer's scorecard notes
+  - Interview transcripts or recordings (optional)
+you_get:
+  - An interview plan with stages, owners and what each stage checks
+  - A scorecard per stage and a work test with a scoring guide
+  - The candidates compared on evidence, with bias flags, for you to decide
+  - A reply drafted for every candidate, ready for you to send
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the role and what it needs. It plans the stages, the scorecards and the work test.
+  - Run the interviews. Each interviewer fills in their scorecard before anyone discusses a candidate.
+  - Paste the scorecards back. It compares the candidates and drafts the replies. You decide, then send.
+how_it_works:
+  - title: Plan the stages
+    text: Sets the stages for the role and level, names who runs each and what it checks, so no two stages test the same thing.
+  - title: Write the scorecards
+    text: Writes one scorecard per stage with set questions, strong and weak answer signs and one rating scale for everyone.
+  - title: Design a work test
+    text: Builds a short task from the real job with a scoring guide and checks that it is fair to every candidate.
+  - title: Run the interviews
+    text: A pause. Run the interviews and the work test. Every interviewer fills in their scorecard before they talk to anyone else about a candidate.
+  - title: Compare on evidence
+    text: Compares candidates on the scorecard evidence only, flags notes that rest on feel or on things unrelated to the job, and leaves the decision to you.
+  - title: Draft every reply
+    text: Drafts the offer call and a clear, kind message for every other candidate. You read and send them.
+output_shape: |-
+  STEP 1: INTERVIEW PLAN
+    Stage <n>: <what it checks> | Runs it: <who> | Length: <minutes>
+
+  STEP 2: SCORECARDS
+    Stage <n>: <question> | Strong answer: <...> | Weak answer: <...> | Rating 1 to 4
+
+  STEP 3: WORK TEST
+    Task: <from the real job> | Time: <...> | Scoring: <...> | Fairness checks: <...>
+
+  PAUSE: run the interviews, fill in every scorecard first
+
+  STEP 4: COMPARISON
+    <candidate>: stage scores <...> | Evidence for: <...> | Evidence against: <...>
+    Bias flags: <note> rests on <feel / unrelated trait>
+    Your decision: <...>
+
+  STEP 5: REPLIES
+    <candidate>: <offer call / rejection>, <the real reason where you can give one>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Role: customer support lead for Sprout (daily greens gummies, sold online and in big-box stores). Reports to the founder.
+    Must be able to: answer 60 to 80 emails a day in a warm, plain voice; spot subscription and discount mix-ups (we have several discount lines live at once); write help pages; train one part-time helper.
+    Level: first lead role, 3 to 6 years in support.
+    Interviewers: me (founder), our operations manager. We have two weeks.
+    Candidates: five, all passed a short phone screen.
+    Reviews our team deals with include lines like "not getting the discount that I was supposed to get" and "I keep forgetting to cancel".
+    After the interviews I'll paste the scorecards.
+  output: pending
+tweaks:
+  - what: The must-haves
+    how: List only what the job truly needs. Every scorecard question and the work test come from that list.
+  - what: The work test
+    how: Give it a real, anonymised task from last month. A real task predicts the job better than a puzzle.
+  - what: Transcripts
+    how: Bring recordings or transcripts to step 4. It can then check a scorecard note against what was actually said.
+  - what: Your rating scale
+    how: If your company uses a 1 to 5 scale, say so in step 2 and every scorecard will use it.
+judge:
+  - Every stage checks something different, and nothing on the list of must-haves is checked twice or not at all.
+  - Each scorecard question has a strong and a weak answer written next to it.
+  - The work test comes from the real job and takes under two hours.
+  - The comparison cites scorecard evidence for every claim and flags notes that rest on feel.
+  - The replies to rejected candidates give a real reason and say nothing about protected traits.
+test:
+  - Run it on a role you filled last year. Would the scorecards have caught what you later learned about the hire?
+  - Paste a scorecard with the note "great culture fit, very confident". Step 4 should flag it.
+  - Give step 4 two candidates with the same scores. It should say so and ask what matters most, not pick one.
+  - Run step 2 twice. The questions should test the same must-haves both times.
+improve:
+  - Save your scorecards per role family in one folder and reuse them, so every hire for that role is comparable.
+  - Add your company's interview rules (who sees what, how long you keep notes) to step 1's brief.
+  - Keep the work tests and their scoring guides. Retire one when a candidate could find it online.
+  - Pair it with "Hire fairly, from job post to a checked offer letter" for the job post and the offer.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: "Every step is text: plans, scorecards and comparisons."
+    - name: A shared document or hiring tool
+      why: Holds the scorecards so interviewers fill them in before the debrief.
+  inputs:
+    - A real, anonymised task from the last month
+    - Your company's interview and data rules
+    - Notes on why past hires for this role worked or did not
+terms:
+  - term: Scorecard
+    meaning: A sheet with set questions and a rating scale, filled in by each interviewer for each candidate.
+  - term: Work sample test
+    meaning: A short task taken from the real job, done by every candidate under the same conditions.

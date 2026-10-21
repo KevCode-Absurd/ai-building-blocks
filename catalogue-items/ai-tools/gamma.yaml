@@ -1,0 +1,40 @@
+slug: gamma
+name: Gamma
+maker: Gamma
+url: https://gamma.app
+promise: A finished deck, document or web page from a prompt or an outline.
+use_cases: [slides-and-docs]
+categories: [productivity, design]
+what_it_does:
+  - Makes a presentation from a prompt, an outline or an uploaded file.
+  - Makes documents, simple websites and social posts in the same way.
+  - Lays out content as cards that grow to fit your text.
+  - Adds AI images and rewrites text when you ask.
+  - Exports your work and shares it through a link.
+benefits:
+  - Go from a rough outline to a full deck in one sitting.
+  - Reuse one set of notes as a deck, a document and a page.
+  - Change the look of a whole deck without moving boxes by hand.
+  - Share a link people can open without installing anything.
+best_for:
+  - Founders and marketers who build pitch decks and proposals.
+  - Teachers and trainers turning notes into slides.
+  - Anyone who wants a first draft of a deck to edit.
+not_for:
+  - Exact layouts where every element must sit in a set place.
+  - Heavy data decks with many complex charts.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: There is a free plan with a one-time set of credits, then paid Plus, Pro, Ultra, Team and Business plans. The pricing page did not load when read, and outside guides disagree on amounts.
+works_with:
+  - chatgpt
+  - claude
+  - canva
+runs_in: [web, api]
+blocks: []
+alternatives: [beautiful-ai, canva, chatgpt]
+last_checked: 2026-10-21
+sources:
+  - https://gamma.app
+  - https://www.eesel.ai/en/blog/gamma-pricing

@@ -1,0 +1,20 @@
+slug: price-rise-readiness-checker
+name: "Price rise readiness checker"
+summary: "Paste your offer, price and what buyers say. Get a readiness score out of 100 and what to add first."
+category: general
+boards: []
+type: prompt
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - {type: offer, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [alex-hormozi]

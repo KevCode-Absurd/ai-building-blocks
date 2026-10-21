@@ -1,11 +1,11 @@
 new_slug: one-bold-move-picker
 name: "One bold move picker"
-summary: "Paste your plan and rivals. Get one move to back, what to stop, the money it needs and a pass test."
+summary: "Paste your plan and rivals. Get one move to back, a stop list, the cost and pass test."
 job: plan-strategy
 thinking: high
 thinking_why: "It has to compare rivals' weak spots and judge which one move beats the rest, so deeper thinking gives a sharper pick."
 
-headline: "Back the one move that can win, and stop the rest"
+headline: "One bold move picker"
 subhead: "Paste your plan, your fix list from earlier checks if you have one, and your rivals. It finds where each rival is least ready, scores your candidate moves, picks one and writes the stop list, the money it needs, an owner and a pass test with a date."
 
 explain: |

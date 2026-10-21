@@ -1,0 +1,17 @@
+slug: week-plan-from-task-list-maker
+name: "Week plan maker from a task list"
+summary: "Paste your task list and your hours. Get a week plan with three big tasks placed and the rest parked."
+category: general
+boards: []
+type: prompt
+role: plan
+job: ops
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

@@ -13,7 +13,7 @@
 - [Data file reader and writer](https://useaiblocks.com/skills/data-file-reader-and-writer): Name your CSV, Excel, JSON or Parquet file. Get it read or saved correctly, with errors fixed.
 - [Data quality auditor](https://useaiblocks.com/skills/data-quality-auditor): Give it a dataset. Get a report on gaps, duplicates, odd values and the rules that would catch them.
 - [Data story writer](https://useaiblocks.com/skills/data-story-writer): Give it your numbers. Get a clear story with the point, the proof and the next step for your readers.
-- [Deck number refresher](https://useaiblocks.com/skills/deck-number-refresher): Give it a deck and new figures. Get every number updated across the slides, with a list of changes.
+- [Deck number refresher](https://useaiblocks.com/skills/deck-number-refresher): Give it a deck and new figures. Get every number updated across the slides, with a change log.
 - [Doc typo and term checker](https://useaiblocks.com/prompts/doc-typo-and-term-checker): Paste a document. Get typos, grammar slips and term clashes listed, with no rewrites.
 - [Document file generator](https://useaiblocks.com/skills/document-file-generator): Describe the slides, report, sheet or PDF. Get a new PPTX, DOCX, XLSX or PDF file built from a JSON spec.
 - [Editable slide deck builder](https://useaiblocks.com/skills/editable-slide-deck-builder): Give it your story and sources. Get a PowerPoint deck with real editable text, tables and charts, plus a quality check.

@@ -1,0 +1,113 @@
+new_slug: share-of-search-tracker-planner
+name: "Share of search tracker planner"
+summary: "Paste your brand and your rivals. Get a monthly share-of-search tracker and how to read it."
+job: track-numbers
+thinking: low
+thinking_why: "It sets up a known measure from given names; the design is fixed, the terms vary."
+
+headline: "Share of search tracker planner"
+subhead: "Paste your brand name, the rivals buyers compare you with and what people call your category. The prompt builds the search term list, the monthly collection rule, the share formula for your sheet, the reading rules and alarms, and plans the first twelve-month report."
+
+explain: |
+  Most brand measures are expensive, slow or easy to fool. Les Binet has shown in public that one is cheap and hard to fake: your share of all the searches for brands in your category. When it falls for three months while your spend is flat, sales usually follow. When a rival's share climbs, they changed something.
+
+  This prompt sets the tracker up for you. It builds the term list for your brand and each rival, including misspellings and the qualifier for any name that is also a common word. It sets the monthly collection rule and the sheet layout, writes the share formula, and gives you reading rules so a one-month blip is not mistaken for a trend. It adds two alarms, plans the first report with twelve months of history alongside your sales if you have them, and states plainly what the measure cannot tell you.
+
+when:
+  - "You spend on brand and want a measure that moves before sales do."
+  - "You suspect a rival is gaining and have no number to show it."
+  - "Click tracking has got worse and you need something it cannot break."
+
+you_give:
+  - "Your brand name, misspellings and nicknames"
+  - "Your rivals and their common spellings"
+  - "What people call your category"
+  - "Your market, and monthly sales if you have them (advised)"
+you_get:
+  - "A term list with exclusions and qualifiers"
+  - "The collection rule, sheet layout and share formula"
+  - "Reading rules, two alarms and the limits"
+  - "A first-report plan with twelve months of history"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your brand and rivals under it."
+  - "Add your market and, if you have it, monthly sales."
+  - "Set up the sheet from COLLECTION and FORMULA, and pull the first twelve months."
+  - "Put the same day each month in your calendar and read the trend, not the month."
+
+how_it_works:
+  - title: "Builds the term list"
+    text: "Main names, misspellings, nicknames, and a qualifier for any ambiguous name."
+  - title: "Sets the collection rule"
+    text: "Tool, region, day of the month, who does it, and the sheet layout."
+  - title: "Defines the measure"
+    text: "Your volume over the sum of all tracked brands, as a sheet formula."
+  - title: "Writes the reading rules"
+    text: "Three-month trends, what to compare with, and the lead tendency marked to test."
+  - title: "Sets the alarms"
+    text: "A sustained fall with flat spend, or a rival's sustained rise."
+  - title: "Plans the first report and states the limits"
+    text: "Twelve months back, charted with sales if given, and what the measure cannot say."
+
+output_shape: |
+  TERMS           <brand | main | variants | exclusions>
+  COLLECTION      <tool, region, day, who, columns>
+  FORMULA         <share of search formula>
+  READING RULES   <...>
+  ALARMS          <two lines>
+  FIRST REPORT    <...>
+  LIMITS          <three lines>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Brand: Sprout (greens gummies). People also type "sprout gummies",
+    "sprout greens", "sprouts gummy". Note that "sprout" is also a vegetable
+    and a word for a baby plant.
+    Rivals, for our internal tracker only: a big-name greens powder brand
+    that now also sells gummies; a TikTok-famous women's wellness brand with
+    greens gummies; a doctor-backed greens tablet and gummy brand sold in
+    grocery stores; a vegan family vitamin brand with greens gummies.
+    Category words: "greens gummies", "greens powder", "superfood gummies",
+    "daily greens".
+    Market: United States.
+    Sales: monthly first orders for the last 12 months available on request.
+  output: pending
+
+tweaks:
+  - what: "Ambiguous names"
+    how: "Say when a name is also a common word. The term list gets a qualifier so you measure the brand, not the vegetable."
+  - what: "Sales history"
+    how: "Give twelve months and the first report can look for the lead between search share and sales."
+  - what: "Market"
+    how: "Name the countries. Share of search in one country says nothing about another."
+
+judge:
+  - "Every rival has terms and misspellings."
+  - "The formula sums to 100 across brands."
+  - "The lead claim is marked as something to test."
+  - "The limits are there."
+  - "The tracker is clearly internal."
+
+test:
+  - "Pull twelve months and chart share of search against your sales. Look for whether one leads the other."
+  - "Run it twice. The term list and formula should match."
+  - "Give it no rivals. It should set up brand against category only and call it weaker."
+
+improve:
+  - "Add your spend by month, so the alarm 'falling share with flat spend' can be checked."
+  - "Add new rivals when they appear and keep the old columns so history stays comparable."
+  - "Pair it with the Brand and sales budget splitter when the trend says brand needs more."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message setup works in any strong chat AI."}
+    - {name: "A free search trends tool", why: "Gives relative search volume by term and region, which is all the tracker needs."}
+    - {name: "A spreadsheet", why: "One row per month, one column per brand, the formula in the last column."}
+  inputs:
+    - "Monthly sales or orders for the same period"
+    - "Monthly ad spend, to read the alarms properly"

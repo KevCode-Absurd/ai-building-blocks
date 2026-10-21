@@ -1,6 +1,6 @@
 new_slug: measure-first-slowdown-finder
 name: "Measure first slowdown finder"
-summary: "Describe what feels slow. Get a measurement plan, the worst-case view and a ranked list of what to fix."
+summary: "Describe what feels slow. Get a measurement plan, the worst-case view and a ranked fix list."
 job: build-software
 thinking: medium
 thinking_why: "It ranks findings and checks numbers, but the steps are fixed."

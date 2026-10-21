@@ -1,0 +1,28 @@
+slug: price-a-course-or-ebook-and-write-its-launch-emails
+name: "Price a course or ebook and write its launch emails"
+summary: "Give it your course or ebook. Get a price, honest discount wording and the launch email sequence."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: offer
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+  - {type: email_flow}
+uses: [digital-product-pricer, price-ending-picker, discount-wording-planner, launch-email-sequence-planner]
+steps:
+  - {uses: digital-product-pricer, note: "The price for a course, ebook or template, its labels, and the launch discount, from what it does for the buyer and the market around it."}
+  - {uses: price-ending-picker, note: "Round, just-below or exact digits for that price, with the reason, so the number fits the product and the buyer."}
+  - {uses: discount-wording-planner, note: "The discount shown the clearest honest way: percent or amount, how the sale price is displayed, the banner line and a real end date."}
+  - {uses: launch-email-sequence-planner, note: "The launch sequence: trigger, timing and each email, built the way Claude Hopkins sold by mail: one offer, a reason why, proof, and a measured response. Nothing is sent until you say so."}
+origin: own
+version: 1.0.0
+minds: [claude-hopkins]
+credits:
+  - {title: "Scientific Advertising (1923)", by: "Claude C. Hopkins", url: "http://www.scientificadvertising.com/ScientificAdvertising.pdf", used: "Every email makes one offer, gives the reason why, shows proof and asks for a response you can count"}
+example_pending: true

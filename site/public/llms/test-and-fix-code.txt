@@ -2,7 +2,7 @@
 
 > 122 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Accessibility checker](https://useaiblocks.com/skills/accessibility-checker): Point it at a page or code. Get a ranked list of accessibility problems against WCAG 2.2, and fixes if you ask.
+- [Accessibility checker](https://useaiblocks.com/skills/accessibility-checker): Point it at a page or code. Get ranked WCAG 2.2 problems, with fixes if you ask.
 - [Agent run evidence auditor](https://useaiblocks.com/skills/agent-run-evidence-auditor): Give it logs from an AI agent run. Get each success claim checked against real proof, with gaps marked.
 - [Agent system tester](https://useaiblocks.com/skills/agent-system-tester): Describe your AI agent. Get a way to measure how well it works and compare changes.
 - [AI agent tester](https://useaiblocks.com/skills/ai-agent-tester): Describe your AI agent. Get a test set, scoring rules and a release decision memo you can trust.

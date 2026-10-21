@@ -1,0 +1,50 @@
+slug: nano-banana
+name: Nano Banana
+maker: Google
+url: https://gemini.google
+promise: Images made and edited from plain requests, inside Gemini.
+use_cases: [make-images]
+categories: [image]
+what_it_does:
+  - Makes images from a written description in the Gemini app.
+  - Edits a photo you upload when you say what to change.
+  - Blends several photos into one scene.
+  - Keeps a person or product looking the same across images.
+  - Writes short pieces of readable text inside an image.
+benefits:
+  - Fix or restyle a product photo by typing one sentence.
+  - Make a set of matching ad images from one reference picture.
+  - Try image ideas for free before you pay for anything.
+best_for:
+  - Product photos and ad images built from your own pictures.
+  - Quick edits to a photo without opening editing software.
+  - Anyone already using Gemini or a Google account.
+not_for:
+  - Long runs of images when you need a fixed monthly allowance.
+  - Exact brand colours and fonts, which you still need to check by eye.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: Free with a Google account, on a shared allowance with no published image count. Google AI Plus, Pro and Ultra raise the limits. Google lists prices in your local currency.
+works_with:
+  - gemini
+  - adobe-firefly
+  - freepik
+runs_in: [web, mobile, api]
+blocks:
+  - gemini-image-and-video-maker
+  - marketing-image-maker
+  - accurate-product-image-ad-maker
+  - image-ad-maker-with-exact-text
+  - image-ad-settings-picker
+  - scroll-stopping-image-ads
+  - product-photo-set-maker
+  - weekly-image-ad-batch-maker
+  - three-look-product-photos
+  - marketing-image-prompt-writer
+  - single-image-ad-planner
+  - image-upscale-checker
+alternatives: [midjourney, ideogram, flux, adobe-firefly]
+last_checked: 2026-10-21
+sources:
+  - https://gemini.google/subscriptions/

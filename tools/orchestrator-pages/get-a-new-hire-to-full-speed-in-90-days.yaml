@@ -1,0 +1,116 @@
+new_slug: get-a-new-hire-to-full-speed-in-90-days
+name: Get a new hire to full speed in 90 days
+summary: Give it the role and start date. Get a day-one plan, 90-day goals, one-on-ones and a look back.
+job: hire-people
+thinking: high
+thinking_why: It turns a role into goals and meetings a new person can follow. Give it your strongest model.
+headline: Get a new hire to full speed in 90 days
+subhead: Give it the role, the team and the start date. It writes down what the job involves, plans the first week and the 30, 60 and 90 day goals, sets up one-on-ones the way Andy Grove ran them, and looks back after the first month to improve the next start.
+explain: |
+  A new hire's first weeks decide whether they stay. Most start with a laptop that is not ready, a manager in meetings and a vague "settle in". By week six nobody has said what good looks like, so the new person guesses, and the first review is a surprise for both sides.
+
+  This workflow plans those weeks before day one. It writes down the job's real duties and level, so the goals match the role. It builds the pre-start checklist and the first week. It sets 30, 60 and 90 day goals a person can tick off, and plans the one-on-ones around them, following Andy Grove's rule that the report sets the agenda and the manager asks and listens. After the first month you run a short look back, so the next hire starts better still.
+when:
+  - Someone starts in two weeks and you have not written down what their first month looks like.
+  - Your last new hire left inside six months and said they never knew what was expected.
+  - You manage people for the first time and want a one-on-one routine that works.
+you_give:
+  - The role and what it covers
+  - The new person's name, start date and team
+  - What good looks like at 90 days, in your words
+  - After the first month, your notes on how it went (optional)
+you_get:
+  - A duties and level sheet for the role
+  - A pre-start checklist and a first-week plan
+  - 30, 60 and 90 day goals, and a one-on-one routine with the agenda set by the new hire
+  - A look back after month one, with fixes for the next hire
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the role, the team and the start date. It writes the duties sheet, the first-week plan and the 90-day goals.
+  - Hold the one-on-ones as planned and keep short notes.
+  - After 30 days, paste your notes for the look back.
+how_it_works:
+  - title: Write down the real job
+    text: Writes the duties, time split, skills and level for the role, so the goals fit the job.
+  - title: Plan the first week
+    text: Builds the pre-start checklist, the first-week plan and the first goals for 30, 60 and 90 days.
+  - title: Set the 90-day goals
+    text: Turns the goals into a month by month plan with helpers and check-in dates the new hire can tick off.
+  - title: Set up the one-on-ones
+    text: Plans weekly one-on-ones where the new hire sets the agenda and you ask and listen, with the goals checked each time.
+  - title: Run the first month
+    text: A pause. Run the first 30 days. Hold the one-on-ones and keep short notes on what helped and what got in the way.
+  - title: Look back after month one
+    text: Surveys the new hire and you, writes what worked and what did not, and fixes the start-day checklist for the next hire.
+output_shape: |-
+  STEP 1: THE REAL JOB
+    Duties: <...> | Time split: <...> | Skills: <...> | Level: <...>
+
+  STEP 2: BEFORE DAY ONE AND WEEK ONE
+    Pre-start: <accounts, kit, people to meet> | Week one: <day by day>
+
+  STEP 3: 30, 60, 90 DAY GOALS
+    Day 30: <goals> | Helper: <...> | Check-in: <date>
+    Day 60: <...> | Day 90: <...>
+
+  STEP 4: ONE-ON-ONES
+    When: <weekly, length> | Agenda: set by <new hire> | Your questions: <...>
+    Goals checked: <which, how>
+
+  PAUSE: run the first month, hold the one-on-ones
+
+  STEP 5: LOOK BACK
+    Survey: <new hire> | <manager> | What worked: <...> | Fix next time: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Role: customer support lead at Sprout, a daily greens gummy brand sold online and in big-box stores.
+    Covers: 60 to 80 customer emails a day, subscription changes, discount questions (we run several first-order discounts at once and customers get confused), help pages, training one part-time helper.
+    New hire: starts Monday 3 November. First lead role. Team: founder (me), operations manager, one part-time helper.
+    Good at 90 days: replies inside one business day, the discount questions down by half because the help pages explain them, the helper trained, a weekly support report I can read in five minutes.
+    Tools: our help desk, the store admin, a shared drive.
+    I'll paste my notes after the first month.
+  output: pending
+tweaks:
+  - what: What good looks like
+    how: Say it in numbers where you can (replies inside a day, pages written). The goals then have a finish line.
+  - what: The team
+    how: Name who the new hire will work with most. The first-week plan books those meetings.
+  - what: Your one-on-one length
+    how: Say how long you can give each week. The routine fits that, and never drops below one meeting a week in month one.
+  - what: The look back notes
+    how: Bring both your notes and the new hire's. The fixes then come from two views.
+judge:
+  - The 90-day goals come from the duties sheet, and none needs a skill the role does not have.
+  - The pre-start checklist covers accounts, kit and the first meetings, with an owner for each.
+  - Each goal has a date and a helper, and the new hire could tick it off without asking what it means.
+  - The one-on-one agenda is set by the new hire, with your questions listed separately.
+  - The look back names at least one fix for the next hire.
+test:
+  - Run it for the last person you hired. Would the 90-day goals have matched what they actually did?
+  - Give it a role with ten duties. The 30-day goals should cover the first two or three, not all ten.
+  - Read the one-on-one plan as the new hire. Is it clear what you bring to the meeting?
+  - Run step 3 twice. The month one goals should be the same both times.
+improve:
+  - Save the duties sheet per role, so the next hire for that role starts from it.
+  - Add your company's tools and access steps to the pre-start checklist once, then reuse it.
+  - Keep every look back in one file. After three hires, read them together for the pattern.
+  - Pair it with "Set team goals, run one-on-ones and settle decisions" once the new hire is past 90 days.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a checklist.
+    - name: Your calendar
+      why: Book the one-on-ones and check-in dates before day one.
+  inputs:
+    - Your past onboarding notes, even rough ones
+    - The tools and accounts the role uses
+    - The new hire's own questions from the offer stage
+terms:
+  - term: One-on-one
+    meaning: A regular private meeting between a manager and one report, with the report's topics first.

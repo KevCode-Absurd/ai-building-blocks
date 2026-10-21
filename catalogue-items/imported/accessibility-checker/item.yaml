@@ -1,6 +1,6 @@
 slug: accessibility-checker
 name: Accessibility checker
-summary: Point it at a page or code. Get a ranked list of accessibility problems against WCAG 2.2, and fixes if you ask.
+summary: Point it at a page or code. Get ranked WCAG 2.2 problems, with fixes if you ask.
 category: general
 boards: []
 type: skill

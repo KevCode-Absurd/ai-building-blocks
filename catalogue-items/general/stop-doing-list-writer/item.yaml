@@ -1,0 +1,18 @@
+slug: stop-doing-list-writer
+name: "Stop doing list writer"
+summary: "Paste everything your team does. Get the things to stop on purpose, with who tells whom."
+category: general
+boards: []
+type: prompt
+role: plan
+job: ops
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [peter-drucker]

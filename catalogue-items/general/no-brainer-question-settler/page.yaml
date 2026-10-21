@@ -1,11 +1,11 @@
 new_slug: no-brainer-question-settler
 name: No-brainer question settler
-summary: Describe a hard problem. Get the obvious big questions settled first, a rough sum for your target, and a smaller problem left.
+summary: Describe a hard problem. Get the obvious questions settled, a rough target sum and a smaller problem left.
 job: think-and-decide
 thinking: medium
 thinking_why: It has to tell which questions are truly obvious and do simple sums, but the steps are fixed.
 headline: No-brainer question settler
-subhead: Describe the problem or goal and what a good result looks like. It separates the big questions that have an obvious answer from the ones that do not, settles the obvious ones with a reason, runs a rough sum on your target, and hands back a smaller question to work on.
+subhead: Describe the problem and what a good result looks like. It separates the big questions that have an obvious answer from the ones that do not, settles the obvious ones with a reason, runs a rough sum on your target, and hands back a smaller question to work on.
 explain: |-
   A hard problem usually looks hard because many questions are tangled together. Some of them have answers that almost anyone sensible would give. If you settle those first, what is left is smaller and clearer.
 

@@ -1,0 +1,113 @@
+new_slug: problem-cost-question-writer
+name: "Problem cost question writer"
+summary: "Paste what you sell and a buyer's situation. Get the questions that make the cost of their problem clear."
+job: sell-and-negotiate
+thinking: low
+thinking_why: "It writes questions in a fixed sequence from facts you give it."
+
+headline: "Problem cost question writer"
+subhead: "Paste what you sell, the problems it solves and what you know about the buyer. The prompt writes the questions in order, a few about their situation, then their problems, then what those problems lead to and what solving them is worth, plus the moments you usually start pitching and what to ask instead."
+
+explain: |
+  Most sales conversations go wrong the same way. The seller asks two questions, hears a problem they can solve, and starts explaining the product. The buyer nods, says "send me a proposal", and the deal dies in the inbox. Neil Rackham's research, described in public for decades, found that the sellers who win ask more about what the problem leads to, and let the buyer name the cost.
+
+  This prompt writes that question set for one buyer. It cuts the situation questions to the few you cannot look up, writes open problem questions tied to what you solve, then two knock-on questions per problem that ask who else it affects and what it costs, marking the ones that ask for a number. It writes the worth questions, names the three moments you usually start telling and what to ask instead, and ends with one close question that asks for a commitment.
+
+when:
+  - "You have a first meeting with a buyer who could be big."
+  - "Your calls end with 'send me a proposal' and then silence."
+  - "You are training a new seller who talks too much."
+
+you_give:
+  - "What you sell and the problems it solves best"
+  - "The buyer's role, business and what you know"
+  - "What your calls cover today and where they stall (advised)"
+  - "How past buyers described the problem (optional)"
+you_get:
+  - "Situation, problem, knock-on and worth questions in order"
+  - "The three telling traps and what to ask instead"
+  - "One close question that asks for a commitment"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your product and the buyer under it."
+  - "Add where your calls usually stall."
+  - "Read TELLING TRAPS before the call. They are the moments you will want to pitch."
+  - "Ask the questions in order and write down the buyer's numbers."
+
+how_it_works:
+  - title: "Cuts situation questions"
+    text: "Only the two or three facts you cannot look up."
+  - title: "Writes problem questions"
+    text: "Open, in the buyer's world, each tied to a problem you solve, product unnamed."
+  - title: "Writes knock-on questions"
+    text: "What each problem leads to and costs, with number-asking questions marked."
+  - title: "Writes worth questions"
+    text: "What solving it would be worth or allow, in the buyer's words."
+  - title: "Marks the telling traps"
+    text: "Where sellers start pitching and what to ask instead."
+  - title: "Writes the close"
+    text: "One question that asks for a commitment, from the next step you named."
+
+output_shape: |
+  SITUATION       <2 to 3>
+  PROBLEM         <4 to 6>
+  KNOCK-ON        <problem: 2 each>
+  WORTH           <3 to 4>
+  TELLING TRAPS   <moment | ask instead> x3
+  CLOSE           <one question>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    What we sell: Sprout greens gummies to retailers. Problems we solve for
+    a buyer: greens powders and multivitamins sit on shelf because people
+    quit them; the supplement aisle has little that parents buy for kids and
+    themselves in one trip; limited flavours every 4 to 8 weeks give the
+    aisle a reason to change.
+    Buyer: the category manager for vitamins at a regional grocery chain,
+    80 stores. We know they stock two greens powders and a rival greens
+    gummy at $25 to $30 for 50. Our adult line is in a different chain and
+    sells through well.
+    Our calls today: we open with the 60+ ingredients and the clinical study,
+    show the pouch, and the buyer says they will review it at the next
+    category reset. Stalls there.
+    Customer words: "the one thing I've been able to stick to"; "I stopped
+    buying separate probiotic, B12 and multivitamin gummies".
+    Next step we want: a 10-store trial before the spring reset.
+  output: pending
+
+tweaks:
+  - what: "Where calls stall"
+    how: "Say it and the telling traps are your traps, not generic ones."
+  - what: "What you know about the buyer"
+    how: "The more you know, the fewer situation questions and the sharper the problem questions."
+  - what: "The next step"
+    how: "Name the commitment you want and the close question asks for exactly that."
+
+judge:
+  - "No question names your product."
+  - "Every question is open."
+  - "Knock-on questions ask about consequences and costs."
+  - "The situation questions are ones you could not look up."
+  - "The close asks for a real commitment."
+
+test:
+  - "Use the set on one call and count how many numbers the buyer says. Compare with your last call."
+  - "Run it twice. The problem questions should cover the same problems."
+  - "Leave out the problems you solve. It should mark MISSING and write weaker questions."
+
+improve:
+  - "Paste call notes after each meeting so the knock-on questions learn what buyers actually say."
+  - "Add your buyer types and keep a question set per type."
+  - "Pair it with the Objection answer sheet writer for what comes after the questions."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message question set works in any strong chat AI."}
+  inputs:
+    - "Notes or a recording from your last call with this kind of buyer"
+    - "What the buyer's business has said in public about its goals"

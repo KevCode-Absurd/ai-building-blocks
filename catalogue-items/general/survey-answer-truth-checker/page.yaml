@@ -1,0 +1,114 @@
+new_slug: survey-answer-truth-checker
+name: "Survey answer truth checker"
+summary: "Paste your survey questions and results. Get a trust score out of 100, each weak answer and the fix."
+job: research-topics
+thinking: high
+thinking_why: "It judges sampling, wording and memory effects against each other and must explain every deduction."
+
+headline: "Survey answer truth checker"
+subhead: "Paste your survey questions word for word, how it was sent, the response rate and the results. The prompt scores who answered, the wording, memory effects and the fit with your other data, gives a trust score out of 100, sorts the answers into use, direction or discard, and rewrites the survey."
+
+explain: |
+  A survey comes back and the numbers look like facts. Forty percent said they found you on social, so the budget moves. Rand Fishkin has pointed out in public for years why that is risky: people name the channel they saw last, the question's options steer them, and the customers who bother to reply are not the ones who left.
+
+  This prompt scores the survey on four things, each out of 25: who answered and who is missing, how each question is worded, what people typically misremember for each question, and how the answers compare with your analytics or sales. It shows the sum as a trust score out of 100 and what the band means. It sorts each answer into use as is, use as direction or do not use, with a reason, and rewrites the questions and sampling for next time.
+
+when:
+  - "A 'how did you hear about us' survey is about to move your marketing budget."
+  - "A customer survey says one thing and your sales data says another."
+  - "You are writing a survey and want to know what will make the answers worthless."
+
+you_give:
+  - "The questions and answer options, word for word"
+  - "How it was sent, to whom, and the response rate"
+  - "The results"
+  - "What you will decide with it, and any other data on the same question (advised)"
+you_get:
+  - "A trust score out of 100 with four scored parts and reasons"
+  - "Each wording problem quoted, and the memory effects per question"
+  - "Answers sorted into use, direction or discard"
+  - "The rewritten survey for next time"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the questions under it."
+  - "Add how it was sent, who replied, and the results."
+  - "Paste any analytics or sales numbers on the same question."
+  - "Act only on the USE AS IS answers. Send the NEXT TIME version next quarter."
+
+how_it_works:
+  - title: "Checks who answered"
+    text: "Response rate, who was asked, who likely replied, who is missing."
+  - title: "Checks the wording"
+    text: "Leading words, missing options, option order, double questions, impossible recall, each quoted."
+  - title: "Checks memory"
+    text: "Which answers are likely inflated or deflated by how people remember."
+  - title: "Checks against other data"
+    text: "Survey versus analytics, sales or support, with the gaps named."
+  - title: "Scores and sorts"
+    text: "Four parts out of 25, the sum out of 100, and each answer marked use, direction or discard."
+  - title: "Rewrites for next time"
+    text: "Questions, options, sampling, and what to collect alongside."
+
+output_shape: |
+  TRUST SCORE         <a>/25 + <b>/25 + <c>/25 + <d>/25 = <n>/100   <band>
+  WHO ANSWERED        <rate, who, missing>
+  WORDING             <question | problem | quote>
+  MEMORY              <question | inflated | deflated>
+  AGAINST OTHER DATA  <answer | survey | data | gap>
+  USE AS IS / DIRECTION / DO NOT USE
+  NEXT TIME           <rewrites, sampling>
+  MISSING             <...>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Sprout post-purchase survey, shown on the thank-you page after a first
+    order, October, no incentive. Shown to about 4,000 buyers, 610 answered.
+    Q1 "How did you hear about Sprout?" options in this order: Instagram or
+    Facebook ad, TikTok, a friend, saw it in a store, podcast, other.
+    Results: ads 44%, TikTok 18%, friend 15%, store 12%, podcast 4%, other 7%.
+    Q2 "What made you decide to buy today?" options: the discount, the taste,
+    I want to stick to a supplement, gut health, for my kids. Results:
+    discount 38%, gut health 24%, stick to it 19%, taste 11%, kids 8%.
+    Q3 "How often will you take Sprout?" options: daily, 4 to 6 times a
+    week, less. Results: daily 71%, 4 to 6 times 24%, less 5%.
+    Decision: whether to move budget from Meta ads to podcasts and store
+    promotions.
+    Other data: the brand is on shelves in big-box and grocery chains; the
+    public ad library shows about 80% of our live ads are discount-led;
+    analytics show 9% of first orders use a podcast promo code.
+  output: pending
+
+tweaks:
+  - what: "Response rate"
+    how: "Give asked and answered. Without it the who-answered score is capped."
+  - what: "Other data"
+    how: "Analytics, promo codes and sales by channel turn the comparison from a suggestion into a table."
+  - what: "The decision"
+    how: "Say what the survey will change. The sort into use, direction or discard is made against it."
+
+judge:
+  - "Every wording problem quotes a question."
+  - "The four parts add up to the score."
+  - "The memory notes are about specific questions."
+  - "Each answer sorted has a reason."
+  - "The NEXT TIME survey is one you could actually send."
+
+test:
+  - "Run it on a survey whose answers you later found wrong. The weak answers should be the ones it marks."
+  - "Run it twice. The band and the DO NOT USE list should match."
+  - "Leave out the response rate. The who-answered score should be capped at 10 and say why."
+
+improve:
+  - "Add the channels and promo codes you track, so the other-data comparison is always possible."
+  - "Save the NEXT TIME version as your standard survey and run the checker on it before sending."
+  - "Pair it with the Review reason spotter to compare what buyers say unprompted."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a scored check in one message."}
+  inputs:
+    - "Analytics by channel for the same period"
+    - "Promo code use and store sell-through, to compare with the channel answers"

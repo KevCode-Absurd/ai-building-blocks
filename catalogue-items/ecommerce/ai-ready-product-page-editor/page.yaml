@@ -1,6 +1,6 @@
 new_slug: ai-ready-product-page-editor
 name: "AI-ready product page editor"
-summary: "Give it a product or collection page. Get the facts, spec table, FAQs and markup checklist AI tools can use."
+summary: "Give it a product page. Get the facts, spec table, FAQs and markup checklist AI tools can use."
 job: get-found-in-search
 thinking: medium
 thinking_why: "It rewrites a page from your facts and keeps every claim true. A mid-level model is enough. Check the facts it uses against your own."

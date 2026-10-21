@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It looks for friction and then redesigns the order of steps.
 new_slug: decision-friction-auditor
 name: Decision friction auditor
-summary: Give it a page or flow. Get the spots where layout, defaults or order stop people acting, with clearer fixes.
+summary: Give it a page or flow. Get the spots where layout, defaults or order stop people, with fixes.
 job: audit-landing-page
 headline: Decision friction auditor
-subhead: Give it a page or flow. Get the spots where layout, defaults or order stop people acting, with clearer fixes.
+subhead: Give it a page, screenshot or flow such as a checkout or sign-up, the one action you want and who the users are. It traces the path step by step. You get a marked-up list of friction points in layout, defaults and order, a clearer replacement for each and ideas to test.
 explain: |
   Spot why people stall on your page or flow, and fix it. Give it a screen, checkout or sign-up and you get a marked-up list of friction points in layout, defaults, order of steps and cues, each with a clearer replacement.
 

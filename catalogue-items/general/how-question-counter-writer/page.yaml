@@ -1,0 +1,112 @@
+new_slug: how-question-counter-writer
+name: "How-question counter writer"
+summary: "Paste a bad offer or demand you face. Get the 'how' questions that push back without saying no."
+job: sell-and-negotiate
+thinking: low
+thinking_why: "It writes a short set of questions from a constraint you give it."
+
+headline: "How-question counter writer"
+subhead: "Paste the offer or demand you cannot accept, the real reason you cannot, and what you could live with. The prompt names their need, writes a label and five how-or-what questions in the order to use them, a holding line for 'answer now', and the shape of a yes."
+
+explain: |
+  When someone makes you a bad offer, "no" starts a fight and "yes" costs you. The third option, which Chris Voss explains in public, is to ask them how. "How am I supposed to deliver that in two weeks with the team I have?" puts your problem on their desk, and people work on problems they are asked to solve.
+
+  This prompt reads the demand and guesses what the other side really needs. It writes a label that names their pressure without agreeing to anything, then five questions that start with how or what and rest on your real constraint. No whys, no yes-or-no questions, no bluffs. It orders them from softest to the one you keep for "take it or leave it", writes the line to hold when they press for an answer now, and gives you the sentence to say when a question opens a door toward a deal you could accept.
+
+when:
+  - "A client wants the price cut or the deadline halved and you cannot do either."
+  - "A supplier or landlord sends new terms and expects a yes by Friday."
+  - "You tend to cave or to blow up, and want a third way ready before the call."
+
+you_give:
+  - "The offer or demand, with numbers and dates"
+  - "Why you cannot accept it, in plain words"
+  - "What you could accept (advised)"
+  - "Who they are and what they need from you (optional)"
+you_get:
+  - "Their position and probable need"
+  - "A label and five how-or-what questions, ordered"
+  - "A holding line and the question for 'take it or leave it'"
+  - "The shape of a yes"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the demand under it."
+  - "Write the real constraint, even if it is just cash."
+  - "Say the LABEL and the first question out loud before the call. Change any word that does not sound like you."
+  - "Use the questions in order. Let the silence after each one do its work."
+
+how_it_works:
+  - title: "Names their position and need"
+    text: "What they asked for and what they probably need, marked as a guess where it is one."
+  - title: "Writes the label"
+    text: "One sentence that names their pressure without agreeing."
+  - title: "Writes five questions"
+    text: "How or what, each resting on your constraint, none answerable with yes or no."
+  - title: "Orders them"
+    text: "Softest first, one held for pushback, one for take it or leave it."
+  - title: "Writes the holding line"
+    text: "What to say when pressed for an answer now."
+  - title: "Shapes the yes"
+    text: "What you could say when a question opens a door, inside what you can accept."
+
+output_shape: |
+  THEIR POSITION  <ask> | THEIR NEED <guess>
+  LABEL           <one sentence>
+  QUESTIONS       1 to 5 with timing
+  HOLDING LINE    <...>
+  IF THEY SAY TAKE IT OR LEAVE IT <...>
+  SHAPE OF A YES  <...>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Demand: a grocery chain buyer wants to stock Sprout Kids in 300 stores
+    but wants 90-day payment terms instead of our 60, a 25% launch discount
+    for the first two orders, and free in-store display units, with a yes
+    by Friday or they move to a rival's greens gummy.
+    Why we cannot: cash is about 3 months at current spend; 90 days on
+    300 stores would mean funding roughly a quarter's worth of stock before
+    we are paid, and we have a pouch reprint to pay for. The 25% discount
+    on top of our wholesale margin leaves almost nothing per pouch.
+    What we could accept: 60-day terms with a smaller launch discount, or
+    90 days on a 100-store pilot first, or display units if they are shared
+    cost.
+    Relationship: first deal with this chain; they already stock our adult
+    line in 120 stores and it sells through well.
+  output: pending
+
+tweaks:
+  - what: "The real constraint"
+    how: "Give the honest reason. Questions built on a real constraint sound true because they are."
+  - what: "Your range"
+    how: "Say what you could accept and the SHAPE OF A YES becomes something you can actually say."
+  - what: "Their words"
+    how: "Paste what they wrote. The label and the first question can echo it."
+
+judge:
+  - "No question starts with why or can be answered yes or no."
+  - "Nothing says no or threatens."
+  - "Each question rests on your real constraint."
+  - "The label is about them."
+  - "The yes stays inside what you said you could accept."
+
+test:
+  - "Use the first question in a low-stakes negotiation this week and note what the other side does next."
+  - "Run it twice. The holding line and the take-it-or-leave-it question should match in substance."
+  - "Give it no constraint. It should mark MISSING and say the questions are weaker."
+
+improve:
+  - "Add questions that worked for you before, so the five sound like you."
+  - "Add your walk-away point so the holding line never drifts past it."
+  - "Pair it with the Negotiation call prep planner for the whole call."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message set of questions works in any strong chat AI."}
+  inputs:
+    - "The other side's past emails, for their words and their pressures"
+    - "Your cash and capacity numbers, so the constraint is exact"

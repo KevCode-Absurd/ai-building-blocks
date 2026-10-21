@@ -1,0 +1,48 @@
+slug: github-copilot
+name: GitHub Copilot
+maker: GitHub (Microsoft)
+url: https://github.com/features/copilot
+promise: AI help in your code editor and on GitHub, from suggestions to pull requests.
+use_cases: [code]
+categories: [coding]
+what_it_does:
+  - Suggests code as you type, and the next edit you are likely to make.
+  - Answers coding questions in chat and proposes changes to your code.
+  - Works through a GitHub issue in the background and opens the changes for review.
+  - Reviews pull requests on GitHub.
+  - Connects to outside services through MCP servers your organisation approves.
+  - Gathers docs and repositories into a shared reference for a team.
+benefits:
+  - Write routine code faster without leaving the editor you already use.
+  - Assign a ticket to an agent and come back to a pull request.
+  - Get a review pass on a pull request before a teammate looks.
+  - Keep your code, issues and AI help in one place.
+best_for:
+  - Teams that already host their code on GitHub.
+  - Developers who use VS Code, JetBrains, Visual Studio or Xcode.
+  - Companies that need admin controls over how AI is used.
+not_for:
+  - Anyone who wants an app built from a description with no coding.
+  - Heavy agent users who want a flat, predictable bill, since agent work uses credits.
+pricing:
+  model: freemium
+  from: US$10 per month
+  note: Free plan with limited chat and 2,000 inline suggestions a month. Pro is US$10 and Pro+ is US$39 per month. Agent mode, chat and the command line use AI credits. Business and Enterprise prices are not listed on the page.
+works_with:
+  - claude
+  - codex
+  - VS Code
+  - JetBrains
+  - Visual Studio
+  - Xcode
+runs_in: [desktop, web, mobile]
+blocks:
+  - agent-context-setter
+  - agent-instructions-auditor
+  - mcp-config-version-checker
+  - mcp-tool-set-designer
+alternatives: [cursor, claude-code, windsurf, codex]
+last_checked: 2026-10-21
+sources:
+  - https://github.com/features/copilot/plans
+  - https://github.com/features/copilot

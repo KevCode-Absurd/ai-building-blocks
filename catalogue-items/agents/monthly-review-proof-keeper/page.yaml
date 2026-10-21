@@ -1,0 +1,169 @@
+new_slug: monthly-review-proof-keeper
+name: Monthly review proof keeper
+summary: Share new reviews. Get approved quotes checked, claims linked to
+  evidence and gaps for the next request.
+job: understand-customers
+thinking: high
+thinking_why: It must judge which review is honest proof for which claim, keep
+  quotes exactly as written and never promote an over-claim. Give it your
+  strongest model.
+headline: Monthly review proof keeper
+subhead: Give it last month's new reviews from every source and the pages that
+  show proof. It finds the themes that moved, pairs each claim on your pages
+  with its strongest real proof, flags the claims with none, says which quotes
+  to show and where, and lists who could fairly be asked for a review. You
+  publish.
+explain: >
+  Social proof goes stale and quietly wrong. The home page quote is three years
+  old. The rating badge says one number, the public review site says another,
+  and the page shows neither source. The newest reviews praise the thing
+  customers really value, and the page still leads with a claim the reviews
+  stopped backing a year ago.
+
+
+  This agent reads the month's reviews from every source, keeping hand-picked,
+  widget, retailer and public reviews apart, because the public ones carry the
+  complaints. It tracks the themes month to month and puts the one that moved
+  most at the top. It pairs each claim on your pages with its strongest proof
+  and flags every claim with none, without softening it. It says which quotes to
+  show, from someone like the reader with a true number, and which to drop for
+  age. It checks every rating against its source and lists buyers who could
+  fairly be asked for a review, with no reward and no rush. It never publishes a
+  word.
+when:
+  - Your pages show quotes and ratings nobody has checked in a year.
+  - Your rating badge and the public review site disagree.
+  - You want review requests that are fair, timed right and never rewarded.
+you_give:
+  - Last month's new reviews from your site, widget, retailers and public sites,
+    as written, names removed
+  - The text of each page that shows proof, with every quote, rating and number
+    (advised)
+  - Your product facts and what you can claim (advised)
+  - A read-only connection to your store, for the ask list (optional)
+  - Last month's keeper file, once it exists
+you_get:
+  - Themes by source, with counts, share and change, and quotes
+  - Each claim on your pages with its strongest proof, and every claim with none
+    flagged
+  - Which quotes to show, where they go and from which review, and what to drop
+  - Line-by-line mismatches on pages whose proof changed
+  - Every rating shown, with its source and whether it still matches
+  - A list of buyers who could fairly be asked for a review, for approval
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in
+    .claude/agents, then ask it to run last month.
+  - Export the month's reviews from each source with date and rating. Put them
+    in one folder with your page texts, or attach them in the chat.
+  - Add your product facts and claims once. It saves them.
+  - Read the flagged claims first. Fix or remove them on your pages yourself.
+  - Place the proof you approve. Send review requests yourself to the list you
+    approve. Run it again next month.
+how_it_works:
+  - title: Read last month
+    text: Picks up the proof published and the claims flagged last time.
+  - title: List who could be asked
+    text: Buyers 7 to 14 days after delivery, minus refunds and anyone asked in six
+      months, as a list for approval with no reward.
+  - title: Find the themes
+    text: Themes by source with quotes and counts, compared with last month, with
+      the one that moved most on top.
+  - title: Pair claims with proof
+    text: Each claim on your pages with its strongest proof from the reviews, and
+      every claim with none flagged, never softened.
+  - title: Place the proof
+    text: Which quote or number to show, where, from which review, and what to drop
+      for age.
+  - title: Re-check the pages that change
+    text: Line by line against the proof on file, with every rating checked against
+      its source.
+  - title: Log and hand back
+    text: Updates the themes, shown and asks files, then stops. You publish.
+output_shape: >-
+  THIS MONTH
+    <n> new reviews | by source: <site n at x.x | widget n at x.x | retailer n at x.x | public n at x.x> | moved most: <theme>
+
+  WHO COULD BE ASKED (for approval, no reward)
+    <order id> | delivered <date> | ask from <date>
+
+  THEMES
+    <theme> | <n> (<%>) | last month <n> | <source> | "<quote as written>"
+    sources disagree on: <what>
+
+  CLAIMS AND PROOF
+    "<claim>" | strongest proof: "<quote>" (<source>, <date>) | or FLAGGED: no proof
+
+  PROOF TO SHOW
+    <page> | <spot> | show: "<quote>" (<source>, <date>) | drop: "<old quote>" (<date>)
+
+  PAGE MISMATCHES
+    <page> line <n> | says <x> | proof says <y>
+
+  RATINGS
+    <page> shows <x.x> | source: <which> | source today: <x.x> | <matches | mismatch>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run October for Sprout. Reviews are the 20 public quotes on file plus
+    this month's batch (practice counts, not Sprout's real figures):
+    brand site widget 1,140 new at 4.8; big-box retailer 210 at 4.5;
+    public review site 61 at 3.9, with cancelling the loudest complaint.
+    Quotes as written include: "Sprout has been the one thing I've been
+    able to stick to"; "My bowel movements are normal for the 1st time
+    in 15 years!"; "I hate subscriptions because I feel like they are a
+    trap"; "after the third day they started tasting better".
+    Pages: product page shows "4.8/5.0 (100,000)" and "1M+ Customers";
+    the on-page widget shows 4.75 from 109,639; the reviews page says
+    4.74 from 118,002. Home page quote is from 2023. Claims on the page:
+    "Promotes mental clarity + energy", "Supports digestion and gut
+    health", "Clinically tested for nutrient absorption".
+    Claims register: "supports" only; the study measured vitamin C and
+    folate in the blood; survey numbers must say "of surveyed users".
+  output: pending
+tweaks:
+  - what: Sources kept apart
+    how: Export each source separately. Hand-picked reviews and public ones tell
+      different stories, and the agent keeps them apart.
+  - what: Quote age
+    how: Quotes older than two years are dropped unless nothing newer says the same.
+      Set one year for a fast-moving product.
+  - what: Ask window
+    how: Buyers are listed 7 to 14 days after delivery. Set longer for a product
+      that takes weeks to judge.
+  - what: Claims register
+    how: With it, a review that over-claims is never promoted to the page.
+judge:
+  - Every quote is as written with source and date.
+  - Every claim has proof or a flag, and none was softened.
+  - No review request offers a reward or goes to someone asked in six months.
+  - Every rating shown names its source.
+  - Nothing was asked, published or changed.
+test:
+  - Give it a page with a claim you know the reviews never mention. It should
+    flag it, not soften it.
+  - Give it a widget rating and a public rating that differ. It should list both
+    with sources, not average them.
+  - Run it twice on the same reviews. The proof to show should match.
+improve:
+  - Write your claims register before the first run, so over-claims in reviews
+    are caught.
+  - Export reviews by source every month and keep the files in the folder.
+  - Record every quote you publish with its review and date in the shown file.
+  - Pair it with the Public review reply desk, which answers reviews; this one
+    decides which to show as proof.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the themes, shown and asks files between months and run on the
+        first working day.
+    - name: Your review widget
+      why: Export reviews with date, rating and source. A read-only store connection
+        lets the ask list read orders directly.
+  inputs:
+    - The date each quote on your pages was published
+    - Your page templates, so proof spots are known by name

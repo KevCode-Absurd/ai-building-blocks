@@ -1,0 +1,107 @@
+new_slug: size-a-market-and-separate-facts-from-guesses
+name: Size a market and separate the facts from the guesses
+summary: Give it the market and your idea. Get a size estimate, the facts behind it and a report.
+job: research-topics
+thinking: high
+thinking_why: It builds numbers from sources and must say which are findings and which are guesses. Give it your strongest model.
+headline: Size a market and separate the facts from the guesses
+subhead: Give it the market and who you would sell to. It estimates the size from the bottom up, finds the public facts behind each input, separates what is known from what is guessed, and writes a market report where every number says which it is.
+explain: |
+  Market size numbers are mostly made up and passed on. A deck says the market is $12 billion, the source is another deck, and the number that matters, how many people would actually buy this, was never worked out.
+
+  This workflow builds the number from the bottom and labels every part. It estimates the market from the people or businesses who have the problem, how many could buy, and what they would pay. It then looks for the public facts behind each input: census and trade data, filings, official statistics. It separates findings from guesses, in the manner of Newton and Darwin, who kept what they had observed apart from what they inferred. Then it writes the report with each number marked as a fact with its source or a guess with its reasoning, so a reader can argue with the right part.
+when:
+  - You are writing a plan or a deck and need a market size that holds up to questions.
+  - Two sources give you numbers a factor of five apart.
+  - You want to know which inputs to test, because they are guesses.
+you_give:
+  - The market and who you would sell to
+  - What you already know or believe about its size
+  - Your price or an idea of it
+  - Any data you already have (optional)
+you_get:
+  - A bottom-up size estimate with every input shown
+  - The public facts found for each input, with sources
+  - A split of findings from guesses, with the guesses that matter most
+  - A market report with every number labelled fact or guess
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the market, who you would sell to and your price. It builds the estimate and looks for the facts.
+  - Read the findings and guesses split. Decide which guesses to go and test.
+  - Use the report, and update it when a guess becomes a finding.
+how_it_works:
+  - title: Estimate from the bottom up
+    text: Builds the market size from who has the problem, how many could buy and what they would pay, with every input shown.
+  - title: Find the public facts
+    text: Finds public data for each input, with source and date.
+  - title: Separate findings from guesses
+    text: Marks each input as a finding or a guess and ranks the guesses by how much they move the total.
+  - title: Write the report
+    text: Writes the report with every number labelled, a range instead of one figure, and what to test next.
+output_shape: |-
+  STEP 1: ESTIMATE
+    Who has the problem: <n> (how: <...>) | Could buy: <n> | Would pay: <...> | Size: <range>
+
+  STEP 2: PUBLIC FACTS
+    <input>: <fact> (source: <...>, <date>) | No public data found: <input>
+
+  STEP 3: FINDINGS AND GUESSES
+    <input>: <finding / guess> | Basis: <...> | Moves the total by: <...>
+    Test first: <guess>
+
+  STEP 4: REPORT
+    Size: <range> | Facts: <...> | Guesses: <...> | Test next: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. We want to size the US market for a kids' daily greens gummy sold to parents, before we commit to a kids 12-pack for big-box stores.
+    Who we'd sell to: parents of children aged 2 to 13 who already buy a children's vitamin or gummy.
+    What I believe: a lot of US households have kids in that range; some share buys a children's supplement; our kids pouch sells at $53.32 one-time or $24.99 on a first order, and the 12-pack would retail around $14.97.
+    Data I have: our own kids line is about 15% of our site sales; in one retailer, kids 12-packs sold at about a third the rate of adult packs.
+    I don't want a headline number from a market report. I want to know which of my inputs are facts and which are hopes.
+  output: pending
+tweaks:
+  - what: Who has the problem
+    how: Define them tightly. The whole estimate hangs on this count.
+  - what: Your own data
+    how: Bring sales, conversion or survey numbers. They turn guesses into findings.
+  - what: The region
+    how: Say the country or area. Public data is found per region.
+  - what: The reader
+    how: Say if this goes to investors or your team. The report's range and labels are the same, but the length changes.
+judge:
+  - Every input of the estimate is shown, with how it was reached.
+  - Each public fact has a source and a date.
+  - Every input is marked finding or guess, and the guesses are ranked by how much they move the total.
+  - The report gives a range, not one number.
+  - The report says which guess to test first.
+test:
+  - Give it a market where no public data exists. Step 2 should say so rather than invent a figure.
+  - Give it a headline market size from a deck. Step 3 should mark it as a guess until its basis is found.
+  - Run step 1 twice. The structure of the estimate should match.
+  - Change one guess by half and check the report's range moves as step 3 predicted.
+improve:
+  - Save the public sources you found per region and reuse them.
+  - When a guess becomes a finding, update the estimate and keep the old version.
+  - Add your own sales data file once, so step 3 has findings from the start.
+  - Pair it with "Pick a market worth selling to and its price" once the size is known.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Official statistics sites
+      why: Census, trade and health statistics are the facts behind the inputs.
+    - name: A spreadsheet
+      why: Holds the estimate so you can change an input and see the range move.
+  inputs:
+    - Your own sales or survey data
+    - Industry reports you have, with their methods
+    - Competitor filings or public numbers
+terms:
+  - term: Bottom-up estimate
+    meaning: A market size built from the number of buyers and what they pay, instead of taken from a headline figure.

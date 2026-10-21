@@ -1,0 +1,29 @@
+slug: blog-post-publish-check-loop
+name: "Blog post publish check loop"
+summary: "Give it a finished draft. Get every claim matched to proof, the words made plain and the page fixed until it passes."
+category: agent
+type: agent
+role: orchestrate
+job: copy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brand_brain, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: audit_report}
+uses: [claim-and-proof-matcher, plain-english-editor, draft-brand-voice-checker, answer-first-page-rewriter, ai-citation-scorer, article-formatter]
+steps:
+  - {uses: claim-and-proof-matcher, note: "Every draft, first: each claim matched to its proof, with unsupported ones listed. Runs again after fixes."}
+  - {uses: plain-english-editor, note: "Every draft: clutter cut, each cut explained, the writer's voice kept."}
+  - {uses: draft-brand-voice-checker, note: "Every draft, when a brand brain exists: off-voice lines ranked with fixes."}
+  - {uses: answer-first-page-rewriter, note: "Only when the draft is a guide, how-to or FAQ: each section rewritten to give the answer first."}
+  - {uses: ai-citation-scorer, note: "Every draft: each passage scored on how easily an AI assistant can quote it, with rewrites to try. Loops back to the editor while the score is low."}
+  - {uses: article-formatter, note: "Last, once the checks pass: title, summary, headings and lists tidied, same words."}
+schedule: "Each time a draft is marked ready, and again after each round of fixes"
+asks_before: [publishing or scheduling the post, changing a claim or a number, adding a source the writer did not give, changing the title or the point of the piece, sending the draft to anyone]
+minds: [william-zinsser]
+origin: own
+version: 1.0.0
+example_pending: true

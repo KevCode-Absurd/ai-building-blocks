@@ -1,6 +1,6 @@
 new_slug: marketing-plan-order-checker
 name: "Marketing plan order checker"
-summary: "Paste your marketing plan. Get it sorted into diagnosis, strategy and tactics, the gaps named and a score out of 100."
+summary: "Paste your marketing plan. Get it sorted into diagnosis, strategy and tactics, plus a score out of 100."
 job: plan-strategy
 thinking: medium
 thinking_why: "It sorts lines into three kinds and checks links between them, which needs care but follows set rules."

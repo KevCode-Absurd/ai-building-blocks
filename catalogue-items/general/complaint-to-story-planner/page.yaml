@@ -1,0 +1,107 @@
+new_slug: complaint-to-story-planner
+name: "Complaint to story planner"
+summary: "Paste a complaint and your fix. Get the one surprise that turns it into a story customers retell."
+job: help-customers
+thinking: medium
+thinking_why: "It weighs five gestures against cost, time and how they would land before picking one."
+
+headline: "Complaint to story planner"
+subhead: "Paste a customer complaint, the fix you are already making and what you can spend. The prompt finds one personal detail, lists five gestures with their cost and the line a friend would hear, picks the best story per dollar, writes the note and sets a team rule."
+
+explain: |
+  A refund closes a ticket. It does not make anyone tell a friend. Tony Hsieh built a company on the public idea that service is marketing when it surprises people, and that the surprise works best when it is small, personal and comes after the problem is fixed.
+
+  This prompt starts by checking that the fix is real, because a gift before the fix reads as a bribe. It then finds one detail from the customer's own words, lists five gestures from a handwritten note to a fix for everyone, with what each costs in money and minutes and the sentence a friend would hear. It picks one that fits your limits, writes the note or call script in under 60 words, and turns it into a rule your team can follow next time without asking you.
+
+when:
+  - "A complaint is fixed and you want the customer to leave happier than before it happened."
+  - "You have a small budget and want it to buy word of mouth rather than ads."
+  - "Your team fixes problems fine but every reply reads the same."
+
+you_give:
+  - "The complaint in the customer's words"
+  - "The fix you are making and when"
+  - "Anything they mentioned about their life (advised)"
+  - "What you can spend and what your team can do (advised)"
+you_get:
+  - "The personal hook"
+  - "Five gestures with cost, owner and the line a friend would hear"
+  - "The pick, the words to send, and a team rule"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the complaint under it."
+  - "Add the fix, your spend limit and anything the customer mentioned."
+  - "Read FIX STATUS. If it is not done, finish the fix first."
+  - "Send the words with the gesture, and add the TEAM RULE to your support notes."
+
+how_it_works:
+  - title: "Checks the fix"
+    text: "Says whether the fix is done, in progress or uncertain. The surprise waits for the fix."
+  - title: "Finds the hook"
+    text: "One detail about the customer's life from their own words."
+  - title: "Lists five gestures"
+    text: "A note, a small item, a call, a fix for everyone and a wild card, each with cost and the friend's line."
+  - title: "Picks one"
+    text: "Best story per dollar inside your limits. Anything that feels like a bribe or a sales push is crossed off."
+  - title: "Writes the words"
+    text: "A note or call script under 60 words, naming the detail."
+  - title: "Sets a team rule"
+    text: "When X happens, we do Y, within Z. Something a new hire can follow."
+
+output_shape: |
+  FIX STATUS      <done | in progress | uncertain>
+  THE HOOK        <one detail>
+  FIVE GESTURES   <what, cost, who, the friend's line> x5
+  THE PICK        <which and why>
+  THE WORDS       <under 60 words>
+  TEAM RULE       <when X, we do Y, within Z>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Complaint (email): "My daughter's Kids Sprout pouch arrived torn open and
+    half the packs had leaked. She was so excited to try the strawberry
+    ones for her first week of school and now she's upset. I've been a
+    subscriber for 8 months."
+    Fix: a replacement Kids pouch shipped today with 2-day delivery; the
+    damaged one does not need to be returned.
+    What we can spend: up to $15 per gesture. We have the Raspberry
+    Lemonade limited flavour in stock and Sprout stickers. The support team
+    is three people; a phone call is possible.
+  output: pending
+
+tweaks:
+  - what: "The hook"
+    how: "The more the customer said about their life, the more personal the pick. Paste their whole message."
+  - what: "Spend limit"
+    how: "Set it low. The best gestures in the list are usually the cheapest ones."
+  - what: "What you have on hand"
+    how: "List stock, stickers, samples and who can make a call. Gestures only use what you listed."
+
+judge:
+  - "The fix is confirmed before any gesture."
+  - "The pick is inside your spend and time limits."
+  - "The note names the customer's detail, not a generic 'valued customer'."
+  - "No gesture smuggles in a coupon or a sales pitch."
+  - "The team rule is clear enough to follow without you."
+
+test:
+  - "Use it on a complaint from last month. Ask yourself if the pick would have been worth the cost."
+  - "Run it twice. THE HOOK should match."
+  - "Give it a complaint with no personal detail. It should say so, not invent one."
+
+improve:
+  - "List the gestures you have already used and how customers reacted, so the five get better."
+  - "Add your brand's voice lines, so the note sounds like you."
+  - "Collect the TEAM RULEs into one page for new support hires."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message plan works in any strong chat AI."}
+  inputs:
+    - "The customer's order history and how long they have been with you"
+    - "A list of small items you can send at low cost"

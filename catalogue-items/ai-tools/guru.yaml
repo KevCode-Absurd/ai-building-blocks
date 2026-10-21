@@ -1,0 +1,38 @@
+slug: guru
+name: Guru
+maker: Guru
+url: https://www.getguru.com
+promise: Cited answers from your company's knowledge, kept up to date by your own experts.
+use_cases: [organise-work, research]
+categories: [productivity, sales-and-support]
+what_it_does:
+  - Gathers company knowledge from the apps your team uses.
+  - Answers questions in chat with citations.
+  - Lets experts verify cards so answers stay current.
+  - Sends answers to Slack, Teams and the browser.
+  - Shows which knowledge is out of date.
+benefits:
+  - Give support and sales staff one answer they can trust.
+  - Cut repeat questions to your experts.
+  - Find out which help pages have gone stale.
+  - Show where each answer came from.
+best_for:
+  - Support, sales and enablement teams.
+  - Companies where policies and product facts change often.
+  - Teams that want answers inside Slack or the browser.
+not_for:
+  - Solo owners, since it is sold to companies through a sales call.
+  - Teams with no one to look after the knowledge.
+pricing:
+  model: enterprise
+  from: Check the maker's site
+  note: No public prices. The maker sets a package after a first conversation with its team. Reduced pricing exists for eligible non-profits.
+works_with:
+  - Slack
+  - Microsoft Teams
+runs_in: [web, browser-extension, slack]
+blocks: []
+alternatives: [glean, notion-ai, intercom-fin, zendesk-ai]
+last_checked: 2026-10-21
+sources:
+  - https://www.getguru.com/pricing

@@ -1,0 +1,27 @@
+slug: pre-sell-your-idea-to-three-buyers-then-launch-in-thirty-days
+name: "Pre-sell to three buyers, then launch in thirty days"
+summary: "Give it your idea. Get a three-buyer test, a paid ask, a launch plan and a trial log."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: plan}
+  - {type: lessons_register}
+uses: [three-buyer-idea-test-planner, two-day-paid-ask-planner, thirty-day-launch-planner, trial-log-planner]
+steps:
+  - {uses: three-buyer-idea-test-planner, note: "Who to ask first, in what order, what to say in one line, what counts as a real yes (money, not words), in Noah Kagan's manner."}
+  - {uses: two-day-paid-ask-planner, note: "The two-day ask: the message, the price, how to take the money today, what you promise and when, and what to say to a no."}
+  - {uses: thirty-day-launch-planner, note: "If three paid: the smallest version that works, built and shipped on a date thirty days out, in the manner of Pieter Levels and Sara Blakely. If not: what the log says to change, and whether to try once more."}
+  - {uses: trial-log-planner, note: "A log for every attempt: what you expected, what happened, what it taught, in the manner of Edison and Galileo, so each no narrows the next try."}
+origin: own
+version: 1.0.0
+minds: [noah-kagan, pieter-levels, sara-blakely, thomas-edison, galileo-galilei]
+credits:
+  - {title: "How to Validate a Business Idea in 48 Hours", by: "Noah Kagan", url: "https://noahkagan.com/validate-a-business-idea/", used: "Get three paying customers in 48 hours before you build"}
+  - {title: "12 Startups in 12 Months (March 1, 2014)", by: "Pieter Levels", url: "https://levels.io/12-startups-12-months", used: "Ship the smallest version on a fixed date and learn from the launch"}
+example_pending: true

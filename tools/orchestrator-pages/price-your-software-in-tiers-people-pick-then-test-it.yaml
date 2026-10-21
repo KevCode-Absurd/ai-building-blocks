@@ -1,0 +1,112 @@
+new_slug: price-your-software-in-tiers-people-pick-then-test-it
+name: Price your software in tiers people pick, then test it
+summary: Give it your product and customers. Get a revenue model, tiers, a price page and a safe test.
+job: set-prices
+thinking: high
+thinking_why: It makes money decisions from your numbers and designs a test you can undo. Give it your strongest model.
+headline: Price your software in tiers people pick, then test it
+subhead: Give it your product, your customers and any sales numbers. It picks the revenue model, designs a value metric and good, better, best tiers, lays out the price page so the value is clear without tricks, and plans a price test you can undo, with the number that decides.
+explain: |
+  Most software prices are a guess made at launch and never touched. One plan does everything, so heavy users pay the same as light ones. The price page lists features nobody understands, and the founder is afraid to change anything because a mistake means lost customers.
+
+  This workflow sets prices from the product and the people who pay for it. It starts with the revenue model: three to five ways to earn from the product, with the risk of each and the one to build on. It designs the value metric, the thing you charge for that grows as the customer gets more value, and lays out good, better, best tiers around it. It plans the price page so the anchor, the order and the words under each price make the value clear without dark patterns. Then it plans a price test you can undo.
+when:
+  - You have one plan and your biggest customers pay the same as your smallest.
+  - You are about to launch and have no idea what to charge.
+  - You want to raise prices but fear losing customers, and have no way to test it.
+you_give:
+  - What the product does and who pays for it
+  - Your current plans and prices, if any
+  - Sign-ups, upgrades and churn by plan for a set period (optional)
+  - "Product facts: costs per customer, usage limits (optional)"
+you_get:
+  - A revenue model with the risks of each option and the one to build on
+  - A value metric and good, better, best tiers with starting prices
+  - A price page layout with the anchor, order and words under each price
+  - A price test you can undo, with three outcome cases and the number that decides
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste what the product does, who pays and your current prices. It picks the model and designs the tiers.
+  - Review the price page layout with whoever owns your site.
+  - Run the test as planned, on new sign-ups only, and bring the numbers back when the read date comes.
+how_it_works:
+  - title: Pick the revenue model
+    text: Lists three to five ways to earn from the product with their risks, and picks the one to build on.
+  - title: Design the tiers
+    text: Sets the value metric and designs good, better, best tiers with a starting price for each.
+  - title: Lay out the price page
+    text: Plans the price page with the anchor, the tier order and plain words under each price, without dark patterns.
+  - title: Plan a safe test
+    text: Picks the first price to test, writes three outcome cases, the deciding number and the rollback. You decide when it goes live.
+output_shape: |-
+  STEP 1: REVENUE MODEL
+    Option <n>: <model> | Fits because: <...> | Risk: <...>
+    Build on: <model> | Prove it with: <test>
+
+  STEP 2: VALUE METRIC AND TIERS
+    Value metric: <what you charge for, why it grows with value>
+    Good: <name, price, for whom, what's in> | Better: <...> | Best: <...>
+
+  STEP 3: PRICE PAGE
+    Anchor: <which tier, why> | Order: <...> | Under each price: <words> | Avoid: <tricks not used>
+
+  STEP 4: PRICE TEST
+    Change: <one thing> | On: <new sign-ups only> | Cases: worse <...> / same <...> / better <...>
+    Decides: <number, by date> | Rollback: <how>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    We're the small software team inside Sprout, a daily greens gummy brand. We built a tool for other subscription brands: it watches the discount lines live across a store (announcement bars, pop-ups, product pages, ads) and flags when they contradict each other. We built it because our own site once showed 52%, 55%, 58% and 61% off at the same time.
+    Who pays: founders and marketing leads at subscription brands doing $1M to $20M a year. Today it is free for 12 pilot brands.
+    What it does: scans the site daily, flags contradictions, keeps a history, sends a weekly email, and lets a team mark a line as approved.
+    Current price: none. We were going to guess $49 a month.
+    Costs: about $3 a month per brand in scanning.
+    Numbers: 12 pilots, 9 open the weekly email, 4 asked for a team login, 2 asked for ad scanning.
+  output: pending
+tweaks:
+  - what: Who pays
+    how: Say who signs off on the purchase and what they already pay for similar tools. The tiers and the anchor follow from it.
+  - what: Your numbers
+    how: Bring sign-ups, upgrades and churn by plan to step 4. Without them the test plan has to assume a baseline.
+  - what: The value metric
+    how: If you already know what grows with the customer's value (brands watched, seats, scans), say so in step 2.
+  - what: What you refuse to do
+    how: Say if you never want hidden fees or fake countdowns. Step 3 holds to it.
+judge:
+  - The chosen revenue model has a stated risk and a test that would prove it.
+  - The value metric grows when the customer gets more value, and every tier is priced on it.
+  - Each tier says who it is for in one line, and the best tier is not a dumping ground for every feature.
+  - "The price page uses no trick you did not approve: no fake anchors, no hidden fees."
+  - The test changes one thing, runs on new sign-ups only, and has a number and a date that decide.
+test:
+  - Give it a product with heavy and light users. The value metric should charge them differently.
+  - Ask step 3 to add a fake "most popular" badge to the cheapest tier. It should refuse and say why.
+  - Run step 2 twice. The value metric should be the same both times.
+  - Give step 4 a tiny customer base. It should say the test needs more sign-ups or more time before it can decide.
+improve:
+  - Save your costs per customer and your plan numbers in one file and bring them to every run.
+  - After the first test, add the result to step 4's input so the next test builds on it.
+  - Add your brand voice rules so the words under each price sound like you.
+  - Pair it with "Set your price from what buyers say, then test it" to survey customers before step 2.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: The model, tiers and test plan are all text.
+    - name: Your billing tool
+      why: Most let you run a price on new sign-ups only and roll it back.
+    - name: A spreadsheet
+      why: Holds sign-ups, upgrades and churn by plan for the test read.
+  inputs:
+    - What customers already pay for similar tools
+    - Support tickets about price or plans
+    - Feature use by customer, so tiers follow real use
+terms:
+  - term: Value metric
+    meaning: The unit you charge for, chosen so the bill grows as the customer gets more value (seats, scans, orders).
+  - term: Anchor
+    meaning: The price a reader sees first, which makes the others look cheaper or dearer by comparison.

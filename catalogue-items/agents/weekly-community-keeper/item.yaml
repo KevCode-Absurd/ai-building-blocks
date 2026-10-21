@@ -1,0 +1,55 @@
+slug: weekly-community-keeper
+name: Weekly community keeper
+summary: Share community posts and questions. Get useful replies, repeat
+  questions and a plan for the next week.
+category: agent
+type: agent
+role: orchestrate
+job: organic
+level: intermediate
+inputs:
+  - type: source_text
+    required: true
+  - type: performance_sheet
+    required: false
+  - type: brand_brain
+    required: false
+outputs:
+  - type: plan
+  - type: document
+  - type: audit_report
+uses:
+  - developer-community-builder
+  - feedback-theme-finder
+  - key-moment-designer
+  - recognition-plan-designer
+  - internal-update-writer
+steps:
+  - uses: developer-community-builder
+    note: "Once, and again each quarter: the channels, the onboarding path and the
+      events, as the plan each week is measured against."
+  - uses: feedback-theme-finder
+    note: "Every week: the themes in the week's posts and replies, with quotes, and
+      which threads went unanswered."
+  - uses: recognition-plan-designer
+    note: "Once, then every quarter: the levels anyone can reach and the public
+      moment for each, so recognition is fair, not favourites."
+  - uses: key-moment-designer
+    note: "Only when a first, a launch or a milestone is coming in the next month:
+      the one peak to build and the rest kept simple."
+  - uses: internal-update-writer
+    note: "Every week, last: the weekly community note drafted from the themes, the
+      recognitions and the answers owed."
+schedule: Every Friday, after the week's posts are exported
+asks_before:
+  - posting or sending anything to the community
+  - messaging any member
+  - recognising a member publicly
+  - removing or muting a member or a post
+  - changing channels or rules
+  - announcing an event
+minds:
+  - chip-heath
+origin: own
+version: 1.0.0
+example_pending: true

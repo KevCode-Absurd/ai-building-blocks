@@ -2,10 +2,10 @@ thinking: low
 thinking_why: It applies accrual rules to listed items.
 new_slug: accrual-schedule-drafter
 name: Accrual schedule drafter
-summary: Give it the period's expenses. Get an accrual schedule with each entry, its support and a draft journal entry.
+summary: Give it the period's expenses and accrual policy. Get a schedule with each entry, its support and a draft journal entry.
 job: money-and-investing
 headline: Accrual schedule drafter
-subhead: Give it the period's expenses. Get an accrual schedule with each entry, its support and a draft journal entry.
+subhead: Give it your accrual policy list, the period's expenses and open orders, and the contracts or estimates behind them. It works through each accrual, calculates the amount for the period and cites the source. You get a schedule with amounts, the support for each entry, draft journal entries and period totals. A controller approves before posting.
 explain: |
   Month-end accruals land in one schedule where every entry is calculated, backed by its source, and turned into a draft journal entry. It is a draft only. A controller approves it before anything is posted.
 

@@ -1,0 +1,48 @@
+slug: notion-ai
+name: Notion AI
+maker: Notion
+url: https://www.notion.com/product/ai
+promise: AI inside your notes, docs and tasks that finds answers and does the busywork.
+use_cases: [organise-work, research, meeting-notes]
+categories: [productivity, writing]
+what_it_does:
+  - Chats with an agent that creates and edits pages and databases for you.
+  - Records meetings, then writes the summary and action points into a page.
+  - Searches your workspace and connected apps and answers with sources.
+  - Drafts and improves writing right inside a page.
+  - Fills in database columns and writes formulas for you.
+benefits:
+  - Find answers in your own notes, with links to the source.
+  - Turn a meeting into a page of next steps without typing it up.
+  - Keep notes, tasks and AI in one place instead of five apps.
+  - Draft a first version of a doc from material you already have.
+best_for:
+  - Teams that already keep notes, wikis and projects in Notion.
+  - Anyone who wants meeting notes saved next to their tasks.
+  - Small companies building a shared knowledge base.
+not_for:
+  - People who do not use Notion. The AI works on the pages you keep there.
+  - Teams that need a standalone meeting recorder with deep call analysis.
+pricing:
+  model: freemium
+  from: US$20 per month
+  note: Business, at US$20 per member billed monthly, includes the agent and AI meeting notes. Free and Plus (US$10) only include a trial of the AI. Custom agents use credits. Enterprise is priced on request.
+works_with:
+  - Slack
+  - Google Drive
+  - zapier
+runs_in: [web, desktop, mobile]
+blocks:
+  - notion-wiki-writer
+  - notion-research-writer
+  - meeting-pre-read-writer
+  - spec-to-task-planner
+  - time-log-keeper
+  - company-wiki-planner
+  - brain-dump-organizer
+  - weekly-meeting-actions-keeper
+alternatives: [glean, guru, microsoft-copilot, claude]
+last_checked: 2026-10-21
+sources:
+  - https://www.notion.com/pricing
+  - https://www.notion.com/product/ai

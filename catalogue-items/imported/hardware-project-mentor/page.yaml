@@ -5,7 +5,7 @@ name: Hardware project mentor
 summary: Describe your sensor or device idea. Get a board pick, where readings go and a phased build plan.
 job: build-product
 headline: Hardware project mentor
-subhead: Describe your sensor or device idea. Get a board pick, where readings go and a phased build plan.
+subhead: "Describe what the device should do, what you have built before, your budget and timeline. It picks a board and toolchain with one alternative, and decides where readings end up: phone, PC, dashboard or alert. You get a phased build plan from breadboard up, with costs, time and the top risks."
 explain: |
   A plain-language plan for a sensor or device idea, from first breadboard to something you could manufacture. You describe what you want to build and what you have built before. The mentor answers at your level, not above it.
 

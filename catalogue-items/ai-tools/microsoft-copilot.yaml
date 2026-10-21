@@ -1,0 +1,45 @@
+slug: microsoft-copilot
+name: Microsoft Copilot
+maker: Microsoft
+url: https://copilot.microsoft.com
+promise: An assistant inside Word, Excel, Outlook and Teams that drafts and summarises your work.
+use_cases: [ask-an-assistant, write-copy, research, make-images]
+categories: [chat-assistant, productivity]
+what_it_does:
+  - Answers questions and drafts text in a chat.
+  - Writes and rewrites inside Word and Outlook.
+  - Summarises long email threads and documents.
+  - Helps with formulas and charts in Excel.
+  - Makes images from a written description.
+benefits:
+  - Draft a reply or report without leaving your Microsoft apps.
+  - Catch up on a long thread in a few lines.
+  - Get help with a spreadsheet formula you do not know.
+  - Start on the free app, then add it to your Microsoft 365 plan.
+best_for:
+  - Teams that already run on Microsoft 365.
+  - Office work such as email, documents, slides and spreadsheets.
+  - Companies that want admin controls over AI use.
+not_for:
+  - Teams that do not use Microsoft apps.
+  - Work in other apps, since its best features sit inside Microsoft apps.
+pricing:
+  model: freemium
+  from: US$9.99 per month
+  note: The Copilot app has a free plan. Microsoft 365 Personal costs US$9.99 per month and Premium US$19.99 per month. Business Copilot plans are priced per user, so check the page.
+works_with:
+  - Word
+  - Excel
+  - PowerPoint
+  - Outlook
+  - Teams
+runs_in: [web, desktop, mobile]
+blocks:
+  - ai-search-platform-checker
+  - ai-search-visibility-optimiser
+  - ai-citation-scorer
+alternatives: [chatgpt, claude, gemini, notion-ai]
+last_checked: 2026-10-21
+sources:
+  - https://www.microsoft.com/en-us/microsoft-copilot/for-individuals
+  - https://eesel.ai/blog/copilot-pricing

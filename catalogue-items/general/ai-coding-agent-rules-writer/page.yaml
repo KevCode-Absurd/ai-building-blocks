@@ -1,6 +1,6 @@
 new_slug: ai-coding-agent-rules-writer
 name: "AI coding agent rules writer"
-summary: "Describe your project. Get a plan file and standing rules that make an AI coding agent work one test at a time."
+summary: "Describe your project. Get a plan file and agent rules for working one test at a time."
 job: set-up-ai
 thinking: medium
 thinking_why: "It turns known rules into files for your project, which needs care but not deep reasoning."

@@ -1,13 +1,13 @@
 # Write ad copy: AI Blocks
 
-> 65 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 66 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner): Name your ad's buyer. Get a short brief on how it opens, argues and asks.
 - [Ad ask line writer](https://useaiblocks.com/prompts/ad-ask-line-writer): Paste your ad and offer. Get two clear asks, each with a true reason to act and the doubts removed.
-- [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer): Paste your buyer and proof. Get ten first lines, or fixes for yours, and a score out of 100.
+- [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer): Paste your buyer and proof. Get ten first lines, or yours scored out of 100 with fixes.
 - [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer): Paste your buyer and facts. Get plain headlines with character counts and the line to test first.
 - [Ad opening line batch writer](https://useaiblocks.com/prompts/ad-opening-line-batch-writer): Paste your buyer and proof. Get ten ad opening lines, each with the line that follows it.
-- [Almost-buyer follow-up writer](https://useaiblocks.com/skills/almost-buyer-follow-up-writer): Paste your offer and what leads did before they stopped. Get a follow-up email series with a new reason each time.
+- [Almost-buyer follow-up writer](https://useaiblocks.com/skills/almost-buyer-follow-up-writer): Paste your offer and where leads stopped. Get a follow-up email series with a new reason each time.
 - [Article-style image ad writer](https://useaiblocks.com/skills/article-style-image-ad-writer): Paste your idea and its landing page. Get an article-style ad, an image brief and a page check.
 - [Belief ladder builder](https://useaiblocks.com/skills/belief-ladder-builder): Paste a draft with a big claim. Get the claims reordered into small accepted steps, each scored, and a redraft.
 - [Big idea and mechanism builder](https://useaiblocks.com/skills/big-idea-and-mechanism-builder): Give it your product and buyer. Get a big idea, root cause, named mechanism and why-now line.
@@ -32,7 +32,7 @@
 - [Get headlines sorted by type and the three worth testing](https://useaiblocks.com/workflows/headline-type-tests): Give it your product and buyer. Get headlines sorted by type, ranked with a cover test, and a keyed test plan.
 - [Get story ads and a carousel from your buyer's problem](https://useaiblocks.com/workflows/story-ads-carousel): Give it customer reviews and product facts. Get a problem story, a card-by-card carousel and a story image ad.
 - [Headline cover test ranker](https://useaiblocks.com/skills/headline-cover-test-ranker): Paste your headline list. Get each one read alone, scored on five rules and cut to the best three.
-- [Headline option writer](https://useaiblocks.com/skills/headline-option-writer): Give it your audience and goal. Get several headline angles that earn the click without clickbait or false promises.
+- [Headline option writer](https://useaiblocks.com/skills/headline-option-writer): Give it your reader and goal. Get several headline angles that earn the click without clickbait or false promises.
 - [How-it-works copy writer](https://useaiblocks.com/skills/how-it-works-copy-writer): Paste a draft and product facts. Get a short cause-and-effect passage that makes the promise believable, with every link backed.
 - [Image ad copy writer](https://useaiblocks.com/skills/image-ad-copy-writer): Attach your ad image and offer. Get every word the ad needs, in versions that test different appeals.
 - [Lead want picker](https://useaiblocks.com/skills/buyer-wants-finder): Paste your product facts. Get one buyer want to lead with, its reward, the facts behind it and what not to claim.
@@ -64,6 +64,7 @@
 - [Winning ad variant writer](https://useaiblocks.com/skills/winning-ad-variant-writer): Paste your winning ad and top customer groups. Get same-voice variants and a launch plan.
 - [Winning hook rubric builder](https://useaiblocks.com/skills/winning-hook-rubric-builder): Paste your top ads and a rival's. Get a hook rubric from the winners and your drafts graded.
 - [Write a flaw-first ad from the drive behind the sale](https://useaiblocks.com/workflows/flaw-first-ad): Paste your product facts and buyer words. Get a brief on why people buy, a flaw-first ad and fresh wording.
+- [Write a flaw-first ad from the drive behind the sale](https://useaiblocks.com/workflows/write-a-flaw-first-ad-from-the-drive-behind-the-sale): Paste your product facts and buyer words. Get a brief on why people buy, a flaw-first ad and fresh wording.
 - [Write a headline that fits what your buyers already know](https://useaiblocks.com/workflows/buyer-aware-headline): Give it your product and buyers. Get their awareness and claim fatigue read, stage-matched headlines, a promise check and a test plan.
 - [Write an ad and a page with the same promise](https://useaiblocks.com/workflows/write-an-ad-and-a-landing-page-that-keep-the-same-promise): Give it your product facts and reviews. Get an ad and a matching page that repeat the promise, each checked.
 - [Write an ad in five parts, from hook to ask](https://useaiblocks.com/workflows/five-part-ad): Give it your product facts. Get an ad that grabs attention, shows a gain, proves it, sums up and asks for action.

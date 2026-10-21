@@ -1,0 +1,105 @@
+new_slug: write-a-welcome-email-sequence-that-teaches-then-sells
+name: Write a welcome email sequence that teaches, then sells
+summary: Give it your offer and reader. Get a five-email sequence, a Hopkins-style review, fixes and a send check.
+job: write-emails
+thinking: high
+thinking_why: It writes emails real people will read and judges every claim in them. Give it your strongest model.
+headline: Write a welcome email sequence that teaches, then sells
+subhead: Give it what you offer and who joins your list. It writes a welcome sequence that teaches something useful in each email before it asks for anything, reviews each email the way Claude Hopkins judged an ad, fixes the mistakes, and checks every email is ready to send.
+explain: |
+  Most welcome sequences are one email that says thanks and one that says buy. The reader learns nothing, trusts nothing and unsubscribes at the first discount code. The list grows and the sales do not.
+
+  This workflow writes a sequence that earns the sale. Each email teaches one useful thing the reader can act on, in your voice, and the ask comes only after the reader has had something from you. Every email is then reviewed the way Claude Hopkins judged advertising in Scientific Advertising: is there a specific claim, a reason why, proof, and one clear thing to do. The mistakes are fixed, from a weak subject line to a claim without proof. Then each email is checked for send readiness: links, names, length, spam triggers, and the one thing you forgot. You load them and switch the sequence on.
+when:
+  - Your welcome email is one line and a discount code.
+  - New subscribers buy at a lower rate than you expected.
+  - You have knowledge your customers want and never share it.
+you_give:
+  - What you offer and who joins your list
+  - Three to five things you know that a new reader would find useful
+  - Your voice, or two emails you were happy with
+  - Your brand file (optional)
+you_get:
+  - A five-email welcome sequence with timing and the one thing each email teaches
+  - "A review of each email against Hopkins's tests: claim, reason why, proof, one action"
+  - The emails fixed
+  - A send-readiness check for each email
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your offer, your reader and the useful things you know. It writes the sequence.
+  - Read the review and the fixed emails. Change anything that does not sound like you.
+  - Read the send check, then load the sequence into your email tool.
+how_it_works:
+  - title: Write the sequence
+    text: Writes five emails with timing, each teaching one useful thing, with the ask after the reader has had something.
+  - title: Review like Hopkins
+    text: "Reviews each email against Hopkins's tests: specific claim, reason why, proof, one clear action."
+  - title: Fix the mistakes
+    text: "Fixes each flagged line: vague subjects, claims without proof, two asks in one email."
+  - title: Check each is ready
+    text: Scores each email for send readiness and lists what to fix before it goes live. You switch it on.
+output_shape: |-
+  STEP 1: SEQUENCE
+    Email <n> (day <d>): Subject <...> | Teaches <...> | Ask <none / ...> | Body <...>
+
+  STEP 2: HOPKINS REVIEW
+    Email <n>: Claim <specific / vague> | Reason why <yes / no> | Proof <...> | One action <yes / two> | Fix: <...>
+
+  STEP 3: FIXED EMAILS
+    Email <n>: <final subject and body> | Changed: <...>
+
+  STEP 4: SEND CHECK
+    Email <n>: Score <n>/100 | Links <...> | Length <...> | Spam triggers <...> | Fix first: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. People join our list through a pop-up that offers a first-order discount by text message.
+    Who joins: adults 25 to 45 who have tried a greens powder and quit, or who buy vitamins and want fewer bottles.
+    Offer: 28 daily packs, $49.99 on subscription, first order from $29.99 with the text sign-up. 30-day money-back on the first order.
+    Useful things we know: why people quit powders (taste, mixing, the shaker); how to read a daily value on a label; what a prebiotic fibre does and does not do; that doses are per pack, not per gummy; how to build a daily habit around something you already do.
+    Voice: warm, plain, a bit dry. Say sorry once, never hype. No claims about weight loss, energy or immunity.
+    Past email we liked: "The shaker bottle is why you quit" (short, one story, one link).
+  output: pending
+tweaks:
+  - what: The useful things
+    how: Give five real ones. Each email teaches one, so thin input makes a thin sequence.
+  - what: When the ask comes
+    how: Say which email may sell. The default is the fourth.
+  - what: Your voice
+    how: Paste an email you liked. The sequence matches it and the review checks against it.
+  - what: Claims you avoid
+    how: List them. The review flags any that slip in.
+judge:
+  - Each email teaches one thing a reader could act on today.
+  - No ask appears before the reader has been given something.
+  - Every claim in the fixed emails has a reason why or proof next to it.
+  - Each email has one action.
+  - The send check found nothing you would be embarrassed by.
+test:
+  - Send the sequence to yourself. Would you open email three?
+  - Put a vague claim ("amazing results") in a draft. Step 2 should flag it and step 3 should fix it.
+  - Run step 1 twice. The order of what is taught should be similar.
+  - Give step 4 an email with no unsubscribe line. It should fail it.
+improve:
+  - After a month, bring open and click rates by email. Step 1 learns which teaching landed.
+  - Save your voice sample and claims list and paste them every run.
+  - Keep the review notes. The same mistake twice means a rule for your brand file.
+  - Pair it with "Price a course or ebook and write its launch emails" when you have something new to sell to the list.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Your email tool
+      why: Holds the sequence, the timing and the results.
+  inputs:
+    - Open and click rates from past emails
+    - Replies readers sent you
+    - Your current welcome email
+terms:
+  - term: Welcome sequence
+    meaning: The set of emails a new subscriber gets automatically in their first days or weeks.

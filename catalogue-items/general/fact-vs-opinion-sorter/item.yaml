@@ -1,0 +1,17 @@
+slug: fact-vs-opinion-sorter
+name: "Fact and opinion sorter"
+summary: "Paste any text that persuades. Get every line sorted into fact, inference or opinion, with what to check."
+category: general
+boards: []
+type: prompt
+role: check
+job: research
+level: beginner
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

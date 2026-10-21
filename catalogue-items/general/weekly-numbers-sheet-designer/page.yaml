@@ -1,0 +1,113 @@
+new_slug: weekly-numbers-sheet-designer
+name: "Weekly numbers sheet designer"
+summary: "Paste what your business does and what you can measure. Get a one-page weekly sheet of seven numbers."
+job: track-numbers
+thinking: medium
+thinking_why: "It chooses seven numbers from many and has to justify each against the flow of the business."
+
+headline: "Weekly numbers sheet designer"
+subhead: "Paste what your business does, how money comes in and which numbers you can already pull. The prompt maps the flow, picks at most seven numbers with an exact definition, source and owner each, writes what up and down mean, and gives you the two-minute Monday read."
+
+explain: |
+  Dashboards grow until nobody reads them. Forty tiles, three of which matter, and the one that would have warned you about the cash problem was not there. A weekly sheet works when it is one page, the numbers are few, and each one says what to do when it moves.
+
+  This prompt maps your business as a flow from stranger to money in the bank and after. It picks one number per stage, seven at most, preferring rates and leading numbers over totals that only go up, and always including money in and cash on hand. Each number gets a definition two people would compute the same way, its source, owner and day, and a reading line for what up and down mean. Stages you cannot measure yet are marked with the smallest way to start. You end with the order to read the sheet on Monday and the question to ask at each number.
+
+when:
+  - "You run a small business and check your bank balance instead of your numbers."
+  - "Your dashboard has forty tiles and you look at none of them."
+  - "You are about to hire someone to run operations and want them to report on the same seven things."
+
+you_give:
+  - "What you sell, to whom, and how money comes in"
+  - "The numbers you can already pull, and from where"
+  - "What matters this quarter (advised)"
+  - "Problems you wish you had seen coming (optional)"
+you_get:
+  - "Your business as a flow"
+  - "Seven numbers at most, each defined with source, owner, day and reading line"
+  - "What you cannot measure yet and how to start"
+  - "A two-minute Monday read"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your business under it."
+  - "List the numbers you can already get and from which tool."
+  - "Build the sheet from THE SHEET and COLUMNS. Fill four weeks before you judge any number."
+  - "Do the MONDAY READ every week at the same time."
+
+how_it_works:
+  - title: "Maps the flow"
+    text: "Five boxes or fewer from stranger to money in and what happens after."
+  - title: "Picks one number per box"
+    text: "Rates over totals, leading over lagging, actionable over watchable. Money in and cash always included."
+  - title: "Defines each exactly"
+    text: "One sentence two people would compute the same way, plus source, owner, day and unit."
+  - title: "Writes the reading line"
+    text: "Up means, down means, look at this first."
+  - title: "Sets the columns and gaps"
+    text: "This week, last week, same week last year, target. Unmeasured boxes get the smallest start."
+  - title: "Writes the Monday read"
+    text: "The order and the question at each number."
+
+output_shape: |
+  THE FLOW         <boxes>
+  THE SHEET        <number | definition | source | owner | day | unit | up | down | look first>
+  COLUMNS          <...>
+  NOT YET MEASURED <box | smallest start>
+  MONDAY READ      <order, questions>
+  MISSING          <...>
+  CHECKS MISSED    <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Sprout sells daily greens gummies online by subscription (first box
+    $29.99, renews $49.99 every 4 weeks) and one-time ($66.65), and through
+    big-box, warehouse club and grocery retailers. Money comes in from
+    online orders daily and from retailers on 60-day terms.
+    What we can pull: site visits (analytics, daily); first orders and
+    renewals (subscription tool, daily); ad spend (ads manager, daily);
+    cancellations and pauses (subscription tool, daily); refunds (store
+    admin, daily); support tickets by tag (help desk, weekly); retailer
+    purchase orders (email, as they arrive); cash balance (bank, daily);
+    stock on hand per flavour (warehouse sheet, weekly).
+    What matters this quarter: fewer cancellations; more first orders from
+    the habit angle; Kids line growing in stores.
+    What we wish we had seen coming: a pouch reprint that ate cash; a month
+    where cancellations jumped and we found out from a review site.
+  output: pending
+
+tweaks:
+  - what: "What you can pull"
+    how: "Be honest about sources. A number with no source goes to NOT YET MEASURED, which is useful too."
+  - what: "What matters"
+    how: "Name the quarter's results and the seven will lean towards them."
+  - what: "Past surprises"
+    how: "Say what you wish you had seen. The sheet will carry an early warning for it."
+
+judge:
+  - "Seven numbers or fewer."
+  - "Every number has a real source."
+  - "Money in and cash are on the sheet."
+  - "You could compute every definition yourself."
+  - "No number is a total that only grows."
+
+test:
+  - "Fill the sheet for the last eight weeks from your records. The bad weeks should show in at least one number."
+  - "Run it twice. At least five of the seven should match."
+  - "Leave out how money comes in. It should mark MISSING and design what it can."
+
+improve:
+  - "After four weeks, add your normal range per number so moves are easy to spot."
+  - "Add the targets for the quarter to the target column."
+  - "Pair it with the Numbers drop explainer when a number falls."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message design works in any strong chat AI."}
+    - {name: "A spreadsheet", why: "One tab, one row per week, the seven columns and the compare columns."}
+  inputs:
+    - "Eight weeks of history to fill the sheet on day one"
+    - "Your quarter's targets"

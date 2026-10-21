@@ -1,12 +1,12 @@
 new_slug: offer-profit-per-session-checker
 name: "Offer profit-per-session checker"
-summary: "Give it offer variants, costs and sessions. Get profit per visitor for each, a winner and a trust score."
+summary: "Paste offer variants, costs and sessions. Get profit per visitor, a winner and a trust score."
 job: make-offer
 thinking: high
 thinking_why: "It builds cost tables and checks many numbers against each other, so a stronger model makes fewer sum errors."
 
 headline: "Offer profit-per-session checker"
-subhead: Give it your offer variants, your costs per unit and the sessions and orders each one got. It works out net profit per order and per visitor, break-even ROAS and CPA, flags offers that raise AOV but lose profit, and scores how far you can trust the read-out out of 100.
+subhead: Give it your offer variants, costs per unit and the sessions and orders each one got. It works out net profit per order and per visitor, break-even ROAS and CPA, flags offers that raise AOV but lose profit, and scores how far you can trust the read-out out of 100.
 
 explain: |
   A higher average order value does not always mean more profit. A big pack at a high price can lift AOV and still lose money per visitor, because fewer people buy it. Revenue alone hides this. So does conversion rate alone.

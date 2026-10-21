@@ -5,7 +5,7 @@ name: Task handoff writer
 summary: Describe work to pass on. Get a clear handoff to another AI agent, with checks along the way.
 job: set-up-ai
 headline: Task handoff writer
-subhead: Describe work to pass on. Get a clear handoff to another AI agent, with checks along the way.
+subhead: Describe the work to pass on, which AI agent will take it and what it may touch. It scopes the job and writes a brief with the goal, what it owns and what counts as done. You get the brief, a success check, a progress-check plan and a report of changes.
 explain: |
   A clear brief that lets another AI agent take over a piece of work without losing context, plus a way to check its progress. Handoffs stop failing because the second agent knows what to do, what it owns and what counts as done.
 

@@ -1,0 +1,54 @@
+slug: klaviyo
+name: Klaviyo
+maker: Klaviyo
+url: https://www.klaviyo.com
+promise: Email and text campaigns and flows that bring store customers back to buy
+use_cases: [email-and-sms, run-ads]
+categories: [marketing]
+what_it_does:
+  - Builds campaigns and flows from a prompt with its Composer assistant.
+  - Sends email and text messages from one store-connected account.
+  - Builds customer segments from a plain-language description.
+  - Scores customers on predicted lifetime value, churn risk and best send time.
+  - Answers customer questions about orders with its Customer Agent.
+benefits:
+  - Get abandoned-cart and welcome flows live without building each step by hand.
+  - Message the right customers, based on what they bought and did.
+  - See which emails and texts earn revenue in one place.
+  - Turn a campaign idea into a draft in a single conversation.
+best_for:
+  - Online stores that sell through Shopify and want email and text in one place.
+  - Owners who want automatic flows for carts, welcomes and win-backs.
+  - Teams that sync ad audiences from customer lists.
+not_for:
+  - Businesses with no customer or order data to segment on.
+  - Teams that want a flat price, since cost rises with your profile count.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: The free plan covers up to 250 active profiles and 500 email sends a month. Paid email and text plans scale with your active profiles, and the page only offers an estimate builder.
+works_with:
+  - Shopify
+  - claude
+  - chatgpt
+  - gorgias
+  - zapier
+runs_in: [web, api]
+blocks:
+  - welcome-flow-builder
+  - cart-recovery-flow-builder
+  - browse-abandonment-flow-builder
+  - post-purchase-flow-builder
+  - win-back-flow-builder
+  - campaign-email-writer
+  - email-segment-builder
+  - email-flow-gap-checker
+  - sms-send-planner
+  - text-message-campaign-writer
+  - sunset-flow-and-list-cleaner
+  - email-and-sms-performance-reader
+alternatives: [hubspot-breeze, shopify-magic, gorgias]
+last_checked: 2026-10-21
+sources:
+  - https://www.klaviyo.com/pricing
+  - https://www.klaviyo.com/features/ai

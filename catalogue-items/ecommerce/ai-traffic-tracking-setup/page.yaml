@@ -6,7 +6,7 @@ thinking: low
 thinking_why: "It follows fixed set-up steps for your tools, so a fast model is enough."
 
 headline: "AI traffic tracking set-up"
-subhead: Tell it your analytics and checkout setup. It gives you the steps to add an AI traffic channel in GA4, a "how did you hear about us" question for your order page, a sheet to track AI sessions and orders, and a redirect list for AI links that land on 404 pages.
+subhead: Tell it your analytics and checkout setup. It gives the steps to add an AI traffic channel in GA4, a "how did you hear about us" question for your order page, a sheet for AI sessions and orders, and a redirect list for AI links that hit 404 pages.
 
 explain: |
   Some shoppers find your store through ChatGPT, Gemini or Perplexity. Your analytics shows only part of them. Some AI tools pass no referral data, and others land buyers who then type your name into Google. Those visits show up as direct or branded search.

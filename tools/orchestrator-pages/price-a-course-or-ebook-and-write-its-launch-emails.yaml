@@ -1,0 +1,106 @@
+new_slug: price-a-course-or-ebook-and-write-its-launch-emails
+name: Price a course or ebook and write its launch emails
+summary: Give it your course or ebook. Get a price, honest discount wording and the launch email sequence.
+job: set-prices
+thinking: high
+thinking_why: It sets a price and writes emails that make an offer to real people. Give it your strongest model.
+headline: Price a course or ebook and write its launch emails
+subhead: "Give it what you made and who it is for. It sets the price, picks the digits, writes the launch discount the clearest honest way, and plans the launch emails the way Claude Hopkins sold by mail: a reason to act, proof, and one clear offer in every email."
+explain: |
+  A digital product has no cost per copy, so the price feels arbitrary and most makers pick a round number from a competitor's page. Then launch day comes and the emails say "I'm so excited to announce", the discount says "limited time" with no end, and nobody buys because nobody was given a reason to.
+
+  This workflow sets the price from what the product does for the buyer and the market around it, then picks the digits (round, just-below or exact) with the reason. It writes the launch discount so the saving is clear and true, with an honest end date. Then it plans the launch sequence, following Claude Hopkins's method from Scientific Advertising: every email makes one offer, gives a reason why, shows proof, and asks for a measured response. You load the emails and send the first one only when you have read every line.
+when:
+  - Your course or ebook is finished and you have not decided what to charge.
+  - You priced it once, nobody bought, and you do not know whether the price or the launch was wrong.
+  - You want a launch discount that does not look like a trick.
+you_give:
+  - What you made, who it is for and what it does for them
+  - What it took to make and any comparable products you know of
+  - Your list size and how often you email them
+  - Customer words from pilots or early readers (optional)
+you_get:
+  - A price with its digits and labels, and the reason for each
+  - The launch discount written the clearest honest way, with an end date
+  - "A launch email sequence: trigger, timing, and each email with its offer, reason and proof"
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste what you made, who it is for and your list size. It sets the price and the discount wording.
+  - Read the email sequence. Check every claim against what the product really does.
+  - Load the emails into your email tool and send the first one when you are ready.
+how_it_works:
+  - title: Set the price
+    text: Sets the price and the launch discount from what the product does for the buyer and what similar products cost.
+  - title: Pick the digits
+    text: Chooses round, just-below or exact digits for the price and says why.
+  - title: Write the discount honestly
+    text: Writes the launch discount as percent or amount, plans how the sale price shows and gives it a real end date.
+  - title: Plan the launch emails
+    text: Plans the launch sequence with timing and each email's offer, reason why and proof, in Hopkins's method. You send.
+output_shape: |-
+  STEP 1: PRICE
+    Price: <amount> | Label: <...> | Reason: <what it does for the buyer, the market>
+    Launch discount: <amount or percent> | For: <how long>
+
+  STEP 2: DIGITS
+    Pick: <round / just-below / exact> | Reason: <...>
+
+  STEP 3: DISCOUNT WORDING
+    Show as: <percent / amount> | Sale price display: <...> | Banner: <...> | Ends: <date>
+
+  STEP 4: LAUNCH EMAILS
+    Trigger: <...> | Timing: <day, email>
+    Email <n>: Subject <...> | Offer <...> | Reason why <...> | Proof <...> | Ask <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    I'm the founder of Sprout, a daily greens gummy brand. I've written a short ebook for other founders: "Fix your discount mess", about how we found 52%, 55%, 58% and 61% off live on our own site at the same time, and the ten rules we now use for first-order offers, subscriptions and announcement bars.
+    What it is: 48 pages, PDF, with our checklist and a spreadsheet for tracking every live offer.
+    For: founders and marketing leads of subscription brands.
+    Took: about 40 hours. Comparable: business ebooks I've seen go from $19 to $79; a paid newsletter in our space is $20 a month.
+    List: 1,400 founders who signed up for our monthly notes. I email once a month.
+    Early readers (6): "I found three contradictions on our site in ten minutes." "The spreadsheet alone is worth it." "Wish I'd had this before our Black Friday."
+  output: pending
+tweaks:
+  - what: Who it is for
+    how: Be exact. A $200 price for founders of $5M brands is a different product from a $19 price for everyone.
+  - what: Early reader words
+    how: Paste them exactly. Step 4 uses them as proof, in quotes, with permission noted.
+  - what: Your list and habit
+    how: Say how often you email. A list that hears from you monthly needs a gentler sequence than a daily one.
+  - what: The end date
+    how: Pick a real one. Step 3 refuses a discount with no end, and step 4 refuses to extend it.
+judge:
+  - The price has a reason that mentions what the product does for the buyer, not only what others charge.
+  - The digits have one stated reason, and the reason fits the product.
+  - The discount shows the saving the clearest way and has a real end date.
+  - Every email has one offer, a reason why and a piece of proof you can point to.
+  - No email claims a result the product does not deliver, and no subject line is a trick.
+test:
+  - Give it a $19 ebook and a $400 course. The digits and the discount wording should differ.
+  - Ask step 3 for "limited time" with no end date. It should ask for one.
+  - Read email three as a reader who skipped emails one and two. Does it still make sense?
+  - Run step 1 twice. The price range should be the same both times.
+improve:
+  - Save the launch numbers (opens, clicks, sales by email) and bring them to the next launch's step 4.
+  - Add your brand voice so the emails sound like your monthly notes.
+  - Keep a file of early reader quotes with permission, so proof is ready for the next product.
+  - Pair it with "Write a personal story email and read how it did" for the story email in the sequence.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Pricing and emails are all text.
+    - name: Your email tool
+      why: Holds the sequence, the send times and the counts.
+  inputs:
+    - Sales of any past product and its price
+    - Replies to your past emails
+    - The product's table of contents
+terms:
+  - term: Reason why
+    meaning: The plain explanation of why an offer exists (a launch, a season, a first edition), which makes a discount believable.

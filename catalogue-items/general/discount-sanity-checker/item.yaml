@@ -1,0 +1,19 @@
+slug: discount-sanity-checker
+name: "Discount sanity checker"
+summary: "Paste every discount you show. Get a consistency score out of 100, each clash, and one true offer line."
+category: general
+boards: []
+type: prompt
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: offer, required: true}
+  - {type: landing_page, required: false}
+  - {type: ad_copy, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

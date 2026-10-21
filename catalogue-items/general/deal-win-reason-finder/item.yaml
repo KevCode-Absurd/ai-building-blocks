@@ -1,0 +1,18 @@
+slug: deal-win-reason-finder
+name: "Deal win reason finder"
+summary: "Paste notes on deals you won and lost. Get why you really win, and the message built on it."
+category: general
+boards: []
+type: prompt
+role: research
+job: analysis
+level: intermediate
+inputs:
+  - {type: meeting_notes, required: true}
+outputs:
+  - {type: angle_library}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [april-dunford]

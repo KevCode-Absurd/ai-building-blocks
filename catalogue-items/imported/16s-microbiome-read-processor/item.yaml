@@ -1,6 +1,6 @@
 slug: 16s-microbiome-read-processor
 name: 16S microbiome read processor
-summary: Give it paired 16S reads. Get checked sequence variants and species labels, with the steps kept so you can repeat them.
+summary: Give it paired 16S reads and primers. Get a sequence variant table, species labels and a repeatable record.
 category: general
 boards: []
 type: skill

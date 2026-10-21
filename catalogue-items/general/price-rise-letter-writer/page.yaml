@@ -1,0 +1,109 @@
+new_slug: price-rise-letter-writer
+name: "Price rise letter writer"
+summary: "Paste the old price, the new price and why. Get a customer letter that keeps most of them."
+job: set-prices
+thinking: low
+thinking_why: "It writes one letter and a short FAQ from facts you give it."
+
+headline: "Price rise letter writer"
+subhead: "Paste the old price, the new price, the start date, who it affects and the honest reason. The prompt writes a letter that leads with the numbers, gives the reason once, lists what customers can do with dates, and adds a short FAQ answered only from your facts."
+
+explain: |
+  A price rise letter that hides the number in paragraph three, or blames "market conditions", makes customers feel handled. They cancel out of irritation, not because of the price. The letter that works says the new price and the date in the first sentence and gives one true reason.
+
+  This prompt takes your prices, date, reason and the choices you offer. It checks the percent, writes a subject line that carries the news, leads with the facts, says the reason once in plain words, lists each choice with a date and a way to do it, and closes as a person. It adds three to five FAQ answers using only what you gave it. If you did not give a date or a lock-in option, it says MISSING rather than inventing one.
+
+when:
+  - "Your costs went up and the renewal price has to follow."
+  - "You priced too low at the start and need to fix it without losing the customers who trusted you."
+  - "A subscription renewal price is changing and people will see it on their statement."
+
+you_give:
+  - "Old price, new price, what it covers, start date"
+  - "The honest reason"
+  - "Who it affects"
+  - "What customers can do, such as lock in, switch or cancel (advised)"
+you_get:
+  - "The change in money and percent, checked"
+  - "A letter with the news first and the choices with dates"
+  - "A short FAQ answered from your facts"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your prices and reason under it."
+  - "Add the choices customers have and the dates for each."
+  - "Check THE CHANGE line. If the percent is off, fix your input."
+  - "Send the letter at least two weeks before the date, and put the FAQ on your help page."
+
+how_it_works:
+  - title: "States the change"
+    text: "Old to new, the difference in money and percent, the date and who it affects."
+  - title: "Says the reason once"
+    text: "The honest reason from your input, in one or two plain sentences, no filler."
+  - title: "Leads with the news"
+    text: "Subject and first sentence carry the new price and the date."
+  - title: "Lists the choices"
+    text: "Each option on its own line with a date and how to do it."
+  - title: "Closes as a person"
+    text: "Thanks from the input, a name, a reply address."
+  - title: "Answers the FAQ"
+    text: "Three to five questions customers will ask, answered only from what you gave."
+
+output_shape: |
+  THE CHANGE      <old> to <new> (+<amount>, +<percent>) from <date>, for <who>
+  SUBJECT         <under nine words>
+  LETTER          <news, reason, what stays, choices, thanks, sign-off>
+  FAQ             <3 to 5 questions and answers>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Product: Sprout greens gummies, Subscribe and Save, 28 packs every
+    4 weeks.
+    Old renewal price: $49.99. New renewal price: $54.99.
+    Start: renewals on or after 1 December.
+    Who: existing subscribers. The first-box price stays $29.99 for new
+    customers.
+    Reason: the cost of the branded prebiotic fiber blend and of shipping
+    went up this year, and we held the price through it.
+    Choices: subscribers who switch to the 84-pack (3 pouches every 12 weeks)
+    before 30 November keep $49.99 per pouch for a year. Anyone can pause or
+    cancel from Manage Subscription with no fee. Questions to
+    hello@sprout.example.
+    Voice: casual, warm, short lines, no corporate words.
+  output: pending
+
+tweaks:
+  - what: "The reason"
+    how: "Say the real one. 'We underpriced it' lands better than 'to keep delivering value'."
+  - what: "The choices"
+    how: "A lock-in option with a date turns a letter about losing money into a letter with something to do."
+  - what: "Notice"
+    how: "Give the start date and the send date. The letter can then say how many days people have."
+
+judge:
+  - "The new price and date are in the first sentence."
+  - "The percent is right."
+  - "The reason is yours and appears once."
+  - "Every choice has a date and a way to act."
+  - "No apology for charging more."
+
+test:
+  - "Send it to a small group first and count cancellations against your normal month."
+  - "Run it twice. THE CHANGE line should match exactly."
+  - "Leave out the start date. It should write MISSING in the subject, not invent a date."
+
+improve:
+  - "Add your refund and cancellation rules so the FAQ is complete every time."
+  - "Paste the voice file from your brand file so the letter sounds like you."
+  - "Pair it with the Price rise readiness checker before you decide the number."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message letter works in any strong chat AI."}
+  inputs:
+    - "How long your average customer has been with you, for the thanks line"
+    - "The three questions support expects to get"

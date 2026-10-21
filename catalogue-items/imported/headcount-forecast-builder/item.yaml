@@ -1,6 +1,6 @@
 slug: headcount-forecast-builder
 name: Headcount forecast builder
-summary: Give it past headcount and goals. Get a forecast of hires and exits with a clear method and a range of error.
+summary: Give it past headcount and goals. Get a hires and exits forecast, the method used and an error range.
 category: general
 boards: []
 type: skill

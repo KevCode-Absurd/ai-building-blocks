@@ -2,10 +2,10 @@ thinking: high
 thinking_why: It traces roles, owners and order states across the whole codebase.
 new_slug: marketplace-access-auditor
 name: Marketplace access auditor
-summary: Point it at a multi-role marketplace app. Get a report of who can see or change what, with evidence from the code.
+summary: Point it at a marketplace app's code. Get a report of who can see or change what.
 job: secure-code
 headline: Marketplace access auditor
-subhead: Point it at a multi-role marketplace app. Get a report of who can see or change what, with evidence from the code.
+subhead: Point it at the code of a marketplace app with several user roles. It builds a table of rules per role, then walks every entry point to see what each role can see or change. You get the permissions table, findings backed by code, a severity ranking and fixes.
 explain: |
   A report on who can see or change what in a marketplace app, backed by lines of code as proof.
 

@@ -1,0 +1,39 @@
+slug: grok
+name: Grok
+maker: xAI
+url: https://grok.com
+promise: An assistant that answers with live posts from X and the web.
+use_cases: [ask-an-assistant, research, make-images]
+categories: [chat-assistant]
+what_it_does:
+  - Answers questions and drafts text from a message you type or say.
+  - Searches X and the web for what people are saying now.
+  - Makes images from a written description.
+  - Reads files and images you share with it.
+  - Offers deeper research on harder questions.
+benefits:
+  - See what people are saying about a topic today.
+  - Spot a trend on X before it reaches the news.
+  - Get a quick image for a post or mock-up.
+  - Try it free before you pay.
+best_for:
+  - Checking live conversation and recent topics.
+  - Social media research.
+  - People who already use X every day.
+not_for:
+  - Work that needs calm, balanced sources, since posts on X are often one-sided.
+  - Heavy daily use on the free plan, which has caps.
+pricing:
+  model: freemium
+  from: US$30 per month
+  note: Free plan with usage caps. SuperGrok costs US$30 per month and SuperGrok Heavy US$300 per month. X Premium plans also include Grok.
+works_with:
+  - X
+runs_in: [web, mobile, api]
+blocks:
+  - recent-topic-pulse-researcher
+alternatives: [chatgpt, claude, perplexity, gemini]
+last_checked: 2026-10-21
+sources:
+  - https://www.cloudzero.com/blog/grok-pricing/
+  - https://ai-toolbox.co/grok-models/grok-pricing-plans-api-2026

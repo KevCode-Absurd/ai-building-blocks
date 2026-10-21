@@ -1,0 +1,123 @@
+new_slug: quarterly-client-rate-reviewer
+name: Quarterly client rate reviewer
+summary: Give it your hours and invoices by client each quarter. Get each client's real rate, who to raise and what to propose.
+job: set-prices
+thinking: high
+thinking_why: It judges each client from several numbers, decides between keep, raise and let go, and frames a price change. Give it your strongest model.
+headline: Quarterly client rate reviewer
+subhead: Give it last quarter's hours and invoices by client, your floor and your goals. It works out the real rate each client paid you, who pays late, who fell under your floor, and the price and terms to propose. You decide what to send and to whom.
+explain: |
+  Most people who sell their time know their day rate and not what each client really pays them. Unbilled calls, revisions, late payments and scope that grew without the fee following all pull the real rate down, one client at a time. The busiest quarter can be the worst paid.
+
+  This agent runs the review once a quarter. It works out the real rate per client, prices in slow payment, and refreshes your fee floor and the number of clients you can serve well. For each client under the floor it writes the price change and how to say it, checks what they can likely pay, and drafts a one-page agreement if terms change. It proposes a let-go date for a client with no room to fix, and never cuts anyone mid-project. Nothing goes to a client until you say so.
+when:
+  - You freelance or run a small studio and have never worked out what each client really pays per hour.
+  - You feel busy and underpaid and cannot say which client is the reason.
+  - A client's scope has grown for two quarters and the fee has not.
+you_give:
+  - Last quarter's hours, invoices and payments by client, with unbilled time included
+  - Your lowest acceptable rate, your income goal and the hours you want to work
+  - Your costs the fee must cover (advised)
+  - Rates you have seen for similar work, with sources (optional)
+  - Last quarter's review, once it exists
+you_get:
+  - Each client's real rate, days to pay and change since last quarter
+  - Your fee floor, billing terms and client cap for the quarter
+  - A price change and how to frame it for each client under the floor
+  - The range each raise candidate can likely meet
+  - A let-go date for clients with no room to fix
+  - A one-page agreement for each client whose terms change
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to review last quarter.
+  - Export hours and invoices by client from your time and invoicing tools. Put them in one folder, or attach them in the chat.
+  - Tell it your floor, income goal, hours and costs once. It saves them.
+  - Read the proposals. Send the ones you agree with in your own words, then tell the agent what each client said.
+  - Run it again next quarter. It compares each client with its own history.
+how_it_works:
+  - title: Read last quarter
+    text: Opens the client rows and the proposals from last time, and notes what came of each.
+  - title: Work out the real rate
+    text: Divides what each client paid by all the hours they took, including the unbilled ones.
+  - title: Price the slow payers
+    text: Works out days to pay per client and treats a slow payer's rate as lower by the cost of waiting.
+  - title: Refresh the floor and the cap
+    text: Sets your floor, billing terms and how many clients you can serve well from your costs and goals.
+  - title: Sort each client
+    text: Keep as is, raise with a framed price and a range they can meet, or let go when the current work ends.
+  - title: Write the agreement
+    text: For a client whose terms change, a one-page agreement on results, limits, help and review dates.
+  - title: Log and hand back
+    text: Saves the proposals as drafted and stops for your yes.
+output_shape: |-
+  THE QUARTER
+    <hours> hours | <income> | real rate <amount>/hour across clients | floor <amount>/hour
+
+  CLIENTS BY REAL RATE
+    <client> | <hours> h | paid <amount> | <n> days to pay | <amount>/hour (last quarter <amount>) | <keep | raise | let go>
+
+  FLOOR AND CAP
+    Floor <amount>/hour | terms: <billing terms> | cap: <n> clients (you have <n>)
+
+  PROPOSALS
+    <client> | now <amount> -> propose <amount> | they can likely meet <range> | how to say it: <one line> | from <date>
+
+  LET GO WHEN CURRENT WORK ENDS
+    <client> | <date> | why: <reason>
+
+  AGREEMENTS
+    <client>: results, limits, help, review dates (one page each)
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Review Q3 for a freelance ad copywriter whose main client is Sprout.
+    Practice numbers, not Sprout's real figures.
+    Clients last quarter:
+    - Sprout (greens gummies brand): 148 hours incl. 22 unbilled on
+      revision rounds and weekly calls; invoiced $9,000 flat monthly x3;
+      paid in full, average 38 days after invoice.
+    - Client B (skincare brand): 60 hours; invoiced $7,200; paid 12 days.
+    - Client C (local gym): 35 hours; invoiced $1,750; paid 55 days,
+      still owes $700.
+    Floor: $90/hour. Goal: $150,000 a year at 1,300 billable hours.
+    Costs: $650 a month in software, insurance and a shared desk.
+    Seen rates: $100 to $150/hour for direct-response copy, from two
+    freelance job boards this month.
+  output: pending
+tweaks:
+  - what: Unbilled hours
+    how: List every call, revision and admin hour. The real rate is only as true as the hours you give it.
+  - what: Your floor
+    how: Set it from your costs and the hours you want, not from what others charge. The agent checks it covers your costs.
+  - what: Slow payment cost
+    how: Tell it what late cash costs you, such as an overdraft rate. It uses that to adjust slow payers' rates.
+  - what: Who you want to keep
+    how: Name the clients you would keep at a lower rate for other reasons. The agent proposes gentler terms for them.
+judge:
+  - Every real rate includes the unbilled hours you listed.
+  - Each raise comes with a range the client can likely meet and a date.
+  - No client is cut before current work ends.
+  - The floor covers the costs you gave.
+  - Nothing was sent or ended without your yes.
+test:
+  - Run it on a past quarter where you later lost a client over price. See if it would have flagged the drift.
+  - Give it two clients with the same fee but different unbilled hours. The real rates should differ.
+  - Run it twice on the same data. The keep, raise and let-go calls should match.
+improve:
+  - Add your own cost of late cash in step 3, so slow payers are priced for your situation.
+  - Save what each client said to a proposal in the proposals file. The next review reads it before proposing again.
+  - Set a scope rule, such as two revision rounds included, so scope growth is measured, not felt.
+  - Pair it with the Weekly invoice and cash chaser so days to pay come from the same rows.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the client and proposal files between quarters and run on a schedule.
+    - name: Your time tracker
+      why: Export hours by client and project. Any tracker that exports a CSV will do.
+  inputs:
+    - Your contract or statement of work with each client, so scope growth can be measured against it
+    - What each client said the last time you raised a price

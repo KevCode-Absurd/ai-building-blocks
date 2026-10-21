@@ -1,0 +1,108 @@
+new_slug: build-an-outcome-based-roadmap-and-write-the-update
+name: Build an outcome-based roadmap and write the update
+summary: Give it your goals. Get an opportunity tree, an outcome roadmap, a quarter plan and the update.
+job: build-product
+thinking: high
+thinking_why: It must connect outcomes to work and defend the trade-offs to stakeholders. Give it your strongest model.
+headline: Build an outcome-based roadmap and write the update
+subhead: Give it the outcomes you need and what you know about customers. It maps the opportunities under each outcome, builds a roadmap of outcomes rather than features in Marty Cagan's manner, turns the next quarter into a plan with bets and measures, then writes the update stakeholders will read.
+explain: |
+  Most roadmaps are lists of features with dates. Everyone commits to the dates, the features ship, and the number they were meant to move does not. Stakeholders ask for more features, because that is what the roadmap taught them to ask for.
+
+  This workflow builds the roadmap from outcomes. It maps the opportunities under each outcome, the customer problems that, if solved, would move the number, in a tree you can see. It builds the roadmap as outcomes with the bets under each, in Marty Cagan's manner: the team owns the problem, not a feature list. It turns the next quarter into a plan: which bets, what each should move, how you will know. Then it writes the update stakeholders will read: the outcomes, the bets, what changed and why, in plain words.
+when:
+  - Your roadmap has twenty features and no one can say what each is for.
+  - You ship on time and the numbers do not move.
+  - Stakeholders keep adding features and you need a way to say no with a reason.
+you_give:
+  - The outcomes the business needs this year, in numbers if you have them
+  - "What you know about customers: research, tickets, feedback"
+  - Your team's capacity for the quarter
+  - Your current roadmap, if you have one (optional)
+you_get:
+  - "An opportunity tree: the customer problems under each outcome"
+  - An outcome-based roadmap with bets under each outcome
+  - A quarter plan with the bets, what each should move and how you will know
+  - A roadmap update for stakeholders
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the outcomes, what you know about customers and your capacity. It maps the opportunities and builds the roadmap.
+  - Read the quarter plan with the team. Change the bets you would not make.
+  - Read the update once as a stakeholder, then send it.
+how_it_works:
+  - title: Map the opportunities
+    text: Maps the customer problems under each outcome and the solutions worth considering, in a tree.
+  - title: Build the roadmap
+    text: Builds a roadmap of outcomes with bets, owners and measures, in Marty Cagan's manner.
+  - title: Plan the quarter
+    text: "Plans the quarter: the bets, what each should move, how you will know, and what you are not doing."
+  - title: Write the update
+    text: "Writes the stakeholder update: outcomes, bets, what changed and why, and what you are not doing."
+output_shape: |-
+  STEP 1: OPPORTUNITY TREE
+    Outcome: <...>
+      Opportunity: <customer problem> (evidence: <...>)
+        Solution ideas: <...>
+
+  STEP 2: OUTCOME ROADMAP
+    <outcome>: Measure <...> | Owner <team> | Bets: <...> | Example features: <...>
+
+  STEP 3: QUARTER PLAN
+    Bet <n>: <...> | Should move: <metric, by how much> | Know by: <...> | Not doing: <...>
+
+  STEP 4: UPDATE
+    Outcomes: <...> | Bets this quarter: <...> | Changed since last time: <...> | Not doing: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. Our small product team works on the store, the subscription experience and the internal tools.
+    Outcomes this year (practice numbers): monthly subscriber churn from 11% to 8%; first-order discount confusion tickets from 40 a month to under 10; retail reorder time (store to shipped) from 6 days to 3.
+    What we know: reviews say "I keep forgetting to cancel" and "three pouches stacked up"; tickets say "I signed up for 55% off and was charged $49.99"; retailer buyers email purchase orders as PDFs that we key in by hand.
+    Capacity: two developers and a designer for one quarter.
+    Current roadmap: a list of 14 features including a new flavour picker, a loyalty page, a redesign of the account page, an API for retailer orders, and a pause button.
+  output: pending
+tweaks:
+  - what: Outcomes in numbers
+    how: Give the number now and the number you need. A roadmap of outcomes needs measures.
+  - what: Customer evidence
+    how: Paste tickets and reviews. The opportunity tree is built from them, not from the feature list.
+  - what: Capacity
+    how: Say what the team can do in a quarter. The plan picks bets that fit.
+  - what: The current roadmap
+    how: Paste it. The roadmap places each feature under an outcome or marks it as unowned.
+judge:
+  - Every opportunity in the tree has evidence from a customer.
+  - The roadmap is a list of outcomes, with features only as examples.
+  - Each bet in the quarter says what it should move and how you will know.
+  - The quarter plan says what you are not doing.
+  - A stakeholder could read the update and not ask for a feature.
+test:
+  - Paste a feature with no outcome behind it. Step 2 should mark it unowned rather than invent an outcome.
+  - Give step 3 more bets than the team can do. It should cut, not squeeze.
+  - Run step 1 twice. The top opportunity under each outcome should match.
+  - Send the update to one stakeholder. Did they ask about outcomes or features?
+improve:
+  - Keep the opportunity tree alive. Add evidence as tickets and reviews come in.
+  - Save your outcomes and measures in one file and update them each quarter.
+  - Keep each quarter's update. The next one says what changed.
+  - Pair it with "Launch a feature through a beta and read the numbers" to ship each bet.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: A whiteboard or diagram tool
+      why: The opportunity tree is easier to argue with when you can see it.
+  inputs:
+    - Customer interview notes
+    - Support ticket exports by theme
+    - Last quarter's results against its plan
+terms:
+  - term: Opportunity solution tree
+    meaning: A diagram with an outcome at the top, the customer problems under it, and solution ideas under each problem.
+  - term: Outcome-based roadmap
+    meaning: A roadmap that lists the results a team must achieve instead of the features it must ship.

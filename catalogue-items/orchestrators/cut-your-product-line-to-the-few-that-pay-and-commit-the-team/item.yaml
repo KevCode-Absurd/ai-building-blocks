@@ -1,0 +1,29 @@
+slug: cut-your-product-line-to-the-few-that-pay-and-commit-the-team
+name: "Cut your product line to the few that pay"
+summary: "Give it your products and their numbers. Get the cut list, a give-up list and a commit note."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: brief, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+  - {type: shortlist}
+  - {type: copy_draft}
+uses: [product-line-cutter, program-keep-or-cut-reviewer, give-up-list-planner, disagree-and-commit-note-writer]
+steps:
+  - {uses: product-line-cutter, note: "The products ranked by what they really earn and what attention they take, and the line cut to the few that pay, in the manner of Steve Jobs's 1997 cull: the grid, the four quadrants, everything else gone."}
+  - {uses: program-keep-or-cut-reviewer, note: "Each programme, campaign and recurring effort reviewed as keep or cut on its results, the way Jeff Bezos and Warren Buffett judge what to stop, with the reason."}
+  - {uses: give-up-list-planner, note: "What you will no longer do, sell or chase, said plainly, following Al Ries and Jack Trout's rule that focus means sacrifice, with the customers and revenue you are giving up named."}
+  - {uses: disagree-and-commit-note-writer, note: "A note in Jeff Bezos's manner that states the decision, records the disagreement honestly, and asks everyone to commit, with what each team does on Monday. Sent only when you say so."}
+origin: own
+version: 1.0.0
+minds: [steve-jobs, jeff-bezos, warren-buffett, al-ries, jack-trout]
+credits:
+  - {title: "Speech to Apple employees, 23 September 1997 (in Make Something Wonderful, Part III)", by: "Steve Jobs, Steve Jobs Archive", url: "https://book.stevejobsarchive.com/#speech-apple-1997", used: "Cut the product line to a few things done well; focus means saying no"}
+  - {title: "2016 letter to shareholders", by: "Jeff Bezos", url: "https://www.aboutamazon.com/news/company-news/2016-letter-to-shareholders", used: "Disagree and commit: decide, record the disagreement and move together"}
+example_pending: true

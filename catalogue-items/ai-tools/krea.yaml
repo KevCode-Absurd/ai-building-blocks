@@ -1,0 +1,38 @@
+slug: krea
+name: Krea
+maker: Krea
+url: https://www.krea.ai
+promise: Image, video and 3D models in one place, with a free daily allowance.
+use_cases: [make-images, make-video, design]
+categories: [image, video]
+what_it_does:
+  - Gives you many image, video, 3D and lip-sync models in one account.
+  - Updates an image live as you change the prompt, with real-time models.
+  - Makes images bigger and sharper, up to 2K on the free plan.
+  - Trains a style on your own images.
+  - Chains steps into a repeatable flow with Krea Nodes.
+benefits:
+  - Compare several models on the same idea without extra sign-ups.
+  - Try everything free, with 100 units back every day.
+  - Keep a brand look by training on your own pictures.
+best_for:
+  - Designers and marketers who test many models.
+  - Quick rounds of image ideas that change as you type.
+  - Anyone who wants image and video in one account.
+not_for:
+  - Long videos with one continuous take.
+  - Saving up free units, which do not carry over to the next day.
+pricing:
+  model: freemium
+  from: US$9 per month
+  note: Free plan gives 100 compute units a day with a commercial licence. Basic gives 5,000 units a month and costs about US$5 a month billed yearly. Pro is US$35.
+works_with:
+  - flux
+  - kling
+  - veo
+runs_in: [web]
+blocks: []
+alternatives: [higgsfield, freepik, leonardo, midjourney]
+last_checked: 2026-10-21
+sources:
+  - https://www.krea.ai/pricing

@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It adapts each lesson to your answers.
 new_slug: adaptive-tutor
 name: Adaptive tutor
-summary: Name a topic. It checks your level, then teaches in small steps with practice and feedback.
+summary: Name a topic and your goal. Get a level check, then short lessons with practice and feedback.
 job: think-and-decide
 headline: Adaptive tutor
-subhead: Name a topic. It checks your level, then teaches in small steps with practice and feedback.
+subhead: Name a topic, your goal and how much time you have. It asks a few questions to find your level, then teaches in short steps, each followed by a question you answer from memory. You get the level check, lessons in steps, practice with feedback, a study guide if you want one and a plan for what to review next.
 explain: |
   You get a lesson that fits your level on a topic you choose. It begins with a short check of what you already know, then teaches in small steps with practice and feedback.
 

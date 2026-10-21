@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It joins several large tables and reads them with care.
 new_slug: cancer-dependency-analyst
 name: Cancer dependency analyst
-summary: Name a gene or cell line. Get which cancers depend on it and which drugs work, from DepMap data.
+summary: Name a gene or cell line. Get which cancers depend on it and which drugs hit them.
 job: research-topics
 headline: Cancer dependency analyst
-subhead: Name a gene or cell line. Get which cancers depend on it and which drugs work, from DepMap data.
+subhead: Name a gene or cell line and, if you like, a cancer type to compare. It pulls the latest DepMap release, the public map of gene knockout screens in cancer cells, and runs the statistics. You get ranked gene dependencies, cell line group comparisons, genes that behave alike and drug response links.
 explain: |
   Name a gene or cell line and see which cancers need it to survive and which drugs hit them. The skill works from DepMap, the public map of gene knockout screens in cancer cells, and gives you ranked lists you can take to the lab as ideas to test.
 

@@ -1,0 +1,41 @@
+slug: replit
+name: Replit
+maker: Replit
+url: https://replit.com
+promise: Describe an app and get it built, hosted and live in one place.
+use_cases: [build-apps, code]
+categories: [coding]
+what_it_does:
+  - Builds an app or site from a description in plain words.
+  - Hosts and publishes the project on its own servers.
+  - Adds a database to each project without separate setup.
+  - Includes sign-in and monitoring, so you do not add them yourself.
+  - Connects your app to more than 100 services, such as Stripe and Google Workspace.
+benefits:
+  - Go from an idea to a live link without setting up servers.
+  - Test a small business app before you hire a developer.
+  - Keep building, editing and hosting in one account.
+  - Add teammates on a paid plan so others can work on the same project.
+best_for:
+  - Founders and operators building an internal app or a first product.
+  - Beginners who want the code, hosting and database handled for them.
+  - Anyone prototyping a web app over a weekend.
+not_for:
+  - Large apps with strict security needs, unless you check the enterprise plan.
+  - Anyone who wants a fixed bill, since extra AI use is charged on top.
+pricing:
+  model: freemium
+  from: US$20 per month
+  note: Free Starter plan with one live project. Core is US$20 per month, or US$18 per month billed yearly, and includes US$20 towards stronger models. Pro is US$100 per month.
+works_with:
+  - Stripe
+  - OpenAI
+  - Google Workspace
+  - GitHub
+runs_in: [web, mobile]
+blocks: []
+alternatives: [lovable, bolt, v0, cursor]
+last_checked: 2026-10-21
+sources:
+  - https://replit.com/pricing
+  - https://replit.com

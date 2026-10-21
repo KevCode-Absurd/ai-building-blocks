@@ -1,0 +1,111 @@
+new_slug: meeting-to-written-update-converter
+name: "Meeting to written update converter"
+summary: "Paste a recurring meeting's purpose and agenda. Get the written update that replaces it, with a template."
+job: organise-work
+thinking: low
+thinking_why: "It sorts a given agenda and designs a short template from it."
+
+headline: "Meeting to written update converter"
+subhead: "Paste a recurring meeting's purpose, agenda, attendees and a set of recent notes. The prompt sorts each item into report, decide, solve or social, counts the hours it costs, moves the reports into a written update with a template, keeps only what needs a room, and plans a two-week trial."
+
+explain: |
+  The weekly status meeting is six people listening to one person read. Everyone agrees it is too long, nobody cancels it, because somewhere in it a decision gets made. Jason Fried has made the public case for years that the report parts belong in writing and the room should be kept for the few things that need one.
+
+  This prompt sorts your agenda into the four kinds of item, checks the labels against what was actually said last time, and counts the cost in hours per month. It designs the written update, with who writes it, when, where, a word limit and how questions get asked. It keeps the decide and solve items in a shorter meeting with fewer people, finds a home for the social part so it is not lost, writes the template with headings and limits, and sets up a two-week trial with something to measure.
+
+when:
+  - "A weekly meeting has grown to an hour and most of it is updates."
+  - "Your team is spread across time zones and the live meeting leaves someone out."
+  - "You want to cancel a meeting but are afraid of losing the one decision it makes."
+
+you_give:
+  - "The meeting's purpose, frequency, length, attendees and agenda"
+  - "Notes from a recent occurrence (advised)"
+  - "What people complain about (optional)"
+you_get:
+  - "Each agenda item sorted, with the hours the meeting costs"
+  - "The written update design and its template"
+  - "The shorter meeting that stays, if any, and where the social part goes"
+  - "A two-week trial with a measure"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the meeting details under it."
+  - "Paste last week's notes so the sort is based on what really happened."
+  - "Check AGENDA SORTED. Fix any label you disagree with and run again."
+  - "Post the template, start the trial, and ask the end question in two weeks."
+
+how_it_works:
+  - title: "Sorts the agenda"
+    text: "Report, decide, solve or social, each backed by the notes."
+  - title: "Counts the cost"
+    text: "People times minutes, in hours per month."
+  - title: "Moves reports to writing"
+    text: "Who writes, when, where, the word limit, how questions work."
+  - title: "Keeps what needs a room"
+    text: "Decide and solve items in a shorter meeting with only the people who decide."
+  - title: "Protects the social part"
+    text: "Suggests where it goes so it is not lost by accident."
+  - title: "Writes the template and trial"
+    text: "Headings with word limits, and a two-week trial with a measure and an end question."
+
+output_shape: |
+  AGENDA SORTED   <item | label | evidence>
+  COST NOW        <hours per month>
+  WRITTEN UPDATE  <who, when, where, limit, questions>
+  MEETING KEPT    <items, length, attendees> or none
+  SOCIAL          <where it goes>
+  TEMPLATE        <headings, instruction, limit>
+  TRIAL           <changes, measure, end question>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Meeting: Sprout weekly team sync, Mondays, 60 minutes, 7 people (founder,
+    marketing lead, two support agents, web developer, ops manager, designer).
+    Agenda: last week's sales and ad numbers (marketing lead reads them out);
+    support volume and top complaints (support agent reads them); site
+    changes shipped (developer); stock and shipping (ops); upcoming limited
+    flavour launch (founder asks for decisions on date and ad angle); anything
+    else.
+    Notes from last Monday: numbers took 20 minutes with questions; support
+    said cancel complaints up again; developer shipped the new Kids page;
+    ops flagged the pouch reprint; the launch date for Raspberry Lemonade
+    was debated for 15 minutes and not decided; the designer did not speak.
+    Complaints: runs over, the launch decision keeps slipping.
+  output: pending
+
+tweaks:
+  - what: "The notes"
+    how: "Real notes make the sort honest. Without them every label is a guess."
+  - what: "What people complain about"
+    how: "Say it. 'Nothing gets decided' points at the decide items, 'runs long' at the report items."
+  - what: "Your tools"
+    how: "Say where written updates can live (a channel, a doc) so the design uses what you have."
+
+judge:
+  - "The labels match what happened in the notes."
+  - "The hours are right."
+  - "Every template heading has a word limit."
+  - "The decisions still have a time and a room."
+  - "You know what to measure in two weeks."
+
+test:
+  - "Run the trial and compare hours in meetings and decisions made against the two weeks before."
+  - "Run it twice. The sort should match."
+  - "Give it a meeting whose agenda is all decisions. It should say the meeting stays, shorter."
+
+improve:
+  - "Add where your team already writes, so the update lands in a place people read."
+  - "Keep the template and tune the word limits after the trial."
+  - "Pair it with the Weekly status update writer to fill the template each week."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message plan works in any strong chat AI."}
+  inputs:
+    - "Two or three sets of past notes, so the sort sees a pattern"
+    - "The calendar invite, so attendees and length are exact"

@@ -1,0 +1,127 @@
+new_slug: monthly-help-centre-keeper
+name: Monthly help centre keeper
+summary: Give it last month's support tickets each month. Get the questions your help pages miss, new articles drafted and stale ones fixed.
+job: help-customers
+thinking: high
+thinking_why: It groups messy tickets into topics, judges whether an article failed or was never found, and must keep customer details out of every draft. Give it your strongest model.
+headline: Monthly help centre keeper
+subhead: Give it last month's support tickets and your help centre. It counts the questions by topic, checks which ones your pages already answer and whether the answer matches what support said, drafts the missing articles from the best solved tickets and rewrites the pages customers found and still wrote in about. You publish.
+explain: |
+  A help centre is written at launch and then the product moves on. The tickets know what the pages miss. The same question arrives forty times a month, the article that would answer it has a title nobody searches for, and another article says one thing while support has been saying another for six weeks.
+
+  This agent reads last month's tickets on the first Monday of each month. It groups them into topics and ranks them, then checks each top topic against the help centre: is there an article, did customers find it, and does it match what support actually said? A topic with no article gets a draft built from the best solved ticket. An article customers found and still wrote in about gets rewritten with the answer first and a title that matches what they typed. Every draft is stripped of personal details and checked against your voice. It never publishes or replies.
+when:
+  - The same question fills your support inbox and the help page for it either does not exist or nobody finds it.
+  - Your help articles have not been checked against what support says since launch.
+  - You want proof that an article you published last month reduced tickets.
+you_give:
+  - Last month's ticket export with the question, the reply that solved it and the page visited first, if recorded
+  - Every help article as text, with its address and last-updated date
+  - Your brand brain, for the voice check (advised)
+  - Internal product docs or release notes (optional)
+  - Last month's keeper file, once it exists
+you_get:
+  - The top topics ranked by ticket count, each with whether an article exists and was found
+  - Proof of whether last month's articles reduced tickets
+  - Mismatches between an article and what support said, for the product owner
+  - New articles drafted from real solved tickets, personal details stripped
+  - Failed articles rewritten answer first, with titles customers would type
+  - Voice fixes on every draft
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run last month.
+  - Export last month's tickets from your support tool with the solving replies. Put them in the support team's folder with your help articles, or attach them in the chat.
+  - Attach your brand brain if you have one.
+  - Read the mismatches first and settle them with the product owner. Then read the drafts.
+  - Publish what you approve in your help centre yourself. Run it again next month; it tells you whether the articles worked.
+how_it_works:
+  - title: Read last month
+    text: Counts this month's tickets on each topic an article was published for, against last month.
+  - title: Count the topics
+    text: Groups the tickets by topic, ranks the top ten and keeps the best solved ticket for each.
+  - title: Check what the help centre already says
+    text: For each top topic, whether an article exists, where, and whether it matches what support actually told customers.
+  - title: Sort each topic
+    text: No article, not found, found but did not answer, or working. Only the first three get action.
+  - title: Draft the missing articles
+    text: A page from the best solved ticket, or a fuller article from several tickets and the product docs, with every personal detail stripped.
+  - title: Rewrite the pages that failed
+    text: Each section opens with its answer and the title says what the customer typed.
+  - title: Check the voice
+    text: Every new or rewritten article checked against your brand brain.
+  - title: Log and hand back
+    text: Updates the topic and article files, then stops. You publish.
+output_shape: |-
+  THIS MONTH
+    <n> tickets | top topics <n> | no article <n> | found but failed <n> | not found <n>
+
+  DID LAST MONTH'S ARTICLES WORK
+    <article> | tickets before <n> | after <n> | <worked | no change | worse>
+
+  THE TOPICS
+    <topic> | <n> tickets | article: <yes: address | none> | found: <yes | no> | action: <draft | rewrite | retitle | leave>
+
+  MISMATCHES (for the product owner)
+    <article> says <x> | support said <y> in <n> tickets | which is right?
+
+  NEW ARTICLES (drafts)
+    <title> | from ticket <id, details stripped> | steps | what you should see | if it happens again
+
+  REWRITES
+    <old title> -> <new title> | sections answer first | facts needing a source: <list>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run September for Sprout's help centre. Practice tickets, not real
+    customers.
+    Ticket export: 1,840 tickets with question, solving reply, date and
+    first help page visited. Top patterns I can see: "how do I cancel"
+    (about 400), "the price went up after my first box" (about 290),
+    "sugar-free upset my stomach, can I switch" (about 120), "limited
+    flavour switched back to Original without asking" (about 95), "my
+    daily pack was torn on the side, is it okay" (about 60).
+    Help centre: 23 articles attached. Relevant ones: "Managing your
+    subscription" (last updated March; the cancel steps are two clicks
+    out of date); "Pricing and discounts" (says the first-order price is
+    $34.99; the site now says $29.99); no article on switching sugar
+    level; "Limited flavours" says subscribers "may" switch back, support
+    replies say they switch back automatically after one month.
+    Brand brain attached.
+  output: pending
+tweaks:
+  - what: Solving replies
+    how: Export the reply that fixed each ticket. New articles are built from them, not from how the product should work.
+  - what: Page visited first
+    how: If your tool records it, the agent can tell "not found" from "found but did not answer".
+  - what: Top topics
+    how: Ten by default. Set five for a small inbox.
+  - what: Personal details
+    how: The agent strips them. Keep the export in the support team's folder anyway.
+judge:
+  - Every topic count comes from the sorted tickets.
+  - No draft contains a name, email or order number.
+  - Every new article came from a solved ticket or the product docs.
+  - Rewrites kept the answer support gave unless flagged.
+  - Nothing was published or sent.
+test:
+  - Give it tickets for a topic you know has an article with a bad title. It should mark it "not found" and retitle it.
+  - Give it an article that disagrees with support's replies. It should flag the mismatch, not pick a side.
+  - Run it twice on the same export. The topics and actions should match.
+improve:
+  - Record which help page a customer visited before writing in. It is the difference between "retitle" and "rewrite".
+  - Keep your product docs current and in the folder, so mismatches can be settled fast.
+  - Record the publish date of every article. The proof step depends on it.
+  - Pair it with the Customer inbox triage and reply drafter, which handles today's tickets; this one reduces next month's.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the topic and article files between months and read the help centre export directly.
+    - name: Your support tool
+      why: Export tickets with the solving reply and the first help page visited.
+  inputs:
+    - Your help centre search logs, so "not found" can be confirmed
+    - Release notes for the month, so an article can be checked against the current product

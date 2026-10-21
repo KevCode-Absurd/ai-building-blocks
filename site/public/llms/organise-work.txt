@@ -1,8 +1,8 @@
 # Run meetings, notes and plans: AI Blocks
 
-> 61 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 68 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Activity digest writer](https://useaiblocks.com/skills/activity-digest-writer): Ask what you missed. Get a daily or weekly digest of mentions, action items and decisions by topic.
+- [Activity digest writer](https://useaiblocks.com/skills/activity-digest-writer): Ask what you missed. Get a daily or weekly digest of mentions, action items and decisions by project.
 - [Brain dump organizer](https://useaiblocks.com/skills/brain-dump-organizer): Dump everything on your mind. Get it sorted into tasks, ideas and notes with nothing lost.
 - [Brain dump sorter](https://useaiblocks.com/prompts/brain-dump-sorter): Paste everything on your mind. Get tasks, ideas and notes sorted with nothing lost.
 - [Bullet note maker](https://useaiblocks.com/skills/bullet-note-maker): Paste messy notes or an article. Get tidy nested bullets that are quick to scan and revise.
@@ -10,12 +10,14 @@
 - [Company operating system setter](https://useaiblocks.com/skills/company-operating-system-setter): Describe your company. Get a way of running it: scorecard, accountability chart, meetings and 90-day goals.
 - [Confluence space builder](https://useaiblocks.com/skills/confluence-space-builder): Say what your team needs. Get a Confluence space set up with page templates, permissions and a clear layout.
 - [Cross-tool search finder](https://useaiblocks.com/skills/cross-tool-search-finder): Ask where a decision or doc lives. Get one search across your chat, email and files, with sources.
-- [Deep work day planner](https://useaiblocks.com/skills/deep-work-day-planner): Give it your tasks and calendar. Get a day with protected focus hours and shallow work cut back.
+- [Daily shutdown planner](https://useaiblocks.com/agents/daily-shutdown-planner): Give it your task list and tomorrow's calendar each evening. Get the day closed, three priorities set and focus hours protected.
+- [Debate then decide meeting planner](https://useaiblocks.com/prompts/debate-then-decide-meeting-planner): Paste a decision your team keeps circling. Get a one-meeting plan that argues it out and closes it.
+- [Deep work day planner](https://useaiblocks.com/skills/deep-work-day-planner): Give it your tasks and calendar. Get a schedule with protected focus blocks and shallow work cut back.
 - [Delivery team sprint runner](https://useaiblocks.com/skills/delivery-team-sprint-runner): Tell it your team and sprint. Get metrics, capacity plans, ceremony agendas and a sprint report for your PMO routine.
 - [File organizer](https://useaiblocks.com/skills/file-organizer): Point it at a messy folder. Get files sorted by type, date or project, with duplicates found.
 - [Folder tidier](https://useaiblocks.com/skills/folder-tidier): Point it at a messy folder. Get a clean folder plan and duplicates found. Files move only when you say yes.
 - [Google Forms automator](https://useaiblocks.com/skills/google-forms-automator): Say what should happen on each form reply. Get a form plan and Apps Script that emails alerts or logs rows.
-- [Handoff note writer](https://useaiblocks.com/skills/handoff-note-writer): Finish a chat. Get it boiled down to a handoff note that another AI can pick up.
+- [Handoff note writer](https://useaiblocks.com/skills/handoff-note-writer): Finish or pause a chat. Get a short handoff note that another AI can carry on from.
 - [Inbox triager](https://useaiblocks.com/skills/inbox-triager): Run it on your recent email. Get messages sorted, senders checked and reply drafts. It never sends.
 - [Incident postmortem writer](https://useaiblocks.com/skills/incident-postmortem-writer): Give it the facts of an outage. Get a blameless postmortem with timeline, causes and follow-up actions.
 - [Internal update writer](https://useaiblocks.com/skills/internal-update-writer): Give it the facts. Get a status report, leadership update, newsletter or incident note in a clear format.
@@ -27,6 +29,8 @@
 - [Meeting notes maker](https://useaiblocks.com/skills/meeting-notes-maker): Give it meeting audio. Get a transcript by speaker, with a summary, decisions and action items.
 - [Meeting pre-read writer](https://useaiblocks.com/skills/meeting-pre-read-writer): Name the meeting. Get an agenda and pre-read built from your Notion pages and research.
 - [Meeting scheduler](https://useaiblocks.com/skills/meeting-scheduler): Say who to meet and when. Get time zones sorted, calendars checked and the best slots offered.
+- [Meeting to written update converter](https://useaiblocks.com/prompts/meeting-to-written-update-converter): Paste a recurring meeting's purpose and agenda. Get the written update that replaces it, with a template.
+- [Monthly roles and goals reviewer](https://useaiblocks.com/agents/monthly-roles-and-goals-reviewer): Give it your roles and last month's calendar. Get the role crowding out the rest, your goals re-set and next month protected.
 - [Note organizer](https://useaiblocks.com/skills/note-organizer): Give it ideas or meeting notes. Get them captured, tagged and filed so you can find them later.
 - [Notes wiki builder](https://useaiblocks.com/skills/notes-wiki-builder): Give it what you learned. Get small linked notes and an index, so your AI remembers it next time.
 - [Notion research writer](https://useaiblocks.com/skills/notion-research-writer): Ask a question. Get a cited brief or comparison built from your Notion pages.
@@ -38,6 +42,7 @@
 - [On-call handoff writer](https://useaiblocks.com/skills/on-call-handoff-writer): Give it your shift alerts and open issues. Get a handoff note the next person can act on at once.
 - [Personal wiki keeper](https://useaiblocks.com/skills/personal-wiki-keeper): Feed it sources. Get an Obsidian wiki that updates pages, links ideas and flags where sources disagree.
 - [Process bottleneck finder](https://useaiblocks.com/skills/process-bottleneck-finder): Describe a business process. Get a swim-lane map, cycle times and the one stage holding everything up.
+- [Process waste walk planner](https://useaiblocks.com/prompts/process-waste-walk-planner): Paste a process step by step. Get every kind of waste in it named, with the first one to remove.
 - [Questionnaire writer](https://useaiblocks.com/skills/questionnaire-writer): Tell it who you need answers from. Get a questionnaire aimed at what they know and you do not.
 - [Rough notes to minutes writer](https://useaiblocks.com/prompts/rough-notes-to-minutes-writer): Paste rough meeting notes. Get short minutes with decisions, owners and dates.
 - [Run a meeting worth holding, from agenda to action items](https://useaiblocks.com/workflows/run-a-meeting-worth-holding-from-agenda-to-action-items): Name a meeting. Get a call on whether to hold it, a pre-read, then notes with owners and dates.
@@ -51,10 +56,12 @@
 - [Stakeholder map builder](https://useaiblocks.com/skills/stakeholder-map-builder): List the people affected by your project. Get a power and interest grid with how to talk to each group.
 - [Stakeholder update writer](https://useaiblocks.com/skills/stakeholder-update-writer): Give it your progress. Get an update for leaders, engineers or customers at the right depth and cadence.
 - [Standup update writer](https://useaiblocks.com/skills/standup-update-writer): Ask for your standup. Get yesterday, today and blockers from your commits, PRs and tickets.
-- [Task list keeper](https://useaiblocks.com/skills/task-list-keeper): Tell it your tasks. Get a simple TASKS file kept up to date as you add, finish and review work.
+- [Stop doing list writer](https://useaiblocks.com/prompts/stop-doing-list-writer): Paste everything your team does. Get the things to stop on purpose, with who tells whom.
+- [Task list keeper](https://useaiblocks.com/skills/task-list-keeper): Tell it your tasks. Get one TASKS file kept current as you add, finish and review work.
 - [Team capacity planner](https://useaiblocks.com/skills/team-capacity-planner): Give it your team and projects. Get workload against people, who is overloaded, and whether you can take on more.
 - [Vendor scorecard builder](https://useaiblocks.com/skills/vendor-scorecard-builder): Give it your vendor list and uptime data. Get scorecards, missed-SLA credits and keep, review or replace calls.
 - [Web clipper template maker](https://useaiblocks.com/skills/web-clipper-template-maker): Name the site you clip from. Get a tested Obsidian Web Clipper template that saves clean, well-labelled notes.
+- [Week plan maker from a task list](https://useaiblocks.com/prompts/week-plan-from-task-list-maker): Paste your task list and your hours. Get a week plan with three big tasks placed and the rest parked.
 - [Weekly customer call planner](https://useaiblocks.com/skills/weekly-customer-call-planner): Ask for your week. Get one brief covering every outside call in the next seven days. Needs your Common Room account.
 - [Weekly meeting actions keeper](https://useaiblocks.com/agents/weekly-meeting-actions-keeper): Give it this week's meeting notes. Get minutes, last week's open actions checked and an agenda for the next meeting.
 - [Weekly review guide](https://useaiblocks.com/skills/weekly-review-guide): Run it each week. Get open loops closed, stalled projects found and a clear plan for next week.

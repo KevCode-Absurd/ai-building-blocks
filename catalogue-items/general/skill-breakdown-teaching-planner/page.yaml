@@ -1,0 +1,114 @@
+new_slug: skill-breakdown-teaching-planner
+name: "Skill breakdown teaching planner"
+summary: "Paste a skill you know well. Get it broken into teachable steps with the mistake and check for each."
+job: teach-and-train
+thinking: medium
+thinking_why: "It has to find the steps the expert no longer notices, which takes reasoning about the description."
+
+headline: "Skill breakdown teaching planner"
+subhead: "Paste a description of something you do well and who you want to teach it to. The prompt finds the steps you no longer notice, orders four to eight steps for learning, gives each a common mistake, a quick check and a ready sign, marks the hard step and plans the first hour."
+
+explain: |
+  The person who does a thing best is often the worst at teaching it, because half the steps have become invisible to them. "You just know when it is ready" is true for them and useless to a beginner. The beginner needs that feeling turned back into something they can look at or measure.
+
+  This prompt reads your description and hunts for those hidden steps, turning each one into an action a beginner can do on purpose. It orders four to eight steps for learning, not for doing, and gives each one the common mistake, a quick check the learner can run alone and the sign they are ready to move on. It marks the step where most people stall and what to do about it, and plans a first hour that ends with a small complete result.
+
+when:
+  - "You are training your replacement in something you have done for years."
+  - "New hires keep failing at a task that feels obvious to you."
+  - "You are turning your know-how into a course or a how-to."
+
+you_give:
+  - "The skill, described in as much detail as you can"
+  - "The learner: who, what they know, how much time"
+  - "What beginners got wrong before (advised)"
+  - "A good and a poor example (optional)"
+you_get:
+  - "The result stated and the hidden steps found"
+  - "Four to eight steps with mistake, check and ready sign"
+  - "The hard step and what to do when learners stall"
+  - "A first-hour plan"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your description under it."
+  - "Describe the skill as if talking to a friend, including the parts you 'just know'."
+  - "Read HIDDEN STEPS FOUND. Correct any that are wrong and run again."
+  - "Teach the FIRST HOUR, then adjust the steps from what you saw."
+
+how_it_works:
+  - title: "Names the result"
+    text: "What the learner will be able to do, and how it is judged."
+  - title: "Finds the hidden steps"
+    text: "Every decision made by feel, turned into something a beginner can do on purpose."
+  - title: "Orders the steps"
+    text: "Four to eight, in learning order, grouped into stages."
+  - title: "Writes four lines per step"
+    text: "What to do, the common mistake, the quick check, the ready sign."
+  - title: "Marks the hard step"
+    text: "Where most people stall, and what to do about it."
+  - title: "Plans the first hour"
+    text: "Steps, repetitions, and a complete result to leave with."
+
+output_shape: |
+  THE RESULT          <one line>
+  HIDDEN STEPS FOUND  <...>
+  STEPS               <stage> <n. do | mistake | check | ready when>
+  THE HARD STEP       <which, why, what to do>
+  FIRST HOUR          <steps, reps, outcome>
+  MISSING             <...>
+  CHECKS MISSED       <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Skill: reading a week of Sprout ad results and deciding which ads to
+    keep, cut or copy. I have done it every Monday for two years. I look at
+    spend, orders and cost per order for each ad, but mostly I look at the
+    opening line and whether the ad is "doing its job" for the buyer it is
+    aimed at. A discount ad with a high cost per order is fine if it is
+    pulling price doubters; a habit ad with the same cost is a problem. I
+    check how long it has run, because the first three days lie. I cut
+    anything that has been flat for two weeks unless it is the only ad on
+    an angle. I copy the opening line of anything that beats the account
+    average and write two variations.
+    Learner: our new marketing coordinator, one month in, knows the ads
+    manager but has never made a keep-or-cut call. We have 90 minutes on
+    Monday.
+    Past teaching: the last person cut ads after three days and kept
+    everything with a low cost per order even when it was aimed at the
+    wrong buyer.
+  output: pending
+
+tweaks:
+  - what: "Detail"
+    how: "The more you ramble, the more hidden steps the prompt can find. Say the things you 'just know'."
+  - what: "Past teaching"
+    how: "What beginners got wrong before becomes the common mistakes, marked as observed rather than likely."
+  - what: "Examples"
+    how: "A good and a poor result let the quick checks point at a real difference."
+
+judge:
+  - "Every step has a check the learner can run alone."
+  - "The hidden steps are things you really do by feel."
+  - "Likely mistakes are marked as likely."
+  - "The first hour ends with a result."
+  - "There are no more than eight steps."
+
+test:
+  - "Teach the first hour to one person and note where they stalled. It should be the marked hard step."
+  - "Run it twice. The steps should match in substance."
+  - "Leave out the learner. It should plan for a beginner with one hour and say MISSING: learner."
+
+improve:
+  - "Add your examples of good and poor results so the checks are concrete."
+  - "After each teaching session, paste in what went wrong and let the mistakes update."
+  - "Pair it with the Practice session minute planner to run the first hour."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message plan works in any strong chat AI."}
+  inputs:
+    - "A recording of you doing the skill while talking through it"
+    - "The learner's own attempt, so the plan starts where they are"

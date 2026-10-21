@@ -1,0 +1,131 @@
+new_slug: quarterly-accessibility-keeper
+name: Quarterly accessibility keeper
+summary: Give it your site each quarter. Get accessibility gaps ranked, last quarter's fixes checked and a statement kept current.
+job: design-work
+thinking: high
+thinking_why: It ranks problems by whether they block a real task, reads code to place fixes and must never over-claim. Give it your strongest model.
+headline: Quarterly accessibility keeper
+subhead: Give it your site, its key pages and your colour tokens once a quarter. It checks against WCAG, re-checks last quarter's fixes, ranks the gaps with task-blocking ones first, checks colour contrast when the palette changes, and keeps dated notes for your accessibility statement. You approve every change.
+explain: |
+  Accessibility work decays. A site is fixed once, then a redesign ships with a form nobody labelled, a brand refresh drops the button contrast under the line, and the statement on the footer describes a site that no longer exists. The next time anyone looks is when a customer or a buyer complains.
+
+  This agent looks every quarter and after every redesign. It re-checks last quarter's fixes first, then checks the whole site and the pages that matter most. It ranks what to fix by whether it stops a real task, not just by which criterion it fails, and proposes at most ten fixes with where each goes in the code. It checks every colour pair when the palette changes and runs the Section 508 check when a government buyer asks. It keeps dated notes for your statement and never claims a conformance level. It changes nothing.
+when:
+  - You fixed accessibility once and are not sure it held.
+  - A redesign or brand refresh just shipped.
+  - A buyer or a regulator asked for your accessibility statement and you do not have a current one.
+you_give:
+  - Your site address and the pages where people buy, sign up, pay or get help
+  - Your code or templates, so fixes can be placed (advised)
+  - Your colour tokens or design direction (advised)
+  - What changed since last quarter (advised)
+  - Whether any buyer is a government body (optional)
+you_get:
+  - Gaps by WCAG level, against last quarter
+  - At most ten fixes, task-blocking first, each with page, criterion and where it goes
+  - A verdict on each fix from last quarter, held or reopened
+  - Failing colour pairs and the closest passing colours
+  - Dated notes for your accessibility statement, with no over-claim
+  - A five-task human test to run with people who use assistive technology
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this quarter.
+  - Give it the site address and your key pages. Point it at the code and the colour tokens if you can.
+  - Say what changed since last quarter.
+  - Read the fix list. Make the changes you agree with, then tell the agent which were done.
+  - Run the human test with five users. Run the agent again next quarter; it re-checks what you fixed.
+how_it_works:
+  - title: Read last quarter
+    text: Lists every fix marked done, to re-check before anything new.
+  - title: Check the whole site
+    text: Finds WCAG gaps by level, what to fix first and notes for the statement, against last quarter.
+  - title: Check the pages that matter
+    text: Ranks problems on key and changed pages against WCAG 2.2, with fixes held as proposals, task-blocking ones first.
+  - title: Check the colours when they changed
+    text: Tests every light and dark pair and names the closest passing colour for each failure.
+  - title: Check for government buyers
+    text: Runs the Section 508 check and writes report notes only when a government buyer applies.
+  - title: Rank and plan
+    text: Merges the gaps, sorts by blocked tasks then level, and proposes at most ten fixes with their place in the code.
+  - title: Update the statement notes
+    text: Writes what is true now, dated, and leaves the conformance claim to you after a human test.
+  - title: Log and hand back
+    text: Saves the gaps and notes, then stops.
+output_shape: |-
+  THIS QUARTER
+    A gaps <n> (<change>) | AA gaps <n> (<change>) | fixes held <n> | reopened <n>
+
+  FIX FIRST (max 10)
+    1. <page> | <WCAG criterion> | <blocks task | level A | level AA> | fix: <what> | where: <file or element>
+
+  RE-CHECKS
+    <fix from last quarter> | <held | reopened: why>
+
+  COLOUR PAIRS
+    <foreground> on <background> | ratio <n> | fails <AA | AAA> | closest passing: <colour>
+
+  GOVERNMENT NOTES (if it applies)
+    <Section 508 gap> | fix: <what> | report note: <one line>
+
+  STATEMENT NOTES (dated, no claim)
+    Checked: <pages> on <date> | known gaps: <list> | next check: <date>
+
+  HUMAN TEST
+    <task> with <who> | watch for: <what>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run Q4 for sprout.example. Key pages: home, /products/sprout,
+    /products/kids, the cart and checkout, /help/cancel, /faq.
+    Changed since last quarter: new theme on the product pages, a quiz
+    funnel added at /quiz, the announcement bar now rotates four messages.
+    Colour tokens: forest green #00582D, deep green #002C17, cream #FFF7DF,
+    kelly green #007E40 (buttons), sunflower yellow #FFCC2E (stars,
+    badges, small text), plum #581E5A (top banner, white text).
+    Code: theme repo attached.
+    Last quarter's fixes marked done: alt text on gallery images; focus
+    ring on the plan selector; the "Select Sugar Level" buttons labelled.
+    Government buyers: none.
+  output: pending
+tweaks:
+  - what: Key pages
+    how: Name the pages where people buy, sign up or get help. Those are checked every quarter even if nothing changed.
+  - what: Fixes per quarter
+    how: Ten is the default. A team of one should set five.
+  - what: Colour tokens
+    how: Give the palette as tokens. Without them the contrast check is skipped.
+  - what: Government buyers
+    how: Say if any buyer is a government body. The Section 508 check runs only then.
+judge:
+  - Every gap names a page and a criterion.
+  - Last quarter's fixes were re-checked first.
+  - Task-blocking problems rank above checklist failures.
+  - The statement notes make no conformance claim.
+  - Nothing on the site was changed.
+test:
+  - Run it after a redesign where you know a form lost its labels. It should rank that near the top.
+  - Give it a colour pair you know fails. It should name a passing colour close to it.
+  - Run it twice on the same site. The ranked list should match.
+improve:
+  - Write your key page list and your palette tokens into the folder before the first run.
+  - Set the fixes-per-quarter cap to what your team can ship.
+  - Record which fixes were done and when in the gaps file. Re-checks depend on it.
+  - Run the five-user test the agent writes, and paste what you saw. The next ranking learns from it.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read the theme or app code, keep the gaps file between quarters and run on a schedule.
+    - name: A screen reader
+      why: For the human test. Use the one your users use most on the device they use most.
+  inputs:
+    - Support tickets that mention a screen reader, keyboard or colour
+    - Your statement as it stands today, so the notes update it rather than start over
+terms:
+  - term: WCAG
+    meaning: The Web Content Accessibility Guidelines, the standard most laws and buyers point to, with levels A, AA and AAA.
+  - term: Section 508
+    meaning: The US rule that government bodies, and often their suppliers, must meet for accessible technology.

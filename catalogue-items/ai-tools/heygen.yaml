@@ -1,0 +1,38 @@
+slug: heygen
+name: HeyGen
+maker: HeyGen
+url: https://www.heygen.com
+promise: Videos with a talking AI presenter, in your look and voice.
+use_cases: [make-video]
+categories: [video]
+what_it_does:
+  - Turns a typed script into a video with an AI presenter.
+  - Makes a custom avatar of you, with your own voice, on paid plans.
+  - Offers over 500 stock presenters in more than 30 languages.
+  - Translates a video into other languages.
+  - Exports in 1080p, or 4K on the Pro plan.
+benefits:
+  - Send personal video messages without filming each one.
+  - Put your sales or support video into other languages.
+  - Update a video by changing the script instead of reshooting.
+best_for:
+  - Product demos, outreach videos and explainers.
+  - Founders who want a video version of themselves without the shoot.
+  - Teams that need videos in many languages.
+not_for:
+  - Cinematic ads or story-led clips.
+  - Free use at scale, since the free plan has watermarks and only 3 short videos a month.
+pricing:
+  model: freemium
+  from: "US$29 per month"
+  note: Free plan gives 3 watermarked videos a month, up to 1 minute each. Creator includes 600 credits and removes the watermark. Pro is US$49 per month.
+works_with:
+  - elevenlabs
+  - canva
+runs_in: [web, api]
+blocks:
+  - marketing-video-producer
+alternatives: [synthesia, veed, descript, capcut]
+last_checked: 2026-10-21
+sources:
+  - https://www.heygen.com/pricing

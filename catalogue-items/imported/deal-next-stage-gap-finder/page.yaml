@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It compares the deal to what the next stage needs.
 new_slug: deal-next-stage-gap-finder
 name: Deal next-stage gap finder
-summary: Name a deal. Get what is missing to reach the next stage and to close, who does what and by when.
+summary: Name a deal. Get what is missing to reach the next stage, with an owner and date for each gap.
 job: sell-and-negotiate
 headline: Deal next-stage gap finder
-subhead: Name a deal. Get what is missing to reach the next stage and to close, who does what and by when.
+subhead: Name a deal and say whether you want the next stage or the close. It reads the CRM record, contact roles, emails and open commitments against your stage exit rules. You get the missing items, an owner and due date for each, and the shortest path to close.
 explain: |
   Know exactly what stands between this deal and the next stage. You get a gap list measured against your stage exit rules and qualification method, with who should do each task and by when, plus the shortest path to close.
 

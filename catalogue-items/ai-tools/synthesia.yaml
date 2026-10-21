@@ -1,0 +1,38 @@
+slug: synthesia
+name: Synthesia
+maker: Synthesia
+url: https://www.synthesia.io
+promise: Videos with a talking AI presenter, made from a script you type.
+use_cases: [make-video]
+categories: [video]
+what_it_does:
+  - Turns a typed script into a video with an AI presenter.
+  - Offers 125 or more stock avatars on paid plans.
+  - Makes a personal avatar from your own footage on the Pro plan.
+  - Translates and dubs a video into other languages.
+  - Adds branded pages and interactive elements to videos.
+benefits:
+  - Make training and how-to videos without filming anyone.
+  - Update a video by changing the script, not by reshooting.
+  - Put the same video in several languages.
+best_for:
+  - Training, onboarding and product explainer videos.
+  - Teams that need many videos with a steady, clear presenter.
+  - Companies that need security features such as SSO.
+not_for:
+  - Cinematic ads or story-led clips.
+  - Videos where a real person on camera builds the trust.
+pricing:
+  model: freemium
+  from: "US$29 per month"
+  note: The free Basic plan has a watermark and a small allowance of video minutes. Starter includes 1,250 credits a month. Yearly billing lowers the price.
+works_with:
+  - elevenlabs
+  - canva
+runs_in: [web, api]
+blocks:
+  - marketing-video-producer
+alternatives: [heygen, veed, descript, capcut]
+last_checked: 2026-10-21
+sources:
+  - https://www.synthesia.io/pricing

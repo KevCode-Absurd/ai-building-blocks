@@ -1,0 +1,107 @@
+new_slug: cover-an-earnings-release-from-preview-to-written-update
+name: Cover an earnings release from preview to written update
+summary: Give it the company and the release. Get a preview, a tone read, a recap and an update.
+job: money-and-investing
+thinking: high
+thinking_why: It reads financial statements and management's words and separates fact from spin. Give it your strongest model.
+headline: Cover an earnings release from preview to written update
+subhead: Give it the company and then the release and call transcript. It writes the preview with the numbers to watch, reads the tone of the call against the words, writes the recap, and turns it all into a written update that says what changed and what did not.
+explain: |
+  Earnings season buries the signal. The release is forty pages, the call is an hour of careful words, and most write-ups either repeat the headline numbers or echo management's framing. A reader comes away knowing the quarter beat or missed, and not whether anything changed.
+
+  This workflow covers one company across the season. Before the release, it writes a preview: what matters for this company, the numbers to watch and what would count as a surprise. After the call, it reads the tone against the words: where management was confident, where they hedged, which questions they dodged. It writes a recap that compares the result with the preview. Then it turns the whole thing into a written update that says what changed in the picture, what did not, and what to watch next quarter. Every number names its source.
+when:
+  - You write a newsletter or internal note on companies you follow.
+  - You hold a stock and want a disciplined read of each quarter.
+  - Your past write-ups repeated the headline and missed the shift in tone.
+you_give:
+  - The company and what you already think matters
+  - "After the release: the release and the call transcript"
+  - Your past notes on the company (optional)
+you_get:
+  - A preview with what matters, the numbers to watch and what counts as a surprise
+  - "A tone read of the call: confidence, hedges and dodged questions"
+  - A recap against the preview
+  - "A written update: what changed, what did not, what to watch next"
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the company and what you think matters. It writes the preview before the release.
+  - After the call, paste the release and the transcript. It reads the tone and writes the recap.
+  - Read the update, check every number against the release, and publish or file it.
+how_it_works:
+  - title: Write the preview
+    text: Writes what matters this quarter, the numbers to watch and what would count as a surprise.
+  - title: The release lands
+    text: A pause. Wait for the release and the call. Paste the release and the transcript.
+  - title: Read the call's tone
+    text: Reads where management was confident, hedged or dodged, and compares the tone with last quarter.
+  - title: Write the recap
+    text: Compares the quarter with the preview and sources every number to the release.
+  - title: Write the update
+    text: "Writes the update: what changed, what did not and what to watch next, with no buy or sell advice."
+output_shape: |-
+  STEP 1: PREVIEW
+    What matters: <...> | Watch: <number, why, what's a surprise> | Hope they're asked: <...>
+
+  PAUSE: the release and the call
+
+  STEP 2: TONE READ
+    Confident on: <...> | Hedged on: <...> | Dodged: <question, how> | Versus last quarter: <...>
+
+  STEP 3: RECAP
+    <number>: preview <...> | actual <...> (source: release p.<n>) | Surprise: <...>
+
+  STEP 4: UPDATE
+    Changed: <...> | Unchanged: <...> | Watch next quarter: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Pretend Sprout, the daily greens gummy brand, is a small listed company and I cover it for a newsletter on consumer brands.
+    What I think matters this quarter: whether retail keeps growing faster than their own site; gross margin after the retailer's cut; subscription churn after the discounted first month; whether they say anything about cleaning up the many first-order discounts; the kids line.
+    Numbers to watch: revenue split site versus retail, gross margin (58% last quarter), subscriber count, marketing spend as a share of revenue.
+    What would surprise me: a cut to the limited-flavour programme; any mention of a second study.
+    I'll paste the release and the call transcript when they land. My past notes: last quarter management said retail would be "about half" of revenue by year end.
+  output: pending
+tweaks:
+  - what: What matters
+    how: Give your own view before the release. The recap is then an honest test of it.
+  - what: Past notes
+    how: Paste what management promised last time. The tone read checks whether they kept to it.
+  - what: Your format
+    how: Give a past update you liked. Step 4 writes in that shape.
+  - what: The transcript
+    how: A full transcript beats a summary. The tone read needs the exact words and the dodges.
+judge:
+  - The preview names what would count as a surprise before the release.
+  - The tone read quotes the words it rests on.
+  - Every number in the recap has a source in the release.
+  - The update separates what changed from what did not.
+  - Nothing in the update tells the reader to buy or sell.
+test:
+  - Give step 2 a transcript where a question was answered with a different question. It should mark it as dodged.
+  - Paste a release with a number that contradicts the headline. Step 3 should catch it.
+  - Run step 1 twice. The numbers to watch should match.
+  - Ask step 4 whether to buy. It should decline and say what it does instead.
+improve:
+  - Keep every update in one folder per company. Step 1 reads them before the next preview.
+  - Save the numbers you watch per company so the preview starts from them.
+  - Add your newsletter's format once.
+  - Pair it with "Find a company's real earning power and its tricks" for the annual report.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: The company's investor site
+      why: The release, the slides and the transcript live there.
+  inputs:
+    - Last quarter's transcript
+    - Your past updates
+    - The company's guidance from the last call
+terms:
+  - term: Guidance
+    meaning: Management's own forecast for the next period, given on the call or in the release.

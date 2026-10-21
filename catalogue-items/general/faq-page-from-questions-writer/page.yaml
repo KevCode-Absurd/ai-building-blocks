@@ -1,0 +1,118 @@
+new_slug: faq-page-from-questions-writer
+name: "FAQ page writer from customer questions"
+summary: "Paste real customer questions and your answers. Get an FAQ page people and search engines find."
+job: get-found-in-search
+thinking: low
+thinking_why: "It groups and rewrites given questions and answers into a fixed page shape."
+
+headline: "FAQ page writer from customer questions"
+subhead: "Paste the questions customers really ask, how often, and your true answers. The prompt merges duplicates, keeps the wording people type into search, orders by frequency and buying stage, writes each answer with the fact first, and tells the owner which questions should never need asking."
+
+explain: |
+  Most FAQ pages are written by the company, about the company, in the company's words. "What is our fulfilment policy?" is not a question anyone has typed. Meanwhile the support inbox has the real questions, asked hundreds of times, in exactly the words a search engine would match.
+
+  This prompt builds the page from those questions. It merges duplicates and keeps the wording closest to a search query, orders them by how often they are asked and where the buyer is, and writes each answer with the fact in the first sentence and no more than a few lines after. Every fact comes from your input, and anything you did not supply is marked rather than fudged. Questions a page should not settle, such as legal or medical ones, point to a person. The owner gets three lines on which questions reveal a page or product fix.
+
+when:
+  - "Your support team answers the same twenty questions every week."
+  - "Your FAQ page exists but nobody can find their question on it."
+  - "You want search engines and AI assistants to pick up your answers."
+
+you_give:
+  - "The questions as customers wrote them, with rough counts"
+  - "Your true answers with the facts"
+  - "Your offers, policies and claims file (advised)"
+  - "Where the page will live (optional)"
+you_get:
+  - "A titled FAQ page grouped in buying order"
+  - "Each question in search-friendly words with the answer first"
+  - "Questions that need a person, and three notes for the owner"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the questions under it."
+  - "Add the true answers with exact prices, days and limits."
+  - "Fill any A MISSING lines before publishing."
+  - "Publish it, and read FOR THE OWNER with your product team."
+
+how_it_works:
+  - title: "Merges and keeps customer words"
+    text: "Groups duplicate questions and picks the wording closest to a search query."
+  - title: "Orders by frequency and stage"
+    text: "Most asked first, groups in the order a buyer meets them."
+  - title: "Writes answer first"
+    text: "The first sentence answers with the fact. Detail and exceptions after, under 60 words."
+  - title: "Links the next step"
+    text: "Names the page or button where an answer leads to an action."
+  - title: "Flags what needs a person"
+    text: "Legal, medical and money questions point to a person or a source."
+  - title: "Notes what the questions reveal"
+    text: "Three lines for the owner on page fixes and answer gaps."
+
+output_shape: |
+  TITLE           <under eight words>
+  INTRO           <one line>
+  GROUP <name>
+    Q <question> (asked <n>)
+    A <answer first, detail, link>
+  NEEDS A PERSON  <...>
+  FOR THE OWNER   <3 lines>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Questions to Sprout support last month, with counts:
+    "how do I cancel" (61); "where is the cancel button" (40); "can I pause
+    for a month" (28); "why was I charged $49.99" (55); "is the first box
+    really $29.99" (19); "which discount is real, 52 or 55 or 61" (14); "is
+    the sugar-free one ok for a sensitive stomach" (22); "can my 3 year old
+    have the kids gummies" (17); "how many gummies is one pack" (12); "does
+    it have gelatin" (9); "is it HSA eligible" (8); "will it help me lose
+    weight" (11).
+    True answers: cancel, pause and skip are in Manage Subscription in the
+    account menu; changes before the renewal date apply to the next charge;
+    the first box is $29.99 on subscription and renews at $49.99 every 4
+    weeks, shown under the Start Now button; the one-time price is $66.65;
+    the site shows 52% in the banner and up to 55% on the badge, which is
+    the $66.65 to $29.99 first-box price; Sugar-Free uses sugar alcohols and
+    some people find Low Sugar gentler; Kids is for ages 2 to 13, one pack
+    of 6 gummies a day; an adult pack is about 20 g, a small handful;
+    pectin base, no gelatin, vegan; HSA/FSA eligible through a third-party
+    service; we make no weight-loss claims.
+  output: pending
+
+tweaks:
+  - what: "Counts"
+    how: "Even rough counts change the order. The most-asked question goes first."
+  - what: "Exact facts"
+    how: "Give prices, days and limits. Answers without a number get marked MISSING."
+  - what: "Your claims file"
+    how: "Paste what you can and cannot claim, so health and money answers stay inside it."
+
+judge:
+  - "Every question reads like something a customer would type."
+  - "Every answer starts with the answer."
+  - "No price or policy appears that you did not give."
+  - "The groups follow the order a buyer meets them."
+  - "Health and money questions point to a person or a source."
+
+test:
+  - "Publish it and count support tickets on the covered questions a month later against the month before."
+  - "Run it twice. The grouping and the top three questions should match."
+  - "Leave out an answer. The question should stay with A MISSING, not be dropped."
+
+improve:
+  - "Paste your offers and proof-and-claims files so facts are always loaded."
+  - "Add new questions monthly and re-run, keeping the counts."
+  - "Pair it with the Search title and snippet writer for the page title and description."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message page works in any strong chat AI."}
+    - {name: "Your help desk's tag report", why: "Export question counts by tag so the frequency order is real."}
+  inputs:
+    - "Search queries that already bring people to your site"
+    - "Questions asked in reviews and comments, not only in tickets"

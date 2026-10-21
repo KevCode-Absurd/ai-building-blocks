@@ -55,7 +55,11 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "agents", "impor
     const folder = path.join(dir, slug);
     const yamlPath = path.join(folder, "item.yaml");
     const skillPath = path.join(folder, "SKILL.md");
-    if (!fs.existsSync(yamlPath) || !fs.existsSync(skillPath)) { problems.push(`${category}/${slug}: missing item.yaml or SKILL.md`); continue; }
+    if (!fs.existsSync(yamlPath) || !fs.existsSync(skillPath)) {
+      // Empty folders left by a rename contain no catalogue entry.
+      if (fs.readdirSync(folder).length) problems.push(`${category}/${slug}: missing item.yaml or SKILL.md`);
+      continue;
+    }
     let item;
     try { item = YAML.parse(fs.readFileSync(yamlPath, "utf8")); } catch (e) { problems.push(`${category}/${slug}: ${e.message.split("\n")[0]}`); continue; }
     if (item.slug !== slug) problems.push(`${dirName}/${slug}: slug in item.yaml is "${item.slug}"`);
@@ -290,6 +294,8 @@ const urls = ["/", "/how-it-works", "/minds", "/from-a-source", "/tools", ...TOO
 // sitemap-jobs.xml (the job hubs) is written by scripts/prerender.mjs.
 const urlset = (us) => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${us.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`;
 const SITEMAPS = { pages: urls.filter((u) => !/^\/(skills|workflows|agents|prompts|minds)\//.test(u)), skills: urls.filter((u) => u.startsWith("/skills/")), workflows: urls.filter((u) => u.startsWith("/workflows/")), agents: urls.filter((u) => u.startsWith("/agents/")), prompts: urls.filter((u) => u.startsWith("/prompts/")), minds: urls.filter((u) => u.startsWith("/minds/")) };
+const aiToolsRoot = path.join(ROOT, "ai-tools");
+if (fs.existsSync(aiToolsRoot)) SITEMAPS["ai-tools"] = ["/ai-tools", ...fs.readdirSync(aiToolsRoot).filter((f) => f.endsWith(".yaml") && !f.startsWith("_")).map((f) => `/ai-tools/${f.slice(0, -5)}`)];
 for (const f of fs.readdirSync("public").filter((f) => /^sitemap-.*\.xml$/.test(f))) fs.rmSync(path.join("public", f));
 for (const [k, us] of Object.entries(SITEMAPS)) if (us.length) fs.writeFileSync(`public/sitemap-${k}.xml`, urlset(us));
 fs.writeFileSync("public/sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...Object.keys(SITEMAPS).filter((k) => SITEMAPS[k].length), "jobs"].map((k) => `  <sitemap><loc>${SITE}/sitemap-${k}.xml</loc></sitemap>`).join("\n")}\n</sitemapindex>\n`);
@@ -354,4 +360,4 @@ if (redirects.length + appRoutes.length > 2000) problems.push(`_redirects has ${
 console.log(`sitemap: ${urls.length} pages`);
 console.log(`${blocks.filter((b) => b.headline).length} of ${blocks.length} have a page`);
 console.log(`${blocks.length} blocks (${blocks.filter((b) => b.category === "general").length} general, ${blocks.filter((b) => b.category === "ecommerce").length} ecommerce, ${blocks.filter((b) => b.category === "orchestrator").length} orchestrators, ${blocks.filter((b) => b.category === "agent").length} agents, ${blocks.filter((b) => b.category === "mind").length} minds)`);
-if (problems.length) console.log("Problems:\n  " + problems.join("\n  "));
+if (problems.length) { console.error("Problems:\n  " + problems.join("\n  ")); process.exitCode = 1; }

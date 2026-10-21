@@ -1,0 +1,44 @@
+slug: fireflies
+name: Fireflies
+maker: Fireflies.ai
+url: https://fireflies.ai
+promise: A transcript, summary and action list for every call, saved and searchable.
+use_cases: [meeting-notes]
+categories: [productivity]
+what_it_does:
+  - Records and transcribes calls in more than 100 languages.
+  - Writes a summary and action items after each meeting.
+  - Lets you search across every past call for what was said.
+  - Tracks talk time, topics and sentiment across conversations.
+  - Sends notes to your CRM, Slack and task apps.
+benefits:
+  - Stop taking notes and pay attention to the person you are talking to.
+  - Find what a customer said three months ago in a few seconds.
+  - Get follow-up tasks into your CRM without typing them in.
+  - Review how calls go across a whole sales team.
+best_for:
+  - Sales and customer teams that live on calls.
+  - Recruiters who need notes sent to their hiring system.
+  - Teams that want every meeting stored in one searchable place.
+not_for:
+  - People who dislike a note-taker bot joining the call.
+  - Heavy use on the free plan, which has limited transcription credits.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: Plans are Free, Pro, Business and Enterprise, billed per seat. Paid plans give more transcription credits and team features. The pricing page showed no dollar amounts when read.
+works_with:
+  - Zoom
+  - Google Meet
+  - Microsoft Teams
+  - Slack
+  - HubSpot
+  - Salesforce
+runs_in: [web, desktop, mobile, api]
+blocks:
+  - meeting-coaching-analyst
+alternatives: [otter, granola, notion-ai, descript]
+last_checked: 2026-10-21
+sources:
+  - https://fireflies.ai
+  - https://fireflies.ai/pricing

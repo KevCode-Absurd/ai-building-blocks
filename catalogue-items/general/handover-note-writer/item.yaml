@@ -1,0 +1,17 @@
+slug: handover-note-writer
+name: "Handover note writer"
+summary: "Paste what you are handing over and to whom. Get a note the next person can run from on day one."
+category: general
+boards: []
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

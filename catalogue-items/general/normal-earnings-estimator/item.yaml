@@ -1,6 +1,6 @@
 slug: normal-earnings-estimator
 name: "Normal earnings estimator"
-summary: "Paste cleaned earnings and how far the record can be trusted. Get low, normal and high earnings for an ordinary year."
+summary: "Paste cleaned earnings and a reliability rating. Get low, normal and high earnings for an ordinary year."
 category: general
 type: skill
 role: make

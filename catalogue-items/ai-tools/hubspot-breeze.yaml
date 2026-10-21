@@ -1,0 +1,49 @@
+slug: hubspot-breeze
+name: HubSpot Breeze
+maker: HubSpot
+url: https://www.hubspot.com/products/artificial-intelligence
+promise: AI assistants and agents inside HubSpot that write, research and reply for you
+use_cases: [sell-and-support, find-leads, write-copy]
+categories: [sales-and-support, marketing]
+what_it_does:
+  - Gives you an assistant inside HubSpot to answer questions and draft content.
+  - Runs a Prospecting Agent that researches companies and suggests leads.
+  - Runs a Customer Agent that answers support questions across channels.
+  - Answers questions about your contacts and companies with a Data Agent.
+  - Lets you build your own agent from prompts and your CRM data, with no code.
+benefits:
+  - Spend less time on research before each sales call.
+  - Get first replies sent to customers while you are away.
+  - Draft campaign and content ideas from your own contact data.
+best_for:
+  - Teams that already run their sales and service in HubSpot.
+  - Small sales teams that need lead research done for them.
+  - Service teams with many repeat questions.
+not_for:
+  - Teams on another CRM, since the agents work on HubSpot data.
+  - Anyone who needs a fixed monthly bill, since agent use runs on credits.
+pricing:
+  model: subscription
+  from: Check the maker's site
+  note: Agent Hub is included in Starter, Professional and Enterprise editions. Many agents run on HubSpot credits, bought in packs or pay as you go. Third-party pages from 2026 list the Customer Agent at about US$0.50 per resolved chat, so confirm on HubSpot's site.
+works_with:
+  - HubSpot
+  - claude
+  - chatgpt
+  - zapier
+runs_in: [web, mobile]
+blocks:
+  - crm-record-filler
+  - deal-notes-and-crm-updater
+  - crm-hygiene-auditor
+  - new-inquiry-reply-drafter
+  - cold-email-writer
+  - own-voice-outreach-writer
+  - who-to-call-first-ranker
+  - lead-handoff-designer
+  - marketing-results-reporter
+alternatives: [apollo, clay, intercom-fin, zendesk-ai]
+last_checked: 2026-10-21
+sources:
+  - https://www.hubspot.com/products/artificial-intelligence
+  - https://resolve247.ai/blog/hubspot-breeze-pricing-change

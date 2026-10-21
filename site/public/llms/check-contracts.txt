@@ -1,8 +1,8 @@
 # Check contracts and rules: AI Blocks
 
-> 89 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 90 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Accessibility standards checker](https://useaiblocks.com/skills/accessibility-standards-checker): Describe your site or app. Get WCAG gaps by level, what to fix first and notes for an accessibility statement.
+- [Accessibility standards checker](https://useaiblocks.com/skills/accessibility-standards-checker): Describe your site or app. Get WCAG gaps by level, fixes ranked first, and accessibility statement notes.
 - [Ad claim sorter](https://useaiblocks.com/prompts/ad-claim-sorter): Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording.
 - [AI impact assessment writer](https://useaiblocks.com/skills/ai-impact-assessment-writer): Describe an AI use at work. Get risks, rules that apply and conditions to meet. Not legal advice.
 - [AI risk framework planner](https://useaiblocks.com/skills/ai-risk-framework-planner): Describe your AI system. Get risks mapped, measured and managed under the NIST AI framework, with a plan.
@@ -12,7 +12,7 @@
 - [Bank messaging security checker](https://useaiblocks.com/skills/bank-messaging-security-checker): Describe how you connect to SWIFT. Get your architecture type, control gaps and what your yearly attestation needs.
 - [Board written consent drafter](https://useaiblocks.com/skills/board-written-consent-drafter): Describe the decision your directors must approve. Get a written consent to sign instead of a meeting. Have a lawyer check it.
 - [Brazil data privacy checker](https://useaiblocks.com/skills/brazil-data-privacy-checker): Describe how you handle data about people in Brazil. Get your LGPD duties, gaps and a plan to fix them.
-- [California privacy law checker](https://useaiblocks.com/skills/california-privacy-law-checker): Describe how you use customer data. Get California privacy duties, gaps and a plan for consumer requests.
+- [California privacy law checker](https://useaiblocks.com/skills/california-privacy-law-checker): Describe how you use customer data. Get whether California privacy law applies, your duties and gaps.
 - [Car supplier security checker](https://useaiblocks.com/skills/car-supplier-security-checker): Describe your work for car makers. Get the right TISAX level, labels and gaps before the assessment.
 - [Card payment security checker](https://useaiblocks.com/skills/card-payment-security-checker): Describe how you take card payments. Get your PCI level, the right self-check form and gaps to fix.
 - [Cease-and-desist letter helper](https://useaiblocks.com/skills/cease-and-desist-letter-helper): Describe an infringement or paste a letter you got. Get a draft demand or options. Have a lawyer review.
@@ -55,6 +55,7 @@
 - [Legal meeting briefer](https://useaiblocks.com/skills/legal-meeting-briefer): Name a negotiation or review meeting. Get background, key issues, questions to ask, then action items. Not legal advice.
 - [Legal risk rater](https://useaiblocks.com/skills/legal-risk-rater): Describe a deal or issue. Get each risk rated by how bad and how likely. Not legal advice.
 - [Marketing claims checker](https://useaiblocks.com/skills/marketing-claims-checker): Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording. Not legal advice.
+- [Monthly contract renewal keeper](https://useaiblocks.com/agents/monthly-contract-renewal-keeper): Give it your vendor contracts each month. Get renewals and notice dates due, the traps in each and the asks to make.
 - [NDA drafter](https://useaiblocks.com/skills/nda-drafter): Name the two parties and what is shared. Get a draft confidentiality agreement with the clauses a lawyer should check.
 - [NDA quick checker](https://useaiblocks.com/skills/nda-quick-checker): Give it an NDA. Get a green, yellow or red rating and the odd clauses. Have a lawyer check yellow or red.
 - [NDA traffic-light checker](https://useaiblocks.com/prompts/nda-traffic-light-checker): Paste an NDA. Get a green, yellow or red rating and the odd clauses explained.

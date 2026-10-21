@@ -6,7 +6,7 @@ thinking: high
 thinking_why: "It weighs spend, margins, regions and creative output against each other, so a stronger model makes better trade-offs."
 
 headline: "Meta account structure planner"
-subhead: "Give it your monthly Meta spend, product categories with margins, buyer groups, countries and how many new ads you can make. It asks five questions, then hands back a campaign and ad set map with budgets, a KPI and read window per level, a spend cap per concept and the settings to switch off."
+subhead: "Give it your monthly Meta spend, product categories with margins, buyer groups, countries and how many new ads you can make. It hands back a campaign and ad set map with budgets, a KPI and read window per level, a spend cap per concept and the settings to switch off."
 
 explain: |
   Most Meta accounts have too many campaigns. Each campaign learns on its own, so splitting 100 monthly sales across four campaigns leaves 25 each and starves all four. The opposite mistake is one pile of ads where you cannot tell what works.

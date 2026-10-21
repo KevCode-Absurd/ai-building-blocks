@@ -1,0 +1,28 @@
+slug: stress-test-a-business-plan-before-you-commit-money
+name: "Stress test a business plan before you commit money"
+summary: "Give it the plan. Get a one-page canvas, the strongest case against it, stress-tested assumptions and a pre-mortem."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: plan, required: false}
+outputs:
+  - {type: document}
+  - {type: audit_report}
+  - {type: feedback_notes}
+uses: [lean-canvas-builder, business-idea-killer, assumption-stress-test, ruin-risk-stress-tester, plan-pre-mortem-runner]
+steps:
+  - {uses: lean-canvas-builder, note: "The plan on a one-page canvas: problem, customers, solution, channels, revenue, costs, advantage, with every assumption marked as one."}
+  - {uses: business-idea-killer, note: "The strongest honest case for not doing this: the fatal flaw if there is one, the rivals, the reasons customers will not switch, said without softening."}
+  - {uses: assumption-stress-test, note: "Each assumption tested at half as good and twice as slow, with what happens to the plan and which assumptions it cannot survive."}
+  - {uses: ruin-risk-stress-tester, note: "The risks you cannot recover from, not the likely ones, in Nassim Taleb's manner: what would take you out, how exposed the plan is, and how to cap the downside."}
+  - {uses: plan-pre-mortem-runner, note: "Imagine it is a year from now and the plan has failed. The most likely story of why, in detail, and what to change today so that story cannot happen."}
+origin: own
+version: 1.0.0
+minds: [nassim-taleb]
+credits:
+  - {title: "The Fourth Quadrant: A Map of the Limits of Statistics (14 September 2008)", by: "Nassim Nicholas Taleb, Edge", url: "https://www.edge.org/conversation/nassim_nicholas_taleb-the-fourth-quadrant-a-map-of-the-limits-of-statistics", used: "Judge a plan by the losses you cannot recover from, not by the likely outcome"}
+example_pending: true

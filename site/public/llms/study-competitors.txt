@@ -1,9 +1,9 @@
 # Study competitor ads: AI Blocks
 
-> 41 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 42 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad library teardown counter](https://useaiblocks.com/skills/ad-library-teardown-counter): Paste an Ad Library export. Get ad counts by format, age, page and awareness stage, plus content gaps.
-- [Ad library teardown writer](https://useaiblocks.com/skills/ad-library-teardown-writer): Give it a competitor. Get their live ads broken into hooks, offers, calls to action and test ideas. Collects data from websites.
+- [Ad library teardown writer](https://useaiblocks.com/skills/ad-library-teardown-writer): Name a competitor. Get their live ads broken into hooks, offers, calls to action and tests to run.
 - [Amazon market researcher](https://useaiblocks.com/skills/amazon-market-researcher): Give it a product or category. Get Amazon sales rank, reviews and seller data in a report. Collects data from websites.
 - [Brand playbook fit checker](https://useaiblocks.com/skills/brand-playbook-fit-checker): Name a big brand and its tactic. Get a fit score out of 100, a verdict per tactic and a small test.
 - [Competitor ad gap finder](https://useaiblocks.com/skills/competitor-ad-gap-finder): Paste competitor ads from the Ad Library. Get the gaps, briefs and a score out of 100.
@@ -36,6 +36,7 @@
 - [Rival store comparer](https://useaiblocks.com/skills/rival-store-comparer): Name your top rivals. Get a side-by-side of their channels, prices and messages, plus the gaps you can win.
 - [Rival weakness message finder](https://useaiblocks.com/skills/rival-weakness-message-finder): Name a rival and your strengths. Get the one strength that is also their weakness, as a message you can defend.
 - [Size up a rival and decide whether to go](https://useaiblocks.com/workflows/rival-go-no-go): Describe your plan and a rival. Get a five-factor matchup, where to fight and avoid, and a go or no-go check.
+- [Size up a rival and decide whether to go](https://useaiblocks.com/workflows/size-up-a-rival-and-decide-whether-to-go): Describe your plan and a rival. Get a five-factor matchup, where to fight and avoid, and a go or no-go check.
 - [Store product data collector](https://useaiblocks.com/skills/store-product-data-collector): Give it a product search or store link. Get prices, reviews and seller details in a table. Collects data from websites.
 - [Turn competitor ads into a script of your own](https://useaiblocks.com/workflows/competitor-ad-to-script): Give it competitor ads and your reviews. You get an original script that borrows one idea, checked against ad rules.
 - [Turn competitor gaps into image ad copy that passes Meta](https://useaiblocks.com/workflows/competitor-gap-image-ads): Give it competitor ads. Get their gaps, image ad copy for each gap, and a Meta rules check.

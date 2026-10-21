@@ -2,10 +2,10 @@ thinking: high
 thinking_why: It plans and writes working code for your own tools.
 new_slug: support-desk-automation-builder
 name: Support desk automation builder
-summary: Tell it your help desk and billing tool. Get scripts, reply templates and a triage routine that drafts replies for your approval.
+summary: Tell it your help desk and tools. Get scripts, reply templates and a triage routine that drafts replies.
 job: help-customers
 headline: Support desk automation builder
-subhead: Tell it your help desk and billing tool. Get scripts, reply templates and a triage routine that drafts replies for your approval.
+subhead: Tell it which help desk and billing tools you use and your common ticket types. It plans the connections, writes the scripts and a config file, and sets up reply templates. You get a triage routine that drafts answers for you to approve. Nothing is sent without you.
 explain: |
   A working support automation made for your company: scripts that read your help desk, templates for common replies and a triage routine that drafts answers for you to approve. Nothing is sent without you.
 

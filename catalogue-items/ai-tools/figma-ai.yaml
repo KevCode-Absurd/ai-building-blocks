@@ -1,0 +1,50 @@
+slug: figma-ai
+name: Figma AI
+maker: Figma
+url: https://www.figma.com
+promise: Draft screens and working prototypes from a written prompt, inside Figma.
+use_cases: [design, build-apps]
+categories: [design, coding]
+what_it_does:
+  - Makes a first draft of a screen from a written prompt.
+  - Turns a prompt into a working prototype or web app with Figma Make.
+  - Publishes the app and adds a backend through Supabase.
+  - Edits images and removes backgrounds on the canvas.
+  - Helps tidy layers and find designs faster.
+benefits:
+  - Show a clickable version of an idea before a developer starts.
+  - Get past the blank page when you start a new screen.
+  - Keep designs, prototypes and handoff in one file.
+best_for:
+  - Product teams and designers who already work in Figma.
+  - Founders testing an app idea with a prototype.
+  - Teams that hand designs to developers.
+not_for:
+  - Quick social posts, which Canva handles better.
+  - Heavy AI use on a plan with a small monthly credit cap.
+pricing:
+  model: freemium
+  from: US$16 per month
+  note: Price is per Full seat on Professional. Starter is free with 150 AI credits a day, up to 500 a month. A Professional Full seat gets 3,000 AI credits a month, and Figma Make is not on Dev or Collab seats.
+works_with:
+  - claude
+  - cursor
+  - Supabase
+runs_in: [web, desktop]
+blocks:
+  - design-feedback-giver
+  - new-screen-design-reviewer
+  - landing-page-design-planner
+  - brand-stylescape-planner
+  - icon-set-planner
+  - visual-system-rules-writer
+  - design-token-builder
+  - design-system-auditor
+  - developer-handoff-spec-writer
+  - visual-hierarchy-fixer
+  - page-grid-and-type-planner
+  - competitor-landing-layout
+alternatives: [canva, lovable, v0, bolt]
+last_checked: 2026-10-21
+sources:
+  - https://www.figma.com/pricing/

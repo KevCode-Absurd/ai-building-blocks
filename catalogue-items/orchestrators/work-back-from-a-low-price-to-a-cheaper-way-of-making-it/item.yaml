@@ -1,0 +1,60 @@
+slug: work-back-from-a-low-price-to-a-cheaper-way-of-making-it
+name: Work back from your price to lower costs
+summary: Name the price you want to sell at. Get a cost-cutting plan, a better
+  work layout and the waste worth chasing.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: plan
+uses:
+  - price-first-cost-squeeze-planner
+  - waste-and-by-product-finder
+steps:
+  - uses: price-first-cost-squeeze-planner
+    note: Sets the target price first, lists every cost line and step, and asks of
+      each whether the customer needs it. Removes before it speeds up.
+  - uses: waste-and-by-product-finder
+    note: Takes the steps left in the cost plan and puts them in the order of the
+      work. Counts each person's moves and shortens how far parts travel.
+origin: rebuilt
+credits:
+  - title: My Life and Work
+    by: Henry Ford with Samuel Crowther (1922)
+    used: Setting the price first and working backward, and removing parts that the
+      customer does not need
+  - title: Today and Tomorrow
+    by: Henry Ford with Samuel Crowther (1926)
+    used: Cutting the cost of making before changing the product, and growing the
+      market by lowering the price
+  - title: Sam Walton
+    by: Wikipedia
+    url: https://en.wikipedia.org/wiki/Sam_Walton
+    used: Serving places where people travel far to buy, and lower prices on high
+      volume
+  - title: 10 Rules for Building a Better Business
+    by: Sam Walton (excerpt)
+    used: Passing savings on to the customer to earn more volume
+  - title: The Testament of a Furniture Dealer
+    by: Ingvar Kamprad (1976)
+    used: Designing a product for a low price from the start
+  - title: Cheap is good, says furniture magnate
+    by: Swiss TV interview report
+    used: Serving the many who can pay little
+  - title: Random Reminiscences of Men and Events
+    by: John D. Rockefeller (1909)
+    used: Finding a use or buyer for what a process throws away, and watching what
+      rivals waste
+  - title: Today and Tomorrow, chapter Learning from Waste
+    by: Henry Ford with Samuel Crowther (1926)
+    used: Listing all scrap and offcuts, valuing them by the labour in them, and
+      reclaiming what pays
+version: 1.0.0
+example_pending: true

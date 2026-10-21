@@ -1,0 +1,28 @@
+slug: daily-shutdown-planner
+name: "Daily shutdown planner"
+summary: "Give it your task list and tomorrow's calendar each evening. Get the day closed, three priorities set and focus hours protected."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: plan, required: true}
+  - {type: question, required: true}
+  - {type: meeting_notes, required: false}
+outputs:
+  - {type: plan}
+  - {type: document}
+uses: [week-priority-picker, deep-work-day-planner, not-to-do-list-builder, habit-plan-builder, weekly-status-update-writer]
+steps:
+  - {uses: week-priority-picker, note: "Every evening: the task list against real hours tomorrow, the big tasks that matter, three priorities and the list for the morning."}
+  - {uses: deep-work-day-planner, note: "Every evening: tomorrow laid out with protected focus hours and the shallow work cut to two windows."}
+  - {uses: not-to-do-list-builder, note: "Only on Friday, or when three days in a row lost their focus hours: what to stop, with a rule and a swap for each."}
+  - {uses: habit-plan-builder, note: "Only when the same interruption broke the focus hours three days running: one two-minute habit that guards them."}
+  - {uses: weekly-status-update-writer, note: "Only on Friday, when you ask: a one-page update for your team or manager from the week's closed days."}
+schedule: "Every working day at shutdown time, with a longer pass on Friday"
+asks_before: [creating, moving or deleting calendar events, sending any message or status update, dropping a task from the list, declining a meeting, changing a commitment to someone else]
+minds: [cal-newport]
+origin: own
+version: 1.0.0
+example_pending: true

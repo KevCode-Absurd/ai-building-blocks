@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: Filter choice depends on the signal.
 new_slug: adaptive-filter-designer
 name: Adaptive filter designer
-summary: Describe noise or echo to remove. Get an adaptive filter built and tested on your signal.
+summary: Describe the noise or echo to remove. Get MATLAB filter code, a convergence check and a cleaned signal.
 job: build-software
 headline: Adaptive filter designer
-subhead: Describe noise or echo to remove. Get an adaptive filter built and tested on your signal.
+subhead: Give it your signal, a reference signal and a description of the noise or echo, plus your sample rate and filter length goals. It picks the filter type and update method, builds the filter in MATLAB and tests it on your signal. You get the filter code, the reason for the choice, a convergence check, the final weights and a cleaned signal.
 explain: |
   You get an adaptive filter built and tested on your own signal, ready to cancel noise or echo. The skill shows whether it settles on the right answer and gives you the final filter weights.
 

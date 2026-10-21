@@ -2,10 +2,10 @@ thinking: low
 thinking_why: It uses a few set viewer functions.
 new_slug: 3d-image-viewer-builder
 name: 3D image viewer builder
-summary: Give it a 3D scan or mesh. Get a viewer with slices, overlays and marked regions.
+summary: Give it a 3D scan or mesh. Get MATLAB viewer code with slices, overlays and marked regions.
 job: build-software
 headline: 3D image viewer builder
-subhead: Give it a 3D scan or mesh. Get a viewer with slices, overlays and marked regions.
+subhead: Give it a 3D scan, volume file or surface mesh, plus any mask to lay on top. It picks the right MATLAB display call for your data and writes the viewer code. You get slice scrolling, overlay display, drawn regions with notes and a starter app layout if you want one.
 explain: |
   You get MATLAB code that opens a 3D scan or surface mesh in an interactive viewer. You can scroll through slices, lay a colour mask on top, and draw marked regions and notes right on the volume.
 

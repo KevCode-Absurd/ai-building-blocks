@@ -2,10 +2,10 @@ thinking: high
 thinking_why: Forecast method choices change the answer.
 new_slug: headcount-forecast-builder
 name: Headcount forecast builder
-summary: Give it past headcount and goals. Get a forecast of hires and exits with a clear method and a range of error.
+summary: Give it past headcount and goals. Get a hires and exits forecast, the method used and an error range.
 job: hire-people
 headline: Headcount forecast builder
-subhead: Give it past headcount and goals. Get a forecast of hires and exits with a clear method and a range of error.
+subhead: Give it past headcount and exits, your growth goals and known events such as launches. It picks a method that fits your data, then builds the forecast. You get headcount and exit numbers, hiring demand by team, the method used and a range showing how sure it is.
 explain: |
   A forecast of how many people you will have, how many will leave, and how many you need to hire, with an honest range instead of a single guess. Planners and finance teams get a number they can trust and a clear reason for it.
 

@@ -1,0 +1,127 @@
+new_slug: blog-post-publish-check-loop
+name: Blog post publish check loop
+summary: Give it a finished draft. Get every claim matched to proof, the words made plain and the page fixed until it passes.
+job: write-and-tell-stories
+thinking: high
+thinking_why: It must tell a claim from a fact, edit without changing meaning and judge its own rounds. Give it your strongest model.
+headline: Blog post publish check loop
+subhead: Give it an article, guide or FAQ page that is about to go live. It matches every claim to proof, cuts the clutter, checks your voice, puts the answer first and scores how quotable each passage is, looping until the checks pass. You get the piece, the claims to fix and nothing published.
+explain: |
+  The last hour before publishing is where mistakes get in. A number nobody checked, a sentence that could sit on any site, a guide whose answer is buried under three paragraphs of setup. Each is small. Together they make a piece nobody quotes and one reader screenshots for the wrong reason.
+
+  This agent runs the same checks on every draft. It writes the one sentence the piece is trying to say and asks if the writer agrees. It lists every claim without proof and leaves those to the writer. It edits the words plain in the writer's own voice, puts the answer first in guides, and scores how easily an AI assistant could quote each passage. A low score sends it back to the editor, up to three times. Then it formats the piece and hands it back. It never publishes or changes a fact.
+when:
+  - You publish articles or guides and want the same checks run on every one before it goes live.
+  - A piece went out with a wrong number once and you do not want that again.
+  - Your guides bury the answer and nobody quotes them.
+you_give:
+  - The finished draft with its title, links and sources
+  - Your brand brain, for the voice check and the claims register (advised)
+  - The product's real facts, if the piece names one (optional)
+  - What kind of piece it is and the one sentence it is trying to say (advised)
+you_get:
+  - The piece, edited and formatted, ready to paste
+  - Every claim without proof, with the line it sits in, for you to fix
+  - The one sentence the piece says, checked against yours
+  - The main cuts and voice fixes, each with its reason
+  - A quotable score per round and whether the loop passed
+  - The one thing your drafts keep needing, from the log
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to check a draft.
+  - Paste the draft, or point it at the file. Attach your brand brain if you have one.
+  - Say what kind of piece it is and, in one line, what it is trying to say.
+  - Read the claims list first and fix those yourself. Then read the piece.
+  - Publish it yourself. Run the agent again on the next draft; it keeps a log of what your drafts need.
+how_it_works:
+  - title: Read the piece once
+    text: Writes the one sentence the piece says and stops to ask if it differs from yours.
+  - title: Match claims to proof
+    text: Lists every claim without proof for you, and never adds a source you did not give.
+  - title: Edit plain
+    text: Cuts clutter, turns passive to active and splits double sentences, keeping your voice.
+  - title: Check the voice
+    text: Ranks off-voice lines against your brand brain and fixes them.
+  - title: Put the answer first
+    text: For guides and FAQs, opens each section with its answer.
+  - title: Score how quotable it is
+    text: Scores each passage, applies rewrites that keep the meaning, and loops back to the editor while the score is low.
+  - title: Format it
+    text: Tidies title, summary, headings and lists once the checks pass.
+  - title: Log and hand back
+    text: Records rounds and scores, then stops. You publish.
+output_shape: |-
+  ONE SENTENCE
+    <what the piece says> | writer's: <same | different: ...>
+
+  CLAIMS FOR THE WRITER (not fixed)
+    line <n>: "<claim>" | proof: <none found | partial> | MISSING: <what would prove it>
+
+  WHAT CHANGED
+    <cut or fix> because <reason>
+
+  SCORES
+    round 1: <n>/100 | round 2: <n>/100 | round 3: <n>/100 | <passed | stopped at 3, gaps: ...>
+
+  THE PIECE
+    <title>
+    <summary>
+    <formatted body>
+
+  PATTERN
+    <the one thing this writer's drafts keep needing>
+
+  FILES AND MISSING
+    <each round's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Check this guide before it goes on the Sprout blog. Kind: how-to guide.
+    One sentence: a gummy can carry a real daily dose if you read the
+    label for per-pack amounts, not per-gummy.
+    Draft title: "How to read a greens gummy label"
+    Draft (excerpt): "Most gummies on the shelf are candy with a vitamin
+    sprinkled in. Sprout is different: each gummy delivers 100% of your
+    daily needs for key vitamins. Look for the serving size first. Sprout
+    is one pack, about 20 g, a small handful. Then the fiber line: most
+    fiber supplements only contain 5 g, Sprout has 6 g of prebiotic fiber.
+    Then the form of folate: methylfolate, not folic acid. Backed by
+    35,000+ studies, this is the formula that actually works."
+    Sources in the draft: the Sprout science page.
+    Brand brain attached (claims register says: per pack, not per gummy;
+    "supports", never "works"; study measured vitamin C and folate only).
+  output: pending
+tweaks:
+  - what: The one sentence
+    how: Give it. If the agent's reading differs from yours, the piece has a thinking problem, not a wording one.
+  - what: The quotable bar
+    how: The loop stops when a passage scores 70 or more. Raise it for pages you want AI assistants to quote.
+  - what: Kind of piece
+    how: Guides get the answer-first pass. Say opinion or story to skip it.
+  - what: Rounds
+    how: Three is the limit. Set one if you prefer to finish edits by hand.
+judge:
+  - No claim, number or quote was changed.
+  - Every unsupported claim is listed with its line.
+  - The piece still says what you meant.
+  - The scores per round are shown.
+  - Nothing was published.
+test:
+  - Give it a draft with one wrong number on purpose. It should list it for you, not fix it.
+  - Run it twice on the same draft. The claims list should match.
+  - Give it an opinion piece. It should skip the answer-first pass and say why.
+improve:
+  - Keep your claims register in the brand brain current. The claim check is only as good as it.
+  - Set the quotable bar and the round limit to match how you publish.
+  - Read the pattern line each month. It tells you what to fix before drafting.
+  - Pair it with the Monthly content repurposer, so only checked pieces get repurposed.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read the draft from your repo, keep the log between pieces and run on each ready draft.
+    - name: Any good chat AI
+      why: Paste the agent and the draft. Attach the brand brain for the voice and claims checks.
+  inputs:
+    - The sources behind each number in the draft
+    - Two past pieces you were proud of, so the voice check has your bar

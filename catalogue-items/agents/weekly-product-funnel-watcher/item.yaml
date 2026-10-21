@@ -1,0 +1,30 @@
+slug: weekly-product-funnel-watcher
+name: "Weekly product funnel watcher"
+summary: "Give it your product events each week. Get the step that lost the most, the cause and one experiment to run."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: plan, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [event-tracking-planner, conversion-funnel-analyst, cohort-funnel-reader, vanity-metric-fixer, input-metric-picker, root-cause-finder, one-change-experiment-planner]
+steps:
+  - {uses: event-tracking-planner, note: "Once: the event list, naming rules, funnel steps, retention groups and the one main metric every week is read against. Skipped if the plan exists."}
+  - {uses: vanity-metric-fixer, note: "Once, and again each quarter: which of the numbers you report are vanity, and the per-customer numbers that show cause."}
+  - {uses: input-metric-picker, note: "Once, and again each quarter: the input numbers you control, a proxy test for each and the one output that checks them."}
+  - {uses: conversion-funnel-analyst, note: "Every week: conversion per step, drop-offs, time to convert and what moved against last week."}
+  - {uses: cohort-funnel-reader, note: "Every week, once three or more weeks exist: each sign-up week's path, which changes moved which rates, and whether the report holds up."}
+  - {uses: root-cause-finder, note: "Only when the same step lost the most two weeks running, or a rate moved past the normal swing: a chain of whys checked against facts."}
+  - {uses: one-change-experiment-planner, note: "Only after a cause is found: one experiment that changes one thing, with the rate it should move and the date to read it."}
+schedule: "Every Monday, from last week's event export"
+asks_before: [changing the product, a screen or a flow, starting or stopping an experiment, changing what is tracked or how events are named, sending the numbers to the team or the board, contacting any user]
+minds: [eric-ries, jeff-bezos]
+origin: own
+version: 1.0.0
+example_pending: true

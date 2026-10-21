@@ -5,7 +5,7 @@ name: MATLAB chart maker
 summary: Describe the chart. Get working code for line, bar, heatmap or surface plots, with labels and layout.
 job: build-software
 headline: MATLAB chart maker
-subhead: Describe the chart. Get working code for line, bar, heatmap or surface plots, with labels and layout.
+subhead: Give it your data or its column names and the point the chart should make. It sorts the request by what you want to show, such as a trend or a comparison, then picks the plotting function. You get working MATLAB code with labels and legends, plus multi-chart layout.
 explain: |
   A chart in MATLAB that fits the question your data answers, with labels, layout and colours done. Describe the chart you want and get working code for lines, bars, heatmaps, surfaces and more.
 

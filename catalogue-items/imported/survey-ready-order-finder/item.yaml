@@ -1,6 +1,6 @@
 slug: survey-ready-order-finder
 name: Survey-ready order finder
-summary: Run it on your orders. Get the buyers 7 to 14 days after delivery who should get a survey, minus refunds.
+summary: Point it at your store orders. Get buyers delivered 7 to 14 days ago, minus refunds and cancellations.
 category: general
 boards: []
 type: skill

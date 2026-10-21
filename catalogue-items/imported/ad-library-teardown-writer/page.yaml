@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It gathers ads, then reads the pattern in them.
 new_slug: ad-library-teardown-writer
 name: Ad library teardown writer
-summary: Give it a competitor. Get their live ads broken into hooks, offers, calls to action and test ideas. Collects data from websites.
+summary: Name a competitor. Get their live ads broken into hooks, offers, calls to action and tests to run.
 job: study-competitors
 headline: Ad library teardown writer
-subhead: Give it a competitor. Get their live ads broken into hooks, offers, calls to action and test ideas. Collects data from websites.
+subhead: Name a competitor or paste an ad library link and pick the platform. It pulls their active public ads from the Meta, Google or LinkedIn library, records the wording, offers, buttons and video speech, and reads the landing page. You get a summary of their angles, a swipe file of hooks, offers and calls to action, and recommended tests.
 explain: |
   A competitor's live ads get broken into hooks, offers, calls to action and test ideas for you to try. It collects public ads from websites, so it works only on what is shown there.
 

@@ -1,0 +1,111 @@
+new_slug: debate-then-decide-meeting-planner
+name: "Debate then decide meeting planner"
+summary: "Paste a decision your team keeps circling. Get a one-meeting plan that argues it out and closes it."
+job: organise-work
+thinking: medium
+thinking_why: "It has to structure roles, options and a close from a messy history."
+
+headline: "Debate then decide meeting planner"
+subhead: "Paste a decision your team has discussed without closing, who owns it and who has the facts. The prompt writes the question with a deadline and concrete options, sets the roles and a one-page pre-read, plans a timed debate with a champion per option, and scripts the close."
+
+explain: |
+  Some decisions get discussed every week and never made. The loudest person talks, the people with the facts stay quiet, and the owner avoids calling it because the room is split. Andy Grove's public rule for this was a sequence: open debate with the people who know, then one person decides, then everyone commits.
+
+  This prompt turns a stuck decision into one meeting. It writes the question with a deadline and two to four concrete options, including doing nothing. It names the owner, the people who know, who is missing and who only needs to hear the outcome. It sets a one-page pre-read, gives each option a champion in a timed debate where the owner asks and does not opine, and scripts the close: the owner's four sentences and the two things each person may say. A one-paragraph note goes out within a day.
+
+when:
+  - "The same decision has been on three agendas and is still open."
+  - "You own a call and the team is split, and you want them behind it afterwards."
+  - "The person with the facts is junior and never gets heard."
+
+you_give:
+  - "The decision and the options"
+  - "Who owns the call"
+  - "Who has the facts or the front-line view"
+  - "What has happened so far and what is at stake (advised)"
+you_get:
+  - "The question with a deadline and concrete options"
+  - "Roles, including who is missing"
+  - "A pre-read outline and a timed debate plan"
+  - "The scripted close and the follow-through note"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the decision under it."
+  - "Name the owner and the people who know."
+  - "Send the PRE-READ two days before, with the MISSING facts asked for."
+  - "Run the meeting to the plan, and send the note within a day."
+
+how_it_works:
+  - title: "Writes the question"
+    text: "One line with a deadline, and two to four concrete options including do nothing."
+  - title: "Names the roles"
+    text: "Owner, knowers, who is missing, and who only hears the outcome."
+  - title: "Sets the pre-read"
+    text: "One page with facts for and against each option, who writes it, and what it must ask for."
+  - title: "Plans the debate"
+    text: "A champion per option, three rules, the owner asks and does not opine."
+  - title: "Scripts the close"
+    text: "The owner's decision, reason, what would change it, review date. Each person agrees or disagrees and backs it."
+  - title: "Writes the follow-through"
+    text: "A one-paragraph note within a day, with who does what by when."
+
+output_shape: |
+  THE QUESTION    <one line, deadline, options>
+  ROLES           <owner, knowers, missing, affected>
+  PRE-READ        <sections, writer, date, MISSING facts>
+  DEBATE          <minutes, champions, rules>
+  CLOSE           <owner's sentences, each person's line>
+  FOLLOW-THROUGH  <note, sender, review date>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Decision at Sprout: whether to move our ads away from discount headlines
+    ("61% off") toward the habit angle ("the one thing I stuck to"), and how
+    far. It has come up in four Monday meetings without a call.
+    Options so far: keep discount-led; shift half the budget to habit ads
+    for 6 weeks; shift all of it.
+    Owner: the founder.
+    Who knows: the marketing lead (ad results), the support agents
+    (customers ask which discount is real; cancel complaints), the ops
+    manager (margin at each price).
+    So far: marketing says discount ads bring the most first orders; support
+    says those customers cancel most; nobody has the numbers side by side.
+    At stake: the holiday budget has to be set by the 15th.
+  output: pending
+
+tweaks:
+  - what: "The options"
+    how: "State them as concrete choices. 'Do something about ads' cannot be debated."
+  - what: "Who knows"
+    how: "Include the junior person with the front-line facts. The plan will seat them."
+  - what: "History"
+    how: "Say why it did not close before. The debate rules are shaped to stop that happening again."
+
+judge:
+  - "There is one named owner."
+  - "Do nothing has a champion."
+  - "The owner speaks their view only in the close."
+  - "The close gives each person exactly two things they can say."
+  - "The note has a review date."
+
+test:
+  - "Run the plan on one stuck decision. Count whether it closed and whether anyone reopened it within a month."
+  - "Run it twice. The roles and options should match."
+  - "Give it a decision with no owner. It should refuse to book the meeting until one is named."
+
+improve:
+  - "Add your team's meeting norms, so the debate rules match what people already accept."
+  - "Keep the follow-through notes in one place. They become your decision log."
+  - "Pair it with the Disagree and commit note writer for people who argued the other way."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message plan works in any strong chat AI."}
+  inputs:
+    - "The numbers each side keeps quoting, so the pre-read puts them side by side"
+    - "The date the decision stops mattering"

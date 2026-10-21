@@ -1,0 +1,29 @@
+slug: handbook-change-desk
+name: "Handbook change desk"
+summary: "Give it each proposed rule change. Get where the rule came from, what it affects and a small test to approve."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: document, required: true}
+  - {type: brief, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: document}
+  - {type: plan}
+uses: [rule-origin-tracer, handbook-change-checker, policy-removal-test-planner, policy-handbook-writer, company-policy-explainer, change-announcement]
+steps:
+  - {uses: rule-origin-tracer, note: "Every change that touches an existing rule: where the rule came from, who it served and whether it earns its place."}
+  - {uses: handbook-change-checker, note: "Every change: what it affects elsewhere in the handbook, including place-by-place differences. A first check, not legal advice."}
+  - {uses: policy-removal-test-planner, note: "Only when the change removes or loosens a rule: a small, dated test in one team and what to measure."}
+  - {uses: policy-handbook-writer, note: "Only when the change adds a rule or rewrites a section: the new wording, drafted for counsel."}
+  - {uses: company-policy-explainer, note: "Every change, once wording exists: the rule explained in plain words as a worker would ask about it, to test that it is clear."}
+  - {uses: change-announcement, note: "Only when the change is approved: the announcement, FAQ, manager talking points and send plan."}
+schedule: "Each time a policy or handbook change is proposed, plus a sweep of all rules once a quarter"
+asks_before: [changing the live handbook or any policy, announcing or sending anything to the team, removing a rule for everyone at once, applying a rule to a specific person, sharing the handbook outside the company, treating a legal question as settled]
+minds: [patty-mccord]
+origin: own
+version: 1.0.0
+example_pending: true

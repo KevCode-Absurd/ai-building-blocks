@@ -1,0 +1,27 @@
+slug: write-your-team-culture-memo-and-make-it-real-in-daily-habits
+name: "Write a culture memo your team lives by"
+summary: "Give it how your team works. Get a culture memo, a standards sheet and a rule to drop."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brand_brain, required: false}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+uses: [team-culture-memo-writer, standards-sheet-writer, recognition-plan-designer, policy-removal-test-planner]
+steps:
+  - {uses: team-culture-memo-writer, note: "What the team does, what it refuses to do, and what it does when two good things collide, written as behaviour in the manner of the Netflix culture deck."}
+  - {uses: standards-sheet-writer, note: "Each behaviour turned into a standard anyone can check, with what good looks like and how often it is checked, the way Ray Kroc wrote standards."}
+  - {uses: recognition-plan-designer, note: "How behaviour gets noticed and praised: in public, specific, often, tied to the standards, in the manner of Mary Kay Ash."}
+  - {uses: policy-removal-test-planner, note: "The one rule the memo makes unnecessary, the risk if it goes, a safe trial without it and the sign that says bring it back, following Patty McCord."}
+origin: own
+version: 1.0.0
+minds: [reed-hastings, patty-mccord, ray-kroc, mary-kay-ash]
+credits:
+  - {title: "How Netflix Reinvented HR (Harvard Business Review, January to February 2014)", by: "Patty McCord", url: "https://hbr.org/2014/01/how-netflix-reinvented-hr", used: "Culture written as behaviour, hire adults and remove the rules they do not need"}
+example_pending: true

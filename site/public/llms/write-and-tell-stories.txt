@@ -1,6 +1,6 @@
 # Write and tell stories: AI Blocks
 
-> 93 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 95 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI-written text detector](https://useaiblocks.com/skills/ai-written-text-detector): Paste a document. Get an honest estimate of whether AI wrote it, with the wording clues behind it.
 - [App Store release notes writer](https://useaiblocks.com/skills/app-store-release-notes-writer): Point it at your app's code history. Get plain "What's New" notes users can read, based on real changes.
@@ -8,6 +8,7 @@
 - [Article shaper](https://useaiblocks.com/skills/article-shaper): Give it raw material. Get it shaped into an article, paragraph by paragraph.
 - [Article translator](https://useaiblocks.com/skills/article-translator): Give it an article. Get a translation in your language, quick or polished with review, using consistent terms.
 - [Blog post producer](https://useaiblocks.com/skills/blog-post-producer): Give it a topic. Get a researched, edited blog post or guide that is ready to publish.
+- [Blog post publish check loop](https://useaiblocks.com/agents/blog-post-publish-check-loop): Give it a finished draft. Get every claim matched to proof, the words made plain and the page fixed until it passes.
 - [Blog post writer](https://useaiblocks.com/skills/blog-post-writer): Give it a topic. Get a blog post with outline, hook and call to action, as how-to, list or story.
 - [Brand manifesto writer](https://useaiblocks.com/skills/brand-manifesto-writer): Say what your brand believes and fights for. Get a bold manifesto that rallies your team and customers.
 - [Brand origin story writer](https://useaiblocks.com/skills/brand-origin-story-writer): Tell it how you started and why. Get an origin story and an About page that sound human.
@@ -49,10 +50,10 @@
 - [Make a daily writing habit that lasts](https://useaiblocks.com/workflows/daily-writing-habit): Tell it your hours. Get a daily word count, a reading plan, a restart rule and a weekly check on your log.
 - [Memorable message writer](https://useaiblocks.com/skills/memorable-message-writer): Give it a message. Get a rewrite that is simple, surprising, concrete, believable and emotional. Uses the SUCCESs checklist.
 - [Message stickiness rewriter](https://useaiblocks.com/prompts/message-stickiness-rewriter): Paste a tagline, pitch line or short paragraph. Get three versions that people will remember.
-- [Mistakes letter to partners writer](https://useaiblocks.com/skills/mistakes-letter-partners): Paste your year's results and slip-ups. Get an honest owners' letter naming each mistake, its cost and the change.
-- [Mystery plot planner](https://useaiblocks.com/skills/mystery-plot-planner): Tell it the crime or puzzle. Get a clue map where every clue is in plain sight and the reveal is fair.
-- [Name family planner](https://useaiblocks.com/skills/name-family-planner): Describe your world, brand or product range. Get names that share one root, each with a meaning and a short history.
-- [Next-page hook planner](https://useaiblocks.com/skills/next-page-hook-planner): Tell it your scene. Get the one question readers must want answered, where to stop, and a fair answer.
+- [Mistakes letter to partners writer](https://useaiblocks.com/skills/mistakes-letter-partners): Paste your year's results and slip-ups. Get an owners' letter naming each mistake, its cost and the change.
+- [Mystery plot planner](https://useaiblocks.com/skills/mystery-plot-planner): Tell it the crime or puzzle. Get a clue map, a timeline and a reveal that plays fair.
+- [Name family planner](https://useaiblocks.com/skills/name-family-planner): Describe your world, brand or product range. Get names from one root, each with a meaning and history.
+- [Next-page hook planner](https://useaiblocks.com/skills/next-page-hook-planner): Tell it your scene. Get the question readers must want answered, where to stop and a fair answer.
 - [Outcome-first positioning memo writer](https://useaiblocks.com/skills/positioning-memo): Paste your product facts. Get a team memo that names the outcome you sell, who users become and a relatable example user.
 - [Overstuffed draft cutter](https://useaiblocks.com/skills/overstuffed-draft-cutter): Paste your draft. Get the one main idea named, what fights it cut, and a list of every cut with its reason.
 - [Page-pull scene checker](https://useaiblocks.com/skills/page-pull-scene-checker): Paste your scene. Get the paragraph where a reader would put it down, the fix, and a verdict on its pull.
@@ -82,6 +83,7 @@
 - [Teaching story writer](https://useaiblocks.com/skills/teaching-story-writer): Give it a lesson you want to teach. Get a short funny story that carries it, with a turn to the reader.
 - [Technical writer](https://useaiblocks.com/skills/technical-writer): Give it a feature or API. Get clear docs, guides, tutorials or changelogs for your readers.
 - [Ten percent cutter](https://useaiblocks.com/skills/ten-percent-cutter): Paste your draft. Get it cut to 90% of its length, with a log of every cut and a story check.
+- [Test a story and fix its scenes and narration](https://useaiblocks.com/workflows/test-a-story-idea-check-every-scene-turns-and-strip-the-voice-over): Paste your story idea. Get a premise verdict, every scene marked for what changes, and a line-by-line voice-over test.
 - [Test a story idea and make every scene turn](https://useaiblocks.com/workflows/story-idea-test): Paste your story idea. Get a premise verdict, every scene marked for what changes, and a line-by-line voice-over test.
 - [Translator](https://useaiblocks.com/skills/translator): Give it text and a language. Get a natural translation with local tone and consistent terms.
 - [Two-audience brief writer](https://useaiblocks.com/skills/two-audience-brief-writer): Paste your project and its audience. Get a brief with two audiences, two ways to fail and a promise to each.

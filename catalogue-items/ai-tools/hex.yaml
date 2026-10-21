@@ -1,0 +1,40 @@
+slug: hex
+name: Hex
+maker: Hex Technologies
+url: https://hex.tech
+promise: A shared workspace where your team asks questions of company data and builds reports.
+use_cases: [analyse-data]
+categories: [data]
+what_it_does:
+  - Connects to your data sources in one workspace.
+  - Lets you write SQL, Python or plain questions in the same notebook.
+  - Has an AI agent that writes queries and builds charts for you.
+  - Turns an analysis into an app others can use.
+  - Runs analyses on a schedule and sends alerts.
+benefits:
+  - Get answers from company data without waiting on an analyst.
+  - Share a live report instead of a stale spreadsheet.
+  - Let analysts and non-analysts work in the same place.
+  - Rerun the same analysis each week with no copying.
+best_for:
+  - Data teams that serve a whole company.
+  - Analysts who want AI help inside their notebook.
+  - Reports that people need to explore and refresh.
+not_for:
+  - A one-off look at a single spreadsheet.
+  - People who want no contact with data work at all.
+pricing:
+  model: freemium
+  from: US$36 per editor
+  note: Free Community plan with a trial of the agent. Professional costs US$36 per editor, and Team US$75 per editor. Enterprise is priced on request.
+works_with:
+  - Snowflake
+  - BigQuery
+  - Databricks
+runs_in: [web, api]
+blocks:
+  - warehouse-a-b-test-runner
+alternatives: [julius, claude, chatgpt, gemini]
+last_checked: 2026-10-21
+sources:
+  - https://hex.tech/pricing/

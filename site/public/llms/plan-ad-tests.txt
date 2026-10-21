@@ -1,12 +1,12 @@
 # Plan what ads to test: AI Blocks
 
-> 42 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 43 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [Ad angle multiplier](https://useaiblocks.com/skills/ad-angle-multiplier): Give it one winning ad idea. Get 10 to 15 different angles with hooks, ready to test side by side.
-- [Ad concept matrix builder](https://useaiblocks.com/skills/ad-concept-matrix-builder): Give it your product and buyer words. Get 30 to 40 personas with angles and offers in test order.
-- [Ad creative variation planner](https://useaiblocks.com/skills/ad-creative-variation-planner): Give it your offer and audience. Get hooks, formats and a testing plan that spots tired ads early.
+- [Ad angle multiplier](https://useaiblocks.com/skills/ad-angle-multiplier): Give it one winning ad idea. Get 10 to 15 different angles with hooks and a test order.
+- [Ad concept matrix builder](https://useaiblocks.com/skills/ad-concept-matrix-builder): Give it your product and reviews. Get 30 to 40 personas with angles and offers in test order.
+- [Ad creative variation planner](https://useaiblocks.com/skills/ad-creative-variation-planner): Give it your offer and audience. Get hook ideas, format picks, a variation plan and a fatigue watch.
 - [Ad test brief writer](https://useaiblocks.com/skills/ad-test-brief-writer): Paste your brand file and results. Get three ideas, nine designer-ready versions and questions for the founder.
-- [Ad test budget calculator](https://useaiblocks.com/skills/ad-test-budget-calculator): Give it your target CPA and test days. Get a test budget, a keep or cut rule and a read window.
+- [Ad test budget calculator](https://useaiblocks.com/skills/ad-test-budget-calculator): Give it your target CPA and test days. Get a budget, a keep or cut rule and read window.
 - [Ad test budget setter](https://useaiblocks.com/prompts/ad-test-budget-setter): Paste your target cost per sale. Get a daily test budget, a spend limit per ad and a rule for reading it.
 - [Ad test sprint runner](https://useaiblocks.com/agents/ad-test-sprint-runner): Give it your brand file and results. It plans each test round, reads it when it ends and plans the next.
 - [Advertorial angle and format picker](https://useaiblocks.com/skills/advertorial-angle-and-format-picker): Give it your pain points and buyers. Get ranked angles, an awareness mix and a format for each.
@@ -44,3 +44,4 @@
 - [Untried ad idea finder](https://useaiblocks.com/skills/untried-ad-idea-finder): Paste your past ads and brand file. Get a gap map and five untried ad ideas to test.
 - [What you really sell finder](https://useaiblocks.com/skills/what-you-really-sell-finder): Paste your product and buyer. Get ten or more reasons to buy, scored, and the best three as test angles.
 - [Write headlines and pick the winner with a small test](https://useaiblocks.com/workflows/headline-test): Give it your brief and product facts. Get checked headlines and a small keyed test that picks the winner.
+- [Write headlines and pick the winner with a small test](https://useaiblocks.com/workflows/write-headlines-and-pick-the-winner-with-a-small-test): Give it your brief and product facts. Get checked headlines and a small keyed test that picks the winner.

@@ -1,0 +1,111 @@
+new_slug: get-a-stuck-customer-issue-unstuck-and-close-the-loop
+name: Get a stuck customer issue unstuck and close the loop
+summary: Give it the stuck issue. Get the facts, an escalation brief and a reply that keeps its promises.
+job: help-customers
+thinking: high
+thinking_why: It must find the truth across your records and promise the customer only what was agreed. Give it your strongest model.
+headline: Get a stuck customer issue unstuck and close the loop
+subhead: Give it the stuck issue and the customer's messages. It finds what your docs, past tickets and chats already say, writes a brief for the person who can fix it, waits for their answer, then drafts the customer reply and checks every promise against what was really agreed.
+explain: |
+  Some tickets never close. The customer asks, support says "we're looking into it", engineering or the warehouse never hears a clear question, and the customer writes again, angrier. Support, with nothing new to say, promises a date nobody agreed to. The issue is now two problems: the original one and the broken promise.
+
+  This workflow closes the loop. First it reads your docs, past tickets and chats and lays out what is already known about the issue, each source named, and what nobody has answered. Then it writes an escalation brief for the owner: the customer's impact, what was tried, what you need from them and by when. You send it and wait for a real answer or a real date. Then it drafts the reply to the customer and checks every promise against what the owner actually said, so the customer hears the truth once, from you.
+when:
+  - A customer has written three or more times and the thread has no answer.
+  - Support keeps saying "we're looking into it" because nobody inside has said anything.
+  - An issue needs engineering, the warehouse or a supplier, and the request to them is vague.
+you_give:
+  - "The issue and its history: what the customer asked and what was said back"
+  - The customer's own messages, in full
+  - Who can fix this kind of problem and how to reach them
+  - Your docs, past tickets or chat logs on the topic (optional)
+you_get:
+  - What your records already say about the issue, each source named, and the open question
+  - An escalation brief with impact, what was tried, what you need and by when
+  - A reply to the customer with the real answer or date, checked so it promises only what was agreed
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the issue, the customer's messages and who owns the fix. It finds the facts and writes the brief.
+  - Send the brief to the owner. Wait for an answer or a date and paste it back.
+  - Read the checked reply and send it. Note the date you promised.
+how_it_works:
+  - title: Find what is already known
+    text: Reads your docs, tickets and chats, lays out what is known with each source named, and states the open question.
+  - title: Write the escalation brief
+    text: Writes a brief for the owner with the customer's impact, what was tried, what you need and by when.
+  - title: Escalate and wait
+    text: A pause. Send the brief to the owner and wait for their answer or a date. Paste it back.
+  - title: Draft the customer reply
+    text: Drafts the customer reply with the real answer or date, in your voice.
+  - title: Check every promise
+    text: Checks each promise against what the owner agreed, flags tone, and repairs the reply before you send it.
+output_shape: |-
+  STEP 1: WHAT IS KNOWN
+    Known: <fact> (source: <doc / ticket / chat>, <date>)
+    Said to the customer so far: <...> | Open question: <...>
+
+  STEP 2: ESCALATION BRIEF
+    To: <owner> | Customer impact: <...> | Tried: <...> | Need from you: <...> | By: <date>
+
+  PAUSE: send the brief, wait for the answer
+
+  STEP 3: REPLY DRAFT
+    <reply in your voice> | Check first: <...>
+
+  STEP 4: CHECKED REPLY
+    Promises: <each, agreed or removed> | Tone: <ok / repaired> | Final reply: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, daily greens gummies by subscription. The issue: a subscriber switched to a limited flavour for one month, and our rule says they switch back to Original automatically. Her account switched back, but she was charged for the limited flavour again and received Original. She has written three times since Oct 2.
+    Her messages:
+    Oct 2: "I was charged $52.79 but got the Original pouch. I only wanted the raspberry for one month."
+    Oct 9: "Still no answer. Is this being fixed or not?"
+    Oct 16: "This is my third email. I want the difference back and I want to know this won't happen again. Otherwise I'm cancelling."
+    What was said back: Oct 3, "We're looking into it with our team."
+    Who owns it: our subscription app's support, and our operations manager for refunds.
+    Our docs: the FAQ line about limited flavours switching back after one month. Two past tickets in September mention a similar double charge.
+  output: pending
+tweaks:
+  - what: The customer's messages
+    how: Paste every one, in full, with dates. The checker uses them to catch a promise that does not answer what was asked.
+  - what: The owner's answer
+    how: Paste it word for word. Every promise in the reply is checked against it.
+  - what: What you can offer
+    how: Say what support may offer on its own (a refund of the difference, a free pouch) so the reply does not wait on the owner for those.
+  - what: Past tickets
+    how: Bring similar past tickets to step 1. A pattern turns one escalation into a fix for everyone.
+judge:
+  - Step 1 names a source for every fact and states the open question in one line.
+  - The brief could be read by a busy engineer in one minute and acted on.
+  - The reply gives a real answer or a real date, and says sorry once.
+  - No promise in the reply goes beyond what the owner wrote.
+  - The reply answers the customer's latest question, not only the first one.
+test:
+  - Give step 4 a draft that promises a fix "by Friday" when the owner said "next sprint". It should remove or change the date.
+  - Run step 1 without the past tickets, then with them. The second run should mention the pattern.
+  - Read the brief as the owner. Is it clear what you are being asked to do and by when?
+  - Give it an owner's answer that says "we can't fix this". The reply should say so plainly and offer what you can.
+improve:
+  - Keep a list of owners by problem type in your about-me note, so step 2 addresses the right person without asking.
+  - Save every escalation brief. After five, you have a list of the problems that need a product fix.
+  - Add your refund and goodwill rules once, so the reply knows what support may offer alone.
+  - Pair it with "Clear your support inbox and turn fixes into help pages" when the fix lands, so the next customer finds the page.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Research, briefs and replies are all text.
+    - name: Your help desk and chat tool
+      why: Where the past tickets and the owner's answer live.
+  inputs:
+    - The customer's order and subscription history
+    - Similar past tickets
+    - Your refund and goodwill rules
+terms:
+  - term: Escalation
+    meaning: Passing a problem to the person or team who can fix it, with what they need to act.

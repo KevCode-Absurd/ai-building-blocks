@@ -1,0 +1,47 @@
+slug: n8n
+name: n8n
+maker: n8n
+url: https://n8n.io
+promise: Build automations and AI agents you can host yourself or run in the cloud.
+use_cases: [automate]
+categories: [automation]
+what_it_does:
+  - Builds automations from steps you can open, test and re-run one by one.
+  - Connects more than 500 apps, plus any API through HTTP requests.
+  - Builds AI agents with the model you choose and approval steps you set.
+  - Lets you switch from visual steps to code when a job gets complex.
+  - Runs on your own server or in n8n's cloud.
+  - Keeps a version history and detailed logs of every run.
+benefits:
+  - Keep your data on your own server if your rules require it.
+  - Re-run only the step that failed instead of the whole job.
+  - Add a human approval step before an agent acts.
+  - Try it free by self-hosting before you pay for the cloud.
+best_for:
+  - Technical teams that want control and self-hosting.
+  - Operators working with a developer on larger automations.
+  - Companies building AI agents with approval steps.
+not_for:
+  - Beginners who want the easiest possible setup.
+  - Anyone who does not want to manage a server, unless you use the cloud plans.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: Self-hosting the Community Edition is free. Cloud plans are Starter (20 euros per month billed yearly, 2,500 runs), Pro (50 euros) and Business (667 euros, self-hosted). The price is in euros and shown for yearly billing.
+works_with:
+  - claude
+  - chatgpt
+  - Slack
+  - Google Sheets
+runs_in: [web, api]
+blocks:
+  - build-an-n8n-automation-that-reports-failures-and-can-be-reused
+  - n8n-ai-agent-builder
+  - n8n-failure-handler
+  - n8n-sub-workflow-builder
+  - n8n-workflow-designer
+alternatives: [zapier, make, gumloop, lindy]
+last_checked: 2026-10-21
+sources:
+  - https://n8n.io/pricing
+  - https://n8n.io

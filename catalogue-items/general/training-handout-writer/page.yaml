@@ -1,0 +1,116 @@
+new_slug: training-handout-writer
+name: "Training handout writer"
+summary: "Paste your session notes or slides. Get a one-page handout people can use at their desk a month later."
+job: teach-and-train
+thinking: low
+thinking_why: "It condenses given material into a fixed one-page shape."
+
+headline: "Training handout writer"
+subhead: "Paste the slides, notes or transcript from a training session and the skill it taught. The prompt names the moment the handout will be used, pulls the steps in order with the common mistakes beside them, keeps one example, cuts what only worked in the room, and fits it on one page."
+
+explain: |
+  Training slides are built for the hour. A month later, someone at their desk with a real problem opens the deck, scrolls past the warm-up and the agenda, and gives up. What they wanted was the steps, the mistakes and a way to check they got it right, on one page.
+
+  This prompt starts from the moment of use and builds backwards. It pulls the steps from your material in the imperative, puts the common mistakes beside the steps they belong to, keeps the checks and one example that shows the right result, and cuts the room-only parts, listing what it cut so you can see. Anything inferred rather than observed is marked. If your material describes the skill without the steps, it says which steps are missing instead of making them up.
+
+when:
+  - "You ran a training and want people to remember it past Friday."
+  - "New hires get the session once and then ask the same questions for a month."
+  - "You are turning a recorded session into something searchable."
+
+you_give:
+  - "Slides, notes or a transcript"
+  - "The skill, in one line"
+  - "When people will use it at work (advised)"
+  - "Questions asked in the session (optional)"
+you_get:
+  - "The moment of use, named"
+  - "A one-page handout with steps, mistakes, checks and an example"
+  - "What was cut, and what the material did not cover"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the material under it."
+  - "Say the skill and when people will use it."
+  - "Read CUT. If something cut belongs at the desk, say so and run again."
+  - "Print it or pin it where the work happens."
+
+how_it_works:
+  - title: "Names the moment of use"
+    text: "When, where and with what problem someone opens the page."
+  - title: "Pulls the steps"
+    text: "Numbered, imperative, only from the material."
+  - title: "Attaches the mistakes"
+    text: "Beside the step they belong to, marked from the material or LIKELY."
+  - title: "Keeps the checks and one example"
+    text: "How to know it was done right, and one example that shows it."
+  - title: "Cuts the room-only parts"
+    text: "Warm-ups, discussion, history and stories, listed so the trainer can see."
+  - title: "Adds the help line"
+    text: "Who or what to turn to when the page is not enough."
+
+output_shape: |
+  MOMENT OF USE   <one line>
+  HANDOUT
+    <title and skill>
+    STEPS           <numbered, mistakes beneath>
+    DONE RIGHT WHEN <lines>
+    EXAMPLE         <right, wrong>
+    WHEN THIS IS NOT ENOUGH <who>
+  CUT             <one line>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Skill: replying to a Sprout cancellation email so the customer knows
+    their options and leaves calm.
+    Used when: an agent opens a cancel email in the help desk.
+    Session notes (60 minutes): warm-up on worst customer emails we have
+    received; why cancellation matters (loudest complaint on review sites,
+    public score 4.0 v our widget 4.75); the three options every reply must
+    mention (skip next delivery, pause, cancel) and where they are (Manage
+    Subscription in the account menu); the first sentence names what the
+    customer said before any policy; never open with "Unfortunately"; if the
+    renewal has already been charged and not shipped, refund it and say so
+    with the 5 to 7 day timing; if shipped, offer the return path; practice
+    on ten anonymised emails in pairs; discussion of the hardest one, a
+    customer who called us a trap; agents asked whether they can offer a
+    discount to stay (no, not without the founder) and what to do if the
+    customer threatens a chargeback (reply the same day and flag to the
+    founder).
+  output: pending
+
+tweaks:
+  - what: "The moment of use"
+    how: "Say exactly when the page gets opened. The steps get written for that second."
+  - what: "Questions asked"
+    how: "Paste them. They become the mistakes and the help line."
+  - what: "Format"
+    how: "Say 'printed' or 'pinned in chat' and the handout shapes itself to fit."
+
+judge:
+  - "It fits on one page."
+  - "Every step is an instruction from your material."
+  - "Inferred mistakes are marked."
+  - "Nothing from the warm-up or the discussion survived."
+  - "Someone who missed the session could follow it."
+
+test:
+  - "Give the handout to someone who missed the session and ask them to do the task from it."
+  - "Run it twice. The steps should match."
+  - "Give it slides that describe the skill without steps. It should mark the steps MISSING."
+
+improve:
+  - "Add your house format for how-tos so the handout matches the others."
+  - "After a month, add the questions people still asked and run it again."
+  - "Pair it with the Repeat task how-to writer when the handout becomes the standard."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message document works in any strong chat AI."}
+  inputs:
+    - "The session recording transcript, for the exact words used"
+    - "The questions people asked in the week after"

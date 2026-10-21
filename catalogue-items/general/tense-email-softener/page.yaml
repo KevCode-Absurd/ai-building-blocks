@@ -1,0 +1,110 @@
+new_slug: tense-email-softener
+name: "Tense email softener"
+summary: "Paste an email you are angry about. Get a version the reader wants to help with."
+job: write-emails
+thinking: low
+thinking_why: "It rewrites one email from the facts you give it."
+
+headline: "Tense email softener"
+subhead: "Paste the blunt email you wrote to a supplier, client or colleague who let you down. The prompt keeps every fact, removes the blame, opens from what the reader wants and asks for one fix by one date. You get the email and a firmer follow-up."
+
+explain: |
+  The email you write while angry is accurate and useless. The reader gets defensive, replies to the tone instead of the problem, and the fix takes a week longer. You still need the thing done, and you often still need the person next month.
+
+  This prompt follows the rules Dale Carnegie set out in public for getting people to help you. It separates the facts from the heat and keeps only the facts. It works out what the reader wants from this, owns your part first if there is one, states what happened with dates and no verdict, and asks for one fix by one date in a way that lets them save face. You also get a firmer follow-up for when nothing happens, still free of threats you cannot keep.
+
+when:
+  - "A supplier shipped late again and you need the next order on time."
+  - "A client changed the brief twice and is now blaming you for the delay."
+  - "You wrote the email at 11pm and something tells you not to send it yet."
+
+you_give:
+  - "The email you wrote"
+  - "What you need from them"
+  - "The facts with dates (advised)"
+  - "Who they are and whether you need them again (optional)"
+you_get:
+  - "The facts and the heat, separated"
+  - "The rewritten email with one request and one date"
+  - "A firmer follow-up for if they do nothing"
+  - "Missing facts marked"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your email under it."
+  - "Add the dates and amounts if your draft only has feelings."
+  - "Read HEAT REMOVED first. If a line there is a fact, tell the AI and run it again."
+  - "Send the email. Put the follow-up date in your calendar."
+
+how_it_works:
+  - title: "Separates facts from heat"
+    text: "Lists what happened with dates in one column and the blame in another. Only the facts stay."
+  - title: "Finds what they want"
+    text: "One line on what the reader needs out of this, which becomes the opening."
+  - title: "Owns your part"
+    text: "If any of the problem is yours, it says so in the first two lines. If none, it skips this."
+  - title: "States facts without a verdict"
+    text: "Dates, numbers, what was agreed and what arrived. No 'you failed to'."
+  - title: "Asks for one fix"
+    text: "One action, one date, framed so both sides get what they want, with a way to save face."
+  - title: "Writes the follow-up"
+    text: "Three firmer lines for when nothing happens, with no empty threats."
+
+output_shape: |
+  FACTS              <what happened, dated>
+  HEAT REMOVED       <blame lines, quoted>
+  WHAT THEY WANT     <one line>
+  SUBJECT            <under seven words>
+  EMAIL              <own your part, facts, one request, warm close>
+  IF THEY DO NOTHING <firmer follow-up, three lines>
+  MISSING            <facts not given>
+  CHECKS MISSED      <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    To: the packaging supplier who prints Sprout's green stand-up pouches.
+    What I need: the reprint of 20,000 pouches with the corrected
+    "28 Daily Packs" line by the 15th, at no extra charge.
+    Facts: the proof we approved on the 2nd said "28 Daily Packs". The
+    delivery on the 9th says "28 Daily Pack". We cannot ship it.
+    Draft:
+    Subject: Unacceptable
+    This is the second time your team has ignored an approved proof. We have
+    20,000 useless pouches sitting in our warehouse because nobody at your
+    end can read. I expect a full reprint at your cost and I expect it
+    immediately. This is not how professionals work.
+  output: pending
+
+tweaks:
+  - what: "Your part"
+    how: "If you did contribute to the problem, say how. Owning it in line one changes the whole reply."
+  - what: "The relationship"
+    how: "Say whether you need them again. A one-off dispute can be firmer than a supplier you rely on."
+  - what: "The follow-up"
+    how: "Give the real consequence you are willing to carry out, so the follow-up is honest."
+
+judge:
+  - "Every date and number is in your original facts."
+  - "No sentence says or implies the reader is incompetent."
+  - "There is one request and one date."
+  - "You would be fine receiving this email yourself."
+  - "The follow-up contains no threat you would not carry out."
+
+test:
+  - "Rewrite an angry email you already sent. Ask someone who saw the original which they would rather receive."
+  - "Run it twice. The FACTS block should match."
+  - "Give it a draft with no dates. It should write MISSING: dates instead of inventing them."
+
+improve:
+  - "Add how you usually sign off and address people, so the warmth sounds like you."
+  - "Add the consequences you are willing to use, in order, so follow-ups stay honest."
+  - "Pair it with the Late invoice reminder writer when the problem is money owed."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message rewrite works in any strong chat AI."}
+  inputs:
+    - "The agreement or order the dispute rests on"
+    - "What this person did well in the past, for the warm close"

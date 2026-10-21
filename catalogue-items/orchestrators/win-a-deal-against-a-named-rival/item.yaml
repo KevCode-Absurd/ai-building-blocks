@@ -1,0 +1,26 @@
+slug: win-a-deal-against-a-named-rival
+name: "Win a deal against a named rival"
+summary: "Give it the deal and the rival. Get a playbook, a battlecard, objection answers and a signature plan."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brief, required: false}
+  - {type: tool_connection, required: false}
+outputs:
+  - {type: competitor_set}
+  - {type: document}
+  - {type: copy_draft}
+  - {type: plan}
+uses: [deal-competitor-playbook-builder, sales-battlecard-builder, live-objection-responder, mutual-action-plan-builder]
+steps:
+  - {uses: deal-competitor-playbook-builder, note: "Where you win and lose against this rival, the patterns from past deals, the traps they set and the ground to fight on."}
+  - {uses: sales-battlecard-builder, note: "Honest comparisons, reply scripts for their usual claims, your positioning against them and the win themes to lead with."}
+  - {uses: live-objection-responder, note: "For each objection the buyer raises: what it really means, a reply that has worked before and the proof to use."}
+  - {uses: mutual-action-plan-builder, note: "The why-buy case in the buyer's words and a dated plan to signature, with who does what on both sides, written to share with the buyer."}
+origin: own
+version: 1.0.0
+example_pending: true

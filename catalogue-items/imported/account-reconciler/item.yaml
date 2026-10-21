@@ -1,6 +1,6 @@
 slug: account-reconciler
 name: Account reconciler
-summary: Give it a ledger and a bank statement. Get matched items, the gaps and a note on each. Have an accountant check.
+summary: Give it a ledger and a bank statement. Get matched items, the gaps sorted by type and a next step each.
 category: general
 boards: []
 type: skill

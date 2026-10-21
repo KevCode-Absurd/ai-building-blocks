@@ -1,0 +1,45 @@
+slug: whisper
+name: Whisper
+maker: OpenAI
+url: https://github.com/openai/whisper
+promise: Accurate speech-to-text in many languages, free to run on your own computer.
+use_cases: [voice-and-audio, meeting-notes]
+categories: [voice]
+what_it_does:
+  - Turns an audio recording into written text.
+  - Works with many languages and can tell which one is spoken.
+  - Translates speech into English with the multilingual models.
+  - Runs on your own computer with open source code under the MIT licence.
+  - Is also sold per minute through the OpenAI API.
+benefits:
+  - Get a transcript of a call, interview or video for free.
+  - Keep audio on your own computer when it is private.
+  - Pay about US$0.36 an hour if you would rather not run it yourself.
+best_for:
+  - Transcripts of meetings, podcasts and videos.
+  - Developers who add speech-to-text to their own app.
+  - Teams who want private transcripts on their own machine.
+not_for:
+  - People who want a ready-made app with a summary, since Whisper only returns the text.
+  - Slow computers without a graphics card for the larger models.
+pricing:
+  model: free
+  from: Free
+  note: The open source model is free to run. OpenAI's API charges US$0.006 per minute of audio for the hosted version.
+works_with:
+  - chatgpt
+  - claude
+  - fireflies
+runs_in: [desktop, api]
+blocks:
+  - whisper-speech-transcriber
+  - audio-meeting-notes-writer
+  - meeting-notes-maker
+  - dead-air-and-retake-cutter
+  - youtube-transcript-saver
+  - voice-swap-editor
+alternatives: [otter, fireflies, elevenlabs, descript]
+last_checked: 2026-10-21
+sources:
+  - https://github.com/openai/whisper
+  - https://developers.openai.com/api/docs/models/whisper-1

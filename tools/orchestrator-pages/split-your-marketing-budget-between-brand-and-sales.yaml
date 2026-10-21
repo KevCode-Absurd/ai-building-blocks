@@ -1,0 +1,130 @@
+new_slug: split-your-marketing-budget-between-brand-and-sales
+name: Split your marketing budget between brand and sales
+summary: Paste your spend and the numbers you track. Get a balanced scorecard
+  and a brand versus sales budget split.
+job: plan-strategy
+thinking: high
+thinking_why: It has to read your numbers and judge long-term effects from
+  short-term data. Give it your strongest model.
+headline: Split your marketing budget between brand and sales
+subhead: Paste your marketing spend by channel and the numbers you track. It
+  sorts your numbers into short-term and long-term and builds a scorecard that
+  doesn't mislead. Then it works out your current split between brand and sales,
+  checks your share of voice, and suggests the smallest shift to test.
+explain: >
+  Many businesses judge all their marketing on what happened this month.
+  Sales-focused spend wins that contest every time, so the brand-building work
+  that grows the business over years loses its budget. A few years on, prices
+  have to drop to keep sales up and growth slows.
+
+
+  This workflow separates the two. It sorts what you measure into short-term and
+  long-term, and flags any number that misleads on its own, such as sales that
+  come from clicks. It then sorts each channel as brand building or sales,
+  compares your split with a starting point of about 60 brand to 40 sales, and
+  checks your share of voice against your market share. It ends with the
+  smallest shift worth testing. The research behind it is The Long and the Short
+  of It, by Les Binet and Peter Field.
+when:
+  - You spend on marketing every month and can't say how much of it builds the
+    brand and how much drives sales.
+  - Sales are steady but you are pushing more discounts to hold them, and you
+    suspect the brand is slipping.
+  - You are planning next year's marketing budget and want to defend the split
+    to your boss or partners.
+you_give:
+  - Your marketing spend by channel and the results you track
+  - Your brand file, with your voice and positioning (optional)
+  - Your main competitors and roughly what they spend (optional)
+you_get:
+  - A scorecard of your numbers, split into short-term and long-term, with what
+    each one tells you and how long it takes to show
+  - Your current split between brand building and sales, compared with a
+    starting point
+  - A share-of-voice check and the smallest shift to test, with what the right
+    split depends on for your business
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file
+    this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project)
+    and say "Follow HANDOFF.md".
+  - Paste your spend by channel and the numbers you track. Add your brand file
+    and competitors if you have them.
+  - It works step by step and saves each result. Read the scorecard before you
+    read the split.
+  - Put the shift it suggests into one channel first, and don't judge it on a
+    short window.
+how_it_works:
+  - title: Build the scorecard
+    text: Lists your numbers, sorts them into short-term and long-term and flags
+      those that mislead alone. Sets a review rhythm that suits each.
+  - title: Split the budget
+    text: Uses the scorecard to sort each channel as brand or sales. Compares your
+      split and your share of voice with the market and proposes the smallest
+      shift to test.
+output_shape: >-
+  STEP 1: BALANCED SCORECARD
+    Long-term: <metric | question it answers | time lag>
+    Short-term: <metric | question it answers | time lag>
+    Misleading alone: <metric | why>
+    Review rhythm: <how often, for each>
+
+  STEP 2: BRAND VERSUS SALES SPLIT
+    Channels: <brand building / sales> for each
+    Current split: <brand % | sales %> against a start of about 60 / 40
+    Share of voice vs share of market: <grow / hold / shrink>
+    Message check: <rational only or emotional too> | Reach check: <wide or only existing buyers>
+    Smallest shift to test: <what to move> | What the split depends on: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+tweaks:
+  - what: How much history you give it
+    how: Give at least a year of spend and results. Long-term effects can't be seen
+      in a few weeks of data.
+  - what: Competitor spend
+    how: Even a rough guess lets it compare your share of voice with your share of
+      the market.
+  - what: How you label channels
+    how: Say what each channel is for. A video ad can build the brand or drive a
+      sale, and the split depends on which.
+judge:
+  - Every metric is marked short-term or long-term, with the question it answers.
+  - Metrics that mislead alone are named, with the reason.
+  - The split is worked from your numbers, not just stated as a rule of thumb.
+  - The share-of-voice check says whether your brand is set to grow or shrink,
+    and why.
+  - The shift is small enough to test, and the page says what would change the
+    advice.
+test:
+  - Give it a year of numbers from a year when you cut brand spend. See whether
+    it flags the long-term cost.
+  - Run it twice on the same data. The split and the shift should agree.
+  - Compare its split with what your team believes. Where they differ, ask it to
+    show its working.
+improve:
+  - Add the long-term measures you can collect, such as price sensitivity and
+    brand surveys, to the scorecard.
+  - Save the scorecard and the split in your brand file, and re-run it each
+    quarter.
+  - Add your own rule for what share of spend may go to untested channels.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Reads a pasted spend sheet and works through both steps.
+    - name: A spreadsheet
+      why: Holds your spend and results by month, which the scorecard needs.
+  inputs:
+    - A brand survey that shows how well people know you
+    - Your market share, if you can find it
+    - Spend by channel for the last three years
+terms:
+  - term: Share of voice
+    meaning: Your share of all the advertising spend in your market, compared with
+      your share of sales.
+  - term: Brand building
+    meaning: Marketing that reaches many people, including those who aren't ready to
+      buy yet, so they remember you later.
+  - term: Sales activation
+    meaning: Marketing aimed at people who are ready to buy now, such as search ads
+      and discount offers.

@@ -1,0 +1,18 @@
+slug: three-tier-price-ladder-drafter
+name: "Three-tier price ladder drafter"
+summary: "Paste what you sell and your costs. Get three tiers with what each includes and why the middle one wins."
+category: general
+boards: []
+type: prompt
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: product_data, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: offer}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

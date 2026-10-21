@@ -30,6 +30,7 @@ const PAGES = {
   block: () => import("./BlockPage"),
   guide: () => import("./HowItWorks"),
   tools: () => import("./tools/ToolsPage"),
+  aitools: () => import("./aitools/AiToolsPage"),
   apps: () => import("./apps/AppsPage"),
   space: () => import("./space/SpacePage"),
   minds: () => import("./MindsPage"),
@@ -40,6 +41,7 @@ const PAGES = {
 function sectionOf(to: string): keyof typeof PAGES | null {
   const path = to.split(/[?#]/)[0];
   if (path === "/tools" || path.startsWith("/tools/")) return "tools";
+  if (path === "/ai-tools" || path.startsWith("/ai-tools/")) return "aitools";
   if (path === "/apps" || path.startsWith("/apps/")) return "apps";
   if (path === "/space" || path === "/people" || path.startsWith("/s/")) return "space";
   if (path === "/minds") return "minds";
@@ -50,6 +52,7 @@ function sectionOf(to: string): keyof typeof PAGES | null {
 const BlockPage = lazy(PAGES.block);
 const HowItWorks = lazy(PAGES.guide);
 const ToolsPage = lazy(PAGES.tools);
+const AiToolsPage = lazy(PAGES.aitools);
 const AppsPage = lazy(PAGES.apps);
 const SpacePage = lazy(PAGES.space);
 const MindsPage = lazy(PAGES.minds);
@@ -61,16 +64,27 @@ const IntakePage = lazy(PAGES.intake);
 function useHashLanding() {
   useEffect(() => {
     let t = 0;
+    let end = 0;
+    let observer: ResizeObserver | null = null;
     const land = () => {
       window.clearTimeout(t);
-      t = window.setTimeout(() => {
+      window.clearTimeout(end);
+      observer?.disconnect();
+      const align = () => {
         const el = location.hash.length > 1 ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
-        const top = el?.getBoundingClientRect().top;
-        if (el && top !== undefined && (top < 0 || top > innerHeight * 0.6)) el.scrollIntoView({ behavior: "auto" });
+        if (el) window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top, behavior: "instant" as ScrollBehavior });
+      };
+      t = window.setTimeout(() => {
+        align();
+        // Rows can arrive while the smooth scroll crosses the library.
+        // Follow those layout changes only for this landing, then release it.
+        observer = new ResizeObserver(align);
+        observer.observe(document.body);
+        end = window.setTimeout(() => { observer?.disconnect(); align(); }, 1800);
       }, 900);
     };
     addEventListener("hashchange", land);
-    return () => { window.clearTimeout(t); removeEventListener("hashchange", land); };
+    return () => { window.clearTimeout(t); window.clearTimeout(end); observer?.disconnect(); removeEventListener("hashchange", land); };
   }, []);
 }
 
@@ -88,13 +102,11 @@ function useIdlePrefetch() {
     if (net?.saveData || /(^|-)2g$/.test(net?.effectiveType ?? "")) return;
     const idle = window.requestIdleCallback ?? ((f: () => void) => window.setTimeout(f, 1200));
     const stop = window.cancelIdleCallback ?? window.clearTimeout;
-    // A block's page is what most people open next, so its code comes first. The bigger sections follow only on a
-    // fast line; anywhere else they load when a link to them is pointed at, or opened.
+    // Warm the common next page on home. Other sections load on pointer intent;
+    // loading every calculator and app while a page opens competes with its data.
     const ids: number[] = [];
     ids.push(idle(() => {
-      PAGES.block().catch(() => {});
-      if (net?.effectiveType && net.effectiveType !== "4g") return;
-      ids.push(idle(() => Object.values(PAGES).forEach((load) => load().catch(() => {})), { timeout: 8000 }));
+      if (location.pathname === "/") PAGES.block().catch(() => {});
     }, { timeout: 4000 }));
     return () => ids.forEach(stop);
   }, []);
@@ -163,6 +175,7 @@ function Header({ onKits }: { onKits: () => void }) {
           <span className={`nav-more${more ? " open" : ""}`} onClick={(e) => e.stopPropagation()}>
             <button type="button" className="nav-more-btn" aria-expanded={more} aria-controls="nav-more-list" onClick={() => setMore((m) => !m)} data-testid="nav-more">More <span aria-hidden="true">▾</span></button>
             <span className="nav-more-list" id="nav-more-list" onClick={() => { setMore(false); setMenu(false); }}>
+              <Link to="/ai-tools" data-testid="nav-ai-tools">AI tools</Link>
               <Link to="/from-a-source" data-testid="nav-intake">From a source</Link>
               <Link to="/space" data-testid="nav-space">My space</Link>
             </span>
@@ -458,6 +471,8 @@ export default function App() {
       <Header onKits={() => setKitsOpen(true)} />
       {path === "/tools" || path.startsWith("/tools/") ? (
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><ToolsPage path={path} toast={setToast} /></Suspense>
+      ) : path === "/ai-tools" || path.startsWith("/ai-tools/") ? (
+        <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><AiToolsPage path={path} /></Suspense>
       ) : path === "/apps" || path.startsWith("/apps/") ? (
         <Suspense fallback={<main className="wrap bp-hero"><p className="small">Loading…</p></main>}><AppsPage path={path} toast={setToast} /></Suspense>
       ) : path === "/space" || path === "/people" || path.startsWith("/s/") ? (
@@ -478,6 +493,7 @@ export default function App() {
           <span>© 2026 AI Blocks · useaiblocks.com</span>
           <nav aria-label="More">
             <Link to="/tools">Mini tools</Link>
+            <Link to="/ai-tools">AI tools</Link>
             <Link to="/from-a-source">Turn a source into a workflow</Link>
             <Link to="/apps">Apps</Link>
             <Link to="/apps/starter-pack">App starter pack</Link>

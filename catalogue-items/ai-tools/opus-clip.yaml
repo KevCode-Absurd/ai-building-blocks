@@ -1,0 +1,38 @@
+slug: opus-clip
+name: Opus Clip
+maker: Opus
+url: https://www.opus.pro
+promise: Turn one long video into short clips ready to post.
+use_cases: [edit-video]
+categories: [video]
+what_it_does:
+  - Finds the best moments in a long video.
+  - Cuts them into short clips sized for TikTok, Reels and Shorts.
+  - Adds captions to each clip.
+  - Reframes the video so the speaker stays in view.
+benefits:
+  - Get a week of short posts from one podcast or webinar.
+  - Skip the hours of scrubbing through a long recording.
+  - Post a clip every day from videos you already have.
+best_for:
+  - Podcasters, webinar hosts and course makers.
+  - Marketers who repurpose long videos into social posts.
+  - Founders with talking-head content.
+not_for:
+  - Videos with no speech, since the clip picks lean on the words.
+  - Heavy hand edits or visual effects.
+pricing:
+  model: freemium
+  from: "US$15 per month"
+  note: Free plan lets you post one clip a day with no card. Starter is US$15 per month and Pro is US$29 per month. The page does not list credits per plan.
+works_with:
+  - zapier
+  - descript
+runs_in: [web]
+blocks:
+  - social-post-planner
+  - marketing-video-producer
+alternatives: [descript, capcut, veed]
+last_checked: 2026-10-21
+sources:
+  - https://www.opus.pro/pricing

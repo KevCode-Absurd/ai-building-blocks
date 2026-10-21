@@ -1,0 +1,126 @@
+new_slug: weekly-one-on-one-prep-keeper
+name: Weekly one-on-one prep keeper
+summary: Give it last week's notes on each person you manage. Get this week's agenda, the praise and the hard point to raise.
+job: lead-people
+thinking: high
+thinking_why: It reads notes about people, tells a pattern from a bad week and plans a conversation that must land well. Give it your strongest model.
+headline: Weekly one-on-one prep keeper
+subhead: Give it last week's notes for each person you manage. It carries open items forward, finds the specific win to praise, notices when a problem has repeated and plans how to raise it, then hands you a one-page agenda per person. You run the meeting. It never messages or records anything.
+explain: |
+  One-on-ones slide into status updates because nobody prepared. The manager arrives with a list of their own, the win from last week is forgotten, the problem that showed up twice is never raised because it is awkward, and the question "what could I do better?" is asked once and never acted on.
+
+  This agent prepares you every Monday. It sets up a meeting rhythm and a go-to question for each person once, then each week reads your notes, carries open items forward, marks the stuck ones, finds one real win and the exact words to praise it, and plans a hard conversation only when a problem has shown up two weeks running. The agenda opens with the person's items. The hard point sits after them, shaped so it lands. Your notes about people stay in files only you read.
+when:
+  - You manage three or more people and your one-on-ones have become status meetings.
+  - You keep forgetting to praise the thing that went well last week.
+  - A problem has come up twice and you are not sure how to raise it.
+you_give:
+  - Last week's notes from each one-on-one and anything you noticed, per person
+  - Each person's name, job, time in it and current work
+  - Their objectives or key results this quarter (advised)
+  - A yes if you want a status update for your own manager (optional)
+  - The person files, once they exist
+you_get:
+  - A one-page agenda per person, their items first
+  - One specific win per person and the exact praise
+  - Open items carried forward, with stuck ones marked
+  - A planned hard conversation only where a problem repeated
+  - Patterns stuck across the team, which may be yours to fix
+  - A one-page status update for your manager, when asked
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to prepare this week.
+  - Keep your one-on-one notes in one private folder, one file per person, or paste them in the chat.
+  - On the first run, give each person's job and how new they are. It sets up the rhythm and the go-to question.
+  - Read each agenda before the meeting. Change what does not fit. Hold the meeting yourself.
+  - After the week, add your notes. Run it again next Monday.
+how_it_works:
+  - title: Set up each person once
+    text: Sets a meeting rhythm that tightens when someone is new, and writes your go-to question for asking them what to change.
+  - title: Read last week
+    text: Carries every open item forward, marks ones stuck three weeks, and checks whether you acted on their last answer.
+  - title: Find the win
+    text: Picks one specific win from the notes and writes the exact praise and when to give it.
+  - title: Spot the repeat
+    text: When the same problem appears in two weeks of notes, names one watchable behaviour and its likely reason.
+  - title: Plan the hard conversation
+    text: Only where a repeat exists, plans what to praise, what to say and how, humble and about what happened.
+  - title: Build each agenda
+    text: Their items first, then open items, the win, the hard point, and the go-to question if due.
+  - title: Write your update on request
+    text: A one-page status update for your manager, with people's private notes left out.
+  - title: Log and hand back
+    text: Updates each person's file, then stops.
+output_shape: |-
+  THIS WEEK
+    <n> one-on-ones | <n> stuck items | <n> hard points | go-to question due for: <names>
+
+  <NAME> (<job>, <time in role>)
+    Their items: <ask first>
+    Open: <item> (since <date>) | <item> STUCK, 3 weeks
+    Win: <what they did> | say: "<exact praise>" | when: <start | after their items>
+    Hard point: <behaviour> seen <week>, <week> | likely reason: <what> | how to raise: <three lines>
+    Go-to question: <due | asked <date>, you acted: yes | no>
+
+  TEAM PATTERNS
+    <what is stuck for more than one person> | maybe yours: <why>
+
+  YOUR UPDATE (if asked)
+    <one page>
+
+  FILES AND MISSING
+    <each agenda file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Prepare this week for a marketing lead at Sprout who manages three
+    people. Practice notes, not real people.
+    - A, performance marketer, 2 years in role, runs Meta and TikTok ads.
+      Last week: launched the birthday price-cut ads on time; said the
+      creative queue is "always late"; second week saying this. Open item
+      since 22 Sep: write the test plan for hook variants.
+    - B, content lead, 4 months in role. Last week: the limited flavour
+      shoot landed early; missed the Thursday newsletter deadline again
+      (also missed 2 weeks ago). Open: finish the brand voice file.
+    - C, lifecycle marketer, 3 weeks in role. Last week: mapped the cancel
+      flow; asked twice how decisions get made here.
+    Goals this quarter: A, hold cost per new subscriber under $42;
+    B, two posts a week and the newsletter every Thursday; C, cut
+    first-30-day cancels by a fifth.
+    Last go-to question to A on 15 Sep: "fewer surprise requests on
+    Fridays". I have not changed that yet.
+  output: pending
+tweaks:
+  - what: Your notes
+    how: One line per thing you noticed is enough. The win and the repeat check both come from them.
+  - what: Repeat rule
+    how: The agent waits for a problem to appear in two weeks of notes. Raise a serious problem yourself, at once.
+  - what: Meeting rhythm
+    how: Tell it when someone is new or has just proved themselves. The rhythm tightens or loosens.
+  - what: Goals
+    how: With goals on file, the win and the agenda tie to what matters this quarter.
+judge:
+  - Each agenda opens with the person's items.
+  - Each win is specific and in your notes.
+  - No hard point rests on one week.
+  - No person's notes leak into another's agenda or your update.
+  - Nothing was sent, changed or recorded.
+test:
+  - Give it two weeks of notes with the same problem. It should plan a hard point in week two and not in week one.
+  - Give it notes with no clear win for one person. It should say so, not invent one.
+  - Run it twice on the same notes. The agendas should match.
+improve:
+  - Write each person's goals into their file before the first run.
+  - Record what each person said to the go-to question and what you changed. The agent checks it before asking again.
+  - Set the repeat rule to one week for a new person, where small things need raising early.
+  - Pair it with the Quarterly performance review keeper, which reads these files at quarter end.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep one private file per person and run every Monday before the first meeting.
+    - name: Any good chat AI
+      why: Paste the agent and your notes for the week. Keep the person files in a private note.
+  inputs:
+    - What each person said the last time you asked what you should change
+    - Each person's start date in the role, so the rhythm is right

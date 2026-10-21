@@ -1,0 +1,124 @@
+new_slug: handbook-change-desk
+name: Handbook change desk
+summary: Give it each proposed rule change. Get where the rule came from, what it affects and a small test to approve.
+job: document-work
+thinking: high
+thinking_why: It must tell a real problem from one bad day, read how a change touches the rest of the handbook and know when to stop for counsel. Give it your strongest model.
+headline: Handbook change desk
+subhead: Give it each proposed change to a company rule and your handbook. It names the problem the change solves, traces where the rule came from, checks what else it touches, plans a small test before any rule is dropped for everyone, and drafts wording for counsel. You approve, then it writes the announcement.
+explain: |
+  Company rules pile up the same way. Someone misuses a freedom, a rule gets written for everyone, and years later nobody remembers why it exists. Then someone proposes dropping it on a Tuesday, it is dropped for everyone on Wednesday, and the reason it existed shows up in a month.
+
+  This agent handles every change the same way. It asks what problem the change solves and says so if there is none. It traces where the existing rule came from and whether it earns its place. It checks what the change touches elsewhere, including differences by place, and marks anything about pay, leave, safety or dismissal for counsel. A removal gets a small, dated test in one team. An addition gets wording drafted for counsel and tested in plain words. Only after you approve does it write the announcement. It never touches the live handbook.
+when:
+  - Someone has proposed dropping or adding a company rule and you want it done carefully.
+  - Your handbook has rules nobody can explain.
+  - You want a quarterly sweep that finds the rules that no longer earn their place.
+you_give:
+  - Your current handbook or policies as text, with the places you operate
+  - The proposed change, who asked and the problem they say it solves
+  - How often the rule comes up and who it affects (advised)
+  - Headcount, places and whether you are remote (advised)
+  - The change log, once it exists
+you_get:
+  - The problem the change solves, in one line, or a note that it solves nothing
+  - Where the rule came from and whether it earns its place
+  - Every section the change touches, with counsel items marked
+  - A small, dated test plan for any removal
+  - New wording drafted for counsel, tested in plain words
+  - The announcement, FAQ and talking points, only after approval
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then describe the proposed change.
+  - Put your handbook in one folder, or attach it in the chat. Say where you operate.
+  - Read the problem line and the origin first. If the change solves nothing, stop there.
+  - Take the counsel items to counsel. Approve the test or the wording.
+  - Tell the agent it is approved. It then writes the announcement for you to send.
+how_it_works:
+  - title: Name the problem
+    text: Writes the problem the change solves in one line, or says the proposal has none behind it.
+  - title: Trace the rule
+    text: Finds where the existing rule came from, who it served and whether it still earns its place.
+  - title: Check what it touches
+    text: Lists every affected section and place-by-place difference, marking pay, leave, safety and dismissal for counsel.
+  - title: Sort the change
+    text: A removal gets a small test in one team. An addition gets wording for counsel. A rule aimed at one person is sent back as a management decision.
+  - title: Test the wording
+    text: Explains the rule as a worker would ask about it, and loops once if the plain version does not match.
+  - title: Write the announcement after approval
+    text: The announcement, FAQ, manager talking points and send plan, only once you say yes.
+  - title: Sweep quarterly
+    text: Re-traces every rule not reviewed in a year and lists removal candidates.
+  - title: Log and hand back
+    text: Records the change, its test and its result, then stops.
+output_shape: |-
+  THE PROBLEM
+    <one line> | asked by: <who> | <real problem | one incident | none found>
+
+  ORIGIN
+    <rule> | came from: <what, when> | served: <who> | earns its place: <yes | no | law or safety requires it>
+
+  WHAT IT TOUCHES
+    <section> | <how> | <place difference> | <for counsel>
+
+  THE PATH
+    <removal: test in <team> from <date> to <date>, measure <what>, stop if <condition>>
+    <addition: wording below, for counsel>
+    <not a handbook change: a decision about one person, with counsel>
+
+  PLAIN-WORDS TEST
+    Worker asks: "<question>" | rule says: <plain answer> | matched: <yes | no, fix: ...>
+
+  ANNOUNCEMENT (after approval)
+    <announcement> | FAQ: <q and a> | managers: <talking points> | send plan: <who, when>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Proposed change at Sprout (practice scenario, not a real policy):
+    drop the rule that every social post and ad must be approved by the
+    founder before it goes live. Asked by the content lead. Problem she
+    names: approvals take 2 to 4 days and limited-flavour launches miss
+    the week. The rule dates from 2024, after one ad ran "Fix the Hot
+    Girl Tummy" style wording that the founder felt crossed the line on
+    health claims. Team: 34 people, US, remote, marketing team of 6.
+    Handbook attached, including the claims policy ("supports", never
+    "fixes" or "cures") and the brand review section.
+    How often: about 40 posts and 15 ads a month pass through it.
+  output: pending
+tweaks:
+  - what: The problem line
+    how: Ask the proposer for it before you start. A change with no problem behind it should stop at step one.
+  - what: Places you operate
+    how: Rules differ by country and state. Name each place so the cross-check is real.
+  - what: Test size
+    how: The agent tests a removal in one team. Name the team and how long you can wait.
+  - what: Counsel items
+    how: Tell it which topics always go to counsel in your company, beyond pay, leave, safety and dismissal.
+judge:
+  - The problem the change solves is written in one line.
+  - No rule is removed for everyone without a small test.
+  - Counsel items are marked.
+  - The announcement exists only if you approved.
+  - The live handbook was not changed.
+test:
+  - Propose dropping a safety rule. The agent should stop and say law or safety requires it.
+  - Propose a rule aimed at one person. It should send it back as a management decision.
+  - Run the same proposal twice. The origin and the path should match.
+improve:
+  - Fill the rules file with each rule's origin as you learn it. The quarterly sweep gets sharper.
+  - Set your own counsel list and the team you test changes in.
+  - Record each test's result in the log. The next similar proposal reads it.
+  - Pair it with the Rule change policy keeper, which handles rules that change outside the company; this one handles the ones you change yourself.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read the handbook folder, keep the log and rules files and run on each proposal.
+    - name: Any good chat AI
+      why: Paste the agent, the proposal and the relevant handbook sections.
+  inputs:
+    - The incident or reason behind the rule, from whoever remembers it
+    - What counsel has said before about similar changes

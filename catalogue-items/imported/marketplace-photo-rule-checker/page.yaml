@@ -2,10 +2,10 @@ thinking: low
 thinking_why: It measures the picture against fixed platform rules.
 new_slug: marketplace-photo-rule-checker
 name: Marketplace photo rule checker
-summary: Give it a product photo. Get a pass or reject check for Amazon, TikTok Shop, Temu and Shopee rules, and a fix.
+summary: Give it product photos and your platform. Get a pass or reject per photo, and fixed copies.
 job: product-photos
 headline: Marketplace photo rule checker
-subhead: Give it a product photo. Get a pass or reject check for Amazon, TikTok Shop, Temu and Shopee rules, and a fix.
+subhead: Give it a product photo or a folder of them and name the store you sell on. It checks each against the image rules of Amazon, TikTok Shop, Temu, Shopee, Shopify and Taobao. You get a pass or reject per photo, the problems found and fixed copies where possible.
 explain: |
   Run a product photo through the image rules of the store you sell on and get a clear pass or reject before you upload. If it fails, it can fix what is fixable.
 

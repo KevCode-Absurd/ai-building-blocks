@@ -1,0 +1,27 @@
+slug: student-work-marking-desk
+name: "Student work marking desk"
+summary: "Give it each batch of student work. Get every piece marked against one rubric, feedback that names the problem, and class patterns."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: document, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: feedback_notes}
+  - {type: document}
+uses: [task-rubric-drafter, mark-student-work-against-a-rubric-and-sharpen-your-feedback, honest-draft-feedback-giver, good-note-sharpener]
+steps:
+  - {uses: task-rubric-drafter, note: "Once per task: the rubric with clear wording at each level, saved and used for every piece in every batch. Skipped if a rubric exists."}
+  - {uses: mark-student-work-against-a-rubric-and-sharpen-your-feedback, note: "Every batch, for each piece: the gaps against the rubric and the feedback, with the two or three pieces at the edges of a level marked for the teacher."}
+  - {uses: honest-draft-feedback-giver, note: "Only for written work such as essays and stories: feedback that names the weak lines and asks whether the student is fine with them."}
+  - {uses: good-note-sharpener, note: "Every batch, last: each feedback note rewritten as a note on the problem, not a fix, so the student does the thinking."}
+schedule: "Each time a batch of student work is handed in"
+asks_before: [sending feedback or grades to any student, recording a grade, contacting a parent or guardian, changing the rubric after marking has started, sharing one student's work with another, flagging a student for misconduct]
+minds: [ed-catmull]
+origin: own
+version: 1.0.0
+example_pending: true

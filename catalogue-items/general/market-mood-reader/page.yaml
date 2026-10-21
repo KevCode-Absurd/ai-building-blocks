@@ -1,11 +1,11 @@
 new_slug: market-mood-reader
 name: "Market mood reader"
-summary: "Paste your holdings and how prices moved. Get each move sorted as business or mood, and a take, ignore or wait read."
+summary: "Paste holdings and price moves. Get each move sorted as business or mood, plus take, ignore or wait."
 job: money-and-investing
 thinking: medium
 thinking_why: "It compares a price with your own written value and sorts the cause of a move. The care is in keeping the story out of the sort."
 
-headline: "Find out if a price move is the business changing or the crowd changing its mood"
+headline: "Market mood reader"
 subhead: "Paste what you hold, what you think each is worth and how prices moved. It sorts each move into business change or mood, separates pricing from timing, and reads today's price as an offer to take, ignore or wait on. A method of analysis, not personal financial advice."
 
 explain: |

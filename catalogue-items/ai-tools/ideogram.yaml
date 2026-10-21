@@ -1,0 +1,40 @@
+slug: ideogram
+name: Ideogram
+maker: Ideogram
+url: https://ideogram.ai
+promise: Images with clean, correct text in them, from a written description.
+use_cases: [make-images, design]
+categories: [image, design]
+what_it_does:
+  - Makes images from a written description.
+  - Puts readable words into posters, logos and ad images.
+  - Edits part of an image while the rest stays as it was.
+  - Copies the style of reference images you upload.
+  - Makes bigger, sharper versions of images you like.
+benefits:
+  - Get ad images and posters where the headline is spelled right.
+  - Try logo and sticker ideas in minutes.
+  - Keep a set of images in one style by reusing a reference.
+best_for:
+  - Posters, social graphics and ad images that carry words.
+  - Logo and packaging concepts.
+  - Quick text-on-image tests before a designer finishes the work.
+not_for:
+  - Photo-real product shots where the packaging must be exact.
+  - Long paragraphs of small text.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: Free plan with a small weekly credit allowance, and free images are public. Paid Plus, Pro and Team plans add credits and private images. Third-party prices disagree, so check the page.
+works_with:
+  - canva
+  - figma-ai
+runs_in: [web, mobile, api]
+blocks:
+  - image-ad-maker-with-exact-text
+  - customer-quote-image-ad
+  - marketing-image-maker
+alternatives: [midjourney, recraft, nano-banana, flux]
+last_checked: 2026-10-21
+sources:
+  - https://eesel.ai/blog/ideogram-pricing

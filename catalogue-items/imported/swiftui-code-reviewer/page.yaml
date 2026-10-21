@@ -5,7 +5,7 @@ name: SwiftUI code reviewer
 summary: Give it your SwiftUI code. Get it written, reviewed or refactored with current APIs and fewer speed traps.
 job: build-software
 headline: SwiftUI code reviewer
-subhead: Give it your SwiftUI code. Get it written, reviewed or refactored with current APIs and fewer speed traps.
+subhead: Share your SwiftUI code, or describe the feature you want. It checks data flow, view composition, animation and localisation against a checklist, and swaps old APIs for newer ones. You get review findings, refactored code and speed fixes, with a note on why each change helps.
 explain: |
   SwiftUI code that is written, reviewed or fixed with current APIs and fewer slow spots. You get changes that follow how SwiftUI actually behaves, for iPhone, iPad or Mac apps.
 

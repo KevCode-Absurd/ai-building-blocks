@@ -1,0 +1,26 @@
+slug: find-old-posts-losing-traffic-refresh-or-cut-them-and-track-it
+name: "Find old posts losing traffic and refresh or cut them"
+summary: "Give it your traffic by page. Get the decaying pages, keep or cut calls, refresh plans and tracking."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: web_page, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+  - {type: copy_draft}
+uses: [content-gap-and-decay-finder, page-keep-or-cut-auditor, old-content-refresher, search-title-and-snippet-writer, seo-change-tracker]
+steps:
+  - {uses: content-gap-and-decay-finder, note: "The pages losing traffic over time, the searches they are losing and the topics where rivals now rank above you."}
+  - {uses: page-keep-or-cut-auditor, note: "For each page, a call with the reason and the numbers: keep as is, refresh, merge into another page or cut and redirect."}
+  - {uses: old-content-refresher, note: "For each page to refresh: the facts to update, the structure to change, the questions it now misses and what to add, in order."}
+  - {uses: search-title-and-snippet-writer, note: "A new title and search snippet for each refreshed page, within length, saying what the page now gives the searcher."}
+  - {uses: seo-change-tracker, note: "Tracking for each changed page: the date of the change, the searches to watch and a read at six to eight weeks that says whether it worked."}
+origin: own
+version: 1.0.0
+example_pending: true

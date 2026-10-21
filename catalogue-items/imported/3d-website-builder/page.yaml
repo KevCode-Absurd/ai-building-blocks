@@ -2,10 +2,10 @@ thinking: high
 thinking_why: It balances many visual effects against speed.
 new_slug: 3d-website-builder
 name: 3D website builder
-summary: Describe the site. Get a 3D web page with shaders, smooth motion, a preloader and phone-friendly tuning.
+summary: Describe the site and its mood. Get 3D page code with shaders, motion, a preloader and phone tuning.
 job: build-websites
 headline: 3D website builder
-subhead: Describe the site. Get a 3D web page with shaders, smooth motion, a preloader and phone-friendly tuning.
+subhead: Describe the site, its mood, your colours and any 3D models. It writes the scene and render loop, custom shader effects, smooth motion and hover behaviour, and a loading screen. You get code tuned to run well on phones, with the pixel ratio capped and effects kept light.
 explain: |
   A high-end 3D website needs more than a model on a page, and this skill writes the code for custom shader effects, smooth motion, a loading screen and phone tuning.
 

@@ -1,0 +1,126 @@
+new_slug: weekly-saas-numbers-keeper
+name: Weekly SaaS numbers keeper
+summary: Give it your revenue and customers each week. Get recurring revenue, churn and payback read, one growth target and what to skip.
+job: track-numbers
+thinking: high
+thinking_why: It holds definitions steady, reads several numbers against each other and judges whether growth is worth its cost. Give it your strongest model.
+headline: Weekly SaaS numbers keeper
+subhead: Give it last week's billing export every Monday. It reads recurring revenue, churn, the cost to win a customer and payback under definitions that never drift, names the one thing to fix first, and sets one growth target for the week with what to skip. You approve every change to price or spend.
+explain: |
+  Subscription numbers are easy to get and easy to fool yourself with. Churn gets redefined in a bad month. A yearly plan is read as a month of revenue. The cost to win a customer is worked out three ways by three people. And the weekly growth rate, the one number that tells a founder whether the thing is working, is never written down.
+
+  This agent fixes the definitions once and reads the numbers the same way every Monday. It keeps a row per week so the trend is in a file. It names the one thing to fix first and says when that thing has been the same for three weeks. Once a month it checks whether a customer pays back inside a year and returns several times their cost, and gives a scale-or-fix call. Then it sets one growth target for the week and lists what to skip to hit it. It never changes a price or a budget.
+when:
+  - You run a subscription business and read the numbers differently each week.
+  - You spend to win customers and are not sure whether each one pays back.
+  - You want one number to judge the week by, and permission to skip the rest.
+you_give:
+  - Last week's billing export with plan, price, start, cancel and payments per customer, or a read-only billing connection
+  - Ad spend, sales pay and tools for the week (advised)
+  - Your gross margin per customer (advised)
+  - Your open pipeline, if you sell with a sales team (optional)
+  - Last week's keeper file, once it exists
+you_get:
+  - Recurring revenue, churn and net new customers under fixed definitions
+  - The last eight weeks in a row, with the target line
+  - The one thing to fix first, and whether it repeated
+  - Payback months, the lifetime profit to cost ratio and a scale-or-fix call, monthly
+  - Commit, best case and pipe-only forecasts, if you have a pipeline
+  - One growth target for the week and what to skip
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week.
+  - Export last week from your billing tool, or connect it read-only. Put the file in one folder, or attach it in the chat.
+  - On the first run, approve the definitions of revenue, customer and churn. They are saved and never drift.
+  - Add your spend and gross margin once. Update them when they change.
+  - Read the target and the one thing to fix. Run it again next Monday.
+how_it_works:
+  - title: Fix the definitions once
+    text: Writes what counts as recurring revenue, an active customer and churn, approved by you and used every week.
+  - title: Read the source
+    text: Pulls recurring revenue, active customers and churn from billing, adds the week's row and works out the growth rate.
+  - title: Read the numbers together
+    text: Revenue, churn, cost to win a customer and lifetime value read as one picture, with the one thing to fix first.
+  - title: Check the economics monthly
+    text: Payback months and lifetime profit against cost, scored, with a scale-or-fix call.
+  - title: Forecast the pipeline
+    text: Commit, best case and pipe-only forecasts with the maths shown, if you sell with a pipeline.
+  - title: Set the week's target
+    text: One growth target, what it means in sign-ups or revenue, and what to skip.
+  - title: Log and hand back
+    text: Saves the row and stops for your yes.
+output_shape: |-
+  THIS WEEK
+    Recurring revenue <amount> | growth <%> (target <%>) | new <n> | churned <n> | net <n>
+
+  THE TREND (last 8 weeks)
+    <week> | <revenue> | <growth %> | <churn %> | <cost per new customer>
+
+  FIX FIRST
+    <one thing> | <new | same as last week | third week running, nothing done>
+
+  ECONOMICS (monthly)
+    Payback <n> months | lifetime profit to cost <ratio> (<band>) | scores <n>/100, <n>/100 | call: <scale | fix>
+
+  PIPELINE (if any)
+    Commit <amount> | best case <amount> | pipe only <amount> | maths: <shown>
+
+  THE WEEK'S TARGET
+    <growth %> = <n> new customers or <amount> | skip: <what>, <what>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run this week for Sprout's subscription business. Practice numbers,
+    not Sprout's real figures.
+    Billing export attached: 18,400 active subscribers at $49.99 every
+    4 weeks (Low Sugar) or $54.99 (Sugar-Free); 1,150 new last week at
+    the $29.99 first-order price; 620 cancelled; 210 paused.
+    Definitions from the first run: recurring revenue = renewal price x
+    active subscribers, first-order discount excluded; churn = cancel
+    date in the week, pauses not counted.
+    Spend last week: ads $141,500; creators $11,200; tools $1,800.
+    Gross margin after product, packing and shipping: 61%.
+    Last week's row: 17,870 active, growth 2.9%, churn 3.3%, cost per new
+    subscriber $38, target was 3%.
+    Fix first last week: first-rebill cancels.
+  output: pending
+tweaks:
+  - what: Your definitions
+    how: Decide once what counts as revenue, a customer and churn. The agent holds them steady and asks before any change.
+  - what: Gross margin
+    how: Without it, payback is worked out on revenue and shown as a ceiling.
+  - what: Growth target
+    how: The agent proposes one from the trend. Set your own if you have a plan to hit.
+  - what: Economics rhythm
+    how: Monthly by default, or when spend moved more than a fifth. Weekly if you are scaling spend fast.
+judge:
+  - Every number follows the saved definitions.
+  - The growth rate comes from the saved rows.
+  - The one thing to fix is named and repeats are called out.
+  - Payback uses your gross margin or is marked as a guess.
+  - Nothing was changed or sent.
+test:
+  - Run it on last month's exports, week by week. The trend should match what you remember.
+  - Change a plan's price in the export. The agent should ask before treating it as a definition change.
+  - Run it twice on the same export. Every number should match.
+improve:
+  - Write your definitions before the first run and have your accountant check them.
+  - Add your gross margin and update it when costs change.
+  - Set the growth target from your plan, and record each week's miss or hit in the rows.
+  - Pair it with the Subscription churn watcher, which goes deep on where cancels come from each month.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the weeks and definitions files between runs and run every Monday.
+    - name: Your billing tool
+      why: Export per-customer plan, price, start, cancel and payments. A read-only connection lets the tracker read them directly.
+  inputs:
+    - Ad spend by channel for the week
+    - Your gross margin, checked by your accountant
+terms:
+  - term: Payback
+    meaning: How many months a customer's gross profit takes to cover what you spent to win them.

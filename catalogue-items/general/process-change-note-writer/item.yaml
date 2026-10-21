@@ -1,0 +1,17 @@
+slug: process-change-note-writer
+name: "Process change note writer"
+summary: "Paste what is changing and why. Get the note that tells the team what to do differently, from when."
+category: general
+boards: []
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,17 @@
+slug: per-order-profit-calculator
+name: "Per-order profit calculator"
+summary: "Paste your price and every cost per order. Get the profit per order, the break-even and what moves it most."
+category: general
+boards: []
+type: prompt
+role: make
+job: analysis
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+outputs:
+  - {type: spreadsheet}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

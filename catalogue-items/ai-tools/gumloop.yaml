@@ -1,0 +1,45 @@
+slug: gumloop
+name: Gumloop
+maker: Gumloop
+url: https://www.gumloop.com
+promise: Describe the work in plain words and get an agent that does it.
+use_cases: [automate]
+categories: [automation]
+what_it_does:
+  - Builds agents from a plain-words description of the job.
+  - Connects to Slack, Gmail, Salesforce, HubSpot, Notion, GitHub and Google Sheets.
+  - Watches the web or your apps and acts when your conditions match.
+  - Saves reusable skills that agents write, refine and share.
+  - Makes shareable dashboards, documents and web apps from your connected data.
+  - Lets IT control access, with SSO and audit logs.
+benefits:
+  - Hand off lead research, CRM updates and ticket sorting.
+  - Share one agent with the whole team instead of rebuilding it.
+  - Let a team build agents while IT keeps control of access.
+  - Run reports on a schedule without anyone remembering.
+best_for:
+  - Marketing, sales and operations teams that want agents, not flowcharts.
+  - Companies where IT must approve what agents can reach.
+  - Teams replacing manual lead and CRM work.
+not_for:
+  - One-off text writing with no apps involved.
+  - People who need a clear free plan, since sources disagree on whether one exists.
+pricing:
+  model: subscription
+  from: Check the maker's site
+  note: The pricing page did not load. Sources dated August and September 2026 list a Pro plan from about US$37 per month, plus Enterprise, but disagree on a free plan. Credits are used per run.
+works_with:
+  - Slack
+  - Gmail
+  - Salesforce
+  - HubSpot
+  - Notion
+  - Google Sheets
+runs_in: [web, api, slack]
+blocks: []
+alternatives: [lindy, zapier, make, n8n]
+last_checked: 2026-10-21
+sources:
+  - https://www.gumloop.com/pricing
+  - https://gumloop.com
+  - https://www.gumloop.com/blog/simplifying-gumloop-pricing

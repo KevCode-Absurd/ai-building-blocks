@@ -1,0 +1,117 @@
+new_slug: check-a-small-business-before-you-buy-it
+name: Check a small business before you buy it
+summary: Give it the listing and the books. Get a checklist, seller questions, owner earnings and a value range.
+job: money-and-investing
+thinking: high
+thinking_why: It judges a business from its books and sets a price range you will act on. Give it your strongest model.
+headline: Check a small business before you buy it
+subhead: Give it the listing, the seller's claims and the financial statements. It builds the diligence checklist, prepares your meetings with the seller, reads the statements for what they hide, works out owner earnings the way Warren Buffett defines them, and gives a value range to offer from.
+explain: |
+  Small businesses are sold on a story and a spreadsheet the seller prepared. The buyer sees the revenue, hears about the loyal customers, and pays for profits that include the owner's unpaid labour and leave out the truck that needs replacing.
+
+  This workflow checks the business in order. It builds a diligence checklist for this kind of business: what to ask for, what to verify, what a red flag looks like. It prepares your meetings with the seller, with the questions and the answers to listen for. It reads the statements as an analyst would: trends, margins, what is unusual, what is missing. It works out owner earnings, in Warren Buffett's definition: reported earnings plus non-cash charges, minus the money the business must spend to stay as it is. Then it gives a value range to offer from, with the method shown.
+when:
+  - A broker sent you a listing and you are tempted.
+  - You are buying from a retiring owner who keeps the books in their head.
+  - You have bought before and found the surprises after closing.
+you_give:
+  - The listing and what the seller claims
+  - The financial statements, two or three years if you can
+  - What you know of the industry and the location
+  - After the meetings, the seller's answers (optional)
+you_get:
+  - A diligence checklist for this kind of business, with red flags
+  - Meeting questions with the answers to listen for
+  - "A read of the statements: trends, margins, oddities and gaps"
+  - Owner earnings and a value range to offer from, with the method shown
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the listing and the statements. It builds the checklist and the meeting questions.
+  - Meet the seller. Paste what they said and any new documents.
+  - Read the statement analysis, the owner earnings and the value range before you make any offer.
+how_it_works:
+  - title: Build the checklist
+    text: Builds the diligence checklist for this kind of business, with red flags and the order to work in.
+  - title: Prepare the seller meetings
+    text: Prepares the seller meetings with the questions, the answers to listen for and what to ask to see.
+  - title: Meet the seller
+    text: A pause. Meet the seller and collect the documents on the checklist. Paste the answers and any new files.
+  - title: Read the statements
+    text: Reads the statements for trends, margins, oddities and gaps, each tied to a line.
+  - title: Work out owner earnings
+    text: Works out owner earnings in Buffett's definition, with the owner's unpaid work priced at a fair wage.
+  - title: Set the value range
+    text: Gives a value range with the method shown and the price past which the deal makes no sense.
+output_shape: |-
+  STEP 1: CHECKLIST
+    Ask for: <...> | Verify by: <...> | Red flag: <...> | Order: <...>
+
+  STEP 2: SELLER MEETINGS
+    Ask: <...> | Listen for: <...> | Ask to see: <...>
+
+  PAUSE: meet the seller, collect the documents
+
+  STEP 3: STATEMENT READ
+    Trend: <line, direction> | Margins: <...> | Unusual: <...> | Missing: <...>
+
+  STEP 4: OWNER EARNINGS
+    Reported: <...> + non-cash <...> - must-spend <...> - fair owner wage <...> = <owner earnings>
+
+  STEP 5: VALUE RANGE
+    Method: <...> | Range: <low to high> | Walk away above: <...> | Still to verify: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand, is considering buying a small co-packer: a 12-person facility that makes gummies for three brands, including us. The owner, 64, wants to retire.
+    Listing: asking $2.4M. "Revenue $3.1M, profit $520k, loyal customers, equipment well maintained, owner will stay six months."
+    Statements: three years of P&L and balance sheets attached. Revenue $2.6M, $2.9M, $3.1M. Stated profit $410k, $470k, $520k. The owner draws $60k a year and works 60 hours a week running production and sales. Depreciation $85k a year. The main depositor is 11 years old. One customer is 55% of revenue.
+    What I know: gummy co-packing margins are usually 15% to 25%; the lease has four years left; we would be buying our own supplier.
+    I meet the owner next Tuesday.
+  output: pending
+tweaks:
+  - what: Years of statements
+    how: Three years beats one. Trends and one-off items show up only across years.
+  - what: The owner's hours and pay
+    how: Say what they do and what they draw. Owner earnings price their work at a fair wage.
+  - what: The industry
+    how: Give the usual margins and the big costs. The statement read knows what normal looks like.
+  - what: The seller's answers
+    how: Paste them word for word. A vague answer to a checklist item is a finding.
+judge:
+  - The checklist asks to see documents, not only to hear answers.
+  - The statement read ties each finding to a line in the statements.
+  - Owner earnings subtract a fair wage for the owner's work and the spending needed to stay as is.
+  - The value range shows its method and names a walk-away price.
+  - The still-to-verify list is not empty.
+test:
+  - Give it statements where the owner draws nothing. Step 4 should add a fair wage and lower the earnings.
+  - Give it one customer at over half of revenue. Steps 1 and 5 should both flag it.
+  - Run step 5 twice. The method and the range should match.
+  - Give step 3 only one year of statements. It should say what it cannot see.
+improve:
+  - Save the usual margins and costs for industries you look at, so step 3 starts with the right baseline.
+  - Keep every checklist. The next deal in the same industry starts from it.
+  - After closing, record what you found that diligence missed. Step 1 adds it next time.
+  - Pair it with "Value a business and the discount to ask for" when you are ready to negotiate price.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: A spreadsheet
+      why: Holds the statements and the owner earnings working.
+    - name: An accountant and a lawyer
+      why: The workflow prepares the questions; they verify the answers.
+  inputs:
+    - Tax returns, which are harder to flatter than management accounts
+    - The customer list with revenue by customer
+    - The lease and any equipment loans
+terms:
+  - term: Owner earnings
+    meaning: "Warren Buffett's measure: reported earnings plus non-cash charges, minus what the business must spend to stay as it is."
+  - term: Co-packer
+    meaning: A factory that makes products for other brands under contract.

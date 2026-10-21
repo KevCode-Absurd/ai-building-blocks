@@ -1,0 +1,108 @@
+new_slug: get-a-stuck-learner-moving-again
+name: Get a stuck learner moving again
+summary: Give it the learner's work. Get a diagnosis, one-step hints, a task ladder and a study plan.
+job: teach-and-train
+thinking: high
+thinking_why: It must find the real cause of a learner's trouble, not the visible symptom. Give it your strongest model.
+headline: Get a stuck learner moving again
+subhead: Give it the learner's work and where they get stuck. It diagnoses the real sticking point, writes hints that reveal one step at a time, builds a ladder of tasks that rebuilds confidence from where they are, and plans short study sessions with a review built in.
+explain: |
+  When a learner is stuck, the usual fix is to explain again, louder. It rarely works, because the stuck point is seldom where it looks. A student who cannot do the hard problem is often missing one small earlier step, and every full explanation skips it again.
+
+  This workflow finds the step. It reads the learner's work and diagnoses where their thinking actually breaks, with the evidence from their own attempts. It writes hints that give one step at a time, so the learner does the work and the hint never gives the answer. It builds a ladder of tasks that starts where the learner can succeed and climbs back to the hard problem. Then it plans short study sessions with a review at the end of each, so the gain holds.
+when:
+  - A student has had three explanations and still cannot do it.
+  - A new team member keeps failing the same kind of task.
+  - You are tutoring and want to stop giving away the answer.
+you_give:
+  - The learner's attempts, as they wrote them
+  - What the task asks and where they say they get stuck
+  - What the learner already can do
+  - How much time they have to practise each week
+you_get:
+  - A diagnosis of the real sticking point, with evidence from their work
+  - Hints that reveal one step at a time
+  - A task ladder from where they can succeed up to the hard problem
+  - A study plan with short sessions and a review in each
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the learner's attempts and the task. It diagnoses the sticking point.
+  - Use the hints one at a time in your next session. Stop as soon as the learner moves.
+  - Give them the task ladder and the study plan. Check the reviews each week.
+how_it_works:
+  - title: Diagnose the sticking point
+    text: Finds where the learner's thinking breaks, with evidence from their attempts, and the earlier step they are missing.
+  - title: Write one-step hints
+    text: Writes hints that reveal one step at a time without giving the answer.
+  - title: Build the task ladder
+    text: Builds a ladder of tasks from what the learner can do up to the hard problem.
+  - title: Plan the sessions
+    text: Plans short sessions with a goal from the ladder and a review in each.
+output_shape: |-
+  STEP 1: DIAGNOSIS
+    Looks like: <symptom> | Actually: <missing step> | Evidence: <from their attempt, quoted>
+
+  STEP 2: HINTS
+    Hint 1: <...> | Hint 2: <...> | ... | Never: <the answer>
+
+  STEP 3: TASK LADDER
+    Rung 1 (can do now): <task> | Success: <...>
+    Rung <n>: <...> | Top (the hard problem): <...>
+
+  STEP 4: STUDY PLAN
+    Session <n> (<minutes>): Goal <rung> | Review: <question> | If it fails: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. Our new support hire keeps getting our discount maths wrong when customers ask what they'll pay.
+    The task: a customer asks "If the pouch is $66.65 and I get 55% off my first order, then $49.99 after, what do I pay in the first three months?"
+    Her attempts (three tickets this week):
+    1. She wrote $66.65 x 0.55 = $36.66 as the first price. (That's the discount, not the price.)
+    2. She wrote first month $29.99, then "$49.99 x 2 = $99.98", total $129.97, but told the customer "about $100".
+    3. She wrote the right numbers and then added the $5 "Buy 2 Save $5" line to a single-pouch order.
+    What she can do: percentages when told what to find; our systems; talking to customers well.
+    Time: 20 minutes a day, four days a week.
+  output: pending
+tweaks:
+  - what: The attempts
+    how: Paste them exactly, mistakes included. The diagnosis reads the mistakes, not the description of them.
+  - what: What they can do
+    how: Say it. The ladder starts there, not at the bottom.
+  - what: Their time
+    how: Give real minutes. Short sessions planned to fit beat long ones that never happen.
+  - what: How the hints are used
+    how: Say if you are present or the learner works alone. Alone, the hints get a bit more scaffolding.
+judge:
+  - The diagnosis quotes the learner's own work as evidence.
+  - No hint gives the answer, and each reveals one step.
+  - The bottom rung of the ladder is something the learner can do today.
+  - Each session has a goal and a review question.
+  - The plan says what to do when a session fails.
+test:
+  - Use only the hints in your next session. Did the learner move without you adding the answer?
+  - Give step 1 three attempts with the same mistake. It should name one missing step, not three.
+  - Run step 3 twice. The bottom rung should be the same.
+  - Ask the learner the review question a week later. Does the gain hold?
+improve:
+  - Keep each diagnosis. Across learners, the same missing step shows where your teaching skips.
+  - Save your task ladders by topic and reuse them.
+  - Add your own hint style so the hints sound like you.
+  - Pair it with "Build a lesson from explanation to practice and a quiz" when several learners share the gap.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Paper or a shared document
+      why: The learner works the ladder where you can both see it.
+  inputs:
+    - Past work from the same learner
+    - The rubric or standard the task is marked against
+    - What the learner says about where they get stuck
+terms:
+  - term: Task ladder
+    meaning: A set of tasks ordered from what a learner can do now up to the hard one, each a small step harder.

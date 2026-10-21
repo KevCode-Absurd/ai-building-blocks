@@ -1,7 +1,7 @@
 slug: aerospace-unit-converter
 renamed_from: aerospace-unit-and-frame-converter
 name: "Aerospace unit and frame converter"
-summary: "Give it values in one unit, time or coordinate frame. Get them converted correctly, with MATLAB code you can rerun."
+summary: "Give it values in one unit, time system or frame. Get them converted, with MATLAB code you can rerun."
 category: general
 boards: []
 type: skill

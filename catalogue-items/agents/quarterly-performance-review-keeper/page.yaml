@@ -1,0 +1,124 @@
+new_slug: quarterly-performance-review-keeper
+name: Quarterly performance review keeper
+summary: Give it the quarter's goals and notes per person. Get each review drafted from evidence, with next quarter's goals to approve.
+job: lead-people
+thinking: high
+thinking_why: It judges people from evidence, decides when a hard message is earned and drafts goals that must be fair and true. Give it your strongest model.
+headline: Quarterly performance review keeper
+subhead: Give it each person's goals, the quarter's notes and what the business needs next. It builds every review from dated evidence, plans each conversation, writes the hard message only where it is earned, and drafts next quarter's goals. You hold the meetings. It sends and records nothing.
+explain: |
+  Reviews get written from the last two weeks. The quarter's wins are forgotten, a problem nobody raised becomes a surprise in the meeting, and next quarter's goals are last quarter's with the dates moved. People feel it, and the review loses its point.
+
+  This agent builds each review from what happened. It lists every key result hit or missed and every dated note, and flags any problem never raised in the quarter as "raise now, do not grade on it". It drafts the review in a format checked with counsel, plans the conversation so you ask for their view first, and writes a hard message only where results missed and a problem repeated after being raised. Then it drafts next quarter's goals from what the business needs. Every file stays with you.
+when:
+  - You manage people and owe each one a review this quarter.
+  - Your last reviews were written from memory and it showed.
+  - You want next quarter's goals to come from where the business is going, not from last quarter's list.
+you_give:
+  - Each person's objectives and key results this quarter, with hit or missed
+  - One-on-one notes, wins and behaviour notes per person, with dates (advised)
+  - The numbers each person owned this quarter (advised)
+  - One paragraph on what the business needs next quarter
+  - The review format from your first run, checked with counsel
+you_get:
+  - A per-person evidence list, every claim dated
+  - A draft review per person in your format
+  - A conversation plan that asks for their view first
+  - A hard message only where it is earned
+  - Next quarter's objectives and dated key results per person
+  - A list of problems to raise now rather than grade
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to prepare this quarter's reviews.
+  - On the first run, approve the review format and have counsel check it. It is saved and reused.
+  - Put each person's goals and notes in their private folder, or paste them in the chat. Add your paragraph on next quarter.
+  - Read each review against its evidence. Change what you disagree with. Hold the meetings yourself.
+  - Approve next quarter's goals with each person, then save them for the next run.
+how_it_works:
+  - title: Set the format once
+    text: Builds the review questions and the rules on what is written down, for counsel to check.
+  - title: Gather the evidence per person
+    text: Lists each key result and every dated note, and flags problems never raised during the quarter.
+  - title: Draft the review
+    text: Writes each section from the evidence only, in plain words that say where the person stands.
+  - title: Plan the conversation
+    text: What to praise, what to say and how, opening by asking for their view of the quarter.
+  - title: Write the hard message when earned
+    text: Only where results missed and a raised problem repeated, the written message that keeps the person.
+  - title: Draft next quarter's goals
+    text: A few objectives with dated key results per person, from what the business needs next.
+  - title: Refresh recognition yearly
+    text: A reward plan where anyone who reaches the level wins.
+  - title: Log and hand back
+    text: Saves each person's file and stops. Nothing is sent.
+output_shape: |-
+  THE QUARTER
+    <n> reviews | key results hit <n> of <n> | hard messages: <n> | thin reviews: <n>
+
+  <NAME>
+    Evidence: <key result> hit | <key result> missed (<number>) | <date> win: <what> | <date> note: <what>, raised: <yes | no>
+    Raise now, do not grade: <problem never raised>
+    Review: <sections in the saved format, each claim dated>
+    Conversation: ask first: "<question>" | praise: <what> | say: <what> | how: <three lines>
+    Hard message: <text | not earned>
+    Next quarter: <objective> | KR: <measure> by <date> | <objective> | KR: ...
+
+  RECOGNITION PLAN (yearly)
+    <level> -> <reward> | public moment: <when>
+
+  FILES AND MISSING
+    <each person's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Prepare Q3 reviews for a marketing lead at Sprout with three reports.
+    Practice notes, not real people.
+    - A, performance marketer. KRs: hold cost per new subscriber under $42
+      (ended at $39, hit); launch 12 new hooks (launched 7, missed). Notes:
+      birthday price-cut launch on time (Sep); test plan late 3 weeks
+      (raised 29 Sep); said creative queue is late, twice.
+    - B, content lead, 4 months in. KRs: two posts a week (averaged 1.6,
+      missed); newsletter every Thursday (missed 3 of 13, raised 2 Oct).
+      Notes: limited flavour shoot landed early; brand voice file done.
+    - C, lifecycle, 3 weeks in. No KRs yet. Notes: mapped the cancel flow.
+    Business next quarter: widen beyond offer-led ads to the habit angle
+    ("the one thing I stuck to"); launch Kids ads; cut first-30-day
+    cancels. Format: saved from Q2, checked with counsel.
+  output: pending
+tweaks:
+  - what: Your notes
+    how: Dated one-on-one notes are the difference between a fair review and a memory of September.
+  - what: The business paragraph
+    how: Say what the team must do next quarter. Goals are drafted from it.
+  - what: Hard message rule
+    how: The agent writes one only where results missed and a raised problem repeated. Tighten or loosen it.
+  - what: Format
+    how: Have counsel check the format once. The agent then follows its rules on what gets written.
+judge:
+  - Every claim in a review points at a result or a dated note.
+  - No one is graded on a problem they never heard about.
+  - Each conversation opens by asking for their view.
+  - Next quarter's goals tie to the business paragraph.
+  - Nothing was sent, recorded or changed.
+test:
+  - Give it one person with a problem raised twice and one with the same problem never raised. Only the first should get a hard message.
+  - Run it twice on the same notes. The reviews should match in substance.
+  - Give it a person with no notes. It should say the review is thin, not fill the gap.
+improve:
+  - Use the Weekly one-on-one prep keeper through the quarter, so the evidence is already dated.
+  - Write your review format once with counsel and save it before the first run.
+  - Add the numbers each person owns to their file each month, not at quarter end.
+  - Keep each person's approved goals in their folder, so next quarter starts from them.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep one private folder per person and read the one-on-one files from the quarter.
+    - name: Any good chat AI
+      why: Paste the agent and one person's goals and notes at a time. Keep the files private.
+  inputs:
+    - Each person's own written view of their quarter, if your format asks for one
+    - Peer feedback collected under your format's rules
+terms:
+  - term: Key result
+    meaning: A dated, measurable sign that an objective was reached, such as "cost per new subscriber under $42 by 30 Sep".

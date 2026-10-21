@@ -1,0 +1,119 @@
+new_slug: process-waste-walk-planner
+name: "Process waste walk planner"
+summary: "Paste a process step by step. Get every kind of waste in it named, with the first one to remove."
+job: organise-work
+thinking: medium
+thinking_why: "It judges every step against one question and reasons through a cause chain."
+
+headline: "Process waste walk planner"
+subhead: "Paste a process written out step by step, with who does each step and how long it takes, and who the customer is. The prompt marks each step as value or waste, names the kind of waste, finds where mistakes travel, asks why five times and picks the first waste to remove."
+
+explain: |
+  Processes grow. A step gets added after a mistake, a check after a complaint, a wait because someone is busy. A year later the work takes three days and the customer would pay for about four hours of it. Taiichi Ohno's public method was to walk the floor and ask, at every step, whether the customer would pay for this.
+
+  This prompt walks your process the same way. It lays out the steps with working and waiting time, marks each as value, needed waste or waste, and names the kind of waste with the evidence. It finds the gap between where a mistake first appears and where it is caught, which is where rework comes from. It asks why five times on the biggest waste until it reaches a cause you can change, and picks the first removal with who changes what and the number to watch for two weeks.
+
+when:
+  - "A job that should take a day takes a week and nobody can say why."
+  - "The same mistake keeps coming back after you fixed it."
+  - "You are about to hire to handle volume and suspect the process is the problem."
+
+you_give:
+  - "The steps in order, with who and how long, including waits"
+  - "Who the customer is and what they want at the end"
+  - "What goes wrong (advised)"
+  - "Volumes and error rates (optional)"
+you_get:
+  - "Every step labelled, with working and waiting totals"
+  - "Each waste named with its kind and evidence"
+  - "Where mistakes travel and where to stop them"
+  - "A five-whys chain and the first waste to remove"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the steps under it."
+  - "Add who the customer is and the step people dread."
+  - "Read THE STEPS. If a label is wrong, say why and run again."
+  - "Make the REMOVE FIRST change and watch its number for two weeks."
+
+how_it_works:
+  - title: "Lays out the steps"
+    text: "Step, who, working time, waiting time, with totals for each."
+  - title: "Asks the customer question"
+    text: "Would the customer pay for this step? Value, needed waste or waste."
+  - title: "Names the waste"
+    text: "Waiting, moving, too early, re-doing, checking, piles, extra steps, unused skills. Evidence for each."
+  - title: "Finds where mistakes travel"
+    text: "Where an error appears, where it is caught, and where a stop-and-check belongs."
+  - title: "Asks why five times"
+    text: "From the symptom to a cause you can change, with guesses marked."
+  - title: "Picks the first removal"
+    text: "Best time saved for effort, the process without it, who changes what, the number to watch."
+
+output_shape: |
+  THE STEPS       <step | who | work | wait | label>
+  TOTALS          <working, waiting, value steps>
+  WASTE FOUND     <step | type | evidence>
+  WHERE MISTAKES TRAVEL <appears, caught, stop belongs>
+  FIVE WHYS       <chain>
+  REMOVE FIRST    <waste, new process, who, number>
+  MISSING         <...>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Process at Sprout: handling a "my pouch arrived damaged" email.
+    Customer: a subscriber who wants a good pouch, fast.
+    Steps:
+    1. Customer emails support. Waits for a reply, average 1 day.
+    2. Agent reads it, asks for a photo of the damage. 5 min. Customer
+       replies, average 1 day.
+    3. Agent checks the order in the store admin and the subscription tool
+       (two logins). 10 min.
+    4. Agent fills a replacement form in a spreadsheet and messages the ops
+       manager. 10 min. Waits for ops, average half a day.
+    5. Ops manager approves and creates a replacement order by hand. 10 min.
+    6. Warehouse picks and ships next business day.
+    7. Agent emails the customer the tracking number once it appears. 5 min,
+       usually a day after shipping.
+    8. Agent logs the case in a second spreadsheet for the monthly report.
+       5 min.
+    What goes wrong: ops is often away so step 4 waits two days; about one
+    in ten replacements goes to an old address because the admin and the
+    subscription tool disagree; customers write again at step 2 asking why
+    they need a photo.
+    Volume: about 40 a week.
+  output: pending
+
+tweaks:
+  - what: "Times"
+    how: "Give waiting times separately from working times. Waiting is usually the biggest waste and the easiest to miss."
+  - what: "What goes wrong"
+    how: "Describe the rework and the repeat questions. They point at where mistakes travel."
+  - what: "Volume"
+    how: "Give it and the first removal can be stated in hours saved per week."
+
+judge:
+  - "Each label follows the customer question, not habit."
+  - "The totals add up."
+  - "Every waste has a type and a piece of evidence."
+  - "The five whys end at something you can change."
+  - "The first removal names a person and a number."
+
+test:
+  - "Make the first removal, measure the number for two weeks, and compare with the two weeks before."
+  - "Run it twice. The labels and the first removal should match."
+  - "Leave out the times. It should still label and name waste, and mark totals MISSING."
+
+improve:
+  - "Add your own waste types (for example, re-typing between two tools) so they are named every time."
+  - "Keep a log of removals and their results. It becomes your process history."
+  - "Pair it with the Repeat task how-to writer to write down the new process once it works."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message walk works in any strong chat AI."}
+  inputs:
+    - "A timestamped example of one real case from start to finish"
+    - "The error or rework rate from your logs"

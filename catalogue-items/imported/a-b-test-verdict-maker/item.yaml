@@ -1,6 +1,6 @@
 slug: a-b-test-verdict-maker
 name: A/B test verdict maker
-summary: Give it your test data. Get a split check, the result with a confidence range, side effects and a ship call.
+summary: Give it your A/B test data. Get a split check, results with confidence ranges and a ship call.
 category: general
 boards: []
 type: skill

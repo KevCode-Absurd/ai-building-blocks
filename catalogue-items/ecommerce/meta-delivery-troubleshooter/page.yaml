@@ -6,7 +6,7 @@ thinking: high
 thinking_why: "It reasons from symptoms to a cause across several steps, so a stronger model diagnoses better."
 
 headline: "Meta delivery troubleshooter"
-subhead: "Describe what Meta is doing with your ads, with numbers such as frequency, click rate, CPM, cost per sale and spend by ad. It matches the symptoms to the delivery steps, says which step is failing, what to change first and what to leave alone, and plans a 7-day broad against interest test."
+subhead: "Describe what Meta is doing with your ads, plus frequency, click rate, CPM, cost per sale and spend by ad. It matches the symptoms to the delivery steps, says which step is failing, what to change first and what to leave alone, and plans a 7-day broad against interest test."
 
 explain: |
   When Meta ads stall, people blame the wrong thing. They tweak budgets daily, add exclusions, or chase a "learning" label, when the real problem sits earlier. Meta picks which ads a person sees in steps. It reads your creative to narrow tens of millions of ads to a few thousand, ranks them, then runs an auction. Each step takes about 200 milliseconds.

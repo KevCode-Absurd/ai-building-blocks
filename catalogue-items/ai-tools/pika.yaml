@@ -1,0 +1,37 @@
+slug: pika
+name: Pika
+maker: Pika Labs
+url: https://pika.art
+promise: Quick, playful video clips from a text prompt or a still image.
+use_cases: [make-video]
+categories: [video]
+what_it_does:
+  - Makes short video clips from a written description.
+  - Turns a still image into a moving clip.
+  - Runs two video jobs at once, even on the free plan.
+  - Sells extra credits in packs, so you can top up without a plan.
+benefits:
+  - Test a social video idea for the price of a few credits.
+  - Buy credits only when you need them, with no monthly commitment.
+  - Make a few versions of one clip and keep the best.
+best_for:
+  - Short, stylised clips for social posts.
+  - People who want to try AI video before paying monthly.
+  - Small budgets, since top-ups cost US$1 for 60 credits.
+not_for:
+  - Long videos with one continuous take.
+  - Commercial work on the Starter plan, which has no commercial licence.
+pricing:
+  model: freemium
+  from: "US$10 per month"
+  note: The Free plan has no monthly credits and you buy top-ups. Starter includes 900 credits a month but no commercial licence. Creator at US$35 per month adds one. Plan credits do not roll over.
+works_with:
+  - elevenlabs
+  - capcut
+runs_in: [web, mobile, api]
+blocks:
+  - marketing-video-producer
+alternatives: [kling, runway, luma, veo]
+last_checked: 2026-10-21
+sources:
+  - https://pika.art/pricing

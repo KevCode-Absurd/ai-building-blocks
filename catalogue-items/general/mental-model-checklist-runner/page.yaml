@@ -1,11 +1,11 @@
 new_slug: mental-model-checklist-runner
 name: Many-field model checklist runner
-summary: Paste a plan or problem. Get it checked through maths, engineering, biology, psychology and economics, one field at a time.
+summary: Paste a plan or problem. Get it checked through maths, engineering, biology, psychology and economics in turn.
 job: think-and-decide
 thinking: high
 thinking_why: It must apply many fields honestly to one case and spot where the answers agree or clash.
 headline: Many-field model checklist runner
-subhead: Paste a plan or problem. It walks the case through the main ideas of maths, engineering, physics, biology, psychology and economics, one at a time, and writes what each says. Then it finds where several fields push the same way, where they clash, and what you still need to find out.
+subhead: Paste a plan or problem. It walks the case through the main ideas of maths, engineering, physics, biology, psychology and economics, one at a time, and writes what each says. Then it finds where several fields push the same way, where they clash, and what you still need to learn.
 explain: |-
   A person with one favourite tool tends to see every problem as fitting it. A founder sees only marketing, an engineer only systems, an accountant only the numbers. The cure is to carry a few big ideas from many fields and run through them in a fixed order, so no field is skipped because it did not come to mind.
 

@@ -1,0 +1,112 @@
+new_slug: three-tier-price-ladder-drafter
+name: "Three-tier price ladder drafter"
+summary: "Paste what you sell and your costs. Get three tiers with what each includes and why the middle one wins."
+job: set-prices
+thinking: medium
+thinking_why: "It balances costs, buyer value and price gaps across three tiers at once."
+
+headline: "Three-tier price ladder drafter"
+subhead: "Paste what you sell, every part you could include, what each part costs you and what buyers ask for. The prompt builds a plain tier, the tier most people should pick and a top tier, each with price, margin, what it includes and who it is for, plus a first test."
+
+explain: |
+  One price makes every buyer decide yes or no. Three prices make them decide which, and most of them pick the middle. The hard part is building the ladder so each step up adds something a buyer can name, the middle holds everything that matters, and no tier gives away a part that costs you more than it earns.
+
+  This prompt lists every part of your offer with its cost and how much buyers value it. It builds the middle tier first from the high-value parts, then strips the costly, less-missed parts for the plain tier, then adds the few-want-it parts for the top. Each tier gets a plain name, a price, the margin shown, and a one-line who-for. You also get the reason the middle wins and the first thing to test.
+
+when:
+  - "You sell one thing at one price and want to serve both the cheap buyer and the big buyer."
+  - "You are launching a service and need a first draft of packages."
+  - "Your current tiers confuse people and most pick the cheapest."
+
+you_give:
+  - "What you sell and every part you could include"
+  - "The cost of each part to you"
+  - "What buyers ask for and push back on (advised)"
+  - "Current price and how many buy (optional)"
+you_get:
+  - "Every part with its cost and buyer value"
+  - "Three tiers with price, margin, includes and who-for"
+  - "Why the middle wins, and what to test first"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your offer and costs under it."
+  - "Add the parts buyers ask about and the parts they ignore."
+  - "Check the PARTS table. Fix any cost or value that is wrong and run again."
+  - "Put the three tiers in front of five customers before you publish them."
+
+how_it_works:
+  - title: "Lists the parts"
+    text: "Every part with cost to you and buyer value, marked GUESS where there are no buyer words."
+  - title: "Builds the middle first"
+    text: "All high-value parts, priced where most buyers push back a little, with the margin shown."
+  - title: "Strips to the plain tier"
+    text: "Removes the costly, least-missed parts. A small gap to the middle keeps the middle the better deal."
+  - title: "Adds the top tier"
+    text: "Parts few people want but some will pay for, at a clear step up."
+  - title: "Checks the ladder"
+    text: "Each step adds something nameable. No tier gives away a part that costs more than it adds."
+  - title: "Names and tests"
+    text: "Plain tier names, one-line descriptions, and the first price to test."
+
+output_shape: |
+  PARTS           <part | cost | buyer value>
+  TIER 1 <name>   <price> | margin | includes | for | gives up
+  TIER 2 <name>   <price> | margin | includes | for   (the pick)
+  TIER 3 <name>   <price> | margin | includes | for
+  WHY THE MIDDLE WINS <one line>
+  TEST            <what to try, number to watch>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    What we sell: Sprout greens gummies for adults, 28 daily packs per pouch.
+    Parts we could include or leave out: a pouch every 4 weeks; 3 pouches
+    every 12 weeks (84 packs); free shipping; Low Sugar or Sugar-Free (Sugar-
+    Free costs us about $5 more per pouch); access to limited flavours every
+    4 to 8 weeks; a Kids pouch add-on; 30-day money-back guarantee; pause or
+    cancel any time; VIP perks (gifts, early access).
+    Costs (illustrative figures, not the brand's real numbers): $14 per pouch
+    to make, $6 to ship one pouch, $9 to ship three pouches together, $3 per
+    limited-flavour access per month in extra stock handling.
+    Buyer words: "the one thing I've been able to stick to"; "two
+    subscriptions is too much money" (parents); "which discount is real?";
+    "will the sugar-free one cause problems?"; perks ads have 7 live copies.
+    Current price: $49.99 renewal per pouch every 4 weeks.
+  output: pending
+
+tweaks:
+  - what: "Costs"
+    how: "Exact costs per part make the margins real. Rough costs make them labels."
+  - what: "Buyer words"
+    how: "Say which parts people ask about and which they never use. That decides what the plain tier drops."
+  - what: "The floor"
+    how: "Give the margin you need and no tier will go under it."
+
+judge:
+  - "Every margin is shown and the sum is right."
+  - "You can say in one line what each step up adds."
+  - "The middle tier has everything your main buyer needs."
+  - "The names are plain words."
+  - "Nothing is included that you did not list."
+
+test:
+  - "Show the three tiers to five existing customers and ask which they would pick. Most should pick the middle."
+  - "Run it twice. The middle tier's includes should match."
+  - "Leave out the costs. Prices should come back as MISSING, not as guesses."
+
+improve:
+  - "Add the tiers you tried before and what happened, so the draft starts from your history."
+  - "Add your margin floor and your delivery limits, so no tier promises what you cannot ship."
+  - "Pair it with the Offer terms plain writer so each tier's conditions are clear at checkout."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message draft works in any strong chat AI."}
+    - {name: "A spreadsheet", why: "Paste the PARTS table in to try different prices and watch the margins move."}
+  inputs:
+    - "Which parts your support team gets asked about most"
+    - "The share of buyers who pick each current option"

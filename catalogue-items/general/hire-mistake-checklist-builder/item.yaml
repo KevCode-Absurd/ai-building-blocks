@@ -1,0 +1,19 @@
+slug: hire-mistake-checklist-builder
+name: "Hiring mistake checklist builder"
+summary: "Paste the role and your past hiring misses. Get a checklist of mistakes to rule out before you offer."
+category: general
+boards: []
+type: prompt
+role: check
+job: people
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: lessons_register, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [charlie-munger]

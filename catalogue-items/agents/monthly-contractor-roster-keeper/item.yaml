@@ -1,0 +1,29 @@
+slug: monthly-contractor-roster-keeper
+name: "Monthly contractor roster keeper"
+summary: "Give it your contractor roster and invoices each month. Get who to keep, whose terms to fix and the agreements to redo."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: document, required: false}
+  - {type: feedback_notes, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+  - {type: document}
+uses: [contractor-program-setup-guide, invoice-checker, long-term-partner-screener, results-agreement-writer, contract-and-proposal-drafter]
+steps:
+  - {uses: contractor-program-setup-guide, note: "Once, and again when you add a new kind of work: the classification risk check, the onboarding checklist and the vendor plan."}
+  - {uses: invoice-checker, note: "Every month: each contractor invoice matched to the agreed rate, hours and deliverables, with mismatches listed."}
+  - {uses: long-term-partner-screener, note: "Every quarter per contractor, or when a problem repeats: whether this is a person worth repeating with, on ability, energy and integrity."}
+  - {uses: results-agreement-writer, note: "Only for a contractor you will keep whose work has no written results agreement, or whose scope drifted: the one-page agreement."}
+  - {uses: contract-and-proposal-drafter, note: "Only when a new contractor starts, or an agreement must be redone: the contract or statement of work draft, for counsel to check."}
+schedule: "On the last working day of each month, when contractor invoices are in"
+asks_before: [paying or disputing any invoice, ending or pausing a contractor, sending any agreement or contract, changing a rate or scope, sharing feedback about a contractor with anyone, classifying anyone as employee or contractor]
+minds: [naval-ravikant]
+origin: own
+version: 1.0.0
+example_pending: true

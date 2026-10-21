@@ -1,6 +1,6 @@
 slug: 5g-waveform-generator
 name: 5G waveform generator
-summary: Pick a 5G test model or channel. Get a standard-compliant baseband waveform.
+summary: Pick a 5G test model or your own settings. Get MATLAB code that builds a standard 5G waveform.
 category: general
 boards: []
 type: skill

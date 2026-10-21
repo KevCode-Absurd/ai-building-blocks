@@ -1,0 +1,115 @@
+new_slug: audit-your-sites-seo-and-fix-titles-tags-and-markup-first
+name: Audit your site's SEO and fix what matters first
+summary: Give it your site. Get a ranked audit, on-page fixes, new titles and tags, and schema markup.
+job: get-found-in-search
+thinking: high
+thinking_why: It judges a whole site and must rank the fixes by what pays. Give it your strongest model.
+headline: Audit your site's SEO and fix what matters first
+subhead: Give it your site address. It audits the site as a whole, then the technical side, then each key page's on-page SEO, writes the new titles and meta descriptions, and writes the schema markup for your main page types. You approve every change before it goes live.
+explain: |
+  An SEO audit usually arrives as a hundred-row spreadsheet. Everything is red, nothing is ranked, and the team fixes the easy rows while the two problems that block ranking stay. Meanwhile the titles still say "Home" and the product pages have no markup.
+
+  This workflow audits in order and fixes the cheap, high-value things first. It looks at the site as a whole: structure, indexing, duplicate pages, what ranks today. It checks the technical side: speed, crawl errors, mobile, redirects. It reviews each key page's on-page SEO and writes the fixes. It writes new titles and meta descriptions for the pages that matter, in your voice, to the length limits. Then it writes schema markup for your main page types, so search engines read what each page is. Nothing goes live until you approve it.
+when:
+  - Your pages rank on page three for searches you should own.
+  - You never set titles and descriptions and they show as "Home" and "Product".
+  - An agency sent you a hundred-row audit and you do not know where to start.
+you_give:
+  - Your site address
+  - The pages that matter most and the searches you want them to rank for
+  - Your brand voice, or two titles you like (optional)
+  - Access to your search console data (optional)
+you_get:
+  - A site audit ranked by what blocks ranking most
+  - A technical audit with the fixes in order
+  - On-page fixes for each key page
+  - New titles, meta descriptions and schema markup, ready to approve
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste your site address and the pages that matter. It audits the site and the technical side.
+  - Read the ranked fixes. Give the technical ones to whoever runs the site.
+  - Approve the titles, descriptions and markup, then publish them.
+how_it_works:
+  - title: Audit the site
+    text: "Audits the whole site: structure, indexing, duplicates, what ranks, with problems ranked by impact."
+  - title: Audit the technical side
+    text: Checks speed, crawl errors, mobile, redirects, sitemaps and robots rules, with fixes in order.
+  - title: Tune each key page
+    text: Reviews each key page's headings, content, images and links against its search, and writes the fixes.
+  - title: Write titles and descriptions
+    text: Writes a title and meta description per key page, in your voice, within length limits.
+  - title: Write the schema markup
+    text: Writes schema markup for your main page types as code ready to paste, for you to approve.
+output_shape: |-
+  STEP 1: SITE AUDIT
+    Blocks ranking most: <problem, pages, why> | Indexed: <...> | Duplicates: <...> | Ranks today: <...>
+
+  STEP 2: TECHNICAL AUDIT
+    Fix <n>: <problem> | Pages: <...> | How: <...> | Pays because: <...>
+
+  STEP 3: ON-PAGE FIXES
+    <page> (search: <...>): Headings <...> | Content <...> | Images <...> | Links <...>
+
+  STEP 4: TITLES AND DESCRIPTIONS
+    <page>: Title <...> (<n> chars) | Description <...> (<n> chars)
+
+  STEP 5: SCHEMA MARKUP
+    <page type>: <code> | Tells search engines: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. Site: sprout.example (a store platform).
+    Pages that matter: the home page; the adult product page (search: greens gummies); the kids page (search: kids greens gummies, kids vitamins gummies); the science page (search: greens gummies clinical study); the "how it works" page; three blog posts.
+    What I know is wrong: the home page title is the brand name only; two blog posts cover the same question; the science page and the product page both have the FAQ, word for word; the site has a sugar-free variant on a separate URL for each flavour, so there are 14 near-identical product pages; the announcement bar loads late and shifts the page.
+    Voice: plain, warm, no hype. Claims we can make: 21 vitamins and minerals, 6 g fibre, third-party tested, "supports digestion". Avoid: weight loss, energy, immunity.
+    No search console access yet; say what you cannot check without it.
+  output: pending
+tweaks:
+  - what: The pages that matter
+    how: Name them and their target searches. The audit spends its effort there.
+  - what: Search console data
+    how: Export and paste it. Without it the audit can see the site but not how searchers reach it.
+  - what: Your voice and claims
+    how: Give them. The titles and descriptions use the voice and avoid the claims you listed.
+  - what: Your platform
+    how: Say which store or site platform you use. The technical fixes and the markup are written for it.
+judge:
+  - The site audit ranks problems by how much they block ranking, not by how many there are.
+  - Each technical fix says how to do it and why it pays.
+  - Each title is within the length limit and says what the page gives the searcher.
+  - The markup matches what is actually on the page.
+  - Nothing was published without your approval.
+test:
+  - Give it a site with 14 near-duplicate product pages. Step 1 should rank that near the top.
+  - Give step 4 a page with no clear topic. It should ask what the page is for rather than write a vague title.
+  - Paste the markup into a validator. It should pass.
+  - Run step 1 twice. The top three problems should match.
+improve:
+  - Re-run after the fixes with search console data and compare the audits.
+  - Save your voice, claims and platform in one file for every run.
+  - Keep the titles and descriptions in a sheet, so a change is deliberate.
+  - Pair it with "Fix a drop in search traffic and check it recovers" if traffic falls after a change.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Your search console
+      why: Shows what searchers see and which pages have problems.
+    - name: A site crawler
+      why: Finds every page, redirect and error on a larger site.
+    - name: A markup validator
+      why: Checks the schema before it goes live.
+  inputs:
+    - Search console export
+    - A crawl of the site
+    - Your platform's SEO settings screen
+terms:
+  - term: Schema markup
+    meaning: "Code on a page that tells search engines what the page is: a product, an article, a question and answer."
+  - term: Meta description
+    meaning: The short text under a page's title in search results.

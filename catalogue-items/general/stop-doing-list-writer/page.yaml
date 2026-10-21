@@ -1,0 +1,115 @@
+new_slug: stop-doing-list-writer
+name: "Stop doing list writer"
+summary: "Paste everything your team does. Get the things to stop on purpose, with who tells whom."
+job: organise-work
+thinking: medium
+thinking_why: "It judges each item against your results and sorts the stops by who depends on them."
+
+headline: "Stop doing list writer"
+subhead: "Paste everything your team or business does, with the time each takes, and the results that matter most this year. The prompt asks of each item whether you would start it today, sorts the stops by who must be told, adds up what is freed and says where the time goes."
+
+explain: |
+  To-do lists grow and nothing ever comes off. The weekly report nobody reads, the channel that brought two customers last year, the meeting that exists because it always has. Peter Drucker's public question cuts through: if we were not already doing this, would we start it today? If not, stop.
+
+  This prompt asks that question of every item on your list, with a reason tied to the results you said matter most. It sorts the stops into now, with notice, and after replacing, and for each item that needs notice it names who tells whom, by when, in one sentence. It adds up the hours or money freed from your costs and matches them to the results that matter, because stopping is only useful if the time lands somewhere.
+
+when:
+  - "Your team is busy all week and the important work never starts."
+  - "You are planning next quarter and want to clear the deck before adding anything."
+  - "You know something should go but nobody wants to be the one to say it."
+
+you_give:
+  - "Everything you do, one line each, with the time or money it takes"
+  - "The one to three results that matter most this year"
+  - "Who each item serves (advised)"
+  - "What each item brings in, if known (optional)"
+you_get:
+  - "Each item answered: would we start it today, and why"
+  - "Stops sorted into now, with notice, and after replacing"
+  - "Who tells whom, by when, with the sentence to use"
+  - "The freed time or money and where it goes"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your list under it."
+  - "Write the results that matter most in one line each."
+  - "Read THE QUESTION column and argue with any answer. Then run again with your corrections."
+  - "Send the STOP WITH NOTICE sentences this week."
+
+how_it_works:
+  - title: "Asks the question"
+    text: "Would we start this today? Yes, no or unsure, with a reason tied to your results."
+  - title: "Checks the cost"
+    text: "What each no and unsure takes, and what stopping all the nos would free."
+  - title: "Sorts the stops"
+    text: "Now, with notice, or after replacing, with why."
+  - title: "Settles the unsures"
+    text: "The one fact that would decide each, who gets it, by when."
+  - title: "Writes the tells"
+    text: "Who tells whom, by when, one sentence with the reason."
+  - title: "Says where the time goes"
+    text: "Freed hours matched to the results that matter."
+
+output_shape: |
+  THE QUESTION         <item | YES / NO / UNSURE | why>
+  STOP NOW             <item | frees>
+  STOP WITH NOTICE     <item | who tells whom | by when | sentence>
+  STOP AFTER REPLACING <item | replacement>
+  UNSURE               <item | fact | who | when>
+  FREED                <total>
+  WHERE IT GOES        <result>
+  MISSING              <...>
+  CHECKS MISSED        <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Results that matter most for Sprout this year: fewer cancellations;
+    more first orders from the habit angle ("the one thing I stuck to")
+    rather than discounts; the Kids line growing in stores.
+    What the marketing team of three does each week:
+    - Weekly ad report deck for the founder, 4 hours
+    - Monthly influencer gifting to 30 creators, 6 hours a week, 2 posts a
+      month come back
+    - Posting on four social accounts daily, 5 hours
+    - A new limited flavour launch every 4 to 8 weeks, 8 hours a week
+    - 15 live ad headlines, mostly discount-led, refreshed weekly, 6 hours
+    - A fitness app partnership (30 days free with purchase), 2 hours
+    - Writing the VIP perks email, 2 hours
+    - Answering social comments, 3 hours
+    - A weekly competitor price check in a spreadsheet, 1 hour
+    - Updating the review widget quotes on the site, 1 hour
+  output: pending
+
+tweaks:
+  - what: "The results"
+    how: "Name them precisely. The question is answered against them, so vague results give vague answers."
+  - what: "Costs"
+    how: "Hours or money per item make FREED a real number."
+  - what: "Results per item"
+    how: "Where you know what an item brings in, say it. It turns UNSURE into YES or NO."
+
+judge:
+  - "Every item has an answer and a reason that mentions your results."
+  - "The freed total matches your costs."
+  - "Each stop with notice names a person and a date."
+  - "Nothing your key results depend on is on the stop list."
+  - "You can see where the freed time goes."
+
+test:
+  - "Stop the STOP NOW items for a month and check whether anyone noticed."
+  - "Run it twice. The NO list should match."
+  - "Give it a list with no costs. FREED should say MISSING, not an estimate."
+
+improve:
+  - "Add the items you stopped before and what happened, so the reasoning learns from you."
+  - "Run it each quarter with the same results line, so the list keeps shrinking."
+  - "Pair it with the Week priority picker to place the freed hours."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message sort works in any strong chat AI."}
+  inputs:
+    - "Time tracking or calendar data for the real cost of each item"
+    - "What each channel or report brought in last quarter"

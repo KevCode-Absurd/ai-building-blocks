@@ -1,6 +1,6 @@
 slug: accessory-try-on-photo-maker
 name: Accessory try-on photo maker
-summary: Give it a shoe, bag, watch or necklace photo. Get a person wearing it. Your image model draws it.
+summary: Give it a shoe, bag, watch or necklace photo. Get a prompt that puts it on a person.
 category: general
 boards: []
 type: skill

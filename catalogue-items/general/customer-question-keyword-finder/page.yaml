@@ -1,0 +1,116 @@
+new_slug: customer-question-keyword-finder
+name: "Customer question keyword finder"
+summary: "Paste reviews, tickets and comments. Get the questions people search for and the page each one needs."
+job: get-found-in-search
+thinking: low
+thinking_why: "It extracts and groups questions from given text."
+
+headline: "Customer question keyword finder"
+subhead: "Paste your reviews, support tickets and comments, and a list of your pages if you have one. The prompt pulls every stated and hidden question, rewrites each as a search query in the customer's words, counts and groups them, names the page type each needs and picks the first five to write."
+
+explain: |
+  Keyword tools tell you what strangers search for. Your inbox tells you what your buyers search for, in the exact words they use, and it is free. The question in a one-star review ("I didn't know it renewed at $49.99") is the same question someone types before buying.
+
+  This prompt reads your customer words and pulls out every question, including the hidden ones inside complaints and praise. It rewrites each as a short search query with the product type instead of your brand, groups and counts them, and marks the strong ones. For each group it names the intent and the page that answers it, checks against your page list to find the gaps, and picks the first five to write. It also tells you which topics never came up, so you know where the input is thin.
+
+when:
+  - "You want to write pages people will find and do not know where to start."
+  - "Your support inbox is full of the same questions and your site answers none of them."
+  - "You have no budget for keyword tools and a folder full of reviews."
+
+you_give:
+  - "Reviews, tickets, chats and comments, as written"
+  - "A list of your pages with what each covers (advised)"
+  - "What you sell and to whom (optional)"
+you_get:
+  - "Every question found, traced to a quoted source line"
+  - "Grouped search queries with counts, intent and page type"
+  - "Have, partly or gap against your pages, and the first five to write"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your customer words under it."
+  - "Add your page list so gaps can be marked."
+  - "Read the STRONG groups marked GAP. Those are your first pages."
+  - "Write the first five, then run it again next quarter with new tickets."
+
+how_it_works:
+  - title: "Pulls every question"
+    text: "Direct and hidden, each traced to a quoted line."
+  - title: "Rewrites as search queries"
+    text: "Short, how people type, with the product type rather than your brand."
+  - title: "Groups and counts"
+    text: "Merges queries that mean the same, counts sources, marks strong ones."
+  - title: "Names intent and page type"
+    text: "Learning, comparing, checking or solving, and the page that fits."
+  - title: "Checks against your pages"
+    text: "Have, partly, gap or unknown."
+  - title: "Picks the first five"
+    text: "By count, closeness to buying and gap, with a line of why."
+
+output_shape: |
+  QUESTIONS FOUND <query | sources | quote>
+  GROUPS          <query | count | STRONG | intent | page type | status>
+  WRITE FIRST     <1 to 5>
+  NOT FOUND       <...>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Sprout, daily greens gummies. Pages: home; product page (Original);
+    Kids page; science page; how-it-works page; FAQ (shipping and returns
+    only); blog with three posts on recipes.
+    Customer words:
+    "I've tried a few green powders over the years. The issue has never
+    been nutritive content. It's always been consistency."
+    "I was taking a big-name greens powder but it was $94 a month and
+    gritty."
+    "I also stopped buying separate probiotic gummies, b12 gummies and
+    multivitamin gummies. I just take these now."
+    "Will this upset my stomach more?" "Will the sugar-free one cause
+    problems?" "Is this just candy?" "Is the sugar okay for kids?"
+    "Which discount is real?" "Will the price jump after the first order?"
+    "I hate subscriptions because I feel like they are a trap."
+    "A gummy can't hold enough to replace my powder."
+    "These have helped me get back to normal as I've been on a glp1 for
+    about a year now and was always constipated."
+    "after the third day they started tasting better"
+    "Does it have gelatin?" "Is it HSA eligible?" "Methylfolate, not folic
+    acid, does that matter?"
+  output: pending
+
+tweaks:
+  - what: "Volume"
+    how: "More customer words means more groups reach STRONG. Fifty lines beats fifteen."
+  - what: "Your page list"
+    how: "Without it everything is UNKNOWN. With it you get real gaps."
+  - what: "Sources"
+    how: "Mix reviews, tickets and comments. Each one surfaces different questions."
+
+judge:
+  - "Every query has a customer line behind it."
+  - "Queries use words a stranger would type, not your brand's."
+  - "The counts match the quotes."
+  - "Page types fit the intent."
+  - "Nothing is marked HAVE that your site does not have."
+
+test:
+  - "Check the WRITE FIRST queries in a free search tool or your search console. Most should show real searches."
+  - "Run it twice. The STRONG groups should match."
+  - "Give it customer words with no questions in them. NOT FOUND should be long and QUESTIONS FOUND short."
+
+improve:
+  - "Keep the GROUPS table and add counts each month. It becomes your content backlog."
+  - "Add your search console queries to confirm which groups already bring traffic."
+  - "Pair it with the FAQ page writer from customer questions for the FAQ-type groups, and the Keyword to post outline writer for the guides."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message extraction works in any strong chat AI."}
+    - {name: "Your search console", why: "Confirms which queries already reach you and which are true gaps."}
+  inputs:
+    - "Sales call notes, which hold the pre-purchase questions"
+    - "Questions asked on social posts and in community groups"

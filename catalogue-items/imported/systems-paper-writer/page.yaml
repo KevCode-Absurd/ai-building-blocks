@@ -5,7 +5,7 @@ name: Systems paper writer
 summary: Give it your systems work. Get a paper draft built to the structure that systems conferences expect.
 job: research-topics
 headline: Systems paper writer
-subhead: Give it your systems work. Get a paper draft built to the structure that systems conferences expect.
+subhead: Describe your system, what is new, your main results and the target venue. It gives each section a page budget for a 10 to 12 page paper and plans it paragraph by paragraph. You get the outline, a draft in that structure and a venue checklist with weak spots flagged.
 explain: |
   A draft of your systems paper laid out the way OSDI, SOSP, NSDI, ASPLOS and EuroSys reviewers expect, so the strong parts of your work show up on the first read. It saves you from a paper that buries the idea or the evidence.
 

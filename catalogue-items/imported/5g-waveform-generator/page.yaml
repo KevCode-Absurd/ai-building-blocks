@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: Standards give exact settings.
 new_slug: 5g-waveform-generator
 name: 5G waveform generator
-summary: Pick a 5G test model or channel. Get a standard-compliant baseband waveform.
+summary: Pick a 5G test model or your own settings. Get MATLAB code that builds a standard 5G waveform.
 job: build-software
 headline: 5G waveform generator
-subhead: Pick a 5G test model or channel. Get a standard-compliant baseband waveform.
+subhead: Tell it the link direction and a 5G test model, reference channel or your own bandwidth and modulation settings. It picks the right generator route and writes the MATLAB code. You get the code, the IQ samples, a config that matches the 3GPP standard and notes on what to change next.
 explain: |
   You get a baseband 5G NR waveform that follows the 3GPP standard, ready for testing, simulation or playback on an instrument. You pick a test model, a fixed reference channel, or a custom setup and the skill writes the MATLAB code.
 

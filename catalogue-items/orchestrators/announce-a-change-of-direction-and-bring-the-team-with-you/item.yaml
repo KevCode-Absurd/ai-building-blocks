@@ -1,0 +1,29 @@
+slug: announce-a-change-of-direction-and-bring-the-team-with-you
+name: "Announce a change of direction and keep the team"
+summary: "Give it the change and why. Get the memo, a rollout plan, the announcement script and listening talks."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: brief, required: true}
+  - {type: copy_draft, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: plan}
+  - {type: script}
+  - {type: document}
+uses: [top-priority-shift-memo-writer, change-rollout-planner, org-change-announcement-writer, listen-first-talk-planner]
+steps:
+  - {uses: top-priority-shift-memo-writer, note: "A short memo that names the shift, the reason, what stops and what every team does differently, in the manner of Bill Gates's 1995 Internet Tidal Wave memo."}
+  - {uses: change-rollout-planner, note: "Who hears first, in what setting, how far apart, and what each group needs to be able to do the week after."}
+  - {uses: org-change-announcement-writer, note: "The leader announcement, manager talking points, the town hall script and honest answers to the hard questions."}
+  - {uses: listen-first-talk-planner, note: "For each person likely to push back, a talk that hears them first, in the manner of Stephen Covey and Brené Brown, held before the announcement. Nothing is announced until you say so."}
+origin: own
+version: 1.0.0
+minds: [bill-gates, stephen-covey, brene-brown]
+credits:
+  - {title: "The Internet Tidal Wave (memo, 26 May 1995)", by: "Bill Gates", url: "https://constitutioncenter.org/the-constitution/historic-document-library/detail/the-internet-tidal-wave-1995", used: "A priority shift set out in one memo: the shift, the reason, what every group now does"}
+example_pending: true

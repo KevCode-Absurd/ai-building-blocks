@@ -5,7 +5,7 @@ name: Task automation builder
 summary: Name a repetitive task. Get a script, schedule or trigger that does it for you.
 job: set-up-ai
 headline: Task automation builder
-subhead: Name a repetitive task. Get a script, schedule or trigger that does it for you.
+subhead: Name the repetitive task, what starts it and where it will run. It picks a pattern, such as a script, a file watcher or a scheduled job, then builds and tests it. You get the working script, the trigger set up, error handling and logs, and notes on running it.
 explain: |
   A working script, schedule or trigger that does a boring job for you, tested and logged, so you stop doing it by hand. You describe what starts it and what should happen, and the skill builds the right kind of automation.
 

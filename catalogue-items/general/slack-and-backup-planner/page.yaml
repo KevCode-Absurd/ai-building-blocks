@@ -1,0 +1,113 @@
+new_slug: slack-and-backup-planner
+name: "Slack and backup planner"
+summary: "Paste how your business or budget runs. Get where it breaks under stress and the slack to add first."
+job: think-and-decide
+thinking: high
+thinking_why: "It traces shocks through a system to cash and ranks protections, which needs careful reasoning."
+
+headline: "Slack and backup planner"
+subhead: "Paste what your business or team depends on, how much each carries, and your cash. The prompt lists the single points of failure, runs three bad weeks through to cash, prices the slack or backup for each, and gives the first three to add with an owner and a date."
+
+explain: |
+  Efficient businesses are fragile businesses. One supplier, one ad channel, one person who knows the system, no stock buffer and three weeks of cash. It runs beautifully until one Tuesday. Nassim Taleb has argued in public that the fix is slack and backups, bought on purpose, before the shock, and that a long smooth record is not evidence you are safe.
+
+  This prompt lists everything your business leans on and how much each carries, finds the ones with no backup, and runs three bad weeks through them to see what breaks and how long until it hurts cash. For each weak point it prices the slack that would absorb the shock, in money and time, and ranks the additions by protection per cost, with anything that guards against ruin first. It also tells you what to leave fragile because a backup is not worth it.
+
+when:
+  - "One customer, supplier or channel carries most of your business."
+  - "One person knows how the critical thing works and is going on leave."
+  - "Things have gone smoothly for two years and that is starting to worry you."
+
+you_give:
+  - "What you depend on and how much each carries"
+  - "Months of cash and how long key things take to replace (advised)"
+  - "Past shocks and what they cost (optional)"
+  - "The loss you cannot afford (optional)"
+you_get:
+  - "Dependencies with the single points of failure marked"
+  - "Three bad weeks traced to cash"
+  - "Slack and backups priced, and the first three to add"
+  - "What to leave fragile, and a note on quiet records"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your dependencies under it."
+  - "Add months of cash and the loss you cannot afford."
+  - "Read BAD WEEKS. If a trace is wrong about your business, correct it and run again."
+  - "Start ADD FIRST this month."
+
+how_it_works:
+  - title: "Lists the dependencies"
+    text: "Everything you lean on and the share it carries, with anything over a third marked."
+  - title: "Finds the single points"
+    text: "Dependencies with no backup, and what the week they fail looks like."
+  - title: "Runs the bad weeks"
+    text: "Three plausible shocks traced through what breaks to how many weeks until cash hurts."
+  - title: "Prices the slack"
+    text: "The backup for each point, its cost in money and time, and what it buys."
+  - title: "Orders the additions"
+    text: "Protection per cost, ruin guards first, the top three with an owner and date."
+  - title: "Notes the quiet record and what to leave"
+    text: "A smooth run is not safety, and some backups are not worth it."
+
+output_shape: |
+  DEPENDENCIES    <thing | share | backup?>
+  SINGLE POINTS   <thing | the week it fails>
+  BAD WEEKS       <shock | what breaks | weeks to cash | line?>
+  SLACK TO ADD    <point | backup | cost | buys>
+  ADD FIRST       <1 to 3>
+  QUIET RECORD    <note>
+  LEAVE FRAGILE   <what, why>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Sprout, daily greens gummies. Dependencies (illustrative shares, for
+    practice): one gummy manufacturer makes every pouch, 8 weeks lead time;
+    one pouch printer; Meta ads bring about 70% of first orders; the
+    subscription tool holds every subscriber and the cancel flow; one
+    3PL warehouse ships everything; the ops manager is the only person who
+    knows the warehouse systems and supplier contacts; retailers are about
+    30% of revenue on 60-day terms, with one chain about half of that; cash
+    is about 3 months at current spend; the branded prebiotic fiber blend
+    comes from one supplier.
+    Past shocks: a 20,000-pouch reprint after a proof error; a week when
+    the ads account was paused for a compliance review.
+    Cannot afford: more than 4 weeks with no stock to ship in the holiday
+    quarter.
+  output: pending
+
+tweaks:
+  - what: "Shares"
+    how: "Give the share each dependency carries. A third of revenue through one door is the line that matters."
+  - what: "Cash"
+    how: "Months of cash turns 'what breaks' into 'how long until it hurts'."
+  - what: "Past shocks"
+    how: "They become the first bad weeks, and their real costs anchor the pricing."
+
+judge:
+  - "Every single point is something you named."
+  - "Each bad week ends in a number of weeks to cash pain."
+  - "Ruin-level shocks are in ADD FIRST."
+  - "Costs are yours or marked to be quoted."
+  - "The leave-fragile list has reasons you accept."
+
+test:
+  - "Run it with a past shock as one of the bad weeks. The trace should match what actually happened."
+  - "Run it twice. The single points and ADD FIRST should match."
+  - "Leave out cash. It should mark MISSING and give weeks-to-pain as unknown."
+
+improve:
+  - "Add quotes from a second supplier or a cash buffer target so SLACK TO ADD has real costs."
+  - "Re-run each quarter with updated shares. Fragility moves as the business grows."
+  - "Pair it with the Bad year plan stress tester for the cash side."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a traced stress plan in one message."}
+  inputs:
+    - "Revenue by channel and by customer for the last quarter"
+    - "Lead times and contract terms for each supplier"

@@ -1,0 +1,43 @@
+slug: flux
+name: Flux
+maker: Black Forest Labs
+url: https://bfl.ai
+promise: Photo-real images from a written description, through an API or apps built on it.
+use_cases: [make-images]
+categories: [image]
+what_it_does:
+  - Makes images from a written description.
+  - Edits an existing image from a written instruction.
+  - Keeps a character or product looking the same across images.
+  - Runs through an API that other apps and your own code can call.
+  - Offers some model files you can run on your own computer.
+benefits:
+  - Add image making to your own app or workflow with one API.
+  - Pay only for the images you make, with no seat fees.
+  - Use the same model inside several other products.
+best_for:
+  - Teams that build image making into a product or a batch workflow.
+  - Photo-real scenes and product-style shots.
+  - People who want control over where the model runs.
+not_for:
+  - A simple app for everyday image making, which other products on this list provide.
+  - Anyone who does not want to deal with an API.
+pricing:
+  model: usage
+  from: Check the maker's site
+  note: Pay as you go per image through the API, with no subscriptions or seat fees. The price depends on the model. Licences for self-hosting are sold separately.
+works_with:
+  - krea
+  - freepik
+  - higgsfield
+runs_in: [api]
+blocks:
+  - accurate-product-image-ad-maker
+  - image-ad-maker-with-exact-text
+  - image-ad-settings-picker
+  - marketing-image-maker
+  - stable-diffusion-image-maker
+alternatives: [stable-diffusion, midjourney, nano-banana, ideogram]
+last_checked: 2026-10-21
+sources:
+  - https://bfl.ai/pricing

@@ -5,7 +5,7 @@ name: Advisory exposure checker
 summary: Name a breach or package advisory. Get a read-only check of your machine and projects, saved as a report.
 job: secure-code
 headline: Advisory exposure checker
-subhead: Name a breach or package advisory. Get a read-only check of your machine and projects, saved as a report.
+subhead: Name the advisory, package or vulnerability and the folders to check. It picks the relevant checks, searches your Node and Python projects for affected versions and looks at installed tools, changing nothing on your machine. You get the list of checks run, what was found, a clear verdict, a saved report and follow-up steps for you.
 explain: |
   Find out if a security advisory touches your computer and projects with a read-only check, saved as a report. Nothing on your machine is changed.
 

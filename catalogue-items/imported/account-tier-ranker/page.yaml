@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It scores many accounts against a set of rules.
 new_slug: account-tier-ranker
 name: Account tier ranker
-summary: Give it your accounts. Get each scored on fit and activity and sorted into tiers, so you know where to spend time.
+summary: Give it your accounts. Get a fit score, an activity score and a tier for each, with reasons.
 job: sell-and-negotiate
 headline: Account tier ranker
-subhead: Give it your accounts. Get each scored on fit and activity and sorted into tiers, so you know where to spend time.
+subhead: Give it a list of accounts or your whole book, your ideal customer profile and a connected CRM. It scores each account for fit from 0 to 10 using size, industry and tools, then scores recent activity. You get both scores, a tier for each account, the reason behind each score and a suggested move per tier.
 explain: |
   A long list of accounts becomes a short list of where your time pays off most. Each account is scored for fit and for activity, with a plain reason.
 

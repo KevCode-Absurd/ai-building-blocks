@@ -1,0 +1,110 @@
+new_slug: plan-inversion-checker
+name: "Plan inversion checker"
+summary: "Paste a plan. Get every way it fails, ranked, with the guard for each and the ones you cannot guard."
+job: think-and-decide
+thinking: high
+thinking_why: "It has to imagine failures across five groups and rate them honestly from thin input."
+
+headline: "Plan inversion checker"
+subhead: "Paste a plan you are about to commit to, what it rests on and what went wrong last time. The prompt writes the failure line, lists ten to fifteen ways the plan gets there, rates each by likelihood and damage, gives each a guard with an owner, names what cannot be guarded and gives a verdict."
+
+explain: |
+  Plans are written by people who want them to work, so they list the steps to success and skip the steps to failure. Charlie Munger's public habit is the reverse: work out how it fails, then do not do that. It sounds obvious. Almost nobody does it before signing.
+
+  This prompt inverts your plan. It writes the one line that would mean failure, then lists ten to fifteen ways to get there across people, money, outside events, the thing itself and the plan's own goal, pulling from your past plans first. It rates each by how likely and how bad, writes the cheapest guard with a person and a date, and drops guards that cost more than the failure. It names the failures nothing can guard and the early sign of each, asks who gains if the plan stalls, and gives a verdict: go, go with guards first, or do not go.
+
+when:
+  - "You are about to sign, hire, launch or spend on something you cannot easily undo."
+  - "The plan feels exciting and nobody in the room is arguing against it."
+  - "The last plan like this failed and you want to be sure this one fails differently, if at all."
+
+you_give:
+  - "The plan: what, by when, with what, and what success looks like"
+  - "What it depends on (advised)"
+  - "What went wrong last time (optional)"
+  - "The loss you cannot afford (optional)"
+you_get:
+  - "The failure line and ten to fifteen ways to reach it, rated"
+  - "A guard with an owner and a date for each"
+  - "The unguardable failures with their early signs"
+  - "Who gains if it fails, and a verdict"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your plan under it."
+  - "Add what the plan depends on and what went wrong before."
+  - "Read UNGUARDABLE first. Decide whether you can live with those."
+  - "Put the guards for ruin-level and high-likelihood failures in place before you start."
+
+how_it_works:
+  - title: "States the failure"
+    text: "One line, the success line inverted, with a date."
+  - title: "Lists the ways"
+    text: "Ten to fifteen across people, money, outside, inside and the plan itself, history first."
+  - title: "Rates each"
+    text: "Likelihood and damage with a line of reasoning. Ruin is always marked."
+  - title: "Writes the guards"
+    text: "The cheapest action that lowers likelihood or damage, with who and when."
+  - title: "Names the unguardable"
+    text: "Failures with no sensible guard, the early sign, and whether the plan is still worth it."
+  - title: "Finds the incentives and gives a verdict"
+    text: "Who gains if it stalls, then go, go with guards first, or do not go."
+
+output_shape: |
+  THE FAILURE     <one line>
+  WAYS IT FAILS   <group> <failure | likelihood | damage | why>
+  GUARDS          <failure | guard | who | when>
+  UNGUARDABLE     <failure | early sign | worth it?>
+  INCENTIVES      <...>
+  VERDICT         <go | go with guards | do not go> <reason>
+  MISSING         <...>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Plan: Sprout moves half its ad budget from discount-led headlines to
+    the habit angle ("the one thing I've been able to stick to") for six
+    weeks starting 1 November, with the holiday budget. Success: first
+    orders hold within 10% of today while 90-day cancellations fall, and
+    the habit ads reach the account's average cost per order by week four.
+    Depends on: the marketing lead writing the new ads in two weeks; the
+    designer; the ads platform approving health-adjacent copy; the review
+    quotes we have permission to use; the founder not reverting after a bad
+    week.
+    Last time: a 2024 test of non-discount ads was cut after eight days
+    because cost per order rose, before the cancellation data was in.
+    Cannot afford: a holiday season with first orders down more than 25%.
+  output: pending
+
+tweaks:
+  - what: "Past plans"
+    how: "What failed before becomes the first failures on the list, marked from history."
+  - what: "What you cannot afford"
+    how: "Give the loss that is too much and the ruin ratings become precise."
+  - what: "Dependencies"
+    how: "Name the people and suppliers. The people group fills from them."
+
+judge:
+  - "There are ten to fifteen failures across all five groups."
+  - "Every ruin-level line has a guard or is marked unguardable."
+  - "Every guard has a name and a date."
+  - "The verdict matches the ruin and high-likelihood lines."
+  - "Nothing is said about people or costs you did not mention."
+
+test:
+  - "Run it on a plan that failed. The real cause should be on the list, and ideally rated high."
+  - "Run it twice. The ruin-level failures should match."
+  - "Give it a plan with no success line. It should mark MISSING and invert the goal instead."
+
+improve:
+  - "Keep the FROM HISTORY failures in a file and paste them into every check."
+  - "Add your own failure groups (for example, regulatory) if your field has them."
+  - "Pair it with the Debate then decide meeting planner when the verdict splits the team."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a structured failure list in one message."}
+  inputs:
+    - "The budget and the date you could still stop"
+    - "The names of who is accountable for each part"

@@ -1,6 +1,6 @@
 # Audit a landing page: AI Blocks
 
-> 35 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 36 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [A/B test traffic checker](https://useaiblocks.com/skills/ab-test-traffic-checker): Paste visits, orders and revenue. Get the test size, weeks needed and a readiness score out of 100.
 - [Advertorial readiness checker](https://useaiblocks.com/skills/advertorial-readiness-checker): Give it your live ads. Get a go or no-go, a score out of 100 and page length.
@@ -12,7 +12,7 @@
 - [Collection page fixer](https://useaiblocks.com/skills/collection-page-fixer): Paste your collection page and stock by size. Get which products to feature and a daily check.
 - [Conversion problem finder](https://useaiblocks.com/skills/conversion-problem-finder): Give it a landing page. Get the conversion problems found and a set of tests worth running, each with a clear reason.
 - [Conversion research planner](https://useaiblocks.com/skills/conversion-research-planner): Paste your page and analytics. Get a research order that finds where, what and why before you test anything.
-- [Decision friction auditor](https://useaiblocks.com/skills/decision-friction-auditor): Give it a page or flow. Get the spots where layout, defaults or order stop people acting, with clearer fixes.
+- [Decision friction auditor](https://useaiblocks.com/skills/decision-friction-auditor): Give it a page or flow. Get the spots where layout, defaults or order stop people, with fixes.
 - [Email sequence auditor](https://useaiblocks.com/skills/email-sequence-auditor): Paste your email flow and its numbers. Get a green, yellow and red list of what to protect and fix.
 - [Find what's wrong with your page and pick tests](https://useaiblocks.com/workflows/page-problems-test-picks): Give it your page and analytics. Get a research plan, ranked page problems and a check that you can test.
 - [Find where your page loses buyers and prove the fix](https://useaiblocks.com/workflows/find-where-your-page-loses-buyers-and-prove-the-fix): Give it page captures and your funnel numbers. Get a ranked test list and a clear verdict on the first fix.
@@ -29,6 +29,7 @@
 - [Product page auditor](https://useaiblocks.com/skills/product-page-auditor): Give it a product page. Get ranked changes to variants, social proof, buttons and price, each with the research behind it.
 - [Product page screenshot auditor](https://useaiblocks.com/skills/product-page-screenshot-auditor): Attach product page screenshots. Get what blocks shoppers, changes to test and a score out of 100.
 - [Redirect chain finder](https://useaiblocks.com/skills/redirect-chain-finder): Get redirects that chain from one to another or share a target, so shoppers and search get there fast.
+- [Review a page and plan a morning usability test](https://useaiblocks.com/workflows/review-a-page-for-ease-of-use-and-plan-a-one-morning-test): Give it a page or screen. Get its usability problems, every unclear choice rated, and a one-morning test plan for three people.
 - [Review a page's ease of use, then plan a test](https://useaiblocks.com/workflows/page-usability-review): Give it a page or screen. Get its usability problems, every unclear choice rated, and a one-morning test plan for three people.
 - [Sales funnel drop-off finder](https://useaiblocks.com/skills/sales-funnel-drop-off-finder): Paste step numbers and screenshots. Get the worst drop-off step, fixes and a score out of 100.
 - [Site search basics checker](https://useaiblocks.com/skills/site-search-basics-checker): Paste your site address and page list. Get a short fix list for duplicate titles, a missing sitemap and dead-end 404 pages.

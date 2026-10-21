@@ -1,0 +1,26 @@
+slug: turn-a-sales-call-into-a-checked-proposal-and-a-plan-to-signature
+name: "Turn a sales call into a checked proposal"
+summary: "Give it the call notes. Get the follow-up, a costed proposal, a margin check and a dated plan."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: transcript, required: true}
+  - {type: brief, required: true}
+  - {type: offer, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: document}
+  - {type: audit_report}
+  - {type: plan}
+uses: [call-follow-up-drafter, sales-proposal-writer, deal-desk-reviewer, mutual-action-plan-builder]
+steps:
+  - {uses: call-follow-up-drafter, note: "The follow-up email in your voice, a summary for your team and the CRM updates, from the call."}
+  - {uses: sales-proposal-writer, note: "The proposal: the buyer's needs in their words, the value, the price, the timeline and proof, in your template if you have one."}
+  - {uses: deal-desk-reviewer, note: "Margin after any discount, every term against your standards, and a clear yes, no or counter with what to change."}
+  - {uses: mutual-action-plan-builder, note: "The why-buy case in the buyer's words and a dated plan to signature with tasks for both sides, written to share with the buyer."}
+origin: own
+version: 1.0.0
+example_pending: true

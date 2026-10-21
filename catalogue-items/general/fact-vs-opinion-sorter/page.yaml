@@ -1,0 +1,110 @@
+new_slug: fact-vs-opinion-sorter
+name: "Fact and opinion sorter"
+summary: "Paste any text that persuades. Get every line sorted into fact, inference or opinion, with what to check."
+job: research-topics
+thinking: medium
+thinking_why: "It labels from how each sentence is written, not from what it believes, and that takes care."
+
+headline: "Fact and opinion sorter"
+subhead: "Paste an article, pitch, report or post that wants you to believe something. The prompt labels each weight-bearing sentence as fact, inference, opinion or prediction, flags opinion dressed in fact words, traces what the main claim rests on and lists the facts to check first."
+
+explain: |
+  Persuasive writing mixes three kinds of sentence so smoothly that you cannot feel the joins. A number, then a "so", then a "clearly", and by the end you believe the opinion because the number was true. The text might be right. You just cannot tell where the weight is.
+
+  This prompt sorts every sentence that carries weight, with a quote beside each label, by how it is written rather than by whether the AI agrees. It flags lines that use fact words ("studies show", "experts agree") without a source or a number. It traces the chain from the facts to the main claim and shows where that chain leans on an opinion or an unsourced fact. You get the three to six facts to check first, with how to check them, and a count of each kind.
+
+when:
+  - "A supplier's pitch or a vendor's case study is making a strong argument and you want to know what it rests on."
+  - "An article is going round your team as if it settled something."
+  - "You are writing something persuasive yourself and want to see how much is opinion."
+
+you_give:
+  - "The text in full"
+  - "The main claim, if you can tell (advised)"
+  - "What you need to decide (optional)"
+you_get:
+  - "Every weight-bearing sentence labelled with a quote"
+  - "Opinion dressed as fact, flagged"
+  - "The chain the main claim rests on and the facts to check first"
+  - "A count of facts, inferences, opinions and predictions"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the text under it."
+  - "Say what you are trying to decide."
+  - "Read DRESSED UP first. Those are the lines that were working on you."
+  - "Check the CHECK FIRST facts before you act on the text."
+
+how_it_works:
+  - title: "Finds the main claim"
+    text: "The one thing the text wants, stated or inferred and marked as such."
+  - title: "Sorts each sentence"
+    text: "Fact, inference, opinion or prediction, from how it is written, with a quote."
+  - title: "Marks the sources"
+    text: "Which facts come with a source and which do not."
+  - title: "Flags dressed-up opinion"
+    text: "Fact words without a source or a number."
+  - title: "Traces the chain"
+    text: "Which facts and inferences the main claim rests on, and where it leans on opinion."
+  - title: "Writes the check list and count"
+    text: "The facts that would bring the claim down if false, with how to check, and the tally."
+
+output_shape: |
+  MAIN CLAIM      <one line>
+  SORTED          <quote | label>
+  DRESSED UP      <quoted lines>
+  THE CHAIN       <paragraph>
+  CHECK FIRST     <fact | how>
+  COUNT           <tallies>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    I run Sprout's marketing. We are deciding whether to keep running the
+    "Support Muscle While You Lose Weight" ad. Here is the brief our agency
+    sent arguing for it:
+    "Weight-loss buyers are the fastest-growing segment in supplements.
+    Everyone on a GLP-1 is looking for a way to protect muscle, and greens
+    with 21 vitamins are exactly what they need. Our weight-loss ad
+    outperformed the account average in its first week, so the angle
+    clearly works. Studies show that people losing weight lose muscle too.
+    Customers already tell us Sprout helps them, one reviewer said it fixed
+    her constipation on a GLP-1. If we pause this ad we will hand the
+    segment to competitors, who will own it by next quarter. The smart
+    move is to triple the budget."
+  output: pending
+
+tweaks:
+  - what: "The full text"
+    how: "Paste all of it. The dressed-up lines are often near the end, after the real facts."
+  - what: "Your decision"
+    how: "Say what you are deciding and CHECK FIRST aims at the facts that matter for it."
+  - what: "Your own writing"
+    how: "Run it on your own pitch before sending. The count tells you how much is opinion."
+
+judge:
+  - "Every label has a quote."
+  - "Labels follow the wording, not whether you agree."
+  - "Each dressed-up line really has fact words and no source."
+  - "The chain names the facts the main claim rests on."
+  - "The count matches the list."
+
+test:
+  - "Run it on a text you know is sound and one you know is weak. The counts and the chain should differ in the way you expect."
+  - "Run it twice. The CHECK FIRST facts should match."
+  - "Give it a text with no clear claim. It should say so and still sort the sentences."
+
+improve:
+  - "Add the fact words your field overuses, so they are always flagged."
+  - "Keep the CHECK FIRST lists. They become your standard questions for pitches."
+  - "Pair it with the Source note summariser when the text cites a study."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message sort works in any strong chat AI."}
+  inputs:
+    - "The sources the text cites, so unsourced facts can be checked"
+    - "A second text arguing the other way"

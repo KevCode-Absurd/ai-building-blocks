@@ -1,0 +1,124 @@
+new_slug: monthly-budget-versus-actual-keeper
+name: Monthly budget versus actual keeper
+summary: Give it the month's spend by team. Get what moved against budget, why, and cash levers if the year is off.
+job: track-numbers
+thinking: high
+thinking_why: It separates timing shifts from real overspend, refreshes a full-year forecast and judges when a cut protects survival. Give it your strongest model.
+headline: Monthly budget versus actual keeper
+subhead: Give it last month's actuals by team and your budget. It explains each move in plain words, refreshes the full-year forecast, watches cash against your floor, and ranks the cash levers only when the year is off track. You decide every cut and every send.
+explain: |
+  A budget is set once, in a hopeful week, and then drifts. Each team is a little over, a bill lands early and looks like overspend, and nobody adds it up until the quarter is gone. Then the cut is sudden and lands on the wrong team.
+
+  This agent adds it up every month. It compares each team with its plan, uses the owners' reasons where given and marks its own readings as readings. It refreshes the forecast for the year, checks cash against your floor, and only when the year is more than a tenth off, or cash is at risk within 90 days, ranks six levers by the cash they free. Each lever gets one test: does it protect survival, and would doing nothing be safer? It never moves budget or sends a note without your yes.
+when:
+  - You run a small team with a budget by department or project and the monthly review keeps slipping.
+  - One team is always a little over and you want to know whether it is timing or a pattern.
+  - Cash is tight and you want a cut list ranked by what it frees, not by what is easiest.
+you_give:
+  - Last month's actual spend and income by team and line
+  - Your budget for the year by team and month, or past spend to build one from
+  - Bills due and what you are owed (advised)
+  - Your cash floor and the date the year must be back on plan (advised)
+  - One line from each team owner on what happened last month (optional)
+you_get:
+  - Each team's gap against budget with the reason, marked as the owner's or the agent's reading
+  - A refreshed full-year forecast and the gap against plan
+  - A 30, 60 and 90 day cash view against your floor
+  - Teams over for two or more months, with the pattern
+  - Six cash levers ranked by cash freed, only when the year is off track
+  - A quarterly survival score and what gives the plan room for error
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run last month.
+  - Export last month's actuals by team from your accounting tool. Put the file and your budget in one folder, or attach them in the chat.
+  - Tell it your cash floor once. It saves it.
+  - Ask each team owner for one line on last month and paste the lines in. The explanations get much better.
+  - Read the moves and the levers. Approve what you agree with. Run it again on the 5th of next month.
+how_it_works:
+  - title: Build the budget once
+    text: If none exists, turns past spend and targets into a phased budget by team, saved only when you approve it.
+  - title: Read the history
+    text: Opens the tracking rows and notes which teams have been over two months running.
+  - title: Explain the moves
+    text: Compares budget with actual by team and line, uses the owners' reasons and marks its own readings.
+  - title: Refresh the forecast
+    text: Recasts the full year from actuals so far and shows the gap against plan.
+  - title: Watch the cash
+    text: Builds the 30, 60 and 90 day view and puts any dip under your floor at the top.
+  - title: Rank the levers when needed
+    text: If the year is more than a tenth off or cash is at risk, ranks six levers by cash freed, each tested for survival.
+  - title: Check room for error quarterly
+    text: Scores whether the plan survives a bad quarter and what would give it room.
+  - title: Log and hand back
+    text: Saves the rows and levers, then stops for your yes.
+output_shape: |-
+  THE MONTH
+    Budget <amount> | actual <amount> | gap <amount> (<%>) | full-year forecast <amount> vs plan <amount>
+
+  CASH
+    30 days <amount> | 60 days <amount> | 90 days <amount> | floor <amount> | <above | UNDER by <amount> on <date>>
+
+  MOVES BY TEAM
+    <team> | budget <amount> | actual <amount> | gap <amount> | why: <reason> (<owner | agent's reading>) | note to owner: <one line>
+
+  REPEAT OFFENDERS
+    <team> | over <n> months running | pattern: <what>
+
+  LEVERS (only if off track)
+    1. <lever> | frees <amount> | survival test: <protects | risks> | restartable: <yes | no>
+
+  ROOM FOR ERROR (quarterly)
+    Survival score <n>/100 | breaks when: <condition> | room from: <what>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run September for Sprout's marketing budget. Practice numbers, not
+    Sprout's real figures.
+    Budget by team, September: paid ads 120,000; creators and gifting
+    18,000; email and SMS 6,000; content and photos 9,000; agency 15,000.
+    Actuals: paid ads 141,500; creators 11,200; email and SMS 6,300;
+    content and photos 14,800; agency 15,000.
+    Year to date after 9 months: 1,452,000 spent against 1,392,000 budget.
+    Owner notes: "Ads: we leaned into the birthday price-cut launch."
+    "Photos: the limited flavour shoot landed in September, was planned
+    for October."
+    Cash floor: 250,000. Cash today 410,000. Bills next 60 days: 380,000.
+    Owed from retailers next 60 days: 290,000.
+  output: pending
+tweaks:
+  - what: Your off-track line
+    how: The agent ranks levers when the year is more than a tenth off. A company with thin cash should set a tighter line.
+  - what: Owner reasons
+    how: One line from each team turns guessed explanations into facts. Ask for it before each run.
+  - what: Your cash floor
+    how: Set the lowest balance you accept. The cash view is judged against it every month.
+  - what: Timing rules
+    how: Tell it which bills move between months, so an early payment is not read as overspend.
+judge:
+  - Every gap is budget minus actual from your file.
+  - Each explanation says whether it came from an owner or the agent.
+  - Any lever that cuts something you cannot restart is clearly marked.
+  - The budget file was not changed.
+  - Nothing was moved, cut or sent without your yes.
+test:
+  - Run it on a past month where you know a bill landed early. It should call it a timing shift, not overspend.
+  - Give it two months with the same team over. The second run should name it a repeat.
+  - Run it twice on the same data. The lever ranking should match.
+improve:
+  - Set the off-track line and the cash floor to match your company before the first run.
+  - Add your timing rules, such as which bills are quarterly, so the explanations stay true.
+  - Save the levers you took and what they freed, so next quarter's ranking learns from it.
+  - Pair it with the Monthly profit close so both use the same actuals.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the budget, tracking and lever files between months and run on a schedule.
+    - name: Your accounting tool
+      why: Export actuals by department or class with the lines under each.
+  inputs:
+    - A list of contracts signed or hires started last month, so step changes are explained
+    - Last year's monthly spend, so seasonal patterns are known from the first run

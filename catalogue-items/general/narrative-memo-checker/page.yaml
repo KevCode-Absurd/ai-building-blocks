@@ -1,6 +1,6 @@
 new_slug: narrative-memo-checker
 name: Narrative memo checker
-summary: Paste your memo. Get a score out of 100, the weak spots and the three fixes that matter most.
+summary: Paste your memo. Get a score out of 100, the weak spots and the three fixes that matter.
 job: speak-and-persuade
 thinking: medium
 thinking_why: It judges clarity and proof against a fixed list of checks.

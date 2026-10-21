@@ -1,0 +1,42 @@
+slug: runway
+name: Runway
+maker: Runway
+url: https://runway.com
+promise: Video clips from text or images, with editing controls built in.
+use_cases: [make-video, edit-video]
+categories: [video]
+what_it_does:
+  - Makes video clips from a written description.
+  - Turns a still image into a moving clip.
+  - Edits existing footage, such as removing objects or changing the look.
+  - Makes images and audio from the same account.
+  - Spends one pool of credits across every kind of output.
+benefits:
+  - Fix or restyle a clip you already shot without a reshoot.
+  - Try several versions of a scene in one sitting.
+  - Keep making and editing in one place instead of moving files between apps.
+best_for:
+  - Marketers who want to make and edit short clips in the same product.
+  - Creative teams testing looks before a real shoot.
+  - Short ad and social clips.
+not_for:
+  - Long videos made in one go.
+  - People who want a fixed monthly cost, since heavy use drains credits quickly.
+pricing:
+  model: freemium
+  from: "US$15 per month"
+  note: Free plan gives a one-time grant of 125 credits. Standard is US$12 per month billed yearly and includes 625 credits a month, which reset each month.
+works_with:
+  - elevenlabs
+  - capcut
+  - midjourney
+runs_in: [web, mobile, api]
+blocks:
+  - knitted-wool-video-prompts
+  - paper-craft-video-prompts
+  - watercolor-video-prompts
+  - marketing-video-producer
+alternatives: [kling, veo, pika, luma]
+last_checked: 2026-10-21
+sources:
+  - https://runway.com/pricing

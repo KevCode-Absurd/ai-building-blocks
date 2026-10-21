@@ -1,6 +1,6 @@
 slug: guaranteed-format-generator
 name: Guaranteed format generator
-summary: Say what shape the output must take. Get a model setup that always returns valid JSON or matching text.
+summary: Say what shape the result must take. Get Python code that always returns valid JSON or matching text.
 category: general
 boards: []
 type: skill

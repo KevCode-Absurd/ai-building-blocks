@@ -1,0 +1,110 @@
+new_slug: five-step-problem-runner
+name: "Five-step problem runner"
+summary: "Paste a problem that keeps coming back. Get it run through goal, problem, cause, design and doing."
+job: think-and-decide
+thinking: medium
+thinking_why: "The diagnosis step has to reason past the first answer and separate cause from blame."
+
+headline: "Five-step problem runner"
+subhead: "Paste a problem that keeps happening, with examples, and the goal it blocks. The prompt writes the goal, states the problem as a specific gap, diagnoses the root cause as a missing step, skill, owner or incentive, designs the change that removes it and lays out the doing with owners and dates."
+
+explain: |
+  Some problems come up in every meeting and never get solved, because each time the group starts from a different place: one person wants to fix the symptom, another wants to blame someone, a third is not sure what the goal was. Ray Dalio's public method is to walk the same five steps every time and write each one down.
+
+  This prompt runs your problem through those steps. It fixes the goal in one line, states the problem as a repeated gap with your examples, and diagnoses the cause by going at least two levels past the first answer, naming roles doing or not doing things rather than people at fault. It designs the change that removes the cause, with the rule that would have prevented your examples, and lays out the doing with a person and date per step and a check for when the problem has stopped. It ends with a one-sentence principle for next time.
+
+when:
+  - "The same problem is on the agenda for the third month."
+  - "A fix was tried and the problem came back."
+  - "You want to hand a problem to someone with a method, not a mood."
+
+you_give:
+  - "The problem with two or three dated examples"
+  - "The goal it blocks"
+  - "What has been tried (advised)"
+  - "Who is involved, as roles (optional)"
+you_get:
+  - "The five steps written out"
+  - "A root cause typed as step, skill, owner, incentive or design, with guesses marked"
+  - "A design with an owner and the rule that would have prevented it"
+  - "Doing steps with dates, a check, and a principle"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the problem under it."
+  - "Give dated examples. The diagnosis is only as good as they are."
+  - "Read 3 DIAGNOSIS. If it is a guess you know is wrong, say so and run again."
+  - "Put the DOING steps in your task tool and the PRINCIPLE in your team's rules."
+
+how_it_works:
+  - title: "Fixes the goal"
+    text: "One line, measurable if possible, with other goals parked."
+  - title: "States the problem"
+    text: "A specific, repeated gap with examples, separated from its symptoms."
+  - title: "Diagnoses the cause"
+    text: "At least two levels past the first answer, typed, with roles not blame and guesses marked."
+  - title: "Designs the change"
+    text: "Removes the cause, names the owner, and the rule that would have prevented the examples."
+  - title: "Lays out the doing"
+    text: "Steps with a person and date, and the check for when the problem has stopped."
+  - title: "Writes the principle"
+    text: "One sentence for the next problem like this."
+
+output_shape: |
+  1 GOAL          <one line>
+  2 PROBLEM       <gap, examples>
+  3 DIAGNOSIS     <cause | type | roles | GUESS>
+  4 DESIGN        <change | after | owner | rule | past fixes missed>
+  5 DOING         <step | who | when | done when>  CHECK <...>
+  PRINCIPLE       <one sentence>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Problem at Sprout: our discount claims keep drifting apart. In September
+    the ads said 61% off, the banner said 52% and the badge said up to 55%.
+    In August a "4 FREE gifts" ad ran for three weeks with no gifts on the
+    page. In October a compliance review paused an ad for the same reason.
+    Goal: every price and discount a customer sees agrees with checkout, so
+    nobody asks "which discount is real?"
+    Tried: a Slack reminder to check the page before launching ads; a shared
+    doc of current offers that nobody updated after the first week.
+    Involved: the marketing lead writes ads; the web developer changes the
+    page; the founder approves offers verbally; support hears the
+    complaints.
+  output: pending
+
+tweaks:
+  - what: "Dated examples"
+    how: "Three examples with dates let the diagnosis find a pattern instead of a theory."
+  - what: "What was tried"
+    how: "Past fixes tell the design what not to repeat."
+  - what: "Roles"
+    how: "Name roles and the doing steps get owners without anyone being blamed."
+
+judge:
+  - "The problem is a gap with examples, not a complaint."
+  - "The diagnosis went past the first answer."
+  - "No one is blamed."
+  - "The design removes the cause the diagnosis found."
+  - "Every doing step has a name and a date."
+
+test:
+  - "Run it on a problem you already solved. The diagnosis should match what you found."
+  - "Run it twice. The cause type should match."
+  - "Give it a problem with no goal. It should mark MISSING and infer one."
+
+improve:
+  - "Keep the PRINCIPLE lines in one file. They become your team's rules."
+  - "Add your organisation's roles so diagnoses use the same names."
+  - "Pair it with the Process change note writer to announce the design."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message run works in any strong chat AI."}
+  inputs:
+    - "The messages or tickets from each example, for exact dates and words"
+    - "The current process as written, if one exists"

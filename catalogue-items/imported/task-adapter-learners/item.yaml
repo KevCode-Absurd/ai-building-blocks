@@ -1,7 +1,7 @@
 slug: task-adapter-learners
 renamed_from: task-adapter-for-different-learners
 name: "Task adapter for different learners"
-summary: "Give it a task and a learner need. Get an adapted task with the same goal. It does not diagnose anyone."
+summary: "Give it a task and a learner need. Get the same task adapted, with the learning goal unchanged."
 category: general
 boards: []
 type: skill

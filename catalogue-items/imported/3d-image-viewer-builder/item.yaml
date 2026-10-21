@@ -1,6 +1,6 @@
 slug: 3d-image-viewer-builder
 name: 3D image viewer builder
-summary: Give it a 3D scan or mesh. Get a viewer with slices, overlays and marked regions.
+summary: Give it a 3D scan or mesh. Get MATLAB viewer code with slices, overlays and marked regions.
 category: general
 boards: []
 type: skill

@@ -1,0 +1,123 @@
+new_slug: weekly-customer-health-watcher
+name: Weekly customer health watcher
+summary: Give it your account usage each week. Get who is slipping, who is up for renewal and the next touch for each.
+job: keep-customers
+thinking: high
+thinking_why: It compares each account with its own history, picks a cause for each slide and chooses between a touch, an escalation and nothing. Give it your strongest model.
+headline: Weekly customer health watcher
+subhead: Give it last week's account usage every Monday. It scores each customer, compares with last week, finds the cause for the ones slipping, puts renewals at risk at the top and plans the next touch for each. You approve every message.
+explain: |
+  Customers rarely leave in a hurry. Usage drops a little, a ticket sits for a week, the person who bought the product moves on, and the renewal date arrives before anyone looked at the account. By then the only tool left is a discount.
+
+  This agent looks every week. It sets one leading sign of success, the share of new customers who do the key action within a set number of days, then scores every account from usage and support data and keeps the history. An account that falls two weeks running gets a cause and one idea. One with a problem you cannot fix alone gets an escalation brief. A healthy one gets a thank-you and a keep-in-touch plan. Renewals at risk inside 60 days go first. It never contacts a customer without your yes.
+when:
+  - You have customers on plans, subscriptions or retainers and find out about cancels when they happen.
+  - Renewals come up without anyone knowing whether the account is healthy.
+  - You want one early sign that tells you, in the first month, whether a customer will stay.
+you_give:
+  - Last week's usage per account, with the actions that matter and the renewal date
+  - Open and closed support tickets per account (advised)
+  - Survey answers, review lines or call notes from the week (optional)
+  - A read-only connection to your account tool (optional)
+  - Last week's history file, once it exists
+you_get:
+  - A health score for every account, against last week
+  - Slipping accounts with the likely cause and one idea each
+  - Renewals at risk in the next 60 days, at the top
+  - An escalation brief for any account that needs another team
+  - A thank-you note and keep-in-touch plan for healthy and recovered accounts
+  - A weekly check on your leading sign of success
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week.
+  - Export last week's usage per account from your product or billing tool. Put it in one folder, or attach it in the chat.
+  - On the first run, tell it what customers do after they buy. It sets the leading sign and saves it.
+  - Read the list. Send the touches you agree with, then tell the agent which went out.
+  - Run it again next Monday. It adds the new scores and looks for the trend.
+how_it_works:
+  - title: Set the leading sign once
+    text: Picks one early sign of success in the form "P percent do event E within T days", and re-checks it each quarter.
+  - title: Read last week
+    text: Opens the saved scores and notes which touches were sent.
+  - title: Score every account
+    text: Scores health, churn risk and upsell room from usage and support data, and adds the row to the history.
+  - title: Sort each account
+    text: A slide two weeks running gets a cause and one idea. An unfixable problem gets an escalation brief. A healthy account gets a thank-you.
+  - title: Watch the renewals
+    text: Lists renewals in the next 90 days with risk, and puts at-risk ones inside 60 days at the top.
+  - title: Log and hand back
+    text: Saves the scores and touches, then stops for your yes.
+output_shape: |-
+  THIS WEEK
+    <n> accounts | <n> fell | <n> recovered | <n> renewals at risk in 60 days | leading sign: <P>% did <E> within <T> days
+
+  RENEWALS AT RISK
+    <account> | renews <date> | score <n> (<n>, <n>) | cause: <what> | touch: <one line>
+
+  SLIPPING ACCOUNTS
+    <account> | score <n>, <n>, <n> | sign: <hit | missed> | cause: <what> | idea: <one line>
+
+  ESCALATIONS
+    <account> | problem: <what> | impact: <what> | tried: <what> | for: <team>
+
+  TOUCHES TO SEND
+    <account> | <thank-you | check-in | quarterly note> | draft below
+
+  NO ACTION
+    <accounts steady and recently touched>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run this week for Sprout's wholesale and VIP accounts. Practice
+    numbers, not Sprout's real figures.
+    Usage export (last 7 days), 6 accounts:
+    - Big-box retailer: reorder every 4 weeks, last order 6 weeks ago,
+      open ticket: "pallet short 2 cases", 9 days old. Renews contract 1 Dec.
+    - Warehouse club: reorder on time, no tickets.
+    - Grocery chain: reorders slowing, 3 then 5 then 7 weeks between
+      orders. No tickets. Renews 15 Jan.
+    - VIP subscriber group A (1,200 subs): 71% opened the limited flavour
+      email, cancels 3.1% this month vs 2.8% last month.
+    - VIP subscriber group B (800 subs): skipped shipments up from 4% to 9%.
+    - Online marketplace listing: steady.
+    Leading sign from the first run: 65% of new subscribers reorder or
+    skip (not cancel) within 35 days.
+    Customer words: "the sugar-free one upset my stomach" (3 cancel notes).
+  output: pending
+tweaks:
+  - what: The actions you track
+    how: The score is built from the actions in your export. Make sure the ones that predict staying are in it.
+  - what: Your slide rule
+    how: The agent flags a fall two weeks running. Set a tighter rule for accounts worth more.
+  - what: Renewal window
+    how: Set how far ahead a renewal counts as near. The default is 60 days.
+  - what: Touch spacing
+    how: Tell it how often a healthy account should hear from you. The default is once a quarter.
+judge:
+  - Every slipping account shows at least two weeks of scores.
+  - Each at-risk account has one cause and one idea.
+  - No healthy account was touched twice in two weeks.
+  - Renewals inside 60 days are at the top.
+  - Nothing was sent or offered without your yes.
+test:
+  - Run it on last quarter's data for an account you know cancelled. See how many weeks before the cancel it would have flagged it.
+  - Give it a healthy account and a slipping one with the same usage total but different trends. It should treat them differently.
+  - Run it twice on the same export. The slipping list should match.
+improve:
+  - Set the leading sign from your own data, not a guess. Check it each quarter against who stayed.
+  - Add your renewal window and touch spacing before the first run.
+  - Save what each customer said after a touch in the touches file. The next run reads it before proposing another.
+  - Pair it with the Subscription churn watcher if you sell subscriptions. It reads the cancels; this one reads the accounts before they cancel.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the account and touch files between weeks and run every Monday.
+    - name: Your billing or CRM tool
+      why: Export usage, plan and renewal date per account. A read-only connection lets the renewal step read them directly.
+  inputs:
+    - A note when a customer's main contact changes
+    - Which accounts carry most of your revenue, so their slide rule can be tighter

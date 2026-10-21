@@ -1,0 +1,25 @@
+slug: clear-your-support-inbox-and-turn-fixes-into-help-pages
+name: "Clear your support inbox and turn fixes into help pages"
+summary: "Give it your open tickets. Get them sorted, checked replies to send and a help page per fix."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: source_text, required: true}
+  - {type: question, required: true}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: spreadsheet}
+  - {type: copy_draft}
+  - {type: document}
+uses: [support-ticket-sorter, customer-reply-drafter, angry-customer-reply-checker, solved-ticket-help-page-writer]
+steps:
+  - {uses: support-ticket-sorter, note: "Each ticket classified, ranked by how much harm a slow reply would do, routed to the right person and given a first line."}
+  - {uses: customer-reply-drafter, note: "A full reply for each ticket in your voice, with a note on what to check in your systems before you send it."}
+  - {uses: angry-customer-reply-checker, note: "Every promise checked against what you can do, every fact against the ticket, every line for tone, and a repaired reply where one fails. The complaint is the ticket itself."}
+  - {uses: solved-ticket-help-page-writer, note: "A help page for each solved problem: the steps, what the customer should see, and a fix for next time, written for someone who has never written in."}
+origin: own
+version: 1.0.0
+example_pending: true

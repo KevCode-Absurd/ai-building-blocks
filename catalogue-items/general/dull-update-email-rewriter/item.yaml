@@ -1,0 +1,19 @@
+slug: dull-update-email-rewriter
+name: "Dull update email rewriter"
+summary: "Paste a flat company update. Get an email people open, with the reader's gain first."
+category: general
+boards: []
+type: prompt
+role: make
+job: email
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [ann-handley]

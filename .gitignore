@@ -7,6 +7,9 @@ dist/
 *.log
 .DS_Store
 Thumbs.db
+__pycache__/
+# Local research helpers; published material lives in knowledge/ and tools/.
+_codex_*.py
 # run outputs and traces stay local unless promoted into reports/
 runs/
 traces/

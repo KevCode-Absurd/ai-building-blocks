@@ -1,0 +1,100 @@
+new_slug: clear-an-email-backlog-and-set-triage-rules-that-stick
+name: Clear an email backlog and set triage rules that stick
+summary: Give it your inbox rules and the backlog. Get a saved triage guide, drafted replies and fixes.
+job: write-emails
+thinking: high
+thinking_why: It drafts replies in your name and decides what matters. Give it your strongest model.
+headline: Clear an email backlog and set triage rules that stick
+subhead: Give it twenty minutes of answers about how you handle email, then the backlog. It saves a guide to your senders, your reply voice and your triage rules, drafts a reply or a decision for every email in the pile, then checks each draft for mistakes before you send.
+explain: |
+  An email backlog is not a time problem. It is a decisions problem: every message needs a call on whether it matters, who it is from and what to say, and making four hundred calls in a row is what nobody can face. So the pile grows and the important email is in there somewhere.
+
+  This workflow makes the calls once, then applies them. It interviews you about your email: who your senders are, what you always say yes or no to, how you sound, what goes to someone else. It saves that as a guide. Then it goes through the backlog with the guide and drafts a reply, a forward or a one-line decision for every email. Each draft is checked for mistakes: a wrong name, a promise you did not make, a tone that is off. You send in batches.
+when:
+  - You have more than two hundred unanswered emails.
+  - You dread your inbox and answer the easy ones first.
+  - You cleared it once and it filled up again.
+you_give:
+  - Twenty minutes to answer questions about your email
+  - The backlog, exported or pasted, with sender and date
+  - What you can promise and what goes to someone else
+  - Two replies you were happy with (optional)
+you_get:
+  - A saved guide to your senders, your reply voice and your triage rules
+  - A reply, forward or decision drafted for every email
+  - Each draft checked and the mistakes fixed
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Answer its questions about how you handle email. It saves the guide.
+  - Paste the backlog. It drafts a reply or a decision for each email and checks them.
+  - Send the drafts you approve, in batches. Keep the guide for next time.
+how_it_works:
+  - title: Learn your inbox rules
+    text: Interviews you about your senders, your yeses and nos, your voice and what gets forwarded, and saves it as a guide.
+  - title: Clear the backlog
+    text: Gives every email a drafted reply, a forward, a decision or an archive, with the ones only you can answer marked.
+  - title: Fix the drafts
+    text: Checks each draft for wrong names, promises you did not make and tone, and fixes them. You send.
+output_shape: |-
+  STEP 1: INBOX GUIDE
+    Senders: <group, what they want, how to treat> | Always yes: <...> | Always no: <...>
+    Voice: <...> | Goes to: <person, what kind> | Triage rule: <...>
+
+  STEP 2: THE BACKLOG
+    <date, sender>: <reply / forward to ... / decision / archive> | Draft: <...> | Only you: <yes / no>
+
+  STEP 3: CHECKED DRAFTS
+    <email>: Fixed <name / promise / date / tone> | Final: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    I'm the founder of Sprout, a daily greens gummy brand. 340 unanswered emails since late August.
+    Who writes to me: retailer buyers (two chains, a warehouse club); our co-packer; three agencies pitching; influencers asking for free product; customers who found my address; our accountant; a journalist who asked about our discount lines; job applicants; software vendors.
+    Always yes: a retailer buyer gets a reply within a day; the accountant gets what she asks for. Always no: paid influencer placements; agency pitches; "quick call" requests from vendors. Goes to someone else: customer emails go to support; job applicants go to the ops manager.
+    How I sound: short, warm, direct, first names, no exclamation marks.
+    What I can promise: a call within a week; samples to a retailer buyer. What I can't: a discount, a timeline for the kids 12-pack.
+    Backlog exported as a sheet with date, sender, subject and body.
+  output: pending
+tweaks:
+  - what: Your rules
+    how: Answer the interview honestly, including who you avoid. The guide is only as good as your answers.
+  - what: What you can promise
+    how: List it. The mistake check flags any draft that promises more.
+  - what: Who takes what
+    how: Name the people. Forwards go to them with a note.
+  - what: Oldest or newest first
+    how: Say which. Oldest first is the default, because those senders have waited longest.
+judge:
+  - The guide could be read by an assistant and used to triage your inbox tomorrow.
+  - Every email in the backlog has a call, and the ones only you can answer are marked.
+  - Replies sound like you and promise nothing outside your list.
+  - Forwards carry a note that says what the recipient should do.
+  - No draft was sent without you.
+test:
+  - Give step 2 an email from a retailer buyer and one from an agency pitch. The calls should differ as your rules say.
+  - Plant a draft that promises a discount. Step 3 should flag and fix it.
+  - Run step 1 twice. The always-yes list should match.
+  - A month later, triage a week of email with the guide only. Does it still fit?
+improve:
+  - Update the guide whenever a new kind of sender appears.
+  - Save the drafts that worked as your voice sample for next time.
+  - Add your calendar rules (when you take calls) so replies offer real times.
+  - Pair it with "Catch up on your week, close loops and plan tomorrow" for the rest of the week's loose ends.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Your email client
+      why: Export the backlog and send the approved drafts in batches.
+  inputs:
+    - Replies you were happy with
+    - Your calendar availability
+    - A list of people who take forwarded email
+terms:
+  - term: Triage
+    meaning: "Sorting incoming email by what it needs: a reply, a forward, a decision or nothing."

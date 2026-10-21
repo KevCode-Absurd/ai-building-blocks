@@ -1,0 +1,40 @@
+slug: stable-diffusion
+name: Stable Diffusion
+maker: Stability AI
+url: https://stability.ai
+promise: Images made from text, on your own computer or through an API.
+use_cases: [make-images]
+categories: [image]
+what_it_does:
+  - Makes images from a written description.
+  - Edits images, with erase, fill-in, outpaint and background removal.
+  - Makes small images bigger and sharper.
+  - Follows a sketch or a layout you give it.
+  - Offers model files you can download and run yourself.
+benefits:
+  - Make images in bulk at a few cents each.
+  - Run the model on your own computer if your files must stay private.
+  - Build image steps into your own app or workflow.
+best_for:
+  - Developers and technical teams that want control over the model.
+  - Batch jobs such as many product backgrounds.
+  - People who want to tune a model on their own images.
+not_for:
+  - A first-time user who wants a simple app with a chat box.
+  - Anyone who does not want to set up software or an API.
+pricing:
+  model: usage
+  from: US$0.009 per image
+  note: The API sells credits at US$0.01 each. Stable Image Core costs 3 credits and Ultra costs 8, and the cheapest model starts at 0.9 credits. New accounts get 25 free credits. Check the licence before using downloaded models in a business.
+works_with:
+  - ComfyUI
+  - flux
+  - krea
+runs_in: [api, desktop]
+blocks:
+  - stable-diffusion-image-maker
+  - marketing-image-maker
+alternatives: [flux, midjourney, leonardo, ideogram]
+last_checked: 2026-10-21
+sources:
+  - https://docs.stability.ai/pricing

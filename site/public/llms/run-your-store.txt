@@ -2,9 +2,9 @@
 
 > 127 free AI skills and workflows for this job. Each page links its SKILL.md.
 
-- [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor): Paste your 3PL invoice, rate card and orders. Get overcharges found, a score out of 100 and a dispute note.
-- [Abandoned checkout reader](https://useaiblocks.com/skills/abandoned-checkout-reader): Pick a date range. Get abandoned checkouts split by cart value and hour, so you see when and where buyers drop.
-- [Acquisition cost by source calculator](https://useaiblocks.com/skills/cac-by-source): Add your ad spend. Get the cost to win a customer from each traffic source.
+- [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor): Paste your 3PL bill, rates and orders. Get overcharges, a dispute note and a score out of 100.
+- [Abandoned checkout reader](https://useaiblocks.com/skills/abandoned-checkout-reader): Pick a date range. Get abandoned checkouts counted by cart value and hour of day.
+- [Acquisition cost by source calculator](https://useaiblocks.com/skills/cac-by-source): Add ad spend per source. Get the cost to win one new customer from each traffic source.
 - [After-purchase experience planner](https://useaiblocks.com/skills/post-purchase-experience): Give it your shipping, returns and loyalty setup. Get a plan for what happens after checkout so customers order again.
 - [Amazon brand protection planner](https://useaiblocks.com/skills/amazon-brand-protection-planner): Give it your brand and listings. Get checks for hijackers and fakes, plus complaint letters ready to send.
 - [Amazon cost cutting advisor](https://useaiblocks.com/skills/amazon-cost-cutting-advisor): Tell it how you source and ship. Get the biggest cost bottlenecks and ways to cut them.
@@ -46,7 +46,7 @@
 - [Gift card issuer](https://useaiblocks.com/skills/gift-card-issuer): Name the customers and amounts. Get gift cards issued as goodwill, return credit or rewards. Creates live gift cards.
 - [Gift card liability calculator](https://useaiblocks.com/skills/gift-card-liability-calculator): Run it on your gift cards. Get the total balance you still owe, split by issue date and balance size.
 - [Gift message collector](https://useaiblocks.com/skills/gift-message-collector): Run it on recent orders. Get gift messages, recipients and gift flags in one list for packing slips.
-- [Growth roadmap builder](https://useaiblocks.com/skills/growth-roadmap-builder): Tell it your stage and numbers. Get the growth lever that pays most now, plus a step by step roadmap.
+- [Growth roadmap builder](https://useaiblocks.com/skills/growth-roadmap-builder): Tell it your shop numbers. Get the growth lever that pays most now and a 90 day roadmap.
 - [Inventory value calculator](https://useaiblocks.com/skills/inventory-value-calculator): Give it your stock purchases and counts. Get inventory valued by FIFO or average cost, with write-downs flagged.
 - [Inventory value report builder](https://useaiblocks.com/skills/inventory-value-report-builder): Get what your stock is worth, by location and by supplier, ready for your books and insurance.
 - [Lapsed customer finder](https://useaiblocks.com/skills/lapsed-customer-finder): Get a list of customers who stopped ordering, tagged for your win-back campaign. Adds tags to live customer records.
@@ -57,7 +57,7 @@
 - [Missing product cost finder](https://useaiblocks.com/skills/missing-product-cost-finder): Get a list of products with no cost set, so your margin and stock value reports stay right.
 - [Monthly catalogue clean-up keeper](https://useaiblocks.com/agents/monthly-catalogue-clean-up-keeper): Run it monthly. Get missing costs, clashing SKUs and hidden products found, and a short fix list in the right order.
 - [Monthly returns and refunds reviewer](https://useaiblocks.com/agents/monthly-returns-and-refunds-reviewer): Run it monthly. Get the products driving refunds, why, what returns cost and the one fix to make first.
-- [Ninety day marketing plan builder](https://useaiblocks.com/skills/90-day-marketing-plan): Describe your store. Get a buyer profile, your best channels, a budget split, and a 90 day action plan.
+- [Ninety day marketing plan builder](https://useaiblocks.com/skills/90-day-marketing-plan): Describe your store and budget. Get a buyer profile, ranked channels, a budget split and a 90 day plan.
 - [Old discount code cleaner](https://useaiblocks.com/skills/old-discount-code-cleaner): Get expired, unused and duplicate discount codes found, then switched off or deleted if you say so. Deletes cannot be undone.
 - [Online order fulfillment planner](https://useaiblocks.com/skills/online-order-fulfillment-planner): Give it your order volume and setup. Get ways to pick, pack and ship faster and cheaper, with returns handled.
 - [Online store auditor](https://useaiblocks.com/skills/online-store-auditor): Describe your store. Get ranked calls on marketing channels, homepage layout, trust signals and marketplaces.
@@ -117,7 +117,7 @@
 - [Supplier name cleaner](https://useaiblocks.com/skills/supplier-name-cleaner): Get supplier name typos and case variants grouped, with one proper name suggested for each.
 - [Support capacity planner](https://useaiblocks.com/skills/support-capacity-planner): Give it ticket data and your sales forecast. Get cost per ticket and hiring dates for peak.
 - [Support hiring date planner](https://useaiblocks.com/prompts/support-hiring-date-planner): Paste 12 months of tickets, costs and a sales forecast. Get agents needed and when to hire.
-- [Survey-ready order finder](https://useaiblocks.com/skills/survey-ready-order-finder): Run it on your orders. Get the buyers 7 to 14 days after delivery who should get a survey, minus refunds.
+- [Survey-ready order finder](https://useaiblocks.com/skills/survey-ready-order-finder): Point it at your store orders. Get buyers delivered 7 to 14 days ago, minus refunds and cancellations.
 - [TikTok Shop launch planner](https://useaiblocks.com/skills/tiktok-shop-launch-planner): Tell it where you are starting. Get a week-by-week plan to set up, list, create content and scale.
 - [TikTok Shop overseas expansion planner](https://useaiblocks.com/skills/tiktok-shop-expansion): Tell it your products and target countries. Get which markets to enter first, plus shipping, rules and localizing steps.
 - [Top product ranker](https://useaiblocks.com/skills/top-product-ranker): Pick a date range. Get your products ranked by revenue, units sold and refund rate.

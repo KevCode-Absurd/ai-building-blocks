@@ -1,6 +1,6 @@
 slug: abandoned-checkout-reader
 name: Abandoned checkout reader
-summary: Pick a date range. Get abandoned checkouts split by cart value and hour, so you see when and where buyers drop.
+summary: Pick a date range. Get abandoned checkouts counted by cart value and hour of day.
 category: general
 boards: []
 type: skill

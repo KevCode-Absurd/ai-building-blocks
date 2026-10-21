@@ -1,0 +1,106 @@
+new_slug: one-ask-email-tightener
+name: "One-ask email tightener"
+summary: "Paste an email before you send it. Get it cut to one clear ask the reader can act on."
+job: write-emails
+thinking: low
+thinking_why: "It edits one short email and keeps the facts as given."
+
+headline: "One-ask email tightener"
+subhead: "Paste any work email before you send it. The prompt finds every ask in it, keeps the one that matters, puts what you need, by when and why in the first three lines, cuts the padding and writes the subject as the ask. You get the email and the parked asks."
+
+explain: |
+  Emails go unanswered because the reader cannot find what you want from them. The ask is in paragraph three, there are two of them, and neither has a date. The reader means to come back to it and never does.
+
+  This prompt reads your draft and quotes every sentence that asks for something. It keeps one, parks the rest for a separate email, and rewrites so line one is the ask, line two is the date and line three is the reason. It makes the ask answerable with a yes, a date, a name or a file, cuts the openers and hedges, and writes a subject line that is the ask itself. If there is no deadline in your draft, it marks MISSING rather than picking one for you.
+
+when:
+  - "You need a decision from someone senior and have one shot at their inbox."
+  - "Your emails get replies that answer a different question than the one you asked."
+  - "You wrote four paragraphs and are not sure what you are asking for."
+
+you_give:
+  - "The draft email"
+  - "The one thing you need, if you know it (advised)"
+  - "Who the reader is (optional)"
+you_get:
+  - "Every ask in your draft, counted and quoted"
+  - "The rewritten email with the ask, date and reason in the first three lines"
+  - "The parked asks and where they go"
+  - "The word count before and after"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your draft under it."
+  - "Read THE ONE. If it picked the wrong ask, say which one matters and run it again."
+  - "Fill any MISSING date with a real date."
+  - "Send it. Put the parked asks in your task list."
+
+how_it_works:
+  - title: "Finds every ask"
+    text: "Quotes each sentence that asks the reader to do, decide or send something."
+  - title: "Keeps one"
+    text: "Picks the ask that matters most now and parks the rest for a separate email."
+  - title: "Puts the ask first"
+    text: "Line one what, line two by when, line three why. Context after, as short as it can be."
+  - title: "Makes it answerable"
+    text: "A yes, a no, a date, a name or a file. Never 'thoughts?'."
+  - title: "Cuts the padding"
+    text: "Removes openers, hedges and repeated context, and writes the subject as the ask."
+
+output_shape: |
+  ASKS FOUND      <n>: <each quoted>
+  THE ONE         <kept, and why>
+  PARKED          <other asks, where they go>
+  SUBJECT         <the ask, under eight words>
+  EMAIL           <ask, by when, why, short context, sign-off>
+  WORDS           <before> to <after>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Reader: the founder of Sprout, who gets 200 emails a day.
+    Draft:
+    Hi, hope you had a good weekend. I wanted to flag a few things on the
+    product page. The ingredients panel says "over 20 vitamins and minerals"
+    but the science page says 21, and the home page says "20+". We should
+    probably pick one. Also the Subscribe and Save badge says "up to 55%
+    off" while the announcement bar says 52%, and the ads say 61%. I think
+    this might be hurting trust. Separately, do you have time this week to
+    look at the new Kids pouch design? And could you send me the nutrition
+    label file when you get a chance? Thanks, let me know your thoughts.
+  output: pending
+
+tweaks:
+  - what: "Which ask"
+    how: "Say which one matters this week and the rest get parked without debate."
+  - what: "The reader"
+    how: "A senior reader gets fewer words of context. A new colleague gets one more line of why."
+  - what: "The date"
+    how: "Give a real date and the subject line can carry it."
+
+judge:
+  - "You can say in one breath what the email asks for."
+  - "There is a date or a MISSING date line."
+  - "The parked asks are all the other things you wanted."
+  - "No fact changed."
+  - "It is shorter than what you wrote."
+
+test:
+  - "Tighten an email that got no reply last month and send the new version to a similar person."
+  - "Run it twice. THE ONE should match."
+  - "Give it an email with no ask. It should say so instead of inventing one."
+
+improve:
+  - "Add your team's rule for deadlines (for example, always give two working days), so missing dates are rarer."
+  - "Add how your organisation addresses senior people, so the greeting fits."
+  - "Pair it with the Weekly status update writer for the emails that carry no ask at all."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message edit works in any strong chat AI."}
+  inputs:
+    - "The last reply you got from this reader, so the tone matches"
+    - "Your task list, so parked asks land somewhere"

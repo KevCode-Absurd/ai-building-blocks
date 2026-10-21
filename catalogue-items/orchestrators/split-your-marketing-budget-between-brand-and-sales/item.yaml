@@ -1,0 +1,43 @@
+slug: split-your-marketing-budget-between-brand-and-sales
+name: Split your marketing budget between brand and sales
+summary: Paste your spend and the numbers you track. Get a balanced scorecard
+  and a brand versus sales budget split.
+category: orchestrator
+type: workflow
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: performance_sheet
+    required: false
+outputs:
+  - type: plan
+uses:
+  - marketing-scorecard-builder
+  - brand-and-sales-budget-splitter
+steps:
+  - uses: marketing-scorecard-builder
+    note: Lists your numbers, sorts them into short-term and long-term and flags
+      those that mislead alone. Sets a review rhythm that suits each.
+  - uses: brand-and-sales-budget-splitter
+    note: Uses the scorecard to sort each channel as brand or sales. Compares your
+      split and your share of voice with the market and proposes the smallest
+      shift to test.
+origin: rebuilt
+credits:
+  - title: "The long and the short of it: 10 key principles of success (summary
+      presentation)"
+    by: Les Binet and Peter Field, IPA
+    used: Short-term and long-term measures, and not judging long-term effects on
+      short-term windows
+  - title: Exclusive interview for PHD with Les Binet
+    by: Les Binet with Tomas Lilja
+    used: Why share of voice against share of market, and broad reach, matter for
+      growth
+  - title: Les Binet study notes
+    by: Les Binet sources, collected 2026
+    used: Rational and emotional messaging, and how the split depends on the brand
+version: 1.0.0
+example_pending: true

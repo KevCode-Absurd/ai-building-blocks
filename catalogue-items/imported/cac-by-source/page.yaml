@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It joins spend to orders, with some guesswork on sources.
 new_slug: cac-by-source
 name: Acquisition cost by source calculator
-summary: Add your ad spend. Get the cost to win a customer from each traffic source.
+summary: Add ad spend per source. Get the cost to win one new customer from each traffic source.
 job: run-your-store
 headline: Acquisition cost by source calculator
-subhead: Add your ad spend. Get the cost to win a customer from each traffic source.
+subhead: Add your ad spend per source, such as Google, Meta or TikTok, and point it at your Shopify store. It counts first-time buyers by landing page or referrer over the window you choose, reading orders only. You get cost per new customer and new-customer counts for each source in a table.
 explain: |
   For every traffic source, you see what it costs to win one new customer. Add your ad spend per source, such as Google, Meta or TikTok, and the skill matches it to new-customer orders from your Shopify store over the window you choose.
 

@@ -5,7 +5,7 @@ name: MATLAB camera capture helper
 summary: Say which camera. Get it connected and images or video captured in MATLAB.
 job: build-software
 headline: MATLAB camera capture helper
-subhead: Say which camera. Get it connected and images or video captured in MATLAB.
+subhead: Tell it the camera type and model, your operating system and whether you want stills or video. It lists the devices, connects through MATLAB's video input object, sets exposure and frame rate and grabs frames. You get listing, setup and capture code plus the support packages to install.
 explain: |
   A camera connected and capturing in MATLAB, whether it is a laptop webcam, a USB camera or an industrial GigE model. You get code that finds the device, sets it up and grabs a still image or video.
 

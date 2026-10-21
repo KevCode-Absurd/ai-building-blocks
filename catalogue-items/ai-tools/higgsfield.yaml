@@ -1,0 +1,53 @@
+slug: higgsfield
+name: Higgsfield
+maker: Higgsfield
+url: https://higgsfield.ai
+promise: Images and video clips from many top models, in one place.
+use_cases: [make-images, make-video]
+categories: [image, video]
+what_it_does:
+  - Makes video clips from a written description or a still image.
+  - Makes images from the same account.
+  - Copies the motion from one video onto your own character or product.
+  - Swaps one object in a clip and leaves the rest alone.
+  - Builds AI influencer characters and face swap or try-on clips.
+benefits:
+  - Test a video ad idea with several models before you pay for a shoot.
+  - Keep your product the same across clips by starting from your photo.
+  - Use one account instead of signing up for each model.
+best_for:
+  - Product ads and short clips for Reels, TikTok and Shorts.
+  - Teams that want to compare video models on the same idea.
+  - Making an AI character that appears across many clips.
+not_for:
+  - Long videos with one continuous take.
+  - Exact on-screen text, which still comes out wrong often.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: Free plan with daily credits and basic models only. Paid plans are sold as monthly credits, and third-party pages quote different prices, so check the page.
+works_with:
+  - kling
+  - veo
+  - seedance
+  - claude
+runs_in: [web, api]
+blocks:
+  - avatar-storyboard-planner
+  - video-ad-shot-list-maker
+  - anime-video-clip-prompt-writer
+  - weekly-video-ad-batch-maker
+  - talking-object-video-prompts
+  - claymation-video-prompts
+  - review-video-ad
+  - accurate-product-image-ad-maker
+  - product-photo-set-maker
+  - reference-product-photos
+  - weekly-image-ad-batch-maker
+  - marketing-image-prompt-writer
+alternatives: [kling, krea, freepik, runway]
+last_checked: 2026-10-21
+sources:
+  - https://higgsfield.ai/
+  - https://higgsfield.ai/pricing
+  - https://creatify.ai/blog/higgsfield-pricing-(2026)-plans-and-what-you-ll-actually-pay

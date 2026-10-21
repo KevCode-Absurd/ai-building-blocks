@@ -21,6 +21,9 @@ export function navigate(to: string, opts: { replace?: boolean } = {}) {
   const same = u.pathname === location.pathname;
   history[opts.replace ? "replaceState" : "pushState"](null, "", u.pathname + u.search + u.hash);
   window.dispatchEvent(new Event(CHANGE));
+  // pushState does not emit hashchange. Lazy sections and the landing correction
+  // need the same signal as a native anchor, even when the path stayed the same.
+  if (u.hash) window.dispatchEvent(new Event("hashchange"));
   requestAnimationFrame(() => {
     const el = u.hash ? document.getElementById(u.hash.slice(1)) : null;
     if (el) el.scrollIntoView({ behavior: same ? "smooth" : "auto" });

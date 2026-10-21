@@ -1,0 +1,111 @@
+new_slug: practice-session-minute-planner
+name: "Practice session minute planner"
+summary: "Paste the skill, the group and the time. Get a session planned minute by minute with one thing to fix."
+job: teach-and-train
+thinking: low
+thinking_why: "It arranges given basics into timed blocks from a fixed pattern."
+
+headline: "Practice session minute planner"
+subhead: "Paste the skill you are teaching, who is in the room, how long you have and the mistake that matters most. The prompt breaks the skill into basics, builds 5 to 12 minute blocks with what to watch for and what to say, places the fix where it gets the most repetitions, and ends with a live run."
+
+explain: |
+  Most training sessions are a talk, a demo and some unstructured practice that runs out of time. People leave having watched more than they did. John Wooden planned every minute of practice in advance and drilled the basics before anything else, and he said in public that the planning was most of the coaching.
+
+  This prompt does that planning for any skill. It sets one checkable goal, breaks the skill into three to five basics, and builds short blocks that each say the minutes, the drill, what the coach watches for and the one correction phrase. The thing to fix gets the most repetitions in the middle of the session with a before-and-after check. A live run at real speed comes near the end, then a two-minute close with one thing done well and one thing to practise. You also get a one-card version to hold.
+
+when:
+  - "You are training new support agents, sales reps or kitchen staff and have one hour."
+  - "You coach a team and the last session drifted."
+  - "The same mistake keeps happening and you want a session built around fixing it."
+
+you_give:
+  - "The skill, in one line"
+  - "The group: how many, level, last mistakes"
+  - "Minutes, room and equipment"
+  - "The one thing to fix (advised)"
+you_get:
+  - "A checkable session goal and the skill broken into basics"
+  - "Timed blocks with what to watch for and what to say"
+  - "The fix placed for repetitions, a live run, and a close"
+  - "A one-card version for the coach"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the skill and group under it."
+  - "Give the exact minutes and what went wrong last time."
+  - "Print the COACH'S CARD. Run the session from it, not from the full plan."
+  - "After the session, note what the live run showed and feed it into the next plan."
+
+how_it_works:
+  - title: "Sets the goal"
+    text: "One line on what each person will do correctly by the end."
+  - title: "Breaks the skill into basics"
+    text: "Three to five parts in the order they are done, with the fix marked."
+  - title: "Builds the blocks"
+    text: "Five to 12 minutes each, with the drill, what to watch for and the correction phrase."
+  - title: "Places the fix"
+    text: "Most repetitions, mid-session, with a before-and-after check."
+  - title: "Adds the live run"
+    text: "The whole skill at real speed, coach silent and noting."
+  - title: "Closes and writes the card"
+    text: "One thing done well, one to practise, and a one-card version of the plan."
+
+output_shape: |
+  SESSION GOAL    <one line>
+  BASICS          <parts, fix marked>
+  BLOCKS          <minutes | what | how | watch for | say this>
+  THE FIX         <where, reps, check>
+  LIVE RUN        <minute, conditions, notes>
+  CLOSE           <two lines>
+  COACH'S CARD    <one card>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Skill: answering a Sprout cancellation email so the customer leaves calm
+    and knows their options, in under five minutes per email.
+    Group: 3 support agents, two with six months experience, one new. Last
+    time the common mistakes were opening with "Unfortunately", quoting the
+    policy before acknowledging the customer, and forgetting to mention the
+    pause option.
+    Time and space: 60 minutes, a meeting room with a screen, each agent has
+    a laptop with the help desk in test mode and ten real anonymised cancel
+    emails to practise on.
+    The one thing to fix: the first sentence. It should name what the
+    customer said before anything about policy.
+  output: pending
+
+tweaks:
+  - what: "Last mistakes"
+    how: "Give them and the fix and the watch-for lines are specific to your group."
+  - what: "Minutes"
+    how: "Give the exact number. The blocks fill it with no gap."
+  - what: "Equipment"
+    how: "Say what is in the room. Drills only use what you have."
+
+judge:
+  - "The blocks add up to your minutes."
+  - "No block is over 12 minutes."
+  - "The first block is a basic done slowly."
+  - "The fix has the most repetitions."
+  - "Every correction phrase says what to do."
+
+test:
+  - "Run the session. Compare the live run with the first block. The fix should show."
+  - "Run it twice. The basics and the fix placement should match."
+  - "Give it no equipment. It should plan for a bare room and mark MISSING where it assumed anything."
+
+improve:
+  - "Add your own correction phrases, so the card uses words your group knows."
+  - "Keep the live-run notes and paste them in next time as the last mistakes."
+  - "Pair it with the Task rubric drafter to score the live run the same way each session."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message plan works in any strong chat AI."}
+  inputs:
+    - "A recording or transcript of the group doing the skill, for the real mistakes"
+    - "Your standard for the skill, written down, so the goal is checkable"

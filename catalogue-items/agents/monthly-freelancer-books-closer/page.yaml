@@ -1,0 +1,128 @@
+new_slug: monthly-freelancer-books-closer
+name: Monthly freelancer books closer
+summary: Give it the month's transactions. Get them sorted, checked against your budget and a cash forecast with the tax set aside.
+job: track-numbers
+thinking: high
+thinking_why: It applies your category rules the same way each month, spots what no rule covers and explains what moved. Mistakes here cost real money, so give it your strongest model.
+headline: Monthly freelancer books closer
+subhead: Give it last month's bank export, receipts and budget on the 3rd of each month. It sorts every line by your saved rules, matches receipts, sets aside tax, explains what moved and hands back a 90-day cash view. You approve every rule and nothing is posted.
+explain: |
+  If you work for yourself, the books are usually a bank export and a folder of receipts that get sorted in a panic before tax time. The same costs get filed under different names each month, tax is remembered late, and the cash in the bank includes money that was never yours.
+
+  This agent closes the month the same way every time. It sorts each transaction by the rules you have agreed, proposes a rule for anything new and waits for your yes. It matches the receipts you give it, takes the tax set-aside out first, and explains what moved against your budget in plain words. At quarter end it builds the statements your accountant checks. It never posts an entry or moves money.
+when:
+  - You run a one-person business or a small team and do your own books between client work.
+  - Your categories drift from month to month and your accountant keeps asking the same questions.
+  - You want to know, before the 10th, how much of the cash in the bank is really yours.
+you_give:
+  - Last month's bank and card export with date, description and amount
+  - Receipts and supplier invoices for the month (advised)
+  - Your budget by category (advised)
+  - Your tax set-aside rate and whether you charge sales tax or VAT (advised)
+  - Last month's sorted file and rules, once they exist
+you_get:
+  - Every transaction sorted, with new-rule and personal lines grouped at the top
+  - Receipt gaps, both ways
+  - The tax set aside this month and the running total
+  - A plain-words note on each category that moved against the budget
+  - A 30, 60 and 90 day cash forecast after the set-aside
+  - Statements for your accountant at quarter end
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to close last month.
+  - Export last month from your bank and card accounts. Put the files and receipts in one folder, or attach them in the chat.
+  - Tell it your tax set-aside rate once. It saves it.
+  - Read the proposed rules and say yes or no to each. Approved rules apply every month after.
+  - Run it again on the 3rd of next month. It reuses the rules and compares the months.
+how_it_works:
+  - title: Read last month
+    text: Opens the saved rules and last month's file, and picks up any line left unsure.
+  - title: Sort the month
+    text: Applies every saved rule, proposes a rule for anything new and groups personal spending on its own.
+  - title: Match the receipts
+    text: Pulls the fields from each receipt, matches it to a bank line and lists the gaps both ways.
+  - title: Set aside the tax
+    text: Takes the set-aside from the month's income at your rate and adds it to the running total.
+  - title: Explain what moved
+    text: Compares budget with actual by category and writes the reason for each big move in plain words.
+  - title: Forecast the cash
+    text: Builds the 30, 60 and 90 day view after the set-aside, with doubtful amounts marked.
+  - title: Build statements when due
+    text: At quarter end, turns the sorted months into a P&L, balance sheet and cash flow statement.
+  - title: Log and hand back
+    text: Saves the file and the rules you approved, then stops.
+output_shape: |-
+  THE MONTH
+    Income <amount> | spend <amount> | left <amount> | tax set aside <amount> (running <amount>)
+
+  NEW RULES TO APPROVE
+    <description pattern> -> <category>, <tax treatment> | <n> lines this month
+
+  PERSONAL LINES
+    <date> <description> <amount>
+
+  RECEIPT GAPS
+    No receipt: <n> lines over <limit> | No bank line: <n> receipts
+
+  WHAT MOVED
+    <category> | budget <amount> | actual <amount> | why: <reason>
+
+  CASH VIEW (after set-aside)
+    30 days <amount> | 60 days <amount> | 90 days <amount> | doubtful: <amount>
+
+  STATEMENTS
+    <P&L, balance sheet, cash flow | not due this month>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Close September for the card used by Sprout's small marketing team.
+    Practice numbers, not Sprout's real figures.
+    Card export, 41 lines, attached. Examples:
+    - 03 Sep  AD PLATFORM  -4,200.00
+    - 05 Sep  FREELANCE DESIGNER INV 118  -1,800.00
+    - 09 Sep  EMAIL TOOL MONTHLY  -249.00
+    - 14 Sep  CAFE NEAR OFFICE  -31.40
+    - 18 Sep  PRODUCT PHOTOS STUDIO  -2,400.00
+    - 30 Sep  TRANSFER FROM MAIN ACCOUNT  +15,000.00
+    Receipts attached: designer invoice 118, studio invoice, email tool.
+    Budget for September: ads 4,000; design 2,000; tools 600; photos 2,500.
+    Tax: no sales tax on these; set aside 0 (costs only, no income here).
+    Rules from last month: AD PLATFORM -> Paid ads; EMAIL TOOL -> Tools.
+  output: pending
+tweaks:
+  - what: Your category rules
+    how: The agent proposes, you approve. Ten agreed rules sort most months. Add one when a new kind of cost appears.
+  - what: Your set-aside rate
+    how: Give the share of income you put aside for tax. Without it the forecast shows money that is not yours.
+  - what: Receipt limit
+    how: Tell it the amount above which you need a receipt. Below that it stops nagging.
+  - what: Budget variance limit
+    how: Set how far a category must move before it gets a note. The default is a fifth.
+judge:
+  - Every transaction appears once and the totals match the export.
+  - No saved rule was changed without your yes.
+  - The set-aside uses your rate, or the agent says it is missing.
+  - The cash view shows what is left after tax, not before.
+  - Nothing was posted, paid or sent.
+test:
+  - Run it on a month you already closed by hand. Compare the categories.
+  - Add one personal purchase to the export. It should land in the personal group.
+  - Run it twice on the same export. The sorting should match line for line.
+improve:
+  - Write your category rules into the rules file before the first run, so month one is already consistent.
+  - Add your receipt limit and your accountant's category names, so the statements need no translation.
+  - At quarter end, give it the previous quarter's statements too, so it can show the change.
+  - Pair it with the Weekly invoice and cash chaser, which feeds the owed side of the cash view.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the rules and set-aside files between months and run on a schedule.
+    - name: Your bank's export
+      why: A CSV with date, description and amount is all it needs. Card and bank in separate files is fine.
+  inputs:
+    - Your accountant's chart of accounts, so categories match theirs
+    - A note of any one-off cost this month, so it is not read as a new pattern

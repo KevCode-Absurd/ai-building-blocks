@@ -1,0 +1,19 @@
+slug: zero-click-content-planner
+name: "Zero-click content planner"
+summary: "Paste what your buyers ask and where they hang out. Get a content plan that helps them without a click."
+category: general
+boards: []
+type: prompt
+role: plan
+job: strategy
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [rand-fishkin]

@@ -1,0 +1,39 @@
+slug: jasper
+name: Jasper
+maker: Jasper
+url: https://www.jasper.ai
+promise: On-brand marketing content, written by AI agents that know your voice.
+use_cases: [write-copy, run-ads]
+categories: [writing, marketing]
+what_it_does:
+  - Writes blog posts, emails, ads and social posts in a saved brand voice.
+  - Runs ready-made agents for jobs like SEO content, campaigns and research.
+  - Stores your brand rules, product facts and audiences in one place.
+  - Makes content in batches from a grid, for many pages at once.
+  - Makes on-brand product images and checks how your brand shows up in AI answers.
+benefits:
+  - Keep every writer and every channel in the same brand voice.
+  - Turn one brief into many pieces of content without starting over.
+  - Hand repeat marketing jobs to an agent and review the result.
+  - Give your team one source for product facts and brand rules.
+best_for:
+  - Marketing teams that publish a lot of content every week.
+  - Brands with a fixed voice and style guide to follow.
+  - Teams that want agents built for marketing jobs.
+not_for:
+  - One-off writing, where a general chat assistant costs less.
+  - Teams that need several seats on the entry plan, which means talking to sales.
+pricing:
+  model: subscription
+  from: US$59 per month
+  note: Pro is US$59 per seat when billed yearly, or US$69 billed monthly, with a 7-day free trial. Business is priced on request.
+works_with:
+  - chatgpt
+  - claude
+runs_in: [web, api, browser-extension]
+blocks: []
+alternatives: [copy-ai, grammarly, chatgpt, claude]
+last_checked: 2026-10-21
+sources:
+  - https://www.jasper.ai
+  - https://www.jasper.ai/pricing

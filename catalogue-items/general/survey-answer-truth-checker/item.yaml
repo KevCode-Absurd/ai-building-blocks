@@ -1,0 +1,18 @@
+slug: survey-answer-truth-checker
+name: "Survey answer truth checker"
+summary: "Paste your survey questions and results. Get a trust score out of 100, each weak answer and the fix."
+category: general
+boards: []
+type: prompt
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [rand-fishkin]

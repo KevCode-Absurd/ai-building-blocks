@@ -1,6 +1,6 @@
 slug: ad-pull-diagnoser
 name: "Ad pull diagnoser"
-summary: "Paste an ad that gets few replies. Get causes ranked by likelihood and cost to fix, starting with the headline."
+summary: "Paste an ad that gets few replies. Get its causes ranked by likelihood and cost to fix."
 category: general
 type: skill
 role: check

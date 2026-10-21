@@ -2,10 +2,10 @@ thinking: high
 thinking_why: A custom storefront has many linked design and code choices.
 new_slug: headless-store-builder
 name: Headless store builder
-summary: Describe the store you want. Get a fast custom storefront on Hydrogen, ready to host on Oxygen.
+summary: Describe the store you want. Get a fast custom Shopify storefront built on Hydrogen, with deploy steps.
 job: build-websites
 headline: Headless store builder
-subhead: Describe the store you want. Get a fast custom storefront on Hydrogen, ready to host on Oxygen.
+subhead: Give it your Shopify store domain, API token, design idea and page list. It sets up a Hydrogen project, a custom React storefront that talks to your Shopify store behind the scenes. You get the project, pages for home, product and collection, the product queries and deploy steps for Oxygen.
 explain: |
   A custom online storefront that loads fast and looks exactly how you want, connected to your Shopify store behind the scenes. Instead of using a theme, you build the front end yourself with React and Shopify's Hydrogen framework, then host it free on Shopify's Oxygen.
 

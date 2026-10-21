@@ -1,6 +1,6 @@
 new_slug: ai-fit-problem-checker
 name: "AI-fit problem checker"
-summary: "Describe a problem. Get a verdict on whether AI suits it, using three tests, and the data or simulator you would need."
+summary: "Describe a problem. Get a three-test verdict on whether AI suits it, and the data you would need."
 job: test-an-idea
 thinking: medium
 thinking_why: "It applies three fixed tests, but each answer needs judgement on the problem."

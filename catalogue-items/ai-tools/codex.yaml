@@ -1,0 +1,47 @@
+slug: codex
+name: Codex
+maker: OpenAI
+url: https://openai.com/codex
+promise: An AI coding agent that writes, tests and reviews code from your ChatGPT account.
+use_cases: [code, build-apps]
+categories: [coding]
+what_it_does:
+  - Takes a coding task, writes the change and runs the tests.
+  - Works in the command line, your code editor, the web and GitHub.
+  - Reviews code on GitHub and takes tasks from Slack.
+  - Runs several tasks at the same time.
+  - Can bill by API usage if you use your own API key.
+benefits:
+  - Start coding help with the ChatGPT plan you may already pay for.
+  - Hand off several small tasks and review the results later.
+  - Get a code review pass on every pull request.
+  - Pick pay-as-you-go through the API if a plan does not fit.
+best_for:
+  - Developers who already use ChatGPT.
+  - Teams that want coding help in GitHub and Slack.
+  - People who want to hand off tasks and come back to review them.
+not_for:
+  - Anyone who wants an app built with no code on screen.
+  - People who need to predict cost, since plans use credits and usage varies.
+pricing:
+  model: freemium
+  from: US$8 per month
+  note: Included with ChatGPT plans, from Free to Go (US$8), Plus (US$20) and Pro (from US$100) per month. Business is US$20 per user billed yearly. API-key use is billed by API pricing.
+works_with:
+  - chatgpt
+  - GitHub
+  - Slack
+runs_in: [desktop, web, api, slack]
+blocks:
+  - chatgpt-app-builder
+  - coding-agent-handoff-writer
+  - agent-context-setter
+  - token-saver-for-coding-agents
+  - competing-agent-racer
+  - ai-written-code-reviewer
+  - generated-code-reviewer
+alternatives: [claude-code, cursor, github-copilot, windsurf]
+last_checked: 2026-10-21
+sources:
+  - https://learn.chatgpt.com/docs/pricing
+  - https://developers.openai.com/codex/pricing

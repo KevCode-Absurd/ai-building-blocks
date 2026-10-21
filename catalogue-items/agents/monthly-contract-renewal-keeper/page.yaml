@@ -1,0 +1,124 @@
+new_slug: monthly-contract-renewal-keeper
+name: Monthly contract renewal keeper
+summary: Give it your vendor contracts each month. Get renewals and notice dates due, the traps in each and the asks to make.
+job: check-contracts
+thinking: high
+thinking_why: It reads contract wording, traces changes clause by clause and decides which renewals need action first. Give it your strongest model.
+headline: Monthly contract renewal keeper
+subhead: Give it the contracts you have signed with vendors, software providers and suppliers. Each month it builds the renewal calendar, puts closing notice windows first, traces what a vendor changed, flags the traps in anything renewing soon and prepares the asks. You renew, cancel or call. It never does.
+explain: |
+  Contracts are read once, at signing, and then forgotten until the renewal invoice arrives. By then the notice window closed three weeks ago, the price went up in a terms update nobody opened, and the tool is used by two people.
+
+  This agent reads every signed contract every month. It builds the calendar and puts any notice window closing within 45 days at the top. When a vendor sends new terms, it traces what changed clause by clause and flags a buried price rise. For software renewing within 90 days it flags renewal traps and data terms. For anything renewing within 60 days it writes a two-minute summary and the terms worth pushing for, or lists it as a cancel candidate if you barely use it. It never renews, cancels or contacts anyone. A lawyer checks anything you act on.
+when:
+  - You have a dozen or more vendor and software contracts and some renew without anyone deciding.
+  - A price rise arrived in a terms update and you found out from the invoice.
+  - You want to renegotiate supplier terms and need the asks ready before the call.
+you_give:
+  - Every signed vendor, software and supplier contract, with amendments and notices
+  - A register with dates, price and owner per contract, or let the first run build one (advised)
+  - One line per vendor on whether you still use it and would renew today (advised)
+  - Your cash picture, for supplier payment terms (optional)
+  - Last month's keeper file, once it exists
+you_get:
+  - A renewal calendar with notice windows closing in 45 days at the top
+  - What each vendor changed, clause by clause, since last month
+  - Renewal traps, price rises and data terms flagged for software renewing in 90 days
+  - A two-minute summary and the terms to push for on each renewal in 60 days
+  - Cancel candidates with their notice dates
+  - Broken vendor promises to raise on the call
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month.
+  - Put every signed contract in one folder, or attach them in the chat. Add your register if you have one.
+  - Add one line per vendor on whether you still use it. The cancel candidates depend on it.
+  - Read the notice windows first. Decide, act in your own tools, then tell the agent the outcome.
+  - Run it again on the first Monday of next month. It records what happened and tracks promises.
+how_it_works:
+  - title: Read last month
+    text: Records how each renewal and notice ended, and whether vendor promises were kept.
+  - title: Build the calendar
+    text: Maps every renewal and notice date, lists terms worth pushing for, and puts windows closing in 45 days first.
+  - title: Trace what changed
+    text: For any new terms, amendment or price notice, shows what changed and each clause's latest wording.
+  - title: Check the software renewals
+    text: Flags renewal traps, price rises, uptime and data terms in subscriptions renewing within 90 days.
+  - title: Prepare the asks
+    text: Writes a two-minute summary per renewal in 60 days, lists cancel candidates, and plans supplier payment terms where cash matters.
+  - title: Log and hand back
+    text: Updates the register and promises files, then stops for your yes.
+output_shape: |-
+  THIS MONTH
+    <n> contracts | <n> renew in 90 days | <n> notice windows close in 45 days | <value> at stake
+
+  NOTICE WINDOWS FIRST
+    <vendor> | notice by <date> | renews <date> | <price> | still use: <yes | barely | no> | call: <renew | renegotiate | cancel candidate>
+
+  WHAT CHANGED
+    <vendor> | <amendment | new terms | price notice> on <date> | clause <n>: <old> -> <new> | matters because: <one line>
+
+  SOFTWARE TRAPS (renewing in 90 days)
+    <vendor> | <auto-renew term | price rise | uptime | data> | <wording> | ask: <what>
+
+  ASKS (renewing in 60 days)
+    <vendor> | summary: <two minutes> | push for: <term>, <term> | payment terms: <float, ask, split>
+
+  BROKEN PROMISES
+    <vendor> | promised <what> on <date> | <not kept> | raise on the call
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run October for Sprout's vendor contracts. Practice contracts and
+    numbers, not Sprout's real ones.
+    Contracts attached:
+    - Email and SMS platform: 12-month term from 1 Dec 2025, auto-renews,
+      60 days notice, $2,400 a month. New terms emailed 20 Sep: "pricing
+      tier adjusts with contact count; see schedule B".
+    - Subscription management app: month to month, $349, no notice period.
+    - Co-packer supply agreement: 24 months from 1 Mar 2025, renews 1 Mar
+      2027, 120 days notice, minimum 40,000 pouches a quarter, net 15.
+      Promised a 3% rebate on volume over 50,000 in Q2; no credit seen.
+    - Third-party testing lab: annual, renews 15 Dec, 30 days notice,
+      $18,000 a year.
+    - Review widget: annual, renews 10 Nov, 30 days notice, $5,900 a year.
+    Still use: email platform yes; sub app yes; co-packer yes; lab yes;
+    review widget "barely, we moved reviews to the new theme".
+    Cash: payments to the co-packer land before retailer receipts.
+  output: pending
+tweaks:
+  - what: Notice window warning
+    how: The agent flags windows closing in 45 days. Set 60 or 90 if your approvals are slow.
+  - what: Still use it lines
+    how: One line per vendor turns the calendar into decisions. Without them every renewal is a question.
+  - what: Software check window
+    how: Subscriptions renewing in 90 days get the trap check. Widen it for big contracts.
+  - what: Promises file
+    how: Record every rebate, credit or uptime promise when it is made. The agent checks it on the next renewal.
+judge:
+  - Every date comes from the contract or the register.
+  - Closing notice windows are at the top.
+  - Each traced change names the clause.
+  - Every summary says it is a first check, not legal advice.
+  - Nothing was renewed, cancelled, signed or sent.
+test:
+  - Give it a contract with a notice window closing in 30 days. It should be the first line.
+  - Give it a terms update with a buried price change. It should trace it to the clause.
+  - Run it twice on the same contracts. The calendar and flags should match.
+improve:
+  - Build the register once from the contracts and have an owner check every date.
+  - Add your approval speed to set the notice warning window.
+  - Record each vendor promise the day it is made in the promises file.
+  - Pair it with the Contract intake reviewer, which reads a contract once when it arrives; this one keeps reading it every month.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the register and promises files between months and read the contracts folder directly.
+    - name: Any good chat AI
+      why: Paste the agent and the contracts renewing soon. Keep the register in a spreadsheet yourself.
+  inputs:
+    - Vendor emails about terms changes, saved as text
+    - Usage per software seat, so cancel candidates are real

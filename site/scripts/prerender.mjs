@@ -17,6 +17,7 @@ const shell = fs.readFileSync(path.join(DIST, "index.html"), "utf8")
 // The same page without the app: for hubs and the 404 page, which are complete as plain HTML.
 const plainShell = shell.replace(/<script type="module"[^>]*><\/script>\s*/g, "").replace(/<link rel="modulepreload"[^>]*>\s*/g, "").replace(/<link rel="preload" href="\/data\/blocks.json"[^>]*>\s*/, "");
 const cat = JSON.parse(fs.readFileSync("public/data/blocks.json", "utf8"));
+const aiTools = JSON.parse(fs.readFileSync("public/data/ai-tools.json", "utf8"));
 const bySlug = Object.fromEntries(cat.blocks.map((b) => [b.slug, b]));
 const { TOOLS } = await import("../../mini-tools/index.mjs");
 const TASK_NAMES = Object.fromEntries([...fs.readFileSync("src/lib/data.ts", "utf8").split("export const TASKS")[1].split("];")[0].matchAll(/\{ id: "([^"]+)", name: "([^"]+)" \}/g)].map((m) => [m[1], m[2]]));
@@ -70,6 +71,18 @@ const list = (items) => (items.length ? `<ul>${items.map((x) => `<li>${x}</li>`)
 const link = (b) => `<a href="${hrefOf(b)}">${esc(b.name)}</a>`;
 
 function pageFor(url) {
+  if (url === "/ai-tools") return {
+    title: "AI tools for your work", h1: "Find the right AI product for the job", collection: true,
+    desc: `${aiTools.tools.length} AI products with their uses, pricing notes, sources and related skills. Find a product for the work you need done.`,
+    body: `<p class="bp-sub">AI products by job, with pricing notes and sources.</p>${list(aiTools.tools.map((t) => `<a href="/ai-tools/${esc(t.slug)}">${esc(t.name)}</a>: ${esc(t.promise)}`))}`,
+  };
+  if (url.startsWith("/ai-tools/")) {
+    const t = aiTools.tools.find((t) => `/ai-tools/${t.slug}` === url);
+    if (!t) return null;
+    return { title: `${t.name} for your work`, h1: t.name, desc: `${t.promise} Read what ${t.name} does, who it suits, pricing notes and related skills.`, crumbs: [["AI tools", "/ai-tools"]],
+      body: `<p class="bp-sub">${esc(t.promise)}</p><h2>What it does</h2>${list(t.does.map(esc))}<h2>Best for</h2>${list(t.bestFor.map(esc))}<h2>Pricing</h2><p>${esc(t.pricing.from)}. ${esc(t.pricing.note)}</p><h2>Related skills</h2>${list(t.blocks.map((b) => `<a href="${esc(b.path)}">${esc(b.name)}</a>`))}<p><a href="${esc(t.url)}">Open ${esc(t.name)}</a></p>`,
+    };
+  }
   if (STATIC[url]) {
     const [t, d] = STATIC[url];
     let extra = "";

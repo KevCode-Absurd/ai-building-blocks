@@ -1,0 +1,31 @@
+slug: customer-onboarding-keeper
+name: "Customer onboarding keeper"
+summary: "Give it each week's new-customer cohort. Get where they stall in the first 30 days and one fix to approve."
+category: agent
+type: agent
+role: orchestrate
+job: email
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: plan}
+  - {type: email_flow}
+  - {type: audit_report}
+uses: [customer-onboarding-planner, cohort-funnel-reader, retention-problem-fixer, first-use-onboarding-designer, new-customer-onboarding-sequence-writer, feedback-theme-finder]
+steps:
+  - {uses: customer-onboarding-planner, note: "Once: the onboarding steps, milestones and owners that every later cohort is measured against. Skipped if a plan exists."}
+  - {uses: cohort-funnel-reader, note: "Every week: each sign-up week's path through the onboarding steps, which step lost the most, and whether last week's fix moved it."}
+  - {uses: feedback-theme-finder, note: "Only when new-customer messages or survey answers were given: the themes behind the stall, with quotes."}
+  - {uses: retention-problem-fixer, note: "Only when the same step has lost the most two weeks running: the cause and the fix to onboarding or habit."}
+  - {uses: first-use-onboarding-designer, note: "Only when the stall is in the product's first use, before the first win: a redesigned first-use flow."}
+  - {uses: new-customer-onboarding-sequence-writer, note: "Only when the stall is after the first win, or no sequence exists: the 14-day email and SMS plan rewritten for that step."}
+schedule: "Every Monday, after the week's sign-ups and their first steps are exported"
+asks_before: [sending or turning on any email, text or in-app message, changing the product's onboarding flow, offering a credit or extension, contacting any customer directly, changing the plan file]
+minds: [eric-ries]
+origin: own
+version: 1.0.0
+example_pending: true

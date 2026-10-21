@@ -1,0 +1,47 @@
+slug: shopify-magic
+name: Shopify Magic
+maker: Shopify
+url: https://www.shopify.com/magic
+promise: Product copy, photos and store tasks done inside your Shopify admin
+use_cases: [write-copy, make-images, sell-and-support]
+categories: [marketing]
+what_it_does:
+  - Writes product descriptions from a few details you give it.
+  - Upgrades phone photos into studio-style product shots.
+  - Suggests themes and layouts, and edits your store design.
+  - Writes ShopifyQL queries so you can ask questions of your sales data.
+  - Sets up discounts, collections, email campaigns and low-stock alerts through Sidekick.
+benefits:
+  - Fill a catalogue with product descriptions in one sitting.
+  - Get cleaner product photos without booking a shoot.
+  - Ask your store a question and get an answer without learning a query language.
+  - Finish routine admin jobs by typing what you want done.
+best_for:
+  - Shopify owners running a store alone or with a small team.
+  - Catalogues that need many product pages written quickly.
+  - New stores that need a theme and first pages.
+not_for:
+  - Stores on other platforms, since it only works inside Shopify.
+  - Brand voice work that needs heavy editing of each draft.
+pricing:
+  model: subscription
+  from: Included with a Shopify plan
+  note: Sidekick, Shopify's assistant, is included with every Shopify plan at no separate charge. Features and usage limits vary by plan, and you need a Shopify plan to use it.
+works_with:
+  - Shopify
+  - klaviyo
+  - canva
+runs_in: [web, mobile]
+blocks:
+  - shopify-store-setup-planner
+  - shopify-theme-picker
+  - shopify-dashboard-reader
+  - shopify-landing-page-builder
+  - product-title-cleaner
+  - product-category-assigner
+  - ai-ready-product-page-editor
+alternatives: [klaviyo, chatgpt, claude, canva]
+last_checked: 2026-10-21
+sources:
+  - https://www.shopify.com/magic
+  - https://www.shopify.com/pricing

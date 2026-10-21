@@ -2,10 +2,10 @@ thinking: low
 thinking_why: It filters orders by dates and status.
 new_slug: survey-ready-order-finder
 name: Survey-ready order finder
-summary: Run it on your orders. Get the buyers 7 to 14 days after delivery who should get a survey, minus refunds.
+summary: Point it at your store orders. Get buyers delivered 7 to 14 days ago, minus refunds and cancellations.
 job: run-your-store
 headline: Survey-ready order finder
-subhead: Run it on your orders. Get the buyers 7 to 14 days after delivery who should get a survey, minus refunds.
+subhead: Point it at your store's order data. It reads orders through the API, keeps those fulfilled 7 to 14 days ago and drops anything refunded or cancelled. It changes nothing in your store. You get the eligible orders and customers, counts of what was excluded, and a read-only log.
 explain: |
   A list of customers who got their order 7 to 14 days ago and are ready for a post-purchase survey, with refunded and cancelled orders left out. It reads your store and changes nothing.
 

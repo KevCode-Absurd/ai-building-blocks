@@ -1,0 +1,28 @@
+slug: take-over-a-team-as-its-new-leader
+name: "Take over a team as its new leader"
+summary: "Give it the team and your brief. Get a first message, a listening tour and results agreements."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: feedback_notes, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: plan}
+uses: [new-leader-first-message-writer, listen-first-talk-planner, wartime-or-peacetime-check, results-agreement-writer]
+steps:
+  - {uses: new-leader-first-message-writer, note: "Who you are, how you work, what you will not change yet and when the team will hear more, in the manner of Satya Nadella's first-day email."}
+  - {uses: listen-first-talk-planner, note: "A one-to-one with each person that hears them first: what works, what is broken, what they would change, what they need from you."}
+  - {uses: wartime-or-peacetime-check, note: "Whether the team is in peacetime or wartime in Ben Horowitz's terms, the evidence for the call, and what it changes about how you lead this quarter."}
+  - {uses: results-agreement-writer, note: "A results agreement per person in Stephen Covey's manner: the result, the guidelines, the resources, how it is measured and what follows, written with them."}
+origin: own
+version: 1.0.0
+minds: [satya-nadella, mary-barra, stephen-covey, ben-horowitz]
+credits:
+  - {title: "Email to employees on his first day as CEO (February 4, 2014)", by: "Satya Nadella", url: "https://news.microsoft.com/2014/02/04/satya-nadella-email-to-employees-on-first-day-as-ceo/", used: "A first message that says who you are, how you work and what comes next, before any plan"}
+  - {title: "Peacetime CEO/Wartime CEO (April 14, 2011)", by: "Ben Horowitz", url: "https://a16z.com/peacetime-ceo-wartime-ceo/", used: "Read whether the situation is peacetime or wartime before choosing how to lead"}
+example_pending: true

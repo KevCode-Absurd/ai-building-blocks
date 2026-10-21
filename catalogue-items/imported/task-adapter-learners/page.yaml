@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It changes the support but keeps the learning goal the same.
 new_slug: task-adapter-learners
 name: Task adapter for different learners
-summary: Give it a task and a learner need. Get an adapted task with the same goal. It does not diagnose anyone.
+summary: Give it a task and a learner need. Get the same task adapted, with the learning goal unchanged.
 job: teach-and-train
 headline: Task adapter for different learners
-subhead: Give it a task and a learner need. Get an adapted task with the same goal. It does not diagnose anyone.
+subhead: Give it the task, the learning objective and the learner need, such as EAL or dyslexia. It keeps the objective fixed and changes only how the student gets there. You get the adapted task, what changed and why, and extra scaffolds or stretch prompts. It does not diagnose anyone.
 explain: |
   The same classroom task, reshaped for a learner who needs more support, more stretch or a different way in, with the learning goal left untouched. You avoid giving a student an easier task that teaches less.
 

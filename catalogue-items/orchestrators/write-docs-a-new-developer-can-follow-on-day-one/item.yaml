@@ -1,0 +1,25 @@
+slug: write-docs-a-new-developer-can-follow-on-day-one
+name: "Write docs a new developer can follow on day one"
+summary: "Give it the codebase. Get an architecture read, a README with decisions, a quickstart and a first-run test."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: codebase, required: true}
+  - {type: question, required: true}
+  - {type: document, required: false}
+outputs:
+  - {type: document}
+  - {type: test_report}
+uses: [codebase-architecture-reviewer, readme-and-decision-interviewer, codebase-onboarding-guide-writer, developer-quickstart-writer, readme-first-run-tester]
+steps:
+  - {uses: codebase-architecture-reviewer, note: "The parts of the codebase, how they talk, where things live and what is unusual, written for someone who has never seen it."}
+  - {uses: readme-and-decision-interviewer, note: "A README that records the decisions behind the structure and their reasons, from your answers, so nobody reverses one by accident."}
+  - {uses: codebase-onboarding-guide-writer, note: "A guide to the code for the new developer: where to start reading, the main flows, the conventions, the gotchas."}
+  - {uses: developer-quickstart-writer, note: "The shortest path from a clean machine to a running app and a passing test, with every command and expected output."}
+  - {uses: readme-first-run-tester, note: "Follows the quickstart on a clean setup as a newcomer would, and reports every step that breaks, is missing or assumes knowledge."}
+origin: own
+version: 1.0.0
+example_pending: true

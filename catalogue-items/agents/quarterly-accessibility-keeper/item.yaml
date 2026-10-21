@@ -1,0 +1,27 @@
+slug: quarterly-accessibility-keeper
+name: "Quarterly accessibility keeper"
+summary: "Give it your site each quarter. Get accessibility gaps ranked, last quarter's fixes checked and a statement kept current."
+category: agent
+type: agent
+role: orchestrate
+job: design
+level: intermediate
+inputs:
+  - {type: web_page, required: true}
+  - {type: codebase, required: false}
+  - {type: design_direction, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [accessibility-standards-checker, accessibility-checker, colour-contrast-checker, federal-accessibility-checker]
+steps:
+  - {uses: accessibility-standards-checker, note: "Every quarter: WCAG gaps by level across the site, what to fix first and notes for the accessibility statement, compared with last quarter."}
+  - {uses: accessibility-checker, note: "Every quarter, on the pages that matter most and any page changed since last time: a ranked list of problems against WCAG 2.2, with fixes proposed, never applied."}
+  - {uses: colour-contrast-checker, note: "Only when colour tokens exist or the palette changed: every light and dark pair checked, with the closest passing colours."}
+  - {uses: federal-accessibility-checker, note: "Only when you sell to government or a buyer asks for Section 508: the gaps, a fix plan and notes for the report."}
+schedule: "First week of each quarter, and after any redesign"
+asks_before: [changing any page, code or colour, publishing or changing the accessibility statement, sending a report to a buyer or regulator, buying an audit or an overlay tool, claiming a conformance level]
+minds: [jakob-nielsen]
+origin: own
+version: 1.0.0
+example_pending: true

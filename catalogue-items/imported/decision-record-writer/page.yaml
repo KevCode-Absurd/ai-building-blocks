@@ -5,7 +5,7 @@ name: Decision record writer
 summary: Tell it a design choice you made. Get a short record of why, with the options you passed on.
 job: build-software
 headline: Decision record writer
-subhead: Tell it a design choice you made. Get a short record of why, with the options you passed on.
+subhead: Tell it about a design or technology choice, the options you considered and your reasons. It checks your project for an existing record format and matches it. You get a short decision record with the context, the rejected options, the trade-offs you accepted and a suggested file name and place.
 explain: |
   A short written record of why you chose option A over option B, so nobody has to ask in six months. Tell it about a design or technology choice and you get a record of the context, the options you passed on and the trade-offs you accepted.
 

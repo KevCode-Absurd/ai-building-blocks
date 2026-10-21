@@ -1,0 +1,176 @@
+new_slug: monthly-lost-deal-reviewer
+name: Monthly lost deal reviewer
+summary: Give it last month's lost deals and your pitch. Get the real reasons, a
+  revised pitch and the objection answers to add.
+job: sell-and-negotiate
+thinking: high
+thinking_why: It must see past the reason a buyer gave, weigh losses against
+  wins and revise a pitch without turning it into a list of defences. Give it
+  your strongest model.
+headline: Monthly lost deal reviewer
+subhead: Give it last month's lost deals, the buyers' words and your current
+  pitch. It grades each loss so a buyer with no urgency is not read as a lesson,
+  finds the fixable cause behind the real losses, revises the pitch from the
+  doubts that repeat and writes a rule when the loss was your own mistake.
+explain: >
+  Lost deals get a one-word reason in the CRM and are never opened again.
+  "Price." "Timing." The reason the buyer gave is almost never the cause, and
+  half the losses were buyers who were never going to act this quarter. So the
+  pitch gets rewritten around the wrong lesson, or not at all.
+
+
+  This agent reads the losses on the first Monday of each month. It grades each
+  buyer by urgency first, so a no-urgency loss teaches about qualification
+  rather than the pitch. For the real losses it asks why against the notes until
+  it reaches a cause you can fix. It ranks the doubts behind the month's nos,
+  revises the pitch where the nos touched it, and writes the advice question to
+  open the next conversation. A doubt that appears three times gets an answer
+  with proof. A loss that was your own mistake gets a rule. Once a quarter it
+  checks the edge against the wins too, because losses alone pull a pitch toward
+  defence. It never contacts a lost buyer.
+when:
+  - You lose deals and the CRM reason is one word nobody reads again.
+  - Your pitch has not changed in a year and the doubts you hear have.
+  - You keep losing to the same objection and have no proof-backed answer for it.
+you_give:
+  - Last month's lost deals with buyer type, stage, reason, rival, urgency and
+    notes
+  - Your current pitch, deck or proposal template as text
+  - The buyers' own words on why, as close to verbatim as you have (advised)
+  - The quarter's won deals with reasons, at quarter end (advised)
+  - The register, once it exists
+you_get:
+  - Each lost deal graded A, B or C by urgency, and whether qualification or the
+    pitch is the first lesson
+  - The fixable cause behind each real loss, not the reason given
+  - A revised pitch with what changed, why, and the advice question for the next
+    buyer
+  - Proof-backed answers to doubts that repeat, with missing proof marked
+  - A quarterly check on whether your edge is real, from wins and losses
+  - A rule for each loss that was your own mistake
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in
+    .claude/agents, then ask it to review last month.
+  - Export last month's lost deals from your CRM with notes and urgency. Put
+    them in one folder with your pitch, or attach them in the chat.
+  - Paste the buyers' words where you have them.
+  - Read the grades first. If most losses are Cs, fix who gets a proposal before
+    you touch the pitch.
+  - Approve the revision and the answers you agree with. Share them with the
+    team yourself. Run it again next month.
+how_it_works:
+  - title: Grade the losses
+    text: Each lost buyer graded A, B or C by how soon they needed to act. More than
+      half Cs makes qualification the first lesson.
+  - title: Find the cause behind the real losses
+    text: A chain of whys against the notes for each A and B loss, ending in a cause
+      you can fix.
+  - title: Revise the pitch
+    text: Ranks the doubts behind the month's nos, revises the pitch where they
+      touched it, and writes the advice question for the next buyer.
+  - title: Answer the doubts that repeat
+    text: A doubt in three or more losses gets an answer with proof, or a
+      missing-proof mark.
+  - title: Check the edge quarterly
+    text: From wins and losses together, whether the edge is real and which claims
+      buyers chose you for.
+  - title: Write a rule for your own mistakes
+    text: For a late proposal, a wrong price or the wrong person pitched, the root
+      cause and a rule to check next time.
+  - title: Log and hand back
+    text: Updates the register, pitch and rules, then stops for your yes.
+output_shape: >-
+  THE MONTH
+    <n> lost | A <n> | B <n> | C <n> | top cause: <cause> | first lesson: <qualification | the pitch>
+
+  THE CAUSES (A and B losses)
+    <deal> | grade <A | B> | reason given: "<word>" | cause found: <what> | doubt behind it: <what> | buyer's words: "<quote>"
+
+  THE REVISED PITCH
+    changed: <section> from <old> to <new> | because: <the no that drove it>
+    advice question for the next buyer: "<question>"
+
+  OBJECTION ANSWERS
+    "<doubt>" (<n> losses) | answer: <one line> | proof: <what> | or MISSING: proof
+
+  THE EDGE (quarterly)
+    buyers chose you for: <claim> (<n> wins) | losses blamed: <claim> | verdict: <real | thin>
+
+  RULES
+    new: <mistake> -> rule: <one line>
+    broken again: <rule> | ask why
+
+  THE REGISTER
+    <cause> | <n> this month | <n> over 3 months
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Review September for Sprout's wholesale team. Practice deals, not
+    Sprout's real ones. Rivals described, never named.
+    Lost deals (6):
+    - Regional grocery chain A, 40 stores, stage: proposal, reason: "going
+      with another gummy", rival: big-name greens powder brand's new
+      gummy, urgency: planogram reset in October (A). Words: "their brand
+      pulls shoppers in on its own".
+    - Gym chain, 12 sites, stage: tasting, reason: "price", rival: none,
+      urgency: "maybe next year" (C).
+    - Pharmacy chain, stage: proposal, reason: "price per bottle", rival:
+      doctor-backed grocery gummy at $25 to $30 (B). Words: "yours is
+      $20 for 12 packs, theirs is $25 for 50 gummies, my buyer compares
+      the bottle".
+    - Online marketplace, stage: intro, reason: "timing" (C).
+    - Grocery chain B, stage: proposal, reason: "timing", urgency: reset
+      in September, our proposal arrived 4 days after the reset (A).
+    - Corporate wellness buyer, stage: proposal, reason: "sugar-free
+      concerns", urgency: January programme (B).
+    Pitch attached (deck, 14 slides, leads with the 61% off consumer
+    offer, then the study, then third-party testing).
+  output: pending
+tweaks:
+  - what: Urgency per deal
+    how: Record how soon each buyer needed to act. The grade decides whether a loss
+      teaches about the pitch at all.
+  - what: Buyers' words
+    how: One verbatim line per loss turns a reason into a cause.
+  - what: Repeat rule
+    how: Three losses with the same doubt earn an answer. Set two if your deal count
+      is low.
+  - what: Won deals
+    how: Give them at quarter end. A pitch revised from losses alone becomes a list
+      of defences.
+judge:
+  - Every lost deal has a grade.
+  - Every cause came from a chain of whys, not the CRM reason.
+  - The revision names what changed and the no behind it.
+  - Every objection answer has proof or a missing mark.
+  - Nothing was sent, changed or written to the CRM.
+test:
+  - Give it a lost deal with no urgency. It should grade it C and draw no pitch
+    lesson from it.
+  - Give it three losses with the same doubt. It should write one proof-backed
+    answer.
+  - Run it twice on the same deals. The causes should match.
+improve:
+  - Add an urgency field and a buyer's-words field to every lost deal in your
+    CRM.
+  - Keep your proof per claim in one file, so objection answers have something
+    to point at.
+  - Record what the next buyers said to the advice question. The following
+    month's revision reads it.
+  - Pair it with the Quarterly battle card keeper, which reads the same deals
+    rival by rival.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the register, pitch and rules files between months and run on
+        the first Monday.
+    - name: Your CRM
+      why: Export lost deals with stage, reason, rival, urgency and notes.
+  inputs:
+    - Lost-deal emails from buyers, pasted as written
+    - What the next three buyers answered when asked for advice

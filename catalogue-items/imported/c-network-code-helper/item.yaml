@@ -1,6 +1,6 @@
 slug: c-network-code-helper
 name: C++ network code helper
-summary: Describe the networking job. Get safe Boost.Asio code for servers, clients, timers and secure connections.
+summary: Describe the networking job. Get C++ Boost.Asio code that compiles on your version of Boost.
 category: general
 boards: []
 type: skill

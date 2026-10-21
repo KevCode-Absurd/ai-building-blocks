@@ -1,0 +1,114 @@
+new_slug: write-docs-a-new-developer-can-follow-on-day-one
+name: Write docs a new developer can follow on day one
+summary: Give it the codebase. Get an architecture read, a README with decisions, a quickstart and a first-run test.
+job: document-work
+thinking: high
+thinking_why: It must understand a codebase and explain it accurately to a stranger. Give it your strongest model.
+headline: Write docs a new developer can follow on day one
+subhead: Give it the codebase. It reads the architecture, interviews you for the decisions behind it and writes the README, writes an onboarding guide to the code, writes a quickstart that gets a developer to a running app, then follows the quickstart on a clean machine and reports where it breaks.
+explain: |
+  Most codebases have a README that was true on day one and a set of decisions that live in one person's head. A new developer spends their first week asking that person, who is also the person with the least time.
+
+  This workflow writes the docs a newcomer actually needs, then proves they work. It reads the codebase and describes how it is built: the parts, how they talk, where things live. It interviews you for the decisions behind the structure and records them in the README, so nobody reverses one by accident. It writes an onboarding guide to the code and a quickstart that gets to a running app. Then it follows the quickstart on a clean setup, as a newcomer would, and reports every step that breaks or assumes knowledge, so you fix them before the new developer starts.
+when:
+  - Someone starts in two weeks and the README is two years old.
+  - You are the only person who knows why the code is shaped this way.
+  - Your last new developer took a month to run the app.
+you_give:
+  - The codebase, in a folder the AI can open
+  - Fifteen minutes to answer questions about the decisions behind it
+  - Who the new developer is and what they already know
+  - Your current README and docs, if any (optional)
+you_get:
+  - "An architecture read: the parts, how they talk and where things live"
+  - A README that records the decisions and their reasons
+  - An onboarding guide to the code and a quickstart to a running app
+  - A first-run test report with every step that broke
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Open the codebase in Claude Code and start. It reads the architecture and asks you about the decisions.
+  - Read the guide and the quickstart. Fix anything that is wrong about your setup.
+  - Read the first-run report and fix every broken step before the new developer starts.
+how_it_works:
+  - title: Read the architecture
+    text: Describes the parts of the codebase, how they talk and where things live, for a newcomer.
+  - title: Answer the interview
+    text: A pause. Answer its questions about why the code is shaped this way. Fifteen minutes is enough.
+  - title: Record the decisions
+    text: Interviews you for the decisions behind the structure and writes them into the README with their reasons.
+  - title: Write the onboarding guide
+    text: "Writes a guide to the code: where to start reading, the main flows, conventions and gotchas."
+  - title: Write the quickstart
+    text: Writes the shortest path from a clean machine to a running app, with every command and expected output.
+  - title: Test the first run
+    text: Follows the quickstart on a clean setup and reports every step that breaks or assumes knowledge.
+output_shape: |-
+  STEP 1: ARCHITECTURE
+    Parts: <...> | How they talk: <...> | Where things live: <...> | Unusual: <...>
+
+  PAUSE: answer the interview about the decisions
+
+  STEP 2: README
+    What it is | Decisions: <decision, reason, date> | Don't: <what not to change and why>
+
+  STEP 3: ONBOARDING GUIDE
+    Start reading at: <...> | Main flows: <...> | Conventions: <...> | Gotchas: <...>
+
+  STEP 4: QUICKSTART
+    Step <n>: <command> | Expect: <output> | If not: <...>
+
+  STEP 5: FIRST-RUN REPORT
+    Step <n>: <passed / broke: how> | Assumed knowledge: <...> | Fix: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. Our codebase is the internal tool that watches our site for discount contradictions (announcement bars, pop-ups, product pages, ads), stores a history and sends a weekly email.
+    Stack as far as I know: a scheduled scraper of our own pages, a small database, a web dashboard, an email job. Built by a contractor over four months; he left notes in a few files.
+    New developer: starts 10 November, mid-level, knows the language, has never seen the project.
+    Current README: three lines and a command that no longer works.
+    Decisions I remember: we store every scan, not only changes, because we needed history for a dispute; the dashboard has no login because it only runs on our office network; the email job runs Monday 7am because that's when I read it.
+    Codebase is open in Claude Code.
+  output: pending
+tweaks:
+  - what: The interview answers
+    how: Give the reason for each decision, even if it is "we were in a hurry". A recorded reason stops a silent reversal.
+  - what: The new developer
+    how: Say what they know. The guide skips what they know and spends words on what is specific to you.
+  - what: A clean setup
+    how: Say what a clean machine looks like for you (OS, what is installed). The first-run test uses it.
+  - what: Your current docs
+    how: Paste them. The README keeps what is still true.
+judge:
+  - The architecture read names every main part and how it talks to the others.
+  - Every decision in the README has a reason and came from you.
+  - The quickstart gives the expected output for every command.
+  - The first-run report tried every step and says which broke.
+  - A developer who has never seen the project could follow the guide without asking you.
+test:
+  - Give the quickstart to someone outside the project. Do they get to a running app?
+  - Delete a required environment variable and run step 5. It should catch the broken step.
+  - Run step 1 twice. The list of parts should match.
+  - Read the README's decisions a month later. Would you still agree with each reason?
+improve:
+  - Add a decision to the README every time you make one. The interview gets shorter.
+  - Run step 5 after every big change so the quickstart stays true.
+  - Save your clean-machine description so the first-run test is the same every time.
+  - Pair it with "Write a procedure, test it and build a training deck" for the operational side of the system.
+works_best_with:
+  tools:
+    - name: Claude Code or another coding agent
+      why: The steps read and change files in the project.
+    - name: A clean machine or container
+      why: The first-run test only means something on a setup without your local state.
+  inputs:
+    - The contractor's or last developer's notes
+    - Your deploy and environment setup
+    - Past questions from new developers
+terms:
+  - term: Quickstart
+    meaning: The shortest set of steps from a clean machine to the app running.

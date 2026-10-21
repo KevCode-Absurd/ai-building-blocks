@@ -1,0 +1,23 @@
+slug: get-a-stuck-learner-moving-again
+name: "Get a stuck learner moving again"
+summary: "Give it the learner's work. Get a diagnosis, one-step hints, a task ladder and a study plan."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: brief, required: true}
+  - {type: source_text, required: true}
+outputs:
+  - {type: feedback_notes}
+  - {type: plan}
+uses: [stuck-point-diagnosis-coach, step-by-step-hint-writer, confidence-building-task-ladder, study-session-planner-and-review]
+steps:
+  - {uses: stuck-point-diagnosis-coach, note: "Where the learner's thinking breaks, with the evidence from their own attempts, and the earlier step they are missing."}
+  - {uses: step-by-step-hint-writer, note: "Hints in order, each revealing one step, so the learner does the work and the last hint still does not give the answer."}
+  - {uses: confidence-building-task-ladder, note: "Tasks from where the learner can succeed today up to the hard problem, each one step harder, with what success looks like."}
+  - {uses: study-session-planner-and-review, note: "Short sessions across the week, each with a goal from the ladder and a review at the end, and what to do if a session fails."}
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,6 +1,6 @@
 slug: deal-next-stage-gap-finder
 name: Deal next-stage gap finder
-summary: Name a deal. Get what is missing to reach the next stage and to close, who does what and by when.
+summary: Name a deal. Get what is missing to reach the next stage, with an owner and date for each gap.
 category: general
 boards: []
 type: skill

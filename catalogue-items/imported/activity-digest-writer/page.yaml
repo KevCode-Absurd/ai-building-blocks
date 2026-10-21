@@ -2,10 +2,10 @@ thinking: low
 thinking_why: It collects and groups recent items.
 new_slug: activity-digest-writer
 name: Activity digest writer
-summary: Ask what you missed. Get a daily or weekly digest of mentions, action items and decisions by topic.
+summary: Ask what you missed. Get a daily or weekly digest of mentions, action items and decisions by project.
 job: organise-work
 headline: Activity digest writer
-subhead: Ask what you missed. Get a daily or weekly digest of mentions, action items and decisions by topic.
+subhead: Say whether you want a day or a week, and which projects matter. It pulls activity from your connected chat, email and document tools and picks out what mentions you, decisions made and tasks waiting on you. You get your action items at the top, decisions, updates grouped by project and a note on any source it could not reach.
 explain: |
   A daily or weekly digest of what you missed, grouped by project, puts your action items and decisions at the top. It is made for the morning after time away, or for Friday's review.
 

@@ -1,0 +1,46 @@
+slug: apollo
+name: Apollo
+maker: Apollo.io
+url: https://www.apollo.io
+promise: Find the right people to contact and email them from one account
+use_cases: [find-leads]
+categories: [sales-and-support]
+what_it_does:
+  - Searches a large database of people and companies by role, size and place.
+  - Shows emails and phone numbers for the people you find.
+  - Sends email sequences from the same account.
+  - Records calls and uses AI to help write messages on higher plans.
+  - Syncs with CRMs such as Salesforce and HubSpot.
+benefits:
+  - Build a list of the right buyers in an afternoon.
+  - Start contacting them without moving data between apps.
+  - Keep outreach and contact details in one place.
+best_for:
+  - Solo sellers and small teams starting outbound.
+  - Founders who need a first list of buyers.
+  - Recruiters and agencies that source contacts.
+not_for:
+  - Teams with a strict monthly bill, since credits for phones and exports add up.
+  - Lists you plan to use without checking the contact details first.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: Free, Basic, Professional and Custom plans. Credits are pooled across the team and do not roll over. Third-party pages from 2026 list Basic near US$49 per user per month on yearly billing, but the maker's page showed no figure.
+works_with:
+  - Salesforce
+  - HubSpot
+  - Gmail
+  - clay
+runs_in: [web, browser-extension, chrome, api]
+blocks:
+  - prospect-list-builder
+  - prospect-outreach-drafter
+  - who-to-call-first-ranker
+  - outbound-sales-team-planner
+  - own-voice-outreach-writer
+  - lead-handoff-designer
+alternatives: [clay, hubspot-breeze]
+last_checked: 2026-10-21
+sources:
+  - https://www.apollo.io/pricing
+  - https://docket.io/resources/research/apollo-pricing

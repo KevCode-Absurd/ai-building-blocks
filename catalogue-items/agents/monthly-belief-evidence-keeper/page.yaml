@@ -1,0 +1,133 @@
+new_slug: monthly-belief-evidence-keeper
+name: Monthly belief and evidence keeper
+summary: Give it the beliefs your plan rests on. Each month get the evidence for and against, and what to test next.
+job: think-and-decide
+thinking: high
+thinking_why: It weighs evidence against beliefs the person wants to keep, judges when a bet failed and must not flatter. Give it your strongest model.
+headline: Monthly belief and evidence keeper
+subhead: Give it the five to ten beliefs your plan rests on and each month's new evidence. It writes what each belief predicts and what would sink it, logs every fact against before the facts for, gives a keep, change or stop call when evidence moves, and tests what you really know when a belief goes quiet. You change the plan.
+explain: |
+  Every plan rests on a few beliefs: who the buyer is, what they will pay, why they leave, which channel works. Facts that support those beliefs are remembered and repeated. Facts against them are explained away and forgotten by the next meeting. A year later the plan is built on beliefs nobody has tested since the day they were written.
+
+  This agent keeps the record. For each belief it writes the prediction, the fact that would prove it wrong, a small bet and a date. Each month it logs every fact against first, with its source, then the facts for. When evidence moves it gives a keep, change or stop call and names the next thing to learn. When a belief has had no evidence for three months it asks the hardest questions and says which ones you cannot answer. It flags plainly when the record says otherwise and you still hold the belief. It never changes the plan.
+when:
+  - Your plan rests on beliefs about buyers and prices that nobody has tested in a year.
+  - You keep remembering the evidence for your idea and losing track of the evidence against.
+  - You want a monthly habit that tells you when a belief has quietly died.
+you_give:
+  - Five to ten beliefs your plan rests on, each in one sentence
+  - This month's evidence, with where each fact came from (advised)
+  - Your plan, so a changed belief can be traced to what it holds up (optional)
+  - The register, once it exists
+you_get:
+  - A prediction, a sinking fact, a bet and a date for each belief
+  - Every fact for and against, logged with its source
+  - A keep, change or stop call for each belief that moved
+  - A plain flag for any belief still held against strong evidence
+  - The hardest questions on a quiet belief, and a learn, borrow, start small or pass plan
+  - What the record cannot show, and the fact that would settle it
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it your beliefs.
+  - Write each belief in one sentence. On the first run, approve the prediction and the sinking fact for each.
+  - Each month, paste the new evidence with its source. Include the facts that hurt.
+  - Read the moved beliefs and the flags. Change the plan yourself where the record says to.
+  - Run it again on the first Friday of next month, and on any bet's check date.
+how_it_works:
+  - title: Set up each new belief
+    text: Writes what it predicts, the fact that would sink it, a small bet and a check date.
+  - title: Log the evidence
+    text: Every fact against first, then the facts for, each with a source and date.
+  - title: Review the moved ones
+    text: For each belief with new evidence, a keep, change or stop call and the next thing to learn.
+  - title: Check the quiet ones
+    text: After three months with no evidence, asks the hardest follow-up questions and marks the ones you cannot answer.
+  - title: Close the gap when found
+    text: Learn it, borrow help, start small or pass, with a first-week plan.
+  - title: Check the bets
+    text: On each check date, reads the bet against the prediction and writes held, failed or unclear with the numbers.
+  - title: Say what the record cannot show
+    text: One line per belief on the limit of the evidence and the fact that would settle it.
+  - title: Log and hand back
+    text: Updates the register and stops. You change the plan.
+output_shape: |-
+  THIS MONTH
+    <n> beliefs | <n> moved | <n> quiet | <n> bets due
+
+  THE REGISTER
+    <belief> | against <n> (new <n>) | for <n> (new <n>) | verdict: <keep | change | stop | untested> | next check <date>
+
+  MOVED BELIEFS
+    <belief> | new against: <fact> (<source>, <date>) | new for: <fact> (<source>) | call: <keep | change | stop> | learn next: <what>
+
+  THE RECORD SAYS OTHERWISE
+    <belief> | <n> facts against, <n> for | still held because: <stated reason>
+
+  QUIET BELIEFS
+    <belief> | hardest questions: <q>, <q> | can answer: <n> of <n> | plan: <learn | borrow | start small | pass>, first week: <what>
+
+  BETS
+    <belief> | bet: <what> | predicted <x> | got <y> | verdict: <held | failed | unclear, new date>
+
+  WHAT THE RECORD CANNOT SHOW
+    <belief> | cannot tell: <what> | would settle it: <fact>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Run October for Sprout's plan. Beliefs the plan rests on:
+    1. Our main buyer is the person who quit greens powders and wants one
+       habit that sticks.
+    2. Most people who cancel do so because of price, not the product.
+    3. Offer-led ads (61% off) are what win new subscribers.
+    4. The limited flavour every 4 to 8 weeks keeps subscribers from
+       cancelling.
+    5. Sugar-Free buyers stay longer than Low Sugar buyers.
+    Evidence this month (sources noted):
+    - Top review theme on the brand site: "the one thing I've been able
+      to stick to" (6 of 20 quotes).
+    - Cancel notes from the portal: "forgot it was a subscription" 31%,
+      "price jumped after first box" 28%, "didn't like the taste" 14%,
+      "sugar-free upset my stomach" 9%.
+    - Ad library on 4 Oct: offer-led ads fell from 80% to 48% of the 40
+      newest ads; only 2 use the habit idea.
+    - Public review site: 4.0 stars from 2,411, cancelling the loudest
+      complaint.
+    No numbers yet on flavour and retention.
+  output: pending
+tweaks:
+  - what: The beliefs
+    how: Five to ten, one sentence each. Fewer means some are hidden. More means some are details.
+  - what: The hurting facts
+    how: The fact you left out because it stung is the one that matters most. Give it with its source.
+  - what: Quiet rule
+    how: Three months without evidence triggers the knowledge test. Set two for beliefs that carry the most.
+  - what: Bet size
+    how: Keep bets small and dated. The agent will not extend a date to avoid a verdict.
+judge:
+  - Each belief has a prediction and a sinking fact.
+  - Facts against are logged first, with sources.
+  - Each verdict rests on the log.
+  - No bet is marked held or failed without numbers.
+  - Nothing in the plan was changed.
+test:
+  - Give it a belief you already know is wrong, with the evidence. It should call stop and flag it plainly.
+  - Give it a belief with only supporting facts. It should mark it untested, not proven.
+  - Run it twice on the same evidence. The verdicts should match.
+improve:
+  - Write the sinking fact for each belief yourself first, then compare with the agent's.
+  - Link each belief to the part of the plan it holds up, so a change shows what it touches.
+  - Record every bet's result the day it is due.
+  - Pair it with the Customer interview program keeper, whose rounds of notes are evidence for this log.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep one file per belief and the register between months and run on the first Friday.
+    - name: Any good chat AI
+      why: Paste the agent, your beliefs and the month's evidence. Keep the register in a note yourself.
+  inputs:
+    - Customer interview notes from the month
+    - Numbers that bear on a belief, such as cancel reasons or ad results by angle

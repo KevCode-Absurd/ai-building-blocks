@@ -1,6 +1,6 @@
 # Understand your customers: AI Blocks
 
-> 94 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 95 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [App stickiness guide](https://useaiblocks.com/skills/app-stickiness-guide): Describe your app. Get a retention plan with a habit loop, a better first run and one metric to watch.
 - [Audience hangout finder](https://useaiblocks.com/skills/audience-hangout-finder): Describe your buyer group. Get a map of the sites, shows, accounts and communities they use, and where to show up first.
@@ -12,11 +12,11 @@
 - [Brand ladder survey builder](https://useaiblocks.com/skills/brand-ladder-survey-builder): Give it your category and rivals. Get a short buyer survey that shows where you rank.
 - [Brand mention tracker](https://useaiblocks.com/skills/brand-mention-tracker): Give it a brand name. Get reviews, ratings and mentions from many sites in one report. Collects data from websites.
 - [Build a buyer profile from interviews and reviews](https://useaiblocks.com/workflows/build-a-buyer-profile-from-interviews-and-reviews): Give it your orders and reviews. Get interview sheets, a buyer profile in their words and a brief writers use.
-- [Buyer awareness stage mapper](https://useaiblocks.com/skills/buyer-awareness-stage-mapper): Describe your audience and offer. Get where buyers sit, from unaware to ready, and what to say to each.
+- [Buyer awareness stage mapper](https://useaiblocks.com/skills/buyer-awareness-stage-mapper): Describe your audience and offer. Get each buyer stage, from unaware to ready, and what to say.
 - [Buyer brief writer](https://useaiblocks.com/skills/buyer-brief-writer): Paste your offer and some reviews. Get a half-page buyer brief and the one force your copy must move.
 - [Buyer identity segment finder](https://useaiblocks.com/skills/buyer-identity-segment-finder): Paste reviews and survey answers. Get buyer groups by self-description, their size and who to build for.
 - [Buyer instinct brief writer](https://useaiblocks.com/skills/buyer-instinct-brief-writer): Paste your product facts and buyer words. Get a brief naming the drive behind buying and the feeling the ad must leave.
-- [Buyer psychology advisor](https://useaiblocks.com/skills/buyer-psychology-advisor): Describe a page or offer. Get the mental models that apply and how to use them honestly.
+- [Buyer psychology advisor](https://useaiblocks.com/skills/buyer-psychology-advisor): Describe a page or offer. Get the mental models that fit and honest changes to try.
 - [Buyer research plan with survey](https://useaiblocks.com/skills/buyer-research-plan-with-survey): Give it your customer list and reward budget. Get a call plan, recruiting email and objection survey.
 - [Buying story interview guide](https://useaiblocks.com/skills/buying-story-interview-guide): Name what you sell. Get a timeline interview script for five to eight recent buyers, from first thought to first use.
 - [Chat export need finder](https://useaiblocks.com/skills/chat-export-need-finder): Give it a Telegram group export. Get a ranked list of unmet needs, each backed by real quotes.
@@ -70,8 +70,9 @@
 - [Jobs-to-be-done framer](https://useaiblocks.com/skills/jobs-to-be-done-framer): Give it a product or customer problem. Get job statements, struggling moments and hire and fire reasons that sharpen your choices.
 - [Low-star review triager](https://useaiblocks.com/skills/low-star-review-triager): Paste 1 to 3 star app reviews. Get a ranked brief of risks, repeat problems and what to fix first.
 - [Market size and survey planner](https://useaiblocks.com/skills/market-size-and-survey-planner): Give it your market. Get market size two ways, survey sample sizes and segments scored.
-- [Market stage reader](https://useaiblocks.com/skills/market-stage-reader): Paste your product facts and rival claims. Get what buyers know, how worn claims are and what a headline may say.
+- [Market stage reader](https://useaiblocks.com/skills/market-stage-reader): Paste product facts and rival claims. Get what buyers know, how worn claims are and a headline brief.
 - [Monthly customer voice keeper](https://useaiblocks.com/agents/monthly-customer-voice-keeper): Give it this month's new reviews. Get new buyer words, new doubts and wrong-fit buyers, as changes to approve.
+- [Monthly review proof keeper](https://useaiblocks.com/agents/monthly-review-proof-keeper): Share new reviews. Get approved quotes checked, claims linked to evidence and gaps for the next request.
 - [Order-record buyer interview guide](https://useaiblocks.com/skills/order-record-buyer-interview-guide): Paste recent orders. Get a pre-filled interview sheet per buyer, gap questions and a timeline pattern note.
 - [Post-purchase survey builder](https://useaiblocks.com/skills/post-purchase-survey-builder): Say your store and customers. Get a post-purchase survey, a list survey and review-mining prompts.
 - [Quiz answers to ad angles reader](https://useaiblocks.com/skills/quiz-answers-to-ad-angles-reader): Paste your quiz answers. Get who buys, how aware they are and ranked ad angles.

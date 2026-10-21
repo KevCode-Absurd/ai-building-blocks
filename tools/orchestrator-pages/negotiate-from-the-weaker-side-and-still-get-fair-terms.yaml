@@ -1,0 +1,112 @@
+new_slug: negotiate-from-the-weaker-side-and-still-get-fair-terms
+name: Negotiate from the weaker side and still get fair terms
+summary: Give it the deal. Get their view, your terms, a call plan and calming lines.
+job: sell-and-negotiate
+thinking: high
+thinking_why: It reads the other side, sets your walk-away and plans a live conversation. Give it your strongest model.
+headline: Negotiate from the weaker side and still get fair terms
+subhead: Give it the deal, what you need and who sits across the table. It maps their side, sets your terms and walk-away point for the weaker position, plans the call with Chris Voss's labels and calibrated questions, and writes the lines that keep a dispute calm.
+explain: |
+  When the other side can walk away and you cannot, most people do one of two things: cave early, or bluff and get caught. The weaker side wins fair terms by knowing the other side better than they know themselves, by having a clear floor, and by never letting the talk turn into a fight.
+
+  This workflow prepares you in that order. It first writes the other side's view, only theirs: what they want, why they act as they do, what they fear losing. It then sets your terms and your walk-away for the weaker position, holding firm, as Nelson Mandela did, on the few things that matter. It plans the call with Chris Voss's tools: an opening, feeling labels, calibrated how and what questions, and a check that the deal is real. Last, it writes short calming lines for the points you expect them to dispute.
+when:
+  - A customer who is a third of your revenue wants to change the terms.
+  - You are renewing a lease, a supply contract or a platform fee and the other side knows you need it.
+  - You tend to agree too fast when someone pushes back.
+you_give:
+  - "The deal: what is on the table, what you need and what you can give"
+  - Who you are talking to and what you know about them
+  - What happens to you if there is no deal
+  - Points you expect them to dispute (optional)
+you_get:
+  - "The other side's view, in their words: wants, reasons, fears"
+  - Your terms, your walk-away point and the few things you will not give
+  - A call plan with an opening, labels, calibrated questions and a test that the deal is real
+  - Short calming lines for each point of dispute
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the deal, who you face and what no deal costs you. It maps their view and sets your terms.
+  - Read the call plan aloud once. Change any line you would not say.
+  - Hold the talk. Bring back what they said if you want the next round planned.
+how_it_works:
+  - title: Map their side
+    text: "Writes the other side's view only: wants, reasons, fears and how they would describe the deal to their boss."
+  - title: Set your terms
+    text: Sets your terms, your walk-away point and the few things you will not give, planned for the weaker position.
+  - title: Plan the call
+    text: Plans the opening, the labels, the calibrated questions and the test that the deal is real, in Chris Voss's method.
+  - title: Write the calming lines
+    text: Writes short lines for each likely dispute that keep the talk calm without giving ground.
+output_shape: |-
+  STEP 1: THEIR SIDE
+    They want: <...> | Because: <...> | They fear losing: <...> | They'd tell their boss: <...>
+
+  STEP 2: YOUR TERMS
+    Ask: <...> | Walk-away: <...> | Will not give: <...> | Can give freely: <...>
+    If no deal: <what happens to you, and the plan for it>
+
+  STEP 3: CALL PLAN
+    Opening: <...> | Labels: <"It seems like ...">
+    Calibrated questions: <How ...? What ...?> | Is the deal real: <question, what a thin answer means>
+
+  STEP 4: CALMING LINES
+    <point of dispute>: <line to say> | Then: <silence / question>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. A big-box retailer carries our 12-pack in 400 stores at $19.97. They are about a third of our revenue.
+    Their buyer wants: a 10% lower wholesale price, a promo fund of $40,000 a year, and 90-day payment terms instead of 45. If we say no, they hint they'll give the shelf to a greens powder brand.
+    We need: to keep the shelf, to stay above a 38% gross margin, and payment within 60 days because of our stock orders.
+    We can give: a promo fund tied to display space, a new kids 12-pack exclusive for six months, co-branded end caps.
+    If no deal: we lose a third of revenue and have to cut two roles. We'd survive on our site and the warehouse club.
+    What I know about the buyer: new in the role, measured on category margin and on new items launched. Her predecessor liked us.
+    I expect them to dispute the margin and the 60 days.
+  output: pending
+tweaks:
+  - what: What no deal costs you
+    how: Be honest about it. The walk-away point is set from this, and a false floor gets found out.
+  - what: What you know about them
+    how: Add how they are measured and who they report to. Step 1 and the labels get sharper.
+  - what: Points of dispute
+    how: List the two or three you dread. Step 4 writes a line for each.
+  - what: The medium
+    how: Say if it is a call, a meeting or email. The opening and the silences change.
+judge:
+  - Step 1 contains nothing about your side. It reads as if the other person wrote it.
+  - The walk-away is a number or a condition, not a feeling, and no deal has a plan.
+  - Every calibrated question starts with how or what and could not be answered yes or no.
+  - The calming lines give no ground and contain no but.
+  - The plan never suggests splitting the difference as a first move.
+test:
+  - Give it a deal where you hold the power. Step 2 should say so and change its advice.
+  - Read the labels aloud. Each should start "It seems like" or "It sounds like" and name a feeling.
+  - Run step 1 twice. The other side's fears should match.
+  - Give step 4 a point you have already decided to concede. It should say a calming line is not needed there.
+improve:
+  - After the talk, paste what they actually said. Step 1 learns what you got wrong about them.
+  - Keep your walk-away rules per kind of deal (customers, suppliers, landlords) in one file.
+  - Add your own voice so the calming lines sound like you.
+  - Pair it with "Reach a deal both sides will back" when you hold equal power.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: A notebook during the call
+      why: Write down their exact words. The next round is planned from them.
+  inputs:
+    - Past emails or notes from this counterpart
+    - Your margins and payment terms by customer
+    - How the other side is measured in their job
+terms:
+  - term: Label
+    meaning: "Naming the other side's feeling as a statement: \"It seems like you're under pressure on margin.\""
+  - term: Calibrated question
+    meaning: An open question starting with how or what that makes the other side solve your problem with you.
+  - term: Walk-away
+    meaning: The point past which no deal is better than this deal, decided before the talk.

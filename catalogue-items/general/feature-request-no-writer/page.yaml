@@ -1,0 +1,107 @@
+new_slug: feature-request-no-writer
+name: "Feature request no writer"
+summary: "Paste a feature request you will not build. Get a no the customer accepts, with the real reason."
+job: help-customers
+thinking: low
+thinking_why: "It writes one short reply from a decision and a reason you give it."
+
+headline: "Feature request no writer"
+subhead: "Paste the customer's feature request, your decision and the real reason behind it. The prompt finds the need under the request, writes a no that opens with the no, gives the honest reason, offers what exists today and respects the ask. Under 120 words."
+
+explain: |
+  Most feature request replies are a slow no dressed as a maybe. "Great idea, I've passed it to the team" costs nothing to write and leaves the customer waiting for something that will never come. When they work it out, they trust you less than if you had said no on day one.
+
+  This prompt follows the way Jason Fried talks about saying no in public. It names the need under the request, because the feature is the customer's guess at a fix. It opens the reply with the no, gives the real reason you supplied in plain words, offers a way to get close today only if one exists, and thanks them for the detail they gave. It will not write "maybe later" unless you said it is true, and if your reason looks weak it tells you before writing.
+
+when:
+  - "A customer asks for a feature that would make the product worse for everyone else."
+  - "You have twenty requests in the queue and have been avoiding the honest ones."
+  - "You keep writing 'passed to the team' and the team has never heard of it."
+
+you_give:
+  - "The customer's request as written"
+  - "Your decision and the real reason"
+  - "A way to get close today, if one exists (advised)"
+  - "What your product is for (optional)"
+you_get:
+  - "The need under the request"
+  - "A reply under 120 words that opens with the no"
+  - "A note if the no looks wrong, and lines not to say"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the request under it."
+  - "Write the real reason, even if it is uncomfortable."
+  - "Read OWNER NOTE. If it questions the no, decide again before sending."
+  - "Send the reply as is. Do not add a maybe."
+
+how_it_works:
+  - title: "Finds the need"
+    text: "One line on what the customer wants to achieve, under the feature they asked for."
+  - title: "Checks the no"
+    text: "If the reason is weak or the request is cheap and on purpose, it tells the owner first."
+  - title: "Opens with the no"
+    text: "The first sentence says you will not build it. No 'great idea' opener."
+  - title: "Gives the real reason"
+    text: "One or two honest, specific sentences from your input."
+  - title: "Offers what exists"
+    text: "A real way to get close today, or nothing."
+  - title: "Respects the ask"
+    text: "Thanks them for the detail they gave, naming it, with no false promise."
+
+output_shape: |
+  THE NEED        <one line>
+  OWNER NOTE      <why the no may be wrong, or none>
+  REPLY           <no, reason, what exists, respect, sign-off>
+  DO NOT SAY      <false-maybe lines>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Request to Sprout: "Could you add a build-your-own flavour mix option so
+    I can get 14 Original and 14 Raspberry Lemonade packs in one pouch? I'd
+    pay a bit more."
+    Decision: no.
+    Real reason: every pouch is sealed at the factory as one flavour. A mixed
+    pouch means a new packing line, and limited flavours exist for 4 to 8
+    weeks, so the mix would often be unavailable mid-subscription.
+    What exists: subscribers can add a second pouch of any live flavour to
+    the same delivery from Manage Subscription, and pause the second one any
+    month.
+    Product purpose: one daily pack of greens gummies that people stick to.
+  output: pending
+
+tweaks:
+  - what: "The reason"
+    how: "Give the real one. A vague reason gets a vague reply and the owner note."
+  - what: "What exists"
+    how: "If there is a real workaround, give the exact steps. If not, say none, so nothing is invented."
+  - what: "Tone"
+    how: "Say 'short and friendly' or 'formal' and the reply shifts, but the no stays first."
+
+judge:
+  - "The first sentence is the no."
+  - "The reason is yours, specific, and true."
+  - "There is no 'maybe later'."
+  - "Any workaround exists."
+  - "It is under 120 words."
+
+test:
+  - "Rewrite a 'passed to the team' reply you sent. Ask a colleague which one they would rather receive."
+  - "Run it twice. THE NEED should match."
+  - "Give it a weak reason such as 'not a priority'. It should write an owner note asking for the real one."
+
+improve:
+  - "Add your product purpose line once, so every no is measured against it."
+  - "Keep a list of the needs found. Several requests with one need is a feature worth building."
+  - "Pair it with the Feature request screener to decide before you write."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message reply works in any strong chat AI."}
+  inputs:
+    - "The three things your product will never do, written down"
+    - "The last five requests you said no to and how customers reacted"

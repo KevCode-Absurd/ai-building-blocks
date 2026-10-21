@@ -1,0 +1,111 @@
+new_slug: stress-test-a-business-plan-before-you-commit-money
+name: Stress test a business plan before you commit money
+summary: Give it the plan. Get a one-page canvas, the strongest case against it, stress-tested assumptions and a pre-mortem.
+job: test-an-idea
+thinking: high
+thinking_why: It must argue against a plan its owner loves and find the risk of ruin. Give it your strongest model.
+headline: Stress test a business plan before you commit money
+subhead: Give it the business plan. It squeezes it onto a one-page canvas, writes the strongest case for killing it, stress tests each assumption, checks for risks that could ruin you in Nassim Taleb's manner, and runs a pre-mortem that imagines the failure and works backwards to its cause.
+explain: |
+  A business plan is written to persuade, which makes it the worst document for finding its own flaws. The assumptions are buried in the forecast and the one risk that could end the company is a line in a list of twenty.
+
+  This workflow attacks the plan on purpose. It first squeezes the plan onto a one-page canvas so every assumption is visible. It writes the strongest honest case for killing the idea. It stress tests each assumption: what if it is half as good, what if it takes twice as long. It then checks for risks of ruin, in Nassim Taleb's manner: the ones you cannot recover from. Last it runs a pre-mortem: it imagines the plan has failed a year from now and writes the most likely story of why, so you can fix that story before it happens.
+when:
+  - You are about to sign a lease, hire or spend savings on a plan.
+  - Everyone around you likes the plan, which worries you.
+  - A past plan failed for a reason that was obvious afterwards.
+you_give:
+  - The business plan, however rough
+  - "The numbers behind it: costs, prices, how many customers and when"
+  - "What you are putting in: money, time, what you give up"
+  - What you fear most (optional)
+you_get:
+  - A one-page canvas with every assumption visible
+  - The strongest case for killing the idea
+  - Each assumption stress tested at half as good and twice as slow, and a ruin-risk check
+  - "A pre-mortem: the most likely story of failure and what to change now"
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the plan and the numbers. It writes the canvas and the case against.
+  - Read the stress tests and the ruin risks. Decide which you can remove.
+  - Read the pre-mortem. Change the plan so that story cannot happen, or decide not to go.
+how_it_works:
+  - title: Squeeze it onto one page
+    text: Puts the plan on a one-page canvas with every assumption marked.
+  - title: Argue for killing it
+    text: Writes the strongest honest case for not doing this.
+  - title: Stress test the assumptions
+    text: Tests each assumption at half as good and twice as slow and says which the plan cannot survive.
+  - title: Check for ruin
+    text: Finds the risks you cannot recover from, in Taleb's manner, and says how to cap the downside.
+  - title: Run the pre-mortem
+    text: Imagines the plan has failed a year from now, writes the most likely story of why, and says what to change now.
+output_shape: |-
+  STEP 1: ONE-PAGE CANVAS
+    Problem: <...> | Customers: <...> | Solution: <...> | Channels: <...> | Revenue: <...> | Costs: <...> | Advantage: <...>
+    Assumptions: <each, marked>
+
+  STEP 2: THE CASE AGAINST
+    Fatal flaw: <... / none found> | Rivals: <...> | Why customers won't switch: <...>
+
+  STEP 3: STRESS TESTS
+    <assumption>: Half as good -> <...> | Twice as slow -> <...> | Survives: <yes / no>
+
+  STEP 4: RUIN CHECK
+    Could take us out: <...> | Exposure: <...> | Cap the downside by: <...>
+
+  STEP 5: PRE-MORTEM
+    A year on, it failed because: <the story> | Change today: <...> | Go: <yes / no / changed>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. The plan: open our own small gummy factory instead of using our co-packer, to cut cost per pouch and control quality.
+    Numbers: lease $18k a month on a five-year term; equipment $1.4M financed over seven years; six production staff; current co-packer cost $11.20 a pouch; our forecast in-house cost $7.80 a pouch at 40,000 pouches a month, which is about our current volume; break-even at 31,000 pouches a month; eight months to get the facility certified and running.
+    What we put in: $600k of our cash, a personal guarantee on the lease, and most of the ops manager's year.
+    What I fear: a recall from a quality mistake in our own factory; the retailer that is a third of our volume leaving while we are mid-build.
+  output: pending
+tweaks:
+  - what: The numbers
+    how: Give the forecast's inputs, not only its outputs. The stress test changes the inputs.
+  - what: What you put in
+    how: Include the personal guarantee and the time. The ruin check needs the full exposure.
+  - what: What you fear
+    how: Say it. The pre-mortem starts there and looks for what you have not feared yet.
+  - what: Your past failures
+    how: Tell it how a past plan failed. The case against checks for the same shape.
+judge:
+  - Every assumption in the plan appears on the canvas, marked.
+  - The case against is one you could not easily answer.
+  - The stress test names the assumptions the plan cannot survive.
+  - The ruin check separates recoverable losses from unrecoverable ones.
+  - The pre-mortem's story is specific enough that you could change the plan to prevent it.
+test:
+  - Give it a plan with a personal guarantee. Step 4 should name it as a ruin risk.
+  - Give step 3 a forecast that only works at exactly current volume. It should fail the half-as-good test.
+  - Run step 5 twice. The failure stories should point at the same cause.
+  - Give step 2 a plan you know has a fatal flaw. Does it find it?
+improve:
+  - Save the pre-mortem. A year on, compare it with what happened.
+  - Keep your exposure (cash, guarantees, time) in one file so the ruin check is complete every time.
+  - Add your past failures so the case against knows your patterns.
+  - Pair it with "Check your strategy, then turn it into a 90-day plan" once the plan survives the test.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: A spreadsheet
+      why: Change the inputs and watch the plan break or hold.
+  inputs:
+    - Your forecast spreadsheet with its inputs
+    - Contracts with penalties or guarantees
+    - How a past plan of yours failed
+terms:
+  - term: Pre-mortem
+    meaning: Imagining a plan has already failed and writing the story of why, before you start.
+  - term: Risk of ruin
+    meaning: A loss you cannot recover from, however unlikely, which matters more than the average outcome.

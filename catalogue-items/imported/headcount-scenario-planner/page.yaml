@@ -2,10 +2,10 @@ thinking: high
 thinking_why: Several linked cases need careful thought.
 new_slug: headcount-scenario-planner
 name: Headcount scenario planner
-summary: Give it your hiring plan. Get base, best and worst cases with costs and signs it is time to switch plans.
+summary: Give it your hiring plan. Get base, best and worst cases with costs, and signals that say switch plans.
 job: hire-people
 headline: Headcount scenario planner
-subhead: Give it your hiring plan. Get base, best and worst cases with costs and signs it is time to switch plans.
+subhead: Give it your hiring plan, cost per role and the risks you worry about. It builds base, upside and downside cases with headcount and cost for each. You get the three plans, trigger signals that say when to switch, and the actions to take under each one.
 explain: |
   Three versions of next year's workforce, so one wrong guess does not wreck your plan. Most plans assume a single future. This one tests what happens if sales drop 20 percent, a market closes, or growth runs faster than expected.
 

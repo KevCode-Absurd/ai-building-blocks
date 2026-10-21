@@ -1,0 +1,31 @@
+slug: weekly-customer-health-watcher
+name: "Weekly customer health watcher"
+summary: "Give it your account usage each week. Get who is slipping, who is up for renewal and the next touch for each."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: false}
+  - {type: voc_reviews, required: false}
+  - {type: tool_connection, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+  - {type: copy_draft}
+uses: [customer-success-signals, customer-health-and-churn-scorer, churn-risk-finder, renewal-watch-planner, post-sale-follow-up-planner, escalation-brief-writer]
+steps:
+  - {uses: customer-success-signals, note: "Once, and again each quarter: the one early sign that a customer will stay, written as a percentage doing an event within a time."}
+  - {uses: customer-health-and-churn-scorer, note: "Every week: each account scored for health, churn risk and upsell room, compared with last week's score."}
+  - {uses: churn-risk-finder, note: "Only for accounts whose score fell two weeks running or that missed the early sign: the likely cause and ideas for how to step in."}
+  - {uses: renewal-watch-planner, note: "Every week, if the account tool is connected read-only: renewals in the next 90 days with timing and risk."}
+  - {uses: post-sale-follow-up-planner, note: "Only for an account that is healthy or newly recovered: the thank-you note and the keep-in-touch plan."}
+  - {uses: escalation-brief-writer, note: "Only when an at-risk account has an open problem the person cannot fix alone: the brief for engineering or leadership."}
+schedule: "Every Monday morning, from a fresh usage export"
+asks_before: [sending any message to a customer, offering a discount, credit or extension, changing a plan or a contract, escalating to another team, marking an account as lost]
+minds: [mark-roberge]
+origin: own
+version: 1.0.0
+example_pending: true

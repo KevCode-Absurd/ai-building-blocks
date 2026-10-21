@@ -1,0 +1,42 @@
+slug: lovable
+name: Lovable
+maker: Lovable
+url: https://lovable.dev
+promise: Chat with an AI to build a web app or site, then publish it.
+use_cases: [build-apps]
+categories: [coding]
+what_it_does:
+  - Builds a web app or site from a chat description.
+  - Changes the design and features when you ask in plain words.
+  - Adds sign-in, a database and payments to the app.
+  - Publishes the app to a live link, with custom domains on paid plans.
+  - Lets everyone in your workspace share one pool of credits.
+benefits:
+  - See a working first version of your idea in an afternoon.
+  - Test an idea with real users before you pay for a developer.
+  - Fix and restyle the app by describing the change.
+  - Start free with a daily credit allowance.
+best_for:
+  - Founders and operators with an app idea and no developer.
+  - Designers and marketers who need a landing page or a small app.
+  - Teams that want a fast prototype to show before a build.
+not_for:
+  - Large, long-lived products without a developer to clean up the code.
+  - Anyone who wants a fixed monthly bill, since credits, hosting and extras add up.
+pricing:
+  model: freemium
+  from: US$25 per month
+  note: Free plan with about 30 credits a month. Pro starts at US$25 per month for 100 credits, or US$21 billed yearly. Business starts at US$50. Cloud hosting is charged on top. Price from a June 2026 article, so check the live page.
+works_with:
+  - Supabase
+  - GitHub
+  - Stripe
+runs_in: [web]
+blocks:
+  - lovable-project-cleaner
+  - vibe-coded-app-cleaner
+alternatives: [bolt, v0, replit, cursor]
+last_checked: 2026-10-21
+sources:
+  - https://lovable.dev/pricing
+  - https://eesel.ai/blog/lovable-pricing

@@ -1,0 +1,111 @@
+new_slug: help-article-from-ticket-writer
+name: "Help article writer from support tickets"
+summary: "Paste tickets about the same problem. Get a short help article in the customer's words, with its title."
+job: help-customers
+thinking: low
+thinking_why: "It reshapes given tickets and a given answer into one short page."
+
+headline: "Help article writer from support tickets"
+subhead: "Paste three or more support tickets about one problem and the answer your team gives. The prompt pulls the customer's own words, writes the title as their question, puts the answer in the first two lines, lists the steps and notes the root cause for the owner."
+
+explain: |
+  The same question arrives ten times a week, and each time someone types the same answer. A help article would stop most of them, but the one you have is titled with your internal name for the feature, so nobody finds it, and the answer is in paragraph four.
+
+  This prompt reads the tickets and collects the words customers use. It writes the title as the question they would type, answers it in the first two lines, and lists numbered steps that come only from the correct answer you gave. It ends with what to do if the fix fails and how to reach a person. It also writes one line for the owner about the root cause, because ten tickets about a hidden cancel link are a page problem, not a support problem.
+
+when:
+  - "The same question keeps landing in your inbox."
+  - "Your help centre exists but customers write in anyway."
+  - "You want an auto-reply that actually answers the question."
+
+you_give:
+  - "Three or more tickets about the same problem"
+  - "The answer your team gives today"
+  - "Where the article will live (optional)"
+you_get:
+  - "The customer's words and a title in their language"
+  - "A help article under 250 words with the answer first"
+  - "A root cause note for the owner"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with the tickets under it."
+  - "Add the correct answer as your team gives it today."
+  - "Check each step against your product. Fill any MISSING button or page name."
+  - "Publish the article under the given title, and read the root cause note."
+
+how_it_works:
+  - title: "Confirms one problem"
+    text: "Splits the tickets if they describe two, and writes for the most common."
+  - title: "Collects customer words"
+    text: "Pulls the phrases customers use, which become the title and the first line."
+  - title: "Writes the title as the question"
+    text: "Under twelve words, the way a customer would type it."
+  - title: "Answers first"
+    text: "The fix or explanation in two lines, before any steps."
+  - title: "Writes the steps"
+    text: "Numbered, one action each, only from the answer you gave."
+  - title: "Notes the root cause"
+    text: "One line for the owner on what the tickets suggest fixing."
+
+output_shape: |
+  CUSTOMER WORDS   <phrases from the tickets>
+  TITLE            <the question>
+  ARTICLE
+  <answer in two lines>
+  <numbered steps>
+  <if that did not work>
+  ALSO             <second problem or none>
+  ROOT CAUSE NOTE  <for the owner>
+  MISSING          <...>
+  CHECKS MISSED    <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Tickets to Sprout support:
+    1. "How do I cancel? I've looked everywhere in my account."
+    2. "I want to pause my subscription for a month, I still have two
+       pouches. Where is that option?"
+    3. "There's no cancel button. Is this on purpose? I don't want to be
+       charged $49.99 again."
+    4. "Trying to skip my next delivery. The app just shows my orders."
+    Correct answer: Log in, open Manage Subscription from the account menu,
+    choose the subscription, then pick Skip next delivery, Pause or Cancel.
+    Changes made before the renewal date apply to the next charge. If the
+    renewal has already been charged, reply to the order email and support
+    will refund the unshipped pouch.
+  output: pending
+
+tweaks:
+  - what: "The tickets"
+    how: "More tickets means better customer words in the title. Five is better than three."
+  - what: "The answer"
+    how: "Give exact button names and the time limit. The steps only use what you give."
+  - what: "Where it lives"
+    how: "Say auto-reply and it gets shorter. Say help centre and it keeps the if-that-fails section."
+
+judge:
+  - "The title is something a customer would type, not your product's name for the feature."
+  - "The answer is in the first two lines."
+  - "Every step matches your product today."
+  - "It is under 250 words."
+  - "The root cause note points at a real cause."
+
+test:
+  - "Publish the article and count tickets on that topic over the next month against the month before."
+  - "Run it twice on the same tickets. The title should match in meaning."
+  - "Leave out the correct answer. It should hand back a skeleton with MISSING: the fix, not invent steps."
+
+improve:
+  - "Add your help centre's style rules, so every article matches."
+  - "Keep the root cause notes in one list for your product owner."
+  - "Pair it with the Review reply batch writer when the same problem shows up in reviews."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message draft works in any strong chat AI."}
+  inputs:
+    - "Screenshots of the exact screens, so button names are right"
+    - "Your ticket tags, so you know which topic to write first"

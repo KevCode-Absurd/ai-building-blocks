@@ -2,10 +2,10 @@ thinking: low
 thinking_why: It turns a brief into prompts and sizes.
 new_slug: marketing-image-maker
 name: Marketing image maker
-summary: Say what image you need. Get a prompt, size and file plan for blog heroes, social graphics and mockups.
+summary: Say what the image is for. Get a prompt to paste, exact size and a file plan.
 job: make-images
 headline: Marketing image maker
-subhead: Say what image you need. Get a prompt, size and file plan for blog heroes, social graphics and mockups.
+subhead: Tell it what the image is for, where it will sit and any brand colours or size limits. It picks between an AI image model and a design tool, then writes the prompt. You get the tool to use, a prompt to paste, exact pixel size and a file name.
 explain: |
   Tell it what the picture is for and it hands back a ready plan: the tool to use, the prompt to paste, the exact pixel size and the file name to save it under.
 

@@ -2,10 +2,10 @@ thinking: low
 thinking_why: It swaps numbers by rule and lists changes.
 new_slug: deck-number-refresher
 name: Deck number refresher
-summary: Give it a deck and new figures. Get every number updated across the slides, with a list of changes.
+summary: Give it a deck and new figures. Get every number updated across the slides, with a change log.
 job: work-with-files
 headline: Deck number refresher
-subhead: Give it a deck and new figures. Get every number updated across the slides, with a list of changes.
+subhead: Give it the deck file and the new figures or a source spreadsheet. It finds every place each number appears, in text, tables, charts and footnotes, and shows you a plan before changing anything. You get the updated deck with formatting untouched, a change log by slide and flags for numbers that do not tie.
 explain: |
   Every figure in your deck updated, with the formatting untouched. Give it the deck and the new numbers and it changes values on slides, tables and charts, then lists exactly what it changed.
 

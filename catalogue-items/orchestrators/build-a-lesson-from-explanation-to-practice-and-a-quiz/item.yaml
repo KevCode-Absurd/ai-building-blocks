@@ -1,0 +1,25 @@
+slug: build-a-lesson-from-explanation-to-practice-and-a-quiz
+name: "Build a lesson from explanation to practice and a quiz"
+summary: "Give it the topic and learners. Get a lesson plan, worked examples, a practice set and a quiz."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: source_text, required: true}
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+  - {type: copy_draft}
+  - {type: audit_report}
+uses: [direct-teaching-lesson-builder, online-worked-example-builder, practice-problem-set-writer, retrieval-quiz-writer, overloaded-lesson-checker]
+steps:
+  - {uses: direct-teaching-lesson-builder, note: "What to say, what to show, in what order, with a check for understanding after each new idea, for these learners and this time."}
+  - {uses: online-worked-example-builder, note: "Worked examples that fade: a full one, then one with gaps, then one the learner completes, each with the thinking shown."}
+  - {uses: practice-problem-set-writer, note: "A practice set from easy to hard, mixed enough to make learners choose the method, with answers."}
+  - {uses: retrieval-quiz-writer, note: "A short quiz that asks learners to recall and do, not recognise, with answers and the misconception each question catches."}
+  - {uses: overloaded-lesson-checker, note: "Too many new ideas at once, too much text, too few pauses. What to cut, split or move to a second session."}
+origin: own
+version: 1.0.0
+example_pending: true

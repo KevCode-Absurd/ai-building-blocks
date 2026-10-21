@@ -1,0 +1,40 @@
+slug: bolt
+name: Bolt
+maker: StackBlitz
+url: https://bolt.new
+promise: Chat with an AI to build sites and apps, with hosting and a database.
+use_cases: [build-apps, code]
+categories: [coding]
+what_it_does:
+  - Builds websites, apps, slides and prototypes from a chat.
+  - Starts from scratch, a Figma design, a GitHub repo or a template.
+  - Includes hosting, a database, user sign-in and analytics.
+  - Publishes with a custom domain on paid plans.
+  - Builds with your own design system so the result matches your brand.
+benefits:
+  - Turn a Figma design into a working page without hand coding.
+  - Get a live link to test an idea the same day.
+  - Keep hosting and a database in the same account as the build.
+  - Start free before you commit to a plan.
+best_for:
+  - Founders and marketers who need a quick site or prototype.
+  - Designers who want to see a design running as an app.
+  - Teams that want shared templates and a shared token pool.
+not_for:
+  - Big, complex products that need a full engineering team.
+  - Anyone who wants a firm monthly cost, since large builds use many tokens.
+pricing:
+  model: freemium
+  from: US$18 per month
+  note: Free plan with 1 million tokens a month and a 300,000 daily limit. Pro is US$18 per month billed yearly for 10 million tokens, and Teams is US$27 per member per month billed yearly.
+works_with:
+  - Figma
+  - GitHub
+  - Stripe
+runs_in: [web]
+blocks: []
+alternatives: [lovable, v0, replit, cursor]
+last_checked: 2026-10-21
+sources:
+  - https://bolt.new/pricing
+  - https://bolt.new

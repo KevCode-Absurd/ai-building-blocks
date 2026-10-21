@@ -2,10 +2,10 @@ thinking: high
 thinking_why: Modelling a domain needs real judgment about where concepts split.
 new_slug: business-model-code-designer
 name: Business model code designer
-summary: Describe your business rules. Get areas, shared terms and clusters of data that map to your code. Uses domain-driven design.
+summary: Describe your business rules. Get a glossary, a map of business areas and the data that belongs together.
 job: build-software
 headline: Business model code designer
-subhead: Describe your business rules. Get areas, shared terms and clusters of data that map to your code. Uses domain-driven design.
+subhead: Describe your business rules and the words your team uses. It splits the business into separate areas, each with its own border in the code, so one team's change does not break another's. You get a shared glossary, a map of the areas and the groups of data that change together.
 explain: |
   Your code starts to match how your business really talks. Describe your rules, and you get a map of the separate areas of the business, the exact words each area uses, and the clusters of data that must change together. Each area becomes its own boundary in the code, so one team's change does not break another's.
 

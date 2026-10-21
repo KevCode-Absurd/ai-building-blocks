@@ -5,7 +5,7 @@ name: Symbolic math coder
 summary: Describe the equation. Get exact solutions worked out in MATLAB, and turned into fast numeric functions.
 job: build-software
 headline: Symbolic math coder
-subhead: Describe the equation. Get exact solutions worked out in MATLAB, and turned into fast numeric functions.
+subhead: Describe the equation in plain words, with any known values or assumptions. It writes MATLAB code that sets up the variables, then differentiates, integrates, solves or transforms, and simplifies the result. You get working code, the exact solution, a fast numeric function and notes on the assumptions used.
 explain: |
   MATLAB code that solves your equation exactly, shows the result in clean form, and turns it into a fast numeric function you can run on real data. That saves you from hand algebra and from syntax slips that make symbolic code fail.
 

@@ -1,6 +1,6 @@
 slug: measure-first-slowdown-finder
 name: "Measure first slowdown finder"
-summary: "Describe what feels slow. Get a measurement plan, the worst-case view and a ranked list of what to fix first."
+summary: "Describe what feels slow. Get a measurement plan, the worst-case view and a ranked fix list."
 category: general
 type: skill
 role: check

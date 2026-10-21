@@ -1,0 +1,41 @@
+slug: zendesk-ai
+name: Zendesk AI
+maker: Zendesk
+url: https://www.zendesk.com/service/ai/
+promise: AI agents and drafting help that resolve tickets inside Zendesk
+use_cases: [sell-and-support]
+categories: [sales-and-support]
+what_it_does:
+  - Runs AI agents that answer customers across chat, email and messaging.
+  - Charges per automated resolution, with a few included each month.
+  - Helps your team with drafted replies and summaries through Copilot.
+  - Routes tickets to the right team.
+benefits:
+  - Answer simple tickets without a person.
+  - Give your team a drafted reply to edit and send.
+  - Keep one place for tickets from every channel.
+best_for:
+  - Support teams already on Zendesk.
+  - Teams with enough ticket volume to justify automation.
+  - Managers who need reporting across channels.
+not_for:
+  - Small teams that only need a shared inbox.
+  - Anyone who wants a single flat price for support and AI.
+pricing:
+  model: subscription
+  from: US$19 per month
+  note: Support Team costs US$19 per agent a month on yearly billing (US$25 monthly). AI agent resolutions are extra at US$2.00 each pay-as-you-go, and Copilot adds US$50 per agent a month.
+works_with:
+  - Slack
+  - Salesforce
+  - Shopify
+runs_in: [web, mobile, api]
+blocks:
+  - support-desk-automation-builder
+  - support-capacity-planner
+  - data-request-reply-drafter
+  - chat-export-need-finder
+alternatives: [intercom-fin, gorgias, hubspot-breeze]
+last_checked: 2026-10-21
+sources:
+  - https://www.zendesk.com/pricing/

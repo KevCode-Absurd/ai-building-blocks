@@ -1,0 +1,122 @@
+new_slug: launch-a-feature-through-a-beta-and-read-the-numbers
+name: Launch a feature through a beta and read the numbers
+summary: Give it the feature. Get a launch plan, a beta, pre-set metrics, release notes and a results read.
+job: build-product
+thinking: high
+thinking_why: It decides what to measure before launch and then judges the result without flattering it. Give it your strongest model.
+headline: Launch a feature through a beta and read the numbers
+subhead: Give it the feature and who it is for. It plans the launch, sets up a beta with the right users, decides the metrics before anything ships, writes the release notes in plain words, and after launch reads the numbers and says what they mean.
+explain: |
+  Features launch to everyone at once, with a changelog line nobody reads, and the team decides afterwards which number proves it worked. Whatever went up is the success metric. The users who would have told you it was confusing never got asked.
+
+  This workflow launches in order. It plans the launch: who gets it first, what could go wrong, what the rollback is. It sets up a beta with the users who feel the problem most and a way to hear from them weekly. It decides the metrics before anything ships: what success looks like, what the guardrails are, and the number that would make you pull it. It writes the release notes in plain words, saying what changed for the user. After launch, it reads the numbers against the metrics you set and says what they mean, including when they mean nothing yet.
+when:
+  - A feature is two weeks from done and nobody has planned the launch.
+  - Your last launch went to everyone and broke something.
+  - Your team argues after launch about whether it worked.
+you_give:
+  - "The feature: what it does and who it is for"
+  - How you can reach users and roll out to a subset
+  - What the business needs from this feature
+  - After launch, the numbers and the beta feedback
+you_get:
+  - A launch plan with order, risks and rollback
+  - "A beta programme: who, how many, how you hear from them"
+  - The metrics decided before launch, with success, guardrails and the pull number
+  - Release notes in plain words, and a results read after launch
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the feature and who it is for. It plans the launch, the beta and the metrics.
+  - Run the beta. Collect the feedback it asks for.
+  - Approve and publish the release notes. After two to four weeks, paste the numbers for the results read.
+how_it_works:
+  - title: Plan the launch
+    text: Plans who gets the feature first, what could go wrong, the rollback and the dates.
+  - title: Set up the beta
+    text: "Sets up the beta: who, how many, how to invite them and what to ask each week."
+  - title: Decide the metrics first
+    text: Decides success, guardrails and the pull number before anything ships.
+  - title: Run the beta
+    text: A pause. Run the beta. Collect the weekly feedback and fix what it finds.
+  - title: Write the release notes
+    text: Writes release notes in plain words about what changed for the user. You approve and publish.
+  - title: Launch and wait
+    text: A pause. Publish the release notes and roll out. After two to four weeks, paste the numbers.
+  - title: Read the numbers
+    text: Reads the post-launch numbers against the metrics you set and says what they mean and what they cannot yet say.
+output_shape: |-
+  STEP 1: LAUNCH PLAN
+    Order: <group, date> | Could go wrong: <...> | Rollback: <...>
+
+  STEP 2: BETA
+    Who: <...> | How many: <n> | Invite: <...> | Ask weekly: <...> | Close when: <...>
+
+  STEP 3: METRICS (before launch)
+    Success: <metric, target, by when> | Guardrails: <metric, must not fall below> | Pull if: <...>
+
+  PAUSE: run the beta, fix what it finds
+
+  STEP 4: RELEASE NOTES
+    What changed for you: <...> | Why: <...> | If something looks different: <...>
+
+  PAUSE: publish, roll out, wait two to four weeks
+
+  STEP 5: RESULTS
+    <metric>: target <...> | actual <...> | Means: <...> | Can't say yet: <...> | Keep / change / pull: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. Feature: "Pause instead of cancel". When a subscriber clicks cancel, we offer a one-tap pause of one or two months before the cancel button.
+    Who it is for: subscribers in months two to four, when most cancels happen. Customers say things like "I keep forgetting to cancel" and "I have three pouches stacked up".
+    How we can roll out: our subscription app lets us show the feature to a percentage of subscribers.
+    What the business needs: fewer cancels without trapping anyone. Our rule: the cancel button must stay visible and work in one click. No dark patterns.
+    Current numbers (practice numbers): 11% monthly churn; 38% of cancels happen in months two to four; support gets 40 "how do I pause" tickets a month.
+    I'll paste the numbers after launch.
+  output: pending
+tweaks:
+  - what: Your rollout tool
+    how: Say how you can show a feature to a subset. The launch plan uses it, or plans a manual beta if you cannot.
+  - what: Your rules
+    how: State what you will not do (hide the cancel button). The metrics include a guardrail for it.
+  - what: The beta users
+    how: Say who feels the problem most. The beta invites them, not your friendliest customers.
+  - what: The wait
+    how: Say how long a result takes to show. The results read refuses to call it early.
+judge:
+  - The launch plan names a rollback.
+  - The beta users are the ones who feel the problem, with a weekly question for them.
+  - The metrics were set before launch and include a guardrail and a pull number.
+  - The release notes say what changed for the user, in words a user would use.
+  - The results read uses the pre-launch metrics only and says what it cannot yet say.
+test:
+  - Give step 3 a feature and ask it to add a metric after launch. It should refuse and explain.
+  - Give step 5 one week of data when you said results take four. It should say it is too early.
+  - Run step 2 twice. The beta users' description should match.
+  - Read the release notes as a customer. Would you understand what changed?
+improve:
+  - Keep every metrics plan and results read in one folder. The pattern shows what you tend to overestimate.
+  - Save your rules (no dark patterns) so every launch carries the guardrail.
+  - Build a reusable beta invite from the first one.
+  - Pair it with "Find where new users leave and prove the fix works" when the feature targets onboarding.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Your feature flag or rollout tool
+      why: Lets you show the feature to a subset and roll it back.
+    - name: Your analytics
+      why: The numbers for the results read come from here.
+  inputs:
+    - Support tickets about the problem the feature solves
+    - Past launch results
+    - Your analytics event names
+terms:
+  - term: Guardrail metric
+    meaning: A number that must not get worse when you launch, such as cancel completion rate or support tickets.
+  - term: Beta
+    meaning: A release to a small group of users before everyone, to find problems and hear feedback.

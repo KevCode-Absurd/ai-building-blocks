@@ -1,0 +1,105 @@
+new_slug: define-your-metrics-once-and-write-a-weekly-update-anyone-gets
+name: Define your metrics once and write a weekly update
+summary: Give it your numbers. Get metric definitions, an assumptions log, the weekly update and plain pictures.
+job: document-work
+thinking: high
+thinking_why: It must get definitions exact and then explain numbers without losing the truth. Give it your strongest model.
+headline: Define your metrics once and write a weekly update
+subhead: Give it the numbers you track and this week's figures. It writes a definition for each metric so everyone means the same thing, logs the assumptions behind the analysis, writes the weekly update, then translates the key figures into pictures people can hold in their heads.
+explain: |
+  Two people say "conversion rate" and mean different things, so the weekly update starts an argument instead of a decision. The update itself is a table, and the one line that matters, that something changed, is buried in row nine.
+
+  This workflow fixes the words before the numbers. It writes a definition for each metric: what it counts, what it excludes, where it comes from and how often. It logs the assumptions behind the analysis so a reader can see what was taken for granted. It writes the weekly update in a fixed shape: what changed, why, what we do about it. Then it translates the key figures into pictures a reader can hold, in the manner of Chip Heath's Made to Stick: a thousand new subscribers becomes a number of full buses, a percentage becomes one person in a room of ten.
+when:
+  - Two reports show different numbers for the same thing.
+  - Your weekly update is sent and not read.
+  - A leader asked "so what does that mean" after your last report.
+you_give:
+  - The metrics you track and where each comes from
+  - This week's numbers and last week's
+  - Who reads the update and what they decide with it
+  - Your current update, if you have one (optional)
+you_get:
+  - "A definition for each metric: what it counts, excludes, its source and timing"
+  - An assumptions log for the analysis
+  - "A weekly update: what changed, why, what we do"
+  - The key figures as plain pictures a reader can hold
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the metrics and where they come from. It writes the definitions and the assumptions log.
+  - Paste this week's and last week's numbers. It writes the update and the plain pictures.
+  - Read the update once as the reader. Send it, and reuse the definitions every week.
+how_it_works:
+  - title: Define each metric
+    text: Writes what each metric counts, excludes, where it comes from and who owns it.
+  - title: Log the assumptions
+    text: "Logs every assumption behind the analysis: windows, exclusions, estimates."
+  - title: Write the weekly update
+    text: "Writes the update: what changed, why, what we do and what we watch, each number tied to its definition."
+  - title: Turn figures into pictures
+    text: Translates the key figures into pictures a reader can hold, in Chip Heath's manner, and puts them at the top.
+output_shape: |-
+  STEP 1: METRIC DEFINITIONS
+    <metric>: Counts <...> | Excludes <...> | Source <...> | Updates <...> | Owner <...>
+
+  STEP 2: ASSUMPTIONS LOG
+    <assumption>: <why it was made> | Affects: <metric>
+
+  STEP 3: WEEKLY UPDATE
+    Changed: <metric, from, to, why> | We do: <...> | Watching: <...>
+
+  STEP 4: PLAIN PICTURES
+    <figure>: <picture a reader can hold> | Placed: top of the update
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. Our weekly update goes to the founder, the ops manager and our two retail partners' category buyers.
+    Metrics we track: site orders, new subscribers, subscriber churn, retail sell-through (units sold per store per week), average first-order discount, support tickets per 100 orders, ad spend as a share of site revenue.
+    Where they come from: store platform, subscription app, retailer portals (weekly), help desk, ad accounts.
+    The argument: "new subscribers" is counted by one person as sign-ups and by another as first paid renewals. "Churn" is sometimes monthly, sometimes rolling.
+    This week versus last: site orders 2,140 vs 2,310; new subscribers 610 vs 540; churn (monthly) 11% vs 9%; retail sell-through 4.1 vs 3.8 units per store per week across 400 stores; average first-order discount 56% vs 53%; tickets per 100 orders 6.2 vs 4.9; ad spend share 31% vs 28%.
+    These are practice numbers.
+  output: pending
+tweaks:
+  - what: The argument
+    how: Say which metrics people disagree on. The definitions settle those first.
+  - what: The reader
+    how: Say who reads it and what they decide. The update leads with what they need.
+  - what: Last week's numbers
+    how: Bring both weeks. Without last week there is no "changed".
+  - what: Your fixed shape
+    how: If your update has a required format, paste it. Step 3 fills it.
+judge:
+  - Each definition says what the metric excludes, not only what it counts.
+  - The assumptions log could be read by someone outside the team.
+  - The update leads with what changed and says what you do about it.
+  - Every number in the update ties to a definition.
+  - The pictures are true to the figures and a stranger would remember them.
+test:
+  - Give two people the definitions and the raw data. Do they get the same number?
+  - Give step 4 a figure of 0.3%. The picture should make it concrete without making it sound bigger than it is.
+  - Run step 1 twice. The exclusions should match.
+  - Send the update and ask one reader what changed this week. Do they say the same as the update?
+improve:
+  - Keep the definitions in one file and paste it every week. Change one only with a dated note.
+  - Save each week's update. The month's trend is in them.
+  - Add your readers' past questions so the update answers them before they ask.
+  - Pair it with "Build a weekly KPI report with a forecast and dashboard" when you want the numbers charted too.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: A spreadsheet
+      why: Holds the numbers and the definitions side by side.
+  inputs:
+    - Questions readers asked about past updates
+    - The exports the numbers come from
+    - A metric that changed definition in the past, and when
+terms:
+  - term: Churn
+    meaning: The share of subscribers who cancel in a period. Say which period.

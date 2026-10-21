@@ -1,0 +1,110 @@
+new_slug: take-over-a-team-as-its-new-leader
+name: Take over a team as its new leader
+summary: Give it the team and your brief. Get a first message, a listening tour and results agreements.
+job: lead-people
+thinking: high
+thinking_why: It shapes how a team first sees you and what you commit to. Give it your strongest model.
+headline: Take over a team as its new leader
+subhead: Give it the team and what you were brought in to do. It writes your first message in the manner of Satya Nadella's first-day email, plans a listening tour, reads whether the team is in peacetime or wartime in Ben Horowitz's terms, and writes a results agreement with each person.
+explain: |
+  A new leader's first month sets the next year. The team watches every word for who is in and who is out. Most new leaders either announce a plan before they understand anything, or listen so long that nobody knows what they stand for. Either way, the first results agreement is made too late.
+
+  This workflow walks the first weeks in order. It writes your first message: who you are, how you work, what you will not change yet, in the manner of Satya Nadella's first-day email. It plans the listening tour, one-to-one with each person, hearing them first. It reads whether the team is in peacetime or wartime, in Ben Horowitz's terms, because the right leadership style depends on which. Then it writes a results agreement with each person, in Stephen Covey's manner: the result, the guidelines, the resources, how it is measured and what follows.
+when:
+  - You start as manager of an existing team next week.
+  - You have bought or inherited a business and its people.
+  - You took over six months ago and it has not settled.
+you_give:
+  - "The team: who they are, their roles and how long they have been there"
+  - What you were brought in to do and by whom
+  - "What you know of the situation: numbers, morale, what happened before you"
+  - Your own way of working
+you_get:
+  - A first message to the team in your own voice
+  - A listening tour plan with the questions for each person
+  - A read of whether the team is in peacetime or wartime, and what that changes
+  - A results agreement with each person
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the team, your brief and what you know. It writes the first message and the listening tour.
+  - Send the message and hold the one-to-ones. Paste your notes.
+  - Read the situation call, then agree results with each person in the next one-to-one.
+how_it_works:
+  - title: Write your first message
+    text: "Writes your first message: who you are, how you work, what you will not change yet, in the manner of Nadella's first-day email."
+  - title: Plan the listening tour
+    text: Plans a one-to-one with each person that hears them first, with the questions to ask.
+  - title: Listen first
+    text: A pause. Send the message and hold the listening tour. Write down what each person said.
+  - title: Read the situation
+    text: Calls peacetime or wartime from your notes and the numbers, in Horowitz's terms, and says what that changes.
+  - title: Agree results with each person
+    text: "Writes a results agreement per person: result, guidelines, resources, measures and consequences, in Covey's manner."
+output_shape: |-
+  STEP 1: FIRST MESSAGE
+    <who you are, how you work, what stays for now, when they hear more>
+
+  STEP 2: LISTENING TOUR
+    <person>: When: <...> | Ask: <what works, what's broken, what you'd change, what you need from me>
+
+  PAUSE: send the message, hold the one-to-ones, write down what you heard
+
+  STEP 3: SITUATION READ
+    Call: <peacetime / wartime> | Evidence: <...> | This quarter I lead by: <...> | I stop: <...>
+
+  STEP 4: RESULTS AGREEMENTS
+    <person>: Result <...> | Guidelines <...> | Resources <...> | Measured by <...> | Then <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    I've just bought a majority stake in Sprout, a daily greens gummy brand, and I'm taking over as CEO from the founder, who stays as an adviser.
+    Team (nine): operations manager (4 years, runs everything), product developer (3 years, flavours), social lead (2 years), paid social manager (14 months), support lead (1 year), two warehouse staff, a part-time bookkeeper, a part-time designer.
+    Brought in to: fix the discount mess on the site (four different percentages live at once), grow retail, and get the company to profit in 18 months.
+    What I know: site sales down 20% year on year; retail up; morale fine but people are tired of flavour launches; the founder made every decision; the last two hires left inside a year.
+    How I work: I ask a lot of questions, I decide in writing, I hate surprises.
+  output: pending
+tweaks:
+  - what: What happened before you
+    how: Say it plainly, including why the last leader left. The first message avoids the wrong promises.
+  - what: Your way of working
+    how: Three honest lines. The message and the agreements are written to them.
+  - what: The numbers
+    how: Bring the figures to step 3. The peacetime or wartime call needs them.
+  - what: Your listening notes
+    how: Write down what each person said, in their words. Step 4 builds each agreement from them.
+judge:
+  - The first message makes no promise about changes you have not yet understood.
+  - The listening tour asks every person the same core questions and hears them before you talk.
+  - The situation call names its evidence and says what you stop doing as a result.
+  - Each results agreement has a measure and a consequence both of you could state.
+  - Nothing in the agreements contradicts the first message.
+test:
+  - Give it a team in crisis (cash for four months). Step 3 should call wartime and change the lead style.
+  - Read the first message as the longest-serving person. Does it respect what they built?
+  - Run step 1 twice. What you say you will not change yet should match.
+  - Give step 4 a person whose notes you did not paste. It should mark MISSING rather than invent their agreement.
+improve:
+  - Keep the listening notes. Re-read them at 90 days against what changed.
+  - Add your own working rules to your about-me note so every message matches them.
+  - Revisit the peacetime or wartime call each quarter with the numbers.
+  - Pair it with "Set team goals, run one-on-ones and settle decisions" once the agreements are in place.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Your calendar
+      why: Book the whole listening tour in the first two weeks.
+  inputs:
+    - The last leader's notes or handover
+    - The team's current goals and numbers
+    - Exit interviews from recent leavers
+terms:
+  - term: Wartime
+    meaning: Ben Horowitz's term for a company facing a threat to its survival, which needs a different leadership style from calm times.
+  - term: Results agreement
+    meaning: Stephen Covey's written agreement on a result, the guidelines, the resources, how it is measured and what follows.

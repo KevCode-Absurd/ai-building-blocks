@@ -1,0 +1,169 @@
+new_slug: experiment-readout-desk
+name: Experiment readout desk
+summary: Give it each test before it starts and when it ends. Get a readiness
+  check, an honest verdict and the lesson saved.
+job: test-an-idea
+thinking: high
+thinking_why: It judges whether a test can be read, weighs two readers against
+  each other and must not call luck a win. Give it your strongest model.
+headline: Experiment readout desk
+subhead: Give it each test plan before the test and the results when it ends.
+  Before, it checks that one thing changes, one rate is named and there is
+  enough traffic, scored out of 100. After, it gives a verdict with a confidence
+  range, a second opinion on luck and a lesson when the test was run badly.
+explain: >
+  Most tests fail before they start. Two things change at once, no rate is
+  named, the site has a tenth of the traffic needed, and someone peeks on day
+  three. Then a gap that is pure luck gets shipped and a real win gets missed
+  because the readout was never done the same way twice.
+
+
+  This agent sits at both ends. Before a test it defines the terms, checks the
+  plan changes one thing with a written prediction, and scores readiness from
+  your traffic. Under the bar, it sends the test back. When the test reaches its
+  read date it reads the result with a confidence range and a split check, gets
+  a second opinion on luck from a different reader, lists the side effects and
+  says plainly what the test did not test. If the test was peeked at, stopped
+  early or muddled, it writes the lesson as a rule. It never starts, stops or
+  ships anything.
+when:
+  - Your team runs A/B or split tests and the readouts depend on who reads them.
+  - A test shipped last quarter and nobody can say now whether it worked.
+  - You want to know, before you build a test, whether you have the traffic to
+    read it.
+you_give:
+  - The test plan, with what changes, for whom, the rate to move, by how much
+    and the read date
+  - Visits, conversions and revenue for the pages in the test, for the last few
+    weeks
+  - The results per version when the test ends, by day if you have them
+  - What else happened during the test, with dates (advised)
+  - The test register, once it exists
+you_get:
+  - The one change, the one rate and what would prove the idea wrong, written
+    before the run
+  - A readiness score out of 100 with the sample size and weeks needed
+  - A verdict with both versions, the gap, the confidence range and a ship call
+  - A second opinion on luck and whether it agrees
+  - What the test did not test
+  - A lesson written as a rule when the test was run badly
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in
+    .claude/agents, then ask it to check a test plan.
+  - Paste the plan and the traffic numbers. Read the readiness score. Fix the
+    plan or drop the test if it says so.
+  - Start the test in your own tool. Tell the agent the start date.
+  - On the read date, export the results per version and give them to the agent.
+    Read the verdict.
+  - Ship or revert yourself. The register keeps the team's hit rate over the
+    year.
+how_it_works:
+  - title: Define the terms
+    text: Writes the one change, the one rate, the hoped-for move and what would
+      prove the idea wrong, or sends the plan back.
+  - title: Check the plan
+    text: Confirms one change and a prediction written before the run.
+  - title: Check the traffic
+    text: Works out the sample size and weeks needed and scores readiness out of
+      100. Under the bar, the test goes back.
+  - title: Check the date
+    text: Refuses to read a result before its date unless you say so in writing, and
+      then writes the lesson.
+  - title: Read the result
+    text: The split check, the result on the named rate with a confidence range,
+      side effects and a ship call.
+  - title: Get a second opinion on luck
+    text: Reads the same counts a second way, names any disagreement and prefers the
+      cautious call.
+  - title: Write the lesson when earned
+    text: For a peeked, stopped or muddled test, the root cause and a rule for next
+      time.
+  - title: Hand back
+    text: Updates the register and stops. You ship or revert.
+output_shape: >-
+  BEFORE THE TEST
+    Change: <one thing> | rate: <name> | hoped: <from % to %> | wrong if: <result>
+    Readiness: <n>/100 | sample: <n> per version | weeks: <n> | call: <go | send back: why>
+
+  WHEN IT ENDS
+    Read date: <date> | read on: <date> | <on time | early, by written yes>
+    Split check: <A n visitors, B n visitors | ok | skewed>
+    Result: <rate> A <%> vs B <%> | gap <points> | range <low> to <high> | <B wins | no difference | A wins>
+    Second opinion: <keep | rerun | stop> | <agrees | differs: prefer cautious>
+    Side effects: <business number> <move> | <other watched number> <move>
+    Not tested: <what this cannot tell you>
+    Ship call: <ship | revert | rerun>
+
+  THE LESSON (if earned)
+    Cause: <what went wrong> | rule: <one line to check next time>
+
+  REGISTER
+    <test> | <date> | readiness <n> | verdict <call> | lesson <yes | no>
+
+  FILES AND MISSING
+    <each file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Test ending today on Sprout's product page. Practice numbers, not
+    Sprout's real figures.
+    Plan (approved 15 Sep): change the plan box badge from "MOST POPULAR:
+    GET UP TO 55% OFF" (A) to "Subscribe and save $16.66 a pouch" (B).
+    Rate: plan selected to checkout started. Hoped: 62% to 66%. Read date:
+    13 Oct. Wrong if: B is not above A by at least 2 points.
+    Results 15 Sep to 13 Oct: A 4,120 plan selections, 2,554 checkouts
+    (62.0%). B 4,088 plan selections, 2,640 checkouts (64.6%).
+    Orders placed: A 1,379, B 1,431. Revenue per order: A $31.40, B $30.90.
+    What else happened: the birthday price-cut ads started 1 Oct and sent
+    more traffic to both versions; a checkout app update landed 9 Oct.
+    Traffic before the test: about 1,000 plan selections a week, 62%
+    to checkout.
+  output: pending
+tweaks:
+  - what: The readiness bar
+    how: The agent sends a test back under 70 out of 100. Raise it for tests that
+      are costly to run.
+  - what: Daily data
+    how: Results by day make the split check and the second opinion much stronger.
+      Totals alone are weaker.
+  - what: What else happened
+    how: A release or a campaign in the middle can be the real cause. Log them with
+      dates.
+  - what: Your main business number
+    how: Name it once. Every verdict lists side effects on it.
+judge:
+  - The test changed one thing and named one rate, or was sent back.
+  - No result was read early without your written yes.
+  - The verdict shows both versions, the gap and the range.
+  - The two readers were compared.
+  - Nothing was started, stopped or shipped.
+test:
+  - Give it a past test where you know the result was luck. It should call no
+    difference.
+  - Give it a plan that changes two things. It should send it back.
+  - Give it a test with a tenth of the traffic it needs. The readiness score
+    should say do not run.
+improve:
+  - Write your main business number and readiness bar into the register before
+    the first test.
+  - Give every test a read date in the plan and hold to it.
+  - Record the verdict and lesson for every test. A year of rows shows the
+    team's real hit rate.
+  - Pair it with the Weekly product funnel watcher, which proposes the
+    experiments this desk reads.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep one folder per test and the register between tests.
+    - name: Your testing tool
+      why: Export results per version by day, with the rate named in the plan and the
+        main business number.
+  inputs:
+    - Release notes and campaign dates during the test
+    - The last three tests the team ran, so the register starts with history
+terms:
+  - term: Confidence range
+    meaning: The span the true gap most likely sits in. A gap whose range includes
+      zero is not a win.

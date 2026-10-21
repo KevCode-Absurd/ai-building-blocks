@@ -1,0 +1,48 @@
+slug: seedance
+name: Seedance
+maker: ByteDance
+url: https://dreamina.capcut.com/
+promise: Short video clips from a text prompt or a still image.
+use_cases: [make-video]
+categories: [video]
+what_it_does:
+  - Makes short video clips from a written description.
+  - Turns a still image into a moving clip.
+  - Takes reference images and clips to guide the look of a scene.
+  - Runs inside Dreamina, and through ByteDance's API for developers.
+benefits:
+  - Test a video ad idea before you pay for a shoot.
+  - Guide the look of a clip with your own reference pictures.
+  - Try the free daily credits before you pay.
+best_for:
+  - Cinematic short clips and product ads.
+  - People who already use CapCut, since Dreamina is made by the same company.
+  - Prompt writers who want to try many styles of one script.
+not_for:
+  - Long videos with one continuous take.
+  - Users in regions where the model is not offered.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: Dreamina lists Free, Basic, Standard and Advanced plans, with free daily credits. The page does not show dollar prices, and third-party sites disagree.
+works_with:
+  - capcut
+  - elevenlabs
+  - higgsfield
+runs_in: [web, mobile, api]
+blocks:
+  - video-ad-shot-list-maker
+  - weekly-video-ad-batch-maker
+  - avatar-storyboard-planner
+  - selfie-style-video-prompts
+  - talking-object-video-prompts
+  - claymation-video-prompts
+  - paper-cutout-video-prompts
+  - short-film-video-prompts
+  - 3d-explainer-video-prompts
+  - offer-reel-real-product
+alternatives: [kling, veo, runway, pika]
+last_checked: 2026-10-21
+sources:
+  - https://dreamina.capcut.com/
+  - https://dreamina.capcut.com/pricing/dreamina-price

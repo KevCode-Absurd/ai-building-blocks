@@ -1,0 +1,37 @@
+slug: veed
+name: VEED
+maker: VEED
+url: https://www.veed.io
+promise: Edit, caption and translate videos in your browser, with no install.
+use_cases: [edit-video]
+categories: [video]
+what_it_does:
+  - Edits video in your browser with a timeline and templates.
+  - Makes subtitles from speech, with unlimited use on paid plans.
+  - Translates and dubs videos into other languages.
+  - Makes AI presenters and AI clips with its credits.
+  - Records your screen and camera.
+benefits:
+  - Add captions to a video in a few minutes.
+  - Put one video in several languages.
+  - Edit on any computer, since nothing needs installing.
+best_for:
+  - Marketers and small teams who edit social video.
+  - Teams that share one workspace, since plans are per seat.
+  - Quick caption and translation jobs.
+not_for:
+  - Long films or complex effects work.
+  - Large teams on a tight budget, since the price grows with each editor.
+pricing:
+  model: freemium
+  from: Check the maker's site
+  note: There is a free plan. The pricing page text did not show plan prices, and sources found in 2026 disagree. Plans are per seat and AI credits do not carry over.
+works_with:
+  - elevenlabs
+runs_in: [web]
+blocks:
+  - marketing-video-producer
+alternatives: [capcut, descript, opus-clip, heygen]
+last_checked: 2026-10-21
+sources:
+  - https://www.veed.io/pricing

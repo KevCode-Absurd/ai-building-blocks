@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It creates real codes, so it must get the rules right.
 new_slug: abandoned-cart-code-maker
 name: Abandoned cart code maker
-summary: Get a unique discount code for each shopper who left a cart, and tag them. Creates live codes you cannot bulk delete.
+summary: Connect your Shopify store. Get one discount code per shopper who left a cart, plus a tag.
 job: make-offer
 headline: Abandoned cart code maker
-subhead: Get a unique discount code for each shopper who left a cart, and tag them. Creates live codes you cannot bulk delete.
+subhead: Give it your Shopify store, how many days back to look, a minimum cart value and the discount. It pulls recent abandoned checkouts, drops small carts and makes one unique code per shopper. You get a preview count, the live codes, a tag on each customer and a summary. Codes cannot be bulk deleted.
 explain: |
   You get a unique discount code for each shopper who left a cart, and each of them is tagged in your Shopify store so you can message them next. The codes are live as soon as they are made, and they cannot be bulk deleted.
 

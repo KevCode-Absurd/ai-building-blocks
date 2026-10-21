@@ -1,0 +1,18 @@
+slug: share-of-search-tracker-planner
+name: "Share of search tracker planner"
+summary: "Paste your brand and your rivals. Get a monthly share-of-search tracker and how to read it."
+category: general
+boards: []
+type: prompt
+role: plan
+job: analysis
+level: intermediate
+inputs:
+  - {type: competitor_set, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+minds: [les-binet]

@@ -1,12 +1,12 @@
 new_slug: marketing-plan-law-checker
 name: "Marketing plan law checker"
-summary: "Paste your marketing plan. Get each law it breaks, the line that breaks it, a score and a fix list."
+summary: "Paste your marketing plan. Get the laws it breaks, the line behind each, a score and fixes."
 job: plan-strategy
 thinking: high
 thinking_why: "It has to read a plan against thirteen tests and judge each one from what the plan really says, so more thinking time finds more faults."
 
-headline: "Find the marketing laws your plan breaks before you spend on it"
-subhead: "Paste your marketing plan, and your rivals if you have them. It tests the plan against thirteen rules about the buyer's mind: being first, owning one word, product lines, targets and money. You get a verdict on each, the plan line behind it, a score out of 100 and a fix list."
+headline: "Marketing plan law checker"
+subhead: "Paste your marketing plan, and your rivals if known. It tests the plan against thirteen rules about the buyer's mind: being first, owning one word, product lines, targets and money. You get a verdict on each, the plan line behind it, a score out of 100 and a fix list."
 
 explain: |
   Most plans assume the better product wins. The rules this skill uses start from the opposite view: buyers keep a short ranking in their heads for each kind of product, they rarely change it, and the plan has to fit that ranking. A plan can be well made, well funded and still push against it.

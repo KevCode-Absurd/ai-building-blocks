@@ -1,0 +1,130 @@
+new_slug: stalled-deal-revival-desk
+name: Stalled deal revival desk
+summary: Give it a deal that went quiet. Get the real reason it stalled, a firm recommendation and the follow-up to send.
+job: sell-and-negotiate
+thinking: high
+thinking_why: It must read a buyer's silence from notes, tell doubt from fear of a mistake and pick a follow-up that does not push. Give it your strongest model.
+headline: Stalled deal revival desk
+subhead: Give it the notes on a deal that has gone quiet for 14 days. It writes the timeline, checks whether it was ever a real deal, works out whether the buyer doubts you or fears making a mistake, checks whether money is the block and writes the one follow-up that fits. You send it.
+explain: |
+  A deal goes quiet and the seller does one of two things. Chases every three days with "just checking in", or waits a month and marks it lost. Both miss the point. Most buyers who go quiet are not choosing a rival. They are afraid of making a mistake, and every chase adds to the fear.
+
+  This agent takes each quiet deal on day 14. It writes the timeline in dates and checks the deal's health, because a deal with no decision maker met is a qualification problem, not a stall. Then it judges the indecision: doubt about you, or fear of a mistake. It checks whether money is the real block and says plainly when a smaller option fits. It writes the follow-up that matches the cause, a short series that takes the risk off the table, or closing questions that offer two ways to say yes, with a personal recommendation. At day 30 it writes one last message and a clean break. It never sends.
+when:
+  - A deal you felt good about has gone quiet after the proposal.
+  - You keep chasing stalled deals the same way and it keeps not working.
+  - You want to know, before you discount, whether price is really the block.
+you_give:
+  - The deal notes with every meeting and message dated, and the last thing the buyer said
+  - Your proposal or quote with price, scope and terms (advised)
+  - A read-only connection to your CRM (optional)
+  - Your objection map from past deals (optional)
+  - What you can and cannot change without approval (advised)
+you_get:
+  - The timeline in dates and the days quiet
+  - A health score and whether the deal was ever qualified
+  - The cause named, doubt, fear of a mistake, money or never qualified, with the evidence
+  - The range the buyer can pay and whether a smaller option fits
+  - A follow-up series or closing questions that match the cause, ready to send
+  - Why deals at your company stall most, once five have been through
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then paste the deal notes.
+  - Add your proposal and your limits on what you can change.
+  - Read the cause first. If the deal was never qualified, do what it says to learn before any follow-up.
+  - Send the follow-up yourself, in your own words if you like, and tell the agent the date.
+  - If there is no reply by day 30, run it again. It writes one last message and a clean break.
+how_it_works:
+  - title: Read the deal
+    text: Writes the dated timeline, counts the days quiet and notes whether the deal was ever qualified.
+  - title: Check the health
+    text: A health score, the risks and the gaps in qualification. A low score with no decision maker met is sent back as a qualification problem.
+  - title: Judge the indecision
+    text: Doubt about you, or fear of a mistake, with a firm recommendation that fits.
+  - title: Check the money when it is the block
+    text: The range they can pay and the sum to propose, and a plain word when a smaller option fits them better.
+  - title: Write the follow-up that fits
+    text: A short series that takes the risk off the table for fear, closing questions for doubt about options, or the proof to find for doubt about the product.
+  - title: Set the next check
+    text: Marks the send date, and at day 30 writes one last message and a clean break.
+  - title: Log and hand back
+    text: Updates the deal file and the patterns, then stops for your yes.
+output_shape: |-
+  THE DEAL
+    <buyer> | quiet <n> days | health <n>/100 | cause: <doubt about you | fear of a mistake | money | never qualified>
+
+  TIMELINE
+    <date> first contact | <date> <meeting> | <date> proposal sent | <date> last reply: "<what they said>" | silence since <date>
+
+  THE CALL
+    stuck on: <what> | evidence: <two lines from the notes> | recommendation: <one firm line>
+
+  MONEY (if it applied)
+    can pay: <range> | propose: <sum> | smaller option fits: <yes: which | no>
+
+  THE FOLLOW-UP
+    <message 1> | send <date>
+    <message 2> | send <date>
+    or closing questions: "<q offering two yeses>" | recommend: <which>
+    or learn first: <what to find out before any message>
+
+  DAY 30
+    last message: <text> | clean break: <one line>
+
+  PATTERN (after 5 deals)
+    deals here stall most on: <cause> (<n> of <n>)
+
+  FILES AND MISSING
+    <the deal file> | MISSING: <every line>
+example:
+  business: sprout
+  input: |
+    [the agent]
+
+    Stalled deal, quiet 16 days. Practice deal, not Sprout's real one.
+    Buyer: category manager at a regional grocery chain, 40 stores.
+    Timeline: 2 Sep intro call, she said "customers keep asking for a
+    greens gummy"; 11 Sep tasting with her team, liked the Original,
+    asked about Kids; 19 Sep proposal sent: 12-pack Adults at $19.97
+    shelf price, Kids at $14.97, 2 facings, 90-day trial in 10 stores;
+    24 Sep she replied "looks good, need to run it past my director and
+    look at the two other gummy options we were sent"; nothing since.
+    Decision maker: the director, never met.
+    Offer attached. Limits: I can offer a 60-day instead of 90-day trial
+    and in-store sampling; I cannot change shelf price or facings without
+    the founder.
+    Objection map: price per bottle vs the grocery gummy at $25 to $30;
+    "is the category real yet".
+  output: pending
+tweaks:
+  - what: Dated notes
+    how: Every meeting and message with a date. The cause is read from the timeline.
+  - what: Your limits
+    how: Say what you can change alone. The agent proposes nothing beyond it.
+  - what: Quiet lines
+    how: 14 and 30 days are the defaults. Set 7 and 21 for a fast-moving sale.
+  - what: Objection map
+    how: With it, the follow-up answers doubts you have already met in other deals.
+judge:
+  - The timeline is dated and the days quiet are counted from it.
+  - The cause is one of four, with evidence from the notes.
+  - The follow-up matches the cause.
+  - No discount was proposed before the money check.
+  - Nothing was sent or closed.
+test:
+  - Give it a deal where the decision maker was never met. It should call it a qualification problem, not a stall.
+  - Give it a deal that went quiet after the proposal with "need to think". It should call fear of a mistake and write a risk-off series.
+  - Run it twice on the same notes. The cause and the follow-up should match.
+improve:
+  - Write your limits and your objection map into the folder before the first deal.
+  - Record every outcome in the patterns file. After five deals it tells you why deals here stall.
+  - Set the quiet lines to your sales cycle.
+  - Pair it with the Weekly sales pipeline reviewer, which finds the quiet deals this desk works on.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep one file per deal and the patterns file, and run when a deal passes 14 days quiet.
+    - name: Your CRM
+      why: A read-only connection lets the health check read the deal history directly.
+  inputs:
+    - The buyer's own words from the last call, as close to verbatim as you have
+    - Who else at the buyer has a say, and what each cares about

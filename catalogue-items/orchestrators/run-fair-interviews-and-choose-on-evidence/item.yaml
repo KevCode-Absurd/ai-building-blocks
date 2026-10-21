@@ -1,0 +1,25 @@
+slug: run-fair-interviews-and-choose-on-evidence
+name: "Run fair interviews and choose the candidate on evidence"
+summary: "Give it the role. Get an interview plan, scorecards, a work test, a fair comparison and the replies."
+category: orchestrator
+type: workflow
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: feedback_notes, required: true}
+  - {type: transcript, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: copy_draft}
+uses: [interview-process-planner, interview-scorecard-builder, work-sample-test-designer, fair-candidate-comparer, candidate-message-drafter]
+steps:
+  - {uses: interview-process-planner, note: "The stages for this role and level, who runs each one and what it checks, so no stage repeats another."}
+  - {uses: interview-scorecard-builder, note: "One scorecard per stage: the set questions, what a strong and a weak answer sound like, and a rating guide every interviewer uses."}
+  - {uses: work-sample-test-designer, note: "A short task taken from the real job, a scoring guide and fairness checks, so candidates are judged on work."}
+  - {uses: fair-candidate-comparer, note: "Candidates compared on the scorecards alone, with a flag on any note that rests on feel or on something unrelated to the job. You make the call."}
+  - {uses: candidate-message-drafter, note: "The offer call for the person you chose and a clear, kind reply for everyone else, with the real reason where you can give one. Nothing is sent until you say so."}
+origin: own
+version: 1.0.0
+example_pending: true

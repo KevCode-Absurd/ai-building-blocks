@@ -1,0 +1,43 @@
+slug: descript
+name: Descript
+maker: Descript
+url: https://www.descript.com
+promise: Edit video and audio by editing the written transcript.
+use_cases: [edit-video, voice-and-audio]
+categories: [video, voice]
+what_it_does:
+  - Turns a recording into a transcript you edit like a document.
+  - Cuts filler words and pauses with a click.
+  - Adds captions to your video.
+  - Clones your voice so you can fix a line by typing it.
+  - Records your screen and your camera in one place.
+benefits:
+  - Cut a raw recording in minutes instead of hours.
+  - Fix a slip in the audio by typing the line.
+  - Get captions and a transcript with the same edit.
+best_for:
+  - Podcasters and people who record talking videos.
+  - Marketers who turn long recordings into short clips.
+  - Teams who record demos and tutorials.
+not_for:
+  - Heavy visual effects or colour work.
+  - People who never record themselves, since the main value is in speech.
+pricing:
+  model: freemium
+  from: "US$16 per month"
+  note: Free plan gives 1 hour of media and 100 one-time AI credits. Hobbyist includes 10 hours a month and 1080p export. The page shows a second, higher price of US$24, probably for monthly billing, so check it.
+works_with:
+  - elevenlabs
+  - capcut
+runs_in: [desktop, web]
+blocks:
+  - video-ad-edit-planner
+  - social-video-edit-planner
+  - video-ad-text-overlays
+  - podcast-style-ad-script
+  - founder-video-ad-script-writer
+  - marketing-video-producer
+alternatives: [capcut, veed, opus-clip, whisper]
+last_checked: 2026-10-21
+sources:
+  - https://www.descript.com/pricing

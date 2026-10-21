@@ -2,10 +2,10 @@ thinking: medium
 thinking_why: It tests against a fixed list of success criteria.
 new_slug: accessibility-standards-checker
 name: Accessibility standards checker
-summary: Describe your site or app. Get WCAG gaps by level, what to fix first and notes for an accessibility statement.
+summary: Describe your site or app. Get WCAG gaps by level, fixes ranked first, and accessibility statement notes.
 job: check-contracts
 headline: Accessibility standards checker
-subhead: Describe your site or app. Get WCAG gaps by level, what to fix first and notes for an accessibility statement.
+subhead: "Describe your site or app, or share a link, code or screenshots, and say which level you aim for: A, AA or AAA. It checks each criterion and sorts the gaps by level. You get a gap table, fixes ranked by priority, corrected code, draft accessibility statement notes and a map from rules to laws."
 explain: |
   Where your site or app falls short of the web accessibility standard shows up in a list sorted by level, with the most important fixes first, plus notes for an accessibility statement.
 

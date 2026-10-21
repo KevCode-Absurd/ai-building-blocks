@@ -1,0 +1,30 @@
+slug: quarterly-battle-card-keeper
+name: "Quarterly battle card keeper"
+summary: "Give it your won and lost deals each quarter. Get each rival's card refreshed, your edge checked and the objection answers updated."
+category: agent
+type: agent
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: product_data, required: true}
+  - {type: competitor_set, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: competitor_set}
+  - {type: document}
+  - {type: objection_map}
+uses: [competitor-battle-card-builder, competitor-product-analyst, product-differentiation-checker, competitor-white-space-mapper, objection-answer-sheet-writer]
+steps:
+  - {uses: competitor-battle-card-builder, note: "Once, and for any rival that first appears in a lost deal: the card with product, pricing and customer views, and the feature grid."}
+  - {uses: competitor-product-analyst, note: "Every quarter, for each rival that appeared in three or more deals: their pricing, features and strengths set against yours, with gaps to act on."}
+  - {uses: product-differentiation-checker, note: "Every quarter: from won and lost deals, whether your edge is real, and which claims buyers chose you for."}
+  - {uses: competitor-white-space-mapper, note: "Once a year, or when a new rival takes a tenth of lost deals: the grid of what buyers value and where nobody is strong."}
+  - {uses: objection-answer-sheet-writer, note: "Every quarter, last: the doubts buyers raised in lost deals, each with an answer backed by proof you have."}
+schedule: "First two weeks of each quarter, after the quarter's deals are closed out"
+asks_before: [publishing or sending cards to the sales team, making any claim about a rival in public or to a buyer, contacting a rival or its customers, changing your pricing or positioning, buying competitor data]
+minds: [april-dunford]
+origin: own
+version: 1.0.0
+example_pending: true

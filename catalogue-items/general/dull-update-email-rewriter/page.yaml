@@ -1,0 +1,107 @@
+new_slug: dull-update-email-rewriter
+name: "Dull update email rewriter"
+summary: "Paste a flat company update. Get an email people open, with the reader's gain first."
+job: write-emails
+thinking: low
+thinking_why: "It rewrites one short email from facts you give it."
+
+headline: "Dull update email rewriter"
+subhead: "Paste a company or product update that reads like a notice. The prompt finds what the reader gains, picks one point, writes the subject and first line as a pair, cuts the generic lines and ends on one action. You get the email and the list of what was cut."
+
+explain: |
+  Most update emails are written from the company's side. "We're excited to announce our new dashboard" tells the reader nothing about their day. They skim, they delete, and the next one gets opened less. The facts were fine. The framing was the problem.
+
+  This prompt follows the way Ann Handley talks about writing for one reader in public. It finds the reader's gain and puts it first, keeps one point per email, writes a subject line the first line has to prove, and deletes any sentence that could appear in another company's newsletter unchanged. Every date, price and name stays exactly as you gave it. If the update has no gain for the reader, it says so and writes the honest version instead of a hyped one.
+
+when:
+  - "You have a product change, a price change or a schedule change to tell customers about."
+  - "Your team newsletter gets opened by half the people it used to."
+  - "You wrote the update in five minutes and it reads like a legal notice."
+
+you_give:
+  - "The draft email, or the facts of the update"
+  - "Who reads it and what they care about (advised)"
+  - "Two or three lines you have sent before, so it sounds like you (optional)"
+you_get:
+  - "The reader's gain in one line"
+  - "A subject line and the rewritten email"
+  - "The generic lines that were cut, so you can see the difference"
+  - "Missing facts marked"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your update under it."
+  - "Say who reads it, such as customers, subscribers or your team."
+  - "Read the READER'S GAIN line first. If it is wrong, tell the AI what the real gain is and run it again."
+  - "Check every date and price against your source, then send."
+
+how_it_works:
+  - title: "Finds the reader's gain"
+    text: "Reads the update and writes one line about what changes for the reader, in their words."
+  - title: "Picks one point"
+    text: "Keeps the point readers care about most and moves the rest to a short list at the end, or cuts them."
+  - title: "Pairs subject and first line"
+    text: "The subject says the news in under eight words. The first line proves it with a fact."
+  - title: "Rewrites the body"
+    text: "Short paragraphs, plain words for company words, every fact kept exactly."
+  - title: "Cuts the generic lines"
+    text: "Deletes any sentence that could sit in another company's email, and lists what it cut."
+  - title: "Ends on one action"
+    text: "One link or reply on its own line, with what happens when they click."
+
+output_shape: |
+  READER'S GAIN   <one line, in the reader's words>
+  SUBJECT         <under eight words>
+  EMAIL
+  <first line, body, one action line, sign-off>
+  ALSO (optional) <points moved out of the body>
+  CUT             <generic lines removed>
+  MISSING         <facts not given>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    Readers: existing subscribers to Sprout, the daily greens gummies.
+    Draft update:
+    Subject: Exciting news from Sprout!
+    We're thrilled to announce that we're lowering our prices! As part of our
+    birthday celebrations, the subscription renewal price is now $49.99 every
+    4 weeks. We've also launched our VIP program, where members save up to
+    $80, get limited flavors and VIP access. Our new Raspberry Lemonade
+    flavour is also live for a limited time. Thank you for being part of the
+    Sprout family. Shop now!
+  output: pending
+
+tweaks:
+  - what: "The reader"
+    how: "Say who they are and what they already know. A subscriber and a new customer get different first lines."
+  - what: "Your past emails"
+    how: "Paste two you liked. The rewrite keeps your rhythm instead of a generic one."
+  - what: "How many points"
+    how: "If you need all four points, ask for one email per point and a send order."
+
+judge:
+  - "The first line is about you, the reader, not about the company."
+  - "Every date, price and name matches your draft."
+  - "The CUT list has real lines in it, and the email reads better without them."
+  - "There is one action, and it says what happens when you click."
+  - "No exclamation marks and no 'excited'."
+
+test:
+  - "Run it on an update you already sent. Compare open and click rates on the next send if you use the rewrite."
+  - "Run the same draft twice. The reader's gain line should match in meaning."
+  - "Give it an update with no reader gain, such as a holiday office closure. It should say so and write the plain version."
+
+improve:
+  - "Paste your voice-and-look file from your brand file, so the rhythm and banned words are yours."
+  - "Add the three things your readers reply about most, so the gain line aims at them."
+  - "Save the CUT lists over a month. They become your own list of phrases to stop using."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message rewrite like this well."}
+  inputs:
+    - "Your last three updates and how each one did"
+    - "The words readers use when they reply to you"

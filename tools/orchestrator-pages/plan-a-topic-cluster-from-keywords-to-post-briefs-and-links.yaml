@@ -1,0 +1,115 @@
+new_slug: plan-a-topic-cluster-from-keywords-to-post-briefs-and-links
+name: Plan a topic cluster from keywords to briefs and links
+summary: Give it your topic and site. Get keyword research, a cluster plan, post briefs and links.
+job: get-found-in-search
+thinking: high
+thinking_why: It judges what searchers want and plans a set of pages that must fit together. Give it your strongest model.
+headline: Plan a topic cluster from keywords to briefs and links
+subhead: Give it the topic you want to own and your site. It researches the keywords, maps what searchers want behind each, groups them into one main page and its supporting posts, writes a brief for every post, and maps the internal links so the cluster holds together.
+explain: |
+  Blog posts written one at a time rarely rank. Each one chases a different keyword, two of them compete for the same search, and none links to the others. Search engines see twenty loose pages instead of one site that knows a topic.
+
+  This workflow plans the cluster before the writing. It researches the keywords around your topic and groups them by what the searcher actually wants: to learn, to compare, to buy. It maps the cluster: one main page for the broad search and supporting posts for the specific ones, with no two posts chasing the same search. It writes a brief for each post: the search it answers, the questions to cover, the length and the proof to include. Then it maps the internal links, from each post to the main page and between related posts, so the cluster reads as one body of knowledge.
+when:
+  - You have twenty posts on a topic and none of them rank.
+  - You are starting a blog and want a plan, not a list of ideas.
+  - Two of your pages compete for the same search.
+you_give:
+  - The topic you want to own and who searches for it
+  - Your site and the pages you already have on the topic
+  - Your product or service, so the cluster leads somewhere
+  - Keyword data from a tool, if you have it (optional)
+you_get:
+  - Keyword research grouped by what the searcher wants
+  - "A cluster plan: one main page and its supporting posts, with no overlap"
+  - A brief for every post with the search, the questions, the length and the proof
+  - An internal link map for the cluster
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the topic, your site and your pages on it. It researches the keywords and maps the intent.
+  - Read the cluster plan. Strike any post you would not want to publish.
+  - Give the briefs to whoever writes, and the link map to whoever publishes.
+how_it_works:
+  - title: Research the keywords
+    text: Finds the searches around your topic, how often and how hard, grouped so the pattern shows.
+  - title: Map the intent
+    text: Maps what the searcher wants behind each keyword and the kind of page that answers it.
+  - title: Plan the cluster
+    text: Plans one main page and its supporting posts, with each search given to exactly one page.
+  - title: Brief every post
+    text: Writes a brief per post with the search, the questions, the length, the proof and the links.
+  - title: Map the links
+    text: Maps which page links to which, with the anchor text, so the cluster holds together.
+output_shape: |-
+  STEP 1: KEYWORDS
+    <group>: <keyword> | Searches a month: <...> | Difficulty: <...>
+
+  STEP 2: INTENT
+    <keyword>: Wants to <learn / compare / buy / fix> | Page type: <...>
+
+  STEP 3: CLUSTER
+    Main page: <search, title> | Supporting: <post, search> ... | Current pages: <kept / merged / retired>
+
+  STEP 4: BRIEFS
+    <post>: Answers <search> | Cover: <questions> | Length: <...> | Proof: <...> | Links to: <...>
+
+  STEP 5: LINK MAP
+    <from page> -> <to page> | Anchor: <...>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand, sprout.example.
+    Topic to own: greens supplements in gummy form, for people who have quit greens powders.
+    Who searches: adults 25 to 45 who tried a greens powder and stopped; parents looking at kids' vitamins.
+    Pages we have: a product page; a science page about our 2025 absorption study; a "how it works" page; three blog posts: "Why greens powders taste bad", "Gummy vitamins vs pills" and "Are greens gummies worth it" (the last two overlap).
+    Where the cluster should lead: the product page, honestly, with the kids page for parents.
+    Claims we can make: 21 vitamins and minerals, 6 g prebiotic fibre per pack, third-party tested, "supports digestion". Claims we avoid: weight loss, energy, immunity.
+    No keyword tool data; please work from what you know and say so.
+  output: pending
+tweaks:
+  - what: Keyword data
+    how: Bring an export from your keyword tool. Without it, the volumes are estimates and the plan says so.
+  - what: Your current pages
+    how: List them all. The cluster plan places or retires each, so you stop competing with yourself.
+  - what: Claims you avoid
+    how: List them. The briefs never ask a writer to make them.
+  - what: Where it leads
+    how: Name the page the cluster should send people to. Every brief links toward it.
+judge:
+  - Each keyword has one intent and one page, and no two pages chase the same search.
+  - The main page answers the broad search and the posts answer specific ones.
+  - Each brief names the search, the questions, the length and the proof.
+  - The link map sends every post to the main page.
+  - No brief asks for a claim you said to avoid.
+test:
+  - Give it two existing pages that compete. Step 3 should merge or retire one.
+  - Give step 4 a post and check its brief against a top-ranking page for that search. Does it cover the same questions and more?
+  - Run step 3 twice. The main page should be the same.
+  - Read the link map and check no post is an orphan.
+improve:
+  - After three months, bring the search console data back. Step 3 learns which posts earned their place.
+  - Save your claims list and your voice so every brief carries them.
+  - Keep the link map and update it when you publish.
+  - Pair it with "Write a post that beats the pages ranking today" to write each brief.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: A keyword research tool
+      why: Real search volumes and difficulty beat estimates.
+    - name: Your search console
+      why: Shows which searches already bring people to your pages.
+  inputs:
+    - Search console data for your site
+    - Competitor pages that rank for the topic
+    - Customer questions from support or reviews
+terms:
+  - term: Topic cluster
+    meaning: One main page on a broad search plus supporting posts on specific searches, all linked together.
+  - term: Search intent
+    meaning: "What the person typing a search actually wants: to learn, compare, buy or fix something."

@@ -1,0 +1,111 @@
+new_slug: follow-up-email-sequence-writer
+name: "Follow-up email sequence writer"
+summary: "Paste one email you planned to send once. Get a four-step sequence with timing and one ask."
+job: write-emails
+thinking: medium
+thinking_why: "It has to find four different reasons in one input and keep every fact straight across four emails."
+
+headline: "Follow-up email sequence writer"
+subhead: "Paste the one email you were going to send and the offer behind it. The prompt pins one ask, finds four different reasons to act, writes four short emails that each carry one reason, suggests the days between them and sets the stop rule."
+
+explain: |
+  Most people send one email and call it a campaign. The reader was busy, or not ready, or needed one more fact. Drayton Bird has said in public for decades that the follow-ups do most of the selling, as long as each one brings something new rather than "just bumping this".
+
+  This prompt turns your single email into a sequence of four. Every email asks for the same one action. Each email carries one reason: the main benefit, the biggest doubt answered, the proof, then a short honest last note. It suggests the gaps between sends, keeps every price and deadline exactly as you gave them, and writes the rule that ends the sequence when someone replies or buys. Where you have no proof or no real deadline, it says MISSING instead of inventing one.
+
+when:
+  - "You wrote one sales or outreach email and are about to send it once to a list."
+  - "People open your first email and nothing happens after."
+  - "You have an offer with a real end date and want the run-up planned."
+
+you_give:
+  - "The email or its facts"
+  - "The offer, with price, terms and deadline if real (advised)"
+  - "Who gets it and what they already know (advised)"
+  - "Proof you are allowed to use (optional)"
+you_get:
+  - "One ask and four different reasons, each marked from the input or a gap"
+  - "Four emails under 150 words with subject lines"
+  - "Suggested timing with reasons, and the stop rule"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your email under it."
+  - "Add the offer facts and who the list is."
+  - "Check the REASONS list. Fill any GAP with a real fact and run again, or let that email ask a question instead."
+  - "Load the four emails into your email tool with the suggested gaps and the stop rule."
+
+how_it_works:
+  - title: "Pins the one ask"
+    text: "Every email asks for the same action. A second ask gets parked."
+  - title: "Lists four reasons"
+    text: "Main benefit, biggest doubt answered, proof, cost of waiting. Each marked FROM INPUT or GAP."
+  - title: "Gives each email one reason"
+    text: "No email repeats another. The last one is short and honest about the deadline."
+  - title: "Sets the timing"
+    text: "Suggests days between sends and says why."
+  - title: "Writes the emails"
+    text: "Under 150 words each, subject under eight words, only facts from the input."
+  - title: "Writes the stop rule"
+    text: "A reply, a purchase or an opt-out ends the sequence."
+
+output_shape: |
+  THE ASK         <one action>
+  REASONS         1 <...> 2 <...> 3 <...> 4 <...>
+  TIMING          Day 0, Day <n>, Day <n>, Day <n> (SUGGESTED)
+  EMAIL 1         Subject: <...> / <body> / <ask line>
+  EMAIL 2 to 4    <same shape>
+  STOP RULE       <when it ends>
+  MISSING         <...>
+  CHECKS MISSED   <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    List: people who bought one pouch of Sprout greens gummies once, at the
+    full one-time price of $66.65, and did not subscribe.
+    Ask: start a subscription.
+    Offer: Subscribe and Save, 28 packs every 4 weeks, first box $29.99,
+    renews at $49.99 every 4 weeks, free shipping, pause or cancel any time,
+    30-day money-back guarantee. No end date on the offer.
+    Proof I can use: a brand survey of 3,000+ customers, "95% of surveyed
+    users take Sprout at least 4 to 6 times a week". Review quote with
+    permission: "Sprout has been the one thing I've been able to stick to."
+    My one email:
+    Subject: Ready for your next pouch?
+    Your first pouch should be running low. Subscribe today and save up to
+    55% on your first box, with free shipping. Start Now.
+  output: pending
+
+tweaks:
+  - what: "The deadline"
+    how: "Give a real end date and email 4 gets sharper. Give none and it stays an honest last note."
+  - what: "Proof"
+    how: "One quote with permission or one number you can back turns email 3 from a claim into evidence."
+  - what: "Who they are"
+    how: "Past customers need less background and a shorter sequence. Cold leads need more doubt-answering."
+
+judge:
+  - "All four emails ask for the same thing."
+  - "You can name the one reason in each email, and they differ."
+  - "No price, deadline or result appears that you did not give."
+  - "Each email reads fine if it is the only one they open."
+  - "The stop rule is there."
+
+test:
+  - "Send the sequence to half a list and your single email to the other half. Compare replies or sales."
+  - "Run it twice. THE ASK and the four reason types should match."
+  - "Give it an email with no proof. Email 3 should ask a question or say MISSING, not invent a number."
+
+improve:
+  - "Add your real send-gap rule, so TIMING stops being a suggestion."
+  - "Paste your offers file from your brand file, so prices and terms are always right."
+  - "Pair it with the Email send readiness scorer before loading it into your tool."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a four-email draft in one message."}
+  inputs:
+    - "The last sequence you sent and which email got the most replies"
+    - "The three doubts customers raise most before buying"

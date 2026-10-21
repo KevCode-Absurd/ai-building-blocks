@@ -1,0 +1,43 @@
+slug: granola
+name: Granola
+maker: Granola
+url: https://www.granola.ai
+promise: Your own meeting notes, finished by AI, with no bot on the call.
+use_cases: [meeting-notes]
+categories: [productivity]
+what_it_does:
+  - Listens through your computer's audio, so no bot joins the call.
+  - Takes your rough notes and fills in the gaps from the transcript.
+  - Prepares a brief before a meeting from the attendees and past talks.
+  - Drafts follow-up emails and action items after the call.
+  - Answers questions across your meeting history in a chat.
+benefits:
+  - Keep your own notes and still get a complete write-up.
+  - Join calls without a bot that guests can see.
+  - Send a follow-up email within minutes of hanging up.
+  - Keep notes private until you choose to share them.
+best_for:
+  - Founders, managers and consultants with back-to-back calls.
+  - In-person meetings, as well as Zoom, Meet and Teams.
+  - People who prefer to write their own notes.
+not_for:
+  - Teams that want a recorder that shows up in the call as a participant.
+  - Looking back past 30 days on the free plan.
+pricing:
+  model: freemium
+  from: US$14 per month
+  note: Basic is free with 30 days of meeting history. Business is US$14 per user a month with unlimited history and more integrations. Enterprise is US$35.
+works_with:
+  - Slack
+  - Notion
+  - HubSpot
+  - zapier
+  - claude
+runs_in: [desktop, mobile, api]
+blocks:
+  - meeting-coaching-analyst
+alternatives: [fireflies, otter, notion-ai, claude]
+last_checked: 2026-10-21
+sources:
+  - https://www.granola.ai
+  - https://www.granola.ai/pricing

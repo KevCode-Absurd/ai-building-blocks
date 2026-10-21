@@ -1,0 +1,38 @@
+slug: suno
+name: Suno
+maker: Suno
+url: https://suno.com
+promise: Full songs with vocals from a few lines about the sound you want.
+use_cases: [voice-and-audio]
+categories: [voice]
+what_it_does:
+  - Makes a full song with vocals from a text description.
+  - Writes lyrics for you, or sings the lyrics you paste in.
+  - Makes several versions so you can pick the best.
+  - Lets paid plans download songs.
+benefits:
+  - Get a jingle or background track without hiring a composer.
+  - Try many musical styles for one ad in an afternoon.
+  - Have a draft song to share before you spend on a final one.
+best_for:
+  - Jingles and background music for video ads.
+  - Creators who need original tracks for their posts.
+  - Quick song ideas.
+not_for:
+  - Commercial use on the free plan, which has no commercial rights.
+  - Exact control over each instrument and note.
+pricing:
+  model: freemium
+  from: "US$8 per month"
+  note: Billed yearly. Free plan gives 50 credits a day with no commercial rights. Pro includes 2,500 credits a month and commercial rights. Credits do not carry over.
+works_with:
+  - capcut
+  - elevenlabs
+runs_in: [web, mobile]
+blocks:
+  - jingle-video-ad-script-writer
+  - jingle-video-clip-prompt-writer
+alternatives: [udio, elevenlabs]
+last_checked: 2026-10-21
+sources:
+  - https://suno.com/pricing

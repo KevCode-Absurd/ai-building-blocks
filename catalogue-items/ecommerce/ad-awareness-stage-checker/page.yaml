@@ -6,7 +6,7 @@ thinking: medium
 thinking_why: "It judges one ad against a clear framework, so a mid-size model is enough."
 
 headline: "Ad awareness stage checker"
-subhead: "Attach your ad image or video with its copy. It names how much the viewer knows (the awareness stage), finds where the image, copy and video disagree, scores the ad out of 100 and writes fixes. Give it your other live ads and it checks your mix against a target split."
+subhead: "Attach your ad image or video with its copy. It names how much the viewer knows (the awareness stage), finds where image, copy and video disagree, scores the ad out of 100 and writes fixes. Give it your other live ads and it checks your mix against a target split."
 
 explain: |
   Most store ads are written as if everyone already knows the product. They lead with features, ingredients and price. But most people who see a cold ad are only problem aware at best, and many do not know they have a problem. An ad that doesn't meet them where they are gets ignored, and your frequency climbs as it keeps going to the same warm people.

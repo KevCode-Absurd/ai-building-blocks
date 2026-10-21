@@ -1,0 +1,104 @@
+new_slug: get-a-late-invoice-paid-and-keep-the-customer
+name: Get a late invoice paid and keep the customer
+summary: Give it the late invoice. Get a warm reminder, a range they can meet and a firm follow-up.
+job: sell-and-negotiate
+thinking: high
+thinking_why: It judges what a customer can pay and writes letters that touch a relationship. Give it your strongest model.
+headline: Get a late invoice paid and keep the customer
+subhead: Give it the invoice facts and your history with the customer. It writes a warm reminder, works out what they can realistically pay and proposes terms, following Keynes's rule to ask only for what can be paid, then writes a firmer follow-up. You send each letter yourself.
+explain: |
+  A late invoice puts you in a bind. Chase too hard and you lose a customer who was going to pay anyway. Chase too softly and you become the supplier who gets paid last. Most reminders are either a template with a red stamp or an apology for asking.
+
+  This workflow chases in three steps. First a warm reminder, in the manner of Robert Collier's letters: it assumes good faith, makes paying easy and gives a reason to do it now. If that brings no payment, it works out what the customer can actually pay from what you know of their situation, and proposes terms they can meet, following Keynes's rule that a demand nobody can pay produces nothing. Then it writes a firmer follow-up that states the consequence plainly and leaves the door open. You send each letter and wait the agreed days before the next.
+when:
+  - An invoice is 30 days late and the customer has gone quiet.
+  - A good customer has hit a rough patch and you want to be paid without losing them.
+  - Your reminders either sound like threats or like apologies.
+you_give:
+  - "The invoice facts: amount, date, what it was for, any part paid"
+  - Your history with the customer and what they have said about the delay
+  - What you know of their situation and means
+  - "Your own limits: how long you can wait, what discount or plan you would accept"
+you_get:
+  - A warm reminder that makes paying easy
+  - A range the customer can realistically pay and proposed terms
+  - A firm follow-up that states the consequence and keeps the door open
+how_to_use:
+  - Download the handoff pack. It's a zip with HANDOFF.md and every skill file this workflow uses.
+  - Give the folder to Claude (in Claude Code, or as files in a Claude Project) and say "Follow HANDOFF.md".
+  - Paste the invoice facts and your history with the customer. It writes the warm reminder.
+  - Send it. If nothing arrives in the agreed days, paste what you know of their means.
+  - Send the proposed terms. If still nothing, send the firm follow-up.
+how_it_works:
+  - title: Write the warm reminder
+    text: Writes a warm reminder that assumes good faith, makes paying easy and gives a reason to pay now.
+  - title: Send and wait
+    text: A pause. Send the reminder yourself. Wait the days you set before going on.
+  - title: Find what they can pay
+    text: Works out the range the customer can realistically pay and proposes terms they can meet, following Keynes.
+  - title: Send and wait again
+    text: A pause. Send the proposed terms yourself. Wait the days you set.
+  - title: Write the firm follow-up
+    text: Writes a firm follow-up that states the consequence, restates the terms and leaves the door open.
+output_shape: |-
+  STEP 1: WARM REMINDER
+    Subject: <...> | Body: <assumes good faith, how to pay, reason to pay now> | Wait: <days>
+
+  PAUSE: you send it and wait
+
+  STEP 2: WHAT THEY CAN PAY
+    Their situation: <...> | Realistic range: <amount, by when> | Proposed terms: <plan / part now / date>
+    What you accept: <...> | What you don't: <...>
+
+  PAUSE: you send the terms and wait
+
+  STEP 3: FIRM FOLLOW-UP
+    Subject: <...> | Body: <the facts, the terms, the consequence, the open door> | Send: <your call>
+
+  HAND-BACK SUMMARY
+    Files: <each step's file> | MISSING: <every line, in one list>
+example:
+  business: sprout
+  input: |
+    [the workflow]
+    Sprout, a daily greens gummy brand. A boutique gym chain (three locations) buys our 12-pack display cases wholesale.
+    Invoice: $2,760 for 240 units, dated 12 September, due in 30 days. Nothing paid. Today is 21 October.
+    History: they've bought from us five times over 14 months and always paid within 35 days. The owner texted on 8 October: "Sorry, slow month, will sort it next week." Nothing since.
+    What I know: they opened the third location in August and are stretched. Members like our product; they reorder every six weeks.
+    My limits: I can wait until 30 November. I'd accept half now and half in 30 days. No discount. I'd rather keep them than win $200.
+  output: pending
+tweaks:
+  - what: Your history
+    how: Say how they paid before. A customer who was always on time gets a warmer first letter.
+  - what: What you know of their means
+    how: A new location, a lost client, a season. Step 2 sets the range from this.
+  - what: Your limits
+    how: Say what plan you would accept and the last date. The terms never go past them.
+  - what: Waiting days
+    how: Set the days between letters. The workflow waits for you, never sends on its own.
+judge:
+  - The first letter could be read by the customer without embarrassment, and it says how to pay in one line.
+  - The payment range rests on facts you gave, not on hope.
+  - The proposed terms are inside your limits.
+  - The firm letter states a consequence you would actually carry out.
+  - No letter apologises for asking to be paid.
+test:
+  - Give it a customer who has never paid late before. The first letter should be gentle and the terms generous.
+  - Give it a customer who has broken two promises. Step 2 should propose a part payment now.
+  - Read the firm letter aloud. Would you be willing to send it and still take their call next month?
+  - Run step 1 twice. The reason to pay now should be the same.
+improve:
+  - Save your terms and limits by customer type so step 2 starts from them.
+  - Keep the letters that got paid and their timing in one file. Step 1 starts from the best.
+  - Add your voice so the letters sound like your other emails.
+  - Pair it with "Turn a dispute into a checked demand letter draft" if the firm letter brings nothing.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: Every step is a plan or a piece of writing.
+    - name: Your invoicing tool
+      why: Shows what is paid and lets you add a payment link to each letter.
+  inputs:
+    - The customer's payment history
+    - Their recent orders, which show whether they still value you
+    - Your cash position, so the limits are real

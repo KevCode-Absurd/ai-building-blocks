@@ -1,0 +1,114 @@
+new_slug: handover-note-writer
+name: "Handover note writer"
+summary: "Paste what you are handing over and to whom. Get a note the next person can run from on day one."
+job: document-work
+thinking: low
+thinking_why: "It sorts a brain dump into a fixed shape and keeps every fact as given."
+
+headline: "Handover note writer"
+subhead: "Paste a brain dump of the work you are leaving behind and who takes it over. The prompt pulls out what will break if nobody acts, lists what is due, describes each live piece of work with its next step, maps where things live and who the people are, and sets the rule for reaching you."
+
+explain: |
+  Handover notes get written on the last afternoon, in the order things come to mind. The person covering reads four pages and still misses the invoice that had to go out on Tuesday. What they needed was the dangerous things first and everything else findable.
+
+  This prompt reorders your brain dump. The time bombs go first, each with a date and an action. Then what is due in the window, then each live piece of work with its status, next step, files and the decision that may come up. It maps the tools and folders with how access is granted, never a password, describes each person and how to deal with them, lists what to leave alone until you are back, and sets how you can be reached. If a deadline has no date, it says so rather than losing it.
+
+when:
+  - "You are going on leave and someone is covering your work."
+  - "You are leaving a job and want the successor to start well."
+  - "You are the only person who knows how a thing runs and that has started to feel like a risk."
+
+you_give:
+  - "A brain dump of everything about the work, in any order"
+  - "Who takes over and for how long"
+  - "Your dates and the deadlines in the window (advised)"
+  - "What the taker-over already knows (optional)"
+you_get:
+  - "Time bombs first, each with a date and an action"
+  - "What is due, live work with next steps, and where things live"
+  - "The people and how to deal with them, what to leave alone, how to reach you"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your brain dump under it."
+  - "Say who takes over and your dates. Never include passwords."
+  - "Read IF YOU READ NOTHING ELSE. If anything there is wrong, fix it first."
+  - "Walk the taker-over through the note once before you leave."
+
+how_it_works:
+  - title: "Finds the time bombs"
+    text: "Anything that breaks, expires or is missed without action, with the date and what to do."
+  - title: "Lists what is due"
+    text: "Deadlines in date order, with what done looks like and who is waiting."
+  - title: "Describes live work"
+    text: "Status, next step, files, people, and any decision pending, with unsure items marked."
+  - title: "Maps where things live"
+    text: "Tools and folders with what is in them and how access is granted. Account names only."
+  - title: "Lists the people"
+    text: "Role, what they care about, how to contact them, and the useful quirks."
+  - title: "Sets what to leave alone and how to reach you"
+    text: "Work that waits for you, and the contact rule."
+
+output_shape: |
+  IF YOU READ NOTHING ELSE  <date | action | consequence>
+  DUE IN THE WINDOW         <date | what | done | waiting>
+  LIVE WORK                 <status, next step, files, people, decision>
+  WHERE THINGS LIVE         <tool | contents | access>
+  PEOPLE                    <name | role | cares about | contact | notes>
+  LEAVE ALONE               <what, why>
+  REACHING ME               <rule>
+  MISSING                   <...>
+  CHECKS MISSED             <one line each, or none>
+
+example:
+  business: sprout
+  input: |
+    [the prompt]
+
+    I run ops at Sprout. Away 10 to 24 November. Covered by the marketing
+    lead, who knows the store admin but not the warehouse side.
+    Brain dump: the pouch reprint (20,000 corrected pouches) is due from the
+    printer on the 14th, I need someone to check the proof line "28 Daily
+    Packs" on a sample before accepting; the warehouse invoice for October
+    is due on the 15th, pay from the ops card, it is in the shared drive
+    under Ops/Invoices; the Raspberry Lemonade stock lands on the 12th and
+    the launch is the 13th, the warehouse needs the SKU set up in the
+    subscription tool or orders will fail; multi-pouch replacement cases
+    still need my approval, the agents know to message #support; the 3PL
+    account manager replies on chat within the hour, never on email; the
+    Kids pouch supplier quote is half negotiated, leave it until I am back;
+    the monthly stock count is on the 20th, the warehouse does it, they
+    send a sheet, just file it; the store admin and subscription tool
+    logins are in the password manager under Ops.
+  output: pending
+
+tweaks:
+  - what: "Dates"
+    how: "Give your leave dates and every deadline. The time bombs are only as good as the dates."
+  - what: "Who covers"
+    how: "Say what they already know. The note skips what they do not need."
+  - what: "Leave alone"
+    how: "Name the things that should wait. It saves the taker-over from acting on everything."
+
+judge:
+  - "The first section has the things that would actually hurt."
+  - "Every item from your dump is in the note."
+  - "No password or key anywhere."
+  - "Each live piece of work has a next step."
+  - "The taker-over could start without you on day one."
+
+test:
+  - "Give the note to the taker-over and ask them to list the questions they still have. Add the answers."
+  - "Run it twice. The time bombs should match."
+  - "Mention a deadline without a date. It should appear in DUE with MISSING: date."
+
+improve:
+  - "Keep the WHERE THINGS LIVE and PEOPLE sections and reuse them next time."
+  - "Add your team's standard tools once so the map is always complete."
+  - "Pair it with the Repeat task how-to writer for any task in LIVE WORK that the taker-over must do more than once."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message note works in any strong chat AI."}
+  inputs:
+    - "Your calendar for the window, so no deadline is missed"
+    - "Your last handover note, so the structure improves each time"

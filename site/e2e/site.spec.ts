@@ -20,8 +20,8 @@ const WORKFLOW = "review-image-ads";
 
 test("hero is the headline, the mono subhead, and two buttons, How it works a plain nav link, over the globe", async ({ page }) => {
   await page.goto("/");
-  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Making humanity AI native");
-  await expect(page.locator(".hero .lede")).toContainText("Save hours every week");
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Use AI like the top 1%");
+  await expect(page.locator(".hero .lede")).toContainText("Turn hours of work into minutes");
   expect(await page.locator(".hero .lede").evaluate((el) => getComputedStyle(el).fontFamily)).toContain("JetBrains Mono");
   await expect(page.locator(".hero").getByRole("link")).toHaveText(["Browse the blocks", "Build a workflow"]);
   await expect(page.locator(".hero-in > *")).toHaveCount(3);

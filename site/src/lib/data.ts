@@ -76,6 +76,8 @@ export type Page = {
   headline: string; subhead: string; explain: string; when: string[];
   you_give: string[]; you_get: string[]; how_to_use: string[];
   how_it_works: { title: string; text: string }[];
+  /** A workflow's note for each step, in order (blocks.json sends only the step slugs). */
+  stepNotes?: string[];
   output_shape?: string;
   example?: { business: string; input: string; output: string };
   tweaks: { what: string; how: string }[]; judge: string[]; test?: string[]; improve: string[];

@@ -16,7 +16,7 @@ export default function MindsPage({ c, toBuilder }: { c: Catalogue; toBuilder: (
   const [label, setLabel] = useState("");
   const labels = c.minds?.labels ?? {};
   const [seated, setSeated] = useState<string[]>([]);
-  useEffect(() => { document.title = "Minds · AI Blocks"; return () => { document.title = "AI Blocks · Making humanity AI native"; }; }, []);
+  useEffect(() => { document.title = "Minds · AI Blocks"; return () => { document.title = "AI Blocks · Use AI like the top 1%"; }; }, []);
   const built = roster.filter((m) => m.built).length;
   const shown = useMemo(() => roster.filter((m) => (!area || m.area === area) && (!label || m.labels?.includes(label))), [roster, area, label]);
   const toggle = (slug: string) => setSeated((s) => (s.includes(slug) ? s.filter((x) => x !== slug) : s.length >= MAX ? s : [...s, slug]));

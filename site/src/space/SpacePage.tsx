@@ -12,7 +12,7 @@ import { KIND_NAMES, type Item, type Kind, type NewItem, type PublicItem, SpaceE
 import "./space.css";
 
 type Toast = (m: string) => void;
-const TITLE = "AI Blocks · Making humanity AI native";
+const TITLE = "AI Blocks · Use AI like the top 1%";
 const useTitle = (t: string) => useEffect(() => { document.title = `${t} · AI Blocks`; return () => { document.title = TITLE; }; }, [t]);
 const KINDS: Kind[] = ["skill", "prompt", "workflow", "kit", "agent"];
 const errText = (e: unknown) => (e instanceof SpaceError ? e.message : "That didn't work. Try again.");

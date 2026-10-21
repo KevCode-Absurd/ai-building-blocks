@@ -16,8 +16,8 @@ const ZIP_DATE = new Date("2026-01-01T00:00:00Z");
 const sub = (html) => html.replace(/<(\/?)h([1-5])\b/g, (_, slash, n) => `<${slash}h${Number(n) + 1}`);
 const OUT_PAGES = "public/data/pages";
 const WORKFLOW_PAGES = path.resolve("../tools/orchestrator-pages");
-fs.rmSync(OUT_SKILLS, { recursive: true, force: true });
-fs.rmSync(OUT_PAGES, { recursive: true, force: true });
+fs.rmSync(OUT_SKILLS, { recursive: true, force: true, maxRetries: 5 });
+fs.rmSync(OUT_PAGES, { recursive: true, force: true, maxRetries: 5 });
 fs.mkdirSync(OUT_PAGES, { recursive: true });
 
 // Until a block has its page written, it is filed under the job closest to its old group.
@@ -250,6 +250,8 @@ for (const b of blocks) {
   if (b.files.length) pageData.files = b.files;
   // An imported skill's GitHub link, licence, first name and commit are only shown on its page; the list keeps just the maker.
   if (b.source) pageData.source = b.source;
+  // A workflow's step notes are only read on its own page, so they travel there; blocks.json keeps the step slugs.
+  if (b.steps.some((s) => s.note)) { pageData.stepNotes = b.steps.map((s) => s.note); b.steps = b.steps.map((s) => ({ uses: s.uses, note: "" })); }
   fs.writeFileSync(f, JSON.stringify(pageData));
 }
 

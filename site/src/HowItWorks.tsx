@@ -87,7 +87,7 @@ const TOC: [string, string][] = [
 ];
 
 export default function HowItWorks({ toast }: { toast: (m: string) => void }) {
-  useEffect(() => { document.title = "How it works · AI Blocks"; return () => { document.title = "AI Blocks · Making humanity AI native"; }; }, []);
+  useEffect(() => { document.title = "How it works · AI Blocks"; return () => { document.title = "AI Blocks · Use AI like the top 1%"; }; }, []);
   return (
     <main className="bp hiw" data-testid="how-it-works">
       <header className="wrap bp-hero">

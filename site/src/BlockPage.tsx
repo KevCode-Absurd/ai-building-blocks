@@ -146,7 +146,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
     loadSkillText(slug).then(setSkill);
     markViewed(slug);
   }, [slug]);
-  useEffect(() => { document.title = `${b?.name ?? "Not found"} · AI Blocks`; return () => { document.title = "AI Blocks · Making humanity AI native"; }; }, [b]);
+  useEffect(() => { document.title = `${b?.name ?? "Not found"} · AI Blocks`; return () => { document.title = "AI Blocks · Use AI like the top 1%"; }; }, [b]);
 
   if (!b) {
     return (
@@ -383,7 +383,7 @@ export default function BlockPage({ c, slug, toast, toBuilder }: Props) {
                       <span className="n">{String(i + 1).padStart(2, "0")}</span>
                       <div>
                         <b>{how?.title ?? sb?.name ?? s.uses}</b>
-                        <p>{how?.text ?? s.note}</p>
+                        <p>{how?.text ?? (p?.stepNotes?.[i] || s.note)}</p>
                         {sb && <Link to={pathOf(sb)} className="step-link">{sb.name} <ArrowIcon size={12} /></Link>}
                       </div>
                     </li>

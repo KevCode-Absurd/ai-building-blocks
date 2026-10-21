@@ -1,6 +1,6 @@
 # Site
 
-The AI Building Blocks website: one page, light by default with a dark mode. Header, "Making humanity AI native" and two buttons, then the library (Prompts, Skills, Workflows, Agents; anything opens in a side drawer, `?block=<slug>`) and the builder (drag-and-drop canvas with the handoff download). See `docs/PRD.md`.
+The AI Building Blocks website: one page, light by default with a dark mode. Header, "Use AI like the top 1%" and two buttons, then the library (Prompts, Skills, Workflows, Agents; anything opens in a side drawer, `?block=<slug>`) and the builder (drag-and-drop canvas with the handoff download). See `docs/PRD.md`.
 
 Vite + React + TypeScript, built to static files. No server; what people save (kits, workflows) is kept in their browser by `src/lib/store.ts`, the one file to change when free accounts arrive.
 

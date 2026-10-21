@@ -203,9 +203,9 @@ const titles = new Map(), problems = [];
 // The home page: the main sections and every job, so a crawler reaches the whole library in two steps.
 const tasks = Object.entries(byTask).sort((a, b) => b[1].length - a[1].length);
 fs.writeFileSync(path.join(DIST, "index.html"), render("/", {
-  title: "Free AI skills, workflows and minds", desc: "Stop doing the work AI could do for you. Free prompts, skills, workflows, mini tools and example apps that save you hours every week.", h1: "Making humanity AI native",
+  title: "Free AI skills, workflows and minds", desc: "Turn hours of work into minutes. Free prompts, skills, workflows, mini tools and example apps that save you hours every week.", h1: "Use AI like the top 1%",
   body: `<p class="bp-sub">Free AI skills, workflows, prompts, minds and mini tools that do real work for you and your work.</p><h2>Skills by job</h2>${list(tasks.map(([t, bs]) => `<a href="${jobHref(t)}">${esc(TASK_NAMES[t] ?? t)}</a> (${bs.length}): ${bs.slice(0, 3).map(link).join(", ")}`))}<h2>Minds</h2>${list(cat.blocks.filter((b) => b.type === "mind").slice(0, 24).map(link))}<p><a href="/minds">All minds</a></p>`,
-}).replace(/<title>[^<]*<\/title>/, "<title>AI Blocks · Making humanity AI native</title>"));
+}).replace(/<title>[^<]*<\/title>/, "<title>AI Blocks · Use AI like the top 1%</title>"));
 
 // Job hubs: /jobs lists every job; /jobs/<job> lists every page for it with its one line, 150 to a page.
 const PER = 150;

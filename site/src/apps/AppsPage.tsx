@@ -9,7 +9,7 @@ import { AREAS, REPO, SETUP_STEPS, TOUR, type Area } from "./data";
 import { FILES, STAGES, START_PROMPT, starterZip } from "./starter";
 import "./apps.css";
 
-const TITLE = "AI Blocks · Making humanity AI native";
+const TITLE = "AI Blocks · Use AI like the top 1%";
 const useTitle = (t: string) => useEffect(() => { document.title = `${t} · AI Blocks`; return () => { document.title = TITLE; }; }, [t]);
 const Back = () => <Link to="/apps" className="back"><span aria-hidden="true">←</span> Apps</Link>;
 

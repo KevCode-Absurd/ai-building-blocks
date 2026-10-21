@@ -36,6 +36,17 @@ const PAGES = {
   builder: () => import("./Builder"),
   intake: () => import("./IntakePage"),
 };
+/** Which section's code a link opens, if it isn't the home page or a block. */
+function sectionOf(to: string): keyof typeof PAGES | null {
+  const path = to.split(/[?#]/)[0];
+  if (path === "/tools" || path.startsWith("/tools/")) return "tools";
+  if (path === "/apps" || path.startsWith("/apps/")) return "apps";
+  if (path === "/space" || path === "/people" || path.startsWith("/s/")) return "space";
+  if (path === "/minds") return "minds";
+  if (path === "/from-a-source") return "intake";
+  if (path === "/how-it-works") return "guide";
+  return null;
+}
 const BlockPage = lazy(PAGES.block);
 const HowItWorks = lazy(PAGES.guide);
 const ToolsPage = lazy(PAGES.tools);
@@ -65,18 +76,27 @@ function useHashLanding() {
 
 function useIdlePrefetch() {
   useEffect(() => {
-    // A link to a block warms its page file; the code for every page is already loading below.
+    // Pointing at a link warms what it opens: a block's page file, or the code for that section.
     setPrefetch((to) => {
-      const m = /^\/(skills|prompts|workflows|minds)\/([a-z0-9-]+)/.exec(to);
-      if (m) void loadPage(m[2]);
+      const m = /^\/(skills|prompts|workflows|agents|minds)\/([a-z0-9-]+)/.exec(to);
+      if (m) { void loadPage(m[2]); return; }
+      const page = sectionOf(to);
+      if (page) void PAGES[page]().catch(() => {});
     });
     // On data saver or a slow phone line, pages load when they're opened instead.
     const net = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
     if (net?.saveData || /(^|-)2g$/.test(net?.effectiveType ?? "")) return;
     const idle = window.requestIdleCallback ?? ((f: () => void) => window.setTimeout(f, 1200));
     const stop = window.cancelIdleCallback ?? window.clearTimeout;
-    const id = idle(() => Object.values(PAGES).forEach((load) => load().catch(() => {})), { timeout: 4000 });
-    return () => stop(id);
+    // A block's page is what most people open next, so its code comes first. The bigger sections follow only on a
+    // fast line; anywhere else they load when a link to them is pointed at, or opened.
+    const ids: number[] = [];
+    ids.push(idle(() => {
+      PAGES.block().catch(() => {});
+      if (net?.effectiveType && net.effectiveType !== "4g") return;
+      ids.push(idle(() => Object.values(PAGES).forEach((load) => load().catch(() => {})), { timeout: 8000 }));
+    }, { timeout: 4000 }));
+    return () => ids.forEach(stop);
   }, []);
 }
 
@@ -366,8 +386,8 @@ function Home({ c, toast }: { c: Catalogue | null; toast: (m: string) => void })
       <section className="hero">
         <Suspense fallback={null}><Globe /></Suspense>
         <div className="wrap hero-in">
-          <h1 className="h1">Making humanity AI native</h1>
-          <Typewriter text="Stop doing the work AI could do for you. Save hours every week, and spend them on the work only you can do. Or at the beach (we won't tell)." />
+          <h1 className="h1">Use AI like the top 1%</h1>
+          <Typewriter text="Turn hours of work into minutes. Spend the time you save on the work only you can do. Or at the beach (we won't tell)." />
           <div className="hero-actions">
             <Link to="/#library" className="btn btn-primary">Browse the blocks <ArrowIcon /></Link>
             <Link to="/#build" className="btn btn-dark">Build a workflow</Link>

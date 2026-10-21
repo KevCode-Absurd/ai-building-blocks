@@ -6,6 +6,25 @@ summary: Give it a recording. Get the same performance in a different voice, wit
 job: work-with-audio
 headline: Voice swap editor
 subhead: Give it a recording. Get the same performance in a different voice, with your timing and emotion kept.
+explain: |
+  The same recording, spoken by a different voice, with your timing, emotion, breaths and pauses kept. It is useful when the performance is right but the voice is not.
+
+  The skill uses the ElevenLabs voice changer, which converts speech to speech. You give an audio file and pick a target voice from your voice library. It handles the limits: five minutes and 50 MB per request, so longer files are cut into chunks and joined again. It also covers output format choices and noise handling. It does not make or clone new voices, only converts into one you already have. It needs an ElevenLabs account and API key.
+when:
+  - You recorded a scratch performance and want a character voice on top.
+  - You want to dub a voice-over in a different voice without re-recording.
+  - You need to hide who a speaker is.
+  - A voice-over has the right feel but the wrong voice.
+you_give:
+  - An audio recording, under 50 MB
+  - The voice to use from your library
+  - Preferred audio format (optional)
+  - An ElevenLabs account and API key
+you_get:
+  - A converted audio file
+  - Settings that suit your clip
+  - A plan for splitting long recordings
+  - Notes on cleaning noisy input
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

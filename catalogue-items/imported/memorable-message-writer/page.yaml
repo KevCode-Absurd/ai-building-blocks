@@ -6,6 +6,24 @@ summary: Give it a message. Get a rewrite that is simple, surprising, concrete, 
 job: write-and-tell-stories
 headline: Memorable message writer
 subhead: Give it a message. Get a rewrite that is simple, surprising, concrete, believable and emotional. Uses the SUCCESs checklist.
+explain: |
+  A message that people understand fast and still remember next week. Paste your copy, slide or pitch and get it scored and rewritten with the six traits behind ideas that stick: simple, unexpected, concrete, credible, emotional and told as a story.
+
+  It starts with the curse of knowledge, the habit of forgetting what it is like not to know your subject. The test is whether a smart 12-year-old could repeat it. Each trait has techniques: a single core message, a pattern break, a curiosity gap, a vivid detail, a proof point. You rate each trait out of 10, see where it falls short, and get before and after versions of the weak parts.
+when:
+  - Your product description is full of jargon and nobody repeats it.
+  - You are writing a talk and want the audience to remember one thing.
+  - A launch email reads like every other launch email.
+  - You need a campaign line that is specific, not vague.
+you_give:
+  - The message, copy or slide to improve
+  - Who it is for
+  - What they should remember or do (optional)
+you_get:
+  - A score for each of the six traits
+  - The weakest points named
+  - A rewrite with a clear core message
+  - Before and after examples
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

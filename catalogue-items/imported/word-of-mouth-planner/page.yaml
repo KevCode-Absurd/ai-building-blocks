@@ -6,6 +6,26 @@ summary: Describe your product or message. Get ideas for making people talk abou
 job: grow-social
 headline: Word of mouth planner
 subhead: Describe your product or message. Get ideas for making people talk about it, scored on six sharing triggers. Uses the STEPPS method.
+explain: |
+  Ideas that make people talk about your product, each checked against six reasons things spread. You see which parts of your idea are likely to be shared and which are weak.
+
+  The skill uses the STEPPS model from Jonah Berger: social currency, triggers, emotion, public visibility, practical value and stories. It scores each driver from 0 to 2 for your product or message, reports a total and names the drivers to raise next. A strong plan has at least three strong drivers, including one that shows in public or makes people look good. It also notes that most talk happens offline, so it does not lean only on social media.
+when:
+  - You are launching and have no ad budget.
+  - Your product is good but nobody mentions it.
+  - You want a campaign people pass on without being asked.
+  - You need a way to judge which idea is most shareable.
+you_give:
+  - Your product or message
+  - Who you want to reach
+  - Current ways people hear about you (optional)
+  - Ideas you are considering (optional)
+you_get:
+  - Score for each of six drivers
+  - Ideas to raise weak drivers
+  - Trigger and public visibility ideas
+  - Story people can retell
+  - Overall sharing score
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

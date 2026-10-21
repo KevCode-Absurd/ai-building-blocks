@@ -6,6 +6,25 @@ summary: Tell it how a data project went. Get what worked, what slipped, the cau
 job: track-numbers
 headline: Analysis lessons review writer
 subhead: Tell it how a data project went. Get what worked, what slipped, the causes and actions for next time.
+explain: |
+  A short written review after a data project that records what worked, what slipped and why, and who does what next time. Do it within a week, while the details are fresh.
+
+  You set a time box of 30 minutes alone or 60 with a team. Then compare the actual timeline, scope and effort with the plan. List at least two things that went well, because those need repeating. For each problem, ask why five times to find the real cause, not the symptom. Decide where each lesson belongs: a template, a checklist, a reference page or team notes. Actions get owners and dates, and reusable lessons go into a log.
+when:
+  - You just finished a big analysis and want to learn from it.
+  - A project ran late or missed the mark and you need to know why.
+  - Your team keeps repeating the same mistakes.
+  - You want to turn lessons into templates and checklists.
+you_give:
+  - The project name, scope and timeline
+  - The original plan or brief
+  - Who took part
+  - What went wrong or slowed you down (optional)
+you_get:
+  - A completed review document
+  - Root causes for each problem
+  - Action items with owners and dates
+  - Entries for a learnings log
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

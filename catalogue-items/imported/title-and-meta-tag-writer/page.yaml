@@ -6,6 +6,26 @@ summary: Give it a page. Get title tags, meta descriptions and social share tags
 job: get-found-in-search
 headline: Title and meta tag writer
 subhead: Give it a page. Get title tags, meta descriptions and social share tags that fit the page's aim.
+explain: |
+  Page titles and descriptions that make people click when they see your page in search results, plus the tags that control how links look when shared on social sites.
+
+  You give the page title, page type, main keyword, a short summary, who it is for, what action you want and your strongest benefit. The skill places the main keyword near the front of the title, keeps lengths inside what search results show, and writes a description that promises a clear outcome and a next step. It offers a few options to choose from, and adds Open Graph and Twitter tags so shared links get a good title and summary. It can include your brand name when it fits.
+when:
+  - Your pages rank but few people click.
+  - You are launching a page and need its title and description.
+  - Shared links on social sites look plain or cut off.
+  - You have many pages with duplicate or missing meta tags.
+you_give:
+  - Page title and type
+  - Main and secondary keywords
+  - A short summary of the page
+  - Audience and your strongest benefit
+  - Brand name (optional)
+you_get:
+  - Title tag options
+  - Meta description options
+  - Open Graph and Twitter tags
+  - Length checks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

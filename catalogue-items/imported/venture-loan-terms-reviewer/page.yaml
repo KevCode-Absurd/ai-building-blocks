@@ -6,6 +6,23 @@ summary: Give it a startup loan offer. Get the cost, warrants and covenants expl
 job: money-and-investing
 headline: Venture loan terms reviewer
 subhead: Give it a startup loan offer. Get the cost, warrants and covenants explained, with points to question.
+explain: |
+  A startup loan offer explained in plain words: what it costs, what you give up and where the lender can pull the plug. It checks the rate, usually the prime rate plus a margin, and whether you pay interest only first or repay from day one. It calculates warrant coverage, for example 10 percent of the loan, and how many shares that gives the lender at today's price. It tests whether the loan adds six to nine months of runway. It reads covenants such as minimum cash or revenue, and reviews the material adverse change clause that lets a lender freeze a credit line. Last, it flags refinance risk if your next round slips.
+when:
+  - A lender sent a term sheet and you need to understand every line.
+  - You want to extend runway without selling more shares.
+  - You are comparing two debt offers and cannot tell which is cheaper.
+  - You want to know what could trigger the lender to stop funding.
+you_give:
+  - The loan term sheet or its main terms
+  - Your monthly revenue, growth and margins
+  - Cash in the bank and monthly burn
+  - Your investors and how much you raised
+you_get:
+  - A summary of cost and repayment
+  - Warrant size and share count
+  - Covenants and clauses explained
+  - Risks and questions to ask the lender
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe your product. Get an event list, naming rules, funnels, retent
 job: track-numbers
 headline: Event tracking planner
 subhead: Describe your product. Get an event list, naming rules, funnels, retention cohorts and one main metric to watch.
+explain: |
+  A tracking plan for your product that you can trust: a short list of events, clear naming rules, funnels, retention groups and one main metric to watch.
+
+  It builds from the bottom up, because bad events give bad funnels. Events are named object then action in past tense, like checkout_completed. States such as active status become properties, not events. It aims for 30 to 50 events, and warns when you go over 100. It also covers how to tie anonymous visits to a signed-in user, how to version your schema, and how to pick a North Star metric. The result is a spec your developers can build from.
+when:
+  - You are launching a product and need to set up analytics properly.
+  - Your current data is messy and nobody trusts the dashboards.
+  - You are adding a feature and want to track it without breaking old events.
+  - You need to define signup to paid funnels and retention groups.
+you_give:
+  - Description of your product and main user steps
+  - Analytics tool you use
+  - Business goal
+  - Existing event list (optional)
+you_get:
+  - Event list with names and properties
+  - Naming and versioning rules
+  - Funnel and retention definitions
+  - User identity plan
+  - North Star metric choice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

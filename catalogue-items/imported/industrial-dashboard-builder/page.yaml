@@ -6,6 +6,27 @@ summary: Describe your plant data. Get a control-room dashboard with alarms, tre
 job: build-software
 headline: Industrial dashboard builder
 subhead: Describe your plant data. Get a control-room dashboard with alarms, trends and safe controls.
+explain: |
+  A plant-floor dashboard in MATLAB App Designer that an operator can read at a glance, with alarms that stand out, live trends and setpoint changes that need confirmation. It turns a data script into a proper screen.
+
+  The skill follows industrial screen conventions. The background is grey, so colour is saved for problems. Alarms appear in a banner with clear priority. Writes to the plant need a confirm step, so no one changes a setpoint by a stray click. Figures are built in a light theme so widgets stay readable on a dark desktop. It suits data from OPC UA, Modbus, MQTT and PI. It is not for consumer apps or finding OPC servers.
+when:
+  - You have a script reading plant data and want an operator screen.
+  - You need alarm banners that rank by priority.
+  - Operators must change setpoints safely.
+  - Your current screen uses bright gauges and lamps everywhere.
+  - You are building overview and detail screens for a process area.
+you_give:
+  - The script or data source (OPC UA, Modbus, MQTT, PI)
+  - The tags and alarm limits
+  - Which values operators may change
+  - The screen layout you have in mind (optional)
+you_get:
+  - A MATLAB App Designer dashboard
+  - Alarm banner and indicators
+  - Live trend plots
+  - Confirmed setpoint writes
+  - Grey-field screen styling
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

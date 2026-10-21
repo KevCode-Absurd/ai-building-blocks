@@ -6,6 +6,25 @@ summary: Give it your text. Get spoken audio in a built-in voice, for narration,
 job: work-with-audio
 headline: Voiceover maker
 subhead: Give it your text. Get spoken audio in a built-in voice, for narration, voiceovers or batches.
+explain: |
+  Spoken audio from your text, in a built-in voice, ready for narration, product demos, phone menus or accessibility reads. You can make one clip or a whole batch in one run.
+
+  You give the exact text, a voice, the delivery style, such as calm or upbeat, and a file format. The skill writes a short labelled brief for the speech model without changing your words. For many lines, it writes a batch file with one job per line and runs it once. It then listens for clarity, pacing and pronunciation, changes one thing at a time, and saves clean files with stable names. It needs Python and an OpenAI API key.
+when:
+  - You need narration for a video or slide deck.
+  - You want to record a set of phone menu prompts.
+  - You need an audio version of an article.
+  - You want to hear several voices or speeds before choosing.
+you_give:
+  - The exact text to speak
+  - A voice and delivery style
+  - File format and where to save it (optional)
+  - An OpenAI API key
+you_get:
+  - One or more audio files
+  - A record of text, voice and settings used
+  - A check of pacing and pronunciation
+  - A re-run with one tweak if needed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe the app you want. Get working code for a chatbot, question ans
 job: build-software
 headline: AI app and chatbot builder
 subhead: Describe the app you want. Get working code for a chatbot, question answerer or agent that uses tools.
+explain: |
+  Working code for a chatbot, a document question answerer, or an agent that uses tools, written with the LangChain library. It runs on your choice of AI provider, so you can swap one for another later.
+
+  You describe the app. The skill picks the right shape. A chatbot gets conversation memory. A document question answerer gets a search step that loads your files, splits them, stores them and pulls the best pieces into each answer. An agent gets a set of tools and a loop where it decides when to use them. You need Python 3.10 or newer, a package install and an API key from your AI provider. It also points to simpler tools if your need is narrower.
+when:
+  - You want a chatbot that remembers the conversation.
+  - You need an app that answers questions from your own documents.
+  - You want an agent that can call tools like search or a calculator.
+  - You may switch AI providers later and want code that makes that easy.
+you_give:
+  - A plain description of the app
+  - The documents or tools it should use (optional)
+  - Your preferred AI provider
+  - A Python setup and an API key
+you_get:
+  - Starter code for the app
+  - Install steps
+  - A search setup for your documents if needed
+  - A tool-using agent example
+  - Notes on when to pick a different library
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

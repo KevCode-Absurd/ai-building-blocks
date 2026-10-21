@@ -6,6 +6,26 @@ summary: Give it slow code. Get the real slowdown found, fixed and measured, wit
 job: test-and-fix-code
 headline: MATLAB speed tuner
 subhead: Give it slow code. Get the real slowdown found, fixed and measured, with no made-up speed claims.
+explain: |
+  Slow MATLAB code made faster by fixing the real bottleneck, with measured proof and no invented speed claims. You hand over slow code and get the cause, the fix and the numbers.
+
+  The skill follows seven steps. It times a baseline, then runs the profiler and reads self-time and call counts per line to find where time goes. It checks whether the target is worth optimising before it touches anything. Common fixes include moving unchanging work out of loops, vectorising, preallocating and using the GPU where it helps. After each change it times the code again and checks that the result is unchanged. Claims of speedup come only from measurements. A short report covers what was tried and what worked.
+when:
+  - A loop takes minutes and you think it should take seconds.
+  - You are not sure which line in your code is the slow one.
+  - You want a speedup you can quote with real numbers.
+  - Your GPU code is not faster than the CPU version.
+you_give:
+  - The slow code
+  - A way to run it with typical data
+  - Your target speed (optional)
+  - MATLAB release
+you_get:
+  - Baseline timing
+  - Profiler findings
+  - Faster code
+  - Before and after numbers
+  - Proof results match
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

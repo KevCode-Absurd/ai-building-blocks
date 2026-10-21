@@ -6,6 +6,26 @@ summary: Give it a spreadsheet. Get it cleaned, reconciled and analysed with for
 job: work-with-files
 headline: Spreadsheet checker
 subhead: Give it a spreadsheet. Get it cleaned, reconciled and analysed with formulas and formatting kept intact.
+explain: |
+  A spreadsheet that has been inspected, cleaned or analysed without breaking your original. The skill works on a copy and records the file's fingerprint, so the source stays safe. It lists every sheet, then separates stored values from formulas.
+
+  It asks what each column means before guessing at blanks, zeros, dates or IDs, and writes down its assumptions. It checks formulas and data quality, reconciles to totals you trust, and compares versions. Each finding comes with the method, filters, units and where the evidence sits. Edits go to a new file, and calculated values are labelled apart from cached ones.
+when:
+  - A workbook has odd totals and you need to know why.
+  - Two versions of a sheet differ and you need the changes.
+  - You need a summary, pivot or chart without breaking formulas.
+  - A messy CSV needs repair before you can use it.
+you_give:
+  - The spreadsheet or CSV file
+  - The question you want answered
+  - Totals to reconcile against (optional)
+  - Whether formatting and macros must stay (optional)
+you_get:
+  - A sheet inventory and scope
+  - Findings with evidence locations
+  - Data quality and formula issues
+  - A new output file with your edits
+  - Reconciliation results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

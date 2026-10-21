@@ -6,6 +6,25 @@ summary: Describe what is broken or slow. Get the cause found step by step and t
 job: test-and-fix-code
 headline: Bug diagnoser
 subhead: Describe what is broken or slow. Get the cause found step by step and the fix checked.
+explain: |
+  A step-by-step method for the bugs that resist quick fixes, whether something is broken or just slow. It ends with a cause found and a fix that was checked.
+
+  The key idea is to build a tight pass or fail signal first. That might be a failing test, a request script, a command with sample input, a browser script or a replay of saved data. Once you can reproduce the bug on demand, the skill narrows it down with bisecting, guessing causes and adding logs. Secrets are replaced with a redaction marker before anything is shown. If the bug cannot be reproduced, it says so and asks you for more.
+when:
+  - A bug shows up only sometimes and you cannot trigger it.
+  - Something got slower and you do not know what changed.
+  - You tried several fixes and none worked.
+  - You need a repeatable test that proves a bug is fixed.
+you_give:
+  - A description of what is broken or slow
+  - Any error output or logs
+  - Steps or data that trigger it (optional)
+  - Access to the code
+you_get:
+  - A repeatable way to trigger the bug
+  - A narrowed-down cause
+  - A tested fix
+  - Notes with secrets removed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

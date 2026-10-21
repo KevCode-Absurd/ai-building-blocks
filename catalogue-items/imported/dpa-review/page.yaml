@@ -6,6 +6,25 @@ summary: Give it a data processing agreement. Get each term checked, with edits 
 job: check-contracts
 headline: Data processing agreement reviewer
 subhead: Give it a data processing agreement. Get each term checked, with edits to ask for. First check, not legal advice.
+explain: |
+  A term-by-term review of a data processing agreement, with the edits to ask for. It is a first check and not legal advice.
+
+  The first question is direction: are you the processor (reviewing a customer's DPA) or the controller (reviewing a vendor's)? The advice is nearly opposite for each, so the skill asks if it is unclear. It then compares each clause with your own playbook, which you set up in advance, and checks that the DPA matches what your privacy policy says. It looks at prior work on the same counterparty for risks already flagged. The output is a memo with suggested redlines. Jurisdiction rules depend on your setup.
+when:
+  - A customer sent their own DPA and you need to know what to push back on.
+  - You are about to sign a vendor's DPA.
+  - You want to check a DPA against your privacy policy.
+  - A legal team needs a first-pass memo before a deeper review.
+you_give:
+  - The DPA as a file, link or pasted text
+  - Whether you are the processor or controller
+  - Your DPA playbook set up in the plugin
+  - Earlier reviews of the same party (optional)
+you_get:
+  - A term-by-term review memo
+  - Suggested redlines
+  - A consistency check with your privacy policy
+  - Open points to raise with the other side
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your site. Get uptime checks, error tracking, targets, alert r
 job: ship-and-host
 headline: Uptime and alert setup planner
 subhead: Describe your site. Get uptime checks, error tracking, targets, alert rules and an on-call plan that avoids alert fatigue.
+explain: |
+  A monitoring plan that tells the right person when your site breaks and stays quiet when it does not. You get what to check, what to alert on and who gets woken up, without a flood of noise.
+
+  The plan works in four layers. First, is the site up: web checks from several regions, DNS, certificate expiry and error codes. Second, is it correct: scripted checks on signup, checkout or search. Third, how fast and how healthy: error rate and speed targets. Fourth, business impact. It sets targets and an error budget, splits alerts into page now and look later, and designs an on-call rotation. It also helps cut alert fatigue when people already ignore their pager.
+when:
+  - You are launching a site and have no monitoring yet.
+  - Your team gets so many alerts that people have stopped reading them.
+  - An outage happened and nobody was told until a customer complained.
+  - You need to decide who is on call and when.
+you_give:
+  - Your site address and the services it relies on
+  - Monitoring tools you already use (optional)
+  - Team size and time zones
+  - Any targets you already promise customers (optional)
+you_get:
+  - A list of checks across the four layers
+  - Targets and an error budget
+  - Alert rules split into page and quiet channel
+  - An on-call rotation plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your site, folder or Search Console export. Get why pages are n
 job: build-websites
 headline: Search indexing auditor
 subhead: Give it your site, folder or Search Console export. Get why pages are not indexed and a fix list.
+explain: |
+  A diagnosis of why Google is skipping your pages, with a fix list and a cleaner site plan. It finds what is behind messages like "Discovered but not currently indexed" and says whether each cause is content, technical or structure.
+
+  It works in fixed phases. First, indexing health: broken pages, soft 404s and noindex tags. Then crawl structure: how deep pages sit, orphan pages and wasted crawl effort. Then sitemaps, which should list only live, indexable pages, and finally redirects and URL structure. You can give it a folder of site files, a Search Console export, a live address or a planned URL layout.
+when:
+  - Search Console shows many pages as discovered but not indexed.
+  - You are moving a site and want to catch redirect loops and lost pages first.
+  - Your sitemap has old or broken links and you are not sure which.
+  - You are planning a new site structure and want it checked before launch.
+you_give:
+  - A site address, site folder or Search Console export
+  - A sitemap and robots file (optional)
+  - A proposed URL layout (optional)
+  - Recent site changes (optional)
+you_get:
+  - A list of indexing problems and their causes
+  - Orphan and deep pages found
+  - Sitemap fixes
+  - A redesigned structure and redirect plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

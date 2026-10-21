@@ -6,6 +6,25 @@ summary: Give it heart, skin or breathing signals. Get a cleaned, checked analys
 job: research-topics
 headline: Body signal analysis builder
 subhead: Give it heart, skin or breathing signals. Get a cleaned, checked analysis of events and variability.
+explain: |
+  Turn raw heart, skin or breathing recordings into a cleaned, checked analysis of events and variability. The code is repeatable, so another person can rerun it and get the same result.
+
+  The skill builds Python workflows with NeuroKit2 for filtering and cleaning, finding peaks and intervals, lining up signals from different sensors, and measuring heart rate variability and signal complexity. It picks methods to fit your signal and checks the output at each step. It pins the library version so results do not shift. It is for research use only and is not for diagnosis or device validation.
+when:
+  - You have an ECG or pulse recording and need beats found.
+  - You want heart rate variability from a short recording.
+  - You need skin conductance or breathing signals cleaned.
+  - You must line up signals from several sensors on one timeline.
+you_give:
+  - Signal files or arrays
+  - The sampling rate
+  - The signal type, such as ECG or EDA
+  - Event markers (optional)
+you_get:
+  - Cleaned signals
+  - Detected peaks and events
+  - Variability and complexity measures
+  - Plots and a rerunnable script
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

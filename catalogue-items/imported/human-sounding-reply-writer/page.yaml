@@ -6,6 +6,23 @@ summary: Ask for it once. Get AI replies that sound like a person, with less lis
 job: write-and-tell-stories
 headline: Human-sounding reply writer
 subhead: Ask for it once. Get AI replies that sound like a person, with less listing and fewer stock phrases.
+explain: |
+  AI answers that sound like a person talking, not a helpdesk. Ask for it once and replies drop the stock phrases, the bullet lists and the hollow sympathy.
+
+  It works as a two-voice loop. The first voice writes the quick, usual AI answer. The second voice calls out filler, list-hiding and fake empathy. Then the first voice rewrites the reply to be direct and warm. It switches on when the topic is personal, such as a hard breakup, a job loss or advice on a life choice, or when you ask for writing that should sound like you. It stays off for code and facts.
+when:
+  - You are drafting a note to a friend or a colleague and it sounds robotic.
+  - You want advice on a hard personal choice without a bulleted list.
+  - AI replies feel full of filler and you want them to get to the point.
+  - You are writing a short intro or post that must sound like a real person.
+you_give:
+  - The situation or message to respond to
+  - Who the reply is for
+  - Your own voice or sample lines (optional)
+you_get:
+  - A reply that reads as human
+  - Fewer lists and stock phrases
+  - A direct tone with real warmth
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

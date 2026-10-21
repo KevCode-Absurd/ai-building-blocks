@@ -6,6 +6,25 @@ summary: Give it your channel link or three videos. Get the one fix that matters
 job: grow-social
 headline: YouTube channel auditor
 subhead: Give it your channel link or three videos. Get the one fix that matters most, plus what to keep doing.
+explain: |
+  One fix, not twenty. Give it your channel link or three videos and it names the single change that will help most this week, then lists what already works so you do not break it.
+
+  It looks at your channel in a set order. It reads your last ten titles as a list, to see if they all promise the same thing. It shrinks your thumbnails to feed size. It transcribes the first fifteen seconds of your three newest videos and scores the hooks. Then it checks how steady your upload rhythm is, and the retention curve if you can export it. It also tells you what not to do yet.
+when:
+  - Your channel has stalled and you do not know why.
+  - You want honest feedback that is not a long list of problems.
+  - You are about to change your format and want to check the current one first.
+  - You want to know which of your habits to keep.
+you_give:
+  - Your channel link or three of your videos
+  - Your last ten titles and thumbnails
+  - A retention export (optional)
+  - Your voice notes or past scripts (optional)
+you_get:
+  - The single biggest fix with this week's action
+  - Three specific things that already work
+  - What not to do yet and why
+  - "A closing question: ship it or change it"
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

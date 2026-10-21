@@ -6,6 +6,25 @@ summary: Give it video posts. Get the hooks, claims, quotes and themes pulled fr
 job: research-topics
 headline: Social video transcript analyst
 subhead: Give it video posts. Get the hooks, claims, quotes and themes pulled from what was said. Collects data from websites.
+explain: |
+  The words spoken in social videos, pulled apart into hooks, claims, quotes and themes you can reuse. You give video links, and the skill collects the transcripts and studies what was said.
+
+  It works with TikTok, Instagram, YouTube, Facebook, X, LinkedIn, Rumble and Reddit video posts. Beyond summaries, it extracts the opening line of each video, the stories and examples, the objections and the calls to action. It can compare what several creators say on one topic, or turn a transcript into posts, scripts or newsletter ideas. It uses the ScrapeCreators data service, so you need an API key and the service has costs.
+when:
+  - You want to learn how a top creator opens their videos.
+  - You need a summary of a long video without watching it.
+  - You want to compare what ten creators say about one topic.
+  - You want to repurpose a podcast clip into posts.
+you_give:
+  - Links to the videos
+  - "What you want from them: summary, hooks or quotes"
+  - A ScrapeCreators API key
+  - Other creators to compare (optional)
+you_get:
+  - Clean transcripts
+  - A list of hooks, claims and quotes
+  - Common themes across videos
+  - Content ideas based on what was said
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

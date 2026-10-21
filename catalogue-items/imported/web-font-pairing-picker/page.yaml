@@ -6,6 +6,25 @@ summary: Describe your site. Get font pairs, sizes and line spacing that read we
 job: build-websites
 headline: Web font pairing picker
 subhead: Describe your site. Get font pairs, sizes and line spacing that read well on every screen.
+explain: |
+  A font pair, size scale and line spacing that read well on every screen, chosen to fit what your site says about you. Readers stay longer when text is easy on the eyes.
+
+  You describe the site, its tone and the type of content. The skill separates type for a moment, such as headlines and buttons, from type to live with, such as body text. It picks a pair with enough contrast between them, and a safe workhorse font for reading. It sets body size at 16 pixels or more, line length under about 75 characters, and line height of 1.4 or higher. It adds responsive sizing, font loading tips and a ten-point score.
+when:
+  - Your site feels cold or dated and you suspect the fonts.
+  - You are choosing fonts for a new brand or page.
+  - Your text is hard to read on phones.
+  - You want fonts to load fast without a flash of change.
+you_give:
+  - A description of your site and tone
+  - "The kind of content: articles, shop, app"
+  - Existing brand fonts (optional)
+  - Page or code to review (optional)
+you_get:
+  - A heading and body font pair
+  - Size scale and line spacing
+  - Responsive type rules
+  - A score on ten typography checks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

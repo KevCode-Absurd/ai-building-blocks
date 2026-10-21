@@ -6,6 +6,25 @@ summary: Give it raw 1D NMR data. Get a phased spectrum, peak candidates and int
 job: research-topics
 headline: NMR spectrum processor
 subhead: Give it raw 1D NMR data. Get a phased spectrum, peak candidates and integration regions.
+explain: |
+  A raw 1D NMR signal turned into a calibrated spectrum with peaks and integration regions, plus a report of every processing choice so someone else can repeat it.
+
+  The skill takes a complex time-domain signal from a NumPy file or an NMRPipe file. It needs the spectral width, observation frequency, carrier position and sign convention, and it does not guess them. You copy a settings file, fill in the measured values, and run the helper. It outputs a descending ppm spectrum, positive peak candidates and signed region integrals. It does not name compounds or assign peaks. Bruker, Varian and JEOL imports are not tested here, so check the conversion yourself first.
+when:
+  - You have an FID and need a phased, referenced spectrum.
+  - You want integrals you can repeat and defend.
+  - A collaborator asks exactly how you processed the data.
+  - You want a list of peak candidates before assigning them by hand.
+you_give:
+  - The raw FID file (NumPy or NMRPipe)
+  - Spectral width, frequency and carrier values
+  - Sign convention from acquisition
+  - Your processing choices (optional)
+you_get:
+  - A ppm spectrum
+  - Peak candidates
+  - Region integrals
+  - A processing report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Name an industry. Get a report on its size, main players, competition a
 job: money-and-investing
 headline: Sector landscape report writer
 subhead: Name an industry. Get a report on its size, main players, competition and trends.
+explain: |
+  An industry report showing how big the sector is, who the main players are, how they compete and where it is heading. This version is set up for Indian markets. It uses the April to March fiscal year and lakh and crore units, and it names gaps with no Indian match instead of using a stand-in.
+
+  You set the scope first: sector, purpose, depth from 5 to 30 pages, and a neutral view or a theme. Then it covers market size and growth with sources, how the industry is built, and trends. It profiles the top 5 to 10 companies with revenue, growth, margin and share, and explains how the rivalry is shifting.
+when:
+  - You need a client-ready overview of an Indian industry.
+  - You are researching a sector before looking at individual companies.
+  - You need a market map with the top players and their margins side by side.
+  - You want to test a theme, such as infrastructure spending, against the sector.
+you_give:
+  - The sector or sub-sector
+  - Report purpose and depth
+  - Neutral view or specific theme
+  - Public only or private companies too
+  - Your data sources (optional)
+you_get:
+  - A market size and growth section
+  - Industry structure and value chain
+  - Company profile table
+  - Trends, risks and competitive dynamics
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

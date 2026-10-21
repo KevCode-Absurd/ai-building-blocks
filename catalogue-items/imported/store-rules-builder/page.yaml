@@ -6,6 +6,25 @@ summary: Say the discount, shipping or payment rule you want. Get a working Shop
 job: build-software
 headline: Store rules builder
 subhead: Say the discount, shipping or payment rule you want. Get a working Shopify Function that runs it.
+explain: |
+  A custom rule for your Shopify checkout, written as working code. Say what you want in plain words, like 10 percent off when a cart has three of a product, hide a shipping option for large orders or block checkout for a bad cart, and get a Shopify Function that runs it.
+
+  Functions are small programs that run on Shopify's servers in milliseconds. The skill covers the main types: discounts, delivery options, payment method rules, cart and checkout checks and order routing. It sets up the app, writes the logic in Rust or JavaScript and explains how to test it. You need Shopify CLI, a Partner account and some comfort with code.
+when:
+  - You want a discount rule Shopify's built-in options cannot do.
+  - You need to hide or rename shipping choices for certain carts.
+  - You want to remove a payment method for large orders.
+  - You need to stop checkout when a cart breaks a rule.
+you_give:
+  - The rule in plain words
+  - Which part of checkout it affects
+  - A Shopify Partner account and CLI
+  - Your language choice, Rust or JavaScript (optional)
+you_get:
+  - A working Shopify Function project
+  - The rule logic in code
+  - Setup and deploy steps
+  - Test cases to try
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

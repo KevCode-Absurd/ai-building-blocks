@@ -6,6 +6,24 @@ summary: Give it an h5ad or h5 file. Get low-quality cells filtered and plots sh
 job: test-and-fix-code
 headline: Single-cell RNA quality checker
 subhead: Give it an h5ad or h5 file. Get low-quality cells filtered and plots showing data quality.
+explain: |
+  Low-quality cells filtered out of your single-cell file, plus plots that show how good the data is. It sets thresholds from your own data instead of a fixed number.
+
+  Give it an h5ad file or a 10X Cell Ranger h5 file. A bundled script loads either format, calculates metrics such as genes per cell, counts and mitochondrial share, then flags outliers using median absolute deviation, the scverse standard. Cells outside the limits are removed, and the plots show the before and after. You can adjust thresholds or run many datasets in a batch. You need Python with scanpy installed.
+when:
+  - You just received a new single-cell dataset and need to clean it.
+  - Dead or broken cells may be skewing your clusters.
+  - You want the same QC across many samples.
+  - A reviewer asks you to follow scverse practice.
+you_give:
+  - An h5ad or 10X h5 file
+  - Python with scanpy
+  - Custom thresholds (optional)
+you_get:
+  - A filtered dataset
+  - QC plots before and after
+  - Per-cell quality metrics
+  - A summary of cells removed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

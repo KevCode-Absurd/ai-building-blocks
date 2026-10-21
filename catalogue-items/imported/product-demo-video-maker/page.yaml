@@ -6,6 +6,25 @@ summary: Give it screenshots or a page. Get a short demo video or GIF that walks
 job: make-images
 headline: Product demo video maker
 subhead: Give it screenshots or a page. Get a short demo video or GIF that walks through the product.
+explain: |
+  A short demo video or GIF that walks someone through your product, built from screenshots or scene notes. It is planned like a small film, with a story, pacing and a clear point for every frame.
+
+  Claude first checks which tools you have: a browser tool to render scenes, a text-to-speech tool for narration, and ffmpeg to join it all. It then plans scenes, writes narration, renders each frame, adds voice and assembles the clip. If a tool is missing, it falls back to scene images, narration text files and ffmpeg commands you can run yourself.
+when:
+  - You need a quick walkthrough of a feature for your site or launch post.
+  - You have screenshots and want them turned into a moving demo.
+  - You want a GIF for a README or email.
+  - You need narration text even if you record the voice yourself.
+you_give:
+  - Screenshots or a description of each scene
+  - The main message of the demo
+  - Preferred length and tone (optional)
+  - Playwright, ffmpeg and a text-to-speech tool (optional)
+you_get:
+  - A scene plan with narration
+  - A rendered demo video or GIF
+  - Narration audio or text
+  - Fallback files if a tool is missing
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

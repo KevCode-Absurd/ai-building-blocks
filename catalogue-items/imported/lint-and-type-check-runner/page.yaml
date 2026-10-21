@@ -6,6 +6,25 @@ summary: Run it after a change. It runs your project's checks, fixes real failur
 job: test-and-fix-code
 headline: Lint and type check runner
 subhead: Run it after a change. It runs your project's checks, fixes real failures and reports what did not run.
+explain: |
+  A clear pass or fail on your project's lint and type checks after a change, with an honest line for any check that never ran. A check that did not run is not the same as a check that passed.
+
+  It first finds your languages, configured commands and installed tools. It reads your scripts before running them, since a script called lint can change files. For Node it uses your declared lint and typecheck scripts, and for Python it uses tools already installed, such as ruff and mypy. It fixes real failures without weakening rules, then reports each command, its result and what was left uncovered.
+when:
+  - You changed code and want to know it is clean before you commit.
+  - Your AI says the checks pass and you want proof.
+  - A project has lint settings but you are not sure what is wired up.
+  - Type errors keep slipping into your main branch.
+you_give:
+  - The project folder
+  - The files you changed
+  - Permission to run the project's own checks
+  - Rules not to relax (optional)
+you_get:
+  - Results of each lint and type check
+  - Fixes for real failures
+  - A list of checks that did not run
+  - The commands used and their exit results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it page links. Get tables, lists and prices as a CSV or JSON file.
 job: work-with-files
 headline: Web page data extractor
 subhead: Give it page links. Get tables, lists and prices as a CSV or JSON file. Collects data from websites.
+explain: |
+  Tables, lists and prices pulled from web pages into a CSV or JSON file you can open in a spreadsheet. It saves hours of copying and pasting.
+
+  You give the page links and say what data you want. The skill tries more than one approach to read each page, so it copes with different layouts. It follows page numbers to collect every result, not just the first page, and can re-run the job to watch for changes such as price moves. It exports to CSV or JSON. It collects data from websites, so check the site's terms and robots rules first, and go slowly. It runs as a script and may need Python.
+when:
+  - You want a price list from several product pages.
+  - A table on a site is too long to copy by hand.
+  - You track a competitor's prices over time.
+  - You need a list of items in a clean file.
+you_give:
+  - One or more page links
+  - The data you want, such as name and price
+  - Number of pages to follow (optional)
+  - How often to re-run (optional)
+you_get:
+  - A CSV or JSON file
+  - One row per item found
+  - Data from all result pages
+  - A re-run script for tracking changes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

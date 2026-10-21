@@ -6,6 +6,25 @@ summary: Give it a new AI law. Get gaps against what you do now and a fix plan. 
 job: check-contracts
 headline: New AI rule gap checker
 subhead: Give it a new AI law. Get gaps against what you do now and a fix plan. Not legal advice.
+explain: |
+  A list of what a new AI law or guidance means for your company, set against what you already do. Instead of reading a hundred pages, you see the gaps and a plan to close them.
+
+  The skill first asks whether the rule applies to you at all, based on place, size, your role as builder or user, and sector. If it does, it pulls out the actual requirements and compares each one with your recorded AI uses, vendor positions, impact checks and published commitments. Gaps are sorted into must do, should do, already met and accepted risks. It says so where the law is unclear. This is not legal advice.
+when:
+  - A new AI law is announced and you need to know if it affects you.
+  - Your legal team needs a gap list before a compliance deadline.
+  - You want to see which AI tools you use fall under a rule.
+  - You must brief leadership on what to change first.
+you_give:
+  - The regulation or guidance to check
+  - A record of your AI uses and policies
+  - Your location and sector (optional)
+  - Vendor details (optional)
+you_get:
+  - A yes or no on whether the rule applies
+  - The requirements pulled out
+  - Gaps ranked by urgency
+  - A dated remediation plan for your file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

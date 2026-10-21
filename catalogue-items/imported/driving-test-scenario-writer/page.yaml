@@ -6,6 +6,25 @@ summary: Describe the traffic event. Get a RoadRunner scenario with actors, rout
 job: build-software
 headline: Driving test scenario writer
 subhead: Describe the traffic event. Get a RoadRunner scenario with actors, routes and triggers, built in code.
+explain: |
+  Describe a traffic event in words and get a RoadRunner scenario written as code. A car cuts in, a pedestrian crosses, a lead vehicle brakes hard. Each one becomes actors, routes and trigger logic you can run and change.
+
+  The skill works through the roadrunnerAPI in MATLAB. It first confirms a RoadRunner session is open. Then it adds vehicles and pedestrians, sets their routes and waypoints, and places them on roads by anchor or map position. Next it writes the scenario logic as phases, conditions and actions. Last, it checks the structure before you simulate. Scenes, road shapes and simulation runs are handled by other skills.
+when:
+  - You need a cut-in or lead-brake test for an automated driving system.
+  - You want a pedestrian crossing set up without clicking through the editor.
+  - You plan many variations of one traffic event.
+  - You want the scenario checked before you simulate.
+you_give:
+  - A plain description of the traffic event
+  - The road or scene to use
+  - Actor types and speeds (optional)
+  - Trigger conditions (optional)
+you_get:
+  - MATLAB code that builds the scenario
+  - Actors with routes and waypoints
+  - Phase logic with conditions and actions
+  - A structure check before simulation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

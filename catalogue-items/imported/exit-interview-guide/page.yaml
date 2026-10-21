@@ -6,6 +6,25 @@ summary: Describe the case. Get a fair step-by-step way to handle it, plus exit 
 job: hire-people
 headline: Exit interview and grievance guide
 subhead: Describe the case. Get a fair step-by-step way to handle it, plus exit interview questions. Not legal advice.
+explain: |
+  A fair, documented way to handle an employee relations case, plus exit interview questions that get honest answers. It is guidance for HR, not legal advice.
+
+  For exits, it writes a question list, advises on keeping the talk private and calm, and shows how to read answers across many leavers for turnover trends. It also writes stay interview questions to learn what keeps your best people. For grievances and investigations, it lays out the steps in a sensible order and asks you to check local law and company policy. It covers related items such as improvement plans, remote work policies and employee surveys.
+when:
+  - An employee is leaving and you want real feedback, not polite answers.
+  - You want to find out why people quit and spot patterns.
+  - A grievance has landed and you need a fair step-by-step process.
+  - You want stay interviews to keep your strongest people.
+you_give:
+  - Description of the case or exit
+  - Role and team of the person (optional)
+  - Your company policy and local rules (optional)
+  - Past exit feedback (optional)
+you_get:
+  - Exit interview question list
+  - Stay interview questions
+  - Step-by-step case handling plan
+  - Method to spot turnover trends
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

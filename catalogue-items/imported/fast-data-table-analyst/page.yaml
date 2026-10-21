@@ -6,6 +6,24 @@ summary: Give it a large data file. Get fast cleaning, grouping and analysis wit
 job: work-with-files
 headline: Fast data table analyst
 subhead: Give it a large data file. Get fast cleaning, grouping and analysis with Polars code that you can rerun.
+explain: |
+  Large spreadsheets and data files cleaned, grouped and summed in seconds, as Polars code you can run again next month. It beats slow pandas scripts when your data is big but still fits in memory.
+
+  You describe the file and the question. The skill writes the steps using Polars expressions: select columns, filter rows, add computed columns, group and aggregate, join tables and reshape. For big files it uses lazy mode, so Polars plans the whole job and reads only what it needs, running in parallel. It also shows how to read CSV and Parquet files and how to avoid slow row-by-row loops. It needs Python with Polars installed.
+when:
+  - Your pandas script takes minutes on a big CSV.
+  - You need monthly totals by customer from millions of rows.
+  - You want a repeatable cleaning step for a weekly export.
+  - You need to join two large tables without freezing your computer.
+you_give:
+  - A data file, such as CSV or Parquet
+  - The question you want answered
+  - Column names and any known data problems (optional)
+you_get:
+  - Polars code you can rerun
+  - Cleaned and grouped tables
+  - A result file
+  - Notes on speed choices
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

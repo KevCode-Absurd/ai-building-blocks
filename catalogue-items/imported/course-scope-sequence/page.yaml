@@ -6,6 +6,26 @@ summary: Describe your course or year. Get what to teach and in what order, so e
 job: teach-and-train
 headline: Course scope and sequence planner
 subhead: Describe your course or year. Get what to teach and in what order, so each year builds on the last.
+explain: |
+  A scope and sequence that shows what to teach and in what order across a year or programme, so each topic builds on what came before. Gaps and jumps in difficulty show up before students hit them.
+
+  You give the subject, years and learning goals. The skill maps prerequisites, diagnoses how the knowledge is built, and sets sequencing limits. It proposes an order with reasons, then flags prerequisite violations and checks coherence up and across the programme. It lists principles used and marks where the teacher should decide. A confidence note says how sure it is. The result is a plan you adjust, not a final timetable.
+when:
+  - You are designing a new programme and need the order of units.
+  - Students arrive in year two missing key ideas.
+  - You are rebuilding a subject and want to check progression.
+  - You want to show colleagues why topics appear where they do.
+you_give:
+  - Subject and year levels
+  - Learning goals
+  - Current topic list (optional)
+  - Time available per unit
+you_get:
+  - Prerequisite map
+  - Recommended sequence with reasons
+  - Prerequisite violations
+  - Coherence checks
+  - Questions for teacher judgment
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

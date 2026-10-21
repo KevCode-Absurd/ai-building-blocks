@@ -6,6 +6,26 @@ summary: Say what your Shopify app should do. Get a working app with admin scree
 job: build-software
 headline: Shopify app builder
 subhead: Say what your Shopify app should do. Get a working app with admin screens, sign-in and extensions.
+explain: |
+  A working Shopify app with admin screens, sign-in and extensions, built from a plain description of what it should do. You can skip the long setup reading.
+
+  It first helps you choose the type: public app for the App Store, custom app for one store, or a sales channel. Then it sets up the project with the Shopify command line tool and a Remix template, lays out the routes, and adds sign-in through Shopify's OAuth. It builds the admin pages with Shopify's Polaris components, adds webhook handlers and any extensions, and covers the steps to deploy. You need Node, the Shopify CLI and a Partner account.
+when:
+  - You want an app that adds a screen to your Shopify admin.
+  - You need to react to store events such as new orders.
+  - You plan to list an app on the Shopify App Store.
+  - You want a private tool for one store and no review process.
+you_give:
+  - What the app should do
+  - "App type: public, custom or sales channel"
+  - A Shopify Partner account
+  - Node and the Shopify CLI installed
+you_get:
+  - A project with admin pages
+  - Sign-in and permission setup
+  - Webhook handlers
+  - Extension code where needed
+  - Deploy steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a project's budget, schedule and spend. Get cost and schedule i
 job: money-and-investing
 headline: Project cost progress tracker
 subhead: Give it a project's budget, schedule and spend. Get cost and schedule indexes and a finish cost estimate.
+explain: |
+  A clear answer to whether your project is on budget and on time, plus a forecast of what it will cost at the end. It replaces gut feel with three numbers you can defend in a meeting.
+
+  You give the planned budget, the work scheduled by now, the work really done and the money spent. The skill works out earned value, then the cost index and schedule index. A value below 1.0 means over budget or behind. It forecasts the final cost, the gap against budget and the efficiency you need on remaining work. It also asks you to measure progress by finished work, such as half the foundation poured, not by effort spent.
+when:
+  - A large project is halfway through and you need an honest status.
+  - Your sponsor wants a forecast of the final cost.
+  - Spend looks fine but you suspect the work is behind.
+  - You need to know how much harder the team must work to finish within budget.
+you_give:
+  - Total budget
+  - Planned value to date
+  - Actual cost to date
+  - Percent complete for each task or work package
+you_get:
+  - Cost and schedule performance indexes
+  - Projected final cost and variance
+  - Efficiency needed on remaining work
+  - A short dashboard in plain words
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

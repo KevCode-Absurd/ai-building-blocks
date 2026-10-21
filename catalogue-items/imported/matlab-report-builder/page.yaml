@@ -6,6 +6,25 @@ summary: Give it your results. Get a PDF, Word or HTML report built with titles,
 job: work-with-files
 headline: MATLAB report builder
 subhead: Give it your results. Get a PDF, Word or HTML report built with titles, chapters, tables and charts.
+explain: |
+  A finished report in PDF, Word or HTML, built from MATLAB code, with a title page, chapters, tables and charts. Give it your results and get a document that updates whenever you rerun it.
+
+  The skill builds on the MATLAB Report API for chapters, figures and tables, and uses the lower-level DOM tools only for things the Report API lacks, such as custom paragraphs. It lists your layout needs first, then checks whether the standard title page and sections cover them. When they do not, it makes a custom reporter instead of squeezing fields into the wrong slots.
+when:
+  - You run the same analysis each month and need a fresh report every time.
+  - A client wants a PDF with your branding on the title page.
+  - You need a Simulink model documented with figures and tables.
+  - You are tired of pasting charts into Word by hand.
+you_give:
+  - Your results, data or figures
+  - Output format
+  - Branding or layout needs (optional)
+  - Section titles (optional)
+you_get:
+  - Report building code
+  - A title page and chapters
+  - Formatted tables and figures
+  - The report as PDF, Word or HTML
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

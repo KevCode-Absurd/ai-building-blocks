@@ -6,6 +6,26 @@ summary: Set goals at the start, check your method halfway, and note what change
 job: teach-and-train
 headline: Study session planner and review
 subhead: Set goals at the start, check your method halfway, and note what changed at the end of a study session.
+explain: |
+  A study session with a start, a midpoint check and an end, so time spent turns into learning you can see. It builds the habit of managing your own learning.
+
+  At the start, you state the topic and a goal for the session, and the coach tightens it into something you can actually finish. Halfway, it asks whether your method is working and offers a switch if not. At the end, it has you say what changed in your understanding and what to do next time. It remembers earlier sessions to compare, and adjusts its tone to the learner's age band. The full run is written as a short transcript.
+when:
+  - You sit down to study for hours and finish unsure what you learned.
+  - A student drifts halfway through homework with no check on progress.
+  - You want a repeatable routine for revision weeks.
+  - You coach learners and want them to plan and reflect on their own.
+you_give:
+  - The subject or topic
+  - The type of session, such as revision or new reading
+  - How long you have
+  - Notes from earlier sessions (optional)
+  - Age or level (optional)
+you_get:
+  - A clear goal for the session
+  - A mid-session method check
+  - An end-of-session reflection
+  - A note on what to do next time
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

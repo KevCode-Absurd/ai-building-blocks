@@ -6,6 +6,25 @@ summary: Point it at an MCP server. Get a ranked list of attack risks, each with
 job: secure-code
 headline: MCP attack defence reviewer
 subhead: Point it at an MCP server. Get a ranked list of attack risks, each with a fix.
+explain: |
+  A ranked list of the ways someone could attack your MCP server, with a fix for each. Point it at the server and see where an attacker or a confused AI could do damage.
+
+  It starts with a threat model built on the known MCP attack types. The core idea is that protections must live in code, not in the prompt, since prompts can be talked around. It looks for tools that change data without a retry guard, checks how far a single compromised call can reach, and checks that logs cannot be tampered with. It also cleans what the model sees, such as tool descriptions and results, where hidden instructions can hide.
+when:
+  - You are about to give an AI access to your MCP server and want it checked.
+  - A tool result could contain text that tricks the AI.
+  - Your server can delete or pay and you worry about retries.
+  - You need a security list to show before release.
+you_give:
+  - The MCP server code or repo
+  - The tools it exposes
+  - What data and systems it can reach
+you_get:
+  - A ranked list of risks
+  - A fix for each risk
+  - Code guard suggestions
+  - A logging plan
+  - CI checks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

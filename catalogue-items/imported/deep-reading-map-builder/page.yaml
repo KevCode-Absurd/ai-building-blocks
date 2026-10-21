@@ -6,6 +6,24 @@ summary: Give it an article, book or PDF. Get a knowledge map of its ideas and a
 job: think-and-decide
 headline: Deep reading map builder
 subhead: Give it an article, book or PDF. Get a knowledge map of its ideas and a Feynman check that you understood it.
+explain: |
+  A knowledge map of an article, book or PDF, with each idea linked to the evidence behind it, followed by a plain-language check that you understood. It turns long reading into a structure you can study from.
+
+  The map has typed nodes such as claim, data, example and assumption, joined by labelled links like supports or contradicts. Source locations stay attached so you can find the page again. Then the Feynman check has you explain the idea simply and shows where your explanation is thin. If you give it several documents, it compares them without blending their disagreements into one answer.
+when:
+  - You want study notes that show how ideas connect.
+  - You are comparing three reports that disagree.
+  - You need to find where a long article's argument is weakest.
+  - You want to test yourself after reading a chapter.
+you_give:
+  - Article, book, PDF or web page
+  - "Choice of output: map, notes or comparison matrix"
+  - Your own explanation to test (optional)
+you_get:
+  - Knowledge map with linked ideas
+  - Claims tied to evidence and locations
+  - Comparison matrix for several sources
+  - Feynman-style recall check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

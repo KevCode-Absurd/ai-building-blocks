@@ -6,6 +6,25 @@ summary: Describe your store. Get ranked calls on marketing channels, homepage l
 job: run-your-store
 headline: Online store auditor
 subhead: Describe your store. Get ranked calls on marketing channels, homepage layout, trust signals and marketplaces.
+explain: |
+  Ranked answers to the big whole-store questions: where to spend marketing money, how to lay out the homepage, which trust signals to show, and whether to sell on a marketplace. All of them depend on what kind of store you run, so it classifies first.
+
+  The skill asks what you sell, who buys it, how big you are and whether the product is high-tech. It uses that to pick a path, then gives calls on channel mix across social, search, comparison sites and marketplaces. It reviews homepage and category layout, carousels, recommendation labels and visual style. It also names the trust signals that work for your kind of product and says whether a marketplace listing fits your margin.
+when:
+  - You do not know whether Instagram or search deserves your next ad dollar.
+  - Your homepage has a carousel and you wonder if it helps.
+  - You are deciding whether to list on a big marketplace.
+  - Customers hesitate and you need better trust signals.
+you_give:
+  - What you sell and who buys
+  - Company size
+  - Current channels and homepage layout
+  - Gross margin
+you_get:
+  - A store classification
+  - Ranked marketing channel calls
+  - Homepage and category layout advice
+  - Trust signal and marketplace recommendations
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

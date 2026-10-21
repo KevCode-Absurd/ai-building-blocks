@@ -6,6 +6,24 @@ summary: Paste your PageSpeed report. Get fixes for speed, access, best practice
 job: build-websites
 headline: Page speed fixer
 subhead: Paste your PageSpeed report. Get fixes for speed, access, best practice and SEO scores, in ordered batches.
+explain: |
+  A faster, cleaner page, fixed in ordered batches from the report you already have. Paste your PageSpeed or Lighthouse results and the work follows the scores, not guesses.
+
+  It reads the summary table and finds the biggest drag, such as a hero image loading late or CSS blocking the first paint. Then it runs through four areas in order: speed, accessibility, best practice and search basics. Each batch ends with fixes applied and a re-test before the next. Checks cover images, unused scripts, security headers, screen reader labels and meta tags. It needs your site code.
+when:
+  - Your page scores low on PageSpeed and you want it above 90.
+  - The main image takes seconds to appear.
+  - The report lists dozens of issues and you do not know where to begin.
+  - You need accessibility and meta tag fixes made along with speed.
+you_give:
+  - PageSpeed or Lighthouse report, pasted
+  - Your site code
+  - Pages to prioritise (optional)
+you_get:
+  - Ranked list of issues by risk
+  - Code fixes in ordered batches
+  - Re-test after each batch
+  - Notes on what changed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

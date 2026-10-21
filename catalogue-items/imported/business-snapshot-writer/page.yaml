@@ -6,6 +6,24 @@ summary: Connect what you use. Get a one-page view of cash, sales and open leads
 job: plan-strategy
 headline: Business snapshot writer
 subhead: Connect what you use. Get a one-page view of cash, sales and open leads, plus the one thing to handle today.
+explain: |
+  One page tells you how the business stands today: cash in the bank, sales this month, money owed to you, and open leads. At the top sits the single thing most worth your attention now.
+
+  The skill reads from your connected tools all at once, so you do not wait on each one. That can include accounting, payments, card spend, payroll timing and ad spend. It then lines the numbers up, flags failed payments, fresh disputes and overdue invoices, and picks one priority. Where a tool lacks a number, it says so on the page instead of guessing. You need at least one connected tool for it to work.
+when:
+  - You open the day and want cash, sales and leads in one place.
+  - You check three or four apps each morning just to see how things stand.
+  - A client or partner asks how the month is going and you need numbers fast.
+  - You want to be told the one thing to deal with first.
+you_give:
+  - Connections to the tools you use, such as accounting or payments
+  - Which tools matter most (optional)
+  - Any goals or cash floors to compare against (optional)
+you_get:
+  - A one-page business brief
+  - Cash, sales and receivables at a glance
+  - A watch list of failed payments and disputes
+  - One named priority for today
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

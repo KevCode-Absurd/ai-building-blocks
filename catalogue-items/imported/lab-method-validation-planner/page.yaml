@@ -6,6 +6,25 @@ summary: Name the lab test method and rules. Get a validation plan, acceptance l
 job: document-work
 headline: Lab method validation planner
 subhead: Name the lab test method and rules. Get a validation plan, acceptance limits and a write-up ready for review.
+explain: |
+  A validation plan with acceptance limits fixed before any data is collected. Name the test method and the rules it falls under. The skill first picks the governing framework, because ICH Q2(R2), ICH M10, USP and ISO 17025 ask for different studies, and blending them satisfies none.
+
+  It then lays out which characteristics to test, such as accuracy, precision, range and linearity, and where acceptance numbers should come from. Bundled Python scripts compute the statistics, and the documentation is structured for review. It never declares a method validated. That call stays with your analyst and quality unit, and paywalled standards are cited, not quoted.
+when:
+  - You are validating a new assay and need a protocol before you start.
+  - You have results and need the statistics worked out and written up.
+  - You are moving a method to another lab or instrument.
+  - A reviewer asked you to defend your acceptance criteria.
+you_give:
+  - The test method and what it measures
+  - The governing guideline or framework
+  - Specification or development data
+  - Existing validation data (optional)
+you_get:
+  - A validation plan
+  - Acceptance criteria with their source
+  - Calculated statistics
+  - A report outline for review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

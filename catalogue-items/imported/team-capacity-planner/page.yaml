@@ -6,6 +6,26 @@ summary: Give it your team and projects. Get workload against people, who is ove
 job: organise-work
 headline: Team capacity planner
 subhead: Give it your team and projects. Get workload against people, who is overloaded, and whether you can take on more.
+explain: |
+  A clear picture of who has too much work, who has room, and whether you can say yes to the next project. You can show your plan with numbers instead of a feeling that the team is stretched.
+
+  You give the team, their roles, what they are working on and what is coming next quarter. The skill lines workload up against available hours and skills. It flags people over capacity, spots skill gaps, and shows what happens if a project is added, a hire is delayed or a contractor joins. The plan lists options, such as delay, hire, outsource or drop.
+when:
+  - A new project lands and you must say whether the team can take it.
+  - Two people are burning out and you need proof to rebalance.
+  - You are planning next quarter and need a headcount case.
+  - A key person is leaving and you need to see the gap.
+  - You want to compare hiring against using contractors.
+you_give:
+  - Team members and roles
+  - Current projects and who is on them
+  - Upcoming work
+  - Budget and hiring limits (optional)
+you_get:
+  - Workload against capacity per person
+  - Overloaded and spare capacity flagged
+  - Skill gaps
+  - Options with trade-offs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

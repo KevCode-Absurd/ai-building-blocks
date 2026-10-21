@@ -6,6 +6,27 @@ summary: Describe your goods and route. Get tariff codes, duty options and the p
 job: check-contracts
 headline: Import and export paperwork advisor
 subhead: Describe your goods and route. Get tariff codes, duty options and the papers customs will ask for.
+explain: |
+  A clear list of the tariff code, duty options and papers customs will ask for, matched to your goods and shipping route. That saves you from a held shipment or a wrong duty bill. It gives general guidance, so check key decisions with a licensed broker.
+
+  The skill sorts your goods by the Harmonized System, working through the General Rules of Interpretation in strict order. It points out common mistakes, such as classing a multi-function device by its priciest part. It picks a fitting Incoterm and lists the documents: commercial invoice, packing list, certificate of origin, bill of lading, and the US security filing and entry summary where they apply.
+when:
+  - You are shipping a new product abroad and need its tariff code.
+  - You are unsure which trade terms to put in a sales contract.
+  - Customs held your shipment and asked for papers you lack.
+  - You want to know which free trade deal might cut your duty.
+  - You need a checklist of documents before a first import.
+you_give:
+  - A description of the goods, with materials and use
+  - The origin and destination countries
+  - The value and sale terms (optional)
+  - Any papers you already have (optional)
+you_get:
+  - A likely tariff code with the reasoning
+  - Duty options to check
+  - A list of required documents
+  - Trade term suggestions
+  - Common mistakes to avoid
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

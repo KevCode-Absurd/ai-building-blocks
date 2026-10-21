@@ -6,6 +6,25 @@ summary: Give it your data and the question. Get a Python model that estimates w
 job: track-numbers
 headline: Bayesian model builder
 subhead: Give it your data and the question. Get a Python model that estimates what drove your results, with ranges, not guesses.
+explain: |
+  A Python model that estimates what drove your results and shows the range of likely answers, not a single guess. You bring the data and the question, and the AI chooses a starting point: a simple scaffold, an established model from your field, or a smaller piece of a bigger one.
+
+  It builds the model in PyMC, checks that your assumptions are plausible before fitting, fits it, then diagnoses the fit with ArviZ and evaluates how well it predicts. It uses supported algorithms from the pymc-extras package instead of custom code, and only loads the reference material the task needs. You expand or simplify the model as checks suggest. You need a Python environment with these packages.
+when:
+  - You want to know how much a campaign lifted sales, with an honest range.
+  - A simple regression ignores groups in your data and misleads you.
+  - You need priors that make sense before you fit anything.
+  - An existing model fit looks odd and needs diagnosing.
+you_give:
+  - Your data
+  - The question you want answered
+  - Prior knowledge, if any (optional)
+  - An existing model (optional)
+you_get:
+  - A PyMC model in Python
+  - Prior plausibility checks
+  - Fit diagnostics
+  - Estimates with uncertainty ranges
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

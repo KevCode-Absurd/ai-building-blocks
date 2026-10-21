@@ -6,6 +6,24 @@ summary: Get every product scored on missing descriptions, images, SEO, weight, 
 job: run-your-store
 headline: Listing completeness scorer
 subhead: Get every product scored on missing descriptions, images, SEO, weight, barcode and cost, worst first.
+explain: |
+  Every product in your store scored on how complete its data is, worst first, so you know exactly what to fix. It only reads, and changes nothing in your shop.
+
+  It pulls your products from Shopify and checks seven things: description, images, search settings, weight, barcode, cost and extra fields. Each product gets a score from a fixed scoring guide. The list is ordered with the most incomplete products at the top. You can then work through the gaps in batches. It tracks the session and reports errors plainly if a request fails. It needs access to your store's API.
+when:
+  - Your catalogue has gaps and you do not know where.
+  - You want to fix search settings before a sale.
+  - Shipping quotes break because product weights are missing.
+  - You are cleaning up after importing hundreds of products.
+you_give:
+  - Access to your Shopify store
+  - Which products to check, if not all (optional)
+  - Which fields matter most to you (optional)
+you_get:
+  - A completeness score for each product
+  - The missing fields on each product
+  - A list ordered worst first
+  - Totals for each type of gap
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

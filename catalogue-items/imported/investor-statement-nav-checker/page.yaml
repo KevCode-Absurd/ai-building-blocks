@@ -6,6 +6,25 @@ summary: Give it an investor statement and the fund's NAV pack. Get the capital 
 job: money-and-investing
 headline: Investor statement NAV checker
 subhead: Give it an investor statement and the fund's NAV pack. Get the capital account recomputed and any mismatch flagged.
+explain: |
+  Proof that an investor's capital statement matches the fund's books. Give it the generated statement and the period's NAV pack from the fund admin system. The statement is the thing under test and the pack is the source of truth.
+
+  The skill rebuilds the capital account line by line: beginning capital, plus contributions, minus distributions, plus the investor's share of profit after fees and expenses, minus any carry. It compares each line to the statement within one cent. It also checks that ending capital matches next period's opening, that all investors' ending capitals add up to fund value, and that commitments agree with the register. It reports pass or fail and never edits the statement.
+when:
+  - Investor statements are about to go out and you need a final check.
+  - A statement figure looks off and you want to know why.
+  - You close the quarter and need statements tied to fund value.
+  - An auditor asks how you verify capital accounts.
+you_give:
+  - The generated investor statement
+  - The NAV pack for the period
+  - Prior and next period statements (optional)
+  - The commitment register (optional)
+you_get:
+  - A pass or fail result for every line
+  - Recomputed values beside the statement values
+  - The input behind each mismatch
+  - A list of flags for review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

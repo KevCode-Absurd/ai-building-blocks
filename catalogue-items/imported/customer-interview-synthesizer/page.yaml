@@ -6,6 +6,24 @@ summary: Paste interviews, tickets or survey notes. Get clear patterns and what 
 job: understand-customers
 headline: Customer interview synthesizer
 subhead: Paste interviews, tickets or survey notes. Get clear patterns and what each means for your product.
+explain: |
+  Piles of interview notes turn into a decision when they are sorted properly. Paste interviews, support tickets, call notes or survey answers and you get clear patterns with what each one means for your product.
+
+  It tags what people said, groups similar tags into patterns, gives each pattern a name, and draws out the product implication and the choice it supports. It avoids two traps: handing over raw data with no conclusions, and a polished story that nobody uses. It marks how strong each pattern is, so weak guesses are not presented as facts. It suits one batch of research, not ongoing feedback feeds.
+when:
+  - You ran a dozen customer calls and have a pile of notes.
+  - You are reviewing support tickets to plan next quarter.
+  - Past research never led to a decision and you want to fix that.
+  - You need a short readout for a product meeting.
+you_give:
+  - Interview notes, transcripts, tickets or survey data
+  - The decision the research should inform
+  - Who the participants were (optional)
+you_get:
+  - Tagged observations
+  - Named patterns with evidence strength
+  - Product implications for each pattern
+  - Decisions and open questions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

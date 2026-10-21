@@ -6,6 +6,25 @@ summary: Describe your plans. Get upgrade screens, trigger moments and copy that
 job: build-product
 headline: Paywall designer
 subhead: Describe your plans. Get upgrade screens, trigger moments and copy that convert free users.
+explain: |
+  Upgrade screens, timing triggers and copy that move free users to paid. It places the ask after people have felt real value, not before.
+
+  You describe your plans and what is free. It first checks the type of upgrade: free to paid, trial to paid, a higher tier or a usage limit. Then it maps the user path to find the right moments, such as after a first win or at a limit. It designs the screen, shows what the paid plan unlocks in a tangible way, keeps the path to upgrade short and writes the wording. It also suggests tests to run.
+when:
+  - Lots of people use the free plan but few upgrade.
+  - A trial ends and users drop off.
+  - You are adding usage limits and need a good upgrade prompt.
+  - You want to push users to a higher tier.
+you_give:
+  - Your plans and what is free or paid
+  - Where users hit limits or ends of trials
+  - Current upgrade rate (optional)
+  - Notes on how users move through the product (optional)
+you_get:
+  - Paywall screen layouts
+  - Trigger moments
+  - Upgrade copy
+  - Test ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

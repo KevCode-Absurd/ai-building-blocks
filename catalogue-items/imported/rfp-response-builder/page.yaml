@@ -6,6 +6,26 @@ summary: Paste an RFP or security questionnaire. Get requirements sorted by must
 job: sell-and-negotiate
 headline: RFP response builder
 subhead: Paste an RFP or security questionnaire. Get requirements sorted by must have, a fit score and draft answers.
+explain: |
+  A response plan for a tender or security questionnaire that shows what the buyer wants, where you are strong and whether to bid. It marks gaps openly and never invents claims.
+
+  Paste the document. The skill splits it into sections and tags every requirement as must have, weighted or nice to have, and pulls out scoring rules and deadlines. For each requirement it rates your fit as strong, partial or gap, tied to a real proof such as a case study or certificate. It then drafts three to five win themes that tie requirements together. A win-chance estimate factors in incumbent, relationships and rival count, and ends in bid, partner or no-bid.
+when:
+  - An RFP lands and you must decide fast whether to bid.
+  - A customer sends a long security questionnaire.
+  - Your team needs one view of every must-have requirement.
+  - You want win themes that are more than generic claims.
+you_give:
+  - The RFP, RFI or questionnaire text
+  - Your case studies, certificates and proof points
+  - Known competitors or incumbent (optional)
+  - Deal size and relationship notes (optional)
+you_get:
+  - Requirements tagged by priority
+  - A fit matrix with proof points and gaps
+  - Three to five win themes
+  - A win-chance estimate and bid call
+  - Draft answers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Name your board material. Get a substrate, conductor and layer stack se
 job: build-software
 headline: PCB material setup helper
 subhead: Name your board material. Get a substrate, conductor and layer stack set up with loss included.
+explain: |
+  Pick your board material and walk away with a substrate, a metal and a layer stack that behave like the real thing, loss included. Every RF board design starts here, and wrong material numbers ruin every result after it.
+
+  The skill looks up common materials such as FR4 or Teflon from a built-in catalogue, or builds your own from dielectric constant, loss tangent and thickness. It sets conductors like copper or gold with real conductivity. For several layers it builds a stack with a thickness for each. For wide frequency ranges it adds a frequency-dependent loss model so results stay accurate. It runs in MATLAB with the RF PCB Toolbox.
+when:
+  - You are starting an RF board design and need a substrate defined first.
+  - Your datasheet gives dielectric constant and loss tangent, and you need a material from them.
+  - You want a multi-layer stack for a stripline or embedded design.
+  - Results need to stay accurate across a wide frequency band.
+you_give:
+  - Your material name or its datasheet values
+  - Layer thicknesses
+  - The metal you use, such as copper or gold (optional)
+  - Your frequency range (optional)
+you_get:
+  - A substrate object with the right loss
+  - A conductor object with real conductivity
+  - A multi-layer stack with thickness per layer
+  - Material code you can pass to later designs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

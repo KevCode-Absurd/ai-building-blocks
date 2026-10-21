@@ -6,6 +6,25 @@ summary: Describe your data warehouse and terms. Get a custom data analysis skil
 job: track-numbers
 headline: Data skill builder
 subhead: Describe your data warehouse and terms. Get a custom data analysis skill that knows your tables and metrics.
+explain: |
+  A custom data analysis skill that already knows your warehouse: your tables, your metric definitions and your team's slang. Later questions get answers in your terms instead of generic ones.
+
+  In build mode it connects to your database type, discovers schemas, and asks a short list of questions analysts usually keep in their heads: how revenue is defined, which tables to trust, what filters always apply. It writes the skill with reference files for each area. In improve mode you tell it what is missing about a topic, and it asks targeted questions and updates the right file. You will need database access and an analyst who knows the data.
+when:
+  - Your AI keeps using the wrong table for revenue.
+  - A new analyst needs your team's data knowledge in one place.
+  - Your metric definitions live only in people's heads.
+  - You want to add notes on a new data domain to an existing skill.
+you_give:
+  - Your database type and access
+  - Table and metric names you use
+  - Company terms and rules
+  - An analyst to answer questions
+you_get:
+  - Custom data analysis skill
+  - Reference files per topic
+  - Metric definitions in writing
+  - Updates when you add context
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

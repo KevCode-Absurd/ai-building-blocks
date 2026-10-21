@@ -6,6 +6,25 @@ summary: Describe your product. Get tested marketing ideas matched to your stage
 job: plan-strategy
 headline: Marketing idea picker
 subhead: Describe your product. Get tested marketing ideas matched to your stage and budget.
+explain: |
+  Three to five marketing ideas picked for your product, stage and budget, with steps to try the ones you choose. It draws from a library of 139 ideas across the main areas.
+
+  It asks about your product, audience and where you are now, or reads your saved marketing context. Then it picks from groups such as content and SEO, competitor pages, free tools, paid ads, community and social, email, partnerships and events. It matches the ideas to your time, money and team size, so a one-person team does not get a plan that needs ten. For each pick you get what to do first. It is written with software products in mind, but many ideas carry over.
+when:
+  - You have a product and no idea which channel to try first.
+  - You have a small budget and need ideas that cost time, not money.
+  - You want free-tool ideas such as calculators or generators.
+  - Your current channel stalled and you need new options.
+you_give:
+  - Your product and audience
+  - Your stage
+  - Budget, time and team size
+  - What you already tried (optional)
+you_get:
+  - Three to five matched ideas
+  - Why each fits you
+  - First steps for each
+  - A note on the effort needed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

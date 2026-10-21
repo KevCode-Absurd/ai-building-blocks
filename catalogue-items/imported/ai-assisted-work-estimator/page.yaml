@@ -6,6 +6,26 @@ summary: Give it your tasks and how your team uses AI agents. Get time estimates
 job: build-software
 headline: AI-assisted work estimator
 subhead: Give it your tasks and how your team uses AI agents. Get time estimates with likely ranges you can plan on.
+explain: |
+  Time estimates for work done with AI agents, shown as a likely range you can plan on instead of one hopeful number. It works for a single task or a backlog of hundreds.
+
+  First it finds your mode: all human, a mix of people and agents, or agent-first. Then it sorts each task by size, complexity and risk, and applies the right speed multipliers. Three-point estimates, best, likely and worst, are blended into an expected value. Results come with confidence bands at 50, 75 and 90 percent, so you can commit to the 75 or 90 when dates matter. Output can be formatted for Jira, Linear, GitHub and others. You can feed back actual times to sharpen future guesses.
+when:
+  - You plan a sprint where AI agents write part of the code.
+  - You need a date you can defend with a confidence level.
+  - You have a big backlog and need a size for each item.
+  - Your past estimates were too hopeful and you want to calibrate.
+you_give:
+  - The tasks or tickets to estimate
+  - How much of the work agents do
+  - Team size and mode
+  - Past actual times (optional)
+you_get:
+  - An estimate for each task
+  - Likely, 75 percent and 90 percent figures
+  - Task size and risk labels
+  - Output ready for your tracker
+  - Notes on how to improve with actuals
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

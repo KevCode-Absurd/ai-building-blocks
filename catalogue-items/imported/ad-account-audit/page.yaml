@@ -6,6 +6,27 @@ summary: Give it your ad exports and goal. Get an evidence-based audit across Go
 job: read-ad-results
 headline: Twelve-platform ad account auditor
 subhead: Give it your ad exports and goal. Get an evidence-based audit across Google, Meta, TikTok, LinkedIn and more, with next steps.
+explain: |
+  A fact-based audit of your paid advertising comes with the proof for each finding and clear next steps. It covers Google, Meta, YouTube, LinkedIn, TikTok and other platforms.
+
+  The skill works in a set order. It first collects context: your goal, budget and exports. Then it routes the job, whether that is an audit, strategy, measurement plan or report. Every finding must cite its source, and it will not claim what the data cannot show. Helper workers can check different platforms side by side. The result carries a score and a ranked list of actions. It will not change a live campaign unless you clearly approve the specific change first. Your keys and secrets stay out of the output.
+when:
+  - You spend on several ad platforms and do not know what is working.
+  - A new agency took over and you want an independent check.
+  - You want a plan for budget and measurement for next quarter.
+  - You need a report that shows its evidence.
+you_give:
+  - Ad account exports or reports
+  - Your goal, such as sales or leads
+  - Your monthly budget
+  - Your tracking setup (optional)
+  - Landing page links (optional)
+you_get:
+  - A scored audit by platform
+  - Evidence for each finding
+  - A ranked list of fixes
+  - A budget and measurement plan
+  - Test ideas for the next month
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

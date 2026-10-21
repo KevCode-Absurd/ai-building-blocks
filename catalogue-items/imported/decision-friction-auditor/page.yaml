@@ -6,6 +6,25 @@ summary: Give it a page or flow. Get the spots where layout, defaults or order s
 job: audit-landing-page
 headline: Decision friction auditor
 subhead: Give it a page or flow. Get the spots where layout, defaults or order stop people acting, with clearer fixes.
+explain: |
+  Spot why people stall on your page or flow, and fix it. Give it a screen, checkout or sign-up and you get a marked-up list of friction points in layout, defaults, order of steps and cues, each with a clearer replacement.
+
+  It first pins down who the user is, the single action you want, and your limits such as accessibility. Then it traces the path step by step, looking for too many choices, hidden next steps, weak defaults and moments where effort rises. Fixes borrow from choice design: fewer options, a better first step, clear cues. It treats psychology as a guide to test, not proof, so each change is meant to be A/B tested.
+when:
+  - Visitors reach your sign-up page but do not finish it.
+  - A pricing page has too many options and people leave.
+  - Your checkout feels long and you do not know which step to cut.
+  - Copy tweaks did not help, so the problem may be the layout.
+you_give:
+  - Page, screenshot or flow description
+  - The action you want users to take
+  - Who the users are
+  - "Constraints: platform, accessibility, brand (optional)"
+you_get:
+  - Annotated friction points
+  - Reasons each one hurts action
+  - Redesign suggestions
+  - Ideas to test
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a video idea. Get scored hook options and a full spoken script 
 job: write-and-tell-stories
 headline: YouTube script writer
 subhead: Give it a video idea. Get scored hook options and a full spoken script with what shows on screen.
+explain: |
+  A full spoken script for one video idea, plus the hook chosen from five options that were actually scored.
+
+  The skill writes five hooks against a list of 21 opening formulas and runs them through a Python scorer, then shows you the best two with their scores. The script follows a fixed shape: the hook, a turn at 15 to 45 seconds that skips channel intros and subscribe pitches, then a body where each beat lists what is on screen, a payoff that delivers what the hook promised, and one ask. It estimates runtime at 150 words a minute. It writes in your voice, from your notes or three of your past videos, and invents no numbers.
+when:
+  - You have a video idea and a blank page.
+  - Your openings lose viewers in the first 30 seconds.
+  - You want to see two hook options side by side before choosing.
+  - You want a script that tells you what to show on screen.
+you_give:
+  - Your video idea
+  - Your voice notes or three past videos (optional)
+  - Facts, numbers or sources you can use
+  - The target length (optional)
+you_get:
+  - Two scored hook options
+  - A beat-by-beat script with on-screen notes
+  - A runtime estimate
+  - The formula the winning hook used
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a page or pitch. Get where to add proof, scarcity or reciprocit
 job: speak-and-persuade
 headline: Honest persuasion advisor
 subhead: Give it a page or pitch. Get where to add proof, scarcity or reciprocity, using Cialdini's seven principles, without trickery.
+explain: |
+  A review of your page, pitch or product flow that shows where each of the seven persuasion principles could help and where it would cross a line. The seven are reciprocity, commitment, social proof, authority, liking, scarcity and unity, from Robert Cialdini's work.
+
+  Share what you have. The skill runs a quick diagnostic on which principles you already use, which are missing, and which are misused. For each gap it suggests a specific change, like adding real customer numbers near the buy button, giving something useful before you ask for an email, or showing true stock limits. It scores how well the page applies them and flags fake scarcity or invented proof. Use real reasons, never tricks.
+when:
+  - People visit your page but do not buy.
+  - You want to add proof or urgency without lying.
+  - You are writing a sales pitch and want to know what is missing.
+  - You suspect a tactic you use might feel manipulative.
+you_give:
+  - Your page, pitch or product flow
+  - Who you are trying to persuade
+  - What you want them to do
+  - Real proof you have, such as reviews or numbers (optional)
+you_get:
+  - A check of all seven principles
+  - Where each fits or is missing
+  - Specific changes to try
+  - Warnings where a tactic would be deceptive
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

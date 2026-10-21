@@ -6,6 +6,25 @@ summary: Describe your product and buyers. Get the best of seven ways to reach t
 job: plan-strategy
 headline: Launch channel picker
 subhead: Describe your product and buyers. Get the best of seven ways to reach them, with tools and first steps.
+explain: |
+  A clear pick of how to reach your first buyers, chosen from seven proven approaches. Describe your product, price and who buys it. The skill weighs inbound content, outbound sales, paid ads and four other motions against your sales cycle and deal size, since a cheap app and an enterprise contract need very different ones.
+
+  For each approach it names tools, tactics, who it suits, its strength and its main weakness. You get the best fit first, with first steps and the tools to start with, plus a view of whether a self-serve or sales-led model fits better. It helps you stop spreading thin across every channel.
+when:
+  - You are about to launch and do not know where to spend your first month.
+  - You are deciding between cold outreach and content marketing.
+  - You wonder whether self-serve signup or a sales team fits your product.
+  - Your current channel stopped working and you need a new one.
+you_give:
+  - What you sell and the price
+  - Who buys it
+  - Your team size and budget
+  - Channels you already tried (optional)
+you_get:
+  - A ranked list of go-to-market approaches
+  - Tools for the top pick
+  - First steps for week one
+  - Trade-offs of each channel
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

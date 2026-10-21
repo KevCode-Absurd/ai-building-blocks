@@ -6,6 +6,25 @@ summary: Ask any email or CRM question. Get expert advice on audits, deliverabil
 job: write-emails
 headline: CRM and email strategist
 subhead: Ask any email or CRM question. Get expert advice on audits, deliverability, flows, tests and measuring what email earns.
+explain: |
+  Expert answers to email and CRM questions: how to audit a program, fix deliverability, design flows, run tests and measure what email earns. You get advice grounded in a knowledge wiki, not guesses.
+
+  You ask your question. The skill routes it to the right pages of the knowledge base and pulls several together when a task needs them. It applies principles on how to think about email, such as who should get what and when, and it returns a set format for each kind of deliverable. A local fallback of core knowledge covers moments when the wiki cannot be reached. It suits marketers who run lists, flows and campaigns.
+when:
+  - Your emails land in spam and you don't know why.
+  - You need to design a welcome flow for new subscribers.
+  - You are unsure whether email drives revenue or only opens.
+  - You want an audit of your current email program.
+you_give:
+  - Your question or goal
+  - Your email platform
+  - Recent metrics (optional)
+  - Current flows (optional)
+you_get:
+  - Direct expert answer
+  - Audit or flow plan
+  - Test ideas
+  - Measurement approach
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

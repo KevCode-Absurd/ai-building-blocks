@@ -6,6 +6,25 @@ summary: Give it your site and traffic. Get a plan to capture more leads and sal
 job: audit-landing-page
 headline: Website growth guide
 subhead: Give it your site and traffic. Get a plan to capture more leads and sales through research, message and tests.
+explain: |
+  A growth plan for a site that already has visitors but turns too few into leads and sales. The thinking is that most traffic problems are really conversion problems, so you fix those before paying for more traffic.
+
+  The skill runs a guided eight-phase process and saves a tracker so you can pick up later. It begins with research on why visitors leave. Then it sets up a way to keep the 97 percent who are not ready to buy, such as a quiz or scorecard. Next it clarifies the message, adds proof and urgency, reworks the offer, builds in sharing and links the wins into one marketing plan. Each phase ends with a document.
+when:
+  - You have traffic but it does not turn into leads.
+  - Your offer is not landing and you need to rework it.
+  - You want a lead capture idea for people who are not ready to buy.
+  - You want one plan from research to testing.
+you_give:
+  - Your site address
+  - Monthly traffic and current conversion rate
+  - Your offer, price and audience
+  - Customer feedback or reviews (optional)
+you_get:
+  - A phase-by-phase growth plan
+  - A lead capture idea for early-stage visitors
+  - A clearer message and offer
+  - A tracker file to resume later
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

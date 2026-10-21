@@ -6,6 +6,27 @@ summary: Describe your store. Get ten email flows with full copy, who gets each 
 job: write-emails
 headline: Store email flow writer
 subhead: Describe your store. Get ten email flows with full copy, who gets each one, and a year of campaigns.
+explain: |
+  A full email system for your online shop, written out and ready to paste into your email tool. It builds ten automated flows, including welcome, cart reminder, browse reminder, post-purchase, review request and win-back, with every email written.
+
+  Each email has a subject line, preview text, body and button text, plus three to five subject line variants to test. You also get setup steps for your email platform, such as Klaviyo or Omnisend, with triggers, delays and splits, and flow diagrams. It adds eight customer segments with exact filters, a year of seasonal campaigns for your product type and list growth ideas. If you have no email tool yet, it suggests one.
+when:
+  - You are launching a shop and have no automated emails yet.
+  - You have subscribers but only send the occasional newsletter.
+  - Your cart reminder emails are weak and you want better copy.
+  - You want a yearly plan for holiday and seasonal campaigns.
+you_give:
+  - What you sell and your price range
+  - Brand name and voice
+  - Your sales platform
+  - Your email tool and list size
+  - Your best sellers (optional)
+you_get:
+  - Ten automated flows with full copy
+  - Subject line variants for testing
+  - Setup steps for your email tool
+  - Eight customer segments with filters
+  - A seasonal campaign calendar
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

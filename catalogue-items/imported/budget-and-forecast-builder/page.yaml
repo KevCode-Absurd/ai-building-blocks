@@ -6,6 +6,26 @@ summary: Give it your past numbers and plans. Get a budget, a forecast and a not
 job: money-and-investing
 headline: Budget and forecast builder
 subhead: Give it your past numbers and plans. Get a budget, a forecast and a note on gaps against actuals.
+explain: |
+  A budget and forecast for the next year or the next few, built from your history and the things that actually drive your numbers, with a plan to track the gaps.
+
+  The skill asks about your time frame, your business unit and your main revenue and cost drivers. It builds revenue bottom-up from pipeline, churn and deal size, adds seasonal changes, then plans fixed and variable costs. It runs what-if tests, such as what a one percent rise in churn does to year-end cash, and gives best, worst and base cases. It ends with a budget against actuals setup so you can follow along.
+when:
+  - You need next year's budget and have two or three years of past numbers.
+  - You want a cash forecast that shows what happens if sales dip.
+  - You are planning headcount and need the cost shown by month.
+  - Your board asks for best and worst cases.
+you_give:
+  - Past revenue and cost numbers
+  - Your main revenue and cost drivers
+  - Plans for hiring, pricing or spending
+  - The forecast time frame
+you_get:
+  - A monthly or quarterly P&L forecast
+  - A headcount and spend plan
+  - Best, worst and base scenarios
+  - What-if results
+  - A budget against actuals tracker
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

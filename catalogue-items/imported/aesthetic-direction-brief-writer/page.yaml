@@ -6,6 +6,26 @@ summary: Answer four questions about tone and feel. Get a brief that keeps copy,
 job: design-work
 headline: Aesthetic direction brief writer
 subhead: Answer four questions about tone and feel. Get a brief that keeps copy, design and images in one style.
+explain: |
+  A vague feeling like "premium but warm" becomes a short brief that fixes the look and feel of your project, so your copy, design and images match.
+
+  You answer four questions. Tone register asks how formal or playful you sound. Aesthetic philosophy asks what style ideas guide the work. Audience relationship asks whether you speak as an expert, a friend or a peer. Sensory ambition asks how rich the feel should be. The skill walks you through each, names common failure patterns, and writes a structured brief that other skills can use as required input. It is different from an operational kickoff brief, which covers scope and deadlines.
+when:
+  - Your project has a vague feel and everyone interprets it differently.
+  - Different people write copy and design, and the style drifts.
+  - You are starting a brand and want a clear mood.
+  - You want one reference for an AI to follow in all outputs.
+you_give:
+  - A description of the project
+  - Your audience
+  - Words or examples you like (optional)
+  - Words or looks you want to avoid (optional)
+you_get:
+  - A tone setting
+  - A style direction
+  - A defined audience relationship
+  - A sensory goal
+  - A brief other tools can follow
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

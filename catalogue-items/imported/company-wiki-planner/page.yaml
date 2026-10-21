@@ -6,6 +6,25 @@ summary: Describe your business. Get the smallest useful process wiki set-up, wi
 job: document-work
 headline: Company wiki planner
 subhead: Describe your business. Get the smallest useful process wiki set-up, with a register of each process.
+explain: |
+  The smallest process wiki that will actually get used, with one register listing every process, its owner and how it runs. It avoids a giant document project that nobody finishes.
+
+  Claude starts from the process that hurts most to run, then asks only what is missing: which processes exist, who owns each, how they are done today and what for, such as onboarding or handover. It recommends a short setup first. Only when you ask does it produce the files, such as a CSV, a database table, a JSON schema or a Notion layout, all from the same field list so they match. It makes empty templates only and never holds employee or customer data.
+when:
+  - Key processes live in one person's head and that person may leave.
+  - New hires keep asking the same how-do-I questions.
+  - You want a place for step-by-step guides but have none.
+  - Your processes are scattered across sheets, docs and inboxes.
+you_give:
+  - Your business type and size
+  - The processes that hurt most
+  - Who owns each process
+  - The tool you prefer, such as Notion or a sheet (optional)
+you_get:
+  - A short wiki setup recommendation
+  - A process register
+  - Blank step-by-step guide templates
+  - Export files if you ask
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

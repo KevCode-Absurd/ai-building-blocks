@@ -6,6 +6,26 @@ summary: Name a role. Get its duties, time split, required skills and a fair lev
 job: hire-people
 headline: Job duties and level analyst
 subhead: Name a role. Get its duties, time split, required skills and a fair level, ready for pay and planning.
+explain: |
+  A role written down as it is actually done, with a fair level to match. Name the role. The skill plans a job analysis, choosing methods such as interviews, questionnaires and task lists, and then drafts the duties, the share of time spent on each, and the knowledge, skills and abilities needed.
+
+  It rates job complexity to suggest a level or pay band, and it helps check whether the written duties match real work. It supports overtime-exemption decisions with documented facts. The output is a clean job content record you can use for pay reviews, workforce planning and training needs, and one you can defend if someone challenges how the role was classified.
+when:
+  - Two people have the same title but do very different work.
+  - You are building levels for a new set of roles.
+  - You need to justify a pay band for a position.
+  - A job description is years old and nobody trusts it.
+you_give:
+  - The role title and department
+  - Notes from people who do the job or manage it
+  - Existing job descriptions (optional)
+  - Your level or pay structure (optional)
+you_get:
+  - A duties list with time split
+  - Required skills and knowledge
+  - A suggested job level
+  - A job analysis plan
+  - A record you can use for pay and planning
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

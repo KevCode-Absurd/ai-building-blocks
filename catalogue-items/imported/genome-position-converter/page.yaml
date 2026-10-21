@@ -6,6 +6,25 @@ summary: Give it gene positions or variants. Get them converted between conventi
 job: research-topics
 headline: Genome position converter
 subhead: Give it gene positions or variants. Get them converted between conventions, with assembly and naming mismatches caught.
+explain: |
+  Stop genomics coordinates from silently going wrong. Give it gene positions or variants, and it converts them between conventions, such as 1-based and 0-based, and flags when assemblies or chromosome names do not match.
+
+  The core idea is that a coordinate is three facts: the number, the convention and the assembly. If any is missing, the number is not safe to use. It converts with a fixed table, then checks against a reference FASTA when you have one. That also catches indels that shifted position. Scripts run on Python's standard library, with no network. The skill states what it does not cover, like liftover.
+when:
+  - A BED file and a VCF disagree by one base and you need to know why.
+  - A variant fails to match its database entry and you suspect shifting.
+  - You are mixing files from different genome builds.
+  - You need to normalise variants against a reference.
+you_give:
+  - Positions or variants to convert
+  - The convention each file uses
+  - The genome build for each file
+  - A reference FASTA (optional)
+you_get:
+  - Converted coordinates
+  - Warnings for build or contig mismatches
+  - Normalised variant records
+  - A note of what was checked
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your business. Get who it is for, who you compete with and whe
 job: understand-customers
 headline: Brand discovery researcher
 subhead: Describe your business. Get who it is for, who you compete with and where you could stand out.
+explain: |
+  Find out who your brand is for, what they need, who else is trying to meet that need, and where you could stand apart. This comes before any brief, logo or content plan.
+
+  The work starts with a scope that fits your time, from one week before a launch to six weeks for a rebrand. It audits what you already hold, such as sales calls, support tickets and reviews, since teams often know more than they think. It adds five to eight interviews if possible, maps three to eight competitors including the do-nothing option, and writes up three to five positioning territories in a discovery report.
+when:
+  - You are about to brand a new product and know little about buyers.
+  - A rebrand needs facts before any design work.
+  - You have sales calls and reviews but no one has read them together.
+  - You want to see how competitors are positioned.
+you_give:
+  - The product or organisation to brand
+  - What you already know about your audience
+  - Calls, tickets, reviews or analytics (optional)
+  - Your timeline and any constraints
+you_get:
+  - Audience findings
+  - A competitor map
+  - A category map with its conventions
+  - A discovery report with positioning territories
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

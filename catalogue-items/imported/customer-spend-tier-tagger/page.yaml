@@ -6,6 +6,25 @@ summary: Set your spend levels. Get each customer tagged Bronze, Silver, Gold or
 job: run-your-store
 headline: Customer spend tier tagger
 subhead: Set your spend levels. Get each customer tagged Bronze, Silver, Gold or Platinum from lifetime spend. Changes live customer tags.
+explain: |
+  Every customer in your store gets a Bronze, Silver, Gold or Platinum tag based on what they have spent over their lifetime. That gives you VIP groups for offers and support without a loyalty app.
+
+  The skill pulls customers and their orders, adds up lifetime spend, and places each person in a band. You set the band limits, or use the defaults of 250, 1,000 and 5,000. It runs as a preview first and shows how many customers land in each tier. Only after you approve does it write tags, and it can clear old tier tags so nobody holds two. Your AI needs access to your Shopify store.
+when:
+  - You want to send a special offer only to your biggest spenders.
+  - You need support to know which customers are VIPs at a glance.
+  - You are starting a loyalty program and have no app for it yet.
+  - Your old tier tags are out of date and need a clean reset.
+you_give:
+  - Your store address
+  - Spend limits for each tier (optional)
+  - Tag naming style (optional)
+  - Go-ahead after the preview
+you_get:
+  - Preview count of customers per tier
+  - Lifetime spend per customer
+  - Tier tags written to customer records
+  - Old tier tags removed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

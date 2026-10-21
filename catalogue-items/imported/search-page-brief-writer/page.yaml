@@ -6,6 +6,26 @@ summary: Give it a keyword and the pages that rank. Get a brief with search inte
 job: get-found-in-search
 headline: Search page brief writer
 subhead: Give it a keyword and the pages that rank. Get a brief with search intent, gaps to fill, and an outline.
+explain: |
+  A writer-ready brief for one page, built from what the top-ranking pages actually say. You give a keyword and three to five results that rank. Claude reads each one and records its headings, format and anything special, like a calculator or original data.
+
+  From that it names the search intent with evidence, such as "4 of 5 results are step-by-step guides". A coverage table marks what is table stakes, common or rare. It lists gaps, labelled as judgement. You get an outline with title options, headings and a note on what each section must answer, plus questions to answer and a meta description. It states what it cannot know, such as volume.
+when:
+  - You are about to commission an article and want the writer to start with a clear brief.
+  - You want to see what top pages cover that yours is missing.
+  - A keyword has mixed results and you need to know which intent to serve.
+  - You want a title and meta description draft that fits the real results.
+you_give:
+  - A target keyword or question
+  - Three to five URLs that rank for it
+  - A line on your site and audience
+  - Page type (optional)
+you_get:
+  - Search intent with evidence
+  - A coverage table of topics
+  - Gaps to fill
+  - An outline with titles
+  - Questions and meta description draft
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

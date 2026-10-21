@@ -6,6 +6,25 @@ summary: Give it an HR project idea. Get a charter, timeline, risk list and stat
 job: hire-people
 headline: HR project plan builder
 subhead: Give it an HR project idea. Get a charter, timeline, risk list and status report template.
+explain: |
+  A project plan for an HR change that people can follow from kickoff to review. Give it an idea such as a new HR system or a policy rollout and get a charter, a timeline, a risk list and a status report template.
+
+  It writes a charter that sets goals, scope and what is left out. It builds a milestone timeline for your length of project and a chart of who is responsible, accountable, consulted and informed across HR, IT and the business. It plans communication and lists risks with fixes. It adds scope change rules, a budget plan, phased rollout and a lessons-learned template.
+when:
+  - You were asked to run an HR system rollout and have no plan.
+  - A project is drifting and you need to define scope and owners.
+  - Leaders want a regular status update in a set format.
+  - You are rolling a program out in phases across several locations.
+you_give:
+  - The HR project idea and goal
+  - Target dates and budget
+  - People and teams involved
+  - Known risks (optional)
+you_get:
+  - A project charter
+  - A milestone timeline
+  - A responsibility chart and risk list
+  - A status report template
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

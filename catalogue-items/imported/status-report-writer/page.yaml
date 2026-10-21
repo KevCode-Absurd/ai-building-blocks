@@ -6,6 +6,27 @@ summary: Give it your project updates. Get a weekly or monthly report with statu
 job: document-work
 headline: Status report writer
 subhead: Give it your project updates. Get a weekly or monthly report with status, risks and decisions needed.
+explain: |
+  A status report you can send to leadership today, built from the rough updates you already have. It opens with a short summary, an overall green, amber or red rating, and then lays out what is done, what is in progress, what could go wrong and what you need someone to decide.
+
+  The layout is fixed so readers learn where to look. A metrics table compares target to actual with a trend arrow. Risks list the impact, the plan and the owner. A decisions table gives the deadline and your recommended answer, so the reader can reply with a yes. It ends with next-period priorities. If your project tracker or chat tools are connected, it can pull updates from them.
+when:
+  - It is Friday and your weekly update to the boss is still blank.
+  - A project is slipping and you need to flag it without sounding alarmed.
+  - You need a monthly report for stakeholders who skim.
+  - You want to ask for decisions and get clear answers back.
+you_give:
+  - Notes on what happened this period
+  - Targets and actual results
+  - Known risks and blockers
+  - Decisions you need from others
+  - The reporting period and audience
+you_get:
+  - A one-page status report
+  - An overall rating with a short summary
+  - A table of risks with owners
+  - A table of decisions needed
+  - A list of next priorities
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

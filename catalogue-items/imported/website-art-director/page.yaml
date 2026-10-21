@@ -6,6 +6,25 @@ summary: Describe your site or app screen. Get a built page with a chosen look, 
 job: build-websites
 headline: Website art director
 subhead: Describe your site or app screen. Get a built page with a chosen look, checked in a browser, not a template.
+explain: |
+  A built web page with a chosen look, checked in a real browser, not a stock template. It stops pages from all looking the same: centred headline, icon cards, soft gradient.
+
+  The skill deals out three design directions from a library drawn from 247 award-winning sites. You pick the one that fits the idea behind your subject. A script then supplies type, palette and layouts for it. After building, a browser script measures the page against strict rules with no decorative filler. You then view screenshots at three widths, score them against a rubric, fix what falls short and look again. It works for landing pages and for app screens such as dashboards.
+when:
+  - Your page looks like every other AI-made page.
+  - You are building a landing page or portfolio and want a real concept.
+  - You want a dashboard that looks designed, not default.
+  - You need a polish pass on a page before launch.
+you_give:
+  - What the site or screen is for
+  - The subject, audience and feel
+  - Your stack, such as HTML or React
+  - Brand assets or sites you admire (optional)
+you_get:
+  - A chosen design direction
+  - A built page or screen
+  - Screenshots at three widths
+  - A fix list after review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

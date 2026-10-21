@@ -6,6 +6,24 @@ summary: Get redirects that chain from one to another or share a target, so shop
 job: audit-landing-page
 headline: Redirect chain finder
 subhead: Get redirects that chain from one to another or share a target, so shoppers and search get there fast.
+explain: |
+  A list of redirects in your Shopify store that point through other redirects or share the same target, so shoppers and search engines reach the page faster. Nothing in the store is changed.
+
+  It reads every URL redirect through the Shopify Admin connection, 250 at a time. It then follows each target to see if that page is redirected again, which makes a chain from A to B to C. It also groups redirects that all point to one destination. You get a readable report or JSON. You need a Shopify store login through the CLI with read access to content. Fixing the chains is a separate step you do after reviewing the list.
+when:
+  - You moved products and suspect old redirects now loop through each other.
+  - Page speed is slow after a store migration.
+  - You want to clean up redirects before an SEO audit.
+  - Search tools report redirect chains on your site.
+you_give:
+  - Store domain
+  - Shopify CLI sign-in with content read access
+  - "Output format: readable or JSON (optional)"
+you_get:
+  - List of redirect chains
+  - Groups sharing one target
+  - Suggested direct targets
+  - Report in readable or JSON form
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

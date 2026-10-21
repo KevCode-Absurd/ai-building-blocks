@@ -6,6 +6,27 @@ summary: Give it a bug, task or idea. Get a complete Jira, Linear or GitHub tick
 job: build-software
 headline: Work ticket writer
 subhead: Give it a bug, task or idea. Get a complete Jira, Linear or GitHub ticket with fields and a clear done test.
+explain: |
+  A ticket someone can pick up and start without asking you a single question. It works in Jira, Linear or GitHub, and fills the fields your tracker needs.
+
+  Give it a spec, a bug report or a loose request. The skill picks the ticket type, then writes the title, background, scope and acceptance criteria that can be checked as done or not done. Bugs get steps to reproduce and expected versus actual results. Spikes get a decision to reach, not an open search. Epics get a goal, a metric and a kill condition. It can also audit a backlog for tickets that are not ready, and tag work for finance if you capitalise development costs.
+when:
+  - A spec needs breaking into tickets for the team.
+  - You are filing a bug that another person will fix.
+  - Developers keep asking what a ticket means.
+  - Your backlog has vague items nobody can start.
+you_give:
+  - Spec, bug or request
+  - Ticket type (optional)
+  - Your tracker's required fields (optional)
+  - Parent epic (optional)
+  - Capitalisation policy (optional)
+you_get:
+  - Complete ticket with fields
+  - Checkable acceptance criteria
+  - Bug reproduction steps
+  - Epic goal and metric
+  - Backlog readiness audit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

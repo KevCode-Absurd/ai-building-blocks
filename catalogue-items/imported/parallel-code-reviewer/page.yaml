@@ -6,6 +6,24 @@ summary: Point it at a code change. Get four reviewers working at once and one s
 job: test-and-fix-code
 headline: Parallel code reviewer
 subhead: Point it at a code change. Get four reviewers working at once and one short list of issues that matter.
+explain: |
+  One short list of code issues that matter, produced by four reviewers working at the same time on your change. Noise is filtered out before you see it.
+
+  It picks the review scope in order: files you name, then your current git changes, then a branch or commit you ask for. It reads your project notes, then sends four read-only reviewers to hunt for different problems such as behaviour regressions, security and privacy, missing tests and risky structure. The main agent then removes weak or duplicate findings, orders the rest and writes one summary. It only reviews. It never edits your files.
+when:
+  - You want a second look at a change before merging.
+  - A large diff is too long to read line by line.
+  - You want security and logic checked together.
+  - You need a review without code being modified.
+you_give:
+  - A git diff, branch, commit or file list
+  - Project notes or rules (optional)
+  - Areas of concern (optional)
+you_get:
+  - Ranked list of real issues
+  - Where each one sits in the code
+  - Why it matters
+  - No changes to your files
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

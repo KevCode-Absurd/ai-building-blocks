@@ -6,6 +6,26 @@ summary: Give it past promotions and stock. Get a promo calendar with expected s
 job: plan-supply-chain
 headline: Promotion and stock planner
 subhead: Give it past promotions and stock. Get a promo calendar with expected sales lift and the extra stock to have ready.
+explain: |
+  A promotion calendar that shows what to run and when. It shows how much extra each deal should sell and how much stock to have ready. A good promo then does not end in empty shelves or a warehouse full of leftovers.
+
+  You share past promotions, normal sales, trade spend and lead times. The skill estimates the lift for each deal type, such as price cuts, features, displays and multi-buys. It checks the return after trade costs and flags deals that only pull sales forward. Then it turns the lift into extra production and stock by location, tests it against capacity, and spaces events so they do not compete.
+when:
+  - You plan next quarter's deals with retailers and need to know which ones pay off.
+  - Last promotion sold out early and you want to size the next one properly.
+  - You need to tell production how much extra to build.
+  - You want to compare promotion types by return, not by habit.
+you_give:
+  - History of past promotions and results
+  - Baseline sales without promotion
+  - Trade spend and cost data
+  - Lead times and capacity
+  - Promotion budget and goals
+you_get:
+  - Promotion calendar
+  - Expected lift per deal
+  - Return on spend
+  - Extra stock needed by timing
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your app. Get a database pick, a schema, indexes and a safe mi
 job: build-software
 headline: Database design guide
 subhead: Describe your app. Get a database pick, a schema, indexes and a safe migration plan.
+explain: |
+  A database choice and design that fits your app, instead of a default picked out of habit. You get the reasoning, not only the code, so you can defend it later.
+
+  You describe what you are building. The skill asks about your preferences when something is unclear, then works through a checklist before any schema is drawn. It compares options such as PostgreSQL, Neon, Turso and SQLite, and ORMs such as Drizzle, Prisma and Kysely. It then covers table design and keys, relationships, which indexes to add, how to find slow queries such as N+1 patterns, and how to change the schema safely, including on serverless databases. It reads only the notes your request needs.
+when:
+  - You are starting a new app and must choose a database.
+  - You cannot decide between Drizzle and Prisma.
+  - A page is slow and you suspect missing indexes.
+  - You need to change a live schema without breaking it.
+you_give:
+  - A description of your app
+  - Your hosting setup (optional)
+  - Your team's tools (optional)
+  - Current schema (optional)
+you_get:
+  - Database and ORM recommendation
+  - Schema design
+  - Index plan
+  - Safe migration steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

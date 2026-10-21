@@ -6,6 +6,26 @@ summary: Give it your purchases and disposals. Get what to capitalise, yearly de
 job: money-and-investing
 headline: Fixed asset register keeper
 subhead: Give it your purchases and disposals. Get what to capitalise, yearly depreciation and impairment checks.
+explain: |
+  A fixed asset register that stays accurate, with clear rulings on what to capitalise, how much to depreciate each year and when an asset has lost value.
+
+  For each purchase, it decides which costs go on the balance sheet, such as price, delivery and set-up. Training and repairs are expensed. It builds the depreciation schedule from your rules for life and scrap value. Big parts like engines or roofs are depreciated on their own where needed. It tests for impairment when warning signs show up, works out the gain or loss on disposals, and writes the journal entries. Last, it rolls the register forward so it ties to the ledger.
+when:
+  - You bought equipment and are unsure whether to capitalise or expense it.
+  - You need a yearly depreciation schedule for a set of assets.
+  - An asset is idle or damaged and you suspect impairment.
+  - You sold or scrapped an asset and need the gain or loss and entries.
+you_give:
+  - List of purchases or disposals with costs and dates
+  - Capitalisation threshold and useful life rules
+  - Residual value and depreciation method (optional)
+  - Opening register balances (optional)
+you_get:
+  - Capitalise or expense ruling with reasons
+  - Depreciation schedule
+  - Impairment check
+  - Journal entries
+  - Register rollforward that ties to the ledger
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

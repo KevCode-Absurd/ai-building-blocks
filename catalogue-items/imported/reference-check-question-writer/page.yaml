@@ -6,6 +6,24 @@ summary: Give it a role. Get fair reference questions, a call script and a sheet
 job: hire-people
 headline: Reference check question writer
 subhead: Give it a role. Get fair reference questions, a call script and a sheet to record answers. Check local rules first.
+explain: |
+  A fair, consistent reference check for a role: a question set, a call script, and a sheet to record answers. Every candidate gets the same questions, so you can compare references on the same footing.
+
+  You give it the role and level. It writes questions on performance, teamwork and areas to develop. It suggests which references to ask for, such as a manager, a peer and someone who reported to them. It adds a short note to prepare the candidate, and guidance for guarded references who only confirm dates or give lukewarm answers. Local rules differ on what you may ask or share, so check them before you call. It is not legal advice.
+when:
+  - You are about to hire and need to check references this week.
+  - Reference calls feel random and you want a standard script.
+  - A reference will only confirm dates and nothing more.
+  - You need records of what was asked and answered.
+you_give:
+  - Role and level
+  - Candidate's claims to verify (optional)
+  - Your country or region (optional)
+you_get:
+  - Question set for the role
+  - Call script
+  - Answer recording sheet
+  - Guide to guarded and mixed references
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

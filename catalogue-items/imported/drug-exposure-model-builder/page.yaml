@@ -6,6 +6,25 @@ summary: Give it concentration-over-time data. Get fitted drug exposure models, 
 job: research-topics
 headline: Drug exposure model builder
 subhead: Give it concentration-over-time data. Get fitted drug exposure models, dose estimates and a clear write-up of what holds.
+explain: |
+  Concentration-over-time numbers turned into fitted drug models, exposure measures and a write-up that says what the data does and does not support. This is exploratory research work. It does not give a dose for a patient.
+
+  The skill makes you fix the basics first: which compound, what matrix, units, the exposure measure, and how to handle values below the assay limit. It then separates the structure model, the residual error and any covariates. It checks whether parameters can really be told apart, using sensitivity and multiple starts. The Python scripts need only NumPy and SciPy. They cover dose simulation, exposure-response, bioequivalence planning and interaction screening.
+when:
+  - You have concentration-time data and want fitted PK curves.
+  - You are planning a bioequivalence study and need sample sizes.
+  - You want to screen a drug interaction risk early.
+  - You must write up modelling assumptions clearly.
+you_give:
+  - Concentration-time data with units
+  - Dose history and sample times
+  - The question you want answered
+  - Assay limit and covariates (optional)
+you_get:
+  - Fitted PK or PD models
+  - AUC and other exposure measures
+  - Regimen simulations
+  - A write-up of assumptions and limits
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

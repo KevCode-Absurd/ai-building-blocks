@@ -6,6 +6,25 @@ summary: Describe the liquid handling you need. Get an Opentrons protocol that i
 job: build-software
 headline: Lab robot protocol writer
 subhead: Describe the liquid handling you need. Get an Opentrons protocol that is simulated, reviewed and ready to run.
+explain: |
+  A liquid handling protocol for an Opentrons robot that has been simulated and checked before it touches real reagents. Describe the transfers, plates, tips and modules you need. The skill writes Python Protocol API code for a Flex or OT-2, sets up the deck layout, and chooses an API level the robot actually supports.
+
+  It then runs the simulator and reads the output. Passing simulation is not treated as permission to run, so the skill lists a safety review to complete before a live run. That covers deck layout, labware, volumes and hardware limits. You need Python and the Opentrons package installed locally.
+when:
+  - You need a serial dilution or plate transfer scripted for a Flex robot.
+  - You have an OT-2 protocol that needs updating to a newer API level.
+  - You want to test a protocol in simulation before using real samples.
+  - You are adding a heater-shaker or thermocycler step to a run.
+you_give:
+  - Which robot you have, Flex or OT-2
+  - Plates, tubes and tip types
+  - The transfers and volumes
+  - Modules in use (optional)
+you_get:
+  - A Python protocol file
+  - A simulation result
+  - A deck and labware list
+  - A pre-run safety check list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

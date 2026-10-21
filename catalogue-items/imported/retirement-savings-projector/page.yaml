@@ -6,6 +6,26 @@ summary: Give it your age, savings and goals. Get a projected nest egg and the g
 job: money-and-investing
 headline: Retirement savings projector
 subhead: Give it your age, savings and goals. Get a projected nest egg and the gap to your target.
+explain: |
+  A projected retirement pot and the exact gap between it and the amount you need. You also see the monthly saving that would close that gap.
+
+  You give your age, current savings, monthly contributions, any employer match and the yearly income you want. The skill sets the target using the 4% rule: yearly spending divided by 0.04, so $60,000 a year means about $1.5 million. It then grows your savings and contributions forward month by month, using return and inflation numbers you can change. It subtracts pension or Social Security income, works out the shortfall, and solves for the contribution needed. This is a planning tool, not financial advice.
+when:
+  - You want to know if you are on track to retire at your target age.
+  - You are deciding how much extra to save each month.
+  - You are curious what retiring early would take.
+  - You want to see how a higher return or lower spending changes the answer.
+you_give:
+  - Your age and target retirement age
+  - Current savings and monthly contribution
+  - Yearly income you want in retirement
+  - Expected pension or state benefit (optional)
+  - Return and inflation assumptions (optional)
+you_get:
+  - A projected pot at retirement
+  - The target nest egg
+  - The shortfall or surplus
+  - The monthly saving needed to close the gap
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

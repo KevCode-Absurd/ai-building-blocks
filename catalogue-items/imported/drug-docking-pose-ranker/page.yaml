@@ -6,6 +6,25 @@ summary: Give it a protein and a molecule. Get predicted binding poses ranked by
 job: research-topics
 headline: Drug docking pose ranker
 subhead: Give it a protein and a molecule. Get predicted binding poses ranked by confidence, with checks on each.
+explain: |
+  Predicted ways a small molecule could sit in a protein, ranked and labelled with how far to trust them. Give it a protein and a molecule, and you get candidate binding poses with confidence scores and checks on each.
+
+  The skill runs DiffDock, a published docking model, from its official code. It sets up the exact environment the model needs, runs one pair or a batch, and can try several protein shapes. It states plainly that confidence is not a measured probability and not binding strength. Sorting a large library by score is treated as rough triage, not finding hits. You need a GPU-ready setup, and some steps are untested recipes.
+when:
+  - You want likely binding poses for one protein and ligand pair.
+  - You have a batch of molecules to dock against one target.
+  - You need a pose check before spending lab time.
+  - You want to know what the confidence score really means.
+you_give:
+  - A protein structure or sequence
+  - A ligand, such as a SMILES string
+  - A GPU environment with the DiffDock setup
+  - Alternate protein shapes (optional)
+you_get:
+  - Ranked poses with confidence scores
+  - Per-pose checks
+  - Run commands for the DiffDock setup
+  - Notes on what the scores can and cannot show
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

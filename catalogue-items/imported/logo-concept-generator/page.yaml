@@ -6,6 +6,25 @@ summary: Describe your brand. Get several logo directions, from wordmarks to sym
 job: design-work
 headline: Logo concept generator
 subhead: Describe your brand. Get several logo directions, from wordmarks to symbols, each with the reasoning and how to use it.
+explain: |
+  Six to twelve logo options for one brand, each built a different way, so you can pick a direction instead of staring at one idea. The output is material for a decision, not a finished logo.
+
+  Every option comes from a different build: a plain wordmark, a lockup, a monogram, or a letter turned into a symbol. Each one gets a short reason, a note on what it says about the brand and what it rejects, and how it should look in real uses such as signs, tiny sizes, motion or embroidery. After you choose, it refines that single direction, adjusting letter spacing, weight and small shape fixes. It assumes the name and tone are already set.
+when:
+  - Your brand has a name and tone and you need logo options to choose from.
+  - You want a monogram for a long name that must fit small spaces.
+  - You have a wordmark and want symbol ideas to sit beside it.
+  - You picked a direction and want it refined for real use.
+you_give:
+  - Your brand name and tone of voice
+  - What the brand stands for
+  - Competitors or looks to avoid (optional)
+  - Where the logo must work
+you_get:
+  - Six to twelve logo variants
+  - A reason for each variant
+  - Use notes for small, large and motion cases
+  - A refined version of your chosen pick
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

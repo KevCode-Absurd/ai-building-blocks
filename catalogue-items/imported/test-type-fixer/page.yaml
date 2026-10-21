@@ -6,6 +6,24 @@ summary: Point it at your tests. Get unsafe type casts swapped for shoehorn so t
 job: test-and-fix-code
 headline: Test type fixer
 subhead: Point it at your tests. Get unsafe type casts swapped for shoehorn so test data stays typed.
+explain: |
+  Test files full of "as" casts hide type mistakes and force you to fake every field of a big object. This skill swaps those casts for the shoehorn library, so your tests pass only the data they care about and TypeScript still checks it.
+
+  It installs the package, then works through the test files one pattern at a time. A large object with two needed fields becomes a partial. Data that is wrong on purpose, like a missing field you want to test, gets its own helper instead of a double cast. It touches test code only and never edits production files. Afterward it runs the type check to confirm nothing broke.
+when:
+  - Your tests are littered with "as unknown as" casts and you want them gone.
+  - You fake a 20-field request object just to test one field.
+  - You want test data that stays checked by TypeScript.
+  - A code review asked you to remove type assertions from tests.
+you_give:
+  - Your test files or folder
+  - Your TypeScript project
+  - Permission to install one package
+you_get:
+  - Test files with casts replaced
+  - Partial test data that still type checks
+  - A passing type check
+  - A note on any case left as is
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

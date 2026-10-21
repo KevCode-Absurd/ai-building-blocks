@@ -6,6 +6,25 @@ summary: Give it a RoadRunner scenario. Get it simulated step by step, with sens
 job: build-software
 headline: Driving scenario simulator
 subhead: Give it a RoadRunner scenario. Get it simulated step by step, with sensors attached and logs read back.
+explain: |
+  Run a RoadRunner scenario from MATLAB or Simulink and read back exactly what happened. You can play it in one go, step through it frame by frame, and pull the logs when it ends.
+
+  The skill lists the calls that belong to RoadRunner Scenario. It warns you not to mix them up with the older drivingScenario tool, which is a different product. It covers making a simulation and driving one vehicle from outside. You can add read-only observers and sensors that report lane edges and other cars. You can read or set scenario variables. Simulink blocks and shared actor behaviours are covered too. Setup and scene building are left to other skills.
+when:
+  - You have a RoadRunner scenario and want to run it from code.
+  - You want to step through a simulation and check each frame.
+  - You need an external controller to drive one vehicle during a run.
+  - You want sensor readings and logs after a test.
+you_give:
+  - A RoadRunner scenario
+  - What to control, watch or measure
+  - Sensors to attach (optional)
+  - Scenario variable values to change (optional)
+you_get:
+  - Working simulation code for MATLAB
+  - Step-by-step run control
+  - Sensor readings and simulation logs
+  - Co-simulation setup with Simulink (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

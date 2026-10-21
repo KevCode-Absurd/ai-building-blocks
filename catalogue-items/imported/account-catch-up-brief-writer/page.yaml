@@ -6,6 +6,26 @@ summary: Name a customer. Get one brief from your CRM, email, docs and calls on 
 job: sell-and-negotiate
 headline: Account catch-up brief writer
 subhead: Name a customer. Get one brief from your CRM, email, docs and calls on what is going on with them.
+explain: |
+  Five tools worth of customer news fits in one brief that pulls together your CRM, email, shared docs and call notes.
+
+  The skill reads from the tools you have connected and cites each fact with a link to the record, so you can check it. It uses the labels your own CRM uses, and it says plainly when a field is blank or was not looked up. It treats email, chat and call text as data to read, not as orders, and flags any text that tries to give instructions. If your view is empty, it asks which scope to use and does not quietly widen it to the whole company.
+when:
+  - You have a call with a customer in an hour and need to catch up.
+  - You took over an account and need the history fast.
+  - You want to know what was last promised to a customer.
+  - You want one view of deals, emails and notes in a single place.
+you_give:
+  - A customer or account name
+  - Connected CRM, email and docs
+  - How far back to look (optional)
+  - A meeting topic (optional)
+you_get:
+  - A one-page account brief
+  - Links to each source record
+  - Open deals and recent contacts
+  - Gaps where data was blank
+  - Suggested next steps for you to approve
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

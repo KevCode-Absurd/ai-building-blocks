@@ -6,6 +6,25 @@ summary: Tell it your Git problem. Get branching, commits, merges and pull reque
 job: build-software
 headline: Git workflow helper
 subhead: Tell it your Git problem. Get branching, commits, merges and pull requests handled cleanly.
+explain: |
+  Say what you want done in Git and it gets done cleanly. It starts by reading the state of your repo: current branch, uncommitted changes, recent history and remotes. Then it works from that, not from guesses.
+
+  It groups changes into small commits with short, clear messages and creates branches with a steady naming pattern. It syncs with the remote, helps you rebase or merge, and walks through conflicts by reading both sides before choosing. It can also set up commit hooks and a .gitignore, and prepare pull requests through the GitHub or GitLab command line. It works with GitFlow, GitHub Flow or trunk-based habits.
+when:
+  - You have a tangle of edits and need them split into clean commits.
+  - A merge has conflicts and you are not sure which side to keep.
+  - You want a branch naming and PR routine your team follows.
+  - You need a .gitignore and pre-commit checks added.
+you_give:
+  - Your Git problem in plain words
+  - Access to the repo
+  - Your branching model (optional)
+  - The hosting platform (optional)
+you_get:
+  - Clean, atomic commits
+  - Branches created from the right base
+  - Conflicts resolved with explanations
+  - A pull request ready to review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

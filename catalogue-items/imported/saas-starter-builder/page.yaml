@@ -6,6 +6,26 @@ summary: Describe your app. Get a Next.js project with sign-in, database, billin
 job: build-software
 headline: SaaS starter builder
 subhead: Describe your app. Get a Next.js project with sign-in, database, billing, API routes and a dashboard.
+explain: |
+  A working Next.js project for your software product with sign-in, database, payments, API routes and a dashboard already in place. You describe the app, pick your tools, and get the whole file tree.
+
+  You fill in a short form: product name, a few lines about it, sign-in service (NextAuth, Clerk or Supabase), database (Neon, Supabase or PlanetScale), payments (Stripe, Lemon Squeezy or none) and a feature list. The output follows a set layout with three areas: marketing pages with pricing, auth pages, and a dashboard with settings and billing. It adds webhook and checkout routes, shared components, and helper files for auth, database and payments. You need Node tooling, and accounts with the services you choose.
+when:
+  - You want a launch-ready base for a new web product instead of starting blank.
+  - You have chosen Stripe and need checkout and webhook routes wired up.
+  - You want a dashboard with billing and settings pages from day one.
+  - You need a pricing and marketing page in the same project.
+you_give:
+  - Product name and short description
+  - Sign-in service choice
+  - Database choice
+  - Payment provider choice
+  - List of features
+you_get:
+  - A full Next.js file tree
+  - Sign-in, billing and webhook routes
+  - Dashboard and marketing pages
+  - Shared components and helper files
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

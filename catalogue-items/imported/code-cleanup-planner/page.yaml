@@ -6,6 +6,24 @@ summary: Point it at messy code. Get the problem spots named and cleaned up with
 job: test-and-fix-code
 headline: Code cleanup planner
 subhead: Point it at messy code. Get the problem spots named and cleaned up with proven patterns.
+explain: |
+  Messy code gets a short list of named problems and a safe order for fixing them. The code ends up easier to read and change, and it still does the same thing.
+
+  It scans for long functions, deep nesting, copied logic, magic numbers, dead code and bloated parameter lists, and says where each one is and why it hurts. Each problem gets a matching move, such as extract a function, rename, simplify a condition or name a constant. The moves are put in a sequence of small steps, applied one at a time. Tests run after each step, and it writes simple tests first if none exist.
+when:
+  - A function has grown to three hundred lines and nobody wants to touch it.
+  - You inherited code with copied blocks all over.
+  - You want cleanup done without changing behavior.
+  - You need a plan to tidy a file before adding a feature.
+you_give:
+  - The code to clean up
+  - Your test command (optional)
+  - Areas to leave alone (optional)
+you_get:
+  - A list of code problems with locations
+  - A matching fix for each
+  - A safe order of steps
+  - Tests run after each change
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

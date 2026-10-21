@@ -6,6 +6,25 @@ summary: Connect your Meta ad account read-only. Get a daily check of spend, win
 job: read-ad-results
 headline: Meta ads daily checker
 subhead: Connect your Meta ad account read-only. Get a daily check of spend, winners, money wasters and tired ads.
+explain: |
+  A short daily read on your Meta ad account, so you stop digging through Ads Manager. Connect it read-only and you see what matters: spend trend, winners, ads wasting money, and creatives that are tiring out.
+
+  It runs a shell kit that pulls account data, and it can run in mock mode first to test the setup. It looks for patterns: spend moving up or down, click rate falling as people tire of an ad, cost per sale spiking when the audience runs dry. It compares results to the target cost or return you store in your brand files, and logs what it learns so repeat problems stand out. You make the calls. It needs an access token.
+when:
+  - You want a five-minute check on your ads each morning.
+  - You suspect an ad set is burning budget with no sales.
+  - Click rate has been sliding and you want to know which ads are tired.
+  - You want to see if a problem happened last month too.
+you_give:
+  - Meta ad account ID and access token
+  - Target cost per sale or return (optional)
+  - Brand files for context (optional)
+you_get:
+  - A daily spend and results summary
+  - Winning ads listed
+  - Money-wasting ads flagged
+  - Signs of creative fatigue
+  - Saved notes on repeat patterns
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

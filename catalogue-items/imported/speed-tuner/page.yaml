@@ -6,6 +6,25 @@ summary: Name what feels slow. Get the real bottleneck measured, fixed and measu
 job: test-and-fix-code
 headline: Speed tuner
 subhead: Name what feels slow. Get the real bottleneck measured, fixed and measured again.
+explain: |
+  A slow page or feature measured, fixed at the real bottleneck, then measured again to prove the gain. The skill refuses to guess. It sets a baseline first, using Lighthouse or browser tools for repeatable tests and real user data for what people actually feel.
+
+  Then it finds the true cause. For the front end it checks Core Web Vitals: largest paint under 2.5 seconds, interaction delay under 200 ms and layout shift under 0.1. For the back end it hunts for repeated database queries and slow calls. It applies one fix, verifies the result, and adds a guard so it does not slip back.
+when:
+  - Users say your site or app feels slow.
+  - Your Core Web Vitals scores are in the red.
+  - A recent change made things slower and you do not know which.
+  - A page struggles with big data sets or heavy traffic.
+you_give:
+  - What feels slow and where
+  - The code or page involved
+  - Current timings or a Lighthouse report (optional)
+you_get:
+  - A measured baseline
+  - The real bottleneck, named
+  - A targeted fix
+  - Before and after numbers
+  - A check to stop the slowdown returning
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

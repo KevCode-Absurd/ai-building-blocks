@@ -6,6 +6,24 @@ summary: Use it when someone pushes your AI to agree or sign off. Get answers th
 job: think-and-decide
 headline: Pressure-proof answer checker
 subhead: Use it when someone pushes your AI to agree or sign off. Get answers that separate evidence from pressure.
+explain: |
+  A way to keep your AI honest when someone pushes it to agree, sign off or hurry. It separates what the evidence shows from what the pressure demands.
+
+  Before replying, the AI looks for pressure patterns: forced urgency, appeals to authority, requests to certify unchecked work. If an external anti-deception tool is set up, it can call that tool, but only when you allow sharing the context, and never with private details. The answer then leads with the strongest counter-evidence, states what is unknown, and refuses to give false assurance. You get a reply you can defend later.
+when:
+  - A boss wants the AI to approve a risky plan before tomorrow.
+  - Someone claims authority to push through weak claims.
+  - You are asked to confirm work that was never tested.
+  - You want your AI to stop agreeing just to be pleasant.
+you_give:
+  - The message or request applying pressure
+  - Facts or evidence you have
+  - Permission to use an external tool (optional)
+you_get:
+  - Reply that leads with counter-evidence
+  - Clear list of what is unproven
+  - Refusal of false sign-off
+  - Honest next steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

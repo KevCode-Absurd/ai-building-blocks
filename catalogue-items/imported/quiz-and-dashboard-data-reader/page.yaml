@@ -6,6 +6,24 @@ summary: Paste your quiz results or LMS numbers. Get what they say and what to d
 job: teach-and-train
 headline: Quiz and dashboard data reader
 subhead: Paste your quiz results or LMS numbers. Get what they say and what to do in class next.
+explain: |
+  Your quiz results or LMS numbers turned into a plain statement of what is going on, and what to do in class next. It helps you avoid acting on a number that means less than it looks.
+
+  You paste the data and say what decision you face. The skill works out what was actually measured and how. It separates real patterns from noise, such as a quiz that was too easy, a low login count with a simple cause, or a few students pulling the average. It points out what the data cannot tell you. Then it turns each finding into a teaching move you can do this week, and notes what to check next.
+when:
+  - Quiz scores dropped and you do not know why.
+  - The LMS shows low engagement and you need to know if it matters.
+  - You must decide whether to reteach a topic or move on.
+  - You want to read a dashboard without being misled by it.
+you_give:
+  - Quiz results or LMS data pasted in
+  - The decision you need to make
+  - Student level or subject (optional)
+you_get:
+  - Plain-language reading of the data
+  - What the data cannot say
+  - Teaching actions for next class
+  - Follow-up checks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

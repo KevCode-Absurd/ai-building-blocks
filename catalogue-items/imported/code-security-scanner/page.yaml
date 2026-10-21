@@ -6,6 +6,24 @@ summary: Point it at your source code. Get security flaws found with static tool
 job: secure-code
 headline: Code security scanner
 subhead: Point it at your source code. Get security flaws found with static tools and rules you can add to CI.
+explain: |
+  Security flaws found in your source code without running the app, with a clean list of real problems and rules you can add to CI so they stay fixed.
+
+  It checks which languages you use, then picks the right scanners: Semgrep for patterns across languages, CodeQL for deeper checks, Bandit for Python and ESLint security plugins for JavaScript. It runs them with the right rule sets, then sorts true problems from false alarms, so you do not wade through noise. The results cover issues like SQL injection, cross-site scripting, hardcoded secrets and weak crypto. Finally it shows how to run the scan on every pull request.
+when:
+  - You want to catch injection bugs before release.
+  - You suspect secrets are hardcoded in the repo.
+  - Your scanner output is too noisy to use.
+  - You need security checks added to your CI pipeline.
+you_give:
+  - Your source code repository
+  - Existing scanner settings (optional)
+  - Where you run CI (optional)
+you_get:
+  - Scan results with false alarms removed
+  - Flaws sorted by seriousness
+  - Config for your scan tools
+  - A CI step to run on every change
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

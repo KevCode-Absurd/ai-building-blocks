@@ -6,6 +6,25 @@ summary: Point it at your React app. Get unit, integration and end-to-end tests 
 job: test-and-fix-code
 headline: React test writer
 subhead: Point it at your React app. Get unit, integration and end-to-end tests for the parts that lack them.
+explain: |
+  Tests for the parts of your React app that have none: unit tests for components, integration tests, and end-to-end tests for key routes. You also learn where your coverage falls short.
+
+  A scanner reads your components and writes Jest and React Testing Library test files with the render and interaction cases laid out. A coverage analyser reads your Jest report and shows files under your threshold, such as 80 percent. A third tool scaffolds Playwright tests for each Next.js route. The stubs give you a base to fill with real assertions. You need Python for the scripts and Node for running the tests.
+when:
+  - Your React app has little test coverage and you need a start.
+  - You want end-to-end tests for every page route.
+  - A coverage report is full of numbers and you need the gaps.
+  - You are about to refactor and need a safety net.
+you_give:
+  - Components folder
+  - Jest coverage report (optional)
+  - Coverage target
+  - Node and Python installed
+you_get:
+  - Jest test files for components
+  - Playwright end-to-end tests
+  - Coverage gap list
+  - Next steps to fill in assertions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

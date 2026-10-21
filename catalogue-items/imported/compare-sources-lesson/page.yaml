@@ -6,6 +6,25 @@ summary: Give it two or more accounts. Get a lesson series that teaches learners
 job: teach-and-train
 headline: Compare history sources lesson builder
 subhead: Give it two or more accounts. Get a lesson series that teaches learners to find agreement, conflict and gaps.
+explain: |
+  A short lesson series that teaches students to compare accounts of the same event, find where they agree and clash, and notice what none of them says. This is the skill historians use to decide what likely happened.
+
+  You give Claude the topic and your class level. It builds on single-source skills first, since students must already know who wrote each document and why. Then it adds tools for side by side comparison, such as a worksheet for what each source says, where they differ and what the gap may mean. Tasks use real puzzles, like the same author contradicting himself in two accounts. It draws on research showing even college students rarely compare documents unprompted.
+when:
+  - Your class reads each source alone and never checks it against another.
+  - You are teaching a topic with competing accounts, such as an event with two sides.
+  - Students say two sources disagree but cannot say why.
+  - You need a few lessons that build a habit, not a one-off.
+you_give:
+  - Your historical topic or question
+  - Year group and current skill level
+  - The accounts you want to use (optional)
+  - Number of lessons (optional)
+you_get:
+  - A lesson sequence
+  - A comparison worksheet
+  - Questions on agreement, conflict and gaps
+  - Teacher notes on common mistakes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

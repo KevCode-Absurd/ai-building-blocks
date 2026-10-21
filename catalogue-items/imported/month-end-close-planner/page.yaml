@@ -6,6 +6,27 @@ summary: Say what must be done to close the books. Get a dated task list with ow
 job: track-numbers
 headline: Month-end close planner
 subhead: Say what must be done to close the books. Get a dated task list with owners and blockers.
+explain: |
+  A dated close plan for your books with an owner on every task and the blockers listed up front. It shows the longest chain of tasks, which is what sets your real close time.
+
+  It starts by profiling your close: how long it takes now, your target, your systems and how many entities. It then sequences the work on a five-day pattern: ledger cut-off, accruals and prepaids, reconciliations, consolidation and tax, then review and sign-off. Rules stop wasted work, such as no review of numbers that are not reconciled yet. You get the critical path and the changes that would shorten it, such as automating bank feeds.
+when:
+  - Your close runs late every month and you do not know why.
+  - You must cut close time by two days.
+  - Intercompany confirmations keep arriving last.
+  - You are taking over a close and need a clean schedule.
+you_give:
+  - Current close length and your target
+  - The list of recurring close tasks
+  - Owners and durations
+  - Systems and entities in scope
+  - Known problem areas (optional)
+you_get:
+  - A dated close calendar
+  - Task owners and dependencies
+  - The critical path
+  - A blocker list
+  - Ideas to shorten the close
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe the task to automate. Get an Apify Actor project with inputs, 
 job: build-software
 headline: Apify Actor builder
 subhead: Describe the task to automate. Get an Apify Actor project with inputs, outputs and deploy steps. Needs a paid Apify account.
+explain: |
+  A ready Apify Actor project for a task you want to automate, such as scraping a site or processing data, with its inputs, outputs and deploy steps in place. You need an Apify account, which is paid.
+
+  The skill checks that the Apify command line tool is installed and signed in, and asks you to supply a token safely. It then picks a template, defines the JSON input the Actor accepts, writes the logic, and saves results to a dataset or store. It fills in the Actor settings file, including a note on which AI tool wrote it, and shows how to run it locally and push it to Apify. Actors are small cloud programs that do one job.
+when:
+  - You want a scraper that runs in the cloud on a schedule.
+  - You need a repeatable task others can run with simple inputs.
+  - You are not sure which Apify template fits your job.
+  - Your Actor project fails at setup or login.
+you_give:
+  - The task to automate
+  - Input options the user should set
+  - Output format you want
+  - Apify account and token
+you_get:
+  - A complete Actor project
+  - Input and output definitions
+  - Run and test commands
+  - Deploy steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

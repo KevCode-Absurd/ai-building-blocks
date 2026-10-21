@@ -6,6 +6,26 @@ summary: Give it your stock lengths and cut list. Get cutting patterns that use 
 job: plan-supply-chain
 headline: Rod and pipe cutting planner
 subhead: Give it your stock lengths and cut list. Get cutting patterns that use the fewest pieces and waste the least.
+explain: |
+  A cutting plan that tells you how to slice each rod, pipe or beam so you buy fewer lengths and throw away less offcut. Give it your stock lengths and the pieces you need.
+
+  It first asks about the job: stock sizes, cost, saw width lost per cut, minimum useful offcut and how complex patterns may be. Then it picks the right problem type, such as one stock length, several lengths, reused leftovers or setup costs. It builds cutting patterns and solves them, to a true best answer or a fast close one for big orders. The result lists each pattern, how many times to use it and the waste.
+when:
+  - You must cut 6 m pipes into many shorter pieces and want the least waste.
+  - You have leftover offcuts and want to use them before buying new stock.
+  - Your saw loses material on each cut and the plan has to count it.
+  - A big order makes hand planning slow and costly.
+you_give:
+  - Stock lengths and cost per piece
+  - List of needed lengths and quantities
+  - Saw cut width (optional)
+  - Minimum usable offcut (optional)
+  - Leftover pieces on hand (optional)
+you_get:
+  - A set of cutting patterns
+  - How many of each stock piece to buy
+  - Waste per pattern and in total
+  - A plan you can hand to the saw operator
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

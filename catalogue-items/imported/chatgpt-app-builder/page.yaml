@@ -6,6 +6,26 @@ summary: Describe the tool you want inside ChatGPT. Get a working Apps SDK proje
 job: connect-tools
 headline: ChatGPT app builder
 subhead: Describe the tool you want inside ChatGPT. Get a working Apps SDK project with its server and screen.
+explain: |
+  A working starter project for a tool that runs inside ChatGPT, with its server and its on-screen panel. You describe what the app should do, and you get code that follows the current Apps SDK instead of guesses from old examples.
+
+  It starts by reading the current official docs. Then it sorts your idea into a type of app, plans each tool with names, inputs and outputs, and picks an official example to adapt or a small fallback to start from. It writes the server, the panel and the setup steps for local testing. A final check compares the repo against a minimum working checklist. You need Node, plus access to the OpenAI docs through a tool or the web.
+when:
+  - You want your service to appear as an app inside ChatGPT.
+  - You are not sure which of the official examples to start from.
+  - You need a tool plan with clear names and inputs before coding.
+  - You want to test the app locally and then submit it.
+you_give:
+  - What your app should do
+  - The data or service it connects to
+  - Whether it needs a visual panel
+  - Your hosting plan (optional)
+you_get:
+  - An app type and repo layout
+  - A tool plan with inputs and outputs
+  - A server and panel scaffold
+  - Setup steps for local testing
+  - A validation report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

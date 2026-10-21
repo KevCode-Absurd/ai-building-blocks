@@ -6,6 +6,25 @@ summary: Pick a file and a score. Get an agent that edits, measures and keeps on
 job: set-up-ai
 headline: Metric-driven file improver
 subhead: Pick a file and a score. Get an agent that edits, measures and keeps only changes that raise the score.
+explain: |
+  A file that gets better while you sleep, because an agent tries changes, measures each one and keeps only those that raise your score. Give it one file and one way to score it, and it runs dozens of small experiments instead of one guess.
+
+  You set it up once with the file, the test that produces a number, and how often to run. In each round the agent edits the file, runs the fixed test, and compares the score. Changes that help stay and those that do not are dropped. You can run one round, loop on a timer, check results, or resume a paused run. It needs Python to run.
+when:
+  - You want a script to run faster and have a benchmark to prove it.
+  - You want headlines or prompts improved overnight against a score.
+  - You have a metric to move from one value to another.
+  - You want a record of every try, not just the final version.
+you_give:
+  - The file to improve
+  - A command that gives a score
+  - Run frequency and a stopping point
+  - Your project folder to run it in
+you_get:
+  - A better version of the file
+  - A log of every experiment and score
+  - A status dashboard
+  - The ability to pause and resume
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

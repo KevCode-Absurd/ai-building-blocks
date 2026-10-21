@@ -6,6 +6,25 @@ summary: Give it your product and prices. Get a tier and anchor layout that make
 job: set-prices
 headline: Price presentation planner
 subhead: Give it your product and prices. Get a tier and anchor layout that makes value clear without tricks.
+explain: |
+  A layout for your prices, tiers and anchors that makes value easy to see without tricks. Give it your product and prices and get a plan that is clear and fair.
+
+  The skill starts with who the buyer is, what you want them to choose, and your ethical limits. It sets the reference point people will compare against, then designs the tiers and the anchor price. It tests ideas like a high-priced option beside the plan you want chosen, and a split of cost into smaller units. Each idea comes with the reason it works and a way to test it. Nothing misleading is used.
+when:
+  - Visitors view your pricing page but pick the cheapest plan.
+  - You want to introduce a third tier.
+  - You need to show a large price as good value.
+  - You want to test an anchor before changing live prices.
+you_give:
+  - Product and current prices
+  - Target buyer
+  - Goal, such as plan selection or upsell
+  - Ethical limits or market norms (optional)
+you_get:
+  - Tier and anchor layout
+  - Reference point to set
+  - Reason each choice works
+  - Test ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

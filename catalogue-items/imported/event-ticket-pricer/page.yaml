@@ -6,6 +6,26 @@ summary: Tell it about your class, workshop or event. Get ticket prices, early-b
 job: set-prices
 headline: Event ticket pricer
 subhead: Tell it about your class, workshop or event. Get ticket prices, early-bird terms and how to show seats and dates.
+explain: |
+  Ticket prices and offer rules for a class, workshop or dated event, so you sell more seats without making the people who miss out resent you.
+
+  It applies five rules built for events with dates and limited seats. Round the price, so 150 beats 149. Show sold-out dates, but only up to about 30 percent of them. Use a dated deadline instead of a loud seat counter. For events three or more weeks away, offer a free bonus rather than an early-bird discount. Use real social proof like others also booked. It ends with a table of each choice and the reason.
+when:
+  - You are pricing a workshop or class for the first time.
+  - You want to run an early-bird offer and are unsure how.
+  - Your event page shows a seat counter and sales feel flat.
+  - You have several dates and want to decide how to show the full ones.
+you_give:
+  - Event type and planned ticket price
+  - Dates and seats per date
+  - Which dates are full
+  - Time until the first date
+  - Bonus item you could add (optional)
+you_get:
+  - Final ticket price
+  - Rules for showing full dates
+  - Early offer terms with deadline
+  - Wording ideas for scarcity and proof
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

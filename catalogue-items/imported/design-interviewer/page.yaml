@@ -6,6 +6,24 @@ summary: Give it a plan. Get tough questions until it holds, plus a glossary and
 job: think-and-decide
 headline: Design interviewer
 subhead: Give it a plan. Get tough questions until it holds, plus a glossary and decision records.
+explain: |
+  Your plan, questioned until it holds. Give it a design or proposal and it asks hard questions one at a time, branch by branch, until the weak parts show. You finish with a shared glossary and written records of the decisions you made.
+
+  It combines two methods. The grilling part pushes on every choice: why this, what if that fails, what are you assuming. The domain-modelling part pins down the words your project uses, so each term means one thing and everyone uses it the same way. As answers settle, it records them as short decision notes. You end up with a plan that has been argued with, not just written down.
+when:
+  - You have a plan that sounds good but has never been challenged.
+  - Your team uses the same word for different things.
+  - You want your reasoning written down before you build.
+  - You need to prepare for tough questions from a reviewer.
+you_give:
+  - Your plan, design or proposal
+  - "Context: who it is for and why"
+  - Existing terms or glossary (optional)
+you_get:
+  - Sequence of tough questions
+  - Shared glossary of terms
+  - Decision records
+  - List of open problems
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

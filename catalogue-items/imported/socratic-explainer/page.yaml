@@ -6,6 +6,24 @@ summary: Name a topic. Get it taught through questions, so you reach the idea yo
 job: think-and-decide
 headline: Socratic explainer
 subhead: Name a topic. Get it taught through questions, so you reach the idea yourself and remember it.
+explain: |
+  A topic you understand because you worked it out, not because someone lectured you. Name what you want to understand, and the skill teaches it in the style of Socrates, through a short back and forth of questions and small thought experiments.
+
+  It starts with curiosity, often by questioning an assumption or admitting it does not know. Then it builds the idea one small step at a time, using analogies and asking a reflective question now and then. It avoids textbook definitions, long lists of facts and heavy jargon. It reads like a conversation, not documentation. It fits ideas that need real understanding. For a quick fact, install step or command, ask for a direct answer instead.
+when:
+  - A concept makes sense when read but you cannot explain it back.
+  - You want to understand why something works, not just what it is.
+  - Textbook explanations leave you lost.
+  - You want to explore an abstract or philosophical idea.
+you_give:
+  - The topic you want to understand
+  - What you already think about it (optional)
+  - Your level or background (optional)
+you_get:
+  - A guided conversation that builds the idea
+  - Analogies and small thought experiments
+  - Questions that make you think
+  - A clearer sense of how the idea fits together
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

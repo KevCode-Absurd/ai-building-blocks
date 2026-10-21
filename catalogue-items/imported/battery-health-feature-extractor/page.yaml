@@ -6,6 +6,25 @@ summary: Give it battery test data. Get health and wear features ready for life 
 job: build-software
 headline: Battery health feature extractor
 subhead: Give it battery test data. Get health and wear features ready for life prediction.
+explain: |
+  Health and wear numbers pulled out of battery test data, ready for models that estimate state of health or predict remaining life. Give it cycling files and it produces more than 165 features, from simple statistics per charge or discharge segment to differential curves that show electrode aging.
+
+  These curves are incremental capacity (dQ/dV), differential voltage (dV/dQ) and differential temperature (dT/dV), and the skill also pulls peak features from them. It uses five functions from MATLAB's Predictive Maintenance Toolbox, handles segmenting the data, and can process many files in a batch. It asks whether to stop or continue before moving to the next stage. You need MATLAB and that toolbox.
+when:
+  - You have months of cycling data and need inputs for a life prediction model.
+  - You want to see capacity fade through differential curves.
+  - You must process fifty test files the same way.
+  - You need statistics from a partial charge segment.
+you_give:
+  - Battery cycling or test data
+  - Which cycling phase to use
+  - Batch of files (optional)
+  - Your prediction goal, such as SOH or RUL
+you_get:
+  - A table of battery features
+  - Differential curves
+  - Peak features from the curves
+  - A batch pipeline for many files
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

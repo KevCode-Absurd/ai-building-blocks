@@ -6,6 +6,25 @@ summary: Name your top rivals. Get a side-by-side of their channels, prices and 
 job: study-competitors
 headline: Rival store comparer
 subhead: Name your top rivals. Get a side-by-side of their channels, prices and messages, plus the gaps you can win.
+explain: |
+  A side-by-side look at your top rivals: where they sell, what they charge and how they pitch their products, with the gaps you can step into. You can see where each rival is strong and where it is thin.
+
+  You name your main rivals and your market. The skill maps their presence on marketplaces, their own stores and social shops. It then compares positioning, messaging, pricing and product range, and how they win customers. Engagement and loyalty signs are set next to each other, and the gaps are listed. The output suggests where you could pull ahead, such as a channel they ignore or a promise they do not make. Findings depend on public information.
+when:
+  - A new rival appeared on Amazon and you want to know how they sell.
+  - You are deciding which sales channel to enter.
+  - You need to check if your prices are in line.
+  - You want to find a message no one else is using.
+you_give:
+  - Your top competitors
+  - Your products and market
+  - Channels you care about
+  - Your own pricing and positioning (optional)
+you_get:
+  - Channel presence for each rival
+  - Pricing and message comparison
+  - Strengths and weak spots
+  - Gaps you can win
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

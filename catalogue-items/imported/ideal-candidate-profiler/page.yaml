@@ -6,6 +6,25 @@ summary: "Give it a job description. Get a profile of who fits: their motives, w
 job: hire-people
 headline: Ideal candidate profiler
 subhead: "Give it a job description. Get a profile of who fits: their motives, where they spend time, what moves them."
+explain: |
+  A picture of the person you want to hire that goes beyond the job description. Give it a job description and get a profile of who fits, what moves them, where they spend time and how to reach them.
+
+  A job description lists what the company needs. A profile describes the person. The skill fills in career path, years of experience, education patterns and kinds of companies they came from. It adds their main and related skills, tools and what they are learning now. It then covers what attracts them to a move and what puts them off. Last it lists where they gather online and offline, and what message would catch their attention, for use in sourcing outreach.
+when:
+  - Your job post gets many applicants and none are right.
+  - You are a recruiter hunting for a hard-to-find role.
+  - You need outreach that speaks to what the person cares about.
+  - You want to know which communities to search for a role.
+you_give:
+  - The job description
+  - Your company type and culture
+  - A great past hire as an example (optional)
+  - Pay and location limits (optional)
+you_get:
+  - A candidate persona
+  - Motivators and turn-offs
+  - Places they spend time
+  - Outreach angles to try
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

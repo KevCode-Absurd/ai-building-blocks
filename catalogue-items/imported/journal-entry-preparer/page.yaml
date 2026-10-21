@@ -6,6 +6,25 @@ summary: Name an accrual or adjustment. Get the debits, credits and support read
 job: track-numbers
 headline: Journal entry preparer
 subhead: Name an accrual or adjustment. Get the debits, credits and support ready for review. An accountant should check it.
+explain: |
+  Month-end adjustment entries with the numbers, the support and the review notes. Pick the type: accounts payable accruals, fixed asset depreciation, prepaid amortization, payroll accruals or revenue recognition, and give the period. If your accounting system is connected, it pulls the trial balance, subledger detail and last period's entries. If not, it asks for the data.
+
+  It calculates each entry, builds the debit and credit lines, attaches the supporting schedule and writes a note for the reviewer. Prior-period entries serve as a reference so amounts are consistent. This helps your workflow but is not financial advice, and a qualified accountant should review every entry before posting.
+when:
+  - You are at month end and need accrual entries ready.
+  - Depreciation or prepaid amounts must be booked for the quarter.
+  - You want your support schedules to look the same each month.
+  - A reviewer asks how you got an adjustment number.
+you_give:
+  - Entry type, such as accrual, prepaid or payroll
+  - The accounting period
+  - Trial balance or subledger data
+  - Last period's entries (optional)
+you_get:
+  - Entries with debits and credits
+  - Supporting calculation schedules
+  - Notes for the reviewer
+  - A comparison with last period
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

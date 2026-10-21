@@ -6,6 +6,26 @@ summary: Say how many codes you need and what they give. Get unique single-use d
 job: make-offer
 headline: Promo code batch maker
 subhead: Say how many codes you need and what they give. Get unique single-use discount codes made live in your store.
+explain: |
+  Hundreds of unique discount codes, created live in your Shopify store in one run. Each code works once, so you can hand one to each person and know who used it.
+
+  You give the store, a prefix such as GIVEAWAY, how many codes you need (up to 1000 per run), the discount type and value, and a validity window. Each code becomes its own discount, so you can track or cancel any one that leaks. It defaults to a dry run that previews the codes first, then creates them once you confirm. You need a signed-in Shopify CLI session with discount write access.
+when:
+  - You are running an influencer giveaway and every winner needs their own code.
+  - A partner will share codes with their audience and you want to track each one.
+  - You need 500 single-use codes for an event and do not want to type them.
+  - You want to preview the codes before anything goes live.
+you_give:
+  - Store address
+  - Code prefix
+  - Number of codes
+  - Discount type and value
+  - Usage limit and start and end dates (optional)
+you_get:
+  - Preview of codes before creation
+  - Unique codes made in your store
+  - List of codes to share
+  - Report of any that failed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

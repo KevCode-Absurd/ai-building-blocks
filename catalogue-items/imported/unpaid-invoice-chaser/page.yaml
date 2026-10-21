@@ -6,6 +6,25 @@ summary: Give it your unpaid invoices. Get a reminder for each, gentle or firm t
 job: track-numbers
 headline: Unpaid invoice chaser
 subhead: Give it your unpaid invoices. Get a reminder for each, gentle or firm to suit the customer. Nothing sends alone.
+explain: |
+  A reminder for every overdue invoice, written to suit the customer, and nothing is sent until you say so. Good payers get a gentle nudge. Repeat late payers get a firm one.
+
+  The skill pulls your overdue list from your accounting tool, such as Xero, QuickBooks, MYOB, NetSuite or Zoho Books. It checks recent payments in PayPal, Stripe or Airwallex so you do not chase someone who just paid. It scores each customer as a good payer, occasionally late or repeat late, then drafts matching emails, with a pay link where one exists. You see a summary table and the drafts, then reply to approve. It needs those tools connected, and a mail connector for drafts.
+when:
+  - You want to know who owes you money right now.
+  - You dread writing the same reminder email again.
+  - You want firm wording for a repeat late payer and soft wording for a good client.
+  - You need to avoid chasing invoices that were just paid.
+you_give:
+  - Access to your accounting tool
+  - Payment tools such as PayPal or Stripe (optional)
+  - Your mail choice, Gmail or Microsoft 365
+  - Your approval before anything is sent
+you_get:
+  - A table of overdue invoices
+  - A payment history score per customer
+  - Tone-matched reminder drafts
+  - Drafts queued for your approval
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

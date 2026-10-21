@@ -6,6 +6,26 @@ summary: Point it at an MCP server you run. Get a checklist of fixes for transpo
 job: secure-code
 headline: MCP server hardener
 subhead: Point it at an MCP server you run. Get a checklist of fixes for transport, auth, access and logging.
+explain: |
+  A checklist of fixes that locks down an MCP server you run. It covers the connection, who may sign in, what each user may do and what gets logged.
+
+  The skill starts with a threat model for MCP servers. Then it works through each layer. For the connection it gives sample TLS setups, including an Nginx proxy, mutual TLS between agent and server and how to create a client certificate. For sign-in it covers OAuth 2.1 and key handling, then access control per tool, input checks and audit logging.
+when:
+  - You run an MCP server and plan to expose it beyond your own laptop.
+  - Your agents connect to the server with no encryption.
+  - You need per-user access to tools, not one shared key.
+  - A security team asked what protects your MCP server.
+you_give:
+  - Your server setup and transport
+  - How users sign in today
+  - The tools and data it exposes
+  - Hosting details (optional)
+you_get:
+  - A prioritised fix checklist
+  - TLS and mTLS sample configs
+  - Sign-in and key advice
+  - Access rules per tool
+  - Logging suggestions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it an article. Get a cover image with a type, colours and mood tha
 job: make-images
 headline: Article cover maker
 subhead: Give it an article. Get a cover image with a type, colours and mood that fit the piece.
+explain: |
+  A cover image for your article whose look, colours and mood fit the piece. Give it the article and it designs the image around five choices and an image tool draws it.
+
+  The five choices are the type of cover, the colour palette, the drawing style, whether text appears, and the mood. The skill has 11 palettes and 7 styles to combine. It reads your article, suggests a mix, and asks you to confirm or change it. You can pick a wide cinema shape, a 16 by 9 widescreen or a square. It needs an image tool to do the drawing, and it asks questions through your AI's own prompt tool or as a numbered list.
+when:
+  - Your blog post has no image and you need one fast.
+  - You want covers that look consistent across a series.
+  - You need a square image for social and a wide one for the site.
+  - You are unsure which colours and mood suit the topic.
+you_give:
+  - The article text
+  - Where the cover will appear
+  - Preferred shape
+  - Style or colour wishes (optional)
+you_get:
+  - A cover image sized for your use
+  - A palette and style that fit
+  - Optional title text on the image
+  - The prompt, so you can redo it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

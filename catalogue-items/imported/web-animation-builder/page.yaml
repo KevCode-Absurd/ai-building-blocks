@@ -6,6 +6,25 @@ summary: Describe the motion. Get staggered, timed and SVG animations built with
 job: build-websites
 headline: Web animation builder
 subhead: Describe the motion. Get staggered, timed and SVG animations built with Anime.js.
+explain: |
+  Smooth, timed animations for your page, written with the Anime.js library. Think headings that slide in one by one, cards that fade in as a grid, or an SVG line that draws itself.
+
+  You describe the motion you want and where it happens. The skill picks the targets, sets the properties and chooses easing, including spring and custom curves. It builds timelines so several effects run in order or overlap, and uses stagger to offset items in a list. It also covers SVG path drawing and shape morphing. It checks which version of the library you have, since the code differs between versions. You need a web project where you can add JavaScript.
+when:
+  - You want your landing page to feel alive when it loads.
+  - A grid of cards should appear one after another.
+  - You want a logo or line drawing to animate on screen.
+  - CSS transitions are too limited for what you have in mind.
+you_give:
+  - A description of the motion you want
+  - The page or elements to animate
+  - Your Anime.js version, or permission to install it
+  - Timing or mood notes (optional)
+you_get:
+  - Working animation code
+  - A timeline with the right order
+  - Easing and stagger settings
+  - Notes for getting it into your page
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your product and its rivals. Get the best market to compete in
 job: plan-strategy
 headline: Product positioning planner
 subhead: Describe your product and its rivals. Get the best market to compete in and a clear line on why you win.
+explain: |
+  The market you should compete in and one clear line on why you win there. It stops you from being compared in the wrong category.
+
+  Claude follows April Dunford's positioning steps. It lists what customers would do without you, then names what you do that they cannot, and who cares most about that. It adds jobs-to-be-done discovery, a Moore-style positioning statement and Neumeier's Onliness Test. Research on competitors runs in two waves before the work is written up as a positioning document, a map of alternatives and a market category choice.
+when:
+  - Customers compare you to the wrong competitors.
+  - You are launching and need a clear market category.
+  - Your pitch sounds like everyone else's.
+  - You are refreshing positioning after your product changed.
+you_give:
+  - Your product and what it does
+  - Your current customers or target buyers
+  - Known competitors or alternatives
+  - Your best customer stories (optional)
+you_get:
+  - A positioning document
+  - A positioning statement
+  - A map of competitive alternatives
+  - A recommended market category
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

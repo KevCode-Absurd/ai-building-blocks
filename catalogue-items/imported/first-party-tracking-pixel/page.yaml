@@ -6,6 +6,27 @@ summary: Answer a few questions about your site. Get a tracking script and datab
 job: track-numbers
 headline: First-party tracking pixel builder
 subhead: Answer a few questions about your site. Get a tracking script and database that keep your visit data in your own hands.
+explain: |
+  Your site gets its own tracking script, a collector that receives the events, and a Postgres database you control. Visit data, page clicks, campaign tags and conversions stay in your hands instead of a third party's.
+
+  Before building anything, it asks one set of questions: which platforms you already use, where you host, and how you handle consent. It saves your answers to a config file and shows it back for approval. Then it builds the pixel, the endpoint and the tables for raw clickstream, an identity graph and conversion events. It does not replace ad-platform pixels, and it skips mobile apps. You need hosting and a database account.
+when:
+  - You want to own your analytics data instead of sending it all to GA4.
+  - You need campaign tags and click IDs saved with each visit.
+  - You want to link anonymous visits to known customers in your own database.
+  - You need tracking that respects consent choices.
+you_give:
+  - Platforms and hosting you already use
+  - Your website address
+  - Consent and privacy rules you follow
+  - Events you want to record
+  - Existing analytics tools (optional)
+you_get:
+  - Tracking script for your site
+  - Event collector endpoint
+  - Postgres tables for visits, identities and conversions
+  - Config file listing your choices
+  - Setup steps for your hosting
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

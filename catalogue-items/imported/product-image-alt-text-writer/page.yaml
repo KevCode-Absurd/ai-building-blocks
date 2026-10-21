@@ -6,6 +6,25 @@ summary: Point it at your product images. Get alt text set on each, so AI knows 
 job: build-websites
 headline: Product image alt text writer
 subhead: Point it at your product images. Get alt text set on each, so AI knows what they show. Changes live files.
+explain: |
+  Clear alt text on every product image, so AI tools know what each one shows. Shopping agents cannot see pixels. They read the alt text to judge color, material and style, and a file name like IMG_2931 tells them nothing.
+
+  Claude finds product images with blank or low-value alt text. For each, it writes a short, specific line covering what the product is, its color and material, and how it is shown. You review the lines before anything is saved. The change updates live files, so you need an authenticated Shopify CLI session with product and file write access.
+when:
+  - Your product images have no alt text.
+  - Alt text on your store is just file names.
+  - You want visual searches like "red linen midi dress" to find your items.
+  - You are making your store more accessible for screen readers.
+you_give:
+  - Your store domain
+  - Which products or images to cover
+  - Style notes for how you describe products (optional)
+  - Approval before the changes are saved
+you_get:
+  - A list of images missing good alt text
+  - A short description for each image
+  - Alt text saved to your store after approval
+  - A summary of how many were updated
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

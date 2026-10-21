@@ -6,6 +6,25 @@ summary: Get every gift message and special instruction from your orders in one 
 job: run-your-store
 headline: Order note collector
 subhead: Get every gift message and special instruction from your orders in one table for your packing team.
+explain: |
+  Every gift message, engraving request and special instruction from recent orders, collected into one table for your packing team. Nothing gets missed because it was buried in an order screen.
+
+  The skill reads orders from a window you choose, one day by default. For each order it pulls the customer note and the custom fields on each item, such as personalisation text. You can limit it to chosen field names like gift_message or engraving, and show only orders that have notes. It pages through large days of orders automatically. It reads only and never changes anything, so it is safe to run every morning. Needs a signed-in Shopify CLI session with order read access.
+when:
+  - You run a daily pick and pack and need to see special requests.
+  - Gift messages must be printed with the right order.
+  - Engraved items need the exact text checked.
+  - A busy sale week has too many orders to scan by hand.
+you_give:
+  - Store domain
+  - Days to look back
+  - Field names to pull (optional)
+  - Only orders with notes (optional)
+you_get:
+  - A table of notes by order
+  - Gift messages and personalisation text
+  - Item-level instructions
+  - Readable or JSON output
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

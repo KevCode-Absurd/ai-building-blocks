@@ -6,6 +6,25 @@ summary: Connect your sales and marketing data. Get a plain read on what is work
 job: read-ad-results
 headline: Growth health checker
 subhead: Connect your sales and marketing data. Get a plain read on what is working and three actions for this week.
+explain: |
+  One page that says whether your growth is working and what to do about it this week. Connect your sales and marketing sources, or upload exports, and it pulls everything at once and builds five views, such as channel trend and funnel conversion, each given a status.
+
+  It can read from HubSpot, Stripe, PayPal, Square, Shopify, QuickBooks, TikTok Ads, Mailchimp, email and public reviews. If a source is missing, it notes that and moves on. With none connected, files like a CRM export or ads CSV are enough. Cutoffs for each status come from a threshold file. The finish is a plain read of what is happening and three actions.
+when:
+  - You check three dashboards each week and still do not know the story.
+  - You want a Monday summary of what is working.
+  - Leads are up but sales are flat and you do not know why.
+  - You need to decide where to put next week's effort.
+you_give:
+  - Connected sales and marketing tools or exports
+  - The week or month to review
+  - Your goals (optional)
+  - Last period's figures (optional)
+you_get:
+  - A one-page growth read
+  - Five views with status
+  - Biggest drop-off in your funnel
+  - Three actions for this week
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

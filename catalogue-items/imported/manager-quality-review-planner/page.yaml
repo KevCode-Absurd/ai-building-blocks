@@ -6,6 +6,26 @@ summary: Give it your management team. Get skill standards, a 360 feedback form 
 job: hire-people
 headline: Manager quality review planner
 subhead: Give it your management team. Get skill standards, a 360 feedback form and a plan to support managers who struggle.
+explain: |
+  A plan to measure how well your managers manage, and to help the ones who struggle. It links management quality to team health and people leaving.
+
+  You describe your management team and its levels. The skill writes clear standards for each level, a 360 feedback form with upward questions that surface real issues, and a way to link scores to engagement and attrition data. It then plans support for managers who fall short, with coaching steps and a path for those who do not improve. It adds onboarding for new managers, peer groups and a report format for HR and leaders. It ships with ready prompts you can adapt to your company.
+when:
+  - Several teams have high turnover and you suspect the manager is the cause.
+  - You need competencies for team leads, managers and directors.
+  - You want upward feedback that people will answer honestly.
+  - You must plan what happens when a manager does not improve.
+you_give:
+  - Your management levels and headcount
+  - Engagement or attrition data (optional)
+  - Your company values
+  - Past feedback methods (optional)
+you_get:
+  - Manager standards by level
+  - A 360 feedback form
+  - A support and intervention plan
+  - A manager onboarding outline
+  - A leadership report layout
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Point it at code that works but is hard to read. Get a simpler version 
 job: test-and-fix-code
 headline: Code simplifier
 subhead: Point it at code that works but is hard to read. Get a simpler version that behaves the same.
+explain: |
+  Code that works but is hard to read becomes simpler and behaves exactly the same. The test is whether a new teammate would understand the new version faster.
+
+  Shorter is not the goal. It looks for deep nesting, long functions, unclear names and duplication, then makes small changes: flatter conditions, clearer names, merged repeats. It does this after the feature works and tests pass, never before you understand the code. It skips code that is already clean or where the simpler version would be measurably slower. Tests run after changes to confirm nothing moved.
+when:
+  - A feature works but the code feels heavy.
+  - A reviewer flagged deeply nested logic.
+  - A merge left duplicate logic across files.
+  - Code written in a hurry needs tidying before others read it.
+you_give:
+  - The code to simplify
+  - Tests that prove it still works (optional)
+  - Any speed limits to respect (optional)
+you_get:
+  - A simpler version of the code
+  - A list of what changed and why
+  - Confirmation behavior is unchanged
+  - Places left alone on purpose
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

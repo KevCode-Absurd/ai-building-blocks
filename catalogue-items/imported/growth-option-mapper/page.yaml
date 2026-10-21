@@ -6,6 +6,26 @@ summary: Describe your business. Get four growth paths mapped, from selling more
 job: plan-strategy
 headline: Growth option mapper
 subhead: Describe your business. Get four growth paths mapped, from selling more to new markets, with risks.
+explain: |
+  Four growth paths for your business, each with ideas, a risk level and a rough timeline, laid out side by side so you can pick where to put your effort. This uses the Ansoff Matrix, a two by two grid that crosses your products with your markets.
+
+  The four boxes are: sell more of what you have to the people you already serve, sell the same thing to new people or places, build something new for current customers, and build something new for new customers. For each one you get specific moves, the risks, how long it usually takes, and what you would need to be good at. It ends with a ranking and a first step.
+when:
+  - You have grown as far as your current offer allows and need to choose the next direction.
+  - You are weighing a new country, a new customer group or a new product and want the risks side by side.
+  - You need a simple growth framework to explain your plan to a partner or a board.
+  - Your sales are flat and you want to see which growth path is least risky first.
+you_give:
+  - What you sell now and who buys it
+  - Current sales and market share, if you know them
+  - Your growth target and timeframe
+  - What you are good at and what limits you
+  - Competitor notes (optional)
+you_get:
+  - A four box growth grid for your business
+  - Specific moves for each box
+  - A risk level and timeline for each path
+  - A ranked recommendation with a first step
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

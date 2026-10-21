@@ -6,6 +6,25 @@ summary: "The full kit: tell it your channel and goal. Get an audit, ideas, scri
 job: grow-social
 headline: YouTube channel growth kit
 subhead: "The full kit: tell it your channel and goal. Get an audit, ideas, scripts, thumbnails, SEO and a calendar."
+explain: |
+  One front door to a full set of YouTube growth tools. Tell it your niche, your size and your goal, and it sends you to the right one: audit, ideas, hooks, scripts, thumbnails, search, a calendar, Shorts, metrics, repurposing, money, competitors or upload details.
+
+  Before any of that it asks three things: what your channel is about, whether you have under 1K, 1K to 10K, 10K to 100K or over 100K subscribers, and whether your main goal is growth, money, authority or engagement. It sorts your channel into one of nine types and loads a matching template. If your request spans several jobs, such as planning and scripting, it runs them in order and passes each result to the next.
+when:
+  - You are new to YouTube and want one place that covers the whole process.
+  - You need a plan, a script and a thumbnail brief for the same video.
+  - You want a content calendar that fits your channel size.
+  - You are unsure which part of your channel to fix first.
+you_give:
+  - Your channel niche in specific terms
+  - Your subscriber range
+  - Your main goal
+  - Your channel link (optional)
+you_get:
+  - A channel type and matching template
+  - Output from the right growth tool for your question
+  - Chained results across tools when needed
+  - A clear next step
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it a story or idea. Get a LinkedIn post, carousel script or poll t
 job: grow-social
 headline: LinkedIn post writer
 subhead: Give it a story or idea. Get a LinkedIn post, carousel script or poll that you post yourself.
+explain: |
+  A LinkedIn post, carousel script or poll you can post yourself, built from your own story or idea. It also checks drafts you already wrote.
+
+  Give it a story, how-to, opinion, or an article or talk to repurpose. It drafts the post so a sentence finishes before the mobile fold, puts links in the first comment, and keeps real formatting rather than fake bold text. It adds picture descriptions and video captions. It never makes up a number, a client or a quote. If you ask it to review a draft, it points to weak hooks and bait lines. You read every line before it goes out.
+when:
+  - You have a story from work and want it shaped into a post.
+  - You want to turn a talk or article into several posts.
+  - You want a verdict on whether your opening line works.
+  - You need a carousel script or a poll.
+you_give:
+  - Your story, idea or source text
+  - Your goal for the post
+  - Your voice or a writing sample (optional)
+  - Real facts you can verify
+you_get:
+  - A drafted post, carousel script or poll
+  - A hook review
+  - Fixes for formatting and accessibility
+  - Picture and video text
+  - A first comment for links
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

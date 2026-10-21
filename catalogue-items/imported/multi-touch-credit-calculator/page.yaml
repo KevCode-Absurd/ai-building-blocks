@@ -6,6 +6,26 @@ summary: Give it your touches and sales. Get credit split by first, last, linear
 job: track-numbers
 headline: Multi-touch credit calculator
 subhead: Give it your touches and sales. Get credit split by first, last, linear or decay rules, plus cost per sale.
+explain: |
+  Credit for each sale split across the ads and visits that came before it, using first-touch, last-touch, linear, position-based or time-decay rules. Then you see cost per sale by channel.
+
+  The skill writes BigQuery SQL. You declare the keys that link touches to buyers, the currency, time zone, date range and how far back to look. One query builds a ledger that shows every conversion under all five models. It also reports coverage, so sales with no matching touch are not hidden. A second step adds spend and works out cost per sale. It states that these are rules for splitting credit, not proof of what caused the sale.
+when:
+  - Last-click gives all credit to one channel and you doubt it.
+  - You want to compare five credit rules on the same data.
+  - You need cost per sale by channel for a budget meeting.
+  - Some sales have no tracked touch and you need to see how many.
+you_give:
+  - Touch history, such as ad clicks and visits
+  - Sales or conversion records
+  - Ad spend by channel
+  - Time zone, date range and lookback days
+  - A BigQuery project
+you_get:
+  - A credit ledger for five models
+  - A coverage report
+  - Cost per sale by channel
+  - A note on what the numbers can and cannot say
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

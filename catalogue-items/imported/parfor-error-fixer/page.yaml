@@ -6,6 +6,24 @@ summary: Paste a failing parfor loop. Get the cause of the error and a fixed loo
 job: test-and-fix-code
 headline: Parfor error fixer
 subhead: Paste a failing parfor loop. Get the cause of the error and a fixed loop that runs in parallel.
+explain: |
+  A parfor loop that runs, with the exact reason the old one failed. Paste the loop or the error, and it uses MATLAB's own code checker rather than guessing the rules.
+
+  Parfor sorts each variable in the loop as sliced, reduction, broadcast or temporary, and mistakes cause errors like unable to classify. AI models often misremember these rules, so the skill runs the code analyser first and trusts that. Then it explains which variable broke the rule and rewrites the loop. It also helps convert a normal for loop into parfor. It does not tune speed. You need MATLAB.
+when:
+  - MATLAB says it cannot classify a variable in your parfor.
+  - You want to turn a slow for loop into a parallel one.
+  - A sliced or reduction variable behaves oddly.
+  - You are reviewing a script that uses parfor and want it checked.
+you_give:
+  - The parfor loop or whole .m file
+  - The error text (optional)
+  - MATLAB access
+you_get:
+  - Plain reason for the error
+  - Code checker findings
+  - Fixed loop
+  - Notes on variable types
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

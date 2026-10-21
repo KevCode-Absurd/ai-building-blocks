@@ -6,6 +6,24 @@ summary: Pick one of ten themes or ask for a new one. Get your slides, docs or p
 job: design-work
 headline: Slide and page styler
 subhead: Pick one of ten themes or ask for a new one. Get your slides, docs or page restyled to match.
+explain: |
+  Slides, docs or a web page that look designed, in one consistent style. You pick from ten ready-made themes, or ask for a new one made for your topic, and the skill restyles your work to match.
+
+  Each theme sets a colour palette with exact hex codes and a pair of fonts for headings and body text. The themes include Ocean Depths, Sunset Boulevard, Forest Canopy, Modern Minimalist, Golden Hour, Arctic Frost, Desert Rose and Tech Innovation. First you see a showcase file, then you choose, then you confirm, and only then does it apply the theme. Your content stays the same. Only colours and type change.
+when:
+  - Your slide deck looks plain and you want it to look finished.
+  - You want your report and your landing page to share one look.
+  - You are unsure about colours and want to see options first.
+  - You need a custom theme for a specific audience.
+you_give:
+  - The slides, doc or page to style
+  - A theme choice, or a description of the mood you want
+  - Brand colours (optional)
+you_get:
+  - A visual showcase of ten themes
+  - Your file restyled in the chosen theme
+  - Exact colours and fonts used
+  - A custom theme if none fit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

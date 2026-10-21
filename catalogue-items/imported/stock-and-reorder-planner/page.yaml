@@ -6,6 +6,27 @@ summary: Give it your stock and sales numbers. Get safety stock, reorder points,
 job: run-your-store
 headline: Stock and reorder planner
 subhead: Give it your stock and sales numbers. Get safety stock, reorder points, an ABC ranking and fulfillment cost checks.
+explain: |
+  Warehouse numbers you can act on: how much safety stock to hold, when to reorder, which items deserve the most attention, and whether your fulfilment costs are in line. No account or key is needed.
+
+  You describe your setup, such as self-fulfilment, Amazon FBA or FBM, Walmart, a 3PL, Shopify fulfilment or dropshipping. It then runs an ABC ranking so your best sellers get tight control, calculates safety stock and reorder points from demand and lead time, and checks storage, pick and pack costs against what is normal. For FBA it looks at inventory health scores and aged stock fees. For a 3PL it points out fees worth negotiating.
+when:
+  - Your top sellers keep running out while slow movers fill the shelves.
+  - Amazon warned you about excess inventory or storage limits.
+  - Your 3PL bill feels high and you want a benchmark.
+  - You must decide which products to send to FBA and which to ship yourself.
+you_give:
+  - Product list with sales per month
+  - Lead times from suppliers
+  - Current stock levels
+  - Your fulfilment model
+  - Monthly fulfilment or storage costs (optional)
+you_get:
+  - Safety stock and reorder points per item
+  - An ABC ranking of products
+  - Storage and fulfilment cost checks
+  - A list of items to cut or shift
+  - Negotiation points for your 3PL
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

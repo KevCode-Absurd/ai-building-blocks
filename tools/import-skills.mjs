@@ -180,6 +180,9 @@ let written = 0;
 if (WRITE) for (const r of batch) {
   if (r.flags.length) { console.log(`not written, fix first: ${r.rel}: ${r.flags.join("; ")}`); continue; }
   const to = path.join(OUT, r.slug);
+  // Page text we wrote by hand (explain, when, you_give, you_get) survives a re-import; the map wins only where it sets the field.
+  const oldPage = fs.existsSync(path.join(to, "page.yaml")) ? YAML.parse(fs.readFileSync(path.join(to, "page.yaml"), "utf8")) ?? {} : {};
+  const kept = Object.fromEntries(["explain", "when", "you_give", "you_get"].filter((f) => oldPage[f] != null).map((f) => [f, oldPage[f]]));
   fs.rmSync(to, { recursive: true, force: true });
   copyDir(path.join(FROM, r.rel), to);
   if (r.lic.file.startsWith("..")) fs.copyFileSync(path.join(FROM, r.rel, r.lic.file), path.join(to, path.basename(r.lic.file)));
@@ -207,6 +210,7 @@ if (WRITE) for (const r of batch) {
     thinking: r.m.thinking ?? "medium", thinking_why: r.m.thinking_why ?? "It follows a set method with a few checks.",
     new_slug: r.slug, name: r.name, summary: r.summary, job: r.m.task ?? "set-up-ai",
     headline: r.name, subhead: r.m.subhead ?? r.summary,
+    ...kept,
     ...(r.m.when ? { when: r.m.when } : {}),
     how_to_use: [
       "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill.",

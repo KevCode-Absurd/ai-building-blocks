@@ -6,6 +6,26 @@ summary: Give it your products and shelf sizes. Get a shelf layout that gives yo
 job: plan-supply-chain
 headline: Shelf layout planner
 subhead: Give it your products and shelf sizes. Get a shelf layout that gives your best sellers the best space.
+explain: |
+  A shelf layout that puts your best sellers in the best spots and gives each product the right amount of space. You list your products with sizes, sales rates and margins, plus your shelf or fixture sizes.
+
+  It starts by asking about store type, traffic flow and goals: sales, profit or availability. Then it applies space rules. Fast sellers get more facings at eye level, which gives roughly 40 percent of sales, with chest level about 30 percent, waist 20 and floor 10. High margin items get prime spots, impulse items go to end caps and checkout, and destination items can sit at the back. More space has diminishing returns, so facings are capped by demand.
+when:
+  - You are resetting a category and need to decide who gets eye level.
+  - Some shelves are always empty and others overstocked.
+  - You want to place impulse items where they will sell.
+  - You need a layout that balances sales against restocking labour.
+you_give:
+  - Product list with sizes
+  - Sales and margin by product
+  - Shelf and fixture dimensions
+  - Store type and goals
+  - Restocking limits (optional)
+you_get:
+  - Facings per product
+  - A shelf by shelf placement
+  - Cross merchandising groups
+  - Reasons for each placement
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

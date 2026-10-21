@@ -6,6 +6,26 @@ summary: Describe your idea. Get name options, positioning angles, mood directio
 job: brand-file
 headline: Brand direction brainstormer
 subhead: Describe your idea. Get name options, positioning angles, mood directions and a story, narrowed to one direction.
+explain: |
+  Narrow a fuzzy brand idea down to one direction you can brief a designer on. You finish with a positioning, a short list of name finalists, mood directions and a story shape.
+
+  The work runs in four stages, spreading out first and then focusing. First it makes three to five positioning territories and names what each rejects. Then you pick one or two. Next come 30 to 50 name candidates across several approaches, cut to eight to twelve that pass a six-point check. After that it makes two to four mood directions and two to three story shapes, then helps you choose.
+when:
+  - You have a business idea and no name or look yet.
+  - You want several brand directions to compare.
+  - You need name options that survive a quality check.
+  - A designer needs a clear mood to work from.
+you_give:
+  - Your product or category
+  - Your rough audience
+  - Why the brand exists
+  - Constraints, such as a parent brand
+  - How many directions you want (optional)
+you_get:
+  - Three to five positioning territories
+  - Eight to twelve name finalists
+  - Two to four mood directions
+  - Two to three story shapes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

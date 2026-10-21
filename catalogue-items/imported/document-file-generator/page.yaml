@@ -6,6 +6,25 @@ summary: Describe the slides, report, sheet or PDF. Get a new PPTX, DOCX, XLSX o
 job: work-with-files
 headline: Document file generator
 subhead: Describe the slides, report, sheet or PDF. Get a new PPTX, DOCX, XLSX or PDF file built from a JSON spec.
+explain: |
+  A new PowerPoint, Word, Excel or PDF file built from a plain description, with no template work by hand. It only creates files and does not edit existing ones.
+
+  You describe the slides, report, sheet or invoice. The skill turns that into a JSON layout spec, then runs it through the matching PaperJSX package: one for presentations, one for Word, one for spreadsheets with charts, and one for PDFs. That means the result is a real file you can open and share. You install the right npm package first, so it needs Node and a place to run code. It suits reports, decks and invoices that follow a set shape.
+when:
+  - You need a slide deck made from data without opening PowerPoint.
+  - A monthly report must come out as a Word file each time.
+  - You want an Excel sheet with charts generated from a list.
+  - You need a PDF invoice built the same way every time.
+you_give:
+  - A description of the document and its content
+  - "The format: PPTX, DOCX, XLSX or PDF"
+  - Data or text to include
+  - Node installed to run the package
+you_get:
+  - A new file in the format you chose
+  - The JSON spec behind it
+  - Install commands for the package
+  - A file you can open and share
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

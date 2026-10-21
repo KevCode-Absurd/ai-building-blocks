@@ -6,6 +6,25 @@ summary: Give it a contract. Get key clauses, duties and risks rated by severity
 job: check-contracts
 headline: Contract risk reviewer
 subhead: Give it a contract. Get key clauses, duties and risks rated by severity. Not legal advice.
+explain: |
+  A structured risk report on a contract: the key clauses, who owes what, and every risk rated by how severe it is. You see the dangerous parts first instead of finding them on page twelve.
+
+  The skill reads the full text and pulls out the main clauses, such as payment, term, ending the deal, liability and ownership. It lists duties for each party with dates. Each risk gets a severity rating and a short reason, plus a suggested change. It works with software agreements, freelance contracts and similar deals. It stays inside safe limits, so it does not say you should sign or not. It is not legal advice, so a lawyer should confirm anything serious.
+when:
+  - A freelance client sent a contract and you want to know the risks.
+  - You are about to renew a software agreement with auto-renewal terms.
+  - You need a list of obligations and dates from a signed deal.
+  - You want a second pair of eyes before paying for legal review.
+you_give:
+  - The contract text
+  - Which party you are
+  - Specific worries (optional)
+  - Deal value (optional)
+you_get:
+  - Key clause list
+  - Duties and dates for each side
+  - Risks rated by severity
+  - Suggested changes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it competitor links. Get a profile of each with site, pricing and 
 job: study-competitors
 headline: Competitor profile writer
 subhead: Give it competitor links. Get a profile of each with site, pricing and positioning. Collects data from websites.
+explain: |
+  A structured profile for each competitor, built from their own site and public data, with facts kept separate from opinion. Every claim traces back to a source page, a review or an SEO figure.
+
+  You give Claude a list of competitor links, your product, and how deep to go: a quick scan or a full profile. It crawls each site for positioning, pricing, features and content. If an SEO data tool is connected, such as DataForSEO, Ahrefs or Semrush, it adds search and traffic numbers. If not, it falls back to plain page fetching. It keeps what was observed, what was reported and what was inferred visibly apart, and it reads your product notes first if you have them.
+when:
+  - You have ten competitor links and no time to read each site.
+  - A new rival appears and you need a profile today.
+  - You are starting a positioning project and need the field mapped.
+  - You want pricing and positioning side by side for every rival.
+you_give:
+  - Competitor website links
+  - Your product description
+  - "Depth: quick or deep"
+  - Focus areas (optional)
+you_get:
+  - A profile for each competitor
+  - Positioning and pricing notes
+  - Search and traffic data when available
+  - Sources for every claim
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

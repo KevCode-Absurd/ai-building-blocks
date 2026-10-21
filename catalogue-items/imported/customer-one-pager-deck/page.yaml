@@ -6,6 +6,25 @@ summary: Give it your account notes. Get a customer deck, one-pager or leave-beh
 job: sell-and-negotiate
 headline: Customer one-pager and deck builder
 subhead: Give it your account notes. Get a customer deck, one-pager or leave-behind with no made-up numbers.
+explain: |
+  A sales asset for a specific customer, built only from facts you can back up. Give it your account notes and approved material and you get a deck, one-pager or leave-behind with no invented numbers.
+
+  Claims come from your approved documents, your CRM or what you provide. Anything else is marked UNVERIFIED. Customer figures cite where they came from, or appear as a bracketed placeholder for you to fill. Quotes, logos and customer names are never made up. Before it builds, it checks whether the asset is for internal or customer eyes, so roadmap or battlecard content cannot slip into a customer piece. Call notes and emails can add personal detail.
+when:
+  - You are sending a follow-up after a discovery call.
+  - A prospect wants a one-page summary to share with their team.
+  - You need a short deck tailored to one account.
+  - You want a leave-behind that uses their own words.
+you_give:
+  - The account name and context
+  - Approved product and pricing material
+  - Call notes or transcripts (optional)
+  - Asset type and audience
+you_get:
+  - A finished deck, one-pager or FAQ
+  - Source notes on each claim
+  - Bracketed placeholders for missing numbers
+  - A list of UNVERIFIED claims to check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

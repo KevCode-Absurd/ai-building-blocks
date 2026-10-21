@@ -6,6 +6,26 @@ summary: Give it your product reviews. Get the pain points, praise and feature r
 job: run-your-store
 headline: Review insight finder
 subhead: Give it your product reviews. Get the pain points, praise and feature requests, ranked by how often they come up.
+explain: |
+  Your customer reviews boiled down to what people complain about, what they love and what they ask for, ranked by how often each comes up. You see the biggest fixes at the top of the list.
+
+  Paste or upload reviews from any platform. The skill scores the overall mood, separates praise and pain points into themes, and counts how often each theme appears. It filters out reviews that look fake or empty, and watches for change over time. Requests for features are pulled out and ranked, with gaps no one fills noted as chances. If you add competitor reviews, it compares what customers say about each.
+when:
+  - You have hundreds of reviews and no time to read them.
+  - You are deciding which product fix to make next.
+  - You want customer wording for your product page.
+  - You want to compare your reviews with a rival's.
+you_give:
+  - Customer reviews, pasted or as a file
+  - The product name
+  - Competitor reviews (optional)
+  - The platform they come from (optional)
+you_get:
+  - Pain points ranked by how often they appear
+  - Praise themes to use in marketing
+  - Feature requests ranked
+  - Mood over time
+  - A comparison with competitors if provided
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

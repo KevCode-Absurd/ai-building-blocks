@@ -6,6 +6,25 @@ summary: Describe the age groups. Get a shared task where older and younger lear
 job: teach-and-train
 headline: Mixed-age group task designer
 subhead: Describe the age groups. Get a shared task where older and younger learners both gain.
+explain: |
+  A shared task where older and younger pupils both learn something, not one group helping the other. Give the learning goal and the age range and you get a plan with roles, steps and tutor training.
+
+  The design rule is that both groups must gain. The task needs input from each age group that the other cannot supply, so work is shared, not handed down. A gap of two to three years works best. The older pupils are taught how to tutor: ask before telling, wait, and check understanding. The interaction is structured, because loose instructions to work together often leave the older child doing everything. You get timing, materials and what to watch for.
+when:
+  - You are pairing Year 2 with Year 4 for a fractions session.
+  - You want a buddy-class activity that stretches the older children.
+  - Your older pupils tend to take over when paired with younger ones.
+  - You need a regular cross-year routine, not a one-off.
+you_give:
+  - The learning objective
+  - The age groups paired
+  - Session length and group sizes (optional)
+  - Available materials (optional)
+you_get:
+  - A task plan with roles for each age group
+  - Steps and timings
+  - A short tutor training script
+  - Signs to watch for during the session
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

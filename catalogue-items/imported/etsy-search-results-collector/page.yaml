@@ -6,6 +6,25 @@ summary: Give it a keyword. Get Etsy listings with rank, price and shop. Collect
 job: run-your-store
 headline: Etsy search results collector
 subhead: Give it a keyword. Get Etsy listings with rank, price and shop. Collects data from websites.
+explain: |
+  A table of what is ranking on Etsy for a keyword right now: position, price, rating, badges, ad or organic, and the shop behind each listing. It is a quick view of your market without scrolling pages by hand.
+
+  You name a keyword or category and how many pages to pull. The skill runs a ready-made scraper on Apify through an MCP connection and returns each row. It needs an Apify account and token, which you add yourself, and it asks before spending credits on large page counts. Filters like best seller, star seller, free shipping and ship-to country are optional. The rows are then ready to compare and to feed into shop checks.
+when:
+  - You want to see who owns page one for a keyword.
+  - You are pricing a new product against what is already selling.
+  - You need a list of competitor shops to study.
+  - You want to separate paid ads from organic results.
+you_give:
+  - Keyword, phrase or category
+  - Number of pages to pull
+  - Apify account and token
+  - Filters such as free shipping (optional)
+you_get:
+  - Listings with rank and price
+  - Rating and badge data
+  - Ad versus organic marker
+  - Shop names for each slot
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

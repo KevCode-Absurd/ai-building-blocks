@@ -6,6 +6,24 @@ summary: Give it your vendor list and uptime data. Get scorecards, missed-SLA cr
 job: organise-work
 headline: Vendor scorecard builder
 subhead: Give it your vendor list and uptime data. Get scorecards, missed-SLA credits and keep, review or replace calls.
+explain: |
+  A scorecard for every software and service vendor you pay, with a clear keep, review or replace call, so you walk into renewal already knowing what to do. 
+  You give a vendor list, contract values and uptime or incident data. The skill scores each vendor on several dimensions, tuned to your industry. It compares real uptime against the promised target and flags any breach where you are owed a service credit. It sorts third-party risk across four types and shows where your spend overlaps, which matters after a merger. A heavy vendor, like your login provider, gets its own deeper review. This is for ongoing performance checks, not for picking a first vendor or drafting contracts.
+when:
+  - You pay for 100 or more software tools and have never reviewed them together.
+  - A key vendor keeps going down and you want to put a number on it.
+  - A renewal is 60 to 90 days away and you need a firm position.
+  - You want to claim credits for missed uptime promises.
+you_give:
+  - A list of vendors with cost and renewal dates
+  - Uptime and incident records
+  - Contract uptime targets (optional)
+  - Your industry
+you_get:
+  - A score for every vendor
+  - SLA breaches with credit flags
+  - A risk rating by type
+  - A keep, review or replace recommendation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

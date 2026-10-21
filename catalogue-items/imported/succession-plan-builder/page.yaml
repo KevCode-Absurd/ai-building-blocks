@@ -6,6 +6,26 @@ summary: Give it your key roles. Get a coverage map, a possible successors list 
 job: hire-people
 headline: Succession plan builder
 subhead: Give it your key roles. Get a coverage map, a possible successors list and development plans. The final calls stay yours.
+explain: |
+  A succession plan that shows which key roles have no cover, who might step in, and what each person needs to be ready. People decisions stay with you.
+
+  You give your critical roles and some detail on current talent. The skill maps each role by how much damage a vacancy would do, assesses the pipeline behind it, and prepares material for a talent review with a 9-box grid. It drafts development plans to move successors along and a short board report. It warns that a name in a box is not a ready successor, and that succession is not the same as replacement planning. Readiness calls are yours.
+when:
+  - A senior person is leaving and no one knows who covers the role.
+  - You prepare for a talent review meeting.
+  - The board asks how ready your leadership bench is.
+  - You want development plans for high-potential staff.
+you_give:
+  - A list of key roles
+  - Current holders and possible successors
+  - Performance and potential notes (optional)
+  - Company size and industry
+you_get:
+  - A map of critical roles and risk
+  - A pipeline view per role
+  - Talent review prep with a 9-box
+  - Development plans for successors
+  - A short board summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

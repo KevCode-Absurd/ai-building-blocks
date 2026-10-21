@@ -6,6 +6,26 @@ summary: Give it study data that is safe to share. Get evidence profiles, cohort
 job: research-topics
 headline: Clinical research evidence packager
 subhead: Give it study data that is safe to share. Get evidence profiles, cohort and survival summaries and privacy notes.
+explain: |
+  Research documents for a clinical study, built from data that is safe to share. You get evidence profiles, cohort tables, survival analysis plans and privacy notes, all marked as research use only.
+
+  It works only on grouped numbers with small counts hidden, and never on a single patient. It will not diagnose, advise treatment, work out doses or support live care. Within that line it writes statements of intended use and limits, table shells for cohorts, plans for survival analysis, summaries of how well a model or biomarker performs, and checklists to rate the strength of evidence. It also adds notes on privacy and governance. Local scripts check the files for structure. Python is needed, and no network access.
+when:
+  - You are writing a study protocol and need clear cohort table shells.
+  - You want to rate the strength of evidence for a research question.
+  - You need a plan for survival analysis before touching data.
+  - You must record privacy and governance notes for a study.
+you_give:
+  - Aggregate study data with small cells hidden
+  - The research question
+  - Study design details
+  - Existing protocol notes (optional)
+you_get:
+  - Evidence profile checklist
+  - Cohort table shells
+  - A survival analysis plan review
+  - Model performance summary
+  - Privacy and governance notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

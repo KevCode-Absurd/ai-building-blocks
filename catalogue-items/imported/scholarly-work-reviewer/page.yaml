@@ -6,6 +6,25 @@ summary: Give it a paper or thesis. Get a fair review of what is strong, what is
 job: research-topics
 headline: Scholarly work reviewer
 subhead: Give it a paper or thesis. Get a fair review of what is strong, what is weak and what to fix next.
+explain: |
+  Honest feedback on a paper, thesis, protocol or research idea, so you know what is strong, what is weak and what to fix next. The review is written in words first, with evidence for each point.
+
+  Each comment ties to a place in your work, so you can check it. Optional scores only show how your evidence matches a rubric set before the review, and never decide anything alone. It can also audit a low-stakes assessment process for rater consistency, uncertainty, fairness and privacy. It refuses to rank people or support hiring, tenure, admissions, funding or awards, and gives no accept or publish verdict. Optional scripts use Python.
+when:
+  - You wrote a draft and want a tough but fair read before submitting.
+  - Your thesis chapter feels weak and you cannot say where.
+  - You review a protocol and want comments tied to evidence.
+  - Your group uses a rubric and you want to check it is applied fairly.
+you_give:
+  - The paper, draft or idea
+  - The field and your target readers
+  - A rubric you want applied (optional)
+  - Specific worries (optional)
+you_get:
+  - Strengths and weaknesses with evidence
+  - Next steps to improve the work
+  - Optional rubric notes with limits stated
+  - A check of an assessment process (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

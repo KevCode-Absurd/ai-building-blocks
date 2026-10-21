@@ -6,6 +6,25 @@ summary: Name the fact you need and the database. Get it retrieved the same way 
 job: research-topics
 headline: Public database fact finder
 subhead: Name the fact you need and the database. Get it retrieved the same way every time, with source and date.
+explain: |
+  A fact pulled from a named public database, with the source, query and date attached. Anyone can repeat the lookup and get the same answer.
+
+  Instead of answering from memory, the skill sets a retrieval contract: the entity, identifiers, filters, fields wanted and whether you need one record or the full set. It picks the authoritative database from a catalogue of about 80 science, regulatory and financial sources, reads the notes for that source, and makes limited, rate-aware calls. It pages through all results when completeness matters, checks counts, and logs the exact request. It asks when a missing detail would change the answer.
+when:
+  - You need a gene, drug, trial or regulatory record, and a guess will not do.
+  - A report needs a figure with a citation you can show.
+  - You must pull every record matching a filter, not just the first page.
+  - A colleague needs to repeat your search next month.
+you_give:
+  - The fact or records you need
+  - The database, if you have a preferred one
+  - Identifiers and filters such as species or date range
+  - Fields to return (optional)
+you_get:
+  - Retrieved records
+  - Source, query and date
+  - Record count check
+  - A log someone else can rerun
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

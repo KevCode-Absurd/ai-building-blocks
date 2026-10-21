@@ -6,6 +6,26 @@ summary: Describe your product's first minutes. Get a step-by-step setup wizard 
 job: build-product
 headline: First-run wizard designer
 subhead: Describe your product's first minutes. Get a step-by-step setup wizard with skip options, rewards and drop-off tracking.
+explain: |
+  A setup wizard plan that gets new users to their first real result without a long tour. It decides step by step what each screen earns and where people can skip.
+
+  First it asks whether a wizard is worth building at all, since some products reach value in one action and do better with small hints. If a wizard fits, it names the moment the user first sees value, then works backwards. Each step asks for one thing and shows what the user gains. It sets skip rules, rewards for finishing, and what to measure so you can see where people drop off. It warns against dumping every feature into twelve steps.
+when:
+  - Your new users sign up and then stall before they get any value.
+  - Your current onboarding has low completion and you do not know why.
+  - You are building a first-run flow and need to decide what goes in it.
+  - You need to choose which setup tasks are required and which can wait.
+you_give:
+  - What your product does
+  - Steps a new user must do before value shows up
+  - Who signs up (role, skill level)
+  - Current completion or drop-off numbers (optional)
+you_get:
+  - Decision on whether you need a wizard
+  - Step-by-step wizard outline
+  - Skip and return rules
+  - Reward and progress cues
+  - Drop-off measures to track
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

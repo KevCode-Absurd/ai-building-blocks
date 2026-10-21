@@ -6,6 +6,25 @@ summary: Describe a task to automate. Get the right Zapier or Make setup, built 
 job: connect-tools
 headline: No-code automation planner
 subhead: Describe a task to automate. Get the right Zapier or Make setup, built to hold up, and when to switch to code.
+explain: |
+  The right Zapier or Make setup for a task, built so it keeps working, with a warning for when it is time to move to code.
+
+  The skill starts by choosing the tool. Zapier has more app connections and is simpler. Make costs less per step and handles branching better with its visual builder. It then shows how to build the flow: a trigger, filters to stop unwanted runs, clear names and tests on real sample data. It points out where no-code breaks down, such as high volume, complex logic or slow steps. Examples show a Gmail to Todoist flow in both tools. A longer guide holds the full steps and checks.
+when:
+  - You want an email with an attachment to create a task automatically.
+  - You cannot decide between Zapier and Make.
+  - Your automation runs too often or sends duplicates.
+  - You wonder if your growing zap should become real code.
+you_give:
+  - The task you want to automate
+  - The apps involved
+  - How often it runs and how much data
+  - Budget (optional)
+you_get:
+  - A tool recommendation with reasons
+  - A trigger, filter and action layout
+  - Test and naming tips
+  - A sign for when to switch to code
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

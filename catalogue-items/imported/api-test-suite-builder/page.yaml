@@ -6,6 +6,25 @@ summary: Point it at your endpoints. Get integration and contract tests for each
 job: test-and-fix-code
 headline: API test suite builder
 subhead: Point it at your endpoints. Get integration and contract tests for each route, with fixtures.
+explain: |
+  Test files for every route in your API, covering sign-in, bad input, error codes and the edge cases people forget. Point it at your code and it finds the endpoints for you.
+
+  The skill scans Next.js, Express, FastAPI and Django REST projects to list each route and method. For each one it writes tests for missing, invalid and expired tokens, wrong types and boundary values, injection tries, the main status codes, first and last pages, empty results, file uploads of the wrong type or size, and burst limits. Output is ready to run with Vitest and Supertest in Node, or Pytest and httpx in Python. It can also create a scaffold before you write the endpoint.
+when:
+  - Your old API has no tests and you need a baseline.
+  - You are building a new endpoint and want tests first.
+  - You need to confirm every route has at least a smoke test before release.
+  - You are preparing for a security review.
+you_give:
+  - Your project folder with the routes
+  - Your test tool preference
+  - Auth method and test accounts
+  - Routes to skip (optional)
+you_get:
+  - Test files for each route
+  - Sign-in and permission cases
+  - Bad input and error code checks
+  - Test data fixtures
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

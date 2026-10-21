@@ -6,6 +6,25 @@ summary: Give it a policy gap and the current policy. Get a marked-up draft with
 job: check-contracts
 headline: Policy redraft proposer
 subhead: Give it a policy gap and the current policy. Get a marked-up draft with small edits. Not legal advice.
+explain: |
+  When a review finds your policy no longer meets a rule, this writes the fix as a marked-up draft with the smallest edits that close the gap. Nothing in your original policy is touched.
+
+  You give it the gap and the current approved policy text. It checks the rule is still current, or warns you if it cannot. It then strikes the fewest words needed, keeps any [verify] tags on facts it could not confirm, adds comments explaining each change, and saves everything to a new dated file. The gap stays open until the policy owner applies and approves the change. It is a proposal, not legal advice.
+when:
+  - A gap review shows a policy clause is out of date.
+  - A new rule takes effect and you need amended wording quickly.
+  - You want edits your policy owner can approve line by line.
+  - You need a record of why each change was proposed.
+you_give:
+  - Description of the gap
+  - Current approved policy text
+  - Text of the rule or regulation
+  - Name of the policy owner (optional)
+you_get:
+  - Marked-up redraft with small edits
+  - Comments explaining each change
+  - Redraft memo in a new dated file
+  - List of facts still to verify
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

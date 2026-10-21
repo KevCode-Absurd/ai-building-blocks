@@ -6,6 +6,25 @@ summary: Describe your buyer's doubts. Get which testimonials, numbers or case s
 job: write-landing-page
 headline: Social proof placer
 subhead: Describe your buyer's doubts. Get which testimonials, numbers or case studies to use and where to place them.
+explain: |
+  A plan for which proof to show and where, matched to the doubts your buyer has. You describe what holds buyers back, and the skill picks the right testimonial, number, logo or case study for each doubt.
+
+  It first gathers context: who the buyer is, how much they already trust you, how aware they are of the problem and what you want them to do. Then it maps each worry to the proof that answers it. A price worry may need a result with a number. A fit worry may need a story from a similar customer. It places each piece near the doubt it solves. It uses only real proof and flags claims you cannot back up.
+when:
+  - Your page has testimonials but sales are still low.
+  - Buyers hesitate at price and you need proof for that moment.
+  - You have logos, numbers and quotes and no plan for using them.
+  - You want to know which case study fits which visitor.
+you_give:
+  - Who your buyer is
+  - Their main doubts
+  - "The proof you have: quotes, numbers, logos, case studies"
+  - The page or offer to improve
+you_get:
+  - A doubt by doubt proof map
+  - The best proof type for each doubt
+  - Placement advice for the page
+  - Flags on weak or unverifiable claims
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

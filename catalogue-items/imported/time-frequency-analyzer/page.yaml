@@ -6,6 +6,26 @@ summary: Give it a signal that changes over time. Get plots and measures of how 
 job: build-software
 headline: Time-frequency analyzer
 subhead: Give it a signal that changes over time. Get plots and measures of how its frequencies shift.
+explain: |
+  See how the pitch or frequency of a signal moves over time, such as a bearing that starts to whine or a heart rhythm that shifts. You get plots and numbers showing when each frequency appears and fades.
+
+  The skill is for MATLAB. It first picks the method that fits your goal: short-time Fourier transform for steady views, wavelets for sharp changes, synchrosqueezing for crisp ridges, or EMD and VMD to split a signal into parts. It draws spectrograms or scalograms, extracts and rebuilds single components, and estimates instantaneous frequency. For two signals it can compute time-varying coherence. It points out common mistakes for each method.
+when:
+  - Your sensor signal changes pitch and a single spectrum hides it.
+  - You need to pull one component out of a mixed signal.
+  - You must pick between STFT, wavelets and mode decomposition.
+  - You want to see how two signals relate over time.
+you_give:
+  - Your signal data and sample rate
+  - What you want to find
+  - MATLAB with signal and wavelet toolboxes
+  - A second signal for comparison (optional)
+you_get:
+  - Spectrogram or scalogram plots
+  - Method choice with reasons
+  - Extracted signal parts
+  - Frequency over time estimates
+  - Working MATLAB code
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

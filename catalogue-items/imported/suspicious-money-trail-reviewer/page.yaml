@@ -6,6 +6,26 @@ summary: Give it records that do not add up. Get a structured review of red flag
 job: money-and-investing
 headline: Suspicious money trail reviewer
 subhead: Give it records that do not add up. Get a structured review of red flags and evidence to follow up.
+explain: |
+  A structured look at financial records that do not add up, with the red flags listed and the evidence worth following up. It points where to dig. It does not prove fraud.
+
+  Give it the records and what seems wrong. The skill works in priority order and uses four checks. Benford's Law tests whether digits in the numbers look natural. Vendor link analysis finds connections between suppliers and staff. Round-trip tracking follows money that comes back to where it started. A lifestyle audit compares known income with spending. The result is a forensic report with findings, evidence and next steps. Findings need confirming by a qualified examiner.
+when:
+  - Expenses look odd and you want to know where to start checking.
+  - A whistleblower raised a claim and you need a structured first review.
+  - You suspect a vendor is not real.
+  - Funds are missing and you must list what to preserve.
+you_give:
+  - Financial records or transaction lists
+  - What looks wrong
+  - Vendor and staff lists (optional)
+  - Time period
+you_get:
+  - A list of red flags
+  - Benford's Law results
+  - Vendor link findings
+  - Money flow traces
+  - A forensic report outline with next steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

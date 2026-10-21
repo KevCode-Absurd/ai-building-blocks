@@ -6,6 +6,25 @@ summary: Give it your repo or profile. Get a stronger README, profile and topics
 job: grow-social
 headline: GitHub README improver
 subhead: Give it your repo or profile. Get a stronger README, profile and topics so developers try your project.
+explain: |
+  A project page that makes a developer want to try it within seconds. Give it your repo or profile and it audits what a first-time visitor sees, then rewrites the weak parts.
+
+  For the README it checks for a one-line promise, a hero example, badges that add trust, and install steps that work. For your profile it improves the intro and the pinned repos. It also sets topics and plans where to get listed so people can find the project. Developers judge a project on GitHub before they install it, so the first screen matters most.
+when:
+  - Your repo gets visits but few stars or installs.
+  - Your README starts with setup steps instead of what the project does.
+  - You want your GitHub profile to show your best work.
+  - You are launching an open source tool and need people to find it.
+you_give:
+  - Your repo or profile link
+  - Who the project is for
+  - What makes it different
+  - Current README text (optional)
+you_get:
+  - A rewritten README structure
+  - A one-line project summary
+  - Profile and pinned repo advice
+  - Topic tags and listing ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

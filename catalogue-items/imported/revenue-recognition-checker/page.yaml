@@ -6,6 +6,26 @@ summary: Give it a customer contract. Get its promises, price split and timing o
 job: money-and-investing
 headline: Revenue recognition checker
 subhead: Give it a customer contract. Get its promises, price split and timing of revenue under IFRS 15 or ASC 606.
+explain: |
+  A memo showing what a customer contract promises, how the price is split between those promises, and when you can count each part as revenue. It follows the IFRS 15 and ASC 606 five-step model.
+
+  It checks the contract is enforceable, then lists the separate promises, such as a software licence, setup and support. It sets the total price, including discounts or bonuses that may change it. It then splits that price by what each item would sell for alone: a $1,000 bundle of items worth $800 and $400 is shared in that ratio. Last, it says if each part is recognised now or over time and gives journal entries for deferral and monthly release.
+when:
+  - You signed a contract bundling software, setup and support.
+  - You need to explain deferred revenue to an auditor.
+  - A contract has discounts or bonuses that change the price.
+  - You are building a monthly revenue release schedule.
+you_give:
+  - The customer contract or its key terms
+  - Prices of each item sold alone (optional)
+  - Payment terms and dates
+  - Any discounts, rebates or bonuses (optional)
+you_get:
+  - A list of separate promises in the contract
+  - The transaction price
+  - An allocation table
+  - Journal entries for the start, deferral and monthly release
+  - Timing of revenue
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

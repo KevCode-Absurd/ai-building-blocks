@@ -6,6 +6,25 @@ summary: Give it a teaser or CIM and your criteria. Get a one-page memo showing 
 job: money-and-investing
 headline: Deal screening memo writer
 subhead: Give it a teaser or CIM and your criteria. Get a one-page memo showing where it passes or fails each test.
+explain: |
+  A one-page memo that tells you in minutes whether a deal is worth more time. Drop in a teaser or CIM and your fund's criteria, and you get each test marked pass or fail with the numbers beside it.
+
+  It first pulls the facts: company, sector, revenue, EBITDA, margins, growth, deal type, asking price, seller motivation, management plans and key customers. Then it fills a table of your criteria against what the document says, such as revenue range, margin, growth and sector fit. Red flags and open questions are listed at the end. If it does not know your criteria, it asks.
+when:
+  - A broker sends a teaser and you need a quick yes or no.
+  - You have ten CIMs to read this week and want them ranked.
+  - You need to explain to your partners why you passed on a deal.
+  - You want the same screening format for every deal across your team.
+you_give:
+  - Teaser, CIM or deal description
+  - Your investment criteria
+  - Target ranges for size and margin (optional)
+you_get:
+  - Extracted deal facts
+  - Pass or fail table by criterion
+  - Red flags
+  - Questions for the seller
+  - One-page screening memo
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

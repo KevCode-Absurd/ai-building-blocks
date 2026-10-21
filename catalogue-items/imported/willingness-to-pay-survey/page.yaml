@@ -6,6 +6,27 @@ summary: Tell it what you sell. Get two survey questions to send customers and a
 job: set-prices
 headline: Willingness-to-pay survey designer
 subhead: Tell it what you sell. Get two survey questions to send customers and a way to turn answers into a best price.
+explain: |
+  Two short surveys that give you a best price from real customer answers, plus the steps to turn those answers into a number. It replaces guessing and asking "how much would you pay?", which overstates by about half.
+
+  You set seven prices at equal steps between your lowest and highest plausible price. Survey A asks an open price question. Survey B shows each person one price from the ladder and asks if they would buy. After cleaning absurd answers from A, the skill corrects the stated demand and works out the price that makes the most profit given your unit cost. You need about 500 responses, and the skill tells you how to test the survey before launch.
+when:
+  - You are about to launch and cannot decide the price.
+  - You want to know whether a rise would cost you sales.
+  - You have an audience of several hundred you can survey.
+  - You want to stop copying competitor prices.
+you_give:
+  - Product description and images
+  - Unit cost
+  - Lowest and highest price you can imagine
+  - Where you will find respondents
+  - "Goal: profit, reach or premium"
+you_get:
+  - Seven-step price ladder
+  - Wording for both surveys
+  - Sample size and test checklist
+  - Cleaning and correction steps
+  - Profit-maximising price estimate
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

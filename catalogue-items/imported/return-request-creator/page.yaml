@@ -6,6 +6,26 @@ summary: Name the order, items and reason. Get a formal return record opened in 
 job: run-your-store
 headline: Return request creator
 subhead: Name the order, items and reason. Get a formal return record opened in Shopify. Creates a live return.
+explain: |
+  A formal return opened in Shopify for a delivered order, with the right items, amounts and reason, so the warehouse and refund steps can follow. This one changes your live store, so check the details with the customer first.
+
+  You name the order, the line items and quantities, and a reason such as wrong size, defective or not as described. If you give nothing, all fulfilled items are returned with the reason set to other. The skill checks the order has shipped, since only fulfilled orders can have a return. It can run as a dry run to preview, and you choose whether the customer gets an email. Orders not yet shipped need a cancel instead.
+when:
+  - A customer writes in asking to send back a delivered item.
+  - Support needs a tracked return record, not just a refund.
+  - You want the same reason codes used on every return.
+  - You want to preview the return before it goes live.
+you_give:
+  - The order ID
+  - Which items and quantities to return
+  - A return reason
+  - Whether to email the customer (optional)
+  - A note on the reason (optional)
+you_get:
+  - A return record opened in Shopify
+  - Items, quantities and reason recorded
+  - A dry-run preview if you ask for one
+  - A report of what was created
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

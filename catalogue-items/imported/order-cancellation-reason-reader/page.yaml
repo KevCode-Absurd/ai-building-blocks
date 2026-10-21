@@ -6,6 +6,26 @@ summary: Get your cancellation rate over time and why orders were cancelled, suc
 job: run-your-store
 headline: Order cancellation reason reader
 subhead: Get your cancellation rate over time and why orders were cancelled, such as fraud, stock or declined payment.
+explain: |
+  Know how many orders you lose and why. You get a cancellation rate over time, split by reason: customer request, fraud, stock problems, declined payment, staff or other.
+
+  The skill pulls all orders in your chosen window, from a week to months, and groups them by day, week or month. It divides cancelled orders by all orders to get the rate, then shows how each reason moves. A jump in stock cancellations hints at bad inventory counts. A jump in fraud may mean someone is targeting you. You can filter to one reason or to higher-value orders. It only reads data and changes nothing. Results depend on staff picking the right reason at cancel time. Needs Shopify CLI access.
+when:
+  - Your cancellations rose and you want to know what changed.
+  - You suspect stock counts are wrong in your store.
+  - You want to see if fraud attempts are increasing.
+  - You report monthly on order health to your team.
+you_give:
+  - Store domain
+  - How many days to look back
+  - Day, week or month grouping (optional)
+  - Minimum order value (optional)
+  - One reason to focus on (optional)
+you_get:
+  - Cancellation rate over time
+  - Counts by cancel reason
+  - Spikes and shifts flagged
+  - A readable table or JSON
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

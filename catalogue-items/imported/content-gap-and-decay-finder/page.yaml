@@ -6,6 +6,25 @@ summary: Connect Ahrefs. Get missing topics, thin pages, outdated posts and deca
 job: get-found-in-search
 headline: Content gap and decay finder
 subhead: Connect Ahrefs. Get missing topics, thin pages, outdated posts and decaying pages, sorted into update or replace.
+explain: |
+  A to-do list for your content library: topics you have not covered, pages that are thin, and posts losing traffic, each marked as create, update, merge or remove. It shows where your next content hours will pay off.
+
+  You connect Ahrefs and give Claude your site, three to five rivals, and your content inventory with dates and traffic. It finds missing topics where rivals rank and you have no page. It then spots thin pages, outdated posts and pages whose traffic is falling. Each finding gets one action, since a missing topic and a decaying page need different fixes. The output is a ranked roadmap you can plan a quarter around.
+when:
+  - You plan next quarter's content and want data behind the choices.
+  - Organic traffic is flat despite regular publishing.
+  - You want to catch decaying pages before they lose more traffic.
+  - A site redesign is coming and you need to know what to keep.
+you_give:
+  - Your site and content scope
+  - Three to five competitors
+  - A content list with dates and traffic
+  - Ahrefs connected to Claude
+you_get:
+  - Missing topics
+  - Thin and outdated pages
+  - Decaying pages
+  - A roadmap of create, update, merge and prune actions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

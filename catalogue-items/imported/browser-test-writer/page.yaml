@@ -6,6 +6,24 @@ summary: Describe a user story or page. Get Playwright tests written for it that
 job: test-and-fix-code
 headline: Browser test writer
 subhead: Describe a user story or page. Get Playwright tests written for it that you can run.
+explain: |
+  Tell it what a user should be able to do, and get Playwright tests for it that you can run today.
+
+  You can give a user story like "user can log in", a page address, a component file or a feature name. The skill reads your Playwright config, your existing tests, any page objects, and your login setup so the new test matches your style. It picks a template for the type of flow, such as login, checkout, search, forms, dashboards or API calls, and fills in your real selectors, routes and data. The output is a test file in the shape your project already uses.
+when:
+  - You just built a checkout flow and have no tests for it.
+  - You want a login test that follows your existing test style.
+  - You have a component file and want its behaviour covered.
+  - You need accessibility checks added to a page.
+you_give:
+  - A user story, page, component or feature name
+  - Your Playwright config and existing tests
+  - Test data or login details for testing (optional)
+you_get:
+  - A runnable Playwright test file
+  - Selectors and routes from your real code
+  - Page objects or fixtures where they help
+  - Cases for the main path and for errors
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Say you want safe git. Get hooks that block risky commands like force p
 job: build-software
 headline: Git safety guard setter
 subhead: Say you want safe git. Get hooks that block risky commands like force push and hard reset before they run.
+explain: |
+  Your AI agent can no longer wreck your git history by accident. This sets up a hook in Claude Code that checks each command before it runs, and stops the risky ones.
+
+  Blocked commands include any git push, including force push, reset --hard, clean -f, branch -D, and checkout or restore of the whole folder. When a command is blocked, Claude is told it has no authority to run it. You choose whether the guard covers one project or all your projects. The skill copies a small shell script into place and adds the matching hook to your settings file.
+when:
+  - You let an AI agent run commands and fear a force push.
+  - You want a hard stop on deleting branches or untracked files.
+  - You are setting up a shared project and want the same safety for everyone.
+  - You lost work once to a hard reset and never want that again.
+you_give:
+  - "Scope choice: one project or all projects"
+  - Permission to edit your settings file
+  - Extra commands to block (optional)
+  - A shell that can run the script
+you_get:
+  - A hook script in the right folder
+  - Settings updated with the hook
+  - A list of blocked commands
+  - A quick test that the guard works
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

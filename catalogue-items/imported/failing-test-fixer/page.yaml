@@ -6,6 +6,24 @@ summary: Point it at a broken test suite. Get failures grouped by cause and fixe
 job: test-and-fix-code
 headline: Failing test fixer
 subhead: Point it at a broken test suite. Get failures grouped by cause and fixed one group at a time.
+explain: |
+  A test suite that goes from red to green, fixed one cause at a time instead of one test at a time. Fifty failures often come from three real bugs.
+
+  The skill runs the whole suite first and records the failures. It groups them by error type, by file and by likely cause, such as a missing dependency or a changed API. The groups with the most tests, and the ones that other fixes depend on, come first. For each group it reads the code, checks the recent diff, makes the smallest change, and reruns only that group. It moves on only when the group passes. At the end it runs everything again.
+when:
+  - You changed a shared function and dozens of tests broke.
+  - CI is red and you do not know where to start.
+  - You finished a feature and tests that used to pass now fail.
+  - You inherited a project with a long list of failing tests.
+you_give:
+  - Access to the codebase and its test command
+  - The failing output, if you have it (optional)
+  - Project style notes (optional)
+you_get:
+  - Failures grouped by cause
+  - Small focused code fixes
+  - A re-run result after each group
+  - A final full-suite result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

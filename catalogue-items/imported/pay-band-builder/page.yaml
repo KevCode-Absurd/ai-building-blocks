@@ -6,6 +6,24 @@ summary: Give it a role and market pay data. Get a pay range and a clear method 
 job: hire-people
 headline: Pay band builder
 subhead: Give it a role and market pay data. Get a pay range and a clear method you can explain to leaders.
+explain: |
+  A pay range for a role, built from market data, with a method you can explain to leaders. It also shows whether current pay is competitive.
+
+  It starts by choosing the right salary survey or data source for the role, industry and place. It matches your internal job to the closest outside job code, adjusts for level and geography, and sets a range with a midpoint. It handles roles with thin data, total pay beyond base salary, regular refreshes and pay across countries. It can write a short methodology note so the range holds up when challenged.
+when:
+  - You are hiring for a role and do not know what to pay.
+  - You must show leaders why a range is fair.
+  - Pay for a job has no clear market data.
+  - You hire in several countries and want consistent bands.
+you_give:
+  - Role, level and location
+  - Market data or survey source
+  - Current pay for the role (optional)
+you_get:
+  - Pay range with midpoint
+  - Job-matching notes
+  - Competitiveness check against the market
+  - Method note for leaders
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

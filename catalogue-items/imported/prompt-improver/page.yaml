@@ -6,6 +6,23 @@ summary: Give it a rough prompt. Get it rebuilt into a clear, structured prompt 
 job: set-up-ai
 headline: Prompt improver
 subhead: Give it a rough prompt. Get it rebuilt into a clear, structured prompt using a fitting framework.
+explain: |
+  Turn a rough request like "help me code Python" into a clear, structured prompt you can paste straight into any AI. No prompting jargon needed.
+
+  The skill reads your intent, sorts the task by type and complexity, and picks a fitting framework from a set that includes RTF, RISEN, Chain of Thought, RODES, RACE and STAR. It asks questions only when something critical is missing. Then it rebuilds your request with the right role, context, steps and output format and hands back the finished prompt without explaining the technique. It suits coding, writing, analysis, planning, learning and creative tasks.
+when:
+  - You know what you want from the AI but cannot phrase it well.
+  - Your prompts give generic answers.
+  - The task needs step-by-step reasoning, like debugging or planning.
+  - You want a reusable prompt for a task you repeat.
+you_give:
+  - Your rough prompt or idea
+  - What you will use the answer for
+  - Any must-have details or limits (optional)
+you_get:
+  - A polished prompt ready to paste
+  - Fitting structure for the task
+  - Questions only if something key is unclear
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Name a company. Get a short briefing from your Common Room data. Needs 
 job: sell-and-negotiate
 headline: Account snapshot writer
 subhead: Name a company. Get a short briefing from your Common Room data. Needs your Common Room account.
+explain: |
+  A short briefing on a company, drawn from the signals in your Common Room data, tells you what the account has been doing so you know how to approach it.
+
+  The skill first loads your own context. It finds the company in Common Room and pulls only the fields that matter for that question, such as activity, contacts and intent signals. If the data is sparse, it adds a web search and notes that the briefing is based on limited data. It then reasons across the signals and produces a clean overview with the facts first. It needs a Common Room account connected.
+when:
+  - You are about to call a company and want a quick background.
+  - You hear a company name and want to know if they already use you.
+  - You want to see what an account has done in your community.
+  - You need a briefing for a teammate taking over an account.
+you_give:
+  - A company name or domain
+  - A connected Common Room account
+  - The question you care about (optional)
+you_get:
+  - A short account overview
+  - Recent activity and signals
+  - Key contacts found
+  - A note when data is limited
+  - Suggested angles for your approach
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

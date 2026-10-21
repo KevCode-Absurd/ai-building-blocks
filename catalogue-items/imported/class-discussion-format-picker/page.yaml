@@ -6,6 +6,26 @@ summary: Give it your topic and group. Get the discussion format that fits, with
 job: teach-and-train
 headline: Class discussion format picker
 subhead: Give it your topic and group. Get the discussion format that fits, with steps to run it.
+explain: |
+  The right kind of class discussion for your goal, with steps to run it. A debate, a Socratic seminar and a think-pair-share all do different jobs. You give your topic, purpose and group, and you get the best match.
+
+  The skill asks what the talk should achieve: explore ideas, argue a view, reach agreement or analyse a text. It weighs your students' age and how used to structured talk they are. Then it picks a format and writes a facilitation guide: how to set the room, a starter question, sentence frames for students, what you say when talk stalls, and how to keep quiet voices in. The advice draws on research on productive classroom talk.
+when:
+  - You want a discussion that goes deeper than the same few students talking.
+  - You are planning a Socratic seminar for the first time.
+  - Your class needs to argue both sides of an issue fairly.
+  - Students are young and need sentence starters to join in.
+you_give:
+  - What the discussion should achieve
+  - The topic or driving question
+  - Age and experience of your students
+  - Time available (optional)
+you_get:
+  - A recommended discussion format
+  - Steps to run it
+  - Sentence starters for students
+  - Moves for when talk stalls
+  - Ways to include quiet students
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

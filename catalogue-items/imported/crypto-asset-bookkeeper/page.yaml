@@ -6,6 +6,25 @@ summary: Describe your coin or NFT holdings. Get them classified, valued and rec
 job: track-numbers
 headline: Crypto asset bookkeeper
 subhead: Describe your coin or NFT holdings. Get them classified, valued and recorded under accounting standards.
+explain: |
+  Crypto holdings need a clear place in your books. Describe your coins, NFTs or tokens and you get them classified, valued and recorded under standard accounting rules such as ASC 350 or IAS 38.
+
+  It starts by deciding the category: usually an intangible asset for things you hold, inventory if you deal in them. Then it sets the measurement approach, cost with impairment testing or fair value where allowed. It covers cost basis tracking, impairment at the quarter's lowest price, income from staking, mining or airdrops at receipt value, and how to treat gas fees. It ends with a ledger summary and a reconciliation to your general ledger. It is not tax or legal advice.
+when:
+  - Your company holds Bitcoin or Ether and the auditor wants proper treatment.
+  - You received staking rewards and need to know how to book them.
+  - The price dropped and you need to know if you must write down value.
+  - On-chain activity does not match your ledger.
+you_give:
+  - Assets held with quantities and purchase dates
+  - "Transactions: buys, sells, rewards, fees"
+  - Accounting standard in use (GAAP or IFRS)
+  - Custody details (optional)
+you_get:
+  - Asset classification and measurement choice
+  - Impairment calculation
+  - Income recognition entries
+  - A digital asset ledger summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it code an AI wrote fast. Get the real risks that will hurt later,
 job: test-and-fix-code
 headline: AI-written code reviewer
 subhead: Give it code an AI wrote fast. Get the real risks that will hurt later, with the smallest fix for each.
+explain: |
+  Code that runs but feels fragile gets a plain risk review: what will hurt later, why, and the smallest fix for each. It looks at what rapid AI-assisted coding often leaves behind and ignores cosmetic nitpicks.
+
+  It starts with a quick scan: file count, language, entry points and red flags such as hardcoded secrets, bare excepts and leftover TODOs. Then it checks seven areas for risks it can point to in the code. It never invents findings. It does not rewrite your code to show off. You get each issue with its location, why it matters and a minimal fix, so you can decide what to do before launch or team handoff.
+when:
+  - An AI built your prototype and you want to ship it for real.
+  - The code works but you are afraid to change it.
+  - You are handing the project to another developer.
+  - You want security and upkeep risks flagged before launch.
+you_give:
+  - The source code, as files or pasted
+  - What the system does and its scale (optional)
+  - Your language and framework (optional)
+you_get:
+  - A quick scan summary
+  - Risks with file and line locations
+  - Why each one matters
+  - The smallest fix for each
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

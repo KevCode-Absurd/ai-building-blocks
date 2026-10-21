@@ -6,6 +6,26 @@ summary: Give it a PDF. Get text pulled out, pages merged, split, filled, redact
 job: work-with-files
 headline: PDF toolkit
 subhead: Give it a PDF. Get text pulled out, pages merged, split, filled, redacted or checked, with the original kept safe.
+explain: |
+  Do what you need to a PDF, such as pull text, merge, split, fill forms, redact or check it, while the original stays untouched. Each run gives you proof, not a promise.
+
+  The skill first confirms what you want, which pages count (human page labels often differ from physical page numbers), and whether the file is confidential. It records the source's hash and size, picks the tools you actually have, and writes new files to explicit paths. After the work it checks structure, content and how pages look, and reports hashes, page counts, tools used, OCR language and any limits. It never asks for private keys in chat. Needs PDF tools installed.
+when:
+  - You need to merge several PDFs in a set order.
+  - You must redact names from a contract and prove the text is gone.
+  - A scanned file needs searchable text with the right OCR language.
+  - You need to fill a form and check the result renders.
+you_give:
+  - The source PDF or PDFs
+  - The operation and page ranges
+  - Output location and naming
+  - OCR language (optional)
+  - Whether the file is confidential
+you_get:
+  - New output files at stated paths
+  - Hashes, sizes and page counts
+  - An operation log
+  - Checks for structure and appearance, with limits noted
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

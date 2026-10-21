@@ -6,6 +6,25 @@ summary: Give it single-cell data. Get your datasets merged, batch effects fixed
 job: build-software
 headline: Single-cell deep learning analyst
 subhead: Give it single-cell data. Get your datasets merged, batch effects fixed and cell types found with scvi-tools.
+explain: |
+  Single-cell datasets merged, batch effects removed and cell types found with scvi-tools, the deep learning toolkit for single-cell data. Your samples then line up so real biology shows through.
+
+  It starts with a model table: scVI for plain RNA integration, scANVI when you have labels, totalVI for RNA plus protein, PeakVI and MultiVI for chromatin data, and DestVI for spatial data. It points you to the matching step-by-step reference, ready scripts and notes on GPU setup and fixing errors. Tasks include batch correction, label transfer to a reference, joint analysis of several data types and a latent map of cells. You need Python, scvi-tools and ideally a GPU.
+when:
+  - You have samples from different labs and batch effects hide the signal.
+  - You want to label new cells using a reference dataset.
+  - You work with CITE-seq or multiome data.
+  - You need a latent space for clustering or comparison.
+you_give:
+  - Single-cell data, often an AnnData file
+  - Batch or sample information
+  - Labels, if you have them (optional)
+  - Python with scvi-tools
+you_get:
+  - The right model for your data type
+  - Integrated data with batch effects reduced
+  - Transferred cell type labels
+  - A latent representation for downstream work
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

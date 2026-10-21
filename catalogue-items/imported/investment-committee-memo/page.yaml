@@ -6,6 +6,27 @@ summary: Give it diligence findings and deal terms. Get a structured committee m
 job: money-and-investing
 headline: Investment committee memo drafter
 subhead: Give it diligence findings and deal terms. Get a structured committee memo with facts, risks and open questions.
+explain: |
+  A committee memo that puts the facts, the risks and the open questions on one page flow. Give it what you know: the company, market, three to five years of financials, deal terms, diligence findings and the returns cases. The skill organizes them into the standard structure: executive summary, business and market, financials, management, deal terms, risks, value creation plan and returns.
+
+  It writes the recommendation up front with headline returns, and lists risks with ways to reduce each. This version is built for Indian deals: it uses the April to March fiscal year and lakh and crore units, and avoids the spreadsheet format that makes figures a hundred times off.
+when:
+  - You are presenting a deal to an investment committee next week.
+  - You have scattered diligence notes and need one structured memo.
+  - You want base, upside and downside returns shown side by side.
+  - You invest in India and need fiscal year and crore labels right.
+you_give:
+  - Company description and market context
+  - Historical financials
+  - Deal terms and financing
+  - Diligence findings
+  - Returns cases and value creation plan (optional)
+you_get:
+  - A structured committee memo
+  - An executive summary with a recommendation
+  - A risk list with mitigations
+  - A returns section
+  - A list of open questions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

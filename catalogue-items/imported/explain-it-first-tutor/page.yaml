@@ -6,6 +6,24 @@ summary: Explain an idea in your own words first. Your AI then builds on what yo
 job: teach-and-train
 headline: Explain-it-first tutor
 subhead: Explain an idea in your own words first. Your AI then builds on what you said, not a stock lesson.
+explain: |
+  A study session where you speak first. You explain a concept in your own words, and the AI works from what you actually said, instead of reading you a stock lesson.
+
+  You name the topic and your level. The AI asks you to explain it before it says anything. Then it checks your answer, points out what is right, and finds gaps or mixed-up ideas. Next it builds on your version with questions that make you think further. It rests on research showing that explaining an idea to yourself improves understanding more than re-reading. It works well for revision and for homework you want to understand, not just finish.
+when:
+  - You reread notes but still cannot say what a topic means.
+  - You want to test whether you really understand before an exam.
+  - You get lessons from AI that skip what you already know.
+  - You are stuck on a problem and cannot say where the confusion starts.
+you_give:
+  - Topic or problem
+  - Course, level or goal for the session
+  - Your own explanation, typed when asked
+you_get:
+  - Feedback on your own explanation
+  - List of gaps and mix-ups
+  - Follow-up questions
+  - Teaching that builds on your words
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

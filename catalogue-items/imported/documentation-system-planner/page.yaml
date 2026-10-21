@@ -6,6 +6,26 @@ summary: Describe your team and product. Get what to write down, where it lives 
 job: document-work
 headline: Documentation system planner
 subhead: Describe your team and product. Get what to write down, where it lives and how to keep it fresh.
+explain: |
+  A documentation plan for your team: what to write down, where it should live, who owns it and how it stays up to date. It covers internal docs, product docs and runbooks.
+
+  The skill starts with who reads the docs and what already exists, including where it sits, how it is shaped and when it was last updated. It also considers your team size, growth, the kinds of work that create documents and the tools you use. From that, it decides what is worth documenting and what is not, picks a home for each type, sets owners and a review rhythm, and suggests a tool if you lack one. It works with any stack.
+when:
+  - Your team's knowledge is scattered across chats, wikis and old files.
+  - A new product needs docs, but no one knows where to start.
+  - Your docs are stale and nobody trusts them.
+  - You need to choose a documentation tool for the team.
+you_give:
+  - Who the docs are for
+  - A list of existing docs and their state
+  - Team size and how fast it is growing
+  - Tools you use today
+you_get:
+  - A map of what to document and what to skip
+  - A home for each type of document
+  - Owners and a review schedule
+  - A tool recommendation
+  - First steps for cleanup
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

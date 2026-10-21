@@ -6,6 +6,25 @@ summary: Describe what you plan to build. Get the biggest risks on demand and sw
 job: test-an-idea
 headline: Build risk reviewer
 subhead: Describe what you plan to build. Get the biggest risks on demand and switching, plus the smallest test to run first.
+explain: |
+  Find out if what you plan to build is worth building, before you write any code. You get the biggest risks named and the smallest test to try first.
+
+  The skill restates your idea in one sentence: who it is for, the job they need done and what they do now. It then checks the main risks: real demand, fit with their workflow, willingness to switch, how people will find it, pricing, data access and running costs. It prefers specific doubts to vague brainstorming. It proposes one small test, like a buyer chat, a landing page or a manual version. If risk is low it moves on to build with the assumptions written down. If high, it says stop.
+when:
+  - You are about to ask an AI to build an app and are unsure anyone wants it.
+  - A feature sounds good but you cannot say why users would switch.
+  - You have a side project idea and want a cheap way to test it.
+  - You need to write down your assumptions before building.
+you_give:
+  - What you plan to build
+  - Who you think will use it
+  - What they use today (optional)
+  - How you plan to reach them (optional)
+you_get:
+  - The build bet in one sentence
+  - The biggest risks
+  - The smallest validation test
+  - A continue or stop call
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

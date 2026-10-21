@@ -6,6 +6,26 @@ summary: Give it your product details. Get a title, description, image and video
 job: write-landing-page
 headline: TikTok Shop listing writer
 subhead: Give it your product details. Get a title, description, image and video plan that fits TikTok Shop search.
+explain: |
+  Product listings that get found in TikTok Shop search and then convince the person looking. You get a title, description and a plan for images and video, all based on how shoppers search there.
+
+  You provide product details. The skill works out the keywords shoppers use, puts the strongest ones in the title, and picks the right category and attributes. It writes a description that answers buying questions, plans the main image, supporting images and a short demo clip, and suggests price and promotion framing. It also connects each listing to the videos you will post and shows where reviews and customer clips can add proof.
+when:
+  - Your product titles never show up in TikTok Shop search.
+  - You are listing a new item and want it right the first time.
+  - Your listing gets views but few sales.
+  - You need to know which images and videos a listing needs.
+you_give:
+  - Product details and features
+  - Price and any promotion
+  - Photos you already have (optional)
+  - Competing listings (optional)
+you_get:
+  - A search-ready title
+  - A description
+  - Category and attribute picks
+  - An image and video plan
+  - Hashtag ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

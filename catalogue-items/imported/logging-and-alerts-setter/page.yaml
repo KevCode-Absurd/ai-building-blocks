@@ -6,6 +6,26 @@ summary: Say what must work in production. Get logs, metrics and alerts added so
 job: build-software
 headline: Logging and alerts setter
 subhead: Say what must work in production. Get logs, metrics and alerts added so problems show up fast.
+explain: |
+  Code that tells you what it is doing in production, so when something breaks you can see what happened. Say what must work and get logs, metrics and alerts added to match.
+
+  It starts by defining what working means, then picks the right signal for each question. It adds structured logs, counts and timings, and traces across services. Alerts must be actionable and must link to a short runbook with what it means, the first query to run and who to call. Thresholds come from your goals or past data, not a guess. It ends by testing the telemetry itself, since a silent alert is worse than none.
+when:
+  - You shipped a feature and cannot tell if it works.
+  - A user reported a bug and your logs say nothing.
+  - Your alerts fire so often that the team ignores them.
+  - You need a runbook for a key page or endpoint.
+you_give:
+  - The feature or code to instrument
+  - What counts as working
+  - Your logging and monitoring tools (optional)
+  - Past incidents (optional)
+you_get:
+  - Structured log statements
+  - Metrics for key behaviour
+  - Trace points
+  - Alert rules with thresholds
+  - A short runbook for each alert
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

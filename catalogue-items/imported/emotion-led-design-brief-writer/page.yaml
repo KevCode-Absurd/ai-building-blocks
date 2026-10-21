@@ -6,6 +6,25 @@ summary: Name the feeling you want. Get colour, type, imagery and layout choices
 job: design-work
 headline: Emotion-led design brief writer
 subhead: Name the feeling you want. Get colour, type, imagery and layout choices that support it.
+explain: |
+  A design brief that starts with the feeling you want people to have, then picks colour, type, imagery and layout to support it. Name the feeling, such as calm, trust or urgency, and get specific choices you can hand to a designer.
+
+  The skill first asks about your audience, their culture and state of mind, your goal, and brand or accessibility limits. It sets the target emotion, then maps colour by audience and category, since colour feelings vary across cultures. It continues with type, spacing, image style and layout. The research it cites is marked as ideas to test with your own audience before you rely on it.
+when:
+  - Your page looks fine but does not feel right.
+  - You are briefing a designer and need more than "make it pop".
+  - You want a premium look for one launch and calm for another.
+  - You sell to people from different cultures.
+you_give:
+  - The feeling you want
+  - Your audience
+  - Brand and accessibility limits
+  - The platform, such as web or packaging (optional)
+you_get:
+  - A colour direction with reasons
+  - Type and spacing guidance
+  - Image style guidance
+  - A layout approach in a short brief
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

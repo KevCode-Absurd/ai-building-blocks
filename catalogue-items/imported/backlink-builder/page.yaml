@@ -6,6 +6,25 @@ summary: Give it your site. Get places to earn links, pitch text and a plan to w
 job: plan-strategy
 headline: Backlink builder
 subhead: Give it your site. Get places to earn links, pitch text and a plan to win mentions.
+explain: |
+  A plan for earning links and mentions from other sites that help you rank in search and get cited by AI answers. Give it your site, target pages, the searches you want to win and what you could offer, such as data, tools or expert comments.
+
+  It first checks whether links are really the bottleneck, then whether you have something worth linking to. It picks tactics by effort and quality, finds and qualifies targets, and drafts pitch text. It also sets rules to stay safe from link schemes, plans anchor text and pace, and says how to measure both search gains and AI citations. Some of the work can run as a repeating loop.
+when:
+  - Your content is good but nobody links to it.
+  - A competitor outranks you and has far more links.
+  - You want to be named in the pages AI tools quote.
+  - You need pitch emails for guest posts or digital PR.
+you_give:
+  - Your site and target pages
+  - Target searches and AI prompts
+  - Hours per week and budget
+  - What you could offer to link to
+you_get:
+  - Link tactics ranked by effort
+  - A target list to qualify
+  - Pitch text for outreach
+  - Rules, pace and a measuring plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

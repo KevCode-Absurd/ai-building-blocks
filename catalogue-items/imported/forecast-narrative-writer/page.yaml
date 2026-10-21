@@ -6,6 +6,26 @@ summary: "Ask for your forecast. Get a commit, best case and pipeline story: wha
 job: sell-and-negotiate
 headline: Forecast narrative writer
 subhead: "Ask for your forecast. Get a commit, best case and pipeline story: what is closing, at risk and changed."
+explain: |
+  A forecast story you can say out loud in a review or 1:1: the number, the deals behind it, what changed since last week and where the risk sits. It is split into commit, best case and pipeline.
+
+  It connects to your CRM or reads an uploaded pipeline export. It maps stages to the three buckets, using the CRM's forecast field if one exists, and pulls open deals closing in the period. Each deal named links to its record. It compares with last week's notes if you paste them, so changes stand out. Missing data is marked as blank, not guessed. Scope stays on your own deals unless you say otherwise.
+when:
+  - You have a forecast call tomorrow and need your talking points.
+  - Your manager asks what moved since last week.
+  - You need a quick view of which deals are at risk.
+  - You want to pitch commit and best case with deal names behind each.
+you_give:
+  - CRM access or a pipeline export
+  - Period, such as this quarter
+  - Last week's narrative (optional)
+  - Rep or team scope (optional)
+you_get:
+  - Commit, best case and pipeline totals
+  - Deal list per bucket with links
+  - What changed since last time
+  - Deals at risk with reasons
+  - Short script to say in the meeting
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

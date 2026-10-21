@@ -6,6 +6,25 @@ summary: Give it a hashtag or account. Get public videos, comments and stats. Co
 job: grow-social
 headline: TikTok research collector
 subhead: Give it a hashtag or account. Get public videos, comments and stats. Collects data from websites.
+explain: |
+  Public TikTok videos, comments and stats for a hashtag or account, pulled into a table you can sort. No TikTok login is needed, but the collection runs through a paid Apify scraper, so you need an Apify account and token.
+
+  The skill picks the right input for your question: profiles, hashtags, search terms, video links, sounds, comments or followers. It sets limits such as the date range, minimum likes and exact tag match, then runs the scraper and returns the data with views, likes and shares. Typical uses are checking the last 20 videos of a creator, finding top videos for a phrase, or exporting a comment thread. It only reads public data.
+when:
+  - You want to see what is working under a hashtag in your niche.
+  - You are checking whether a creator's last videos look brand safe.
+  - You need comments from one video exported for analysis.
+  - You want a list of top videos for a keyword over the past week.
+you_give:
+  - A hashtag, account, search phrase or video link
+  - "Limits: dates, likes, number of results"
+  - An Apify account and token
+  - Budget for paid results
+you_get:
+  - A table of videos with stats
+  - Exported comments (if asked)
+  - A short read on patterns
+  - A note on cost and result count
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

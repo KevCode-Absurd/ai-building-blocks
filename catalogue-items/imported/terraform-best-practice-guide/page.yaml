@@ -6,6 +6,26 @@ summary: Describe the cloud setup you need. Get Terraform or OpenTofu code with 
 job: ship-and-host
 headline: Terraform best-practice guide
 subhead: Describe the cloud setup you need. Get Terraform or OpenTofu code with tested modules and CI steps.
+explain: |
+  Terraform or OpenTofu code that is organised, tested and ready for a pipeline, built from your description of the cloud setup. You avoid the usual traps, like fragile modules and changes nobody tested.
+
+  The skill covers how to structure modules and environments, when to use count or for_each, and how to manage state. It sets up a testing ladder from validate and plan checks up to full test frameworks, and helps you choose the level that fits your risk. It adds CI steps for formatting, checks and plans. It also reviews existing Terraform for refactoring. A longer guide holds the detail. Plan before you apply, and review what changes.
+when:
+  - You are writing Terraform for a new environment and want it done properly.
+  - Your modules are copied between projects and drifting apart.
+  - You do not know how to test infrastructure code.
+  - You need a pipeline that checks changes before they reach production.
+  - You inherited Terraform with no structure.
+you_give:
+  - The cloud setup you need
+  - Cloud provider and Terraform or OpenTofu
+  - Number of environments
+  - Existing code (optional)
+you_get:
+  - Terraform or OpenTofu code with modules
+  - A testing approach
+  - CI steps
+  - Notes on structure and state
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

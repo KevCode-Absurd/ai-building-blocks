@@ -6,6 +6,27 @@ summary: Give it your item list. Get a rolling count schedule, who counts what, 
 job: plan-supply-chain
 headline: Stock count program planner
 subhead: Give it your item list. Get a rolling count schedule, who counts what, and how to trace count mismatches.
+explain: |
+  A plan for counting inventory a little each week, so you never have to shut down for one big yearly count. You get a rolling schedule, a list of who counts what, and a method to trace mismatches back to their cause.
+
+  It starts by asking about your current accuracy, item count, warehouse size, scanning tools and labour. Then it ranks items by value and sales so high-value ones are counted more often. It sets a count frequency per group, tolerance limits and rules for recounting. When a count is off, it walks through root causes such as receiving errors, mispicks or location mistakes, and suggests fixes. It also covers audit needs.
+when:
+  - Your annual stock take shuts everything down for days.
+  - Your system says you have stock but the shelf is empty.
+  - Auditors ask how you keep inventory records accurate.
+  - You have staff time for a few counts a day and need to decide what to count.
+you_give:
+  - Item list with value and sales rate
+  - Warehouse size and storage type
+  - Current accuracy and how you count now
+  - Staff time available for counting
+  - Audit or compliance needs (optional)
+you_get:
+  - A rolling count calendar
+  - Count frequency by item group
+  - Tolerance and recount rules
+  - A mismatch tracing checklist
+  - Accuracy targets and tracking
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

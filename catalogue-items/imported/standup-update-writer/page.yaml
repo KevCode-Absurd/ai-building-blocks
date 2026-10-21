@@ -6,6 +6,23 @@ summary: Ask for your standup. Get yesterday, today and blockers from your commi
 job: organise-work
 headline: Standup update writer
 subhead: Ask for your standup. Get yesterday, today and blockers from your commits, PRs and tickets.
+explain: |
+  Your daily standup written in under a minute: yesterday, today and blockers. If your source control, tracker or chat is connected, it pulls recent commits, pull requests, ticket changes and build status, then sorts them into a short update.
+
+  Without connections, you tell it roughly what you worked on and it puts it into shape. It keeps the update short and focused on actions, so your team can read it in seconds. You can ask for just one part, such as only blockers. It works well for engineers who forget what they did yesterday by morning.
+when:
+  - Standup starts in five minutes and you cannot recall yesterday.
+  - You have rough notes and need them in a shareable format.
+  - You want your commits and tickets summed up for you.
+  - You want to flag a blocker clearly.
+you_give:
+  - Rough notes on your work (optional)
+  - Access to your commits and tickets (optional)
+  - "Which part you want: yesterday, today or blockers (optional)"
+you_get:
+  - A short standup update
+  - Yesterday and today sections
+  - A clear blockers list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

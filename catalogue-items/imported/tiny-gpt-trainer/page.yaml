@@ -6,6 +6,26 @@ summary: Give it any text file. Get a small GPT trained from scratch that writes
 job: build-software
 headline: Tiny GPT trainer
 subhead: Give it any text file. Get a small GPT trained from scratch that writes in that style, plus how it works.
+explain: |
+  Train your own small GPT from scratch on any text file and watch it learn to write in that style. It is built for learning how language models work, and it runs on a normal laptop for the small version.
+
+  The skill uses nanoGPT, a short and readable training codebase. It prepares your text, splits it into training and check sets, and runs the training script with a config sized to your computer. A character-level run on a small file finishes in about five minutes on CPU. You then sample text from the model and see how settings such as layers, size and training steps change the result.
+when:
+  - You want to understand how a GPT is built, not just use one.
+  - You have a text collection and want a tiny model that mimics it.
+  - You are teaching a class how language models are trained.
+  - You want to test how model size affects output.
+you_give:
+  - A plain text file
+  - Python with PyTorch
+  - A computer with CPU or graphics card
+  - How long you can train
+you_get:
+  - Prepared training data
+  - A trained small model
+  - Sample generated text
+  - Notes on how training works
+  - Settings to scale up
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

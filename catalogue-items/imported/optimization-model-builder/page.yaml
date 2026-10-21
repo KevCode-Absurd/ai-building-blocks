@@ -6,6 +6,26 @@ summary: Describe a choice with limits, like budget or capacity. Get a working m
 job: plan-supply-chain
 headline: Optimization model builder
 subhead: Describe a choice with limits, like budget or capacity. Get a working model and the best answer it finds.
+explain: |
+  Turn a decision with limits into a working model and the best answer it can find. Think of picking production amounts, routes or stock levels within a budget or capacity.
+
+  The skill asks what you decide, what to minimise or maximise, which limits are firm, how big the problem is and what data you trust. It then picks the right type, such as linear, integer or network flow, and writes Python code, mostly with open-source solvers. You can change the numbers and rerun it. It checks the answer against your limits and says in plain words which constraints hold the result back. Written with supply chain in mind.
+when:
+  - You must split limited capacity across products to earn the most.
+  - You want the cheapest shipping plan across several warehouses.
+  - You have a budget cap and many ways to spend it.
+  - Spreadsheet trial and error is no longer good enough.
+you_give:
+  - The decision you need to make
+  - What to minimise or maximise
+  - Your limits, such as budget or capacity
+  - The data tables
+  - Solver access (optional)
+you_get:
+  - A formal model of your problem
+  - Runnable Python code
+  - The best solution found
+  - Notes on which limits bind
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

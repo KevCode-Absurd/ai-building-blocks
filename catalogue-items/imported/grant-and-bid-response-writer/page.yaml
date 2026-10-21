@@ -6,6 +6,25 @@ summary: Say who you are. Get grants and bids worth chasing, a go or no-go call,
 job: sell-and-negotiate
 headline: Grant and bid response writer
 subhead: Say who you are. Get grants and bids worth chasing, a go or no-go call, and a draft response. Scrapes sites.
+explain: |
+  Fewer bids chased, more of them won. Tell it who your organisation is and it finds grants and government or formal bids worth your time, makes a go or no-go call on each, and drafts a response from what you have really done.
+
+  It first builds an organisation profile once, which every later step reads. Then it screens the feed fast, checks eligibility, and drops weak fits early so you do not waste hours. It is tuned for nonprofits, contractors and schools, but a business can run it too. It reads web pages to find opportunities, so expect it to browse sites for you.
+when:
+  - You spend hours reading solicitations that turn out to be a poor fit.
+  - You need a first draft for a grant application.
+  - You want a go or no-go reason you can show your team.
+  - You must send many bids a week with little time.
+you_give:
+  - Your organisation details
+  - Past projects and results
+  - Funding or contract types you want
+  - Deadlines and size limits (optional)
+you_get:
+  - A shortlist of opportunities
+  - A go or no-go call with reasons
+  - A saved organisation profile
+  - A draft response for each bid
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

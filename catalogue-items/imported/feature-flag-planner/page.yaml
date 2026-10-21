@@ -6,6 +6,26 @@ summary: Say what you ship. Get flags with rollout steps, kill switches and a pl
 job: ship-and-host
 headline: Feature flag planner
 subhead: Say what you ship. Get flags with rollout steps, kill switches and a plan to remove them later.
+explain: |
+  A plan for shipping a risky change behind a switch, ramping it up in safe steps, and removing the switch once it is done. Old flags are tidied up, not left to rot.
+
+  The skill sorts each flag into a type, such as release, experiment, ops or permission, because each type has a different life span and owner. It plans the ramp by population and days, for example by rings or by percent. It checks every flag has a working kill switch and a clean-up date. Three Python scripts scan a repo for stale flags, plan the rollout and audit kill switches. It also helps you compare providers like LaunchDarkly, GrowthBook, Statsig, Unleash and Flipt.
+when:
+  - You are about to release a large change and want a way to turn it off fast.
+  - Your codebase has dozens of old flags nobody dares remove.
+  - You need to pick a flag tool for your team.
+  - You want a gradual rollout to 100% over two weeks.
+you_give:
+  - The feature you are shipping
+  - User numbers and rollout time
+  - Your codebase for a flag scan (optional)
+  - The flag tool you use (optional)
+you_get:
+  - Flag type and owner
+  - A step-by-step rollout plan
+  - A kill switch check
+  - A stale flag report
+  - A clean-up date
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

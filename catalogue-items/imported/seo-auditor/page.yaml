@@ -6,6 +6,25 @@ summary: Give it a site or page. Get a scored SEO report and ranked fixes. Colle
 job: get-found-in-search
 headline: SEO auditor
 subhead: Give it a site or page. Get a scored SEO report and ranked fixes. Collects data from websites.
+explain: |
+  A scored SEO report on your site or page, plus an action plan with the fixes in priority order. Say "perform seo analysis on" and a URL, and it runs a full audit and saves two files: a detailed findings report and a ranked action plan. An HTML version is available too.
+
+  The skill covers 16 areas, including technical checks, page-level analysis, content quality, structured data, sitemaps, images, AI search readiness, international targeting and GitHub repo discoverability. About 89 scripts collect evidence from the live pages, so findings rest on what was fetched. You can run one area alone, such as technical or schema, or a full audit. It collects data from websites, so you need Python and web access.
+when:
+  - You want a full SEO health check on a site, with a score.
+  - You need to know whether a single page is set up well.
+  - Your structured data may be broken and you want it checked.
+  - You want a prioritised list to hand to a developer or writer.
+you_give:
+  - A site or page URL
+  - The area to focus on (optional)
+  - Python and web access
+  - Your main keywords (optional)
+you_get:
+  - A scored audit report
+  - A prioritised action plan
+  - An HTML report (optional)
+  - Evidence from the fetched pages
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

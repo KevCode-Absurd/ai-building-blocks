@@ -6,6 +6,26 @@ summary: Give it an idea to test. Get a clear hypothesis, sample size, test plan
 job: test-an-idea
 headline: Product experiment designer
 subhead: Give it an idea to test. Get a clear hypothesis, sample size, test plan and how to read the result.
+explain: |
+  A test plan you can run and trust: a clear hypothesis, the right sample size, and rules for when to stop and how to read the result. It keeps you from calling a winner too early.
+
+  Claude writes the idea in If, Then, Because form. It picks one decision metric, adds guardrail metrics to catch harm, and treats other numbers as diagnostics only. A Python script works out sample size from your baseline rate, the smallest change worth detecting, confidence and power. Ideas are ranked with ICE scoring: impact, confidence and ease. It then sets stopping rules before launch and reads the outcome.
+when:
+  - You have several ideas to test and need to pick the order.
+  - You want to know how many users a test needs.
+  - A test finished and you are unsure if the result is real.
+  - You need a simple hypothesis the whole team can agree on.
+you_give:
+  - The change you want to test
+  - Your current conversion rate or average
+  - The smallest improvement that would matter
+  - Test results to interpret (optional)
+you_get:
+  - A written hypothesis
+  - Primary and guardrail metrics
+  - A sample size and test duration
+  - ICE ranking of test ideas
+  - A plain reading of the result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

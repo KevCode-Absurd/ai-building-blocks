@@ -6,6 +6,26 @@ summary: Give it your audience and goal. Get several headline angles that earn t
 job: write-ad-copy
 headline: Headline option writer
 subhead: Give it your audience and goal. Get several headline angles that earn the click without clickbait or false promises.
+explain: |
+  A set of headline options aimed at one reader, each using a different angle, so you can pick or test the best. Good headlines get noticed because they feel relevant and leave a small gap the reader wants to close. Bad ones promise too much.
+
+  The skill first asks who the reader is, how aware they are of the problem, what you want them to do, where the headline will run, and any length limit. It then picks the mental state needed and writes headlines using different mechanisms, such as contrast, a specific number, a question or a surprising fact. Every line is checked against what you can prove, so there is no clickbait.
+when:
+  - Your ad or email subject line gets ignored.
+  - You are writing a landing page hero and want several angles.
+  - You want options for an A/B test.
+  - You need a headline that fits a tight character limit.
+you_give:
+  - Who the headline is for
+  - What you want them to do
+  - The channel, such as ad, email or page
+  - Facts you can prove about the offer
+  - Brand voice and length limits (optional)
+you_get:
+  - Several headlines with different angles
+  - A note on why each should work
+  - A pick for the best fit
+  - A check that no claim goes beyond your facts
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

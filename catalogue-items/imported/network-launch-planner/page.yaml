@@ -6,6 +6,26 @@ summary: Describe your product that needs many users to work. Get a plan to win 
 job: test-an-idea
 headline: Network launch planner
 subhead: Describe your product that needs many users to work. Get a plan to win the first small group and grow from there.
+explain: |
+  A launch plan for a product that is useless until other people join, such as a marketplace, a chat app or a team tool. The plan shows how to get the first small group to stay and use it.
+
+  It follows Andrew Chen's book The Cold Start Problem. The idea is to start with one tiny network that works on its own, not the whole market. You pick it, solve the harder side first (for example, sellers before buyers), and measure how dense it gets instead of counting signups. Then you repeat the same moves in the next group. It also covers the tipping point, fast growth, the ceiling and the moat, and scores your plan out of 10.
+when:
+  - You are launching a marketplace and have no sellers or buyers yet.
+  - Your app has signups but people leave because no one else is there.
+  - You want to choose which small group to win first.
+  - You need to explain your growth plan to investors.
+you_give:
+  - A description of your product and who uses it
+  - The two sides, if it has them
+  - Your current user numbers (optional)
+  - Your current launch plan (optional)
+you_get:
+  - The smallest network to launch in
+  - Which side to win first and how
+  - Density measures to track
+  - Steps to move to the next group
+  - A score for your plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

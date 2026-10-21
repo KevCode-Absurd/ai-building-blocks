@@ -6,6 +6,25 @@ summary: Share your people data and questions. Get the right metrics, a dashboar
 job: hire-people
 headline: HR metrics and report builder
 subhead: Share your people data and questions. Get the right metrics, a dashboard layout and a leadership report that tells the story.
+explain: |
+  A people report that leadership will read and act on. Share your HR data and the questions you face, and get the right metrics, a dashboard layout and a monthly report that tells a clear story.
+
+  It starts by matching metrics to your goals, then defines each one exactly, such as time to fill, turnover rate and cost per hire, so everyone counts the same way. It looks at turnover data for the causes of people leaving and for early signs of flight risk. It lays out dashboards for different readers, like executives and recruiters, and gives plain tips for charts non-HR people can follow. It also covers data quality checks, privacy rules for people data and simple forecasts.
+when:
+  - Leaders ask for HR numbers and you are unsure which ones matter.
+  - Turnover is rising and you need to find out why.
+  - Your monthly report is a pile of tables nobody reads.
+  - You need rules for keeping people data accurate and private.
+you_give:
+  - HR data such as headcount, exits and hires
+  - The decisions leaders must make
+  - Survey results (optional)
+  - Your industry and company size (optional)
+you_get:
+  - A short list of metrics with definitions
+  - A dashboard layout
+  - A leadership report template
+  - Turnover findings and priorities
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

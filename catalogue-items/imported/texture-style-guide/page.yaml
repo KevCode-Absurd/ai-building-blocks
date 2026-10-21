@@ -6,6 +6,25 @@ summary: Describe your product. Get a style guide that copies real objects and t
 job: design-work
 headline: Real-world texture style guide writer
 subhead: Describe your product. Get a style guide that copies real objects and textures, with rules for each part.
+explain: |
+  A style guide for an app or site that looks like real things: leather, paper, glass, brushed metal, buttons that seem to press down. It gives your designers and developers one shared rulebook instead of guesses.
+
+  You describe the product and its mood. The skill restates the design intent, then sets colors, type sizes, spacing and shadow depth before moving to parts such as buttons, cards and inputs. For each part it lists states, variants and how it behaves when touched. It adds accessibility rules, do and don't lists, plain-language writing tone, and ends with a checklist your team can use in code review.
+when:
+  - You want an interface that feels physical and familiar.
+  - Your team keeps making buttons and cards that do not match.
+  - You need design rules written down before developers start building.
+  - You are updating an older screen and want clear before-and-after guidance.
+you_give:
+  - A description of your product
+  - The mood you want, such as playful or calm
+  - Brand colors and fonts (optional)
+  - Screens or parts you must cover (optional)
+you_get:
+  - Color, type and spacing rules
+  - Part-by-part guidance with states
+  - Accessibility requirements
+  - A review checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

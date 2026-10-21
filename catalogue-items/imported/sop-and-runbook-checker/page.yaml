@@ -6,6 +6,25 @@ summary: Give it your SOPs or wiki export. Get missing owners, stale pages and g
 job: document-work
 headline: SOP and runbook checker
 subhead: Give it your SOPs or wiki export. Get missing owners, stale pages and gaps, plus new SOPs to fix them.
+explain: |
+  A list of the weak spots in your company procedures, with new SOPs written to fill the gaps. Give it your SOPs or a wiki export. It checks each one against the 5W2H questions: who, what, when, where, why, how and how much.
+
+  For runbooks it also looks for a named owner, an expected time, a clear sign that a step worked, a way to roll back, and who to call if it fails. It finds pages with no inbound links, stale pages with no review date, and terms used two different ways. Scoring runs through small Python tools, and you get a cleanup list in priority order.
+when:
+  - Your wiki has hundreds of pages and nobody knows which are current.
+  - A runbook is about to go into use and you want it checked first.
+  - Your SOPs name a team instead of a person as owner.
+  - You need a hygiene report on your Notion or Confluence space.
+you_give:
+  - Your SOPs, runbooks or a wiki export
+  - The processes that matter most (optional)
+  - Python available on your computer
+you_get:
+  - Completeness scores for each SOP
+  - A list of missing owners and stale pages
+  - Orphan page and glossary problems
+  - A prioritised cleanup list
+  - Draft SOPs for the gaps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

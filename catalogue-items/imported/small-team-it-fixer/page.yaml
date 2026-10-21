@@ -6,6 +6,25 @@ summary: Name the IT problem, like a lockout or Wi-Fi drop. Get steps to fix it,
 job: organise-work
 headline: Small team IT fixer
 subhead: Name the IT problem, like a lockout or Wi-Fi drop. Get steps to fix it, ranked by how many people it hits.
+explain: |
+  Fast fixes for the IT problems that land on you when nobody on the team has IT in their title. You name the problem, like a locked-out user, a Wi-Fi drop or a laptop that will not start, and get steps ordered by how many people it hits.
+
+  The skill triages first. It asks how many people are affected and whether revenue is at risk, then ranks company-wide outages above single laptops. Runbooks cover sign-in lockouts in Google Workspace, with commands for resetting passwords, unsuspending users and issuing backup codes, plus network, device and onboarding trouble. Some steps need admin access, so check the commands before running them on live accounts.
+when:
+  - Someone is locked out of their work account at midnight.
+  - The office Wi-Fi keeps dropping before a client demo.
+  - A new hire starts Monday and has no accounts.
+  - You are the accidental IT person and need a plan.
+you_give:
+  - A description of the problem
+  - How many people are affected
+  - Your tools, like Google Workspace
+  - Admin access when needed (optional)
+you_get:
+  - Problems ranked by impact
+  - Step by step fixes
+  - Commands for common admin tasks
+  - A note on what to check before you run them
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

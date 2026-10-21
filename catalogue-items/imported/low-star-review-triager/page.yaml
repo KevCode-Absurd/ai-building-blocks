@@ -6,6 +6,26 @@ summary: Paste 1 to 3 star app reviews. Get a ranked brief of risks, repeat prob
 job: understand-customers
 headline: Low-star review triager
 subhead: Paste 1 to 3 star app reviews. Get a ranked brief of risks, repeat problems and what to fix first.
+explain: |
+  A ranked brief from your 1 to 3 star app reviews that shows which ones are urgent, which repeat, and what to fix first. It stops you treating every angry review as equally important.
+
+  Paste the public review text. The skill sorts each review into a type: a real incident, a design problem, a pricing wording problem or a feature request. It scores how much damage each could do on a P0 to P3 scale, groups repeats across apps, and gives a first action for each row. Original wording stays attached so you can trace the source. It was made for Shopify apps. It needs no network or code, and you supply the text.
+when:
+  - A new 1-star review lands and you must decide whether it is an incident.
+  - You run several app listings and need one weekly support brief.
+  - You want to know which complaints keep coming back.
+  - You track a few competitors and want their weak spots.
+you_give:
+  - Low-star review text
+  - Which app each review belongs to
+  - Your own app and competitors (optional)
+  - Any known issues (optional)
+you_get:
+  - A P0 to P3 ranking
+  - Review type for each row
+  - Repeating problem groups
+  - A first action per review
+  - Original wording kept
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

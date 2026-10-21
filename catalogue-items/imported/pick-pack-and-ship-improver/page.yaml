@@ -6,6 +6,26 @@ summary: Describe how orders move through your space. Get the slow steps found a
 job: run-your-store
 headline: Pick, pack and ship improver
 subhead: Describe how orders move through your space. Get the slow steps found and a fix plan with expected time saved.
+explain: |
+  Find the slow steps in how orders move through your space and get a fix plan with the time each fix should save. It covers receiving an order through to leaving the door.
+
+  The skill starts with the facts: orders per day, peaks, lines per order, speed promised, accuracy goals, tools in use and limits on space, staff and budget. It then reviews each stage: order intake, picking, packing, shipping and returns. It weighs picking methods and flags where staff walk or wait too much. You get priorities ranked by gain and effort. It fits small shops and large warehouses.
+when:
+  - Orders go out late and you do not know which step is slow.
+  - Mispicks or wrong parcels are costing refunds.
+  - Peak season is coming and you need capacity.
+  - You are choosing between picking methods.
+you_give:
+  - Order volume and peaks
+  - Lines per order
+  - Delivery promises and cut-off times
+  - Current process and pain points
+  - Staff, space and budget limits
+you_get:
+  - Bottlenecks found step by step
+  - A ranked fix plan
+  - Expected time and accuracy gains
+  - A comparison of picking methods
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

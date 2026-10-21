@@ -6,6 +6,26 @@ summary: Say what you need to train. Get a rented GPU server chosen, set up, loa
 job: build-software
 headline: Rented GPU server setup helper
 subhead: Say what you need to train. Get a rented GPU server chosen, set up, loaded with your files and shut down after.
+explain: |
+  A rented GPU machine picked for your job, set up, loaded with your files and shut down when you finish. You stop paying for idle hardware.
+
+  You say what you need to train or run. The skill matches it to a Lambda Labs instance type, such as an A100 or H100, and shows the price per minute. It uses the Lambda API to launch the machine, adds your SSH key, attaches a persistent file store so your data survives restarts, and copies your files over. The machine comes with PyTorch, CUDA and related tools already installed. When you are done it terminates the server. You need a Lambda account and an API key.
+when:
+  - Your laptop is too slow to train a model.
+  - A training run will last many hours and you need storage that persists.
+  - You want to compare GPU types before you pay.
+  - You keep forgetting to shut a rented server down.
+you_give:
+  - What you need to train or run
+  - Lambda account and API key
+  - SSH key
+  - Files or code to upload
+  - Budget or run length (optional)
+you_get:
+  - Chosen GPU instance with price
+  - Running server with SSH access
+  - Persistent storage set up
+  - Shutdown steps so billing stops
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

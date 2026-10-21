@@ -6,6 +6,25 @@ summary: Tell it about a dispute. Get a notice telling staff which records to ke
 job: check-contracts
 headline: Records preservation notice drafter
 subhead: Tell it about a dispute. Get a notice telling staff which records to keep. A first draft, not legal advice.
+explain: |
+  A notice telling staff which records they must keep when a dispute is likely, written as a first draft for a lawyer to review. Tell it about the matter. It captures the scope, the people who hold records, the date range and the systems involved, then drafts the notice in your house style.
+
+  It can also write a refreshed notice when scope changes, flag people who have left, and draft the release notice when the hold ends. It checks your matter log first, so a conflicts check has been done before anything goes out. You confirm the draft and log change before anything is saved. It is not legal advice.
+when:
+  - A customer threatened a lawsuit and you must stop records being deleted.
+  - The scope of a case grew and staff need an updated notice.
+  - An employee on the hold list has left the company.
+  - The matter settled and you need to release the hold.
+you_give:
+  - The dispute and key facts
+  - People and teams who hold records
+  - Date range and systems
+  - Your hold template and matter log
+you_get:
+  - A draft hold notice
+  - Updated notices when scope changes
+  - A release notice
+  - A log entry for the matter
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

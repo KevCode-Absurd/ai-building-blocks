@@ -6,6 +6,25 @@ summary: Describe a lab part, like a mount or chip mold. Get a parametric design
 job: build-software
 headline: Lab hardware designer
 subhead: Describe a lab part, like a mount or chip mold. Get a parametric design and STEP, STL or DXF files.
+explain: |
+  A lab part you can fabricate, built as code so you can change one number and rebuild. Describe the mount, chip mold, holder or fixture. The skill sorts it into a device family, such as microfluidics or optomechanics, and loads the matching standards, because the hard part is fitting equipment with fixed sizes. A holder 0.5 mm too wide will not fit the plate reader.
+
+  It writes parametric Python with build123d, exports STEP as the master file plus STL or DXF, then checks the dimensions with numbers and a rendered picture before anything is made. You need Python and the build123d package installed, and you should only run model files you trust.
+when:
+  - You need a mount that fits your optical table's bolt pattern.
+  - You want a microfluidic chip mold with the right channel sizes.
+  - You need a plate holder that matches a vendor's published dimensions.
+  - You want to change one dimension on a part and get new files fast.
+you_give:
+  - What the part does and what it mates with
+  - Key dimensions or the vendor drawing
+  - Material and fabrication method
+  - An existing STEP file to modify (optional)
+you_get:
+  - Parametric Python model
+  - STEP, STL or DXF files
+  - Dimension checks against the standard
+  - A preview image to inspect
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

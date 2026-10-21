@@ -6,6 +6,25 @@ summary: List your brands and products. Get a clear structure for how they relat
 job: brand-file
 headline: Brand family planner
 subhead: List your brands and products. Get a clear structure for how they relate and what each one is called.
+explain: |
+  A clear structure for how your brands, sub-brands and products relate, with a name rule for each, so customers are never confused. It picks the model that fits your goals and then applies it to your real list.
+
+  The skill lays out each option: one master brand with plain sub-names, a house of separate brands, or a mix. For each it gives an example, when it suits, and its main risk. It asks about your parent brand, current and planned products, audience overlap, how competitors are set up, and whether you want the parent brand to grow or each product to stand alone.
+when:
+  - You have several products and no naming rule.
+  - You are adding a new product and don't know where it fits.
+  - Two brands you own overlap and confuse buyers.
+  - You plan to enter a new market with a new audience.
+you_give:
+  - Your parent brand and category
+  - A list of products and services
+  - Planned additions
+  - Whether the parent or each product should lead
+you_get:
+  - A recommended brand structure
+  - A map of how each brand relates
+  - Naming rules for new products
+  - Risks to watch
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

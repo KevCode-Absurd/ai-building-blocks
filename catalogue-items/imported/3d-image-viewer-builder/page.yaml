@@ -6,6 +6,26 @@ summary: Give it a 3D scan or mesh. Get a viewer with slices, overlays and marke
 job: build-software
 headline: 3D image viewer builder
 subhead: Give it a 3D scan or mesh. Get a viewer with slices, overlays and marked regions.
+explain: |
+  You get MATLAB code that opens a 3D scan or surface mesh in an interactive viewer. You can scroll through slices, lay a colour mask on top, and draw marked regions and notes right on the volume.
+
+  The skill picks the right display call for your data type. Volumes go in a volume viewer, and meshes use a faster surface object than the older isosurface route. Medical files such as DICOM or NIfTI load through the medical volume class, which brings in spacing and units from the file. It also covers overlays, drawn shapes with move callbacks, streaming data in, and wrapping the viewer in an app. It needs MATLAB with the Image Processing Toolbox.
+when:
+  - You have a CT or MRI file and want to look at it in 3D.
+  - You need to lay a segmentation mask over the original scan.
+  - You want users to draw regions of interest on a volume.
+  - You are building a small app around a 3D data viewer.
+you_give:
+  - A 3D volume, scan file or mesh
+  - A mask or label volume to overlay (optional)
+  - Which shapes or regions you want to mark
+  - MATLAB with the Image Processing Toolbox
+you_get:
+  - MATLAB code for the viewer
+  - Overlay and mask display
+  - Drawn regions and annotations
+  - Slice scrolling controls
+  - A starter app layout (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

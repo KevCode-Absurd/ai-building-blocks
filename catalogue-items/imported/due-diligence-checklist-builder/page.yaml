@@ -6,6 +6,25 @@ summary: Describe the deal and sector. Get a request list by workstream with sta
 job: money-and-investing
 headline: Due diligence checklist builder
 subhead: Describe the deal and sector. Get a request list by workstream with status tracking and red flag notes.
+explain: |
+  A diligence request list shaped to your deal, split by workstream, with a status column and a place for red flags. You describe the target and sector, and you get a list you can send to the other side and track.
+
+  The skill starts by asking five things: the company and model, the deal type, size, known worries and timeline. It then builds checklists for each area, such as financial, legal, tax, commercial, operations and people, with items picked for the sector. Examples include quality of earnings, debt-like items and customer concentration. This version follows Indian conventions: an April to March year and lakh and crore units, labelled clearly to avoid 100 times errors.
+when:
+  - You are about to buy or invest in a company and need a request list.
+  - You want one tracker the deal team can update.
+  - You want sector-specific questions, not a generic list.
+  - You need Indian fiscal year and currency handled right.
+you_give:
+  - Target company, sector and model
+  - Deal type and size
+  - Known concerns
+  - Target timeline
+you_get:
+  - Checklists by workstream
+  - Status tracking columns
+  - Red flag notes
+  - Priority items for your main concerns
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

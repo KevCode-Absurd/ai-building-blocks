@@ -6,6 +6,24 @@ summary: Point it at a Lovable export. Get the Lovable tags, branding and filler
 job: build-software
 headline: Lovable project cleaner
 subhead: Point it at a Lovable export. Get the Lovable tags, branding and filler files removed so the project is yours.
+explain: |
+  A project export with every trace of Lovable removed, so the code reads as your own before you ship or open-source it. It covers fifteen places where the tool leaves marks.
+
+  The main one is a hidden dev dependency and a matching call in the Vite config. Removing both is always safe. Then it replaces the stock favicon, share image, logo and page title, and strips the Lovable link from the README. It also deletes the generated notes in the root folder, such as cleanup, deployment and development summaries. Finally, it audits the project again to make sure nothing was missed. It assumes a Vite and React project with shadcn components.
+when:
+  - You exported a project from Lovable and want it to look like your own work.
+  - Your page title and favicon are still the generic defaults.
+  - You see extra summary markdown files in the project root.
+  - You are about to open-source the code and want to audit for leftovers.
+you_give:
+  - The exported project folder
+  - Your own name, title and icons (optional)
+  - Whether to keep generated docs (optional)
+you_get:
+  - The tagger dependency and config call removed
+  - Branding files and title replaced
+  - Generated docs deleted
+  - A final leftovers report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

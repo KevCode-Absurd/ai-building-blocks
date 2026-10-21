@@ -6,6 +6,23 @@ summary: Give it a Windows script. Get operator, quoting and error handling mist
 job: test-and-fix-code
 headline: PowerShell pitfall checker
 subhead: Give it a Windows script. Get operator, quoting and error handling mistakes caught and fixed.
+explain: |
+  Catch the Windows PowerShell mistakes that make scripts fail for no clear reason, and get the corrected script back.
+
+  The skill checks for known traps. Logical operators like -and and -or need each command wrapped in brackets. Emoji and fancy symbols break output, so it swaps them for plain tags like [OK] and [!]. It reviews null checks, quoting, error handling and path handling, and rewrites any line that is wrong. You paste your script and get a list of what was found plus a fixed version. It is built for Windows PowerShell.
+when:
+  - A script runs on your machine but errors on a colleague's.
+  - An if statement with -or behaves strangely.
+  - Your output shows garbled characters.
+  - You want a quick review before sharing a script.
+you_give:
+  - Your PowerShell script
+  - Error message (optional)
+  - Windows or PowerShell version (optional)
+you_get:
+  - List of mistakes found
+  - Corrected script
+  - Plain explanation for each fix
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe a partner who approached you. Get a sign or pass call, the rig
 job: sell-and-negotiate
 headline: Partner deal evaluator
 subhead: Describe a partner who approached you. Get a sign or pass call, the right tier and terms to ask for.
+explain: |
+  A sign or pass decision on a partner who approached you, with the right tier, a 90-day plan and a revenue share range. It tells you if they are a real partner or after better terms.
+
+  It asks four questions: does this partner bring their own demand, what tier fits (referral, reseller, OEM, services or strategic), what joint plan proves it works in 90 days, and what share makes sense before direct sales would earn more. The result includes clear stop criteria. It also helps with underperforming partners, deciding to restructure or end. It does not sign anything. You decide.
+when:
+  - A company asks for reseller or OEM terms and you are not sure.
+  - A big name wants a strategic tie and you need to test it.
+  - A consulting firm wants a share of your product revenue.
+  - An existing partner underperforms and you must decide what to do.
+you_give:
+  - Who the partner is and what they ask for
+  - Your product, price and margin
+  - What they bring, such as customers or reach
+  - Your current partner terms (optional)
+you_get:
+  - Sign or pass call
+  - Recommended tier
+  - 90-day joint plan
+  - Revenue share band with stop criteria
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

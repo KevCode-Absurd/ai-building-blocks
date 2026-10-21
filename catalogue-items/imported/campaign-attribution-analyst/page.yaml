@@ -6,6 +6,25 @@ summary: Give it your campaign data. Get attribution by channel, funnel drop-off
 job: read-ad-results
 headline: Campaign attribution analyst
 subhead: Give it your campaign data. Get attribution by channel, funnel drop-offs and ROI, with what to change.
+explain: |
+  You see which channels earn credit for sales, where buyers drop out of your funnel, and what each campaign returned. Give it your campaign data as JSON and three small scripts do the maths the same way every time.
+
+  One script spreads credit across touchpoints in each customer path to purchase under several attribution models. Another counts how many people move between funnel stages and flags the biggest drop. The third works out return on spend, cost per lead and cost per customer for each campaign. They use plain Python with no extra packages and no outside calls. You need Python and data shaped like the sample files.
+when:
+  - Customers touch email, search and social before buying and you cannot tell which one deserves credit.
+  - Half your visitors vanish between two funnel stages and you want to know which.
+  - You need a return-on-spend table to defend next quarter's budget.
+  - You want results that repeat exactly when the same data is run again.
+you_give:
+  - Customer paths to purchase with channels and timestamps
+  - Funnel stage names and counts
+  - Campaign spend, revenue, clicks and leads
+  - Python on your computer
+you_get:
+  - Attribution results by channel
+  - Funnel drop-off rates by stage
+  - ROI and cost per lead for each campaign
+  - Suggestions on what to change
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

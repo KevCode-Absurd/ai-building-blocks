@@ -6,6 +6,24 @@ summary: Ask for a full file or list. Get every line, with no placeholders, skip
 job: set-up-ai
 headline: Full answer enforcer
 subhead: Ask for a full file or list. Get every line, with no placeholders, skipped parts or half answers.
+explain: |
+  When you ask for a full file or list, you get every line. No "rest of code here", no stubs and no "let me know if you want more".
+
+  The skill bans a list of shortcuts: placeholder comments in code, skeletons in place of real code, "for brevity" and skipped sections. It counts the pieces you asked for, builds each one completely, then compares the count before sending. If an answer is too long for one reply, it breaks cleanly at the end of a function or file and continues, instead of squeezing the rest. It won't invent files or keys it doesn't have.
+when:
+  - Your AI keeps cutting code short with comments like "same as above".
+  - You need a whole file, not a snippet.
+  - You asked for a long list and keep getting half of it.
+  - You need long output split cleanly into parts.
+you_give:
+  - Your request for the full output
+  - Source files or context
+  - Number of items you expect (optional)
+you_get:
+  - Complete files or lists with nothing skipped
+  - No placeholders or TODO stubs
+  - Clean continuation chunks for long answers
+  - Final check against what you asked for
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

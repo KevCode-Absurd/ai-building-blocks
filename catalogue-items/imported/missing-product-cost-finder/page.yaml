@@ -6,6 +6,25 @@ summary: Get a list of products with no cost set, so your margin and stock value
 job: run-your-store
 headline: Missing product cost finder
 subhead: Get a list of products with no cost set, so your margin and stock value reports stay right.
+explain: |
+  A list of products in your Shopify store that have no cost, or a cost of zero, so your margin and stock value reports can be trusted. Reports built on missing costs look better than they are.
+
+  It reads every variant in your catalogue and checks the cost recorded for each. You can limit it to active products, one vendor, or items in stock, and choose whether a zero cost counts as missing. It adds up how many are missing, their share of the catalogue, and the stock value affected. It only reads data and never edits anything, so it is safe to run at any time. It needs a signed-in Shopify CLI with read access to products and inventory.
+when:
+  - Your profit report shows margins that look too good.
+  - You are preparing for a stock count or accounts review.
+  - A new supplier's products were added in bulk with no costs.
+  - You want to know how many items still need a cost entered.
+you_give:
+  - Your store domain
+  - Product status to check, such as active
+  - One vendor to focus on (optional)
+  - Whether to count zero cost as missing
+you_get:
+  - A list of variants with no cost
+  - The count and share of your catalogue
+  - Estimated stock value affected
+  - Output as a readable list or JSON
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it your needs and options. Get vendors scored against your criteri
 job: think-and-decide
 headline: Software vendor chooser
 subhead: Give it your needs and options. Get vendors scored against your criteria, RFP questions, risk notes and a contract checklist.
+explain: |
+  A clear pick between software tools or suppliers, backed by scores you can show your team. Tell it the need, budget, timeline and who will use the tool. It works in five phases. First it defines the real problem before any demos. Then it asks whether you should build instead of buy.
+
+  Next it scores each vendor against weighted criteria, drafts RFP questions, and notes risks such as lock-in, finances and security. It ends with a contract checklist and a plan for switching if you change your mind. Useful at renewal time too.
+when:
+  - You are comparing three tools and cannot decide which to buy.
+  - A renewal is coming and you need to know whether to stay or switch.
+  - You need to write an RFP and do not know what to ask.
+  - You want to check how risky a supplier is before signing.
+you_give:
+  - The problem you want solved
+  - Your budget and timeline
+  - The vendors you are comparing
+  - Must-have integrations or compliance rules (optional)
+you_get:
+  - A weighted vendor scorecard
+  - RFP questions
+  - Risk notes for each vendor
+  - A contract negotiation checklist
+  - A build versus buy view
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

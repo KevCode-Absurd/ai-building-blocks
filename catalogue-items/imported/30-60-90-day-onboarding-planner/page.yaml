@@ -6,6 +6,27 @@ summary: Tell it the role and team. Get a 30, 60 and 90 day plan that gets a new
 job: hire-people
 headline: 30-60-90 day onboarding planner
 subhead: Tell it the role and team. Get a 30, 60 and 90 day plan that gets a new person productive.
+explain: |
+  A written plan for a new hire's first three months, with clear goals for day 30, day 60 and day 90, is ready to hand over.
+
+  The plan is built in four layers. Week one covers belonging: introductions, accounts, and a first small win. Then comes context, where the person learns how the work flows. Next is contribution, with real tasks and a mentor. The last layer is mastery, where they own something. The skill fits each layer to the role, flags the usual traps, and can also capture knowledge held in one person's head.
+when:
+  - A new hire starts next month and you have nothing written down.
+  - A contractor or agency partner needs to get up to speed fast.
+  - People keep leaving in their first 90 days and you want to know why.
+  - One person holds all the know-how and you need it captured.
+you_give:
+  - The role and what success looks like at 90 days
+  - The team members who will mentor or answer questions
+  - Existing docs, runbooks or files the person will need
+  - Tools and accounts they need access to
+  - How many hours your team can give to training (optional)
+you_get:
+  - A 30, 60 and 90 day plan
+  - A first-week checklist
+  - A mentor and buddy schedule
+  - Check-in questions for each stage
+  - A list of knowledge gaps to document
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

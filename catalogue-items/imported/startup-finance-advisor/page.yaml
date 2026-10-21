@@ -6,6 +6,26 @@ summary: Give it your numbers. Get unit economics, runway, fundraising steps and
 job: money-and-investing
 headline: Startup finance advisor
 subhead: Give it your numbers. Get unit economics, runway, fundraising steps and a finance pack for the board.
+explain: |
+  Finance questions that usually wait for a part-time CFO get answered from your own numbers. You get burn and runway under base, good and bad cases, unit economics split by customer cohort instead of blended, and a plan for the next raise.
+
+  It starts with pointed questions: your burn multiple, whether you survive if fundraising takes six months, and your net revenue retention. Then it works through dilution, cash tactics and the layout of a board finance pack. It also asks you to set decision triggers now, such as the runway at which you start cutting, so you are not deciding in a panic. Some steps can run small Python scripts for burn, unit economics and round scenarios.
+when:
+  - You are about to raise money and need to know how much dilution each option costs.
+  - Your board wants a finance pack and you do not know what to put in it.
+  - You suspect blended customer numbers are hiding a drop in newer cohorts.
+  - You want to know when to start cutting costs before cash gets tight.
+you_give:
+  - Monthly revenue, costs and cash balance
+  - Customer counts and churn by signup month
+  - Planned hires and spend
+  - Funding plans or term sheet details (optional)
+you_get:
+  - Runway scenarios for base, good and bad cases
+  - Unit economics by cohort and by channel
+  - A fundraising timeline with dilution estimates
+  - A board finance pack outline
+  - Decision triggers tied to runway
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

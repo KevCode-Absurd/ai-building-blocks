@@ -6,6 +6,25 @@ summary: Give it a policy topic and your country. Get a plain draft, a manager g
 job: hire-people
 headline: HR policy drafter
 subhead: Give it a policy topic and your country. Get a plain draft, a manager guide and a rollout plan. Not legal advice.
+explain: |
+  A clear company policy that staff can read and follow, with the guide and rollout plan to go with it. Give a topic and your country and get a plain draft, a manager guide and a plan for telling everyone. It is not legal advice.
+
+  It can write policies on leave, remote work, conduct, performance and discipline, and build or update a handbook. Each policy comes with an approval flow, an owner and a review date, so none goes stale. It also drafts talking points for managers, a question-and-answer sheet for staff, a change summary between old and new versions, an exception process and a sign-off tracker. For several countries it adapts wording to each place.
+when:
+  - You have no remote work policy and staff are asking for one.
+  - You are updating an old handbook after a law change.
+  - You need to explain a policy change to managers and staff.
+  - Your policies are scattered and nobody knows who owns them.
+you_give:
+  - The policy topic
+  - Your country or state
+  - Company size and industry
+  - Your current policy text (optional)
+you_get:
+  - A plain-language policy draft
+  - A manager guide with talking points
+  - A staff question-and-answer sheet
+  - A rollout and sign-off plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

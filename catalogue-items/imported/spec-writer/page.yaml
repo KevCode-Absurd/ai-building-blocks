@@ -6,6 +6,24 @@ summary: Talk through your idea. Get the conversation turned into a spec and pos
 job: build-software
 headline: Spec writer
 subhead: Talk through your idea. Get the conversation turned into a spec and posted to your issue tracker.
+explain: |
+  A feature spec written from the conversation you already had, then posted to your issue tracker and marked ready for an agent to pick up. It does not interview you. It uses what the chat and codebase have already shown.
+
+  First it looks at the repo and uses your own domain terms. Then it picks the best place to test the feature, preferring existing test points and aiming for as few as possible, and checks that choice with you. The spec covers the problem, the solution, a long list of user stories, implementation decisions and testing choices.
+when:
+  - You just talked through a feature and want it written down.
+  - You need a spec in your issue tracker for an agent to build.
+  - You want testing points chosen before building starts.
+  - You would rather not answer a long list of questions again.
+you_give:
+  - The conversation about the feature
+  - Access to the codebase
+  - Your issue tracker and label setup
+you_get:
+  - A spec with problem, solution and user stories
+  - Implementation decisions
+  - A testing plan with chosen test points
+  - The spec posted to your tracker with a ready label
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

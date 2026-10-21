@@ -6,6 +6,25 @@ summary: Give it what a student just said. Get follow-up moves that push their t
 job: teach-and-train
 headline: Follow-up question writer
 subhead: Give it what a student just said. Get follow-up moves that push their thinking further.
+explain: |
+  After a student says something half right or surprising, you get follow-up questions that push their thinking further, so you are not stuck saying "good, anyone else?".
+
+  You give the student's exact words, what you want the class to understand and the topic. The skill offers a few moves drawn from research on classroom talk: asking them to say more, to give evidence, to build on a classmate's idea, to disagree respectfully, or to connect it to the lesson goal. Each comes with the exact words to say and a note on when to use it. Level and confidence of the student shape how they are phrased.
+when:
+  - A student gives a thin answer and you want to draw out more.
+  - A student says something wrong in an interesting way and you want to use it.
+  - You want the class to build on each other's ideas.
+  - You run discussion lessons and want better questions ready.
+you_give:
+  - What the student said
+  - What you want students to understand
+  - Subject and topic
+  - Age group and student confidence (optional)
+you_get:
+  - Several follow-up questions in your voice
+  - Why each move works
+  - When to use each one
+  - Prompt for the whole class to join in
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your AI system. Get risks mapped, measured and managed under t
 job: check-contracts
 headline: AI risk framework planner
 subhead: Describe your AI system. Get risks mapped, measured and managed under the NIST AI framework, with a plan.
+explain: |
+  Your AI system's risks, laid out under the NIST AI Risk Management Framework, with owners and next steps. NIST is the US standards body, and the framework is voluntary, so this is a way to organise your thinking, not a compliance badge.
+
+  You describe the system. The skill works through the four functions: govern, map, measure and manage. It gives a status for each category, a gap list and a risk register. Every item cites the exact framework reference, such as MAP 1.5, so others can trace it. Outside vendors' models get their own rows in the register. For banks, it ties treatments to existing model risk rules.
+when:
+  - You deploy AI and need a written risk process leaders can sign off.
+  - A customer asks how you manage AI risk and you have no document.
+  - You need an owner and a priority for each AI risk.
+  - You want to compare your practice with the NIST framework.
+you_give:
+  - A description of your AI system and how it is used
+  - Your current policies and roles (optional)
+  - Third-party models or vendors you rely on
+  - Your industry (optional)
+you_get:
+  - A status table by function and category
+  - A risk register with owners and treatments
+  - A prioritised action plan
+  - Policy text you can paste and edit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

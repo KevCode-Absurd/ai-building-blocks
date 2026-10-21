@@ -6,6 +6,26 @@ summary: Describe your inbound and outbound loads. Get a plan to move goods truc
 job: plan-supply-chain
 headline: Cross-docking planner
 subhead: Describe your inbound and outbound loads. Get a plan to move goods truck to truck without storing them.
+explain: |
+  A cross-dock plan that moves goods from inbound trucks to outbound trucks without putting them on a shelf. You get a layout idea, a flow design and the numbers to check it.
+
+  It starts with questions about your products, volumes, dock doors, staging space, time window and systems. Then it picks the right type: pre-sorted direct transfer, consolidation of many origins into one load, or break-bulk that splits a big load across destinations. It sets out the dock assignment logic, the staging approach and the handling rules for each, so goods leave within hours of arriving. It points to separate help for warehouse design and dock scheduling.
+when:
+  - You want to cut storage cost by moving freight straight from truck to truck.
+  - Small shipments from many suppliers need to become full truckloads.
+  - A full container has to be split for several stores or customers.
+  - Your dock is jammed and you need a clearer flow plan.
+you_give:
+  - Product type and case or pallet size
+  - Inbound and outbound volumes and timing
+  - Number of dock doors and staging space
+  - Temperature or inspection needs (optional)
+  - Current WMS or TMS setup (optional)
+you_get:
+  - The cross-dock type that fits your loads
+  - A flow and staging plan
+  - Dock assignment rules
+  - Handling time and cost targets
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

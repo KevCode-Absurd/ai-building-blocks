@@ -6,6 +6,27 @@ summary: Say what to clean from a signal. Get a filter designed, checked and app
 job: build-software
 headline: Digital filter designer
 subhead: Say what to clean from a signal. Get a filter designed, checked and applied.
+explain: |
+  A digital filter that removes the noise or interference you named, designed, checked and applied to your signal in MATLAB. You also get the reasoning behind each choice.
+
+  It covers lowpass, highpass, bandpass, bandstop and notch filters. The skill decides between FIR and IIR designs, and between streaming and offline use. If those or the phase needs are not stated, it asks and does not guess. It writes all code to .m files, and reads its reference notes before every design call. For narrow transition bands it can switch to multirate or IFIR methods. You can compare candidates in Filter Analyzer. It needs MATLAB with Signal Processing Toolbox and DSP System Toolbox.
+when:
+  - Your sensor data has a 50 or 60 Hz hum you need to remove.
+  - You must choose between an FIR and an IIR filter and want the trade-offs explained.
+  - A real-time pipeline needs a filter that works on streaming data.
+  - You need a sharp cutoff between two close frequencies.
+you_give:
+  - Your signal or its sample rate
+  - The frequencies to keep and to remove
+  - Streaming or offline use
+  - Phase needs, such as linear phase (optional)
+  - MATLAB with the signal toolboxes
+you_get:
+  - A designed and verified filter
+  - MATLAB .m files for the design
+  - A comparison of FIR and IIR options
+  - Plots that show the response
+  - The filter applied to your data
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

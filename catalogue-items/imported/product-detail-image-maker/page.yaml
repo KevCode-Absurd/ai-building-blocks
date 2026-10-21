@@ -6,6 +6,25 @@ summary: Give it a product photo and selling points. Get detail page pictures wi
 job: product-photos
 headline: Product detail image maker
 subhead: Give it a product photo and selling points. Get detail page pictures with the text built in. Your image model draws them.
+explain: |
+  Product detail page images with the selling points already laid out as text on the picture, ready to upload. Most image models scramble written text, so the model you pick matters more than any other setting.
+
+  Claude takes one product photo and your selling points, then writes a prompt for each page module, such as a top banner with headline and short feature line. It keeps the product's color, weave and shape matched to your photo and plans where the text sits. The method is built around Chinese text, so check that your image model renders your language cleanly. Claude cannot draw. An image model or API key does that step.
+when:
+  - You need a set of detail page modules for a product listing.
+  - You want headlines and feature lines placed on the image.
+  - Plain photos make your listing look unfinished.
+  - You are launching a product with only one source photo.
+you_give:
+  - A clear product photo
+  - Your selling points and headline wording
+  - The language for the text on the image
+  - Access to an image model that renders text well
+you_get:
+  - A prompt for each detail page module
+  - Text layout notes for banner and feature areas
+  - Advice on choosing a model that renders text
+  - Tips to keep the product true to the photo
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

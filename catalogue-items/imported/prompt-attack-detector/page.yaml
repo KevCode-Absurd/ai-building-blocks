@@ -6,6 +6,25 @@ summary: Point it at your AI app's inputs. Get a small filter that flags tricks 
 job: build-software
 headline: Prompt attack detector
 subhead: Point it at your AI app's inputs. Get a small filter that flags tricks and hidden instructions before they land.
+explain: |
+  A small filter that checks text before it reaches your AI app and flags tricks like "ignore previous instructions" or commands hidden inside documents. Bad input gets caught before it does damage.
+
+  It uses Meta's Prompt Guard, a compact classifier that labels text as normal, injection or jailbreak. You set a threshold, and anything over it is blocked or sent for review. Use it on user messages, and on third-party content such as web pages or search results that feed a retrieval system. It handles several languages and runs fast, including in batches. You need Python with transformers and torch, and model access on Hugging Face.
+when:
+  - Your chatbot takes free text from the public and you worry about jailbreaks.
+  - Your app reads web pages or emails and someone could hide instructions in them.
+  - You want a quick check on documents before they enter your search index.
+  - You need a log of suspicious inputs for review.
+you_give:
+  - The inputs or documents to screen
+  - Score threshold you want to use (optional)
+  - Python setup with the model downloaded
+  - Whether the text is user input or third-party data
+you_get:
+  - Working filter code
+  - Label and score for each text
+  - Block or allow decisions
+  - Batch screening script
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

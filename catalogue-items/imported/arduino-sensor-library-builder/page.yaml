@@ -6,6 +6,25 @@ summary: Name a sensor MATLAB lacks. Get a custom Arduino library so you can use
 job: build-software
 headline: Arduino sensor library builder
 subhead: Name a sensor MATLAB lacks. Get a custom Arduino library so you can use it from MATLAB.
+explain: |
+  A custom library so MATLAB can use a sensor or part it doesn't support out of the box, such as a DHT22, an OLED screen or NeoPixels. Name the part and you get the link between MATLAB and the Arduino code.
+
+  The skill does two fast checks first. It runs listArduinoLibraries to see if native support exists, and it searches MathWorks contributions on File Exchange for a ready add-on. If either exists, it stops and tells you. If not, it builds a custom add-on that wraps the Arduino C++ library for MATLAB, using the LibraryBase structure and the arduinoioaddons folder. It does not handle plain I2C or SPI, standalone Arduino code or Simulink.
+when:
+  - You want temperature readings from a DHT22 sensor in MATLAB.
+  - You need to drive an OLED screen or motor driver from MATLAB.
+  - You have an Arduino C++ library and want to call it from MATLAB.
+  - You aren't sure whether MATLAB already supports your part.
+you_give:
+  - The sensor or part name
+  - Your Arduino board model
+  - The existing Arduino C++ library (optional)
+  - MATLAB and an Arduino to test
+you_get:
+  - A native support check
+  - A custom add-on if none exists
+  - MATLAB functions for the part
+  - Setup and test steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

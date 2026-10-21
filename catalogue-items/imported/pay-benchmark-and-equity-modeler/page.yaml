@@ -6,6 +6,24 @@ summary: Give it a role or pay data. Get market ranges, outliers and equity gran
 job: hire-people
 headline: Pay benchmark and equity modeler
 subhead: Give it a role or pay data. Get market ranges, outliers and equity grant models. Not pay or tax advice.
+explain: |
+  A market pay check for a role, a scan of your pay data for outliers and a model of stock grants. It helps you set offers and plan raises. It is not pay or tax advice.
+
+  There are three ways to use it. Ask what to pay a role in a city. Upload a sheet of your pay bands and see who sits too high or low. Or model an equity grant, such as 10,000 shares over four years at a given price. It looks at base, bonus, equity and benefits together, and at role, level and location. You verify the figures before acting.
+when:
+  - You need an offer number for a new hire.
+  - You want to find people paid far off their band.
+  - A retention grant needs a vesting model.
+  - You are planning next year's raises.
+you_give:
+  - Role, level and city, or your pay sheet
+  - Equity details such as shares, price and vesting (optional)
+  - Market data you trust (optional)
+you_get:
+  - Market range for the role
+  - List of pay outliers
+  - Equity value schedule by year
+  - Notes on assumptions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

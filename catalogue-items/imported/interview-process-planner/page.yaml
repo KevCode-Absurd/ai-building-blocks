@@ -6,6 +6,26 @@ summary: Name the role and level. Get the interview stages, who runs each one an
 job: hire-people
 headline: Interview process planner
 subhead: Name the role and level. Get the interview stages, who runs each one and what each stage checks.
+explain: |
+  A hiring process where every stage has a purpose and no one asks the same thing twice. Give it the role and level. It lists the skills you must have, then assigns each to an interview stage, such as a recruiter screen, technical deep dive, work sample or panel.
+
+  It follows firm rules: front-load deal-breakers, check key skills at least twice with different people, and keep total hours in range for the level. It sets a candidate timeline with no long silences, names who runs each stage, and adds advance and reject criteria before the first candidate walks in. A review step tells you when to adjust the process after several hires.
+when:
+  - You are opening a role and have no clear interview plan.
+  - Your current process feels long and candidates keep dropping out.
+  - Interviewers keep asking the same questions in every round.
+  - You need to explain the stages to a hiring manager and the candidate.
+you_give:
+  - The role title and level
+  - The job description or must-have skills
+  - Who is available to interview
+  - Your target time to hire (optional)
+you_get:
+  - A stage-by-stage interview plan
+  - A skills-to-stage map
+  - An owner and length for each stage
+  - Advance and reject criteria
+  - A candidate timeline
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

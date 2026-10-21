@@ -6,6 +6,25 @@ summary: Give it two companies and deal terms. Get the effect on earnings per sh
 job: money-and-investing
 headline: Merger effect modeler
 subhead: Give it two companies and deal terms. Get the effect on earnings per share, cost savings cases and price split.
+explain: |
+  A model that shows whether buying a company adds to or cuts your earnings per share, and by how much. Give it both companies and the deal terms, and you get the price paid, how it is funded, and what happens after cost savings.
+
+  It works through a purchase price table, then sources and uses of cash, then the earnings effect for different mixes of cash and stock. Cost and revenue savings are phased in over time and tested in cases. The skill is set for Indian deals: fiscal years run April to March, and amounts are in lakh and crore, with a warning about an Excel format that is off by 100 times.
+when:
+  - You are weighing an acquisition and need to know if it lifts earnings.
+  - You want to compare paying in cash versus shares.
+  - You need to test how many cost savings make the deal break even.
+  - You are building an Indian deal model and want the units right.
+you_give:
+  - "Buyer details: share price, share count, earnings, debt and cash"
+  - "Target details: price, shares and earnings"
+  - Offer price and cash versus stock mix
+  - Expected savings and fees
+you_get:
+  - A purchase price and value table
+  - A sources and uses of funds table
+  - Earnings per share before and after the deal
+  - Savings cases and a break-even view
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it company facts. Get a draft sale memorandum with a clear structu
 job: money-and-investing
 headline: Sale memorandum drafter
 subhead: Give it company facts. Get a draft sale memorandum with a clear structure and story.
+explain: |
+  The long document buyers read first when a company is for sale, drafted from your facts. It has to tell a clear story, and this gives it a set order and flow.
+
+  You bring what you have: management slides, three to five years of accounts, forecasts, customer data and an org chart. The draft starts with a short summary and five to seven reasons to buy. Then it covers the company, its market, products, customers, operations, financials and the deal. It is set up for Indian deals, so it uses April to March years and lakh and crore units, and says where India has no equivalent.
+when:
+  - You are selling a company and need a first draft of the sale document.
+  - You have scattered slides and spreadsheets and need one story.
+  - An advisor asked for a memorandum outline to review.
+  - You want investment highlights written clearly for buyers.
+you_give:
+  - Management presentations
+  - Three to five years of financials
+  - Forecast or budget
+  - Customer and org chart details (optional)
+you_get:
+  - A section-by-section memorandum draft
+  - Seven or fewer investment highlights
+  - A financial summary with correct units
+  - A list of missing facts to collect
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it an article. Get a plan for where pictures belong and a matching
 job: make-images
 headline: Article illustrator
 subhead: Give it an article. Get a plan for where pictures belong and a matching set of illustrations.
+explain: |
+  An article with pictures in the right places, all drawn in one matching look. The skill reads your text first and marks the spots where a picture would help a reader, such as a hard idea, a process or a long stretch with nothing to rest the eye on.
+
+  Then it asks you to pick three things: the type of picture, the style and the colours. It writes an outline with one short brief per picture, and only then makes the images, so every picture follows the same choices. It needs an image tool to draw with, such as the one built into your AI app.
+when:
+  - You wrote a long post and it looks like a wall of text.
+  - You want pictures that all share one style instead of a random mix.
+  - You need to know which paragraphs deserve a picture before you pay for any.
+  - You are publishing an article and have no designer.
+you_give:
+  - Your article text
+  - The look you want, or a few examples (optional)
+  - Any pictures you want kept as style references (optional)
+you_get:
+  - A list of where pictures belong
+  - A picture outline with one brief per spot
+  - A matching set of illustrations
+  - Placement notes for your article
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

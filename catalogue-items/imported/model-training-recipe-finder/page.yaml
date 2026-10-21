@@ -6,6 +6,26 @@ summary: Say what you are training. Get the right settings, a safe training loop
 job: build-software
 headline: Model training recipe finder
 subhead: Say what you are training. Get the right settings, a safe training loop and a checklist for when the loss goes wrong.
+explain: |
+  The right training settings for what you are building, plus a safe loop and a checklist for when the loss misbehaves. It saves the weeks that usually go to trial and error.
+
+  You start with a table that matches your data type and size to a model: images, text, tables, audio, molecules, proteins or medical scans. The skill then supplies tested patterns for PyTorch: weight setup, optimizer choices, learning rate groups, data loading, checkpoints and spreading work across GPUs. It adds scaling rules for your compute budget and a keep or discard loop for running many experiments. The core idea is that a good recipe beats a fancier model.
+when:
+  - You are training a model and do not know where to start with settings.
+  - The loss goes to NaN or stops improving.
+  - You must pick a model size for a fixed GPU budget.
+  - You work on biology or medical data and need specific advice.
+you_give:
+  - What you are training and on what data
+  - Data size
+  - Your hardware and budget
+  - Where it fails right now (optional)
+you_get:
+  - A model choice with reasons
+  - Optimizer and learning rate settings
+  - A tested training loop
+  - A loss troubleshooting checklist
+  - Scaling advice for your budget
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

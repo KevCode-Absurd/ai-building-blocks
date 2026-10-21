@@ -6,6 +6,26 @@ summary: Give it molecules and measured results. Get a tested model that predict
 job: research-topics
 headline: Molecule property predictor
 subhead: Give it molecules and measured results. Get a tested model that predicts a property, with fair train and test splits.
+explain: |
+  A tested model that predicts a property of a molecule, such as solubility or toxicity, with fair splits so the score means something.
+
+  The skill uses DeepChem. It first cleans your data: it parses molecule strings, records rejected rows and checks duplicate structures and repeated measurements. It trains a simple number-based baseline before any neural network. It splits by molecular scaffold or by time, so test molecules are truly new, and fits preprocessing on training data only. Settings are chosen on validation data and the final test is run once. The report shows per-task counts and warns that a good fit is not proof for new chemistry.
+when:
+  - You have lab results for a few thousand compounds and want to predict the rest.
+  - Your model looks great and you worry about leakage between train and test.
+  - You need a baseline before trying a graph neural network.
+  - You want results in the original units, not scaled numbers.
+you_give:
+  - Molecules as SMILES strings
+  - Measured values or labels
+  - Units and assay conditions
+  - The deployment question, such as new scaffolds (optional)
+you_get:
+  - A cleaning report with rejected rows
+  - A baseline and a tuned model
+  - A scaffold or time split
+  - Test scores with counts per task
+  - Limits on where to trust it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

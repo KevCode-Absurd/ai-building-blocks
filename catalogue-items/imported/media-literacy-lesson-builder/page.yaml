@@ -6,6 +6,26 @@ summary: Give it an ad, news item or post. Get a lesson that helps learners see 
 job: teach-and-train
 headline: Media literacy lesson builder
 subhead: Give it an ad, news item or post. Get a lesson that helps learners see persuasion, bias and who is shown.
+explain: |
+  A lesson that teaches learners to take apart an ad, news story, post or video and ask why it was made that way. You pick the media type, what to notice and the year group, and you get a ready-to-teach protocol.
+
+  The lesson is built around four questions: who made it and why, what techniques it uses, how people and ideas are shown, and who it is aimed at. A fifth question sits on top of them all: what is left out, and whose voice is missing. The techniques are matched to the media type, so a poster is read differently from a TikTok. If you give no example text, it writes a model one to teach with.
+when:
+  - You want a class to spot persuasion in an Instagram ad.
+  - You are teaching how a news article frames an issue as one-sided.
+  - You need a lesson on who is shown and who is missing in a campaign poster.
+  - You want a reusable question set for any media text.
+you_give:
+  - The type of media text
+  - What learners should notice
+  - The year group
+  - The actual text or a description of it (optional)
+  - Learning objectives (optional)
+you_get:
+  - A step-by-step deconstruction protocol
+  - Questions on production, language, representation and audience
+  - Prompts about what is left out
+  - A modelling script for the teacher
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

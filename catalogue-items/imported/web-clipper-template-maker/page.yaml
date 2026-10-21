@@ -6,6 +6,25 @@ summary: Name the site you clip from. Get a tested Obsidian Web Clipper template
 job: organise-work
 headline: Web clipper template maker
 subhead: Name the site you clip from. Get a tested Obsidian Web Clipper template that saves clean, well-labelled notes.
+explain: |
+  A tested template for the Obsidian Web Clipper that saves a clean, well-labelled note from one kind of site, such as recipes, videos or articles. Each clip then lands in your vault with the right fields filled in.
+
+  You name the site or content type. The skill checks if you already have an Obsidian Base with the properties you use, then fetches a real sample page. It reads the page's structured data, meta tags and selectors, and tests each selector against the page rather than guessing. It then drafts the importable JSON template, sets the note name, folder, properties and the body layout, and explains the variables so you can adjust it later.
+when:
+  - You clip recipes and want ingredients and times in properties.
+  - You save YouTube videos and want title, channel and link filled in.
+  - Your clipped notes are messy and need the same shape each time.
+  - You want a template for a site that clips poorly.
+you_give:
+  - The site or content type
+  - A sample page link
+  - Your Obsidian Base file or property names (optional)
+  - Where clips should be saved (optional)
+you_get:
+  - A template file you can import
+  - Selectors checked on a real page
+  - Property mapping to your notes
+  - Short notes on editing it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

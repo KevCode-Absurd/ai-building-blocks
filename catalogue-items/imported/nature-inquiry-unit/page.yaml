@@ -6,6 +6,26 @@ summary: Name a nearby garden, pond or hedge. Get a unit that teaches your scien
 job: teach-and-train
 headline: Local nature inquiry unit planner
 subhead: Name a nearby garden, pond or hedge. Get a unit that teaches your science or geography goals through it.
+explain: |
+  A science or geography unit built around one living place near your school, such as a garden, a pond, a hedgerow or a patch of waste ground. Pupils study the real thing, and your curriculum goals get covered along the way.
+
+  You give the place and the learning goals. The skill shapes a central question, then plans hands-on investigations that meet each goal. It uses ideas from place-based teaching: start with wonder and local contact, not worry about big problems, and let pupils find things out first hand. It can scale from one lesson to a year, and suggests local experts such as gardeners or park rangers who could visit or advise.
+when:
+  - You must teach a science topic and want it rooted in something pupils can visit.
+  - Your school has a small garden or pond and no plan to use it.
+  - You want pupils to ask their own questions about nature.
+  - You have only a week and need a tight outdoor unit.
+you_give:
+  - The local place or living system
+  - The curriculum goals to cover
+  - Year group (optional)
+  - Time frame (optional)
+  - Outdoor space and local experts available (optional)
+you_get:
+  - A central inquiry question
+  - Investigations tied to each goal
+  - A timeline for your chosen length
+  - Ideas for local experts and visits
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

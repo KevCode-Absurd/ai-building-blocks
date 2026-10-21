@@ -6,6 +6,25 @@ summary: Give it a vague request. Get asked one question at a time until what yo
 job: think-and-decide
 headline: Intent interviewer
 subhead: Give it a vague request. Get asked one question at a time until what you really want is clear.
+explain: |
+  A clear statement of what you really want, reached by being asked one question at a time before any plan or code exists. People ask for "a dashboard" because that is what one asks for, when what they need is something else.
+
+  The skill looks for what is missing: who it is for, why, what success looks like, and the main limit. It also catches cases where two good goals pull apart, like simple against flexible. Each question comes alone, with a reason and, where possible, choices. It stops when the picture is clear and sums it up for you to confirm. Skip it for simple, exact tasks like renaming a file, or when you want speed over checking.
+when:
+  - You have a vague idea and cannot yet say what you want built.
+  - A request sounds standard but you suspect it hides a real need.
+  - You are about to start a big task and want to avoid wasted work.
+  - Two goals conflict and you have not chosen between them.
+  - You want your thinking pressure-tested before you commit.
+you_give:
+  - Your rough request
+  - Honest answers to each question
+  - Any limits on time, budget or tools (optional)
+you_get:
+  - A sharper statement of the real goal
+  - Surfaced assumptions
+  - Success measures
+  - A summary to confirm before work starts
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

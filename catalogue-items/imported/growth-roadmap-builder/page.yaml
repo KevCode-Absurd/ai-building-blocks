@@ -6,6 +6,26 @@ summary: Tell it your stage and numbers. Get the growth lever that pays most now
 job: run-your-store
 headline: Growth roadmap builder
 subhead: Tell it your stage and numbers. Get the growth lever that pays most now, plus a step by step roadmap.
+explain: |
+  If your online shop has stalled, you probably do not need more of everything. You need the one fix that pays most right now. This skill checks your numbers first: cost to win a customer, lifetime value, average order size and margin per sale. Then it scores five growth levers: more traffic, better conversion, bigger orders, more repeat buyers, and expansion.
+
+  It also uses the Ansoff Matrix, adjusted for shops, to compare selling more on your current channel, adding channels like Amazon or TikTok Shop, adding products, or entering new markets. The result is a ranked list of moves and a 90 day roadmap with steps in order. No code or API key is needed.
+when:
+  - Your shop has been flat for a few months and you do not know why.
+  - You are choosing between adding a new sales channel and launching new products.
+  - You want a 90 day plan with a clear order of work.
+  - You are not sure whether to spend on ads, email or your product page first.
+you_give:
+  - Your platform or platforms, such as Shopify, Amazon or Etsy
+  - Monthly revenue and margin
+  - Customer cost and order size, if you know them
+  - Your target and timeframe
+  - Email list and social following size (optional)
+you_get:
+  - A health check of your shop numbers
+  - The growth lever that pays most right now
+  - A channel or product expansion verdict
+  - A 90 day roadmap with steps in order
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

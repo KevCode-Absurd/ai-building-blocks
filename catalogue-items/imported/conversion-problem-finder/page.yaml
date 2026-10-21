@@ -6,6 +6,25 @@ summary: Give it a landing page. Get the conversion problems found and a set of 
 job: audit-landing-page
 headline: Conversion problem finder
 subhead: Give it a landing page. Get the conversion problems found and a set of tests worth running, each with a clear reason.
+explain: |
+  A list of why a page or checkout loses visitors, scored by how bad it is, plus A/B tests worth running, each with a reason behind it. It stops you from testing button colours while a bigger problem sits unfixed.
+
+  You give it a page. The skill checks it against a conversion method: customer research and objections, persuasion elements, and a quick diagnostic. It writes test ideas as hypotheses that state the change, the expected result and why. It covers test setup, including sample size and how long to run, and warns about common mistakes like stopping early. Results come as a ranked list so you start with the change most likely to matter.
+when:
+  - Your landing page gets traffic but few sign ups.
+  - People add to cart and then leave.
+  - You want to test things but don't know where to start.
+  - You need to explain to a team why a test is worth running.
+you_give:
+  - The page URL or screenshots
+  - Your current conversion rate
+  - Traffic per week (optional)
+  - What customers say about you (optional)
+you_get:
+  - Problems found and scored
+  - Test ideas as hypotheses
+  - Priority order
+  - Test setup guidance
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

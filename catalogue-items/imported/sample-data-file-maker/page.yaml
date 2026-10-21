@@ -6,6 +6,26 @@ summary: Say which columns and rules you need. Get a realistic fake dataset as C
 job: test-and-fix-code
 headline: Sample data file maker
 subhead: Say which columns and rules you need. Get a realistic fake dataset as CSV, JSON, SQL or a script.
+explain: |
+  Realistic fake data for testing, in the shape and size you need. Tell it the columns and rules and get a dataset as CSV, JSON, SQL inserts or a script that makes it.
+
+  You name the product, the type of data such as orders or user profiles, the row count (100 by default), the columns and any business rules. It plans each column with a type and range, uses realistic patterns for names, emails and dates, and applies your rules so rows stay consistent, for example a ship date after an order date. It can write the data out or give you a Python script to rerun with more rows. A last check looks for gaps and invalid values.
+when:
+  - You are building an app and need sample records to try it.
+  - A demo needs data that looks real but is not.
+  - You want to load a test database with orders and customers.
+  - You need a repeatable script to refresh test data.
+you_give:
+  - The type of data and product name
+  - Column names or fields
+  - Number of rows
+  - Output format
+  - Business rules (optional)
+you_get:
+  - A dataset in your chosen format
+  - A Python script that regenerates it
+  - Consistent, realistic values
+  - A quality check of the output
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your visits and orders. Get every one sorted into the same 11 c
 job: track-numbers
 headline: Traffic channel classifier
 subhead: Give it your visits and orders. Get every one sorted into the same 11 channels, whatever tool it came from.
+explain: |
+  Every visit and order gets one of the same 11 channel labels, whether it came from GA4, a tracking pixel, Shopify or an ad network. Your reports stop disagreeing about what counts as paid social or email.
+
+  The skill applies one fixed set of rules in a set order: click IDs first, then explicit network, paid medium, native channel, non-paid medium, Shopify type, source hints, referrer, then direct. Anything unclear becomes Other, and the raw signals are kept next to the label. It ships a small script and a BigQuery function, plus test cases. A click ID is treated as a routing clue, not proof that money was spent. It needs Node to run the script.
+when:
+  - Your GA4 and Shopify reports show different channel totals.
+  - You are joining data from several sources and need one label set.
+  - You want a BigQuery function that sorts sessions into channels.
+  - You need to explain why a visit was labelled paid or organic.
+you_give:
+  - Visit or order rows with source, medium, referrer and click ID fields
+  - The source system, such as GA4 or Shopify
+  - Native channel labels already in your data (optional)
+  - Landing page URLs (optional)
+you_get:
+  - One of 11 channels for each row
+  - The rule that chose each label
+  - A BigQuery function
+  - Test cases to check the setup
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

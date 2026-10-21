@@ -6,6 +6,27 @@ summary: Give it a big task. Get a plan that splits it among AI agents with clea
 job: set-up-ai
 headline: Multi-agent workflow planner
 subhead: Give it a big task. Get a plan that splits it among AI agents with clear owners, handoffs and checks.
+explain: |
+  A plan that splits a big task among AI agents, with a clear owner for each piece, defined handoffs and checks before anything is merged.
+
+  It starts with one measurable goal and a line around what agents may touch. Work is divided by separate outputs, not by vague roles. The plan draws a task graph with owners, inputs, outputs, files each may write and a check for each task. Only tasks with independent inputs run in parallel. It sets approval points, retry limits and stop conditions, then a final step that settles disagreements and checks the combined result. It says plainly when a task is too small to split.
+when:
+  - You have a large job and want several agents working at once.
+  - Two agents edited the same file and overwrote each other.
+  - A handoff lost key details between steps.
+  - You need a human approval step before anything goes live.
+you_give:
+  - The goal and what done looks like
+  - Agents and tools available
+  - Shared files or systems
+  - Deadline and budget (optional)
+  - Who makes the final call
+you_get:
+  - A task graph with owners
+  - A handoff rule for each step
+  - Approval and retry rules
+  - A merge and check plan
+  - A final report template
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

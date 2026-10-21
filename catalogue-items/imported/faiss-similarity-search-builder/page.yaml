@@ -6,6 +6,25 @@ summary: Give it your embeddings. Get a fast index that finds the closest matche
 job: build-software
 headline: FAISS similarity search builder
 subhead: Give it your embeddings. Get a fast index that finds the closest matches among millions of items.
+explain: |
+  A search index that finds the closest items among millions of vectors in milliseconds, set up in code you can run. It is the engine behind "find similar" for text, images and products.
+
+  You give it your embeddings. The skill shows how to pick an index type for your size and speed needs: exact flat search for small sets, IVF to search only part of the data, and compressed indexes when memory is tight. You then train the index, add the vectors, search for neighbours, and save it to disk. It covers GPU use and how to measure the trade-off between speed and recall. It needs Python and the FAISS library, and it has no metadata filtering.
+when:
+  - You have a million embeddings and a brute-force search is too slow.
+  - You want a find-similar feature for products or documents.
+  - You need to pick between flat, IVF and compressed indexes.
+  - You want to move your search from CPU to GPU.
+you_give:
+  - Your embedding vectors
+  - Vector size and item count
+  - Your speed and memory limits
+  - A set of test queries (optional)
+you_get:
+  - Python code to build the index
+  - An index choice with the reason
+  - A saved index file
+  - A speed versus recall check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

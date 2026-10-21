@@ -6,6 +6,24 @@ summary: Give it a video or podcast. Get versions in other languages that keep e
 job: work-with-audio
 headline: Video dubbing editor
 subhead: Give it a video or podcast. Get versions in other languages that keep each speaker's voice, ready to correct.
+explain: |
+  Your video or podcast in new languages, still in each speaker's own voice, with a chance to fix the words before the final version. 
+  The skill uses the ElevenLabs dubbing service. You upload a file or give a link, and it transcribes the source into editable segments with speaker names and timing. Then you add as many target languages as you like. Each language gets its own translation, and you can refine any segment, then regenerate the dubbed audio. It tells you to use the current projects interface, not the old dubbing calls. You need an ElevenLabs account and an API key, which the setup command can create for the project.
+when:
+  - You have a course video and want Spanish and German versions.
+  - A podcast episode needs a translated audio track.
+  - The first translation got a product name wrong and you need to fix it.
+  - You want to check the source transcript before paying for several languages.
+you_give:
+  - A video, audio file or link
+  - Target languages
+  - An ElevenLabs account and key
+  - Corrections to the transcript or translation (optional)
+you_get:
+  - An editable source transcript
+  - A dubbed track per language in the original voices
+  - Segment-level translation edits
+  - Regenerated audio after each change
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

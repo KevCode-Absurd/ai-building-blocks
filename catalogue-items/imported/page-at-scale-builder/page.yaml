@@ -6,6 +6,26 @@ summary: Give it a keyword pattern and data. Get a page template and plan for ma
 job: get-found-in-search
 headline: Page-at-scale builder
 subhead: Give it a keyword pattern and data. Get a page template and plan for many useful search pages.
+explain: |
+  A page template and a rollout plan for hundreds of search pages, built so none of them read as thin or copied. You give it a keyword pattern, such as service plus city, and the data you have to fill it.
+
+  It first checks the pattern for real search demand and who already ranks. Then it ranks your data by how hard it is to copy, from data only you hold down to public lists anyone can use. It designs one template where each page carries something unique, sets a clean folder URL structure, and recommends starting with a small batch before you publish thousands.
+when:
+  - You want one page for every city, tool or use case you cover.
+  - You have a data set and wonder if it can power a directory.
+  - You worry that near-identical pages will get ignored by search.
+  - You need a plan for URLs, templates and internal links before building.
+you_give:
+  - Keyword pattern, like [service] in [city]
+  - Your data source or spreadsheet
+  - Your product and buyer
+  - Competitor pages that rank today (optional)
+you_get:
+  - Page template with unique-content slots
+  - URL structure plan
+  - Page count and demand estimate
+  - Quality checks before publishing
+  - Small first-batch launch plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

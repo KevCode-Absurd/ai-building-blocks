@@ -6,6 +6,26 @@ summary: Give it a skill. Get a lesson that moves from you showing it, to practi
 job: teach-and-train
 headline: Direct teaching lesson builder
 subhead: Give it a skill. Get a lesson that moves from you showing it, to practice together, to practice alone.
+explain: |
+  A lesson plan where the teacher shows the skill first, the class tries it together next, and then each learner does it alone. This gradual hand-over, backed by research on explicit instruction, helps new skills stick.
+
+  You give the skill to teach, the learners' age and prior knowledge, and how much time you have. The skill builds three stages: I do (the teacher models and thinks aloud), We do (guided practice with prompts and quick checks), and You do (independent work). It sizes each stage to your lesson time. It draws on work by Rosenshine, Archer and Hughes, and Hattie. Use it for maths methods, writing steps, science procedures or any clear skill.
+when:
+  - You need to teach a step-by-step skill and want a tight lesson structure.
+  - Learners nod along but cannot do the task alone afterwards.
+  - You are planning a short lesson with a fixed time limit.
+  - A new teacher needs a clear model to build lessons from.
+you_give:
+  - The skill or concept to teach
+  - Learner age or year group and prior knowledge
+  - The lesson length
+  - Known misconceptions (optional)
+you_get:
+  - A three-stage I do, We do, You do lesson
+  - Teacher talk and thinking-aloud prompts
+  - Guided practice tasks
+  - Independent practice tasks
+  - Quick checks for understanding
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

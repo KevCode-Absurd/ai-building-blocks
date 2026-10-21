@@ -6,6 +6,24 @@ summary: Give it MATLAB code and a chip. Get embedded code set up and tested on 
 job: ship-and-host
 headline: Microcontroller code deployer
 subhead: Give it MATLAB code and a chip. Get embedded code set up and tested on that hardware.
+explain: |
+  MATLAB code turned into C or C++ for your chip, with a test that proves the generated code gives the same answers. Name the board and the code and the setup is built for you.
+
+  It creates an embedded real-time configuration using MATLAB Coder with Embedded Coder, which gives production-style code with no operating system needed. It sets the hardware, either from a support package for boards like STM32 or by hand with word sizes for an ARM Cortex-M. It can switch off dynamic memory use. Then it sets up processor-in-the-loop testing, which runs the generated code on the target and compares results with MATLAB. It needs MATLAB with those toolboxes.
+when:
+  - You must put a MATLAB algorithm on an STM32 or Raspberry Pi board.
+  - You need code with no dynamic memory allocation.
+  - You want proof the C code matches the MATLAB result.
+  - You are deploying an AI model entry-point function to an embedded device.
+you_give:
+  - The MATLAB function to deploy
+  - The target board or processor
+  - Memory or no-heap rules (optional)
+you_get:
+  - A code generation configuration
+  - Hardware settings for your board
+  - Generated C or C++ code
+  - A processor-in-the-loop test setup
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

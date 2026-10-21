@@ -6,6 +6,25 @@ summary: Paste the complaint and your draft reply. Get promises, facts and tone 
 job: help-customers
 headline: Angry customer reply checker
 subhead: Paste the complaint and your draft reply. Get promises, facts and tone checked, plus a repaired draft.
+explain: |
+  A reply to an upset customer can calm things down or make them worse. Paste the complaint and your draft, and you get a clear list of what works and what will backfire, plus a repaired version you can send.
+
+  The skill reads your draft as a second pair of eyes. It lists every point the customer raised and marks each as answered, partly answered or missed. It lists every promise you made and checks it against the policy you supplied. It compares facts such as dates and amounts with the original message. It then flags blame, defensive phrases, empty apologies and risky wording, and checks that the reply ends with a next step, who does it and by when.
+when:
+  - You wrote a reply to a refund demand and want a check before you press send.
+  - A customer's message made you angry and you fear your draft sounds sharp.
+  - You are not sure you are allowed to promise what you just offered.
+  - A new team member drafts replies and you want a safety net.
+you_give:
+  - The customer's message, in full
+  - Your draft reply
+  - Your policy or a list of what you can offer
+  - Order or case facts (optional)
+you_get:
+  - Each customer point marked answered or missed
+  - Each promise checked against your rules
+  - Tone flags with the exact words quoted
+  - A repaired draft with a clear next step
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

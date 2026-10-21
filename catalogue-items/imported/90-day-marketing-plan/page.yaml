@@ -6,6 +6,27 @@ summary: Describe your store. Get a buyer profile, your best channels, a budget 
 job: run-your-store
 headline: Ninety day marketing plan builder
 subhead: Describe your store. Get a buyer profile, your best channels, a budget split, and a 90 day action plan.
+explain: |
+  Your online store gets a full marketing plan: who your buyer is, which channels to start with, how to split your budget, and what to do in each of the first 90 days.
+
+  The skill starts with your product, market and rivals. From that it writes a buyer profile with pains and buying reasons, then maps how competitors price and position, and where the gaps sit. Next it ranks channels such as paid ads, search, email and text, content, social, influencers and referrals by likely return for your stage. Each one gets a budget share and a content direction. It works for Shopify, Amazon, Etsy and others, and needs no API key.
+when:
+  - You just launched a store and have no marketing plan.
+  - You have a small budget and need to know where to spend it first.
+  - You want to know who your best buyer is and where to find them.
+  - You are planning the next quarter and want weekly actions.
+you_give:
+  - Your product and price
+  - Your store platform
+  - Your marketing budget
+  - Your main competitors (optional)
+  - Your sales so far (optional)
+you_get:
+  - A buyer profile
+  - A ranked channel list with budget split
+  - An email and text flow outline
+  - A content and social direction
+  - A 90 day action plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB and r
 job: build-software
 headline: Outside AI model importer
 subhead: Give it a PyTorch, ONNX or Keras model. Get it loaded into MATLAB and ready to run.
+explain: |
+  A trained model from PyTorch, ONNX or Keras, loaded into MATLAB as a network you can run, and checked against the original so you know the results match.
+
+  You give the model file, such as .pt2, .pt, .onnx or .keras. The skill picks the right import route for the format. It sets the input sizes and data formats, handles the PyTorch export step, and runs the import. If it fails, it helps with unsupported operators, networks left uninitialised or zero learnable parameters. Then it runs the same input through both versions and compares the outputs. It does not cover exporting out of MATLAB, training afterwards or embedded deployment. Needs MATLAB with Deep Learning Toolbox.
+when:
+  - A colleague trained a model in PyTorch and you work in MATLAB.
+  - Your import throws unsupported operator warnings.
+  - The imported network shows zero learnables.
+  - You must prove the imported model gives the same answers.
+you_give:
+  - The model file
+  - Input size and data format
+  - A sample input (optional)
+  - MATLAB with Deep Learning Toolbox
+you_get:
+  - A MATLAB network ready to use
+  - Fixes for import errors
+  - A match check against the source model
+  - Notes on unsupported parts
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

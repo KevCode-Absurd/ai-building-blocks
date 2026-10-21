@@ -6,6 +6,25 @@ summary: Name an industrial server. Get MATLAB connected securely and its nodes 
 job: build-software
 headline: OPC UA client connector
 subhead: Name an industrial server. Get MATLAB connected securely and its nodes browsed.
+explain: |
+  MATLAB code that finds an industrial OPC UA server, connects to it securely, and lets you browse what it offers. You name the server and get working steps instead of trial and error with certificates.
+
+  It starts with discovery through the local discovery service and reads the server's endpoints and security policies. It then connects as a client, with a username and password or with certificates, and sets the security mode. It handles the common stumbling blocks, such as untrusted certificates and host name mismatches, and inspects certificate files. Once connected, it walks the node tree, finds nodes by name or ID, calls methods, and processes large namespaces in batches.
+when:
+  - You need to read data from a factory machine into MATLAB.
+  - Your connection fails with a certificate trust error.
+  - Discovery returns an empty list and you do not know why.
+  - You want to find a node by name in a huge address space.
+you_give:
+  - The server name or address
+  - Login or certificate details
+  - The security mode required (optional)
+  - The node or data you want
+you_get:
+  - MATLAB code to discover and connect
+  - Security and certificate setup
+  - Fixes for trust and host name errors
+  - Node browsing and lookup code
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

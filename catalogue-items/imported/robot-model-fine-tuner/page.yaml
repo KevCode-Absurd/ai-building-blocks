@@ -6,6 +6,25 @@ summary: Give it your robot data. Get a pi0 robot model fine-tuned on it, and a 
 job: build-software
 headline: Robot model fine-tuner
 subhead: Give it your robot data. Get a pi0 robot model fine-tuned on it, and a server that runs it.
+explain: |
+  A robot policy model trained on your own task data, plus a server that other code can call to get actions back. This covers the pi0 family from Physical Intelligence, using the open OpenPI project.
+
+  The work follows one loop whenever your data or settings change: compute normalisation stats, train, serve the checkpoint, then test inference. You can train in JAX or PyTorch and convert checkpoints between them. It covers the model variants, from best quality to fastest, and setups for ALOHA, DROID and LIBERO robots. It also helps fix wrong normalisation stats and GPU memory limits. You need a strong GPU.
+when:
+  - You recorded robot demonstrations and want a pi0 model trained on them.
+  - You need a policy server that your robot code can call over a socket.
+  - Training runs out of GPU memory and you need to know what to change.
+  - You have a JAX checkpoint and need a PyTorch copy.
+you_give:
+  - Your robot dataset
+  - Which robot setup you use, such as ALOHA or DROID
+  - Your GPU type and memory
+  - Which pi0 variant you want (optional)
+you_get:
+  - A training config for your data
+  - Fine-tuning steps in JAX or PyTorch
+  - A running policy inference server
+  - Fixes for stats and memory errors
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

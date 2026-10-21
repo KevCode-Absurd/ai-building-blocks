@@ -6,6 +6,25 @@ summary: Describe how someone will work for you. Get employee or contractor risk
 job: hire-people
 headline: Employee or contractor checker
 subhead: Describe how someone will work for you. Get employee or contractor risks flagged. Not legal advice.
+explain: |
+  A first read on whether a person should be treated as an employee or a contractor, with the risk points marked. Describe how they will work for you, and you get the tests that apply and where your plan does not fit. This is not legal advice. For existing relationships, talk to a lawyer.
+
+  The skill uses what you give and asks only about gaps. It runs the classification tests for the place involved, then flags where real working life clashes with the contractor label. Examples are your tools, set hours, working in a team, working only for you, and pay by project. Use it before the work starts.
+when:
+  - You want to hire a freelancer for six months.
+  - You have a recruiter who works only for you.
+  - Someone's job looks more like employment than their contract says.
+  - You are drafting a contractor agreement.
+you_give:
+  - How the person will work
+  - Where they are based
+  - Tools, hours and pay terms
+  - Contract draft (optional)
+you_get:
+  - The tests that apply
+  - Flags where the plan looks like employment
+  - Questions to settle before starting
+  - A summary of risk areas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

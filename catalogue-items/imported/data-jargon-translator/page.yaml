@@ -6,6 +6,24 @@ summary: Paste your technical findings and name the reader. Get jargon found and
 job: write-and-tell-stories
 headline: Data jargon translator
 subhead: Paste your technical findings and name the reader. Get jargon found and the text rewritten in plain business words.
+explain: |
+  A technical write up becomes something a VP, finance lead or product manager can act on, with the original kept in an appendix for the experts.
+
+  You paste your findings and name the reader. The skill scans for jargon terms, scores reading level before and after, and aims for grade 10 or lower for executives. It picks a reader profile with their typical vocabulary and questions. Then it swaps technical phrases for plain equivalents, such as turning a p-value below 0.05 into confidence that a result is not chance, and adds a simple comparison for hard ideas. Output is a side by side version with the technical text preserved. It runs small scripts in Python.
+when:
+  - Your model results need to go to a non technical executive.
+  - You wrote an analysis and suspect it is full of jargon.
+  - A stakeholder keeps asking what a statistical term means.
+  - You must present test results to a finance team.
+you_give:
+  - Your technical text or findings
+  - The reader's role
+  - The decision they need to make (optional)
+you_get:
+  - Jargon report
+  - Reading level before and after
+  - Plain business version
+  - Original text appendix
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

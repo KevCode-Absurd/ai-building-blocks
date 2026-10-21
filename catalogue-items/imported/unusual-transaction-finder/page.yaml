@@ -6,6 +6,25 @@ summary: Give it a large set of transactions. Get the odd ones flagged, with a s
 job: money-and-investing
 headline: Unusual transaction finder
 subhead: Give it a large set of transactions. Get the odd ones flagged, with a short reason for each.
+explain: |
+  Hidden in thousands of payments, a few look wrong: a duplicate, a rare amount, a strange hour. This skill finds them and gives each one a risk score and a short reason, so you review a handful of rows instead of the whole file.
+
+  It starts by building useful inputs from your data, such as time since the last payment, usual spend and distance from home. Then it runs methods such as Isolation Forest and clustering, which spot rows that are easy to cut away from the rest. It can also use an autoencoder for harder cases. For millions of rows it writes Python code to run, because Claude alone is not built for that size.
+when:
+  - You have a year of card or expense data and want the odd entries flagged.
+  - You suspect duplicate or split payments but cannot search for them by hand.
+  - An audit is coming and you want a ranked list of rows to explain.
+  - Fixed rules keep missing new kinds of errors in your payments.
+you_give:
+  - A transaction file (CSV or JSON)
+  - What counts as odd for you, such as one-off or unusual for that person
+  - Columns like date, amount, vendor and user
+  - Roughly how many rows there are
+you_get:
+  - A risk score for every row
+  - A shortlist of flagged transactions with reasons
+  - The factors that drove the scores
+  - Python code to rerun on larger files
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Point it at a repo. Get a clear changelog built from the git history.
 job: build-software
 headline: Changelog writer
 subhead: Point it at a repo. Get a clear changelog built from the git history.
+explain: |
+  A readable changelog built straight from your git history, so you can see what changed this week without reading every commit. Point it at a repo and it groups changes by day for the last week, then by week.
+
+  Each commit is sorted into a type: feature, fix, refactor, docs, config, dependency or breaking change. Related commits are merged into one clear line, written in your project's own terms and aimed at users. Breaking changes get a prominent note with migration advice. Each claim links back to its commit so you can check it. You need access to the repository's history.
+when:
+  - A teammate asks what changed since last week.
+  - You return to a project after a break and need to catch up.
+  - You want a user-facing summary of recent development.
+  - You need breaking changes called out before an upgrade.
+you_give:
+  - A git repository
+  - The time range to cover (optional)
+  - A README for project terms (optional)
+you_get:
+  - A changelog grouped by day and week
+  - Changes sorted by type
+  - Breaking changes with migration notes
+  - Links from each line to its commit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

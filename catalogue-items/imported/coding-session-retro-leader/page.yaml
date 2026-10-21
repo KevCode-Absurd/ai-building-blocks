@@ -6,6 +6,24 @@ summary: Finish a coding session. Get what slowed your AI down and the changes t
 job: build-software
 headline: Coding session retro leader
 subhead: Finish a coding session. Get what slowed your AI down and the changes that would help next time.
+explain: |
+  After a coding session, you learn what slowed your AI down and what changes to your setup would help next time. The fixes target the working environment, not your prompts.
+
+  It reads the session record, by default the current one, and sorts problems into groups. These include navigation, where the agent took too long to find files, and automated checks that could have caught its mistakes. It reads the repo's own lint and CI commands first, so an existing but unplugged check counts as the finding. A repo with no pre-commit hook or CI job gets flagged on its own. Each suggestion names the change to make.
+when:
+  - Your AI spent an hour hunting for the right file.
+  - The agent kept making the same type of mistake.
+  - You want to improve your repo for future agent runs.
+  - You finished a long session and want lessons from it.
+you_give:
+  - The session to review, or the current one
+  - Access to the session logs
+  - The repo's check commands (optional)
+you_get:
+  - What slowed the session
+  - Missing checks and guardrails
+  - Navigation pointers to add
+  - A short list of changes to make
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

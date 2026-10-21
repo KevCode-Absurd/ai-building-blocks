@@ -6,6 +6,25 @@ summary: Point it at a repo. Get a slide deck with cited facts that warns you wh
 job: work-with-files
 headline: Repo slide deck builder
 subhead: Point it at a repo. Get a slide deck with cited facts that warns you when the code changes.
+explain: |
+  A slide deck about your code where every fact points to a file and line, and a check that tells you when the slides no longer match. Most decks go stale and nobody notices.
+
+  Each quoted piece of code is saved with its file, line range and a fingerprint of those lines, and the deck notes the commit it came from. Later, a small Python script compares every citation with today's code and marks it current, moved, changed or missing. It needs no model and no network. The deck is one self-contained HTML file. A full version lives in the SlideOps repository.
+when:
+  - You must present how a codebase works to new team members.
+  - A client wants slides about a system you built.
+  - Your architecture slides are months old and you doubt they are right.
+  - You want proof for every claim on a slide.
+you_give:
+  - Repository to present
+  - Audience and talk length
+  - Topics to cover (optional)
+  - Python for the drift check
+you_get:
+  - Self-contained HTML slide deck
+  - Citations with file, lines and fingerprint
+  - "Drift report: current, moved, changed or missing"
+  - List of slides to update
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

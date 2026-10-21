@@ -6,6 +6,25 @@ summary: Name the framework, such as SOC 2 or GDPR. Get an evidence checklist wi
 job: secure-code
 headline: Compliance readiness checklist builder
 subhead: Name the framework, such as SOC 2 or GDPR. Get an evidence checklist with gaps ranked by priority.
+explain: |
+  An evidence checklist for a standard such as SOC 2, HIPAA, PCI-DSS or GDPR, showing what you already have in place and what is missing, ranked so you fix the right things first.
+
+  You name the framework and describe your business and tools. Claude works out which standards apply, splits each one into its control areas and requirements, then marks each as done, partly done or missing based on what you tell it. Gaps are ranked by risk, audit impact and effort, and by how many frameworks one fix covers. Quick wins come first. For a startup preparing for a SOC 2 audit, it also gives an overall readiness percentage by category.
+when:
+  - A customer asked for SOC 2 and you have six months to get ready.
+  - You handle health or card data and need to know your gaps.
+  - You want one plan that covers two frameworks at once.
+  - An audit date is set and you need a punch list.
+you_give:
+  - The framework or frameworks
+  - Business type and tools you use
+  - What controls exist today
+  - Audit date (optional)
+you_get:
+  - A checklist by control area
+  - Status for each item
+  - Gaps ranked by priority
+  - A readiness summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

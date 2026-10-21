@@ -6,6 +6,25 @@ summary: Describe your product. Get a style guide for a soft, pressed-in look, w
 job: design-work
 headline: Soft shadow style guide writer
 subhead: Describe your product. Get a style guide for a soft, pressed-in look, with shadow rules and contrast fixes.
+explain: |
+  A style guide for a soft, pressed-in interface, where buttons and cards look gently raised or sunk into the page. You describe your product, and the skill writes the shadow rules and the contrast fixes that keep it usable.
+
+  This look uses one calm surface colour with light and dark shadows to suggest depth. Its weakness is low contrast, so the guide sets clear rules for text, icons and focus outlines to meet accessibility standards. It defines colour tokens, a type scale, a compact spacing scale, hit area sizes and how raised, pressed and disabled states differ. It also covers empty, loading and error states, and notes where to avoid the style.
+when:
+  - You like the soft embossed look but worry about readability.
+  - You need shadow values your developers can copy.
+  - Users cannot tell which elements are clickable.
+  - You want a consistent look across a dashboard.
+you_give:
+  - A description of your product
+  - Base surface and accent colours (optional)
+  - Your audience
+  - Any accessibility needs
+you_get:
+  - A style guide for the soft shadow look
+  - Shadow and colour tokens
+  - Contrast and focus fixes
+  - Rules for pressed, raised and disabled states
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

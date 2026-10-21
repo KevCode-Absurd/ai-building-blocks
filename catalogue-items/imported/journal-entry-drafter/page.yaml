@@ -6,6 +6,25 @@ summary: Describe the transaction. Get a balanced journal entry with debits, cre
 job: track-numbers
 headline: Journal entry drafter
 subhead: Describe the transaction. Get a balanced journal entry with debits, credits and support notes.
+explain: |
+  A balanced journal entry you can post once it has been reviewed. Describe the transaction. The skill sorts out the event: what happened, which period it belongs to, whether it is an accrual, deferral, depreciation, correction or reclass, and whether it reverses next month.
+
+  It applies the debit and credit rules, checks that the debits equal the credits, and lines up with standard patterns such as accrued expenses, prepaid amortization, deferred revenue release, payroll and bad debt provisions. Corrections reverse the wrong entry in full and repost it right, never the net difference. The output also lists the support documents needed and who must approve.
+when:
+  - You need to book an expense you have not been invoiced for yet.
+  - You found a posting error and must correct it properly.
+  - You are closing the month and have a list of adjustments.
+  - You are not sure which accounts to debit and credit.
+you_give:
+  - A description of the transaction
+  - The accounting period
+  - Amounts and source documents
+  - Your chart of accounts (optional)
+you_get:
+  - A balanced journal entry
+  - The entry type and reversal choice
+  - Support notes
+  - Approval needs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

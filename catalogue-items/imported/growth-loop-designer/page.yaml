@@ -6,6 +6,25 @@ summary: Describe your product and users. Get the growth loops that fit, from sh
 job: plan-strategy
 headline: Growth loop designer
 subhead: Describe your product and users. Get the growth loops that fit, from sharing to referrals, and how to start one.
+explain: |
+  Growth that feeds itself, matched to your product. Describe the product and who uses it, and you get the loops that fit, ranked, with the first one worth starting.
+
+  It checks your product against five types. In a viral loop, shared content brings new people in. A usage loop grows as people use the product. A collaboration loop pulls in teammates. A user-generated loop builds on content people post. A referral loop rewards invites. For each, it names the mechanism, the strength, the main challenge and a known example. The aim is less spend on paid ads and more product-led growth.
+when:
+  - Paid ads cost too much and you want growth that compounds.
+  - You are not sure if referrals or sharing fit your product.
+  - You are comparing how rivals grow.
+  - You need a plan for the first loop to test.
+you_give:
+  - Your product description
+  - Who uses it and how
+  - Current growth sources
+  - Your team size (optional)
+you_get:
+  - Loop types that fit your product
+  - Mechanism of each loop
+  - Strengths and challenges
+  - How to start the first loop
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

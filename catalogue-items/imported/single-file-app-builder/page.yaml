@@ -6,6 +6,24 @@ summary: Describe the app. Get a working React web app bundled into one HTML fil
 job: build-websites
 headline: Single-file app builder
 subhead: Describe the app. Get a working React web app bundled into one HTML file you can open or share.
+explain: |
+  A working React web app packed into one HTML file that you can open on your own or share as is. No server or install needed for whoever opens it.
+
+  It runs a script that creates a project with React, TypeScript, Vite, Tailwind CSS and more than forty shadcn/ui components. You edit the generated code to build your app. A second script then bundles everything into a single HTML file with Parcel. You see it displayed and can test it. The style rules push you away from plain defaults: centred everything, purple gradients, even rounded corners and the Inter font. You need Node on your computer.
+when:
+  - You want a small tool, calculator or dashboard you can send as one file.
+  - A single text box prompt is not enough and you need real components.
+  - You want to share a prototype by email.
+  - You want a polished interface without hand-writing it.
+you_give:
+  - A description of the app
+  - Any colours or style notes (optional)
+  - Node installed
+you_get:
+  - A React project
+  - One bundled HTML file
+  - A preview you can test
+  - A look that avoids generic AI design
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

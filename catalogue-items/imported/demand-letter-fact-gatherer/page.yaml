@@ -6,6 +6,25 @@ summary: Answer its questions about a dispute. Get a fact sheet ready for a dema
 job: check-contracts
 headline: Demand letter fact gatherer
 subhead: Answer its questions about a dispute. Get a fact sheet ready for a demand letter. First check, not legal advice.
+explain: |
+  A complete fact sheet for a demand letter, built by answering the questions that careless letters skip. It saves you from sending a letter before you know your bargaining strength, your limits, or what the other side could use against you.
+
+  It begins with your posture: tone, response window and whether the letter should be marked as a settlement communication. Then it asks eight core questions on every matter, and a deeper set when the amount or risk is high. Topics include your best alternative to a deal, the downside you can accept, and what you can prove. It saves the answers as a file ready for drafting. It is a first check, not legal advice.
+when:
+  - Someone owes you money and you want to write to them but are unsure of your position.
+  - You must decide how aggressive the letter should be.
+  - You want your facts, dates and documents in one place before a lawyer sees them.
+  - Several people on your team send demand letters and the quality varies.
+you_give:
+  - Short description of the dispute
+  - Names of the parties and key dates
+  - Contracts, emails or invoices
+  - Your goal and what you would settle for
+you_get:
+  - Completed fact sheet
+  - "Posture notes: tone, deadline, marking"
+  - Evidence and gaps list
+  - File ready for the drafting step
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

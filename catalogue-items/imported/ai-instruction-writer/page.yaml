@@ -6,6 +6,24 @@ summary: Say which skill or instruction file you are writing. Get it written so 
 job: make-skills
 headline: AI instruction writer
 subhead: Say which skill or instruction file you are writing. Get it written so your AI follows it well.
+explain: |
+  A guide to writing skills and instruction files so your AI follows them the same way each run. It applies to skills, AGENTS.md or CLAUDE.md, and any document the AI is pointed to.
+
+  The key idea is the context pointer: the line your AI always sees that says what a document is and when to open it. Its wording decides whether the AI reaches the material. So you put the key word first, give each distinct case one trigger, and drop synonyms and words the body already says. The guide also weighs two costs. Always-loaded text uses attention on every turn. Too many documents leave the human as the index.
+when:
+  - Your AI skips a skill or file you wrote for it.
+  - Your AGENTS.md is long and you must decide what to cut.
+  - You are writing a new skill and want it triggered at the right time.
+  - You want results to vary less between runs.
+you_give:
+  - The skill or instruction file you are writing or fixing
+  - The cases it should handle
+  - Times it failed to trigger or ran wrongly (optional)
+you_get:
+  - A rewritten pointer or description
+  - Guidance on what to keep always loaded and what to link
+  - A tighter version of your document
+  - A list of triggers by case
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

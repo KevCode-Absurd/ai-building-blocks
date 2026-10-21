@@ -6,6 +6,25 @@ summary: Describe where your business sits in the UAE. Get which data and cyber 
 job: check-contracts
 headline: UAE rules finder
 subhead: Describe where your business sits in the UAE. Get which data and cyber rules apply, then the steps for each.
+explain: |
+  In the UAE, where your company sits decides which law covers you. This skill tells you which data and cyber rules apply to your setup and what to do for each.
+
+  It starts with a short intake: mainland, DIFC, ADGM or another free zone, what type of organisation, which emirate, what personal or health data you hold, where data is stored, and what certifications you have. It then gives a table of the laws, who regulates them and when they apply, such as the federal data law, DIFC and ADGM rules, central bank rules, health data localisation and government standards. After that it gives gaps, steps and mapping to ISO 27001, NIST or SOC 2. It is not legal advice.
+when:
+  - You are expanding to the UAE and need the rules for your location.
+  - You handle health or banking data and need to know about residency rules.
+  - You must report a data breach and need the deadline.
+  - You hold ISO 27001 and want to reuse that work for UAE rules.
+you_give:
+  - "Your location: mainland, DIFC, ADGM or other"
+  - Your organisation type
+  - The data you handle and where it is stored
+  - Your certifications (optional)
+you_get:
+  - A table of rules that apply to you
+  - A gap list
+  - Steps for each requirement
+  - A mapping to ISO 27001 or similar
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

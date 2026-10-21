@@ -6,6 +6,26 @@ summary: Give it two or more tuned models. Get one model that blends their skill
 job: build-software
 headline: Model merger
 subhead: Give it two or more tuned models. Get one model that blends their skills, with no new training.
+explain: |
+  One model that blends the strengths of two or more tuned models, built without any new training. Merge a math model with a coding model and a chat model, and test the result in minutes.
+
+  The skill uses mergekit and a short config file. You choose a method: a plain weighted average, SLERP for two models, or TIES and DARE for several, which trim clashing changes first. You set the weights, run one command, and test the new model on a few benchmarks against its parents. It runs on a CPU, though a GPU is faster. The models must share the same base design.
+when:
+  - You have a model good at code and another good at chat and want both.
+  - You cannot afford the GPU time to train from scratch.
+  - You want to try five blends in an afternoon.
+  - You need to check that a merge did not erase a skill.
+you_give:
+  - Two or more models built on the same base
+  - The skills you want to keep
+  - Weights or a method preference (optional)
+  - A test set to score the result
+you_get:
+  - A merge config file
+  - The command to run the merge
+  - A merged model folder
+  - A comparison against the parent models
+  - Advice on which method to use
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe your service. Get a plan for metrics, logs, traces, SLOs and a
 job: ship-and-host
 headline: Monitoring system planner
 subhead: Describe your service. Get a plan for metrics, logs, traces, SLOs and alerts that you can build step by step.
+explain: |
+  A step-by-step plan for watching your production system: what to measure, what to log, how to trace requests and when to alert. You can build it in small pieces.
+
+  The plan starts with your critical user journeys and what reliability each needs. Then it picks signals and sets how long data is kept. It builds the smallest set of dashboards and alerts that support your targets, each with an owner, a runbook and a rule for missing data. It checks that counts and totals line up, tests one alert in a safe environment, and measures noise before rolling out. It keeps private data, such as passwords and full request bodies, out of the logs.
+when:
+  - You are setting up monitoring for the first time.
+  - Releases keep causing slowdowns and you cannot say why.
+  - You need to agree on reliability targets with your team.
+  - You want a privacy check on what your logs capture.
+you_give:
+  - The services and user journeys that matter most
+  - Reliability goals
+  - Tools in use, such as Prometheus or Grafana
+  - Data you must not log
+you_get:
+  - A list of signals to collect
+  - A phased build plan
+  - Dashboards and alerts with owners
+  - Runbook outlines
+  - A log privacy list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

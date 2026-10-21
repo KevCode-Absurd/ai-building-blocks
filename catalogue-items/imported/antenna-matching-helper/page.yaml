@@ -6,6 +6,25 @@ summary: Give it an antenna. Get a matching network and system model that connec
 job: build-software
 headline: Antenna matching helper
 subhead: Give it an antenna. Get a matching network and system model that connect it to your RF chain.
+explain: |
+  An antenna that does not match your radio wastes power and sends signal back. This skill builds the matching network and the system model that tie your antenna to the rest of your radio chain, so the signal actually gets out.
+
+  It works in MATLAB with the Antenna and RF toolboxes. It designs L, Pi or Tee networks, compares two and three element versions for bandwidth, and can convert them to distributed form. It can turn your measured or simulated data into a reusable antenna model, including files from other design tools. From there it estimates coverage, signal strength, interference and link budget with ray tracing, and can estimate body exposure (SAR) for devices near tissue.
+when:
+  - Your antenna's return loss is poor and you need a matching network.
+  - You have measured pattern data and want a model you can reuse.
+  - You are planning where to place transmitters for coverage.
+  - You must show an RF exposure check for a wearable or implant.
+you_give:
+  - Antenna design or measured data
+  - Target impedance and frequency
+  - Site or link details (optional)
+  - Exposure limits to test against (optional)
+you_get:
+  - A matching network design
+  - A reusable antenna model
+  - Coverage and link budget results
+  - SAR estimate (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

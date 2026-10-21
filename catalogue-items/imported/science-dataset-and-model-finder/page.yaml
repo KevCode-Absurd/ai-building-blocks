@@ -6,6 +6,25 @@ summary: Name your science field and task. Get datasets, models and tools worth 
 job: research-topics
 headline: Science dataset and model finder
 subhead: Name your science field and task. Get datasets, models and tools worth trying, with notes on fit.
+explain: |
+  A short list of datasets, models and tools for your science field and task, with notes on which are worth trying. Name your area, such as protein folding, weather or galaxy images, and the job you want done.
+
+  The skill searches the Hugging Science catalogue, a curated index across seventeen scientific areas, and the matching community collections on the Hugging Face Hub. It reads the compact and full listing files, then checks fit: does the resource match your data type, task and size? It also warns about practical limits. Some models run in common libraries, while others need their own runtime, and some datasets are gated and need a token. It needs Python and network access.
+when:
+  - You wonder if a dataset exists for your science topic.
+  - You want a pretrained model to fine-tune for genomics or chemistry.
+  - You need to compare a few candidate models before picking.
+  - You want demos or posts that show how others use a model.
+you_give:
+  - Your science field
+  - The task, such as classify or predict
+  - Your data type and size (optional)
+  - Compute you have (optional)
+you_get:
+  - A shortlist of datasets and models
+  - Notes on how well each fits
+  - Runtime and access warnings
+  - Links to demos and write-ups
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

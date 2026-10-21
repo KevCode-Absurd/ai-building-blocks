@@ -6,6 +6,25 @@ summary: Describe your devices and cloud services. Get gaps against Cyber Essent
 job: secure-code
 headline: UK Cyber Essentials checker
 subhead: Describe your devices and cloud services. Get gaps against Cyber Essentials and what to fix before you apply.
+explain: |
+  A list of gaps between your setup and the UK Cyber Essentials standard, plus what to fix before you apply. You find out about a failure before you pay for the test.
+
+  You describe your devices, cloud services, home working and who uses what. The skill checks the five control themes: firewalls, secure setup, updates, user access and malware protection. It flags the automatic fail points, such as missing multi-factor login on cloud services and updates older than 14 days. It also applies the scope rules for cloud, personal devices and remote staff, and explains how Plus testing differs. It states which question set version applies, and lists current prices by company size.
+when:
+  - You want Cyber Essentials for a tender or for cyber insurance.
+  - You are unsure which devices and cloud tools count in scope.
+  - You want to prepare before the assessor sees your answers.
+  - You are planning the extra technical test for Plus.
+you_give:
+  - Your device types and operating systems
+  - Cloud services you use
+  - How staff work from home
+  - Company size and your account creation date (optional)
+you_get:
+  - A gap list against the five themes
+  - Warnings for automatic fail points
+  - Scope notes for your setup
+  - A fix list in priority order
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

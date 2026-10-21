@@ -6,6 +6,26 @@ summary: Name your store and goals. Get ranked countries, shipping and tax costs
 job: run-your-store
 headline: Overseas market planner
 subhead: Name your store and goals. Get ranked countries, shipping and tax costs, and a phased plan to sell abroad.
+explain: |
+  A ranked list of countries to sell in next, what shipping and tax will cost, and a phased plan to get there.
+
+  You describe your store, products, platform and current sales. The skill scores target markets on size, how easy they are to enter and how crowded they are. It compares ways to fulfil orders, such as shipping from home, using a local warehouse or a marketplace programme, and walks through VAT, import duties, registration rules and payment methods. It then builds a roadmap in stages, starting with the easiest market, and points to follow-up skills for each. It works for Amazon, Shopify, Etsy, TikTok Shop and others. Check tax rules with an adviser.
+when:
+  - Orders from abroad are growing and you want to do it properly.
+  - You must pick your next three countries.
+  - You are losing money on shipping and returns overseas.
+  - You need to understand VAT and customs before shipping to the EU.
+you_give:
+  - Your store and platform
+  - Products and monthly sales
+  - Current shipping origin
+  - Countries you are considering (optional)
+  - Goals
+you_get:
+  - Countries ranked by score
+  - Fulfilment options compared
+  - Tax and duty overview
+  - A phased expansion roadmap
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

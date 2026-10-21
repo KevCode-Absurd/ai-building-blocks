@@ -6,6 +6,26 @@ summary: Describe the deal. Get a due diligence list, valuation checks and an in
 job: money-and-investing
 headline: Acquisition due diligence planner
 subhead: Describe the deal. Get a due diligence list, valuation checks and an integration plan.
+explain: |
+  Before you sign a deal to buy or sell a company, this skill hands you a due diligence list, valuation checks and an integration plan, so you ask the right questions.
+
+  It starts with one question: why this deal? The strategic reason has to be clear before anything else. Then comes a checklist covering the areas a buyer reviews, and valuation methods to cross-check the price. For integration, it offers frameworks for the first days after close. If you are the one being bought, it covers readiness signs, six to twelve months of preparation, and negotiation points. It lists red flags for both sides and ends with a check to run before any letter of intent or signature.
+when:
+  - You are weighing the purchase of a smaller company.
+  - You want to sell your business and need to prepare.
+  - You need a list of what to ask in due diligence.
+  - You want a plan for the first 100 days after a deal.
+you_give:
+  - A description of the deal and parties
+  - Your reason for the deal
+  - Financial figures you have (optional)
+  - Your timeline
+you_get:
+  - A due diligence checklist
+  - Valuation checks
+  - An integration plan
+  - A list of red flags
+  - A pre-signing verification list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

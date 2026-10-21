@@ -6,6 +6,24 @@ summary: Point it at a page you just built. Get a report of buttons and controls
 job: test-and-fix-code
 headline: Web page control tester
 subhead: Point it at a page you just built. Get a report of buttons and controls that do not work.
+explain: |
+  A short report on which buttons, links and inputs on a page you just built do not work. It catches the broken things you would only find by clicking everything yourself.
+
+  The skill uses assay, a command line tool. It serves your page locally, opens it in a real Chromium browser through Playwright, finds every control and drives each one. It then prints a result that says where the page does not do what it promises. You run it once at the end, after your last edit, on each page you changed. The skill reports the result and does not fix the page itself. It needs Node or Python tooling and a one-time install.
+when:
+  - You just made an HTML page and want a quick check.
+  - You changed a script or style file and worry something broke.
+  - You want a smoke test before you share a page.
+  - You have no tests and no time to write them.
+you_give:
+  - The page file or local address
+  - Confirmation that edits are finished
+  - Permission to install the tool once
+you_get:
+  - A one-line pass or fail result
+  - A list of controls that failed
+  - What each control should have done
+  - A clear rerun after your fix
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

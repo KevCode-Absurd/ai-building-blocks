@@ -6,6 +6,25 @@ summary: Give it your Postman collection. Get a ready CI pipeline file that runs
 job: test-and-fix-code
 headline: API test pipeline writer
 subhead: Give it your Postman collection. Get a ready CI pipeline file that runs your API tests on every push.
+explain: |
+  A ready pipeline file that runs your API tests every time someone pushes code, so a broken endpoint is caught within minutes. You hand over your Postman collection and name your build tool.
+
+  The skill uses Newman, the command line runner for Postman. It asks a short list of questions: which CI platform you use, where the collection and environment files live, which reports you want such as JUnit or HTML, which Node version, and when it should run. It then writes the config for GitHub Actions, GitLab, Jenkins, Azure DevOps, CircleCI or Bitbucket. Secrets come from your CI store, reports are saved as artifacts, and the build fails when a test fails.
+when:
+  - You have Postman tests but run them only by hand.
+  - Your team wants API checks on every pull request.
+  - You need a test report to show inside your CI results.
+  - You are moving from one CI tool to another.
+you_give:
+  - Your Postman collection
+  - Your CI platform
+  - Environment file or secrets plan
+  - Report types and trigger
+you_get:
+  - A pipeline file for your CI tool
+  - Newman install and run steps
+  - JUnit or HTML reports
+  - A build that fails on test failure
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it your option strikes and prices. Get a chart of what the trade e
 job: money-and-investing
 headline: Options payoff chart maker
 subhead: Give it your option strikes and prices. Get a chart of what the trade earns or loses. Collects data from websites.
+explain: |
+  An interactive chart of what your options trade makes or loses, drawn from the strikes and prices you already have. Drag sliders and watch the lines move.
+
+  Send a text description or a broker screenshot. The skill reads the strategy type, underlying, strikes, premium, quantity, expiry and implied volatility, and fills gaps with sensible defaults. It plots a dashed line for profit at expiry and a solid line for today's theoretical value using the Black-Scholes model. Sliders change spot price, volatility and days left. Stats show max profit, max loss, break-even points and current profit or loss. It may fetch a live quote for spot price. Educational only, not advice.
+when:
+  - You opened a spread and want to see the risk shape.
+  - You have a broker screenshot and want a clearer chart.
+  - You want to see how the trade changes as time passes.
+  - You need break-even prices before placing the trade.
+you_give:
+  - Strikes and expiry
+  - Premium paid or received
+  - Quantity
+  - Ticker and spot price (optional)
+  - Implied volatility (optional)
+you_get:
+  - An interactive payoff chart
+  - Expiry and theoretical value lines
+  - Max profit, max loss and break-evens
+  - Sliders for price, volatility and time
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

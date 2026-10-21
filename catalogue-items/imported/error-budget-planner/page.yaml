@@ -6,6 +6,26 @@ summary: Name your service. Get service level targets, error budgets and alert r
 job: ship-and-host
 headline: Error budget planner
 subhead: Name your service. Get service level targets, error budgets and alert rules that match what users feel.
+explain: |
+  Reliability targets for your service, written as numbers a team can act on: how much downtime users will put up with, how much of it you can spend, and when to raise an alarm.
+
+  You name the service and what users do with it. The skill picks service level indicators that match what users feel, such as success rate and response time, then sets targets for each. From a target it works out the error budget, the amount of failure you can afford in a month. It then writes alert rules that fire when the budget burns too fast. It also suggests a dashboard, and asks you to check targets against real data first.
+when:
+  - You run a service and have no clear promise on how reliable it should be.
+  - Your alerts fire constantly and nobody trusts them.
+  - Your team argues about shipping features versus fixing stability.
+  - You need a dashboard that shows reliability against a target.
+you_give:
+  - Name and purpose of the service
+  - Current uptime and speed numbers (optional)
+  - What users most care about
+  - Monitoring tools you use (optional)
+you_get:
+  - Service level indicators and targets
+  - Error budget per month
+  - Alert rules for fast and slow burn
+  - Dashboard outline
+  - Reporting routine
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

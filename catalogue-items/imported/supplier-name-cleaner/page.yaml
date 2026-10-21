@@ -6,6 +6,24 @@ summary: Get supplier name typos and case variants grouped, with one proper name
 job: run-your-store
 headline: Supplier name cleaner
 subhead: Get supplier name typos and case variants grouped, with one proper name suggested for each.
+explain: |
+  Messy supplier names grouped and fixed. 'Acme Co', 'ACME co.' and 'Acme Co ' become one name, with a suggested clean version for each group. It only reads your store and changes nothing.
+
+  The skill pulls the vendor field from your product catalogue through the store's API. It finds typos, case differences and stray trailing spaces, groups the names that look alike, and proposes one correct name per group, with counts so you can see which spelling is most used. Safety rules keep it read-only, it logs the session, and it handles errors like rate limits. It needs API access to a Shopify-style store.
+when:
+  - Your vendor filter shows the same brand five different ways.
+  - You are about to run reports by supplier and the totals look split.
+  - You inherited a catalogue and want to tidy it.
+  - You want a merge list to apply by hand.
+you_give:
+  - Access to your store's product data
+  - A vendor field to check
+  - Similarity strictness (optional)
+you_get:
+  - Groups of similar supplier names
+  - One suggested name per group
+  - Product counts for each spelling
+  - A read-only session log
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

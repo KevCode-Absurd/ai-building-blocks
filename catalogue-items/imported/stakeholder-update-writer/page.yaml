@@ -6,6 +6,25 @@ summary: Give it your progress. Get an update for leaders, engineers or customer
 job: organise-work
 headline: Stakeholder update writer
 subhead: Give it your progress. Get an update for leaders, engineers or customers at the right depth and cadence.
+explain: |
+  A progress update written for the right reader at the right depth. Say whether it is weekly, monthly, a launch or a one-off, and who will read it. The skill then shapes the content to that audience.
+
+  Leaders get a short, outcome-first view. Engineers get technical detail and decisions needed. Partners get shared goals and dependencies. Customers get benefits and dates without internal jargon. The board gets metrics and risk, kept brief. If your tracker, chat or meeting notes are connected, it pulls what finished, what is blocked and what was decided. You can also paste your notes.
+when:
+  - Your weekly update is due and you have rough notes.
+  - You must tell leaders about a risk or blocker.
+  - You need one set of progress in versions for several audiences.
+  - A launch needs a customer-facing announcement.
+you_give:
+  - What happened since the last update
+  - The type of update
+  - The audience
+  - Links to your tracker or chat (optional)
+you_get:
+  - An update matched to the audience
+  - Progress, risks and blockers sorted out
+  - Decisions needed from the reader
+  - Versions for other audiences (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

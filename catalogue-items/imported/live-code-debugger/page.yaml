@@ -6,6 +6,25 @@ summary: Point it at a bug. Get the program run with breakpoints, so you see exa
 job: test-and-fix-code
 headline: Live code debugger
 subhead: Point it at a bug. Get the program run with breakpoints, so you see exact values and where it goes wrong.
+explain: |
+  Instead of guessing from error text, run the program and stop it where the bug lives. You see the exact values at that moment and trace back to the cause.
+
+  It starts a debug session with breakpoints where you expect trouble: where data crosses a boundary, where a value changes, or at the branch that took the wrong path. It can use a condition so it stops only when needed. With no clue, it can stop at an exception or walk from the start. It can also attach to a running process. At each stop it reads variables, tests expressions and moves up the call stack, then names the root cause.
+when:
+  - A function returns the wrong value and you cannot see why.
+  - A crash happens deep inside, far from where you looked.
+  - A server is stuck and you cannot restart it.
+  - You want facts, not another round of guessing.
+you_give:
+  - The program or script
+  - How to trigger the bug
+  - What you expected versus what happens
+  - A guess at where it goes wrong (optional)
+you_get:
+  - A debug session with chosen breakpoints
+  - Live variable values at each stop
+  - The root cause
+  - A fix suggestion
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

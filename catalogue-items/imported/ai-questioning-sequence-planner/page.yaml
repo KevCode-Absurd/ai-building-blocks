@@ -6,6 +6,26 @@ summary: Give it a topic. Get rounds of questions students put to a chatbot, to 
 job: teach-and-train
 headline: AI questioning sequence planner
 subhead: Give it a topic. Get rounds of questions students put to a chatbot, to see if it gives in or truly updates.
+explain: |
+  Rounds of questions your students can put to a chatbot, built to show whether it truly changes its answer or just gives in to pressure. It turns a vague worry about AI agreeing too easily into a class exercise.
+
+  You name a topic and a year group. The plan sets out three to five rounds, each with a question type, its purpose and the kind of reply to expect. Students log how the answer shifts using a drift tracker. A short guide helps them tell a real update, backed by new reasoning, from caving in. Facilitation notes and a debrief guide close it out. It draws on work on questioning and AI sycophancy.
+when:
+  - You teach AI literacy and want a hands-on lesson on chatbot flattery.
+  - Students trust chatbot answers without testing them.
+  - You need a question set on a topic from your own subject.
+  - You want a debrief guide for pairs or the whole class.
+you_give:
+  - The claim or topic to probe
+  - Year group and how familiar students are with questioning
+  - Subject area (optional)
+  - Number of rounds (optional)
+  - How findings will be shared (optional)
+you_get:
+  - A round by round question sequence
+  - An answer drift tracker
+  - A guide to real updates versus caving in
+  - Facilitation notes and a debrief guide
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

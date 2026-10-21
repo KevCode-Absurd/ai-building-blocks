@@ -6,6 +6,25 @@ summary: Give it your queries or schema. Get Postgres fixes for speed, indexes a
 job: build-software
 headline: Postgres performance tuner
 subhead: Give it your queries or schema. Get Postgres fixes for speed, indexes and security, ranked by impact.
+explain: |
+  Faster Postgres without guessing. Hand over your queries or schema and get a list of fixes ranked by how much each one helps.
+
+  The rules come from Supabase and are grouped into eight areas in priority order: query speed, connections, security and row-level access, schema design, locking, data access patterns, monitoring and advanced features. The skill checks your SQL and table design against each area, starting with the changes that matter most, such as missing indexes and wasteful queries. Each finding says what to change and why. It suits anyone writing or reviewing Postgres, not only Supabase users.
+when:
+  - A page is slow and you suspect one database query.
+  - You are about to ship a new schema and want a review.
+  - Your app runs out of database connections under load.
+  - You use row-level security and want to check it is safe and quick.
+you_give:
+  - Slow queries or SQL files
+  - Table definitions
+  - Query plan output (optional)
+  - Traffic and data size notes (optional)
+you_get:
+  - Fixes ranked by impact
+  - Index suggestions
+  - Connection and pooling advice
+  - Security and row-level rule checks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

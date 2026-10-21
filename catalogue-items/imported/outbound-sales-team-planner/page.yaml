@@ -6,6 +6,25 @@ summary: Describe your sales. Get roles, a lead flow and a repeatable outreach p
 job: sell-and-negotiate
 headline: Outbound sales team planner
 subhead: Describe your sales. Get roles, a lead flow and a repeatable outreach process for outbound B2B sales.
+explain: |
+  A setup where some people find leads and others close them, with an outreach routine that makes next quarter's pipeline easier to predict. It follows the Predictable Revenue method.
+
+  The skill scores your sales process out of 10, two points per check. The checks are prospecting apart from closing, a set outbound process, pipeline you can see three months ahead, a known mix of lead types and a standard handoff from first-contact rep to closer. It explains three lead types: seeds from referrals, nets from marketing and spears from outbound. It then names what blocks a 10 and plans roles, lead flow and cold outreach that asks for a referral to the right person.
+when:
+  - The same person prospects and closes, and revenue swings each month.
+  - You are hiring your first sales reps and need roles.
+  - You want pipeline you can forecast three months out.
+  - Handoffs between reps and closers keep dropping leads.
+you_give:
+  - What you sell and to whom
+  - Current sales team and process
+  - Lead sources and volumes
+  - Revenue goals (optional)
+you_get:
+  - A 0 to 10 process score
+  - Roles for prospectors and closers
+  - A lead flow and handoff plan
+  - An outreach routine to repeat
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

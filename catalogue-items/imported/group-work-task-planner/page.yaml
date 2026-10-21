@@ -6,6 +6,25 @@ summary: Tell it where group work goes wrong. Get a group task with roles and AI
 job: teach-and-train
 headline: Group work task planner
 subhead: Tell it where group work goes wrong. Get a group task with roles and AI prompts that spread participation.
+explain: |
+  A group task that stops one student doing everything while others watch. Tell it where group work goes wrong in your class and you get a task with set roles and AI prompts that spread participation.
+
+  The design starts with the specific problem, such as quiet members, dominant voices or free riders. It assigns rotating roles, adds AI prompts that nudge members to contribute, and builds checkpoints where the group must show progress. Prompts can also ask follow-up questions that deepen the talk. The evidence base is rated moderate, and the skill says so. It is made for teachers, tutors and course leads.
+when:
+  - The same two students do all the group work.
+  - Some students never speak in group tasks.
+  - You want AI to prompt discussion without taking it over.
+  - You need a group activity with clear roles.
+you_give:
+  - The participation problem you see
+  - Class level and size
+  - The task topic
+  - Time available (optional)
+you_get:
+  - A group task with roles
+  - AI prompts to spread participation
+  - Checkpoints for progress
+  - Tips for facilitating
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

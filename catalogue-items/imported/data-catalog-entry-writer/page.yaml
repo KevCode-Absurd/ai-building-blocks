@@ -6,6 +6,25 @@ summary: Give it a table and its owner. Get a plain entry with column meanings, 
 job: document-work
 headline: Data catalog entry writer
 subhead: Give it a table and its owner. Get a plain entry with column meanings, quality notes, sources and who may use it.
+explain: |
+  A plain, complete entry that tells anyone what a table is, who owns it, how good it is and who may use it. It ends the repeated questions about what a column means.
+
+  The skill pulls the technical facts first: columns, types, keys and row counts. It then asks the owner for the business purpose, how critical it is and known uses. Each column gets a one sentence description with example values and rules. It checks completeness, freshness and duplicates, records where the data comes from and what depends on it, and adds access level, sensitive data tags and retention. The result follows a fixed template, so entries look the same across tables.
+when:
+  - A new table has just shipped and nobody knows what is in it.
+  - Analysts keep asking you what the same columns mean.
+  - An audit asks for documentation on sensitive data.
+  - A new hire needs to learn what data you have.
+you_give:
+  - Table schema or database export
+  - Name of the data owner
+  - Upstream sources and downstream reports
+  - Privacy and retention rules (optional)
+you_get:
+  - Column by column descriptions
+  - Quality notes
+  - Source and dependency map
+  - Access and sensitivity details
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

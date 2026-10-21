@@ -6,6 +6,24 @@ summary: Before you release. Get a go or no-go from set checks, with the blocker
 job: ship-and-host
 headline: Ship readiness gate
 subhead: Before you release. Get a go or no-go from set checks, with the blockers listed.
+explain: |
+  A clear go or no-go before you push code live, with the blockers listed so you know what to fix first. It catches the problems that usually show up after launch.
+
+  It first detects your stack (Node, Python, Go and so on). Then it scans the code in eight areas: security, database, deployment, code quality, AI use, dependencies, frontend and monitoring. Each check comes back pass, fail or manual. If you say "deploy" or "go live", it stops and asks whether you have run the gate, and asks you to re-run it if the last scan is over a day old or the code changed. Critical failures block the release.
+when:
+  - You are about to deploy and want a last check on your codebase.
+  - You built something quickly and are unsure what you missed.
+  - Your team needs a repeatable pre-launch checklist that works on any stack.
+  - You want a hard stop if someone says "ship it" before checks pass.
+you_give:
+  - Your code project folder
+  - The stack, if it is unusual (optional)
+  - What counts as critical for you (optional)
+you_get:
+  - A pass, fail or manual result for each check
+  - A list of blockers to fix before release
+  - A go or no-go verdict
+  - A prompt to re-scan after changes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Run it on your customer emails. Get bad, role-based and throwaway addre
 job: run-your-store
 headline: Customer email list checker
 subhead: Run it on your customer emails. Get bad, role-based and throwaway addresses flagged to protect your sender reputation.
+explain: |
+  Bad addresses on a mailing list damage your sender reputation. This scans your Shopify customers and flags the ones likely to hurt you, and builds a suppression list you can act on.
+
+  Each address is checked in order for broken format, role accounts like info@ and sales@, throwaway email domains, patterns that suggest a bounce such as keyboard mashing or long strings, plus duplicates. Plus-address aliases are marked for information only. The worst flag decides the suggested action. By default it only looks at customers who accept marketing. It reads data only, sends nothing and changes no consent.
+when:
+  - Your last email campaign had a spike in bounces.
+  - You are about to send to an old list and want to clean it first.
+  - You see many sign-ups from fake-looking addresses.
+  - You need to remove duplicates before an import.
+you_give:
+  - Your Shopify store and read access
+  - Whether to check only opted-in customers (optional)
+  - Your own role names or domain list (optional)
+you_get:
+  - Flagged addresses with the reason
+  - A suppression list
+  - Duplicate groups
+  - A recommended action for each flag
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

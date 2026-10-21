@@ -6,6 +6,27 @@ summary: Describe a flow to model. Get a checked solver setup, run plan and anal
 job: research-topics
 headline: Fluid flow simulation planner
 subhead: Describe a flow to model. Get a checked solver setup, run plan and analysis of the results.
+explain: |
+  A checked setup for a fluid flow simulation, a run plan with strict limits, and a review of the results. It stops a finished run from being mistaken for a correct one.
+
+  You state the equations, units, boundaries, starting conditions and what counts as acceptable. The skill picks a FluidSim solver, writes a plan with limits on CPU, memory, disk, time and time step, and checks it with a validator and a resource estimate. A dry-run script comes next, then a small test run. It inspects energy budgets and divergence, refines grid and step size separately, and only then prepares a larger job. You need Python.
+when:
+  - You want to set up a turbulence or periodic flow simulation in Python.
+  - You worry a run finished but the numbers cannot be trusted.
+  - You need limits so a test run does not use all your memory or disk.
+  - You need to record versions and settings so a result can be repeated.
+you_give:
+  - Equations and units
+  - Domain, boundaries and starting conditions
+  - Forcing and outputs you want
+  - Acceptance criteria
+  - CPU, memory and time limits (optional)
+you_get:
+  - Validated simulation plan
+  - Dry-run script
+  - Pilot run checks
+  - Grid and time step study
+  - Record of versions, settings and outputs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

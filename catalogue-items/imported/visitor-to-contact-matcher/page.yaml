@@ -6,6 +6,25 @@ summary: Give it your site visit records and contact list. Get anonymous visits 
 job: track-numbers
 headline: Visitor to contact matcher
 subhead: Give it your site visit records and contact list. Get anonymous visits linked to known contacts, with unclear links flagged.
+explain: |
+  Anonymous website visits tied to the real contacts they belong to, with doubtful matches flagged instead of guessed. You can then see which channels brought in people you already know.
+
+  The skill runs small Node.js scripts on records you supply. It cleans emails and phone numbers, hashes them, and merges repeat touches within thirty minutes. It links a device to a contact only when there is evidence, such as a form fill or a login. It handles shared devices, cross-device history and events that arrive late. It also reads webhook events and ties them back to the visit. It does not store data or send anything out.
+when:
+  - You have web visit logs and a contact list and want to know who visited.
+  - A lead converts on a phone but first visited on a laptop.
+  - Several people share one device and your reports mix them up.
+  - Webhook events arrive after the visit and you want them credited properly.
+you_give:
+  - Site visit or clickstream records
+  - Your contact list with emails or phones
+  - Form, login or webhook events that link a visitor to a person
+  - Rules for what counts as a match (optional)
+you_get:
+  - Visits linked to known contacts
+  - A flag on unclear or shared-device links
+  - Cleaned and hashed identities
+  - Notes on what the data cannot prove
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

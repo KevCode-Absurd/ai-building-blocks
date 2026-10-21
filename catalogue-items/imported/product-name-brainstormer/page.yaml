@@ -6,6 +6,25 @@ summary: Describe your product and buyers. Get five memorable name ideas, each w
 job: brand-file
 headline: Product name brainstormer
 subhead: Describe your product and buyers. Get five memorable name ideas, each with the reason it fits.
+explain: |
+  Five product names that fit your brand and buyers, each with the reason it works. You compare real options side by side instead of staring at a blank page.
+
+  You describe the company, the product and the people who will buy it. For each name, Claude gives the rationale, how it fits your brand, why it is easy to remember and stand out, and notes on what to check before you commit. Names are built around the value of the product and the tone of your market, not random word mashing.
+when:
+  - You are naming a new product or feature.
+  - You are renaming an existing product.
+  - You have a shortlist and want fresh alternatives.
+  - You need a quick set of options before a team vote.
+you_give:
+  - A short description of the product
+  - Your brand values and tone
+  - Your target audience
+  - Names you already dislike or like (optional)
+you_get:
+  - Five name ideas
+  - The reasoning behind each name
+  - How each fits your brand
+  - Notes on memorability and checks to run
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

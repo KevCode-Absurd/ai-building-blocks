@@ -6,6 +6,26 @@ summary: Describe your company. Get whether NIS2 covers you, your security dutie
 job: check-contracts
 headline: EU network security rules checker
 subhead: Describe your company. Get whether NIS2 covers you, your security duties, reporting deadlines and gaps.
+explain: |
+  A clear answer on whether the EU NIS2 security law covers your company, and what that means in practice: your category, the ten risk measures, reporting deadlines and the gaps to close.
+
+  It checks three things in order: whether your sector is listed, whether you pass the size threshold, and whether you count as essential or important. Getting this wrong is the most common and costly mistake. It then covers board duties, the ten required security measures, and the incident clock for early warning, notification and final report. It builds a gap table and shows fine exposure using your own figures.
+when:
+  - You are unsure whether NIS2 applies to your company.
+  - You need to know your deadlines if a security incident happens.
+  - Your board must approve security measures and wants a checklist.
+  - You want a gap table against the ten required measures.
+you_give:
+  - Sector and services you offer
+  - Employee count, turnover and balance sheet
+  - Countries where you operate
+  - Current security measures (optional)
+you_get:
+  - "Verdict: essential, important or out of scope"
+  - Gap table by measure
+  - Incident reporting timeline
+  - Board duty checklist
+  - Fine exposure estimate
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

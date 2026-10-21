@@ -6,6 +6,25 @@ summary: Give it a pull request or commit. Get a security review of only what ch
 job: secure-code
 headline: Security-focused change reviewer
 subhead: Give it a pull request or commit. Get a security review of only what changed, with risks ranked.
+explain: |
+  A security review of just what changed in a pull request, commit range or diff, with each risk backed by line numbers, history and a realistic attack story. It scales to the size of the codebase: deep reading for small ones, focused for mid-size, and only critical paths for large ones.
+
+  Changes are rated by risk, not size, since a two-line edit to sign-in code can matter more than a big refactor. High risk covers auth, crypto, outside calls and removed checks. It works in phases: triage, code analysis, test coverage, blast radius, deep context and an adversarial pass. It always writes a markdown report and states what it could not cover.
+when:
+  - A pull request touches login or permissions and needs a security look.
+  - A small change removed a validation check and you want it assessed.
+  - You want a written report you can attach to a review.
+  - Your team reviews many changes and needs risk ranked first.
+you_give:
+  - A pull request, commit range or diff
+  - Access to the repository and its history
+  - Notes on what the change is meant to do (optional)
+you_get:
+  - Findings with line references
+  - Attack scenarios for each risk
+  - A blast radius estimate
+  - Test coverage gaps
+  - A markdown report with confidence level
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

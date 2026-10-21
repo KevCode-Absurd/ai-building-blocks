@@ -6,6 +6,26 @@ summary: Describe a company for sale. Get a ranked list of likely buyers, strate
 job: money-and-investing
 headline: Likely buyers list builder
 subhead: Describe a company for sale. Get a ranked list of likely buyers, strategic and financial, with fit notes.
+explain: |
+  Before you sell a company, you need to know who might buy it. This builds a ranked list of likely buyers, with a reason each one fits and a sensible order to call them.
+
+  Start by describing the company: sector, revenue, profit, growth, assets and what the seller wants. The skill then finds strategic buyers in four groups: direct rivals, neighbours in adjacent markets, customers or suppliers, and platform builders. It then adds financial sponsors. Each buyer is scored on fit, ability to pay and deal history, then sorted into three waves of outreach. Contact names are mapped last.
+when:
+  - You are preparing to sell a business and need a buyer universe.
+  - You advise a seller and must pitch a target list to them.
+  - You want to know which rivals might pay a premium.
+  - You need to decide who to call first, second and third.
+you_give:
+  - Company description and sector
+  - Revenue, profit and growth
+  - Key assets or strengths
+  - Expected price range (optional)
+  - Seller preferences (optional)
+you_get:
+  - A list of strategic buyers with fit notes
+  - A list of financial sponsors
+  - Buyers ranked into three tiers
+  - Contact mapping for outreach
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

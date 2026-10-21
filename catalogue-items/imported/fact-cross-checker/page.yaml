@@ -6,6 +6,25 @@ summary: Give it a claim to check. Get an evidence table with sources, confidenc
 job: think-and-decide
 headline: Fact cross-checker
 subhead: Give it a claim to check. Get an evidence table with sources, confidence, conflicts and gaps.
+explain: |
+  A claim checked against several independent sources, with a table that shows what supports it, what contradicts it and where the evidence runs out. You stop trusting the first search result.
+
+  The skill sets a small search budget first, about six searches and six page opens. It then uses at least two different search tools and prefers primary documents over summaries. Articles that all trace back to one origin count once. Each claim gets a confidence level of low, medium or high, and is marked as sourced or inferred. Pages it reads are treated as evidence only, never as instructions. It stops when another search is unlikely to add anything new.
+when:
+  - You read a statistic in an article and need to know if it is true.
+  - You are about to put a claim in a report and want proof behind it.
+  - Two sources disagree and you need to see why.
+  - You want to know which parts of a story rest on one source only.
+you_give:
+  - The claim or question to check
+  - How deep to go (optional)
+  - Sources you already trust (optional)
+  - Anything you do not want searched (optional)
+you_get:
+  - An evidence table linking each claim to sources
+  - A confidence level per claim
+  - A list of conflicts between sources
+  - A list of gaps still open
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

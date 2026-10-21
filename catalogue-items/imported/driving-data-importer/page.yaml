@@ -6,6 +6,25 @@ summary: Give it recorded GPS, camera or lidar data. Get it loaded, synced and c
 job: build-software
 headline: Driving data importer
 subhead: Give it recorded GPS, camera or lidar data. Get it loaded, synced and cleaned for building driving scenarios.
+explain: |
+  Recorded driving data loaded, lined up in time and cleaned, ready for building driving scenarios in MATLAB. It handles GPS, camera, lidar and tracked-object data from common sources.
+
+  The skill maps raw files into the right scenario builder objects: GPS, camera, lidar, actor tracks, trajectories and lane data. It accepts datasets like KITTI, nuScenes and Waymo, ROS bags, MAT, CSV and video. It also attaches mounting position, angles and camera settings, syncs sensors with different sample rates, corrects time offsets, trims segments and sets a common time zero. It will not open the Driving Log Analyzer unless you ask or report a sync problem. It needs MATLAB with the matching toolboxes.
+when:
+  - You have a KITTI or ROS bag recording and want to build a scenario from it.
+  - Camera and lidar timestamps do not match.
+  - You need to crop one segment out of a long recording.
+  - Your sensors use different sample rates and must share a timeline.
+you_give:
+  - Your raw recording files
+  - The dataset type, such as KITTI or ROS bag
+  - Sensor mounting details (optional)
+  - MATLAB with the scenario builder tools
+you_get:
+  - Data wrapped into scenario builder objects
+  - Sensors synced to one timeline
+  - Time offsets corrected
+  - A saved dataset ready for scenario building
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

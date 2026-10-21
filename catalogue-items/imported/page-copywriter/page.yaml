@@ -6,6 +6,25 @@ summary: Describe the page and your buyer. Get clear page copy with headline, se
 job: write-landing-page
 headline: Page copywriter
 subhead: Describe the page and your buyer. Get clear page copy with headline, sections and calls to action.
+explain: |
+  Page copy you can paste in: a headline, section-by-section text and a clear call to action, all aimed at the one thing you want a visitor to do.
+
+  Before writing, it asks about the page's single goal, your buyer, their objections and where the traffic comes from. Then it names which situation you are in: starting blank, fixing a draft that already has a voice, or editing one line. If you share your own writing, it keeps your words and angle instead of swapping in its own taste. Drafts are checked for clarity and proof, with alternate headlines to test.
+when:
+  - You are launching a homepage or landing page and have a blank screen.
+  - Your draft feels flat and you want it sharper without losing your voice.
+  - You need one headline or paragraph fixed, nothing more.
+  - Visitors reach the page but few click the button.
+you_give:
+  - Page type and its one main action
+  - Your buyer and what worries them
+  - Your offer and proof such as numbers or reviews
+  - An existing draft or writing sample (optional)
+you_get:
+  - Headline and subhead options
+  - Full page copy by section
+  - Call to action text
+  - Short note on the choices made
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

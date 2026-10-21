@@ -6,6 +6,25 @@ summary: Say which CAN device you have. Get channels set up and messages sent an
 job: build-software
 headline: Vehicle network setup helper
 subhead: Say which CAN device you have. Get channels set up and messages sent and received.
+explain: |
+  A working CAN connection in MATLAB: your device found, a channel opened at the right speed, and messages going out and coming in. You can test without hardware too, using a virtual channel.
+
+  The skill lists the connected CAN hardware from vendors such as Vector, Kvaser, NI and PEAK, then creates a channel with the right bus speed and options. It also shows how to encode and decode signals inside messages, and how to set up a loopback test on your bench. Common errors, like channel already in use, wrong speed or no acknowledgment, are explained with fixes. It needs MATLAB with Vehicle Network Toolbox and the vendor driver.
+when:
+  - You have a new CAN adapter and want to see messages in MATLAB.
+  - Your channel will not start because of a speed or access error.
+  - You need to send a test message to an ECU on your bench.
+  - You want to practice with a virtual channel before buying hardware.
+you_give:
+  - Your CAN hardware brand and model
+  - Your bus speed and whether it is CAN or CAN FD
+  - Your MATLAB release
+  - The error message you see (optional)
+you_get:
+  - Code to discover your device
+  - A configured channel
+  - Send and receive examples
+  - Fixes for common channel errors
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

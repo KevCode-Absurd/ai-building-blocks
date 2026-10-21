@@ -6,6 +6,26 @@ summary: Give it a screen. Get button labels, error messages, empty states and t
 job: design-work
 headline: Interface microcopy writer
 subhead: Give it a screen. Get button labels, error messages, empty states and toasts in a friendly, polite voice.
+explain: |
+  The small words in your product, button labels, error messages, empty states and toasts, written in a friendly, polite voice. Give it a screen and get text that tells people what will happen and how to move on.
+
+  The skill applies a short rule set. Buttons name the action, so "Save changes", not "Submit". Errors help and never blame. Empty states invite the next step. Money messages stay calm. One term is used for each idea across the product. It reads your design language file first, so the voice matches. It handles one language per run and does not cover long content, full feedback design, or defining a brand voice.
+when:
+  - Your error messages say "Invalid input" and nothing more.
+  - You have a new screen and need every label and message.
+  - Empty screens look cold and confuse new users.
+  - Words for the same thing change between pages.
+  - You need a polite, casual tone in payments or account steps.
+you_give:
+  - The screen or flow and what it does
+  - The product's voice or design language (optional)
+  - The language to write in
+you_get:
+  - Button labels
+  - Error messages that help
+  - Empty state text
+  - Toast messages
+  - A consistent term list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

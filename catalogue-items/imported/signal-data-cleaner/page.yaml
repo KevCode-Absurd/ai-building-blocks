@@ -6,6 +6,25 @@ summary: Give it raw signals. Get gaps filled, drift removed, noise cut and labe
 job: build-software
 headline: Signal data cleaner
 subhead: Give it raw signals. Get gaps filled, drift removed, noise cut and labels added for analysis.
+explain: |
+  A MATLAB script that turns a raw signal into clean, labelled data ready for analysis. It saves you from inventing filters that are wrong or functions that do not exist.
+
+  The skill follows one order: condition the signal, load files into a datastore, label, split and frame, then hand off to training. For cleaning, it uses the standard tools: fill short gaps with interpolation, fill long gaps in oscillating signals with an AR method, and remove slow drift with a polynomial detrend, raising the order step by step. It also handles outliers and noise. It needs MATLAB with the Signal Processing Toolbox.
+when:
+  - Your sensor data has holes and spikes before you can analyse it.
+  - The signal drifts slowly and hides what you want to see.
+  - You need to label recordings for machine learning.
+  - You have a folder of signal files and need one clean dataset.
+you_give:
+  - Your signal data or a folder of files
+  - Sample rate
+  - "What problems you see: gaps, drift, noise"
+  - MATLAB with Signal Processing Toolbox
+you_get:
+  - A runnable .m cleaning script
+  - Gaps filled and drift removed
+  - Outlier handling
+  - Labelled, split data for training
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

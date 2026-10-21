@@ -6,6 +6,25 @@ summary: Give it a web page or screen. Get fixes for spacing, color, type and de
 job: design-work
 headline: Visual hierarchy fixer
 subhead: Give it a web page or screen. Get fixes for spacing, color, type and depth so it looks professional.
+explain: |
+  A web page or app screen that looks professional because the eye knows where to go first. You get a short list of fixes you can apply in code or in a design tool.
+
+  The skill works in grayscale first, so structure carries the design before colour does. It then checks eight things: size, weight and contrast for hierarchy, spacing on a fixed scale, type scale, colour palette, shadows and depth, borders, and how components look. It scores the page out of ten and names which checks failed. It also helps you set up design tokens and a dark mode, so the fixes stay consistent across screens.
+when:
+  - Your page works but looks flat, crowded or amateur.
+  - You are about to launch and want a final polish pass.
+  - You need a spacing, type and colour scale you can reuse.
+  - You are building a dark theme and want it to stay readable.
+you_give:
+  - A page, screen, screenshot or code
+  - The page goal, such as sign-ups
+  - Brand colours or fonts (optional)
+  - Any constraints, such as a design system (optional)
+you_get:
+  - A score out of ten with failed checks
+  - Specific fixes for spacing, type, colour and depth
+  - A set of design tokens
+  - Updated styles or code
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Say what to find or tidy in your Zotero library. Get references searche
 job: research-topics
 headline: Zotero library manager
 subhead: Say what to find or tidy in your Zotero library. Get references searched, tagged, sorted or exported as citations.
+explain: |
+  Tell it what to find or tidy in your Zotero library and get the references searched, tagged, sorted or exported as citations.
+
+  It uses Pyzotero, a Python wrapper for the Zotero web API. You set up your library ID and an API key from your Zotero settings, and store them in environment variables. From there it can read items and collections, search by keyword, add or edit entries, apply tags, move items between collections, and export in citation formats. It can work on your own library or a group library. You need Python, the Pyzotero package and a Zotero account. Be careful with write actions, because they change your real library, so check the plan first.
+when:
+  - Your library has hundreds of untagged papers and you want order.
+  - You need a reading list exported as citations.
+  - You want to search your references by keyword from a script.
+  - You need to add a batch of new references at once.
+you_give:
+  - What to find or change in the library
+  - Your Zotero library ID and API key
+  - Whether it is a personal or group library
+  - Python and the Pyzotero package
+you_get:
+  - Matching items from your library
+  - Tags or collection changes applied
+  - Citation exports
+  - A plan to review before any write
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

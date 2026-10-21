@@ -6,6 +6,25 @@ summary: Get products with stock on the shelf but no sales in your chosen number
 job: run-your-store
 headline: Dead stock finder
 subhead: Get products with stock on the shelf but no sales in your chosen number of days.
+explain: |
+  A list of products you hold stock of that have not sold in a window you choose, so you can see which money is sitting on shelves. This is the first step before a clearance sale or a return to supplier.
+
+  The skill compares inventory counts with order history from Shopify. By default it looks back 90 days and flags any variant that has stock but zero sales in that time. You can set a minimum quantity and narrow it to one vendor. The output shows the items and how much stock each holds. It only reads data and changes nothing, so you can run it any time. Your AI needs access to your Shopify store.
+when:
+  - You want to plan a clearance sale on slow items.
+  - Your storage is full and you need to know what to clear.
+  - You are deciding which products to stop reordering.
+  - A supplier review needs their unsold lines listed.
+you_give:
+  - Your store address
+  - Look back window in days (optional)
+  - Minimum stock to count (optional)
+  - Vendor filter (optional)
+you_get:
+  - List of items with no recent sales
+  - Stock quantity per item
+  - Vendor grouping
+  - Data for clearance decisions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

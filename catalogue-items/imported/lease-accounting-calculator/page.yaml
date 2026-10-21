@@ -6,6 +6,26 @@ summary: Give it a lease contract. Get the lease liability, right-of-use asset a
 job: money-and-investing
 headline: Lease accounting calculator
 subhead: Give it a lease contract. Get the lease liability, right-of-use asset and yearly entries under IFRS 16 or ASC 842.
+explain: |
+  The numbers for a lease on your books: the liability, the right-of-use asset and the entries for each year. Give the contract terms. The skill first checks whether it is a lease at all, then settles the lease term, which payments count and which discount rate applies.
+
+  It calculates the liability as the present value of unpaid payments, builds the asset from that plus prepaid costs and incentives, and runs an interest schedule. It follows IFRS 16 or ASC 842, including the difference for operating leases, and checks the short-term and low-value exemptions. Review results with your accountant before you post anything.
+when:
+  - You signed an office lease and need it on the balance sheet.
+  - Your auditor asked for a lease schedule.
+  - You need to know if a service contract hides a lease.
+  - You are deciding whether the short-term exemption applies.
+you_give:
+  - Lease contract terms and payments
+  - Start date and any extension options
+  - Discount rate or borrowing rate
+  - Standard to follow, IFRS 16 or ASC 842
+  - Prepaid costs and incentives (optional)
+you_get:
+  - Lease liability at start
+  - Right-of-use asset value
+  - Year by year interest and depreciation schedule
+  - Journal entries
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

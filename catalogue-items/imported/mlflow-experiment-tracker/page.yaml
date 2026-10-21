@@ -6,6 +6,26 @@ summary: Give it your training code. Get every run logged, compared and versione
 job: track-numbers
 headline: MLflow experiment tracker
 subhead: Give it your training code. Get every run logged, compared and versioned, so you can repeat the best one.
+explain: |
+  Every training run you do gets saved with its settings, scores and files, so you can see which one won and repeat it. No more folders named final_v2_really_final.
+
+  The skill adds MLflow to your training code. It logs the settings you chose, such as learning rate and batch size, then the scores as training goes, then the finished model. Autologging covers common libraries in one line. After that you open the MLflow screen, sort runs by score, and compare two side by side. Good models can be named, versioned and moved from testing to production. It needs Python and a local install of MLflow.
+when:
+  - You have run the same model ten times and cannot remember which settings gave the best score.
+  - A teammate asks you to reproduce last week's result.
+  - You want to compare two model versions on the same scores.
+  - You need a record of which model went live and when.
+you_give:
+  - Your training script
+  - The scores you care about
+  - Where to store runs, such as a folder or a shared server (optional)
+  - The machine learning library you use
+you_get:
+  - Training code that logs every run
+  - A screen to sort and compare runs
+  - Saved models with version numbers
+  - A promotion path from test to production
+  - Steps to repeat your best run
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

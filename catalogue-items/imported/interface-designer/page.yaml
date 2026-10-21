@@ -6,6 +6,26 @@ summary: Describe the page or app. Get a built interface with a clear look that 
 job: build-websites
 headline: Interface designer
 subhead: Describe the page or app. Get a built interface with a clear look that does not feel like a template.
+explain: |
+  A built page or app with its own clear look, rather than the same template everyone ships. The skill works like a design lead whose clients each get a distinct identity.
+
+  It first pins down the subject, asking you if the brief is unclear, and designs from that world. The top of the page opens with the most characteristic thing in the subject's field. It picks type deliberately, keeps lines under about eighty characters, and avoids stock tricks such as highlighting one word in a headline or labelling everything in capitals. Structure like borders and numbers must carry meaning. Motion is rare and planned. It also writes real copy when the brief has none.
+when:
+  - You need a landing page that does not look like a template.
+  - Your current design feels generic and forgettable.
+  - The brief has no copy and you need believable text.
+  - You want a strong first screen for a specific subject.
+  - You need guidance on choosing fonts that fit the topic.
+you_give:
+  - What the page or app is for
+  - Your audience
+  - Any content, brand colours or fonts (optional)
+  - Your framework (optional)
+you_get:
+  - A built interface
+  - A clear type and layout system
+  - Real placeholder copy
+  - A distinct visual direction
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

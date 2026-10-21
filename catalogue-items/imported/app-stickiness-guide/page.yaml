@@ -6,6 +6,25 @@ summary: Describe your app. Get a retention plan with a habit loop, a better fir
 job: understand-customers
 headline: App stickiness guide
 subhead: Describe your app. Get a retention plan with a habit loop, a better first run and one metric to watch.
+explain: |
+  People sign up for your app, then quietly drift away. This skill gives you a retention plan: a habit loop that brings people back, a better first run, and one number your team agrees to watch.
+
+  It works in eight phases and puts leaks before growth. First it studies why users come back unprompted, then why new users never reach that loop. It talks with you about what your own users need, shapes the product around that, picks a single metric, adds small touches that make the app feel alive, and looks at what motivates people. It saves choices in docs files so you can pick up later. Fix broken experience first. Retention tricks cannot hide it.
+when:
+  - Many people sign up and are gone within a week.
+  - Your onboarding funnel loses people at the same step.
+  - Daily active users stay flat.
+  - You want a single retention metric the team trusts.
+you_give:
+  - A description of your app and its users
+  - Current sign-up and return numbers
+  - Where the onboarding funnel leaks
+  - Your docs folder (optional)
+you_get:
+  - A habit loop design
+  - A better first-run plan
+  - One chosen retention metric
+  - Saved plan files for later sessions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

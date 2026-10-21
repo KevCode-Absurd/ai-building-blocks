@@ -6,6 +6,25 @@ summary: Set your rules, such as region or order value. Get matching orders tagg
 job: run-your-store
 headline: Order tagger
 subhead: Set your rules, such as region or order value. Get matching orders tagged. Changes live orders, so preview first.
+explain: |
+  Orders tagged automatically by your own rules, so your team can filter, route and report without reading each one. Think high-value, international, first-time buyer or needs review.
+
+  You write simple rules, each a condition and a tag: total over 500 becomes high-value, shipping country not US becomes international, risk level high becomes needs-review. The skill reads orders from your chosen window, checks each rule, skips orders already tagged and applies the rest. It starts in preview mode, listing what would be tagged, and only changes orders when you turn that off. It supports rules on order value, geography, item count, order history, payment status and fulfilment status. Needs Shopify CLI access with order write permission.
+when:
+  - You want international orders flagged for customs forms.
+  - Fraud checks need all high-risk orders in one list.
+  - You want repeat buyers tagged for a thank-you note.
+  - Your packing team needs bulk orders labelled.
+you_give:
+  - Store domain
+  - Tagging rules (condition and tag)
+  - Days to look back
+  - Preview or apply choice
+you_get:
+  - A preview list of orders to tag
+  - Tags applied to matching orders
+  - Skipped orders already tagged
+  - A count per rule
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

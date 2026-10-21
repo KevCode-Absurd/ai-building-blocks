@@ -6,6 +6,25 @@ summary: Say your goal. Get SMS or WhatsApp flows for welcome, cart, win-back an
 job: write-emails
 headline: Text message campaign writer
 subhead: Say your goal. Get SMS or WhatsApp flows for welcome, cart, win-back and promos, with consent rules.
+explain: |
+  A set of text message flows you can load into your SMS tool: welcome, abandoned cart, post-purchase, win-back and promo sends, each with message copy and timing. It also covers WhatsApp and the plain account texts like order updates.
+
+  The skill first asks about your business, list size, phone number type and where you stand on consent. Then it decides which jobs belong in SMS and which belong in email, since texts only earn their place when speed matters. It writes short messages with clear opt-out lines and checks them against consent rules, including US registration and EU differences. You get a plan for what to send, when, and how to measure it.
+when:
+  - You want to start texting customers and need a first set of flows.
+  - Your abandoned cart emails are slow and you want a faster nudge.
+  - You are unsure whether a message should go by text or by email.
+  - You need to check that your opt-in and opt-out wording is compliant.
+you_give:
+  - Your business type and list size
+  - Your SMS or WhatsApp tool and number type
+  - How people opt in today
+  - "Your main goal: revenue, signups or updates"
+you_get:
+  - Flow plans with timing
+  - Message copy for each step
+  - A text-versus-email split
+  - A consent and compliance checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a skill. Get practice problems that rise in difficulty and vary
 job: teach-and-train
 headline: Practice problem set writer
 subhead: Give it a skill. Get practice problems that rise in difficulty and vary just enough, for worksheets or homework.
+explain: |
+  A set of practice problems that start easy, grow harder step by step and change just enough to build real skill. Ready for worksheets, homework or tutoring.
+
+  You name the skill to practise, the learner's level and how many problems you want. The skill orders them from guided to independent, mixes in variety so learners do not memorise one pattern, and keeps difficulty rising at a steady pace. It draws on teaching research on worked examples, spaced and mixed practice, and gradual support. You can ask for answer keys and notes on the common errors to watch for.
+when:
+  - You need a homework sheet on fractions by tomorrow.
+  - Your learners can copy the example but fail on a new version.
+  - You tutor and want a smooth ramp in difficulty.
+  - You want mixed review problems instead of ten the same.
+you_give:
+  - Skill or topic to practise
+  - Learner level or age
+  - Number of problems wanted
+  - Worked example or textbook style (optional)
+you_get:
+  - Ordered problem set
+  - Difficulty levels labelled
+  - Answer key
+  - Notes on common mistakes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

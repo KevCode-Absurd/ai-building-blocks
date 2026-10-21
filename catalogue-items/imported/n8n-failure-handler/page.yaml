@@ -6,6 +6,24 @@ summary: Give it an n8n workflow that breaks quietly. Get clear errors, retries 
 job: connect-tools
 headline: n8n failure handler
 subhead: Give it an n8n workflow that breaks quietly. Get clear errors, retries and alerts so you see and fix failures.
+explain: |
+  Workflows that fail loudly instead of dying in silence. When an n8n node breaks, the default is to halt the whole run, and nobody finds out. That is fine when you are watching, and a problem when it runs alone at night.
+
+  The skill adds two layers. First, each node that can fail gets its own error path, so one bad call does not kill the run. Second, a catch-all error workflow sends an alert for anything that slips through. It also sets limited retries for network calls, makes sure a retry cannot double-send an email or payment, and strips private details from alerts and API replies.
+when:
+  - A webhook workflow returns an empty error and you cannot tell why.
+  - A scheduled workflow stopped weeks ago and no one noticed.
+  - You want a Slack or email alert whenever a workflow breaks.
+  - Calls to a flaky API fail now and then and should retry on their own.
+you_give:
+  - The n8n workflow that breaks (JSON or a description)
+  - Where alerts should go
+  - Which steps are safe to retry (optional)
+you_get:
+  - Error paths wired on risky nodes
+  - A shared error workflow with alerts
+  - Retry settings that cannot double-send
+  - Safe error replies for callers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

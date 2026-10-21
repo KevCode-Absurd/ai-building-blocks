@@ -6,6 +6,24 @@ summary: Give it your retention export. Get where viewers leave, what you said t
 job: grow-social
 headline: YouTube retention reader
 subhead: Give it your retention export. Get where viewers leave, what you said then, and the one change to make.
+explain: |
+  Export your audience retention data and learn where viewers leave, what you were saying at that moment, and the one change to make.
+
+  You download the retention file from Studio under Analytics, then run a small Python tool on it. It separates three problems. A hook leak is the share lost in the first 30 seconds, where under 25 percent is healthy. A cliff is one steep drop, and with a transcript the tool prints the words spoken right then. A slide is a steady loss across the middle, which means pacing and calls for cutting. You get the biggest leak and one fix. If numbers look fine, it points you to packaging.
+when:
+  - A video lost half its viewers early and you want to know why.
+  - You see a sharp drop in the graph and want the words behind it.
+  - You are deciding what to change in your next video's opening.
+  - Your retention looks fine but views are low.
+you_give:
+  - The retention CSV from YouTube Studio
+  - The video length in seconds
+  - Your transcript as an SRT file (optional)
+you_get:
+  - A hook leak reading
+  - Cliff points with what you said there
+  - A note on any steady slide
+  - The one change to make first
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

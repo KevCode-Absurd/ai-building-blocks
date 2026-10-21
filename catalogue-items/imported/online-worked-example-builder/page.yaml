@@ -6,6 +6,25 @@ summary: Give it a skill. Get step-by-step worked examples for online lessons, w
 job: teach-and-train
 headline: Online worked example builder
 subhead: Give it a skill. Get step-by-step worked examples for online lessons, with help that fades as students learn.
+explain: |
+  A set of worked examples for an online lesson, where the help shrinks as students get better. Students first see a full solution, then solutions with a step missing, then try alone.
+
+  You name the skill you want to teach. The skill builds a sequence of examples that start complete and fade step by step. Early examples explain the reasoning at each step. Later ones leave blanks for the student to fill, and prompts ask them to explain why. It keeps each screen light so learners are not overloaded. This approach comes from research on how people learn from examples. It suits e-learning modules, school platforms and apps.
+when:
+  - You are building an online maths or coding module and students get stuck.
+  - Learners copy the answer without understanding it.
+  - You need examples that fit a screen-based lesson.
+  - You want to move students from guided to independent work.
+you_give:
+  - The skill to teach
+  - Your learners' level
+  - The platform or format (optional)
+  - A sample problem (optional)
+you_get:
+  - A sequence of examples that fade support
+  - Step explanations
+  - Fill-in-the-blank practice steps
+  - Self-explanation prompts
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

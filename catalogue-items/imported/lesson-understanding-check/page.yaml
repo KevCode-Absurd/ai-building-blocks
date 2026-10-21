@@ -6,6 +6,27 @@ summary: Give it your lesson stages. Get a check for each stage, so you know who
 job: teach-and-train
 headline: Lesson understanding check planner
 subhead: Give it your lesson stages. Get a check for each stage, so you know who has it before moving on.
+explain: |
+  Know who has understood before you move on, not after the test. Give it your lesson stages and you get a planned check for each one, so quiet students cannot hide behind the confident few.
+
+  The skill picks a technique to fit each moment, such as mini-whiteboards during teaching or an exit ticket at the end. It writes questions that show real understanding instead of recall. It adds one hinge question that splits students who got it from students who did not, plus a cold-call order. Then it gives you a simple decision tree: what to do if most, some or few answer correctly.
+when:
+  - You teach new content and want to check every student before the next step.
+  - Your class says they understand when they do not.
+  - You need a hinge question for the middle of a lesson.
+  - You want an exit ticket that shows what to reteach tomorrow.
+you_give:
+  - What you are teaching
+  - Lesson stages or timing
+  - Year group and class traits
+  - Common misconceptions (optional)
+  - Tools you have, like whiteboards (optional)
+you_get:
+  - Checks for each lesson stage
+  - A hinge question
+  - A cold-call sequence
+  - An exit ticket
+  - A decision tree for what to do with answers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

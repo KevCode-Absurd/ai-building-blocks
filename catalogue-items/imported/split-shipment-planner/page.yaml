@@ -6,6 +6,24 @@ summary: Say which items ship from where. Get one order split into separate ship
 job: run-your-store
 headline: Split shipment planner
 subhead: Say which items ship from where. Get one order split into separate shipments. Changes a live order and cannot be undone.
+explain: |
+  One Shopify order split into separate shipments, each with its own tracking number. You say which items ship together, for example from different locations, dates or carriers.
+
+  The skill checks that the order is open and that every item you list belongs to it. It runs a dry run by default, showing the groups it would create. Only after you confirm does it run the split. The split changes a live order and cannot be undone, and the original fulfilment order is replaced by new ones. It needs the Shopify command line, a signed-in session and order and fulfilment permissions.
+when:
+  - One order has items stored in two warehouses.
+  - Part of an order is ready now and the rest ships next week.
+  - Items need different carriers.
+  - You want to preview the groups before changing a live order.
+you_give:
+  - Your store domain
+  - The fulfilment order ID
+  - Which items and quantities go in each shipment
+  - Shopify permission to read orders and write fulfilments
+you_get:
+  - A dry-run preview of the shipment groups
+  - Separate fulfilment orders after you confirm
+  - A summary of what changed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

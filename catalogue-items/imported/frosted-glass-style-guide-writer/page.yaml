@@ -6,6 +6,26 @@ summary: Describe your product. Get a style guide for a frosted, see-through loo
 job: design-work
 headline: Frosted glass style guide writer
 subhead: Describe your product. Get a style guide for a frosted, see-through look, with blur levels and contrast checks.
+explain: |
+  A style guide for a frosted, see-through look, with blur levels, layered surfaces and contrast rules that keep text readable. Designers and engineers can use it straight away.
+
+  It sets colour and spacing tokens, a type scale, and how translucent cards and borders stack to create depth. Rules for do and don't are explicit: use named tokens not raw values, keep interaction states visible, avoid low-contrast text and don't mix different visual styles. Accessibility is built in, with WCAG 2.2 AA and keyboard focus. You give your product details and brand tone, and it adjusts the guide.
+when:
+  - You want a glass-style interface and need rules to keep it consistent.
+  - Your frosted cards make text hard to read.
+  - You need design tokens a developer can implement.
+  - You are handing a visual style to a team.
+you_give:
+  - Product and audience
+  - Brand colours and fonts
+  - Tone of voice (optional)
+  - "Platforms: web, mobile or both (optional)"
+you_get:
+  - Style guide for the frosted look
+  - Colour, type and spacing tokens
+  - Blur and layer levels
+  - Contrast and accessibility rules
+  - Do and don't list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your forecast and capacity. Get a monthly meeting agenda, gap l
 job: plan-supply-chain
 headline: Monthly demand and supply meeting planner
 subhead: Give it your forecast and capacity. Get a monthly meeting agenda, gap list and decisions that need an owner.
+explain: |
+  A monthly planning meeting that gets sales, operations and finance agreeing on one plan. You give it your forecast and capacity, and you get an agenda, a list of gaps between demand and supply, and decisions that each need a named owner.
+
+  It begins by learning how you plan today, who attends, how many products you handle and where it hurts. Then it lays out the standard monthly cycle: update demand, check supply, find the gaps, resolve what staff can, and take the rest to leadership. Inputs, outputs and measures for each step are listed. It also helps you track forecast accuracy and service levels so the meeting improves over time.
+when:
+  - Sales promises more than operations can build.
+  - Your planning is in separate spreadsheets that never match.
+  - You want a monthly meeting that ends in decisions, not updates.
+  - Leadership asks for one number to run the business on.
+you_give:
+  - Demand forecast
+  - Capacity and inventory data
+  - Who attends and how often you meet
+  - Current pain points (optional)
+you_get:
+  - Meeting agenda by step
+  - Demand and supply gap list
+  - Decisions with owners
+  - Measures to track
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

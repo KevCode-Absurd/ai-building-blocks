@@ -6,6 +6,27 @@ summary: Describe your product. Get a free tier with limits that win paid users 
 job: plan-strategy
 headline: Free plan designer
 subhead: Describe your product. Get a free tier with limits that win paid users without anger or abuse.
+explain: |
+  A free tier for a developer product with limits that let people build real things and still lead many of them to pay. It avoids both stingy limits and ones that invite abuse.
+
+  It first compares four models: free trial, free tier, freemium and open core, and picks the one that suits how you sell. Then it sets limits on usage, projects, seats and features, based on when a hobby project turns into a paid one. It checks for abuse risks and for limits that feel like traps. Last, it sets up the upgrade message and tracks what to watch after launch.
+when:
+  - You are launching a developer tool and must decide what to give free.
+  - Your free users never pay, or they leave angry about limits.
+  - You think people are abusing your free plan.
+  - You are choosing between a trial and a permanent free tier.
+you_give:
+  - What your product does
+  - How you sell (self-serve or sales-led)
+  - Costs per free user
+  - Paid plan prices
+  - "Who uses it: hobbyists or companies (optional)"
+you_get:
+  - Model recommendation
+  - Free tier limits with reasons
+  - Abuse risks and guards
+  - Upgrade trigger points
+  - Metrics to track
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

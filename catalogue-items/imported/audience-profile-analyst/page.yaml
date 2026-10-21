@@ -6,6 +6,25 @@ summary: Give it a brand or account. Get who follows it, what they like and how 
 job: understand-customers
 headline: Audience profile analyst
 subhead: Give it a brand or account. Get who follows it, what they like and how engaged they are. Collects data from websites.
+explain: |
+  A picture of who follows a brand or account, what they like and how engaged they really are. Point it at a Facebook, Instagram, YouTube or TikTok account, and it collects public data and writes up the findings.
+
+  It picks the right data collector, called an Actor, on the Apify service, reads what inputs that Actor needs, asks how you want the results saved, and runs it. Then it summarises demographics, behaviour patterns and engagement quality. You need an Apify account and token, Node.js, and a command line tool called mcpc, so it suits people comfortable with a terminal. Collection is paid by Apify.
+when:
+  - You want to know who really follows a competitor before you copy their content.
+  - You are choosing an influencer and need to see if their audience is real.
+  - You need audience facts for a pitch or a brand deck.
+  - You want to compare followers across two platforms.
+you_give:
+  - The brand, account or page link
+  - Which platform
+  - An Apify account token
+  - Output format and file name (optional)
+you_get:
+  - A collected audience data file
+  - A summary of who the audience is
+  - Interests and behaviour patterns
+  - An engagement quality read
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

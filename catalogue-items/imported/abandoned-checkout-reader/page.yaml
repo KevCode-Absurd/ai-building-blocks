@@ -6,6 +6,25 @@ summary: Pick a date range. Get abandoned checkouts split by cart value and hour
 job: run-your-store
 headline: Abandoned checkout reader
 subhead: Pick a date range. Get abandoned checkouts split by cart value and hour, so you see when and where buyers drop.
+explain: |
+  Shoppers who leave at checkout do it at certain prices and certain hours, and this report shows both. It splits abandoned checkouts by cart value and by hour of day.
+
+  You pick a start and end date. The skill pulls every abandoned checkout in that range from your Shopify store, paging through the results until it has them all. It then counts them by price band, such as under 25, 25 to 50, 50 to 100, 100 to 250 and above, and by hour in UTC. It only reports what Shopify provides, so device type and location are left out on purpose. It is read only. It needs the Shopify command line signed in.
+when:
+  - Your store loses sales at checkout and you want to know when.
+  - You suspect high-value carts are the ones being dropped.
+  - You want to time a reminder email for the busiest drop-off hour.
+  - You need numbers for a checkout fix you plan to test.
+you_give:
+  - Your Shopify store address
+  - A start date and an end date
+  - Custom cart value bands (optional)
+  - Shopify read access for checkouts
+you_get:
+  - Abandoned checkouts counted by cart value band
+  - Counts by hour of day
+  - The total number found
+  - Plain notes on where drop-off is highest
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: "Describe your product. Get a style guide with a magazine feel: serif t
 job: design-work
 headline: Magazine layout style guide writer
 subhead: "Describe your product. Get a style guide with a magazine feel: serif type, tidy grids and easy reading."
+explain: |
+  A style guide for your product with a magazine feel, covering serif type, tidy grids and easy reading. Engineers and designers can use it directly without further interpretation.
+
+  It sets a type scale, here 14 up to 40, with a serif font for body and display text. It adds a restrained color set with named tokens for primary, neutral, success, warning, danger and surface. Spacing follows an 8-point grid. It states rules to follow and to avoid, such as always using tokens, keeping clear hierarchy and designing empty, loading and error states. Accessibility is built in: WCAG 2.2 AA, visible focus, large touch targets and reduced motion. It also sets a short, clear tone for text.
+when:
+  - You want your app or site to feel like a well-edited publication.
+  - Your team needs one shared set of type, color and spacing rules.
+  - You are building a reading-heavy product and want comfortable text.
+  - You need design guidance that also meets accessibility standards.
+you_give:
+  - A description of your product
+  - Your audience
+  - Fonts or colors you must keep (optional)
+  - The platform, web or app (optional)
+you_get:
+  - Type scale and font choices
+  - Color tokens
+  - Spacing and layout rules
+  - Accessibility requirements
+  - Tone-of-voice notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

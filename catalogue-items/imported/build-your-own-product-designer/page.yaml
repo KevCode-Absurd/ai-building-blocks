@@ -6,6 +6,26 @@ summary: Describe your customisable product. Get a plan with option rules, live 
 job: build-product
 headline: Build-your-own product designer
 subhead: Describe your customisable product. Get a plan with option rules, live pricing, checks and saving.
+explain: |
+  A plan for a build-your-own product tool that people finish, not abandon. It covers the choices to show, the rules between them, live pricing, checks and saving.
+
+  The skill points to the two common failures: showing every option at full detail, which freezes buyers, and calling three fixed bundles "custom". Its fix is smart defaults that give a sensible start, rules that block invalid combinations and say why, a way into deeper options for those who want them, and a price that updates as they choose. It also decides which options deserve to be shown at all, and when plain bundles are the better answer.
+when:
+  - You are scoping a configurator for the first time.
+  - Your current builder has many people quitting halfway.
+  - You need rules that stop customers picking combinations that cannot be made.
+  - You are not sure which options to show and which to hide.
+you_give:
+  - The product and all its options
+  - Which combinations are not allowed
+  - Pricing rules
+  - Current drop-off data (optional)
+you_get:
+  - A shortlist of options to show
+  - Smart default choices
+  - Rules for blocking invalid combinations
+  - A live pricing approach
+  - Save and share ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

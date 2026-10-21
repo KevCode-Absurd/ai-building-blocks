@@ -6,6 +6,25 @@ summary: Give it a page. Get working JSON-LD markup for rich results, tested and
 job: build-websites
 headline: Structured data writer
 subhead: Give it a page. Get working JSON-LD markup for rich results, tested and ready to paste.
+explain: |
+  Search-engine markup for your page, written as JSON-LD you can paste in and test. It helps search engines understand what a page is, so it can qualify for rich results like star ratings, prices, FAQ answers or event dates.
+
+  It first checks the page type, any markup that already exists and which rich results you want. Then it writes schema.org markup that matches only what is truly on the page, since markup for content that is not there can get you penalised. It sticks to types Google supports, and lists what to validate with Google's Rich Results Test and what to watch in Search Console. It can fix errors in markup you already have.
+when:
+  - Your product pages show no price or rating in Google.
+  - You added an FAQ and want it to appear as a rich result.
+  - Search Console reports errors in your structured data.
+  - You publish articles, recipes or events and want them marked up.
+you_give:
+  - The page address or its content
+  - The page type
+  - Existing markup (optional)
+  - The rich result you want (optional)
+you_get:
+  - JSON-LD markup ready to paste
+  - Placement advice for your page
+  - A validation checklist
+  - Fixes for current errors
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

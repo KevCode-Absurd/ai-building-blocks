@@ -6,6 +6,24 @@ summary: Point it at your components. Get naming and hardcoded value problems, d
 job: design-work
 headline: Design system auditor
 subhead: Point it at your components. Get naming and hardcoded value problems, docs for variants, or a new pattern.
+explain: |
+  A check of how consistent your components are, in one of three modes. Audit finds naming problems and hardcoded values. Document writes up a component with its variants. Extend designs a new pattern that fits what you already have.
+
+  It looks at the building blocks of your system: tokens such as colours, type scale, spacing, borders, shadows and motion, and components with their variants and states. In audit mode it flags places that skip tokens, duplicate each other or break naming rules. In document mode it writes usage notes and variants. In extend mode it proposes a new component using your existing tokens, so it feels native.
+when:
+  - Your buttons look different on every page.
+  - You need documentation for a component developers keep rebuilding.
+  - You want to find hardcoded colours that should be tokens.
+  - You need a new component and want it to match the system.
+you_give:
+  - Components, styles or Figma file
+  - "Mode: audit, document or extend"
+  - Component or pattern name (optional)
+you_get:
+  - Audit list of inconsistencies
+  - Component documentation with variants
+  - Design for a new pattern
+  - Fixes for naming and tokens
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

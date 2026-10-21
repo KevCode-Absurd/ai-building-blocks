@@ -6,6 +6,26 @@ summary: Give it an audio file. Get a written transcript in 99 languages, or an 
 job: work-with-audio
 headline: Whisper speech transcriber
 subhead: Give it an audio file. Get a written transcript in 99 languages, or an English translation.
+explain: |
+  A written transcript of your audio, in the original language or translated into English. Podcasts, interviews and meeting recordings become searchable text.
+
+  It runs Whisper, a speech model trained on 680,000 hours of audio and covering 99 languages. It copes well with noise and accents. The skill covers installing the model, choosing a model size that balances speed against accuracy, running transcription and translation, and saving the result with timestamps. It also says when another tool fits better, such as a managed service if you need speaker labels or live streaming. You need Python and a computer able to run the model.
+when:
+  - You have a recorded interview and need the words on a page.
+  - Your podcast needs show notes or subtitles.
+  - A recording is in another language and you want it in English.
+  - Meeting audio is noisy and other tools mishear it.
+you_give:
+  - An audio or video file
+  - Language, if you know it (optional)
+  - Whether you want a translation
+  - Computer with Python
+you_get:
+  - Full text transcript
+  - Timestamps
+  - English translation (optional)
+  - Choice of model size
+  - Saved transcript file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

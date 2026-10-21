@@ -6,6 +6,25 @@ summary: Give it RINEX satellite data. Get receiver positions worked out from ch
 job: build-software
 headline: GNSS position calculator
 subhead: Give it RINEX satellite data. Get receiver positions worked out from chosen satellite groups.
+explain: |
+  Where a receiver was, worked out from satellite data you already have. Give it RINEX observation and navigation files and it calculates positions using pseudoranges from GPS, GLONASS, Galileo, BeiDou, QZSS, NavIC and SBAS.
+
+  You can pick which satellite groups to use and compare a single group against several. It also reports dilution of precision and satellite geometry, so you can judge solution quality. You can test options such as the elevation mask, signal strength cutoff and corrections to see their effect. It handles RINEX version 3 only, not carrier-phase methods. It needs MATLAB with the Navigation Toolbox, release R2026a or newer.
+when:
+  - You logged satellite data and need receiver positions from it.
+  - You want to see if adding Galileo improves accuracy.
+  - You are teaching how satellite positioning works.
+  - You need to test how an elevation mask changes your result.
+you_give:
+  - RINEX 3 observation file
+  - RINEX 3 navigation file
+  - Satellite systems to use
+  - Processing options (optional)
+you_get:
+  - Receiver position solutions
+  - Dilution of precision values
+  - Single versus multi-system comparison
+  - MATLAB code you can rerun
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

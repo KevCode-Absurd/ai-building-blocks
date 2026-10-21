@@ -6,6 +6,26 @@ summary: Give it a subpoena. Get what it asks for, the deadline and a plan for y
 job: check-contracts
 headline: Subpoena first-look reviewer
 subhead: Give it a subpoena. Get what it asks for, the deadline and a plan for your lawyer. Not legal advice.
+explain: |
+  A first read of a subpoena your company has received, so you know what it wants and when before you call your lawyer. It is a triage aid, not legal advice.
+
+  Share the subpoena. The skill first looks up the rule that applies where it was issued. It then classifies the document, pulls out the key fields, and checks them against your other matters. It reviews scope, burden and privilege, drafts an objections framework, and lays out a compliance plan with the people and systems likely holding documents. It ends with a deadline calendar and a written triage you can hand to counsel.
+when:
+  - Your company was served and no one knows the deadline.
+  - You need a summary to give outside counsel on day one.
+  - You want to know which teams and systems might hold the records.
+  - Several matters overlap and you need to see how this one fits.
+you_give:
+  - The subpoena document
+  - The jurisdiction
+  - Your other open matters (optional)
+  - Company context or systems list (optional)
+you_get:
+  - A classification of the subpoena
+  - Key fields and categories sought
+  - A scope, burden and privilege review
+  - An objections framework
+  - A deadline calendar and compliance plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

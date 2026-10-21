@@ -6,6 +6,26 @@ summary: Describe the mobile screens you want. Get Expo Router code with native 
 job: build-software
 headline: Expo app interface builder
 subhead: Describe the mobile screens you want. Get Expo Router code with native tabs, styling and motion.
+explain: |
+  Mobile screens written as Expo Router code, with native tabs, tidy styling and smooth motion, so your app feels like it belongs on the phone.
+
+  You describe the screens. The skill builds the route structure, including dynamic routes and groups, and sets up navigation with native tabs. It adds animations with Reanimated for entering, leaving and gestures, and uses native controls such as switches, sliders and date pickers. It also covers form sheets, search bars, gradients, icons, camera and media, and local storage. Reference notes for each area sit alongside the main guide, so code follows current Expo patterns.
+when:
+  - You are starting an Expo app and need the screens and navigation set up.
+  - Your tab bar looks like a web page, not a phone app.
+  - You want smooth entry and exit motion on a list or card.
+  - You need a search bar, form sheet or native picker.
+you_give:
+  - Description of the screens and flow
+  - Expo project (existing or new)
+  - Look you want, such as colors or style (optional)
+  - Data to store on the device (optional)
+you_get:
+  - Expo Router screens and layout files
+  - Native tab navigation
+  - Animations
+  - Native controls and forms
+  - Storage setup
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

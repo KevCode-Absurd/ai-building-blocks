@@ -6,6 +6,25 @@ summary: Point it at a Python project. Get which library changes came after the 
 job: test-and-fix-code
 headline: Library change finder
 subhead: Point it at a Python project. Get which library changes came after the AI's training and where your code uses them.
+explain: |
+  AI models write code from what they learned before a cutoff date. If your project pins newer library versions, the model may use old methods. This finds the gap in your Python project and shows where your code is affected.
+
+  It reads your lockfile, checks the model's cutoff, and lists which pinned libraries changed their interfaces since then. Then it points to the files in your code that call those changed parts. The scan only reads. If you want, it previews short notes for your AGENTS.md or CLAUDE.md and writes them only after you agree. It needs the small since-cutoff tool, which it asks before downloading.
+when:
+  - Your AI keeps calling library functions that no longer exist.
+  - You upgraded packages and want to know what the AI may get wrong.
+  - You want a standing note in your repo about changed library behaviour.
+  - You maintain a Python project and use a coding agent daily.
+you_give:
+  - A Python project with pinned dependencies
+  - The AI model you use
+  - Permission to run the since-cutoff tool
+  - A yes or no on writing notes (optional)
+you_get:
+  - The model's cutoff and affected libraries
+  - Changed interfaces your code uses
+  - The files that use them
+  - A previewed notes block for AGENTS.md or CLAUDE.md
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it a topic. Get the key academic papers found from open databases 
 job: think-and-decide
 headline: Literature review finder
 subhead: Give it a topic. Get the key academic papers found from open databases and sorted by theme.
+explain: |
+  A starting set of real academic papers on your topic, found from free databases and sorted by theme. You can trust each paper because it was found in this session.
+
+  It asks three questions first: how specific your question is, which framework fits, and how deep to go. It picks PICO for clinical questions, SPIDER for social ones, or a problem-solution-evaluation split for technology. It then searches PubMed and OpenAlex, which need no key, and can add Consensus if connected. It tracks searches run, unique papers and papers kept, and only cites what came back. It retries failures gently and tells you when it stops.
+when:
+  - You are new to a field and need the main papers fast.
+  - You have a clinical question and want a structured search.
+  - You need a reading list before writing a proposal.
+  - You want a search record you can show your supervisor.
+you_give:
+  - Your research topic or question
+  - Your field
+  - How deep you want to go
+  - Date or study type limits (optional)
+you_get:
+  - A search plan with framework
+  - Papers found, deduplicated
+  - Papers grouped by theme
+  - Counts of searches and papers
+  - A note on any search failures
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

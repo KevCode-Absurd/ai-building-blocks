@@ -6,6 +6,26 @@ summary: Ask a high-stakes question. Get a sourced answer checked across many so
 job: think-and-decide
 headline: Decision research investigator
 subhead: Ask a high-stakes question. Get a sourced answer checked across many sources, with doubts flagged.
+explain: |
+  For questions where a wrong answer costs more than the extra hours. You get a research folder you can reopen next month: a plan, scored sources, a report, and a list of what to refresh.
+
+  It begins by rewriting your question and stating two to four hypotheses that could be proven wrong. Then it searches in parallel, saves every source, and rates each for credibility, recency and bias. Each main claim needs at least three independent sources of different types. The report includes the best arguments against its own conclusion, and a check of citations before it closes. It can take a while and uses many searches.
+when:
+  - You are choosing a vendor or market and the stakes are high.
+  - A one-shot AI answer is not enough and you need sources you can check.
+  - You must defend a recommendation to a skeptical board.
+  - You want research you can update later without starting over.
+you_give:
+  - The question and the decision behind it
+  - "Depth: shallow, medium or deep"
+  - Source types you trust or want to exclude (optional)
+  - Deadline or length limit (optional)
+you_get:
+  - Reframed question with hypotheses
+  - Scored source files
+  - Report with counter-arguments
+  - Citation check
+  - Refresh list for later
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

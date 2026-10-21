@@ -6,6 +6,26 @@ summary: Give it your product facts. Get a title, bullets and description built 
 job: write-landing-page
 headline: Product listing writer
 subhead: Give it your product facts. Get a title, bullets and description built for the marketplace you sell on.
+explain: |
+  A marketplace-ready listing: title, bullet points, description and hidden search keywords, written for the platform you sell on. It avoids guessing by scoring keywords and checking what competitors do.
+
+  It has two modes. In Create mode, you give product specs and it builds a new listing. In Optimize mode, you paste an existing listing and it finds keyword gaps. Copy follows the FABE pattern: feature, advantage, benefit, evidence. It supports Amazon, eBay and other major platforms and needs no API key. For Amazon, a separate dedicated skill is recommended.
+when:
+  - You are listing a new product on a marketplace.
+  - An existing listing gets few views and you want better keywords.
+  - You need bullets that match one platform's rules.
+  - You want to compare your listing against competitors.
+you_give:
+  - Product specs and features
+  - The platform you sell on
+  - Competitor listings or links (optional)
+  - Your current listing for optimising (optional)
+you_get:
+  - A keyword-aware title
+  - Benefit-led bullet points
+  - A full description
+  - Backend search keywords
+  - A keyword gap report when optimising
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

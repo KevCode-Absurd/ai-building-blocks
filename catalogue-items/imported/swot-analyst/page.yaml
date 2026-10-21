@@ -6,6 +6,25 @@ summary: Name your business or product. Get strengths, weaknesses, opportunities
 job: plan-strategy
 headline: SWOT analyst
 subhead: Name your business or product. Get strengths, weaknesses, opportunities and threats, with actions to take.
+explain: |
+  A SWOT analysis that goes past four lists. Each point leads to something you can do, so the result drives a decision.
+
+  Name your business or product and give a little background. The skill sorts what it finds into strengths and weaknesses, which come from inside the business, and opportunities and threats, which come from outside. It keeps those two sides separate so they do not blur, then turns the findings into recommended actions. It can also be used for competitive checks or for judging a product's position. You can feed it your own facts to make it specific.
+when:
+  - You are planning next year and need a quick strategic review.
+  - You are weighing a new product against the market.
+  - A competitor moved and you want to judge your position.
+  - You need a one-page assessment for a meeting or pitch.
+you_give:
+  - Your business or product name
+  - What it does and who it serves
+  - Competitors or market notes (optional)
+  - Goals for the next year (optional)
+you_get:
+  - Strengths and weaknesses
+  - Opportunities and threats
+  - Recommended actions
+  - A one-page summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

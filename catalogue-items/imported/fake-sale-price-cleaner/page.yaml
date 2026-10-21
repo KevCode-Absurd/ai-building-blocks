@@ -6,6 +6,25 @@ summary: Get strikethrough prices removed where there is no real discount. Chang
 job: set-prices
 headline: Fake sale price cleaner
 subhead: Get strikethrough prices removed where there is no real discount. Changes live prices and the old values are not kept.
+explain: |
+  A Shopify store where strikethrough prices only show when there is a real discount. It removes old compare-at prices that no longer mean anything, which keeps your pricing honest.
+
+  The skill reads your variants through the Shopify CLI. It finds two kinds of problem: compare-at prices that are at or below the selling price, and compare-at prices that have sat unchanged past an age limit, 90 days by default. You can limit the run to one collection or tag. It starts as a dry run and writes a CSV of every change first, so you can undo them. A live run clears the old values and does not keep them in Shopify. You need store access.
+when:
+  - Your store shows crossed-out prices that have been there for a year.
+  - A product page shows a sale price higher than the old price.
+  - You want to meet rules on fair price claims.
+  - You are cleaning up after a sale ended.
+you_give:
+  - Your store domain
+  - Shopify CLI access with product read and write rights
+  - Age limit in days (optional)
+  - A collection or tag to limit the run (optional)
+you_get:
+  - A dry-run list of affected variants
+  - A CSV backup of old values
+  - Cleared compare-at prices on a live run
+  - A count of what changed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

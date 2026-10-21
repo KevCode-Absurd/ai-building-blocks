@@ -6,6 +6,26 @@ summary: Describe work to pass on. Get a clear handoff to another AI agent, with
 job: set-up-ai
 headline: Task handoff writer
 subhead: Describe work to pass on. Get a clear handoff to another AI agent, with checks along the way.
+explain: |
+  A clear brief that lets another AI agent take over a piece of work without losing context, plus a way to check its progress. Handoffs stop failing because the second agent knows what to do, what it owns and what counts as done.
+
+  The skill only delegates when you have allowed it. It scopes the job to something bounded, then writes the brief: the goal, the files or areas the agent owns, what is off limits and the check that proves success. For terminal agents it uses safe ways to send long prompts so quotes and symbols do not break. It polls at sensible intervals, reports real progress only, and keeps the final review with you.
+when:
+  - You want a second AI agent to take one part of a big job.
+  - A long prompt keeps breaking when sent to a terminal agent.
+  - You need to track what the agent changed and what is left.
+  - You worry two agents will edit the same files.
+  - You want a handoff note a person could follow too.
+you_give:
+  - The work to pass on
+  - Which agent or tool will take it
+  - Files or areas it may touch
+  - How you will know it worked
+you_get:
+  - A handoff brief with scope and limits
+  - A check for success
+  - A polling plan with sensible gaps
+  - A report of changes and open issues
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

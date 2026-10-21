@@ -6,6 +6,25 @@ summary: Give it a market or product idea. Get a TAM, SAM and SOM estimate built
 job: plan-strategy
 headline: Market size estimator
 subhead: Give it a market or product idea. Get a TAM, SAM and SOM estimate built top-down and bottom-up, with sources.
+explain: |
+  A market size estimate for your idea, shown as TAM, SAM and SOM and built three ways so you can see if the numbers agree. It is useful for fundraising, planning and checking whether an idea is big enough.
+
+  TAM is the whole market if you took all of it. SAM is the part your product and region can reach. SOM is the slice you can realistically win. The skill builds these top-down from industry reports, bottom-up from customer counts times price, and by value, based on what people would pay to solve the problem. It lays out the steps, the assumptions and the sources, and explains how to cross-check the results.
+when:
+  - You are writing a pitch deck and need defensible market numbers.
+  - You want to know whether your idea can reach a meaningful revenue.
+  - Your top-down and bottom-up numbers are far apart.
+  - An investor asked you to justify your TAM.
+you_give:
+  - Your product or idea
+  - Target customers and region
+  - Price or revenue per customer
+  - Any industry reports you have (optional)
+you_get:
+  - TAM, SAM and SOM estimates
+  - Top-down and bottom-up workings
+  - A willingness-to-pay view
+  - Assumptions and sources list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

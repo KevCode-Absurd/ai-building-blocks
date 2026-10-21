@@ -6,6 +6,25 @@ summary: Say what to explore or teach. Get a clean Jupyter notebook, ready to ru
 job: work-with-files
 headline: Notebook builder
 subhead: Say what to explore or teach. Get a clean Jupyter notebook, ready to run.
+explain: |
+  A clean Jupyter notebook, ready to run, for either an experiment or a tutorial. It gives you a good starting structure so you spend time on the work, not the layout.
+
+  The skill asks which kind you need. Experiment notebooks follow a hypothesis-led flow for exploring and analysing data. Tutorial notebooks go step by step for a named audience. It first locks the goal, the reader and what done looks like. Then a helper script scaffolds the notebook from a template, which avoids hand-editing the raw file and breaking it. It can also turn rough notes or scripts into a notebook, or tidy an old one so it runs top to bottom. You need Python and Jupyter.
+when:
+  - You have a loose script and want it as a readable notebook.
+  - You are writing a tutorial and want a clear structure.
+  - An old notebook only works if cells run in a certain order.
+  - You want to compare two ideas in a repeatable way.
+you_give:
+  - The topic, goal and audience
+  - Experiment or tutorial
+  - Existing notes, scripts or a notebook (optional)
+  - Python and Jupyter installed
+you_get:
+  - A new .ipynb file
+  - A structure fitted to your goal
+  - A reproducible, top to bottom flow
+  - A tidied version of an old notebook (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

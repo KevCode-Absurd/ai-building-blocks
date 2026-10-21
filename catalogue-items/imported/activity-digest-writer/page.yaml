@@ -6,6 +6,25 @@ summary: Ask what you missed. Get a daily or weekly digest of mentions, action i
 job: organise-work
 headline: Activity digest writer
 subhead: Ask what you missed. Get a daily or weekly digest of mentions, action items and decisions by topic.
+explain: |
+  A daily or weekly digest of what you missed, grouped by project, puts your action items and decisions at the top. It is made for the morning after time away, or for Friday's review.
+
+  The skill checks which sources you have connected, such as chat, email and documents. It pulls activity from each one, then picks out the key items: things that mention you, decisions made, and tasks waiting on you. It groups the rest by topic, so each project reads as one block. The digest lists mentions and updated documents, with counts at the end. If a source is not available, it says so rather than hiding the gap. You can set the daily or weekly range.
+when:
+  - You were out for a week and need to catch up fast.
+  - You want a short summary of mentions and tasks at the start of the day.
+  - Your team makes decisions in chat and you lose track of them.
+  - You need a weekly recap grouped by project.
+you_give:
+  - Daily or weekly range
+  - Connected chat, email and document tools
+  - Projects or topics to focus on (optional)
+you_get:
+  - A list of your action items
+  - Decisions made
+  - Updates grouped by project
+  - Mentions of you
+  - A note on any source that was unavailable
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

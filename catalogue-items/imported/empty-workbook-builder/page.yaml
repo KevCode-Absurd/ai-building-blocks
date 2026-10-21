@@ -6,6 +6,25 @@ summary: Give a confirmed field list. Get a formatted empty Excel or CSV file, w
 job: work-with-files
 headline: Empty workbook builder
 subhead: Give a confirmed field list. Get a formatted empty Excel or CSV file, with no invented rows.
+explain: |
+  A tidy, empty Excel or CSV file built only from the fields you have already agreed, with no made-up rows and no extra dashboards. You hand it the list, and you get a workbook ready to fill in by hand or import.
+
+  It acts as a helper for other skills. It does not decide which fields you need. It takes the confirmed list and sets columns, headings, formatting and entry rules. Because the workbook and CSV come from the same list, they always match. Use it for registers, templates or importable tables.
+when:
+  - You agreed a field list and now need a real file.
+  - You want a register your team fills in by hand.
+  - You need a CSV for a data import.
+  - You want a template without sample data.
+you_give:
+  - The confirmed field list
+  - "File type: Excel or CSV"
+  - Column rules (optional)
+  - Sheet name (optional)
+you_get:
+  - An empty formatted workbook
+  - A matching CSV (optional)
+  - Clear column headings
+  - No invented rows
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

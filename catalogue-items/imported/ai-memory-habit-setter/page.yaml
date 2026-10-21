@@ -6,6 +6,24 @@ summary: Connect any memory tool. Get clear rules for when your AI recalls and s
 job: set-up-ai
 headline: AI memory habit setter
 subhead: Connect any memory tool. Get clear rules for when your AI recalls and saves decisions, so it stops repeating itself.
+explain: |
+  Your AI has a memory tool connected, yet it still asks the same questions and forgets what you decided last week. This skill gives it standing rules for when to look things up and when to write them down.
+
+  The rules are plain. Recall before you start work that has history, pick a tool, or follow a convention. Save after a decision, a correction, a failure, or a lasting preference. Each note holds one fact, the reason, the date and the source, in your own words. It skips secrets and anything that can be reread from a file. It works with a notes folder, a local memory server or a hosted one.
+when:
+  - You connected a memory tool but your AI never seems to use it.
+  - Your AI keeps undoing a habit you already corrected.
+  - You start every session by repeating the same background.
+  - You want one set of memory rules across several AI tools.
+you_give:
+  - The memory tool or folder your AI can use
+  - Your project name
+  - Standing decisions you want kept (optional)
+you_get:
+  - Rules for when your AI recalls
+  - Rules for when it saves
+  - A note format with fact, reason, date and source
+  - A list of what never to save
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your calls or appointments. Get a booking flow with open times
 job: sell-and-negotiate
 headline: Booking page designer
 subhead: Describe your calls or appointments. Get a booking flow with open times, qualifying questions, prep emails and follow-up.
+explain: |
+  A booking flow that sets up good calls instead of cold demos. You get open times, a short set of questions, prep emails for your team and a follow-up sequence, all matched to who is booking.
+
+  The skill argues for three to five well-chosen form fields, since long forms lose most people before they book. It routes high-fit leads to senior people and sends others down a lighter path. It briefs the rep before each call so no one starts blind. It also tells you when a booking page is the wrong tool. It suits a first scheduler or a rebuild of a weak one.
+when:
+  - You are setting up a scheduler for the first time.
+  - Your booking form is too long and people drop off.
+  - Reps join calls knowing nothing about the lead.
+  - You want good leads routed to your best people.
+you_give:
+  - What the calls are for
+  - Who books and how you tell good fits
+  - Your team's availability
+  - Your current booking tool (optional)
+you_get:
+  - A booking flow with availability rules
+  - Three to five qualifying questions
+  - Prep briefs for the rep
+  - Reminder and follow-up emails
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

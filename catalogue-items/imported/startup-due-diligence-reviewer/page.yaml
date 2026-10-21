@@ -6,6 +6,25 @@ summary: Name a startup. Get its market, traction, money and team reviewed from 
 job: money-and-investing
 headline: Startup due diligence reviewer
 subhead: Name a startup. Get its market, traction, money and team reviewed from an investor, job seeker and founder view.
+explain: |
+  A review of a startup from three points of view: investor, job seeker and founder. Name the company. The skill searches the web, the company's site and press, then gathers basics, funding, product, traction and team.
+
+  The investor view looks at market size, unit economics, growth and defensibility. The job seeker view covers runway risk, equity value, culture signals and pay. The founder view covers product fit, spending efficiency and competitive position. Each view ends in a verdict, because a good investment can still be a poor place to work. Facts come from public sources, so treat gaps with care.
+when:
+  - You are weighing a job offer from a startup.
+  - You are thinking of investing in a private company.
+  - You want to know how healthy a competitor is.
+  - Someone asks what you think of a company and you want facts.
+you_give:
+  - The startup's name
+  - What you want to decide (optional)
+  - Details of the offer or deal (optional)
+you_get:
+  - A profile of the company
+  - An investor view with a verdict
+  - A job seeker view with a verdict
+  - A founder view with a verdict
+  - Gaps in the public data
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

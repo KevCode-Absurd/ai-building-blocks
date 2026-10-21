@@ -6,6 +6,25 @@ summary: Give it a topic. Get a group task where learners build knowledge togeth
 job: teach-and-train
 headline: Group knowledge-building task designer
 subhead: Give it a topic. Get a group task where learners build knowledge together and share responsibility for the result.
+explain: |
+  A group task where learners build an answer together and share the blame or credit for it. Give it a topic and you get a task design built on the Ubuntu idea that a person is a person through other people.
+
+  The task is made so no one can finish alone: each member holds a piece of the knowledge, and the group result only works when pieces are combined. It sets shared goals, a way for the group to check each other's understanding, and a reflection step. It suits classes that tend to split into individual work, and it comes with a note on how strong the research behind the approach is.
+when:
+  - Your class works in groups but one person does the work.
+  - You want a task that values shared learning over ranking.
+  - You teach across cultures and want a more collective approach.
+  - You need a new group project on a given topic.
+you_give:
+  - Your topic
+  - Learner age and group size
+  - Time available
+  - Learning goals (optional)
+you_get:
+  - A group task design
+  - Roles and shared goals
+  - A way to check understanding together
+  - A reflection activity
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

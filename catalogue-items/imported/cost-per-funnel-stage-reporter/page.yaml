@@ -6,6 +6,25 @@ summary: Give it your CRM stages and ad spend. Get a trusted funnel with the tru
 job: track-numbers
 headline: Cost per funnel stage reporter
 subhead: Give it your CRM stages and ad spend. Get a trusted funnel with the true cost of each stage.
+explain: |
+  A funnel you can trust and the true cost of each stage, built from your CRM snapshot and ad spend. It stops late edits and double counted spend from distorting your cost per lead or per win.
+
+  The skill first sets stage truth from a complete snapshot as of a given date, with one row per lead and stage. A later loss does not erase an earlier win, and unknown stays unknown, not false. Spend is matched to CRM records only through an exact campaign key, then bucketed as matched, ambiguous, unmatched, unattributed or spend only. It never adds repeated stage spend. It also plans a safe refresh of changed partitions. Needs SQL data with clear source keys.
+when:
+  - Cost per qualified lead changes each time the CRM is edited.
+  - Ad spend and CRM campaigns do not match by name.
+  - You need to refresh a report without rebuilding everything.
+  - You are unsure if some leads are missing from the funnel.
+you_give:
+  - CRM snapshot with stages and dates
+  - Ad spend by campaign
+  - Stage order and time zone
+  - The key linking CRM to ads
+you_get:
+  - Stage ledger per lead
+  - Spend matched by bucket
+  - Cost per stage
+  - Partition refresh plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

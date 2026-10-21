@@ -6,6 +6,25 @@ summary: Name the setting to tune and the score to improve. Get a small tested s
 job: test-and-fix-code
 headline: Tuning experiment runner
 subhead: Name the setting to tune and the score to improve. Get a small tested search with a trial log and stop rule.
+explain: |
+  A small, controlled search for better settings, with a log of each trial and a rule for when to stop. You avoid burning compute on random changes with no baseline.
+
+  You name one score to push up or down and list the settings with their ranges and defaults. The skill runs a baseline first, sets a budget in trials, time or money, and then tries one change at a time unless you allow parallel runs. It compares each trial to the best so far, writes down the result and the reason for the next step, and stops at the limit or when gains flatten. It works for model settings, prompts, inference options, simulations and control policies.
+when:
+  - You want to tune hyperparameters with a fixed small budget.
+  - You need a record of what you tried and what each trial scored.
+  - You are not sure when to stop trying new settings.
+  - You tune prompts or inference settings against a measurable score.
+you_give:
+  - One score to improve and its direction
+  - The settings to tune with their ranges
+  - A budget in trials, time or cost
+  - A way to run and score a trial
+you_get:
+  - A baseline result
+  - A trial log with scores
+  - The best settings found
+  - A stop rule and final summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

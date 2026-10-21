@@ -6,6 +6,26 @@ summary: Point it at your PyMC models. Get every run saved with its settings and
 job: track-numbers
 headline: Model run tracker
 subhead: Point it at your PyMC models. Get every run saved with its settings and checks, so you can compare them later.
+explain: |
+  Every PyMC model fit saved with its settings, checks and results, so you can compare runs and bring any one back later.
+
+  The skill ties PyMC to MLflow. It sets up a named experiment and logs your data source, package versions, random seed and sampler settings before the slow fitting starts. Runs sit inside a tracked block, so failures show up as failed runs. After the fit it saves the full results file and the quality checks, and labels runs as exploring, reportable or mock. Guides cover plain PyMC, PyMC-Marketing auto-logging and saving marketing mix models. It needs Python.
+when:
+  - You have fit the same Bayesian model six times with small changes.
+  - A report needs the exact settings behind one result.
+  - You want to save and reload a marketing mix model.
+  - A failed fit left you unsure which run was the last good one.
+you_give:
+  - Your PyMC model code
+  - Where to store runs
+  - Which runs are for exploring or for reporting
+  - PyMC-Marketing details if you use it (optional)
+you_get:
+  - Code that logs each fit
+  - Saved results and checks per run
+  - Run labels for tracking status
+  - A way to compare runs
+  - Steps to restore a saved model
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

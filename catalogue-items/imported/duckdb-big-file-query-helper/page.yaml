@@ -6,6 +6,25 @@ summary: Point it at large CSV, Parquet or JSON files. Get fast queries run from
 job: build-software
 headline: DuckDB big file query helper
 subhead: Point it at large CSV, Parquet or JSON files. Get fast queries run from MATLAB with DuckDB.
+explain: |
+  Large CSV, Parquet and JSON files queried in place from MATLAB, with no giant loading step. You get SQL answers fast, and only the reduced result lands in memory.
+
+  The skill uses DuckDB through the Database Toolbox. On load it audits your code for the slow habit of reading a file into MATLAB, writing it to a database, then querying it. It sends you straight to reading the file with SQL instead. It covers in-memory and file databases, filtering, grouping, deduplicating, cleaning and sampling at the source, and saving to a .duckdb file for repeat use. It also says when not to use it: small files, or number-heavy work better done in MATLAB afterwards.
+when:
+  - Your file is too big for readtable.
+  - Your code loads a CSV only to write it to a database.
+  - You need to filter and group a large Parquet file before analysis.
+  - You want to profile a dataset before deciding what to load.
+you_give:
+  - Paths to CSV, Parquet or JSON files
+  - The question or summary you need
+  - Existing MATLAB code to review (optional)
+  - MATLAB with Database Toolbox
+you_get:
+  - SQL queries that run on the files directly
+  - A reduced table ready for MATLAB
+  - A review of slow loading patterns
+  - A saved .duckdb file for repeat use (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

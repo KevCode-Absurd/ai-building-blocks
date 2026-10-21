@@ -6,6 +6,25 @@ summary: Point it at your documents. Get code that answers questions from them a
 job: build-software
 headline: Document question answerer builder
 subhead: Point it at your documents. Get code that answers questions from them and shows which pages it used.
+explain: |
+  Working code that lets you ask questions about your own documents and get answers that show which pages they came from. This is the common retrieval-augmented generation setup.
+
+  It uses LlamaIndex, a framework for connecting language models to private data. The code loads your files, with more than 300 connectors for sources like PDFs, Notion and databases, then splits and indexes them. When you ask a question, it finds the best passages, passes them to the model and returns the answer with the source passages attached. It suits knowledge bases, internal chatbots and data extraction. It needs Python, the LlamaIndex package and an API key for a model provider.
+when:
+  - You want a chatbot that answers from your company handbook.
+  - You have hundreds of PDFs and need to ask questions across all of them.
+  - Answers must show their sources so people can check them.
+  - You want to pull structured facts from a pile of documents.
+you_give:
+  - Your documents or data sources
+  - The kind of questions you expect
+  - Python set up on your machine
+  - A model provider API key
+you_get:
+  - Python code for a document Q&A app
+  - An index built from your files
+  - Answers with source passages
+  - Setup instructions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

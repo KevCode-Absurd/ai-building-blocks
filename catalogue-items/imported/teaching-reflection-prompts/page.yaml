@@ -6,6 +6,26 @@ summary: Give it a lesson or a challenge. Get questions that help you reflect on
 job: teach-and-train
 headline: Teaching reflection prompt writer
 subhead: Give it a lesson or a challenge. Get questions that help you reflect on it and decide what to change.
+explain: |
+  Questions written for the exact lesson you taught, that take you from what happened to why it happened and what to change. Generic prompts like "how did it go?" get a shrug. These get insight you can use next week.
+
+  You describe the experience and what you want to learn. The skill builds a sequence in layers. First it asks you to describe the event. Then it asks you to analyse causes. Then it asks you to question your own assumptions. It also invites you to see the lesson through students' eyes and a colleague's. The sequence always ends with a small action to try, since reflection that changes nothing is only worry. The length fits the time you have.
+when:
+  - A group activity went badly and you do not know why.
+  - You want to reflect on a lesson but a blank page stops you.
+  - You are keeping a reflective log for a course or appraisal.
+  - A class you teach is stuck and you need fresh angles.
+  - You have ten minutes and want a short, focused set of prompts.
+you_give:
+  - What happened in the lesson or event
+  - What you want to understand
+  - How you felt (optional)
+  - Time you have (optional)
+you_get:
+  - Layered reflection questions
+  - Prompts from student and colleague views
+  - A small action to try next
+  - A short version for limited time
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

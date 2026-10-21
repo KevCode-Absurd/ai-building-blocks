@@ -6,6 +6,26 @@ summary: Give it a security alert. Get severity, who to tell, what to preserve a
 job: secure-code
 headline: Security incident triager
 subhead: Give it a security alert. Get severity, who to tell, what to preserve and the next steps.
+explain: |
+  The first hour of a security alert, sorted out: what kind of incident it is, how severe, who needs to know, and what evidence to keep. You feed it an alert from a SIEM, an endpoint tool, a threat feed or a user report.
+
+  A triage script classifies the event, filters out likely false alarms, scores severity and decides who to escalate to. It sets up evidence collection with a chain of custody, so you can use the findings later. The skill also covers legal notice duties and common mistakes in the early response. It is for declared incidents, not for hunting threats before an alert or mapping compliance afterwards.
+when:
+  - An alert fired and you need to know if it is real and how bad.
+  - You must decide who to wake up and what to tell them.
+  - You need to preserve logs and files before anything is changed.
+  - You want to check whether the incident triggers a duty to notify regulators.
+you_give:
+  - The alert or event details, in JSON if you have them
+  - What systems and data are involved
+  - Your escalation contacts (optional)
+  - Your location and sector (for notice rules)
+you_get:
+  - An incident type and severity score
+  - A false positive check
+  - An escalation path
+  - An evidence preservation list
+  - Next steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

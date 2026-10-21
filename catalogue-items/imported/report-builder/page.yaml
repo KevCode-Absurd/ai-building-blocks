@@ -6,6 +6,26 @@ summary: Give it your data. Get a clear report with charts, such as a sprint ret
 job: work-with-files
 headline: Report builder
 subhead: Give it your data. Get a clear report with charts, such as a sprint retro, financial summary or postmortem.
+explain: |
+  A finished report from your raw numbers, with the charts and written insights already in place. A sprint retro, a financial summary or an incident postmortem no longer starts from a blank page.
+
+  You hand over data as a table, JSON or an export. It checks the data for missing fields, then fills a matching template. It calculates changes, averages, rankings and trends, and flags anything that looks odd. Charts are generated and a short narrative explains what the numbers show. Before it finishes, it checks that every figure traces back to your data and that no template blanks remain. Output can be Markdown, HTML or PDF.
+when:
+  - It is the end of a sprint and you need a retrospective.
+  - You have monthly figures and need a clear financial summary.
+  - An outage happened and you need a postmortem document.
+  - You export the same data every week and format it by hand.
+you_give:
+  - Data file or pasted table
+  - Report type
+  - Time period
+  - Output format (optional)
+  - Template preferences (optional)
+you_get:
+  - Formatted report with sections
+  - Charts for key figures
+  - Written insights and trends
+  - Check that every figure matches the data
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

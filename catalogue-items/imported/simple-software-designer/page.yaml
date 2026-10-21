@@ -6,6 +6,24 @@ summary: Give it code or a design. Get complexity spotted and simpler, deeper mo
 job: build-software
 headline: Simple software designer
 subhead: Give it code or a design. Get complexity spotted and simpler, deeper modules suggested. Uses A Philosophy of Software Design.
+explain: |
+  A review of your code or design that spots needless complexity and suggests simpler, deeper modules. You get a score out of 10 and the exact change each weak point needs.
+
+  It rests on the book A Philosophy of Software Design. Complexity shows up as change amplification, mental load and unknowns. The review scores eight diagnostics, such as deep modules with small interfaces, hidden internals, and comments that explain intent. It names the failures, like many tiny classes, leaking details or code that only restates itself. Then it gives the specific refactor for each one. The aim is a design that is easy to understand and change.
+when:
+  - An interface feels too large for what it does.
+  - Changing one thing means editing ten files.
+  - You are choosing how to split a new feature into modules.
+  - You want a second look at a design before it spreads.
+you_give:
+  - Code or a design description
+  - What the module is for
+  - Pain points you have noticed (optional)
+you_get:
+  - A score out of 10
+  - The failed checks with reasons
+  - Specific refactors for each
+  - A simpler module outline
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

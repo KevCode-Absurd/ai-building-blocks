@@ -6,6 +6,25 @@ summary: Give it a strategy. Get an honest diagnosis, a guiding policy and coher
 job: plan-strategy
 headline: Real strategy checker
 subhead: Give it a strategy. Get an honest diagnosis, a guiding policy and coherent actions, or a list of what is hollow.
+explain: |
+  An honest check of your strategy, telling you whether it is a real plan or a list of goals. If it is thin, you get a rebuilt version with a diagnosis, a guiding policy and actions that fit together.
+
+  It uses Richard Rumelt's test for good strategy. First, a diagnosis that names the one critical challenge. Second, a guiding policy that is a real choice, one that rules things out. Third, coordinated actions with resources behind them. It scores your plan against eight checks and lists what is hollow: buzzwords, long lists of unrelated goals, and vision dressed as strategy. Then it helps you find the pivot point where effort pays off most.
+when:
+  - Your plan is a list of goals with no clear approach.
+  - You need to review a strategy document before approving it.
+  - Leadership says growth is the strategy and you want better.
+  - You are writing a new plan and want a sound structure.
+you_give:
+  - Your strategy or plan document
+  - Market and competitor context
+  - Resources available (optional)
+you_get:
+  - Score out of 10 against eight checks
+  - Honest diagnosis of the challenge
+  - Guiding policy
+  - Coordinated actions
+  - List of hollow parts
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

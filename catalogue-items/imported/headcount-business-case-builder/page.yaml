@@ -6,6 +6,26 @@ summary: Give it a role you want to add. Get its yearly cost, a hire or contract
 job: hire-people
 headline: Headcount business case builder
 subhead: Give it a role you want to add. Get its yearly cost, a hire or contract comparison and a case to present.
+explain: |
+  A hiring request that finance can say yes to. Instead of arguing that the team is busy, you show what a role costs, what it returns, and when it pays back.
+
+  The skill works out the full yearly cost of a role: base pay, benefits, taxes, equipment and overhead, plus hidden costs like ramp-up time and management attention. It then compares a full-time hire with a contractor or outsourcing over the same period. It estimates the payback, and suggests how to word the case for a CFO. You can also use it to price the cost of turnover and slow hiring, or to check labor cost as a share of revenue.
+when:
+  - You need approval to add a person and finance wants numbers.
+  - You are deciding between a full-time hire and a contractor.
+  - You want to know the true cost of a role beyond salary.
+  - You need to explain turnover or slow hiring costs to leaders.
+you_give:
+  - The role, level and location
+  - The salary range you expect
+  - What work the person would do
+  - The time period you are comparing
+  - Revenue or output the role would affect (optional)
+you_get:
+  - A fully loaded yearly cost for the role
+  - A hire versus contract comparison
+  - A payback estimate
+  - A short business case worded for finance
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

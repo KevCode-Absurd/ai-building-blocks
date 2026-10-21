@@ -6,6 +6,24 @@ summary: Answer a few quick questions at a time. Get a README and short decision
 job: build-software
 headline: README and decision interviewer
 subhead: Answer a few quick questions at a time. Get a README and short decision records that hold your plans.
+explain: |
+  Your project vision and decisions captured in a README and short decision records, written from a quick interview. You answer a few questions at a time, and your taste and reasoning end up saved as plain text.
+
+  Before anything else it reads your existing docs, since other people and agents may have added to them. Then it asks, listens, and writes. The README holds the vision, and a docs folder holds one record per decision, with what you chose and why. Over time the files become what a new teammate or AI agent reads to understand your project. Each pass checks the docs first, so nothing is overwritten by accident.
+when:
+  - You have a project in your head and nothing written down.
+  - Your team keeps re-debating decisions that were already made.
+  - A new AI agent needs context on how you work.
+  - You want a README that states vision, not only install steps.
+you_give:
+  - Your project folder
+  - Time to answer short questions
+  - Existing README or notes (optional)
+you_get:
+  - README with the project vision
+  - Decision records, one per choice
+  - Reasons behind each decision
+  - Updated docs after each session
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

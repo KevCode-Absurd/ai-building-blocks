@@ -6,6 +6,24 @@ summary: Give it a loose request. Get a few rounds of sharp questions first, so 
 job: think-and-decide
 headline: Request clarifier
 subhead: Give it a loose request. Get a few rounds of sharp questions first, so the first draft lands.
+explain: |
+  Better first drafts, because the AI asks sharp questions before it starts. A loose request like "write me a plan" gets turned into clear choices about scope, audience, tone and format.
+
+  It only fires when at least two parts of your request are open and each has three or more reasonable answers. Simple lookups and clear requests go straight through. The questions come in up to three rounds, and each round builds on your last answers. Questions are short with options you can pick. After round three, anything still open becomes a stated assumption, so the work begins instead of stalling. The aim is a draft you do not need to rewrite three times.
+when:
+  - You ask for a plan, essay or design and have only a vague idea.
+  - Your last AI draft missed the point and needed three rewrites.
+  - You are not sure yourself who the audience should be.
+  - The task has many possible directions and you want to choose one.
+you_give:
+  - Your loose request
+  - Answers to each round of questions
+  - Any context you have, such as audience or goal (optional)
+you_get:
+  - Short rounds of focused questions
+  - Clear record of your choices
+  - Stated assumptions for anything left open
+  - A first draft that fits
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

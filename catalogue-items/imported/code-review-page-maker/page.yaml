@@ -6,6 +6,24 @@ summary: Give it a markdown code review. Get one HTML page with severity tags an
 job: work-with-files
 headline: Code review page maker
 subhead: Give it a markdown code review. Get one HTML page with severity tags and diffs that are easy to read.
+explain: |
+  A markdown code review becomes one HTML page that is easy to scan. You get a jump menu, diffs on one side, comments on the other, severity tags such as blocker and major, and the reviewer named at the bottom.
+
+  Three small Python tools run in order. The first pulls the diff blocks out of your markdown. The second finds the callouts like blocker or major and attaches each to the closest diff chunk. The third builds the two-column page using your design settings. It will refuse input under 100 lines, input without diffs, and projects with no design system set up, and will tell you where to send those instead.
+when:
+  - You wrote a long review and want to share it as a clean page.
+  - Your pull request notes have diffs and severity callouts.
+  - You want reviewers to jump straight to blockers.
+  - Plain markdown reviews are hard for your team to read.
+you_give:
+  - A markdown review with diff blocks and severity callouts
+  - Your design settings
+  - Python 3 on your machine
+you_get:
+  - One HTML review page
+  - Two-column diff and comment layout
+  - Severity tags
+  - A jump menu
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

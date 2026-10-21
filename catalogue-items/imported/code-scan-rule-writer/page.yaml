@@ -6,6 +6,25 @@ summary: Describe a bug pattern. Get a tested Semgrep rule that finds it across 
 job: secure-code
 headline: Code scan rule writer
 subhead: Describe a bug pattern. Get a tested Semgrep rule that finds it across your code.
+explain: |
+  Describe a bug pattern once and get a Semgrep rule that finds it everywhere in your code. The rule is tested, so it catches the bad cases and leaves safe code alone.
+
+  It writes the rule, then a test file with cases that should match and cases that should not. It runs the Semgrep test command and fixes the rule until both sides pass. It uses taint mode when data must be followed from user input to a risky call, since plain pattern matching gets noisy there. It pushes back on shortcuts like "the pattern looks complete" or "one test is enough". You need Semgrep installed.
+when:
+  - You found a bug and want to find every copy of it.
+  - You want to enforce a coding rule across a big codebase.
+  - You need to catch user input reaching a dangerous call.
+  - Your current scan rules raise too many false alarms.
+you_give:
+  - A description of the bug or pattern
+  - An example of bad code
+  - An example of safe code (optional)
+  - The language
+you_get:
+  - A Semgrep rule file
+  - A test file with match and no-match cases
+  - Test results
+  - Notes on false positives
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

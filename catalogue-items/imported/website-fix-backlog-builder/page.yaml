@@ -6,6 +6,25 @@ summary: Give it your live site. Get a ranked list of fixes for conversion, usab
 job: audit-landing-page
 headline: Website fix backlog builder
 subhead: Give it your live site. Get a ranked list of fixes for conversion, usability, message and speed, each with evidence.
+explain: |
+  A ranked list of fixes for a live site that underperforms, each one tied to evidence and a reason. It covers conversion, ease of use, message and speed, so you work on what matters first.
+
+  The skill runs as a guided process in eight phases, saving progress to files in a docs folder so you can stop and resume. It starts by working out why visitors do not convert. It then looks at usability, how clear the visual hierarchy is, how readable the text is, whether a stranger gets the offer in five seconds, and how fast the pages load. Each fix is written as a test you can run, and it asks for your decision at every key point.
+when:
+  - Your site gets traffic but few sign-ups or sales.
+  - You are not sure which fix to start with.
+  - You want fixes backed by evidence, not opinion.
+  - You need a plan to hand to a developer or designer.
+you_give:
+  - Your live site address
+  - Your goal and main conversion
+  - Any analytics or user research (optional)
+  - Constraints on time or budget (optional)
+you_get:
+  - A ranked fix list with reasons
+  - Test ideas for the big changes
+  - Notes saved in a docs folder
+  - A phase-by-phase action plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Name the concept. Get a lesson that shows it, names it and checks it, u
 job: teach-and-train
 headline: Three-step hands-on vocabulary lesson planner
 subhead: Name the concept. Get a lesson that shows it, names it and checks it, using real objects.
+explain: |
+  A short lesson plan that teaches a new word or idea with real objects, in three clear moves: show it, name it, then check it. It is based on the three-period lesson used in Montessori classrooms.
+
+  You name the concept and list the objects students can handle. The skill writes the steps. First the teacher names the item while students touch it. Then students point to or fetch items when the teacher says the word. Last, students are asked to say the name themselves. It adapts to age, group size and what students already know, and it suggests ways to support language learners. A teacher can read it in a few minutes.
+when:
+  - You need to introduce new vocabulary to a small group.
+  - You teach with real objects and want a clear lesson order.
+  - A student missed the first lesson and needs a quick re-teach.
+  - You teach students who are learning in a second language.
+you_give:
+  - The word or concept to teach
+  - Objects or materials you have on hand
+  - Student age or level
+  - What students already know (optional)
+  - Group size (optional)
+you_get:
+  - A step-by-step three-part lesson
+  - Exact words for the teacher to say
+  - A quick check for understanding
+  - Notes for language learners
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

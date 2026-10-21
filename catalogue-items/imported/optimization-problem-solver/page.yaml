@@ -6,6 +6,26 @@ summary: Describe what to minimise and your limits. Get the problem set up, solv
 job: build-software
 headline: Optimization problem solver
 subhead: Describe what to minimise and your limits. Get the problem set up, solved and the result checked.
+explain: |
+  MATLAB code for an optimisation problem that is set up properly, solved with a suitable solver and checked before you trust it. It avoids common traps like the wrong method or a bad stop.
+
+  The skill first sorts your problem into a class, such as linear, quadratic or nonlinear. That decides the solver and whether the answer is global or only local. It writes the problem with optimization variables and expressions, not slow loops, then picks and tunes solver options and runs it. It reads the exit flag, constraint violations and convergence, and helps debug failures. It also spots hidden easier forms, like a nonlinear problem that is really linear. Needs MATLAB with Optimization Toolbox.
+when:
+  - You have an objective and constraints and need them coded in MATLAB.
+  - Your solver stops with an odd exit flag and you do not know why.
+  - You are unsure which solver or algorithm suits your problem.
+  - Your code loops over variables and runs far too slowly.
+you_give:
+  - What to minimise or maximise
+  - Variables and bounds
+  - Constraints
+  - Any existing MATLAB code (optional)
+  - MATLAB with Optimization Toolbox
+you_get:
+  - The problem class and solver choice
+  - Working MATLAB code
+  - The solution
+  - A check of convergence and constraint satisfaction
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

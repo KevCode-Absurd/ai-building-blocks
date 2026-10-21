@@ -6,6 +6,26 @@ summary: Describe your room and what feels off. Get layout, light and plant idea
 job: teach-and-train
 headline: Classroom nature layout planner
 subhead: Describe your room and what feels off. Get layout, light and plant ideas for a calmer room. Not medical advice.
+explain: |
+  Ideas to make your room calmer using light, plants, natural materials and views, scaled to your budget. You describe the room and what feels off, and you get a plan you can do in stages. It is not medical advice.
+
+  The skill looks at what you have now: windows, lighting, surfaces and any plants. It asks what you want, such as better focus or less restlessness. It then suggests ways to bring in daylight, move desks toward views, add plants that suit your rules, use wood and soft colours, and bring in nature sounds or images when real plants are not allowed.
+when:
+  - Your room feels harsh and students are restless.
+  - You cannot keep live plants but want a natural feel.
+  - You have almost no money to spend.
+  - You want a quiet corner that helps students settle.
+you_give:
+  - A description of the room
+  - What you want to improve
+  - Budget level (optional)
+  - Restrictions such as no live plants (optional)
+  - Sensory needs in the class (optional)
+you_get:
+  - A staged redesign plan
+  - Light and layout changes
+  - Plant and natural material ideas
+  - Options that fit your budget
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

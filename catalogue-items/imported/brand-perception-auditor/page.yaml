@@ -6,6 +6,25 @@ summary: Describe your brand and who it is for. Get a list of mixed signals and 
 job: brand-file
 headline: Brand perception auditor
 subhead: Describe your brand and who it is for. Get a list of mixed signals and changes to close the gap.
+explain: |
+  A list of mixed signals your brand sends, and the changes that close the gap between what you mean and what people feel. It looks at how your look, words and behaviour land with your audience.
+
+  The skill gathers context about your market and who you serve. It then reviews your visual, verbal and behavioural identity for what each part signals about trust and status, and where those signals clash. Ideas from psychology are treated as lenses to check, not proof, so verify any claim before you use it in public. It leans on your own audience research and verified product facts.
+when:
+  - Customers say your brand feels off but can't say why.
+  - Your price and your look don't match.
+  - You plan to reposition and need to see the current gap.
+  - You want to shift how much trust your messaging earns.
+you_give:
+  - A description of your brand and its audience
+  - Samples of copy, visuals and packaging
+  - Audience research (optional)
+  - The perception you want
+you_get:
+  - A list of mixed signals
+  - Where look, words and behaviour disagree
+  - Changes to close the gap
+  - Priorities for what to fix first
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

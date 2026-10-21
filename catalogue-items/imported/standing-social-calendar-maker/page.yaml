@@ -6,6 +6,26 @@ summary: Give it your brand and products. Get a rolling post calendar, captions 
 job: grow-social
 headline: Standing social calendar maker
 subhead: Give it your brand and products. Get a rolling post calendar, captions in your voice and posts ready for approval.
+explain: |
+  A rolling social media calendar that always has the next few weeks already drafted. It starts by learning how you write, using your past posts, newsletters and emails, and confirms the voice with you before writing a word.
+
+  Then it plans posts around your products, writes captions in your voice, and turns one asset into the formats each channel needs. It can make on-brand Canva graphics and pull product photos and prices from Shopify when connected. Posts are staged for your approval, never published on their own. Without connectors, it gives you the calendar and asset briefs to post by hand.
+when:
+  - You have gone quiet on Instagram and need to catch up.
+  - You want a month of posts planned in one go.
+  - AI captions never sound like you and you want that fixed.
+  - One photo needs to become posts for several channels.
+you_give:
+  - Your brand and products
+  - Past posts, newsletters or sent emails
+  - Goals or promotions for the period (optional)
+  - Canva or Shopify connection (optional)
+you_get:
+  - A rolling post calendar
+  - Captions in your voice
+  - Posts for each channel from one asset
+  - Posts staged for your approval
+  - Asset briefs for graphics
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

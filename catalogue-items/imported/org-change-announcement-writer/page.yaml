@@ -6,6 +6,27 @@ summary: Describe the change. Get the leader announcement, manager talking point
 job: hire-people
 headline: Org change announcement writer
 subhead: Describe the change. Get the leader announcement, manager talking points, town hall script and hard-question answers.
+explain: |
+  All the words you need when a change hits your company: the leader announcement, manager talking points, a town hall script and answers to the hard questions. People hear the same clear story from everyone.
+
+  You describe the change, such as a restructure, a new policy, a leadership move or a new system. The skill builds a message for each audience, from executives to managers to staff, with who tells them, how and when. It plans channels and timing, writes an FAQ and a Q&A for tough questions, and gives managers a kit for one-to-one talks. It covers rumours and how to check people understood. Have HR or legal review the text.
+when:
+  - You must announce a restructure or layoffs and need careful wording.
+  - Managers need to explain a new policy to their teams.
+  - You are rolling out a new HR system and need a communication plan.
+  - A leader is leaving and people will have questions.
+you_give:
+  - What is changing and why
+  - Who is affected
+  - Company size and tone
+  - Timeline
+  - Known concerns or rumours (optional)
+you_get:
+  - Leader announcement
+  - Manager talking points
+  - Town hall script
+  - FAQ and hard-question answers
+  - Timing and channel plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

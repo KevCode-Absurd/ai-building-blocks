@@ -6,6 +6,25 @@ summary: Describe your offer. Get copy in AIDA, PAS or BAB form, with tone optio
 job: write-ad-copy
 headline: Copywriting framework writer
 subhead: Describe your offer. Get copy in AIDA, PAS or BAB form, with tone options and A/B variants.
+explain: |
+  Marketing copy written in a proven structure, AIDA, PAS or BAB, in the tone you pick, with A/B variants and stronger calls to action. You see the same offer in different shapes and choose the best.
+
+  You describe your offer, audience and goal. The skill picks a framework to fit: attention to action for emails, problem and agitation for pain-led pages, before and after for results. It writes the copy in your tone and gives two or more variants to test. Calls to action are written to be specific. Examples cover a landing page hero and an email sequence. Edge cases cover short copy and unclear offers.
+when:
+  - You need a hero section and want a few versions to test.
+  - You are writing an email sequence and want a clear structure.
+  - Your ad copy sounds flat and you want a different angle.
+  - You can't decide which style fits your offer.
+you_give:
+  - Your offer and price
+  - Your audience
+  - The tone you want
+  - The goal of the copy
+you_get:
+  - Copy in the chosen framework
+  - Tone options
+  - A/B variants
+  - Call to action options
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

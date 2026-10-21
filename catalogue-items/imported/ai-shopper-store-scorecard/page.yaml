@@ -6,6 +6,24 @@ summary: Give it your Shopify store link. Get a 6-point scorecard of what AI sho
 job: get-found-in-search
 headline: AI shopper store scorecard
 subhead: Give it your Shopify store link. Get a 6-point scorecard of what AI shopping tools can read. Scrapes sites.
+explain: |
+  Can an AI shopping assistant actually read your Shopify store? In about two minutes you get a six point scorecard with proof for each result, set against 99 other stores.
+
+  A small Python script visits your store politely. It follows robots.txt, waits a second between requests and sends about 15 requests. It checks six things: AI crawlers allowed in and an llms.txt file, shipping and returns in structured data, star ratings in structured data, barcodes, descriptions of 80 words or more, and image alt text. The report says what an AI agent cannot answer because of each gap. It needs Python. A fuller paid audit is mentioned at the end.
+when:
+  - You want a fast read on whether AI shopping tools can see your products.
+  - You wonder how your store compares with other Shopify stores.
+  - You need proof of gaps before asking a developer for changes.
+  - You want a quick check before a bigger audit.
+you_give:
+  - Your Shopify store address
+  - Python on your computer
+  - Pages to paste if the script cannot fetch them (optional)
+you_get:
+  - A pass or gap result on six checks
+  - Evidence for each result
+  - A comparison with 99 stores
+  - Plain notes on what AI agents cannot do because of each gap
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

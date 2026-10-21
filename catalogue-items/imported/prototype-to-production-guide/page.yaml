@@ -6,6 +6,25 @@ summary: Give it a working prototype. Get tests, cleaner structure and a plan to
 job: test-and-fix-code
 headline: Prototype to production guide
 subhead: Give it a working prototype. Get tests, cleaner structure and a plan to make it ready for real users.
+explain: |
+  A step-by-step path from a prototype that works but scares you to a product you can ship. It starts with a safety net of tests, so each later change is safe to make.
+
+  The guide runs nine phases: protect with tests, clean up the code, refactor, tidy design, separate business rules, apply sound engineering habits, harden for failures, plan for scale and handle data. It asks you a question at every decision. Results go into project files for testing, tech debt and a plan, so you can stop and resume in a later session. It is meant for AI-built or fast-built prototypes you now need to trust.
+when:
+  - Your app works on your machine but you are afraid to touch the code.
+  - An AI built your prototype and now real users are coming.
+  - You need tests before you refactor anything.
+  - You want a written plan to pay down technical debt.
+you_give:
+  - Access to your prototype code
+  - Who will use it and how soon
+  - Your biggest worries about it
+  - Time you can spend each week (optional)
+you_get:
+  - Tests around the key behaviour
+  - Cleaner code structure
+  - Tech debt list
+  - Production readiness plan saved in your docs folder
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

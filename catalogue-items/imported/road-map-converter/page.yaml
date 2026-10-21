@@ -6,6 +6,25 @@ summary: Give it a Lanelet2 map. Get a RoadRunner HD map built from it, ready fo
 job: build-software
 headline: Road map converter
 subhead: Give it a Lanelet2 map. Get a RoadRunner HD map built from it, ready for simulation.
+explain: |
+  A Lanelet2 map turned into a RoadRunner HD map file you can open and simulate. The whole pipeline runs, so you get a finished scene and not half a road.
+
+  It reads the .osm file and its lanelet relations, then builds boundaries, lanes, centre lines, junctions, barriers, signs, markings and speed limits. Boundary points are never changed, and each boundary is built once. Lane direction is worked out for every lane, never assumed. Before saving, checks run on alignment, position, extensions and completeness. It works through MATLAB script files and needs MATLAB with RoadRunner. Plain OpenStreetMap roads or OpenDRIVE files need a different route.
+when:
+  - You have an open-source Lanelet2 map and want it in RoadRunner.
+  - You are building driving scenes from public map data.
+  - A past conversion left out junctions or signs.
+  - You need an .rrhd file for simulation tests.
+you_give:
+  - A Lanelet2 .osm file
+  - A project folder in RoadRunner
+  - MATLAB with RoadRunner
+  - Output location (optional)
+you_get:
+  - A RoadRunner HD map (.rrhd) file
+  - Lanes, junctions, signs and markings
+  - Check results before saving
+  - Conversion scripts you can rerun
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

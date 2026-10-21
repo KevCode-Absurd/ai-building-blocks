@@ -6,6 +6,24 @@ summary: Tell it how you did your analysis and who reads it. Get a plain how-we-
 job: document-work
 headline: Method explainer
 subhead: Tell it how you did your analysis and who reads it. Get a plain how-we-did-this section with limits.
+explain: |
+  A plain write-up of how you got your answer, so readers trust it. Tell it the method and who reads it, and you get a short section that says what was asked, what data was used, what was done, what was assumed, and where it falls short.
+
+  It starts by picking the depth for the reader: executive, analyst or technical. It then picks a structure, such as a story, a layered summary or a deeper appendix. Statistical terms are swapped for business words using a translation table. Every explanation gets at least one honest limit and what it means for the conclusion. The result fits a ready write-up template or a slide template.
+when:
+  - You ran an A/B test and the board asks how you know it worked.
+  - Your forecast needs a plain-language method section.
+  - An attribution model is questioned and you need to explain it simply.
+  - You must present the same analysis to executives and to analysts.
+you_give:
+  - The method, data and steps you used
+  - Who will read it
+  - Assumptions and known limits (optional)
+you_get:
+  - A plain-language method section
+  - A limits paragraph
+  - A filled write-up or slide template
+  - Business-word swaps for technical terms
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

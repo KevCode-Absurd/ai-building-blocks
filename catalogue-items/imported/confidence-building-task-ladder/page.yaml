@@ -6,6 +6,25 @@ summary: Give it a skill students avoid. Get a ladder of small wins that builds 
 job: teach-and-train
 headline: Confidence-building task ladder
 subhead: Give it a skill students avoid. Get a ladder of small wins that builds confidence. Not medical advice.
+explain: |
+  A ladder of small, achievable tasks that rebuilds a student's belief that they can do a skill they avoid. Each step is a real win, not a pep talk.
+
+  You describe the skill, the year group and what the student does instead, such as writing one sentence then stopping. Claude builds the ladder from the four things that shape this belief: doing the task successfully, seeing a similar peer succeed, hearing credible encouragement and handling the feeling of stress. It avoids empty praise, slogans and reward charts. Tasks start just inside what the student can already do and rise in small steps. This is classroom support, not medical or mental health advice.
+when:
+  - A student says they can't write, do maths or speak up and stops trying.
+  - You want an alternative to telling them to try harder.
+  - A learner avoids a skill by asking for help straight away.
+  - You need a gentle plan for a few weeks.
+you_give:
+  - The skill the student avoids
+  - Year group
+  - What the student does instead
+  - Their strengths and past attempts (optional)
+you_get:
+  - A step-by-step ladder of tasks
+  - Wording for feedback that builds belief
+  - Ways to show peer success
+  - Signs to watch for progress
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Tell it your product. Get a shot list for photos and video, with a reas
 job: product-photos
 headline: Product shoot brief writer
 subhead: Tell it your product. Get a shot list for photos and video, with a reason for each shot.
+explain: |
+  A shot list for photos and video where every shot has a reason behind it. Instead of taste, the brief follows findings on what moves sales and willingness to pay.
+
+  Claude first asks if your product can be held and if it is premium, whether it has one main function, and who wears it. It then sets format choices, like stills versus video, plus gaze, the sense of touching the product, and composition details such as shine, spacing, side and props. Most shots cite a measured effect. A few are marked as practitioner tips. The brief is written to hand to a photographer.
+when:
+  - You are briefing a photographer or video team.
+  - You must decide whether a product needs video.
+  - Your product images do not sell and you do not know why.
+  - You need to choose between candidate hero images.
+you_give:
+  - The product and how it is used
+  - Where the visuals will run
+  - Your audience and reading direction
+  - Candidate images to compare (optional)
+you_get:
+  - A shot list with a reason for each shot
+  - Photo versus video advice
+  - Pose and composition notes
+  - A pick between candidate images
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

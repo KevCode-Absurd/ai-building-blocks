@@ -6,6 +6,24 @@ summary: Give it audio or video. Get the words written out, with each speaker la
 job: work-with-audio
 headline: Recording transcriber
 subhead: Give it audio or video. Get the words written out, with each speaker labelled.
+explain: |
+  Your audio or video turned into written words, with each speaker labelled if you want. You get a clean text file or structured data you can search, quote or summarise.
+
+  It runs a bundled script against OpenAI's transcription models, so it needs an OpenAI API key saved on your machine and Python. By default it uses a fast model for plain text. When you want to know who said what, it switches to a speaker model and returns labelled segments. Long recordings are split automatically. It checks the result for quality and segment boundaries and repeats once with a single fix if needed. Output goes into a named folder per job.
+when:
+  - You recorded a meeting and need minutes.
+  - You have an interview and want quotes with names attached.
+  - You need subtitles or searchable text for a video.
+  - You have many audio files to process in one go.
+you_give:
+  - Audio or video file or files
+  - Language hint (optional)
+  - Known speaker names (optional)
+  - OpenAI API key set on your machine
+you_get:
+  - Transcript in text or JSON
+  - Speaker labels (optional)
+  - Output in a folder per job
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

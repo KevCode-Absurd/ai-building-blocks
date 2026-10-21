@@ -6,6 +6,25 @@ summary: Give it contracts and points to find. Get one cited spreadsheet row per
 job: check-contracts
 headline: Contract batch review grid builder
 subhead: Give it contracts and points to find. Get one cited spreadsheet row per contract. Verify before relying on it.
+explain: |
+  A spreadsheet with one row per contract and one column per point you want to find, each answer backed by a citation to the contract text. It turns a stack of agreements into something you can sort and filter.
+
+  You name the contracts and the points, such as renewal date, notice period or liability cap. The skill builds a column list with set types, tests it on a sample, then runs the full set. It separates three cases of an empty cell: the clause is absent, it was not found, or it is unclear. Values are normalised so dates and amounts compare. It does not replace a lawyer, so check key rows before you rely on them.
+when:
+  - You must pull renewal dates from fifty vendor contracts.
+  - A buyer asks for a list of change of control clauses across your deals.
+  - You are cleaning up a contract archive before an audit.
+  - You want to compare how different customers negotiated the same term.
+you_give:
+  - The set of contracts
+  - The points to find in each
+  - Date or amount formats you want
+  - A sample row to confirm (optional)
+you_get:
+  - Spreadsheet, one row per contract
+  - Citation for each answer
+  - Flags for absent, unfound or unclear
+  - Short summary of patterns
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

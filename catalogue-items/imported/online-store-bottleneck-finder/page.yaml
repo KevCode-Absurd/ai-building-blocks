@@ -6,6 +6,25 @@ summary: Give it your cash, stock and shipping numbers. Get the bottleneck holdi
 job: run-your-store
 headline: Online store bottleneck finder
 subhead: Give it your cash, stock and shipping numbers. Get the bottleneck holding your store back and fixes ranked by payoff.
+explain: |
+  The one thing holding your store back, named, with fixes ranked by payoff. You give it your numbers on cash, stock, shipping and customer cost, and it shows where money is stuck or leaking.
+
+  The skill is built for Shopify and direct-to-consumer shops. It sets out your cost structure, such as payment fees, advertising share, warehouse fees and returns. It then checks four areas: cash flow, inventory, shipping costs and what it costs to win a customer compared with what a customer is worth. It compares the results with healthy ranges for stores like yours, picks the biggest bottleneck, and lists fixes in order of impact, starting with the easiest.
+when:
+  - Sales are fine but you never seem to have cash.
+  - Too much money sits in stock that moves slowly.
+  - Shipping costs are higher than you expected.
+  - Ads cost more per customer than customers are worth.
+you_give:
+  - Monthly revenue and cash position
+  - Inventory levels and turnover
+  - Shipping and fulfillment costs
+  - Ad spend and customers won
+you_get:
+  - The main bottleneck
+  - A cash, stock, shipping and acquisition check
+  - Fixes ranked by payoff
+  - Healthy ranges to compare against
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

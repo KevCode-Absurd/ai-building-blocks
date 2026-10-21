@@ -6,6 +6,25 @@ summary: Say your SNR target. Get noise added right, with SNR, Eb/No and Es/No c
 job: build-software
 headline: Noise level code helper
 subhead: Say your SNR target. Get noise added right, with SNR, Eb/No and Es/No converted correctly.
+explain: |
+  Noise added at exactly the level you intended in a communications simulation, with SNR, Eb/No and Es/No converted the right way. Mix-ups between these measures are a common source of wrong results.
+
+  The skill sets firm rules for MATLAB code. Always give awgn an explicit signal power, never the measured option. Use unit average power if the scale does not matter, or compute the real power with mean(abs(x).^2) when it does. Always use convertSNR instead of hand formulas, since it handles coding rate, bits per symbol and oversampling. It has a pattern for OFDM links and for getting noise variance to feed a soft-decision demodulator. It needs MATLAB with the Communications Toolbox.
+when:
+  - Your bit error curve is off by a few dB and you cannot see why.
+  - You have an Eb/No target and need the SNR for your simulation.
+  - You are adding noise after a fading channel.
+  - You need the noise variance for a soft demodulator.
+you_give:
+  - Your target SNR, Eb/No or Es/No
+  - Modulation, coding rate and oversampling
+  - Your MATLAB simulation code (optional)
+  - Whether the link is OFDM (optional)
+you_get:
+  - Noise code with correct power settings
+  - Converted SNR values
+  - Noise variance for demodulators
+  - A fix for common mistakes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,27 @@ summary: Tell it the dispute reason. Get what proof to collect, where to find it
 job: help-customers
 headline: Chargeback evidence gatherer
 subhead: Tell it the dispute reason. Get what proof to collect, where to find it in Shopify, and whether to accept instead.
+explain: |
+  Before you spend hours digging up files, you get a short checklist of exactly what proof your dispute needs. Tell it the reason on the dispute, and it sorts each item into have, get, check or not available, with the spot in Shopify where you can find it.
+
+  It starts with five quick checks: is this an inquiry or a real chargeback, the due date, whether you already refunded, whether Shopify Protect applies, and whether the customer may simply be right. Then it shows the fee against the amount at stake so you can choose to fight or accept. It also lists what to leave out, because the wrong evidence can weaken a case.
+when:
+  - A dispute just landed and you do not know what Shopify wants as proof.
+  - You have a deadline and need to know which files matter and which do not.
+  - You wonder whether fighting is worth the fee on a small order.
+  - You want to know where in the Shopify admin each record lives.
+you_give:
+  - The reason shown on the dispute
+  - The amount and due date
+  - A rough story of the order
+  - What proof you already hold (optional)
+  - Your store policy link (optional)
+you_get:
+  - Five first checks
+  - A fight or accept line with the money
+  - An evidence checklist with status and location
+  - Items to leave out
+  - What Shopify adds on its own
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

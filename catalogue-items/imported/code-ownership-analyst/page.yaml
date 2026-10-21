@@ -6,6 +6,25 @@ summary: Point it at a git repo. Get who owns the sensitive code and where one p
 job: secure-code
 headline: Code ownership analyst
 subhead: Point it at a git repo. Get who owns the sensitive code and where one person is the only owner.
+explain: |
+  A map of who really owns your sensitive code, and where a single person is the only one who knows it. It turns git history into risk you can act on.
+
+  A Python script reads the commit history and links people to files. It marks sensitive areas using default rules or your own list, and flags files with one owner or owners who have left. It also builds a co-change graph, grouping files that tend to change together while ignoring huge noisy commits and glue files like lockfiles. You can query the results as small slices and export them to Neo4j or Gephi. It needs Python 3 and networkx.
+when:
+  - One engineer left and you do not know what they alone understood.
+  - You want to see who owns your auth and payment code.
+  - You need to find files that always change together.
+  - An audit asks who is responsible for sensitive areas.
+you_give:
+  - A git repository
+  - A time window (optional)
+  - A list of sensitive paths (optional)
+  - Python 3 with networkx
+you_get:
+  - People-to-file ownership map
+  - Single-owner risk flags
+  - Clusters of files that change together
+  - Export files for graph tools
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

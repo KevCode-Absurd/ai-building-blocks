@@ -6,6 +6,26 @@ summary: Give it your sprint data. Get velocity trends, retro themes and fixes f
 job: lead-people
 headline: Sprint coach
 subhead: Give it your sprint data. Get velocity trends, retro themes and fixes for your team's habits.
+explain: |
+  A clear read on how your sprints are going, using your own data, and fixes for the habits that slow the team down. Export sprint history from Jira or a similar tool. Three Python scripts do the maths.
+
+  The first looks at velocity: rolling averages, trend lines and a Monte Carlo forecast that gives a range of likely outcomes. The second scores sprint health across several areas and gives a grade. The third tracks retrospective themes and whether action items were ever finished. Guidance on standups, backlog grooming, blockers and story points sits alongside.
+when:
+  - You need to forecast how much work the team can finish.
+  - Your velocity jumps around and you want to know why.
+  - Retro action items keep coming back unfinished.
+  - You want a health grade for your team before a review.
+you_give:
+  - Sprint data exported as JSON
+  - Retro notes and action items (optional)
+  - Python on your computer
+  - Team size and sprint length
+you_get:
+  - Velocity trends and a range forecast
+  - A sprint health score and grade
+  - Recurring retro themes
+  - Action item follow-through rates
+  - Suggested team improvements
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

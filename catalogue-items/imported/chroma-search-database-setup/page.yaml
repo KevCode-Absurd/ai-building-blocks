@@ -6,6 +6,25 @@ summary: Give it your text. Get a searchable store that finds passages by meanin
 job: build-software
 headline: Chroma search database setup
 subhead: Give it your text. Get a searchable store that finds passages by meaning, ready for question-answering.
+explain: |
+  A small searchable store for your documents that finds passages by meaning instead of exact words. Ask a question and it brings back the closest text, ready to feed into a question-answering app.
+
+  The setup uses Chroma, a free database that runs on your own computer. You split your text into pieces, turn them into number lists called embeddings, and save them with labels like source and date. A short set of functions then lets you add, search, filter and delete. You can narrow a search by label, mix word search with meaning search, and keep the store on disk or run it as a server. Python is needed, and it works well in a notebook for early prototypes.
+when:
+  - You want a chatbot that answers from your own documents.
+  - Keyword search misses pages that use different wording.
+  - You need to filter results by author, date or source.
+  - You are prototyping on a laptop and do not want a paid hosted database.
+you_give:
+  - Your text or documents
+  - The labels to store with each piece
+  - Where to save the store
+  - A few test questions (optional)
+you_get:
+  - A working Chroma store
+  - Code to add and query text
+  - Filters by label
+  - A test search that returns matching passages
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

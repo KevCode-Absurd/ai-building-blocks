@@ -6,6 +6,26 @@ summary: Say who you want to be known as. Get your focus, your audience and a pl
 job: grow-social
 headline: Personal brand planner
 subhead: Say who you want to be known as. Get your focus, your audience and a plan to show up steadily.
+explain: |
+  A clear answer to who you are for, what you stand for and what you want to be known for, with a plan to show up steadily. The aim is not fame but to be the obvious choice for a certain kind of person.
+
+  The skill asks only what it needs: your role, background, audience, goal, the thing you do better than most and a view you hold that others may not. It then shapes a focus, a short list of themes, the places to publish and a rhythm you can keep. If you run a company brand too, it reads that context so the two fit together. It suits founders, executives, creators and consultants.
+when:
+  - You want clients or employers to know you for one thing.
+  - You are changing careers and need a new public story.
+  - You publish ideas but have no focus or rhythm.
+  - You are a founder and need your voice to fit your company.
+you_give:
+  - Your name, role and background
+  - Who you want to reach
+  - Your goal, such as clients or speaking
+  - What you know better than most
+  - Company brand notes (optional)
+you_get:
+  - A one-line brand focus
+  - Audience and theme list
+  - Channels to use
+  - A steady posting plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

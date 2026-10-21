@@ -6,6 +6,24 @@ summary: Describe a flow, system or database. Get a Mermaid diagram you can past
 job: work-with-files
 headline: Mermaid chart writer
 subhead: Describe a flow, system or database. Get a Mermaid diagram you can paste into docs, in the right style.
+explain: |
+  A Mermaid diagram of your flow, system or database that you can paste straight into docs, a README or a wiki. Describe it in words and get working diagram code, not a drawing you must redo.
+
+  It picks the chart type that fits: flowchart, sequence, entity relationship, state, Gantt, user flow, timeline and more. It keeps the chart readable by avoiding clutter, using steady styling and adding short labels. It adds comments in the code where the syntax is tricky, checks it will render in your Mermaid version, and offers other chart types when they would work better. It escapes untrusted labels and does not turn on click scripts.
+when:
+  - You need an API call flow drawn for a design doc.
+  - You want a database diagram without opening a drawing tool.
+  - You have a project plan and need a Gantt chart for a README.
+  - A diagram of yours fails to render and you need it fixed.
+you_give:
+  - A plain description of the process, system or schema
+  - The Mermaid version you use (optional)
+  - Style preferences (optional)
+you_get:
+  - Mermaid code ready to paste
+  - A chart type suited to your data
+  - Styling options
+  - Notes on how to export or preview
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

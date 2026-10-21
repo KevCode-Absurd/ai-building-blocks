@@ -6,6 +6,26 @@ summary: Give it your SwiftUI code. Get it written, reviewed or refactored with 
 job: build-software
 headline: SwiftUI code reviewer
 subhead: Give it your SwiftUI code. Get it written, reviewed or refactored with current APIs and fewer speed traps.
+explain: |
+  SwiftUI code that is written, reviewed or fixed with current APIs and fewer slow spots. You get changes that follow how SwiftUI actually behaves, for iPhone, iPad or Mac apps.
+
+  Share your code or describe the feature. For a review, the skill checks data flow, view composition, identity, environment use, animation and localisation against a correctness checklist. It suggests migrating old APIs to newer ones. For speed problems, it records an Instruments trace or reads one you provide, then ties slow views back to the code. A topic router sends each question to the right reference notes. It works best with Xcode on a Mac.
+when:
+  - A SwiftUI screen feels slow or redraws too much.
+  - You inherited code using old APIs and want it updated.
+  - You are building a new view and want it right the first time.
+  - You have an Instruments trace and cannot read it.
+you_give:
+  - Your SwiftUI code
+  - What you want, such as review or a new feature
+  - An Instruments trace (optional)
+  - Target platform and minimum version
+you_get:
+  - Review findings
+  - Refactored code
+  - Updated APIs
+  - Performance fixes tied to the trace
+  - Notes on why each change helps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

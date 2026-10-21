@@ -6,6 +6,23 @@ summary: Get two or three sharp follow-up questions after an answer, so you chec
 job: think-and-decide
 headline: Answer double-checker
 subhead: Get two or three sharp follow-up questions after an answer, so you check the facts and the thinking.
+explain: |
+  After the AI gives you advice, a plan or a number, you get two or three sharp questions that help you check it before you act. Each question points at something specific in that answer, not a generic warning.
+
+  The questions follow three habits: check the facts, question the reasoning, and spot what the answer had to guess about you. It might ask which cost figure to verify, why one step follows another, or what the AI assumed about your budget. It runs once per conversation and stays quiet for simple lookups, casual chat, plain formatting jobs, or when you already asked for a review. The point is a short pause, not a lecture, and the answer itself stays whole.
+when:
+  - You are about to act on advice about money, health or work.
+  - The AI gave you estimates and you cannot tell how solid they are.
+  - You want to learn how to question AI answers without extra effort.
+  - A draft plan looks tidy and you want to find its weak spot.
+you_give:
+  - The question you asked
+  - The answer or draft you plan to rely on
+  - Context the AI may not know (optional)
+you_get:
+  - Two or three follow-up questions
+  - Each tied to a claim in the answer
+  - A prompt to check facts, logic and missing context
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

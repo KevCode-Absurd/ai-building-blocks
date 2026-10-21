@@ -6,6 +6,25 @@ summary: Describe your product. Get a faster path to first value with a checklis
 job: build-product
 headline: Onboarding improver
 subhead: Describe your product. Get a faster path to first value with a checklist, empty states and emails.
+explain: |
+  A faster route from signup to the moment a new user thinks, this works. You describe your product and get a plan to shorten that route and keep people coming back.
+
+  The skill starts by asking what the aha moment is and where users drop off. Then it designs the minimum path to value, the fewest steps needed to feel the benefit. It limits the first session to one goal and saves advanced features for later. You get a checklist for the first visit, empty states that guide instead of showing blank screens, and a short email series that nudges people along. It suggests which events to measure so you can see what is working.
+when:
+  - Many people sign up and never use the product again.
+  - Your first screen after signup is empty and confusing.
+  - You need onboarding emails for the first week.
+  - You want to know which step loses the most people.
+you_give:
+  - What your product does and who uses it
+  - What counts as a user getting value
+  - Where users drop off today
+  - Your current onboarding steps (optional)
+you_get:
+  - A shorter path to first value
+  - An in-app checklist
+  - Empty-state copy
+  - Onboarding email ideas and metrics to track
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

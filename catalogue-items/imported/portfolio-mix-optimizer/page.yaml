@@ -6,6 +6,25 @@ summary: Give it asset returns. Get the best mix by risk and return, with an eff
 job: money-and-investing
 headline: Portfolio mix optimizer
 subhead: Give it asset returns. Get the best mix by risk and return, with an efficient frontier chart.
+explain: |
+  Find the mix of assets that gives the most return for the risk you accept, and see it on an efficient frontier chart. Works in MATLAB with the Financial Toolbox, which is a paid product.
+
+  You provide the expected returns and covariances of your assets. The skill builds a Portfolio object and sets the limits you care about, such as weight bounds, group caps, turnover and number of holdings. It then solves for minimum risk, best Sharpe ratio or a target return, and draws the frontier. It insists on the built-in Portfolio tools instead of hand-coded solvers, and helps fix errors from the estimate methods.
+when:
+  - You want the lowest-risk blend of ten funds.
+  - You need the best risk-adjusted weights with a cap per sector.
+  - You must limit how much a rebalance trades.
+  - Your hand-coded optimiser keeps failing or giving odd weights.
+you_give:
+  - Asset returns or return estimates
+  - Constraints such as weight limits (optional)
+  - Target return or risk level (optional)
+  - MATLAB with Financial Toolbox
+you_get:
+  - Optimal asset weights
+  - Efficient frontier chart
+  - Max Sharpe and minimum variance portfolios
+  - Working MATLAB code
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

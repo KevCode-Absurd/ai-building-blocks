@@ -6,6 +6,24 @@ summary: Give it MATLAB code. Get a review of style, speed and upkeep, checked a
 job: test-and-fix-code
 headline: MATLAB code reviewer
 subhead: Give it MATLAB code. Get a review of style, speed and upkeep, checked against MathWorks standards.
+explain: |
+  A written review of your MATLAB code that sorts problems by how much they matter: errors first, then warnings, then suggestions. It checks against MathWorks coding standards, not personal taste.
+
+  It starts with the built-in code analyser, then loads the official guidelines and goes through a checklist. That list covers names for functions and variables, argument blocks, function length, nesting depth, vectorisation, preallocation and modern commands. It also catches things the analyser misses, such as subplot where tiledlayout belongs, variables that hide built-in functions like sum, and nesting deeper than three levels. Each finding gives the file, the issue and a suggested change. You need MATLAB and its connected tools.
+when:
+  - A teammate sent a pull request with MATLAB code and you need a review.
+  - You wrote code years ago and want it brought up to date.
+  - Your loops run slowly and you suspect missing preallocation.
+  - You want code that follows one standard across your team.
+you_give:
+  - The MATLAB files to review
+  - Any style rules your team has (optional)
+  - MATLAB release
+you_get:
+  - Findings sorted by severity
+  - The exact lines affected
+  - Suggested fixes
+  - A short summary of overall quality
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

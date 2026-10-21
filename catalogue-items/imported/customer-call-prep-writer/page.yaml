@@ -6,6 +6,25 @@ summary: Name the company and who is on the call. Get a one-page brief with sign
 job: sell-and-negotiate
 headline: Customer call prep writer
 subhead: Name the company and who is on the call. Get a one-page brief with signals and talking points. Needs Common Room.
+explain: |
+  One page you can scan five minutes before a customer call. Name the company and who will be on the line, and you get a brief built from signals in Common Room: recent product use, open deals, risks and news.
+
+  It looks up the account, then each attendee's role, influence and recent activity. It pulls past call recordings first, since those show what was already said. If a calendar is connected it finds attendees for you. It sets a call goal, writes three to five talking points tied to real signals, and lists two or three likely questions or objections. It needs a Common Room connection.
+when:
+  - You have a renewal call in an hour and have not looked at the account.
+  - A new contact joined the thread and you know nothing about them.
+  - You are running a demo and want to speak to what they actually use.
+  - You need to spot risk signs like falling usage before you dial in.
+you_give:
+  - The company name
+  - Names of people on the call (optional)
+  - Call type, such as discovery, demo or renewal (optional)
+  - A Common Room connection
+you_get:
+  - A one-page account and attendee brief
+  - A call objective
+  - Three to five talking points with sources
+  - Likely objections and how to reply
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

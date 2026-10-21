@@ -6,6 +6,26 @@ summary: Give it a bug your AI keeps failing to fix. Get a three-try repair plan
 job: test-and-fix-code
 headline: Fix loop breaker
 subhead: Give it a bug your AI keeps failing to fix. Get a three-try repair plan, proof it works and a way back.
+explain: |
+  When your AI keeps patching the same bug and nothing changes, this gives it a strict way to stop guessing. You get a repair with proof that it worked and a tested way back.
+
+  Before any edit, it records the bug, the exact command that shows it, and how to undo the change. Then it allows three attempts only. Each attempt needs a single cause, a prediction, the changed files, a quick check and a check on the real path, such as the deployed app. A fix counts only if the check can also fail on a known bad state. If the bug cannot be reproduced, it stops and says so.
+when:
+  - Your AI agent keeps trying similar patches and the same error comes back.
+  - A small test passes but the live app still fails.
+  - You need proof that a fix works, not only a claim.
+  - You want a rollback that has been tested before you trust a change.
+you_give:
+  - Description of the bug
+  - Command or steps that show the failure
+  - Repo or project access
+  - Rollback method (optional)
+you_get:
+  - Repair contract with baseline result
+  - Log of up to three attempts with evidence
+  - Check that fails on bad state and passes on the fix
+  - Tested rollback
+  - "Plain verdict: fixed, not fixed or inconclusive"
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

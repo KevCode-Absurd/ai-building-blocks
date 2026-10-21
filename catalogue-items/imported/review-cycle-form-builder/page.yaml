@@ -6,6 +6,27 @@ summary: Give it your team and goals. Get review forms, goal templates and a gui
 job: hire-people
 headline: Review cycle form builder
 subhead: Give it your team and goals. Get review forms, goal templates and a guide for fair rating meetings. Not legal advice.
+explain: |
+  A ready set of performance review materials: appraisal forms, goal templates and a guide for running fair rating meetings. Managers get wording they can use instead of starting from a blank page. It is not legal advice.
+
+  You give the team, roles and what you want to measure. The skill drafts review forms and goal or OKR templates for each role, and helps write the reviews themselves with clear, specific language. It covers 360-degree feedback, improvement plans with measurable milestones, and calibration sessions where managers compare ratings across teams. It can also draft recognition programmes and succession plans. Check anything on formal warnings with HR or a lawyer.
+when:
+  - Review season is near and you have no form.
+  - You need to write a review for a team member and want clear wording.
+  - A struggling employee needs an improvement plan with measurable steps.
+  - Managers rate people differently and you want calibration.
+you_give:
+  - Your team and job roles
+  - Goals or OKRs to measure
+  - Time period for the review
+  - Examples of achievements or issues (optional)
+  - Company values or rating scale (optional)
+you_get:
+  - Review forms for each role
+  - Goal and OKR templates
+  - Phrases for clear feedback
+  - A calibration meeting guide
+  - Improvement plan outlines
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

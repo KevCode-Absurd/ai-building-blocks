@@ -6,6 +6,26 @@ summary: Give it a model and a compute budget. Get a tuning plan and the best se
 job: build-software
 headline: Model settings tuner
 subhead: Give it a model and a compute budget. Get a tuning plan and the best settings found.
+explain: |
+  The best settings for your model, found within the compute you can spend. You get a clear plan for the search, then the winning combination.
+
+  First it lists every setting to try, with ranges, using log scales for values like learning rate. Then it picks a search method to fit your budget: grid for small spaces, random as a strong default, Bayesian search when each trial is expensive, or Hyperband when you train deep networks and can stop weak trials early. It scores each trial with cross-validation or a holdout set, runs trials in parallel, prunes the poor ones, and reports which settings mattered most.
+when:
+  - Your model scores fine, and you suspect better settings would add a few points.
+  - You have a fixed GPU budget and need to spend it well.
+  - You do not know whether to use grid or random search.
+  - You want to know which setting matters most.
+you_give:
+  - Your model and training code
+  - The score to improve
+  - Your compute or time budget
+  - Settings you already know are fixed (optional)
+you_get:
+  - A search space with ranges
+  - A chosen search method and why
+  - Search code with early stopping
+  - The best settings found
+  - A ranking of which settings mattered
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

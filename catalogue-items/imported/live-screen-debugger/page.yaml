@@ -6,6 +6,26 @@ summary: Describe the screen bug. Get your web or Electron app opened, tried out
 job: test-and-fix-code
 headline: Live screen debugger
 subhead: Describe the screen bug. Get your web or Electron app opened, tried out and fixed step by step.
+explain: |
+  Describe the screen bug and your web or Electron app is opened, clicked through and fixed in a loop, until it works. You watch the problem disappear.
+
+  It keeps one browser or app window open between edits, so each test is quick. It can use desktop or mobile sizes, and a native-window pass for Electron. The loop is: change code, reload only when needed, try the flow, check what is on screen, repeat. The checklists cover function, layout and visual checks. It needs Playwright, and for Electron it needs the app project itself.
+when:
+  - A button does nothing and you cannot see why.
+  - A layout breaks on a phone screen.
+  - You are fixing a desktop app built with Electron.
+  - You want your AI to try the page, not guess.
+you_give:
+  - The app or its address
+  - A description of the bug
+  - Steps to reproduce
+  - Screen sizes to check (optional)
+  - Playwright installed
+you_get:
+  - The app opened and tested step by step
+  - The cause of the screen bug
+  - Code fixes
+  - Checks that the fix works on desktop and mobile
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

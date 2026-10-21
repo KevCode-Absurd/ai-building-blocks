@@ -6,6 +6,25 @@ summary: Point it at slow code. Get CPU, memory and I/O hot spots found, with fl
 job: test-and-fix-code
 headline: Slow code finder
 subhead: Point it at slow code. Get CPU, memory and I/O hot spots found, with flame graphs and fixes.
+explain: |
+  A map of exactly where your app wastes time or memory. Point the skill at slow code and it finds CPU, memory and input and output hot spots, then ranks fixes by impact.
+
+  It works for Node.js, Python and Go. For CPU it builds flame graphs. For memory it takes heap snapshots and looks for leaks. It checks web bundle size, runs EXPLAIN on slow database queries and hunts for N+1 patterns. It can run load tests with k6 or Artillery before a launch. A bundled Python script scans a project for risk signs and can output JSON for your build checks. Every fix starts from a measured baseline, so you can see the gain.
+when:
+  - Your app is slow and you do not know which part is to blame.
+  - Memory use keeps climbing and you suspect a leak.
+  - Your page bundle grew after adding a package.
+  - You expect a traffic spike and want to load test first.
+you_give:
+  - The project folder or the slow endpoint
+  - "Your language: Node.js, Python or Go"
+  - A target, like a latency limit (optional)
+  - Permission to run profiling tools
+you_get:
+  - A ranked list of hot spots
+  - Flame graphs or memory snapshots
+  - Slow query findings
+  - A load test script and baseline numbers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

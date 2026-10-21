@@ -6,6 +6,25 @@ summary: Describe your ad and offer. Get a short page that warms visitors and se
 job: write-landing-page
 headline: Bridge page writer
 subhead: Describe your ad and offer. Get a short page that warms visitors and sends them on to buy.
+explain: |
+  A short page of 300 to 800 words that sits between your ad and your offer. It warms up a curious visitor so they click through to watch your video or see the offer.
+
+  It does not sell. There is no price and no checkout. The skill first sorts your brief by market and by how aware the visitor is, from not knowing they have a problem to already comparing solutions. That choice sets the angle, headline and proof. It then writes copy that answers whether this is legit and worth their time, while leaving the main question open enough that the next click feels natural. It follows classic direct-response methods.
+when:
+  - You run ads that send people straight to a long video and many drop off.
+  - You need a pre-sell page between a cold ad and your main offer.
+  - You want to test a new angle without rebuilding your sales page.
+  - Your ad gets clicks but few watch the video.
+you_give:
+  - Your ad or ad idea
+  - The offer it leads to
+  - Who the visitor is and what they know
+  - Proof or results you can show (optional)
+you_get:
+  - A short bridge page
+  - A headline matched to visitor awareness
+  - A curiosity-led body with proof
+  - A call to action that leads to the next step
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your content and audience. Get where to share it, when, and whi
 job: grow-social
 headline: Content channel planner
 subhead: Give it your content and audience. Get where to share it, when, and which channels to skip.
+explain: |
+  A plan for where your content goes after it is published, matched to your audience, with channels to drop. Most teams put nine tenths of their effort into making content and almost none into getting it seen.
+
+  Claude sorts channels into owned, earned and paid. It matches each type of content to the channel where that audience reads, sets a posting rhythm and says what to skip. It can also audit why a program publishes steadily but gets little reach. This is about getting content to people. It is different from turning one piece into many formats, which is a separate job.
+when:
+  - You publish regularly and almost nobody reads it.
+  - You are choosing between email, social, search and paid.
+  - A budget cut means you must drop channels.
+  - You are launching a new content program and need a distribution plan.
+you_give:
+  - Your content types
+  - Your audience
+  - Channels you use now
+  - Budget and team size
+you_get:
+  - Channels matched to content and audience
+  - A posting rhythm
+  - Channels to drop
+  - Notes on owned, earned and paid mix
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

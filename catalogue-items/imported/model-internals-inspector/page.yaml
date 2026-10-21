@@ -6,6 +6,26 @@ summary: "Give it a language model and a question. Get a look inside it: which p
 job: research-topics
 headline: Model internals inspector
 subhead: "Give it a language model and a question. Get a look inside it: which parts pay attention to what, and why."
+explain: |
+  A look inside a language model that answers questions like which parts of it attend to which words, and which parts caused a specific answer. You get evidence, not guesses.
+
+  The skill uses TransformerLens, a Python library that puts a hook on every step inside a GPT-style model. It loads the model, runs your prompt, and saves what happened at each layer. Then it can plot attention, trace how a fact moves through the layers, and swap pieces of one run into another to see which part matters. That swap test is called activation patching. It needs Python and is built for research use.
+when:
+  - You want to see which words a model attends to when it answers.
+  - You are tracing why a model gets one prompt right and a near copy wrong.
+  - You study circuits, such as how a model copies earlier words.
+  - You need to test one change inside a model and see the effect.
+you_give:
+  - A GPT-style model name
+  - Two prompts to compare, one right and one wrong (optional)
+  - The question about its behavior
+  - A Python setup with a GPU for larger models
+you_get:
+  - Code that loads the model with hooks
+  - Attention maps for your prompt
+  - Activation patching results
+  - A short reading of which layers matter
+  - Next experiments to run
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

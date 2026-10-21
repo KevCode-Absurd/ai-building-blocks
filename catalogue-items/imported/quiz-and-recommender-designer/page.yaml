@@ -6,6 +6,24 @@ summary: Describe who you want to sort. Get quiz questions, scoring, result grou
 job: make-offer
 headline: Quiz and recommender designer
 subhead: Describe who you want to sort. Get quiz questions, scoring, result groups and matching recommendations that can capture leads.
+explain: |
+  A quiz that sorts people into useful groups and points each group to the right product, plus a way to capture their email. It is built to produce leads, not just clicks.
+
+  First it checks whether a quiz is the right tool for your audience. Then it designs five to twelve questions that separate people into groups, a scoring method, and result pages for each group. Every result carries a matched recommendation and a clear next step. It also covers where the email ask goes and how to test that results are not flattery. A quiz with thirty questions becomes a survey, so it keeps the length short.
+when:
+  - You want a quiz that tells visitors which of your products fits them.
+  - Your current quiz gets plays but no leads.
+  - You need to split your list into groups by need or level.
+  - You are planning a lead magnet and want to compare formats.
+you_give:
+  - Who you want to sort and why
+  - Your products or offers
+  - Current quiz, if any (optional)
+you_get:
+  - Question set
+  - Scoring method
+  - Result groups with matched recommendations
+  - Email capture placement
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

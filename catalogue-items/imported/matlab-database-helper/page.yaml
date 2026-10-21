@@ -6,6 +6,25 @@ summary: Say which database and table. Get working code to read, filter, write a
 job: build-software
 headline: MATLAB database helper
 subhead: Say which database and table. Get working code to read, filter, write and update rows from MATLAB.
+explain: |
+  Working MATLAB code that reads from and writes to your database, with safe habits built in. Tell it the database and table, and it writes the connection, the queries and the updates.
+
+  Three rules shape everything it writes. Filters are sent to the database, so you never pull a whole table into memory just to cut it down. Passwords are saved as secrets and never typed into code. And anything that deletes or overwrites data waits for your clear yes first. It covers connecting through ODBC and saved data sources, reading rows with filters, importing with set options, and adding or changing rows. DuckDB and MongoDB have other routes. You need MATLAB with Database Toolbox, release 2021a or later.
+when:
+  - You need to pull only certain rows from a large table into MATLAB.
+  - You want to write results back to a database after analysis.
+  - Your code has a password typed into the connection line.
+  - You are setting up an ODBC connection for the first time.
+you_give:
+  - Database type and connection details
+  - Table and column names
+  - What you want to read or change
+  - MATLAB release
+you_get:
+  - Connection code with safe credentials
+  - Filtered read queries
+  - Insert and update code
+  - A confirmation step before deletes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe a call or email. Get a ready entry on the right account and de
 job: sell-and-negotiate
 headline: CRM activity logger
 subhead: Describe a call or email. Get a ready entry on the right account and deal, saved when you say so.
+explain: |
+  A call, meeting or email logged to the right account, contact and deal in your CRM, shown to you first and saved only when you say so. It turns a quick description or transcript into a clean entry.
+
+  First it checks you have permission to write. Then it finds the matching records, drafts the entry from what you said, and shows it with its sources. You review, then it saves and checks that the record landed. It can also read mode: ask what is logged on an account and see recent activity. It needs a connected CRM. If no write access exists, it hands you the text to paste yourself.
+when:
+  - You just finished a call and don't want to type it into the CRM.
+  - You have a meeting transcript to log against a deal.
+  - You want to see what has been logged on an account.
+  - Your team forgets to log emails to prospects.
+you_give:
+  - Description or transcript of the interaction
+  - Account or contact name
+  - Connected CRM
+  - Date and outcome (optional)
+you_get:
+  - Matched account, contact and deal
+  - Drafted activity entry
+  - Preview before saving
+  - Saved record check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

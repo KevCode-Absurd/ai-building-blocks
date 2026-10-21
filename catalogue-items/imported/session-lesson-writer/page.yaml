@@ -6,6 +6,25 @@ summary: Give it a fixed problem from your session. Get one short, tested how-to
 job: make-skills
 headline: Session lesson writer
 subhead: Give it a fixed problem from your session. Get one short, tested how-to your AI can reuse next time.
+explain: |
+  One short, tested how-to taken from a problem you just fixed, ready for your AI to reuse. A lesson is only worth saving with a clear trigger, a fix and a way to confirm it worked, so guesses are not saved.
+
+  It separates the wrong ideas from the verified cause and checks the fix with a real test. Then it writes the smallest steps that reproduce and repair the problem, adds the expected result and a case where the lesson does not apply, and strips secrets, names and private paths. It checks your existing notes first so you amend one instead of adding overlap, and shows you a draft before saving.
+when:
+  - You solved a stubborn error and want Claude to remember the fix.
+  - The same correction came up three times in your project.
+  - You want project notes that stay short and tested.
+  - You need a lesson written without leaking private chat details.
+you_give:
+  - A summary or transcript of the fixed session
+  - The command or test that proved the fix
+  - "The scope: this project, one tool version, or general"
+  - Where lessons are stored (optional)
+you_get:
+  - A short lesson draft with trigger and steps
+  - A verification step
+  - A note on when not to use it
+  - A cleaned version with private details removed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

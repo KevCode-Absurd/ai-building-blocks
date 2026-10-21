@@ -6,6 +6,26 @@ summary: Tell it your products. Get a plan to reuse, refurbish or recycle them a
 job: plan-supply-chain
 headline: Reuse and returns planner
 subhead: Tell it your products. Get a plan to reuse, refurbish or recycle them and take back returns.
+explain: |
+  A plan to keep your products and materials in use longer, through reuse, repair, refurbishing or recycling, plus a way to take products back from customers. It shows where your waste goes now and where value is being thrown away.
+
+  You describe what you sell, what it is made of and how it is used and discarded. The skill follows the Ellen MacArthur principles: design out waste, keep things in use, and return materials to nature where possible. It checks how repairable and recyclable each product is, what return and sorting setup you have, and where used goods could be resold. You get options ranked by effort and payoff, with goals to track.
+when:
+  - You are asked to take back or recycle what you sell.
+  - You want to cut waste and cost from end-of-life products.
+  - You are thinking about a refurbished or second-hand line.
+  - New rules require you to handle product take-back.
+you_give:
+  - Your products and their materials
+  - How they are used and thrown away today
+  - Your current returns process
+  - Rules or customer demands you face (optional)
+  - Repair or refurbish facilities you have (optional)
+you_get:
+  - A map of waste and lost value
+  - Reuse, repair, refurbish and recycle options
+  - A take-back and returns plan
+  - Goals and measures to track
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

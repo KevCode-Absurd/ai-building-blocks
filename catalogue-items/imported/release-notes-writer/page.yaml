@@ -6,6 +6,25 @@ summary: Point it at your commits. Get tidy release notes and the right version 
 job: build-software
 headline: Release notes writer
 subhead: Point it at your commits. Get tidy release notes and the right version bump from Conventional Commits.
+explain: |
+  Release notes written from your commit history, with the right version bump worked out for you. Raw git messages turn into a changelog that people can actually read.
+
+  It reads commits written in the Conventional Commits style. Fixes become a patch bump, new features a minor bump, and breaking changes a major bump. It then groups the changes under headings like Added, Changed and Fixed. Parsing, version logic and writing are kept as separate steps, so you can edit the wording before publishing. A linter script also checks commit messages and can run in your build pipeline. It works on a git range or pasted commits, and uses Python scripts.
+when:
+  - You are about to tag a release and need the notes written.
+  - Your commit history is a mess and you want it as a tidy changelog.
+  - You need to know whether this release is a patch, minor or major.
+  - You want pull requests blocked when commit messages break the format.
+you_give:
+  - Git range or tags to compare
+  - Next version number (optional)
+  - Commits pasted in directly (optional)
+  - Output format (optional)
+you_get:
+  - Release notes grouped by type
+  - Recommended version bump
+  - Commit format check results
+  - Output ready for a changelog file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Ask where a decision or doc lives. Get one search across your chat, ema
 job: organise-work
 headline: Cross-tool search finder
 subhead: Ask where a decision or doc lives. Get one search across your chat, email and files, with sources.
+explain: |
+  Finding where a decision was made usually means checking chat, email, files and your tracker one by one. Ask once and this searches all your connected tools and brings back one combined answer with sources.
+
+  It first checks which tools are connected. Then it reads your question for the topic, people, dates and any hints like "in the email" or "from Sam". It breaks that into smaller searches for each source, runs them side by side, and merges the results. Each answer points back to the message, thread or file it came from. If nothing is connected, it tells you what to connect first.
+when:
+  - You remember a decision but not whether it was in chat or email.
+  - You need the latest version of a doc that was shared in a thread.
+  - A teammate asks what was agreed last month and you have to find out.
+  - You want everything on one project in one place.
+you_give:
+  - Your question or topic
+  - Names, dates or channels to narrow it (optional)
+  - Connected chat, email, storage or tracker tools
+you_get:
+  - One merged answer across sources
+  - Links to each message, email or file
+  - Results ranked by how well they match
+  - A note on any tool that could not be searched
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

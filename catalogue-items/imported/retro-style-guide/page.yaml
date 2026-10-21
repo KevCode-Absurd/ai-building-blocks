@@ -6,6 +6,26 @@ summary: Describe your product. Get a style guide with a vintage look, nostalgic
 job: design-work
 headline: Retro throwback style guide writer
 subhead: Describe your product. Get a style guide with a vintage look, nostalgic type and bold colour pairs.
+explain: |
+  A written style guide for a throwback look: vintage-feeling type, high-contrast colour pairs and the little rules that keep a whole product consistent. Designers and developers can build from it without guessing.
+
+  You describe your product and audience. The skill first states the design idea in a sentence, then sets the colours, type sizes and spacing, then covers each part such as buttons and forms, with states and variants. It adds accessibility rules to WCAG 2.2 AA level, with visible focus and enough contrast. It finishes with tone examples, things to avoid and a review checklist your team can run before shipping. The nostalgic style comes from the choice of display type and bold pairings.
+when:
+  - You are launching a product with a nostalgic, vintage feel.
+  - Your team has a retro mood board but no written rules.
+  - You want developers and designers to stay in step.
+  - An existing retro-style site looks inconsistent from page to page.
+you_give:
+  - A description of your product
+  - Your audience
+  - Brand colours or fonts you must keep (optional)
+  - Screens or components you need covered (optional)
+you_get:
+  - A retro style guide with colours, type and spacing
+  - Rules for each component and its states
+  - Accessibility checks
+  - Tone examples and things to avoid
+  - A review checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

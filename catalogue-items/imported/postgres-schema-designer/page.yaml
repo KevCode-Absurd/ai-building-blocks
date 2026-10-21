@@ -6,6 +6,25 @@ summary: Describe your data. Get a Postgres schema with the right types, keys, i
 job: build-software
 headline: Postgres schema designer
 subhead: Describe your data. Get a Postgres schema with the right types, keys, indexes and rules for speed and safety.
+explain: |
+  A Postgres schema designed for your data, with the right column types, keys, indexes and rules so it stays fast and hard to corrupt as it grows.
+
+  You describe your data, how you will read it and the scale you expect in rows and requests. The skill picks types and constraints that enforce your rules, such as primary keys, foreign keys and checks. It adds indexes only for real query paths and tells you to confirm them with EXPLAIN. It plans partitions or row-level security when scale or access control needs them, and warns you to use migrations and backups before changing a live database.
+when:
+  - You are starting a new app and need tables.
+  - An existing schema is a mess of text columns.
+  - You expect millions of rows and need partitions.
+  - You need row-level rules so users see only their own data.
+you_give:
+  - Description of your data and entities
+  - How you will query it
+  - Expected row counts and traffic
+  - Existing schema (optional)
+you_get:
+  - Table definitions as SQL
+  - Choice of types and constraints
+  - Index plan
+  - Notes on partitioning and safe migration
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

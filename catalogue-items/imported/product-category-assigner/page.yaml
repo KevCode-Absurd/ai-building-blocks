@@ -6,6 +6,25 @@ summary: Give it your catalog. Get every product matched to a standard Shopify c
 job: build-websites
 headline: Product category assigner
 subhead: Give it your catalog. Get every product matched to a standard Shopify category, so AI can place it. Updates live products.
+explain: |
+  Every product in your Shopify catalog matched to the right standard category. AI shopping tools turn a request like "office chair" into a category, then pull products from it. A product with no category only turns up by keyword luck.
+
+  Claude finds products with no category or a wrong one. It infers the best fit from the title, type and tags, then checks that choice against the live Shopify category tree before suggesting it. You see the list first, then approve. Updates change live products, so you need an authenticated Shopify CLI session with product write access.
+when:
+  - Many of your products have no standard category set.
+  - You imported a catalog and the categories are a mess.
+  - You want AI shopping tools to place your products correctly.
+  - A product sits in the wrong category and loses search traffic.
+you_give:
+  - Your store domain
+  - Which products to check, or the whole catalog
+  - Approval before changes are written
+  - Any categories you want to avoid (optional)
+you_get:
+  - A list of uncategorised or mis-categorised products
+  - A proposed category for each
+  - Changes applied after your approval
+  - A summary of what was updated
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

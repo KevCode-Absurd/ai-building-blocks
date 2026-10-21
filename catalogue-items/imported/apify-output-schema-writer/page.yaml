@@ -6,6 +6,24 @@ summary: Give it an Apify Actor. Get output schema files that show its results a
 job: build-software
 headline: Apify output schema writer
 subhead: Give it an Apify Actor. Get output schema files that show its results as a clear table. Needs a paid Apify account.
+explain: |
+  Schema files that make an Actor's results show up as a clear table in Apify Console, so anyone can read a run without opening raw data. It suits Actors already built on Apify, which needs a paid account.
+
+  The skill reads the Actor's source first and never guesses what the code saves. It finds the settings file and any existing schemas, and copies the style of other Actors in the same repository. It then writes the dataset schema, the output schema, and a key-value store schema when the Actor uses one. Every field is marked as possibly empty, because websites and APIs are unpredictable. Examples use made-up data. Finally it updates the Actor settings to link the files.
+when:
+  - Your Actor's results look like a wall of JSON in the Console.
+  - You are about to publish an Actor and want a tidy results view.
+  - Several Actors in a repo need schemas that match each other.
+  - Your code saves files to a store and you want them listed.
+you_give:
+  - The Actor project folder
+  - Notes on what each field means (optional)
+  - Other Actors to match (optional)
+you_get:
+  - A dataset schema for the results table
+  - An output schema
+  - A key-value store schema (when needed)
+  - Updated Actor settings
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

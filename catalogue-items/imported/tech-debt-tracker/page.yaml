@@ -6,6 +6,26 @@ summary: Point it at your code. Get debt found, scored by severity and ordered i
 job: build-software
 headline: Tech debt tracker
 subhead: Point it at your code. Get debt found, scored by severity and ordered into a clean-up plan.
+explain: |
+  A scan of your codebase that finds debt, scores each item by how serious it is, and orders them into a clean-up plan you can track over time. It gives you a number for something that usually stays a feeling.
+
+  Three parts work together. A scanner finds signals such as TODO notes, duplicated code, large files, missing tests and old dependencies, and writes a JSON inventory. A prioritiser reads that inventory and ranks items by cost of delay against effort. A dashboard compares dated snapshots, so you can see whether debt is rising or falling and report that to leaders. The scripts need Python and run on a folder you point them at.
+when:
+  - You want a first count of the debt in a project you do not know.
+  - You need a trend line to show debt is growing or shrinking.
+  - You must report engineering health to non-technical leaders.
+  - You want to pick this quarter's clean-up from a scored list.
+  - Your TODO comments are scattered and nobody tracks them.
+you_give:
+  - The path to your codebase
+  - Python to run the scripts
+  - Earlier scan results for trends (optional)
+  - Your team's capacity for clean-up (optional)
+you_get:
+  - A debt inventory with severity scores
+  - A prioritised clean-up order
+  - Summary counts by type
+  - A trend dashboard over time
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

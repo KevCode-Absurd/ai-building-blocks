@@ -6,6 +6,25 @@ summary: Describe your systems. Get your controls mapped, gaps found and the evi
 job: secure-code
 headline: SOC 2 readiness planner
 subhead: Describe your systems. Get your controls mapped, gaps found and the evidence an auditor will ask for.
+explain: |
+  Your controls mapped to SOC 2, the gaps listed, and the evidence an auditor will ask for. You describe your systems, and the skill builds the plan for a Type I or Type II report.
+
+  It starts with the five trust categories: security, availability, processing integrity, confidentiality and privacy. Then it builds a control matrix, one row per control with an owner and an evidence source. A gap analysis marks what is missing. An evidence checklist says what to collect and when. It adds vendor management and steady upkeep tasks, and it warns about habits that fail audits. Helper scripts in Python can generate the matrix. It suits software companies selling to business customers.
+when:
+  - A customer asks for your SOC 2 report and you have none.
+  - You are choosing between a Type I and a Type II report.
+  - You need to know what evidence to keep from day one.
+  - You want a control list your team can assign to owners.
+you_give:
+  - A description of your systems and data
+  - Your current security practices
+  - Customer demands for the report (optional)
+  - Your target date (optional)
+you_get:
+  - A control matrix with owners
+  - A gap list
+  - An evidence collection checklist
+  - A readiness summary and vendor tasks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

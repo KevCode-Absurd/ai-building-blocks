@@ -6,6 +6,24 @@ summary: Give it DICOM, NIfTI or NRRD scans. Get them read, listed and ready to 
 job: build-software
 headline: Medical scan reader
 subhead: Give it DICOM, NIfTI or NRRD scans. Get them read, listed and ready to use in MATLAB.
+explain: |
+  Scan files from DICOM, NIfTI or NRRD loaded into MATLAB as clean volumes with the right voxel size, orientation and patient coordinates. It saves you from hand-rolling the reading code and getting the geometry wrong.
+
+  It starts by checking which MATLAB toolboxes you have, then picks the newer Medical Imaging Toolbox calls when they exist and falls back to the Image Processing Toolbox when they do not. A quick-reference table maps each task, such as reading a folder, listing series, pulling an oriented slice or reading RT contours, to the right function. It also covers anonymising DICOM files. Showing the volumes is left to other skills.
+when:
+  - You have a folder of CT or MR slices and need one 3D array in MATLAB.
+  - You need to list the series inside a DICOM study.
+  - You want a slice in a set orientation, such as coronal.
+  - You must remove patient details from DICOM files before sharing.
+you_give:
+  - Paths to your DICOM, NIfTI or NRRD files
+  - The MATLAB toolboxes you have installed (optional)
+  - What you want out, such as a volume, slice or contours
+you_get:
+  - MATLAB code that reads your scans
+  - Voxel data with spacing and orientation
+  - A list of DICOM series
+  - Anonymised DICOM files when asked
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

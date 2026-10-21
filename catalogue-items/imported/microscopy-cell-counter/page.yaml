@@ -6,6 +6,26 @@ summary: Give it microscope images. Get cell counts, outlines and per-cell brigh
 job: research-topics
 headline: Microscopy cell counter
 subhead: Give it microscope images. Get cell counts, outlines and per-cell brightness, run the same way every time.
+explain: |
+  Cell counts, outlines and per-cell brightness from your microscope images, produced the same way every run so conditions can be compared fairly. It builds a CellProfiler pipeline for nuclei in a single grayscale channel.
+
+  You list each image in a CSV manifest with plate, well and site. The starting pipeline finds nuclei with Otsu thresholding, measures size and intensity, draws outline overlays and exports a table. You tune the size range on a small pilot of control, dense, dim and edge images, and check the overlays for misses, splits and merges. Settings are set once for all treatments, never per group. It rejects colour, stacks and float images rather than guessing.
+when:
+  - You need nuclei counts across a plate of wells.
+  - You want nuclear fluorescence measured for each cell.
+  - A teammate counted by hand and you need a repeatable method.
+  - You have images from a proprietary format that need converting first.
+you_give:
+  - Grayscale TIFF images of the nuclear channel
+  - A manifest of plate, well and site
+  - Pixel size and bit depth
+  - Representative images for tuning
+you_get:
+  - A CellProfiler pipeline file
+  - Nucleus counts per image
+  - Intensity and size per cell
+  - Outline overlays to check results
+  - A pilot checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

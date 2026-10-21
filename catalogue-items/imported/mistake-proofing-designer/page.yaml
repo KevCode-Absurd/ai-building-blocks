@@ -6,6 +6,24 @@ summary: Point it at code, a form or a process. Get changes that make the wrong 
 job: test-and-fix-code
 headline: Mistake-proofing designer
 subhead: Point it at code, a form or a process. Get changes that make the wrong move impossible or loud.
+explain: |
+  Changes to your code, form or process that make the wrong move impossible, or make it loud the moment it happens. Point it at something that keeps going wrong and you get fixes that do not rely on anyone remembering.
+
+  It uses mistake-proofing from Toyota. A comment, a wiki page or a review checklist is only training, and training fades. A real fix is a device: a type, a database constraint, a lint rule, a state machine. It ranks fixes on a ladder. Best is control, where the mistake cannot happen. Next is warning, where it is flagged at once. Then detection, where something finds it later. Docs rank at zero.
+when:
+  - The same bug has bitten your team for the third time.
+  - You handle money, permissions or deletion and failures are silent.
+  - You are designing an API that callers keep misusing.
+  - You want to find what is easy to get wrong in a module.
+you_give:
+  - The code, form or process to harden
+  - The mistake that keeps happening
+  - How costly it is when it does (optional)
+you_get:
+  - Hazards listed and ranked
+  - Fixes placed on the control, warning or detection ladder
+  - Concrete changes such as types or constraints
+  - A note on which fixes rely only on memory
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

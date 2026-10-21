@@ -6,6 +6,26 @@ summary: Name the broken feature. Get it traced end to end, fixed and tested wit
 job: test-and-fix-code
 headline: Feature fixer
 subhead: Name the broken feature. Get it traced end to end, fixed and tested without touching the rest.
+explain: |
+  A broken feature traced from one end to the other, repaired, and tested, without side effects on the rest of the app. It suits cases where a whole module is off, not one bug.
+
+  The skill works in five phases in strict order. It fixes the scope, traces the code path, then diagnoses what is wrong. A rule blocks any fix until the diagnosis is finished. After that it makes the changes, then verifies them with tests and checks that nearby features still work. It tells you when your problem is only a single bug, so a lighter debugging approach fits better. The report lists what it found, what it changed and what it left alone.
+when:
+  - Your checkout flow is half working and nobody knows why.
+  - You were told to make the export module work properly.
+  - Several bugs sit in one area and fixing them one by one keeps failing.
+  - You want a fix that does not break something else.
+you_give:
+  - The name of the feature or module
+  - What is broken, in your words
+  - Access to the code and tests
+  - Steps to reproduce the problem (optional)
+you_get:
+  - A scope and trace of the feature
+  - A diagnosis before any change
+  - Focused fixes
+  - Test results
+  - A list of what was left untouched
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

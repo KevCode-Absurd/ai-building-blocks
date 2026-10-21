@@ -6,6 +6,25 @@ summary: Give it a course syllabus. Get a Word reading list of recent peer-revie
 job: teach-and-train
 headline: Course reading list builder
 subhead: Give it a course syllabus. Get a Word reading list of recent peer-reviewed papers for each section. Needs a paid Consensus account.
+explain: |
+  A Word document of recent, peer-reviewed papers for each section of your course, each with a short summary and discussion questions. You get reading that is current and matches your students' level.
+
+  You answer three questions about your syllabus format, your audience and the year range. The skill reads the syllabus, groups the topics into sections and asks you to confirm the grouping before searching. For each section it searches an academic database for papers, favouring recent and relevant work and tying topics to applied settings. It writes summaries and discussion questions, then builds the document with a script. It needs a paid Consensus account and a way to run the script.
+when:
+  - You are updating a syllabus and want fresh papers for each week.
+  - You teach a new course and need supplementary reading fast.
+  - Students ask for sources beyond the textbook.
+  - You want discussion questions tied to each reading.
+you_give:
+  - The course syllabus
+  - Course audience and level
+  - Year range for papers
+  - A Consensus account
+you_get:
+  - Word reading list by section
+  - Paper summaries
+  - Discussion questions
+  - Confirmed topic grouping
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

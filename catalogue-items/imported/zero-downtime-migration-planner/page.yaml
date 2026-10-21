@@ -6,6 +6,25 @@ summary: Name what you are moving. Get a zero-downtime plan with checks and a ro
 job: ship-and-host
 headline: Zero-downtime migration planner
 subhead: Name what you are moving. Get a zero-downtime plan with checks and a rollback for each step.
+explain: |
+  A migration plan for moving a database, service or API with no downtime, where every step has a check and a way back.
+
+  You describe what is moving and where to. Python scripts turn that spec into phases with risks and a time estimate. A second script compares the old and new schema or API and lists breaking and possibly breaking changes. It exits with an error unless things are compatible, so it can gate a deploy. A third script writes a rollback runbook from the plan, with data recovery steps, service rollbacks and the trigger for pulling back. The plan is not approved until the check passes or the owner accepts every breaking change. You need Python.
+when:
+  - You must change a database schema on a live system.
+  - You are replacing an old service and users cannot see an outage.
+  - You want to know what an API change will break for callers.
+  - You need a rollback plan before a release window.
+you_give:
+  - A description of what you are migrating
+  - The before and after schema or API (optional)
+  - Your constraints, such as time window and traffic
+  - Python on your computer
+you_get:
+  - A phased migration plan with risks
+  - A compatibility report of breaking changes
+  - A rollback runbook per phase
+  - Validation checkpoints with go and stop rules
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

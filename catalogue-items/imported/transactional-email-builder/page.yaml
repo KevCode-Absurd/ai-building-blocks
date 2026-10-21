@@ -6,6 +6,25 @@ summary: Say which emails your app sends. Get coded templates, a sending setup, 
 job: build-software
 headline: Transactional email builder
 subhead: Say which emails your app sends. Get coded templates, a sending setup, preview and dark mode.
+explain: |
+  The emails your app sends, such as welcome, verify, password reset and invoice, built as real code you can ship. They look right in dark mode, in different languages and in major email apps.
+
+  The skill writes React Email templates, or MJML where wide email client support matters. It wires them to Resend, Postmark, SendGrid or AWS SES through one sending interface, and adds a local preview server with hot reload. It handles translated text with typed keys, dark mode styles, UTM links and open and click tracking. A spam checklist helps your mail reach the inbox. You need a code project, Node and an account with one email provider.
+when:
+  - You are adding sign-up and password emails to a new product.
+  - Your old email system is hard to change and you want to replace it.
+  - Your emails land in spam or look broken in some apps.
+  - You need the same emails in several languages.
+you_give:
+  - The list of emails your app sends
+  - Your email provider choice
+  - Your brand colours and logo
+  - Languages you support (optional)
+you_get:
+  - Coded email templates
+  - A provider-agnostic send setup
+  - A local preview server
+  - A spam and dark mode checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Name a real event or puzzle. Get a unit plan that uses several subjects
 job: teach-and-train
 headline: Real-world phenomenon unit planner
 subhead: Name a real event or puzzle. Get a unit plan that uses several subjects to explain it.
+explain: |
+  A unit plan built around one real event or puzzle that no single subject can explain alone, so each subject has to contribute. It follows the phenomenon approach from the Finnish national curriculum.
+
+  You name something like water quality in a local river. The skill maps what science, geography, maths and civics each add, marks the points where they must connect, and lays out a pathway students follow as they ask and answer their own questions. It ends with an assessment that tests combined understanding. The aim is real integration, not subjects stitched together by the teacher. It suits teachers planning cross-subject work.
+when:
+  - You want a unit that pulls several subjects into one question.
+  - A local event is in the news and you want to teach from it.
+  - You need to show how each subject's goals are covered.
+  - Your team plans together across departments.
+you_give:
+  - A real-world phenomenon or puzzle
+  - Subjects and year level
+  - Curriculum goals to cover
+  - Unit length (optional)
+you_get:
+  - A unit design
+  - Each subject's part in it
+  - Integration points
+  - A student inquiry pathway
+  - An assessment for combined understanding
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it a ticker. Get prices, statements, options and holdings from Yah
 job: money-and-investing
 headline: Stock data fetcher
 subhead: Give it a ticker. Get prices, statements, options and holdings from Yahoo Finance. Collects data from websites.
+explain: |
+  Market data on any listed company, pulled into a tidy table from Yahoo Finance. Give a ticker and say what you want, and you get current quotes, price history, statements, options chains, dividends, analyst targets or holdings.
+
+  It matches your request to the right data type: income statement, balance sheet, cash flow, dividends and splits, earnings estimates, insider and fund holdings, news, or sector data. It can compare several tickers and run simple screens. It uses a Python library, so it needs code to run and installs the package if missing. Data is for research and learning only, and the library has no tie to Yahoo.
+when:
+  - You need five years of price history for a chart or model.
+  - You want a company's cash flow statement in a spreadsheet-ready table.
+  - You are comparing the numbers of several tickers in one go.
+  - You want to see analyst price targets and recent ratings.
+you_give:
+  - A ticker symbol or list of tickers
+  - The type of data you want
+  - A date range (optional)
+  - A way to run Python
+you_get:
+  - Price tables for the period
+  - Financial statements
+  - Options chains or dividend history
+  - Analyst estimates and targets
+  - Holdings and news lists
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

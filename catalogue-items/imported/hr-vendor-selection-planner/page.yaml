@@ -6,6 +6,25 @@ summary: Give it a tool or service you need. Get an RFP outline, a scorecard and
 job: hire-people
 headline: HR vendor selection planner
 subhead: Give it a tool or service you need. Get an RFP outline, a scorecard and a contract negotiation checklist.
+explain: |
+  A fair, documented way to pick an HR vendor and sign a good contract. Say what tool or service you need and get an outline for a request for proposals, a scoring sheet and a checklist for negotiation.
+
+  It sets your criteria first, then builds a scorecard so you can compare vendors on cost, features, support and implementation record. It lists security and data privacy questions to ask before a vendor sees staff records. For the contract, it highlights terms and service levels to push for, plus exit and data-return clauses. It also helps you check prices against market rates, plan a move between providers, manage vendors after signing and cut overlap in a crowded tool stack.
+when:
+  - You need to replace your payroll, recruiting or benefits provider.
+  - Three vendors have sent proposals and you need a fair way to compare them.
+  - A contract renewal is near and you want better terms.
+  - You have too many overlapping HR tools and want to cut some.
+you_give:
+  - The tool or service you need
+  - Vendors you are considering
+  - Budget and timing
+  - Data the vendor will access (optional)
+you_get:
+  - A request for proposals outline
+  - A vendor scorecard
+  - Security and privacy questions
+  - A contract negotiation checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

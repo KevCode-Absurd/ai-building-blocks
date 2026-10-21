@@ -6,6 +6,24 @@ summary: Add four habits to your AI coder. Get smaller, simpler changes that sta
 job: build-software
 headline: Careful coding rules
 subhead: Add four habits to your AI coder. Get smaller, simpler changes that state their assumptions and prove they work.
+explain: |
+  Your AI coder makes smaller, simpler changes and shows its thinking before it writes. Add four habits, and the code you get back states its assumptions, does only what you asked, touches only what it must, and proves it works.
+
+  The habits come from observations on common AI coding mistakes. Think before coding: name assumptions, offer options, ask when unsure. Keep it simple: no extras, no one-use abstractions, rewrite 200 lines that could be 50. Make surgical edits: change only the lines needed and clean up only your own mess. Set a goal you can check, then loop until it is met. They lean toward care over speed.
+when:
+  - Your AI assistant keeps adding features you did not ask for.
+  - A small fix came back as a big rewrite across many files.
+  - You want the model to ask questions instead of guessing.
+  - Code reviews take long because changes are bigger than the task.
+you_give:
+  - The coding task you want done
+  - The existing code to change
+  - A test or check that shows success (optional)
+you_get:
+  - Stated assumptions before any code
+  - The smallest change that solves the problem
+  - Edits limited to the lines that matter
+  - A clear way to check the result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

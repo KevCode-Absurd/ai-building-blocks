@@ -6,6 +6,24 @@ summary: Run it on your orders. Get the buyers 7 to 14 days after delivery who s
 job: run-your-store
 headline: Survey-ready order finder
 subhead: Run it on your orders. Get the buyers 7 to 14 days after delivery who should get a survey, minus refunds.
+explain: |
+  A list of customers who got their order 7 to 14 days ago and are ready for a post-purchase survey, with refunded and cancelled orders left out. It reads your store and changes nothing.
+
+  The skill queries your store's orders through the API and keeps only those fulfilled in the 7 to 14 day window. It removes anything refunded or cancelled so unhappy or returned buyers do not get a survey invitation by mistake. Safety rules keep it read-only, it logs the session and handles errors such as rate limits and large order counts. It needs API access to a Shopify-style store.
+when:
+  - You want feedback from buyers who have used the product for a week.
+  - You are planning a survey email and need the right list.
+  - You do not want to survey people who got a refund.
+  - You run this every week as a routine.
+you_give:
+  - Access to your store's order data
+  - A confirmed fulfilment status
+  - The date window if different (optional)
+you_get:
+  - A list of eligible orders
+  - Customers who qualify
+  - Counts of orders excluded
+  - A read-only session log
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

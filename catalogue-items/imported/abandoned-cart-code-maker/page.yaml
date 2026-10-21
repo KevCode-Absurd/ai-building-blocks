@@ -6,6 +6,26 @@ summary: Get a unique discount code for each shopper who left a cart, and tag th
 job: make-offer
 headline: Abandoned cart code maker
 subhead: Get a unique discount code for each shopper who left a cart, and tag them. Creates live codes you cannot bulk delete.
+explain: |
+  You get a unique discount code for each shopper who left a cart, and each of them is tagged in your Shopify store so you can message them next. The codes are live as soon as they are made, and they cannot be bulk deleted.
+
+  It pulls abandoned checkouts from the last few days, filters out carts below your minimum value, then creates one code per person at your chosen percentage with your chosen prefix. It then adds a tag to each customer. A preview mode shows how many people qualify before anything is written. It does not send email, so you need a separate tool for that. It needs the Shopify command line signed in, with the right permissions.
+when:
+  - You want to win back shoppers who left items in their cart.
+  - You need single-use codes so one code is not shared around.
+  - You want a tagged list of customers to feed into your email tool.
+  - You want to see how many carts qualify before you commit.
+you_give:
+  - Your Shopify store address
+  - How many days back to look
+  - A minimum cart value (optional)
+  - The discount percentage and code prefix
+  - Shopify access with the right permissions
+you_get:
+  - A preview count of eligible shoppers
+  - One unique code per shopper
+  - A tag on each customer
+  - A summary of what was created
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

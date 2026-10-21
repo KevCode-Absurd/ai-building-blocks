@@ -6,6 +6,25 @@ summary: Describe what your AI app must never do. Get rules that block jailbreak
 job: build-software
 headline: AI app guardrails builder
 subhead: Describe what your AI app must never do. Get rules that block jailbreaks, made-up facts and leaked personal details.
+explain: |
+  Safety rules for your AI app that block jailbreaks, made-up facts and leaked personal details before a reply goes out. You say what the app must never do, and the rules enforce it at run time.
+
+  The skill uses NeMo Guardrails, a Python package you install. Rules are written as short patterns: what users might say, what the bot should answer, and which flow connects them. Input rules catch attempts such as "ignore your instructions" and refuse before the model sees them. Output rules check replies for toxic text, unsupported facts and personal data. You can add your own check functions. A test script sends sample attacks to confirm each rule fires.
+when:
+  - Users try to talk your chatbot out of its rules.
+  - Your bot sometimes states facts it cannot back up.
+  - You must stop the bot from repeating emails, phone numbers or other private data.
+  - You want rules that sit outside the prompt so they are harder to bypass.
+you_give:
+  - What your app must never say or do
+  - Examples of attacks or bad requests
+  - Your app's code or setup (optional)
+  - A Python setup
+you_get:
+  - Guardrail rules for input and output
+  - Refusal messages
+  - Custom check functions
+  - Test cases for each rule
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

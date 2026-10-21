@@ -6,6 +6,25 @@ summary: Describe your invention or rival. Get patents found for novelty, freedo
 job: study-competitors
 headline: Patent prior-art searcher
 subhead: Describe your invention or rival. Get patents found for novelty, freedom to operate or a landscape view.
+explain: |
+  A patent search report matched to your purpose: whether your idea is new, whether you can sell safely, who is filing in a field, or what to check before buying a company.
+
+  It first asks which of five goals you have, because each needs a different search. Novelty searches focus on claim wording. Freedom to operate looks at active patents in your countries. Landscape reports map filers and trends. Diligence checks a seller's portfolio and ownership. Litigation work hunts for art that predates a target patent. It searches Google Patents, Espacenet and USPTO, cites only what it found, and builds a Word report. It is search signal, not legal advice.
+when:
+  - You want to file a patent and need to know if the idea is new.
+  - You need to see who files patents in a market.
+  - You are buying a company and want its patent portfolio checked.
+  - You must find older art to challenge a patent.
+you_give:
+  - Your invention, rival product or target patent
+  - Which of the five goals you have
+  - Countries or dates that matter
+  - Web access for patent sites
+you_get:
+  - Ranked closest prior art
+  - Report in Word format
+  - Filer or landscape tables where relevant
+  - Source links for each patent
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

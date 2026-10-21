@@ -6,6 +6,25 @@ summary: Give it a meeting agenda and notes. Get draft board or committee minute
 job: document-work
 headline: Board minutes drafter
 subhead: Give it a meeting agenda and notes. Get draft board or committee minutes in a proper format. Have a lawyer check them.
+explain: |
+  Draft board or committee minutes in your own house format, ready for you to check and correct instead of retyping from scratch. Minutes are a legal record, so the format and accuracy matter.
+
+  The skill reads your meeting dates from your calendar, asks for the agenda and any slides or pre-read papers, and then drafts the full minutes based on your earlier sample minutes. It can also handle written consents in place of a meeting. Your settings file holds your preferred minutes style. Treat the output as a draft: a lawyer should review it before it goes into the record.
+when:
+  - A board meeting just ended and you need the minutes.
+  - Committee minutes must follow the format of past ones.
+  - You have an agenda and slides but no written record.
+  - A decision was made by written consent, not in a meeting.
+you_give:
+  - The agenda
+  - Meeting notes or a transcript
+  - Slides or pre-read papers (optional)
+  - Sample past minutes for format
+you_get:
+  - Draft minutes in your house format
+  - Resolutions and votes recorded
+  - A list of open points to confirm
+  - A draft ready for a lawyer's review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

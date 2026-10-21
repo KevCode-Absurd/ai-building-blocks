@@ -6,6 +6,25 @@ summary: Give it a calculation. Get units checked, error margins carried through
 job: track-numbers
 headline: Units and error margin checker
 subhead: Give it a calculation. Get units checked, error margins carried through and an uncertainty budget you can show.
+explain: |
+  A calculation with its units checked and its error margin carried through, ending in an uncertainty budget you can show a reviewer. The plus or minus on your result then means something.
+
+  The skill uses the pint and uncertainties Python libraries. It converts units, including ones that need context such as wavelength to energy, and flags mismatches. It follows the standard method for expressing measurement uncertainty: list each source, add them correctly, handle linked inputs, and pick a coverage factor you can defend. It also reads curve fits without losing correlations, rounds results properly, and audits code for silent unit mistakes. It needs Python 3.12 or newer.
+when:
+  - Your result needs a plus or minus that you can defend.
+  - You mix units and suspect a hidden conversion error.
+  - You must build an uncertainty budget from calibration certificates.
+  - You want to review analysis code for unit mistakes.
+you_give:
+  - Your calculation or formula
+  - Measured values with units
+  - Calibration certificates or specifications (optional)
+  - Your analysis code (optional)
+you_get:
+  - Checked unit conversions
+  - Uncertainty carried through the calculation
+  - An uncertainty budget table
+  - A correctly rounded result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

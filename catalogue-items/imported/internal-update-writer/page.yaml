@@ -6,6 +6,25 @@ summary: Give it the facts. Get a status report, leadership update, newsletter o
 job: organise-work
 headline: Internal update writer
 subhead: Give it the facts. Get a status report, leadership update, newsletter or incident note in a clear format.
+explain: |
+  A status report, leadership update, newsletter, FAQ answer or incident note in the right format, written from the facts you give. Each type has its own guideline, so the result reads as it should for that audience.
+
+  The skill first names what kind of message you need. It then loads the matching guide: the progress, plans and problems layout for team updates, a newsletter template, FAQ answers, status reports, leadership updates, project updates or incident reports. It fits your facts into that structure, keeps the points short and puts the key message first. Use it when you spend too long on the same kinds of messages.
+when:
+  - You write a weekly team update and want it faster.
+  - You must report an incident to the company.
+  - Leadership wants a short update on project status.
+  - You are producing a company newsletter.
+  - You need clear answers to common staff questions.
+you_give:
+  - The facts, progress and problems
+  - The type of message and its audience
+  - Dates and owners (optional)
+you_get:
+  - A finished update in the right format
+  - Key points up front
+  - Plans and problems clearly separated
+  - A tone suited to the audience
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it a topic. Get a cross-checked report built from many sources, wi
 job: test-an-idea
 headline: Deep research reporter
 subhead: Give it a topic. Get a cross-checked report built from many sources, with findings and sources.
+explain: |
+  A report on any topic that has been checked against many sources, with the findings and the sources listed. It aims to replace a single search result with a cross-checked answer.
+
+  It breaks your question into three to six sub-questions covering different angles. For each one it searches across source types: academic, official documents, reputable news and industry reports. Key claims, numbers and quotes are pulled into notes. Then it compares sources, marks where they agree or conflict, and flags any claim that rests on one source. The final report has a summary, sections per theme and a citation list, and is re-read for gaps before you see it.
+when:
+  - You need a briefing on a market or technology by tomorrow.
+  - You want facts checked across more than one website.
+  - A manager asks for a summary with sources they can open.
+  - You want to know where experts disagree on a topic.
+you_give:
+  - Research topic or question
+  - Focus areas or sub-questions (optional)
+  - Depth and length (optional)
+  - Preferred source types (optional)
+you_get:
+  - Sub-question plan
+  - Executive summary
+  - Sections by theme
+  - Conflicts and gaps noted
+  - Source list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

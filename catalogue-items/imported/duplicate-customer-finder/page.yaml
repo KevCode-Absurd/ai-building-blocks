@@ -6,6 +6,25 @@ summary: Run it on your customers. Get likely duplicate records matched by email
 job: run-your-store
 headline: Duplicate customer finder
 subhead: Run it on your customers. Get likely duplicate records matched by email, phone or name, ready to review.
+explain: |
+  A review list of customer records that probably belong to one person. Run it on your Shopify store and see matches by email, phone or name, so order history stops splitting across profiles.
+
+  The skill is read-only and changes nothing. It signs in through the Shopify CLI with permission to read customers, then pulls all customers in pages of 250. It builds lookup tables for the match type you choose and reports any key shared by more than one record. You can set a minimum order count to skip trivial ones, and ask for plain or JSON output. Shopify does not allow merging by API, so you merge the flagged pairs yourself.
+when:
+  - Repeat buyers show up as two separate profiles.
+  - You want a clean customer list before an email send.
+  - You need to check phone numbers as well as emails.
+  - You want a safe check that cannot edit anything.
+you_give:
+  - Store domain
+  - "Match type: email, phone, name or all"
+  - Minimum orders (optional)
+  - A Shopify CLI sign-in with read access
+you_get:
+  - Groups of likely duplicate customers
+  - Order counts and spend for each record
+  - Plain or JSON output
+  - A list ready to merge by hand
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

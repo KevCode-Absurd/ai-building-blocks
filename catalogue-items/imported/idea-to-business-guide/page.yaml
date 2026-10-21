@@ -6,6 +6,25 @@ summary: Describe your idea. Get a tested customer, a position, a price and a fi
 job: test-an-idea
 headline: Idea to business guide
 subhead: Describe your idea. Get a tested customer, a position, a price and a first market to win, step by step.
+explain: |
+  A step-by-step path from a raw idea to a business you can defend. You get a tested customer, a clear position, a price and the first market to win, each saved as a short document.
+
+  It runs ten phases in order. First, the job the customer hires you for. Then a check that the problem is real, by talking to buyers. Then tests with five customers and a small first product. Then strategy, positioning, an offer, pricing and the first segment to win. A tracker file records progress so you can pause and resume. At each phase it asks you to decide, then you approve the draft before it is saved.
+when:
+  - You have a business idea and no clear path from here.
+  - You want proof of demand before you spend money building.
+  - You need a price and offer, and do not know what people will pay.
+  - You come back to the idea each week and want your progress saved.
+you_give:
+  - Your business idea
+  - Who you think the customer is
+  - Your skills, budget and time (optional)
+  - Notes from customer conversations (optional)
+you_get:
+  - A customer document
+  - An experiments log
+  - A strategy and positioning document
+  - An offer and pricing plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

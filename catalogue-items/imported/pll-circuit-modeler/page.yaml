@@ -6,6 +6,25 @@ summary: Give it a PLL datasheet. Get a working phase-locked loop model with the
 job: build-software
 headline: PLL circuit modeler
 subhead: Give it a PLL datasheet. Get a working phase-locked loop model with the right solver set.
+explain: |
+  A working model of a phase-locked loop chip built from its datasheet or your system targets, with the solver set up correctly. You can then check whether the loop locks fast enough and has low enough phase noise.
+
+  The skill works in Simulink with the Mixed-Signal Blockset. It asks one question at a time, picks between integer-N, fractional-N and dual-modulus designs, extracts parameters from the datasheet and builds the loop from library blocks. A companion guide covers loop filter design, checks against datasheet phase noise, measurement and common mistakes. It needs MATLAB, Simulink and the blockset.
+when:
+  - You have a PLL datasheet and want a simulation of it.
+  - You are designing a synthesizer for a set output and reference frequency.
+  - You need to check phase noise against the datasheet.
+  - You are choosing between integer-N and fractional-N.
+you_give:
+  - The PLL datasheet or system specs
+  - Output and reference frequencies
+  - Lock time and phase noise targets
+  - Answers to its questions, one at a time
+you_get:
+  - A built Simulink PLL model
+  - Architecture choice with reasons
+  - Loop filter design
+  - Phase noise check against targets
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

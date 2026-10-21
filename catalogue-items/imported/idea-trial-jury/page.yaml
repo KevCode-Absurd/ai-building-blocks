@@ -6,6 +6,25 @@ summary: Give it a plan or claim. Get a verdict from a prosecutor, a defender an
 job: think-and-decide
 headline: Idea trial jury
 subhead: Give it a plan or claim. Get a verdict from a prosecutor, a defender and 12 jurors, plus what would flip it.
+explain: |
+  A verdict on your plan, argued like a court case, for the times when Claude agrees with everything you say. A prosecutor builds the case against it, a defender builds the case for it and a jury of twelve independent Claudes votes without seeing each other.
+
+  You play no part in the argument. The skill acts as clerk, keeps the record and never softens the result. A Python script handles the bookkeeping, with a quick mode and a juror count. You get the vote count, the reasons and what facts or changes would flip the verdict. It suits a plan, a purchase, a post, a code approach or a claim. It needs Python and the ability to run subagents.
+when:
+  - You keep getting yes from AI and want a real challenge.
+  - You are deciding whether to make a big purchase or change.
+  - You want to know how a claim holds up before posting it.
+  - You need an outcome from many views, not one.
+you_give:
+  - The idea, plan or claim
+  - Facts the court should know (optional)
+  - Number of jurors or quick mode (optional)
+  - Python on your computer
+you_get:
+  - The case for and the case against
+  - A jury vote count with reasons
+  - A clear verdict
+  - What would flip the decision
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

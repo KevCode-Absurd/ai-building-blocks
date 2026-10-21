@@ -6,6 +6,26 @@ summary: Answer ten questions once. Get your colours, fonts and style saved for 
 job: brand-file
 headline: Brand style setup wizard
 subhead: Answer ten questions once. Get your colours, fonts and style saved for every page that follows.
+explain: |
+  Set your colours, fonts and look once, and have every page you convert afterwards come out in your brand instead of plain defaults.
+
+  The wizard asks ten questions: where files are saved, your main colours, fonts and similar choices. It saves the answers to a config file. Later conversions of notes into documents, reviews or slides read that file and apply the same twelve style values. A built-in checker tests that your text and background colours are readable under the WCAG AA standard, and it can build a matching palette from one colour. It needs Python on your computer and makes no AI calls. You can set a project-level override or reset it.
+when:
+  - You convert Markdown into HTML documents and want them to match your brand.
+  - You want one saved style that every converted page and slide deck reuses.
+  - You chose a brand colour and need to know if the text on it is readable.
+  - One project needs a different look from your usual default.
+you_give:
+  - Answers to ten setup questions
+  - A main brand colour (optional)
+  - Font choices (optional)
+  - A folder for saved output (optional)
+you_get:
+  - A saved brand style config
+  - A matching colour palette
+  - A contrast check against WCAG AA
+  - Style applied to later conversions
+  - Project-level overrides
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

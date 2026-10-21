@@ -6,6 +6,25 @@ summary: Pitch a business idea. Get a panel of tough investors who grill it and 
 job: test-an-idea
 headline: Investor panel pitch tester
 subhead: Pitch a business idea. Get a panel of tough investors who grill it and vote in or out.
+explain: |
+  Hear the no before a real investor says it. Paste your business idea and a panel of up to ten simulated investors, five by default, grill it one at a time. Each is built to doubt, and a founder agent answers only from your pitch file, so gaps in your story show up.
+
+  The skill sizes the session first and tells you how many calls it will make. Panelists question the idea, you see the exchanges, and each investor votes in or out with reasons. The host never invests and never answers for you. It needs Python and a folder where it can save session files. Use it to practice, not as real funding advice.
+when:
+  - Claude keeps telling you every idea is great and you want honest pushback.
+  - You have an investor meeting soon and want to practise answering hard questions.
+  - You are choosing between side projects and want a sceptical read on each.
+  - You want to know which part of your pitch is weakest.
+you_give:
+  - Your business idea or pitch
+  - Numbers such as price, cost, traction and ask (optional)
+  - Panel size from 2 to 10 (optional)
+  - Permission to save files in the working folder
+you_get:
+  - Tough questions from each investor
+  - Your pitch tested against the answers
+  - A vote in or out from every investor with reasons
+  - A summary of the weak spots to fix
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

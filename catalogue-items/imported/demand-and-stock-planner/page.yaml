@@ -6,6 +6,27 @@ summary: Give it sales history and lead times. Get a demand forecast, safety sto
 job: plan-strategy
 headline: Demand and stock planner
 subhead: Give it sales history and lead times. Get a demand forecast, safety stock levels and a restock plan.
+explain: |
+  A forecast, the right safety stock and a restock plan for each product. Give it sales history and supplier lead times and you get what to order, how much buffer to hold, and when.
+
+  It picks the forecast method by how each item behaves: moving averages for steady items, smoothing for noisy ones, seasonal splits for items with seasons, and regression when price or promotion drives sales. Accuracy is checked with weighted error, bias and a tracking signal that warns when a model drifts. Safety stock uses your service level, demand swings and lead time. It also estimates the effect of promotions and flags seasonal ramps and slow-moving items.
+when:
+  - You keep running out of your top sellers and overstocking the rest.
+  - A promotion is coming and you need to know how much extra to buy.
+  - Supplier lead times changed and your reorder points are now wrong.
+  - You want a simple rule for how much buffer stock to carry.
+you_give:
+  - Sales history by product
+  - Supplier lead times
+  - Target service level
+  - Promotions and seasons (optional)
+  - Current stock levels
+you_get:
+  - Forecast by product
+  - Safety stock levels
+  - Reorder points and quantities
+  - Accuracy and bias check
+  - Promotion impact estimate
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

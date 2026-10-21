@@ -6,6 +6,27 @@ summary: Give it your prices and costs. Get the breakeven volume, margin of safe
 job: run-your-store
 headline: Breakeven point calculator
 subhead: Give it your prices and costs. Get the breakeven volume, margin of safety and the effect of price changes.
+explain: |
+  Find the sales volume where you stop losing money, and see how much room you have before you do. Then test what a price change or cost change does to profit.
+
+  You give prices, variable costs and fixed costs. The skill works out the profit per unit, the breakeven in units and in revenue, the volume needed for a target profit, and your margin of safety. It checks whether costs are split fairly, since items like overtime hide variable costs inside fixed ones. It also handles step costs, product mixes and one-off orders, where the answer depends on spare capacity. Use real history if you have it.
+when:
+  - You are setting a price and need to know how many sales cover your costs.
+  - A customer wants a discount order and you need the lowest price that still pays.
+  - You are about to rent a bigger space and want to see the new breakeven.
+  - You hit your breakeven volume but still lost money and want to know why.
+you_give:
+  - Selling price per unit
+  - Variable cost per unit
+  - Fixed costs for the period
+  - Target profit (optional)
+  - Past sales and cost history (optional)
+you_get:
+  - Breakeven in units and revenue
+  - Margin of safety
+  - Volume for your target profit
+  - Effect of price and cost changes
+  - Notes on the assumptions used
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your goals for the quarter. Get clear objectives and measurable
 job: plan-strategy
 headline: OKR writer
 subhead: Give it your goals for the quarter. Get clear objectives and measurable key results, plus a scoring and mid-quarter check routine.
+explain: |
+  Clear objectives and key results for the quarter that you will actually use in your weekly decisions. The skill pushes you toward goals that stretch you without being impossible.
+
+  It turns each goal into an outcome statement, not a to-do list, then writes key results that measure whether the outcome happened. It checks for the two common failures. Sandbagged goals always score full marks and teach nothing. Fantasy goals nobody can reach. The target is a stretch that averages around 60 to 70 percent. You also get a scoring routine, a mid-quarter check to adjust what is off track, and a quick test of last quarter's scores.
+when:
+  - You have to write next quarter's goals and they all read like task lists.
+  - Your team hit every goal last quarter and you suspect they were too easy.
+  - Goals were set in week one and nobody looked at them again.
+  - You are introducing OKRs to a team that has never used them.
+you_give:
+  - The goals or priorities for the quarter
+  - Last quarter's goals and scores (optional)
+  - Your team or role
+  - What you can measure today
+you_get:
+  - Objectives written as outcomes
+  - Measurable key results
+  - A scoring guide
+  - A mid-quarter check routine
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

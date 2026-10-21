@@ -6,6 +6,25 @@ summary: Give it a file or pull request. Get a review of bugs, security gaps, sp
 job: test-and-fix-code
 headline: Bug and security code reviewer
 subhead: Give it a file or pull request. Get a review of bugs, security gaps, speed issues and style.
+explain: |
+  A written code review that catches bugs and security holes, each tied to a specific line, before the code ships.
+
+  The skill takes a file, folder or pull request and reads only the changed lines for a pull request. It reads linter settings and style rules so it reviews against your standards. It first states in one sentence what the change is meant to do. Then it traces data through each function, hunting for null errors, off-by-one mistakes, race conditions and leaks. It also checks for injection, exposed secrets, weak encryption and missing access checks, then looks at speed and readability. Findings come with actionable fixes.
+when:
+  - You are about to merge a pull request and want a second pair of eyes.
+  - You wrote code alone and have nobody to review it.
+  - You want a security check on a login or payment change.
+  - A file has grown messy and you want a list of issues to fix.
+you_give:
+  - A file, folder or pull request diff
+  - Your linter or style rules (optional)
+  - A short note on what the change should do (optional)
+you_get:
+  - A review report with line-linked findings
+  - Bugs and error paths
+  - Security issues
+  - Speed and readability notes
+  - Suggested fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,27 @@ summary: Get help in small steps, from a nudge to a full step. You reflect befor
 job: teach-and-train
 headline: Step-by-step hint tutor
 subhead: Get help in small steps, from a nudge to a full step. You reflect before each bigger hint.
+explain: |
+  Help that gives a student just enough to take the next step, and no more. You share the problem and what the student has tried. The tutor starts with a nudge, then moves up through hints, only offering a bigger one after the student reflects on the last.
+
+  The ladder has levels from a guiding question up to a worked step, based on research into step-level tutoring. The student must make a first attempt before any help appears. The tutor notes whether the mistake is about concepts, procedure or strategy, and tailors the hint to it. Language is adjusted to the learner's age. The aim is that the student does the thinking, so the learning sticks.
+when:
+  - Your child or student is stuck on homework and you do not want to hand over the answer.
+  - You study alone and want a guide who pushes you to try first.
+  - You tutor and want a consistent way to scale help up.
+  - A student keeps asking for the answer instead of attempting the problem.
+you_give:
+  - The problem or task they are stuck on
+  - The student's attempt so far
+  - Course, topic and level
+  - The hint level reached before (optional)
+  - Learner age or stage (optional)
+you_get:
+  - A first nudge as a question
+  - Hints that grow step by step
+  - A reflection prompt before each bigger hint
+  - A label for the type of mistake
+  - A last worked step if still needed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

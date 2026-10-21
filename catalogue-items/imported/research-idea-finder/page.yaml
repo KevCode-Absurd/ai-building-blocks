@@ -6,6 +6,24 @@ summary: Describe your field or stuck project. Get ten ways to find research ide
 job: research-topics
 headline: Research idea finder
 subhead: Describe your field or stuck project. Get ten ways to find research ideas worth chasing, with the best ones ranked.
+explain: |
+  Ten different ways to find a research idea worth chasing, applied to your field, with the strongest ideas ranked at the end. When you are stuck, a fresh angle matters more than a longer list.
+
+  The ten lenses include starting from a real problem versus starting from a method, finding gaps others skip, combining two fields, flipping a common assumption, and looking at what recently became possible. You describe your area or your stuck project, and the skill runs the lenses and collects candidates. Then it checks each for payoff, risk and fit with your skills. It does not do literature reviews or experiment design.
+when:
+  - You are starting a new direction and have no idea where to aim.
+  - Your current project is stuck and you need a new angle.
+  - You have a half-formed idea and want to test its promise.
+  - You are moving between fields and need an entry point.
+you_give:
+  - Your field or stuck project
+  - Your skills and resources (optional)
+  - Ideas you already have (optional)
+you_get:
+  - Candidate ideas from ten lenses
+  - Strengths and risks for each
+  - Ranked shortlist
+  - Next step for the top ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

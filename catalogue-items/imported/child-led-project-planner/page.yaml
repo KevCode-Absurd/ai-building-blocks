@@ -6,6 +6,26 @@ summary: Describe what young children keep asking about. Get a project plan that
 job: teach-and-train
 headline: Child-led project planner
 subhead: Describe what young children keep asking about. Get a project plan that follows their interests into deeper inquiry.
+explain: |
+  When young children keep asking about the same thing, like worms, shadows or bridges, you get a project plan that grows from their questions. Instead of a fixed unit, it starts from what you saw and heard and moves toward deeper inquiry.
+
+  You describe the interest and what you have noticed: their questions, theories, drawings and experiments. The skill turns those into possible directions, then suggests ways children can explore through building, drawing, talking and trying things out. It plans how you will record their work, how you will ask questions that push thinking, and how families or the wider community can join.
+when:
+  - Your class is fascinated by something and you want to build on it.
+  - You have notes of children's questions and need a next step.
+  - You want to work in the project style but do not know where to start.
+  - You need ways to show families what the children are learning.
+you_give:
+  - The interest the children have shown
+  - Your observations of their questions and theories
+  - Age or year group (optional)
+  - Time and space you have (optional)
+you_get:
+  - Possible directions for the project
+  - Hands-on exploration ideas
+  - Questions to ask the children
+  - A plan for recording their work
+  - Ways to involve families
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

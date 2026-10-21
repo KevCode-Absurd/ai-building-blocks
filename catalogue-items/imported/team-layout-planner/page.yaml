@@ -6,6 +6,26 @@ summary: Describe your teams. Get a team structure for fast work, with clear own
 job: lead-people
 headline: Team layout planner
 subhead: Describe your teams. Get a team structure for fast work, with clear owners and how teams hand off. Uses Team Topologies.
+explain: |
+  A team structure designed for fast delivery, with clear owners and a set way for teams to work together. You find out where teams are overloaded, where work bounces between groups and what to change, scored out of ten.
+
+  The skill uses Team Topologies. It sorts teams into four types: stream-aligned, platform, enabling and complicated subsystem. It applies Conway's law, which says systems copy the way teams talk, so a bad structure produces a tangled product. It checks each team's cognitive load and assigns an interaction mode: collaboration, service or coaching. It then rates your design, lists the changes needed to reach ten, and suggests an order for the reorganisation.
+when:
+  - Every change needs sign off from three different teams.
+  - One team owns too much and is always behind.
+  - You are planning a reorganisation and want a sound basis.
+  - Your architecture mirrors an org chart you dislike.
+  - A platform team exists but other teams avoid using it.
+you_give:
+  - Your current teams and what each owns
+  - The product or system they work on
+  - Pain points such as delays or handoffs
+  - Team sizes (optional)
+you_get:
+  - Each team labelled by type
+  - Interaction modes between teams
+  - Overload and boundary problems
+  - A score and steps to improve it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

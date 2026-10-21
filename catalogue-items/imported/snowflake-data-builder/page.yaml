@@ -6,6 +6,25 @@ summary: Describe your data job. Get Snowflake SQL, pipelines and tuning that fo
 job: build-software
 headline: Snowflake data builder
 subhead: Describe your data job. Get Snowflake SQL, pipelines and tuning that follow good practice.
+explain: |
+  Snowflake SQL and data pipelines that follow the platform's own rules, so they run the first time. You describe the data job, and the skill writes the code and explains the choices.
+
+  It covers style rules such as snake_case names, CTEs and explicit column lists. It knows Snowflake quirks, like needing a colon before variables inside stored procedures, and handles JSON in VARIANT columns. For pipelines it chooses between Dynamic Tables, Streams and Tasks, and Snowpipe. It also writes Cortex AI function calls, Snowpark Python, dbt setup, tuning advice and access settings. You need a Snowflake account to run the output, and costs depend on your warehouse size.
+when:
+  - You need a pipeline that refreshes data every few minutes.
+  - A stored procedure fails with an invalid identifier error.
+  - You want to call Snowflake's AI functions on a column of text.
+  - Your query is slow and you want tuning ideas.
+you_give:
+  - A description of the data job
+  - Table and column names
+  - Your refresh timing needs (optional)
+  - A Snowflake account to run the code
+you_get:
+  - Snowflake SQL that follows its rules
+  - A pipeline design using the right feature
+  - Cortex AI or Snowpark code when needed
+  - Performance and security tips
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

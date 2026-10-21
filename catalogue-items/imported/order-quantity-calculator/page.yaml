@@ -6,6 +6,26 @@ summary: Give it demand, order cost and holding cost. Get the order size with th
 job: plan-supply-chain
 headline: Order quantity calculator
 subhead: Give it demand, order cost and holding cost. Get the order size with the lowest total cost, with discounts compared.
+explain: |
+  The order size that gives you the lowest total cost, worked out from your demand, ordering cost and holding cost. You see how far off your current habit is and what it costs.
+
+  The skill checks the basics first: the kind of stock, demand pattern, unit cost, cost per order, yearly holding rate, supplier minimums, storage limits and lead time. It applies the classic economic order quantity formula, then adapts it when your case differs, such as price breaks for bigger orders or production at a set rate. It compares total cost at each option, so you can see if a discount is worth taking. It also gives reorder timing from lead time. Best when demand is steady and known.
+when:
+  - You reorder by habit and suspect you buy too much or too little.
+  - A supplier offers a discount for larger orders and you must decide.
+  - Storage is limited and you need a sensible lot size.
+  - You are setting reorder rules for a new product.
+you_give:
+  - Yearly demand
+  - Cost per order or setup
+  - Unit cost and holding cost rate
+  - Supplier minimums and price breaks (optional)
+  - Lead time
+you_get:
+  - Best order quantity
+  - Total cost comparison
+  - Discount analysis
+  - Reorder point and frequency
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

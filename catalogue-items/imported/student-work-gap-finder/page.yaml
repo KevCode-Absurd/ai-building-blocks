@@ -6,6 +6,27 @@ summary: Paste a piece of student work and the criteria. Get exactly what is mis
 job: teach-and-train
 headline: Student work gap finder
 subhead: Paste a piece of student work and the criteria. Get exactly what is missing, why, and what feedback to give.
+explain: |
+  A piece of student work, checked against your criteria, with the exact gaps named. You see what is strong, what is missing, and which gap to tackle first.
+
+  Paste the work or describe it, then add the criteria and the learning goal. The skill compares what the student did with what the criteria ask for. It lists strengths, then each gap with a plain reason it matters, and ranks the gaps so you fix the biggest one first. For each priority gap it suggests a next teaching step. It also drafts a short feedback script you can read to the student, pitched to their level.
+when:
+  - You have a stack of essays and need quick, specific feedback.
+  - A student's work is nearly there but you cannot say what is missing.
+  - You are planning small-group teaching based on what the work shows.
+  - You want your feedback to name one thing to fix, not ten.
+you_give:
+  - The student work, pasted or described
+  - The assessment criteria
+  - The learning goal
+  - Year level and subject
+  - Notes on the student (optional)
+you_get:
+  - A list of strengths
+  - Named gaps against the criteria
+  - A priority order for the gaps
+  - Next teaching steps
+  - A feedback script to say aloud
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

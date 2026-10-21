@@ -6,6 +6,25 @@ summary: Feed it sources. Get an Obsidian wiki that updates pages, links ideas a
 job: organise-work
 headline: Personal wiki keeper
 subhead: Feed it sources. Get an Obsidian wiki that updates pages, links ideas and flags where sources disagree.
+explain: |
+  A personal knowledge base that grows each time you feed it a source, instead of starting over with every question. You end up with linked notes in an Obsidian vault where connections and conflicts are already marked.
+
+  The method follows Karpathy's wiki idea. You add an article, paper, meeting note or chapter. The AI reads it once, writes or updates the right pages, links related ideas, and flags where two sources disagree. Later you ask questions of the wiki and get answers built on what has already been joined up. It suits research, book notes, team notes and personal tracking. For one-off questions on one document, a plain search is a better fit.
+when:
+  - You read papers for weeks and want one thesis that keeps up to date.
+  - You take meeting notes and never find them again.
+  - You want a companion wiki for a long book or series.
+  - You want a second brain that does the filing for you.
+you_give:
+  - Sources such as articles, notes or transcripts
+  - An Obsidian vault folder
+  - The topic or purpose of the wiki
+  - Questions to ask later (optional)
+you_get:
+  - New and updated linked wiki pages
+  - Cross-references between ideas
+  - Flags where sources disagree
+  - Answers drawn from the wiki
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

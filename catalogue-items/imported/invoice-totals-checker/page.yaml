@@ -6,6 +6,25 @@ summary: Give it an invoice. Get every line and total recalculated, and any miss
 job: track-numbers
 headline: Invoice totals checker
 subhead: Give it an invoice. Get every line and total recalculated, and any missing fields or date problems listed.
+explain: |
+  Every number on an invoice rechecked, so you pay or send the right amount. Paste the invoice text, a table or a CSV. The skill pulls out each line, the discounts, the tax and the stated totals. Then it recomputes them, using a small Python script if it can run one, and compares the results with what the invoice says.
+
+  Every difference is shown as a table with both figures. It then checks which standard fields are present, such as supplier, customer, number, dates and payment terms, and flags oddities like a due date before the invoice date or mixed currencies. It never gives tax advice or changes the invoice quietly.
+when:
+  - A supplier invoice total looks higher than expected.
+  - You are about to send an invoice and want to catch mistakes first.
+  - You suspect a discount or tax line was applied wrongly.
+  - You need a list of what to ask the sender to fix.
+you_give:
+  - The invoice as text, a table or a CSV
+  - Whether you are sending or receiving it (optional)
+  - The currency (optional)
+you_get:
+  - An arithmetic result line
+  - A table of stated versus recomputed figures
+  - A list of missing or unclear fields
+  - Date and consistency flags
+  - Questions to send to the other party
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Point it at your Expo app. Get iOS and Android builds made and sent to 
 job: ship-and-host
 headline: Mobile app release shipper
 subhead: Point it at your Expo app. Get iOS and Android builds made and sent to the app stores.
+explain: |
+  Your Expo app built for iOS and Android and sent to the app stores, with the settings written down so the next release is one command.
+
+  The skill sets up Expo's build service, creates the build profiles in a config file, and runs the production build for each platform. It can send the iOS build to TestFlight for testers, then to App Store review, and send the Android build to Google Play. It also covers version and build numbers, store listing text, and automated releases that run when you merge code. You need an Expo project, an Apple developer account and a Google Play account.
+when:
+  - Your Expo app works and you are ready to put it on the App Store.
+  - You want testers on TestFlight before the public release.
+  - Version numbers keep clashing between releases.
+  - You want a release to start automatically when code is merged.
+you_give:
+  - Your Expo app folder
+  - Apple and Google developer accounts
+  - Bundle identifier and app name
+  - Store listing text and screenshots (optional)
+you_get:
+  - Build profiles for test and production
+  - iOS and Android builds
+  - Store submission steps
+  - A rule for version and build numbers
+  - An automated release setup
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Point it at a TypeScript repo. Get dependency-cruiser set up so each pa
 job: build-software
 headline: TypeScript module guard setter
 subhead: Point it at a TypeScript repo. Get dependency-cruiser set up so each package is reached only through its front door.
+explain: |
+  A TypeScript repo where each package can only be used through its front door, enforced by lint rules. Nobody can reach into another package's inner files by mistake.
+
+  The skill sets up dependency-cruiser with four error rules. Code outside a package may import only its root entry files. Files inside a package can import each other freely. Tests go through entry points. Cycles are banned. Packages keep their code in a lib folder and tests in a tests folder. It detects your package manager, finds the packages folder, and merges the rules into any existing config instead of overwriting it. Layering between packages is left as a stub for you to fill.
+when:
+  - Your packages import each other's inner files and changes keep breaking things.
+  - "You want a simple rule: use the entry file or do not import."
+  - You are adding dependency-cruiser to an existing TypeScript project.
+  - You want the check to run in your build.
+you_give:
+  - A TypeScript repo
+  - Your package manager
+  - Where your packages live (optional)
+  - Any existing dependency-cruiser config (optional)
+you_get:
+  - Installed dependency-cruiser
+  - Four boundary rules in the config
+  - A merged config if one existed
+  - A script to run the check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

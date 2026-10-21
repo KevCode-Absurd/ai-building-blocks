@@ -6,6 +6,26 @@ summary: Tell it about your analysis. Get every assumption logged with its risk,
 job: document-work
 headline: Analysis assumptions logger
 subhead: Tell it about your analysis. Get every assumption logged with its risk, so reviewers see what could change the answer.
+explain: |
+  Every analysis rests on choices that could change the answer. A log of them lets a reviewer see what you assumed, how sure you are, and what breaks if you are wrong.
+
+  You give the analysis name, the decision it informs, your data and the method choices you made. The skill sorts assumptions into three groups: data (is it complete and representative), business logic (metric definitions, time windows, who is included) and statistics (independence, distribution). Each gets a confidence and an impact. Low confidence and high impact items get a plan to check them. A small script keeps the log, and a template gives you a sign-off sheet.
+when:
+  - You start an analysis with many choices about scope and data.
+  - A peer or manager will review your work before sign-off.
+  - You are picking up an old analysis and cannot tell why it was done that way.
+  - You work somewhere that needs an audit trail.
+you_give:
+  - Analysis name and the decision it supports
+  - Data sources, time period and population
+  - The method choices you made and alternatives you dropped
+  - Business rules from stakeholders (optional)
+  - Known data quality problems (optional)
+you_get:
+  - A logged list of data, business and statistical assumptions
+  - Confidence and impact for each
+  - Validation plans for the risky ones
+  - A sign-off sheet for reviewers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

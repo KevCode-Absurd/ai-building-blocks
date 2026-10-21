@@ -6,6 +6,25 @@ summary: Give it Neuropixels recordings. Get cleaned data, sorted neuron spikes 
 job: research-topics
 headline: Brain recording analyst
 subhead: Give it Neuropixels recordings. Get cleaned data, sorted neuron spikes and quality checks.
+explain: |
+  Go from raw Neuropixels recordings to cleaned data, sorted neuron spikes and quality checks you can act on. The workflow follows common practice from SpikeInterface, the Allen Institute and the International Brain Laboratory.
+
+  It loads data from SpikeGLX, Open Ephys or NWB, then filters and re-references the signal and finds bad channels. It corrects drift, runs a spike sorter such as Kilosort4, and computes quality measures such as signal-to-noise and ISI violations. Last comes curation and export. Ready-made scripts and a template come with it. It needs Python and the SpikeInterface packages.
+when:
+  - You have raw Neuropixels files and need them preprocessed.
+  - Your recording drifts and you must correct the motion.
+  - You want to sort spikes into single neurons.
+  - You need to drop low-quality units before analysis.
+you_give:
+  - Neuropixels recording files
+  - The probe and acquisition format
+  - Your choice of spike sorter (optional)
+  - A computer with Python and enough memory
+you_get:
+  - Cleaned, filtered recordings
+  - Sorted units
+  - Quality metrics for each unit
+  - Curated data ready to export
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

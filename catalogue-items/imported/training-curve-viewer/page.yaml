@@ -6,6 +6,25 @@ summary: Give it your training code. Get live charts of loss and accuracy, plus 
 job: track-numbers
 headline: Training curve viewer
 subhead: Give it your training code. Get live charts of loss and accuracy, plus a way to compare runs.
+explain: |
+  Live charts of loss and accuracy while your model trains, with runs lined up so you can see which settings worked. You stop guessing from printed numbers and watch the curves.
+
+  The skill adds TensorBoard logging to your PyTorch or TensorFlow code. It writes scalars for loss and accuracy, adds histograms to spot dead or exploding weights, and logs images, model graphs and embeddings when you want them. Each run goes in its own folder so you can compare them on one page. It also covers hyperparameter tracking and the profiler for slow steps. You start the viewer with one command and open it in your browser. It needs Python and TensorBoard installed.
+when:
+  - You train a model and want to see loss curves instead of console text.
+  - You are comparing runs with different learning rates or layer sizes.
+  - Your model stops improving and you want to inspect weights and gradients.
+  - Training is slow and you need to find the bottleneck.
+you_give:
+  - Your training script
+  - The framework you use, PyTorch or TensorFlow
+  - What you want to watch, such as loss or images (optional)
+  - Names for the runs you want to compare (optional)
+you_get:
+  - Logging code added to your script
+  - Live charts of training metrics
+  - A run comparison setup
+  - The command to launch the viewer
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

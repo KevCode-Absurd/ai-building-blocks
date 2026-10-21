@@ -6,6 +6,24 @@ summary: Point it at your project. Get a DESIGN.md that lists the colours, type,
 job: design-work
 headline: Design rules file writer
 subhead: Point it at your project. Get a DESIGN.md that lists the colours, type, spacing and parts your product really uses.
+explain: |
+  A DESIGN.md that tells people and AI agents which colours, type sizes, spacing and parts your product really uses. With one in place, each new screen matches the last instead of inventing styles.
+
+  Point it at your project and it reads the actual code and styles, then writes the file from what it finds rather than from guesses. It lists the colour set, type scale, spacing steps and common components, and notes what to avoid. It works on its own with no account, token or server. Use it when agents keep adding new colours and sizes, or when you need a single source of truth for how your product looks.
+when:
+  - Your AI keeps picking new colours and font sizes for each screen.
+  - A new designer joins and asks for the style guide that does not exist.
+  - You want to document a design system that only lives in code.
+  - Screens built by different people look slightly different.
+you_give:
+  - Project folder with styles and components
+  - Brand notes (optional)
+  - Pages that show the look you prefer (optional)
+you_get:
+  - DESIGN.md file at the project root
+  - Colour, type and spacing lists
+  - Component rules
+  - Things to avoid
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

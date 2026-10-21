@@ -6,6 +6,25 @@ summary: Say which AI crawlers to allow. Get your robots.txt updated so AI assis
 job: build-websites
 headline: AI crawler access editor
 subhead: Say which AI crawlers to allow. Get your robots.txt updated so AI assistants can read your catalog. Changes your live theme.
+explain: |
+  Your Shopify store's robots.txt updated so AI assistants such as ChatGPT, Claude and Perplexity can read your catalog. If the file blocks them or says nothing, people shopping through AI may never see you.
+
+  The skill reads your theme's robots template and adds a clearly marked block of allow rules for the main AI crawlers. Running it twice adds no duplicates. You can change the crawler list, or use audit mode, which only reports. It needs the Shopify CLI signed in, with permission to read and write themes. It edits your live theme, so it defaults to a preview. Copy the theme first.
+when:
+  - You sell on Shopify and want AI shopping tools to see your products.
+  - You do not know whether your robots.txt blocks AI crawlers.
+  - A site report flagged a missing AI crawler rule.
+  - You want a preview of the change before it goes live.
+you_give:
+  - Your store address
+  - A signed-in Shopify CLI
+  - Theme write permission
+  - Which AI crawlers to allow (optional)
+you_get:
+  - A preview of the new robots file
+  - An audit of current crawler rules
+  - A marked, safe-to-rerun block of rules
+  - The live theme updated once you approve
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

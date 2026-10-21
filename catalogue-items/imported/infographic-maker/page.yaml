@@ -6,6 +6,26 @@ summary: Give it your content. Get an infographic with a layout and style picked
 job: make-images
 headline: Infographic maker
 subhead: Give it your content. Get an infographic with a layout and style picked to fit the message.
+explain: |
+  An infographic where the layout and look match the message, built from your own content. You pick how the information is arranged and the visual style separately, and any layout can pair with any style.
+
+  The skill reads your content, then suggests a layout, such as a timeline, comparison or steps, and a style. It asks short questions if choices are unclear. When it is time to draw, it picks an image tool in this order: one you name, one saved in your settings, then whatever the host offers. It saves the finished image. It works in several AI hosts, and falls back to numbered plain-text questions when no question tool exists.
+when:
+  - You have a report and need a one-page visual from it.
+  - You want to try one set of facts in several styles.
+  - You need a timeline or steps diagram for a post.
+  - You are unsure which layout suits your content.
+  - You want infographics that match across a series.
+you_give:
+  - Your content or key points
+  - A layout or style preference (optional)
+  - Image size or platform (optional)
+  - A preferred image tool (optional)
+you_get:
+  - A suggested layout and style
+  - The infographic image
+  - Options to change either one
+  - A saved file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

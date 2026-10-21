@@ -6,6 +6,26 @@ summary: Give it your brand and campaign goal. Get a brief for a photographer, i
 job: design-work
 headline: Creative shoot briefer
 subhead: Give it your brand and campaign goal. Get a brief for a photographer, illustrator or video team.
+explain: |
+  A brief that a photographer, illustrator or video team can act on, covering the story, the look, how to shoot it, the variants needed and the quality bar. It cuts back and forth and gets you the right images the first time.
+
+  You give the brand and campaign goal. The skill builds the brief in five layers: story, look, execution, variants and standards. It adapts the workflow for three jobs: briefing an outside creative, directing in-house work, or judging work that already exists. It lists failure patterns, such as mood words with no reference, and includes a clear output format. You can use it for concepts, mood boards and shot lists.
+when:
+  - You are hiring a photographer and need a clear shot list.
+  - An illustrator keeps delivering work that misses the mark.
+  - You need a campaign concept before shooting starts.
+  - You want to judge whether finished images fit the brand.
+you_give:
+  - Brand and campaign goal
+  - Audience and channels
+  - Reference images (optional)
+  - Budget and deadline
+you_get:
+  - Creative brief
+  - Shot list or visual direction
+  - Variant needs
+  - Quality standards
+  - Feedback checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

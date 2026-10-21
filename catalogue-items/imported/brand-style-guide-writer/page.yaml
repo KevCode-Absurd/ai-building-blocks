@@ -6,6 +6,27 @@ summary: Give it your logo, colours and fonts. Get a full style guide others can
 job: brand-file
 headline: Brand style guide writer
 subhead: Give it your logo, colours and fonts. Get a full style guide others can follow without guessing.
+explain: |
+  Hand your brand over to a designer, agency or new hire and have them get it right the first time. This builds the reference document that settles every "is this allowed?" question.
+
+  You bring your logo, colours, fonts and voice notes. The skill organises them into eight sections: story, logo rules, colour, type, imagery, voice, layout and examples. Each part states what is required, what is flexible and what is banned, with spacing and sizing rules written out. It is made for brands that already have a finished look. If you have no look yet, build that first. It can also audit an old guide for holes and clashes.
+when:
+  - You finished a rebrand and need a guide to hand to vendors and partners.
+  - Your brand exists but nothing is written down, so every freelancer guesses.
+  - A new team member keeps asking which blue and which font to use.
+  - Your current style guide has gaps and you want to find them.
+you_give:
+  - Your logo files and variants
+  - Colours and fonts in use
+  - Notes on voice and tone
+  - Examples of the brand in real use (optional)
+  - Rules on what is required or forbidden (optional)
+you_get:
+  - An eight-section brand style guide
+  - Logo clear space and misuse rules
+  - Colour and type specifications
+  - Voice and imagery guidance
+  - A list of gaps if you asked for an audit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

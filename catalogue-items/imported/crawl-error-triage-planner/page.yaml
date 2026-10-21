@@ -6,6 +6,25 @@ summary: Give it your crawler's issue list. Get fixes ranked by effect on rankin
 job: get-found-in-search
 headline: Crawl error triage planner
 subhead: Give it your crawler's issue list. Get fixes ranked by effect on rankings and traffic, not by raw severity.
+explain: |
+  Your site audit issues ranked by how much they affect rankings and traffic, not by the severity label the tool gave them. You fix the few things that matter and leave the noise.
+
+  You give it the crawler's list. Each issue is scored on three axes: how much traffic the affected pages get, how the problem harms search, and how much work the fix takes. These feed a matrix that sorts items into do now, schedule and skip. It looks for groups of related issues worth one fix, such as redirect chains or broken links on key pages. It also notes failure patterns and what to do if some data is missing.
+when:
+  - Your site audit shows 4,000 issues and you don't know where to begin.
+  - You are planning a technical SEO sprint.
+  - A developer asks which fixes are worth their time.
+  - You want to justify why you are ignoring certain warnings.
+you_give:
+  - Crawler export of issues
+  - Traffic per page (optional)
+  - Developer capacity
+  - Priority pages (optional)
+you_get:
+  - Ranked fix list
+  - Impact and effort scores
+  - Grouped fixes
+  - Sprint plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

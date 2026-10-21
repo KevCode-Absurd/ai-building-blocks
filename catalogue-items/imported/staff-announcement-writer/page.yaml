@@ -6,6 +6,26 @@ summary: Say what is changing. Get a clear internal announcement, a rollout plan
 job: hire-people
 headline: Staff announcement writer
 subhead: Say what is changing. Get a clear internal announcement, a rollout plan and answers to likely questions.
+explain: |
+  A clear internal announcement, a plan for sending it and answers to the questions people will ask. Tell it what is changing and who it affects. It writes in plain words so staff read it, understand it and trust it.
+
+  It covers routine news like policy updates and benefits, and sensitive ones such as restructures or leadership changes. It can adapt one message for email, Slack, a town hall or the intranet, and write talking points for managers. It suggests timing and order to stop rumours starting, and builds an FAQ to go with it.
+when:
+  - A policy is changing and everyone needs to hear it clearly.
+  - You must share hard news and want the tone right.
+  - Managers need talking points before the announcement lands.
+  - You want one message adapted for email and chat.
+you_give:
+  - What is changing and why
+  - Who it affects
+  - The channels you will use (optional)
+  - Date and timing constraints (optional)
+you_get:
+  - A plain-language announcement
+  - Versions for different channels
+  - Manager talking points
+  - An FAQ
+  - A suggested rollout order
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

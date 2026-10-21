@@ -6,6 +6,25 @@ summary: Give it a vision model repo on GitHub. Get a MATLAB function that runs 
 job: connect-tools
 headline: Python vision model connector
 subhead: Give it a vision model repo on GitHub. Get a MATLAB function that runs it on your images.
+explain: |
+  A MATLAB function that runs a Python vision model on your images, so you can use tools like segmentation or depth estimation without leaving MATLAB.
+
+  Give it a GitHub repository or pip package for an image model. The skill reads the repo, then builds a MATLAB interface with the MPyReq framework: a function that sends your image to the Python model and returns the result as MATLAB data. It covers models for segmentation, depth, detection, super-resolution, pose, optical flow and image generation. It does not suit audio or text models, model serving or pure MATLAB image work. You need MATLAB, Python and MPyReq set up.
+when:
+  - A new segmentation or depth model exists only as Python code.
+  - You work in MATLAB and want to call that model on your own images.
+  - You want a demo showing the model working end to end.
+  - You need to wrap a pip package such as Cellpose or SAM2.
+you_give:
+  - GitHub link or package name of the vision model
+  - Sample images
+  - MATLAB and Python environment details
+  - Model weights location (optional)
+you_get:
+  - MATLAB function that calls the model
+  - Setup steps for the Python side
+  - A demo script on your sample image
+  - Notes on inputs and outputs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

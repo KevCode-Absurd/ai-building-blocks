@@ -6,6 +6,25 @@ summary: "Point it at an AI-built app. Get the short set of docs a reviewer need
 job: document-work
 headline: Ship-ready docs writer
 subhead: "Point it at an AI-built app. Get the short set of docs a reviewer needs: architecture, permissions, secrets and test map."
+explain: |
+  A short set of documents that lets a reviewer judge an AI-built app without guessing what it was meant to do. AI writes code fast but leaves no record of intent, so nobody can tell if the app is safe to ship.
+
+  The core set has five docs: architecture, user and permission flows, permissions, variables and secrets, and a test-coverage map. Extra docs are added only when they apply: emails, scheduled jobs, search visibility and embedded agents. Each doc says what it must capture and how a reviewer uses it. The repo's own folder names and rules win over the defaults. These docs also serve as the baseline for later security checks.
+when:
+  - You built an app with AI and a reviewer or client needs to understand it.
+  - You are handing a codebase to another developer or an auditing agent.
+  - You need to map who can do what before a security review.
+  - You want to see which rules in the app have tests and which do not.
+you_give:
+  - The app's code folder
+  - Any existing docs or agent instruction files (optional)
+  - Who will review it (optional)
+you_get:
+  - An architecture doc
+  - A user and permission flow doc
+  - A secrets and variables list
+  - A test-coverage map
+  - Extra docs for emails, schedules or agents where they apply
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

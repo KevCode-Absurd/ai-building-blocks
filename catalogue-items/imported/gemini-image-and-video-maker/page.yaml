@@ -6,6 +6,25 @@ summary: Give it a picture idea and reference images. Get images or short video 
 job: make-images
 headline: Gemini image and video maker
 subhead: Give it a picture idea and reference images. Get images or short video drawn by Google Gemini.
+explain: |
+  Images and short videos from Google Gemini, started by a plain description. Hand over a picture idea and, if you have them, reference images such as a logo, a face or a product shot. It picks the right model for the job: a fast draft, a standard image, a high quality image, or video.
+
+  You can link a folder of references once and reuse it for on-brand results. A still image can also be animated. Each run saves a small log file next to the result so you know how it was made. It needs a Gemini API key, and usage is billed by Google.
+when:
+  - You need a thumbnail or hero image that matches your brand look.
+  - You want to animate a still product photo into a short clip.
+  - You have reference images and want new pictures in the same style.
+  - You want a quick draft first, then a better version of the one you like.
+you_give:
+  - A description of the image or video
+  - Reference images (optional)
+  - A Gemini API key
+  - The quality level you want (optional)
+you_get:
+  - Generated images or short video files
+  - A model picked for the task
+  - A saved log of each run
+  - Reusable reference sets for later
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

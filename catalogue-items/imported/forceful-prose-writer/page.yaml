@@ -6,6 +6,24 @@ summary: Give it a topic or a draft. Get clean, concrete writing with no filler 
 job: write-and-tell-stories
 headline: Forceful prose writer
 subhead: Give it a topic or a draft. Get clean, concrete writing with no filler and none of the usual AI habits.
+explain: |
+  Clean, concrete writing with no filler and none of the usual AI habits: no friendly assistant tone, no empty openers, no stock phrases. Use it for essays and rewrites that need weight.
+
+  You start a request with a short line to switch it on. Then you can set the register, such as literary, journalistic or cold, plus density, how sharp the voice is and length. The skill treats its style rules as a contract and counts breaking them as a failure. It favours strong verbs and images over adjectives, avoids sales rhythm, and returns only the prose with no comment on itself.
+when:
+  - Your draft reads like a chatbot wrote it.
+  - You want an essay with a firm, confident voice.
+  - You need a rewrite that cuts filler and keeps the point.
+  - You want to try the same piece in a cooler or hotter tone.
+you_give:
+  - Topic or draft
+  - Register (literary, journalistic, cold)
+  - Density, heat and length settings (optional)
+you_get:
+  - Finished prose, nothing else
+  - Concrete wording with strong verbs
+  - Version in the voice you picked
+  - Rewrite that removes stock phrases
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

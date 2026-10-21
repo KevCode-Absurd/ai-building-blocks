@@ -6,6 +6,25 @@ summary: Say what to build. Get a quiz, name generator or calculator designed so
 job: build-websites
 headline: Shareable tool builder
 subhead: Say what to build. Get a quiz, name generator or calculator designed so people share it.
+explain: |
+  A quiz, name generator, avatar maker or calculator designed so people want to share the result. It follows one pattern: minimal input, a clever step in the middle, and a result worth showing off.
+
+  It helps you choose the input, such as a name, a birthday or five quiz answers, trading friction against personal feel. It picks a result type that gets shared: identity ("You are a..."), comparison, prediction, score or visual. It designs for the screenshot, with clear text on mobile and subtle branding, then adds share buttons. For quizzes it plans five to ten questions with weighted scoring that lands on one of several results.
+when:
+  - You want a free tool that brings visitors to your site.
+  - You have a quiz idea and need the questions, scoring and results planned.
+  - You want a name or title generator people send to friends.
+  - Your calculator gets used once and never shared.
+you_give:
+  - The tool idea and audience
+  - Your brand and topic
+  - The input you can ask for
+  - Where you want it shared
+you_get:
+  - A tool design with input, logic and result
+  - Shareable result formats
+  - A quiz structure with scoring
+  - Screenshot and share button advice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

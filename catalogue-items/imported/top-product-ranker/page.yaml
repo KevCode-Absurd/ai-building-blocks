@@ -6,6 +6,25 @@ summary: Pick a date range. Get your products ranked by revenue, units sold and 
 job: run-your-store
 headline: Top product ranker
 subhead: Pick a date range. Get your products ranked by revenue, units sold and refund rate.
+explain: |
+  Your products ranked by what they earn, so you know which ones to push and which to drop. Choose any date range and see revenue, units sold and refund rate side by side.
+
+  The skill reads orders from your Shopify store through a connection that only has permission to view orders. It pages through every order in your chosen dates, adds up line items per product, and subtracts refunds to get a refund rate. You can rank by revenue, units or refund rate and show the top 20 or any number you pick. It makes no changes to your store. Output comes as a readable table or as JSON for your own tools.
+when:
+  - You want to know last month's best sellers.
+  - A product sells a lot but you suspect high returns.
+  - You are planning stock and need a ranked list.
+  - You want to find weak products to retire.
+you_give:
+  - Your store address
+  - Shopify login with order read access
+  - Start and end dates
+  - Ranking measure and number of products (optional)
+you_get:
+  - A ranked product table
+  - Revenue and units for each
+  - Refund rate for each
+  - A readable or JSON file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

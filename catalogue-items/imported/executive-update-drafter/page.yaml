@@ -6,6 +6,26 @@ summary: Give it the news and who reads it. Get a status update, exec review or 
 job: lead-people
 headline: Executive update drafter
 subhead: Give it the news and who reads it. Get a status update, exec review or bad-news note pitched to that audience.
+explain: |
+  A message pitched at the right level for the person reading it, whether it is a weekly status, an executive review, a technical choice explained to non-technical people, or bad news about a delay.
+
+  Before writing, it asks five questions: who reads this, what they care about, what you want from them, what they already know and what they must do next. Then it shapes the update to fit, with the point up front and the ask clear. It handles delays, misses and quality problems without hiding them. It can also set a regular update rhythm for a project, matched to how each group wants to hear things.
+when:
+  - You must tell leadership a project is late and want to do it well.
+  - You write weekly status notes that nobody reads.
+  - You need to explain a technical decision to people outside the team.
+  - You want to ask a sponsor for resources or a decision.
+you_give:
+  - Who the message is for
+  - "Purpose: inform, ask, escalate or decide"
+  - What is actually happening
+  - Format, such as email, doc or slide
+  - Deadline (optional)
+you_get:
+  - Draft update in the right tone
+  - Clear ask or decision request
+  - Bad-news framing when needed
+  - Suggested update schedule
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

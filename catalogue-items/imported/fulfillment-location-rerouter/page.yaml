@@ -6,6 +6,26 @@ summary: Name the orders and the new location. Get fulfillment moved between war
 job: run-your-store
 headline: Fulfillment location rerouter
 subhead: Name the orders and the new location. Get fulfillment moved between warehouses. Changes live orders.
+explain: |
+  Open Shopify orders are moved from one warehouse to another, for example when a location is full or a region needs different routing. This changes live orders, so it previews first.
+
+  You name the source and destination locations, and optionally list specific orders. It finds the open fulfilment orders at the source and, in preview mode, shows exactly which would move. Preview is on by default. Only when you confirm does it move them, which changes who picks and ships each order. You must check that the destination can fulfil the items. It needs Shopify login with order and fulfilment write access.
+when:
+  - One warehouse is overloaded and another has room.
+  - A location is closing and its open orders need a new home.
+  - You want to send orders from one region to a closer site.
+  - You want to see what will move before changing anything.
+you_give:
+  - Store address
+  - Source location
+  - Destination location
+  - Specific order numbers (optional)
+  - Shopify login with fulfilment write access
+you_get:
+  - Preview of orders to move
+  - Confirmation step before changes
+  - Moved fulfilment orders
+  - Summary of what changed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

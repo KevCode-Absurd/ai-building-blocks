@@ -6,6 +6,25 @@ summary: Describe a late, lost or damaged shipment. Get the right steps, claim p
 job: plan-strategy
 headline: Shipment problem handler
 subhead: Describe a late, lost or damaged shipment. Get the right steps, claim paperwork and carrier messages.
+explain: |
+  A plan for a late, lost or damaged shipment, with the claim paperwork and carrier messages ready to send. Acting fast and documenting well decides whether you get paid.
+
+  You describe what happened. It sorts the problem into a type (transit delay, visible damage, hidden damage, loss, dispute) because each type has its own steps, deadlines and proof. It tells you what to photograph and note on the delivery receipt, whether fault lies with the carrier or an event outside their control, and when to file. It then drafts the claim, the carrier email and the customer update, in the order that protects your money and the relationship.
+when:
+  - A pallet arrived with crushed boxes and the driver already left.
+  - A shipment is days late and the customer is asking where it is.
+  - A carrier denied your claim and you want to push back.
+  - You are not sure what proof you need before filing a freight claim.
+you_give:
+  - What happened and the shipment details
+  - Carrier, mode and dates
+  - Photos or delivery receipt notes
+  - Goods value and insurance (optional)
+you_get:
+  - The problem type and next steps
+  - A claim checklist and draft paperwork
+  - A carrier message
+  - A customer update
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

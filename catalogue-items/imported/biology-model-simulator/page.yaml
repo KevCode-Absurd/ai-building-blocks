@@ -6,6 +6,25 @@ summary: Give it a model. Get it run for what-if cases, with the most influentia
 job: build-software
 headline: Biology model simulator
 subhead: Give it a model. Get it run for what-if cases, with the most influential settings found.
+explain: |
+  Run your SimBiology model forward in time and see what changes when you tweak a dose, a rate or a starting level. You also learn which settings move the result most, so you know where to spend your effort.
+
+  The skill covers smooth ODE runs and random-event runs, plus what-if scenarios, dose-response sweeps and factorial designs. For influence, it runs global sensitivity methods such as Sobol and Morris. It follows a few hard-won rules: use element-wise operators in observables, and log the states that observables depend on. It works inside MATLAB with SimBiology installed.
+when:
+  - You want to see how your model behaves over time under a new dose.
+  - You need to compare several what-if cases side by side.
+  - Gene expression noise matters and you need stochastic runs.
+  - You must find out which parameters drive the output most.
+you_give:
+  - A SimBiology model
+  - The scenarios or ranges to test
+  - Run length and output species
+  - Whether you want stochastic runs (optional)
+you_get:
+  - Time-course results for each case
+  - Dose-response or sweep tables
+  - Plots of the runs
+  - A ranked list of influential parameters
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

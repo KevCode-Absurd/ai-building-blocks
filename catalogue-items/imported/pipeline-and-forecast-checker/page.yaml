@@ -6,6 +6,25 @@ summary: Give it your deals and quota. Get pipeline cover, forecast accuracy and
 job: money-and-investing
 headline: Pipeline and forecast checker
 subhead: Give it your deals and quota. Get pipeline cover, forecast accuracy and sales cost numbers.
+explain: |
+  Three numbers a sales leader needs: is there enough pipeline to hit quota, how accurate were past forecasts, and what does each sale cost to win. You get them from your own deal data.
+
+  The skill runs scripts on JSON files. The pipeline analyzer measures coverage against quota (healthy is three to four times), stage conversion, sales velocity, deal age beyond twice the usual stage time, and concentration when over 40 percent sits in one deal. The forecast tracker scores accuracy over several periods. The efficiency calculator covers go-to-market cost. Output is plain text or JSON. It needs Python.
+when:
+  - You must say if next quarter's quota is covered.
+  - Forecasts keep missing and you need to measure by how much.
+  - One big deal makes up most of the pipeline.
+  - You want to know what it costs to win a customer.
+you_give:
+  - Deals with value, stage and age
+  - Quota target
+  - Past forecasts and results
+  - Sales and marketing spend (optional)
+you_get:
+  - Pipeline coverage ratio
+  - Stage conversion and velocity
+  - Forecast accuracy by period
+  - Risk flags for aged or concentrated deals
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

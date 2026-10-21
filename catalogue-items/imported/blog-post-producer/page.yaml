@@ -6,6 +6,26 @@ summary: Give it a topic. Get a researched, edited blog post or guide that is re
 job: write-and-tell-stories
 headline: Blog post producer
 subhead: Give it a topic. Get a researched, edited blog post or guide that is ready to publish.
+explain: |
+  A finished blog post or guide that is researched, edited and ready to publish, built from a topic and an angle. It cuts out the blank-page stall and the long back and forth with a draft.
+
+  The skill first checks for any saved brand notes, then asks for what is missing in one go: the topic, target keyword, reader, goal and length. If the topic is vague, it pushes back and asks for a sharper angle. It then researches, outlines, drafts, tightens and checks the piece for search fit and links to your other content. It is for writing the piece, not for planning a calendar or reusing old content.
+when:
+  - You have a topic and need a full post, not an outline.
+  - A writer is stuck and you need a solid first draft fast.
+  - You want one clear article that targets a single search term.
+  - You need a guide that links to your existing pages.
+you_give:
+  - A topic or working title
+  - The main search term (optional)
+  - Who will read it and what they know
+  - The goal and rough length
+  - Links to related content (optional)
+you_get:
+  - A full draft with a strong opening
+  - Edited, tightened copy
+  - Search-friendly headings and a title
+  - Internal link suggestions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

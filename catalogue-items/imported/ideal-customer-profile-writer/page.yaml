@@ -6,6 +6,25 @@ summary: Describe what you sell. Get detailed buyer personas with motivations, d
 job: understand-customers
 headline: Ideal customer profile writer
 subhead: Describe what you sell. Get detailed buyer personas with motivations, doubts and habits.
+explain: |
+  Buyer personas built on how people think and decide, not just age and income. Describe what you sell and get detailed profiles with motivations, doubts and habits that you can write ads and pages against.
+
+  It reads any brand notes first so it does not re-ask. Then it asks about the product, who buys today, who you want to reach, any customer research and how you are positioned. The output is a numbered audience framework that starts with a sharp overview. It covers beliefs and values, how they research and decide, the job they hire you to do and the exact words they use for their problem and the result they want.
+when:
+  - You have demographic data but still do not understand your buyers.
+  - You are launching a product and need a first target group.
+  - You have reviews and support tickets you have not mined.
+  - You write copy and want the real words customers use.
+you_give:
+  - What you sell
+  - Who buys now or who you hope will
+  - Reviews, surveys or interview notes (optional)
+  - Your brand position (optional)
+you_get:
+  - An audience overview
+  - Beliefs, doubts and decision habits
+  - The jobs your buyers hire you for
+  - Customer language to reuse in copy
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

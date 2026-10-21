@@ -6,6 +6,25 @@ summary: Tell it about your reviews. Get when to ask, how to word the request, a
 job: help-customers
 headline: Review request and reply planner
 subhead: Tell it about your reviews. Get when to ask, how to word the request, and how to answer a bad review.
+explain: |
+  A plan for getting more reviews and replying to bad ones in a way that wins over everyone watching. It rests on a few findings that go against common habit.
+
+  Ask 9 to 13 days after delivery, not at 24 hours, which cut reviews. Open with a friendly question like what did you enjoy most, before asking for a rating. Send the same request to every customer, because sending only happy ones to the public page is judged deceptive by regulators. Early at launch, ask all early buyers quickly. Keep a rating below 5.0, since it sells better. Replies to public complaints are written for the onlookers, not the angry writer.
+when:
+  - You are not sure when to send the review request email.
+  - You got a harsh 1-star review and wonder whether to try to remove it.
+  - Your average is 4.9 and you worry it looks fake.
+  - A launch needs a healthy set of early reviews.
+you_give:
+  - Your product and how long it takes to judge
+  - Your current request timing and wording
+  - Your average rating
+  - A review or complaint to answer (optional)
+you_get:
+  - A better timing for the request
+  - Wording for a review request email
+  - A reply to a bad review
+  - Advice on handling ratings and complaints
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

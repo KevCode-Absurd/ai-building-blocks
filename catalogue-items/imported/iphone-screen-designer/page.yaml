@@ -6,6 +6,25 @@ summary: Describe your app screens. Get native-feeling iPhone screens, checked o
 job: design-work
 headline: iPhone screen designer
 subhead: Describe your app screens. Get native-feeling iPhone screens, checked on small and large sizes.
+explain: |
+  iPhone screens that look and behave like they belong on an iPhone, not like a website squeezed into an app. Describe the screens you need, such as onboarding, settings, a paywall or a list with a detail view. The skill applies Apple conventions: back buttons where people expect them, tab bars instead of hamburger menus, sheets, text that grows with accessibility settings, and native-style lists and forms.
+
+  It works with SwiftUI, UIKit, React Native, Expo or Flutter, and it checks the result on both small and large phone sizes. A paid design library can be connected for reference screens, but only if you ask for it. The skill works fine without any account.
+when:
+  - Your app screens feel like a web page in an app shell.
+  - You are building a settings screen, paywall or onboarding flow.
+  - You need to check a layout on small and large iPhones.
+  - You build in Flutter or React Native and want it to feel native.
+you_give:
+  - A description of the screens and what each does
+  - Your framework, such as SwiftUI or React Native
+  - Any existing code or mockups (optional)
+  - Brand colours or fonts (optional)
+you_get:
+  - Native-feeling screen designs or code
+  - Correct navigation, lists, forms and sheets
+  - A size check on small and large phones
+  - A list of places that break Apple conventions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

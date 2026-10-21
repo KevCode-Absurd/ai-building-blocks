@@ -6,6 +6,25 @@ summary: Give it your numbers. Get ratio analysis, a valuation, budget variances
 job: money-and-investing
 headline: Financial statement analyst
 subhead: Give it your numbers. Get ratio analysis, a valuation, budget variances and a rolling forecast.
+explain: |
+  Your numbers read back to you: ratios that show how healthy the business is, a value estimate, how actuals compare with budget and a forecast that rolls forward.
+
+  The skill checks your data first for gaps or odd values. It then computes ratios in five groups: profitability, liquidity, debt, efficiency and valuation. It builds a DCF with WACC and terminal value, and sanity-checks the result against implied multiples. A budget variance table marks each gap as favorable or unfavorable and explains the large ones. A driver-based rolling forecast adds base, bull and bear cases. Summaries state what is material, with a goal of forecasts within 5% on revenue.
+when:
+  - You want to know whether margins and cash position are healthy.
+  - Actual spend differs from budget and you need to explain it.
+  - You need a rolling forecast for the next four quarters.
+  - You are valuing a business and want a sanity-checked DCF.
+you_give:
+  - Income statement, balance sheet and cash flow
+  - Budget figures (optional)
+  - Industry or peer benchmarks (optional)
+  - Forecast assumptions (optional)
+you_get:
+  - Ratio analysis with trends
+  - A DCF with a sensitivity table
+  - A budget variance report
+  - A rolling forecast with scenarios
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

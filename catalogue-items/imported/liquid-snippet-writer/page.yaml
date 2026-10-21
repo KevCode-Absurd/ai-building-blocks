@@ -6,6 +6,25 @@ summary: Paste your theme code or say what you need. Get correct Liquid for prod
 job: build-software
 headline: Liquid snippet writer
 subhead: Paste your theme code or say what you need. Get correct Liquid for products, carts and loops.
+explain: |
+  Working Shopify Liquid code for your theme, without trial and error. Paste your theme code or say what you need, and get the right objects, filters and loops for products, collections and carts.
+
+  The skill knows Liquid's output tags, logic tags and whitespace control. It uses the right objects for products, collections, carts, customers and the shop, and picks the correct filters for text, numbers, lists, links, images and money. Then it builds conditionals and loops for dynamic content, like showing a badge on sale items or listing cart lines. It follows Liquid best practices so the snippet is safe to paste into a theme.
+when:
+  - You want a sale badge that only shows when a product has a compare price.
+  - Your theme loop is not showing the products you expect.
+  - You need to display cart totals in the right format.
+  - You are editing a theme and do not know Liquid.
+you_give:
+  - What the snippet should show
+  - The theme file it goes in (optional)
+  - Your existing code (optional)
+  - Product or collection details involved
+you_get:
+  - A working Liquid snippet
+  - The right objects and filters used
+  - Conditionals and loops for dynamic content
+  - A short note on where to place it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

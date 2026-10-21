@@ -6,6 +6,25 @@ summary: Give it a video or podcast topic. Get title, description, tags and time
 job: get-found-in-search
 headline: YouTube title and tags writer
 subhead: Give it a video or podcast topic. Get title, description, tags and timestamps, or an audit of one that is stuck.
+explain: |
+  A complete upload package for a video or podcast episode, or an audit of one that is stuck: title, description, tags, hashtags and timestamps.
+
+  It confirms your target keyword first, then builds each piece around it. Titles are tuned for length, and short clips get their own 60 to 70 character title with a 150 to 200 word description that reuses the episode's tags. For a published video with weak views, it runs an audit instead, with a scorecard and the fixes in order. Podcasts get show notes and episode details too. A longer guide inside the skill holds the full procedure. It advises you to check results on the platform itself, since ranking is never guaranteed.
+when:
+  - You are uploading a video and need the title, description and tags in one go.
+  - A podcast episode has barely any views and you want to know why.
+  - You cut a short clip from a longer episode and need matching text.
+  - You need show notes and timestamps for an episode.
+you_give:
+  - The topic, transcript or episode link
+  - Your target keyword (optional)
+  - The live video link if you want an audit (optional)
+  - Your channel or show name (optional)
+you_get:
+  - A title and description built on one keyword
+  - A tag and hashtag set
+  - Timestamps or show notes
+  - An audit scorecard for a stuck video
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

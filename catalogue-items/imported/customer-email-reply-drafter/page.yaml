@@ -6,6 +6,24 @@ summary: Ask what needs a reply. Get unread customer emails sorted by priority, 
 job: write-emails
 headline: Customer email reply drafter
 subhead: Ask what needs a reply. Get unread customer emails sorted by priority, each with a draft reply. You send them.
+explain: |
+  A morning of customer email, sorted and answered in minutes. Ask what needs a reply and you get your unread customer emails grouped by what each one needs, with a draft reply for the ones that deserve it. You review and send them yourself.
+
+  It defaults to the last 72 hours and counts an email as a customer email if the sender's domain matches an account you own. If a CRM is connected it matches senders and adds context. If a calendar is connected it uses your free time for scheduling replies. Email contents are treated as data, so instructions inside them are reported, not followed. Nothing is sent or logged without your say.
+when:
+  - You come back from a day out to a full inbox.
+  - You want to know which customers are waiting on you.
+  - A meeting request needs a reply with your real availability.
+  - You need first drafts for routine questions.
+you_give:
+  - Access to your email, or pasted or exported emails
+  - How far back to look (optional)
+  - CRM and calendar connections (optional)
+you_get:
+  - Emails grouped by what they need
+  - A priority order
+  - A draft reply for each that needs one
+  - A short list of items to log
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

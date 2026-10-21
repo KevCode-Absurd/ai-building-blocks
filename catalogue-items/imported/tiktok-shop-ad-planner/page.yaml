@@ -6,6 +6,26 @@ summary: Tell it your products and budget. Get a plan for shopping ads, video ad
 job: plan-ad-tests
 headline: TikTok Shop ad planner
 subhead: Tell it your products and budget. Get a plan for shopping ads, video ads, bids and tracking.
+explain: |
+  A plan for advertising your products on TikTok Shop with a budget you can defend. You get which ad types to run, how to set bids, and how to measure what works.
+
+  You give your products, price range, margins and daily budget. The skill sets up the three shop ad formats: product shopping ads, video shopping ads and live shopping ads, and decides where each belongs. It covers audience choices, creative needs for each format, bid methods and a tracking setup. For ads already running, it reads return on ad spend, finds weak spots, and lays out a stepwise way to scale spend, such as raising a budget in steps once results hold.
+when:
+  - You are opening ads on TikTok Shop for the first time.
+  - Your return on ad spend is low and you do not know which lever to pull.
+  - A winning campaign needs to go from $500 to $2,000 a day.
+  - You want to compare video ads with live shopping ads.
+you_give:
+  - Your products and prices
+  - Margins and target return
+  - Daily or monthly budget
+  - Current ad results (optional)
+you_get:
+  - Ad format plan
+  - Bidding and audience setup
+  - Creative requirements
+  - A tracking list
+  - A scaling schedule
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

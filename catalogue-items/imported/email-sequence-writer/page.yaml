@@ -6,6 +6,25 @@ summary: Say the goal. Get a welcome, nurture or win-back sequence with timing, 
 job: write-emails
 headline: Email sequence writer
 subhead: Say the goal. Get a welcome, nurture or win-back sequence with timing, subject lines and full emails.
+explain: |
+  A ready-to-send email sequence with timing, subject lines and full copy. Say the goal, such as welcome, nurture or win-back, and you get the whole series, not just an outline.
+
+  The skill reads your product marketing notes first if you have them, so it does not repeat tested angles. It asks about sequence type, who the audience is, the trigger and the goal. It then loads the right guide for flow design, missing lifecycle emails or copy rules. It sets the number of emails and the gaps between them, writes each message, and plans personalisation and segments. It can also audit a current flow for missing emails.
+when:
+  - You need a welcome series for new sign-ups.
+  - You want to win back customers who went quiet.
+  - You suspect your onboarding flow has gaps.
+  - You want timing and copy done together.
+you_give:
+  - The goal and trigger
+  - Audience and offer
+  - Product marketing notes (optional)
+  - Existing flow to audit (optional)
+you_get:
+  - A complete email sequence with copy
+  - Send timing between emails
+  - Subject lines for each message
+  - A list of missing lifecycle emails (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

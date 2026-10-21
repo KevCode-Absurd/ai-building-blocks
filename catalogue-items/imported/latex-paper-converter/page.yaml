@@ -6,6 +6,25 @@ summary: Give it your paper and a new journal template. Get the paper rebuilt in
 job: work-with-files
 headline: LaTeX paper converter
 subhead: Give it your paper and a new journal template. Get the paper rebuilt in that format.
+explain: |
+  Your paper, rebuilt in a different journal's template without retyping it. Give it your LaTeX file and the folder for the new template. The skill compares the layouts, such as single column against double, and writes a Python script that pulls out your sections and drops them into the new file.
+
+  It then fixes the usual problems: theorem and math environment names, float placement the new class does not allow, figure paths that moved, and tables too wide for narrow columns. Finally it builds with pdflatex and bibtex and reads the log to clear errors until the paper compiles. You need a LaTeX install and Python.
+when:
+  - Your paper was rejected and you must resubmit in another journal's format.
+  - A conference gave you a new template and a short deadline.
+  - Your tables overflow after moving to a two-column layout.
+  - Your figures broke after you changed folders.
+you_give:
+  - Your source .tex file
+  - The new template folder
+  - Figures and bibliography files
+  - Target journal name (optional)
+you_get:
+  - A converted .tex file
+  - A script you can rerun
+  - A compiled PDF
+  - A list of fixes made
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

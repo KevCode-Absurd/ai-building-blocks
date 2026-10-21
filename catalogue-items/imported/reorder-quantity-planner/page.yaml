@@ -6,6 +6,26 @@ summary: Get a sales forecast for each product, plus when to reorder and how man
 job: run-your-store
 headline: Reorder quantity planner
 subhead: Get a sales forecast for each product, plus when to reorder and how many to buy.
+explain: |
+  For every product, a sales forecast, the stock level at which to reorder, and how many units to buy. It tells you what runs out before the next delivery lands.
+
+  It reads your Shopify orders and stock. It works out how fast each item sells, adjusts for trends and optional seasonality, and projects demand over your chosen window. Then it applies your supplier lead time and a safety buffer to set the reorder point. The suggested purchase quantity covers demand until the next order arrives. You can narrow it to one supplier or only the items at risk of stocking out. It reads data only and changes nothing.
+when:
+  - You keep running out of your best sellers.
+  - You are about to place a purchase order and need quantities.
+  - You want to see which items will stock out in the next month.
+  - Supplier lead times differ and you need to plan around them.
+you_give:
+  - Store domain
+  - Sales history window in days
+  - Supplier lead time
+  - Safety stock days (optional)
+  - Supplier to focus on (optional)
+you_get:
+  - Demand forecast per product
+  - Reorder point per product
+  - Suggested order quantities
+  - List of items likely to stock out
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Point it at your app. Get a lean, safe Dockerfile and compose file that
 job: ship-and-host
 headline: Docker setup builder
 subhead: Point it at your app. Get a lean, safe Dockerfile and compose file that run your project.
+explain: |
+  A lean, safer Dockerfile and compose file for your project, which usually means smaller images, faster builds and fewer security holes.
+
+  The skill offers three jobs. Optimize looks at a Dockerfile for size, speed and layer caching, using multi-stage builds to cut what ships. Compose creates or improves your docker-compose file with good defaults. Security audits a Dockerfile or running container for risks. It is a set of firm choices about how to build containers, not a Docker tutorial. Use it when a build is slow, an image is huge, or you simply want a sound setup for a new project.
+when:
+  - Your Docker build takes minutes every time you change one line.
+  - Your image is over a gigabyte and you do not know why.
+  - You want to know if your Dockerfile has security problems.
+  - You need a first Dockerfile for a Node or Python app.
+you_give:
+  - Your project or existing Dockerfile
+  - Your language and framework
+  - Whether it is for development or production
+  - Services your app depends on (optional)
+you_get:
+  - An optimised Dockerfile
+  - A compose file
+  - A security audit with fixes
+  - Notes on what changed and why
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

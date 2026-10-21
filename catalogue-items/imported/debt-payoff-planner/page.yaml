@@ -6,6 +6,26 @@ summary: List your debts. Get a payoff timeline comparing the snowball and avala
 job: money-and-investing
 headline: Debt payoff planner
 subhead: List your debts. Get a payoff timeline comparing the snowball and avalanche methods, with total interest for each.
+explain: |
+  A payoff schedule that shows the day you become debt-free, and what each method costs you. You get a month-by-month timeline for the snowball and the avalanche, with total interest and finish date side by side.
+
+  It starts with an inventory: each debt's balance, rate and minimum payment, plus any 0 percent offers that end soon or accounts in collections. Then it asks how much extra cash you can add each month. Avalanche sends extra money to the highest rate first. Snowball sends it to the smallest balance first for quick wins. It rolls freed-up payments forward and shows which one fits how you behave.
+when:
+  - You have several cards and loans and do not know which to pay first.
+  - You got a bonus and want to know where it saves the most interest.
+  - You keep losing motivation and want to see quick wins first.
+  - You want a date to aim for and a reason to stick to it.
+you_give:
+  - List of debts with balance and rate
+  - Minimum payments
+  - Extra monthly amount you can pay
+  - "Preference: lowest cost or quickest wins (optional)"
+you_get:
+  - Snowball payoff timeline
+  - Avalanche payoff timeline
+  - Total interest for each
+  - Debt-free date
+  - Pick that fits your habits
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Name your robot arm. Get a MATLAB model ready for moves, reach checks a
 job: build-software
 headline: Robot arm modeler
 subhead: Name your robot arm. Get a MATLAB model ready for moves, reach checks and drawing.
+explain: |
+  A MATLAB robot arm model you can trust, so later moves and reach checks do not quietly go wrong. Name the arm, such as a UR5e, KUKA iiwa or Panda, and it builds the model.
+
+  It picks the best source it can find: the built-in robot library first, then your URDF file, then DH parameters. Collision shapes matter, because a model without them lets a planner call a path clear when it is not. It also helps you attach a gripper, choose between the two inverse kinematics solvers, and checks each solution for exit flags, position error and smooth joint changes. You need MATLAB with the robotics toolbox.
+when:
+  - You need a MATLAB model of a named arm like a UR5e or Panda for a simulation.
+  - You have a URDF file and want it loaded with meshes kept.
+  - You want to attach a gripper and check that the arm can reach a target.
+  - You solved inverse kinematics and want proof the answer is valid.
+you_give:
+  - The arm name or your URDF or DH parameters
+  - Target poses to reach (optional)
+  - Gripper details (optional)
+  - What you plan to do next, such as animate or pick and place (optional)
+you_get:
+  - A MATLAB robot model ready to use
+  - Collision and visual shapes added where needed
+  - Checked inverse kinematics solutions
+  - A note on any gaps in the model
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

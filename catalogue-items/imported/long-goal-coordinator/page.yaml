@@ -6,6 +6,25 @@ summary: Give it a goal that takes days. Get helpers and schedules set up to wor
 job: plan-strategy
 headline: Long-goal coordinator
 subhead: Give it a goal that takes days. Get helpers and schedules set up to work on it.
+explain: |
+  A set-up that lets your AI work toward a goal that takes days, without losing what it learned along the way. It acts like a chief of staff: it plans, hands out work, and keeps notes.
+
+  The main chat does no heavy work itself. It sends tasks to background helpers so its own memory stays clear, and passes them short pointers to notes instead of long copies of text. It keeps a wiki, a folder of linked markdown pages with an index, so lessons survive past the end of a session. It also suggests recurring schedules that move the goal forward. It thinks on two tracks: finishing the task now, and improving things so the next task goes better.
+when:
+  - Your project will take days or weeks and one chat cannot hold it all.
+  - You want helpers running in the background while you keep talking to your AI.
+  - You keep re-explaining the same background at the start of each session.
+  - You want regular check-ins scheduled toward a goal.
+you_give:
+  - The goal and a rough deadline
+  - Where the notes folder should live
+  - Tools or helpers your AI can use
+  - Recurring checks you want (optional)
+you_get:
+  - A coordination plan
+  - A notes wiki with an index
+  - Tasks split across helpers
+  - Suggested recurring schedules
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

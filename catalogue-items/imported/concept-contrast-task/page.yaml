@@ -6,6 +6,25 @@ summary: Name two ideas your learners mix up. Get a task of contrasting examples
 job: teach-and-train
 headline: Confusing concept contrast task designer
 subhead: Name two ideas your learners mix up. Get a task of contrasting examples that shows what sets them apart.
+explain: |
+  A learning task that shows students the difference between two ideas they keep mixing up, by putting the right examples side by side. It follows variation theory, which says people notice a feature only when they see it change.
+
+  You name the concept and the common confusion, such as students thinking a bigger shape always has a longer perimeter. Claude finds the one critical feature to notice, then uses four moves: contrast the idea with what it is not, vary that feature while holding the rest fixed, show it in different settings, and bring features together. The result is a short task with worked examples and teacher questions. It is built for any subject.
+when:
+  - Students mix up two ideas such as area and perimeter, or affect and effect.
+  - Your explanation is clear to you but the same error keeps coming back.
+  - You want to redesign a worksheet so it shows the key difference.
+  - You are planning a lesson on a notoriously confused topic.
+you_give:
+  - The concept to be learned
+  - The common mistake or confusion
+  - Year group
+  - An existing task to improve (optional)
+you_get:
+  - The key feature to notice
+  - A task with contrasting examples
+  - Worked examples
+  - Questions to ask in class
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

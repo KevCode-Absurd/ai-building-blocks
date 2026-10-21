@@ -6,6 +6,27 @@ summary: Give it a history source. Get a lesson series that teaches learners to 
 job: teach-and-train
 headline: Check who wrote it lesson builder
 subhead: Give it a history source. Get a lesson series that teaches learners to ask who wrote it, when and why.
+explain: |
+  A lesson series that trains students to ask who wrote a source, when and why before they read a word. It builds the habit expert historians use, instead of treating each document as plain fact.
+
+  The method follows Wineburg's research on sourcing. You describe your topic, your students and what they do now when handed a document. The skill returns a progression from novice to proficient, a three-part teaching sequence (you model, they practise with help, they work alone) and guiding questions suited to your source type, such as testimony, official papers or photographs. It also lists the common ways students fail and how to respond.
+when:
+  - Students accept every document at face value.
+  - You are starting a unit built on primary sources.
+  - You want a clear way to show growth in source skills.
+  - Your students read first and ask questions later.
+you_give:
+  - Topic or period
+  - Students' age and experience
+  - What students do now with sources
+  - Type of source and documents (optional)
+  - Curriculum framework (optional)
+you_get:
+  - Sourcing progression by level
+  - Model, guided and independent sequence
+  - Source-specific questions
+  - Common errors and fixes
+  - Signs of progress to watch for
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

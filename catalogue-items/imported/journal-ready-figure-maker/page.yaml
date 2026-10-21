@@ -6,6 +6,26 @@ summary: Give it your data. Get clear, honest, colour-safe figures with uncertai
 job: research-topics
 headline: Journal-ready figure maker
 subhead: Give it your data. Get clear, honest, colour-safe figures with uncertainty shown, sized for journal export.
+explain: |
+  Charts that tell the truth and survive peer review. Give it your data and say where the figure is going. The skill records what the numbers mean, the units, how uncertainty is defined and every change made to the data, so the figure can be rebuilt later. It picks an honest chart type: bars start at zero, points show their spread, and no missing values are quietly joined up.
+
+  Colours are chosen to be readable by colour-blind viewers. Size and format are set for the final width. It never hides or tweaks data, and it will not claim journal compliance until the exact journal and stage are known and its live guidance is checked.
+when:
+  - You are preparing figures for a paper.
+  - A reviewer says your chart is misleading or hard to read.
+  - You need uncertainty shown clearly, not just means.
+  - Your figures must be readable in black and white or by colour-blind readers.
+you_give:
+  - Your data table or file
+  - What each variable and unit means
+  - The target journal and stage (optional)
+  - The final figure width (optional)
+you_get:
+  - Charts with honest scales and visible uncertainty
+  - Colour-safe palettes
+  - Output sized for export
+  - A record of every data transformation
+  - A list of journal checks still to do
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

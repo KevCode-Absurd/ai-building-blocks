@@ -6,6 +6,25 @@ summary: Give it your spend list. Get spend by category, duplicate tools and a p
 job: money-and-investing
 headline: Software spend auditor
 subhead: Give it your spend list. Get spend by category, duplicate tools and a plan to cut suppliers.
+explain: |
+  A clear picture of what you spend on software, where you pay twice, and which suppliers to cut. You give your spend list, and get it sorted into categories with a plan for fewer vendors.
+
+  The skill groups each line using a standard category scheme, then shows a Pareto view so you can see the few categories that make up most of the cost. It finds duplicate tools, such as several monitoring or email apps doing the same job, and works out where consolidation saves money. It then ranks suppliers to keep, merge or drop, with reasons and a timing plan. Python scripts and templates help with the sorting. It fits an annual software review.
+when:
+  - Software costs rose and nobody can say why.
+  - You suspect several teams pay for the same kind of tool.
+  - You are preparing an annual vendor review.
+  - You want to cut the number of suppliers you manage.
+you_give:
+  - A list of software spend lines with vendor and amount
+  - Contract renewal dates (optional)
+  - Who owns each tool (optional)
+  - Your savings goal (optional)
+you_get:
+  - Spend grouped by category
+  - A Pareto view of the biggest costs
+  - Duplicate tool groups
+  - A keep, merge or drop plan for suppliers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

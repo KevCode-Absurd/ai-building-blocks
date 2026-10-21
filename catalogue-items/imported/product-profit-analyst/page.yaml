@@ -6,6 +6,26 @@ summary: Give it revenue and costs by product. Get each product's margin and whi
 job: run-your-store
 headline: Product profit analyst
 subhead: Give it revenue and costs by product. Get each product's margin and which ones lose money.
+explain: |
+  Each product's margin laid out, so you can see which ones earn money and which ones lose it. Revenue alone hides this.
+
+  Claude acts as a management accountant. It matches revenue to each product, then subtracts variable costs to get contribution margin. Fixed and shared costs are spread using an allocation method you agree on, giving a fully loaded margin. Actual results are compared with budget where you have one. It ends with clear moves such as dropping a loser or putting more behind a winner. You decide the segments: SKU, category or service line.
+when:
+  - You sell many products and do not know which ones profit.
+  - You are deciding which line to cut or grow.
+  - Shared costs make some products look better than they are.
+  - You need a product-level P&L for a review.
+you_give:
+  - Revenue by product or segment
+  - Variable costs such as COGS
+  - Fixed and shared cost totals
+  - Budget figures (optional)
+you_get:
+  - Contribution margin per product
+  - Fully loaded margin per product
+  - A list of products losing money
+  - Cost allocation notes
+  - Keep, cut or grow recommendations
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

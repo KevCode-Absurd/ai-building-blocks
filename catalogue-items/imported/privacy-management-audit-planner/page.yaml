@@ -6,6 +6,25 @@ summary: Describe how you handle personal data. Get gaps against ISO 27701, a pr
 job: check-contracts
 headline: Privacy management audit planner
 subhead: Describe how you handle personal data. Get gaps against ISO 27701, a privacy control list and an audit plan.
+explain: |
+  A clear view of where your handling of personal data falls short of ISO 27701, with the controls you need and a plan to audit them. Describe your setup and get the gaps.
+
+  The skill handles both the 2019 add-on edition and the 2025 standalone one, and picks the right one for you. It runs a gap assessment against controller, processor and shared security controls, helps write a Statement of Applicability, and supports data protection impact assessments and records of processing. It also maps the standard to GDPR, CCPA, LGPD and PIPEDA, and plans the path to certification.
+when:
+  - A customer asks if you hold ISO 27701.
+  - You process personal data and want to test your controls.
+  - You are moving from the 2019 to the 2025 edition.
+  - You need a plan before an audit.
+you_give:
+  - Description of how you handle personal data
+  - Whether you act as controller or processor
+  - Existing ISO 27001 status (optional)
+  - Target laws such as GDPR
+you_get:
+  - Gap list against ISO 27701
+  - Privacy control checklist
+  - Statement of Applicability draft
+  - Audit plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

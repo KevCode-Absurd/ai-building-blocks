@@ -6,6 +6,25 @@ summary: Give it your jobs and machines. Get a job order that finishes everythin
 job: plan-supply-chain
 headline: Machine job scheduler
 subhead: Give it your jobs and machines. Get a job order that finishes everything sooner.
+explain: |
+  A job order for your machines that finishes everything sooner, or meets due dates, while keeping each job's steps in the right sequence. This is the classic job shop problem.
+
+  First it asks about your jobs, machines, step times, setup times, due dates and limits like breakdown windows. It chooses a goal: shortest total finish time, least lateness, or a weighted mix. Then it picks a method by size. Small cases get exact solving. Mid-size ones get advanced search. Large ones get heuristic methods that give a good answer quickly. It can use a model with a disjunctive graph, where no machine runs two things at once and each job follows its route.
+when:
+  - You have a dozen jobs sharing a handful of machines and the order is guesswork.
+  - Late orders keep cascading through your shop floor.
+  - You want to see how much faster a better order would be.
+  - Some machines go down for maintenance and you must plan around it.
+you_give:
+  - The list of jobs and their steps
+  - Machines and processing times
+  - Due dates and setup times (optional)
+  - Your main goal
+you_get:
+  - A schedule by machine and time
+  - The total finish time
+  - Late jobs flagged
+  - The method used and why
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

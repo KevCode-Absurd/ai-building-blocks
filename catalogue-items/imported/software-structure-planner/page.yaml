@@ -6,6 +6,24 @@ summary: Give it your codebase. Get a plan to keep business rules apart from fra
 job: build-software
 headline: Software structure planner
 subhead: Give it your codebase. Get a plan to keep business rules apart from frameworks and databases. Uses the Clean Architecture method.
+explain: |
+  A plan that keeps your business rules free of frameworks, databases and screens, so you can swap any of them later without a rewrite. You share your codebase or describe it. The skill applies the Clean Architecture method, built on one rule: code dependencies point inward, from frameworks to use cases to core entities.
+
+  It runs seven diagnostic checks, such as where logic lives, whether the database leaks into core code, and whether module boundaries are clear. You get a score out of 10, the checks that failed, and the exact change that fixes each one.
+when:
+  - You are not sure which layer a piece of code belongs in.
+  - Your business logic is tangled up with the web framework or the database.
+  - You want to change frameworks or databases without rewriting everything.
+  - You are reviewing module boundaries before a codebase grows further.
+you_give:
+  - Your codebase or a description of its folders
+  - The framework and database you use
+  - The change you want to make later (optional)
+you_get:
+  - A score out of 10 for your structure
+  - A list of the checks that failed
+  - The fix for each broken dependency
+  - A suggested layer layout
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe the Windows desktop app. Get a WinUI 3 project set up and buil
 job: build-software
 headline: Windows app builder
 subhead: Describe the Windows desktop app. Get a WinUI 3 project set up and built to Microsoft guidance.
+explain: |
+  A new Windows desktop app, set up and built the way Microsoft recommends for WinUI 3. You describe what the app should do and get a working project instead of a blank folder and a long setup guide.
+
+  The skill first classifies your request: machine setup, new app, design, implementation, review or fixing a problem. For a new app it picks a safe name, checks your machine through a WinGet configuration that can turn on Developer Mode and install Visual Studio with the right workloads, then confirms the winui template exists and scaffolds the project with dotnet. It asks before changing your machine. It needs Windows and the .NET tools.
+when:
+  - You want to start a Windows desktop app and have no project yet.
+  - Your machine is not ready for WinUI development.
+  - You are unsure how a modern Windows app should look.
+  - An existing WinUI project has build errors.
+you_give:
+  - Description of the app
+  - App name (optional)
+  - Where to create the project (optional)
+  - A Windows machine with permission to install tools
+you_get:
+  - Machine readiness check
+  - New WinUI 3 project
+  - Build that compiles
+  - Design guidance for modern Windows
+  - Fixes for setup problems
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

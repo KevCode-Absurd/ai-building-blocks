@@ -6,6 +6,25 @@ summary: Give it an idea to explore. Get a series of questions that leads learne
 job: teach-and-train
 headline: Socratic question sequence writer
 subhead: Give it an idea to explore. Get a series of questions that leads learners to work out the answer.
+explain: |
+  A set of questions that lets learners reach the answer themselves. You give the idea to explore, the learners' level and what they believe now, and get a planned sequence that moves them step by step.
+
+  The sequence starts at their current thinking, then moves through questions that clarify terms, probe assumptions, ask for evidence, test other views and reach a conclusion. If you know the idea you want them to reach, you can name it. The design draws on research on classroom questioning and critical thinking. It suits philosophy talks, science concepts and any lesson where telling the answer would end the thinking too early. Each question has a purpose, so you know why you ask it.
+when:
+  - You lead a discussion and run out of good follow-up questions.
+  - You want students to find the concept themselves.
+  - You teach a topic where common misconceptions get in the way.
+  - You need questions pitched at the right age group.
+you_give:
+  - The concept to develop
+  - Learner age or level
+  - What learners believe now
+  - The understanding you want them to reach (optional)
+you_get:
+  - An ordered list of questions
+  - The purpose of each question
+  - Likely answers and how to follow up
+  - A path to the target idea
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a service. Get weak spots found and fixes like timeouts, retrie
 job: ship-and-host
 headline: Production stability reviewer
 subhead: Give it a service. Get weak spots found and fixes like timeouts, retries and circuit breakers, so outages stay small.
+explain: |
+  Find the places where your service will fall over in production, and fix them before an outage spreads. The review turns vague worry into a list of weak spots with specific fixes.
+
+  The skill walks through eight checks: timeouts on every outside call, circuit breakers, bulkheads that isolate failures, zero-downtime deploys, deep health checks, linked logs and metrics, load tests past peak traffic, and deliberate failure testing. Each answered yes earns a point, and the score shows how exposed you are. For each gap it recommends a pattern, such as a retry with backoff or a breaker that stops a retry storm, and explains where to put it.
+when:
+  - Your service keeps crashing under load and you do not know which call is the cause.
+  - A slow partner API has taken your whole app down before.
+  - You are planning a launch and want to know how it behaves at peak.
+  - You want to deploy without taking the site offline.
+you_give:
+  - Description of the service and what it depends on
+  - Past outages or crash reports (optional)
+  - Current deploy and monitoring setup
+  - Expected peak traffic
+you_get:
+  - Score out of 8 on stability checks
+  - List of weak spots ranked by risk
+  - Fixes such as timeouts, retries and circuit breakers
+  - A rollout order for the changes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

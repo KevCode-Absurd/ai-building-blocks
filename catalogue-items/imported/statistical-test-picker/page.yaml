@@ -6,6 +6,26 @@ summary: Give it your data and question. Get the right test, assumption checks, 
 job: track-numbers
 headline: Research test picker and reporter
 subhead: Give it your data and question. Get the right test, assumption checks, effect sizes and a write-up in APA style.
+explain: |
+  The right statistical test for your question, run properly, and written up in APA style. You describe your data and what you want to know, and you get a choice of test with the reason for it, checks that its assumptions hold, effect sizes with confidence intervals, and report-ready wording.
+
+  It begins by framing the hypothesis and design: paired or independent, how many groups. It looks at each group's size, spread and missing values, then picks a test such as a t-test, ANOVA, chi-square, regression or Bayesian model. It always reports the size of the effect, not only the p-value, and can work out how many participants you need. It needs Python with scientific packages.
+when:
+  - You have two or three groups of results and are unsure which test fits.
+  - A journal asks for effect sizes and assumption checks, not just p-values.
+  - You need to know how many participants a study requires.
+  - You want a methods and results paragraph written in APA format.
+you_give:
+  - Your data file or a description of it
+  - The research question
+  - The study design
+  - The alpha level you use (optional)
+you_get:
+  - A test recommendation with reasons
+  - Assumption check results
+  - Effect sizes with confidence intervals
+  - A power or sample size estimate
+  - APA-style results text
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it a product or feature. Get a blunt review on focus, simplicity a
 job: design-work
 headline: Ruthless simplicity reviewer
 subhead: Give it a product or feature. Get a blunt review on focus, simplicity and end-to-end quality, with what to cut.
+explain: |
+  A blunt review of your product or feature that says what to cut and what to fix, with a score out of ten. It judges your work the way Steve Jobs ran product reviews: start with the customer, then subtract.
+
+  A quick diagnostic checks seven things and counts passes. Seven is a ten, six is a nine, and two or fewer is a three or lower. Areas include simplicity, focus, what you refuse to do, whether the whole experience works from first run to daily use, and whether it demos well. It asks if a need was designed away or just hidden. You get the failed checks and the cuts needed to reach ten.
+when:
+  - Your product feels too complicated and you cannot say why.
+  - You must decide which features to cut from a roadmap.
+  - You want an honest answer to whether a feature is good enough to ship.
+  - You need to test a first-run flow before launch.
+you_give:
+  - A description, screenshots or link to the product or feature
+  - Who the customer is
+  - Your current feature list or roadmap (optional)
+you_get:
+  - A score out of ten
+  - The checks that failed
+  - A list of what to cut
+  - Specific fixes to reach ten
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

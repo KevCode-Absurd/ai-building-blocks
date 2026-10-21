@@ -6,6 +6,25 @@ summary: Get products that sit in no collection, and ones stuffed into too many,
 job: run-your-store
 headline: Orphan product finder
 subhead: Get products that sit in no collection, and ones stuffed into too many, so shoppers can find everything.
+explain: |
+  A list of products that no shopper can find through your menus, and a list of products crammed into too many collections. Fixing both makes your catalogue easier to browse.
+
+  The skill scans your Shopify products, active by default, and counts the collections each one sits in. Zero means it is an orphan, invisible in navigation. Above your limit, set at 10 by default, it is flagged as over-collected and likely adds clutter. It then pulls collection names and sizes so the report is readable. It only reads data and changes nothing. You choose whether to scan active, draft or all products. Needs a signed-in Shopify CLI session with product read access.
+when:
+  - You added products but forgot to place them in collections.
+  - Your menu feels messy and some items seem lost.
+  - You are tidying the catalogue before a sale.
+  - You suspect a few products appear in too many places.
+you_give:
+  - Store domain
+  - Collection limit (optional)
+  - Product status to scan (optional)
+  - Readable or JSON output (optional)
+you_get:
+  - Products in no collection
+  - Products in too many collections
+  - Collection names and sizes
+  - A report you can act on
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

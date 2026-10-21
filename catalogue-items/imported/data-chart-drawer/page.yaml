@@ -6,6 +6,25 @@ summary: Give it your data. Get a clean chart with the right chart type, as an i
 job: track-numbers
 headline: Data chart drawer
 subhead: Give it your data. Get a clean chart with the right chart type, as an image or an interactive plot.
+explain: |
+  A clear chart that fits your data and your reader, saved as an image or an interactive plot. It picks the chart type for you if you are not sure which fits.
+
+  You share the data as a file, pasted rows or query results, and say what the chart is for: a report, a slide or exploring. The skill loads it into a table, tidies types and gaps, and chooses between line, bar, scatter and others based on what you are comparing. It then builds the chart in Python with readable labels, sensible axes and accurate scales, and adjusts to the audience. You can ask for edits in plain words. It needs Python with a plotting library installed.
+when:
+  - You have a spreadsheet and need a chart for a slide by tomorrow.
+  - You do not know whether a line or bar chart fits your data.
+  - You want an interactive plot someone can hover over.
+  - Your current chart looks cluttered and needs to be cleaner.
+you_give:
+  - Your data, file or pasted rows
+  - What you want to show
+  - Chart type (optional)
+  - Who will see it (optional)
+you_get:
+  - Chart image or interactive plot
+  - Chart type recommendation
+  - The code that made it
+  - Edits on request
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

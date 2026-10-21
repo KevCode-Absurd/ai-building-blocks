@@ -6,6 +6,25 @@ summary: Give it your brand details. Get markup added so AI can confirm your sto
 job: build-websites
 headline: Brand identity markup adder
 subhead: Give it your brand details. Get markup added so AI can confirm your store is a real brand. Changes your live theme.
+explain: |
+  Add machine-readable brand details to your Shopify store so AI shopping assistants can confirm you are the real brand, not a copy or reseller. This changes your live theme, so it previews first.
+
+  The skill builds an Organization JSON-LD block from your shop data. It includes your official social profiles and public pages such as Wikipedia, plus a contact point. It then places the block in your theme. The preview mode is on by default and shows the snippet and where it will go before anything is written. You need a logged-in Shopify CLI session with theme read and write access.
+when:
+  - AI assistants don't recommend your store with confidence.
+  - Resellers or copycats use your brand name.
+  - You want your social and public profiles linked to your site.
+  - You need a contact point that machines can read.
+you_give:
+  - Your store domain
+  - Logo URL (optional)
+  - Official social and public page links
+  - A logged-in Shopify CLI session with theme access
+you_get:
+  - An Organization JSON-LD snippet
+  - A preview of the theme change
+  - The snippet added to your theme
+  - A check that it reads correctly
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

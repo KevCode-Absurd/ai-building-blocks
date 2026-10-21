@@ -6,6 +6,25 @@ summary: Give it a slow site. Get fixes for network, loading and rendering, rank
 job: build-websites
 headline: Web page speed tuner
 subhead: Give it a slow site. Get fixes for network, loading and rendering, ranked by gain. Uses High Performance Browser Networking.
+explain: |
+  A ranked list of fixes that make your slow site faster, starting with the ones that gain the most. It is grounded in one idea: delay, not bandwidth, is what slows most pages.
+
+  You give the site and what feels slow. The skill looks at the path a request takes: DNS lookup, connection, secure handshake, then the data. It checks protocol versions, caching, compression and the order resources load in. It looks at what blocks the first paint, image size, fonts and scripts. It then checks eight items and scores them, weighted toward real-user measures like load time and layout shifts. Each fix comes with the reason it helps.
+when:
+  - Pages take several seconds to show up.
+  - Your speed score is poor and you do not know why.
+  - You want to get faster on mobile networks.
+  - You are choosing between many small fixes and need an order.
+you_give:
+  - Your site address or code
+  - Speed test results or numbers (optional)
+  - Your hosting and tools (optional)
+  - Pages that matter most
+you_get:
+  - A ranked list of fixes with expected gain
+  - Changes for network, loading and rendering
+  - A score on eight checks
+  - Config or code changes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

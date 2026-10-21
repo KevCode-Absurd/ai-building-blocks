@@ -6,6 +6,25 @@ summary: Point it at your repo. Get a short, checked AGENTS.md with real command
 job: set-up-ai
 headline: Agent instructions auditor
 subhead: Point it at your repo. Get a short, checked AGENTS.md with real commands and no guesses.
+explain: |
+  A short AGENTS.md for your code project where every command was checked and nothing was guessed. Your AI coding tool reads this file first, so a wrong line costs you on every task.
+
+  The skill reads what is already there: your readme, config files, build scripts, test setup and CI workflows. It also reads other agent files such as CLAUDE.md so rules do not clash. Then it makes small edits to the file you have instead of rewriting it, and keeps the maintainers' own rules. For a big repo with many packages, it writes one root file plus narrower files for each package. Stale, repeated or unsupported lines are cut.
+when:
+  - Your AGENTS.md has commands that no longer work.
+  - You are adding AI coding help to a repo for the first time.
+  - A repo holds several packages and each needs its own rules.
+  - You have both AGENTS.md and CLAUDE.md and they disagree.
+you_give:
+  - Your code repository
+  - Any existing AGENTS.md or CLAUDE.md
+  - Rules you want kept (optional)
+  - Parts of the repo that are off limits (optional)
+you_get:
+  - A short, checked AGENTS.md
+  - A list of commands confirmed from your own files
+  - Notes on lines removed or fixed
+  - Narrower files for sub-folders if needed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

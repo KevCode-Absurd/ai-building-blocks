@@ -6,6 +6,25 @@ summary: Name what your visitors want to work out. Get a calculator design that 
 job: build-websites
 headline: Online calculator designer
 subhead: Name what your visitors want to work out. Get a calculator design that gives a real answer and gathers leads fairly.
+explain: |
+  A calculator design that gives visitors a real answer they can defend to their boss, and still brings in good leads. Many calculators are bait: made-up multipliers and the result hidden behind a form. This one earns trust instead.
+
+  The skill first decides if a calculator is the right tool for your audience. Then it designs the inputs, keeps the questions few, and shows the method so the result can be questioned. It sets out a fair trade. People get a useful result first, and a deeper report can sit behind an email address. It cites sources for any benchmark numbers. It also suggests how to judge lead quality from the answers people give.
+when:
+  - You want an ROI or savings calculator on your site.
+  - Your current calculator gets entries but the leads are poor.
+  - People distrust your numbers and ask where they come from.
+  - You need a spec to give to a developer.
+you_give:
+  - What decision your visitors want help with
+  - The formula or data behind the answer
+  - Who the audience is
+  - What you want from the lead
+you_get:
+  - A calculator design with inputs and outputs
+  - A plain-language method note
+  - A fair plan for what is free and what needs an email
+  - Lead qualifying signals
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a site and the data you want. Get a checked script and a clean 
 job: build-software
 headline: Data extraction pipeline builder
 subhead: Give it a site and the data you want. Get a checked script and a clean data file. Collects data from websites.
+explain: |
+  Get a script that pulls data from a website, document or API into a clean CSV or JSON file, with a check that the result is not empty or broken. It avoids fragile one off scripts.
+
+  The skill first decides the route and tells you why: Firecrawl for dynamic or large public sites, local Python for private files or simple pages, or both together. It estimates quota and token costs before big jobs. Multi page jobs save progress so a crash does not lose work. Every result goes through a validator that fails on empty or malformed output. Firecrawl needs your own API key, stored as an environment variable. Check that the site allows scraping.
+when:
+  - You need a table of products or listings from a site.
+  - You have a folder of PDFs and need the numbers pulled into a spreadsheet.
+  - A site loads with JavaScript and a simple scraper returns nothing.
+  - You want a reusable script instead of copy and paste.
+you_give:
+  - The site, file or API address
+  - The fields you want
+  - Output format (optional)
+  - A Firecrawl key if used (optional)
+you_get:
+  - Extraction script
+  - Clean CSV or JSON file
+  - Validation result
+  - Cost and quota estimate
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

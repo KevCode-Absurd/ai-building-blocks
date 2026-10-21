@@ -6,6 +6,26 @@ summary: Say what you sell. Get ways to get customers posting, a creator brief a
 job: grow-social
 headline: Customer content planner
 subhead: Say what you sell. Get ways to get customers posting, a creator brief and ideas to reuse their posts in ads.
+explain: |
+  Customer posts sell better than brand posts, and this shows you how to get more of them. Say what you sell and who buys it, and you get a plan for getting customers to post, plus a creator brief and ways to reuse their content in ads.
+
+  It asks about your current customer posts, goals, channels, budget and any legal limits. Then it sets out the types of customer content, ways to ask for it, and contest or review ideas. It writes a brief you can send to creators, covers rights and permission, and shows how to turn posts into paid ads for Meta and TikTok. It reads your brand notes first if you have them.
+when:
+  - Your customers love your product but never post about it.
+  - You want review volume to go up on Google or Trustpilot.
+  - You need a brief to hand to a creator you plan to pay.
+  - You want to turn real customer videos into ads.
+you_give:
+  - What you sell and who buys it
+  - Your channels and budget
+  - Any brand notes or voice guide (optional)
+  - Legal limits such as health claims (optional)
+you_get:
+  - A customer content plan
+  - A creator brief
+  - Contest or incentive ideas
+  - Rights and permission steps
+  - A plan to reuse posts in ads
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

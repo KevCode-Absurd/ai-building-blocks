@@ -6,6 +6,23 @@ summary: Give it a blurry clothing photo and a sharp product photo. Get clear, b
 job: product-photos
 headline: Fabric texture fixer
 subhead: Give it a blurry clothing photo and a sharp product photo. Get clear, believable fabric. Your image model redraws it.
+explain: |
+  A blurry garment photo repaired so the fabric looks real and sharp, while the model, pose and layout stay untouched. Knits that turned to mush when zoomed in get their texture back.
+
+  You give two images: the photo to fix, and a clear product photo of the same item that shows the true fabric. The skill writes a prompt telling the image model to rebuild the surface from the clear photo: cable ridges, jacquard relief, fibre fuzz and the dark folds. Faces, hair and background are left alone. It is a finishing pass for AI-made or low quality fashion images, and it uses the dlazy command line tool with credits.
+when:
+  - Your AI-generated clothing photo looks fine small and mushy when zoomed.
+  - A supplier image shows the garment but the fabric is blurred.
+  - You have a sharp flat-lay and want the on-model shot to match.
+  - You need a finishing pass before a product page goes live.
+you_give:
+  - The blurry garment photo
+  - A clear product photo of the same item
+  - dlazy tool and credits
+you_get:
+  - Enhanced image with clear fabric texture
+  - Same model, pose and background
+  - Prompt used for repeat runs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

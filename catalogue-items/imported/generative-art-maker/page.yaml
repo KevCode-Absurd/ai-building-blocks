@@ -6,6 +6,25 @@ summary: Describe the look you want. Get an interactive generative art piece you
 job: make-images
 headline: Generative art maker
 subhead: Describe the look you want. Get an interactive generative art piece you can tweak and repeat.
+explain: |
+  A piece of generative art you can open in a browser, change and reproduce. Describe the mood or look you want, and the skill first writes a short manifesto for an art movement that fits it. Then it turns that idea into code.
+
+  The code is a p5.js sketch built mostly from rules, such as noise fields, particles, flows and forces, with only a few parameters exposed. Seeded randomness means you can get the same image again, or step through variations on purpose. The result is an HTML viewer plus a JavaScript file. You can run it locally with no account or paid service.
+when:
+  - You want a one-off visual for a site header or a print.
+  - You like a certain mood and want art that expresses it with code.
+  - You want a piece you can tweak with sliders and seeds.
+  - You need unique art that changes each time it loads.
+you_give:
+  - A description of the mood or look
+  - Colours or themes to use (optional)
+  - A seed or variation count (optional)
+  - Output size (optional)
+you_get:
+  - A short written art philosophy
+  - An interactive HTML viewer
+  - A p5.js sketch file
+  - Seeds to repeat any result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

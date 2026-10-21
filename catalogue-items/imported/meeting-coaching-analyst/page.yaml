@@ -6,6 +6,24 @@ summary: Give it a meeting transcript. Get speaking patterns, habits that hurt a
 job: organise-work
 headline: Meeting coaching analyst
 subhead: Give it a meeting transcript. Get speaking patterns, habits that hurt and coaching you can act on.
+explain: |
+  Honest feedback on how you come across in meetings, based on what you actually said. Give it a folder of transcripts and you get numbers and examples, not general advice.
+
+  It reads common transcript formats, such as VTT, SRT, text, Word and JSON exports from note-taking apps, and puts them into one shape. Then it measures talk share, turns, long monologues and interruptions. It scans your own speech for hedging and avoidance, and flags patterns like talking over 60 percent of a group meeting, or someone who never speaks. If timestamps are missing, it skips the timing checks and still does the text checks. You confirm scope first.
+when:
+  - You want to know if you talk too much in team meetings.
+  - You lead a call and suspect quiet people are being shut out.
+  - You want to catch hedging words that weaken your points.
+  - You have a month of recordings and want to see trends across them.
+you_give:
+  - Meeting transcripts in a folder
+  - Your name or speaker label
+  - Which meetings to include (optional)
+you_get:
+  - A table of each speaker's share and turns
+  - Flags for interruptions and long monologues
+  - Examples of hedging and indirect phrasing
+  - Coaching points tied to quotes from the call
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

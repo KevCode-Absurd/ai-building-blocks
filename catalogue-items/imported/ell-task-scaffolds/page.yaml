@@ -6,6 +6,25 @@ summary: Give it a task. Get a version with language help added that keeps the t
 job: teach-and-train
 headline: Task scaffold adder for language learners
 subhead: Give it a task. Get a version with language help added that keeps the thinking just as hard.
+explain: |
+  Your task, changed so a student still learning English can do it, without making the thinking easier. Give the task and the target level, and you get a version with language support built in.
+
+  The skill follows Gibbons' rule that scaffolding should challenge, not water down. It first states the learning goal, from you or inferred from the task. It then adds supports such as word banks, sentence starters, visuals, models, partner talk and chunked steps at the level you name. The thinking stays as hard as in the original. You add the subject and, if you can, the year group and the materials used.
+when:
+  - You set an essay and a new-to-English student cannot start.
+  - You do not want to give some students an easier task.
+  - You need supports for one level, such as early acquisition.
+  - You want a model answer or word bank for a task.
+you_give:
+  - The original task
+  - Target English level
+  - Subject
+  - Learning goal and materials (optional)
+you_get:
+  - A scaffolded version of the task
+  - Word banks and sentence starters
+  - Chunked steps
+  - A note on what thinking is kept
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it your supplier deals. Get a renewal calendar, terms to push for 
 job: check-contracts
 headline: Supplier contract manager
 subhead: Give it your supplier deals. Get a renewal calendar, terms to push for and a way to track broken promises.
+explain: |
+  Your supplier deals tracked in one place, with the renewal dates, the terms worth pushing for and a way to catch missed promises. You stop finding out about an auto-renewal after it has happened.
+
+  The skill sets up a contract lifecycle from draft to renewal. It prepares you for negotiation by comparing pricing models and key terms, adds service levels with penalty structures, and tracks each obligation with upcoming and overdue checks. It also monitors spend against what was agreed, and offers a renewal decision framework. Python examples are included for the tracking and analysis.
+when:
+  - You have a dozen supplier contracts and no renewal calendar.
+  - A renewal is due and you want to know what to ask for.
+  - A supplier keeps missing delivery targets and you need evidence.
+  - You want to see spend against contract terms.
+you_give:
+  - Your supplier contracts or key terms
+  - Renewal dates
+  - Performance or spend data (optional)
+  - Your negotiation goals (optional)
+you_get:
+  - A renewal calendar
+  - Terms to negotiate
+  - Service level targets with penalties
+  - An obligation tracker with overdue flags
+  - A renew or exit recommendation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

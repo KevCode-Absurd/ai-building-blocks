@@ -6,6 +6,26 @@ summary: Give it a topic you find hard to teach. Get common mistakes and the bes
 job: teach-and-train
 headline: Hard topic teaching guide
 subhead: Give it a topic you find hard to teach. Get common mistakes and the best ways to explain it.
+explain: |
+  A topic guide for the lesson you feel least ready to teach. Knowing a subject is one thing. Knowing where learners get stuck, and which example clears it up, is another skill, and it is the one this guide builds.
+
+  You name the topic, the age group and your own background. The skill then maps the mistakes learners commonly make, why they make them, and what each mistake tells you. It suggests the best analogies, models, examples and demonstrations, and explains which suits which type of confusion. It also checks your likely strengths and gaps with this topic, based on your training. The ideas come from research on pedagogical content knowledge, in plain language.
+when:
+  - You are teaching a topic outside your main subject and feel unsure.
+  - Students keep making the same mistake and you are not sure how to fix it.
+  - You want better examples for a concept that never lands.
+  - You are preparing a new unit and want to plan for confusion before it happens.
+you_give:
+  - The topic or unit you will teach
+  - The age group or year
+  - Your background with this topic
+  - Mistakes you already see (optional)
+  - Your curriculum framework (optional)
+you_get:
+  - A list of common learner mistakes and causes
+  - Best examples, models and analogies
+  - A read on your likely strengths and gaps
+  - Questions to check understanding mid-lesson
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

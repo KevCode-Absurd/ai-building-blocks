@@ -6,6 +6,25 @@ summary: Give it interviews, surveys or tickets. Get themes ranked by how often 
 job: understand-customers
 headline: Research theme synthesizer
 subhead: Give it interviews, surveys or tickets. Get themes ranked by how often they come up, with quotes.
+explain: |
+  The themes in your interviews, surveys or support tickets, ranked by how often they come up and backed by real quotes. You stop reading piles of notes and start seeing the pattern.
+
+  You give it any mix of notes, transcripts, survey answers and feedback, and say what decision the work informs. It reads everything, groups similar comments into themes and counts how many sources mention each. For every theme you get supporting quotes and a note on how strong the evidence is. It then turns the themes into recommendations tied to your question. If your tools are connected, it can pull tickets, usage data and meeting notes itself.
+when:
+  - You ran ten user interviews and need the main findings.
+  - A survey has hundreds of open answers to sort.
+  - Support tickets keep raising problems and you need the top ones.
+  - You must show your team evidence behind a product decision.
+you_give:
+  - Notes, transcripts, survey answers or tickets
+  - The question or decision this informs
+  - Number of participants (optional)
+  - Connected tools for extra data (optional)
+you_get:
+  - Themes ranked by frequency
+  - Supporting quotes for each theme
+  - Evidence strength notes
+  - Recommendations tied to your question
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

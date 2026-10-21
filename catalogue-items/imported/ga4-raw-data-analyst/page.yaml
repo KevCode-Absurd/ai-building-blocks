@@ -6,6 +6,25 @@ summary: Point it at your GA4 export in BigQuery. Get sessions, channels and sig
 job: track-numbers
 headline: GA4 raw data analyst
 subhead: Point it at your GA4 export in BigQuery. Get sessions, channels and sign-ups, plus why they differ from the GA4 screen.
+explain: |
+  Your GA4 numbers finally match what you can trace. Sessions, channels and sign-ups come straight from the raw daily export in BigQuery, with a clear note on why they differ from the GA4 screen.
+
+  It starts by fixing the boundary: which dataset, which dates, which events count as a key event. Then it checks the table layout before it writes a single query. Ready-made SQL covers sessions, channels, landing pages, traffic source checks, ecommerce and a screen reconciliation. Every query is shown first, with a cost estimate and a byte cap. Late events are flagged, since daily tables can still change for a few days.
+when:
+  - Your GA4 report and your own sign-up count do not agree and you need to know why.
+  - You want sessions by channel from raw export tables instead of the GA4 screen.
+  - You need landing page and UTM checks for a set of dates.
+  - You want purchase or lead events counted the same way every month.
+you_give:
+  - Access to your GA4 BigQuery export
+  - Dataset name and billing project
+  - Date range to cover
+  - List of key events (optional)
+you_get:
+  - Session and channel tables from raw events
+  - Landing page and source comparison
+  - Key event and ecommerce counts
+  - A note explaining gaps against the GA4 screen
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

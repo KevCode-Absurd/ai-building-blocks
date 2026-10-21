@@ -6,6 +6,26 @@ summary: Give a topic and angle. Get a LinkedIn post built on a tested opening l
 job: grow-social
 headline: LinkedIn hook post writer
 subhead: Give a topic and angle. Get a LinkedIn post built on a tested opening line for your goal.
+explain: |
+  A LinkedIn post that opens with a line chosen for what you want it to do: draw comments, reposts, likes or saves. You pick the goal first and the opening follows.
+
+  The skill holds 16 tested opening formulas, each matched to an engagement goal. You give it a topic, an angle and who you are talking to. It selects a formula, drafts the post with current formatting rules, such as keeping the hook above the fold. Then it scrubs wording that sounds machine-written and hands you the result. It warns against picking a hook just because its raw reach number is bigger.
+when:
+  - You have a story but your first line is weak.
+  - You want more comments, not just views.
+  - Your drafts sound like every other AI post.
+  - You need a post ready within ten minutes.
+you_give:
+  - Your topic
+  - Your angle or point of view
+  - "Your main goal: comments, reposts, likes or saves"
+  - Your audience (optional)
+  - Real facts or numbers you can use (optional)
+you_get:
+  - A drafted post
+  - The opening formula used and why
+  - Formatting set for the feed
+  - A cleaned version without AI tells
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

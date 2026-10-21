@@ -6,6 +6,24 @@ summary: Give your business facts and country. Get a draft privacy policy, terms
 job: check-contracts
 headline: Policy page drafter
 subhead: Give your business facts and country. Get a draft privacy policy, terms or cookie notice to send to a lawyer.
+explain: |
+  A first draft of your privacy policy, terms of service or cookie notice, built from the facts of your actual business and ready to hand to a lawyer. The draft matches what you really collect, not a generic template.
+
+  The skill asks for your country, who your users are, what data you gather, why, who receives it, how long you keep it and how people can contact you. It then writes each page to fit the laws that apply, such as GDPR, CCPA or COPPA, and marks gaps it cannot fill. It never claims to certify compliance, so a qualified person must review the result.
+when:
+  - You are launching a site and need a privacy policy before going live.
+  - You added analytics or ads and your cookie notice is missing.
+  - You sell to children or to EU visitors and need extra wording.
+  - Your terms of service are copied from another company and don't fit.
+you_give:
+  - Business description and country
+  - List of data you collect and why
+  - Tools and vendors that receive data
+  - Whether you serve children or EU users
+you_get:
+  - Draft privacy policy
+  - Draft terms of service or cookie notice
+  - List of open questions for your lawyer
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

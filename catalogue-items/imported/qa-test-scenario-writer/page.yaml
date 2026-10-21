@@ -6,6 +6,24 @@ summary: Paste your user stories. Get test scenarios with starting state, steps 
 job: test-and-fix-code
 headline: QA test scenario writer
 subhead: Paste your user stories. Get test scenarios with starting state, steps and the result to expect.
+explain: |
+  A set of test scenarios you can hand straight to a tester, one per user story. Each one says what is being checked, what must be true before you start, who does it, the steps, and what you should see after each step.
+
+  You give it the product name, the story with its acceptance criteria, and any limits on testing. It states the test goal first, then sets up the starting data and roles. It writes the steps in order with one expected result each. It then adds edge cases such as bad input and values at the limit, so the happy path is not the only one covered.
+when:
+  - You have a user story and need test cases before the feature goes out.
+  - You are writing an acceptance test plan for a release.
+  - A tester asks what exactly to click and what should happen.
+  - You want edge cases listed that nobody has thought of yet.
+you_give:
+  - Product or system name
+  - User story with acceptance criteria
+  - Testing limits or context (optional)
+you_get:
+  - Test objective for each story
+  - Starting conditions and user roles
+  - Numbered steps with expected results
+  - List of edge cases to try
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

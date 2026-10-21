@@ -6,6 +6,24 @@ summary: Give it a training script. Get an experiment that sweeps settings, set 
 job: build-software
 headline: Training experiment setup helper
 subhead: Give it a training script. Get an experiment that sweeps settings, set up in MATLAB and kept in sync.
+explain: |
+  Instead of changing settings by hand and rerunning, you get a MATLAB experiment that sweeps them for you. Your training script becomes a set of runs you can compare, and the Experiment Manager screen updates as you edit.
+
+  You give it a script or a plain description. It reads the code, finds the settings worth varying, and builds the experiment with the right strategy and parameter values. You can then add, rename, duplicate, edit or delete experiments, and the tree and editor in the app change live without a restart. It only manages the experiment itself. It does not run, analyse or export results. You need MATLAB and Experiment Manager.
+when:
+  - You have a training script and want to try ten learning rates.
+  - You want to edit sweep values and see the app update right away.
+  - You need to rename or copy an experiment without breaking it.
+  - You are not sure how to describe a parameter sweep in Experiment Manager.
+you_give:
+  - Your training script or a description of it
+  - Which settings to sweep and their values
+  - The experiment name you want (optional)
+you_get:
+  - A new Experiment Manager experiment
+  - Parameter values set from your code
+  - Live edits shown in the app
+  - Answers about the strategy and settings
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

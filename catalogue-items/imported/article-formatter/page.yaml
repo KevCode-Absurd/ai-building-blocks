@@ -6,6 +6,24 @@ summary: Give it plain text or rough markdown. Get a tidy article with title, su
 job: work-with-files
 headline: Article formatter
 subhead: Give it plain text or rough markdown. Get a tidy article with title, summary, headings and lists, same words.
+explain: |
+  A messy draft turned into a clean, easy-to-scan article with title, summary, headings, bold key points, lists and code blocks. The words stay yours: it formats and fixes obvious typos only.
+
+  The skill takes plain text or rough markdown, offers title and summary options, then adds the structure that helps a reader find the main points quickly. It writes the result to a new file named with -formatted, so the original is safe. A small script handles quotes and spacing between Chinese and English text. You can save preferences in a settings file to skip the title and summary choice. It needs Bun or npx to run the script.
+when:
+  - You pasted a long draft with no headings.
+  - You want a summary and title options before publishing.
+  - Your article mixes Chinese and English and spacing is off.
+  - You need the original kept and a tidy copy saved alongside.
+you_give:
+  - Plain text or a markdown file
+  - Title or summary preferences (optional)
+  - Bun or npx installed
+you_get:
+  - A formatted markdown file
+  - Title and summary options
+  - Headings, bold points and lists
+  - The original left unchanged
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it support questions and product docs. Get clear, searchable help 
 job: write-and-tell-stories
 headline: Help article writer
 subhead: Give it support questions and product docs. Get clear, searchable help center articles and FAQs.
+explain: |
+  Help center articles written so customers can solve a problem without opening a ticket. Start with your support data and product notes. The skill finds which questions come up most, then writes an article for each one that matches the words customers actually search for.
+
+  Each article follows the same layout: an action-based title, a one or two sentence answer up top, what the reader needs first, numbered steps with one action each, fixes for common errors, and links to related articles. It checks the steps against the real product text and menu paths, suggests where screenshots and code samples belong, and adds alt text. FAQ entries are shorter versions of the same idea.
+when:
+  - The same support question keeps arriving in your inbox.
+  - You launched a feature and need documentation fast.
+  - Your help center is hard to search and out of date.
+  - You want FAQ entries drawn from real ticket patterns.
+you_give:
+  - Common support questions or ticket themes
+  - Product docs or notes on the feature
+  - Exact button and menu names
+  - Plan limits or permissions that apply (optional)
+you_get:
+  - Step by step help articles
+  - Short FAQ entries
+  - Troubleshooting sections for common errors
+  - Search-friendly titles and related links
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

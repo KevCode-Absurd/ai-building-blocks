@@ -6,6 +6,26 @@ summary: Name a spend category. Get a sourcing plan with supplier list, quote re
 job: plan-supply-chain
 headline: Sourcing plan builder
 subhead: Name a spend category. Get a sourcing plan with supplier list, quote request, scoring rules and negotiation levers.
+explain: |
+  A full sourcing plan for one spend category, with supplier list, quote request, scoring rules and negotiation tactics. Name the category, its yearly spend, how important it is and who supplies it today.
+
+  The skill follows seven steps: profile the category, study the supply market, set the strategy, find suppliers, pick one, negotiate, then roll out. It places the category on the Kraljic grid to decide how hard to push suppliers. It lists ways to save such as bundling volume, changing specs and adding competition, and it covers should-cost thinking.
+when:
+  - You are about to re-bid a big category such as packaging or software.
+  - You want to know how much pull you have with your suppliers.
+  - You need a supplier shortlist and a quote request in one go.
+  - You are preparing for a price negotiation and want levers ready.
+you_give:
+  - The spend category
+  - Yearly spend and volume
+  - Current suppliers and contract terms
+  - Business goals such as cost, risk or quality (optional)
+you_get:
+  - A seven-step sourcing plan
+  - A category position on the Kraljic grid
+  - A supplier long list
+  - Quote request and scoring rules
+  - Negotiation tactics
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Name your model and computer. Get it running on a Mac, a plain CPU or a
 job: build-software
 headline: Local model runner for laptops
 subhead: Name your model and computer. Get it running on a Mac, a plain CPU or a non-NVIDIA graphics card.
+explain: |
+  An AI model running on a Mac, a plain CPU or a non-Nvidia graphics card, with no CUDA needed. Name the model and your computer and get the commands that start it.
+
+  It uses llama.cpp, which runs compact GGUF models from 1.5 to 8 bits. It builds for Apple Metal, AMD ROCm or plain CPU, then downloads or converts the model. You can chat in the terminal or start a server that speaks the OpenAI style, so existing apps can connect. On a CPU it can run four to ten times faster than standard PyTorch. It explains the quantization formats so you pick one that fits your memory.
+when:
+  - You have an M-series Mac and want a local model.
+  - Your graphics card is AMD or Intel.
+  - You want a local server your apps can call.
+  - You are deploying to a machine with no GPU.
+you_give:
+  - The model name
+  - Your computer and its memory
+  - Operating system
+  - Whether you want chat or a server
+you_get:
+  - Install and build commands
+  - A model download or conversion step
+  - A chat command
+  - A server command and test request
+  - A quantization choice that fits
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

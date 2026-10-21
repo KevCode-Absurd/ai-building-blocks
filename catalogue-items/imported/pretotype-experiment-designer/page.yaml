@@ -6,6 +6,25 @@ summary: Give it a new product idea. Get cheap tests like landing pages and pre-
 job: test-an-idea
 headline: Pretotype experiment designer
 subhead: Give it a new product idea. Get cheap tests like landing pages and pre-orders, each with a clear pass mark.
+explain: |
+  Cheap tests for a new product idea, each with a clear pass mark, so you learn if people want it before you build it.
+
+  The skill turns your idea into an XYZ hypothesis: at least X percent of Y will do Z. It then suggests two or three low-effort tests such as a landing page, an explainer video, an email campaign, a pre-order or waitlist, or doing the service by hand. It follows Alberto Savoia's rules: ask for real commitment, not opinions, and collect your own data rather than relying on market reports. Each test gets its measure and its pass line.
+when:
+  - You have an idea and no proof anyone wants it.
+  - You want to test demand this week without code.
+  - A pre-order would show real interest.
+  - You need a clear go or no-go rule before spending money.
+you_give:
+  - Product idea
+  - Target customers
+  - Budget and time for tests
+  - Any research you have (optional)
+you_get:
+  - XYZ hypothesis
+  - Two or three test designs
+  - Metric and pass mark for each
+  - Skin-in-the-game ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

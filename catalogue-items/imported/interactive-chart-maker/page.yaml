@@ -6,6 +6,25 @@ summary: Give it your data. Get an interactive Plotly chart with hover, zoom and
 job: work-with-files
 headline: Interactive chart maker
 subhead: Give it your data. Get an interactive Plotly chart with hover, zoom and pan that you can embed in a page.
+explain: |
+  A chart you can hover, zoom and pan, saved so you can drop it into a web page, report or dashboard. Give it your data and get Plotly code for it. It needs Python and the Plotly package.
+
+  The skill helps you choose between the fast high-level interface and the finer-control one for the same chart. It covers more than forty chart types, from lines and bars to maps and 3D. It shows setup with a data table, how to add titles, labels and colours, and how to export the result as a standalone HTML file or an image. It suits notebooks, dashboards and presentations where people need to explore numbers.
+when:
+  - You have a CSV and want a chart people can explore.
+  - You need a graph to embed in a web page.
+  - Your notebook charts are flat and hard to read.
+  - You are choosing between simple and detailed chart control.
+  - You want one file you can email that still works.
+you_give:
+  - Your data as a table or file
+  - The chart type or question to answer (optional)
+  - Titles, colours or labels you want (optional)
+you_get:
+  - Python code for the chart
+  - An interactive chart with hover, zoom and pan
+  - An HTML file to embed
+  - Install steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

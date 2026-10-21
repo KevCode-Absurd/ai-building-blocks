@@ -6,6 +6,25 @@ summary: Give it your audience. Get a map of who they are and want to be, plus c
 job: understand-customers
 headline: Customer identity messaging mapper
 subhead: Give it your audience. Get a map of who they are and want to be, plus copy that reflects it.
+explain: |
+  People respond to messages that match who they are and who they want to be. Give it your audience and you get a map of their current self-image and their aspired identity, then copy that reflects both without sounding fake.
+
+  It works in steps. First it states how the customer sees themselves now. Then who they want to become. It rates the gap as small, medium or large, because a message that feels out of reach makes people defensive. Then it rewrites your copy so your brand reflects the identity back in believable words. It asks you for the goal and any limits on culture or ethics. Research notes in it are ideas to test, not proof.
+when:
+  - Your copy is accurate but nobody feels it is about them.
+  - You are launching to a group with a strong identity, like runners or parents.
+  - You want headlines that speak to who the buyer is becoming.
+  - You are writing brand messaging for a new audience.
+you_give:
+  - A description of your target audience
+  - What the offer or message should do
+  - Existing copy to rewrite (optional)
+  - Limits on tone or ethics (optional)
+you_get:
+  - A current and aspired identity map
+  - An identity gap rating
+  - Language patterns that fit
+  - Rewritten copy
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

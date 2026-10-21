@@ -6,6 +6,25 @@ summary: Tell it the work. Get Linear issues read, created or updated for you.
 job: organise-work
 headline: Linear ticket manager
 subhead: Tell it the work. Get Linear issues read, created or updated for you.
+explain: |
+  Tell your AI what work needs tracking and it reads, creates or updates the Linear issues for you. No tab switching, no copying details by hand.
+
+  First it checks that the Linear connection is set up, and if not, walks you through adding it and logging in. Then it confirms your goal, such as triage or sprint planning, along with the team, project, priority, labels and due dates. It picks the right Linear tools and runs the calls in sensible batches. It checks IDs before changing anything. You need a Linear account and a one-time login.
+when:
+  - You just left a meeting and want its action items as tickets.
+  - You need to triage a pile of new issues quickly.
+  - You want to update many ticket statuses in one request.
+  - You are planning a sprint and want the backlog read back to you.
+you_give:
+  - The work to create or change
+  - Team and project
+  - Priority, labels and due dates (optional)
+  - A Linear account and login
+you_get:
+  - New Linear issues
+  - Updated tickets
+  - A summary of issues you asked about
+  - Setup steps for the Linear connection
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

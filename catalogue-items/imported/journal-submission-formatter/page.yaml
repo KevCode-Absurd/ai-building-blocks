@@ -6,6 +6,25 @@ summary: Name the journal or conference. Get its template, current page and anon
 job: research-topics
 headline: Journal submission formatter
 subhead: Name the journal or conference. Get its template, current page and anonymity rules checked, and your paper fitted to them.
+explain: |
+  Your paper fitted to the rules of the venue you are sending it to, with those rules checked at the source. Name the journal or conference, the year, the track and the stage: first submission, revision or final copy. The skill finds the official author instructions and records the page, date checked, page limit, anonymity rules, required sections and citation style.
+
+  It will not guess a style file by changing the year on an old name. It offers LaTeX starting points for common document types and clearly labels them as generic, not official. It can also inspect a PDF for page count and fonts, and it covers funding proposals and posters. Reviewer expectations shape the writing advice.
+when:
+  - You are submitting to a conference and the deadline is close.
+  - Your paper is over the page limit and you need to cut smartly.
+  - You must hide author details for blind review.
+  - You are writing a grant proposal and need the funder's format.
+you_give:
+  - The journal, conference or funder
+  - The year, track and submission stage
+  - Your draft paper or proposal
+  - Access to a LaTeX setup (optional)
+you_get:
+  - The official rules with source links and date checked
+  - A paper fitted to the format
+  - A page and font check on the PDF
+  - Writing tips for that venue's reviewers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it your test data. Get a split check, the result with a confidence
 job: track-numbers
 headline: A/B test verdict maker
 subhead: Give it your test data. Get a split check, the result with a confidence range, side effects and a ship call.
+explain: |
+  Your A/B test ends with a clear ship, don't ship or keep running call, backed by the numbers.
+
+  The skill confirms the test setup first: the question, who was split, the main metric and the guard metrics. Then it checks that traffic split the way it should, using a chi-square test. If the split is off, it stops, because the result cannot be trusted. Next it works out each version's rate with a 95 percent range, runs a z-test for rates or Welch's t-test for averages, and repeats the test on guard metrics. A drop in any guard metric blocks the launch. It finishes with the expected business impact and a filled-in report.
+when:
+  - Your test finished and your team needs a yes or no.
+  - The result looks positive but you doubt it is real.
+  - A test has run for weeks with no clear winner.
+  - You want to size a test before you start it.
+you_give:
+  - Your test plan or hypothesis
+  - Data with user ID, version and outcome
+  - The main metric and any guard metrics
+  - The planned traffic split
+you_get:
+  - A traffic split check
+  - Results with 95 percent ranges
+  - Guard metric checks
+  - A ship, stop or extend call
+  - A written test report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it meeting audio. Get a transcript by speaker, with a summary, dec
 job: organise-work
 headline: Meeting notes maker
 subhead: Give it meeting audio. Get a transcript by speaker, with a summary, decisions and action items.
+explain: |
+  Drop in a meeting recording and get back a transcript with each speaker named, plus a summary, the decisions made and the action items. You stop replaying audio to find who said what.
+
+  The recording is checked for format and size, cleaned of hum, clicks and echo, and levelled out. Speakers are told apart by voice. A speech-to-text tool such as Whisper or Deepgram then writes the words with timestamps. The result is grouped into topics, decisions, open questions and tasks. You choose Markdown, JSON or plain text, and can give speaker names and the main language. It needs a speech-to-text service to run.
+when:
+  - You recorded a sprint planning call and need a written record.
+  - You joined a long call and want only the decisions and tasks.
+  - You need a transcript with speaker names for a client file.
+  - Your team speaks a language other than English and needs notes in it.
+you_give:
+  - The meeting audio file
+  - Speaker names (optional)
+  - Main language
+  - Output format, such as Markdown or JSON
+you_get:
+  - A timestamped transcript by speaker
+  - A short summary
+  - A list of decisions
+  - Action items with owners
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

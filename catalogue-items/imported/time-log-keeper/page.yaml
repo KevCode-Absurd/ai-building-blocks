@@ -6,6 +6,24 @@ summary: Tell it what you did today in plain words. Get rows added to your Notio
 job: track-numbers
 headline: Time log keeper
 subhead: Tell it what you did today in plain words. Get rows added to your Notion time log, asking when unsure.
+explain: |
+  Tell it what you did today in plain words, such as "read papers 2h, gym 1h", and get tidy rows added to your Notion time log. No forms, no timers.
+
+  The skill finds your time ledger database in Notion, then turns each phrase into a row with the activity, minutes, date and a note. It maps words to categories like reading, coding, fitness or meetings, and converts hints like "an hour" or "all morning" into minutes. When something is unclear, such as a vague duration or which day you meant, it marks the row for confirmation and writes a question for you. You can also ask where your time went. It needs Notion connected.
+when:
+  - You want a time log but hate filling in forms.
+  - You spent the day in blocks and want to log it at once.
+  - You want a weekly look at where your hours went.
+  - You have a Notion database ready for time entries.
+you_give:
+  - A plain-language note of what you did
+  - Notion connected with a time ledger database
+  - The date, if not today (optional)
+you_get:
+  - New rows in your Notion log
+  - Category and minutes for each
+  - Flags where it was unsure
+  - A time review when you ask
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

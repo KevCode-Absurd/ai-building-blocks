@@ -6,6 +6,25 @@ summary: Ask what was said and where. Get the right messages, files and people f
 job: organise-work
 headline: Slack message finder
 subhead: Ask what was said and where. Get the right messages, files and people from your Slack, found with smart searches. Needs Slack.
+explain: |
+  The right Slack message, file or person, found without scrolling for an hour. You ask in plain words, like "what was decided about the launch date?", and the skill runs several searches and puts the answer together.
+
+  It starts broad, then narrows with filters such as channel, sender and date. If there are too few hits, it drops filters and tries other words. It splits big questions into smaller searches: the topic first, then who said what, then which channel. It picks between public search and search that includes private channels, which asks for your consent first. It can also look up channels and people. This needs Slack connected.
+when:
+  - You remember a decision was made but not where.
+  - You need a file someone shared months ago.
+  - You want to know who on the team handles a topic.
+  - You need context from several channels before you reply to a question.
+you_give:
+  - What you are trying to find
+  - A channel, person or date range you remember (optional)
+  - Slack connected to your AI
+  - Consent to search private channels (optional)
+you_get:
+  - The messages that answer your question
+  - Files and links that match
+  - Channels or people tied to the topic
+  - A short summary of what was said
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

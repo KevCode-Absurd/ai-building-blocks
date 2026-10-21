@@ -6,6 +6,26 @@ summary: Give it invoices and purchase orders. Get fields pulled out, matched, c
 job: track-numbers
 headline: Invoice checker
 subhead: Give it invoices and purchase orders. Get fields pulled out, matched, checked and coded to the right accounts.
+explain: |
+  Invoices that arrive as messy text and leave as clean, coded records. Paste an invoice or a batch, as text, OCR output or a CSV, and add your purchase orders if you have them. The skill identifies the document type, extracts every line with quantity, price and tax, and tests that the lines add up to the stated subtotal and total.
+
+  It matches the invoice to its purchase order on quantities and prices, scores the match, and assigns each line to a general ledger account. Problems are grouped by how serious they are, from blocking errors to notes. For a batch you get a summary of passed, failed and blocked invoices with the total value.
+when:
+  - Your inbox is full of vendor invoices to enter into the books.
+  - You need to know if an invoice matches what you ordered.
+  - You want line items coded to the right accounts without doing it by hand.
+  - You want a list of invoices to hold before paying.
+you_give:
+  - Invoice text, OCR output or a CSV
+  - Matching purchase orders (optional)
+  - Your account code list (optional)
+  - Vendor records (optional)
+you_get:
+  - Structured fields for each invoice
+  - A purchase order match result
+  - Account codes per line
+  - A flag list sorted by severity
+  - A batch summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

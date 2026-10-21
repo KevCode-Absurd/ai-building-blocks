@@ -6,6 +6,25 @@ summary: Describe your defense work and systems. Get your CMMC level, gaps and t
 job: check-contracts
 headline: Defense contractor security checker
 subhead: Describe your defense work and systems. Get your CMMC level, gaps and the plan papers an assessor expects.
+explain: |
+  Find out which CMMC level you need and how far your systems are from it. Describe your defense contracts and systems, and you get the level, a gap table by practice, and drafts of the papers an assessor will ask for.
+
+  It asks which level and contract type apply, then works through NIST SP 800-171 practices: status, evidence needed and gap notes. It drafts System Security Plan sections and a plan of action and milestones with owners and dates. It also covers scoping of controlled unclassified information and what you must pass to subcontractors. It notes the July 2026 suspension of Phase 2. This is guidance from an AI, so have a qualified assessor confirm it.
+when:
+  - You won a subcontract and the prime says you need CMMC.
+  - You must decide what counts as controlled information in your systems.
+  - An assessment is coming and you have no security plan written.
+  - You need a list of gaps with owners before you spend on fixes.
+you_give:
+  - Contract type and data you handle
+  - Description of your systems and network
+  - Current security controls
+  - Target CMMC level (optional)
+you_get:
+  - Required CMMC level
+  - Gap table by practice
+  - System security plan sections
+  - Action and milestone plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

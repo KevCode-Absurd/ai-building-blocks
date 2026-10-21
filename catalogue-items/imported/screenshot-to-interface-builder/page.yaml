@@ -6,6 +6,25 @@ summary: Give it a screenshot or mockup. Get matching UI built with your own par
 job: build-websites
 headline: Screenshot to interface builder
 subhead: Give it a screenshot or mockup. Get matching UI built with your own parts, compared side by side with the image.
+explain: |
+  A working screen that matches your screenshot or mockup, built from your project's own components and colours, then compared against the image and corrected. Pictures usually go wrong in the same ways: spacing close but off, text sizes guessed, colours picked by eye, a missing state. This skill measures first.
+
+  It confirms what the image is for: an exact match, or only direction for your own style. It reads sizes and spacing from the image, builds with what the project already has, and puts the result next to the original to fix differences. If the image shows another company's product, it copies the layout pattern only, never their logo, text or pictures. It works with no account.
+when:
+  - A designer sent a mockup and you need it built in your codebase.
+  - You have a screenshot of a layout you like and want your own version.
+  - Your first build looks close but the spacing and fonts feel wrong.
+  - You want a screen to match a design export without inventing new styles.
+you_give:
+  - A clear screenshot or mockup
+  - Your project or component library
+  - Whether to match exactly or use it as direction
+  - Brand colours and fonts (optional)
+you_get:
+  - Code for the screen using your own parts
+  - A side-by-side check against the image
+  - A list of differences fixed
+  - Placeholders where assets are not yours to copy
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

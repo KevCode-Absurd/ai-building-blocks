@@ -6,6 +6,24 @@ summary: Give it a client deck. Get number mismatches, weak wording and format s
 job: work-with-files
 headline: Finance deck quality checker
 subhead: Give it a client deck. Get number mismatches, weak wording and format slips found slide by slide.
+explain: |
+  A slide-by-slide check of a client presentation that finds numbers that do not match, loose wording and formatting slips before the client sees them. It only reads, and changes nothing.
+
+  You provide the deck. The skill reads every slide and keeps track of which slide each line came from. It then checks four things: whether figures agree across slides and with each other, whether the story and claims are consistent, whether the language is clear and professional, and whether the formatting is uniform. Every finding names the slide and shows the conflict, such as a $500M figure that appears as $450M elsewhere. It uses Indian conventions: April to March fiscal years and lakh and crore units.
+when:
+  - A pitch deck goes to a client in an hour.
+  - You edited numbers on one slide and fear you missed another.
+  - Different team members wrote different sections of one deck.
+  - You want a second reviewer for a board presentation.
+you_give:
+  - The slide deck as a PowerPoint file, or open in the add-in
+  - The audience (optional)
+  - Key figures that must match (optional)
+you_get:
+  - A list of number mismatches by slide
+  - Wording and claim issues
+  - Formatting inconsistencies
+  - A priority order for fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

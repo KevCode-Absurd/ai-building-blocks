@@ -6,6 +6,25 @@ summary: Try a hard problem two ways before any teaching. Your AI then builds th
 job: teach-and-train
 headline: Try-first problem tutor
 subhead: Try a hard problem two ways before any teaching. Your AI then builds the lesson from your attempts.
+explain: |
+  A lesson built on your own attempts. You try a hard problem two different ways before anyone explains it, and the teaching then starts from what you tried. The method is called productive failure, and it helps ideas stick.
+
+  You give the problem and the idea it points to. The skill asks you to come up with two approaches, even if both are wrong. It looks at what you did, what was close and what was missing. Only then does it teach the concept, comparing it to your attempts so you see why the right method works. You must make real attempts first, or the lesson loses its point. It suits students and self-learners tackling maths, science and similar problems.
+when:
+  - You are stuck on a new type of problem and want to learn it for real.
+  - You usually read the answer first and forget it a week later.
+  - A teacher wants to set a problem before a lesson.
+  - You want a study method that builds on your own thinking.
+you_give:
+  - A challenging problem
+  - The idea or rule behind it
+  - Your course and level
+  - Your two attempts, once you have made them
+you_get:
+  - A two-attempt exploration task
+  - Feedback on what each attempt shows
+  - A short lesson linked to your attempts
+  - A check of what you learned
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

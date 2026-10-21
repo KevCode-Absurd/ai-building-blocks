@@ -6,6 +6,24 @@ summary: Ask it to pause. Get an honest look at your direction, assumptions and 
 job: think-and-decide
 headline: Direction check-in
 subhead: Ask it to pause. Get an honest look at your direction, assumptions and bias before you go on.
+explain: |
+  A pause in the middle of a long chat, when you want an honest look at whether you are heading the right way. It tells you what the conversation has actually been building and what you may have missed.
+
+  Say something like "step back", "zoom out" or "are we on track", and the AI stops its current task. It then reassesses the direction, names the assumptions behind it, flags bias and dead ends, and asks if the bigger picture still fits your real goal. It can also offer a pause by itself when a chat runs ten turns deep on details, or when you seem stuck, but it asks first. It needs no tools or files, only the conversation.
+when:
+  - You have spent twenty messages on one detail and feel lost.
+  - You keep hitting dead ends and changing direction.
+  - You worry you are solving the wrong problem.
+  - You want a sanity check before committing to a plan.
+you_give:
+  - The conversation so far
+  - Your real goal in a sentence (optional)
+  - Any doubts you have (optional)
+you_get:
+  - A frank summary of where the chat has been heading
+  - The assumptions behind your current approach
+  - Possible bias or tunnel vision
+  - Options for what to do next
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

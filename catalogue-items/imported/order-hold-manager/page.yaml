@@ -6,6 +6,26 @@ summary: Give it orders and a reason. Get fulfilment holds placed or lifted in o
 job: run-your-store
 headline: Order hold manager
 subhead: Give it orders and a reason. Get fulfilment holds placed or lifted in one batch. Changes live orders, so preview first.
+explain: |
+  Pause or release many Shopify orders at once, with a reason your packing team can see. It suits fraud review, payment checks and stock shortages.
+
+  You pick hold or release, then choose the orders by listing IDs or by a search such as a tag. You set the reason: awaiting payment, high fraud risk, wrong address, out of stock or other. You can add a staff note and a date when the hold ends on its own. The skill looks up each order's fulfilment status first and works on open ones. Preview mode shows which orders are affected. Holding delays delivery, and releasing sends orders to be packed at once. Needs Shopify CLI access.
+when:
+  - A batch of orders is flagged for fraud review.
+  - Stock ran out and you need to pause affected orders.
+  - Payment has not cleared and you want orders held.
+  - The review is done and you need to release a tagged group.
+you_give:
+  - Store domain
+  - Hold or release
+  - Order IDs or a search filter
+  - Reason and staff note
+  - Auto-expiry date (optional)
+you_get:
+  - A preview of affected orders
+  - Holds placed or released
+  - The reason shown to fulfilment staff
+  - A list of results per order
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

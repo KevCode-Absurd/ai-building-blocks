@@ -6,6 +6,27 @@ summary: Describe your service business and area. Get a local search audit, list
 job: get-found-in-search
 headline: Local search listing manager
 subhead: Describe your service business and area. Get a local search audit, listing fixes and a plan for more reviews.
+explain: |
+  A local search plan for a business that serves customers at their location, like repair, heating, plumbing or cleaning. Describe your business and area and get an audit, fixes and a review plan.
+
+  It works in four modes. The Google Business Profile audit checks relevance, closeness and prominence, with a checklist and review reply templates. The area content mode writes neighbourhood service pages. The consistency check compares your name, address and phone number across directories. The technical mode adds schema markup. It begins by gathering your services, areas, current listings and the competitors in the map results.
+when:
+  - You do not show up in the map results for your service.
+  - Your phone number differs across directories.
+  - You serve twenty towns and need pages for each.
+  - You want a plan to get more good reviews.
+you_give:
+  - Business name, address and phone
+  - Services you offer
+  - Areas you serve
+  - Current listings and website
+  - Local competitors (optional)
+you_get:
+  - A Business Profile audit
+  - Service area page drafts
+  - A directory consistency report
+  - Schema markup
+  - Review reply templates
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

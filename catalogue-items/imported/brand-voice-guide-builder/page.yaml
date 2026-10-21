@@ -6,6 +6,26 @@ summary: Give it your documents or call transcripts. Get a brand voice guide wit
 job: brand-file
 headline: Brand voice guide builder
 subhead: Give it your documents or call transcripts. Get a brand voice guide with rules, examples and open questions.
+explain: |
+  Turn the way your company already talks into a voice guide anyone can follow. The raw material is your own documents and call recordings, so the guide sounds like you, not like a template.
+
+  You supply brand PDFs, decks, notes or sales call transcripts. The skill sorts the sources, pulls out repeated voice traits, preferred terms, tone by situation and phrases that work or backfire. Each finding gets a confidence score, so you can see what is solid and what is a guess. It ends with a list of open questions for you to settle. If a discovery report from an earlier step exists, it starts there.
+when:
+  - You have sales calls and brand decks but no written voice rules.
+  - New writers keep producing copy that does not sound like the company.
+  - You want to check what customers and your team actually say before you decide your tone.
+  - Your brand documents disagree and need one consistent summary.
+you_give:
+  - Brand documents such as PDFs, decks or notes
+  - Call or meeting transcripts (optional)
+  - A discovery report (optional)
+  - Your own description of your voice (optional)
+you_get:
+  - A structured brand voice guide
+  - Tone rules by situation
+  - Preferred and banned wording
+  - Confidence scores on each finding
+  - A list of open questions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

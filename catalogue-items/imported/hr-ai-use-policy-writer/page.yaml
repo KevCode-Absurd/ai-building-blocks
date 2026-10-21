@@ -6,6 +6,25 @@ summary: Describe how you use AI in hiring. Get a use policy, a bias check and a
 job: hire-people
 headline: HR AI use policy writer
 subhead: Describe how you use AI in hiring. Get a use policy, a bias check and a staff notice. Not legal advice.
+explain: |
+  A written rulebook for how your HR team may use AI, plus the notices people need to see. Describe how AI touches hiring and people decisions and get a policy, a bias check plan and a plain-language staff notice. It is not legal advice, so have counsel review it.
+
+  The skill drafts the policy and requires a person to review any AI-assisted decision with real consequences, such as hiring or firing. It builds a review step to run before any new HR AI tool is adopted and a vendor questionnaire on training data and fairness. It adds an escalation path for people who want to challenge a decision, documentation rules, candidate disclosures and training points for HR staff.
+when:
+  - Your team already uses AI to screen résumés and has no written rules.
+  - A new law on automated hiring tools applies to you and you need a plan.
+  - You must tell candidates in plain words that AI is part of the process.
+  - Managers keep asking what they may and may not do with AI.
+you_give:
+  - How and where HR uses AI today
+  - Your country or state
+  - Tools or vendors in use (optional)
+  - Existing HR policies (optional)
+you_get:
+  - An AI use policy draft
+  - A bias and risk check outline
+  - A candidate and staff disclosure notice
+  - A vendor review checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

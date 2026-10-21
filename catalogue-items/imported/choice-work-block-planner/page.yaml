@@ -6,6 +6,25 @@ summary: Describe your time block. Get a plan for a long stretch of independent,
 job: teach-and-train
 headline: Choice work block planner
 subhead: Describe your time block. Get a plan for a long stretch of independent, choice-based work.
+explain: |
+  A plan for a long, uninterrupted stretch where students pick their own work and stay focused. You tell it how much time you really have and what is on offer, and you get a block that works in a real timetable.
+
+  The skill sets the length of the block so it is long enough for deep work, and plans how the session opens and closes. It lays out the choices on the shelves or stations, how students record what they chose, and how you can watch and give short lessons without breaking the focus of others. It also covers what to do when a child struggles to choose, and how to treat interruptions.
+when:
+  - You want to try a Montessori style work period but your schedule is tight.
+  - Students hop between tasks and never settle into one.
+  - You are unsure how to run small lessons while others work alone.
+  - You need a way to track what each student chooses.
+you_give:
+  - The real length of your time block
+  - The activities students can choose from
+  - Student age or level (optional)
+  - Room set up and rules you already have (optional)
+you_get:
+  - A timed block plan
+  - A choice menu for the shelves or stations
+  - Notes on how to open and close the session
+  - Ways to support students who struggle to choose
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe your AI agent. Get a test set, scoring rules and a release dec
 job: test-and-fix-code
 headline: AI agent tester
 subhead: Describe your AI agent. Get a test set, scoring rules and a release decision memo you can trust.
+explain: |
+  A test set, scoring rules and a release memo for your AI agent, built so a decision-maker can trust the result. It avoids cherry-picked demos.
+
+  First it states what is being tested and what decision the test supports. Then it builds cases from real use, plus odd ones: bad input, long-tail requests, broken tools and attacks. A holdout set stays hidden while you tweak prompts. Each check uses the plainest fair judge: exact checks for facts, a rubric-driven AI judge for quality, and blind human review for risky or disputed cases. Everything is frozen and run against a baseline, repeated where results vary. Failures are read case by case before any average is trusted.
+when:
+  - You must decide if an agent is ready to ship and want evidence.
+  - You want to compare two prompts, models or tool set-ups fairly.
+  - A production failure should become a test that never goes away.
+  - You need a repeatable gate every time the agent changes.
+you_give:
+  - What the agent is for and who uses it
+  - Outcomes that must never happen
+  - The current version to compare against
+  - Examples from real use (optional)
+you_get:
+  - An evaluation brief
+  - A test set with notes on where cases came from
+  - Scoring rules and pass marks
+  - Results with a comparison to the baseline
+  - A decision memo for the release owner
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Name your old and new site. Get a move plan that keeps search rank, lin
 job: build-websites
 headline: Website content mover
 subhead: Name your old and new site. Get a move plan that keeps search rank, links and bookmarks working.
+explain: |
+  A move plan for taking your content to a new platform, domain or URL layout without losing search rank, links or bookmarks. A bad move can wipe out years of traffic.
+
+  You describe the old site, the new one and why you are moving. The skill builds an inventory of what exists, decides what to keep, merge or drop, and maps each old address to a new one with permanent redirects. It plans the order of work, checks that metadata, internal links and integrations survive, and sets a test run before launch. After launch it lists what to watch for in search results and traffic, and how to catch broken pages early.
+when:
+  - You are switching from one CMS to another.
+  - You are merging several sites into one.
+  - You are changing your domain or URL structure.
+  - You are rebranding and want to keep search rank.
+you_give:
+  - Old platform, domain and URL structure
+  - New platform and URL plan
+  - Content list or sitemap (optional)
+  - Reason for the move
+you_get:
+  - Content inventory with keep or drop calls
+  - Old-to-new address map
+  - Redirect and launch plan
+  - Post-launch check list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

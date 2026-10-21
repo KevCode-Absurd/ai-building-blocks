@@ -6,6 +6,24 @@ summary: Give it old C, C++ or Fortran MEX files. Get them moved to the newer co
 job: test-and-fix-code
 headline: MEX file upgrader
 subhead: Give it old C, C++ or Fortran MEX files. Get them moved to the newer complex number format.
+explain: |
+  Old MATLAB MEX files in C, C++ or Fortran moved to the newer interleaved complex format, so they build with the current compiler flag and run faster on complex arrays. You hand over the source and it does the conversion in seven set steps.
+
+  It first counts the old calls such as mxGetPr and mxGetPi and checks whether complex data is handled, since the old format forces a costly copy at the MATLAB boundary. It asks where to write the converted code before touching anything. It then swaps in typed calls like mxGetDoubles and mxGetComplexDoubles, following the MathWorks upgrade guide. It leaves files that already use typed accessors alone.
+when:
+  - You have MEX code from File Exchange or before 2018 that must be rebuilt.
+  - You want to build with the R2018a flag.
+  - A MEX function is slow on large complex arrays.
+  - You need to know how many old API calls a file uses.
+you_give:
+  - Your .c, .cpp, .cxx, .F or .f90 MEX files
+  - Where to save the converted files
+  - MATLAB and compiler details (optional)
+you_get:
+  - A count of old API calls and a performance note
+  - Converted source using the newer calls
+  - A summary of each change
+  - Build and test steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

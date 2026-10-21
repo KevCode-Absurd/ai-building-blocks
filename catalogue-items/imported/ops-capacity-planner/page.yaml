@@ -6,6 +6,26 @@ summary: Give it your demand and team size. Get staffing levels, overload risk a
 job: lead-people
 headline: Ops capacity planner
 subhead: Give it your demand and team size. Get staffing levels, overload risk and a 12-month hiring plan.
+explain: |
+  Staffing numbers backed by maths, so your hiring request holds up when finance pushes back. The skill sizes your team, flags who is overloaded and lays out a 12-month hiring plan by quarter.
+
+  It works for queues of work, such as support, customer success, finance ops and IT. You give daily volume at typical, busy and extreme levels. Queueing theory shows how likely you are to miss your service target at 70, 80 and 90 percent utilisation, rated safe, watch, at risk or critical. A traffic light checks each person's load. The plan allows for ramp time, people leaving, demand growth and when you need another manager. The calculation uses no AI guesses.
+when:
+  - Your team is near 90 percent busy and service levels are slipping.
+  - You must justify headcount in next year's budget.
+  - Demand changed more than 15 percent and you need to resize.
+  - You are merging teams or opening a new segment and need a starting size.
+you_give:
+  - Daily volume at typical, busy and peak levels
+  - Team size and hours worked
+  - Service target, such as reply time
+  - Handle time per item
+  - Expected demand growth and attrition (optional)
+you_get:
+  - Staffing needed at three utilisation levels
+  - Risk of breaching your service target
+  - Team health verdict
+  - A quarterly hiring plan for 12 months
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

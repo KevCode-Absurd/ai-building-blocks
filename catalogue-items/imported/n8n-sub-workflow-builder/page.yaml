@@ -6,6 +6,25 @@ summary: Give it a long n8n workflow. Get reusable sub-workflows with clear inpu
 job: connect-tools
 headline: n8n sub-workflow builder
 subhead: Give it a long n8n workflow. Get reusable sub-workflows with clear inputs that your agents can also call.
+explain: |
+  A long n8n workflow split into small, reusable pieces. Each piece has named inputs and a clear output, like a function, so you fix a bug once instead of in five copies.
+
+  The skill first searches your existing workflows for something that already does the job. If nothing fits, it builds a new sub-workflow with an Execute Workflow Trigger that lists its inputs, and a last node that returns the result. It then shows how to call it, choosing between running once for all items or once per item, and between waiting for the answer or firing and moving on. Names are chosen so others can find it later, and agents can use it as a tool.
+when:
+  - The same date-cleaning steps are copied across four workflows.
+  - One workflow has grown so large that nobody wants to edit it.
+  - You want an AI agent to call a workflow as a tool.
+  - A teammate keeps rebuilding something you already made.
+you_give:
+  - The workflow or steps to split out
+  - A list of your existing workflows (optional)
+  - What the piece should accept and return
+  - Whether the caller should wait for it
+you_get:
+  - A sub-workflow with a clear input and output
+  - The right call settings in the parent
+  - A findable name
+  - A parent workflow that is shorter and simpler
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

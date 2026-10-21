@@ -6,6 +6,25 @@ summary: Describe your offer. Get honest wording that shows what people lose by 
 job: write-ad-copy
 headline: Loss framing writer
 subhead: Describe your offer. Get honest wording that shows what people lose by waiting, without fear tactics.
+explain: |
+  Messaging that shows what people lose by putting off a decision, written with real facts and without scare tactics. Used well, loss framing creates honest urgency. Used badly, it reads as manipulation.
+
+  It starts with who you are talking to: their situation, how much risk they accept, and how well they trust you. It then states your goal and checks which of your claims you can back up. From there it finds where losses beat gains as a message, and writes copy about the real cost of waiting, such as lost time, money or progress. Psychology claims are treated as ideas to verify, not proof. It will not exploit fear, guess sensitive traits or invent urgency.
+when:
+  - Your offer has a cost to waiting, and your page only talks about benefits.
+  - Your urgency copy sounds like hype and you want it to be believable.
+  - You are writing a follow-up email to people who stalled.
+  - You want to test a loss angle against a gain angle.
+you_give:
+  - Your offer and its real facts
+  - Who the audience is
+  - What you want them to do
+  - Evidence for the cost of waiting (optional)
+you_get:
+  - Loss-framed copy options
+  - Gain-framed versions to compare
+  - A check for claims that need proof
+  - Notes on where to avoid pressure
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

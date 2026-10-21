@@ -6,6 +6,25 @@ summary: Save your site's SEO state today. Get a warning when rankings, tags or 
 job: get-found-in-search
 headline: SEO change tracker
 subhead: Save your site's SEO state today. Get a warning when rankings, tags or pages slip later.
+explain: |
+  A saved picture of how your site looks to search engines today, and a warning later if something slips. It records a baseline of search performance and live page details, then compares a new snapshot against it.
+
+  From Search Console it takes queries, positions, clicks, impressions and indexed pages. From the live pages it reads titles, descriptions, canonical links, robots directives and schema. When you compare, it flags ranking drops, pages that dropped out of the index, overwritten metadata and missing markup. This is useful after a redesign, migration or redeploy. If Search Console is missing, it compares pages only and says ranking changes could not be measured.
+when:
+  - You are about to relaunch your site and want a before picture.
+  - Traffic dropped after a release and you need to see what changed.
+  - A plugin may have overwritten your titles and you want to catch it.
+  - You want a monthly check that key pages still rank and index.
+you_give:
+  - Your site and the key URLs
+  - Search Console access or export
+  - A prior snapshot to compare (optional)
+  - Known site changes (optional)
+you_get:
+  - A baseline snapshot
+  - A change report between snapshots
+  - Ranking and index losses
+  - Changed titles, tags and schema
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

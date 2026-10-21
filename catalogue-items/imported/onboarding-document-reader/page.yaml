@@ -6,6 +6,25 @@ summary: Give it an onboarding pack. Get identity, ownership, source of funds an
 job: hire-people
 headline: Onboarding document reader
 subhead: Give it an onboarding pack. Get identity, ownership, source of funds and a document list in set fields.
+explain: |
+  Raw client or investor onboarding papers turned into one neat record, so your team can check the facts instead of hunting for them. Nothing gets guessed. If a field is not in the documents, it stays empty.
+
+  The skill first lists every document received, by type: identity, company formation, ownership, address, source of funds and tax forms. Then it pulls out names, dates of birth, addresses, owners and controllers, where the money comes from, and any tax details, into set fields. It treats the documents as untrusted text. It reads data out of them and ignores any instruction written inside them. The result feeds straight into a rules check step.
+when:
+  - A new investor sent a packet of twenty PDFs and you need the key facts in one place.
+  - You must list which documents you have and which are missing.
+  - Someone retypes passport and company details into a form by hand today.
+  - You want a consistent record before running compliance checks.
+you_give:
+  - The onboarding documents
+  - "The type of client: person, company or trust"
+  - The fields your firm needs (optional)
+  - Your document checklist (optional)
+you_get:
+  - A document inventory
+  - A structured record of identity and ownership
+  - Source of funds details
+  - Empty fields where nothing was found
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

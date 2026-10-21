@@ -6,6 +6,24 @@ summary: Point it at Claude Code memory. Get what it learned reviewed, kept rule
 job: set-up-ai
 headline: Claude memory curator
 subhead: Point it at Claude Code memory. Get what it learned reviewed, kept rules moved up and stale notes cut.
+explain: |
+  Claude Code keeps notes about your project as it works. This reviews those notes so the good ones become firm rules, and the stale ones get cut. You end up with a shorter, sharper memory file that Claude reads each session.
+
+  md and groups entries into those worth keeping, those that repeat, and those that are out of date. md or the rules folder, where they load every time. Recurring fixes can be turned into a standalone skill. A status view shows line counts and topic files, since only the first lines of the memory file load automatically. There are commands for review, promote, extract, status and saving a note on purpose.
+when:
+  - Your memory file has grown long and Claude seems to ignore the end.
+  - The same lesson keeps showing up in notes and you want it as a rule.
+  - Old notes no longer match your project.
+  - You want to turn a repeated fix into a reusable skill.
+you_give:
+  - Your project's memory file
+  - Your CLAUDE.md and rules folder
+  - Which notes matter most (optional)
+you_get:
+  - A review of keep, merge and delete
+  - Rules moved to CLAUDE.md
+  - A standalone skill from a repeated fix
+  - A memory health summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

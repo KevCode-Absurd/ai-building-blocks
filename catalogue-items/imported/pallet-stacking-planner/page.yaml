@@ -6,6 +6,25 @@ summary: Give it your box sizes and pallet size. Get a stacking pattern that fit
 job: plan-supply-chain
 headline: Pallet stacking planner
 subhead: Give it your box sizes and pallet size. Get a stacking pattern that fits the most boxes safely.
+explain: |
+  A stacking pattern that fits the most boxes on a pallet without breaking weight, height or crush limits. You give box and pallet sizes, and it works out the layers.
+
+  It starts by confirming the pallet type, its weight capacity, allowed overhang and maximum height. Then it checks your boxes: sizes, weights, fragile items and how many can sit on each other. It tests layer patterns, including interlocked ones, picks the layout with the best fill, and checks total weight and height. It also covers wrapping, banding, forklift side and whether pallets will be stacked on a truck.
+when:
+  - You ship the same box size every week and want fewer pallets.
+  - A pallet leans or crushes the bottom layer.
+  - You mix box sizes on one pallet.
+  - A customer limits pallet height or weight.
+you_give:
+  - Pallet type and size
+  - Box sizes and weights
+  - Maximum height and weight
+  - Fragile or no-stack rules (optional)
+you_get:
+  - Layer pattern with box count per layer
+  - Total boxes per pallet
+  - Weight and height check
+  - Wrapping and handling notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

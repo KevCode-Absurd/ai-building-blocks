@@ -6,6 +6,24 @@ summary: Point it at a pull request. Get complexity and risk scored, code smells
 job: test-and-fix-code
 headline: Pull request risk scorer
 subhead: Point it at a pull request. Get complexity and risk scored, code smells flagged and review comments written.
+explain: |
+  A quick score for how risky and complex a pull request is, with code smells flagged and review comments already written. You know where to look before reading line by line.
+
+  The skill runs analysis tools on the change and rates complexity and risk. It checks code against universal rules for security, async code, resources, error handling and performance, then against rules for the language in use, from Python and TypeScript to Go, Rust, Java, Swift and more. It looks for design problems like SOLID breaks and common smells. The output is a review report with a checklist and suggested comments.
+when:
+  - You must review many pull requests and need to triage them.
+  - A change looks large and you want to know where the danger is.
+  - You want consistent review standards across languages.
+  - You need a checklist to support your review notes.
+you_give:
+  - The pull request or code diff
+  - Language or languages used
+  - Team coding rules (optional)
+you_get:
+  - Complexity and risk score
+  - Code smell and design issue list
+  - Language-specific findings
+  - Review checklist and written comments
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

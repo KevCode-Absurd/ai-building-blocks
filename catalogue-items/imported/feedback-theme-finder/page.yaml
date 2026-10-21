@@ -6,6 +6,25 @@ summary: Give it NPS, CSAT or open comments. Get themes, trends and an insight r
 job: understand-customers
 headline: Feedback theme finder
 subhead: Give it NPS, CSAT or open comments. Get themes, trends and an insight report you can act on.
+explain: |
+  A report that shows why customers are happy or unhappy, with NPS and CSAT numbers, grouped themes and what changed since last period.
+
+  You give it survey scores and open comments in a CSV, JSON or described form. The skill removes duplicates, puts scales on the same footing, and groups the open text into themes such as slow reports or great support. It computes NPS as promoters minus detractors, CSAT averages and how often each theme appears. It then compares against earlier periods and flags new or growing themes. The final report has a summary of key points, a scorecard, theme details with quotes and suggestions.
+when:
+  - You ran a quarterly NPS survey and have 800 comments.
+  - You want to know why detractors scored you low.
+  - A new complaint seems to be rising and you need numbers.
+  - You need a clear summary for your leadership team.
+you_give:
+  - NPS or CSAT responses with comments
+  - Segments such as plan or region (optional)
+  - Earlier period data for comparison (optional)
+  - The question you want answered
+you_get:
+  - NPS and CSAT scorecard
+  - Themes with counts and quotes
+  - Trends versus last period
+  - Action points
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it your findings. Get a manuscript in standard sections with check
 job: write-and-tell-stories
 headline: Research paper writer
 subhead: Give it your findings. Get a manuscript in standard sections with checked citations and reporting rules applied.
+explain: |
+  A manuscript drafted in the standard sections, with citations formatted correctly and the right reporting rules applied. It turns your findings into text a journal editor can read.
+
+  You provide the results and the target journal. The skill writes the abstract, introduction, methods, results and discussion in the usual order. It applies the checklist for your study type: CONSORT for trials, STROBE for observational work or PRISMA for reviews. Citations follow APA, AMA, Vancouver, Chicago or IEEE as needed. It also helps with figures and tables, trims wordy sentences and drafts replies to reviewer comments. A detailed guide file sets the safety limits.
+when:
+  - You have results and need a first full draft.
+  - A journal wants a specific reporting checklist.
+  - Reviewers returned comments and you must revise.
+  - You need to match a journal's abstract and citation rules.
+you_give:
+  - Findings and data summary
+  - Target journal
+  - Study type
+  - Notes or earlier drafts (optional)
+  - Reference list (optional)
+you_get:
+  - Manuscript in standard sections
+  - Formatted citations
+  - Checklist-aligned reporting
+  - Revised text and reviewer replies (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

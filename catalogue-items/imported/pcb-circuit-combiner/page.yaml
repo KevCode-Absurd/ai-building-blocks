@@ -6,6 +6,25 @@ summary: Give it several RF PCB parts. Get them cascaded with extra parts added 
 job: build-software
 headline: PCB circuit combiner
 subhead: Give it several RF PCB parts. Get them cascaded with extra parts added and S-parameters exported.
+explain: |
+  Several RF circuit board parts joined end to end into one circuit, with extra components added and results saved as a standard Touchstone file. It runs in MATLAB.
+
+  It uses pcbcascade to chain parts like filters and couplers, and pcbElement to wrap them as circuit elements for RF Toolbox. You can load internal ports with parts such as varactors or terminators. The combined response is written out as S-parameters with rfwrite, and the data can move on to signal integrity eye diagram analysis. It expects each part to be designed and checked first. You need MATLAB with the RF PCB Toolbox.
+when:
+  - You must join a filter and coupler into one chain.
+  - You need S-parameters in a file for another tool.
+  - A feed network must connect to an antenna array.
+  - An internal port needs a load or terminator.
+you_give:
+  - Designed PCB components in MATLAB
+  - Order they connect in
+  - Loads to add at ports (optional)
+  - Frequency range
+you_get:
+  - Cascaded circuit
+  - Added load elements
+  - Touchstone S-parameter file
+  - Link to eye diagram analysis
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

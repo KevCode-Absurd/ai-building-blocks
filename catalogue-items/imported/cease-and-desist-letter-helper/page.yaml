@@ -6,6 +6,25 @@ summary: Describe an infringement or paste a letter you got. Get a draft demand 
 job: check-contracts
 headline: Cease-and-desist letter helper
 subhead: Describe an infringement or paste a letter you got. Get a draft demand or options. Have a lawyer review.
+explain: |
+  Either a draft demand letter for someone copying your work, or a plain options memo for a letter you received. Describe the infringement or paste the letter, and you get a first version a lawyer can review and finish.
+
+  It has two modes. Sending mode works out who the right target is, what they did, your relationship with them and what you want, then drafts a letter at the firmness your enforcement approach calls for, with a check before delivery. Receiving mode reads the letter, assesses the claim, notes your exposure and lays out choices with a recommendation. It needs a practice profile set up first. It is not legal advice.
+when:
+  - A competitor is using your logo or text and you want to demand they stop.
+  - You received a threatening letter and do not know your options.
+  - You need a draft to bring to your lawyer rather than starting blank.
+  - You want to decide between ignoring, negotiating or fighting a claim.
+you_give:
+  - A description of the infringement, or the letter you received
+  - Who the other party is and your history with them
+  - What you want them to do
+  - Your enforcement approach (set up once)
+you_get:
+  - A draft cease-and-desist letter
+  - Or an options memo on a letter you received
+  - A recommended response
+  - A checklist before sending or replying
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

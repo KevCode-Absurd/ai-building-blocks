@@ -6,6 +6,27 @@ summary: Tell it what you are launching. Get a go-live runbook with checks, DNS 
 job: ship-and-host
 headline: Site go-live runbook writer
 subhead: Tell it what you are launching. Get a go-live runbook with checks, DNS cutover steps, post-launch watching and a rollback plan.
+explain: |
+  A launch day runbook the whole team can follow, with checks before launch, DNS cutover steps, watching after launch and a rollback plan. It stops launch day from running on memory and chat messages.
+
+  You give the launch scope, the window, the team and roles, the rollback triggers and who tells whom what. It writes a time-ordered runbook: pre-launch verification, the go-live procedure, DNS changes, post-launch monitoring and the exact conditions for pulling back. It suits new sites, redesigns, platform moves and big releases, and it can be reused for a deploy you repeat. QA before launch and incident handling after are separate jobs.
+when:
+  - You are moving a site to a new host and need a safe cutover plan.
+  - You are launching a redesign and the team needs clear roles.
+  - A big release is planned and you need a rollback rule.
+  - You deploy often and want a repeatable checklist.
+you_give:
+  - What is being launched
+  - Launch date, time and window
+  - Team and on-call roles
+  - Rollback criteria
+  - Who needs updates and when
+you_get:
+  - A pre-launch checklist
+  - Go-live steps in order
+  - DNS cutover steps
+  - A post-launch watch plan
+  - A rollback plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

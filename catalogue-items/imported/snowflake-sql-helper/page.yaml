@@ -6,6 +6,25 @@ summary: Describe your data job. Get Snowflake SQL, pipelines and AI function ca
 job: build-software
 headline: Snowflake SQL helper
 subhead: Describe your data job. Get Snowflake SQL, pipelines and AI function calls that follow its rules.
+explain: |
+  Snowflake SQL, pipelines and AI function calls written to match Snowflake's own rules. Describe the data job, and the helper returns code that avoids the usual traps.
+
+  A small Python script generates ready templates: a MERGE upsert from a staging table, a Dynamic Table with a lag, and role grants with the right privileges. Around that, the skill covers semi-structured JSON, the colon rule in procedures, Streams with Tasks, Cortex AI functions, agent specs, Snowpark Python and dbt settings. It also gives tuning notes. The script runs with Python, and the SQL needs a Snowflake account. Check grants before running them on shared data.
+when:
+  - You need to upsert new rows into a customer table.
+  - You want a table that stays fresh within five minutes of its source.
+  - You must give an analyst role read access to a few schemas.
+  - You are setting up dbt to run on Snowflake.
+you_give:
+  - The data job in plain words
+  - Source and target table names
+  - Key columns and refresh timing
+  - A Snowflake account to run the output
+you_get:
+  - A MERGE upsert statement
+  - A Dynamic Table definition
+  - Role and grant statements
+  - Cortex or Snowpark code when needed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

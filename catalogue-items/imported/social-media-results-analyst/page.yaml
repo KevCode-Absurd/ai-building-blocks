@@ -6,6 +6,25 @@ summary: Give it your post numbers. Get engagement rates, ROI and platform bench
 job: grow-social
 headline: Social media results analyst
 subhead: Give it your post numbers. Get engagement rates, ROI and platform benchmarks, plus what to post next.
+explain: |
+  Your post numbers turned into engagement rates, return on spend and a comparison with platform norms, plus ideas on what to post next. You give your figures, and the skill does the maths.
+
+  It first checks the data, for example that reach is above zero and dates make sense. Then it works out engagement per post, adds up campaign totals and calculates return on investment if you gave ad spend. It compares results with benchmarks for Instagram, Facebook, TikTok and LinkedIn, picks the top and bottom posts, and checks that the numbers are possible, such as engagement under 100 percent. Python helper scripts do the calculations, so the results are the same each time.
+when:
+  - You have a spreadsheet of post stats and no idea what it means.
+  - You need to show a client the return on a campaign.
+  - You want to know if your engagement is good for your platform.
+  - You are choosing what to post more of.
+you_give:
+  - "Post data: reach, likes, comments, shares and dates"
+  - Ad spend and revenue (optional)
+  - The platforms involved
+  - Your goal for the campaign (optional)
+you_get:
+  - Engagement rate for each post
+  - Campaign totals and return on spend
+  - Comparison with platform benchmarks
+  - Top and bottom posts and what to do next
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

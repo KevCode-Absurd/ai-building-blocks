@@ -6,6 +6,25 @@ summary: Point it at your screen history. Get a list of tasks you repeat and dra
 job: make-skills
 headline: Repeated work skill finder
 subhead: Point it at your screen history. Get a list of tasks you repeat and draft skills to automate them.
+explain: |
+  A list of tasks you do again and again, with draft skills ready to automate them. It finds the patterns in your own screen history that you stopped noticing.
+
+  You pick a time window. The skill reads your recorded activity from Screenpipe, a program that captures what you do on your computer. It groups similar workflows, checks whether an existing skill already covers each one, and drafts a new skill or a combination when none fits. Drafts are saved for you to review, not installed. It needs Python and a running Screenpipe, plus a local or cloud language model for drafting.
+when:
+  - You suspect you waste hours on the same steps every week.
+  - You want to turn your habits into reusable skills.
+  - You use many tools and cannot see which tasks repeat.
+  - You want drafts you can review before using.
+you_give:
+  - Time window of activity to look at
+  - Running Screenpipe program
+  - Python set up on your computer
+  - Language model to draft with, local or cloud
+you_get:
+  - List of repeated tasks found
+  - Match to existing skills
+  - Draft skills for new tasks
+  - Notes on which are worth automating
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

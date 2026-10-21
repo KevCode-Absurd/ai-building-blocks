@@ -6,6 +6,26 @@ summary: Name a text type, like a lab report. Get a frame that teaches the writi
 job: teach-and-train
 headline: Subject writing frame maker
 subhead: Name a text type, like a lab report. Get a frame that teaches the writing rules of that subject.
+explain: |
+  A writing frame that teaches students how a subject writes, such as a lab report conclusion or a history essay. Each subject has its own rules, and this makes them visible.
+
+  Name the text type, the subject and the level. The skill builds a scaffold of sections and sentence starters, then a language toolkit with the words that subject uses, like 'the results suggest' in science. It adds an annotated model text that shows each move at work. Finally it offers versions of the frame for different needs, from more support to less, so students can drop the help as they improve.
+when:
+  - Students write lab reports like stories and lose marks.
+  - You teach a new text type, like a historical argument, and need a model.
+  - Some students need more support than others on the same writing task.
+  - You want sentence starters that match the subject, not generic ones.
+you_give:
+  - The writing task
+  - Subject
+  - Year level
+  - Genre or text type
+  - Assessment criteria (optional)
+you_get:
+  - A section-by-section writing frame
+  - A subject language toolkit
+  - An annotated model text
+  - Easier and harder versions of the frame
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

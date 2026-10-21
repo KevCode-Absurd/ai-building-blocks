@@ -6,6 +6,26 @@ summary: Name your industry, such as store, restaurant or manufacturer. Get page
 job: build-websites
 headline: Industry-look site composer
 subhead: Name your industry, such as store, restaurant or manufacturer. Get page layouts that look like that kind of site.
+explain: |
+  Page layouts that look like they belong to your type of business, so a shop looks like a shop and a restaurant looks like a restaurant, not a generic software landing page. A site can be clean and still feel off for its field.
+
+  The skill decides which modules go where, how dense a page should be, how much of the catalogue shows at once, and how navigation is set up for that kind of site. It works best when fed the output of a competitor experience audit, so you build to the standard of your field. It does not set brand identity, build single components or handle accessibility; other skills do that.
+when:
+  - You are building a site in an industry you have not worked in before.
+  - Your site is tidy but still looks generic for its category.
+  - You have a competitor review and need to turn it into a layout.
+  - You are building a demo that must look like a real store or firm.
+  - Visitors expect certain sections and yours lacks them.
+you_give:
+  - Your industry or type of site
+  - A competitor audit (optional)
+  - Your product or catalogue size
+  - Your brand direction (optional)
+you_get:
+  - Page layouts for your industry
+  - Module placement and density guidance
+  - Navigation and merchandising rules
+  - A list of what visitors expect to see
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

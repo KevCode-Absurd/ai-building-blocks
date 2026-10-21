@@ -6,6 +6,26 @@ summary: Describe your AI feature. Get a test plan with scores, human review and
 job: test-and-fix-code
 headline: AI answer testing planner
 subhead: Describe your AI feature. Get a test plan with scores, human review and A/B checks to catch weak answers.
+explain: |
+  A plan to test whether your AI feature gives good answers, and to catch drops in quality before users do. It mixes quick computed scores, human review and live A/B tests, so no single method has to carry everything.
+
+  The plan picks measures that match the job. Translation and summaries use text-overlap scores. Classifiers use accuracy, precision and recall. Search-based answers use ranking measures such as how often the right document is in the top results. For quality that numbers miss, people rate accuracy, flow, relevance and safety, and an AI judge scales that up. You set a baseline, re-run the tests on each prompt or model change, and flag any drop.
+when:
+  - You changed a prompt and need to know if answers got worse.
+  - You are choosing between two AI models for the same feature.
+  - You want a regression check to run before each release.
+  - Your answers are fine in demos but users complain.
+you_give:
+  - A description of your AI feature
+  - Example inputs and good answers (optional)
+  - "What matters most: accuracy, tone, speed or safety"
+  - Models or prompts to compare (optional)
+you_get:
+  - A list of measures for your feature
+  - A human review plan
+  - An AI judge set-up
+  - A baseline and regression check
+  - A plan for live A/B tests
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

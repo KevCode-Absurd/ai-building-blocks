@@ -6,6 +6,25 @@ summary: Give it your tasks and calendar. Get a day with protected focus hours a
 job: organise-work
 headline: Deep work day planner
 subhead: Give it your tasks and calendar. Get a day with protected focus hours and shallow work cut back.
+explain: |
+  A day built around your best focus hours. Give it your task list with rough minutes and it returns a schedule with deep work placed early in blocks of at least 90 minutes, and shallow tasks batched into two short windows.
+
+  It labels each task as deep or shallow and shows how much of your day is shallow. For each shallow item it asks: how long would it take to train a smart new graduate to do this? It adds buffers after hard blocks and refuses to book more than four hours of deep work. Small Python scripts handle the scheduling and keep a log of focus sessions, so your weekly deep-hours total is counted, not guessed.
+when:
+  - Your calendar is full of meetings and you cannot get real work done.
+  - You have ten tasks and no sense of which deserve your sharpest hours.
+  - You want to track how many hours a week you truly focus.
+  - Email and chat eat your mornings and you want them boxed in.
+you_give:
+  - Today's tasks with minutes for each
+  - Your calendar and fixed commitments
+  - Deep or shallow tags (optional)
+  - Weekly deep-hours target (optional)
+you_get:
+  - Time-blocked schedule
+  - Deep and shallow split
+  - Questions to cut shallow work
+  - Focus-hours log
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

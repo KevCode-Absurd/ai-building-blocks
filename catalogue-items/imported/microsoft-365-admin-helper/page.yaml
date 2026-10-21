@@ -6,6 +6,24 @@ summary: Say what your company needs. Get Microsoft 365 setup scripts for users,
 job: connect-tools
 headline: Microsoft 365 admin helper
 subhead: Say what your company needs. Get Microsoft 365 setup scripts for users, mail, Teams and security.
+explain: |
+  PowerShell scripts for setting up and running your Microsoft 365 tenant: users, mail, Teams and security. Say what your company needs and get scripts to run, instead of clicking through the admin centre.
+
+  Examples include a security audit that lists licences and sign-in rules, bulk user creation from a CSV with random one-time passwords, and a conditional access policy that requires MFA for admins. New policies start in report-only mode, so you see the effect before anyone is locked out. It covers the full life of an account from joining to leaving. You need Global Administrator rights and the Microsoft Graph PowerShell module to run it.
+when:
+  - You have 40 new hires starting Monday and need accounts and licences.
+  - You want to know how locked down your tenant is.
+  - You need MFA for admin accounts without risking a lockout.
+  - Someone is leaving and you need their access closed cleanly.
+you_give:
+  - What your company needs set up
+  - A CSV of users and licences (optional)
+  - Admin access to your tenant
+you_get:
+  - Ready-to-run PowerShell scripts
+  - A security audit script
+  - Bulk user creation steps
+  - Safe, report-only security policies
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

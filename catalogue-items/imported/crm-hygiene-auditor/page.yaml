@@ -6,6 +6,24 @@ summary: Give it your CRM deals. Get a fix list of missing fields, stale dates a
 job: sell-and-negotiate
 headline: CRM hygiene auditor
 subhead: Give it your CRM deals. Get a fix list of missing fields, stale dates and stage mismatches. Changes nothing.
+explain: |
+  A pipeline full of stale dates and empty fields makes forecasts unreliable. Give this your open deals and you get a ranked fix list, with each problem tied to the exact record. It changes nothing in your CRM.
+
+  It looks for missing amounts, close dates in the past, deals with no next step, no recent activity, and stages that do not match what the deal's data shows. It uses your CRM's real field and stage names and says "blank" when a field is empty and "not checked" when it could not read it. You decide which fixes to make, then hand them to an update step.
+when:
+  - Your forecast call is tomorrow and you do not trust the pipeline data.
+  - You inherited a set of accounts and need to know what is missing.
+  - You suspect deals are sitting in the wrong stage.
+  - You want a monthly clean-up list for your own opportunities.
+you_give:
+  - Your open deals from the CRM or an export
+  - Your own stage names and required fields (optional)
+  - Which owner or team to check (optional)
+you_get:
+  - A fix list sorted by how much each issue matters
+  - Missing field and stale date flags per deal
+  - Stage mismatch notes with the evidence
+  - Links to each record
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

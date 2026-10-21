@@ -6,6 +6,25 @@ summary: Run it on open orders. Get shipped orders with stale tracking and late 
 job: run-your-store
 headline: Where-is-my-order risk finder
 subhead: Run it on open orders. Get shipped orders with stale tracking and late unshipped ones, before customers ask.
+explain: |
+  A list of the orders most likely to trigger a "where is my order?" email, found before the email arrives. You can message those customers first.
+
+  It connects to your Shopify store and reads open orders. It flags two groups: orders that shipped but whose tracking has not updated for several days, and orders still unfulfilled after your own cut-off. You set both limits, with defaults of five days and three days. The run is read-only, so nothing in your store changes, and it prints a readable report or JSON. You need Shopify admin access with the read_orders scope.
+when:
+  - Support is flooded with tracking questions every Monday.
+  - You suspect a carrier has stopped scanning parcels.
+  - Orders have sat unfulfilled and you want to know which ones.
+  - You want to email affected customers before they complain.
+you_give:
+  - Your store domain
+  - Shopify admin login with read_orders access
+  - Days before unfulfilled counts as late (optional)
+  - Days before tracking counts as stale (optional)
+you_get:
+  - Shipped orders with stale tracking
+  - Unfulfilled orders past your limit
+  - Order details for outreach
+  - Report in readable or JSON form
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your buyer. Get lead magnet ideas, the best pick and the page 
 job: make-offer
 headline: Lead magnet planner
 subhead: Describe your buyer. Get lead magnet ideas, the best pick and the page and emails to go with it.
+explain: |
+  A free offer your buyer wants enough to hand over their email, with the page and emails to deliver it. Describe your business and the buyer. The skill first checks what content, data and expertise you already have, since the best lead magnet is often something you have written already.
+
+  It suggests several ideas, such as checklists, templates, calculators and guides, and picks the strongest for your stage of buyer. Then it plans the signup page and the follow-up emails that move readers toward your product. It also looks at your goal, whether that is list size, lead quality or education, and your time limits.
+when:
+  - Your signup form converts poorly and you need a better offer.
+  - You have blog posts and data you could repackage.
+  - You want leads who are ready to buy, not just free downloaders.
+  - You need a plan for the emails sent after the download.
+you_give:
+  - What your business sells
+  - Your ideal customer
+  - Existing content and expertise
+  - Your main goal and timeline
+you_get:
+  - Lead magnet ideas
+  - A recommended pick with reasons
+  - A signup page outline
+  - A follow-up email plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your background and a job post. Get a paste-ready CV that passe
 job: work-with-files
 headline: CV writer
 subhead: Give it your background and a job post. Get a paste-ready CV that passes applicant filters, plus a flaw report.
+explain: |
+  A CV you can paste straight into FlowCV, Canva, Google Docs or Word, aimed at one specific job post. It comes with a report of anything that could trip up applicant tracking filters.
+
+  You share your background from LinkedIn, GitHub, a portfolio or old CVs. The skill merges them, then matches your wording to the job description. It adapts tone to your seniority and rewrites stiff lines so they sound like a person. It never invents titles, dates, degrees or numbers. If you say you grew sales a lot, it asks for the real figure. A checklist shows what is missing, and any rewording is flagged so you can approve it.
+when:
+  - You are applying for a job and need your CV tailored to its posting.
+  - Your CV lives in three places and needs to become one clean version.
+  - You are changing careers and need your past work reframed.
+  - You want to know why your CV keeps getting auto-rejected.
+you_give:
+  - Your background, CV or profile links
+  - The job description
+  - Target format such as Canva or Word (optional)
+  - Real figures for your results (optional)
+you_get:
+  - Paste-ready CV text
+  - Applicant filter flaw report
+  - Missing information checklist
+  - Notes on any reworded lines
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

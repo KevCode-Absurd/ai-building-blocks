@@ -6,6 +6,27 @@ summary: Give it a tool or AI app and a subject. Get a check of how well it fits
 job: teach-and-train
 headline: Classroom tech fit checker
 subhead: Give it a tool or AI app and a subject. Get a check of how well it fits your teaching, with changes.
+explain: |
+  Before you bring an app or AI tool into a lesson, check whether it fits what you teach and how. You name the tool, the topic and your students, and you get a plain verdict with changes to make it work.
+
+  The check looks at three things together: the technology, your teaching method and the content itself. It asks whether the tool helps students think about the topic or just makes the lesson look busy. It points out where the tool could get in the way, where it adds value and what you need to learn before using it. It considers your confidence with tech, school rules and the learning goal.
+when:
+  - Your school bought a new app and you must use it in maths.
+  - You want to try an AI tutor but are unsure it helps learning.
+  - A tool looks fun and you worry it will distract.
+  - You need to explain to a colleague why a tool does or does not fit.
+you_give:
+  - The subject, topic or unit
+  - The tool or AI app
+  - Age of the students
+  - Your teaching background and tech confidence
+  - The learning goal (optional)
+you_get:
+  - A fit check across tool, method and content
+  - Lesson changes
+  - A small trial plan
+  - Warning signs to watch
+  - Skills you need to build
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Say who reads it and what they decide. Get the right metrics and a dash
 job: read-ad-results
 headline: KPI dashboard designer
 subhead: Say who reads it and what they decide. Get the right metrics and a dashboard layout that fits.
+explain: |
+  A dashboard plan where every number earns its place, because each one ties to a decision the reader has to make. Start by saying who will look at it and what they act on. The skill sorts metrics into three levels: strategic for leaders, tactical for managers, and operational for day-to-day teams. Each level gets its own refresh pace.
+
+  It then checks every candidate metric against five tests: specific, measurable, achievable, relevant and time-bound. You get a one-page summary of four to six headline numbers with trend and alert markers, then department views below it. It also covers who owns each definition, so two people never report two different numbers for the same thing.
+when:
+  - Your leadership team wants one page that shows how the business is doing.
+  - Your current dashboard has forty charts and nobody knows which ones matter.
+  - You are building a view for sales, marketing or operations and need to pick the right metrics.
+  - Two teams report different numbers for the same metric and you need one agreed definition.
+you_give:
+  - Who reads the dashboard
+  - The decisions they make from it
+  - The data sources you have
+  - Your current dashboard or metric list (optional)
+you_get:
+  - A short list of KPIs with clear definitions
+  - A layout for the summary page and department views
+  - Refresh pace and alert rules per level
+  - A plan for who owns each metric
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

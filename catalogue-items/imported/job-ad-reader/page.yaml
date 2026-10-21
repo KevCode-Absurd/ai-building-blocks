@@ -6,6 +6,25 @@ summary: Paste a job ad. Get what the job is, firm needs versus wishes, what is 
 job: think-and-decide
 headline: Job ad reader
 subhead: Paste a job ad. Get what the job is, firm needs versus wishes, what is missing, and questions to ask.
+explain: |
+  A job ad decoded before you spend a weekend on an application. Paste the post or give a link. The skill sums up the real job in three sentences, then sorts every requirement into firm, wish or unclear, quoting the ad for each. It counts years and tools asked for and says if the list looks too broad for one person.
+
+  It checks what the ad leaves out, such as pay, location, hours, team size, reporting line and contract type. It picks out phrases worth a question, like fast-paced or competitive salary with no figure, and gives six to eight questions for the recruiter. Add your background and it shows where you fit and what to lead with.
+when:
+  - You found a job ad and cannot tell what the role really is.
+  - An ad asks for ten years of everything and you wonder if you should apply.
+  - You want smart questions to ask in a first call.
+  - You need help tailoring your application to the ad.
+you_give:
+  - The job post text or link
+  - Your current role and skills (optional)
+  - What you want next (optional)
+you_get:
+  - A three-sentence plain summary of the job
+  - Requirements sorted into firm, wish and unclear
+  - A list of missing details
+  - Phrases worth a question
+  - Questions to ask the employer
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

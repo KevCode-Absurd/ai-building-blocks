@@ -6,6 +6,26 @@ summary: Get your top customers by lifetime spend as a VIP list. It tags them in
 job: run-your-store
 headline: VIP customer finder
 subhead: Get your top customers by lifetime spend as a VIP list. It tags them in Shopify only if you ask.
+explain: |
+  A list of your best Shopify customers, ranked by what they have spent over time. You can use it to build a loyalty group, give them faster support or offer early access to new products.
+
+  The skill pulls lifetime spend and order counts straight from your store. You choose whether to rank by spend, order count or a mix of both, and how big the top slice is, such as the top 5 percent. You can set a minimum number of orders or a minimum spend. It runs as a preview first and writes a CSV. It only adds a VIP tag in Shopify if you switch that on. It needs a store login.
+when:
+  - You want to thank your top 5 percent of customers with something special.
+  - You need a segment for an early-access launch or a loyalty email.
+  - Your support team wants to know which customers deserve a fast reply.
+  - You want a CSV of high-value buyers without a separate CRM.
+you_give:
+  - Your Shopify store address
+  - "How to rank: spend, orders or both"
+  - The size of the top group, such as 5 percent
+  - Minimum orders or spend (optional)
+  - A tag name if you want VIPs tagged (optional)
+you_get:
+  - A ranked VIP customer list
+  - A CSV file you can open in a spreadsheet
+  - A preview before any change is made
+  - VIP tags in Shopify, only if you ask
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

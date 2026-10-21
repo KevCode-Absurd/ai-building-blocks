@@ -6,6 +6,25 @@ summary: Give it a task. Get a script of what you say out loud to show students 
 job: teach-and-train
 headline: Think-aloud script writer
 subhead: Give it a task. Get a script of what you say out loud to show students how an expert thinks it through.
+explain: |
+  A script of what a teacher says out loud while solving a problem, so students hear the thinking an expert does silently. Seeing the steps, doubts and checks makes hidden skills teachable.
+
+  You name the task, the class level and the subject. The skill lays out the decision points an expert faces, then writes first-person lines for each: noticing a clue, rejecting a wrong path, checking the work. It can aim the script at errors your students often make, so the demonstration heads them off. You can set a target length in minutes. It also adds pause points where you ask students a question before moving on.
+when:
+  - You are about to model how to analyze a poem or solve a hard problem.
+  - Students copy your answer but not your reasoning.
+  - You want to head off a common mistake before it happens.
+  - You are a new teacher and unsure how to explain your thinking aloud.
+you_give:
+  - The task you will model
+  - Year group and subject
+  - Common student errors (optional)
+  - Target length in minutes (optional)
+you_get:
+  - A spoken script in first person
+  - Marked decision points
+  - Pause points with questions for students
+  - Lines that address common errors
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe what your agent must remember. Get a memory design for short-t
 job: build-software
 headline: Agent memory designer
 subhead: Describe what your agent must remember. Get a memory design for short-term, long-term and graph storage.
+explain: |
+  A plan for what your AI agent remembers, where each memory is kept, and how it gets back into the conversation. Without memory, an agent forgets everything when the session ends.
+
+  The skill lays memory out in layers. Working memory is the live conversation. Short-term memory lasts across a session. Long-term memory lasts for good. Then it matches your needs to a storage type. A plain vector store suits simple lookups. A knowledge graph keeps how things relate, such as which customer owns which order. A time-aware graph also tracks when facts were true. You get a pick based on your queries, limits and accuracy needs.
+when:
+  - Your agent forgets customers and decisions between sessions.
+  - You need the agent to keep names and facts consistent across many chats.
+  - You are choosing between a vector store and a knowledge graph.
+  - Facts change over time and the agent must know which version is current.
+you_give:
+  - What the agent has to remember
+  - How the agent is used
+  - Storage tools you already have (optional)
+  - How accurate recall needs to be (optional)
+you_get:
+  - A layered memory design
+  - A storage choice with reasons
+  - Rules for what to save and what to drop
+  - A plan for retrieving memory into context
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Share posts you already wrote. Get new Twitter/X or LinkedIn posts that
 job: grow-social
 headline: Voice-matched post writer
 subhead: Share posts you already wrote. Get new Twitter/X or LinkedIn posts that sound like you, checked against your style.
+explain: |
+  New Twitter/X or LinkedIn posts that sound like you wrote them, checked against how you really write. Most AI drafts read like nobody; this one starts from your own posts.
+
+  You paste five ordinary recent posts. If you cannot, you answer four short questions about your topics, openings, pace and words you never use. The skill writes a voice sketch covering how you open, your sentence length and your habits, and shows it to you before drafting. It then writes the post, compares the draft to the sketch and fixes lines that drift. You can also paste text and ask whether it sounds like you.
+when:
+  - You post on LinkedIn or X and want drafts that need less editing.
+  - Your AI posts all sound generic.
+  - You want to turn a rough idea into a hook and short thread.
+  - You want to test if a piece of text sounds like you.
+you_give:
+  - Five recent posts you wrote
+  - The topic or idea for the new post
+  - "The platform: X or LinkedIn"
+  - Words or tones to avoid (optional)
+you_get:
+  - A short sketch of your writing voice
+  - A draft post in that voice
+  - A match check against your samples
+  - Edit notes for lines that sound off
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

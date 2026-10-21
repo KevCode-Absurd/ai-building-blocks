@@ -6,6 +6,25 @@ summary: Describe your health data use or app. Get HIPAA gaps, safeguards to add
 job: check-contracts
 headline: Health data privacy checker
 subhead: Describe your health data use or app. Get HIPAA gaps, safeguards to add and draft notices or agreements.
+explain: |
+  A first check of whether your handling of patient information meets HIPAA, with gaps listed and fixes drafted. Say how your app, clinic or process uses health data. The skill works out whether you are a covered entity or a business associate, then checks the privacy rule, the security rule and breach notification.
+
+  For software, it reviews technical safeguards such as encryption, access control and audit logs. For paperwork, it reviews policies and consent forms. It can then draft privacy notices, business associate agreements, risk assessments, policies and breach letters. Plain-language explanations are available for any rule. Every answer carries a reminder that this is information, not legal advice, so check with a HIPAA attorney before you rely on it.
+when:
+  - You are building an app that stores patient data and need to know the rules.
+  - A client asks if you are HIPAA compliant and you are not sure.
+  - You need to draft a business associate agreement.
+  - You want to prepare for a security risk assessment.
+you_give:
+  - A description of your health data use or system
+  - Existing policies, notices or architecture notes
+  - Who handles the data
+  - Your role, such as provider, vendor or developer
+you_get:
+  - A list of compliance gaps
+  - Safeguards to add
+  - Draft notices, agreements or policies
+  - Plain explanations of the rules that apply
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

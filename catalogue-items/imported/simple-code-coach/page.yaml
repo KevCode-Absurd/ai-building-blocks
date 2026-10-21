@@ -6,6 +6,24 @@ summary: Write code with it. Get assumptions stated, the smallest change made an
 job: build-software
 headline: Simple code coach
 subhead: Write code with it. Get assumptions stated, the smallest change made and only what you asked for.
+explain: |
+  Code changes that are small, tied to your request and checked against clear goals, instead of large rewrites you did not ask for. It targets the usual AI coding habits: silent guesses, bloat and drive-by edits.
+
+  It works on four rules. First, think before coding: state assumptions, list other readings of the request and ask when unclear. Second, keep it simple: no extras, no one-use abstractions. Third, make surgical changes that touch only what the task needs. Fourth, turn the task into a goal with a test that proves it. It also ships Python tools that scan a change for breaches of these rules.
+when:
+  - The AI keeps rewriting files when you wanted one fix.
+  - You want assumptions stated before it starts coding.
+  - You review a diff and suspect it added more than needed.
+  - You want a clear pass or fail test for a task.
+you_give:
+  - The coding task
+  - Your code or a diff
+  - Python available to run the checker tools (optional)
+you_get:
+  - Stated assumptions and questions
+  - The smallest working change
+  - A success test for the task
+  - A check of the diff against the four rules
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

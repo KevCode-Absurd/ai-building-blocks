@@ -6,6 +6,24 @@ summary: Give it your MATLAB files. Get them uploaded to GitHub or MATLAB Drive,
 job: ship-and-host
 headline: MATLAB code sharer
 subhead: Give it your MATLAB files. Get them uploaded to GitHub or MATLAB Drive, plus an Open in MATLAB Online link.
+explain: |
+  Your MATLAB files online, with a link that opens them in MATLAB Online in one click. Anyone you send it to can run your code without installing anything.
+
+  The skill first checks where your files are: only on your computer, already on GitHub, on MATLAB Drive, or on File Exchange. Local files get uploaded first. Then it builds the correct link for that place, for example leaving out the file name to open a whole GitHub repository, or pointing to the root for a shared Drive folder. For GitHub it can also make an Open in MATLAB Online badge for your README.
+when:
+  - You want classmates or colleagues to run your script without setup.
+  - Your README needs an Open in MATLAB Online badge.
+  - You are unsure whether to use GitHub, Drive or File Exchange.
+  - You have a GitHub repo and need the right link format.
+you_give:
+  - Your MATLAB files or repo link
+  - Who will open them
+  - A GitHub or MathWorks account
+you_get:
+  - Files uploaded to the place you chose
+  - A working Open in MATLAB Online link
+  - A README badge (optional)
+  - Upload steps in plain words
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your CRM lead export. Get each lead linked to the paid channel 
 job: track-numbers
 headline: Lead to ad matcher
 subhead: Give it your CRM lead export. Get each lead linked to the paid channel and ad that brought it in.
+explain: |
+  A table with one row per lead showing which paid channel and ad brought it in. Give it a CRM lead export. The skill reads click IDs and UTM tags in a set order: current click, current UTM, first-touch click, then first-touch UTM. A current tag always beats an older one.
+
+  It classifies each source into a standard channel list, cleans human-typed values, and keeps every lead, including ones it cannot match, so nothing silently drops. Reference SQL for BigQuery is included. It does not prove spend, incremental sales or revenue, and your reports must state their date mode and lookback. You need Node to run the checks.
+when:
+  - You want to see which ads create leads that turn into customers.
+  - Your CRM has UTM fields but nobody joins them to ad data.
+  - Reports disagree about channel counts and you need one classification.
+  - You are preparing lead data to join with GA4 or ad spend.
+you_give:
+  - A CRM lead export with created dates
+  - UTM and click ID fields
+  - Ad or channel data to match (optional)
+  - Your channel naming rules
+you_get:
+  - One row per lead with channel and ad
+  - Unmatched leads kept and labelled
+  - Standard channel names
+  - Reference SQL for BigQuery
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

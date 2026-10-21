@@ -6,6 +6,26 @@ summary: Give it your sales forecast and capacity. Get a week-by-week plan of wh
 job: plan-supply-chain
 headline: Production plan builder
 subhead: Give it your sales forecast and capacity. Get a week-by-week plan of what to make and when.
+explain: |
+  A week-by-week plan that says what to make, how many and when. You can promise delivery dates with confidence. It balances your sales forecast and customer orders against what your capacity can really build.
+
+  First the skill asks how you make things (to stock, to order or assembled to order), your planning horizon and your bottlenecks. Then it builds a schedule by week. It shows forecast against orders, projected stock, planned production lots and the quantity you can still promise. A rough check tests the plan against critical resources. The plan is adjusted until it fits, and it can feed your materials planning.
+when:
+  - You have a sales forecast and need to turn it into a build schedule.
+  - A customer asks for a delivery date and you need to know what you can promise.
+  - Your plan keeps changing and you want a stable weekly one.
+  - You need a master schedule to feed into material requirements.
+you_give:
+  - Sales forecast and open customer orders
+  - Current stock of finished goods
+  - Capacity of key resources and changeover times
+  - How you make products (to stock or to order)
+  - Planning horizon in weeks
+you_get:
+  - Weekly production plan by product
+  - Projected stock levels
+  - Available-to-promise quantities
+  - Capacity check against bottlenecks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

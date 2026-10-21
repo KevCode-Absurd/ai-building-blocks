@@ -6,6 +6,25 @@ summary: Check your shipping, returns and privacy policies. Get clean, plain tex
 job: build-websites
 headline: Store policy cleaner
 subhead: Check your shipping, returns and privacy policies. Get clean, plain text versions AI can quote to shoppers. Can update live policies.
+explain: |
+  Shipping, returns and privacy policies that both people and AI shopping assistants can read and quote correctly. When a shopper's AI asks do you ship to me or what is the return window, it needs clear plain text to answer from. If your policy is missing or messy, it may skip you.
+
+  The skill first audits your Shopify store and reports which policies exist and which are unreadable. It can then prepare clean versions for you to approve. Writing to your live policies is off by default, because they are legal text and the skill will not invent legal terms. You supply the approved wording and it applies it only after a preview. A lawyer should check the content.
+when:
+  - You suspect your policy pages are blank, broken or buried in images.
+  - You want AI assistants to answer shipping questions about your shop.
+  - You have approved new policy wording and want it loaded into Shopify.
+  - You want a quick check that all five policy types exist.
+you_give:
+  - Your Shopify store link and access
+  - Which policies to check
+  - Approved policy text files (optional)
+  - Audit only or apply changes
+you_get:
+  - An audit of which policies exist
+  - Notes on unclear or missing policies
+  - Clean plain text versions
+  - A preview before any live change
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

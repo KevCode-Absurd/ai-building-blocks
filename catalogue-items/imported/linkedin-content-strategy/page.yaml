@@ -6,6 +6,27 @@ summary: Say your goal. Get content pillars, positioning and a posting rhythm yo
 job: grow-social
 headline: LinkedIn content strategy planner
 subhead: Say your goal. Get content pillars, positioning and a posting rhythm you can keep.
+explain: |
+  A LinkedIn plan you can keep: who you write for, what you stand for, what you will not post about, and how often you will show up. It is a plan, not a pile of posts.
+
+  It starts with one objective, because two goals pull in different directions. It builds content pillars and positioning for your case, such as a career change, consulting or thought leadership. The list of topics you refuse to cover shapes the positioning as much as the topics you pick. It sets a posting rhythm priced from a bad week, not a good one, and helps you decide on a newsletter. Review it every quarter.
+when:
+  - You do not know what to post about on LinkedIn.
+  - You are changing careers and need a clear public position.
+  - You posted hard for two weeks, then stopped.
+  - You wonder if a newsletter is worth your time.
+you_give:
+  - Your one main goal
+  - Your audience
+  - Your work and experience
+  - Weekly time you can spare
+  - Topics you want to avoid (optional)
+you_get:
+  - A content brief
+  - Content pillars
+  - A positioning line
+  - A realistic posting rhythm
+  - A newsletter decision
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

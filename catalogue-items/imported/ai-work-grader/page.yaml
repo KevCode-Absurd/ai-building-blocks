@@ -6,6 +6,24 @@ summary: Finish a task. Get an honest score on quality and effort, with the weak
 job: think-and-decide
 headline: AI work grader
 subhead: Finish a task. Get an honest score on quality and effort, with the weak spots named.
+explain: |
+  An honest score for the work you just finished, not the usual 4 out of 5 for everything. It rates how hard the task was and how well it was done, then combines them with a fixed table.
+
+  Two scores are set apart. Task ambition is low, medium or high. Execution is poor, adequate or strong. The final grade comes from the table, so an easy task caps at 2 out of 5 even if it was done perfectly. Before finalising, it must argue for a higher score and a lower score, then settle the argument. Each grade is saved to a file, and it warns you when recent grades all look the same. It needs no tools.
+when:
+  - You finished a coding or writing task and want a real verdict.
+  - Your AI rates everything 4 out of 5 and the scores mean nothing.
+  - You want to track whether your work quality improves.
+  - You need to name the weak spots before a review.
+you_give:
+  - The finished work or a description of it
+  - What you set out to do (optional)
+  - Past scores file (optional)
+you_get:
+  - An ambition rating and an execution rating
+  - A final score from the table
+  - The weak spots, named
+  - A saved score history that flags score inflation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

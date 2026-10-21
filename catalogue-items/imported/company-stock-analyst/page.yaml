@@ -6,6 +6,25 @@ summary: Name a listed company. Get a sector-relative review of its numbers, str
 job: money-and-investing
 headline: Company stock analyst
 subhead: Name a listed company. Get a sector-relative review of its numbers, strengths and risks.
+explain: |
+  A written review of one listed company that judges its numbers against the right peers, not a random firm in another industry. A 20 percent margin means different things in software and in distribution, so the review checks the sector first.
+
+  Claude gathers figures from annual reports and exchange filings. Each number carries its source and period. Anything it cannot find is marked as not available, never guessed. It says whether figures are consolidated or standalone. Then it scores profit, return on capital, cash, debt, growth, governance and price together, because one ratio cannot rank a business. You get a report and a scorecard against peers.
+when:
+  - You want to understand a company before you buy its shares.
+  - A friend gave you a tip and you want the numbers behind it.
+  - You need to compare two firms in the same sector fairly.
+  - You want strengths and risks laid out with the evidence for each.
+you_give:
+  - The company name or ticker
+  - Its annual reports or filings, if you have them (optional)
+  - Peers you want it compared with (optional)
+you_get:
+  - A written fundamental review
+  - A scorecard against sector peers
+  - A source and period beside every figure
+  - A list of strengths and risks
+  - Gaps clearly marked
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

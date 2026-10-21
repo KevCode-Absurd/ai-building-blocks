@@ -6,6 +6,25 @@ summary: Give it a Python change. Get tests that fail whenever that change is br
 job: test-and-fix-code
 headline: Change test prover
 subhead: Give it a Python change. Get tests that fail whenever that change is broken, proven by code mutations.
+explain: |
+  Tests that fail whenever your Python change is broken, proven by deliberately breaking the code. Give it a change and the skill checks it is actually tested, not just passing.
+
+  It works in a clear order. It defines what should be true before coding, then makes small edits, called mutants, to each changed line. If your tests still pass, the mutant survived and the test is weak. It adds tests until every mutant is caught, then reports which tests fail on the old code. Passing tests alone prove little, as many deletable calls sat inside well-tested functions. It needs Python, pytest, git and a runner.
+when:
+  - You finished a Python fix and want proof it is tested before saying done.
+  - Coverage looks high but you do not trust the tests.
+  - A reviewer asks if your change is covered.
+  - You want to know which new tests would have failed before the fix.
+you_give:
+  - A Python project with pytest
+  - The change, as uncommitted work or a branch
+  - The base revision to compare with (optional)
+  - A time budget for the check (optional)
+you_get:
+  - A list of mutants killed and survived
+  - New tests that catch the survivors
+  - Tests that fail on the old code
+  - Evidence the change is safe to trust
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

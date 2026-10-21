@@ -6,6 +6,26 @@ summary: Describe the document. Get an ODT file, or a conversion to Word, PDF or
 job: work-with-files
 headline: LibreOffice document builder
 subhead: Describe the document. Get an ODT file, or a conversion to Word, PDF or HTML.
+explain: |
+  Make a text document from a plain description, then turn it into the format the other person needs. You get an ODT file, or a copy in Word, PDF or HTML, without opening a word processor.
+
+  The skill drives LibreOffice Writer from the command line. It builds a document, fills a template for mail merge, and converts one file or a whole folder at once. It can also script edits with Python. You need LibreOffice installed on your computer. If conversion fails, it checks for a stuck background process, the usual cause, and tidies layout problems after the change.
+when:
+  - You need fifty letters made from one template and a list of names.
+  - A client sent a Word file and you want a clean PDF.
+  - You want a document built by script instead of by hand.
+  - A folder of old files needs converting in one go.
+you_give:
+  - What the document should say
+  - A template file (optional)
+  - Data for mail merge (optional)
+  - The output format you need
+  - LibreOffice installed
+you_get:
+  - An ODT document
+  - Converted DOCX, PDF or HTML copies
+  - Merged documents from a template
+  - A batch conversion command
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

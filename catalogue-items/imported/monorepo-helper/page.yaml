@@ -6,6 +6,26 @@ summary: Point it at a monorepo. Get what a change affects and the tests to run,
 job: build-software
 headline: Monorepo helper
 subhead: Point it at a monorepo. Get what a change affects and the tests to run, in Turborepo, Nx or pnpm.
+explain: |
+  A clear answer to which parts of your monorepo a change touches and which tests to run, so you stop rebuilding everything for a one-line fix.
+
+  The skill works with Turborepo, Nx, pnpm workspaces and Lerna. It maps how packages depend on each other, draws that as a diagram, and finds every app that breaks when a shared package changes. It then runs builds and tests only for the affected packages and sets up caching to skip repeated work. It also covers moving several repos into one without losing history, publishing with changesets, and writing a CLAUDE.md that knows each package.
+when:
+  - CI takes forty minutes because everything rebuilds on every change.
+  - You edited a shared package and want to know what could break.
+  - You are merging several repos into one.
+  - You are choosing between Turborepo and Nx.
+you_give:
+  - Your monorepo, or its package list
+  - The change you are about to make
+  - The tool you use or are considering
+  - Your CI setup (optional)
+you_get:
+  - A list of affected packages
+  - The commands to run only those tests
+  - A dependency diagram
+  - A caching setup
+  - A migration plan if merging repos
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

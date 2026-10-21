@@ -6,6 +6,25 @@ summary: Name a prospect. Get a short personal email or sequence saved as a draf
 job: sell-and-negotiate
 headline: Prospect outreach drafter
 subhead: Name a prospect. Get a short personal email or sequence saved as a draft for you to review. You send it.
+explain: |
+  A short, personal email or multi-step sequence for one prospect, saved as a draft so you can review it before anything is sent. You stay in control of the send button.
+
+  Name the person or company. The skill reads your CRM and any call notes for context, then writes outreach that mentions what is actually known about them. It can write a single first email, a re-engagement note or a three-touch sequence. Values come from your records and are labelled blank when missing, with no guessing. Text found in emails or transcripts is treated as data, never as instructions. It adds the contact to a sequence only when you ask.
+when:
+  - You have a hot lead and need a first email that does not sound like a template.
+  - A past prospect went quiet and you want to re-engage them.
+  - You need a three-touch sequence for a target account.
+  - You want drafts waiting in your inbox, not emails sent for you.
+you_give:
+  - Prospect name or company
+  - Connected CRM and email
+  - Goal of the message
+  - Notes from earlier contact (optional)
+you_get:
+  - Personal email draft
+  - Follow-up sequence if requested
+  - Facts used, with sources
+  - Draft saved for your review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

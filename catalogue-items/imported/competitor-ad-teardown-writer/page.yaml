@@ -6,6 +6,26 @@ summary: Name your rivals. Get a report on their public ads and landing pages, w
 job: study-competitors
 headline: Competitor ad teardown writer
 subhead: Name your rivals. Get a report on their public ads and landing pages, with proof apart from guesses. Collects data from websites.
+explain: |
+  A report on what your rivals are running in ads and where those ads send people, with what you can prove kept apart from what you are guessing. A long-running ad hints at money being spent on it, but the public library cannot confirm that.
+
+  Claude searches the Meta Ad Library and Google ad sources for each rival you name. It sorts ads by hook, format, offer and angle, then follows visible landing pages to map the funnel step by step. A standard pass covers ads and pages. A deep pass adds history, funnel rebuild and ideas for how you could answer back. It uses web search to find first-party pages and does not claim spend figures it cannot see.
+when:
+  - You are about to launch ads and want to know what the category already says.
+  - A rival's ads changed and you want to see the new angle.
+  - You need fresh hook ideas based on what is running now.
+  - You want to find the weak spots in a competitor's funnel.
+you_give:
+  - Competitor names and websites
+  - Your product and category
+  - Channels, such as Meta or Google
+  - "Depth: standard or deep"
+  - Landing page links you spotted (optional)
+you_get:
+  - A teardown of hooks, formats and offers
+  - A map of each visible funnel
+  - Evidence marked apart from guesses
+  - Gaps and counter ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

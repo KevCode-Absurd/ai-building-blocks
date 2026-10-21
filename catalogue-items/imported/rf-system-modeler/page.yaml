@@ -6,6 +6,27 @@ summary: Give it S-parameter files or a spec. Get RF chains modeled, with gain, 
 job: build-software
 headline: RF system modeler
 subhead: Give it S-parameter files or a spec. Get RF chains modeled, with gain, noise and stability checked.
+explain: |
+  A working model of your radio frequency chain, with gain, noise, distortion and stability checked, built in MATLAB from measured files or your spec. You find problems on screen before you build hardware.
+
+  It loads Touchstone S-parameter files, checks they are sound, and plots them on Smith charts. It converts between network forms, cascades parts and removes test fixtures. Chains of amplifiers, filters and mixers are run through a budget that shows total gain, noise figure and third-order intercept. It can design matching networks and test amplifier stability. It needs MATLAB with the RF Toolbox, and RF Blockset for time-domain runs.
+when:
+  - You have S-parameter files and need to see how parts behave together.
+  - You are checking whether a receiver chain meets its noise target.
+  - An amplifier oscillates and you need a stability check.
+  - You need a matching network between two stages.
+you_give:
+  - S-parameter files (.s2p, .s4p) or part specs
+  - The chain order of parts
+  - Frequency range
+  - Target gain or noise figure (optional)
+  - A MATLAB licence with RF Toolbox
+you_get:
+  - Cascaded gain, noise figure and intercept results
+  - Smith chart and rectangular plots
+  - Stability results
+  - A matching network design
+  - MATLAB scripts or a model export
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

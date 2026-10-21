@@ -6,6 +6,26 @@ summary: Describe your buyers. Get free calculator or tool ideas that bring lead
 job: build-product
 headline: Free tool idea planner
 subhead: Describe your buyers. Get free calculator or tool ideas that bring leads, with a build plan.
+explain: |
+  Ideas for a free calculator or small tool that brings in leads and search traffic, plus a plan to build it and a check that it is worth the effort.
+
+  It asks about your product, buyers and goal, then lists tool types that fit, such as calculators, generators, graders and checkers. Each idea is tested against four rules: it solves a real problem, it connects to what you sell, it stays simple, and expected lead value beats build and upkeep cost. For the winner, it covers the page, the data capture, how people find it and what happens after they use it.
+when:
+  - You want a free calculator that people will search for.
+  - You need leads but ads are costly.
+  - You have a few tool ideas and need to pick one.
+  - You want to know if a free tool is worth the build time.
+you_give:
+  - Your product and who buys it
+  - "Your goal: leads, traffic or awareness"
+  - Build skills and time available
+  - Budget for promotion (optional)
+you_get:
+  - Several tool ideas that fit your buyers
+  - Score for each against four rules
+  - Pick with reasons
+  - Build plan
+  - Promotion and follow-up plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

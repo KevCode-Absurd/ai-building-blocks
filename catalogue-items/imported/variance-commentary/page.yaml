@@ -6,6 +6,24 @@ summary: Give it this period's and last period's numbers. Get a written reason f
 job: track-numbers
 headline: Month-end variance commentary writer
 subhead: Give it this period's and last period's numbers. Get a written reason for every line that moved past your limit.
+explain: |
+  A written reason for every line in your month-end numbers that moved more than it should. 
+  You supply this period, last period and budget. The skill flags a line when its change passes your materiality rule, which defaults to 5 percent or a fixed floor, whichever is larger. Revenue, headcount cost and cash are always checked. For each flagged line it shows the three values, the change against prior and against budget, and a one sentence driver drawn from the activity behind the number, like a vendor, a volume change or a hire. If the cause is not in the data, it writes driver unclear and flags it for the controller instead of guessing.
+when:
+  - Month-end close is due and you have 80 lines to explain.
+  - Your CFO asks why costs jumped and you only have the totals.
+  - You need budget variance notes in the board package.
+  - You want a consistent threshold for what needs a comment.
+you_give:
+  - Current period actuals
+  - Prior period actuals
+  - Budget for the same lines
+  - Your materiality threshold (optional)
+you_get:
+  - A commentary table for flagged lines
+  - Changes against prior and budget
+  - A one sentence driver for each line
+  - A short summary of the biggest movers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

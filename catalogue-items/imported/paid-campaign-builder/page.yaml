@@ -6,6 +6,25 @@ summary: Name your goal and budget. Get campaign structure, targeting, bids and 
 job: plan-ad-tests
 headline: Paid campaign builder
 subhead: Name your goal and budget. Get campaign structure, targeting, bids and a plan to scale across Google, Meta and LinkedIn.
+explain: |
+  A paid ads plan that tells you what to launch first: campaign structure, audiences, bids, budget split and how to scale if it works. It covers Google, Meta and LinkedIn.
+
+  It starts with your goal, such as leads or sales, your target cost per sale and your monthly budget. Then it asks about your offer, buyer and landing page, and whether you have past results or tracking set up. It picks the platform that fits your buyer, builds campaigns and ad groups, suggests keywords or audiences, and sets starting bids. It then lists what to test and the numbers that tell you to scale or stop.
+when:
+  - You are about to spend on ads and have no structure.
+  - Your current ads burn budget with few sales.
+  - You need to decide between Google, Meta and LinkedIn.
+  - You want a test plan with clear stop and scale numbers.
+you_give:
+  - Goal and target cost per result
+  - Monthly budget
+  - Offer and landing page
+  - Past ad results (optional)
+you_get:
+  - Campaign and ad group structure
+  - Audience and keyword picks
+  - Bid and budget plan
+  - Test list and scaling rules
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

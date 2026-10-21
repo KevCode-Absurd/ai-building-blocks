@@ -6,6 +6,24 @@ summary: Point it at your project. Get junk files, dead code and leaked secrets 
 job: ship-and-host
 headline: Pre-push repo cleaner
 subhead: Point it at your project. Get junk files, dead code and leaked secrets found and fixed before you publish.
+explain: |
+  A cleaner project before it goes on GitHub. The skill reads your code file by file, fixes what it can and flags what needs your decision.
+
+  It deletes junk such as .DS_Store, logs, temp files, build output and installed dependencies. Then it looks for dead code, unused files, hard-coded secrets and keys, security holes and slow patterns. Fixes are made straight away rather than only listed. Use it before a first push, before making a repo public or before a production release. Review its changes before you commit.
+when:
+  - You are about to push a project to GitHub for the first time.
+  - You want to make a private repo public safely.
+  - Your folder is full of logs and old test files.
+  - You worry an API key is hidden somewhere in the code.
+you_give:
+  - Your project folder
+  - Notes on files to keep (optional)
+  - Target platform (optional)
+you_get:
+  - Junk files removed
+  - Dead code removed
+  - List of leaked secrets found
+  - Security and speed fixes applied
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

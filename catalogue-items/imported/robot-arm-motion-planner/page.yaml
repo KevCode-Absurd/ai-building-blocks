@@ -6,6 +6,25 @@ summary: Give it a start and goal pose. Get a smooth path and timed moves for th
 job: build-software
 headline: Robot arm motion planner
 subhead: Give it a start and goal pose. Get a smooth path and timed moves for the arm.
+explain: |
+  An arm that moves from pose A to pose B along a path that avoids obstacles, with timing that respects speed and acceleration limits. That is what you finish with, as MATLAB code you can run.
+
+  It starts by requiring a proper robot model, because planning on a bad model gives false safe paths. You describe the obstacles as a collision world. It then helps you choose a planner: RRT for fast random search, CHOMP for smoother optimised paths. The raw path is shortened, then turned into a timed trajectory, such as time-optimal, constant speed for welding, or trapezoidal. A last check confirms the full trajectory is free of collisions. You need MATLAB with the robotics toolbox.
+when:
+  - You have two arm poses and need a safe path between them.
+  - A tool must move at constant speed along a seam, like welding or cutting.
+  - Your workspace has boxes or meshes the arm must not touch.
+  - You already have waypoints and need them joined into timed moves.
+you_give:
+  - A robot model already set up in MATLAB
+  - Start and goal poses or joint values
+  - Obstacle shapes or an environment map (optional)
+  - Speed and acceleration limits (optional)
+you_get:
+  - A collision-free path between your poses
+  - A timed trajectory that respects limits
+  - Planner choice with reasons
+  - A collision check of the final motion
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

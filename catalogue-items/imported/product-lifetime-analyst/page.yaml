@@ -6,6 +6,25 @@ summary: Give it failure or test data. Get life curves, failure rates and confid
 job: build-software
 headline: Product lifetime analyst
 subhead: Give it failure or test data. Get life curves, failure rates and confidence ranges, worked out in MATLAB.
+explain: |
+  Life curves, failure rates and confidence ranges for a product, worked out from your test or field data in MATLAB. You learn how long things last and how sure you can be.
+
+  Claude fits life distributions such as Weibull, compares several fits to find the best one, and computes figures like mean time to failure and B10 life. It builds Kaplan-Meier survival curves and empirical CDFs, handles accelerated life models, and uses bootstrapping for confidence intervals on the results. It writes MATLAB code using the standard fitting and probability tools, so you need MATLAB with the Statistics toolbox.
+when:
+  - You have failure times from testing and need a life estimate.
+  - You want to compare Weibull and other distributions.
+  - You need a warranty or maintenance figure with confidence limits.
+  - Some units have not failed yet and the data is censored.
+you_give:
+  - Failure or test data with times
+  - Which units are still running (optional)
+  - Stress levels for accelerated tests (optional)
+  - MATLAB with the Statistics toolbox
+you_get:
+  - Fitted life distributions
+  - Mean time to failure and B10 life
+  - Kaplan-Meier survival curves
+  - Confidence intervals on results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

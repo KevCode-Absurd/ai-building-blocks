@@ -6,6 +6,27 @@ summary: Describe your product. Get a pricing survey, plan tiers and a price bui
 job: set-prices
 headline: Willingness to pay pricing planner
 subhead: Describe your product. Get a pricing survey, plan tiers and a price built on what buyers will actually pay.
+explain: |
+  A price and plan structure built on what buyers say they will pay, set while your product is still changeable. Most new products miss revenue targets because price came last.
+
+  The skill applies the Monetizing Innovation method. It helps you ask the right questions: what feels acceptable, expensive and too much, plus trade-off questions that reveal real priorities, scored with top-box purchase intent only. It then groups buyers by value, shapes good, better and best tiers and moves killer features out of the base plan. It scores your current pricing from 0 to 10 and lists the changes needed to reach 10.
+when:
+  - You are designing a new product and have no price yet.
+  - Your price came from costs or a competitor's page.
+  - You discount too often and want a firmer plan.
+  - You need to decide between tiers, freemium or one flat price.
+you_give:
+  - Product description
+  - Target customer groups
+  - Current price and plans (optional)
+  - Competitor prices (optional)
+  - Customer research you have (optional)
+you_get:
+  - Willingness-to-pay survey questions
+  - Customer segments by value
+  - Tier and packaging design
+  - Suggested price metric
+  - Pricing score with next fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

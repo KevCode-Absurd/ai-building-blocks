@@ -6,6 +6,25 @@ summary: Name the deal or buyer. Get a pitch deck outline, one-pager, objection 
 job: sell-and-negotiate
 headline: Sales collateral writer
 subhead: Name the deal or buyer. Get a pitch deck outline, one-pager, objection sheet or demo script.
+explain: |
+  The sales material your reps will actually open and use. Name the deal or buyer and get a pitch deck outline, a one-pager, an objection sheet or a demo script.
+
+  It reads any product context file you keep, then asks what is missing: your value and what sets you apart, how you sell, deal size, sales cycle, the people in the buying decision and the funnel stage. It checks which materials already exist so it does not repeat them. The output is written for whoever will use it, whether an account executive, a development rep or a champion inside the buyer's company, and leans on proof you can back up.
+when:
+  - A big deal needs a tailored pitch outline.
+  - Your reps keep getting the same objection and have no good answer.
+  - You need a one-page leave-behind for a buyer.
+  - A demo is coming and the presenter needs a script.
+you_give:
+  - What you sell and who it is for
+  - The deal or buyer to target
+  - Proof points such as results (optional)
+  - Your sales process and deal size
+you_get:
+  - A pitch deck outline
+  - A one-pager
+  - An objection handling sheet
+  - A demo script
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

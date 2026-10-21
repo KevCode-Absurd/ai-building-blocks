@@ -6,6 +6,25 @@ summary: Give it a data table. Get a fitted regression or time series model with
 job: track-numbers
 headline: Regression and forecast modeller
 subhead: Give it a data table. Get a fitted regression or time series model with checks and a plain read of the results.
+explain: |
+  A fitted model for your data table, with the checks that show whether you can trust it, and a plain reading of what the numbers mean.
+
+  It uses Python and the statsmodels library. You describe the question, such as what drives sales or what next quarter looks like. It picks a fit: ordinary regression, logistic or count models, mixed models, or time series like ARIMA. Then it tests the assumptions, looks for outliers and compares candidate models. A good fit only proves the maths ran, so it separates correlation from cause and warns you about both. It needs Python and a few packages installed.
+when:
+  - You want to know which factors really move your sales or conversion numbers.
+  - You need a forecast from monthly figures with a clear range of uncertainty.
+  - A model gave odd results and you need to find out why.
+  - You must compare two models and choose one.
+you_give:
+  - Data table as a CSV
+  - What you want to explain or predict
+  - Time column for forecasts (optional)
+  - Python set up with statsmodels
+you_get:
+  - Fitted model with coefficients
+  - Assumption and outlier checks
+  - Forecast with ranges (optional)
+  - Plain language reading of results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Name what you want to set up. Get one small step at a time, with the st
 job: organise-work
 headline: Setup walkthrough guide
 subhead: Name what you want to set up. Get one small step at a time, with the steps left shown.
+explain: |
+  A guided setup where you see only one small step at a time, with the steps left shown below. Setups feel long because the whole list lands at once. Here each reply holds a single action, such as one click, field or command, then a divider and a numbered list of what remains.
+
+  Before step one, Claude builds a full checklist from your outline, the docs, your screen and any prerequisites. The remaining list never shows more than eight items. If more are left, later steps merge into broader ones, but none are dropped. A new required step is added in the right place. When done, Claude says setup is complete.
+when:
+  - You are installing a tool and the instructions are overwhelming.
+  - You are connecting several services and keep losing your place.
+  - You are helping a teammate set up something non-technical.
+  - You want to see how many steps are still left at every point.
+you_give:
+  - What you want to set up
+  - Docs or an outline of the steps (optional)
+  - Your current screen or progress (optional)
+you_get:
+  - The current step, one action only
+  - A list of up to eight steps remaining
+  - An updated list after each step
+  - A completion message
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

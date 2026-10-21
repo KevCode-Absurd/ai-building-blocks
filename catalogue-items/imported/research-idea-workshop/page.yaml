@@ -6,6 +6,26 @@ summary: Name your research area. Get ideas built, challenged and ranked, with a
 job: research-topics
 headline: Research idea workshop
 subhead: Name your research area. Get ideas built, challenged and ranked, with assumptions and a decision log.
+explain: |
+  A structured brainstorm for your research area that builds ideas, challenges them and ranks them, ending with a log of why you chose what you chose. Ideas stay proposals until evidence says otherwise.
+
+  It keeps four jobs apart: making ideas, checking evidence, testing hypotheses and getting ethics review. First each idea is written on its own, to avoid copying the loudest one. Then a structured discussion adds options, and an adversarial round attacks the weak points. Every idea lists its hidden assumptions. A transparent scoring step ranks them, and a decision log records the reasons. Small Python tools help organise the output.
+when:
+  - You lead a lab meeting and want a fair way to pick a direction.
+  - You want your ideas attacked before you invest months.
+  - You need a written record of why you chose one idea.
+  - You are working alone and want the group effect.
+you_give:
+  - Research area or question
+  - Participants and their views (optional)
+  - Criteria that matter to you
+  - Existing evidence (optional)
+you_get:
+  - List of candidate ideas
+  - Stated assumptions for each
+  - Challenge notes on weak points
+  - Ranked shortlist
+  - Decision log
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

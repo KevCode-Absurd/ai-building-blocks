@@ -6,6 +6,25 @@ summary: Give it a deck and new figures. Get every number updated across the sli
 job: work-with-files
 headline: Deck number refresher
 subhead: Give it a deck and new figures. Get every number updated across the slides, with a list of changes.
+explain: |
+  Every figure in your deck updated, with the formatting untouched. Give it the deck and the new numbers and it changes values on slides, tables and charts, then lists exactly what it changed.
+
+  It works in four phases. First it gets the new data. Then it finds every place each number appears, including headline text, tables, chart data and footnotes. Third, it shows you a plan and waits for your approval before editing anything. Last, it makes the smallest change possible and checks that totals still match. It follows Indian conventions: April to March fiscal years and lakh and crore units, labelled the right way.
+when:
+  - Quarterly results arrived and the board deck still shows last quarter.
+  - A client changed one assumption and ten slides depend on it.
+  - You need a clean list of changes to send to a reviewer.
+  - You worry about missing a number buried in a footnote.
+you_give:
+  - The deck file
+  - New figures or a source spreadsheet
+  - Which periods or units to update (optional)
+  - Rules for rounding (optional)
+you_get:
+  - Update plan to approve
+  - Updated deck with original formatting
+  - Change log by slide
+  - Flags for numbers that do not tie
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

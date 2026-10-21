@@ -6,6 +6,25 @@ summary: Describe the work and workers. Get a classification risk check, an onbo
 job: hire-people
 headline: Contractor program setup guide
 subhead: Describe the work and workers. Get a classification risk check, an onboarding checklist and a vendor plan. Not legal advice.
+explain: |
+  A set up for working with contractors and freelancers: a check on whether each worker really counts as a contractor, an onboarding checklist, and a plan for vendors. It lowers the chance of misclassifying someone as a contractor when they are an employee.
+
+  You describe the work, how it is directed, and who the workers are. The skill walks through classification factors such as control, tools, schedule and exclusivity, and marks risk. It then covers program design, vendor management systems, statements of work, onboarding, offboarding, and converting a contractor to staff. It lists common mistakes to avoid. It is guidance for HR and buying teams, not legal advice.
+when:
+  - You use freelancers daily and worry they might count as employees.
+  - You are creating a program to manage temporary staff and agencies.
+  - You need an onboarding checklist for a new contractor.
+  - You want to hire a contractor full time and need the steps.
+you_give:
+  - Description of the work
+  - How workers are directed and paid
+  - Country or state
+  - Current vendors (optional)
+you_get:
+  - Classification risk check
+  - Onboarding and offboarding checklist
+  - Vendor management plan
+  - Statement of work outline
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe a repeatable job. Get a step-by-step procedure file for your A
 job: make-skills
 headline: Agent procedure writer
 subhead: Describe a repeatable job. Get a step-by-step procedure file for your AI, with firm rules and a format check.
+explain: |
+  A step-by-step procedure file that an AI agent follows the same way each time, for a job you repeat. It has inputs you can change, clear steps, and firm rules the agent cannot wave off.
+
+  The skill writes in a standard format called an Agent SOP, saved as a markdown file with a set name ending. Rules use three plain words: MUST for required, SHOULD for expected, MAY for optional. That gives the agent room to think but no room to skip the important parts. Each step carries examples and a fix list for common failures. A check script then reads the file and flags anything that breaks the format, and you re-run it after each edit.
+when:
+  - You do the same multi-step job each week and want an AI to do it your way.
+  - An agent skips steps and you need some rules to be firm.
+  - You want one procedure that works in several AI tools.
+  - Your old procedure has grown messy and needs checking.
+you_give:
+  - A description of the repeatable job
+  - The steps as you do them now
+  - Inputs that change each time (optional)
+  - Rules that must never be broken (optional)
+you_get:
+  - A procedure file with steps and firm rules
+  - Inputs you can swap per run
+  - Examples and fixes for common problems
+  - A format check result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

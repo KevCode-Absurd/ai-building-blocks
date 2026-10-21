@@ -6,6 +6,25 @@ summary: Name the markets you eye. Get a market pick, entry route, localisation 
 job: plan-strategy
 headline: New country expansion planner
 subhead: Name the markets you eye. Get a market pick, entry route, localisation list and rules to check.
+explain: |
+  A clear pick of which country to enter next, and how to enter it. You name the markets you are considering, and the skill scores each one so the choice is not a gut call.
+
+  Scoring covers market size, competition, rules and red tape, cultural distance, any demand you already have, and how hard day-to-day operations would be. Next it picks an entry route, from selling remotely, to a local partner, to hiring in country, to setting up a company. The usual path is to start light and add commitment as revenue grows. A checklist covers what to localise: language, prices, payment methods and legal terms. You also get a note on the rules to confirm with an expert.
+when:
+  - You have customers asking from abroad and cannot decide where to go.
+  - You are choosing between two or three countries for next year.
+  - You want to test a market before hiring anyone there.
+  - You need a localisation to-do list for a launch.
+you_give:
+  - The countries you are weighing
+  - Your product and who it serves
+  - Current customers or demand abroad (optional)
+  - Budget and team size (optional)
+you_get:
+  - A scored market comparison
+  - A recommended entry route
+  - A localisation checklist
+  - A list of legal rules to check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

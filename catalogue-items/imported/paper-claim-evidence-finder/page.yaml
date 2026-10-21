@@ -6,6 +6,23 @@ summary: Name a topic or DOI. Get claims taken from full papers, with the number
 job: research-topics
 headline: Paper claim evidence finder
 subhead: Name a topic or DOI. Get claims taken from full papers, with the numbers, limits and source for each.
+explain: |
+  A table of what research papers actually claim, with the numbers, the limits and the source for each claim. It reads full-text-derived records, not just titles and abstracts.
+
+  You name a topic or paste a DOI. It searches a paper database through a connected service, pulls extracted findings with the experiments behind them, and lays them out so each claim can be traced back. It is built for a first pass at evidence. It does not replace a systematic review or judge study bias. You need to connect the BGPT service, which has free and paid use, and an internet connection.
+when:
+  - You need evidence for a claim and want the numbers, not a vague summary.
+  - You are starting a literature review and want a traceable table.
+  - You have a DOI and want what the paper really found.
+  - You must cite sources and show where each fact came from.
+you_give:
+  - Research topic or question, or a DOI
+  - The BGPT service connected
+  - Number of papers wanted (optional)
+you_get:
+  - Evidence table with claim, result and limits
+  - Source and DOI for each row
+  - Details of the experiment behind each claim
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

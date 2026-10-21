@@ -6,6 +6,25 @@ summary: Give it brain imaging files. Get them named, laid out and described to 
 job: research-topics
 headline: Brain imaging dataset organizer
 subhead: Give it brain imaging files. Get them named, laid out and described to the BIDS standard, with problems flagged.
+explain: |
+  Get a pile of brain imaging and related files named, laid out and described to the BIDS standard, so other people and tools can read them at once. Problems are flagged before you share or submit.
+
+  BIDS sets file names, folder layout and metadata fields. It covers MRI, PET, EEG, MEG, intracranial recordings, near-infrared, motion capture, behaviour and more. The skill uses Python tools such as PyBIDS to index and query the dataset, and it checks the result against the current spec. Each archive has its own submission rules, so check your target before you deposit.
+when:
+  - You have raw scanner files and need a standard layout.
+  - A repository asks for BIDS before you can submit.
+  - You must add the metadata files BIDS requires.
+  - You want a check that finds naming and layout errors.
+you_give:
+  - Your raw imaging or recording files
+  - Details on the study, subjects and sessions
+  - The modality, such as MRI or EEG
+  - The target archive (optional)
+you_get:
+  - A BIDS-structured folder
+  - Correct file names and sidecar metadata
+  - A list of validation problems
+  - Notes on what to fix
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

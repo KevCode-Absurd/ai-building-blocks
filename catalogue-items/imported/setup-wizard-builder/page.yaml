@@ -6,6 +6,25 @@ summary: Describe a manual setup job. Get a script that walks you through each s
 job: build-software
 headline: Setup wizard builder
 subhead: Describe a manual setup job. Get a script that walks you through each step and saves what you enter.
+explain: |
+  A bash script that walks you through a tedious manual job one stage at a time. It opens each web page, tells you what to click and copy, and saves what you enter in the right place. Use it for setting up outside services, a one-off migration, or moving a project to a new state.
+
+  Claude reads your repo first, including env files, workflow secrets and config, and lists each stage and value needed. You approve that list. For each stage it writes the exact path, such as Dashboard, Developers, API keys, copy. A fixed template handles progress, hidden entry for secrets, env updates and GitHub secrets. You delete the script afterward unless you keep it.
+when:
+  - Setting up a project means copying keys from five dashboards into env files.
+  - You do the same setup for each new client and it takes an hour of clicking.
+  - A migration has irreversible steps and you want a confirm at each one.
+  - You want GitHub secrets written for you without pasting them into chat.
+you_give:
+  - The manual procedure to automate
+  - Your repo with env files and workflows
+  - The services involved
+  - Whether the wizard should be kept (optional)
+you_get:
+  - An ordered stage list for approval
+  - A step by step wizard script
+  - Values saved to .env or GitHub secrets
+  - A closing summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

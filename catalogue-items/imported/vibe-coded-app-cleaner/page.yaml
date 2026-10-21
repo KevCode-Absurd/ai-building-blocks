@@ -6,6 +6,25 @@ summary: Point it at a fast-built app. Get dead code and broken imports removed 
 job: test-and-fix-code
 headline: Vibe-coded app cleaner
 subhead: Point it at a fast-built app. Get dead code and broken imports removed without breaking routes or APIs.
+explain: |
+  An app built fast with AI, tidied up without breaking it. Dead imports, unused files and broken references are removed, while your routes, APIs, login and database stay exactly as they were.
+
+  The skill works like surgery, not demolition. It starts by mapping the app: listing every page and route, running the type checker for broken imports, and checking for unused exports and leftover debug logs. It removes only what is proven dead, in small steps. After each batch it checks again. It does not rename routes that may be indexed, change API shapes, or touch the database or auth flow. Duplicate logic moves to shared helpers. js, React and Node apps.
+when:
+  - Your prototype works but the code is a mess and you want to hand it off.
+  - The type checker shows broken imports you do not understand.
+  - You are about to launch and want a safe baseline.
+  - You are afraid a cleanup will break pages that already work.
+you_give:
+  - The app code
+  - How to run it and its tests
+  - Routes or files that must not change
+  - The stack you used, such as Next.js (optional)
+you_get:
+  - A map of pages and routes
+  - A list of safe removals
+  - Small, reversible changes
+  - A check after each batch
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Say your product stage. Get the KPIs to track, a dashboard layout and h
 job: build-product
 headline: Product metrics planner
 subhead: Say your product stage. Get the KPIs to track, a dashboard layout and how to read retention and adoption.
+explain: |
+  A short list of the numbers worth tracking at your product's stage, laid out as a dashboard, plus a way to read retention and adoption. You avoid drowning in charts that do not drive decisions.
+
+  Claude picks a framework to fit: AARRR for funnels, North Star for shared focus, or HEART for user experience quality. It then sets KPIs for your stage, whether before product-market fit, growing or mature. The dashboard has three layers: five to seven leadership metrics, product health, and per-feature use. For cohorts, it compares retention curves rather than single points and looks for drop-offs around first value.
+when:
+  - You are launching and do not know which metrics matter yet.
+  - Your dashboard has too many numbers and no clear story.
+  - You need to read cohort retention.
+  - You want to know if a feature is actually being used.
+you_give:
+  - Your product and its stage
+  - Your main business goal
+  - Current metrics or cohort data (optional)
+  - The analytics tool you use (optional)
+you_get:
+  - A chosen metric framework
+  - KPIs for your stage
+  - A layered dashboard layout
+  - A reading of retention and adoption
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

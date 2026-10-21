@@ -6,6 +6,25 @@ summary: Give it your products or plans. Get a comparison page that helps people
 job: build-websites
 headline: Comparison table designer
 subhead: Give it your products or plans. Get a comparison page that helps people choose, with a fair default pick.
+explain: |
+  A comparison page that helps a visitor choose, not one that dumps 160 cells on them. The key is a fair like-for-like grid plus a clear pick for each type of buyer, such as: if you are a small team, choose this.
+
+  Claude helps you decide which few rows matter, which option shows by default, and how filters and toggles should behave. It writes the recommendation logic so the page says who each choice suits and why, in an honest voice. It also reviews an existing feature grid that is not lifting sign-ups and points out what to cut. It is made for plan pages, product versus product pages and vendor shortlists, and it leaves the coding to you.
+when:
+  - Your pricing page lists every feature and visitors still do not pick a plan.
+  - You are building a versus page against a rival.
+  - You need a quiz or table to steer people to the right product.
+  - A comparison tool you built gets views but no sign-ups.
+you_give:
+  - The options to compare
+  - Your audience and what they care about
+  - Your current table (optional)
+  - The goal, such as sign-ups
+you_get:
+  - A shortlist of rows that matter
+  - A default view
+  - Recommendation rules by buyer type
+  - Notes on filters and layout
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

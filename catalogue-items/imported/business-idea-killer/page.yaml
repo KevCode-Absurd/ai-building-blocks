@@ -6,6 +6,24 @@ summary: Give it a business idea. Get the one fact that kills it, or the cheapes
 job: test-an-idea
 headline: Business idea killer
 subhead: Give it a business idea. Get the one fact that kills it, or the cheapest test it still has to pass.
+explain: |
+  Before you spend money or weeks, find the one fact that kills your idea. If it survives, you get the cheapest test it still has to pass.
+
+  The skill acts like a pathologist, not a cheerleader. If you keep a list of past rejected ideas, it checks that first: the same niche means dead, and a matching failure pattern becomes a strong warning to test. Otherwise it runs named kill checks and ends in a hard verdict. DEAD comes with the pattern that killed it. SURVIVED comes with one cheap test that could still end it. It can start your kill list file if you allow it.
+when:
+  - You have a new business idea and want honest feedback.
+  - You want to know if you should build something before you spend time.
+  - You have many ideas and need a fast way to rule out the weak ones.
+  - You want a cheap test to run before committing.
+you_give:
+  - Your business idea in a few lines
+  - Who you plan to sell to
+  - Your list of past rejected ideas (optional)
+you_get:
+  - "A verdict: dead or survived"
+  - The kill pattern named, if dead
+  - The cheapest remaining test, if survived
+  - A row for your kill list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

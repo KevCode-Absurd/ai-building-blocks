@@ -6,6 +6,25 @@ summary: Give it your API spec. Get a scorecard, flagged breaking changes and fi
 job: test-and-fix-code
 headline: API design reviewer
 subhead: Give it your API spec. Get a scorecard, flagged breaking changes and fixes for naming and errors.
+explain: |
+  A scorecard for your API design, with a list of breaking changes and fixes for naming, errors and structure. It works best before an API ships, or before you plan a second version.
+
+  The skill runs three scripts and reports what they find. A linter checks resource names, how requests and statuses are used, URL shape, error format and missing docs. A change detector compares two versions of your spec and flags removed endpoints and changed responses. A scoring tool grades the whole design. You fix the issues, then run them again until the linter is clean, nothing breaks without a version bump, and the grade meets your target. It will not sign off on words alone.
+when:
+  - A pull request adds or changes endpoints and you want a proper review.
+  - You are planning a second version and need to know what would break.
+  - Your team has no shared API standards.
+  - Names and errors differ from route to route.
+you_give:
+  - Your OpenAPI or Swagger file
+  - An older version to compare (optional)
+  - Your target grade (optional)
+  - Team naming rules (optional)
+you_get:
+  - A graded scorecard
+  - A list of convention problems
+  - Flagged breaking changes
+  - Fixes for naming and error format
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

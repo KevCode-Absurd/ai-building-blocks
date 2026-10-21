@@ -6,6 +6,25 @@ summary: Name your model and GPU. Get a fast model server running, with settings
 job: build-software
 headline: vLLM model server setup
 subhead: Name your model and GPU. Get a fast model server running, with settings for speed and memory.
+explain: |
+  A running model server that answers requests fast, with settings picked to fit your GPU and model size. It speaks the same API as OpenAI, so your existing code points at it with a one-line change.
+
+  The skill starts from a quick install and a test call. It then sets memory use, context length and port for your model, and for large models it splits work across several GPUs. It covers shrinking models with quantization to fit smaller cards, testing with light traffic, turning on monitoring and checking speed numbers before go-live. It needs Python, a supported GPU and the vLLM package. You download the model yourself.
+when:
+  - You want to host an open model on your own GPU instead of paying per call.
+  - Your current setup is slow or runs out of memory under load.
+  - You need an OpenAI-style endpoint for an existing app.
+  - A large model must be split across two or more GPUs.
+you_give:
+  - The model you want to run
+  - Your GPU type and how many you have
+  - Expected traffic or response time target
+  - Whether a smaller, quantized model is acceptable (optional)
+you_get:
+  - Install and launch commands
+  - Tuned settings for memory and context
+  - A test call using the OpenAI client
+  - A launch check list with monitoring
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

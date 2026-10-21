@@ -6,6 +6,24 @@ summary: Get staff accounts with old logins, inactive status or too much access,
 job: secure-code
 headline: Staff access reviewer
 subhead: Get staff accounts with old logins, inactive status or too much access, so your store stays safe.
+explain: |
+  A report on which Shopify staff accounts are a risk to your store. It lists accounts with no login for a set number of days (90 by default), accounts marked inactive but still set up, and accounts with full or owner-level access.
+
+  The skill only reads data. It changes nothing, so it is safe to run at any time. You can include or leave out inactive accounts and the owner, and get the output as a readable list or as JSON. It is a good first step before you remove access. You need the Shopify command line, a signed-in session and permission to view staff.
+when:
+  - A former contractor may still have a login.
+  - You want a regular check on who can get into your store.
+  - Too many people have full admin access.
+  - You need a list before a security review.
+you_give:
+  - Your store domain
+  - How many days without login counts as stale (optional)
+  - Shopify read access for staff users
+you_get:
+  - Staff with stale logins
+  - Inactive but still active accounts
+  - Accounts with full access
+  - A readable or JSON report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

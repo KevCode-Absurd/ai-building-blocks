@@ -6,6 +6,25 @@ summary: Run it on your orders. Get the product pairs and triples people buy tog
 job: run-your-store
 headline: Bundle pair finder
 subhead: Run it on your orders. Get the product pairs and triples people buy together, as ideas for bundles and cross-sells.
+explain: |
+  Find which products your customers already buy together, so your bundles and cross-sells start from real orders, not hunches. It only reads data and changes nothing.
+
+  The skill looks at your Shopify orders over a set window, 180 days by default. For every order with two or more products, it counts pairs, or triples if you ask. It scores each combination by support (how many orders), confidence (how often B follows A) and lift (how much more often they sell together than by chance). You can limit by collection and set a minimum count. You need the Shopify CLI signed in with read access to orders and products.
+when:
+  - You want to design a bundle that people already want.
+  - You need ideas for "frequently bought together" suggestions.
+  - You want to know which products sell together by more than chance.
+  - You are planning a promotion and need product pairings.
+you_give:
+  - Your store address
+  - How many days of orders to look at (optional)
+  - A collection to focus on (optional)
+  - Pair or triple size (optional)
+you_get:
+  - A ranked list of product pairs or triples
+  - Support, confidence and lift scores
+  - Bundle candidates
+  - Cross-sell ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

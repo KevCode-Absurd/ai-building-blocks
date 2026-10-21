@@ -6,6 +6,25 @@ summary: Ask a question about your Postgres data. Get a read-only query run with
 job: work-with-files
 headline: Safe database query runner
 subhead: Ask a question about your Postgres data. Get a read-only query run with write protection and the results back.
+explain: |
+  Ask a question about your Postgres data in plain words and see real results, with no risk of changing anything. Every query runs read-only, so a bad command cannot delete or edit a row.
+
+  You set up a connections file listing each database with a name, a short note on what it holds and a login. Keep the file locked down since it holds passwords. A Python script lists databases and tables, shows columns and runs queries. Protection comes in layers: the connection is read-only, and the script checks each command for inserts, updates, deletes and schema changes. It needs Python and a Postgres driver. Use a read-only login.
+when:
+  - You want to count orders or users without asking a developer.
+  - You are exploring an unfamiliar database and need to see its tables.
+  - You have several databases and need the right one picked.
+  - You fear an AI-written query might change live data.
+you_give:
+  - A connections file with database details
+  - A question in plain words
+  - A read-only database login
+  - Table names you care about (optional)
+you_get:
+  - A list of your databases and tables
+  - A read-only query that runs
+  - Results from your data
+  - A clear refusal if a command would write
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

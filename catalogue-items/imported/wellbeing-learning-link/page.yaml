@@ -6,6 +6,26 @@ summary: Give it a wellbeing programme. Get the evidence linking it to academic 
 job: teach-and-train
 headline: Wellbeing and learning link mapper
 subhead: Give it a wellbeing programme. Get the evidence linking it to academic results, for reports and funding cases. Not medical advice.
+explain: |
+  The case, in evidence, for how a wellbeing programme helps academic results. It gives you wording for governors, leaders, parents or inspectors who ask why you spend time and money on it.
+
+  You describe the programme and your school. The skill draws on research such as broaden-and-build theory, social and emotional learning studies and Visible Learning to trace a pathway from the programme to specific learning outcomes. It explains the mechanism, meaning how the programme is expected to change behaviour and attention, and predicts results at student, class and school level with realistic timeframes. Not medical advice.
+when:
+  - You need to justify a wellbeing programme in a funding bid.
+  - Governors ask how it improves attainment.
+  - You are choosing between two wellbeing initiatives.
+  - You must write the rationale section of a school improvement plan.
+you_give:
+  - The wellbeing programme
+  - Your school context and phase
+  - Outcomes you hope for
+  - Attendance or survey data (optional)
+  - Who will read the case
+you_get:
+  - Evidence map from programme to results
+  - Explanation of how it works
+  - Expected outcomes with timeframes
+  - Short statement for school leaders
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

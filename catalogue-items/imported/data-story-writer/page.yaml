@@ -6,6 +6,25 @@ summary: Give it your numbers. Get a clear story with the point, the proof and t
 job: work-with-files
 headline: Data story writer
 subhead: Give it your numbers. Get a clear story with the point, the proof and the next step for your readers.
+explain: |
+  Your numbers turn into a story a room can follow: what happened, why it matters and what to do next. The aim is a decision, not a pile of charts.
+
+  The skill sets the structure first: a setup, a rising tension where the data surprises, and a resolution with a clear ask. It matches chart choices to the point of each slide, puts the main finding in the headline, and uses comparisons and annotations so readers see the shift without squinting. It adjusts the depth for executives, investors or non technical staff. All figures are checked against your source data before they go in. Useful for quarterly reviews, board decks and written reports.
+when:
+  - You must present quarterly results to executives.
+  - Your analysis is correct but nobody acts on it.
+  - You are building an investor update with data.
+  - You need to explain a trend to people who do not read charts.
+you_give:
+  - Your numbers or analysis
+  - Who the audience is
+  - The decision you want from them
+  - Format, deck or report (optional)
+you_get:
+  - Story outline
+  - Headline findings
+  - Chart suggestions
+  - Recommendation and next step
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

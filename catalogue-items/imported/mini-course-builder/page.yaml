@@ -6,6 +6,24 @@ summary: Name a topic. Get a web mini-course with lessons, flashcards and quizze
 job: build-websites
 headline: Mini-course builder
 subhead: Name a topic. Get a web mini-course with lessons, flashcards and quizzes in one page.
+explain: |
+  A small web course on any topic, in one page you can open in a browser, with lessons, flashcards and quizzes. Name the topic and you get six to eight lessons you can use or share right away, with no server or login.
+
+  The skill plans first: a course title, a short description, and ordered lessons, each with a goal, two to four objectives, source links, two or three flashcards and one or two quiz questions. It then builds three files: index.html, styles.css and script.js. The page has a lesson list on the left, a reader, a sources list and a final review. Lessons stay short so the preview loads fast. It uses a warm, readable look.
+when:
+  - You need a quick course for your team on a new tool.
+  - You want to turn a topic you know into a study page.
+  - A client asks for training material they can open anywhere.
+  - You want flashcards and quizzes without a learning platform.
+you_give:
+  - The topic
+  - Who the learners are (optional)
+  - Source links or notes to base it on (optional)
+you_get:
+  - A six to eight lesson course page
+  - Flashcards for each lesson
+  - Quiz questions with feedback
+  - Three files you can host or open locally
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Name a government. Get its curve shape, key slopes and real rate split 
 job: money-and-investing
 headline: Yield curve explainer
 subhead: Name a government. Get its curve shape, key slopes and real rate split explained in plain words.
+explain: |
+  Pick a government and get its bond yield curve explained in plain words: its shape, its key slopes, and how much of each rate is real versus inflation.
+
+  The skill builds the curve from free public sources such as the US Treasury and FRED. It lays the real-rate curve over the nominal one, then names the shape and reads slopes like 2s10s and 5s30s. It always states which sign it uses for a slope, so "inverted" and "steep" never get mixed up. It checks where today's reading sits against recent years before drawing any view. Missing yields stay blank. It does not cover swap curves.
+when:
+  - You want to know if the US curve is inverted and what that means.
+  - You are writing a market note and need clean slopes and real rates.
+  - You need to compare today's curve with the last few years.
+  - You want a plain explanation of what the curve says about rate expectations.
+you_give:
+  - The government or market, such as US or euro area
+  - The date or period you care about
+  - The slopes you want, such as 2s10s (optional)
+  - The audience for the write-up (optional)
+you_get:
+  - The curve shape in plain words
+  - Key slope readings with a stated sign convention
+  - A real versus nominal rate split
+  - Historical context for today's levels
+  - A source and date on every table
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

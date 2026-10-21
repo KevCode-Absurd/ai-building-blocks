@@ -6,6 +6,25 @@ summary: Get custom field definitions that are unused, undocumented or share a k
 job: run-your-store
 headline: Unused custom field finder
 subhead: Get custom field definitions that are unused, undocumented or share a key, so your setup stays clean.
+explain: |
+  A tidy list of Shopify custom field definitions that nobody uses, nobody explained, or that repeat the same key in several places. You can clean up your store setup with confidence.
+
+  The skill reads every metafield definition across products, variants, customers, orders, collections, companies and locations. It flags definitions with zero stored values, definitions with no description, and namespace and key pairs that appear on more than one owner type. It is read-only, so nothing is deleted, changed or pinned, and it is safe to run any time. You choose which owner types to scan and get a readable or JSON report. It needs a signed-in Shopify command line session with read access.
+when:
+  - Your store has dozens of custom fields and nobody knows what they do.
+  - A developer left and you need to know what is safe to remove.
+  - You want to find duplicates before a theme or app change.
+  - You are preparing a store clean-up.
+you_give:
+  - Your store domain
+  - Owner types to scan (optional)
+  - Which checks to run (optional)
+  - Report format, readable or JSON (optional)
+you_get:
+  - A list of every field definition
+  - Flags for unused fields
+  - Flags for undocumented fields
+  - Flags for duplicate keys
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

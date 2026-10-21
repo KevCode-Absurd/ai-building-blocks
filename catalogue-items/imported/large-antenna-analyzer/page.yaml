@@ -6,6 +6,25 @@ summary: Describe a dish or reflector antenna. Get a built model with patterns a
 job: build-software
 headline: Large antenna analyzer
 subhead: Describe a dish or reflector antenna. Get a built model with patterns and performance checked.
+explain: |
+  A working model of a dish or reflector antenna, with the radiation pattern and performance checked. Describe what you need: a parabolic dish, a Cassegrain or Gregorian pair, an offset reflector, a reflectarray, or an antenna mounted on a vehicle, ship or satellite. It can also compute radar cross section.
+
+  The skill builds the geometry in MATLAB Antenna Toolbox, then picks the right solver for the size of the problem, such as MoM-PO, PO or FMM. It sets mesh control, can use the GPU, and plots patterns so you can check gain and beam shape. You need MATLAB with the Antenna Toolbox licence.
+when:
+  - You are designing a satellite dish and need gain and sidelobe plots.
+  - You want to compare a Cassegrain setup with an offset-fed one.
+  - You need to know how a vehicle body changes your antenna pattern.
+  - You must estimate radar cross section for a shape.
+you_give:
+  - Antenna type and frequency
+  - Dish size and focal setup
+  - Platform geometry or an STL file (optional)
+  - MATLAB with Antenna Toolbox
+you_get:
+  - A built antenna model
+  - Radiation pattern plots
+  - Solver choice with a reason
+  - Performance numbers such as gain
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Get orders listed by fraud risk level with the warning signs, as a queu
 job: secure-code
 headline: Fraud review queue builder
 subhead: Get orders listed by fraud risk level with the warning signs, as a queue for manual review.
+explain: |
+  A list of recent Shopify orders ranked by fraud risk, with the warning signs shown for each, so a person can check them by hand. It only reads data and changes nothing in your store.
+
+  You set how many days to look back, the lowest risk level to include and a minimum order value. It asks Shopify for matching orders, then sorts them with the highest risk first and larger orders ahead of smaller ones. Each row shows Shopify's own flags, such as mismatched billing and shipping details. The scores are advice from Shopify, not a final verdict. You need a Shopify store login with read access to orders.
+when:
+  - You want one list of risky orders to check each morning.
+  - You are seeing chargebacks and want to catch orders earlier.
+  - You need to review only high-value orders at risk.
+  - You want a safe way to look without changing anything.
+you_give:
+  - Store address
+  - Days to look back
+  - Minimum risk level (optional)
+  - Minimum order value (optional)
+  - Shopify login with order read access
+you_get:
+  - Orders ranked by risk
+  - Fraud signals for each order
+  - Order values and dates
+  - Readable or JSON output
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe your tech team and stack. Get a tech debt review, a hiring pla
 job: build-software
 headline: Tech leadership advisor
 subhead: Describe your tech team and stack. Get a tech debt review, a hiring plan and architecture calls.
+explain: |
+  The kind of advice a seasoned CTO gives: a view of your tech debt, a hiring and growth plan for engineering, and clear calls on architecture, build versus buy and cloud choices. It suits founders and leads who have no technical peer to ask.
+
+  You describe the team, the stack and the pressure you are under. The skill rates technical debt by severity and lays out a repayment plan, with management as the goal, not elimination. It models team growth and cost, tracks engineering health with DORA style measures, and applies a build-versus-buy rule that defaults to buying unless the thing is your core product. Optional Python scripts calculate debt and team scaling figures.
+when:
+  - You are a founder with no CTO and need a second opinion on tech choices.
+  - You must decide whether to build or buy a new capability.
+  - You are planning how many engineers to hire next year and what it costs.
+  - Deployments are slow or risky and you want measures to improve.
+  - A cloud migration is on the table and you need to weigh it.
+you_give:
+  - A description of your team and stack
+  - Your business goals and constraints
+  - Current pain points
+  - Team size and budget (optional)
+you_get:
+  - A tech debt assessment and plan
+  - A team growth and cost model
+  - Build versus buy recommendations
+  - Engineering health measures to track
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

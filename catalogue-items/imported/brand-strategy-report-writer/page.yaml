@@ -6,6 +6,26 @@ summary: Answer a set of brand questions. Get a full brand strategy report for y
 job: plan-strategy
 headline: Brand strategy report writer
 subhead: Answer a set of brand questions. Get a full brand strategy report for your business or your client.
+explain: |
+  A finished brand strategy report for your own business or a client, built from answers instead of guesswork. Without a clear strategy, every logo, post and ad pulls in a different direction.
+
+  The skill first hands you a questionnaire, grouped into sections such as the basics, the audience and the competition. You fill it in, or paste in one a client already completed. It then acts as a senior brand strategist and turns the answers into a structured report with positioning, audience, personality and messaging. If your answers are thin, it says where the gaps are before it writes.
+when:
+  - You have a new branding client and need a discovery questionnaire to send them.
+  - A client filled in a brief and you need to turn it into a polished report.
+  - You are launching your own business and want your positioning written down before you design anything.
+  - Your team keeps disagreeing about who the brand is for and needs one shared document.
+you_give:
+  - Brand name and what it sells
+  - Answers to the questionnaire, or a completed client brief
+  - Details on your audience and competitors (optional)
+  - Any existing brand material (optional)
+you_get:
+  - A grouped brand questionnaire
+  - A full brand strategy report
+  - Positioning and audience sections
+  - Personality and messaging direction
+  - A list of gaps in your answers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

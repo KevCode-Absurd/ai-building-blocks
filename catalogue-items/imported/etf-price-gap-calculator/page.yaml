@@ -6,6 +6,25 @@ summary: Give it an ETF ticker. Get how far its price sits above or below its ho
 job: set-prices
 headline: ETF price gap calculator
 subhead: Give it an ETF ticker. Get how far its price sits above or below its holdings, and why. Collects data from websites.
+explain: |
+  The gap between an ETF's market price and the value of the assets it holds, shown as a percent, with a clear reason for why it exists. You see quickly whether you would be overpaying.
+
+  You give a ticker. The skill pulls price and net asset value data from Yahoo Finance, using a small Python script, and calculates the premium or discount. It can compare several funds, scan a list for the biggest gaps, or dig deeper into why a fund trades away from value. For sudden jumps it splits the move into value-driven and structural parts, such as dealer positioning or blocked arbitrage. It is for research only, not financial advice.
+when:
+  - You want to know if an ETF is trading above or below what it holds.
+  - You are comparing several bond or crypto funds on price gap.
+  - A fund jumped hard and you want to know why.
+  - You want a list of the ETFs with the widest discounts.
+you_give:
+  - One or more ETF tickers
+  - Python with data packages installed
+  - Time period to look at (optional)
+you_get:
+  - Premium or discount percent
+  - Side-by-side fund comparison
+  - Ranked list of widest gaps
+  - Plain reason for the gap
+  - Breakdown of a sudden move
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

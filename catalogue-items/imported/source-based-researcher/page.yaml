@@ -6,6 +6,23 @@ summary: Ask a question. Get answers from trusted primary sources, saved as a Ma
 job: build-software
 headline: Source-based researcher
 subhead: Ask a question. Get answers from trusted primary sources, saved as a Markdown file in your project.
+explain: |
+  A research note you can trust, saved as a Markdown file in your project. Ask a question and the skill sends a background agent to read for you while you carry on with other work.
+
+  The agent goes to primary sources only: official docs, source code, specs and first-party APIs. It does not lean on blog posts that summarise them. Every claim in the note is traced back to the source that owns it and cited. The file is saved where your repo already keeps notes, or in a sensible place if none exists, and you are told where.
+when:
+  - You need facts about an API or library before you build with it.
+  - You want a topic researched while you keep coding.
+  - You do not trust second-hand summaries and want the original source.
+  - Your team keeps research notes in the repo and needs one more.
+you_give:
+  - The question to research
+  - Where notes are kept in your repo (optional)
+  - Sources you already trust (optional)
+you_get:
+  - A Markdown research file in your project
+  - Citations for every claim
+  - The file location
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

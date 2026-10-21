@@ -6,6 +6,27 @@ summary: Describe your business. Get a WhatsApp setup with broadcasts, automatic
 job: help-customers
 headline: WhatsApp marketing planner
 subhead: Describe your business. Get a WhatsApp setup with broadcasts, automatic replies and support flows.
+explain: |
+  A working WhatsApp channel plan that covers sales messages, automatic replies and support, matched to your brand voice. It is built for the most personal channel a customer has, where one spammy message gets you blocked.
+
+  The skill first helps you choose between the free Business app for small lists and the Business API through a provider such as Wati or Twilio for scale. Then it designs the pieces: profile and catalog, opt-in collection, broadcast types, quick replies and automated flows for orders and support. It adds message templates and rules on how often to send. It checks your brand context file first so the tone fits.
+when:
+  - Your customers already use WhatsApp and you want to sell there.
+  - You need automatic answers for common support questions.
+  - You must pick between the free app and the paid API.
+  - Your broadcasts get blocked or ignored.
+you_give:
+  - Your business and products
+  - Number of customers
+  - Brand voice notes (optional)
+  - Country or markets
+  - Budget for tools (optional)
+you_get:
+  - "Setup recommendation: app or API"
+  - Opt-in and list plan
+  - Broadcast ideas with sample messages
+  - Automatic reply and support flows
+  - Sending rules
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

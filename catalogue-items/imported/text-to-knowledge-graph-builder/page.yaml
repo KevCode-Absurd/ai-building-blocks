@@ -6,6 +6,26 @@ summary: Give it unstructured text. Get people, things and links pulled out and 
 job: think-and-decide
 headline: Text-to-knowledge-graph builder
 subhead: Give it unstructured text. Get people, things and links pulled out and drawn as a graph.
+explain: |
+  Paste a long document and get a map of who and what is in it and how they connect. Instead of rereading pages, you see a diagram of people, companies, tools and ideas, with labelled links between them.
+
+  The skill reads your text and lists each entity with its type. It then writes each link as a triple, such as Service A depends on Service B. Those triples come out as Cypher for Neo4j, JSON-LD or a simple CSV, plus a Mermaid diagram you can paste into a document. Last, it checks for orphan nodes and vague link names and tightens them. You can say which entity types to keep and how big the graph should be.
+when:
+  - You have a long report and want to see how its parts connect.
+  - You need data for a graph database from plain text.
+  - You want a diagram of a system described only in prose.
+  - You are checking that a document does not leave important links unsaid.
+you_give:
+  - The text or documents
+  - "Output format: Cypher, JSON-LD or Mermaid (optional)"
+  - Entity types you care about (optional)
+  - A size limit for the graph (optional)
+you_get:
+  - A table of entities and their types
+  - Relationship triples
+  - Graph data ready to load
+  - A Mermaid diagram
+  - A list of gaps found
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

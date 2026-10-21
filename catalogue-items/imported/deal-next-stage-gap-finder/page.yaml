@@ -6,6 +6,25 @@ summary: Name a deal. Get what is missing to reach the next stage and to close, 
 job: sell-and-negotiate
 headline: Deal next-stage gap finder
 subhead: Name a deal. Get what is missing to reach the next stage and to close, who does what and by when.
+explain: |
+  Know exactly what stands between this deal and the next stage. You get a gap list measured against your stage exit rules and qualification method, with who should do each task and by when, plus the shortest path to close.
+
+  Where a deal review scores today's position, this looks forward. It reads the CRM record, contact roles, recent emails, open commitments from calls and blockers raised in chat. Then it compares what is proven with what your stage needs. It only reads and suggests. Any record changes it proposes come with evidence, and you choose which ones to apply.
+when:
+  - A deal has sat in one stage for weeks and you need to move it.
+  - You want a clear to-do list before your next call with the buyer.
+  - You need to know what is missing before you can commit the deal in the forecast.
+  - A new rep inherits a deal and needs to know what is left to do.
+you_give:
+  - Deal name or ID
+  - "Target: next stage or close"
+  - CRM details or pasted notes
+  - Your stage exit criteria (optional)
+you_get:
+  - List of missing items for the next stage
+  - Owner and due date for each gap
+  - Shortest path to close
+  - Suggested record updates with evidence
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

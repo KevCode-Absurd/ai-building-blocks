@@ -6,6 +6,26 @@ summary: Describe the equation. Get exact solutions worked out in MATLAB, and tu
 job: build-software
 headline: Symbolic math coder
 subhead: Describe the equation. Get exact solutions worked out in MATLAB, and turned into fast numeric functions.
+explain: |
+  MATLAB code that solves your equation exactly, shows the result in clean form, and turns it into a fast numeric function you can run on real data. That saves you from hand algebra and from syntax slips that make symbolic code fail.
+
+  The skill follows the correct Symbolic Math Toolbox patterns. It declares symbolic variables with the right assumptions, then differentiates, integrates, solves or takes transforms. It simplifies or rewrites the result, and uses variable precision when you need digits. It converts answers with matlabFunction, and can go on to C code, transfer functions or state space form. You need MATLAB with the Symbolic Math Toolbox to run it.
+when:
+  - You have a differential equation and need its exact solution, not an approximation.
+  - You derived a long formula and want it simplified or rewritten into a cleaner form.
+  - You need a Laplace or Fourier transform worked out and checked.
+  - You want a symbolic result turned into a fast function for simulations.
+  - You are working with physical units and want them tracked through the algebra.
+you_give:
+  - The equation or expression in plain words
+  - Known values or assumptions for each variable
+  - The form you want back (exact, numeric, transfer function)
+  - Access to MATLAB with the Symbolic Math Toolbox
+you_get:
+  - Working MATLAB code
+  - An exact or simplified solution
+  - A numeric function made from the symbolic result
+  - Notes on assumptions used
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

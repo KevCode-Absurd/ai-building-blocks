@@ -6,6 +6,26 @@ summary: Give it the material and the goal. Get study methods that fit, with ste
 job: teach-and-train
 headline: Study strategy picker
 subhead: Give it the material and the goal. Get study methods that fit, with steps for how to use them.
+explain: |
+  Study methods chosen to fit your material and goal, with steps for using them. It also names the habits to drop, such as rereading, that feel useful but do little.
+
+  Give it the task, the type of material, the time left and the kind of test. The skill ranks study strategies by how well research supports them for your case, such as retrieval practice, spacing and mixing topics. It lists what to stop doing and why, builds a study plan across your available days, and ends with a short guide written for the student to follow on their own.
+when:
+  - An exam is three weeks away and you do not know how to revise.
+  - A student studies for hours but scores stay flat.
+  - You advise students on homework and want advice you can back up.
+  - You need a plan for memorising lots of facts, like cell biology.
+you_give:
+  - The study task or exam
+  - Material type, such as notes, diagrams or formulas
+  - Time available
+  - Year level and subject
+  - Current study habits (optional)
+you_get:
+  - Ranked study strategies for your case
+  - A list of habits to stop
+  - A day-by-day study plan
+  - A short guide the student can follow
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

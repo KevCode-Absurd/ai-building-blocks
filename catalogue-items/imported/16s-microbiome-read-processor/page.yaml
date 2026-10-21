@@ -6,6 +6,27 @@ summary: Give it paired 16S reads. Get checked sequence variants and species lab
 job: research-topics
 headline: 16S microbiome read processor
 subhead: Give it paired 16S reads. Get checked sequence variants and species labels, with the steps kept so you can repeat them.
+explain: |
+  You end up with a table of sequence variants, a species label for each one, and a saved record of every step, so a colleague can rerun the work and get the same answer.
+
+  The skill checks your setup before it runs anything. It confirms the quality encoding, the primer sequences as they were read, and whether primers are still on the reads. It uses your quality plots to set trim points, then tests that the forward and reverse reads will overlap by enough bases. After denoising it reports how many reads survived, and it helps you pick a classifier that fits your region. It needs QIIME 2 installed on your machine.
+when:
+  - You have paired 16S reads from a sequencer and need a clean variant table.
+  - A reviewer asked you to show exactly how you processed your microbiome data.
+  - You are not sure your trim settings leave enough overlap between read pairs.
+  - You need species labels for each variant using a reference you trust.
+you_give:
+  - Paired FASTQ files, one pair per sample
+  - Your primer sequences
+  - Sample metadata with matching IDs
+  - A trained classifier file for your 16S region
+  - Quality plots from a first look at the reads (optional)
+you_get:
+  - A table of sequence variants per sample
+  - Species labels for each variant
+  - A read-retention report by sample
+  - Saved QIIME 2 files that record every step
+  - A short list of checks that passed or failed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

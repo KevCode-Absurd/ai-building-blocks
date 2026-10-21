@@ -6,6 +6,26 @@ summary: Give it a decision you made. Get a 90-day plan with weekly steps, owner
 job: plan-strategy
 headline: 90-day plan builder
 subhead: Give it a decision you made. Get a 90-day plan with weekly steps, owners and check-in times.
+explain: |
+  A decision only matters once it turns into Monday-morning work, and this skill turns it into a 90-day plan with weekly milestones, a named owner for each, and what done looks like.
+
+  The plan has a fixed shape. It starts by copying the decision's success and stop rules, so the goal cannot drift. Then it splits the work into streams, each with one owner and one number to hit. A 12-week table follows, with an observable finish line for every week. Last come the dependencies inside and outside your team, and a risk list with owners and fixes.
+when:
+  - Your team just approved a big call and nobody knows who does what.
+  - You need weekly milestones for a market entry or price change.
+  - A project keeps slipping because owners are unclear.
+  - You want a clear day 30, 60 and 90 checkpoint to report to your boss.
+you_give:
+  - The decision, with its success and stop criteria
+  - The people who can own each part
+  - Your start date
+  - Known deadlines or limits (optional)
+you_get:
+  - A 12-week milestone table
+  - A named owner for each stream
+  - A check-in schedule
+  - A dependency list
+  - A risk list with fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

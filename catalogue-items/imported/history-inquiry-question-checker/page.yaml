@@ -6,6 +6,25 @@ summary: Paste your main history question. Get a verdict on whether it drives re
 job: teach-and-train
 headline: History inquiry question checker
 subhead: Paste your main history question. Get a verdict on whether it drives real inquiry, with sharper rewrites.
+explain: |
+  A verdict on whether your main history question will make students think or just look things up. Paste the question you drafted. The skill tests whether it has more than one reasonable answer, needs evidence to settle, and fits the sources you have.
+
+  You get a list of the question's strengths and the threats to it, such as wording that points to one answer, a yes or no trap, or a scope too big for one lesson. It checks whether your sources can actually support an argument either way. Then it offers a rewritten question and short teaching notes on how to launch it. Use it before building a lesson around a question that may not work.
+when:
+  - You drafted a central question and are not sure it is strong enough.
+  - Student answers to your last question were thin or all the same.
+  - Your sources do not seem to match the question.
+  - You are planning a document-based lesson from scratch.
+you_give:
+  - Your draft central question
+  - The topic and age group
+  - The sources you plan to use (optional)
+  - What happened last time you taught it (optional)
+you_get:
+  - A verdict on the question
+  - Strengths and threats listed
+  - A check of question against sources
+  - A rewritten question and teaching notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your data. Get a GraphQL schema with fast resolvers, paging an
 job: build-software
 headline: GraphQL schema designer
 subhead: Describe your data. Get a GraphQL schema with fast resolvers, paging and performance patterns.
+explain: |
+  Describe your data and get a GraphQL API plan you can build from. You receive a full schema, plus resolver code that avoids the slow trap of one database call per item.
+
+  It starts by modelling real entities as types, inputs, enums and interfaces. Queries are named for things, mutations for actions. Long lists use cursor paging with edges, nodes and page info. Resolvers use DataLoader so fifty posts and their authors cost two lookups, not fifty-one. It adds subscriptions for live data, limits on query depth and cost, field-level access rules, and options for Apollo Federation and persisted queries.
+when:
+  - You are starting a new API and need a schema design.
+  - Your API is slow because each list item triggers its own query.
+  - You need cursor paging for long lists.
+  - You need to stop expensive queries from overloading the server.
+you_give:
+  - Your entities and how they relate
+  - The reads and writes you need
+  - Your server framework (optional)
+  - Auth rules (optional)
+you_get:
+  - A complete GraphQL schema
+  - Resolver code with batching
+  - Paging for list fields
+  - Depth and cost limits
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

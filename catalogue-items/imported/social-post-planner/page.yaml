@@ -6,6 +6,25 @@ summary: Name your platforms. Get a content calendar and ready posts for LinkedI
 job: grow-social
 headline: Social post planner
 subhead: Name your platforms. Get a content calendar and ready posts for LinkedIn, X, Instagram and TikTok.
+explain: |
+  A content calendar and ready-to-post drafts for LinkedIn, X, Instagram, TikTok and Facebook. You name your platforms, and the skill plans what to post and writes it.
+
+  It starts from your story, since posts that share real experience tend to do better than posts built only around platform tricks. It then adapts format and tone to each site: longer, work-focused posts for LinkedIn, short sharp lines for X, visual hooks for Instagram and TikTok. It lays posts out on a calendar with a mix of topics. It also covers scheduling advice and a way to triage replies and comments, with a short social listening pass to find topics people care about.
+when:
+  - You post when you remember and want a steady plan.
+  - You need a month of ideas across several platforms.
+  - You have one idea and want it rewritten for each site.
+  - Comments are piling up and you need a way to sort them.
+you_give:
+  - Your platforms
+  - Your audience and goal
+  - Your story, offers and topics
+  - Posting frequency (optional)
+you_get:
+  - A content calendar
+  - Drafted posts for each platform
+  - A topic mix
+  - A reply and comment triage routine
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

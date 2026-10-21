@@ -6,6 +6,25 @@ summary: Describe a new feature that uses personal data. Get a privacy impact as
 job: check-contracts
 headline: Privacy impact assessment writer
 subhead: Describe a new feature that uses personal data. Get a privacy impact assessment with conditions and owners. First check, not legal advice.
+explain: |
+  A privacy impact assessment for a new feature that uses personal data, with conditions, named owners and a route to sign-off. It is a first check, not legal advice.
+
+  The skill starts by asking whether an assessment is needed at all, using your house trigger and the rules in each region you serve. Then it asks the product team questions, or reads a product requirements doc. It writes the assessment in your own format, checks whether the privacy policy matches the new practice, and ends with a list of conditions that must be met before launch, each with an owner.
+when:
+  - A team wants to ship location sharing next month.
+  - You are unsure whether a new feature needs a formal review.
+  - You have a product requirements doc and need the privacy section.
+  - Legal wants named owners for each risk.
+you_give:
+  - Feature description or requirements doc
+  - Data types involved
+  - Regions served
+  - Your house format or a past assessment (optional)
+you_get:
+  - Need-for-assessment check
+  - Completed assessment
+  - Policy consistency check
+  - Conditions with owners
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Run it on your orders. Get shipping you charged against shipping you pa
 job: run-your-store
 headline: Shipping cost analyzer
 subhead: Run it on your orders. Get shipping you charged against shipping you paid, by carrier and method.
+explain: |
+  A table of what you charged customers for shipping against what you paid carriers, split by carrier and method. It shows exactly where you are subsidising delivery and where you overcharge.
+
+  It reads your paid Shopify orders for a chosen period (30 days unless you say otherwise) and pulls each order's shipping lines. For every line it records what the customer paid and the cost recorded, then groups the totals by carrier and shipping method. Gaps and margins are flagged. It only reads data and changes nothing in your store. You need a signed-in Shopify CLI session with order access, and orders typed in by hand may have no cost data.
+when:
+  - Shipping seems to eat your margin and you cannot see which method does it.
+  - You want to know whether your free-shipping threshold costs too much.
+  - You are about to change rates and need the real numbers first.
+  - Your finance person asks what shipping really costs per carrier.
+you_give:
+  - Your Shopify store address
+  - Number of days to look back (optional)
+  - Shopify CLI sign-in with order read access
+  - Output style, readable or JSON (optional)
+you_get:
+  - Shipping charged against shipping paid
+  - A breakdown by carrier and method
+  - A list of lines sold at a loss
+  - A readable or JSON report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

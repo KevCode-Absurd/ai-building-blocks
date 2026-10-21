@@ -6,6 +6,26 @@ summary: Describe the site. Get a 3D web page with shaders, smooth motion, a pre
 job: build-websites
 headline: 3D website builder
 subhead: Describe the site. Get a 3D web page with shaders, smooth motion, a preloader and phone-friendly tuning.
+explain: |
+  A high-end 3D website needs more than a model on a page, and this skill writes the code for custom shader effects, smooth motion, a loading screen and phone tuning.
+
+  The work goes in four steps. First, a render loop with a resize handler and a pixel ratio capped at two, so high-density screens do not choke. Second, post-processing such as bloom, depth of field or film grain, kept to few passes. Third, motion and light physics, so objects respond to hover, drag and click. Fourth, an asset pipeline with compressed models and a preloader. It includes examples in React Three Fiber and in GLSL for a wavy liquid surface.
+when:
+  - You want an award-style site with 3D and custom visual effects.
+  - Your 3D page looks good on a laptop but stutters on a phone.
+  - You need a branded loading screen while heavy files download.
+  - You want objects to react to the mouse in a natural way.
+you_give:
+  - A description of the site and its mood
+  - Your brand colours and any 3D models
+  - The framework you use, such as React (optional)
+  - Target devices and a speed goal
+you_get:
+  - Scene and render loop code
+  - Shader and post-processing effects
+  - A preloader
+  - Motion and hover behaviour
+  - Mobile performance settings
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

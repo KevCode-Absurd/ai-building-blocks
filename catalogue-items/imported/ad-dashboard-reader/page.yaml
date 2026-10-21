@@ -6,6 +6,26 @@ summary: Paste your ad numbers. Get what each metric really means, where platfor
 job: read-ad-results
 headline: Ad dashboard reader
 subhead: Paste your ad numbers. Get what each metric really means, where platforms disagree, and whether to scale or cut.
+explain: |
+  Ad numbers stop being a puzzle once each metric is explained. See where platforms disagree with each other, and whether to scale a campaign or cut it.
+
+  The skill reads your pasted dashboard figures with care. It explains how each platform's attribution model inflates its own credit, and how to reconcile Meta, Google and your own sales data. It warns about the ROAS trap, where a short window hides the value of a customer over time. It checks whether a change is real or just noise. It also explains incrementality tests, such as holding out a region, so you can tell what ads caused versus what would have happened anyway. If data is missing, it says what it needs.
+when:
+  - Meta and Google both claim credit for the same sale.
+  - ROAS looks great but your bank balance does not.
+  - You cannot tell if last week's dip is real or random.
+  - You want to know whether to raise or cut spend.
+you_give:
+  - Dashboard numbers from each ad platform
+  - Your own sales or order data
+  - The date range and attribution settings
+  - Your margin or customer value (optional)
+you_get:
+  - A plain reading of each metric
+  - A reconciliation across platforms
+  - A noise check on changes
+  - A scale, hold or cut call
+  - A suggested incrementality test
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

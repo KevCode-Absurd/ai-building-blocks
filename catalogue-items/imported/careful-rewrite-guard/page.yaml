@@ -6,6 +6,25 @@ summary: Name a file too rotten to patch. Get a justified delete and rebuild tha
 job: build-software
 headline: Careful rewrite guard
 subhead: Name a file too rotten to patch. Get a justified delete and rebuild that keeps the behaviour that worked.
+explain: |
+  When a file is too broken to patch, you get a deletion that is justified and a rebuild that keeps every behaviour that worked. Name the file, and the AI must make its case before it removes a single line.
+
+  The process has phases. First it must prove a rewrite is needed, giving specific structural problems and showing why targeted edits would make things worse. Next it lists everything the old code does that must survive, so nothing disappears quietly. Then it rebuilds, and finally it checks each item on the list against the new version. It is for whole files or modules, not small refactors or one-function fixes.
+when:
+  - A module has been patched so many times that every fix breaks something else.
+  - You want to rewrite a file but fear losing behaviour nobody wrote down.
+  - A reviewer asks you to justify a full rewrite.
+  - An AI assistant suggests deleting a file and you want proof first.
+you_give:
+  - The file or module to rewrite
+  - What it should do
+  - Existing tests (optional)
+  - Known bugs and pain points (optional)
+you_get:
+  - A written case for or against the rewrite
+  - A list of behaviours that must survive
+  - The rebuilt code
+  - A check that each behaviour still works
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

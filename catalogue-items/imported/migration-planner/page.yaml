@@ -6,6 +6,25 @@ summary: Name the old system or feature. Get a plan to retire it and move users 
 job: build-software
 headline: Migration planner
 subhead: Name the old system or feature. Get a plan to retire it and move users over without breaking them.
+explain: |
+  A plan to retire an old system, feature or library and move users to the new one without breaking them. Name what you want to remove and you get the decision, the steps and the dates.
+
+  First it tests whether you should deprecate: does it still give unique value, how many things depend on it, does a replacement exist, and what does each user pay to move. No replacement means build one first. It plans for the fact that with enough users, every quirk becomes depended on. Then it lays out announcement, moving each consumer, watching usage and the final shutdown. It also asks how you would remove a new system in three years.
+when:
+  - You are replacing an API and clients still call the old one.
+  - You want to sunset a feature few people use.
+  - Two copies of the same code exist and you must pick one.
+  - You plan a new system and want its exit built in.
+you_give:
+  - The system, feature or library to retire
+  - What replaces it (optional)
+  - Who depends on it and how many
+  - Your timeline (optional)
+you_get:
+  - A go or no-go on deprecation
+  - A phased migration plan
+  - A list of users to move and effort for each
+  - A shutdown checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it a YouTube link. Get a clean transcript saved as a markdown note
 job: organise-work
 headline: YouTube transcript saver
 subhead: Give it a YouTube link. Get a clean transcript saved as a markdown note you can search later.
+explain: |
+  Paste a YouTube link and get the talk saved as a tidy markdown note in your notes folder, ready to search later.
+
+  A Python script uses the free yt-dlp tool to list the available subtitles and prefers manual ones over auto captions, because manual ones keep punctuation and speaker names. It then strips the timing marks, removes the doubled lines that auto captions produce, and merges the rest into clean paragraphs. The note is filed by channel and date, with title, channel and date at the top. It also scans for words like framework, decision and lesson, and drops a small idea stub for each hit. You need Python and yt-dlp.
+when:
+  - You watch long talks and want them in your notes.
+  - You want to search across everything you have learned from videos.
+  - You need a clean transcript, not messy auto captions.
+  - You want ideas from a talk flagged for later writing.
+you_give:
+  - One YouTube video link
+  - The path to your notes folder
+  - Your preferred caption language (optional)
+you_get:
+  - A clean markdown transcript note
+  - A filing path by channel and date
+  - A word count and language
+  - Idea stubs for key passages
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,27 @@ summary: Give it an event log and your steps. Get conversion per step, drop-offs
 job: track-numbers
 headline: Conversion funnel analyst
 subhead: Give it an event log and your steps. Get conversion per step, drop-offs, time to convert and what to fix.
+explain: |
+  A funnel table showing how many people reach each step, where they leave, how long they take, and which fixes are worth the most. It points you at the step costing you the most customers.
+
+  You give it an event log with user, event and time, plus your ordered steps and a time window. A script builds each person's path, then works out step to step and overall conversion, and drop-off counts. It calculates median and slow-end time between steps, since long waits show friction even when drop-off is low. It repeats the numbers by channel, device or cohort, then ranks problems by users lost times what a conversion is worth. Needs Python to run the script.
+when:
+  - Sign ups dropped and you need to find which step broke.
+  - You want to compare mobile and desktop conversion.
+  - You are planning a test and need a baseline rate.
+  - You need a monthly funnel report that looks the same every time.
+you_give:
+  - Event log with user, event and time
+  - Ordered funnel steps
+  - Time window to finish
+  - Segment columns (optional)
+  - Value of one conversion (optional)
+you_get:
+  - Conversion per step
+  - Drop-off counts
+  - Time between steps
+  - Segment comparison
+  - Ranked fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

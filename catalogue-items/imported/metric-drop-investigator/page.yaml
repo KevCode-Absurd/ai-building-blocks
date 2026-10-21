@@ -6,6 +6,26 @@ summary: Tell it which number moved. Get the change confirmed, split by group, t
 job: track-numbers
 headline: Metric drop investigator
 subhead: Tell it which number moved. Get the change confirmed, split by group, the main driver ranked and next steps.
+explain: |
+  An answer to why a number dropped or spiked, with evidence you can show. Tell it which metric moved and it works out if the change is real, when it began and which part of the business caused it.
+
+  It first checks the change against normal swings using a z-score or the rolling average. Then it dates the start of the change, since a sudden step points to an event and a slow slide points to drift. It breaks the metric into parts, such as volume times price times mix, and compares before and after across region, platform, channel and product. Each theory, including a data fault, is accepted or rejected. A script ranks the causes.
+when:
+  - Revenue fell last week and your boss wants the reason.
+  - Sign-ups spiked and you are not sure it is real.
+  - You need a post-mortem after an outage hit your numbers.
+  - A trend changed weeks ago and nobody knows why.
+you_give:
+  - The metric and 30 or more days of history
+  - Data split by region, platform, channel or segment
+  - The date the change was noticed
+  - A log of releases, campaigns or outages (optional)
+you_get:
+  - Confirmation the change is real
+  - The date it started
+  - Contributors ranked by impact
+  - Accepted and rejected theories
+  - A root cause report with next steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

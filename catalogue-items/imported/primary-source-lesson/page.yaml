@@ -6,6 +6,25 @@ summary: Give it a topic and sources. Get a full lesson where learners investiga
 job: teach-and-train
 headline: Primary source history lesson planner
 subhead: Give it a topic and sources. Get a full lesson where learners investigate a historical question from documents.
+explain: |
+  A full history lesson where learners investigate a real question using original documents, then argue from the evidence. Give it a topic and sources and it builds the lesson.
+
+  It follows the Reading Like a Historian method from Stanford researchers. The lesson has four parts: set up background, ask a central question, work through the documents with prompts on who wrote it, when and why, and finish with discussion that compares sources. It includes guiding questions and scaffolds for readers who need help. It suits middle school, high school and adult classes.
+when:
+  - You teach a unit and want learners to use sources, not a textbook summary.
+  - You have two conflicting documents on one event.
+  - You need a lesson plan with discussion questions.
+  - You want learners to practise judging sources.
+you_give:
+  - Topic
+  - Sources or document excerpts
+  - Grade level
+  - Class time
+you_get:
+  - Central question
+  - Background activity
+  - Document analysis prompts
+  - Discussion plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe how you connect to SWIFT. Get your architecture type, control 
 job: check-contracts
 headline: Bank messaging security checker
 subhead: Describe how you connect to SWIFT. Get your architecture type, control gaps and what your yearly attestation needs.
+explain: |
+  A clear read on your SWIFT security obligations. Describe how you connect to the SWIFT network, and the AI works out your architecture type and which of the 32 controls in the Customer Security Controls Framework v2026 apply, 26 mandatory and 6 advisory.
+
+  It walks through the three goals: secure your environment, know and limit access, and detect and respond. It highlights Control 2.4 on back-office data flows, now mandatory, and lays out what the yearly attestation through the KYC-SA portal needs and when it is due. You get control gaps and the evidence an independent assessor will want. The document is dated September 2026, so check current rules.
+when:
+  - Your bank or company connects to SWIFT and attestation is due.
+  - You don't know which architecture type you fall under.
+  - Control 2.4 became mandatory and you need to know what changes.
+  - An independent assessment is coming and you need evidence ready.
+you_give:
+  - How you connect to SWIFT
+  - Your current security controls
+  - Back-office systems that send messages
+  - Your attestation deadline
+you_get:
+  - Your architecture type
+  - Which controls apply
+  - A control gap list
+  - What your attestation needs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it your source and target tables. Get a column-by-column map with 
 job: document-work
 headline: Column mapping document writer
 subhead: Give it your source and target tables. Get a column-by-column map with rules, gaps and decisions to review.
+explain: |
+  A column-by-column map from your source tables to your target tables, with the rules for each, the gaps, and decisions someone must still make. It saves your team from guessing where each field comes from.
+
+  It collects both schemas with names, types and nullability, then matches columns. Direct renames are separated from derived columns that need a cast, a lookup or a calculation, and the exact formula is written down, like dividing cents by one hundred. Target columns with no source get flagged. A script can match same-name columns automatically. The result works as migration notes, a dbt spec or a catalog entry.
+when:
+  - You are connecting a new data source to your warehouse.
+  - You must document what happened to a field in a migration.
+  - A new analyst asks where a column comes from.
+  - You are writing a data catalog entry with column lineage.
+you_give:
+  - The source table list with column types
+  - The target table list
+  - Business rules or lookup logic (optional)
+you_get:
+  - A source-to-target column map
+  - Transformation rules written out
+  - Gaps with no source
+  - Decisions for review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

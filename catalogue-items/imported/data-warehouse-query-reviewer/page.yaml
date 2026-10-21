@@ -6,6 +6,25 @@ summary: Share your business question or SQL. Get a safe, read-only analysis pla
 job: read-ad-results
 headline: Data warehouse query reviewer
 subhead: Share your business question or SQL. Get a safe, read-only analysis plan and a check for join and privacy errors.
+explain: |
+  A careful, read-only plan for answering a business question from your warehouse, or a review of SQL you already wrote. It catches wrong joins and privacy slips before they reach a report.
+
+  The skill starts by pinning down the decision behind the question, the group, metric, dimensions and time window, and what the warehouse allows. Then it checks the query for grain mismatches, join fan-out that inflates totals, bad filters and small groups that could expose individuals. It records scope, data freshness, assumptions and source tables so someone else can repeat the work. It does not change data, fix pipelines or grant access, and the write up avoids claiming more than the evidence shows.
+when:
+  - Your totals jumped after you added a join.
+  - You want a second look at SQL before sharing results.
+  - A question needs an analysis plan before anyone writes queries.
+  - You must keep small customer groups private in a report.
+you_give:
+  - The business question or SQL
+  - Table and schema notes
+  - Privacy limits (optional)
+  - Time window and population
+you_get:
+  - Read-only analysis plan
+  - Join and grain review
+  - Privacy check
+  - Record of scope and assumptions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Pick products and a custom field value. Get it set or removed on all of
 job: run-your-store
 headline: Product field bulk editor
 subhead: Pick products and a custom field value. Get it set or removed on all of them. Overwrites live store data.
+explain: |
+  A custom field value set or cleared on every product that matches your filter, in one run instead of hundreds of manual edits. Typical fields include material, care notes and specs.
+
+  You name the products by tag, vendor or similar filter, plus the field's namespace, key and value. Claude queries the matching items, then sets or deletes the field. It can work on variants and customers too. The field is created on first use if it does not exist. This overwrites live store data, so you need an authenticated Shopify CLI session with write access. Preview the matches before you apply.
+when:
+  - A new spec must be added to every product in a collection.
+  - An old field value is wrong across many items.
+  - You need to remove a field from a set of products.
+  - A storefront feature reads a custom field and needs it filled.
+you_give:
+  - Your store domain
+  - A filter such as a tag or vendor
+  - Field namespace and key
+  - The value to set, or a request to delete
+you_get:
+  - A preview of matching products
+  - The field set or removed on each
+  - A count of items changed
+  - A list of any that failed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

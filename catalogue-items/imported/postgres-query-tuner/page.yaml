@@ -6,6 +6,25 @@ summary: Share your queries or schema. Get faster Postgres with better indexes, 
 job: build-software
 headline: Postgres query tuner
 subhead: Share your queries or schema. Get faster Postgres with better indexes, types and settings, ranked by impact.
+explain: |
+  Share a slow query or a table design and get back a faster version with the reason for each change. Fixes are ranked from biggest gain to smallest.
+
+  The skill works through Supabase's Postgres rules in order of impact. It looks first at query performance, then connection handling and row-level security, then schema choices such as column types and keys. After that come locking, data access patterns and monitoring. For each issue it shows the before and after SQL, so you can test the change yourself. It is useful when reviewing code before release or hunting a single slow endpoint.
+when:
+  - One report query takes ten seconds.
+  - Your column types waste space or block indexes.
+  - You need to check indexes before a release.
+  - Locks are blocking writes at peak times.
+you_give:
+  - Queries or schema files
+  - Table sizes (optional)
+  - EXPLAIN output (optional)
+  - Database settings (optional)
+you_get:
+  - Rewritten SQL
+  - Index and type recommendations
+  - Settings changes
+  - A ranked list of issues
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

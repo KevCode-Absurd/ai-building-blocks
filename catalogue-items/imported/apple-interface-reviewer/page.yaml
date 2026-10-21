@@ -6,6 +6,25 @@ summary: Describe or share your iOS or Mac screen. Get fixes checked against App
 job: design-work
 headline: Apple interface reviewer
 subhead: Describe or share your iOS or Mac screen. Get fixes checked against Apple's design rules, including Liquid Glass.
+explain: |
+  An audit of your iOS, macOS, watchOS or visionOS screen against Apple's design guidelines, including the newer Liquid Glass look. You get a scored report with measured fixes.
+
+  You describe or share the screen and say which platform it is for. The skill then uses a small script to measure what can be measured. It checks text contrast against the 4.5 to 1 target, flags tap targets below 44 by 44 points, and scores a batch of elements from 100, dropping ten for each violation. It fills a standard audit template, and can design from scratch by choosing the platform's navigation pattern first, then type and system colour. It also asks whether text stays readable on glass surfaces.
+when:
+  - You want to know if your text is readable on a glass background.
+  - A reviewer says your tap targets are too small.
+  - You are starting a new Apple app and want the right layout.
+  - You need a score and a list to hand to a developer.
+you_give:
+  - A screen image, mockup or description
+  - The target platform
+  - The app category
+  - Colour values and sizes (optional)
+you_get:
+  - A scored audit report
+  - Contrast and tap target measurements
+  - Platform-specific layout advice
+  - A prioritised fix list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

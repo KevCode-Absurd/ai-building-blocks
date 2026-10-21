@@ -6,6 +6,25 @@ summary: Give it your audience and your goal. Get a pitch or deck outline that b
 job: speak-and-persuade
 headline: Pitch arc planner
 subhead: Give it your audience and your goal. Get a pitch or deck outline that builds belief, then asks for a clear decision.
+explain: |
+  A pitch or deck outline that moves your audience from attention to trust to a clear decision. It builds belief first and brings in your solution after the need is felt.
+
+  The skill starts by getting facts: who the audience is, how aware they are of the problem, how far they trust you and what you want them to do. It then sequences the story so each part answers a doubt in the order it arises, and makes the choice and its trade-offs plain. It treats psychology ideas as planning aids, not proven effects, and tells you to verify any claim before using it outside. It does not exploit weaknesses.
+when:
+  - You are pitching investors and the deck feels flat.
+  - A sales presentation gets interest but no decision.
+  - You must pitch a product to a cold audience.
+  - You need a clear ask at the close.
+you_give:
+  - Audience and what they know
+  - Your goal or the decision wanted
+  - Verified facts about your product
+  - Known objections (optional)
+you_get:
+  - A pitch outline in order
+  - The belief each section builds
+  - Where to put proof and the ask
+  - Trade-offs stated plainly
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

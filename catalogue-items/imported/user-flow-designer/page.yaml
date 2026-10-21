@@ -6,6 +6,25 @@ summary: Describe a goal. Get a step-by-step user flow and navigation layout bui
 job: design-work
 headline: User flow designer
 subhead: Describe a goal. Get a step-by-step user flow and navigation layout built on proven patterns.
+explain: |
+  Say what a person wants to do in your app, and get a clear flow from first tap to done, plus a navigation layout that fits it. Every step has a way in, a way out and a way back from errors.
+
+  The skill applies simple rules. Show only what is needed at each step. Keep choices per screen low. Group items in sets of five to nine. Reach any key feature in three taps or fewer. It picks a pattern: hub and spoke for dashboards, a straight line for forms and checkout, or tabs for three to five main areas. It adds loading, empty and error states, and makes each screen answer one main question.
+when:
+  - You are starting a new app and need to map its main screens.
+  - Onboarding has too many steps and people give up.
+  - You want a navigation plan before a designer builds mockups.
+  - You need to explain a flow to a developer in one page.
+you_give:
+  - The goal the user wants to reach
+  - Who the user is and what device they use
+  - Existing screens or components (optional)
+  - Any steps that must happen, such as sign in
+you_get:
+  - A flow diagram from entry to exit
+  - A navigation pattern choice
+  - Error and loading states for each step
+  - A screen list in order
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

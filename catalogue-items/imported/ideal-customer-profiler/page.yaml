@@ -6,6 +6,24 @@ summary: Give it survey or customer data. Get a profile of your best customers a
 job: understand-customers
 headline: Ideal customer profiler
 subhead: Give it survey or customer data. Get a profile of your best customers and what they need.
+explain: |
+  A profile of the customers who get the most from you and stay longest, drawn from your own survey or research data. Give it the data and get who they are, how they buy and what they need most.
+
+  It looks at who your best customers are in company terms and personal terms: company size, industry, region, job title and background. It then studies behavior: how they find and judge tools, how long they take to decide, whether one person or a committee chooses, and how fast they adopt new things. It combines these into a clear target profile. Use it to aim sales and marketing, rank leads by fit and decide which segments to expand into.
+when:
+  - You ran a customer survey and are unsure what it tells you.
+  - Sales spends time on leads that never become good customers.
+  - You want to know which segment to grow next.
+  - You need a way to score new leads for fit.
+you_give:
+  - Survey, interview or customer data
+  - A list of your best and worst customers (optional)
+  - What you sell and to whom
+you_get:
+  - A profile of your ideal customer
+  - Traits that predict a good fit
+  - Buying behavior patterns
+  - Guidance for ranking new leads
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

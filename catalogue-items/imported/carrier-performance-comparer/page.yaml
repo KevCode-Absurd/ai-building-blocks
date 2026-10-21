@@ -6,6 +6,25 @@ summary: Run it on your shipments. Get delivery times and costs side by side by 
 job: run-your-store
 headline: Carrier performance comparer
 subhead: Run it on your shipments. Get delivery times and costs side by side by carrier, to guide your carrier mix.
+explain: |
+  Your carriers are compared head to head, so you can pick the best default for each route or weight. Run it on your Shopify shipments and you see average transit days, on-time rate and shipping cost per order side by side.
+
+  It reads fulfilled orders from a recent window, joins each fulfilment to the shipping line on its order, and measures delivery against the estimate the customer was given. You can split results by country or weight band and set a minimum order count so thin data is left out. Nothing in your store changes. Cost uses what the customer paid for shipping, not your negotiated rate, so add carrier invoices if you need true cost.
+when:
+  - You use three carriers and suspect one is slower than it should be.
+  - Customers complain that parcels arrive after the date you promised.
+  - You are renegotiating rates and want delivery numbers to back you.
+  - You want to choose a default carrier by country.
+you_give:
+  - Your Shopify store domain with order read access
+  - How many days back to look
+  - Minimum orders per carrier (optional)
+  - A split by country or weight (optional)
+you_get:
+  - Average transit days by carrier
+  - On-time rate by carrier
+  - Shipping cost per order by carrier
+  - A suggested default carrier per segment
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

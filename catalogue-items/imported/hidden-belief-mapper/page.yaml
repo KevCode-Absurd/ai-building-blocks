@@ -6,6 +6,25 @@ summary: Give it a topic or system. Get the beliefs, stories and values that sha
 job: teach-and-train
 headline: Hidden belief mapper
 subhead: Give it a topic or system. Get the beliefs, stories and values that shape it, each checked against evidence.
+explain: |
+  A map of the beliefs, stories and values that keep a system the way it is. When a team, school or community keeps getting the same results, the cause is often how people see the situation, not the rules. This skill helps you see those views and test them against evidence.
+
+  You name the issue and who is involved. It surfaces assumptions, definitions of success, fears, identities and the stories people tell, and links each to the habits, rules and results it produces. It compares views and notes where groups differ. It also supplies reflection questions and safer wording, so you can raise sensitive points without blaming anyone.
+when:
+  - A team keeps hitting the same problem despite new rules.
+  - Two groups clash and you suspect they see the situation differently.
+  - You are planning a change and want to know what beliefs will resist it.
+  - You want to talk about assumptions without blaming people.
+you_give:
+  - The issue, system or decision to examine
+  - Who is involved and where it happens
+  - Events, phrases or routines that hint at beliefs (optional)
+  - What you want to do with the map (optional)
+you_get:
+  - A map of current and alternative beliefs
+  - Links from beliefs to habits and results
+  - Reflection questions
+  - Non-accusing language to use
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

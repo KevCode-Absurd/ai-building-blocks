@@ -6,6 +6,23 @@ summary: Give it a garment shape and a fabric swatch. Get a sample photo in the 
 job: product-photos
 headline: Fabric swap sample maker
 subhead: Give it a garment shape and a fabric swatch. Get a sample photo in the new fabric. Your image model draws it.
+explain: |
+  A sample image of your garment shape made in a new fabric, before you cut or sew anything. Test eight fabrics for the price of eight image runs, not eight sample garments.
+
+  You give two images: a garment style sheet, which sets the cut, structure and camera angle, and a fabric swatch, which sets material, texture, shine and how it hangs. The skill writes a prompt that keeps the shape fixed and replaces only the cloth, so a chunky knit can become silk satin with a matching drape. A close-up swatch works best. It uses the dlazy command line tool, which needs an account and credits.
+when:
+  - You want to see one design in several fabrics before sampling.
+  - A buyer asks what a style would look like in a different material.
+  - You have a swatch from a supplier and want a quick visual.
+  - You are choosing between fabrics and need a mock-up to decide.
+you_give:
+  - Garment style sheet image
+  - Fabric swatch image, close-up if possible
+  - dlazy tool and credits
+you_get:
+  - Sample image in the new fabric
+  - Same cut and angle as your style sheet
+  - Material, shine and drape changed to match the swatch
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe your study. Get a design, random group assignment and run orde
 job: research-topics
 headline: Study design and randomizer
 subhead: Describe your study. Get a design, random group assignment and run order that avoid confounded results.
+explain: |
+  Plan an experiment so the results mean something. You leave with a design, a random assignment and a run order that stops hidden factors from muddying the answer.
+
+  You describe what you are testing, the units you have and the factors involved. The skill helps choose a design, then generates it with Python scripts. They build randomisation schedules, including permuted blocks, stratified groups and whole-cluster assignment, and layouts for factorial, screening and response-surface experiments in real-world units. It also lists the common mistakes that ruin studies, such as confounded groups and unbalanced blocks, and checks your plan against them. It needs Python.
+when:
+  - You are about to run a trial and need to assign people or samples to groups.
+  - You want to test several factors without running every combination.
+  - You worry the order of runs will bias your results.
+  - A reviewer asked how you randomised.
+you_give:
+  - The question you want to test
+  - The units, such as people or samples, and how many
+  - The factors and their ranges
+  - Any grouping variable to balance, like age (optional)
+you_get:
+  - A recommended study design
+  - A random allocation schedule
+  - A run order
+  - A table of treatment combinations
+  - A list of design pitfalls to avoid
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

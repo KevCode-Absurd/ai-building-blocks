@@ -6,6 +6,24 @@ summary: Give it signals from your teams. Get a traffic-light score on eight are
 job: lead-people
 headline: Company health scorer
 subhead: Give it signals from your teams. Get a traffic-light score on eight areas with what to fix first.
+explain: |
+  A traffic-light score for your company across eight areas, so you see which problem to fix first instead of guessing. Each area is judged against stated thresholds, not a feeling.
+
+  The areas cover money, revenue, product, engineering, people, operations, security and market. For each one, Claude uses a few key measures and a green, yellow or red band. Runway under six months is red. Net revenue retention under 100 percent is red. Burn compared to new revenue and customer concentration get the same treatment. You can paste numbers, answer questions, or run the bundled Python script for a guided score. You can also ask for one area only and go deeper there.
+when:
+  - You want one view of how the whole company is doing, not just revenue.
+  - A board or investor meeting is coming and you need to know your weak spots.
+  - You suspect a problem in one team but have no number to show it.
+  - You want to repeat the check each quarter and compare.
+you_give:
+  - Key numbers from each team
+  - Company stage
+  - The area to deep dive on (optional)
+you_get:
+  - A traffic-light score for eight areas
+  - The numbers behind each colour
+  - A list of what to fix first
+  - A saved score to compare next quarter
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

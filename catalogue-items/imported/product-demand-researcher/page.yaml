@@ -6,6 +6,25 @@ summary: Give it a product idea. Get the pain points, objections and buying sign
 job: test-an-idea
 headline: Product demand researcher
 subhead: Give it a product idea. Get the pain points, objections and buying signals people post, with links. Collects data from websites.
+explain: |
+  Proof of whether people want what you plan to build, in their own words, with links. You see the complaints, workarounds, objections and "is there a tool for this" posts that repeat across Reddit, TikTok and YouTube comments.
+
+  Claude searches public social data for your product idea or niche. It looks for repeated complaints, wish phrases, spreadsheet hacks, mentions of alternatives, buying intent and reasons people reject existing options. Findings are grouped and backed by sources. It needs a ScrapeCreators API key, which is a paid service, and it collects data from public sites.
+when:
+  - You have a product idea and want evidence before you build.
+  - You need real customer language for ad copy or a landing page.
+  - You want to know why people dislike the current options.
+  - You are choosing between niches and need demand signals.
+you_give:
+  - Your product idea or niche
+  - Platforms to search, such as Reddit or TikTok (optional)
+  - A ScrapeCreators API key
+  - Competitor names (optional)
+you_get:
+  - Pain points ranked by how often they appear
+  - Buyer phrases quoted with source links
+  - Objections to existing solutions
+  - Buying signals and alternatives people use
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

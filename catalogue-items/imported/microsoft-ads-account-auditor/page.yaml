@@ -6,6 +6,25 @@ summary: Give it your Microsoft Ads exports. Get a checked audit of tracking, ke
 job: read-ad-results
 headline: Microsoft ads account auditor
 subhead: Give it your Microsoft Ads exports. Get a checked audit of tracking, keywords, Google imports, audiences, bids and budgets.
+explain: |
+  A checked audit of your Microsoft Ads account that separates what it saw from what it thinks, and never changes your account. Give it your exports and it reports on tracking, imports, keywords, audiences, bids and budgets.
+
+  It starts with your goal, what counts as a conversion, the account age, dates, currency and spend. It looks at the UET tag and conversions first, then imports from Google, syndication, structure and settings. Findings are labelled as observation, diagnosis, recommendation or suggested change, with doubt marked. Benchmarks are used only when your goal, region and sample size match. Optional or unavailable features are not scored, and no universal bid or budget rules are given.
+when:
+  - You moved campaigns over from Google and want to know what broke.
+  - Conversions in Microsoft Ads look low and you suspect the tag.
+  - You inherited an account and need a clear starting review.
+  - You want an audit that says what is a fact and what is a guess.
+you_give:
+  - Account exports, screenshots or API results
+  - Your goal and conversion definition
+  - Date range, currency and spend
+  - Targets (optional)
+you_get:
+  - Findings by area
+  - Each point marked fact, diagnosis or advice
+  - Draft changes held for your approval
+  - A report built from checked results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

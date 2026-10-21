@@ -6,6 +6,26 @@ summary: Describe the screens. Get responsive, accessible components with a desi
 job: build-websites
 headline: Interface builder
 subhead: Describe the screens. Get responsive, accessible components with a design system and dark mode.
+explain: |
+  Responsive, accessible interface components with a design system behind them and dark mode that works, built from your description of the screens. Output is code in the framework you use, such as React with Tailwind.
+
+  The skill works in a set order. It first confirms the devices and framework. Then it sets design tokens: a 4px spacing scale, type sizes, colours. Components are built with variants for size, colour and state. Layouts use grid for pages and flexbox for parts, with set breakpoints. Accessibility comes first, with proper HTML elements before ARIA, and dark mode uses swapped colour variables. It ships a worked example of a card component with variants.
+when:
+  - You need a set of screens built and want them to match.
+  - Your components look different on every page.
+  - You must support phones and desktops from one codebase.
+  - You want dark mode added without redoing styles.
+  - You need components that work with a keyboard and screen reader.
+you_give:
+  - A description of the screens
+  - Your framework and styling tool
+  - Existing colours or tokens (optional)
+you_get:
+  - Design tokens
+  - Reusable components with variants
+  - Responsive layouts
+  - Accessible markup
+  - Dark mode styles
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

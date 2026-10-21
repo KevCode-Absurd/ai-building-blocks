@@ -6,6 +6,25 @@ summary: Give it your needs and supplier offers. Get a weighted score for each s
 job: plan-supply-chain
 headline: Supplier scorer
 subhead: Give it your needs and supplier offers. Get a weighted score for each supplier and a clear pick with reasons.
+explain: |
+  Supplier offers compared on the same scale, so the pick is clear and you can explain it. It weighs price against delivery, quality and the other things that decide the real cost.
+
+  Give it what you need and each supplier's offer. The skill builds a weighted scoring model from your priorities, compares total cost of ownership, not just the unit price, and can use pairwise comparison to set the weights when you cannot agree on them. It adds qualification checks for finance, operations, quality and delivery. For formal bids, it scores RFP responses. Python code does the calculations.
+when:
+  - Three suppliers sent quotes and the cheapest has a worse defect rate.
+  - You must justify a vendor choice to your boss.
+  - You are scoring RFP responses from several bidders.
+  - Your team cannot agree what matters most.
+you_give:
+  - What you need to buy
+  - Supplier offers or RFP responses
+  - Criteria and how much each matters
+  - Quality and delivery history (optional)
+you_get:
+  - A weighted score per supplier
+  - A total cost of ownership comparison
+  - Criteria weights
+  - A clear recommendation with reasons
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

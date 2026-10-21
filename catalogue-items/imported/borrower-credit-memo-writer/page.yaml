@@ -6,6 +6,25 @@ summary: Give it a borrower's accounts. Get a credit memo on repayment ability, 
 job: money-and-investing
 headline: Borrower credit memo writer
 subhead: Give it a borrower's accounts. Get a credit memo on repayment ability, debt capacity and covenant room.
+explain: |
+  A credit memo that answers one question with evidence: can this borrower pay the money back through a bad year, and what protects the lender if not. It is written from the borrower's own accounts.
+
+  The skill first sets the loan context, covering facility type, amount, term, security and purpose. It uses at least three years of financials and computes ratios with code instead of by eye, because the trend matters more than any one figure. It stress tests sales, margins and interest rates, and checks debt service stays above 1.0. It also tests covenant headroom and audits how terms like EBITDA are defined.
+when:
+  - You must write a credit memo for a loan request.
+  - You need to know how much debt a company can carry.
+  - A covenant package needs headroom checked.
+  - You want a stress test on sales, margin and rates.
+you_give:
+  - Three or more years of financial statements
+  - Facility type, amount and term
+  - Projections (optional)
+  - Existing debt details and covenants
+you_get:
+  - Ratio analysis with trends
+  - Stress test results
+  - Covenant headroom analysis
+  - A written credit recommendation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

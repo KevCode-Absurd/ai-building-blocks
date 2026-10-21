@@ -6,6 +6,26 @@ summary: Paste feedback given to learners. Get a check for how specific and usef
 job: teach-and-train
 headline: Written feedback checker
 subhead: Paste feedback given to learners. Get a check for how specific and useful it is, with better wording.
+explain: |
+  Vague comments like "good work, add more detail" teach nobody anything. Paste the feedback you gave a learner and get it back graded, with a sharper rewrite you can send.
+
+  The skill sorts each comment by level: the task itself, the method used, the learner's own self-checking, or the person. Comments about the person get cut or redirected. It then asks three questions: where is the learner going, how are they doing against that goal, and what should they do next? It also tests whether the wording is specific enough to act on.
+when:
+  - You marked a stack of essays and want to know if your comments will actually change what students do next.
+  - A peer reviewer gave a colleague a vague note and you want to rewrite it.
+  - You coach new staff and want feedback that names one clear next step.
+  - Your feedback keeps getting ignored and you want to see why.
+you_give:
+  - The feedback text you wrote or received
+  - What the learner was doing and the goal of the task
+  - A short note on the work itself (optional)
+  - The rubric or success criteria (optional)
+  - The learner's level or year group (optional)
+you_get:
+  - A level-by-level diagnosis of each comment
+  - A check on specificity, threat and next step
+  - A rewritten version of the feedback
+  - A short list of habits to change
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

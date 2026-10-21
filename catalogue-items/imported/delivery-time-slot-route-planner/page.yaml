@@ -6,6 +6,26 @@ summary: Give it stops with promised delivery windows. Get routes that hit each 
 job: plan-supply-chain
 headline: Delivery time slot route planner
 subhead: Give it stops with promised delivery windows. Get routes that hit each window with the fewest vehicles.
+explain: |
+  Delivery routes that arrive inside each customer's promised window, using as few vehicles as possible. Give it stops with their time slots and you get a timed route for every driver.
+
+  It first asks whether windows are hard (must be met) or soft (late allowed with a penalty), how wide the windows are, service time at each stop, travel times, shift length, driver breaks and depot hours. Small jobs under about 25 stops can be solved exactly. Larger ones use insertion and local-search methods. The result lists arrival times, waiting time, and any stop that cannot be met, so you can call that customer early.
+when:
+  - Customers booked morning or afternoon slots and you must keep them.
+  - You offer two-hour windows and keep missing some.
+  - You want to know how many vans you need for tomorrow's bookings.
+  - Drivers must take breaks and the plan has to allow for them.
+you_give:
+  - Stops with time windows
+  - Service time at each stop
+  - Travel times or addresses
+  - Vehicles, capacity and shift hours
+  - Hard or soft windows
+you_get:
+  - Timed route per vehicle
+  - Arrival and waiting times
+  - Number of vehicles needed
+  - Stops that miss their window
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

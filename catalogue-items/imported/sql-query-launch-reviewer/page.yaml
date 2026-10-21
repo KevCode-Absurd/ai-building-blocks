@@ -6,6 +6,27 @@ summary: Give it a SQL query before it goes live. Get wrong-result risks, slow s
 job: track-numbers
 headline: SQL query launch reviewer
 subhead: Give it a SQL query before it goes live. Get wrong-result risks, slow spots and rewrites ranked by impact.
+explain: |
+  A review of your SQL query before it goes live, listing wrong-result risks and slow spots, ranked by impact. Paste the query and name the engine: Snowflake, BigQuery, Postgres or Redshift.
+
+  The skill lints the syntax, then compares the structure to a list of known bad patterns, such as hidden type conversions, SELECT star and endless CTEs. If you have a query plan, it pulls out the slow steps like full table scans. It also estimates whether a join could multiply rows by surprise, and checks engine-specific date and window behaviour. Findings come as a filled review sheet with rewrite options.
+when:
+  - A query is about to power a production dashboard.
+  - A report shows numbers that look wrong.
+  - A query runs slowly and nobody knows the cause.
+  - You want a second pair of eyes before a launch.
+you_give:
+  - The SQL query
+  - The database engine
+  - Table layouts and row counts (optional)
+  - The query plan (optional)
+  - What the query should calculate (optional)
+you_get:
+  - Syntax and lint results
+  - Wrong-result risks by severity
+  - Slow steps from the query plan
+  - Join fan-out warnings
+  - Rewrites ranked by impact
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

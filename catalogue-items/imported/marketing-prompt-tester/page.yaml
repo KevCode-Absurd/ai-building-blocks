@@ -6,6 +6,25 @@ summary: Give it your prompts and test cases. Get scored comparisons of each ver
 job: set-up-ai
 headline: Marketing prompt tester
 subhead: Give it your prompts and test cases. Get scored comparisons of each version and a saved version history.
+explain: |
+  Stop picking the prompt that looked best once. Give it two or more versions of a prompt and a set of test cases, and it scores each version, then tells you which wins and why.
+
+  The method is simple. You write test cases, including awkward edge cases and a list of words the answer must never contain. The skill runs every prompt on every case and scores the results. It stores each prompt as a numbered version with the author and the reason for the change, and shows what changed between versions. If you edit a prompt later, it reruns the same tests, and only a version that scores better without breaking safety checks gets promoted.
+when:
+  - You rewrote a prompt and want proof it is better than the old one.
+  - Your team shares prompts and nobody knows which version is current.
+  - A prompt works on easy cases but fails on odd ones.
+  - You are switching to a different AI model and need to check nothing broke.
+you_give:
+  - Two or more prompt versions
+  - Test cases with expected results
+  - Words the answer must not contain (optional)
+  - A way to run Python scripts
+you_get:
+  - Scores for each prompt on each case
+  - A named winner with evidence
+  - A saved version history
+  - A change log between versions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

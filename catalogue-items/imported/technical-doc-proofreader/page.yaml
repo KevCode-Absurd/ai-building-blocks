@@ -6,6 +6,25 @@ summary: Give it an English technical doc. Get a list of typos, grammar slips, t
 job: work-with-files
 headline: Technical doc proofreader
 subhead: Give it an English technical doc. Get a list of typos, grammar slips, term clashes and jargon, with no rewrites.
+explain: |
+  A clean checklist of the typos, grammar slips, mixed-up terms and jargon in your English technical document, so you can fix them yourself and keep your own voice. Nothing is rewritten and no fact is changed quietly.
+
+  The skill first reads the whole document to judge its type, such as tutorial, API reference or README. It builds a term list to catch one idea named two ways, for example sign in and log in. It then works through six areas: spelling, grammar, punctuation, code and proper name formatting, sentence style and structure. Each item shows the original, a suggestion and the reason. Doubtful facts are marked verify. A count by category closes the report.
+when:
+  - Your README is about to go public and you want a last check.
+  - Your docs call the same feature by three different names.
+  - You wrote a blog draft and fear small errors.
+  - A tutorial has steps that read unevenly.
+  - You want review without losing your own style.
+you_give:
+  - The English technical document
+  - The document type if you know it (optional)
+  - Any style rules you follow (optional)
+you_get:
+  - A checklist of original, suggestion and reason
+  - Terms flagged where naming is inconsistent
+  - Doubtful facts marked to verify
+  - Counts of issues by category
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

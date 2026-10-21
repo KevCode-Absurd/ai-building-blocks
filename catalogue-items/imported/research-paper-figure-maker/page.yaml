@@ -6,6 +6,26 @@ summary: Give it your results or a method section. Get charts and architecture d
 job: research-topics
 headline: Research paper figure maker
 subhead: Give it your results or a method section. Get charts and architecture diagrams that look ready for a paper.
+explain: |
+  Figures that look ready for a conference paper: charts from your results and architecture diagrams from your method section. You describe the work and skip the hours in a drawing tool.
+
+  It splits figures into two kinds. Charts with numeric axes, such as bars, lines, scatter plots, heatmaps and training curves, are made with matplotlib and seaborn, so they are exact and repeatable. Diagrams with boxes and arrows are drawn through Google's Gemini image model. The skill reads your section or notes, pulls out the parts and links, and builds the figure in a style suited to ML venues. It needs Python and packages, and a Gemini key for diagrams.
+when:
+  - You have results and need clean charts for a submission.
+  - Your method needs an architecture figure and you cannot draw well.
+  - Reviewers asked for clearer plots.
+  - You want figures that match a conference's look.
+you_give:
+  - Results data or method text
+  - Figure type wanted
+  - Target venue (optional)
+  - Python with plotting packages
+  - Gemini API key for diagrams
+you_get:
+  - Publication-style charts
+  - Architecture and workflow diagrams
+  - Figure files ready for LaTeX
+  - Plot code you can edit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

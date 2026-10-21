@@ -6,6 +6,26 @@ summary: Name the order. Get it cancelled, stock put back and the customer told,
 job: run-your-store
 headline: Order canceller and restocker
 subhead: Name the order. Get it cancelled, stock put back and the customer told, as you choose. Cancels a live order.
+explain: |
+  Cancel a Shopify order, put the items back in stock, refund the money and email the customer, all in one step and in the way you choose. It saves the trip through several admin screens.
+
+  You name the order and pick a reason: customer, fraud, inventory, declined, staff or other. Four switches decide what happens: restock, refund, notify the customer and add an internal note. The skill first checks that the order can still be cancelled and cannot touch fully shipped orders. Use preview mode to see the effects before committing. Cancelling cannot be undone, and refunds and stock changes happen straight away. Needs a signed-in Shopify CLI session with order write access.
+when:
+  - An item sold out and you must cancel the order today.
+  - A fraud check failed before the order shipped.
+  - A customer asks to cancel before dispatch.
+  - You want to confirm an order can be cancelled before doing it.
+you_give:
+  - Store domain
+  - Order ID
+  - Cancel reason
+  - Restock, refund and email choices
+  - Internal note (optional)
+you_get:
+  - A check that the order can be cancelled
+  - Cancellation done on the live order
+  - Stock restored and refund issued as chosen
+  - A summary of what changed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

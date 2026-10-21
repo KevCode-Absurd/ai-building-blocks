@@ -6,6 +6,26 @@ summary: Give it a model and examples of good and bad answers. Get a model tuned
 job: build-software
 headline: Model preference tuning guide
 subhead: Give it a model and examples of good and bad answers. Get a model tuned to answer the way you prefer.
+explain: |
+  A language model tuned to answer the way you prefer, taught with examples of good and bad answers. You choose the method that fits your data and compute.
+
+  The skill uses the TRL library. If you have pairs of preferred and rejected answers, it sets up DPO, the simplest route. If you want the classic path, it walks through three stages: teach basic instructions, train a reward model that scores answers, then tune with PPO. It also covers GRPO for tasks with checkable answers. It adds LoRA to cut memory use and ends by testing the tuned model against the original. You need Python and a GPU.
+when:
+  - Your model gives answers that are correct but the wrong tone.
+  - You have a pile of thumbs up and thumbs down examples.
+  - You want a small model to follow your house style.
+  - You need to pick between DPO, PPO and GRPO.
+you_give:
+  - A base model
+  - Pairs of chosen and rejected answers
+  - A GPU and a Python setup
+  - The behavior you want to see (optional)
+you_get:
+  - Training code for the right method
+  - A dataset format checklist
+  - LoRA settings to save memory
+  - An evaluation against the original
+  - Advice on which method suits your data
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

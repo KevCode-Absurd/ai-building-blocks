@@ -6,6 +6,25 @@ summary: Point it at crypto code. Get a list of spots where run time could leak 
 job: secure-code
 headline: Timing leak checker
 subhead: Point it at crypto code. Get a list of spots where run time could leak secret keys, with fixes.
+explain: |
+  Spot places in encryption or signing code where the time it takes could give away a secret key. Attackers can measure small time differences, so a clean-looking function can still be broken.
+
+  The skill reads your cryptographic code and flags operations whose speed depends on secret values. Examples include division or remainder on secret data, branches that depend on a key, and early exits in comparisons. It checks sign, verify, encrypt, decrypt and key derivation functions first, and for each flagged spot explains why it leaks and offers a constant-time fix. It does not apply to ordinary business code or to high-level library calls that already handle timing.
+when:
+  - You wrote your own signing or encryption routine and want a review.
+  - You use division or modulo on secret numbers.
+  - Someone mentioned KyberSlash or side-channel attacks.
+  - You compare tokens or hashes and worry about early exit.
+you_give:
+  - Your cryptographic source code
+  - The language and compiler
+  - Which values are secret
+  - Target platform (optional)
+you_get:
+  - A list of risky operations
+  - Why each one leaks
+  - Constant-time rewrites
+  - Functions marked safe
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

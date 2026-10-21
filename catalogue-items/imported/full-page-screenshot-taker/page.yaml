@@ -6,6 +6,25 @@ summary: Give it a page address. Get one long image of the whole page, even with
 job: build-websites
 headline: Full-page screenshot taker
 subhead: Give it a page address. Get one long image of the whole page, even with scroll areas and lazy images.
+explain: |
+  One long image of an entire web page, including areas that scroll inside the page and images that load late. It works on pages where normal screenshots cut off.
+
+  It connects to Chrome through its debugging port. You can capture a tab you already have open, which is best for pages behind a login, or open a web address in a background tab. It waits for content to load, handles scroll areas inside apps, and saves a single PNG at the width you choose. Set 1200 pixels for articles or larger for dashboards. You need Node.js and Chrome with remote debugging turned on.
+when:
+  - You need a record of a whole long page for a report or review.
+  - A normal screenshot cuts off at the visible screen.
+  - The page loads images only as you scroll.
+  - You want a capture of a logged-in dashboard.
+you_give:
+  - Page address or an open Chrome tab
+  - Width in pixels (optional)
+  - Wait time for loading (optional)
+  - Node.js and Chrome with remote debugging
+you_get:
+  - Single full-length PNG
+  - Content from inner scroll areas
+  - Late-loading images included
+  - Environment check result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your TikTok Ads exports. Get a checked audit of your pixel, cre
 job: read-ad-results
 headline: TikTok ads account auditor
 subhead: Give it your TikTok Ads exports. Get a checked audit of your pixel, creative, audiences, Smart+ and Shop campaigns, bids and budgets.
+explain: |
+  Find out where your TikTok ad money is leaking, with each finding tied to the data it came from. You hand over exports and screenshots, and get an audit that separates what it saw, what it thinks it means, and what it suggests.
+
+  The skill sets up your goal, dates and currency first. Then it checks pixel and measurement, phone-style creative, audiences, Smart+ campaigns, TikTok Shop ads, bids, budgets, pacing, attribution and policy. It refuses to apply a benchmark unless your goal, country and sample size fit. Beta or unavailable features are listed but not scored, and no change is made to your account without a separate approval.
+when:
+  - Your TikTok cost per result keeps climbing and you do not know why.
+  - You inherited an ad account and need to know its state.
+  - You are not sure your pixel is counting sales correctly.
+  - You want a second look before raising budgets.
+you_give:
+  - Campaign and ad exports
+  - Your goal and what counts as a conversion
+  - Date range, currency and spend targets
+  - Screenshots of settings (optional)
+you_get:
+  - A checked audit of your account
+  - Findings with the source data named
+  - Ranked recommendations
+  - A list of missing inputs and uncertain points
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

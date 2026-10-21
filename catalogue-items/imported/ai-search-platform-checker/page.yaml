@@ -6,6 +6,24 @@ summary: Give it a site. Get a score and fix list for Google AI Overviews, ChatG
 job: get-found-in-search
 headline: AI search platform checker
 subhead: Give it a site. Get a score and fix list for Google AI Overviews, ChatGPT, Perplexity and more.
+explain: |
+  Each AI search tool picks its sources by its own rules, so a site that wins in one can be missing from another. Only about one domain in nine is cited by both ChatGPT and Google AI Overviews for the same question. This check scores your site on each platform separately.
+
+  For every platform, it runs a checklist and gives a score from 0 to 100. Google AI Overviews checks include question headings, direct answers under them, tables, lists, a FAQ, cited statistics, dates and author bylines. The output is one file with a score, the gaps and action items for each platform. Fix the platform that matters most to your buyers first.
+when:
+  - You rank in Google but never appear in ChatGPT answers.
+  - You want to pick which AI platform to work on first.
+  - You need platform-specific edits for one key page.
+  - You have to show a client where each AI engine stands.
+you_give:
+  - Your website address
+  - Your main topic or industry
+  - The queries you most want to win (optional)
+you_get:
+  - A 0 to 100 score per AI platform
+  - The gaps behind each score
+  - Action items for each platform
+  - One saved report file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

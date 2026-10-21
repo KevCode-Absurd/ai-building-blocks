@@ -6,6 +6,25 @@ summary: Give it a crash or odd behaviour. Get several parallel read-only invest
 job: test-and-fix-code
 headline: Bug cause investigator team
 subhead: Give it a crash or odd behaviour. Get several parallel read-only investigations and one ranked list of likely causes.
+explain: |
+  Four read-only investigators look into your bug at the same time, and you get one ranked list of likely causes and the fastest way to prove each. No code is changed.
+
+  The skill starts by building a bug packet: the symptom, what you expected, what happened, steps to repeat, who is hit, and any logs or recent changes. It writes a short brief that says what is unproven and where to look. Then four helpers each inspect the code from a different angle. The main agent compares their findings and ranks the causes by likelihood, with a next step for each. It suits regressions, crashes and flaky behaviour.
+when:
+  - A feature broke after a release and you do not know which change did it.
+  - A crash happens now and then and you cannot repeat it.
+  - You have a stack trace but the cause is not near it.
+  - You want a diagnosis first, with no edits yet.
+you_give:
+  - What you see and what you expected
+  - Steps to repeat, if known (optional)
+  - Logs, stack traces or failing tests (optional)
+  - Recent changes (optional)
+you_get:
+  - A summary of the bug and what is unknown
+  - Findings from four parallel investigations
+  - A ranked list of likely causes
+  - The fastest test to confirm each cause
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

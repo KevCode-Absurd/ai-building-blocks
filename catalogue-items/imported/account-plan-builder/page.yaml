@@ -6,6 +6,26 @@ summary: Name an account. Get a plan with goals, key people, open deals, risks a
 job: sell-and-negotiate
 headline: Account plan builder
 subhead: Name an account. Get a plan with goals, key people, open deals, risks and next steps, ready for your CRM.
+explain: |
+  You get a strategic plan for one account in a shared doc, with the key fields copied back to your CRM. It covers where the account stands, goals, the people involved, open deals, risks and next steps.
+
+  The skill starts by checking your CRM setup, then gathers the account picture from your connected tools. It drafts the plan in sections: current state, goals, stakeholder coverage showing who you know and who you are missing, an opportunity map, risks, and an action plan. You review the draft. The highlights then sync to the CRM, and you decide whether to approve each change. It needs your CRM and a docs tool connected.
+when:
+  - You are preparing for a quarterly review with a key customer.
+  - You need a plan for a large account you just inherited.
+  - You want to see which decision makers you have not met.
+  - You want your CRM to match the plan without retyping.
+you_give:
+  - The account name
+  - Connected CRM and document tools
+  - Your goals for the account (optional)
+  - Notes or past plans (optional)
+you_get:
+  - A written account plan in a doc
+  - A stakeholder coverage map
+  - An opportunity and risk list
+  - An action plan with next steps
+  - CRM fields updated after your approval
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

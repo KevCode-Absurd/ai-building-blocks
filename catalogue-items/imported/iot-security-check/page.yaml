@@ -6,6 +6,26 @@ summary: Describe your product with software. Get its EU risk class, security du
 job: secure-code
 headline: Connected product security checker
 subhead: Describe your product with software. Get its EU risk class, security duties, parts list needs and reporting steps.
+explain: |
+  A plain answer to what the EU Cyber Resilience Act means for your connected product. Describe what it is, whether it is hardware, software or an app, and who sells it. The skill decides if it counts as a product with digital elements, sorts it into default, important or critical class, and names the route to CE marking.
+
+  It then lists the security duties you carry: secure design, a support period, a software parts list, vulnerability handling and reporting to authorities. Reporting rules are already in force, and the full set applies from December 2027. Your role matters too, whether maker, importer or distributor. This is guidance, not legal advice.
+when:
+  - You sell a smart device or app in Europe and do not know your duties.
+  - You need to know if your product needs outside testing or self-assessment.
+  - A customer asks for a software parts list and you have none.
+  - You must know how and when to report a security flaw.
+you_give:
+  - A description of your product and how it connects
+  - "Your role: maker, importer or distributor"
+  - Where it is sold
+  - What data it handles (optional)
+you_get:
+  - Your product's risk class
+  - The route to CE marking
+  - A list of security duties
+  - What a software parts list needs
+  - Reporting steps and deadlines
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

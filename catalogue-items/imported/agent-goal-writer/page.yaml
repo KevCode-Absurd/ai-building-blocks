@@ -6,6 +6,25 @@ summary: Give it a vague job. Get a goal an AI agent can finish, with proof of d
 job: set-up-ai
 headline: Agent goal writer
 subhead: Give it a vague job. Get a goal an AI agent can finish, with proof of done, limits and stop rules.
+explain: |
+  A vague job turned into a goal an AI agent can actually finish. The goal says what done looks like, what proof counts, what is off limits, and when the agent must stop and ask you.
+
+  You pick a mode: draft a new goal, refine one you have, audit one for holes, or preview how the loop would run before you commit. The writer then fills in the missing parts. It adds proof of done, checks sized to the risk, and drift guards for long jobs that span many steps. It also sets how long the agent waits on slow outside things, so it never loops forever. It writes the goal. It does not do the job itself.
+when:
+  - You asked an agent to do a big job and it wandered off or quit early.
+  - You have a checklist or ticket and want it turned into a clear goal.
+  - You want to see how an agent would loop through a task before you let it run.
+  - A long job keeps drifting from what you first wanted.
+you_give:
+  - A rough description of the job
+  - What you want to end up with
+  - Limits on what the agent may touch (optional)
+  - An existing goal to fix (optional)
+you_get:
+  - A goal an agent can follow step by step
+  - A clear proof-of-done list
+  - Stop rules and limits
+  - A list of holes found in an existing goal
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

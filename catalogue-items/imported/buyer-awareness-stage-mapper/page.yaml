@@ -6,6 +6,25 @@ summary: Describe your audience and offer. Get where buyers sit, from unaware to
 job: understand-customers
 headline: Buyer awareness stage mapper
 subhead: Describe your audience and offer. Get where buyers sit, from unaware to ready, and what to say to each.
+explain: |
+  Your message finally matches where each buyer is in their thinking. You describe your audience and offer, and you get a map of where people sit, from not knowing they have a problem to ready to buy. Each stage comes with the words, tone and proof that suit it.
+
+  The skill starts by getting context: who the person is and what you want them to do. Then it places them on the awareness ladder and shapes the approach for that spot. Someone who feels the pain needs different copy from someone comparing prices. It treats psychology claims as ideas to check, not proven facts, and avoids targeting sensitive traits.
+when:
+  - Your ads and emails sound the same to people who are at very different stages.
+  - You are about to write a landing page and are not sure what the reader already knows.
+  - A campaign gets clicks but few sales and you suspect the message is off.
+  - You need a sequence of messages that moves cold readers toward an offer.
+you_give:
+  - A description of your audience
+  - What you sell and the action you want
+  - Any customer research or interview notes (optional)
+  - Current copy you want to check (optional)
+you_get:
+  - A map of awareness stages for your audience
+  - Language and tone for each stage
+  - A suggested order for your messages
+  - Notes on claims to verify before publishing
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Ask a question about your table or sensor data. Get it cleaned, summari
 job: build-software
 headline: Data analysis coder
 subhead: Ask a question about your table or sensor data. Get it cleaned, summarised and answered with MATLAB code.
+explain: |
+  Ask a question about a table, time series or sensor data and get clean MATLAB code that answers it. The code handles the messy parts first so the answer is trustworthy.
+
+  The skill works with tables and timetables. It covers filtering, sorting, grouping, resampling, smoothing, missing values, outliers and type fixes. Before writing code it reads its own reference notes for each topic involved, which cover correct syntax and common traps that cause silent errors. It then writes code in the style MATLAB experts use and explains what each block does. For plots, file reading, large data or model training, it points you to a better matching skill. You need MATLAB to run the result.
+when:
+  - You have a sensor log and want the top ten readings by hour.
+  - A table has gaps and odd values and you need it cleaned before analysis.
+  - You want to compare groups in a dataset and need the code.
+  - You need to resample a time series to a steady interval.
+you_give:
+  - Your table or data description
+  - The question you want answered
+  - MATLAB release (optional)
+you_get:
+  - Working MATLAB code
+  - Cleaned and summarised data steps
+  - Answer to your question
+  - Notes on what each step does
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Say the event type and goal. Get a plan to fill seats, follow up and tu
 job: plan-strategy
 headline: Event marketing planner
 subhead: Say the event type and goal. Get a plan to fill seats, follow up and turn attendees into pipeline.
+explain: |
+  A plan for an event that fills the room and leads to real sales conversations, whether you host, sponsor, speak or just attend.
+
+  It starts with your role, one main goal and who must be in the room. Then it helps you pick events by pipeline value, since a few events usually produce most of the results. The plan follows one arc: the event is about 20 percent of the work, and the rest is before and after. Before means a target list and meetings booked ahead. After means fast follow-up and reusing the content. Separate guides cover webinars, sponsorship return and speaking.
+when:
+  - You are hosting a webinar or dinner and need to fill seats.
+  - You paid for a booth and want meetings booked before you arrive.
+  - You are deciding which of ten conferences deserve your budget.
+  - You have a speaking slot and want it to bring leads.
+you_give:
+  - "Your role: host, sponsor, speaker or attendee"
+  - Main goal for the event
+  - Target customer profile
+  - Budget and team size
+you_get:
+  - Event plan with before, during and after steps
+  - Target list approach
+  - Outreach message ideas
+  - Follow-up sequence
+  - Ways to judge event return
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

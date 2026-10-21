@@ -6,6 +6,25 @@ summary: Describe your page. Get one that looks designed, checked in a real brow
 job: build-websites
 headline: Page design gate
 subhead: Describe your page. Get one that looks designed, checked in a real browser at phone and desktop width.
+explain: |
+  A page that looks designed instead of generic, and that has been opened in a real browser at phone and desktop width before it is called done.
+
+  It starts by reading the room: who visits, what feel suits them, and one signature detail to make the page memorable. It then builds on a set floor of rules for type, colour, layout, buttons states and motion, and bans familiar AI looks like purple glow gradients and emoji icons. The last step renders the page at both sizes and keeps the work open while any hard problem remains, such as overlapping text or sideways scrolling. It needs a browser it can control.
+when:
+  - You asked an AI for a landing page and it looks like every other one.
+  - You want proof the page works on a phone, not a guess.
+  - You are about to ship a new screen and want a final check.
+  - A redesign needs a clear look, not just tweaks.
+you_give:
+  - What the page is for and who visits
+  - Brand fonts or colours (optional)
+  - The page code or a short brief
+  - A browser the AI can open
+you_get:
+  - A built page with a chosen visual direction
+  - Phone and desktop render checks
+  - List of problems found and fixed
+  - Sign-off only when hard issues are closed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

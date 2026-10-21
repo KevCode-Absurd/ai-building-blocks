@@ -6,6 +6,26 @@ summary: Name a market. Get a sourced report where every claim has a source, and
 job: research-topics
 headline: Market research report writer
 subhead: Name a market. Get a sourced report where every claim has a source, and sizing shows its assumptions.
+explain: |
+  A market report where every claim points to a source you can check, and market size shows its working. You can defend it in front of a board or an investor.
+
+  It first fixes definitions: the product, customer, region, period, currency and what is being counted. Each claim gets an ID tied to exact sources. Facts, estimates, calculations, forecasts and opinions are labeled differently. It favors official statistics and company filings over summaries, keeps conflicts between sources visible, and gives ranges instead of single numbers. The calculations are repeatable. It will not invent citations or market shares, copy a research firm's style, or give investment or legal advice.
+when:
+  - A board asks how big a market is and wants proof.
+  - You are writing a competitor and market section for a plan.
+  - You need a forecast with stated assumptions and ranges.
+  - You want to separate hard facts from your own opinion.
+you_give:
+  - The market and question to answer
+  - Region and time period
+  - Sources or data you already have (optional)
+  - The decision the report supports
+you_get:
+  - A sourced report
+  - A claim and source table
+  - Market size with assumptions
+  - Forecast ranges
+  - A list of limits
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

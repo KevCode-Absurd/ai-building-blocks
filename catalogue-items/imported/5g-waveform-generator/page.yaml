@@ -6,6 +6,26 @@ summary: Pick a 5G test model or channel. Get a standard-compliant baseband wave
 job: build-software
 headline: 5G waveform generator
 subhead: Pick a 5G test model or channel. Get a standard-compliant baseband waveform.
+explain: |
+  You get a baseband 5G NR waveform that follows the 3GPP standard, ready for testing, simulation or playback on an instrument. You pick a test model, a fixed reference channel, or a custom setup and the skill writes the MATLAB code.
+
+  It first decides which route fits. Standard test models and reference channels use the ready-made generator with predefined settings. Custom downlink or uplink signals use a carrier config object, where you set bandwidth, subcarrier spacing, modulation, power and bandwidth parts, along with channels such as PDSCH, PUSCH and SSB. It warns you off the low-level building blocks that are easy to get wrong. It does not model channels or decode signals. It needs MATLAB with 5G Toolbox.
+when:
+  - You need a conformance test signal for a 5G receiver.
+  - You want a custom downlink waveform with specific channels turned on.
+  - You need to play an IQ signal into an RF instrument.
+  - You are setting up several bandwidth parts in one waveform.
+you_give:
+  - Link direction, downlink or uplink
+  - A test model or reference channel name, or your own settings
+  - Bandwidth, subcarrier spacing and modulation
+  - Which channels and signals to include
+  - MATLAB with 5G Toolbox
+you_get:
+  - MATLAB code that builds the waveform
+  - The generated IQ samples
+  - A config that matches the standard
+  - Notes on which settings to change next
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

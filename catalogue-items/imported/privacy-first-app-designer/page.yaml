@@ -6,6 +6,25 @@ summary: "Describe the data your app collects. Get privacy controls designed in:
 job: secure-code
 headline: Privacy-first app designer
 subhead: "Describe the data your app collects. Get privacy controls designed in: less data kept, clear consent, safe storage."
+explain: |
+  Build privacy in from day one. Describe the data your app collects and get a design that keeps less, asks for clear consent and stores data safely.
+
+  The skill checks each data point against core rules: collect only what you need, tie each item to a purpose, set how long it stays, and give people access, export and deletion. It designs for the strictest law you target, usually GDPR, which often covers CCPA and Brazil's LGPD too. It looks at database schema, APIs, sign-in flows, analytics and third-party tools, and lists changes before launch.
+when:
+  - You are designing a signup form and want fewer fields.
+  - Your app will have EU users.
+  - You add analytics and third-party scripts.
+  - You need a privacy check before production.
+you_give:
+  - Description of the app
+  - List of data collected
+  - Countries of your users
+  - Third-party tools in use
+you_get:
+  - Data minimisation list
+  - Consent and retention design
+  - Storage and security measures
+  - Pre-launch privacy checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

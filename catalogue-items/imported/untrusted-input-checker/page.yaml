@@ -6,6 +6,24 @@ summary: Point it at code. Get every place outside data enters found and checked
 job: secure-code
 headline: Untrusted input checker
 subhead: Point it at code. Get every place outside data enters found and checked before it reaches your logic.
+explain: |
+  A list of every place outside data enters your code, each one checked before it reaches your logic. Bad input then stops at the edge instead of causing silent bugs or security holes.
+
+  The skill works in four phases. It finds the entry points: request bodies, query strings, forms, environment variables, webhooks, file reads, command line arguments, third-party responses and socket messages. It classifies each by risk, adds a filter that validates shape and type, and verifies the filter works with bad data. It will not write handling code until every entry point in scope is listed. It suits anyone adding an API route, form handler or webhook.
+when:
+  - You are adding an API route or form handler.
+  - Your code uses request body or query values directly.
+  - You parse webhooks or third-party responses and want safe handling.
+  - You want to find every place your app trusts outside data.
+you_give:
+  - The code or files to check
+  - The language and framework
+  - Which entry points you already know (optional)
+you_get:
+  - A list of every entry point
+  - A risk label for each
+  - Validation filters added
+  - A check that bad input is stopped
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

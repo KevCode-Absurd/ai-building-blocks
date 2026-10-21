@@ -6,6 +6,25 @@ summary: Give it your email and audience. Get subject lines in several angles th
 job: write-ad-copy
 headline: Subject line writer
 subhead: Give it your email and audience. Get subject lines in several angles that earn opens without losing clarity.
+explain: |
+  Email subject lines in several angles, each built to earn an open without tricking the reader. You pick the one that fits your message and your audience.
+
+  You give the email, who gets it, and where it sits in a sequence. The skill sets the plan first, using a decision matrix that weighs position in the sequence, how warm the audience is and whether people read on a phone. It then writes options, each using honest curiosity or a clear promise. It checks every line against a list of failure modes, such as clickbait and misleading claims, and against ethical guardrails. A final quality check trims the set.
+when:
+  - You wrote the email but the subject line is a blank.
+  - Your opens are low and you want to test new angles.
+  - You send a sequence and each email needs a line that fits its place.
+  - You write push notifications and have a few words to work with.
+you_give:
+  - The email or its main point
+  - Who receives it and how warm they are
+  - Where it sits in the sequence (optional)
+  - Your brand voice (optional)
+you_get:
+  - Several subject lines in different angles
+  - A note on why each might work
+  - Checks for clickbait or misleading wording
+  - A suggested pick to test first
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a reviewed contract. Get a two-minute summary of what to know b
 job: check-contracts
 headline: Contract plain-words summary writer
 subhead: Give it a reviewed contract. Get a two-minute summary of what to know before signing. A first check, not legal advice.
+explain: |
+  A two-minute summary of a contract, written so a busy person knows what matters before signing. It gives the pages the same attention a careful friend would, in words you use every day.
+
+  It works from a contract that has already been reviewed. It asks which side you are on, then keeps the summary to a hard length cap. It quotes only what it needs, turns legal wording into plain terms, and leaves out clauses that do not affect you. If the review found problems, they come first. Tone stays calm, with no alarm and no false comfort. It is a first check, not legal advice, so use it to decide what to ask a lawyer.
+when:
+  - You must sign today and have not read the full contract.
+  - You need to brief a manager on a long agreement in a few minutes.
+  - A client asks what they are agreeing to and you want a short answer.
+  - You want to prepare questions before talking to your lawyer.
+you_give:
+  - The contract text
+  - Notes from a prior review (optional)
+  - Which side you are on
+  - Who will read the summary
+you_get:
+  - A two-minute plain summary
+  - Problems listed first
+  - Key dates, costs and duties
+  - Questions to ask a lawyer
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

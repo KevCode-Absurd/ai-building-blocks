@@ -6,6 +6,24 @@ summary: Point it at stuttering animations. Get each slow spot found and a small
 job: build-websites
 headline: Animation speed fixer
 subhead: Point it at stuttering animations. Get each slow spot found and a small fix that smooths it.
+explain: |
+  Animations that stutter make a good product feel cheap. Point this skill at the troubled code and it finds each slow spot, explains the cause in one sentence, and gives a small fix.
+
+  It sorts the work by what the browser must redo each frame. Moving or fading with transform and opacity is cheap. Changing colours, gradients and filters costs more. Changing size or position forces a full layout and costs the most. The skill flags common traps: reading and writing layout in the same frame, animating large areas, tying motion to scroll in a heavy way, and heavy blur.
+when:
+  - Your page janks while scrolling and you suspect the animations.
+  - A menu or card slide drops frames on phones.
+  - You added a blur effect and the interface got heavy.
+  - You want a check on animation code before it goes live.
+you_give:
+  - The file or component with the animation
+  - What feels slow, and on which device
+  - Your animation library (optional)
+you_get:
+  - Each slow line quoted
+  - A one-sentence reason for each
+  - A concrete code fix
+  - A list of safer properties to animate
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

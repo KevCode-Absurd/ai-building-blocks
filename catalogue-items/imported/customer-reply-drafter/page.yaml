@@ -6,6 +6,25 @@ summary: Describe the customer's situation. Get a reply in the right tone, plus 
 job: help-customers
 headline: Customer reply drafter
 subhead: Describe the customer's situation. Get a reply in the right tone, plus notes on what to check before you send it.
+explain: |
+  A hard customer message is easier to answer when the draft is done and the checks are listed. Describe the situation and you get a reply in the right tone, plus notes on what to check before you send it.
+
+  It reads the context: who the customer is, the kind of situation (question, outage, bad news, declined request, billing error), how urgent it is, the channel and how senior the reader is. If tools are connected it looks up account background. Then it drafts for that audience, with the news placed where it should go and the next step clear. The notes flag facts to verify, promises to avoid and anything to run past a colleague.
+when:
+  - A customer is angry about a delay and you need the right words.
+  - You must say no to a feature request without losing the account.
+  - An outage hit a key customer and they want updates.
+  - A billing error needs a quick, calm fix.
+you_give:
+  - A description of the situation
+  - The customer's name and history (optional)
+  - Channel, such as email, chat or ticket (optional)
+  - Facts you can share (optional)
+you_get:
+  - A draft reply in a fitting tone
+  - Notes on what to verify
+  - Points to avoid promising
+  - An alternative shorter version
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

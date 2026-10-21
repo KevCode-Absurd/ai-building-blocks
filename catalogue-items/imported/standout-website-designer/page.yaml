@@ -6,6 +6,25 @@ summary: Describe your site. Get a bold, award-level design plan with motion, la
 job: design-work
 headline: Standout website designer
 subhead: Describe your site. Get a bold, award-level design plan with motion, layout and effects.
+explain: |
+  A bold design plan for a site that people remember, with layout, type, motion and effects spelled out. Describe your site and who it is for. The skill rates your design from 0 to 10, with 10 being award-level, and lists exactly what to change to get there.
+
+  It works from a few beliefs: type carries the design, motion should tell a story, white space is a tool, and animation must hold 60 frames a second. It covers scroll-based storytelling, parallax, dramatic headings and smooth transitions. It suits portfolios, brand sites and standout landing pages. For basic interface work, other skills fit better.
+when:
+  - Your landing page looks fine but forgettable.
+  - You are designing a portfolio or brand experience site.
+  - You want scroll animations that feel purposeful.
+  - You want to rate your current design and see what is missing.
+you_give:
+  - A description of your site and audience
+  - Your current page or design (optional)
+  - Brand look and mood (optional)
+you_get:
+  - A design score out of 10
+  - Layout and typography direction
+  - Motion and scroll effects plan
+  - Performance guidance for animation
+  - A list of changes to reach top level
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

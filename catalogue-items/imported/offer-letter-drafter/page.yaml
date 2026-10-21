@@ -6,6 +6,25 @@ summary: Give it a role and level. Get an offer letter, pay package and talking 
 job: hire-people
 headline: Offer letter drafter
 subhead: Give it a role and level. Get an offer letter, pay package and talking points. Have HR or a lawyer check it.
+explain: |
+  A complete offer letter and pay package, ready for a quick review by HR or a lawyer. You give the role, level, location, pay and start date. If you are missing details, the skill helps you work them out.
+
+  It builds a pay table with base salary, equity and vesting, signing bonus, target bonus and the total for year one. Then it writes the terms: start date, who they report to, and conditions such as background checks. It also prepares talking points for the call where you share the offer, including how to answer likely pushback. Always have someone qualified check the final text before sending.
+when:
+  - A candidate has passed the final interview and you need the offer out today.
+  - You are unsure how to combine base pay, equity and a signing bonus.
+  - The hiring manager has to call the candidate and wants a short script.
+  - You are setting up your first offer letter template.
+you_give:
+  - The role and title
+  - The level and location
+  - Base pay, equity and bonus
+  - Start date and hiring manager
+you_get:
+  - A drafted offer letter
+  - A pay package table with first-year total
+  - Terms and conditions text
+  - Talking points for the offer call
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

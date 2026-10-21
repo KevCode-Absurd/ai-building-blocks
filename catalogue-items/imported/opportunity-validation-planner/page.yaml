@@ -6,6 +6,25 @@ summary: Give it a product bet. Get your riskiest assumptions mapped and a short
 job: test-an-idea
 headline: Opportunity validation planner
 subhead: Give it a product bet. Get your riskiest assumptions mapped and a short plan to test them before you build.
+explain: |
+  Before you spend months building, you get a short plan that tests the parts most likely to be wrong. The riskiest guesses come first, with a cheap way to check each.
+
+  The skill sets one outcome with a baseline and a target date, then lists your guesses in four groups: do people want it, will it make money, can you build it and can people use it. Each guess is scored by risk and by how much evidence you have. You get interview questions to confirm the problem is frequent and painful, prototype tests that watch behaviour instead of opinions, and a one to two week sprint plan. It ends with a clear call: go ahead, change direction or stop.
+when:
+  - You have a product idea and no proof anyone needs it.
+  - Your team is about to commit budget to a big build.
+  - You need a one or two week plan to test a bet.
+  - You want to drop weak ideas early and say why.
+you_give:
+  - The product bet or idea
+  - The outcome you want to move
+  - What you already know about customers (optional)
+  - Team size and time available (optional)
+you_get:
+  - A map of assumptions scored by risk
+  - Problem interview questions
+  - Prototype and value tests
+  - A discovery sprint plan with a go, change or stop rule
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

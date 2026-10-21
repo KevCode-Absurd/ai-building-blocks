@@ -6,6 +6,25 @@ summary: Describe the screen. Get React and Next.js components with fast loading
 job: build-websites
 headline: React and Next.js builder
 subhead: Describe the screen. Get React and Next.js components with fast loading, Tailwind styling and bundle checks.
+explain: |
+  React and Next.js components for the screen you describe, written in TypeScript with Tailwind styling, and checked for load speed and bundle size. You get code you can drop into a project.
+
+  The skill starts with a project scaffold if you need one, then generates components in a set structure. It applies common React patterns and Next.js performance rules, such as splitting code and loading images well. A bundle analyser shows what is making the app heavy, so you cut the real cause. It also covers accessibility checks and testing set-up. Python scripts do the scaffolding and analysis, and you need Node installed to run the result.
+when:
+  - You need a new screen built in React with Tailwind.
+  - Your Next.js page loads slowly and you want to know why.
+  - You are starting a fresh project and want a clean base.
+  - You want accessibility checks built into your components.
+you_give:
+  - Description of the screen
+  - Project folder or a new one
+  - Features such as auth or forms (optional)
+  - Node and Python installed
+you_get:
+  - React and Next.js components
+  - Project scaffold
+  - Bundle size report
+  - Accessibility and testing notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

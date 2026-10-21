@@ -6,6 +6,25 @@ summary: Give it a day of orders. Get groups to pick together so pickers walk le
 job: plan-supply-chain
 headline: Picking batch planner
 subhead: Give it a day of orders. Get groups to pick together so pickers walk less, with the expected distance saved.
+explain: |
+  Group a day of orders so pickers pick them together and walk less, with the expected distance saved. Fewer trips mean faster orders and lower labour cost.
+
+  The skill first learns your picking method, order shapes, layout, cart size and current picks per hour. It then compares ways to group: single orders, batches, zones and cart clusters. It builds batches from items that overlap, respecting priority, cart limits and sort time after picking. You get the batches, the distance and time saved, and the trade-off against sorting errors. It suits any warehouse that picks by hand.
+when:
+  - Pickers cross the same aisles for many small orders.
+  - Your daily orders have lots of repeated items.
+  - You have urgent orders that cannot wait for a batch.
+  - You want to test a cart size before buying.
+you_give:
+  - A list of the day's orders with items
+  - Warehouse layout and pick locations
+  - Cart capacity
+  - Priorities and cut-off times (optional)
+you_get:
+  - Orders grouped into batches
+  - Estimated walking distance saved
+  - Sort steps after picking
+  - Risks such as mispicks flagged
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

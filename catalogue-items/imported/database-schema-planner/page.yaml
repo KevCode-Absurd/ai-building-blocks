@@ -6,6 +6,25 @@ summary: Describe your data. Get a clean schema, migration plan and query advice
 job: build-software
 headline: Database schema planner
 subhead: Describe your data. Get a clean schema, migration plan and query advice, with SQL or NoSQL guidance.
+explain: |
+  A review and plan for your database design: what to fix in the tables, which indexes to add, and how to roll out changes safely. It also helps you decide between SQL and NoSQL.
+
+  The skill runs analysis tools rather than judging by eye. It checks normalisation level, missing keys and constraints, odd data types and naming consistency, and draws a Mermaid diagram of the tables. For indexes it finds gaps on foreign keys, redundant overlaps and the best column order for combined indexes. For changes it plans zero downtime steps with a rollback path and the order they must run. It also weighs when to denormalise for speed. You provide SQL definitions to analyse.
+when:
+  - Your database grew messy and you want a health check.
+  - Queries are slow and you suspect missing indexes.
+  - You need a safe plan to change several tables.
+  - You are weighing SQL against NoSQL for a project.
+you_give:
+  - Your table definitions in SQL
+  - Common queries (optional)
+  - Planned changes (optional)
+  - Database type
+you_get:
+  - Schema issues list
+  - Table diagram
+  - Index recommendations
+  - Step by step migration plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

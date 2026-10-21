@@ -6,6 +6,26 @@ summary: Describe a high-speed serial link. Get a model with equalizers tuned an
 job: build-software
 headline: SerDes link modeler
 subhead: Describe a high-speed serial link. Get a model with equalizers tuned and eye diagrams plotted.
+explain: |
+  A working model of a high-speed serial link, with equalisation tuned and eye diagrams plotted. It uses MATLAB's SerDes Toolbox and covers NRZ and PAM links from PAM3 to PAM16.
+
+  Start from a target data rate and channel loss, or from a reference design such as PCIe, USB4, DDR5 or UCIe. Load a Touchstone channel file, or model crosstalk. Then tune FFE, CTLE and DFE settings, sweep parameters, and check eye height, eye width, bathtub curves and jitter parts. The skill also builds IBIS-AMI models for transmitters, receivers, redrivers and retimers, and tests them against the behavioural model. It includes rules that avoid silent setup errors.
+when:
+  - You are designing a PCIe or PAM4 link and need to pick equaliser settings.
+  - You have measured channel S-parameters and want to see the eye.
+  - You need an IBIS-AMI model to share with a partner.
+  - You want to sweep data rates and compare eye margin.
+you_give:
+  - Target data rate and signalling type
+  - Channel data or loss profile
+  - MATLAB with SerDes Toolbox
+  - Compliance mask or jitter budget (optional)
+you_get:
+  - A SerDes system model
+  - Tuned equaliser settings
+  - Eye diagrams and jitter breakdown
+  - IBIS-AMI model files
+  - Parameter sweep results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe your product and what new users must learn. Get a short tour p
 job: build-product
 headline: In-app tour designer
 subhead: Describe your product and what new users must learn. Get a short tour plan with triggers, tips and completion tracking.
+explain: |
+  A short tour plan for your product that teaches new users at the moment they need help, instead of burying them in pop-ups. It also tells you plainly when a tour is the wrong tool and a help page would do.
+
+  The skill starts with a decision: does your product have buried features, an audience that wants guidance, and a team that can keep tours current? If so, it designs the triggers (when a tip shows), where each hint sits, and how to stay quiet when the user is fine. It sets how you track completion and adoption, so you can tell if a tour worked or only got clicked. It stays separate from first-run wizards and chat help.
+when:
+  - Users miss a key feature that is hidden in a menu.
+  - Your current tour gets clicks but no change in feature use.
+  - You need a plan for tips that appear only when someone struggles.
+  - You are unsure if you need a tour or better help docs.
+  - You want a way to measure whether tips lead to adoption.
+you_give:
+  - A description of your product
+  - The features new users must learn
+  - Your current tour or help setup (optional)
+  - Your main success measure
+you_get:
+  - A go or no-go call on building a tour
+  - Trigger rules for each tip
+  - Placement and wording guidance
+  - Completion and adoption tracking plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

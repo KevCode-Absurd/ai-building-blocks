@@ -6,6 +6,26 @@ summary: Describe how you handle data about people in Brazil. Get your LGPD duti
 job: check-contracts
 headline: Brazil data privacy checker
 subhead: Describe how you handle data about people in Brazil. Get your LGPD duties, gaps and a plan to fix them.
+explain: |
+  A clear list of what Brazil's data protection law, the LGPD, asks of you, where you fall short, and what to fix first. It matters because fines can reach two percent of Brazilian revenue.
+
+  You describe what personal data you collect, why, where it goes and who sees it. The skill matches each use to a legal basis, checks sensitive data rules, and works out rights requests, breach reporting and when you need a data officer. Gaps go into a table with priority and action. It cites the law by article and notes where GDPR differs. It is guidance, not legal advice, so have a lawyer review it.
+when:
+  - You sell to customers in Brazil and are unsure what the law requires.
+  - You need to pick a legal basis for a new way of using customer data.
+  - You had a data leak and need to know who to tell and when.
+  - You must send data out of Brazil and need to know the rules.
+you_give:
+  - A description of the personal data you hold
+  - Why you collect it and who receives it
+  - Where data is stored or sent
+  - Your current privacy policy (optional)
+you_get:
+  - A gap table with priority and action
+  - Legal basis for each data use
+  - Step-by-step rights request workflow
+  - Breach notification checklist
+  - Penalty exposure notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

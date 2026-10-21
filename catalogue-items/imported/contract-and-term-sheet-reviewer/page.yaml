@@ -6,6 +6,25 @@ summary: Paste a contract or term sheet. Get the risky terms flagged, plain-Engl
 job: check-contracts
 headline: Contract and term sheet reviewer
 subhead: Paste a contract or term sheet. Get the risky terms flagged, plain-English meaning and when to call a lawyer.
+explain: |
+  A read of your contract or investment term sheet with risky terms flagged, each explained in plain English, and a clear signal for when you should pay a lawyer. You know what you are agreeing to before you sign.
+
+  It first asks a few questions about your company and the deal. Then it reviews the document clause by clause for service agreements, software terms, NDAs, data agreements and hiring contracts. For term sheets it decodes items like valuation, liquidation preference and board control. It also checks who owns your intellectual property and whether rules such as health privacy or GDPR apply. It is general guidance, not legal advice.
+when:
+  - An investor sent a term sheet and you do not know what it means.
+  - A customer's contract landed in your inbox and you need to know what's risky.
+  - You are unsure whether your IP assignments are in order.
+  - You need to decide if a deal is worth an outside lawyer's fee.
+you_give:
+  - The contract or term sheet text
+  - Your company stage and business
+  - Which side you are on
+  - Your country and industry (optional)
+you_get:
+  - Flagged risky terms with plain meaning
+  - Suggested changes
+  - Term sheet breakdown
+  - When to call a lawyer
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

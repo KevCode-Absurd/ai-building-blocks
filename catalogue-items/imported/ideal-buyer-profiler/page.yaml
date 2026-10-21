@@ -6,6 +6,25 @@ summary: Describe who you sell to. Get one specific buyer with pains, goals, fai
 job: understand-customers
 headline: Ideal buyer profiler
 subhead: Describe who you sell to. Get one specific buyer with pains, goals, failed attempts and what drives their choices.
+explain: |
+  One specific buyer, not a crowd. Describe who you sell to and get a profile of a real-feeling person, with their daily frustrations, what they want, what they already tried and why it failed.
+
+  It works like a buyer psychologist. It first pins down who they are, their job and life stage, and what they are trying to achieve. Then it digs out past attempts, why those fell short and what they believe about their problem. Last it surfaces the emotions underneath: fear, frustration and desire, plus quieter drivers like wanting status, control or relief. The output is a primary avatar with a description, situation, pain points and desired outcome. Use it as the base for ads, pages and offers.
+when:
+  - Your marketing talks to everyone and persuades no one.
+  - You are about to write an offer and need to know who it is for.
+  - You want to understand why past solutions let your buyers down.
+  - A new team member needs a clear picture of your customer.
+you_give:
+  - What you sell
+  - Who you think buys it
+  - Customer feedback or reviews (optional)
+  - Notes from sales calls (optional)
+you_get:
+  - A primary buyer description
+  - Current situation and daily pains
+  - Past failed solutions
+  - Emotional and hidden drivers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

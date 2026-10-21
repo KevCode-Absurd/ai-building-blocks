@@ -6,6 +6,25 @@ summary: Point it at a skill, MCP server or add-on. Get a read-only safety revie
 job: secure-code
 headline: Skill safety reviewer
 subhead: Point it at a skill, MCP server or add-on. Get a read-only safety review before you install it.
+explain: |
+  A read-only safety review of a skill, MCP server, connector or desktop extension before you install it, ending in one of three clear verdicts. You see what it can touch before it touches anything.
+
+  It records the repo, version and licence, then reads every instruction and every file it calls. It lists the powers: files, commands, network, browser, accounts, publishing, deletion, payment and credentials. It traces sensitive data from source to where it ends up, checks dependencies and install scripts, and separates proven findings from open questions with file and line proof. The verdict is lower observed risk, review required, or high observed risk. It proposes a minimal test and never runs it without your approval.
+when:
+  - You want to add an MCP server and need to know what it can access.
+  - A desktop extension asks for broad permissions.
+  - A skill pulls and runs a remote installer.
+  - You must justify an install decision to your security team.
+you_give:
+  - The skill, server or extension link or folder
+  - Which accounts or data you would connect
+  - Your risk tolerance (optional)
+you_get:
+  - One of three verdicts
+  - A table of capabilities and permissions
+  - A data flow trace
+  - Findings with file proof
+  - A safe test proposal
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

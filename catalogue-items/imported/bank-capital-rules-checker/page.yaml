@@ -6,6 +6,25 @@ summary: Give it a bank's balance sheet. Get its Basel III capital and liquidity
 job: check-contracts
 headline: Bank capital rules checker
 subhead: Give it a bank's balance sheet. Get its Basel III capital and liquidity ratios checked against the limits.
+explain: |
+  A bank's capital and liquidity checked against Basel III limits. Provide the balance sheet figures: common equity, other Tier 1 and Tier 2 capital, risk-weighted assets, high-quality liquid assets and expected 30-day cash outflows.
+
+  The AI applies risk weights to the asset mix. Then it works out the CET1 ratio, Tier 1 and total capital ratios, the ratio of capital to total exposure and the liquidity coverage ratio. It adds capital buffers on top of the minimums and compares each ratio with its limit. The result is a compliance dashboard showing passes, shortfalls and how much room is left. It can also frame simple stress scenarios. Scripts and reference notes are included.
+when:
+  - You need a quick check that a bank meets its CET1 minimum.
+  - A risk team must show headroom over capital buffers.
+  - You are studying how asset mix changes risk-weighted assets.
+  - You want to see how a loss would move the ratios.
+you_give:
+  - Capital components, such as CET1 and Tier 2
+  - Risk-weighted assets or the asset mix
+  - Liquid assets and 30-day outflows
+  - Local buffer rules (optional)
+you_get:
+  - CET1, Tier 1 and total capital ratios
+  - Exposure and liquidity ratios
+  - A pass or shortfall for each limit
+  - A compliance dashboard
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

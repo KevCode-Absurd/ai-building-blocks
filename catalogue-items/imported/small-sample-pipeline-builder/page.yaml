@@ -6,6 +6,25 @@ summary: Describe a data or AI workflow. Get it working end to end on a tiny sam
 job: build-software
 headline: Small-sample pipeline builder
 subhead: Describe a data or AI workflow. Get it working end to end on a tiny sample, then scaled with cost checks.
+explain: |
+  A data or AI workflow that works from start to finish on a tiny sample before you spend real money on the full run. This stops the common mistake of building every stage at full size, then finding a wrong prompt ran over a whole table.
+
+  First it defines what "it works" means, with one pass or fail test you can check. Then it builds the thinnest path through every stage on a few rows with the cheapest settings. After the test passes, it scales up in steps, measuring and projecting cost before each one. Only then does it add features, one at a time, re-running tests. It suits pipelines that use warehouse credits, tokens, embeddings or API calls.
+when:
+  - You are about to run an LLM over thousands of documents.
+  - A new data pipeline has several stages that have never run together.
+  - You worry a mistake will burn warehouse credits.
+  - You need a cost estimate before the full run.
+you_give:
+  - A description of the workflow and its stages
+  - A small sample of your data
+  - Your budget limit
+  - The tools you use, like Snowflake or dbt (optional)
+you_get:
+  - A one-line definition of success and a pass or fail test
+  - A working tiny version of the whole path
+  - Cost projections for each scale-up step
+  - A cost-gated plan to full size
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a product photo. Get a pass or reject check for Amazon, TikTok 
 job: product-photos
 headline: Marketplace photo rule checker
 subhead: Give it a product photo. Get a pass or reject check for Amazon, TikTok Shop, Temu and Shopee rules, and a fix.
+explain: |
+  Run a product photo through the image rules of the store you sell on and get a clear pass or reject before you upload. If it fails, it can fix what is fixable.
+
+  It holds a table of limits for Amazon, TikTok Shop, Temu, Shopee, Shopify and Taobao. These cover white background, the shortest allowed long side, how much of the frame the product fills, shape and file size. A script reads the photo and reports each problem in plain words. With the fix option it resizes, pads and recolours into a fixed folder, then checks the result again. It will not repaint a bad photo.
+when:
+  - A marketplace rejected your main product photo and you are not sure why.
+  - You have 200 photos and want to find the bad ones before upload.
+  - You sell on several platforms and each wants a different size.
+  - You use AI to make product images and want them to pass the first time.
+you_give:
+  - One photo or a folder of photos
+  - The platform you sell on
+  - Your own rule file (optional)
+  - Python on your computer
+you_get:
+  - A pass or reject for each photo
+  - A plain list of problems
+  - Fixed copies where possible
+  - A batch summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

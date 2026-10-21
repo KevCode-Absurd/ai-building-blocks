@@ -6,6 +6,25 @@ summary: Describe your queries and scale. Get a Cassandra or DynamoDB table desi
 job: build-software
 headline: NoSQL data modeler
 subhead: Describe your queries and scale. Get a Cassandra or DynamoDB table design that avoids hot partitions.
+explain: |
+  A Cassandra or DynamoDB table design that answers your queries quickly and spreads load evenly, so no single partition gets overloaded.
+
+  These stores work differently from SQL. You do not model things and link them later. You list your questions first, then build one table per question and copy data so each read is fast. The skill takes you through that: write the access patterns, choose partition and sort keys, check how big and how evenly each partition will grow, and avoid hot spots. It explains the trade-offs, such as eventual consistency and extra storage cost. You can also use it to find why an existing table is slow.
+when:
+  - You are moving from SQL to DynamoDB and the model feels backwards.
+  - One partition key is taking all the traffic.
+  - You have ten queries and need to know how many tables to build.
+  - Reads are slow and you suspect the key design.
+you_give:
+  - The queries you need to run
+  - Expected data size and traffic
+  - Cassandra, ScyllaDB or DynamoDB
+  - Your current schema (optional)
+you_get:
+  - A list of access patterns
+  - Table and key designs
+  - A hot partition check
+  - Trade-offs in plain words
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

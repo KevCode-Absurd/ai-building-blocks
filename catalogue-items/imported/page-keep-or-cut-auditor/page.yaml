@@ -6,6 +6,25 @@ summary: Give it your site's content list. Get each page marked keep, update, me
 job: get-found-in-search
 headline: Page keep-or-cut auditor
 subhead: Give it your site's content list. Get each page marked keep, update, merge, redirect or delete, with reasons.
+explain: |
+  A spreadsheet-style decision for every page on your site: keep, update, merge, redirect or delete, each with a reason. It helps when traffic has dropped or you inherited a pile of old posts.
+
+  It starts from your page list, search data, traffic and backlinks. Each page gets scored. Pages ranking well stay. Pages sitting on the second results page with stale facts get an update. Two pages fighting for one search get merged. Pages with no traffic but good links are redirected so the link value is not lost. The rest are cut. You review the plan before touching anything.
+when:
+  - You inherited a blog with hundreds of posts and no map of it.
+  - Site traffic has slid and you do not know where to start.
+  - Two of your pages compete for the same search.
+  - You are about to redesign or move the site and want to trim first.
+you_give:
+  - Your site address or full page list
+  - Search console export for 12 months
+  - Analytics data such as sessions and sales
+  - Backlink export (optional)
+you_get:
+  - Each page marked keep, update, merge, redirect or delete
+  - Reason for each call
+  - Priority order of work
+  - Redirect map for pages you remove
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

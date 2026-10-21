@@ -6,6 +6,26 @@ summary: Describe your project. Get a one-page brief with goal, audience, tone a
 job: plan-strategy
 headline: Project kickoff brief writer
 subhead: Describe your project. Get a one-page brief with goal, audience, tone and limits that your team can sign off.
+explain: |
+  A one-page brief your team can sign off before work starts, so a designer, developer or AI agent knows what to build. It turns "we want a website" into something concrete.
+
+  The skill checks what you already know, then asks only for what is missing. It fills ten parts: snapshot, audience, objectives, key message, voice and tone, visual direction, scope and deliverables, limits, inspiration and rivals, and approval. It watches for common failures such as goals nobody can measure or audiences described as everyone. The finished brief gets a final read for gaps, so everyone can agree on it.
+when:
+  - You are starting a website, campaign, app or rebrand and need alignment.
+  - You are handing work to a designer, developer or AI and want fewer back-and-forth questions.
+  - The team has drifted and you need to restate the goal.
+  - You have a vague idea and need to make it buildable.
+you_give:
+  - Your idea, even if rough
+  - Who it is for
+  - What success looks like
+  - Deadline, budget or other limits
+  - Examples you like (optional)
+you_get:
+  - One-page brief
+  - Clear goal, audience and tone
+  - Scope and limits
+  - A list of open questions to settle
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

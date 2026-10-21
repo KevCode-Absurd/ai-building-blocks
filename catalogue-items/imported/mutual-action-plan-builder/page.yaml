@@ -6,6 +6,25 @@ summary: Name a deal. Get a why-buy case and a dated plan to signature that you 
 job: sell-and-negotiate
 headline: Mutual action plan builder
 subhead: Name a deal. Get a why-buy case and a dated plan to signature that you can share with the customer.
+explain: |
+  Close the gap between a deal that feels close and one that has a signing date. You name the deal and get two documents: a business case in the customer's own words, and a shared plan that works backward from the signature date.
+
+  The skill pulls the deal record, call notes and open email threads. The business case covers their problem, their goals, the price against the value, and the cost of waiting. Any claim with no customer proof is flagged as something to confirm on the next call. The plan lists security review, legal edits, approvals and signatures, each with an owner and a date. It warns you if the close date can no longer be met.
+when:
+  - A deal is in late stage and the customer has no clear path to signature.
+  - Your champion needs a document to sell the deal inside their own company.
+  - You suspect the forecast close date is too early.
+  - You want to show the buyer who owns each step before signing.
+you_give:
+  - The deal or account name
+  - Call notes, proposals or emails about the deal
+  - Your target signature date (optional)
+  - Your own approval steps and how long they take (optional)
+you_get:
+  - A customer-facing business case
+  - A dated plan to signature with owners
+  - A list of claims that still need proof
+  - A draft email to your champion
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

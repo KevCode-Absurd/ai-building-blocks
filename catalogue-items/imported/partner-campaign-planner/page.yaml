@@ -6,6 +6,25 @@ summary: Say who you serve. Get partner ideas and a joint campaign plan with a p
 job: plan-strategy
 headline: Partner campaign planner
 subhead: Say who you serve. Get partner ideas and a joint campaign plan with a pitch you can send.
+explain: |
+  A shortlist of partners you could team up with, plus a joint campaign plan and a pitch you can send. It aims at companies that share your buyer without competing for the same budget.
+
+  It starts with your audience and the tools they use before, during and after yours. It then ranks partner ideas by audience overlap, size match and fit. For a chosen partner it suggests campaign formats such as a joint webinar, guide or launch, with who does what. It also outlines the partner agreement terms. It is written with software companies in mind but the method fits other teams.
+when:
+  - You want to reach new customers without more ad spend.
+  - You have a partner in mind and need campaign ideas.
+  - You need to decide if a partner is a good fit.
+  - You must write a message asking a company to join.
+you_give:
+  - Who you serve and what you sell
+  - Tools your customers already use
+  - A partner you have in mind (optional)
+  - Goal such as leads or launch buzz
+you_get:
+  - Ranked partner ideas
+  - Joint campaign options
+  - Roles and split of work
+  - Outreach pitch you can send
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

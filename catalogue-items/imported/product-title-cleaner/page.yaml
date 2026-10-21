@@ -6,6 +6,25 @@ summary: Give it your product list. Get tidy, consistent titles as a CSV for Sho
 job: run-your-store
 headline: Product title cleaner
 subhead: Give it your product list. Get tidy, consistent titles as a CSV for Shopify, plus a before and after sheet.
+explain: |
+  Messy Shopify product titles tidied into one pattern across the catalog, delivered as a CSV you can import as is. Only titles that need a change are in the file, so a clean store with 40 edits is better than 250 pointless ones.
+
+  Claude starts from whatever you give it: a store address, a collection link, a products file or an export. It reads the store through a script, then removes promo words, ALL CAPS, stray symbols and size clutter, while keeping your brand and trademark names. The pattern runs brand, product type, key attribute, variant. You get the import CSV with URL handle and new title, plus a before and after sheet. It fixes titles only, not SEO text.
+when:
+  - Your product titles are inconsistent or shout in capitals.
+  - Titles carry promo text and size clutter.
+  - You are about to import a catalog and want it clean.
+  - Your Google Shopping feed titles look messy.
+you_give:
+  - A store domain, collection link, products file or export CSV
+  - Your brand names to keep
+  - A preferred naming pattern (optional)
+  - Products to leave unchanged (optional)
+you_get:
+  - A Shopify import CSV of changed rows
+  - A before and after review sheet
+  - One consistent title pattern
+  - A note on titles left as they are
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

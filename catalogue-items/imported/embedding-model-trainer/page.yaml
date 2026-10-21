@@ -6,6 +6,25 @@ summary: Say what your search or matching must do. Get an embedding or reranker 
 job: build-software
 headline: Embedding model trainer
 subhead: Say what your search or matching must do. Get an embedding or reranker model trained from a ready template.
+explain: |
+  A trained search or matching model, built from a tested template rather than written from scratch. Say what your search must do and you get an embedding model or a reranker, fine-tuned on your data.
+
+  The skill is a router. It asks whether you need a bi-encoder for fast retrieval, a cross-encoder to rerank the top results, or a sparse encoder for keyword-style search. Then it makes you read the matching guides on losses, evaluators and model design before touching code. You copy the production template script for that type and adapt it. It stresses matching the loss to your data shape and the right batch settings. You need Python, the sentence-transformers library and usually a GPU.
+when:
+  - Off-the-shelf search misses results in your field.
+  - You need a reranker to sort the top results.
+  - You have pairs of related texts to train on.
+  - You want to measure whether training helped.
+you_give:
+  - What the model must find or match
+  - Training pairs or labelled data
+  - Base model choice (optional)
+  - A Python setup, ideally with a GPU
+you_get:
+  - The right model type for your job
+  - A training script from the template
+  - Evaluation setup and metrics
+  - A fine-tuned model
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

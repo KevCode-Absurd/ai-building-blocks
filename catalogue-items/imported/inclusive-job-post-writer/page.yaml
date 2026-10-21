@@ -6,6 +6,26 @@ summary: Name the role. Get a clear job post with real requirements, plus a fix 
 job: hire-people
 headline: Inclusive job post writer
 subhead: Name the role. Get a clear job post with real requirements, plus a fix for biased or bloated wording.
+explain: |
+  A job post that candidates can read in a minute and trust, with real requirements and no wording that quietly pushes good people away. Give it a role, or paste an old post to be fixed.
+
+  The skill writes an opening summary, what the person will do, and what success looks like at 30, 60 and 90 days. It splits must-have skills from nice-to-have ones, since long wish lists keep out strong applicants who doubt themselves. It scans for biased or inflated terms, like "rockstar" or ten years for a new tool, and offers plainer swaps. It also covers pay, benefits and a team description that reads as honest.
+when:
+  - You must hire for a role and have no job post yet.
+  - Your old job post gets few or narrow applicants.
+  - The requirements list is long and half of it is not needed.
+  - You want a post checked for biased wording.
+  - You need to explain what the first three months look like.
+you_give:
+  - The role title and team
+  - Key duties and must-have skills
+  - Pay range and benefits (optional)
+  - An existing post to fix (optional)
+you_get:
+  - A complete job post
+  - A split of must-have and nice-to-have skills
+  - Flagged wording with replacements
+  - 30, 60 and 90 day goals
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

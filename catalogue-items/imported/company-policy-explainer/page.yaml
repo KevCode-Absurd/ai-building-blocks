@@ -6,6 +6,24 @@ summary: Ask about leave, travel or expenses. Get the rule in plain words from y
 job: hire-people
 headline: Company policy explainer
 subhead: Ask about leave, travel or expenses. Get the rule in plain words from your handbook. Check with HR for big decisions.
+explain: |
+  Straight answers to questions like how much leave you get or what you can claim on a trip, taken from your own handbook and put in plain words. Staff stop waiting days for HR to reply to simple questions.
+
+  You paste your handbook or connect your policy documents, then ask in everyday language. Claude finds the matching section, explains the rule without jargon, and points to where it came from. It covers time off, benefits, pay, remote work, travel, expenses and conduct. With your HR system connected it can also pull a leave balance. For a dispute or a big decision, it tells you to check with HR.
+when:
+  - A new hire asks how parental leave works and you want to answer correctly.
+  - You are unsure whether an expense is covered before you spend.
+  - Your handbook is 80 pages and nobody reads it.
+  - HR keeps getting the same five questions each week.
+you_give:
+  - Your employee handbook or policy text
+  - The question in your own words
+  - Your country or region (optional)
+you_get:
+  - The rule in plain words
+  - The section it came from
+  - Steps to follow, such as who to ask or what form to file
+  - A note when HR should confirm
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

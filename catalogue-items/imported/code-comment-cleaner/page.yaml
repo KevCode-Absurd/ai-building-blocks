@@ -6,6 +6,24 @@ summary: Give it a code file. Get clear, professional comments and tidy-ups, wit
 job: build-software
 headline: Code comment cleaner
 subhead: Give it a code file. Get clear, professional comments and tidy-ups, with the logic left untouched.
+explain: |
+  Comments that read like one careful person wrote them, and code that still behaves exactly the same. It is meant for the last pass before a review, a handoff or going public.
+
+  The rule is simple: comments and layout are in scope, logic never is. It reads the whole file first, so no comment is a guess. Then it fixes casual, stale, missing or venting comments, adds docstrings in the language's usual style, and does safe tidy-ups like spacing and import order. If a fix would change what the code does, it leaves the line alone and tells you instead.
+when:
+  - You are about to open-source a project full of rough notes.
+  - A file mixes human comments and AI comments in different voices.
+  - Old comments no longer match what the code does.
+  - You want clearer comments without any risk of changed behavior.
+you_give:
+  - A code file or module
+  - The language and style guide (optional)
+  - Comments to keep as they are (optional)
+you_get:
+  - Rewritten comments in one voice
+  - Docstrings where they were missing
+  - Safe formatting tidy-ups
+  - A list of anything spotted but not changed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Describe your audience. Get a scored quiz that sorts people, captures l
 job: write-landing-page
 headline: Quiz funnel builder
 subhead: Describe your audience. Get a scored quiz that sorts people, captures leads and leads into the right next offer.
+explain: |
+  A scored quiz that draws in the right people, sorts them by result, and sends each one to the offer that fits. Visitors leave with a score and you leave with their answers and contact details.
+
+  It builds the funnel in four parts: a landing page with a hook people want to be scored on, the questions, the results page, and the follow-up offer. It prefers hooks that move people toward a goal over hooks built on fear. Answers tell you what each person needs before you ever speak to them. Once built, it scores your funnel against six checks so you can see what to fix first.
+when:
+  - You want a lead magnet that collects real data on each prospect.
+  - You are launching a new offer and need to find who is ready to buy.
+  - Your landing page gets visits but few sign-ups.
+  - You want different follow-ups for different types of buyer.
+you_give:
+  - Your audience and the goal they want
+  - Your offers or services
+  - Existing landing page (optional)
+you_get:
+  - Landing page hook and copy
+  - Scored question set
+  - Result tiers with next steps
+  - Six-point funnel score
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: List your income and spending. Get a budget plan, such as zero-based or
 job: money-and-investing
 headline: Personal budget builder
 subhead: List your income and spending. Get a budget plan, such as zero-based or 50/30/20, and where money leaks.
+explain: |
+  A spending plan where every dollar has a job, and a clear view of where money leaks. You get either a simple 50/30/20 split or a zero-based plan where income minus spending equals zero.
+
+  The skill starts with your take-home pay and whether it is steady or variable, then your fixed bills, variable essentials, wants and your main goal, such as an emergency fund or debt payoff. It sorts a month or two of statements into categories, finds recurring or irregular charges, and treats savings as a bill paid first, not a leftover. You get a plan to review and reset each month. It is a budgeting aid, not financial advice.
+when:
+  - You earn variable income and need a budget that holds up.
+  - Money runs out before month end and you cannot see why.
+  - You want to save for a goal such as a house deposit.
+  - You are paying off debt and need room for extra payments.
+you_give:
+  - Monthly take-home income
+  - One to three months of statements (optional)
+  - Fixed bills
+  - Your main financial goal
+you_get:
+  - A budget by category
+  - A 50/30/20 or zero-based plan
+  - A list of spending leaks
+  - A savings target and monthly review steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

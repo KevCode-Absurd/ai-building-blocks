@@ -6,6 +6,25 @@ summary: Describe your system. Get threats found with STRIDE, rated by risk, eac
 job: secure-code
 headline: Threat modeler
 subhead: Describe your system. Get threats found with STRIDE, rated by risk, each with a way to reduce it.
+explain: |
+  Describe a system and get a list of what could go wrong, ranked by risk, each with a fix. It suits the design stage, when changing a plan costs far less than changing shipped code.
+
+  The skill walks through the STRIDE method: spoofing, tampering, repudiation, information disclosure, denial of service and elevation of privilege. For each one it asks where your system is exposed, such as logins, data stores or third-party links. It scores likelihood and impact, then suggests controls like multi-factor login, signed requests or stricter logging. It works from your architecture notes or diagrams, and from how sensitive your data is.
+when:
+  - You are designing a new feature that handles personal data.
+  - You are adding a third-party service and want to know the risk.
+  - A compliance review is coming and you need documented threats.
+  - A past incident showed gaps and you want to find the rest.
+you_give:
+  - A description or diagram of your system
+  - The kind of data it holds
+  - Outside services it connects to
+  - Existing security controls (optional)
+you_get:
+  - Threats sorted by STRIDE category
+  - Risk ratings
+  - Suggested controls for each threat
+  - A short summary for reviewers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

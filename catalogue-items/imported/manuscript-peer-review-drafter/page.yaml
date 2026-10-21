@@ -6,6 +6,26 @@ summary: Give it a paper or proposal. Get a fair, evidence-based review with cla
 job: research-topics
 headline: Manuscript peer review drafter
 subhead: Give it a paper or proposal. Get a fair, evidence-based review with claim checks, method critique and revision steps.
+explain: |
+  A fair, evidence-based draft review of a paper or proposal that a human reviewer can edit and sign. It covers claim checks, method critique and clear revision steps.
+
+  Before it reads anything, it checks that you are allowed to review the document and that the venue's rules permit the tools you use. Unpublished work stays confidential and is processed locally by default. If permission is unclear, it will not open the manuscript. After that, it records conflicts and limits of your expertise, then tests whether each claim matches the evidence, examines the design and statistics, and notes what is missing. The review ends with specific, ranked requests for the authors.
+when:
+  - An editor asked you to review a paper and you want a structured start.
+  - You are reviewing a grant proposal and need to test its claims.
+  - You want to check that your review is fair and not just negative.
+  - You need to write revision requests the authors can act on.
+you_give:
+  - The paper or proposal
+  - Proof you are authorised to review it
+  - The venue's review guidelines
+  - Your expertise limits (optional)
+you_get:
+  - A claim-by-claim check
+  - A critique of methods and statistics
+  - Strengths and weaknesses
+  - Ranked revision requests
+  - A confidentiality checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

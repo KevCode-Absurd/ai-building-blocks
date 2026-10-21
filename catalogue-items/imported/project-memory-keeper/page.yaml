@@ -6,6 +6,24 @@ summary: Work on a codebase. Get a notes folder of decisions, design and rules t
 job: build-software
 headline: Project memory keeper
 subhead: Work on a codebase. Get a notes folder of decisions, design and rules that any AI can read later.
+explain: |
+  A folder of plain notes inside your project that records what it is, why choices were made and how code should be written. Any AI that can read files can pick it up later.
+
+  The skill sets up a hidden folder of Markdown files for architecture, decisions and conventions, with scopes for each part of a monorepo. After a change it syncs the notes, records new decisions with the alternatives you rejected, and audits the folder for stale entries. It can also compress old notes to save space and answer questions from them. It is not a diary or a changelog. It keeps the context that normally lives in one person's head.
+when:
+  - You keep re-explaining the same project decisions to your AI.
+  - The one person who knows why things were built that way might leave.
+  - You work in a monorepo and different parts need different rules.
+  - You want notes that work across several AI coding tools.
+you_give:
+  - Access to your project folder
+  - Decisions or conventions to record (optional)
+  - The change you just made, for syncing notes (optional)
+you_get:
+  - A notes folder of architecture, decisions and conventions
+  - Updated notes after each change
+  - Audit of stale or missing entries
+  - Compact versions for quick loading
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

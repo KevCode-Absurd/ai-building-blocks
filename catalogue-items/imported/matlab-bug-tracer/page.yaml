@@ -6,6 +6,25 @@ summary: Give it code that fails. Get the cause found, with breakpoints and vari
 job: test-and-fix-code
 headline: MATLAB bug tracer
 subhead: Give it code that fails. Get the cause found, with breakpoints and variable checks to show it.
+explain: |
+  The cause of a MATLAB error found by running the code, not by guessing. You give it a script that fails or returns a wrong answer, and it shows you the line, the variable and the value that went wrong.
+
+  It starts by deciding if reading the code is enough, as with a typo or an unused variable, or if the code must run. When it must run, it uses MATLAB through connected tools, sets breakpoints, steps through the code and inspects variables. It previews big data with a few rows only. When it spots an error message in a session, it asks you before it begins digging.
+when:
+  - Your script stops with an error and the message tells you little.
+  - A function returns the wrong number and you cannot see where it changes.
+  - You need to learn what unfamiliar code does before editing it.
+  - You want to know why a variable has an odd value halfway through.
+you_give:
+  - The failing script or function
+  - The error message or wrong output
+  - What you expected to happen
+  - A working MATLAB install
+you_get:
+  - The line and cause of the problem
+  - Variable values that prove it
+  - The breakpoints used
+  - A suggested fix
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

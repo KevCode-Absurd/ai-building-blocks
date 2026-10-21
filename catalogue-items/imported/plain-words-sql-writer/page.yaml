@@ -6,6 +6,24 @@ summary: Describe the data you need. Get a working SQL query for your database t
 job: track-numbers
 headline: Plain-words SQL writer
 subhead: Describe the data you need. Get a working SQL query for your database type, with a note on how it runs.
+explain: |
+  Describe the data you want in plain words and get a working SQL query for your database, with a short note on how it runs. It saves you from remembering each system's quirks.
+
+  The skill pulls out the columns, filters, totals, joins, order and limits from your description. If it does not know your database, it asks: Postgres, Snowflake, BigQuery, Redshift, Databricks, MySQL, SQL Server, DuckDB, SQLite or another. If a warehouse is connected, it looks up tables, columns and partitions first. It then writes the query in your dialect and explains the logic and any speed concerns.
+when:
+  - You know what you want but not the SQL for it.
+  - You switched from one database to another.
+  - You need a top-ten or time-range report query.
+  - You want a query that does not scan the whole table.
+you_give:
+  - A description of the data you need
+  - Your database type
+  - Table names or access to the warehouse (optional)
+you_get:
+  - A SQL query in your dialect
+  - A note on how it works
+  - Speed tips such as partition use
+  - Assumptions listed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

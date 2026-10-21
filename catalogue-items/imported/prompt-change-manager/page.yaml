@@ -6,6 +6,26 @@ summary: Keep prompts in production. Get versioning, tests of changes, a registr
 job: set-up-ai
 headline: Prompt change manager
 subhead: Keep prompts in production. Get versioning, tests of changes, a registry and safe rollbacks.
+explain: |
+  Treat your prompts like code: saved, versioned, tested and safe to roll back. A wording tweak that quietly breaks a feature gets caught before users see it.
+
+  The skill starts by asking how prompts are stored now, how many are live, and whether a change has ever caused a regression. It then sets up a registry with version history, an evaluation set that runs on every change, A/B tests with clear pass rules, and a deploy path with rollback. Ownership is spelled out for each prompt. It fits teams running AI features in production, not people writing one-off prompts.
+when:
+  - A prompt edit broke something and users noticed first.
+  - Prompts are hardcoded across your codebase and nobody knows what is live.
+  - You want to A/B test a new prompt without guessing.
+  - Several people edit prompts and you need order.
+you_give:
+  - How prompts are stored today
+  - Number of production prompts
+  - AI provider and frameworks in use
+  - Main pain point such as versioning or testing
+  - Team size
+you_get:
+  - Prompt registry design
+  - Versioning rules
+  - Evaluation pipeline plan
+  - A/B test and rollback process
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

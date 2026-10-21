@@ -6,6 +6,26 @@ summary: "Get the true cost of returns by reason and product: refunds, shipping 
 job: run-your-store
 headline: Return cost calculator
 subhead: "Get the true cost of returns by reason and product: refunds, shipping lost and written-off stock."
+explain: |
+  The real cost of your returns, not only the refund amount. You see what each return reason and each product costs you in refunds, lost shipping income, written-off stock and handling time.
+
+  It reads your Shopify returns for a set window, 90 days by default, and groups them by reason, product, SKU or reason and product together. Items sent back as defective are treated as a full loss at cost. Every other return gets a flat handling cost you can set, with $5 as the starting figure. It drops groups with too few returns to mean anything. It changes nothing in your store. The costs are estimates, so adjust the handling figure before using them for accounts.
+when:
+  - You suspect one product line is quietly costing you a lot in returns.
+  - You want to know if a size guide or better packaging would pay off.
+  - Refunds look small but your margin keeps shrinking.
+  - You need figures to argue for a listing or supplier fix.
+you_give:
+  - Your Shopify store address
+  - How many days back to look
+  - How to group the results
+  - Which return reasons count as written off (optional)
+  - Your average handling cost per return (optional)
+you_get:
+  - Return cost by reason
+  - Return cost by product or SKU
+  - Refund, shipping and stock loss totals
+  - A ranked list of what to fix first
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

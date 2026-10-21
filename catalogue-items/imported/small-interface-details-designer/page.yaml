@@ -6,6 +6,24 @@ summary: Give it a screen or feature. Get the triggers, rules, feedback and loop
 job: design-work
 headline: Small interface details designer
 subhead: Give it a screen or feature. Get the triggers, rules, feedback and loops for its small moments, so it feels polished.
+explain: |
+  The small moments in a screen, like a toggle, a loading spinner or a like button, designed so they feel right. You name a screen or feature, and get a plan for each tiny interaction.
+
+  It uses Dan Saffer's four parts. A trigger starts the moment, either by the user or by the system. Rules decide what happens. Feedback shows it happened, through motion, colour, sound or touch. Loops and modes cover what repeats or changes over time. The skill scores a design against eight checks and gives a score out of ten, then lists what to fix. It is useful when a product works but feels flat or confusing.
+when:
+  - Your button works but gives no sign that it did anything.
+  - A loading state leaves people unsure if the page is stuck.
+  - You are designing a toggle, a password field or pull to refresh.
+  - A product feels rough and you cannot say why.
+you_give:
+  - The screen or feature to review
+  - What the user is trying to do
+  - A screenshot or description of the current design (optional)
+you_get:
+  - Trigger, rules, feedback and loop notes for each moment
+  - A score out of ten against eight checks
+  - A short list of fixes in priority order
+  - Ideas for motion and feedback
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

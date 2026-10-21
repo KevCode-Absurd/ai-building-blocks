@@ -6,6 +6,26 @@ summary: Name the order and items. Get a full or partial refund, plus a replacem
 job: help-customers
 headline: Refund and reorder processor
 subhead: Name the order and items. Get a full or partial refund, plus a replacement order if you want one. Moves real money.
+explain: |
+  A refund issued on the right order, for the right items, with a replacement draft order ready if the customer wants one. No clicking through the Shopify admin, and no guessing at amounts.
+
+  You give it the store, the order and the items to refund. It looks up the order, works out the refund for a full or partial return, and creates it. If you ask for a replacement, it drafts a new order for the same items. Because it moves real money, it has a dry run mode that shows what would happen first. It needs a logged-in Shopify command line session and permission to read and write orders.
+when:
+  - A customer got a damaged item and you need to refund it and ship a new one.
+  - You need to refund only two items from a five item order.
+  - You want to check the refund amount before any money moves.
+  - You handle many refunds a week and want the same steps each time.
+you_give:
+  - Store domain
+  - Order number
+  - Items to refund, or full refund
+  - Replacement wanted or not (optional)
+  - Dry run preference (optional)
+you_get:
+  - Refund created on the order
+  - Refund amount confirmation
+  - Replacement draft order (optional)
+  - Preview of changes in dry run
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your brand facts. Get a tagline, key messages and proof points 
 job: brand-file
 headline: Brand messaging builder
 subhead: Give it your brand facts. Get a tagline, key messages and proof points for each audience.
+explain: |
+  A full set of messages for your brand: the one thing you must say, a tagline, and proof points for each audience. Everyone who writes for you then pulls from the same page.
+
+  It starts with a core message in a fixed form, naming the brand, the audience, the outcome and the method. Then it writes four or five tagline options of three to seven words, each marked functional, emotional, aspirational or witty, with a reason. If you already have a tagline, it judges that too. It reads saved brand notes first and asks only for missing items such as positioning, audiences and proof.
+when:
+  - Your website, sales deck and ads say different things.
+  - You need a tagline and want options to compare.
+  - You sell to more than one audience.
+  - You want facts that back up each claim.
+you_give:
+  - Your positioning
+  - Primary and secondary audiences
+  - The main benefit you deliver
+  - Proof points and a current tagline (optional)
+you_get:
+  - A core message sentence
+  - Four or five tagline options
+  - Key messages by audience
+  - Proof points for each claim
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

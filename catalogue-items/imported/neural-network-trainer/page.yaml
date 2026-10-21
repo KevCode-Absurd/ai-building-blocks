@@ -6,6 +6,25 @@ summary: Give it data and a goal. Get a neural network trained, tested and expor
 job: build-software
 headline: Neural network trainer
 subhead: Give it data and a goal. Get a neural network trained, tested and exported, with old code moved to current methods.
+explain: |
+  A neural network trained in MATLAB, tested on held-out data and exported, using the current functions instead of the old ones. If your code uses outdated calls, it is moved over for you.
+
+  The skill first decides the right route. For table data, it uses fitcnet or fitrnet. For images, signals and sequences, it uses the newer trainnet approach with dlnetwork, and can start from a pretrained network for transfer learning. After training it scores the model with testnet and predicts with minibatchpredict. It can export the result to Simulink. It also migrates older patternnet, fitnet, narxnet and trainNetwork code, and can speed up slow deep learning code with dlaccelerate. You need MATLAB with the right toolboxes.
+when:
+  - You have a dataset in MATLAB and want a working classifier.
+  - Your old patternnet code now shows warnings.
+  - You want to fine-tune a pretrained image network on your own pictures.
+  - Your training code is slow and you want it faster.
+you_give:
+  - Your data (table, images or signals)
+  - What you want to predict
+  - Existing MATLAB code to update (optional)
+  - Whether you need a Simulink export (optional)
+you_get:
+  - A trained network
+  - Test results on unseen data
+  - Updated code using current functions
+  - An exported model (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

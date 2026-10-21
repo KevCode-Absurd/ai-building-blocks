@@ -6,6 +6,25 @@ summary: Give it a model photo. Get versions with other models and backgrounds, 
 job: product-photos
 headline: Model and scene swapper
 subhead: Give it a model photo. Get versions with other models and backgrounds, same clothes. Your image model draws them.
+explain: |
+  One photo of a clothed model turns into many: new models, new backgrounds, same clothes. A single shoot can then cover different ages, skin tones and settings for different markets.
+
+  Claude cannot draw the pictures. It writes the exact prompt, and an image model such as GPT Image does the drawing. The prompt names every detail of the garment to lock in, such as color, cut, logo and folds. Then it describes the new person, the new background, or both, and keeps the pose, camera angle and crop. You pick one of three modes: swap the person, swap the background, or swap both. You need access to an image tool.
+when:
+  - You have one good model photo and need versions for several countries.
+  - You want the same shirt shown on a street, a studio and a beach.
+  - You need an older or younger model without a new shoot.
+  - An ad test needs ten looks from one source photo.
+you_give:
+  - The original model or mannequin photo
+  - What to swap, the person, the background or both
+  - A description of the new model or scene
+  - Access to an image tool such as ChatGPT or an API key
+you_get:
+  - A ready-to-paste image prompt for each version
+  - A list of what stays locked on the clothes
+  - Pose and framing instructions
+  - Notes on how to check the result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

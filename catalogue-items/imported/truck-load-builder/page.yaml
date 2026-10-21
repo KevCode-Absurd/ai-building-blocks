@@ -6,6 +6,25 @@ summary: Give it your orders and truck sizes. Get orders grouped into full truck
 job: plan-supply-chain
 headline: Truck load builder
 subhead: Give it your orders and truck sizes. Get orders grouped into full truck loads that cost less to ship.
+explain: |
+  Orders grouped into full truck loads, so you ship fewer trucks and pay less per delivery. You see how full each trailer is by space and weight before anything is loaded.
+
+  The skill first asks about your trailers, their size, weight and axle limits, and about your shipments: size, weight, stacking, temperature and delivery order. It then builds loads that raise fill rates while respecting limits, keeping cold and ambient goods apart and putting last-drop pallets near the door. It reports cube and weight use per truck and points to where you can combine shipments. It gives a plan, not a loading machine, so a planner should review it.
+when:
+  - Your trucks leave half empty and freight cost is climbing.
+  - You have mixed pallets with different temperatures and delivery stops.
+  - You need to decide which orders ride together.
+  - You want to compare your current fill rate with a better plan.
+you_give:
+  - Trailer types, sizes and weight limits
+  - Your shipments with sizes and weights
+  - Delivery stops and time windows
+  - Rules on stacking or mixing goods (optional)
+you_get:
+  - Orders grouped into truck loads
+  - Space and weight use per truck
+  - A stop-order plan
+  - Ideas to cut truck count and cost
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it usage, engagement and support data. Get at-risk accounts scored
 job: understand-customers
 headline: Churn risk finder
 subhead: Give it usage, engagement and support data. Get at-risk accounts scored with ideas for how to step in.
+explain: |
+  A scored list of customer accounts most likely to leave, each with a suggested next step. You share usage, engagement and support data, and every account gets a score from 0 (healthy) to 100 (about to go).
+
+  It starts by choosing the warning signs that matter for your business, such as logins falling by half, a rise in support tickets, a drop in satisfaction scores, a champion who left, or a renewal date getting close. Each signal is weighted, with usage decline counting most. Accounts then fall into four tiers: critical, high, medium and low. For each tier you get a specific plan, from a call with a senior sponsor to a light check-in.
+when:
+  - Renewals are coming up and you do not know which accounts are shaky.
+  - You have a usage export and want to know who needs a call this week.
+  - Your support team sees rising tickets from one customer.
+  - You need a clear reason to ask for time from a sales or success lead.
+you_give:
+  - Usage data per account
+  - Support ticket history
+  - Billing and renewal dates
+  - Satisfaction scores (optional)
+you_get:
+  - A risk score per account
+  - Four risk tiers
+  - Key signals for each account
+  - A recommended action per tier
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

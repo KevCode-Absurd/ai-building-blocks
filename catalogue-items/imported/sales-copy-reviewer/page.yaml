@@ -6,6 +6,25 @@ summary: Paste your sales copy. Get a direct-response critique with fixes for th
 job: write-ad-copy
 headline: Sales copy reviewer
 subhead: Paste your sales copy. Get a direct-response critique with fixes for the weakest parts.
+explain: |
+  A direct-response review of your sales copy that points to the weakest parts and shows how to fix them. Paste in a video sales letter, email, ad or landing page and get a critique grounded in the methods of well-known response copywriters.
+
+  It names the piece type, its place in the funnel, the target reader and how aware that reader is. Then it judges the big picture before the lines. Is there a clear big idea you could say over a drink? Does the opening keep people reading? Is there a believable mechanism that sets the offer apart? It then works through the copy, grades the lead and offers rewrites for weak sections.
+when:
+  - Your landing page gets traffic but few sales.
+  - An ad or email draft feels flat and you cannot say why.
+  - You wrote a video sales script and want a second opinion.
+  - You want to know if your opening stops people scrolling.
+you_give:
+  - The copy to review
+  - What is being sold and to whom
+  - Where it runs, such as cold traffic or email
+  - Results so far (optional)
+you_get:
+  - A named classification of the piece
+  - A big-picture assessment
+  - Notes on the lead and mechanism
+  - Rewrites for the weakest parts
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

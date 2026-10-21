@@ -6,6 +6,24 @@ summary: Name a vendor. Get what you signed, what is missing and what expires so
 job: check-contracts
 headline: Vendor agreement status checker
 subhead: Name a vendor. Get what you signed, what is missing and what expires soon. Verify against the originals.
+explain: |
+  Name a vendor and get one page of what you have signed with them, what is missing and what ends soon. 
+  The skill takes the vendor's name and handles variations such as a trade name versus a legal name or a parent company. It searches your connected contract system, CRM, email and document storage, in that order. It collects active, expired and pending agreements plus amendments, and notes the account owner and recent contract emails. Then it compares what it found against what a vendor like this should have, such as a master agreement, a data processing agreement and work orders, and lists the gaps with upcoming expiry dates. Check the original documents, since it is not legal advice.
+when:
+  - You are onboarding a new vendor and need to know what paperwork is missing.
+  - A renewal is coming and nobody knows what was signed last time.
+  - Privacy review wants to see the data processing agreement.
+  - You want to check if anything with a vendor expires this quarter.
+you_give:
+  - The vendor name
+  - Access to your contract, CRM, email or document tools
+  - The reason you are checking (optional)
+  - Which agreement types you expect (optional)
+you_get:
+  - A list of agreements and their status
+  - Gaps in the paperwork
+  - Upcoming expiry and renewal dates
+  - The sources each item came from
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

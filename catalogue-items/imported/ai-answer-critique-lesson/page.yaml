@@ -6,6 +6,25 @@ summary: Give it a subject. Get a worksheet that has students judge an AI answer
 job: teach-and-train
 headline: AI answer critique activity builder
 subhead: Give it a subject. Get a worksheet that has students judge an AI answer on clarity, evidence and fairness.
+explain: |
+  A class worksheet set that teaches students to read an AI answer closely instead of trusting how smooth it sounds. It is built around six standards for judging claims: clear, accurate, precise, relevant, deep and broad.
+
+  People spot weak writing by clues like bad grammar or an odd source. AI text has none of those, so students need a new reading habit. The kit has a markup guide where students underline claims stated with too much confidence, numbers with no source and expert-sounding words with little behind them. A scoring grid rates each standard weak, medium or strong. It adds push-back sentence starters and a teacher script that models the first read aloud.
+when:
+  - Your students copy AI answers and never question them.
+  - You need a ready activity on judging AI text for your subject.
+  - You want students to give reasons for what they trust, not just opinions.
+  - You want a teacher script to show how a close read sounds.
+you_give:
+  - Your subject and year level
+  - A topic or question for the AI to answer
+  - A sample AI answer (optional)
+  - Time available for the lesson (optional)
+you_get:
+  - A markup guide for students
+  - A weak, medium, strong scoring grid
+  - Sentence starters for pushing back
+  - A teacher modelling script
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

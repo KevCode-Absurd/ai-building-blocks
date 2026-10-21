@@ -6,6 +6,25 @@ summary: Point it at your API. Get rate limiting added with Upstash, using the r
 job: secure-code
 headline: API rate limit adder
 subhead: Point it at your API. Get rate limiting added with Upstash, using the right window type for each route.
+explain: |
+  Your API gets a request limit that works across every server instance, so one bad actor cannot flood your login or sign-up routes. You get the code in place and a clear reason for each choice.
+
+  The skill uses the Upstash rate limit library with Upstash Redis, so all instances share the same counters. You need an Upstash account and two keys set in your environment. It picks a window type for each route: sliding window for smooth limits, fixed window for simple ones, and token bucket where short bursts are fine. The limiter is built once, outside the handler, so blocked callers are turned away without a database call. Over-limit callers get a 429 reply.
+when:
+  - Your login or sign-up route is being hammered.
+  - An AI endpoint costs money per call and needs a cap per user.
+  - You run serverless functions and in-memory limits do not work.
+  - You are not sure which limit style fits each route.
+you_give:
+  - The routes to protect
+  - Who to count by, such as IP, user or key
+  - Allowed requests and time window
+  - Upstash keys in your environment
+you_get:
+  - Rate limiting wired into your routes
+  - A window type chosen per route
+  - 429 replies with reset info
+  - Optional usage analytics
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

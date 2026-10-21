@@ -6,6 +6,25 @@ summary: Describe your hiring steps. Get a map of what candidates go through, wh
 job: hire-people
 headline: Candidate experience improver
 subhead: Describe your hiring steps. Get a map of what candidates go through, where they struggle and messages for each stage.
+explain: |
+  You see exactly what candidates go through in your hiring process and where they give up. Describe your steps, and you get a map of the candidate path from first look to offer or rejection, with the friction points marked and a message for each stage.
+
+  The skill reviews the application form, screening, interviews, updates, offers and rejections. For each, it asks how long it takes, what the candidate feels and what they hear from you. It then suggests fixes such as shorter forms, clearer timelines, structured interviews that respect time, and kind rejection notes. It also gives a way to measure with short surveys and checks for bias and access problems.
+when:
+  - Strong candidates drop out halfway through your process.
+  - Candidates complain about silence after interviews.
+  - You are hiring many people for the same role and want a smoother flow.
+  - You want rejection messages that protect your reputation.
+you_give:
+  - Your hiring steps from application to offer
+  - Role types you hire for
+  - Drop-off numbers or candidate feedback (optional)
+  - Your company tone (optional)
+you_get:
+  - A map of the candidate path
+  - The top friction points
+  - Message drafts for each stage
+  - A short survey to measure experience
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your product plan. Get a memo that checks each legal area befor
 job: check-contracts
 headline: Launch legal reviewer
 subhead: Give it your product plan. Get a memo that checks each legal area before you ship. First check, not legal advice.
+explain: |
+  A review memo that checks your product plan against each legal area your team cares about, before you ship. Share the plan, a PRD, a Drive link or a ticket. The skill reads your team's own framework and risk settings, then goes through every category one by one and rates each finding against what really blocks a launch in your company.
+
+  Novel questions are flagged clearly. The memo follows your house format, and a summary can be posted to the ticket. It can pass marketing claims or deeper risk questions to related skills. It is a first check, not legal advice, and a qualified lawyer should review the result. It needs your setup file filled in.
+when:
+  - Product wants to know if a feature can ship next week.
+  - You received a PRD and need a legal issues list by category.
+  - You need to see which concerns are blockers and which are minor.
+  - You want a consistent memo format across launches.
+you_give:
+  - The product plan or PRD
+  - Your team's legal review framework
+  - Risk calibration settings
+  - A ticket ID (optional)
+you_get:
+  - A category by category review memo
+  - Each finding rated for risk
+  - Flags on new or unclear issues
+  - A summary for the ticket
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

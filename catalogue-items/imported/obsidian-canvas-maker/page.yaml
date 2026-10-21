@@ -6,6 +6,25 @@ summary: Describe a map or flow. Get an Obsidian canvas file with boxes, links a
 job: organise-work
 headline: Obsidian canvas maker
 subhead: Describe a map or flow. Get an Obsidian canvas file with boxes, links and groups ready to open.
+explain: |
+  Describe a mind map, flowchart or project board and get a real Obsidian canvas file you can open straight away. The boxes, arrows and groups are already placed, so you only adjust the layout.
+
+  A canvas file is plain JSON with a list of nodes and a list of edges. The skill gives every node a unique 16-character ID, sets its position and size, and picks a type such as text, note, link or group. It then draws edges between valid IDs, with labels if you want them. Before it hands the file over, it checks that the JSON parses and every edge points to a real node.
+when:
+  - You want to map a project plan as boxes and arrows inside your vault.
+  - You have a topic outline and want it as a mind map in Obsidian.
+  - An existing canvas needs three new nodes connected to what is there.
+  - You want notes grouped by theme in labelled colour zones.
+you_give:
+  - A description of what the canvas should show
+  - The notes or text to put in the boxes
+  - How things connect
+  - An existing .canvas file to extend (optional)
+you_get:
+  - A valid .canvas file
+  - Nodes with positions and sizes
+  - Edges and labels
+  - Groups to cluster related items
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

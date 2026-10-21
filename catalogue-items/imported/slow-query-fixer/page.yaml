@@ -6,6 +6,25 @@ summary: Give it a slow SQL query. Get the cause found and a faster version with
 job: test-and-fix-code
 headline: Slow query fixer
 subhead: Give it a slow SQL query. Get the cause found and a faster version with indexes where needed.
+explain: |
+  A slow SQL query turned into a fast one, with the reason it was slow explained. You paste the query, or a slow log line, and the skill reads the database's execution plan to find the cause.
+
+  It looks for full table scans, joins that repeat too much work, sorts that spill and filters that cannot use an index. Then it applies fixes: new indexes for the columns in your WHERE, JOIN and ORDER BY, subqueries rewritten as joins, SELECT * narrowed to the columns you need, and limits added where they make sense. It also tunes common ORM habits that generate bad SQL. It runs the plan again to confirm the gain. Works with PostgreSQL and MySQL.
+when:
+  - A report query takes minutes and used to take seconds.
+  - Your database CPU spikes on one page load.
+  - Your ORM builds a query you cannot read.
+  - You have an EXPLAIN plan and cannot tell what is wrong.
+you_give:
+  - The slow query
+  - The execution plan (optional)
+  - Table sizes and how often it runs
+  - Your database type, like PostgreSQL or MySQL
+you_get:
+  - The cause of the slowdown
+  - A rewritten query
+  - Index statements to add
+  - A before and after plan comparison
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

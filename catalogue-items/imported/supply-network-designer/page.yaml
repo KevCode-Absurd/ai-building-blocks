@@ -6,6 +6,26 @@ summary: Give it your sites, customers and costs. Get a short list of warehouse 
 job: plan-supply-chain
 headline: Supply network designer
 subhead: Give it your sites, customers and costs. Get a short list of warehouse layouts with cost and delivery time compared.
+explain: |
+  A short list of warehouse and distribution layouts, with cost and delivery time side by side. You can see what adding, closing or moving a site would do before you spend anything.
+
+  Give it your sites, customers, demand and costs. The skill frames the strategic choice, then builds an optimisation model in Python with PuLP to choose where facilities go and which serves whom. It adds up fixed, transport and inventory costs, including the stock savings from consolidating sites, and measures service levels. It follows a process: clean the data, set the strategy, model scenarios and compare trade-offs. It needs Python.
+when:
+  - You are deciding whether to open a second warehouse.
+  - You want to know the effect of closing a distribution centre.
+  - Delivery times are slow in one region.
+  - You need options to take to leadership.
+you_give:
+  - Current and candidate site locations
+  - Customer locations and demand
+  - Facility, transport and inventory costs
+  - Service targets such as delivery days
+you_get:
+  - Several network options
+  - Total cost for each
+  - Delivery time or service level for each
+  - Trade-off comparison
+  - The model code
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

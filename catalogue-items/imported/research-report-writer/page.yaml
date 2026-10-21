@@ -6,6 +6,25 @@ summary: Give it a question. Get a conclusion-first report with sources ranked a
 job: think-and-decide
 headline: Research report writer
 subhead: Give it a question. Get a conclusion-first report with sources ranked and cross-checked.
+explain: |
+  A research report that opens with the conclusion, ranks every source by trust, and states what remains unknown. Readers can see how you got there and how sure you are.
+
+  First you write the question in one sentence, with at most three sub-questions. Then sources are tiered before searching: primary ones such as official documents and original papers, secondary ones such as reputable press, and tertiary ones such as forums, which count as leads only. Key claims are cross-checked against more than one source. The report puts the answer first, then the evidence, then the gaps and uncertainty. It suits topic studies and competitor analysis.
+when:
+  - You need a report for a decision and must defend the sources.
+  - You are comparing competitors and want facts, not marketing.
+  - Search results disagree and you need to sort them out.
+  - You want a report that admits what it does not know.
+you_give:
+  - The question to answer
+  - Sub-questions (optional)
+  - Sources you already have (optional)
+  - Audience and decision (optional)
+you_get:
+  - One-sentence question and scope
+  - Sources ranked by tier
+  - Conclusion-first report
+  - List of unknowns and uncertainty
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

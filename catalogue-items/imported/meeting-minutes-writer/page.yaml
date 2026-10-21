@@ -6,6 +6,24 @@ summary: Paste rough meeting notes. Get short minutes with decisions, action ite
 job: organise-work
 headline: Meeting minutes writer
 subhead: Paste rough meeting notes. Get short minutes with decisions, action items with owners and dates, and open questions.
+explain: |
+  Short minutes that let someone who missed the call catch up in three minutes, and let attendees see what they owe. Paste your rough notes and get the point of the meeting first, then the detail.
+
+  The notes are sorted into three groups. Decisions are written as "Decided to do X", never "Discussed X". Action items need an owner and a date, and when the notes lack one, the gap is marked [unassigned] or [TBD] rather than guessed. Open questions say what blocks them and who moves next. A final check confirms every item is complete, and the minutes stay under a third of the length of the notes.
+when:
+  - You have a page of messy notes from a team call and need to send a summary.
+  - Your action items keep going out without owners or dates.
+  - You need to show a boss what was decided, not the full discussion.
+  - You want a clear record of what is still open after a meeting.
+you_give:
+  - Raw meeting notes or a transcript
+  - Attendee names (optional)
+  - Known deadlines (optional)
+you_get:
+  - A three-line bottom line
+  - A list of decisions
+  - Action items with owner and date
+  - Open questions with a next step
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

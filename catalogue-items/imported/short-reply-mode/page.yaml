@@ -6,6 +6,24 @@ summary: Switch it on. Get much shorter AI replies that drop filler but keep the
 job: set-up-ai
 headline: Short reply mode
 subhead: Switch it on. Get much shorter AI replies that drop filler but keep the facts, to save tokens.
+explain: |
+  Much shorter AI replies that drop filler and keep every fact, so you read less and spend fewer tokens. Savings can reach about three quarters of the words.
+
+  Once switched on, the AI writes in clipped fragments. It drops articles, pleasantries, hedging and words like "basically". It uses short words, common abbreviations and arrows to show cause and effect. Technical terms, code blocks and error messages stay exact. The mode stays on for every reply, even when you forget, until you say "stop caveman" or "normal mode". Expect a blunt style, since it is built on a joke persona.
+when:
+  - Your chat replies are long and you only need the answer.
+  - You are paying per token and want to cut costs.
+  - You are debugging and want findings with no preamble.
+  - You are running out of room in a long conversation.
+you_give:
+  - A phrase to turn it on, such as "caveman mode"
+  - Your normal questions
+  - How long you want the mode to last (optional)
+you_get:
+  - Short, blunt replies with the facts intact
+  - Exact code and error text
+  - Lower token use
+  - A way to switch it off
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

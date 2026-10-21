@@ -6,6 +6,26 @@ summary: Describe your service. Get metrics, logs, traces, alerts and service ta
 job: ship-and-host
 headline: Monitoring planner
 subhead: Describe your service. Get metrics, logs, traces, alerts and service targets that tell you when it hurts.
+explain: |
+  A monitoring setup for your service that tells you when users are hurting, without waking you for noise. You get the dashboards, the alert rules and the targets that define good service.
+
+  The skill covers the three signals: metrics, logs and traces. It produces a Grafana dashboard for your service type and criticality, reviews your existing alerts for noise, duplicates and gaps, and sketches service level targets. Python scripts do the work and run from the command line. After deployment, track the share of alerts that led to action for one on-call rotation and tune again if it did not improve.
+when:
+  - On-call gets alerts at 3am that need no action.
+  - A new service goes live and has no dashboard.
+  - You suspect your alert rules overlap or miss real failures.
+  - You need a first draft of targets for uptime and speed.
+you_give:
+  - Service name and type, such as API or queue
+  - How critical it is
+  - Your current alert config (optional)
+  - Who is on call and the tools you use
+you_get:
+  - A dashboard file with notes
+  - An alert noise report
+  - A cleaned alert config
+  - A first draft of service targets
+  - A tuning check for the next rotation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

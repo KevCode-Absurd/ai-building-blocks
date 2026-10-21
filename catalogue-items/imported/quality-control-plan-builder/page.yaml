@@ -6,6 +6,24 @@ summary: Give it your defect data. Get control charts, the biggest causes ranked
 job: plan-supply-chain
 headline: Quality control plan builder
 subhead: Give it your defect data. Get control charts, the biggest causes ranked, and a plan to cut defects.
+explain: |
+  A quality plan built from your own defect data. You see control charts that show whether your process is stable, a ranked list of the biggest causes of defects, and a step-by-step plan to cut them.
+
+  It starts by asking what is going wrong, how bad the rates are, what a defect costs you, and how you inspect today. Then it applies standard quality methods: control charts, process capability, Pareto ranking and root cause tools. It tells you where you sit on the path from inspecting finished goods to preventing defects at the source. The plan sets targets and owners, so improvement does not stop at the report.
+when:
+  - Returns or complaints are rising and you do not know the main cause.
+  - You have defect counts and want to see if the process is in control.
+  - You need to prepare for a customer audit or ISO review.
+  - You want to move from sorting bad parts to stopping them early.
+you_give:
+  - Defect or inspection data
+  - Description of your process
+  - Target defect level (optional)
+  - Current quality system or certification (optional)
+you_get:
+  - Control charts and stability read
+  - Ranked list of main defect causes
+  - Improvement plan with owners and targets
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it a recording or video. Get a written transcript with who spoke, 
 job: work-with-audio
 headline: Subtitle and transcript maker
 subhead: Give it a recording or video. Get a written transcript with who spoke, word timing and subtitles.
+explain: |
+  Turn a recording into a written transcript with who said what, the time of each word, and subtitles ready to use. It handles meetings, interviews and videos.
+
+  The skill sends audio or video to ElevenLabs speech to text, which needs an account and an API key, with Python or JavaScript code. You can switch on speaker labels, word-level timestamps, language detection and key term hints for names and jargon. It handles files with separate audio channels, lists the formats it accepts, and explains how to read the response and handle errors. It also covers live transcription and how to watch your costs.
+when:
+  - You recorded a meeting and need minutes with names attached.
+  - You need subtitles for a video.
+  - A podcast episode needs a searchable transcript.
+  - Product names keep getting misspelled in your transcripts.
+you_give:
+  - An audio or video file
+  - An ElevenLabs API key
+  - Names and jargon to watch for (optional)
+  - The language, if known (optional)
+you_get:
+  - A full text transcript
+  - Speaker labels
+  - Word-level timestamps
+  - Subtitle output
+  - A cost estimate
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Name a topic or paper. Get a literature scan, a deep read or a reading 
 job: think-and-decide
 headline: Paper research assistant
 subhead: Name a topic or paper. Get a literature scan, a deep read or a reading list from Semantic Scholar and arXiv.
+explain: |
+  A literature scan, a close read of one paper, an impact check or a reading list, pulled from free academic sources. You name a topic or paper and get organised results.
+
+  It runs a bundled Python tool that searches Semantic Scholar and arXiv, downloads arXiv PDFs and extracts their text. From that it builds the piece you asked for: who cites a paper, which work shaped it, what the method and results are, and which papers to read in what order. It needs Python and an internet connection, and it uses free services rather than paid ones.
+when:
+  - You are new to a field and need a starting reading list.
+  - You want a plain summary of what one paper does and finds.
+  - You need to know how much influence a paper has had.
+  - You are checking what has already been published on your idea.
+you_give:
+  - Topic, paper title or arXiv link
+  - Python on your computer
+  - Scan depth or number of papers (optional)
+you_get:
+  - Literature scan of a topic
+  - Deep read of a single paper
+  - Citation and impact summary
+  - Ordered reading list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

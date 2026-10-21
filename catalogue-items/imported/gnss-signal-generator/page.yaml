@@ -6,6 +6,25 @@ summary: Pick a GPS or Galileo signal. Get a baseband waveform with realistic ch
 job: build-software
 headline: GNSS signal generator
 subhead: Pick a GPS or Galileo signal. Get a baseband waveform with realistic channel effects.
+explain: |
+  A test signal for a satellite navigation receiver, made on demand. Choose GPS, Galileo or NavIC and you get a baseband waveform for several satellites. It carries real navigation data, so a receiver can decode it and work out a position.
+
+  The channel effects, Doppler shift, delay and noise, can come from a realistic satellite scenario or from values you type in. That lets you test one condition at a time. It stops at the waveform, so it does not cover acquisition, tracking, decoding, BeiDou, GLONASS or sending the signal through radio hardware. It needs MATLAB, release R2026a or newer, with the matching toolboxes.
+when:
+  - You are testing a receiver and need a controlled input signal.
+  - You want to see how Doppler and delay change decoding.
+  - You need a signal with a specific noise level.
+  - You are building a full receiver simulation.
+you_give:
+  - The satellite system to simulate
+  - Which satellites to include
+  - Scenario or custom Doppler, delay and noise
+  - MATLAB R2026a or newer
+you_get:
+  - A multi-satellite baseband waveform
+  - Navigation data a receiver can decode
+  - Channel effects applied
+  - MATLAB code to run again
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

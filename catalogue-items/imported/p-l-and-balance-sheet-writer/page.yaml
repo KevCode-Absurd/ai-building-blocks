@@ -6,6 +6,25 @@ summary: Give it your books. Get an income statement, balance sheet or cash flow
 job: track-numbers
 headline: P&L and balance sheet writer
 subhead: Give it your books. Get an income statement, balance sheet or cash flow with big swings flagged. Review with an accountant.
+explain: |
+  Your income statement, balance sheet or cash flow built from your books, with the prior period beside it and the big swings explained. It is ready for review by your accountant.
+
+  You pick monthly, quarterly, annual or year to date and the period. The skill pulls data from a connected accounting system, or you paste a trial balance or upload a spreadsheet. It groups accounts, lines up this period against last period and last year, and flags changes that are large in dollars or percent so you can ask why. Reference notes cover presentation under US accounting rules and common period-end adjustments. It does not give financial advice, and a qualified professional should review before filing.
+when:
+  - Month-end is here and you need a P&L with comparisons.
+  - You must explain why costs jumped from last quarter.
+  - You have a trial balance and need formatted statements.
+  - You want a first draft before your accountant reviews it.
+you_give:
+  - Period type and date
+  - Trial balance or accounting data
+  - Comparison period or budget (optional)
+  - Account groupings (optional)
+you_get:
+  - Income statement, balance sheet or cash flow
+  - Period-over-period comparison
+  - Flagged large variances
+  - Notes on adjustments to check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

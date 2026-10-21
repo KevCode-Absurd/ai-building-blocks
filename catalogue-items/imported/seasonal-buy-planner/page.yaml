@@ -6,6 +6,26 @@ summary: Give it last season sales. Get how much to buy early, how much to hold 
 job: plan-supply-chain
 headline: Seasonal buy planner
 subhead: Give it last season sales. Get how much to buy early, how much to hold back, and when to mark down.
+explain: |
+  A season buy plan that says how much to order up front, how much to keep in reserve, and when to mark items down. It balances two costs: running out of winners and being stuck with leftovers.
+
+  It starts by asking about your category, season length, sales and margin targets, open-to-buy budget, carry-over versus new styles and supplier lead times. Then it plans around four phases: pre-season, early, peak and late. Early sell-through tells you which styles to reorder or cut. The skill includes Python code that tests buy quantities against demand uncertainty, and plans timed markdowns to clear stock before the season ends.
+when:
+  - You are placing orders for next season and need a quantity for each style.
+  - Last season ended with too much stock and heavy markdowns.
+  - You want to know how much to hold back for reorders after launch.
+  - You need a markdown calendar for the end of the season.
+you_give:
+  - Last season's weekly sales by style
+  - Sell-through and markdown history
+  - Sales and margin targets
+  - Budget and supplier lead times
+  - Season dates
+you_get:
+  - Initial and reserve buy quantities
+  - A phase plan for the season
+  - Reorder and cut triggers
+  - A markdown timing plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

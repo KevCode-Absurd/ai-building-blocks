@@ -6,6 +6,25 @@ summary: Describe your API or paste cURL commands. Get a Postman collection file
 job: build-software
 headline: Postman collection maker
 subhead: Describe your API or paste cURL commands. Get a Postman collection file that imports and runs straight away.
+explain: |
+  A Postman collection file that imports in one click, built from a plain description of your API or from cURL commands you paste in.
+
+  The skill pulls out each endpoint's name, method, URL, headers, authentication, body and query parameters. It puts the host in a base_url variable so you can switch between environments. It then writes a valid Collection v2.1 JSON file with folders for related requests. When something is unclear, it follows common REST habits and lists its guesses at the end so you can correct them. You can mix described endpoints and cURL in one request.
+when:
+  - You have a dozen cURL commands and want them organised.
+  - A new teammate needs a way to try your API.
+  - You are documenting an API for testers.
+  - You want to switch between dev and live hosts quickly.
+you_give:
+  - API description or cURL commands
+  - Base URL
+  - Authentication type
+  - Sample request bodies (optional)
+you_get:
+  - Postman Collection JSON file
+  - Requests grouped in folders
+  - Variables for host and tokens
+  - List of assumptions made
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

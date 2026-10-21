@@ -6,6 +6,25 @@ summary: Paste error logs, notes or a screenshot. Get a clear GitHub issue with 
 job: build-software
 headline: Bug report writer
 subhead: Paste error logs, notes or a screenshot. Get a clear GitHub issue with steps to repeat, impact and proof.
+explain: |
+  A messy error log, a voice note or a screenshot becomes a clean GitHub issue someone can act on in minutes.
+
+  The skill fills a fixed layout: a one-line summary, environment, numbered steps to repeat, expected result, actual result, error text, visual evidence, impact and extra context. It pulls facts out of casual speech and labels anything missing or guessed rather than inventing it. Sensitive values become placeholders such as a project name tag. Severity runs from critical to low, based on impact. It saves the draft as a dated markdown file and does not post the issue publicly unless you say so.
+when:
+  - You have a raw error log and need a proper issue from it.
+  - A teammate sent a rambling voice note about a bug.
+  - You have a screenshot of the problem and no write-up.
+  - Your bug reports keep coming back with questions.
+you_give:
+  - Error logs, notes or a voice transcript
+  - Screenshots or short recordings (optional)
+  - The product or version (optional)
+you_get:
+  - A structured issue draft
+  - Steps to repeat
+  - A severity rating with reason
+  - Placeholders for sensitive data
+  - A dated markdown file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

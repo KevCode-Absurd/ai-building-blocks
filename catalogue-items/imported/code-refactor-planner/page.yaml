@@ -6,6 +6,24 @@ summary: Give it messy code. Get named refactoring moves to apply in small safe 
 job: test-and-fix-code
 headline: Code refactor planner
 subhead: Give it messy code. Get named refactoring moves to apply in small safe steps, without changing what it does.
+explain: |
+  Messy code turns into a list of named moves you can apply one at a time, with tests passing after each. Nothing about what the code does should change.
+
+  The rule is that refactoring is not rewriting. Each move is one small structural change: verify tests pass, change one thing, verify again. The skill looks for known code smells, then picks the matching move from a catalog, such as extracting a function, replacing a conditional with polymorphism or removing duplication. Quality is scored out of ten from eight quick checks, so you can see progress. Big all-at-once rewrites are avoided because you cannot tell what broke.
+when:
+  - A class does five jobs and is hard to test.
+  - You need to improve code without risking new bugs.
+  - A review said the code smells but gave no steps.
+  - You want a clear before-and-after quality score.
+you_give:
+  - The code to improve
+  - Your test command (optional)
+  - Parts that must not change (optional)
+you_get:
+  - Code smells with locations
+  - A named move for each smell
+  - A step-by-step order
+  - A quality score out of ten
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

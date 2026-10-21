@@ -6,6 +6,25 @@ summary: Paste a post that did badly. Get why it failed, whether unseen, skipped
 job: grow-social
 headline: Flop post diagnoser
 subhead: Paste a post that did badly. Get why it failed, whether unseen, skipped or ignored, and what to change.
+explain: |
+  A clear answer on why one X or LinkedIn post did badly, and what to change next time. It separates the three ways a post fails, because each needs a different fix.
+
+  You paste the post with its impressions, likes, comments and reposts. If a post was barely shown, rewriting the hook will not help, so it checks timing, gaps since your last post, links and falling reach. If it was seen but not clicked, it reviews the first line. If people read it but did not react, it looks at the point and the ask. Without impressions it tells you it cannot diagnose and offers only a read-through of the writing.
+when:
+  - A post you were proud of got almost no reaction.
+  - You do not know if people never saw it or just ignored it.
+  - You are about to rewrite a post and want to know what to fix.
+  - You want one specific post reviewed, not your whole account.
+you_give:
+  - Post text
+  - Impressions, likes, comments and reposts
+  - Platform (X or LinkedIn)
+  - What you normally get on a post (optional)
+you_get:
+  - "Verdict: not seen, skipped or ignored"
+  - Evidence from your numbers
+  - Specific changes to try
+  - Honest note when numbers are missing
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: "Describe your company. Get a way of running it: scorecard, accountabil
 job: organise-work
 headline: Company operating system setter
 subhead: "Describe your company. Get a way of running it: scorecard, accountability chart, meetings and 90-day goals."
+explain: |
+  A written way of running your company: who owns what, which numbers you watch each week, how meetings run, and what the team commits to this quarter. Most repeated problems come from missing structure, not from people, so this fixes the structure.
+
+  Claude builds six parts. An accountability chart gives each function one owner, with gaps and overlaps listed. A weekly scorecard keeps to 5 to 15 metrics. Quarterly goals, called rocks, become real commitments. A weekly meeting has a set order, and an issues list gets solved, not just discussed. It draws on well known systems like EOS, OKRs and Scaling Up and helps you pick the one that fits your size.
+when:
+  - The same issues come up in every meeting and never get solved.
+  - Nobody is sure who owns a given outcome.
+  - Quarterly goals keep slipping and no one is held to them.
+  - You are growing past ten people and the informal way has stopped working.
+you_give:
+  - A description of your company and team size
+  - Your current meetings and goals
+  - The main problems you see
+  - A framework you already like (optional)
+you_get:
+  - An accountability chart
+  - A weekly scorecard
+  - A meeting agenda
+  - Quarterly goals with owners
+  - A plan for the first 90 days
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

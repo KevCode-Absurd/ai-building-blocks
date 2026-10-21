@@ -6,6 +6,25 @@ summary: Give it code with no tests. Get safe steps to add tests and change it w
 job: test-and-fix-code
 headline: Untested code change guide
 subhead: Give it code with no tests. Get safe steps to add tests and change it without breaking anything.
+explain: |
+  A safe way to change code that has no tests, one step at a time. You get tests around the part you will touch before you edit it, so you know right away if you broke something.
+
+  The method comes from Michael Feathers' book on legacy code. It starts by naming where the change goes and where its effects show up. Then it breaks the dependencies that block testing using small, low-risk moves, and writes tests that record what the code does today. Only then do you change behaviour or refactor, in separate steps. It rates your approach out of ten and lists what to do to improve it. It is for anyone who inherited code without tests.
+when:
+  - You must change a file that has no tests and fear breaking it.
+  - You cannot test a class because it calls a database or the network.
+  - You want a plan to add tests only where you change code.
+  - A teammate suggests a rewrite and you want a safer path.
+you_give:
+  - The code you need to change
+  - What change you want to make
+  - Your language and test tools (optional)
+  - Known trouble spots (optional)
+you_get:
+  - The change points and test points
+  - Steps to break blocking dependencies
+  - Tests that record current behaviour
+  - A safe order for the real change
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

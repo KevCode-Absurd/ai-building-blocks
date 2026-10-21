@@ -6,6 +6,25 @@ summary: Say what the bot should do. Get a Slack app with commands, events and r
 job: build-software
 headline: Slack bot builder
 subhead: Say what the bot should do. Get a Slack app with commands, events and rich messages.
+explain: |
+  A working Slack app that responds to commands, events and button clicks, built on Slack's Bolt framework in Python, JavaScript or Java. You say what the bot should do, and the skill sets up the pieces to do it.
+
+  It covers slash commands, event listeners, Block Kit layouts for rich messages, interactive buttons and menus, the sign-in flow that lets other workspaces install your app, and links into Slack's Workflow Builder. The skill reads a detailed guide first and treats its safety and setup rules as required. You need a Slack workspace where you can create apps, plus your own tokens, which you should keep out of shared code.
+when:
+  - You want a bot that answers a slash command like /standup.
+  - Your team needs a message with buttons that trigger an action.
+  - You want an app other workspaces can install through a sign-in flow.
+  - You need to react to events, such as a new channel being created.
+you_give:
+  - What the bot should do
+  - "Your language: Python, JavaScript or Java"
+  - A Slack workspace where you can create apps
+  - Your Slack app tokens (kept private)
+you_get:
+  - A Bolt app with commands and event handlers
+  - Block Kit message layouts
+  - Interactive button and menu handling
+  - Setup notes for installation and sign-in
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

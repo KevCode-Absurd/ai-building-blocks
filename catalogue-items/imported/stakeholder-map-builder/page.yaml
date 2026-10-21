@@ -6,6 +6,25 @@ summary: List the people affected by your project. Get a power and interest grid
 job: organise-work
 headline: Stakeholder map builder
 subhead: List the people affected by your project. Get a power and interest grid with how to talk to each group.
+explain: |
+  A grid of who matters to your project and exactly how to talk to each group. List the people and groups affected, or share an org chart or brief and let the skill infer them. It rates each one on power and interest, then places them on a four-box grid.
+
+  High power and high interest means manage closely. High power and low interest means keep satisfied. Low power and high interest means keep informed. The rest are monitored. For each box it sets how often to talk, which channel to use, the key message, and what goes wrong if you ignore them. The output is a communication plan table.
+when:
+  - You are starting a project with many people who care about it.
+  - You are launching something and need leaders on side.
+  - Teams across the company must line up behind a plan.
+  - You are unsure who needs updates and how often.
+you_give:
+  - The project or initiative
+  - A list of people and groups, or an org chart (optional)
+  - Project briefs or rosters (optional)
+you_get:
+  - A power and interest grid
+  - A strategy for each group
+  - Update frequency and channel for each
+  - Key messages
+  - Risks of ignoring each group
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

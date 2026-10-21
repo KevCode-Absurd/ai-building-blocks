@@ -6,6 +6,25 @@ summary: Point it at a spec in Notion. Get an implementation plan and tracked ta
 job: organise-work
 headline: Spec to task planner
 subhead: Point it at a spec in Notion. Get an implementation plan and tracked tasks.
+explain: |
+  An implementation plan and a set of linked tasks, built straight from a spec that lives in Notion. The skill finds your spec, reads it, and notes gaps and assumptions before anything is planned.
+
+  It then picks the plan depth. A small change gets a quick plan. A multi-phase feature or migration gets a fuller one with phases, risks and success criteria. It finds your task database, checks its fields, and creates the tasks. Spec, plan and tasks are linked to each other, and statuses are kept current as work moves. You need the Notion connection set up.
+when:
+  - Your spec is in Notion and you need a plan from it.
+  - You want tasks created in your Notion task board without typing them.
+  - A spec has unclear points you want listed before work starts.
+  - You want spec, plan and tasks to stay linked as work progresses.
+you_give:
+  - The name or link of the Notion spec
+  - Access to your Notion workspace
+  - Your task database (optional)
+you_get:
+  - A list of gaps and assumptions in the spec
+  - A plan page, quick or full
+  - Tasks created in your database
+  - Links between spec, plan and tasks
+  - Status updates as work moves
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

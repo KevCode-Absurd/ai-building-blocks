@@ -6,6 +6,25 @@ summary: Give it claims history. Get loss reserves, IBNR estimates and loss and 
 job: money-and-investing
 headline: Insurance claims reserve calculator
 subhead: Give it claims history. Get loss reserves, IBNR estimates and loss and combined ratios.
+explain: |
+  How much should an insurer set aside for claims that have happened but are not yet fully paid? You give it claims history, and you get reserve estimates, the incurred but not reported amount (IBNR) and the loss and combined ratios.
+
+  It starts by asking whether the line is short-tail, like car or home, or long-tail, like liability. You supply a loss triangle, which shows losses by accident year and how they grow over time. The skill works out age-to-age growth factors, picks fair ones, and runs the chain ladder method to project each year to its final cost. For young years it can blend in the Bornhuetter-Ferguson method. IBNR is the projected final loss minus what is already incurred.
+when:
+  - You need year-end reserves for a line of business.
+  - You want to know how much IBNR to book.
+  - Your loss triangle is ready but the growth factors are not.
+  - You must check whether losses plus expenses are above premium.
+you_give:
+  - A loss triangle by accident year
+  - Line of business
+  - Premium and expense figures
+  - Expected loss ratio (optional)
+you_get:
+  - Age-to-age factors
+  - Ultimate loss by year
+  - An IBNR estimate
+  - Loss and combined ratios
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

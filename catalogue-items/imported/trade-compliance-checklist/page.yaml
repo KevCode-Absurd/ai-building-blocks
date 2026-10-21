@@ -6,6 +6,26 @@ summary: Give it what you make, import and export. Get a checklist of the rules 
 job: check-contracts
 headline: Trade compliance checklist builder
 subhead: Give it what you make, import and export. Get a checklist of the rules that apply and who owns each.
+explain: |
+  A checklist of the import, export and product rules that apply to you, each with an owner and a due check. You can hand it to your team and see at a glance what is covered and what is not.
+
+  The skill first asks what you make, where you sell, how many suppliers and countries you use, and how you classify products. Then it sorts rules into groups such as customs and HS codes, country of origin, trade agreements, sanctions, export controls, product safety and supplier standards. It rates your risk, points out gaps in your current process, and sets how often each item needs a review. It does not replace advice from a licensed customs or trade lawyer.
+when:
+  - You are starting to import or export and need to know what rules apply.
+  - An audit or customer asks for proof of trade compliance.
+  - You have new suppliers in several countries and no clear process.
+  - Nobody on your team owns the compliance tasks.
+you_give:
+  - What you make or sell
+  - Countries you import from and export to
+  - Your suppliers and product types
+  - Your current compliance steps (optional)
+  - Past issues or fines (optional)
+you_get:
+  - A checklist of rules that apply to you
+  - An owner and review rhythm for each item
+  - A list of gaps and risks
+  - Suggested next steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

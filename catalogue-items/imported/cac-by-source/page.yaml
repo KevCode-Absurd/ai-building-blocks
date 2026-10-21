@@ -6,6 +6,25 @@ summary: Add your ad spend. Get the cost to win a customer from each traffic sou
 job: run-your-store
 headline: Acquisition cost by source calculator
 subhead: Add your ad spend. Get the cost to win a customer from each traffic source.
+explain: |
+  For every traffic source, you see what it costs to win one new customer. Add your ad spend per source, such as Google, Meta or TikTok, and the skill matches it to new-customer orders from your Shopify store over the window you choose.
+
+  It reads orders and customers only, so nothing in your store changes. It counts first-time buyers by landing page or referrer, drops any source with too few orders to trust, and divides your spend by customers won. Spend figures come from you, since the skill does not pull from ad platforms. You need a Shopify CLI login with order and customer read access, and spend numbers by source.
+when:
+  - You spend on three ad channels and cannot tell which one wins customers cheapest.
+  - You are deciding where to move next month's ad budget.
+  - Your ad dashboards disagree and you want a count from actual store orders.
+  - You want to see cost per new customer rather than cost per click.
+you_give:
+  - Your Shopify store domain and a logged-in CLI
+  - Ad spend per source for the period
+  - How many days back to look (optional)
+  - Minimum orders a source needs to be reported (optional)
+you_get:
+  - Cost per new customer for each source
+  - New-customer counts by source
+  - Sources with too few orders left out
+  - A readable table or JSON output
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

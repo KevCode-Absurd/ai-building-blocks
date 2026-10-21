@@ -6,6 +6,26 @@ summary: Describe your web app or marketplace. Get a Terms of Service draft to r
 job: check-contracts
 headline: Terms of service drafter
 subhead: Describe your web app or marketplace. Get a Terms of Service draft to review with a lawyer.
+explain: |
+  A full Terms of Service draft for your web app, SaaS or marketplace, written around how your business really works. It gives you something specific to take to a lawyer, in place of a generic template.
+
+  You describe the platform, revenue model, users and any risks such as user content or payments. The skill sets out what users may and may not do, then drafts the liability limits and warranty disclaimers. It adds dispute rules, including governing law and arbitration where it holds up. Finally it reviews the draft for terms courts often strike down and for terms that must be shown clearly. Not legal advice, so have a lawyer check it.
+when:
+  - You are launching a product and have no terms yet.
+  - Your copied terms mention things your business does not do.
+  - You run a marketplace and need rules for buyers and sellers.
+  - You take subscriptions and need clear renewal wording.
+  - You allow user uploads and need a content policy.
+you_give:
+  - What your product does
+  - How you earn money
+  - Where your company and users are
+  - Any special risks (optional)
+you_get:
+  - A Terms of Service draft
+  - Acceptable use and liability sections
+  - Dispute and cancellation wording
+  - Notes on clauses that may not hold up
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

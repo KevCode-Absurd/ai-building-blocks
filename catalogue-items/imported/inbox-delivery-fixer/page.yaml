@@ -6,6 +6,27 @@ summary: Name your sending domain. Get SPF, DKIM and DMARC set up and a plan to 
 job: write-emails
 headline: Inbox delivery fixer
 subhead: Name your sending domain. Get SPF, DKIM and DMARC set up and a plan to stop emails landing in spam.
+explain: |
+  A setup and repair plan so your emails reach the inbox, not the spam folder. You get the exact records to add for SPF, DKIM and DMARC, plus a way to watch your sender reputation.
+
+  The skill works from three pillars. First is authentication, the three DNS records that prove mail really comes from you. Then comes reputation, which builds on clean lists and steady sending. Last is content and monitoring. It asks for your domain, your email provider, your current records and your volume. It then checks what is missing, sets a safe order to switch DMARC from watching to blocking, and gives a pre-launch check before you send more.
+when:
+  - You set up email on a new domain and want it trusted from day one.
+  - Customers say your emails never arrive.
+  - You want to stop people faking your domain in scam emails.
+  - You are switching email providers and want no gap in delivery.
+  - Your spam complaints or bounces have started to climb.
+you_give:
+  - Your sending domain or domains
+  - Your email provider
+  - Your current DNS records (optional)
+  - Daily volume, split between marketing and transactional
+  - Bounce and complaint rates, if known (optional)
+you_get:
+  - The SPF, DKIM and DMARC records to add
+  - A staged DMARC rollout plan
+  - A reputation monitoring routine
+  - A list of likely causes of spam placement
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

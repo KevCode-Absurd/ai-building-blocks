@@ -6,6 +6,24 @@ summary: Give it code that fails on workers. Get paths, variables and shared obj
 job: build-software
 headline: Parallel worker setup helper
 subhead: Give it code that fails on workers. Get paths, variables and shared objects set up on each worker.
+explain: |
+  Parallel MATLAB code that stops failing on workers because each worker has the paths, variables and objects it needs. It fixes errors like undefined function, cannot serialize or slow data transfer.
+
+  Workers share your path but do not inherit loaded libraries, open database connections or heavy objects. The skill shows which tool fits each case. Use parallel.pool.Constant for items that cannot be copied, parfevalOnAll to run setup once on every worker, and pool options for settings set at start. It also replaces the setup-with-spmd habit that wastes time. You need MATLAB with Parallel Computing Toolbox.
+when:
+  - A parfor loop works in a normal for loop but errors on workers.
+  - Each worker needs its own database connection.
+  - Large data is copied again on every loop pass and it is slow.
+  - You use spmd only to set things up before a loop.
+you_give:
+  - Your MATLAB code
+  - The error message (optional)
+  - What each worker needs, such as a library or data file
+you_get:
+  - The cause of the worker failure
+  - Setup code using the right parallel tool
+  - Reduced data transfer
+  - Cleaned-up replacement for spmd setup
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

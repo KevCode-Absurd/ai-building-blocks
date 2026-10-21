@@ -6,6 +6,25 @@ summary: Give it MATLAB code bound for the GPU. Get faster generated CUDA code, 
 job: test-and-fix-code
 headline: GPU code speed tuner
 subhead: Give it MATLAB code bound for the GPU. Get faster generated CUDA code, measured after each change.
+explain: |
+  Your MATLAB function, rewritten to run faster as generated CUDA code, with proof it still gives the same answers. It works in loops: compile, time it, change one structure, profile, and check the output against the original.
+
+  It uses the GPU Performance Analyzer to find slow kernels, memory waste and poor parallelism. Then it fixes the diagnostics it reports. Each change is checked for numerical equivalence before the next. It tunes only the main design file, not helper functions, and it does not handle Simulink or standalone executables. It needs MATLAB with GPU Coder, an NVIDIA GPU, and representative test inputs.
+when:
+  - Your generated GPU code runs slower than expected.
+  - You want to cut GPU memory use in a MATLAB function.
+  - The Performance Analyzer shows warnings you cannot read.
+  - You need to confirm a speed-up did not change results.
+you_give:
+  - Your MATLAB design file
+  - Representative test inputs
+  - An NVIDIA GPU with GPU Coder
+  - A speed target (optional)
+you_get:
+  - Faster generated CUDA or MEX code
+  - Timing before and after each change
+  - Profiler findings explained
+  - Proof that results still match
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

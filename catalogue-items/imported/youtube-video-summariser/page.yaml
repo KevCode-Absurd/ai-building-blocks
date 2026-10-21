@@ -6,6 +6,24 @@ summary: Give it a YouTube link. Get a detailed summary of the talk or lesson, t
 job: organise-work
 headline: YouTube video summariser
 subhead: Give it a YouTube link. Get a detailed summary of the talk or lesson, taken from its transcript.
+explain: |
+  A long, detailed written summary of a YouTube talk, lecture or tutorial, built from its transcript so you do not need to rewatch it.
+
+  The skill first checks that Python and the youtube-transcript-api package are present, and offers to install it if not. It confirms the video can be read, pulls the transcript, and then writes a thorough summary using two frameworks, STAR and RISE, which cover the situation, the key points and the takeaways. It favours completeness over brevity, so it suits reference notes for lectures, courses and technical walkthroughs. It stops with a clear message if captions are off or the video is private. You can then ask follow-up questions about any part of it.
+when:
+  - You sat through a two-hour lecture and need notes.
+  - You want a reference summary of a tutorial for later.
+  - You need the key arguments of a talk before a meeting.
+  - You want to check if a video is worth watching in full.
+you_give:
+  - A YouTube video link
+  - Python on your computer
+  - The aspects you care most about (optional)
+you_get:
+  - A detailed structured summary
+  - The key points and arguments
+  - Takeaways to act on
+  - A clear error message if the video has no captions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

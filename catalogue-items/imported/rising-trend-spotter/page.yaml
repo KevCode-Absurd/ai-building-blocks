@@ -6,6 +6,25 @@ summary: Give it a topic. Get what is rising on Google Trends and social sites. 
 job: plan-strategy
 headline: Rising trend spotter
 subhead: Give it a topic. Get what is rising on Google Trends and social sites. Collects data from websites.
+explain: |
+  A short report on what is rising for your topic across Google Trends, Instagram, Facebook, YouTube and TikTok, so your content follows real interest. It collects public data by running web scrapers.
+
+  You name the topic and platforms. The skill picks matching scrapers on the Apify service, for example Google search trends, hashtag content, trending sounds or short videos. It checks what each scraper needs, asks how you want the output saved, runs it and summarises what is climbing. This needs an Apify account and API token, Node.js and a command line tool. Scraping can use paid credits, so check your plan first.
+when:
+  - You plan content and want to know what is gaining interest now.
+  - You need hashtags or sounds that are on the rise.
+  - You are checking whether a product idea has growing search demand.
+  - You want a regular trend scan across several platforms.
+you_give:
+  - A topic or niche
+  - The platforms to scan
+  - An Apify account and token
+  - Preferred file format (optional)
+you_get:
+  - Rising searches and hashtags
+  - Trending content by platform
+  - A saved data file
+  - A summary of what is gaining ground
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

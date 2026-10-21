@@ -6,6 +6,25 @@ summary: Give it a history question. Get a chosen, ordered set of sources that p
 job: teach-and-train
 headline: History source set picker
 subhead: Give it a history question. Get a chosen, ordered set of sources that pull in different directions.
+explain: |
+  A short, ordered set of sources for a history lesson, chosen so they disagree in useful ways. A flat set where every document says the same thing produces flat answers. A set that pulls in different directions makes students weigh evidence.
+
+  Give it your central question. The skill picks several documents, including different authors, dates and viewpoints, and names the tension between them. It notes which thinking skills each source supports, such as checking who wrote it, reading closely or comparing. It explains why the documents come in this order, with a short one first and the harder ones later. It ends with an audit of whose voices are present and whose are missing, so the set is not one-sided.
+when:
+  - You are building a document-based lesson from scratch.
+  - Your current sources all agree and students have little to argue about.
+  - You want a set that works on sourcing and comparing skills.
+  - You need to check that voices from different groups are included.
+you_give:
+  - Your central question
+  - Topic and learners' age
+  - Sources you already have (optional)
+  - Skills you want to teach (optional)
+you_get:
+  - A chosen set of sources
+  - The tensions between them
+  - The skill each source builds
+  - A reasoned order and a voice check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

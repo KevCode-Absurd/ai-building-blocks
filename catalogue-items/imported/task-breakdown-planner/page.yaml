@@ -6,6 +6,25 @@ summary: Give it a spec. Get small, ordered tasks, each with a clear way to chec
 job: build-software
 headline: Task breakdown planner
 subhead: Give it a spec. Get small, ordered tasks, each with a clear way to check it is done.
+explain: |
+  A spec turned into small ordered tasks, each with a plain test for when it is done. Big vague work becomes a plan that you or an AI agent can follow one step at a time without a tangle.
+
+  The skill reads the spec and the existing code first and writes no code. It maps what depends on what, such as schema before models before endpoints. It cuts work into thin vertical slices that each leave things working. Every task gets acceptance criteria, files likely touched, a rough size and risks. Checkpoints are placed between groups of tasks. The plan is saved as a plan file and a task list, so progress can be tracked.
+when:
+  - You have a spec and no idea where to begin.
+  - A task feels too large to start and keeps slipping.
+  - You want to split work across several people or AI sessions.
+  - You need to show a manager the scope in clear pieces.
+  - The order of the work is not obvious.
+you_give:
+  - The spec or requirements
+  - Access to the codebase (optional)
+  - Known deadlines or limits (optional)
+you_get:
+  - A dependency map
+  - An ordered task list
+  - Done checks for each task
+  - Checkpoints and a list of risks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

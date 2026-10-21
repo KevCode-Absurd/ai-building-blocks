@@ -6,6 +6,25 @@ summary: Give it a hard question. Get a clear guess, a fair attempt to break it,
 job: think-and-decide
 headline: Claim stress tester
 subhead: Give it a hard question. Get a clear guess, a fair attempt to break it, the evidence and a tested answer.
+explain: |
+  For a tough question where a wrong answer costs you, this makes the AI commit to a guess, then try hard to prove itself wrong before it gives a final answer. You see the guess, the test, the evidence and the answer that survived.
+
+  It starts by choosing a mode. A live outage gets quick action. A simple fact gets a short answer. A vague question gets one round of clarifying questions. Only high stakes or why-is-it-broken questions run the full five stages: state a hypothesis that could be proven wrong, try to break it, gather evidence, judge it, and report what remains uncertain. The rule is that no answer is allowed without a stated way it could fail.
+when:
+  - You must decide something important and your first idea may be wrong.
+  - A system is failing and you need to know the real cause.
+  - You suspect an AI answer sounds sure but has no proof.
+  - You want the uncertain parts marked, not hidden.
+you_give:
+  - The question or problem
+  - What you already know or tried
+  - The cost of being wrong (optional)
+  - Data or logs (optional)
+you_get:
+  - A testable first guess
+  - An attempt to disprove it
+  - Evidence for and against
+  - A tested answer with uncertainty marked
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

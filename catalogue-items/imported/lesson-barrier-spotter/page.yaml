@@ -6,6 +6,25 @@ summary: Paste a lesson and describe your class. Get likely barriers and which o
 job: teach-and-train
 headline: Lesson barrier spotter
 subhead: Paste a lesson and describe your class. Get likely barriers and which ones design can fix. It does not diagnose anyone.
+explain: |
+  A list of places your lesson is likely to trip learners up, before you teach it. Paste the task and describe your class, such as English learners, attention needs or wide reading levels. The skill goes through what students must read, write, say and produce, and predicts where each group may get stuck.
+
+  It then separates two kinds of barrier: those you can remove by changing the lesson design, and those that need individual support. It uses Universal Design for Learning from CAST. It looks at the task, not the child, so it never diagnoses anyone. You come away knowing what to change before the lesson starts.
+when:
+  - You are planning a reading task for a class with mixed levels.
+  - You have English learners and want to catch language barriers early.
+  - A group project asks for skills some students may find hard.
+  - You want to know which problems to fix in the lesson and which need extra help.
+you_give:
+  - The lesson task and how it is assessed
+  - A description of your class
+  - Materials students will use (optional)
+  - Learning goal
+you_get:
+  - Likely barriers by learner group
+  - Barriers design can fix
+  - Barriers needing individual support
+  - Changes to make before teaching
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

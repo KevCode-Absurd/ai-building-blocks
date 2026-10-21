@@ -6,6 +6,24 @@ summary: Give it code. Get clearer names, smaller functions and tidier error han
 job: test-and-fix-code
 headline: Readable code reviewer
 subhead: Give it code. Get clearer names, smaller functions and tidier error handling, each with a reason. Uses Clean Code.
+explain: |
+  Your code reviewed for how easily a stranger can read it, with a score out of 10 and clear fixes. Each suggestion comes with the reason behind it, based on the Clean Code approach.
+
+  It checks six areas: names that show intent, small functions that do one job, comments, formatting, error handling, and tests. A name that needs a comment to explain it gets flagged. Long functions are pointed out with a split suggested. Mixed error styles are made consistent. Scoring runs from nearly unreadable to clean, and the review lists what to change to reach the top band. It works on any language, and on code you are about to write.
+when:
+  - You inherited code that nobody dares to touch.
+  - A pull request needs a readability pass before merge.
+  - Your functions have grown to fifty lines or more.
+  - You want to teach a junior developer why naming matters.
+you_give:
+  - Code to review
+  - Language and style rules (optional)
+  - Tests (optional)
+you_get:
+  - Score out of 10
+  - Better names for unclear ones
+  - Suggested function splits
+  - Error handling fixes with reasons
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

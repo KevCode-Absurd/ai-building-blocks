@@ -6,6 +6,25 @@ summary: Give it values in one unit, time or coordinate frame. Get them converte
 job: build-software
 headline: Aerospace unit and frame converter
 subhead: Give it values in one unit, time or coordinate frame. Get them converted correctly, with MATLAB code you can rerun.
+explain: |
+  Values move correctly between units, time systems and coordinate frames, with MATLAB code you can run again. That avoids the slip-ups that come from mixing frames in flight or space work.
+
+  The skill covers unit changes, time systems such as UTC and sidereal time, and positions in latitude, longitude and altitude, Earth-fixed and Earth-inertial frames. It also converts orbit elements to position and velocity, and moves between Euler angles, rotation matrices and quaternions. Time-dependent conversions use the right date. It shows the standard patterns and picks the right function for each case. It stays inside basic aerospace maths, so check the toolbox notes for harder dynamics. It needs MATLAB with the Aerospace Toolbox.
+when:
+  - You have data in feet and knots and need metres and metres per second.
+  - You need to turn GPS positions into Earth-fixed coordinates.
+  - You must convert orbit elements to position and velocity.
+  - Your attitude data is in Euler angles and you need quaternions.
+you_give:
+  - Your values and their current units or frame
+  - The target units or frame
+  - Dates and times, where the frame depends on time
+  - MATLAB with the Aerospace Toolbox
+you_get:
+  - Converted values
+  - MATLAB code you can rerun
+  - The frame and time assumptions used
+  - A check of the result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

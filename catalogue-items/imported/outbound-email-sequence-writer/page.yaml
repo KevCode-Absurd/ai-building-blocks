@@ -6,6 +6,25 @@ summary: Describe your prospect. Get a multi-step email sequence with timing and
 job: write-emails
 headline: Outbound email sequence writer
 subhead: Describe your prospect. Get a multi-step email sequence with timing and personal touches.
+explain: |
+  A full cold email series that earns replies and ends with a booked meeting, each message short and different from the last.
+
+  You describe the target company type and the person you are writing to. The skill pins down their title and pains, then boils your offer to one clear outcome, such as cutting month-end close from ten days to three. It writes the series: an opening with a relevant hook, follow-ups with new angles and proof, a helpful resource email and a final breakup note. Each body is 50 to 120 words. It adds subject line options, personal fields like name, company and trigger events, and a send schedule with days, times and gaps between touches.
+when:
+  - You have a list of prospects and nothing to send them.
+  - Your cold emails get opens but no replies.
+  - You target a new job title and need fresh messaging.
+  - You want a follow-up plan, not one-off emails.
+you_give:
+  - Target company type and person
+  - Your offer and its main result
+  - Proof points or case studies (optional)
+  - Trigger events you can mention (optional)
+you_get:
+  - A multi-step email series
+  - Subject line options
+  - Personal fields to fill in
+  - A send schedule
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

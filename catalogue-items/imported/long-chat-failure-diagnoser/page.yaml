@@ -6,6 +6,25 @@ summary: Describe how your AI gets worse in long chats. Get the likely cause and
 job: set-up-ai
 headline: Long chat failure diagnoser
 subhead: Describe how your AI gets worse in long chats. Get the likely cause and a fix to try.
+explain: |
+  A named cause for why your AI gets worse as a chat grows, and a fix you can try today. Long chats fail in a few known ways, and each one needs a different cure.
+
+  You describe what goes wrong. The skill matches it to a pattern: facts in the middle get ignored, an early mistake keeps getting repeated, too much unrelated text drowns the point, the AI cannot tell which instructions apply, or old and new facts clash. Then it suggests the fitting fix. That could be summarising the chat, hiding old tool output, splitting the work across fresh sessions, or moving key facts to the start or end.
+when:
+  - Your AI forgets earlier instructions deep into a long session.
+  - The answers drift or repeat a mistake made 50 messages ago.
+  - You are designing an agent that must handle long documents reliably.
+  - You pasted a lot of material and the AI now misses obvious facts.
+you_give:
+  - A description of the failure
+  - How long the chat or input is
+  - A sample of the bad output (optional)
+  - What you already tried (optional)
+you_get:
+  - The likely cause, named
+  - A fix matched to that cause
+  - A way to test that it worked
+  - A note on how to prevent it next time
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

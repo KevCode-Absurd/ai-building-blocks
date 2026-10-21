@@ -6,6 +6,25 @@ summary: Give it a big build request. Get a plan in your repo that any fresh age
 job: build-software
 headline: Multi-session build plan writer
 subhead: Give it a big build request. Get a plan in your repo that any fresh agent can pick up and finish.
+explain: |
+  A plan stored in your repo that any fresh agent can pick up and finish, so a big build does not die when a chat ends.
+
+  The skill splits what stays fixed from what changes. A contract file holds the goal, scope, tasks and the definition of done. A task file tracks status and links to evidence. A checkpoint file records the exact point to resume from. It reuses documents that already exist in your project and keeps your unrelated changes safe. A task counts as done only when there is proof, such as a passing test or a working screen. It skips this for small jobs.
+when:
+  - A build will take several sessions or several agents.
+  - An agent said it was finished and nothing actually worked.
+  - You switch tools or branches and lose track of progress.
+  - You need a clean handoff to a teammate.
+you_give:
+  - The build request
+  - Your repo
+  - Existing plan or task files (optional)
+  - What proof counts as done
+you_get:
+  - A contract file with scope and tasks
+  - A task tracker
+  - A resume checkpoint
+  - Evidence rules for completion
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

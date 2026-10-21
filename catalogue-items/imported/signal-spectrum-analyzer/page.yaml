@@ -6,6 +6,25 @@ summary: Give it a signal. Get its frequency content, peaks and bandwidth worked
 job: build-software
 headline: Signal spectrum analyzer
 subhead: Give it a signal. Get its frequency content, peaks and bandwidth worked out with the right method.
+explain: |
+  The frequency content of your signal, with peaks, band power and bandwidth worked out using a method that fits your data. It avoids the usual FFT traps that give misleading plots.
+
+  It asks whether data is saved or streaming in live. For saved data it runs quick diagnostics, checks for gaps and trend, and picks the output type: power spectral density, power spectrum or amplitude spectrum. Then it chooses the estimator, such as Welch, periodogram or a parametric method, computes with a stated sample rate, and plots with labelled axes. It pulls out peaks, band power and bandwidth with built-in functions. It needs MATLAB with the Signal Processing Toolbox.
+when:
+  - You need to find the dominant frequencies in a recording.
+  - You want to compare two signals with coherence or cross-spectrum.
+  - Your FFT plot looks noisy and you are unsure why.
+  - You need the bandwidth or power in a specific band.
+you_give:
+  - Your signal data
+  - Sample rate
+  - The measurement you want, such as peaks or band power
+  - MATLAB with Signal Processing Toolbox
+you_get:
+  - A spectrum computed with a suitable estimator
+  - A labelled plot
+  - Peak frequencies
+  - Band power and bandwidth figures
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

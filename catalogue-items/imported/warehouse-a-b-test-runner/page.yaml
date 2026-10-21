@@ -6,6 +6,25 @@ summary: Describe your data setup. Get SQL steps to split users, log exposure an
 job: track-numbers
 headline: Warehouse A/B test runner
 subhead: Describe your data setup. Get SQL steps to split users, log exposure and read results with proper stats.
+explain: |
+  A way to run A/B tests inside your own data warehouse, with no testing vendor. You get the SQL and the habits that keep the numbers trustworthy.
+
+  You describe your warehouse, such as BigQuery or Snowflake, and your test idea. The skill helps you decide if warehouse testing is right for you or if a platform is simpler. It then sets out how to split users into groups in SQL, how to log who saw which version, and how to write metric definitions in dbt. For the read-out it covers t-tests, variance cuts with CUPED, and checks for early peeking. It assumes you have already designed the test itself.
+when:
+  - Your testing tool bill is growing with traffic.
+  - You need a custom metric a vendor tool cannot compute.
+  - You want one source of truth for test results.
+  - Your team needs to show every step of the maths.
+you_give:
+  - Your warehouse and data tools
+  - The test idea and the main metric
+  - Where users are identified
+  - How users are shown each version (optional)
+you_get:
+  - A platform or warehouse recommendation
+  - SQL for assigning users and logging exposure
+  - Metric definitions for dbt
+  - An analysis plan with variance reduction
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

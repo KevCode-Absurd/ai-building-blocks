@@ -6,6 +6,25 @@ summary: Tell it your site's media. Get a plan for formats, responsive images, v
 job: build-websites
 headline: Image and video pipeline planner
 subhead: Tell it your site's media. Get a plan for formats, responsive images, video hosting and a tidy brand asset library.
+explain: |
+  A plan for how your site stores, shrinks, organizes and serves images, video and downloads. Tell it what media you have and get a setup that loads fast and stays tidy as it grows. It works with any tech stack.
+
+  The plan covers four stages: source, process, store and deliver. For each it picks formats, sizes for different screens, and where video should live. It helps you choose between an image service and a CDN with the monthly cost in mind, and sets up a shared library for brand assets with clear upload steps for designers and writers. It starts by asking where assets live now, how many there are, who uploads them and how fast pages load.
+when:
+  - Your site is slow because images are huge.
+  - You are choosing where to host videos for a site.
+  - Your brand files are scattered across drives and chat threads.
+  - You are moving media from one platform to another.
+you_give:
+  - A list of where media lives now
+  - Volume of files and traffic
+  - Who creates and uploads media
+  - Budget for hosted tools
+you_get:
+  - A format and size plan
+  - A video hosting recommendation
+  - A media library structure
+  - An upload workflow for your team
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

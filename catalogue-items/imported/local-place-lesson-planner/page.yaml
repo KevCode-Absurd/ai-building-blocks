@@ -6,6 +6,26 @@ summary: Name a place near your learners. Get lessons that tie your content to t
 job: teach-and-train
 headline: Local place lesson planner
 subhead: Name a place near your learners. Get lessons that tie your content to that place, its community and its heritage.
+explain: |
+  Lessons that start from a real place near your students and still cover your curriculum. Name the place and the content and get an inquiry plan where the place is the text.
+
+  It begins with what the place itself can teach, then adds several ways of knowing it. A scientist, a historian and a long-time local each see a river differently. Students visit and observe directly where they can. The plan includes a critical angle, asking who the place serves and who it leaves out, and an action step, since knowing a place brings responsibility to it. It asks about Indigenous connections and local experts, and plans around access limits.
+when:
+  - Your students find the topic distant and you want it to feel real.
+  - There is a canal, park or building near school you could use.
+  - You teach local history and want fresh sources.
+  - Your class cannot visit and you need a way to still use the place.
+you_give:
+  - The curriculum content
+  - The local place
+  - Year group and subject
+  - Indigenous connections (optional)
+  - Local people who know the place (optional)
+you_get:
+  - What the place teaches
+  - Multiple ways of knowing it
+  - An inquiry sequence
+  - An action step for students
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

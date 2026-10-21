@@ -6,6 +6,26 @@ summary: Describe your offer and buyer. Get Facebook and Instagram ad text, hook
 job: write-ad-copy
 headline: Meta ad copywriter
 subhead: Describe your offer and buyer. Get Facebook and Instagram ad text, hooks and UGC scripts ready to test.
+explain: |
+  Facebook and Instagram ad text written for the one job an ad has, which is to get the click. Describe your offer and buyer and you get hooks, primary text, headlines and UGC video scripts to test.
+
+  It first sorts the brief by funnel position and by how much the buyer knows, from unaware to most aware, and the less they know, the longer the copy. Then it picks a strategy. Sell the click uses a short caption and curiosity and sends people to an advertorial. Sell the solution shows and proves the product in the ad, then sends people to the product page. It warns against sending a viewer who has seen the product to a blind sales video.
+when:
+  - You are launching a cold-traffic Facebook ad and need several angles.
+  - You need a UGC video script for Reels.
+  - Your retargeting ads get views but few clicks.
+  - You are unsure whether the ad or the landing page should do the selling.
+you_give:
+  - Your offer and product
+  - Your buyer and what they know
+  - Where the ad sends people
+  - Past ads that worked (optional)
+you_get:
+  - Primary text variations
+  - Headlines and descriptions
+  - Hooks to test
+  - UGC or video ad scripts
+  - A note on the ad strategy used
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

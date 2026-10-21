@@ -6,6 +6,25 @@ summary: Describe the bug. Get the cause proven with evidence before any code is
 job: test-and-fix-code
 headline: Bug root cause finder
 subhead: Describe the bug. Get the cause proven with evidence before any code is changed, so fixes stop being guesses.
+explain: |
+  Stops your AI from guessing at fixes. It must prove the cause first, and you approve it before any code is changed.
+
+  The skill runs five phases in order. Reproduce: run the failing test a few times and record the exact error, without reading code. Isolate: read code and add marked debug logging only. Root cause: ask why repeatedly, remove the logging, and state the cause. Then it stops and waits for you to agree. Fix: make the smallest change for the confirmed cause. Verify: rerun the failing test and the related ones. It is made for stubborn, intermittent or regression bugs.
+when:
+  - An AI agent keeps making fixes that do not stick.
+  - A bug comes and goes and you need a disciplined approach.
+  - You want to approve the diagnosis before any edits happen.
+  - A bug appeared after a recent change and you need the cause.
+you_give:
+  - The failing command or test
+  - A description of the bug
+  - Access to the code
+you_get:
+  - The exact error captured
+  - A narrowed-down location
+  - A root cause for your approval
+  - A minimal fix after you agree
+  - Proof that tests pass
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

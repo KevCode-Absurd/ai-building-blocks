@@ -6,6 +6,25 @@ summary: Name the page type. Get checked JSON-LD markup ready to paste for searc
 job: get-found-in-search
 headline: Schema markup writer
 subhead: Name the page type. Get checked JSON-LD markup ready to paste for search results.
+explain: |
+  Structured data for your page that search engines can read, checked and ready to paste into your site. Name the page type and give the details to get JSON-LD markup that can make your listing eligible for rich results.
+
+  You fill in a short form: page type such as blog post, product page, FAQ or how-to, the URL, title, description, dates, author, brand and logo. Product pages take price, currency, stock and SKU. Ratings, reviews, FAQs and steps can be added. It picks schema types that fit, builds the JSON-LD and checks it for missing or badly formatted fields. It reminds you to keep markup honest and matched to what is visible.
+when:
+  - You publish a product page and want star ratings and price in search results.
+  - Your FAQ page has questions that should be marked up.
+  - You write articles and want author and date markup.
+  - You want to check existing markup for errors.
+you_give:
+  - Page type and URL
+  - Title, description and dates
+  - Product, review, FAQ or how-to details
+  - Brand name and logo link
+you_get:
+  - JSON-LD markup ready to paste
+  - The right schema types for the page
+  - A check for missing fields
+  - Notes on rich result eligibility
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

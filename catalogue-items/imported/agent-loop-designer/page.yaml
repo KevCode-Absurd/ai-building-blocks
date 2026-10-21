@@ -6,6 +6,25 @@ summary: Say the job you want repeated. Get a bounded AI loop with checks, stop 
 job: set-up-ai
 headline: Agent loop designer
 subhead: Say the job you want repeated. Get a bounded AI loop with checks, stop rules and handoffs.
+explain: |
+  A repeating job for an AI agent with clear checks, a point where it must stop, and a handoff to you when it is stuck. Without those, a loop either quits too soon or runs all night.
+
+  Start by saying what you want done. The skill first looks through a catalogue of published loops and offers the closest one or two. You can copy one as it is, change its limits, tools and schedule, or design a new one from a few plain questions. Each loop gets a test that proves progress, rules for stopping, guardrails on what the agent may touch, and a note on who picks up the result.
+when:
+  - You want an agent to keep working on a task until a check passes.
+  - You want something to run on a schedule, like a daily review.
+  - You have a loop idea but no stop rule, so you fear it will run forever.
+  - You want to copy a loop someone else already proved works.
+you_give:
+  - The job you want repeated
+  - How often it should run
+  - What counts as done (optional)
+  - Tools the agent can use (optional)
+you_get:
+  - Up to three matching loops to choose from
+  - A loop written so you can paste it in
+  - Checks and stop rules for each round
+  - A handoff step for when it gets stuck
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

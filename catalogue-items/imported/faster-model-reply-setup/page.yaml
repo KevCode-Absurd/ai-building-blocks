@@ -6,6 +6,25 @@ summary: Name your model. Get a setup that makes replies 1.5 to 3.6 times faster
 job: build-software
 headline: Faster model reply setup
 subhead: Name your model. Get a setup that makes replies 1.5 to 3.6 times faster without changing the answers.
+explain: |
+  A setup that makes your language model reply about 1.5 to 3.6 times faster, with the same answers. It suits chat tools and code generation where waiting hurts.
+
+  The skill is based on speculative decoding. A small draft model guesses several words ahead and the big model checks them all at once, keeping the right ones. It covers three routes: a separate draft model, Medusa, which adds extra prediction heads, and lookahead decoding, which needs no second model. It lists install steps, sample code for the transformers library, and how to pick draft size and guess length. It needs Python, a GPU and a model you can run yourself.
+when:
+  - Your self-hosted chatbot feels slow to answer.
+  - You run a code assistant and want lower delay per request.
+  - You want more throughput from the same GPU.
+  - You need to choose between a draft model and Medusa.
+you_give:
+  - The model you serve
+  - Your hardware
+  - "Your main goal: lower delay or higher throughput"
+  - A smaller model from the same family (optional)
+you_get:
+  - A recommended speed-up method
+  - Install and setup steps
+  - Sample code
+  - Tuning settings to try
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

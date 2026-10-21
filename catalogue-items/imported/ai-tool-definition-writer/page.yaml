@@ -6,6 +6,25 @@ summary: Describe what a tool does. Get a clear, safe definition your AI can cal
 job: connect-tools
 headline: AI tool definition writer
 subhead: Describe what a tool does. Get a clear, safe definition your AI can call without guessing.
+explain: |
+  A tool definition that your AI can call correctly the first time, with fewer wrong picks and invented inputs. The goal is to make the safe, intended call easier to choose than a risky one.
+
+  You describe what the tool does. It decides whether this is one tool or several, then writes a verb-led name and a description that says when to use it and when not to. It builds the parameter list from user intent, with limits, closed choices and examples, and rejects unknown fields. It also defines confirmation, access rules, retry safety and error codes. Tests cover good, edge and hostile inputs. A script checks the schema.
+when:
+  - You are adding a function-calling, MCP or plugin tool to an AI agent.
+  - Your agent keeps picking the wrong tool or inventing arguments.
+  - One API action is too big and needs splitting up.
+  - A tool can delete or send things and needs a confirmation step.
+you_give:
+  - What the tool should do
+  - The backend action behind it
+  - Who may use it and what it can change
+  - Neighbouring tools it could be confused with (optional)
+you_get:
+  - A name and description with use and non-use rules
+  - A checked parameter schema
+  - Confirmation, retry and error rules
+  - Test cases for tool choice and inputs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

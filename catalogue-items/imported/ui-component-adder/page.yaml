@@ -6,6 +6,25 @@ summary: Say which components you need. Get them added to your project with the 
 job: build-websites
 headline: UI component adder
 subhead: Say which components you need. Get them added to your project with the right setup and usage.
+explain: |
+  Interface parts such as buttons, forms, tables and sidebars added to your project the right way, with setup done and example usage included. You build screens from parts that already exist instead of hand-coding them.
+
+  The skill uses the shadcn/ui command line. It reads your project setup first, then searches registries before writing anything custom. It adds components as source files you own, shows the docs for each one, and follows rules: use built-in variants, use semantic colours, use gap instead of space utilities, and put layout in className, not colours. A settings page becomes tabs plus cards plus form controls. It needs a JavaScript project with a package manager.
+when:
+  - You need a dialog, table or sidebar and want a ready, accessible one.
+  - You are starting a new project and want to set up shadcn/ui.
+  - Your components look inconsistent and need tidy styling rules.
+  - You want to find a community component before building your own.
+you_give:
+  - A project using or ready for shadcn/ui
+  - The components or screens you need
+  - Your package manager
+  - Design preferences (optional)
+you_get:
+  - Components added to your project
+  - Correct setup and imports
+  - Usage examples
+  - Styling that follows the rules
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

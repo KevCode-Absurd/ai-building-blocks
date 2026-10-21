@@ -6,6 +6,25 @@ summary: Give it social accounts. Get engagement figures and which posts did bes
 job: grow-social
 headline: Social content results reader
 subhead: Give it social accounts. Get engagement figures and which posts did best. Collects data from websites.
+explain: |
+  Engagement numbers for your social accounts and a clear read on which posts did best. You name the accounts, and the skill collects public data from Instagram, Facebook, YouTube and TikTok, then explains what worked.
+
+  It picks the right collector for the need, such as posts, reels or follower counts, and checks what inputs that collector expects. You choose the file format and name. It then runs the script, saves the results and writes a short summary of top performers and patterns. It works through Apify, a paid data service, so you need an Apify token, Node.js and a command line tool. Public data only, so private account figures will not appear.
+when:
+  - You want to compare your last 50 posts by engagement.
+  - A client asks which reels worked best.
+  - You need to track a competitor's follower growth.
+  - You want a hashtag's performance in a spreadsheet.
+you_give:
+  - The accounts, posts or hashtags to analyse
+  - An Apify token
+  - Preferred file format and name
+  - The time range (optional)
+you_get:
+  - Engagement figures per post
+  - A saved data file
+  - A ranked list of top posts
+  - A short summary of what worked
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

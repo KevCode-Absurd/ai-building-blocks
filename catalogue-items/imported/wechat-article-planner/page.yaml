@@ -6,6 +6,27 @@ summary: Name your topic. Get a WeChat Official Account article plan with title 
 job: grow-social
 headline: WeChat article planner
 subhead: Name your topic. Get a WeChat Official Account article plan with title options and layout built for the platform.
+explain: |
+  A full plan for one WeChat Official Account article, built around how the platform works. Distribution is closed, sharing happens in Moments and readers tap titles that promise something. You leave with a title shortlist, a layout and a call to action that fits your goal.
+
+  First it checks your account type, because a subscription account and a service account get different reach and push limits. Then it writes title options with formulas that suit WeChat readers, lays out the article section by section, and suggests how to move readers to your mini-program or private group. It can also fit the piece into a longer content calendar.
+when:
+  - You run a WeChat Official Account and need a plan for this week's article.
+  - Your open rates are low and you suspect the titles.
+  - You want readers to move from articles into a mini-program or private group.
+  - You are entering the Chinese market and do not know the platform's rules.
+you_give:
+  - Your topic
+  - Account type (subscription or service)
+  - Target readers
+  - Goal such as sales or followers
+  - Existing brand voice notes (optional)
+you_get:
+  - Several title options
+  - Article outline and layout
+  - Sharing and Moments hooks
+  - Call to action to private traffic
+  - Posting schedule suggestion
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

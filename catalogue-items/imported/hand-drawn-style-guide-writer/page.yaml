@@ -6,6 +6,25 @@ summary: Describe your product. Get a style guide with a sketchy, handwritten, p
 job: design-work
 headline: Hand-drawn style guide writer
 subhead: Describe your product. Get a style guide with a sketchy, handwritten, playful look and rules for each part.
+explain: |
+  A written style guide for a playful product that looks sketched by hand. It gives your designers and developers the same rules for doodle-style lines, handwritten fonts and a loose, friendly feel, so screens do not drift apart.
+
+  The guide starts with the basics: a font scale, a colour palette with named values, and spacing steps. Then it covers each component, its states such as hover, focus, disabled and error, and how it behaves on small screens. It adds accessibility rules you can test, tone rules for button and label text, a list of things to avoid, and a checklist to run in code review. Playful does not mean hard to read, so contrast and keyboard use come first.
+when:
+  - You want an informal, sketchy look for a kids app, a creative tool or a friendly brand.
+  - Your team keeps building buttons and forms that look different from each other.
+  - You need rules a developer can follow without asking a designer each time.
+  - You want a playful style that still passes accessibility checks.
+you_give:
+  - A short description of your product and audience
+  - Brand colours or fonts you must keep (optional)
+  - The screens or components you plan to build
+  - Any existing UI that feels inconsistent (optional)
+you_get:
+  - Design tokens for colour, type and spacing
+  - Rules for each component and its states
+  - Accessibility checks you can test
+  - A code review checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Point it at your app's code history. Get plain "What's New" notes users
 job: write-and-tell-stories
 headline: App Store release notes writer
 subhead: Point it at your app's code history. Get plain "What's New" notes users can read, based on real changes.
+explain: |
+  Plain "What's New" notes your users can read, built from what truly changed since your last release. No more guessing from memory or pasting raw commit text.
+
+  The skill reads your git history from the last tag using a helper script, or from the full history if there are no tags. It sorts the changes by what a user would notice: new, improved and fixed. It drops internal work like build scripts, refactors, dependency updates and test setup. Each kept change becomes a short bullet with a clear verb. A login race fix, for instance, becomes a line about fewer unexpected sign-outs. It then checks every bullet against a real change, removes duplicates, and asks if anything is unclear.
+when:
+  - You are about to submit an update and have no release notes.
+  - Your commit log reads like code and users need plain words.
+  - You want notes sorted into new, improved and fixed.
+  - You want to be sure each bullet matches a real change.
+you_give:
+  - Your project folder with git history
+  - The last release tag (optional)
+  - Desired length of notes (optional)
+you_get:
+  - Five to ten user-friendly bullets
+  - Changes grouped by theme
+  - Internal work left out
+  - Each bullet traced to a real commit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

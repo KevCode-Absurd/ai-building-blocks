@@ -6,6 +6,26 @@ summary: Give it a social account. Get its positioning, content themes, top post
 job: study-competitors
 headline: Creator profile teardown writer
 subhead: Give it a social account. Get its positioning, content themes, top posts and what to test. Collects data from websites.
+explain: |
+  A breakdown of a social account: how it positions itself, which themes it returns to, which posts beat the average, and what you can test yourself. You learn from what works without copying it.
+
+  You name an account. The skill reviews the profile and recent posts, then writes up positioning, content pillars and outlier posts, with the hooks and formats behind them. It reads audience reactions in comments. A section lists what to steal and a separate section lists what not to copy, because your voice differs. It ends with tests to run on your own account. It collects data from websites, so results depend on what is public.
+when:
+  - A competitor's account is growing and you want to know why.
+  - You are choosing a content style for your own profile.
+  - You need hook ideas that already work in your niche.
+  - You are researching a creator before a partnership.
+you_give:
+  - The account link
+  - Your own niche and goals
+  - Time period to review (optional)
+  - Competitor list (optional)
+you_get:
+  - Positioning summary
+  - Content pillars
+  - Outlier posts and why they worked
+  - Hooks and formats to try
+  - Tests for your account
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

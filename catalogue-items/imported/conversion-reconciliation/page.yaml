@@ -6,6 +6,25 @@ summary: Give it your Meta and Google conversion reports. Get why the numbers di
 job: track-numbers
 headline: Cross-platform conversion reconciler
 subhead: Give it your Meta and Google conversion reports. Get why the numbers differ and a plan to make them match.
+explain: |
+  An explanation of why your Meta, Google and analytics conversion numbers disagree, and a plan to bring them to a form you can compare. It stops you from adding numbers that should never be added.
+
+  First it fixes what counts as one conversion, its value, the date range, time zone and currency. It then lists every source: browser tags, server events, ad platforms, analytics, app measurement and offline uploads, with how each counts and removes duplicates. It refuses to total reports that use different windows, such as seven days against thirty, and shows them side by side with their definitions. It ends with gaps, confidence and steps to improve measurement.
+when:
+  - Meta says 120 sales and Google says 90 and your store says 100.
+  - You want to total conversions across ad platforms.
+  - You are reviewing tracking after a privacy or consent change.
+  - A client asks which report to trust.
+you_give:
+  - Conversion reports from each platform
+  - Your definition of a conversion
+  - Date range and time zone
+  - Analytics or store totals (optional)
+you_get:
+  - Side by side comparison with definitions
+  - Reasons for each gap
+  - Confidence rating
+  - Measurement fix plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

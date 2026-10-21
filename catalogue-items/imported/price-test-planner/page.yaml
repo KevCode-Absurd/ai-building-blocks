@@ -6,6 +6,25 @@ summary: Give it your costs and sales data. Get the best price to try, three out
 job: set-prices
 headline: Price test planner
 subhead: Give it your costs and sales data. Get the best price to try, three outcome cases, and a test you can undo.
+explain: |
+  The best price to try next, with three outcome cases and a test you can undo. Give it your costs and sales history and it shows what the numbers can and cannot tell you.
+
+  The skill checks that your price, sales, traffic and promotion data are comparable. It works out margin at each candidate price and sets hard limits. It estimates how demand reacts only when the data supports it, and says so when it does not. Candidates are compared under base, low and high demand. Then it designs a controlled test with a hypothesis, guardrails, and a decision rule, plus a rollback if results disappoint.
+when:
+  - You want to raise a price but fear losing sales.
+  - You have five price options and need to pick.
+  - You need a test design your boss will approve.
+  - Your sales history is noisy and you want honest limits.
+you_give:
+  - Unit costs and fees
+  - Sales history by price
+  - Traffic and promotion notes
+  - Price candidates
+you_get:
+  - Recommended price to test
+  - Base, low and high cases
+  - Test design with guardrails
+  - Rollback plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

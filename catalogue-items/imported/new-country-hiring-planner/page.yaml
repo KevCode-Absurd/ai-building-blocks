@@ -6,6 +6,25 @@ summary: Name the country. Get an own-entity or employer-of-record choice, a loc
 job: hire-people
 headline: New country hiring planner
 subhead: Name the country. Get an own-entity or employer-of-record choice, a local rules list and a hiring plan. Not legal advice.
+explain: |
+  A plan for hiring your first people in a new country. The big early choice is whether to set up your own local company or use an employer of record, which hires on your behalf. The skill lays out the cost, time and risk of each.
+
+  It also covers what to check before the first hire: local employment law, required benefits, contract terms, payroll and tax, and any works council or union rules. It adds ideas for finding talent, pay benchmarks, adapting your handbook, and preparing managers for cultural differences. It says when to move from an employer of record to your own entity. This is planning help, not legal advice.
+when:
+  - You want to hire two engineers in Germany and do not know where to begin.
+  - You are comparing two countries for the same role and budget.
+  - You need to know when an employer of record stops making sense.
+  - Your manager asks what must be in place before a first hire.
+you_give:
+  - The country or countries
+  - Number and type of roles
+  - Your timeline
+  - Your company size and current setup (optional)
+you_get:
+  - Own entity versus employer of record comparison
+  - A list of local rules to check
+  - A hiring and pay plan
+  - A dated sequence for the first hires
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

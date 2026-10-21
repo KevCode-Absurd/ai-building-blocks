@@ -6,6 +6,25 @@ summary: Give it a clothing flat lay. Get a photo shaped as if worn by an invisi
 job: product-photos
 headline: Ghost mannequin photo maker
 subhead: Give it a clothing flat lay. Get a photo shaped as if worn by an invisible model. Your image model draws it.
+explain: |
+  A cheap flat lay of a garment becomes a full, shaped product photo, as if an invisible person were wearing it. The shoulders fill out, sleeves bend, the neckline shows its inside and the hem casts a light shadow.
+
+  It sits between a flat lay, which looks plain, and a model shoot, which costs more and brings likeness issues. The skill sets what the image should keep, such as colour, knit pattern and ribbing, and writes the prompt for your image model. Claude does not draw the image itself. A separate image tool does, so you need access to one. The original skill is written in Chinese.
+when:
+  - Your store photos are flat lays and look cheap.
+  - You cannot afford a model shoot for every item.
+  - You want a consistent catalogue look across clothing.
+  - You need to show shape and fit without a person in the photo.
+you_give:
+  - A flat lay photo of the garment
+  - Garment type and colour
+  - Access to an image maker
+  - Background preference (optional)
+you_get:
+  - A ghost mannequin image prompt
+  - Rules to keep colour and texture true
+  - A shaped product image from your image tool
+  - Notes on what to check in the result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

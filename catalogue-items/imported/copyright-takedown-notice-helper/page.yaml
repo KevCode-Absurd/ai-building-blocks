@@ -6,6 +6,25 @@ summary: Describe a copy of your work online, or paste a notice. Get a draft or 
 job: check-contracts
 headline: Copyright takedown notice helper
 subhead: Describe a copy of your work online, or paste a notice. Get a draft or options. Have a lawyer review.
+explain: |
+  Help with a copyright takedown: either a draft notice to get your work removed, or a read on a notice sent to you, with your options laid out. It saves you from missing the required parts of a notice.
+
+  In send mode it identifies your work, the copy and where it sits, then runs a fair use check and a good faith check before drafting. It confirms accuracy and your right to act, writes the notice, and stops for a final review before anything goes out. In respond mode it reads the notice you received, assesses it, lists choices such as complying or disputing, and writes a short memo. It assumes US law. Have a lawyer review before you send.
+when:
+  - Someone copied your photos or text and posted them online.
+  - You received a takedown notice and need to understand it.
+  - You want to check if a copy might count as fair use.
+  - You need a notice with the legally required parts.
+you_give:
+  - Description of your original work
+  - Where the copy appears
+  - Proof you own the work
+  - The notice you received (optional)
+you_get:
+  - Draft takedown notice
+  - Fair use check
+  - Options when responding
+  - Short triage memo
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Run it on your customers. Get repeat-purchase rate and revenue for each
 job: run-your-store
 headline: Customer cohort reader
 subhead: Run it on your customers. Get repeat-purchase rate and revenue for each first-purchase month.
+explain: |
+  Do customers you win in March come back more than the ones from January? This groups your Shopify customers by the month of their first order and shows how each group behaves afterwards.
+
+  For each cohort you see how many customers bought again, how many orders they placed and how much revenue they brought in during the following months. You choose how many months of cohorts to review and how long to follow each one. The result shows whether your retention is improving or slipping, and which acquisition months were best. It only reads data and changes nothing. It needs Shopify access.
+when:
+  - You changed your offer and want to know if repeat buying improved.
+  - You ran a big sale and need to see if those customers stayed.
+  - An investor or partner asks about retention.
+  - You want to compare months before planning ad spend.
+you_give:
+  - Your Shopify store and read access
+  - Number of cohort months (optional)
+  - How long to follow each cohort (optional)
+you_get:
+  - Customers grouped by first-purchase month
+  - Repeat purchase rate per cohort
+  - Revenue per cohort by month
+  - A plain summary of the best and weakest cohorts
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

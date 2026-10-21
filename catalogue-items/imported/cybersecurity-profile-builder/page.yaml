@@ -6,6 +6,25 @@ summary: Describe your security today and your goals. Get a NIST CSF profile, ga
 job: secure-code
 headline: Cybersecurity profile builder
 subhead: Describe your security today and your goals. Get a NIST CSF profile, gaps and a step by step plan.
+explain: |
+  A written picture of where your security stands now, where you want it to be, and the steps between. It follows the NIST Cybersecurity Framework, the common standard used by auditors and insurers.
+
+  You describe your current setup and goals. The skill works through the six areas of the framework: Govern, Identify, Protect, Detect, Respond and Recover. It builds a current profile and a target profile, then lists gaps by area with a priority for each. It rates your maturity tier and turns the gaps into an action plan sorted by effort and impact. It can also map controls to ISO 27001 or CIS Controls. It assumes the 2.0 version unless you ask for the older one.
+when:
+  - A client or insurer asks how your security lines up with NIST.
+  - You need a plan to improve security but do not know where to begin.
+  - You are preparing for an audit and need a gap list.
+  - You want your controls mapped to another standard such as ISO 27001.
+you_give:
+  - A description of your security today
+  - Your goals or target level
+  - Framework version (optional)
+  - Standards to map to (optional)
+you_get:
+  - Current and target profile
+  - Gap table with priorities
+  - Maturity tier rating
+  - Step by step action plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

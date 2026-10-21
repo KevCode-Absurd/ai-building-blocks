@@ -6,6 +6,25 @@ summary: Share what you have posted and know first-hand. Get three to five subje
 job: grow-social
 headline: Content pillar finder
 subhead: Share what you have posted and know first-hand. Get three to five subjects you can post about again and again.
+explain: |
+  Three to five subjects you can post about again and again, chosen from what you have already published and what you know first-hand. That ends the weekly question of what to post, and it keeps your feed from sounding like everyone else's.
+
+  You share your past posts, your work history and the questions people ask you. The skill groups them into themes, then tests each theme with four questions, such as whether you have real experience in it and whether your audience cares. It narrows the list to subjects that are specific, not broad labels like marketing. It also names what to drop, so you stop spending time on posts that do not fit any pillar.
+when:
+  - You have run out of ideas and post whatever comes to mind.
+  - You have posted for months and cannot say what you are known for.
+  - You are starting a personal brand and need a few clear subjects.
+  - Your content feels scattered and followers do not know what to expect.
+you_give:
+  - Links or copies of your past posts
+  - Your work history and expertise
+  - Questions your audience asks you
+  - Which posts did well (optional)
+you_get:
+  - Three to five specific pillar subjects
+  - A reason each one passed the tests
+  - A list of themes to drop
+  - Starter post ideas per pillar
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

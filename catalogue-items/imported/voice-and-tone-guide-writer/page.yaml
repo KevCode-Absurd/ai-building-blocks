@@ -6,6 +6,25 @@ summary: Describe how your brand talks. Get voice traits, tone by situation, wor
 job: brand-file
 headline: Voice and tone guide writer
 subhead: Describe how your brand talks. Get voice traits, tone by situation, word lists and side-by-side examples.
+explain: |
+  A voice and tone guide anyone can use, from a new writer to an AI assistant. It tells people how your brand sounds and how that shifts from a sales page to an apology email.
+
+  You describe the brand, the audience, and a handful of writing samples and brands you admire. The skill builds a few voice traits, each with what it means and what it does not. It then maps tone to situations such as support, sales or bad news. You also get words to use and avoid, and pairs of off-voice and on-voice examples. It can also check existing copy against the guide and point out where it drifts.
+when:
+  - Your copy sounds different on every page and channel.
+  - You are handing writing to a freelancer or an AI tool and need rules.
+  - Your brand has changed and the old voice no longer fits.
+  - Your writing feels off but you cannot say why.
+you_give:
+  - A short description of the brand and audience
+  - Five to ten samples of your writing (optional)
+  - Brands whose voice you like
+  - Any traits you already want
+you_get:
+  - Three to five voice traits with clear limits
+  - A tone guide by situation
+  - Words and phrases to use and avoid
+  - Side-by-side before and after examples
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

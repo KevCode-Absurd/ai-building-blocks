@@ -6,6 +6,24 @@ summary: Point it at a set of changes. Get a review against your coding standard
 job: test-and-fix-code
 headline: Code change reviewer
 subhead: Point it at a set of changes. Get a review against your coding standards and your spec, side by side.
+explain: |
+  Two reviews of the same set of changes, side by side: does the code follow your team's standards, and does it do what the ticket asked? Keeping them apart stops one from muddying the other.
+
+  You give it a starting point such as a commit, branch or tag. It checks that the starting point is real and that there is a diff. Then it finds the spec, from linked issues, a file you point to or docs in the repo, and gathers every document about how code should be written. Two helper agents review in parallel, one per question, and their findings are merged into one report.
+when:
+  - You finished a branch and want a check before opening a pull request.
+  - You are reviewing a teammate's work against the original ticket.
+  - You want to know if a change breaks your written coding standards.
+  - You are unsure the code covers everything the spec asked for.
+you_give:
+  - A branch, tag or commit to compare against
+  - The ticket or spec (optional)
+  - Your coding standards file (optional)
+you_get:
+  - Standards findings
+  - Spec findings
+  - One merged review
+  - A note if no spec could be found
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

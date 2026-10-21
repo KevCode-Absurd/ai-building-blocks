@@ -6,6 +6,25 @@ summary: Paste what the buyer said. Get what it really means, a reply that has w
 job: sell-and-negotiate
 headline: Live objection responder
 subhead: Paste what the buyer said. Get what it really means, a reply that has worked before and proof to use.
+explain: |
+  When a buyer says "too expensive" or "we're talking to a rival", you need an answer now. Paste what they said and get what they likely mean, a reply that has worked before and proof to back it.
+
+  It first checks what you know about the deal, then sorts the objection into what is really being said, such as price, trust, timing or a rival's pull. It then gathers your own evidence: past wins and losses, direct customer quotes, case studies and security or ROI documents. Finally it builds a reply using that evidence, grounded in your history rather than generic scripts.
+when:
+  - A prospect just said you cost too much.
+  - A buyer is comparing you with a named competitor.
+  - You are on a call and need a response in minutes.
+  - You want a reply built on real customer quotes.
+you_give:
+  - The objection in the buyer's words
+  - What you know about the deal
+  - Win and loss notes (optional)
+  - Customer quotes and case studies (optional)
+you_get:
+  - What the objection really means
+  - A reply that fits the deal
+  - Proof points to use
+  - Evidence from your own history
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

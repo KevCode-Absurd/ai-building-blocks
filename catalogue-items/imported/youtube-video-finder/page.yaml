@@ -6,6 +6,23 @@ summary: Say a topic. Get matching videos and channels, with transcripts for the
 job: grow-social
 headline: YouTube video finder
 subhead: Say a topic. Get matching videos and channels, with transcripts for the ones you pick. Collects data from websites.
+explain: |
+  Name a topic and get matching YouTube videos, channels or playlists, then pull transcripts for the ones you pick.
+
+  It searches YouTube through TranscriptAPI, a service that needs your key and gives a small free allowance. Each search page costs one credit. You can filter by video, channel, playlist or movie, sort by relevance or views, limit to the past hour, day, week, month or year, and set a short, medium or long length. Results come in pages of up to 50. For a recent best-performing video on a subject, you sort by views and filter by month. Then you choose the winners and get their transcripts, which saves you from watching a dozen videos to find two that matter.
+when:
+  - You are researching a topic and want the best recent videos on it.
+  - You need to find channels that cover a niche.
+  - You want long tutorials from the past month, sorted by views.
+  - You want to read what an expert said instead of watching it.
+you_give:
+  - A topic or search phrase
+  - Filters such as date, length and sort order (optional)
+  - Your TranscriptAPI key
+you_get:
+  - A ranked list of videos, channels or playlists
+  - Transcripts for the ones you pick
+  - A count of credits used
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

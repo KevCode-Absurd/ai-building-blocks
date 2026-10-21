@@ -6,6 +6,25 @@ summary: Run it on recent orders. Get gift messages, recipients and gift flags i
 job: run-your-store
 headline: Gift message collector
 subhead: Run it on recent orders. Get gift messages, recipients and gift flags in one list for packing slips.
+explain: |
+  Every gift note for your open orders on one sheet, ready for the packing table. It scans recent unfulfilled Shopify orders and pulls out gift messages, recipient names and gift flags from custom fields and order notes.
+
+  You choose how far back to look and which field names your store uses, such as gift_message, gift_note or Gift Wrap. It also checks the free-text order note. Nothing in your store is changed. The sheet holds text customers wrote, so treat it like any customer data file. It needs a signed-in Shopify session with permission to read orders.
+when:
+  - Gift orders are arriving and the packing team needs the messages.
+  - You print notes on slips and keep missing some.
+  - Customers put their gift note in the order comments instead of the form.
+  - You want to see which orders are gifts before shipping.
+you_give:
+  - Store domain
+  - How many days back to look
+  - Order status to include (optional)
+  - Your custom field names (optional)
+you_get:
+  - One list of gift messages by order
+  - Recipient names
+  - Gift flags per order
+  - A file ready for packing slips
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

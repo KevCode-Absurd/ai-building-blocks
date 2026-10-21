@@ -6,6 +6,27 @@ summary: Describe your launch or push. Get a brief with goals, audience, message
 job: plan-strategy
 headline: Campaign brief and calendar builder
 subhead: Describe your launch or push. Get a brief with goals, audience, messages, channels and a week-by-week calendar.
+explain: |
+  A launch plan you can hand to a team: goals, audience, messages, channels and a week-by-week calendar, all in one brief. Describe your push and the skill fills each section, asking for any key detail that is missing first.
+
+  It starts from four inputs: the goal, the audience, the dates and the budget range. The brief then sets a named campaign with a measurable target, defines who it is aimed at, writes the core messages, picks channels, and lays out content by week with success measures. If you give no budget, it writes a plan that works at any spend and notes where money would change choices.
+when:
+  - You have a product launch in six weeks and no written plan.
+  - Your team keeps asking what the campaign is trying to achieve.
+  - You need a content calendar that ties each post to a goal.
+  - You want one document to share with stakeholders for approval.
+you_give:
+  - Campaign goal
+  - Target audience and their pain points
+  - Dates or deadline
+  - Budget range (optional)
+  - Past results or brand rules (optional)
+you_get:
+  - A campaign brief with a measurable goal
+  - Audience and message sections
+  - A channel plan
+  - A week-by-week content calendar
+  - Success measures
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

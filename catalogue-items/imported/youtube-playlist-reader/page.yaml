@@ -6,6 +6,23 @@ summary: Give it a playlist. Get every video listed, with transcripts for the on
 job: research-topics
 headline: YouTube playlist reader
 subhead: Give it a playlist. Get every video listed, with transcripts for the ones you want. Collects data from websites.
+explain: |
+  Give it a YouTube playlist and get back every video in it, with transcripts for the ones you pick.
+
+  It accepts a playlist link or ID, including a channel's uploads list. Results come in pages of 100 videos, and the skill follows the continuation token until the list is complete. Each page costs one credit on TranscriptAPI, which gives a small number of free credits and needs a key. From the list you choose which videos matter, and it fetches their transcripts one by one. That makes a course, a conference series or a creator's best-of list something you can read, search and quote without watching hours of video.
+when:
+  - You found a course playlist and want it as a text list.
+  - You need transcripts from a conference series.
+  - You want a full video list from a channel's uploads.
+  - You want to find the one talk in a playlist worth watching.
+you_give:
+  - A playlist link or ID
+  - Which videos you want transcripts for (optional)
+  - Your TranscriptAPI key
+you_get:
+  - A full list of videos with titles and IDs
+  - Transcripts for the videos you choose
+  - A count of credits used
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

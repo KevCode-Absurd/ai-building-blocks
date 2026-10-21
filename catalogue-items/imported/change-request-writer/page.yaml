@@ -6,6 +6,26 @@ summary: Describe a system or process change. Get a change request with impact, 
 job: document-work
 headline: Change request writer
 subhead: Describe a system or process change. Get a change request with impact, risks, rollback steps and who to tell.
+explain: |
+  A formal change request for a system or process change, with impact, risks, rollback steps and who to tell. Describe the change and you get a document ready for approval.
+
+  The request follows four stages: assess what is changing, who is affected and how big the change is; plan communication, training, support and timeline; execute with a clear why, then monitor adoption; and sustain by measuring and reinforcing. It sets the why before the what, names what people lose as well as gain, and gives a clear way to ask questions. The output has a title, priority, status, description, business case, risks, rollback and approvals.
+when:
+  - IT or your boss needs a change request before you can touch a system.
+  - You are retiring a process and want to show you thought it through.
+  - You must list risks and a rollback in one place.
+  - A change touches several teams and you need to name who to inform.
+you_give:
+  - A description of the change
+  - Who is affected
+  - Dates and constraints
+  - Reasons for the change (optional)
+you_get:
+  - A structured change request
+  - An impact and risk assessment
+  - A rollback plan
+  - A communication and training plan
+  - A list of people to tell
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

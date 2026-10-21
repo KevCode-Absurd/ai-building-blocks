@@ -6,6 +6,26 @@ summary: Name the meeting and company. Get sharp questions, benchmarks and red f
 job: money-and-investing
 headline: Diligence meeting prep writer
 subhead: Name the meeting and company. Get sharp questions, benchmarks and red flags to probe.
+explain: |
+  A question list for a diligence meeting, ordered by priority, with the red flags to probe. You walk in knowing what to ask and what a weak answer sounds like.
+
+  Start by naming the meeting type: management presentation, expert call, customer reference, advisor check-in or site visit. Add who attends, which area you are focused on, what you already know from the data room, and your main worries. The skill then builds the questions by topic. For a management meeting those include business overview, revenue and growth, competitive position, and operations. Early questions warm the room up, and later ones go after the numbers. Benchmarks help you judge the answers.
+when:
+  - You have a management presentation with a target company next week.
+  - You are about to speak with a customer reference and need sharp questions.
+  - The data room raised concerns and you want to test them live.
+  - A teammate will lead the call and needs a briefing sheet.
+you_give:
+  - The meeting type and attendees
+  - The company and its sector
+  - What you already learned from documents
+  - Your biggest concerns (optional)
+you_get:
+  - Questions grouped by topic and priority
+  - Warm-up questions to open the meeting
+  - Benchmarks to compare answers against
+  - Red flags to listen for
+  - Follow-up probes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

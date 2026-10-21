@@ -6,6 +6,25 @@ summary: Give it a company's debt, equity and market inputs. Get its WACC with c
 job: money-and-investing
 headline: Cost of capital calculator
 subhead: Give it a company's debt, equity and market inputs. Get its WACC with cost of equity and debt shown.
+explain: |
+  A company's weighted average cost of capital with every input shown, so you can use it in a valuation or a capital budget and defend it. You see the cost of equity, cost of debt and the weights that produce the final rate.
+
+  The skill takes market inputs: risk-free rate, equity risk premium, beta, debt, equity and tax rate. It unlevers and relevers beta to match the target capital structure, uses market value of debt, and computes the cost of equity with CAPM. Then it weights each source and gives a written memo with the formula and every number. Scripts and reference files back the calculation, so you can rerun it with new assumptions.
+when:
+  - You are building a discounted cash flow and need a discount rate.
+  - A project needs a hurdle rate for approval.
+  - You want to compare a company's beta to peers.
+  - You need to explain how you got the rate to a reviewer.
+you_give:
+  - Debt and equity values
+  - Risk-free rate and market premium
+  - Beta or peer betas
+  - Tax rate and cost of debt
+you_get:
+  - WACC figure
+  - Cost of equity and cost of debt
+  - Beta adjustment steps
+  - Computation memo
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

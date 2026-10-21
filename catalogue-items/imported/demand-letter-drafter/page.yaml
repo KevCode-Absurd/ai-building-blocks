@@ -6,6 +6,26 @@ summary: Give it your finished fact sheet. Get a demand letter draft and a send 
 job: check-contracts
 headline: Demand letter drafter
 subhead: Give it your finished fact sheet. Get a demand letter draft and a send checklist. A first draft, not legal advice.
+explain: |
+  A demand letter draft and a checklist for after you send it, built from a finished fact sheet. It refuses to start if the fact sheet is missing, since the care is in what comes before the writing.
+
+  Before drafting it runs a set of checks: privileged material, statements that could be used against you, earlier settlement offers, whether you have waived anything, tone and factual accuracy. Quotes stay word for word, and any that cannot be checked are marked to verify rather than guessed. You review the draft in chat, then it saves a Word file and the checklist. It is a first draft, not legal advice. Have a lawyer review it.
+when:
+  - You have finished your fact sheet and need the letter itself.
+  - A client has not paid and you want a firm but safe first letter.
+  - You worry a draft might admit something you did not mean to.
+  - You want a list of what to do after the letter goes out.
+you_give:
+  - Completed fact sheet from the intake step
+  - Your house style or sample letter (optional)
+  - Tone and response deadline
+  - Contract or email text to quote
+you_get:
+  - Demand letter draft
+  - Pre-draft risk check
+  - Word file
+  - Post-send checklist
+  - Notes on quotes to verify
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it a long AI session. Get a structured summary that keeps files, d
 job: set-up-ai
 headline: Long chat summariser
 subhead: Give it a long AI session. Get a structured summary that keeps files, decisions and next steps.
+explain: |
+  A structured summary of a long AI session that keeps the file changes, decisions and next steps, so a fresh chat can pick up without losing the thread. The aim is fewer total tokens for the whole task, not the smallest summary.
+
+  The summary has fixed sections: what you set out to do, which files were touched, what was decided and why, and what comes next. When the chat grows again, only the newly cut part is summarised and merged into the existing summary. That keeps details from fading with each rewrite. The skill also explains why a plain one-paragraph summary makes agents forget which files they edited, and how to test whether your summary kept the facts that matter.
+when:
+  - Your coding session hit the context limit and you must start a new chat.
+  - Your AI keeps forgetting which files it already changed.
+  - You are building a tool that must compress conversation history.
+  - You want to check whether a summary dropped something important.
+you_give:
+  - The long chat or its log
+  - The goal of the session
+  - Files or paths that matter (optional)
+  - Questions the summary must still answer (optional)
+you_get:
+  - A sectioned session summary
+  - A list of changed files
+  - Decisions and their reasons
+  - Clear next steps
+  - A checklist to test the summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

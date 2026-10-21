@@ -6,6 +6,26 @@ summary: Say what hardware you have. Get Ollama and Open WebUI running local mod
 job: set-up-ai
 headline: Local AI model setup
 subhead: Say what hardware you have. Get Ollama and Open WebUI running local models, tuned for your graphics card.
+explain: |
+  Run AI models on your own computer, tuned for your graphics card, with a chat screen in your browser. Say what hardware you have and get Ollama and Open WebUI working together.
+
+  It starts with install steps for Ollama, then pulls a model sized to your memory and lists quantization choices. A model selection guide helps match a model to the card. Then it gives a full Docker Compose setup with Open WebUI, and optional LiteLLM proxy for one common address. It also shows chat, embeddings and Python calls. You need Docker for the full setup, and a GPU helps.
+when:
+  - You want a private chat with an AI that never leaves your machine.
+  - You have a gaming GPU and do not know which model fits.
+  - You want one screen for several local models.
+  - Your app needs a local model address to call.
+you_give:
+  - Your computer and graphics card
+  - Operating system
+  - What you want to use the model for
+  - Docker installed (optional)
+you_get:
+  - Install and start commands
+  - A model suited to your memory
+  - A Docker Compose setup with Open WebUI
+  - API call examples
+  - Optional proxy config
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

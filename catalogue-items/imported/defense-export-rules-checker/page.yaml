@@ -6,6 +6,25 @@ summary: Describe your defense product or data. Get whether it is controlled, wh
 job: check-contracts
 headline: Defense export rules checker
 subhead: Describe your defense product or data. Get whether it is controlled, which licences apply and how to stay compliant.
+explain: |
+  Find out whether your product or data is controlled under US arms export rules, and what you must do about it. Describe the item and who will receive it, and you get a classification, the licences that apply and the steps to stay compliant.
+
+  It works through the jurisdiction test: match the item to the US Munitions List, then fall back to the commercial rules if it does not fit. From there it covers company registration, licence forms, technical assistance and manufacturing agreements, brokering, and sharing technology with foreign employees. It can also walk you through a voluntary disclosure. It is an AI guide, so confirm real decisions with trade counsel.
+when:
+  - You want to sell a component overseas and are not sure it is controlled.
+  - A foreign national joins your team and will see technical data.
+  - You need to know which licence form fits your deal.
+  - You found a possible violation and need to know how to report it.
+you_give:
+  - Description of the item or technical data
+  - Destination country and end user
+  - Your registration status (optional)
+  - Details of any foreign persons involved (optional)
+you_get:
+  - Jurisdiction and classification analysis
+  - Licence or agreement needed
+  - Compliance checklist
+  - Disclosure steps if relevant
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

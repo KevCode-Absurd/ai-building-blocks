@@ -6,6 +6,26 @@ summary: Describe a business process. Get a swim-lane map, cycle times and the o
 job: organise-work
 headline: Process bottleneck finder
 subhead: Describe a business process. Get a swim-lane map, cycle times and the one stage holding everything up.
+explain: |
+  The one stage that holds your process back, named and ranked, with a likely cause. Most elapsed time in a process is waiting, not work. This finds where the waiting piles up so you fix the right stage.
+
+  You describe the process from start to finish. Claude draws a swim-lane map in BPMN style, then works through cycle times per stage: typical and slow-case times, the share of time spent on real work, and throughput using Little's Law. It uses Lean and Theory of Constraints ideas to rank stages by severity and gives a root-cause guess for each. Small Python tools do the math, so you need Python available.
+when:
+  - Onboarding, procurement or claims take far longer than anyone expects.
+  - You want to speed up a process but do not know which stage to fix first.
+  - You need a map of how work moves between teams.
+  - You have timestamps for each stage and want to see where work waits.
+you_give:
+  - A description of the process and its stages
+  - Cycle time or timestamp data per stage (optional)
+  - Who owns each stage (optional)
+  - Volume of work per week or month (optional)
+you_get:
+  - A swim-lane process map
+  - A ranked list of bottlenecks
+  - Cycle time figures per stage
+  - A root-cause guess for each bottleneck
+  - The share of time spent on real work
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

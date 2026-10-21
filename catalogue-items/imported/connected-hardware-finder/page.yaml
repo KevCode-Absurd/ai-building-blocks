@@ -6,6 +6,24 @@ summary: Ask what devices are plugged in. Get them listed with the add-ons each 
 job: build-software
 headline: Connected hardware finder
 subhead: Ask what devices are plugged in. Get them listed with the add-ons each one needs.
+explain: |
+  A quick answer to what hardware is plugged into your computer and what MATLAB add-ons each device needs. You stop hunting through menus to see why a board is not recognised.
+
+  You ask in plain words, such as what is connected, which devices handle CAN, or what the USB data acquisition unit can do. Claude uses the helper scripts that ship with the skill to list devices, search by capability and read a device's details. It then checks whether the support package for each device is installed and says what is missing. It only reports. To collect data or program a device, you move on to a device-specific skill. It needs MATLAB installed.
+when:
+  - You plugged in a board and MATLAB does not seem to see it.
+  - You need to know which of your devices support analogue input.
+  - A project needs a support package and you are unsure if it is installed.
+  - You inherited a lab setup and want an inventory.
+you_give:
+  - Your question about devices
+  - MATLAB on your computer
+  - Device names or capabilities of interest (optional)
+you_get:
+  - A list of connected devices
+  - Devices matched to a capability
+  - Details for a named device
+  - The support packages you need to install
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

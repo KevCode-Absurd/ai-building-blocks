@@ -6,6 +6,25 @@ summary: Give it a prompt and test cases. Get scores for each version and a bett
 job: set-up-ai
 headline: Prompt tester and tuner
 subhead: Give it a prompt and test cases. Get scores for each version and a better prompt backed by results.
+explain: |
+  A prompt improved by results, not opinion. You get scores for each version against your test cases, so you can see which edits helped and by how much.
+
+  The skill will not touch a prompt without a baseline. It builds a set of 10 to 20 test cases with expected answers if you lack one, measures the current prompt, then tests each change against the same set. It prefers built-in features such as structured output over wording tricks, and adds scaffolding only when the scores show a gain. Three small Python tools handle prompt analysis, RAG quality checks and agent configuration checks. You supply your provider's prices for cost figures.
+when:
+  - You keep tweaking a prompt and cannot tell if it is improving.
+  - You need to compare several prompt versions with numbers.
+  - Your retrieval setup returns weak or unfaithful answers.
+  - You want to see how many tokens a prompt costs before you ship it.
+you_give:
+  - Current prompt
+  - Test cases with expected outputs (or help building them)
+  - Model provider and pricing (optional)
+  - Retrieval or agent setup if relevant (optional)
+you_get:
+  - Baseline score
+  - Scores for each new version
+  - Improved prompt with proof
+  - Token and cost estimate
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

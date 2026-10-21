@@ -6,6 +6,27 @@ summary: Give it a keyword. Get a full SEO blog post with tables, FAQ and option
 job: get-found-in-search
 headline: WordPress blog writer
 subhead: Give it a keyword. Get a full SEO blog post with tables, FAQ and optional Yoast fields, ready for WordPress.
+explain: |
+  A full blog post built for search and ready to paste into WordPress. You give a keyword and get a long, structured article with the extras that usually take another hour.
+
+  You set the title, primary keyword and search intent: informational, commercial or transactional. The skill writes the article with a short answer box near the top, comparison tables, clear headings and an FAQ section. On request it adds Yoast fields, such as meta title, description and slug, and JSON-LD schema markup. It writes in an expert, direct voice and keeps structure consistent so every post in your blog looks like it belongs to the same site.
+when:
+  - You need a new post for a keyword and have no time to draft.
+  - Your posts lack tables and an FAQ.
+  - You want Yoast fields filled in with the post.
+  - You run a content calendar and need consistent structure.
+you_give:
+  - Post title
+  - Primary keyword
+  - Search intent
+  - Secondary keywords (optional)
+  - Yoast and schema needs (optional)
+you_get:
+  - Full long-form post
+  - Comparison tables
+  - FAQ section
+  - Yoast title, description and slug (optional)
+  - JSON-LD schema (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

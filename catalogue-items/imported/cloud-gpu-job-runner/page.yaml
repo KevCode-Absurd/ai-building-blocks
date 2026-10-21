@@ -6,6 +6,26 @@ summary: Give it your Python code. Get it running on rented GPUs, or live as a w
 job: ship-and-host
 headline: Cloud GPU job runner
 subhead: Give it your Python code. Get it running on rented GPUs, or live as a web API, with no server to manage.
+explain: |
+  Your Python code runs on rented GPUs, or goes live as a web endpoint, and you do not manage a server. You pay by the second, and everything shuts down to zero when idle.
+
+  The setup uses Modal. You describe the container, the GPU type and the function in Python, with no config files. You can run a one-off job, a batch of many jobs in parallel, a scheduled task or a web API that scales up with traffic. The skill covers picking a GPU from small to very large, caching model files so starts are fast, storing weights and results, and keeping secrets safe. It also notes when another service suits you better, such as long-running machines.
+when:
+  - Your laptop cannot run the model you want to test.
+  - You want to serve a model as an API without a server.
+  - You have thousands of items to process in parallel.
+  - You need a job to run on a schedule on a GPU.
+you_give:
+  - Your Python code or model
+  - The GPU size you need
+  - Whether it is a job, a schedule or an API
+  - A Modal account
+you_get:
+  - A Modal app in Python
+  - GPU and container settings
+  - A deploy or run command
+  - Caching for model files
+  - Notes on cost
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your new product. Get one canvas joining your strategy to cost
 job: plan-strategy
 headline: Startup canvas builder
 subhead: Describe your new product. Get one canvas joining your strategy to costs and revenue.
+explain: |
+  A one-page canvas for a new product that joins your strategy to its costs and revenue. It uses the Startup Canvas by Paweł Huryn: nine strategy sections plus cost structure and revenue streams.
+
+  The point is to keep strategy and business model apart, unlike the Business Model Canvas or Lean Canvas. The strategy sections cover your vision, what you will not do, what stops rivals copying you, and the metrics that show it is working. The skill leaves out boxes that rarely help early products, such as key partners. Use it when launching a new product or testing a startup concept.
+when:
+  - You are about to launch a new product and need a strategy.
+  - You want to say what you will not do, not only what you will.
+  - You need to show how costs and revenue fit your strategy.
+  - Lean Canvas feels too thin for your idea.
+you_give:
+  - Your product or startup idea
+  - Who it is for
+  - Known costs and pricing ideas (optional)
+you_get:
+  - A completed Startup Canvas
+  - Vision and trade-offs
+  - A test of what rivals cannot copy
+  - Cost and revenue sections
+  - Key metrics for the strategy
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

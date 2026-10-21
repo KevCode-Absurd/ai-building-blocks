@@ -6,6 +6,25 @@ summary: Give it an existing script or project. Get it ready to run as an Apify 
 job: build-software
 headline: Apify Actor converter
 subhead: Give it an existing script or project. Get it ready to run as an Apify Actor.
+explain: |
+  Your existing script or project, made ready to run as an Apify Actor so it can run in the cloud, take input from a form and give back structured results. You need an Apify account.
+
+  The skill follows an eight step list. It studies your project to find the language, entry point, inputs and outputs. It runs the Apify init command to create the Actor folders, then wraps your code with the Apify SDK start and finish steps in your language. It writes an input schema, an output schema if useful, and the metadata file. Then it tests locally with a sample input and pushes the Actor to Apify. It works for scripts, command line tools and Crawlee projects.
+when:
+  - You have a scraper on your laptop and want it in the cloud.
+  - You want a command line tool to be usable by non-coders through a form.
+  - You are moving a Crawlee project onto Apify.
+  - You want to publish your tool for others to run.
+you_give:
+  - Your existing code or project folder
+  - What inputs it takes
+  - What it should output
+  - Apify account and token
+you_get:
+  - Your project wrapped as an Actor
+  - Input and output schema files
+  - Updated Actor settings file
+  - Local test and push steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

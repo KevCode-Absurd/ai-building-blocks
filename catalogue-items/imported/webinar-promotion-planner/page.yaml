@@ -6,6 +6,26 @@ summary: Give it your webinar topic and audience. Get a plan to promote it, run 
 job: grow-social
 headline: Webinar promotion planner
 subhead: Give it your webinar topic and audience. Get a plan to promote it, run it and follow up.
+explain: |
+  A full webinar plan: how to get the right people to sign up, run the session and follow up so attendees take the next step. A webinar is a funnel, and most of the gain is in the parts people skip.
+
+  You give the topic, the audience and the goal. The skill asks one group of questions at a time, then builds the promise of the event, a promotion calendar across email, social, partners and ads, and a run-of-show with the content mix. It also covers reminders, the live-versus-replay choice, and a follow-up sequence that moves attendees and no-shows to a demo, trial or call. It ends with the numbers to track.
+when:
+  - You plan a webinar and need people to actually show up.
+  - Your past webinars got sign-ups but few leads.
+  - You want a follow-up that turns attendees into buyers.
+  - You need a plan for a recurring virtual event.
+you_give:
+  - Webinar topic and the one promise
+  - Target audience
+  - Date, length and platform
+  - The action you want afterwards
+  - Your list size and channels
+you_get:
+  - Promotion calendar
+  - Run-of-show outline
+  - Reminder and follow-up emails plan
+  - Metrics to track
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

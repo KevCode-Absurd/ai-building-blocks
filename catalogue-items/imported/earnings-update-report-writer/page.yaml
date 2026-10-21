@@ -6,6 +6,25 @@ summary: Give it a company's quarterly results. Get an 8 to 12 page update on be
 job: money-and-investing
 headline: Earnings update report writer
 subhead: Give it a company's quarterly results. Get an 8 to 12 page update on beats, misses and key numbers.
+explain: |
+  An 8 to 12 page note on a company's new quarter, written for readers who already know the stock. It focuses on what is new: the beat or miss, changed estimates, and whether the thesis still holds.
+
+  Target length is 3,000 to 5,000 words, with one to three summary tables and 8 to 12 charts, ready within a day or two of results. The skill follows institutional research habits and sets the text in Times New Roman unless told otherwise. This version is built for Indian markets. It labels periods by an April to March year, such as Q3 FY26, and uses crore and lakh correctly, so you avoid a 100 times unit error.
+when:
+  - A covered company reported last night and clients expect a note.
+  - You need a fast update on an estimate change.
+  - You want a clear beat or miss section with charts.
+  - You cover Indian listed companies.
+you_give:
+  - Company name and quarter
+  - Reported results and consensus
+  - Your prior estimates and rating
+  - Style preferences (optional)
+you_get:
+  - An 8 to 12 page earnings update
+  - Summary tables and 8 to 12 charts
+  - Updated estimates and thesis check
+  - Beat and miss analysis
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

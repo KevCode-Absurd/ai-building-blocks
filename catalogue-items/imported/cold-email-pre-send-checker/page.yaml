@@ -6,6 +6,25 @@ summary: Paste a cold email and what you know of the prospect. Get claims tested
 job: write-emails
 headline: Cold email pre-send checker
 subhead: Paste a cold email and what you know of the prospect. Get claims tested, legal basics checked, and a tighter version.
+explain: |
+  A careful second opinion on a cold email before you hit send. It tests every claim about the prospect against their real page, checks legal basics, and returns a tighter version.
+
+  You paste the draft, plus the text of the pages it refers to. If it has a web tool it can fetch them. Each statement about them is marked supported, unsupported or not checked, with the evidence quoted. It also asks you to confirm any result or client you mention is true. It then checks the legal basics for the sender's and recipient's countries. If no prospect text is available after one ask, those claims stay marked as not checked.
+when:
+  - You wrote a personalized opener and want to be sure it is accurate.
+  - You are emailing a country with strict rules.
+  - You claim a client result and need it checked.
+  - A cold email feels long and you want it tighter.
+you_give:
+  - The draft with subject and body
+  - Text from the prospect's page
+  - Proof for your claims (optional)
+  - Sender and recipient countries (optional)
+you_get:
+  - A claim-by-claim check
+  - Legal basics notes
+  - Flags on unproven statements
+  - A tighter rewrite
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

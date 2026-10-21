@@ -6,6 +6,25 @@ summary: Give it up to eight single items. Get one photo of a model wearing the 
 job: product-photos
 headline: Outfit photo composer
 subhead: Give it up to eight single items. Get one photo of a model wearing the full outfit. Your image model draws it.
+explain: |
+  One photo of a model wearing a complete outfit, built from up to eight separate item pictures. Skip the studio and the model fee when you want to show how pieces look together.
+
+  You supply single items such as a sweater, hat, necklace, trousers, bag and shoes. The skill writes the prompt that tells an image model to keep each item exactly the same in colour, weave, pattern and material, and to add any missing basics. It sets the model pose, background, lighting and frame for a clean shop photo with no text or watermark. Claude does not draw the picture, so your image model or the dlazy tool does that step. It needs an image service account.
+when:
+  - You sell clothing and want styled outfit photos without a shoot.
+  - You want to show how a hat, top and necklace work together.
+  - You need a lookbook image from product flat shots.
+  - You are testing outfits before ordering photography.
+you_give:
+  - Up to eight item photos
+  - Model and style preference (optional)
+  - Background and lighting choice (optional)
+  - An image model or dlazy account
+you_get:
+  - A finished prompt for the image model
+  - One full outfit photo
+  - Items kept true to your pictures
+  - Size options for shop use
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

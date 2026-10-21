@@ -6,6 +6,25 @@ summary: Point it at your code. Get a hard line-by-line hunt for logic errors an
 job: test-and-fix-code
 headline: Hidden bug hunter
 subhead: Point it at your code. Get a hard line-by-line hunt for logic errors and gaps, sorted by how bad they are.
+explain: |
+  A hard, hostile review of your code that tries to break it. AI tools write code that looks finished but may not be right. This skill assumes the code is guilty until it proves otherwise, and works through every category of fault rather than a quick skim.
+
+  It agrees the scope first, then maps entry points and data flow, reads every relevant file line by line, and follows data across function and file boundaries, where most real bugs hide. It runs mental tests with hostile inputs such as null, empty, zero and negative values. Findings come back ranked by how bad they are, covering logic errors, security flaws and gaps.
+when:
+  - AI wrote your code and you do not trust it yet.
+  - You want a deep correctness pass before a release.
+  - Something fails rarely and you cannot find why.
+  - A style review passed but you still worry about hidden faults.
+you_give:
+  - The code, file, folder or recent changes to audit
+  - The scope you want, whole project or just a diff
+  - What the code is supposed to do (optional)
+  - Languages and frameworks used (optional)
+you_get:
+  - A list of bugs and logic errors with locations
+  - Security flaws found
+  - Findings ranked by severity
+  - Suggested fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

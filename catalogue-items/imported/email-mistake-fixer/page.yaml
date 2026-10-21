@@ -6,6 +6,24 @@ summary: Paste an email. Get small errors fixed in your own voice, and tracking 
 job: write-emails
 headline: Email mistake fixer
 subhead: Paste an email. Get small errors fixed in your own voice, and tracking bits removed from links if you ask.
+explain: |
+  Your email, with small errors fixed and your voice left alone. Paste a draft and get a corrected copy that still sounds like you and promises the same things.
+
+  The skill makes two passes. The first fixes only plain mistakes: doubled words, wrong a or an, subject and verb mismatch, mixed-up words like your and you're, and stray caps or punctuation. It leaves fragments, contractions, casual greetings and slang alone, since those are choices. If unsure, it flags the doubt in a note. Names, numbers, dates and quotes never change. The second pass runs only if you ask. It strips known tracking tags from links and keeps every other part, so links still work.
+when:
+  - You want a last check before pressing send.
+  - You do not want an editor to rewrite your tone.
+  - You want tracking tags removed from links in a message.
+  - You have a long message and typos slip by.
+you_give:
+  - Your draft email
+  - Whether to clean links (optional)
+  - Any words or names to leave alone (optional)
+you_get:
+  - The corrected email
+  - A list of what was changed
+  - Notes on things you may want to check
+  - Cleaned links (only if asked)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

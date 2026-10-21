@@ -6,6 +6,26 @@ summary: Give it new WooCommerce code. Get common AI mistakes caught, like broke
 job: test-and-fix-code
 headline: WooCommerce code checker
 subhead: Give it new WooCommerce code. Get common AI mistakes caught, like broken order storage and missed checkout checks.
+explain: |
+  A review pass that catches the mistakes AI makes in WooCommerce code before they reach a live store. These errors can lose orders or open a security hole where money is involved.
+
+  The skill checks new or changed code against a fixed rule set. Typical catches are reading order data with old post-meta calls that break on stores using high-performance order storage, and skipping checks at checkout. It also applies a security floor: escape all output, clean request data, require permission and a nonce for any change, and prepare every database query. Use it after code is written, while writing, or to audit an existing extension.
+when:
+  - AI wrote a payment or shipping extension and you want it checked.
+  - You customise checkout and fear breaking orders.
+  - Your store uses high-performance order storage.
+  - You are reviewing a plugin before putting it on a live store.
+you_give:
+  - The WooCommerce code or diff
+  - What the code is meant to do
+  - WooCommerce and PHP versions (optional)
+  - "Mode: guard pass, live or review"
+you_get:
+  - List of issues by severity
+  - Order storage and checkout problems
+  - Security fixes
+  - Corrected code suggestions
+  - Self-check before shipping
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

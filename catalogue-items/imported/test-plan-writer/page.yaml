@@ -6,6 +6,26 @@ summary: Describe what you are building. Get a test plan with what to test, at w
 job: test-and-fix-code
 headline: Test plan writer
 subhead: Describe what you are building. Get a test plan with what to test, at what level and where the gaps are.
+explain: |
+  A test plan that says what to test, at what level and where the gaps are, for the thing you are building. You spend test time on the paths that matter, not on getters and framework code.
+
+  The skill applies the testing pyramid: many fast unit tests, some integration tests and few slow end-to-end tests. It then adjusts by component. APIs get logic tests plus contract tests, data pipelines get input and idempotency checks, front ends get component, interaction and accessibility tests, and infrastructure gets smoke and load tests. It aims at business-critical paths, error handling, edge cases, security boundaries and data integrity. The plan includes coverage targets, sample cases and the gaps in any tests you already have.
+when:
+  - You are starting a project and need a test approach before coding.
+  - You inherited code with a few random tests.
+  - A manager asks what your testing strategy is.
+  - You are unsure whether to write unit or end-to-end tests.
+  - You need to decide what is not worth testing.
+you_give:
+  - A description of what you are building
+  - "The parts: API, front end, data jobs"
+  - Existing tests (optional)
+  - Time and team limits (optional)
+you_get:
+  - A test plan by component
+  - Test type for each area
+  - Coverage targets
+  - Example cases and gaps in current tests
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

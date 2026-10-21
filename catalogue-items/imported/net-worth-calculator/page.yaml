@@ -6,6 +6,24 @@ summary: List your assets and debts. Get your net worth, how it splits, and a mo
 job: money-and-investing
 headline: Net worth calculator
 subhead: List your assets and debts. Get your net worth, how it splits, and a monthly view to track.
+explain: |
+  Your net worth on one page, with a view you can repeat each month. You list what you own and what you owe, and the skill does the sums and shows where the money sits.
+
+  Assets are grouped into three kinds: cash you can reach in days, investments and retirement accounts, and slower assets such as property or a business. It uses today's value, not what you paid, and debts at their current balance. It then works out three ratios: debts compared to assets, the share held as cash, and the share invested. If you have last month's figures, it shows the change and which item moved it most. It is a tracking aid, not financial advice.
+when:
+  - You have never added up everything you own and owe in one place.
+  - You want a monthly check on whether you are moving forward.
+  - You are deciding whether to pay down debt or save more.
+  - You want to see how much of your wealth is tied up in your home.
+you_give:
+  - Cash, investments, property and other assets with current values
+  - Loans, cards and other debts with balances
+  - Last period's totals (optional)
+you_get:
+  - Your net worth figure
+  - Assets split into cash, invested and slow
+  - Three health ratios
+  - A change summary since last time
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

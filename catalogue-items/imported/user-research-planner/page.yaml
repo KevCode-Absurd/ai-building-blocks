@@ -6,6 +6,24 @@ summary: Say what you need to learn. Get the right research method, a plan and a
 job: understand-customers
 headline: User research planner
 subhead: Say what you need to learn. Get the right research method, a plan and a way to store what you find.
+explain: |
+  Choose the right way to learn from users, size the study honestly, and keep what you learn in a form people can trust. 
+  The skill matches your goal and product stage to a method: open interviews for discovery, usability tests for ease of use, concept tests for ideas, or validation for a decision. It then gives a plan with objective, who to recruit, a question guide and success measures. A sample size tool gives a figure with its confidence level, such as five people per group for usability problems or about twelve for themes. Afterward it groups coded notes by tag and counts how many different people said each thing.
+when:
+  - You must decide whether to run interviews, a survey or a usability test.
+  - Your boss asks how many people you need to talk to, and why.
+  - You have a pile of interview notes and want insights you can defend.
+  - You want a shared place for research findings that stays reliable.
+you_give:
+  - What you need to learn
+  - Your product stage
+  - Who your users are
+  - Coded notes from past sessions (optional)
+you_get:
+  - A recommended research method
+  - A study plan with questions and criteria
+  - A sample size with a confidence label
+  - Ranked insights marked by how many people said them
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

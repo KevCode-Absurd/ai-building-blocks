@@ -6,6 +6,24 @@ summary: Paste a text. Get the reading strategies that fit its hard parts, in a 
 job: teach-and-train
 headline: Reading strategy picker for a text
 subhead: Paste a text. Get the reading strategies that fit its hard parts, in a teaching order.
+explain: |
+  For a given text, you get the reading strategies that fit its hard parts, in the order to teach them. This helps students who stall on a passage and need support aimed at the real barrier.
+
+  You describe the text: its genre, topic, length and what makes it hard. You also describe the readers. The skill finds the demands, such as dense vocabulary, abstract ideas or tangled structure. It then matches strategies from reading research, including predicting, questioning, summarising, clarifying and visualising. It sequences them so each builds on the last, and notes when to model, practise with guidance, and release students to try alone.
+when:
+  - Your class struggles with a dense science passage.
+  - You need to plan a lesson on a new text type.
+  - A group of students read the words but miss the meaning.
+  - You want to teach a strategy that matches the text, not a random one.
+you_give:
+  - Description or sample of the text
+  - Reader age or level
+  - What students find hard (optional)
+you_get:
+  - Strategies matched to the text
+  - Teaching order
+  - Modelling and practice steps
+  - Signs students are ready to go alone
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

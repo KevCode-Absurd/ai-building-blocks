@@ -6,6 +6,26 @@ summary: Name a local habitat. Get an inquiry cycle for young learners that link
 job: teach-and-train
 headline: Local nature inquiry cycle planner
 subhead: Name a local habitat. Get an inquiry cycle for young learners that links place, nature and community.
+explain: |
+  A term-long learning cycle for children aged 5 to 12 that starts from a real place near your school, such as a pond, a hedge or a stream. It gives teachers a clear order of work, from noticing to action, so the project does not drift.
+
+  The cycle is called SEEDS. Children first tune in to the place and gather what they already know. They then picture what could be better, try small ideas, document what happens and share it with people in the community. The plan names the activities for each stage, suggests ways to record learning through stories and portfolios, and links the work to local people who can help. It fits early years or primary groups.
+when:
+  - You teach young children and want learning anchored in a nearby habitat.
+  - Your school wants a project that involves local people and groups.
+  - You have a term to fill and want a clear order of steps.
+  - You need a way to record learning without tests.
+you_give:
+  - Age group, early years or primary
+  - The place the work will centre on
+  - Time available (optional)
+  - Local people and groups who could help (optional)
+  - A known problem or hope for the place (optional)
+you_get:
+  - A cycle overview with the place at its centre
+  - Activities for each stage
+  - Ways to record and share learning
+  - A list of community links to approach
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a README or doc. Get false claims, drift from the code and weak
 job: test-and-fix-code
 headline: Documentation checker
 subhead: Give it a README or doc. Get false claims, drift from the code and weak spots listed before you publish.
+explain: |
+  A fact check for docs before they ship. It finds claims that do not match your code, which is the typical failure when an AI writes docs from memory of how APIs usually look.
+
+  The skill reads your project's own instructions first, because they win over general rules. Then it verifies every named function, flag, endpoint, config key and file path against the real source. It runs each code sample for correct imports and signatures, and it describes what the code does, not what it was meant to do. It also checks that README, docstrings, changelog and examples still agree. You can use it right after docs are written, or before writing, or as a full audit.
+when:
+  - An AI just wrote your README and you need to trust it.
+  - You changed an API and worry that the docs are out of date.
+  - A code sample in the docs might not run.
+  - You want a final review before a release.
+you_give:
+  - The README or doc to review
+  - Access to the code it describes
+  - Your project's style rules (optional)
+  - Supported versions (optional)
+you_get:
+  - A list of false or missing claims
+  - Code samples marked as working or broken
+  - Places where docs and code disagree
+  - Fixes for each issue
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

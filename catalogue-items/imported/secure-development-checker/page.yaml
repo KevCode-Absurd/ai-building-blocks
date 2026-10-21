@@ -6,6 +6,26 @@ summary: Give it your project. Get a scan for code flaws, weak packages and expo
 job: secure-code
 headline: Secure development checker
 subhead: Give it your project. Get a scan for code flaws, weak packages and exposed secrets, with fixes ranked.
+explain: |
+  A security scan of your project that finds code flaws, risky packages and exposed secrets, with fixes ranked by severity. Three bundled Python tools do the work and can export JSON for your build pipeline.
+
+  The code scanner looks for hardcoded keys, SQL injection, cross-site scripting, command injection and unsafe file paths. The package scanner reads npm, Python and Go dependency files and reports known CVEs, affected versions, fixed versions and an overall risk score from 0 to 100. A compliance checker tests the project against SOC 2, PCI-DSS, HIPAA and GDPR. Use it before a release or when a client asks for proof of secure practice.
+when:
+  - You are about to release and want a security check on the code.
+  - A client asks whether you meet SOC 2 or GDPR basics.
+  - You want to know which outdated packages carry known vulnerabilities.
+  - You need a severity-sorted list to hand to a developer.
+you_give:
+  - Your project folder
+  - A framework to check against (optional)
+  - A severity cutoff (optional)
+  - Python installed
+you_get:
+  - Code flaw findings with locations
+  - Vulnerable packages with fixed versions
+  - A risk score from 0 to 100
+  - A compliance gap report
+  - JSON output for builds
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

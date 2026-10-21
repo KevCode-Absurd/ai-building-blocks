@@ -6,6 +6,25 @@ summary: Name a gene or cell line. Get which cancers depend on it and which drug
 job: research-topics
 headline: Cancer dependency analyst
 subhead: Name a gene or cell line. Get which cancers depend on it and which drugs work, from DepMap data.
+explain: |
+  Name a gene or cell line and see which cancers need it to survive and which drugs hit them. The skill works from DepMap, the public map of gene knockout screens in cancer cells, and gives you ranked lists you can take to the lab as ideas to test.
+
+  It finds the latest data release first and checks which files are really available, since some links are blank. Then it ranks dependencies, compares groups defined before you look, checks genes that rise and fall together, and links them to drug response data. It is careful to say that results suggest targets and do not prove a drug works. You need data downloads and a way to run code.
+when:
+  - You study a gene and want to know which cancer types rely on it.
+  - You need to pick cell lines for an experiment and want the ones most sensitive to a knockout.
+  - You are looking for drugs that match a known weakness in a tumour group.
+  - You want to check if two genes share a dependency.
+you_give:
+  - A gene name or cell line
+  - The cancer type or group to compare (optional)
+  - A DepMap release to use (optional)
+  - A computer that can download data and run code
+you_get:
+  - Ranked gene dependencies for your target
+  - Group comparisons between cell lines
+  - Related genes that behave alike
+  - Drug response links with clear limits on what they mean
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

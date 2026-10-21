@@ -6,6 +6,26 @@ summary: Tell it how a metric is worked out. Get one agreed definition as checke
 job: document-work
 headline: Metric definition writer
 subhead: Tell it how a metric is worked out. Get one agreed definition as checked YAML your team can reuse.
+explain: |
+  One agreed definition for a metric, written as YAML that a tool can check and your team can reuse. It ends the arguments over how a number is worked out when two teams run different queries for the same thing.
+
+  You give the name, the calculation, who uses it and the decision it feeds. The skill scaffolds the right YAML for a metric, dimension or entity, using a template script, and then runs a validator that checks required fields, types and references between items. It can match the exact field names the dbt Semantic Layer expects. Edge cases and known traps are written into the definition so they are not lost.
+when:
+  - Finance and marketing each have their own revenue query.
+  - You are setting up the dbt Semantic Layer and need metric files.
+  - A leader asks how churn is calculated and no one can point to a source.
+  - You are writing a data catalog entry for a key model.
+you_give:
+  - The metric or model name
+  - The calculation as SQL, a formula or plain steps
+  - Who uses it and what a good value looks like
+  - Source tables (optional)
+  - Existing YAML to check (optional)
+you_get:
+  - A filled metric, dimension or entity YAML
+  - A validation report
+  - dbt-ready field names
+  - Notes on edge cases
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

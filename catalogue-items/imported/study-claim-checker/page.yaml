@@ -6,6 +6,25 @@ summary: Give it a study or claim. Get its biases, flaws, weak statistics and ev
 job: research-topics
 headline: Study claim checker
 subhead: Give it a study or claim. Get its biases, flaws, weak statistics and evidence grade, explained in plain words.
+explain: |
+  A clear verdict on how far to trust a study or a scientific claim, in plain words. You learn what the evidence can and cannot show.
+
+  Give it the paper, the abstract or the claim. The skill works through an appraisal. It checks the study design, looks for bias and confounders, tests whether the statistics fit the question, and rates the strength of evidence using recognised grading ideas such as GRADE and the Cochrane risk-of-bias approach. It applies those tools to the right unit, such as a single study versus a body of work. When something is unclear, it says so instead of guessing, and it can also be used to teach critical reading.
+when:
+  - A news story cites a study and you want to know if it holds up.
+  - You are reading a paper for work and need to judge its weak spots.
+  - You teach students to question evidence.
+  - Someone sends you a health claim with one study behind it.
+you_give:
+  - The study, abstract or claim
+  - The question you want answered
+  - Your background with statistics (optional)
+you_get:
+  - A list of biases and confounders
+  - Notes on weak or misused statistics
+  - An evidence-strength grade
+  - A plain-language verdict
+  - Questions to ask the authors
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

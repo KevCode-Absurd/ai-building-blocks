@@ -6,6 +6,25 @@ summary: Describe what you are launching. Get a launch plan with timing, channel
 job: build-product
 headline: Product launch planner
 subhead: Describe what you are launching. Get a launch plan with timing, channels and announcement copy.
+explain: |
+  A launch plan with dates, channels and announcement copy, so a new product or feature gets noticed instead of slipping out quietly. Launches are treated as repeating events, not one big day.
+
+  Claude reads your product context file if you have one, then asks only what is missing. It builds a phased plan covering pre-launch buzz, launch day and follow-up, picks channels such as email, Product Hunt or social, and drafts announcement messages. It also covers beta launches, waitlists and a pre-launch checklist. The result is tied to your audience and goal rather than a generic template.
+when:
+  - You are about to ship a product and need a plan.
+  - A feature release deserves more than a changelog line.
+  - You want to run a Product Hunt or beta launch.
+  - You need an announcement email or post written.
+you_give:
+  - What you are launching and its main benefit
+  - Your target audience
+  - Your target date and available channels
+  - Your product context file (optional)
+you_get:
+  - A phased launch timeline
+  - Channel recommendations
+  - Announcement copy drafts
+  - A pre-launch checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

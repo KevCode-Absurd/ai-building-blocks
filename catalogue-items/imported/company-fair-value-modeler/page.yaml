@@ -6,6 +6,24 @@ summary: Give it a stock ticker. Get a fair value range from three methods, with
 job: money-and-investing
 headline: Company fair value modeler
 subhead: Give it a stock ticker. Get a fair value range from three methods, with a sensitivity grid. Collects data from websites.
+explain: |
+  A fair value range for a listed company, built three ways so you can see where the methods agree and where they do not. You also get a bull, base and bear case and a grid that shows how the price moves when growth and discount rate change.
+
+  Claude runs a five year cash flow forecast, applies peer multiples such as price to earnings, and values separate business segments when there are two or more. It picks the methods that suit the company type, so a bank is not forced through a cash flow model. It needs Python and pulls figures from public websites. It is research, not financial advice.
+when:
+  - You want a price range for a stock before you read more about it.
+  - You need to test how sensitive a valuation is to your growth guess.
+  - A company has several business lines and you want each valued on its own.
+  - You are checking whether the market price looks high or low against peers.
+you_give:
+  - A stock ticker
+  - Your own growth or margin view (optional)
+  - A list of peers to compare against (optional)
+you_get:
+  - Fair value from three methods
+  - A blended price estimate
+  - A discount rate and growth sensitivity grid
+  - Bull, base and bear scenarios
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

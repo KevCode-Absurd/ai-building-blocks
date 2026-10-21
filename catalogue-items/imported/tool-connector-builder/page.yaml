@@ -6,6 +6,26 @@ summary: Name the service. Get an MCP server that lets your AI use its tools, bu
 job: connect-tools
 headline: Tool connector builder
 subhead: Name the service. Get an MCP server that lets your AI use its tools, built and ready to test.
+explain: |
+  Give your AI access to a service by building an MCP server, a small program that exposes the service's actions as tools the AI can call. Done well, the AI picks the right action and gets useful answers back.
+
+  The skill works in four phases. First it studies the service's API and the MCP spec, then plans which tools to offer, balancing full coverage with a few workflow tools. It builds the server, defaulting to TypeScript, with clear tool names, short descriptions, paging and error messages that tell the AI what to try next. Then it tests the tools and writes evaluation questions to check the AI can use them. You need coding tools and the service's API access.
+when:
+  - You want Claude to work with a service that has no connector yet.
+  - Your internal API should be usable by an AI assistant.
+  - An existing connector returns too much text and wastes context.
+  - You want questions that test whether your connector works.
+you_give:
+  - The name of the service and its API docs
+  - API keys for testing
+  - "Language preference: TypeScript or Python (optional)"
+  - The tasks the AI should handle
+you_get:
+  - A working MCP server
+  - Tool names and descriptions
+  - Error handling that guides the AI
+  - Test questions
+  - Setup steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

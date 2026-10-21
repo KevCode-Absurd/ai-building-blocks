@@ -6,6 +6,25 @@ summary: Share a rough idea. Get it widened, stress-tested and cut to a one-page
 job: test-an-idea
 headline: Idea sharpener
 subhead: Share a rough idea. Get it widened, stress-tested and cut to a one-page concept worth acting on.
+explain: |
+  A rough idea turned into a one-page concept worth acting on. Share what you have and it widens your options, tests them hard and cuts them down to one clear direction.
+
+  The first stage restates your idea, asks pointed questions and creates variations. The second stage groups the options, stress-tests them and brings hidden assumptions into the open. The third stage writes a markdown page with the problem, the recommended direction, key assumptions, the smallest first version and a list of things you will not do. It asks before saving the file into your project. It works as a back-and-forth chat, so expect to answer questions along the way.
+when:
+  - You have a vague idea and need to know what it really is.
+  - You want to compare a few versions of a plan before picking one.
+  - You fear a plan has hidden weak spots and want them found.
+  - You need a short page to share with a partner or developer.
+you_give:
+  - Your rough idea
+  - Who it is for (optional)
+  - Limits on time, money or skills (optional)
+  - Answers to its sharpening questions
+you_get:
+  - Variations of the idea
+  - A list of assumptions to check
+  - A one-page concept
+  - A not-doing list to keep scope tight
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

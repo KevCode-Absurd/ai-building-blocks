@@ -6,6 +6,25 @@ summary: Get revenue, order count and average order value split by campaign, sou
 job: read-ad-results
 headline: UTM revenue reader
 subhead: Get revenue, order count and average order value split by campaign, source and medium from your order links.
+explain: |
+  You get revenue, orders and average order value split by source, medium and campaign, taken from your own Shopify orders with no extra analytics tool.
+
+  The skill pulls recent paid orders, reads the landing page link on each one, and pulls out the UTM tags in it. Orders are then totalled by the grouping you choose: source, medium, campaign or source and medium together. You set how many days back to look, hide groups with very few orders, and choose whether to show orders with no tags. It only reads, so nothing in your store changes. One limit: orders made outside the storefront, such as in-person sales, draft orders or subscriptions, carry no landing link and appear untagged.
+when:
+  - You spend on several channels and want to know which ones pay back.
+  - Your email and social links use UTM tags and you want the sales behind them.
+  - You are choosing where to put next month's ad budget.
+  - You want a quick channel report without setting up another tool.
+you_give:
+  - Your store domain
+  - How many days back to look
+  - How to group the results
+  - A Shopify login with read access to orders
+you_get:
+  - Revenue by source, medium or campaign
+  - Order count and average order value per group
+  - Untagged orders shown separately
+  - A JSON export (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

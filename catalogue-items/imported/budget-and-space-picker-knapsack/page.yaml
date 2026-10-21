@@ -6,6 +6,25 @@ summary: Give it items with values and costs. Get the best set to pick within yo
 job: plan-supply-chain
 headline: Budget and space picker (knapsack)
 subhead: Give it items with values and costs. Get the best set to pick within your budget, weight or space limit.
+explain: |
+  Out of many options, pick the set that gives the most value without going over your budget, weight, time or space limit.
+
+  The skill first works out which kind of problem you have: each item once or many times, one limit or several, one container or several. It asks for each item's value and cost, any must-have items, items that cannot go together, and category quotas. It then uses the matching method, usually dynamic programming for exact answers on small to medium lists and quicker approximations on large ones. It shows which items are in, which are out, and the total value used against the limit.
+when:
+  - You have ten projects and a budget that covers only some.
+  - You must pack a shipment with a weight limit and want the most valuable load.
+  - You are choosing features for a release with limited team time.
+  - You need to fill a shelf or truck with products by space and profit.
+you_give:
+  - A list of items with value and cost or weight
+  - Your limit, such as budget, weight or space
+  - Must-have items or conflicts (optional)
+  - Category quotas (optional)
+you_get:
+  - The best set of items to pick
+  - Items left out and why
+  - Total value against the limit
+  - A note on the method used
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

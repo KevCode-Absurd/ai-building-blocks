@@ -6,6 +6,25 @@ summary: Give it the job and the resumes. Get a ranked shortlist scored only on 
 job: hire-people
 headline: Applicant shortlist builder
 subhead: Give it the job and the resumes. Get a ranked shortlist scored only on the job needs, with replies drafted.
+explain: |
+  A ranked shortlist of the people worth calling, scored only on what the job needs, with reply drafts ready. It turns a full inbox of applications into a short list you can act on today.
+
+  It will not score anyone until there is a rubric, which is the list of skills and experience in the job post. If you have no rubric, it builds one with you first. Each candidate is scored only against those points. Name, age, gender, photo, address, school prestige, gaps and resume looks are never used. It reads applications from your hiring inbox or uploaded files, pulls out only evidence that matters for the role, ranks people, and drafts replies and interview scheduling.
+when:
+  - Fifty applications arrived and you have an hour.
+  - You want your hiring choices to be fair and easy to explain.
+  - The best field worker has the worst-formatted resume.
+  - You need polite replies to people you won't interview.
+you_give:
+  - The job post or a rubric
+  - Resumes or access to the hiring inbox
+  - How many people you want on the shortlist
+  - Tone for replies (optional)
+you_get:
+  - A rubric if you lack one
+  - A ranked shortlist with evidence
+  - Fairness notes on what was ignored
+  - Draft replies and interview invites
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

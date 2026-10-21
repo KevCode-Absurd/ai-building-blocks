@@ -6,6 +6,25 @@ summary: Give it an earnings call transcript. Get shifts in management tone and 
 job: money-and-investing
 headline: Earnings call tone reader
 subhead: Give it an earnings call transcript. Get shifts in management tone and confidence flagged, with quotes.
+explain: |
+  A report on how management sounded on the call, not just what they said. Give it a transcript and you get shifts in tone and confidence flagged, each backed by a quote.
+
+  The skill cleans the transcript, strips legal disclaimers, and treats the Q&A as the most revealing part. It scores sentiment with finance-aware word lists, because general tools mislabel words like cost and tax as negative. It compares the positive to negative ratio with the last four quarters. It also counts hedging words such as uncertain, might and assume, which often rise before a price drop. Finally, it compares management's tone with the analysts' questions to spot friction.
+when:
+  - You want a read beyond the numbers before you trade or decide.
+  - You follow a company and want to track tone quarter to quarter.
+  - You suspect management got more cautious in the Q&A.
+  - You need a short note on what management talked about more or less.
+you_give:
+  - The earnings call transcript
+  - Transcripts from prior quarters (optional)
+  - Whether to focus on prepared remarks or Q&A
+  - The company name
+you_get:
+  - A tone shift score against past quarters
+  - Flagged hedging and uncertainty language
+  - Quotes that support each flag
+  - A sentiment report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe your product's feel. Get a DESIGN.md with type, colour, layout
 job: design-work
 headline: Design system file writer
 subhead: Describe your product's feel. Get a DESIGN.md with type, colour, layout, motion and rules against generic UI.
+explain: |
+  One DESIGN.md file that tells an AI screen generator exactly how your product should look, so the screens stop coming out generic. It is written for Google Stitch, but the file reads fine as a plain style brief.
+
+  You describe the feel you want. The skill sets three dials first: how dense the layout is, how much it breaks symmetry, and how much it moves. Then it names each colour with a hex code and a job, caps you at one accent, and bans the purple neon look. It picks fonts, spacing, and button and card behaviour, and ends with a list of banned clichés. Review the result against your real brand before you use it.
+when:
+  - You want AI-made screens to match one clear look instead of the default template style.
+  - You are starting a new product and need a written design direction before any screens exist.
+  - Your generated interfaces keep coming out with the same purple gradients and rounded cards.
+  - You use Google Stitch and want a single file to paste in as the style source.
+you_give:
+  - A few lines on your product and its mood
+  - Who the product is for
+  - Colours or fonts you already use (optional)
+  - Apps or sites whose look you like (optional)
+you_get:
+  - A DESIGN.md file ready to paste into Stitch
+  - Named colours with hex codes and roles
+  - Font and spacing rules
+  - Button, card and input behaviour notes
+  - A list of banned design clichés
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

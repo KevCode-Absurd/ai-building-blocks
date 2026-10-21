@@ -6,6 +6,25 @@ summary: Name your market. Get each rival's product, pricing and customer views 
 job: study-competitors
 headline: Competitor battle card builder
 subhead: Name your market. Get each rival's product, pricing and customer views with battle cards and a feature grid.
+explain: |
+  A set of battle cards and a pricing landscape for the rivals in your market, built from three rounds of research. Sales gets a one-page answer to each competitor, and you see where each one is weak.
+
+  Claude takes a short intake first and reuses any earlier market work it finds in your folder. It then researches rivals in three waves, covering product, pricing and what customers say. It combines the findings into a feature grid and a list of strategic weak points. Each battle card then covers how to win, how to answer their strengths and what to ask a buyer. It saves progress so a long run can resume, and it takes roughly fifteen to twenty minutes.
+when:
+  - You are entering a market and need to know who you face.
+  - Sales loses deals and has no answers to a particular rival.
+  - You want a pricing comparison across the whole field.
+  - You need to know where a competitor is open to attack.
+you_give:
+  - Your product description
+  - Known competitors
+  - Target customers
+  - Earlier market research (optional)
+you_get:
+  - A battle card for each rival
+  - A pricing landscape
+  - A feature grid
+  - A list of rival weak points
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

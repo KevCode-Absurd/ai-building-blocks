@@ -6,6 +6,25 @@ summary: Describe a sale process. Get a draft letter with bid instructions, dead
 job: money-and-investing
 headline: Sale process letter drafter
 subhead: Describe a sale process. Get a draft letter with bid instructions, deadlines and meeting details.
+explain: |
+  The letter that tells bidders how your sale will run: when to bid, what to include and how to meet management. Describe the process and get a draft for an advisor to check.
+
+  First it settles which letter you need: the first process letter, indication of interest instructions, a final bid letter or a management meeting invitation. The first round asks for a value range, form of payment, financing, key checks and timing. The final round adds a mark-up of the sale agreement, firm financing letters, exclusivity terms, approvals and what is binding. Each draft has a confidentiality reminder, exact deadlines and contacts.
+when:
+  - You are running a sale and must tell buyers how to submit first offers.
+  - The first round is over and you need final bid instructions.
+  - You want to invite shortlisted buyers to meet management.
+  - You need consistent letters for every bidder.
+you_give:
+  - Deal code name and seller goals
+  - Timeline and key dates
+  - Where bids should be sent
+  - Number of rounds (optional)
+you_get:
+  - A process letter draft
+  - Bid requirements for the round
+  - Deadlines and submission details
+  - A confidentiality and contacts section
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

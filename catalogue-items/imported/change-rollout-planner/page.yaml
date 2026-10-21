@@ -6,6 +6,25 @@ summary: Describe a re-org or tool switch. Get a rollout plan, message templates
 job: lead-people
 headline: Change rollout planner
 subhead: Describe a re-org or tool switch. Get a rollout plan, message templates and a plan for pushback.
+explain: |
+  A re-org or tool switch gets a rollout plan, message templates and a plan for pushback, so people actually adopt it. Most changes fail in the rollout, not the design, and this plan is built around the stages people go through.
+
+  It uses a fast-moving version of the ADKAR model. First, awareness: explain why, honestly, before what. Then desire: answer what is in it for each group, since understanding does not create buy-in. Next come knowledge, ability and reinforcement. It suggests short founder videos over formal documents, names common mistakes at each stage, and gives you wording for each group. It also covers resistance and change fatigue.
+when:
+  - You are moving the team to a new CRM and expect complaints.
+  - A strategy pivot is coming and people may not trust it.
+  - Your last change faded after two weeks.
+  - You need to tell different groups different things about the same change.
+you_give:
+  - What is changing and why
+  - Who is affected and how they feel
+  - Your timeline
+  - Past changes that went badly (optional)
+you_get:
+  - A stage-by-stage rollout plan
+  - Message templates for each group
+  - Answers to likely pushback
+  - Ways to keep the change in place
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

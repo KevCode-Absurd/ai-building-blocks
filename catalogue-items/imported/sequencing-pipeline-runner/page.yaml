@@ -6,6 +6,26 @@ summary: Point it at sequencing data or a public set. Get an nf-core pipeline ru
 job: build-software
 headline: Sequencing pipeline runner
 subhead: Point it at sequencing data or a public set. Get an nf-core pipeline run for RNA-seq, variants or ATAC-seq.
+explain: |
+  A finished nf-core pipeline run on your sequencing data, for RNA-seq, variant calling or ATAC-seq, set up for people without a bioinformatics background. It can start from FASTQ files you have or fetch a public dataset from GEO or SRA.
+
+  The steps run in order, with a pause for your approval at key choices. It fetches study info and asks which samples to download. A check confirms Docker, Nextflow and Java work, with fixes if not. You confirm the pipeline, then it runs the built-in test profile, which must pass. It builds the samplesheet, confirms the genome with you, runs the full job and checks the outputs. It needs a computer with those tools.
+when:
+  - You have RNA-seq reads and want a differential expression analysis run for you.
+  - You found a public GEO dataset and want to reanalyse it.
+  - You need variant calling run without learning Nextflow first.
+  - Your pipeline failed and you suspect the environment.
+you_give:
+  - FASTQ files or a GEO or SRA accession
+  - The analysis type
+  - The reference genome
+  - A computer with Docker, Nextflow and Java
+you_get:
+  - An environment check
+  - A pipeline chosen with your approval
+  - A samplesheet
+  - Completed pipeline outputs
+  - A verification of results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

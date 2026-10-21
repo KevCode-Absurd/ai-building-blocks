@@ -6,6 +6,26 @@ summary: Name your site and rivals. Get a comparison of search overlap, content 
 job: study-competitors
 headline: Rival SEO comparer
 subhead: Name your site and rivals. Get a comparison of search overlap, content depth, backlinks, technical state and brand presence.
+explain: |
+  A side-by-side view of how your site stacks up against rivals in search, showing why they outrank you and what to do about it. You see gaps in topics, links and site health.
+
+  You name your site and three to five competitors. If you do not know them, the skill takes the top-ranking sites for your ten main keywords and picks those that appear most. It then compares overlap in search results, the depth of content on shared topics, who links to them but not you, technical condition, and how visible their brand is. Use any keyword, link and crawl tools you have. Traffic estimates from Similarweb help with scale.
+when:
+  - A competitor outranks you and you do not know why.
+  - You are choosing who to benchmark against.
+  - You want sites that link to rivals but not to you.
+  - You are planning content and want to see what rivals cover.
+you_give:
+  - Your site address
+  - Three to five competitor sites, or your topic area
+  - Access to a keyword or backlink tool (optional)
+  - Your top priority keywords (optional)
+you_get:
+  - Search overlap comparison
+  - Content gaps
+  - Backlink gaps
+  - Technical comparison
+  - Where rivals are strongest, and moves to close the gap
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

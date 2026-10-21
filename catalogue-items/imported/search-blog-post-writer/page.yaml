@@ -6,6 +6,25 @@ summary: Give a topic and target keyword. Get a long post with an answer first, 
 job: get-found-in-search
 headline: Search blog post writer
 subhead: Give a topic and target keyword. Get a long post with an answer first, FAQs and internal links.
+explain: |
+  A finished long post of 800 to 3,000 words built to rank in search and to be quoted by AI answer tools. It opens with a two or three sentence direct answer, then an introduction that names your keyword early, then a fixed set of sections.
+
+  Those sections include a one-line definition, why the topic matters, a deep how-it-works part with comparisons, FAQs and a closing call to action. You give the topic, exact keyword, extra keywords, audience, tone and length. It writes to what the searcher actually wants, not only the keyword. It adds internal links to pages you list, and a product call to action only where it fits the reader's need.
+when:
+  - You have a target keyword and need a full article, not an outline.
+  - You want a post with a short answer block at the top that AI tools can pull.
+  - You have other pages on your site and want links to them placed naturally.
+  - You need a consistent blog format across many posts.
+you_give:
+  - Topic and exact target keyword
+  - Secondary keywords (optional)
+  - Target audience and tone
+  - Word count and page titles to link to
+you_get:
+  - A full blog post in a set structure
+  - A short answer box at the top
+  - FAQ section
+  - Internal links in the text
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

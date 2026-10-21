@@ -6,6 +6,26 @@ summary: Describe your profile. Get a stronger headline, About section and exper
 job: grow-social
 headline: LinkedIn profile rewriter
 subhead: Describe your profile. Get a stronger headline, About section and experience bullets.
+explain: |
+  A LinkedIn profile that tells people why to contact you. You describe yours and get a sharper headline, About section and experience bullets, fixed in the order that pays off most.
+
+  It starts with an audit, then rewrites only the parts that earn their keep. The headline puts your strongest point first. The About section is written in first person, with the key message above the "see more" cut. Experience bullets use your real facts, never invented titles or numbers. It also looks at the banner, Featured section and recommendations. Nothing is scraped, so you paste in what your profile says.
+when:
+  - Your profile gets views but no messages.
+  - You are changing roles and need your story rewritten.
+  - You are unsure what your About section should say.
+  - Your headline is just a job title.
+you_give:
+  - Your current profile text
+  - Who you want to attract
+  - Your goal, such as a job or clients
+  - Real results you can prove
+you_get:
+  - A profile audit
+  - A rewritten headline
+  - A new About section
+  - Stronger experience bullets
+  - Notes on Featured, banner and recommendations
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

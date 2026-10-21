@@ -6,6 +6,25 @@ summary: Give it past spending and targets. Get a phased budget by department, w
 job: money-and-investing
 headline: Department budget planner
 subhead: Give it past spending and targets. Get a phased budget by department, with variance reports and fixes.
+explain: |
+  A budget for each department, set up so you can compare actual spending to it every month. Give it six to twelve months of past spending and your targets and you get a phased budget, variance reports and suggested fixes.
+
+  It looks at trends, seasonal peaks and one-off costs in the history. It sets a top-level amount per department from your revenue goals and priorities, then breaks that into lines such as pay, software, travel and marketing. As real spending arrives it maps each item to a line and period and reports month-to-date, quarter and year. Variances are labelled as timing, one-off or lasting, and it suggests moving unused money to where it is needed.
+when:
+  - You must hand each department head a number for next year.
+  - Spending keeps running over and nobody can say why.
+  - Finance asks for a monthly variance report.
+  - You need to move money between teams mid-year.
+you_give:
+  - Past spending by department and category
+  - Revenue targets and priorities
+  - Department structure
+  - Budget period
+you_get:
+  - Budget by department and line
+  - Phased monthly plan
+  - Variance report with causes
+  - Reallocation suggestions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

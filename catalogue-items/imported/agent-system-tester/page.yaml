@@ -6,6 +6,25 @@ summary: Describe your AI agent. Get a way to measure how well it works and comp
 job: test-and-fix-code
 headline: Agent system tester
 subhead: Describe your AI agent. Get a way to measure how well it works and compare changes.
+explain: |
+  A way to measure how well your AI agent works, so you can tell if a change made it better or worse. Agents answer differently each run and can reach a goal by several paths, so one pass or fail test is not enough.
+
+  The skill builds a rubric with several parts, such as accuracy, completeness, source quality and effort spent. It judges the final result and allows different routes to get there. An AI judge gives volume, and a person checks the tricky cases. It also suggests a realistic token budget, since that drives much of the result, and sets pass marks you can use as a gate before release.
+when:
+  - You changed a prompt and cannot tell whether the agent got better.
+  - You want to catch regressions before you ship an update.
+  - You are comparing two set-ups of the same agent.
+  - You need a pass mark an agent must hit before release.
+you_give:
+  - A description of what your agent does
+  - Example tasks and good answers (optional)
+  - The changes you want to compare
+  - Your token or cost limits (optional)
+you_get:
+  - A scoring rubric with weighted parts
+  - A set of test tasks
+  - A judging plan using AI and human review
+  - Pass marks to use as a release gate
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

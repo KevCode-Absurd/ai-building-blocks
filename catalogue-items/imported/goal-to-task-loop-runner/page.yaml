@@ -6,6 +6,25 @@ summary: Give it a goal and a folder of skills. Get a checked task plan that run
 job: set-up-ai
 headline: Goal-to-task loop runner
 subhead: Give it a goal and a folder of skills. Get a checked task plan that runs one task at a time.
+explain: |
+  A goal goes in and finished, checked work comes out, one task at a time. You point it at a folder of skills and state the goal. It compiles a task plan where each task has a check a machine can run. Vague goals are refused with questions to sharpen them.
+
+  A state file holds the full status, so a fresh session can resume from it alone. A controller hands out one task at a time, and each result must pass its check before the next begins. When the plan is done or stuck, it stops and tells you which. Eighteen ready-made domain setups are included. It needs Python.
+when:
+  - You have a big goal and want it split into checkable tasks.
+  - An AI keeps saying it is done when it is not.
+  - You want to pause work and resume it later in a new session.
+  - You have a set of skills and want them run in a set order.
+you_give:
+  - Your goal
+  - A folder of skills for the domain
+  - A domain setup to start from
+  - Checks that prove each task is done (optional)
+you_get:
+  - A task plan with a check per task
+  - A saved state file you can resume
+  - Results verified task by task
+  - "A clear stop: finished or stuck"
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

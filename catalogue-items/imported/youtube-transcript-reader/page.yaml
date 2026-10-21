@@ -6,6 +6,24 @@ summary: Give it a video or channel. Get transcripts, video lists and new upload
 job: grow-social
 headline: YouTube transcript and channel reader
 subhead: Give it a video or channel. Get transcripts, video lists and new uploads. Collects data from websites.
+explain: |
+  Give it a YouTube video or a channel and get transcripts, video lists and a check for new uploads, all as text you can read, search and quote.
+
+  It uses TranscriptAPI, a paid service with a free starter allowance and your own key. A transcript costs one credit and can include timestamps and video details. It can search YouTube for a topic, list a channel's latest 15 uploads for free, page through all of a channel's videos, and search within one channel. Before fetching transcripts it checks the latest list, so you only pay for new videos. It suits summaries, quote hunting and watching a channel for new posts. For local extraction without a key, it points to other tools.
+when:
+  - You need the transcript of a talk to pull quotes from.
+  - You track a creator and want to know if they posted something new.
+  - You want to find videos on a topic and read them quickly.
+  - You want to search one channel's library for a phrase.
+you_give:
+  - A video link, a topic, or a channel @handle
+  - Your TranscriptAPI key
+  - What you want from the text, such as a summary or quotes (optional)
+you_get:
+  - A timestamped transcript
+  - A list of matching videos
+  - The latest uploads with views and dates
+  - Search hits inside a channel
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

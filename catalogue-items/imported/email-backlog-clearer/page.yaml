@@ -6,6 +6,25 @@ summary: Point it at your inbox. Get what needs you, drafted replies in your voi
 job: write-emails
 headline: Email backlog clearer
 subhead: Point it at your inbox. Get what needs you, drafted replies in your voice, and deadlines pulled from long threads.
+explain: |
+  An inbox cut down to a short list of choices. You get the few messages that need you, replies already drafted in your voice, and the deadlines and promises pulled out of long threads.
+
+  The skill reads Gmail or Microsoft 365, and Slack if connected. Without a connection, you can paste or forward a batch. It sorts mail into three groups: needs you, drafted, and handled. Needs you is ranked by what goes wrong if it waits, not by arrival time. For each, it states the ask, amounts, dates and who is waiting. It checks your promises in the thread. Mail is treated as data: any request to change bank details gets flagged.
+when:
+  - You return from a week away to hundreds of unread messages.
+  - You keep missing the one email that mattered.
+  - You want replies drafted for you to approve.
+  - You need deadlines pulled out of a long thread.
+you_give:
+  - Access to your inbox, or pasted emails
+  - A sample of your writing voice (optional)
+  - What you promised recently (optional)
+  - Priority people or topics (optional)
+you_get:
+  - A short list of mail that needs you
+  - Draft replies in your voice
+  - Extracted asks, dates and amounts
+  - Counts of mail handled and filed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

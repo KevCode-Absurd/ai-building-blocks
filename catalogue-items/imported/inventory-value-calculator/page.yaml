@@ -6,6 +6,26 @@ summary: Give it your stock purchases and counts. Get inventory valued by FIFO o
 job: run-your-store
 headline: Inventory value calculator
 subhead: Give it your stock purchases and counts. Get inventory valued by FIFO or average cost, with write-downs flagged.
+explain: |
+  Stock that is valued the way an auditor expects, with the maths shown. Give it your purchases, counts and costs. You pick or confirm a cost method, FIFO or weighted average, and it works out the cost of goods sold and the closing stock. It adds freight, duties and a fair share of production overhead, and leaves out waste and selling costs.
+
+  Then it tests each item against net realizable value, which is selling price less cost to finish and sell, and flags write-downs. An age-and-movement table suggests provisions for slow or dead stock. Count differences above your limit get investigated. The result is a valuation memo with adjusting journal entries.
+when:
+  - You are closing the year and must value your stock.
+  - You think some items are worth less than you paid for them.
+  - Prices rose and you need to see how FIFO changes your profit.
+  - Book stock and the physical count do not match.
+you_give:
+  - Purchase records with quantities and costs
+  - Opening stock and current counts
+  - Your cost method, if you have one (optional)
+  - Selling prices and costs to sell (optional)
+you_get:
+  - A stock valuation schedule by category
+  - Cost of goods sold
+  - A list of items to write down
+  - A slow-stock provision table
+  - Adjusting journal entries
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

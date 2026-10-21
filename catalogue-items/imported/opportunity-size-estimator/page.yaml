@@ -6,6 +6,26 @@ summary: Give it a baseline and an expected change. Get a low, base and high est
 job: track-numbers
 headline: Opportunity size estimator
 subhead: Give it a baseline and an expected change. Get a low, base and high estimate with every assumption listed.
+explain: |
+  A number you can defend when someone asks how big a change could be. You get a low, base and high estimate, never a single figure, plus a list of every assumption behind it.
+
+  First the skill sorts your idea into one of four types: more revenue, lower cost, less risk or saved time. Each type uses its own formula. It then collects your baseline, how many people or orders are affected, the expected lift, the time frame and how sure you are. It builds the point estimate, adds the range, and writes the result in plain words so a boss or client can act on it or rank it against other ideas.
+when:
+  - You found a gap in your data and need to say what fixing it is worth.
+  - You have ten ideas and need to rank them by likely payoff.
+  - Your manager asks for the return on a change before approving it.
+  - You need a rough size for a new market, offer or price change.
+you_give:
+  - Your current baseline number
+  - The change you expect
+  - Who or what is affected
+  - Time frame
+  - How confident you are (optional)
+you_get:
+  - Low, base and high estimates
+  - A list of assumptions
+  - The formula used
+  - A plain summary for decision makers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

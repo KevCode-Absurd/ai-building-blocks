@@ -6,6 +6,26 @@ summary: Describe the app screen. Get a touch-first design that fits iOS or Andr
 job: design-work
 headline: Mobile app designer
 subhead: Describe the app screen. Get a touch-first design that fits iOS or Android, with a risk score before you build.
+explain: |
+  A phone screen design that fits the platform and has been checked for risk before anyone builds it. It treats the phone as a phone, not a small desktop.
+
+  Before designing, the skill asks which platform you target, then scores the screen on five points: how clear the platform is, how complex the touches are, how heavy it is on speed, how much it needs a network, and how well it works for people with different abilities. The score runs from minus 10 to plus 10. A low score means simplify first. Then it designs with thumb reach, touch size and offline states in mind.
+when:
+  - You are sketching the first screen of an iOS or Android app.
+  - A design looks good on a laptop and you worry it will feel wrong on a phone.
+  - You want to know which screens are risky before paying a developer.
+  - You need the screen to work when the signal drops.
+you_give:
+  - A description of the screen and what the user does there
+  - Target platform, iOS, Android or both
+  - Who will use it, including any access needs
+  - Brand colors or style notes (optional)
+you_get:
+  - A risk score with the reasons behind it
+  - A touch-first screen layout
+  - Platform-specific design notes
+  - Offline and loading states
+  - Changes to make if the score is low
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

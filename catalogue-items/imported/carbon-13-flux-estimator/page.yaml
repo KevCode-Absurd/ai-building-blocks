@@ -6,6 +6,26 @@ summary: Give it carbon-13 tracing data. Get estimated metabolic fluxes, fit che
 job: research-topics
 headline: Carbon-13 flux estimator
 subhead: Give it carbon-13 tracing data. Get estimated metabolic fluxes, fit checks and a profile you can trust.
+explain: |
+  Carbon-13 labelling data turns into estimated reaction rates in a cell, with checks on how well the fit holds. You give a carbon map, tracer mixtures and corrected measurements, and the skill returns a fitted flux set and tells you which fluxes your experiment pins down.
+
+  A bundled solver does the maths. It simulates how labelled carbon spreads, then fits fluxes within the mass-balanced range. It does not assume a growth goal. Before fitting it asks for evidence: atom assignments, proof of steady state, every carbon input, fragment assignments and a record of natural abundance correction. It covers steady-state experiments only, not time-course labelling. You need Python and your lab data.
+when:
+  - You ran a carbon-13 tracer experiment and need to turn spectra into fluxes.
+  - You need to know which reactions your tracer design actually measures.
+  - A fit looks good but you are unsure if it is trustworthy.
+  - You combine several tracer experiments on one cell state.
+you_give:
+  - A carbon network with atom assignments
+  - Tracer mixtures and carbon input details
+  - Corrected mass distribution measurements
+  - Measurement error estimates
+  - Python to run the solver
+you_get:
+  - Estimated metabolic fluxes
+  - Goodness of fit checks
+  - Which fluxes are well or poorly determined
+  - A profile of the fit you can inspect
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

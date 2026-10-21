@@ -6,6 +6,25 @@ summary: Describe or share an interface. Get it scored against 168 research-back
 job: design-work
 headline: Interface principles checker
 subhead: Describe or share an interface. Get it scored against 168 research-backed UX principles, with common mistakes flagged.
+explain: |
+  Your interface scored against 168 research-based UX principles, with common mistakes flagged and a reason for each score. Describe it or share it and see where users are likely to trip.
+
+  The pack has five parts. One evaluates a design against the principle set. One finds antipatterns using a catalogue of UX smells. One audits AI-powered screens against 44 principles on trust, openness and safety. One checks flows for decision, error and feedback problems. The last adds UX context to coding sessions before you build. Pick the part that fits and you get findings tied to a named principle.
+when:
+  - You want a UX review before launch and have no researcher.
+  - Your flow loses users at one step and you do not know why.
+  - You built an AI feature and want to check trust and clarity.
+  - You are about to build a screen and want UX rules in mind.
+  - You need review points you can cite to a team.
+you_give:
+  - A description, screenshot or code of the interface
+  - The user flow to check (optional)
+  - Whether it uses AI features
+you_get:
+  - Scores against named principles
+  - Flagged antipatterns
+  - Flow problems with fixes
+  - AI interface trust checks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

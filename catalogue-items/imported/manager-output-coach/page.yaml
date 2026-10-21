@@ -6,6 +6,25 @@ summary: Describe your team and role. Get meeting rhythms, one-on-ones and the t
 job: lead-people
 headline: Manager output coach
 subhead: Describe your team and role. Get meeting rhythms, one-on-ones and the tasks that most raise your team's output.
+explain: |
+  A tuned management routine for your team, built on Andy Grove's High Output Management. It judges every habit by one test: does it raise what your team produces?
+
+  You describe your team and role. The skill scores your calendar, meetings and processes from 0 to 10 and lists the exact changes to reach 10. It looks for output measures paired with quality checks, one-on-ones owned by the team member, delegation that fits each person's experience, goals that stretch without driving pay, and a calendar built around key events. It sorts your tasks by how much output each hour creates, and flags the ones that cost output. Meetings are treated as the main tool of management.
+when:
+  - Your week is full of meetings and you cannot tell which matter.
+  - Your one-on-ones are irregular or run by you only.
+  - You track busyness instead of results.
+  - You are a new manager and want a proven routine.
+you_give:
+  - Your role and team size
+  - Your current calendar and meetings
+  - How you measure work today
+  - Goals for the quarter (optional)
+you_get:
+  - A score out of 10
+  - A list of changes to reach 10
+  - A meeting and one-on-one rhythm
+  - A ranked list of high-impact tasks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

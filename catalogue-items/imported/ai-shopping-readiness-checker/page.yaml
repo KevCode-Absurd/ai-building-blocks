@@ -6,6 +6,24 @@ summary: Run it on your store. Get a score for how easily AI shoppers find your 
 job: build-websites
 headline: AI shopping readiness checker
 subhead: Run it on your store. Get a score for how easily AI shoppers find your products, plus the fix for each gap.
+explain: |
+  A readiness score for how easily AI shoppers can find, read and trust your products, with a fix for each gap. It reads straight from inside your Shopify admin, so it sees more than an outside scan can.
+
+  It pulls your shop details, theme files and product sample, up to 250 items by default. Then it checks whether your robots file lets AI crawlers in, whether you have organisation data and an llms.txt file, whether policies exist, and which product facts are filled in. At product level it counts thin descriptions, missing image alt text, barcodes, categories and spec fields. It only reads. It never changes your store.
+when:
+  - You run a Shopify store and want to be found by AI shopping tools.
+  - Your product pages have thin descriptions and gaps in product data.
+  - You need a list of fixes your team can work through.
+  - You want a repeatable check after each catalogue update.
+you_give:
+  - Your store domain
+  - A Shopify CLI login with read access
+  - Sample size and the minimum description length (optional)
+you_get:
+  - An overall readiness score
+  - Results for discovery, identity, policies and product data
+  - The product-level gaps found
+  - A fix for each gap
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

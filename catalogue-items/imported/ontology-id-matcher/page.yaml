@@ -6,6 +6,25 @@ summary: Give it lab terms like tissue or disease names. Get the matching ontolo
 job: research-topics
 headline: Science label to ontology ID matcher
 subhead: Give it lab terms like tissue or disease names. Get the matching ontology IDs, checked against the public lookup service.
+explain: |
+  Correct ontology IDs for the lab terms in your data, each one checked against the public lookup service, not written from memory. A well-formed ID can point to the wrong thing and nobody will notice. For example, one real code is the small intestine, not the liver.
+
+  You give it free-text labels like a tissue, cell type or disease name. The skill searches the EBI ontology lookup service, picks the best match, and confirms the ID and its label. It can also check IDs already in a file to see if they are real and still current, and look up prefixes. Scripts use only the Python standard library, but you need Python 3.11 or later and internet access.
+when:
+  - You are filling a data submission and need ontology IDs for tissue terms.
+  - Someone gave you a table of IDs and you do not trust them.
+  - An old file may use IDs that have since been replaced.
+  - You need the correct prefix for a given ontology.
+you_give:
+  - Terms or a column of labels
+  - The ontology to use, such as anatomy or disease (optional)
+  - An existing file of IDs to audit (optional)
+  - Python 3.11 or later and internet access
+you_get:
+  - Matching ontology IDs with labels
+  - IDs checked against the lookup service
+  - Flags for wrong or obsolete IDs
+  - Ontology prefix lookups
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

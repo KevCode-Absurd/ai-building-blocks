@@ -6,6 +6,25 @@ summary: Give it your costs and rival offers. Get a price for each product, resp
 job: set-prices
 headline: Price position planner
 subhead: Give it your costs and rival offers. Get a price for each product, response rules for rival discounts, and a rollout plan.
+explain: |
+  A price for each product, rules for how to respond when rivals cut theirs, and a rollout plan, all built from your costs and the competitor offers you can see.
+
+  The skill first makes rival offers comparable by pack size, variant, shipping, discounts and seller type. It works out your price floor from your costs and margin. Then it places each product as budget, value, parity or premium, without assuming the cheapest wins. It builds regular, launch, bundle and channel prices, and sets response rules for discounts, stockouts and new entrants. It leaves legal limits like minimum advertised price to you.
+when:
+  - A competitor just dropped their price.
+  - You are launching on Amazon and your own store.
+  - You don't know your lowest safe price.
+  - You need rules so your team stops reacting at random.
+you_give:
+  - Product costs and fees
+  - Competitor offers
+  - Brand positioning
+  - Sales channels
+you_get:
+  - Price per product
+  - Price floors
+  - Competitor response rules
+  - Rollout and monitoring plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

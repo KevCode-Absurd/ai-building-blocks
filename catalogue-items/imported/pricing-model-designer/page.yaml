@@ -6,6 +6,25 @@ summary: Give it your product and price survey data. Get a pricing model, price 
 job: set-prices
 headline: Pricing model designer
 subhead: Give it your product and price survey data. Get a pricing model, price points and good, better, best tiers.
+explain: |
+  Choose how to charge, what to charge and how to package it. Give it your product and price survey answers and get a pricing model, a price range and good, better, best tiers.
+
+  The skill compares models such as seat-based, usage-based, value-based, freemium and hybrid. If you have willingness-to-pay survey answers, it runs the Van Westendorp method to find the range between too cheap and too expensive. It builds three tiers and checks them for traps such as a decoy plan, a feature dump or no reason to upgrade. It recommends a model and range; you choose the final number.
+when:
+  - You are launching a SaaS and need first pricing.
+  - Your pricing is 18 months old and feels wrong.
+  - You ran a price survey and need to read it.
+  - Your tiers confuse buyers.
+you_give:
+  - Product and customer description
+  - Price survey responses (optional)
+  - Competitor prices
+  - Current plans (optional)
+you_get:
+  - Recommended pricing model
+  - Price range from survey data
+  - Good, better, best tier layout
+  - List of packaging problems found
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

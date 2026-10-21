@@ -6,6 +6,24 @@ summary: "Give it a one-line SaaS idea. Get eight files: research, analysis, arc
 job: build-product
 headline: SaaS blueprint planner
 subhead: "Give it a one-line SaaS idea. Get eight files: research, analysis, architecture, features, screens, phases and a step-by-step build plan."
+explain: |
+  Eight markdown files that take a one-line software idea to a plan you can build from: the idea, market research, product analysis, system design, feature specs, screens, build phases and a step-by-step playbook, plus a README linking them.
+
+  It confirms the idea first, asking two quick questions on audience and business model if you gave only a topic. Then it runs the stages in order, saving each file to a folder. Analysis uses a business model canvas, a SWOT and a product-market fit check. After each stage it summarises and asks if you want to skip or expand. The files are made to load into Claude Code.
+when:
+  - You have a software idea in one sentence and no plan yet.
+  - You want research and a feature list before you spend money on code.
+  - You plan to build with Claude Code and need a clear set of files to feed it.
+  - You want to compare your idea with rivals and see the risks.
+you_give:
+  - Your idea in one line
+  - Who it is for (optional)
+  - How it will make money (optional)
+you_get:
+  - Eight stage files in markdown
+  - Market research and product analysis
+  - System design and feature specs
+  - A build playbook with phases
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Get how many returns become exchanges, refunds or store credit, and how
 job: run-your-store
 headline: Exchange or refund split reader
 subhead: Get how many returns become exchanges, refunds or store credit, and how much revenue you keep.
+explain: |
+  A percentage split of how your returns end: exchange, store credit or refund. It also shows how much revenue each route keeps, so you see what returns really cost you.
+
+  The skill reads your Shopify returns for a chosen period, such as 30 days, and puts each return into one bucket. Exchanges keep the revenue. Store credit defers it. Refunds lose it. It then reports a revenue recovery rate, and can compare against an earlier period to show if you are improving. It is read-only and changes nothing in your store. You need a Shopify store with the command line tool signed in and permission to read orders and returns.
+when:
+  - You want to know how many returns you convert into exchanges.
+  - You changed your returns policy and want to see if it worked.
+  - You are deciding whether to push store credit over refunds.
+  - You need numbers for a monthly returns report.
+you_give:
+  - Shopify store address
+  - Shopify sign-in with read access to orders and returns
+  - Number of days to look back
+  - Earlier period to compare (optional)
+you_get:
+  - Share of exchanges, credit and refunds
+  - Revenue recovery rate
+  - Comparison with an earlier period
+  - Readable or data-file output
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Name the framework you use. Get code checked against its official docs,
 job: build-software
 headline: Docs-backed coder
 subhead: Name the framework you use. Get code checked against its official docs, with sources cited.
+explain: |
+  Code that follows your framework's official documentation, with the sources shown, so you are not relying on what the AI remembers about an old version.
+
+  The skill works in four moves. It detects your framework and version. It fetches the docs for the exact feature you are building, such as forms, routing, data fetching, state or auth. It writes the code in the documented way. And it cites the pages it used, so you can check them. It is most useful for starter code and patterns that get copied across a project. Skip it for quick renames or logic that does not depend on a framework. It needs internet access to read the docs.
+when:
+  - You are building boilerplate that your whole team will copy.
+  - The AI keeps using an outdated API from an older version.
+  - You need to be sure a pattern is the recommended one.
+  - You want a source link for each framework decision.
+you_give:
+  - Your framework and version
+  - The feature you want to build
+  - Your existing code (optional)
+  - Internet access for the docs
+you_get:
+  - Code that follows the official docs
+  - Links to the docs used
+  - A note where several approaches exist
+  - A check that the version matches
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

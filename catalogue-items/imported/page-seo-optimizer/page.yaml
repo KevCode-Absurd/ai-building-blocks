@@ -6,6 +6,24 @@ summary: Give it a web page. Get on-page, speed and structured data fixes to ran
 job: get-found-in-search
 headline: Page SEO optimizer
 subhead: Give it a web page. Get on-page, speed and structured data fixes to rank better.
+explain: |
+  A page-by-page search report with exact code changes, sorted from most to least important. Give it a web address and a target keyword and it tells you what is holding the page back.
+
+  It reads the page, then checks the title and description length, headings, keyword placement and links between your pages. It tests speed measures like load time and layout shift, and writes structured data for the page type, such as an article or product. The report shows before and after snippets so you can copy them straight in. It needs access to fetch the live page.
+when:
+  - A blog post you wrote is not ranking.
+  - You want a to-do list for a page, ranked by impact.
+  - You need structured data written for a product or article page.
+  - You are checking old pages for weak titles and thin links.
+you_give:
+  - Page address
+  - Target keyword (optional)
+  - Access to the page or its code
+you_get:
+  - Prioritised issue list
+  - Rewritten title and description
+  - Structured data code
+  - Speed and internal-link advice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

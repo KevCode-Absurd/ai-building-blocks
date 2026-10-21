@@ -6,6 +6,25 @@ summary: Give it your research outline. Get a checked file for every item, with 
 job: research-topics
 headline: Item-by-item researcher
 subhead: Give it your research outline. Get a checked file for every item, with each answer filled in or marked unsure. Scrapes sites.
+explain: |
+  A research list turned into a folder of checked answers, one file for each item. You supply an outline of items to study and the fields to fill for each. The skill finds the outline, skips items already done, and works in batches. Each batch goes to search agents that look things up on the web and write a JSON file per item.
+
+  Where an answer cannot be found, the field is marked unsure instead of guessed. You approve each batch before the next starts, which keeps cost and quality in your hands. It scrapes websites and launches several agents, so expect it to use more time and usage than a single question.
+when:
+  - You need the same facts gathered for fifty companies or products.
+  - You started a big research list and want to resume where it stopped.
+  - You want sources and gaps shown, not guesses.
+  - You need structured files you can load into a spreadsheet.
+you_give:
+  - An outline file listing the items to research
+  - A list of fields to fill for each item
+  - Batch size (optional)
+  - Your approval before each batch
+you_get:
+  - One result file per item
+  - Fields filled or marked unsure
+  - A record of finished items for resuming
+  - Batch-by-batch progress
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

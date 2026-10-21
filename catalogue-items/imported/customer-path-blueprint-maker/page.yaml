@@ -6,6 +6,24 @@ summary: Describe your customer and their goal. Get a map of each step with touc
 job: understand-customers
 headline: Customer path blueprint maker
 subhead: Describe your customer and their goal. Get a map of each step with touchpoints, feelings, friction and the systems behind it.
+explain: |
+  Teams often disagree about what the customer experience is. Describe your customer and their goal and you get a step-by-step map plus a service blueprint showing what happens behind the scenes at each step.
+
+  For each stage it lists the touchpoints, what the customer does, what they feel, and where friction or drop-off happens. The blueprint adds the staff actions, handoffs and systems out of the customer's sight, so you can see where a poor experience starts. It works best with one map per customer type, real research, and input from support, operations and engineering. It ends with the biggest gaps and opportunities.
+when:
+  - Sales, support and product each describe the customer experience differently.
+  - Customers drop off and you do not know at which step.
+  - You are designing a new service and need the whole picture.
+  - You want a shared view for a planning session.
+you_give:
+  - The customer type and their goal
+  - Existing research, tickets or analytics
+  - What each team does at each step (optional)
+you_get:
+  - A stage by stage map with touchpoints and emotions
+  - Friction and drop-off points
+  - A service blueprint with behind-the-scenes steps
+  - Ranked opportunities
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

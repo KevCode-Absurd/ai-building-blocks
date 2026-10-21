@@ -6,6 +6,25 @@ summary: Describe your business. Get topic clusters, a content calendar and the 
 job: plan-strategy
 headline: Content topic planner
 subhead: Describe your business. Get topic clusters, a content calendar and the pieces to write first.
+explain: |
+  A list of topics worth writing about, grouped into clusters, with a calendar and a short list of the first pieces to write. It replaces the blank page and the habit of guessing what readers want.
+
+  It begins with questions on your business, your customers and what you have already published. It then separates content people search for from content people share. Topics are grouped into pillars, and each cluster gets keywords for the awareness, consideration, decision and use stages of a customer. It treats each piece like a product, with a purpose and a reader, and ranks the list so you know what to write this week.
+when:
+  - You say "I don't know what to write" every time you open the blog.
+  - You are launching a content program and need a first quarter plan.
+  - You want topics that bring in search traffic and others that earn shares.
+  - You need to explain to a client why you picked these topics.
+you_give:
+  - What your business sells
+  - Who your customers are and what they ask
+  - Your existing content (optional)
+  - Competitor sites (optional)
+you_get:
+  - Pillars and topic clusters
+  - Keyword ideas by customer stage
+  - Content calendar
+  - First pieces to write, ranked
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

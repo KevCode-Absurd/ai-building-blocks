@@ -6,6 +6,26 @@ summary: Give it a brand name. Get a score for where it is mentioned online. Col
 job: get-found-in-search
 headline: AI brand mention scanner
 subhead: Give it a brand name. Get a score for where it is mentioned online. Collects data from websites.
+explain: |
+  A score for how often and where your brand is mentioned across the web, and which mentions matter for AI assistants. It collects data from websites, so expect it to browse public pages for you.
+
+  The idea: a recent study of 75,000 brands found that mentions without any link predict AI recommendations better than backlinks do. Place matters too. A comment on Reddit or a YouTube video counts for more than a post on a small blog. The scan searches those platforms by brand name, rates each mention by place and tone, and adds them into one score. It ends with gaps and a list of places to earn more mentions.
+when:
+  - You want to know if AI tools are likely to name your brand.
+  - You are paying for backlinks and wonder if mentions matter more.
+  - You want a baseline before starting a brand awareness push.
+  - You need to compare your brand with a rival.
+you_give:
+  - Your brand name
+  - Rival brand names (optional)
+  - Your website address
+  - Platforms you care most about (optional)
+you_get:
+  - An overall mention score
+  - A breakdown by platform
+  - Examples of mentions found
+  - Gaps compared with rivals
+  - A list of places to build mentions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

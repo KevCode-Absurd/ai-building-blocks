@@ -6,6 +6,25 @@ summary: Give it your product and platforms. Get topics from real customer words
 job: grow-social
 headline: Content calendar builder
 subhead: Give it your product and platforms. Get topics from real customer words, rival content gaps, and a ready calendar.
+explain: |
+  A ready content calendar for your online shop, with topics drawn from what your customers actually say and from gaps in what your rivals publish. You know what to post each week and on which platform.
+
+  You give Claude your product, platforms and goal. In build mode it researches audience questions, looks at competitor accounts, spots formats that are doing well and sets a plan for the period, such as four weeks. In audit mode it reviews your existing content against rivals. It covers TikTok, Instagram, YouTube, X, Pinterest, blog posts and Amazon A+ pages, and it gives each platform its own content types.
+when:
+  - You sell a product online and don't know what to post.
+  - You are starting on TikTok or Pinterest and need a month of ideas.
+  - Your posts get little reaction and you want to see why.
+  - You want content topics based on rival gaps.
+you_give:
+  - Your product and target market
+  - Platforms to use
+  - Content goal and period
+  - Competitor links (optional)
+you_get:
+  - Topic ideas from customer language
+  - A competitor content gap review
+  - A week by week calendar
+  - Format suggestions per platform
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

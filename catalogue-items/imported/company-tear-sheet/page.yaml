@@ -6,6 +6,25 @@ summary: Name a company. Get a dense one-page Word profile with numbers, ratios 
 job: money-and-investing
 headline: Company one-page tear sheet maker
 subhead: Name a company. Get a dense one-page Word profile with numbers, ratios and a business summary. It collects data from websites.
+explain: |
+  A dense one-page Word profile of a listed company with the numbers, ratios and a short business summary, ready to hand to a client or manager. Built for Indian companies, so it follows the April to March fiscal year and shows amounts in lakh and crore.
+
+  Claude pulls data from free public sources and company filings, with no paid terminal. It shapes the sheet for the reader, such as an investor or a lender. It never invents a figure. Missing data shows as not disclosed. Periods are written in full, such as Q3 FY26, and crore values use a live formula so no unit is off by 100 times. It needs a tool called officecli to build the file.
+when:
+  - You need a one-page snapshot of an Indian listed company for a meeting.
+  - A client asked for numbers and a short business note on a company.
+  - You want fiscal periods and rupee units shown correctly.
+  - You are preparing the first page of a longer research pack.
+you_give:
+  - The company name or ticker
+  - The reader, such as investor or lender
+  - Fiscal period to cover
+  - Your preferred layout (optional)
+you_get:
+  - A one-page Word tear sheet
+  - Key financials and ratios
+  - A short business summary
+  - Not disclosed marks where data is missing
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

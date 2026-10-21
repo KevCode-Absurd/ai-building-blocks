@@ -6,6 +6,26 @@ summary: Name a maths idea. Get lessons from hands-on objects to pictures to sym
 job: teach-and-train
 headline: Concrete to abstract maths lesson planner
 subhead: Name a maths idea. Get lessons from hands-on objects to pictures to symbols, as in the Singapore method.
+explain: |
+  A maths lesson sequence that starts with objects students can handle, moves to drawings and bar models, and ends with symbols. This is the concrete, pictorial, abstract method used in Singapore classrooms.
+
+  You name the topic, such as adding fractions with different denominators, and describe where your class is. Claude plans the hands-on stage so the objects show the real structure of the idea, not just counting props. The drawing stage uses bar models and number lines as thinking tools, not decoration. It then writes explicit bridging steps between stages, since students often fail to link them on their own. It takes your available materials, lesson time and common errors into account.
+when:
+  - Students can follow the rule but do not understand why it works.
+  - You are introducing fractions, ratio or word problems.
+  - You want to use bar models properly and not as pictures of the answer.
+  - Your class jumps to symbols before the idea is secure.
+you_give:
+  - The maths concept
+  - Year group and current level
+  - Materials you have (optional)
+  - Common mistakes (optional)
+  - Lesson time (optional)
+you_get:
+  - A three-stage lesson sequence
+  - Hands-on activities
+  - Drawing and bar model steps
+  - Bridging prompts between stages
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

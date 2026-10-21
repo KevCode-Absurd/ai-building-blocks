@@ -6,6 +6,26 @@ summary: Give it your ad exports. Get what is working, what is wasted, and small
 job: read-ad-results
 headline: Ad spend analyst
 subhead: Give it your ad exports. Get what is working, what is wasted, and small budget tests to run next.
+explain: |
+  You get a clear view of what is working and what is wasting money across your ad channels, plus small budget tests to try next. It labels what the data proves and what it only hints at.
+
+  The skill starts with an intake of your goals, then cleans and lines up data from different channels so they can be compared. It checks each campaign's health, flags ones to investigate, notes standout performers, and runs a significance check so small numbers do not fool you. It follows the funnel from click to sale to find where people drop off. Then it looks at where a shift of budget may pay, models a few scenarios, and proposes tests.
+when:
+  - You run ads on several channels and want a combined view.
+  - You need to decide where to move next month's budget.
+  - You want to know which campaigns to cut.
+  - You want test ideas that risk little money.
+you_give:
+  - Ad exports from each channel
+  - Your goal and target cost per sale
+  - Funnel or sales data (optional)
+  - Your total budget
+you_get:
+  - A health check on each campaign
+  - A list of wasted spend
+  - Standout performers, labelled by evidence
+  - Budget shift ideas with scenarios
+  - Small tests to run next
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

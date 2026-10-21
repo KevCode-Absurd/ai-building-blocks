@@ -6,6 +6,25 @@ summary: Give it a story, page or campaign. Get the feeling you want at each ste
 job: write-and-tell-stories
 headline: Emotional arc mapper
 subhead: Give it a story, page or campaign. Get the feeling you want at each step, from attention to action.
+explain: |
+  A step-by-step map of the feeling you want at each point of a page, ad, story or campaign, from first attention to action. Give it the piece and the reader, and you get an arc to write against.
+
+  The skill asks where the reader starts emotionally, where they should end, what you want them to do, and any channel or ethical limits. Then it sequences the feelings, such as tension, recognition, hope and confidence, and matches each stage to a section of your content. It treats emotion and reasoning as working together. The research notes are labelled as ideas to test. It checks the pacing so the ask arrives after the trust.
+when:
+  - Your landing page lists claims but does not pull people in.
+  - You are outlining a pitch and want the right order.
+  - You want an email series to feel like a story.
+  - You want to check an ad for emotional gaps.
+you_give:
+  - The content or campaign
+  - Reader's starting and ending feeling
+  - The action you want
+  - Channel, length and brand voice (optional)
+you_get:
+  - An emotional arc, step by step
+  - Feelings matched to content sections
+  - Pacing advice
+  - Where to place the ask
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

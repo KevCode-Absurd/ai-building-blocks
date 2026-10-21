@@ -6,6 +6,26 @@ summary: Describe a recurring job. Get a loop with triggers, checks, stop rules 
 job: set-up-ai
 headline: Repeatable AI loop designer
 subhead: Describe a recurring job. Get a loop with triggers, checks, stop rules and handoffs.
+explain: |
+  A loop for an AI agent to repeat a recurring job, with a trigger to start it, a check that it worked, a rule for when to stop, and a handoff to a person. It keeps the agent from running endlessly.
+
+  The skill first picks a path: find a loop in the Loop Library, check one you already have, adapt a published one, or design a new one. For a new one, it asks a few plain questions about the goal, the trigger, the tools and the owner. It then writes the loop with limits and safety rules. It can also scan your code or past threads to find work you repeat.
+when:
+  - Your team fixes the same kind of bug every week.
+  - An agent loop you wrote keeps running without finishing.
+  - You want to adapt a ready-made loop to your own tools.
+  - You are not sure which repeated work is worth automating.
+you_give:
+  - What you want done repeatedly
+  - Trigger and how often it runs
+  - Tools the agent may use
+  - Existing loop to review (optional)
+  - Code or threads to scan (optional)
+you_get:
+  - Loop design with trigger and actions
+  - Verification and stop rules
+  - Guardrails and handoff points
+  - Review notes on an existing loop
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

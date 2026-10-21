@@ -6,6 +6,25 @@ summary: Paste a post. Get a comment that adds something new instead of agreeing
 job: grow-social
 headline: LinkedIn comment writer
 subhead: Paste a post. Get a comment that adds something new instead of agreeing, in your voice.
+explain: |
+  A short LinkedIn comment that adds something the post did not have, written in your voice. It replaces the "Great post!" that nobody reads.
+
+  First it helps you decide whether to comment at all. Then it finds the gap in the post: what is missing, assumed or too general. Next it picks one of five shapes: a counterexample, an extension, a specific case, an honest disagreement about the idea, or a real question. It keeps the comment short and standalone, and removes any pitch. The same method works when you reply on someone else's thread. It never posts for you.
+when:
+  - You want to get noticed by people you admire without sounding fake.
+  - Your comments get no replies.
+  - You have a view on a post but cannot find the words.
+  - You are tempted to just write "agree" and move on.
+you_give:
+  - The post text
+  - Your own experience or view
+  - Your name, role and goal on LinkedIn (optional)
+  - A sample of your writing (optional)
+you_get:
+  - A comment that adds something new
+  - The gap it found in the post
+  - A choice of comment shape
+  - A shorter version to paste
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

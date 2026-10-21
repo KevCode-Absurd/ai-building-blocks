@@ -6,6 +6,25 @@ summary: Say what the service must do. Get API routes, database design and secur
 job: build-software
 headline: Backend builder
 subhead: Say what the service must do. Get API routes, database design and secure login written for you.
+explain: |
+  The server side of an app: API routes, database design and secure login, written for what your service must do. Start from an OpenAPI file or a schema, and the AI scaffolds route handlers, input checks and types.
+
+  It also reviews your database for slow queries and helps plan changes safely, tests an API under load by setting how many users and for how long, and runs a security pass over login and common attack points. It includes standard response formats, error shapes and status code rules so your API stays consistent. Three Python helper scripts do the scaffolding, migration analysis and load testing. You need a way to run code.
+when:
+  - You have an API plan and need routes without writing each by hand.
+  - A page is slow and you suspect the database.
+  - You want to know if your API survives fifty users at once.
+  - You need login added and want it hardened.
+you_give:
+  - An API spec or a description of the service
+  - Database type and connection details (optional)
+  - Language or framework, such as Express
+  - Load targets (optional)
+you_get:
+  - API route handlers and validation
+  - Database analysis and migration notes
+  - Load test results
+  - Security hardening steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

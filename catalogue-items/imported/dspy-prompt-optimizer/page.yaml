@@ -6,6 +6,25 @@ summary: Describe your AI task and a few examples. Get a program that tunes its 
 job: build-software
 headline: DSPy prompt optimizer
 subhead: Describe your AI task and a few examples. Get a program that tunes its own prompts to score better.
+explain: |
+  A small program that tunes its own prompts, so you stop hand-editing wording and start measuring scores. You describe an AI task and give a few examples, and you get working DSPy code plus an optimiser run that improves it.
+
+  DSPy, from Stanford, lets you declare what goes in and what comes out, then builds the prompt for you. The skill covers installing it, writing the signature for your task, wrapping it in modules for steps like reasoning or retrieval, and choosing a metric. An optimiser then tests prompt and example variations against your data and keeps the best. It suits question answering, classifiers, RAG pipelines and agents. You need Python and a model API key.
+when:
+  - Your prompt works on some inputs and fails on others.
+  - You want a repeatable score instead of guessing at wording.
+  - You are building a RAG or classifier and want it tuned.
+  - You want to swap models without rewriting prompts.
+you_give:
+  - A description of the AI task
+  - A handful of example inputs and answers
+  - A scoring rule for good output
+  - Python and a model API key
+you_get:
+  - DSPy code for your task
+  - A metric to score outputs
+  - An optimised program
+  - A comparison of before and after scores
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a meeting idea. Get a call on whether to hold it, its cost in d
 job: organise-work
 headline: Meeting agenda and cost planner
 subhead: Give it a meeting idea. Get a call on whether to hold it, its cost in dollars and a timed agenda.
+explain: |
+  A call on whether a meeting should happen at all, with the cost in dollars, and a timed agenda only if it passes. Most meetings should be an email, and this makes that easy to prove.
+
+  Three small Python scripts do the work. The first multiplies people, minutes and pay rate, adds the cost of lost focus, and checks that there is a decision, an agenda and an owner. No decision means send a memo. The second builds a decision-first agenda, refuses topics with no outcome, and keeps a five-minute closing slot. The third turns raw notes into a checklist by owner and flags any action with no owner or date.
+when:
+  - You are asked to join a recurring meeting and doubt it is worth the time.
+  - You need an agenda that fits in 45 minutes and ends with decisions.
+  - You want to show your boss what a weekly sync really costs.
+  - You have messy notes and need a list of who does what by when.
+you_give:
+  - Attendee count, length and average pay rate
+  - The decision the meeting should reach
+  - Topics with desired outcomes and owners
+  - Raw meeting notes for the action list (optional)
+you_get:
+  - A meet or send-a-memo verdict
+  - The meeting cost in dollars
+  - A timed, decision-first agenda
+  - An action checklist with owners and due dates
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

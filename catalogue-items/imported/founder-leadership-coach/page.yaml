@@ -6,6 +6,26 @@ summary: Describe how you spend your week. Get a delegation plan, calendar audit
 job: lead-people
 headline: Founder leadership coach
 subhead: Describe how you spend your week. Get a delegation plan, calendar audit and your blind spots named.
+explain: |
+  A clear picture of how you work as a founder, where you are the bottleneck, and what to hand off first. It comes with a delegation plan and a calendar audit.
+
+  It starts by placing you as a builder, seller, operator or visionary and naming the blind spot that goes with it. It then looks at why you hold on to tasks and sorts your week by what only you can do. A calendar audit shows where your energy goes. It covers growing from small teams to larger ones, where your style starts to shape culture, and suggests the hire that complements you. It also addresses burnout and self-doubt directly.
+when:
+  - You are in every meeting and nothing moves without you.
+  - You feel overloaded and do not know what to delegate.
+  - You suspect your style is slowing the team as it grows.
+  - You are a first-time CEO and want an honest read on your gaps.
+you_give:
+  - How you spend a typical week
+  - Calendar or list of recurring meetings
+  - Team size and who reports to you
+  - What you avoid or enjoy most (optional)
+you_get:
+  - Your founder type and blind spot
+  - Delegation plan with first handoffs
+  - Calendar audit
+  - Complement hire suggestion
+  - Energy and burnout check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your API or paste its code. Get a complete OpenAPI or Swagger 
 job: build-software
 headline: API spec writer
 subhead: Describe your API or paste its code. Get a complete OpenAPI or Swagger spec ready for docs and SDKs.
+explain: |
+  A full, valid OpenAPI or Swagger file for your API, ready to feed your docs and client libraries. Describe the API in words, or paste your route code, and the file is written for you with no placeholders left.
+
+  The skill asks a few questions first: OpenAPI 3 or Swagger 2, YAML or JSON, what the API does, the endpoints, the sign-in type and the main data shapes. If you paste code from Express, FastAPI, Django or Spring, it reads the endpoints itself and does not ask what you already showed. It then builds the paths, parameters, request and response shapes, security schemes, tags and example servers. A partial spec is merged, not overwritten.
+when:
+  - You have working endpoints but no documentation file.
+  - You need a spec so tools can generate client libraries.
+  - A partner asks for your API in OpenAPI format.
+  - Your old Swagger 2 file needs to move to version 3.
+you_give:
+  - A description of the API, or your route code
+  - Output format and spec version
+  - Sign-in type
+  - A partial spec to extend (optional)
+you_get:
+  - A complete OpenAPI or Swagger file
+  - Endpoints with request and response shapes
+  - Security setup
+  - Reusable data schemas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

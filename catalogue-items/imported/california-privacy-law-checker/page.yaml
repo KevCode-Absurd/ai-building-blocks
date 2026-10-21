@@ -6,6 +6,25 @@ summary: Describe how you use customer data. Get California privacy duties, gaps
 job: check-contracts
 headline: California privacy law checker
 subhead: Describe how you use customer data. Get California privacy duties, gaps and a plan for consumer requests.
+explain: |
+  You learn whether California privacy law applies to you, what it requires, and where you fall short. Describe how you collect and use customer data, and you get duties, gaps and a plan for handling consumer requests.
+
+  The skill works in order. It confirms you are a for-profit business in California, then tests the three thresholds: revenue over 25 million dollars, data on 100,000 or more people, or half your revenue from selling or sharing data. It then classifies each company you share data with, as a vendor, a third party and so on, since that changes what counts as a sale. It marks its last-verified date. It is guidance, so have a lawyer confirm.
+when:
+  - You are not sure the California privacy act covers your business.
+  - A customer asks you to delete or share their data and you lack a process.
+  - You share customer data with ad or analytics partners and need to know what that means.
+  - You are updating your privacy policy and want a gap list first.
+you_give:
+  - What personal data you collect and why
+  - Your revenue and number of California customers
+  - Who you share data with
+  - Your current privacy policy (optional)
+you_get:
+  - A yes or no on whether the law applies
+  - A list of duties that apply to you
+  - Gaps to close
+  - A plan for handling consumer requests
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

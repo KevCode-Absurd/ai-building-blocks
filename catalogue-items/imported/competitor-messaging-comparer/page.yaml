@@ -6,6 +6,25 @@ summary: Name your rivals. Get a messaging and positioning comparison with conte
 job: study-competitors
 headline: Competitor messaging comparer
 subhead: Name your rivals. Get a messaging and positioning comparison with content gaps. Reads public web pages.
+explain: |
+  A side by side look at how your rivals describe themselves, what content they publish and where they have gone quiet. You can see which claims are crowded and which message nobody owns.
+
+  You name the competitors and, if you wish, say what you sell and what makes you different. Claude reads their home pages, product and pricing pages, blogs, social profiles, recent news and review themes. It can add job postings as a hint of direction. It compares positioning, messaging, content mix, recent launches and pricing where public. The brief ends with gaps you can use. It reads only public web pages and needs web search to run.
+when:
+  - You are rewriting your homepage and want to stand out from rivals.
+  - A competitor just launched and you need to know how they pitch it.
+  - Your content team wants topics rivals have missed.
+  - You need a competitive brief before a planning meeting.
+you_give:
+  - One or more competitor names
+  - What you sell and to whom (optional)
+  - Your key differences (optional)
+  - Focus areas, such as messaging or pricing (optional)
+you_get:
+  - A positioning comparison
+  - A messaging and content review
+  - Recent news and launches
+  - A list of gaps to use
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

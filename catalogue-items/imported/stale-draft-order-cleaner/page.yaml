@@ -6,6 +6,23 @@ summary: Get draft orders older than your set days found, and deleted if you say
 job: run-your-store
 headline: Stale draft order cleaner
 subhead: Get draft orders older than your set days found, and deleted if you say so. Deletes cannot be undone.
+explain: |
+  A list of Shopify draft orders older than a set number of days, and a clean-up of them if you say yes. Old drafts pile up from abandoned quotes, half-finished manual orders and retired integrations. They clutter the admin and inflate pending revenue.
+
+  The skill finds open drafts older than your cutoff (30 days by default) and shows them as a dry run first. Only after you confirm does it delete. Deletes are permanent and cannot be undone, so check that none are live B2B quotes waiting on a customer. You need the Shopify command line, a signed-in session and order read and write access.
+when:
+  - Your draft orders list is full of old items.
+  - Pending revenue looks too high because of stale drafts.
+  - You want to clear abandoned B2B quotes.
+  - You want to preview before anything is deleted.
+you_give:
+  - Your store domain
+  - Age in days that counts as stale (optional)
+  - Shopify access to read and write orders
+you_get:
+  - A dry-run list of stale drafts
+  - Deletion of the ones you confirm
+  - A summary of what was removed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

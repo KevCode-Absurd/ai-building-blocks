@@ -6,6 +6,26 @@ summary: Give it a ledger and a bank statement. Get matched items, the gaps and 
 job: track-numbers
 headline: Account reconciler
 subhead: Give it a ledger and a bank statement. Get matched items, the gaps and a note on each. Have an accountant check.
+explain: |
+  Differences between your books and a bank statement, subledger or partner records are matched, sorted and explained. Have an accountant check the result before you rely on it.
+
+  The skill compares your ledger balance to the other source and lists the items that do not agree. It sorts each one into three groups: timing differences that will clear on their own, adjustments you need to book, and items that need investigation. It ages the open items, so old ones stand out, and shows trends over time. It handles bank reconciliations, ledger to subledger, and intercompany. You get a note for each gap that says what it is and what to do next.
+when:
+  - It is month end and the bank balance does not match your books.
+  - Two group companies disagree on what they owe each other.
+  - You need to explain old open items to your accountant.
+  - You want a clear list of what needs booking and what needs a closer look.
+you_give:
+  - A ledger or trial balance extract
+  - A bank statement or the other record to compare
+  - The period you are closing
+  - Your escalation thresholds (optional)
+you_get:
+  - Matched items
+  - A list of unmatched differences
+  - Each difference sorted by type
+  - An aging view of open items
+  - A note on the next action for each gap
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

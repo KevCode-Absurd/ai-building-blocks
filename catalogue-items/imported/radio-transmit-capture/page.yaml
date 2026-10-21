@@ -6,6 +6,25 @@ summary: Give it a test signal. Get it sent over the air and the received IQ dat
 job: build-software
 headline: Radio transmit and capture helper
 subhead: Give it a test signal. Get it sent over the air and the received IQ data captured.
+explain: |
+  A test signal sent over the air from a software defined radio, and the received IQ data captured and ready to study. You can run a loopback test, capture a band, or send for a long time.
+
+  It works with NI USRP radios using MATLAB Wireless Testbench. You pick the signal: a test tone, a standard-style waveform or your own samples. The skill sets sample rate, gain and antennas, then chooses transmit once or continuous, and foreground or background capture. It also helps when samples drop or gain is wrong. You need MATLAB, the Wireless Testbench add-on and a set-up USRP radio. First-time radio setup is a separate task.
+when:
+  - You want to confirm a radio chain works with a loopback test.
+  - You need to capture a slice of spectrum as IQ data.
+  - You are transmitting for hours and capturing in the background.
+  - Captured data has dropped samples or the wrong gain.
+you_give:
+  - Test signal or waveform
+  - Radio model and antenna setup
+  - Center frequency and sample rate
+  - MATLAB with Wireless Testbench
+you_get:
+  - Transmit and capture script
+  - Captured IQ data
+  - Gain and sample-rate settings
+  - Fixes for dropped samples
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

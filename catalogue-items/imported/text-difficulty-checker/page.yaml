@@ -6,6 +6,25 @@ summary: Paste a text. Get its difficulty by length, meaning and reader task, wi
 job: teach-and-train
 headline: Text difficulty checker
 subhead: Paste a text. Get its difficulty by length, meaning and reader task, with support ideas for struggling readers.
+explain: |
+  Pick the wrong text and half the class stalls, pick a text that is too easy and nobody grows. This skill rates a passage three ways: how long and tangled the language is, how deep the meaning goes, and how hard the task asked of the reader is.
+
+  You describe the text, the age or reading level of the students, and why they are reading it. A short extract makes the check sharper. It then names the exact parts likely to cause trouble, such as rare words, dense sentences or missing background. For each trouble spot it suggests support, like pre-taught vocabulary, a guided first read or a question set.
+when:
+  - You are choosing a text for a class and are unsure it fits their level.
+  - Some students struggle with a passage and you need ways to help.
+  - You want to compare two texts for the same lesson.
+  - You are planning pre-reading support for readers learning English.
+you_give:
+  - A description or extract of the text
+  - Year group and reading level
+  - Why students are reading it
+  - Known worries about the text (optional)
+you_get:
+  - A difficulty rating on length, meaning and task
+  - A list of likely trouble spots
+  - Support ideas for each trouble spot
+  - A suggested reading plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Say what good looks like. Get a scoring guide an AI can use to grade an
 job: test-and-fix-code
 headline: AI answer judge designer
 subhead: Say what good looks like. Get a scoring guide an AI can use to grade answers fairly, with bias checks.
+explain: |
+  A scoring guide that an AI judge can use to grade answers the same way each time, plus checks for the biases judges are known to have. It starts from what good looks like for your use.
+
+  You choose between two modes. Direct scoring gives one answer a score, which works for facts and following instructions. Pairwise comparison picks the better of two answers, which works for tone and style. The skill then guards against known problems. Position bias favours the first answer, so each pair is judged twice with the order swapped. Length bias favours long answers, so the rubric says length is not quality. It also shows how to compare AI scores with human ones.
+when:
+  - You want an AI to grade many answers and need the grading to be fair.
+  - Your scores change every time you run the same test.
+  - You are comparing two prompts and want to pick the winner.
+  - You need a rubric both people and AI can apply the same way.
+you_give:
+  - What a good answer looks like
+  - Examples of good and bad answers (optional)
+  - What you are comparing
+  - A few human scores to check against (optional)
+you_get:
+  - A rubric with scale and examples
+  - A judge prompt for direct or pairwise grading
+  - Checks for position and length bias
+  - A way to compare AI and human scores
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

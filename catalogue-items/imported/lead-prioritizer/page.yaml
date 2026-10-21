@@ -6,6 +6,25 @@ summary: Give it your leads. Get them scored on fit and activity and sorted into
 job: sell-and-negotiate
 headline: Lead prioritizer
 subhead: Give it your leads. Get them scored on fit and activity and sorted into ranked tiers.
+explain: |
+  Your leads in a ranked list, with hot ones at the top so your team calls them first. Give your ideal customer profile, the activity signals you track and a list of leads. The skill scores how well each company fits, using size, industry, funding stage and region, up to 50 points.
+
+  It adds up to 50 points more for behaviour, such as email clicks, page visits and product use. The total sorts every lead into Hot at 75 and above, Warm from 40 to 74 and Cold below that. You also get the rubric, so you can see why each lead scored as it did and tune the weights as you learn.
+when:
+  - Your sales team does not know which of 400 leads to call first.
+  - You want a simple scoring model without buying software.
+  - Marketing and sales disagree on what a good lead is.
+  - You want to route hot leads straight to a rep.
+you_give:
+  - Your ideal customer profile
+  - The activity signals you track
+  - A list of leads with their details
+  - Past won deals to calibrate (optional)
+you_get:
+  - A scoring rubric with points
+  - Each lead scored on fit and activity
+  - Hot, Warm and Cold tiers
+  - A ranked list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

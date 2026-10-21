@@ -6,6 +6,25 @@ summary: Give it a bank statement and your ledger. Get matched items, near match
 job: track-numbers
 headline: Bank and ledger matcher
 subhead: Give it a bank statement and your ledger. Get matched items, near matches and a list of what is left over.
+explain: |
+  Bank transactions matched to ledger entries at scale, with the leftovers clearly listed. Give it a bank statement and a ledger export and say how you define a match: same reference and amount, or similar name, same amount and a date within a couple of days.
+
+  Code does the heavy lifting with Python tools such as pandas, because AI alone is poor at matching tens of thousands of rows. It cleans vendor names, so AWS and Amazon Web Svcs line up, matches amounts with tolerance, and sorts out one-to-many cases where one payment covers several invoices. The AI then handles the few ambiguous items the code can't decide. You get a reconciliation report.
+when:
+  - You face five thousand bank lines and a ledger that doesn't agree.
+  - Vendor names differ between your bank and your books.
+  - One payment covers many invoices and nothing lines up.
+  - Your month-end bank rec takes days of manual work.
+you_give:
+  - A bank statement file
+  - A ledger export
+  - Your matching rules and date tolerance
+  - Any shared IDs, such as check numbers
+you_get:
+  - Exact and fuzzy matches
+  - A list of near matches to review
+  - Unmatched items on each side
+  - A reconciliation report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

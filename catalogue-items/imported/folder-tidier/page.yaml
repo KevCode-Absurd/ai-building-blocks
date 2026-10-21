@@ -6,6 +6,26 @@ summary: Point it at a messy folder. Get a clean folder plan and duplicates foun
 job: organise-work
 headline: Folder tidier
 subhead: Point it at a messy folder. Get a clean folder plan and duplicates found. Files move only when you say yes.
+explain: |
+  A messy folder becomes a clear plan for how it should be organised, with duplicates listed. Nothing moves until you approve it.
+
+  It first asks which folder, what annoys you most, and what to leave alone. Then it scans file types, dates and names, finds exact duplicates, and spots old files you may not need. It suggests a folder structure that fits what you actually have, plus a naming pattern. You see the full list of planned moves and renames. After you say yes, it carries them out and gives a summary. You can choose a light tidy or a full clean-up.
+when:
+  - Your Downloads folder is full of files you cannot find.
+  - You suspect many duplicates are taking up space.
+  - You are archiving old projects and want them sorted first.
+  - You are starting a new project and want a clean structure.
+you_give:
+  - Folder to tidy
+  - Main problem (finding files, duplicates, no structure)
+  - Files and folders to leave alone
+  - "How far to go: light or full clean-up"
+you_get:
+  - Summary of what is in the folder
+  - List of duplicate files
+  - Proposed folder structure and naming rules
+  - Move plan to approve
+  - Report after the changes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

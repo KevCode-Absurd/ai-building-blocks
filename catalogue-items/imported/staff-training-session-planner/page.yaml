@@ -6,6 +6,27 @@ summary: Give it a training goal. Get a session plan for teachers that uses adul
 job: teach-and-train
 headline: Staff training session planner
 subhead: Give it a training goal. Get a session plan for teachers that uses adult learning methods.
+explain: |
+  A teacher training session plan built on how adults actually learn. Give it the topic, who is attending and how long you have. The skill draws on research on effective teacher development, including work by Timperley, Darling-Hammond and Desimone.
+
+  The plan starts from what teachers do now, mixes input with practice and discussion, and links to classroom use. It also sets out follow-up after the session, because one-off training rarely changes practice. You can add why the session is happening, your school's priorities and any follow-up plans, and it fits them in. It suits INSET days and CPD workshops.
+when:
+  - You must run an INSET day and need a session plan.
+  - A new initiative needs staff buy-in, not just a talk.
+  - You have only one hour and want it to count.
+  - You want training to lead to real classroom change.
+you_give:
+  - The teaching practice or topic
+  - Who is attending and their experience
+  - Session length
+  - Current practice and school priorities (optional)
+  - Follow-up plans (optional)
+you_get:
+  - A timed session plan
+  - Activities for adult learners
+  - Links between the session and classroom practice
+  - A follow-up plan
+  - Evidence behind the design
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

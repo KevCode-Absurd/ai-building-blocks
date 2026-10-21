@@ -6,6 +6,25 @@ summary: Give it an API or config design. Get the easy-to-misuse parts that lead
 job: secure-code
 headline: Risky design reviewer
 subhead: Give it an API or config design. Get the easy-to-misuse parts that lead to security mistakes.
+explain: |
+  A list of the places in your API or settings where the easy choice is the unsafe one, so developers cannot slip into security mistakes. You fix the design, not the people.
+
+  The skill works from one idea: secure use should take the least effort. It reviews API designs, config options and crypto library use, and looks for dangerous defaults, switches that turn off safety and choices a rushed developer will get wrong. It rejects stock excuses like it is documented, or advanced users need flexibility. Each find comes with a fix, such as a safe default or removing the option. It is not for implementation bugs or business logic.
+when:
+  - You are releasing a library and want it hard to misuse.
+  - A config file has an option that turns off a security check.
+  - You are reviewing how authentication settings are exposed.
+  - A past incident came from a developer using your API wrongly.
+you_give:
+  - The API, library interface or config schema
+  - The language or framework (optional)
+  - How developers use it (optional)
+  - Past misuse cases (optional)
+you_get:
+  - A list of risky design points
+  - Why each is easy to misuse
+  - A safer design for each
+  - Priority order for fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it your jobs, machines and due dates. Get a job order that meets d
 job: plan-supply-chain
 headline: Production schedule planner
 subhead: Give it your jobs, machines and due dates. Get a job order that meets deadlines and keeps machines busy.
+explain: |
+  Put your jobs in the right order on the right machines so orders ship on time and no machine sits idle. You get a concrete schedule instead of a guess.
+
+  Start by describing your shop: job shop or flow shop, how many machines, setup times, routings and due dates. Say what matters most, such as shortest total time, fewest late jobs or least work in progress. The skill picks a sequencing method that fits, such as shortest processing time or earliest due date, builds the job order, and checks it against shift patterns, tooling and labour limits. It points out the bottleneck and suggests changes when the plan is tight.
+when:
+  - You have more jobs than machines and need a clear order to run them.
+  - Orders keep shipping late and you suspect poor sequencing.
+  - Changeovers eat your day and you want to group similar jobs.
+  - You are replacing a whiteboard or spreadsheet schedule with something more reasoned.
+you_give:
+  - List of jobs with routing and processing times
+  - Machines and their limits
+  - Due dates and priorities
+  - Setup and changeover times (optional)
+  - Your main goal, such as fewer late jobs
+you_get:
+  - Job sequence for each machine
+  - Expected finish time per job
+  - Machine utilisation
+  - Bottleneck and late job warnings
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

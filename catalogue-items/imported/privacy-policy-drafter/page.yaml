@@ -6,6 +6,25 @@ summary: Describe your business and data use. Get privacy policy wording and a r
 job: check-contracts
 headline: Privacy policy drafter
 subhead: Describe your business and data use. Get privacy policy wording and a review checklist. Have a lawyer check it.
+explain: |
+  Privacy policy wording written for how your business really handles data, with a checklist for review. Have a lawyer check it before you publish.
+
+  You describe your business, what you collect and where your users live. The skill maps every kind of personal data, from forms and accounts to cookies and payment details, to the laws that may apply. It writes each section in plain language next to the exact disclosures required, and marks open questions. A final pass checks every data use has a purpose and a legal basis, and lists compliance gaps you still need to close.
+when:
+  - You are launching a SaaS and have no privacy policy.
+  - Your current policy is a copy from another site.
+  - You added a new tool that collects data.
+  - You want a list to hand your lawyer.
+you_give:
+  - Business and product description
+  - Data you collect
+  - Third-party tools such as analytics and payments
+  - Countries of your users
+you_get:
+  - Privacy policy sections
+  - Plain-language explanations
+  - Compliance gap list
+  - Review checklist for your lawyer
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

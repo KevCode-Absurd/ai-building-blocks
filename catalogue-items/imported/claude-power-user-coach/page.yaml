@@ -6,6 +6,24 @@ summary: Tell it your work. Get lessons and exercises that make you faster with 
 job: set-up-ai
 headline: Claude power-user coach
 subhead: Tell it your work. Get lessons and exercises that make you faster with Claude, one step at a time.
+explain: |
+  Short lessons and exercises that make you faster with Claude, one step at a time and tuned to your own work. It asks one question about how you use Claude, then teaches the tricks that matter for you.
+
+  On day one it gives you a personal glossary of key terms, so you know what to call things. After that it stays on in the background. As you chat, it watches for moments where a better habit would help, such as giving context upfront, asking for a different format or splitting a big task. It speaks up only when a tip is worth it, and most turns it says nothing.
+when:
+  - You use Claude daily but feel you are only scratching the surface.
+  - You want practical tricks for writing, coding or research.
+  - Your prompts take many rounds to get right.
+  - You want a coach who points out better habits as you go.
+you_give:
+  - Your top two or three uses for Claude
+  - Your current skill level (optional)
+  - Permission for tips as you work
+you_get:
+  - A personal glossary
+  - Short exercises
+  - Timely tips when you miss a shortcut
+  - A growing set of habits
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

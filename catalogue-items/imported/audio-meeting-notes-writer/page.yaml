@@ -6,6 +6,25 @@ summary: Give it a recording. Get a written transcript, a short summary and clea
 job: work-with-audio
 headline: Audio meeting notes writer
 subhead: Give it a recording. Get a written transcript, a short summary and clear meeting notes.
+explain: |
+  A meeting recording turned into a written transcript, a short summary and tidy notes in a Markdown file. Hand it an audio or video file and it transcribes the speech, and can label who spoke when.
+
+  From the transcript, the AI writes an executive summary, key points and action items. It can also produce subtitle files such as SRT and VTT, and process several recordings in one go. It handles common formats like MP3, WAV, M4A, OGG, FLAC and WEBM. It warns you before working on a very large file. Transcription runs through tools on your computer, so expect to install a few things, and read its guide first.
+when:
+  - You recorded a call and nobody took notes.
+  - You need subtitles for a training video.
+  - A two-hour interview has to be boiled down to a page.
+  - You have a folder of recordings to turn into text.
+you_give:
+  - An audio or video file
+  - Whether you want speaker labels (optional)
+  - Output type, such as notes or subtitles
+  - Language of the recording (optional)
+you_get:
+  - A written transcript
+  - An executive summary
+  - Action items and key points
+  - Subtitle files (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Write what you remember and rate your confidence first. Your AI then fi
 job: teach-and-train
 headline: Recall-first study tutor
 subhead: Write what you remember and rate your confidence first. Your AI then fills gaps instead of repeating what you know.
+explain: |
+  A study helper that makes you try first. You write what you remember and rate how sure you are, and only then does your AI fill the gaps. This beats rereading, because pulling facts from memory is what makes them stick.
+
+  You name the topic. Before any explanation, it asks for a free-recall attempt and a confidence rating. It compares your recall to the facts, marks what you got right, and finds what you missed or got wrong. Where you were confident but wrong, it tells you plainly. It then teaches only the gaps and ends with a short retrieval check. The method comes from research on testing and desirable difficulty.
+when:
+  - You have an exam and want to find out what you really know.
+  - You keep rereading notes and nothing sticks.
+  - You want an AI that does not just hand over answers.
+  - You want to catch topics where you feel sure but are wrong.
+you_give:
+  - Topic you are studying
+  - What you can recall, in your own words
+  - A confidence rating
+  - Course notes (optional)
+you_get:
+  - Check of your recall against the facts
+  - Gaps and errors listed
+  - Explanation of only what you missed
+  - Short retrieval quiz
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

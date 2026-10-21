@@ -6,6 +6,25 @@ summary: Point it at your app. Get every page, part and endpoint listed with wha
 job: test-and-fix-code
 headline: Test coverage gap finder
 subhead: Point it at your app. Get every page, part and endpoint listed with what is tested and what is not.
+explain: |
+  A full inventory of what your app can do and which parts have tests, so you see the untested pages, components and endpoints at a glance. You decide where to add tests from evidence, not hunches.
+
+  The skill first maps the surface of the app: routes and pages, interactive components such as forms and modals, API endpoints with their methods, and key user flows like sign-up and checkout. It then maps the existing tests and matches them to each item. Each surface is marked tested, partly tested or missing. Gaps are ranked by how important the feature is and how likely it is to break. You get a short plan for what to test first.
+when:
+  - You inherited an app and do not know what is tested.
+  - A bug reached users in an area you thought was covered.
+  - You want to know if checkout and login have real tests.
+  - You are planning a testing sprint and need priorities.
+  - Coverage percentage looks fine but you do not trust it.
+you_give:
+  - Access to your app code
+  - Your test folder
+  - Your most important user flows (optional)
+you_get:
+  - A map of pages, components, endpoints and flows
+  - A tested or not tested label for each
+  - Gaps ranked by risk
+  - A list of what to test first
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

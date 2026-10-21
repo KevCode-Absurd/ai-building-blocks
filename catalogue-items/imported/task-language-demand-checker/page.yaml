@@ -6,6 +6,26 @@ summary: Paste a task or text. Get the words and sentence types that may block s
 job: teach-and-train
 headline: Task language demand checker
 subhead: Paste a task or text. Get the words and sentence types that may block students still learning English.
+explain: |
+  A list of the words, phrases and sentence types in a task that may stop students who are still learning English, before they ever get to the subject itself. You can then support the language and keep the thinking hard.
+
+  The skill reads the task through the lens of everyday versus academic language. It flags abstract nouns, passive voice, long nested sentences, command verbs such as justify or evaluate, and subject terms with no context. It rates the demand for your year group. For each barrier it suggests a support, such as a sentence starter, a word bank or a visual. It does not lower the task.
+when:
+  - A multilingual student fails a task you know they understand.
+  - You are planning a unit and want to find the hardest wording early.
+  - You need to decide what to pre-teach before a lesson.
+  - An exam question uses wording students rarely meet.
+  - You want to compare two texts and pick the more accessible one.
+you_give:
+  - The task or text
+  - Year group
+  - Subject
+  - Student English level (optional)
+you_get:
+  - A list of word and sentence barriers
+  - A language demand rating
+  - Suggested supports for each barrier
+  - Words to pre-teach
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your business. Get an honest diagnosis, a working rhythm and o
 job: plan-strategy
 headline: Stalled business turnaround guide
 subhead: Describe your business. Get an honest diagnosis, a working rhythm and offers repriced to real value, step by step.
+explain: |
+  A business that has stopped growing gets a diagnosis first and a plan second. You work through eight layers in order: strategy, weekly execution, management, structure, motivation, metrics, margin and pricing. Each step asks you to decide something, and your choices are saved in a docs folder so you can stop and pick up later.
+
+  The flow is simple. It names the one challenge holding you back, builds a working rhythm for the team, checks if your org shape is the block, then looks at the numbers and what you charge. It hands each phase to a focused method rather than improvising. You need to be able to answer honest questions about your business.
+when:
+  - Revenue has been flat for a year and you do not know why.
+  - You tried several tactics and none of them moved the numbers.
+  - You are the bottleneck and your team waits on you for decisions.
+  - Your prices have not changed in years and margins feel thin.
+you_give:
+  - A description of the business, customers and revenue
+  - Your team size and how decisions get made
+  - Key numbers such as margin and pricing (optional)
+  - Time to answer questions across several sessions
+you_get:
+  - A written diagnosis of what is capping growth
+  - A strategy note you can share with your team
+  - A weekly operating rhythm
+  - Repriced offers tied to real value
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

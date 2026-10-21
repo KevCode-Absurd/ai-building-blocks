@@ -6,6 +6,25 @@ summary: Describe your systems. Get how much loss you can take, a backup plan an
 job: set-up-ai
 headline: Backup and recovery planner
 subhead: Describe your systems. Get how much loss you can take, a backup plan and a restore drill to run.
+explain: |
+  A plan for when your data is gone: how much you can lose, how fast you must be back and exactly how to restore. Describe your systems. The AI works through four questions. What must be recoverable? How much data loss is acceptable (RPO)? How much downtime is acceptable (RTO)? What kind of disaster are you planning for?
+
+  It lists your data and sets targets for each tier. It checks or designs the backups and writes a step-by-step restore guide. Then it plans a drill so you know it works before you need it. It covers ransomware, deleted databases, host outages and bad deploys.
+when:
+  - You have backups but have never tried restoring one.
+  - Someone asked how long you'd be down if your database vanished.
+  - You are moving to a new platform and need a recovery plan.
+  - An incident showed gaps and you want them closed.
+you_give:
+  - A list of systems and where data lives
+  - Current backups, if any
+  - What downtime and data loss would hurt
+  - Team size and tools
+you_get:
+  - Data inventory by importance
+  - RPO and RTO targets per tier
+  - A backup design or review
+  - A restore runbook and drill plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

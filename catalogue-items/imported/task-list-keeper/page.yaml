@@ -6,6 +6,25 @@ summary: Tell it your tasks. Get a simple TASKS file kept up to date as you add,
 job: organise-work
 headline: Task list keeper
 subhead: Tell it your tasks. Get a simple TASKS file kept up to date as you add, finish and review work.
+explain: |
+  One plain TASKS file that stays current as you add, finish and review your work; you know what is active, waiting and can wait.
+
+  The file has four sections: Active, Waiting On, Someday and Done. When you say you finished something, it moves to Done. When you add a task, it goes in the right place with context such as who you are waiting on. You and the AI can both edit the file, and it is kept in your working folder. A visual board can read the same file. You can ask for a review of open items any time.
+when:
+  - Your to-do list lives in five apps and you trust none.
+  - You keep forgetting what you are waiting on from other people.
+  - You want to say "done with the invoice" and have it updated.
+  - You need a weekly check of what is stuck.
+  - You want tasks the AI can see while it works with you.
+you_give:
+  - Tasks in your own words
+  - Updates as you finish things
+  - Who or what you are waiting on (optional)
+you_get:
+  - A TASKS file with four clear sections
+  - Items moved and updated as you report
+  - A review of open and stuck work
+  - An optional visual task board
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

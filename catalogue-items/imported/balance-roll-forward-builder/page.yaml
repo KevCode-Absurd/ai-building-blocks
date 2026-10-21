@@ -6,6 +6,25 @@ summary: Name an account. Get a schedule from opening to closing balance, with e
 job: money-and-investing
 headline: Balance roll-forward builder
 subhead: Name an account. Get a schedule from opening to closing balance, with each movement tied to the ledger.
+explain: |
+  A schedule that walks a balance sheet account from its opening balance to its closing balance, with every movement tied to the ledger. Name the account, the entity and the period, and the AI builds the layout: opening balance, plus new activity, plus accruals booked, minus reversals of earlier accruals, minus payments, plus or minus reclasses and currency translation, giving the ending balance.
+
+  Each line is matched to a source, such as the prior close package or the general ledger. The ending figure must equal the ledger balance, and any gap is shown. It suits month-end close packages and audit support.
+when:
+  - Month-end close needs a roll-forward for accrued expenses.
+  - An auditor asks you to prove how a balance moved in the year.
+  - Your ledger balance and your schedule are off by an unknown amount.
+  - You want the same layout for every balance sheet account.
+you_give:
+  - The account or account group
+  - The entity and period
+  - Opening balance and ledger activity
+  - Accruals, payments and adjustments
+you_get:
+  - A roll-forward from opening to closing balance
+  - Each line tied to its ledger source
+  - A difference check against the ledger
+  - A package ready for review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

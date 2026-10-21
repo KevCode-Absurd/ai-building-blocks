@@ -6,6 +6,26 @@ summary: Give it a new WordPress plugin or theme. Get security, translation and 
 job: test-and-fix-code
 headline: WordPress code checker
 subhead: Give it a new WordPress plugin or theme. Get security, translation and speed problems found before you ship.
+explain: |
+  A check of your new WordPress plugin or theme for problems that hurt security, translations and speed. You find the faults before visitors or attackers do.
+
+  The skill reviews code that AI or a person just wrote, using WordPress rules. It looks for unescaped output, request data used without cleaning, state changes missing a nonce or permission check, and database queries built without preparation. It also flags text that cannot be translated and slow patterns such as heavy queries on every page load. Use it only on code you own or are allowed to review. It stays read-only and asks for confirmation before anything that touches a live target.
+when:
+  - AI generated a plugin and you want it reviewed before release.
+  - You are about to submit a theme to the directory.
+  - Your plugin is slow on busy pages.
+  - You need to add translation support.
+you_give:
+  - Plugin or theme code
+  - What it should do
+  - WordPress and PHP versions (optional)
+  - Confirmation you own or may review the code
+you_get:
+  - Security issues with severity
+  - Translation gaps
+  - Performance problems
+  - Suggested code fixes
+  - Review checklist result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

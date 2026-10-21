@@ -6,6 +6,25 @@ summary: Describe your large files. Get the right MATLAB tool picked for data to
 job: build-software
 headline: Big data tool chooser
 subhead: Describe your large files. Get the right MATLAB tool picked for data too big for memory.
+explain: |
+  One clear MATLAB path for working with files too big for memory, not a menu of options. Describe your data: CSV, Parquet, text or spreadsheet files, how many and how big, and what you want to do with them.
+
+  The AI runs a pre-flight check and follows a decision flowchart. Continuous data across files points to a datastore with tall arrays. Files to process one at a time point to a datastore with transform. Parquet can be handled per row group. It also covers running reads in parallel, when mapreduce is actually needed, formats with no built-in datastore, and how to write a custom datastore. You need MATLAB.
+when:
+  - readtable crashes with an out-of-memory error.
+  - You have a folder of two hundred CSV files to treat as one dataset.
+  - You want to speed up a loop over many files.
+  - Your data is in a format MATLAB can't read in chunks.
+you_give:
+  - File type, count and total size
+  - What you want to compute
+  - Your MATLAB setup and available memory
+  - Whether files are one dataset or independent
+you_get:
+  - One recommended approach with reasons
+  - Working MATLAB code for it
+  - Parallel settings if they help
+  - A custom datastore outline (if needed)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

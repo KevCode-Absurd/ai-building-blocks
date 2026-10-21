@@ -6,6 +6,25 @@ summary: Give it social posts. Get what people ask, complain about and want, in 
 job: understand-customers
 headline: Comment mining analyst
 subhead: Give it social posts. Get what people ask, complain about and want, in their own words. Collects data from websites.
+explain: |
+  What people ask, complain about and want, in their own words, pulled from social comments. Use it for product research, content ideas, copy and objection handling.
+
+  You give it a post or video link from TikTok, YouTube, Instagram, Facebook, Reddit or Rumble. It fetches the comments and replies, paging through for depth if you want it. Then it sorts them into questions, complaints, buying signals, misunderstandings and repeated phrases, and keeps the exact wording. It collects data from websites through an API, so it needs a data service account.
+when:
+  - You need real customer language for ad copy.
+  - A competitor's video has hundreds of comments worth reading.
+  - You want content ideas from what your audience asks.
+  - You want to see objections to a product before launch.
+you_give:
+  - Links to posts or videos
+  - How deep to go (optional)
+  - Your product or topic (optional)
+  - Access to a comment data service
+you_get:
+  - Top questions and complaints
+  - Buying signals
+  - Exact phrases people use
+  - Content and copy ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

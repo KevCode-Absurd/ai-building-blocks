@@ -6,6 +6,25 @@ summary: Give it radar or sonar needs. Get a chosen waveform, its settings and p
 job: build-software
 headline: Radar waveform designer
 subhead: Give it radar or sonar needs. Get a chosen waveform, its settings and plots of how well it performs.
+explain: |
+  A radar or sonar waveform chosen for your needs, with its settings and plots showing how well it works. You see range resolution, sidelobes and how it copes with moving targets.
+
+  You state what you need: range, resolution, speed, and whether it is radar, sonar or a combined sensor. The skill walks a decision tree to pick the waveform type, such as linear chirp, nonlinear chirp, FMCW, or phase-coded. It uses the matching MATLAB Phased Array object and avoids the usual mismatches between functions and objects. Then it plots the ambiguity function and measures sidelobe level so you can compare options side by side. MATLAB with the toolbox is required.
+when:
+  - You must pick between a chirp and a phase code for a new sensor.
+  - Sidelobes hide weak targets and you need to lower them.
+  - You want to know how a waveform handles Doppler shift.
+  - You are designing an FMCW radar and need the sweep settings.
+you_give:
+  - Range, resolution and speed needs
+  - Radar, sonar or dual use
+  - MATLAB with Phased Array toolbox
+  - Bandwidth or pulse limits (optional)
+you_get:
+  - Chosen waveform type with reasons
+  - Settings for the waveform
+  - Ambiguity function plots
+  - Sidelobe and resolution figures
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

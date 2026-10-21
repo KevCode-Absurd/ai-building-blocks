@@ -6,6 +6,26 @@ summary: Give it user activity data. Get retention curves by sign-up group, feat
 job: track-numbers
 headline: Retention cohort analyst
 subhead: Give it user activity data. Get retention curves by sign-up group, feature adoption trends and what they suggest.
+explain: |
+  A clear picture of which sign-up groups stay and which leave, with charts and a short list of what to look into next. You see where the drop-off happens and who it happens to.
+
+  You give the skill a CSV, Excel or JSON file with cohort labels, time periods and activity. It first checks the data for gaps and reports cohort sizes and date ranges. Then it works out retention rates, period-over-period change and feature adoption for each cohort, and draws retention heatmaps and cohort lines. It marks early churn, late changes and odd spikes. It ends with follow-up ideas, such as interviews with people who left, surveys and A/B tests.
+when:
+  - Retention fell last quarter and you do not know which users caused it.
+  - You need to show whether a new feature helped people stay.
+  - You want to compare cohorts from different months or campaigns.
+  - You are planning user interviews and need to know whom to ask.
+you_give:
+  - A data file with cohort, period and activity columns
+  - The question you want answered
+  - Feature usage columns (optional)
+  - Engagement scores (optional)
+you_get:
+  - Retention rates by cohort
+  - Heatmap and line charts
+  - Feature adoption comparison
+  - A list of patterns and surprises
+  - Suggested follow-up research and tests
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

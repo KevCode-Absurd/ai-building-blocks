@@ -6,6 +6,24 @@ summary: Get API keys and env variables checked and loaded without ever showing 
 job: secure-code
 headline: Safe secrets manager
 subhead: Get API keys and env variables checked and loaded without ever showing the values in logs or chat.
+explain: |
+  Check that your API keys and environment variables are set, valid and loaded, without any secret ever appearing in chat, logs or command history. The point is that Claude never sees the values.
+
+  It works on four rules. Never print a secret with echo or env commands. Never open the .env file directly. Use a tool called Varlock to validate and show only masked values. Never place a key inside a command, use variables instead. Claude reads the schema file, which lists names and types but no values, and runs a load check that reports pass or fail. You can also run other commands through the tool so keys are filled in out of sight. You need to install Varlock.
+when:
+  - You want Claude to help debug a failing app without seeing your keys.
+  - A new teammate needs to confirm all required variables are set.
+  - You worry a key leaked into logs or shell history.
+  - You need a schema that says which variables the app needs.
+you_give:
+  - Your project folder
+  - A list of required variables (optional)
+  - Which keys are sensitive (optional)
+you_get:
+  - A schema file listing variables without values
+  - A pass or fail check on loaded secrets
+  - Commands that keep keys hidden
+  - Fixes for missing or invalid variables
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

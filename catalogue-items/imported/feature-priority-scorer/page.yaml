@@ -6,6 +6,25 @@ summary: Give it your feature list. Get each scored with RICE and ranked, plus i
 job: build-product
 headline: Feature priority scorer
 subhead: Give it your feature list. Get each scored with RICE and ranked, plus interview analysis and a requirements template.
+explain: |
+  Your feature list ranked by a score, not by who asked loudest. You also get interview themes and a requirements template to start writing the spec.
+
+  The RICE tool takes a CSV where each feature has reach, impact, confidence and effort, and scores it as reach times impact times confidence, divided by effort. With a team capacity figure, it shows what fits in the quarter. A second script reads a customer interview transcript and pulls out pain points, requests and quotes. Templates in the references folder help write the requirements document after that. The scripts need Python. A sample file shows the format.
+when:
+  - You have 30 feature ideas and room for six.
+  - Stakeholders disagree on what to build first.
+  - You finished customer calls and need the main points.
+  - You are ready to write a requirements document.
+you_give:
+  - A feature list with reach, impact, confidence and effort
+  - Team capacity for the period
+  - Interview transcripts (optional)
+  - The problem you are solving
+you_get:
+  - Features ranked by RICE score
+  - A shortlist that fits your capacity
+  - Pain points and quotes from interviews
+  - A requirements template
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

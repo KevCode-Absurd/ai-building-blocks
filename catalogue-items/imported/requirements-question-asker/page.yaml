@@ -6,6 +6,24 @@ summary: Give it a vague request. Get the few questions that matter, with defaul
 job: think-and-decide
 headline: Requirements question asker
 subhead: Give it a vague request. Get the few questions that matter, with default answers, before any work starts.
+explain: |
+  The handful of questions that matter before work begins, each with a default answer so you can reply with one word. It stops wrong work before it starts.
+
+  The skill first decides if your request is truly unclear: the goal, what done looks like, scope, limits, setting and risk. If an existing file or quick check can answer something, it checks rather than asks. When it needs you, it asks one to five numbered questions, ranked so that answers cut off whole branches of work. Each shows a recommended default, so "go with the defaults" works. No work starts until the must-have answers arrive or you approve the assumptions.
+when:
+  - You gave a short instruction and the result could go several ways.
+  - You want a change made but did not say what must stay the same.
+  - You would rather answer three questions than redo the work.
+  - The task is risky and hard to undo.
+you_give:
+  - Your request, however vague
+  - Short answers to the questions
+  - Approval of the defaults (optional)
+you_get:
+  - One to five numbered questions
+  - A recommended default for each
+  - Clear list of confirmed requirements
+  - Work that starts only when the picture is clear
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

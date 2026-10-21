@@ -6,6 +6,25 @@ summary: Paste your unit content. Get it sorted into what students know, underst
 job: teach-and-train
 headline: Know, understand, do sorter
 subhead: Paste your unit content. Get it sorted into what students know, understand and do, with the matching test types.
+explain: |
+  A teaching unit sorted into three clear columns: what students will know, understand and be able to do. Paste your unit description, project brief or competencies and give the learner stage. Every item in the chart is labelled by type of knowledge, such as facts that build step by step or ideas that stand in separate areas.
+
+  Each label links to the kind of test that fits it, for example recall for facts, explanation for ideas and performance for skills. The design draws on Understanding by Design and research on feedback and motivation. It keeps tests low-pressure so students feel supported, not judged. You can feed in existing learning targets and your school's competency list.
+when:
+  - You are planning a new unit and want clear targets.
+  - Your tests do not match what you taught.
+  - You need to explain your unit to colleagues in one chart.
+  - A unit mixes facts, big ideas and skills and you need to separate them.
+you_give:
+  - A unit description or project brief
+  - The learner stage or age range
+  - Existing learning targets (optional)
+  - Your school's competency framework (optional)
+you_get:
+  - A know, understand and do chart
+  - Knowledge type labels
+  - Matching assessment types
+  - Notes on keeping assessment low-pressure
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a model and new results or guidance. Get estimates updated and 
 job: money-and-investing
 headline: Financial model refresher
 subhead: Give it a model and new results or guidance. Get estimates updated and the biggest changes flagged.
+explain: |
+  An existing model brought up to date after earnings, new guidance or a market move, with the biggest changes to estimates pointed out. You see what moved and why.
+
+  First you say what triggered the update: a results release, new guidance, a change in your own view, a macro shift or an event like an acquisition. The skill plugs in the new actuals and compares each line to your prior estimate, showing the gap and a note. It then adjusts forward estimates, flows the changes through the statements, and flags the lines with the largest revisions. It follows Indian conventions: April to March fiscal years and lakh and crore units.
+when:
+  - A company just reported quarterly results.
+  - Management raised or cut guidance.
+  - Interest rates or currency moved and your forecast is stale.
+  - You need a short note on what changed in your numbers.
+you_give:
+  - The current model file
+  - New results, guidance or the event
+  - Your view on what changed (optional)
+you_get:
+  - Updated actuals
+  - A prior versus new estimate table
+  - Revised forecasts
+  - Largest changes flagged
+  - A short change summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

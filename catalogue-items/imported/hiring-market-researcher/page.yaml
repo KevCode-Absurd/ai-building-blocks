@@ -6,6 +6,25 @@ summary: Name a role and place. Get pay ranges, talent supply and hiring difficu
 job: hire-people
 headline: Hiring market researcher
 subhead: Name a role and place. Get pay ranges, talent supply and hiring difficulty. Reads public web pages.
+explain: |
+  A clear picture of the job market for one role in one place, so you know what to offer and how long it will take. Name the role, level and location. The skill gathers public pay data from sources like job postings, salary sites and surveys, and tells you which ones to trust most.
+
+  It breaks pay into base, bonus, equity and sign-on, and splits it by city, company stage and seniority. It estimates talent supply from pool sizes, candidates open to offers and application volume, and demand from open roles and posting growth. The ratio tells you if candidates or employers hold the power, and how hard the hire will be. It reads public web pages only.
+when:
+  - You need to set a salary range for a role you have not hired before.
+  - A hiring manager thinks the budget is enough and you disagree.
+  - You want to know if talent for a role is scarce in your area.
+  - You are deciding whether to hire locally or remote.
+you_give:
+  - The role title and seniority
+  - The location or remote policy
+  - Your budget range (optional)
+  - Company stage and size (optional)
+you_get:
+  - Pay ranges split by component and level
+  - A supply and demand read
+  - A hiring difficulty rating
+  - Advice you can bring to the hiring manager
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

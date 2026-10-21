@@ -6,6 +6,27 @@ summary: Describe your team and traffic. Get which testing tool fits, how to swi
 job: plan-ad-tests
 headline: Experiment tool picker
 subhead: Describe your team and traffic. Get which testing tool fits, how to switch tools, and when to use more than one.
+explain: |
+  A firm choice of testing tool for your team, a migration plan if you already picked the wrong one, and a view on when running two tools is fine.
+
+  You describe your team, traffic and data setup. The skill works through seven questions: where the data lives, how sound the statistics are, AI assistant support, feature flag fit, analytics depth, access control and cost shape. It compares Statsig, PostHog, GrowthBook, Optimizely, Amplitude, Eppo and Kameleoon, and states strengths, gotchas and the ideal customer for each. Where tools overlap, it advises on consolidating or coordinating them.
+when:
+  - You are picking a testing tool for the first time.
+  - Your current tool is too costly or too limited and you consider switching.
+  - Two teams run different tools and you wonder if you should merge.
+  - You need rules on who can launch tests and read data.
+you_give:
+  - Team size and who runs tests
+  - Monthly traffic or event volume
+  - Where your data lives, such as a warehouse
+  - Tool you use now (optional)
+  - Budget range (optional)
+you_get:
+  - Recommended tool with reasons
+  - Strengths and gotchas per tool
+  - Migration plan
+  - Advice on using multiple tools
+  - Governance setup
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

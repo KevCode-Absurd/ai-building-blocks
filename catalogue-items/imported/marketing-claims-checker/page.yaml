@@ -6,6 +6,25 @@ summary: Paste your ad or page copy. Get each claim sorted as fine, needs proof 
 job: check-contracts
 headline: Marketing claims checker
 subhead: Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording. Not legal advice.
+explain: |
+  Every claim in your ad or page copy sorted into fine, needs proof or cut, with safer wording that keeps the energy. This is a check for risk, not legal advice, and a lawyer should confirm anything high-stakes.
+
+  Paste your copy. The skill pulls out each claim and labels it: puffery, factual, comparative, implied or absolute. Puffery passes. For the rest it asks what proof exists and whether it is enough, then suggests a fix. It looks for the claims likely to draw a rival's demand letter or a regulator's inquiry, such as "best" with no basis or unproven comparisons. It reads your saved company standards first if you have set them up. The output goes claim by claim.
+when:
+  - Marketing wrote "the best" and you need to know if you can say it.
+  - You are about to launch a landing page and want a risk pass.
+  - Your ad compares you to a competitor.
+  - You need to show what proof backs each claim.
+you_give:
+  - Your ad or page copy
+  - Proof you hold for key claims (optional)
+  - Your company's claims standards (optional)
+  - Where the copy will run
+you_get:
+  - A claim-by-claim table
+  - A label for each claim
+  - Proof needed for each
+  - Safer rewrites
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

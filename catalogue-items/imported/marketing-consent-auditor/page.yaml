@@ -6,6 +6,24 @@ summary: Run it on your customers. Get who agreed to email and SMS marketing, an
 job: run-your-store
 headline: Marketing consent auditor
 subhead: Run it on your customers. Get who agreed to email and SMS marketing, and who did not, for compliance.
+explain: |
+  A count of how many of your Shopify customers agreed to email and SMS marketing, and how many did not. It is useful for privacy reviews and for knowing your real reachable audience.
+
+  It reads every customer record, 250 at a time, and sorts each into subscribed, unsubscribed, pending or never asked, separately for email and text. Then it works out three numbers: people you can market to, people at risk because consent is pending, and people you cannot reach. You can check email, SMS or both. It only reads data and changes nothing, so it is safe to run any time. It needs a signed-in Shopify CLI with permission to read customers.
+when:
+  - You are preparing for a GDPR or email-law review.
+  - You want to know how many people you can legally email.
+  - You plan an SMS campaign and need your opted-in count.
+  - You want to find customers whose consent is still pending.
+you_give:
+  - Your store domain
+  - "The channel to audit: email, SMS or both"
+  - Output style, readable or JSON (optional)
+you_get:
+  - Consent counts by state
+  - Addressable audience size
+  - Pending and unreachable counts
+  - A read-only report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

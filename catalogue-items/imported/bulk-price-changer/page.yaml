@@ -6,6 +6,25 @@ summary: Pick products and a percent or amount. Get every price changed at once,
 job: set-prices
 headline: Bulk price changer
 subhead: Pick products and a percent or amount. Get every price changed at once, within limits. Changes live prices, so preview first.
+explain: |
+  Change prices across a whole collection or tag in one go, within a floor and a ceiling you set. It edits live prices, so preview first.
+
+  You name a collection or product tag, then say whether to adjust by percent or by a fixed amount. A negative value means a discount. Minimum and maximum prices keep any variant from going too low or too high. The skill can run in preview mode that lists every change without applying it. Use it for storewide sales, ending a promotion, passing on a supplier increase or aligning prices. It works through Shopify, so you need the CLI signed in with permission to read and write products.
+when:
+  - You are running a ten percent sale on one collection.
+  - A promotion ended and prices must go back.
+  - Your supplier raised costs and you need to pass that on.
+  - You want to see every price change before it goes live.
+you_give:
+  - Your store address
+  - A collection or product tag
+  - Percent or fixed adjustment and amount
+  - Minimum and maximum price (optional)
+you_get:
+  - A preview of old and new prices
+  - Updated prices on every variant
+  - Price limits applied
+  - A summary of what changed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

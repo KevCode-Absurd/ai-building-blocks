@@ -6,6 +6,25 @@ summary: Describe your data sources and goal. Get a working pipeline with checks
 job: build-software
 headline: Data pipeline builder
 subhead: Describe your data sources and goal. Get a working pipeline with checks, scheduling and fixes for common faults.
+explain: |
+  A plan and working code for moving data from where it starts to where people use it, with checks along the way. You also get advice on choices such as batch versus streaming.
+
+  You describe your sources, volume and goal. The skill designs the flow using tools like Python, SQL, Spark, Airflow, dbt and Kafka, and picks between ETL and ELT. It builds the data model, such as a star schema, sets up scheduling, and adds data quality checks. It deals with late arriving records and weighs designs like Lambda against Kappa. A troubleshooting section covers common faults such as stalled jobs and duplicates. Expect to run code on your own systems and need access to your sources.
+when:
+  - You need to load data from an app and a spreadsheet into one warehouse.
+  - You are deciding between batch and streaming for a new feature.
+  - A nightly job keeps failing and you need a fix.
+  - You want a star schema for reporting.
+you_give:
+  - Data sources and their format
+  - Where the data should end up
+  - How fresh it must be
+  - Tools you already use (optional)
+you_get:
+  - Pipeline design
+  - Working extraction and load code
+  - Data quality checks
+  - Scheduling setup and fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

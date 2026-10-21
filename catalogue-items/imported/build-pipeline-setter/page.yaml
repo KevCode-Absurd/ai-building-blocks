@@ -6,6 +6,25 @@ summary: Describe how you ship. Get automatic checks and a deploy pipeline so ba
 job: ship-and-host
 headline: Build pipeline setter
 subhead: Describe how you ship. Get automatic checks and a deploy pipeline so bad changes never reach users.
+explain: |
+  Every change is checked automatically before it reaches users, so a broken build gets caught in minutes instead of in production.
+
+  The skill lays out a chain of gates for each pull request: lint, type check, unit tests, build, integration tests, optional browser tests, a security audit and a bundle size check. Problems are caught as early as possible, because cheap checks run before slow ones. It also covers how to deploy in small, frequent releases, which are easier to debug than big ones, and how to read CI failures. You describe how your team ships and it shapes the pipeline to that.
+when:
+  - You are setting up checks for a new project.
+  - Bad changes keep slipping into production.
+  - Your pipeline is slow and you want a better order of checks.
+  - A CI run failed and you need to understand why.
+you_give:
+  - Your language and tools
+  - How you currently ship code
+  - Your hosting or deploy target
+  - Existing CI files (optional)
+you_get:
+  - A set of quality gates in the right order
+  - A deploy pipeline plan
+  - Security and size checks
+  - Guidance on fixing CI failures
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

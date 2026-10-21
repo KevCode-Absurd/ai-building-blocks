@@ -6,6 +6,27 @@ summary: Point it at your site. Get a checklist covering HTTPS, security headers
 job: secure-code
 headline: Website security baseline checker
 subhead: Point it at your site. Get a checklist covering HTTPS, security headers, secrets and content policy, with fixes ranked.
+explain: |
+  A pre-launch security checklist for your site, with the weak spots ranked so you fix the dangerous ones first. It matters because most breaches come from basics that were never set up, not from clever attacks.
+
+  You describe the site, where it is hosted and what third-party scripts it loads. The skill then walks six layers: how data travels (HTTPS, TLS version, HSTS), response headers, secrets handling, content security policy, access control and monitoring. For each layer it says what is in place, what is missing and what to change. Run it before launch and again every quarter to catch drift.
+when:
+  - You are about to launch a new site and want a security check first.
+  - A vendor or auditor asked how your site is protected.
+  - You added a new third-party script and want to know what it exposes.
+  - It has been months since anyone looked at your site's security settings.
+you_give:
+  - Your site address and environments
+  - Your hosting platform and CDN
+  - How people log in (if they do)
+  - List of third-party scripts
+  - Compliance rules you must meet (optional)
+you_get:
+  - Checklist across six security layers
+  - Ranked list of fixes
+  - Header and policy settings to apply
+  - Secrets handling plan
+  - Schedule for re-checking
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

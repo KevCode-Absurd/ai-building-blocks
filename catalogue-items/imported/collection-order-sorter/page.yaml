@@ -6,6 +6,25 @@ summary: Pick a collection. Get in-stock products moved to the top and sold-out 
 job: run-your-store
 headline: Collection order sorter
 subhead: Pick a collection. Get in-stock products moved to the top and sold-out ones to the bottom. Changes your live store.
+explain: |
+  Products in stock move to the top of a Shopify collection and sold-out ones drop to the bottom. It changes your live store, so shoppers see what they can actually buy first.
+
+  It reads every product in a manual collection, sorts them by total inventory, and sends the new order in one update. You choose highest stock first or lowest first. A dry-run mode shows the plan without changing anything. It only works on manual collections, not smart ones driven by rules. It needs a signed-in Shopify CLI and read and write product permissions. You can undo it by running the opposite sort.
+when:
+  - Sold-out items sit at the top of your best collection.
+  - You want a quick reorder without clicking through the admin.
+  - You want to preview the new order before it goes live.
+  - A launch sold out and you need to refresh the page.
+you_give:
+  - Your store domain
+  - The collection ID
+  - Sort direction (optional)
+  - A signed-in Shopify CLI with product permissions
+you_get:
+  - A preview of the new order
+  - The reordered live collection
+  - A report of what moved
+  - A way to reverse it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

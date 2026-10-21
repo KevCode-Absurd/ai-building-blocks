@@ -6,6 +6,25 @@ summary: Describe the interface. Get a built page with careful colour, layout an
 job: build-websites
 headline: Polished interface builder
 subhead: Describe the interface. Get a built page with careful colour, layout and motion, not a stock template look.
+explain: |
+  Ask for a page or app screen and get working front-end code with a deliberate look, not the stock template feel of centred heroes, purple gradients and rows of identical cards.
+
+  The skill sets three dials for layout variety, motion and density, then builds to rules on type, colour, spacing and responsive behaviour. It defaults to React with Tailwind unless you name another stack. It covers loading, empty and error states, avoids fragile layouts, and checks that each part earns its place. If your brand already has a style, tell it and it follows that instead. You can also ask it to review an existing screen.
+when:
+  - Your landing page looks like every other AI-made site.
+  - You need a dashboard that works on phone and desktop.
+  - You want a review of a screen with the biggest design faults ranked.
+  - You are building a React page and want motion that is not distracting.
+you_give:
+  - Description of the page or app
+  - Brand colours or style rules (optional)
+  - Tech stack preference (optional)
+  - Existing screen to review (optional)
+you_get:
+  - Working interface code
+  - Choices of type, colour and spacing explained
+  - Loading, empty and error states
+  - Ranked list of design fixes for a review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

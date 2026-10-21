@@ -6,6 +6,25 @@ summary: Give it a company and deal terms. Get a buyout model with debt paydown 
 job: money-and-investing
 headline: Buyout returns modeler
 subhead: Give it a company and deal terms. Get a buyout model with debt paydown and exit returns, IRR and MOIC.
+explain: |
+  You find out if a company is worth buying with borrowed money. Give it a company and deal terms, and you get a model showing how debt shrinks over time and what the investors earn at exit, as IRR and MOIC.
+
+  The work goes in a set order. First, sources and uses show the price and how it is paid for. Then a forecast turns revenue into free cash flow. A debt schedule applies required and optional repayments. Returns follow, and a sensitivity table tests different entry and exit multiples and growth rates. It first asks for the entry multiple, exit multiple, holding period, debt levels, interest rates and capital spending.
+when:
+  - You are screening a company and want a quick view of buyout returns.
+  - You need to see how much debt a business can carry before it gets risky.
+  - A deal looks good at one exit multiple and you want to see it at others.
+  - You are learning how a buyout model fits together.
+you_give:
+  - Company financials and projected EBITDA growth
+  - Entry price or multiple
+  - Debt amounts, rates and fees
+  - Exit multiple and holding period
+you_get:
+  - A sources and uses table
+  - A cash flow and debt paydown schedule
+  - IRR and MOIC
+  - A sensitivity table on price, exit and growth
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it an API and its users. Get tests that catch breaking changes bet
 job: test-and-fix-code
 headline: API contract tester
 subhead: Give it an API and its users. Get tests that catch breaking changes between the two before they ship.
+explain: |
+  Tests that catch the moment an API change would break the programs using it, before it reaches anyone. Give it the API and a list of who calls it, and you get a small test set that checks both sides.
+
+  The skill starts from the real contract, such as an OpenAPI file or documented examples, and reads the server and client code that match. It sorts each change as breaking or safe by looking at fields, required flags, empty values, allowed options, status codes, headers, paging and error shapes. Even a new optional field can break a strict client. It then builds a small matrix of sample data using fake values. Gaps are reported, not guessed.
+when:
+  - You renamed a response field and fear a client will break.
+  - The build passes but the app and server disagree at runtime.
+  - You need to prove a change is safe to ship.
+  - A bug report needs a small reproduction between two systems.
+you_give:
+  - The API spec or documented examples
+  - The server and client code
+  - A list of known callers
+  - The change you plan to make
+you_get:
+  - Each change marked breaking or compatible
+  - Tests that cover both server and client
+  - Sample data for success and failure cases
+  - A list of untested gaps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

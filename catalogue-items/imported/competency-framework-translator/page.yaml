@@ -6,6 +6,25 @@ summary: Give it a framework like DigComp or ISTE. Get classroom activities that
 job: teach-and-train
 headline: Competency framework translator
 subhead: Give it a framework like DigComp or ISTE. Get classroom activities that teach each skill in it.
+explain: |
+  A framework such as DigComp, GreenComp or ISTE turned into classroom activities your students can do, with signs you can observe to tell whether they have the skill. Official wording is often too abstract to teach from.
+
+  You name the framework competency and the lesson setting. Claude unpacks it into things students can show, like choosing which of two websites is more reliable and saying why. It then maps what the skill looks like at several levels, not just has it or does not. It fits the wording to your subject, since checking sources in history differs from science. Each task needs the skill to finish, and comes with an assessment idea.
+when:
+  - Your school adopted a framework and you must show it in lessons.
+  - The competency wording is too vague to plan from.
+  - You want one skill taught inside a history or science unit.
+  - You need to assess a skill, not just mention it.
+you_give:
+  - The framework and competency
+  - Subject and year group
+  - The official wording (optional)
+  - How you need to assess (optional)
+you_get:
+  - Observable indicators
+  - Levels of progress
+  - Classroom activities in your subject
+  - Assessment ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

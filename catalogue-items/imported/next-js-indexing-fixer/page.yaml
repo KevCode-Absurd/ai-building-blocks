@@ -6,6 +6,25 @@ summary: Give it your Next.js site and a Search Console error. Get the canonical
 job: get-found-in-search
 headline: Next.js indexing fixer
 subhead: Give it your Next.js site and a Search Console error. Get the canonical, sitemap and rendering fixes.
+explain: |
+  Fixes for pages that Google will not index on your Next.js site. You bring the Search Console message and the skill maps it to a cause and a code change.
+
+  It starts with a table that translates each coverage status into plain meaning, such as "Crawled, not indexed" or "Duplicate, Google chose a different canonical". Then it works through the usual suspects: canonical tags set with generateMetadata, accidental noindex, sitemap routes, robots.js, redirect chains, weak internal links and pages that render too late for crawlers. It gives App Router examples for each fix. The goal is to stop wasting crawl budget on junk URLs and get the pages that matter into the index.
+when:
+  - Search Console says pages are "Discovered, not indexed".
+  - Google picked a different canonical than the one you set.
+  - You are checking sitemap and robots files before a release.
+  - Old URLs return 404 and you need the right redirects.
+you_give:
+  - The Search Console error or status
+  - Your Next.js project code
+  - A list of affected URLs (optional)
+  - Your sitemap and robots setup (optional)
+you_get:
+  - A plain meaning of each coverage status
+  - Canonical and metadata fixes
+  - Sitemap and robots code
+  - A redirect and internal linking plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

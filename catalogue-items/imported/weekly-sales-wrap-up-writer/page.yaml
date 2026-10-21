@@ -6,6 +6,26 @@ summary: Ask for your week. Get what closed, moved and slipped, plus Monday's pl
 job: organise-work
 headline: Weekly sales wrap-up writer
 subhead: Ask for your week. Get what closed, moved and slipped, plus Monday's plan and an optional team post draft.
+explain: |
+  Monday's plan and last week's story, written for you from your pipeline. You see what closed, what moved and what slipped, without opening six reports.
+
+  The skill reads your CRM for deals closed, advanced and newly created this week, then adds meeting counts from your calendar and customer thread counts from email if those are connected. It uses your own stage names, quotes values exactly as stored and says plainly when a source was missing. Pick personal scope or a team rollup with a section per rep. It drafts a post for your team channel and only sends it when you ask.
+when:
+  - It is Friday and you need a pipeline summary for your manager.
+  - You lead a team and want a one-page rollup by rep.
+  - You want Monday's priorities ready before the week starts.
+  - You need a short update to post in the team chat.
+you_give:
+  - Your CRM access or last two weeks of exports
+  - "Scope: your week or your team"
+  - Calendar and email access (optional)
+  - Whether to draft a team post
+you_get:
+  - Closed, moved and slipped deals
+  - New pipeline created
+  - Meeting and thread counts
+  - Monday plan
+  - Draft team channel post
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

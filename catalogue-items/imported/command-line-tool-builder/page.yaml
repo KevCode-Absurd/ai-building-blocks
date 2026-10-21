@@ -6,6 +6,25 @@ summary: Give it an API doc or script. Get a command-line tool that returns clea
 job: build-software
 headline: Command-line tool builder
 subhead: Give it an API doc or script. Get a command-line tool that returns clean JSON and handles sign-in.
+explain: |
+  A real command-line tool you can run by name from any folder. Give it an API doc, a script or a few curl examples, and get a tool that returns clean JSON and handles sign-in.
+
+  You name the source, the first jobs it should do, such as list drafts or download failed logs, and a short install name. It first checks that the name is free. Then it checks your machine for Rust, Node or Python and picks the least surprising option, usually Rust for one fast file. It builds the commands, a login step and JSON output so other tools can read it. It is for lasting tools, not one-off scripts.
+when:
+  - You keep running the same long curl commands.
+  - You want your AI to call a service through one simple command.
+  - You have an API doc and need a tool for it.
+  - A script in your shell history deserves to become a real tool.
+you_give:
+  - An API doc, script or curl examples
+  - The first jobs the tool must do
+  - An install name (optional)
+  - Credentials for the service
+you_get:
+  - A working command-line tool
+  - JSON output
+  - Sign-in handling
+  - Install steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

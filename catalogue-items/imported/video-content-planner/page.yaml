@@ -6,6 +6,24 @@ summary: Give it your channel goal. Get a video plan, scripts and ways to turn o
 job: grow-social
 headline: Video content planner
 subhead: Give it your channel goal. Get a video plan, scripts and ways to turn one long video into short clips.
+explain: |
+  A video plan you can start this week: what to make, for whom, and how to get several clips out of each long video. 
+  The skill first asks about your goal, audience, team size and what you already have, such as blog posts, webinars or demos. It sets up a channel with a clear niche, content pillars and search keywords. It writes scripts with a strong opening and a clear structure. It plans a pipeline that cuts one long video into many short clips. It also gives ideas to improve YouTube titles, descriptions and thumbnails for search. If you have a brand voice file, it reads that first so the video sounds like you.
+when:
+  - You want to start a YouTube channel and have no idea what to post.
+  - You have a podcast or webinar that could become a month of short clips.
+  - You need a script for a tutorial or product video.
+  - Your videos get few views and you want to fix titles and keywords.
+you_give:
+  - Your main goal, such as leads or authority
+  - Your audience
+  - Existing content (optional)
+  - Your time and budget for video
+you_get:
+  - A channel plan with content pillars
+  - Video scripts
+  - A repurposing plan from long to short
+  - Title and search tips
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

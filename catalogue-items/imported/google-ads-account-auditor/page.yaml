@@ -6,6 +6,25 @@ summary: Give it your Google Ads exports. Get a checked audit of tracking, searc
 job: read-ad-results
 headline: Google Ads account auditor
 subhead: Give it your Google Ads exports. Get a checked audit of tracking, search terms, Shopping, Performance Max, bids and budgets.
+explain: |
+  A Google Ads audit where every claim traces back to your own export. Give it your exports or screenshots and it checks tracking first, since bad conversion data ruins everything after it.
+
+  Then it covers search terms and wasted spend, account structure, keywords, Shopping, Performance Max, Demand Gen, creative assets, bids, budgets and policy. It keeps observations, diagnoses and recommendations apart, and any account change stays a draft until you approve it. It will not suggest negative keywords without evidence, and it will not copy benchmarks that do not fit your goal or country. Final scores come from checked data only.
+when:
+  - Your Google Ads spend is rising and results are not.
+  - You inherited an account and need to know its state.
+  - You suspect conversion tracking is broken.
+  - You want a list of search terms wasting budget.
+you_give:
+  - Google Ads exports or screenshots
+  - Your goal and conversion definition
+  - Account age and countries
+  - Spend and margin figures (optional)
+you_get:
+  - Tracking and measurement check
+  - Search term waste findings
+  - Notes for Shopping and Performance Max
+  - Draft changes ranked by impact
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

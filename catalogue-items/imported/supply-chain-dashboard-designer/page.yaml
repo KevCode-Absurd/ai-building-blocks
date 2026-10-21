@@ -6,6 +6,26 @@ summary: Tell it what you ship and from where. Get a one-screen design showing d
 job: track-numbers
 headline: Supply chain dashboard designer
 subhead: Tell it what you ship and from where. Get a one-screen design showing delays, low stock and orders at risk.
+explain: |
+  A one-screen design that shows late shipments, low stock and orders at risk, so a planner sees problems in the morning, not at the customer's complaint.
+
+  Tell it what you ship, from where, and which systems hold the data. The skill picks the control tower type and maturity level that fits you. It maps the data sources, orders and shipments needed, and designs the views, the exception list and the alerts. It covers common challenges, such as joining data from different systems, silos between teams, alert fatigue and getting people to use it. Python sketches show the data flow.
+when:
+  - Your team checks five systems to find out where an order is.
+  - You want to see exceptions without reading every row.
+  - You are choosing between building and buying a visibility tool.
+  - Alerts are ignored because there are too many.
+you_give:
+  - What you ship and where from
+  - Systems that hold orders and shipments
+  - The problems you want to catch
+  - Who will use the screen (optional)
+you_get:
+  - A dashboard layout
+  - A data source map
+  - An exception and alert list
+  - A rollout plan
+  - Notes on adoption
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

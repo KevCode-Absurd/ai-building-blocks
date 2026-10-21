@@ -6,6 +6,25 @@ summary: Give it a pile of notes and documents. Get a deduplicated, ordered set 
 job: think-and-decide
 headline: Context package cleaner
 subhead: Give it a pile of notes and documents. Get a deduplicated, ordered set that fits your size limit.
+explain: |
+  A cleaned-up set of notes, documents and search results that fits your size limit and puts the best material where the AI will notice it. Messy input costs money and gives weaker answers, so this trims it before the question is asked.
+
+  The skill counts what you gathered, then removes passages that say the same thing. It scores each piece for how relevant it is to your question and how many facts it carries per word. Low scorers go. The rest are ordered with the strongest first and second strongest last, because models lose track of the middle. A final check confirms every part of your question still has support, and adds back material if not.
+when:
+  - Your search step returns many overlapping chunks and answers come out vague.
+  - You pasted several long files and hit the size limit.
+  - You are building an AI helper and want to cut cost per question.
+  - An assistant keeps missing facts that are in the middle of a long prompt.
+you_give:
+  - The pile of text chunks or files
+  - The question or task
+  - Your size limit in tokens
+  - Relevance scores from your search (optional)
+you_get:
+  - Deduplicated, filtered context
+  - Chunks in priority order
+  - Token budget per chunk
+  - Coverage check against your question
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

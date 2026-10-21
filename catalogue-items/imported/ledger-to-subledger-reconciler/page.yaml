@@ -6,6 +6,25 @@ summary: Give it ledger and subledger data. Get matches, breaks and a likely cau
 job: track-numbers
 headline: Ledger to subledger reconciler
 subhead: Give it ledger and subledger data. Get matches, breaks and a likely cause for each break.
+explain: |
+  A reconciliation that shows what matches between your general ledger and subledger, what does not, and a likely reason for each gap. Supply both extracts for the same entity and date. The skill lines them up on the lowest shared key, converts dates and amounts to one format, and joins them.
+
+  Each row lands in one bucket: matched, amount break, quantity break, timing break, ledger only or subledger only. Default tolerance is one cent on amounts and zero on quantity, unless your policy says otherwise. Every break gets a likely cause such as timing, currency rate or account mapping. That is a hypothesis for whoever resolves it, not a final answer.
+when:
+  - Month-end close is blocked by a difference you cannot trace.
+  - You need to match a custodian statement to your books.
+  - Your auditor asked for support on reconciling items.
+  - You want breaks sorted by likely cause so staff can work them in order.
+you_give:
+  - The general ledger extract
+  - The subledger or custodian extract
+  - The matching key and date
+  - Your tolerance rules (optional)
+you_get:
+  - Matched and unmatched rows
+  - Breaks sorted by type
+  - A likely cause for each break
+  - A break report for review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

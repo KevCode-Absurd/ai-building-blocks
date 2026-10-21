@@ -6,6 +6,26 @@ summary: Say who the program is for. Get matching rules, a six-month plan and co
 job: hire-people
 headline: Mentoring program builder
 subhead: Say who the program is for. Get matching rules, a six-month plan and coaching talk guides for managers.
+explain: |
+  A mentoring or coaching program you can launch, with the rules, the schedule and the guides your people need. Say who it is for and you get a plan that runs six months.
+
+  It covers how to match mentors and mentees by goals and development needs, not just rank. It adds onboarding guides for mentors and mentees, a relationship charter and check-in questions. For managers it provides conversation guides using models like GROW, practice scenarios and a skills check. It keeps coaching, which draws out answers, apart from mentoring, which shares experience. It also suggests how to track program quality through check-ins instead of only completion counts.
+when:
+  - You want a mentoring program for new managers or early-career staff.
+  - Managers in your team give orders and you want them to coach.
+  - You need a peer coaching setup for one team.
+  - You want a way to show the program is working.
+you_give:
+  - Who the program is for
+  - Program length and size
+  - Your goals for it
+  - Current coaching habits (optional)
+you_get:
+  - A six-month program plan
+  - Matching rules for pairs
+  - Mentor and mentee onboarding guides
+  - Coaching conversation guides for managers
+  - Measures to track results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

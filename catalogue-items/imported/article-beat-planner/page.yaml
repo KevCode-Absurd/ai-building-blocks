@@ -6,6 +6,24 @@ summary: Give it raw notes. Get them arranged into a story of beats, with each t
 job: write-and-tell-stories
 headline: Article beat planner
 subhead: Give it raw notes. Get them arranged into a story of beats, with each term explained first.
+explain: |
+  Your raw notes, turned into an article one beat at a time. You pick the path, and every term is explained before a later beat relies on it, so readers are never lost.
+
+  It starts by settling what the audience already knows, so those ideas count as grounded. Then it offers two or three starting beats drawn from your notes, shows what each would explain, and lets you choose. Only the chosen beat is written to your file. It then re-reads the file and offers the next two or three beats, each reachable from what is already grounded. This continues until the article reaches a natural end. A beat can be a sentence or several paragraphs.
+when:
+  - You have a folder of rough notes and no clear order.
+  - Readers say your articles use terms before explaining them.
+  - You want to choose the story path yourself, step by step.
+  - You are writing for people new to the topic.
+you_give:
+  - A markdown file of raw notes
+  - What your readers already know
+  - Where to save the article
+you_get:
+  - Starting beat options to choose from
+  - One written beat at a time
+  - Next beat options after each step
+  - A finished article in your file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

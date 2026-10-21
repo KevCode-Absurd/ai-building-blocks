@@ -6,6 +6,25 @@ summary: Give it a young company's facts. Get a value range from methods such as
 job: money-and-investing
 headline: Early-stage valuation estimator
 subhead: Give it a young company's facts. Get a value range from methods such as Berkus, scorecard and the VC method.
+explain: |
+  A pre-money value range for a young company, with the working shown. Give it the stage, traction, team and market, and you get a range built from several methods, not a single guess.
+
+  It first asks a few questions: pre-seed, seed or Series A, whether there is a working product, growth rate, founder track record and market size. Then it scores the company with the Berkus method, which gives up to $500k per risk area, and with a scorecard. It adds the VC method, which works backwards from a target exit value and the return investors need. It checks similar deals and combines everything into one range with reasons. Treat it as a starting point, not a verdict.
+when:
+  - You are raising a seed round and need a sensible ask.
+  - You are an angel deciding what to offer.
+  - You want to compare three valuation methods side by side.
+  - You need a range you can explain to a co-founder.
+you_give:
+  - Stage and funding round
+  - Traction and growth rate
+  - Team background
+  - Market size and similar deals (optional)
+you_get:
+  - A Berkus method breakdown
+  - A VC method calculation
+  - A comparison with similar deals
+  - A final valuation range with reasons
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

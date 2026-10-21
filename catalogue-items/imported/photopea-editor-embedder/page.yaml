@@ -6,6 +6,25 @@ summary: Say what image editing your app needs. Get Photopea embedded and script
 job: build-websites
 headline: Photopea editor embedder
 subhead: Say what image editing your app needs. Get Photopea embedded and scripted to open, edit and export files.
+explain: |
+  A working image editor inside your web page, controlled by your own code. Photopea runs in a frame, and your page can open files, run edits and export results without the user leaving your app.
+
+  The skill uses the photopea.js wrapper instead of hand-written message passing. It gives scripts for common jobs such as renaming text layers from their contents, exporting each layer as its own PNG, and editing text, selections, filters, colours and paths. A detailed guide holds the full steps, safety notes and checks, and the skill says to read it first. It needs web development skills.
+when:
+  - You are adding image editing to your product.
+  - You need to export every layer of a design as a separate file.
+  - A web tool must open a template and swap in text.
+  - You want to automate repeat edits from a host page.
+you_give:
+  - What edits your app needs
+  - The page or app to embed it in
+  - Sample files to open
+  - Export format (optional)
+you_get:
+  - Embed code using photopea.js
+  - Scripts for the edits you need
+  - Open, edit and export flow
+  - Checks that the editor responds
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

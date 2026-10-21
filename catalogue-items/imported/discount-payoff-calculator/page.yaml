@@ -6,6 +6,25 @@ summary: "Run it on your discounts. Get the real return of each code: extra reve
 job: run-your-store
 headline: Discount payoff calculator
 subhead: "Run it on your discounts. Get the real return of each code: extra revenue against what the discount cost."
+explain: |
+  The true return on every discount you run: the revenue it brought in set against what the discount cost you. Some codes pay for themselves, and others only give margin away.
+
+  The skill reads all your discount codes and automatic discounts in your Shopify store, then keeps those used at least a minimum number of times in your chosen window (90 days by default). For each one, it pulls the orders and works out revenue, order count, average order size and money given away. It only reads data, so it is safe to run anytime. It needs a signed-in Shopify CLI with read access to orders and discounts. Output comes as a table or JSON.
+when:
+  - You run many codes and do not know which ones are worth it.
+  - Your margins feel thin and you suspect discounts are the cause.
+  - You want to retire the codes that cost more than they earn.
+  - You need numbers for a talk with your team about promotions.
+you_give:
+  - Your Shopify store domain
+  - How many days back to look
+  - The minimum number of uses to count a discount (optional)
+  - A signed-in Shopify CLI with read access
+you_get:
+  - Revenue and order count per discount
+  - Average order value per discount
+  - The cost of each discount
+  - A ranking of which ones paid off
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

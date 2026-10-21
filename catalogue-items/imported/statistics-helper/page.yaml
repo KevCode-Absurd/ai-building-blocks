@@ -6,6 +6,26 @@ summary: Give it data and a question. Get trends, outliers, correlations and tes
 job: track-numbers
 headline: Statistics helper
 subhead: Give it data and a question. Get trends, outliers, correlations and tests, explained in plain words.
+explain: |
+  Plain-language answers from your data: what is typical, what is odd, what is moving and what is likely just noise. You paste a table or describe a metric, and get a written read of it, not a wall of numbers.
+
+  It picks the right centre for the shape of your data, mean for even data and median for skewed, and often reports both so the gap shows skew. It adds spread, key percentiles and a note on outliers. For trends it uses moving averages and checks for seasonality. For comparisons it runs suitable tests and says when a result is too weak to trust. It also warns about weak claims, like treating correlation as cause.
+when:
+  - You have a spreadsheet of sales or usage and want to know what it says.
+  - An average looks off and you suspect a few big values are pulling it.
+  - You need to tell if a change between two weeks is real or random.
+  - You want to explain a result to a team that does not like statistics.
+you_give:
+  - A data table or file
+  - The question you want answered
+  - What each column means (optional)
+  - The time period or groups to compare (optional)
+you_get:
+  - A summary of typical values and spread
+  - Outliers flagged with context
+  - Trend and seasonality notes
+  - Test results in plain words
+  - Cautions about what the data cannot show
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

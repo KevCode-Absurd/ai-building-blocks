@@ -6,6 +6,24 @@ summary: Give it a stock ticker. Get the report date, what analysts expect, past
 job: money-and-investing
 headline: Earnings preview writer
 subhead: Give it a stock ticker. Get the report date, what analysts expect, past surprises and what to watch. Collects data from websites.
+explain: |
+  A pre-earnings briefing for one stock, built from live data. Give a ticker and you get the report date, what analysts expect, how the company has beaten or missed before, and what to watch.
+
+  The skill uses the yfinance Python package, and installs it if missing. A single script pulls the calendar, estimate tables for earnings and revenue, past surprise history, recent price action and key company facts. It turns these into a short readable brief. The data comes from Yahoo Finance, so it is for research only and is not financial advice. You need Python, an internet connection and the ability to install a package.
+when:
+  - A company reports next week and you want a quick prep sheet.
+  - You want to see how often it has beaten estimates.
+  - You need the consensus numbers in one place.
+  - You hold a stock and want to know what moves it on results.
+you_give:
+  - A stock ticker or company name
+  - Python with internet access
+  - Specific metrics to watch (optional)
+you_get:
+  - The expected report date
+  - Analyst estimates for earnings and revenue
+  - Past surprise history
+  - A short list of what to watch
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

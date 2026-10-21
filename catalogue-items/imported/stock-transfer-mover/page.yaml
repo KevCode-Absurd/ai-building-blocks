@@ -6,6 +6,24 @@ summary: Name a product, two locations and a number. Get stock moved from one to
 job: run-your-store
 headline: Stock transfer mover
 subhead: Name a product, two locations and a number. Get stock moved from one to the other. Changes live stock levels.
+explain: |
+  Move units of a product from one of your locations to another in Shopify, with the two sides kept in step. You name the products by code, the source and destination locations and the quantities. The skill takes stock off the source and adds it to the destination.
+
+  It checks that both places exist and are active, finds each product's inventory record by code and warns if the move would take the source below zero. It starts in preview mode, so you see every change before it is written. Running it for real changes live stock, so confirm the preview first. It needs write access to inventory in your store.
+when:
+  - You are shipping stock from your warehouse to a retail shop.
+  - A location is running out while another has too much.
+  - You are closing a pop-up and moving what is left home.
+  - You need to move many products between places without editing each one by hand.
+you_give:
+  - Your Shopify store link and access
+  - Source and destination locations
+  - Product codes with quantities
+you_get:
+  - A preview of the stock changes
+  - Source and destination levels after the move
+  - A warning if a source would go negative
+  - A record of what was moved
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

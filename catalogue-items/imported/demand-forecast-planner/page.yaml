@@ -6,6 +6,25 @@ summary: Give it your past sales. Get a forecast, the best-fit method and a way 
 job: plan-supply-chain
 headline: Demand forecast planner
 subhead: Give it your past sales. Get a forecast, the best-fit method and a way to track how far off it is.
+explain: |
+  A sales forecast you can trust, with a measure of how wrong it tends to be. Give it your past sales and you get a projection, the method that fits best, and a way to track error over time.
+
+  It starts by asking what decisions depend on the forecast, how far ahead you plan, and how much history you have. Two years is ideal. Then it looks at patterns: steady, seasonal, trending, intermittent or driven by promotions, and treats new and mature products differently. It tests several methods against held-back data, compares their error, and picks one. It explains what to do with outside factors such as weather and events.
+when:
+  - You plan purchasing from a gut feel and want numbers behind it.
+  - Sales are seasonal and last year's total is a poor guide.
+  - You launched a product and have only a few weeks of data.
+  - You want to know whether your current forecast is biased high or low.
+you_give:
+  - Sales history by product or period
+  - Planning horizon
+  - Promotions or events (optional)
+  - Current forecast method and accuracy (optional)
+you_get:
+  - Forecast for the horizon
+  - Best-fit method and why
+  - Accuracy comparison
+  - Error tracking routine
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

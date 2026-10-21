@@ -6,6 +6,26 @@ summary: Describe the store you want. Get a fast custom storefront on Hydrogen, 
 job: build-websites
 headline: Headless store builder
 subhead: Describe the store you want. Get a fast custom storefront on Hydrogen, ready to host on Oxygen.
+explain: |
+  A custom online storefront that loads fast and looks exactly how you want, connected to your Shopify store behind the scenes. Instead of using a theme, you build the front end yourself with React and Shopify's Hydrogen framework, then host it free on Shopify's Oxygen.
+
+  The skill walks through creating a Hydrogen app, understanding its folders and routes, and setting up environment values like your store domain and Storefront API token. It covers fetching products and collections with GraphQL, using ready-made commerce components for carts and product pages, and deploying to Oxygen. It also covers bringing your own stack. You need Node.js, React knowledge and a Shopify store.
+when:
+  - A theme limits the design you want for your shop.
+  - Your store is slow and you want faster page loads.
+  - You want a custom React front end on top of Shopify.
+  - You plan to deploy a storefront to Shopify's own hosting.
+you_give:
+  - A Shopify store and its domain
+  - Your design idea and page list
+  - Whether you use JavaScript or TypeScript
+  - Your Node.js and React setup
+  - Storefront API token
+you_get:
+  - A new Hydrogen project setup
+  - Pages for home, product and collection
+  - GraphQL queries for your products
+  - Deploy steps for Oxygen
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

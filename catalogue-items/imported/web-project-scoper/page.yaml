@@ -6,6 +6,25 @@ summary: Describe a web project. Get its goals, users, features, design tokens a
 job: build-product
 headline: Web project scoper
 subhead: Describe a web project. Get its goals, users, features, design tokens and page plan in one scoped brief.
+explain: |
+  A single scoped brief for a new website or page: who it is for, what it must do, how people move through it, how it looks and what to build first. You start a project knowing what you are making.
+
+  The skill works through six phases and asks questions one phase at a time. First comes the concept: audience, core value and the three to five must-have features. Then user flow and page structure. After that come the visual style, with colours, type and spacing as design tokens. It also compares tech choices, such as Next.js against plain JavaScript, and ends with a page plan. You can stop after any phase.
+when:
+  - You have a web project idea but no clear scope.
+  - You are briefing a designer or developer.
+  - You are about to redesign a site and need a plan.
+  - You must choose between tech options for a build.
+you_give:
+  - Your project idea in a few lines
+  - Who it is for
+  - Must-have features (optional)
+  - Brand colours, fonts or sites you like (optional)
+you_get:
+  - A project brief with goals and users
+  - A feature list
+  - A page and flow plan
+  - Design tokens and a tech suggestion
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

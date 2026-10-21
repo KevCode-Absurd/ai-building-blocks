@@ -6,6 +6,25 @@ summary: Give it a raw idea. Get clarifying questions, research, a product brief
 job: build-product
 headline: Idea to plan pipeline runner
 subhead: Give it a raw idea. Get clarifying questions, research, a product brief and a phased plan, as four files.
+explain: |
+  Four files that take a raw idea to something you can start building on Monday: clarifying questions, deep research, a product brief and a phased plan. It was made for founders and hobbyists as well as product managers.
+
+  It first sorts your idea by size, from weekend tool to marketplace, and by how technical you are, so the depth and word choice fit. Then it asks questions, researches the market and competitors, writes the product brief and builds a phased plan. Each step feeds the next, and the plan ends with kill criteria, which are the signs that you should stop. Research can include customer jobs and strengths and weaknesses of rivals.
+when:
+  - You have an idea but no clue what to research first.
+  - You want to know if the market is crowded before you build.
+  - You need a product brief to hand to a developer.
+  - You want clear signs for when to stop a project.
+you_give:
+  - Your raw idea or problem statement
+  - Your technical level
+  - Answers to clarifying questions
+  - Budget and time limits (optional)
+you_get:
+  - A clarifying questions file
+  - A research file on market and competitors
+  - A product brief
+  - A phased plan with stop criteria
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

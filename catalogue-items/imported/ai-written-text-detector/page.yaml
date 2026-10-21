@@ -6,6 +6,24 @@ summary: Paste a document. Get an honest estimate of whether AI wrote it, with t
 job: write-and-tell-stories
 headline: AI-written text detector
 subhead: Paste a document. Get an honest estimate of whether AI wrote it, with the wording clues behind it.
+explain: |
+  An honest estimate of whether AI wrote a document, with the wording clues behind it and a clear "cannot tell" when the document is not suited to testing. It reads style only. It cannot prove who wrote something.
+
+  You send a file or pasted text to a detection service. It returns a lean of AI, human or unsure, a probability between 0 and 1, the phrases and patterns it flagged, such as stock openers and sentences of the same length, and its reasoning. Forms, tables and scans are refused instead of guessed. Treat the result as one signal for triage, never a verdict, because people write plainly and AI can too. It needs an API key for the service.
+when:
+  - You teach and want a first look at a suspicious student essay.
+  - You review inbound articles or guest posts and need to triage them.
+  - You read CVs or cover letters and want to flag, not reject, AI drafts.
+  - You want to see which phrases make a text read like AI.
+you_give:
+  - A document as a file, link or pasted text
+  - An API key for the detection service
+  - Who will read the result (optional)
+you_get:
+  - A lean of AI, human or unsure
+  - A probability score, labelled as uncalibrated
+  - The flagged phrases and patterns
+  - A note on what the result cannot show
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

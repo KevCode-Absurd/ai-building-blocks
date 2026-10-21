@@ -6,6 +6,24 @@ summary: Paste messy notes or an article. Get tidy nested bullets that are quick
 job: organise-work
 headline: Bullet note maker
 subhead: Paste messy notes or an article. Get tidy nested bullets that are quick to scan and revise.
+explain: |
+  Dense text turned into clean nested bullets that you can scan in seconds and revise easily. No paragraphs, no long sentences.
+
+  Paste in messy notes, an article, a page or a tangled bullet list. The skill sorts the ideas into parents and children and keeps one indent style. Related points are grouped and long lines are split. Three levels of detail are available. Lite keeps sentence flow with light tidying. Full is the default, with balanced compression and clear grouping. Ultra breaks things down as far as possible. It sticks to bullets only, which suits study notes and quick review.
+when:
+  - You have a long article and want a scannable summary.
+  - Your meeting notes are messy and need structure.
+  - You study from notes and want parent and child ideas clear.
+  - Your bullet list has mixed formatting and needs cleaning.
+you_give:
+  - Text, notes or an article
+  - A web page to summarise (optional)
+  - "A detail level: lite, full or ultra (optional)"
+you_get:
+  - Nested bullet notes
+  - Related ideas grouped under parents
+  - Short lines with no paragraphs
+  - Consistent indentation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

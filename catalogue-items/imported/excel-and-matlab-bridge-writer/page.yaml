@@ -6,6 +6,25 @@ summary: Say what to move between Excel and MATLAB. Get VBA macros that send dat
 job: work-with-files
 headline: Excel and MATLAB bridge writer
 subhead: Say what to move between Excel and MATLAB. Get VBA macros that send data, run MATLAB and return results.
+explain: |
+  Working Excel VBA macros that send your sheet data into MATLAB, run MATLAB commands and bring the results or charts back into cells, so Excel stays your front end and MATLAB does the heavy maths.
+
+  It uses MathWorks Spreadsheet Link, which links the two programs on one Windows computer. You choose between two styles: range-based calls that move whole blocks of cells, or variable-based calls that move VBA values. It can also use worksheet formulas instead of macros, and bring MATLAB figures in as images. It needs MATLAB installed and running, plus Excel. It does not cover Python or web deployment.
+when:
+  - You have data in Excel and need a MATLAB calculation on it.
+  - You want a button in a workbook that runs a MATLAB script.
+  - You need MATLAB results to land back in specific cells.
+  - You want a MATLAB plot to appear inside an Excel sheet.
+you_give:
+  - What data moves between Excel and MATLAB
+  - The MATLAB command or script to run
+  - Where results should land in the workbook
+  - Windows computer with Excel and MATLAB
+you_get:
+  - VBA macros for sending and receiving data
+  - Worksheet formula alternative
+  - Code to run MATLAB commands
+  - Steps to bring figures into Excel
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it customer data and a goal. Get natural groups found by behaviour
 job: track-numbers
 headline: Behaviour group finder
 subhead: Give it customer data and a goal. Get natural groups found by behaviour, each profiled with a plan.
+explain: |
+  Natural customer groups found in your data and described in a way you can act on. Say what decision the groups should inform, such as a campaign, a roadmap or a retention plan, and the AI picks three to seven behaviours to compare.
+
+  It runs k-means clustering with a helper script, then profiles each group by how far above or below average it sits on each trait. It checks the groups are truly different using a silhouette score above 0.3, and that they make business sense. Each group gets a strategy: retain and expand, monetise, activate, win back or sunset. You need user-level data and a way to run Python.
+when:
+  - Marketing wants different messages for different customers and has no groups.
+  - You suspect your best customers share a pattern.
+  - Churn is rising and you need to spot at-risk users.
+  - Your current customer segments feel arbitrary.
+you_give:
+  - User-level data with behaviour and plan details
+  - What the groups will be used for
+  - Variables you think matter (optional)
+you_get:
+  - Customer groups found in the data
+  - A profile for each group
+  - A validity check on the groups
+  - A recommended strategy per group
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

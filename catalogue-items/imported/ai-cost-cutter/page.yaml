@@ -6,6 +6,26 @@ summary: Describe your AI app. Get where the tokens go and changes that cut the 
 job: build-software
 headline: AI cost cutter
 subhead: Describe your AI app. Get where the tokens go and changes that cut the bill without hurting quality.
+explain: |
+  A clear view of where your AI app's tokens go, and a list of changes that cut the bill without hurting quality. The aim is often 40 to 80 percent less, and you measure first so you know which change worked.
+
+  Changes come in order of payoff. Routing sends easy tasks like tagging and short answers to a small cheap model and keeps big models for hard reasoning. Caching reuses the repeated parts of prompts, such as system text and examples; aim for a hit rate above 40 or 60 percent depending on the app. Prompts are trimmed. Logging per request shows which features cost most. You set a quality floor and check after each step that it still holds.
+when:
+  - Your AI bill climbed and you do not know which feature is causing it.
+  - Most of your requests are simple but all go to the biggest model.
+  - You repeat the same long instructions on every call.
+  - You need to hit a monthly budget without making answers worse.
+you_give:
+  - Which models and providers you use
+  - Monthly spend and the busiest features
+  - Sample prompts and rough token counts
+  - A quality floor and any speed limits
+you_get:
+  - A map of where cost comes from
+  - A ranked list of savings
+  - A model routing plan
+  - A caching plan with target hit rates
+  - A way to track cost per request
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

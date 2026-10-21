@@ -6,6 +6,25 @@ summary: Say what your code needs to offer. Get a clear, stable API or module de
 job: build-software
 headline: API designer
 subhead: Say what your code needs to offer. Get a clear, stable API or module design that is hard to misuse.
+explain: |
+  An interface for your code that is clear, stable and hard to misuse. Say what your code needs to offer, and you get a design for the routes, types or module boundaries, with the contract written down first.
+
+  The skill works from a few firm ideas. Anything users can see will end up relied on, so you expose only what you mean to. Keep one version of an interface alive at a time and extend it, not fork it. Write the contract before the code. It applies to REST and GraphQL endpoints, the line between front end and back end, and even component props. It also plans how to retire old behaviour.
+when:
+  - You are about to add new endpoints and want to get them right the first time.
+  - Two teams need an agreed line between their code.
+  - You are changing a public interface and fear breaking users.
+  - Your component props have grown messy.
+you_give:
+  - What the interface must do
+  - Who or what will call it
+  - Existing code or schema (optional)
+  - Language or framework (optional)
+you_get:
+  - A written contract for the interface
+  - Clear names, types and error shapes
+  - Notes on what to hide
+  - A plan for changing it later
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

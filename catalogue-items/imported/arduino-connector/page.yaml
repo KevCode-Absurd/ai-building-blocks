@@ -6,6 +6,24 @@ summary: Plug in a board. Get it found, set up and connected to MATLAB.
 job: build-software
 headline: Arduino connector
 subhead: Plug in a board. Get it found, set up and connected to MATLAB.
+explain: |
+  Your Arduino board found, set up and connected to MATLAB, with you kept in the loop at every step. You plug it in and the skill handles the checking.
+
+  It always runs two commands to find boards: arduinolist and serialportlist. Both are required, because the first can miss boards that lack the support package firmware. It shows you both results. If nothing turns up, it will not try every port. It asks you whether the board is plugged in, then guides you through your operating system's tools to find it. It never guesses a port or board type. It covers USB connections only, and not Bluetooth, wifi or Simulink workflows.
+when:
+  - You want to read sensors from an Arduino inside MATLAB.
+  - MATLAB doesn't list your board and you don't know why.
+  - You have several boards and need the right port.
+  - You are starting a hardware project and need a working connection.
+you_give:
+  - An Arduino connected by USB
+  - MATLAB with the Arduino support package
+  - Board model (optional)
+you_get:
+  - A list of boards and ports found
+  - The right board and port chosen
+  - A working arduino object in MATLAB
+  - Clear steps if no board is found
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

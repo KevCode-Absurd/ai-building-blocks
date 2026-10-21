@@ -6,6 +6,25 @@ summary: Say what you want to learn. Get survey questions, a focus group guide, 
 job: hire-people
 headline: Employee survey designer
 subhead: Say what you want to learn. Get survey questions, a focus group guide, a result reading and an action plan.
+explain: |
+  A listening plan for your people: survey questions, a focus group guide, a way to read results and an action plan. Say what you want to learn, and you get instruments you can use this month.
+
+  The skill builds engagement surveys and short pulse checks, onboarding checks at 30, 60 and 90 days, and manager feedback forms. It writes focus group, stay interview and skip-level guides. It then helps you read the answers, turn them into actions, equip managers to talk about team results, and plan how to launch and share findings. It also helps measure response rates.
+when:
+  - You want to know why attrition is up.
+  - You need a quarterly pulse on wellbeing.
+  - Managers need help acting on survey results.
+  - You are checking morale after a restructure.
+you_give:
+  - What you want to learn
+  - Number of employees and teams
+  - Past survey results (optional)
+  - Timing and channel (optional)
+you_get:
+  - Survey questions
+  - A focus group or interview guide
+  - A reading of results
+  - An action plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

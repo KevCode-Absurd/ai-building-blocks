@@ -6,6 +6,26 @@ summary: Give it a channel and its price. Get a verdict on audience, fake follow
 job: check-ads
 headline: Telegram ad vetter
 subhead: Give it a channel and its price. Get a verdict on audience, fake followers and fair cost per thousand.
+explain: |
+  A verdict on whether a Telegram channel is worth the price you were quoted, based on real audience reach, signs of fake followers and a fair cost per thousand views. You avoid paying for a post that nobody sees.
+
+  The skill reads the public preview of the channel and records subscriber count and views of 10 to 20 older posts. It works out reach as median views divided by subscribers and compares that with benchmarks for channels of the same size. It looks for odd growth and flat views. It then calculates cost per thousand views, explains what slots like 1/24 or a permanent post are worth,.
+when:
+  - An admin offers you a post slot and you are unsure about the price.
+  - You want to compare five channels for one campaign.
+  - You suspect a channel has bought subscribers.
+  - You do not know what 1/24 or 1/48 means.
+  - You need a cost per thousand to compare with other ad channels.
+you_give:
+  - The channel name or link
+  - The price quoted
+  - The post format offered
+  - Other channels to compare (optional)
+you_get:
+  - A reach check against similar channels
+  - Fake follower warning signs
+  - Cost per thousand views
+  - A buy, negotiate or skip verdict
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

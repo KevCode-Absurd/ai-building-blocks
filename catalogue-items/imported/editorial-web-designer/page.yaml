@@ -6,6 +6,25 @@ summary: Describe the interface. Get a calm, document-style design with warm gre
 job: build-websites
 headline: Editorial web designer
 subhead: Describe the interface. Get a calm, document-style design with warm greys, crisp borders and quiet motion.
+explain: |
+  A calm, document-style interface in the manner of Notion or Linear, with warm greys, thin borders and quiet motion. You describe the screen and get design and code that avoid the usual busy web look.
+
+  The skill sets strict rules. It bans Inter, Roboto and Open Sans, thin icon packs, heavy shadows, gradients, neon colours, pill-shaped big buttons, emojis and filler names like John Doe. It asks for strong type contrast with a serif and sans mix, muted pastel accents and generous white space. You can also have an existing screen reviewed and get the highest-impact fixes. Always check contrast and keyboard use on real content.
+when:
+  - You want a dashboard or docs site that feels clean and adult.
+  - Your interface looks like every other template.
+  - You want a review of a screen with fixes you can build.
+  - You need a plain design that stays out of the way.
+you_give:
+  - A description of the screen or product
+  - Your content, in real wording
+  - An existing interface to review (optional)
+  - Brand limits (optional)
+you_get:
+  - A design direction with type, colour and spacing rules
+  - Code or components in that style
+  - A prioritised list of fixes (optional)
+  - A banned-elements checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe your site. Get a page hierarchy, navigation, URL plan and inte
 job: build-websites
 headline: Site map planner
 subhead: Describe your site. Get a page hierarchy, navigation, URL plan and internal linking map.
+explain: |
+  A site map with page hierarchy, navigation, URL plan and internal links, so visitors find things and search engines follow your structure. It stops a site from growing into a pile of orphan pages.
+
+  Tell it what the business does, who the audiences are and the top goals: sales, search traffic, education or support. For an existing site, it asks what is broken and which URLs need redirects. It matches the site type (SaaS, blog, shop, docs, local business) to a layout. Then it draws the hierarchy, sets URL patterns, plans the top menu and footer, and maps links between pages. Platform choice and migration notes are also covered.
+when:
+  - You are planning a new website from scratch.
+  - Your menu has grown messy and visitors cannot find pages.
+  - You are restructuring and must keep old URLs working.
+  - You want internal links that help search rankings.
+you_give:
+  - What the business does and who it serves
+  - Site goals
+  - Current page list or URLs (optional)
+  - Site type and platform
+you_get:
+  - A page hierarchy
+  - A navigation plan
+  - A URL structure
+  - An internal linking map
+  - Redirect notes for moved pages
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Paste a failed GitHub Actions log. Get the root cause and a fix for you
 job: test-and-fix-code
 headline: Failed workflow diagnoser
 subhead: Paste a failed GitHub Actions log. Get the root cause and a fix for your workflow file.
+explain: |
+  The real reason your GitHub Actions run failed, plus the exact change to your workflow file that fixes it. You skip scrolling through hundreds of log lines.
+
+  Paste the failed log and the workflow YAML. The skill first hides secrets and tokens in the log. It then finds the step where the run broke and matches it to the job in your file. It checks the usual causes in turn: missing secrets, wrong Node, Python or OS versions, timeouts, shell errors in run blocks, and outdated actions. It also looks at your permissions block. The fix comes back as a diff you can apply. It can also point out slow steps.
+when:
+  - Your build is red and the log is too long to read.
+  - A workflow passes on your laptop but fails in CI.
+  - An action warns that it uses an outdated Node version.
+  - A deploy step fails with a vague missing key error.
+you_give:
+  - The failed workflow log
+  - The workflow YAML file
+  - What changed since the last green run (optional)
+you_get:
+  - The root cause in plain words
+  - A diff for the workflow file
+  - A check of secrets and permissions
+  - Tips to speed up slow steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Name the data source and series. Get MATLAB code that pulls Bloomberg, 
 job: connect-tools
 headline: Market data connector
 subhead: Name the data source and series. Get MATLAB code that pulls Bloomberg, FRED, Haver or Datastream data.
+explain: |
+  MATLAB code that pulls financial and economic data from Bloomberg, FRED, Haver Analytics or LSEG Datastream, using the right interface for each. It saves you from guessing which connection method fits.
+
+  Name the provider and the series you need. For Bloomberg it chooses among four interfaces and covers prices, history, live data and reference data. For FRED it fetches economic series from the St. Louis Fed. For Haver and Datastream it pulls history, and Datastream is history only, with no live stream. It works only inside MATLAB with the Datafeed Toolbox, plus your own access to each provider, which may be paid. Other sources like Yahoo Finance and Excel add-ins are out of scope.
+when:
+  - You need Bloomberg prices in MATLAB and are unsure which interface to use.
+  - You want a FRED economic series pulled into a table.
+  - You use Haver or Datastream and need historical data.
+  - You are writing code that depends on a data provider.
+you_give:
+  - The provider
+  - The securities or series IDs
+  - The date range
+  - Your access details set up in MATLAB
+you_get:
+  - MATLAB connection code
+  - The right interface for your case
+  - Example data pull code
+  - Notes on provider limits
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

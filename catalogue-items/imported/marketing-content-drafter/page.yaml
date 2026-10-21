@@ -6,6 +6,26 @@ summary: Say what you need. Get a blog post, social post, newsletter, page or pr
 job: grow-social
 headline: Marketing content drafter
 subhead: Say what you need. Get a blog post, social post, newsletter, page or press release with headline options.
+explain: |
+  A first draft of a blog post, social post, newsletter, landing page, press release or case study, with headline options, ready to edit. It writes for a named audience in your voice.
+
+  It starts by asking for what it needs: content type, topic, audience, two to four key messages, tone and length. If you have brand voice notes, it applies them and tells you so. If not, it asks whether you have any, or uses a plain professional tone. Each content type has its own shape. A social post is fitted to its platform, and a press release follows its usual structure. You get the draft plus alternative headlines to choose from.
+when:
+  - You need a first draft of a blog post and have only the topic.
+  - You must write a LinkedIn post and a newsletter from the same idea.
+  - You are announcing news and need a press release.
+  - You want several headline options to pick from.
+you_give:
+  - The content type
+  - The topic and key messages
+  - Your audience
+  - Tone and length
+  - Brand voice notes (optional)
+you_get:
+  - A full draft
+  - Headline options
+  - Platform-fitted formatting
+  - Notes on voice used
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

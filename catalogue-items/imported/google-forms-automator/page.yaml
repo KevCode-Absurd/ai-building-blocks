@@ -6,6 +6,25 @@ summary: Say what should happen on each form reply. Get a form plan and Apps Scr
 job: organise-work
 headline: Google Forms automator
 subhead: Say what should happen on each form reply. Get a form plan and Apps Script that emails alerts or logs rows.
+explain: |
+  A Google Form that does something the moment someone replies. Say what should happen, such as an email alert, a row added to a sheet or a different follow-up based on an answer, and you get a form plan plus the Apps Script to do it.
+
+  The steps stay inside your browser. Build the form with clear questions, open the script editor from the form's Extensions menu, paste the handler that reads each response, and install an on-form-submit trigger. Then test with a real submission. You write no integration and run nothing outside Google. It does not cover custom screens or standalone Apps Script apps.
+when:
+  - You want an email every time someone fills out your form.
+  - You need replies logged to a sheet with extra columns.
+  - Different answers should lead to different follow-ups.
+  - You do not want to build a full app for one form.
+you_give:
+  - What the form is for
+  - The questions and answer types
+  - What should happen on each reply
+  - The email address or sheet to use
+you_get:
+  - A form design plan
+  - Apps Script to paste in
+  - Steps to install the trigger
+  - A test checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

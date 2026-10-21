@@ -6,6 +6,26 @@ summary: Give it a software company. Get how its value multiple changed across f
 job: money-and-investing
 headline: Funding round multiple analyst
 subhead: Give it a software company. Get how its value multiple changed across funding rounds and what drove the shift.
+explain: |
+  A look at how a software company's valuation multiple changed from round to round, and why. You see if the drop or rise came from the market, slower growth, a new story or the competition.
+
+  It searches for each funding round: date, amount, valuation and lead investor, then for revenue at that time. It computes the valuation as a multiple of annual recurring revenue and sets it against typical private software multiples for the same date. It then splits the change into causes: interest rates and selloffs, growth slowing, shifts in story such as an AI premium, rivals and investor demand. The result is a chart and a short written explanation.
+when:
+  - You want to know why a company's valuation fell between rounds.
+  - You are comparing a startup to peers at the same stage.
+  - You are checking whether a down round was market or company driven.
+  - You need a short valuation story for a memo.
+you_give:
+  - Company name
+  - Rounds to include (optional)
+  - Peers to compare (optional)
+  - Revenue figures you trust (optional)
+you_get:
+  - Valuation multiple per round
+  - Comparison with market medians
+  - Causes ranked by effect
+  - Chart and short explanation
+  - Notes on estimated figures
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

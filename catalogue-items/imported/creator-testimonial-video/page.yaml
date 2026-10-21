@@ -6,6 +6,26 @@ summary: Give it a product and a persona. Get a spoken recommendation script and
 job: make-video-ads
 headline: Creator-style testimonial video maker
 subhead: Give it a product and a persona. Get a spoken recommendation script and a handheld, creator-style video. Your video model makes it.
+explain: |
+  A spoken recommendation script and a handheld, creator-style video for a product, built around a persona you choose. It looks like a real person filming themselves, which is the style that often gets watched on social feeds.
+
+  You give the product and describe the person speaking. The skill starts with a compliance note on what you may and may not claim, then writes the persona and script for a short talking video. It sets out how to call your video tool and the steps to run, and answers common problems. The video itself is made by your own video model, so you need access to one. Instructions are in Chinese.
+when:
+  - You need a product video and have no creator to film it.
+  - You want to test several personas for the same product.
+  - You sell on a platform where authentic-style videos perform.
+  - You need a script that stays inside advertising rules.
+you_give:
+  - Product and key points
+  - Persona of the speaker
+  - Platform and video length
+  - Access to a video model
+you_get:
+  - Compliance notes
+  - Persona description
+  - Spoken script
+  - Video generation steps
+  - Fixes for common problems
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

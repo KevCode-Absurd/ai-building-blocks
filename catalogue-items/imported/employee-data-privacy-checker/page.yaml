@@ -6,6 +6,25 @@ summary: Name the AI tool using staff data. Get a privacy review, a shorter data
 job: hire-people
 headline: Employee data privacy checker
 subhead: Name the AI tool using staff data. Get a privacy review, a shorter data list and a notice. Not legal advice.
+explain: |
+  A privacy review for the AI tool that touches your staff's data, with a shorter list of what it really needs and a notice to send employees. This is general guidance, not legal advice.
+
+  Name the tool, such as a hiring screener, performance system or monitoring software. The skill helps you map what it collects against what it needs, and cut the rest. It builds an impact assessment, a vendor question list, a consent and transparency notice, retention and deletion rules, access controls and a breach response outline. It covers laws such as GDPR, PDPA and PIPL, cross-border transfers and employee access requests.
+when:
+  - HR wants to buy an AI hiring tool and you must check it.
+  - You need to explain to staff what data is used.
+  - A vendor collects more than seems necessary.
+  - An employee asks to see their data.
+you_give:
+  - The AI tool and what it does
+  - Where your staff are located
+  - Data it collects (optional)
+  - Vendor documents (optional)
+you_get:
+  - A privacy impact assessment
+  - A reduced data list
+  - A staff notice
+  - A vendor question list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

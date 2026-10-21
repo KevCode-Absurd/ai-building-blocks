@@ -6,6 +6,24 @@ summary: Point it at a codebase. Get two guides that take a new engineer from fi
 job: build-software
 headline: Codebase onboarding guide writer
 subhead: Point it at a codebase. Get two guides that take a new engineer from first day to deep knowledge.
+explain: |
+  Two guides that take a new engineer from day one to deep knowledge of your codebase. One is for senior people who need the reasons behind choices; the other is for those who need to get started now.
+
+  It detects your main language from build files, then writes both guides with examples in that language. The senior guide covers design principles, an architecture map with a diagram, key abstractions, a log of big decisions and trade-offs, and dependencies. The starter guide covers setup, where things live and first tasks. Together they let a newcomer work out who owns what and why it was built that way.
+when:
+  - A new hire starts Monday and your docs are thin.
+  - Only one person understands how the system fits together.
+  - You are open-sourcing a project and need contributor guides.
+  - Your team keeps answering the same setup questions.
+you_give:
+  - Your repository
+  - Your audience level (optional)
+  - Notes on past decisions (optional)
+you_get:
+  - A senior-level onboarding guide
+  - A getting-started guide
+  - An architecture diagram
+  - A log of key decisions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

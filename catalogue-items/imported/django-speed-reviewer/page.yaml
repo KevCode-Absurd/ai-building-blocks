@@ -6,6 +6,24 @@ summary: Point it at a Django project. Get slow queries and N+1 problems found, 
 job: test-and-fix-code
 headline: Django speed reviewer
 subhead: Point it at a Django project. Get slow queries and N+1 problems found, with the fix for each.
+explain: |
+  A list of real performance problems in your Django code, each proved by reading it, with the change that fixes it. It will not invent issues to look thorough, and zero findings is a fine result.
+
+  The skill ranks problems by impact. N+1 queries and unbounded querysets come first, because they break at scale. Next come missing indexes and write loops. Minor patterns are skipped. Before reporting anything, it traces the data flow, checks for existing fixes and thinks about data volume. A finding marked critical must really be critical, or it is downgraded or dropped. It reads your code and does not need a running site.
+when:
+  - A page gets slower as your data grows.
+  - You suspect an N+1 query behind a slow list view.
+  - Your server runs out of memory when loading big tables.
+  - You want a trusted review without a pile of maybe-issues.
+you_give:
+  - Your Django views, models and queries
+  - The slow page or endpoint (optional)
+  - Rough data sizes (optional)
+you_get:
+  - Confirmed performance issues ranked by impact
+  - The code location of each
+  - A concrete fix such as select_related or an index
+  - A clear statement if nothing serious was found
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

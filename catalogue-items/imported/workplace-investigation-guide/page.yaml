@@ -6,6 +6,26 @@ summary: Describe a workplace complaint. Get a plan, evidence log and draft memo
 job: hire-people
 headline: Workplace investigation guide
 subhead: Describe a workplace complaint. Get a plan, evidence log and draft memo. Not legal advice.
+explain: |
+  A structured path through a workplace complaint, from the first intake to a draft memo. You keep a clean evidence log and a record of which sources you have covered. Not legal advice.
+
+  The skill opens a matter, then lets you add documents one by one. It reads each for key facts, logs them and tracks coverage against the people and sources you planned to check. You can ask questions of the log, and it drafts the final memo and short summaries for different audiences. Everything it creates carries a work-product header, but it warns that marking a file does not create privilege. Confirm first that the investigation is directed by counsel.
+when:
+  - HR received a complaint and you must investigate it fairly.
+  - You are collecting documents and need a clear log.
+  - You want to check what evidence you still lack.
+  - You must write a findings memo for leadership.
+you_give:
+  - Description of the complaint
+  - Documents and interview notes
+  - People and sources to cover
+  - Confirmation of who directs the investigation
+you_get:
+  - Investigation plan
+  - Evidence log
+  - Source coverage tracker
+  - Answers from the log
+  - Draft memo and audience summaries
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it a topic. Get a structured review of sources chosen by clear rul
 job: test-an-idea
 headline: Literature reviewer
 subhead: Give it a topic. Get a structured review of sources chosen by clear rules, with findings synthesised.
+explain: |
+  A written literature review where every source was chosen by rules you can state, not by whatever came up first. Give it a topic and get findings drawn together by theme.
+
+  It works in six steps. First, you fix a sharp research question, using a framework such as PICO. Second, it writes search queries with keywords, synonyms and Boolean operators. Third, it screens results against include and exclude rules. Fourth, it pulls the same details from each paper. Fifth, it groups findings and notes gaps and disagreements. Sixth, it writes the review. It records every search and decision so someone else could repeat it.
+when:
+  - You must write a literature review for a thesis or report.
+  - You need to explain why you picked some studies and not others.
+  - You want to see where researchers disagree on a topic.
+  - You need a review protocol with a flow of included studies.
+you_give:
+  - Your research topic
+  - Inclusion and exclusion rules, if you have them (optional)
+  - Papers you already have (optional)
+  - The review length and audience
+you_get:
+  - A sharp research question
+  - Search queries
+  - A screening record
+  - A table of extracted findings
+  - A written review with themes and gaps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

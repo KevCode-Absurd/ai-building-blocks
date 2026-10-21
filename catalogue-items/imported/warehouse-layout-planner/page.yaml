@@ -6,6 +6,25 @@ summary: Give it your products, volumes and building size. Get zones, aisle layo
 job: plan-supply-chain
 headline: Warehouse layout planner
 subhead: Give it your products, volumes and building size. Get zones, aisle layout, storage type and space needed.
+explain: |
+  A warehouse design on paper before you commit: zones, aisles, storage type and the floor space you need. It is built to cut handling and wasted walking.
+
+  You give your product range, daily volume, growth plans and any special needs like cold storage. The skill sizes the building from pallets and shelving needs, then sets out zones for receiving, storage, picking, packing and shipping. It compares storage types such as pallet racking, shelving and flow racks, plans aisle widths and dock numbers, and keeps flow in a simple line. It also checks the layout against your site limits like column spacing and floor load.
+when:
+  - You are moving to a new building and need to know how much space you need.
+  - Your current layout has long walks and traffic jams.
+  - You are adding a product line that needs new storage.
+  - You need a layout concept to share with a landlord or contractor.
+you_give:
+  - Product types, sizes and counts
+  - Orders or pallets per day, with peak
+  - Growth expected over three to five years
+  - Building size and height (optional)
+you_get:
+  - Zone plan for the site
+  - Storage type recommendation
+  - Aisle and dock sizing
+  - Space needed and design notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

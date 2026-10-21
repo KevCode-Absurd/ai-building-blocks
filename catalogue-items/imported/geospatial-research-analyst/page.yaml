@@ -6,6 +6,25 @@ summary: Give it maps, satellite images or location data. Get a worked analysis 
 job: research-topics
 headline: Geospatial research analyst
 subhead: Give it maps, satellite images or location data. Get a worked analysis of terrain, change or spatial patterns.
+explain: |
+  Maps and satellite data turned into a worked analysis you can follow. Give it location data, rasters, vector files or satellite imagery and a question, such as how land cover changed or where terrain gets steep, and it builds the workflow and runs it.
+
+  It starts by checking where each input came from and what coordinate system it uses. Then it picks the right path: vector or raster GIS, remote sensing, spatial statistics, terrain, road or network analysis, or machine learning on Earth observation data. Reference notes are loaded only for the task at hand. It needs Python with GeoPandas and Rasterio, and some paths need extra packages or service logins.
+when:
+  - You have satellite images and need to measure change over time.
+  - You have a map layer and want spatial patterns tested properly.
+  - You need terrain or slope results from elevation data.
+  - You want a route or network analysis for a region.
+you_give:
+  - Map, raster or location files
+  - The question you want answered
+  - The area and dates of interest (optional)
+  - Service credentials for imagery (optional)
+you_get:
+  - A step-by-step analysis workflow
+  - Maps and result tables
+  - Notes on data source and projection
+  - Code you can rerun
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

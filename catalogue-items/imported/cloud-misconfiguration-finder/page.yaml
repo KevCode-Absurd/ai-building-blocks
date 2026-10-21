@@ -6,6 +6,26 @@ summary: Point it at your cloud setup files. Get open buckets, loose access rule
 job: secure-code
 headline: Cloud misconfiguration finder
 subhead: Point it at your cloud setup files. Get open buckets, loose access rules and gaps ranked with fixes.
+explain: |
+  A ranked list of cloud settings that put you at risk, each with a fix. Point it at your infrastructure files or exported configs, and it finds open storage buckets, loose permissions and overly wide network rules.
+
+  It checks four areas. Permissions are scanned for paths that let a user raise their own access. Storage is checked for public exposure. Network rules are checked for ports open to the whole internet. Infrastructure code, such as Terraform files, is read for the same problems before it is deployed. A helper script scores each finding by risk, and the report names which cloud provider each check covers. It is a preventive check on setup, not a hunt for an attack in progress.
+when:
+  - You want to catch an open storage bucket before it leaks data.
+  - You inherited an account and no one knows what permissions exist.
+  - You want to review Terraform files before they go live.
+  - A security audit is coming and you need a list of gaps.
+you_give:
+  - Infrastructure code or exported configs
+  - Which cloud provider you use
+  - Permission policies (optional)
+  - Network rules (optional)
+you_get:
+  - Findings ranked by risk
+  - Public storage exposures
+  - Risky permission paths
+  - Open network rules
+  - Fixes for each issue
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

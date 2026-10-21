@@ -6,6 +6,24 @@ summary: Give it an AI tool's terms or addendum. Get data-training, liability an
 job: check-contracts
 headline: AI vendor terms checker
 subhead: Give it an AI tool's terms or addendum. Get data-training, liability and model-change risks flagged. A first check, not legal advice.
+explain: |
+  Spot the risky clauses in an AI vendor's contract before you sign. You get the key issues first, then a clause by clause review and suggested wording changes. It is a first pass and is not legal advice.
+
+  You supply the AI addendum, the main agreement or the terms of service. It checks whether your inputs can be used to train the vendor's models, how confidential your data stays, what happens when the vendor changes the model, who owns outputs, liability limits, incident notice, your right to human review, and use limits. It also compares the terms with your own AI policy and notes where they disagree. A missing AI addendum is flagged.
+when:
+  - You are about to sign with an AI tool and want to know what you are agreeing to.
+  - A vendor's terms bury the data-training rules and you cannot find them.
+  - You want to see where their terms break your own AI policy.
+  - You need redline suggestions to send to the vendor.
+you_give:
+  - The vendor's AI addendum, agreement or terms
+  - Your AI policy or stated positions
+  - Any data processing agreement already in place (optional)
+you_get:
+  - A bottom-line summary of the risk
+  - A clause by clause review
+  - Suggested redlines
+  - What to do if the vendor will not change the terms
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

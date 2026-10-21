@@ -6,6 +6,25 @@ summary: Give it a book or a folder of documents. Get skill files that put its m
 job: make-skills
 headline: Book to skill converter
 subhead: Give it a book or a folder of documents. Get skill files that put its method to work.
+explain: |
+  Point it at a book or a folder of documents and get a set of skill files that put the method to work. Your agent can then look up an exact answer instead of searching a PDF.
+
+  It pulls out structure, not summaries. A small core file holds the main frameworks with a chapter and topic index. One file per chapter loads only when needed, with a glossary, a patterns file and a cheat sheet beside it. Each file has a size limit. You can run the full conversion, or analyse first and review before building. It also works on internal docs, standards and brand systems.
+when:
+  - You have a book whose method you want your AI to use.
+  - A folder of standards or specs keeps being searched by hand.
+  - You want a glossary and cheat sheet from a long document.
+  - You want to review what will be extracted before it is built.
+you_give:
+  - A book file or folder of documents
+  - Which mode to run, full or analyse first
+  - Your goal for the skill (optional)
+  - Chapters to skip (optional)
+you_get:
+  - A core skill file with indexes
+  - One summary per chapter
+  - A glossary and a patterns file
+  - A decision cheat sheet
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

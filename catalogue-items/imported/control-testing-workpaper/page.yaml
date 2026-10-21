@@ -6,6 +6,25 @@ summary: Name a control area. Get a test sample, a workpaper and a rating for an
 job: track-numbers
 headline: Control testing workpaper builder
 subhead: Name a control area. Get a test sample, a workpaper and a rating for any gap. Not audit advice.
+explain: |
+  A test sample, a filled workpaper and a rating for any gap, ready for a control test in your SOX program. It saves the hours spent working out sample sizes and formatting evidence.
+
+  You name a control area such as revenue, purchasing to payment, IT general controls or month-end close. The skill sets the sample size from the control's frequency and risk, then selects items with a method you can defend. It builds a workpaper with the control, steps, evidence and conclusion. If something fails, it classifies the deficiency as a control deficiency, significant deficiency or material weakness, and writes the assessment. It supports your judgment and is not audit advice.
+when:
+  - Quarterly testing is coming and you need a sample for a control.
+  - You need a workpaper template for a new control.
+  - A test found an exception and you must rate how serious it is.
+  - You are new to SOX 404 and want a worked starting point.
+you_give:
+  - The control and its area
+  - How often it runs
+  - The population list
+  - Risk level (optional)
+you_get:
+  - Sample size and selected items
+  - Testing workpaper
+  - Deficiency classification
+  - Control assessment write up
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

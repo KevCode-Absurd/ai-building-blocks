@@ -6,6 +6,25 @@ summary: Say who to meet and when. Get time zones sorted, calendars checked and 
 job: organise-work
 headline: Meeting scheduler
 subhead: Say who to meet and when. Get time zones sorted, calendars checked and the best slots offered.
+explain: |
+  A meeting on everyone's calendar at a time that works, without the back-and-forth emails. Tell it who to meet, how long and when, in plain words.
+
+  It pulls out the people, topic, length and limits. It looks up each person's time zone and converts the options into local times. It reads each calendar for free blocks, then ranks slots by working hours and by how few early or late times it creates. You see a grid of options with the best one marked. Once you confirm, it creates the invite with the agenda and a video link, tracks replies, and offers new slots if a key person declines. It needs calendar access.
+when:
+  - You need a one-hour call across India, Europe and China.
+  - You want a weekly team standup set at the same local time.
+  - A meeting must move and you want the next best slot found.
+  - You are tired of asking five people for their free times.
+you_give:
+  - Names or emails of the people to invite
+  - Topic and length
+  - Preferred days or time of day
+  - Calendar access
+you_get:
+  - A grid of times in each person's local time
+  - A recommended slot with the reason
+  - A calendar invite with agenda and video link
+  - Updates on who accepted or declined
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

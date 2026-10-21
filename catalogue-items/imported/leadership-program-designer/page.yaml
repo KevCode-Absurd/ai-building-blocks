@@ -6,6 +6,25 @@ summary: Say who you are training. Get a program, a 360 review form, a coaching 
 job: hire-people
 headline: Leadership program designer
 subhead: Say who you are training. Get a program, a 360 review form, a coaching guide and a succession plan.
+explain: |
+  A full leadership development plan, from first-time managers to senior executives. Say who you are training and which skills matter. The skill designs the program and its competency framework, then adds the tools around it: a 360-degree review form, a coaching guide, a scorecard to track progress and a succession plan for key roles.
+
+  It can also cover executive onboarding, cross-cultural leadership and digital leadership. Each piece is written with the audience in mind, so a program for team leads differs from one for directors. You can ask for one piece, such as only the 360 form, or the whole set.
+when:
+  - You promoted several people to manager and want to train them together.
+  - HR asked for a competency framework for your leaders.
+  - You need a 360 review form for senior staff.
+  - Your board asked who could replace your key leaders.
+you_give:
+  - Who you are training and their level
+  - Skills you want to build
+  - Company size and industry
+  - Time and budget limits (optional)
+you_get:
+  - A leadership program outline
+  - A competency framework
+  - A 360 review form
+  - A coaching guide and succession plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

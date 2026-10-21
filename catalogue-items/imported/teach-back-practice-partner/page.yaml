@@ -6,6 +6,25 @@ summary: Teach an idea to your AI, which plays a curious beginner. Get the gaps 
 job: teach-and-train
 headline: Teach-back practice partner
 subhead: Teach an idea to your AI, which plays a curious beginner. Get the gaps shown by its honest questions.
+explain: |
+  A way to find out what you do not really know. You explain an idea to your AI, which plays a curious beginner, and its honest questions show where your understanding is thin.
+
+  Teaching forces you to organise an idea and say it in your own words. The AI stays in the role of a novice peer. It does not correct you at once. It asks the kind of questions a beginner would, such as why a step happens or what a term means. When you stall or repeat a textbook line, it notices. At the end it lists the gaps and half understood parts so you know what to study next. The method comes from learning by teaching research.
+when:
+  - You think you understand a topic but freeze when asked to explain it.
+  - You are revising for an exam and want to test yourself actively.
+  - You want to find the weak spots in a concept before a presentation.
+  - Re-reading notes is no longer helping.
+  - You need a practice listener who never gets bored.
+you_give:
+  - The concept you will teach
+  - Your course and level
+  - What you already feel sure of (optional)
+you_get:
+  - A beginner who asks real questions
+  - A list of gaps shown by your answers
+  - Parts you explained well
+  - A short plan for what to revisit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

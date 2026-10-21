@@ -6,6 +6,24 @@ summary: Point it at your code. Get an HTML report of design improvements, then 
 job: build-software
 headline: Codebase architecture reviewer
 subhead: Point it at your code. Get an HTML report of design improvements, then work through the one you pick.
+explain: |
+  An HTML report of design improvements for your codebase, then a guided session on the one you pick. The focus is turning shallow, tangled modules into deep ones that are easier to test and easier for an AI to navigate.
+
+  It starts by deciding where to look, using your commit history to find areas that change often, unless you name one. It then applies a shared vocabulary of modules, interfaces, depth, seams and adapters, with tests like asking what happens if a module is deleted. It reads your domain glossary and past decision records so it does not reopen settled choices. Each suggestion is written in those terms.
+when:
+  - Changes keep touching ten files for one feature.
+  - Tests are hard to write because modules are tangled.
+  - You want the riskiest design spots named.
+  - An AI agent keeps getting lost in your code.
+you_give:
+  - Your codebase
+  - An area to focus on (optional)
+  - Your glossary and decision records (optional)
+you_get:
+  - An HTML report of design opportunities
+  - Reasons for each
+  - A short list ranked by payoff
+  - A guided walkthrough of the one you choose
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

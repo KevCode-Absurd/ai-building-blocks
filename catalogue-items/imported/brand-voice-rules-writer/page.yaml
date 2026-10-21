@@ -6,6 +6,26 @@ summary: Describe your brand and who you write for. Get tone, word choices and w
 job: brand-file
 headline: Brand voice rules writer
 subhead: Describe your brand and who you write for. Get tone, word choices and writing rules any writer can follow.
+explain: |
+  A voice guide short enough to use and clear enough that two different writers produce text that sounds alike.
+
+  You describe your brand, audience and position, then rate where you sit on a few scales: formal or casual, serious or playful, expert or plain. You also name brands you admire and what you never want to sound like. The skill writes a guide with a one-line voice summary, tone settings with example sentences, five or six voice traits each with a do and a don't, and word choices. It reads any saved brand context first and asks only for what is missing.
+when:
+  - You are hiring freelance writers and need to tell them how you sound.
+  - Your website, emails and ads all sound like different companies.
+  - You are naming your tone for the first time and need words for it.
+  - You want a do and don't list your team can check drafts against.
+you_give:
+  - Brand name and what you sell
+  - Who you write for
+  - Where you sit on tone scales
+  - Brands you admire (optional)
+  - Things you never want to sound like (optional)
+you_get:
+  - A one-line voice summary
+  - Tone settings with examples
+  - Five or six voice traits with do and don't lines
+  - Preferred and avoided words
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your product and rivals. Get positioning, a go-to-market plan a
 job: plan-strategy
 headline: Go-to-market positioning planner
 subhead: Give it your product and rivals. Get positioning, a go-to-market plan and launch steps.
+explain: |
+  A launch plan that starts from the buyer, not the feature list. Give it your product and your rivals and you get a clear position, a go-to-market plan and launch steps in order.
+
+  It begins by defining the ideal customer from your best customers, those with the highest lifetime value. Then it builds positioning, sizes up competitors, and plans the launch. It also covers what your sales team needs and notes on entering new countries. Scripts handle some of the scoring. The result is a plan you can hand to a team, written around why the right buyer picks you over the options.
+when:
+  - You are launching a product and cannot explain why you beat the alternatives.
+  - Your messaging sounds like every competitor's.
+  - You need a launch checklist with owners and timing.
+  - You want to enter a new market and need a plan.
+you_give:
+  - Product description
+  - Main competitors
+  - Customer data (optional)
+  - Launch date and budget (optional)
+you_get:
+  - An ideal customer profile
+  - A positioning statement
+  - Competitor comparison
+  - A go-to-market and launch plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

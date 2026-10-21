@@ -6,6 +6,24 @@ summary: Give it a plan or idea. Get a tough round of questions with a suggested
 job: think-and-decide
 headline: Plan stress-tester
 subhead: Give it a plan or idea. Get a tough round of questions with a suggested answer to each.
+explain: |
+  A tough round of questions on your plan or idea, each with a suggested answer, so you reach a shared and settled design fast. You mostly say yes or change a few answers.
+
+  The skill maps your plan as a tree of decisions, where each choice leads to others. It asks every question whose earlier choices are already settled, in one numbered round, and phrases each so a yes accepts its recommendation. After your answers it recomputes what can now be asked and runs the next round. Facts it can look up, such as files or tools, it finds itself and never asks you.
+when:
+  - You have a rough idea and need the gaps found.
+  - You want to agree on a design before starting to build.
+  - You keep missing decisions that hit you later.
+  - You want quick answers, not a long interview.
+you_give:
+  - Your plan or idea
+  - Any constraints you already know
+  - Answers to each round of questions
+you_get:
+  - Numbered question rounds
+  - A recommended answer for each
+  - A decision tree that narrows each round
+  - A settled plan at the end
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

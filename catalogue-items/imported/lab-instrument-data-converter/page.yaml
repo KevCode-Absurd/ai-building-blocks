@@ -6,6 +6,25 @@ summary: Give it instrument output files. Get them converted to Allotrope JSON o
 job: work-with-files
 headline: Lab instrument data converter
 subhead: Give it instrument output files. Get them converted to Allotrope JSON or flat CSV for your lab systems.
+explain: |
+  Instrument output files turned into a format your lab systems accept. Give it files from a plate reader, cell counter or similar device. The skill detects the instrument type, reads the file with the allotropy library, and writes Allotrope Simple Model JSON, a flat CSV with one row per measurement, or both.
+
+  It keeps raw readings apart from calculated values, and links every calculated value back to its source data so results stay traceable. If a field is unclear, such as whether a number is a setting or a reading, it asks you instead of guessing. It can also write the Python parser code for your data engineers. You need Python and a few packages installed.
+when:
+  - Your LIMS only accepts Allotrope JSON and your instrument exports CSV.
+  - You want a flat table of instrument results to open in Excel.
+  - A data engineer needs parser code to repeat the conversion on every run.
+  - You need calculated values to stay traceable to the raw data.
+you_give:
+  - Instrument output files
+  - The instrument or vendor name (optional)
+  - Whether you want JSON, CSV or both
+  - Your company's schema notes (optional)
+you_get:
+  - Allotrope JSON files
+  - A flat CSV of measurements
+  - Parser code for handoff
+  - A short summary of what was converted
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

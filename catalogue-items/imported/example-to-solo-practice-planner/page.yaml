@@ -6,6 +6,26 @@ summary: Describe where students can follow examples but not solve alone. Get a 
 job: teach-and-train
 headline: Example to solo practice planner
 subhead: Describe where students can follow examples but not solve alone. Get a path from examples to independent problems.
+explain: |
+  A teaching sequence that moves students from watching worked examples to solving problems alone, one step at a time, so they stop freezing when the help disappears.
+
+  It is built on the expertise reversal effect: help that supports beginners starts to slow down students who have learned the method. The plan removes one step from each example at a time, and only moves on when students get the current step right. It adds checkpoints to see if support still helps, then designs the solo practice, including problem difficulty and what to do when a student gets stuck. It also warns about students who feel more confident than they are.
+when:
+  - Students follow your examples but cannot start a problem on their own.
+  - You are not sure when to stop giving worked examples.
+  - You need a set of practice problems that get harder in a sensible order.
+  - Some students feel sure they understand but fail on new problems.
+you_give:
+  - The skill you are teaching
+  - What students know now and how you know it
+  - Year group or level (optional)
+  - Number of practice problems and time available (optional)
+you_get:
+  - Step-by-step fade plan
+  - Rules for when to move on
+  - Checkpoints for over-support
+  - Independent practice design
+  - Plan for stuck students
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

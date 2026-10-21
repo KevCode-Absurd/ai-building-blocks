@@ -6,6 +6,25 @@ summary: Give it a shoe, bag, watch or necklace photo. Get a person wearing it. 
 job: product-photos
 headline: Accessory try-on photo maker
 subhead: Give it a shoe, bag, watch or necklace photo. Get a person wearing it. Your image model draws it.
+explain: |
+  A real-looking person can wear your shoe, bag, watch, glasses or necklace in a photo made from your product picture.
+
+  The skill writes the instructions for an image model and sends your product image plus a model reference photo with them. The key idea is that an accessory fills only a small part of the picture, so the prompt says exactly where it must sit, such as on the nose bridge and ears for glasses. It tells the model to keep your product identical in shape, colour and detail and to change nothing else in the scene. Your image model draws it, and that may need an account or key.
+when:
+  - You sell accessories and want on-model photos without a shoot.
+  - You have a flat product photo and need a lifestyle version.
+  - You want the same scene with a different product in it.
+  - You need the product to stay true to the real item.
+you_give:
+  - A clear photo of the product
+  - A reference photo of the model and scene
+  - Where the item should be worn
+  - Your image tool or account
+you_get:
+  - A ready-to-run image prompt
+  - Placement instructions for the item
+  - Rules that keep the product unchanged
+  - The finished on-model image, once your image tool runs it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

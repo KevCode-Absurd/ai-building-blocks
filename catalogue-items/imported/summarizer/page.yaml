@@ -6,6 +6,25 @@ summary: Give it long text. Get a short summary at the detail level you choose, 
 job: think-and-decide
 headline: Summarizer
 subhead: Give it long text. Get a short summary at the detail level you choose, from one text or many.
+explain: |
+  Long text cut down to the size you need, from a single line to a layered summary. It works on one document or many at once.
+
+  You paste the text and say how much detail you want. The skill picks a method: extractive, which pulls the key lines out; abstractive, which rewrites them in fresh words; hierarchical, which gives a top-level summary with deeper layers; or multi-document, which merges several sources and shows where they agree. Worked examples cover a technical document and a set of meeting notes. It also handles odd cases such as very short input or conflicting sources.
+when:
+  - You have a 40 page report and five minutes.
+  - You need one summary of several meeting notes.
+  - You want a short version plus a longer one for those who want detail.
+  - Sources disagree and you need that noted.
+you_give:
+  - The text or documents
+  - The detail level you want
+  - The audience (optional)
+  - What to focus on (optional)
+you_get:
+  - A summary at your chosen detail level
+  - Layered summaries for long text
+  - A merged summary across documents
+  - Notes on conflicts between sources
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

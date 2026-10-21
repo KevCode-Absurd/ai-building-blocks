@@ -6,6 +6,25 @@ summary: Give it a text. Get each claim checked against trusted sources and scor
 job: think-and-decide
 headline: Claim fact-checker
 subhead: Give it a text. Get each claim checked against trusted sources and scored by confidence.
+explain: |
+  Paste a text and get a verdict on each claim in it, with a confidence score and the sources behind it. Instead of one true or false for the whole piece, you see exactly which sentence holds up and which does not.
+
+  It first splits the text into single checkable statements and drops opinions. It labels each as a number, a date, a science finding or a definition, then looks for the best source type: official data for statistics, journals for research, records for history. Each claim is compared against at least two independent sources. Verdicts run from true to false, with unverifiable as its own result.
+when:
+  - You are about to publish a post and want its facts checked.
+  - A colleague sent a statistic and you doubt it.
+  - You want to check an AI answer before you rely on it.
+  - You need to know which parts of an article are weak.
+you_give:
+  - The text or statement to check
+  - Claims to focus on (optional)
+  - Preferred report format (optional)
+you_get:
+  - A list of separate claims
+  - A verdict for each
+  - A confidence score
+  - Source links
+  - An overall summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

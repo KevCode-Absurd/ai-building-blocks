@@ -6,6 +6,25 @@ summary: Give it your team's feedback. Get what went well, what did not, and act
 job: organise-work
 headline: Sprint retro facilitator
 subhead: Give it your team's feedback. Get what went well, what did not, and action items with owners and dates.
+explain: |
+  A retrospective run for you: what went well, what did not, and action items with owners and dates. Pick a format or let the skill choose. Options are Start, Stop, Continue; the four Ls of liked, learned, lacked and longed for; or Sailboat with wind, anchor, rocks and island.
+
+  If you have raw feedback from sticky notes, surveys or chat, it groups it into themes and counts how often each came up. It also checks the sprint itself: goal met or not, over or under-commitment, and blockers. The result is a ranked action table with owner, deadline and a way to tell it worked.
+when:
+  - The sprint just ended and the team needs a retro.
+  - You have a pile of feedback notes that need sorting.
+  - Past retros ended without clear actions.
+  - You want a new format to keep the meeting fresh.
+you_give:
+  - Team feedback or sticky note text
+  - Sprint goal and results (optional)
+  - Notes from earlier retros (optional)
+  - Your preferred retro format (optional)
+you_get:
+  - Feedback grouped into themes
+  - What went well and what did not
+  - A sprint performance check
+  - Ranked action items with owners and dates
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

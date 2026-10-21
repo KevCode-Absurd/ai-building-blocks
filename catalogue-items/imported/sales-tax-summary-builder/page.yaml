@@ -6,6 +6,25 @@ summary: Pick a filing period. Get tax collected by state, province and rate, re
 job: run-your-store
 headline: Sales tax summary builder
 subhead: Pick a filing period. Get tax collected by state, province and rate, ready for filing prep.
+explain: |
+  Tax collected, grouped the way you file it. Pick a period and get your sales tax split by state, province or rate, ready for whoever prepares your return. This is prep for a professional, not tax advice.
+
+  It is built for Shopify. It reads paid orders in your lookback window, ninety days by default to fit a quarter, and collects the tax lines on each. You choose to group by jurisdiction or by rate. By default it removes tax from fully refunded orders. It sums each group and shows totals as text or JSON. It only reads data. You sign in with the Shopify command line and allow order read access.
+when:
+  - A quarterly filing is due and you need totals by state.
+  - Your accountant asks for tax collected by rate.
+  - You want to see how refunds change what you owe.
+  - You sell in several regions and need a clean breakdown.
+you_give:
+  - Your store domain
+  - The period in days
+  - Group by jurisdiction or by rate
+  - Shopify read access to orders
+you_get:
+  - Tax collected per jurisdiction or rate
+  - Refunded orders taken out
+  - A summary for filing prep
+  - A reminder to check with a tax professional
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

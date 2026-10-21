@@ -6,6 +6,25 @@ summary: Describe your buyer. Get a profile of their wants, fears, identity and 
 job: understand-customers
 headline: Customer motivation profiler
 subhead: Describe your buyer. Get a profile of their wants, fears, identity and trust doubts to use in copy and offers.
+explain: |
+  Age and income rarely explain why someone buys. Describe your buyer and you get a profile of their wants, fears, self-image and trust doubts that you can use in copy, offers and funnels.
+
+  Before writing, it checks what it needs: who the buyer is, what they are trying to achieve or avoid, the situation when they meet you, and any limits. Then it maps their needs and identity, from what they want to what the choice says about them, and where trust breaks. It uses only demographic details that change behaviour. The psychology notes are working ideas, so check them against real audience research before using them in public claims.
+when:
+  - You are about to write copy and only know the buyer's age and location.
+  - Your funnel loses people at the same step and you do not know why.
+  - You want to know what your buyer fears about buying.
+  - You need one profile your whole team can write from.
+you_give:
+  - A description of your target buyer
+  - What they are trying to achieve or avoid
+  - Existing research or reviews (optional)
+  - Brand and ethical limits (optional)
+you_get:
+  - A structured motivation profile
+  - Fears and trust barriers
+  - Identity cues and language
+  - Notes for copy, offers and funnel design
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

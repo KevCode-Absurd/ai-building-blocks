@@ -6,6 +6,25 @@ summary: Give it your SaaS idea. Get a stack choice, build order and launch chec
 job: build-product
 headline: SaaS MVP roadmap planner
 subhead: Give it your SaaS idea. Get a stack choice, build order and launch checklist you can follow.
+explain: |
+  A clear route from idea to first paying customers: which tools to use, what to build in which order and what to check before going live. It is for building the first version of a software product.
+
+  It starts with a gut check before code. Can you state the problem in one sentence, name the exact customer and find three people who would pre-pay? If not, it says do not build yet. Then it picks a stack, such as Next.js, Postgres, a sign-in service and Stripe, and shows a project layout. It covers sign-in, billing, database design and multi-tenant setup, and ends with a launch checklist.
+when:
+  - You are starting a software product from scratch and need a build order.
+  - You cannot decide between tools for sign-in, database and payments.
+  - You want a checklist before launching to real users.
+  - An early product needs a technical check.
+you_give:
+  - Your product idea
+  - Who the customer is
+  - Your coding skills or team size (optional)
+  - Tools you already prefer (optional)
+you_get:
+  - A validation checklist
+  - A recommended tool stack with reasons
+  - A project structure
+  - A launch checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

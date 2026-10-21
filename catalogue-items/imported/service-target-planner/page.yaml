@@ -6,6 +6,26 @@ summary: Describe your service. Get service level targets, error budgets and ale
 job: ship-and-host
 headline: Service target planner
 subhead: Describe your service. Get service level targets, error budgets and alert rules that fit.
+explain: |
+  Service level targets that people believe in, with an error budget and alerts that fire at the right time. Many targets are copied numbers, like 99.9 percent on everything, with no clear measure and no plan for when the budget runs out. This skill uses the method from Google's SRE Workbook.
+
+  It picks the right measure of how users feel the service, such as request success rate instead of CPU. It sets a target users care about and works out the error budget. It builds burn-rate alerts over several time windows, so a short spike stays quiet but a slow leak is caught. It also writes the policy for what the team does when the budget is gone.
+when:
+  - You are launching a service and need real reliability targets.
+  - Your current targets are all 99.99 percent and your alerts are noise.
+  - You need to explain what an error budget is and what happens when it is gone.
+  - You want burn-rate alerts that are neither too jumpy nor too slow.
+you_give:
+  - The service and its users
+  - Current traffic and error data
+  - Existing targets (optional)
+  - Alerting tool in use (optional)
+you_get:
+  - A chosen indicator and target
+  - An error budget calculation
+  - Burn-rate alert thresholds
+  - An error budget policy
+  - A review of common target mistakes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

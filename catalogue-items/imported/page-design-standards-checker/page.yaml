@@ -6,6 +6,24 @@ summary: Give it a page or component. Get checks on colour contrast, spacing, hi
 job: design-work
 headline: Page design standards checker
 subhead: Give it a page or component. Get checks on colour contrast, spacing, hierarchy and mobile, with fixes.
+explain: |
+  A review of your page or component against six design standards, with a fix for each problem found. It catches the usual causes of a page that feels off: low contrast, uneven spacing, weak hierarchy and layouts that break on a phone.
+
+  It starts with design tokens, the saved colours, type sizes and spacing steps, and helps you set them if none exist. Then it checks text contrast, a consistent spacing scale, what the eye sees first, button and form rules, and mobile behaviour. It ends with a pre-ship checklist so nothing slips out. It does not define a brand or audit full accessibility law.
+when:
+  - A page looks off but you cannot say why.
+  - You are about to ship a section and want a quality pass.
+  - Buttons and forms differ from page to page.
+  - You are starting a project and need colour and spacing rules first.
+you_give:
+  - The page, component or code to check
+  - Brand colours, fonts and spacing (optional)
+  - Target devices and screen widths
+you_get:
+  - Findings on contrast, spacing, hierarchy and mobile
+  - A fix for each finding
+  - A starter set of design tokens if you had none
+  - Pre-ship checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

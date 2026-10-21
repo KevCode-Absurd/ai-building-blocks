@@ -6,6 +6,24 @@ summary: Give it a cron schedule. Get a plain-English meaning, the next run time
 job: test-and-fix-code
 headline: Schedule timing checker
 subhead: Give it a cron schedule. Get a plain-English meaning, the next run times, and any silent mistakes that stop or repeat it.
+explain: |
+  Find out what your cron schedule will really do before it ships. Paste the expression and get a plain English meaning, the next run times and any silent mistakes that stop it or make it run too often.
+
+  It splits the five fields and checks each range. Then it hunts for traps: dates that never exist, like 30 February; day-of-month and day-of-week joined by OR, which fires far more than you meant; and midnight times shifted by time zones. A small Node script that needs no install parses the line, validates it deeply and lists upcoming runs with a yearly count. It suits crontabs, Kubernetes, GitHub Actions and Airflow.
+when:
+  - A job did not fire and you cannot see why.
+  - You are about to deploy a CronJob and want to check its timing.
+  - You need to know how many times a year a schedule runs.
+  - You inherited a crontab and want it explained.
+you_give:
+  - The cron expression or file
+  - The time zone it runs in (optional)
+  - Where it is used, such as Kubernetes (optional)
+you_get:
+  - A plain English meaning
+  - The next run times
+  - A list of silent mistakes found
+  - A corrected expression
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

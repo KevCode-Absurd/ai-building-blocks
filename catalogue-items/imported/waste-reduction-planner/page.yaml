@@ -6,6 +6,25 @@ summary: Describe your process. Get a map of waste, a 5S plan and quick fixes ra
 job: plan-supply-chain
 headline: Waste reduction planner
 subhead: Describe your process. Get a map of waste, a 5S plan and quick fixes ranked by payoff.
+explain: |
+  A map of where your process wastes time, money and materials, plus a 5S plan and quick fixes ranked by payoff. It uses lean methods from manufacturing, but the ideas work in any repeated process.
+
+  You describe the process, the problems and the goals. The skill draws a value stream map, which shows each step and the waiting between steps, and sorts waste into the classic types: waiting, extra moving, defects, overproduction and so on. It sets a 5S plan to sort, tidy and standardise the workspace. It then ranks fixes by effort and gain, so you can start with the quick ones. It finishes with simple measures to track progress.
+when:
+  - Work piles up between steps and lead times are long.
+  - Defects or rework are eating your margin.
+  - Your workspace is messy and people lose time looking for things.
+  - You want an improvement plan without a big project.
+you_give:
+  - A description of the process and its steps
+  - Known problems or delays
+  - Time per step, if you have it (optional)
+  - Your goal, such as shorter lead time
+you_get:
+  - A waste map of the process
+  - A 5S plan for the workspace
+  - Quick fixes ranked by payoff
+  - Measures to track progress
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

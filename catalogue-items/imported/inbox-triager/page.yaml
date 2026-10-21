@@ -6,6 +6,26 @@ summary: Run it on your recent email. Get messages sorted, senders checked and r
 job: organise-work
 headline: Inbox triager
 subhead: Run it on your recent email. Get messages sorted, senders checked and reply drafts. It never sends.
+explain: |
+  Your recent email sorted by what needs you, with new senders checked and reply drafts waiting. It never sends anything, so you stay in control of every message.
+
+  The skill reads the files made by the inbox setup skill: your sorting scheme and reply voice, plus optional rate cards or evaluation rules. It then classifies each new message, looks up unknown senders, and writes a recommendation for each one: reply, decline, delegate or ignore. Drafts follow your tone and your hard rules. It ends with a short report in the format you chose. It stops with a clear message if the required setup files are missing. Run it once or a few times a day.
+when:
+  - You come back from a day away and have 200 unread emails.
+  - You want unknown senders checked before you answer.
+  - You want reply drafts in your voice to approve or edit.
+  - You want a short morning summary of what matters.
+  - You need pitches and requests judged against your own rules.
+you_give:
+  - Access to your recent emails
+  - The setup files from the inbox rules interviewer
+  - How often you want it to run (optional)
+you_get:
+  - Messages sorted into your categories
+  - Background on new senders
+  - A recommendation for each message
+  - Draft replies, never sent
+  - A short report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

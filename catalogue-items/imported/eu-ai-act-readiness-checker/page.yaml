@@ -6,6 +6,26 @@ summary: Describe your AI systems. Get a first read of your risk level, duties a
 job: secure-code
 headline: EU AI Act readiness checker
 subhead: Describe your AI systems. Get a first read of your risk level, duties and gaps under the EU AI Act.
+explain: |
+  A first-pass readiness review of your AI systems against the EU AI Act: what you run, your role for each, which duties may apply and where evidence is missing. It is triage, not a legal opinion.
+
+  It builds an inventory with one row per system, then checks the rows for gaps with a small Python script. It screens for banned uses, checks transparency rules, high-risk categories and rules for general-purpose models. It notes its sources and the date it checked them. The output is a gap register with owners and target dates, a 30, 60 and 90 day plan, and a list of questions that need a qualified lawyer.
+when:
+  - You use AI in products or HR and need to know what the EU Act means for you.
+  - You have no inventory of the AI tools your company runs.
+  - Your board has asked how ready you are for the rules.
+  - You need a plan for the next 90 days before talking to counsel.
+you_give:
+  - List of AI systems and what each is used for
+  - Your role for each one, such as builder or user
+  - Countries where it is used
+  - Existing risk, privacy and security documents (optional)
+you_get:
+  - AI system inventory
+  - Gap register with owners and dates
+  - Separate notes on banned uses, transparency and high-risk
+  - 30, 60 and 90 day plan
+  - Questions for counsel
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

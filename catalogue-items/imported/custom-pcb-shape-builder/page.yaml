@@ -6,6 +6,25 @@ summary: Describe a PCB shape. Get a custom layout with shapes, feeds and layers
 job: build-software
 headline: Custom PCB shape builder
 subhead: Describe a PCB shape. Get a custom layout with shapes, feeds and layers built from code.
+explain: |
+  Some RF structures are not in any catalog, so you have to build them from shapes. Describe the board shape you want and you get MATLAB code that builds it as a pcbComponent, with metal layers, feeds and cut-outs in place.
+
+  It builds shapes like rectangles and polygons, combines them with union, subtract and intersect, and places them on the right layers. It adds feeds, from edge feeds to coaxial and delta-gap, and vias. It can cut slots in a ground plane to make defected ground structures, and set up stripline or shielded builds. It checks the layer and feed settings, which are easy to get wrong. It needs MATLAB with the Antenna or RF PCB tools.
+when:
+  - You need a custom antenna or filter shape that no catalog part gives you.
+  - You want to cut a pattern into a ground plane.
+  - An existing component needs a pad added or a vertex edited.
+  - Your design has several metal layers with different shapes.
+you_give:
+  - A description or sketch of the shape
+  - Substrate and conductor details
+  - Feed type and position
+  - Dimensions and layer order
+you_get:
+  - MATLAB code for the pcbComponent
+  - Shapes joined with Boolean steps
+  - Feed and via placement
+  - A note on the next steps, such as EM analysis
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

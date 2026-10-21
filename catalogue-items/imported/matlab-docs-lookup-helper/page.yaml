@@ -6,6 +6,24 @@ summary: Ask how a MATLAB function works. Get the right syntax from the official
 job: build-software
 headline: MATLAB docs lookup helper
 subhead: Ask how a MATLAB function works. Get the right syntax from the official docs, with fewer wrong guesses.
+explain: |
+  The right MATLAB syntax, taken from the official MathWorks pages, instead of a function call that is almost right. Ask how a function works and it finds the page that answers it.
+
+  It knows how the help site is laid out: product pages, category pages, guides, examples and function reference. Guide pages show which functions to call and in what order, and reference pages show the exact options and argument types. You normally need both, and it reads both. It looks up function names in the local list first, then reaches for the matching pages, with a four-step search when the name is unknown.
+when:
+  - You are not sure which options a MATLAB function accepts.
+  - Code that worked last release now gives a warning or error.
+  - You need the steps for a task in a toolbox you have never used.
+  - You want to know what changed in the latest release.
+you_give:
+  - The function name or task
+  - Your MATLAB release
+  - The toolbox in question (optional)
+you_get:
+  - Exact syntax from the official page
+  - The call order for the task
+  - Links to the pages used
+  - Notes on release changes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

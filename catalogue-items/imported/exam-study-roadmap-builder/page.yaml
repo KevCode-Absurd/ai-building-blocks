@@ -6,6 +6,26 @@ summary: Give it your syllabus, past papers or notes. Get a ranked roadmap of wh
 job: think-and-decide
 headline: Exam study roadmap builder
 subhead: Give it your syllabus, past papers or notes. Get a ranked roadmap of what to study first for the best score.
+explain: |
+  A ranked plan of what to study first for the most marks, built from your own syllabus, past papers or notes.
+
+  It sorts topics from easy to hard: definitions first, then explanations and calculations, then proofs and design questions last. Each likely question gets a probability score from how often it appears, how recently, how heavy its unit is and how many marks it carries. Your time sets the mode, from a 1 to 2 hour emergency list to a multi-day schedule with mock papers. A guardrail keeps it inside your syllabus and flags anything outside it. Scores are estimates and cannot promise what appears on the exam.
+when:
+  - Your exam is close and you do not know where to start.
+  - You have several years of past papers and want to see what repeats.
+  - You need a plan for a set number of hours, from two to many days.
+  - You want flashcards or practice for one question type, such as MCQs or numericals.
+you_give:
+  - Syllabus, past papers or notes
+  - Subject and course code
+  - Hours you have before the exam
+  - Question types you want to focus on (optional)
+you_get:
+  - Ranked study roadmap
+  - Probability score per question
+  - Plan sized to your time
+  - Flashcards or practice questions
+  - Flags for out-of-syllabus items
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

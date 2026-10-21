@@ -6,6 +6,25 @@ summary: Give it your product numbers. Get trends against targets, what moved an
 job: build-product
 headline: Product metrics review writer
 subhead: Give it your product numbers. Get trends against targets, what moved and what to do about it.
+explain: |
+  A metrics review that says what moved, why it may have moved, and what to do about it. You get a scorecard against targets instead of a pile of numbers.
+
+  Claude takes your metrics for a week, month or quarter, or pulls them from a connected analytics tool. It compares them with the previous period and with your targets, then separates real trends from noise. It checks for known causes such as launches, outages or seasonality, and digs into sudden spikes and drops. Each finding ends with a suggested action and who might own it.
+when:
+  - You run a weekly or monthly product review and want it faster.
+  - A metric suddenly dropped and you need possible causes.
+  - You need to show progress against targets.
+  - You have raw numbers and need a clear summary for leaders.
+you_give:
+  - Metric values for the period
+  - Previous period figures and targets
+  - Recent launches, incidents or campaigns (optional)
+  - A focus metric or segment (optional)
+you_get:
+  - A scorecard against targets
+  - Trends and notable changes
+  - Likely causes for spikes and drops
+  - Recommended actions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

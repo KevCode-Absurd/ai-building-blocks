@@ -6,6 +6,25 @@ summary: Describe your launch. Get who to invite, what to ask them, and clear ru
 job: build-product
 headline: Beta program planner
 subhead: Describe your launch. Get who to invite, what to ask them, and clear rules for when the beta ends.
+explain: |
+  A beta that produces answers, not noise. Describe your launch, and the AI helps you choose between a closed or open beta, then pick participants who match the people you will have after launch, and size the group so you can handle the feedback.
+
+  It sets up onboarding, structured feedback questions, and a triage routine to run mid-beta. Most useful is the decision rule: the signals that tell you to ship to everyone, keep testing or stop. It names failure modes, like a soft launch with no structure or a kitchen-sink beta with everyone in. It ends with a plan for closing the beta and telling participants what happens next.
+when:
+  - You plan a beta but don't know who to invite.
+  - Past betas ended with no clear call on launching.
+  - Feedback arrives in scattered emails and chat messages.
+  - You need to tell testers the beta is over.
+you_give:
+  - Product and launch date
+  - Target users after launch
+  - Team capacity for feedback
+  - Past beta problems (optional)
+you_get:
+  - A beta type and cohort size
+  - Participant selection criteria
+  - A feedback and triage plan
+  - Ship, extend or stop rules
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

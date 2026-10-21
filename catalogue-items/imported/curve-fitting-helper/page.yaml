@@ -6,6 +6,25 @@ summary: Give it x and y data. Get the best curve or surface fit, with outliers 
 job: build-software
 headline: Curve fitting helper
 subhead: Give it x and y data. Get the best curve or surface fit, with outliers handled and code to repeat it.
+explain: |
+  Finding the right curve for your data is slow when you try every model by hand. Give it x and y values and it guides you through fitting a curve or surface in MATLAB's Curve Fitter app, then hands back code to repeat the work.
+
+  You start by choosing data, then try fit types like regression, interpolation, smoothing and splines. It helps you read the plots and the numbers, exclude outliers by sight, and compare several fits in one session. When you are happy, you can export a figure, generate MATLAB code, save fits to the workspace or send a fit to a Simulink lookup table. It needs MATLAB and the Curve Fitting Toolbox.
+when:
+  - You have measured data and do not know which model fits it.
+  - A few bad readings are pulling your fit off and need removing.
+  - You want to compare a polynomial, a spline and a custom equation side by side.
+  - You need a fitted curve as a Simulink lookup table.
+you_give:
+  - Your x and y data, or x, y and z for a surface
+  - MATLAB with the Curve Fitting Toolbox
+  - A model idea or equation (optional)
+  - A saved session file (optional)
+you_get:
+  - A fit with its numbers and plots
+  - Outliers excluded with a reason
+  - A comparison of fit types
+  - Generated MATLAB code and exports
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

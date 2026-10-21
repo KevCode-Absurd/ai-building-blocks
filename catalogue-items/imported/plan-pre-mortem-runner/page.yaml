@@ -6,6 +6,24 @@ summary: Give it a plan. Imagine it failed in a year and get the hidden assumpti
 job: think-and-decide
 headline: Plan pre-mortem runner
 subhead: Give it a plan. Imagine it failed in a year and get the hidden assumptions and risks found now.
+explain: |
+  Weak spots in a plan, found before reality finds them. Give it the plan, imagine it failed a year from now, and work back to why. The goal is a plan that survives, not one that gets killed.
+
+  The skill starts by listing the hidden assumptions behind each section: customer behaviour, competitor reaction, your own ability to deliver, outside factors and timing. It then tests each, looks for dependencies that nobody questioned and ranks the failure paths by likelihood and damage. It suits moments when you are about to commit money, face the board, or feel too excited to see risks.
+when:
+  - You are about to commit a big budget to a plan.
+  - You present to the board or investors next week.
+  - Everyone only says good things about your idea.
+  - Your plan relies on several outside parties lining up.
+you_give:
+  - The plan in writing
+  - Key dates and budget
+  - Known dependencies (optional)
+you_get:
+  - A list of hidden assumptions
+  - Ranked failure reasons
+  - Weak dependencies
+  - Steps to reduce the biggest risks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

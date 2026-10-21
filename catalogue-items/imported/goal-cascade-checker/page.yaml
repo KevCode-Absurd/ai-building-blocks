@@ -6,6 +6,25 @@ summary: Give it company goals and team plans. Find orphan goals, silos and gaps
 job: plan-strategy
 headline: Goal cascade checker
 subhead: Give it company goals and team plans. Find orphan goals, silos and gaps between strategy and work.
+explain: |
+  Find where company strategy gets lost before it reaches the people doing the work. Give it company goals and team plans and it flags orphan goals with no link upward, goals that conflict, silos, and strategy gaps no team owns.
+
+  It starts with a simple test: ask five people from five teams for the top priority. If they disagree, the cascade cannot work yet, and that gets fixed first. Then it maps each level from company to team to person, and a script checks the alignment of your goals. The idea is that the further a goal sits from its source, the less it matches the original intent.
+when:
+  - Teams are busy but the company goals are not moving.
+  - Two departments are chasing goals that clash.
+  - You wrote company goals and want to see if teams picked them up.
+  - People cannot say how their work ties to strategy.
+you_give:
+  - Company goals
+  - Team goals or plans
+  - Answers from five people on the top priority (optional)
+  - Org chart (optional)
+you_get:
+  - Orphan goals found
+  - Conflicts and silos listed
+  - Coverage gaps against strategy
+  - Steps to fix the cascade
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

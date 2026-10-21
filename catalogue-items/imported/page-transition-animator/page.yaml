@@ -6,6 +6,24 @@ summary: Describe the motion you want. Get smooth React page and element transit
 job: build-websites
 headline: Page transition animator
 subhead: Describe the motion you want. Get smooth React page and element transitions that respect reduced-motion settings.
+explain: |
+  Smooth movement between screens in your React or Next.js app, such as a card that grows into a detail page, using the browser's built-in transition tool instead of a heavy library.
+
+  It works through five patterns in order: shared elements that carry across pages, loading reveals, lists that rearrange, items that appear and disappear, and full route changes. Each animation has to say something, like going deeper or new data arrived, or it is left out. Slides are saved for list to detail moves, and quiet background refreshes get none. Reduced-motion settings are honoured. You need a React project.
+when:
+  - Your app changes screens with an abrupt jump.
+  - You want a thumbnail to grow into its full page.
+  - You are adding animation but fear it will annoy users.
+  - You must respect users who set reduced motion.
+you_give:
+  - Your React or Next.js code
+  - Which screens or lists should animate
+  - The feel you want, such as subtle or lively (optional)
+you_get:
+  - Working transition code
+  - Matching animation styles for each navigation type
+  - Reduced-motion handling
+  - Notes on which moments were left still
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

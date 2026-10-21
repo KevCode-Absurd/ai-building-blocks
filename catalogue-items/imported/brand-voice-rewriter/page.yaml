@@ -6,6 +6,25 @@ summary: Give it a draft or a topic. Get emails, posts or pitches written in you
 job: brand-file
 headline: Brand voice rewriter
 subhead: Give it a draft or a topic. Get emails, posts or pitches written in your brand voice, with notes on each choice.
+explain: |
+  Emails, posts and pitches that sound like your company wrote them, plus a short note on why each choice was made so you can check it.
+
+  The skill first looks for your brand guidelines: the current chat, a saved guidelines file, or whatever you paste in. It then applies your fixed voice traits and adjusts tone for the format, so a Slack message reads looser than a proposal. After drafting, it checks the result against your rules and explains the key wording choices. If it cannot find any guidelines, it stops and asks for them rather than guessing. It also fixes drafts that feel off brand.
+when:
+  - You need a LinkedIn post, email or pitch that matches your brand voice.
+  - A draft from a teammate sounds off and you want it rewritten in your tone.
+  - You want a proposal or sales message written to your guidelines.
+  - You want to know why a line was changed, not just see the result.
+you_give:
+  - Your brand voice guidelines
+  - A draft to fix, or a topic and goal
+  - The audience and format
+  - Facts or offers to include (optional)
+you_get:
+  - Content written in your brand voice
+  - Tone adjusted to the format
+  - Notes on each brand choice
+  - A check against your guidelines
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

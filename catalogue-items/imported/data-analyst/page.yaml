@@ -6,6 +6,25 @@ summary: Give it a dataset and a question. Get evidence-based answers with trend
 job: track-numbers
 headline: Data analyst
 subhead: Give it a dataset and a question. Get evidence-based answers with trends, tests and correlations.
+explain: |
+  Hand over a dataset and a clear question and get an answer backed by numbers, with the limits stated. It uses Python statistics, so results are checkable rather than guesses.
+
+  The skill loads the data and checks its shape and types. It then computes averages, spread and skew, and looks at trends over time with rolling averages and seasonal splits. It tests relationships with correlation, and uses t-tests, chi-square or ANOVA when a difference needs proof, at a significance level of 0.05 unless you change it. It flags outliers using the IQR rule and z-scores, then writes up findings ranked by impact, with caveats such as small samples. It needs Python with common data libraries.
+when:
+  - You want to know if last month's sales dip is real or just noise.
+  - You need to test whether two customer groups behave differently.
+  - You have survey data and want the strongest relationships in it.
+  - You need a short findings note with numbers for a decision.
+you_give:
+  - A dataset file
+  - The question to answer
+  - Columns to focus on (optional)
+  - Significance level (optional)
+you_get:
+  - Summary statistics
+  - Trend and correlation results
+  - Hypothesis test outcomes
+  - Ranked findings with caveats
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

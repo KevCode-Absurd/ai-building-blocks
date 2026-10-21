@@ -6,6 +6,25 @@ summary: Say what your brand believes and fights for. Get a bold manifesto that 
 job: write-and-tell-stories
 headline: Brand manifesto writer
 subhead: Say what your brand believes and fights for. Get a bold manifesto that rallies your team and customers.
+explain: |
+  A manifesto that says what your brand believes, what it fights against and what it wants the world to look like. It gives your team and customers something to rally around.
+
+  The skill asks about your core belief, the thing you refuse to accept, who shares your worldview, the change you want, the tone and where it will be used. The tone can be a war cry, a love letter, a quiet conviction or a provocation. You get a full version of 300 to 500 words, with an opening declaration that states the one thing you believe, plus shorter cuts for other uses.
+when:
+  - Your team needs a shared statement of what you stand for.
+  - Your marketing sounds like everyone else's.
+  - You are launching a brand with a strong point of view.
+  - You want a short version for a website or poster.
+you_give:
+  - What your brand believes
+  - What it is fighting against
+  - Who it is for
+  - Tone and where it will be used
+you_get:
+  - A full manifesto of 300 to 500 words
+  - Shorter versions for other uses
+  - An opening declaration
+  - Tone matched to your choice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

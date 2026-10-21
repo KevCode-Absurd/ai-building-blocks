@@ -6,6 +6,24 @@ summary: Give it a dataset. Get a report on gaps, duplicates, odd values and the
 job: work-with-files
 headline: Data quality auditor
 subhead: Give it a dataset. Get a report on gaps, duplicates, odd values and the rules that would catch them.
+explain: |
+  A health check on any dataset that tells you what is broken, how bad it is, and what to fix first. You end with a single quality score and a ranked repair plan.
+
+  A full audit profiles the data, then analyses missing values to see whether gaps are random or follow a pattern. It flags outliers with IQR and z-score tests, checks duplicates and cross column logic like end dates before start dates, and scores overall quality. If one column went wrong recently, a targeted scan asks what changed upstream and compares against a good baseline. For live data it proposes five to eight key columns with limits and alerts. It runs Python scripts.
+when:
+  - A dashboard number looks wrong and you do not know why.
+  - You are about to use a new dataset and want to trust it first.
+  - You need ongoing checks on a live feed.
+  - Your team needs a ranked list of data fixes.
+you_give:
+  - The dataset
+  - What looks wrong, if anything (optional)
+  - Key columns to protect (optional)
+you_get:
+  - Data quality score
+  - Missing value and outlier findings
+  - Ranked repair plan
+  - Monitoring checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

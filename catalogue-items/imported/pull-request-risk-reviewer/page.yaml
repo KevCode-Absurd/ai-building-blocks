@@ -6,6 +6,26 @@ summary: Give it a pull request. Get issues ranked by severity, security notes a
 job: test-and-fix-code
 headline: Pull request risk reviewer
 subhead: Give it a pull request. Get issues ranked by severity, security notes and clear review comments.
+explain: |
+  A review of a pull request that tells you what could break, what is unsafe and what to fix first. Findings come ranked, with comments you can paste straight into the review.
+
+  The skill pulls the diff and details using the GitHub or GitLab command line. It traces the blast radius: which files, services and users the change could affect. It scans for security problems such as injection, broken auth and exposed secrets, spots breaking changes in APIs and database schemas, and compares new code with new tests. It also checks for slow queries and links the ticket to the scope. A checklist of 30 or more items backs the report.
+when:
+  - A big pull request touches shared code or the database.
+  - A new contributor sent a change and you want thorough feedback.
+  - The change affects login, payments or personal data.
+  - You want a second reader before merging.
+you_give:
+  - Pull request number or diff
+  - Access through the GitHub or GitLab CLI
+  - Ticket link (optional)
+  - Areas you worry about (optional)
+you_get:
+  - Findings ranked by severity
+  - Security notes
+  - Breaking change warnings
+  - Test coverage gap
+  - Ready-to-post review comments
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a deal document or filing. Get its financials pulled into a cle
 job: money-and-investing
 headline: Financial data pack builder
 subhead: Give it a deal document or filing. Get its financials pulled into a clean, standard Excel data pack.
+explain: |
+  A clean Excel data pack with income statement, balance sheet and cash flow pulled from a deal document or filing, with every number traced to its page. It follows the layout used in private equity and banking.
+
+  The skill reads the source and puts each figure into a standard template. Rules cover formats, such as currency with negatives in brackets, and totals as live formulas rather than typed values. It checks that assets equal liabilities plus equity, that subtotals add up, and that cash flow ties to the balance sheet. It uses Indian conventions: April to March fiscal years, and crore figures divided in a formula. It builds the workbook through the spreadsheet skill.
+when:
+  - You have a 100-page offering document and need the numbers in Excel.
+  - Your team needs a data pack before a deal meeting.
+  - You want a source page next to every figure.
+  - You must compare several years in one standard layout.
+you_give:
+  - The deal document, annual report or filing
+  - The periods to include
+  - Company name and currency
+  - A template to follow (optional)
+you_get:
+  - An Excel data pack
+  - Formula-based totals
+  - Source page references
+  - A check sheet showing the statements balance
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

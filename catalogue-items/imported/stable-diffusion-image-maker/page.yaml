@@ -6,6 +6,25 @@ summary: Describe a picture. Get generated images, edits to your own photos or c
 job: make-images
 headline: Stable Diffusion image maker
 subhead: Describe a picture. Get generated images, edits to your own photos or code for a custom image pipeline.
+explain: |
+  Images made from a text description, edits to your own photos, or code for your own image pipeline. The skill uses the Hugging Face Diffusers library with Stable Diffusion models, including SDXL and Flux.
+
+  It covers text-to-image, image-to-image for changing style or quality, inpainting to refill a masked area, and outpainting to extend a picture. It adds ControlNet for guiding by edges, pose or depth, and LoRA for style tuning. It writes the Python and install steps. You need a computer with a capable graphics card and some Python knowledge. If you want no GPU, it points to hosted options.
+when:
+  - You want pictures from a text prompt on your own machine.
+  - You need to change part of a photo and keep the rest.
+  - You want to guide a picture using a pose or an outline.
+  - You are building a custom image generation pipeline.
+you_give:
+  - A text description or a source image
+  - A mask for the area to change (optional)
+  - A computer with a GPU and Python
+  - A style or model preference (optional)
+you_get:
+  - Python code that generates images
+  - Install steps
+  - Image-to-image and inpainting setups
+  - ControlNet and style tuning options
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a research question. Get a long report with cited sources from 
 job: research-topics
 headline: Gemini research report writer
 subhead: Give it a research question. Get a long report with cited sources from Google Gemini. Needs a paid Gemini API key.
+explain: |
+  A long research report with cited sources, written while you do something else. You give a question and Google Gemini's research mode plans the search, reads the pages and writes the report. The skill starts the job, checks on it, and collects the finished text.
+
+  Before anything runs, it shows you the exact question, the cost range and where the file will be saved. It only starts after you agree, because the question goes to Google. It suits market scans, literature reviews and competitor checks where a quick web search falls short. It needs Python and a paid Gemini API key.
+when:
+  - You need a market or competitor scan with sources you can check.
+  - A quick web search will not cover a topic you must understand.
+  - You want a literature review draft to react to.
+  - You want research running in the background while you work.
+you_give:
+  - Your research question
+  - A Gemini API key
+  - Python installed
+  - A place to save the report (optional)
+you_get:
+  - A long report with cited sources
+  - A cost and query summary before it starts
+  - Progress updates while it runs
+  - The finished report saved as a file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

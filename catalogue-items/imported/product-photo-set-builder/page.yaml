@@ -6,6 +6,25 @@ summary: Give it one product photo. Get a full set of new angles and scenes. You
 job: product-photos
 headline: Product photo set builder
 subhead: Give it one product photo. Get a full set of new angles and scenes. Your image model draws them.
+explain: |
+  A full set of product images from a single photo, with new angles, scenes and framing that still look like the same item. Marketplace listings often need five or more images, and detail pages need many more.
+
+  Claude writes one prompt per image in the set. Each repeats the same product description so the item stays identical, then changes only the camera position and setting, such as a close-up, an in-use shot or a flat lay. This keeps the set consistent. Claude cannot draw. You need an image model such as ChatGPT or Gemini, or an API key.
+when:
+  - You only have one photo and need five for a listing.
+  - Your detail page looks sparse.
+  - You want lifestyle and close-up shots of the same product.
+  - You need a matching set without a new photo shoot.
+you_give:
+  - One product photo
+  - Key selling points
+  - Shots and scenes you want
+  - Access to an image model
+you_get:
+  - A set of prompts, one per shot
+  - Consistent product wording across prompts
+  - Angle and scene variations
+  - Tips to spot drift in the product
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

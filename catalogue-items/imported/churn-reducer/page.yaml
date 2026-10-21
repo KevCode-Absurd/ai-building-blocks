@@ -6,6 +6,26 @@ summary: Describe your product and why people leave. Get a cancel flow, save off
 job: build-product
 headline: Churn reducer
 subhead: Describe your product and why people leave. Get a cancel flow, save offers and a failed-payment recovery plan.
+explain: |
+  A plan to keep more subscribers: a cancel flow that asks why, save offers that match each reason, and a way to win back failed payments. You describe your product, billing setup and why people leave, and you get the full set.
+
+  It treats two kinds of loss separately. Voluntary churn is people choosing to cancel, so it designs exit questions, pause and downgrade options and offers that fit the reason given. Involuntary churn is cards that fail, so it plans retry timing, reminder emails and updates to saved cards. It also looks for usage drops that warn of a cancel before it happens, and checks local rules that require easy cancelling.
+when:
+  - Your monthly cancel rate is climbing and you do not know why.
+  - Cancelling takes one click and you offer nothing in return.
+  - A share of your lost customers are just expired cards.
+  - You want to spot unhappy users before they leave.
+you_give:
+  - Your monthly churn rate if known
+  - Your billing tool and plan types
+  - Average revenue per customer
+  - Known cancel reasons (optional)
+  - Whether you track feature use (optional)
+you_get:
+  - A cancel flow with exit questions
+  - Save offers by reason
+  - A failed payment recovery plan
+  - Early warning signals to watch
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

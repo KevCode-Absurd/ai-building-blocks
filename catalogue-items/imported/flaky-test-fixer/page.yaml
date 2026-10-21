@@ -6,6 +6,24 @@ summary: Give it a failing or flaky Playwright test. Get the cause found and the
 job: test-and-fix-code
 headline: Flaky test fixer
 subhead: Give it a failing or flaky Playwright test. Get the cause found and the fix made.
+explain: |
+  A failing or flaky Playwright test gets its cause found and fixed, instead of being retried until it passes. You end with a test you can trust in CI.
+
+  It reruns the test to see the error. If it passes, it runs it many times, then in parallel, to force the flake out. It records a trace and sorts the failure into one of four groups: timing, test isolation, environment, or infrastructure. Each group has its own check, such as running the test alone to see whether other tests interfere. Then it applies the matching fix and runs the burn-in again to prove the test is stable.
+when:
+  - A test passes on your machine but fails in CI.
+  - A test fails now and then with no code change.
+  - A test only fails when the whole suite runs.
+  - You are tempted to add retries and want the real fix instead.
+you_give:
+  - Test file path, test name or a description of the failure
+  - Access to your Playwright project
+  - CI logs or traces (optional)
+you_get:
+  - Reproduction of the failure
+  - Cause sorted into one of four types
+  - Fix applied to the test
+  - Repeat-run results showing it is stable
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

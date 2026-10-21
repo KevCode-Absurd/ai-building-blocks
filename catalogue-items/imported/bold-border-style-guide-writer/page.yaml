@@ -6,6 +6,25 @@ summary: Describe your product. Get a style guide with thick borders and vivid c
 job: design-work
 headline: Bold-border style guide writer
 subhead: Describe your product. Get a style guide with thick borders and vivid colour, plus rules for each part.
+explain: |
+  A written style guide for a bold, raw look: thick borders, vivid colours and warm backgrounds. It covers the base rules and then how each part of your interface should look and behave.
+
+  The skill states your design aim in one sentence, then sets the base: colour tokens, a type scale, spacing steps and accessibility needs. After that, it describes each component with its parts, variants, states and responsive behaviour. It ends with do and don't rules, and it explains trade-offs where there is more than one choice. Contrast and visible focus come before style, so the result stays usable.
+when:
+  - You want a neobrutalist look for a new product.
+  - Designers and developers need one shared reference.
+  - Your current UI feels inconsistent and needs rules.
+  - You need component guidance with all states spelled out.
+you_give:
+  - A description of your product
+  - Brand colours (optional)
+  - Fonts you already use (optional)
+  - The components you need covered
+you_get:
+  - A style guide with colour, type and spacing
+  - Rules for each component and its states
+  - Do and don't lists
+  - Accessibility requirements
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

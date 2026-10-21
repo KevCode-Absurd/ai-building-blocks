@@ -6,6 +6,25 @@ summary: Describe the site. Get a scroll-driven page with layered depth, motion 
 job: build-websites
 headline: Scroll animation site builder
 subhead: Describe the site. Get a scroll-driven page with layered depth, motion and smooth reveals, built in code.
+explain: |
+  A scroll-driven web page where layers move at different speeds, sections overlap, text slides in and products rise between sections, built with plain CSS and JavaScript. No 3D software is needed, only flat images.
+
+  Before it writes code, it looks at your assets, judges which can be separated into layers, and plans the page. It draws on a list of over 45 techniques in 8 groups, such as parallax, sticky sections, clip-path reveals, curtain drops and words that light up as you scroll. It has three modes: build from scratch, add effects to an existing site, or fix slow animation. It checks performance and respects people who set reduced motion.
+when:
+  - You want a product launch page that feels like a premium brand site.
+  - Your landing page is flat and you want sections that overlap as you scroll.
+  - You have product images and need them to float between sections.
+  - Your scroll animation stutters and you need it fixed.
+you_give:
+  - A brief for the site
+  - Product or hero images
+  - Brand colours and copy
+  - An existing page to improve (optional)
+you_get:
+  - A scroll-animated page in HTML, CSS and JavaScript
+  - A plan for layers and assets
+  - Effects matched to each section
+  - A performance and reduced-motion check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

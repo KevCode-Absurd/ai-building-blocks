@@ -6,6 +6,25 @@ summary: Get files in your store that no product, page or post uses, so you can 
 job: run-your-store
 headline: Unused store file finder
 subhead: Get files in your store that no product, page or post uses, so you can clear out clutter.
+explain: |
+  A list of every image, video and file in your Shopify store that no product, page or blog post actually uses. Orphaned files eat storage, clutter your media library and bury the brand assets you want to find.
+
+  The skill reads your whole file library, then reads the media on every product, the HTML of every page and the body of every article. It matches each file by ID and web address, and flags the ones nothing points to. A minimum age setting (30 days by default) skips files you just uploaded. It only reads. Nothing is deleted, so you decide what goes. It needs a Shopify command line login with read access to files, products and content.
+when:
+  - Your media library has thousands of files and you cannot tell which ones matter.
+  - You are close to a storage limit and want to know what is safe to remove.
+  - You are tidying the store before a redesign or a move to a new theme.
+  - You want a clean list to hand to someone who will do the manual cleanup.
+you_give:
+  - Your store domain
+  - A minimum file age in days (optional)
+  - A file type filter such as images only (optional)
+  - A Shopify login with read access
+you_get:
+  - A list of unused files with links and sizes
+  - Total space the unused files take up
+  - A sample of the oldest orphans
+  - A JSON version for a spreadsheet (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

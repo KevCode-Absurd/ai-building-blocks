@@ -6,6 +6,26 @@ summary: Give it your team and rules. Get a ranked list of people risks, owners 
 job: hire-people
 headline: People risk register builder
 subhead: Give it your team and rules. Get a ranked list of people risks, owners and response steps. Not legal advice.
+explain: |
+  A ranked list of the people risks in your organisation, each with an owner and a response step, so nothing important sits unseen. It is a planning aid and not legal advice.
+
+  The skill sorts risks into groups such as compliance, employee conduct, key person dependence, workforce continuity, data privacy and workplace safety. Each gets a likelihood and impact score, an owner and a plan. It can map who your business cannot do without, build an audit checklist to find process gaps, and write escalation steps for serious incidents. It adapts the list to your size, industry and any change underway, such as rapid growth or restructuring.
+when:
+  - You are starting a risk register and need the people categories filled in.
+  - The company is growing fast or restructuring and you want the risks checked.
+  - You want to find which roles would hurt most if someone left.
+  - You need a clear path for escalating a conduct complaint.
+you_give:
+  - Company size, industry and countries
+  - Current change, such as growth or merger (optional)
+  - Known problems or past incidents (optional)
+  - Names of risk owners (optional)
+you_get:
+  - A ranked people risk register
+  - Likelihood and impact scores
+  - Owners and response steps
+  - Key person dependency map
+  - Escalation steps for incidents
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

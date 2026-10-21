@@ -6,6 +6,24 @@ summary: Point it at a repo. Get a report on where outside text could reach an A
 job: secure-code
 headline: AI workflow security checker
 subhead: Point it at a repo. Get a report on where outside text could reach an AI agent in your GitHub workflows.
+explain: |
+  A report on where outside text, such as an issue or pull request from a stranger, can reach an AI agent that runs inside your GitHub workflows. If it can, that agent might be steered to leak secrets or run bad commands.
+
+  The review reads your workflow files and checks the triggers, such as pull_request_target and issue_comment. It then follows the data from the GitHub event through env blocks into the agent's prompt, even when the prompt shows no obvious variable. It also checks the sandbox settings, allowed tools and who may start the run. It rejects common excuses, like only maintainers use it. It reads and reports, and does not change your files.
+when:
+  - Your repo runs an AI coding agent in GitHub Actions.
+  - Strangers can open issues or pull requests on your project.
+  - You use a sandbox setting you are not sure is safe.
+  - A security review asks how untrusted text reaches your agent.
+you_give:
+  - The repo, or its workflow files
+  - Which AI agent actions you use
+  - Who can open issues and pull requests (optional)
+you_get:
+  - A list of risky trigger and data paths
+  - Findings on sandbox and tool settings
+  - Severity for each finding
+  - What to change, without edits made for you
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

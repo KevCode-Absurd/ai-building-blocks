@@ -6,6 +6,25 @@ summary: Describe the change. Get code grounded in your real files, with each st
 job: build-software
 headline: Verified code writer
 subhead: Describe the change. Get code grounded in your real files, with each step checked before it counts.
+explain: |
+  Code that matches what is actually in your project: no made-up functions, no guessed imports, no placeholders. Each step is checked before it counts as done.
+
+  The skill runs five steps. Discuss: agree what the change is and what it is not. Map: read the real files and build a picture of how they connect. Decompose: split the work into small pieces with checks. Execute: build one piece at a time. Verify: run the checks and confirm results. A "lazy senior developer" ladder asks if the code can be removed, reused or simplified before anything new is written. Use it for risky work like migrations and auth changes. For a typo or a throwaway script, skip it.
+when:
+  - You are changing database or login code and a wrong guess would hurt.
+  - The task touches many files and you want it grounded in what exists.
+  - Earlier AI code used functions that do not exist.
+  - You want small, checked steps rather than one large rewrite.
+you_give:
+  - A clear description of the change
+  - Access to the existing code
+  - The tests or checks you already have (optional)
+  - Limits on what must not change (optional)
+you_get:
+  - An agreed scope for the change
+  - A map of the files involved
+  - Small steps, each with a check
+  - Verified code with results shown
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

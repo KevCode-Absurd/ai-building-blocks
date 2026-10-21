@@ -6,6 +6,24 @@ summary: Point it at your project. Get a CI/CD pipeline file for your stack with
 job: ship-and-host
 headline: Build pipeline writer
 subhead: Point it at your project. Get a CI/CD pipeline file for your stack with test and deploy stages.
+explain: |
+  A CI/CD pipeline file written for the stack your project really uses, with test, build and deploy stages, ready to commit.
+
+  The skill runs a Python script that reads your repository and detects the language, runtime and tools, and can save that as JSON. A second script turns the detection into a GitHub Actions or GitLab CI file, adding caching and test matrices that suit the stack. Before you merge, it tells you to check that your test, lint and build commands exist and to run the pipeline locally. It is a quick baseline you can later harden. You need Python and a project folder.
+when:
+  - A new repository has no CI yet.
+  - Your copied pipeline file no longer matches your project.
+  - You are moving from GitHub Actions to GitLab CI or back.
+  - You want to check that your pipeline steps match your real stack.
+you_give:
+  - Your project folder
+  - GitHub or GitLab as the target
+  - Deploy environments (optional)
+you_get:
+  - A detected stack summary
+  - A CI/CD pipeline file
+  - Caching and matrix settings
+  - A pre-merge checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

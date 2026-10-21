@@ -6,6 +6,26 @@ summary: Paste your pipeline numbers. Get a clear update or chart page for the h
 job: hire-people
 headline: Hiring progress reporter
 subhead: Paste your pipeline numbers. Get a clear update or chart page for the hiring manager or your leaders.
+explain: |
+  A clear hiring update that a busy manager will actually read. Paste in your pipeline numbers and say who the report is for. The skill turns them into a short story: what happened, what is stuck and what to do next.
+
+  It offers four report types. A weekly pipeline update covers candidates found, replies, stage counts and blockers. A market report covers pay, talent supply and competitors. A talent map shows target companies, pool sizes and where to focus. A look back after the role is filled shows timeline, which channels worked and what to change. Each comes as a markdown report, and some can include a simple chart page.
+when:
+  - Your hiring manager keeps asking where the search stands.
+  - You need a weekly update that takes minutes, not hours.
+  - You want to show leaders why a role is hard to fill.
+  - You are closing a search and want to record what you learned.
+you_give:
+  - Pipeline counts by stage
+  - Outreach and reply numbers
+  - Blockers and notes on top candidates
+  - Who the report is for
+  - Market data (optional)
+you_get:
+  - A readable pipeline update
+  - A market or talent map report
+  - A simple chart page if you ask
+  - Specific recommendations
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

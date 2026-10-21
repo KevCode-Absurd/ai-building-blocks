@@ -6,6 +6,25 @@ summary: Describe your shipped app. Get fixes for fit, flow, clarity and honest 
 job: build-product
 headline: App polish guide
 subhead: Describe your shipped app. Get fixes for fit, flow, clarity and honest persuasion, step by step.
+explain: |
+  A shipped app that works but feels rough, turned into one that fits its job, flows without friction, reads clearly and persuades honestly. You get a step-by-step plan, not a one-off list.
+
+  The skill runs nine phases in a set order: re-anchor on the job the app is hired for, remove friction, polish the look and small moments, sharpen the words, persuade honestly, then finish with a harsh review that cuts what is not needed. It asks you questions at each decision and saves the answers in docs files for customer, design, positioning and plan, so you can stop and resume later. It covers the product experience only. Code, tests and hardening belong to other skills.
+when:
+  - Your app works but users say it feels clunky.
+  - Onboarding or key screens confuse new users.
+  - Your in-app wording is vague or bossy.
+  - You can't tell what to fix first.
+you_give:
+  - A description or screens of your app
+  - Who uses it and for what
+  - Where users get stuck
+  - Your docs folder (optional)
+you_get:
+  - A phased improvement plan
+  - Friction fixes in priority order
+  - Sharper in-app wording
+  - Saved docs you can resume from
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your story and sources. Get a PowerPoint deck with real editabl
 job: work-with-files
 headline: Editable slide deck builder
 subhead: Give it your story and sources. Get a PowerPoint deck with real editable text, tables and charts, plus a quality check.
+explain: |
+  A PowerPoint file where every title, label, table and chart can be edited, not pasted in as a picture. You give your story and sources, and you get a deck plus a quality check.
+
+  The skill plans the story first, then picks a design direction, then writes an exact layout for each slide. It builds the file from real PowerPoint objects. Images may support a slide but never replace text, data or diagrams. You can show it a reference deck to learn the structure, without copying its files. A final review checks layout, file structure and accessibility. For changing an existing file, another skill is better.
+when:
+  - You need a new deck that colleagues can edit later.
+  - You have data and a story and want slides with real charts.
+  - You want an existing deck reviewed for layout and access problems.
+  - You want a deck planned before any slides are made.
+you_give:
+  - Your main message and audience
+  - Source facts, data and figures
+  - A reference deck (optional)
+  - Brand colours and fonts (optional)
+you_get:
+  - A PowerPoint file with editable content
+  - A slide-by-slide layout plan
+  - A story outline
+  - A quality and accessibility check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

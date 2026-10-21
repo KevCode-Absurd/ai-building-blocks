@@ -6,6 +6,25 @@ summary: Describe what you want to know. Get a working SQL query, using joins, g
 job: track-numbers
 headline: SQL query writer
 subhead: Describe what you want to know. Get a working SQL query, using joins, groups, windows and CTEs as needed.
+explain: |
+  A working SQL query built from a question like which customers spent the most last quarter. The skill first works out what you want measured, which things are involved and how to group or sort the result. It then maps your words to the tables and columns in your schema and finds the right join path, avoiding extra joins that inflate the numbers.
+
+  It chooses the right tool: simple totals, window functions for rankings and running sums, CTEs for multi-step work, or subqueries. The SQL is formatted and commented. If a query is slow, it reads the plan and suggests indexes and restructuring.
+when:
+  - You have a business question and a database but no SQL skills.
+  - You need a ranking or running total and are unsure how to write it.
+  - A multi-step calculation needs to stay readable.
+  - A query you wrote returns too many rows.
+you_give:
+  - Your question in plain words
+  - The table and column layout
+  - Your database type (optional)
+  - Filters or time periods
+you_get:
+  - A formatted SQL query
+  - Notes on joins and logic
+  - A plain explanation of how it works
+  - Index or speed suggestions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

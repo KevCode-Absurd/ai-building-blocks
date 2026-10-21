@@ -6,6 +6,26 @@ summary: Give it pass band and rejection needs. Get a PCB filter designed and it
 job: build-software
 headline: PCB RF filter designer
 subhead: Give it pass band and rejection needs. Get a PCB filter designed and its response plotted.
+explain: |
+  Say what band you need to pass and what you need to block, and get a printed-circuit filter designed with its response plotted. You do not have to know which filter type fits.
+
+  The skill compares the options by number of poles, size and sharpness: coupled-line, hairpin, open-loop, combline, interdigital and substrate-integrated types for bandpass, stepped-impedance for lowpass, and stub-based types for notch. It builds the chosen filter on your substrate, checks mesh and memory cost before a full solve, then plots the result. It can also pull a coupling matrix from measured data. Next steps are tuning and export. It runs in MATLAB with the RF PCB Toolbox.
+when:
+  - You need a bandpass filter at a set centre frequency and bandwidth.
+  - You are unsure whether a hairpin or combline filter suits your size limit.
+  - You need a notch to remove one unwanted signal.
+  - You have measured filter data and want its coupling matrix.
+you_give:
+  - Centre frequency and bandwidth
+  - Stopband rejection needed
+  - The substrate and metal
+  - Size limits (optional)
+  - Measured S-parameter data (optional)
+you_get:
+  - A recommended filter type with the reason
+  - A designed filter object
+  - A plotted frequency response
+  - A mesh and memory estimate
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

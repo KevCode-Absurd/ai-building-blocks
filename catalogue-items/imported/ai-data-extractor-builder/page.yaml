@@ -6,6 +6,25 @@ summary: Say what data to pull from AI answers. Get code that returns checked, t
 job: build-software
 headline: AI data extractor builder
 subhead: Say what data to pull from AI answers. Get code that returns checked, typed results instead of free text.
+explain: |
+  Code that pulls specific facts out of an AI's reply and hands back checked, typed data, not loose text. Your next step, like a database write or a screen, can then rely on the shape.
+
+  You list the fields you need, with type, required or optional, and allowed values. The skill shows how to enforce that shape with each provider. OpenAI takes a JSON schema in its response format. Anthropic uses a tool call as a structured-output slot. Google uses a response schema. Python gets Pydantic models, and JavaScript gets Zod. It then adds retry logic: when the reply fails validation, it sends the error back and asks again. You need some code skill and an API key.
+when:
+  - Your AI replies come back as messy text and your code breaks parsing them.
+  - You want invoices, emails or reviews turned into clean fields.
+  - The AI sometimes gives wrong types or leaves out fields.
+  - You are feeding AI output straight into a database or app.
+you_give:
+  - The fields you need extracted
+  - Sample text to pull them from
+  - Your AI provider and language
+  - An API key
+you_get:
+  - A schema for your fields
+  - Working extraction code
+  - Validation that catches bad output
+  - Retry logic when a reply fails the check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it a role and who you want to reach. Get job ad copy, a content ca
 job: hire-people
 headline: Job ad campaign planner
 subhead: Give it a role and who you want to reach. Get job ad copy, a content calendar and a test plan.
+explain: |
+  A recruiting campaign that earns applications instead of just posting a job. Tell it the role, how many people you need, the time you have and who you want to reach. It builds a plan with channels, a budget split, a content calendar for your careers pages and social feeds, and messages for each candidate type, including active seekers and people who are not looking.
+
+  It writes job ad copy for conversion: clear, free of jargon and not stuffed with impossible requirements. It also drafts several headlines to test against each other and sets measures from impressions to applications to hires, so you can show what worked.
+when:
+  - You must fill many roles within a few months.
+  - Your job posts get views but few applications.
+  - You want to reach passive candidates who are not job hunting.
+  - You need to report recruiting results to leadership.
+you_give:
+  - The role and number of hires
+  - Your timeline and budget
+  - The kind of candidate you want
+  - Your current channels and results (optional)
+you_get:
+  - A campaign plan with channels and budget
+  - Job ad copy and headline variations
+  - A content calendar
+  - An A/B test plan
+  - Funnel measures from view to hire
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your brand. Get a clear message with the customer as the hero,
 job: write-and-tell-stories
 headline: Customer-as-hero message planner
 subhead: Describe your brand. Get a clear message with the customer as the hero, plus a website and elevator pitch. Uses StoryBrand.
+explain: |
+  Customers pick what they understand fastest. Describe your brand and this builds a clear message where your customer is the hero and you are the guide. You end up with website copy, an elevator pitch and a one-liner.
+
+  It uses the seven parts of the StoryBrand method: a character with one clear want, a problem, a guide, a plan, a call to action, and the stakes of success and failure. It names the problem at three levels: outer, inner and why it is wrong. It scores existing copy out of 10 against a quick check and tells you which changes would raise the score. The one-liner must pass a test: clear and repeatable after one hearing.
+when:
+  - Visitors land on your homepage and do not know what you do.
+  - Your team describes the company five different ways.
+  - You are writing a landing page or email sequence and need a clear spine.
+  - You need a one-line answer to "what do you do?"
+you_give:
+  - What you sell and who buys it
+  - The problem your customer faces
+  - Current homepage or pitch copy (optional)
+  - Your proof, such as results or testimonials (optional)
+you_get:
+  - A brand script in seven parts
+  - A one-liner and elevator pitch
+  - Homepage and landing page copy
+  - A score of your current copy with fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

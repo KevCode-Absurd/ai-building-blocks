@@ -6,6 +6,25 @@ summary: Give it a topic. Get a blog post with outline, hook and call to action,
 job: write-and-tell-stories
 headline: Blog post writer
 subhead: Give it a topic. Get a blog post with outline, hook and call to action, as how-to, list or story.
+explain: |
+  Write a blog post in the right shape for its purpose: a how-to guide, a list, an opinion piece or a case study. You get an outline, a hook and a clear call to action, so the post has a point and a next step.
+
+  The skill researches the topic and picks one main keyword with a few related ones. It checks what already ranks and what the reader is trying to do. It then picks the format, builds the outline, writes the draft, adds search tweaks such as headings and meta text, and does a final polish. Each format has its own template, so a list reads like a list and a case study shows results.
+when:
+  - You need a how-to post for a topic people search for.
+  - You want a list-style post that compares options.
+  - You have a strong opinion and want it shaped into a post.
+  - You have a customer result to turn into a case study.
+you_give:
+  - A topic
+  - Your reader and brand voice
+  - A main keyword (optional)
+  - The action you want readers to take
+you_get:
+  - A chosen post format with reasons
+  - A section-by-section outline
+  - A full draft with hook and call to action
+  - Title and meta text suggestions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

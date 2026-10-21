@@ -6,6 +6,26 @@ summary: Describe your company. Get whether EU sustainability reporting applies,
 job: check-contracts
 headline: EU sustainability report checker
 subhead: Describe your company. Get whether EU sustainability reporting applies, what to disclose and the gaps to close.
+explain: |
+  A straight answer on whether EU sustainability reporting rules apply to you, which topics you must disclose and where your current data falls short.
+
+  The skill first tests scope and sets your first reporting year, using the 2026 changes to company size limits. It then guides a double materiality assessment, which weighs your impact on the world against the world's financial impact on you. From there it maps the environmental, social and governance standards, checks value chain data, and produces a gap table with priorities. It cites the rule behind each point and can compare the rules with GRI, TCFD and SASB.
+when:
+  - You need to know if you must report under the EU rules.
+  - You are starting a double materiality assessment and have no method.
+  - An auditor or customer asked for your sustainability data.
+  - You report under GRI and want to see what the EU rules add.
+you_give:
+  - Company size, sector and countries
+  - Existing sustainability data or reports
+  - Main suppliers and customers (optional)
+  - Standards you already follow (optional)
+you_get:
+  - Scope verdict and first reporting year
+  - Double materiality steps
+  - Gap table by topic
+  - Draft disclosures
+  - Comparison with GRI, TCFD and SASB
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

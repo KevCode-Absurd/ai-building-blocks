@@ -6,6 +6,26 @@ summary: Give it one strong piece. Get a blog series, emails, posts and clips, e
 job: grow-social
 headline: Content repurposer
 subhead: Give it one strong piece. Get a blog series, emails, posts and clips, each adapted to its format.
+explain: |
+  One strong article, talk or video turned into a blog series, an email sequence, social posts, a webinar outline and short video scripts, each written for how that format works. Posting the same text everywhere gets ignored. Rewriting by format gets read.
+
+  First it checks that your source piece is worth splitting. Then it adapts the ideas per medium, using each format's limits on length, structure and hook. It keeps your voice the same across all of them, sets a release order and spacing, and adds links from each piece back to the original. It also formats the pieces so AI search tools can pick them up, and warns you about copies that read like filler.
+when:
+  - You wrote a long guide and want it to reach people who never read blogs.
+  - You recorded a webinar or podcast and the recording is just sitting there.
+  - You need a month of emails and posts but only have one good idea.
+  - Your social posts are copy and paste from the blog and get no replies.
+you_give:
+  - The source piece (article, transcript or video notes)
+  - Which formats you want
+  - Your usual voice or a sample
+  - Your publishing schedule (optional)
+you_get:
+  - Blog series outline
+  - Email sequence
+  - Social posts per platform
+  - Short video scripts
+  - Release order and cross links
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

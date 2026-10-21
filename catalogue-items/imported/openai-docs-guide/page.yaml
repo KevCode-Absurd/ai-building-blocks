@@ -6,6 +6,25 @@ summary: Ask how to build with OpenAI. Get current answers with citations and th
 job: build-software
 headline: OpenAI docs guide
 subhead: Ask how to build with OpenAI. Get current answers with citations and the right model for the job.
+explain: |
+  Current, cited answers about building with OpenAI, pulled from the official developer docs at the moment you ask. Models and APIs change fast, so answers from memory go stale.
+
+  The skill searches the docs through the OpenAI developer docs server, then reads the full page before it answers. For API questions it checks the official API spec for fields and parameters. For model choices, it reads the latest model guide first and keeps any model you name. It covers products such as the Responses API, the Chat Completions API, the Apps SDK and Codex, and helps plan upgrades from one model to another, including prompt changes. It needs the docs server connected.
+when:
+  - You need to know which OpenAI model suits your task today.
+  - An API call fails and you want to check required fields.
+  - You plan to move to a newer model and need the migration steps.
+  - You want to build a ChatGPT app and need the right starting point.
+you_give:
+  - Your question about OpenAI products or the API
+  - The model you use now or want (optional)
+  - Your use case
+  - The docs server connected
+you_get:
+  - An answer based on current official docs
+  - Links to the pages used
+  - A model recommendation
+  - Migration and prompt upgrade steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

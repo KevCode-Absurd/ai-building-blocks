@@ -6,6 +6,25 @@ summary: Give it your research files. Get one report with a contents list and ev
 job: research-topics
 headline: Research results report builder
 subhead: Give it your research files. Get one report with a contents list and every checked answer. Unsure ones are left out.
+explain: |
+  One report that pulls together the results from many research files, with a contents list and only the answers that were checked. Uncertain values are left out instead of guessed.
+
+  It finds your outline file and reads every result file in the folder. It then asks which short fields, such as star counts, scores or release dates, to show next to each item in the contents list. A Python script is generated to join everything into a Markdown report that covers every field. Anything marked uncertain is skipped, so the report holds only what you can stand behind. It runs after an earlier research outline step.
+when:
+  - You gathered facts on dozens of items and need one document.
+  - You want a contents list with key numbers beside each item.
+  - You cannot afford guesses in a report.
+  - You finished a batch of research files and want a clean summary.
+you_give:
+  - Folder of research result files
+  - Outline file for the topic
+  - Choice of fields to show in contents
+  - Python to run the script
+you_get:
+  - Single Markdown report
+  - Contents list with chosen fields
+  - Every field covered per item
+  - Uncertain values left out
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

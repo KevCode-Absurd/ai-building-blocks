@@ -6,6 +6,26 @@ summary: Give it loan data. Get expected credit losses worked out under IFRS 9 o
 job: money-and-investing
 headline: Expected credit loss calculator
 subhead: Give it loan data. Get expected credit losses worked out under IFRS 9 or CECL.
+explain: |
+  Expected credit losses for your loans or receivables, worked out the way IFRS 9 or CECL requires, with the number you need for the loss allowance.
+
+  It groups assets that behave alike, then puts each in a stage: performing, higher risk since the start, or credit-impaired. It estimates three inputs: probability of default, loss if default happens, and the amount exposed. These are multiplied and discounted to today's value. Base, upside and downside economic scenarios are weighted by their likelihood. For trade receivables it offers a simpler approach. It ends with the journal entry that books the allowance.
+when:
+  - You are closing the books and need a loan loss provision.
+  - Your receivables are aging and you must estimate what you will not collect.
+  - You are moving from incurred loss to expected loss reporting.
+  - An auditor wants to see how you built your allowance.
+you_give:
+  - Loan or receivable list with balances
+  - Default history or ratings
+  - Asset type and accounting standard
+  - Economic scenarios and weights (optional)
+you_get:
+  - Expected loss per group
+  - Stage assignments
+  - Scenario-weighted total
+  - Journal entry for the allowance
+  - Notes on method for audit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

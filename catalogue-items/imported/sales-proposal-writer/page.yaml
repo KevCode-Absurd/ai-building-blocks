@@ -6,6 +6,25 @@ summary: Give it the prospect needs. Get a proposal or RFP reply with value, pri
 job: sell-and-negotiate
 headline: Sales proposal writer
 subhead: Give it the prospect needs. Get a proposal or RFP reply with value, price, timeline and proof.
+explain: |
+  A proposal or RFP reply that speaks to what the buyer asked for, with value, price, timeline and proof in one document. Give it the prospect's needs and get a draft to polish.
+
+  It pulls out the must-haves from the RFP or notes: required criteria, how answers are scored and submission rules. It researches the prospect's size, news and goals. The executive summary, 250 to 400 words, uses the buyer's own words and restates their problem before your answer. Each requirement maps to a capability. A pricing table shows line items, options and volume discounts. Two or three similar case studies follow, then formatting.
+when:
+  - A prospect sent an RFP with a tight deadline.
+  - You need a tailored proposal after a good discovery call.
+  - You want an executive summary that sounds like the buyer.
+  - Your pricing needs a clear table with options.
+you_give:
+  - The RFP or notes on the prospect's needs
+  - Your product or service details
+  - Pricing and timelines
+  - Case studies or results (optional)
+you_get:
+  - An executive summary
+  - Requirement-by-requirement answers
+  - A pricing table
+  - Case study sections
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

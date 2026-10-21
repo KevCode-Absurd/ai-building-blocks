@@ -6,6 +6,25 @@ summary: Give it your data and what to track. Get one HTML dashboard with charts
 job: track-numbers
 headline: Dashboard builder
 subhead: Give it your data and what to track. Get one HTML dashboard with charts, filters and tables you can open and share.
+explain: |
+  One HTML file you double click to open: KPI cards, charts, filters and tables, all working offline and ready to send to a colleague. No server and no install.
+
+  You describe what the dashboard is for, who reads it and which numbers matter. The skill sets the filters and breakdowns around that. It pulls your data from a warehouse, a CSV or pasted rows, cleans it and embeds it in the page. If you have no data yet, it builds sample data in the right shape, labels the page as sample, and shows how to swap in the real numbers. You can ask for changes in plain words and get the file again.
+when:
+  - Your boss wants a one page view of sales, signups or support volume.
+  - You have query results and need them shareable without a BI tool.
+  - You want a team snapshot with filters by region or product.
+  - You need a quick mock dashboard to show what you would track.
+you_give:
+  - What the dashboard should show
+  - Your data, CSV or query results (optional)
+  - Who will read it
+  - Filters you want
+you_get:
+  - Self contained HTML dashboard
+  - KPI cards and charts
+  - Working filters and tables
+  - Steps to swap in real data
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

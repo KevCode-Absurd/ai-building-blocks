@@ -6,6 +6,24 @@ summary: "Describe your video. Get the right way to make it chosen first: genera
 job: make-video-ads
 headline: Video route picker
 subhead: "Describe your video. Get the right way to make it chosen first: generate, compose, or edit your footage."
+explain: |
+  Choose how a video will be made before you spend anything: generate it with AI, build it from code and assets, or edit footage you already have. 
+  You describe the video. The skill looks at three things: where the visuals come from, how the pieces get assembled, and whether you supplied footage. Then it picks one main route, or a combined plan when a brief mixes types. Generation suits new scenes. Composition suits exact text, charts and repeatable layouts. Editing suits cutting, trimming and finishing your own clips. If production tools or paid services are not available, it still returns a full written package: script, timed storyboard, exact on-screen text, audio direction and export target.
+when:
+  - You are not sure if AI generation or editing is the right approach.
+  - Your brief mixes screen recordings, motion graphics and new scenes.
+  - You need exact text on screen that AI video usually gets wrong.
+  - You have no tools yet and want a ready plan to hand to someone.
+you_give:
+  - A description of the video you want
+  - Footage or assets you already have (optional)
+  - Length, format and where it will play
+  - Tools or budget available (optional)
+you_get:
+  - A chosen production route with reasons
+  - A script and timed storyboard
+  - Exact on-screen text and captions
+  - Notes on assets, rights and export
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

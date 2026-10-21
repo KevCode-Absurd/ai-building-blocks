@@ -6,6 +6,24 @@ summary: Give it your video transcript. Get a chapter list that follows YouTube'
 job: grow-social
 headline: YouTube chapter writer
 subhead: Give it your video transcript. Get a chapter list that follows YouTube's rules and shows up on the video.
+explain: |
+  A chapter list that YouTube really turns into chapters, built from your video transcript.
+
+  YouTube ignores a chapter block that breaks its rules, and it does so silently. The first entry must be 00:00, there must be at least three, and each must run at least ten seconds. A small Python tool finds the breaks by scoring the pauses in your speech for how much the wording changes across them, and it flags an invalid list before you paste it. Its titles are only topic words, so the skill rewrites every line as the promise of that section, three to five words, in your voice. A section you cannot name in five words is two sections, or filler.
+when:
+  - You finished editing and need chapters for the description.
+  - Your pasted timestamps never turned into chapters.
+  - You want chapter titles that make people jump to a section.
+  - A long video feels baggy and you want to see where it splits.
+you_give:
+  - Your transcript as an SRT file
+  - How many chapters you want
+  - Your voice notes (optional)
+you_get:
+  - A valid chapter list starting at 00:00
+  - A rule check that it will work on YouTube
+  - Rewritten five-word chapter titles
+  - A flag on any section that is two sections or filler
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

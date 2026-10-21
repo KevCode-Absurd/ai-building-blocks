@@ -6,6 +6,26 @@ summary: Describe how you sell. Get a discount matrix, approval limits and a cle
 job: sell-and-negotiate
 headline: Discount policy designer
 subhead: Describe how you sell. Get a discount matrix, approval limits and a clear route for exceptions.
+explain: |
+  A written discount policy your sales team can follow: who can offer what, when to ask for approval, and what happens when a request breaks the rules. It ends the habit of citing "last quarter's deal" as precedent.
+
+  The skill builds a matrix of maximum discounts across contract size, term length, payment terms and strategic value. A router then sends out-of-matrix requests through a named chain of approvers with the right evidence attached. A linter checks the policy for flaws: approvers ranked backwards, overlapping bands, margin floor breaches and gaps. It starts from your past four quarters of won and lost deals. It uses Python scripts, so it needs a place to run code.
+when:
+  - You are writing the company's first formal discount rules.
+  - Margins are slipping and reps discount too freely.
+  - Exceptions keep rising and you suspect the bands are wrong.
+  - Your finance lead raised the margin floor and the policy must be rebuilt.
+you_give:
+  - Closed won and lost deals from the last year
+  - Your margin floor
+  - Your sales team structure and approvers
+  - Contract sizes, terms and payment options
+  - Your business type, such as SaaS or enterprise software
+you_get:
+  - A discount matrix by deal type
+  - An exception approval flow
+  - A lint report listing policy flaws
+  - A short policy summary for your team
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

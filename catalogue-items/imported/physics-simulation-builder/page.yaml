@@ -6,6 +6,25 @@ summary: Describe the part and its loads. Get a finite element model built, solv
 job: build-software
 headline: Physics simulation builder
 subhead: Describe the part and its loads. Get a finite element model built, solved and plotted.
+explain: |
+  Describe a part and the forces or heat acting on it, and get a finite element model built, solved and plotted. It covers heat, stress and electromagnetic problems.
+
+  The skill follows five steps in MATLAB's PDE Toolbox. Build geometry from shapes, a STEP or STL file, or a 2D drawing. Set up the model with materials, supports, loads and starting conditions. Mesh with defaults first and refine if needed. Solve for steady, time-varying, vibration or frequency cases. Then read out fields, interpolate values and plot. It needs a recent MATLAB with the PDE Toolbox.
+when:
+  - You need to know how hot a part gets under a heat load.
+  - You want stress in a bracket from a CAD file.
+  - You need the vibration modes of a simple structure.
+  - You want a plot of a field across a shape.
+you_give:
+  - The part shape or CAD file
+  - Materials
+  - Loads, supports and temperatures
+  - The kind of analysis wanted
+you_get:
+  - A built and meshed model
+  - Solved results
+  - Field plots
+  - Derived values such as peak stress or temperature
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

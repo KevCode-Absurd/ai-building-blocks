@@ -6,6 +6,25 @@ summary: Give it your board update. Get the toughest questions, cold-number dril
 job: speak-and-persuade
 headline: Hard-questions board prep coach
 subhead: Give it your board update. Get the toughest questions, cold-number drills and a story that owns the weak spots.
+explain: |
+  The hardest questions your board could ask, plus the answers you need ready. Most board prep rehearses the friendly meeting. This one prepares for the sharp one, where members have seen dozens of companies and can tell when a deck hides something.
+
+  First it lists the numbers you must know cold, such as monthly revenue, burn, runway, churn, headcount and pipeline, and drills you until you can say them without looking. Then, for each agenda item, it writes the tough version of the question, like what failed when you missed revenue by 20 percent. Last, it builds a story that names the weak spots, shows a plan, and keeps the room's trust.
+when:
+  - You have a board meeting or investor update coming and the numbers are bad.
+  - You want to rehearse the questions you hope nobody asks.
+  - You are pitching for funding and need every figure ready.
+  - You want to present a miss without spinning it.
+you_give:
+  - Your meeting agenda
+  - Your deck or key numbers
+  - Where you missed targets
+  - Who is in the room (optional)
+you_get:
+  - A list of numbers to know cold
+  - Hard questions for each agenda item
+  - Answer outlines that own the weak spots
+  - A narrative for the whole meeting
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

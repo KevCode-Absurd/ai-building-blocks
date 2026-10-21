@@ -6,6 +6,25 @@ summary: Name a risky feature. Get what could go wrong, how likely, how bad and 
 job: check-contracts
 headline: Feature legal risk assessor
 subhead: Name a risky feature. Get what could go wrong, how likely, how bad and fixes. First check, not legal advice.
+explain: |
+  A short, structured look at what could go wrong with a risky feature, written so a lawyer or leader can act on it. It is a first check, not legal advice.
+
+  Use it for the few launches that need more than a table row, such as an AI feature, a product for children, or biometric or health data. The skill states what is being assessed, then lists two to five specific risks. Each one has a concrete scenario, who gets hurt, how likely and how bad it is with a reason for each, and a fix that lowers it. It ends with a recommendation and open questions for counsel. It avoids long paperwork for low-risk launches.
+when:
+  - Your team plans an AI feature that uses customer data.
+  - Leadership asks what the risk is and wants more than one line.
+  - A launch touches children, health or biometric data.
+  - A review turned up a problem nobody has seen before.
+you_give:
+  - A description of the feature
+  - What data it uses
+  - Who the users are and where they live
+  - Any earlier review notes (optional)
+you_get:
+  - A list of specific risk scenarios
+  - Likelihood and severity for each, with reasons
+  - Suggested fixes
+  - Open questions for a lawyer
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

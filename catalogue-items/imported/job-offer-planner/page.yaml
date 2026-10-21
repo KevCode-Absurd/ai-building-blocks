@@ -6,6 +6,25 @@ summary: Give it the role and what the candidate wants. Get an offer package, a 
 job: hire-people
 headline: Job offer planner
 subhead: Give it the role and what the candidate wants. Get an offer package, a negotiation plan and call scripts.
+explain: |
+  An offer that has a real chance of being accepted, with a plan for the conversation after it. Give it the role, your budget limits and what the candidate has said they want. The skill builds the full package: base, bonus, equity, sign-on, benefits, relocation, title, start date and flexibility.
+
+  When base pay is capped it suggests other levers, such as a faster review, a year-one guaranteed bonus or a shorter equity cliff. It then plans the negotiation: what you can give, what you hold, and how to respond to likely counters. You also get call scripts for presenting the offer and closing, so you can handle objections calmly.
+when:
+  - Your top candidate wants more than your budget allows.
+  - You must write an offer and are not sure what to include.
+  - A candidate has a competing offer and you need to respond fast.
+  - You want a script for the offer call.
+you_give:
+  - The role and salary range
+  - The candidate's expectations and other offers
+  - Your constraints on pay and equity
+  - Your must-win points (optional)
+you_get:
+  - A full offer package
+  - Creative options when pay is capped
+  - A negotiation plan with fallbacks
+  - Scripts for the offer call and closing
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

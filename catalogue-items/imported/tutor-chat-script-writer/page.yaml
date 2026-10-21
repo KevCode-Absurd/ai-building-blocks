@@ -6,6 +6,25 @@ summary: Give it a topic and where students get stuck. Get a back-and-forth tuto
 job: teach-and-train
 headline: Tutor chat script writer
 subhead: Give it a topic and where students get stuck. Get a back-and-forth tutoring script with replies for each difficulty.
+explain: |
+  A back-and-forth tutoring script that answers the places students actually get stuck. Each wrong turn has a ready reply, so your chatbot or tutor does not just repeat the same hint.
+
+  You give the learning goal and the usual mistakes or confusions. The skill writes a conversation that opens with a question, waits for the student, and branches by response. Hints go from light to strong, so students do as much thinking as they can. It includes prompts that ask for reasoning, replies for misconceptions, and a check at the end. The design follows research on human tutoring and tutoring systems. It suits chatbot builders, teachers and anyone running one-to-one support.
+when:
+  - You are building an AI tutor and need scripts for a topic.
+  - You want a chatbot to handle the common wrong answers well.
+  - A teacher plans one-to-one support and needs guided questions.
+  - You want hints that ramp up instead of giving the answer at once.
+you_give:
+  - The skill or idea students should master
+  - Where students usually struggle
+  - Student age and level (optional)
+  - The subject area (optional)
+you_get:
+  - A branching tutoring dialogue
+  - Replies for each common difficulty
+  - A ladder of hints
+  - A closing check for understanding
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

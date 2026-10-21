@@ -6,6 +6,24 @@ summary: Give it a long markdown file. Get one HTML page with a contents bar, se
 job: work-with-files
 headline: Markdown to web page maker
 subhead: Give it a long markdown file. Get one HTML page with a contents bar, search and light interactivity.
+explain: |
+  One tidy HTML page built from a long markdown file, with a contents bar that follows you, a search box and copy buttons on code. It suits specs, plans, reports and explainers that people will skim.
+
+  Three small Python scripts do the work. One reads the markdown into sections. A second turns them into a styled page using your brand colors and fonts. A third adds the behavior: scroll tracking, filtering and copy buttons. The page needs web fonts and a code highlighter loaded from the internet. Files under 100 lines are refused, since plain markdown reads fine, and slide decks or code reviews go to other tools. You need Python installed.
+when:
+  - Your project spec is a long markdown file that nobody scrolls through.
+  - You want a shareable report with a contents sidebar and search.
+  - You need code snippets with copy buttons in a doc.
+  - You want your plan to use your brand look.
+you_give:
+  - A markdown file of 100 lines or more
+  - Your brand colors and fonts
+  - Python installed on your machine
+you_get:
+  - A single HTML page
+  - A sticky contents bar
+  - Live search filtering
+  - Copy buttons on code
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

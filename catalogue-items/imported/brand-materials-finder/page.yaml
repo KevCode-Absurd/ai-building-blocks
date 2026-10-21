@@ -6,6 +6,25 @@ summary: Point it at your tools. Get a report of style guides, decks and call no
 job: brand-file
 headline: Brand materials finder
 subhead: Point it at your tools. Get a report of style guides, decks and call notes you already have, plus gaps.
+explain: |
+  A report on every brand document you already own, spread across your work tools, with the best sources ranked and the gaps called out. You stop writing a voice guide from a blank page.
+
+  The skill explains the plan and waits for your go-ahead. It then searches connected platforms such as Notion, Google Drive, Confluence, Box, Microsoft 365, Figma, Slack and call recording tools. It finds style guides, decks, templates and transcripts, sorts them, and flags conflicts and open questions. Nothing is saved until you approve, and then guidelines go to a file in your working folder.
+when:
+  - Your brand materials are spread across many tools.
+  - You need a voice guide but don't know what already exists.
+  - Two documents disagree about tone.
+  - You want to find old decks and call notes quickly.
+you_give:
+  - Connected work tools to search
+  - A brand or company name
+  - Anything you know is out of date (optional)
+  - Your approval before saving
+you_get:
+  - A discovery report of what exists
+  - Sources ranked by usefulness
+  - Conflicts and gaps listed
+  - Draft brand voice guidelines after your review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

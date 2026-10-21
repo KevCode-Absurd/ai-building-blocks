@@ -6,6 +6,25 @@ summary: Give it your pipeline and cohorts. Get a commit, best case and pipe-onl
 job: money-and-investing
 headline: Bookings forecast builder
 subhead: Give it your pipeline and cohorts. Get a commit, best case and pipe-only forecast with the maths shown.
+explain: |
+  Three forecast numbers with the maths shown: commit, best case and pipe only. Leaders can present one figure while the board sees the assumptions behind it.
+
+  The skill answers three questions. What is the number for the quarter? Which customer cohorts are leaking, even when overall net revenue retention looks fine? Which funnel stages give stable results and which are noise? It projects retention by cohort over several quarters, and it measures how much each stage varies to set a confidence band. Every assumption goes in a plain block. It is for forward-looking forecasts, not month-end reporting.
+when:
+  - The board will ask for commit, best case and pipe only.
+  - You suspect overall retention hides a weak recent cohort.
+  - Pipeline coverage is shrinking and you need to know why.
+  - You need to project recurring revenue for the next few quarters.
+you_give:
+  - Pipeline by stage with amounts
+  - Cohort retention data
+  - Historic conversion rates
+  - The quarter and horizon to forecast
+you_get:
+  - Commit, best case and pipe-only numbers
+  - An assumptions block
+  - Retention by cohort
+  - A reliability rating for each funnel stage
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

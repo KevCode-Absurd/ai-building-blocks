@@ -6,6 +6,26 @@ summary: Give it your results and figures. Get a printable research poster in La
 job: work-with-files
 headline: Research poster maker
 subhead: Give it your results and figures. Get a printable research poster in LaTeX as a PDF.
+explain: |
+  A printable research poster as a PDF, built in LaTeX from your results and figures. LaTeX keeps text sharp and layouts exact, so it prints well at conference size.
+
+  It helps you choose between three poster packages: beamerposter for Beamer themes, tikzposter for styled blocks, and baposter for projects that already use it. It lays out columns, sets sizes and places your figures. It compiles the document, checks the PDF with Poppler and runs a print check before you send it. It can adapt a finished paper into a poster. It needs a LaTeX setup. An optional AI schematic step needs Python and an OpenRouter key.
+when:
+  - You need a poster for a conference next week.
+  - You want to turn a finished paper into a poster.
+  - Your institute gives you a LaTeX template.
+  - You need a final check before sending it to print.
+you_give:
+  - Results and key text
+  - Figures
+  - Poster size
+  - Template or theme (optional)
+  - LaTeX installed on your computer
+you_get:
+  - LaTeX source files
+  - Compiled PDF poster
+  - Print preflight check
+  - Notes on layout fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

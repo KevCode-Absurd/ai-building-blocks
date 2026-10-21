@@ -6,6 +6,24 @@ summary: Describe a decision or idea. Get its hidden assumptions sorted by how f
 job: think-and-decide
 headline: Hidden assumption auditor
 subhead: Describe a decision or idea. Get its hidden assumptions sorted by how fragile they are, then a rebuilt conclusion.
+explain: |
+  A decision or idea tested against the things you have not questioned. Most plans rest on beliefs that feel like facts. This skill digs them out, labels them, and rebuilds your conclusion using only what holds up.
+
+  It works in five phases. First it checks that you are solving the right problem. Then it surfaces 8 to 12 hidden assumptions across three depths. Each gets one of four labels: fact, convention, belief or interest-driven. It scores every assumption for how fragile and how important it is, and names the three most dangerous. It ends by rebuilding the conclusion from verified premises and showing how your thinking shifted. It replies in English or Chinese, whichever you write in.
+when:
+  - You are about to make a big career, money or business decision.
+  - A plan feels solid but you cannot say why.
+  - You want to stress-test a product idea before building it.
+  - Someone says it has always been done this way and you want to check.
+you_give:
+  - The decision, idea or belief to test
+  - Context and what is at stake
+  - What you have already tried or decided (optional)
+you_get:
+  - A list of hidden assumptions, labelled by type
+  - A fragility and impact ranking
+  - The three most dangerous assumptions
+  - A rebuilt conclusion from verified premises
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

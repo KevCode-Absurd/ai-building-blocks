@@ -6,6 +6,25 @@ summary: Point it at an existing site or app. Get generic design patterns found 
 job: build-websites
 headline: Interface upgrader
 subhead: Point it at an existing site or app. Get generic design patterns found and fixed, without a rewrite.
+explain: |
+  An existing site or app improved where it looks generic, without a rewrite or a change to how it works. It finds the stock patterns and weak spots and fixes them in place.
+
+  The skill first scans your code to learn the framework and styling. It then audits for flat, template-like design, poor spacing, and missing states such as loading, empty and error. It applies targeted upgrades while keeping routes, data flow, accessibility and tests intact. It does not move you to a new framework or rework your structure. You should check the result in your actual app on several screen sizes and browsers.
+when:
+  - Your app works but looks like every other AI-built site.
+  - Pages feel flat and have no loading or error states.
+  - You want a visual refresh without touching the architecture.
+  - Spacing and hierarchy are uneven across screens.
+  - You need to modernise the look before a demo.
+you_give:
+  - Access to your site or app code
+  - Pages or screens to focus on
+  - Anything that must not change (optional)
+you_get:
+  - A list of generic patterns found
+  - Targeted code changes
+  - Added loading, empty and error states
+  - Better spacing and hierarchy
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

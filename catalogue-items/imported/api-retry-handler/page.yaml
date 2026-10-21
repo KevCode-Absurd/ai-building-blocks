@@ -6,6 +6,25 @@ summary: Name the API. Get safe code for waiting, retrying and backing off when 
 job: build-software
 headline: API retry handler
 subhead: Name the API. Get safe code for waiting, retrying and backing off when it says slow down.
+explain: |
+  Code that handles an API saying slow down, without crashing your app or sending the same action twice. Name the API and you get a retry layer that is safe, bounded and easy to read.
+
+  The skill first sorts each reply. Bad requests and permission errors are final and never retried. Rate limits, timeouts and server faults are retried. Next it reads the delay hints the service sends, such as the Retry-After header or a reset time, before it makes up its own wait. If there is no hint, it uses growing waits with a little random jitter and a hard cap on attempts. It also checks that repeating the action is safe.
+when:
+  - Your script gets 429 errors from a payment, AI or code hosting service.
+  - Retries sometimes create duplicate orders or messages.
+  - A failing service takes your whole app down with it.
+  - You need to respect the wait times a service sends.
+you_give:
+  - The API you call
+  - Your language
+  - How costly a repeated call would be
+  - Rate limits from its docs (optional)
+you_get:
+  - Retry and backoff code
+  - Rules for which errors to retry
+  - Support for wait-time headers
+  - Safe handling of repeated actions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

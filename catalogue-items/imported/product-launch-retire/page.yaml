@@ -6,6 +6,25 @@ summary: Pick products and a status. Get them moved between draft, live and arch
 job: run-your-store
 headline: Product launch and retire manager
 subhead: Pick products and a status. Get them moved between draft, live and archived. Changes what shoppers can see and buy.
+explain: |
+  Products moved in bulk between draft, live and archived, so a seasonal launch or sell-off takes one run instead of a long afternoon of clicking. It changes what shoppers can see and buy.
+
+  You pick the products by tag, vendor, collection or current status, and the status you want. Claude lists the matches first, because dry run is on by default, and only applies changes when you confirm. Use it to turn a summer range live, archive last season, or stage new products as drafts. You need an authenticated Shopify CLI session with product write access.
+when:
+  - A seasonal collection goes live on a set date.
+  - Last season's products should leave the storefront.
+  - You are staging new items as drafts before launch.
+  - You need to archive a vendor's whole range.
+you_give:
+  - Your store domain
+  - A filter such as a tag, vendor or collection
+  - "The target status: live, draft or archived"
+  - Confirmation after reviewing the preview
+you_get:
+  - A preview of products to change
+  - Status updated on all matches
+  - A count of what changed
+  - A list of any failures
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,23 @@ summary: Give it a code review comment. Get a direct version that reads like a t
 job: write-and-tell-stories
 headline: Review comment humaniser
 subhead: Give it a code review comment. Get a direct version that reads like a teammate wrote it.
+explain: |
+  Code review comments rewritten to sound like a teammate: short, direct and with a fix. They get read and acted on, not skimmed past.
+
+  Feed it a wordy comment. The skill cuts the padding, such as I noticed, I was wondering if perhaps, or small suggestion. It removes praise stuck onto every note and stops the comment from retelling the code. Each one becomes a line in the shape line number, label, problem, fix. The labels are bug, risk, nit and question, so the reader knows how urgent it is. A comment with an opinion and no fix gets a fix added. Kind words stay when aimed at the person, not as padding.
+when:
+  - Your review comments read like a polite robot wrote them.
+  - Teammates ignore your long feedback.
+  - You want to paste a draft review and tighten it.
+  - A new reviewer needs a clear format to follow.
+you_give:
+  - One or more code review comments
+  - The line numbers or files they refer to (optional)
+  - The code snippet for context (optional)
+you_get:
+  - Rewritten comments with line number, label, problem and fix
+  - Severity labels for each
+  - A shorter review that is easier to act on
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Name your niche. It reads public YouTube pages and ranks videos that be
 job: grow-social
 headline: YouTube viral video finder
 subhead: Name your niche. It reads public YouTube pages and ranks videos that beat their channel's usual views.
+explain: |
+  A ranked list of videos in your niche that beat their own channel's usual views, so you copy ideas, not channel size.
+
+  Raw view counts only show which channels are big. This skill ranks each video by how many times it beat the median views for its channel. It needs at least four videos per channel, or the median means nothing, and it skips channels that fall short. You collect the data from public listings only, never a logged-in session, using yt-dlp, the public page or a hand-made list. A Python tool then ranks them. You get the top five with their multiples, the title formula each used, what they share, and which one you could make this week.
+when:
+  - You want video ideas that worked beyond a channel's own audience.
+  - You are choosing a topic and want proof it can outperform.
+  - You want to learn which title patterns lift views in your niche.
+  - You need to pick between several competitor videos to study.
+you_give:
+  - A list of channels in your niche
+  - Titles, views and links for at least four videos per channel
+  - A minimum multiple, such as 2x (optional)
+  - Your voice notes (optional)
+you_get:
+  - The top five videos with their view multiples
+  - The title formula behind each
+  - The one thing they share
+  - The ones you could make this week
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

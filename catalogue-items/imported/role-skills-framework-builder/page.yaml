@@ -6,6 +6,25 @@ summary: Name your roles. Get the key skills for each, what good looks like at e
 job: hire-people
 headline: Role skills framework builder
 subhead: Name your roles. Get the key skills for each, what good looks like at each level, and matching interview questions.
+explain: |
+  A skills framework your team can use for hiring, reviews and growth, written role by role. Name your roles and get the key skills for each, plus what good looks like at every level.
+
+  It sorts skills into those every role shares and those that are role-specific. Each skill gets a definition and plain behaviour examples at four levels, so a manager can point to evidence. For one role it picks the five to seven that matter most and sets the level needed. It then turns the profile into job ad criteria, interview questions with scoring guides, review wording and learning ideas, and shows how to check the framework with leaders.
+when:
+  - You are hiring for a new role and want interview questions tied to the skills it needs.
+  - Performance reviews feel vague and you want clear examples for each level.
+  - You want to see where your team has skill gaps.
+  - Your existing skill model is old and needs an update.
+you_give:
+  - Role titles and the team or company they sit in
+  - Levels you use, such as entry to senior
+  - Company values or culture notes (optional)
+  - An existing framework to update (optional)
+you_get:
+  - Key skills for each role
+  - Behaviour examples at each level
+  - Interview questions with scoring guides
+  - Review and development wording
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

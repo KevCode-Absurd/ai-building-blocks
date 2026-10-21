@@ -6,6 +6,26 @@ summary: Give it your LinkedIn Ads exports. Get a checked audit of your Insight 
 job: read-ad-results
 headline: LinkedIn ads account auditor
 subhead: Give it your LinkedIn Ads exports. Get a checked audit of your Insight Tag, audiences, lead forms, creative, bids and budgets.
+explain: |
+  A checked audit of your LinkedIn Ads account that separates what the data shows from what to try. Give it your exports and you get findings tied to the numbers they came from.
+
+  It asks for your goal, the conversion you count, dates, spend and targets. Then it reviews tracking through the Insight Tag, professional audiences, lead forms, account-based campaigns, creative, bidding, budgets and pacing. It marks observations, causes, advice and possible changes as separate things. It will not apply a benchmark that does not match your goal, region or account age. Account changes stay as drafts for you to approve.
+when:
+  - Your LinkedIn leads cost too much and you do not know why.
+  - You suspect the Insight Tag is not tracking conversions.
+  - You inherited a B2B ad account and need a health check.
+  - You want a second opinion before raising budgets.
+you_give:
+  - Campaign Manager exports or screenshots
+  - Your goal and conversion definition
+  - Date range, spend and targets
+  - Account or campaign age (optional)
+you_get:
+  - Measurement and tag findings
+  - Audience and lead form review
+  - Creative and bidding notes
+  - Prioritised recommendations
+  - A list of things it could not check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Say what your business does. Get a ready style starting point with colo
 job: brand-file
 headline: Brand style starter picker
 subhead: Say what your business does. Get a ready style starting point with colours, fonts, voice and image direction.
+explain: |
+  Skip the blank page. Describe what your business does and get a style starting point you can change: colours, fonts, voice samples and image direction.
+
+  The skill holds twelve style families, such as calm and clinical or bold and playful, with variations for eighteen kinds of business. It picks the closest family, or blends two neighbours, then rewrites the defaults to fit your brief. It tells you which choices it changed and why. It does not paste a stock palette on you. Treat the result as an anchor to refine, not a final brand. It works with any design tool and needs no code.
+when:
+  - You are starting a brand and want a look to react to, not a blank canvas.
+  - You like a certain brand and want to design near its style without copying it.
+  - You need to pick between several visual directions fast.
+  - You want to see how your idea would look in a different style family.
+you_give:
+  - A short description of your business and audience
+  - A brand or style you admire (optional)
+  - Colours or fonts you must keep (optional)
+you_get:
+  - A matched style family
+  - Starter colours and font pairings
+  - Sample voice lines
+  - Image direction notes
+  - A list of what was adapted from the default
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

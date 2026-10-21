@@ -6,6 +6,26 @@ summary: Give it a buyer request. Get a requirement gap score, a rival feature t
 job: sell-and-negotiate
 headline: Pre-sales proof of concept planner
 subhead: Give it a buyer request. Get a requirement gap score, a rival feature table and a trial plan.
+explain: |
+  Before you answer a buyer's request, see how well you fit it, where you fall short and how to run a trial that wins the deal. You get numbers for fit, a clear comparison with rivals and a trial plan.
+
+  You give the buyer's requirements and your product's abilities. The skill scores coverage of the requirements and counts must-have gaps, with a rule for when to proceed. It builds a feature table against competitors, then plans the proof of concept in phases: discovery, solution design, the trial itself, review and handover. Each phase has a checklist, success measures and a check before moving on. Python scripts run the scoring.
+when:
+  - A buyer sends a long requirements list and you must decide if you can win.
+  - You need a table showing how you compare with rivals.
+  - A customer wants a trial and you need clear success criteria.
+  - You are preparing a technical proposal or demo.
+you_give:
+  - Buyer's request or requirements list
+  - Your product's features and gaps
+  - Known competitors
+  - Customer's technical setup (optional)
+  - Trial length (optional)
+you_get:
+  - Requirement coverage score
+  - Count of must-have gaps
+  - Competitor feature table
+  - Phased trial plan with success checks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

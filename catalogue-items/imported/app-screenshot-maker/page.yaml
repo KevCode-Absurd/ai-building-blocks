@@ -6,6 +6,25 @@ summary: Point it at your running app. Get sharp, high-resolution screenshots re
 job: make-images
 headline: App screenshot maker
 subhead: Point it at your running app. Get sharp, high-resolution screenshots ready for Product Hunt, social or your site.
+explain: |
+  Sharp, high-resolution screenshots of your running app, ready for Product Hunt, social posts, a landing page or docs. You point it at your local or live app address and pick how many shots you need.
+
+  The skill uses Playwright, a browser tool you may need to install, to capture at double resolution, the quality of a retina screen. It asks how many shots you need, what they are for, and whether the app needs a login. If you give a login, it finds the form fields on its own. It suggests common local addresses if you are unsure. The result is a set of crisp images saved to a folder you can use at once.
+when:
+  - You are launching on Product Hunt and need clean images.
+  - Your landing page still shows blurry or outdated screens.
+  - Your docs need fresh pictures after a redesign.
+  - You want social images of key screens without a manual capture.
+you_give:
+  - Your app address
+  - How many screenshots you need
+  - What they are for
+  - Login details for a test account (optional)
+you_get:
+  - High-resolution PNG screenshots
+  - Shots of the screens you choose
+  - Files sized for your purpose
+  - A repeatable capture script
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

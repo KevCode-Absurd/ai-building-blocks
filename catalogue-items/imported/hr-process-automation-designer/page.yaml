@@ -6,6 +6,25 @@ summary: Name your HR processes, like onboarding. Get which to automate, which t
 job: hire-people
 headline: HR process automation designer
 subhead: Name your HR processes, like onboarding. Get which to automate, which tool fits each and a build order.
+explain: |
+  A shortlist of HR tasks worth automating, with the tool for each and the order to build them in. Name your processes, such as onboarding or leave, and get a plan that saves real hours without breaking accuracy.
+
+  It maps each process step by step and scores tasks on volume, difficulty and payoff. It then designs the automated flows, for example from signed offer to day-one ready, or from leave request to approval and payroll. It suggests what fits in your HR system, a no-code tool or an AI helper, and where a person must still approve. It adds data quality checks, a change plan for staff, a business case and ways to measure time saved and errors cut.
+when:
+  - Your HR team spends hours on forms and email reminders each week.
+  - You want to automate onboarding but do not know where to start.
+  - You need a business case to get budget for an HR tool.
+  - Data in your HR system is messy and you fear it will break automation.
+you_give:
+  - The HR processes you run
+  - Your HR system and other tools
+  - Volume per month, such as hires or requests
+  - Pain points and goals (optional)
+you_get:
+  - A ranked list of tasks to automate
+  - Workflow designs for key processes
+  - Tool suggestions for each flow
+  - A business case and build order
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

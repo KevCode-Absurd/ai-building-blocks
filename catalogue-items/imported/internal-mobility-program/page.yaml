@@ -6,6 +6,26 @@ summary: Describe your company. Get a transfer process, forms for staff and mana
 job: hire-people
 headline: Internal job move program builder
 subhead: Describe your company. Get a transfer process, forms for staff and managers, and measures to track.
+explain: |
+  A way for your staff to move into new roles, teams and projects, with the process written down, forms for employees and managers, and measures to track. It helps you keep good people who would otherwise leave to grow elsewhere.
+
+  You describe your company and get a framework sized to it. It covers how roles are posted inside, how employees apply, how managers should respond, and how approvals work. It adds options like short project moves, rotations and career maps that are not just ladders. It includes training for HR partners who guide moves, a link to succession planning, and rates of internal moves to compare over time. It works from reusable prompts.
+when:
+  - Good people leave because they see no next step here.
+  - Managers block transfers to keep their best staff.
+  - You want to post roles inside before going outside.
+  - You are starting a rotation programme for high performers.
+  - You need to measure how many roles are filled internally.
+you_give:
+  - Your company size and structure
+  - Your current transfer practice
+  - Retention or growth goals (optional)
+you_get:
+  - A mobility framework and policy
+  - Transfer request and approval forms
+  - A manager guide
+  - Rotation or project-move options
+  - Measures to track
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: "Give it a screen. Get the states people hit first: empty, loading, err
 job: build-websites
 headline: Screen states designer
 subhead: "Give it a screen. Get the states people hit first: empty, loading, error, offline, no results and success."
+explain: |
+  Most screens are built for the best case: lots of data, fast network, nothing breaking. Real people hit the other cases first. This skill takes a screen you are building and finds those states, then builds each one properly.
+
+  It goes through a list for every screen that loads, lists, searches or saves: first use, empty, loading, partial data, error, offline, bad input, no results and success. It keeps only the ones that can happen, then writes the content and design for each, with a way out of every error. It works on its own. An optional connection to the UXKIN screen library can show how other products handle the same case.
+when:
+  - Your screen only shows the version with perfect data and you need the rest.
+  - A new user would see an empty list on day one and you have nothing designed for it.
+  - Someone asked you to make a screen ready for real use.
+  - You want to review a finished feature for missing error and offline cases.
+you_give:
+  - The screen or component, as code, a screenshot or a description
+  - What data it loads or saves
+  - Your design style or component library (optional)
+you_get:
+  - A list of states that can happen on that screen
+  - Copy and layout for each state
+  - Error messages with a clear next step
+  - Built versions in your code
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

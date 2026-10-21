@@ -6,6 +6,25 @@ summary: Give it a tag name or description. Get the matching PI data points foun
 job: build-software
 headline: PI asset finder
 subhead: Give it a tag name or description. Get the matching PI data points found from MATLAB.
+explain: |
+  Find the right data point in a PI system and pull its history into MATLAB, starting from just a tag name, a description or an asset name. It spares you from raw .NET code.
+
+  The skill decides the route from what you give. A tag name or description goes to the PI Data Archive, using the client to look up tags and read values. An element name or template goes through Asset Framework, which finds elements and attributes and reads their history. For example, you can list every generation unit by template. It reads only, so it does not change assets or write data. It needs MATLAB with the Industrial Communication Toolbox and access to a PI server.
+when:
+  - You have a tag name and need last month's values.
+  - You only know part of a tag's description.
+  - You want all units built from one template.
+  - You need history from an asset attribute.
+you_give:
+  - Tag name, description or element name
+  - Server connection details
+  - Time range
+  - MATLAB release in use (optional)
+you_get:
+  - Matching tags or elements found
+  - Attribute lists
+  - Historical data in MATLAB
+  - The right workflow for your release
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

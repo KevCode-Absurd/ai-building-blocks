@@ -6,6 +6,25 @@ summary: Give it vibration or sensor signals from a motor or pump. Get features 
 job: build-software
 headline: Machine fault feature extractor
 subhead: Give it vibration or sensor signals from a motor or pump. Get features ready for fault detection.
+explain: |
+  A set of useful numbers pulled from the vibration or sensor signals of a motor, pump or other rotating machine, ready for spotting faults early. It runs in MATLAB.
+
+  It follows five steps. First it cleans and prepares your signals. Then it extracts features, such as statistics and frequency measures, which also shrink huge vibration files into compact ones. Next it ranks the features and keeps the ones that best separate healthy from faulty. After that it builds a health indicator from them and finally helps you deploy the monitoring. It fits evenly sampled time data. For sorting several fault types or building anomaly detectors, it points you to other tools.
+when:
+  - You have vibration data from a motor and want to detect wear.
+  - Your raw sensor files are too large to use directly.
+  - You need to pick which signal features actually predict failure.
+  - You want a single health score for a machine over time.
+you_give:
+  - Evenly sampled sensor data
+  - The machine type and sample rate
+  - Healthy and faulty recordings (optional)
+  - Where you will deploy the monitor (optional)
+you_get:
+  - Extracted signal features
+  - A ranked, trimmed feature list
+  - A health indicator
+  - MATLAB code for the workflow
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

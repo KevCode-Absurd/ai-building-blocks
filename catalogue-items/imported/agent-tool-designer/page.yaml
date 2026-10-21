@@ -6,6 +6,25 @@ summary: Describe what your agent must do. Get tool definitions it can use well,
 job: connect-tools
 headline: Agent tool designer
 subhead: Describe what your agent must do. Get tool definitions it can use well, with fewer and clearer tools.
+explain: |
+  Tool definitions your AI agent can pick and use correctly, with fewer tools and clearer ones. Most agent failures come from tools that overlap or describe themselves badly.
+
+  The key test: if a person could not say which tool fits a task, the agent cannot either. So the skill merges tools that do nearly the same thing. Each description answers three questions: what it does, when to use it, and what it returns. Replies are sized to be complete without wasting tokens. Error messages say what went wrong and how to fix the call. It also sets matching names and settings across all tools, so the agent learns one pattern and not ten.
+when:
+  - Your agent picks the wrong tool or calls it with the wrong inputs.
+  - You have too many overlapping tools and want to cut them down.
+  - You are adding a new tool and want its description right the first time.
+  - Tool errors leave the agent stuck.
+you_give:
+  - The tools your agent has now, or the jobs it must do
+  - Examples of failed tool calls (optional)
+  - The agent's main task
+  - Naming rules you already use (optional)
+you_get:
+  - A shorter, clearer tool list
+  - A description for each tool
+  - Better error messages
+  - A naming and settings pattern to follow
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

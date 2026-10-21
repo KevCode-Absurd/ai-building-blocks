@@ -6,6 +6,26 @@ summary: Paste your ad, page or email. Get policy risks flagged for each platfor
 job: check-ads
 headline: Ad and page policy checker
 subhead: Paste your ad, page or email. Get policy risks flagged for each platform, with safer rewrites.
+explain: |
+  Ads, landing pages, video scripts and emails can be checked before launch for rules that could get them rejected or your account flagged. Each issue comes with a safer rewrite.
+
+  The skill first labels what you pasted: the type of copy, the platform, the product category and the stage of the funnel. Then it runs a nine-point check covering personal attributes, sensational wording, health claims, income claims, before and after images, open loops, trigger words, page elements and whether the ad matches its page. After that it flags problems line by line with a severity level and gives a score. It covers Meta, Google, TikTok, YouTube and ClickBank. Rules change, so confirm with the platform's current policy.
+when:
+  - You are about to launch an ad and want to avoid a rejection.
+  - Your last ad was disapproved and you do not know why.
+  - You write health or money offers and need to stay inside the rules.
+  - You want your page and ad to say the same thing.
+you_give:
+  - Your ad copy, page text, script or email
+  - The platform you will run on
+  - The product type
+  - The offer or claim you are making (optional)
+you_get:
+  - A copy classification
+  - A nine-point check result
+  - Line-by-line issues with severity
+  - Safer rewrites
+  - A compliance score
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

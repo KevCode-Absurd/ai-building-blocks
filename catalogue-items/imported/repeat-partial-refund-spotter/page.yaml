@@ -6,6 +6,26 @@ summary: Get orders with many partial refunds or high refund share, a sign of fr
 job: run-your-store
 headline: Repeat partial refund spotter
 subhead: Get orders with many partial refunds or high refund share, a sign of fraud, complaints or process gaps.
+explain: |
+  Orders that look odd: several small refunds on one order, or a large share of the total refunded. These can point to fraud, a product complaint or a gap in how you handle returns.
+
+  The skill reads recent partially refunded orders from Shopify and adds up every refund on each one. It flags an order when it has two or more partial refunds, or when the refunded amount passes a share of the order total that you set. Small orders under a minimum value are skipped. Each flagged order shows its refund history and notes. The list is a prompt to look closer, not a verdict. It reads data only.
+when:
+  - You suspect a customer keeps getting small refunds.
+  - A staff member may be refunding too freely.
+  - You want to find products that cause repeat complaints.
+  - You review refunds each month and want a shortlist.
+you_give:
+  - Store domain
+  - Days to look back
+  - Number of partial refunds that counts as repeated
+  - Refund share threshold (optional)
+  - Minimum order value (optional)
+you_get:
+  - Flagged orders with refund history
+  - Refund share for each order
+  - Notes attached to each refund
+  - Shortlist to check by hand
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

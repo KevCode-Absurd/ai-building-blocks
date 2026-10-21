@@ -6,6 +6,27 @@ summary: Describe the rates and bands. Get a digital down converter built for FP
 job: build-software
 headline: FPGA down converter designer
 subhead: Describe the rates and bands. Get a digital down converter built for FPGA or ASIC use.
+explain: |
+  A digital down converter that takes a radio signal to baseband, built in MATLAB and ready for FPGA or ASIC code generation. It covers both whole-number and fractional sample rate changes.
+
+  The chain is an oscillator, a mixer, a CIC decimator and a compensating FIR filter. For fractional rates it adds a Farrow stage. The skill follows firm rules, such as the exact phase increment formula for the oscillator and a single fixed-point multiply for the mixer with no conjugate. It simulates the design against a floating-point reference, then produces Verilog or VHDL. You need MATLAB with the DSP HDL Toolbox.
+when:
+  - You are building a radio receiver front end for an FPGA.
+  - Your output rate does not divide evenly into the input rate.
+  - You have a floating-point down converter and need an HDL version.
+  - You need a CIC and FIR filter chain with sensible word lengths.
+you_give:
+  - Input sample rate
+  - Carrier frequency
+  - Target output rate
+  - Bandwidth and filter needs
+  - Word lengths (optional)
+you_get:
+  - MATLAB model of the converter
+  - Filter and oscillator settings
+  - Simulation against a reference
+  - Verilog or VHDL output
+  - Notes on design rules followed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

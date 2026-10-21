@@ -6,6 +6,25 @@ summary: Give it an overdue invoice. Get the legal interest and fixed fee worked
 job: track-numbers
 headline: UK late payment chaser
 subhead: Give it an overdue invoice. Get the legal interest and fixed fee worked out, plus reminder emails ready to send.
+explain: |
+  When a UK business customer pays late, the law lets you claim interest and a fixed fee. This skill works out the exact amount and writes the reminder emails.
+
+  You give the unpaid amount and the invoice date. A script, not the AI, does the maths: 8% over the Bank of England base rate, the fixed fee of 40, 70 or 100 pounds by debt size, and the due date under the 30-day rule if none was agreed. It handles public bodies and flags consumers, where the law differs. You then get a short sequence of polite but firm emails with placeholders for names and bank details. It covers business debts in the UK only and is not legal advice.
+when:
+  - A client is past due and you want to know what you can add.
+  - You need a polite first reminder and a firmer second one.
+  - You are a freelancer and unsure if the late payment law covers you.
+  - You want a record of how the interest was calculated.
+you_give:
+  - The unpaid amount
+  - The invoice date
+  - The agreed payment date or terms (optional)
+  - Customer type, such as business or public body (optional)
+you_get:
+  - Interest and fixed fee worked out
+  - A dated calculation
+  - A sequence of reminder emails
+  - Notes on what the law does and does not cover
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

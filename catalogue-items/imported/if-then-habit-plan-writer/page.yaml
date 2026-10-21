@@ -6,6 +6,25 @@ summary: Give it a goal a student struggles to follow through on. Get if-then pl
 job: teach-and-train
 headline: If-then habit plan writer
 subhead: Give it a goal a student struggles to follow through on. Get if-then plans and a simple obstacle plan.
+explain: |
+  A simple plan that helps a student do what they already know they should do. Name the habit that is hard to keep and get if-then plans plus a plan for the obstacle that gets in the way. It is written for teachers.
+
+  The method pairs a trigger with an action, for example "If I get home, then I start my homework before my phone". It also uses the WOOP routine: wish, outcome, obstacle, plan. You give the behavior, the year group and the barrier. You get the plan, exact words the student can say or write, and a way to check whether it is working. It takes about two minutes.
+when:
+  - A student knows they should start homework early but keeps leaving it late.
+  - You want to help a class build one study habit this term.
+  - A student gives up when a distraction shows up.
+  - You need a quick plan for a short chat with a student.
+you_give:
+  - The habit the student should start or stop
+  - Their year group
+  - The main thing that gets in the way (optional)
+  - How long the habit should last (optional)
+you_get:
+  - An if-then plan
+  - A wish, outcome, obstacle, plan sheet
+  - Exact words for the student to use
+  - A simple way to track progress
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

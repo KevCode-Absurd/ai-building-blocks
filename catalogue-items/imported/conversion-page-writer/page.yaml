@@ -6,6 +6,26 @@ summary: Give it your offer and audience. Get landing page copy with hero, value
 job: write-landing-page
 headline: Conversion page writer
 subhead: Give it your offer and audience. Get landing page copy with hero, value points, proof, answers to doubts and clear buttons.
+explain: |
+  Landing page copy for a page that sells: a hero that states the offer, early proof, the problem and promise, how it works, answers to doubts, and a closing call to action. You get the whole page in order, ready to drop into a builder.
+
+  You give your offer and audience. It writes seven sections in a set order. The hero gets a headline and subheadline, social proof comes high on the page, and objections are handled with direct answers. Buttons get specific wording, not just "submit". It names failure patterns to avoid, such as vague claims, and flags places where you need real proof you must supply. It is not for long-form sales letters or email.
+when:
+  - You are launching a product and need a page by Friday.
+  - Your current page gets visits but few sign ups.
+  - You need a sales page for a course or service.
+  - You want an opt-in page with a clear headline.
+you_give:
+  - Your offer and price
+  - Your audience and their main doubts
+  - Proof such as quotes and numbers
+  - The one action you want
+you_get:
+  - Hero headline and subheadline
+  - Proof and value sections
+  - Objection answers
+  - Button text
+  - Final call to action
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

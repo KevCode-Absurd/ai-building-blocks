@@ -6,6 +6,26 @@ summary: Describe your SaaS plans. Get upgrade moments, paywall design, win-back
 job: set-prices
 headline: Free-to-paid flow designer
 subhead: Describe your SaaS plans. Get upgrade moments, paywall design, win-back flows and churn prevention steps.
+explain: |
+  A plan for turning free SaaS users into paying ones at the right moment, including paywalls, upgrade messages, win-back emails and steps to reduce cancellations.
+
+  First it checks your free model: free forever, trial or none. It then finds the points where a user has clearly got value, such as hitting a limit after real use, and puts the upgrade offer there instead of blocking everything. It designs paywall screens, plan differences, and when to offer a cheaper plan instead of letting someone leave. It also adds win-back and churn prevention flows. It avoids both an aggressive paywall and a free plan that never asks.
+when:
+  - Free users use your product for months and never upgrade.
+  - Your paywall appears too early and people leave.
+  - You want to bring back users who cancelled.
+  - You are deciding between freemium and a free trial.
+you_give:
+  - Your plans and prices
+  - What free users can do
+  - Usage data on when people upgrade (optional)
+  - Current paywall screens (optional)
+you_get:
+  - Upgrade trigger moments
+  - Paywall and message designs
+  - Plan structure with downsell option
+  - Win-back flow
+  - Churn prevention steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

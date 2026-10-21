@@ -6,6 +6,25 @@ summary: Give it your vehicles and costs. Get how many you need and when to repl
 job: plan-supply-chain
 headline: Vehicle fleet planner
 subhead: Give it your vehicles and costs. Get how many you need and when to replace each one.
+explain: |
+  The right number of vehicles for your demand, and a plan for when to replace each one. You stop paying for idle vans and stop running old ones past the point they cost more than they are worth.
+
+  You give the current fleet, its ages and costs, and your demand pattern. The skill works out the smallest fleet that covers peak days with a sensible reserve. It compares buy, lease and rent for each vehicle type. It also builds a total cost of ownership view including fuel, repairs, insurance, driver time and resale value, which shows the age where replacement becomes cheaper than repair. Maintenance schedules and utilization checks follow, so you can see which vehicles are barely used.
+when:
+  - You are not sure if you need one more truck or one fewer.
+  - Repair bills on older vehicles keep growing.
+  - You are choosing between leasing and buying a new batch.
+  - Demand is seasonal and you want to plan extra capacity.
+you_give:
+  - Your vehicles with type, age and owned or leased status
+  - "Running costs: fuel, repairs, insurance"
+  - Demand by day or season
+  - Service level goals and limits such as parking
+you_get:
+  - A recommended fleet size and mix
+  - A replacement schedule by vehicle
+  - A cost of ownership comparison
+  - A utilization review and maintenance plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe your offer. Get headlines, emails, calls to action or a full s
 job: write-landing-page
 headline: Direct response copywriter
 subhead: Describe your offer. Get headlines, emails, calls to action or a full sales page that sells.
+explain: |
+  Copy that reads like a person talking and still pushes the reader to act: headlines, emails, calls to action or a full sales page.
+
+  The method treats the headline as most of the job. Its main formula is an action, a specific result, and a timeframe or contrast, as in "days, not weeks". It also teaches story headlines and specific-fact headlines drawn from famous ads. The voice rule is simple: write to a smart friend who is sceptical but curious, and back every claim with a detail. Describe your offer, your buyer and what they get, and you get drafts built on those principles.
+when:
+  - Your sales page gets visits but few sign-ups.
+  - You need ten headline options for one offer.
+  - A launch email sequence has to be written by Friday.
+  - Your current copy sounds like a brochure, not a person.
+you_give:
+  - A description of your offer
+  - Who it is for
+  - The main result buyers get
+  - Proof such as numbers or testimonials (optional)
+  - "The format you need: headline, email or page"
+you_get:
+  - Headline options built from proven formulas
+  - Email or page copy in a natural voice
+  - Calls to action
+  - A reason behind each copy choice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

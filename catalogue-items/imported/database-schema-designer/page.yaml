@@ -6,6 +6,25 @@ summary: Describe your app. Get tables, links, indexes and rules in a clean, nor
 job: build-software
 headline: Database schema designer
 subhead: Describe your app. Get tables, links, indexes and rules in a clean, normalized schema.
+explain: |
+  Plain descriptions of what your app does become a clean set of tables, relationships and rules, plus the SQL to create them. The design avoids duplicated data and bad entries from the start.
+
+  You list the main things your app tracks and how they connect. The skill clarifies one to one, one to many and many to many links, then maps each thing to a table with primary keys. It checks the design against normal forms so every column depends on the right key. It adds NOT NULL, UNIQUE, CHECK and default rules, indexes for lookups and joins, and writes CREATE TABLE statements in the right order. It works with PostgreSQL, MySQL, SQLite and others.
+when:
+  - You are building an app and need the database layout.
+  - Your spreadsheet of data has repeated values that cause errors.
+  - You have to model orders, customers and products with links.
+  - A teammate asks for the schema in SQL.
+you_give:
+  - A description of your app and its data
+  - Main items and what they hold
+  - Database system you will use
+  - Special rules (optional)
+you_get:
+  - Table and relationship design
+  - Keys, rules and indexes
+  - Ready to run SQL statements
+  - Check against your needs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

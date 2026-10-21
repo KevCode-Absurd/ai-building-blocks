@@ -6,6 +6,26 @@ summary: Name a research question. Get a reproducible search, screened papers, a
 job: research-topics
 headline: Systematic review writer
 subhead: Name a research question. Get a reproducible search, screened papers, a PRISMA flow and a cited review.
+explain: |
+  A literature review you can defend: a recorded search, papers screened with clear rules, a PRISMA flow diagram, and a written synthesis whose citations have been checked. Reviewers can repeat your steps and get the same papers.
+
+  The skill turns your question into search strings and runs them across sources such as PubMed, arXiv, bioRxiv and Semantic Scholar. It logs every query and count. Papers are screened against inclusion rules you set, and the reconciled counts feed the PRISMA diagram. Findings are grouped by theme, gaps are named, and every citation is verified against its DOI. It works with Python, and PDF export needs Pandoc and XeLaTeX.
+when:
+  - You need a systematic or scoping review for a thesis or paper.
+  - You must show reviewers exactly how you searched.
+  - You have dozens of papers and need them screened by clear rules.
+  - You want a PRISMA diagram with numbers that add up.
+  - You suspect some citations in your draft are wrong or invented.
+you_give:
+  - Your research question
+  - Inclusion and exclusion rules
+  - Databases or date range to search (optional)
+  - Papers you already have (optional)
+you_get:
+  - A logged, repeatable search
+  - A screened list of papers
+  - A PRISMA flow diagram
+  - A themed review with verified citations
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

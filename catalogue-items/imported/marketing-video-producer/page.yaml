@@ -6,6 +6,26 @@ summary: Say the video you need. Get the right tool, a script and shot plan for 
 job: make-video-ads
 headline: Marketing video producer
 subhead: Say the video you need. Get the right tool, a script and shot plan for AI, avatar or coded video.
+explain: |
+  Say what video you need and get the right way to make it, plus a script and a shot plan. It sorts the job into three routes: AI generated clips, talking avatars, or video coded from text and templates.
+
+  Coded video suits repeatable jobs like changelogs and data reports, since the same input always gives the same result. AI generation suits scenes you cannot film, and the skill compares models by their strengths: audio quality, cost, character consistency across shots, or turning a still into motion. It covers how to write video prompts, when stock footage beats AI, and how to use avatars.
+when:
+  - You need a short product video but have no crew or footage.
+  - You want a batch of personalised videos for outreach.
+  - You are choosing between an avatar, AI clips and stock footage.
+  - Your AI video clips look different from shot to shot.
+you_give:
+  - The video goal and audience
+  - Where it will play
+  - Brand assets or footage (optional)
+  - Budget and tool access
+you_get:
+  - A production route and tool pick
+  - A script
+  - A shot by shot plan
+  - Video prompts ready to paste
+  - Length and format settings
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

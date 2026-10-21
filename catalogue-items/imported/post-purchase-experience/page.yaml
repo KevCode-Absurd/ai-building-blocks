@@ -6,6 +6,25 @@ summary: Give it your shipping, returns and loyalty setup. Get a plan for what h
 job: run-your-store
 headline: After-purchase experience planner
 subhead: Give it your shipping, returns and loyalty setup. Get a plan for what happens after checkout so customers order again.
+explain: |
+  Raise the chance that every order leads to the next one. Share your shipping, returns and loyalty setup and get a plan for what happens after checkout.
+
+  The plan follows tested rules. Send abandoned-cart reminders after 24 to 72 hours, never in the first hour. Put a handwritten thank-you note in the box with nothing attached. Offer paid free-shipping membership if people reorder often. Make returns free and refund when the carrier scans the parcel. Keep loyalty automatic, with one tier and a simple threshold reward. It reviews your current setup against these steps and tells you what to change.
+when:
+  - Customers buy once and never come back.
+  - You are rewriting your returns policy.
+  - You are launching a loyalty programme and want it simple.
+  - Your cart reminder emails go out too soon.
+you_give:
+  - Return and refund policy
+  - Abandoned-cart email timing
+  - Box contents and inserts
+  - Average order value and free-shipping threshold
+you_get:
+  - Review of your after-checkout setup
+  - Reminder timing plan
+  - Returns and refund policy suggestions
+  - Loyalty programme structure
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

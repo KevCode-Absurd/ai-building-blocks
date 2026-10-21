@@ -6,6 +6,24 @@ summary: Give it a pile of rough ideas. Get them scored, crossed and mutated unt
 job: think-and-decide
 headline: Idea tournament runner
 subhead: Give it a pile of rough ideas. Get them scored, crossed and mutated until the strongest few are left.
+explain: |
+  A pile of scattered ideas narrowed to the strongest few through rounds of scoring, crossing and mutation. Instead of filing ideas away, it makes them compete and improve.
+
+  Each idea gets a card holding its core question, description, family history and scores. Ideas are scored on six traits with set weights: novelty, feasibility, value, logic and cross potential, among others. Each round it deepens the most promising ones by filling logical gaps. It crosses ideas from different areas to spark new ones, and it adds outside input, like news or a conversation, to spawn fresh ones. Weak ideas fade, strong ones stay. You judge the results at every round.
+when:
+  - You have dozens of notes and half-ideas and cannot pick where to focus.
+  - You want unexpected links between ideas from work and life.
+  - One-shot brainstorming gave you a list but no ranking.
+  - You want a repeatable way to decide which idea deserves time.
+you_give:
+  - Your list of ideas, rough is fine
+  - What matters to you, such as value or ease
+  - New input between rounds, like news or notes (optional)
+you_get:
+  - A card for each idea
+  - Scores on six traits
+  - Crossed and mutated new ideas
+  - A short list of the strongest survivors
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

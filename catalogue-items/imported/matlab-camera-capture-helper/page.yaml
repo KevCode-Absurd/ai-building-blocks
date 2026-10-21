@@ -6,6 +6,25 @@ summary: Say which camera. Get it connected and images or video captured in MATL
 job: build-software
 headline: MATLAB camera capture helper
 subhead: Say which camera. Get it connected and images or video captured in MATLAB.
+explain: |
+  A camera connected and capturing in MATLAB, whether it is a laptop webcam, a USB camera or an industrial GigE model. You get code that finds the device, sets it up and grabs a still image or video.
+
+  The skill follows a fixed order: list the devices with the hardware info call, connect through the video input object, set properties like exposure and frame rate, then grab frames. It picks the right driver name per system, such as winvideo on Windows, macvideo on Mac and linuxvideo on Linux, and uses gentl for GigE and CoaXPress cameras. It tells you which support packages to install, and it asks which frame grabber you have when it needs to.
+when:
+  - You plugged in a USB camera and MATLAB does not see it.
+  - You need to grab a series of frames at a set rate for analysis.
+  - You work with an industrial GigE camera and the setup fails.
+  - You want a quick webcam snapshot in a script.
+you_give:
+  - Camera type and model
+  - Operating system
+  - What to capture (stills or video)
+  - MATLAB release
+you_get:
+  - Device listing code
+  - Connection and setup code
+  - Working capture code
+  - A list of support packages to install
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

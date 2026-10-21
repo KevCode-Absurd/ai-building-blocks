@@ -6,6 +6,25 @@ summary: Give it a prompt. Get an image from the image service you choose, in th
 job: make-images
 headline: Multi-provider image maker
 subhead: Give it a prompt. Get an image from the image service you choose, in the size you pick.
+explain: |
+  An image made by the image service you choose, in the size you pick, from a single prompt. You can switch services without relearning anything.
+
+  The skill runs a script that connects to many services, including OpenAI, Google, Azure, Replicate, Alibaba, MiniMax and Seedream. On first use it asks you to save your preferences: default service, model and size. Then it takes your prompt, asks anything it needs, such as shape, and calls the service with your own API key. Batches are possible, so you can run many prompts together. It needs Bun or Node to run and an API key for the service you pick.
+when:
+  - You want to try the same prompt on two image services.
+  - You need a batch of images in one size for a campaign.
+  - Your usual service is down and you want a backup.
+  - You want one command for all your image work.
+you_give:
+  - Your image prompt
+  - The service you prefer
+  - The size or shape
+  - An API key for that service
+you_get:
+  - The generated image saved as a file
+  - Your saved defaults for next time
+  - Batch output for many prompts
+  - Messages when a setting is missing
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

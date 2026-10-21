@@ -6,6 +6,24 @@ summary: Point it at a page that misbehaves. Get the real errors, network calls 
 job: test-and-fix-code
 headline: Browser page debugger
 subhead: Point it at a page that misbehaves. Get the real errors, network calls and slow spots found in a live browser.
+explain: |
+  Stop guessing why a page breaks. This lets your AI open it in a real browser and read the console errors, network calls, layout and speed numbers for itself.
+
+  It connects Claude to Chrome DevTools through a small config entry. The skill then guides a loop: reproduce the problem, read console messages, check which requests failed or came back slow, inspect the page structure, and look at load timing and layout shifts. After a fix, it checks again in the live page. By default it uses a separate browser profile, so your own logins stay out of reach. It needs Node.js and Chrome. It is not for back-end only work.
+when:
+  - A button does nothing and you cannot see the error.
+  - A page loads slowly and you want to know which request is to blame.
+  - Your layout jumps around while loading.
+  - You made a fix and want proof it works in a real browser.
+you_give:
+  - The page address or the local site running
+  - A description of what goes wrong
+  - Steps to trigger the problem (optional)
+you_get:
+  - Console errors found
+  - Failed or slow network calls
+  - Layout and speed findings
+  - A check that the fix works in the browser
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

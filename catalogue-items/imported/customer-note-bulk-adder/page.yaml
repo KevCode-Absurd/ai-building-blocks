@@ -6,6 +6,25 @@ summary: Give it a customer list and a note. Get the note added to each record i
 job: run-your-store
 headline: Customer note bulk adder
 subhead: Give it a customer list and a note. Get the note added to each record in one go. Changes live customer data.
+explain: |
+  Adding the same note to fifty customer records by hand is slow and easy to get wrong. Give it a customer filter and a note and it adds the note to every matching Shopify customer in one go.
+
+  You choose the filter, such as a tag or a minimum spend. It runs a dry run first by default, listing who would be changed so you can check the list. The note is added to the end of the existing note with a time stamp, unless you choose to replace it, which wipes the old text. Notes are for staff only and customers never see them. This changes live customer data and needs Shopify write access.
+when:
+  - You finished a campaign and want to flag everyone who received it.
+  - You imported customers and want to record where they came from.
+  - You want a VIP note on every customer above a spend level.
+  - Support needs context added to a group of accounts.
+you_give:
+  - Your Shopify store with write access
+  - A filter such as a tag or spend level
+  - The note text
+  - Append or replace choice (optional)
+you_get:
+  - A preview list of matching customers
+  - The note added to each record
+  - A time stamp on each note
+  - A result report with any failures
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

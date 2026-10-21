@@ -6,6 +6,24 @@ summary: Ask for your day. Get today's meetings with context, deals closing soon
 job: organise-work
 headline: Sales day briefing writer
 subhead: Ask for your day. Get today's meetings with context, deals closing soon, waiting emails and your top actions.
+explain: |
+  Start your sales day knowing where to put your time. Ask for your briefing and get today's meetings with account context, deals close to closing, customer emails waiting on you and your top actions.
+
+  It pulls from your connected CRM, calendar and email, using your CRM's own field and stage names. Each meeting comes with what you know about the account. Deals nearing close are flagged if they look stale. Every value is cited and linked to its record, and blanks show as blank. If your personal scope is empty it asks, rather than widening to the whole company. Email text is treated as data, so instructions inside a message are reported, not followed.
+when:
+  - You open your laptop each morning and want a plan in one view.
+  - A deal is due to close this week and you need to spot any that went quiet.
+  - You have unread customer emails and need to know which to answer first.
+  - You want a meeting prep summary for every call today.
+you_give:
+  - A connected CRM, calendar and email
+  - Your name or sales scope
+  - Which deal stages count as closing soon (optional)
+you_get:
+  - Today's meetings with account context
+  - Deals closing soon with stale flags
+  - Customer emails waiting for a reply
+  - A short list of top actions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

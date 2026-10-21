@@ -6,6 +6,26 @@ summary: Tell it your site and target markets. Get a plan for language URLs, hre
 job: build-websites
 headline: Multi-language site planner
 subhead: Tell it your site and target markets. Get a plan for language URLs, hreflang, translation steps, currencies and right-to-left layouts.
+explain: |
+  A plan to launch your site in new languages and regions that people and search engines can both follow. You decide URLs, translation steps, formats and layout before building.
+
+  The plan works through five layers. First, URL structure: subfolders are the default, with other options weighed. Second, language tags that tell Google which version belongs to which country. Third, how content gets translated and kept current. Fourth, currencies, dates and numbers. Fifth, right-to-left layout for languages such as Arabic and Hebrew. It starts from the markets that matter to you and the translation help you have.
+when:
+  - You are adding your first non-English version of your site.
+  - Your German pages are not showing up for German searchers.
+  - You must choose between subfolders, subdomains and separate domains.
+  - You need layouts that work for Arabic or Hebrew.
+you_give:
+  - The languages and regions you want
+  - Why each market matters
+  - Your current site setup
+  - Who will translate and how often content changes
+you_get:
+  - A URL structure recommendation
+  - Language tag rules
+  - A translation workflow
+  - Currency, date and number rules
+  - Right-to-left layout notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe what your AI agent does. Get clear rules for which actions nee
 job: build-software
 headline: AI approval gate designer
 subhead: Describe what your AI agent does. Get clear rules for which actions need a person to approve and when to escalate.
+explain: |
+  Clear rules for which actions your AI agent may do alone, which need a person to approve, and who steps in when nobody answers. A yes-or-no pop-up is not real oversight, so the approval is tied to the exact action being taken.
+
+  The skill lists every action the agent can take and ranks each by effect, reversibility, value and who could be hurt. Higher tiers need approval from the right roles, never the same person who asked. The approver sees the exact action, side effects, uncertainty and options, with safe reject and edit paths. The policy also sets timeouts, escalation, what happens if logging fails, and recheck before running. Every decision is saved in a record that cannot be edited.
+when:
+  - Your agent can send, pay or delete and you must decide what needs sign-off.
+  - An approval step exists but people just click yes.
+  - You need to show an auditor who approved what and when.
+  - You need a plan for when approvers are away or the log system is down.
+you_give:
+  - What your agent does and every action it can take
+  - Who may approve what
+  - How fast decisions must happen
+  - Rules from your company or law (optional)
+you_get:
+  - An action list with risk tiers
+  - An approval policy
+  - A step-by-step state flow
+  - A design for the approver's screen
+  - A decision log format and test list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

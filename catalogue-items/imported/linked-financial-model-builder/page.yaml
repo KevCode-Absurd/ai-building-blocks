@@ -6,6 +6,26 @@ summary: Give it your past accounts and drivers. Get income, balance sheet and c
 job: money-and-investing
 headline: Linked financial model builder
 subhead: Give it your past accounts and drivers. Get income, balance sheet and cash flow models that tie together.
+explain: |
+  Income statement, balance sheet and cash flow built so they tie out, with the balance check proving it. Give it your past accounts and your key drivers and you get a model you can stress and trust.
+
+  The build order never changes. Assumptions live on one sheet. Revenue and costs follow, then schedules for equipment, working capital and debt. Every balance sheet line comes from a schedule. Cash flow is derived from changes in the other two statements. A revolver plug covers cash shortfalls. Then it compares ratios with three years of history and tests the plumbing by changing growth and capex to see if the balance sheet still balances.
+when:
+  - You need a forecast where the balance sheet actually balances.
+  - Your own model has a circular reference you cannot clear.
+  - An investor wants a three-statement model for your company.
+  - You want to see how a big purchase hits cash and debt.
+you_give:
+  - Past financial statements
+  - Key drivers like growth and margins
+  - Forecast length and purpose
+  - Debt and equipment details (optional)
+you_get:
+  - A drivers sheet
+  - Linked income, balance sheet and cash flow
+  - Debt and working capital schedules
+  - Balance checks
+  - Notes on ratio changes from history
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

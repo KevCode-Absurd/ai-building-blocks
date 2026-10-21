@@ -6,6 +6,25 @@ summary: Describe your team or product. Get ways to raise drive through choice, 
 job: lead-people
 headline: Motivation designer
 subhead: Describe your team or product. Get ways to raise drive through choice, skill growth and purpose.
+explain: |
+  Ways to raise drive in your team or product that rely on choice, skill growth and purpose instead of bonuses and threats. Each idea comes with a score so you can see where you stand.
+
+  The skill uses the autonomy, mastery and purpose model. It starts at 5, adds a point for each of five yes answers about your setup, and subtracts 2 if an if-then reward is doing the motivating, since those can crowd out interest in the work itself. A score of 9 or 10 means all three are present. At 3 or below, rewards and orders are doing the work. You get the score, the failed checks and specific fixes.
+when:
+  - Your sales contest got short bursts of effort and then a slump.
+  - Your team does the minimum and you have only bonuses to offer.
+  - You are designing a points system for an app.
+  - A manager asks why engaged people leave anyway.
+you_give:
+  - A description of your team, product or program
+  - How people are rewarded now
+  - The behavior you want more of
+  - Constraints such as budget or union rules (optional)
+you_get:
+  - A score out of 10
+  - Which checks failed
+  - Fixes for autonomy, skill growth and purpose
+  - What to drop or change in your rewards
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

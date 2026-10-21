@@ -6,6 +6,24 @@ summary: Point it at an AI app. Get prompt injection, jailbreak and tool abuse r
 job: secure-code
 headline: AI system attack tester
 subhead: Point it at an AI app. Get prompt injection, jailbreak and tool abuse risks found, ranked and mapped to known attacks.
+explain: |
+  A ranked list of the ways someone could abuse your AI app, each tied to a known attack type. Test it before real users or attackers do.
+
+  A scanner script runs prompts against your system, looking for prompt injection patterns and jailbreak openings. It also scores the risk that private training data can be extracted, the risk that bad data was slipped into training, and the damage a tool-using agent could do if tricked into misusing its tools. Findings are mapped to the MITRE ATLAS list of attacks on AI. The skill also suggests guardrail designs. Testing deeper than black box needs written permission. It needs Python.
+when:
+  - You are about to launch a chatbot or agent that touches customer data.
+  - Your AI can send emails or run tools and you worry it could be tricked.
+  - A security review asks how you handle prompt injection.
+  - You want a repeatable set of attack prompts for each release.
+you_give:
+  - Test prompts, or a description of your AI app
+  - What the app can access and which tools it can call
+  - Written permission for deeper testing (when needed)
+you_get:
+  - Injection and jailbreak findings
+  - Risk scores for data leaks and poisoning
+  - Tool misuse risks
+  - Guardrail fixes ranked by severity
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

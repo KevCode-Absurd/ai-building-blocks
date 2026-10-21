@@ -6,6 +6,25 @@ summary: Describe the resource you manage. Get a custom operator with its CRD de
 job: build-software
 headline: Kubernetes operator builder
 subhead: Describe the resource you manage. Get a custom operator with its CRD design and reconcile loop.
+explain: |
+  Most operator bugs live in the reconcile loop, not in Kubernetes. This skill builds a custom operator and checks it against seven common mistakes. They are: step-by-step logic, no retry on short errors, missing finalizers, editing spec instead of status, skipping the status subresource, blocking calls and no leader election.
+
+  You name the resource you want to manage. The skill designs the custom resource, picks a tool such as kubebuilder, operator-sdk or Kopf, and writes the controller. Three Python tools then check the CRD, lint the reconcile code and score the operator on five OperatorHub levels. You need Python and a Kubernetes dev setup.
+when:
+  - You want Kubernetes to manage a database, queue or internal service for you.
+  - You inherited an operator that loops forever or leaves orphaned resources.
+  - You are choosing between kubebuilder, operator-sdk and Kopf.
+  - You need to review a CRD for status, conditions and finalizer mistakes.
+you_give:
+  - The resource the operator should manage
+  - Your language and framework preference (optional)
+  - Existing CRD or controller code (optional)
+  - Cluster and RBAC constraints
+you_get:
+  - A custom resource design
+  - Controller code with a safe reconcile loop
+  - CRD and reconcile lint results
+  - A capability level score with gaps to close
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

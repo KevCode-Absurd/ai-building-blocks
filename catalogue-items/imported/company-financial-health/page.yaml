@@ -6,6 +6,25 @@ summary: Give it a company's filings. Get ratios, cash flow and balance sheet he
 job: money-and-investing
 headline: Company financial health reviewer
 subhead: Give it a company's filings. Get ratios, cash flow and balance sheet health explained in plain words.
+explain: |
+  A plain reading of a company's financial health from its statements, with the ratios worked out and the odd numbers flagged. You learn whether the business makes money, can pay its bills and is using its assets well.
+
+  Claude first checks you have the income statement, balance sheet and cash flow statement, and asks what you want to learn. It cleans the numbers, takes out one-off items, then works out margins, current and quick ratios, debt against equity and interest cover. It compares year on year and flags any line that moved over 15 percent without a footnote, or profit not backed by cash. The report ends with a plain summary.
+when:
+  - You have a set of accounts and need to know if the company is in good shape.
+  - You are about to invest in, buy from or lend to a business.
+  - Revenue is growing but you suspect cash is not.
+  - You want a quick liquidity and debt check before a board meeting.
+you_give:
+  - Income statement, balance sheet and cash flow
+  - The reporting period and currency
+  - What you want to learn, such as debt or profit
+  - Industry (optional)
+you_get:
+  - Ratios for profit, liquidity and debt
+  - Year on year trends
+  - Flagged oddities and red flags
+  - A plain-words summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe why users drop off. Get the cause found and fixes to onboardin
 job: understand-customers
 headline: Retention problem fixer
 subhead: Describe why users drop off. Get the cause found and fixes to onboarding and habits. Uses behavior design.
+explain: |
+  A diagnosis of why people sign up and then drift away, plus specific changes to your first-use experience. The skill treats this as a design problem, not a motivation problem, and scores your product out of 10.
+
+  It uses the Fogg model: behaviour happens when motivation, ability and a prompt line up. Your product is checked on six points, covering motivation, how hard the first action is, prompt timing, celebrating small wins, the biggest bottleneck and how well it scales. Failing rows lose points. The main advice is to make the key action easier rather than push harder on motivation. You get a short list of fixes for onboarding, tiny first steps and reminders.
+when:
+  - Lots of people sign up but never finish setup.
+  - Your activation rate is low and you do not know why.
+  - Users quit after their first session.
+  - You want to cut the time it takes a new user to see value.
+you_give:
+  - A description of your product and first-use flow
+  - Where people drop off
+  - Activation or retention numbers (optional)
+  - Your current onboarding steps (optional)
+you_get:
+  - A score out of 10 with the reasons
+  - The main cause of drop-off
+  - Fixes for onboarding and prompts
+  - Small first steps to try
+  - A list of changes in priority order
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

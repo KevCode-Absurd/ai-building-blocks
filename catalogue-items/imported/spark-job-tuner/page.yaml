@@ -6,6 +6,26 @@ summary: Give it a slow Spark job. Get changes to partitions, caching and memory
 job: test-and-fix-code
 headline: Spark job tuner
 subhead: Give it a slow Spark job. Get changes to partitions, caching and memory that speed it up.
+explain: |
+  A slow Spark job made faster, with each change explained. You share the job code, its settings and where it spends time. The skill looks at the usual causes in order: how data is split into partitions, shuffles between steps, uneven data that overloads a few tasks, memory pressure, and slow serialisation.
+
+  It suggests fixes such as adaptive query settings, broadcast joins, salting skewed keys, caching the right data, Kryo serialisation and better file formats. You get advice on executor memory and partition counts, plus ways to confirm the job improved. It assumes you can run Spark code.
+when:
+  - A nightly Spark job takes far too long.
+  - A few tasks run much longer than the rest.
+  - Your executors run out of memory or spill to disk.
+  - You are scaling a pipeline to a much bigger dataset.
+you_give:
+  - The Spark job code
+  - Cluster size and current settings
+  - Job run times or the stage view (optional)
+  - Rough data size
+you_get:
+  - Partition and shuffle changes
+  - Memory and executor settings
+  - Fixes for skewed data
+  - Caching advice
+  - Ways to check the speed gain
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

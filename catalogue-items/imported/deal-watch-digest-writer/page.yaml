@@ -6,6 +6,25 @@ summary: Ask what changed in your deals. Get a short alert list of quiet deals, 
 job: sell-and-negotiate
 headline: Deal watch digest writer
 subhead: Ask what changed in your deals. Get a short alert list of quiet deals, slipping dates and renewals opening.
+explain: |
+  A short alert list you can read every day. It sweeps your open deals and reports only what changed or crossed a line: quiet deals, slipping close dates, renewals opening soon, competitors named, and buyers waiting on a reply.
+
+  You pick the scope, such as your own pipeline, a tier of accounts or your team, and the period, which defaults to seven days. Thresholds come from your own sales cycle, since a 14-day silence means little in a 90-day deal. It reads the CRM, plus email and call notes where connected. If a source is missing, that check is skipped and the digest says so.
+when:
+  - You want a Monday list of deals that need attention.
+  - You keep missing renewals until it is too late.
+  - A competitor shows up in calls and you want to catch it early.
+  - Your manager asks which deals changed since last week.
+you_give:
+  - "Scope: your pipeline, a tier or a team"
+  - Time period (optional)
+  - CRM data or an export from two dates
+  - Your usual sales cycle length (optional)
+you_get:
+  - Short alert list ranked by urgency
+  - Quiet and slipping deals
+  - Upcoming renewals
+  - Competitor mentions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

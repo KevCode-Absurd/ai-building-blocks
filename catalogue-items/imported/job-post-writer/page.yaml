@@ -6,6 +6,25 @@ summary: Describe the role and your team. Get a clear job description that attra
 job: hire-people
 headline: Job post writer
 subhead: Describe the role and your team. Get a clear job description that attracts the right people and avoids biased wording.
+explain: |
+  A job description that candidates want to answer and that does not turn good people away by accident. Describe the role, your team and what the hire will accomplish. If you give only a title, the skill asks short questions about the problem the person solves, what success looks like in six to twelve months, and the level and scope.
+
+  It writes around the candidate, not around a task list, and checks the draft against quality rules, including biased wording. It uses your company story and pay approach if you have saved them. A rewrite mode takes an old posting, finds the weak sections and fixes them. The finished text also feeds later steps like search strings and outreach.
+when:
+  - You need a posting for a new role by end of day.
+  - Your old job post attracts the wrong people.
+  - A hiring manager sent a messy wish list and you must shape it.
+  - You want to remove wording that might discourage some applicants.
+you_give:
+  - The role title and level
+  - What the person will achieve in the first year
+  - Team and company context
+  - An existing posting to rewrite (optional)
+you_get:
+  - A finished job description
+  - A bias check on the wording
+  - Questions that fill any gaps
+  - A rewrite of weak sections
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

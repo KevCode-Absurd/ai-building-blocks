@@ -6,6 +6,25 @@ summary: Name your app and cloud. Get metrics, logs, traces and alerts set up to
 job: ship-and-host
 headline: Cloud monitoring setter
 subhead: Name your app and cloud. Get metrics, logs, traces and alerts set up to see health in real time.
+explain: |
+  Know when your app is slow or broken before your users tell you. You end up with a monitoring plan and the config to run it: metrics, logs, traces, dashboards and alert rules for your cloud.
+
+  It starts by asking what matters most, then turns that into service targets such as response time and error rate. Next it picks tools that fit your cloud, like Prometheus, Grafana, CloudWatch or OpenTelemetry. Dashboards follow the four golden signals: latency, traffic, errors and saturation. Alerts are tuned to fire on real problems only, so your team does not learn to ignore them.
+when:
+  - Your app went down and you heard about it from a customer.
+  - You are moving to a cloud provider and need monitoring from day one.
+  - Your alerts fire all night and nobody trusts them any more.
+  - You need a dashboard that shows whether your service is healthy.
+you_give:
+  - Your app and cloud provider
+  - What must stay fast and online
+  - Tools you already use (optional)
+  - Who gets alerted and how (optional)
+you_get:
+  - Service health targets
+  - Metric, log and trace setup
+  - Dashboards by service
+  - Alert rules with fewer false alarms
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

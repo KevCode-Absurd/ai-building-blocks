@@ -6,6 +6,25 @@ summary: Give it a trained AI model and a target chip. Get lean code that runs t
 job: build-software
 headline: Small-device AI deployer
 subhead: Give it a trained AI model and a target chip. Get lean code that runs the model on that hardware.
+explain: |
+  A trained AI model turned into lean code that runs on a small chip, such as a microcontroller. You give the model and name the target hardware, and the skill carries it through to code you can load.
+
+  It takes models built in MATLAB, or imported from PyTorch, ONNX, TensorFlow and LiteRT, and checks they work. It can shrink them with quantization, test them inside a Simulink system model, and generate C, C++ or CUDA code for Cortex-M, A or R chips, x86 and GPUs. This needs a paid MathWorks setup: a recent MATLAB with the deep learning, coder and embedded toolboxes, plus the MATLAB agent connection for your AI.
+when:
+  - You have a trained network and must run it on a microcontroller.
+  - Your model is too large for the memory on your device.
+  - You want to test a model inside a larger system simulation first.
+  - You need C code generated from a PyTorch model.
+you_give:
+  - The trained model
+  - The target chip and its memory limits
+  - MATLAB with the needed toolboxes
+  - Accuracy you can accept after shrinking (optional)
+you_get:
+  - The model checked and imported
+  - A compressed version sized for the chip
+  - Generated C, C++ or CUDA code
+  - A system simulation of the model (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

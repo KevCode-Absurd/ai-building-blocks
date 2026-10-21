@@ -6,6 +6,25 @@ summary: Give it your cash, debts and currency exposure. Get a liquidity plan an
 job: money-and-investing
 headline: Cash and currency risk planner
 subhead: Give it your cash, debts and currency exposure. Get a liquidity plan and ways to cut rate and exchange risk.
+explain: |
+  You get a plan to keep enough cash on hand, make idle money earn something, and limit damage from rate and currency swings. Share your balances, debts and foreign currency exposure, and the skill acts like a company treasurer.
+
+  It starts with where cash sits across accounts, then builds a cash ladder of expected money in and out by day, week and month to spot dry spells. For foreign currency it estimates value at risk and suggests forwards or options. It finds balances sitting in accounts that pay nothing and points to safer places within your investment policy. It ends with a treasury report. Check the plan with your bank or adviser.
+when:
+  - You are paid in several currencies and exchange swings hurt your margins.
+  - You have floating-rate debt and want to know your exposure.
+  - Cash sits in current accounts earning nothing.
+  - You need to be sure payroll and loan payments are covered next quarter.
+you_give:
+  - Cash balances by account and entity
+  - Upcoming large payments
+  - Foreign currency amounts and floating-rate debt
+  - Your investment policy limits (optional)
+you_get:
+  - A cash ladder showing tight weeks
+  - A currency risk estimate with hedge ideas
+  - A list of idle balances to move
+  - A treasury report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

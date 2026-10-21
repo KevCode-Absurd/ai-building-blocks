@@ -6,6 +6,25 @@ summary: Give it a task. Get prompts for planning, checking and reviewing work t
 job: teach-and-train
 headline: Thinking-about-thinking prompt set
 subhead: Give it a task. Get prompts for planning, checking and reviewing work that students can use alone.
+explain: |
+  A set of questions that students can ask themselves before, during and after a task, so they notice when they are lost and fix it without waiting for you. You describe the task and the class, and the prompts are tuned to both.
+
+  The prompts come in four kinds. Planning prompts help pick a strategy and a first step. Monitoring prompts test whether they really understand or just recognise the words. Evaluating prompts check the answer against the criteria. Debugging prompts locate where understanding broke. They are worded for the age group and the subject, and with no phase given, you get all three phases, weighted to where they matter most.
+when:
+  - Students say they understand, then cannot do the problem.
+  - You want a card of self-check questions for word problems.
+  - Year 12 students need prompts for close reading.
+  - You want students to fix their own mistakes before asking you.
+you_give:
+  - The task students are doing
+  - Year group and level of self-awareness
+  - The skill to target, such as monitoring
+  - Subject or when the prompts will be used (optional)
+you_get:
+  - Planning, monitoring, evaluating and debugging prompts
+  - Wording matched to the year group
+  - Prompts for before, during and after
+  - Tips on how to introduce them
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it flow cytometry files. Get compensated, gated cell populations a
 job: research-topics
 headline: Flow cytometry gating analyst
 subhead: Give it flow cytometry files. Get compensated, gated cell populations and a gating plan you can repeat.
+explain: |
+  Raw flow cytometry files become compensated, gated cell populations with a gating plan you can run again on every batch. Your counts come out the same each time.
+
+  It uses the Python FlowKit package. First it matches detector names to the compensation matrix and checks sample IDs for clashes. It applies compensation before any transform, then builds the gate tree with full parent paths, using your gating strategy or a FlowJo workspace. Results are exported as counts and event tables. Importing a workspace does not prove it matches FlowJo, so it asks for your controls and thresholds rather than guessing. You need Python.
+when:
+  - You have a folder of FCS files and need the same gates on every one.
+  - You want to move a FlowJo gating plan into a repeatable script.
+  - Your compensation or channel names look mismatched.
+  - You need cell population counts for a report.
+you_give:
+  - FCS files
+  - Gating strategy, GatingML file or FlowJo workspace
+  - Compensation matrix (optional)
+  - Control samples and thresholds (optional)
+you_get:
+  - Compensated and transformed data
+  - Gate hierarchy with full paths
+  - Population counts per sample
+  - Python script to repeat the analysis
+  - Notes on what could not be verified
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

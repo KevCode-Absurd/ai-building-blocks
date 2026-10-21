@@ -6,6 +6,25 @@ summary: Give it a CSV of past values. Get a forecast with ranges and a test on 
 job: track-numbers
 headline: Quick time series forecaster
 subhead: Give it a CSV of past values. Get a forecast with ranges and a test on held-back data, with no model training.
+explain: |
+  A forecast of your numbers with ranges around it, tested against data you held back, and no model training. You give it a CSV of past values and see how well it would have predicted what you already know.
+
+  The skill cleans the file into a regular time grid, then runs Google's TimesFM, a pre-trained forecasting model, that predicts without fitting to your data. You get a middle estimate plus low and high bands. It scores the forecast on the held-back period so you can judge trust before relying on it. It is not a tool for cause and effect. It needs Python, PyTorch and a one-time model download.
+when:
+  - You have monthly sales and want the next six months.
+  - You need a forecast but have no time to build a model.
+  - You want to see how reliable a forecast is before using it.
+  - Your data has gaps or uneven dates that need tidying first.
+you_give:
+  - CSV of past values with dates
+  - How far ahead to forecast
+  - Python with PyTorch installed
+  - Extra driver columns (optional)
+you_get:
+  - Forecast with low and high ranges
+  - Score on held-back data
+  - Cleaned time series
+  - Chart of past and predicted values
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

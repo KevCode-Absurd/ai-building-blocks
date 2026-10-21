@@ -6,6 +6,25 @@ summary: Give it a very large image. Get it processed in blocks and in parallel 
 job: build-software
 headline: Huge image processor
 subhead: Give it a very large image. Get it processed in blocks and in parallel without running out of memory.
+explain: |
+  A way to work with images too big to open at once, in MATLAB, without running out of memory. Whole-slide microscope scans, satellite maps and 3D volumes get read, processed and saved in small blocks, even across many processor cores.
+
+  The skill wraps your image as a blocked image so only the needed tiles load. It first asks what you want: view, process, train a model or archive. For folders of many files, it follows a seven-step data discovery routine before any code. Reference notes cover viewing with overlays, labeling and training data, 3D, geospatial files, custom file readers and writing results block by block. Any large TIFF is checked first. It needs MATLAB with the Image Processing Toolbox.
+when:
+  - A TIFF or scan is so large that MATLAB runs out of memory.
+  - You process whole-slide pathology images or satellite rasters.
+  - Your image-processing loop is slow and you want it to run in parallel.
+  - You need training data cut from huge images for a deep learning model.
+you_give:
+  - The large image file or folder
+  - What you want to do with it
+  - Details of file format or coordinates (optional)
+  - MATLAB with the Image Processing Toolbox
+you_get:
+  - Working MATLAB code using blocked images
+  - A block-by-block processing plan
+  - Parallel processing setup
+  - Viewing or training data preparation steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

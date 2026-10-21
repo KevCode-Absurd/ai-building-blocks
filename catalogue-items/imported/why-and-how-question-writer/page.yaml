@@ -6,6 +6,26 @@ summary: Give it your content. Get why and how questions that push learners past
 job: teach-and-train
 headline: Why and how question writer
 subhead: Give it your content. Get why and how questions that push learners past memorising to understanding.
+explain: |
+  A set of why and how questions that make learners explain what they study instead of repeating it. Asking "why is this true?" forces connections to what they already know, and that is what helps memory.
+
+  This is elaborative interrogation, a strategy backed by decades of study. You give the topic, the learners' level and the text they use. The skill writes a set of prompts, usually five to eight, ordered by depth, each with the idea it targets and what a good answer looks like. It adds prompts that tie new facts to prior knowledge and a short note on timing, grouping and whether answers should be spoken or written.
+when:
+  - Students can recite facts but cannot explain them.
+  - You want better questions for a reading or revision session.
+  - A topic is full of facts that feel unconnected.
+  - You need prompts for pairs to discuss.
+you_give:
+  - Topic or content
+  - Students' age and level
+  - The text they are reading (optional)
+  - What they already know (optional)
+  - Number of prompts (optional)
+you_get:
+  - Ordered why and how prompts
+  - Target knowledge and ideal answer depth
+  - Prompts linking to prior learning
+  - Guide to timing and grouping
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

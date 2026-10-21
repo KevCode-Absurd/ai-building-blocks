@@ -6,6 +6,27 @@ summary: Describe your team. Get an inclusion plan, fair hiring steps, group ide
 job: hire-people
 headline: Inclusive workplace plan builder
 subhead: Describe your team. Get an inclusion plan, fair hiring steps, group ideas and measures to track.
+explain: |
+  A practical plan to make your workplace fairer, with hiring steps, group ideas and numbers to track so you can see what changes. You describe your team and get a plan sized to it, not a generic policy.
+
+  The skill starts from your goals and size, then builds a one-year or three-year roadmap with milestones. It covers fair recruiting steps, bias training for managers, mentoring that spreads access, employee resource groups, and pay review. It also sets up surveys and a scorecard so progress is measured, and gives answers for leaders who push back. It works through prompts you can reuse for each area.
+when:
+  - Leadership asks for an inclusion plan and you have nothing written.
+  - You want fairer hiring steps for a growing team.
+  - You are starting an employee resource group.
+  - You need a way to measure whether inclusion is improving.
+  - Senior leaders are doubtful and you need your case ready.
+you_give:
+  - Your team size and industry
+  - Your current hiring and people practices
+  - Your goals for the next one to three years
+  - Survey data (optional)
+you_get:
+  - An inclusion roadmap with milestones
+  - Fair hiring steps
+  - Ideas for groups and mentoring
+  - A scorecard of measures
+  - Talking points for leaders
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

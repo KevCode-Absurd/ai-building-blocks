@@ -6,6 +6,25 @@ summary: Name a page or site and a depth. Get a smoke, standard or full test pas
 job: test-and-fix-code
 headline: Site QA sweep runner
 subhead: Name a page or site and a depth. Get a smoke, standard or full test pass with a list of problems found.
+explain: |
+  A test pass on your page, feature or site at the depth you pick, with a list of problems found. You can confirm something works before you call it shipped.
+
+  Choose one of three tiers. Smoke is a fast check after a deploy. Standard is the full audit of a new page or feature. Full is the release matrix before a major launch. It runs checks with snippets you paste into the browser console, so it works on any stack and needs only dev tools. It covers general quality, and sends deep accessibility or speed work to other specialist checks.
+when:
+  - You just deployed and want to know nothing is broken.
+  - A new page launched and needs a proper test.
+  - A major release is coming and you want the full matrix.
+  - Someone said "something looks off" and you need to find it.
+you_give:
+  - The page or site URL
+  - "The depth: smoke, standard or full"
+  - Browser dev tools
+  - Specific concerns (optional)
+you_get:
+  - Console snippets to run
+  - Test results by tier
+  - A list of problems found
+  - Notes on what to test deeper
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

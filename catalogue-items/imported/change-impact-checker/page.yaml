@@ -6,6 +6,24 @@ summary: Describe a code change. Get what it could break outside its own diff, a
 job: test-and-fix-code
 headline: Change impact checker
 subhead: Describe a code change. Get what it could break outside its own diff, and one proof it is safe.
+explain: |
+  Before you ship a change, you learn what it could break outside its own diff, and you get one piece of proof that it is safe. Describe the change and the skill goes past listing callers, which a search does in a second.
+
+  It asks you to doubt your own write-up and rate each key fact on a ladder: you said so, you pointed to the file and line, you traced it, you ran it, you saw it live. It then looks for hidden users such as stored data, payloads, config, other apps reading a client, and prompt files. Run it before design, since a claim like "this already handles that" is only a guess until checked.
+when:
+  - You are about to edit a shared API, config file or stored data format.
+  - A small diff feels risky and you cannot say why.
+  - A ticket says the code already does X and you plan around that.
+  - You want a blast radius before a multi-file change.
+you_give:
+  - The change or planned change
+  - Access to the code
+  - The claim the change depends on (optional)
+you_get:
+  - A list of things that could break
+  - The facts the change depends on, each rated for strength
+  - One proof that the change is safe
+  - A note on where checking stopped
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

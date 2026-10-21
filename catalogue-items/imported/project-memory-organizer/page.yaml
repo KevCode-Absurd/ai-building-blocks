@@ -6,6 +6,24 @@ summary: Point it at your project. Get small context files per folder so your AI
 job: set-up-ai
 headline: Project memory organizer
 subhead: Point it at your project. Get small context files per folder so your AI reads less and costs less.
+explain: |
+  Small context files for each folder in your project, so your AI reads only what it needs and your token bill drops. It stops re-reading the whole project on every prompt.
+
+  The skill detects your project type, then writes a short root file of about 200 tokens and one scoped file of about 250 tokens per directory. The root file includes routing lines that tell the AI which sub-file to open. A memory folder holds decisions, reusable patterns and an inbox of guesses waiting for your approval. A dashboard shows estimated token savings, session history and how healthy the context is. Best for projects with three or more directories.
+when:
+  - Your AI keeps re-reading the same files and burning tokens.
+  - One giant CLAUDE.md is too big and mostly irrelevant to any one task.
+  - You are starting a project and want structured memory from day one.
+  - You want to see how much context you are saving.
+you_give:
+  - Your project folder
+  - Notes you already have (optional)
+  - Confirmation of guessed facts in the inbox
+you_get:
+  - Short root context file
+  - One context file per folder
+  - Decisions and patterns files
+  - Savings dashboard
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

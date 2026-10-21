@@ -6,6 +6,25 @@ summary: Give it a topic or story. Get a finished comic with panel layouts, a ch
 job: make-images
 headline: Knowledge comic maker
 subhead: Give it a topic or story. Get a finished comic with panel layouts, a chosen art style and drawn pages.
+explain: |
+  A finished comic that teaches a topic or tells a story, planned panel by panel and drawn page by page. Give it the subject. The skill asks you to choose an art style and a tone, then writes a script and lays out each page.
+
+  Every picture gets its own saved prompt file before anything is drawn, so you can review and reuse them. Images come from whichever image tool your setup has, such as a built-in image generator. The skill will not draw with code or paint over text on a bitmap, because that breaks the look. You need an image generator available. Output is a set of pages you can publish or share.
+when:
+  - You want to explain a hard idea to readers who skim text.
+  - You have a story and need it as a comic.
+  - You want a consistent art style across many pages.
+  - You need a teaching handout that people will read.
+you_give:
+  - A topic, story or source text
+  - Preferred art style and tone
+  - Page count or length (optional)
+  - Access to an image generator
+you_get:
+  - A panel-by-panel script
+  - Page layouts
+  - Saved image prompts
+  - Drawn comic pages
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

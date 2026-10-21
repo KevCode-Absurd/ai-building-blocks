@@ -6,6 +6,24 @@ summary: Describe what your AI needs to do. Get clear tool definitions it can ca
 job: connect-tools
 headline: AI tool designer
 subhead: Describe what your AI needs to do. Get clear tool definitions it can call without guessing or failing silently.
+explain: |
+  Tools the model understands and uses correctly, instead of guessing, failing silently or burning tokens. Your AI never sees your code. It sees only the name, the schema and the description, so those are what get designed here.
+
+  Start from what the AI needs to do. The skill proposes the set of tools, writes JSON Schema for each, and writes descriptions that tell the model when the tool applies. It adds input checks and clear error messages that say what to try next. It covers the MCP standard for sharing tools across apps, with working Python examples. Pair it with the tool definition writer when you need a strict safety review of one tool.
+when:
+  - Your agent hallucinates arguments or ignores the tools it has.
+  - You are about to build a set of tools for an agent from scratch.
+  - Tool errors come back vague, so the agent just retries.
+  - You want to expose your tools over MCP.
+you_give:
+  - What the AI should be able to do
+  - The systems or APIs behind it
+  - Examples of calls that went wrong (optional)
+you_get:
+  - A proposed set of tools
+  - JSON Schema for each tool
+  - Descriptions written for the model
+  - Input checks and error messages the agent can act on
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

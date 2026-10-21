@@ -6,6 +6,25 @@ summary: Name the option or bond. Get it priced by the right method, with MATLAB
 job: money-and-investing
 headline: Financial instrument pricer
 subhead: Name the option or bond. Get it priced by the right method, with MATLAB code you can rerun.
+explain: |
+  A price and sensitivities for an option, bond or swap, using the method that fits the instrument, with MATLAB code you can run again. It saves you from guessing which model applies.
+
+  You name the instrument and what you want. The skill routes to a method: Monte Carlo for path-dependent and exotic products, trees and lattices for bonds with embedded options, or FFT methods for fast vanilla pricing. It then picks a model such as Black-Scholes, Heston, Hull-White or SABR and builds the instrument, model and pricer objects. It computes Greeks like delta, vega and gamma, and can compare two methods on the same product. It needs MATLAB with the Financial Instruments Toolbox.
+when:
+  - You need a fair value for a barrier or Asian option.
+  - You want delta and vega for a position.
+  - You hold a callable bond and need its price with the rate model.
+  - You want to check one pricing method against another.
+you_give:
+  - Instrument type and terms
+  - Market data such as rates and volatility
+  - The method or model you prefer (optional)
+  - MATLAB with the toolbox
+you_get:
+  - A price
+  - Greeks and sensitivities
+  - MATLAB code to rerun
+  - A comparison of methods (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

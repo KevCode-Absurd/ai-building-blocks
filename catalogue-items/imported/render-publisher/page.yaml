@@ -6,6 +6,25 @@ summary: Point it at your project. Get it deployed on Render, with a setup file 
 job: ship-and-host
 headline: Render publisher
 subhead: Point it at your project. Get it deployed on Render, with a setup file and the link.
+explain: |
+  Your project live on Render, with the setup file written and the dashboard link in your hand. You do not need to learn the hosting settings first.
+
+  It starts by asking where the code lives and whether Render should create everything the app needs, such as a database. It reads your code to find the language, start command and needed settings. Then it writes a render.yaml file, which describes the whole setup, or creates the services directly. The code must be on GitHub, GitLab or Bitbucket. Ready-made Docker images need the Render dashboard instead. You need a Render account and a pushed repository.
+when:
+  - Your app works on your computer and you want it online.
+  - You want your hosting setup saved as a file, not clicked together.
+  - Your app needs a database and a scheduled job alongside it.
+  - You are new to Render and want a guided start.
+you_give:
+  - Project folder pushed to a Git host
+  - Render account
+  - Whether to create databases and extras
+  - Secret settings the app needs (optional)
+you_get:
+  - Generated render.yaml file
+  - Deployed services
+  - Link to the Render dashboard
+  - List of settings still to fill in
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

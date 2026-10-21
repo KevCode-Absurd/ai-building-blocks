@@ -6,6 +6,26 @@ summary: Name the package to upgrade. Get a staged plan that checks what breaks 
 job: build-software
 headline: Major upgrade planner
 subhead: Name the package to upgrade. Get a staged plan that checks what breaks and tests each step.
+explain: |
+  A staged plan to move one package to a new major version, with a clear picture of what will break and tests after every step. It replaces the risky all-at-once upgrade.
+
+  You name the package and version. The plan checks the version change type, which signals how big the break may be. It builds a compatibility table showing which of your other packages must change first. Then it splits the work into small stages, each with tests that run before moving on, plus a rollback point. Some helper files it refers to are not bundled, so steps that need them are flagged as unavailable rather than guessed. It gives you a checklist you can follow.
+when:
+  - A framework has a new major release and you fear breaking your app.
+  - You have many outdated packages and need an order to update them.
+  - Your tests pass but you do not trust the upgrade.
+  - You need to explain upgrade risk to your team before starting.
+you_give:
+  - The package and target version
+  - Your dependency file
+  - Your test setup
+  - Deadlines or freeze dates (optional)
+you_get:
+  - A list of likely breaking changes
+  - A compatibility table
+  - Staged upgrade steps
+  - Tests for each stage
+  - Rollback points
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

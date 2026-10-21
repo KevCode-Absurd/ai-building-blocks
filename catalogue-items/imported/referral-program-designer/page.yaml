@@ -6,6 +6,25 @@ summary: Describe your product. Get a referral or affiliate program with rewards
 job: grow-social
 headline: Referral program designer
 subhead: Describe your product. Get a referral or affiliate program with rewards, flow and launch plan.
+explain: |
+  A referral or affiliate program designed for your product, with the rewards, the sign-up flow and a launch plan. You can see how the numbers would work before you spend on it.
+
+  It starts with what it needs to know: customer or affiliate, B2B or B2C, average customer value, current cost to win a customer, and whether people already talk about your product. Rewards are sized against your numbers, so the cost of a referral stays below the cost of other channels. It maps the steps from invite to payout and writes the share messages. Then it sets what to measure after launch, such as referral rate and conversion.
+when:
+  - You want existing customers to bring in new ones.
+  - You are weighing a referral program against an affiliate scheme.
+  - A past referral offer got little use and you want to fix it.
+  - You need to know how big a reward you can afford.
+you_give:
+  - Product and customer type
+  - Average customer value
+  - Current cost to win a customer
+  - Past referral attempts (optional)
+you_get:
+  - Program type and reward design
+  - Invite to payout flow
+  - Share message copy
+  - Launch plan and measures
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

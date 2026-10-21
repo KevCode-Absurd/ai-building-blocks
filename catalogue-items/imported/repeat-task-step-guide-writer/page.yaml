@@ -6,6 +6,25 @@ summary: Name a repeat task. Get exact steps, fixes if it fails, how to roll bac
 job: document-work
 headline: Repeat task step guide writer
 subhead: Name a repeat task. Get exact steps, fixes if it fails, how to roll back and who to call.
+explain: |
+  A step-by-step guide for a task someone has to run again and again, written so a person on call can follow it at 2am. What lives in one person's head ends up on the page.
+
+  You name the task. The skill writes the purpose, who owns it, how often it runs and what you need before starting. Each step gets the exact command or action, the result you should see and what to do if it fails. It then adds how to check it worked, how to roll back, who to escalate to and how long it takes. It can also update an old guide when the process changes.
+when:
+  - Only one person knows how to do a weekly task and they are going on leave.
+  - A new hire must run a monthly process alone.
+  - On-call staff keep asking the same questions during incidents.
+  - An old process document is out of date.
+you_give:
+  - Name of the task
+  - How you do it today, notes or commands
+  - Owner and how often it runs (optional)
+  - Known failure cases (optional)
+you_get:
+  - Step-by-step guide with expected results
+  - Fix steps for each failure
+  - Rollback and check steps
+  - Escalation contacts section
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

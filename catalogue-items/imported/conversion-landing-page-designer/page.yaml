@@ -6,6 +6,26 @@ summary: Tell it your offer and audience. Get a landing page plan, copy and stri
 job: write-landing-page
 headline: Conversion landing page designer
 subhead: Tell it your offer and audience. Get a landing page plan, copy and strict design rules that turn visitors into buyers.
+explain: |
+  A complete landing page plan: the questions to ask, the section order, the layout, the copy, and strict visual rules so the page looks clean and sells. It handles both the words and the design, which usually get split and clash.
+
+  It starts with intake questions on offer, audience and proof. Then it sets page structure, picks a layout, and writes copy with conversion rules in mind. A second set of rules governs type sizes, spacing, corner radius, backgrounds, hero layout, icons and motion, so nothing looks random. It adds search and AI answer basics and a list of common mistakes. Use it when you build, restyle or review any page or section.
+when:
+  - You are building a landing page and want copy and layout planned together.
+  - Your page looks busy and inconsistent and you want clear design rules.
+  - You are reviewing a page someone else built.
+  - You need to hand a developer exact styles to follow.
+you_give:
+  - Your offer and price
+  - Your audience
+  - Proof such as reviews or numbers
+  - Brand colours and fonts (optional)
+you_get:
+  - Page structure and layout choice
+  - Landing page copy
+  - Typography and spacing rules
+  - Hero section design
+  - Build order
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

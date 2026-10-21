@@ -6,6 +6,25 @@ summary: Give it a skill. Get its structure checked, scripts run and a score wit
 job: make-skills
 headline: Skill quality tester
 subhead: Give it a skill. Get its structure checked, scripts run and a score with fixes.
+explain: |
+  A score and a to-do list for a skill, after its structure is checked and its scripts are run. You find weak spots before you ship it.
+
+  Four tools run from the repo root. The validator checks front matter, required sections and folder layout against a tier. The script tester checks that Python scripts have valid syntax, standard imports, run, and print output. The quality scorer rates several dimensions and gives a letter grade with a road map of improvements. The security scorer rates risk and can run inside the quality score. You can set a minimum score so it fails a build. It needs Python only.
+when:
+  - You wrote a skill with scripts and want to know they run.
+  - You want a letter grade and a list of what to improve.
+  - You need a score gate in your build pipeline.
+  - You review a library of skills and want to rank them.
+you_give:
+  - A skill folder
+  - Python 3
+  - A minimum score (optional)
+you_get:
+  - A structure check result
+  - Script test results
+  - A quality score and grade
+  - An improvement road map
+  - A security score
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

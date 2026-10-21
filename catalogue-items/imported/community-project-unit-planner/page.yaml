@@ -6,6 +6,26 @@ summary: Name a community need. Get a project plan where students help and also 
 job: teach-and-train
 headline: Community project unit planner
 subhead: Name a community need. Get a project plan where students help and also meet your curriculum goals.
+explain: |
+  A project plan where students solve a real need in their community and meet your curriculum goals at the same time. The help is not a side activity. The learning comes from doing it.
+
+  You name the need and the topic. The plan starts from what the community partner actually asks for, not what the school assumes. It then ties each task to a direct curriculum skill, such as analysing food bank data in a maths unit. It builds in reflection before, during and after the work, because that is where the learning sticks. It also treats the partner as an equal, with a clear role for them and a way to show students' work back to them.
+when:
+  - You want a unit that serves a local group and still covers your set curriculum.
+  - A community project at your school feels like a nice extra with no clear learning in it.
+  - You need a plan that a local charity or care home can say yes to.
+  - You are building a term-long project for one year group.
+you_give:
+  - A real community need
+  - The curriculum topic or skill to cover
+  - Year group
+  - Community partner (optional)
+  - Project length (optional)
+you_get:
+  - A step-by-step project plan
+  - Links from each task to a curriculum skill
+  - Reflection prompts for before, during and after
+  - Partner roles and a way to share results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

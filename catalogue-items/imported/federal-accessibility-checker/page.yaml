@@ -6,6 +6,25 @@ summary: Describe your site, app or documents. Get Section 508 gaps, a fix plan 
 job: check-contracts
 headline: Federal accessibility checker
 subhead: Describe your site, app or documents. Get Section 508 gaps, a fix plan and notes for an accessibility report.
+explain: |
+  A list of where your website, app or documents fall short of Section 508, what to fix first, and notes you can use in an accessibility conformance report. It is built for US federal work and for vendors who sell to agencies.
+
+  The skill uses the Revised Section 508 Standards and WCAG 2.0 Level AA. It cites the exact success criterion for every finding, such as 1.4.3 for contrast. The output fits the task: a section-by-section table for a VPAT, an issue table for an audit, a phased plan with owners for fixes, or draft purchasing clauses. It also covers testing methods and screen reader checks. It is guidance, not a legal ruling.
+when:
+  - You sell software to a federal agency and need a VPAT.
+  - A buyer asks whether your site meets Section 508.
+  - You want a phased plan to fix accessibility issues.
+  - You need accessibility language for a purchase request.
+you_give:
+  - A description or URL of the site, app or document
+  - Who uses it and who buys it
+  - Known issues or earlier audit results (optional)
+  - Deadline (optional)
+you_get:
+  - Gaps tied to WCAG criteria
+  - A priority fix plan
+  - Draft conformance report remarks
+  - Procurement wording if needed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

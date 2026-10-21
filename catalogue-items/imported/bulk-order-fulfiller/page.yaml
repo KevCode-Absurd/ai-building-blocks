@@ -6,6 +6,26 @@ summary: Give it orders and tracking numbers. Get them fulfilled in one batch, w
 job: run-your-store
 headline: Bulk order fulfiller
 subhead: Give it orders and tracking numbers. Get them fulfilled in one batch, with customer alerts if you choose. Changes live orders.
+explain: |
+  Fulfil many open Shopify orders in one batch, adding tracking numbers and, if you choose, sending shipping emails. It changes live orders, so always preview first.
+
+  The skill pulls every open fulfillment order for one location, up to 250 at a time with paging. You supply a list of order, tracking number, carrier and link. By default it runs as a dry run that only shows what it would do. It creates one fulfilment per order when you approve. Fulfilments cannot be undone through the API. It does not print shipping labels. You need the Shopify CLI signed in with permission to read orders and write fulfilments.
+when:
+  - You shipped fifty orders today and need to mark them all fulfilled.
+  - You have a sheet of tracking numbers from your carrier.
+  - You want to preview exactly which orders will change before committing.
+  - You want customers to get tracking emails automatically.
+you_give:
+  - Your store address
+  - The fulfilment location
+  - Tracking numbers, carriers and links
+  - Whether to email customers (optional)
+you_get:
+  - A preview of orders to fulfil
+  - Fulfilments created in one batch
+  - Tracking added to each order
+  - Customer emails if turned on
+  - A summary of results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

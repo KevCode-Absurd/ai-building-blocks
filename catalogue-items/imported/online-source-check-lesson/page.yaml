@@ -6,6 +6,25 @@ summary: Describe your learners. Get a lesson that teaches them to check website
 job: teach-and-train
 headline: Online source checking lesson builder
 subhead: Describe your learners. Get a lesson that teaches them to check websites and posts by reading across other sources.
+explain: |
+  A lesson that teaches students to judge a website or post by leaving it and checking what others say, the way professional fact checkers do. Reading the page harder does not work. Looking across other sources does.
+
+  You describe your learners and the kind of source, such as a news site, a social post or a health page. The skill builds a protocol around lateral reading: stop and ask who is behind it, investigate the source in a new tab, find better coverage, and trace claims back to the original. It adds practice examples, prompts for students to explain their reasoning, and a way to see who is improving. It draws on published research on how students evaluate online information.
+when:
+  - Your students trust the first search result they see.
+  - You teach media literacy and need a hands-on activity.
+  - A class has to judge a viral post for a project.
+  - You want a simple routine learners can repeat on any website.
+you_give:
+  - Age or level of your learners
+  - The type of source to study
+  - Lesson length
+  - Topics that matter to your class (optional)
+you_get:
+  - A lesson plan on lateral reading
+  - A step-by-step checking routine
+  - Practice sources and prompts
+  - A way to check understanding
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

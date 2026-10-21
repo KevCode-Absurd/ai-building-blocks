@@ -6,6 +6,25 @@ summary: Paste your lesson plan. Get a version that supports students learning E
 job: teach-and-train
 headline: Lesson adapter for language learners
 subhead: Paste your lesson plan. Get a version that supports students learning English in reading, writing, speaking and listening.
+explain: |
+  Your lesson plan, rewritten so students learning English can follow the content and still learn the subject. Paste the plan, and you get a version with clear language goals added.
+
+  The skill uses the SIOP model from Echevarria, Vogt and Short. It reads your lesson and applies its eight parts, such as lesson preparation, building background, clear input, strategies, interaction, practice, delivery and review. You add the subject and year group. If you do not give student details, it assumes a mixed class of four to six learners across proficiency levels and a 60 minute lesson. The result keeps the content demand and adds the language help.
+when:
+  - You teach geography or science and have new English learners in class.
+  - You want language goals added to a lesson plan you already have.
+  - You need ways to build background knowledge first.
+  - You want more talk and practice in the lesson.
+you_give:
+  - Your lesson plan
+  - Subject
+  - Year group
+  - Number and level of English learners (optional)
+you_get:
+  - A lesson plan with language and content goals
+  - Support steps for each phase
+  - Interaction and practice ideas
+  - Review and check activities
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

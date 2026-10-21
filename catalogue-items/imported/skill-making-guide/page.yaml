@@ -6,6 +6,25 @@ summary: Describe a task you repeat. Get a step-by-step guide to turning it into
 job: make-skills
 headline: Skill-making guide
 subhead: Describe a task you repeat. Get a step-by-step guide to turning it into your own skill that triggers reliably.
+explain: |
+  A step-by-step guide to turn a task you repeat into your own skill that triggers when it should. You stop pasting the same instructions every time.
+
+  It first checks whether a skill is the right tool at all, since one-off prompts and global behaviour changes are not. Then it covers the SKILL.md file: a front matter name and a description that makes the skill fire, plus a body of steps. Because only the description sits in the system prompt, and the rest loads when needed, long material goes in reference files. It ends with ways to test, fix a skill that does not trigger and maintain it.
+when:
+  - You paste the same long prompt into chat again and again.
+  - You want your team to share one way of doing a task.
+  - Your skill exists but never activates.
+  - You need a quality bar to review someone else's skill.
+you_give:
+  - The task or workflow to encode
+  - Who will trigger it and in what situation
+  - Past prompts or examples of good output
+you_get:
+  - A decision on whether a skill fits
+  - A written SKILL.md draft
+  - A trigger-ready description
+  - Advice on reference files
+  - A test and maintenance plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

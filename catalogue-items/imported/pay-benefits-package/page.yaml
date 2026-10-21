@@ -6,6 +6,26 @@ summary: Give it your pay goals and team size. Get pay bands, bonus ideas and a 
 job: hire-people
 headline: Pay and benefits package designer
 subhead: Give it your pay goals and team size. Get pay bands, bonus ideas and a total pay statement outline. Not legal advice.
+explain: |
+  An outline of your total pay offer: pay bands, bonus ideas, benefits and a statement showing employees the full value. It is a draft, not legal advice.
+
+  You share your pay goals and team size. It covers salary structures and job levels, benchmarking by role and place, pay fairness checks, bonus and sales commission design, stock plans, and benefits. It explains measures like compa-ratio, which compares a person's pay to the range midpoint, and range position. It also helps plan review and raise cycles and write policy and communication drafts that link pay to hiring and keeping people.
+when:
+  - Staff do not see the value in their total pay.
+  - You are building salary levels from scratch.
+  - You need a commission or bonus plan.
+  - You must plan an annual raise cycle.
+you_give:
+  - Pay goals and team size
+  - Roles and levels
+  - Budget
+  - Current pay and benefits (optional)
+you_get:
+  - Pay bands and levels
+  - Bonus or commission ideas
+  - Benefits suggestions
+  - Total pay statement outline
+  - Raise cycle plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

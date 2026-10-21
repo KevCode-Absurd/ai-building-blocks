@@ -6,6 +6,25 @@ summary: Give it your research code and results. Get a paper draft for a top AI 
 job: research-topics
 headline: AI research paper writer
 subhead: Give it your research code and results. Get a paper draft for a top AI conference, with citations checked.
+explain: |
+  A full first draft of a machine learning paper, written from your code, results and notes, and aimed at venues such as NeurIPS, ICML, ICLR and ACL. You get a draft to edit, not a blank page.
+
+  It starts by reading your repo and results to find the real contribution. Then it drafts the sections and looks up related work. One rule is firm: citations are never written from memory, because made-up references are common in AI writing. Each one is searched, checked and pulled in as real BibTeX. Anything it cannot confirm is marked as a placeholder and listed for you to check. After that, you and it trade edits.
+when:
+  - You finished experiments and need a paper draft before a deadline.
+  - You have results in a repo but no clear story for the abstract.
+  - You want a reference list you can trust.
+  - You are rewriting a rejected paper for a different venue.
+you_give:
+  - Your research repo, code and results
+  - Notes on the main claim
+  - The target conference
+  - Related papers you already know (optional)
+you_get:
+  - A full paper draft in the conference style
+  - Real citations fetched from search, not memory
+  - A list of unverified references
+  - Feedback on the weak sections
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a pull request. Get a review where two AI models argue over the
 job: test-and-fix-code
 headline: Two-model pull request reviewer
 subhead: Give it a pull request. Get a review where two AI models argue over the code and agree on what to fix.
+explain: |
+  A code review where two AI models argue before anything reaches your team, so you get fewer false alarms and fewer missed bugs. One review lands on the pull request or merge request as inline comments.
+
+  A main reviewer finds issues in the diff. A second reviewer tries to knock them down and can add its own. The main reviewer then makes the final call. It works with GitHub, GitLab and Azure DevOps, or on a local working tree before a PR exists. It posts from your own signed-in account as a comment only. It never approves and never requests changes. You need Node, Git and your platform's command line tool.
+when:
+  - You want a deep review before merging a pull request.
+  - You want to review local changes before you open a PR.
+  - Single-model reviews give you too many weak comments.
+  - Your team needs inline comments with fewer false positives.
+you_give:
+  - A pull request, merge request or local branch
+  - Which platform it is on
+  - The base branch to compare against (optional)
+  - Whether to print or post the review
+you_get:
+  - Reviewer findings tested by a second model
+  - One review with inline comments
+  - A final decision on each issue
+  - A printed report if you prefer not to post
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

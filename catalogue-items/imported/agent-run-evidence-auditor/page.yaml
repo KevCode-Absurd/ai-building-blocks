@@ -6,6 +6,25 @@ summary: Give it logs from an AI agent run. Get each success claim checked again
 job: test-and-fix-code
 headline: Agent run evidence auditor
 subhead: Give it logs from an AI agent run. Get each success claim checked against real proof, with gaps marked.
+explain: |
+  A claim-by-claim check of whether an AI agent really did what it says it did. A confident "all done" is not proof, so each success claim is matched to records.
+
+  You give it the logs, traces, approvals and deploy records from one run. First it fixes the goal and what counts as success, without bending the rules to fit the evidence. Then it splits the big claim into small testable ones and logs each in a ledger with the proof used, any conflicting record and a verdict: proven, partly proven, contradicted or not proven. Missing evidence is marked as missing, not as failure. It only reads. It never reruns tools or changes anything.
+when:
+  - An agent says a job is finished and you want proof before you trust it.
+  - A run stopped halfway and you need to know what really happened.
+  - You must show a reviewer which steps were done by the agent and which by a person.
+  - You suspect an agent skipped a check or retried more than it should.
+you_give:
+  - Logs, traces or records from the run
+  - The goal the agent was given
+  - What counted as success
+  - Approval or deploy records (optional)
+you_get:
+  - A claim ledger with a verdict for each claim
+  - Links to the records behind each verdict
+  - A list of gaps and missing evidence
+  - Conflicts between what was claimed and what was logged
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

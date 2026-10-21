@@ -6,6 +6,25 @@ summary: Run it on your gift cards. Get the total balance you still owe, split b
 job: run-your-store
 headline: Gift card liability calculator
 subhead: Run it on your gift cards. Get the total balance you still owe, split by issue date and balance size.
+explain: |
+  The amount you still owe customers in unspent gift cards, as one clear number. It reads your Shopify gift cards and adds up the open balances, which count as a future obligation to deliver goods.
+
+  The total is split by the month cards were issued and by balance size, using bands you can set, such as under 10, 50, 100 and 250. Cards that have sat untouched past a set number of days are flagged as possible breakage. It only reads data and changes nothing. Share the figure with your accountant before booking anything. It needs a signed-in Shopify session with permission to read gift cards.
+when:
+  - Month-end is coming and you need the gift card liability figure.
+  - Your accountant asks how much unredeemed credit sits on the books.
+  - You want to know how many old cards have never been touched.
+  - You want to see whether balances are large or mostly small.
+you_give:
+  - Store domain
+  - Card status to include (optional)
+  - Your balance band edges (optional)
+  - Days before a card counts as stale (optional)
+you_get:
+  - Total outstanding gift card balance
+  - Liability by issue month
+  - Breakdown by balance band
+  - A list of stale cards
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

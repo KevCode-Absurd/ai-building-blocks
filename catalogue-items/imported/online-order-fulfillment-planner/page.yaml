@@ -6,6 +6,25 @@ summary: Give it your order volume and setup. Get ways to pick, pack and ship fa
 job: run-your-store
 headline: Online order fulfillment planner
 subhead: Give it your order volume and setup. Get ways to pick, pack and ship faster and cheaper, with returns handled.
+explain: |
+  A plan to pick, pack and ship your online orders faster and cheaper, with returns handled as part of the flow. You describe your volume and setup and get fixes ranked by how much they save.
+
+  The skill starts with your order count, average order value, product range, who does the shipping, and your current accuracy. It then looks at each stage: receiving stock, warehouse layout, picking methods, packing, carrier choice and delivery speed. It compares doing it yourself against a third-party warehouse or a mix. It also covers returns, peak-season capacity and the tools that hold it together, such as warehouse and order systems.
+when:
+  - Orders are growing and packing by hand is falling behind.
+  - Shipping costs are eating your margin.
+  - You are weighing a third-party warehouse against doing it yourself.
+  - Returns arrive with no clear process.
+you_give:
+  - Orders per day, average and peak
+  - Number of products and their size
+  - Current setup and carriers
+  - Shipping and error costs
+you_get:
+  - A stage-by-stage fulfillment review
+  - Ranked cost and speed improvements
+  - A comparison of fulfillment models
+  - A returns process
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

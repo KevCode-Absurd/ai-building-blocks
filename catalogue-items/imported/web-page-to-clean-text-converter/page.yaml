@@ -6,6 +6,24 @@ summary: Give it a web page link. Get the article as clean text without clutter.
 job: work-with-files
 headline: Web page to clean text converter
 subhead: Give it a web page link. Get the article as clean text without clutter. Collects data from websites.
+explain: |
+  The article from a web page as clean text, with menus, ads and clutter removed. It is ready to read, summarise or hand to an AI without wasting space on junk.
+
+  You give a link to a normal public page, such as a blog post or documentation page. The skill runs Defuddle, a command line tool, which keeps the main content and returns it as Markdown. You can save the result to a file or ask for single fields like the title. It prefers a reviewed, already installed copy of the tool and checks its help first. It reads one page at a time, so check the site's terms before collecting large amounts of content.
+when:
+  - You want to summarise a long article from a link.
+  - You need clean page text to feed into another AI step.
+  - You save docs pages as notes.
+  - The raw page is full of menus and cookie banners.
+you_give:
+  - A link to the page
+  - Whether to save to a file (optional)
+  - A field you want, such as title (optional)
+you_get:
+  - The page content as Markdown
+  - A saved file, if you ask
+  - Page title and details (optional)
+  - Text without menus and ads
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

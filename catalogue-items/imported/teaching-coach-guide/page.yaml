@@ -6,6 +6,26 @@ summary: Give it a teaching focus. Get questions, a conversation flow and follow
 job: teach-and-train
 headline: Teaching coach conversation guide
 subhead: Give it a teaching focus. Get questions, a conversation flow and follow-up actions for a coaching session.
+explain: |
+  A coaching session planned before you walk in: opening questions, a flow for the conversation and clear follow-up steps. It keeps the teacher doing the thinking, so the change is theirs and more likely to stick.
+
+  The skill follows a partnership approach and the Impact Cycle. The coach asks, listens and lets the teacher choose the focus. The plan covers setting a goal, looking at evidence, picking one strategy and agreeing a small action with a date. It adjusts for the teacher's experience, mood and the relationship stage, for example an eager new teacher versus someone resistant. Prompts are open questions, not advice. It ends with a short note of what was agreed.
+when:
+  - You coach a teacher and want a clear structure for the meeting.
+  - A teacher is defensive after an observation and you need a gentler route in.
+  - You find yourself talking more than listening in coaching.
+  - You want a good opening question for an overwhelmed new teacher.
+  - You need follow-up actions that are small and specific.
+you_give:
+  - The teacher's coaching focus
+  - Brief background on the teacher
+  - Observation notes (optional)
+  - Where you are in the coaching cycle (optional)
+you_get:
+  - Opening and probing questions
+  - A conversation flow with timings
+  - Tips for the teacher's mood and stage
+  - Agreed follow-up actions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

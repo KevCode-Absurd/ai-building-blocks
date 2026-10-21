@@ -6,6 +6,25 @@ summary: Name a brand or topic. Get what people say about it, grouped by theme, 
 job: research-topics
 headline: Social listening brief writer
 subhead: Name a brand or topic. Get what people say about it, grouped by theme, with notable posts. Collects data from websites.
+explain: |
+  A brief on what people are saying about a brand, product or topic, grouped by theme with real posts to back it up. You name the subject, and the skill gathers public posts and comments across platforms.
+
+  Sources include Reddit, TikTok, YouTube, Instagram, LinkedIn and Threads. It reads posts and comments, then groups them into themes such as praise, complaints and questions. Each theme carries cited examples and a note on how far to trust the sentiment, since it is a sample and not a poll. It uses the ScrapeCreators data service, so you need an API key and the service has costs. Use it for brand checks, product feedback and category research.
+when:
+  - You launched a product and want to know how it landed.
+  - You want the real complaints about a competitor.
+  - You need a quick read on a topic before a campaign.
+  - You are checking your brand's reputation before a meeting.
+you_give:
+  - The brand, product or topic
+  - The platforms to cover (optional)
+  - A time range (optional)
+  - A ScrapeCreators API key
+you_get:
+  - Themes grouped by what people say
+  - Cited posts and comments for each theme
+  - Praise and complaint patterns
+  - Notes on how reliable the sample is
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

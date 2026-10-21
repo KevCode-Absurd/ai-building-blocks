@@ -6,6 +6,25 @@ summary: Give it a sound file. Get loudness, noise and speech quality scores wit
 job: build-software
 headline: Audio quality metric picker
 subhead: Give it a sound file. Get loudness, noise and speech quality scores with the right metric chosen.
+explain: |
+  The right way to measure a sound, chosen before any maths is done. Say what you care about: loudness, background noise, speech clarity or room echo. The AI picks the proper MATLAB Audio Toolbox function and standard. It does not write its own version.
+
+  It covers loudness, roughness, speech scores like STOI and ViSQOL, noise ratings, broadcast loudness in LUFS, reverb time and tones. It asks questions before it computes. It shows how to calibrate with your microphone's sensitivity and how to convert units. It also fixes common mistakes, such as asking for a function that does not exist. PESQ requests are sent to other options. You need MATLAB.
+when:
+  - You need to check a broadcast file meets loudness rules.
+  - A speech recording sounds muffled and you want a number for it.
+  - An office's noise level has to be rated against a standard.
+  - You have a microphone's datasheet and need correct sound levels.
+you_give:
+  - Your sound file or recording details
+  - What you want to measure
+  - Microphone sensitivity (optional)
+  - The standard you must meet (optional)
+you_get:
+  - The right function and standard for the goal
+  - Calibrated MATLAB code
+  - Scores for loudness, noise or speech quality
+  - Unit conversions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

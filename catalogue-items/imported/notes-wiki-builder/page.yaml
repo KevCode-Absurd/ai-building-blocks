@@ -6,6 +6,24 @@ summary: Give it what you learned. Get small linked notes and an index, so your 
 job: organise-work
 headline: Notes wiki builder
 subhead: Give it what you learned. Get small linked notes and an index, so your AI remembers it next time.
+explain: |
+  Your AI remembers what it learned. Instead of one giant notes file that rots, you get small linked files and an index, so the next session finds the fact without redoing the work.
+
+  The rule is one fact per file. Each has a one-line description that recall matches against, [[links]] to related files, and a single index line. The hard part is discipline: only keep what is lasting, such as a tool that fails silently or a limit nobody wrote down. Update an existing file instead of making a near-copy. Skip routine work, since filler makes recall worse. You pick a store, either the agent's memory folder or a shared wiki folder, and compile before you close a task.
+when:
+  - You just finished research and want it available next week.
+  - Your AI keeps re-learning the same hard-won fact.
+  - You say "save this" and want it done in a consistent way.
+  - Your single notes file is too long to be useful.
+you_give:
+  - What you learned or found
+  - Where notes are stored (memory folder or wiki)
+  - Existing notes to update (optional)
+you_get:
+  - Small single-fact files
+  - One-line descriptions and links
+  - An updated index
+  - Fewer duplicates
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

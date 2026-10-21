@@ -6,6 +6,26 @@ summary: Describe your production steps and times. Get the slowest step found an
 job: plan-supply-chain
 headline: Factory bottleneck finder
 subhead: Describe your production steps and times. Get the slowest step found and ranked fixes with expected output gains.
+explain: |
+  The one step that limits your whole line, found and named, with a ranked list of fixes and the output each could add. Speeding up any other step changes nothing, so this tells you where to spend.
+
+  You describe your steps, cycle times, machines, people and the way work moves through them. The skill maps the flow, then works out the capacity of each step and compares them. The slowest one is the bottleneck. It then checks the cause, such as waiting, setup time, breakdowns or uneven work, and tests what-if changes like adding a shift or balancing tasks. It uses ideas from lean flow mapping and queue maths. You get fixes ranked by gain per effort.
+when:
+  - Your production line makes less than the machines should allow.
+  - Work piles up in front of one station and you do not know why.
+  - You are about to buy equipment and want proof it is the right place.
+  - Lead times grew and you cannot see which step caused it.
+you_give:
+  - The list of steps in order
+  - Time per step, or a rough guess
+  - Machines, staff and shifts per step
+  - Known problems or breakdowns (optional)
+  - Your goal, such as more units per day
+you_get:
+  - The bottleneck step named
+  - Capacity of every step side by side
+  - Ranked fixes with expected output gain
+  - What-if results for the best options
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

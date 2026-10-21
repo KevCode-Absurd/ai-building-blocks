@@ -6,6 +6,27 @@ summary: Give it a trained model. Get which inputs matter, why it made each call
 job: build-software
 headline: Model decision explainer
 subhead: Give it a trained model. Get which inputs matter, why it made each call, and where it goes wrong.
+explain: |
+  A clear answer to why your trained model says what it says. You see which inputs matter most, why it gave one case a certain score, and where it keeps getting things wrong.
+
+  The skill works in MATLAB on models trained on rows and columns of data. It matches your question to a method: ranking the inputs, showing how one input moves the result, explaining a single prediction, studying the errors, or comparing groups of people. It works with built-in models and with custom ones you wrap in a prediction function. It is not for images or text models, and it does not train or tune anything.
+when:
+  - Your manager asks which factors drive the model.
+  - One customer got a bad score and you must explain why.
+  - The model does worse on one group and you need to see how much.
+  - You want to know what small change would flip a prediction.
+you_give:
+  - A trained model on table data
+  - The data it was trained or tested on
+  - The question, such as why a case or which inputs
+  - Groups to compare (optional)
+  - MATLAB with the Statistics and Machine Learning Toolbox
+you_get:
+  - A ranked list of the inputs that matter
+  - A plain explanation of single predictions
+  - Charts of how one input changes the answer
+  - A review of the cases it got wrong
+  - A comparison across groups
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it slow code. Get a faster version, one change at a time, with tes
 job: test-and-fix-code
 headline: Slow code speeder
 subhead: Give it slow code. Get a faster version, one change at a time, with tests run before and after.
+explain: |
+  Faster code that still gives the same answers. You hand over code that works but is too slow on big inputs, and the skill cuts its time or memory cost one change at a time.
+
+  Its firm rule is that tests must pass before and after every change. If you have no tests, it first writes one from a sample input and the current output. Then it makes a single transformation, such as replacing a nested scan with a lookup table or running independent awaits together, and runs the tests. A failed test means the change is reverted and the work stops. It also fixes N+1 queries in common ORMs. No change goes in without proof.
+when:
+  - A function times out when the list gets large.
+  - Nested loops are slowing a report that used to be quick.
+  - An ORM makes one database call per row.
+  - You fear a speed-up will quietly break results.
+you_give:
+  - The slow code
+  - Test files, or a sample input (optional)
+  - The size of data that causes trouble
+you_get:
+  - A faster version of the code
+  - A test that locks in current behaviour
+  - One change at a time, each tested
+  - A note on the time or memory saved
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

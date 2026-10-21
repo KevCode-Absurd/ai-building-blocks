@@ -6,6 +6,25 @@ summary: Name your compute budget and goal. Get code to train a large model that
 job: build-software
 headline: Mixture of experts trainer
 subhead: Name your compute budget and goal. Get code to train a large model that only uses part of itself per word.
+explain: |
+  Code to train a large language model that uses only part of itself for each token, so you get more capacity for the same compute. Give your compute budget and goal and you get a working setup, not just theory.
+
+  In a mixture of experts model, a router sends each token to a few expert sub-networks, for example two of eight. Only those run, so cost per token stays lower than a dense model of the same size. The skill supplies a sparse layer in PyTorch and shows how to train it with DeepSpeed, Megatron-DeepSpeed or Hugging Face tools. It draws on models like Mixtral and Switch Transformers. It needs Python, GPUs and the listed libraries.
+when:
+  - You have limited GPU budget and want a bigger model.
+  - You want to try the Mixtral-style design in your own training.
+  - You need experts that specialise by language or domain.
+  - You want lower cost per token at run time.
+you_give:
+  - Your compute budget and GPUs
+  - Your goal, such as language or domain
+  - Model size and expert count (optional)
+  - Your training framework preference (optional)
+you_get:
+  - A sparse expert layer in PyTorch
+  - Training setup for your framework
+  - Install steps
+  - Guidance on expert and router settings
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

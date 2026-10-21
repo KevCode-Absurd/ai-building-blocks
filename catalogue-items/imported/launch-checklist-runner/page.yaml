@@ -6,6 +6,25 @@ summary: Say what you are releasing. Get a pre-launch checklist, a staged rollou
 job: ship-and-host
 headline: Launch checklist runner
 subhead: Say what you are releasing. Get a pre-launch checklist, a staged rollout and a rollback plan.
+explain: |
+  A launch you can roll back if it goes wrong. Say what you are releasing, and the skill builds a checklist that covers code quality, security, performance, infrastructure and monitoring. That includes passing tests, no secrets in code, clean dependency audits, limited cross-origin access and rate limits on login.
+
+  It then plans a staged rollout so a small group sees the change first, defines what to watch, and writes a rollback plan before you start, not after something breaks. It suits any release with risk, from a first production deploy to a data migration or a beta launch. Every item is a box you can tick.
+when:
+  - You are shipping a feature to production for the first time.
+  - You are about to migrate data and cannot afford to lose any.
+  - You want to release to ten percent of users before everyone.
+  - Your team has no agreed rollback steps.
+you_give:
+  - What is being released
+  - Where it runs
+  - Your current tests and monitoring
+  - Who needs to approve (optional)
+you_get:
+  - A pre-launch checklist
+  - A staged rollout plan
+  - What to monitor after release
+  - A rollback plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

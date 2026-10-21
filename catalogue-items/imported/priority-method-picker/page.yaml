@@ -6,6 +6,25 @@ summary: Describe your backlog and team. Get the best way to rank it from nine m
 job: build-product
 headline: Priority method picker
 subhead: Describe your backlog and team. Get the best way to rank it from nine methods, with the steps to use it.
+explain: |
+  Pick the right way to rank your backlog from nine proven methods, then get the steps to use it. Describe your list and team and the skill matches a method to your situation.
+
+  It covers Opportunity Score, ICE, RICE and others with their formulas. Opportunity Score uses survey data on importance and satisfaction to rank customer problems. ICE and RICE score ideas on impact, confidence, reach and effort. The key rule is to rank problems, not features, and never let customers design solutions. You get the method, a scoring template and an example of how to read the results.
+when:
+  - Your backlog has 60 items and everyone ranks them differently.
+  - You need a fair way to say no to requests.
+  - You have survey results on customer needs.
+  - Your team debates features without any scoring system.
+you_give:
+  - List of items to rank
+  - Team size and context
+  - Customer survey data (optional)
+  - Time and data available
+you_get:
+  - Recommended method
+  - Formula and scoring steps
+  - Scoring template
+  - Ranked list guide
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

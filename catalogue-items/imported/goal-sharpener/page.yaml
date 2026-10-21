@@ -6,6 +6,25 @@ summary: Give it a fuzzy aim. Get a clear goal with a number to hit and a finish
 job: plan-strategy
 headline: Goal sharpener
 subhead: Give it a fuzzy aim. Get a clear goal with a number to hit and a finish line.
+explain: |
+  A vague aim becomes a goal you can actually finish. Tell it what you want and you get back one clear goal with a number to hit, proof you will accept, and a limit on scope.
+
+  It first checks whether the goal needs work at all. If so, it restates your aim in concrete terms, adds a measure wherever the area allows one, and repairs weak spots such as activity words like improve or work on. The aim is an objective an agent or a person can pursue honestly and then check. It writes only the goal. It does not build plans, logs or other files around it.
+when:
+  - Your goal says improve the website and nobody knows when it is done.
+  - You are about to start a long AI task and want a clear target.
+  - A team goal has no number attached.
+  - You are not sure if your goal is too big to finish.
+you_give:
+  - Your rough aim
+  - Context on why it matters (optional)
+  - Any deadline or limits (optional)
+  - Current numbers (optional)
+you_get:
+  - A clear goal statement
+  - A number or measure to hit
+  - A finish line
+  - Notes on what was weak and fixed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

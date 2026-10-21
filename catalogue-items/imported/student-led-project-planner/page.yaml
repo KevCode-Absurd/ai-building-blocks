@@ -6,6 +6,27 @@ summary: Describe a student's project idea. Get a plan with mentor check-ins, li
 job: teach-and-train
 headline: Student-led project planner
 subhead: Describe a student's project idea. Get a plan with mentor check-ins, links to your curriculum goals and reflection.
+explain: |
+  A student has a project idea. You need to turn it into something doable, checked along the way, and tied to what the curriculum asks for. This skill drafts that plan.
+
+  Give it the idea, the student's level, the time they have, and the learning targets you must cover. It walks through five phases. Ideation checks whether the idea is feasible. A gap analysis lists what the student still needs to learn. Planning sets milestones. Execution adds mentor check-ins. Completion ends with a defence of the work. You also get a tracking sheet and a guide for judging whether the scope is realistic.
+when:
+  - A student brings a big idea and you are not sure it can be finished in time.
+  - You need to show how a passion project meets curriculum goals.
+  - You mentor several independent projects and want one common structure.
+  - A project drifted and you want clearer check-in points.
+you_give:
+  - The student's project idea
+  - Year level
+  - Time available
+  - Curriculum targets to link to
+  - Your own expertise as a mentor (optional)
+you_get:
+  - A five-phase project plan
+  - A list of what the student needs to learn first
+  - Mentor check-in points
+  - A tracking sheet
+  - A feasibility check for the scope
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

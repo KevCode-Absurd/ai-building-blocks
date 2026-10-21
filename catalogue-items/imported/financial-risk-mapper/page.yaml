@@ -6,6 +6,26 @@ summary: Describe your exposures. Get risks listed and sized, with stress test s
 job: money-and-investing
 headline: Financial risk mapper
 subhead: Describe your exposures. Get risks listed and sized, with stress test scenarios and ways to limit each.
+explain: |
+  A list of the threats to your money, each sized in cost and likelihood, with stress tests and steps to limit them. It turns a vague worry into numbers you can act on.
+
+  You say whether you care about portfolio, credit or operational risk and over what time span. The skill works in order: identify, measure, reduce, monitor. For a portfolio it calculates value at risk at 95% and 99% confidence and explains it in plain words. It runs stress cases such as a rate spike or a sector crash. For counterparties it reviews default risk with models like the Altman Z-score. Each risk gets a fix and a way to track it. It is not investment advice.
+when:
+  - You want to know how much your portfolio could lose in a bad day.
+  - A customer or supplier looks shaky and you need to size your exposure.
+  - Your lender asks for a risk review.
+  - You need stress cases for a board paper.
+you_give:
+  - Your positions, exposures or counterparties
+  - Time horizon
+  - Price history or credit ratings (optional)
+  - Liquidity figures (optional)
+you_get:
+  - A ranked risk register
+  - VaR at two confidence levels
+  - Stress test results
+  - Mitigation steps
+  - A monitoring plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

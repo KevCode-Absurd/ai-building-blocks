@@ -6,6 +6,26 @@ summary: Give it a role and what the hiring manager wants. Get a search plan wit
 job: hire-people
 headline: Hiring search brief writer
 subhead: Give it a role and what the hiring manager wants. Get a search plan with channels, timeline and risks.
+explain: |
+  A one page plan to agree on before you start looking for candidates. Many searches fail because the recruiter and the hiring manager never agreed on who to find, where, how fast or what a good result looks like. This brief puts all of that on paper first.
+
+  Give it the role and what the manager asked for. It sets out the target companies and profiles, picks the mix of channels such as direct outreach, referrals, ads or an agency, and recommends whether to run the search contingent, retained or in-house. It adds a timeline with milestones, success measures, and the main risks, like a thin market or a pay mismatch.
+when:
+  - A hiring manager gives you a vague brief and expects fast results.
+  - You need to decide between an agency and an in-house search.
+  - The role is hard to fill and you want to set expectations early.
+  - A search is stuck and you need to change the approach.
+you_give:
+  - The role and what the hiring manager wants
+  - Location and pay range
+  - Deadline
+  - Budget for ads or agencies (optional)
+  - Whether the search is confidential (optional)
+you_get:
+  - A search brief to align the manager
+  - Target companies and candidate profiles
+  - A channel mix and timeline
+  - A risk list and questions for the manager
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

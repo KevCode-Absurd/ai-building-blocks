@@ -6,6 +6,25 @@ summary: Run it on your store. Get sessions, conversion and bounce rate for each
 job: audit-landing-page
 headline: Page traffic and conversion reader
 subhead: Run it on your store. Get sessions, conversion and bounce rate for each product and collection page.
+explain: |
+  A ranked list of your store's product and collection pages by visits, sales rate and bounce rate, so you see which pages earn their traffic and which waste it.
+
+  It connects to your Shopify store, reads the built-in analytics, and pulls visit data for each landing page over the last 30 days or a range you choose. It keeps only product and collection pages, then sorts by whichever measure you pick and shows the top 25. It only reads data and changes nothing. You need a Shopify store, a logged-in command-line session and permission to read reports.
+when:
+  - You want to know which product pages get visits but never sell.
+  - A collection page has a high bounce rate and you want proof.
+  - You are choosing which pages to improve first.
+  - You need a monthly page performance snapshot.
+you_give:
+  - Store address, such as mystore.myshopify.com
+  - Days to look back (optional, 30 by default)
+  - Page type and sort order (optional)
+  - Shopify login with report access
+you_get:
+  - Top pages ranked by visits, conversion or bounce
+  - Conversion and bounce rate for each page
+  - Product versus collection split
+  - Readable or JSON output
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

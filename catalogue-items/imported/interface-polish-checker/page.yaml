@@ -6,6 +6,25 @@ summary: Give it your page or component code. Get a list of spacing, type and la
 job: build-websites
 headline: Interface polish checker
 subhead: Give it your page or component code. Get a list of spacing, type and layout slips with a fix for each.
+explain: |
+  A list of spacing, type and layout slips in your page or component code, each with a reason and a fix. It cleans up the rough edges that make an interface look unfinished.
+
+  Give it a file and it checks against a firm baseline. For each problem it quotes the exact line, says in one short sentence why it matters, and offers a code-level fix. The baseline leans on Tailwind defaults, uses motion libraries only when script animation is needed, and respects your existing design, accessibility needs and framework choices. It is aimed at quick clean-up passes, not redesigns.
+when:
+  - A page works but looks slightly off and you cannot say why.
+  - You want a fast review before a launch.
+  - Heading sizes and spacing are inconsistent across components.
+  - AI-generated UI code needs tidying.
+  - You want specific line-level fixes, not general advice.
+you_give:
+  - The page or component file
+  - Your framework and styling setup
+  - Any design rules to keep (optional)
+you_get:
+  - A list of violations with quoted lines
+  - A short reason for each
+  - A concrete code fix
+  - Cleaner spacing and type
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

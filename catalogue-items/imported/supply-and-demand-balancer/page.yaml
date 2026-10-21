@@ -6,6 +6,25 @@ summary: Give it your stock and open orders. Get a plan to fill the right orders
 job: plan-supply-chain
 headline: Supply and demand balancer
 subhead: Give it your stock and open orders. Get a plan to fill the right orders first when you cannot fill them all.
+explain: |
+  When you cannot fill every order, a plan for who gets stock first. It makes the allocation fair, fast and easy to defend.
+
+  Give it your stock on hand, incoming supply and open orders with priorities. The skill works out available-to-promise, meaning what you can safely commit by date, then allocates supply by priority rules. For harder cases it uses an optimisation model that trades off customer importance, shortfalls and cost. It ends with a shortage report listing what stays unfilled and why. Python code is included for the calculations.
+when:
+  - A supplier delay leaves you short of stock for this week's orders.
+  - Two big customers want the same units.
+  - Sales keeps promising dates you cannot meet.
+  - You need a shortage report for management.
+you_give:
+  - Stock on hand
+  - Incoming supply and dates
+  - Open orders and quantities
+  - Customer priorities
+you_get:
+  - Available-to-promise by date
+  - An allocation of stock to orders
+  - A shortage report
+  - Optimised allocation (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

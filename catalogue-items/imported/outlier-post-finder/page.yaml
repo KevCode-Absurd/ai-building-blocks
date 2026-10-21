@@ -6,6 +6,25 @@ summary: Give it accounts. Get the posts that beat their normal reach, why they 
 job: grow-social
 headline: Outlier post finder
 subhead: Give it accounts. Get the posts that beat their normal reach, why they worked, and a swipe file. Collects data from websites.
+explain: |
+  The posts that did far better than usual for that account, with the reasons why and a swipe file to learn from. Raw view counts miss this, since big accounts always get big numbers.
+
+  You list creators, competitors or your own accounts. The skill pulls recent public posts on TikTok, Instagram, YouTube, Facebook or X through ScrapeCreators, then works out each account's normal level. A post counts as an outlier if it beats that baseline by a wide margin. It adds transcripts where it can, looks for repeat patterns in hooks, format and topic, and gives source links with practical takeaways. Needs a ScrapeCreators API key, which is a paid service.
+when:
+  - You want to know what really works for a competitor.
+  - You need hook ideas from posts that overperformed.
+  - You want to learn why one reel took off.
+  - You are building a swipe file for your content team.
+you_give:
+  - Accounts to analyse
+  - Platform
+  - A ScrapeCreators API key
+  - How far back to look (optional)
+you_get:
+  - Outlier posts ranked against each baseline
+  - Reasons they worked
+  - Repeatable patterns
+  - Source links and a swipe file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

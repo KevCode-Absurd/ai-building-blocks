@@ -6,6 +6,26 @@ summary: Say how your store should look. Get a built or edited theme with sectio
 job: build-websites
 headline: Shopify theme developer
 subhead: Say how your store should look. Get a built or edited theme with sections, templates and speed fixes.
+explain: |
+  A built or edited Shopify theme that looks the way you described, with sections, templates and speed fixes done. You get code you can preview and push to the store.
+
+  It explains the theme folder layout (layout, templates, sections, snippets, assets, config, locales) and starts from the Skeleton or Dawn theme. Then it writes sections and blocks that shop owners can move around in the theme editor, builds templates, and sets up the local dev loop with the Shopify CLI. It finishes with performance work and deploy steps. You need Node, the Shopify CLI and a Partner account.
+when:
+  - You want a new theme built to match your brand.
+  - You need to change a product page layout in an existing theme.
+  - You want sections your team can rearrange without code.
+  - Your store feels slow and you suspect the theme.
+you_give:
+  - How the store should look
+  - Which pages need work
+  - An existing theme to edit (optional)
+  - Shopify CLI and a Partner account
+you_get:
+  - "Theme files: sections, templates and snippets"
+  - Theme editor settings
+  - Local setup steps
+  - Speed fixes
+  - Deploy steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

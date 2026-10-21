@@ -6,6 +6,25 @@ summary: Give it a topic and keyword. Get a brief with search intent, outline, k
 job: get-found-in-search
 headline: Content brief writer
 subhead: Give it a topic and keyword. Get a brief with search intent, outline, key terms and links, ready for a writer.
+explain: |
+  A brief that tells a writer exactly what to write, so the first draft comes back close to done. It replaces the thin version of a keyword, a word count and a deadline.
+
+  Claude fills twelve fields that earn their place, including search intent, reader, outline, key terms, links to include, the angle and what a good result looks like. It leaves out fields that add length but no help. The brief sits between your content plan and the actual writing, and it works for a human writer or an AI one. You can also paste in existing briefs and ask Claude to audit why they produce weak content.
+when:
+  - Writers keep returning drafts that miss the point.
+  - You are handing a topic to a freelancer or an AI and need clear instructions.
+  - You want content that matches what searchers actually want.
+  - Your current briefs run long but still leave gaps.
+you_give:
+  - A topic and target keyword
+  - The reader and goal of the piece
+  - Competing pages to beat (optional)
+  - Links you want included (optional)
+you_get:
+  - A twelve-field brief
+  - A search intent summary
+  - A section-by-section outline
+  - Key terms and links to use
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

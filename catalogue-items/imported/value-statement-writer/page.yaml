@@ -6,6 +6,25 @@ summary: Give it your value proposition. Get versions for marketing, sales and o
 job: make-offer
 headline: Value statement writer
 subhead: Give it your value proposition. Get versions for marketing, sales and onboarding, ready to use.
+explain: |
+  Ready-to-use value statements for each group you sell to, in versions for marketing, sales and onboarding. You stop rewriting the same pitch for every audience.
+
+  You give the skill your value proposition and your segments. For each segment it writes a statement that names the person, states the main benefit and result, and points to the feature that makes it happen. The tone is clear and direct. The skill follows a worked example using a design tool to show the pattern: one statement for social media marketers, another for small business owners, each focused on what that person cares about. You can then reuse each version in ads, decks and welcome emails, adjusting length for each place.
+when:
+  - You have one pitch but three kinds of customer and they care about different things.
+  - Your sales deck sounds the same as your website.
+  - You are writing a welcome email and want to restate the value clearly.
+  - A new campaign needs a short line for each audience.
+you_give:
+  - Your value proposition
+  - The customer groups you serve
+  - The main features behind the benefit
+  - Where the copy will be used (optional)
+you_get:
+  - A statement for each customer group
+  - Versions for marketing, sales and onboarding
+  - Benefits tied to the features that deliver them
+  - Short and long lengths
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

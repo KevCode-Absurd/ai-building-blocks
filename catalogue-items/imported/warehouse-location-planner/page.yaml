@@ -6,6 +6,25 @@ summary: Give it your customers and demand. Get how many warehouses you need and
 job: plan-supply-chain
 headline: Warehouse location planner
 subhead: Give it your customers and demand. Get how many warehouses you need and where to put them.
+explain: |
+  An answer to how many warehouses you need and where they should go. It balances shipping cost, delivery speed and the cost of running each site.
+
+  You give your customer locations, demand by area, where products come from and your service promise, such as next-day delivery. The skill looks at your current network, then tests options with fewer or more sites. It checks the cost of shipping in, storing and delivering out. It covers central and regional sites, and cross-docking, which means moving goods straight through. It names candidate locations and shows what each option does to cost and delivery time.
+when:
+  - Your customers are spread out and shipping costs keep rising.
+  - You want faster delivery and wonder if a second warehouse would pay.
+  - You are growing into a new region.
+  - You want to close a site and need to see the effect.
+you_give:
+  - Customer or order locations with volumes
+  - Where products come from
+  - Your delivery time target
+  - Current warehouse locations and costs
+you_get:
+  - A recommended number of sites
+  - Candidate locations
+  - Cost and delivery time per option
+  - A trade-off summary for your decision
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

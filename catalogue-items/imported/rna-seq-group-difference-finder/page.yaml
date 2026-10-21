@@ -6,6 +6,26 @@ summary: Give it gene counts for two or more groups. Get which genes changed, wi
 job: research-topics
 headline: RNA-seq group difference finder
 subhead: Give it gene counts for two or more groups. Get which genes changed, with checks, corrected p-values and plots.
+explain: |
+  A list of genes that really changed between your groups, with corrected p-values, effect sizes and plots, from the PyDESeq2 tool in Python. Checks come first so a bad input does not give a confident wrong answer.
+
+  You give raw integer counts and a sample sheet. The skill makes sure samples match, uses only raw counts (not TPM or FPKM), and sets up the design and the exact comparison you want. It runs the Wald test, corrects for many tests so false hits are controlled, and shrinks effect sizes to match the model. Results come with volcano and other plots. It insists on true biological replicates, since cells or lanes from one donor do not count.
+when:
+  - You have counts from treated and control samples and want the changed genes.
+  - You need a design with batch or other covariates.
+  - A reviewer asked for corrected p-values and effect sizes.
+  - You want volcano plots for a paper.
+you_give:
+  - A raw counts table, samples by genes
+  - A sample sheet with group labels
+  - The comparison to test
+  - Covariates such as batch (optional)
+  - Python 3.11 or newer with PyDESeq2
+you_get:
+  - A table of genes with changes and corrected p-values
+  - Shrunk effect sizes
+  - Volcano and related plots
+  - Input checks and a note on what was excluded
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

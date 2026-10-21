@@ -6,6 +6,25 @@ summary: Describe your pipeline or rail operation. Get which TSA security rules 
 job: check-contracts
 headline: Transport cyber rules checker
 subhead: Describe your pipeline or rail operation. Get which TSA security rules apply, your gaps and required plans.
+explain: |
+  For pipeline, freight rail, transit and bus operators in the US, it is hard to tell which TSA security directives cover you. This skill tells you which apply, where your gaps are, and which plans you must write.
+
+  It asks which sector and directive series you fall under, then matches your operation to the rules. It supports gap tables with status, evidence needed and priority. It drafts the plans the rules call for, such as the cybersecurity implementation plan, operational plan and assessment plan, and lays out the steps and timing for reporting incidents to CISA. It also reviews how your office and operational networks are separated. It is guidance, so check final decisions with counsel or TSA.
+when:
+  - You run a pipeline or railroad and are not sure TSA directives apply.
+  - You must write a cybersecurity implementation plan.
+  - You need to know what to report to CISA and how fast.
+  - You want a gap list before a TSA review.
+you_give:
+  - Your sector, such as pipeline, freight rail or transit
+  - What your critical systems are
+  - Your current security controls
+  - Network layout between IT and operations (optional)
+you_get:
+  - Which TSA directives apply
+  - A gap table with priorities
+  - Draft plan sections
+  - An incident reporting procedure
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

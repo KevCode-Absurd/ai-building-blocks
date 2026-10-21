@@ -6,6 +6,27 @@ summary: Describe a feature idea. Get a spec with goals, non-goals, success meas
 job: build-product
 headline: Feature spec writer
 subhead: Describe a feature idea. Get a spec with goals, non-goals, success measures and acceptance checks.
+explain: |
+  A product requirements document for one feature, with the problem, goals, non-goals, success measures and checks for each requirement. It is written so engineers can build from it.
+
+  You can start with a feature name, a problem, a customer request or a vague idea. The skill asks the most important questions first: who has the problem, how you will know it worked, and what limits apply. If your tracker or knowledge base is connected, it pulls related tickets and research. The spec lists user stories, requirements ranked by priority, acceptance criteria, edge cases, open questions and a rollout idea. It marks what is out of scope so the project does not grow.
+when:
+  - Sales keeps asking for single sign-on and you need to define it.
+  - An idea exists but nothing is written down yet.
+  - Engineering asks for acceptance criteria before starting.
+  - You want to separate must-haves from nice-to-haves.
+you_give:
+  - A feature name, problem or request
+  - Target users
+  - How you will measure success
+  - Constraints and deadlines (optional)
+  - Links to research or tickets (optional)
+you_get:
+  - A full spec document
+  - Goals and non-goals
+  - Acceptance criteria
+  - Success metrics
+  - A list of open questions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

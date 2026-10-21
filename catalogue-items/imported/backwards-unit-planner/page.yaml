@@ -6,6 +6,25 @@ summary: Give it your standards. Get a unit planned from the end result, then th
 job: teach-and-train
 headline: Backwards unit planner
 subhead: Give it your standards. Get a unit planned from the end result, then the proof of learning, then the activities.
+explain: |
+  A full teaching unit planned from the end result backwards. Give it the standards or outcomes, the year group and how long the unit lasts. The AI fills in three stages from the Understanding by Design method.
+
+  Stage one sets the lasting ideas, key questions and what students should know and do. Stage two decides the proof of learning, such as a task or test, before any lessons exist. Stage three then plans the learning activities lesson by lesson so each one leads toward that proof. A last alignment check makes sure every lesson serves a goal and every goal is assessed.
+when:
+  - You start a new unit and have only the standards.
+  - An old unit is a pile of activities with no clear point.
+  - Students finish lessons but can't do the final task.
+  - You need a unit plan to share with your department.
+you_give:
+  - Desired outcomes or standards
+  - Year group
+  - Unit length
+  - Resources and student needs (optional)
+you_get:
+  - Lasting understandings and key questions
+  - A final assessment plan
+  - A lesson-by-lesson learning plan
+  - An alignment check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

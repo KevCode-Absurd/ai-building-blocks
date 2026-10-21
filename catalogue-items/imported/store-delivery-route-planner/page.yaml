@@ -6,6 +6,27 @@ summary: Give it your stores, order sizes and delivery windows. Get weekly truck
 job: plan-supply-chain
 headline: Store delivery route planner
 subhead: Give it your stores, order sizes and delivery windows. Get weekly truck routes that cover every store at less cost.
+explain: |
+  Weekly truck routes that visit every store on time and cost less to run. You describe your stores, how much each orders, delivery windows and your vehicles, and get a route plan that fits drivers' hours and truck capacity.
+
+  This is for companies that deliver straight to stores, like drinks, snacks or bread, with small frequent drops. The plan balances stop count, drive time, unload and shelving time, and refrigeration or equipment needs. It separates must-serve stops from optional ones and sets how often each store is visited. It then points out overtime risks and ways to cut miles per stop. It works from the facts you share, so more detail gives better routes.
+when:
+  - Your drivers cover the same area twice and miles per stop keep rising.
+  - Stores complain about deliveries that miss their receiving hours.
+  - You are adding a truck or a driver and must re-cut the routes.
+  - You want to know the cost per delivery before and after a change.
+you_give:
+  - Store list with addresses and order sizes
+  - Delivery windows and receiving hours
+  - Vehicle types and capacity
+  - Driver shift rules
+  - Current miles and cost per stop (optional)
+you_get:
+  - Weekly routes by truck
+  - Visit frequency per store
+  - Time and distance per route
+  - Overtime and capacity warnings
+  - Ideas to cut cost per stop
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

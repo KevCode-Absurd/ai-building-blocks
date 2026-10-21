@@ -6,6 +6,25 @@ summary: Give it a page or topic. Get edits that help ChatGPT, Perplexity and Go
 job: get-found-in-search
 headline: AI search visibility optimiser
 subhead: Give it a page or topic. Get edits that help ChatGPT, Perplexity and Google AI answers cite you.
+explain: |
+  Edits to a page or topic that make AI search tools more likely to pull it into answers and name you as the source. The target is Google AI Overviews, ChatGPT, Perplexity and similar tools.
+
+  First it checks where you stand: what the AI says today for your key questions, who gets cited, whether your content can be lifted out cleanly, and whether AI bots can get in. Then it works on three things. Structure means short answer blocks, clear definitions, comparisons and FAQs. Authority means named sources, fresh facts and expert bylines. Presence means being on the sites AI trusts. It also covers schema markup and tracking.
+when:
+  - Competitors get named in AI answers and you do not.
+  - AI describes your price or features wrongly.
+  - You want existing blog posts rewritten so an answer can be lifted from them.
+  - You need a way to track AI mentions over time.
+you_give:
+  - A page address or a topic
+  - Your key customer questions
+  - Your competitors (optional)
+  - Your product or brand background (optional)
+you_get:
+  - A check of today's AI answers on your topic
+  - Page edits that make content easy to quote
+  - Schema markup suggestions
+  - A tracking list of prompts to monitor
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

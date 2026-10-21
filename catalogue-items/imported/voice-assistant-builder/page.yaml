@@ -6,6 +6,25 @@ summary: Say what your voice assistant should do. Get a working agent that talks
 job: help-customers
 headline: Voice assistant builder
 subhead: Say what your voice assistant should do. Get a working agent that talks with customers, with tools and a web embed.
+explain: |
+  A voice agent that talks with your customers, answers from your instructions and can run actions you define, plus a snippet to put it on your website. You can test it by speaking to it.
+
+  The skill sets up the ElevenLabs agent platform. You describe the job, the first line it says, the language and the voice. It then creates the agent with the command line or the Python or JavaScript library, connects tools and knowledge, and pushes it live. It also covers the choice of language model and widget embedding. It needs an ElevenLabs account and API key, and usage is billed by that service.
+when:
+  - You want a phone or website agent that answers common customer questions.
+  - You need a voice bot that can look things up or book something.
+  - You want to test a voice assistant idea before building a full system.
+  - You need a talking helper embedded on your site.
+you_give:
+  - What the assistant should do and say
+  - The voice and language you want
+  - Any tools or actions it should call (optional)
+  - An ElevenLabs account and API key
+you_get:
+  - A working voice agent
+  - Setup commands or code
+  - Tool connections for actions
+  - An embed snippet for your site
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

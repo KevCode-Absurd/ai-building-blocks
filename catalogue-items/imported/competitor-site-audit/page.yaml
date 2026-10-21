@@ -6,6 +6,25 @@ summary: Name your market. Get what leading sites do well and badly, and the bar
 job: study-competitors
 headline: Competitor site experience auditor
 subhead: Name your market. Get what leading sites do well and badly, and the bar your own site must meet.
+explain: |
+  A picture of what the best websites in a field do well, where they fall short, and the experience level your own site must reach to be taken seriously. It also shows a gap that even the leaders share, which could become your edge.
+
+  You list three to six leading sites in the market. Claude views each in a real browser, not just the page code, and notes shared patterns in brand, layout, navigation, trust cues and key journeys. It separates what the leaders all do, which is the minimum bar, from what only some do. It then names recurring weaknesses. It is a design and experience review, so pair it with a technical check for search or accessibility.
+when:
+  - You are building a site in a market you do not know yet.
+  - You need to know what buyers expect before you design anything.
+  - You want a positioning angle that none of the leaders cover.
+  - A strategy review needs the design side of the field, not just search.
+you_give:
+  - The market or vertical
+  - Three to six leading sites
+  - Your site type, such as a catalogue or booking site
+  - Browser access to view the sites
+you_get:
+  - Shared patterns across the leaders
+  - A minimum experience bar
+  - Common weaknesses
+  - A shared gap you could own
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it your resume and a target job. Get a review against ten best pra
 job: hire-people
 headline: Product manager resume reviewer
 subhead: Give it your resume and a target job. Get a review against ten best practices and a version tailored to the role.
+explain: |
+  A PM resume reviewed line by line against ten best practices, with suggestions taken straight from your own bullet points. If you add a job posting, the feedback and rewrite are tuned to that role.
+
+  Claude opens by naming what already works. It then goes through each practice in turn, covering things like the XYZ+S formula for bullets (what you achieved, how much, how, and the scale), keyword match, tailoring to the job and structure. For each it says what is working, what is not, and shows a better version. It finishes with a tailored resume draft you can edit.
+when:
+  - You are applying for product manager roles.
+  - Your bullets list duties and show no results.
+  - You want your resume to match a specific job posting.
+  - You need a second opinion before sending applications.
+you_give:
+  - Your resume text
+  - A target job posting (optional)
+  - Your target seniority or company type (optional)
+you_get:
+  - Feedback on ten best practices
+  - Rewritten bullets using your own work
+  - Keyword gaps against the posting
+  - A tailored resume version
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

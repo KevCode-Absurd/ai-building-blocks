@@ -6,6 +6,25 @@ summary: Say who it is for and what you need. Get one clear email with the right
 job: write-and-tell-stories
 headline: Email drafter
 subhead: Say who it is for and what you need. Get one clear email with the right tone and a call to action.
+explain: |
+  One clear email, written for the person who will read it. Say who it is for and what you need, and you get a subject line, body and call to action in the right tone.
+
+  The skill works in six steps. First, pin down the type of email, such as outreach, follow-up or support reply, and the goal. Second, size up the reader and set the tone. Third, write a specific subject line under 60 characters. Fourth, build the body: a short hook, two or three tight paragraphs, then one ask. Fifth, add a sign-off to match. Sixth, check it against a list before handing it back.
+when:
+  - You need a cold email that gets a reply.
+  - You are writing a hard follow-up and want the tone right.
+  - You must answer an upset customer.
+  - You have the points but not the words.
+you_give:
+  - Type of email
+  - Who it is for
+  - What you want to happen
+  - Key points and tone (optional)
+you_get:
+  - A subject line
+  - A complete email draft
+  - One clear call to action
+  - A quick checklist review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

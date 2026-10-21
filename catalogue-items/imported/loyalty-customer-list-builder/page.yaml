@@ -6,6 +6,25 @@ summary: Get your top-spending customers tagged and exported, ready for a loyalt
 job: run-your-store
 headline: Loyalty customer list builder
 subhead: Get your top-spending customers tagged and exported, ready for a loyalty program. Adds tags to live customer records.
+explain: |
+  A list of your best customers, tagged inside Shopify and exported, ready to invite into a loyalty program or a VIP campaign. It changes live customer records, so run it in preview first.
+
+  You set a minimum number of orders and a minimum lifetime spend. The defaults are three orders and 200 in your store currency. It reads all matching customers, 250 at a time, and adds a tag you choose, loyalty-vip by default. Then it exports the list with names, emails, order counts and totals. A dry run shows who would be tagged without touching anything. It handles only the data. It needs a signed-in Shopify CLI.
+when:
+  - You want to find your top spenders and treat them differently.
+  - You are launching a VIP offer and need the audience list.
+  - You want customers tagged so your email tool can target them.
+  - You want to test your thresholds before changing any records.
+you_give:
+  - Your store domain
+  - Minimum orders and spend
+  - The tag name (optional)
+  - Dry run or live run
+you_get:
+  - Qualifying customers tagged
+  - An exported customer list
+  - A count of who qualified
+  - A preview of changes when dry run is on
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

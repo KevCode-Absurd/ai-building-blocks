@@ -6,6 +6,25 @@ summary: Ask about a stock. Get short interest, big fund owners, insider filings
 job: money-and-investing
 headline: Ownership and short interest lookup
 subhead: Ask about a stock. Get short interest, big fund owners, insider filings, analyst targets and dividend dates from Fintel.
+explain: |
+  Facts on who owns a stock and who is betting against it, from Fintel data in one answer. You see short interest, big fund holders, insider filings, analyst targets and dividend dates.
+
+  You ask about a ticker. The skill checks for your Fintel API key, then calls read-only endpoints for borrow rates, short volume, fails to deliver, institutional holdings from 13F filings and insider trades. It never uses the write endpoints that create lists or alerts. Results are summarised so you can quickly see crowded shorts, rising fund ownership or insiders buying. Needs a paid Fintel API key. This is research, not personal investment advice.
+when:
+  - A stock is moving and you want to know if shorts are involved.
+  - You want to see which funds bought or sold last quarter.
+  - You are checking insider buying before a decision.
+  - You need the next dividend date and analyst targets in one place.
+you_give:
+  - A stock ticker
+  - A Fintel API key
+  - The question you want answered (optional)
+you_get:
+  - Short interest and borrow rates
+  - Major institutional owners
+  - Insider transaction filings
+  - Analyst price targets
+  - Dividend dates
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

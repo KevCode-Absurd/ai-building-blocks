@@ -6,6 +6,24 @@ summary: Point it at a codebase. Get a product requirements document built from 
 job: build-product
 headline: Code to requirements writer
 subhead: Point it at a codebase. Get a product requirements document built from its screens, data and flows.
+explain: |
+  A product requirements document built from the code you already have. It is written in plain business language, yet detailed enough for an engineer or an AI agent to rebuild each page and endpoint.
+
+  It works in three passes: a scan of the whole project, a page-by-page look at routes, components, models and APIs, then a structured write-up. It reads React, Vue, Angular, Next.js, Django, FastAPI, NestJS and others. It separates real API calls from mock data, lists every status code and constant, and pulls out data models. Two Python scripts help with scanning and folder setup, and a checklist tests the result for gaps.
+when:
+  - You inherited an app with no documentation.
+  - You want to rebuild a product on a new stack.
+  - A stakeholder needs to see what the app does without reading code.
+  - You must hand an AI agent a spec of an existing product.
+you_give:
+  - A codebase, front end, back end or both
+  - Python to run the helper scripts
+  - Pages to focus on (optional)
+you_get:
+  - A requirements document
+  - Page and endpoint descriptions
+  - Data model and status code lists
+  - Real versus mock API notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

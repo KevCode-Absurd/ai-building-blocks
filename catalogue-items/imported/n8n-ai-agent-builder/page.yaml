@@ -6,6 +6,25 @@ summary: Say what your n8n agent should do. Get the agent, tools, memory and rev
 job: connect-tools
 headline: n8n AI agent builder
 subhead: Say what your n8n agent should do. Get the agent, tools, memory and review steps set up the right way.
+explain: |
+  An n8n AI agent that does one job well, instead of an over-built mess of nodes. The skill starts by asking if you need an agent at all, since a simple text chain or classifier is often easier to run and debug.
+
+  If an agent fits, it guides you through the parts: the chat model, memory, the tools the agent can call, and an output parser for structured answers. It covers retrieval from your documents, classifiers and extractors too. It checks each node against your live n8n setup and keeps keys in n8n credentials. Any step that sends messages, writes data or spends money is shown to you for approval before it runs.
+when:
+  - You want an n8n agent that can search your docs and answer questions.
+  - You are not sure whether to use an agent or a simple AI chain.
+  - Your agent returns messy text and you need clean fields from it.
+  - You want a person to approve the agent's actions before they happen.
+you_give:
+  - What the agent should do
+  - The tools or apps it can reach
+  - Access to your n8n setup (optional)
+  - Rules for when a human must check its work (optional)
+you_get:
+  - A choice of node type with reasons
+  - A wired agent with model, memory and tools
+  - Structured output settings
+  - Approval steps for risky actions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

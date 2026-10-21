@@ -6,6 +6,25 @@ summary: "Point it at a release. Get a read-only report of real deploy risks: mi
 job: ship-and-host
 headline: Release readiness reviewer
 subhead: "Point it at a release. Get a read-only report of real deploy risks: migrations, config, order and rollback."
+explain: |
+  A short report listing the real reasons a release could fail on deploy. You find the missing migration, the absent setting or the wrong rollout order before users do.
+
+  It works read-only. It compares your change against a checklist covering database migrations, configuration, secrets, queues, caches, stored files and rollback. Each finding names the module, the evidence, the likely owner, the risk and a fix, sorted from most to least serious. Clean items are left out so the report stays short. Where evidence is unclear but the risk is high, it lists a question to confirm. Secrets are never printed, only their location and name.
+when:
+  - You are about to deploy and want a second pair of eyes on the risks.
+  - A pull request touches database tables and config together.
+  - You need a go or no-go list for a launch meeting.
+  - You want to know if a rollback would actually work.
+you_give:
+  - Release branch, tag or git range
+  - Deploy notes or pipeline files (optional)
+  - Environment details (optional)
+  - Who owns each service (optional)
+you_get:
+  - Ranked list of blockers and risks
+  - Evidence and owner for each item
+  - Recommended fix for each item
+  - Questions to confirm before release
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,27 @@ summary: Name your site and topic. Get a ranked keyword list, including question
 job: get-found-in-search
 headline: Keyword research planner
 subhead: Name your site and topic. Get a ranked keyword list, including question searches, grouped by what people want.
+explain: |
+  A ranked list of what people search for in your topic, grouped by what they want. Give it your site, topic, audience and goal: rank, convert or educate. Add a location, competitor links or keywords you already care about if you have them.
+
+  The skill collects candidate terms, including questions people ask, and sorts each by intent: to learn, to compare, to buy or to find a specific site. It then ranks them by value and effort. If a browser or data service is available it uses live data, and otherwise it says clearly which numbers are estimates. The result shows which terms to target first and what content each needs.
+when:
+  - You are launching a site and do not know what to write about first.
+  - You want to find question searches your customers type.
+  - You need to see which terms fit a sale and which fit education.
+  - You run a local business and want searches for your area.
+you_give:
+  - Your topic and what the site does
+  - Your target audience
+  - "Your goal: rank, convert or educate"
+  - Competitor links and keywords you care about (optional)
+  - A location (optional)
+you_get:
+  - A ranked keyword list
+  - Question searches
+  - Terms grouped by intent
+  - Gaps compared with competitors
+  - A note on which numbers are estimates
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

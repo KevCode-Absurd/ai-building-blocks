@@ -6,6 +6,26 @@ summary: Describe your finance systems. Get controls matrix rows, test steps and
 job: check-contracts
 headline: IT controls audit planner
 subhead: Describe your finance systems. Get controls matrix rows, test steps and a rating for any IT control gaps.
+explain: |
+  Control matrix rows, test steps and a rating for the IT systems that feed your financial statements. Describe your finance applications and how they are run. The skill starts from the financial statements and works down to the systems that matter, then covers the four control areas: access, program changes, computer operations and system development.
+
+  For each system and area it writes the risk, the control, its owner and the evidence. It then drafts test scripts for design and operating checks, and grades any gaps as deficiencies. It also explains which SOX rules apply to your company size, and flags pending rule changes without applying them. It is a practitioner aid, not an audit opinion.
+when:
+  - Your company is going public and needs IT controls ready.
+  - You must document who can change your finance systems.
+  - An auditor found an IT control gap and you must rate it.
+  - You need test steps for user access reviews and change approvals.
+you_give:
+  - A list of finance systems and who runs them
+  - Your company size or filer status
+  - Existing controls and policies (optional)
+  - Test results or exceptions (optional)
+you_get:
+  - A risk and control matrix
+  - Narratives and test scripts
+  - A deficiency rating for gaps
+  - A note on which SOX rules apply to you
+  - A fix plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

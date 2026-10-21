@@ -6,6 +6,25 @@ summary: Point it at thin product descriptions. Get fact-rich rewrites with mate
 job: build-websites
 headline: Product description enricher
 subhead: Point it at thin product descriptions. Get fact-rich rewrites with materials, uses and shopper words. Updates live product pages.
+explain: |
+  Thin product descriptions turned into copy with real facts in it. An AI shopping tool quotes your description to explain why a product fits. A one-liner gives it nothing to quote, so it moves on.
+
+  Claude finds products whose descriptions fall under a length threshold or lack key details. It rewrites each with a benefit-led opening line, then concrete facts: material, fit, size, uses and care, pulled from the product's own fields, options and type. It also works in the words shoppers actually type. You review the rewrites first. They update live product pages, so you need an authenticated Shopify CLI session with write access.
+when:
+  - Many of your products have one-line or empty descriptions.
+  - AI tools describe your items vaguely or skip them.
+  - You want facts like material and care in a consistent layout.
+  - You are rewriting a whole catalog and need a fast first pass.
+you_give:
+  - Your store domain
+  - The length rule for a thin description
+  - Brand tone notes (optional)
+  - Approval before updates go live
+you_get:
+  - A list of thin descriptions
+  - A fact-rich rewrite for each
+  - Consistent structure across products
+  - Updated live pages after approval
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Pick a folder. Get a short CLAUDE.md that tells future AI helpers how t
 job: set-up-ai
 headline: Folder guide writer
 subhead: Pick a folder. Get a short CLAUDE.md that tells future AI helpers how that folder works.
+explain: |
+  A short CLAUDE.md file for one folder, so any AI helper that opens it knows what the work is, which files matter and what not to touch. A matching AGENTS.md points to the same file.
+
+  First it checks the folder is worth a guide. Then it reads every file in full, not just names. Before writing, it shows you a bullet list of what it plans to include, so you can react. Sections cover purpose, key files, hard limits, naming habits, decisions already made and how you like to work. The hard limits section tends to pay off most. You approve the list, then it writes the file.
+when:
+  - You keep re-explaining a project folder to your AI each session.
+  - A folder has rules, such as files never to edit, that the AI keeps breaking.
+  - You made decisions and do not want them reopened.
+  - You want Claude Code and other agents to read the same instructions.
+you_give:
+  - Path to the folder
+  - All files in it, readable by the AI
+  - Rules and limits you want kept (optional)
+  - Style notes on how you work (optional)
+you_get:
+  - Draft outline for approval
+  - Folder-level CLAUDE.md
+  - AGENTS.md linked to it
+  - List of hard limits and locked decisions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

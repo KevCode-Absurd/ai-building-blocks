@@ -6,6 +6,25 @@ summary: Give it a dataset and your rules. Get checks for blanks, duplicates, br
 job: track-numbers
 headline: Data quality scorecard maker
 subhead: Give it a dataset and your rules. Get checks for blanks, duplicates, broken links and stale data, plus a scorecard.
+explain: |
+  A shareable report and one page scorecard that show whether a dataset is fit to use, tested against your own rules. It suits the moment right after a load, before reports depend on it.
+
+  The skill runs five checks: blank counts per column, duplicate rows and keys, orphan records whose parent key is missing, values outside your allowed ranges, and freshness against how recent the data should be. Each finding is labelled with a quality dimension and a severity from low to critical. You supply the keys, business rules and freshness limit. Output is a filled HTML report and a short scorecard. It runs Python scripts on CSV, Parquet or table exports.
+when:
+  - A pipeline just loaded new data and you want to validate it.
+  - A stakeholder says totals look off and you need proof.
+  - You must hand a governance team a formal quality record.
+  - You are onboarding a new data source.
+you_give:
+  - The dataset
+  - Which columns are keys and how tables link
+  - Business rules and allowed ranges
+  - Expected update schedule (optional)
+you_get:
+  - HTML quality report
+  - One page scorecard
+  - Pass and fail counts per check
+  - Severity ratings
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

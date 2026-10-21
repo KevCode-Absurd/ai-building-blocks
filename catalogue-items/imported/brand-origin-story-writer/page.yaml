@@ -6,6 +6,25 @@ summary: Tell it how you started and why. Get an origin story and an About page 
 job: write-and-tell-stories
 headline: Brand origin story writer
 subhead: Tell it how you started and why. Get an origin story and an About page that sound human.
+explain: |
+  An origin story and About page that read like a person wrote them. It finds the real reason you started and builds a story people connect with, instead of opening with "We were founded in...".
+
+  The skill asks about the exact moment that started things, the founder's background, what you believe that others in your field don't, the customer problem others ignore, your promise and how far you have come. It reads saved brand notes first so you are not asked twice. The long version runs 600 to 900 words and opens with a scene, a moment or a question, then moves through the problem to where you are now.
+when:
+  - Your About page is dull and reads like everyone else's.
+  - You are asked how the company started and have no good answer.
+  - You are launching and need a story for press and social.
+  - You want a founder story that feels honest.
+you_give:
+  - The moment you decided to start
+  - The founder's background
+  - What you believe that others in your field don't
+  - Where the brand is now
+you_get:
+  - A long story for the About page
+  - A shorter version for other uses
+  - An opening that pulls readers in
+  - Language that sounds human
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

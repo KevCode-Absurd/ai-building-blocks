@@ -6,6 +6,26 @@ summary: Give it your campaign numbers. Get a report with trends, wins, misses a
 job: read-ad-results
 headline: Marketing performance report writer
 subhead: Give it your campaign numbers. Get a report with trends, wins, misses and what to change next.
+explain: |
+  A clear marketing report you can send to a boss or client, built from your raw campaign numbers. It tells them what moved, what worked, what fell short and what to do next, without making them read a spreadsheet.
+
+  You say which kind of report you need (campaign, email, social, paid, search or overall), the time period and. The skill then writes it in a fixed order: a short summary, a table of the key numbers for that channel, trends against the last period, wins, problems, insights and next steps. It checks your figures against common benchmarks for each channel, so a 2% click rate is judged fairly.
+when:
+  - Your monthly marketing report is due and the numbers are still in exports.
+  - A boss wants a one-page summary of how a campaign did.
+  - You need to explain why email did well and paid did not.
+  - You want year on year trends added without building charts by hand.
+you_give:
+  - Your campaign or channel numbers
+  - The reporting period
+  - Last period's numbers to compare (optional)
+  - Who will read the report (optional)
+you_get:
+  - A short summary at the top
+  - A key numbers table for the channel
+  - Trends against the last period
+  - Wins and problems listed plainly
+  - A list of next steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

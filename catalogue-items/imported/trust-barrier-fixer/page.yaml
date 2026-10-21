@@ -6,6 +6,25 @@ summary: Give it your message and audience. Get the doubts they hold and the pro
 job: understand-customers
 headline: Trust barrier fixer
 subhead: Give it your message and audience. Get the doubts they hold and the proof and claim strength that settle them.
+explain: |
+  The doubts your audience really holds, and the proof and claim strength that settle them. You stop overclaiming to people who do not believe you, and stop underselling to people who would.
+
+  You give the message and the people it is for. The skill names what is missing in their eyes: skill, good intent, proof, familiarity or legitimacy. It checks whether your category is trusted, distrusted or split, then picks signals to match, such as reviews, guarantees, certifications, plain facts or named people. It rates how certain each claim should sound. It labels psychology ideas as working hypotheses to check, not as proven fact, so use your own audience data too.
+when:
+  - Your page claims a lot, but visitors do not buy.
+  - You sell in a category where people feel burned before.
+  - You are not sure how bold your headline can be.
+  - You need to decide which proof to show first.
+you_give:
+  - Your message or page copy
+  - Your target audience
+  - What you want them to do
+  - Past customer feedback or objections (optional)
+you_get:
+  - A list of trust barriers
+  - Proof signals matched to each barrier
+  - Claim strength advice
+  - Reworded lines to try
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

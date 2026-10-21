@@ -6,6 +6,24 @@ summary: Give it a Markdown document. Get a narrated MP4 with slides and a voice
 job: make-video-ads
 headline: Narrated video maker
 subhead: Give it a Markdown document. Get a narrated MP4 with slides and a voiceover.
+explain: |
+  Turn a Markdown document into a narrated slide video, with no screen recording and no editing. You keep your original file untouched and get an MP4 you can share.
+
+  The skill first checks that the tools it needs are installed, and asks before adding anything. It rewrites your text into cleaner sections, then converts it into Marp slides, splitting any slide that would overflow. Next it writes a spoken script that lines up with the slides one to one, with symbols that should not be read aloud removed. A script then renders the slides, creates speech with Edge-TTS and joins them into the video. It runs on your computer and needs Python.
+when:
+  - You wrote a tutorial in Markdown and want a video version.
+  - You need a narrated report for people who will not read a long document.
+  - You want a quick explainer video without recording your own voice.
+  - You have training notes and need a slide deck with audio.
+you_give:
+  - A Markdown document
+  - A slide style choice (optional)
+  - Python and the video tools installed on your computer
+you_get:
+  - A cleaned-up copy of your text
+  - A slide file ready to present
+  - A narration script matched to each slide
+  - A narrated MP4 video
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

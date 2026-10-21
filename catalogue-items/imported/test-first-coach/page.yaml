@@ -6,6 +6,26 @@ summary: Say what to build or fix. Get it done test first, in small steps from f
 job: test-and-fix-code
 headline: Test-first coach
 subhead: Say what to build or fix. Get it done test first, in small steps from failing test to clean code.
+explain: |
+  A feature or bug fix built test first, in small steps from a failing test to clean code, so each test you keep describes real behaviour and survives refactoring. You avoid piles of tests that break whenever you change a variable name.
+
+  The skill runs the red then green loop with firm rules. Before any test it agrees the seams with you: the public boundaries where behaviour can be seen. It writes one failing test, adds only enough code to pass it, then refactors. It rejects tests that mock internals, repeat the code's own logic or are written in bulk before any code. It reads the project's glossary so names match your domain.
+when:
+  - You want to build a feature test first and are unsure how to start.
+  - Your tests break every time you refactor.
+  - You need to fix a bug and prove it stays fixed.
+  - An AI wrote many tests that check nothing real.
+  - You want to agree what to test before writing any code.
+you_give:
+  - The feature or bug in plain words
+  - Access to the code
+  - Your test framework
+  - Project glossary (optional)
+you_get:
+  - Agreed test boundaries
+  - "One slice at a time: a failing test, then a passing one"
+  - Clean code after each step
+  - Tests that describe behaviour
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

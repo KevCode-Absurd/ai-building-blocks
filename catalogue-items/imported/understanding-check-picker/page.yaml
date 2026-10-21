@@ -6,6 +6,25 @@ summary: Describe the lesson moment and age group. Get the best quick check to u
 job: teach-and-train
 headline: Understanding check picker
 subhead: Describe the lesson moment and age group. Get the best quick check to use and how to run it.
+explain: |
+  The best quick check for the moment in your lesson, with a clear way to run it. You stop reaching for the same exit ticket every time.
+
+  You say when the check happens, what you want to find out, and the age group. You can add class size, subject, who needs extra support and what gear you have, such as mini whiteboards or slips of paper. The skill picks a technique that fits that moment, class size and time, explains how to run it, and says what to do with the answers. It can offer a backup if you have no devices. It suits teachers who want to see understanding before moving on.
+when:
+  - You are mid-lesson and want to check if students can move on.
+  - You need an end-of-lesson check that takes five minutes.
+  - You teach a large class and need a quick way to scan answers.
+  - You have no devices and only paper or whiteboards.
+you_give:
+  - When in the lesson the check happens
+  - What you want to check
+  - Student age or year group
+  - Class size and available resources (optional)
+you_get:
+  - A recommended technique
+  - Steps to run it
+  - How to read the answers
+  - A backup option
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

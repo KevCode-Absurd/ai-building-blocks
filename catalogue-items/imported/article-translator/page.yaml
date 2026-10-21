@@ -6,6 +6,25 @@ summary: Give it an article. Get a translation in your language, quick or polish
 job: write-and-tell-stories
 headline: Article translator
 subhead: Give it an article. Get a translation in your language, quick or polished with review, using consistent terms.
+explain: |
+  Your article in another language, at the care level you choose. Quick mode translates straight through. Normal mode studies the piece first, so names, tone and tricky phrases are settled before any sentence is written. Refined mode goes further: it drafts, reviews the draft against the original, and polishes the wording until it reads like it was written in that language.
+
+  Long articles are split into chunks so nothing gets dropped, and a list of key terms keeps each word translated the same way every time. You can save your preferred language and style once. Some steps run small scripts, so your AI needs a way to run code.
+when:
+  - You need a blog post in Spanish, Chinese or another language by tomorrow.
+  - Your product terms are being translated three different ways.
+  - A long article keeps losing paragraphs when you paste it into a chat.
+  - You want a translation reviewed, not just converted word by word.
+you_give:
+  - The article, as text, a file or a link
+  - The target language
+  - A choice of quick, normal or refined mode
+  - Terms that must stay as they are (optional)
+you_get:
+  - A translated article in a new file
+  - A short analysis of tone and hard phrases (normal and refined modes)
+  - A consistent term list
+  - A reviewed, polished final version (refined mode)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

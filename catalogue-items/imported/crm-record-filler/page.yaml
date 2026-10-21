@@ -6,6 +6,25 @@ summary: Give it your CRM records. Get missing company and contact details fille
 job: sell-and-negotiate
 headline: CRM record filler
 subhead: Give it your CRM records. Get missing company and contact details filled in to help routing and outreach.
+explain: |
+  Thin company and contact records hurt routing, scoring and outreach. This fills the gaps: revenue, headcount, industry, tech stack, job titles and contact details.
+
+  It starts by listing which fields are empty or old, then sources each missing value from places like company sites, job posts, press releases and public filings. It matches new data to records by domain or email first, then by fuzzy name match, and merges duplicates while keeping the fullest record. Each value gets a confidence mark, and anything from a single source is flagged low. Only checked values are written back, and it respects fields you do not want touched.
+when:
+  - New leads arrive with only a name and an email.
+  - Your lead routing fails because industry or company size is blank.
+  - You found duplicate accounts after an import.
+  - Job titles in your CRM are years out of date.
+you_give:
+  - The company or contact records to enrich
+  - Which fields matter most to you
+  - Fields that must never be overwritten (optional)
+  - CRM access or an exported file
+you_get:
+  - Filled company and contact fields
+  - A confidence mark on each value
+  - Merged duplicate records
+  - A change log showing old and new values
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

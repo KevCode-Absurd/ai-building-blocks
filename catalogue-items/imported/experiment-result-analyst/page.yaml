@@ -6,6 +6,27 @@ summary: Give it test numbers. Get the right test, sample size and whether the r
 job: track-numbers
 headline: Experiment result analyst
 subhead: Give it test numbers. Get the right test, sample size and whether the result is real, in plain words.
+explain: |
+  A plain verdict on whether your test result is real or just noise, and whether to ship, hold or keep running.
+
+  It matches the test to your data: a z-test for conversion rates, a t-test for averages, chi-square for categories. It reports the p-value, a confidence interval and an effect size, and asks two separate questions: is the result statistically significant, and is it big enough to matter? Before a launch, it calculates how many users each variant needs, given your baseline and the smallest change worth detecting. It also flags traps like peeking early and running many comparisons. Small Python scripts do the maths.
+when:
+  - Your A/B test finished and you need to know if the winner is real.
+  - You are about to launch a test and need the sample size.
+  - Someone shared a result and asked if it is significant.
+  - You suspect a test was stopped too early.
+you_give:
+  - Sample size per group
+  - Observed rates or averages
+  - Baseline and smallest change that matters
+  - Decision the result feeds into (optional)
+  - Python for the included scripts (optional)
+you_get:
+  - Chosen test with reasons
+  - P-value, interval and effect size
+  - Required sample size
+  - Plain-language verdict
+  - Ship, hold or extend advice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

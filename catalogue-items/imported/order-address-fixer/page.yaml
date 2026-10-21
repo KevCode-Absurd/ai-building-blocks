@@ -6,6 +6,26 @@ summary: Give it an order and the right address. Get the shipping address change
 job: run-your-store
 headline: Order address fixer
 subhead: Give it an order and the right address. Get the shipping address changed before it ships. Changes a live order.
+explain: |
+  A wrong ZIP code or street typo fixed on a Shopify order before it leaves the building. The change goes straight through the Shopify API, so nobody clicks around the admin screens.
+
+  You give the store, the order ID and the corrected address. The skill first checks that the order is still unfulfilled and stops with an error if any part has shipped. A preview mode shows what would change. Then it updates the shipping address on the order record. If a fulfilment partner already has the order, tell them yourself, since only the Shopify record changes. Needs a signed-in Shopify CLI session with order write access. This changes a live order.
+when:
+  - A customer emails a corrected address right after ordering.
+  - You spot a typo in a ZIP code before packing.
+  - You need to fix several orders and want a preview first.
+  - A support agent needs a fast fix without the admin interface.
+you_give:
+  - Store domain
+  - Order ID
+  - The corrected address
+  - Preview or run choice (optional)
+  - Shopify CLI sign-in with order access
+you_get:
+  - A check that the order is unfulfilled
+  - A preview of the change
+  - The updated shipping address
+  - A confirmation or error message
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

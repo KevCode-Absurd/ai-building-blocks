@@ -6,6 +6,26 @@ summary: Tell it your products and target countries. Get which markets to enter 
 job: run-your-store
 headline: TikTok Shop overseas expansion planner
 subhead: Tell it your products and target countries. Get which markets to enter first, plus shipping, rules and localizing steps.
+explain: |
+  A shortlist of countries to sell in next, in the order you should enter them, with the shipping, tax, rule and language work each one needs. It helps you avoid launching in a market and then finding out about a customs problem.
+
+  You say what you sell and where you sell now. The skill scores markets by demand, competition, how people there shop, and what it would cost to start. For the top picks it sets out fulfilment options, customs paperwork, payment and currency issues, and how returns will work. It covers VAT or GST setup, product rules and sales rules by region. It then lists what to change in content, product pages and messaging to suit local taste.
+when:
+  - Your US shop is doing well and you want to sell in the UK or Germany.
+  - You do not know how VAT works for a seller based abroad.
+  - You need to decide which country to enter first.
+  - You want to localize videos and listings for Japan.
+you_give:
+  - Your products
+  - Countries you are considering
+  - Where you ship from
+  - Sales and budget to commit
+you_get:
+  - Ranked list of markets
+  - Shipping and customs checklist
+  - Tax and legal points
+  - A localization list
+  - An order of rollout
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

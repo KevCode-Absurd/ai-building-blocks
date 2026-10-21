@@ -6,6 +6,26 @@ summary: Give it your approved text and images. Get an editable PowerPoint poste
 job: work-with-files
 headline: Research poster builder
 subhead: Give it your approved text and images. Get an editable PowerPoint poster at print size, checked for access and file safety.
+explain: |
+  An editable PowerPoint poster at print size, built only from text and images you approved, and checked for accessibility and file safety. You can still change it in PowerPoint afterward.
+
+  It will not guess. If any claim, number, author, funding line, figure licence or QR link is unresolved, it stops and asks. Content comes from a strict local JSON file. You approve it, and the approval is tied to a fingerprint of that exact content. It builds a one-slide .pptx with no macros and no web calls, then inspects the file for structure and safety. Conference and printer rules are confirmed first. It needs Python and a few packages.
+when:
+  - You need a conference poster others can still edit.
+  - Your department only accepts PowerPoint posters.
+  - You want a poster checked for accessibility before print.
+  - Co-authors must approve the exact wording.
+you_give:
+  - Approved poster text
+  - Figures and images
+  - Author, funding and licence details
+  - Conference poster size
+  - Printer requirements
+you_get:
+  - Editable one-slide PPTX poster
+  - Checks for access and file safety
+  - Record of the approved content
+  - List of unresolved items
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

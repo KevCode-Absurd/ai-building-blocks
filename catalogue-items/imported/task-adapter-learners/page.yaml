@@ -6,6 +6,26 @@ summary: Give it a task and a learner need. Get an adapted task with the same go
 job: teach-and-train
 headline: Task adapter for different learners
 subhead: Give it a task and a learner need. Get an adapted task with the same goal. It does not diagnose anyone.
+explain: |
+  The same classroom task, reshaped for a learner who needs more support, more stretch or a different way in, with the learning goal left untouched. You avoid giving a student an easier task that teaches less.
+
+  You name the task, the learning objective and the learner need, such as EAL, dyslexia, ADHD, anxiety or a gifted student. The skill keeps the objective fixed and changes only how the student gets there. It adjusts the language, the steps, the scaffolds, the response format or the level of challenge. Its methods come from differentiation and Universal Design for Learning research. It describes learner needs but does not diagnose anyone, so use your own knowledge of the child.
+when:
+  - One student in your class cannot access a task you planned for everyone.
+  - You want a stretch version for a fast finisher.
+  - A student with anxiety needs a lower pressure way to show the same learning.
+  - You need a version of a worksheet for a pupil still learning English.
+  - You are planning for mixed needs and want options ready.
+you_give:
+  - The original task
+  - The learning objective
+  - The learner need or profile
+  - Year group and subject (optional)
+you_get:
+  - An adapted task with the same goal
+  - A list of what was changed and why
+  - Scaffolds or extension prompts
+  - A quick check that the objective still holds
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

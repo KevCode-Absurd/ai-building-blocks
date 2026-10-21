@@ -6,6 +6,24 @@ summary: Give it a learning goal. Get a one-criterion rubric with open columns f
 job: teach-and-train
 headline: Single-point rubric builder
 subhead: Give it a learning goal. Get a one-criterion rubric with open columns for evidence, ready for feedback or self-assessment.
+explain: |
+  A one-criterion rubric with open columns where specific evidence goes, instead of a scoring scale. It gives students feedback they can act on and takes about three minutes to make.
+
+  You give a learning goal and a purpose: self-assessment, peer feedback, teacher feedback or planning before a task. It writes one clear criterion in the middle. The default has three columns: areas for growth on the left, the criterion in the middle and areas of strength on the right. The side columns stay open so a reader writes real evidence, not a grade. It works with or without a developmental band system.
+when:
+  - You want feedback on one skill, with no points and levels.
+  - Students need a way to assess their own work.
+  - Peers will review each other and need a simple frame.
+  - You plan a task and want one clear target to hang feedback on.
+you_give:
+  - A learning goal or target
+  - "The purpose: self, peer, teacher or planning"
+  - Year group or level (optional)
+  - Band system if you use one (optional)
+you_get:
+  - One clear criterion statement
+  - A three-column rubric with open evidence columns
+  - A version for the stated purpose
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

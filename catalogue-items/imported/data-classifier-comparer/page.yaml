@@ -6,6 +6,24 @@ summary: Give it a data table. Get several classifiers trained and ranked by acc
 job: build-software
 headline: Data classifier comparer
 subhead: Give it a data table. Get several classifiers trained and ranked by accuracy, with tests that show real differences.
+explain: |
+  Find out which classification models really are the best on your data, and which ones are only slightly different by chance. Rankings alone can mislead, so this adds statistical tests.
+
+  You bring a table with predictors and a category column to predict. The skill cleans and prepares it, picks promising classifiers, and trains them in MATLAB. It compares accuracy with cross-validation, a holdout split or hyperparameter search. It then runs McNemar, 5 by 2 cv and Friedman tests to show which models sit in the top group with no real difference. It supports a uniform prior for imbalanced classes but nothing more custom. It does not handle images, sequences or numeric targets, and it needs MATLAB with statistics tools.
+when:
+  - You need to choose a model for churn, fraud or diagnosis data.
+  - Two models score 91 and 92 percent and you wonder if that gap is real.
+  - You want a fair accuracy comparison across many classifiers.
+  - Your classes are unbalanced and you need to handle that.
+you_give:
+  - A data table with a category column
+  - Evaluation method preference (optional)
+  - Whether classes are imbalanced (optional)
+you_get:
+  - Trained classifiers
+  - Accuracy ranking
+  - Statistical test results
+  - Top tier of equal models
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

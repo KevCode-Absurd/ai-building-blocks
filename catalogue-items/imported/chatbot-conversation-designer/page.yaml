@@ -6,6 +6,27 @@ summary: Describe your chatbot job. Get conversation flows with questions, error
 job: build-product
 headline: Chatbot conversation designer
 subhead: Describe your chatbot job. Get conversation flows with questions, error recovery and graceful fallbacks.
+explain: |
+  A full conversation plan for your chatbot, so users reach their goal instead of hitting dead ends. You describe the bot's job, and you get its personality, the things it handles, the questions it asks and what it says when it gets confused.
+
+  The skill lists every request the bot should understand, including helpers like cancel and talk to a human. For each one it plans the questions in order, with the details to collect and when to ask a clarifying question. It builds three layers of fallback: rephrase, then offer a short menu, then hand over to a person. It decides what the bot remembers between turns. Then it gives you a script to test with real people.
+when:
+  - You are planning a support bot and need the chat flows before building.
+  - Your current bot keeps saying "I did not get that" and users leave.
+  - You must decide what the bot can and cannot do on day one.
+  - You need a script to test on real users before you write code.
+you_give:
+  - What the bot is for
+  - Who will use it
+  - The tasks it should handle
+  - The channel, such as web, Slack or WhatsApp
+  - Your current flows (optional)
+you_get:
+  - A bot personality and scope
+  - A list of tasks with question order
+  - Error and fallback flows
+  - A memory plan for each conversation
+  - A test script
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

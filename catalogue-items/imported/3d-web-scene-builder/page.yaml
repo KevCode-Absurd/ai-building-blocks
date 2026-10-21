@@ -6,6 +6,26 @@ summary: Describe the scene or product viewer. Get a working 3D page with fast l
 job: build-websites
 headline: 3D web scene builder
 subhead: Describe the scene or product viewer. Get a working 3D page with fast loading and a fallback.
+explain: |
+  A product viewer, configurator or portfolio scene can run in the browser, load quickly, and fall back to a plain view on devices that cannot run it.
+
+  The skill starts by choosing a tool to match your needs. Spline suits quick pieces made by designers. React Three Fiber suits React apps with complex scenes. Plain Three.js gives full control. It then sets up the scene, prepares and compresses the 3D models, adds camera controls that a first-time visitor can use, and shows a loading state. You need a basic web project to drop the result into.
+when:
+  - You want visitors to spin a product around on your site.
+  - You are building a 3D portfolio and do not know which library to use.
+  - Your 3D scene runs slowly on phones.
+  - You need a 3D scene that still looks fine when WebGL is off.
+you_give:
+  - A description of the scene or product
+  - Your 3D model files, or a request to find a stand-in
+  - The framework your site uses (optional)
+  - Your target devices
+you_get:
+  - A working 3D scene as code
+  - A tool recommendation with reasons
+  - Loading and fallback handling
+  - Controls tuned for first-time users
+  - A performance checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,27 @@ summary: Give it your product cost and price. Get fees, profit margin, break-eve
 job: run-your-store
 headline: Amazon seller profit calculator
 subhead: Give it your product cost and price. Get fees, profit margin, break-even point and a price to charge.
+explain: |
+  Know what you really keep on each Amazon FBA sale before you buy stock. Enter your price and costs and get the full cost breakdown, profit margin, break-even point and a suggested price for the margin you want.
+
+  You list the selling price, product cost, shipping to FBA, FBA fulfilment fee, monthly storage, ad spend as a share of sales and your category. The calculator adds the referral fee and works out profit per unit. Use it for a new product, a diagnosis of a slow seller, a price change, or a batch table that compares many SKUs side by side. It runs on your numbers alone and needs no API key.
+when:
+  - You are deciding whether a product is worth sourcing.
+  - A product sells well but you suspect you make no money on it.
+  - You want to know the lowest price you can charge and still profit.
+  - You need to compare margins across all your SKUs.
+you_give:
+  - Selling price
+  - Product cost and shipping to FBA
+  - FBA fees and monthly storage
+  - Ad spend as a share of sales (optional)
+  - Product category
+you_get:
+  - A cost breakdown per unit
+  - Profit and margin
+  - The break-even point
+  - A price for your target margin
+  - A comparison table across SKUs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

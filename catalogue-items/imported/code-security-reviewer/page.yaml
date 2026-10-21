@@ -6,6 +6,24 @@ summary: Point it at your Python, JavaScript, TypeScript or Go code. Get a ranke
 job: secure-code
 headline: Code security reviewer
 subhead: Point it at your Python, JavaScript, TypeScript or Go code. Get a ranked list of security gaps, each with a fix.
+explain: |
+  A ranked list of security gaps in your Python, JavaScript, TypeScript or Go code, each with a fix. You can also use it to write new code that is safe from the start.
+
+  It first finds which languages and frameworks your project uses, front end and back end. Then it loads the matching security notes for each one, reading all that apply, including the general one for the language. With those in hand it reviews your code against that framework's known risks. If you ask for it, you get a written report with the most serious items first and a suggested change for each.
+when:
+  - You are shipping a web app and want a security check.
+  - You want new code written with safe defaults.
+  - You use a framework and are unsure of its security traps.
+  - You need a short report of what to fix first.
+you_give:
+  - Your code or project folder
+  - The frameworks in use (optional)
+  - Whether you want a full report (optional)
+you_get:
+  - Languages and frameworks found
+  - Security gaps ranked by seriousness
+  - A fix for each gap
+  - Safer code for new work
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

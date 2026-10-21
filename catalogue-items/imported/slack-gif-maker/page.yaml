@@ -6,6 +6,24 @@ summary: Describe the animation. Get a GIF sized and checked to work in Slack.
 job: make-images
 headline: Slack GIF maker
 subhead: Describe the animation. Get a GIF sized and checked to work in Slack.
+explain: |
+  A small animated GIF that fits Slack's limits and looks right on screen. You describe the animation, like a star spinning or a coffee cup bouncing, and get a file that uploads without trouble.
+
+  The skill draws each frame in Python with simple shapes, or uses an image you give it. It follows Slack's rules: 128 by 128 pixels for emoji, 480 by 480 for messages, 10 to 30 frames per second, and 48 to 128 colours. Emoji GIFs stay under about three seconds. A check step flags files that are too big, and it trims colours and frames until the file fits. You need Python with the Pillow image library.
+when:
+  - You want a custom emoji GIF for your team's Slack.
+  - A GIF you found is too large and Slack rejects it.
+  - You want to animate a logo or a photo for a message.
+  - You need a short reaction animation made from a plain description.
+you_give:
+  - A description of the animation
+  - An image to animate (optional)
+  - Whether it is for emoji or a message
+  - Colours or style notes (optional)
+you_get:
+  - An animated GIF at the right Slack size
+  - A file size and frame check
+  - A smaller version if the first one is too big
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

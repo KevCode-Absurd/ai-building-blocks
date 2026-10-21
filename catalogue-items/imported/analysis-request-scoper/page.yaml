@@ -6,6 +6,24 @@ summary: Give it a vague request for data work. Get the right questions asked an
 job: track-numbers
 headline: Analysis request scoper
 subhead: Give it a vague request for data work. Get the right questions asked and a clear brief ready to hand over.
+explain: |
+  Turn a vague "can you look into this?" into a clear brief an analyst can start on, after the right questions are asked and the requester signs off. It saves the rework that comes from guessing what someone meant.
+
+  It runs a short interview to find the decision being made, who will use the result, what success looks like, and what is in and out of scope. It classifies the decision as strategic, operational or tactical to set the depth needed. Anything still unclear goes through extra questions. The requester confirms the requirements in writing before work begins, and the approved version becomes the analysis brief.
+when:
+  - A manager asks you to "look into churn" and nothing more.
+  - Several people want different things from one piece of analysis.
+  - You often redo work because the request changed halfway.
+  - You need agreed scope in writing before you start.
+you_give:
+  - The original request, however vague
+  - Who asked and who else cares about the result
+  - The deadline or urgency
+you_get:
+  - Interview questions to ask
+  - A requirements document
+  - A signed-off scope
+  - An analysis brief for the analyst
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

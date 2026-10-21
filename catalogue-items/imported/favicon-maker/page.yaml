@@ -6,6 +6,24 @@ summary: Give it a logo image. Get a full set of favicons and the link tags adde
 job: build-websites
 headline: Favicon maker
 subhead: Give it a logo image. Get a full set of favicons and the link tags added to your site.
+explain: |
+  The small icons browsers show in tabs, made from one logo file, saved in the right folder and linked in your HTML. One command replaces an hour of resizing.
+
+  The skill checks that your source image exists and is a supported type: PNG, JPG, SVG, WEBP or GIF. It looks at your project to find the framework, such as Next.js, Rails, Astro, Hugo or Vite, and picks the right static folder. It then uses ImageMagick to create each size, including the Apple touch icon and the sizes for Android, and copies an SVG as well if you gave one. Finally it adds the link tags to your HTML head. You need ImageMagick installed.
+when:
+  - You just finished a site and the tab shows a blank icon.
+  - You have a logo and no idea which sizes browsers want.
+  - You switched frameworks and need icons in the new folder.
+  - Your phone home screen icon looks blurry.
+you_give:
+  - A logo image file
+  - Your project folder
+  - ImageMagick installed
+you_get:
+  - A full set of favicon files
+  - Icons placed in the correct folder
+  - Link tags added to your HTML
+  - A list of files created
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

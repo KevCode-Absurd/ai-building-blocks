@@ -6,6 +6,24 @@ summary: Point it at your Playwright tests. Get each one checked against 20 bad 
 job: test-and-fix-code
 headline: Browser test reviewer
 subhead: Point it at your Playwright tests. Get each one checked against 20 bad habits with fixes.
+explain: |
+  A scored review of your Playwright tests that shows what is flaky or weak, with a fix beside each problem.
+
+  The skill reads your Playwright config and every test file in scope, plus page objects and fixtures. It checks each file against twenty bad habits in three levels. Critical ones include fixed waits, missing await, hardcoded addresses, brittle selectors, shared state and tests that depend on order. Warnings cover long tests, vague names and missing error cases. Info items cover things like missing page objects. Each file gets a score from one to ten, and the review lists the changes to make.
+when:
+  - Your tests fail at random and you want to know why.
+  - You inherited a test suite and need to judge its quality fast.
+  - You are about to add many tests and want clean habits first.
+  - You want a quick score for each test file.
+you_give:
+  - A test file, a folder, or your whole project
+  - Your Playwright config (optional)
+  - Page objects and fixtures (optional)
+you_get:
+  - A score from one to ten per file
+  - Problems listed by level
+  - A fix for each problem
+  - A list of missing test cases
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

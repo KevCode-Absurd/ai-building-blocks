@@ -6,6 +6,26 @@ summary: Describe your business stage. Get the one metric to focus on and a shor
 job: track-numbers
 headline: Startup metrics picker
 subhead: Describe your business stage. Get the one metric to focus on and a short list of numbers to track. Uses Lean Analytics.
+explain: |
+  Picking the one number your startup should chase this quarter, and dropping the rest from the wall. You describe your business type and stage, and get a single main metric, a partner metric that stops it being gamed, and a short list to watch.
+
+  The method comes from the book Lean Analytics. It separates metrics that change a decision from vanity totals like cumulative signups. It rewrites totals as ratios, splits data by signup month and by channel, and asks you to set a target, a date and a pre-agreed response if you miss. It can also score your current dashboard from 0 to 10 and list what to fix.
+when:
+  - Your dashboard has twenty numbers and nobody can say which one matters.
+  - You are reporting to a board or investors and want charts that show real progress.
+  - You just passed a milestone and the metric you track no longer fits.
+  - Your team keeps arguing about what success means for this quarter.
+you_give:
+  - Your business model, such as subscription, marketplace or shop
+  - Your current stage
+  - The metrics you track now
+  - Your biggest current risk (optional)
+you_get:
+  - One main metric for your stage
+  - A partner metric to keep it honest
+  - A target, date and miss plan
+  - A short tracking list
+  - A score and fixes for your current dashboard
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Say what tools your AI should reach. Get a safe MCP server with clear t
 job: connect-tools
 headline: MCP tool server builder
 subhead: Say what tools your AI should reach. Get a safe MCP server with clear tool rules and tests.
+explain: |
+  A safe MCP server that lets your AI reach the tools and data you choose, with clear rules for each tool and tests to match. Say what the AI should be able to do, and get the design and code to make it so.
+
+  It starts by bounding the job: what is in scope, what is not and who is trusted. Then it designs each tool with a name, a description, input and output shapes, error shapes and notes on side effects and data type. It ends with deployment, rollback and key revocation steps,.
+when:
+  - You want your AI to read from a database or app without full access.
+  - You need an MCP server where each tool has clear limits.
+  - A security team wants tool rules written down before launch.
+  - You are not sure which actions your AI should be blocked from.
+you_give:
+  - What the AI should be able to do
+  - Systems and data it will reach
+  - Who will use it
+  - Language or stack (optional)
+you_get:
+  - A server design with scope and limits
+  - A tool list with schemas
+  - Server code or a build plan
+  - Unit and access tests
+  - Deployment and rollback steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

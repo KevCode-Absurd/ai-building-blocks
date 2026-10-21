@@ -6,6 +6,26 @@ summary: Tell it where you are starting. Get a week-by-week plan to set up, list
 job: run-your-store
 headline: TikTok Shop launch planner
 subhead: Tell it where you are starting. Get a week-by-week plan to set up, list, create content and scale.
+explain: |
+  A week-by-week plan to take a TikTok Shop from nothing to steady sales, starting from wherever you are today. From no account to your first few sales, it tells you what to do this week.
+
+  The skill covers the application and verification process, tax and payment setup, and shop policies. Then it moves to catalog setup, titles that work in TikTok search, and pricing against competitors. Next it plans content, hashtags and posting rhythm, and adds creators and ads when you are ready. For shops that are live but slow, it looks for what is blocking sales. Each phase has a clear check before you move on.
+when:
+  - You want to open a TikTok Shop and do not know the first step.
+  - Your shop is set up, but sales are low.
+  - You make a few sales and want a path to six figures.
+  - You need a checklist to hand to a new team member.
+you_give:
+  - "Your current stage: not started, set up or selling"
+  - Products and prices
+  - Time and budget per week
+  - Your country
+you_get:
+  - A week-by-week plan
+  - Setup and approval checklist
+  - Listing and pricing steps
+  - A content and ads start plan
+  - Checks for each phase
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

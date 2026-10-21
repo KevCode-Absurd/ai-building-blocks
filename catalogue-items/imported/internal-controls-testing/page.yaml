@@ -6,6 +6,27 @@ summary: Give it your key controls. Get a test plan, sample sizes and a way to r
 job: check-contracts
 headline: Internal controls testing planner
 subhead: Give it your key controls. Get a test plan, sample sizes and a way to rate any control gaps.
+explain: |
+  A test plan for your financial controls with sample sizes and a way to rate any gaps, built for SOX-style review. You give it your key controls and get a defensible method an auditor can follow.
+
+  The skill starts with scoping: which accounts and processes matter, by size and by risk, and whether each control is preventive or detective, manual or automated. It separates testing design from testing whether the control works over the period. Sample size comes from how often the control runs, from one for annual controls up to larger samples for daily ones. Failures are rated by severity, and findings are written to be fixed.
+when:
+  - Year-end is coming and you must test your key controls.
+  - You need sample sizes by control frequency.
+  - A control failed and you must rate how serious it is.
+  - You are deciding what internal staff test versus what the auditor relies on.
+  - You are building a testing calendar for the year.
+you_give:
+  - Your list of key controls
+  - Significant accounts and processes
+  - Control frequency and period covered
+  - Your auditor reliance plan (optional)
+you_get:
+  - A test plan by control
+  - Sample sizes
+  - Test steps for design and operation
+  - A deficiency rating method
+  - A findings write-up
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

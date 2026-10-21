@@ -6,6 +6,24 @@ summary: Give it a written spec. Get a new project folder with the structure, se
 job: build-software
 headline: Spec to starter repo builder
 subhead: Give it a written spec. Get a new project folder with the structure, setup and first working code.
+explain: |
+  A new project folder with real structure, setup files and first working code, made from a written description of your app. The skill reads your spec and pulls out the app name, features, stack, login needs, database and deploy target. If you did not pick a stack, it infers one from clues, for example Next.js for a dashboard and FastAPI for an API.
+
+  It then writes a runnable repository, not an empty template. It works for many stacks, including Rails, Go, Rust and Flutter. For a SaaS with payments and login, a more specific skill fits better.
+when:
+  - You have a plain description of an app and no code yet.
+  - You have a requirements document and need a codebase to start from.
+  - You want a runnable starting point instead of a blank folder.
+  - You are not sure which tech stack fits your idea.
+you_give:
+  - A written spec or feature list
+  - Your preferred tech stack (optional)
+  - Login, database or deploy needs (optional)
+you_get:
+  - A project folder with clear structure
+  - Setup and run instructions
+  - First working code for the main features
+  - Config for your deploy target
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Start several tasks at once. Get a separate git worktree for each, with
 job: build-software
 headline: Parallel branch manager
 subhead: Start several tasks at once. Get a separate git worktree for each, with its own ports and clean-up.
+explain: |
+  A separate working copy of your code for each task, so several features or fixes can run at once without stepping on each other. Each copy gets its own folder, branch and ports.
+
+  It creates git worktrees with predictable names, hands each one a free port and remembers the assignment, and copies your local settings files across. It can install dependencies by reading the lock file. When you finish, it checks for unsaved changes and merged branches before removing old copies, so cleanup is repeatable and safe. It is useful when several AI agents each need a branch of their own.
+when:
+  - You need a quick fix while a feature branch is still open.
+  - Several AI agents must work in the same project without clashing.
+  - Two dev servers keep fighting for the same port.
+  - Old branches pile up and you want safe cleanup.
+you_give:
+  - A git repo
+  - Branch names and task names
+  - Settings files to copy (optional)
+you_get:
+  - One worktree per task
+  - Free port per worktree
+  - Copied settings and installed dependencies
+  - Safe cleanup of stale copies
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

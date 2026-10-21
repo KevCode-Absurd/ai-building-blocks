@@ -6,6 +6,25 @@ summary: Give it your new leads. Get them ranked by fit and urgency, with talkin
 job: sell-and-negotiate
 headline: Who to call first ranker
 subhead: Give it your new leads. Get them ranked by fit and urgency, with talking points and follow-up drafts.
+explain: |
+  A ranked call list for today, taken from the new leads sitting in your HubSpot. You know who to ring first, what to say and what to send to the rest.
+
+  The skill pulls leads at the Lead or MQL stage that are not marked unqualified. It scores each on engagement, company fit, urgency signals and how recent their activity is. Then it returns a ranked list sized to your volume, with talking points per person. It drafts follow-up emails and suggests calendar slots, but it never sends or books anything without your say. If your portal is empty, it says so plainly.
+when:
+  - You open HubSpot to fifty new leads and no idea where to start.
+  - You have two hours for calls and want the best ones first.
+  - You want ready follow-up drafts for the leads you cannot reach today.
+  - You are asked for a quick read on your pipeline.
+you_give:
+  - HubSpot access
+  - Scope such as leads only or pipeline
+  - What fit means for you (optional)
+  - Calendar access (optional)
+you_get:
+  - Ranked lead list with scores
+  - Talking points for each lead
+  - Follow-up email drafts
+  - Proposed call times
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

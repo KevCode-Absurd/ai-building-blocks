@@ -6,6 +6,24 @@ summary: Ask to save your session. Get one clean MATLAB script that reruns the w
 job: build-software
 headline: Session to script exporter
 subhead: Ask to save your session. Get one clean MATLAB script that reruns the work from start to end.
+explain: |
+  One clean MATLAB script that reruns your whole session from start to finish. Ask to export it and Claude walks back through the conversation, collects each MATLAB block that ran, and builds a single .m file.
+
+  It keeps only the final working version of any block that was retried, and drops shell commands, tool wrapper text, debugging one-liners and helper print lines meant for the assistant. Blocks are ordered as setup, model, configuration, analysis and plots, with %% section headings and parameters moved to the top. Figure settings that hid windows are removed, so the script works when you run it by hand. The file is saved in a Results folder with a descriptive name.
+when:
+  - You finished an analysis with Claude and want to rerun it yourself.
+  - You need a script to hand to a colleague after a MATLAB session.
+  - Your session had many failed attempts and you want only the working code.
+  - You want parameters collected at the top so you can change them.
+you_give:
+  - A MATLAB session with code that ran
+  - A script name (optional)
+  - A working folder
+you_get:
+  - A single runnable .m script
+  - Section headings for each step
+  - Parameters gathered at the top
+  - A saved file in the Results folder
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

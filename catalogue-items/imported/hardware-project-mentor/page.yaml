@@ -6,6 +6,25 @@ summary: Describe your sensor or device idea. Get a board pick, where readings g
 job: build-product
 headline: Hardware project mentor
 subhead: Describe your sensor or device idea. Get a board pick, where readings go and a phased build plan.
+explain: |
+  A plain-language plan for a sensor or device idea, from first breadboard to something you could manufacture. You describe what you want to build and what you have built before. The mentor answers at your level, not above it.
+
+  It picks a board and toolchain, gives one main choice and one alternative with the trade-off, and checks what you can actually buy where you live. It decides where readings should go: a phone, a PC, a dashboard or an alert, using tools like MQTT, Home Assistant or Grafana. It looks for ready-made firmware before suggesting you write any, says plainly when a sensor only estimates what you asked, names the biggest risks, and gives time and cost estimates in phases.
+when:
+  - You have an idea for a gadget and do not know which board to buy.
+  - You want to see sensor readings on your phone but not sure how.
+  - You are new to electronics and need a first project at the right size.
+  - You need a rough cost and time estimate before you start buying parts.
+you_give:
+  - What you want the device to do
+  - What you have built before
+  - Your country, budget and timeline
+  - Tools you already own (optional)
+you_get:
+  - A board and toolchain pick with one alternative
+  - A plan for where readings go
+  - A phased build plan from breadboard up
+  - Costs, time and the top risks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

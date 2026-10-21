@@ -6,6 +6,24 @@ summary: Answer a few questions. Get a written quality bar for your project and 
 job: test-and-fix-code
 headline: Quality bar setter
 subhead: Answer a few questions. Get a written quality bar for your project and a watch for anyone lowering it.
+explain: |
+  A short written quality bar for your project, with real numbers, saved in a file the whole team and any AI agent can check. It ends the argument about what good enough to ship means.
+
+  It first reads your project to find the language, test runner, linters, coverage and CI, so it never asks what it can see. Then it asks four questions, each with a default, so an answer of I do not know still works. The result sets limits for things like test coverage, speed and accessibility, and says which checks block a merge. It also adds a watch that flags any change that lowers the bar.
+when:
+  - An AI agent writes more code than you can read and you need guardrails.
+  - Coverage and speed targets get argued about on every pull request.
+  - Your CI has checks but nobody knows which ones really block a merge.
+  - You are starting a project and want standards written down first.
+you_give:
+  - Access to your project files
+  - Answers to four short questions
+  - Existing standards or CI setup (optional)
+you_get:
+  - Written quality bar with numbers
+  - List of checks that block a merge
+  - Floor rules for the minimum standard
+  - A watch for changes that lower the bar
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

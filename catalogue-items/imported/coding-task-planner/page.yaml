@@ -6,6 +6,24 @@ summary: Describe a coding task. Get a short plan with scope, ordered action ite
 job: build-software
 headline: Coding task planner
 subhead: Describe a coding task. Get a short plan with scope, ordered action items, tests and open questions.
+explain: |
+  A short plan you can act on, produced before anyone touches the code. It lists what is in scope, what is not, and an ordered checklist from discovery to rollout.
+
+  It works read-only. It skims your README, docs and the files most likely to change, and notes the language, tests and deployment. It asks at most one or two questions, and only if it cannot plan without the answer. Otherwise it makes an assumption and says so. The plan opens with a short paragraph on the approach, then six to ten atomic items, verb first, covering changes, tests and open questions.
+when:
+  - You have a vague task and need a plan before starting.
+  - You want to hand a clear checklist to a teammate or agent.
+  - You are unsure what a feature will touch.
+  - You need to decide the order of work.
+you_give:
+  - The task in your own words
+  - Repo access
+  - Limits on time or tools (optional)
+you_get:
+  - A short intent paragraph
+  - In-scope and out-of-scope lists
+  - An ordered action checklist
+  - Test steps and open questions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

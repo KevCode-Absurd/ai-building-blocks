@@ -6,6 +6,27 @@ summary: Give it your sheet size and the panels you need. Get cutting layouts th
 job: plan-supply-chain
 headline: Sheet cutting planner
 subhead: Give it your sheet size and the panels you need. Get cutting layouts that waste the least material.
+explain: |
+  Cutting layouts that use the least material when you cut panels from large sheets of steel, glass, wood, fabric or paper. You list sheet size and every panel you need, with sizes and quantities.
+
+  Claude first asks what limits you: whether pieces can rotate, whether grain matters, blade kerf, minimum trim, and whether cuts must run edge to edge, as on a guillotine saw, in two or three stages. Then it picks the right method and produces cutting patterns, with waste percentage and a sheet count. You can aim to minimise sheets, cost or complexity. It can handle several sheet sizes. The output is a pattern set you can send to the saw.
+when:
+  - You need 60 panels cut from standard 2440 by 1220 mm sheets.
+  - Your offcuts are piling up and you want less waste.
+  - Your saw only makes full-width cuts and you need layouts that respect that.
+  - You want to compare sheet cost across two sheet sizes.
+you_give:
+  - Sheet sizes and cost
+  - Panel sizes and quantities
+  - Whether rotation and grain matter
+  - Blade kerf and trim limits
+  - Saw type or cutting stages
+you_get:
+  - Cutting patterns per sheet
+  - Total sheets needed
+  - Waste percentage
+  - Cost comparison
+  - A layout that fits your saw
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Name an Indian stock. Get a short HTML earnings preview with consensus,
 job: money-and-investing
 headline: Earnings preview report builder for India
 subhead: Name an Indian stock. Get a short HTML earnings preview with consensus, past surprises and peers. It collects data from websites.
+explain: |
+  A short HTML earnings preview for an Indian listed company, built from free web data, with consensus, past surprises, peers and a view on what could beat or miss. It prints to about four or five pages.
+
+  The skill handles Indian conventions that trip up outside tools: the April to March fiscal year, quarters labelled like Q3 FY26, and lakh and crore units. It uses no paid terminal. It gathers figures from free sources, measures how estimates moved, compares past results with expectations, and frames the setup with a range of outcomes. Where free data does not exist, it names the gap instead of faking it. It collects data from websites.
+when:
+  - A company you follow reports results next week and you need a brief.
+  - You want past earnings surprises set against the consensus.
+  - You cover Indian stocks and have no paid data terminal.
+  - You need a printable page to share with a team.
+  - You want peer figures beside the company before results.
+you_give:
+  - The company name or ticker
+  - The quarter being previewed
+  - Your point of view or questions (optional)
+you_get:
+  - A self-contained HTML report
+  - Estimate revisions and consensus
+  - Past surprise history
+  - Peer comparison
+  - Beat or miss scenarios
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

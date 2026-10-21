@@ -6,6 +6,25 @@ summary: Describe your app. Get a Google Cloud design with services, cost estima
 job: ship-and-host
 headline: Google Cloud architect
 subhead: Describe your app. Get a Google Cloud design with services, cost estimate and deploy steps.
+explain: |
+  A Google Cloud design you can build from, with services chosen, costs estimated and deploy steps laid out. Describe your app, such as a web app, mobile backend, data pipeline or SaaS, and your limits.
+
+  It first collects the facts: expected users and traffic, monthly budget, team size and skill, compliance needs like GDPR or HIPAA, and uptime targets. Then it recommends a pattern, such as Cloud Run or GKE, with the data stores and BigQuery pipelines that fit. It produces infrastructure-as-code templates and ways to cut spend. A script helps with the design step, and Python is needed to run it.
+when:
+  - You are moving an app to Google Cloud and need a plan.
+  - Your cloud bill is high and you need to cut it.
+  - You must choose between Cloud Run and GKE.
+  - You need a design that meets HIPAA or GDPR rules.
+you_give:
+  - App type and description
+  - Expected users and traffic
+  - Monthly budget
+  - Compliance and uptime needs (optional)
+you_get:
+  - A recommended architecture
+  - Services chosen with reasons
+  - A monthly cost estimate
+  - Infrastructure code and deploy steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

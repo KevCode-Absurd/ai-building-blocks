@@ -6,6 +6,26 @@ summary: Describe a purchase. Get payback, return and risk worked out, so you ca
 job: money-and-investing
 headline: Business investment analyst
 subhead: Describe a purchase. Get payback, return and risk worked out, so you can decide whether to invest.
+explain: |
+  Work out whether a business purchase pays off: payback time, return and risk, with a clear recommendation and the assumptions behind it. It is for business spending, not personal stocks.
+
+  You describe the item, such as equipment, a hire, software, space or a vendor contract, plus its cost, life span and expected savings or extra revenue. The skill calculates ROI, payback, NPV and IRR, then tests an upside and a downside case. It states every assumption and flags what could go wrong. You can compare several options side by side. Partial data is fine, as long as it is labelled. It does not give personal investing advice.
+when:
+  - You are deciding whether to buy a machine or software.
+  - You are weighing a new hire against another use of the same money.
+  - You have three options and need to see them side by side.
+  - You want a payback figure to show your boss or partner.
+you_give:
+  - What the investment is and its upfront cost
+  - Expected savings or extra revenue
+  - Ongoing costs
+  - Alternatives or your cost of capital (optional)
+you_get:
+  - Payback, ROI, NPV and IRR
+  - Upside and downside scenarios
+  - A clear recommendation
+  - Assumptions and risks flagged
+  - A comparison table for several options
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

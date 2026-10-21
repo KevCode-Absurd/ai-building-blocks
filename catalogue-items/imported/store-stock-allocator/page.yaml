@@ -6,6 +6,27 @@ summary: Give it a new buy and store sales. Get how many units of each size and 
 job: plan-supply-chain
 headline: Store stock allocator
 subhead: Give it a new buy and store sales. Get how many units of each size and style go to each store.
+explain: |
+  A split of a new delivery across your stores that matches what each one can sell. You give the buy, the sizes and styles, and each store's sales, and get how many units of each go where.
+
+  It first asks about your products (fashion or basic goods), store tiers, how you divide stock today and your goals, such as fewer markdowns or higher sell-through. Stores are grouped by sales, size, climate or customer type. Allocation then follows sales history and weeks of cover, with size curves per cluster and a reserve held back at the warehouse for reorders. It also covers how to re-balance when one store sells out early.
+when:
+  - A new season's buy arrives and you must decide what each store gets.
+  - Some stores sell out in days while others hold stock for months.
+  - You split everything equally and suspect that costs you sales.
+  - Your size mix ends with too many mediums and no smalls in the busy stores.
+you_give:
+  - The new buy by style, size and cost
+  - Store list with sales history
+  - Store sizes and tiers
+  - Current sell-through and markdown rate (optional)
+  - Weeks of cover you want
+you_get:
+  - Units by store, style and size
+  - Store clusters with reasons
+  - A warehouse reserve amount
+  - Re-balancing rules
+  - Targets for sell-through
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

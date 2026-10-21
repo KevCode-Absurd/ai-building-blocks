@@ -6,6 +6,26 @@ summary: Tell it your plans or membership. Get tier prices, flat or pay-per-use 
 job: set-prices
 headline: Membership plan pricer
 subhead: Tell it your plans or membership. Get tier prices, flat or pay-per-use advice, and ways to win upgrades.
+explain: |
+  Clear prices for your plan tiers that nudge people to pick a plan and move up a level. You give your tiers and goals, and get rounded, ready-to-publish prices with a one-line reason for each.
+
+  The rules are specific to recurring plans. Make the flat rate cover what most members want, and price it above the pay-per-use equivalent, so pay-per-use stays an entry point. Keep the first digit the same between neighbouring tiers, so a step up does not feel like a jump. Round per-seat and per-GB prices and drop admin fees. A paid perk like free shipping needs a minimum order. Rewards work best when automatic, with one tier and a threshold.
+when:
+  - You are launching a membership with Basic and Pro tiers.
+  - Few Basic members upgrade and you want to know why.
+  - You are deciding between a flat monthly fee and pay-per-use.
+  - You charge for extra seats or storage and the add-on prices look messy.
+you_give:
+  - Your tiers, prices and billing period
+  - Any per-use price, such as per seat or per video
+  - Which tier you want people to pick
+  - Any perks or rewards you offer (optional)
+you_get:
+  - A table of tier prices
+  - An upgrade path between tiers
+  - Advice on flat rate versus pay-per-use
+  - Simple add-on prices
+  - A short reason for each choice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it a large task. Get it split across helper agents with clear owne
 job: set-up-ai
 headline: Parallel work coordinator
 subhead: Give it a large task. Get it split across helper agents with clear ownership, then merged into one checked result.
+explain: |
+  A big task split into clear pieces, handed to helper agents, then merged into one checked result. The lead agent stays responsible for the final answer.
+
+  It breaks the work into bounded pieces, each with a clear output and an owner. Quick, read-only scouts run in parallel with small effort settings to gather facts. Then focused workers handle the pieces that change things, with no two touching the same files. The lead agent collects their results, resolves conflicts, checks the whole, and reports back. Small jobs stay with the lead. It suits Codex.
+when:
+  - A task has several independent parts, such as research, review and edits.
+  - You want faster results by running work side by side.
+  - Helper outputs need one person to check and combine them.
+  - You want to stay free to chat while the work runs.
+you_give:
+  - The large task and desired result
+  - Files or areas helpers may touch (optional)
+  - Rules or limits for the work (optional)
+you_get:
+  - Task split with owners and outputs
+  - Parallel scout findings
+  - Merged and verified result
+  - Summary of what each helper did
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

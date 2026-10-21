@@ -6,6 +6,25 @@ summary: Give it what you want to learn from a visit. Get look-fors and a way to
 job: teach-and-train
 headline: Lesson observation form builder
 subhead: Give it what you want to learn from a visit. Get look-fors and a way to record evidence.
+explain: |
+  A focused observation form for classroom visits, with the specific things to look for and a way to record what you see as evidence. Say what you want to learn from the visit and why it is happening: coaching, peer learning, quality checks or research. The skill insists on one narrow lens, not everything.
+
+  It writes look-fors that are visible behaviours, and sets up a record of observed facts kept apart from judgments. It also plans what to do afterwards, so the visit leads to a useful conversation. The design draws on classroom observation research, which warns that vague forms give unreliable results.
+when:
+  - Teachers will visit each other's classrooms next month.
+  - A coach is observing questioning and needs a clear form.
+  - You want observation notes that stick to what happened.
+  - You need to prepare a feedback talk after a visit.
+you_give:
+  - The teaching practice to observe
+  - Purpose of the observation
+  - Who observes and who is observed
+  - Time available (optional)
+you_get:
+  - A list of look-fors
+  - An evidence recording sheet
+  - A way to separate facts from opinion
+  - Questions for the follow-up talk
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

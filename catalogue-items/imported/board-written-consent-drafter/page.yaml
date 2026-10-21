@@ -6,6 +6,25 @@ summary: Describe the decision your directors must approve. Get a written consen
 job: check-contracts
 headline: Board written consent drafter
 subhead: Describe the decision your directors must approve. Get a written consent to sign instead of a meeting. Have a lawyer check it.
+explain: |
+  When directors must approve something, a written consent lets them sign instead of meeting. This skill drafts that consent in your house style, starting from the closest past example in your own files.
+
+  It first sorts the action into routine or needs-review. Major one-off actions trigger a warning to involve outside counsel before going on. It then finds a matching precedent, drafts the resolutions, flags director conflicts, and notes any state notice rules. You also get a signing checklist to track who has signed. It handles several resolutions in one consent. A lawyer should review the draft.
+when:
+  - The board needs to approve a routine action without a meeting.
+  - You want one consent that covers several resolutions.
+  - A director may have a conflict and you need it flagged.
+  - You need to track who has signed and who has not.
+you_give:
+  - A description of the action to approve
+  - Your past consents or sample wording
+  - Board members and state of incorporation
+  - Any known conflicts (optional)
+you_get:
+  - A consent draft in your house format
+  - A signatory checklist
+  - Conflict and notice flags
+  - Prompts for what to review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

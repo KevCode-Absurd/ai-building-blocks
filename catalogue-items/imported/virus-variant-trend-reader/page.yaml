@@ -6,6 +6,25 @@ summary: Name a virus and a region. Get current lineages, weekly sequence shares
 job: track-numbers
 headline: Virus variant trend reader
 subhead: Name a virus and a region. Get current lineages, weekly sequence shares and mutation frequencies from public data.
+explain: |
+  A plain summary of which virus lineages are showing up in public sequence data for a region, week by week. It is built for questions like what is circulating now, and it will not answer from memory or old examples.
+
+  You name the virus and the place. The skill runs small Python scripts that query open sequence databases, then reports the current lineages, their weekly shares and common mutations. It checks what a lineage name means today. It also keeps reminding you that sequence counts are not case counts, and that a rising share can come from changes in sampling rather than real growth. It needs Python and internet access, but no login.
+when:
+  - You need to know which variants are most common in submitted sequences this month.
+  - You are writing a report and want mutation frequencies for a lineage.
+  - You want to see whether a lineage share is truly rising or just sampled more.
+  - You need to check what a lineage name means now.
+you_give:
+  - The virus, such as SARS-CoV-2 or influenza
+  - A country or region
+  - A time window
+  - A lineage or mutation of interest (optional)
+you_get:
+  - Current top lineages with weekly sequence shares
+  - Mutation frequencies
+  - Notes on sampling limits
+  - The queries used, so you can repeat them
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

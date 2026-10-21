@@ -6,6 +6,26 @@ summary: Describe your shipping lanes and carriers. Get a bid plan, rate talking
 job: sell-and-negotiate
 headline: Freight carrier manager
 subhead: Describe your shipping lanes and carriers. Get a bid plan, rate talking points and a carrier scorecard.
+explain: |
+  A plan for running your carrier network: how to bid out freight, what to say when negotiating rates and a scorecard that actually gets used.
+
+  It breaks a freight rate into base haul, fuel surcharge, extra charges like detention and liftgate, and minimums, so you can negotiate each part. It builds a scorecard with five measures: on-time delivery, tender acceptance, claims, invoice accuracy and pickup time. It sets a three-deep routing guide per lane, balances large and small carriers, and lays out an 8 to 12 week RFP with data prep, bids and awards.
+when:
+  - You are about to run a freight bid and need the plan.
+  - Your carriers keep rejecting loads or billing wrong.
+  - You need talking points for a rate renewal.
+  - You want to see which carriers deserve more volume.
+you_give:
+  - Lanes with volumes and spend
+  - Current carriers and rates
+  - Performance data (optional)
+  - Service requirements
+you_get:
+  - Bid timeline and steps
+  - Rate negotiation points by cost part
+  - Five-measure carrier scorecard
+  - Routing guide per lane
+  - Carrier mix advice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

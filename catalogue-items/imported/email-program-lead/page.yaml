@@ -6,6 +6,25 @@ summary: Say your email goal. Get flows, copy, deliverability fixes and complian
 job: write-emails
 headline: Email program lead
 subhead: Say your email goal. Get flows, copy, deliverability fixes and compliance checks, with a hard stop before any real send.
+explain: |
+  A full email marketing plan, with the sending steps held back until you say go. State your goal and you get flows, copy, deliverability fixes and compliance checks, built on one author's playbook drawn from running a large email platform.
+
+  The skill first connects to your sending platform and reads back the account, domain and list size. Everything defaults to draft, with a preview and a test to your own address. It will not send to more than one person until you type "send it" after seeing the audience, count and content. It blocks sends if authentication, unsubscribe link or address is missing. A task router points each job to a detailed guide.
+when:
+  - You want to start or fix a welcome flow.
+  - Your emails land in spam and you need a fix list.
+  - You need a compliance check before a big send.
+  - You want an AI to work in your email tool safely.
+you_give:
+  - Your email goal
+  - Your sending platform and access
+  - Your list size and audience
+  - Brand and offer details (optional)
+you_get:
+  - Email flows and campaign plans
+  - Drafted emails with previews
+  - A deliverability fix list
+  - Compliance checks before any send
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

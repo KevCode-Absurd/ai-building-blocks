@@ -6,6 +6,27 @@ summary: Give it your shipments. Get the cheapest mix of modes and carriers, and
 job: plan-supply-chain
 headline: Freight mode and carrier picker
 subhead: Give it your shipments. Get the cheapest mix of modes and carriers, and where to combine loads.
+explain: |
+  The cheapest mix of shipping modes and carriers for your freight, plus where combining loads would save money without hurting delivery times.
+
+  It starts with what you ship, shipment sizes, lanes, how often, spend now, on-time rate and damage claims. It compares parcel, less-than-truckload, full truckload and other modes for each lane, matches them to transit and handling needs, and recommends carriers. It looks for ways to combine shipments, shift modes and bid out heavy lanes. The result is a list of changes ordered by saving and effort.
+when:
+  - Your freight bill keeps rising and you need ways to cut it.
+  - You ship small loads often and think combining them would help.
+  - You are unsure whether parcel or truckload is cheaper on a lane.
+  - You want to check if you use too many carriers.
+you_give:
+  - What you ship, with weight and size
+  - Lanes and how often you ship
+  - Current spend and carriers
+  - Transit time needs
+  - Special handling needs (optional)
+you_get:
+  - Mode choice per lane
+  - Carrier recommendations
+  - Load combining ideas
+  - Estimated savings
+  - Ordered list of changes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

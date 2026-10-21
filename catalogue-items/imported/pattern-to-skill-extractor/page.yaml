@@ -6,6 +6,25 @@ summary: Name a fix you keep repeating. Get it packaged as a reusable skill with
 job: make-skills
 headline: Pattern to skill extractor
 subhead: Name a fix you keep repeating. Get it packaged as a reusable skill with notes and examples.
+explain: |
+  A fix you keep repeating, turned into a skill you can reuse in any project. Describe the pattern and get a packaged folder with instructions, notes and examples.
+
+  It first checks the pattern qualifies: it has come up in two or more projects, took real debugging to find, applies broadly and is hard to remember. It searches your saved memory for related notes, then drafts a skill with a name, trigger description, steps and a worked example. You can name the skill, pick the output folder or preview first. This suits fixes like a setup quirk or a stubborn build error.
+when:
+  - You solved the same bug twice and do not want a third time.
+  - A tricky setup fix lives only in your head.
+  - You want to share a fix with your team as a skill.
+  - Your notes hold a pattern worth packaging.
+you_give:
+  - Description of the recurring pattern
+  - Skill name (optional)
+  - Output folder (optional)
+  - Any notes or past fixes
+you_get:
+  - Ready-to-install skill folder
+  - Trigger description
+  - Step-by-step instructions
+  - Example of the fix in use
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

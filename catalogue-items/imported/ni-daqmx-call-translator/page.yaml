@@ -6,6 +6,24 @@ summary: Paste a DAQmx C call. Get the correct MATLAB calldaqlib call with argum
 job: build-software
 headline: NI-DAQmx call translator
 subhead: Paste a DAQmx C call. Get the correct MATLAB calldaqlib call with argument types fixed.
+explain: |
+  A DAQmx C function turned into a correct calldaqlib call in MATLAB, with the argument types fixed. Wrong types are the usual reason these calls fail, so this saves a lot of trial and error.
+
+  The skill follows a short decision tree. If you named calldaqlib or a specific DAQmx function, it writes that call without second-guessing you. If you only described a need, it first checks whether the normal daq object can do it. It then checks whether the function needs a task handle or works at the device level, since calldaqlib handles task creation itself and cannot call DAQmxCreateTask. It needs Data Acquisition Toolbox R2026a or newer and an NI device.
+when:
+  - You have example C code from NI and need it in MATLAB.
+  - You need a driver feature the daq object does not expose, such as a reference trigger.
+  - You are reading back what the NI driver actually holds.
+  - A calldaqlib call gives a type error you cannot trace.
+you_give:
+  - The DAQmx C function or signature
+  - What you want it to do
+  - Your device and MATLAB release (optional)
+you_get:
+  - A correct calldaqlib call
+  - Fixed argument types
+  - A note if the daq object can do it instead
+  - Why DAQmxCreateTask will not work here
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

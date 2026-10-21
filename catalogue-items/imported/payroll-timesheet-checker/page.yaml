@@ -6,6 +6,25 @@ summary: Give it your timesheets. Get hours totalled by person, every oddity fla
 job: hire-people
 headline: Payroll timesheet checker
 subhead: Give it your timesheets. Get hours totalled by person, every oddity flagged, and a run ready for your line by line approval.
+explain: |
+  Hours totalled by person for the pay period, every oddity flagged, and a payroll run staged for you to approve line by line before any money moves.
+
+  It first fixes the pay period, pay date and who is on the run, including mid-period hires, exits and leave. Then it pulls timesheets from Gusto, QuickBooks Payroll or an uploaded sheet and totals regular, overtime and paid time off. It flags missed punches, overtime spikes, rate changes and hours outside the schedule. It raises these and never fixes them silently. You approve each line, then the entry posts to the books or goes to your bookkeeper.
+when:
+  - Payroll is due Friday and you want hours checked first.
+  - Someone forgot to clock out.
+  - This week's payroll looks too high.
+  - You need to confirm who was paid for the right period.
+you_give:
+  - Pay period and pay date
+  - Timesheets from Gusto, QuickBooks or a spreadsheet
+  - Roster changes such as hires, exits and leave
+  - Rates and schedules (optional)
+you_get:
+  - Hours totalled by person
+  - List of flagged problems
+  - Run staged for line-by-line approval
+  - Journal entry for the books
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

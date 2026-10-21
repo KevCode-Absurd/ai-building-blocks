@@ -6,6 +6,24 @@ summary: Name a region. Get a dashboard of key indicators, the yield curve and w
 job: track-numbers
 headline: Rates and economy dashboard builder
 subhead: Name a region. Get a dashboard of key indicators, the yield curve and what they say about the cycle.
+explain: |
+  A dashboard for one region that shows key economic indicators, the government yield curve, and real rates, with a read on where the economy sits in its cycle. It ends with what the signals mean for rates.
+
+  It pulls growth, jobs and business survey data, then the shape of the yield curve and the split of rates into inflation and real parts. It labels periods properly, such as fiscal years that run April to March in India, and flags unit traps like lakh and crore. If a needed input has no free source, it stops and says so instead of filling in a stand-in. It is built around Indian markets, with data from free sources.
+when:
+  - You need a quick view of where the economy sits in the cycle.
+  - You want to know if the yield curve is flattening or steepening.
+  - You are writing a market note and need clean macro charts.
+  - You have to explain real rates to your team.
+you_give:
+  - Region to cover (India by default)
+  - Time window
+  - Indicators you care about (optional)
+you_get:
+  - Indicator dashboard
+  - Yield curve and real-rate view
+  - Cycle position read
+  - Notes on missing data
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

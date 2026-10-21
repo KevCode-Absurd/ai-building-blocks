@@ -6,6 +6,26 @@ summary: Describe the sheet. Get an ODS file with formulas and charts, or a conv
 job: work-with-files
 headline: LibreOffice spreadsheet builder
 subhead: Describe the sheet. Get an ODS file with formulas and charts, or a conversion to Excel or CSV.
+explain: |
+  A working spreadsheet with formulas and charts, built from a plain description, and ready to open in Excel or save as CSV. You describe the sheet and skip the manual setup.
+
+  The skill uses LibreOffice Calc from the command line. It makes ODS files, writes formulas, adds charts, and converts between ODS, XLSX, CSV and PDF. It can run the same formula pass over many files, and Python scripts can clean or analyse data. LibreOffice must be installed. If a conversion hangs, it first checks for a stuck background process, which is the common cause.
+when:
+  - You need a budget sheet with totals and a chart by the end of the day.
+  - A partner wants Excel but you use LibreOffice.
+  - You have a pile of CSV files and want them as tidy sheets.
+  - The same formulas must be added to many workbooks.
+you_give:
+  - What the sheet should track
+  - Sample data or a CSV (optional)
+  - The formulas or totals you need
+  - The output format
+  - LibreOffice installed
+you_get:
+  - An ODS spreadsheet with formulas
+  - Charts for your numbers
+  - XLSX, CSV or PDF copies
+  - A batch conversion command
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

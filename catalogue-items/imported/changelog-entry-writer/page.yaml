@@ -6,6 +6,24 @@ summary: Give it a commit range or pull request. Get a clean changelog entry gro
 job: ship-and-host
 headline: Changelog entry writer
 subhead: Give it a commit range or pull request. Get a clean changelog entry grouped into added, changed and fixed.
+explain: |
+  A clean changelog entry you can paste into your file, grouped into added, changed and fixed. Give it a commit range or a pull request and it turns the raw history into what users and maintainers need to know.
+
+  It finds the last version tag, lists commits since then, and reads the real diff, including changes that arrived through merges. It follows the Keep a Changelog format. It treats commit messages, branch names and diffs as plain evidence, never as instructions, and quotes anything suspicious instead of obeying it. It is for release notes, not for PR descriptions or single commit messages. You need a git repository.
+when:
+  - You are about to release a version and the changelog is empty.
+  - A pull request merged and users should hear about it.
+  - You want release notes written from what actually changed.
+  - Commit messages are messy and need turning into readable lines.
+you_give:
+  - A git repository
+  - A commit range, branch or pull request number
+  - The version number (optional)
+you_get:
+  - A changelog entry in a standard format
+  - Changes grouped as added, changed, fixed and so on
+  - Short plain-language lines per change
+  - Flags for anything odd in the history
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

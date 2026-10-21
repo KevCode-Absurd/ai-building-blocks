@@ -6,6 +6,26 @@ summary: Name a repetitive task. Get a script, schedule or trigger that does it 
 job: set-up-ai
 headline: Task automation builder
 subhead: Name a repetitive task. Get a script, schedule or trigger that does it for you.
+explain: |
+  A working script, schedule or trigger that does a boring job for you, tested and logged, so you stop doing it by hand. You describe what starts it and what should happen, and the skill builds the right kind of automation.
+
+  It first asks what triggers the job, what the inputs and outputs are and how often it runs. It then picks a pattern: a shell or Python script, a cron schedule, a file watcher, a CI trigger or API polling. It adds retries, error handling, logging and safe handling of secrets. It is tested on empty files and failures first. It needs somewhere to run.
+when:
+  - You move or rename the same files every week and want it done for you.
+  - A CSV arrives in a folder and must be checked and converted.
+  - You check a website or API by hand and want an alert instead.
+  - You want a job to run every night without you.
+  - You need a CI step that runs when code changes.
+you_give:
+  - The repetitive task in plain words
+  - What starts it (time, file, event)
+  - Where it will run
+  - Credentials or paths it needs (optional)
+you_get:
+  - A working script or workflow file
+  - A schedule or trigger set up
+  - Error handling and logs
+  - Short notes on how to run and monitor it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

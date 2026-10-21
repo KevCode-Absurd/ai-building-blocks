@@ -6,6 +6,26 @@ summary: Describe your invention. Get a first screen on novelty, deadlines and v
 job: check-contracts
 headline: Invention idea screener
 subhead: Describe your invention. Get a first screen on novelty, deadlines and value, and whether to see a patent lawyer. Not legal advice.
+explain: |
+  A quick first look at your invention that tells you whether it is worth paying a patent professional. Describe what it is, the problem it solves, how it differs from what exists, who invented it, and whether it has been shown in public. The skill runs six checks: novelty, obviousness, whether the idea is the kind that can be patented at all, public disclosure deadlines, how easy infringement would be to spot, and business value.
+
+  Each check gets a green, amber or red mark with one line of reasoning. The verdict is pursue, investigate or decline. It never says patentable, and it flags any deadline risk at the top. It is a screen, not legal advice.
+when:
+  - You built something new and wonder if it is worth protecting.
+  - You showed your idea at a talk or on a site and fear a deadline has started.
+  - Your team has several ideas and needs to pick which to take to a lawyer.
+  - You want to arrive at a patent attorney meeting with the facts organized.
+you_give:
+  - A description of the invention
+  - The problem it solves and how it differs from existing options
+  - Who invented it and when
+  - Whether and where it was shown publicly
+  - Your technology area (optional)
+you_get:
+  - A six-point screen with colour marks
+  - A pursue, investigate or decline verdict
+  - A deadline warning if one applies
+  - Next steps, such as a prior-art search or attorney review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

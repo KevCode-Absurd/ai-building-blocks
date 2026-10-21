@@ -6,6 +6,25 @@ summary: Give it the outcome you want. Get a tree of customer opportunities, sol
 job: build-product
 headline: Opportunity solution tree builder
 subhead: Give it the outcome you want. Get a tree of customer opportunities, solution ideas and the tests for each.
+explain: |
+  Instead of jumping to a feature, you get a one-page map that runs from the result you want down to the tests you will run. Every branch ties back to what customers actually said or did.
+
+  You name one outcome with a number, such as lifting 7-day retention to 40 percent. The skill lists customer needs under it, written as "I struggle to...". It scores each need by importance times how unsatisfied people are, then asks for several solution ideas per need, not just the first. Under the best ideas it adds small, cheap tests that put real skin in the game. The tree stays focused on one outcome at a time so the team does not wander.
+when:
+  - Your team keeps debating features without agreeing on the problem.
+  - You have interview notes and need to turn them into a plan.
+  - A leader gave you a goal and you must pick what to explore first.
+  - You want to show why you chose one idea over others.
+you_give:
+  - One measurable outcome
+  - Customer interview notes or research (optional)
+  - Current metrics (optional)
+  - Ideas already on the table (optional)
+you_get:
+  - A four-level tree from outcome to experiments
+  - Ranked customer opportunities
+  - Several solution ideas per opportunity
+  - Cheap tests for the top ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

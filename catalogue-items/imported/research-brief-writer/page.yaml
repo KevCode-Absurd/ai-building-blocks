@@ -6,6 +6,25 @@ summary: Give it a vague research need. Get one clear paragraph a deep-research 
 job: think-and-decide
 headline: Research brief writer
 subhead: Give it a vague research need. Get one clear paragraph a deep-research tool can act on without questions.
+explain: |
+  One clear paragraph that a deep research tool can act on without asking you anything. Vague research needs usually give vague answers, and this fixes the request before you send it.
+
+  The paragraph is written for a researcher who knows nothing about your project. It opens by explaining what the project is and why it exists. Then it states the single question and the decision the answer will inform. It adds all the names, dates, known facts and limits, and lists three to six numbered sub-questions. It says what to include and what to avoid, and how the answer should look. It asks for the job to be done, not just a topic.
+when:
+  - You want to use a deep research tool but your question is fuzzy.
+  - Past research results were off topic or too general.
+  - You need to brief a researcher who has no background.
+  - You have several questions and need to pick one mission.
+you_give:
+  - What you want to learn
+  - Why you need it and what it informs
+  - Known facts, names and dates
+  - Things to include or avoid (optional)
+you_get:
+  - One self-contained brief paragraph
+  - Numbered sub-questions
+  - Stated limits and exclusions
+  - Output format request
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

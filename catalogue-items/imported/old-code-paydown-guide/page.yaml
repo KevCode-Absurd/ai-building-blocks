@@ -6,6 +6,25 @@ summary: Give it a large old codebase. Get a safe plan to make it legible, bound
 job: test-and-fix-code
 headline: Old code paydown guide
 subhead: Give it a large old codebase. Get a safe plan to make it legible, bounded and resilient, step by step.
+explain: |
+  A safe plan for fixing an old codebase that everyone is afraid to touch, without a rewrite. The old system keeps shipping while you improve it in place.
+
+  The plan runs through eight phases, each with a question and a document it leaves behind. First you make the code safe to change by adding tests around what you touch. Then you reshape its structure, make it readable, hide complexity inside simple modules, and separate business rules from frameworks. Later phases build habits that stop debt coming back, test how it behaves under real production stress, and split a large monolith into clear areas. It keeps a tracker, so you can stop and resume.
+when:
+  - You inherited a large app with no tests and every change feels risky.
+  - Your team wants to rewrite and you need a safer alternative.
+  - You must split a monolith but do not know where to cut.
+  - You want one plan and tracker for a long cleanup spread over months.
+you_give:
+  - Access to the codebase or a description of it
+  - The areas that hurt most
+  - Your team size and release schedule
+  - Existing tests or docs (optional)
+you_get:
+  - A phased cleanup plan
+  - A debt and testing log
+  - A tracker you can resume
+  - Architecture notes with suggested boundaries
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

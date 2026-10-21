@@ -6,6 +6,25 @@ summary: Describe what users do. Get a flow diagram with choices, error states a
 job: build-product
 headline: User flow mapper
 subhead: Describe what users do. Get a flow diagram with choices, error states and drop-off points.
+explain: |
+  A diagram of everything a person can do while finishing a task, including the paths where it goes wrong. You see where they might leave, and what to change first.
+
+  You name one goal, such as checkout or password reset, and where users come in. The skill lists each step and marks it as a user action or a system action. It draws the happy path first, then adds branches: not signed in, a form error, a timeout, a declined card. Each branch ends in success, recovery or exit. It then marks drop-off risks, like long forms and account walls, and gives a fix for each. Output is a Mermaid diagram you can paste into many tools.
+when:
+  - You need to document how sign up really works before changing it.
+  - Support tickets suggest people get lost partway through checkout.
+  - You are handing a feature to developers and want every error case listed.
+  - You want to find which step to test first for conversion.
+you_give:
+  - The task to map and who does it
+  - Where users enter the flow
+  - Known drop-off numbers (optional)
+  - Existing screens or notes (optional)
+you_get:
+  - A Mermaid flow diagram
+  - Decision points and error paths
+  - Drop-off risk notes on each step
+  - A list of fixes ranked by effect
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

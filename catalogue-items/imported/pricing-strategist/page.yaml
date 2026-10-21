@@ -6,6 +6,25 @@ summary: Describe your product and buyers. Get tiers, a value metric and a test 
 job: set-prices
 headline: Pricing strategist
 subhead: Describe your product and buyers. Get tiers, a value metric and a test plan for your prices.
+explain: |
+  A pricing plan for your product: tiers, the unit you charge on and a way to test prices without guessing.
+
+  The skill asks about your product type, market, how you sell, what alternatives buyers consider and how competitors charge. It also wants your conversion, ARPU and churn numbers. From this it picks a value metric, the thing price grows with, then designs good, better, best packaging and decides where to put the free plan. It adds a test plan with what to measure and how long to run it, so you can change prices with evidence.
+when:
+  - Your SaaS charges a flat fee and customers use it very unevenly.
+  - You think your price is too low but have no proof.
+  - You are adding a free or enterprise plan.
+  - You need to plan a price rise.
+you_give:
+  - Product and target market
+  - Current pricing (optional)
+  - Competitor prices
+  - Conversion, churn and ARPU numbers (optional)
+you_get:
+  - Pricing tiers
+  - Value metric to charge on
+  - Packaging and feature split
+  - Price test plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

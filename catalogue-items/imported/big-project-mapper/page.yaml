@@ -6,6 +6,25 @@ summary: Give it a project too big for one session. Get a map of decisions, reso
 job: plan-strategy
 headline: Big project mapper
 subhead: Give it a project too big for one session. Get a map of decisions, resolved one at a time.
+explain: |
+  Some projects are too big to hold in one chat. This skill turns a loose, foggy idea into a shared map of open questions, then settles them one at a time until the route is clear. You end up with a list of decisions made, not a pile of half-done work.
+
+  It starts by naming the destination, such as a spec, a locked choice or a change made in place. Then it posts each open question as a ticket on your issue tracker. It works one ticket per session, records the answer on the map, and refers to every ticket by its title so you can follow along. It plans first and builds later.
+when:
+  - You have a large idea and no clear first step.
+  - A project is too big to fit in one AI session.
+  - Your team keeps arguing about choices that should have been settled before work began.
+  - You need a spec or a locked decision before any building starts.
+you_give:
+  - A rough description of the big idea
+  - The destination you want to reach
+  - Access to your issue tracker
+  - Notes on anything already decided (optional)
+you_get:
+  - A shared map of decision tickets
+  - One resolved decision per working session
+  - A running list of decisions so far
+  - A clear hand-off point when the route is clear
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

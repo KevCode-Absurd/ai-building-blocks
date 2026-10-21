@@ -6,6 +6,25 @@ summary: Name a service. Get runbooks for deploy, incidents, maintenance and rol
 job: ship-and-host
 headline: Runbook writer
 subhead: Name a service. Get runbooks for deploy, incidents, maintenance and rollback, ready to edit.
+explain: |
+  On-call people need clear steps at 3 a.m., and this builds them before launch. Name a service and get a runbook with sections for deploy, incidents, maintenance and rollback, ready to fill in.
+
+  A small Python script writes the skeleton from the service name, with optional owner and output file. It has start, stop, health check and rollback sections plus escalation spots. You add real commands and links, give each critical step a check that shows success, and set clear rollback triggers. A trial run in staging comes next, and the file goes in version control beside the code. It warns about stale contacts, steps without checks and untested runbooks.
+when:
+  - A new service is going to production and has no on-call guide.
+  - Your teams write runbooks in different styles and you want one shape.
+  - A new on-call engineer needs docs they can follow alone.
+  - An incident showed gaps and you want to rewrite the steps.
+you_give:
+  - The service name
+  - The owner or team
+  - Your deploy and rollback commands (optional)
+  - Escalation contacts (optional)
+you_get:
+  - A runbook skeleton in markdown
+  - Deploy and rollback sections
+  - Incident response steps
+  - A checklist to test it in staging
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

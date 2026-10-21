@@ -6,6 +6,24 @@ summary: Point it at your pages. Get missing titles, share cards, canonical link
 job: build-websites
 headline: Page metadata fixer
 subhead: Point it at your pages. Get missing titles, share cards, canonical links and page data found and fixed.
+explain: |
+  Pages that show the right title, description and preview card when shared or found in search. It scans your pages for missing, duplicated or clashing metadata and fixes it in small changes that touch nothing else.
+
+  It checks in priority order. First duplicates and indexing mistakes, then titles and descriptions, canonical links, share cards for social sites, icons, and structured page data. It makes sure title, description, canonical link and share address all agree. It also checks that share cards work on a live address rather than your own computer. It leaves unrelated code alone.
+when:
+  - Your link looks bare or wrong when you paste it into chat or social media.
+  - Search results show a missing or odd title.
+  - You are launching new pages and want the head tags right.
+  - Duplicate pages are splitting your search ranking.
+you_give:
+  - Your site code or page addresses
+  - Page titles and descriptions you want (optional)
+  - Your live domain
+you_get:
+  - Audit of missing and broken metadata
+  - Fixes with small, scoped code changes
+  - Share card and canonical settings
+  - Icon and page data additions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

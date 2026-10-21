@@ -6,6 +6,25 @@ summary: Give it a topic. Get a list of items to compare and questions to answer
 job: research-topics
 headline: Research outline builder
 subhead: Give it a topic. Get a list of items to compare and questions to answer for each, found online. Scrapes sites.
+explain: |
+  A research outline for any topic: the list of things to compare and the questions to answer about each one, filled in with results found online. You get a clear frame before the real research starts.
+
+  It first writes an initial list of items and fields from what the AI already knows, and you confirm or change it. Then you pick a time range, and a search agent looks the web up to add missing items and fields, with a strict fixed prompt. The result is saved as an outline file that later steps can use. It browses and scrapes web sites, so results depend on what is online. It suits technology choices, benchmarks and academic surveys.
+when:
+  - You must compare several tools before choosing one.
+  - You are starting a survey of a new field.
+  - You need a list of the main options and what to check on each.
+  - Your topic is too big and you need a frame first.
+you_give:
+  - Research topic
+  - Time range for sources
+  - Changes to the item list and fields
+  - Web search access
+you_get:
+  - List of items to research
+  - Questions to answer for each item
+  - Web-sourced additions
+  - Outline file for later steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

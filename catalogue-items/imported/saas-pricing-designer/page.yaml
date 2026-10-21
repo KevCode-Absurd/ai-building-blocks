@@ -6,6 +6,25 @@ summary: Give it your product and customers. Get a value metric, tier layout and
 job: set-prices
 headline: SaaS pricing designer
 subhead: Give it your product and customers. Get a value metric, tier layout and pricing tests to run.
+explain: |
+  A price page you can defend: what to charge for, how many plans to offer and which pricing tests to run next. Give it your product and your customers.
+
+  First it finds your value metric, the thing you charge by. A good one grows with use, is easy to predict and needs no calculator. Next it finds a price range with the Van Westendorp survey, four questions that mark too cheap, a bargain, expensive and too expensive. Then it lays out good, better and best tiers and adds anchoring and plan naming. It ends with tests to run and a view of rival prices.
+when:
+  - You are launching and have no idea what to charge.
+  - Customers say your price is fine but growth is flat, and you suspect it is too low.
+  - You want to add tiers and need to know what goes in each.
+  - You plan a price rise and want to test it first.
+you_give:
+  - What your product does and who buys it
+  - Current prices (optional)
+  - Competitor prices (optional)
+  - Cost to serve a customer (optional)
+you_get:
+  - A recommended value metric
+  - A price range with a survey method
+  - A three-tier plan layout
+  - A list of pricing tests
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

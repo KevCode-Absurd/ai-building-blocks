@@ -6,6 +6,24 @@ summary: Give it pictures and words. Get image search, sorting by label and chec
 job: build-software
 headline: Image and text matcher
 subhead: Give it pictures and words. Get image search, sorting by label and checks for what a picture shows.
+explain: |
+  A program that matches pictures to words without any training of your own. Give it images and text and you can search a photo set by description, sort pictures into labels you choose, and check what a picture shows.
+
+  It uses OpenAI's CLIP model, which learned from 400 million image and caption pairs. It scores how close each image is to each piece of text. Tasks include zero-shot classification, where you list labels and it picks the best, image search by sentence, finding text for a picture and flagging unsafe content. You need Python with transformers, torch and pillow installed. For captions, chat about images or cutting out objects, other models do a better job, and the skill says so.
+when:
+  - You have thousands of photos and want to search them by describing them.
+  - You need to sort images into your own categories with no labeled examples.
+  - You want to flag unsafe images in uploads.
+  - You need to check if a caption fits a picture.
+you_give:
+  - Images or a folder of images
+  - Labels or text descriptions to match
+  - Python with torch, transformers and pillow
+you_get:
+  - Similarity scores for image and text pairs
+  - Images sorted into your labels
+  - Search results for a text query
+  - Code you can run on your own files
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

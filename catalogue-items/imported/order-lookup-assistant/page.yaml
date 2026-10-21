@@ -6,6 +6,25 @@ summary: "Give an email, phone or order number. Get the full order summary: item
 job: run-your-store
 headline: Order lookup assistant
 subhead: "Give an email, phone or order number. Get the full order summary: items, payment, shipping and history."
+explain: |
+  Everything about a customer's order on one screen: what they bought, what they paid, where it is going, tracking, refunds and history. Support agents answer in seconds without clicking through the Shopify admin.
+
+  You search by order number, email or phone. The skill makes one request to Shopify and returns up to a set number of matching orders with payment status, fulfilment status, line items, shipping address, tracking links and refund details. Output can be a readable summary or JSON for other tools. It only reads data and does not change orders. Needs a signed-in Shopify CLI session with access to orders and customers.
+when:
+  - A customer writes in asking where their parcel is.
+  - You need to check if a refund already went out.
+  - You only have an email address and need their orders.
+  - A support agent needs order details during a chat.
+you_give:
+  - Store domain
+  - Order number, email or phone
+  - How many orders to return (optional)
+  - Readable or JSON output (optional)
+you_get:
+  - Order summary with items and totals
+  - Payment and fulfilment status
+  - Shipping address and tracking
+  - Refund details
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

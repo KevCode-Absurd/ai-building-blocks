@@ -6,6 +6,25 @@ summary: Give it DOIs, paper titles or a messy bibliography. Get clean, checked 
 job: work-with-files
 headline: Citation and BibTeX fixer
 subhead: Give it DOIs, paper titles or a messy bibliography. Get clean, checked BibTeX entries with duplicates removed.
+explain: |
+  A clean bibliography with every entry checked against the real paper. Give it DOIs, PubMed or arXiv IDs, paper titles or a messy BibTeX file, and get back tidy entries with duplicates removed.
+
+  It looks papers up in Google Scholar or PubMed and pulls the full details: authors, title, journal, year and pages. It turns IDs into correctly formatted BibTeX. For an existing file, it compares each entry with the actual publication, flags mismatches and missing fields, merges duplicates and makes the key names and style consistent. It can also find highly cited papers in a field. Scripts are included, so Python and web access are needed. Always skim the final list before you submit your paper.
+when:
+  - You have a pile of DOIs and need BibTeX entries for your thesis.
+  - Your bibliography has duplicates and odd formatting.
+  - You want to be sure each reference matches the real paper.
+  - You need to find key papers in a new field.
+you_give:
+  - DOIs, PMIDs, arXiv IDs or paper titles
+  - Your existing BibTeX file (optional)
+  - A topic and year range for searching (optional)
+  - Your preferred citation style (optional)
+you_get:
+  - Clean BibTeX entries
+  - A duplicate list and merged file
+  - Flagged entries that do not match the source
+  - Consistent key names
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

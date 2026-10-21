@@ -6,6 +6,25 @@ summary: Rate how sure you are before and after you try something. See where you
 job: teach-and-train
 headline: Confidence check coach
 subhead: Rate how sure you are before and after you try something. See where you guess too high or too low.
+explain: |
+  A short exercise that shows whether you tend to be too sure or too unsure about what you know. You rate your confidence, try the question, see how you did, and then compare.
+
+  Claude asks for a gut rating from 0 to 100 before you answer. You attempt the question without notes. Claude marks the attempt honestly as strong, partial, minimal or incorrect, then asks for your rating again after feedback. It compares the two numbers with the result and names the pattern, such as overconfident, underconfident or well calibrated. It keeps earlier results so you can watch the pattern over time. It is useful because feeling you know something often differs from knowing it.
+when:
+  - You re-read notes and feel ready but score badly on tests.
+  - You want to find topics where you guess too high.
+  - A student needs to see their own study habits more clearly.
+  - You are building a regular self-check into revision.
+you_give:
+  - A topic or question
+  - Your confidence rating before and after
+  - Your honest attempt, without notes
+  - Earlier results (optional)
+you_get:
+  - A marked attempt
+  - A comparison of confidence and result
+  - A named pattern
+  - Advice on what to do next
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

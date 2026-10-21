@@ -6,6 +6,25 @@ summary: Say your news. Get a media list, pitch emails and a press kit outline.
 job: grow-social
 headline: Press outreach planner
 subhead: Say your news. Get a media list, pitch emails and a press kit outline.
+explain: |
+  Tell it your news and get a plan to win press coverage: who to contact, what to say and what to put in your press kit.
+
+  The skill starts by testing whether you have a real story, such as your own data, a sharp opinion, a milestone or a strong customer result. It stresses that the story is the trend or the conflict, with your product as proof. You get a target list of journalists, podcasts and newsletters, pitch emails written for each, and an outline for a press page. It also covers fast replies to news already breaking and says when to skip PR.
+when:
+  - You are launching a product and want coverage.
+  - A news story in your field gives you something to say.
+  - You have original data nobody has published.
+  - You are unsure whether PR is worth your time yet.
+you_give:
+  - Your news or announcement
+  - Product and audience
+  - Spokesperson availability
+  - Any data or customer results (optional)
+you_get:
+  - Media target list
+  - Pitch emails
+  - Press kit outline
+  - Advice on timing and follow-up
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

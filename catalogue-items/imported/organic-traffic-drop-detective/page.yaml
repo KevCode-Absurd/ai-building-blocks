@@ -6,6 +6,25 @@ summary: Connect Ahrefs and Search Console. Get the likely cause of a traffic dr
 job: read-ad-results
 headline: Organic traffic drop detective
 subhead: Connect Ahrefs and Search Console. Get the likely cause of a traffic drop or stall and an action plan.
+explain: |
+  The likely cause of a search traffic drop or stall, found in a set order instead of guessing, with an action plan to fix it.
+
+  You describe the change, when it started and what you changed recently. The skill connects to Ahrefs and Search Console data and works through five layers. First it confirms the drop is real, ruling out tracking gaps, bots, wrong date ranges and seasonality. Then it checks for site and technical causes, such as redirects, rendering or a bad deploy, followed by content, links and ranking changes, and finally whether competitors or a Google update explain it. It stops when it has enough evidence. Needs access to Ahrefs and Search Console.
+when:
+  - Search traffic fell sharply and your boss wants an answer.
+  - Traffic has been flat despite months of new content.
+  - You just migrated your site or changed domains.
+  - Rankings dropped right after a Google update.
+you_give:
+  - What changed and by how much
+  - The date it started
+  - Recent deploys, migrations or content changes
+  - Ahrefs and Search Console access
+you_get:
+  - Confirmation the drop is real
+  - A ranked list of likely causes with evidence
+  - Pages and keywords hit hardest
+  - An action plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Say where the candidate is in your process. Get a clear email, rejectio
 job: hire-people
 headline: Candidate message drafter
 subhead: Say where the candidate is in your process. Get a clear email, rejection or update draft for you to send.
+explain: |
+  The right message for a candidate, at the right moment, ready for you to send. Say where the person is in your process, such as screening invite, post-interview update, offer or rejection, and you get an email draft with a clear next step.
+
+  The drafts follow a few plain rules: reply within a day, give a real timeline, mention something specific about the person, ask for one action, and keep paragraphs short for phones. Tone shifts by stage, warmer early and more direct later, and rejections stay respectful. A stage map shows what to send, when and through which channel. You send the message yourself.
+when:
+  - A candidate finished an interview and is waiting to hear back.
+  - You need to turn down a finalist without damaging the relationship.
+  - You are inviting someone to a screening call and want a clear email.
+  - You want a welcome message for a new hire before day one.
+you_give:
+  - The candidate's name and role
+  - Where they are in the process
+  - Anything specific from your conversation (optional)
+  - The next step and date
+you_get:
+  - An email or message draft
+  - A clear single call to action
+  - A suggested send time
+  - Short alternative wording for tone
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

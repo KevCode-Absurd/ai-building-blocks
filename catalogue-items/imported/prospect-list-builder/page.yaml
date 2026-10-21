@@ -6,6 +6,25 @@ summary: Describe your ideal customer. Get a qualified list of accounts and the 
 job: sell-and-negotiate
 headline: Prospect list builder
 subhead: Describe your ideal customer. Get a qualified list of accounts and the reason each one fits.
+explain: |
+  A list of accounts that really fit your ideal customer, with the reason each one made the cut. You can start outreach without sorting through junk contacts.
+
+  You describe your ideal customer, and the skill picks the right path: software companies, general B2B, local small businesses or early customer discovery from public complaints. It finds accounts, looks for buying signals such as job changes or hiring, enriches the data, and verifies emails before anything goes to a sequence. Accounts are scored and sorted into tiers. It uses licensed data and never scrapes LinkedIn. Each account can get a short research note.
+when:
+  - You are starting outbound and need your first 100 targets.
+  - You want to reach companies that show signs they are ready to buy.
+  - You sell to local shops and need nearby leads.
+  - Your last list had bad emails and bounced.
+you_give:
+  - Description of your ideal customer
+  - What you sell and who it helps
+  - Region or industry
+  - Data tools you have access to (optional)
+you_get:
+  - Qualified account list
+  - Fit reason for each account
+  - Verified contacts
+  - Tier or score for each lead
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a blank LBO template and deal facts. Get the debt, cash flow an
 job: money-and-investing
 headline: Buyout model template filler
 subhead: Give it a blank LBO template and deal facts. Get the debt, cash flow and returns model completed and checked.
+explain: |
+  A blank buyout template becomes a finished, checked model. You hand over the template and the deal facts, and the skill fills in the purchase funding, operating forecast, debt schedule and returns, using your file's layout exactly instead of building a new one.
+
+  It works through the spreadsheet with a command line tool. Calculations are written as live formulas, never typed-in numbers, and inputs and formulas are colour coded so reviewers can follow them. If you give no template, it asks, then falls back to a standard one with sources and uses, operating model, debt schedule and returns. It runs checks before you open the file. You need the template file and deal assumptions.
+when:
+  - Your firm has its own buyout template and you need a deal dropped into it.
+  - You have deal terms from a call and need a first model before the meeting.
+  - A teammate left a half-filled model and you must finish and check it.
+  - You want formulas you can audit rather than pasted values.
+you_give:
+  - A blank buyout model template (Excel)
+  - Deal facts such as price, debt and fees
+  - Operating forecast assumptions
+  - Exit timing and multiple (optional)
+you_get:
+  - A completed Excel model in your template
+  - Live formulas, not typed-in numbers
+  - A debt schedule and returns section
+  - A list of checks that passed or failed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

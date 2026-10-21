@@ -6,6 +6,25 @@ summary: Say which Python library you need. Get MATLAB code that calls it, with 
 job: connect-tools
 headline: MATLAB to Python bridge
 subhead: Say which Python library you need. Get MATLAB code that calls it, with setup and errors fixed.
+explain: |
+  MATLAB code that calls a Python library and works, with the setup problems fixed. Tell it which library you need, such as pandas or scikit-learn, and it writes the calls and gets the environment right.
+
+  It follows firm rules. It never uses pyargs or pyversion, runs pip installs and virtual environment steps in the shell, and always asks before it ends a running Python session. It wraps numbers in integer types where Python expects whole numbers, and uses string arrays on newer releases. When a run fails it sorts the error: a missing module, an unresolved py name, an empty Python path, or an unsupported environment. Each type has its own fix. You need MATLAB and a Python install.
+when:
+  - You want to use a Python library that MATLAB does not have.
+  - MATLAB says it cannot find your Python module.
+  - Your call fails because Python wants an integer and gets a double.
+  - MATLAB points to the wrong Python install.
+you_give:
+  - The Python library or function
+  - Your MATLAB code to connect
+  - Python install location (optional)
+  - MATLAB release
+you_get:
+  - Working MATLAB code that calls Python
+  - Setup steps for pip and environments
+  - Error fixes
+  - Notes on data type conversion
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

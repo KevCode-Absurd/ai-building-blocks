@@ -6,6 +6,25 @@ summary: Give it your shipping, energy and supplier data. Get emissions worked o
 job: track-numbers
 headline: Supply chain carbon tracker
 subhead: Give it your shipping, energy and supplier data. Get emissions worked out by source, plus ways to cut them.
+explain: |
+  Your supply chain emissions, worked out by source, with a ranked list of ways to cut them. You can see where most of the carbon sits and which fix pays off most.
+
+  Give it shipping, energy and supplier data. The skill follows the GHG Protocol and sorts emissions into direct, energy and value-chain scopes. It calculates each using emission factors, collects supplier data with a priority on the largest sources, and builds a report. It then scores reduction ideas by size and cost, and lays out a roadmap. Python code does the sums. Emission factors you use must come from a source you trust.
+when:
+  - A customer asks for your carbon footprint and you have only raw data.
+  - You need to know whether freight or suppliers cause more emissions.
+  - You are planning reduction targets.
+  - You want to compare cutting options by cost.
+you_give:
+  - Shipping and freight data
+  - Energy use
+  - Supplier or purchase data
+  - Emission factors you trust (optional)
+you_get:
+  - Emissions by scope and source
+  - A supplier emissions report
+  - Ranked reduction ideas
+  - A reduction roadmap
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

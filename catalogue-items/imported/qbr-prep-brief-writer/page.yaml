@@ -6,6 +6,24 @@ summary: Name a customer. Get a health read with risk signs, value delivered and
 job: sell-and-negotiate
 headline: QBR prep brief writer
 subhead: Name a customer. Get a health read with risk signs, value delivered and an agenda for the review.
+explain: |
+  Name a customer and get a plain read on how healthy the account is, plus a prep brief for the quarterly business review. The brief shows risk signs, the value you delivered, and a proposed agenda for the meeting.
+
+  It pulls signals from your CRM, email, calendar and call notes, then compares this quarter with the last. It looks at deals, recent activity, support cases and how often you meet. Every number is shown with where it came from. Anything it cannot see, such as product usage held elsewhere, is marked as not visible instead of guessed. If you have no connected tools, a pasted account history works.
+when:
+  - A quarterly review with a key customer is due next week.
+  - You want to know if an account is quietly going cold.
+  - You need proof of value delivered before a renewal talk.
+  - You are taking over an account and need a fast status.
+you_give:
+  - Customer name or ID
+  - "Mode: health check or review prep"
+  - CRM, email or call notes, or a pasted history (optional)
+you_get:
+  - Health read with risk signs
+  - Value delivered this quarter
+  - Trend against the last quarter
+  - Meeting agenda and next steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

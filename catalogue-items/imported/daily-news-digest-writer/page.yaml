@@ -6,6 +6,25 @@ summary: Give it a list of news sites. Get a daily report of the best items. Col
 job: think-and-decide
 headline: Daily news digest writer
 subhead: Give it a list of news sites. Get a daily report of the best items. Collects data from websites.
+explain: |
+  Open one Markdown report each day with the best 20 or so items from the sites you follow, with the weak ones filtered out. You skip the tab hopping.
+
+  You give a list of sources, ranked by how much you trust them. A main agent hands the pages out to helper agents. Plain pages are fetched directly, and pages that need JavaScript use a headless browser. Results come back and get scored for quality. If fewer than 20 good items arrive, it sends out more work, then stops and writes the report. A cache remembers what it has seen. This one browses websites and runs helper agents, so expect it to use more time and tokens.
+when:
+  - You follow ten tech sites and want one daily summary.
+  - Your team needs a morning reading list on a niche topic.
+  - You want to track competitors' blog posts without checking each.
+  - You want a fresh digest that skips what you already read.
+you_give:
+  - A list of site addresses
+  - Rank of each source (optional)
+  - Topics you care about (optional)
+  - How many items you want (optional)
+you_get:
+  - Daily Markdown report
+  - Filtered, ranked items
+  - Short note on each item
+  - Cache of already seen links
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

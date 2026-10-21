@@ -6,6 +6,26 @@ summary: Describe your business. Get a full marketing plan by funnel stage with 
 job: plan-strategy
 headline: Marketing plan writer
 subhead: Describe your business. Get a full marketing plan by funnel stage with a 90-day or 12-month roadmap.
+explain: |
+  A written marketing plan for your business with a 90-day roadmap and a 12-month outlook, laid out by funnel stage so every move has a place and an owner.
+
+  It works in three phases. First it researches your business and asks you questions. Then it walks you through 13 sections one at a time: summary, strategy, where you are now, and plans for getting noticed, signing up, staying, referring and paying. Finally it joins them up and checks the result. The 90-day roadmap runs in four blocks, from clearing blockers to building speed. It also picks a north-star number to track and lists decisions still waiting on you.
+when:
+  - You are starting a new year and have no written marketing plan.
+  - You need a plan to show an investor, partner or board.
+  - Your team keeps trying tactics with no order or owner.
+  - You have a small budget and need to pick what to do first.
+you_give:
+  - A description of your business
+  - Your audience and offer
+  - Current budget and team size
+  - What you have already tried (optional)
+you_get:
+  - A 13-section marketing plan
+  - A 90-day roadmap with owners
+  - A 12-month outlook
+  - A list of tactics marked Now, Later or Skip
+  - A measurement plan with open decisions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

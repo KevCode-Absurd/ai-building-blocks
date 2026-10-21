@@ -6,6 +6,24 @@ summary: Give it your UI code. Get a 0 to 100 score, why it looks AI-made and a 
 job: design-work
 headline: AI-look design reviewer
 subhead: Give it your UI code. Get a 0 to 100 score, why it looks AI-made and a ranked fix list.
+explain: |
+  Your screen looks off and you cannot say why. This review finds the reason. It reads your UI code, scores it from 0 to 100 and points to the exact lines that make it look machine-made.
+
+  The score comes from seven categories, such as coherence, colour, type hierarchy, layout, and missing states. Each starts at full marks. Points come off for faults it can cite, like mixed corner radii, two accent colours, pure black text, emoji used as icons, or no empty and error states. You get a fix list ranked by how much each change lifts the score. It only reviews. It will not edit your files unless you ask.
+when:
+  - Your app screen looks generic or unfinished and you cannot say why.
+  - You want a quality check on a page before you ship it.
+  - An AI built your front end and you want to know what gives it away.
+  - You need a ranked list of design fixes to hand to a developer.
+you_give:
+  - UI code files or a folder (React, Tailwind or HTML)
+  - The page or screen to focus on (optional)
+  - Your brand colours or design tokens (optional)
+you_get:
+  - A score from 0 to 100
+  - Points lost per category, with line references
+  - A ranked fix list
+  - A short list of what already works
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Say what to do to your pictures. Get MATLAB code that enhances, segment
 job: build-software
 headline: Image processing coder
 subhead: Say what to do to your pictures. Get MATLAB code that enhances, segments, counts or measures them.
+explain: |
+  Working MATLAB code that cleans up, splits, counts or measures what is in your pictures, so you skip hours of trial and error with the Image Processing Toolbox. It needs MATLAB with that toolbox.
+
+  You describe the image problem in plain words, such as dark, noisy, blurry or uneven light. The skill first picks the right method for the task, then writes code with the right data types and row and column order, since mistakes there ruin results quietly. It covers file input and output, filtering, thresholding, morphology, measurement, colour, transforms and quality scores. Medical, hyperspectral and inspection jobs get passed to other skills.
+when:
+  - You have a folder of microscope photos and need the cells counted.
+  - Your scans are dark or uneven and you need them cleaned before analysis.
+  - You need to measure the size of objects in a set of pictures.
+  - You want to align or stitch several images into one.
+  - You are unsure which MATLAB function suits your image problem.
+you_give:
+  - A sample image or a description of it
+  - What you want done to it
+  - Your MATLAB setup and toolbox list (optional)
+you_get:
+  - MATLAB code you can run
+  - The method chosen and why
+  - Notes on data types and image size
+  - Measurements or masks from your images
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your parcels and van size. Get a load order that fits everythin
 job: plan-supply-chain
 headline: Van loading planner
 subhead: Give it your parcels and van size. Get a load order that fits everything and puts the first stop last in.
+explain: |
+  A load plan that fits every parcel in your van and puts the first drop within easy reach. Fewer repacks, safer weight and less time at the back doors.
+
+  You give vehicle size, weight limit, door layout and a list of items with sizes, weights and stop order. The skill loads in reverse order of delivery so the last stop goes in first. Heavy items go low and near the axle, and the weight is balanced between front and rear, with limits checked against legal axle weights. Fragile and cold items get their own zones, and stackable and non-stackable cargo are handled apart. It also covers securing with straps and bars and keeps hazardous items separate.
+when:
+  - You run multi-drop routes and waste time digging for the next parcel.
+  - A van keeps coming back with items that did not fit.
+  - You need to stay under axle weight limits on a heavy day.
+  - You are training new drivers or loaders on how to pack.
+you_give:
+  - Van or truck size and weight limit
+  - A list of parcels with size and weight
+  - The stop order
+  - Special items such as fragile, cold or hazardous goods
+you_get:
+  - A load order from first in to last in
+  - Positions inside the cargo area
+  - A weight balance check
+  - Notes on securing the load
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

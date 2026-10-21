@@ -6,6 +6,27 @@ summary: Describe your project. Get a CI/CD pipeline that builds, tests and ship
 job: ship-and-host
 headline: Build and release pipeline setter
 subhead: Describe your project. Get a CI/CD pipeline that builds, tests and ships across environments.
+explain: |
+  A build, test and release pipeline for your project, so code goes from push to live without manual steps. You describe your language, host and target, and you get ready-to-use config files.
+
+  It picks a platform that suits you, such as GitHub Actions or GitLab. It sets up stages in order: check style, run tests, build, then release. API keys and passwords go into the platform's secret storage, never into the code. It adds caching so runs are faster and test matrices so you cover several versions. You choose a release style such as rolling or blue and green, with staging before production. Alerts post to Slack or email when something fails.
+when:
+  - You still deploy by hand and it keeps going wrong.
+  - You need tests to run on every pull request.
+  - You want staging on one branch and production on another.
+  - Your pipeline is slow and you want it faster.
+you_give:
+  - Your language and framework
+  - Where your code lives
+  - Where it should be deployed
+  - Test tools you use (optional)
+  - Preferred release style (optional)
+you_get:
+  - Pipeline config files
+  - Staged lint, test, build and deploy steps
+  - Secret handling steps
+  - Caching to speed runs up
+  - Failure alerts
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

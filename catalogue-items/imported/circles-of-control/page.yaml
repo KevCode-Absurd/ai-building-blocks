@@ -6,6 +6,25 @@ summary: Give it a big problem. Get what students control, can influence or only
 job: teach-and-train
 headline: Control and influence circles map
 subhead: Give it a big problem. Get what students control, can influence or only care about, so they act where it counts.
+explain: |
+  A big problem can leave students feeling either helpless or guilty. This sorts it into three rings: what they control, what they can influence, and what they can only care about. Then they pick actions in the right ring.
+
+  You give it an issue, like litter on the school field or climate change, and the context of your class or community. If you ran a systems map first, it uses that. The skill places each part of the issue in a ring and checks that students are not given blame for things they cannot change. It then picks actions in the first two rings, suggests where small steps could reach further, and adds a way to review what happened.
+when:
+  - Students feel overwhelmed by a global issue you are teaching.
+  - Your class has mapped a problem and now needs actions.
+  - You want students to act without carrying the blame for everything.
+  - You need a way to review the results of student action.
+you_give:
+  - The issue or goal the class is looking at
+  - Your class, school or community setting
+  - A systems map or earlier analysis (optional)
+  - Age or year group (optional)
+you_get:
+  - A sorted map of control, influence and concern
+  - A set of realistic actions
+  - Notes on avoiding blame
+  - A way to review what students did
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

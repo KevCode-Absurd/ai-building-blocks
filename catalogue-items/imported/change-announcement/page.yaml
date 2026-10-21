@@ -6,6 +6,25 @@ summary: Describe a re-org, tool change or layoff. Get the announcement, FAQ, ma
 job: lead-people
 headline: Internal change announcement writer
 subhead: Describe a re-org, tool change or layoff. Get the announcement, FAQ, manager talking points and a send plan.
+explain: |
+  The full message package for a re-org, tool change or layoff: the announcement, an FAQ, talking points for managers and a calendar of follow-ups. It is written for staff, not customers, and settles when to speak, in what order and what to leave unsaid.
+
+  The skill sets the size of the change first so the tone matches, since cheerful wording on a job cut backfires. Managers hear first and get answers, because staff trust their own manager most. The FAQ answers what people really ask, like pay, reporting lines and whether more cuts are coming. It sets five to seven touchpoints rather than one post. It works through a fixed change model.
+when:
+  - You are about to announce a re-org and want the words and order ready.
+  - Managers will get questions on day one and need answers.
+  - A tool switch is coming and people are unhappy.
+  - You must announce layoffs and need a careful, honest message.
+you_give:
+  - What is changing, why and when
+  - Who is affected and how many
+  - Your leadership team and channels
+  - Facts you cannot share yet
+you_get:
+  - The main announcement
+  - An FAQ with answers to hard questions
+  - Talking points for managers
+  - A calendar of follow-up messages
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

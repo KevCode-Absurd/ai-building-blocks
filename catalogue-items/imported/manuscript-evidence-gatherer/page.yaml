@@ -6,6 +6,26 @@ summary: Name your paper topic. Get a packet of current sources, competing findi
 job: research-topics
 headline: Manuscript evidence gatherer
 subhead: Name your paper topic. Get a packet of current sources, competing findings and background, each with its link.
+explain: |
+  A research packet for your paper: current sources, studies that disagree, and background reading, each with its link. The default target is 60 checked, distinct references, organised as a claim-to-source map instead of a loose list.
+
+  Name your topic and claims. The skill searches for evidence supporting and contradicting each claim, and for methods precedent, mechanisms, limits and gaps. It counts a reference as verified only when a non-empty excerpt was retrieved, and flags retractions. That check does not prove the source supports your claim, so you still read the sources. Your query goes to a search service, so avoid unpublished material. It cannot supply your results or a full systematic review.
+when:
+  - You are starting a paper and need a solid reference base fast.
+  - You want to find studies that contradict your claim.
+  - You need a map showing which source backs which claim.
+  - You want current work on a method or mechanism.
+you_give:
+  - Your topic and main claims
+  - Your field
+  - Date or journal limits (optional)
+  - A search service account key
+you_get:
+  - Around 60 checked references
+  - An evidence table by claim
+  - Contradicting findings
+  - Retraction flags
+  - Research gaps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

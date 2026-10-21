@@ -6,6 +6,24 @@ summary: Give it a one-line video idea. Get a shot list, a ready prompt per shot
 job: make-video-ads
 headline: AI video shot planner
 subhead: Give it a one-line video idea. Get a shot list, a ready prompt per shot and fixes for failed clips.
+explain: |
+  A shot list and one ready prompt per shot for your AI video, plus a plan to fix clips that came out wrong. Most failed clips break for dull reasons: two actions in one clip, no camera move, a changing subject, or a mood instead of an image.
+
+  Tell it your idea in a line. It asks three questions at most, then splits the video into short shots with a prompt for each. It runs three modes. Plan builds the shot list. Fix rewrites a prompt that is failing. Review looks at a bad clip and names the one change before the next try. It plans only, it does not make video.
+when:
+  - You have a video idea and need to turn it into clips an AI model can make.
+  - Your video prompt keeps producing the wrong result.
+  - The same character looks different from shot to shot.
+  - You wasted a generation and want to change the right thing next.
+you_give:
+  - A one-line video idea or script
+  - Platform and length (optional)
+  - A failing prompt or a description of a bad clip (optional)
+you_get:
+  - A shot list file
+  - One ready prompt per shot
+  - A diagnosis of a failing prompt
+  - One change to make before the next try
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

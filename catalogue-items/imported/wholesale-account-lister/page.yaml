@@ -6,6 +6,26 @@ summary: Run it on your store. Get your B2B companies with locations, catalogs a
 job: run-your-store
 headline: Wholesale account lister
 subhead: Run it on your store. Get your B2B companies with locations, catalogs and payment terms in one view.
+explain: |
+  A single view of every wholesale customer in your Shopify store: companies, their locations, price lists and payment terms. You stop clicking through admin pages one account at a time.
+
+  The skill queries your B2B companies and their locations, then joins each with its catalog and payment terms. The output is a readable table or JSON you can drop into a spreadsheet. It only reads data, so you can run it any time without changing anything. It needs a Shopify Plus store with B2B turned on, an authenticated Shopify CLI session and the read_customers scope.
+when:
+  - You need to check which wholesale accounts have which price list.
+  - A sales rep asks for the terms on an account.
+  - You are cleaning up B2B accounts before a price change.
+  - You want an export of all wholesale locations.
+you_give:
+  - Your store domain
+  - Shopify CLI login
+  - Shopify Plus store with B2B on
+  - Output format (optional)
+you_get:
+  - List of B2B companies
+  - Locations for each company
+  - Price lists and catalogs
+  - Payment terms
+  - Readable table or JSON
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

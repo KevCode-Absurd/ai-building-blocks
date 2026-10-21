@@ -6,6 +6,24 @@ summary: Give it an analysis before you share it. Get a check of the method, the
 job: track-numbers
 headline: Analysis checker
 subhead: Give it an analysis before you share it. Get a check of the method, the math and any bias.
+explain: |
+  Catch errors in your analysis before anyone else does. It checks the method, the maths and bias, then gives a confidence rating and fixes.
+
+  It first asks whether you answered the right question, used the right data, defined the population well and made a fair comparison. Then it runs a pre-delivery checklist covering data quality, calculations, reasonableness and presentation. It hunts for known traps: join explosion, survivorship bias, part-period comparisons and a shifting denominator. It recalculates a few key numbers independently. It accepts a report, notebook, spreadsheet, SQL with results, or just a description.
+when:
+  - You are about to send numbers to leadership and want a second look.
+  - A chart looks too good and you want to know why.
+  - You inherited someone else's analysis and do not trust it yet.
+  - You want to be sure your comparison is fair.
+you_give:
+  - The analysis as a report, file, query or description
+  - The question it was meant to answer (optional)
+  - Who will read it (optional)
+you_get:
+  - A review of method and assumptions
+  - Results of the pre-delivery checklist
+  - Any pitfalls found
+  - A confidence rating and fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

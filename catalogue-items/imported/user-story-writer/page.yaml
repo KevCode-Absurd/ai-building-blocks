@@ -6,6 +6,25 @@ summary: Give it a feature idea. Get user stories with acceptance criteria and a
 job: build-product
 headline: User story writer
 subhead: Give it a feature idea. Get user stories with acceptance criteria and a sprint plan.
+explain: |
+  A feature idea becomes stories your team can build, each with clear checks for done, and a sprint plan that fits the time you have. Nobody has to guess what a vague ticket means.
+
+  The skill writes each story in the usual form, then tests it against the INVEST list: independent, negotiable, valuable, estimable, small and testable. Acceptance criteria use Given, When, Then, and bigger stories get more of them. Large epics are split with five named patterns. Priority comes from a weighted score: value 40 percent, impact 30, risk 15 and effort 15. Sprint capacity is worked out from your past speed and who is available, not from hope. Tools can output the stories and the plan.
+when:
+  - You have a feature in your head and need tickets for the team.
+  - A story keeps growing and you need to cut it into smaller ones.
+  - Planning is tomorrow and you do not know how much fits in the sprint.
+  - Your backlog has no order and every item is called high priority.
+you_give:
+  - The feature or epic idea
+  - Who the users are
+  - Team velocity and availability (optional)
+  - An existing backlog (optional)
+you_get:
+  - User stories that pass the INVEST check
+  - Acceptance criteria for each story
+  - An epic split into smaller pieces
+  - A sprint plan matched to capacity
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

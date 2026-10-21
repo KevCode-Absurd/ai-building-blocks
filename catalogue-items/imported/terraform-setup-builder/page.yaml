@@ -6,6 +6,26 @@ summary: Describe your cloud. Get Terraform modules with safe state, security ch
 job: ship-and-host
 headline: Terraform setup builder
 subhead: Describe your cloud. Get Terraform modules with safe state, security checks and clean structure.
+explain: |
+  Terraform modules for your cloud, laid out cleanly, with safe state storage and security checks built in. Your infrastructure stays predictable and does not drift or break at 3 AM.
+
+  The skill takes a messy or empty project and applies firm decisions. It designs modules with clear inputs and outputs that compose. It sets up remote state with locking and encryption, and pins provider and module versions. Three review modes cover code smells, module design and security, where it looks for secrets in code, open network rules and broad IAM roles. It also handles multi-region layouts. The output is code you can plan and review before anything is applied.
+when:
+  - Your Terraform is one huge file and nobody dares touch it.
+  - You need to move state to a remote, locked backend.
+  - You want a security review of your infrastructure code.
+  - You are building the same stack in two regions.
+  - You need a reusable module other teams can adopt.
+you_give:
+  - A description of your cloud setup or existing Terraform
+  - Cloud provider
+  - State backend you want (optional)
+  - Security rules you must meet (optional)
+you_get:
+  - Structured modules
+  - Remote state setup
+  - A security findings list
+  - Refactor suggestions for existing code
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

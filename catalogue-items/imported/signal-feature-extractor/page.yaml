@@ -6,6 +6,25 @@ summary: Give it signals. Get time and frequency features ready for analysis or 
 job: build-software
 headline: Signal feature extractor
 subhead: Give it signals. Get time and frequency features ready for analysis or machine learning.
+explain: |
+  A table of time and frequency features for each frame of your signal, ready for analysis or a machine learning model. You get the right feature tool set up with real parameters only.
+
+  It first checks whether frequency content shifts over time. Then it picks one of three MATLAB extractors: time, frequency or time-frequency. It sets the sample rate, frame size and frame rate or overlap, turns on the features you name, and runs the extraction. Per-frame results stay as they are unless your model needs averages. A GPU path is optional. Audio features like MFCC are left to other tools. It needs MATLAB with the Signal Processing Toolbox.
+when:
+  - You have vibration data and want features to train a classifier.
+  - You need RMS, crest factor or spectral values for every window.
+  - You want a feature table to feed into a model.
+  - You are unsure which feature extractor suits your signal.
+you_give:
+  - A one-dimensional signal
+  - Sample rate and frame size
+  - Features you want (optional)
+  - MATLAB with Signal Processing Toolbox
+you_get:
+  - A feature table or matrix per frame
+  - A configured extractor
+  - MATLAB code you can rerun
+  - An optional GPU version
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

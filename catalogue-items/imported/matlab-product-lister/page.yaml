@@ -6,6 +6,24 @@ summary: Point it at a MATLAB install. Get a list of every product and add-on pa
 job: set-up-ai
 headline: MATLAB product lister
 subhead: Point it at a MATLAB install. Get a list of every product and add-on package in it.
+explain: |
+  A clean list of every product and add-on package inside one MATLAB install. Point it at the install folder, or just name the release, and see what you actually have.
+
+  The skill works out the release from the folder name, such as R2025a, and expands short names like 25a. It then reads the installed products from the main folder and the support packages from the standard location for your system. Product names are cleaned up and sorted in a set order: MATLAB first, then Simulink and the Copilot products, then the rest A to Z.
+when:
+  - A colleague asks which toolboxes are on your machine.
+  - You are planning an upgrade and need a list of what to reinstall.
+  - You need to show IT what MATLAB products you use.
+  - You have several MATLAB releases and need to compare them.
+you_give:
+  - The install path or release name
+  - Operating system (if not clear)
+  - Where support packages are saved (optional)
+you_get:
+  - A sorted list of products
+  - A list of support packages
+  - Release name and version
+  - A tidy list to share
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Connect Ahrefs. Get a backlink health report with anchor text spread, t
 job: get-found-in-search
 headline: Backlink profile auditor
 subhead: Connect Ahrefs. Get a backlink health report with anchor text spread, toxic links, lost links to win back and rival gaps.
+explain: |
+  A health check of the sites linking to you, built from live Ahrefs data. Connect Ahrefs to your AI, name your domain and rivals, and the AI looks at five things: link quality, how fast links are arriving, anchor text mix, link types and gaps against competitors.
+
+  It flags toxic links, lists links you lost and could win back, and shows where rivals have links you lack. If you are scoping a disavow file, recovering from a manual action or reviewing a site before buying it, it gives a baseline and next steps. It points out common failure patterns too. You need an Ahrefs account connected to your AI.
+when:
+  - Rankings dropped and you suspect lost links.
+  - Google sent an unnatural links warning.
+  - You are buying a site and need to check its link health.
+  - You want a baseline before starting a link campaign.
+you_give:
+  - Your domain
+  - Competitor domains (optional)
+  - A connected Ahrefs account
+  - The reason for the audit, such as a drop or a purchase
+you_get:
+  - A profile health score by dimension
+  - Toxic link candidates
+  - Lost links to reclaim
+  - A competitor gap list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

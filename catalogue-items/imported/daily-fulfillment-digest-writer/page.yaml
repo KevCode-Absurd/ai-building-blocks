@@ -6,6 +6,24 @@ summary: Run it each morning. Get open orders grouped by age, with holds and exc
 job: run-your-store
 headline: Daily fulfillment digest writer
 subhead: Run it each morning. Get open orders grouped by age, with holds and exceptions flagged for action.
+explain: |
+  Each morning you see every unshipped order sorted by how long it has waited, with stuck ones called out. No more scrolling the Orders page to find what is going late.
+
+  The skill pulls all unfulfilled and partly fulfilled orders from Shopify, oldest first. It sorts them into age groups, by default up to 1 day, 1 to 3 days, 3 to 7 days and over 7 days, and you can change those cut points. For each order it checks whether the shipment is on hold and lists those in their own section. It only reads data and changes nothing, so it is safe to run daily. Your AI needs access to your Shopify store.
+when:
+  - You start your day wanting to know which orders are overdue.
+  - A customer asks where their order is and you need to spot delays fast.
+  - You run a small team and need a morning list of what to ship first.
+  - You want to catch held orders before customers complain.
+you_give:
+  - Your store address
+  - Age cut points in days (optional)
+  - Whether to include held orders (optional)
+you_get:
+  - Open orders grouped by age
+  - Held orders section
+  - Oldest orders listed first
+  - Counts per age group
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

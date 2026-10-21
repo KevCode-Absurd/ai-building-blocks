@@ -6,6 +6,27 @@ summary: Pick an 802.11 format. Get a standard-compliant Wi-Fi waveform ready fo
 job: build-software
 headline: Wi-Fi waveform generator
 subhead: Pick an 802.11 format. Get a standard-compliant Wi-Fi waveform ready for link tests.
+explain: |
+  A standard-compliant Wi-Fi transmit waveform, ready to feed into a link test or simulation. You choose the 802.11 format and get time-domain IQ samples you can plot or send to hardware.
+
+  The skill covers formats from 802.11a/g through n, ac, ax and be, plus newer ones, with single-user, multi-user MIMO, OFDMA, trigger-based uplink and preamble puncturing. You set the PHY format, size the payload, optionally build MAC frames such as data, Block Ack or beacon, and aim for a given packet duration. It can combine packets into a longer waveform. It needs MATLAB with the WLAN Toolbox.
+when:
+  - You need a test signal for a Wi-Fi receiver design.
+  - You are building the transmit side of a link simulation.
+  - You want an OFDMA packet with specific resource units.
+  - You need a waveform of a set duration with a given frame type.
+you_give:
+  - Wi-Fi standard and format
+  - Bandwidth and modulation settings
+  - Payload size or frame type
+  - Target duration (optional)
+  - MATLAB with WLAN Toolbox
+you_get:
+  - Time-domain IQ waveform
+  - Configured PHY object
+  - Packets with MAC frames (optional)
+  - Plots of the signal
+  - Multi-packet waveform (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

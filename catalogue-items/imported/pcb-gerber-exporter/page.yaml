@@ -6,6 +6,25 @@ summary: Give it a finished PCB design. Get Gerber files with connectors, ready 
 job: build-software
 headline: PCB Gerber exporter
 subhead: Give it a finished PCB design. Get Gerber files with connectors, ready to send to a maker.
+explain: |
+  Gerber files for a finished RF board, with the right connectors attached and formatted for the company that will make it. It runs in MATLAB.
+
+  It takes a pcbComponent or pcbStack design and writes the manufacturing set with gerberWrite. You choose RF connectors such as SMA, SMB or MMCX, including edge-launch types, and attach them so shielded analysis matches the real part. It formats output for makers such as OSH Park, Seeed or Advanced Circuits. Design and validation should be done first. You need MATLAB with RF PCB Toolbox.
+when:
+  - Your design is finished and you need files for a board maker.
+  - You must place SMA connectors on the board.
+  - A fab house wants a specific file layout.
+  - You want analysis to include the connector.
+you_give:
+  - Finished PCB design in MATLAB
+  - Connector type
+  - Chosen fabrication service
+  - MATLAB with RF PCB Toolbox
+you_get:
+  - Gerber file set
+  - Connectors attached to the design
+  - Fab-specific formatting
+  - Ready package for ordering
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

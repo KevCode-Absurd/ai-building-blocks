@@ -6,6 +6,25 @@ summary: Describe your app. Get an AWS design with serverless parts, setup templ
 job: ship-and-host
 headline: AWS architecture designer
 subhead: Describe your app. Get an AWS design with serverless parts, setup templates and cost cuts.
+explain: |
+  An AWS design for your app that fits your budget, with setup templates ready to deploy. Tell the AI the app type, expected users, monthly spend limit, team experience and any rules such as GDPR or HIPAA.
+
+  It chooses a pattern, often serverless with Lambda, API Gateway and DynamoDB, or containers and Aurora when that suits better. It writes CloudFormation templates, adds a build and deploy pipeline, estimates costs and suggests savings. It has starting points for a budget under 100 dollars a month and for a bigger setup in the hundreds or low thousands. It also covers how to check the deploy and what to do when it fails. Python helper scripts are included.
+when:
+  - You are building a startup app and need a cloud plan without a cloud engineer.
+  - Your AWS bill is rising and you want to cut it.
+  - You need templates to create the same setup in test and live.
+  - You are moving an app to AWS from another host.
+you_give:
+  - App type and expected traffic
+  - Monthly budget
+  - Team size and AWS experience
+  - Compliance needs (optional)
+you_get:
+  - A recommended architecture
+  - CloudFormation templates
+  - A deployment pipeline outline
+  - A cost estimate with savings ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

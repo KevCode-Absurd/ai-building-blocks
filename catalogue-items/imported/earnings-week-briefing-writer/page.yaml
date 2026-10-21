@@ -6,6 +6,25 @@ summary: Name a company about to report. Get what to watch, scenario cases and t
 job: money-and-investing
 headline: Earnings week briefing writer
 subhead: Name a company about to report. Get what to watch, scenario cases and the numbers that matter.
+explain: |
+  What to watch before a company reports, set out as scenarios so the result does not catch you off guard. Name the company and you get the numbers that matter and how each outcome could land.
+
+  The skill starts with context: the quarter, consensus revenue and earnings per share found by web search, the date and time of release, and anything said on the last call. It then builds a watch list tied to this company, including segment revenue, margins, free cash flow and guidance against consensus. It sets out bull, base and bear cases. Indian conventions apply: an April to March year, and crore and lakh units with careful labels.
+when:
+  - Results are due soon and you want a one-page plan.
+  - You need bull, base and bear cases written down.
+  - You want the guidance numbers that could swing the share price.
+  - You follow Indian companies and need fiscal labels right.
+you_give:
+  - Company name and quarter
+  - Consensus numbers (optional)
+  - Your view or position (optional)
+  - Segments you care about (optional)
+you_get:
+  - A what-to-watch list
+  - Scenario cases
+  - Consensus estimates and results date
+  - Key metrics and guidance checks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

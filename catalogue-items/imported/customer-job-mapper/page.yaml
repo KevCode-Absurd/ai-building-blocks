@@ -6,6 +6,25 @@ summary: Describe your product and buyer. Get the functional, emotional and soci
 job: understand-customers
 headline: Customer job mapper
 subhead: Describe your product and buyer. Get the functional, emotional and social jobs they hire it for.
+explain: |
+  People do not buy a product, they hire it to make progress. Describe your product and buyer and you get a jobs-to-be-done map showing what job they are hiring it for: the practical, the emotional and the social.
+
+  It goes in steps. First the before and after state in plain words. Then the three job layers, kept separate. Then the trigger, the moment the buyer starts looking. Then the alternatives they compare you with, including spreadsheets, workarounds and doing nothing. Last, how they will judge success. The map feeds your positioning, messaging and onboarding. It asks for more detail if your input does not describe a real user.
+when:
+  - You cannot explain why customers choose you over doing nothing.
+  - Your messaging lists features and nobody reacts.
+  - You want to understand why people switch or leave.
+  - You are building onboarding around the first win.
+you_give:
+  - Your product or service
+  - Who the buyer is
+  - What progress they want
+  - Competitors and workarounds you know of (optional)
+you_get:
+  - Practical, emotional and social jobs
+  - The trigger that starts the search
+  - A list of alternatives
+  - Success criteria in the buyer's terms
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

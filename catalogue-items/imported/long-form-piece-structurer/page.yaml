@@ -6,6 +6,26 @@ summary: Say what you are writing, such as a case study or whitepaper. Get a cle
 job: write-and-tell-stories
 headline: Long-form piece structurer
 subhead: Say what you are writing, such as a case study or whitepaper. Get a clear outline and structure that avoids padding.
+explain: |
+  A clear outline for one long piece, such as a case study, whitepaper, research report or ebook, where every section earns its place. It aims to stop the two common failures: stretching a short idea with filler, and piling on facts with no spine.
+
+  You name the piece type and your point. The skill sets a thesis for the opening and makes sure the body delivers it. It then sizes each section by its job, cuts any section that only adds length, and plans an ending that leaves the reader with one specific thing to do or remember. Each format gets its own shape. A case study follows a different path than a manifesto or a how-to guide.
+when:
+  - You must write a whitepaper and do not know how to order it.
+  - Your 1,500-word post is being stretched to 5,000 and feels padded.
+  - You have a pile of research and need a spine to organise it.
+  - You are planning an ebook and want each chapter to justify its length.
+you_give:
+  - The type of piece
+  - Your main point or thesis
+  - Your audience and the goal of the piece
+  - Raw notes or research (optional)
+you_get:
+  - A section-by-section outline
+  - A thesis-led opening plan
+  - Word targets per section
+  - A list of sections to cut
+  - An ending that lands
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

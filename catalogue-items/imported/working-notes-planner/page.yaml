@@ -6,6 +6,24 @@ summary: Give it a long task. Get a plan, findings and progress kept in files so
 job: organise-work
 headline: Working notes planner
 subhead: Give it a long task. Get a plan, findings and progress kept in files so your AI stays on track.
+explain: |
+  Three files that act as your AI's memory on a long task, so it stays on track instead of forgetting the goal halfway through. The work survives long sessions.
+
+  Before any big task, the skill creates task_plan.md, findings.md and progress.md in your project folder. The plan holds the goal and phases. Findings holds what was learned along the way. Progress logs what is done and what errors came up. Before each major decision the AI rereads the plan to refresh the goal, and after each phase it updates the files. The method is borrowed from how Manus handles working memory on disk.
+when:
+  - You give your AI a task that takes many steps and it loses focus.
+  - A session is long enough that early decisions get forgotten.
+  - You want to see what your AI has learned and done so far.
+  - You need to pick the work up again tomorrow.
+you_give:
+  - The long task and its goal
+  - A project folder to keep files in
+  - Phases or milestones (optional)
+you_get:
+  - Task plan file
+  - Findings file
+  - Progress log
+  - Rule to reread the plan before decisions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Point it at your repo. Get checks for formatting, types and tests that 
 job: test-and-fix-code
 headline: Pre-commit hook setter
 subhead: Point it at your repo. Get checks for formatting, types and tests that run before every commit.
+explain: |
+  Checks that run on their own before every commit, so broken or messy code never reaches your repo. You point the skill at your project and it wires everything up.
+
+  It detects whether you use npm, pnpm, yarn or bun, installs Husky, lint-staged and Prettier, and creates a Prettier config if you lack one. It then writes the pre-commit hook so staged files are formatted, types are checked and tests run. Your package.json scripts are added or reused. You need a Node project with a package.json. You can commit once to see it work.
+when:
+  - Teammates keep committing unformatted code.
+  - Type errors reach the main branch.
+  - You want tests to run before anything is saved to history.
+  - You just started a Node project and want good habits early.
+you_give:
+  - A Node project folder
+  - Preferred package manager (optional)
+  - Test and type-check commands (optional)
+you_get:
+  - Husky pre-commit hook
+  - lint-staged and Prettier setup
+  - Typecheck and test scripts
+  - Short notes on how to use it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

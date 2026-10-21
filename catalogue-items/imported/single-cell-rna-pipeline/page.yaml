@@ -6,6 +6,25 @@ summary: Give it single-cell counts. Get cleaned data, cell clusters, marker gen
 job: research-topics
 headline: Single-cell RNA analysis pipeline
 subhead: Give it single-cell counts. Get cleaned data, cell clusters, marker genes and plots from start to finish.
+explain: |
+  Cleaned single-cell data, cell clusters, marker genes and plots, from raw counts to a finished analysis. You run one chain instead of stitching steps together.
+
+  It uses Scanpy. It confirms the input holds raw counts, then runs quality control, normalisation, and picks highly variable genes. Next come PCA, UMAP or t-SNE and clustering. It ranks marker genes per cluster, and prepares sample-level sums for differential expression between conditions. Batch tools like Harmony or BBKNN are available. R objects must first be converted to h5ad. You need Python 3.12 or newer and Scanpy installed.
+when:
+  - You have a raw count matrix and want clusters and markers.
+  - You need a standard QC and normalisation run you can repeat.
+  - You want UMAP plots to share with your lab.
+  - You are preparing data for sample-level differential expression.
+you_give:
+  - Single-cell raw counts in h5ad or similar
+  - Python 3.12 or newer with Scanpy
+  - Sample and condition labels (optional)
+  - Species and tissue notes (optional)
+you_get:
+  - Quality-controlled, normalised data
+  - Clusters and UMAP plots
+  - Marker gene lists
+  - Data prepared for condition comparison
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

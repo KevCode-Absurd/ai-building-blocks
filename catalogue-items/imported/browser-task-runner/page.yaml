@@ -6,6 +6,25 @@ summary: Describe a browser task. Get pages visited, forms filled, and screensho
 job: test-and-fix-code
 headline: Browser task runner
 subhead: Describe a browser task. Get pages visited, forms filled, and screenshots or data saved.
+explain: |
+  Pages visited, forms filled, buttons clicked, and the screenshots or data you wanted saved, all done by a real browser from your terminal.
+
+  The skill uses a command line tool called playwright-cli. The loop is simple: open a page, take a snapshot that gives each element a short reference, act on an element by that reference, then snapshot again after the page changes. It can save screenshots, PDFs and traces along the way. It stays on the command line and does not write test files unless you ask. It needs Node.js, which provides npx. The skill checks for that first and tells you how to install it.
+when:
+  - You want data copied off a web page without doing it by hand.
+  - You need to fill out and submit a form step by step.
+  - You want a screenshot or PDF of a page.
+  - You need to click through a site to see what it does.
+you_give:
+  - The task in plain words
+  - The web address
+  - Text to type into forms (optional)
+  - Whether to show the browser window (optional)
+you_get:
+  - Pages visited and steps run
+  - Screenshots or PDFs saved
+  - Data collected from the page
+  - A trace of what happened (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

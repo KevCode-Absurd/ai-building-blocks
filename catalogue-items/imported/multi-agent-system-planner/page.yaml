@@ -6,6 +6,25 @@ summary: Describe the job. Get a choice of supervisor, swarm or handoff design f
 job: build-software
 headline: Multi-agent system planner
 subhead: Describe the job. Get a choice of supervisor, swarm or handoff design for several agents, with the trade-offs.
+explain: |
+  A choice of design for a team of AI agents, with the trade-offs laid out so you pick the one that fits your job. It also tells you when one agent is enough.
+
+  The main point is that extra agents are for splitting up the context, not for playing office roles. The skill compares three patterns: a supervisor who directs workers, a swarm that hands work sideways, and layers of managers. For each it names where it breaks: bottlenecks, drift between agents and errors that spread. It adds ways to get agreement without flattery, then recommends one design with a handoff protocol.
+when:
+  - One agent runs out of room and loses track of earlier work.
+  - Your job splits into parts that need different tools.
+  - You are deciding between a supervisor and a swarm.
+  - Your multi-agent test produced duplicate work and confusion.
+you_give:
+  - A description of the job
+  - The tools each part needs
+  - Size of the inputs, such as documents or code
+  - Speed and cost limits (optional)
+you_get:
+  - A recommended pattern with reasons
+  - A comparison of all three
+  - A handoff design
+  - Failure risks and fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

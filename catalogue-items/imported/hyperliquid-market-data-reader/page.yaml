@@ -6,6 +6,24 @@ summary: Give it a coin. Get prices, funding rates, open interest and the order 
 job: money-and-investing
 headline: Hyperliquid market data reader
 subhead: Give it a coin. Get prices, funding rates, open interest and the order book. Collects data from websites.
+explain: |
+  Live market numbers for any coin on Hyperliquid, pulled for you to read. Name a coin and get its price, daily change, funding rate, open interest, trading volume and order book. This is read-only, so it never touches an account, orders or transfers. It is not financial advice.
+
+  It collects data from the exchange's public information service using a free command-line tool called opencli. That needs Node.js and a Hyperliquid plug-in, and the skill walks through the install. You can also pull candle history and funding history. It compares funding between Hyperliquid and other exchanges such as Binance and Bybit, which helps you see where funding gaps exist. Funding is shown hourly and as a yearly rate.
+when:
+  - You want to check the funding rate of a coin before you trade it elsewhere.
+  - You need an order book snapshot to judge how deep the market is.
+  - You are comparing funding on Hyperliquid with other exchanges.
+  - You want recent price candles to review a move.
+you_give:
+  - The coin or pair name
+  - The time range for candles or history (optional)
+  - Node.js installed on your computer
+you_get:
+  - Price, 24 hour change and volume
+  - Funding rates, hourly and yearly
+  - Open interest and order book depth
+  - Cross-exchange funding comparison
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

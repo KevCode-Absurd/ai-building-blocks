@@ -6,6 +6,27 @@ summary: Name the role. Get a work test, a scoring guide and fairness checks. Yo
 job: hire-people
 headline: Work sample test designer
 subhead: Name the role. Get a work test, a scoring guide and fairness checks. You make the hiring call, not the AI.
+explain: |
+  A work test tied to the real job, with a scoring guide and fairness checks. You hire on what candidates can do, not how well they interview. The final decision stays with you, not the AI.
+
+  You name the role and level. The skill picks the right method: skills test, work sample, simulation or assessment centre. It writes a task based on what the person would do in their first 90 days, builds a rubric that limits rater opinion and sets up a calibration session for assessors. It balances rigor against candidate time to limit drop-off, checks for bias and adverse impact, and shows how to combine scores with interview notes.
+when:
+  - You are hiring and interviews are not predicting performance.
+  - Your team scores candidates differently.
+  - You need a take-home task that is fair to candidates.
+  - You want to audit a test you already use.
+you_give:
+  - Role and level
+  - Key tasks in the first 90 days
+  - Time candidates can spend
+  - Current hiring process (optional)
+  - Past hires' results (optional)
+you_get:
+  - Work sample or test design
+  - Scoring rubric
+  - Assessor calibration plan
+  - Bias and fairness checks
+  - Guide to combining scores
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

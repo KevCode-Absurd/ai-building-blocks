@@ -6,6 +6,26 @@ summary: Describe an idea. Get a five-day plan to map, sketch, prototype and tes
 job: test-an-idea
 headline: Five-day idea test planner
 subhead: Describe an idea. Get a five-day plan to map, sketch, prototype and test it with real users.
+explain: |
+  A five-day plan that takes a risky idea from a blank whiteboard to a tested prototype, with real customer reactions by Friday. You learn what works before writing any production code.
+
+  Monday maps the problem and picks one target. Tuesday is solo sketching. Wednesday ends with one vote by a single decider, then a storyboard. Thursday builds a fake but believable prototype. Friday runs five interviews with people from your target group. The skill also scores your plan out of ten, and flags missing pieces such as no decider, no real users or a prototype that is not done in a day.
+when:
+  - You have a big idea and months of debate ahead unless you test it fast.
+  - Your team keeps arguing about direction and needs a way to decide.
+  - You want customer feedback on a prototype before building it.
+  - You are the one running a sprint and need a day-by-day schedule.
+you_give:
+  - The challenge or idea you want to test
+  - Names and roles of the team
+  - Who your target customers are
+  - Dates you can block out
+you_get:
+  - Day-by-day schedule with time limits
+  - Sprint questions and target customer
+  - Storyboard and prototype brief
+  - Interview script for five users
+  - Plan score with missing items
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

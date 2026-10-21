@@ -6,6 +6,26 @@ summary: Tell it your audience and what you sell next. Get a free guide or check
 job: make-offer
 headline: Free giveaway designer
 subhead: Tell it your audience and what you sell next. Get a free guide or checklist idea worth an email address.
+explain: |
+  One free guide, checklist or template idea that is good enough to trade for an email address, plus a plan to make it. It avoids thin PDFs that people regret downloading.
+
+  First it asks whether a giveaway is the right move for your audience and sales cycle. Then it picks a format that fits, such as a checklist, template, swipe file or mini course, and makes sure it solves one specific problem a reader would pay to fix. It also designs the form so the right people sign up, and it links the giveaway to the next email and product you sell. Warning signs of weak bait are listed.
+when:
+  - Your site gets visitors but few email signups.
+  - Your current free download gets signups from people who never buy.
+  - You need a giveaway idea that matches what you sell next.
+  - You are choosing between a checklist, template or course.
+you_give:
+  - Your audience
+  - What you sell next
+  - Topics your audience asks about
+  - Existing giveaways and their results (optional)
+you_get:
+  - Giveaway idea with format
+  - Outline of what goes inside
+  - Signup form questions
+  - Follow-up email link to your offer
+  - Checks for weak or bait-like ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

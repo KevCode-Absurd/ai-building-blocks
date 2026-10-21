@@ -6,6 +6,25 @@ summary: Give it your store. Get an llms.txt guide to your brand, products and p
 job: get-found-in-search
 headline: AI guide file publisher
 subhead: Give it your store. Get an llms.txt guide to your brand, products and policies for AI assistants. Changes your live theme.
+explain: |
+  An llms.txt file for your Shopify store, a plain-text guide that tells AI assistants who you are, what you sell and where your key pages are. It is published through your theme at a fixed address.
+
+  The skill builds it from your own store data: a one-line brand summary, top collections, flagship products with links, shipping and returns pages, and contact details. You choose how many products to list and which collection they come from. It needs the Shopify CLI signed in, with permission to read products and edit themes. It writes a new template to your live theme, so it defaults to a preview. Copy the theme before approving.
+when:
+  - You want AI assistants to understand your store without guessing.
+  - A site audit says your store has no llms.txt.
+  - You want to choose which products AI sees first.
+  - You want a preview of the file before it goes live.
+you_give:
+  - Your store address
+  - A signed-in Shopify CLI
+  - Permission to read products and write themes
+  - A brand summary or a collection to feature (optional)
+you_get:
+  - A preview of your llms.txt
+  - The file published at a stable path
+  - A flagship product list with links
+  - Links to your policy and contact pages
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

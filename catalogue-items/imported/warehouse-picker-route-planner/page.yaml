@@ -6,6 +6,25 @@ summary: Give it your aisle layout and pick lists. Get the shortest walking orde
 job: plan-supply-chain
 headline: Warehouse picker route planner
 subhead: Give it your aisle layout and pick lists. Get the shortest walking order for each picker.
+explain: |
+  The shortest walking order for each picker, so orders get picked faster with less travel. You get a route for every pick list, not a general rule.
+
+  You describe your aisles, cross-aisles, where pickers start and whether aisles run one-way or two-way. You also give the pick method, such as one order at a time, batch or zone. The skill compares routing methods, from simple snake paths through the aisles to ones that skip empty aisles or return from the same end. It picks the one that fits your layout and sorts each list into walking order. It compares total distance before and after.
+when:
+  - Pickers walk back and forth and orders take too long.
+  - You want to batch orders and need a good order of stops.
+  - You changed the layout and the old routes no longer fit.
+  - You want to measure how much walking a change would save.
+you_give:
+  - Aisle layout with cross-aisles
+  - Where pickers start and finish
+  - Pick lists or typical picks per order
+  - Pick method and equipment (optional)
+you_get:
+  - The best routing method for your layout
+  - Ordered pick lists
+  - Travel distance before and after
+  - Rules your team can follow
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Point it at your project. Get it live on Cloudflare, with the link to o
 job: ship-and-host
 headline: Cloudflare publisher
 subhead: Point it at your project. Get it live on Cloudflare, with the link to open.
+explain: |
+  Your project goes live on Cloudflare, and you get the link to open. No guessing which product to use or which command to run.
+
+  First it checks you are signed in with Wrangler, Cloudflare's command-line tool. Then it works through short decision trees: do you need to run code, store data, or serve a site? It picks between Workers, Pages, KV, D1, R2, queues and the rest, and loads the matching notes. Then it runs the deploy and waits, since a publish can take a few minutes. You need a Cloudflare account and a login or API token.
+when:
+  - You have a finished site and want it public today.
+  - You are not sure whether to use Workers or Pages.
+  - You need to add storage or a database to a Cloudflare project.
+  - A deploy keeps failing and you suspect a sign-in problem.
+you_give:
+  - Your project folder
+  - A Cloudflare account and login
+  - What the project does (optional)
+you_get:
+  - The right Cloudflare product for the job
+  - A live deployment
+  - The link to open it
+  - Fixes if the deploy fails
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

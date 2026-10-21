@@ -6,6 +6,24 @@ summary: Give it your docs and code. Get each place the code breaks its own rule
 job: secure-code
 headline: Code intent gap auditor
 subhead: Give it your docs and code. Get each place the code breaks its own rules, with a fix.
+explain: |
+  Find the places where your code does something different from what your own docs say it should. These are the bugs a normal scanner misses, like a permission that is written down but never enforced.
+
+  It treats your docs as the rule book: who may access what, which boundaries are trusted, which data is public. Then it reads the code to see whether each rule is really enforced. Every gap is reported with the rule, the code location and a fix. If your docs are missing or old, that becomes the first finding, because you cannot check code against rules nobody wrote down.
+when:
+  - An endpoint marked internal is open to anyone.
+  - You documented a permission but never confirmed the code checks it.
+  - You want a security review that goes beyond a basic linter.
+  - You are about to ship and want docs and code to agree.
+you_give:
+  - Your design and permission docs
+  - The code to check
+  - Which areas worry you most (optional)
+you_get:
+  - Rules pulled from your docs
+  - Each place the code breaks them
+  - A fix for every gap
+  - A note if the docs are too thin to audit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

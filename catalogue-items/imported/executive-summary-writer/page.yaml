@@ -6,6 +6,26 @@ summary: Give it a long analysis. Get a one-page summary with the answer first, 
 job: write-and-tell-stories
 headline: Executive summary writer
 subhead: Give it a long analysis. Get a one-page summary with the answer first, the impact in numbers and the decision needed.
+explain: |
+  A one or two page summary a busy executive can read in ten minutes and act on, with the answer first, the impact in numbers and the exact decision needed.
+
+  The skill pulls the top three to five findings that change a decision and drops the rest. Each gets a number, such as revenue at risk or time to payback. It writes a short situation paragraph, then follows the pyramid method: conclusion first, evidence second, detail last. Recommendations name the action, the owner, the result and the date. A final decision block states what approval is needed and what it costs. Guides on tone and jargon come with it.
+when:
+  - You have a long report and your boss only has ten minutes.
+  - A board deck needs a section that sums up weeks of analysis.
+  - Your weekly report lists data but never states the point.
+  - A decision is due today and you need the bottom line.
+you_give:
+  - Full analysis or report
+  - Who will read it and what they decide
+  - Impact numbers for each finding
+  - Length limit, such as one page or three slides
+you_get:
+  - Summary led by the answer
+  - Findings with numbers
+  - Recommendations with owner and date
+  - Decision block
+  - Template to reuse
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

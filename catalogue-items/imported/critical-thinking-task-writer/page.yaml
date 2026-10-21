@@ -6,6 +6,25 @@ summary: Name a subject and a skill. Get a task where learners weigh evidence, s
 job: teach-and-train
 headline: Critical thinking task writer
 subhead: Name a subject and a skill. Get a task where learners weigh evidence, spot bias or test an argument.
+explain: |
+  A classroom task that makes students weigh evidence, spot bias or test an argument, with a guide that shows what a strong answer looks like next to a surface one. It moves lessons past recall and into judgment.
+
+  You name the subject and the thinking skill. The skill writes the task itself, then a response guide that contrasts critical answers with surface ones. It adds follow-up prompts the teacher can ask live and indicators for assessing the work. A worked example uses the bombing of Hiroshima. It lists known limits, so you know when to adjust. The task fits inside a normal lesson and works for any age if you state the level.
+when:
+  - Students summarise sources but never question them.
+  - You want to teach spotting bias in a history unit.
+  - You need an assessment that shows reasoning, not memory.
+  - You want follow-up questions ready for discussion.
+you_give:
+  - Subject and topic
+  - The thinking skill to target
+  - Year or age level
+  - Time available
+you_get:
+  - The student task
+  - Strong versus surface answer guide
+  - Teacher follow-up prompts
+  - Assessment indicators
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

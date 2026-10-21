@@ -6,6 +6,25 @@ summary: Give it MATLAB code to time. Get repeatable performance tests that meas
 job: test-and-fix-code
 headline: MATLAB speed test writer
 subhead: Give it MATLAB code to time. Get repeatable performance tests that measure run time with sound statistics.
+explain: |
+  Repeatable MATLAB speed tests that tell you how long code really takes, with enough runs to trust the number. Give it the code to time and get a test class ready to run.
+
+  It uses MATLAB's performance test framework. You choose where the timer starts and stops. Fast code under ten milliseconds needs a repeat loop, precise cases need start and stop calls, and the default times the whole method. It shows how to test several input sizes with parameters, and warns about a classic mistake: using the wrong kind of parameter for values that setup needs, which causes an error. It keeps setup lean so only the code under test is measured.
+when:
+  - You changed an algorithm and want to prove it got faster.
+  - A function seems fast on small input and slow on large input.
+  - You need timing tests to run each time code changes.
+  - Your timing numbers vary too much between runs to trust.
+you_give:
+  - The code to time
+  - Input sizes to try
+  - What counts as fast enough (optional)
+  - MATLAB release
+you_get:
+  - A performance test class
+  - Timing set up for several input sizes
+  - Instructions to run the tests
+  - A way to compare before and after
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe a trip, simulation or practical. Get the before, during and af
 job: teach-and-train
 headline: Field trip learning cycle planner
 subhead: Describe a trip, simulation or practical. Get the before, during and after steps that turn it into lasting learning.
+explain: |
+  A before, during and after plan that turns a trip, simulation or practical activity into learning that sticks. Students come back with understanding, not just a good day out.
+
+  You give the learning objective and the type of experience. The plan builds on well-known work on learning from experience: prepare students with questions and prior knowledge, run the activity with set tasks to observe or record, then reflect afterwards on what happened, why and what to do differently. It ends with a way to apply the lesson to new cases and a simple check of what they learned. You can add age group, subject and available time.
+when:
+  - You have a field trip booked and want it tied to the curriculum.
+  - You plan a role play or simulation and need a debrief.
+  - A practical lesson ends in a fun mess with nothing learned.
+  - You need a plan that fits a short time slot.
+you_give:
+  - The learning objective
+  - The type of experience, such as a trip or simulation
+  - Student age or year (optional)
+  - Subject area (optional)
+  - Time available (optional)
+you_get:
+  - Pre-activity preparation
+  - Tasks for during the activity
+  - A reflection and debrief plan
+  - A check of what was learned
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

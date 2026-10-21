@@ -6,6 +6,25 @@ summary: Say which product facts matter. Get fields for material, specs and sizi
 job: build-websites
 headline: Product attribute field setter
 subhead: Say which product facts matter. Get fields for material, specs and sizing filled in, so AI can match products. Changes live data.
+explain: |
+  Product fields for material, key features, care, fit and specs, set up and filled across your Shopify catalog. AI shopping tools filter on structured facts. If a fact only lives in prose, your product drops out of results like "machine-washable wool".
+
+  Claude checks which attribute fields exist, creates the missing ones, then reads each product's title, type, options and description to fill them in. You review the plan first. It changes live store data, so it needs an authenticated Shopify CLI session with product write access. Run a preview before you apply anything.
+when:
+  - Shoppers ask AI tools for items by material or spec and your products never show up.
+  - Your size and spec details sit in long descriptions and nowhere else.
+  - You are preparing your catalog for AI shopping assistants.
+  - You want the same set of attribute fields on every product.
+you_give:
+  - Your store domain
+  - The facts that matter for your products, such as material, fit or care
+  - Which products to include
+  - Approval to write to the store after a preview
+you_get:
+  - A set of attribute fields on your store
+  - Values filled in for each product
+  - A preview of changes before they go live
+  - A list of products that still lack data
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

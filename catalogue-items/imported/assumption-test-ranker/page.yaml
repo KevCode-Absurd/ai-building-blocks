@@ -6,6 +6,24 @@ summary: Give it your list of assumptions. Get them ranked by impact and risk, w
 job: test-an-idea
 headline: Assumption test ranker
 subhead: Give it your list of assumptions. Get them ranked by impact and risk, with a test for each top one.
+explain: |
+  A ranked list of your riskiest assumptions, with an experiment for each one that matters most. Paste your assumptions about a product, feature or business idea, and the AI sorts them so you stop testing the wrong things.
+
+  Each one is scored twice: impact, meaning how much value it creates and how many customers it touches, and risk, meaning how unsure you are and how hard it is to check. The result lands in one of four boxes. Low on both: wait. High impact, low risk: just build it. Low impact, high risk: drop it. High on both: design a test. Each test gets a metric and a pass line.
+when:
+  - You have thirty assumptions on sticky notes and time to test five.
+  - You can't decide what to research before building.
+  - A team argument about priorities needs something neutral to look at.
+  - You want cheap tests for a new product idea.
+you_give:
+  - A list of assumptions
+  - What the product or idea is
+  - Research notes or data (optional)
+you_get:
+  - Each assumption scored for impact and risk
+  - A sorted four-box matrix
+  - An experiment for each top assumption
+  - Which ones to build, wait on or drop
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

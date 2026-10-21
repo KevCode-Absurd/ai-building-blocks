@@ -6,6 +6,26 @@ summary: Give it a model. Get a smaller file that runs on your laptop or Mac wit
 job: build-software
 headline: Local model converter
 subhead: Give it a model. Get a smaller file that runs on your laptop or Mac with no GPU, plus the run steps.
+explain: |
+  A smaller version of an AI model that runs on your laptop, a Mac or a plain CPU with no GPU. Give it a model and get a compact GGUF file plus the steps to run it.
+
+  It builds llama.cpp for your machine: CPU, Apple Silicon or Nvidia. It converts the model to GGUF, then shrinks it with quantization anywhere from 2 to 8 bits. A smaller number saves space but loses some quality, and an importance matrix helps low-bit files stay accurate. The result works in LM Studio, Ollama and similar tools. It also says when another format fits better, such as AWQ for NVIDIA servers.
+when:
+  - A model is too big for your laptop memory.
+  - You use a Mac and want it to run well.
+  - You need one file that works in Ollama or LM Studio.
+  - You want to compare different shrink levels.
+you_give:
+  - The model you want to shrink
+  - Your computer type and memory
+  - How much quality loss you can accept
+  - Where you plan to run it
+you_get:
+  - Build steps for your machine
+  - A GGUF conversion command
+  - A shrunk model at the level you pick
+  - Run steps
+  - A guide to quality versus size
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

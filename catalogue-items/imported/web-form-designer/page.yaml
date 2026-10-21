@@ -6,6 +6,25 @@ summary: Name your form. Get fields, error messages, spam protection and a plan 
 job: build-websites
 headline: Web form designer
 subhead: Name your form. Get fields, error messages, spam protection and a plan to raise completions.
+explain: |
+  A form that people finish, with spam kept out and clean data passed on to your tools. It matters because forms are where visitors turn into leads and orders, and small flaws lose them.
+
+  You name the form and its goal. The skill decides which fields to keep, since each extra field costs completions. It picks when to check input and writes clear error messages. It weighs single page against multi-step layouts and sets spam defences such as hidden fields, rate limits and challenge tools that do not annoy people. It also covers how data flows to your CRM or email tool, and what to measure to improve completions.
+when:
+  - Your sign-up or contact form has a low completion rate.
+  - You get spam in your inbox or database.
+  - You are redesigning a long application or checkout form.
+  - You need form data to flow into your CRM.
+you_give:
+  - What the form is for
+  - The current fields or a link to the form
+  - "Your tools: CRM, email, form service"
+  - Completion or spam numbers (optional)
+you_get:
+  - A recommended field list
+  - Error message and validation rules
+  - Spam protection plan
+  - Steps to track and raise completions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

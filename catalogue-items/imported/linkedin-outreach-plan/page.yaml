@@ -6,6 +6,27 @@ summary: Say who you want to reach. Get a commenting list, connection notes and 
 job: grow-social
 headline: LinkedIn comment and outreach planner
 subhead: Say who you want to reach. Get a commenting list, connection notes and a plan, all sent by you.
+explain: |
+  A plan to grow your reach on LinkedIn by commenting first and reaching out second, and every message is sent by you. Tell it who you want to reach and it builds the list and the notes.
+
+  It makes a short roster of people worth engaging, then drafts comments that carry a point only your own view could add. Connection notes and direct messages each include one line written for that person. It sets a safe pace so your volume does not look like spam, and plans one follow-up a week later, only if you have something new. It avoids engagement pods and never sends anything for you.
+when:
+  - You want to meet ten people in your field this month.
+  - You need a connection note that gets accepted.
+  - You are not sure how many messages are safe to send.
+  - You want to grow through comments instead of cold pitching.
+you_give:
+  - Who you want to reach
+  - Your goal
+  - Your background in a sentence
+  - Weekly time or message volume
+  - People or companies you already follow (optional)
+you_get:
+  - A commenting roster
+  - Connection request notes
+  - Direct message drafts
+  - A weekly pace you can keep
+  - A follow-up rule
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

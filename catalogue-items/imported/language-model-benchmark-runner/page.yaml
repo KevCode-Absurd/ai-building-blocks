@@ -6,6 +6,25 @@ summary: Give it a model. Get scores on 60 or more standard tests, so you can co
 job: build-software
 headline: Language model benchmark runner
 subhead: Give it a model. Get scores on 60 or more standard tests, so you can compare it with others.
+explain: |
+  Scores for your model on the same tests everyone else uses, so you can compare it with other models fairly. Point the skill at a model, such as one from Hugging Face, and pick tasks from the 60 or more in EleutherAI's open test suite. These include MMLU for knowledge, GSM8K for maths and HumanEval for code.
+
+  It writes the command, sets batch size and device, runs it and gathers the results into one table. Because the prompts and metrics are fixed, a score from your run lines up with published ones. You need Python, the lm-eval package and a GPU for larger models.
+when:
+  - You fine-tuned a model and want to know if it got better or worse.
+  - You are choosing between two open models for a project.
+  - You want to compare your model with published leaderboard numbers.
+  - You need a repeatable evaluation to run after every training change.
+you_give:
+  - The model name or path
+  - Which benchmarks to run
+  - Access to a GPU machine
+  - A past results file to compare with (optional)
+you_get:
+  - The exact run command
+  - Scores per benchmark
+  - A results table
+  - Notes on how to compare across models
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

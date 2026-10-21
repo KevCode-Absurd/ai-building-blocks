@@ -6,6 +6,24 @@ summary: Give it your call notes, photos or an RFP. Get a branded, costed propos
 job: sell-and-negotiate
 headline: Quote and proposal builder
 subhead: Give it your call notes, photos or an RFP. Get a branded, costed proposal or quote in your own template.
+explain: |
+  Notes from a call, photos of a job, or an RFP become a branded, priced proposal ready to send. It uses your own templates and past prices, so quotes look the same each time and stop eating your evenings.
+
+  It asks one question first: where does the source material live? Then it reads it and builds a picture of what the customer wants, limits, what is out of scope, and any dates or budget. It names the gaps out loud, so a guessed square footage does not become a lost job. You get Word and PDF files you can send yourself. When it works with connected tools, it can route the proposal for signature and trigger the deposit invoice.
+when:
+  - You just looked at a job and need to quote it tonight.
+  - A customer sent an RFP and you must respond with a price.
+  - You have voice notes and photos but no written scope.
+  - Your quotes come out in different formats each time.
+you_give:
+  - Call transcript, voice note, photos or RFP
+  - Your proposal template
+  - Past pricing or rate sheet (optional)
+you_get:
+  - Branded, priced proposal in Word and PDF
+  - List of gaps and stated assumptions
+  - Scope and exclusions
+  - Signature and deposit steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

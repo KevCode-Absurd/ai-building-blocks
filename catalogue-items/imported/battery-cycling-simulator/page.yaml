@@ -6,6 +6,25 @@ summary: Describe a battery and a charge plan. Get simulated voltage curves, tes
 job: research-topics
 headline: Battery cycling simulator
 subhead: Describe a battery and a charge plan. Get simulated voltage curves, tested for solver error and compared with real data.
+explain: |
+  Simulated voltage curves for a lithium-ion cell going through charge, discharge and rest steps. The skill also checks that the numbers are not just solver error. Describe the cell and the charging plan, such as a C-rate protocol. It runs real PyBaMM experiments with the single particle model or the fuller DFN model.
+
+  It records where the parameter set came from. It repeats each run at three numerical resolutions to test mesh and solver sensitivity. Then it compares the predicted voltage with measured cycling data. It does not control a real battery cycler or set safe limits for hardware. You need Python 3.12 and a PyBaMM install with pinned versions.
+when:
+  - You want to predict how a cell's voltage behaves at a new charge rate.
+  - You need to check a model against lab cycling data.
+  - A result changes when you tweak the mesh and you don't trust it.
+  - You need a record of which parameters you used.
+you_give:
+  - Cell type and parameter set
+  - Charge, discharge and rest protocol
+  - Measured voltage data (optional)
+  - Choice of SPM or DFN model
+you_get:
+  - Simulated voltage and charge curves
+  - Mesh and solver sensitivity checks
+  - A comparison with measured data
+  - A record of parameter sources
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

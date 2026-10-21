@@ -6,6 +6,27 @@ summary: Describe your AI app. Get a threat map and fixes against hidden instruc
 job: secure-code
 headline: Prompt injection defender
 subhead: Describe your AI app. Get a threat map and fixes against hidden instructions in text it reads.
+explain: |
+  A threat map and a fix list for your AI app, so text it reads cannot take it over. You see exactly where hidden instructions could get in and what they could reach.
+
+  You describe the app, its tools, data, permissions and every source of input: users, web pages, email, files, images and other agents. The skill maps trust boundaries, lists attacker paths and states what must always hold true. It then plans defences that limit damage: separate untrusted content, narrow tool rights, block data leaving, protect secrets and keep approval checks outside the model. It adds tests and notes the risk that remains. It assumes the model can be fooled.
+when:
+  - You are building an agent that reads emails, web pages or documents.
+  - You want a security review before giving your AI access to tools.
+  - You suspect an injection happened and need to investigate.
+  - You need to document remaining risk for a client or auditor.
+you_give:
+  - Description of the AI app and its purpose
+  - List of input sources
+  - Tools and permissions it has
+  - Data and secrets it can reach
+  - Past incidents (optional)
+you_get:
+  - Data flow and trust map
+  - Threat model
+  - Prioritised defence plan
+  - Injection tests
+  - Residual risk notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

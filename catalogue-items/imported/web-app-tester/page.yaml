@@ -6,6 +6,25 @@ summary: Point it at your local app. Get its screens tried in a real browser, wi
 job: test-and-fix-code
 headline: Web app tester
 subhead: Point it at your local app. Get its screens tried in a real browser, with screenshots and error logs.
+explain: |
+  Your local web app tried out in a real browser, with screenshots and error logs so you can see what breaks. You find out about broken buttons and console errors before users do.
+
+  The skill writes Python scripts with Playwright, a tool that drives a browser. It first decides whether the page is static or dynamic. For a dynamic app it starts your server with a helper script, loads the page, waits for it to settle and looks at the real rendered page for selectors. Then it clicks through your flows, takes screenshots and collects browser logs. It needs Python and Playwright installed on your machine and an app running locally.
+when:
+  - You changed a screen and want to see it still works.
+  - A user reported a bug you cannot reproduce.
+  - You want proof that a sign-up flow completes.
+  - You need screenshots of your app for a bug report.
+you_give:
+  - The address or start command for your local app
+  - The flow to test, such as sign up
+  - Test logins for your app (optional)
+  - What a pass looks like (optional)
+you_get:
+  - A browser test script
+  - Screenshots of each step
+  - Browser console and error logs
+  - A list of what failed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

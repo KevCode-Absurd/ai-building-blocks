@@ -6,6 +6,26 @@ summary: Describe your product and users. Get three to five ways to earn from it
 job: set-prices
 headline: Revenue model picker
 subhead: Describe your product and users. Get three to five ways to earn from it, with risks and tests.
+explain: |
+  Three to five different ways your product could earn money, each with who pays, the risks and a cheap test to run first. You choose with evidence instead of gut feel.
+
+  You describe the product, who it is for, what they might pay and what the business needs most: growth, users or profit. For every model, the skill explains how it works, why it fits your audience, and a rough picture of acquisition cost, customer value and break-even time. It lists risks like churn and weak pricing, and compares how competitors charge. The last part is a low-effort experiment, such as a fake door page or pre-sale, to check demand before you build.
+when:
+  - You have a product with users and no income plan.
+  - You are choosing between subscription, one-off sales and ads.
+  - Investors ask how you will make money.
+  - You want a cheap way to test pricing before launch.
+you_give:
+  - A description of the product
+  - Your target customers
+  - What people pay now or can afford (optional)
+  - How competitors earn money (optional)
+  - "Your top priority: revenue, users or profit (optional)"
+you_get:
+  - Three to five revenue models
+  - Audience fit and unit economics for each
+  - Risks and competitor comparison
+  - A validation experiment for each model
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Point it at your AWS account. Get a ranked list of security gaps with f
 job: secure-code
 headline: AWS security checker
 subhead: Point it at your AWS account. Get a ranked list of security gaps with fixes.
+explain: |
+  A ranked list of security gaps in your AWS account, each with a fix. The AI runs read-only AWS command line checks across four areas: identity and access, network, data protection and logging.
+
+  It looks for things like open security groups, public S3 buckets, unencrypted data, root account use, missing MFA, old access keys and gaps in CloudTrail logging. A scoring step turns the results into a security score, and findings are mapped to common compliance frameworks. You then get remediation steps in priority order. It also includes a script that runs the audit in one go. You need the AWS command line installed and read access to the account.
+when:
+  - You inherited an AWS account and don't know how safe it is.
+  - A customer asked for proof of your security setup.
+  - You want a quick check before a compliance audit.
+  - You want to find public buckets before someone else does.
+you_give:
+  - AWS command line access with read permissions
+  - Which account or region to check
+  - Compliance framework in scope (optional)
+you_get:
+  - Findings across identity, network, data and logs
+  - A security score
+  - A ranked fix list with commands
+  - Compliance mapping
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

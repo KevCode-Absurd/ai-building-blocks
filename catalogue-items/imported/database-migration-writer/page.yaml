@@ -6,6 +6,25 @@ summary: Describe the schema change. Get a versioned migration that runs forward
 job: build-software
 headline: Database migration writer
 subhead: Describe the schema change. Get a versioned migration that runs forward and rolls back safely.
+explain: |
+  A tested schema change that moves your database forward and can roll back cleanly if it goes wrong. It aims for no downtime on production.
+
+  You describe the change. The skill sorts it as safe additive or breaking, then picks your tool: Alembic, Prisma Migrate, Flyway, Knex, Django or Sequelize. It generates the migration from the schema diff, reviews it and writes the downgrade by hand. Data backfills are handled in steps. It tests on a staging copy, then rolls out using expand and contract: add new columns first, switch the app to write to both, then remove the old ones later. After deploy it checks migration status and watches logs.
+when:
+  - You need to add a column to a busy production table.
+  - You are renaming a field without breaking the live app.
+  - You need a rollback plan before releasing a schema change.
+  - You must backfill old rows with new values.
+you_give:
+  - The schema change you want
+  - Your migration tool or stack
+  - Database type
+  - Table size (optional)
+you_get:
+  - Forward migration script
+  - Rollback script
+  - Backfill steps
+  - Staged rollout plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Tell it how students use AI on a task. Get checkpoints that show whethe
 job: teach-and-train
 headline: AI-use understanding check planner
 subhead: Tell it how students use AI on a task. Get checkpoints that show whether they really understand the work.
+explain: |
+  Students who use AI can feel they understand a topic because the answer reads so smoothly. Checkpoints that expose the gap between what they think they know and what they can do turn that into a lesson.
+
+  You describe how students use AI on a task and what worries you. The skill explains how that use can inflate their confidence. Then it designs moments where students must recall or explain without the AI's text in front of them, and compare their prediction with their result. Retrieval is the main tool, because it shows the true state of knowledge. It does not ban AI. It builds the checking into the task and draws on research on self-regulated learning.
+when:
+  - Students hand in good essays but cannot explain them aloud.
+  - You allow AI on a task and want to know what students really learned.
+  - You need a quick check to run before an assessment.
+  - You want to teach students to judge their own understanding.
+you_give:
+  - How students use AI on the task
+  - Your main concern about understanding
+  - Year group and subject (optional)
+  - The AI tool they use (optional)
+  - How the work is assessed (optional)
+you_get:
+  - An analysis of where confidence may be inflated
+  - Checkpoints that require recall without AI
+  - Prompts for students to predict and compare
+  - Guidance on running them in class
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

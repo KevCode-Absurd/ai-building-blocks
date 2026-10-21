@@ -6,6 +6,26 @@ summary: Give it your marketing numbers. Get a report on trends, funnel drop-off
 job: read-ad-results
 headline: Marketing results reporter
 subhead: Give it your marketing numbers. Get a report on trends, funnel drop-offs and what to do next.
+explain: |
+  Numbers from your ads, site and email turned into a report that says what happened and what to do about it. It looks past last-click credit to show which channels start sales and which ones finish them.
+
+  It starts by fixing the goal and the period. Then it collects data from your tools, such as Google Analytics, search console and ad accounts, and compares each metric to the last period and the same period a year ago. It tests several credit models, maps the funnel from first visit to purchase and finds where people drop off. The report ends with a summary, a channel breakdown, key insights and ranked recommendations.
+when:
+  - You think a channel is failing but last-click numbers may be hiding its real role.
+  - You need to find the step where most visitors leave your funnel.
+  - You want a monthly report that compares this month to last year.
+  - You must decide which ad channel to cut or grow.
+you_give:
+  - Data exports from analytics and ad tools
+  - The reporting period
+  - Your main goal metrics
+  - The site or campaign to review
+you_get:
+  - A report with a clear summary
+  - A channel by channel breakdown
+  - Funnel drop-off figures
+  - Credit comparison across channels
+  - Ranked recommendations
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

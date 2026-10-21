@@ -6,6 +6,26 @@ summary: Give it your Etsy listing. Get a score out of 100, better title and tag
 job: get-found-in-search
 headline: Etsy listing SEO scorer
 subhead: Give it your Etsy listing. Get a score out of 100, better title and tags, and a ranked fix list.
+explain: |
+  A score out of 100 for your Etsy listing, with a rewritten title, a full set of tags and a fix list ordered by what will help most.
+
+  The score weighs five parts: title 30 percent, tags 25, description 20, attributes 15 and images 10. It checks that the title puts the main keyword first, then adds style, material and the occasion. It checks you use all 13 tags, each under 20 characters, with long phrases and synonyms. It reads the first 160 characters of your description, since that is what shoppers see, and checks which attributes are missing. You finish with a short action plan in priority order.
+when:
+  - Your Etsy listing gets views but few sales and you suspect the title is weak.
+  - You are launching a new product and want strong tags from day one.
+  - You have many listings and need to decide which to fix first.
+  - You want keyword ideas for your product category.
+you_give:
+  - Listing title
+  - Tags and description
+  - Attributes and image count
+  - Product category or main keyword (optional)
+you_get:
+  - Score out of 100 with parts
+  - Improved title options
+  - Set of 13 tags
+  - Description fixes
+  - Ranked action list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

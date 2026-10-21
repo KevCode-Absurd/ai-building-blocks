@@ -6,6 +6,25 @@ summary: Tell it your product and budget. Get how to find creators, what to offe
 job: grow-social
 headline: TikTok creator outreach planner
 subhead: Tell it your product and budget. Get how to find creators, what to offer, and how to track results.
+explain: |
+  A plan for finding TikTok creators who fit your product, what to offer them, and how to tell if the partnership paid off. It covers the full path from first search to repeat deals.
+
+  You give your product, niche, budget and the creator size you want. The skill sets out how to search the Creator Marketplace, how to check that a creator's followers and engagement look real, and which brand risks to screen for. It drafts a brief, suggests rate ranges and negotiation points, and sets up a simple way to track each creator's results. It also covers content approval and ways to keep strong creators coming back.
+when:
+  - You have a product and a budget but no creators yet.
+  - You want 20 creators for a launch and need a process.
+  - Past creator posts got views but no sales.
+  - You need a brief and an outreach message that creators will answer.
+you_give:
+  - Your product and niche
+  - Budget and number of creators
+  - Follower range you want
+  - Past creator results (optional)
+you_get:
+  - A creator search and vetting checklist
+  - A campaign brief
+  - Offer and rate guidance
+  - A results tracking sheet outline
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

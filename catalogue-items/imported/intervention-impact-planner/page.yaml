@@ -6,6 +6,25 @@ summary: Give it a systems analysis and ideas for action. Get each ranked by imp
 job: teach-and-train
 headline: Intervention impact planner
 subhead: Give it a systems analysis and ideas for action. Get each ranked by impact, with side effects and better options.
+explain: |
+  Your plan to fix a problem gets tested before you act on it. Give it the systems analysis you already have and the action you are leaning toward. It places that action on the twelve places to intervene described by Donella Meadows, from tweaking numbers at the bottom to changing goals and beliefs at the top.
+
+  Then it hunts for knock-on effects: fixes that fail later, relief that hides the real cause, and limits that stall growth. You get two or three better or reworked options that act higher up the ladder, each with its side effects spelled out. Add your time, budget and reach, and the options stay realistic.
+when:
+  - You have a plan for a tough problem and want to know if it will really work.
+  - Your first fix feels obvious and you suspect it only treats symptoms.
+  - You finished a systems analysis and now need to choose what to do.
+  - You need to compare several actions and see which one has the most impact.
+you_give:
+  - Your systems analysis or a description of the problem
+  - The action you are considering
+  - Limits on time, budget and reach (optional)
+  - Context such as school, team or community (optional)
+you_get:
+  - Your action placed on the ladder of places to intervene
+  - A list of likely side effects and delayed backlash
+  - Two or three better or refined options
+  - A ranking by impact
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

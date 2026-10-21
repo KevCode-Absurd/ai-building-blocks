@@ -6,6 +6,25 @@ summary: Give it a new dataset. Get its structure, spread, links and odd spots m
 job: track-numbers
 headline: New dataset explorer
 subhead: Give it a new dataset. Get its structure, spread, links and odd spots mapped before you use it.
+explain: |
+  A first look at a dataset you have not worked with, so surprises show up before they wreck a report or a model. You get a plain picture of what is really in the file.
+
+  The skill reports size, column types and the first and last rows to catch bad headers or junk at the bottom. It counts missing values, constant columns and duplicates. Then it looks at each column's spread, such as average, median and skew, and flags lopsided categories. It checks which columns move together, flagging strong links, and finds outliers using the IQR method. It ends with a short summary of what you can trust and what needs cleaning first.
+when:
+  - A colleague sends a spreadsheet and you do not know what is in it.
+  - You are about to build a model and want to check the data first.
+  - Your totals look wrong and you suspect bad rows.
+  - You need a quick profile for a data handover.
+you_give:
+  - A table of data (CSV, Excel or similar)
+  - The question you hope to answer (optional)
+  - Which column you want to predict (optional)
+you_get:
+  - Size, types and sample rows
+  - A missing data and duplicate report
+  - Charts of each column's spread
+  - Strong links between columns
+  - Outliers and a short findings summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

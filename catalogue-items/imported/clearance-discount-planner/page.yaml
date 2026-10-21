@@ -6,6 +6,26 @@ summary: Give it your slow stock and past sales. Get when and how much to cut pr
 job: set-prices
 headline: Clearance discount planner
 subhead: Give it your slow stock and past sales. Get when and how much to cut prices to sell out.
+explain: |
+  A markdown plan for slow stock that tells you when to cut prices and by how much, so you clear inventory without giving away more margin than needed. You give your stock and sales history, and you get steps by week.
+
+  The skill first asks what is stuck: overstock, seasonal items or slow movers, how old it is and what you paid. It looks at past sell-through to see how price changes moved sales. It sets a floor price from your margin limit and a deadline from the season. Then it builds a schedule of cuts in steps such as 10, 20 or 30 percent, with timing by item and store.
+when:
+  - Winter coats are still on the shelves in March.
+  - You have too much of one item and a new delivery coming.
+  - You do not know whether to cut early and small or late and deep.
+  - You need a markdown rate that fits a margin limit.
+you_give:
+  - Stock list with quantities and age
+  - Cost and current price
+  - Past sales by week
+  - Margin floor and deadline
+  - Competitor pricing (optional)
+you_get:
+  - A markdown schedule by item
+  - The price floor for each
+  - Expected sell-through
+  - Cash recovered compared with other paths
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

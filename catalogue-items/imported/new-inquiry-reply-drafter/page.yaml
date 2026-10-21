@@ -6,6 +6,25 @@ summary: Give it new inquiries. Get each one qualified and answered with a draft
 job: write-emails
 headline: New inquiry reply drafter
 subhead: Give it new inquiries. Get each one qualified and answered with a draft reply and real meeting times. You send it.
+explain: |
+  New enquiries answered while they are still warm. The skill reads what came in, sorts each one by how serious it looks and drafts a reply in your voice, with real meeting times offered.
+
+  It checks your inbox, CRM and website form alerts in one pass, and skips anything a person has already answered. Each enquiry is qualified and given a reply to match. Hot leads that need a human are posted to the chat channel you name, with who they are, what they asked and when. You review every draft and send it yourself, since nothing goes out unseen. Without connected tools, you can forward or paste enquiries and it works the same way.
+when:
+  - Leads sit in your inbox for a day before anyone replies.
+  - You are on the road and cannot answer enquiries quickly.
+  - You want to offer open calendar slots in your first reply.
+  - Your team needs hot leads passed to a person right away.
+you_give:
+  - New enquiries (connected inbox or pasted text)
+  - Your calendar availability
+  - Examples of your writing voice (optional)
+  - The channel for hot leads (optional)
+you_get:
+  - Each lead sorted by how likely it is to buy
+  - A draft reply in your voice
+  - Real meeting times in the reply
+  - A handoff note for hot leads
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it one idea. Get an X post and a LinkedIn post that read as writte
 job: grow-social
 headline: Cross-platform post writer
 subhead: Give it one idea. Get an X post and a LinkedIn post that read as written separately.
+explain: |
+  Pasting the same words onto X and LinkedIn makes one of the two posts sound wrong. Here you give one idea and get two posts, each written from scratch for its own audience.
+
+  It first states your idea back in one plain sentence. If it cannot, it asks which part is the point instead of writing two versions of a muddle. Then it writes the X post as compressed, with a first line that works alone and no setup. The LinkedIn post gets the context and fuller reasoning readers expect there. Neither is an edit of the other, so no seams show.
+when:
+  - You have one insight to share and want it on both platforms today.
+  - Your LinkedIn post reads like a press release when copied to X.
+  - You wrote a short tweet and want a fuller LinkedIn version.
+  - You are unsure how the same point should change between the two.
+you_give:
+  - The idea, rough notes or a draft
+  - Any facts or numbers to include
+  - Your voice or a sample post (optional)
+you_get:
+  - An X post that stands on its first line
+  - A LinkedIn post with the needed context
+  - The one-sentence idea both are built on
+  - A short note on what changed and why
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

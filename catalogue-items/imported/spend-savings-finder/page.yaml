@@ -6,6 +6,25 @@ summary: Give it a list of what you paid suppliers. Get spend grouped by type, t
 job: track-numbers
 headline: Spend savings finder
 subhead: Give it a list of what you paid suppliers. Get spend grouped by type, the biggest savings chances and quick wins.
+explain: |
+  Your supplier payments sorted by type, with the biggest savings chances and quick wins listed. Give it an export from your accounting, purchasing or card data. The skill first cleans it and groups each payment into a category, supplier and business unit, which is the spend cube view.
+
+  It then runs a Pareto check to show which few suppliers take most of your money, and looks at tail spend, off-contract buying and duplicate suppliers. It ranks savings by size and effort, so you know what to chase first and what can wait.
+when:
+  - You do not know where your money goes each month.
+  - You suspect you pay too many suppliers for the same thing.
+  - Staff buy outside approved contracts and you want the size of it.
+  - You need a short list of savings to act on this quarter.
+you_give:
+  - A list of supplier payments or a spend export
+  - The time period covered
+  - Goals such as cost cuts or fewer suppliers (optional)
+you_get:
+  - Spend grouped by category and supplier
+  - A Pareto view of top suppliers
+  - Tail and off-contract spend
+  - Ranked savings chances
+  - Quick wins list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

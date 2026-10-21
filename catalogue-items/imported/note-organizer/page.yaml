@@ -6,6 +6,24 @@ summary: Give it ideas or meeting notes. Get them captured, tagged and filed so 
 job: organise-work
 headline: Note organizer
 subhead: Give it ideas or meeting notes. Get them captured, tagged and filed so you can find them later.
+explain: |
+  Ideas and meeting notes captured as tidy files you can find again. You say what happened, and the skill writes it down in the right shape, tags it and files it.
+
+  It picks a template by note type. Meeting notes get attendees, discussion and action items with checkboxes. Research notes get the source and key findings. Others suit daily logs, ideas and project notes. Files are plain Markdown with date-first names, such as 2026-02-12-sprint-planning.md, and tags and links at the top. Before creating anything, it searches for an existing note on the topic and adds to that instead. It can also search your notes and write a summary across several of them.
+when:
+  - You leave meetings with scraps of text and lose the action items.
+  - You want one place for ideas that is not a messy pile.
+  - You need to find what was decided last month.
+  - You want a short summary across several notes on one topic.
+you_give:
+  - Your notes, ideas or meeting talk
+  - Where your notes folder lives
+  - Tags you already use (optional)
+you_get:
+  - A structured Markdown note
+  - Tags and links to related notes
+  - Action items as checkboxes
+  - Search results and topic summaries
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

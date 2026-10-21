@@ -6,6 +6,25 @@ summary: Give it a PCB design. Get S-parameters, insertion loss and fields compu
 job: build-software
 headline: PCB signal loss analyzer
 subhead: Give it a PCB design. Get S-parameters, insertion loss and fields computed with the right solver.
+explain: |
+  Know how much signal your RF board part loses, reflects and radiates before you build it. You get S-parameters, insertion loss and field plots from a solver chosen to match the shape of your design.
+
+  The skill helps you choose between the method-of-moments and finite-element solvers, set mesh density to trade accuracy for speed, and use interpolating sweeps so a wide frequency range does not take hours. You can plot electric and magnetic fields, surface currents and charge. For fast early estimates it can use simple analytic models instead of a full solve. It runs in MATLAB with the RF PCB Toolbox and needs a component already built.
+when:
+  - Your filter or line is built and you need its insertion loss across a band.
+  - A full solve takes too long and you want a faster sweep method.
+  - You want to see where current crowds on a trace.
+  - You are unsure which solver suits your structure.
+you_give:
+  - A designed RF PCB component
+  - Your frequency range
+  - Port impedance, often 50 ohms
+  - Accuracy or speed priority (optional)
+you_get:
+  - S-parameters over your band
+  - Insertion and return loss
+  - Field and current plots
+  - A solver and mesh choice with reasons
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

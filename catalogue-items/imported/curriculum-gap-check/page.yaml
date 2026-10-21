@@ -6,6 +6,25 @@ summary: Give it your curriculum and a list of requirements. Get a table showing
 job: teach-and-train
 headline: Curriculum requirements gap checker
 subhead: Give it your curriculum and a list of requirements. Get a table showing what is covered, what is missing and a CSV.
+explain: |
+  Before an inspection or accreditation, you need to know which requirements your curriculum actually meets. Give it your curriculum and the requirement list, and you get a table showing what is covered, what is only partly covered and what is missing, plus a CSV.
+
+  Each requirement gets its own row. The row names the learning target or skill that covers it, the age band, and how strong the match is, using a method from alignment research that looks at topic match, depth and range. Requirements with no match are listed as gaps. You can limit the check to certain bands and name the framework and the body that sets the requirements.
+when:
+  - An accreditation visit is coming and you need proof of coverage.
+  - You adopted a new standards list and need to see what your plan misses.
+  - You merged two curricula and want to find overlaps and holes.
+  - You want a clear list to take to your planning team.
+you_give:
+  - Your curriculum or framework
+  - The requirements list in text, CSV or markdown
+  - Framework and requirement source names (optional)
+  - Age bands to check (optional)
+you_get:
+  - A coverage table, one row per requirement
+  - Match strength for each row
+  - A gap list
+  - A CSV you can open in a spreadsheet
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

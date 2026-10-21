@@ -6,6 +6,25 @@ summary: Give it a place, height and date. Get air, gravity, wind and magnetic f
 job: build-software
 headline: Flight environment calculator
 subhead: Give it a place, height and date. Get air, gravity, wind and magnetic field values, worked out in MATLAB.
+explain: |
+  Air, gravity, wind and magnetic values for a given place, altitude and date, worked out in MATLAB with the right Aerospace Toolbox calls. You can drop them straight into flight or spacecraft analysis.
+
+  It first pins down which quantity you need, then picks the matching function from a decision table. Choices cover standard atmosphere models, gravity for Earth and other planets, horizontal wind, magnetic field models, geoid height, space weather inputs, planet positions and Earth orientation values. After each call it checks that units and sizes make physical sense. It does not convert coordinate frames or propagate orbits. You need MATLAB with the Aerospace Toolbox.
+when:
+  - You need air density and pressure at a set altitude for a vehicle model.
+  - You need gravity or wind values for a trajectory study.
+  - You need the magnetic field at a location for compass correction.
+  - You need Moon or planet positions on a specific date.
+you_give:
+  - Latitude, longitude and altitude
+  - Date and time
+  - Which quantity you need
+  - Planet or model preference (optional)
+you_get:
+  - Ready MATLAB code for each quantity
+  - Computed values with units
+  - Sanity check on the results
+  - Model choice with reason
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

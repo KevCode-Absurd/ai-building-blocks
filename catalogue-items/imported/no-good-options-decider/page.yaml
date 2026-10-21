@@ -6,6 +6,25 @@ summary: Describe a choice where every option hurts. Get a 10/10/10 and regret c
 job: think-and-decide
 headline: No-good-options decider
 subhead: Describe a choice where every option hurts. Get a 10/10/10 and regret check, and a clear pick.
+explain: |
+  A clear pick when every choice hurts. This is for the calls that keep you awake: letting a co-founder go, cutting staff, killing a loved product or shutting down.
+
+  The skill begins with reversibility: can you undo this, partly undo it, or not at all? The less reversible the choice, the more checking it asks for. It then runs a 10/10/10 test, asking how you will feel in ten minutes, ten months and ten years, and a regret check for each path. It points out that many hard calls are really late calls, and that waiting often makes the problem larger. You end with the less wrong option and the first steps to take.
+when:
+  - You need to decide on a layoff and keep putting it off.
+  - A co-founder is not working out and the talk is overdue.
+  - You are thinking about ending a product customers still like.
+  - Both choices look bad and you need a way to break the tie.
+you_give:
+  - The decision in plain words
+  - Your options
+  - Who is affected
+  - How long you have been delaying (optional)
+you_get:
+  - A reversibility rating
+  - A 10/10/10 view of each option
+  - A regret check
+  - A clear pick with first steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

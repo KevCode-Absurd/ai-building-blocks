@@ -6,6 +6,25 @@ summary: Describe your AI product. Get a style guide for a chat-first screen wit
 job: design-work
 headline: AI assistant interface style guide writer
 subhead: Describe your AI product. Get a style guide for a chat-first screen with few controls and clear outcomes.
+explain: |
+  A style guide for an AI product where the main screen is a conversation, with few buttons and a clear result at the end. The guide is built so designers and engineers can use it directly.
+
+  It begins with one sentence of design intent. Then it sets the basics in order: type sizes, fonts, colours as named tokens, and an 8-point spacing grid. After that come the parts: how each component looks, its states and how it behaves, including empty, loading and error screens. Accessibility is built in, with keyboard use, visible focus, large touch targets and strong contrast. The writing tone is short, friendly and action-led, with do and don't lists to keep the screens consistent.
+when:
+  - You are designing an AI assistant and want a consistent look.
+  - Your team keeps choosing different colours and spacing for the same product.
+  - You need chat screens to be easy to use with a keyboard or screen reader.
+  - You want one place for rules on button labels and messages.
+you_give:
+  - A description of your AI product
+  - Your brand colours and fonts (optional)
+  - The screens or parts you need
+  - Accessibility rules you must follow (optional)
+you_get:
+  - Design tokens for type, colour and spacing
+  - Part-by-part guidance with states
+  - Accessibility rules
+  - Writing tone rules and do and don't lists
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

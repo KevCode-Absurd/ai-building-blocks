@@ -6,6 +6,25 @@ summary: Paste a draft. Get deviations from your voice and style guide ranked by
 job: brand-file
 headline: Draft brand voice checker
 subhead: Paste a draft. Get deviations from your voice and style guide ranked by severity, each with a before and after fix.
+explain: |
+  Your draft, checked against your brand voice and style guide, with each deviation ranked by how serious it is and a before and after fix for it.
+
+  Paste the draft, point to a file or page, or send several pieces at once. If a brand guide is saved in your settings, it uses that. If not, it asks you to paste or describe one. It then reads for voice and tone fit, shifts in voice, preferred and banned terms, jargon level, and the correct writing of product and feature names. Each flagged line comes with a reason. It also checks style rules like capitalisation. Use it before you publish anything that carries your name.
+when:
+  - A freelancer sent a blog post and you need to check it sounds like you.
+  - Several people write for your brand and the voice keeps drifting.
+  - You are about to publish a launch page and want a last review.
+  - You want a list of banned phrases that slipped into a draft.
+you_give:
+  - The draft, file or link to review
+  - Your brand voice or style guide
+  - The audience for the piece (optional)
+  - Terms you always use or avoid (optional)
+you_get:
+  - Deviations ranked by severity
+  - The reason each was flagged
+  - A before and after fix for each
+  - A short overall verdict
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it a code change and your tests. Get each new behaviour marked cov
 job: test-and-fix-code
 headline: Test gap finder
 subhead: Give it a code change and your tests. Get each new behaviour marked covered or not, plus test cases for the gaps.
+explain: |
+  A short list of what a code change does that no test checks, with test cases to close each gap. Before you merge, you know which new behaviour is covered and which is not.
+
+  You give a diff, a branch or a commit, plus the project's tests. The skill goes through each changed section and writes the behaviour in one plain sentence: new branches, error paths, changed defaults, edge cases. It then searches the tests for something that would fail if that behaviour were wrong. Each behaviour is marked covered, not covered or unknown, with the test name. A test that asserts nothing does not count. It then proposes tests for the gaps.
+when:
+  - You are about to merge a pull request and want to know what is untested.
+  - You review a colleague's change and suspect the tests are thin.
+  - An AI wrote code and tests and you want a second look.
+  - You need test cases for the risky parts of a change.
+  - Coverage numbers look high but you doubt the checks.
+you_give:
+  - The diff, branch or commit
+  - The related test files
+  - The reason for the change (optional)
+  - Test framework (optional)
+you_get:
+  - A list of new behaviours
+  - A covered, not covered or unknown label for each
+  - Evidence for each label
+  - Proposed test cases for the gaps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

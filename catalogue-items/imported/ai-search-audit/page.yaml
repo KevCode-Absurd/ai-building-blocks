@@ -6,6 +6,24 @@ summary: Give it a website. Get a score for how likely AI search is to cite it, 
 job: get-found-in-search
 headline: AI search audit
 subhead: Give it a website. Get a score for how likely AI search is to cite it, plus fixes. Collects data from websites.
+explain: |
+  A score out of 100 for how likely ChatGPT, Perplexity, Claude and Google AI to cite your site, with fixes sorted by urgency. Pages built for AI answers can earn far more mentions, so this shows where you stand.
+
+  It reads your home page to tell whether you are a shop, a local business, a software firm, a publisher or an agency. Then it crawls up to 50 pages from your sitemap. Separate checks run in parallel on six areas: how quotable your content is, brand authority, expertise signals, technical setup, structured data and platform fit. The report lists critical, high, medium and low issues, quick wins and a 30 day plan. It fetches live web pages.
+when:
+  - You want to know if AI tools mention your site at all.
+  - You have good content but get no AI citations.
+  - You need a clear to-do list ranked by urgency.
+  - You are comparing your site against a rival's.
+you_give:
+  - Your website address
+  - Your main topic or industry (optional)
+  - A rival's site to compare against (optional)
+you_get:
+  - An overall score from 0 to 100
+  - Six area scores
+  - Issues ranked critical to low
+  - A 30 day action plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it your systems work. Get a paper draft built to the structure tha
 job: research-topics
 headline: Systems paper writer
 subhead: Give it your systems work. Get a paper draft built to the structure that systems conferences expect.
+explain: |
+  A draft of your systems paper laid out the way OSDI, SOSP, NSDI, ASPLOS and EuroSys reviewers expect, so the strong parts of your work show up on the first read. It saves you from a paper that buries the idea or the evidence.
+
+  The skill gives each section a page budget in a 10 to 12 page paper. It then plans paragraph by paragraph: what the intro must claim, how the design is motivated, how the evaluation answers each claim. It draws on guides from well known systems researchers and adds a checklist per venue plus a list of reasons reviewers reject papers. It does not cover general machine learning papers.
+when:
+  - You built a system and must write it up for a top conference.
+  - Your draft is over the page limit and you need to know what to cut.
+  - Your evaluation section feels scattered and does not match your claims.
+  - You want to check the paper against what reviewers look for before submitting.
+  - You are a first-time author and want a clear section plan.
+you_give:
+  - A description of your system and what is new
+  - Your main results
+  - The target venue
+  - An existing draft (optional)
+you_get:
+  - A page budget per section
+  - A paragraph level outline
+  - A draft in that structure
+  - A venue checklist with weak spots flagged
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

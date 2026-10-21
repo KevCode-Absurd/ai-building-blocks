@@ -6,6 +6,24 @@ summary: Give it code with passwords or API keys. Get them moved into the MATLAB
 job: secure-code
 headline: MATLAB secret keeper
 subhead: Give it code with passwords or API keys. Get them moved into the MATLAB Vault, not left in the file.
+explain: |
+  Passwords, tokens and keys taken out of your MATLAB code and kept in the MATLAB Vault, so a shared file never leaks them. You give it a script with credentials in plain text and get the safe version back.
+
+  It starts with a guide to choosing where each secret should live. Then it stores the secret once with the setSecret call, retrieves it at the point of use with getSecret,. It has ready patterns for common cases: a bearer token for a web service, a passphrase for an SFTP key, a database login and keys for cloud storage on S3, Azure or Google.
+when:
+  - You are about to share a script that has an API key in it.
+  - A database login is typed straight into your connection code.
+  - You need to change a token without editing every file.
+  - You push code to GitHub and want no secrets in the repo.
+you_give:
+  - Code that contains credentials
+  - What the credential connects to
+  - MATLAB release
+you_get:
+  - Code with secrets removed
+  - Vault store and retrieve steps
+  - A pattern for your connection type
+  - A rotation method
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

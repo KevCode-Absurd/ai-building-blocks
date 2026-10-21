@@ -6,6 +6,25 @@ summary: Describe how your team writes. Get what AI should draft, what people ow
 job: set-up-ai
 headline: AI writing workflow planner
 subhead: Describe how your team writes. Get what AI should draft, what people own, and rules that keep your voice.
+explain: |
+  A clear split of who does what when your team writes with AI. People own the voice, the facts and what gets published. AI does the research summaries, first drafts, edit suggestions and quality checks, always under a person's direction.
+
+  You describe how your team writes now. The plan names where AI helps at each stage, from strategy to brief to draft to review, and where a human must decide. It sets a test: if nobody can defend every claim and word in a published piece, the line was crossed. It deals with work that feels generic. It does not push any tool or give prompts, so it fits whichever AI you use.
+when:
+  - Your content feels generic since the team started using AI.
+  - Writers use AI in different ways and quality is uneven.
+  - You lead an editorial team and need clear rules for AI use.
+  - You run an agency and need an agreed process to show clients.
+you_give:
+  - How your team writes and publishes today
+  - Where AI is already used
+  - Your brand voice notes (optional)
+  - Your quality problems (optional)
+you_get:
+  - A map of AI tasks versus human tasks by stage
+  - Review checkpoints before publishing
+  - Rules that protect your voice
+  - A checklist for consistent team use
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

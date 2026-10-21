@@ -6,6 +6,23 @@ summary: Give it a text or document. Get it back corrected in your own voice, wi
 job: write-and-tell-stories
 headline: Draft proofreader
 subhead: Give it a text or document. Get it back corrected in your own voice, with a log of every change.
+explain: |
+  Your text back with the mistakes fixed and your own voice left alone, plus a log of every change so you can accept or reject each one.
+
+  It works on pasted text or on a file such as .docx, .pdf or .txt. The skill corrects grammar, spelling, punctuation, clarity and tone, while keeping your word choices and meaning where they are not wrong. In file mode, it saves a new copy with the UPDATED_ prefix, so your original stays safe. Every edit comes with an explanation. It is not meant for code or technical rewrites. Use it when a draft is nearly done and needs a clean final pass.
+when:
+  - You wrote a report and want the typos and awkward lines fixed before sending.
+  - You want a document corrected without losing how you sound.
+  - You need to see exactly what was changed and why.
+  - A file must be returned as a corrected copy, not a pile of notes.
+you_give:
+  - Pasted text or a document file
+  - The audience or tone (optional)
+  - Words or style choices to keep (optional)
+you_get:
+  - A corrected version in your voice
+  - A log of every change with reasons
+  - A saved copy named UPDATED_ plus your file name (for files)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

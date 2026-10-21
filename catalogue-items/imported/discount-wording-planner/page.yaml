@@ -6,6 +6,27 @@ summary: Give it the discount you plan. Get the percent or amount form, sale pri
 job: set-prices
 headline: Discount wording planner
 subhead: Give it the discount you plan. Get the percent or amount form, sale price display and banner wording that look biggest.
+explain: |
+  The exact numbers and words that make a planned discount look as large and honest as possible. The same price cut can read as big or small, depending on how it is shown.
+
+  Start with your full price and the sale price. The skill first checks that the old price is real, since a fake "was" price is deceptive. Then it works out the amount off, the percentage off and the "higher by" figure. If the cut is over 40 percent, it warns that it can signal low quality. For full prices of 100 or more, it shows the amount off. For lower prices, it uses the percentage. It then writes the badge, strikethrough, banner and email subject.
+when:
+  - You plan a sale and cannot decide between 20% off and $20 off.
+  - You need banner and email subject wording for a markdown.
+  - You are unsure if a deep discount will hurt how your product looks.
+  - You want to know whether to add a time limit.
+you_give:
+  - Full price and sale price, or the discount amount
+  - Currency
+  - Whether it covers one product or the whole store
+  - Where it will appear
+  - The reason for the sale (optional)
+you_get:
+  - The best discount format, percent or amount
+  - Sale price display and badge wording
+  - Banner and email subject lines
+  - A warning if the discount is too deep
+  - A check that the reference price is genuine
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

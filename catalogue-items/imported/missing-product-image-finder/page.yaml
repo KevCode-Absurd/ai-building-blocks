@@ -6,6 +6,25 @@ summary: Get products and variants with no image or too few images, so no page g
 job: product-photos
 headline: Missing product image finder
 subhead: Get products and variants with no image or too few images, so no page goes live looking bare.
+explain: |
+  A list of Shopify products and variants with no image, or fewer than you want, so no page goes live looking bare. Run it before a launch or a sale and fix the gaps first.
+
+  It reads your products and counts their images. Products with zero images are flagged, and so are those under a minimum you set. It can also check each variant for an assigned image, which catches the colour option that shows the wrong photo. You choose active, draft or all products. It reads data only and never changes your store, so it is safe to run any time. It needs a signed-in Shopify CLI with permission to read products.
+when:
+  - You are about to launch a sale and want every page to have photos.
+  - A bulk import left some products blank.
+  - Customers pick a colour and see the wrong picture.
+  - You want a rule that every product has at least three images.
+you_give:
+  - Your store domain
+  - The minimum number of images per product
+  - Whether to check variants too
+  - Product status to scan
+you_get:
+  - Products with no or few images
+  - Variants without an assigned image
+  - A readable list or JSON output
+  - A count of the gaps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

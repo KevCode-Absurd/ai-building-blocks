@@ -6,6 +6,25 @@ summary: Describe the heat or battery drain. Get safe, read-only checks run and 
 job: think-and-decide
 headline: Phone overheating diagnoser
 subhead: Describe the heat or battery drain. Get safe, read-only checks run and the likely cause named.
+explain: |
+  Find why an Android phone runs hot or drains fast, with checks that only read and never change anything. You get the likely cause named, plus what the evidence shows and what is only a guess.
+
+  The skill asks when the heat happens: charging, weak signal, navigation, gaming or while idle. It reads thermal state, battery, processor load, wakeups, radios and sensors over ADB, and ties them to your timeline. Only after you approve does it suggest the smallest change that can be undone. It stops at once if the battery swells, smells or smokes, and tells you to power off and seek repair. You need a computer and a USB link.
+when:
+  - Your phone is warm even when idle.
+  - The battery drops fast and you suspect one app.
+  - Heat shows up only on charging or weak signal.
+  - A past debloat attempt may have changed power settings.
+you_give:
+  - A description of when it gets hot
+  - The phone connected with debugging on
+  - Recent changes or new apps (optional)
+  - Battery condition notes
+you_get:
+  - Read-only check results
+  - A named likely cause
+  - Evidence kept apart from inference
+  - One small reversible fix to approve
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

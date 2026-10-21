@@ -6,6 +6,25 @@ summary: Give it an API spec. Get an MCP server in Python or TypeScript that let
 job: connect-tools
 headline: API to MCP server builder
 subhead: Give it an API spec. Get an MCP server in Python or TypeScript that lets your AI use that API.
+explain: |
+  An MCP server that lets your AI use a real API, built from the API's own spec instead of hand-written wrappers. Give it an OpenAPI file and you get a server in Python or TypeScript that exposes each action as a tool.
+
+  The skill turns each path and operation into a tool definition, then writes a starter server. It checks names, descriptions and data shapes, and runs a validator that catches duplicate names, bad shapes and missing fields before you wire anything up. It also helps with sign-in choices and keeps the tool contract separate from how the server runs. When the API changes, it applies version and compatibility checks so your tools do not break quietly.
+when:
+  - You want Claude or another AI to use your company's API.
+  - Browser automation is too fragile and you want proper tools.
+  - One server should be shared by several teams and assistants.
+  - You need quality checks before publishing tools.
+you_give:
+  - An OpenAPI spec
+  - Python or TypeScript
+  - Sign-in method for the API
+  - Server name
+you_get:
+  - Tool definitions for each action
+  - A starter MCP server
+  - A validation report
+  - Notes for safe versioning
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Paste a broad standard. Get clear, checkable success criteria and the s
 job: teach-and-train
 headline: Standard to success criteria writer
 subhead: Paste a broad standard. Get clear, checkable success criteria and the small skills inside it.
+explain: |
+  A broad standard turned into criteria a student can check themselves against. Instead of 'analyses language', you get the small skills inside it and what each looks like in work.
+
+  Paste the standard or competency descriptor, plus the level and subject. The skill breaks it into observable indicators, the things you can actually see a student do. It lists the knowledge and skills needed first, notes the usual misconceptions, and writes success criteria in student-friendly words. It finishes with what the breakdown means for how you teach. The worked example covers analysing a writer's language and structure.
+when:
+  - The curriculum gives you a vague standard and you must write lesson goals.
+  - Students do not know what good work looks like.
+  - You plan a unit and need to see the skills hidden inside one outcome.
+  - You want criteria to share with students before they start.
+you_give:
+  - The standard or competency descriptor
+  - Year level and subject
+  - The curriculum framework (optional)
+  - What the criteria are for, such as a task or a report (optional)
+you_get:
+  - Observable indicators
+  - Prerequisite knowledge and skills
+  - Common misconceptions
+  - Success criteria in student language
+  - Teaching implications
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

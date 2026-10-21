@@ -6,6 +6,25 @@ summary: Name two or more subjects. Get lessons that show where AI is reliable a
 job: teach-and-train
 headline: Subject-by-subject AI reliability lesson planner
 subhead: Name two or more subjects. Get lessons that show where AI is reliable and where it distorts, subject by subject.
+explain: |
+  A lesson sequence that shows students where AI answers can be trusted and where they bend the truth, one school subject at a time. A chatbot may do well on a biology process and badly on a historical judgement. Students find out why.
+
+  You name two or three subjects and a year group. The plan first describes how each subject builds knowledge and what counts as evidence there. Then it writes the same type of question in each subject's own terms, such as a cause question. Students run all of them through AI and compare. A protocol says what to record. A reliability framework and discussion guide help them draw conclusions.
+when:
+  - You want students to see that AI is not equally reliable in every subject.
+  - You are planning cross-subject AI literacy work.
+  - Students think one AI check works for everything.
+  - You need a lesson that compares AI in history and science, for example.
+you_give:
+  - Two or three subjects to compare
+  - Year group
+  - The question type to use, such as cause or how it works (optional)
+  - Time available (optional)
+you_get:
+  - A note on how each subject builds knowledge
+  - Matching questions for each subject
+  - A comparison and recording protocol
+  - A reliability framework and discussion guide
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

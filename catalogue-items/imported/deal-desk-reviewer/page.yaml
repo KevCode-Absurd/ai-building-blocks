@@ -6,6 +6,25 @@ summary: Give it a deal with a big discount or redlined terms. Get margin after 
 job: sell-and-negotiate
 headline: Deal desk reviewer
 subhead: Give it a deal with a big discount or redlined terms. Get margin after discount and a clear yes, no or counter.
+explain: |
+  A big discount request or a customer's redlined contract gets a score, a clear verdict and the right approver. It never approves on its own, so a person always signs off.
+
+  Three tools do the work. A deal scorer rates margin, risk, strategic value, fit and term shape from 0 to 100 and lands on approve, review, escalate or decline. A router maps discount size, deal size and tier to the approver chain, from account exec up to the CFO or CRO, with an estimated number of days. A terms checker catches ten risky patterns such as uncapped indemnity, most favoured customer clauses, missing data agreements and net 60 payment, each with a standard counter. It runs Python scripts.
+when:
+  - Sales asks for a discount above their authority.
+  - A customer sent back the contract with edits.
+  - You need margin after discount for a CFO review.
+  - You want a consistent way to route approvals.
+you_give:
+  - Deal size, discount and tier
+  - Cost or margin details
+  - Contract terms or redline
+  - Your discount policy (optional)
+you_get:
+  - Deal score and verdict
+  - Approver chain and timing
+  - Risky terms with counters
+  - Margin after discount
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

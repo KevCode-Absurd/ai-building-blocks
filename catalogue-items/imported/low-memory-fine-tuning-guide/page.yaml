@@ -6,6 +6,25 @@ summary: Give it a big model and your GPU size. Get a fine-tune that trains unde
 job: build-software
 headline: Low-memory fine-tuning guide
 subhead: Give it a big model and your GPU size. Get a fine-tune that trains under 1 percent of the model and fits.
+explain: |
+  A fine-tuning setup that trains less than one percent of a large model, so it fits on a single GPU. It uses small add-on layers called adapters, which can be around 6 MB instead of a 14 GB full copy.
+
+  Tell it your model and GPU. It picks LoRA for standard fine-tuning of 7B to 70B models, or QLoRA when memory is tight, such as a 70B model on one 24 GB card. QLoRA gives up around five percent of quality. It gives Python code using the peft, transformers and bitsandbytes libraries, along with settings like rank. It also covers saving several adapters for different tasks on one base model, and when full fine-tuning is the better choice instead.
+when:
+  - You want to fine-tune a 7B to 70B model on a consumer GPU.
+  - Full fine-tuning runs out of memory on your card.
+  - You need several task-specific versions of one base model.
+  - You are deciding between LoRA, QLoRA and full training.
+you_give:
+  - The base model
+  - Your GPU and memory
+  - Your training dataset
+  - Your quality target (optional)
+you_get:
+  - A LoRA or QLoRA choice with reasons
+  - Training code
+  - Settings tuned to your memory
+  - Steps to save and swap adapters
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

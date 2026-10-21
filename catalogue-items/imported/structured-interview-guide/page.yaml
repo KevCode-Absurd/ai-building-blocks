@@ -6,6 +6,26 @@ summary: Name the role. Get set questions, strong and weak answer signs and a sc
 job: hire-people
 headline: Structured interview guide builder
 subhead: Name the role. Get set questions, strong and weak answer signs and a scorecard. You make the hiring call, not the AI.
+explain: |
+  A fair, repeatable interview plan for a role, so every candidate is judged on the same things. You name the role and level, and you get core questions, follow-up probes, signs of strong and weak answers and a scorecard.
+
+  It begins by choosing the skills the job needs, then writes behavioural questions that ask for real past examples, plus situational ones. Each question comes with what a good answer shows, red flags and a scoring rubric, so several interviewers can compare notes. Keeping every candidate on the same questions cuts bias and gut-feel. The AI prepares the guide only. You and your team make the hiring decision.
+when:
+  - You are hiring and interviews feel like casual chats that differ each time.
+  - Several people will interview and you want their scores to be comparable.
+  - You are hiring for a role you have not hired before.
+  - You want to reduce bias and keep notes you can defend.
+you_give:
+  - The role and seniority
+  - Key skills or traits the job needs
+  - The interview stages or panel size (optional)
+  - The job description (optional)
+you_get:
+  - Core interview questions
+  - Follow-up probes
+  - Strong and weak answer signs
+  - A scoring rubric and scorecard
+  - A plan for each interviewer
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

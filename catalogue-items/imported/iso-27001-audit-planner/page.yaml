@@ -6,6 +6,26 @@ summary: Describe your security setup. Get an audit plan, control checks and a l
 job: secure-code
 headline: ISO 27001 audit planner
 subhead: Describe your security setup. Get an audit plan, control checks and a list of findings to fix.
+explain: |
+  A full audit plan for your information security system, with the findings written the way auditors write them. Describe your setup and scope. The skill builds a risk-based schedule: critical areas like privileged access and logging are audited each quarter, others once a year. It assigns auditors who are independent of the area under review.
+
+  For each control it sets test steps and the evidence to collect, then helps you write findings with a clear rating and a fix owner. It also covers the steps to prepare for certification. Three-year coverage of every clause and applicable control is the target. Python helper tools are included for scheduling.
+when:
+  - You must plan this year's internal security audit.
+  - You want to know which controls to test first and how often.
+  - You found problems and need them written up as proper findings.
+  - You are preparing for an outside certification audit.
+you_give:
+  - A description of your security setup and scope
+  - Your last risk assessment (optional)
+  - Earlier audit findings (optional)
+  - Recent incidents (optional)
+you_get:
+  - A risk-based audit schedule
+  - Test steps and evidence for each control
+  - Written findings with ratings
+  - A corrective action list
+  - A certification readiness checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

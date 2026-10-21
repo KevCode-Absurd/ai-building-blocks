@@ -6,6 +6,26 @@ summary: Give it your site. Get an audit of crawling, indexing, site structure, 
 job: get-found-in-search
 headline: Technical SEO auditor
 subhead: Give it your site. Get an audit of crawling, indexing, site structure, structured data, page experience and security.
+explain: |
+  An audit of the hidden layer under your content: whether search engines can find, read, index and trust your site. You get the problems listed in order, so you fix what blocks ranking before polishing anything else.
+
+  The audit covers six layers: crawling, indexing, site structure, structured data, page experience and security. It checks robots.txt, sitemaps, redirect chains, canonical tags, duplicate pages, rendering of script-heavy pages, Core Web Vitals, HTTPS and international tags. It works on any stack. For a large site it asks whether to crawl everything or sample. Findings come with a clear fix and a priority. Search console data and server logs make the audit sharper if you have them.
+when:
+  - Your traffic dropped after a redesign or migration.
+  - Google is not indexing pages you want found.
+  - You are launching a new site and need the SEO basics right.
+  - Pages load slowly and you want to know how much it matters.
+  - You run a site in several languages or countries.
+you_give:
+  - Your site address or staging address
+  - Access to rendered pages, robots.txt and sitemap
+  - Search console or logs (optional)
+  - Whether to crawl all pages or sample (optional)
+you_get:
+  - Findings across six layers
+  - Priorities for each issue
+  - Specific fixes
+  - A short list to do first
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

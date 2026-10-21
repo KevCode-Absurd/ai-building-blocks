@@ -6,6 +6,25 @@ summary: Name a vendor or two proposals. Get the cost, risks and a clear pick, w
 job: think-and-decide
 headline: Vendor comparison writer
 subhead: Name a vendor or two proposals. Get the cost, risks and a clear pick, with points to negotiate.
+explain: |
+  A clear call on whether to pick, keep or drop a vendor, with the real cost, the risks and the points to raise in negotiation. You can show it to the person who signs the deal.
+
+  The skill works from the proposal, contract terms or performance data you give it. It builds a total cost of ownership: licence fees, setup, training, support and the cost of leaving. It reviews risks such as the vendor's financial health, security, reliance on one supplier, lock-in and recovery plans. For two or more vendors, it builds a side-by-side table of price, features, integrations, security, support and terms. The report opens with a two or three sentence recommendation.
+when:
+  - Two vendors sent proposals and you must pick one.
+  - A contract renews in 60 days and you want to know if it is still worth it.
+  - Finance asks for the full cost, not only the licence price.
+  - You want a list of things to push back on before you sign.
+you_give:
+  - The vendor name or proposal
+  - Whether this is new, renewal or comparison
+  - Pricing, contract terms or performance data
+  - What matters most to you (optional)
+you_get:
+  - A short recommendation
+  - A cost breakdown for year one and three years
+  - A risk review
+  - Negotiation points
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

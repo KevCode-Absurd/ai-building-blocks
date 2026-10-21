@@ -6,6 +6,25 @@ summary: Give it a product photo and selling points. Get test versions that chan
 job: plan-ad-tests
 headline: Main image A/B test planner
 subhead: Give it a product photo and selling points. Get test versions that change one thing each, plus a review sheet.
+explain: |
+  A product image test you can learn from, not just a pile of extra pictures. Each version differs from the control in one thing only, and you write down which one you expect to win and why before you run it.
+
+  Choose one variable per round: background, shot distance, with or without a model, text on the image, model look or color tone. The skill makes the control and test images, and checks each against marketplace rules so a rejected image does not ruin your data. It gives you a results sheet to fill in with clicks and sales. It does not connect to your store. It also warns you not to call a winner on too little traffic.
+when:
+  - You want to know whether a lifestyle photo beats a plain white one.
+  - You are tempted to change three things at once and need to stop.
+  - You want a record of each test so you can learn from it later.
+  - You sell on a marketplace with strict main image rules.
+you_give:
+  - Your product photo
+  - Selling points
+  - The one thing to test
+  - Marketplace rules (optional)
+you_get:
+  - Control and test image versions
+  - A written hypothesis per version
+  - A compliance check
+  - A results table to fill in
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

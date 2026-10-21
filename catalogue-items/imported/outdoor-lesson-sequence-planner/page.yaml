@@ -6,6 +6,26 @@ summary: Describe your outdoor space and goals. Get a run of outdoor lessons tha
 job: teach-and-train
 headline: Outdoor lesson sequence planner
 subhead: Describe your outdoor space and goals. Get a run of outdoor lessons that cover your curriculum.
+explain: |
+  A short run of lessons where going outside teaches something that a classroom cannot. Each sequence has prep before, the outdoor activity and follow-up after, so the trip is never just a treat.
+
+  You describe your space, class and the curriculum goal. The skill designs the learning around that goal and explains why outdoors works better than indoors for it. Students do real inquiry using the environment as the main resource. You also get a safety plan, weather and timing options, and links back to indoor learning so ideas carry on. The design is based on research showing clear learning aims and indoor-outdoor links matter most. Check school safety rules before you go.
+when:
+  - You have a field or garden and want it to support the curriculum.
+  - Outdoor sessions feel like a break, not learning.
+  - You need a unit plan with preparation and follow-up.
+  - A senior leader asks why a lesson belongs outside.
+you_give:
+  - Year group and subject
+  - Curriculum objective
+  - Outdoor space description
+  - Time and class size
+  - Weather limits (optional)
+you_get:
+  - Prep, outdoor and follow-up lessons
+  - Why outdoors beats indoors for the goal
+  - A safety plan
+  - Indoor-outdoor links
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

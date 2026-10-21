@@ -6,6 +6,26 @@ summary: Describe your growth stage. Get a positioning check, growth model choic
 job: plan-strategy
 headline: Marketing strategy advisor
 subhead: Describe your growth stage. Get a positioning check, growth model choice and a budget split by channel.
+explain: |
+  Marketing advice from the seat of a chief marketing officer. You describe your stage and goals, and it checks your positioning, picks a growth model and splits your budget across channels.
+
+  It starts from four questions: who you are for, why they pick you, how they find you and whether it is working. For the budget it works backwards from your revenue target. It works out how many customers you need, how many leads that takes at each step, and what each channel should cost. It compares product-led, sales-led and community-led growth. Two Python scripts model the budget and growth. It also flags warning signs, like measuring clicks instead of pipeline.
+when:
+  - You must decide whether to put money into ads, content or sales.
+  - A board or partner is asking for a marketing budget and its logic.
+  - You are unsure who your best customer is.
+  - You wonder if a channel is worth the money it costs.
+you_give:
+  - Your revenue target
+  - Your stage and current channels
+  - Spend, lead and customer numbers
+  - Your customer description (optional)
+you_get:
+  - A positioning check
+  - A recommended growth model
+  - A budget split by channel
+  - Key numbers to track
+  - A list of warning signs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

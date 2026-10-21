@@ -6,6 +6,25 @@ summary: Answer questions about your email. Get a saved guide to your senders, r
 job: hire-people
 headline: Inbox rules interviewer
 subhead: Answer questions about your email. Get a saved guide to your senders, reply voice and rules for triage.
+explain: |
+  A saved set of files that tells an AI how you handle email: who matters, how you sound when you reply, and what to do with each kind of message. You answer once, and the later triage runs from your answers.
+
+  The skill interviews you in eight short sections, one question at a time, each with a reason for asking. Multiple choice is used wherever it can be. After each section it saves its file before moving on, so a half-finished chat still leaves something useful. The result is seven files in an Email folder, including a sorting scheme and your reply voice with templates and hard rules. Re-run it when your work or priorities change.
+when:
+  - You want an AI to sort your email the way you would.
+  - Your inbox is full and you have no clear rules for it.
+  - Your priorities changed and the old sorting rules are out of date.
+  - You want replies drafted in your own voice.
+  - You are about to start automatic inbox triage and need the setup first.
+you_give:
+  - Answers to the interview questions
+  - Examples of emails you reply to and ones you ignore
+  - Your usual reply style or sample replies (optional)
+you_get:
+  - A sorting scheme for your mail
+  - A reply voice file with templates
+  - Rules on senders and priorities
+  - Seven saved files the triage skill reads
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

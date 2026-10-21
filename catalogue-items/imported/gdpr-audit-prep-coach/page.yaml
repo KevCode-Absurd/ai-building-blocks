@@ -6,6 +6,25 @@ summary: Name your scope. Answer six article-based questions and get gaps to fix
 job: secure-code
 headline: GDPR audit prep coach
 subhead: Name your scope. Answer six article-based questions and get gaps to fix before a review or regulator visit.
+explain: |
+  Before a privacy review lands, you hear the hard questions first. Name the scope, such as a product, a team or a data flow, and you get six pointed questions, each tied to a GDPR article. Your answers turn into a list of gaps to fix.
+
+  The questions press on the records of processing and when they were last updated, the lawful basis for each purpose, the impact assessment for risky processing, and similar proof an auditor would ask to see. Each one says what good evidence looks like, so you know if your answer would hold up. It suits an annual audit, a post-breach check or buyer due diligence.
+when:
+  - An internal privacy audit is due next month and you want to find holes first.
+  - You are about to launch something that handles personal data in a new way.
+  - You had a data breach and need to check what a regulator will ask.
+  - A buyer is reviewing your privacy setup as part of a deal.
+you_give:
+  - The scope to review
+  - Your record of processing (optional)
+  - Lawful basis notes for each purpose (optional)
+  - Past impact assessments (optional)
+you_get:
+  - Six questions tied to GDPR articles
+  - What evidence would satisfy each one
+  - A list of gaps ranked by risk
+  - Fix steps before the review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

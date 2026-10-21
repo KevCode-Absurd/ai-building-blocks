@@ -6,6 +6,26 @@ summary: Share your growth goals. Get a role-by-role hiring plan, a priority ord
 job: hire-people
 headline: Headcount plan builder
 subhead: Share your growth goals. Get a role-by-role hiring plan, a priority order and a monthly report for leaders.
+explain: |
+  A hiring plan for next year that starts from your business goals and ends with a role-by-role list. Instead of collecting wish lists from every manager, you get a plan checked against what the business can afford and what your recruiters can handle.
+
+  The skill first sets up a way to gather hiring requests, with the right questions to catch padded asks. It then turns growth targets into headcount by role, level, location and start date, allowing for exits, transfers and backfills. It sets a priority order for critical roles against recruiting capacity, builds conservative, base and fast-growth versions, and checks span of control. Finally it sets up a monthly demand versus supply report for leaders.
+when:
+  - You must turn a revenue or product plan into a hiring plan.
+  - Managers send long wish lists and you cannot hire for all of them.
+  - Recruiters are overloaded and you need to rank roles.
+  - Leaders want a monthly update on hiring gaps.
+you_give:
+  - Your business goals and growth targets
+  - Current headcount by team
+  - Hiring requests from managers
+  - Budget and recruiter capacity
+  - Expected exits (optional)
+you_get:
+  - A role by role hiring plan
+  - A priority order for hires
+  - Conservative, base and fast-growth versions
+  - A monthly demand and supply report outline
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

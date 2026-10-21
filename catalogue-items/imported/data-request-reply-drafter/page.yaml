@@ -6,6 +6,25 @@ summary: Paste a request for someone's data. Get steps to find it and a draft re
 job: check-contracts
 headline: Data request reply drafter
 subhead: Paste a request for someone's data. Get steps to find it and a draft reply. First check, not legal advice.
+explain: |
+  When someone asks for a copy of their data or asks you to delete it, you get a step by step plan and a draft reply. It is a first check, not legal advice, and a person reviews before anything is sent.
+
+  Paste the request. The skill sorts the type: access, deletion, correction or portability. It checks for triggers that need a lawyer first. Then it walks the path: confirm who is asking, go through your list of systems that hold their data, weigh any exemptions, and draft an acknowledgement and a full response. It never sends anything. The request holds personal details, so redact what you do not need.
+when:
+  - A customer emails asking for all the data you hold on them.
+  - Someone demands you delete their account and records.
+  - You need a reply drafted inside the legal deadline.
+  - You are unsure which of your systems hold a person's data.
+you_give:
+  - The request text
+  - Your list of systems holding data
+  - Your identity check method (optional)
+  - Your response deadline rules (optional)
+you_get:
+  - Request type and risk flags
+  - System by system search checklist
+  - Exemption review
+  - Draft acknowledgement and reply
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

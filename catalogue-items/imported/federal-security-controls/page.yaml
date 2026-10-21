@@ -6,6 +6,25 @@ summary: Describe your system. Get the right control baseline, tailoring choices
 job: secure-code
 headline: Federal security controls planner
 subhead: Describe your system. Get the right control baseline, tailoring choices and draft control write-ups.
+explain: |
+  The right set of NIST 800-53 controls for your system, with notes on what to adjust and draft wording for how you meet each one. You start your security plan with real text, not a blank page.
+
+  You describe your system and what it handles. The skill walks from the impact rating under FIPS 199 to a low, moderate or high baseline, then proposes tailoring choices with reasons. For each control it cites the family, number and enhancement exactly, such as AC-2(3). It writes control narratives with an implementation statement, evidence and responsible roles. It can also run a gap check table and explain the steps of the risk management framework. Treat the output as a draft for your assessor.
+when:
+  - You are building a system security plan for a federal customer.
+  - You need to know whether your system is low, moderate or high impact.
+  - You want draft answers for access control requirements.
+  - You are checking a system against controls before an audit.
+you_give:
+  - A system description
+  - The data it stores and processes
+  - Your current controls and policies (optional)
+  - The control families you care about (optional)
+you_get:
+  - A baseline recommendation
+  - Tailoring choices with reasons
+  - Draft control narratives
+  - A gap table with fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

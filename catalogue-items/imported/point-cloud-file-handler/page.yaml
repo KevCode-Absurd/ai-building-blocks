@@ -6,6 +6,24 @@ summary: Give it a lidar file. Get it read or saved in the right format, with it
 job: build-software
 headline: Point cloud file handler
 subhead: Give it a lidar file. Get it read or saved in the right format, with its point details kept.
+explain: |
+  Open and save 3D lidar files without guessing which function fits which format. The skill routes by file type and keeps the extra point details such as class, time and scan angle.
+
+  Ply and PCD files go through the basic reader, LAS and LAZ need the dedicated reader that can filter by area, class or time, and sensor recordings from Velodyne, Ouster or Hesai are read frame by frame. E57 files with several scans use indexed access, and Ibeo recordings are read by message. It also converts between formats, such as LAS to PLY. It needs MATLAB with the Lidar Toolbox.
+when:
+  - You have a LAS file and only want points in one area.
+  - A sensor recording must be read frame by frame.
+  - You need to convert point clouds from one format to another.
+  - You must keep classification and timestamps while saving.
+you_give:
+  - The lidar file or recording
+  - The format you want back
+  - A region or class filter (optional)
+you_get:
+  - A loaded point cloud
+  - Point attributes kept
+  - A saved file in the new format
+  - The right reader for your format
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

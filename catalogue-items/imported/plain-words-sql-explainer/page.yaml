@@ -6,6 +6,24 @@ summary: Paste a SQL query. Get what it counts, which rows it keeps and what eac
 job: document-work
 headline: Plain-words SQL explainer
 subhead: Paste a SQL query. Get what it counts, which rows it keeps and what each column means, in plain words.
+explain: |
+  A SQL query turned into a plain description of what it counts, which rows it keeps and what each output column means. Anyone can then check whether the query matches the question.
+
+  The skill reads the query in order. It describes the tables and how they are joined, including which join type drops or keeps rows. It rewrites each filter as a business rule, explains grouping and totals and the level they work at, and lists each output column with edge cases such as nulls or rounding. It then flags problems such as row duplication or hard-coded dates and adds questions to check. A helper script gives a first parse.
+when:
+  - A manager asks what exactly a report query measures.
+  - You inherited undocumented queries and need to document them.
+  - You want to check a query against the business request.
+  - A new analyst needs to learn your SQL.
+you_give:
+  - The SQL query
+  - The business question it answers
+  - Notes on what key tables and columns mean (optional)
+you_get:
+  - A plain description of sources and joins
+  - Filters stated as business rules
+  - A meaning for each output column
+  - Problems flagged with check questions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Point it at a codebase. Get an onboarding guide for new engineers, lead
 job: build-software
 headline: New teammate guide writer
 subhead: Point it at a codebase. Get an onboarding guide for new engineers, leads or contractors.
+explain: |
+  A written guide that gets a new engineer, tech lead or contractor working in your codebase without a week of questions. You point it at a repository and it writes the guide from what the code shows.
+
+  A Python script first scans the project: file counts, languages, config files and folder layout. Those facts go into a template covering the stack, key files, local setup, common tasks, debugging tips and a contribution checklist. The depth changes by reader. Juniors get setup and guardrails, seniors get architecture and operations, and contractors get their scope and the edges where they connect to other systems. Python must be installed.
+when:
+  - A contractor starts Monday and the old docs are stale.
+  - A big refactor made your README wrong.
+  - You want the same onboarding pack for every service.
+  - A new tech lead needs the architecture fast.
+you_give:
+  - The path to your repository
+  - Who the guide is for
+  - Any setup quirks you know (optional)
+  - Python on your computer
+you_get:
+  - A scan of languages, files and structure
+  - A guide filled in from the template
+  - Setup and common task steps
+  - A debugging and contribution checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

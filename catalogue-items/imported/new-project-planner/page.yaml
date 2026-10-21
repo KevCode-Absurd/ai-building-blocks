@@ -6,6 +6,25 @@ summary: Give it a vague app idea. Get eight planning files your AI reads each s
 job: build-product
 headline: New project planner
 subhead: Give it a vague app idea. Get eight planning files your AI reads each session to stay on track.
+explain: |
+  Eight planning files for a brand new app, built from a vague idea. Your AI reads them at the start of each session, so it remembers what you agreed and stops drifting off course.
+
+  The skill asks questions and writes one file at a time, in order, rather than dumping everything at once. It never adds a feature, tool or page you did not approve. For the design file it asks for your style and colours instead of using its own taste. A tracker file records progress and is only added to, never rewritten. Your live instructions always win, and when you change your mind, every affected file is updated. It is for new projects only, not existing code.
+when:
+  - You have an app idea but no clear spec.
+  - Your AI keeps forgetting decisions halfway through a build.
+  - You change plans mid-project and files fall out of date.
+  - You want to keep control while AI writes the code.
+you_give:
+  - Your project idea, even a rough one
+  - Style and colour preferences
+  - Your answers to its questions
+  - Tech choices you already made (optional)
+you_get:
+  - Eight planning files
+  - A design file in your style
+  - A progress tracker
+  - Files kept in step when plans change
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

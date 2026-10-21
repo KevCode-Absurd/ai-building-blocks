@@ -6,6 +6,26 @@ summary: Describe your product and its first win. Get an onboarding flow that cu
 job: build-product
 headline: First-use onboarding designer
 subhead: Describe your product and its first win. Get an onboarding flow that cuts setup and builds a habit.
+explain: |
+  An onboarding flow built around one early win, so new users feel capable fast and come back the next day. It cuts setup and adds a habit hook.
+
+  You name the first win the person should reach. The skill then trims every field, choice and feature that stands in the way. Next it picks one small action that gives the user a sense of ownership. It ties the product to a cue in their day, such as a morning routine, and reflects their progress back so they see themselves as someone who uses it well. A readiness check changes the path: new users get a shorter route, experienced users get depth sooner.
+when:
+  - People sign up but never come back after the first session.
+  - Your setup asks for too much before showing any benefit.
+  - You want a habit loop built into the first week of use.
+  - You need onboarding paths for beginners and experienced users.
+you_give:
+  - What your product does
+  - Who your users are and what they want
+  - The first win you want them to reach
+  - Time and platform limits (optional)
+you_get:
+  - Onboarding flow with a reason for each step
+  - First-win definition
+  - Habit cue and return trigger
+  - Different paths by user readiness
+  - List of setup steps to cut
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

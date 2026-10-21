@@ -6,6 +6,25 @@ summary: Point it at open issues and outside pull requests. Get each one sorted,
 job: build-software
 headline: Issue triager
 subhead: Point it at open issues and outside pull requests. Get each one sorted, checked and written up as a clear brief.
+explain: |
+  A backlog where every open issue and outside pull request has a clear status and a brief someone can act on. Point it at your tracker. It gives each item one category, bug or enhancement, and one state: needs triage, needs info, ready for an agent, ready for a human, or will not fix.
+
+  It checks each item against your out-of-scope notes and asks reporters for missing details. For items ready for an agent, it writes a durable brief that says what to do and what done looks like. Pull requests count as issues with code attached. Every comment it posts starts with a note that AI wrote it, and clashing labels come to you first.
+when:
+  - Your issue list has grown and nobody knows what is next.
+  - Outside contributors sent pull requests and you need to sort them.
+  - You want to hand clear tasks to a coding agent.
+  - You keep rejecting the same kinds of requests and want a record of why.
+you_give:
+  - Access to your issue tracker
+  - Your label names for each role
+  - Your out-of-scope notes (optional)
+  - Which issues or pull requests to triage
+you_get:
+  - Each item labelled with a category and state
+  - Questions for reporters who left gaps
+  - Agent-ready task briefs
+  - An out-of-scope record for rejected ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

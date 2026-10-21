@@ -6,6 +6,25 @@ summary: Give it a break from a reconciliation. Get it traced to its source entr
 job: track-numbers
 headline: Reconciliation break tracer
 subhead: Give it a break from a reconciliation. Get it traced to its source entries on both sides, and what differs.
+explain: |
+  A break in your reconciliation traced back to the entries that caused it, on both sides, with the differing detail named. You get a one-sentence root cause, an owner and a next action.
+
+  You give one break row with its key, the ledger values and the subledger values. The skill pulls the journal entry from the ledger and the matching transaction from the subledger. With no system connected, it asks for extracts and never invents IDs. It lines up posting date, FX rate, account mapping and sign. A typical cause: the ledger posted on settle date, the subledger on trade date. It then says if the break will clear or needs a fix.
+when:
+  - A break has sat on your reconciliation for weeks.
+  - You need to know if a gap is timing, FX, mapping or a duplicate.
+  - A manager asks why a number does not match.
+  - You want each break to have an owner and a next step.
+you_give:
+  - The break row with key and values
+  - Ledger extract
+  - Subledger extract
+  - Likely cause, if known (optional)
+you_get:
+  - Source entries from both sides
+  - The attribute that differs
+  - One-sentence root cause
+  - Owner, clear date and next action
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: "Get your stock sorted by how long it has sat unsold: under 30, 60, 90 
 job: run-your-store
 headline: Stock age report builder
 subhead: "Get your stock sorted by how long it has sat unsold: under 30, 60, 90 days and over."
+explain: |
+  A clear picture of which products have sat on your shelves too long, and what holding them costs. Every item with stock is placed in an age bucket based on when it last sold, such as 0 to 30, 31 to 60, 61 to 90, 91 to 180 and 181 or more days.
+
+  For each bucket you see units, stock value at cost and an estimated monthly carrying cost, using a yearly rate you can set, with 25 percent as the default. The oldest items rise to the top as markdown candidates. It reads your Shopify products, last year of orders and unit costs. Nothing is changed in your store.
+when:
+  - Cash is tight and you suspect it is tied up in slow stock.
+  - You are planning a clearance sale and need to know what to include.
+  - Your storage fees are rising and you want to see which items cause them.
+  - You want a monthly ageing view of inventory for your accountant.
+you_give:
+  - Your Shopify store link and read access
+  - Bucket ranges in days (optional)
+  - Yearly carrying cost rate (optional)
+  - A supplier filter (optional)
+you_get:
+  - Stock grouped by age bucket
+  - Units and value per bucket
+  - Monthly carrying cost per bucket
+  - A ranked list of markdown candidates
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

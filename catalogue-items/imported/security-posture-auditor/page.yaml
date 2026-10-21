@@ -6,6 +6,25 @@ summary: Describe your system. Get a scoped review of code, servers, sign-in and
 job: secure-code
 headline: Security posture auditor
 subhead: Describe your system. Get a scoped review of code, servers, sign-in and daily operations.
+explain: |
+  A scoped security audit of your web app, API or cloud setup, with each issue rated, mapped to a known standard and paired with a fix. You describe the system and what is in scope, and say whether you need to meet SOC 2, PCI-DSS or HIPAA.
+
+  The audit builds a checklist from the OWASP Top 10 and CWE lists, then runs automated scans with tools such as OWASP ZAP, Trivy and Prowler. A manual pass covers sign-in flows, access roles, input checks, encryption, logging and hardcoded secrets that tools miss. Each finding gets a CVSS severity, exploitability and business impact. The report ends with a ranked remediation plan.
+when:
+  - You are launching a web app and want a security check across code and cloud.
+  - An auditor will review you soon and you want to find gaps first.
+  - You inherited a system and need to know how exposed it is.
+  - You need findings tied to OWASP or CWE for a report.
+you_give:
+  - A description of the stack and architecture
+  - Scope and environments
+  - Config files or infrastructure code
+  - Compliance targets (optional)
+you_get:
+  - A scoped audit checklist
+  - Findings with severity and CWE labels
+  - Business impact notes
+  - A ranked fix plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

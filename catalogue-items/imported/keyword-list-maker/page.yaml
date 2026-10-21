@@ -6,6 +6,24 @@ summary: Paste any text. Get one line of up to 50 ranked keywords, ready for SEO
 job: get-found-in-search
 headline: Keyword list maker
 subhead: Paste any text. Get one line of up to 50 ranked keywords, ready for SEO or tags.
+explain: |
+  One clean line of up to fifty keywords from any text you paste. The output is machine-ready: lowercase, comma separated, ranked from most to least relevant, with no numbers, bullets, notes or full stop at the end.
+
+  The list mixes single words with phrases of two to four words and removes duplicates and near matches. It covers the main subjects and ideas in the text, not filler. Use it for SEO fields, tags, metadata and search indexing. Short or thin text is handled by a fallback rule, so you get fewer, truer keywords instead of padding. Because the format never changes, you can feed the line straight into another tool.
+when:
+  - You have a blog post and need tags for your CMS.
+  - You want a keyword field for a product page.
+  - You need metadata for a batch of documents.
+  - You want a quick check of which topics a text really covers.
+you_give:
+  - The text to extract keywords from
+  - The purpose, such as SEO or tags (optional)
+  - A cap lower than 50 (optional)
+you_get:
+  - One comma-separated line of up to 50 keywords
+  - Ranked by relevance
+  - Lowercase and without duplicates
+  - A mix of words and short phrases
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

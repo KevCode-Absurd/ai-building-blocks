@@ -6,6 +6,27 @@ summary: Give your numbers and plans. Get a 3 to 5 year model with revenue, cost
 job: money-and-investing
 headline: Startup financial model builder
 subhead: Give your numbers and plans. Get a 3 to 5 year model with revenue, costs, cash flow and scenarios.
+explain: |
+  A three to five year model for your startup, built so you can change one assumption and watch cash, profit and runway move. It matters when you pitch investors or plan hires, because every number traces back to a stated input.
+
+  Revenue is built by cohort: new customers each month, how many stay, and what each pays, with upsell on top. Costs are split into cost of goods, sales and marketing, product, and admin. The model then rolls into cash flow and a runway line, and runs best, base and worst cases. Hosting, payment fees and support are treated as costs that grow with customers, while salaries step up with hiring plans.
+when:
+  - You are preparing a pitch and investors will ask for a multi-year forecast.
+  - You need to see whether a planned hire still leaves enough cash.
+  - You want to compare a cautious plan with an aggressive growth plan.
+  - Your current spreadsheet is one growth percentage applied to every month.
+you_give:
+  - Pricing and plan tiers
+  - Expected new customers per month
+  - Retention or churn rates
+  - Team size and hiring plan
+  - Current cash and funding (optional)
+you_get:
+  - A cohort-based revenue forecast
+  - A cost structure by category
+  - A cash flow and runway view
+  - Three scenarios side by side
+  - A list of the assumptions that move the result most
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

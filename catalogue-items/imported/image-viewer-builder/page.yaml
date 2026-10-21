@@ -6,6 +6,25 @@ summary: Give it images and regions to mark. Get a viewer with overlays and mask
 job: build-software
 headline: Image viewer builder
 subhead: Give it images and regions to mark. Get a viewer with overlays and masks in MATLAB.
+explain: |
+  A MATLAB viewer where you can zoom into an image, draw regions on it and lay coloured masks over it, without building the plumbing yourself. It needs MATLAB with the Image Processing Toolbox.
+
+  The skill uses the newer viewer and display functions, not the old ones that lag on large files. Shapes are placed with the drawing tool so they carry measurements. Label maps and masks go on as overlays with a transparency setting. Two viewers can be linked so they pan and zoom together. Huge files load in blocks. It also lists old habits to avoid, like drawing on plain axes.
+when:
+  - You want an app to browse images and mark regions of interest.
+  - You need a segmentation mask shown on top of the original picture.
+  - Your images are too big for a normal figure window.
+  - You want two images side by side that zoom together.
+  - You need to capture a screenshot of the viewer for a report.
+you_give:
+  - Your images or label data
+  - The regions or overlays you want shown
+  - Whether you need a full app or a script
+you_get:
+  - MATLAB code for the viewer
+  - Overlay and mask setup
+  - Drawing tools for regions
+  - Linked views for comparing images
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

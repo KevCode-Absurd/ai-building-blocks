@@ -6,6 +6,25 @@ summary: Give it your emails, calls and meetings. Get contacts and deals updated
 job: sell-and-negotiate
 headline: Deal notes and CRM updater
 subhead: Give it your emails, calls and meetings. Get contacts and deals updated, quiet deals flagged and follow-ups drafted.
+explain: |
+  Stop typing into the CRM. Give it a meeting, call transcript or email thread and it logs the activity against the right deal, updates contacts, and queues the next step so nothing sits without an owner.
+
+  It works in four modes. Log records one interaction. Standing sweeps recent activity on a schedule. Follow-up finds deals that went quiet and drafts a message. Hygiene looks for duplicates, stale records and missing fields. If you have no CRM, it builds a simple one in a spreadsheet. It reads your email, calendar and call notes first, then shows what it will change.
+when:
+  - You just finished a sales call and need the notes in the right deal.
+  - Your pipeline is out of date and you do not know which deals went quiet.
+  - You want a weekly sweep that logs new activity for you.
+  - Your CRM has duplicate contacts and records nobody has touched in months.
+you_give:
+  - Email, meeting notes or call transcript
+  - CRM access or an export (optional)
+  - "Which mode you want: log, sweep, follow-up or clean-up"
+  - Your calendar (optional)
+you_get:
+  - Logged activity per deal
+  - Updated contacts and deal fields
+  - Follow-up drafts for quiet deals
+  - Next-step queue with owners
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

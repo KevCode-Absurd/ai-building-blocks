@@ -6,6 +6,25 @@ summary: Give it your class and goal. Get lessons on naming and handling feeling
 job: teach-and-train
 headline: Emotional skills lesson sequence
 subhead: Give it your class and goal. Get lessons on naming and handling feelings. Not medical or clinical advice.
+explain: |
+  A short run of lessons that teach students to name feelings and handle them, based on the RULER approach from Yale. Describe the situation in your class, and you get a plan you can teach. This is classroom practice, not medical or clinical advice.
+
+  The plan builds on four tools. The Charter sets class agreements. The Mood Meter helps students label feelings by energy and pleasantness. The Meta-Moment is a pause before reacting. The Blueprint walks through conflict. You give the context, such as exam anxiety, and the year group. Optional details are time available, subject and past use of RULER.
+when:
+  - Year 8 students are anxious before mock exams.
+  - Conflict keeps erupting at break time.
+  - You want a ready sequence for a tutor group.
+  - You want students to build words for their feelings.
+you_give:
+  - The situation in your class
+  - Year group
+  - Time available (optional)
+  - Students' past experience with RULER (optional)
+you_get:
+  - A lesson sequence on feelings
+  - Use of the Charter, Mood Meter, Meta-Moment and Blueprint
+  - Activities and prompts
+  - Teacher notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

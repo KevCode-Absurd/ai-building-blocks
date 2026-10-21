@@ -6,6 +6,25 @@ summary: Say which signal to catch. Get a radio that records only when it appear
 job: build-software
 headline: Triggered radio capture helper
 subhead: Say which signal to catch. Get a radio that records only when it appears.
+explain: |
+  A software radio that saves data only when your signal shows up, so you skip hours of empty recordings. You tell it what to catch, and it writes the capture code and checks it works.
+
+  The skill works with NI USRP radios and MATLAB Wireless Testbench. It picks between energy detection, for any strong signal, and preamble detection, for a known pattern. It chooses from seven ready capture patterns, checks every setting against the API limits, and runs a sanity ratio on the result to see if it caught a real signal. If nothing fires, or it fires on noise, it switches to a step-by-step threshold tuning routine. You need the radio, MATLAB and the toolbox.
+when:
+  - You want to record a burst signal without storing hours of noise.
+  - Your detector never fires, or fires on every bit of noise.
+  - You need to catch a known preamble from a wireless device.
+  - You want a repeatable capture script for lab tests.
+you_give:
+  - The signal to catch, such as its frequency and bandwidth
+  - Your radio model and setup
+  - A known preamble, if you have one (optional)
+  - What the signal looks like on a spectrum plot (optional)
+you_get:
+  - MATLAB capture code for your radio
+  - A chosen detector and thresholds
+  - A check that the capture is a real signal
+  - Tuning steps if detection fails
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe your product. Get a style guide with a dithered, limited-colou
 job: design-work
 headline: Dot-pattern style guide writer
 subhead: Describe your product. Get a style guide with a dithered, limited-colour look and high-contrast rules.
+explain: |
+  A style guide for a dithered look, where dot patterns fake shades and colour from a small palette, giving interfaces a grainy, retro-digital feel. It is written so designers and engineers can build from it.
+
+  The guide fixes the basics: a type scale from 14 to 40 pixels, set fonts for body, display and code, a spacing scale in steps of four, and colour tokens for primary, neutral and status colours. It adds accessibility to WCAG 2.2 AA with keyboard use and visible focus. Do and don't lists cover tokens, hierarchy, states, contrast and spacing. The tone is concise and confident. Share your product, and it adapts the template to fit.
+when:
+  - You want a retro, dot-pattern look for a product and need rules to keep it consistent.
+  - Your team asks how the grain style should handle contrast.
+  - You need a design system file for engineers to follow.
+  - You want accessible rules for a stylised interface.
+you_give:
+  - A description of your product
+  - Brand colours and fonts (optional)
+  - The mood you want
+  - Accessibility needs beyond the default (optional)
+you_get:
+  - A style guide for the dithered look
+  - Type, colour and spacing tokens
+  - Accessibility rules
+  - Do and don't lists
+  - Notes on states such as empty and error
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

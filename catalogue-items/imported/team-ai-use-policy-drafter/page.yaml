@@ -6,6 +6,26 @@ summary: Describe how your team uses AI. Get a first-draft AI use policy based o
 job: check-contracts
 headline: Team AI use policy drafter
 subhead: Describe how your team uses AI. Get a first-draft AI use policy based on public model policies. Have a lawyer review it.
+explain: |
+  A first draft of your team's AI use policy, built from published model policies and current guidance, ready to take to the person who decides.
+
+  The skill runs a short interview about which sections you need, who will read the policy and where AI is used. It then searches for current public sources and drafts each section from them. Every choice point is marked for review, with open questions at the end of each section. The draft carries a header saying it is for internal legal review, a list of sources and an adoption checklist. Not legal advice, so have a lawyer review it.
+when:
+  - Your team uses AI every day and nothing is written down.
+  - Your current policy is old and ignores recent laws.
+  - You need something to show your boss or board on Monday.
+  - You want to see what comparable organisations put in their policies.
+  - You must decide which AI tools staff may use with client data.
+you_give:
+  - How your team uses AI today
+  - Who the policy is for
+  - Your location and industry
+  - An existing policy (optional)
+you_get:
+  - A draft AI use policy
+  - Review flags on each choice
+  - A list of sources used
+  - An adoption checklist and next steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe your product goal. Get an opportunity tree, risky assumptions 
 job: understand-customers
 headline: Weekly customer learning planner
 subhead: Describe your product goal. Get an opportunity tree, risky assumptions to test and a weekly customer contact routine.
+explain: |
+  A weekly habit for learning from customers, plus the map that tells you what to learn next. You end with an opportunity tree linking your goal to customer needs, ideas and small tests.
+
+  The method follows continuous discovery. You name one outcome you want to move. The skill helps you list customer needs as the customer would say them, then sort them into a tree with the outcome at the top and solutions and experiments below. It picks the riskiest assumptions to test first and sets a rhythm of customer conversations each week. A short diagnostic scores your current practice so you can see what to improve.
+when:
+  - Your team builds from opinions and rarely talks to customers.
+  - You have a goal like raising trial conversion and no clear way in.
+  - You keep shipping features that nobody uses.
+  - You want a standing weekly slot for customer interviews.
+you_give:
+  - The outcome you want to move
+  - What you know about your customers
+  - Ideas already on your list (optional)
+  - How often you talk to customers now
+you_get:
+  - Opportunity solution tree
+  - Riskiest assumptions to test
+  - Small experiments to run
+  - Weekly customer contact routine
+  - Score of your current practice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

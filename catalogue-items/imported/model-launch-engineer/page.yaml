@@ -6,6 +6,26 @@ summary: Give it a trained model. Get it running as a live service with an API a
 job: ship-and-host
 headline: Model launch engineer
 subhead: Give it a trained model. Get it running as a live service with an API and container.
+explain: |
+  A trained model running as a live service that other programs can call, packaged so it starts the same way on any machine.
+
+  The skill saves the model together with its data preparation steps. It builds a web API in FastAPI or Flask with a health check, input checks and clear error messages. A Dockerfile packs it with pinned requirements, keeping training-only tools out. For bigger loads, it writes Kubernetes files with resource limits and automatic scaling, or targets a serverless service. Last, it pushes the image, deploys and sends test requests to confirm it answers. You need Docker and a place to host.
+when:
+  - Your model works in a notebook and an app now needs to call it.
+  - You need a health check so the host can restart the model if it hangs.
+  - Traffic is growing and you need it to scale on its own.
+  - You want to ship a new model version without breaking the old one.
+you_give:
+  - The trained model file
+  - The data preparation code it needs
+  - Where it will run, such as Kubernetes or serverless
+  - Expected traffic and speed needs (optional)
+you_get:
+  - A model API with input checks
+  - A Dockerfile
+  - Deployment and scaling files
+  - Health check and logging
+  - Smoke tests after launch
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

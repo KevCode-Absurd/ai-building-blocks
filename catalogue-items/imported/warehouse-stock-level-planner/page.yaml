@@ -6,6 +6,25 @@ summary: Give it your warehouses and demand. Get how much stock to hold at each 
 job: plan-supply-chain
 headline: Warehouse stock level planner
 subhead: Give it your warehouses and demand. Get how much stock to hold at each level of your network.
+explain: |
+  A plan for how much stock to hold at every level of your network, from the central warehouse down to local sites. It keeps service high without tying up cash in extra stock.
+
+  You describe your sites, how they connect, lead times, demand at each end point and the holding cost. The skill treats the network as one system rather than separate warehouses. It decides what to hold centrally and what to push to the edge, and it sets safety stock for each location based on demand swings and delivery time. It covers lateral transfers between sites and rush shipping, and the trade-off between them.
+when:
+  - Some sites run out while others sit on piles of stock.
+  - You have a central warehouse feeding regional sites and stores.
+  - You want to cut total inventory without losing sales.
+  - You need to set safety stock across many locations.
+you_give:
+  - "Network layout: sites and who supplies whom"
+  - Demand and its ups and downs at each site
+  - Lead times between sites
+  - Holding, shipping and ordering costs
+you_get:
+  - Stock targets for each location
+  - Safety stock by site
+  - Central versus local stock split
+  - Notes on transfers and rush shipping
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

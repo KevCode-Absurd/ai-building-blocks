@@ -6,6 +6,26 @@ summary: Give it a topic and goals. Get a lesson that teaches the content and bu
 job: teach-and-train
 headline: Lesson plan with wellbeing built in
 subhead: Give it a topic and goals. Get a lesson that teaches the content and builds student wellbeing. Not medical advice.
+explain: |
+  A lesson where the subject content and student wellbeing are taught together, so you do not need a separate wellbeing slot. It teaches your topic and builds habits like engagement and positive relationships as part of the work.
+
+  The design uses the PERMA model: positive emotion, engagement, relationships, meaning and accomplishment. You choose one element to focus on or ask for a balanced mix. The skill places each element inside a specific activity, lists the teacher moves that bring it out and adds reflection prompts so students link their learning to how they felt. It adjusts for class concerns such as anxiety or low engagement. Not medical advice.
+when:
+  - You have no spare time for stand-alone wellbeing lessons.
+  - Your class seems anxious or switched off in your subject.
+  - A school priority asks you to build wellbeing into teaching.
+  - You want a fresh lesson structure for a topic you already teach.
+you_give:
+  - Lesson topic and learning goals
+  - Year group or age
+  - Subject
+  - PERMA element to focus on (optional)
+  - Class concerns (optional)
+you_get:
+  - Full lesson plan
+  - Map of PERMA elements to activities
+  - Teacher moves for each element
+  - Student reflection prompts
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

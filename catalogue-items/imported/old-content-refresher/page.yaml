@@ -6,6 +6,25 @@ summary: Give it your existing posts. Get which to update, merge or delete, and 
 job: get-found-in-search
 headline: Old content refresher
 subhead: Give it your existing posts. Get which to update, merge or delete, and how deep each update goes.
+explain: |
+  A clear list of which old posts to update, merge or delete, and how much work each deserves. Your library decays as search habits change and facts go stale, and this puts your effort where traffic can come back.
+
+  The skill runs a quarterly audit. It scores each piece on how much it once earned, how far it has fallen, and how much it matters to the business. Then it sorts pieces into a light touch, a deep rewrite, a merge into a stronger page, or removal. It sets the order and timing, and gives you a rhythm to repeat each quarter. A refresh that does not move traffic gets a diagnosis instead of more edits.
+when:
+  - Your blog has hundreds of old posts and you cannot update them all.
+  - Traffic is dropping on pieces that used to perform.
+  - Two older posts cover nearly the same topic and compete with each other.
+  - You updated posts but rankings did not move.
+you_give:
+  - A list of your posts with traffic over time
+  - Your main business goals
+  - Your team's capacity per month
+  - Search or ranking data (optional)
+you_get:
+  - An update, merge or delete decision per piece
+  - A priority order
+  - Depth of refresh for each one
+  - A repeatable quarterly schedule
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

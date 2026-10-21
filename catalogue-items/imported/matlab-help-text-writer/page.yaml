@@ -6,6 +6,25 @@ summary: Give it a MATLAB function. Get clear help text with a summary line, syn
 job: build-software
 headline: MATLAB help text writer
 subhead: Give it a MATLAB function. Get clear help text with a summary line, syntax lines and See Also links.
+explain: |
+  Help text for a MATLAB function that shows up properly when someone types help or doc. You hand over the function and get the comment block back in MathWorks style.
+
+  The block follows a set order: a one-line summary at the top, a release note if needed, syntax lines, an optional example, a See Also line and an optional note. The skill sets the casing for help text, which differs from normal prose, and the rules for naming inputs in a syntax line, such as how to show flag options and name-value pairs.
+when:
+  - You wrote a toolbox function and it has no help text.
+  - Your help comments are out of date after you added options.
+  - You want your team's functions to read the same way.
+  - You are about to share code and need documentation done.
+you_give:
+  - The MATLAB function file
+  - Related functions to link (optional)
+  - An example of typical use (optional)
+you_get:
+  - A one-line summary
+  - Syntax lines for each way to call it
+  - An example (optional)
+  - A See Also line
+  - The whole comment block ready to paste
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

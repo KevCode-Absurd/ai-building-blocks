@@ -6,6 +6,25 @@ summary: Give it a topic or subreddit. Get posts and comments in a table you can
 job: understand-customers
 headline: Reddit thread collector
 subhead: Give it a topic or subreddit. Get posts and comments in a table you can study. Collects data from websites.
+explain: |
+  Reddit posts and comments in a table you can sort and study, without needing a Reddit API key. Ask for a topic, a subreddit or a user, and get structured rows back.
+
+  The skill turns your request into a single run of an Apify actor. You can search by keyword, set a date window, pull every comment in a thread, or get the newest posts from several subreddits. This helps with brand watching, finding what people ask for, or tracking mentions since a date. The actor is a paid service charged per result, built by the skill author, and it needs an Apify account. It collects data from websites, so respect Reddit's terms.
+when:
+  - You want every post asking for an alternative to a tool you compete with.
+  - You track mentions of your brand since last month.
+  - You need full comment threads for a research project.
+  - You lost API access and still need Reddit data.
+you_give:
+  - Topic, subreddit or user
+  - Date window
+  - How many results you want
+  - Apify account
+you_get:
+  - Table of posts
+  - Table of comments
+  - Subreddit or user details
+  - Export you can sort and filter
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

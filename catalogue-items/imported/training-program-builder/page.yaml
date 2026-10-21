@@ -6,6 +6,25 @@ summary: Give it a skills gap. Get a learning plan, a training outline and coach
 job: hire-people
 headline: Training program builder
 subhead: Give it a skills gap. Get a learning plan, a training outline and coaching steps.
+explain: |
+  A learning plan for a real skills gap: what people need to learn, how to teach it, and how to coach it afterwards. It saves you from guessing which training to buy or build.
+
+  You start with a needs assessment, using survey questions, performance data and manager input to rank the gaps. Then the skill writes learning objectives using Bloom's levels and builds a training outline for the audience. It can add e-learning modules, microlearning, games, on-the-job tasks, mentoring plans, competency models and career paths. It also writes assessments to check what stuck. It is aimed at HR and team leads, but any manager can use it.
+when:
+  - Your team has a skills gap and you do not know where to begin.
+  - You need a training outline for new managers or new hires.
+  - You want a coaching or mentoring plan to follow a workshop.
+  - You must write clear learning objectives for a course.
+you_give:
+  - The skills gap or role
+  - Your audience and their level
+  - Time and budget limits (optional)
+  - Performance data or survey results (optional)
+you_get:
+  - A needs assessment with priorities
+  - Learning objectives
+  - A training outline
+  - A coaching and follow-up plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

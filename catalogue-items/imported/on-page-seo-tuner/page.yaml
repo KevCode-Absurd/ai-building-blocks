@@ -6,6 +6,25 @@ summary: Give it a page. Get fixes for titles, descriptions, headings, content, 
 job: get-found-in-search
 headline: On-page SEO tuner
 subhead: Give it a page. Get fixes for titles, descriptions, headings, content, internal links, images, URLs and schema.
+explain: |
+  Concrete fixes for a single web page so it ranks better and gets more clicks. You give it a page and it works through eight areas, one by one.
+
+  Those areas are the title tag, the meta description, the heading structure, the quality of the content, links from and to the page, images, the address of the page, and structured data. For each, it points out what is wrong and writes the replacement, such as a new title that fits the length limit and matches what searchers want. It works on any site, whatever the platform. It stays on one page. Site-wide speed, keyword research and competitor studies belong to other checks.
+when:
+  - A product page gets views but few clicks from search results.
+  - You wrote a new article and want it tuned before you publish.
+  - Your headings are out of order and you are not sure how to fix them.
+  - Images have no descriptions and the page has no structured data.
+you_give:
+  - The page address or its content
+  - The main keyword or topic
+  - Your goal for the page (optional)
+  - Related pages on your site (optional)
+you_get:
+  - Rewritten title and meta description
+  - Heading structure fixes
+  - Internal link suggestions
+  - Image, URL and structured data fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

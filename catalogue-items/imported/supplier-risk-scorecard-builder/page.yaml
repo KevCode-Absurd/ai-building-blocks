@@ -6,6 +6,26 @@ summary: Give it your suppliers. Get a risk score for each, warning signs to wat
 job: plan-supply-chain
 headline: Supplier risk scorecard builder
 subhead: Give it your suppliers. Get a risk score for each, warning signs to watch, and a backup supplier plan.
+explain: |
+  A risk score for each supplier, the warning signs to watch and a backup plan for the ones that matter most. You see which supplier failures would hurt, before they happen.
+
+  Give it your supplier list. The skill scores each across risk areas such as finance, delivery, quality and geography, then weights the score by how critical the supplier is to your business. It sets key risk indicators with alert levels, matches mitigation to the risk level, and drafts contingency plans, including a dual-sourcing option. Python code is included to run the scoring and monitor the alerts.
+when:
+  - You rely on one supplier for a key part and want to know the exposure.
+  - A supplier shows late deliveries and you need to judge the risk.
+  - You must show a risk review to management or auditors.
+  - You want early warnings, not post-mortems.
+you_give:
+  - A list of suppliers and what they supply
+  - Spend and criticality for each
+  - Financial or delivery data (optional)
+  - Locations (optional)
+you_get:
+  - A risk score per supplier
+  - A criticality and exposure view
+  - Warning indicators with alert levels
+  - Mitigation actions by risk level
+  - A contingency plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,27 @@ summary: Describe what your service does. Get a clean REST API plan with routes,
 job: build-software
 headline: REST API designer
 subhead: Describe what your service does. Get a clean REST API plan with routes, status codes, paging and docs.
+explain: |
+  A complete plan for a REST API before anyone writes code: the routes, the methods, the status codes and the docs. Mistakes caught here cost minutes. Caught after launch, they cost your users.
+
+  You describe what your service does. The skill pulls the nouns out of that description and turns them into resources, then decides which belong inside others, like comments under tasks. Each resource gets the right method for reading, creating, replacing, patching and deleting. It sets request and response shapes, one shared error format, paging, filtering and sorting. It then picks a version style, with the version in the path as the simple default, and writes OpenAPI docs.
+when:
+  - You are about to build a backend and want the routes agreed first.
+  - Your existing API has inconsistent names and error messages.
+  - A mobile team needs an API contract before the server exists.
+  - You need paging and filtering on a list that keeps growing.
+you_give:
+  - A plain description of what your service does
+  - The main things it stores (users, orders, tasks)
+  - Who will call the API
+  - Existing endpoints to keep (optional)
+  - Naming style, snake_case or camelCase (optional)
+you_get:
+  - A resource and route map
+  - Method and status code choices for each route
+  - Request, response and error shapes
+  - A paging, filtering and versioning plan
+  - OpenAPI documentation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

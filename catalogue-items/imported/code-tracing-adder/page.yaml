@@ -6,6 +6,25 @@ summary: Give it MATLAB code. Get tracing added so you can see where time goes a
 job: build-software
 headline: Code tracing adder
 subhead: Give it MATLAB code. Get tracing added so you can see where time goes and where errors start.
+explain: |
+  Your MATLAB code gains tracing, so you can see where time goes and where errors start. Each function reports what it did, how long it took and whether it failed.
+
+  It adds OpenTelemetry spans around your functions. A span is created from a tracer, made the current context so nested calls link to their parent, and ended automatically when the function exits. It sets attributes, marks status as OK or Error, records exceptions and adds timed events. Loops get special handling so spans end mid-function. It needs the OpenTelemetry-MATLAB package, version 1.11.0 or newer, and MATLAB R2022b or newer.
+when:
+  - A MATLAB pipeline is slow and you cannot tell which step.
+  - An error appears and you cannot find where it began.
+  - You want your MATLAB code to show up in your tracing tool.
+  - You need traces that link parent and child calls.
+you_give:
+  - Your MATLAB functions
+  - OpenTelemetry-MATLAB installed
+  - MATLAB R2022b or newer
+  - Where to send traces (optional)
+you_get:
+  - Functions with tracing added
+  - Spans with attributes and status
+  - Recorded exceptions
+  - Timed events inside slow steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

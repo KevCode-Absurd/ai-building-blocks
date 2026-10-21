@@ -6,6 +6,25 @@ summary: Name the meeting. Get an agenda and pre-read built from your Notion pag
 job: organise-work
 headline: Meeting pre-read writer
 subhead: Name the meeting. Get an agenda and pre-read built from your Notion pages and research.
+explain: |
+  An agenda and pre-read page built from what your team already wrote, so people arrive knowing the goal and the decision they need to make. Name the meeting and the page comes together in Notion.
+
+  It first asks for the goal, the attendees, the length and the decisions needed. It then searches your Notion for past notes, specs and goals, and picks a template that fits the type: status, decision, planning, retro, one-on-one or brainstorm. Each agenda item gets an owner and a time box. It can add short outside research with source links, keeps fact apart from opinion, and updates the page when plans change. It needs the Notion connection.
+when:
+  - You have a decision meeting tomorrow and no prep page.
+  - You run a weekly status call and want the same clean format each time.
+  - You need a customer meeting brief that pulls in past notes.
+  - You want sprint planning prep built from your Notion specs.
+you_give:
+  - The meeting goal and the decisions needed
+  - Attendees, date and length
+  - A connected Notion workspace
+  - Pages or docs to draw from (optional)
+you_get:
+  - A timed agenda with owners
+  - A pre-read with links to source pages
+  - A template matched to the meeting type
+  - Short research notes with sources (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

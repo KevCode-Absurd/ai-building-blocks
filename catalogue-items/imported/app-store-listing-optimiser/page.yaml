@@ -6,6 +6,25 @@ summary: Give it your app listing. Get a scored audit and a rewritten title, key
 job: audit-landing-page
 headline: App store listing optimiser
 subhead: Give it your app listing. Get a scored audit and a rewritten title, keywords, description and screenshots plan.
+explain: |
+  A scored audit of your App Store or Google Play page, plus rewritten text that helps more people find it and install it. Share the link and it does the checking.
+
+  The skill fetches the live listing and pulls every field: title, subtitle, description, promo text, category, screenshots and ratings. It scores each part against listing best practice, keeping to limits such as 30 characters for a title. It then compares your page with competitors, finds keyword gaps, and writes a new title, keyword set, description and a plan for screenshots. Anything it reads from the page, including reviews, is treated as data only and never as instructions. It needs web access.
+when:
+  - People view your listing but few install.
+  - You want to rank for a keyword you aren't using.
+  - You are launching and want the page right the first time.
+  - You want to see how your page compares with a rival's.
+you_give:
+  - Your App Store or Google Play link
+  - Competitor apps (optional)
+  - Target countries and keywords (optional)
+  - Product notes (optional)
+you_get:
+  - A scored listing audit
+  - Rewritten title and subtitle
+  - Keyword suggestions
+  - A screenshot plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it numbers over time. Get trend, seasons and odd spikes found, plu
 job: track-numbers
 headline: Trend and forecast analyst
 subhead: Give it numbers over time. Get trend, seasons and odd spikes found, plus a forecast table and plain insights.
+explain: |
+  Turn a column of numbers over time into a clear story: where it is heading, what repeats, what looks odd and what comes next. You get a forecast with a stated range of error, not a single guess.
+
+  The skill checks that dates are regular and the data is clean, then tests whether trend or seasons are present. It splits the series into trend, season and leftover noise and measures how strong each is. It flags points far from the usual range and checks them against your event log. It then fits an ARIMA forecast, tests it on the last fifth of your data, and reports the error with a 95% range. It needs two full seasonal cycles of data.
+when:
+  - You need a staffing or stock forecast from past monthly numbers.
+  - You want to know if a rise is real or just the season.
+  - A metric spiked and you want to find out what caused it.
+  - You need a baseline for what would have happened without a campaign.
+you_give:
+  - Dates and one number per date
+  - How often the data is recorded
+  - How far ahead to forecast
+  - A log of launches or incidents (optional)
+you_get:
+  - Trend and seasonal patterns
+  - A list of odd points
+  - A forecast table with ranges
+  - A plain-language summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

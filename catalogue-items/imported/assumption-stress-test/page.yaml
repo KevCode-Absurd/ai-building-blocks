@@ -6,6 +6,24 @@ summary: Give it a plan and its key bets. Find which assumptions break first and
 job: test-an-idea
 headline: Business assumption stress tester
 subhead: Give it a plan and its key bets. Find which assumptions break first and what to test.
+explain: |
+  A plan tested against its own weak points before the market does it for you. Pick one belief you are relying on, such as "enterprise buyers will accept a six-month pilot" or "revenue will double each quarter", and the AI tries to break it.
+
+  It first restates the belief so it can be tested, with real numbers. Then it looks for evidence against it, models what happens if it is wrong, and shows how sensitive your results are to small changes. Last, it suggests a hedge: a cheap test or backup plan. It has patterns for revenue forecasts, market size, competitive edge, hiring plans and how rivals might react.
+when:
+  - Your forecast needs one big thing to go right and you want to know how likely that is.
+  - Everyone on the team agrees on the market size and nobody has checked it.
+  - You are about to ask investors for money on the back of a growth model.
+  - You want to know which bet to test first.
+you_give:
+  - The plan or model
+  - The assumption to test, in one sentence
+  - Numbers behind it, such as prices, churn or conversion (optional)
+you_get:
+  - The assumption rewritten so it can be tested
+  - Evidence that cuts against it
+  - A downside case with numbers
+  - A hedge or test to run
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

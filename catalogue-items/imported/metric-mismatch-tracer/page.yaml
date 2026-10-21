@@ -6,6 +6,26 @@ summary: Tell it which number differs between two reports. Get the gap, the step
 job: track-numbers
 headline: Metric mismatch tracer
 subhead: Tell it which number differs between two reports. Get the gap, the step where they split and a fix.
+explain: |
+  The reason two reports show different numbers for the same metric, and the exact step where they split. Name the metric and the two sources, and it finds the gap, the cause and a fix.
+
+  It first confirms the exact definition: top and bottom of the ratio, filters, time zone and period. It pulls both values, row counts included, and works out the gap in amount and percent. A gap inside an agreed tolerance is noted and closed. Otherwise it walks each query step by step, looking at join types, filter order and time zones. The cause is sorted into types such as definition, freshness or aggregation, then written up with a fix.
+when:
+  - Two dashboards show different revenue for the same month.
+  - A number changed after a pipeline update.
+  - A leader doubts a figure and you need a firm explanation.
+  - You are retiring an old report and must check the new one matches.
+you_give:
+  - The metric and its business definition
+  - "Both sources: queries, dashboard SQL or raw data"
+  - The period with the gap
+  - Recent changes to pipelines or rules (optional)
+you_get:
+  - The size of the gap
+  - The step where the two diverge
+  - The root cause by type
+  - A corrected query or tolerance note
+  - A completed reconciliation report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it actual and budget numbers. Get what moved, why, and a short not
 job: track-numbers
 headline: Budget variance explainer
 subhead: Give it actual and budget numbers. Get what moved, why, and a short note for leadership.
+explain: |
+  Know why the numbers moved, not just that they did. You get a short written explanation of each gap between actual and budget, ready for a leadership update.
+
+  The skill breaks every difference into causes. Revenue and cost gaps split into volume, price and mix effects, and these must add up to the total. A rate and mix split handles blended segments. It applies materiality thresholds so you only chase the gaps that matter. Then it writes plain commentary and describes a waterfall chart showing how you got from budget to actual. A finance professional should check the result before you report it.
+when:
+  - Revenue beat budget but profit missed and you must explain it.
+  - You have a monthly close and need commentary for each large gap.
+  - Leadership asks if the miss was price or volume.
+  - You want a waterfall view from budget to actual.
+you_give:
+  - Actual and budget numbers
+  - Prior period or forecast numbers (optional)
+  - Volume and price data (optional)
+  - A materiality level (optional)
+you_get:
+  - A breakdown of each variance by cause
+  - Volume, price and mix amounts
+  - Short written commentary
+  - A waterfall chart outline
+  - A list of gaps worth action
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

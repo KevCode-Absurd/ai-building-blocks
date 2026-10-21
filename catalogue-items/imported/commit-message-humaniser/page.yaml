@@ -6,6 +6,24 @@ summary: Give it a commit message. Get a plain version that sounds like a carefu
 job: write-and-tell-stories
 headline: Commit message humaniser
 subhead: Give it a commit message. Get a plain version that sounds like a careful engineer, with no AI filler.
+explain: |
+  A commit message that reads like a careful engineer wrote it at the end of a real day, with no AI filler. It keeps the Conventional Commits format.
+
+  It strips marketing words such as comprehensive, powerful, enhance and smoothly, and the habit of starting with "This commit". The subject uses the form type, optional scope, then a short command like add, fix or move, kept to about 50 characters and never past 72. No trailing period. A body appears only when the subject cannot carry the why, such as breaking changes, migrations or security context. It leads with why, not just what.
+when:
+  - Your AI wrote a commit message full of buzzwords.
+  - You want messages in Conventional Commits style.
+  - A subject line runs far past 72 characters.
+  - You want your history to read like a person wrote it.
+you_give:
+  - The commit message to rewrite
+  - The staged changes (optional)
+  - Your project's casing style (optional)
+you_get:
+  - A plain subject line
+  - A short body only if needed
+  - Conventional Commits format
+  - Filler words removed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

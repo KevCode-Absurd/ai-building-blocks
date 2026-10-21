@@ -6,6 +6,25 @@ summary: Turn it on once. Get every reply with the next action first, short numb
 job: set-up-ai
 headline: Focus-friendly answer style setter
 subhead: Turn it on once. Get every reply with the next action first, short numbered steps and time estimates.
+explain: |
+  Every reply from your AI starts with the next thing to do, then numbered steps with time estimates. It is written for readers who lose track in long answers, such as people with ADHD.
+
+  Once switched on, it stays on for the whole session until you say normal mode. The first line is always an action or a command. Multi-step work becomes short numbered steps, one action each, with the fewest steps that still work. It repeats where you are so you do not hold state in your head, gives real time estimates instead of vague ones, cuts tangents, and shows small wins as they happen.
+when:
+  - Long AI answers make you lose your place or give up.
+  - You freeze on where to start a task.
+  - You want time estimates you can plan around.
+  - You want to see progress as you work through a list.
+you_give:
+  - Your usual request or task
+  - A trigger to switch the style on
+  - A phrase to turn it off (optional)
+you_get:
+  - Next action as the first line
+  - Numbered steps with one action each
+  - Time estimate for each step
+  - Recap of where you are
+  - Visible progress markers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your products and their pick counts. Get which item goes in whi
 job: plan-supply-chain
 headline: Warehouse slot assigner
 subhead: Give it your products and their pick counts. Get which item goes in which spot so fast sellers sit closest.
+explain: |
+  A plan for which product goes in which storage spot, so fast sellers sit close and slow ones sit far away. That cuts the distance pickers walk each day.
+
+  You give the product list with picks per week, size and weight, plus the storage locations and any rules like cold zones or heavy items low. The skill ranks products by how often they are picked and by cube movement, which mixes volume and speed. It puts the top movers in the easiest spots near the dock and balances the load between aisles. It respects product rules and shows when to refresh the plan as demand shifts.
+when:
+  - Your best sellers are stored at the back of the building.
+  - You are setting up a new site and need a first slot plan.
+  - Peak season changes what moves fastest.
+  - Pickers queue up in one busy aisle.
+you_give:
+  - Product list with picks per week
+  - Product size and weight
+  - Storage locations and levels
+  - Rules such as cold, hazmat or first-in-first-out (optional)
+you_get:
+  - A product-to-slot assignment
+  - A ranked list of fast movers
+  - Rules for heavy and special items
+  - A schedule for reslotting
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

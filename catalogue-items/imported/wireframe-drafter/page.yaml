@@ -6,6 +6,26 @@ summary: Describe the screens. Get text wireframes at three detail levels, with 
 job: design-work
 headline: Wireframe drafter
 subhead: Describe the screens. Get text wireframes at three detail levels, with parts, behavior and screen sizes.
+explain: |
+  Screen layouts you can read, share and build from, at three levels of detail. You see where everything goes before anyone spends time on visual design.
+
+  You name the screen, its purpose and the main action a user should take. The skill lists every component, then draws a low-fidelity block layout in text. It upgrades that to mid-fidelity with real labels and specific controls, such as dropdown versus radio buttons. The high-fidelity version adds sizes, spacing and type. For each wireframe it documents how the layout changes on mobile, tablet and desktop and notes empty, loading and error states.
+when:
+  - You have a product idea and need to show a screen before building.
+  - A developer asks what the form should look like.
+  - You want to compare two layouts quickly.
+  - You need to plan how a page behaves on a phone.
+you_give:
+  - Screen name and purpose
+  - Main user action
+  - Platform such as web or mobile
+  - Level of detail wanted
+  - Design tokens (optional)
+you_get:
+  - Low-fidelity text layout
+  - Mid-fidelity version with real components
+  - High-fidelity specifications
+  - Responsive behaviour notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

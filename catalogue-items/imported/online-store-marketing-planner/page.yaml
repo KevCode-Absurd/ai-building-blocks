@@ -6,6 +6,25 @@ summary: Describe your store. Get a marketing plan covering search, email, paid 
 job: run-your-store
 headline: Online store marketing planner
 subhead: Describe your store. Get a marketing plan covering search, email, paid ads, conversion and keeping customers.
+explain: |
+  A full marketing plan for your online store, covering search, email, paid ads, conversion and keeping customers. You describe your store and get a plan in the order to do it.
+
+  It starts with where you are: visitors, conversion rate, and what you already run. Then it covers each area. For search, it plans on-page work and content. For email, it sets up welcome, cart recovery and win-back flows. For paid ads, it suggests channels and budget splits. For conversion, it looks at the funnel and finds where visitors drop. For retention, it adds loyalty and repeat-purchase ideas. It is built around Shopify and direct-to-consumer stores.
+when:
+  - You are launching a new store and need a marketing plan.
+  - You get 5,000 visitors a month but only about 2 percent buy.
+  - You have no email flows set up.
+  - You want to know where to put a small ad budget first.
+you_give:
+  - What your store sells
+  - Monthly visitors and conversion rate
+  - Budget
+  - Channels you already use
+you_get:
+  - A marketing plan by channel
+  - Email flow ideas
+  - Ad channel and budget suggestions
+  - Conversion and retention actions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

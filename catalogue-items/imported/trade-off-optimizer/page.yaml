@@ -6,6 +6,25 @@ summary: Describe goals that pull against each other. Get a set of best trade-of
 job: build-software
 headline: Trade-off optimizer
 subhead: Describe goals that pull against each other. Get a set of best trade-off answers, checked against known test problems.
+explain: |
+  When two goals fight each other, such as lower cost and higher speed, there is no single best answer. This skill finds the set of best compromises and shows them side by side so you can pick one on purpose.
+
+  It writes Python using the pymoo library. It sets up your goals and limits, picks a suitable method such as NSGA-II or NSGA-III, runs it, and draws the trade-off curve. It also checks the method against known test problems, so you know the setup works before you trust it on yours. It needs Python 3.10 or newer and pymoo installed. It suits engineers and analysts who can run a script.
+when:
+  - You want to cut cost and raise quality at once and need to see the options.
+  - You have an engineering design with several competing targets and limits.
+  - You need to compare optimisation methods on a known benchmark first.
+  - You have a few good solutions and need a way to choose between them.
+you_give:
+  - The goals you want to improve
+  - The settings you can change and their ranges
+  - Any hard limits (optional)
+  - A way to score a design, or the formulas
+you_get:
+  - Python code for the optimisation
+  - A set of best trade-off solutions
+  - A chart of the trade-off curve
+  - A benchmark check of the setup
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Name a company, person or group. Get a tested research file with source
 job: think-and-decide
 headline: Organization dossier researcher
 subhead: Name a company, person or group. Get a tested research file with sources. Collects data from websites.
+explain: |
+  A research file on a company, person or group that tests what you believe instead of repeating what everyone knows. Every claim carries a source.
+
+  The key step is your hypothesis. You say what you expect, for example that a company is moving its AI spend to its own platform. The skill then searches the web and public records, such as SEC filings and GitHub, to prove or disprove it. It counts queries sent, sources received and sources cited, labels anything from memory as unverified and keeps weak sources out of the main findings. You end with a Word document and conversation hooks tied to the evidence. Needs web search, and Node.js for the Word file.
+when:
+  - You have a sales call Tuesday and need real insight, not a profile.
+  - You are checking out a possible partner or investor.
+  - You want to test a theory about a competitor's strategy.
+  - You need a sourced brief before an important meeting.
+you_give:
+  - The company, person or group
+  - Your hypothesis
+  - Why you need it and the meeting date
+  - Optional paid data access
+you_get:
+  - A sourced research file
+  - A verdict on your hypothesis
+  - Conversation hooks
+  - A Word document
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

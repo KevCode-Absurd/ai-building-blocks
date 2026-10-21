@@ -6,6 +6,25 @@ summary: Say when and where you launch. Get a rollout plan with the message and 
 job: plan-strategy
 headline: Brand launch planner
 subhead: Say when and where you launch. Get a rollout plan with the message and steps for each stage.
+explain: |
+  A launch plan with dates, channels and the message for each stage, so your brand lands with momentum instead of a quiet whimper. It works for a new brand or a rebrand.
+
+  The skill builds on any saved strategy and positioning, then asks only what is missing: launch type, deadline, ready assets, main audience, team and budget, and what success looks like. The plan opens with the launch story and a measurable goal, and it names the style, such as a hard launch on one day or a soft one that builds. It then sequences the rollout across your channels.
+when:
+  - A launch date is set and you have no plan.
+  - You are changing your brand name or look and must roll it out.
+  - You need to decide between a big day and a gradual release.
+  - You have a small team and need to focus on a few channels.
+you_give:
+  - Launch type, new or rebrand
+  - Date and any hard deadline
+  - Assets that are ready
+  - Audience, team size and budget
+you_get:
+  - A launch story and goal
+  - A staged rollout plan
+  - Channel plan with key messages
+  - Success measures
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

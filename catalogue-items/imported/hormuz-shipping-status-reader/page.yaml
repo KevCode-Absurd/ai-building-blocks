@@ -6,6 +6,24 @@ summary: Ask about the Strait of Hormuz. Get open or closed status, ship counts 
 job: money-and-investing
 headline: Hormuz shipping status reader
 subhead: Ask about the Strait of Hormuz. Get open or closed status, ship counts and oil price impact. Collects data from websites.
+explain: |
+  A quick, readable status check on the Strait of Hormuz: open, restricted or closed, and what that means for shipping and oil. Ask in plain words. The skill pulls live figures from a public dashboard called the Hormuz Strait Monitor and reads them back to you.
+
+  A general question gets a full briefing: the current status and how long it has lasted, tanker crossings against normal, ships stranded, Brent oil price movement, war-risk insurance rates, cargo volume and the diplomatic situation. A narrower question, like how many ships are stuck, gets just that section. It also adds a short risk read. It uses the web to fetch data and cannot change anything. If the dashboard is down, it tells you.
+when:
+  - You need to know today whether the Strait of Hormuz is open.
+  - You are tracking shipping delays that could affect your supply chain.
+  - You want to understand a jump in oil prices.
+  - You need a short briefing on Gulf tanker traffic for a report.
+you_give:
+  - Your question about the strait
+  - Which part you care about, such as ships, oil price or insurance (optional)
+  - Internet access to fetch the dashboard
+you_get:
+  - Current open, restricted or closed status
+  - Ship counts against normal
+  - Oil price and insurance impact
+  - A short risk assessment
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

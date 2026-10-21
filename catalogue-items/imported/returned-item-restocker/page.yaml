@@ -6,6 +6,25 @@ summary: Get returned items added back to stock at the right location. Changes l
 job: run-your-store
 headline: Returned item restocker
 subhead: Get returned items added back to stock at the right location. Changes live stock, so skip damaged goods.
+explain: |
+  Returned items put back into available stock at the correct location, so your counts match the shelf. It changes live inventory, so it starts in preview mode and skips damaged goods.
+
+  The skill looks at returns closed in the last 14 days by default. For each returned line it adds units to the stock count at the location the return went to, and links the entry to the return record for your audit trail. Items marked defective are left out unless you say otherwise. You can limit it to chosen reasons, such as unwanted or too small, or to one location. Only run it for items that have arrived and been checked.
+when:
+  - Your warehouse processes returns in another system and Shopify counts are behind.
+  - You skipped restocking for a week and need to catch up.
+  - You want defective returns kept out of sellable stock.
+  - You want a preview of changes before touching inventory.
+you_give:
+  - Your Shopify store address
+  - How many days of returns to cover
+  - A location to restock into (optional)
+  - Return reasons to include (optional)
+you_get:
+  - A restock plan listing items and quantities
+  - Stock added at the right location
+  - Defective items left out
+  - A record linking each change to its return
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

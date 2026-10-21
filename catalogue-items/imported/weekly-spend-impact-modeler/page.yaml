@@ -6,6 +6,27 @@ summary: Give it weekly spend and sales by channel. Get a simple model of what e
 job: track-numbers
 headline: Weekly spend impact modeler
 subhead: Give it weekly spend and sales by channel. Get a simple model of what each channel adds, with honest limits.
+explain: |
+  A plain model of what each marketing channel adds to your weekly sales, with its limits stated up front. It stops you from reading a correlation as proof that a channel works.
+
+  You supply weekly spend and outcomes by channel. The skill sets the scope, week range, time zone and currency first, then keeps unknown values as unknown instead of turning them into zero. It runs a weekly regression and compares the modeled share of each channel with the share your CRM reports. Every result comes back with its assumptions and a status. It does not allocate budget. It tells you what the data can and cannot say. It needs Python.
+when:
+  - You spend across several channels and want to know what each one adds.
+  - Your CRM credits one channel and you doubt it.
+  - You are planning a lift test and want a baseline first.
+  - Someone says a channel is incremental and you need to check the claim.
+you_give:
+  - Weekly spend by channel
+  - Weekly sales or conversions
+  - Time zone and currency
+  - Notes on attribution windows
+  - Spend scenarios to test (optional)
+you_get:
+  - Modeled contribution per channel
+  - Modeled share versus CRM share
+  - Scenario results
+  - Assumptions and status flags
+  - Plain statement of what is not proven
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Say what counts as a sale or lead. Get tracking set up or repaired acro
 job: read-ad-results
 headline: Conversion tracking fixer
 subhead: Say what counts as a sale or lead. Get tracking set up or repaired across GA4, Meta, Google Ads and more.
+explain: |
+  Conversion tracking that counts the right events and sends them to GA4, Meta, Google Ads and other platforms, either newly set up or repaired. You trust your sales and lead numbers again.
+
+  You start by saying what counts as a conversion: a form, a booked call, a purchase. The skill first asks three questions to sort the job, then follows either a setup flow or an audit flow. It covers tag manager tags, data layer events, pixels, server-side events, enhanced conversions and click ID capture. Audits end with a verdict per platform. It insists on checking the live result, not just the tag, and states its limits.
+when:
+  - Your ad platform shows no conversions but you know sales happened.
+  - You are launching ads and need tracking set up first.
+  - Conversions doubled after a site change and you suspect double counting.
+  - You want to send leads to Meta and Google from your server.
+you_give:
+  - What counts as a conversion
+  - Your site and platforms
+  - Access or screenshots of tag setup
+  - Recent change on the site (optional)
+you_get:
+  - Setup or repair steps
+  - Event and tag list
+  - Audit verdict per platform
+  - Verification checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

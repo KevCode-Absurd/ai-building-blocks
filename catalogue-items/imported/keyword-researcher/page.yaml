@@ -6,6 +6,26 @@ summary: Name your topic. Get high-value search terms, search intent and content
 job: get-found-in-search
 headline: Keyword researcher
 subhead: Name your topic. Get high-value search terms, search intent and content gaps to target.
+explain: |
+  A search plan for your topic that shows which terms are worth writing for. Name your topic, and add your site and audience if you can. The skill starts from seed words, then grows the list with long-tail variations, related questions and natural phrasing.
+
+  It gathers or estimates monthly searches, difficulty, ad cost and trend for each term, and labels the intent behind each one. It compares your coverage with three to five competitors to find gaps they rank for and you do not. The final report groups keywords into themes that fit content pillars, with a priority score for each group. A table shows the best terms first.
+when:
+  - You plan a content calendar and need topics backed by demand.
+  - A competitor outranks you and you want to know why.
+  - You want low-difficulty terms you can win.
+  - You need keyword groups to organize your site structure.
+you_give:
+  - Your topic or product
+  - Your website (optional)
+  - Your target audience and market
+  - Competitors (optional)
+you_get:
+  - A keyword table with volume, difficulty and intent
+  - Long-tail and question terms
+  - A competitor gap list
+  - Keyword groups by theme
+  - Priorities for content
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

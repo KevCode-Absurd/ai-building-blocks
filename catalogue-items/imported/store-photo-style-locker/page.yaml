@@ -6,6 +6,25 @@ summary: Describe your store look once. Get a style file that keeps models, ligh
 job: brand-file
 headline: Store photo style locker
 subhead: Describe your store look once. Get a style file that keeps models, light and layout the same across every product photo.
+explain: |
+  One style file that makes the 200th product photo look like the first. You describe your shop's look once: the model's face and body, the light, the colour tone, the background and the mood. After that, every photo prompt picks up the same rules.
+
+  Without a shared file, each prompt describes the model a little differently and your catalogue drifts. The file holds a reference image to lock the face, a written description, lighting and background settings and tone words. It is added to each image or video job automatically, so a whole batch comes out matching. It needs Node to run.
+when:
+  - Your product photos show a different model face from item to item.
+  - Colours and backgrounds change from shot to shot.
+  - You are about to generate a full catalogue of images with AI.
+  - You want to change your shop's look without rewriting every prompt.
+you_give:
+  - A description of your shop's look and mood
+  - A reference photo of your model (optional)
+  - Lighting and background preferences
+  - A few sample images you like (optional)
+you_get:
+  - A style file for your shop
+  - A locked model description
+  - Lighting, tone and background rules
+  - A way to add the style to any photo prompt
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

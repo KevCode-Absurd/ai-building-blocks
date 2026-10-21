@@ -6,6 +6,26 @@ summary: Give it a name, role and start date. Get a pre-start checklist, a first
 job: hire-people
 headline: New hire plan builder
 subhead: Give it a name, role and start date. Get a pre-start checklist, a first week plan, and 30/60/90 day goals.
+explain: |
+  A ready onboarding plan for someone starting soon, from the week before they arrive to their first three months. You give a name, role, team, manager and start date.
+
+  The plan begins with a pre-start checklist: welcome email, accounts, equipment, calendar invites and a buddy. Day one is laid out hour by hour, with who meets them and when. Week one lists training, reading, one-to-ones and a first small task. Then it sets goals for days 30, 60 and 90 that match the role, and finishes with a table of key contacts and what to ask each one. Edit the checklist to fit your team, then share it with the manager.
+when:
+  - Someone starts on Monday and nothing is ready.
+  - You manage your first hire and want to get day one right.
+  - Your team's onboarding differs for each new person.
+  - You want clear 30, 60 and 90 day goals for a new role.
+you_give:
+  - The new hire's name and role
+  - Their team and manager
+  - Their start date
+  - Tools they will need (optional)
+you_get:
+  - A pre-start checklist
+  - An hour-by-hour first day
+  - A first week plan
+  - 30, 60 and 90 day goals
+  - A key contacts table
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

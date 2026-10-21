@@ -6,6 +6,26 @@ summary: Describe the change you want to test. Get a clear hypothesis, test plan
 job: plan-ad-tests
 headline: Experiment designer
 subhead: Describe the change you want to test. Get a clear hypothesis, test plan, sample size and a way to read the result.
+explain: |
+  A test plan you can run without fooling yourself: one clear hypothesis, the right sample size, the metric to judge it and rules for reading the result.
+
+  You describe the change you want to try. The skill asks about your current conversion rate, your traffic, and your tools and timeline. It then writes a specific prediction rather than a vague hope, sets a single variable to change, and picks one main metric tied to money plus a few side metrics. It fixes the sample size in advance and tells you not to stop early when results look good. You also get guidance on turning tests into a regular program.
+when:
+  - You want to test a new headline, page or price and need a proper plan.
+  - Past tests gave results nobody trusted.
+  - You do not know how much traffic a test needs.
+  - You want a simple routine for running experiments each month.
+you_give:
+  - The change you want to test
+  - Current conversion rate
+  - Weekly traffic
+  - Tools and deadline (optional)
+you_get:
+  - Written hypothesis
+  - Test design with one variable
+  - Sample size and run time
+  - Main and side metrics
+  - Rules for reading the result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

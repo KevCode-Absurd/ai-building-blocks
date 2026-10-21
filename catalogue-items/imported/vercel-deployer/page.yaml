@@ -6,6 +6,25 @@ summary: Say "deploy my app". Get it live on Vercel and a link you can share.
 job: ship-and-host
 headline: Vercel deployer
 subhead: Say "deploy my app". Get it live on Vercel and a link you can share.
+explain: |
+  Tell it to deploy and your app goes live on Vercel with a link to share. It makes a preview first, so you check before anything reaches real visitors.
+
+  The skill starts with four checks: is there a git remote, is the folder linked to a Vercel project, is the Vercel CLI installed and signed in, and which teams you belong to. Then it picks the best way to deploy, aiming to get you to the setup where every git push deploys on its own. It runs the deploy command, waits for the build and returns the preview link. Production deploys happen only when you explicitly ask. It needs a Vercel account.
+when:
+  - You built an app and want a link to show a friend or client.
+  - You want a preview of changes before they go to the live site.
+  - You are not sure if your project is linked to Vercel yet.
+  - You want to move from manual deploys to deploys on every push.
+you_give:
+  - The project folder
+  - A Vercel account
+  - The team to deploy under, if you have several
+  - A clear yes if you want production (optional)
+you_get:
+  - A live preview link
+  - The project linked to Vercel
+  - A check of git, login and team setup
+  - Next steps for automatic deploys
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

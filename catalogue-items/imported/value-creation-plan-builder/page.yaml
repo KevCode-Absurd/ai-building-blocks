@@ -6,6 +6,25 @@ summary: Give it a company's numbers. Get revenue, cost and operating levers map
 job: plan-strategy
 headline: Value creation plan builder
 subhead: Give it a company's numbers. Get revenue, cost and operating levers mapped to profit, with 100 day priorities.
+explain: |
+  A plan for how a company you just bought will make more profit, with each idea tied to a number and an owner. You get a profit bridge and a clear list of what to do in the first 100 days.
+
+  The skill starts with a baseline: revenue, profit, margins, team and quick wins from the deal review. Then it lists levers in three groups. Revenue levers include pricing, cross-selling, new markets and add-on purchases. Strategic levers include a shift to recurring revenue and stronger management. Each lever gets a start point, target, dollar effect, timing, cost and confidence. They roll into an annual profit bridge, with KPI targets and a named person responsible for each.
+when:
+  - You are closing a deal and need a plan the board will sign off on.
+  - You run a company and want to show lenders how profit will grow.
+  - An operating partner wants the first 100 days laid out.
+  - You need to rank ideas by size, cost and confidence.
+you_give:
+  - Current revenue, profit and margins
+  - Findings from diligence
+  - Team and function notes (optional)
+  - The planned holding period
+you_get:
+  - Levers listed by type with dollar effects
+  - A profit bridge over the hold period
+  - A 100 day priority list
+  - KPI targets with owners
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

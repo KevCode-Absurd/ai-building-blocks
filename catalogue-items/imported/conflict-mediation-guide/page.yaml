@@ -6,6 +6,26 @@ summary: Describe the conflict. Get its likely causes, a mediation plan with gro
 job: hire-people
 headline: Workplace conflict mediation guide
 subhead: Describe the conflict. Get its likely causes, a mediation plan with ground rules and what to say in the talk.
+explain: |
+  A plan for handling a workplace conflict: what is probably behind it, how to run the mediation, and what to say when you sit down with each person. It helps you act early, before the conflict spreads.
+
+  You describe the situation. Claude suggests likely root causes and signs that the dispute is getting worse. It sets out ground rules and a clear structure for the opening, then guides private talks with each person, with active listening and calming steps for tense moments. It says when a neutral outsider is the better choice. It also covers broader needs such as writing a conflict policy, manager training and rebuilding trust afterwards. It does not replace legal or HR advice.
+when:
+  - Two people on your team are no longer speaking.
+  - You must lead a difficult conversation and don't know how to open it.
+  - A conflict looks like it is turning into a complaint.
+  - You are writing a conflict policy for the first time.
+you_give:
+  - A description of the conflict
+  - Who is involved and their roles
+  - What has been tried (optional)
+  - Company policy (optional)
+you_get:
+  - Likely root causes
+  - A mediation plan with ground rules
+  - Opening lines and questions
+  - De-escalation tips
+  - Next steps after the meeting
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

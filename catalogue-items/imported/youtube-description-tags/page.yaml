@@ -6,6 +6,25 @@ summary: Give it your video. Get a description and tags built around the searche
 job: get-found-in-search
 headline: YouTube description and tags writer
 subhead: Give it your video. Get a description and tags built around the searches you want to win.
+explain: |
+  A YouTube description and tag set built around the searches you want the video to win.
+
+  The first two lines get the most attention, since they show above the fold and act as the search snippet, so they say what the video gives in the words a viewer would type. After that come your link or resource, then chapters, then a longer section on what is covered and who it is for. Tags are kept to about fifteen and used only for spellings, tool names and common abbreviations. Before handing anything over, it writes three search queries the video should win and checks the title and snippet contain those words.
+when:
+  - You are about to upload and the description box is empty.
+  - You want an evergreen video to show up in search.
+  - Your tags are a long list of guesses.
+  - You want to check that your title matches what people search.
+you_give:
+  - The video topic or a transcript
+  - The search phrases you hope to rank for (optional)
+  - A link or resource to feature (optional)
+  - Your voice notes (optional)
+you_get:
+  - A description with a strong first two lines
+  - A short, honest tag list
+  - Three target search queries
+  - A check that the title matches them
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

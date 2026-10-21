@@ -6,6 +6,26 @@ summary: Describe your room. Get a layout and materials plan that helps learners
 job: teach-and-train
 headline: Classroom layout redesigner
 subhead: Describe your room. Get a layout and materials plan that helps learners work on their own with calm moves between tasks.
+explain: |
+  A room plan that lets students find materials, work on their own and move between tasks calmly. You describe your room and what goes wrong, and you get a change list in order of cost and effort.
+
+  It works on ideas from Montessori prepared spaces. It looks at where things are stored, whether students can reach what they need without asking, and where traffic jams happen. It plans zones for quiet work, group work and gathering. It suggests low shelves, labelled trays, clear paths and a tidy routine. You can set a budget from zero upward, say what is fixed, and how long you have. It also offers a version that suits a conventional school or a home learning space.
+when:
+  - Students keep asking where things are.
+  - Transitions between tasks are noisy and slow.
+  - You have a tiny budget and need free changes first.
+  - You want to move toward more independent work.
+you_give:
+  - A description of your room
+  - What you want to improve
+  - Budget (optional)
+  - Fixed features of the space (optional)
+  - Age group (optional)
+you_get:
+  - A zoned layout plan
+  - Storage and material access ideas
+  - Ways to calm transitions
+  - Changes ordered by cost and time
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

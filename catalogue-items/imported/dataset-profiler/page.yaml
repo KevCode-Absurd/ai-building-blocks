@@ -6,6 +6,25 @@ summary: Give it a table or file. Get its shape, missing values, odd entries and
 job: track-numbers
 headline: Dataset profiler
 subhead: Give it a table or file. Get its shape, missing values, odd entries and which columns are worth analyzing.
+explain: |
+  Know what is inside a table or file before you analyse it: its size, its gaps and which columns are worth your time. This catches surprises that would otherwise appear in your final numbers.
+
+  The skill reads your file, or a warehouse table, and infers column types. For each column it reports missing rates, distinct values, ranges and common entries. It looks for duplicates, strange values like impossible dates or negative ages, and mixed formats. It also checks how columns relate and points out which are likely useful for analysis and which are mostly empty or constant. You finish with a plain summary and suggested next questions. It works with CSV, Excel, Parquet and JSON files.
+when:
+  - You were just handed a spreadsheet and know nothing about it.
+  - You want to check data quality before building a report.
+  - You are picking which columns to use in a model.
+  - You need to find duplicates and odd entries quickly.
+you_give:
+  - A table name or data file
+  - What you plan to do with it (optional)
+  - Questions you plan to ask (optional)
+  - Sample rows if no file (optional)
+you_get:
+  - Size and column type summary
+  - Missing value and distinct counts
+  - Duplicates and odd value list
+  - Columns worth analysing
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

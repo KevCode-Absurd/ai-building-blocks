@@ -6,6 +6,25 @@ summary: Describe a picture or give one to change. Get new images, variants or t
 job: make-images
 headline: Image maker and editor
 subhead: Describe a picture or give one to change. Get new images, variants or transparent cutouts.
+explain: |
+  New pictures or edits to a picture you already have, saved where your project needs them. Describe what you want, or give a file to change, and get website art, mockups, logos, product shots, variants or transparent-background cutouts.
+
+  By default it uses the built-in image tool, which needs no key. It saves the chosen result into your project folder rather than leaving it in a hidden spot, and it never overwrites an existing file, adding a version number instead. A backup mode runs a command-line script, but only if you ask for it, and that needs an OpenAI API key. Prompt guides and sample prompts are included to help you describe what you want.
+when:
+  - You need a hero image or icon for a website and have no designer.
+  - You want three variations of one picture.
+  - You need a product photo with the background removed.
+  - You want to change part of an image and keep the rest.
+you_give:
+  - A description of the picture
+  - An image to edit (optional)
+  - Where to save it, or the project it is for
+  - An OpenAI API key, only for the backup mode
+you_get:
+  - Generated or edited images
+  - Variants of one idea
+  - Transparent cutouts
+  - Files saved in your project without overwriting old ones
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

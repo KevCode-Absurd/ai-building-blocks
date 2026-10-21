@@ -6,6 +6,25 @@ summary: Give it your price, costs and ad spend. Get your margin per sale and wh
 job: run-your-store
 headline: Online store profit calculator
 subhead: Give it your price, costs and ad spend. Get your margin per sale and whether your cost to win a customer works.
+explain: |
+  Your real profit on each sale, after every cost that eats into it, and whether what you pay to win a customer makes sense. Many sellers see revenue and miss how thin the margin is once ads and fees are in.
+
+  You give your price, product cost, shipping both ways, warehouse fees, card fees and ad spend. The skill adds them up item by item: a card fee of a percentage plus a fixed amount, ads often 20 to 40 percent of sales, return costs, and free shipping if you offer it. It then shows margin per order and compares what a customer is worth over time with what it cost to win them.
+when:
+  - You want to know if a product is worth selling after ads.
+  - Sales are growing but your bank balance is not.
+  - You are setting a price and need to know your break-even.
+  - You want to check if repeat purchases cover your ad cost.
+you_give:
+  - Selling price
+  - Product and shipping costs
+  - Ad spend or cost per customer
+  - Repeat purchase rate (optional)
+you_get:
+  - A cost breakdown per order
+  - Profit margin per sale
+  - Customer lifetime value against acquisition cost
+  - A warning when the numbers do not work
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

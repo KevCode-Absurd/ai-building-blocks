@@ -6,6 +6,26 @@ summary: Describe your sensors. Get the right fusion filter chosen and built to 
 job: build-software
 headline: Inertial sensor fusion builder
 subhead: Describe your sensors. Get the right fusion filter chosen and built to track orientation or position.
+explain: |
+  The right fusion filter chosen and built for your sensors, so you can track orientation or position from accelerometers, gyros, magnetometers and GPS. It is for MATLAB with the Navigation Toolbox.
+
+  The skill asks which sensors you have and at what rates. If your set matches a ready-made one, such as accelerometer plus gyro plus magnetometer, or gyro plus GPS for a ground vehicle, it uses a configured filter. If not, or if rates are mixed or samples drop, it moves to a flexible filter you set up piece by piece. It then guides tuning of noise values. Camera-only or lidar-only mapping and Simulink models are out of scope.
+when:
+  - You have an IMU and need a stable orientation estimate.
+  - You combine GPS with inertial sensors for a vehicle.
+  - Your sensors run at different rates and drop samples.
+  - You do not know which filter fits your sensor mix.
+  - Your estimate drifts and you need to tune the noise settings.
+you_give:
+  - The list of sensors you have
+  - Sample rates and any dropouts
+  - What you want to estimate
+  - Recorded data (optional)
+you_get:
+  - A filter choice with the reason
+  - MATLAB code to build it
+  - Tuning guidance
+  - A way to check the output against truth
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a software subscription contract. Get renewal traps, price rise
 job: check-contracts
 headline: Software subscription terms checker
 subhead: Give it a software subscription contract. Get renewal traps, price rises, uptime and data terms flagged. A first check, not legal advice.
+explain: |
+  A subscription contract can cost far more over three renewals than in year one. Give it a software agreement and it flags the traps: auto-renewal windows, price rises, uptime promises and what happens to your data. It is a first check, not legal advice.
+
+  It runs your standard contract review, then adds checks that matter most for subscriptions: renewal notice periods, caps on price increases, service credits, exit and data return rights, and who handles your data downstream. It warns that rules differ by place, since California, New York and the EU are not the same, and it will not quietly guess to fill gaps.
+when:
+  - A vendor sent a software contract and you must reply before it renews.
+  - You want to know when you can cancel without paying for another year.
+  - You need to confirm what happens to your data if you leave.
+  - Your finance team wants price rise limits written into the deal.
+you_give:
+  - The subscription contract or terms
+  - Your standard terms or playbook (optional)
+  - Where you operate
+  - Your budget or key worries (optional)
+you_get:
+  - Flagged renewal and price traps
+  - Notes on uptime and support terms
+  - Data and exit terms review
+  - Suggested changes to ask for
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

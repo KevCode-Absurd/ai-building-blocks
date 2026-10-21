@@ -6,6 +6,26 @@ summary: Give it a demand letter you got. Get the claims, how strong they look a
 job: check-contracts
 headline: Incoming demand letter reviewer
 subhead: Give it a demand letter you got. Get the claims, how strong they look and your reply options. Not legal advice.
+explain: |
+  A first read of a demand letter you received: what they claim, how strong it looks, and your options for answering. It is a starting point for talking to a lawyer, not legal advice.
+
+  The skill reads the letter and pulls out the sender, the claims, the amounts and the deadline. It checks your matter log for related cases with the same party. It then rates the claim's merit using your own risk settings and gives choices such as ignore, reply, counter, negotiate or escalate, with a recommended one. The result is saved as a triage file. You can then open a case, draft a counter-demand or link it to an existing matter.
+when:
+  - A letter arrived threatening a claim and you need to understand it fast.
+  - You want to see if the sender has contacted you before.
+  - You need a deadline and options before calling a lawyer.
+  - Your team gets many demand letters and needs one method.
+  - You want the letter turned into a case file in one step.
+you_give:
+  - The demand letter file
+  - Your matter log and risk settings, if set up (optional)
+  - Background on the sender (optional)
+you_get:
+  - Extracted claims, amounts and deadline
+  - A check against related matters
+  - A merit rating
+  - Response options with a recommendation
+  - A saved triage note
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

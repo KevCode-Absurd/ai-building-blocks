@@ -6,6 +6,25 @@ summary: Describe your team. Get values written as behaviours, a culture code an
 job: lead-people
 headline: Company values and culture builder
 subhead: Describe your team. Get values written as behaviours, a culture code and a simple health check.
+explain: |
+  Values your team can see in daily behaviour, a short culture code, and a simple way to check how healthy your culture is. A value like transparency means little until it says what people do, for example sharing bad news within a day.
+
+  Claude starts with three questions on mission, vision and values, kept to the point. It asks what your best hires did without being asked, and builds values from that. Each value is rewritten as an action anyone can test. It then looks at what you reward, tolerate and celebrate, since that is your real culture. You also get rituals that fit your size and a short check to repeat each quarter.
+when:
+  - Your values are on a wall but nobody can say what they mean in practice.
+  - You are growing and new hires are not picking up how things work.
+  - You think what you say and what you reward have drifted apart.
+  - You need a culture code for your handbook.
+you_give:
+  - A description of your team and its size
+  - Values you have now (optional)
+  - Examples of great or poor behaviour you have seen
+  - Current rituals and meetings (optional)
+you_get:
+  - Values written as behaviours
+  - A one-page culture code
+  - Rituals to try
+  - A simple culture health check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

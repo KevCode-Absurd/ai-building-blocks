@@ -6,6 +6,26 @@ summary: Give it your roots and target markets. Get business names that stay tru
 job: brand-file
 headline: Origin-true business name picker
 subhead: Give it your roots and target markets. Get business names that stay true to you and still work for buyers.
+explain: |
+  Business names that honour where you come from and still land well with the buyers you want. It catches the trap of a name that is lovely at home but odd, funny or confusing elsewhere.
+
+  First the skill asks if you want new names or a check of ones you have. Then it asks for your origin language and culture, target markets, industry and the feeling you want. For checks, it reads each name as a native speaker, then as a buyer in each target market, looking for unwanted meanings, hard pronunciation and sounds that resemble other words. For new ideas, it suggests names with a short reason for each. Check trademark and domain availability yourself.
+when:
+  - You are naming a brand rooted in your language and want to sell abroad.
+  - You have three name options and need to pick one.
+  - A name worked at home but your first overseas customers looked puzzled.
+  - You want a name that fits a candy brand or a law firm, not both.
+you_give:
+  - Your origin language or culture
+  - Target markets
+  - Business area
+  - Names you already have (optional)
+  - The feeling you want
+you_get:
+  - Name ideas with reasons
+  - Checks of your names for each market
+  - Warnings about odd meanings or sounds
+  - A shortlist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

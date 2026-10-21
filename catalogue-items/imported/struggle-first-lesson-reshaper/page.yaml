@@ -6,6 +6,27 @@ summary: Give it a lesson that starts with the explanation. Get a version where 
 job: teach-and-train
 headline: Struggle-first lesson reshaper
 subhead: Give it a lesson that starts with the explanation. Get a version where students try the problem first.
+explain: |
+  A lesson that opens with a hard problem instead of an explanation, so students meet the gap before you fill it. Students who wrestle with an idea first tend to remember the explanation better.
+
+  You describe the concept and how you teach it today. The skill rebuilds the sequence in two phases. First, a generation phase where students try the problem with what they already know. Then a consolidation phase where you explain and compare their attempts to the right method. It adds safeguards so struggle does not turn into frustration, flags places where students might lean on shortcuts, and gives you prep notes for running it.
+when:
+  - You teach a concept by explaining first and the students forget it a week later.
+  - You want to try a try-first lesson but are unsure how to set up the opening problem.
+  - A topic like standard deviation or ratios keeps confusing the same students.
+  - You need a plan for what to do when students get stuck in the first phase.
+you_give:
+  - The concept you want taught
+  - How you currently teach it
+  - Student age and level (optional)
+  - Time available (optional)
+  - What students already know (optional)
+you_get:
+  - A two-phase lesson sequence
+  - The opening problem for students to attempt
+  - Built-in difficulties that help memory
+  - Safeguards for when students get stuck
+  - Teacher prep notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

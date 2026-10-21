@@ -6,6 +6,24 @@ summary: After any AI explanation, you name one place it could be wrong, one thi
 job: research-topics
 headline: AI answer doubt check
 subhead: After any AI explanation, you name one place it could be wrong, one thing to check and one source to try.
+explain: |
+  A three-question habit that turns any AI answer into a claim to test, not a fact to accept. After the AI explains something, the learner must say where it could be wrong, what they would check, and which source they would use.
+
+  A learning coach prompt runs the step each time. The learner cannot move on until all three are answered in their own words. The coach then helps with the weak spots, such as picking a better source, but does not give the answer. Over weeks the habit sticks: people begin asking "what would prove this wrong?" without being asked. It also teaches leaving the page to see what other sources say about a claim.
+when:
+  - Your students or team take AI answers at face value.
+  - You want a quick routine to use after every AI explanation.
+  - You teach research skills and need a simple, repeatable step.
+  - You want people to practise checking a claim against a second source.
+you_give:
+  - The learner's name or group (optional)
+  - The AI answer or topic being studied
+  - The age or level of the learner (optional)
+you_get:
+  - A coach prompt that asks the three questions
+  - Feedback on the learner's checks
+  - Tips for choosing a better source
+  - A routine that can run after every AI answer
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

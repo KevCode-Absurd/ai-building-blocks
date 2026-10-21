@@ -6,6 +6,25 @@ summary: Describe the scans you need. Get public cancer images found, licence-ch
 job: research-topics
 headline: Cancer imaging data finder
 subhead: Describe the scans you need. Get public cancer images found, licence-checked and ready to download.
+explain: |
+  A short list of public cancer scans that fit your project, with licences checked and download steps ready. Describe the cancer type, scan type or collection you need, and the skill searches the National Cancer Institute's Imaging Data Commons.
+
+  It picks the cheapest way to search first: the connected server if you have one, otherwise a local index it can check for freshness. It filters by body part, scan type, collection and clinical data, reads each collection's licence and citation, and then gives you commands to fetch files from public cloud storage. No account is needed for public data. Some options need Google Cloud sign-in.
+when:
+  - You need CT or MRI scans of a certain cancer to train or test a model.
+  - You want to know which collections allow reuse before you build on them.
+  - You need to cite the data source properly in a paper.
+  - You have a patient or study ID and want the matching images.
+you_give:
+  - The cancer type, scan type or collection you need
+  - Any filters such as body part or number of cases
+  - Disk space and a computer with internet access
+  - Python to run the search (optional)
+you_get:
+  - A list of matching public collections and series
+  - Licence and citation details
+  - Download commands for the files
+  - Notes on which access path to use
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

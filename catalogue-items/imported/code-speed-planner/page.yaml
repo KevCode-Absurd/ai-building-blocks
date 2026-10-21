@@ -6,6 +6,24 @@ summary: Before it writes loops or queries, it states the best approach and cost
 job: build-software
 headline: Code speed planner
 subhead: Before it writes loops or queries, it states the best approach and cost. Get code that avoids slow patterns.
+explain: |
+  Code that avoids slow patterns from the start. Before it writes a loop or a query, it states the best approach and what it will cost, so O(n squared) work and N+1 queries do not reach production.
+
+  It acts as a gate for anything that touches many items: loops inside loops, a search inside a loop, an await inside a map over independent items, or one query per row. For each, it names a better structure, like a hash lookup, a sort once, a batch or a join. It can also audit existing code or a pull request for these known traps, including AI-written code that looks neat but hides slow steps.
+when:
+  - A page gets slower as your data grows.
+  - Your code runs one database query per item.
+  - You are reviewing code that has a loop inside a loop.
+  - You want speed checked before code is written.
+you_give:
+  - The task or the code to review
+  - Typical data size (optional)
+  - The language and database (optional)
+you_get:
+  - The best approach with its cost
+  - Slow patterns found
+  - Faster replacements
+  - Code that avoids those patterns
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

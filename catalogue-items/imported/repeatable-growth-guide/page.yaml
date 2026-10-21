@@ -6,6 +6,26 @@ summary: Describe your business. Get a growth plan with a forecast, built step b
 job: plan-strategy
 headline: Repeatable growth guide
 subhead: Describe your business. Get a growth plan with a forecast, built step by step from your marketing to your numbers.
+explain: |
+  A growth plan and forecast for a business whose good months happened by luck, built one phase at a time. Each phase produces a document that the next phase uses.
+
+  It works through nine areas in a fixed order: pick a niche and marketing plan, sharpen the offer, build a pipeline, add word of mouth, improve the sales page, cross to mainstream buyers, use network effects, track the one key number, and negotiate to keep value. The offer comes before channels because sending traffic to a weak offer wastes money. A tracker file records progress, so you can stop and resume another day.
+when:
+  - Your revenue swings from month to month and you cannot say why.
+  - A conference or referral gave you a great month and you cannot repeat it.
+  - You have a product people pay for but no steady way to find buyers.
+  - You need a growth forecast you can defend.
+you_give:
+  - Description of your business and customers
+  - Current revenue and sales figures
+  - Offer and pricing details (optional)
+  - Time to work through each phase
+you_get:
+  - Marketing plan document
+  - Sharper offer document
+  - Strategy and customer notes
+  - Metrics plan with one key number
+  - Growth forecast
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

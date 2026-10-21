@@ -6,6 +6,26 @@ summary: Name two or more discount codes. Get redemption and revenue side by sid
 job: run-your-store
 headline: Discount code comparer
 subhead: Name two or more discount codes. Get redemption and revenue side by side, so you know which one earned more.
+explain: |
+  A side-by-side look at two or more Shopify discount codes, showing how often each was used and how much revenue each brought in. You find out which offer really earned its place.
+
+  Give it the store domain, the codes to compare and a date range. The skill reads each code's details, such as status and dates, then pulls every order that used it in that period. It adds up redemptions and revenue per code and sets the results next to each other. It only reads data and changes nothing in the store. It needs a signed-in Shopify CLI session with permission to read discounts and orders. Results can be shown as a readable table or as JSON.
+when:
+  - You ran SAVE10 and WELCOME15 and want to know which one worked better.
+  - You are choosing which promotion to repeat next month.
+  - A partner code needs to be compared with your own.
+  - You want numbers to settle an argument about a discount.
+you_give:
+  - Your Shopify store domain
+  - Two or more discount codes
+  - Start and end dates
+  - A signed-in Shopify CLI with read access
+  - "Output format: table or JSON (optional)"
+you_get:
+  - Redemption counts per code
+  - Revenue per code
+  - A side-by-side comparison
+  - A note on which code performed best
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

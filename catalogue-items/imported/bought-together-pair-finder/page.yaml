@@ -6,6 +6,25 @@ summary: Get the products customers most often buy together, ranked, to build bu
 job: make-offer
 headline: Bought-together pair finder
 subhead: Get the products customers most often buy together, ranked, to build bundles and cross-sell offers.
+explain: |
+  Find which products your customers really buy together, ranked by strength, so you can build bundles and cross-sell offers on evidence. It reads your Shopify order history for a date range you choose.
+
+  For every pair that appears in orders, it works out three numbers. Support is how often the pair shows up. Confidence is how likely a buyer of A also takes B. Lift is how much more likely that is than chance. You set minimum values so weak pairs are dropped. It needs a logged-in Shopify CLI session with order and product read access, and has a preview option.
+when:
+  - You want to build bundles from real buying patterns.
+  - You need a frequently-bought-together section on product pages.
+  - You are planning cross-sell emails after a purchase.
+  - You want to see which pairs are just popular items, not true links.
+you_give:
+  - Your store domain
+  - A start and end date
+  - Minimum support, confidence and lift (optional)
+  - A logged-in Shopify CLI session
+you_get:
+  - Ranked product pairs
+  - Support, confidence and lift for each
+  - A readable or JSON report
+  - Bundle and cross-sell ideas
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

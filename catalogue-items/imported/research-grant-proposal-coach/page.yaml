@@ -6,6 +6,26 @@ summary: Name the funder and your idea. Get aims, a compliance checklist, a budg
 job: research-topics
 headline: Research grant proposal coach
 subhead: Name the funder and your idea. Get aims, a compliance checklist, a budget outline and a critique of your draft.
+explain: |
+  A grant application taking shape: aims, a checklist of the funder's rules, a budget outline and a critique of your draft. You find gaps before reviewers do.
+
+  It starts by confirming the exact funding call, because each funder has its own rules and review criteria. It covers NSF, NIH, DOE, DARPA and Taiwan's NSTC. It then helps with specific aims, project narrative, broader impact, timelines and budget reasoning. It scores your draft against that funder's criteria and helps you answer reviewer comments on a resubmission. It can look up current opportunities online, or work from official documents you provide.
+when:
+  - You have a research idea and a deadline for a federal grant.
+  - Your first application was rejected and you must resubmit.
+  - You are unsure what the funder requires in each section.
+  - You need a budget justification that matches your plan.
+you_give:
+  - Funder and call name
+  - Your research idea
+  - Draft sections (optional)
+  - Reviewer comments (optional)
+  - Team and budget details (optional)
+you_get:
+  - Draft specific aims
+  - Compliance checklist
+  - Budget outline
+  - Critique against review criteria
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

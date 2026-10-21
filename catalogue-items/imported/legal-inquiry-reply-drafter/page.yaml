@@ -6,6 +6,25 @@ summary: Name the request, such as a data access request. Get a draft reply and 
 job: check-contracts
 headline: Legal inquiry reply drafter
 subhead: Name the request, such as a data access request. Get a draft reply and a flag when a lawyer must review.
+explain: |
+  A first draft of the reply to a common legal request, with a clear signal when a lawyer must look before it goes out. Name the request type: data subject request, discovery hold, vendor question, NDA request, privacy question, subpoena or insurance notice. The skill finds your saved template for that type, fills in the details and adds escalation triggers.
+
+  If the type is unclear, it asks and shows the options. You can also use your own template. It saves time on repeat requests while keeping the sensitive ones in front of the right person. Replies are drafts only and not legal advice, so a qualified person should check them.
+when:
+  - Someone has asked to see or delete their personal data.
+  - A business team wants an NDA and keeps asking the same questions.
+  - A vendor sent a legal question your team answers often.
+  - A subpoena arrived and you need a prompt, correct first reply.
+you_give:
+  - The type of request
+  - The request itself or its details
+  - Your reply templates (optional)
+  - Facts specific to this case
+you_get:
+  - A draft reply
+  - Details filled into your template
+  - Escalation flags
+  - A note on what a lawyer must check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

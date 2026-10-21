@@ -6,6 +6,26 @@ summary: Give it your offer and reader. Get landing page or email copy with clea
 job: write-landing-page
 headline: Honest conversion copywriter
 subhead: Give it your offer and reader. Get landing page or email copy with clear next steps and no made-up claims.
+explain: |
+  Landing page or email copy that gets a click and does not invent anything. Before writing, the skill makes you confirm a brief: the page's one job, the audience, the offer and the context. It will not start until you agree. That stops guessing.
+
+  It then writes in plain, direct language with one clear next step. Every claim must come from facts you gave it. If a number, testimonial or result is missing, it is left out or marked for you to fill in, never made up. It follows a page structure, from the top section through proof, objections and the closing ask, with alternative headlines and calls to action.
+when:
+  - You need a landing page and only have notes on the product.
+  - Past AI copy invented stats or customers you could not prove.
+  - You are writing a launch or sales email.
+  - You want a clear call to action and a few versions to test.
+you_give:
+  - The page's single goal
+  - Who the reader is
+  - Your offer and real facts about it
+  - Proof you actually have, such as numbers or quotes
+  - Brand voice (optional)
+you_get:
+  - A confirmed copy brief
+  - Page or email copy built on your facts
+  - Alternative headlines and calls to action
+  - Notes and ideas to test
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

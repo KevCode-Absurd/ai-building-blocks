@@ -6,6 +6,24 @@ summary: Give it messy data. Get spacing, text numbers, dates and duplicates fix
 job: work-with-files
 headline: Messy spreadsheet cleaner
 subhead: Give it messy data. Get spacing, text numbers, dates and duplicates fixed, with mixed columns flagged.
+explain: |
+  A spreadsheet where the spaces, text-numbers, dates and duplicate rows are fixed, and any column that mixes types is flagged for you to decide. Point it at a sheet or a range and it does the sweep.
+
+  It first profiles each column to find the main type and the odd ones out. Then it hunts for the usual mess: extra spaces, mixed upper and lower case such as usa and USA, numbers stored as text with stray symbols, dates in several formats, and exact or near-duplicate rows. Fixes go through helper-column formulas in the .xlsx file, so the original stays visible. It follows Indian number and fiscal-year conventions.
+when:
+  - You pasted a CSV into Excel and the numbers will not add up.
+  - A date column mixes 3/8/26 and March 8 2026.
+  - You have a customer list with repeated rows that differ only by spacing.
+  - Category names appear in three different spellings.
+you_give:
+  - An .xlsx file
+  - A cell range to clean (optional)
+  - Which columns matter most (optional)
+you_get:
+  - A cleaned sheet with fixes in helper columns
+  - Dates and numbers in one format
+  - Duplicates marked or removed
+  - A list of columns with mixed types to review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

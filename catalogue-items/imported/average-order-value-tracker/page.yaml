@@ -6,6 +6,25 @@ summary: Pick a time range. Get average order value over time, split into new an
 job: run-your-store
 headline: Average order value tracker
 subhead: Pick a time range. Get average order value over time, split into new and returning customers.
+explain: |
+  A trend of average order value for your Shopify store, split into new and returning customers. Pick a look-back window, such as 90 days, and a bucket size of day, week or month, and see whether orders are getting bigger or smaller.
+
+  The skill reads orders and customer data through the Shopify command line tool, works out the average for each period, and separates first-time buyers from repeat ones using each customer's order count. It only reads. It never changes anything in your store. You must sign in to Shopify CLI with read access to orders and customers. Results come back as a readable table or as JSON.
+when:
+  - You ran a bundle offer and want to see if order size went up.
+  - You suspect repeat customers spend more than new ones.
+  - You need an AOV trend line for a monthly report.
+  - You want to check how a price change affected basket size.
+you_give:
+  - Your store domain
+  - A look-back period in days
+  - Day, week or month buckets
+  - Shopify CLI sign-in with order and customer read access
+you_get:
+  - AOV for each period
+  - New versus returning customer split
+  - The trend over time
+  - Output as a table or JSON
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

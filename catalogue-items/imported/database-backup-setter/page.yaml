@@ -6,6 +6,25 @@ summary: Name your database. Get full, incremental and point-in-time backups set
 job: ship-and-host
 headline: Database backup setter
 subhead: Name your database. Get full, incremental and point-in-time backups set up and tested.
+explain: |
+  Backups that run on a schedule, get verified, and actually restore. A backup nobody has tested is a guess, so this skill builds in the test.
+
+  You name the database, its size, how much data you can afford to lose and how long you can be down. The skill picks full, incremental or point-in-time backups to match. It writes shell scripts for PostgreSQL, MySQL or MongoDB using pg_dump, mysqldump or mongodump, with compression, optional encryption, dated file names and error handling. It sets the schedule and a retention rule such as 7 daily and 4 weekly, checks file integrity, runs a test restore in staging, and sets alerts for missed runs.
+when:
+  - Your app has no tested backups and you want some.
+  - You need to restore to a moment just before a bad change.
+  - Backup files are piling up and need a cleanup rule.
+  - You want an alert when a nightly backup fails.
+you_give:
+  - Database type and size
+  - Acceptable data loss window
+  - Acceptable downtime
+  - Where to store backups
+you_get:
+  - Backup scripts
+  - Schedule and retention rule
+  - Integrity check and restore test
+  - Failure alert setup
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

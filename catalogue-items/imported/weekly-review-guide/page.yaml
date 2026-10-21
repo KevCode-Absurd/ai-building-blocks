@@ -6,6 +6,26 @@ summary: Run it each week. Get open loops closed, stalled projects found and a c
 job: organise-work
 headline: Weekly review guide
 subhead: Run it each week. Get open loops closed, stalled projects found and a clear plan for next week.
+explain: |
+  A weekly review that ends with your open loops closed and next week planned. It refuses to call the review done until the required steps are accounted for.
+
+  It follows the Getting Things Done loop in three phases. First, get clear: collect loose inputs, empty every inbox and dump what is on your mind. Then get current: check next actions, last and coming calendar weeks, and the waiting-for list. Finally, get creative: review projects and the someday list. Before you answer anything from memory, a small script scans your notes folder for unchecked boxes, TODO markers and stale files, so the review starts from evidence.
+when:
+  - Your task lists have grown stale and you no longer trust them.
+  - You want a fixed Friday routine to close the week.
+  - Projects have stalled and you cannot tell which ones.
+  - Your notes folder is full of half-finished items.
+you_give:
+  - Your notes folder or task lists
+  - Calendar for last and next week
+  - Your waiting-for list
+  - Stale threshold in days (optional)
+you_get:
+  - Inventory of open loops
+  - Each loop sorted to a list
+  - Stalled projects flagged
+  - Waiting-for follow-ups
+  - Plan for next week
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

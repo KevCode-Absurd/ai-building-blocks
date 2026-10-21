@@ -6,6 +6,25 @@ summary: Give it your plans. Get a roadmap story, release notes or changelog wri
 job: build-product
 headline: Roadmap update writer
 subhead: Give it your plans. Get a roadmap story, release notes or changelog written for executives, engineers or customers.
+explain: |
+  One set of plans can sound wrong when it reaches the wrong reader. Here you turn your roadmap into a story that fits who is reading it: a board, an engineering team or your customers.
+
+  First you pick a format. Now, Next, Later suits uncertain plans. A timeline suits fixed dates. A theme roadmap groups work by problem. Then the update is framed for the audience. Executives get outcomes, risks and decisions needed. Engineers get scope, order and blockers. Customers get what is live now and what is coming. It also writes release notes in user terms or internal terms, builds a changelog from git history, and checks every piece against a short quality list.
+when:
+  - You must brief the board and the engineering team on the same plan, and they need different things.
+  - A release is going out and you need notes your customers will actually read.
+  - You have a long git history and need a clean changelog from it.
+  - You are announcing a new feature and want a clear order for the message.
+you_give:
+  - Your plans, initiatives or feature list
+  - "The audience: executives, engineers or customers"
+  - Release date or version range (optional)
+  - Git history for a changelog (optional)
+you_get:
+  - A roadmap story in the format that fits
+  - An update written for your chosen audience
+  - User-facing or internal release notes
+  - A changelog grouped by type of change
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

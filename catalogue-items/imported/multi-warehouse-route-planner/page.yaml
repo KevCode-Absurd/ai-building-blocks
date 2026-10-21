@@ -6,6 +6,27 @@ summary: Give it your warehouses and stops. Get which warehouse serves each stop
 job: plan-supply-chain
 headline: Multi-warehouse route planner
 subhead: Give it your warehouses and stops. Get which warehouse serves each stop and the route for every truck.
+explain: |
+  A decision on which warehouse serves each customer and the best truck routes out of every depot, to cut total distribution cost.
+
+  The skill treats it as a multi-depot routing problem, which has two linked choices: who is assigned to which depot, and how each truck loops. It first asks about your depots, their capacity and fixed costs, whether trucks return to their own depot, and how many customers you serve. Size decides the method: exact solving for small cases, smart heuristics for medium ones and metaheuristics for large. It can balance workload between depots or minimize the longest route.
+when:
+  - You have three warehouses and customers that could be served by any of them.
+  - Trucks from two depots overlap in the same areas.
+  - You are deciding whether to close or add a depot.
+  - Some depots are overloaded while others sit idle.
+you_give:
+  - Depot locations and capacities
+  - Customer locations and demand
+  - Number of trucks per depot
+  - Your goal, such as least miles or balanced loads
+  - Time windows (optional)
+you_get:
+  - A depot assignment for each customer
+  - A route for each truck
+  - Total distance and cost
+  - Workload by depot
+  - A method matched to your size
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

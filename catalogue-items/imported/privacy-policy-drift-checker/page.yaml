@@ -6,6 +6,25 @@ summary: Describe a data plan. Get where your privacy policy no longer matches, 
 job: check-contracts
 headline: Privacy policy drift checker
 subhead: Describe a data plan. Get where your privacy policy no longer matches, with fix wording. Not legal advice.
+explain: |
+  Find the places where your privacy policy no longer matches what your team actually does, with fix wording ready. It is a first check, not legal advice.
+
+  It has two modes. In sweep mode it reads approved assessments, vendor reviews and triage results saved since the last check and compares them with your policy. In direct mode you describe a plan, such as a new tracking tool, and it checks whether the policy covers it. Each gap is marked as required, because the policy misstates practice, or advisable, because it is silent. You get the quote, the gap, suggested language and timing.
+when:
+  - Your team started using a new analytics vendor.
+  - You want a regular check of policy against practice.
+  - Someone proposes collecting a new type of data.
+  - A privacy review found a mismatch you need to fix.
+you_give:
+  - Your current privacy policy
+  - Description of the new practice
+  - Saved assessments and reviews (optional)
+  - Date of last check (optional)
+you_get:
+  - Covered, missing or conflicting verdict
+  - Quote of the policy at issue
+  - Suggested replacement wording
+  - Timing advice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

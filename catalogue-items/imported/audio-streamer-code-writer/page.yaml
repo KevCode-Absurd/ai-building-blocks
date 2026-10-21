@@ -6,6 +6,25 @@ summary: Say what to play or record. Get modern MATLAB audio code, not the old m
 job: build-software
 headline: Audio streamer code writer
 subhead: Say what to play or record. Get modern MATLAB audio code, not the old methods.
+explain: |
+  MATLAB code for playing and recording sound that uses the newer audiostreamer object instead of the older device writer and reader classes. Without this guidance, AI tends to write the old style, which has fewer features.
+
+  Tell it what you want to play or record, and it sets up the device, the settings that must be set before streaming starts, callbacks, play and record methods, full-duplex use for loopback tests, transport controls, and device listing. It also tells you when not to use it, such as for a one-off short clip, code generation or Simulink. It needs a recent release of MATLAB with Audio Toolbox.
+when:
+  - You want to play a sequence of sounds through a sound card.
+  - You need to record from an audio interface while playing a test tone.
+  - Your AI keeps writing old audioDeviceWriter code.
+  - You have to list the audio devices on a machine and pick one.
+you_give:
+  - What to play or record
+  - Your device or interface (optional)
+  - Sample rate and channel needs
+  - Your MATLAB release
+you_get:
+  - Working audiostreamer code
+  - Device selection code
+  - Playback, recording or full-duplex setup
+  - Notes on when to use older tools
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

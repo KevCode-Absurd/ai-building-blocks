@@ -6,6 +6,27 @@ summary: Name your business goal. Get a main page and supporting articles, ranke
 job: get-found-in-search
 headline: Topic cluster mapper
 subhead: Name your business goal. Get a main page and supporting articles, ranked by what to write first.
+explain: |
+  A content plan built around one main page and a set of supporting articles that link to it, so search engines see you as an authority on the subject. It also tells you what to write first.
+
+  You give the topic, main keyword, audience, content you already have and what readers should do next. The skill designs a pillar page with a title, intent and length target, then 5 to 10 cluster articles, each with its own search intent and keyword. It skips near-duplicates to hit a number. Each article gets a role in the link structure and a place in a publishing order, so you start with the pieces most likely to win.
+when:
+  - You want to rank for a subject, not just one keyword.
+  - You have a blog with random posts and no plan.
+  - You are launching a new site and need the first articles.
+  - You need to show a writer what to produce and in what order.
+you_give:
+  - Main topic and keyword
+  - Your audience
+  - Existing pages and posts (optional)
+  - Extra keywords (optional)
+  - What readers should do after reading
+you_get:
+  - A pillar page outline
+  - A list of cluster articles with keywords
+  - Search intent for each
+  - An internal linking plan
+  - A publish order
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

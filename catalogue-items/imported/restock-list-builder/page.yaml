@@ -6,6 +6,24 @@ summary: Get every product below your stock limit, grouped by supplier, as a lis
 job: run-your-store
 headline: Restock list builder
 subhead: Get every product below your stock limit, grouped by supplier, as a list ready to order from.
+explain: |
+  A reorder list of every product that has dropped below your stock limit, grouped by supplier, so you can send one order per vendor instead of hunting through your admin. It reads live counts from your Shopify store and changes nothing.
+
+  You set the limit, with 10 units as the default, and can narrow it to one location. The skill pulls tracked variants at or under that number, pages through all of them, and includes zero stock unless you turn that off. It then sorts by vendor and writes out the product, variant, SKU and count. You need a Shopify login with permission to read products and inventory.
+when:
+  - It is Monday and you need to know what to reorder this week.
+  - You are tired of exporting inventory screens and sorting them by hand.
+  - You want one purchase order per supplier.
+  - Items keep selling out and you want a regular low-stock check.
+you_give:
+  - Your Shopify store address
+  - A stock limit (default 10)
+  - A specific location to check (optional)
+  - Whether to include zero-stock items (optional)
+you_get:
+  - Low-stock variants listed by supplier
+  - Product, SKU and current count for each
+  - A file you can order from
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

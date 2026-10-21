@@ -6,6 +6,25 @@ summary: Give it your product and rivals. Get several ways to stand apart, each 
 job: plan-strategy
 headline: Positioning idea generator
 subhead: Give it your product and rivals. Get several ways to stand apart, each with a positioning statement and a reason.
+explain: |
+  Five different ways to position your product, each one aimed at a gap your rivals leave open. Every idea comes with a positioning statement and the reasoning behind it.
+
+  First the skill lists your top five competitors and notes how each presents itself, who it targets and what it stresses. Then it looks for what they ignore or downplay. From those gaps it generates five distinct angles that suit the people you want to reach and highlight strengths competitors skip. You can pick one to develop or combine parts. It works for new launches and for repositioning an older product.
+when:
+  - Your product sounds just like three competitors.
+  - You are about to write a new homepage headline.
+  - You want to test which angle fits a new audience.
+  - A rival changed its message and you need to respond.
+you_give:
+  - Product description
+  - Target audience
+  - Names of competitors (optional)
+  - Market or category
+you_get:
+  - Summary of competitor positions
+  - Five positioning ideas
+  - A positioning statement for each
+  - Reasoning on the gap each one claims
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

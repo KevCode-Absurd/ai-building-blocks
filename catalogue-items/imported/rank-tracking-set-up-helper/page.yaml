@@ -6,6 +6,25 @@ summary: Connect Ahrefs. Get the keywords worth tracking, grouped by purpose, wi
 job: get-found-in-search
 headline: Rank tracking set-up helper
 subhead: Connect Ahrefs. Get the keywords worth tracking, grouped by purpose, with baselines, alert limits and a reporting routine.
+explain: |
+  A rank tracking setup you can start using today. It picks the keywords worth watching, groups them by purpose, records where you stand now, and sets the points at which you should be alerted.
+
+  It connects to Ahrefs and takes your site, market and language. Keywords are split into groups, such as money terms, content that brings readers, and brand names. Each group gets a different alert limit, because a small move on a brand term matters less than a drop on a sales term. It stores a baseline so later changes mean something. It ends with a reporting routine for your team. An Ahrefs account and connection are needed.
+when:
+  - You are launching a site and want to track the terms that matter.
+  - You need a before picture ahead of a big site change.
+  - Your tracked list has grown stale and bloated.
+  - Your boss wants a ranking report they can follow each month.
+you_give:
+  - Site address
+  - Target market and language
+  - Ahrefs connection
+  - Key products or topics (optional)
+you_get:
+  - Keyword list grouped by purpose
+  - Baseline positions
+  - Alert limits per group
+  - Reporting routine
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Share your startup details. Get pitch scripts from one minute to ten, p
 job: speak-and-persuade
 headline: Investor pitch scriptwriter
 subhead: Share your startup details. Get pitch scripts from one minute to ten, plus likely investor questions and answers.
+explain: |
+  Pitch scripts for every slot you might get, from a one-minute hook to a ten-minute walk-through. Share your startup details. The skill asks a short round of questions, checks for earlier work such as a business brief or lean canvas, then researches the investors you are targeting and how competitors present themselves.
+
+  It builds the pitch on a seven-part structure with a problem, solution and insight base. Three rules guide it: clarity over polish, lead with what impresses, and make investors talk. You also get the questions investors are likely to ask, with prepared answers, and a rehearsal pass. A full run takes around fifteen to twenty minutes in Claude Code.
+when:
+  - You have a demo day slot and no script yet.
+  - You need a thirty-second version for a chance meeting.
+  - Your pitch buries your best traction on slide eight.
+  - You want to prepare answers for the questions investors always ask.
+you_give:
+  - What your startup does and who it serves
+  - Traction, team and funding ask
+  - Your target investors (optional)
+  - Earlier work such as a lean canvas or market notes (optional)
+you_get:
+  - Pitch scripts in several lengths
+  - A pitch narrative that leads with your strongest signal
+  - Likely investor questions with answers
+  - A rehearsal guide
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

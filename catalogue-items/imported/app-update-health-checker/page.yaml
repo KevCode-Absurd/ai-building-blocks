@@ -6,6 +6,25 @@ summary: Name your Expo app. Get crash rates, installs and update sizes for each
 job: ship-and-host
 headline: App update health checker
 subhead: Name your Expo app. Get crash rates, installs and update sizes for each published update.
+explain: |
+  A clear read on whether your latest Expo app update is healthy: crash rate, launches, unique users and bundle size, for each published update. You can answer is the new release crashing more than the last one in minutes.
+
+  The skill uses the Expo command line tool, so it needs to be installed and signed in. It lists recent update groups, then pulls per-platform launches, failed launches, crash rate and daily numbers for the one you pick. For a channel and runtime, it shows how many users run the embedded build and how many run over-the-air updates, and which updates are most popular. It reports totals only. It cannot show a single user's crash or device detail.
+when:
+  - You just pushed an update and want to know if it is crashing.
+  - You need to compare two releases quickly.
+  - You want to know how many users still run the old build.
+  - You want to check bundle size before the next push.
+you_give:
+  - Your Expo app or project folder
+  - The update or channel to check
+  - Runtime version (optional)
+  - An Expo login
+you_get:
+  - Crash and failed launch rates
+  - Launch and unique user counts
+  - Embedded and over-the-air user split
+  - Most popular updates and payload size
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

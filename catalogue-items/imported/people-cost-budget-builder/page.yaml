@@ -6,6 +6,25 @@ summary: Give it your headcount plan. Get a budget by team, a month-by-month vie
 job: hire-people
 headline: People cost budget builder
 subhead: Give it your headcount plan. Get a budget by team, a month-by-month view and notes to explain gaps to finance.
+explain: |
+  A people budget finance will accept: headcount costs by team and cost centre, spread month by month, with notes that explain every gap. It puts HR in the same financial language as finance.
+
+  The skill models base pay, benefits and planned hires, keeping approved and not-yet-approved roles apart. It sets assumptions for merit increase, attrition and backfill timing, allocates shared costs such as learning or recruiting across cost centres, and tracks actuals against budget each month to flag risk early. It can build scenarios for mid-year hiring changes or a reorganisation, and draft the narrative for an executive review.
+when:
+  - You are building next year's headcount budget by team.
+  - A reorg changes the hiring plan and you need the cost impact.
+  - Finance asks why actual people spend differs from budget.
+  - You need to share recruiting and training costs across teams.
+you_give:
+  - Headcount plan with roles and start dates
+  - Pay and benefit rates
+  - Assumptions such as merit and attrition
+  - Actual spend to date (optional)
+you_get:
+  - A budget by team and cost centre
+  - A month-by-month spend view
+  - Variance notes against actuals
+  - A narrative for finance review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

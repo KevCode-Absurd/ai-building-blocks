@@ -6,6 +6,25 @@ summary: Name a deal. Get the people in it, their influence and mood, who is mis
 job: sell-and-negotiate
 headline: Deal stakeholder mapper
 subhead: Name a deal. Get the people in it, their influence and mood, who is missing and how to reach them.
+explain: |
+  Find out who really decides, and who you have never spoken to. You get a map of the people in a deal with their role, influence, mood and how strong your relationship is, plus the gaps and the shortest route to the people you are missing.
+
+  It compares contact roles in your CRM with proof: who replied to emails, who joined meetings, who spoke on calls and what stance they took. Each person on the map shows where that evidence came from. It checks the result against the roles a close needs, such as champion and economic buyer, and flags which are empty. Colleagues who know someone there are noted as paths in.
+when:
+  - You have one contact at an account and the deal is stalling.
+  - You are not sure who signs the contract.
+  - A champion leaves and you need to know who else supports you.
+  - You are handing a deal over and want the people map in one place.
+you_give:
+  - Deal or account name
+  - CRM contacts or pasted attendee lists
+  - Emails, calendar or call notes (optional)
+  - Roles you need for a close (optional)
+you_get:
+  - Stakeholder map with role and influence
+  - Mood and relationship strength per person
+  - Missing roles
+  - Suggested routes to reach them
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

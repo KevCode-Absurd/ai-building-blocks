@@ -6,6 +6,24 @@ summary: Ask a customer question. Get an answer found across your docs, past tic
 job: help-customers
 headline: Customer question researcher
 subhead: Ask a customer question. Get an answer found across your docs, past tickets and chats, with each source named.
+explain: |
+  A customer asks something and you need a reliable answer fast. Ask here and it searches across your docs, past tickets, chats and other connected sources, then gives one answer with each source named.
+
+  It first decides what type of question it is: a customer question, a known issue, history with one account, or a general topic. Then it searches in tiers of sources and cross-checks instead of stopping at the first hit. It gives a confidence level and marks where sources disagree or nothing was found. It also checks who the answer is for, since an internal note reads differently from a customer reply.
+when:
+  - A customer asks if you support a tool and you are not sure.
+  - You want to know if a bug was reported before and what the workaround was.
+  - You need to check what you told an account last time.
+  - Support needs background on a topic before replying.
+you_give:
+  - The question or topic
+  - The account name, if relevant (optional)
+  - Connected docs, ticket or chat tools
+you_get:
+  - A single answer with sources
+  - A confidence rating
+  - Conflicts and gaps called out
+  - Suggested next steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Forward a customer email. Get order status checked and a reply in your 
 job: help-customers
 headline: Customer reply and order checker
 subhead: Forward a customer email. Get order status checked and a reply in your voice. Refunds only on your yes.
+explain: |
+  Forward a customer email and get back a reply in your own voice, with the facts already checked. It pulls order and payment status, account history and open tickets before it writes.
+
+  It reads the email for the customer, order number and the real issue, then checks your payments tool (PayPal, Square or Stripe) or Shopify, your CRM and your support desk. It checks your return policy and drafts within it. If a refund is needed, it sets out the details and waits for your yes before anything is issued. With Shopify connected it can also scan for orders that need attention, such as late shipments or payment problems. It works from pasted text alone.
+when:
+  - A customer asks where their order is.
+  - Someone asks for a refund and you need to check the facts first.
+  - You want a reply that sounds like you, not a template.
+  - You want to spot problem orders before customers complain.
+you_give:
+  - The customer email, forwarded or pasted
+  - Your writing samples or tone notes (optional)
+  - Payment, Shopify, CRM or support connections (optional)
+  - Your refund policy
+you_get:
+  - Order and payment status
+  - A draft reply in your voice
+  - A staged refund waiting for your approval
+  - A list of orders needing attention (with Shopify)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

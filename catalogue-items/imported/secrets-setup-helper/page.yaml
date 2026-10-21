@@ -6,6 +6,25 @@ summary: Name your pipeline and secret store. Get a safe plan for storing, readi
 job: secure-code
 headline: Secrets setup helper
 subhead: Name your pipeline and secret store. Get a safe plan for storing, reading and rotating secrets.
+explain: |
+  A safe plan for how your pipeline stores, reads and changes secrets, without printing a single value. You name the secrets, who owns them, what uses them and which store you have, such as Vault, a cloud secret manager or GitHub Actions.
+
+  It picks the supported backend and keeps environments apart with minimum access. It prefers short-lived identities over stored keys, and keeps pull request checks apart from privileged jobs. Rotation follows four steps: prepare, switch the consumer, verify, revoke the old key. It then tests with fake secret markers in logs and error output, and tries denied access and failed rotation in staging.
+when:
+  - Your deploy job needs a database password and you want it handled safely.
+  - You are setting up GitHub Actions secrets and want public pull requests kept away from them.
+  - You need a rotation plan that will not leave the app and store out of sync.
+  - A key showed up in a log and you need to know what to revoke.
+you_give:
+  - Names and owners of the secrets
+  - What uses each secret
+  - Your secret store or CI system
+  - Your rotation and recovery rules
+you_get:
+  - A retrieval and access design
+  - A rotation sequence with rollback
+  - Log and artifact leak checks
+  - A test list for denied and failed cases
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

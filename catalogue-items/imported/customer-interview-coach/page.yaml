@@ -6,6 +6,24 @@ summary: Describe your idea. Get questions that draw honest answers from custome
 job: understand-customers
 headline: Customer interview coach
 subhead: Describe your idea. Get questions that draw honest answers from customers and a way to spot polite lies. Uses The Mom Test.
+explain: |
+  Friends and customers tell you your idea is great, then never buy. This gives you interview questions that get honest answers, and a way to spot polite lies. It is based on The Mom Test.
+
+  The method has three rules: ask about their life and not your idea, ask about specific things that happened in the past, and talk less than they do. A good question could prove your idea wrong. It scores your plan or a past conversation out of 7, names the rows that failed, and gives a fix for each. It also helps you end with a real commitment, such as time, an intro or money, instead of a compliment.
+when:
+  - You are about to interview customers and want better questions.
+  - Everyone says they love your idea but nobody pays.
+  - You think your interview questions might be leading.
+  - You want to price something without asking "would you pay?"
+you_give:
+  - Your idea or product
+  - Who you will talk to
+  - Your draft questions or interview notes (optional)
+you_get:
+  - Interview questions about past behaviour
+  - A score out of 7 for your plan or notes
+  - Fixes for leading or hypothetical questions
+  - A closing ask that tests commitment
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

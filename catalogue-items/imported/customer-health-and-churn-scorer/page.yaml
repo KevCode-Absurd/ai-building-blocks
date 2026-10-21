@@ -6,6 +6,25 @@ summary: Give it your customer data. Get health scores, churn risk and upsell ch
 job: understand-customers
 headline: Customer health and churn scorer
 subhead: Give it your customer data. Get health scores, churn risk and upsell chances for each account.
+explain: |
+  Which accounts are healthy, which are about to leave and which are ready to grow? Give it your customer data and you get a health score, a churn risk and an upsell score for each account.
+
+  Three small Python tools do the maths with no outside services. The health score weighs usage, engagement and support. The churn check looks at falling usage, quieter contacts, support trouble, relationship signals and the contract end date. The expansion score looks at unused seats, plan tier and which modules and departments could be added. Results are repeatable because the same data always gives the same score. Needs Python.
+when:
+  - You manage a book of SaaS accounts and need to know where to spend time.
+  - Renewals are coming and you want an early warning list.
+  - You want to find accounts with spare seats or unused modules to upsell.
+  - Leadership asks for a customer health review.
+you_give:
+  - A JSON file of customers with usage, engagement and support data
+  - Contract end dates and revenue
+  - Seats and plan tier for upsell scoring (optional)
+  - Python on your computer
+you_get:
+  - A health score per account
+  - A churn risk rating with reasons
+  - An expansion opportunity score
+  - Ranked lists for follow-up
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

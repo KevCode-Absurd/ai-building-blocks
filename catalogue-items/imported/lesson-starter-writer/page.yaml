@@ -6,6 +6,25 @@ summary: Give it today's topic and last lesson. Get a starter that brings back w
 job: teach-and-train
 headline: Lesson starter writer
 subhead: Give it today's topic and last lesson. Get a starter that brings back what students know and links to the new content.
+explain: |
+  A short lesson opening that brings back what students already know and links it to today's topic. Give today's topic, what you taught last time and the level of your class. The skill designs a starter based on Rosenshine's first principle: begin with a brief review of earlier learning.
+
+  It uses retrieval practice, asking students to recall facts and ideas without notes, and a bridge sentence that shows how yesterday's work leads into today's. Done well it takes only a few minutes, and it shows you who has forgotten key points before you build on them. You get a ready-to-use starter, questions and the timing.
+when:
+  - You teach a new topic that depends on last week's content.
+  - Students forget key ideas between lessons.
+  - You want a quick start that gets everyone thinking when they walk in.
+  - You need to check prior knowledge before moving on.
+you_give:
+  - Today's topic
+  - What was taught in earlier lessons
+  - Student age or level
+  - Time you can spend on the starter (optional)
+you_get:
+  - A lesson starter ready to use
+  - Recall questions with answers
+  - A bridge into the new content
+  - A quick way to spot gaps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

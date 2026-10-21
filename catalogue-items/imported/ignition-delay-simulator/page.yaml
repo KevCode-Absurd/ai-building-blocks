@@ -6,6 +6,25 @@ summary: Give it a fuel mix, heat and pressure. Get an ignition delay with check
 job: track-numbers
 headline: Ignition delay simulator
 subhead: Give it a fuel mix, heat and pressure. Get an ignition delay with checks that the result is sound.
+explain: |
+  A calculated ignition delay for a fuel mix at a set temperature and pressure, with checks that show whether the number can be trusted. It simulates a closed, sealed, uniform gas mixture using the Cantera chemistry library.
+
+  You pick the reaction model first and confirm it covers your fuel and conditions. Then you choose constant volume or constant pressure to match the real experiment and enter units in kelvin, pascals, seconds and mole amounts. A template file holds your conditions. The helper defines ignition by temperature rise and heating-rate peak, so the result is exact. A finished run proves only that the math ran, not that the model fits your fuel. It needs Python, Cantera and NumPy.
+when:
+  - You need the time a fuel mix takes to ignite at engine-like conditions.
+  - You are comparing simulation with shock tube measurements.
+  - You want to check that a reaction model suits your fuel.
+  - A result looks odd and you suspect two-stage ignition.
+you_give:
+  - A reaction model file and its source
+  - Fuel and oxidizer mix in moles
+  - Starting temperature and pressure
+  - Constant volume or constant pressure choice
+you_get:
+  - An ignition delay time
+  - The exact definition used for ignition
+  - The normalized starting mix
+  - Notes on whether the result is reliable
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

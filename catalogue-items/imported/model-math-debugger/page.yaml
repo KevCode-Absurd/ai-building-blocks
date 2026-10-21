@@ -6,6 +6,25 @@ summary: Give it the PyTensor code that errors or runs slow. Get it fixed, with 
 job: test-and-fix-code
 headline: Model math debugger
 subhead: Give it the PyTensor code that errors or runs slow. Get it fixed, with checks that the numbers still match.
+explain: |
+  Your PyTensor code fixed, with proof that the numbers still come out the same. Errors with shapes, slow compile times and wrong gradients get traced to their cause, not patched over.
+
+  The skill first writes down what each input should look like: its shape, type and which axis is which. It picks the simplest built-in operation instead of a custom one. Then it builds an independent reference, a plain number check or a formula, and compares values, shapes and gradients against it. Separate guides cover shapes, numerics, random draws, compilation and profiling, and custom operations. It works in your existing Python setup.
+when:
+  - Your model throws a shape or broadcasting error you cannot read.
+  - Compiling the graph takes minutes and you need to find out why.
+  - Random draws repeat when they should differ.
+  - You wrote a custom operation and need to check its gradient.
+you_give:
+  - The PyTensor code that fails or runs slow
+  - The error message or timing
+  - What the output should be (optional)
+  - Your installed versions
+you_get:
+  - A fixed version of the code
+  - The cause explained in plain words
+  - A reference check for values and gradients
+  - Profiling notes if it was slow
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

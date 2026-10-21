@@ -6,6 +6,25 @@ summary: Say which app and service. Get a secure OAuth sign-in flow, with the ri
 job: connect-tools
 headline: Sign-in flow setup helper
 subhead: Say which app and service. Get a secure OAuth sign-in flow, with the right steps for your case.
+explain: |
+  A secure OAuth sign-in flow built for your app and your provider, with the right steps for your case. It avoids the common mistakes that leak tokens or break at the redirect.
+
+  You name the provider (Google, GitHub, Auth0, Microsoft and others), the app type and the access scopes you need. It chooses the flow: authorization code with PKCE for web and mobile, client credentials for server to server, or device code for command line tools. Then it sets up the app registration, builds the sign-in request with a random state value, checks that state on return, swaps the code for tokens, and stores them safely. It also refreshes expiring tokens. Expect code in your framework.
+when:
+  - You want to add "Sign in with Google" or GitHub to your app.
+  - Two servers need to call each other's API safely.
+  - You are building a command line tool that needs a user login.
+  - Your redirect keeps failing and you cannot see why.
+you_give:
+  - The provider you use
+  - "App type: web app, single page app, command line or server"
+  - Scopes you need
+  - Framework or language
+you_get:
+  - The right OAuth flow for your case
+  - Working sign-in code
+  - Callback and token exchange
+  - Safe token storage and refresh steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

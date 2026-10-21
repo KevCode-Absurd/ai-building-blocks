@@ -6,6 +6,25 @@ summary: Name your model and data. Get a fine-tuning run set up with TRL, using 
 job: build-software
 headline: Language model trainer
 subhead: Name your model and data. Get a fine-tuning run set up with TRL, using the right method for your goal.
+explain: |
+  A fine-tuning run for your language model, set up with the method that matches what you want. Tell it your base model, your data and your goal. The skill picks from TRL's training types: supervised fine-tuning for following instructions, DPO for learning from preferred versus rejected answers, GRPO and RLOO for reward-based training, and reward model training.
+
+  It writes the trl command with learning rate, epochs, packing and dataset settings, and explains why each is set that way. It is built on Hugging Face Transformers and Accelerate. You need Python, the TRL package and a GPU, and larger models need more memory.
+when:
+  - You want a small model to follow your company's instruction style.
+  - You have pairs of good and bad answers and want to train on the preference.
+  - You are unsure whether to use SFT, DPO or GRPO.
+  - You need a training command you can run on your own machine.
+you_give:
+  - The base model
+  - Your dataset or its Hugging Face name
+  - What the model should do better
+  - Your GPU and memory limits
+you_get:
+  - The right training method for your goal
+  - A ready trl command
+  - Settings with a short reason for each
+  - Next steps to check results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

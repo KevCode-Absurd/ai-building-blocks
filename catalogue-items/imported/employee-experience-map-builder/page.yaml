@@ -6,6 +6,25 @@ summary: Pick a stage, like first week or exit. Get a map of key moments, pain p
 job: hire-people
 headline: Employee experience map builder
 subhead: Pick a stage, like first week or exit. Get a map of key moments, pain points and fixes.
+explain: |
+  A map of one stage of working life, such as first week, promotion or exit, showing the moments that matter, the pain points and what to fix first. Pick the stage and you get something your team can act on.
+
+  The skill lays out the steps people go through, the touchpoints, the systems used and the feelings at each. It mixes what employees say, from surveys and interviews, with system data such as timestamps. It spots moments that shape how people feel about the company, compares the design with real experience, and ranks fixes. It can also make personas for a new graduate, manager or returning parent.
+when:
+  - New hires say onboarding drags.
+  - You want to know why people leave after promotion.
+  - You need a workshop output for managers.
+  - You must pick which people process to fix first.
+you_give:
+  - The stage or persona
+  - Survey, interview or HR system data
+  - The current process (optional)
+  - Pain points already known (optional)
+you_get:
+  - A stage-by-stage experience map
+  - Moments that matter
+  - Friction points
+  - A ranked list of fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it a product idea. Get one researched build document with stack, s
 job: build-product
 headline: Build blueprint writer
 subhead: Give it a product idea. Get one researched build document with stack, steps and tests an AI can build from.
+explain: |
+  One long document that an AI coding agent can build your product from, epic by epic, without stopping to guess. It starts from an idea that may be only two or three lines.
+
+  The skill asks intake questions, then researches the web and benchmarks competitors. It writes a single markdown blueprint with the design approach, a tech stack with pinned versions and evidence, a quality gate, user personas, flows, screen copy and edge cases. Work is split into epics and stories with Given, When, Then checks and tests. A built-in session routine tells Claude Code or Codex to build one epic per fresh session.
+when:
+  - You have a product idea and want a full spec before building.
+  - You want competitor research and a tech stack recommendation with reasons.
+  - You plan to have an AI agent build the app and need clear instructions.
+  - You need a backlog with acceptance criteria for a small team.
+you_give:
+  - Your product idea in a few lines
+  - Answers to intake questions
+  - Constraints such as budget, platform or deadline (optional)
+  - Competitors you know of (optional)
+you_get:
+  - A single markdown blueprint
+  - A researched tech stack with versions
+  - Personas, flows and edge cases
+  - Epics and stories with acceptance criteria
+  - A build protocol for AI agents
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

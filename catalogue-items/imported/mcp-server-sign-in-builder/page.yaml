@@ -6,6 +6,26 @@ summary: Say how people will connect to your MCP server. Get correct OAuth sign-
 job: connect-tools
 headline: MCP server sign-in builder
 subhead: Say how people will connect to your MCP server. Get correct OAuth sign-in built into it.
+explain: |
+  Sign-in for your MCP server built the way the standard says, so clients can actually connect. Tell it how people will reach the server, and get OAuth that works and is safe.
+
+  The first choice depends on the connection. Local stdio servers do not use OAuth, while web servers may. A web server should only check tokens, not issue them. It publishes discovery data so a client can find the sign-in, validates every token on every request, including who the token was meant for, and does not pass tokens through to other services. Finally it tests the flow from start to end.
+when:
+  - Your remote MCP server needs users to sign in.
+  - Clients cannot find how to connect to your server.
+  - You are unsure whether your server should issue its own tokens.
+  - You want to prevent a stolen token from working on other services.
+you_give:
+  - "How people connect: local or web"
+  - Your identity provider
+  - The tools users will reach
+  - Server code
+you_get:
+  - An auth model choice with reasons
+  - Discovery metadata set up
+  - Token checking code
+  - A client registration plan
+  - An end to end test
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

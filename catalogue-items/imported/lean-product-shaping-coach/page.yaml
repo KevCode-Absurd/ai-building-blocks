@@ -6,6 +6,25 @@ summary: Describe your product plan. Get a smaller scope, a six-week bet and fea
 job: build-product
 headline: Lean product shaping coach
 subhead: Describe your product plan. Get a smaller scope, a six-week bet and features to say no to. Uses Shape Up.
+explain: |
+  A smaller plan that you can actually finish: a fixed six-week bet, a clear scope, and a list of features you chose not to build. Describe your product plan. The skill scores it from 0 to 10 against ideas from 37signals' Shape Up, Getting Real and Rework, then names the exact changes that raise the score.
+
+  It pushes to build less, fix the time and let scope flex, write a shaped pitch before work starts, keep teams small and drop the endless backlog. It also looks for process weight like sprints and story points, and shows what to cut. Expect pointed questions about what you can leave out.
+when:
+  - Your roadmap is huge and nothing ships.
+  - A feature keeps growing and you cannot say when it ends.
+  - You want to try six-week cycles instead of sprints.
+  - You need to decide which requests to turn down.
+you_give:
+  - Your product plan or feature list
+  - Team size and current process
+  - The problem you want to solve
+  - Deadlines (optional)
+you_get:
+  - A score out of 10 with reasons
+  - A trimmed scope
+  - A six-week pitch outline
+  - A list of features to say no to
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

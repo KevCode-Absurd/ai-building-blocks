@@ -6,6 +6,26 @@ summary: Give it incoming tickets. Get each one classified, ranked by severity, 
 job: help-customers
 headline: Support ticket sorter
 subhead: Give it incoming tickets. Get each one classified, ranked by severity, routed and given a first reply.
+explain: |
+  A batch of tickets sorted in one pass. Each gets a type, a severity, an owner and a first reply, so urgent ones surface first.
+
+  Paste the tickets. For each, the skill pulls out what the customer wants and the details that matter, such as the product, error or order. It assigns a severity, classifies the request and routes it to the right team. It then drafts an initial reply matched to the case. Worked examples show a batch of five tickets and an urgent production outage escalated straight away. It covers edge cases like tickets with several issues or too little detail.
+when:
+  - Monday morning left forty tickets in the queue.
+  - You need an outage ticket to jump the line.
+  - A new agent needs help judging severity.
+  - You want first replies drafted for a whole batch.
+you_give:
+  - One or more tickets
+  - Your team and category list (optional)
+  - Severity rules (optional)
+  - Reply tone (optional)
+you_get:
+  - Each ticket classified
+  - A severity ranking
+  - A routing choice per ticket
+  - A draft first reply
+  - An escalation flag for urgent cases
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

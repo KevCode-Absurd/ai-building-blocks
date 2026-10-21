@@ -6,6 +6,26 @@ summary: Say what you need to measure. Get a tracking plan with events, names an
 job: plan-strategy
 headline: Tracking plan builder
 subhead: Say what you need to measure. Get a tracking plan with events, names and tags for GA4, Mixpanel or similar tools.
+explain: |
+  A tracking plan that lists every event, its name, its properties and the question it answers. That is what you get before anyone touches a tag, so your numbers stay clean from day one.
+
+  The skill starts from the decisions you need to make and works backwards to the data. It cuts vanity events, sets one naming pattern, and writes the plan for GA4, Mixpanel or a similar tool. It also covers conversions, UTM rules and tag manager setup, then gives a checklist to test that events fire correctly. Any totals it reports are computed from rows with a script or sheet, then cross-checked a second way, not added up by eye.
+when:
+  - You are setting up GA4 or Mixpanel and do not know which events to track.
+  - Your current analytics has messy event names and nobody trusts the numbers.
+  - You need UTM rules your whole team will follow.
+  - You want to check that conversions are recorded before you spend on ads.
+you_give:
+  - The decisions you want data to inform
+  - Your key conversions
+  - The tools and tech stack you use
+  - Any privacy or consent rules (optional)
+  - Your current tracking setup (optional)
+you_get:
+  - An event list with names and properties
+  - A naming guide
+  - UTM and conversion rules
+  - A test checklist for launch
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a pile of text, images or video. Get a clean set with copies, j
 job: build-software
 headline: Training data cleaner
 subhead: Give it a pile of text, images or video. Get a clean set with copies, junk and personal details removed.
+explain: |
+  A cleaned training set where duplicates, junk and personal details are gone, ready to feed a language model. Messy web scrapes make models worse, and this fixes that before you spend on training.
+
+  The skill uses NVIDIA's NeMo Curator. It removes exact and near-duplicate documents, filters low-quality or toxic text using over 30 checks, and can remove similar meaning with embeddings. It redacts names, emails and other personal details. It also covers images, video and audio. It is built for large data on GPUs, with a slower CPU mode. It needs Python, a CUDA setup for full speed, and a lot of disk and memory for big sets.
+when:
+  - You scraped a large pile of web text and need it cleaned for training.
+  - You suspect your dataset has many copies of the same documents.
+  - You must strip personal details before using data.
+  - You want to filter out low-quality or harmful content.
+you_give:
+  - Your raw text, image or video files
+  - The quality bar you want, such as language or length (optional)
+  - Which personal details to remove
+  - Details of your GPU setup (optional)
+you_get:
+  - A pipeline that dedupes and filters
+  - A cleaned dataset
+  - Personal details redacted
+  - A report of what was removed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

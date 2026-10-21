@@ -6,6 +6,26 @@ summary: Give it a niche. Get creators with follower counts, engagement and fit 
 job: grow-social
 headline: Influencer shortlist builder
 subhead: Give it a niche. Get creators with follower counts, engagement and fit notes. Collects data from websites.
+explain: |
+  A shortlist of creators in your niche, with follower counts, engagement rates and notes on fit, so you can pick people to contact without scrolling for days. It pulls data from social sites using Apify tools, which needs an Apify account and token.
+
+  The skill follows a checklist. It picks the data source for the platform you care about, reads that source's input format, runs the collection, and then reviews what came back. It looks at engagement against audience size, signs of fake followers, how well each creator's topic matches yours, and audience signals. The final output is a ranked list with a line on each person. It collects data from websites.
+when:
+  - You need creators to promote a product in a specific niche.
+  - You want to know if a creator's followers are real.
+  - You are planning a campaign and need a list to approach.
+  - You want engagement compared across several platforms.
+  - Your team keeps picking creators by follower count alone.
+you_give:
+  - Your niche and target platforms
+  - What a good fit looks like
+  - An Apify token in a local settings file
+  - Budget or follower limits (optional)
+you_get:
+  - A ranked creator shortlist
+  - Follower and engagement figures
+  - Authenticity signals
+  - Fit notes for each creator
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

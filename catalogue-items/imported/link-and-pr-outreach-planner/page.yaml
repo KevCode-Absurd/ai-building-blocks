@@ -6,6 +6,26 @@ summary: Describe your site. Get a plan for link building, digital PR, brand men
 job: get-found-in-search
 headline: Link and PR outreach planner
 subhead: Describe your site. Get a plan for link building, digital PR, brand mentions and local listings, with linkable ideas.
+explain: |
+  A plan to earn links and mentions that point at your site, with ideas people will want to link to. You stop sending bulk pitches that get ignored.
+
+  It starts by checking your current links, then fixes one goal, since ranking for a term needs different work than building authority. It splits effort across four areas: earned press, assets you own, partnerships, and local listings. A new site often leans on its own assets first. Then it builds a prospect list and personal outreach notes, and sets up tracking. It warns about bought links, stuffed anchor text and templated emails, and tells you when to disavow.
+when:
+  - Your site ranks poorly because few sites link to it.
+  - You want to plan a digital PR campaign with real hooks.
+  - You run a local business and need consistent listings.
+  - You are tempted to buy links and want a safer plan.
+you_give:
+  - Your website and what it offers
+  - Your goal, such as a target ranking
+  - Your current links, if you know them (optional)
+  - Competitors (optional)
+you_get:
+  - A mix of link and PR strategies
+  - Linkable asset ideas
+  - A prospect list approach
+  - Outreach message guidance
+  - A tracking and quarterly check plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

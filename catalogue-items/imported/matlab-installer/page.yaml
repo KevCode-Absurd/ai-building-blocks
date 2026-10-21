@@ -6,6 +6,25 @@ summary: Name the MathWorks products. Get them installed from the command line, 
 job: set-up-ai
 headline: MATLAB installer
 subhead: Name the MathWorks products. Get them installed from the command line, the same way each time.
+explain: |
+  MathWorks products installed from the command line in exactly the same way each time, so a setup that works once keeps working on any machine or server. You name the products and it handles the commands.
+
+  It uses the MATLAB package manager, mpm. Before it starts, it needs four facts: the operating system, the MATLAB release, the install folder and the list of products or support packages. It confirms the plan with you before it runs anything. On Windows it follows strict safety rules. Scripts are written as files and run with the file option, never typed inline, and they use only plain ASCII.
+when:
+  - You must set up MATLAB with several toolboxes on a new machine.
+  - Your team needs the same install on every computer.
+  - An install script fails on Windows with strange quote errors.
+  - You want to add a toolbox to an existing MATLAB folder.
+you_give:
+  - Operating system
+  - MATLAB release
+  - Install folder
+  - List of products and toolboxes
+you_get:
+  - A confirmed install plan
+  - Safe install scripts
+  - Install commands to run
+  - A check that the products are there
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

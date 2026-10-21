@@ -6,6 +6,24 @@ summary: Give it your recording transcript. Get a timed list of pauses, fillers 
 job: grow-social
 headline: Dead air and retake cutter
 subhead: Give it your recording transcript. Get a timed list of pauses, fillers and retakes to cut.
+explain: |
+  A list of exact cut points for your recording, taken from its transcript: silences, filler lines and sentences you started over. You apply the cuts in your editor, so nothing in your footage changes without you.
+
+  Give it an SRT, VTT or Whisper transcript. A small Python script marks three things. Dead air is any gap over a limit, trimmed from the middle so both sides keep a breath and speech does not sound clipped. Filler is lines holding only um or so yeah. Repeats are restarted sentences, compared against the last real speech even when an um sits between takes. It reports time saved as a share of speech, so check long silent demos.
+when:
+  - You rambled through a recording and want a tighter cut.
+  - You have a transcript and need timecodes for pauses to trim.
+  - A take has restarts and you want to find the best attempt.
+  - You want to know how much shorter a video could be.
+you_give:
+  - A timestamped transcript
+  - Silence length to cut (optional)
+  - Your video editor of choice (optional)
+you_get:
+  - Timed cut list
+  - Labels for dead air, filler and repeats
+  - Estimated time saved
+  - JSON version for tools (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

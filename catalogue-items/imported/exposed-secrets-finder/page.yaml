@@ -6,6 +6,24 @@ summary: Give it a site you own. Get a report of keys and private files visitors
 job: secure-code
 headline: Exposed secrets finder
 subhead: Give it a site you own. Get a report of keys and private files visitors can read, with fixes.
+explain: |
+  A report of keys, tokens and private files that anyone can read on your live website, with a fix for each. It finds the leaks before a stranger does.
+
+  The check is read-only and only fetches what the server already gives every visitor. It scans your JavaScript files for hardcoded keys and tokens, looks in page markup, meta tags and comments, and tests for reachable source, config and deploy files that were never meant to be public. Findings are tied to known security categories for hardcoded credentials and sensitive data. Use it only on sites you own or have permission to assess.
+when:
+  - You are about to ship and want to check nothing sensitive is in the browser code.
+  - A developer might have pasted an API key into front-end code.
+  - You want to know if config or source files are reachable by URL.
+  - A review asks for proof that secrets are not exposed.
+you_give:
+  - Address of a site you own or may test
+  - Written permission if it is a client site
+  - Known key formats to look for (optional)
+you_get:
+  - List of exposed secrets and files
+  - Where each one was found
+  - Risk level per finding
+  - Fix steps, including rotating keys
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

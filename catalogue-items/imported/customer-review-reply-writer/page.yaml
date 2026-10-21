@@ -6,6 +6,25 @@ summary: Give it your reviews and complaints. Get themes with quotes, a reply to
 job: help-customers
 headline: Customer review reply writer
 subhead: Give it your reviews and complaints. Get themes with quotes, a reply to each review, and customers at risk. Scrapes sites.
+explain: |
+  Reviews, complaints and quiet customers all tell you something. Give it your reviews and complaints and you get themes backed by exact quotes, a reply for every review in your voice, and a list of customers who may be leaving.
+
+  It collects from Google, Yelp, Facebook, disputes, tickets and email, defaulting to the last 90 days. Missing sources are named, so a gap does not look like good news. Replies are drafted for you to approve. It spots customers who have stopped ordering and drafts win-back offers for those worth keeping. With Shopify, order and shipping patterns add to the picture. It works from pasted or exported reviews, and can fetch public pages.
+when:
+  - A one-star review arrived and you need a good reply.
+  - Your rating dropped and you want to know why.
+  - You want to find customers who have gone quiet.
+  - You want every review answered without writing each from scratch.
+you_give:
+  - Reviews, pasted or exported, or links to review pages
+  - Complaints, tickets or emails (optional)
+  - Samples of your writing voice (optional)
+  - Time period (optional)
+you_get:
+  - Themes with exact quotes
+  - A drafted reply to each review
+  - A list of customers at risk
+  - Win-back offer drafts
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

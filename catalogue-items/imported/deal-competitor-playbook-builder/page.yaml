@@ -6,6 +6,25 @@ summary: Name a rival. Get a plan for winning the deal against them, plus win an
 job: sell-and-negotiate
 headline: Deal competitor playbook builder
 subhead: Name a rival. Get a plan for winning the deal against them, plus win and loss patterns. Reads public web pages.
+explain: |
+  Before you meet a buyer who is also talking to a rival, get a plan for how to win: where the rival is strong, where it is weak, and what your past wins and losses against it show.
+
+  Name the competitor. The skill reads public pages for launches, pricing changes and news, and if connected pulls your closed deals tagged with that competitor, loss reasons and call transcripts or emails. It states what it could not verify. It then writes the play for the deal at hand, plus patterns across the book such as when you tend to win. It can also set up a weekly digest of competitive changes and a team battlecard.
+when:
+  - A prospect says they are also looking at a rival.
+  - You want to know why you lose deals to one competitor.
+  - Your team needs a shared battlecard.
+  - You want a weekly note on what rivals changed.
+you_give:
+  - The competitor name
+  - The deal or situation
+  - CRM data or closed deal export (optional)
+  - Call notes (optional)
+you_get:
+  - Plan for winning the deal
+  - Win and loss patterns
+  - Competitor strengths and gaps
+  - Battlecard or weekly digest (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

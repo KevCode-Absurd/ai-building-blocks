@@ -6,6 +6,26 @@ summary: Give it a procedure. Get a sequence from fully worked examples to solvi
 job: teach-and-train
 headline: Worked example to practice sequence builder
 subhead: Give it a procedure. Get a sequence from fully worked examples to solving it alone.
+explain: |
+  A learning sequence that moves students from fully solved examples to solving the task alone, so they do not drown in the first problem. It follows how beginners really learn a procedure.
+
+  You name the skill and the learners' level. The skill writes a series of examples. The first shows every step with the reasoning. In the next, one step is left blank, then two, then more, until the learner does all of it. Each step comes with prompts that make them explain what they did. It also warns when to slow the fading, because as learners gain skill, too much help can start to hurt. It draws on research by Sweller, Renkl and others.
+when:
+  - Students freeze when you set a new type of problem.
+  - You teach a multi-step procedure such as an algebra method.
+  - You want a fair way to remove support gradually.
+  - Mixed-ability groups need different starting points.
+you_give:
+  - The procedure or skill to teach
+  - Learners' age and level
+  - Common mistakes (optional)
+  - Number of examples (optional)
+you_get:
+  - Fully worked examples
+  - Partly completed examples
+  - Independent practice tasks
+  - Self-explanation prompts
+  - Guidance on pacing the fade
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

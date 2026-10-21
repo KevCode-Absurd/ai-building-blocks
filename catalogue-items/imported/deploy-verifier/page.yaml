@@ -6,6 +6,25 @@ summary: Run it before you deploy. Get silent failure modes checked, then proof 
 job: ship-and-host
 headline: Deploy verifier
 subhead: Run it before you deploy. Get silent failure modes checked, then proof that the live version is the new one.
+explain: |
+  Proof that your release is live, not just that the pipeline went green. Many bad deploys fail silently: the tool says deployed, but users still get the old version. This gate catches that.
+
+  It works in three phases and tells you not to skip ahead. Before the deploy, a pre-flight checks the common silent failures, including migrations, flags and staged rollouts. During the deploy it watches what the command really did. After it, it confirms the running version is the new one by checking the live site or service. Only then may the word shipped be used. Run it before anything that pushes to production or staging.
+when:
+  - The deploy said success but users still see the old page.
+  - An AI agent is about to tell you the release is live.
+  - The release includes a database change or a feature flag.
+  - You are rolling out in stages and need to confirm each one.
+you_give:
+  - What you are deploying and where
+  - Deploy command or pipeline
+  - URL or service to check
+  - Expected version or visible change
+you_get:
+  - Pre-flight checklist results
+  - Silent-failure checks
+  - Proof the live version is new
+  - Clear ship or hold verdict
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

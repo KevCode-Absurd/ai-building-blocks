@@ -6,6 +6,26 @@ summary: Give it direct and partner sales costs. Get cost to serve, ROI by chann
 job: money-and-investing
 headline: Channel cost and ROI comparer
 subhead: Give it direct and partner sales costs. Get cost to serve, ROI by channel and the best mix.
+explain: |
+  Which sales channel really makes money? You get a clear verdict for each one: double down, maintain, defund or exit. Plus a suggested mix of direct and partner sales that holds up when costs shift.
+
+  You fill in a short data template for each channel: deals, revenue, margin, acquisition cost, partner discounts, support load and the often forgotten extras like partner training. Scripts then work out the full cost to serve per deal and per dollar of revenue. They score return three ways: first-year cash, lifetime value and the next dollar spent. A last step tests mixes against your limits, such as a minimum direct share, and shows what happens if costs rise 20%. Python is needed.
+when:
+  - Your pipeline is split between direct and partner sales and you do not know which half is profitable.
+  - You are thinking of hiring a channel manager and want to know if the channel can pay for one.
+  - Your board asks what you got back for the money spent on partner marketing funds.
+  - You are opening a new region and must pick direct first or partner first.
+you_give:
+  - Deals, revenue and margin by channel
+  - Acquisition and sales cycle numbers
+  - Partner discounts and marketing spend
+  - Support and training costs
+  - Limits on your channel mix (optional)
+you_get:
+  - Full cost to serve per channel
+  - Three ROI numbers per channel
+  - A verdict for each channel
+  - A tested channel mix with a cost-shift table
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

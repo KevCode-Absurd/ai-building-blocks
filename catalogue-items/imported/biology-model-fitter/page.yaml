@@ -6,6 +6,25 @@ summary: Give it a model and measured data. Get parameters fitted, patients simu
 job: build-software
 headline: Biology model fitter
 subhead: Give it a model and measured data. Get parameters fitted, patients simulated and drug levels computed.
+explain: |
+  Hand over a SimBiology model and measured data, and get back fitted parameters you can trust, along with simulated patients and drug exposure numbers. It saves you from the usual trial and error with fitting calls.
+
+  The skill sets up each fit through one declared problem object instead of loose function calls. Your data goes into a grouped table, with the response mapped to a model species and bounds set on each parameter. From there it can run population mixed-effects fits, generate virtual patients, and run non-compartmental analysis to give AUC, Cmax, Tmax, half-life and clearance. It runs in MATLAB with SimBiology.
+when:
+  - You have lab or trial data and need to estimate a model's parameters.
+  - You are building a population PK or PD model with variation between people.
+  - You need virtual patients that match an observed group.
+  - You want AUC, Cmax and half-life from concentration data.
+you_give:
+  - A SimBiology model
+  - Measured data with a group and time column
+  - Which parameters to estimate, with bounds
+  - Dosing details (optional)
+you_get:
+  - Fitted parameter estimates
+  - Fit quality checks and plots
+  - A set of virtual patients
+  - Exposure numbers such as AUC and Cmax
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,27 @@ summary: Give it a teaching question. Get a full lesson study plan, from shared 
 job: teach-and-train
 headline: Lesson study cycle planner
 subhead: Give it a teaching question. Get a full lesson study plan, from shared planning to the research lesson.
+explain: |
+  A four-meeting plan for a teaching team to study one problem in their own classrooms, from first question to shared findings. You skip the guesswork about what each meeting should produce.
+
+  Give it the teaching challenge, the topic, who is on the team and how much time you have. It sets the research goal, then plans the lesson together with the team. It writes a research lesson plan, an observation guide that follows three case students, and questions for the talk after the lesson. The last meeting turns what you saw into notes the whole school can use.
+when:
+  - Your department wants to fix one stubborn learning gap together.
+  - You are a new teacher and want a safe way to learn from colleagues.
+  - A school leader needs a clear plan for collaborative teacher inquiry.
+  - Students can do the basic skill but fail when it changes shape.
+you_give:
+  - The teaching challenge
+  - Subject and topic
+  - Team members and experience
+  - Meeting time available
+  - Three case students (optional)
+you_get:
+  - A four-meeting cycle plan
+  - A research lesson plan
+  - An observation guide for case students
+  - Post-lesson discussion questions
+  - A way to share what the team learned
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

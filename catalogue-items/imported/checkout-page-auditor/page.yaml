@@ -6,6 +6,26 @@ summary: Give it your cart and checkout. Get a ranked list of fixes for guest ch
 job: run-your-store
 headline: Checkout page auditor
 subhead: Give it your cart and checkout. Get a ranked list of fixes for guest checkout, fields, wallets and surprise costs.
+explain: |
+  A ranked fix list for your cart and checkout, so shoppers who already want the item can pay without a fight. You share your flow, and each problem comes with the change to make and the study behind it.
+
+  It checks rules in order. Can people buy as a guest? Do you ask only for the fields you need? Do errors show next to the field? Are item price, shipping and tax shown before the pay click? It also looks at a coupon box hidden until asked, wallets placed high on mobile, and trust wording near the pay button. Fixes are ranked by how close they sit to payment.
+when:
+  - Shoppers add to cart but few finish paying.
+  - You want to know if a forced account is costing you orders.
+  - Your coupon box sends people off to hunt for codes.
+  - You need to know what to fix first, not a giant list.
+you_give:
+  - Your cart and checkout flow, as a link, screenshots or a walkthrough
+  - The list of form fields
+  - When shipping and tax appear
+  - Payment wallets you offer (optional)
+you_get:
+  - A ranked table of issues
+  - The exact change for each
+  - The study effect for each fix
+  - Common mistakes to avoid
+  - A note on what already works
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe the screen. Get a responsive, accessible interface that follow
 job: build-websites
 headline: Accessible UI builder
 subhead: Describe the screen. Get a responsive, accessible interface that follows your design system and looks hand made.
+explain: |
+  A screen that is responsive, usable with a keyboard and screen reader, and consistent with your design system is built for you. It should look like a careful designer made it, not a generic AI page.
+
+  The skill keeps each component small and does one job. It prefers composing parts, such as a card with a header and a body, over one component with a dozen options. It follows your existing spacing, colour and type rules rather than inventing new ones, and it adds proper labels, focus states and sensible states for loading, empty and error. It also steers away from the stock AI look. You need a front-end project to build in.
+when:
+  - You need a new page or component that follows your style.
+  - Your current screen fails on keyboard or screen reader use.
+  - You want a layout that works on phone and desktop.
+  - Generated screens in your app all look the same and you want them to look hand made.
+you_give:
+  - A description of the screen
+  - Your design system or style rules
+  - The framework your project uses
+  - Existing components to reuse (optional)
+you_get:
+  - Component code
+  - Responsive layout
+  - Accessible labels and focus handling
+  - Loading, empty and error states
+  - Tests for the component (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

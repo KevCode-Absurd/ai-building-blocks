@@ -6,6 +6,24 @@ summary: Describe your research ideas. Get help choosing a problem worth pursuin
 job: think-and-decide
 headline: Research problem picker
 subhead: Describe your research ideas. Get help choosing a problem worth pursuing, or why a project is stuck.
+explain: |
+  Help choosing a research problem worth your years, or finding out why a current project is stuck. It uses a decision tree for problem choice from a published paper by Fischbach and Walsh.
+
+  You start in one of three ways: pitch a new idea, share a problem in a running project, or ask a strategic question. For a pitch, you give a short version, then more detail on what you want to do, how, why it would matter and the biggest risks. The skill repeats the idea back to confirm it understood, then walks you through early evaluation step by step. The talk is a conversation, with one question at a time.
+when:
+  - You have several project ideas and must choose one.
+  - Your project has stalled and you do not know why.
+  - You need to judge whether an idea would matter if it worked.
+  - You are planning a lab's long-term direction.
+you_give:
+  - A short pitch of your idea or problem
+  - Details on method, payoff and risks
+  - Your field and resources (optional)
+you_get:
+  - Summary of your idea as understood
+  - Questions that test its value
+  - Assessment of risks
+  - Advice on which problem to pursue
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

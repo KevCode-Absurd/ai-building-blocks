@@ -6,6 +6,25 @@ summary: Point it at your API routes. Get a check of sign-in, access rules and i
 job: secure-code
 headline: API security checker
 subhead: Point it at your API routes. Get a check of sign-in, access rules and input, with fixes for each gap.
+explain: |
+  A check of your API routes from the moment a request arrives to the data it returns, with a fix for every gap it finds. It focuses on who the caller is, what they may touch and what they are allowed to send.
+
+  The skill starts by writing down your routes, identity provider, tenant model and test scope. It then looks at sign-in, making sure tokens are verified with a fixed method, the right issuer and audience, and required claims. Next it checks that each record access tests ownership, not just login. It reviews input checks, database queries, rate limits, error messages and logs. It uses fake identities and keeps your existing login system.
+when:
+  - You are adding a protected route and want a second look.
+  - Users might read each other's records by changing an ID.
+  - You are replacing loose request parsing with strict checks.
+  - You are chasing a suspected abuse path.
+you_give:
+  - The routes or code to review
+  - Your login provider and token setup
+  - Your database schema
+  - Test accounts with fake data
+you_get:
+  - Findings on sign-in, access and input
+  - A fix for each gap
+  - Notes on rate limits and error leaks
+  - A list of what to test next
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

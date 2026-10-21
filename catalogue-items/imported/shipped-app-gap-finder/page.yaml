@@ -6,6 +6,25 @@ summary: Point it at a shipped repo. Get gaps found in database rules, webhooks,
 job: secure-code
 headline: Shipped app gap finder
 subhead: Point it at a shipped repo. Get gaps found in database rules, webhooks, secrets, payments and mobile use.
+explain: |
+  A list of the gaps in a live app that AI-built projects often miss, found before a user or attacker finds them. It looks at the deployed product, not just the code in your editor.
+
+  It runs an outside audit of your repo and live URL using a command line tool. The checks cover database access rules, webhook handling, leaked secrets, permission grants, payment retries that could charge twice, missing indexes, monitoring and mobile use. Results are saved in a folder in the project so later sessions can read them without a re-run. It works best alongside the code-time security checks you already use, and is useful right after merging to main.
+when:
+  - You just merged a big feature and want a check before deploy.
+  - You built the app with AI and are unsure what a real launch would expose.
+  - You take payments and need to know a retry cannot charge a customer twice.
+  - You want a score and a to-do list for your project.
+you_give:
+  - The repo folder
+  - The live URL (optional)
+  - Node installed to run the audit tool
+  - Your stack, such as Supabase or Stripe (optional)
+you_get:
+  - A list of gaps by area
+  - A severity ranking
+  - Fix suggestions
+  - A saved report for later sessions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

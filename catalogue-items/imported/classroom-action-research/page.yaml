@@ -6,6 +6,27 @@ summary: Give it a question about your teaching. Get a plan to collect evidence 
 job: teach-and-train
 headline: Classroom action research planner
 subhead: Give it a question about your teaching. Get a plan to collect evidence and act on what you find.
+explain: |
+  A plan for finding out whether a change in your teaching actually works. You write a question about your own practice, and you get a full cycle: how to gather evidence, how to read it, and what to do next.
+
+  The skill helps you sharpen the question until it can be answered. It matches data collection to your time and setting: test scores, student work, short surveys, observation notes. It plans when to collect, how to keep the load small, and how to look for patterns without bias. It also builds in a check on what you did and what changed, plus a way to share findings with colleagues. If you work alone or in a team, the plan adjusts.
+when:
+  - You tried a new routine and want proof it helps.
+  - Your school asks for a professional learning project.
+  - You want to understand why a group of students struggles.
+  - You have a term to run a small study without drowning in data.
+you_give:
+  - Your inquiry question
+  - Subject, year group and goal
+  - Time you have (optional)
+  - Data you already hold (optional)
+  - Whether you work alone or with a team (optional)
+you_get:
+  - A sharper research question
+  - A data collection schedule
+  - A way to read your findings
+  - An action plan
+  - A way to share results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

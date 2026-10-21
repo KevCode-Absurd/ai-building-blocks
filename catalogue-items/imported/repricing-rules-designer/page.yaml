@@ -6,6 +6,26 @@ summary: Give it your margins and stock. Get safe automatic price rules, test ca
 job: set-prices
 headline: Repricing rules designer
 subhead: Give it your margins and stock. Get safe automatic price rules, test cases, and a kill switch you can trust.
+explain: |
+  A set of price rules that change your prices on their own within safe limits, with test cases and a stop button. You get dynamic pricing without a price war or a sale below cost.
+
+  You give it your costs, margins, stock and the signals you trust. It decides which products can reprice automatically, which need approval and which stay manual. It sets a floor that protects profit and a sensible ceiling. Rules use small steps and waiting periods. It tests them against a stockout, a promotion stack and a rival cutting prices. It also designs the audit log, rollback and emergency stop. It plans the rollout but switches nothing on.
+when:
+  - You sell on Amazon and fear a race to the bottom.
+  - You want prices to react to stock levels on your own store.
+  - You need to decide which products are safe to reprice automatically.
+  - You want a way to stop automation fast if it misbehaves.
+you_give:
+  - Cost and target margin per product
+  - Stock levels
+  - Competitor or demand signals you trust
+  - Platform you sell on
+  - Approval rules (optional)
+you_get:
+  - Floor and ceiling prices
+  - Rule table with steps and waits
+  - Scenario test results
+  - Approval, audit and stop plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

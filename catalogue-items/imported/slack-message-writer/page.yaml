@@ -6,6 +6,25 @@ summary: Give it your point. Get a short, well-formatted Slack message, thread r
 job: write-emails
 headline: Slack message writer
 subhead: Give it your point. Get a short, well-formatted Slack message, thread reply or canvas that leads with the news. Needs Slack.
+explain: |
+  A Slack message that people read to the end. The first line carries the news, because many people only see that line in a notification. You give your point, and the skill drafts a short message, a thread reply or a longer canvas.
+
+  It writes in Slack's own formatting, which differs from standard Markdown: single asterisks for bold, angle brackets for links and mentions, and no headers. It keeps messages to one to three short paragraphs and moves long content into a canvas. It also catches common mistakes, like double asterisks that show up as raw symbols. You need Slack connected if you want it to save the draft there.
+when:
+  - You need to announce a change to your team and want it read.
+  - Your Slack posts show stray asterisks and broken links.
+  - A long update should become a canvas instead of a wall of text.
+  - You want a thread reply that is short and clear.
+you_give:
+  - The point you want to make
+  - Who it is for and which channel
+  - Links or people to mention (optional)
+  - Slack connected (optional)
+you_get:
+  - A short message that leads with the news
+  - Correct Slack formatting
+  - A thread reply or canvas when it fits better
+  - A draft ready to send after you approve it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

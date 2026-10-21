@@ -6,6 +6,25 @@ summary: Name the role. Get an interview plan with questions, scoring guides and
 job: hire-people
 headline: Hiring interview designer
 subhead: Name the role. Get an interview plan with questions, scoring guides and a way to compare candidates.
+explain: |
+  An interview plan for one role that gives every candidate the same fair test. It sets the rounds, what each round covers, how long it runs, and which questions to ask so interviewers do not overlap or improvise.
+
+  For each round you get questions matched to the skill being tested and a scoring guide that asks for evidence behind every score. It builds a skills matrix for the role and level, and a checklist to reduce bias, such as avoiding unstructured chats and over-weighting one round. It includes a guide for the debrief meeting and a way to recalibrate every quarter using hiring results. A small Python script can produce the first draft of the loop.
+when:
+  - You are hiring for a new role and have no interview process.
+  - Different interviewers ask different things and decisions feel random.
+  - You want a scoring guide so candidates can be compared fairly.
+  - You need to run a debrief that ends with a decision.
+you_give:
+  - The role and level
+  - Key skills the role needs
+  - How many interview rounds you can run
+  - Past hiring problems (optional)
+you_get:
+  - A round by round interview loop
+  - Questions for each round
+  - Scoring guides with evidence rules
+  - A bias checklist and debrief guide
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

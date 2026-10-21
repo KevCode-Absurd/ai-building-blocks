@@ -6,6 +6,25 @@ summary: Give it a list of stops. Get the shortest order to visit them all and r
 job: plan-supply-chain
 headline: Shortest stop order finder
 subhead: Give it a list of stops. Get the shortest order to visit them all and return, with the total distance.
+explain: |
+  The shortest order to visit a list of stops and return to the start, with the total distance. It cuts drive time and fuel on delivery rounds, site visits or sales calls.
+
+  It asks how many stops you have, whether distance is the same both ways, and what you measure: kilometres, minutes or cost. Then it picks a method by size. Small lists under about 20 stops get an exact answer. Mid-size lists get strong shortcut methods, and very large lists use search methods that get close. It checks the gap from the best possible, and flags rules like time windows that need a different tool.
+when:
+  - A driver has 15 deliveries and no good order to run them in.
+  - You plan a sales rep's visits for the week.
+  - You want to compare your current route with a shorter one.
+  - You have a table of distances and want the best loop through it.
+you_give:
+  - The list of stops
+  - Coordinates or a distance table
+  - "What to minimise: distance, time or cost"
+  - Start point and any fixed rules (optional)
+you_get:
+  - The stop order
+  - Total distance or cost
+  - How close it is to the best possible
+  - The method used and code
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

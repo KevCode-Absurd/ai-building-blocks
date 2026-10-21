@@ -6,6 +6,25 @@ summary: Point it at your project. Get risky packages, licence clashes and a saf
 job: secure-code
 headline: Dependency risk auditor
 subhead: Point it at your project. Get risky packages, licence clashes and a safe order to upgrade.
+explain: |
+  A check of every package your project uses, with risky ones named, licence clashes listed and a safe order to upgrade. It runs three small scripts that read your manifest and lock files. They work offline and give the same result every time.
+
+  The scanner flags known weak versions from a built-in pattern set. The licence checker compares each licence to your policy and calls out conflicts. The upgrade planner takes the scan and orders changes by risk across a timeline you pick. It reads files from JavaScript, Python, Go, Rust, Ruby and more. After you upgrade, you rerun the scan to confirm no high-severity findings remain. It needs Python.
+when:
+  - A customer asks for proof that your dependencies are safe.
+  - You inherit an old project and fear what is in it.
+  - You plan a big upgrade and want to avoid breaking things.
+  - Legal asks whether any package has a licence you cannot ship.
+you_give:
+  - Path to your project
+  - "Licence policy: strict or relaxed"
+  - Upgrade timeline in days (optional)
+  - Risk level you accept (optional)
+you_get:
+  - Vulnerability scan results
+  - Licence conflict list
+  - Upgrade plan in safe order
+  - Re-scan to confirm fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

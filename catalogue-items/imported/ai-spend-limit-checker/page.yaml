@@ -6,6 +6,24 @@ summary: Point it at code that calls paid AI services. Get spending caps and loo
 job: secure-code
 headline: AI spend limit checker
 subhead: Point it at code that calls paid AI services. Get spending caps and loop limits added before a surprise bill.
+explain: |
+  Code that calls paid AI services can run up a huge bill. A loop that looks finite can repeat forever if a bug feeds it new work. This check puts firm limits in place before that happens.
+
+  It reviews or writes the code with three rules. Every call gets a written cost line: most calls per run, most dollars per run, most dollars per day. Every loop gets a hard count limit, not just a reason it should stop. Retries need a cap and repeat-safe keys. The same daily cap is then set in the provider's own dashboard. A cap in code alone can fail. One in the dashboard alone can hurt normal use.
+when:
+  - You are writing a loop or queue that calls an image, text or voice API.
+  - You are reviewing code before it goes live and want to catch runaway costs.
+  - A surprise AI bill just hit and you need to find the cause.
+  - Your retry logic has no upper limit.
+you_give:
+  - The code that calls the paid API
+  - The price per call (optional)
+  - The provider you use
+you_get:
+  - A cost line for each call site
+  - Hard limits on loops and retries
+  - Repeat-safe keys where calls can double up
+  - A list of provider caps to set
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it the period's expenses. Get an accrual schedule with each entry,
 job: money-and-investing
 headline: Accrual schedule drafter
 subhead: Give it the period's expenses. Get an accrual schedule with each entry, its support and a draft journal entry.
+explain: |
+  Month-end accruals land in one schedule where every entry is calculated, backed by its source, and turned into a draft journal entry. It is a draft only. A controller approves it before anything is posted.
+
+  The skill goes through your accrual policy list one item at a time. For each one it works out the amount for the period, such as unbilled services, bonuses or utilities, and cites the invoice, contract or estimate it used. It then writes the matching debit and credit lines. At the end you get one schedule with totals, so you can review all entries together. It does not post anything to your system. You still decide what goes in.
+when:
+  - It is month end and you must book expenses that have not been invoiced.
+  - You need the support for each accrual in one place for your auditor.
+  - A new team member needs a consistent way to build the schedule.
+  - You want draft entries ready for your controller to review.
+you_give:
+  - Your accrual policy list
+  - The period's expenses and open orders
+  - Contracts or estimates for the support
+  - Last month's schedule (optional)
+you_get:
+  - An accrual schedule with amounts
+  - The source cited for each entry
+  - Draft journal entries
+  - Period totals for review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

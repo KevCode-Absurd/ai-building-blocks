@@ -6,6 +6,24 @@ summary: Talk through a topic. Get raw fragments and ideas pulled out, with no s
 job: write-and-tell-stories
 headline: Idea fragment miner
 subhead: Talk through a topic. Get raw fragments and ideas pulled out, with no structure yet.
+explain: |
+  A file of raw material for a piece of writing, collected while you talk. Chat about a topic and it saves every useful scrap to one document, with no outline and no polish yet.
+
+  It starts capturing from your very first message. A fragment can be a sharp sentence, a claim with a reason, a short story, a half-thought, a quote or a complaint. Each goes in the file as it appears, from either side of the chat, separated by lines. The most valuable find is a leading word, a short metaphor that the whole piece can hang on. The file has only a working title on top. It asks once where to save.
+when:
+  - You have a lot to say about a topic but no idea how to start the article.
+  - You want to think out loud and keep the best lines.
+  - You are building notes for a talk, essay or newsletter.
+  - You keep losing good ideas that come up mid-conversation.
+you_give:
+  - A topic to talk through
+  - A file location for the notes
+  - Stories or opinions as you chat
+you_get:
+  - One document of raw fragments
+  - A working title
+  - Possible leading words for the piece
+  - Material ready to be shaped later
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

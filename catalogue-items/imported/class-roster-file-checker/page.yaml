@@ -6,6 +6,26 @@ summary: Give it a OneRoster CSV set. Get broken links, bad encodings and manife
 job: work-with-files
 headline: Class roster file checker
 subhead: Give it a OneRoster CSV set. Get broken links, bad encodings and manifest errors found, with fixes.
+explain: |
+  Find out why a student roster upload gets rejected before you send it. Give it your OneRoster CSV files, and it lists broken links between files, bad text encodings and manifest errors, each with a fix.
+
+  It checks that the manifest sits at the top of the zip, names the right version, and lists every file in the bundle, no more and no less. It confirms the bundle is either a full snapshot or a set of changes, never a mix. It then follows the links across files and finds orphans, such as an enrolment pointing at a missing user. It also strips hidden characters at the start of files that cause import errors.
+when:
+  - Clever or ClassLink rejected your roster zip and gave a vague error.
+  - You want to catch orphan enrolments before a nightly sync.
+  - Your export has strange characters at the start of files.
+  - You need a check that runs before every upload.
+you_give:
+  - Your OneRoster zip or CSV folder
+  - The OneRoster version
+  - Whether it is a full or change bundle
+  - The error message you got (optional)
+you_get:
+  - A list of errors by file and row
+  - Broken links and orphan records
+  - Manifest problems
+  - Encoding fixes
+  - Steps to repair the bundle
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

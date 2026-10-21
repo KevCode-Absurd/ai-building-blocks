@@ -6,6 +6,24 @@ summary: Give it a stock ticker. Get actual versus expected results, margin tren
 job: money-and-investing
 headline: Earnings recap writer
 subhead: Give it a stock ticker. Get actual versus expected results, margin trends and how the share price reacted. Collects data from websites.
+explain: |
+  A post-earnings summary for one stock: what was reported against what was expected, how margins moved, and how the share price reacted. Give a ticker and read the answer in minutes.
+
+  The skill uses the yfinance Python package, installing it if needed. One script collects the latest reported results, the last quarters of earnings history, quarterly income, cash flow and balance sheet, and price moves around the report date. It then compares actual to estimate, calculates beat or miss sizes, tracks margin trends over about five quarters, and writes a clear recap. The data is from Yahoo Finance and is for research, not advice.
+when:
+  - A company just reported and you need the short version.
+  - You want to see whether a miss was small or large.
+  - You want margin trends across recent quarters.
+  - You need to explain a big price move to a client.
+you_give:
+  - A stock ticker
+  - Python with internet access
+  - The quarter to cover (optional)
+you_get:
+  - Actual versus expected results
+  - Beat or miss sizes
+  - Margin trends over recent quarters
+  - Share price reaction to the report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

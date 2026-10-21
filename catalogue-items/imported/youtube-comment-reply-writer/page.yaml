@@ -6,6 +6,24 @@ summary: Paste your comments. Get them sorted by what to answer, short replies i
 job: grow-social
 headline: YouTube comment reply writer
 subhead: Paste your comments. Get them sorted by what to answer, short replies in your voice, and one comment to pin.
+explain: |
+  Paste your latest comments and get them sorted, answered and ready to post, with one comment picked to pin.
+
+  First it counts the comments in four piles: questions, corrections, praise and bait. Questions get answers, and repeated ones are marked as your next video topics. Corrections get a plain thank you if they are right. Praise gets a few short, specific replies rather than a wall of the same thanks. Bait gets no reply at all. Each reply is under 30 words, answers the question in the first sentence and skips emoji unless you use them. It also chooses the comment to pin: the question the most viewers share, not the nicest one.
+when:
+  - Your new video has fifty comments and little time to answer them.
+  - You want replies that sound like you, not a bot.
+  - A rude comment tempts you to argue.
+  - You want to know which questions should become your next video.
+you_give:
+  - The comments, pasted as text
+  - The video title or topic
+  - Your voice notes or past replies (optional)
+you_get:
+  - Comments sorted into four piles with counts
+  - Short replies under 30 words
+  - A list of repeated questions as video ideas
+  - One comment to pin and why
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

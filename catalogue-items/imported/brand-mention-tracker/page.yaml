@@ -6,6 +6,25 @@ summary: Give it a brand name. Get reviews, ratings and mentions from many sites
 job: understand-customers
 headline: Brand mention tracker
 subhead: Give it a brand name. Get reviews, ratings and mentions from many sites in one report. Collects data from websites.
+explain: |
+  Give it a brand name and get reviews, ratings and mentions from several sites in one report. You see how people talk about you without checking each site by hand.
+
+  The skill picks a ready-made scraper from Apify for each source, such as Google Maps reviews, Booking.com hotels or TripAdvisor. It fetches that scraper's settings, asks for your file name and format, runs the job, and then summarises the signals. It collects data from public websites and needs an Apify token, Node.js and the mcpc command line tool. Check each site's terms of use before you scrape.
+when:
+  - You want all your reviews gathered in one place.
+  - You manage a hotel or venue and track ratings.
+  - You need to see what people say about a competitor.
+  - You want a regular reputation check.
+you_give:
+  - Your brand or business name
+  - The sites to check
+  - An Apify token
+  - Output format and file name (optional)
+you_get:
+  - Reviews and ratings from each site
+  - An exported data file
+  - A summary of reputation signals
+  - Notes on common praise and complaints
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

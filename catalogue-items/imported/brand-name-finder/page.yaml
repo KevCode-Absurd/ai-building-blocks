@@ -6,6 +6,25 @@ summary: Share your brand brief. Get name ideas, or scores and honest feedback o
 job: brand-file
 headline: Brand name finder
 subhead: Share your brand brief. Get name ideas, or scores and honest feedback on the names you already have.
+explain: |
+  Name ideas that come with reasons, or scores and honest feedback on names you already have. It works like a naming consultant, not a random word generator.
+
+  It first learns what you sell, who it is for, what feeling the name should give and which names to avoid. It then forms three to five naming directions and a few names for each, and shows only the best. In review mode it rates your own candidates and says what is weak. It asks for extras like price level, markets and words you love or hate only when needed, and it can follow regional language leads.
+when:
+  - You are launching something and have no name.
+  - You have a shortlist and want a frank opinion.
+  - Your name is hard to say or spell and you want alternatives.
+  - You want names in a particular cultural or language style.
+you_give:
+  - What you sell and who it is for
+  - The feeling the name should create
+  - Competitors or names to avoid
+  - Existing name candidates (optional)
+you_get:
+  - Name ideas with reasoning
+  - Scores on your own candidates
+  - Honest feedback on weak names
+  - A shortlist to take forward
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

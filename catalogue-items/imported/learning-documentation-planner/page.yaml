@@ -6,6 +6,25 @@ summary: Describe a class activity. Get a way to record children's learning, sha
 job: teach-and-train
 headline: Learning documentation planner
 subhead: Describe a class activity. Get a way to record children's learning, share it with families and plan next steps.
+explain: |
+  A way to record what children do and say in an activity so their learning becomes visible to them, to families and to other teachers. Describe the activity and why you are documenting it. The skill follows the Reggio Emilia approach, in which notes, photos and children's own words are collected and then interpreted instead of only displayed.
+
+  It sets out what to capture while the activity runs, how to turn it into a panel or story for families, and which questions the evidence raises for your next plan. You get steps for sharing and for using the notes to decide what children explore next.
+when:
+  - Your class is running a project and you want a record of the learning.
+  - You need to show families what children are working out, not only what they made.
+  - You want to plan next steps from what children did.
+  - Your teaching team wants a shared way to review notes.
+you_give:
+  - The activity or investigation
+  - Why you are documenting it
+  - Age group
+  - Who will see the documentation (optional)
+you_get:
+  - A capture plan for the activity
+  - A format to share with families
+  - Questions to interpret the evidence
+  - Ideas for next steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

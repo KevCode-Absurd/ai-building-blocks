@@ -6,6 +6,26 @@ summary: Give it a creator. Get who their audience is, where they live and if th
 job: understand-customers
 headline: Creator audience checker
 subhead: Give it a creator. Get who their audience is, where they live and if they fit a sponsorship. Collects data from websites.
+explain: |
+  A fit check on a creator: who their audience is, where they live, what language they use and whether a sponsorship makes sense. You decide before you spend, using evidence from public pages.
+
+  You name a creator. The skill collects public profile signals, such as follower and following numbers, comments, audience location and language, and content type. It sets these out as evidence with sources, then writes audience notes and a fit summary. It ends with a sponsorship recommendation and says what is unknown. It also lists common pitfalls, like trusting follower counts alone. It reads data from websites, so what it can see depends on what is public.
+when:
+  - A creator pitched you and you want to check their audience first.
+  - You are choosing between three influencers for one budget.
+  - You sell in one country and need to know if their fans live there.
+  - You need evidence to show your boss why you picked someone.
+you_give:
+  - Creator name or profile link
+  - Your product and target market
+  - Budget range (optional)
+  - Sponsorship goal
+you_get:
+  - Audience summary
+  - Location and language evidence
+  - Fit summary
+  - Sponsorship recommendation
+  - What is still unknown
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

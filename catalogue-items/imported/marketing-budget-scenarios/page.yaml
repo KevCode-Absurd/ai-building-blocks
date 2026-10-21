@@ -6,6 +6,25 @@ summary: Give it past spend and results by channel. Get low and high forecasts f
 job: track-numbers
 headline: Marketing budget scenario planner
 subhead: Give it past spend and results by channel. Get low and high forecasts for a new budget, with diminishing returns built in.
+explain: |
+  Low and high forecasts for a new marketing budget, based on your past spend and results, with diminishing returns built in. The model does not assume that doubling spend doubles results.
+
+  You give weekly or monthly spend by channel and the outcomes at each funnel stage. A saturation curve is fitted to each channel. Missing spend data is treated as a gap, not as zero. For a new budget it projects outcomes, then runs many random simulations to give a cautious p10 and an optimistic p90. If you ask it to allocate money, it uses proper optimisation rules so it does not pile everything into one channel. It also backtests on past periods.
+when:
+  - You have a bigger budget next quarter and need a realistic forecast.
+  - You want to split budget across channels based on evidence.
+  - Your plan assumes spend and results scale in a straight line.
+  - You want to know how wrong the model was on past periods.
+you_give:
+  - Past spend by channel and period
+  - Funnel results by period
+  - The new total budget
+  - The timeframe
+you_get:
+  - Conservative and optimistic forecasts
+  - A channel allocation
+  - Fitted return curves
+  - A past-period error check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

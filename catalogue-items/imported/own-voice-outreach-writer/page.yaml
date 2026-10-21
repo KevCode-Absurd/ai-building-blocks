@@ -6,6 +6,25 @@ summary: Give it your prospects. Get emails and follow-ups that sound like you, 
 job: write-emails
 headline: Own-voice outreach writer
 subhead: Give it your prospects. Get emails and follow-ups that sound like you, each tied to something specific about them.
+explain: |
+  Emails and follow-ups that read like you wrote them, each tied to something real about the person getting them. Nobody has to wonder if a bot did it.
+
+  The skill first learns your voice. It reads 15 to 30 of your sent emails from Gmail or Microsoft 365, or three examples you pasted, and notes sentence length, greetings, sign-offs, contractions, exclamation marks, how direct your ask is and things you never say. It saves the profile for next time. Then it finds a true detail for each prospect, from a recent post, role change or company news. It writes the message around that detail and drafts follow-ups in the same voice. With no samples, it asks for three first.
+when:
+  - You dislike how generic AI outreach sounds.
+  - You have a list of prospects and want personal notes fast.
+  - Your follow-ups feel stiff and get ignored.
+  - You want a team member to send in your style.
+you_give:
+  - Your prospects and context
+  - Sent emails or three samples of your writing
+  - What you want from each person
+  - Mailbox access (optional)
+you_get:
+  - A saved voice profile
+  - Emails with a real, specific hook
+  - Follow-ups in your tone
+  - Subject line options
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

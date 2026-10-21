@@ -6,6 +6,24 @@ summary: Give it code. Get blunt reviews in the voices of well-known engineers, 
 job: test-and-fix-code
 headline: Famous engineer code reviewer
 subhead: Give it code. Get blunt reviews in the voices of well-known engineers, each tied to their written views.
+explain: |
+  A code review in the voices of well-known engineers, each finding tied to something they have written or said. The notes are blunter and more concrete than a generic review.
+
+  The skill picks a few personas for the code in front of it and always includes one product thinker. Each persona's view must be grounded in a source file first, and every finding gets a confidence level. It paraphrases principles rather than inventing quotes, and drops any persona it cannot ground. A finding must stand on its own technical merit. A clean result must name three or more principles the code meets. The verdict is approve, concerns or block.
+when:
+  - You want a tougher review than a quick glance from a teammate.
+  - A pull request is about to merge and you want a second view.
+  - You want feedback on a README or quick start from a product angle.
+  - You keep getting vague review comments and want specific ones.
+you_give:
+  - The code, diff or pull request
+  - The language and what it should do
+  - Which kinds of engineers you want (optional)
+you_get:
+  - Findings ranked critical, warning and note
+  - A named principle and confidence level for each
+  - A product-angle check
+  - A final verdict
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

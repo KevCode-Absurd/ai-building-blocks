@@ -6,6 +6,25 @@ summary: Describe your agency system. Get which NZISM controls apply, your gaps 
 job: check-contracts
 headline: New Zealand government security checker
 subhead: Describe your agency system. Get which NZISM controls apply, your gaps and what certification needs.
+explain: |
+  If you work with a New Zealand government agency, this tells you which security rules from the NZISM apply to your system and where you fall short. It uses the real control numbers, not made-up ones, so you can check each answer against the manual.
+
+  First it fixes the classification of your system, from Unclassified up to Top Secret, and assumes Restricted if you do not say. It then matches controls to your setup and builds a gap table with status, evidence needed and notes. It can also lay out the certification and accreditation steps, write policy documents, and explain supplier duties. Incident answers name the right New Zealand bodies to tell.
+when:
+  - You supply software to a New Zealand agency and need to know which controls reach you.
+  - Your agency system is heading for certification and you need the steps and paperwork list.
+  - You are writing a security policy and want it tied to NZISM control numbers.
+  - A supplier asks what security duties pass down to them.
+you_give:
+  - A description of the system and what it handles
+  - The classification level, if known (optional)
+  - Whether you are an agency or a supplier
+  - Your current controls or policies (optional)
+you_get:
+  - A gap table by control with status and evidence needed
+  - The certification pathway with deliverables
+  - Policy text with control references
+  - Classification handling guidance
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

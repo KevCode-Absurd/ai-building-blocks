@@ -6,6 +6,25 @@ summary: Give it MATLAB code. Get class-based unit tests with fixtures, mocks an
 job: test-and-fix-code
 headline: MATLAB unit test writer
 subhead: Give it MATLAB code. Get class-based unit tests with fixtures, mocks and app tests that you can run.
+explain: |
+  A set of MATLAB unit tests you can run today, written as classes with edge cases covered. Give it your code and get tests that check what it does, not how it does it.
+
+  For anything bigger than a small function it shows you a plan first: the test methods, the edge cases and any parameter ranges, for your approval. Then it writes the tests. They follow firm rules. Every test is a class, never a script. No test contains an if, a loop or a try, and each follows arrange, act, assert. Tests use public interfaces only. It covers fixtures, mocks and app tests as well. After writing, it runs the tests through MATLAB to confirm they pass.
+when:
+  - You have functions with no tests and want a safety net before changing them.
+  - You need tests for a class with several input types.
+  - You want to test an app without clicking through it each time.
+  - You need mocks so a test does not call a real service.
+you_give:
+  - The code to test
+  - Expected behaviours and error cases
+  - Any outside services to fake (optional)
+  - MATLAB release
+you_get:
+  - A test plan to approve
+  - Class-based test files
+  - Fixtures and mocks where needed
+  - A passing test run
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

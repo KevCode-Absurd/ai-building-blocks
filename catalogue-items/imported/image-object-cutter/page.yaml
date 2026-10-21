@@ -6,6 +6,24 @@ summary: Click a point or draw a box on a picture. Get the exact outline of that
 job: build-software
 headline: Image object cutter
 subhead: Click a point or draw a box on a picture. Get the exact outline of that object, or of every object.
+explain: |
+  The exact outline of any object in a picture, from one click or a drawn box. Or let it find every object and cut them all out at once. It uses Meta's Segment Anything Model, which works on new kinds of images with no extra training.
+
+  You can guide it with points, boxes or an earlier mask. Three model sizes trade speed for accuracy. A fast model suits quick tools and the most accurate suits detailed work. It can also run on its own across a whole image and return many masks. It suits annotation tools, training data and medical or satellite images. You need Python, torch and the segment-anything package.
+when:
+  - You need a clean cutout of one object from a photo.
+  - You are building labeled data to train a vision model.
+  - You want every object in an image separated automatically.
+  - You are working with medical or satellite images with no labels.
+you_give:
+  - An image
+  - A click point or a box around the object (optional)
+  - Python with torch and segment-anything
+you_get:
+  - A mask outlining the chosen object
+  - Masks for all objects in the image
+  - Confidence scores for each mask
+  - Code you can adapt for your own tool
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Paste your own LinkedIn numbers. Get which posts worked, why reach chan
 job: grow-social
 headline: LinkedIn results reader
 subhead: Paste your own LinkedIn numbers. Get which posts worked, why reach changed and a test to run next.
+explain: |
+  A plain reading of your own LinkedIn numbers: which posts worked, why reach changed, and one test to run next. It is careful not to claim more than the data supports.
+
+  Paste your post data. With fewer than ten posts it describes what happened but draws no conclusion, and says so. With more, it treats patterns as ideas to test, since past posts are tangled with timing and topic. It does not compare you to other people's numbers and does not treat follower count as success. Every claim is labelled by how reliable the source is. You end up with a test you can run.
+when:
+  - Your reach dropped and you want to know why.
+  - You wonder if carousels work better for you.
+  - One post did well and you want to know if it was luck.
+  - You want to decide what to post next based on your data.
+you_give:
+  - Post data you copied from LinkedIn
+  - The dates and formats of posts
+  - Your goal beyond likes (optional)
+  - A question you want answered (optional)
+you_get:
+  - A summary of what happened
+  - Patterns, marked as ideas to test
+  - A confidence label on each claim
+  - One test to run next
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

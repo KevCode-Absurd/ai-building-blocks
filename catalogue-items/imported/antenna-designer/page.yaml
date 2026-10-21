@@ -6,6 +6,25 @@ summary: Name the frequency and goal. Get an antenna or array designed, with its
 job: build-software
 headline: Antenna designer
 subhead: Name the frequency and goal. Get an antenna or array designed, with its pattern and fit checked.
+explain: |
+  Tell it the frequency and what the antenna must do, and you get a working design with its radiation pattern, impedance and fit checked. It can cover a single antenna, a circuit board antenna or a whole array.
+
+  The skill drives MATLAB's Antenna Toolbox, so you need MATLAB with that toolbox. For standard types such as dipoles, patches and horns, it picks a catalogue design and analyses gain, beamwidth and return loss. For odd shapes it builds a custom design from basic shapes. For printed boards it sets up the layers and can export files for manufacture. For arrays it handles beam steering and grating lobes. It can also optimise size for gain or bandwidth.
+when:
+  - You must design a patch antenna for a specific band.
+  - You want to see the pattern and return loss before building anything.
+  - You need a printed antenna ready for board fabrication files.
+  - You are tuning an array to steer a beam.
+you_give:
+  - Target frequency or band
+  - Goals such as gain, bandwidth or size
+  - Antenna type, if you have one in mind (optional)
+  - Board material (optional)
+you_get:
+  - A designed antenna or array in MATLAB
+  - Pattern, impedance and return loss plots
+  - Fabrication files for printed designs (optional)
+  - Optimised dimensions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

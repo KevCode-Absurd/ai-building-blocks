@@ -6,6 +6,25 @@ summary: Give it long material and a size limit. Get a shorter version that keep
 job: think-and-decide
 headline: Context shrinker
 subhead: Give it long material and a size limit. Get a shorter version that keeps decisions, facts and open questions.
+explain: |
+  A shorter version of long material that still holds the decisions, facts, limits and open questions you need. You set the size, and it fits the text into it without dropping what matters.
+
+  It starts by working out how many tokens are free after your instructions and the reply. It scores each passage for useful facts per word, then picks a method: keep the best sentences word for word, rewrite shorter, pull out key points, or cut filler. Heavy cuts combine methods. It checks the result against the original for lost names, numbers and conclusions, and adds a note that the text is summarised so the AI treats it with the right confidence.
+when:
+  - A long chat history no longer fits in your next prompt.
+  - You need a 50 page report squeezed into a question and answer setup.
+  - You must keep exact wording for legal or code text but shorten the rest.
+  - Your prompt cost is too high because of pasted background.
+you_give:
+  - The long text or conversation
+  - Your target size in tokens
+  - The task it will be used for
+  - Preferred method (optional)
+you_get:
+  - Compressed text within your limit
+  - Kept decisions, facts and open questions
+  - List of what was cut
+  - Retention check against the original
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

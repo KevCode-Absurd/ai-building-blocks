@@ -6,6 +6,26 @@ summary: Give it a competitor. Get their live ads broken into hooks, offers, cal
 job: study-competitors
 headline: Ad library teardown writer
 subhead: Give it a competitor. Get their live ads broken into hooks, offers, calls to action and test ideas. Collects data from websites.
+explain: |
+  A competitor's live ads get broken into hooks, offers, calls to action and test ideas for you to try. It collects public ads from websites, so it works only on what is shown there.
+
+  The skill pulls active ads from the Meta, Google or LinkedIn ad libraries. It records the wording, the offers, the buttons and any video speech. It also reads the landing page to see what each ad promises. Then it groups the ads into messaging angles, builds a swipe file of hooks and headlines, and notes what the brand appears to be testing. The last section gives tests for your own ads. It notes the common pitfall of treating one ad as proof of a strategy.
+when:
+  - A rival is running ads and you want to learn what they push.
+  - You need fresh hook ideas from your market.
+  - You want to see which offers a competitor repeats.
+  - You are planning tests and want a starting list.
+you_give:
+  - A competitor name or ad library link
+  - The platform to check
+  - Your own product and audience (optional)
+  - How many ads to study (optional)
+you_get:
+  - A summary of their messaging angles
+  - A swipe file of hooks and headlines
+  - Offers and calls to action
+  - Notes from video transcripts
+  - Recommended tests for you
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

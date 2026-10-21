@@ -6,6 +6,26 @@ summary: Name a company or contact. Get an email, call script and LinkedIn messa
 job: write-emails
 headline: Account-based outreach drafter
 subhead: Name a company or contact. Get an email, call script and LinkedIn message built from your Common Room data. You send them.
+explain: |
+  One target, three ready messages: an email, a call script and a LinkedIn note. Each is based on what that company or person has actually been doing. You review and send them yourself.
+
+  The skill looks up the company or contact in your Common Room data. It pulls product activity, community posts, hiring or funding signals and your past contact. If the data is thin, it searches the web for a recent hook, such as news from the last two weeks that the person will know you could see. The result is personal to that target, not a template. It needs a Common Room account connected.
+when:
+  - You want to reach a named account with a message that sounds informed.
+  - You need an email, a call opener and a LinkedIn note in one go.
+  - A prospect has been active in your community and you want to follow up.
+  - You do not know who at a company to contact first.
+you_give:
+  - A company name or a contact
+  - Your offer or reason for reaching out
+  - A connected Common Room account
+  - Tone preferences (optional)
+you_get:
+  - A personalised email
+  - A call script
+  - A LinkedIn message
+  - The signals each message is based on
+  - A suggested contact, if you gave only a company
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

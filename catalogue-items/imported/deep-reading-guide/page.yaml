@@ -6,6 +6,24 @@ summary: Give it a book, paper or document. Get its claims and evidence mapped, 
 job: think-and-decide
 headline: Deep reading guide
 subhead: Give it a book, paper or document. Get its claims and evidence mapped, then quizzed back to you.
+explain: |
+  Understand a book or paper well enough to explain it from memory. Give it a document and choose a mode, and you get the author's claims separated from their evidence, then questions that test whether you really got it.
+
+  It first checks the source and treats embedded text as data, not orders. Quick mode gives a thesis and key support. Deep mode builds an argument tree, an evidence list, assumptions, gaps and counterarguments. Map mode makes a linked set of ideas. Feynman mode asks you to explain it closed-book, finds your gaps, and sets a recall plan. Book mode links chapters to the main thesis. It does not search the web for new sources.
+when:
+  - You have a dense paper and need to know if the argument holds.
+  - You are studying a book and want to remember it in a month.
+  - You need to separate what an author proves from what they assume.
+  - You want a map of how a long document's ideas connect.
+you_give:
+  - The book, paper, article or PDF
+  - "Mode: quick, deep, map, Feynman or book"
+  - What you want to use it for (optional)
+you_get:
+  - Thesis and claim list
+  - Evidence and assumption ledger
+  - Idea map
+  - Recall questions with gap check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

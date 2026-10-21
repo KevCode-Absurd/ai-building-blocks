@@ -6,6 +6,25 @@ summary: Set a goal such as wider bandwidth or smaller area. Get PCB sizes tuned
 job: build-software
 headline: PCB design optimizer
 subhead: Set a goal such as wider bandwidth or smaller area. Get PCB sizes tuned by search to meet it.
+explain: |
+  PCB dimensions tuned automatically to hit a goal such as wider bandwidth, better return loss or smaller area. It runs in MATLAB.
+
+  It always starts with the toolbox's built-in optimize function rather than a hand-made loop. You set the objective, upper and lower bounds on each size and any constraints. It can run search methods such as SADEA, pattern search or surrogate optimisation, and it can use a custom objective built from the response curves. Afterwards it recommends checking the result with an EM analysis. It needs an existing design to start from, plus MATLAB with RF PCB Toolbox.
+when:
+  - Your filter misses its bandwidth target.
+  - You want a coupler shrunk without losing performance.
+  - Return loss is too weak at the band edge.
+  - You need a custom goal, not a standard one.
+you_give:
+  - Starting PCB design in MATLAB
+  - Goal such as bandwidth, return loss or area
+  - Bounds on each dimension
+  - Constraints
+you_get:
+  - Optimised dimensions
+  - Run settings and method used
+  - Before and after response
+  - Advice to validate the result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

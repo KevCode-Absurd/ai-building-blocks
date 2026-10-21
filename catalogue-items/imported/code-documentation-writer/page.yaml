@@ -6,6 +6,24 @@ summary: Point it at your code. Get docstrings, a README and usage guides that m
 job: build-software
 headline: Code documentation writer
 subhead: Point it at your code. Get docstrings, a README and usage guides that match what the code does.
+explain: |
+  Docs that match what your code actually does: docstrings on each function, a README, and usage guides. They follow your project's existing style.
+
+  It walks the project and lists every public module, class, function and constant, marking which have docs and which are missing or old. It picks the format to match your language, such as JSDoc, Google-style Python docstrings or TypeDoc. For each item it reads the types, defaults, errors and side effects, and looks at tests to see how the code is really used. Each entry gets a one-line summary, details where the logic is tricky, and an example.
+when:
+  - Your project has no README and a new person is joining.
+  - Half your functions have no docstrings.
+  - Your docs are out of date after a big refactor.
+  - You need an API reference for other developers.
+you_give:
+  - Your code or project folder
+  - The doc style you use (optional)
+  - Which parts to cover (optional)
+you_get:
+  - Docstrings for public code
+  - A project README
+  - Usage examples
+  - A list of docs that were stale
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

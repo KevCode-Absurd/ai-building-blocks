@@ -6,6 +6,25 @@ summary: Describe a quantum system. Get a simulation with stated assumptions and
 job: research-topics
 headline: Quantum system simulator
 subhead: Describe a quantum system. Get a simulation with stated assumptions and checks that the numbers have settled.
+explain: |
+  A working simulation of a small quantum system, with the assumptions written down and checks that the answer is stable and not an artefact of the setup. It covers things like qubits in a noisy environment, light in a cavity, and open system dynamics.
+
+  You describe the system. It chooses the right method, builds the model, and runs it in Python using the QuTiP library. It then tests whether the numbers hold when you grow the state space, tighten the solver settings or change the time step. Plots are optional. This needs Python and uv installed, and it does not run on real quantum hardware.
+when:
+  - You need to model how a qubit loses coherence over time.
+  - You are checking a quantum optics idea before building it.
+  - Your simulation gives numbers and you doubt they have converged.
+  - You want a reproducible setup you can share with a colleague.
+you_give:
+  - Description of the quantum system
+  - Quantities you want to measure
+  - Python with uv installed
+  - Noise or loss rates (optional)
+you_get:
+  - Simulation code and results
+  - Stated model assumptions
+  - Convergence and sanity checks
+  - Plots of the dynamics (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

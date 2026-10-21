@@ -6,6 +6,25 @@ summary: Give it welfare readings from an animal study. Get one severity score o
 job: track-numbers
 headline: Animal study severity scorer
 subhead: Give it welfare readings from an animal study. Get one severity score over time and an early forecast.
+explain: |
+  Lab studies often track many welfare signs at once, like weight, temperature and activity. This skill folds them into one severity score for each animal on each day, so you can see who is struggling and who is likely to be next.
+
+  It uses the RELSA method. Each reading is compared with a reference group, set so that worse always points the same way, and scaled to that group's range. The scaled values are combined into a single number. An ARIMA forecast then estimates the score at a chosen future day and shows its likely range. Forecasts are exploratory and never replace your approved endpoint rules.
+when:
+  - You track several welfare measures and want one score per animal per day.
+  - You want an early warning of which animals may be worse at the next check.
+  - You need to set attention and danger zones on a severity scale.
+  - You are writing up severity for an ethics or refinement report.
+you_give:
+  - Daily readings per animal, such as weight and temperature
+  - A reference group of animals for comparison
+  - Which readings get worse when they go up or down
+  - The future day to forecast
+you_get:
+  - One severity score per animal per day
+  - A forecast score with a prediction range
+  - Suggested attention and danger zones
+  - Charts and accuracy checks for the forecast
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

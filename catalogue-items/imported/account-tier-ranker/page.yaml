@@ -6,6 +6,25 @@ summary: Give it your accounts. Get each scored on fit and activity and sorted i
 job: sell-and-negotiate
 headline: Account tier ranker
 subhead: Give it your accounts. Get each scored on fit and activity and sorted into tiers, so you know where to spend time.
+explain: |
+  A long list of accounts becomes a short list of where your time pays off most. Each account is scored for fit and for activity, with a plain reason.
+
+  The skill reads your ideal customer profile from your setup, then pulls the account set you named or your whole book. It scores fit from 0 to 10, using traits such as size, industry and tools. It then scores engagement from 0 to 10 from recent contact, visits and product use. The two scores combine into a tier, and each tier gets a recommended move: pursue, nurture or leave alone. It needs your CRM connected.
+when:
+  - You have more accounts than hours and need to pick where to focus.
+  - A new quarter starts and you want to reset priorities.
+  - You want to find strong-fit accounts that have gone quiet.
+  - Your team argues about which accounts matter most.
+you_give:
+  - A list of accounts, or your full book
+  - Your ideal customer profile
+  - A connected CRM
+  - Which signals count as engagement (optional)
+you_get:
+  - A fit score and an activity score for each account
+  - A tier for each account
+  - A reason behind each score
+  - A suggested move per tier
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

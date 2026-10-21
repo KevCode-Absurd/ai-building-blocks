@@ -6,6 +6,25 @@ summary: Give it one winning ad idea. Get 10 to 15 different angles with hooks, 
 job: plan-ad-tests
 headline: Ad angle multiplier
 subhead: Give it one winning ad idea. Get 10 to 15 different angles with hooks, ready to test side by side.
+explain: |
+  One ad idea that already works turns into 10 to 15 clearly different angles, each with a hook, so you can test them side by side instead of running small edits of the same ad.
+
+  The skill works from six directions. Pain starts with the problem. Desire starts with the result. Proof leans on evidence. Identity speaks to who the buyer is. Contrarian goes against common belief. Urgency adds a reason to act now. Each angle has to feel new, so minor rewrites are rejected. That helps you find out which message moves people, rather than which wording does. It works with any product and needs only your winning idea and some context on the audience.
+when:
+  - One ad is working and you need more like it to scale.
+  - Your ads are tiring out and you need fresh messages.
+  - You plan a creative test and need distinct angles.
+  - You are stuck writing variations of the same line.
+you_give:
+  - Your best ad or core idea
+  - The product and offer
+  - Your audience
+  - Proof points you can use (optional)
+you_get:
+  - 10 to 15 distinct angles
+  - A hook for each angle
+  - The type of angle each one is
+  - A suggested order to test
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

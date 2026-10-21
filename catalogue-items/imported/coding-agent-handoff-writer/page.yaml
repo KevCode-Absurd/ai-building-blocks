@@ -6,6 +6,25 @@ summary: Describe the change you want. Get a handoff note with scope, checks and
 job: build-software
 headline: Coding agent handoff writer
 subhead: Describe the change you want. Get a handoff note with scope, checks and stop rules for a coding agent.
+explain: |
+  A handoff note that lets a coding agent run on its own and come back with work a person can review. It is made for overnight or background jobs where you will not be watching.
+
+  The note sets out the plan to build, the repo and its default branch, the rules for contributing, and the exact commands that prove the work: tests, lint, build. It sets the scope, the stop rules for when the agent should quit instead of guessing, and who merges and cleans up. It works for Claude Code, Codex or similar agents. It refuses to write a note if there is no way to check the result.
+when:
+  - You want an agent to finish a task while you sleep.
+  - You are turning a spec into a brief an agent can run.
+  - Your agent runs vary and you want them comparable.
+  - A draft handoff needs a second look before it goes out.
+you_give:
+  - The plan or spec
+  - The repo and its default branch
+  - Commands that prove the work
+  - Who merges the result
+you_get:
+  - A handoff note
+  - Scope and stop rules
+  - Checks the agent must pass
+  - A review path for the result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

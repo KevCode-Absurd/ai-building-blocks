@@ -6,6 +6,26 @@ summary: Describe the cloud setup you need. Get Terraform, Pulumi or CloudFormat
 job: ship-and-host
 headline: Cloud setup coder
 subhead: Describe the cloud setup you need. Get Terraform, Pulumi or CloudFormation code that builds it the same way every time.
+explain: |
+  Describe the servers, networks and databases you want, and get code that builds them the same way every time. Nobody has to click through a console and hope they remember each step.
+
+  It asks for your cloud, the resources, sizes, security needs and environments such as dev and production. Then it picks Terraform, Pulumi or CloudFormation to match your team. The code is split into small reusable modules for network, compute and data, with settings you can change per environment. It also covers where to keep state, how to preview changes before applying them, and how to spot drift when someone edits things by hand.
+when:
+  - You built your cloud setup by hand and cannot rebuild it.
+  - You need identical dev, staging and production environments.
+  - You want infrastructure changes reviewed like any other code change.
+  - Someone changed a server by hand and you need to catch the drift.
+you_give:
+  - Your cloud provider
+  - The resources you need
+  - Sizing and security rules
+  - Environments to create (optional)
+  - Your preferred tool (optional)
+you_get:
+  - Infrastructure code in modules
+  - Settings per environment
+  - A plan for storing state
+  - Steps to preview and apply changes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

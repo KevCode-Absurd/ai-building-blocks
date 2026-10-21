@@ -6,6 +6,25 @@ summary: Name the goal and buyer. Get an email series where each message builds 
 job: write-ad-copy
 headline: Email sequence arc planner
 subhead: Name the goal and buyer. Get an email series where each message builds trust and sets up the next.
+explain: |
+  An email series where each message sets up the next, so readers keep opening and the last email feels earned. Name the goal and buyer, and you get a plan that paces curiosity, trust and the final ask.
+
+  The skill first asks who the reader is, how aware they are, the end goal and any limits. It then gives each email one emotional job. It opens a question in one email and answers it in the next, and starts with small commitments before a larger ask. The ideas come from psychology research that the skill marks as planning ideas to test, not proven rules. It also keeps persuasion honest.
+when:
+  - Your onboarding sequence repeats the same pitch.
+  - You want readers to open email three because of email two.
+  - You are planning a sales sequence for a new offer.
+  - You need each message to have one clear job.
+you_give:
+  - The goal of the sequence
+  - Who the reader is
+  - Where they are in awareness and trust
+  - Channel limits and send rhythm (optional)
+you_get:
+  - A step-by-step email sequence plan
+  - One emotional goal per email
+  - Open-loop hooks that link emails
+  - Small to large ask progression
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

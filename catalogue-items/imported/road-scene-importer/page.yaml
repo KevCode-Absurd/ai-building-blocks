@@ -6,6 +6,25 @@ summary: Give it a map file. Get it loaded into RoadRunner as a driving scene yo
 job: build-software
 headline: Road scene importer
 subhead: Give it a map file. Get it loaded into RoadRunner as a driving scene you can check by eye.
+explain: |
+  A map file loaded into RoadRunner as a driving scene you can look over by eye, so you can see whether a conversion worked. Setup mistakes are caught before the import runs.
+
+  It takes an RRHD or OpenDRIVE file, copies it into the RoadRunner project folder and checks the file type and build options. Bridge detection is turned on on purpose, not left to defaults. By default it only loads the map; building the full scene is a step you ask for. It works through MATLAB script files and needs a running RoadRunner connection from the core skill. Launching the app and making maps are handled elsewhere.
+when:
+  - You just converted a map and want to see it in 3D.
+  - You have an OpenDRIVE file to bring into RoadRunner.
+  - You want asphalt, bridges or junctions set when building a scene.
+  - You need to check that a converted road looks right.
+you_give:
+  - A map file (.rrhd or .xodr)
+  - A running RoadRunner session
+  - Build options such as asphalt or bridges (optional)
+  - Whether to load only or also build (optional)
+you_get:
+  - The map imported into a RoadRunner scene
+  - A copy of the file in the project folder
+  - Build options applied
+  - A scene ready for visual checking
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

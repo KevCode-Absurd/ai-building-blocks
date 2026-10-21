@@ -6,6 +6,26 @@ summary: Give it de-identified case or trial data. Get a structured report draft
 job: document-work
 headline: Clinical report draft checker
 subhead: Give it de-identified case or trial data. Get a structured report draft and checks for gaps.
+explain: |
+  A structured draft for a clinical case, trial or safety report, plus checks that show what is missing or inconsistent. It works only with de-identified or invented data, and every output is marked as a draft not for clinical use.
+
+  It picks the reporting guide that fits your report type and builds the outline from the facts you supply. It does not guess or fill gaps: missing dates, units or outcomes are listed for a person to resolve. Local scripts check structure and internal consistency, such as numbers that do not add up or sections left blank. It keeps track of where each fact came from. It will not diagnose, advise treatment, sign off or send anything anywhere.
+when:
+  - You are drafting a case report and need a proper outline.
+  - You want to check your tables for numbers that do not add up.
+  - You need to see which required sections are empty.
+  - You must keep a record of the source of each fact.
+you_give:
+  - De-identified or synthetic facts
+  - The report type
+  - Source records for each fact
+  - A reporting guide you follow (optional)
+you_get:
+  - A structured draft
+  - A list of gaps and inconsistencies
+  - A source tracking sheet
+  - Checks on tables and sections
+  - Draft markers on every page
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

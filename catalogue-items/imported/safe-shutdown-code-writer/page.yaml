@@ -6,6 +6,25 @@ summary: Point it at your server or worker. Get code that finishes live work and
 job: build-software
 headline: Safe shutdown code writer
 subhead: Point it at your server or worker. Get code that finishes live work and exits cleanly when stopped.
+explain: |
+  Code that lets your server or worker stop without dropping live requests or losing half-done jobs. Point it at your service and get a shutdown routine for when it receives a stop signal.
+
+  The pattern runs in order. Catch the stop signals early and set a flag, ignoring repeats. Stop taking new connections or queue jobs right away. Let current work finish within a time limit. Close database connections and other resources. Then exit with the right code. It also adds health check endpoints so a load balancer stops sending traffic first, and notes for Kubernetes and Docker, which send the signal before they kill. Examples are given in TypeScript, and the same steps apply to other languages.
+when:
+  - Deploys drop active requests and users see errors.
+  - A background worker loses jobs when the container restarts.
+  - You run on Kubernetes or Docker and need to handle the stop signal.
+  - You need health check endpoints for readiness.
+you_give:
+  - Your server or worker code
+  - Language and framework
+  - How long a request or job can take
+  - Where you deploy
+you_get:
+  - Signal handler code
+  - A drain and cleanup routine
+  - Health check endpoints
+  - A time limit with a forced exit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Share a mockup or Figma link. Get feedback on usability, hierarchy and 
 job: design-work
 headline: Design feedback giver
 subhead: Share a mockup or Figma link. Get feedback on usability, hierarchy and consistency, with fixes.
+explain: |
+  Straight feedback on a design, in the order a user would meet it. Share a Figma link, screenshot or description and you get a critique that covers first impression, usability, hierarchy and consistency, each with a specific fix.
+
+  It starts with the two-second test: what the eye hits first, what feeling it gives and whether the purpose is clear. Then it asks if a person can reach their goal and whether navigation makes sense. It checks the visual order, spacing and style consistency. You tell it what stage the work is at and who it is for, so the advice fits an early sketch or a final screen. You can ask it to focus on mobile or one flow.
+when:
+  - You have a mockup and want a second pair of eyes before review.
+  - Your team debates a layout and needs a neutral opinion.
+  - You want to test a flow on mobile before building it.
+  - A stakeholder says it feels off and you need to name why.
+you_give:
+  - Figma link, screenshot or description
+  - What it is and who it is for
+  - "Stage: exploring, refining or final"
+  - Focus area (optional)
+you_get:
+  - First-impression read
+  - Usability issues
+  - Hierarchy and consistency notes
+  - Fixes ranked by importance
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

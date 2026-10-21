@@ -6,6 +6,25 @@ summary: Run it on your bundles. Get a check that every part is in stock, and ho
 job: run-your-store
 headline: Bundle stock checker
 subhead: Run it on your bundles. Get a check that every part is in stock, and how many bundles you can really sell.
+explain: |
+  Find bundles that look in stock on your storefront but cannot be shipped because one part ran out. It only reads data and changes nothing.
+
+  The skill goes through every product marked as a bundle, using Shopify's own bundle setup or a metafield that lists the component variants and quantities. For each part it compares stock on hand against what one bundle needs. An optional safety buffer treats a part as out when stock minus the buffer falls short. It reports which bundles are at risk and how many you can truly sell. You need the Shopify CLI signed in with read access to products and inventory.
+when:
+  - A customer bought a bundle that you could not ship.
+  - You want to check every bundle before a big sale.
+  - One component is running low and you need to know which bundles it affects.
+  - You want a safety buffer so parts do not hit zero.
+you_give:
+  - Your store address
+  - Where your bundle parts are listed
+  - A safety stock number (optional)
+  - Whether to check active products only (optional)
+you_get:
+  - Each bundle checked part by part
+  - Bundles that cannot be fulfilled
+  - How many bundles you can really sell
+  - The part that is the bottleneck
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

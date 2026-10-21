@@ -6,6 +6,25 @@ summary: Say your GPU is not working in MATLAB. Get it found, tested and ready f
 job: build-software
 headline: GPU setup checker
 subhead: Say your GPU is not working in MATLAB. Get it found, tested and ready for GPU code.
+explain: |
+  MATLAB cannot see your GPU, and this finds out why. It checks whether a compatible GPU is available, tests that it works, and points at what is broken when it does not.
+
+  It relies on MATLAB's own checks, including canUseGPU, which also covers licence and toolbox state, and only uses nvidia-smi for facts MATLAB cannot give. In a multi-GPU machine it helps you pick the right one. If a driver update is the fix, it checks the driver policy on the GPU requirements page for your MATLAB release. It sets up and diagnoses only. It does not write or speed up GPU code.
+when:
+  - gpuDevice throws an error and you do not know why.
+  - MATLAB says no GPU found but you own one.
+  - You have several GPUs and need to select one.
+  - You want to confirm a machine is ready before GPU work.
+you_give:
+  - Your MATLAB release
+  - Error messages (optional)
+  - Your GPU model and driver (optional)
+  - Output of nvidia-smi (optional)
+you_get:
+  - A yes or no on GPU readiness
+  - Test results for the selected device
+  - The cause of any failure
+  - Fix steps including driver advice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

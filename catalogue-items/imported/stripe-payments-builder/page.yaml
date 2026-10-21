@@ -6,6 +6,26 @@ summary: Say how you charge. Get Stripe checkout, subscriptions and webhooks bui
 job: build-software
 headline: Stripe payments builder
 subhead: Say how you charge. Get Stripe checkout, subscriptions and webhooks built safely, with test steps.
+explain: |
+  Working code to take payments with Stripe: one-off checkout, monthly plans, trials, upgrades and downgrades with correct proration, and usage-based billing. You say how you charge, and it builds the pieces and the test steps.
+
+  It handles the full subscription life: free trial, active, cancel pending, canceled and back again. Webhook handlers verify Stripe's signature and ignore repeated events, which stops double charges and lost updates. It also adds the customer portal, invoices and local testing with the Stripe CLI. You need a Stripe account, a web app and developer skills. Use test mode first and check everything before taking real money.
+when:
+  - You are adding paid plans to your web app for the first time.
+  - Customers upgrade mid-month and you must prorate fairly.
+  - Stripe events arrive but your app does not update accounts.
+  - You are changing from flat pricing to pay per use.
+you_give:
+  - How you charge, one-off, monthly or usage-based
+  - Your plans and prices
+  - Your app's language and framework
+  - A Stripe account in test mode
+you_get:
+  - Checkout and subscription code
+  - Webhook handlers with signature checks
+  - Upgrade and downgrade logic
+  - Customer portal setup
+  - A local test plan with the Stripe CLI
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

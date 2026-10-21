@@ -6,6 +6,23 @@ summary: Give it images. Get smaller WebP or PNG files that look the same and lo
 job: make-images
 headline: Image compressor
 subhead: Give it images. Get smaller WebP or PNG files that look the same and load faster.
+explain: |
+  Smaller image files that look the same and load faster. Point it at one file or a folder and get compressed WebP or PNG copies.
+
+  It picks the best tool found on your computer, trying sips, then cwebp, then ImageMagick and then Sharp. You can set the output format, quality and whether to keep the original. A small preferences file can store your defaults at project, user or home level, and the first one found wins. It runs through a script using Bun or npx, so you need one of those installed. It works on a single image or a whole folder in one go.
+when:
+  - Your web page is slow because the photos are heavy.
+  - You have a folder of screenshots to shrink before sharing.
+  - You want to convert PNG or JPEG files to WebP.
+  - You need the same quality settings every time.
+you_give:
+  - An image file or folder
+  - Output format and quality (optional)
+  - Bun or Node installed on your computer
+you_get:
+  - Compressed WebP or PNG files
+  - Original files kept if you choose
+  - Size savings per image
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,23 @@ summary: Point it at a project. Get a short list of skills worth adding or updat
 job: make-skills
 headline: Project skill finder
 subhead: Point it at a project. Get a short list of skills worth adding or updating, based on how you really work.
+explain: |
+  A short list of skills worth adding to your project, picked from how you really work rather than a generic wish list. Updating an existing skill comes before inventing a new one.
+
+  The skill reads your project guidance files, then checks your AI's memory notes and past session summaries for jobs you repeat. It scans the skills you already have so it does not suggest duplicates. For each recommendation it gives the evidence, such as the repeated task and where it showed up, and says whether to update or add. Past sessions are read in order, starting with summaries and only falling back to raw logs when needed.
+when:
+  - You suspect you keep doing the same task by hand that a skill could do.
+  - You have skills already but are not sure which are worth improving.
+  - You are setting up a new project and want to start with the right skills.
+  - You want suggestions backed by evidence from your own work.
+you_give:
+  - Your project folder
+  - Access to your AI's memory and session notes (optional)
+  - Skills you already use
+you_get:
+  - Ranked list of skills to add or update
+  - Evidence for each pick
+  - Notes on existing skills that nearly fit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

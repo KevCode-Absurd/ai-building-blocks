@@ -6,6 +6,25 @@ summary: Give it your site and Meta pixel. Get a tracking audit, a match quality
 job: track-numbers
 headline: Meta pixel and server events fixer
 subhead: Give it your site and Meta pixel. Get a tracking audit, a match quality score and step-by-step fixes for your platform.
+explain: |
+  A health check of the tracking that tells Meta who bought, with a score and fixes for your platform. Browser tracking alone misses a lot of sales, so the fix is to send events from your server as well and match them with shared event IDs.
+
+  The skill audits what is set up, finds what is missing and tests events. It works toward a match quality score of 9.3 or more on purchases and 8 or more on leads. Customer details are hashed before sending, never sent plain. Order of value for matching is email, phone, name, then browser cookies and device data. It knows platform traps like Next.js page loading and Shopify checkout limits. Scripts do the checks.
+when:
+  - Meta reports fewer sales than your shop does.
+  - Your match quality score is low.
+  - You use Shopify or Next.js and are unsure the server events work.
+  - You just set up tracking and want to test it.
+you_give:
+  - Your website or platform
+  - Pixel ID and ad account ID
+  - Current setup details (optional)
+you_get:
+  - A tracking audit
+  - A match quality score
+  - A list of missing events and data
+  - Fixes for your platform
+  - A test plan to confirm they work
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

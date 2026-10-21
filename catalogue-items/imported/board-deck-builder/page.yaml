@@ -6,6 +6,25 @@ summary: Give it your quarter. Get a board or investor deck outline with the sto
 job: speak-and-persuade
 headline: Board deck builder
 subhead: Give it your quarter. Get a board or investor deck outline with the story, numbers and bad news placed right.
+explain: |
+  A board or investor deck outline where the story comes first and the numbers back it up. Each section has a headline, the data, a short narrative and a next step or ask, so directors know what you want from them.
+
+  The deck starts with a three-sentence summary: where the business stands, the biggest event this period, and where it heads next. It then pulls in a view from each leadership role. Bad news goes up front with a plan, not buried. If you do not give a figure, it leaves a clear placeholder and never makes one up. Tell it your stage and cadence, such as a quarterly Series A deck.
+when:
+  - A board meeting is coming and you need a deck structure.
+  - You have to deliver bad news and want it framed well.
+  - You are raising money and need an investor update.
+  - You want each leader's section to share the same layout.
+you_give:
+  - Your stage and meeting type
+  - Key metrics for the period
+  - The main wins and problems
+  - What you need from the board
+you_get:
+  - A section-by-section deck outline
+  - A short executive summary
+  - Bad news framed with a plan
+  - Placeholders where numbers are missing
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

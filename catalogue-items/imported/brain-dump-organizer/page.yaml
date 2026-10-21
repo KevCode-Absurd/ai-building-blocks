@@ -6,6 +6,24 @@ summary: Dump everything on your mind. Get it sorted into tasks, ideas and notes
 job: organise-work
 headline: Brain dump organizer
 subhead: Dump everything on your mind. Get it sorted into tasks, ideas and notes with nothing lost.
+explain: |
+  Paste a messy stream of thoughts and get it sorted into a clean, usable list with nothing lost. Tasks, ideas and notes each land in their place, still in your own words.
+
+  The skill runs without asking permission when it spots a long, mixed block of text. Five rules apply every time: capture everything, keep your voice, match the output size to the input, sort into four sections, and let you prune later. A five-item dump will not get an elaborate structure. Casual phrasing stays casual, so "build something crazy with AI" is not turned into corporate language.
+when:
+  - Your head is full and you need it out on paper.
+  - You pasted a wall of mixed notes and need them sorted.
+  - After a meeting you have scattered tasks and ideas.
+  - You want a to-do list without losing the odd idea.
+you_give:
+  - A messy block of text or dictation
+  - Anything you want treated as urgent (optional)
+  - Preferred format (optional)
+you_get:
+  - Four clear sections of actions, ideas and notes
+  - Your original wording preserved
+  - Nothing dropped
+  - Output sized to match your input
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

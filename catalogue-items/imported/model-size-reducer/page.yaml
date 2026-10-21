@@ -6,6 +6,26 @@ summary: Give it a large model. Get a 4-bit copy that is about 3 times faster an
 job: build-software
 headline: Model size reducer
 subhead: Give it a large model. Get a 4-bit copy that is about 3 times faster and fits on a smaller GPU.
+explain: |
+  A large language model shrunk to 4-bit, running about three times faster and fitting on a smaller GPU, with only a small loss in answer quality.
+
+  The skill uses AWQ, which looks at how the model behaves on sample text and protects the weights that matter most before shrinking the rest. You can load a ready-made small copy or make your own with a short Python script and a few hundred calibration samples. It compares AWQ with GPTQ and bitsandbytes so you pick the right one, and it covers serving with vLLM. Fast kernels need a recent Nvidia GPU.
+when:
+  - Your model does not fit in your GPU memory.
+  - Answers are too slow for a chat product.
+  - You want to serve a chat model cheaply with vLLM.
+  - You need to decide between AWQ, GPTQ and bitsandbytes.
+you_give:
+  - The model you want to shrink
+  - Your GPU type and memory
+  - A small set of sample text for calibration
+  - Your speed and quality targets (optional)
+you_get:
+  - A 4-bit version of the model
+  - The script to make it
+  - Serving steps for vLLM
+  - Before and after speed and quality checks
+  - A method comparison
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

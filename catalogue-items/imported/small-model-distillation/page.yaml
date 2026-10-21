@@ -6,6 +6,25 @@ summary: Name your large model. Get a plan and code to teach a smaller, cheaper 
 job: build-software
 headline: Small model trainer from a big one
 subhead: Name your large model. Get a plan and code to teach a smaller, cheaper model to match it.
+explain: |
+  A plan and working code to teach a small, cheap model to copy a big one. You name the large teacher model and the small student, and you get a path to keep most of the quality at a fraction of the running cost.
+
+  The skill covers the main methods. Soft targets with temperature scaling let the student learn from the teacher's full probability spread, not only its top answer. Logit distillation matches raw outputs. Response distillation trains on text the teacher wrote. A reverse KL method suits language models. It uses Python with transformers and torch, and training needs real GPU time. Expect to keep around 90 percent of performance when it goes well.
+when:
+  - Your large model works but costs too much to run.
+  - You want an open model that handles one task as well as a paid one.
+  - You need a model small enough for limited hardware.
+  - You have teacher answers and want to train a student on them.
+you_give:
+  - The teacher model
+  - The student model you want to train
+  - Training data or prompts for the task
+  - GPU access and a Python setup
+you_get:
+  - A distillation plan for your models
+  - Training code with the right loss
+  - Settings like temperature and loss weights
+  - A way to compare student and teacher
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

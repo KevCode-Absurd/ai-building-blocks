@@ -6,6 +6,25 @@ summary: Name a topic. Get real customer quotes on it from your calls and emails
 job: understand-customers
 headline: Customer quote finder
 subhead: Name a topic. Get real customer quotes on it from your calls and emails, each tied to who said it.
+explain: |
+  Real words from customers carry more weight than your summary of them. Name a topic, like an objection, a feature or a competitor, and you get direct quotes from your calls and emails, each tied to the person who said it.
+
+  It works out which accounts and domains are in scope, then splits what your team said from what customers said. It gathers from call transcripts, email threads and notes, and works with whatever source you have, including uploaded files. Only direct quotes are returned, never paraphrases, with the account, speaker and date. The default period is the last 30 days, and you can widen it.
+when:
+  - You are writing a case study and need real customer language.
+  - A product meeting asks what customers say about pricing.
+  - You want proof for or against a feature idea.
+  - You need exact words for ad or landing page copy.
+you_give:
+  - The topic or theme
+  - Which accounts or team to include (optional)
+  - Time period (optional)
+  - Call transcripts, emails or uploaded files
+you_get:
+  - Direct quotes on the topic
+  - Speaker, account and date for each
+  - A count of how often it comes up
+  - Themes across the quotes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

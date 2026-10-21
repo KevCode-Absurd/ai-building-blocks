@@ -6,6 +6,26 @@ summary: Give it stock tickers. Get how much Reddit, X, news and Polymarket talk
 job: money-and-investing
 headline: Stock chatter tracker
 subhead: Give it stock tickers. Get how much Reddit, X, news and Polymarket talk about each, and whether the mood is rising.
+explain: |
+  How much people are talking about a stock, and whether the mood is warming or cooling, across Reddit, X, news and Polymarket. You give tickers and get a comparison: a buzz score, the share of bullish posts, mention or trade counts and a trend for each source.
+
+  It asks for the lightest data call that answers your question. You can see whether Reddit and X agree on a company, or put several tickers side by side. It uses the Adanos Finance API, so you need an API key from that service. It only reads data and never places trades. It is research material, not investment advice.
+when:
+  - A stock is trending and you want to know how loud the talk really is.
+  - You want to see if Reddit and news tell the same story about a company.
+  - You are comparing the buzz around two or three tickers.
+  - You want to check whether Polymarket traders are active on a company.
+you_give:
+  - One or more stock tickers
+  - Which sources to check
+  - An Adanos Finance API key
+  - A time window (optional)
+you_get:
+  - Buzz score per ticker and source
+  - Bullish percentage
+  - Mention or trade counts
+  - A trend direction
+  - A side-by-side comparison of tickers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

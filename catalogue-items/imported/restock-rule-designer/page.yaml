@@ -6,6 +6,26 @@ summary: Give it your sales and lead times. Get a restock rule for each product 
 job: run-your-store
 headline: Restock rule designer
 subhead: Give it your sales and lead times. Get a restock rule for each product group, like min-max or fixed cycle.
+explain: |
+  A restock rule for each group of products, so reordering stops being a weekly guess. You get a clear trigger, an order size and a reason it fits that group's sales pattern.
+
+  You share how fast things sell, how long suppliers take, minimum order sizes and how often you can order. The skill matches each group to a method. Fast, steady items may suit a reorder point with a fixed amount. Items from one supplier suit a regular review and an order up to a target. Simple shops often do well with min-max, ordering up to the top level when stock hits the bottom. It also flags storage limits and full-truck savings.
+when:
+  - You keep running out of your best sellers but sit on slow ones.
+  - You are setting up reorder rules for the first time.
+  - Your suppliers have long or uneven lead times.
+  - You move stock between a warehouse and several stores.
+you_give:
+  - Sales history by product or group
+  - Supplier lead times
+  - Minimum order quantities
+  - How often you can place orders
+  - Storage limits (optional)
+you_get:
+  - A restock method for each product group
+  - Reorder points and order sizes
+  - Notes on why each rule fits
+  - Warnings about storage or supplier limits
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

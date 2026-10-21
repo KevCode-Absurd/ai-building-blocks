@@ -6,6 +6,26 @@ summary: Give it code that runs out of memory. Get the cause found, fixed and me
 job: test-and-fix-code
 headline: MATLAB memory saver
 subhead: Give it code that runs out of memory. Get the cause found, fixed and measured, with a short report.
+explain: |
+  A MATLAB script that no longer runs out of memory, with proof of how much it saved. You give it the code that crashes or crawls, and it finds what is eating the memory, changes it and measures again.
+
+  The skill works in seven steps. It takes a baseline, profiles memory use, finds the costly spots, makes changes, measures again, checks that the results are identical and writes a short report. Its main rule is to measure before it changes anything, never to guess from the source.
+when:
+  - Your script stops with an out of memory error on big data.
+  - MATLAB slows down after a long run and you do not know why.
+  - You need the same results with a smaller memory footprint.
+  - You want a before and after figure to show your team.
+you_give:
+  - The code that uses too much memory
+  - Typical data size
+  - Your operating system
+  - A sample run command
+you_get:
+  - The memory hot spots found
+  - Optimised code
+  - Before and after measurements
+  - A proof that results match
+  - A short report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

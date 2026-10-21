@@ -6,6 +6,25 @@ summary: Show it your iPhone, iPad or Mac app design. Get what to fix to match A
 job: design-work
 headline: Apple app design checker
 subhead: Show it your iPhone, iPad or Mac app design. Get what to fix to match Apple's design rules.
+explain: |
+  A list of what to fix so your iPhone, iPad or Mac app design matches Apple's own design rules. Show it a design and you get findings tied to the principle behind each one.
+
+  The skill checks your design against Apple's Human Interface Guidelines foundations. It looks at whether content leads over decoration, whether system colours and fonts are used, and whether the design works with VoiceOver, large text and reduced motion. It reviews icons, branding, colour contrast, privacy prompts, motion and right-to-left support. It starts by reading any design notes you keep, so it asks only what is missing. Detailed topic files back each point, such as accessibility, colour and app icons.
+when:
+  - You are designing a first iPhone app and want to avoid rejection.
+  - Your app feels off compared with Apple's own apps.
+  - You need to check accessibility before release.
+  - You are bringing an Android design over to iOS.
+you_give:
+  - Screenshots or a description of your design
+  - Target device and OS
+  - Design notes (optional)
+  - Your app's main purpose
+you_get:
+  - Findings grouped by principle
+  - Fixes for colour, type and icons
+  - Accessibility gaps
+  - Privacy and permission notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

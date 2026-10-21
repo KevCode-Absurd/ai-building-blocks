@@ -6,6 +6,25 @@ summary: Name a negotiation or review meeting. Get background, key issues, quest
 job: check-contracts
 headline: Legal meeting briefer
 subhead: Name a negotiation or review meeting. Get background, key issues, questions to ask, then action items. Not legal advice.
+explain: |
+  A one-page prep sheet for a legal meeting, so you walk in knowing the background, the issues and what to ask. Name the meeting. The skill works out its type, such as a deal review, board session, vendor call or dispute, then decides what prep that type needs.
+
+  It gathers context from connected sources, lists attendees and their interests, flags open issues and approvals, and suggests questions for you to ask. After the meeting it helps you capture action items and owners. It supports your preparation and is not legal advice, so check the facts before you rely on them.
+when:
+  - You are heading into a contract negotiation tomorrow.
+  - The board wants a legal update and you need the key points.
+  - A vendor call is about open terms and you need the history.
+  - You want action items recorded and assigned after a meeting.
+you_give:
+  - Meeting name, time and attendees
+  - The agenda (optional)
+  - Your role in the meeting
+  - Related contracts or notes
+you_get:
+  - A background summary
+  - Key issues and open points
+  - Questions to ask
+  - Action items after the meeting
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a component or page. Get loading, success, error and empty stat
 job: design-work
 headline: Loading and error state designer
 subhead: Give it a component or page. Get loading, success, error and empty states added, so users always know what is happening.
+explain: |
+  A screen that always tells people what is going on. Give it a component or page and it adds loading, empty, error and success states, so nobody stares at a blank box.
+
+  Loading uses a skeleton that matches the final layout. The empty state explains why nothing is there and what to do next. The error state says what failed in plain words and offers a way to retry. The success state confirms the action worked. It reads your existing code and keeps your style. It leaves out cases that do not need these states, such as static content.
+when:
+  - A list shows nothing while data loads and users think it broke.
+  - A failed request shows a blank page with no message.
+  - A new account sees an empty screen with no guidance.
+  - A form submits and gives no sign it worked.
+you_give:
+  - The component or page code
+  - What data it loads or what action it runs
+  - Your design style (optional)
+you_get:
+  - A skeleton loading state
+  - An empty state with next steps
+  - An error state with retry
+  - A success confirmation
+  - Updated component code
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

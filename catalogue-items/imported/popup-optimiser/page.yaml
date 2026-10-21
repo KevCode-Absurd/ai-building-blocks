@@ -6,6 +6,25 @@ summary: Say what you want from visitors. Get popup type, timing and copy that g
 job: audit-landing-page
 headline: Popup optimiser
 subhead: Say what you want from visitors. Get popup type, timing and copy that gets signups without annoying them.
+explain: |
+  Popups that earn signups without making visitors leave. Tell the skill what you want from visitors and it picks the type, the timing, the trigger and the words.
+
+  It starts by asking about the purpose, such as email capture, a discount, an announcement or an exit save, plus your traffic sources and mobile experience. Then it applies its core rules: show the popup after the person has seen value, not at once, respect mobile screen rules, and make closing easy. You get a plan for when it appears, who sees it, how often, and headline and button copy. It also suggests what to test and what to measure.
+when:
+  - Your email popup hurts bounce rate.
+  - You want an exit-intent offer that does not feel pushy.
+  - Visitors complain about popups on mobile.
+  - You need copy for a discount or lead magnet popup.
+you_give:
+  - What you want visitors to do
+  - Traffic sources and page types
+  - Current popup setup and results (optional)
+  - Offer or lead magnet details
+you_get:
+  - Popup type and trigger plan
+  - Timing and frequency rules
+  - Headline, body and button copy
+  - A/B test ideas with metrics
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a role and leave date. Get a checklist, exit interview question
 job: hire-people
 headline: Offboarding plan builder
 subhead: Give it a role and leave date. Get a checklist, exit interview questions and handover plan. Not legal advice; check local rules.
+explain: |
+  A full exit plan for someone leaving, from notice day to their last hour, so nothing gets missed. You give a role and a leave date and get a checklist split by who does what: HR, the manager and IT.
+
+  The plan covers voluntary and involuntary exits, remote staff, and different roles such as manager, individual contributor or contractor. It adds a handover template so knowledge leaves with a plan, exit interview questions that dig for the real reasons, and wording for telling the team. It can also suggest how to track completion and keep in touch with former staff. This is not legal advice, so check local employment rules before acting.
+when:
+  - Someone just gave notice and you need a checklist for their last four weeks.
+  - A senior person is leaving and you need a handover document for what only they know.
+  - You want exit interview questions that get honest answers.
+  - You must tell the team about a departure and want calm, clear wording.
+you_give:
+  - The role and level of the person leaving
+  - Their last day or notice period
+  - Voluntary or involuntary exit
+  - Country or location (optional)
+you_get:
+  - A dated offboarding checklist by owner
+  - A knowledge handover template
+  - Exit interview questions
+  - A script for telling the team
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

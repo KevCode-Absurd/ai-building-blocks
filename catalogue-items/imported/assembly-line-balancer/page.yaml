@@ -6,6 +6,25 @@ summary: Give it your work steps and times. Get steps split across stations so n
 job: plan-supply-chain
 headline: Assembly line balancer
 subhead: Give it your work steps and times. Get steps split across stations so none waits or overloads.
+explain: |
+  A work plan that splits assembly steps across stations so no station sits idle and none piles up. Give the AI your steps, how long each takes, which steps must come before others, and how many units you need per day.
+
+  It works out the pace you must hit (takt time) and the fewest stations that can do the job. It then assigns steps with the ranked positional weight method, which places the steps that block the most others first. You get efficiency and idle time per station. It also handles lines that build several models, U-shaped layouts and steps that must share or avoid a station.
+when:
+  - One station always has a pile of parts waiting while the next one stands idle.
+  - You are adding a product and need to rebalance the line.
+  - You want to know how many workers or stations a target volume needs.
+  - You have to show a manager why the current layout wastes time.
+you_give:
+  - A list of work steps with times
+  - Which steps must come first
+  - Daily output target and shift hours
+  - Steps that must stay together or apart (optional)
+you_get:
+  - Takt time and station count
+  - A station-by-station step assignment
+  - Efficiency and idle time per station
+  - Options for U-shaped or mixed-model lines
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

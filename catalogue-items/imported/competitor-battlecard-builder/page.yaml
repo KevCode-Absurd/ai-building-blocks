@@ -6,6 +6,26 @@ summary: Name your rivals. Get a tracking plan, sales battlecards and where to p
 job: study-competitors
 headline: Competitor battlecard builder
 subhead: Name your rivals. Get a tracking plan, sales battlecards and where to position against them.
+explain: |
+  A way to keep watch on your competitors that leads to decisions, plus sales-ready battlecards you can use on calls. It stops competitor tracking from turning into an endless hobby.
+
+  Claude first sorts rivals into direct, indirect and future, including the do-nothing option. A simple grid of customer overlap and problem overlap shows who is a real threat, and you update it each quarter. Then it sets up tracking of eight areas, such as product moves, pricing, funding, hiring and partnerships, each with a source and a check rhythm. You can also ask for a win and loss review, a positioning map or an update on a named rival.
+when:
+  - You have no routine for tracking rivals and keep being surprised.
+  - Your sales team wants a sheet on one competitor today.
+  - You want to know why you win and lose deals.
+  - A rival just raised money or changed pricing and you need to respond.
+you_give:
+  - Your product and customer type
+  - Competitor names
+  - Recent wins and losses (optional)
+  - What you most need, such as a battlecard or map
+you_get:
+  - A competitor list by threat level
+  - A tracking plan with sources
+  - A sales battlecard
+  - A positioning map
+  - A win and loss summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

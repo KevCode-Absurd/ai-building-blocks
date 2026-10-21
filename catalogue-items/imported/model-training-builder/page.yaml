@@ -6,6 +6,26 @@ summary: Describe your data and goal. Get training code with data loading, check
 job: build-software
 headline: Model training builder
 subhead: Describe your data and goal. Get training code with data loading, checks and saved checkpoints.
+explain: |
+  Training code for your data and goal that loads the data, checks it, trains and saves progress as it goes, so a crash does not cost you the whole run.
+
+  The skill profiles your data first: class balance, missing values, odd types. It splits into training, validation and test sets, keeping class ratios when they are skewed. It builds preprocessing you can reuse at prediction time, chooses a model that fits the task, such as gradient boosting for tables or a pretrained network for images, and sets the optimizer, loss and learning rate schedule. It works with PyTorch, TensorFlow or scikit-learn and adds mixed precision on GPUs.
+when:
+  - You have a labelled dataset and no training code yet.
+  - Your model scores well on training data and badly on new data.
+  - Training takes hours and you need checkpoints.
+  - You want preprocessing that works the same at prediction time.
+you_give:
+  - Your dataset or where it lives
+  - What you want to predict
+  - Your framework and hardware
+  - A score target (optional)
+you_get:
+  - Data loading and splitting code
+  - A reusable preprocessing step
+  - A training loop with validation
+  - Saved checkpoints
+  - Training and test scores
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

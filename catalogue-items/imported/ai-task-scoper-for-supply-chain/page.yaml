@@ -6,6 +6,25 @@ summary: Describe a messy planning problem. Get one clear decision, an AI fit ch
 job: plan-supply-chain
 headline: AI task scoper for supply chain
 subhead: Describe a messy planning problem. Get one clear decision, an AI fit check and a safe hand-off plan.
+explain: |
+  Turn a messy supply chain headache into one decision that your team can name, measure and safely hand to AI. It starts from a real event, such as a late shipment or a stockout, not from a technology wish.
+
+  It asks about a recent scramble: what first showed the problem, who had to decide, and what the delay cost. Then it pins down the trigger, owner, evidence, time window, stakes and whether the decision can be undone. Only then does it say if AI fits. It never invents scores or return figures. If the case is not ready, it says so plainly and gives a not-ready brief. It runs as a quick frame, interview, shortlist or workshop.
+when:
+  - Planners keep scrambling over the same recurring exception.
+  - Leadership wants to use AI but nobody can name the decision.
+  - You have several AI ideas and need one safe place to start.
+  - You are running a workshop and need an agreed brief at the end.
+you_give:
+  - A recent example of the problem
+  - Who owns the decision today
+  - The data and documents the team uses
+  - The cost of a late or wrong decision
+you_get:
+  - One clear decision statement
+  - A check on whether AI fits, with reasons
+  - The human owner and approval limits
+  - A hand-off brief, or a not-ready note
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

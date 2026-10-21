@@ -6,6 +6,25 @@ summary: Say what to do in Gmail, Drive, Sheets or Calendar. Get the commands se
 job: connect-tools
 headline: Google Workspace command-line operator
 subhead: Say what to do in Gmail, Drive, Sheets or Calendar. Get the commands set up and run for you.
+explain: |
+  Gmail, Drive, Sheets, Calendar, Docs, Chat and Tasks handled by commands instead of clicks. Say what you want done, such as sending an email or listing files, and it sets up the tool and runs the right command.
+
+  It uses the open source gws command-line tool, which builds its commands from Google's own API list as it runs. Because the tool is still early, the skill checks each command's real options with a help call before it scripts anything. A doctor script confirms the tool is installed and signed in, and an output script turns results into tables. It also covers admin tasks and security checks. It needs Node 18 or newer and a Google sign-in.
+when:
+  - You want to send or search email from a script.
+  - You need to list or move many Drive files at once.
+  - You manage a Workspace and want to run security checks.
+  - You want a daily job that reads or updates a Sheet.
+you_give:
+  - What you want done in Google Workspace
+  - A Google sign-in for the tool
+  - Node 18 or newer
+  - Admin rights for admin tasks (optional)
+you_get:
+  - The tool installed and checked
+  - Commands run for your task
+  - Results shown as tables
+  - Reusable scripts for repeat jobs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

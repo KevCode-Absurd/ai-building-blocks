@@ -6,6 +6,25 @@ summary: Give it your sales data. Get a 30 day plan of what to push, what offers
 job: grow-social
 headline: Sales-led content planner
 subhead: Give it your sales data. Get a 30 day plan of what to push, what offers to run and what to hold.
+explain: |
+  A thirty-day plan of what to promote, which offers to run and what to hold back, built from your real sales. It is a strategy brief, with no calendar and no finished posts.
+
+  It connects to QuickBooks, PayPal or Square and reads your transactions. With QuickBooks it first checks your industry is set, since seasonal benchmarks depend on it. It asks how you rank top performers: revenue, margin or sales speed. Then it finds best sellers and slow movers, adds seasonality from you or from industry norms, and ranks its advice. You approve the brief, and it can feed a separate tool that makes the posts.
+when:
+  - You have no idea what to post about this month.
+  - Some products sit unsold and you want to know whether to push or pause them.
+  - A busy season is near and you want offers ready.
+  - You want content choices backed by sales numbers.
+you_give:
+  - Access to QuickBooks, PayPal or Square
+  - Your industry
+  - How you rank top performers
+  - Known seasonal patterns (optional)
+you_get:
+  - Top sellers and slow movers
+  - Seasonal timing notes
+  - A ranked list of what to push or hold
+  - Offer ideas for the next thirty days
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

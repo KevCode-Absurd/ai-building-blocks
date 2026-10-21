@@ -6,6 +6,25 @@ summary: Give it a long idea, transcript or draft. Get an X thread where every p
 job: grow-social
 headline: X thread writer
 subhead: Give it a long idea, transcript or draft. Get an X thread where every post stands on its own.
+explain: |
+  Turn a long idea, transcript or rough draft into an X thread where every post still makes sense if someone lands on it alone.
+
+  It first asks if the idea needs a thread at all. A single point with one proof is a post, and it says so. If a thread is right, it writes a skeleton first: one line per beat. If the beats could be shuffled with no loss, it labels the thread as a list. The first post makes a specific promise, each following post holds one idea and never leans on the last, and the final post closes the loop. Posts are split by three dashes so a tool can chain them.
+when:
+  - You have a blog post or talk and want it as a thread.
+  - You wrote a rambling draft and need to find the spine.
+  - You are unsure whether your idea is a thread or just one tweet.
+  - You want a thread where quoting any single post will not embarrass you.
+you_give:
+  - The idea, article, transcript or draft
+  - Your audience on X
+  - Your voice or a few past posts (optional)
+  - A link or call to action to end on (optional)
+you_get:
+  - A one-line check on thread or single post
+  - A beat-by-beat skeleton
+  - The thread with posts separated by dashes
+  - A single closing call to action
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

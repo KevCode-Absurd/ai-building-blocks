@@ -6,6 +6,25 @@ summary: Paste a tweet. Get a reply worth reading on its own, or a clear call to
 job: grow-social
 headline: X reply writer
 subhead: Paste a tweet. Get a reply worth reading on its own, or a clear call to skip it.
+explain: |
+  A reply that gets read has to work as a post on its own. Paste a tweet and this skill writes a short reply that does, or tells you plainly to skip it.
+
+  First it decides whether you have anything to add. If not, the answer is skip. It then checks timing, because a good reply an hour late is seen by almost nobody. Next it names the gap in the original: a hidden assumption, a missing fact, or a case from your own life. The reply is written in two lines or fewer, with no praise opener and no quoting the tweet back. It warns you off becoming the reply guy.
+when:
+  - A large account posted something you disagree with or can improve.
+  - You reply often but nobody reacts.
+  - You want to grow on X by joining conversations without sounding like a bot.
+  - You are not sure if a tweet is too old to reply to.
+you_give:
+  - The tweet text you want to reply to
+  - How old the tweet is
+  - Your own view or experience on the topic (optional)
+  - Your niche or voice (optional)
+you_get:
+  - A reply or a clear skip
+  - The gap in the tweet that the reply fills
+  - A note on timing
+  - A shorter second option
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

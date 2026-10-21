@@ -6,6 +6,24 @@ summary: Point it at code you need to understand. Get a line-by-line map of how 
 job: secure-code
 headline: Code deep reader
 subhead: Point it at code you need to understand. Get a line-by-line map of how it works before you hunt bugs.
+explain: |
+  Before you hunt for bugs, you get a slow, line-by-line understanding of what the code does. That cuts guessing, mixed-up facts and lost context in the later audit.
+
+  It reads each block on its own and asks why it exists, how it works and what it assumes. For every function it notes inputs, outputs, side effects and what must hold true. Then it links each insight to the module and the whole system, so the picture grows from the bottom up. It keeps one clear model and updates it when new evidence appears. It does not report vulnerabilities or suggest fixes.
+when:
+  - You must audit unfamiliar code and need to understand it first.
+  - You keep misreading how two modules talk to each other.
+  - You are preparing a security review or threat model.
+  - You want facts about the code, not high-level guesses.
+you_give:
+  - The code or module to study
+  - The area you care about most (optional)
+  - Any docs or notes on intent (optional)
+you_get:
+  - A block-by-block breakdown
+  - Notes on assumptions and rules that must hold
+  - A map of how functions and modules connect
+  - A list of spots that look risky to read
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it counts by product and location. Get live stock levels corrected
 job: run-your-store
 headline: Stock count updater
 subhead: Give it counts by product and location. Get live stock levels corrected. Wrong numbers can cause overselling.
+explain: |
+  Counts from your shelf, entered straight into your Shopify store. You list each product code, the location and the change, and the skill corrects live stock levels to match, logging a reason such as cycle count or damaged.
+
+  It first looks up each product code and stops if any code is not found, then shows the current quantity beside the change. A preview mode lets you see the result before anything is written. Changes can link to a purchase order or return document for your records. This does change live inventory, and wrong numbers can lead to overselling, so check the preview. It needs write access to inventory in your store.
+when:
+  - You finished a stock count and need the system to match the shelf.
+  - A box of returns arrived back at your warehouse.
+  - Damaged items must be removed from available stock.
+  - A sync mix-up left several products with the wrong quantity.
+you_give:
+  - Your Shopify store link and access
+  - A list of product codes with location and change
+  - The reason for the change
+  - A purchase order or document link (optional)
+you_get:
+  - A preview of each change
+  - Updated stock levels at each location
+  - A reason logged for each adjustment
+  - A list of codes that were not found
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

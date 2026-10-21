@@ -6,6 +6,26 @@ summary: Share your revenue and customers. Get your ARR, churn, CAC and LTV read
 job: money-and-investing
 headline: SaaS metrics coach
 subhead: Share your revenue and customers. Get your ARR, churn, CAC and LTV read, with what to fix first.
+explain: |
+  Know whether your subscription business is healthy, and what to fix first. Share your revenue and customer numbers and get your key figures worked out, each marked healthy, watch or critical.
+
+  It asks for monthly recurring revenue now and last month, new and lost revenue, customer counts, sales and marketing spend and gross margin. Partial data is fine, and it states its assumptions. It works out annual revenue, growth, churn, cost to win a customer, lifetime value, payback time and net revenue retention, then compares each with ranges for your size and stage. The top weak spots get a plain explanation and actions for this month.
+when:
+  - You want to know if your churn is normal for your size.
+  - An investor or partner asked for your SaaS numbers and you need to read them well.
+  - Growth slowed and you cannot tell if the cause is sales or retention.
+  - You want a monthly health report you can repeat.
+you_give:
+  - Monthly recurring revenue, now and last month
+  - "Customers: total, new and lost"
+  - Sales and marketing spend
+  - Gross margin (optional)
+  - Your market segment and stage (optional)
+you_get:
+  - A table of your key metrics
+  - A status label for each metric
+  - A short summary of your overall position
+  - Priority actions for this month
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

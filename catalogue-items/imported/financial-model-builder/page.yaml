@@ -6,6 +6,26 @@ summary: Give it assumptions and past results. Get a P&L, DCF and valuation mode
 job: money-and-investing
 headline: Financial model builder
 subhead: Give it assumptions and past results. Get a P&L, DCF and valuation model you can adjust.
+explain: |
+  A working model of your business with a profit and loss forecast, a discounted cash flow and a valuation, built from your assumptions so you can change them and see the effect.
+
+  You give growth rates, pricing, costs, tax and any past results. The skill builds a revenue forecast from the bottom up, or top down if that is all you have. It projects costs, then derives EBITDA and free cash flow after capex, working capital and tax. It discounts the cash flows with WACC and adds a terminal value to reach a value for the business. It finishes with bear, base and bull scenarios on two or three key assumptions, in a summary table.
+when:
+  - You are raising money and need a three-year forecast.
+  - You want to know what your business could be worth.
+  - You are testing how a change in churn affects profit.
+  - You need a model to hand to an investor.
+you_give:
+  - Revenue and growth assumptions
+  - Cost structure
+  - Past financials (optional)
+  - Projection period
+  - Discount rate, or the inputs to estimate it
+you_get:
+  - A projected income statement
+  - Free cash flow
+  - A DCF valuation
+  - Bear, base and bull scenarios
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

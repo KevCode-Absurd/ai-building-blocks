@@ -6,6 +6,25 @@ summary: Give it a chat or notes. Get a linked Notion page for the decision, how
 job: organise-work
 headline: Notion wiki writer
 subhead: Give it a chat or notes. Get a linked Notion page for the decision, how-to or FAQ.
+explain: |
+  Turn a messy chat or set of meeting notes into a clean Notion page that people can find later. It might be a decision record, a how-to, an FAQ or a short write-up of what you learned.
+
+  First it asks what you are saving, who will read it, and whether this is new or an update. It then looks in Notion for the right database and any older pages on the same topic. It pulls out the facts, the choices made and the reasons, and fills the database fields such as owner, tags and status. For decisions it records the options you rejected. Finally it links the new page from related hub pages. You need Notion connected.
+when:
+  - A long Slack thread ended in a decision and nobody wrote it down.
+  - You keep answering the same question and want a proper FAQ entry.
+  - You finished a project and want a how-to the next person can follow.
+  - Meeting notes sit in a doc and you want them in the team wiki with owners and tags.
+you_give:
+  - The chat, thread or notes to capture
+  - Who the page is for
+  - Whether it is new or updates an existing page (optional)
+  - Access to your Notion workspace
+you_get:
+  - A structured Notion page in the right database
+  - Decision, reasons and rejected options written out
+  - Tags, owner and status filled in
+  - Links from related hub pages
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

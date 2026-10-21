@@ -6,6 +6,25 @@ summary: Get the share of customers who order again within your chosen days, spl
 job: run-your-store
 headline: Repeat buyer rate calculator
 subhead: Get the share of customers who order again within your chosen days, split by product or collection.
+explain: |
+  The share of your customers who come back and order again within the number of days you pick, with the rate split by first product bought. It shows which products bring people back.
+
+  You choose a period for first-time buyers and a repeat window, such as 90 days. The skill reads customers acquired in that period from Shopify, then checks their later orders. The repeat rate is the share who placed a second order inside the window. With product segmenting on, it ranks first purchases by how often those buyers return. It reads data only. It needs a logged-in Shopify command line session with customer and order access.
+when:
+  - You want to know if customers return after the first order.
+  - You are deciding which product to promote to new shoppers.
+  - You want a baseline before you try a loyalty campaign.
+  - An investor or partner asks for your repeat purchase rate.
+you_give:
+  - Store domain
+  - Period for first-time buyers
+  - Repeat window in days
+  - Segment by product (optional)
+you_get:
+  - Overall repeat buyer rate
+  - Rate by first product
+  - Ranked list of products that bring buyers back
+  - Output as text or JSON
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

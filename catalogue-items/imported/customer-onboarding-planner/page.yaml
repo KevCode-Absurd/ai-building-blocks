@@ -6,6 +6,25 @@ summary: Describe your product and customers. Get phased onboarding steps, email
 job: build-product
 headline: Customer onboarding planner
 subhead: Describe your product and customers. Get phased onboarding steps, email templates, milestones and owners.
+explain: |
+  New customers who do not reach a first win tend to leave. Describe your product and your customers and you get an onboarding plan with phases, task lists, email templates, milestones and owners.
+
+  It starts with three to five measurable milestones, like a first report built or three teammates active. Then it splits onboarding into phases with entry and exit rules and a time range, such as Welcome, Setup, Adoption and Review. Each phase gets tasks with owners and due dates counted from day zero. It writes the emails: welcome, kickoff agenda, check-in, milestone and a risk alert. It adds escalation rules, such as a nudge when a task is two days late.
+when:
+  - You keep losing new customers in the first month.
+  - You need a 30-day plan for a new product launch.
+  - Your team onboards customers differently each time.
+  - You want email templates ready for each stage.
+you_give:
+  - Your product and customer type
+  - Your onboarding length and goals
+  - Success milestones you already track (optional)
+  - Team roles (optional)
+you_get:
+  - A phased onboarding plan
+  - Task checklists with owners
+  - Email and message templates
+  - Milestones and escalation rules
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

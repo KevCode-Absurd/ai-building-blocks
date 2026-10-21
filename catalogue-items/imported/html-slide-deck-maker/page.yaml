@@ -6,6 +6,25 @@ summary: Describe your talk or share a PowerPoint. Get an animated slide deck in
 job: work-with-files
 headline: HTML slide deck maker
 subhead: Describe your talk or share a PowerPoint. Get an animated slide deck in one HTML file that opens in any browser.
+explain: |
+  A slide deck in one HTML file that opens in any browser, with no software to install. Describe your talk or hand over a PowerPoint and get animated slides in a distinct design that does not look generic.
+
+  Instead of asking you to choose a style from words, it shows small visual previews so you can pick by sight. Every deck uses a fixed 16:9 stage that scales to any screen, so slides never reflow oddly. It picks bold fonts and a firm color set rather than safe defaults. Existing PowerPoint files can be converted. It can also export to PDF, but that needs Playwright and a browser installed first. One upstream deploy script is missing from this copy.
+when:
+  - You have a talk next week and want slides that look designed.
+  - You have an old PowerPoint and want it as a web page.
+  - You want to send one file that opens anywhere without special software.
+  - You need to see a few visual style options before choosing.
+you_give:
+  - Your talk outline or topic
+  - An existing PowerPoint file (optional)
+  - Audience and length of the talk
+  - Brand colors or logo (optional)
+you_get:
+  - One self-contained HTML slide deck
+  - Style previews to choose from
+  - Animated slide transitions
+  - A PDF export if the tools are installed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Say how you want your notes filtered and shown. Get a working Obsidian 
 job: organise-work
 headline: Obsidian database view builder
 subhead: Say how you want your notes filtered and shown. Get a working Obsidian Base file with views, formulas and summaries.
+explain: |
+  A working Obsidian Base file that turns your notes into a table or card view, filtered and sorted the way you describe. No hand-written syntax needed.
+
+  You say which notes to show, for example every note tagged task that is not done. The skill writes the filter, then adds formulas for things like days until due or an overdue flag. It sets display names for each column, chooses table or card layout, and adds summaries such as counts or averages at the bottom. It follows the Base file format closely, because small syntax slips make a view fail to load. It reads a detailed guide first and checks the finished file against it.
+when:
+  - You track tasks in notes and want an overdue-first table.
+  - You keep book or project notes and want a card gallery with ratings.
+  - You need a formula column that works out days left from a due date.
+  - You want totals or averages shown under a column.
+you_give:
+  - Which notes to include, by tag, folder or property
+  - The columns you want to see
+  - Any calculations you need
+  - A sample note with its properties (optional)
+you_get:
+  - A ready-to-open .base file
+  - Filters that match your notes
+  - Formula columns
+  - Table or card views with summaries
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Say what you want to launch or clear. Get a gift, bundle or pre-order p
 job: make-offer
 headline: Promotion idea planner
 subhead: Say what you want to launch or clear. Get a gift, bundle or pre-order promotion that avoids plain price cuts.
+explain: |
+  A promotion that gets sales without teaching customers to wait for a markdown. You get a clear pick between a gift, bundle, pre-order incentive or limited offer, with the wording to match.
+
+  The skill first classifies your product as bought for pleasure or for a job, since that changes what works. For pre-orders it picks gift or discount based on how far away the launch is: a gift for three weeks or more, a discount if it is close. It then advises on bundles, free bonus wording, unit caps and urgency, and warns about promo mechanics that backfire. It sticks to promotions, not plain price cuts or everyday pricing.
+when:
+  - You are launching a product and want pre-orders.
+  - You want a Black Friday hook that is not just 20 percent off.
+  - You are deciding whether to offer a free gift or a discount.
+  - You need to word a free bonus so it feels like a real prize.
+you_give:
+  - Product and price
+  - Complementary products you sell (optional)
+  - Goal such as pre-orders or clearing stock
+  - Launch date and today's date
+  - Whether buyers usually take one item or a basket
+you_get:
+  - A recommended promotion type
+  - Wording for the offer
+  - Urgency and cap suggestions
+  - Mistakes to avoid
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

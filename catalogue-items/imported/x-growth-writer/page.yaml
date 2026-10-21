@@ -6,6 +6,25 @@ summary: Give it your topic and past posts. Get tweets, threads and a plan to gr
 job: grow-social
 headline: X growth writer
 subhead: Give it your topic and past posts. Get tweets, threads and a plan to grow your audience on X.
+explain: |
+  A steady plan for growing on X, with the posts already written. Give it your topic and a sample of past posts and you get tweets, threads and a posting routine that fit your niche.
+
+  It starts with an audit of your profile: bio, pinned post, posting rate,. Then it studies accounts in your space and pulls out their hook styles, themes, formats and posting times. From that it drafts content in the formats that tend to reach furthest, starting with threads, and plans the reply work that builds followers. Some steps use small Python scripts, so you need Python.
+when:
+  - You post on X but your reach stays flat and you want a clear plan.
+  - You are starting a new account and need a week of posts to begin.
+  - Your bio and pinned post feel weak and you want them audited.
+  - You want to study competitors to see which hooks work in your niche.
+you_give:
+  - Your topic or niche
+  - Your X handle or a sample of past posts
+  - A few accounts you admire or compete with (optional)
+  - Your goal, such as followers, leads or sales (optional)
+you_get:
+  - A profile audit with fixes
+  - A map of what works for similar accounts
+  - Drafted tweets and threads
+  - A posting and reply routine
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

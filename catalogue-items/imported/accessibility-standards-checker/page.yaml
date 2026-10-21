@@ -6,6 +6,26 @@ summary: Describe your site or app. Get WCAG gaps by level, what to fix first an
 job: check-contracts
 headline: Accessibility standards checker
 subhead: Describe your site or app. Get WCAG gaps by level, what to fix first and notes for an accessibility statement.
+explain: |
+  Where your site or app falls short of the web accessibility standard shows up in a list sorted by level, with the most important fixes first, plus notes for an accessibility statement.
+
+  The skill answers in the format that suits your question. A criterion question gets the rule, its level, why it matters, common failures and the fix. An audit gets a table of issue, location, severity and repair. A gap review marks each criterion red, amber or green. It always names the exact criterion number, such as 2.4.7 Focus Visible. It also maps the rules to laws like the European Accessibility Act, Section 508 and ADA cases.
+when:
+  - A client asks whether your site meets accessibility rules.
+  - You need to know which fixes to do first with limited time.
+  - You must write an accessibility statement for your site.
+  - You want to see which laws apply to your product.
+you_give:
+  - A description of your site or app, or a link
+  - Code or screenshots to review (optional)
+  - The level you aim for, A, AA or AAA
+  - Your country or market (optional)
+you_get:
+  - A gap table with status for each criterion
+  - Fixes ranked by priority
+  - Annotated code with corrections
+  - Draft notes for an accessibility statement
+  - A map from rules to laws
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

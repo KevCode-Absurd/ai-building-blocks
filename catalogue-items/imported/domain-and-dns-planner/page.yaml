@@ -6,6 +6,26 @@ summary: List your domains and sites. Get a DNS layout, redirect rules and a pla
 job: ship-and-host
 headline: Domain and DNS planner
 subhead: List your domains and sites. Get a DNS layout, redirect rules and a plan for unused names.
+explain: |
+  A clear layout for how your domains, subdomains and DNS records fit together, including redirects and what to do with the names you do not use. It works for one site or a hundred.
+
+  The skill takes your list of domains, their status and their role: main brand, sub-brand, campaign or defensive. It then works through five decisions in order. The first is whether the apex or the www version is the main address; pick one before launch and redirect the other. The rest cover subdomain versus subfolder, redirect rules for parked and retired names, email and service records, and where to register. You end with a plan you can put into your DNS panel.
+when:
+  - You own several domains and no one remembers what each is for.
+  - You are launching a new site and need to pick apex or www.
+  - You are merging two sites and need redirects planned.
+  - You must decide between a subdomain and a subfolder for a new product.
+you_give:
+  - A list of all your domains and their status
+  - The role of each domain
+  - Your DNS provider and registrar
+  - Email and outside services that depend on them
+you_get:
+  - A DNS layout for each domain
+  - The main address decision
+  - Redirect rules
+  - A plan for parked and unused names
+  - A list of records to set
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

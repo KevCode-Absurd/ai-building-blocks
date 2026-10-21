@@ -6,6 +6,26 @@ summary: Give it your close tasks. Get a day by day schedule and what is blockin
 job: track-numbers
 headline: Month-end close day planner
 subhead: Give it your close tasks. Get a day by day schedule and what is blocking. Review with your accountant.
+explain: |
+  A day-by-day schedule for closing the books, with each task in order and the blockers flagged before they delay you. Review it with your accountant, since it is a planning aid and not financial advice.
+
+  The plan starts in the last two or three days of the month with cut-off checks and preliminary bank work. Day 1 covers accruals, payroll, cash and depreciation. Day 2 covers revenue entries, remaining accruals, subledger reconciliations, inventory and currency revaluation. It sorts what you give it into those days, marks which tasks wait on others, and shows who is holding things up.
+when:
+  - Your close takes eight days and you want it down to five.
+  - A new finance hire needs the close order written out.
+  - You keep finding accrual errors because tasks ran out of order.
+  - You need a status list to show who still owes what.
+you_give:
+  - Your list of close tasks
+  - Who owns each task
+  - Your accounting systems and cut-off times
+  - Your target close length (optional)
+you_get:
+  - A pre-close and day-by-day checklist
+  - Task dependencies
+  - A blocker list
+  - A status tracker
+  - Questions for your accountant
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

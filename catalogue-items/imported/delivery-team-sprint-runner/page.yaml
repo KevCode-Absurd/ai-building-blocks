@@ -6,6 +6,26 @@ summary: Tell it your team and sprint. Get metrics, capacity plans, ceremony age
 job: organise-work
 headline: Delivery team sprint runner
 subhead: Tell it your team and sprint. Get metrics, capacity plans, ceremony agendas and a sprint report for your PMO routine.
+explain: |
+  A steady rhythm for a delivery team, with numbers instead of adjectives. It sets up the team's metrics, checks sprint plans against real capacity, gives you templates for each meeting, and writes the sprint report from your tracker.
+
+  Capacity comes from past sprints, not hope. It covers standup, refinement, review and retro formats, a quarterly rollup, and a points-to-hours ratio you can hand to finance. It can also measure teams where some work is done by AI coding agents. It leaves ticket writing, retro narratives, goals and roadmaps to other skills, so it stays on measurement and meetings. Your tracker needs to supply the data.
+when:
+  - You inherit a team and need a metric set that means something.
+  - Sprint planning keeps overcommitting and nobody knows why.
+  - Leadership asks how the team is doing and you have only opinions.
+  - Finance wants to turn story points into cost.
+you_give:
+  - Team size and sprint length
+  - Tracker export or sprint history
+  - Planned absences (optional)
+  - Which meeting or report you need
+you_get:
+  - Metric set for the team
+  - Capacity-based sprint plan
+  - Meeting agendas
+  - Sprint report
+  - Points-to-hours ratio
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

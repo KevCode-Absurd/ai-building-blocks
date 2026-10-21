@@ -6,6 +6,25 @@ summary: Get how many days each product stock will last and how fast it sells, b
 job: run-your-store
 headline: Days of stock calculator
 subhead: Get how many days each product stock will last and how fast it sells, by location.
+explain: |
+  Per product and per location, you see how many days of stock remain at the current selling pace, and how much of what you received has sold. That tells you what to reorder and when.
+
+  The skill reads variants, orders and inventory from Shopify. It looks back over your chosen window, 30 days by default, to get a daily sales rate. Days of stock is the quantity on hand divided by that rate. Sell-through is units sold as a share of stock received. Anything under your alert level, 14 days by default, is flagged. You can narrow it to one supplier. It only reads and changes nothing. Your AI needs access to your Shopify store.
+when:
+  - You plan next week's purchase orders and need a reorder list.
+  - A bestseller may run out before restock arrives.
+  - You want to compare stock health across locations.
+  - You manage one supplier's products and want to check only those.
+you_give:
+  - Your store address
+  - Sales window in days (optional)
+  - Alert threshold in days (optional)
+  - Supplier filter (optional)
+you_get:
+  - Days of stock per item and location
+  - Sell-through rate
+  - Flagged low stock items
+  - Reorder planning list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

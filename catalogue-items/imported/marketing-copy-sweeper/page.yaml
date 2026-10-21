@@ -6,6 +6,25 @@ summary: Paste your copy. Get it tightened in set passes for clarity, voice, pro
 job: write-landing-page
 headline: Marketing copy sweeper
 subhead: Paste your copy. Get it tightened in set passes for clarity, voice, proof and calls to action.
+explain: |
+  Your copy, tightened in seven set passes, each on one thing: clarity, voice, proof, calls to action and more. One focused pass at a time catches problems that a single read-through misses.
+
+  First it decides which mode fits. If the draft is blank or generic, it rebuilds from your facts. If it has a real voice, it restores that voice and keeps your argument and words. If you only want one line changed, it skips the passes, changes only what you asked and returns those lines with a reason. It reads your saved product and brand context first if you have it. Every edit has a stated reason, and your core message stays as written.
+when:
+  - Your landing page draft is wordy and you cannot see why.
+  - You want a final polish on email copy before sending.
+  - You only need one headline fixed and nothing else touched.
+  - Your copy sounds generic and you want your voice back.
+you_give:
+  - The copy to edit
+  - Brand voice or product notes (optional)
+  - The goal of the copy
+  - "Edit scope: full or one line"
+you_get:
+  - Edited copy
+  - A reason for each change
+  - Results of each pass
+  - Only the changed lines for a small edit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

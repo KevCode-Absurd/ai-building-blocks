@@ -6,6 +6,25 @@ summary: Name a customer. Get their orders, refunds, returns, notes and consent 
 job: run-your-store
 headline: Customer history exporter
 subhead: Name a customer. Get their orders, refunds, returns, notes and consent in one dated CSV.
+explain: |
+  When a support case needs the full story, you want one file, not ten tabs. Name a customer and you get their whole history in a single dated CSV, with a readable timeline beside it.
+
+  It pulls the customer's details, marketing consent, tags, notes, addresses and lifetime spend from Shopify. Then it adds every order with line items, shipments, refunds and returns, newest first, up to a cap you set. Refunds and returns appear as their own rows so the order of events is clear. It reads data only. The file holds personal information, so treat it carefully and delete it when the case closes.
+when:
+  - A customer disputes a charge and you need the full order trail.
+  - A support agent needs context before replying.
+  - You received a data request and must gather the customer's records.
+  - You are reviewing a high-value customer's history.
+you_give:
+  - Your Shopify store and read access
+  - The customer's ID
+  - Whether to include line items and refunds (optional)
+  - A cap on orders (optional)
+you_get:
+  - One CSV in date order
+  - A readable timeline
+  - Refunds and returns as separate rows
+  - Lifetime spend and consent status
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

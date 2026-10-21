@@ -6,6 +6,27 @@ summary: Describe your audience and offer. Get the path from page to lead magnet
 job: make-offer
 headline: Funnel flow planner
 subhead: Describe your audience and offer. Get the path from page to lead magnet to emails to sale.
+explain: |
+  A map of how visitors move from landing page to lead magnet to emails to a sale, with the right path for each audience. Your tools work as one system, not separate pieces.
+
+  It starts by splitting audiences and stages: who they are and how ready they are to buy. Each entry point gets its own flow. A calculator visitor and a newsletter reader should not get the same emails. It maps your existing tools, such as chatbot, quiz, magnet and demo button, onto that flow, then plans the follow-up sequence and the offer at the end. Test ideas are listed so you can improve it over time.
+when:
+  - You have a chatbot, quiz and lead magnet that all work alone.
+  - Conversions are flat although each tool gets some use.
+  - Everyone gets the same email sequence no matter how they arrived.
+  - You are setting up your first funnel and need the structure.
+you_give:
+  - Your audience groups
+  - Your offer and price
+  - Tools and pages you already have
+  - Traffic sources
+  - Current conversion numbers (optional)
+you_get:
+  - Audience and stage segments
+  - Entry points with their paths
+  - Follow-up sequence per path
+  - Offer placement
+  - Tests to run next
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

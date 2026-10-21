@@ -6,6 +6,26 @@ summary: Give it a stuck customer issue. Get a clear escalation brief for engine
 job: help-customers
 headline: Escalation brief writer
 subhead: Give it a stuck customer issue. Get a clear escalation brief for engineering or leadership, with impact and what was tried.
+explain: |
+  One page that gets a stuck customer issue noticed by engineering, product or leadership, with everything they need so nobody has to come back with questions.
+
+  You describe the problem and who it hits. The skill first checks whether it truly needs escalating or can stay in support. Then it gathers the timeline, what was already tried and the exact steps to reproduce. It scores business impact on breadth, depth, duration, revenue at risk and deadline pressure, and picks the right target: second-line support, engineering, product, security or leadership. The brief opens with a clear ask and ends with next steps and who owns them.
+when:
+  - A bug has gone past normal support and engineers need the full picture.
+  - Several customers report the same fault and you need to show the pattern.
+  - A key account threatens to leave and leadership must decide fast.
+  - You keep sending escalations that bounce back for missing detail.
+you_give:
+  - Short description of the issue
+  - Customer or account name (optional)
+  - Ticket history and fixes already tried
+  - Revenue or contract at risk (optional)
+you_get:
+  - Escalation brief with a clear ask
+  - Reproduction steps
+  - Impact summary with numbers
+  - Recommended owner or team
+  - Next steps and timeline
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

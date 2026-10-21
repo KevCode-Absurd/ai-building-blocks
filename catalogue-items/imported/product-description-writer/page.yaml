@@ -6,6 +6,25 @@ summary: Give it your product facts. Get a description with the right number of 
 job: run-your-store
 headline: Product description writer
 subhead: Give it your product facts. Get a description with the right number of claims, units and tone to lift sales.
+explain: |
+  A product description built on the choices that change buying decisions: how many claims to make, which units to use, and what tone fits. The rules matter more than clever adjectives.
+
+  Claude first sorts your product as bought for pleasure (chocolate, decor, perfume) or bought to do a job. That sets the style. Then it picks how many benefits to show, whether to say 500g or 25 servings, how to name a color, and whether a point like lab testing is worth adding. Each choice follows research on persuasion and willingness to pay. You get copy plus a short note on why each choice was made.
+when:
+  - You are writing or rewriting a description, title or feature bullets.
+  - You are unsure how many benefits to list.
+  - You cannot decide between units, such as grams or servings.
+  - You need to name a color or variant in a way that sells.
+you_give:
+  - "Product facts: materials, quantity, specs"
+  - All candidate benefits
+  - Your audience and how technical they are
+  - Where the copy will appear and its length limit
+you_get:
+  - A finished description or bullet list
+  - The right number of claims for the product
+  - Unit and wording choices explained
+  - Title and hero line options
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

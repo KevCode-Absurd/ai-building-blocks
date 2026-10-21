@@ -6,6 +6,24 @@ summary: Name a changed field or flag. Get the places it is missing or read diff
 job: test-and-fix-code
 headline: Shared field change checker
 subhead: Name a changed field or flag. Get the places it is missing or read differently, across database, API and apps.
+explain: |
+  A read-only report of every place a changed field, status or flag is missing or read differently, across your database, API, apps and analytics. A field added in one schema is not finished until each path agrees on what it means.
+
+  First you write down what each state means: missing, null, false or zero, true, and an unknown value from a newer version. These are often treated as the same, and they are not. Then it maps the full chain: storage and migration, models, every endpoint and event, web, Android and iOS handling, analytics, tests, rollout and rollback. The result is a list of gaps with evidence. It reports and does not change code.
+when:
+  - You added a feature flag and want to be sure every client handles it.
+  - A new status value could break older app versions.
+  - The detail endpoint has the field but the list endpoint does not.
+  - You are about to release a change that touches database, API and mobile.
+you_give:
+  - The field, enum or flag that changed
+  - The repo or repos involved
+  - The rollout plan and compatibility needs
+you_get:
+  - A definition of each state
+  - A map of everywhere the field flows
+  - A list of gaps with evidence
+  - Missing test and rollout checks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

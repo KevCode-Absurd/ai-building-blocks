@@ -6,6 +6,25 @@ summary: Name a Bluetooth Low Energy device. Get it scanned, connected and its d
 job: build-software
 headline: Bluetooth device connector
 subhead: Name a Bluetooth Low Energy device. Get it scanned, connected and its data read or written.
+explain: |
+  Find a Bluetooth Low Energy device near you, connect to it from MATLAB, and read, write or subscribe to its data. This is the setup step for anything that needs live sensor or wearable data.
+
+  The skill scans with filters instead of listing every device nearby, then connects and walks the device's services to find the right characteristic. It uses the correct function signatures, so you avoid made-up calls. You can read a value, write one, or subscribe to notifications for a stream such as heart rate or acceleration. BLE support is built into MATLAB, so no extra toolbox is needed. It does not cover Bluetooth Classic or acting as a peripheral.
+when:
+  - You want to read a heart rate or motion sensor into MATLAB.
+  - You need to scan for a nearby BLE device by name or address.
+  - You must write a value to a device characteristic.
+  - You want to stream data from a wearable using notifications.
+you_give:
+  - The device name or address
+  - The service or characteristic you need (optional)
+  - Whether to read, write or subscribe
+  - A bluetooth-capable computer with MATLAB
+you_get:
+  - A scan result narrowed to your device
+  - A live connection to the device
+  - Read, write or notification code that works
+  - Data flowing into MATLAB
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

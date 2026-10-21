@@ -6,6 +6,25 @@ summary: Tell it the workflows you want to build. Get grilled with questions unt
 job: make-skills
 headline: Workflow spec interviewer
 subhead: Tell it the workflows you want to build. Get grilled with questions until each one is clear.
+explain: |
+  A clear written spec for each workflow you want to build, drawn out of you by questions. It keeps going until a builder could implement it without asking anything more.
+
+  It runs a grilling session: a round of questions at a time, then a written spec per workflow in a workflows folder, with raw notes on your world kept in NOTES.md. It thinks of each workflow as one recurring loop in your week or career. It asks what triggers each run, where a human must check, and what the brief at that check should show. It pushes checkpoints as late as possible so you are asked once, with everything prepared.
+when:
+  - You have several repeated tasks and want to automate them.
+  - You can describe a process but not write it down.
+  - An agent or developer needs a spec to build from.
+  - You do not know which routine to automate first.
+you_give:
+  - Workflows you want to build, or none and it will find them
+  - Tools and channels you use
+  - Your own names for things
+  - Time to answer questions
+you_get:
+  - One spec file per workflow
+  - Trigger and checkpoint for each
+  - Notes file on your tools and terms
+  - List of open questions until done
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

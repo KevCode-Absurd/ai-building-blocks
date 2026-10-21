@@ -6,6 +6,25 @@ summary: Answer a few questions about your product. Get a one-page site with 3D 
 job: write-landing-page
 headline: Animated landing page builder
 subhead: Answer a few questions about your product. Get a one-page site with 3D motion and scroll effects.
+explain: |
+  One self-contained web page for your product, with 3D motion, scroll effects and depth that follows the mouse. You can open it in a browser right away.
+
+  Before any writing, the skill asks four questions, one at a time, and says why it asks each: what the product is and who it is for, how your audience talks, any brand colours, and the tone you want. Those answers lock in the positioning, so the copy fits your product and not a generic template. It then builds a single HTML file with the styles and scripts inside it, using web fonts and the GSAP animation library from a CDN. Brand colours can be swapped in a few lines.
+when:
+  - You need a striking one-page site for a launch and have no designer.
+  - Your product page looks flat and you want motion that grabs attention.
+  - You want a quick demo page to show investors or early users.
+  - You have a clear pitch and want it turned into a finished page today.
+you_give:
+  - Product name and a short pitch
+  - Who the page is for
+  - Brand colours (optional)
+  - The tone you want
+you_get:
+  - One HTML file you can open or host
+  - 3D animation and scroll effects
+  - Copy based on your answers
+  - Colours you can change in a few lines
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

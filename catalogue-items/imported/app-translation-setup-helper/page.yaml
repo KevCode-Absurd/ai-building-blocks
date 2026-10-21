@@ -6,6 +6,25 @@ summary: Point it at your app. Get hardcoded text found and a plan for translati
 job: build-websites
 headline: App translation setup helper
 subhead: Point it at your app. Get hardcoded text found and a plan for translations, locale files and right-to-left support.
+explain: |
+  Your app, prepared for more than one language: hardcoded text found, translation files organised and right-to-left layouts planned. You get a clear route from one language to many.
+
+  The skill explains the basics, then looks through your code for text written straight into screens. It sets up key-based translations and a folder per language, with files split by feature such as common, auth and errors. It shows the right pattern for React, Next.js or Python. It covers plural forms, date and number formats, text that grows longer in German, and the changes needed for Arabic or Hebrew layouts. It also gives you a fallback rule for missing text and a check you can run to catch new hardcoded strings.
+when:
+  - You plan to launch your app in new countries.
+  - Text is hardcoded all over your screens.
+  - You need Arabic or Hebrew support and don't know where to start.
+  - Translators ask for files they can edit.
+you_give:
+  - Your project folder
+  - Languages you want to support
+  - Your framework (optional)
+  - Current translation files (optional)
+you_get:
+  - A list of hardcoded strings found
+  - Locale file structure by language
+  - Code patterns for your framework
+  - A right-to-left checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

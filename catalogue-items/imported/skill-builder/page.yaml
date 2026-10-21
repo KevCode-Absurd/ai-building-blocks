@@ -6,6 +6,24 @@ summary: Describe what your AI should learn. Get a skill folder with clear instr
 job: make-skills
 headline: Skill builder
 subhead: Describe what your AI should learn. Get a skill folder with clear instructions and helper files.
+explain: |
+  A finished skill folder with clear instructions and helper files, built from your description of what the AI should learn. The result loads into your assistant and gives it know-how it did not have.
+
+  It starts by asking what the skill must do and with which examples. It treats the context window as shared space, so it keeps the main file short and puts the rest in separate reference files, scripts and assets that load only when needed. It also sets how rigid each part should be: free text where many approaches work, set scripts where steps are fragile. The folder is then built and checked.
+when:
+  - You repeat the same instructions to your AI every week.
+  - You want to package a company process so the AI follows it.
+  - You have a script or file format the AI keeps handling badly.
+  - You want to update a skill you already made.
+you_give:
+  - What the skill should do
+  - Example tasks or documents
+  - Any scripts, templates or rules to include (optional)
+you_get:
+  - A skill folder with a main instruction file
+  - Reference files and helper scripts
+  - A short description that triggers the skill
+  - Notes on how to test it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

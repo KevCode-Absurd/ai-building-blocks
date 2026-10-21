@@ -6,6 +6,25 @@ summary: Give it an outline or document. Get a polished slide deck for your audi
 job: work-with-files
 headline: Presentation builder
 subhead: Give it an outline or document. Get a polished slide deck for your audience in Marp, reveal.js or PPTX.
+explain: |
+  A finished slide deck made from your outline, document or meeting notes, written for the people who will watch it. Output comes as Marp, reveal.js or PPTX.
+
+  The skill first asks who the audience is and how many slides you want. It builds a story arc with a hook, the problem, the answer and a close. Each slide gets a headline under eight words that states the takeaway, with minimal body text. It suggests the right visual for each point, such as a bar chart for comparisons. A last pass checks no slide is overloaded. Marp and reveal.js decks are plain text files.
+when:
+  - You have a report and a meeting in two hours.
+  - You need a pitch deck from rough notes.
+  - A long document must become a ten-slide summary.
+  - You want slides that say one thing each.
+you_give:
+  - Outline, document or notes
+  - Audience
+  - Slide count
+  - Output format
+you_get:
+  - Complete slide deck file
+  - Slide headlines that state takeaways
+  - Visual suggestions per slide
+  - Speaker notes (if asked)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

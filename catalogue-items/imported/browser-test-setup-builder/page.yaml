@@ -6,6 +6,25 @@ summary: Point it at your project. Get Playwright installed with a config, a sam
 job: test-and-fix-code
 headline: Browser test setup builder
 subhead: Point it at your project. Get Playwright installed with a config, a sample test and a CI file.
+explain: |
+  Playwright installed and ready to run in your project in one pass: a config, a folder layout, a sample test and a CI file that runs it on every change.
+
+  The skill scans your project to see what you use, such as React, Next.js, Vue or Angular, whether you write TypeScript, and whether tests or CI already exist. It installs Playwright if needed, then writes a config that fits your framework, including the dev server, the base address, retries on CI and screenshots on failure. It adds one working example test and a GitHub Actions workflow. It needs Node.js and npm.
+when:
+  - You have no browser tests yet and want a clean start.
+  - You use Next.js or Vite and want the right config without reading docs.
+  - You want tests to run automatically on every pull request.
+  - Your current Playwright setup is a mess and you want a fresh baseline.
+you_give:
+  - Your project folder
+  - Your framework, if the skill cannot detect it (optional)
+  - Your CI preference (optional)
+you_get:
+  - Playwright installed
+  - A config matched to your framework
+  - A folder structure
+  - A working sample test
+  - A CI workflow file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

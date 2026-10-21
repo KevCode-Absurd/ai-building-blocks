@@ -6,6 +6,25 @@ summary: Name your service. Get service level targets, error budgets and alerts 
 job: ship-and-host
 headline: Reliability target setter
 subhead: Name your service. Get service level targets, error budgets and alerts to track them.
+explain: |
+  A set of reliability goals for your service that people can measure, with an error budget and alerts that warn you before users feel it. Instead of vague promises like "keep it up", you get numbers.
+
+  The method has three layers. Indicators measure what users feel, such as the share of successful requests or how fast pages load. Objectives set the target for each, such as 99.9 percent over thirty days. Error budgets turn the gap into minutes of allowed failure. The skill then writes alert rules based on how fast the budget burns, and a way to report it. It includes example queries for common monitoring tools.
+when:
+  - You need to promise a customer an uptime number you can keep.
+  - Your team argues about when to ship and when to fix stability.
+  - Alerts fire all the time and nobody trusts them.
+  - You want to measure reliability the way users experience it.
+you_give:
+  - Name and type of your service
+  - Current uptime or speed data (optional)
+  - Monitoring tool in use (optional)
+  - Customer promises already made (optional)
+you_get:
+  - Service level indicators
+  - Targets with time windows
+  - Error budget numbers
+  - Alert rules based on budget burn
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

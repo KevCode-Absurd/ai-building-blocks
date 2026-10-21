@@ -6,6 +6,25 @@ summary: Name a company. Get a one-slide profile with business, key numbers and 
 job: money-and-investing
 headline: Company strip profile slide maker
 subhead: Name a company. Get a one-slide profile with business, key numbers and ownership in a standard layout.
+explain: |
+  One clean slide that tells a reader what a company does, its key numbers and who owns it. It is the kind of page that sits at the front of a bank or investor pack.
+
+  Claude asks whether you want one slide or a few, then researches from filings, investor decks and market data. It collects three years of revenue, margins, profit, valuation, growth and the top five shareholders, in one currency and one scale. Before building, it shows you an outline with real numbers and the chosen fonts and colours. It then builds the slide as a PowerPoint file, turns it into an image, checks for overlap and cut-off text, and waits for your approval before going further.
+when:
+  - You need a company snapshot for a pitch, a deal or a meeting.
+  - A manager asked for a one-pager on a competitor by tomorrow.
+  - You want the business, the numbers and the owners on one page.
+  - You have a house slide style and need the profile to follow it.
+you_give:
+  - The company name
+  - One slide or several
+  - Topics to stress, such as growth or segments (optional)
+  - Your slide template (optional)
+you_get:
+  - A one-slide company profile as a PowerPoint file
+  - Key financials and valuation figures
+  - An ownership and segment breakdown
+  - An outline you approve before the build
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

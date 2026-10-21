@@ -6,6 +6,26 @@ summary: Paste your WordPress Site Health report. Get a ranked, backup-first fix
 job: build-websites
 headline: WordPress health fixer
 subhead: Paste your WordPress Site Health report. Get a ranked, backup-first fix plan with exact commands.
+explain: |
+  A ranked fix plan for your WordPress Site Health screen, with backups first and exact commands for each step. You stop staring at a long list of warnings and start closing them in a safe order.
+
+  Paste the report from Tools, Site Health, or the debug info. The skill sorts items into critical, recommended and passed, then tiers every fix by risk. Before any edit to wp-config.php, .htaccess or a plugin, it tells you to back up that exact file outside the web root. Safe fixes can be done for you, and risky ones come with WP-CLI commands or code to run yourself. It covers speed, security and SEO issues.
+when:
+  - Site Health shows red and orange items you do not understand.
+  - You want the site faster and safer without breaking it.
+  - A client's WordPress site needs a clean-up.
+  - You need to remove old plugins and themes safely.
+you_give:
+  - Site Health report text or screenshot
+  - Debug info (optional)
+  - Access method such as WP-CLI
+  - Backup status
+you_get:
+  - Issues ranked by risk
+  - Backup steps for each file
+  - Exact WP-CLI commands
+  - Code changes to make
+  - Handoff list for risky fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

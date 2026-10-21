@@ -6,6 +6,25 @@ summary: Point it at your store. Get a list of shipping zones with no rate or on
 job: run-your-store
 headline: Shipping rate gap finder
 subhead: Point it at your store. Get a list of shipping zones with no rate or only manual rates.
+explain: |
+  A list of shipping zones in your store that have no rate, or only hand-typed flat rates. A zone with no rate quietly stops customers from checking out.
+
+  It walks every delivery profile and every zone in your Shopify store. For each one it checks for at least one valid rate. It flags zones with none, zones with only manual rates and no carrier-calculated option, and profiles that miss places you sell to. You can also set a price limit to catch rates that look like typos or are out of date. It only reads your shipping settings and changes nothing. You need a signed-in Shopify CLI session with shipping read access.
+when:
+  - Customers abroad say they cannot finish checkout.
+  - You added a new market and are not sure shipping covers it.
+  - A shipping setup was done years ago and nobody has reviewed it.
+  - You suspect a flat rate is set far too high or too low.
+you_give:
+  - Your Shopify store address
+  - A delivery profile name to focus on (optional)
+  - A price limit to flag odd rates (optional)
+  - Shopify CLI sign-in with shipping read access
+you_get:
+  - Zones with no shipping rate
+  - Zones with only manual rates
+  - Profiles missing sales regions
+  - A readable or JSON report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,27 @@ summary: Name a worry like a late shipment or a demand spike. Get three scenario
 job: plan-supply-chain
 headline: What-if supply scenario planner
 subhead: Name a worry like a late shipment or a demand spike. Get three scenarios, their cost, and a response for each.
+explain: |
+  Three worked scenarios for the supply chain worry on your mind, each with a cost and a planned response. You stop arguing about what might happen and start deciding what you would do.
+
+  The skill first asks what decision hangs on the worry, how far ahead you plan and where you are exposed, such as one supplier or limited capacity. It then builds a base case plus best and worst variants, tests how demand, lead times and prices change, and estimates the cost of each path. For every scenario it sets early warning signs and a response, so you know the trigger before trouble starts.
+when:
+  - Your main supplier is late and you need a plan B.
+  - A demand spike is coming and you are unsure you can cover it.
+  - You must justify extra stock or a second supplier to finance.
+  - Port delays or tariffs threaten next quarter's plan.
+you_give:
+  - The risk or worry
+  - The decision it affects
+  - Planning horizon
+  - Cost and lead time data (optional)
+  - Known weak points such as single suppliers
+you_get:
+  - Three scenarios with assumptions
+  - Cost impact for each
+  - Response plan per scenario
+  - Early warning signals
+  - Short list of what to do now
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

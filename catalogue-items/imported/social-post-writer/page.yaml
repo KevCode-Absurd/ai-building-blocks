@@ -6,6 +6,25 @@ summary: Give a topic. Get clear posts for Instagram, LinkedIn and more that als
 job: get-found-in-search
 headline: Social post writer
 subhead: Give a topic. Get clear posts for Instagram, LinkedIn and more that also help search.
+explain: |
+  A clear social post that reads well and also helps people find you in search. You give a topic, a main keyword, your audience and the platform, and get a post sized for that site.
+
+  Every post follows one shape: a hook that earns the next line, context, the value, and a call to action. The writing rules push for plain words, short sentences and accurate claims, so the post works for readers around the world. Tone shifts by platform. LinkedIn is more professional, Instagram more visual and casual, and Facebook sits between them. Emoji use is set to match. You can run one topic through each platform and compare the three versions.
+when:
+  - You have a blog topic and need an Instagram caption for it.
+  - You want a LinkedIn post that sounds professional but not stiff.
+  - You need your keyword in a post without stuffing it.
+  - You write for readers who speak English as a second language.
+you_give:
+  - The topic
+  - A main keyword
+  - Your audience
+  - "The platform: Instagram, LinkedIn or Facebook"
+you_get:
+  - A post with hook, context, value and call to action
+  - Wording tuned to the platform
+  - Natural keyword use
+  - Emoji and tone matched to the site
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

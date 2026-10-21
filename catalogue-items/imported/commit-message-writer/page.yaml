@@ -6,6 +6,24 @@ summary: Stage your changes. Get a short commit message that says what changed a
 job: build-software
 headline: Commit message writer
 subhead: Stage your changes. Get a short commit message that says what changed and why.
+explain: |
+  A short commit message built from your actual staged changes, so a reader knows what changed and why without opening the diff.
+
+  It reads git status and the staged diff first. If nothing is staged it asks for a diff or a description and labels it as such, and it never stages files on its own. It picks one type: feat, fix, docs, refactor, test or chore. If your change mixes types, it asks you to split it. The subject is a verb-first phrase of 50 characters or fewer, and empty subjects like "update code" are banned. A body is added when the reason is not obvious.
+when:
+  - You staged changes and cannot think of a good message.
+  - Your commits all say "fix bug" or "update code".
+  - A commit mixes a fix and a feature and should be split.
+  - You want your team's history to be easy to scan.
+you_give:
+  - Staged changes in git
+  - A note on why you made the change (optional)
+  - Your team's commit style (optional)
+you_get:
+  - A typed subject line
+  - A why-focused body
+  - A split suggestion if types are mixed
+  - A message ready to paste
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it each company's accounts. Get one set of group statements with t
 job: money-and-investing
 headline: Group accounts combiner
 subhead: Give it each company's accounts. Get one set of group statements with the cancelled internal items shown.
+explain: |
+  One set of group accounts that treats a parent and its subsidiaries as a single business. Give it each company's accounts and it combines them, with the cancelled internal items shown so you can see what was removed.
+
+  It works in a set order. First it aligns accounting policies across entities. Then it translates foreign results into the parent currency, adds up the lines, and eliminates intercompany balances such as receivables against payables, and sales against cost of goods sold. The parent's investment in each subsidiary is removed against its equity. Last, it works out the share of profit and equity that belongs to minority owners.
+when:
+  - You own several companies and need combined accounts.
+  - Subsidiaries trade with each other and inflate group revenue.
+  - Some subsidiaries report in a different currency.
+  - You have part-owners and must show their share.
+you_give:
+  - Accounts for each entity
+  - Ownership percentages
+  - Intercompany transaction list
+  - Exchange rates
+you_get:
+  - Combined group statements
+  - A schedule of eliminations
+  - Currency translation workings
+  - Minority interest calculation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

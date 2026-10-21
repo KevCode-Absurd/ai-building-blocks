@@ -6,6 +6,25 @@ summary: Give it guide read counts. Get quality checks and a ranked gene hit lis
 job: research-topics
 headline: CRISPR screen hit ranker
 subhead: Give it guide read counts. Get quality checks and a ranked gene hit list with effect sizes.
+explain: |
+  A quality-checked ranked list of genes from a pooled CRISPR screen, with effect sizes and false discovery rates. You see which genes truly rise or fall between conditions and whether the data can be trusted.
+
+  You give it guide read counts or raw sequencing reads. The skill validates the guide library and the comparisons you want to make. It then measures replicate agreement and library quality before testing. MAGeCK runs the count and test steps for knockout, CRISPRi or CRISPRa screens, in enrichment or depletion contrasts. Output is a gene ranking with effect size and FDR. It needs command line tools and Python installed. Public dependency lookups belong in a different skill.
+when:
+  - You finished a knockout screen and have a count table.
+  - You need to check replicate quality before trusting hits.
+  - You want to compare treated and control cells.
+  - You have raw reads and must produce counts first.
+you_give:
+  - Guide count matrix or FASTQ files
+  - Guide library file
+  - Sample groups and comparison
+  - MAGeCK installed
+you_get:
+  - Library and replicate QC
+  - Ranked gene hit list
+  - Effect sizes and FDR
+  - Commands used
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it reserve and cost data. Get the present value of the reserves, s
 job: money-and-investing
 headline: Oil and gas reserves valuer
 subhead: Give it reserve and cost data. Get the present value of the reserves, such as PV-10.
+explain: |
+  A present value for oil and gas reserves, worked out step by step so you can check every line. The headline figure is PV-10: all future net cash flow, discounted at 10 percent a year.
+
+  The skill first sorts reserves by certainty, as proved, probable or possible. It then forecasts output with a decline curve, multiplies by price, and takes off production taxes, lifting costs and development spending. You choose the price basis, such as a 12-month average or a forward curve. It discounts each year, adds them up, and works out how many years the reserves will last. It also explains that PV-10 is before tax and the standardised measure is after tax.
+when:
+  - You are looking at a producing well and need a quick value for the reserves.
+  - A lender asks for the PV-10 of your proved reserves.
+  - You want to see how value changes if oil prices drop.
+  - You are comparing the value of 1P and 2P cases.
+you_give:
+  - Reserve volumes by category
+  - Production or decline data
+  - Lifting, development and tax costs
+  - Price assumption
+you_get:
+  - A cash flow table by year
+  - The PV-10 figure
+  - Reserve life in years
+  - Notes on the pre-tax versus post-tax difference
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

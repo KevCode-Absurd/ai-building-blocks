@@ -6,6 +6,26 @@ summary: Point it at a site with many tool or feature pages. Get duplicate text 
 job: get-found-in-search
 headline: Tool pages SEO fixer
 subhead: Point it at a site with many tool or feature pages. Get duplicate text found and unique titles and copy planned.
+explain: |
+  If you run a site with dozens of tool or feature pages that all use the same template text, search engines treat them as copies and rank them low. This skill finds that duplication and plans a way to give each page its own words.
+
+  It was shaped by an audit where 93 of 105 tool pages shared identical text. The skill compares pages, reports how much text repeats, and builds a content register with one record per page for title, summary, uses, steps and questions. It then plans unique titles, meta descriptions, URL slugs and internal links, and adds signs of expertise and trust. It expects page data in a structured form such as JSON, YAML or a database.
+when:
+  - Your tool pages all rank low and look alike.
+  - Search Console warns about duplicate content.
+  - You have 50 or more feature pages and need a plan to differentiate them.
+  - Tool pages are not getting indexed.
+you_give:
+  - Your site or code repository
+  - A list of the tool pages
+  - Where page content is stored
+  - Search Console data (optional)
+you_get:
+  - A duplicate text report
+  - A per-page content register
+  - Unique titles and descriptions
+  - Slug and internal link plan
+  - A rewrite order
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

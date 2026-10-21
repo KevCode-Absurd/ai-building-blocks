@@ -6,6 +6,26 @@ summary: Give it company facts. Get a one-page teaser that sells the business wi
 job: money-and-investing
 headline: Anonymous company teaser writer
 subhead: Give it company facts. Get a one-page teaser that sells the business without naming it.
+explain: |
+  When you sell a company, you need to spark buyer interest without giving away whose it is. This skill writes a one-page anonymous teaser that sells the business and keeps the name hidden until a buyer signs an NDA.
+
+  You give the facts: what the company does, key numbers, location, strengths and what must stay hidden. The page follows a set layout. It has a code name, a sector line, a short description, four to six investment highlights, a small financial summary and a confidentiality note. Locations stay at region level. This version is tuned for India, so it reads fiscal years from April to March and writes sums in lakh and crore.
+when:
+  - You are selling a company and want to test buyer interest first.
+  - An adviser asks for a blind teaser before NDAs go out.
+  - You need to describe a strong business without naming customers or the town.
+  - You are preparing a sell-side pack for Indian buyers.
+you_give:
+  - What the company does and how it earns
+  - Revenue, profit and growth numbers
+  - Selling points and location
+  - What must stay hidden
+  - Likely buyer type (optional)
+you_get:
+  - A one-page anonymous teaser
+  - A code name and sector line
+  - Investment highlights
+  - A short financial summary table
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

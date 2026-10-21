@@ -6,6 +6,25 @@ summary: Describe the Drizzle migration clash. Get it diagnosed and repaired, wi
 job: test-and-fix-code
 headline: Database migration conflict fixer
 subhead: Describe the Drizzle migration clash. Get it diagnosed and repaired, with steps to stop it coming back.
+explain: |
+  A clash in your Drizzle migration files, snapshots or journal gets diagnosed and repaired without damaging your history, with a plan so it stops recurring.
+
+  The skill starts in read-only mode. It inspects the migration folder, the journal, snapshot files and git state, and explains what collided and why. Only if you ask will it propose edits. It will not run migrate or push, touch a live database, delete migration files, or discard either side of a merge without your clear say so. It treats running drizzle-kit check as running project code, so it reads your scripts first. It finishes with CI or merge queue rules that reduce repeat conflicts for teams.
+when:
+  - A pull or rebase left conflicts in your Drizzle journal file.
+  - drizzle-kit check reports migrations that do not commute.
+  - Two developers changed the schema on separate branches.
+  - Your team keeps hitting migration conflicts in pull requests.
+you_give:
+  - Your migration folder and git state
+  - The conflict or check error
+  - Your Drizzle Kit version (optional)
+  - Team workflow notes (optional)
+you_get:
+  - Diagnosis of the conflict
+  - Safe repair steps
+  - Checks to confirm the fix
+  - CI rules to prevent repeats
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

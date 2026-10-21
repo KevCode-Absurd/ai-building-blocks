@@ -6,6 +6,25 @@ summary: Say what effect you want to detect. Get how many subjects you need, wit
 job: track-numbers
 headline: Sample size planner
 subhead: Say what effect you want to detect. Get how many subjects you need, with power curves you can put in a grant.
+explain: |
+  The number of subjects, samples or replicates your study needs, worked out before you collect any data. Say what effect you want to detect and get a sample size with power curves ready for a grant or protocol.
+
+  Four numbers are tied together: sample size, effect size, significance level and power. Fix three and the fourth follows. It uses a formula where one exists and simulation for complex designs. It checks that your assumed effect is believable, not picked to give a small study, and counts the true independent unit, since repeated measures are not separate subjects. Output includes tables, plots and a method paragraph. Code needs Python with common stats packages.
+when:
+  - A funder wants a sample size justification in your grant.
+  - You are planning an experiment and do not know how many animals or samples to use.
+  - Your study is already small and you need to know its power.
+  - You must compare two groups and want to know what effect you can detect.
+you_give:
+  - The outcome you measure and test type
+  - The effect size you care about
+  - Variation from past data (optional)
+  - Significance and power targets (optional)
+you_get:
+  - The required sample size
+  - Power curves and a table
+  - A short method paragraph
+  - Notes on assumptions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

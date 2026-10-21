@@ -6,6 +6,27 @@ summary: Give it a set of student errors. Get the likely causes and the feedback
 job: teach-and-train
 headline: Student mistake analyser
 subhead: Give it a set of student errors. Get the likely causes and the feedback or teaching that fixes each one.
+explain: |
+  A set of wrong answers becomes a list of causes and fixes. Instead of marking 'incorrect', you learn whether the student slipped, misread, or holds a wrong idea, and what to do about each.
+
+  Give it samples of the student's work, the task and the correct response. The skill sorts the errors into types, looks for patterns across them, and works back to the likely root cause. It writes diagnostic questions you can ask the student to confirm the cause, then a targeted response plan for each type of error. It also gives a short guide students can use to analyse their own mistakes, and ideas to prevent repeats.
+when:
+  - A whole class made the same error on a test and you need to know why.
+  - A student keeps losing marks on algebra and you cannot see the reason.
+  - You want feedback that fixes the cause, not just the answer.
+  - You want students to learn to review their own errors.
+you_give:
+  - Samples of student work with errors
+  - The task description
+  - The correct response
+  - Subject and year level
+  - A rubric (optional)
+you_get:
+  - Errors sorted into types
+  - The likely cause behind each
+  - Questions to confirm the cause
+  - A response plan for each error type
+  - A self-analysis guide for students
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

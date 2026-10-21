@@ -6,6 +6,25 @@ summary: Give it an Indian company model. Get April to March years, crore units,
 job: money-and-investing
 headline: India modeling rules checker
 subhead: Give it an Indian company model. Get April to March years, crore units, Ind AS and listing rules checked.
+explain: |
+  Your Indian company model checked for the quiet mistakes that make numbers wrong: fiscal years, crore units, accounting standards and listing rules. You get a list of faults and the fix for each.
+
+  The biggest trap is units. In Excel, each trailing comma in a number format divides by a thousand, so no comma pattern gives crore, and the usual attempt shows lakh under a crore heading. The skill checks for that and for bare calendar years where April to March years belong. It also reviews Ind AS conventions and listing-related expectations. Items with no Indian equivalent, like some consensus data, are named as missing, never replaced by a look-alike.
+when:
+  - A colleague built a model and the figures look off by a large factor.
+  - You are about to send a model to a client or investor.
+  - You need to confirm fiscal year labels are right.
+  - You are moving a model from a US layout to an Indian one.
+  - You want a review checklist for Indian financial files.
+you_give:
+  - The model file or its key sheets
+  - The company and reporting periods
+  - The intended audience (optional)
+you_get:
+  - A list of unit and label errors
+  - Fixes for number formats
+  - Ind AS and listing checks
+  - A list of data that has no Indian equivalent
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

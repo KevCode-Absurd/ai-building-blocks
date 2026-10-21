@@ -6,6 +6,25 @@ summary: Give it a blank income, balance sheet and cash flow template. Get it fi
 job: money-and-investing
 headline: Statement model template filler for India
 subhead: Give it a blank income, balance sheet and cash flow template. Get it filled in, with Indian years and crore units handled.
+explain: |
+  A blank income statement, balance sheet and cash flow template, filled in and linked, with Indian years and crore units done right. Totals flow between the three statements, so the model balances.
+
+  The skill sets Indian periods first. FY2025 ends on 31 March 2025, and each quarter is labelled with its months. It avoids a known Excel trap: a common number format shows lakh under a crore label, a hundredfold error. It divides by ten million in live formulas instead. It fills the template with officecli and links net income to retained earnings. Cash flow ties to the balance sheet. Anything Indian data cannot supply is listed, not replaced by a stand-in.
+when:
+  - You have a blank three-statement template and need it filled.
+  - Your model mixes lakh and crore and the numbers look wrong.
+  - You need April to March years labelled properly.
+  - The balance sheet does not balance and you suspect broken links.
+  - You are building a model for an Indian company from its filings.
+you_give:
+  - The blank model template file
+  - The company's financial statements or source data
+  - The periods to cover
+you_get:
+  - A completed linked model
+  - Correct fiscal period labels
+  - Crore figures from live formulas
+  - A list of gaps that could not be filled
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

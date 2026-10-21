@@ -6,6 +6,24 @@ summary: Give it a long video transcript. Get the best five moments to clip, eac
 job: grow-social
 headline: Shorts clip finder
 subhead: Give it a long video transcript. Get the best five moments to clip, each with a new first line.
+explain: |
+  The five best moments in a long video to cut into Shorts, each with a new first line, on-screen text and a loop point. A good clip stands alone without the video around it.
+
+  Paste your transcript. It looks for 20 to 55 second spans that open on a complete thought, contain a turn (a claim, then proof or a twist) and end on a strong line. It ranks them and shows five with timecodes so you can reject one fast. For each, it writes a fresh opening line for viewers with no context, different words for the first two seconds of on-screen text, and an ending that loops back. Nothing is posted for you.
+when:
+  - You recorded a one-hour podcast and want Shorts from it.
+  - Your clips keep flopping because they need earlier context.
+  - You want hook lines that work for cold viewers.
+  - You edit for a client and need timecodes to hand over.
+you_give:
+  - The long video transcript with timecodes
+  - The audience or channel topic (optional)
+  - Preferred clip length (optional)
+you_get:
+  - Five ranked clip moments with timecodes
+  - A new first line for each
+  - On-screen text for the first two seconds
+  - A loop point and a crop note for vertical video
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

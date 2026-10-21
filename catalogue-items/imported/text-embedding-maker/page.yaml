@@ -6,6 +6,25 @@ summary: Give it sentences or documents. Get number versions of them for search,
 job: build-software
 headline: Text embedding maker
 subhead: Give it sentences or documents. Get number versions of them for search, grouping and finding similar text.
+explain: |
+  Turn sentences or documents into lists of numbers that capture their meaning, so a computer can find text that says similar things even when the words differ. That powers meaning-based search, grouping of similar items and question answering over your own files.
+
+  The skill uses the Sentence Transformers library in Python. It picks a pre-trained model that fits your language and size needs, encodes your text in batches, and compares results with cosine similarity. It covers semantic search, clustering and reranking, and shows how to run it locally with no paid API. You need Python, and a graphics card helps for large sets.
+when:
+  - You want search that finds matches by meaning, not exact words.
+  - You have thousands of support tickets and want to group similar ones.
+  - You are building a question-answering tool over your own documents.
+  - You need embeddings in several languages without paying per request.
+you_give:
+  - Your sentences or documents
+  - The language or languages involved
+  - "What you want to do: search, group or compare"
+  - Your Python setup
+you_get:
+  - Embedding code that runs on your machine
+  - A model choice suited to your text
+  - Similarity scores between texts
+  - A working search or clustering example
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

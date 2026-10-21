@@ -6,6 +6,25 @@ summary: Tell it your free hours. Get a week of uploads with titles, formats and
 job: grow-social
 headline: YouTube upload planner
 subhead: Tell it your free hours. Get a week of uploads with titles, formats and what to drop first.
+explain: |
+  A week of YouTube uploads that fits the hours you really have, with a clear line on what to drop first if the week goes wrong.
+
+  It asks two questions before it writes anything: how many hours you can give, and what is already half made. It then builds a week with one main video, one cheap video made from something that exists, and three Shorts cut from the main video. That is three uploads, not seven. You get a table with the day, format, working title, the one sentence each video promises, and what already exists.
+when:
+  - You want to post steadily but keep burning out.
+  - You have a few half-finished videos and no schedule.
+  - You need to turn one video into Shorts.
+  - You want to know which day to publish.
+you_give:
+  - Your free hours this week
+  - What is already half made
+  - Your best upload day from analytics (optional)
+  - Your channel niche (optional)
+you_get:
+  - A week table with day, format and working title
+  - The one promise of each video
+  - An hours cost estimate
+  - What to drop first
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

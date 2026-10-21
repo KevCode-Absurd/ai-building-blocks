@@ -6,6 +6,26 @@ summary: Give it a prompt change and a fixed set of cases. Get a clear report of
 job: test-and-fix-code
 headline: Prompt change tester
 subhead: Give it a prompt change and a fixed set of cases. Get a clear report of what got better or worse.
+explain: |
+  A fair test of whether your new prompt is better than the old one. You get case-by-case evidence, so a change ships on proof, not a hunch.
+
+  You freeze a set of test cases, then run the old and new prompts under the same model settings and budget. The skill records the prompt fingerprints, model and settings used. It decides pass rules in advance: exact checks for structured output, behaviour checks for tools, a clear rubric for open text. A timeout or missing answer counts as incomplete, never a pass. When an AI judges the results, it notes the judge's limits and compares against human labels. The report lists wins and losses per case.
+when:
+  - You rewrote a prompt and want to know if it got worse anywhere.
+  - Your team argues over which prompt is better and needs evidence.
+  - You are changing models and want to compare answers on the same cases.
+  - You need a record of why you approved a change.
+you_give:
+  - Old and new prompts
+  - A fixed set of test cases
+  - Rules for what counts as a pass
+  - Model and settings used
+  - Human-scored examples (optional)
+you_get:
+  - Side-by-side results per case
+  - List of regressions
+  - Notes on missing or noisy results
+  - A ship or hold recommendation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

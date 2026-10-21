@@ -6,6 +6,25 @@ summary: Describe a new feature or plan. Get the rules that may apply, approvals
 job: check-contracts
 headline: Rules and approvals checker
 subhead: Describe a new feature or plan. Get the rules that may apply, approvals needed and risk areas. Not legal advice.
+explain: |
+  Describe a feature, campaign or plan before launch and get the rules that may apply, who must sign off and where the risk sits. It is a first-pass view, not legal advice.
+
+  The answer opens with a verdict: proceed, proceed with conditions, or needs more review. Below is a table of laws and policies that could apply, such as GDPR or CCPA, with what each asks of you. Each requirement is marked met, not met or unknown, with an action. A risk table rates issues high, medium or low with a fix. You also get ranked actions, a list of approvers and the points where a specialist should look.
+when:
+  - You plan a referral program with cash rewards and want to know what rules apply.
+  - Marketing wants to use customer quotes in ads and you need a quick check.
+  - You are adding a feature that handles personal data.
+  - You need to know who has to approve a plan before it goes ahead.
+you_give:
+  - A short description of the plan or feature
+  - Where you operate and where your customers live
+  - Data you collect or use (optional)
+  - Existing policies that may matter (optional)
+you_get:
+  - A proceed or review verdict
+  - Rules and policies that may apply
+  - Risks rated with fixes
+  - A list of approvals needed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

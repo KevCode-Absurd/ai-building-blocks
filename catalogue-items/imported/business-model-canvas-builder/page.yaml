@@ -6,6 +6,25 @@ summary: Describe your business. Get a nine-block Business Model Canvas checked 
 job: plan-strategy
 headline: Business model canvas builder
 subhead: Describe your business. Get a nine-block Business Model Canvas checked for gaps between customers, costs and revenue.
+explain: |
+  A nine-block Business Model Canvas for your business, checked so that customers, value, costs and revenue all line up.
+
+  The skill follows Osterwalder's method. It begins by locking your value proposition to your customer segments, since the rest depends on that match. Then it builds channels, customer relationships, key activities, resources and partners. A last pass checks consistency: every key activity must show up in the cost structure, and revenue streams must fit the segments. Use it to design a new business, audit an existing one, or test the logic before a pivot.
+when:
+  - You are designing a new business and need the whole model on one page.
+  - You want to check whether your costs and revenue really fit your customers.
+  - You are thinking about a pivot and need to test the logic.
+  - Your business feels fine but profit is thin and you cannot see why.
+you_give:
+  - A description of your business
+  - Who your customers are
+  - How you earn money
+  - Main costs (optional)
+you_get:
+  - A nine-block canvas
+  - Value and customer match check
+  - Cost and revenue consistency check
+  - A list of gaps to fix
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

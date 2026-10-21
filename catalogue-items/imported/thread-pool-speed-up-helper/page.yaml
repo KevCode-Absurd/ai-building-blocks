@@ -6,6 +6,25 @@ summary: Give it slow local parallel code. Get it switched to a thread pool and 
 job: build-software
 headline: Thread pool speed-up helper
 subhead: Give it slow local parallel code. Get it switched to a thread pool and timed to prove the gain.
+explain: |
+  MATLAB code that runs in parallel on your own computer often barely beats a plain loop, because data gets copied between worker processes. Switching to a thread pool removes much of that copying, and your existing parfor, parfeval or spmd code needs no rewrite.
+
+  The skill starts the thread pool, runs your code, and times it against the process pool so you can see the gain. If something is not supported on threads, MATLAB says so and the skill falls back to a process pool. It also explains what threads really save: large shared variables are not copied, while sliced arrays still are. It can set Threads as your default. It does not apply to clusters or Simulink parallel runs.
+when:
+  - Your parfor loop is only slightly faster than a normal for loop.
+  - Workers spend a lot of time receiving large arrays.
+  - Opening a process pool takes longer than your short job.
+  - You want to know if your function can run on a thread pool at all.
+you_give:
+  - Your MATLAB parallel code
+  - Whether you run locally or on a cluster
+  - A rough sense of data sizes (optional)
+  - MATLAB with Parallel Computing Toolbox
+you_get:
+  - Code running on a thread pool
+  - Timing before and after
+  - A fallback plan if threads are unsupported
+  - A setting to make Threads your default
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

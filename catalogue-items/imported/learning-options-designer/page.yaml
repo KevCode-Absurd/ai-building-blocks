@@ -6,6 +6,25 @@ summary: Give it a learning goal. Get specific ways to engage learners, present 
 job: teach-and-train
 headline: Learning options designer
 subhead: Give it a learning goal. Get specific ways to engage learners, present content and let them show what they know.
+explain: |
+  A set of specific choices for how learners take part, take in content and show what they know, all for one learning goal. Give the goal and how you plan to teach it now. The skill applies Universal Design for Learning from CAST and offers options in three groups: engagement, representation, and action and expression.
+
+  The ideas are practical and tied to your topic. For a lesson on photosynthesis, that could mean a diagram plus audio alongside the textbook, and a choice between a poster, a short talk or a written answer. The aim is to reduce barriers for everyone without lowering the goal.
+when:
+  - Your lesson relies on one textbook page and one worksheet.
+  - Students with different needs struggle to show what they know.
+  - You want choices for how students prove they met the goal.
+  - You are planning a unit and want engagement ideas beyond a quiz.
+you_give:
+  - The learning goal
+  - How you plan to teach it now
+  - Student age or level
+  - Known needs in your group (optional)
+you_get:
+  - Engagement options
+  - Ways to present the content
+  - Ways students can show learning
+  - Notes on keeping the goal intact
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

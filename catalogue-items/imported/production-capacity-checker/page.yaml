@@ -6,6 +6,26 @@ summary: Give it demand and what you can make. Get your bottlenecks and a plan t
 job: plan-supply-chain
 headline: Production capacity checker
 subhead: Give it demand and what you can make. Get your bottlenecks and a plan to close the gap.
+explain: |
+  Know whether your plant, warehouse or team can handle next quarter's demand before you promise it. You get a clear view of where the squeeze is, which resource limits everything else, and what it would cost to close the gap.
+
+  You describe the kind of capacity you plan (machines, space, labour, trucks), the time frame, and your demand forecast with its swings. The skill compares load against what you can really produce, works out utilisation for each resource, and finds the bottleneck. It then lays out options such as overtime, extra shifts, outsourcing or buying equipment, and weighs each against budget and lead time.
+when:
+  - Demand is growing and you are not sure your equipment or staff can keep up.
+  - A big order is on the table and you need to know if you can deliver it.
+  - One work station always seems to hold up the rest and you want proof of which one.
+  - You are deciding whether to buy a new machine or add a shift.
+you_give:
+  - Demand forecast with seasonal swings
+  - Current capacity by machine, shift or team
+  - Known bottlenecks and current output rates (optional)
+  - Budget and lead times for adding capacity
+  - Service level you must hit (optional)
+you_get:
+  - Utilisation by resource
+  - The named bottleneck
+  - Gap between demand and capacity
+  - Options to close the gap, compared by cost and timing
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

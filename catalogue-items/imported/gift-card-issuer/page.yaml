@@ -6,6 +6,25 @@ summary: Name the customers and amounts. Get gift cards issued as goodwill, retu
 job: run-your-store
 headline: Gift card issuer
 subhead: Name the customers and amounts. Get gift cards issued as goodwill, return credit or rewards. Creates live gift cards.
+explain: |
+  Store credit in your customers' hands, issued from one request. Name the customers and amounts, and it creates Shopify gift cards for goodwill after a late order, credit in place of a refund, or loyalty rewards.
+
+  You can look up each customer by email or customer ID, add an internal reason, set an expiry date and tag the customer. A dry run shows what would be created before anything happens. This skill creates live gift cards that hold real value, so check the list first. It needs a signed-in Shopify session, write access to gift cards, and gift cards turned on in your store settings.
+when:
+  - An order shipped late and you want to send a goodwill credit.
+  - A customer returned an item and you prefer store credit to a cash refund.
+  - You want to reward your top customers with a small gift card.
+  - You need to issue the same amount to a list of customers.
+you_give:
+  - Store domain
+  - Customer emails or IDs
+  - Gift card amount
+  - Reason, expiry date and tag (optional)
+you_get:
+  - Gift cards created for each customer
+  - A dry run preview first
+  - Reason notes logged on each card
+  - A summary of what was issued
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

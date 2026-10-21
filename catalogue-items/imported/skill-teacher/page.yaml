@@ -6,6 +6,25 @@ summary: Say what you want to learn. Get lessons and cheat sheets that build ove
 job: think-and-decide
 headline: Skill teacher
 subhead: Say what you want to learn. Get lessons and cheat sheets that build over many sessions toward your goal.
+explain: |
+  A learning folder that grows with you, so a topic you want to learn gets taught across many sessions instead of in one long answer. You start by saying what you want to learn and why. The skill writes that reason into a mission file and uses it to keep every lesson on target.
+
+  Each session it checks what you already know, teaches the next small piece, and turns what you learned into a printable cheat sheet. It also keeps a list of useful resources. Next time, it picks up where you stopped. Your goal stays in view, and the reference pages pile up into a set you can use on the job.
+when:
+  - You want to learn a new subject slowly over weeks, not in one chat.
+  - You keep forgetting what you learned and want cheat sheets to look back at.
+  - You have a real goal, like a promotion or a project, and want lessons tied to it.
+  - You want an AI tutor that remembers where you left off.
+you_give:
+  - The topic you want to learn
+  - Why you want to learn it
+  - What you already know (optional)
+  - A folder to keep lessons in
+you_get:
+  - A mission file stating your learning goal
+  - Lessons that build from session to session
+  - Printable cheat sheets for quick reference
+  - A list of resources to explore next
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it a plan or change you feel sure about. Get a fresh reviewer's ha
 job: think-and-decide
 headline: Second-opinion reviewer
 subhead: Give it a plan or change you feel sure about. Get a fresh reviewer's hardest objections, sorted by what matters.
+explain: |
+  A set of the hardest objections to a plan or change you feel sure about, sorted by how much each one matters. In a long session, guesses quietly turn into facts. This skill breaks that by handing your work to a fresh reviewer who has not seen your reasoning and is told to find what is wrong.
+
+  It applies only to non-trivial decisions: new branching logic, anything crossing a module boundary, claims such as "this is safe", or changes you cannot undo. Typos and renames are skipped. The reviewer sees only the artifact and the requirements, returns objections, and you decide which hold up. It is meant for the main session, since a helper cannot start another.
+when:
+  - You are about to commit a change that touches logic you only half understand.
+  - You made an architecture choice under uncertainty and want it challenged.
+  - You are about to say "this scales" and want someone to try to prove otherwise.
+  - A plan has run for many messages and you suspect your assumptions have hardened.
+you_give:
+  - The plan, code change or claim
+  - What it must achieve
+  - Constraints and things already ruled out (optional)
+you_get:
+  - A fresh reviewer's strongest objections
+  - Objections sorted by importance
+  - Which points to fix and which to dismiss
+  - A revised decision
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

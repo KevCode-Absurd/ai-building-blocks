@@ -6,6 +6,25 @@ summary: Describe what feels slow. Get the bottleneck found, fixed, and proven f
 job: test-and-fix-code
 headline: Slow code fixer
 subhead: Describe what feels slow. Get the bottleneck found, fixed, and proven faster with before and after numbers.
+explain: |
+  A slow page, API or database call, fixed and proven faster with numbers. You describe what feels slow, and the skill measures first, so it never guesses.
+
+  It times the real operation, finds the slowest part with the right tool for the setting (browser performance tab, Node profiler or EXPLAIN on a query), and fixes that part first. Common fixes include replacing N+1 queries with one join, adding a missing index, caching repeated work and trimming what a page loads. After each change it measures again and reports the before and after times. If a change does not help, it is not kept.
+when:
+  - Your page takes seconds to load and users complain.
+  - An API call is slow and you do not know why.
+  - A database query that used to be fast now drags.
+  - You need proof that your fix made a real difference.
+you_give:
+  - A description of what feels slow
+  - The code or query involved
+  - How slow it is now, if you know (optional)
+  - Access to run the code (optional)
+you_get:
+  - The bottleneck, named
+  - A fix aimed at the slowest part
+  - Before and after timings
+  - A short note on what changed and why
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

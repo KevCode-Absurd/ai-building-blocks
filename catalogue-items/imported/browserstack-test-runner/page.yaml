@@ -6,6 +6,24 @@ summary: Give it your Playwright tests. Get them run on many browsers and device
 job: test-and-fix-code
 headline: BrowserStack test runner
 subhead: Give it your Playwright tests. Get them run on many browsers and devices, with a pass and fail report.
+explain: |
+  Run your Playwright tests on many browsers and phones in the cloud, and get a clear report of what passed and failed on each.
+
+  The skill checks that your BrowserStack username and access key are set, and stops with instructions if not. It then edits your Playwright config to add cloud projects for chosen browser and operating system combinations, such as Chrome on Windows 11. After a run, it reports results per browser and device. You need a paid or trial BrowserStack account. The connecting tool is not set up by default, so you have to enable it by hand first, and the skill explains where.
+when:
+  - Your site works in Chrome but you do not know about Safari or Firefox.
+  - You need to check your app on real phones and tablets.
+  - A customer reports a bug on a browser you do not own.
+  - You want a pass and fail table across browsers before a release.
+you_give:
+  - Your Playwright tests
+  - A BrowserStack username and access key
+  - The browsers and devices to cover (optional)
+you_get:
+  - A config updated for BrowserStack
+  - Tests run across browsers and devices
+  - A pass and fail report
+  - Failures grouped by browser
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

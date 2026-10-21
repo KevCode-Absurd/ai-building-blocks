@@ -6,6 +6,25 @@ summary: Describe a product or feature. Get a short product requirements documen
 job: build-product
 headline: Product requirements writer
 subhead: Describe a product or feature. Get a short product requirements document with goal, audience, value and release plan.
+explain: |
+  A short product requirements document your team can read in a few minutes and start work from. It is built to help people decide, not to fill pages.
+
+  Claude writes eight parts: summary, contacts, background, objective, market segments, value propositions, solution and release. Value is stated in a six-part jobs-to-be-done format. It targets one to two pages, about 600 to 1,000 words, and a section with little to say gets a line or two. It only fills gaps that would block a decision on the first version. Ask for a fuller spec if you need one.
+when:
+  - You are about to start a feature and need agreement on what to build.
+  - Engineers and designers need a brief to start from.
+  - Leaders want a one-page case before they approve work.
+  - You have notes and need them shaped into a PRD.
+you_give:
+  - A description of the product or feature
+  - The problem and who has it
+  - Known constraints or deadlines (optional)
+  - Notes or research you already have (optional)
+you_get:
+  - A lean eight-section PRD
+  - Value propositions in jobs-to-be-done form
+  - An objective and release plan
+  - A list of open questions that block decisions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

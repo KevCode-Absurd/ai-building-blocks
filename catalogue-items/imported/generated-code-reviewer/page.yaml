@@ -6,6 +6,25 @@ summary: Give it code your AI just wrote. Get a pass for clean-code slips, repea
 job: test-and-fix-code
 headline: Generated code reviewer
 subhead: Give it code your AI just wrote. Get a pass for clean-code slips, repeated logic and common AI mistakes.
+explain: |
+  Code your AI just wrote gets a second pass before it ships. The review checks for clean-code slips, repeated logic, needless complexity and the mistakes AI tools tend to make, like extra layers nobody asked for.
+
+  It works in three modes. Guard mode checks a fresh diff and fixes problems before you see it. Live mode applies the rules while code is being written, then runs a checklist. Review mode scores and critiques files you point at. Detailed rules sit in reference files and are read when needed. It does not replace your linter, formatter or tests. It adds the judgement those tools miss. No setup or key is needed.
+when:
+  - An AI tool just wrote a large change and you want it checked before commit.
+  - You want to review a file or diff against clear clean-code rules.
+  - Your generated code keeps growing duplicate helper functions.
+  - You want rules applied during a risky edit, not only after.
+you_give:
+  - The changed code or files
+  - The language or project style (optional)
+  - Your lint and test setup (optional)
+  - Which mode you want (optional)
+you_get:
+  - Fixes for rule violations
+  - A structured list of findings
+  - A self-check list before delivery
+  - Notes on repeated or needless code
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it sales and stock numbers. Get what to reorder and when, draft or
 job: run-your-store
 headline: Purchase order and reorder drafter
 subhead: Give it sales and stock numbers. Get what to reorder and when, draft orders and slow movers to clear.
+explain: |
+  A reorder list that tells you what to buy, how much and when, based on what is actually selling. It also shows the cash stuck in stock you should not buy more of.
+
+  Upload sales history and stock counts, or connect Shopify, Square or NetSuite. The skill works out how fast each item sells over 7 and 28 days, projects a cautious stockout date, and sizes a 60-day order using lead time. It applies seasonality only when your history supports it, and says so otherwise. Slow, overstocked and dead items are listed as stock to clear. It drafts purchase orders and vendor emails, but orders nothing without your approval.
+when:
+  - You keep running out of your best sellers.
+  - Cash feels tied up in boxes that are not moving.
+  - You need to send your supplier a purchase order this week.
+  - You count stock on a clipboard and want a plan from it.
+you_give:
+  - Sales history by item and date
+  - Stock on hand
+  - Unit cost, price and vendor
+  - Lead times (optional)
+you_get:
+  - Reorder list with quantities and dates
+  - Estimated stockout date per item
+  - Draft purchase orders
+  - Vendor email drafts
+  - Slow movers to clear
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

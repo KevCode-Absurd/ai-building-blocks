@@ -6,6 +6,25 @@ summary: Give it a stock ticker. Get how analyst profit and sales forecasts are 
 job: money-and-investing
 headline: Analyst estimate reader
 subhead: Give it a stock ticker. Get how analyst profit and sales forecasts are changing and where they differ. Collects data from websites.
+explain: |
+  Before you buy or hold a stock, you can see whether analysts are getting more hopeful or more worried about it. Give a ticker and you get a plain read on profit and sales forecasts: the average, the high and low calls, and how far apart they sit.
+
+  The skill pulls public data from Yahoo Finance with a small Python library. It compares forecasts by period, then checks how they moved over the last 7, 30, 60 and 90 days and how many analysts raised or cut. It also sets expected growth against the industry, the sector and the wider market, and looks at how accurate past forecasts were. It is research only, not advice.
+when:
+  - You are weighing a stock and want to know if forecasts are rising or falling.
+  - You hear a company beat estimates and want to know how big the gap between analysts really is.
+  - You need next quarter and full year forecasts side by side for a report.
+  - You want to compare a company's expected growth with its sector.
+you_give:
+  - A stock ticker
+  - The periods you care about (optional)
+  - A peer or sector to compare against (optional)
+you_get:
+  - Profit and sales forecasts by period
+  - Forecast changes over 7 to 90 days
+  - Count of analysts raising and cutting
+  - Growth compared with industry and market
+  - Notes on past forecast accuracy
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

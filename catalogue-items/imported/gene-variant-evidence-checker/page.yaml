@@ -6,6 +6,25 @@ summary: Name a gene variant. Get public evidence, expert gene-disease ratings a
 job: research-topics
 headline: Gene variant evidence checker
 subhead: Name a gene variant. Get public evidence, expert gene-disease ratings and papers, each with its source.
+explain: |
+  Name a gene variant and get back what public sources say about it, with a link for every claim. It looks up variant evidence, automated classification support under the ACMG/AMP rules, expert gene-disease ratings from ClinGen, and linked papers.
+
+  It connects to a free public service, so you need no account or key. It keeps to public identifiers only, so no patient data goes out. If a source has nothing, or a check fails, the answer says so plainly instead of guessing. The coverage is limited, so a missing entry does not mean no link exists. The output is support for a professional reviewer, not a diagnosis.
+when:
+  - You found a variant in a report and want the public evidence behind it.
+  - You need a gene-disease rating from an expert panel.
+  - You want papers about one variant in a single list.
+  - You are preparing notes for a clinician to review.
+you_give:
+  - A variant name or identifier
+  - The gene (optional)
+  - The genome build (optional)
+  - Network access to the public service
+you_get:
+  - Public evidence for the variant
+  - ACMG/AMP decision support notes
+  - Gene-disease validity ratings
+  - Linked papers with sources
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

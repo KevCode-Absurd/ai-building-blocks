@@ -6,6 +6,25 @@ summary: Give it your text. Get spoken audio in a natural voice in 90+ languages
 job: work-with-audio
 headline: Multilingual narrator
 subhead: Give it your text. Get spoken audio in a natural voice in 90+ languages, saved as a sound file.
+explain: |
+  Spoken audio of your text in a natural voice, in over 90 languages, saved as a sound file you can use in videos, courses or apps.
+
+  The skill uses the ElevenLabs text-to-speech service. It first checks that an API key is set, and helps you sign in if not. Then you choose a voice and a model, trading quality against speed. It writes short code in Python, JavaScript or a command line call that sends your text and saves the returned audio as an MP3. You can also pipe text straight into a command to hear it right away. It needs an ElevenLabs account, and usage may cost money.
+when:
+  - You need a voiceover for a video and have only a script.
+  - You want your course lessons read aloud in Spanish and French.
+  - An app should read alerts aloud.
+  - You want to hear a draft before recording yourself.
+you_give:
+  - The text to read aloud
+  - The language
+  - A voice choice (optional)
+  - An ElevenLabs account and API key
+you_get:
+  - An audio file of your text
+  - Code to repeat the job
+  - A voice and model recommendation
+  - Setup steps for your key
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your content. Get a slide deck outline and one drawn image per 
 job: work-with-files
 headline: Slide deck image maker
 subhead: Give it your content. Get a slide deck outline and one drawn image per slide, ready to share or read.
+explain: |
+  A slide deck made to be read and shared, where each slide is a drawn image. You give your content, and the skill writes an outline with style instructions, then creates one picture per slide.
+
+  The slides explain themselves, since people will scroll through them alone, not watch a presenter. The skill asks you about style and length first, then drafts the outline for you to approve. It then calls an image tool to render each slide, using whichever image backend you have set up. It needs Bun or Node and an image generation tool. Because each slide is a picture, edit the outline before drawing, not after.
+when:
+  - You have an article and want a swipe-through deck for social media.
+  - You need a self-explanatory deck to email, not present.
+  - You want an outline approved before any images are drawn.
+  - You want every slide to share one visual style.
+you_give:
+  - The content or article to turn into slides
+  - A preferred style and slide count (optional)
+  - An image tool the skill can call
+  - Your approval of the outline
+you_get:
+  - An outline with a style plan for each slide
+  - One image per slide
+  - A deck that reads well without a speaker
+  - Ready-to-share image files
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe a problem. Get ideas explored, assumptions challenged and the 
 job: test-an-idea
 headline: Product idea brainstorm partner
 subhead: Describe a problem. Get ideas explored, assumptions challenged and the strongest options narrowed down.
+explain: |
+  A sparring partner for the early stage of an idea, before you write a spec. It pushes back, asks the hard questions and stops you settling on the first answer.
+
+  Claude picks a mode to match where you are. In problem exploration it asks who has the problem and what they do about it today. In idea generation it offers angles you may not have tried. In stress testing it attacks your assumptions. You can shift between modes as the talk moves along. The aim is not a document. It is a few strong options you can believe in and know how to test.
+when:
+  - You have a vague problem area and no clear idea to build.
+  - You want your plan challenged before you commit.
+  - You need fresh angles on a product problem.
+  - You are stuck between a few directions.
+you_give:
+  - The problem or opportunity you are exploring
+  - Who you think has the problem
+  - What you have tried or learned so far (optional)
+  - Constraints such as time or budget (optional)
+you_get:
+  - Questions that sharpen the problem
+  - A set of different ideas
+  - Your weak assumptions called out
+  - A short list of the strongest options
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

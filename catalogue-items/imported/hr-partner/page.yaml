@@ -6,6 +6,25 @@ summary: Describe the people task. Get job posts, interview kits, onboarding lis
 job: lead-people
 headline: HR partner
 subhead: Describe the people task. Get job posts, interview kits, onboarding lists, review plans or policy drafts to check with counsel.
+explain: |
+  An HR helper that produces the actual documents: job posts, interview kits, onboarding lists, review plans and policy drafts. Describe the people task and get a single package you can use, with a clear note to check key items with a lawyer. It is not legal advice.
+
+  It asks up to three questions first, such as your country, company size and whether staff are remote. Then it builds a package with a summary, your stated assumptions, the finished documents with fill-in placeholders, and an implementation checklist with owners and timing. Interview kits use job-related questions and scoring guides to keep hiring fair, and it avoids banned questions. High-risk actions like terminations are flagged for counsel.
+when:
+  - You need a job description and structured interview questions for a new role.
+  - A new hire starts next week and you have no onboarding plan.
+  - You are writing a leave or time-off policy from scratch.
+  - A manager needs a fair way to set goals or handle a performance issue.
+you_give:
+  - The HR task in plain words
+  - Your country or region
+  - Company size and work setup
+  - Existing policies (optional)
+you_get:
+  - Ready-to-edit HR documents
+  - Interview kits with scoring guides
+  - Onboarding or review checklists
+  - A rollout checklist with owners
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

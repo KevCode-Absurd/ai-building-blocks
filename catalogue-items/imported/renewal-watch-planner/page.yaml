@@ -6,6 +6,25 @@ summary: Ask what is renewing. Get upcoming renewals with timing, risk and room 
 job: sell-and-negotiate
 headline: Renewal watch planner
 subhead: Ask what is renewing. Get upcoming renewals with timing, risk and room to raise the price.
+explain: |
+  A list of renewals coming up, sorted by timing and risk, with a read on how much room you have to raise the price. A renewal you plan at ninety days out is a conversation. One you notice at two weeks is a discount.
+
+  It reads your customer records or an uploaded contract file and finds each renewal date in your chosen window, such as the next 120 days. Then it flags risks: a contact who left, an open escalation, low usage. It estimates the uplift, cites where each value came from and says plainly what it could not find. You can then ask it to prepare each renewal step.
+when:
+  - You manage accounts and want to see what renews next quarter.
+  - You want early warning on renewals that look shaky.
+  - You are deciding whether to raise prices at renewal.
+  - You only have a spreadsheet of contracts, not a CRM.
+you_give:
+  - Your book, one account or the team
+  - Time window to look at
+  - CRM access or a renewals file
+  - Email or chat access for risk signals (optional)
+you_get:
+  - Renewal calendar by date
+  - Risk flags per account
+  - Price uplift estimates
+  - Prep actions for each renewal
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

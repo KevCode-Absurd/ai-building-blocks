@@ -6,6 +6,25 @@ summary: Give it one task. Get several AI agents trying it in separate branches,
 job: build-software
 headline: Competing agent racer
 subhead: Give it one task. Get several AI agents trying it in separate branches, scored, with the best one merged.
+explain: |
+  Several AI agents try the same task side by side, each in its own copy of your project, and the best result is merged. You stop betting on one attempt and pick from real alternatives with scores.
+
+  You start a session with the task, how many agents to run and how to judge them. Each agent works in a separate git branch so they cannot clash. Ready-made patterns exist for speed tuning, cleaning up code, writing tests and fixing bugs. A coordinator ranks the results by a measured number or an AI judge, merges the winner and archives the rest. It needs git and a code project, and also works for comparing drafts of text.
+when:
+  - You have a slow function and want three different speed-ups to compare.
+  - A bug has several possible fixes and you want to see them tested.
+  - You need more test coverage and want the best set of tests.
+  - You want to compare content drafts and keep the strongest.
+you_give:
+  - The task in one sentence
+  - A git project to work in
+  - How many agents to run
+  - A way to score results, such as a test or a timing
+you_get:
+  - Several attempts in separate branches
+  - A ranked comparison
+  - The winning branch merged
+  - A status view of every agent
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

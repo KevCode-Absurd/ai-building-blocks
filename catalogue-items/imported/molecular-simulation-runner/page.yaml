@@ -6,6 +6,26 @@ summary: Give it a protein or molecule. Get a simulation run and an analysis of 
 job: research-topics
 headline: Molecular simulation runner
 subhead: Give it a protein or molecule. Get a simulation run and an analysis of how it moves.
+explain: |
+  A simulation of how your protein or molecule moves, followed by a clear analysis of that motion. You can see which parts stay rigid, which flex, and how a mutation or a drug changes it.
+
+  The skill pairs two Python tools. OpenMM runs the physics on a CPU or GPU, and MDAnalysis reads the saved path and measures it. It sets up a clean environment, loads a structure, adds water and a force field, relaxes it, runs the simulation and records the trajectory. Then it calculates RMSD and RMSF, which show how much the structure drifts and which residues move most. It states what the results cannot prove.
+when:
+  - You want to see whether a mutation makes a protein less stable.
+  - You need the motion of a ligand inside a binding pocket.
+  - You are studying a protein in a membrane.
+  - You have a trajectory file and need the analysis.
+you_give:
+  - A protein or molecule structure file
+  - The question, such as stability or binding
+  - Your hardware, CPU or GPU
+  - Temperature and run length (optional)
+you_get:
+  - Setup and run scripts
+  - A saved trajectory
+  - RMSD and RMSF plots
+  - A plain reading of the motion
+  - Notes on what the run cannot show
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

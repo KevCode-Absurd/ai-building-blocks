@@ -6,6 +6,25 @@ summary: Pick your review cycle. Get a self-review template, a manager review dr
 job: hire-people
 headline: Performance review helper
 subhead: Pick your review cycle. Get a self-review template, a manager review draft and calibration prep with specific examples.
+explain: |
+  Review season without the blank page. Pick your mode and get a self-assessment, a manager review draft or a calibration prep document, each built around specific examples instead of vague praise.
+
+  The self-assessment asks for three to five accomplishments, each with situation, what you did and the result, then goals met or missed with evidence, growth areas, challenges and next goals. The manager review gives structure to feedback on a named person. The calibration mode prepares the comparison across the team. If you do not name a mode, it asks which you need.
+when:
+  - It is review time and you need to list your wins with proof.
+  - You are a manager who must write a review for one person.
+  - You are about to join a calibration meeting and need prep.
+  - You want feedback to be specific and fair rather than general.
+you_give:
+  - "The review mode: self, manager or calibration"
+  - The review period
+  - Notes on accomplishments or goals
+  - The employee name, for manager reviews (optional)
+you_get:
+  - A self-review template filled with your examples
+  - A manager review draft
+  - A calibration prep document
+  - A next-period goals list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your product. Get the one metric to steer by, plus 3 to 5 supp
 job: track-numbers
 headline: North star metric picker
 subhead: Describe your product. Get the one metric to steer by, plus 3 to 5 supporting numbers that feed it.
+explain: |
+  One number your whole team can steer by, plus three to five smaller numbers that move it. Without this, teams chase many figures and pull in different directions.
+
+  The skill first sorts your business into one of three games: attention (time spent), transactions (deals completed) or productivity (work done well). It then proposes a metric that reflects value to the customer, not your revenue, and tests it against what makes a good North Star. It must be a single measure, understood by all, and an early sign of long-term success. The supporting input metrics show which levers change it. An OKR is a goal, not the metric itself.
+when:
+  - Your team tracks twenty numbers and cannot agree which matters.
+  - You are setting up a metrics plan for a new product.
+  - You have a candidate metric and want to test it.
+  - Revenue is your headline and you suspect it is the wrong guide.
+you_give:
+  - A description of your product and customers
+  - What value customers get
+  - Metrics you track now (optional)
+  - A candidate North Star (optional)
+you_get:
+  - Your business game type
+  - One North Star metric
+  - Three to five input metrics
+  - A test of the metric against the criteria
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

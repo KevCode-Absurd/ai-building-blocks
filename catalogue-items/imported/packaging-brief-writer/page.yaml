@@ -6,6 +6,26 @@ summary: Describe your product and brand. Get a packaging brief a designer can f
 job: design-work
 headline: Packaging brief writer
 subhead: Describe your product and brand. Get a packaging brief a designer can follow, from materials to unboxing.
+explain: |
+  A packaging brief a designer or agency can pick up and work from. It covers shape, materials, layout and the moment the customer opens the box.
+
+  The skill reads your brand colours, fonts and tone, then asks only for what is missing: product size, weight, sales channel, market position, competitors, budget, green needs, volumes and legal text. The brief is built around five jobs packaging must do. It must protect, explain, stand out, win undecided buyers and carry the brand after purchase. You get structure, visual order, materials that fit the budget and an unboxing plan. Check legal labels with your supplier.
+when:
+  - You are launching a product and need to brief a designer.
+  - Your shipping box feels generic and forgettable.
+  - You want a premium unboxing without overspending.
+  - You need to explain packaging goals to your supplier.
+you_give:
+  - Product details and size
+  - Sales channel
+  - Brand colours, fonts and personality
+  - Budget tier
+  - Sustainability and legal needs (optional)
+you_get:
+  - A packaging brief
+  - Structure and material recommendations
+  - Visual hierarchy for the pack
+  - An unboxing experience plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Name a company and its rivals. Get a deck on market position, side by s
 job: plan-strategy
 headline: Competitor landscape deck builder
 subhead: Name a company and its rivals. Get a deck on market position, side by side comparison and what it means.
+explain: |
+  A slide deck that shows where a company sits among its rivals, with a side by side comparison and a clear takeaway. The work runs in two phases, so you agree the plan before any slides are built.
+
+  Claude first asks what you want: one company with rivals around it, or several companies compared as equals. It confirms the exact competitor set, researches, and shows an outline for approval. It then builds the deck in PowerPoint or as a file in chat. It is set up for Indian markets, with the April to March fiscal year and amounts in lakh and crore, and it names gaps that have no Indian equivalent instead of swapping in a stand-in measure.
+when:
+  - You are presenting a company's market position to a client or board.
+  - You need a side by side view of three to six rivals.
+  - A deal team wants to see the competitive field before a decision.
+  - You want the deck outline approved before the slides are made.
+you_give:
+  - The target company
+  - The competitors in scope
+  - What the deck is for
+  - Your PowerPoint template (optional)
+you_get:
+  - An approved outline
+  - A competitive landscape deck
+  - Side by side comparison slides
+  - A closing slide on what it means
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

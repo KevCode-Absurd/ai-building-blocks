@@ -6,6 +6,27 @@ summary: Connect Ahrefs and name rivals. Get keywords they rank for that you do 
 job: study-competitors
 headline: Rival keyword gap finder
 subhead: Connect Ahrefs and name rivals. Get keywords they rank for that you do not, ranked by opportunity into quick wins.
+explain: |
+  A ranked list of search terms your rivals appear for and you do not, so you know which pages to write next. Quick wins are marked, and related terms are grouped.
+
+  You connect Ahrefs and name your site and three to five competitors. The skill sorts every keyword into four boxes: both rank, only rivals rank, only you rank, or neither. The box that matters is where rivals rank and you do not. Those terms get an opportunity score from search volume, difficulty and fit with your business, then are clustered by topic. It also checks your existing content list so you update pages before writing new ones. You need an Ahrefs account.
+when:
+  - You plan next quarter's content and need targets.
+  - A rival is gaining search traffic and you want to know why.
+  - You are entering a new market and need to see the field.
+  - You want fast wins from keywords just outside page one.
+you_give:
+  - Your site address
+  - Three to five competitor sites
+  - Target market and language
+  - A connected Ahrefs account
+  - Existing content list (optional)
+you_get:
+  - Keywords rivals rank for and you do not
+  - An opportunity score for each
+  - Topic clusters
+  - A list of quick wins
+  - Content ideas for a calendar
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

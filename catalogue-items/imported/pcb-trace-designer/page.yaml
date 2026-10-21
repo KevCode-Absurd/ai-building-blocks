@@ -6,6 +6,25 @@ summary: Give it impedance and layer needs. Get microstrip, stripline or paired 
 job: build-software
 headline: PCB trace designer
 subhead: Give it impedance and layer needs. Get microstrip, stripline or paired traces sized and checked.
+explain: |
+  Trace widths and spacings that hit your impedance target, sized and checked in one pass. Ask for microstrip, stripline, coplanar or a differential pair and get the geometry plus crosstalk figures.
+
+  The skill uses a 2D field solver by default, so loss, coupling and odd stacks come out accurate. It can auto-size a line for a target impedance at your frequency, extract resistance, inductance, capacitance and conductance per unit length from the cross-section, and model a differential pair with a nearby aggressor to read near-end and far-end crosstalk. It falls back to closed-form formulas only if you ask or the toolbox is missing. It runs in MATLAB with the RF PCB Toolbox.
+when:
+  - You need a 50 ohm microstrip on a given stackup.
+  - You are routing a differential pair and want to know the crosstalk.
+  - You want per-unit-length values to feed a circuit model.
+  - You are designing a substrate-integrated waveguide line.
+you_give:
+  - Target impedance and frequency
+  - Substrate and metal
+  - Line type
+  - Aggressor trace spacing (optional)
+you_get:
+  - Trace width and spacing for your impedance
+  - Per-unit-length line values
+  - Crosstalk figures for pairs
+  - A mesh and memory check before the full solve
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

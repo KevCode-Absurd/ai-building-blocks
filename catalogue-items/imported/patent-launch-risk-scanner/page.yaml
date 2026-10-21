@@ -6,6 +6,25 @@ summary: Describe a product or feature. Get patents that might block it and a fi
 job: check-contracts
 headline: Patent launch-risk scanner
 subhead: Describe a product or feature. Get patents that might block it and a first claim comparison. Not a legal opinion.
+explain: |
+  A first-pass list of patents that could block your product, with a claim comparison for the most likely ones. It is a screening step before a lawyer looks, not a legal opinion.
+
+  You describe the product, process or feature and where you will sell it. It gathers the technical detail, searches for patents if a patent tool is connected, or uses the ones you supply, then picks the two to five most plausible. For each, it compares the patent's claims against your product part by part. A result of nothing found never means clear to launch. A registered patent attorney must do the formal check.
+when:
+  - You are about to launch a feature and want to catch obvious patent problems.
+  - A competitor holds patents in your area.
+  - You need to prepare for a talk with patent counsel.
+  - You want to know which patents to worry about first.
+you_give:
+  - Description of the product, process or feature
+  - Countries you will sell in
+  - Patents you already know about (optional)
+  - Launch timing
+you_get:
+  - Shortlist of possibly blocking patents
+  - Claim-by-claim first comparison
+  - Open questions for counsel
+  - Clear note that this is not a legal opinion
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

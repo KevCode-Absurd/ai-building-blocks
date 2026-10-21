@@ -6,6 +6,25 @@ summary: Describe your product. Get a loop of trigger, action, reward and invest
 job: build-product
 headline: Habit loop designer
 subhead: Describe your product. Get a loop of trigger, action, reward and investment that brings users back. Uses the Hook Model.
+explain: |
+  A four step loop that gives people a reason to come back to your product without being nagged. It uses the Hook Model: a trigger, an action, a reward that varies, and an investment that makes the next visit more likely.
+
+  You describe your product and the skill checks each step. Does an inner feeling, like boredom or worry, prompt the visit? Is the action very easy? Is the reward unpredictable enough to stay interesting? Does the user put something in, such as data, settings or followers, that makes the next trip better? Each step scores 0 to 2. An ethics check caps the score if the design just hooks people.
+when:
+  - People sign up and then never return.
+  - You are planning notifications, streaks or progress bars and want them to mean something.
+  - You want to know why users drop off after the first week.
+  - You want to check that your engagement tactics are fair to users.
+you_give:
+  - What your product does and who uses it
+  - What brings users in now
+  - Where users stop coming back
+  - Any notifications or streaks you already run (optional)
+you_get:
+  - A map of your habit loop in four steps
+  - A score out of 10 with the weak steps named
+  - Ideas to move users from reminders to inner triggers
+  - An ethics check on your design
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

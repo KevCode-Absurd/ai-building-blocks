@@ -6,6 +6,26 @@ summary: Describe a possible copy or a claim against you. Get a flag list of fac
 job: check-contracts
 headline: Infringement first-look sorter
 subhead: Describe a possible copy or a claim against you. Get a flag list of factors. Not legal advice.
+explain: |
+  A flag list of the factors that matter when you think someone copied you, or someone says you copied them. It is a first sort, not a finding, and not legal advice. Acting on it without a lawyer can lead to fee awards or sanctions.
+
+  The skill first asks which right is at issue: trademark, copyright, patent or trade secret. Mixed cases are run one right at a time, never blended. It collects your position, the jurisdiction, timing and exhibits. It then walks the factors for that right, for example the local confusion test and dilution for trademarks. The output flags strong and weak points, unknowns, and the questions to bring to an attorney.
+when:
+  - You found a product that looks like yours and want a first view.
+  - You received a claim and need to know what to ask a lawyer.
+  - You must decide whether to send a warning letter.
+  - You want to separate trademark from copyright issues in one dispute.
+  - Your team needs a quick method to sort incoming claims.
+you_give:
+  - Which type of right is involved
+  - "Your side: the owner or the accused"
+  - The jurisdiction and key dates
+  - Examples, links or documents of the work in question
+you_get:
+  - A list of factors with flags
+  - Strengths and weak spots
+  - Missing facts to collect
+  - Questions for your attorney
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

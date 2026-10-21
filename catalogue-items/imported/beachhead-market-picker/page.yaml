@@ -6,6 +6,25 @@ summary: Describe your product and early users. Get one starting segment and a p
 job: plan-strategy
 headline: Beachhead market picker
 subhead: Describe your product and early users. Get one starting segment and a plan to reach the mainstream. Uses Crossing the Chasm.
+explain: |
+  One starting customer segment you can win, and a plan to grow from there into the mainstream. Describe your product and your first users, and the AI uses Geoffrey Moore's Crossing the Chasm to see where you are on the adoption curve.
+
+  It guides you to pick a single point of attack, assemble the whole product with partners, define the competitor to beat, and launch with positioning that feels like an evolution rather than a revolution. After that comes the bowling pin sequence, moving to neighbouring segments. A quick diagnostic scores you out of 10, names the weak rows and gives a fix for each. It has a special section for freemium software.
+when:
+  - Early fans love your product but the mainstream ignores it.
+  - You are targeting five segments and winning none.
+  - You need a story for investors on how you go beyond early adopters.
+  - You want to know if your product is complete enough for pragmatic buyers.
+you_give:
+  - What the product is and does
+  - Who uses it now
+  - Candidate segments
+  - Your partners and references
+you_get:
+  - One beachhead segment with reasons
+  - A whole-product checklist
+  - A follow-on segment order
+  - A 0 to 10 diagnostic score with fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

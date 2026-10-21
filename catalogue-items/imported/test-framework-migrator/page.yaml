@@ -6,6 +6,26 @@ summary: Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them conv
 job: test-and-fix-code
 headline: Test framework migrator
 subhead: Give it Selenium, Playwright, Puppeteer or Cypress tests. Get them converted to the framework you choose.
+explain: |
+  Your browser tests converted from one framework to another, Selenium, Playwright, Puppeteer or Cypress, so you can switch tools without rewriting every test by hand.
+
+  The skill first detects the source framework from your code, looking for signs like By.id, cy.get or page.goto. It confirms the target. If either is unclear, it asks. It then maps the old calls to the new ones: locators, waits, assertions, setup and teardown. It replaces explicit waits with the target's own waiting model, and notes features with no direct match so you can decide what to do. The result is converted files with a list of anything that needs manual review.
+when:
+  - Your team is moving from Selenium to Playwright.
+  - Cypress tests must run in a different tool for cross-browser coverage.
+  - You have hundreds of tests and cannot rewrite them manually.
+  - Flaky waits in an old suite are the reason to switch.
+  - You want to know what will not convert cleanly before committing.
+you_give:
+  - The existing test files
+  - The framework you want
+  - Language you use (optional)
+  - Project setup details (optional)
+you_get:
+  - Converted test files
+  - A list of changed patterns
+  - Items needing manual review
+  - Notes on setup differences
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it MATLAB code. Get a published toolbox file, built in checked sta
 job: ship-and-host
 headline: Toolbox packager
 subhead: Give it MATLAB code. Get a published toolbox file, built in checked stages from scope to release.
+explain: |
+  A folder of MATLAB code turned into a toolbox file that others can install in one click. Instead of guessing what a clean release needs, you move through checked stages and approve each before the next begins.
+
+  First it defines the public functions you offer. It then maps dependencies, optionally sets up a MATLAB project, and writes documentation: a readme, function hints, a getting-started guide and examples. Next comes a build plan with code checks, tests and coverage, followed by a readiness check that ends in a go or no-go list. Only then does it build the .mltbx file. It does not compile standalone apps or package a single script.
+when:
+  - You want to share your MATLAB code as an installable toolbox.
+  - Colleagues keep asking for your scripts and you are tired of emailing folders.
+  - You need to know if your code is ready for release.
+  - Your toolbox lacks documentation and examples.
+you_give:
+  - The folder with your MATLAB code
+  - What the toolbox does and who it is for
+  - Decisions at each checkpoint
+you_get:
+  - An interface spec you approve
+  - A dependency list
+  - Readme and getting-started docs
+  - A readiness punch list
+  - A built .mltbx toolbox file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

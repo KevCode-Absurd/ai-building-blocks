@@ -6,6 +6,26 @@ summary: Describe the data you must collect. Get a staged form plan with progres
 job: build-websites
 headline: Multi-step form designer
 subhead: Describe the data you must collect. Get a staged form plan with progress cues, conditional questions and save-and-resume.
+explain: |
+  A staged form plan that asks for less at a time, so more people finish. You get the steps, the progress cues and the questions that appear only when they apply.
+
+  The skill treats each step as one chunk of work a person can do with confidence, not a long page cut at random. It decides first whether steps help or only add friction. Then it groups fields, orders them so easy ones come first, shows progress, and hides questions that earlier answers made irrelevant. It also designs save and resume so people can leave and come back, and it audits existing long forms that convert badly.
+when:
+  - Your long form loses people halfway down the page.
+  - You are building an application or intake form for the first time.
+  - You need to show different questions based on earlier answers.
+  - People ask to come back later and finish.
+you_give:
+  - The data you must collect
+  - Who fills it in and why
+  - Your current form and completion rate (optional)
+  - Fields that are required by law or process
+you_get:
+  - A step-by-step form layout
+  - Progress indicator advice
+  - Conditional question rules
+  - A save and resume design
+  - An audit of what to cut
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

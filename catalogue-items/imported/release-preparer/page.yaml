@@ -6,6 +6,25 @@ summary: Point it at your project. Get the version bumped, a changelog written a
 job: ship-and-host
 headline: Release preparer
 subhead: Point it at your project. Get the version bumped, a changelog written and a tagged release ready to publish.
+explain: |
+  Everything needed to ship a version in one pass: the number bumped, the changelog written and a tagged release ready to publish. You skip the manual file editing that people forget.
+
+  It looks at your project and finds the version file by itself, whether that is package.json, pyproject.toml, Cargo.toml or a plain version file. It reads the commits since the last tag, suggests a major, minor or patch bump, and asks you to confirm. Then it updates the files, writes the changelog and creates the tag. A dry run shows the changes first. It can also add missing GitHub release pages for old tags, and handle changelogs in more than one language.
+when:
+  - You are ready to publish a new version and want the steps done right.
+  - Your project has several files that all hold the version number.
+  - Old tags have no GitHub release pages.
+  - You want to preview a release before anything changes.
+you_give:
+  - Your project folder
+  - Bump type to force (optional)
+  - Confirmation of the suggested version
+  - Changelog languages (optional)
+you_get:
+  - Updated version files
+  - Written changelog entry
+  - Tagged release
+  - Preview of changes in dry run
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your project. Get the right rules and files loaded so your AI 
 job: set-up-ai
 headline: Agent context setter
 subhead: Describe your project. Get the right rules and files loaded so your AI stays accurate through long sessions.
+explain: |
+  A short rules file and a tidy set of project files that tell your AI what you are building and how you work, so it stops guessing. Answers get worse when the AI sees too little, and also when it sees too much.
+
+  The skill sorts what the AI sees into layers. At the top sit always-on rules: your tools, run commands, code style and hard limits. Below that come specs for the current feature, then only the source files the task touches, then the latest error or test output. It also tells you when to start a fresh session, and to paste the real error instead of describing it.
+when:
+  - Your AI keeps ignoring your project's style or inventing functions that do not exist.
+  - You are starting a new project and want the AI set up properly from day one.
+  - Answers got worse halfway through a long session and you do not know why.
+  - You are switching to a different part of the project and need the AI to catch up.
+you_give:
+  - A short description of your project
+  - The tools and commands you use
+  - Rules the AI keeps breaking (optional)
+  - Specs or notes for the current task (optional)
+you_get:
+  - A ready rules file for your project
+  - A list of which files to load for each task
+  - Rules for when to reset or trim the session
+  - A checklist for spotting drifting answers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

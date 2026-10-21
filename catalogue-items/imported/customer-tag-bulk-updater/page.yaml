@@ -6,6 +6,25 @@ summary: Pick customers and tags. Get tags added or removed across the whole gro
 job: run-your-store
 headline: Customer tag bulk updater
 subhead: Pick customers and tags. Get tags added or removed across the whole group. Changes live customer data.
+explain: |
+  Hundreds of customers can be tagged or untagged in one pass instead of one by one in the admin. Tags drive your discounts, email groups and support rules, so getting them right in bulk saves hours.
+
+  You choose who to change, either with a search such as total spent over 500 or with a list of customer IDs. You say which tags to add and which to remove. The skill first shows who matches and what each tag set will become. It stops if more people match than your size cap, so a wrong filter cannot touch the whole store. Merge mode keeps existing tags. Replace mode overwrites them, so check the preview closely. Needs access to your Shopify store.
+when:
+  - You want everyone who joined your newsletter to get a tag for a campaign.
+  - A tag was misspelled and needs to be swapped on hundreds of customers.
+  - You need to remove an old promotion tag from a whole group.
+  - You have a list of customer IDs from a spreadsheet to tag.
+you_give:
+  - Your store address
+  - A customer search or a list of IDs
+  - Tags to add or remove
+  - A size cap for the run (optional)
+you_get:
+  - Preview of matching customers
+  - Before and after tag sets
+  - Tags updated on live customer records
+  - Count of changes made
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

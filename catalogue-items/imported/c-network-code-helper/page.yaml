@@ -6,6 +6,25 @@ summary: Describe the networking job. Get safe Boost.Asio code for servers, clie
 job: build-software
 headline: C++ network code helper
 subhead: Describe the networking job. Get safe Boost.Asio code for servers, clients, timers and secure connections.
+explain: |
+  C++ network code that actually compiles on your version of Boost. Describe the job, such as a server, client, timer or secure connection, and you get working asynchronous code in the style your setup supports.
+
+  Most Asio examples online are old and fail on new toolchains, or use coroutines that old compilers cannot build. So the skill checks your Boost version and C++ standard first, then picks one of the styles: coroutines, callbacks, or stackful spawn. It follows a reference file for that style. The three worked examples it relies on were tested across Boost releases from 2016 onward. You need a C++ build setup to try the results.
+when:
+  - You are writing a TCP server and your compiler rejects the example you found.
+  - You need a timer or client in C++ that fits an older Boost version.
+  - You want to add TLS to a connection and are not sure which API to use.
+  - You are reviewing async network code that mixes old and new styles.
+you_give:
+  - The networking job you want done
+  - Your Boost or Asio version
+  - Your C++ standard and build tool (optional)
+  - Existing code to review (optional)
+you_get:
+  - Async C++ code in the right style for your version
+  - A server, client, timer or secure connection example
+  - Notes on why that style was chosen
+  - Build hints for your setup
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

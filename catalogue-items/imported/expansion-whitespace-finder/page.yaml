@@ -6,6 +6,26 @@ summary: Name an account. Get what they own, what they could add, the proof for 
 job: sell-and-negotiate
 headline: Expansion whitespace finder
 subhead: Name an account. Get what they own, what they could add, the proof for each and the deals to open.
+explain: |
+  A map of what one account already owns, what it could still buy from you, and the proof behind each possible upsell, ending in the deals worth opening.
+
+  It works for one account in depth or a whole book in a quick sweep. It starts by learning your product list, ideal customer and usual deal sizes. Then it reads your CRM for purchases, open deals and child accounts, and scans email and call transcripts for teams or needs that were mentioned but never sold to. Every gap is tied to evidence and a named play. Fields come from your own CRM, not a guess. If you have no CRM link, an uploaded customer list works.
+when:
+  - You have a happy customer and want to know what else to sell them.
+  - You are planning next quarter and need to rank accounts by growth room.
+  - A renewal is coming and you want an expansion angle alongside it.
+  - You inherited a book of accounts and need to see the gaps fast.
+you_give:
+  - Account name, or your whole book
+  - Product list or price sheet
+  - CRM access or a purchase export
+  - Email or call notes (optional)
+you_get:
+  - Owned versus possible map
+  - Evidence for each gap
+  - Named expansion plays
+  - Open deals to create
+  - Ranking across accounts
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

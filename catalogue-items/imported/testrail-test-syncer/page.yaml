@@ -6,6 +6,25 @@ summary: Give it your TestRail project. Get its test cases turned into Playwrigh
 job: test-and-fix-code
 headline: TestRail test syncer
 subhead: Give it your TestRail project. Get its test cases turned into Playwright tests, and results sent back.
+explain: |
+  Your test cases live in TestRail, your automated tests live in Playwright, and keeping them in step by hand is slow. This skill moves work both ways. It pulls cases from a TestRail project and writes Playwright tests from their steps and expected results. It can also run your tests and push pass or fail results back to a test run.
+
+  Each generated test carries its TestRail case ID, so results map to the right case. Imports are grouped by section, and you get a count of cases read and tests written. You need a TestRail account, an API key, and a connector set up in your own tools first.
+when:
+  - You have a TestRail suite and want Playwright tests built from it.
+  - You ran an automated suite and need the results recorded in a TestRail run.
+  - You want to see which TestRail cases have no automated test yet.
+  - Your QA team writes cases in TestRail but your developers work in code.
+you_give:
+  - TestRail address, user and API key
+  - Project and suite ID
+  - Your Playwright project
+  - Run ID for pushing results (optional)
+you_get:
+  - Playwright test files grouped by section
+  - Case IDs tagged on each test
+  - Results sent to a TestRail run
+  - A count of imported cases and written tests
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

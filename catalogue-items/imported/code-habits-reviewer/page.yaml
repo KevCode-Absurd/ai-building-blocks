@@ -6,6 +6,24 @@ summary: Give it code. Get duplication, tight coupling and weak contracts flagge
 job: test-and-fix-code
 headline: Code habits reviewer
 subhead: Give it code. Get duplication, tight coupling and weak contracts flagged, with fixes. Uses Pragmatic Programmer principles.
+explain: |
+  Your code gets a score out of ten against the habits from The Pragmatic Programmer, plus a list of what to fix. It shows where repeated logic, tangled parts and unclear promises will make future changes expensive.
+
+  It checks seven questions: is each fact stored once, are layers independent, is there a thin working slice through the whole system, are the contracts at boundaries clear, are there broken windows left unfixed, can vendor or database choices be reversed, and are estimates given as ranges. Each yes adds points. The score bands tell you if you have no issues or a few that cost real effort, and each flagged problem comes with a fix.
+when:
+  - You are reviewing a design before the team builds on it.
+  - Changing one feature keeps breaking three others.
+  - Business logic is copied into several places.
+  - You want a quick quality score for a codebase.
+you_give:
+  - Code or a design description
+  - The language and framework (optional)
+  - Your biggest worry (optional)
+you_get:
+  - A score out of ten
+  - Problems with duplication, coupling and contracts
+  - A fix for each problem
+  - What to do first
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

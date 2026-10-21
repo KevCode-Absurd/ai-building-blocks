@@ -6,6 +6,25 @@ summary: Get every size and color ranked by sales, units and refunds, with stock
 job: run-your-store
 headline: Variant sales ranker
 subhead: Get every size and color ranked by sales, units and refunds, with stock, to spot top sellers and dead weight.
+explain: |
+  Know which exact sizes and colors make your money and which sit on the shelf. Each variant is ranked by revenue, units sold and refund rate, then set beside the stock you have left.
+
+  You give a start and end date. The skill reads your orders for that period and totals sales and refunds for each variant, not just each product. It then pulls current inventory for the same variants and puts the two side by side. You choose how to rank: by revenue, units or refund rate. The output makes it easy to spot a best seller about to run out and a slow one tying up cash. It only reads data.
+when:
+  - You are deciding how many of each size to reorder.
+  - You suspect one color is returned far more than the rest.
+  - You want to clear slow stock before the next season.
+  - Your best-selling variant might be running low and you need to check.
+you_give:
+  - Your store domain
+  - A start and end date
+  - "The ranking you want: revenue, units or refund rate"
+  - A Shopify login with read access to orders and products
+you_get:
+  - Variants ranked by your chosen measure
+  - Refund rates per variant
+  - Current stock next to sales
+  - Lists of top performers and dead weight
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

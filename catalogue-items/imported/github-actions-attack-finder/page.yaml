@@ -6,6 +6,25 @@ summary: Point it at your workflows. Get only the holes an outsider could use, e
 job: secure-code
 headline: GitHub Actions attack finder
 subhead: Point it at your workflows. Get only the holes an outsider could use, each with the exact attack.
+explain: |
+  A security review of your GitHub Actions that reports only what an outsider could really exploit. Each finding must come with the exact attack: who the attacker is, what they send, and what they gain. If the attack cannot be built, it is not reported.
+
+  It reads workflow files, composite actions and the scripts and config they load. It looks for patterns seen in real campaigns, such as untrusted pull request input reaching a shell, risky triggers, and secrets reachable from a fork. Because every finding is proven, you spend your time fixing real holes instead of sorting through generic CI advice.
+when:
+  - You run workflows that handle pull requests from outside contributors.
+  - You are about to make a repo public and want its pipelines checked.
+  - A scanner gave you many warnings and you need the real ones.
+  - You use AI agents in CI and want to see how they could be abused.
+you_give:
+  - Your workflow files or repo
+  - Any custom actions or scripts they call
+  - Which triggers matter most (optional)
+  - Past scan results (optional)
+you_get:
+  - Only findings with a working attack path
+  - The exact steps an attacker would take
+  - Impact for each hole
+  - A fix for each finding
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

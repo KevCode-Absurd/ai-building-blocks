@@ -6,6 +6,26 @@ summary: Give it your site. Get an llms.txt file that tells AI tools which pages
 job: get-found-in-search
 headline: llms.txt writer
 subhead: Give it your site. Get an llms.txt file that tells AI tools which pages and facts matter most.
+explain: |
+  An llms.txt file for your site, a plain list that tells AI tools which pages and facts matter most. You choose what they see first instead of letting them guess.
+
+  It studies the site, then writes the file to the published format: a title, a short summary, then sections of links. Each link is a full address with a 10 to 30 word note on what the page covers, ordered by importance. An optional section holds lower priority pages. Key facts such as pricing, features and locations are stated outright, so AI tools can cite the right page. It can also check an existing file against the rules.
+when:
+  - AI tools get your pricing or services wrong.
+  - You want AI answers to cite your best page.
+  - You launched a docs site and want it easy for AI to read.
+  - You already have an llms.txt and want it checked.
+you_give:
+  - Your website address
+  - Your most important pages
+  - Facts that must be right, like pricing
+  - An existing llms.txt (optional)
+you_get:
+  - A finished llms.txt file
+  - Page notes of the right length
+  - Key facts stated clearly
+  - Placement steps for your site
+  - A check of an existing file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

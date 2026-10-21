@@ -6,6 +6,26 @@ summary: Give it transactions. Get each sorted by category, department and tax t
 job: money-and-investing
 headline: Expense sorter
 subhead: Give it transactions. Get each sorted by category, department and tax treatment.
+explain: |
+  A clean list of your transactions, each sorted by category, department and tax treatment, with a flag on anything the skill is unsure about.
+
+  You paste a CSV or bank statement text. The skill cleans each merchant name, removing codes and location tags, then assigns a category such as travel, meals or software. It routes each cost to a department by cardholder, project code or your own rules. It marks likely deductible items, including the 50 percent limit on business meals under US rules, and you can name another country. Anything below 80 percent confidence is listed separately for you to confirm. Totals come by category, team and tax status.
+when:
+  - Your month-end card statement is a mess of cryptic merchant names.
+  - You need costs split by department for a budget review.
+  - You are preparing for tax time and want deductible items marked.
+  - You run a small team and have no accounting software rules yet.
+you_give:
+  - Transactions with date, amount and merchant
+  - Department list
+  - Your own category rules (optional)
+  - Tax country if not the US (optional)
+you_get:
+  - Categorized transaction list
+  - Department assignment
+  - Tax-deductible flags
+  - Totals by category and department
+  - Uncertain items to review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

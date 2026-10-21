@@ -6,6 +6,25 @@ summary: Say what image you need. Get a prompt, size and file plan for blog hero
 job: make-images
 headline: Marketing image maker
 subhead: Say what image you need. Get a prompt, size and file plan for blog heroes, social graphics and mockups.
+explain: |
+  Tell it what the picture is for and it hands back a ready plan: the tool to use, the prompt to paste, the exact pixel size and the file name to save it under.
+
+  It first asks about the goal, the place the image will sit and the size. Then it picks between an AI image model and a design tool such as Canva or Figma. It follows a set workflow for each image type, for example 1200 by 630 for a blog hero that doubles as a share image.
+when:
+  - You need a hero image for a blog post and do not know what size to ask for.
+  - You want a set of social graphics that all match one brand look.
+  - You are choosing between an AI image tool and a design tool for a job.
+  - You need an image with readable text in it and your first tries came out garbled.
+you_give:
+  - What the image is for
+  - Where it will be shown
+  - Brand colours or style notes (optional)
+  - Size or format limits (optional)
+you_get:
+  - A tool recommendation for the job
+  - A prompt ready to paste
+  - Exact dimensions and file format
+  - A file naming and saving plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

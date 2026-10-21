@@ -6,6 +6,25 @@ summary: Give it a paper, article or report. Get the key findings, plain summari
 job: think-and-decide
 headline: Research paper summarizer
 subhead: Give it a paper, article or report. Get the key findings, plain summaries and a comparison across sources.
+explain: |
+  The key findings of a paper, article or report in plain language, plus a comparison across several sources and correctly formatted citations. You read less and still know what matters.
+
+  It works only on documents you give it and does no web search. For each source it extracts the main claims, method, results, limits and what it means for your question. When you give several, it builds a comparison that shows where they agree and disagree. It then formats citations in the style you ask for. The output is a short brief for decisions, not a generic summary. It suits product managers, analysts and founders who read a lot.
+when:
+  - You have ten papers to read before a meeting.
+  - A report is long and you need the findings and the catch.
+  - You want to compare three studies on one question.
+  - You need citations in a set style.
+you_give:
+  - Papers, articles or reports
+  - Question you are trying to answer (optional)
+  - Citation style (optional)
+  - Audience for the summary (optional)
+you_get:
+  - Key findings per source
+  - Plain language summary
+  - Side-by-side comparison
+  - Formatted citations
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

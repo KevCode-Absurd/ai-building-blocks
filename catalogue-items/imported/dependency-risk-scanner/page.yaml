@@ -6,6 +6,24 @@ summary: Point it at your project. Get known weak spots in packages found, plus 
 job: secure-code
 headline: Dependency risk scanner
 subhead: Point it at your project. Get known weak spots in packages found, plus a parts list and license check.
+explain: |
+  A list of the weak spots in the packages your project uses, plus a parts list and a licence check. Point it at your project and it finds your manifest files, reads lock files to see indirect packages too, and checks each version against public vulnerability databases.
+
+  It compares licences to your policy and warns about ones that force you to open your own code. It then writes a software bill of materials in CycloneDX or SPDX format and a report sorted by severity. Last, it suggests the smallest upgrades that fix each problem without breaking things. It names the right audit tool for your language, such as npm audit or pip-audit, and can fit into your build checks.
+when:
+  - Security asks for a software bill of materials.
+  - A new vulnerability is in the news and you need to know if you use it.
+  - You want checks on every build to catch bad packages early.
+  - You need to know which package has a licence that conflicts with yours.
+you_give:
+  - Project folder with manifest and lock files
+  - Licence policy (optional)
+  - Build system you use (optional)
+you_get:
+  - Vulnerability report by severity
+  - Licence compliance flags
+  - Software bill of materials
+  - Minimum upgrades to fix problems
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

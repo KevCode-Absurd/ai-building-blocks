@@ -6,6 +6,25 @@ summary: Say which drone or flight controller. Get MATLAB connected over MAVLink
 job: build-software
 headline: Drone autopilot connector
 subhead: Say which drone or flight controller. Get MATLAB connected over MAVLink and reading its data.
+explain: |
+  MATLAB talking to your drone in a few minutes. You name the flight controller, such as PX4 or ArduPilot, and get a working MAVLink link over UDP, with MATLAB acting as the ground station.
+
+  The skill gives a fixed order of steps, because getting the order wrong fails without any error. First create the message dialect. Then open the UDP link. Then run a timer that sends heartbeats so the autopilot keeps listening. Finally find the connected client and confirm data is arriving. It suits simulators (SITL) and real hardware on a network. Reading parameters, mission upload and offline log parsing are outside it.
+when:
+  - You want MATLAB to connect to a PX4 simulator.
+  - Your ground station code never gets a reply from the autopilot.
+  - You need a heartbeat that keeps the link alive.
+  - You are testing against ArduPilot on a network.
+you_give:
+  - Which autopilot you use, PX4 or ArduPilot
+  - IP address and UDP port
+  - MATLAB with MAVLink support
+  - Simulator or hardware details (optional)
+you_get:
+  - Connection code in the right order
+  - A running heartbeat timer
+  - Confirmation that the client is found
+  - A link ready for reading flight data
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

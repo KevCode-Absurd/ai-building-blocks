@@ -6,6 +6,25 @@ summary: Give it your orders and space. Get which machines pay back, ranked, wit
 job: plan-supply-chain
 headline: Warehouse automation chooser
 subhead: Give it your orders and space. Get which machines pay back, ranked, with cost, payback time and risks.
+explain: |
+  A ranked list of automation options for your warehouse, with cost, payback time and risks for each, so you spend only where it pays off.
+
+  You describe your orders, the products, the building and your labour costs. The skill first asks why you want automation: labour, accuracy, speed or growth. It then compares options across the range, from simple conveyors and put-to-light to robots, shuttles and automated storage. For each it estimates cost and payback, checks fit with your space and software, and points out risks like peak-season load and downtime. It finishes with a phased plan so you can start small.
+when:
+  - Labour is scarce or costly and you want to know if machines would help.
+  - A vendor pitched you a system and you want an independent view.
+  - You expect volume to grow and need capacity.
+  - You need a business case for a capital request.
+you_give:
+  - Order volume now and expected later
+  - "Order profile: lines and units per order"
+  - Building size, ceiling height and layout
+  - Labour cost and budget range
+you_get:
+  - A ranked list of options
+  - Cost and payback for each
+  - Risks and fit with your site
+  - A phased roll-out plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

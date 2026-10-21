@@ -6,6 +6,25 @@ summary: Describe a service or process. Get a step-by-step runbook that anyone o
 job: document-work
 headline: On-call runbook writer
 subhead: Describe a service or process. Get a step-by-step runbook that anyone on call can follow under pressure.
+explain: |
+  A runbook that a tired person can follow at 3am without asking anyone. You describe a service or a process and get plain, numbered steps with the checks and fixes written out.
+
+  A good runbook answers a few things quickly: what this service does, how to tell it is broken, how to fix the common failures, and who to call when the fix does not work. The skill writes each step so it can be done in order, with the exact command or screen and what a good result looks like. It adds troubleshooting trees for known problems, recovery steps, and rollback. It uses checklists and advice only, with no special access needed.
+when:
+  - Only one person knows how to restart your main service.
+  - An incident exposed that your recovery steps live in someone's head.
+  - You are setting up a new service and want a runbook before launch.
+  - Your old runbook is long and nobody reads it.
+you_give:
+  - The service or process to cover
+  - Known failure modes (optional)
+  - Commands, dashboards and contacts
+  - Who is on call
+you_get:
+  - A numbered runbook
+  - Troubleshooting steps for common failures
+  - Recovery and rollback steps
+  - An escalation contact list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

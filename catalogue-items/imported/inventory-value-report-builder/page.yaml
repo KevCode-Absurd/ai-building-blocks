@@ -6,6 +6,25 @@ summary: Get what your stock is worth, by location and by supplier, ready for yo
 job: run-your-store
 headline: Inventory value report builder
 subhead: Get what your stock is worth, by location and by supplier, ready for your books and insurance.
+explain: |
+  A clean answer to what your stock is worth, split by location and by supplier. Connect your Shopify store with read-only access. The skill pulls every active location, then every variant with its stock and unit cost, and multiplies quantity by cost for each variant at each location.
+
+  Totals roll up by location, by vendor or both, in a readable layout or as JSON. It changes nothing in your store. Items with no cost set count as zero, so the report shows which ones to fix before you trust the total. You need the Shopify command line tool and an authenticated session with product and inventory read access.
+when:
+  - Your accountant asks for the value of stock on hand at year end.
+  - You need a number for an insurance claim or renewal.
+  - You hold stock in several places and want to see value in each.
+  - You want to know how much money is tied up with each supplier.
+you_give:
+  - Your Shopify store domain
+  - Read access to products and inventory
+  - "Breakdown choice: location, vendor or both (optional)"
+  - Whether to include items with no cost (optional)
+you_get:
+  - Total inventory value
+  - Value by location
+  - Value by supplier
+  - A list of variants with no cost set
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

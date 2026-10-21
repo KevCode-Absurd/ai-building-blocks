@@ -6,6 +6,25 @@ summary: Give it a company's debts and cash flow. Get a draft plan with creditor
 job: money-and-investing
 headline: Debt restructuring plan drafter
 subhead: Give it a company's debts and cash flow. Get a draft plan with creditor terms that fit what it can pay.
+explain: |
+  A first-draft plan for a company that cannot pay its debts as written. It sets out new terms for each creditor that match what the business can actually afford, so liquidation is not the only road.
+
+  It starts with the facts: secured and unsecured debt, rates, maturities, interest cover, cash on hand and free cash flow available for debt service. Then it works in order: protect cash, find where the debt stack breaks, choose between a haircut, an extension or a debt-for-equity swap, and plan how to bring each creditor group to agree. Haircut maths is shown so you can test it.
+when:
+  - Your company cannot meet next quarter's loan payments.
+  - You must present creditors with a credible alternative to default.
+  - An adviser asks you to model a haircut versus a longer maturity.
+  - You want to know how much debt the cash flow can carry.
+you_give:
+  - List of debts with rates and due dates
+  - Cash flow and cash balance
+  - Which debt is secured and by what
+  - Any covenants or creditor demands (optional)
+you_get:
+  - Capital structure analysis
+  - Haircut and extension scenarios
+  - Proposed terms by creditor
+  - Negotiation approach
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

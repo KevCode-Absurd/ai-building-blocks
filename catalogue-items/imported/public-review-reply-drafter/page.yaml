@@ -6,6 +6,25 @@ summary: Paste your store reviews. Get a specific reply to each, with risky ones
 job: help-customers
 headline: Public review reply drafter
 subhead: Paste your store reviews. Get a specific reply to each, with risky ones flagged and no refunds promised.
+explain: |
+  A reply for every review you paste, ready to post. Each reads as if you wrote it to that one customer, and none promise anything you have not approved.
+
+  Paste reviews from Judge.me, Yotpo, Okendo, Loox, Google, Trustpilot or similar. The skill numbers them, sorts each as praise, mixed or a problem, and writes a specific reply. Happy customers are thanked for what they said. Unhappy ones get an apology for the experience, one clear next step and an invitation to talk privately. It never admits fault and never offers refunds or discounts you did not name. It flags reviews needing a human, such as injury, allergic reactions or legal threats.
+when:
+  - You have a backlog of unanswered store reviews.
+  - A one-star review landed and you need a calm, careful response.
+  - You want replies that do not sound copied from a template.
+  - You need to know which reviews carry legal or safety risk.
+you_give:
+  - Pasted reviews
+  - Support email (optional)
+  - Remedies you have approved, such as a refund (optional)
+  - Brand voice and sign-off name (optional)
+you_get:
+  - One reply per review
+  - Flags on risky reviews
+  - A table when there are four or more
+  - Placeholders where approval is needed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

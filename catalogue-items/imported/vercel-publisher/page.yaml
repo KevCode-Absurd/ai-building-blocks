@@ -6,6 +6,25 @@ summary: Say "deploy my app". Get it live on Vercel as a preview or production s
 job: ship-and-host
 headline: Vercel publisher
 subhead: Say "deploy my app". Get it live on Vercel as a preview or production site, with the link.
+explain: |
+  Say deploy my app and get a live address back. It uses the Vercel command line tool if you have it, and a no-login fallback if you do not.
+
+  The skill checks whether the Vercel CLI is installed, then runs the deploy command with a ten minute allowance, since builds can be slow. By default it publishes a preview. Production happens only if you say so, with the production flag. If there is no sign-in, a bundled script packages the project, detects the framework, uploads it and returns two links: a preview link and a claim link that lets you take ownership of the deployment later. If the network blocks the deploy, it reruns with wider access.
+when:
+  - You want a shareable link for a prototype in minutes.
+  - You do not have a Vercel account yet and want to try it.
+  - Your build is slow and a default time limit keeps cutting it off.
+  - You need to ship to production after checking the preview.
+you_give:
+  - The project folder or an archive of it
+  - The Vercel CLI (optional)
+  - A yes for production (optional)
+  - Permission for network access if blocked
+you_get:
+  - A preview link
+  - A claim link when deploying without login
+  - A production deploy on request
+  - Troubleshooting for network errors
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

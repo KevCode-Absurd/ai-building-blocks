@@ -6,6 +6,25 @@ summary: Give it text. Get grammar, spelling, punctuation and style fixed agains
 job: write-and-tell-stories
 headline: Proofreader
 subhead: Give it text. Get grammar, spelling, punctuation and style fixed against your style guide.
+explain: |
+  Clean text with every fix explained, so you can send it with confidence and see what changed. It follows your chosen style guide instead of guessing.
+
+  The skill makes several separate passes over the text: grammar (agreement, tense, fragments, run-ons), spelling and confused words, punctuation, then style and consistency. It applies AP, Chicago, APA or your own house rules, including details such as the Oxford comma. Terms are checked against any glossary you supply. You get the corrected text, a list of each change with the original wording, a readability score and a note on tone.
+when:
+  - You are about to send a report, article or email and want it error-free.
+  - Your company has a style guide and drafts keep breaking it.
+  - You mix up words like affect and effect and want them caught.
+  - You want to know how easy your text is to read.
+you_give:
+  - The text to check
+  - Style guide (AP, Chicago, APA or your own)
+  - Glossary of names and terms (optional)
+  - Audience or tone goal (optional)
+you_get:
+  - Corrected text
+  - Annotated list of every change
+  - Readability score
+  - Tone notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

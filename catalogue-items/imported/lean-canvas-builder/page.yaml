@@ -6,6 +6,25 @@ summary: Describe your idea. Get a one-page lean canvas with problem, solution, 
 job: test-an-idea
 headline: Lean canvas builder
 subhead: Describe your idea. Get a one-page lean canvas with problem, solution, channels, costs and revenue.
+explain: |
+  Your business idea on a single page, with every box filled in and the riskiest guesses visible. Describe the product, the customer and what you know about the market. The skill fills the nine lean canvas sections: problem, customer segments, unique value proposition, solution, channels, revenue streams, cost structure, key metrics and unfair advantage.
+
+  It lists the top three problems and today's alternatives, writes a short value statement, and ties each feature to a problem. The result is a set of guesses you can test one at a time. That suits early ideas better than a long plan.
+when:
+  - You have a startup idea and need it on one page today.
+  - You are pitching a new product inside your company.
+  - Your team disagrees about who the customer is.
+  - You want to find your riskiest assumption before spending money.
+you_give:
+  - A description of the idea
+  - The customer group you have in mind
+  - Market or competitor notes (optional)
+  - Known costs or revenue ideas (optional)
+you_get:
+  - A completed lean canvas
+  - Top problems and alternatives
+  - A value proposition
+  - Assumptions to test first
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

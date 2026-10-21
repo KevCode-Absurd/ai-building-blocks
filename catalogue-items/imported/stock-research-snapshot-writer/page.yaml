@@ -6,6 +6,26 @@ summary: Name a stock. Get a note combining estimates, reported numbers, price h
 job: money-and-investing
 headline: Stock research snapshot writer
 subhead: Name a stock. Get a note combining estimates, reported numbers, price history and the macro backdrop. It collects data from websites.
+explain: |
+  A short research note on one company that ties together what analysts expect, what the company has reported, how the price has moved and what the economy is doing. Every number connects to a thesis so the note reads as an argument.
+
+  It pulls consensus estimates, three to five years of reported results, one year of price history with beta and 52-week position, and macro data from free public sources. The version here is set up for Indian markets: it uses the April to March fiscal year, shows lakh and crore units correctly and tells you where no Indian equivalent exists. Some sources need a free API key. It is research, not advice.
+when:
+  - You are about to read an earnings report and want context first.
+  - You need a one-page company brief for a team meeting.
+  - You want to see whether results beat or missed market estimates.
+  - You follow Indian companies and need fiscal-year labels done right.
+you_give:
+  - A company name or ticker
+  - Your question or view on the stock (optional)
+  - A free data key where required
+  - Peers to compare (optional)
+you_get:
+  - A summary of consensus estimates
+  - Multi-year fundamentals
+  - Price performance and beta
+  - A macro backdrop section
+  - A short thesis with risks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

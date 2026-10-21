@@ -6,6 +6,25 @@ summary: Name a deal. Get a health score, risks, gaps in how it is qualified and
 job: sell-and-negotiate
 headline: Deal health reviewer
 subhead: Name a deal. Get a health score, risks, gaps in how it is qualified and the next actions to take.
+explain: |
+  One deal, one honest read. You get a health score, a list of risks, the gaps in how the deal was qualified, and the next actions worth taking. It shows where the deal really stands, not just the stage your CRM claims.
+
+  It pulls signals from the CRM record, recent emails, call transcripts and internal chat, then checks each against your stage rules and qualification method such as BANT or MEDDIC. Every signal is tied to its source, and blank fields are labelled blank. If a tool is not connected, it works from what you paste in and tells you what it could not see.
+when:
+  - You are about to forecast a deal and want to know if it will really close.
+  - A deal has gone quiet and you need to see what changed.
+  - Your manager asks for a deal review and you have an hour to prepare.
+  - You suspect the CRM stage is ahead of what the buyer has actually agreed to.
+you_give:
+  - Deal or account name
+  - CRM record, export or pasted deal details
+  - Recent emails or call transcripts (optional)
+  - Your qualification method (optional)
+you_get:
+  - Health score with the reasons behind it
+  - Ranked list of risks
+  - Qualification gaps
+  - Recommended next actions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

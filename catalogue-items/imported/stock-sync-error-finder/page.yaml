@@ -6,6 +6,24 @@ summary: Get products with negative or impossible stock across your locations, a
 job: run-your-store
 headline: Stock sync error finder
 subhead: Get products with negative or impossible stock across your locations, a sign your counts have drifted.
+explain: |
+  A list of products where your inventory counts cannot be right, found before a customer finds them. It scans every active location in your Shopify store and flags items with a negative available quantity, or with more units committed to orders than you hold on hand.
+
+  Those patterns usually point to a sync problem with a warehouse, app or channel, or to counts that drifted. You can limit the scan to certain locations, choose which of the two checks to run and include or skip products with tracking turned off. The output shows each flagged product by location so you know where to look first. It only reads data and changes nothing.
+when:
+  - Customers ordered items your system said were in stock.
+  - You added a new warehouse or app and want to check numbers still line up.
+  - Your dashboard shows minus stock on some products.
+  - You want a monthly health check on inventory data.
+you_give:
+  - Your Shopify store link and read access
+  - Specific locations to check (optional)
+  - Whether to include untracked items (optional)
+you_get:
+  - Products with negative available stock
+  - Products committed above on-hand
+  - Results grouped by location
+  - A short list of where to investigate
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

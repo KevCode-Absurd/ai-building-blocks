@@ -6,6 +6,25 @@ summary: Share a fuzzy idea. Answer six sharp questions on customer, reach and d
 job: test-an-idea
 headline: Founder office hours questioner
 subhead: Share a fuzzy idea. Answer six sharp questions on customer, reach and defence before you get advice.
+explain: |
+  Six hard questions you must answer in writing before any advice is given. They test whether your idea has a real problem, a named buyer and a way to reach them.
+
+  The questions cover the problem in your customer's own words, one real person who would buy today, how they first hear your name, what stops a copycat in six months, what it costs and how fast it pays back, and what you would do if this fails. Weak answers get pushed back, for example, "we will do marketing later" counts as no answer. Only after all six does it give a view. Use it before fundraising, a pivot or a big bet.
+when:
+  - You are excited about an idea and want it stress-tested.
+  - You are about to raise money or start a major project.
+  - You are considering a pivot and want clarity first.
+  - The answer seems obvious and you want to check it is not wrong.
+you_give:
+  - The idea or decision in a few lines
+  - Written answers to six questions
+  - Customer quotes or notes (optional)
+  - Cost and payback estimates (optional)
+you_get:
+  - Six questions to answer
+  - Pushback on weak or vague answers
+  - Gaps you must close
+  - Short verdict once all six are done
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

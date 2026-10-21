@@ -6,6 +6,24 @@ summary: Describe the JSON data and what you need. Get a working jq command that
 job: work-with-files
 headline: JSON query helper
 subhead: Describe the JSON data and what you need. Get a working jq command that filters, reshapes or sums it.
+explain: |
+  The exact jq command for the JSON in front of you. Describe the data and what you want from it, or paste a sample. The skill writes a working command that picks fields, filters records, renames keys, flattens arrays, groups items and totals numbers.
+
+  It works for the output of cloud tools, GitHub, container tools and log files, and it can place the command inside a shell script. If you already have a long, cryptic expression, it explains what each part does. Examples show the input and the expected output so you can check the result before relying on it. You need jq installed on your computer.
+when:
+  - An API returned a huge blob and you only want three fields.
+  - You need to sum values or group records from a JSON file.
+  - You inherited a jq one-liner and cannot read it.
+  - You want to reshape JSON inside a bash script.
+you_give:
+  - A sample of the JSON
+  - What you want to pull out or change
+  - The tool that produced it (optional)
+you_get:
+  - A working jq command
+  - A line-by-line explanation
+  - The expected output on your sample
+  - A version ready to paste into a script
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

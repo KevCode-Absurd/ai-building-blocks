@@ -6,6 +6,26 @@ summary: Describe a deal or salary talk. Get an opening, calibrated questions an
 job: sell-and-negotiate
 headline: Negotiation prep coach
 subhead: Describe a deal or salary talk. Get an opening, calibrated questions and a fallback plan. Uses tactical empathy.
+explain: |
+  A prepared plan for a hard conversation, whether it is a contract, a supplier price or a pay rise. It follows the approach of former FBI negotiator Chris Voss, which treats the other side's feelings and needs as the way to a better deal.
+
+  You describe the situation. The skill helps you picture their world, then writes labels for their likely fears, such as "it sounds like you are worried about...". It prepares open questions that start with "how" or "what" instead of "why", plans an opening, and looks for hidden facts that could change the deal. It also sets your walk-away option. It scores your prep out of 10 and says what is missing.
+when:
+  - You have a salary talk next week and want to go in prepared.
+  - A supplier is pushing back on price and you need a better approach.
+  - A client keeps saying no and you do not know why.
+  - You tend to give in too quickly and want a fallback plan.
+you_give:
+  - A description of the deal or talk
+  - What you want and your limits
+  - What you know about the other side (optional)
+  - Your best alternative if no deal happens (optional)
+you_get:
+  - An opening line
+  - Feeling labels for their likely concerns
+  - Open questions to ask
+  - A fallback plan
+  - A prep score with gaps to fix
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

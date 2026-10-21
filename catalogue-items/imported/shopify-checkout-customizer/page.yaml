@@ -6,6 +6,25 @@ summary: Say what checkout should add, such as a field or upsell. Get working ch
 job: build-software
 headline: Shopify checkout customizer
 subhead: Say what checkout should add, such as a field or upsell. Get working checkout extension code.
+explain: |
+  Working checkout code for the change you want, such as a gift note field, a post-purchase upsell or a rule that blocks bad orders. It stays safe when Shopify updates checkout.
+
+  It picks the right extension type: checkout screen add-ons, post-purchase offers, customer account pages, thank-you page and order status changes. It scaffolds the extension with the Shopify CLI, writes the interface code, wires in custom fields, and adds validation rules where you need them. Extensions run in a sandbox, so they keep working with Shop Pay and new features. You need the Shopify CLI, a Partner account, and Shopify Plus or checkout extensibility.
+when:
+  - You want a gift message or delivery note field at checkout.
+  - You want to offer an upsell after the customer pays.
+  - You need to stop orders that break a business rule.
+  - You want to add content to the customer account or order status page.
+you_give:
+  - The change you want at checkout
+  - Which page it should appear on
+  - A Shopify Partner account
+  - Shopify CLI and a plan with checkout extensibility
+you_get:
+  - Extension code for your change
+  - Project and file setup
+  - Validation or field logic
+  - Steps to test and deploy
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

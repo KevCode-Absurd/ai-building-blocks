@@ -6,6 +6,25 @@ summary: Give it an X post link. Get the text, author and numbers as clean data.
 job: work-with-files
 headline: X post reader
 subhead: Give it an X post link. Get the text, author and numbers as clean data. Collects data from websites.
+explain: |
+  Paste a link to a post on X and get its content back as clean, structured data: the text, the author, the time and the like, reply and view counts. You can then summarise it, quote it or compare it with others.
+
+  The skill pulls the handle and post ID out of an x.com or twitter.com link. It then calls a free third-party web service with a simple curl request and reads the JSON that comes back. Because someone else runs the service, it may fail or miss posts, and the numbers are only as current as the fetch. The skill notes the retrieval time.
+when:
+  - A colleague sends an X link and you want a summary without opening the app.
+  - You are collecting posts for research and need the author and counts in a table.
+  - You want the full text of a long X Article.
+  - You need to quote a post and record when you read it.
+you_give:
+  - One or more X or Twitter post links
+  - A question to answer from the post, such as a summary (optional)
+  - A way to run curl on your computer
+you_get:
+  - The post text
+  - The author name and handle
+  - Reply, retweet, like and view counts
+  - The full article text for long posts
+  - A note of when the data was fetched
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

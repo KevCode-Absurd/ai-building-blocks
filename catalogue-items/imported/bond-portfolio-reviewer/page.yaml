@@ -6,6 +6,25 @@ summary: Give it your bond holdings. Get yield, duration and mix by rating, plus
 job: money-and-investing
 headline: Bond portfolio reviewer
 subhead: Give it your bond holdings. Get yield, duration and mix by rating, plus a rate shock test. It collects data from websites.
+explain: |
+  Give it your bond holdings and get a portfolio review: yield, duration and convexity weighted by market value, a mix by rating and sector, and a rate shock test. It is set up for Indian markets and fiscal year conventions.
+
+  The skill prices every bond first, adds reference data such as rating and issuer, and projects cash flows to show reinvestment risk. It then rolls the numbers up and stresses the portfolio with moves in interest rates. It loads Indian conventions so lakh, crore and the April to March year are right. It gathers data from public websites, so results depend on what those sources show.
+when:
+  - You hold a set of bonds and want one risk summary.
+  - You need to know how a rate rise would hit your portfolio.
+  - You want your mix by rating and sector in one table.
+  - You must report in crore and match an April to March year.
+you_give:
+  - A list of bond holdings with amounts
+  - Purchase prices or dates (optional)
+  - The scenarios you want tested
+  - Internet access for public data
+you_get:
+  - Portfolio yield, duration and convexity
+  - A breakdown by rating and sector
+  - Cash flow projections
+  - Rate shock results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

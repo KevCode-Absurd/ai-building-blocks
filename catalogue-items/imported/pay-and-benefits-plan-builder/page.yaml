@@ -6,6 +6,26 @@ summary: Describe your roles and budget. Get a pay philosophy, pay bands, a bonu
 job: hire-people
 headline: Pay and benefits plan builder
 subhead: Describe your roles and budget. Get a pay philosophy, pay bands, a bonus plan and a benefits list. Check the maths yourself.
+explain: |
+  A draft pay and benefits plan for your team: a pay philosophy, pay bands, a bonus scheme, equity options and a benefits list. Check the maths yourself before using any of it.
+
+  You describe your roles, budget and goals. It then works through pay analysis, how to compare jobs and set grades, bonus and incentive design, stock plans, health and leave policies, and a total rewards statement. It also helps spot pay gaps across groups. It offers many ready prompts for each part. The output is a starting draft for HR to refine, and it is not legal or tax advice.
+when:
+  - You are building pay structure for the first time.
+  - You must write a pay philosophy statement.
+  - You want to design a bonus plan on a limited budget.
+  - You need a benefits package to support hiring and retention.
+you_give:
+  - Roles and team size
+  - Pay budget
+  - Location and industry
+  - Current pay data (optional)
+you_get:
+  - Pay philosophy draft
+  - Pay bands by role
+  - Bonus plan outline
+  - Benefits list
+  - Total rewards statement outline
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

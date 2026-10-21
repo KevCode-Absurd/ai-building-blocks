@@ -6,6 +6,26 @@ summary: Give it your product and team. Get a vision, quarterly plan and a goal 
 job: plan-strategy
 headline: Product vision and OKR planner
 subhead: Give it your product and team. Get a vision, quarterly plan and a goal cascade for each team.
+explain: |
+  A product vision, a quarterly plan and a chain of goals from company down to each team, all pointing the same way. You also see how well the goals line up.
+
+  Claude generates OKRs for one of five strategy types: growth, retention, revenue, innovation or operational. It cascades them from company level to teams you name, and scores alignment both up and down and across teams. It can also help with a competitive landscape view, a vision document and a team scaling proposal. A Python script builds the cascade, so you need Python available.
+when:
+  - You are writing quarterly OKRs for a product organisation.
+  - Team goals do not clearly support company goals.
+  - You need a product vision document.
+  - You want to propose adding people to a team.
+you_give:
+  - Your strategy type, such as growth or retention
+  - Your teams, such as Engineering and Design
+  - Company goals and the product share of them
+  - Competitor notes (optional)
+you_get:
+  - A product vision
+  - Company to team OKR cascade
+  - Alignment scores
+  - A quarterly plan
+  - A team scaling proposal (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

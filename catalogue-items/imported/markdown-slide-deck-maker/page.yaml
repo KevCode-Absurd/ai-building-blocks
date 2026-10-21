@@ -6,6 +6,24 @@ summary: Give it a markdown outline. Get one HTML slide deck you present with ar
 job: work-with-files
 headline: Markdown slide deck maker
 subhead: Give it a markdown outline. Get one HTML slide deck you present with arrow keys, with speaker notes.
+explain: |
+  One HTML file that is your slide deck: open it in any browser, move with the arrow keys, show speaker notes and print to PDF. You write it in plain markdown.
+
+  Slides are split at horizontal rules or top headings. Your notes go inside comment blocks, and a second step attaches each note to its slide. A third step puts everything into a single file with your design colors and keyboard navigation. It runs three small Python scripts, so you need Python installed. It declines input with no clear slide breaks, and with only one slide it suggests a poster instead. Long reports and code reviews go to sibling skills.
+when:
+  - You have an outline in markdown and want a presentable deck now.
+  - You want speaker notes that stay hidden from the audience.
+  - You need one file you can email or open without PowerPoint.
+  - You want to print the deck to PDF.
+you_give:
+  - A markdown outline with slide breaks
+  - Notes in comment blocks (optional)
+  - Your brand colors (optional)
+you_get:
+  - A single HTML slide deck
+  - Arrow-key navigation
+  - Presenter mode with notes
+  - A print-ready PDF view
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

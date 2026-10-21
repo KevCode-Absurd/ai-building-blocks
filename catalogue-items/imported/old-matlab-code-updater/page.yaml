@@ -6,6 +6,25 @@ summary: Give it code that uses removed or discouraged functions. Get current re
 job: test-and-fix-code
 headline: Old MATLAB code updater
 subhead: Give it code that uses removed or discouraged functions. Get current replacements in place.
+explain: |
+  Old MATLAB code rewritten with current functions, so it runs on new releases and stops giving warnings. It handles removed functions that now cause errors, and older ones that still work but have a better replacement.
+
+  It starts from the warnings in MATLAB's code checker. It swaps each flagged function for the modern one, in place. It also catches habits the checker misses, such as the old map container, the old array expansion helper, turning text into numbers with eval, and clearing everything at the top of a script. Examples include newer ways to read spreadsheets, handle dates and train neural networks.
+when:
+  - Your old script errors on a new MATLAB release because a function is gone.
+  - The code checker is full of warnings about discouraged functions.
+  - You are migrating a lab's old analysis code.
+  - A script uses clear all and eval and you want it cleaned up.
+you_give:
+  - The MATLAB files or code
+  - The checker warnings, if you have them (optional)
+  - The MATLAB release you target (optional)
+  - Behaviour that must stay the same (optional)
+you_get:
+  - Updated code with current functions
+  - A list of each swap made
+  - Fixes for patterns the checker misses
+  - Notes on any behaviour change
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

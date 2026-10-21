@@ -6,6 +6,25 @@ summary: Describe your data steps. Get a Nextflow or nf-core pipeline built, run
 job: build-software
 headline: Nextflow pipeline builder
 subhead: Describe your data steps. Get a Nextflow or nf-core pipeline built, run and fixed when it fails.
+explain: |
+  A Nextflow data pipeline that runs the same on your laptop, a computing cluster or the cloud. You describe the steps, and the skill writes the pipeline, runs it and fixes it when it fails.
+
+  Nextflow links tasks by their data, so you do not schedule anything by hand. The skill uses the modern DSL2 syntax with separate processes and modules. It can also run ready-made nf-core pipelines, set containers and resources, and write nf-test tests. To move between machines, you change a config profile, not the code. It pins software versions so results can be repeated. It is strongest in bioinformatics but suits any heavy data work.
+when:
+  - You need to run an nf-core pipeline on your own samples.
+  - A run failed halfway and you want to resume it safely.
+  - Your scripts work on one machine but must scale to a cluster.
+  - You want to add tests to a pipeline module.
+you_give:
+  - The steps your data goes through
+  - Your tools and input files
+  - Where it will run (laptop, cluster or cloud)
+  - Error logs from a failed run (optional)
+you_get:
+  - A working Nextflow pipeline
+  - Config profiles for each machine
+  - Tests for your modules
+  - A diagnosis for failed runs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

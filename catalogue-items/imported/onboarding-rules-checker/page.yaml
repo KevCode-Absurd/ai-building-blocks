@@ -6,6 +6,25 @@ summary: Give it a parsed record and your rules. Get a risk rating, each rule re
 job: hire-people
 headline: Onboarding rules checker
 subhead: Give it a parsed record and your rules. Get a risk rating, each rule result and missing items. It does not decide.
+explain: |
+  Your firm's compliance rules applied to a client record, with each result shown and the rule cited. It gives a risk rating and a list of what is missing. It does not approve or reject anyone. That call stays with a person.
+
+  You give it the parsed record and your rules grid. It scores risk factors such as country, client type, how layered the ownership is, political exposure, and how clear the source of funds is. It lists the documents required at that risk level and marks each as received, missing or expired. Then it shows every rule outcome. It never assumes a screening result. If a name was not checked against a sanctions or similar list, it says so.
+when:
+  - You have a parsed client record and need a risk rating with reasons.
+  - An analyst must show which rule caused each flag.
+  - You want a list of missing and expired documents before sign-off.
+  - You need to see which names still need screening.
+you_give:
+  - The structured client record
+  - Your rules grid
+  - Screening results from sanctions and politically exposed person checks (optional)
+  - The client type and risk factors
+you_get:
+  - A low, medium or high risk rating with factor table
+  - A document check marked received, missing or expired
+  - Every rule result with the rule cited
+  - Items to send for human review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

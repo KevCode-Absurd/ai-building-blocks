@@ -6,6 +6,25 @@ summary: Point it at an open-source issue. Get a checked fix, rerun tests and a 
 job: test-and-fix-code
 headline: Open-source contribution preparer
 subhead: Point it at an open-source issue. Get a checked fix, rerun tests and a drafted post held for your approval.
+explain: |
+  A careful way to prepare a fix for someone else's open source project, ending at a queue item that you approve. The agent never posts anything itself.
+
+  It works in gates. First it checks whether the project allows AI-assisted pull requests. Then it asks the maintainer for a go-ahead if needed, checks for duplicate work, and reproduces the bug. Only then does it write a small patch, rerun the tests, and draft a pull request with the right disclosure note. It also handles follow-ups on your own pull requests: replies to reviews, a 14-day ping and a 28-day close. It refuses unasked refactors or features in other people's repos.
+when:
+  - You found a bug in a project you do not maintain and want to fix it properly.
+  - You need to know if a repo accepts AI-assisted pull requests first.
+  - You want a ready draft but need to approve before anything is posted.
+  - A maintainer has not replied to your pull request and you need a follow-up.
+you_give:
+  - The repo and the issue link
+  - A bug you can reproduce, or permission to search open issues
+  - Your approval queue details
+  - Disclosure wording for the project (optional)
+you_get:
+  - A policy and duplicate check
+  - A reproduction of the bug
+  - A tested patch
+  - A pull request draft held for your approval
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

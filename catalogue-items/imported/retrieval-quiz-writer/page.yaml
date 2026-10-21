@@ -6,6 +6,26 @@ summary: Give it a topic. Get low-stakes recall questions at easy, medium and ha
 job: teach-and-train
 headline: Retrieval quiz writer
 subhead: Give it a topic. Get low-stakes recall questions at easy, medium and hard levels for starters or revision.
+explain: |
+  A set of short recall questions on one topic, ready to use as a lesson starter or revision task. Because they are low stakes, students practise pulling facts from memory, which makes them stick better than re-reading.
+
+  You name the topic, the year group and how many questions you want, usually six to ten. The skill writes a mix of free recall, cued recall and recognition questions, each labelled with its type and difficulty. It spreads them across easy, medium and hard. It adds answer notes for you and says when to run the quiz after first teaching. If you list known misconceptions or how long ago the topic was taught, it aims questions at them.
+when:
+  - You need a five-minute starter for tomorrow's lesson.
+  - A class has forgotten last term's content before revision.
+  - You want low-stakes testing that is not graded.
+  - You are building a revision pack with mixed difficulty.
+you_give:
+  - The topic or skill
+  - Year group or age
+  - Number of questions
+  - Time since students first learned it (optional)
+  - Known misconceptions (optional)
+you_get:
+  - Recall questions at three difficulty levels
+  - A label for each question type
+  - Answer notes
+  - When to use the quiz after teaching
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

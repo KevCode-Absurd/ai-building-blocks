@@ -6,6 +6,24 @@ summary: Paste a customer interview transcript. Get a one-page summary of needs,
 job: understand-customers
 headline: Interview summary writer
 subhead: Paste a customer interview transcript. Get a one-page summary of needs, satisfaction and next steps.
+explain: |
+  A one-page summary of a customer interview that your team will really read. Paste the transcript or attach the file. The skill reads it all first, then fills a fixed template: who was interviewed, what they use today, what they like, what frustrates them, and surprising quotes.
+
+  Each like and problem is framed as a job the customer is trying to get done, with the outcome they want, how much it matters to them and how satisfied they are. It ends with action items that carry a date and an owner. The wording stays simple, so anyone on the team can follow it. The summary is saved as a markdown file in your workspace.
+when:
+  - You just finished a customer call and have a long transcript.
+  - You need to share interview findings with people who were not there.
+  - You are running many interviews and want the same format each time.
+  - You want follow-up actions captured with owners and dates.
+you_give:
+  - The interview transcript, pasted or as a file
+  - The product or area you are exploring
+  - Names and roles of the participants (optional)
+you_get:
+  - A one-page interview summary
+  - Likes and problems framed as jobs with satisfaction levels
+  - Key insights and notable quotes
+  - Action items with dates and owners
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

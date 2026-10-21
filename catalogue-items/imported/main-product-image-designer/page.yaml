@@ -6,6 +6,25 @@ summary: Give it a product photo and selling points. Get a main image with the c
 job: product-photos
 headline: Main product image designer
 subhead: Give it a product photo and selling points. Get a main image with the copy laid on. Your image model draws it.
+explain: |
+  A square main image for your product with selling-point text laid on it, built to stay readable at thumbnail size. Your image model draws it; Claude writes the instructions.
+
+  You give it a product photo and your selling points. It writes a detailed picture prompt: the product centred and unchanged in shape, a clean gradient background, a large headline, two small feature lines and a promo badge in a corner. Clear text keeps it legible when small. The prompt tells the model to keep stitching, shape and details identical to your photo. This is for the single main image slot, not long detail pages. It needs an image tool with credits.
+when:
+  - You need a marketplace main image with price or benefit text on it.
+  - Your plain product photo gets few clicks in search results.
+  - You want the text to stay clear when the image is small.
+  - You have a product photo but no designer.
+you_give:
+  - A product photo on a plain background
+  - Three or four selling points
+  - A promo offer (optional)
+  - Image size or ratio
+you_get:
+  - A picture prompt for your image model
+  - A layout with headline and badges
+  - Advice on keeping text legible
+  - One square main image once drawn
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

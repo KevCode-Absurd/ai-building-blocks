@@ -6,6 +6,25 @@ summary: Give it your shop numbers. Get what is working across video, live sales
 job: read-ad-results
 headline: TikTok Shop results reader
 subhead: Give it your shop numbers. Get what is working across video, live sales, affiliates and ads, and what to change.
+explain: |
+  Your TikTok Shop numbers read through for you: which products, videos, live shows, affiliates and ads actually make money, and what to change first.
+
+  You paste in your dashboard figures or describe them. The skill reviews sales trend, order value, conversion and repeat buyers. It compares video formats and hooks to see which ones turn views into sales, scores live sessions by sales per show and audience behavior, and checks affiliate and ad results against their cost. When views are high and sales are low, it traces the leak, such as weak product page, unclear offer or poor call to action, and suggests a test for each.
+when:
+  - You want to know which videos and products made last month's sales.
+  - Your videos get views but few orders.
+  - You are unsure whether live selling is worth the time.
+  - You want to compare your results with others in your category.
+you_give:
+  - Dashboard numbers or exports
+  - Time period
+  - Costs for ads and creators (optional)
+  - Your goal for the shop
+you_get:
+  - Summary of what is working
+  - Weak spots in the sales path
+  - Live and affiliate scorecards
+  - A list of changes and tests
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

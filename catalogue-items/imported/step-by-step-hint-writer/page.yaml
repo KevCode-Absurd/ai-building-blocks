@@ -6,6 +6,27 @@ summary: Give it a problem type. Get hints that reveal help bit by bit without g
 job: teach-and-train
 headline: Step-by-step hint writer
 subhead: Give it a problem type. Get hints that reveal help bit by bit without giving away the answer.
+explain: |
+  A set of hints for one kind of problem, written so a student can climb from a small nudge to a near-full solution without being handed the answer. You use it ahead of time to build worksheets, quizzes or tutoring scripts.
+
+  You name the problem type and where students usually get stuck. The skill designs three to five levels, each tied to a specific stuck point, from a prompt to look again, to naming the idea needed, to showing a parallel example. You choose what happens at the end: reveal the answer, send them to a teacher or give a fresh task. It follows research on tutoring hints and scaffolding, and can be tuned to an age group and subject.
+when:
+  - You are writing a worksheet and want built-in help for stuck students.
+  - You teach a topic where the same mistake appears every year.
+  - You are building a tutoring bot and need hint text for each problem.
+  - You want to stop hints from giving the answer too early.
+you_give:
+  - The problem type students are solving
+  - Common sticking points
+  - Student level and subject (optional)
+  - How hints will be delivered (optional)
+  - Number of hint levels (optional)
+you_get:
+  - A hint sequence from light to strong
+  - Each hint linked to a sticking point
+  - A rule for what comes after the last hint
+  - Notes on when to show each hint
+  - A version matched to the learner's level
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

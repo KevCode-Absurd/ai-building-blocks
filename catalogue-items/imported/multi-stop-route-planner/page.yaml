@@ -6,6 +6,27 @@ summary: Give it your stops and vehicles. Get the shortest routes for each drive
 job: plan-supply-chain
 headline: Multi-stop route planner
 subhead: Give it your stops and vehicles. Get the shortest routes for each driver with total miles and time.
+explain: |
+  The shortest set of routes for your drivers, with total miles and time for each, so deliveries cost less and arrive on time.
+
+  The skill starts by asking about your operation: fleet size, vehicle capacity, time windows, shift lengths, time at each stop and how many stops a day. It then names the type of problem. One vehicle visiting all stops is a traveling salesman problem. Several vehicles with limits make a vehicle routing problem. Time windows make a third kind. It picks a method sized to your stops, builds the routes and compares them to your current ones.
+when:
+  - Drivers cross each other's paths and run overtime.
+  - You have forty stops a day and plan them by hand.
+  - Customers have delivery windows you must hit.
+  - You need to know whether another van pays for itself.
+you_give:
+  - Your stop addresses or locations
+  - Number of vehicles and capacity
+  - Time windows and shift lengths
+  - Time spent at each stop
+  - Your current routes (optional)
+you_get:
+  - A route for each driver
+  - Total miles and time per route
+  - A comparison with your current plan
+  - The method used and why
+  - Notes on stops that cause problems
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Say you want MATLAB linked to Databricks. Get sign-in, Spark or JDBC se
 job: build-software
 headline: Databricks connection setup helper
 subhead: Say you want MATLAB linked to Databricks. Get sign-in, Spark or JDBC set up and tested.
+explain: |
+  MATLAB gets connected to Databricks and proven to work, whether you use Spark or JDBC. First time setup of this link is fiddly, and this walks through each piece.
+
+  The skill helps you pick the path. Spark through Databricks Connect suits reading large Unity Catalog tables with filtering done on the server. JDBC through Database Toolbox suits cluster or SQL Warehouse connections. It sets up the .databrickscfg file and sign in using browser login, machine credentials or a personal access token. It creates the session or connection, picks a JDBC driver, tests a read, and shows how to write data back. You need MATLAB, a Databricks workspace and your own credentials.
+when:
+  - You are linking MATLAB to Databricks for the first time.
+  - You need to read a huge table without loading all of it.
+  - Your sign in keeps failing and you do not know why.
+  - You want to write MATLAB results back to Databricks.
+you_give:
+  - Your Databricks workspace address
+  - Sign in method you use
+  - Whether you use a cluster or SQL Warehouse
+  - Your MATLAB setup
+you_get:
+  - Configured sign in file
+  - Working Spark or JDBC connection
+  - A tested table read
+  - Steps to write data back
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

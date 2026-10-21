@@ -6,6 +6,26 @@ summary: Give it a language model. Get a small network trained to show which ide
 job: research-topics
 headline: Model feature finder
 subhead: Give it a language model. Get a small network trained to show which ideas its inner activity stands for.
+explain: |
+  A small helper network, trained on your language model, that shows which ideas its inner activity stands for. Instead of a blur of numbers, you get named features such as a place, a tone or a risky topic.
+
+  The skill uses SAELens, a Python library. It picks one layer of the model, collects activations from lots of text, and trains a sparse autoencoder to split them into features where only a few fire at once. You then look at which text lights each feature up, and test it by turning it up or down. It needs Python, a GPU for larger models, and some comfort with research code.
+when:
+  - You want to know what concept a layer of your model has learned.
+  - You are studying whether a model holds a feature for something unsafe.
+  - You want to steer a model by adjusting one named feature.
+  - You need to load a ready-made feature set and look around.
+you_give:
+  - A language model and the layer to study
+  - A text dataset to read activations from
+  - A GPU and a Python setup
+  - A feature or topic you want to find (optional)
+you_get:
+  - Training code for the feature network
+  - Named features with example text
+  - Charts of which features fire
+  - Steering and removal tests
+  - Notes on quality checks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

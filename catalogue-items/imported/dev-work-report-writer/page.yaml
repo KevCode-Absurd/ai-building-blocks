@@ -6,6 +6,25 @@ summary: Finish a coding task. Get a clear write-up of what changed, why, and pr
 job: build-software
 headline: Dev work report writer
 subhead: Finish a coding task. Get a clear write-up of what changed, why, and proof that it works.
+explain: |
+  A written record of a coding task that someone else can read cold: what you changed, why, and proof that it works. It turns a finished piece of work into something you can hand to a teammate, a client or your future self.
+
+  The report follows a fixed shape: a clear title, a short overview, a file-by-file list of changes, key code before and after, and verification results such as build output and test runs. The skill first collects the context, meaning the problem, the errors that existed, the approach taken and the reasons for each choice. It lists dependencies added or removed and any config changes. Use it after features, bug fixes, refactors and upgrades.
+when:
+  - You just finished a bug fix and need to explain it to a reviewer.
+  - A teammate has to pick up your work and needs to know what changed.
+  - You want a record of why you chose one approach over another.
+  - A client wants evidence that a fix builds and passes tests.
+you_give:
+  - The task you completed
+  - The files or diff that changed
+  - Build and test output
+  - The reasons behind key decisions (optional)
+you_get:
+  - A titled write-up with a short overview
+  - A file-by-file list of changes
+  - Before and after code snippets
+  - A verification section with build and test results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

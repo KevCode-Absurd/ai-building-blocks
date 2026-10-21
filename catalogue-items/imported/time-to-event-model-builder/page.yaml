@@ -6,6 +6,26 @@ summary: Give it follow-up data with dropouts. Get survival models that avoid da
 job: track-numbers
 headline: Time-to-event model builder
 subhead: Give it follow-up data with dropouts. Get survival models that avoid data leaks, with scores and risk curves.
+explain: |
+  Models that predict how long until something happens, such as a customer leaving or a patient relapsing, even when some people have not yet had the event. Those cases are cut off and must be handled with care, or the results mislead.
+
+  The skill uses the scikit-survival library in Python. It sets up data in the right form, then fits Cox models, penalized Cox, survival trees, forests and boosting. It splits and tunes models in a way that prevents leaks from test data into training. Scores include concordance and time-based error, and it plots risk curves and cumulative incidence with competing risks. It will not present results as clinical advice. You need Python 3.11 or later.
+when:
+  - You have customer or patient follow-up data where many people have not yet had the event.
+  - You want to compare several survival models fairly.
+  - Your model looks too good and you fear data leakage.
+  - You need risk curves to show a group over time.
+you_give:
+  - A table with time, event flag and features
+  - The question you are asking
+  - Python 3.11 or later
+  - Time points that matter (optional)
+you_get:
+  - Fitted survival models
+  - Leak-safe validation
+  - Concordance and error scores
+  - Risk and survival curves
+  - A reproducible script
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

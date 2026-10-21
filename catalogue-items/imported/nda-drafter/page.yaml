@@ -6,6 +6,25 @@ summary: Name the two parties and what is shared. Get a draft confidentiality ag
 job: check-contracts
 headline: NDA drafter
 subhead: Name the two parties and what is shared. Get a draft confidentiality agreement with the clauses a lawyer should check.
+explain: |
+  A first draft of a confidentiality agreement between two named parties, with a plain-language note beside each clause and the risky ones marked for a lawyer.
+
+  The skill first asks a few checks: is it one-way or mutual, what kind of information is shared, how long it should last, and which law applies. It then builds the standard sections: parties and definitions, the duty to keep secrets, allowed disclosures, term, and return or destruction of material. It adapts the wording to your information types, such as pricing or source code, and your location. This is a starting draft, not legal advice. A qualified lawyer should review it before anyone signs.
+when:
+  - You are about to share pricing or plans with a partner and need an NDA today.
+  - You want a draft to hand to your lawyer instead of starting from nothing.
+  - You need a mutual agreement for early talks with another company.
+  - You want to understand what each clause means before you sign.
+you_give:
+  - Both parties' names, addresses and representatives
+  - What kind of information will be shared
+  - Where the agreement is governed
+  - One-way or mutual, and how long it runs (optional)
+you_get:
+  - A full NDA draft
+  - Plain-language notes on each clause
+  - Clauses flagged for legal review
+  - A short list of questions to settle first
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

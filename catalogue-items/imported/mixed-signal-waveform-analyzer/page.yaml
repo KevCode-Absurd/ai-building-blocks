@@ -6,6 +6,25 @@ summary: Give it circuit waveform data. Get phase noise, jitter, timing and ADC 
 job: build-software
 headline: Mixed-signal waveform analyzer
 subhead: Give it circuit waveform data. Get phase noise, jitter, timing and ADC accuracy measured.
+explain: |
+  Measurements from your circuit simulation waveforms: phase noise, jitter, timing and converter accuracy, worked out with MATLAB Mixed-Signal Blockset functions. Give it the data and it picks the right function.
+
+  It measures phase noise, jitter, rise and fall time, duty cycle, lock time, and ADC and DAC error. It resamples uneven data onto an even grid, and imports HSpice files. For phase noise it asks which offsets to use, defaulting to 10 kHz to 10 MHz, and sets resolution bandwidth to half the lowest offset. Plain SNR or FFT work goes to the Signal Processing Toolbox.
+when:
+  - You simulated a VCO and need phase noise at set offsets.
+  - You must turn a phase noise profile into RMS jitter.
+  - Your simulator gave unevenly spaced samples.
+  - You need INL and DNL for an ADC design.
+you_give:
+  - Waveform data or HSpice files
+  - The measurement you want
+  - Frequency offsets for phase noise (optional)
+  - Clock or signal details
+you_get:
+  - MATLAB code for the measurement
+  - Phase noise, jitter or timing values
+  - INL and DNL results
+  - Data resampled to an even grid
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: List your companies and where they are registered. Get annual filings a
 job: check-contracts
 headline: Company filing deadline tracker
 subhead: List your companies and where they are registered. Get annual filings and due dates. Not legal advice.
+explain: |
+  One file that lists every company you run, where each is registered, and what must be filed and when. Missed annual reports and franchise taxes cost fees and can put a company out of good standing, so the dates are worth having in one place.
+
+  You give Claude your list of entities with their states or countries. It builds a tracker file, then shows what is due soon and what is overdue. You can update statuses, walk through unknown items one by one, run a health check, or export a table. It splits entity types, since a Delaware company and a Delaware LLC differ. Confirm dates with your registered agent. Not legal advice.
+when:
+  - You run several companies and lose track of annual report dates.
+  - You want to know what is overdue before a lawyer or investor asks.
+  - A new entity was formed and needs its first filing calendar.
+  - You need a clean table of deadlines to send to your accountant.
+you_give:
+  - A list of your companies
+  - Where each is formed or registered
+  - Entity type for each (such as LLC or corporation)
+  - Registered agent details (optional)
+you_get:
+  - A deadline tracker file
+  - An upcoming and overdue report
+  - A health check of the whole list
+  - A CSV or table export
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

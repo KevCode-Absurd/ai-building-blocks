@@ -6,6 +6,24 @@ summary: Give it a product or screen. Get what confuses people and fixes for clu
 job: design-work
 headline: Everyday usability reviewer
 subhead: Give it a product or screen. Get what confuses people and fixes for clues, limits and feedback. Uses Don Norman's principles.
+explain: |
+  A list of exactly what confuses people in your product or screen, with fixes. It tells you why users press the wrong thing, miss a feature or cannot tell whether an action worked.
+
+  It uses Don Norman's ideas. It checks the two gaps every user crosses: working out how to act, and understanding what happened afterward. Then it tests five things: can people find what to do, can they see the result, can they recover from errors, do controls match what they affect, and do limits block wrong moves. Each passed check earns 2 points, for a score out of 10. Fixes use clear cues, natural layouts, constraints and visible feedback.
+when:
+  - Users keep asking how to do something your screen already allows.
+  - People click the wrong button or give up halfway through a form.
+  - You are reviewing a design before it goes to developers.
+  - A physical product or device gets blamed for user mistakes.
+you_give:
+  - Description or screenshot of the product or screen
+  - The task users try to do
+  - Complaints or support questions (optional)
+you_get:
+  - Score out of 10
+  - List of confusing points with causes
+  - Fixes for cues, limits and feedback
+  - Error recovery suggestions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

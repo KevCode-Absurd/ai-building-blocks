@@ -6,6 +6,25 @@ summary: Give it recorded sensor data. Get a virtual driving scene with roads, v
 job: build-software
 headline: Driving scenario builder
 subhead: Give it recorded sensor data. Get a virtual driving scene with roads, vehicles and paths built from it.
+explain: |
+  A simulation-ready driving scene, built from real drives instead of drawn by hand. Feed in recorded GPS, camera, lidar and tracked vehicles, and you get roads, other vehicles and their paths that a simulator can replay.
+
+  The skill works inside MATLAB with the Scenario Builder support package. It first checks that the package is installed. Then it cleans and aligns the sensor streams, tracks the other vehicles, places the car on a map using lane lines, and builds the scene. RoadRunner is the default export. It can also write OpenSCENARIO, OpenDRIVE or a road surface file, add signs and trees, and pull out events such as cut-ins and hard brakes.
+when:
+  - You have a recorded drive and want to replay it in a simulator.
+  - You need real-world cut-ins and near-misses turned into test scenarios.
+  - You must show scenario coverage from real data for a safety standard.
+  - You want a road surface file from lidar for vehicle testing.
+you_give:
+  - Recorded GPS, camera or lidar data
+  - Tracks of other vehicles (optional)
+  - Target format, such as RoadRunner or OpenSCENARIO
+  - MATLAB with Scenario Builder installed
+you_get:
+  - A driving scenario ready for simulation
+  - Exported scene and scenario files
+  - Extracted critical events from the drive
+  - Road surface or map additions (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

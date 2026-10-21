@@ -6,6 +6,25 @@ summary: Describe your documents. Get chunking, embedding and vector database ch
 job: build-software
 headline: RAG pipeline designer
 subhead: Describe your documents. Get chunking, embedding and vector database choices, with ways to test results.
+explain: |
+  A design for retrieving answers from your documents, backed by numbers from your own files rather than guesses. You get chunking, embedding and vector database choices, plus a test that shows how well retrieval works.
+
+  It follows three rules: analyse your real documents before choosing chunk sizes, design from your requirements such as size, query load and speed, and finish with an evaluation run. A design without test numbers is only a guess. Model and price choices come as tiers to check before buying, since they go stale fast. It runs three small Python tools for chunking, pipeline design and retrieval scoring.
+when:
+  - You want an assistant that answers from your company documents.
+  - Your current search returns the wrong passages.
+  - You must choose a vector database and need a basis for the choice.
+  - You want to measure retrieval quality before launch.
+you_give:
+  - Your documents or a sample
+  - Number of documents and daily queries
+  - Speed and cost limits
+  - Python installed
+you_get:
+  - Chunking strategy picked from your files
+  - Pipeline design
+  - Embedding and database tier choices
+  - Retrieval test results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it a tricky function. It writes the rules and edge cases first, th
 job: test-and-fix-code
 headline: Code correctness planner
 subhead: Give it a tricky function. It writes the rules and edge cases first, then code that keeps them.
+explain: |
+  A tricky function gets its rules written down before any code, so off-by-one and empty-input bugs get caught early. Tests alone often miss these, because the bug lives in the contract, not the loop body.
+
+  Before writing a loop or a recursive call, it states the invariant (what stays true on each pass), the base case, why the loop must end, and the awkward inputs: empty, duplicates, boundaries, overflow. Only then does it write the code, and it checks the code keeps each rule it stated. The firm rule is no loop or recursion without a written invariant and a reason it stops.
+when:
+  - You are writing binary search, partition or in-place dedup.
+  - A function passes tests but you do not trust it.
+  - You keep hitting off-by-one errors with duplicates or empty lists.
+  - You think "I know this algorithm" and want a second check.
+you_give:
+  - The function you want written or reviewed
+  - The chosen algorithm (optional)
+  - Known awkward inputs (optional)
+you_get:
+  - Written invariants
+  - A base case and stop argument
+  - An edge case list
+  - Code that matches those rules
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

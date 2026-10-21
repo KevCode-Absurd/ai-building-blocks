@@ -6,6 +6,27 @@ summary: Give it a current event. Get the patterns, structures and beliefs under
 job: teach-and-train
 headline: Event-to-pattern iceberg builder
 subhead: Give it a current event. Get the patterns, structures and beliefs under it, laid out as an iceberg.
+explain: |
+  An iceberg chart that takes one visible event and digs below it: the patterns repeating over time, the structures behind them and the beliefs that keep them in place. It turns a headline problem into something a group can act on.
+
+  You name the event and the setting, such as a class, school or team. The skill asks what happened, then what trends keep recurring. It then asks which rules, incentives and habits produce those trends, and finally which mental models people hold. It can include the people and groups involved and any evidence you already have. It is based on well-known systems thinking work, and suits classroom and team discussions.
+when:
+  - A repeated problem keeps coming back and a quick fix has not worked.
+  - You teach a class and want students to see causes under the news.
+  - Your team needs a shared view before choosing an action.
+  - You want to move a discussion from blame to structure.
+you_give:
+  - The visible event or repeated issue
+  - Setting, such as class or team
+  - People or groups involved (optional)
+  - Notes, data or stories so far (optional)
+  - Age or year group (optional)
+you_get:
+  - Iceberg with four levels
+  - Patterns that repeat over time
+  - Structures that drive them
+  - Beliefs behind the structures
+  - Questions for group discussion
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

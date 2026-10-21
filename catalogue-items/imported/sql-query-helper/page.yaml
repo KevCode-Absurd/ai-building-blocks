@@ -6,6 +6,26 @@ summary: Describe the data you need. Get a tested SQL query, a faster version, o
 job: build-software
 headline: SQL query helper
 subhead: Describe the data you need. Get a tested SQL query, a faster version, or a migration.
+explain: |
+  A SQL query that has been written, tested or sped up, or a database migration ready to run. Describe the data you need in plain words. The skill turns nouns into tables, verbs into joins, conditions into filters, and words like total or latest into grouping and ordering.
+
+  It writes for your database, whether Postgres, MySQL, SQLite or SQL Server. For slow queries it reads the execution plan, spots repeated query patterns and suggests indexes. For schema changes it writes up and down migration scripts with a rollback plan. It also helps with Prisma, Drizzle, TypeORM and SQLAlchemy.
+when:
+  - You know what data you want but not how to ask for it in SQL.
+  - A query is slow and you need to know why.
+  - You must change a table without taking the site down.
+  - Your app code and database are out of step.
+you_give:
+  - A plain description of the data you need
+  - Your database type
+  - Table layout or schema
+  - The slow query or plan (optional)
+you_get:
+  - A working SQL query
+  - Index and rewrite suggestions
+  - Up and down migration scripts
+  - Schema documentation
+  - ORM-friendly equivalents
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

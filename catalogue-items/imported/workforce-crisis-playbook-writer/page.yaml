@@ -6,6 +6,26 @@ summary: Name the crisis type. Get roles, a first-hour staff message, a 24-hour 
 job: hire-people
 headline: Workforce crisis playbook writer
 subhead: Name the crisis type. Get roles, a first-hour staff message, a 24-hour action list and a review plan for your people.
+explain: |
+  A crisis playbook for your people, written before you need it or while you are in it. You get who does what, what to tell staff in the first hour, and what to do in the first day.
+
+  You name the type of crisis, such as a safety incident, natural disaster, sudden leadership departure or public scandal. The skill sets roles and decision rights for HR, legal, security and communications, drafts a first message to employees, and lists actions for the first 24 hours. It covers staff wellbeing and manager briefings. After the event it gives you a review plan to find what to improve. Not legal advice.
+when:
+  - You have no written plan for a workplace emergency.
+  - A crisis has just started and you need staff messages now.
+  - A senior leader left suddenly and people are worried.
+  - You want to train managers on their role in a crisis.
+you_give:
+  - Crisis type
+  - Company size and sites
+  - Existing contacts for legal and security (optional)
+  - Facts known so far (optional)
+you_get:
+  - Roles and decision authority
+  - First-hour staff message
+  - 24-hour action list
+  - Manager briefing points
+  - Post-crisis review plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

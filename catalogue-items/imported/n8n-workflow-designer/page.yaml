@@ -6,6 +6,24 @@ summary: Describe the automation you want. Get an n8n workflow laid out with a p
 job: connect-tools
 headline: n8n workflow designer
 subhead: Describe the automation you want. Get an n8n workflow laid out with a proven pattern, from webhook to schedule.
+explain: |
+  Pick the shape of an n8n automation before you drag a single node. Many workflows go wrong because the structure was a guess. This skill matches your idea to one of five proven patterns and lays it out step by step.
+
+  The patterns are: a webhook that receives data, an API fetch that moves data between services, a database sync, an AI agent with tools and memory, and a scheduled job. For each, it gives the usual order of steps, such as trigger, check, change, send, then log. It also adds an error step where one belongs. You end up with a clear plan, not node-by-node fixes.
+when:
+  - You have an idea like "when a form is sent, add a row and ping Slack".
+  - You need to sync two databases on a schedule.
+  - You want to know if your task needs an AI agent or a plain flow.
+  - A workflow you started has grown messy and needs a cleaner outline.
+you_give:
+  - A plain description of what should happen
+  - What starts it (a request, a time, an event)
+  - The apps or databases involved
+you_get:
+  - The best-fit pattern with a reason
+  - An ordered list of steps
+  - Where error handling goes
+  - Examples of the same pattern in use
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

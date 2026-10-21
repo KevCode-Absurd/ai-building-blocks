@@ -6,6 +6,25 @@ summary: Describe your app's users. Get a login and permissions plan, or a revie
 job: secure-code
 headline: Login and access builder
 subhead: Describe your app's users. Get a login and permissions plan, or a review of the one you have.
+explain: |
+  A written plan for who can sign in to your app and what each person is allowed to do, or a review of the setup you already have. Login mistakes are costly, so the plan is explicit about every boundary.
+
+  It starts by listing your users, accounts, sign-in flows and threats. Then it picks a method, such as sessions, tokens or single sign-on, and sets how long each token lasts. Next it designs roles and permission checks, and decides where each check runs. It finishes with how secrets are stored and rotated, what gets logged, and what is never logged. It works best when it can read your project files.
+when:
+  - You are adding sign-in, social login or single sign-on to an app.
+  - You need roles so admins, staff and customers see different things.
+  - Your API lets someone reach data that is not theirs, and you need to find why.
+  - You want a second look at your session or token setup before launch.
+you_give:
+  - A description of your app and its users
+  - Your current login code or setup (optional)
+  - The sign-in methods you want
+  - Any rules about who may see what (optional)
+you_get:
+  - A login and session design
+  - A roles and permissions map
+  - Token lifetime and storage rules
+  - A list of security gaps to fix
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

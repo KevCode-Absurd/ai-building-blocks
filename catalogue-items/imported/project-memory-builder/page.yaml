@@ -6,6 +6,24 @@ summary: Give it a bloated project notes file. Get a lean version, plus a way fo
 job: set-up-ai
 headline: Project memory builder
 subhead: Give it a bloated project notes file. Get a lean version, plus a way for your AI to save lasting facts.
+explain: |
+  A short project notes file that your AI actually reads, plus a way for it to save lasting facts without piling clutter back in. Repeated corrections stop being forgotten.
+
+  The skill uses four layers: raw session logs, possible facts, project context and stable preferences. A fact only moves up when it shows up again across different sessions and days, never from one confident remark. Nothing lands in a committed file until you approve it. You can ask why a remembered line exists and where it came from. It runs with plain scripts, with no database or outside service.
+when:
+  - Your CLAUDE.md has grown so long that nobody reads it.
+  - Your AI keeps making the same mistake you already corrected.
+  - A remembered rule is wrong and you want to find where it came from.
+  - You want the AI to learn from sessions, but only with your say-so.
+you_give:
+  - Your current project notes file
+  - Past session transcripts if available (optional)
+  - A fact or rule you want to check (optional)
+you_get:
+  - A trimmed notes file
+  - A tiered store of candidate facts
+  - Review list for adopting or rejecting facts
+  - Traceable source for each remembered line
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

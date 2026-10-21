@@ -6,6 +6,24 @@ summary: Describe the poster or artwork. Get a finished PNG or PDF design with i
 job: design-work
 headline: Poster designer
 subhead: Describe the poster or artwork. Get a finished PNG or PDF design with its own clear look.
+explain: |
+  A finished poster or piece of art as a PNG or PDF, with a distinct look rather than a template feel. Describe what you want and the skill makes the image itself.
+
+  It works in two steps. First it writes a short visual philosophy, naming a style movement and describing how it uses space, form, colour and composition. Then it draws the piece on a canvas, with very little text, treating words as an accent. Craft comes first: careful spacing, a strict palette and balanced composition. You can ask for another round to adjust colours or layout. Output lands as a file you can print or share.
+when:
+  - You need an event poster with a strong visual identity.
+  - You want wall art for an office or shop.
+  - You need a cover image that is not a stock photo.
+  - You want a design file you can send to a printer.
+you_give:
+  - Topic or message of the poster
+  - Mood or style hints (optional)
+  - Size or format (optional)
+  - Short text to include (optional)
+you_get:
+  - A PNG or PDF poster
+  - Short design philosophy file
+  - A second round of edits if you ask
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

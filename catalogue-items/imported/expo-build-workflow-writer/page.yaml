@@ -6,6 +6,25 @@ summary: Say how you want your app built and released. Get a working EAS workflo
 job: ship-and-host
 headline: Expo build workflow writer
 subhead: Say how you want your app built and released. Get a working EAS workflow file that does it.
+explain: |
+  A working EAS workflow file that builds, tests and releases your Expo app the way you ask, written in the right format the first time.
+
+  Before writing anything, the skill downloads the official schema from Expo and the syntax guide, so job types, triggers, runners and options are correct, not remembered. It then writes the YAML for your case, such as a build on every push to main, a preview for each pull request, or a store submission. It checks the file against the schema and edits existing workflows without breaking them. You need Node and internet access for the fetch step.
+when:
+  - You want every push to main to produce a test build.
+  - You need pull requests to create a preview you can share.
+  - You want store submission to run on its own after a build.
+  - Your workflow file keeps failing validation.
+you_give:
+  - How you want builds and releases to run
+  - "Platforms: iOS, Android or both"
+  - Triggers, such as push, pull request or tag
+  - Existing workflow file (optional)
+you_get:
+  - EAS workflow YAML
+  - Validation against the official schema
+  - Edits to existing workflow files
+  - Short notes on each job
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

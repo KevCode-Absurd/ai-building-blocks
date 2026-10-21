@@ -6,6 +6,26 @@ summary: Name a topic. It checks your level, then teaches in small steps with pr
 job: think-and-decide
 headline: Adaptive tutor
 subhead: Name a topic. It checks your level, then teaches in small steps with practice and feedback.
+explain: |
+  You get a lesson that fits your level on a topic you choose. It begins with a short check of what you already know, then teaches in small steps with practice and feedback.
+
+  The diagnostic asks a few questions, so the lesson skips what you know and fills real gaps. Each step is a short explanation, then a question to answer from memory, since recall helps learning stick. If you answer well, it moves faster. If you struggle, it explains another way and slows down. It can also give you a study guide, a lesson plan or a set of drills.
+when:
+  - You want to learn a new topic and do not know where to start.
+  - You have an exam coming and need practice questions.
+  - You studied something once and want a refresher.
+  - You teach and want a lesson plan that adapts to the group.
+you_give:
+  - A topic to learn
+  - What you already know (optional)
+  - Your goal or deadline
+  - How much time you have
+you_get:
+  - A quick level check
+  - Short lessons in steps
+  - Practice questions with feedback
+  - A study guide (optional)
+  - A plan for what to review next
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

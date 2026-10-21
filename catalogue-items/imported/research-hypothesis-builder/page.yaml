@@ -6,6 +6,26 @@ summary: Describe what you observed. Get testable hypotheses, rival explanations
 job: research-topics
 headline: Research hypothesis builder
 subhead: Describe what you observed. Get testable hypotheses, rival explanations, predictions and a plan to test them.
+explain: |
+  Testable explanations for something you observed, with rival explanations, predictions that tell them apart and a plan to test them. It keeps you from falling for the first story that fits.
+
+  Starting with your observation, it writes a clear question, then several candidate hypotheses. For each it states what would have to be true, what rival explanation could explain the same data, and what result would tell them apart. It keeps association and cause separate and never claims a hypothesis is proven or new. It includes small local Python tools that handle your files without a network. It stops at ethics, safety and privacy gates and does not rank ideas for you.
+when:
+  - Your data shows a pattern and you want to explain it.
+  - You want rival explanations before you design an experiment.
+  - A result surprised you and you need to know what to test next.
+  - You are unsure if a link is cause or just association.
+you_give:
+  - Your observation or data
+  - Field and context
+  - Existing literature notes (optional)
+  - Constraints on what you can measure (optional)
+you_get:
+  - Clear research question
+  - Candidate hypotheses
+  - Rival explanations
+  - Predictions that separate them
+  - Measurement and testing plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

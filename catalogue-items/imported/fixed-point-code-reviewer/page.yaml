@@ -6,6 +6,24 @@ summary: Give it MATLAB fixed-point code. Get slow or risky patterns found, with
 job: test-and-fix-code
 headline: Fixed-point code reviewer
 subhead: Give it MATLAB fixed-point code. Get slow or risky patterns found, with cleaner replacements.
+explain: |
+  MATLAB fixed-point code is checked for slow habits and risky patterns, and each one gets a cleaner replacement. Your simulations run faster and your code is ready for C or hardware conversion.
+
+  It goes through a checklist. It finds fi calls inside loops and replaces them with one array call. It pulls hard-coded data types out of the algorithm into a types table, so you can switch between floating point and fixed point for comparison. It also looks at math settings and number types that waste time or give wrong results. Each finding shows the bad code beside the fixed code. It skips plain integer code and Simulink block settings.
+when:
+  - Your fixed-point simulation takes far too long to run.
+  - You plan to generate C or HDL code and want the MATLAB clean first.
+  - You want to compare double, single and fixed versions of one algorithm.
+  - You inherited fi code and do not know if it is written well.
+you_give:
+  - MATLAB code that uses fi, fimath or numerictype
+  - Target (simulation speed, C code or hardware)
+  - Word lengths you plan to use (optional)
+you_get:
+  - List of slow or risky patterns found
+  - Bad and good code side by side
+  - Types table pulled out of your algorithm
+  - Notes on code generation readiness
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

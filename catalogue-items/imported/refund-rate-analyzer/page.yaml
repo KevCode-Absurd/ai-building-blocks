@@ -6,6 +6,25 @@ summary: Pick products, collections or dates. Get refund rates that point to qua
 job: run-your-store
 headline: Refund rate analyzer
 subhead: Pick products, collections or dates. Get refund rates that point to quality or listing problems.
+explain: |
+  Which products get sent back most? This gives you a refund rate for each product, vendor or time period, so you can see where quality or listing problems hide.
+
+  It reads your recent orders from Shopify and finds every refunded item. For each group it divides refunded units by units sold, then ranks the results. Groups with too few orders are left out, so one odd sale does not skew the list. You choose how far back to look and how to group the data. It only reads data and never changes an order. It needs a logged-in Shopify command line session with order read access.
+when:
+  - Refunds are rising and you do not know which product causes them.
+  - You suspect a supplier ships faulty stock.
+  - A product page may promise more than the product delivers.
+  - You want a monthly refund check for your finance review.
+you_give:
+  - Store domain
+  - Days to look back
+  - Grouping by product, vendor or period
+  - Minimum orders per group (optional)
+you_get:
+  - Refund rate for each group
+  - Ranked list of worst offenders
+  - Notes on likely quality or listing issues
+  - Output as plain text or JSON
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

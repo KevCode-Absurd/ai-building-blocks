@@ -6,6 +6,27 @@ summary: Give it your product. Get a ranked list of directories and ready listin
 job: grow-social
 headline: Directory listing planner
 subhead: Give it your product. Get a ranked list of directories and ready listing text to submit by hand.
+explain: |
+  A ranked list of directories where your software product should be listed, plus listing text ready to submit by hand. Directory links pass authority to your site and put you in front of people who are shopping.
+
+  The skill sets three hard rules. Have a strong landing page live before submitting anywhere. Build destination pages before directories. And treat directories as a base layer, not your whole plan. Before you submit, it checks you have clean headings, a pricing page, policies, logos, real screenshots, a short demo video and structured data. It draws on a catalogue of directories and a set of positioning variants, so the descriptions differ between sites.
+when:
+  - You are launching a SaaS or AI product and want backlinks and discovery.
+  - You do not know which directories are worth the time.
+  - Your landing page is missing assets that directories require.
+  - You want varied listing text so each site gets a different description.
+you_give:
+  - Your product and what it does
+  - Your landing page link
+  - Your pricing and target buyer
+  - Logos, screenshots and demo video
+  - Product marketing notes (optional)
+you_get:
+  - A ranked directory list
+  - A readiness checklist for your site
+  - Listing text for each directory
+  - Positioning variants
+  - A submission order
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Describe a sound. Get a clip such as rain, an impact or a button click,
 job: work-with-audio
 headline: Sound effects designer
 subhead: Describe a sound. Get a clip such as rain, an impact or a button click, with the length you set.
+explain: |
+  A sound clip made from a short description, such as thunder with light rain, a cinematic impact or a button click. You pick the length from half a second to 30 seconds. You can also ask for a clip that loops cleanly, which suits background ambience.
+
+  The skill uses the ElevenLabs sound effects tool. You set how closely it follows your words, from loose to strict. It gives you code in Python, JavaScript or the command line to save the clip as an MP3. You need an ElevenLabs account and API key, and the service may charge.
+when:
+  - Your video or game needs a rain, wind or crowd sound you do not own.
+  - You want a short click or whoosh for an app button.
+  - You need a loop for background ambience.
+  - You want several takes of the same sound to compare.
+you_give:
+  - A description of the sound
+  - The length you want (optional)
+  - A loop request (optional)
+  - An ElevenLabs API key
+you_get:
+  - An MP3 sound clip
+  - Code that makes the clip
+  - Settings to tune length and prompt match
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

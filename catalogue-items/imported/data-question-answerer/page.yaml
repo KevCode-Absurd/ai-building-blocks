@@ -6,6 +6,25 @@ summary: Ask a data question. Get a quick lookup or a full analysis with the num
 job: track-numbers
 headline: Data question answerer
 subhead: Ask a data question. Get a quick lookup or a full analysis with the numbers and what they mean.
+explain: |
+  Ask a question about your data in plain words and get an answer sized to the question: a quick number, a full analysis, or a formal report with caveats.
+
+  The skill first decides which size fits, then works out the tables, metrics and time range it needs. With a connected warehouse it explores the schema, writes the SQL and runs it. With a file or pasted rows it works from those. It checks the results for sense before explaining them, so a lookup stays short while a question like why conversion dropped gets a breakdown by segment and time. Larger work ends with method notes and recommendations. Accuracy depends on the data you connect.
+when:
+  - You need to know how many people signed up last week.
+  - Conversion dropped and you want to know why.
+  - A comparison of customer groups over time is due.
+  - You must prepare a quarterly review with numbers and caveats.
+you_give:
+  - Your question
+  - Data access or a file
+  - Output style you prefer (optional)
+  - Time range (optional)
+you_get:
+  - Direct answer with numbers
+  - Supporting table or chart
+  - The query used
+  - Caveats and next steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

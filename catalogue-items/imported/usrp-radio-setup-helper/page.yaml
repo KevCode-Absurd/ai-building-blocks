@@ -6,6 +6,25 @@ summary: Name your USRP model. Get it connected, set up and verified for use in 
 job: build-software
 headline: USRP radio setup helper
 subhead: Name your USRP model. Get it connected, set up and verified for use in MATLAB.
+explain: |
+  A USRP radio that is connected, configured and proven to work in MATLAB, so you can start sending and capturing signals. It covers the models E320, N300, N310, N320, N321, X300, X310 and X410.
+
+  The skill first checks your computer: operating system, network card type and speed, and packet size. It then finds the radio with the discovery commands findsdru and probesdru and checks the driver version matches. It sets up the radio in code, or with the setup wizard, and runs a transceiver test to confirm samples flow. A separate troubleshooting guide covers radios that are not found, connection errors and dropped samples. It needs MATLAB with the Wireless Testbench add-on, and the radio on your desk.
+when:
+  - You unboxed a USRP and have never connected it to MATLAB.
+  - MATLAB says the radio is not found, and you do not know why.
+  - You see dropped samples when streaming and suspect the network.
+  - You need a repeatable setup before a lab session or a project.
+you_give:
+  - Your USRP model
+  - How it connects to your computer
+  - Your MATLAB release
+  - Any error message you see (optional)
+you_get:
+  - A host check of OS and network card settings
+  - Steps to find and configure the radio
+  - A test that proves the connection works
+  - Fixes for the most common failures
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

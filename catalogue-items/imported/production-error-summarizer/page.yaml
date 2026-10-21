@@ -6,6 +6,24 @@ summary: Ask about recent errors. Get the Sentry issues and events summed up wit
 job: test-and-fix-code
 headline: Production error summarizer
 subhead: Ask about recent errors. Get the Sentry issues and events summed up with the key details.
+explain: |
+  Ask what broke in production and get a short, readable answer pulled straight from Sentry. No clicking through dashboards to find the issues that matter.
+
+  The skill uses the Sentry command line tool in read-only mode. It lists unresolved issues from the last 24 hours in the production environment, newest first, with title, level and priority. You can then open one issue to see its events and details. It never changes anything in Sentry. You need the Sentry CLI installed and signed in, and you set your access token locally, never in chat.
+when:
+  - You just shipped a release and want to know if new errors appeared.
+  - You are on call and need the top live issues in a minute.
+  - A teammate asks what went wrong overnight and you need a summary.
+  - You want the key facts on one failing issue without opening the Sentry site.
+you_give:
+  - A question about recent errors, such as a time range or project
+  - Sentry CLI installed and signed in
+  - Organisation and project names (optional, usually found automatically)
+you_get:
+  - List of recent unresolved issues
+  - Priority and level for each
+  - Event details for any issue you pick
+  - A short plain summary of what is going wrong
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

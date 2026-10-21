@@ -6,6 +6,25 @@ summary: Give it a phone photo of a product. Get a cleaner listing photo with fe
 job: product-photos
 headline: Product photo retoucher
 subhead: Give it a phone photo of a product. Get a cleaner listing photo with fewer wrinkles. Your image model edits it.
+explain: |
+  A casual phone photo of a product turned into a clean listing photo: wrinkles pressed out, shape straightened and evened, light balanced, background cleaned up.
+
+  Claude writes the editing prompt for an image model. It asks for specific fixes: remove random creases in the body and sleeves, square the shoulders, line up both sides, tidy the collar and hem, and remove hot spots. The prompt also tells the model to keep colors and details true. It focuses on how the item sits and how it is lit, not fabric texture. Claude cannot edit pixels itself. An image model does that step.
+when:
+  - Your product photos are wrinkled or crooked.
+  - Lighting in your shots is uneven.
+  - You want listing-ready photos without a studio.
+  - You need a quick clean-up before upload.
+you_give:
+  - A phone photo of the product
+  - What looks wrong with it
+  - Background preference (optional)
+  - Access to an image model
+you_get:
+  - An editing prompt for an image model
+  - A list of fixes to request
+  - Advice to keep true colors and details
+  - Tips to check the finished image
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

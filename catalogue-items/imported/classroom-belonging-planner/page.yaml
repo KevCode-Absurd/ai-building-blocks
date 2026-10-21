@@ -6,6 +6,26 @@ summary: Describe a class dynamic like cliques or new students. Get actions that
 job: teach-and-train
 headline: Classroom belonging planner
 subhead: Describe a class dynamic like cliques or new students. Get actions that help everyone feel part of the group.
+explain: |
+  Practical steps to make every student feel part of your class, aimed at the exact problem you face. Describe the group, such as cliques, an isolated child or new arrivals, and you get actions you can start this week.
+
+  The skill reads your class context and the specific belonging concern. It suggests small routines that bring students together, like mixed groups with real roles, greeting habits and ways for quiet students to contribute. For new students it plans a welcome and a buddy system. For cliques it plans seating and task changes. It skips what you already do, so you do not get repeats. It also suggests quiet signs to watch to see whether the changes are working.
+when:
+  - A student eats alone and joins no group.
+  - Two friendship groups split the class in half.
+  - A new student joined mid-term and has not settled.
+  - The class feels tense after a move up to a new school year.
+you_give:
+  - A description of your class
+  - The belonging concern
+  - Age and subject (optional)
+  - What you already do (optional)
+  - Time you can give (optional)
+you_get:
+  - A set of targeted actions
+  - Routines to start this week
+  - A welcome plan for new students
+  - Signs to watch for progress
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

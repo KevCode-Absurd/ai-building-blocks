@@ -6,6 +6,24 @@ summary: Give it a Telegram group export. Get a ranked list of unmet needs, each
 job: understand-customers
 headline: Chat export need finder
 subhead: Give it a Telegram group export. Get a ranked list of unmet needs, each backed by real quotes.
+explain: |
+  Thousands of group messages turn into a ranked list of problems people keep complaining about, with real quotes as proof. It reads a Telegram Desktop export and shows which needs are worth building something for.
+
+  It reads the file in small chunks, so a multi-gigabyte export will not crash your computer. It looks for phrases in English and Russian such as "I wish", "is there a bot" or "waste of time". Themes rank higher when they appear across several separate chats, because one angry person is a story and many people in many groups is a pattern. Every theme needs two to five exact quotes with date and chat name. Themes without quotes are marked unconfirmed.
+when:
+  - You run or study a Telegram community and want to know what members struggle with.
+  - You hunt for product ideas and want proof that people really ask for them.
+  - You have exports from several groups and want to compare them.
+  - Your export file is too big to open in a normal editor.
+you_give:
+  - One or more Telegram result.json exports
+  - The topic or niche you care about (optional)
+  - Extra search phrases (optional)
+you_get:
+  - Ranked unmet needs
+  - 2 to 5 exact quotes per need with dates
+  - How many chats each need appears in
+  - Weak themes marked unconfirmed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

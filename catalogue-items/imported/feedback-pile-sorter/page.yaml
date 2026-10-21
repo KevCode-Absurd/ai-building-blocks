@@ -6,6 +6,24 @@ summary: Give it feedback from tickets, NPS and calls. Get one ranked signal of 
 job: understand-customers
 headline: Feedback pile sorter
 subhead: Give it feedback from tickets, NPS and calls. Get one ranked signal of what customers need, not just the loudest voice.
+explain: |
+  One ranked picture of what customers need, built from tickets, surveys, calls and reviews, so the loudest person does not decide your roadmap.
+
+  The skill treats each channel differently, because support tickets show friction, sales calls show missing features, and surveys show broad mood. It weighs a signal by source quality, how often it appears and how relevant it is to the decision. That avoids two traps: giving the loudest voice the win, and averaging everything equally. You get themes with counts, which segment raised each one, and a short list of what to act on. It also helps audit a feedback process that makes volume but no decisions.
+when:
+  - Feedback comes from five places and nobody reads all of it.
+  - A big customer keeps pushing for one feature.
+  - You want to prove a theme is common, not one angry email.
+  - Your team collects feedback but never acts on it.
+you_give:
+  - Feedback exports from tickets, surveys or calls
+  - Customer segment or plan for each item (optional)
+  - The decision you are making (optional)
+you_get:
+  - Themes ranked by weighted signal
+  - Counts by source and segment
+  - A short list of actions
+  - Notes on weak or noisy channels
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

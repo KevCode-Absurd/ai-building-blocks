@@ -6,6 +6,25 @@ summary: Name a company. Get a table comparing its price multiples and key numbe
 job: money-and-investing
 headline: Peer multiples table builder
 subhead: Name a company. Get a table comparing its price multiples and key numbers with its peers.
+explain: |
+  A comparison table of your target company against its listed peers, showing price multiples and key figures side by side, so you can tell whether it looks cheap or dear. This version is set up for Indian markets.
+
+  The skill follows Indian conventions: the fiscal year runs April to March, periods are labelled like Q3 FY26, and money is in lakh and crore, with live formulas that divide by the right number rather than a number format that is wrong by 100 times. It reads data from institutional sources first, such as FactSet or S&P, and only then public filings, never web search as the main source. Where India has no matching measure, it says so.
+when:
+  - You are valuing an Indian listed company and need its peers' multiples.
+  - You are preparing a pitch and need a quick comps page.
+  - You want to see if a stock trades above or below its sector.
+  - You need figures in crore with correct fiscal year labels.
+you_give:
+  - The target company name
+  - Peer set, or sector to choose from (optional)
+  - Multiples wanted, such as P/E or EV/EBITDA
+  - Access to a financial data source
+you_get:
+  - A comps table with consistent periods
+  - Multiples calculated by live formula
+  - Median and mean across peers
+  - Notes on gaps with no Indian equivalent
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

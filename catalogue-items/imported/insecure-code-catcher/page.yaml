@@ -6,6 +6,24 @@ summary: Turn it on. Get a warning when your AI writes risky code, like injectio
 job: secure-code
 headline: Insecure code catcher
 subhead: Turn it on. Get a warning when your AI writes risky code, like injection, XSS or unsafe commands.
+explain: |
+  A warning right before your AI writes risky code, so common security holes are caught at the moment they would be added. It is a hook, not a command: once installed, it runs on its own before every edit or write.
+
+  It scans both the file path and the text about to be written. It checks for patterns tied to known attacks, such as running shell commands built from input, dynamic code evaluation, direct HTML injection in React or the browser, unsafe Python object loading, and risky expressions in GitHub Actions files. A match pauses the write with a note on the risk. It matches text patterns, so it flags and does not prove a bug.
+when:
+  - You let an AI edit code and want a safety net on every change.
+  - Your team works with web code where injection bugs are common.
+  - You edit workflow files and fear unsafe expressions.
+  - You want a warning before risky functions land in your repo.
+  - You are teaching a team which patterns are dangerous.
+you_give:
+  - Claude Code with hooks enabled
+  - The hook installed in your project settings
+  - Your own list of extra patterns (optional)
+you_get:
+  - A warning when risky code is about to be written
+  - The name and risk of the pattern found
+  - A pause so you can choose a safer option
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

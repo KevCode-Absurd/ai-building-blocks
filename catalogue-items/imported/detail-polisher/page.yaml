@@ -6,6 +6,25 @@ summary: Name one UI detail or slow function. Get several checked attempts, with
 job: build-software
 headline: Detail polisher
 subhead: Name one UI detail or slow function. Get several checked attempts, with the best version kept inside a set budget.
+explain: |
+  One small thing, made as good as it can be, with proof that the final version is better than the first. Think of a toggle that feels slightly off, or one function that runs too slowly.
+
+  You name a single target and a goal. The skill does not accept its first answer. It makes several attempts, checks each one (screenshots for UI, timing for speed), and keeps the best-supported result, not simply the latest one. It stops once the goal is met, and every run has a hard limit on attempts so it never loops forever. UI checks need a browser or screenshot tool. Without one, you get one unverified proposal. It is not for redesigns.
+when:
+  - A button or toggle transition feels clumsy and you cannot say why.
+  - One layout breaks at a certain screen width and you want it fixed properly.
+  - A single function is too slow and its output must stay exactly the same.
+  - You want a small piece of work tested several ways, not guessed once.
+you_give:
+  - One target, such as a component, file or function
+  - The goal in your own words
+  - A browser or screenshot tool for UI checks (optional)
+  - A limit on how many attempts to allow (optional)
+you_get:
+  - The best checked version of your target
+  - A short note on each attempt and how it was tested
+  - Before and after evidence
+  - A clear statement of whether the goal was met
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

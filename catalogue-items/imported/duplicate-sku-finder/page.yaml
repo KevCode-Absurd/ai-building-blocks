@@ -6,6 +6,25 @@ summary: Get a list of products that share the same SKU or barcode, so stock and
 job: run-your-store
 headline: Duplicate SKU finder
 subhead: Get a list of products that share the same SKU or barcode, so stock and orders stop mixing up.
+explain: |
+  Find the products in your Shopify store that share a SKU or barcode before they cause wrong stock counts and mixed-up orders. You get a list of every clash, with the product names.
+
+  The skill is read-only and safe to run at any time. It signs in through the Shopify CLI with permission to read products, then fetches every variant in pages of 250. It builds a map from each SKU and each barcode to the variants using it, and reports any that appear more than once. You can choose to check SKUs, barcodes or both, and ask it to flag variants with a blank SKU as well. Output is plain text or JSON.
+when:
+  - Stock sold on one product drops on another.
+  - You are about to sync with a warehouse and need clean IDs.
+  - You want blank SKUs found too.
+  - You inherited a catalogue and do not trust it.
+you_give:
+  - Store domain
+  - Whether to check SKUs, barcodes or both
+  - Flag blank SKUs? (optional)
+  - A Shopify CLI sign-in with product read access
+you_get:
+  - A list of duplicate SKUs and barcodes
+  - The products and variants that clash
+  - Blank SKU flags (optional)
+  - Plain or JSON output
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

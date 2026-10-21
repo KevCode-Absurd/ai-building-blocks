@@ -6,6 +6,25 @@ summary: Give it your CRM leads and ad history. Learn if your lead source fields
 job: track-numbers
 headline: Lead source field checker
 subhead: Give it your CRM leads and ad history. Learn if your lead source fields are good enough to link leads to ads.
+explain: |
+  A yes or no on whether your CRM's source fields are good enough to link leads to the ads that brought them. Give it CRM rows and ad history rows, plus a binding that says which CRM fields join to which ad account, platform and entity type. Joins are never guessed from a bare ID.
+
+  It measures how complete and consistent the fields are, then returns one verdict per field: propose, corroborate, reject, capture missing or pre-window. Only counts, rates and shape summaries are kept, never raw customer rows. It does not prove causal attribution. It needs Node to run the checks and the thresholds you set.
+when:
+  - You suspect your lead source field is blank or messy.
+  - You want to know if campaign IDs in your CRM match your ad platform.
+  - You are deciding whether to fix tracking before building attribution.
+  - Your agency says attribution is hard and you want evidence.
+you_give:
+  - CRM lead rows with source fields
+  - Ad history rows
+  - A mapping of CRM fields to ad accounts
+  - Your acceptance thresholds
+you_get:
+  - A verdict per field
+  - Fill and consistency rates
+  - Gaps in what is captured
+  - Counts you can share without customer data
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

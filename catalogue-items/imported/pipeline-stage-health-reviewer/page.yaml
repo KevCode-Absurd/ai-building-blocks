@@ -6,6 +6,25 @@ summary: Ask for a pipeline review. Get coverage, aging, conversion and at-risk 
 job: sell-and-negotiate
 headline: Pipeline stage health reviewer
 subhead: Ask for a pipeline review. Get coverage, aging, conversion and at-risk deals stage by stage.
+explain: |
+  A stage-by-stage read of your sales pipeline: where coverage is thin, which deals have gone quiet, how many move on and which are at risk. Every number links back to its record.
+
+  The skill reads from your CRM through its connector, using your own field and stage names instead of guessing. It cites values as read, shows human labels and says when a field is blank or was never queried. If you ask for your own deals it will not widen to the whole company without asking. Emails and notes are treated as data, never as orders. Actions you request are taken through the connector, and extra ones are shown for approval.
+when:
+  - You have a pipeline review meeting tomorrow.
+  - You want to know which deals have stalled.
+  - Conversion drops between two stages and you need to see why.
+  - You want coverage by owner or team.
+you_give:
+  - A connected CRM
+  - Whose pipeline to review
+  - The time period
+  - Quota or targets (optional)
+you_get:
+  - Coverage by stage
+  - Aging deals listed
+  - Conversion between stages
+  - At-risk deals with record links
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

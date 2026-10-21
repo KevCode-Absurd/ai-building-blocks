@@ -6,6 +6,26 @@ summary: Say who your community is for. Get a plan to start it, grow it and turn
 job: grow-social
 headline: Community growth planner
 subhead: Say who your community is for. Get a plan to start it, grow it and turn members into advocates.
+explain: |
+  A plan to start a community, grow it and turn members into people who speak up for you. It ties what members enjoy to results your business can measure.
+
+  It first asks what your product does, which platform you use, such as Discord, Slack, Circle or Reddit, what stage you are at, your main goal and who your ideal member is. The goal can be retention, support savings, product feedback or word of mouth. Missing details are assumed and flagged. It then builds strategy principles, a launch approach, ways to keep activity going and a path from new member to advocate. It reads your product marketing notes first if you have them.
+when:
+  - You want to launch a community around your product.
+  - Your group has 50 members and has gone quiet.
+  - You want fewer support tickets through peer help.
+  - You need a way to find and reward your best members.
+you_give:
+  - Your product or brand
+  - The community platform
+  - Current stage and size
+  - Your main goal
+  - Your ideal member
+you_get:
+  - A community strategy
+  - A launch plan
+  - Ways to keep members active
+  - A path from member to advocate
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Find products missing barcode, SKU, vendor or weight. Get the gaps fill
 job: build-websites
 headline: Product data gap filler
 subhead: Find products missing barcode, SKU, vendor or weight. Get the gaps filled so AI can quote exact items. Updates live products.
+explain: |
+  Missing barcodes, SKUs, vendors, product types and weights found and filled, so AI tools can quote an exact in-stock item. When this data is blank, a shopping agent cannot confirm the product is the one asked for and picks a rival with full data.
+
+  Claude scans your Shopify products and variants for blank fields. Vendor and product type are set at product level. Barcode and SKU are set per variant. You see the gaps and proposed values before anything is written. It changes live data, so you need an authenticated Shopify CLI session with product write access, and you should supply real barcodes rather than guesses.
+when:
+  - Your product pages show no GTIN or SKU.
+  - AI shopping tools skip your items in favour of competitors.
+  - Vendor or product type is blank on many products.
+  - You are cleaning up a catalog after a bulk import.
+you_give:
+  - Your store domain
+  - Barcode, SKU and vendor data you already have
+  - Which products to check
+  - Approval before changes go live
+you_get:
+  - A report of products with missing fields
+  - Fields filled where data is known
+  - Variant-level barcode and SKU updates
+  - A list of gaps only you can fill
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

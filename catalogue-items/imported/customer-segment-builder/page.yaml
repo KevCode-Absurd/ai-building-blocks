@@ -6,6 +6,25 @@ summary: Run it on your customers. Get each one scored on recency, frequency and
 job: run-your-store
 headline: Customer segment builder
 subhead: Run it on your customers. Get each one scored on recency, frequency and spend, then grouped from Champions to Lost.
+explain: |
+  Not all customers deserve the same email. This scores each Shopify customer on how recently they bought, how often, and how much they spent, then sorts them into groups from Champions to Lost.
+
+  This is called RFM scoring. Every customer gets 1 to 5 on each of the three measures, based on how they rank against the rest of your base. The score combination decides the group: Champions, Loyal, At Risk, Lost and others, each with a clear definition. You can set the look-back window, the number of buckets and the minimum orders. It reads data only unless you ask it to tag customers, which needs write access and a dry run first.
+when:
+  - You want a VIP list for early access or a thank-you.
+  - You need to choose who gets a win-back email.
+  - You plan different offers for new and loyal buyers.
+  - You want to see how your customer base is shaped.
+you_give:
+  - Your Shopify store and read access
+  - Look-back window (optional)
+  - Minimum orders to include (optional)
+  - Whether to tag customers (optional, needs write access)
+you_get:
+  - Recency, frequency and spend scores
+  - Customers grouped by segment
+  - Segment sizes and revenue
+  - Optional tags added to customer records
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

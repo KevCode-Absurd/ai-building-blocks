@@ -6,6 +6,24 @@ summary: Describe your product. Get a style guide for a raw, blunt look, with ty
 job: design-work
 headline: Raw brutalist style guide writer
 subhead: Describe your product. Get a style guide for a raw, blunt look, with type, colour, states and checks.
+explain: |
+  A style guide for a raw, blunt, anti-polish look, ready for designers and developers to build from. It covers type, colour, spacing, states and checks, so the harsh look stays consistent and still works for people.
+
+  You describe your product. The guide draws on the feel of raw concrete buildings: heavy type, sharp edges, flat blocks of colour and jarring layouts that put function first. It sets a type scale and fonts, a colour palette with named tokens, and a spacing scale. It then defines how buttons, inputs and focus states look. Accessibility is kept in: it targets WCAG 2.2 AA and visible keyboard focus, so rough does not mean unusable.
+when:
+  - You want a site that looks deliberately rough and bold.
+  - A designer and a developer need one shared set of rules.
+  - You have a brutalist mockup but no written system.
+  - You need to check that a harsh style still passes accessibility.
+you_give:
+  - Product description
+  - Audience and tone
+  - Brand colours (optional)
+you_get:
+  - Type and colour tokens
+  - Spacing scale
+  - Component and state rules
+  - Accessibility checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

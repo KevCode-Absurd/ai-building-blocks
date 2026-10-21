@@ -6,6 +6,26 @@ summary: Give it your projects. Get risks scored, resources balanced and a clear
 job: plan-strategy
 headline: Project risk and portfolio manager
 subhead: Give it your projects. Get risks scored, resources balanced and a clear status for stakeholders.
+explain: |
+  A clear picture across all your projects: which risks cost the most, where people are overloaded and which projects need attention first. You end with a status report leaders can read in two minutes.
+
+  The skill scores each risk by expected money impact, which is probability times cost, and can model schedule risk with Monte Carlo ranges. It ranks competing projects using methods such as WSJF, RICE or MoSCoW, and checks team capacity against what is planned. Each project gets a health score on several dimensions and a red, amber or green status. A responsibility matrix clarifies who decides what. It suits large, multi-team work.
+when:
+  - You manage several projects and must decide which gets people first.
+  - Leaders ask for a status report and you have a pile of updates.
+  - You need to put a dollar figure on project risks.
+  - Dependencies between teams are causing surprises.
+you_give:
+  - List of projects with budget, dates and owners
+  - Known risks with rough odds and impact
+  - Team capacity and assignments
+  - Audience for the report (optional)
+you_get:
+  - Risk register with expected cost
+  - Priority ranking of projects
+  - Resource load check
+  - Health scores and status colours
+  - Executive summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

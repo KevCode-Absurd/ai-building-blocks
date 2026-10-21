@@ -6,6 +6,25 @@ summary: Name the duplicate and the one to keep. Get the records merged with tag
 job: run-your-store
 headline: Customer record merger
 subhead: Name the duplicate and the one to keep. Get the records merged with tags and notes kept. Changes live customer data.
+explain: |
+  Duplicate customers split orders, notes and history across two records. Name the duplicate and the one to keep, and the two are merged in Shopify with tags and notes carried over.
+
+  It tries Shopify's own merge first, which moves orders, addresses and subscriptions to the record you keep. If that is not available, it copies the tags and notes across by hand and leaves a note on the old record pointing to the winner. It runs as a preview by default so you can check the plan first. Merging cannot be undone once done. This changes live customer data and needs Shopify write access.
+when:
+  - You found the same person twice after an import.
+  - A customer used two emails and their orders are split.
+  - Support cannot see the full history on one record.
+  - You are cleaning up before an email campaign.
+you_give:
+  - Your Shopify store with write access
+  - The ID of the record to keep
+  - The ID of the duplicate to merge in
+  - Options for tags and notes (optional)
+you_get:
+  - A merge preview
+  - One combined customer record
+  - Tags and notes carried over
+  - A note on the old record pointing to the new one
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

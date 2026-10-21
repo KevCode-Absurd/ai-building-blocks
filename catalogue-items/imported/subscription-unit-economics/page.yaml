@@ -6,6 +6,26 @@ summary: Give it customer and revenue data. Get cohorts, LTV to CAC, retention a
 job: money-and-investing
 headline: Subscription unit economics analyst
 subhead: Give it customer and revenue data. Get cohorts, LTV to CAC, retention and payback worked out.
+explain: |
+  A clear read on whether a recurring revenue business makes money on each customer. You see how cohorts behave, what a customer is worth against what they cost, and how fast you earn it back.
+
+  Give it customer and revenue data. The skill first identifies the business model, then works out the core numbers: recurring revenue by cohort, lifetime value to acquisition cost, net revenue retention and payback period. It compares each against benchmarks for the sector, scores the quality of the revenue, and presents the result with the margin steps from revenue to profit. It is written for investors assessing a target but suits any founder.
+when:
+  - You are weighing up buying or investing in a software company.
+  - You want to know if your customer acquisition spend pays back.
+  - Revenue is growing but you suspect customers leave quickly.
+  - You need a cohort view for a board pack.
+you_give:
+  - Revenue by customer or cohort over time
+  - Customer acquisition spend
+  - Cost of serving customers
+  - Sector or business model
+you_get:
+  - Cohort retention tables
+  - LTV to CAC ratio
+  - Net revenue retention
+  - Payback period
+  - A revenue quality score
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

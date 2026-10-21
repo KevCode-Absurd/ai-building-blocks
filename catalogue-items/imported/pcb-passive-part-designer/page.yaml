@@ -6,6 +6,25 @@ summary: Say which part you need, such as an inductor or balun. Get it designed 
 job: build-software
 headline: PCB passive part designer
 subhead: Say which part you need, such as an inductor or balun. Get it designed and checked.
+explain: |
+  Tell it the part, such as a spiral inductor, interdigital capacitor, ring resonator or balun, and get a design you can measure instead of guess at. It pulls out the numbers that matter: inductance, capacitance and self-resonant frequency.
+
+  The skill creates the part from a catalogue object, tunes it for your target frequency, and then reads its values at that frequency. It can use fast behavioural S-parameters for quick estimates. Before a full solve it checks the mesh and memory need, so you do not start a run that will not finish. After design you move on to full-wave checks, tuning and circuit work. It runs in MATLAB with the RF PCB Toolbox, and needs a substrate set first.
+when:
+  - You need a spiral inductor for a given inductance on your board.
+  - You want to check where a capacitor stops acting like a capacitor.
+  - You are building a balun to join a balanced and an unbalanced line.
+  - You want a ring resonator for a filter or test structure.
+you_give:
+  - The part type
+  - Your target frequency
+  - The substrate and metal you use
+  - Size limits (optional)
+you_get:
+  - A designed part object
+  - Inductance, capacitance or resonance values
+  - Quick behavioural S-parameters
+  - A memory and mesh estimate before the full solve
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

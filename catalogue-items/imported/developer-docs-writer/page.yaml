@@ -6,6 +6,25 @@ summary: Give it your product or draft docs. Get clear developer documentation t
 job: document-work
 headline: Developer docs writer
 subhead: Give it your product or draft docs. Get clear developer documentation that follows Google's style guide.
+explain: |
+  Developer documentation that a reader can follow to finish a task, written and checked to the standards of Google's developer style guide.
+
+  The skill starts with the reader: who they are and what they should be able to do afterwards. It checks every fact against your code before it writes a word. Then it applies the style rules: talk to the reader as "you", use active voice and present tense, put prerequisites before step one, and end each how-to with a check that it worked. It removes words like "simply" and "just". It can also audit existing docs and score them out of ten against a short checklist.
+when:
+  - Your README lists features but never says how to get a first result.
+  - You need to rewrite old docs so they match what the code does today.
+  - Your team writes docs in different voices and wants one standard.
+  - You want a score and a fix list for a page before you publish it.
+you_give:
+  - Your product, API or draft docs
+  - The code the docs describe
+  - Who will read them
+  - Your own style guide (optional)
+you_get:
+  - Clear, task-based documentation
+  - A fact check against your code
+  - A score out of 10 with failed checks listed
+  - Before and after rewrites of weak sentences
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

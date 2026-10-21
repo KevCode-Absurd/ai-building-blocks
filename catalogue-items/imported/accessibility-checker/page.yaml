@@ -6,6 +6,25 @@ summary: Point it at a page or code. Get a ranked list of accessibility problems
 job: test-and-fix-code
 headline: Accessibility checker
 subhead: Point it at a page or code. Get a ranked list of accessibility problems against WCAG 2.2, and fixes if you ask.
+explain: |
+  Accessibility problems on a page or in your code come back as a ranked list, checked against WCAG 2.2. Ask for fixes and it repairs them and checks again.
+
+  The skill first works out whether you want a report only or a fix. In report mode it changes nothing. It tries a live audit of a web address first, using a connected browser. Otherwise it reads the code. Each finding is ranked by impact. In fix mode it edits, then re-runs the check to confirm the problem is gone. Automated checks cover only part of WCAG, so the skill says so rather than claiming full conformance. It needs a checking tool or browser connection.
+when:
+  - You are about to launch a page and want to find barriers first.
+  - A customer says your site is hard to use with a screen reader.
+  - You want colour contrast problems fixed and confirmed.
+  - You need a report to hand to your developers.
+you_give:
+  - A page address or the code folder
+  - Report only or fix as well
+  - A signed-in browser session, if the page needs one (optional)
+  - The pages or parts to focus on (optional)
+you_get:
+  - A ranked list of WCAG 2.2 problems
+  - The place in the page or code for each
+  - Fixes applied and re-checked, if you asked
+  - A note on what automated checks cannot cover
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

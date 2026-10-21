@@ -6,6 +6,26 @@ summary: Describe the job. Get a multi-agent design with handoffs, failure handl
 job: set-up-ai
 headline: AI agent workflow designer
 subhead: Describe the job. Get a multi-agent design with handoffs, failure handling and cost limits.
+explain: |
+  A plan for splitting a big job across several AI agents, with clear handoffs, failure handling and a cost cap for each step. Many jobs do not need this. The skill tells you when one good prompt is enough.
+
+  It picks the smallest of five patterns that fits. Sequential suits a strict chain. Parallel splits independent parts and merges them. A router sends each request to the right specialist. An orchestrator plans and coordinates. An evaluator pairs a maker with a quality checker in a loop. Every handoff passes only what the next agent needs. Each step has a timeout, a retry rule and a budget, and outputs are checked before they are combined.
+when:
+  - One prompt cannot handle the job and you need specialist steps.
+  - You want to see the workflow on paper before building it.
+  - Your multi-agent set-up costs too much or fails with no clear cause.
+  - You need a quality gate between a writer agent and a checker agent.
+you_give:
+  - The job to be done
+  - The steps or specialists you imagine (optional)
+  - Cost and time limits
+  - Quality or safety checks you need (optional)
+you_get:
+  - A chosen workflow pattern with reasons
+  - Agent roles and boundaries
+  - What each handoff passes along
+  - Timeout, retry and cost rules
+  - Checks between steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

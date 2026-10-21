@@ -6,6 +6,27 @@ summary: Describe your data and goal. Get a repeatable pipeline from data prep t
 job: build-software
 headline: Machine learning pipeline builder
 subhead: Describe your data and goal. Get a repeatable pipeline from data prep to training, checks and release.
+explain: |
+  A machine learning pipeline you can run again next month and get the same answer. Every stage, from raw data to a released model, has a named input, a named output and a version.
+
+  First it looks at what you already use for code, storage and scheduling, and reuses it. Then it records your goal, your baseline and the score a model must reach. It draws the stages as a graph, adds data checks, sets the pass or fail gate before release, and plans retries and rollback. It finishes by testing the pipeline and writing down what passed.
+when:
+  - You have a notebook that works once and breaks when someone else runs it.
+  - You need a model release that only happens when it beats a set score.
+  - You must explain which data and code produced the model in production.
+  - You want retries and a rollback plan before the first failure, not after.
+you_give:
+  - Your goal and the score a model must reach
+  - Where the data lives and how often it changes
+  - Your current training and evaluation code
+  - Where the model will run
+  - Compute, cost or privacy limits (optional)
+you_get:
+  - A stage-by-stage pipeline graph
+  - Pipeline code in your existing tools
+  - Input and output schemas for each stage
+  - Pass or fail rules for release
+  - Retry, backfill and rollback steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

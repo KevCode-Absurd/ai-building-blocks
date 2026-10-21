@@ -6,6 +6,25 @@ summary: Say what shape the output must take. Get a model setup that always retu
 job: build-software
 headline: Guaranteed format generator
 subhead: Say what shape the output must take. Get a model setup that always returns valid JSON or matching text.
+explain: |
+  A model setup that cannot return broken output. Instead of asking a model nicely for JSON and hoping, this uses a Python library called Outlines to block every token that would break your format. A reply can only be valid JSON, one of a fixed list of choices, text matching a pattern, or an object that fits your Pydantic class.
+
+  You describe the shape once, as a schema, a regex or a list of allowed answers. The skill then writes the code to load a local model through Transformers, llama.cpp or vLLM and generate against that shape. You need Python and a model you can run yourself. Good for sorting text into labels and pulling fields out of messy text.
+when:
+  - Your script keeps crashing because the model returned broken JSON.
+  - You need every answer to be one of a fixed set of labels, such as positive, negative or neutral.
+  - You are pulling names, dates or emails out of text and need typed fields every time.
+  - You run a local model and want guaranteed structure without retries.
+you_give:
+  - The exact shape the output must take
+  - Example inputs to process
+  - Which local model or backend you use
+  - Your Python setup (optional)
+you_get:
+  - A schema or Pydantic class for your format
+  - Working Python code that generates against it
+  - Setup steps for your model backend
+  - Tips to keep generation fast
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

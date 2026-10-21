@@ -6,6 +6,24 @@ summary: Give it your colour tokens. Get light and dark theme pairs checked for 
 job: design-work
 headline: Colour contrast checker
 subhead: Give it your colour tokens. Get light and dark theme pairs checked for readability, with the closest passing colours.
+explain: |
+  Your colour tokens get checked for readability in both light and dark themes, and each failure comes with the closest colour that passes. Fix a token once and it is fixed everywhere it is used.
+
+  A small Node script reads the CSS custom properties in your project and pairs text colours with their backgrounds. It measures each pair in light and dark mode against the WCAG 2.2 AA minimums: 4.5 to 1 for normal text, 3 to 1 for large text and for borders, icons and focus rings. For failing pairs it keeps the hue and nudges lightness until it passes. It also suggests a single value that works on every background.
+when:
+  - You are about to approve a new colour palette.
+  - Your dark mode text is hard to read.
+  - An accessibility audit flagged low contrast.
+  - You added a brand colour and need to know where it fails.
+you_give:
+  - Your CSS file with colour tokens
+  - Which tokens are text and which are backgrounds (optional)
+  - Node installed
+you_get:
+  - A pass or fail list for each pair
+  - Light and dark results
+  - Closest passing colours
+  - One fix value per token
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

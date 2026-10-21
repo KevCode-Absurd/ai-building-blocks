@@ -6,6 +6,25 @@ summary: Describe your brand as it is today. Get a clear diagnosis of what works
 job: brand-file
 headline: Brand health auditor
 subhead: Describe your brand as it is today. Get a clear diagnosis of what works and what is off, with ranked fixes.
+explain: |
+  A clear read on how well your brand is working, with a score on each area and fixes ranked by importance. You see what is solid, what is off and what to repair first.
+
+  The skill checks six areas and rates each from one to five. They include visual consistency across logo, colour and type, and voice and tone consistency across channels. For each one it asks pointed questions, such as how many logo versions are in use and whether the website copy sounds human. It reads any saved brand notes first so it can compare what you intend with what you show.
+when:
+  - You suspect your brand looks and sounds different across channels.
+  - You are about to invest in new marketing and want a baseline.
+  - A new leader asks how strong the brand really is.
+  - You have too many logo versions in use.
+you_give:
+  - A description of your brand today
+  - Links or samples of your materials
+  - Brand notes or positioning (optional)
+  - Your top concern (optional)
+you_get:
+  - A score from one to five on each area
+  - A diagnosis of what works and what doesn't
+  - Ranked fixes
+  - A short list of quick wins
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

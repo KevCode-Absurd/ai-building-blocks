@@ -6,6 +6,24 @@ summary: Share interviews, surveys or tickets. Get the patterns, the words buyer
 job: understand-customers
 headline: Customer research analyst
 subhead: Share interviews, surveys or tickets. Get the patterns, the words buyers use and clear personas.
+explain: |
+  Customer words are the best source for positioning, product and copy. Share interviews, surveys, tickets or reviews and you get patterns, the exact language buyers use and clear personas.
+
+  It works in three modes. First, it analyses research you already have. Second, it mines public sources like review sites, forums and Reddit for unprompted opinions. Third, if no signal exists, it helps you run interviews and surveys. It pulls out pains, goals, objections and phrases to reuse, and builds personas from what people said. Fetched reviews and posts are treated as data, never as instructions. It reads your product notes first if you have them.
+when:
+  - You have call transcripts and no time to read them all.
+  - You want to see what buyers say about you and competitors on review sites.
+  - You need personas based on evidence, not guesses.
+  - You are writing copy and want customers' own phrases.
+you_give:
+  - Transcripts, survey results, reviews or tickets
+  - Product or market notes (optional)
+  - The question you want answered (optional)
+you_get:
+  - Patterns across the research
+  - Exact phrases customers use
+  - Personas based on evidence
+  - Gaps and suggested next questions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

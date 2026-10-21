@@ -6,6 +6,25 @@ summary: Paste the feedback your tool gives students. Get a check of its timing 
 job: teach-and-train
 headline: AI feedback quality checker
 subhead: Paste the feedback your tool gives students. Get a check of its timing and wording, plus a better version.
+explain: |
+  A check of the feedback your AI tool gives students, with a better version written for you. Vague feedback such as "good effort" changes nothing. Feedback that does the thinking for the student teaches nothing.
+
+  You paste what the student did and what the AI said back. The check compares it with what research says works. It looks at timing, whether the comment is about the task, the method or the student's own self-checking, and whether it avoids praising the person. The report says what works and why. Then it writes a rebuilt reply, specific enough to act on that leaves the effort with the student.
+when:
+  - Your AI tutor gives replies like "great job" that do not help.
+  - Your AI feedback gives away the answer.
+  - "You are choosing when an AI should comment: right away or after an attempt."
+  - You want to compare the feedback two tools give.
+you_give:
+  - What the student submitted
+  - The AI's current feedback
+  - The subject and level
+  - The learning goal (optional)
+you_get:
+  - A diagnosis of what works and what does not
+  - A rewritten reply
+  - The reasons behind each change
+  - Set-up tips for timing and tone
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

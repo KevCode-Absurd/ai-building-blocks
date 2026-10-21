@@ -6,6 +6,25 @@ summary: Say what people tried before and why it failed. Get a named new method 
 job: make-offer
 headline: Why-it-works story builder
 subhead: Say what people tried before and why it failed. Get a named new method and the reason it works now.
+explain: |
+  The story that explains why your offer works when other things people tried did not. You get a named method with a believable reason behind it, ready to use in copy.
+
+  The process is short. You say what people tried before and why it failed. The skill then pins down what is different about your approach and why it works now, rather than five years ago. Last, it gives the idea a name that is simple, easy to remember and yours alone. The result is four lines: the failed method, the new mechanism, its name and why it works. It keeps claims believable so the story survives a sceptical reader.
+when:
+  - Your sales page says what you sell but not why it works.
+  - Prospects say they have tried everything already.
+  - You need a name for your method.
+  - Your offer sounds like every competitor's.
+you_give:
+  - What your audience tried before
+  - Why those attempts failed
+  - What your product does differently
+  - Proof you can back the claim with (optional)
+you_get:
+  - Failed method summary
+  - New mechanism explained
+  - Memorable method name
+  - Why-it-works paragraph
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

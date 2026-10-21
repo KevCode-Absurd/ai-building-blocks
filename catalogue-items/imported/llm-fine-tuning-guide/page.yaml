@@ -6,6 +6,27 @@ summary: Say your model and GPU. Get a fine-tuning plan and code with Unsloth, s
 job: build-software
 headline: LLM fine-tuning guide
 subhead: Say your model and GPU. Get a fine-tuning plan and code with Unsloth, sized to your memory, ready to export.
+explain: |
+  A fine-tuning plan and working code for your model and your graphics card, sized to the memory you have so it does not run out halfway through. Tell it the model, the GPU and the goal.
+
+  It works through six steps with Unsloth. First, it estimates memory before any code. Then it loads the model and fixes the chat template, a common cause of models that ignore stop tokens. It attaches LoRA adapters, runs the training, and exports to the format your runtime needs, such as GGUF. It covers QLoRA on a 16 GB GPU and reward-based methods like GRPO and DPO. You need Python and a GPU.
+when:
+  - You want a model that follows your format and have one consumer GPU.
+  - Training crashes with out of memory part way through.
+  - Your tuned model repeats the prompt or never stops.
+  - You need a file you can run locally after training.
+you_give:
+  - Base model
+  - GPU and memory
+  - Training data
+  - The goal of the tuned model
+  - Export target, like GGUF (optional)
+you_get:
+  - A memory estimate
+  - Training code
+  - A fixed chat template
+  - A tuning run setup
+  - Export steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

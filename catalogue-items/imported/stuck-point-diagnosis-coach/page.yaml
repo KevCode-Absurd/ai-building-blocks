@@ -6,6 +6,25 @@ summary: When you are stuck or wrong, work out why first. Then get help aimed at
 job: teach-and-train
 headline: Stuck-point diagnosis coach
 subhead: When you are stuck or wrong, work out why first. Then get help aimed at the real gap.
+explain: |
+  A coach that makes you name why you are stuck before it helps, so the help lands on the real gap and not just the surface error. Answers handed over too early often fix the wrong thing.
+
+  You share the mistake or the point where you froze, plus what you tried. The coach then asks you to say what you think went wrong. It checks that against what you wrote, separates a slip from a missing idea, and only then gives a hint pitched at the right level. The aim is a learner who can spot their own breakdown next time. It adjusts wording to the learner's age band and keeps the full exchange as a short transcript.
+when:
+  - A student gets the same type of question wrong and keeps asking for the answer.
+  - You are learning something yourself and want to know why you keep failing at one step.
+  - You tutor and want help that goes to the cause of an error.
+  - A learner says 'I don't get it' and you need a way in.
+you_give:
+  - The mistake or the place you got stuck
+  - The task or topic around it
+  - What you already tried (optional)
+  - The learner's age or level (optional)
+you_get:
+  - A guided diagnosis step before any help
+  - The likely gap behind the error
+  - A hint matched to that gap
+  - A way to catch the same problem next time
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

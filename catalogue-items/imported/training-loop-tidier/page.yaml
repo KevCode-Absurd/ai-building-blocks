@@ -6,6 +6,25 @@ summary: Give it a messy training script. Get a clean one with checkpoints, logg
 job: build-software
 headline: Training loop tidier
 subhead: Give it a messy training script. Get a clean one with checkpoints, logging and multi-GPU support built in.
+explain: |
+  A messy PyTorch training script becomes a clean one with checkpoints, logging and multi-GPU support already in place. You stop rewriting the same boilerplate for every project.
+
+  The skill moves your code into PyTorch Lightning. You put the model in a LightningModule with training and validation steps, and the Trainer handles the loop. From there you switch on distributed training with DDP, FSDP or DeepSpeed by changing a setting, not rewriting code. Callbacks cover saving the best model, early stopping and learning rate logging. The same script runs on a laptop or a GPU cluster. It needs Python with the lightning and torch packages.
+when:
+  - Your training script is full of manual loops, device moves and save code.
+  - You want to move from one GPU to several without a rewrite.
+  - You need checkpoints and early stopping you can trust.
+  - You are handing code to a teammate who must read it.
+you_give:
+  - Your current PyTorch training script
+  - Your hardware, such as number of GPUs
+  - What you want to log or save (optional)
+  - Distributed strategy preference (optional)
+you_get:
+  - A cleaned LightningModule
+  - A configured Trainer
+  - Checkpoint and logging callbacks
+  - Settings for multi-GPU runs
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

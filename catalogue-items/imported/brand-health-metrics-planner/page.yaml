@@ -6,6 +6,25 @@ summary: Say what your brand should achieve. Get the numbers to track, how to co
 job: track-numbers
 headline: Brand health metrics planner
 subhead: Say what your brand should achieve. Get the numbers to track, how to collect them and how to read them.
+explain: |
+  A measurement plan that tracks your brand against its own goals, not generic numbers. You get the metrics to follow, how to collect each one and how to read the results.
+
+  It starts from your goal, such as awareness, preference, loyalty or higher prices, and from your stage, since a new brand has no baseline. It then names one headline metric and builds out groups of measures, for example perception metrics like sentiment across social posts and review sites. It fits your tools and budget, so a team with no research money gets free and owned data options.
+when:
+  - You need to show leaders that brand work is paying off.
+  - You have no baseline for a newly launched brand.
+  - You want to track sentiment but have no survey budget.
+  - You are unsure which brand numbers matter for your goal.
+you_give:
+  - What your brand should achieve
+  - Whether it is new or established
+  - The tools and budget you have
+  - Who needs to see the results
+you_get:
+  - One headline metric
+  - A list of metrics grouped by purpose
+  - How to collect each one
+  - Guidance on reading the numbers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

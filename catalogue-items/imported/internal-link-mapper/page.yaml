@@ -6,6 +6,26 @@ summary: Give it your pages. Get which pages should link to which, with anchor t
 job: get-found-in-search
 headline: Internal link mapper
 subhead: Give it your pages. Get which pages should link to which, with anchor text and orphan pages to fix.
+explain: |
+  A map of which pages should link to which, with the anchor text to use and a list of orphan pages that nothing links to. Good internal links help readers and help search engines find your best pages.
+
+  You give it your pages as a list, each with title, URL and target keyword. The skill checks how pages relate by topic, then proposes links from one to another with natural anchor text rather than repeated exact phrases. It flags orphans, pages buried too deep, and key pages with too few links in. Pages not yet published are included with a blank URL so you can plan links before launch.
+when:
+  - You publish often and old posts never get linked.
+  - Some pages get no links in and no traffic.
+  - You are planning a topic cluster and need the link plan.
+  - You want better anchor text than "click here".
+  - You are launching new pages and want them linked from day one.
+you_give:
+  - A list of pages with titles and URLs
+  - The target keyword for each page
+  - Page content or summaries (optional)
+  - Your priority pages (optional)
+you_get:
+  - A link map from page to page
+  - Suggested anchor text
+  - A list of orphan pages
+  - Pages that need more links in
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

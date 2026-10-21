@@ -6,6 +6,25 @@ summary: Ask about your traffic, sign-ups or top pages. Get a clear Google Analy
 job: track-numbers
 headline: Google Analytics reader
 subhead: Ask about your traffic, sign-ups or top pages. Get a clear Google Analytics report, pulled live and read only.
+explain: |
+  Ask about your traffic in plain words and get a Google Analytics 4 report built from live data. Ask for sessions by source, top pages, sign-ups last week or how a campaign did, and it runs the query and reads it back.
+
+  It uses a command-line tool for the GA4 Admin and Data APIs. Almost everything is read only. The one exception is creating an audience export. It signs in with a Google service account, found by flag, profile name, environment variable or a default file, and it checks the login before each run. If the login fails, it tells you what to fix. It needs Node and a service account with access to your property.
+when:
+  - You need last week's top pages without opening GA4.
+  - A boss asks how many sign-ups came from a campaign.
+  - You want the same traffic report run every Monday.
+  - You want to compare traffic across several properties.
+you_give:
+  - A GA4 property
+  - A service account with access
+  - Your question or metric
+  - Date range (optional)
+you_get:
+  - A clear traffic report
+  - Live numbers from GA4
+  - The query that produced them
+  - Notes if sign-in fails
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

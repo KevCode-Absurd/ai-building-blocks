@@ -6,6 +6,25 @@ summary: Pick products and a tag. Get it added or removed on all of them. Change
 job: run-your-store
 headline: Product tag bulk editor
 subhead: Pick products and a tag. Get it added or removed on all of them. Changes your live catalog; preview first.
+explain: |
+  A tag added or removed on every product in a collection, tag group or search result, in one run. Campaign setup and teardown no longer mean editing products one at a time.
+
+  You say whether to add or remove, give the tags, and pick the products by collection, existing tag or search query. Claude lists what will change, applies it and reports the count. Use it to add a summer-sale tag before a promotion, remove flash-sale tags after it ends, or retag items moving between categories. It changes your live catalog, so preview first. You need an authenticated Shopify CLI session with product write access.
+when:
+  - A sale starts and a whole collection needs a promotion tag.
+  - A campaign ended and its tags must go.
+  - You are reorganising how products are tagged.
+  - You tag by vendor or product group and want it done fast.
+you_give:
+  - Your store domain
+  - Add or remove, and the tag names
+  - A collection, tag or search query to select products
+  - Confirmation after reviewing the preview
+you_get:
+  - A preview of affected products
+  - Tags added or removed on all matches
+  - A count of changes made
+  - A list of failures
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

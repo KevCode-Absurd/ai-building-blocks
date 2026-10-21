@@ -6,6 +6,25 @@ summary: Describe what to show. Get a chart, diagram or explainer with sliders a
 job: design-work
 headline: Interactive visual builder
 subhead: Describe what to show. Get a chart, diagram or explainer with sliders and toggles, ready to open in a browser.
+explain: |
+  A diagram, chart or explainer that you can click and drag, with sliders and toggles, ready to open in a browser. It picks the right type of visual from the way you phrase the request.
+
+  The skill routes on the verb. "How does it work" gives an illustrative diagram, "what are the steps" gives a flowchart, "compare these" gives a comparison grid, "show revenue" gives a chart, and "explain compound interest" gives an interactive explainer with controls. Diagrams are drawn as SVG and the interactive pieces as HTML. On hosts without a built-in widget tool, it saves a complete page you open yourself.
+when:
+  - You want to explain an idea with a slider the reader can move.
+  - You need a flowchart of steps for a page.
+  - You have numbers and want a chart with toggles.
+  - You want to compare options in a simple grid.
+  - You need a visual that works without special software.
+you_give:
+  - What you want to show
+  - The data or facts to include
+  - Where it will be used (optional)
+you_get:
+  - The right visual type chosen for your request
+  - An SVG diagram or HTML explainer
+  - Controls like sliders and toggles
+  - A page you can open in a browser
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it each entity's balances. Get mismatches found, settlement netted
 job: money-and-investing
 headline: Intercompany balance matcher
 subhead: Give it each entity's balances. Get mismatches found, settlement netted and elimination entries drafted.
+explain: |
+  Your group's internal balances matched across entities, with each mismatch traced, settlements netted and elimination entries drafted. That clears the way for a clean consolidation at month end.
+
+  The skill starts with a map of who trades with whom: goods, services, royalties, loans, dividends. It checks each flow has a signed agreement and an arm's length price. Both sides must book in the same period. Mismatches are worked in a fixed order: timing, exchange rate, missing entry, then price dispute. It then supports netting of cash settlements and prepares the elimination entries. Old unsettled balances are flagged because tax authorities look at them.
+when:
+  - Two group companies show different amounts for the same balance.
+  - You are closing the month and need elimination entries.
+  - You want to net many internal payments into fewer cash moves.
+  - A new internal service needs a pricing and booking setup.
+  - Old internal balances keep piling up unsettled.
+you_give:
+  - Each entity's intercompany balances
+  - The entity map and transaction types
+  - Your matching tolerance policy (optional)
+  - Exchange rates used
+you_get:
+  - A list of mismatches with causes
+  - A netting and settlement plan
+  - Draft elimination entries
+  - Notes on pricing and agreements
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your finished analysis. Get a write-up with the question, data,
 job: document-work
 headline: Analysis write-up builder
 subhead: Give it your finished analysis. Get a write-up with the question, data, method, results and steps to rerun it.
+explain: |
+  A finished analysis turned into a write-up that someone else can read, trust and rerun. It covers the question, the data, the method, the results and the steps to repeat it, so your future self will not have to guess.
+
+  First it decides who is reading: data people, business people or both. Then it writes the business context, notes each data source with its dates, row counts and known problems, and explains the method, including tool versions and the choices made. Results come in order of importance with captioned charts. Each finding links to a business meaning and a next action. The last section gives the rerun steps.
+when:
+  - You are about to share an analysis and want it documented properly.
+  - You are handing a notebook to a teammate.
+  - A recurring report needs to be rerun the same way each time.
+  - A peer review or audit is coming.
+you_give:
+  - Your code (SQL, Python or notebook) and outputs
+  - The business question and who asked
+  - Key findings and recommendations
+  - Data source details and tool versions
+you_get:
+  - A complete analysis document
+  - Data source and method sections
+  - Results with captioned charts
+  - Recommendations and rerun steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

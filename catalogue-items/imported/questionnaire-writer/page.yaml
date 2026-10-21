@@ -6,6 +6,24 @@ summary: Tell it who you need answers from. Get a questionnaire aimed at what th
 job: organise-work
 headline: Questionnaire writer
 subhead: Tell it who you need answers from. Get a questionnaire aimed at what they know and you do not.
+explain: |
+  When you need answers only one person has, you get a ready document to send them. It is built so they can reply on their own time, or you can fill it in together in a meeting.
+
+  The skill asks you just two things: who it goes to, and what you need back. Those are things you can always answer. It then writes the questions aimed at the gap between what you know and what they know. Questions are grouped by theme with the most important first. Each has one idea, a line on why it matters, and an empty space to answer. There is a short note on how to reply, and a last catch-all question.
+when:
+  - You need a decision input from an expert who is too busy for a call.
+  - You are taking over a project and must learn what others know.
+  - A new client holds facts you need before you can start.
+  - You want a meeting to run from a prepared list of questions.
+you_give:
+  - Who the questionnaire goes to and their role
+  - The facts or decisions you need back
+  - Deadline (optional)
+you_get:
+  - Questionnaire document in Markdown
+  - Questions grouped by theme, most important first
+  - Why each question matters
+  - How-to-answer note and catch-all question
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

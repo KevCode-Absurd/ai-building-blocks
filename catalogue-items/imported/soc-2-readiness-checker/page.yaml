@@ -6,6 +6,25 @@ summary: Name your scope. Answer six questions and get gaps to fix before the SO
 job: secure-code
 headline: SOC 2 readiness checker
 subhead: Name your scope. Answer six questions and get gaps to fix before the SOC 2 Type II watch period.
+explain: |
+  A list of gaps to close before your SOC 2 Type II watch period starts. You name your scope, answer six pointed questions, and see where an auditor would push back.
+
+  Type II looks at how controls work over months, not on one day, so the questions focus on that. They cover which trust categories are in scope, whether any control skipped a cycle, whether evidence exists for each period, how changes and incidents were handled, and whether the system description is complete. You can run it at the start, at the month six checkpoint, before the audit field work, or after a major incident. It prepares you for the audit but is not a replacement for your auditor.
+when:
+  - You are about to start a SOC 2 Type II observation period.
+  - You are halfway through the period and want a checkpoint.
+  - A control skipped a monthly review and you need to know the damage.
+  - You added a new trust category and need to recheck scope.
+you_give:
+  - "Your scope: the systems and teams covered"
+  - Which trust categories you plan to include
+  - Your current controls and evidence (optional)
+  - Where you are in the audit cycle
+you_get:
+  - Answers to six readiness questions
+  - A list of gaps ranked by risk
+  - Missed cycles flagged
+  - Next steps before the audit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

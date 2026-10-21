@@ -6,6 +6,24 @@ summary: Give it two 3D scans. Get them lined up and merged, with the right meth
 job: build-software
 headline: Point cloud aligner
 subhead: Give it two 3D scans. Get them lined up and merged, with the right method chosen and tuned.
+explain: |
+  Two or more 3D scans lined up into one, with the best method chosen and tuned for your data. It is useful for building a map from lidar scans or merging overlapping captures.
+
+  The skill starts with plane-to-plane iterative closest point, measures the fit with RMSE, and applies the result with the align tool. For scans far apart it points to global methods that estimate an initial transform. It also guides cleaning before alignment and merging after. It steers away from older transform types. It works on 3D clouds only and needs MATLAB with the Computer Vision and Lidar Toolboxes.
+when:
+  - Two lidar scans overlap slightly and need joining.
+  - You are building a map from a long run of scans.
+  - Your first alignment attempt drifts or fails.
+  - You are not sure which algorithm suits your clouds.
+you_give:
+  - Point cloud data from two or more scans
+  - A rough starting alignment (optional)
+  - Noise level or scan type (optional)
+you_get:
+  - Aligned and merged point clouds
+  - The method chosen and its settings
+  - An RMSE accuracy figure
+  - Preprocessing steps used
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

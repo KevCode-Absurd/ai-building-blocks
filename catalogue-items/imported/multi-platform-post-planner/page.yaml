@@ -6,6 +6,26 @@ summary: Say what you want to share. Get posts made for each platform, with hook
 job: grow-social
 headline: Multi-platform post planner
 subhead: Say what you want to share. Get posts made for each platform, with hooks and a posting plan.
+explain: |
+  Posts for X, LinkedIn, Instagram and Facebook from one idea, each written to suit its platform, plus a plan for when to post.
+
+  The skill starts with your goal and audience, because a business-to-business launch leans on LinkedIn and X while a consumer brand leans on Instagram and Facebook. It then writes separate versions: short with a hook for X, longer with line breaks for LinkedIn, caption plus tags for Instagram, and a short question for Facebook. The first line gets the most work, since it shows before the see more break. Each post ends with one clear action, and a calendar sets the posting order.
+when:
+  - You have one announcement and four places to post it.
+  - Your posts get no replies and you do not know why.
+  - You need a week of content planned in one sitting.
+  - You are launching a product and need a post for each channel.
+you_give:
+  - What you want to share
+  - Your goal, such as sales or awareness
+  - Your audience and platforms
+  - Brand voice notes (optional)
+you_get:
+  - A post for each platform
+  - First-line hooks
+  - Hashtag choices
+  - A clear action to close each post
+  - A posting calendar
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

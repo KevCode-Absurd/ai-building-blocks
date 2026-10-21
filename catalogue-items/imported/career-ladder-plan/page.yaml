@@ -6,6 +6,25 @@ summary: Name a job family. Get career levels, growth plans and a manager guide 
 job: hire-people
 headline: Career ladder and growth plan writer
 subhead: Name a job family. Get career levels, growth plans and a manager guide for career talks.
+explain: |
+  Name a job family and get clear career levels, growth plans and a guide for managers on career talks. People can see what each level expects and what to do to reach the next one.
+
+  The skill builds a ladder from entry to senior leadership with level definitions and progression criteria. It can set up two tracks, one for specialists and one for managers, or a lattice with sideways moves. It writes individual development plans, 90-day plans and self-assessment questions. It also gives managers prompts for career conversations and sets ways to measure whether the programme works, such as promotion rates and retention.
+when:
+  - People keep asking what they need to do to get promoted.
+  - You are creating levels for a team that never had them.
+  - Managers avoid career talks because they do not know what to say.
+  - You want a development plan template for each person.
+you_give:
+  - The job family or function
+  - Current titles and levels (optional)
+  - The skills that matter in the role
+  - Company size and goals (optional)
+you_get:
+  - Level definitions and promotion criteria
+  - A specialist and manager track
+  - An individual development plan template
+  - A guide for manager career conversations
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your research notes. Get personas, a path map and a usability t
 job: understand-customers
 headline: User persona and path mapper
 subhead: Give it your research notes. Get personas, a path map and a usability test plan.
+explain: |
+  Your research notes turned into three working tools: personas that match real people, a map of what they go through, and a plan to test your design with them. Your team gets the same picture of who you are building for.
+
+  You supply user data such as age, how often they use the product, features used, device and pain points. A script groups similar people into archetypes and writes each persona with goals, frustrations and behavior. The skill then lays out a path map with stages, actions, feelings and chances to improve. It plans a usability test with tasks and the number of participants. It also helps combine interview findings into themes and an empathy map.
+when:
+  - You have survey and interview data but no clear picture of your users.
+  - A new team member needs to understand your customers in five minutes.
+  - You are about to redesign and want to base it on evidence.
+  - You need to work out how many people to interview.
+you_give:
+  - User data or interview notes
+  - What the product does
+  - Research questions (optional)
+  - Python installed for the scripts
+you_get:
+  - Data based personas
+  - A path map with pain points
+  - A usability test plan
+  - A summary of research themes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

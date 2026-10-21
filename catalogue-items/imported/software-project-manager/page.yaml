@@ -6,6 +6,25 @@ summary: Describe your project. Get work split into tasks, sprints tracked and s
 job: organise-work
 headline: Software project manager
 subhead: Describe your project. Get work split into tasks, sprints tracked and status reports written.
+explain: |
+  A software project broken into clear tasks, with sprints tracked and status reports written for you. You describe the project, team and deadlines, and the skill acts as a project manager.
+
+  It gathers the team, capacity and method you use, like Scrum or Kanban. Then it splits each goal into epics, user stories and sub-tasks small enough to finish in a day or two, each with acceptance criteria. It estimates effort, plans sprints around what the team can handle, and writes progress reports that flag risks and slipping dates. It can connect to Jira, Linear, GitHub Issues or Trello if you give it access. Without access, it produces lists you can paste in.
+when:
+  - You have a big goal and no task list.
+  - You need a status report for your manager every Friday.
+  - Your sprint is overloaded and you need to cut scope.
+  - You want tasks written so any developer can pick them up.
+you_give:
+  - The project goals and deadlines
+  - Your team and their capacity
+  - "Your method: Scrum, Kanban or mixed"
+  - Tracker access, such as Jira (optional)
+you_get:
+  - Epics, stories and tasks with acceptance criteria
+  - Effort estimates
+  - A sprint plan
+  - Status reports with risks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

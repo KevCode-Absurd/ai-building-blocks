@@ -6,6 +6,25 @@ summary: Name your rival. Get a battlecard with comparisons, reply scripts, posi
 job: sell-and-negotiate
 headline: Sales battlecard builder
 subhead: Name your rival. Get a battlecard with comparisons, reply scripts, positioning and win themes.
+explain: |
+  A one-page guide your sales team can use in a live deal against a named rival. Give it the competitor and get comparisons, reply scripts and the points that win deals.
+
+  It first researches the rival: product, pricing, recent launches, review sites and common customer complaints. It then lists what they do well, because reps lose trust if they deny it, and where they are weak. A side-by-side feature table marks each row as a strong lead, slight lead, even or behind, using claims you can check. Five to eight common objections each get a reply that acknowledges, reframes and proves. Finally it adds three or four win themes with talk tracks, such as total cost or time to value.
+when:
+  - A rival keeps showing up in your deals and reps lack a consistent answer.
+  - A competitor launched a feature and sellers are asking what to say.
+  - New reps need to learn how to position against a key rival.
+  - You want to prepare for a head-to-head evaluation.
+you_give:
+  - The competitor name
+  - Your product and main strengths
+  - Common objections reps hear (optional)
+  - Your target buyers (optional)
+you_get:
+  - A feature comparison table
+  - Objection reply scripts
+  - A positioning statement
+  - Win themes with talk tracks
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

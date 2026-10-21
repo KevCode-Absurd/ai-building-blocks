@@ -6,6 +6,24 @@ summary: Run it on your customers. Get each one scored for churn risk from how o
 job: run-your-store
 headline: Customer churn risk scorer
 subhead: Run it on your customers. Get each one scored for churn risk from how often they buy and how long since.
+explain: |
+  Customers rarely announce they are leaving. They just stop buying. This reads your Shopify orders and scores every repeat customer for churn risk, from 0 to 100, based on how overdue they are.
+
+  For each customer with at least two orders it works out their usual gap between purchases. It then compares that to the time since their last order. Someone who is within their normal rhythm scores low. Someone at one and a half times their usual gap or more gets flagged as at risk. You can set the history window, the minimum orders and the risk threshold. It only reads data and changes nothing. It needs Shopify access.
+when:
+  - You want to know who to send a win-back email to this week.
+  - Repeat buyers have gone quiet and you cannot tell who matters.
+  - You sell a product people reorder and want to catch lapses early.
+  - You are choosing which customers to call before a sale.
+you_give:
+  - Your Shopify store and read access
+  - History window in days (optional)
+  - Minimum orders and risk threshold (optional)
+you_get:
+  - A 0 to 100 churn score per customer
+  - "Groups: active, cooling, at risk"
+  - Each customer's usual buying gap and days overdue
+  - A list ready to export
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

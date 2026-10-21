@@ -6,6 +6,25 @@ summary: Describe your shipments. Get what to track at each step, how to tag ite
 job: plan-supply-chain
 headline: Shipment tracking planner
 subhead: Describe your shipments. Get what to track at each step, how to tag items, and alerts for late or lost goods.
+explain: |
+  A tracking plan that shows where your goods are at each step and warns you when something is late or lost. It also gives you the trail you need for a recall or an audit.
+
+  It begins with why you track (customer service, compliance, recalls) and how fine the detail should be: pallet, case, unit or serial number. Then it reviews your systems and data capture, such as barcodes, RFID and sensors. From that it sets what to record at each handover, how to tag items, and which events trigger alerts. It also decides who sees what, inside the company and outside it.
+when:
+  - Customers keep asking where their order is and you cannot tell them.
+  - A regulator or buyer wants proof of where a batch has been.
+  - You need to find every shipment holding a recalled lot.
+  - You want alerts before a delay becomes a complaint.
+you_give:
+  - What you ship and how it moves
+  - The level of detail you need
+  - Your current systems (optional)
+  - Rules you must follow (optional)
+you_get:
+  - A list of events to record at each step
+  - A tagging and labelling scheme
+  - Alert rules for late or lost goods
+  - A plan for who sees tracking data
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

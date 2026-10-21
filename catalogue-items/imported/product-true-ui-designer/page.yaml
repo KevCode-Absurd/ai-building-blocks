@@ -6,6 +6,25 @@ summary: Give it your product and screen. Get an interface built from your own d
 job: design-work
 headline: Product-true UI designer
 subhead: Give it your product and screen. Get an interface built from your own design system, with every state covered.
+explain: |
+  An interface for your product that looks like your product, not a generic template. It is built from your existing components, spacing and type, with every state covered.
+
+  Claude begins with the screen's real job: who uses it, their main action and the content needed. It then lists the states to design for, including loading, empty, error, success, disabled and permission. It reuses your design system and tokens before inventing anything new. Outside reference screens are optional, used only when they answer a specific visual question. The last step is to inspect the rendered result and fix what looks off.
+when:
+  - You are building a screen and want it to match your product.
+  - AI-built interfaces keep coming out generic.
+  - You are reviewing a design before it ships.
+  - You need to cover empty and error states.
+you_give:
+  - Your product brief and the screen's purpose
+  - Your existing components and design tokens
+  - "Platform: web or iOS"
+  - A reference or screenshot (optional)
+you_get:
+  - A screen built on your design system
+  - Designs for loading, empty, error and other states
+  - A review of the rendered result
+  - A list of fixes before shipping
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

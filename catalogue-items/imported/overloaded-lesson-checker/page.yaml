@@ -6,6 +6,25 @@ summary: Paste a task or handout. Get the places that overload learners, with ch
 job: teach-and-train
 headline: Overloaded lesson checker
 subhead: Paste a task or handout. Get the places that overload learners, with changes that lighten it.
+explain: |
+  A diagnosis of where a task or handout asks too much of learners at once, with specific changes that lighten it without dumbing it down.
+
+  Paste the task, instructions or resource and say who it is for. The skill looks at three kinds of load. The first is how complex the content itself is, based on how many ideas must be held together. The second is difficulty added by poor design, such as split attention, clutter or unclear steps. The third is useful effort that builds understanding. It marks where each is too high for that learner's level and suggests edits, since what helps beginners can slow experts. Based on cognitive load theory.
+when:
+  - Students freeze when you hand out a multi-step task.
+  - A worksheet looks busy and you suspect it is too much.
+  - You are adapting a resource for weaker or newer learners.
+  - You want to check your own materials before teaching.
+you_give:
+  - The task, handout or instructions
+  - Age and prior knowledge of learners
+  - Learning aim (optional)
+  - Time available (optional)
+you_get:
+  - Load diagnosis in three areas
+  - The exact points of overload
+  - Specific edits to try
+  - A lighter version of the task
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your problem. Get new directions from eight creative methods, 
 job: research-topics
 headline: Original research idea generator
 subhead: Describe your problem. Get new directions from eight creative methods, such as borrowing ideas from other fields.
+explain: |
+  Fresh research directions that are not a small tweak of last year's paper. You get ideas from eight proven creative methods, each fitted to your own problem.
+
+  The skill is built for computer science and AI work. It combines distant concepts, reframes the problem, borrows structure from another field, adds a constraint, flips an assumption, moves up a level of abstraction, probes the edge of what is possible and holds two opposing ideas at once. For each method it asks questions that push you past the obvious and keeps the link to your topic. It stresses real structural parallels, not surface likeness. Pair it with a planning step afterward to sort and test the ideas.
+when:
+  - You are stuck in one corner of your subfield.
+  - You are preparing for a research retreat or ideation session.
+  - You want a cross-field idea, not just a literature gap.
+  - Every idea you have looks like an extension of someone else's paper.
+you_give:
+  - Your problem or research area
+  - What has been tried
+  - Your constraints (optional)
+  - Fields you know well (optional)
+you_get:
+  - Ideas from eight creative methods
+  - Cross-field analogies
+  - Reframed versions of your problem
+  - A short list worth testing
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

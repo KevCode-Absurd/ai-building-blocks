@@ -6,6 +6,27 @@ summary: Describe your food business. Get a plan for shelf life, safe handling, 
 job: plan-supply-chain
 headline: Food supply chain planner
 subhead: Describe your food business. Get a plan for shelf life, safe handling, tracing and cold storage.
+explain: |
+  A supply chain plan for a food or drink business that covers shelf life, safe handling, traceability and cold storage. It aims to cut waste while keeping to food safety rules.
+
+  First it asks about your products, how fast they spoil, temperature needs, and how you sell, whether to shops, restaurants or online. It checks rules and certifications such as FSMA, HACCP and allergen control. Then it plans stock rotation, cold chain steps, recall tracing depth and how to handle demand peaks and promotions. You get a plan that shows where spoilage and delays happen and what to change first.
+when:
+  - Too much of your stock spoils before it sells.
+  - You need a recall tracing process that works in hours.
+  - You are adding cold storage or a new distribution centre.
+  - A retailer is asking for certifications and you need a plan.
+you_give:
+  - Product list and shelf life
+  - Temperature needs
+  - Sales channels
+  - Certifications or rules you must meet
+  - Current waste levels (optional)
+you_get:
+  - Shelf-life and rotation plan
+  - Cold chain checkpoints
+  - Traceability setup
+  - Waste reduction steps
+  - Priority list of changes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

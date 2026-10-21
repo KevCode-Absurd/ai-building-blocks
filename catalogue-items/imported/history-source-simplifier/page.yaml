@@ -6,6 +6,26 @@ summary: Paste a primary source and the learners' age. Get a shorter, simpler ve
 job: teach-and-train
 headline: History source simplifier
 subhead: Paste a primary source and the learners' age. Get a shorter, simpler version that keeps what they need to analyse.
+explain: |
+  A shorter, easier version of a primary source that still works as evidence. Paste a document and say how old your learners are. You get a version they can read, with the parts they need for analysis left in.
+
+  The skill keeps the full source note: author, date and where it came from. It keeps the writer's voice and any loaded words, then shortens sentences instead of swapping vocabulary. Hard words go in a word bank at the bottom with plain definitions, never explanations of what the writer meant. Every cut is marked with brackets, and the note says the text is adapted. Key passages can appear in both forms side by side.
+when:
+  - A source is too hard or long for your class.
+  - You want to keep loaded words so learners can analyse them.
+  - You have learners with English as an extra language and need glossing.
+  - You need an honest, marked adaptation instead of a rewrite.
+you_give:
+  - The original source text
+  - Learners' age or reading level
+  - Skills you want them to use on it
+  - Target length (optional)
+  - Other sources it will be compared with (optional)
+you_get:
+  - An adapted source with marked cuts
+  - A word bank of plain definitions
+  - Notes on what was changed
+  - A list of features kept for analysis
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

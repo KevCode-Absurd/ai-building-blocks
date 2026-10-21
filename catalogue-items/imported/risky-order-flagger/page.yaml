@@ -6,6 +6,26 @@ summary: Get orders Shopify marks as risky tagged for review, and held from ship
 job: run-your-store
 headline: Risky order flagger
 subhead: Get orders Shopify marks as risky tagged for review, and held from shipping if you choose. Changes live orders.
+explain: |
+  Orders Shopify rates high risk are tagged for review and, if you choose, held so they cannot ship until you check them. It changes live orders, so it starts as a preview.
+
+  The skill looks at orders from the last day by default, optionally only those over a value you set. Each flagged order gets a tag, fraud-review unless you rename it. If hold is on, it also places a fulfilment hold with a payment-risk reason. Customers wait while the hold is on, so turn the hold off if you only want tags. Run the dry run first to see the list. Holds are released later by a separate skill after you review.
+when:
+  - You want a daily queue of orders to check before shipping.
+  - A fraud wave hit and you need to stop risky orders leaving the warehouse.
+  - Staff keep missing high-risk flags in the admin.
+  - You want tags only, without delaying shipping.
+you_give:
+  - Your Shopify store address
+  - How many days back to check
+  - A minimum order value (optional)
+  - Tag name (optional)
+  - Whether to hold fulfilment
+you_get:
+  - A list of high-risk orders
+  - Tags on those orders
+  - Fulfilment holds if you chose them
+  - A dry-run preview before any change
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it your video idea. Get ten titles checked for length and repeats,
 job: grow-social
 headline: YouTube title and thumbnail checker
 subhead: Give it your video idea. Get ten titles checked for length and repeats, plus a thumbnail brief for the best.
+explain: |
+  Ten title ideas checked against hard limits, with a thumbnail brief for the winner. The title and thumbnail are planned as one unit so they do not say the same thing twice.
+
+  A Python tool checks each title against 60 characters, where desktop search cuts it, and 40, where the mobile feed does. It flags a thumbnail that repeats the title, more than three words on the thumbnail, and more than two all-caps words in a title. You see the top three titles with scores and the exact issue on each. For the winner you get a brief covering expression, framing, the three thumbnail words.
+when:
+  - You finished a video and have only a vague title.
+  - You suspect your title and thumbnail repeat each other.
+  - You want to see how a title looks cut off on mobile.
+  - You need a thumbnail brief for a designer.
+you_give:
+  - Your video idea or finished video summary
+  - Draft titles or a draft thumbnail text (optional)
+  - Your voice notes (optional)
+you_get:
+  - Ten titles scored for length and style
+  - The top three with their issues
+  - A thumbnail brief with three words or fewer
+  - "A closing question: ship it or change it"
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

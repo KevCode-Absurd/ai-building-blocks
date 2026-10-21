@@ -6,6 +6,24 @@ summary: Point it at your skill folder. Get a list of mistakes that stop it load
 job: make-skills
 headline: Skill portability checker
 subhead: Point it at your skill folder. Get a list of mistakes that stop it loading in other AI tools, with fixes.
+explain: |
+  A list of mistakes in your skill folder that stop it from loading in other AI tools, with a fix for each one. Your skill then works beyond the one app you built it in.
+
+  A Python script, using only the standard library, scans one skill or a whole repo and reports errors and warnings. Errors include broken front matter, a name that does not match the folder, a description over 1024 characters and links to missing files. Warnings cover extra front matter keys, vendor tool names, missing fallbacks and bodies over 500 lines. It then explains each finding in plain words. If you have no shell, paste the file and it checks by reading.
+when:
+  - You want your skill to work in several AI tools.
+  - A skill loads in one app and fails silently in another.
+  - You maintain a repo with many skills and need a bulk check.
+  - You want CI to fail on skill errors.
+you_give:
+  - A path to a skill folder or repo
+  - Python 3 for the script (or paste SKILL.md instead)
+  - Strict mode choice (optional)
+you_get:
+  - Errors and warnings by skill
+  - A plain explanation of each
+  - Fixes to apply
+  - Machine-readable output if you ask
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

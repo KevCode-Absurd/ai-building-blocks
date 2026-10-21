@@ -6,6 +6,25 @@ summary: Ask a question. Get a cited report with each claim checked against its 
 job: research-topics
 headline: Cited research report writer
 subhead: Ask a question. Get a cited report with each claim checked against its source quote. Uses many tokens. Scrapes sites.
+explain: |
+  Ask a question and get a written report where each important claim is tied to a source and a quote you can check. It leaves a full run folder behind, so you can see how the answer was reached. It uses many tokens and scrapes websites, so expect a longer wait and bigger usage.
+
+  You choose a size: quick, standard or deep. It clarifies the question, sets a plan for you to approve, then sends several research angles out in parallel. Scripts number the sources and check quotes. Central claims are confirmed with other sources, and supporting claims are matched to their quote. Weak claims are cut or marked. The result is a short answer or a report.
+when:
+  - You need a sourced answer on a market, policy or science question.
+  - You want to compare options and see the evidence for each.
+  - You care more about correct facts than a smooth essay.
+  - You want an audit trail to show where each claim came from.
+you_give:
+  - Your research question
+  - Scope such as time or place (optional)
+  - "Preset: quick, standard or deep"
+  - Brief or full report
+you_get:
+  - A cited report
+  - Source list with checked quotes
+  - A run folder with the audit trail
+  - Claims that failed checks removed or flagged
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

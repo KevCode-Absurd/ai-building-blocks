@@ -6,6 +6,25 @@ summary: Finish a work session. Get a record of what you drove, what Claude did 
 job: think-and-decide
 headline: Session credit reviewer
 subhead: Finish a work session. Get a record of what you drove, what Claude did and where you steered.
+explain: |
+  A record of a work session that shows what you drove, what Claude did and where you steered it. Much of your thinking never gets written down, such as why you picked one option over another.
+
+  At the end it reads recent git history and file changes, then rates the session high, medium or low. High means a new file, four or more files, a compared choice, or a bug with a known root cause. High gets full notes: a decisions log, session history, a work log and an HTML summary. Medium gets a work log only. Low gets nothing. It scores four lenses together: technical difficulty, your doubt, your direction and your judgement.
+when:
+  - You finished a long coding session and want the key decisions written down.
+  - You fixed a tricky bug and want the root cause on record.
+  - You need to show what you decided versus what Claude generated.
+  - You want a work log without writing it by hand.
+you_give:
+  - A finished work session
+  - Access to the git history
+  - The conversation context
+you_get:
+  - A signal level for the session
+  - A decisions log
+  - A work log
+  - A session history
+  - An HTML summary (for high signal sessions)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

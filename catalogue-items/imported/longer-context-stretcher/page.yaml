@@ -6,6 +6,25 @@ summary: Name your model. Get a method and code to make it read much longer docu
 job: build-software
 headline: Longer context stretcher
 subhead: Name your model. Get a method and code to make it read much longer documents than it was trained for.
+explain: |
+  A method, with working code, for making a language model read documents far longer than it was trained on. This is for people training or running models, and it needs Python and a GPU.
+
+  You name your model and the target length, such as 32k, 64k or 128k tokens. The skill covers four techniques for encoding word position: rotary embeddings, YaRN, ALiBi and position interpolation. It shows how to switch each on in the common Hugging Face tools, and when a short fine-tune is enough instead of full retraining. It points to the original papers, so you can check the maths. It also notes how to use FlashAttention to keep memory use down at long lengths.
+when:
+  - Your model fails on documents longer than its trained limit.
+  - You want to extend a Llama or Mistral model to a longer window cheaply.
+  - You are choosing between YaRN, ALiBi and position interpolation.
+  - You need to run a model on long inputs without running out of memory.
+you_give:
+  - The model name
+  - The context length you need
+  - Your GPU and memory limits
+  - Whether you can fine-tune (optional)
+you_get:
+  - A recommended technique and why
+  - Code to apply it
+  - Fine-tuning steps if needed
+  - Paper references to check against
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

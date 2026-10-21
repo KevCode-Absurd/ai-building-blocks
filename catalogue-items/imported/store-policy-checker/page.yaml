@@ -6,6 +6,25 @@ summary: Give it your store link or policy text. Get gaps, clashes and unclear w
 job: check-contracts
 headline: Store policy checker
 subhead: Give it your store link or policy text. Get gaps, clashes and unclear wording, with fixes to paste in.
+explain: |
+  A check of your shop's refund, shipping, privacy and terms pages that tells you what is missing, what contradicts itself and what will confuse customers, with fixed wording to paste in. Give it a store link or the policy text.
+
+  It reads each policy and the pages that repeat policy terms, like FAQ and returns, then compares every number and promise: return window, who pays return postage, restocking fees, final-sale items. It flags vague phrases such as in a timely manner, and checks rules for the regions you sell to. The report scores the store out of 100, lists the top fixes with exact quotes and says why each matters. It is not legal advice.
+when:
+  - You wrote your policies years ago and never reread them.
+  - Customers keep asking questions your return page should answer.
+  - Your FAQ says 30 days and your refund policy says 14.
+  - A payment or ad platform asked you to fix your policies.
+you_give:
+  - Your store link or pasted policy text
+  - Regions you sell to (optional)
+  - Details your policies leave out (optional)
+you_get:
+  - A score out of 100
+  - A top-fixes list with quotes
+  - A list of contradictions
+  - Rewritten wording to paste in
+  - Notes on region rules
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Name your buyer and offer. Get cold emails, follow-ups and a sending se
 job: write-emails
 headline: Cold email writer
 subhead: Name your buyer and offer. Get cold emails, follow-ups and a sending setup that gets replies.
+explain: |
+  Cold emails that read like a sharp person wrote them, plus follow-ups and a sending setup that keeps you out of spam. The goal is replies that turn into meetings.
+
+  It asks who you are writing to, what outcome you want, what value you offer, your proof, and any signal such as funding, hiring or a recent post. If you have little, it still writes and tells you what would make it better. It then covers the follow-up sequence, how to work with other channels, and how to handle replies. It checks your product marketing notes first, so you do not repeat yourself.
+when:
+  - You are starting outbound sales and need your first sequence.
+  - Your emails get opens but no replies.
+  - You have a buyer list and a clear offer.
+  - You need follow-ups that do not sound pushy.
+you_give:
+  - Who you are writing to
+  - Your offer and proof
+  - The outcome you want
+  - Research signals on the prospect (optional)
+you_get:
+  - Cold emails to send
+  - Follow-up messages
+  - Subject line options
+  - Sending setup advice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

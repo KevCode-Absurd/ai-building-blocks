@@ -6,6 +6,26 @@ summary: Give it a product or customer problem. Get job statements, struggling m
 job: understand-customers
 headline: Jobs-to-be-done framer
 subhead: Give it a product or customer problem. Get job statements, struggling moments and hire and fire reasons that sharpen your choices.
+explain: |
+  A way to stop guessing what customers want by asking what job they hired your product to do. Give it a product or customer problem. The skill separates three things teams often mix up: a list of feature requests, a decorative persona, and a real job.
+
+  It writes job statements in the form: when this, I want that, so I can get this. It finds struggling moments, the points where people give up on their current choice, and the reasons they hire and fire a solution. It tests each statement against a product decision your team is debating. It also warns about when this method becomes empty ceremony, so the output serves discovery, priorities and positioning.
+when:
+  - Your roadmap is a long list of feature requests with no pattern.
+  - Your personas are cute but do not help you choose what to build.
+  - You want to understand why customers switch away from you.
+  - You need sharper positioning for a product.
+you_give:
+  - A product or customer problem
+  - Interview notes or research (optional)
+  - A decision your team is debating (optional)
+  - Who your customers are (optional)
+you_get:
+  - Job statements
+  - Struggling moments
+  - Hire and fire reasons
+  - A test of the framing against your decision
+  - Notes on how to use the jobs in priorities and positioning
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

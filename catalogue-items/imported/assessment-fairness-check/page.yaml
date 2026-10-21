@@ -6,6 +6,25 @@ summary: Paste a quiz or task and its goals. Get a check that it tests the right
 job: teach-and-train
 headline: Assessment fit and fairness checker
 subhead: Paste a quiz or task and its goals. Get a check that it tests the right things and marks fairly.
+explain: |
+  A review of a quiz, essay task or test that tells you whether it measures what you meant it to measure and whether two markers would give the same grade. Paste the task, how it is marked and what students should have learned.
+
+  The check looks at three things. First, validity: does the task really test the learning goal, or does something else, like reading speed, get in the way? Second, reliability: is the marking clear enough that scores would not change by marker? Third, effects: what happens to students who score low? You get the problems found, fixes in order of importance, and an overall verdict before you use the task.
+when:
+  - You wrote a new end-of-unit test and want a second opinion.
+  - Two teachers marked the same essay and gave very different grades.
+  - Students who know the topic still score poorly on one task.
+  - You must show a department that an assessment lines up with the curriculum.
+you_give:
+  - The assessment and how it is marked
+  - The learning goals it should test
+  - Year group or level
+  - Purpose and stakes (optional)
+you_get:
+  - A fit check against the learning goals
+  - Marking consistency problems
+  - Unfair or distracting features found
+  - Ranked fixes and a verdict
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe your audience and goals. Get an editorial plan that maps conte
 job: plan-strategy
 headline: Content strategy planner
 subhead: Describe your audience and goals. Get an editorial plan that maps content to funnel stages.
+explain: |
+  An editorial plan that matches each piece of content to a buyer stage and a business goal, so every article has a reason to exist. You can see what to publish, in what order, and what each piece should achieve.
+
+  You describe your audience, goals and current content. The skill maps topics to awareness, consideration and decision stages, builds a calendar, and gives each item a format, a goal and a measure of success. It can also audit the content you already have and sort it into keep, update, merge or cut. It ends with how to review results, so the plan changes when the numbers say it should.
+when:
+  - You publish often but cannot tell which posts help sales.
+  - You need a three month calendar for your team or a client.
+  - You want to audit old content and decide what to update or remove.
+  - You must show your boss how content connects to goals.
+you_give:
+  - Your audience and their questions
+  - Business goals
+  - Your current content list (optional)
+  - Team size and publishing capacity
+you_get:
+  - Editorial calendar
+  - Topics mapped to funnel stages
+  - Content audit with keep, update or cut calls
+  - Success measures per piece
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

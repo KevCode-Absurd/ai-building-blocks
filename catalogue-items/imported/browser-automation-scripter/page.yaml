@@ -6,6 +6,24 @@ summary: Say what to do in a web browser. Get Playwright code written and run fo
 job: test-and-fix-code
 headline: Browser automation scripter
 subhead: Say what to do in a web browser. Get Playwright code written and run for it, with results and screenshots.
+explain: |
+  Say what you want done in a web browser and get working Playwright code, run for you, with the results and screenshots. Good for checking a site, filling forms or testing a page.
+
+  The skill first looks for running local sites and asks which one to use if there are several. It writes a fresh script in a temporary folder, never inside the skill, and opens a visible browser window so you can watch. The web address sits at the top of the script so you can change it. It runs the script and reports what happened. It needs Node.js and Playwright installed on your computer.
+when:
+  - You want to click through your site and confirm a flow works.
+  - You need to fill the same web form many times.
+  - You want screenshots of a page at different screen sizes.
+  - You need to check that your local site loads without errors.
+you_give:
+  - A plain description of what to do in the browser
+  - The web address, or a local site running
+  - Form values or login details for testing (optional)
+you_get:
+  - A Playwright script written for the task
+  - The script run in a visible browser
+  - A report of what happened
+  - Screenshots of the result
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

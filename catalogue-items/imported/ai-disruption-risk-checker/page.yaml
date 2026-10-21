@@ -6,6 +6,25 @@ summary: Name your business or industry. Get your exposure to AI on ten points a
 job: plan-strategy
 headline: AI disruption risk checker
 subhead: Name your business or industry. Get your exposure to AI on ten points and a 90-day plan to defend.
+explain: |
+  A score for how exposed your business is to AI, on ten points, and a 90-day plan to defend it. It finds where pressure from AI breaks your model first.
+
+  Tell it your industry, your type of business and, if you like, a named company. Each point is scored from 0 to 10: jobs AI can replace, how customers reach you, whether your expertise becomes free, pricing pressure, supply chain change, your data advantage, trust with customers, and more. A strong moat shows up as a low score. The result ranks your weakest spots and sets out an action plan for the next three months. It is strategy for planning, not audited research or investment advice.
+when:
+  - You want to know where AI could hurt your business first.
+  - You are checking a company before you invest or partner.
+  - You want to picture how an AI-first rival would take your customers.
+  - You need a plan for the next 90 days.
+you_give:
+  - Your industry
+  - Your type of business
+  - A company name (optional)
+  - What you think protects you today (optional)
+you_get:
+  - A score from 0 to 10 on ten points
+  - A ranked list of weak spots
+  - Where your advantages hold
+  - A 90-day defence plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Ask whether a marketing move will work. Get a straight verdict with the
 job: plan-strategy
 headline: Marketing decision coach
 subhead: Ask whether a marketing move will work. Get a straight verdict with the reasons, including "not worth doing".
+explain: |
+  A straight verdict on a marketing move, with the reasoning, including "not worth doing" when that is true. It gives a decision, not a list of tactics.
+
+  It starts from one idea: marketing is an exchange, so every action must trade for something real, such as money, clear prospects or a realistic chance of revenue. It reads your product, offer, audience, budget and channel data, then answers questions like where your first customers will come from, whether a test result is good, or whether to drop a channel. It checks how much volume a test needs before its result means anything. It will not make up proof, testimonials or case studies.
+when:
+  - You do not know where your first ten customers will come from.
+  - You ran a test and need to know if the result means anything.
+  - You are deciding whether to stop a channel or fix it.
+  - You want an honest opinion on a marketing plan, not a yes.
+you_give:
+  - Your product and offer
+  - Your audience and budget
+  - Channel numbers or test results (optional)
+  - The decision you face
+you_get:
+  - A clear verdict
+  - The reasoning behind it
+  - The volume a test needs
+  - A next step or a stop recommendation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

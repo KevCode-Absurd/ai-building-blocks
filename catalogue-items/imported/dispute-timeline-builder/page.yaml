@@ -6,6 +6,25 @@ summary: Give it your emails and documents. Get a dated timeline of what happene
 job: check-contracts
 headline: Dispute timeline builder
 subhead: Give it your emails and documents. Get a dated timeline of what happened, with key events marked. First check, not legal advice.
+explain: |
+  A dated timeline of what happened in a dispute, built from your emails and documents, with the most important events marked. It gives you a first working version to check, not legal advice.
+
+  The skill reads the case notes if they exist, then goes through your sources and pulls out every dated event. It merges duplicates and tags each event with its sources. Each one is marked red, yellow or grey for how much it matters to the case theory. Unreachable documents are listed as gaps. Before finalising, it asks you to scan the red entries for mistakes. It also asks if any papers came from legal disclosure, as their use can be limited.
+when:
+  - A contract dispute has dozens of emails and you need the order of events.
+  - You must brief a lawyer and want the facts laid out clearly.
+  - You are building the facts section of a letter or brief.
+  - You want to spot gaps in your records.
+you_give:
+  - Emails, letters and documents about the dispute
+  - Your view of the main issue
+  - Any key date or fact you already know (optional)
+  - Whether any papers came from legal disclosure
+you_get:
+  - A dated timeline with sources
+  - Events marked by importance
+  - A list of gaps and missing documents
+  - A version history when you update it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

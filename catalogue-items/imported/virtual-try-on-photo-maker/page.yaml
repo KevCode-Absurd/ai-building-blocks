@@ -6,6 +6,25 @@ summary: Give it a clothing flat lay and a pose photo. Get a model-wearing shot.
 job: product-photos
 headline: Virtual try-on photo maker
 subhead: Give it a clothing flat lay and a pose photo. Get a model-wearing shot. Your image model draws it, not Claude.
+explain: |
+  A photo of a model wearing your garment, made from a flat product shot and a pose photo. You skip the model, the studio and the shoot day.
+
+  You give two pictures: the garment laid flat and a reference photo that sets the pose, camera angle, light and background. The skill writes a precise prompt that tells the image model to keep the fabric, colour, texture and small details of the garment exactly as they are, and to copy the pose and scene from the reference. It also gives advice on picking a good reference. Claude does not draw the picture. A paid image model does, through an account and credits.
+when:
+  - You have a flat-lay photo of a sweater or dress and no budget for a photoshoot.
+  - You want product pages to show clothes on a person.
+  - You need the same garment shown on several poses or models.
+  - You want to test a listing photo before paying for real photography.
+you_give:
+  - A flat-lay photo of the garment
+  - A reference photo for pose and setting
+  - Output size and quality preferences (optional)
+  - An account with an image model service
+you_get:
+  - A ready-to-run prompt for the image model
+  - The command to make the on-model shot
+  - Tips for choosing a reference photo
+  - A check list for garment accuracy
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

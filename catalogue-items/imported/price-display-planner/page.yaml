@@ -6,6 +6,25 @@ summary: Give it a price you are weighing. Get whether to round it, how to price
 job: set-prices
 headline: Price digits and placement planner
 subhead: Give it a price you are weighing. Get whether to round it, how to price add-ons, and where to place it.
+explain: |
+  Decide how to show a price so it sends the signal you want. Give it a price you are weighing and learn whether to round it, how to price add-ons and where to put it on the page.
+
+  The skill first sorts your product as bought for pleasure or for practical use, because that changes the best ending. Pleasure buys often suit round prices, practical buys suit precise ones. It then covers add-on and upgrade pricing, flat rate against pay-per-use, colour and position on the product page, and opening prices for negotiations. It also notes market quirks, such as lucky endings in Japan and China.
+when:
+  - You can't decide between $200, $199 and $203.
+  - You are adding upgrades and want fair-looking prices.
+  - You want to know where the price should sit on the page.
+  - You are setting an opening price for a negotiation.
+you_give:
+  - Product and candidate price
+  - Brand position, premium or value
+  - Whether it is a promotion price
+  - Your market
+you_get:
+  - Round or precise price advice
+  - Add-on pricing structure
+  - Price placement and colour tips
+  - Reasoning behind each choice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

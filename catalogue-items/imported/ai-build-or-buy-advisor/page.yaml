@@ -6,6 +6,25 @@ summary: Describe an AI plan. Get an API vs fine-tune call, AI risk class under 
 job: set-up-ai
 headline: AI build-or-buy advisor
 subhead: Describe an AI plan. Get an API vs fine-tune call, AI risk class under EU rules and cost break-even.
+explain: |
+  Straight answers on four AI choices for a small company: use an API, fine-tune or build your own; whether your use is high risk under EU rules; when to move to your own hosting; and which AI role to hire next.
+
+  The skill includes small Python calculators. One compares a three-year cost for each model route. Another finds the break-even point where self-hosting beats paying per token. A third sorts your use case into a risk class under the EU AI Act, and notes US state rules and the NIST framework. The hire step maps your stage to the right role, since an AI engineer is not an ML engineer. This is not legal advice.
+when:
+  - You must pick between an API, a fine-tuned model and a custom build.
+  - You want to know if your AI use counts as high risk under EU law.
+  - Your API bill is growing and you wonder when self-hosting pays off.
+  - You are about to hire and are unsure which AI role you need.
+you_give:
+  - A description of your AI use case
+  - Expected monthly usage
+  - Your company's stage and team
+  - Where you operate and who is affected
+you_get:
+  - A model route recommendation with a three-year cost
+  - A break-even point for self-hosting
+  - A risk class and what it requires
+  - A next-hire recommendation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

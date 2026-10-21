@@ -6,6 +6,27 @@ summary: Name your feature. Get a launch plan with messaging, support prep, roll
 job: build-product
 headline: Feature launch planner
 subhead: Name your feature. Get a launch plan with messaging, support prep, rollout steps and rollback triggers.
+explain: |
+  A launch plan that covers more than shipping the code: messaging, sales and support prep, a rollout schedule, and clear triggers for rolling back. Many features fail because nobody launched them.
+
+  The skill starts by separating three things: shipping means the code is live, releasing means users can reach it, and launching means people know and are ready. It sizes the work by launch tier, so a small tweak gets a short list and a big feature gets the full plan. You get tasks by owner and date, a staged rollout, the metrics to watch, and the exact numbers that mean pause or roll back. It also helps audit a past launch that went quiet.
+when:
+  - Engineering is done but nobody has told sales or support.
+  - You are launching a feature to existing customers in stages.
+  - Your last launch got no attention and you want to know why.
+  - You need rollback triggers agreed before go-live.
+you_give:
+  - The feature name and what it does
+  - Who it is for
+  - Target date
+  - Team members involved (optional)
+  - Your spec or notes (optional)
+you_get:
+  - A launch tier and task list
+  - Messaging and support prep
+  - A staged rollout plan
+  - Metrics to track
+  - Rollback triggers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

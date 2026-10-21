@@ -6,6 +6,25 @@ summary: Give it your AI app. Get traces of every step, plus tests that score an
 job: build-software
 headline: Phoenix AI app tracer
 subhead: Give it your AI app. Get traces of every step, plus tests that score answers and spot failures.
+explain: |
+  See every step your AI app takes, score its answers, and catch failures before users do. Phoenix is an open-source tool you run yourself, with no vendor lock-in.
+
+  The skill covers setup and use. You install the packages, switch on tracing so each call and tool step is recorded, and open the interface to inspect them. You build versioned test sets, then run judge models that grade answers, and compare prompts or models through experiments. It also supports live monitoring in production. Data sits in SQLite or PostgreSQL. It needs Python and a running Phoenix server.
+when:
+  - Your chatbot gives odd answers and you need to see each step.
+  - You want to compare two prompts on the same test set.
+  - You need a regression check before shipping a change.
+  - You want to watch an AI app in production.
+you_give:
+  - Your AI app code
+  - A test set of questions (optional)
+  - Which framework you use
+  - What counts as a good answer
+you_get:
+  - Traces of every call and step
+  - Judge scores on answers
+  - Versioned test sets
+  - Experiment results comparing prompts or models
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

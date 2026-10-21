@@ -6,6 +6,27 @@ summary: Name a system. Get safe experiments that break parts on purpose, with l
 job: test-and-fix-code
 headline: Failure drill planner
 subhead: Name a system. Get safe experiments that break parts on purpose, with limits, checks and lessons.
+explain: |
+  A safe plan for breaking part of your system on purpose, so you learn how it fails before your customers do. Every plan has a stop rule, so a test cannot turn into an outage.
+
+  You name the service and what you expect to stay true, such as response time under 500 ms. The skill writes a hypothesis, picks a fault like slow network or a dead node, and sizes the blast radius from traffic share, users and duration. It sets abort limits and a rollback step before anything runs. It helps you choose a tool, such as Chaos Mesh, Litmus or AWS FIS, and a script writes up the result afterwards. The scripts use Python only.
+when:
+  - You want to test what happens when a payment service gets slow.
+  - You are planning a game day with your engineering team.
+  - You need to know how many users a test could affect.
+  - You want to review a colleague's experiment plan for safety.
+you_give:
+  - The service or system to test
+  - What should keep working (the steady state)
+  - The fault you want to try
+  - Traffic and user numbers
+  - Time window
+you_get:
+  - A structured experiment plan
+  - A blast radius estimate
+  - Abort criteria and a rollback step
+  - A tool suggestion
+  - A short results write-up
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it your goal and budget. Get a plan with test ideas, channel picks
 job: plan-ad-tests
 headline: Paid media budget planner
 subhead: Give it your goal and budget. Get a plan with test ideas, channel picks, spend split, targeting and what not to buy.
+explain: |
+  A paid media plan built on testable bets instead of habit. It tells you where your budget should go, what to test, and which spend to cut.
+
+  Each plan starts with a clear hypothesis: who you reach, the offer, the channel, the result you measure and the size of the change. You also decide in advance what number means keep going and what means stop. It then compares channels like search, shopping, Meta, TikTok and LinkedIn by fit with your buyer, splits budget, picks audiences and bid style, and explains why platform reports overstate results. It also names what not to buy.
+when:
+  - You inherited ad accounts that run on autopilot.
+  - You must split a budget across several platforms.
+  - You are deciding whether to scale or kill a campaign.
+  - You need a spend case to show your boss or investors.
+you_give:
+  - Goal and monthly budget
+  - Product and buyer
+  - Current channels and results (optional)
+  - Target cost per customer
+you_get:
+  - Channel picks with reasons
+  - Budget split
+  - Test hypotheses with stop and scale numbers
+  - Audience and bid guidance
+  - List of spend to avoid
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

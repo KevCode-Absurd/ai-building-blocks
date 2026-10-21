@@ -6,6 +6,26 @@ summary: Describe your team. Get a clear accommodation request process and manag
 job: hire-people
 headline: Workplace accommodation process builder
 subhead: Describe your team. Get a clear accommodation request process and manager guidance. Not legal advice; check with a lawyer or HR adviser.
+explain: |
+  Staff who need a workplace accommodation get a clear, kind way to ask, and managers get guidance on handling requests. It is not legal advice. Check the final version with a lawyer or HR adviser.
+
+  The skill designs the path from first request to follow-up: who to tell, what to ask, what paperwork to require and what to avoid asking for. It sets out how to hold the back-and-forth conversation with an employee. It also covers making hiring and interviews accessible by default, remote and hybrid arrangements, and how to weigh requests against business limits. Managers learn to support without asking for medical details. It adds ways to review outcomes later, so decisions stay consistent and fair.
+when:
+  - Your team has no written way for staff to ask for adjustments.
+  - A manager gets a request and does not know what to say.
+  - You want your hiring process to work for candidates with disabilities.
+  - You need to explain policy without pressuring anyone to disclose.
+you_give:
+  - A short description of your team and its size
+  - Your country or region
+  - Any existing policy (optional)
+  - A specific request you must handle (optional)
+you_get:
+  - A step-by-step request process
+  - A draft employee-facing policy
+  - Manager guidance and sample wording
+  - A documentation do and don't list
+  - A way to review outcomes over time
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

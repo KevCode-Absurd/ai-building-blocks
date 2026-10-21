@@ -6,6 +6,26 @@ summary: Describe your API sign-up path. Get a plan that cuts the time to a deve
 job: build-product
 headline: Developer onboarding improver
 subhead: Describe your API sign-up path. Get a plan that cuts the time to a developer's first working call.
+explain: |
+  A plan to cut the time between a developer finding your API and making their first successful call. That one number predicts whether they keep using you.
+
+  The skill breaks the path into six stages: finding the start page, signing up, getting keys, setting up the SDK, running a request and seeing success. It rates your time against benchmarks, from under five minutes to over an hour, and shows where to measure each stage. Then it works on the weak points: simpler sign-up, keys shown up front, a test sandbox, interactive docs and clear error messages. It begins by asking what your developers already know and tools they use.
+when:
+  - Developers sign up for your API and never make a call.
+  - Getting an API key takes too many steps or an approval wait.
+  - You do not know how long your own setup takes a new developer.
+  - Your sandbox or test mode is hard to find or use.
+you_give:
+  - A description of your sign-up and setup steps
+  - Who your developers are and how skilled they are
+  - Any numbers you have on drop-off (optional)
+  - Your current docs or quickstart (optional)
+you_get:
+  - A stage-by-stage time estimate
+  - The biggest points where people get stuck
+  - A ranked list of fixes
+  - Ideas for sandbox, keys and error messages
+  - What to measure going forward
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Commit your branch. Get a clear pull request that says what changed, wh
 job: build-software
 headline: Pull request description writer
 subhead: Commit your branch. Get a clear pull request that says what changed, why, and what reviewers should check.
+explain: |
+  A pull request description that tells the reviewer what changed, why, and what to look at first. It is written from your actual committed changes, not from memory.
+
+  The skill checks that everything is committed, finds your base branch with the GitHub command line tool, then reads the commit log and full diff. It works out the purpose of the whole branch and writes a structured description covering what changed, the reason and any context a reviewer needs, such as risks and links to issues. It then opens the pull request through GitHub. You need the GitHub CLI installed and signed in.
+when:
+  - Your branch is ready and you dread writing the description.
+  - Reviewers keep asking why a change was made.
+  - The branch has many commits and you need one clear summary.
+  - You want a repeatable way to open pull requests.
+you_give:
+  - A committed branch
+  - GitHub CLI signed in
+  - Linked issue or ticket (optional)
+  - Anything reviewers should know (optional)
+you_get:
+  - Pull request title and body
+  - Summary of what changed and why
+  - Reviewer notes
+  - The opened pull request
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

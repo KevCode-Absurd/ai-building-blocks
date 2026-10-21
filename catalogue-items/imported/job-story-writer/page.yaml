@@ -6,6 +6,25 @@ summary: Describe a customer situation. Get job stories in the when, I want, so 
 job: build-product
 headline: Job story writer
 subhead: Describe a customer situation. Get job stories in the when, I want, so I can format, with checks for done.
+explain: |
+  Backlog items that start from the customer's situation instead of a made-up persona. Describe the product, the feature, and the moments when people need it. The skill turns each into a job story in the form: when this happens, I want to do this, so I can reach that result.
+
+  Each story gets a title and acceptance criteria that you can watch and measure. The criteria check three things: the situation is recognised, the product supports the motivation, and the outcome is reached. You can link design files so developers see the screen next to the story. Stories focus on the job to be done, not who the person is.
+when:
+  - User stories with generic roles are not telling your team enough.
+  - You must split a big feature into small, testable pieces.
+  - You want backlog items based on what customers are doing at that moment.
+  - Developers ask what done looks like and you have no answer.
+you_give:
+  - The product name
+  - The feature to break down
+  - Situations when people need it
+  - A link to designs (optional)
+you_get:
+  - Job stories in the when, I want, so I can format
+  - Acceptance criteria for each story
+  - Titles that state the outcome
+  - Design links attached to the stories
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

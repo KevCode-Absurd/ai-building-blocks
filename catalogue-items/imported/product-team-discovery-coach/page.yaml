@@ -6,6 +6,25 @@ summary: Describe your product team. Get a plan for finding what to build, testi
 job: build-product
 headline: Product team discovery coach
 subhead: Describe your product team. Get a plan for finding what to build, testing ideas first and working with empowered teams.
+explain: |
+  A plan to move your product team from building a roadmap of features to finding what customers actually want. It helps teams own problems rather than just ship a list.
+
+  Claude uses the empowered product team model. Teams get objectives, not features, and run discovery and delivery side by side. The plan covers how to test ideas before building them, how to check value, usability, feasibility and viability, how to write a product vision, and how leaders can support teams without controlling them. It also names signs you are a feature factory and how to change.
+when:
+  - Your roadmap is just a list of features from stakeholders.
+  - You want to test ideas before engineering builds them.
+  - You are restructuring teams to own outcomes.
+  - You need a clear product vision for the team.
+you_give:
+  - A description of your team and how it works now
+  - Your current roadmap process
+  - Problems you face with stakeholders (optional)
+  - Your product vision draft (optional)
+you_get:
+  - A diagnosis of your current way of working
+  - A discovery and delivery plan
+  - Ways to test ideas early
+  - Steps to move to empowered teams
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

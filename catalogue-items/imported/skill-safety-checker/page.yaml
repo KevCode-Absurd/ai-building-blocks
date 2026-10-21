@@ -6,6 +6,24 @@ summary: Give it a skill or bundle before you add it. Get a list of risky code, 
 job: make-skills
 headline: Skill safety checker
 subhead: Give it a skill or bundle before you add it. Get a list of risky code, data leaks and hidden payloads.
+explain: |
+  A list of risky code, data leaks and hidden payloads in a skill or bundle, found before you add it. It checks without running anything, on Windows, Mac, Linux and mobile.
+
+  It reads the files and looks for patterns grouped by threat. Examples are raised privileges and ownership changes, locking or hiding folders, scripts that chain other scripts, and obfuscated or encoded commands. Each group has its platform-specific signs, such as sudo and chmod on Unix or icacls and execution policy changes on Windows. It lists what it found and why it matters. The review is a static read, so it cannot prove a skill is safe.
+when:
+  - You downloaded a bundle of skills and want a scan first.
+  - You work on Windows and the checks you find are for Linux only.
+  - A skill touches system folders and you want to know why.
+  - You review skills for a company.
+you_give:
+  - A skill or bundle folder
+  - Your operating system (optional)
+  - The skill source or link (optional)
+you_get:
+  - Risky patterns found, grouped by threat
+  - What each finding could do
+  - Platform-specific notes
+  - A summary of what to remove or ask about
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

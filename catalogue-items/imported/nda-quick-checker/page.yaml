@@ -6,6 +6,24 @@ summary: Give it an NDA. Get a green, yellow or red rating and the odd clauses. 
 job: check-contracts
 headline: NDA quick checker
 subhead: Give it an NDA. Get a green, yellow or red rating and the odd clauses. Have a lawyer check yellow or red.
+explain: |
+  A traffic-light rating for an NDA someone else sent you, so you know in minutes whether you can sign, need a second look, or must send it to a lawyer.
+
+  The skill checks the agreement against a screening list. It looks at whether it is one-way or mutual, how broadly it defines confidential information, how long it lasts and whether the usual exceptions are there, such as public information and independently built work. It also flags unusual terms like non-compete clauses, non-solicitation or a residuals clause. If you have no company rules, it uses common market defaults and tells you so. Yellow or red results should be checked by a lawyer.
+when:
+  - A prospect sends their own NDA and you need a fast first read.
+  - Your team gets many NDAs and wants to sort the simple ones.
+  - You want to spot odd clauses before sending it to counsel.
+  - You are not sure if the term length is normal.
+you_give:
+  - The NDA as a file, link or pasted text
+  - Your own NDA rules (optional)
+  - Which side you are on (optional)
+you_get:
+  - A green, yellow or red rating
+  - A list of clauses that look unusual
+  - Gaps against the standard checklist
+  - A suggested next step
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

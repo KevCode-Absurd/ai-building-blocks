@@ -6,6 +6,26 @@ summary: Give it your text. Get a custom word-splitting tokenizer trained on it,
 job: build-software
 headline: Tokenizer trainer
 subhead: Give it your text. Get a custom word-splitting tokenizer trained on it, with padding and length limits set up.
+explain: |
+  A tokenizer built from your own text, so a model sees your words, codes or product names as clean pieces instead of broken fragments. It is useful when general tokenizers split your specialist vocabulary badly.
+
+  The skill uses the Hugging Face Tokenizers library. You pick a method: BPE, WordPiece or Unigram. It trains the vocabulary on your files, sets special tokens, and adds rules for padding and maximum length. It can track where each token came from in the original text, which helps with highlighting and entity work. It also loads ready-made tokenizers when you do not need a custom one. The library tokenizes about a gigabyte in under 20 seconds on a normal processor.
+when:
+  - Your industry terms get chopped into odd pieces by standard tokenizers.
+  - You are training a model and need a vocabulary for your data.
+  - You need to map tokens back to positions in the original text.
+  - You must process a large text collection quickly.
+you_give:
+  - Your text files
+  - "Method preference: BPE, WordPiece or Unigram (optional)"
+  - Vocabulary size
+  - Padding and length limits
+you_get:
+  - A trained tokenizer file
+  - Special token setup
+  - Padding and truncation settings
+  - Token-to-text position mapping
+  - Test output on sample text
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

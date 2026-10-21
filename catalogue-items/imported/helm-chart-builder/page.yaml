@@ -6,6 +6,25 @@ summary: Describe your service. Get a Helm chart for Kubernetes with sensible va
 job: ship-and-host
 headline: Helm chart builder
 subhead: Describe your service. Get a Helm chart for Kubernetes with sensible values, checks and safe defaults.
+explain: |
+  A Helm chart for your Kubernetes service that other people can trust and use. Describe the service and the skill scaffolds a chart with the right shape for it: a web service, a background worker, a scheduled job, a stateful service or a shared library chart.
+
+  It writes Chart.yaml, a clean values file with sensible defaults, optional schema validation, and template helpers. It then adds the hardening many charts skip: resource limits, non-root containers, network policies, minimal permissions and careful handling of secrets. You can also ask it to review a chart you already have for hardcoded values and missing labels, or run a security audit. It uses helm lint and test, so you need Helm installed.
+when:
+  - You have raw Kubernetes manifests and want a reusable chart.
+  - You are asked to review a teammate's Helm chart.
+  - You need a security check on RBAC, network rules and pod settings.
+  - You want a values.yaml other people can understand.
+you_give:
+  - A description of the service or its manifests
+  - The workload type
+  - Dependencies such as a database (optional)
+  - An existing chart to review (optional)
+you_get:
+  - A scaffolded chart with values and templates
+  - Security hardening applied
+  - A review of problems in an existing chart
+  - Test and lint steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

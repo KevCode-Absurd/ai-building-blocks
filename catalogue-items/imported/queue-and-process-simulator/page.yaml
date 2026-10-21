@@ -6,6 +6,25 @@ summary: Describe a process with queues and limited resources. Get a simulation 
 job: track-numbers
 headline: Queue and process simulator
 subhead: Describe a process with queues and limited resources. Get a simulation with repeated runs and a clear summary of results.
+explain: |
+  Find out how a system with waiting lines will behave before you build it or change it. You get a simulation with repeated runs and a clear summary, such as average wait, how busy each resource is, and how much the results vary.
+
+  You describe the process: who arrives, what they wait for, and how long each step takes. The skill first writes down the question, the boundary of the model, the time units and when a run ends. It then builds the model in Python with SimPy, sets a warm-up period and run length, and repeats the run many times. Results come with ranges, not a single lucky number. Python and uv are needed.
+when:
+  - You want to know how many staff or machines a busy shop floor needs.
+  - A queue at a service desk keeps growing and you need to test fixes.
+  - You are sizing a warehouse or logistics flow before spending money.
+  - You need results that show spread, not a single average.
+you_give:
+  - Description of the process and its steps
+  - Arrival rates and step durations
+  - The question you want answered
+  - Python with uv installed
+you_get:
+  - Simulation code
+  - Waits, usage and queue lengths
+  - Repeated runs with ranges
+  - Plain summary of results
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

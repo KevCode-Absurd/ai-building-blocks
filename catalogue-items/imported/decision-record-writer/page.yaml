@@ -6,6 +6,25 @@ summary: Tell it a design choice you made. Get a short record of why, with the o
 job: build-software
 headline: Decision record writer
 subhead: Tell it a design choice you made. Get a short record of why, with the options you passed on.
+explain: |
+  A short written record of why you chose option A over option B, so nobody has to ask in six months. Tell it about a design or technology choice and you get a record of the context, the options you passed on and the trade-offs you accepted.
+
+  It first checks your project for an existing format, such as a docs folder of past records, and matches it. If none exists, it uses a simple layout: status, context, decision, alternatives and consequences. It focuses on the why, since code already shows the what. It is for choices that are costly to reverse, such as a framework, database or API design, and skips obvious ones.
+when:
+  - You just picked a database and the team will ask why.
+  - A new hire keeps questioning an old technical choice.
+  - You are about to change a public API and want the reasoning saved.
+  - You find yourself explaining the same decision for the third time.
+you_give:
+  - The decision you made
+  - Options you considered
+  - Constraints and reasons
+  - Existing records or format to match (optional)
+you_get:
+  - Decision record in your project's format
+  - List of rejected options with reasons
+  - Stated trade-offs
+  - Suggested file name and place
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

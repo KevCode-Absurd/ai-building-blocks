@@ -6,6 +6,25 @@ summary: Describe the terrain, buildings and sensors. Get a drone simulation sce
 job: build-software
 headline: Drone scenario builder
 subhead: Describe the terrain, buildings and sensors. Get a drone simulation scene you can fly in MATLAB.
+explain: |
+  A drone simulation you can watch fly. Describe the terrain, buildings and sensors, and you get a UAV scene in MATLAB with a drone that moves through it and reports what its sensors read.
+
+  The skill uses the UAV Toolbox scenario tools. You set a reference location and update rate, add terrain from elevation data, and add buildings from OpenStreetMap files. Then you place a drone platform on a trajectory and attach GPS and IMU sensors. A loop advances time, updates the sensors and reads their values. At the end, a 3D view plays the flight. Trajectory design, Simulink models and path planning are out of scope.
+when:
+  - You want to test a drone over real terrain and city buildings.
+  - You need simulated GPS and IMU readings for an algorithm.
+  - You want a 3D view of a flight for a demo.
+  - You are setting up a UAV simulator for the first time.
+you_give:
+  - Location and area to simulate
+  - Terrain and building files (optional)
+  - The drone's path
+  - Sensors to attach
+you_get:
+  - A UAV scenario with terrain and buildings
+  - A drone platform with sensors
+  - A simulation loop that returns sensor readings
+  - A 3D flight animation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Say what your AI should do through MCP. Get a small set of clearly name
 job: connect-tools
 headline: MCP tool set designer
 subhead: Say what your AI should do through MCP. Get a small set of clearly named tools with plain descriptions.
+explain: |
+  A short list of MCP tools your AI can pick from without guessing. Too many tools, or tools that copy every API endpoint one by one, make an AI choose badly and waste its memory. This skill fixes that before you write any code.
+
+  First it asks whether you need a server at all. Then it starts from the jobs people want done, not from the API, and folds chained calls into one tool that finishes a whole task. It keeps the set to roughly 5 to 15 tools, gives each a clear name, writes each description like a prompt, and keeps inputs flat and typed. Error messages are written so an AI can recover from them.
+when:
+  - You are about to build an MCP server and want the tool list right before coding.
+  - Your AI keeps picking the wrong tool from a long list.
+  - You have an API and want to turn it into tools without copying every endpoint.
+  - An existing server uses too much of your AI's context with tool descriptions.
+you_give:
+  - The jobs your AI should do through MCP
+  - The API or system behind it (optional)
+  - Any existing tool list to review (optional)
+you_get:
+  - A short list of outcome-based tools
+  - Clear tool names and plain descriptions
+  - Typed input fields for each tool
+  - Error messages an AI can act on
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

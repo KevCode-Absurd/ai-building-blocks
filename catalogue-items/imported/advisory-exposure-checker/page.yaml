@@ -6,6 +6,26 @@ summary: Name a breach or package advisory. Get a read-only check of your machin
 job: secure-code
 headline: Advisory exposure checker
 subhead: Name a breach or package advisory. Get a read-only check of your machine and projects, saved as a report.
+explain: |
+  Find out if a security advisory touches your computer and projects with a read-only check, saved as a report. Nothing on your machine is changed.
+
+  The skill follows hard rules: look, do not fix. Pick the advisory or breached package and it chooses the relevant checks from a menu. For software supply chain advisories it searches your Node and Python projects for affected versions. It also looks at installed tools, running programs and open network ports, startup items, settings that raise risk, and editor or browser extensions. The report lists the advisories in scope, what was found, a verdict in set wording, actions taken and follow-ups. It tells you when breaking the read-only rule would be needed, and asks first.
+when:
+  - A package you use was in the news for a breach.
+  - You want to know if you are exposed to a new vulnerability.
+  - Your team asks for proof that you checked.
+  - You want a record of what you looked at.
+you_give:
+  - The name of the advisory, package or vulnerability
+  - The folders or projects to check
+  - Permission to read your machine
+  - Package manager or system details (optional)
+you_get:
+  - A list of checks run
+  - What was found on your machine
+  - A clear verdict
+  - A saved report
+  - Follow-up steps for you
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

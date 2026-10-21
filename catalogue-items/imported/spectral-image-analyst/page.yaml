@@ -6,6 +6,26 @@ summary: Give it a hyperspectral or satellite image. Get it cleaned, unmixed and
 job: build-software
 headline: Spectral image analyst
 subhead: Give it a hyperspectral or satellite image. Get it cleaned, unmixed and checked for targets or anomalies.
+explain: |
+  Cleaned hyperspectral or satellite images, with materials separated and targets or odd spots flagged. The skill writes MATLAB code for the full path. It reads files in formats like ENVI, GeoTIFF, Sentinel-2 and Landsat. Then it applies calibration, atmospheric correction, denoising and sharpening, and cuts bands down with PCA.
+
+  From there it finds pure materials, unmixes each pixel into their shares, matches known spectra, and flags anomalies. It also computes indices like NDVI, segments scenes, and labels data for deep learning. It needs desktop MATLAB and the Hyperspectral Imaging Library add-on.
+when:
+  - You have a satellite scene and need to map vegetation or water.
+  - You want to find a target material hidden in a hyperspectral image.
+  - Your image data is noisy and needs correcting before analysis.
+  - You are preparing labelled data to train a classifier.
+you_give:
+  - A hyperspectral or multispectral image file
+  - The material or feature you want to find
+  - Desktop MATLAB with the Hyperspectral Imaging Library
+  - A reference spectral library (optional)
+you_get:
+  - MATLAB code for each processing step
+  - Corrected and denoised image data
+  - Abundance maps for each material
+  - Target or anomaly detections
+  - Spectral index maps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

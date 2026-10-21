@@ -6,6 +6,25 @@ summary: Give it a design or plan. Get it tested by reviewers in turn for hidden
 job: think-and-decide
 headline: Design review panel
 subhead: Give it a design or plan. Get it tested by reviewers in turn for hidden assumptions and ways it could fail.
+explain: |
+  A design that has survived a proper review before anyone builds it. Hand over a plan and it is tested by reviewers in turn, each with a fixed job, so hidden assumptions and likely failures come out early.
+
+  It is not a brainstorm where everyone talks at once. One agent designs. Others review one at a time, each limited to its own role, such as skeptic, constraint checker or user advocate. They may not step outside their mandate. Creativity stays with the designer while critique is spread across the panel. Every decision and objection is logged, so you can see why the design changed and what is still open.
+when:
+  - You are about to build something costly and want it stress-tested.
+  - A single idea is stuck and you need structured pushback.
+  - You want a record of which risks were raised and how they were handled.
+  - Your team tends to agree too fast and miss problems.
+you_give:
+  - Design or plan to review
+  - Goals and constraints
+  - Reviewer roles you want (optional)
+you_get:
+  - Hidden assumptions list
+  - Failure modes
+  - Check against limits like speed, cost and safety
+  - Decision log
+  - Revised design
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

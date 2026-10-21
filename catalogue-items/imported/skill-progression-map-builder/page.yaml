@@ -6,6 +6,25 @@ summary: Name a skill. Get the steps from first prerequisite to mastery, with ch
 job: teach-and-train
 headline: Skill progression map builder
 subhead: Name a skill. Get the steps from first prerequisite to mastery, with checks to find where a student is stuck.
+explain: |
+  A map of steps from first prerequisite to mastery of a skill, with checks to find where a student is stuck. You can teach in the right order and fill gaps early.
+
+  You name the target skill and the student level. It lays out the stages from novice to proficient, and shows which stage must come before another. Each stage gets a way to check it, so a short diagnostic points to the exact step a learner missed. It rests on learning progression research, which describes the more advanced ways of thinking that follow one another. It suits sequencing a unit or planning support for pupils who are behind.
+when:
+  - You plan a unit and need to sequence the content.
+  - A student fails a task and you need to find the missing step.
+  - You want a short diagnostic that locates a gap.
+  - You are building a curriculum for a new skill.
+you_give:
+  - The target skill
+  - Student year group or level
+  - Common misconceptions you see (optional)
+  - Time available (optional)
+you_get:
+  - Ordered stages from prerequisite to mastery
+  - Links showing what depends on what
+  - Checks for each stage
+  - Notes on common stuck points
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

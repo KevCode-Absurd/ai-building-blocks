@@ -6,6 +6,25 @@ summary: Name a rival. Get a fair comparison or alternative page built to rank a
 job: write-landing-page
 headline: Alternative page writer
 subhead: Name a rival. Get a fair comparison or alternative page built to rank and convince buyers.
+explain: |
+  A comparison or alternative page for a named rival, written so it ranks for searches like "X alternative" and helps a buyer decide. It leads with fairness, because readers check claims and trust fades fast when you misstate a competitor.
+
+  It will not guess the rival. If you do not name one, it asks and stops. It gathers your product's value, standout points, price model and honest weak spots, then lays out the page: where the rival is stronger, where you are, and who each one fits. Depth beats surface, so features are compared in detail, not in vague claims. Page format covers a single comparison, an alternatives roundup and a switching page.
+when:
+  - Buyers search for "your rival vs you" and land on their pages.
+  - Sales keeps explaining the same comparison by hand.
+  - You want to win people who are leaving a competitor.
+  - You need an honest comparison that readers will trust.
+you_give:
+  - The competitor's name
+  - Your product, price and differentiators
+  - Your honest weak spots
+  - The goal, such as search traffic or sales help (optional)
+you_get:
+  - A comparison or alternative page draft
+  - A fair feature and price comparison
+  - Who-it-suits sections for each side
+  - Headings and wording aimed at search
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

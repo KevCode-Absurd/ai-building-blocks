@@ -6,6 +6,25 @@ summary: Pick an outcome. Get a loop that runs weekly or daily, checks itself an
 job: set-up-ai
 headline: Recurring marketing routine builder
 subhead: Pick an outcome. Get a loop that runs weekly or daily, checks itself and stops when it should.
+explain: |
+  A marketing task that repeats itself on a schedule, checks its own results and stops when it should. You pick the outcome to protect, such as rankings, ad cost, sign-ups or repeat sales, and get a loop built around it.
+
+  The skill picks the closest loop from a catalogue and sets how often it runs, based on how fast the signal changes. Weekly rank checks and daily ad checks are different jobs. It decides what the loop does alone and what it only prepares for your approval, so nothing is published or paid for without a human look.
+when:
+  - You check the same ad numbers every Monday and want that step to run itself.
+  - You want draft posts or emails prepared for you each week to approve.
+  - You need a routine that watches search rankings and flags drops.
+  - You want to know if a task is worth turning into a loop at all.
+you_give:
+  - The outcome the routine should protect
+  - How often the data changes
+  - What it may do alone and what needs approval
+  - The tool where it will be scheduled (optional)
+you_get:
+  - A loop built from a tested pattern
+  - A run schedule that fits your data
+  - Approval points before spending or publishing
+  - Stop rules for when the loop should end
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

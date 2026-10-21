@@ -6,6 +6,25 @@ summary: Pick a date range. Get revenue, units and average order value for each 
 job: run-your-store
 headline: Sales channel reporter
 subhead: Pick a date range. Get revenue, units and average order value for each sales channel.
+explain: |
+  See which channels bring in your money: online store, point of sale, draft orders and more. Pick a date range and get revenue, units sold and average order value for each channel.
+
+  This is for Shopify stores. It reads orders over the lookback window you choose, thirty days by default, paging through them in batches of 250. Each order carries its channel, total price and item quantities. The numbers are grouped by channel, and each group shows order count, revenue, units and average order value. It is read only, so no data changes. You sign in with the Shopify command line and allow order read access.
+when:
+  - You sell online and in person and want to compare the two.
+  - You wonder if B2B draft orders are worth the work.
+  - You want proof of where revenue comes from before moving ad spend.
+  - You need a quick monthly channel summary.
+you_give:
+  - Your store domain
+  - Number of days to look back
+  - Shopify read access to orders
+  - Output format (optional)
+you_get:
+  - Revenue per channel
+  - Units sold per channel
+  - Average order value per channel
+  - Order counts for context
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

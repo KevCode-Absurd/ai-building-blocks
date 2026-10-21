@@ -6,6 +6,26 @@ summary: Give it your product images and copy. Get versions for other countries 
 job: run-your-store
 headline: Overseas listing localizer
 subhead: Give it your product images and copy. Get versions for other countries with local language, sizes and required labels.
+explain: |
+  Your product listing rewritten for each country you sell in, not just translated. You get local-language copy, converted sizes, correct image rules and reminders about labels the market expects.
+
+  The skill rewrites text to match local habits: dense selling points for China, short scene-based copy for North America, polite detailed copy for Japan. It converts clothing sizes across CN, US, UK, EU and JP charts, lays out main images with local-language text where allowed, and fits each marketplace's picture rules. A common mistake it avoids is pasting dense text onto an Amazon main image, which gets rejected. It lists likely compliance labels as hints only. This is not legal advice, and a native speaker should check the final copy.
+when:
+  - You sell on a China platform and are opening a US store.
+  - Your listing was rejected for text on the main image.
+  - You need size charts for European and Japanese buyers.
+  - You want to know which labels each region may require.
+you_give:
+  - Product images
+  - Product copy
+  - Target countries and platforms
+  - Size chart (optional)
+you_get:
+  - Localized copy per country
+  - Converted size tables
+  - Region-ready main images
+  - Platform image specs
+  - Label reminders
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

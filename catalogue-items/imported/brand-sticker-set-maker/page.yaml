@@ -6,6 +6,25 @@ summary: Give it your logo. Get a set of playful die-cut character stickers on c
 job: make-images
 headline: Brand sticker set maker
 subhead: Give it your logo. Get a set of playful die-cut character stickers on clear backgrounds.
+explain: |
+  A set of playful character stickers made from your logo, with thin white die-cut edges and clear backgrounds. They suit a website, a launch or merchandise while staying true to the brand.
+
+  The skill studies your real logo first and picks three anchors: its shape, its colour pairing and a verb the product performs. It then turns shapes into a cast, or product behaviour into a character's useful, slightly troublesome ability. Each character keeps the brand's palette and gets something surprising to do. Your latest visual feedback overrides any older brief. Use a logo design process if you do not yet have a logo.
+when:
+  - You want stickers for a product launch.
+  - Your site needs transparent illustrations that feel on-brand.
+  - An existing mascot needs new poses without changing its look.
+  - You want merchandise that people actually keep.
+you_give:
+  - Your logo file
+  - Brand colours and any mascot (optional)
+  - What your product does
+  - Feedback on early drafts (optional)
+you_get:
+  - A cast of characters drawn from your logo
+  - A sticker set with white die-cut edges
+  - Clear background images
+  - A short note on why the idea fits your brand
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

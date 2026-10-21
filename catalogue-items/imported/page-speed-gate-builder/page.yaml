@@ -6,6 +6,25 @@ summary: Point it at your web app. Get a Lighthouse check in CI that blocks slow
 job: ship-and-host
 headline: Page speed gate builder
 subhead: Point it at your web app. Get a Lighthouse check in CI that blocks slow or weak pages.
+explain: |
+  A speed check that runs on every code change and blocks pages that get slow or weak, so a slow page cannot slip into your live site unnoticed.
+
+  It writes one Lighthouse config file holding every limit, with a set of budgets for load time, layout jumps and blocking time, plus minimum scores for performance, search, accessibility and best practice. It tests the real production build, never the dev server, and takes the median of several runs so the check does not fail at random. A workflow file runs the same setup locally and in your build pipeline and saves reports. It needs Node and a build pipeline.
+when:
+  - You keep shipping changes that quietly slow the site.
+  - You want a failing check when load time passes a set limit.
+  - Your speed test gives a different score every run.
+  - You need speed reports saved with each code change.
+you_give:
+  - Your web app code
+  - Your build and start commands
+  - Speed limits you want (optional)
+  - Where your build pipeline runs, such as GitHub Actions
+you_get:
+  - A single Lighthouse config with named budgets
+  - A pipeline workflow file
+  - Median-of-runs setup to cut flaky results
+  - Saved reports for each run
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

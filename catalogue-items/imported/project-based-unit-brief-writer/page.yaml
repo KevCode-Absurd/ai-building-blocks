@@ -6,6 +6,27 @@ summary: Give it a topic. Get a project brief with a driving question, milestone
 job: teach-and-train
 headline: Project-based unit brief writer
 subhead: Give it a topic. Get a project brief with a driving question, milestones and marking criteria.
+explain: |
+  A student-ready project brief for a unit of work, built around one driving question that gives the whole project a purpose. Teachers get a plan they can hand out and mark against.
+
+  You give the topic, learning goals, year group and how long the project runs. The skill writes a real-world scenario, spells out what students will produce, and sets milestones with checkpoints along the way. It adds assessment criteria, a teacher guide listing what to teach explicitly and when, and notes for supporting different learners. It also states its own design choices so you can change them. Based on research into project-based learning.
+when:
+  - You are planning a half-term project and need a strong opening question.
+  - You want students to produce something real, not just answer worksheets.
+  - You need clear marking criteria before the project starts.
+  - You want milestones so students do not leave the work until the last week.
+you_give:
+  - Topic the project covers
+  - Learning goals
+  - Year group
+  - Project length
+  - Real-world link or subject area (optional)
+you_get:
+  - Driving question and scenario
+  - What students will make
+  - Milestone schedule
+  - Marking criteria
+  - Teacher guide and support notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

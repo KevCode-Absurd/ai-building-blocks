@@ -6,6 +6,25 @@ summary: Give it a contract and its amendments. Get what changed and each clause
 job: check-contracts
 headline: Contract change tracer
 subhead: Give it a contract and its amendments. Get what changed and each clause's latest wording. Not legal advice.
+explain: |
+  A clear record of how a contract changed over time: what each amendment did, and the wording that rules today for any clause you ask about. You stop flipping between five PDFs to learn what the deal now says.
+
+  You give it the base agreement and every amendment. It puts them in date order and reads each one. In summary mode it lists changes amendment by amendment with section numbers, then states the net current position and items to watch. In trace mode you name a clause and it shows the original text, each change to it, and the controlling language now. Every point cites a section. It is a first pass, not legal advice.
+when:
+  - A vendor deal has three amendments and nobody knows which terms apply.
+  - You are taking over a client account and need to know its current contract.
+  - Someone claims a clause was changed and you need to check.
+  - You are preparing for a renewal and need the live wording.
+you_give:
+  - The base contract
+  - All amendments and side letters
+  - Clause to trace (optional)
+  - Which side you are on (optional)
+you_get:
+  - Changes in date order
+  - Net current state of the deal
+  - Clause history with section cites
+  - Watch items
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

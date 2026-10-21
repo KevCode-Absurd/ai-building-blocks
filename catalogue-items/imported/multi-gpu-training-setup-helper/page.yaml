@@ -6,6 +6,25 @@ summary: Give it a training script. Get it running on one GPU, many GPUs or seve
 job: build-software
 headline: Multi-GPU training setup helper
 subhead: Give it a training script. Get it running on one GPU, many GPUs or several machines with a few added lines.
+explain: |
+  Your training script running on one GPU, several GPUs or several machines, with only a handful of added lines. The same script works in all three setups.
+
+  The skill uses Hugging Face Accelerate. You create one Accelerator object, pass your model, optimizer and data loader through its prepare call, and swap the usual backward call for the Accelerate one. You can delete the lines that move data to the GPU by hand. Then one launch command runs it. The skill also covers answering a few setup questions to make a config file, and the options for splitting memory across GPUs for big models.
+when:
+  - Your script runs on one GPU and you just got four.
+  - You want to try mixed precision without rewriting the loop.
+  - Training must run across two machines.
+  - Your model is too big for one GPU's memory.
+you_give:
+  - Your PyTorch training script
+  - How many GPUs and machines you have
+  - Whether the model fits on one GPU
+  - Precision preference (optional)
+you_get:
+  - The script with the added lines marked
+  - A launch command
+  - A config file for your setup
+  - Memory-saving options for large models
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

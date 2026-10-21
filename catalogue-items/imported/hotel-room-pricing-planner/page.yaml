@@ -6,6 +6,25 @@ summary: Give it your bookings and rates. Get room prices, overbooking limits an
 job: set-prices
 headline: Hotel room pricing planner
 subhead: Give it your bookings and rates. Get room prices, overbooking limits and a channel mix that fill rooms at the best rate.
+explain: |
+  Room prices and booking limits that fill more rooms at better rates. Share your bookings, rates and sales channels and get a plan for what to charge, how many rooms to oversell and where to sell them.
+
+  It reads your key numbers first: occupancy, average daily rate and revenue per available room. Then it models how demand reacts to price, so you can see where a higher or lower rate earns more. It sets overbooking limits by weighing the cost of a walked guest against an empty room. It also compares your direct bookings, travel sites and corporate deals, and suggests how to split room supply between them. Some steps use Python code.
+when:
+  - Your rooms sell out on some nights and sit empty on others.
+  - You want to know how many extra bookings you can safely take.
+  - Booking sites take a large share of sales and you want a better mix.
+  - You are planning rates for a busy season or a big event.
+you_give:
+  - Past bookings and occupancy
+  - Current room rates by type
+  - Sales channels and their fees
+  - Seasonal patterns and local events (optional)
+you_get:
+  - A rate plan by date and room type
+  - Overbooking limits
+  - A channel mix recommendation
+  - Revenue forecasts under different prices
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,23 @@ summary: Give it a noisy recording. Get clean speech with the background noise a
 job: work-with-audio
 headline: Noisy audio cleaner
 subhead: Give it a noisy recording. Get clean speech with the background noise and music removed.
+explain: |
+  Speech pulled clean out of a noisy recording. Traffic, hiss, room echo and background music are stripped away, so you hear the voice.
+
+  The skill sends your file to the ElevenLabs Voice Isolator and saves the cleaned audio. It works on any common format, and a faster option takes raw 16 kHz mono PCM when you need low delay. It can also fetch audio from a link. Use it to prepare interviews for transcription, tidy up a call, or pull dialogue out of a mixed track. You can run it from Python, JavaScript or the command line. You need an ElevenLabs account and API key, and usage may cost credits.
+when:
+  - An interview was recorded in a loud cafe and the voice is hard to hear.
+  - You want a cleaner file before sending it for transcription.
+  - A video has background music you need to remove from the speech.
+  - You have many short clips to tidy up in one go.
+you_give:
+  - A noisy audio file or link
+  - Your ElevenLabs API key
+  - File format notes (optional)
+you_get:
+  - A clean speech audio file
+  - Code to run it on more files
+  - A faster PCM option for low delay
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

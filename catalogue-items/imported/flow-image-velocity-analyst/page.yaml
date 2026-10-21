@@ -6,6 +6,26 @@ summary: Give it pairs of flow images. Get velocity fields, bad vectors fixed, a
 job: research-topics
 headline: Flow image velocity analyst
 subhead: Give it pairs of flow images. Get velocity fields, bad vectors fixed, and vorticity and turbulence numbers.
+explain: |
+  Pairs of flow images become velocity fields, with bad vectors found and fixed and vorticity and turbulence numbers worked out. It turns particle photos into measured fluid motion.
+
+  Using the OpenPIV Python package, it prepares the images, runs cross-correlation over small windows and checks each vector for signal quality. It flags outliers, replaces them, smooths the field and converts pixels to real units using your scale and time gap. Then it derives vorticity, strain rate and turbulence statistics. It also helps you tune window size and overlap. It measures flow; it does not simulate it. You need Python.
+when:
+  - You have laser or camera images of a flow and need velocity maps.
+  - Your vector field has spurious arrows and you need them cleaned.
+  - You need vorticity or turbulence statistics from experiment data.
+  - You are choosing window sizes for your image pairs.
+you_give:
+  - Image pairs
+  - Time gap between frames
+  - Pixel to millimetre scale
+  - Flow type or expected speed (optional)
+you_get:
+  - Velocity field
+  - Flagged and replaced bad vectors
+  - Vorticity and strain rate
+  - Turbulence statistics
+  - Plots and a parameter log
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

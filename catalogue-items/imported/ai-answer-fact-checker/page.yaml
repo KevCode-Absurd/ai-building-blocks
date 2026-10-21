@@ -6,6 +6,26 @@ summary: Paste one or more AI answers. Get each claim checked against public sou
 job: think-and-decide
 headline: AI answer fact-checker
 subhead: Paste one or more AI answers. Get each claim checked against public sources, with links and a short verdict.
+explain: |
+  A list of the claims in an AI answer, each checked against current public sources, with links and a short verdict. It also compares answers from several AIs and shows where they agree, clash or leave out proof.
+
+  It keeps three questions apart: did the AI gather evidence, does the cited source actually say that, and is the claim true. Paste the answer text, the original question and any date or country that matters. Every web page and file is treated as untrusted. Links are screened before they open. It does not log in for you or touch private chats. Using the web tools your AI already has, it writes a report with one row per claim.
+when:
+  - An AI gave you facts and you need to know which ones hold up.
+  - You asked two or three AIs the same question and the answers differ.
+  - A cited source looks odd and you want to see if it says what the AI claims.
+  - You must send a checked summary to a boss or client.
+you_give:
+  - The original question
+  - The AI answer text or public link
+  - Which AI gave each answer
+  - A date or country that matters (optional)
+you_get:
+  - Each claim listed one by one
+  - A verdict per claim with source links
+  - Where several answers agree or clash
+  - Claims that are stale or lack proof
+  - A short report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

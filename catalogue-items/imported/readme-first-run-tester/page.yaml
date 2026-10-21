@@ -6,6 +6,24 @@ summary: Point it at a project. Get each README step marked working or broken, w
 job: test-and-fix-code
 headline: README first-run tester
 subhead: Point it at a project. Get each README step marked working or broken, with proof, and the edits that fix it.
+explain: |
+  Each step in your README marked working, broken, missing or unchecked, with proof from the repo and the edits that fix it. You see what a new user would hit first.
+
+  It plays the newcomer. It lists every instruction, from prerequisites to install to run, then checks each one against your files. A script named in the README but absent from package.json is broken. An environment variable the code reads but the README never mentions is missing. It also checks links and the order of commands. It then writes out the real first run, step by step, and where the person would stop. It only runs commands if you allow it.
+when:
+  - You are about to open source a project and want the README to work.
+  - New hires keep getting stuck on setup.
+  - You changed the build and fear the README is out of date.
+  - You want proof for each fix, not a general complaint.
+you_give:
+  - Repository path or pasted README and manifests
+  - Platform the newcomer uses (optional)
+  - Permission to run commands (optional)
+you_get:
+  - Step list marked working, broken, missing or unchecked
+  - Evidence with file and line
+  - The real first-run path
+  - README edits to fix problems
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

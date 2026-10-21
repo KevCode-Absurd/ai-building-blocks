@@ -6,6 +6,25 @@ summary: Share screenshots or links of designs you like. Get their colors, type,
 job: design-work
 headline: Design style analyst
 subhead: Share screenshots or links of designs you like. Get their colors, type, feel and effects as a profile you can reuse.
+explain: |
+  A reusable profile of a look you like. Share screenshots or links to designs you admire and you get a structured file with the colours, type, spacing, overall feel and any special effects, which you can then use to guide new designs.
+
+  It has three parts. The design system covers measurable values: colour, type, spacing, shape and motion. The design style covers the feel: mood, composition, imagery and brand voice. Visual effects cover things like canvas or 3D scenes, particles, shaders and scroll animation. The three work in three phases: see the schema, extract a profile from references, or generate a design from a profile plus your content.
+when:
+  - You love a competitor's site and want to capture its look, not copy its code.
+  - You need to brief a designer using real examples.
+  - You want new pages to match a style from several references.
+  - You have a saved style file and want a page made from it.
+you_give:
+  - Screenshots or links of reference designs
+  - Your content for the new page (optional)
+  - Saved style profile (optional)
+you_get:
+  - Design token set
+  - Written style description
+  - Visual effects notes
+  - Structured style file
+  - Design made from the profile (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

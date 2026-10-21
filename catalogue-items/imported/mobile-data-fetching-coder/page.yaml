@@ -6,6 +6,26 @@ summary: Describe the data your app needs. Get fetch, cache, retry and offline c
 job: build-software
 headline: Mobile data fetching coder
 subhead: Describe the data your app needs. Get fetch, cache, retry and offline code for React Native with Expo.
+explain: |
+  The code that gets data into your React Native app and keeps it working when the network is slow, gone or wrong. You end up with fetching that retries, remembers recent answers and shows something useful offline.
+
+  The skill starts with plain fetch plus error handling, then picks React Query for bigger apps or SWR for simpler ones. It sets how long data stays fresh, keeps saved answers on the phone, and watches the connection to pause or resume requests. Login tokens go in secure storage, not plain files. Web addresses for development and production live in separate environment files. Secret keys stay on the server side only.
+when:
+  - Your app shows a blank screen whenever the signal drops.
+  - API calls feel slow and repeat for data you already have.
+  - You need to refresh login tokens without kicking people out.
+  - You need different server addresses for testing and for the live app.
+you_give:
+  - The data your screens need and the API it comes from
+  - How fresh each piece of data must be
+  - Your Expo project
+  - Login method, if the API needs one (optional)
+you_get:
+  - Fetch code with error handling
+  - Caching and retry settings
+  - An offline plan
+  - Safe token storage code
+  - Environment files for each stage
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

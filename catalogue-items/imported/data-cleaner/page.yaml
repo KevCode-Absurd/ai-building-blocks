@@ -6,6 +6,24 @@ summary: Give it a messy dataset. Get missing values, duplicates, wrong types an
 job: work-with-files
 headline: Data cleaner
 subhead: Give it a messy dataset. Get missing values, duplicates, wrong types and outliers fixed.
+explain: |
+  A messy file becomes analysis ready, with a log of every change made. You see exactly what was fixed and can undo or adjust it.
+
+  First it profiles the data: nulls per column, duplicate rows and mixed types. Then it fills gaps by column, using medians for light numeric gaps and an Unknown label for categories. It removes exact duplicates and checks near duplicates, such as rows that differ only by spacing or capital letters. It converts dates and numbers to proper types and standardises formats. Outliers are found with the 1.5 times IQR rule or z-scores, and you choose between capping, blanking or keeping them. A final validation reports anything still wrong. It uses Python.
+when:
+  - A CSV from a supplier has blank cells, duplicates and dates in three formats.
+  - You need clean data before building a report.
+  - Your customer list has the same person twice with different spelling.
+  - Numbers are stored as text and break your formulas.
+you_give:
+  - The raw data file
+  - Expected column types and ranges (optional)
+  - How to treat outliers (optional)
+you_get:
+  - Cleaned dataset file
+  - Log of every transformation
+  - Data quality report
+  - List of remaining issues
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

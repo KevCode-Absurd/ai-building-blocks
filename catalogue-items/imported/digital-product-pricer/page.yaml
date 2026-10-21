@@ -6,6 +6,26 @@ summary: Tell it what you sell, such as a course or ebook. Get the price digits,
 job: set-prices
 headline: Digital product pricer
 subhead: Tell it what you sell, such as a course or ebook. Get the price digits, labels and launch discount to use.
+explain: |
+  The exact price digits, labels and launch discount for a course, ebook or other digital product. Digital goods have no materials cost to hint at quality, so the price itself carries more weight.
+
+  First, it classifies your product as bought for pleasure or for practical use. Then it applies a short set of rules. An unknown seller should use a rounded price, such as $100 rather than $97. A buyer who already tried a sample can see a just-below price. Pre-orders far out get a bonus instead of a percentage off. Lead magnets are "for $0", never "FREE". Pick-your-price offers use three or four fixed options, not pay what you want.
+when:
+  - You are about to price your first course or ebook and cannot choose between $97 and $100.
+  - You plan a pre-order and are unsure if you should discount or add a bonus.
+  - Your free download page uses the word FREE and you wonder if that hurts.
+  - You want to offer a few price tiers and need to set them well.
+you_give:
+  - What you sell and your planned price
+  - Whether you are an individual or a known publisher
+  - If buyers get a sample first
+  - Launch date and any offer idea (optional)
+you_get:
+  - The price digits to use
+  - Wording for lead magnets and offers
+  - A pre-order bonus or discount choice
+  - Pick-your-price tier levels
+  - A short reason for each choice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

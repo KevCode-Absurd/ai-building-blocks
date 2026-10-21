@@ -6,6 +6,25 @@ summary: Give it your MCP config files. Get a list of server packages that can c
 job: secure-code
 headline: MCP config version checker
 subhead: Give it your MCP config files. Get a list of server packages that can change under you, before you approve them.
+explain: |
+  A list of the tool servers in your MCP config that could change under you, found before you approve them. It reads your config files without running anything, so nothing can start by accident.
+
+  It searches the repo for MCP config files and reads them as plain text. If a drift checker tool is already installed it uses it; otherwise it applies hand rules. These flag servers fetched by a floating tag, an unpinned package name, or a download that runs straight from the web. For each one it suggests a fix without inventing a version number, since a pinned version should be one someone has reviewed.
+when:
+  - A repo you cloned has an MCP config and you are unsure about approving it.
+  - You want to know which servers update themselves.
+  - Your team needs a rule to block unpinned servers.
+  - You are reviewing a pull request that adds a new MCP server.
+you_give:
+  - The repo or MCP config files
+  - Your approval rules (optional)
+  - CI service (optional)
+you_get:
+  - A list of risky entries
+  - A reason for each flag
+  - Safer pinning advice
+  - A short report
+  - A CI check (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

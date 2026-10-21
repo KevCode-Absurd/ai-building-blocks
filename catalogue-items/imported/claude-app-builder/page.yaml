@@ -6,6 +6,25 @@ summary: Say what to build with Claude. Get working code that calls the Claude A
 job: build-software
 headline: Claude app builder
 subhead: Say what to build with Claude. Get working code that calls the Claude API the right way.
+explain: |
+  Tell it what you want to build with Claude, and get working code that talks to the Claude API correctly. It uses the official software kit for your language, so function names and imports are real and not guessed.
+
+  It first looks at your project for signs of another AI provider and stops if you are using one. Then it picks the right way to build: a single call, a tool-using loop or a longer-running agent. It covers streaming, tool use, saved prompts to cut cost, token counts and moving to newer models. It warns where old habits from training are out of date, such as how thinking is switched on.
+when:
+  - You want to add a Claude feature to an app and need correct code.
+  - Your old code uses settings that have since changed.
+  - You need to stream answers or let Claude call your tools.
+  - You want to cut cost by caching a long prompt.
+you_give:
+  - What you want to build
+  - Your programming language
+  - Your existing code (optional)
+  - An API key from Anthropic
+you_get:
+  - Working code using the official kit
+  - The right approach for your use
+  - Notes on settings that changed
+  - Tips on cost and speed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

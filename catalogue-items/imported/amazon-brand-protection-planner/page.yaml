@@ -6,6 +6,25 @@ summary: Give it your brand and listings. Get checks for hijackers and fakes, pl
 job: run-your-store
 headline: Amazon brand protection planner
 subhead: Give it your brand and listings. Get checks for hijackers and fakes, plus complaint letters ready to send.
+explain: |
+  A set of checks and ready complaint templates to protect your Amazon brand from hijackers, fakes and sellers breaking your price rules. It works to risk levels, so you know what needs action in 24 hours and what only needs watching.
+
+  You give the brand name and listings. The skill watches four signals: new sellers appearing on your listing, prices below your minimum, review wording that hints at counterfeits, and your trademark used in other sellers' titles. Each gets a risk rating of high, medium or low. It supplies a Brand Registry complaint, a cease and desist letter and a guide to making a test buy for evidence. Check each letter with a lawyer before sending.
+when:
+  - Another seller has suddenly joined your listing.
+  - Reviews say the product is fake or different from the photos.
+  - A reseller is selling below your minimum price.
+  - You need a complaint ready to send to Amazon.
+you_give:
+  - Your brand name and trademark details
+  - Your listing identifiers
+  - Your minimum advertised price (optional)
+  - Seller names you already suspect (optional)
+you_get:
+  - Risk ratings for hijackers, prices, fakes and trademark use
+  - What to do next for each level
+  - Brand Registry and cease and desist templates
+  - A test buy guide for evidence
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

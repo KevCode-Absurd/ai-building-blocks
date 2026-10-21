@@ -6,6 +6,26 @@ summary: Point it at your tests. Get them run and filtered, with failures, cover
 job: test-and-fix-code
 headline: MATLAB test runner
 subhead: Point it at your tests. Get them run and filtered, with failures, coverage gaps and CI set up.
+explain: |
+  Your MATLAB tests run, filtered and explained. You get a clear pass and fail count, the reason for each failure, which lines are not covered by tests, and a build file for continuous integration.
+
+  It runs tests through MATLAB's test tools, with filters for a name, a tag or a folder. After the run it checks the pass and fail counts and reads the diagnostics for each failure. For coverage it sets up the coverage plugin, shows a summary and points at the gaps. For CI it writes a buildfile with a test task and adds a config for GitHub Actions, Azure DevOps or GitLab.
+when:
+  - You changed code and need to see which tests now fail.
+  - You want to know which parts of your code no test touches.
+  - Your team wants tests to run on every pull request.
+  - You only want to run one group of tests quickly.
+you_give:
+  - The folder or files with tests
+  - A filter by name or tag (optional)
+  - Your CI service (optional)
+  - MATLAB release
+you_get:
+  - Pass and fail results
+  - Failure reasons
+  - A coverage summary and gaps
+  - A build file
+  - A CI config (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

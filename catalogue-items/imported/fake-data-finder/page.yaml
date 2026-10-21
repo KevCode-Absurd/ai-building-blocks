@@ -6,6 +6,25 @@ summary: Give it a live page. Get a report of which numbers are real, mocked, ha
 job: test-and-fix-code
 headline: Fake data finder
 subhead: Give it a live page. Get a report of which numbers are real, mocked, hardcoded or broken.
+explain: |
+  A page audit that tells you which numbers on screen come from a real source and which are made up. It matters before you show an app built with AI to a customer or investor.
+
+  You give a live URL. A browser walks the page, takes a full screenshot, and lists every heading, button, card, stat and table cell. With your approval it clicks tabs and safe buttons, and watches network calls and console errors. Each value is labelled real, mocked, hardcoded, generated or broken. Warning signs include round numbers, clustered timestamps and values that never change. You confirm ownership and which actions are allowed before it starts.
+when:
+  - You built a dashboard with an AI tool and are unsure what is connected.
+  - A contractor delivered an app and you need a check before you pay.
+  - A page looks too tidy, with every metric a round number.
+  - You are about to demo an early product and want no surprises.
+you_give:
+  - The live page URL
+  - Login details for a test account, if needed
+  - Which actions are safe to click
+  - Your suspicions about the page (optional)
+you_get:
+  - "A value-by-value report: real, mocked, hardcoded or broken"
+  - Screenshots of the page
+  - Notes on network and console problems
+  - A short fix list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

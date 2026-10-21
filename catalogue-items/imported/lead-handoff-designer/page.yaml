@@ -6,6 +6,25 @@ summary: Describe your sales process. Get lead scoring, stages and handoff rules
 job: sell-and-negotiate
 headline: Lead handoff designer
 subhead: Describe your sales process. Get lead scoring, stages and handoff rules from marketing to sales.
+explain: |
+  The rules that tell marketing, sales and customer success when a lead is ready to pass on, written down before you automate anything. Describe your sales process, deal size and tools. The skill builds a lead scoring model, defines each stage from new lead to closed deal, and sets handoff rules with a time limit and an owner for every step.
+
+  It works from a few principles: one system of record, definitions before automation, and a tracked handoff at every transfer, since each one can leak leads. It also covers fixing definitions when sales will not work what marketing calls qualified. It starts with whatever you can tell it.
+when:
+  - Marketing says leads are good and sales says they are not.
+  - Leads sit untouched for days before anyone calls.
+  - You are setting up your CRM and need stage definitions.
+  - You want a speed-to-lead target and a way to track it.
+you_give:
+  - How you sell, self-serve or sales-led
+  - Average deal size and sales cycle
+  - Your CRM and marketing tools
+  - How leads are handled today
+you_get:
+  - A lead scoring model
+  - Stage definitions
+  - Handoff rules with time limits
+  - Metrics to track each handoff
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

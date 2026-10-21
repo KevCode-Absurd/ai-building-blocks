@@ -6,6 +6,26 @@ summary: Point it at your MCP server. Get realistic task tests and a report on w
 job: test-and-fix-code
 headline: MCP server test runner
 subhead: Point it at your MCP server. Get realistic task tests and a report on whether an AI picks the right tool.
+explain: |
+  Tests for your MCP server that show if an AI picks the right tool for a real task. Point it at the server and get a report on what passes, what fails and why.
+
+  The skill works through gates. First the server must build and start. Then the Inspector checks that the protocol works and the conformance suite checks the spec. The main test is an agent evaluation: write about ten realistic questions on real data, solve each yourself with the tools first, check them with a linting script, then run an AI against the live server and score exact answers.
+when:
+  - You built an MCP server and want to know if an AI uses its tools correctly.
+  - The AI keeps choosing the wrong tool for a request.
+  - You need regression checks before each release.
+  - Your hosted server must handle many users at once.
+you_give:
+  - The MCP server code or address
+  - Sample real data
+  - Typical user tasks
+  - Test runner access or CI (optional)
+you_get:
+  - Protocol and spec check results
+  - About ten evaluation questions
+  - A scored agent test run
+  - A tool selection accuracy report
+  - CI test gates
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

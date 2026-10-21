@@ -6,6 +6,26 @@ summary: Give it an outage. Get severity, a timeline, roles and a blame-free rev
 job: ship-and-host
 headline: Outage incident leader
 subhead: Give it an outage. Get severity, a timeline, roles and a blame-free review once it is fixed.
+explain: |
+  A calm plan when your service is down: how bad it is, who does what, a clear timeline and a blame-free review after the fix.
+
+  The skill covers reliability problems like outages, slowdowns and failed deploys. It is not for security attacks. First it scores severity from SEV1 to SEV4 using users hit, revenue and service promises, and suggests who to pull in with message templates for updates. Later it turns scattered logs and chat messages into one ordered timeline and points out gaps. Finally it writes a post-incident review using root cause methods, with action items. The tools are Python scripts you can run on your own data.
+when:
+  - Your site just went down and nobody knows who is in charge.
+  - You need to tell customers and leaders what is happening.
+  - Logs and chat threads need to become one clear timeline.
+  - The fix is done and you must write the review.
+you_give:
+  - Description of the incident
+  - "Impact: users, revenue, services"
+  - Timestamped events or logs
+  - Team roles available (optional)
+you_get:
+  - Severity level and response team
+  - Status update templates
+  - A rebuilt timeline
+  - A blame-free incident review
+  - Follow-up actions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

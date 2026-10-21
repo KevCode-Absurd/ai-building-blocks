@@ -6,6 +6,24 @@ summary: Get products, collections and pages with no search title or description
 job: get-found-in-search
 headline: Store SEO gap finder
 subhead: Get products, collections and pages with no search title or description, so search results stop looking blank.
+explain: |
+  A list of pages in your Shopify store that show up blank or weak in search results. It scans products, collections and pages for missing or short search titles and descriptions, the text that appears under your link on Google.
+
+  You can set what counts as too short, by default under 10 characters for a title and under 50 for a description, and choose to scan only products, only collections, only pages or all. The result lists each page with what is missing, so you can fill gaps in order. It reads your store only and changes nothing, so you can run it whenever you add products. It is a good first step before writing new search text.
+when:
+  - You added many products and never wrote search descriptions.
+  - Your listings in Google show random text from the page.
+  - You are planning an SEO clean-up and need a to-do list.
+  - You want a regular check after each product launch.
+you_give:
+  - Your Shopify store link and read access
+  - What to scan, products, collections, pages or all (optional)
+  - Minimum title and description length (optional)
+you_get:
+  - Pages with missing search titles
+  - Pages with missing descriptions
+  - Pages with short text flagged
+  - Results grouped by type
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Name the packet type. Get a Bluetooth Low Energy waveform built with co
 job: build-software
 headline: Bluetooth LE waveform generator
 subhead: Name the packet type. Get a Bluetooth Low Energy waveform built with correct functions.
+explain: |
+  Get Bluetooth Low Energy PHY waveforms built with the right MATLAB functions, so you stop debugging invented API calls. You name the packet type or test, and the skill picks a matching pattern.
+
+  It starts from a routing table that maps your request to a pattern: single mode, all-mode comparison, direction finding with CTE, RF-PHY compliance, WLAN coexistence, transmit measurements, RSSI location, bit error rate, multi-packet bursts, spectrum views, whitening or full impairments. If you are vague, it defaults to LE1M with a 37-byte payload on channel 37. It covers the LE1M, LE2M, LE500K and LE125K modes. It needs the Bluetooth Toolbox.
+when:
+  - You need a Bluetooth LE packet waveform for a test.
+  - You want to compare the four PHY modes side by side.
+  - You are working on angle of arrival or departure.
+  - You must check bit error rate across noise levels.
+you_give:
+  - The packet or PHY mode to generate
+  - Payload size and channel (optional)
+  - The test you plan to run
+  - A MATLAB install with the Bluetooth Toolbox
+you_get:
+  - Waveform generation code
+  - A matching receiver or measurement step
+  - Plots such as spectrum or error rate
+  - Sensible defaults when your request is vague
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

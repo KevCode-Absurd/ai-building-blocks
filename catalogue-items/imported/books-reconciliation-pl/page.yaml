@@ -6,6 +6,25 @@ summary: Give it your ledger and payment reports. Get mismatches, duplicates and
 job: track-numbers
 headline: Books reconciler and P&L narrator
 subhead: Give it your ledger and payment reports. Get mismatches, duplicates and missing receipts flagged, plus a plain P&L story.
+explain: |
+  Close the month with fewer surprises. The skill compares your bookkeeping ledger to your payment reports, flags mismatches, duplicates and missing receipts, and then tells the profit and loss story in plain words.
+
+  It works through a checklist in order, and it stops at each step for your input before moving on. It starts by confirming the month, then pulls the ledger's profit and loss and its register, and matches them against payment processor data. It works with QuickBooks, Xero, Zoho Books and others. If a connection is missing, it asks for a CSV export and never skips a step silently.
+when:
+  - You are closing the month and need books matched to payments.
+  - You suspect duplicate entries in your ledger.
+  - Receipts are missing and you need a list of which ones.
+  - You want your P&L explained without accounting jargon.
+you_give:
+  - Your connected ledger or a CSV export
+  - Payment processor reports
+  - The month to close
+  - Your currency (optional)
+you_get:
+  - A list of mismatches
+  - Flagged duplicates and missing receipts
+  - A plain-language P&L summary
+  - A step-by-step close checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

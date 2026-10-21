@@ -6,6 +6,26 @@ summary: Name your competitors. Get what content works for them, the gaps, and a
 job: study-competitors
 headline: Competitor social strategy researcher
 subhead: Name your competitors. Get what content works for them, the gaps, and a short social plan. Collects data from websites.
+explain: |
+  A view of what content works for your competitors on social media, where they are weak, and a short plan for what you could post. It judges each account against its own normal results, so a small brand is not compared with a giant on raw views.
+
+  Claude pulls profile snapshots and recent posts for each account on the platforms you choose, such as TikTok, Instagram, YouTube or LinkedIn. It finds outlier posts by comparing each to that account's median. It then reviews content themes, formats, hooks, posting rhythm, offers and use of a founder face. It looks for topics rivals avoid, formats few use and audience questions left unanswered, and turns those into a plan.
+when:
+  - You are starting on a platform and want to know what works in your niche.
+  - You want to see how often rivals post and in what format.
+  - Your content feels repetitive and you need new angles.
+  - A manager asked for a social plan based on evidence.
+you_give:
+  - Competitor accounts or company names
+  - The platforms to cover
+  - Your niche or product
+  - Time window to look at (optional)
+you_get:
+  - A snapshot of each account
+  - Outlier posts and why they worked
+  - Content theme and hook review
+  - A list of gaps
+  - A short social plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

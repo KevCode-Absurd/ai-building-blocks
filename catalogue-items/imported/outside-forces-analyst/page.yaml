@@ -6,6 +6,25 @@ summary: "Name your business and market. Get the outside forces that affect you:
 job: plan-strategy
 headline: Outside forces analyst
 subhead: "Name your business and market. Get the outside forces that affect you: rules, money, people, tech and nature."
+explain: |
+  A list of the outside forces that can help or hurt your business, sorted into political, economic, social, technology, legal and environment. It helps you spot risks before they land.
+
+  You name your business, market and region. The skill goes through each of the six areas with specific prompts: tariffs and stability, interest rates and spending, population and habits, tech change, rules and licences, and climate or sustainability pressure. It judges which forces matter most for your case and which are noise. It points out which are threats and which are chances, and turns the key ones into questions to ask or actions to take. Useful before entering a market or setting yearly plans.
+when:
+  - You are planning to enter a new country or market.
+  - You are writing yearly strategy and need the outside view.
+  - A new law or tariff might change your costs.
+  - Investors ask what external risks you face.
+you_give:
+  - Your business and product
+  - Market and region
+  - Current strategic question
+  - Known rule or market changes (optional)
+you_get:
+  - Forces sorted into six areas
+  - Threats and chances flagged
+  - The most important factors
+  - Questions or actions to follow up
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe a design problem. Get hypotheses, quick sketching steps and sm
 job: design-work
 headline: Hypothesis-first design planner
 subhead: Describe a design problem. Get hypotheses, quick sketching steps and small experiments in place of heavy design documents.
+explain: |
+  A design plan built on small tests instead of heavy documents. Describe a design problem and get a list of assumptions, clear hypotheses and quick experiments that show whether you are right before you build much.
+
+  It starts by writing down what you believe about the business and the users, then ranks those beliefs by risk and how little you know. For each top belief it writes a hypothesis with a success rule set in advance. It picks the cheapest way to test it, like a paper sketch or a fake landing page. It pushes the team to design together and research weekly. It also scores your process out of 10.
+when:
+  - Your team is about to spend months on a design nobody has tested.
+  - Stakeholders disagree and you need to turn opinions into things to test.
+  - You want to replace long spec documents with quick learning.
+  - You need a weekly research habit your team will keep.
+you_give:
+  - The design problem or feature idea
+  - Who the users are
+  - Your current design process (optional)
+  - Team size and roles (optional)
+you_get:
+  - A ranked assumptions list
+  - Hypotheses with success rules
+  - Lightweight experiment plans
+  - A score of your current process with fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

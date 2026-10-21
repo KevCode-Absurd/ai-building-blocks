@@ -6,6 +6,25 @@ summary: Give it a data table. Get models trained and compared in the Learner ap
 job: build-software
 headline: No-code model trainer
 subhead: Give it a data table. Get models trained and compared in the Learner apps, and the best one exported.
+explain: |
+  Machine learning models trained and compared in MATLAB's Classification Learner and Regression Learner apps, with the best one exported. You do it by code, so you do not click through the apps by hand.
+
+  The skill drives the apps through their AppController. It opens a session on your data table, creates models, trains them and selects them. It reads their accuracy figures and options such as feature selection and PCA, and opens the standard plots. For explanation, it can run partial dependence, permutation importance, Shapley and LIME. Finally it exports the chosen model, or code to rebuild it. You need MATLAB with the Statistics and Machine Learning Toolbox.
+when:
+  - You have a table and want to try many model types quickly.
+  - You want to compare models without clicking through the app.
+  - You need to explain which features drive predictions.
+  - You want to export the winning model for use elsewhere.
+you_give:
+  - A data table
+  - The column to predict
+  - Which model types to try (optional)
+  - Feature selection or tuning wishes (optional)
+you_get:
+  - A set of trained models
+  - A comparison of their metrics
+  - Explanation plots
+  - The exported best model
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

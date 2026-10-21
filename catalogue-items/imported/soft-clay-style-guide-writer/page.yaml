@@ -6,6 +6,25 @@ summary: Describe your product. Get a style guide for a puffy, rounded look, wit
 job: design-work
 headline: Soft clay style guide writer
 subhead: Describe your product. Get a style guide for a puffy, rounded look, with shapes, colour and states.
+explain: |
+  A style guide for a puffy, rounded, clay-like interface that your designers and developers can use directly. You describe your product, and the skill writes the rules for shapes, colour, type and states.
+
+  The look is soft, three-dimensional and playful, with colourful surfaces that seem moulded. The guide sets a type scale, colour tokens for primary, neutral and status colours, and a spacing scale built on 4 and 8 pixel steps. It covers how each component looks when hovered, focused or disabled, and sets accessibility rules for contrast and keyboard use. It also lists do and don't rules, such as using tokens over raw values and not mixing styles.
+when:
+  - You want an app to feel friendly and tactile.
+  - You need a style guide before building a new product.
+  - Your team keeps making inconsistent buttons and cards.
+  - You are designing for kids or a playful brand.
+you_give:
+  - A description of your product
+  - Brand colours and fonts (optional)
+  - Your audience
+  - Platforms you build for (optional)
+you_get:
+  - A written style guide for the clay look
+  - Colour, type and spacing tokens
+  - Rules for component states
+  - Accessibility and do and don't rules
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

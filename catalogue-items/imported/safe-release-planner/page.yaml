@@ -6,6 +6,25 @@ summary: Describe your release. Get a deploy plan with checks, rollback steps an
 job: ship-and-host
 headline: Safe release planner
 subhead: Describe your release. Get a deploy plan with checks, rollback steps and how to know it worked.
+explain: |
+  A deploy plan that tells you what to check before shipping, how to go back if it fails, and how to tell it worked. Describe your release and it fits the steps to where you host.
+
+  It starts with the platform, because a static site on Vercel, a small app on Railway, a server with PM2, Docker and Kubernetes each deploy differently. Before release you pass four checks: code quality, build, environment and safety. The deploy runs in five phases: prepare, back up, deploy, verify, and then either keep or roll back. It stresses the reasons behind each step so you can adapt, rather than a script to copy. Rollback steps are written before you start, not after something breaks.
+when:
+  - You are shipping a change that touches the database and want a safe order.
+  - Your team deploys by hand and forgets steps.
+  - You need a rollback plan before a risky release.
+  - You are moving to a new host and need a deploy method.
+you_give:
+  - What you are deploying
+  - Where it runs
+  - Whether the release changes the database
+  - Your current deploy steps (optional)
+you_get:
+  - A pre-release checklist
+  - A step-by-step deploy plan
+  - Rollback steps
+  - Checks that show the release worked
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

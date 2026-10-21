@@ -6,6 +6,25 @@ summary: Give it old session-based data acquisition code. Get it ported to the c
 job: build-software
 headline: Data acquisition code updater
 subhead: Give it old session-based data acquisition code. Get it ported to the current interface.
+explain: |
+  Old MATLAB scripts that talk to measurement hardware get ported to the current DataAcquisition interface, so they stop breaking on new releases. Error messages about missing wait or Data fields usually point to this exact problem.
+
+  The skill swaps the old session calls for their modern equivalents: daq("ni") for createSession, addinput for channel adds, ScansAvailableFcn for the data listener, and preload plus write for queued output. It works in a fixed order and checks after each step, because failures here are often silent. It also covers new scripts that mix triggers, callbacks and continuous capture. It is built around National Instruments hardware. Simple one channel captures do not need it.
+when:
+  - Your lab script worked years ago and now errors on a new MATLAB release.
+  - You see an error that wait is undefined for a DataAcquisition object.
+  - You need to replace DataAvailable listeners with the new callbacks.
+  - You are writing a new script with triggers and continuous streaming.
+you_give:
+  - Your old MATLAB script
+  - The MATLAB release you use (optional)
+  - Your hardware details (optional)
+  - The error message (optional)
+you_get:
+  - Ported script on the modern interface
+  - List of changed calls
+  - Fixes for callback and output queue code
+  - Checks to confirm it still works
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

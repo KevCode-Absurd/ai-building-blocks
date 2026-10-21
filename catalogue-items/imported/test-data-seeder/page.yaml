@@ -6,6 +6,26 @@ summary: Describe your tables. Get realistic, repeatable test data loaded for de
 job: test-and-fix-code
 headline: Test data seeder
 subhead: Describe your tables. Get realistic, repeatable test data loaded for development and staging.
+explain: |
+  Realistic test data loaded into your database, the same every time you run it, so development and staging stop depending on empty tables or a copy of real customers. Everything fits your schema and keeps its links intact.
+
+  The skill reads your tables, columns, constraints and foreign keys. It plans the data by purpose: fixed seeds for repeatable tests, or random fake data for demos. It writes a seed script in your language, using tools like Faker or your framework's seeders, and loads parent tables before children. The script is safe to run twice, using upserts or clean-and-reload. It offers small, medium and large profiles, then checks row counts and that all references point to real rows.
+when:
+  - Your development database is empty and the app looks broken.
+  - You need the same test data in every environment.
+  - You want a large dataset to test slow queries.
+  - You cannot use real customer data for testing.
+  - A seed script keeps failing on foreign keys.
+you_give:
+  - Your schema or migration files
+  - Database and language you use
+  - Environment and data size wanted
+  - Rules about realistic values (optional)
+you_get:
+  - A seed script that can be re-run safely
+  - Small, medium and large data profiles
+  - Data that respects your constraints
+  - A check of row counts and links
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

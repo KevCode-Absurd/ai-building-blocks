@@ -6,6 +6,26 @@ summary: Describe the effect. Get a frame-by-frame audio chain with filters, EQ 
 job: build-software
 headline: Live audio processing builder
 subhead: Describe the effect. Get a frame-by-frame audio chain with filters, EQ and level meters.
+explain: |
+  A chain of audio processing that runs on sound as it plays, with filters, equaliser and level meters you can tweak while it runs. Describe the effect you want and get MATLAB code that does it.
+
+  The steps are fixed. Create a source, such as a file reader or live input. Set up Audio Toolbox objects for your sample rate. Look at the filter responses. Open a tuning panel so you can change settings by ear. Then process in a loop, one frame at a time, and release the objects when done. Patterns cover multiband processing, parametric equaliser, metering and per-frequency work. You need MATLAB with Audio Toolbox.
+when:
+  - You want to hear an equaliser change as you adjust it.
+  - You need a compressor or filter that works on live input.
+  - You want to see audio levels while a file plays.
+  - You are teaching signal processing and need a working demo.
+you_give:
+  - The effect or chain you want
+  - "Audio source: file or live input"
+  - Sample rate
+  - MATLAB with Audio Toolbox
+you_get:
+  - A frame-by-frame MATLAB script
+  - Filter and equaliser setup
+  - A tuning panel for live changes
+  - Level meters
+  - Cleanup steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

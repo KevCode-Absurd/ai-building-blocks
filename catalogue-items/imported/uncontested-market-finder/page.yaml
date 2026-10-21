@@ -6,6 +6,25 @@ summary: Describe your market. Get a strategy canvas showing what to cut, raise 
 job: plan-strategy
 headline: Uncontested market finder
 subhead: Describe your market. Get a strategy canvas showing what to cut, raise and add to stand apart.
+explain: |
+  A strategy canvas that shows where you copy your rivals and where you could stand apart in a space with no fights. You see what to cut, what to reduce, what to raise and what to create.
+
+  The skill plots your market's factors, such as price, features and service, and draws your curve against competitors. If the curves match, you are in a crowded market. It then applies the four actions framework to find changes that cut cost while raising value for buyers. It also looks at non-customers, the people who skip your category, and what would win them. It scores the strategy out of ten on five checks and lists the moves needed to improve it.
+when:
+  - Your market is crowded and you compete only on price.
+  - You are planning a new product and want a different angle.
+  - You want to find people who do not buy anything in your category yet.
+  - You need a clear picture of how you differ from rivals.
+you_give:
+  - Your market and main rivals
+  - What buyers compare you on
+  - Your costs and strengths (optional)
+  - Who does not buy in your category (optional)
+you_get:
+  - A strategy canvas
+  - Cut, reduce, raise and create lists
+  - A look at non-customers
+  - A score with moves to improve it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

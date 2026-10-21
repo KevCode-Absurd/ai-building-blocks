@@ -6,6 +6,25 @@ summary: Give it text and a language. Get a natural translation with local tone 
 job: write-and-tell-stories
 headline: Translator
 subhead: Give it text and a language. Get a natural translation with local tone and consistent terms.
+explain: |
+  Text in another language that reads as if a local wrote it, with the same tone and the same terms every time. You do not get stiff word-for-word output.
+
+  The skill first reads your text for field, formality and audience. For specialised content it builds a short glossary so a key term is never translated two ways. It translates while keeping formatting such as Markdown, code blocks, HTML tags, JSON keys and placeholders. Then it adapts units, dates, currency and sayings to the target place, rereads for gaps or repeats, and adds short notes where a choice was tricky. You can set formal or informal, give a glossary and pick the output format.
+when:
+  - You need marketing copy translated so it sounds natural, not literal.
+  - You must translate app messages without breaking placeholders.
+  - You want one term to stay the same across a long document.
+  - You need dates and units changed for a different country.
+you_give:
+  - The text to translate
+  - The target language
+  - Formality and field, such as legal or casual (optional)
+  - A glossary of required terms (optional)
+you_get:
+  - A natural translation
+  - Formatting and placeholders kept intact
+  - Local units and dates
+  - Translator notes on tricky choices
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

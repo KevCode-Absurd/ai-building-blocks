@@ -6,6 +6,26 @@ summary: Name the part you want to improve. Get a simpler design with clear boun
 job: build-software
 headline: Module design coach
 subhead: Name the part you want to improve. Get a simpler design with clear boundaries that is easier to test.
+explain: |
+  A simpler design for the part of your code you want to improve, with clear edges that make it easier to test. The goal is a lot of behavior behind a small, plain interface.
+
+  The skill teaches a fixed set of words and uses them throughout: module, interface, depth, seam and adapter. It asks what a caller must know to use a piece correctly, including order of calls, errors and settings. If that list is long compared to what the piece does, the module is shallow. It then suggests where to draw the seam, what to hide, and how to test through the interface instead of through the internals.
+when:
+  - A piece of code needs too much explanation before anyone can use it.
+  - Tests break every time you rename something inside.
+  - You want to split a messy file but do not know where the line goes.
+  - You are reviewing a design before it is built.
+you_give:
+  - The code or area you want to improve
+  - What callers need from it
+  - Pain points, such as hard to test or hard to change
+  - Language and framework (optional)
+you_get:
+  - A shallow or deep rating with reasons
+  - A proposed interface
+  - Where to place the seam
+  - What to hide inside
+  - A testing approach through the interface
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

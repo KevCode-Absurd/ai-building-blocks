@@ -6,6 +6,26 @@ summary: Describe your story. Get a style guide for a page that walks visitors t
 job: design-work
 headline: Story-led page style guide writer
 subhead: Describe your story. Get a style guide for a page that walks visitors through it, with clear steps and tone.
+explain: |
+  A design guide for a web page that tells a story, so a designer or developer can build it without guessing. You describe the story and the feeling you want, and get rules for how the page leads a visitor from one step to the next.
+
+  The guide sets fonts and size scale, colours with named tokens, spacing steps, and how each part of the page behaves, including hover, focus and loading states. It adds accessibility rules to WCAG 2.2 AA, keyboard use and visible focus, plus a writing tone, do and don't lists and example components. The default style is playful, but you can change that. It is a specification document, not a finished page.
+when:
+  - You are building a product or brand page that should read like a story.
+  - A developer and a designer need shared rules for one page.
+  - Your landing page feels like a list of features with no flow.
+  - You want accessibility rules written in from the start.
+you_give:
+  - A short description of your story
+  - The mood or style you want
+  - Brand colours and fonts (optional)
+  - Who the page is for
+you_get:
+  - Typography and colour rules
+  - A spacing scale
+  - Behaviour rules for page parts
+  - Accessibility requirements
+  - Do and don't lists and a tone guide
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

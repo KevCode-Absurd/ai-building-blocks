@@ -6,6 +6,25 @@ summary: Describe your product. Get a landing page as React code with hero, pric
 job: write-landing-page
 headline: React landing page builder
 subhead: Describe your product. Get a landing page as React code with hero, pricing, FAQ and proof sections.
+explain: |
+  A full landing page as React code, built from your product description. It has a hero, features, pricing, FAQ and proof sections, each with copy written to a proven pattern.
+
+  You give your product name, tagline, audience, pain point and pricing. The skill picks one of four design styles and one of several copy frameworks, such as problem then solution, based on the tone of your existing content. It offers five hero layouts, feature grids, two to four pricing tiers, a FAQ with search markup, testimonials and calls to action. It also writes SEO tags. The page is a Next.js TSX component with Tailwind, aimed at fast load.
+when:
+  - You are launching a product and need a page this week.
+  - You want pricing and FAQ sections without hand coding them.
+  - You want to compare two hero layouts before choosing.
+  - Your current page loads slowly and ranks poorly.
+you_give:
+  - Product name and tagline
+  - Audience and main pain point
+  - Pricing tiers
+  - Brand content for tone (optional)
+you_get:
+  - Landing page in React and Tailwind
+  - Copy for each section
+  - FAQ with search markup
+  - SEO meta tags
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,24 @@ summary: Give it a company's numbers. Get a value range from DCF, peer multiples
 job: money-and-investing
 headline: Valuation method comparer
 subhead: Give it a company's numbers. Get a value range from DCF, peer multiples and past deals, with the key assumptions.
+explain: |
+  A fair value range for a company, built from three angles that check each other, with the assumptions that move the answer shown plainly. 
+  First, a cash flow model: project free cash flow for five to ten years, discount it, and add a terminal value. A warning appears if the terminal value is over 75 percent of the total. Second, trading multiples from five to ten peers, using median and quartile ranges. Third, past deals, which include a control premium of about 20 to 35 percent. A bridge then turns company value into equity value by subtracting debt and other claims. The purpose of the valuation, such as a sale or a tax test, sets the standard used.
+when:
+  - You are preparing to buy, sell or raise money and need a defensible value.
+  - A board member asks what the company is worth and why.
+  - You want to test how much a growth or discount rate changes the answer.
+  - You need to compare your own estimate with what peers trade for.
+you_give:
+  - Three or more years of financials
+  - Management forecasts (optional)
+  - Peer companies or recent deals (optional)
+  - The reason for the valuation
+you_get:
+  - A value range from each method
+  - A football field summary
+  - A bridge from company value to equity value
+  - The key assumptions and what changes them
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

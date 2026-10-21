@@ -6,6 +6,25 @@ summary: Describe the page or app. Get a polished design with premium type, dept
 job: design-work
 headline: Premium interface designer
 subhead: Describe the page or app. Get a polished design with premium type, depth and smooth motion, not a template look.
+explain: |
+  A page or app that looks expensive: premium type, soft depth, careful spacing and smooth motion, rather than a template look. Describe what you need and get working code.
+
+  The skill bans common giveaways such as Inter, Roboto and Arial fonts, thick generic icons and harsh shadows. It instead picks distinctive fonts and light icons, builds layered surfaces and plans micro-motion for hover and scroll. It will not repeat the same layout twice in a row. Fonts and libraries must be added to your project, and heavy motion is not right for tight dashboards or regulated products.
+when:
+  - Your landing page must look like a high-end agency made it.
+  - You want a portfolio with real polish.
+  - A SaaS product page feels flat and generic.
+  - You need a design review with the top fixes ranked.
+you_give:
+  - Page or app description
+  - Brand name and tone
+  - Fonts you can use (optional)
+  - Existing design to review (optional)
+you_get:
+  - Working page code
+  - Type and colour choices
+  - Motion and hover details
+  - Ranked design fixes for a review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

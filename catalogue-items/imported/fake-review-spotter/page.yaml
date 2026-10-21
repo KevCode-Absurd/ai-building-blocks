@@ -6,6 +6,25 @@ summary: Give it a product's reviews. Get a trust rating and the red flags that 
 job: run-your-store
 headline: Fake review spotter
 subhead: Give it a product's reviews. Get a trust rating and the red flags that point to fake or bought reviews.
+explain: |
+  A trust score from 0 to 100 for a product's reviews, with the exact reviews that look bought or copied. Use it before you buy, or to see how clean a rival's rating is.
+
+  Paste the review text, and add dates, star ratings and verified-purchase marks if you have them. More data unlocks more checks. The skill looks for bursts of reviews in a short time, near-identical wording, star counts that do not follow a natural curve, an unusual share of verified buyers, odd review lengths and stock phrases. Each check carries a weight. The result falls into low, medium, high or critical risk, and flagged reviews come with the reason.
+when:
+  - A product has a 4.9 rating and you do not believe it.
+  - You are choosing a supplier's item and want to avoid inflated reviews.
+  - You suspect a competitor bought reviews.
+  - You want to check your own listing for odd review spikes.
+you_give:
+  - Review text, pasted or exported
+  - Review dates (optional)
+  - Star ratings (optional)
+  - Verified purchase status (optional)
+you_get:
+  - A trust score from 0 to 100
+  - A risk level
+  - A list of flagged reviews with reasons
+  - Notes on timing and rating patterns
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe the effect or sound. Get a tested audio plugin you can export 
 job: build-software
 headline: Audio plugin writer
 subhead: Describe the effect or sound. Get a tested audio plugin you can export as VST or AU.
+explain: |
+  A working audio effect or sound generator that you can export as a VST or AU plugin for use in music software. Describe the sound you want, such as a warm compressor, a delay or a synth tone, and the AI writes the MATLAB class that does it.
+
+  Each plugin has tunable settings, a processing step and a reset step, written so it can be turned into compiled code. The skill covers the traps that make export fail: buffers and state, settings with options of different lengths, values worked out from settings, and calls that only work at runtime. It then runs MATLAB's own validation and builds the plugin. You need MATLAB with Audio Toolbox.
+when:
+  - You have a MATLAB audio idea and want it inside your music software.
+  - Your plugin fails validation and you can't see why.
+  - You want to add a neural network to a real-time effect.
+  - You are turning a research filter into something a producer can use.
+you_give:
+  - A description of the effect or sound
+  - Settings you want to control
+  - An existing MATLAB algorithm (optional)
+  - The target format, VST or AU
+you_get:
+  - A MATLAB plugin class
+  - Validation results with fixes
+  - Build steps for a VST or AU file
+  - Notes on settings and state
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

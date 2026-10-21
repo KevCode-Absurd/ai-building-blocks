@@ -6,6 +6,24 @@ summary: Point it at a failing pull request. Get the cause of the failed GitHub 
 job: test-and-fix-code
 headline: CI failure fixer
 subhead: Point it at a failing pull request. Get the cause of the failed GitHub check and a fix plan.
+explain: |
+  A red check on your pull request turns into a clear cause and a short plan to fix it. Point it at the PR, and it reads the logs from the failed GitHub Actions run, pulls out the lines that matter and tells you what went wrong.
+
+  It uses the GitHub command line to find the PR and list the checks that failed. A bundled script fetches each failing log and cuts it down to the error. It ignores checks that run outside GitHub Actions and tells you which ones it skipped. Then it drafts a fix plan and waits for your approval before changing any code.
+when:
+  - Your pull request is blocked by a failing check you cannot read.
+  - The logs are thousands of lines and you want only the error.
+  - You want a plan to approve before any code is touched.
+  - Several checks failed and you need to know which one to fix first.
+you_give:
+  - The repo folder
+  - The pull request number or link (optional)
+  - A signed-in GitHub command line
+you_get:
+  - A list of failing checks
+  - The error lines from each log
+  - A likely cause
+  - A fix plan to approve
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

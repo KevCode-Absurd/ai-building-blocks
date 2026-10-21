@@ -6,6 +6,26 @@ summary: Give it your market. Get market size two ways, survey sample sizes and 
 job: understand-customers
 headline: Market size and survey planner
 subhead: Give it your market. Get market size two ways, survey sample sizes and segments scored.
+explain: |
+  Your market size worked out two ways, a survey sample that holds up for each segment you report, and a score for which segments are real markets. It centers on method and assumptions, not a single big number.
+
+  The sizing tool runs top-down and bottom-up at once and reports how far apart they land. If they disagree widely, it says the check failed. The sample tool uses your confidence level, margin of error and expected split, adjusts for small populations and sets a minimum per segment, since a survey that works overall can fail for one group. The segment tool scores each candidate on five classic criteria and drops slices that are too small or unreachable.
+when:
+  - You need to answer how big the market is with a defendable number.
+  - You are planning a survey and must pick a sample size.
+  - You have a list of customer groups and need to pick the real ones.
+  - You want to compare two sizing methods side by side.
+you_give:
+  - Market and product details
+  - Customer counts, prices and share assumptions
+  - Survey confidence and margin of error
+  - Candidate segments
+you_get:
+  - Top-down and bottom-up market size
+  - A divergence check
+  - Sample sizes per segment
+  - Segment scores with keep or drop
+  - Assumptions list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

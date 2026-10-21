@@ -6,6 +6,25 @@ summary: Name your scope. Answer six questions and get gaps to fix before an int
 job: secure-code
 headline: ISO 27001 audit prep coach
 subhead: Name your scope. Answer six questions and get gaps to fix before an internal or outside ISO 27001 audit.
+explain: |
+  Six hard questions that expose what an ISO 27001 auditor would pick on, asked before they do. Name your scope and the audit type: an internal review, a stage 1 or 2 certification, or a surveillance visit. The coach works through each question and expects samples, not claims.
+
+  It asks whether three-year audit coverage is on track and whether auditors are independent. It asks when the risk register was last refreshed and whether high risks link to controls. It asks you to show the last four quarters of access reviews, which is the most cited finding area. Each weak answer becomes a gap to fix before the audit.
+when:
+  - Your annual internal audit is coming up.
+  - A certification body will visit next month.
+  - You changed scope after adding a product or a new SaaS tool.
+  - You had a breach and need to check your management system.
+you_give:
+  - Your audit scope
+  - The audit type
+  - Your risk register and access review records
+  - Policy and audit schedule documents (optional)
+you_get:
+  - Answers to six audit questions with gaps marked
+  - A list of weak or missing evidence
+  - A priority fix list
+  - Hints on what auditors will ask next
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

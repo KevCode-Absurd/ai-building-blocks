@@ -6,6 +6,26 @@ summary: Give it your findings and goals. Get the top insights ranked by impact 
 job: track-numbers
 headline: Insight brief writer
 subhead: Give it your findings and goals. Get the top insights ranked by impact and confidence, each with an action.
+explain: |
+  A one-page brief of the three to five findings that matter most, each ranked and paired with an action. It turns a heap of statistics into a clear answer to the question "so what do we do?"
+
+  The skill lists every real finding, then turns each into an insight by asking: so what, why, and now what. It puts a number on the business impact, because an insight without a size is only an observation. It scores each by impact, confidence and ease of action, groups related ones, and flags any that contradict each other. Your goals and priorities set the ranking. The brief suits people with no time for the full analysis.
+when:
+  - Your analysis has many numbers and no clear message.
+  - Leaders ask what the results mean for them.
+  - You need to combine several analyses into one set of actions.
+  - Your team cannot agree which finding to act on first.
+  - You must brief a busy team in five minutes.
+you_give:
+  - Your analysis findings, charts or outputs
+  - Current goals and priorities
+  - Who will read the brief (optional)
+you_get:
+  - Top insights ranked by impact and confidence
+  - A so what, why and now what for each
+  - Size estimates for business impact
+  - Notes on conflicting findings
+  - A short brief
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

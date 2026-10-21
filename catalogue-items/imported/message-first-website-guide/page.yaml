@@ -6,6 +6,24 @@ summary: Describe your business. Get a website plan that starts with your messag
 job: write-landing-page
 headline: Message-first website guide
 subhead: Describe your business. Get a website plan that starts with your message, then design, then conversion, step by step.
+explain: |
+  A step-by-step plan for building a website that gets visitors to act, with the words settled before the looks. Describe your business and you are walked through ten phases, saved in a plan file you can pick up again later.
+
+  The order is fixed: first who the site is for and its one job, then the message with your customer as the hero, then making it memorable. After that come visual design, type, consistency and ease of use. The last phases fix why people do not convert, capture those not ready to buy, and run a final review. Each phase ends with a draft you approve. Every claim, testimonial and guarantee must be true.
+when:
+  - You are starting a new site and do not know where to begin.
+  - Your site looks fine but nobody signs up.
+  - You have a product and no clear message yet.
+  - You want the site to collect leads from people who are not ready to buy.
+you_give:
+  - What you sell and who it is for
+  - The main goal, such as trial, demo, purchase or quiz
+  - Any existing positioning or customer notes (optional)
+you_get:
+  - A ten-phase plan with a progress tracker
+  - Positioning and website copy documents
+  - A design brief
+  - A conversion and test plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

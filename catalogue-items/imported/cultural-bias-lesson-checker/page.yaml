@@ -6,6 +6,26 @@ summary: Paste a lesson or task. Get a check for cultural bias and hidden assump
 job: teach-and-train
 headline: Cultural bias lesson checker
 subhead: Paste a lesson or task. Get a check for cultural bias and hidden assumptions, with ways to adapt it for your learners.
+explain: |
+  A lesson built in one country can quietly fail in another. Paste a task or teaching practice and say who will use it, and you get a check for cultural bias and hidden assumptions.
+
+  It looks at what the task takes for granted: examples, values, ways of speaking up in class, views of the teacher's role and how success is judged. It compares those with the culture the task came from and the culture of your learners. Concerns you name get extra attention. You get a verdict on how well the task fits, plus changes that keep the learning goal while fitting your learners. It is guided by cross-cultural education research.
+when:
+  - You are using a lesson from another country with your class.
+  - A teaching method that worked elsewhere is not landing with your learners.
+  - You want to review a resource before it goes into your curriculum.
+  - A research finding is being treated as true for every classroom.
+you_give:
+  - The task, lesson or practice
+  - Who it is for and where
+  - Where it was first made (optional)
+  - Year group and subject (optional)
+  - Specific concerns (optional)
+you_get:
+  - A list of cultural assumptions in the task
+  - How well it fits your learners
+  - Adapted versions of weak parts
+  - Questions to ask your students or colleagues
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your underperforming campaign. Get the main cause across offer,
 job: read-ad-results
 headline: Ad performance diagnoser
 subhead: Give it your underperforming campaign. Get the main cause across offer, audience, creative, funnel and sales, plus the fix.
+explain: |
+  Before you change five things at once and learn nothing, find the main reason your campaign is underperforming and the fix to try first.
+
+  The skill checks five places in order: the offer, the audience, the creative, the funnel and the sales follow-up. At each step it asks whether that part could explain the poor results, using your numbers. It finds the bottleneck, which is the first weak link, then names it as the root cause and gives the fix. The rule is to diagnose before changing anything and to avoid guessing. It suits problems such as high cost per lead or ads that get clicks but no sales.
+when:
+  - Your cost per lead keeps rising and you do not know why.
+  - Ads get clicks but few buy.
+  - You are about to change everything and want to find the real issue.
+  - A client asks for a clear reason behind bad results.
+you_give:
+  - Campaign results, such as spend, clicks, leads and sales
+  - Your offer and audience
+  - The ads and landing page
+  - Your sales follow-up process (optional)
+you_get:
+  - The main bottleneck
+  - A check of all five areas
+  - A root cause statement
+  - A fix to try first
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

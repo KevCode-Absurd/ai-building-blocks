@@ -6,6 +6,26 @@ summary: Point it at a multi-role marketplace app. Get a report of who can see o
 job: secure-code
 headline: Marketplace access auditor
 subhead: Point it at a multi-role marketplace app. Get a report of who can see or change what, with evidence from the code.
+explain: |
+  A report on who can see or change what in a marketplace app, backed by lines of code as proof.
+
+  The skill first builds a table of rules for each role. For every action it asks five things: the role, the link to the specific item, the scope, the state of the item and the fields involved. Then it walks the code in order. It lists every entry point, follows how identity and scope are passed, checks each object lookup, checks field limits, and tests state changes like refunds and shipping.
+when:
+  - You built a marketplace with buyers, vendors and admins and want to check the walls between them.
+  - You are about to launch and need a security review of access rules.
+  - A bug report says a user saw someone else's order.
+  - You inherited code and do not know what each role can do.
+you_give:
+  - The app's code or a repo link
+  - The list of user roles
+  - Any rules you intended to enforce (optional)
+  - Test accounts or setup notes (optional)
+you_get:
+  - A table of role permissions
+  - Findings with code evidence
+  - Severity ranking
+  - Tests that should be blocked
+  - A fix list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

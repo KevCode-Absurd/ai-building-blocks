@@ -6,6 +6,26 @@ summary: Give it your backlog and team time off. Get sprint scope, goals and a s
 job: build-product
 headline: Sprint plan writer
 subhead: Give it your backlog and team time off. Get sprint scope, goals and a stretch list sized to real capacity.
+explain: |
+  A sprint plan sized to the time your team really has. Give it your backlog and who is away. The skill works out capacity by taking off time off and regular meetings, so you are not planning for a full-strength team that does not exist.
+
+  It then proposes sprint goals and success measures, sorts items into must-do and stretch, and handles carryover from the last sprint. It also flags dependencies and risks. With a project tracker or calendar connected, it can pull the backlog and leave dates itself. Without them, you paste the details in.
+when:
+  - Planning day is tomorrow and the backlog is a mess.
+  - Two people are on leave and you need honest capacity.
+  - Work from last sprint is still unfinished.
+  - You want a clear goal for the sprint, not just a list.
+you_give:
+  - Your backlog items
+  - Team members and time off
+  - Last sprint's unfinished work (optional)
+  - Sprint name or dates
+you_get:
+  - Sprint goals and success measures
+  - A capacity estimate
+  - Must-do and stretch items
+  - A list of dependencies and risks
+  - A sprint plan document
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

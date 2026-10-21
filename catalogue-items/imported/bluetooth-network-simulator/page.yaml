@@ -6,6 +6,25 @@ summary: Describe your devices and links. Get a system-level Bluetooth network r
 job: build-software
 headline: Bluetooth network simulator
 subhead: Describe your devices and links. Get a system-level Bluetooth network run with results.
+explain: |
+  Describe your Bluetooth devices and how they link, and get a network simulation with results you can read. It handles one link, a star of devices or a mix of Bluetooth types.
+
+  It covers LE data links, LE Audio streams for speakers and hearing aids, and connection setup with advertising and scanning. It also covers classic piconets with voice links, and LE and classic devices sharing the air with adaptive hopping. Every run follows one flow. Start the simulator, set traffic and movement, add statistics, add the nodes, run, then read the key numbers. It needs MATLAB with the Bluetooth Toolbox.
+when:
+  - You want to know how many devices a Bluetooth link can carry.
+  - You are testing LE Audio for stereo earbuds or hearing aids.
+  - You need connection timing for advertising and scanning.
+  - LE and classic devices share space and you want to see the effect.
+you_give:
+  - The devices and how they connect
+  - Traffic type and data rates
+  - Movement or distance between nodes (optional)
+  - How long to run the simulation
+you_get:
+  - A runnable simulation script
+  - Throughput, delay and loss numbers
+  - Connection and link statistics
+  - Plots of how the network behaves
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

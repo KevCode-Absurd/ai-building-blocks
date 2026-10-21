@@ -6,6 +6,26 @@ summary: Describe your supply chain. Get the top risks ranked, a backup for each
 job: plan-supply-chain
 headline: Supply chain backup plan builder
 subhead: Describe your supply chain. Get the top risks ranked, a backup for each, and who does what if it breaks.
+explain: |
+  The biggest threats to your supply chain, ranked, with a backup for each and a clear owner for every step if something breaks. You get a plan to use on the bad day.
+
+  Describe your supply chain. The skill lists risks by category and rates each by chance and damage, which gives a value at risk and a priority order. It runs disruption scenarios, including a stress test and a random simulation, so you see the likely cost of a port closure or a supplier failure. It then picks responses such as dual sourcing and safety stock, and scores your overall resilience. Python code is included.
+when:
+  - A single supplier or port failing would stop your business.
+  - You must write a business continuity plan.
+  - You want to know how much a disruption could cost.
+  - Management asks how resilient you are.
+you_give:
+  - A description of your supply chain
+  - Key suppliers, routes and sites
+  - Cost of downtime (optional)
+  - Existing safety stock (optional)
+you_get:
+  - A ranked risk list
+  - Scenario and stress test results
+  - A mitigation plan for each top risk
+  - Owners and actions for a disruption
+  - A resilience score
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your people data. Get headcount, turnover and team health repor
 job: hire-people
 headline: Headcount and turnover reporter
 subhead: Give it your people data. Get headcount, turnover and team health reports. Use your own data only.
+explain: |
+  A report on who works for you and who is leaving, built from your own people data. Pick the type: headcount, turnover, representation, or org health. Upload a spreadsheet or describe the data.
+
+  The skill starts by asking what question you are trying to answer. Then it works out the numbers: headcount by team, location and level, average time in role, voluntary and involuntary exits, regretted exits, manager span of control, and signs someone may leave. Every report has a short summary, a metrics table with trends, the detail, recommended actions, and a note on how each figure was calculated. Use your own data only, and treat small groups carefully to protect privacy.
+when:
+  - Leadership wants a headcount snapshot by team and location.
+  - You suspect one team has high turnover and want to see the numbers.
+  - You need to report on representation across levels.
+  - You want to find managers with too many direct reports.
+you_give:
+  - A spreadsheet of employees with team, level, location and dates
+  - Exit dates and reasons, if you have them
+  - The question you want answered
+  - Manager names or IDs (optional)
+you_get:
+  - A summary of the main findings
+  - A metrics table with trends
+  - Detail by team, level or location
+  - Recommended actions and a method note
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

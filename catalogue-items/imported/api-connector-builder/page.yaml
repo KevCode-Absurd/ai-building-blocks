@@ -6,6 +6,25 @@ summary: Name the service you need to reach. Get working code with sign-in, erro
 job: connect-tools
 headline: API connector builder
 subhead: Name the service you need to reach. Get working code with sign-in, error handling and retries.
+explain: |
+  Working code that talks to an outside service, with sign-in, error handling and retries already in it. Name the service you want to reach and describe what you need from it, and you get a connector you can run.
+
+  The skill reads the service's docs first and picks the right pattern: a direct request client, a webhook receiver for live events, a polling loop when no webhooks exist, or a wrapper around the official kit. It sets up the right sign-in, whether API key, OAuth or token, and keeps secrets in environment variables. Errors are sorted so bad requests are not repeated, while rate limits and server faults retry with growing waits. It adds logging to help you debug.
+when:
+  - You need your app to pull orders or contacts from another service.
+  - A webhook should push events into your system.
+  - Your current integration breaks whenever the other side has a hiccup.
+  - Sign-in tokens keep expiring in a long-running job.
+you_give:
+  - The service or its API docs
+  - What data you want to read or send
+  - Your language or framework
+  - Where secrets are stored (optional)
+you_get:
+  - Working client or webhook code
+  - Sign-in with token refresh
+  - Retry and backoff rules
+  - Logging for troubleshooting
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

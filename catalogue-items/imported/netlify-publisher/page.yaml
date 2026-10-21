@@ -6,6 +6,25 @@ summary: Point it at your site. Get it live on Netlify as a preview or productio
 job: ship-and-host
 headline: Netlify publisher
 subhead: Point it at your site. Get it live on Netlify as a preview or production deploy, with the link.
+explain: |
+  Your website on a live Netlify address, with the link handed back. You can publish a private preview to check first or push straight to the public site.
+
+  The skill checks that the Netlify tool is signed in, and walks you through login if it is not. It looks at your project folder to find the framework and build settings. It then links the folder to an existing Netlify site or creates a new one. Finally it deploys, as a preview or production, and waits for the build, which can take a few minutes. It runs through the Netlify command line on your computer and needs a free Netlify account.
+when:
+  - You built a site locally and want it online today.
+  - You want a preview link to show someone before going public.
+  - You are not sure which build settings Netlify needs.
+  - You want to update a live site after a change.
+you_give:
+  - Your web project folder
+  - A Netlify account
+  - Preview or production choice
+  - An existing Netlify site to link (optional)
+you_get:
+  - A confirmed login check
+  - Detected framework and build settings
+  - A deployed site
+  - The preview or live link
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

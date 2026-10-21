@@ -6,6 +6,25 @@ summary: Give it your landing page, signup or checkout. Get the leaks ranked, pl
 job: audit-landing-page
 headline: Leaky funnel fixer
 subhead: Give it your landing page, signup or checkout. Get the leaks ranked, plus tests to run in order.
+explain: |
+  A ranked list of where your page, signup or checkout loses people, and a series of tests to fix them in the right order. It works in seven phases and asks before every decision. First it uses your numbers to find the biggest drop. Then customer research explains why people leave.
+
+  Fixes follow a fixed order: message, then offer, then proof, then friction, because cutting steps does not help if nobody wants what you offer. Every change is a test with its goal set before you run it. Each phase saves notes to your docs folder so you can stop and resume later.
+when:
+  - Visitors reach your signup page but few finish.
+  - Your checkout loses people and you do not know where.
+  - You keep changing the page without knowing if it helped.
+  - You want a plan for what to test first, second and third.
+you_give:
+  - The page or flow that leaks
+  - Your funnel numbers by step
+  - Customer feedback or interviews (optional)
+  - Your single goal action
+you_get:
+  - The biggest leaks, ranked
+  - Reasons people drop off
+  - Fixes in message, offer, proof and friction order
+  - A test plan with goals set in advance
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

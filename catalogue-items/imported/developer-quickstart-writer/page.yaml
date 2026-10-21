@@ -6,6 +6,25 @@ summary: Describe your product. Get a quickstart, tutorial and sample app plan t
 job: build-product
 headline: Developer quickstart writer
 subhead: Describe your product. Get a quickstart, tutorial and sample app plan that gets a developer to Hello World fast.
+explain: |
+  A quickstart, a tutorial and a sample app plan that take a new developer from sign-up to working code in minutes. The first win matters most, so everything is built around reaching it fast.
+
+  The skill draws on patterns from products known for good onboarding: test keys visible right away, one-click templates, code in the reader's language, and error messages that say how to fix the problem. It also lists patterns to avoid, such as wizards that cannot be skipped. You get a Hello World path, then a longer tutorial that leads the reader on to deeper features. It reads a detailed guide first, so give it your real product details.
+when:
+  - You are launching an API or SDK and need a first-run guide.
+  - Your current quickstart takes thirty steps to show any result.
+  - You want a sample app that new developers can copy and run.
+  - Developers read your docs but do not come back after day one.
+you_give:
+  - A description of your product
+  - The language or frameworks your developers use
+  - How sign-up and keys work
+  - Your existing docs (optional)
+you_get:
+  - A quickstart that reaches Hello World fast
+  - A longer tutorial for the next step
+  - A sample app plan
+  - A list of onboarding patterns to avoid
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

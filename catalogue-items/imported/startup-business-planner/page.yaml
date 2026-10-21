@@ -6,6 +6,26 @@ summary: Describe your startup idea. Get market sizing, a business model, brand 
 job: test-an-idea
 headline: Startup business planner
 subhead: Describe your startup idea. Get market sizing, a business model, brand basics and tests to run first.
+explain: |
+  A set of planning documents that takes a startup idea from a rough thought to something tested. Tell it your idea. It moves through phases: intake, brainstorm, research, customer discovery, strategy, brand, product, finance and validation.
+
+  You get market sizing, a competitive scan, a lean canvas, a business model, financial projections, brand basics and go-to-market ideas. It adds a gate for real customer interviews, so you do not rely on desk research alone. Everything is saved as markdown files with a progress tracker, so you can resume after a break. A fast mode gives a quick check in far less time.
+when:
+  - You have an idea and want to know if it is worth pursuing.
+  - You need a business plan or lean canvas for an investor.
+  - You want market size and competitors without weeks of research.
+  - You need experiments to test the idea cheaply.
+you_give:
+  - Your startup idea
+  - Your budget and time limits (optional)
+  - Notes from customer conversations (optional)
+  - Fast or full mode
+you_get:
+  - Market size and competitor scan
+  - A business model and lean canvas
+  - Brand positioning
+  - Financial projections
+  - A list of validation experiments
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

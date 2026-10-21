@@ -6,6 +6,26 @@ summary: Find customers with disputed orders. Get their records tagged so you re
 job: run-your-store
 headline: Chargeback customer tagger
 subhead: Find customers with disputed orders. Get their records tagged so you review their next orders. Changes live customer tags.
+explain: |
+  Customers who have lost you a dispute get a tag on their record, so you can review or hold their next orders. This one writes to your live Shopify store, so it starts in preview mode and shows you who would be tagged before anything changes.
+
+  It scans orders from the last two years (you can change that) and finds every order linked to a dispute. It groups them by customer and skips anyone already tagged. By default it skips customers whose disputes you won. Then it adds a tag, named chargeback-history unless you pick another. You need the Shopify command line signed in with read and write access to orders and customers.
+when:
+  - You keep getting repeat disputes from the same buyers and want a flag on their account.
+  - You want to hold new orders from past dispute customers for a manual look.
+  - You need a list of every customer who has filed a dispute in the past year or two.
+  - You want to build a Shopify customer segment around risky buyers.
+you_give:
+  - Your store domain
+  - How far back to scan (optional)
+  - The tag name you want (optional)
+  - Whether to include disputes you won (optional)
+  - A go-ahead to leave preview mode
+you_get:
+  - A preview list of customers to tag
+  - Tags added to customer records
+  - A count of skipped and already tagged customers
+  - Any errors Shopify returned
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

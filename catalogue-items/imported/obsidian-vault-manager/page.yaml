@@ -6,6 +6,25 @@ summary: Tell it what to find, add or change in your vault. Get notes read, crea
 job: organise-work
 headline: Obsidian vault manager
 subhead: Tell it what to find, add or change in your vault. Get notes read, created and searched from the command line.
+explain: |
+  Run your Obsidian vault from the command line, in plain words. You say what to find, create or change, and the skill turns it into the right command for the running app.
+
+  It uses the Obsidian command line tool, which talks to a copy of Obsidian that is already open. Commands take values like name or content, and flags such as silent to avoid overwriting. You can aim a command at a note by name, which works like a link, or by exact path from the vault root. When you have more than one vault, it names the vault first so nothing lands in the wrong place. It can also help you develop and debug plugins and themes.
+when:
+  - You want to create ten notes from a list without clicking through the app.
+  - You need to search your vault for a phrase and see which notes match.
+  - You are building an Obsidian plugin and want to reload and test it from the terminal.
+  - You keep several vaults and need to be sure a change goes into the right one.
+you_give:
+  - What you want to find, add or change
+  - The vault name, if you have more than one
+  - The note names or paths involved (optional)
+  - Obsidian installed and open on your computer
+you_get:
+  - The exact commands to run
+  - Notes created or edited in the right vault
+  - Search results from your vault
+  - Plugin and theme debugging steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

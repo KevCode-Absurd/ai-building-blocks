@@ -6,6 +6,25 @@ summary: Give it your vendor bills. Get each one read, coded and matched, with a
 job: track-numbers
 headline: Vendor bill coder
 subhead: Give it your vendor bills. Get each one read, coded and matched, with a payment run ready for your approval.
+explain: |
+  The bill pile cleared in one sitting: every bill read, coded to the right account and job, checked against the order and receipt, and a proposed payment run waiting for your yes. Nothing is entered and nothing is paid until you approve.
+
+  The skill gathers bills from an accounts payable inbox, uploaded PDFs or phone photos. It pulls out the vendor, amount, due date and line detail. It codes each line to an account and a job, then does a match against the purchase order and the receiving record. It flags double billing and odd amounts. Then it stages entries in QuickBooks, Xero or NetSuite and builds a payment list by due date and cash available.
+when:
+  - Bills are piling up in your email and you cannot tell what you owe.
+  - You suspect a supplier billed you twice.
+  - You want to know who must be paid this week.
+  - A supplier invoice was forwarded with no message and you need it coded.
+you_give:
+  - "Your bills: inbox, PDFs or photos"
+  - Your chart of accounts and jobs
+  - Purchase orders and receipts (optional)
+  - Access to your accounting software
+you_get:
+  - Each bill with vendor, amount and due date
+  - Account and job coding for every line
+  - Match results and duplicate flags
+  - A proposed payment run for approval
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

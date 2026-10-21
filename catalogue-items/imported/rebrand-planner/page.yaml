@@ -6,6 +6,25 @@ summary: Say why your brand must change. Get what to keep, what to change and a 
 job: plan-strategy
 headline: Rebrand planner
 subhead: Say why your brand must change. Get what to keep, what to change and a rollout plan.
+explain: |
+  A rebrand plan that says what to keep, what to change and how to roll it out without losing customer trust. It begins with the real reason for the change, since a new logo alone never fixes a strategy problem.
+
+  It asks why you are rebranding, what triggered it, what is broken, and what has value worth keeping. Then it audits what exists. It classes the job as a full transformation, a repositioning, a visual refresh or a name change. It builds the new brand direction, and then a phased transition plan covering who must be told, in what order, and how to avoid confusion on the day.
+when:
+  - A merger, new market or new owner means the brand must change.
+  - Customers see you as something you no longer are.
+  - You want a refresh but fear losing recognition.
+  - You need a rollout plan covering staff, customers and channels.
+you_give:
+  - Reason for the rebrand
+  - What is broken and what must stay
+  - Stakeholders
+  - Existing brand notes (optional)
+you_get:
+  - Audit of the current brand
+  - Keep and change list
+  - New brand direction
+  - Phased rollout plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

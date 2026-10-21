@@ -6,6 +6,26 @@ summary: Give it an error, log or stack trace. Get the cause found and a fix tha
 job: test-and-fix-code
 headline: Error and log debugger
 subhead: Give it an error, log or stack trace. Get the cause found and a fix that works.
+explain: |
+  Paste an error, a log or a stack trace and get back the real cause of the bug, plus the smallest fix that solves it. No guessing at changes until something works.
+
+  It works in five steps. First it confirms the problem can be repeated. Then it uses the trace to narrow down where the fault sits and follows the data back to the first bad value. Once the root cause is clear, it writes a small fix that avoids side effects. Last, it re-runs the failing case and adds a test so the bug cannot return quietly. It handles many languages, from Python and JavaScript to Go and Rust, and knows common tools like debuggers and profilers.
+when:
+  - Your app crashes and you have a stack trace you cannot read.
+  - A bug only appears under load or at random and you cannot pin it down.
+  - You have fixed a bug before and it came back.
+  - You want a test written that proves a fix works.
+you_give:
+  - Full error message or stack trace
+  - Code file or snippet involved
+  - What you expected versus what happened
+  - Steps that trigger the bug (optional)
+  - Log output around the failure (optional)
+you_get:
+  - Plain explanation of the root cause
+  - Minimal code fix
+  - Test that covers the failing case
+  - Steps to confirm the fix
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

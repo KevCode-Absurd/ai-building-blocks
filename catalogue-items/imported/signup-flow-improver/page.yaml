@@ -6,6 +6,25 @@ summary: Describe your signup steps. Get fewer fields, clearer copy and a plan t
 job: build-product
 headline: Signup flow improver
 subhead: Describe your signup steps. Get fewer fields, clearer copy and a plan to cut drop-off.
+explain: |
+  A shorter signup flow with clearer words and a plan to cut drop-off, so more visitors become users. Every extra field costs you signups, and this finds which ones to cut.
+
+  Describe your steps and what you know about where people leave. It checks each field: do you need it now, can you ask later, or can you work it out from other data? It moves value before the ask, so people see the product before they commit. It reviews social login options, button and error wording, trust cues and what happens right after signup. The result is ranked changes and test ideas for your own flow.
+when:
+  - Many people start your signup and few finish it.
+  - Your form asks for company, role and phone on page one.
+  - Trial users sign up but never reach their first useful step.
+  - You are redesigning registration and want a checklist.
+you_give:
+  - Your signup steps and fields
+  - Where people drop off, if known
+  - Business needs that force certain fields
+  - Product context (optional)
+you_get:
+  - A list of fields to cut or delay
+  - Clearer copy for buttons and errors
+  - A ranked set of changes
+  - Test ideas for your signup
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

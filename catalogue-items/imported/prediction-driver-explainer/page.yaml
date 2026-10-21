@@ -6,6 +6,25 @@ summary: Give it a trained model and data. Get which inputs drove each predictio
 job: track-numbers
 headline: Prediction driver explainer
 subhead: Give it a trained model and data. Get which inputs drove each prediction and overall, with checked plots.
+explain: |
+  See why a trained model made its predictions: which inputs pushed each result up or down, and which matter most overall. Every plot is checked against the real model output so you can trust it.
+
+  The skill uses SHAP in Python 3.12 or newer. It chooses the right explainer for your model type, picks a sensible background sample, and says which output is explained, such as a probability or raw score. It checks that the pieces add up to the prediction before showing plots. It warns that SHAP shows model behaviour, not cause, and refuses to open untrusted model files.
+when:
+  - A manager asks why the model rejected a customer.
+  - You want to know which features matter most.
+  - You suspect a feature is leaking the answer.
+  - You need plots for a model review.
+you_give:
+  - Trained model
+  - Dataset to explain
+  - Which output to explain
+  - Python 3.12 or newer
+you_get:
+  - Feature importance plots
+  - Explanations for single predictions
+  - Additivity check results
+  - Notes on limits of the explanation
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

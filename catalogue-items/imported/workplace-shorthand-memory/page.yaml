@@ -6,6 +6,25 @@ summary: Share your nicknames and codes. Get a memory so Claude knows who and wh
 job: set-up-ai
 headline: Workplace shorthand memory builder
 subhead: Share your nicknames and codes. Get a memory so Claude knows who and what you mean in short requests.
+explain: |
+  A memory file that teaches Claude your nicknames, acronyms and project codes, so a short request like "ask todd to do the PSR for oracle" is understood as written.
+
+  The skill sets up a two-level memory. A small hot cache in CLAUDE.md holds the people and terms you use daily. A fuller glossary and folders for people, projects and context hold the rest. When a word is unclear, Claude checks the cache, then the glossary, and asks you only if it finds nothing. Each entry records who or what the term means and any useful detail, such as a person's role and preferred channel. Over time your short requests stop needing explanation.
+when:
+  - You keep re-explaining who "Todd" and "PSR" are.
+  - You use many internal acronyms and codes.
+  - A new teammate or AI needs your company vocabulary.
+  - Names in your projects are ambiguous, like two Oracles.
+you_give:
+  - Your nicknames, names and acronyms
+  - Project and deal names
+  - Roles and preferences of people (optional)
+  - A project folder for the memory files
+you_get:
+  - Hot cache of common terms
+  - Full glossary file
+  - People and project profiles
+  - Rule for decoding short requests
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

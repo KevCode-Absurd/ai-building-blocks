@@ -6,6 +6,25 @@ summary: Paste a lesson. Get a check against Universal Design for Learning, with
 job: teach-and-train
 headline: Accessible lesson auditor
 subhead: Paste a lesson. Get a check against Universal Design for Learning, with fixes ranked by impact.
+explain: |
+  A lesson you already wrote can be checked for barriers, with the fixes that matter most listed first. It keeps your learning goal and works within limits you cannot change.
+
+  The skill reads your plan against the three Universal Design for Learning ideas: how information is shown, how students respond, and what keeps them engaged. It looks for choices that quietly shut some learners out, such as a text-only source or a single way to show understanding. For each barrier it offers a specific swap. It also names what the lesson already does well and what it will leave alone. You get a short list of the changes with the biggest effect, not a rewrite of the whole plan.
+when:
+  - You have a lesson plan and suspect some students are being left out.
+  - You teach a mixed-ability class and want practical changes.
+  - A colleague asked for feedback on a unit plan.
+  - You want to improve a lesson without starting over.
+you_give:
+  - The lesson or unit plan
+  - The learning goal
+  - Class size and age group
+  - Things you cannot change, such as time or room (optional)
+you_get:
+  - A barrier check across the three UDL principles
+  - Fixes ranked by impact
+  - Things the lesson already does well
+  - Notes on what to leave alone
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

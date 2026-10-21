@@ -6,6 +6,26 @@ summary: Describe the app you need. Get a working MATLAB app, built from a chose
 job: build-software
 headline: MATLAB app builder
 subhead: Describe the app you need. Get a working MATLAB app, built from a chosen layout.
+explain: |
+  A working MATLAB app built from your description, with the right build route chosen for how long it must last and who will keep it up. You skip the question of where to start.
+
+  It asks a few questions: what the app does, whether it is a quick tool or a long-term one, how polished it must look, who will maintain it, and how to save it. From the answers it picks App Designer, a code-only app, or a web-style layout with HTML. It builds the app, handles slow tasks with background jobs so the window stays responsive, and saves it in the file format you chose.
+when:
+  - You want a small tool so colleagues can run your analysis without code.
+  - You need a MATLAB app with a polished look for a client.
+  - Your team keeps editing one app and needs a clear structure.
+  - A calculation takes seconds and freezes the window while it runs.
+you_give:
+  - What the app should do
+  - Who will use it
+  - How polished it must look
+  - Who will maintain it
+  - MATLAB release number
+you_get:
+  - A working MATLAB app
+  - A route choice with reasons
+  - Background handling for long tasks
+  - Files saved in your chosen format
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

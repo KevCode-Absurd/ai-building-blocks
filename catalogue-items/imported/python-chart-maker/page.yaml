@@ -6,6 +6,25 @@ summary: Give it your data. Get a clean Matplotlib chart, static, animated or in
 job: work-with-files
 headline: Python chart maker
 subhead: Give it your data. Get a clean Matplotlib chart, static, animated or interactive, ready to save as an image.
+explain: |
+  A clean chart from your data, saved as an image or built as an animated or interactive plot. You get tidy labels, sensible colours and the right chart for the numbers.
+
+  The skill writes Matplotlib code for line, scatter, bar, histogram, heatmap, contour and 3D plots, and for grids of several panels. It uses the object-based Figure and Axes style for control, with the quick pyplot style as an option. It tunes colours, labels, legends and layout, then exports to PNG, PDF or SVG at print quality. It also fits charts into notebooks or desktop apps. You need Python with Matplotlib installed.
+when:
+  - You have a spreadsheet of results and need a figure for a paper or report.
+  - You want several related charts in one tidy grid.
+  - A default plot looks messy and needs cleaning up.
+  - You need a vector file for print or slides.
+you_give:
+  - Your data (CSV, table or numbers)
+  - The chart type you want, or the question it should answer
+  - Size, colours or style needs (optional)
+  - Output format
+you_get:
+  - Python plotting code
+  - A saved chart file
+  - Styled labels and legend
+  - Multi-panel layout if needed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

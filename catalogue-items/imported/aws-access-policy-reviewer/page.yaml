@@ -6,6 +6,24 @@ summary: Give it your IAM policies. Get risky permissions found and tighter vers
 job: secure-code
 headline: AWS access policy reviewer
 subhead: Give it your IAM policies. Get risky permissions found and tighter versions that grant only what is needed.
+explain: |
+  Your AWS permission policies checked for risks and rewritten to allow only what each user or service needs. Paste IAM policies or point the AI at an account, and it flags wildcard permissions, users without multi-factor login, old access keys, unused roles and risky trust settings.
+
+  For each finding, you get a tighter version. It includes ready-made patterns: access to a single S3 bucket, policies that require MFA, access limited by time and access limited by IP address. It ends with a hardening checklist and shows how to automate the checks. Reviewing a live account needs the AWS command line and read access to IAM.
+when:
+  - A policy has Action star and Resource star and nobody remembers why.
+  - You are tidying an AWS account before a security review.
+  - A developer needs access to one bucket and nothing else.
+  - You want to enforce MFA for everyone who logs in.
+you_give:
+  - IAM policies as JSON, or account access
+  - What each user or role must do
+  - Compliance rules you follow (optional)
+you_get:
+  - A list of risky permissions
+  - Least-privilege replacement policies
+  - MFA and key rotation checks
+  - A hardening checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

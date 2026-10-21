@@ -6,6 +6,26 @@ summary: Give it a running web app or API you own. Get weaknesses found by safe 
 job: secure-code
 headline: Live app security tester
 subhead: Give it a running web app or API you own. Get weaknesses found by safe probing.
+explain: |
+  A list of weaknesses found in a running web app or API that you own, found by safe probing from the outside. You get a report with how to fix each one.
+
+  You set the target and scan rules first. If the app has a login, you supply a valid test account or token. The scan uses tools such as OWASP ZAP, Burp or Nuclei to crawl, then probe the app. Each finding is sorted by type and severity score. The report gives the page, the request and the fix. You can then schedule it nightly against staging. Always scan staging, never production, since probes can change data.
+when:
+  - You are about to launch and want an outside check on your app.
+  - You own an API and want to find exposed endpoints.
+  - You want a regular nightly scan against your test site.
+  - A customer asked for a security test report.
+you_give:
+  - The address of your app or API
+  - Proof that you own it or may test it
+  - A test login or token (optional)
+  - What is out of scope (optional)
+you_get:
+  - Findings by type and severity
+  - The request that triggered each issue
+  - Fix advice for each finding
+  - A report you can share
+  - A schedule for repeat scans
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

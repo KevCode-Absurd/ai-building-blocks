@@ -6,6 +6,25 @@ summary: Paste interview notes or transcripts. Get candidates compared on eviden
 job: hire-people
 headline: Fair candidate comparer
 subhead: Paste interview notes or transcripts. Get candidates compared on evidence, with bias checks. You make the hiring call.
+explain: |
+  Interview notes turned into a side-by-side comparison that points to what each candidate actually said. It flags weak spots in the evidence, and you make the hiring call.
+
+  You paste a transcript or notes along with the role's scorecard. For each question, the skill records the answer, key quotes, and whether the planned follow-up was asked. It rates answers against the green and red flags in your rubric, not against other people. It also writes a screen summary grouped by skill, and an entry formatted for your hiring tool. Gaps such as questions never asked are called out, and a bias check looks for ratings that rest on feeling rather than evidence.
+when:
+  - Three interviewers gave you three different opinions on one person.
+  - You have a transcript and need a scorecard filled in fast.
+  - You are choosing between two finalists and want a fair comparison.
+  - You want to check whether a rating has real evidence behind it.
+you_give:
+  - Interview transcripts or notes
+  - The role scorecard with questions and flags
+  - Candidate background or outreach notes (optional)
+  - Interviewer names (optional)
+you_get:
+  - A scorecard filled in question by question
+  - A written screen evaluation
+  - A side-by-side comparison of candidates
+  - A list of evidence gaps and bias flags
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

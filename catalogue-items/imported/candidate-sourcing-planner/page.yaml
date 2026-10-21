@@ -6,6 +6,25 @@ summary: Give it a role and candidate profile. Get the best places to look, targ
 job: hire-people
 headline: Candidate sourcing planner
 subhead: Give it a role and candidate profile. Get the best places to look, target companies and a week-by-week plan.
+explain: |
+  A plan for where to find the right people and how to spend your time looking. Give a role and a candidate profile, and you get ranked places to search, target companies and communities, and a week-by-week schedule.
+
+  The skill needs a candidate profile first and will not guess one. If none exists it tells you to build it. Then it ranks channels for this specific role: professional networks, org charts, code sites, regional networks and communities, and says which suit seniority and location. It lists companies where similar people work and sets an order of attack. Check your own notes for preferred channels and templates.
+when:
+  - You have an open role and no idea where to start looking.
+  - Job posts alone are not bringing in good candidates.
+  - You need to hire in a new country or a niche field.
+  - You want a schedule you can hand to a recruiter helping you.
+you_give:
+  - The role name or job description
+  - A candidate profile for the role
+  - Location and seniority
+  - Your preferred channels (optional)
+you_get:
+  - Ranked sourcing channels for the role
+  - Target companies and communities
+  - A week-by-week action plan
+  - Notes on what to do first
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

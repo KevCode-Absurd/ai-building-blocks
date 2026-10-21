@@ -6,6 +6,26 @@ summary: Describe your work for car makers. Get the right TISAX level, labels an
 job: check-contracts
 headline: Car supplier security checker
 subhead: Describe your work for car makers. Get the right TISAX level, labels and gaps before the assessment.
+explain: |
+  If you sell to car makers, you learn which TISAX level you need, which labels to ask for, and which gaps to close before the assessment. Describe the work you do for them, and you get a plan based on the data and prototypes you handle.
+
+  TISAX is an assessment with labels you can share with many customers, not a certificate. The skill states which catalogue version applies to your timing, the current one or the new one that takes over for assessments ordered from January 2027. It matches your work to assessment levels and modules such as prototypes, and lists the control areas where firms usually fall short. It is guidance, not an audit.
+when:
+  - A car maker customer asked for TISAX and you do not know where to start.
+  - You handle prototype parts or test vehicles and need to know which module applies.
+  - Your assessment is coming and you want to find gaps first.
+  - You are not sure which catalogue version your assessment falls under.
+you_give:
+  - What you do for car makers
+  - The kind of data and prototypes you handle
+  - Your sites and security setup
+  - Your planned assessment date (optional)
+you_get:
+  - The assessment level you likely need
+  - The labels to request
+  - A gap list by control area
+  - Which catalogue version applies
+  - A preparation plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

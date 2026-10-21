@@ -6,6 +6,24 @@ summary: Give it a SKILL.md. Get a list of structure, wording and naming problem
 job: make-skills
 headline: Skill file validator
 subhead: Give it a SKILL.md. Get a list of structure, wording and naming problems to fix before you share it.
+explain: |
+  A list of structure, wording and naming problems in your SKILL.md, found before anyone else hits them. It checks the file against the open agent skills specification and Anthropic's advice.
+
+  It reads your file and its front matter, then runs checks in groups. Structure covers name format and a description that says what and when. Body checks line count, hard-coded paths, stale dates and empty sections. Naming flags vague or single-word names. Meaning checks find contradictions and missing output formats. It also notes strengths, and gives a score. It only reads files.
+when:
+  - You wrote a skill and want to check it before publishing.
+  - A skill never triggers and you do not know why.
+  - You review skills from a team and need a standard.
+  - You are adding a skill to a marketplace.
+you_give:
+  - Your SKILL.md file or folder
+  - The target marketplace or tool (optional)
+  - Any rules your team adds (optional)
+you_get:
+  - A list of problems by category
+  - Points where the file does well
+  - A quality score
+  - Fixes for the issues found
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

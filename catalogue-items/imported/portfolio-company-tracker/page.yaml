@@ -6,6 +6,25 @@ summary: Give it monthly or quarterly reports. Get KPIs pulled out, variances to
 job: money-and-investing
 headline: Portfolio company tracker
 subhead: Give it monthly or quarterly reports. Get KPIs pulled out, variances to budget flagged and a summary dashboard.
+explain: |
+  A monthly view of how each company you back is doing against plan. Feed it the financial packs your companies send and get the key numbers pulled out and the misses flagged.
+
+  It reads Excel, PDF or CSV reports, finds revenue, EBITDA, cash, debt, capex and working capital, and compares them with the prior period and the budget. It checks debt levels and interest cover, adapts the KPIs to the sector, and builds a summary dashboard. This version follows Indian conventions: April to March fiscal years, and lakh and crore units written out clearly to avoid a hundred-fold error.
+when:
+  - You get monthly packs from several portfolio companies and need one view.
+  - Quarter-end is near and you must report variances to budget.
+  - You want to spot a company burning cash before it becomes a problem.
+  - Your reports mix lakh and crore figures and need consistent units.
+you_give:
+  - Financial packs in Excel, PDF or CSV
+  - Budget or plan figures
+  - Sector of each company (optional)
+  - Prior period reports (optional)
+you_get:
+  - Extracted KPIs per company
+  - Variance table against budget
+  - Flags for debt and cash issues
+  - Summary dashboard
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,27 @@ summary: Give it the facts of an outage. Get a blameless postmortem with timelin
 job: organise-work
 headline: Incident postmortem writer
 subhead: Give it the facts of an outage. Get a blameless postmortem with timeline, causes and follow-up actions.
+explain: |
+  A blameless postmortem of an outage, written so your team learns from it and the same failure does not return. You give the facts and get a document with a timeline, causes and follow-up actions that have owners.
+
+  The skill swaps blame for system questions. It asks what let the mistake happen, not who made it. It builds a minute-by-minute timeline, separates the root cause from contributing factors, and measures impact in users, money and time. Each fix becomes a numbered action with an owner and a due date. It also gives a way to run the review meeting so people speak freely, plus templates for short and long incidents.
+when:
+  - Your service went down and leadership wants a written review.
+  - You have a pile of chat logs and need a clean timeline.
+  - You want to run a review meeting without finger-pointing.
+  - Past reviews ended with vague actions nobody did.
+  - You need a standard format for all future incidents.
+you_give:
+  - Incident notes, chat logs or alerts
+  - Times of detection, response and fix
+  - Impact figures (optional)
+  - Who was involved (optional)
+you_get:
+  - A blameless postmortem document
+  - A timeline of events
+  - Root and contributing causes
+  - Action items with owners and dates
+  - A meeting plan for the review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

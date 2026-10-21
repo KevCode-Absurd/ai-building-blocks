@@ -6,6 +6,26 @@ summary: Give it your stops and truck limits. Get routes that reach every stop w
 job: plan-supply-chain
 headline: Delivery route planner (vehicle routing)
 subhead: Give it your stops and truck limits. Get routes that reach every stop with the fewest miles.
+explain: |
+  Routes that reach every customer without overloading a truck, using the fewest miles. Give it stops, order sizes and your fleet, and you get a route for each vehicle that respects capacity.
+
+  First it asks about capacity units such as weight, volume or pallets, whether items can be split, how many vehicles you have, and whether cost is by distance or per vehicle. Then it picks a method by size. Under about 50 stops, exact methods can work. For 50 to 200 stops it uses heuristics like savings and sweep, then improves the result with local swaps. It reports load per route, distance and any stop it cannot fit.
+when:
+  - You send out trucks every morning and plan routes by hand.
+  - Orders have grown and your vans are overloaded on some days.
+  - You want to know if you need one more vehicle.
+  - You have mixed truck sizes and need the best use of each.
+you_give:
+  - List of stops with locations
+  - Order size for each stop
+  - Number of vehicles and capacities
+  - Depot location
+  - "Goal: fewest miles or fewest vehicles (optional)"
+you_get:
+  - Route per vehicle
+  - Load and distance per route
+  - Total distance
+  - Stops that do not fit
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

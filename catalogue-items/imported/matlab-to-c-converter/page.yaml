@@ -6,6 +6,25 @@ summary: Give it MATLAB code. Get C, C++ or CUDA code that is checked and tuned 
 job: build-software
 headline: MATLAB to C converter
 subhead: Give it MATLAB code. Get C, C++ or CUDA code that is checked and tuned for speed.
+explain: |
+  MATLAB code turned into C, C++ or CUDA that has been checked against the original, and tuned for speed. Give it a function and say what you need it to run on.
+
+  The skill uses MATLAB Coder. It asks for the input types and sizes first, since the generated code depends on them. For classes it uses the class signature method, not a wrapper function. It then builds code, tests it against the MATLAB version to make sure results match, and tunes settings for speed. You need MATLAB Coder.
+when:
+  - You need your algorithm in C to drop into a larger product.
+  - A MATLAB function is too slow and you want a compiled version.
+  - You want GPU code from MATLAB without writing CUDA yourself.
+  - You must prove the generated code gives the same results.
+you_give:
+  - The MATLAB function or class
+  - Input types and sizes
+  - "Target language: C, C++ or CUDA"
+  - MATLAB Coder licence
+you_get:
+  - Generated source code
+  - A match check against MATLAB
+  - Speed settings
+  - Notes on limits
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

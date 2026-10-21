@@ -6,6 +6,25 @@ summary: Give it your website. Get what blocks you in Google and AI answers, wit
 job: get-found-in-search
 headline: Search and AI answer visibility auditor
 subhead: Give it your website. Get what blocks you in Google and AI answers, with fixes. Scrapes sites.
+explain: |
+  Find out what stops customers finding you in Google and in AI assistants, and get the actual files to fix it. The aim is to make your site easy to read and quote correctly. It does not try to trick any AI into recommending you.
+
+  It crawls the site, then checks six AI-facing points: crawler access in robots.txt, whether text shows without JavaScript, an llms.txt file, structured data, clear facts such as hours and prices, and listings like Google Business Profile. Then it asks assistants the questions a customer would ask and records what comes back. You get the five fixes that matter most, plus a rewritten robots.txt and llms.txt.
+when:
+  - Customers say they asked an AI about your trade and you never came up.
+  - You suspect a security plugin is blocking AI crawlers.
+  - AI tools quote your hours or prices wrongly.
+  - You want fixes ready to upload, not a list of advice.
+you_give:
+  - Your website address
+  - Your business type and service area
+  - Access to your site platform (optional)
+  - The questions customers ask (optional)
+you_get:
+  - A crawl report of what was and was not reachable
+  - Results from real assistant questions
+  - The top five fixes in order
+  - A corrected robots.txt and an llms.txt
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

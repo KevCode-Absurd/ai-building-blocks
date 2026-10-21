@@ -6,6 +6,26 @@ summary: Describe your app services. Get a Docker Compose setup with networks, v
 job: ship-and-host
 headline: Docker Compose setter
 subhead: Describe your app services. Get a Docker Compose setup with networks, volumes and settings.
+explain: |
+  A Docker Compose setup for your multi-service app, with networks, saved data and health checks, so everything starts together in the right order.
+
+  Describe the app: your language, your database, any cache, proxy or queue. The skill then works through six steps. It reviews the stack and picks images, ports and settings for each service. It builds named networks that separate front and back tiers. It adds volumes for data that must survive restarts. It adds health checks so services wait for their dependencies. And it writes a base file plus an override file for each environment. It covers common runtimes, databases, proxies, queues and monitoring.
+when:
+  - Your app needs a web server, a database and a cache running together.
+  - Services start before the database is ready and crash.
+  - You want development and production settings kept apart.
+  - You need your database data to survive a container restart.
+you_give:
+  - The services your app needs
+  - Your language and framework
+  - Ports and data you need to keep
+  - Dev or production target (optional)
+you_get:
+  - A docker-compose.yml file
+  - Named networks and volumes
+  - Health checks and start order
+  - An override file per environment
+  - A short run guide
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

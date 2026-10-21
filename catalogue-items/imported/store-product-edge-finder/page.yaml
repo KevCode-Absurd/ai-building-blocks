@@ -6,6 +6,26 @@ summary: Give it rival stores and reviews. Get their gaps, your unique value, an
 job: run-your-store
 headline: Store product edge finder
 subhead: Give it rival stores and reviews. Get their gaps, your unique value, and a ranked list of what to change.
+explain: |
+  Find the gap between your shop and the rivals, and what to change first. You give competitor stores and, if you have them, their customer reviews and yours. You get a side-by-side comparison, a list of what buyers complain about, what makes you different and a ranked action list.
+
+  The analysis builds up in levels. Store details alone give a basic matrix. Adding competitor reviews brings out pain points to solve. Adding your own reviews shows which of your selling points customers truly mention. It also checks price against value, brand story, visual style, trust signals and ad messaging. The end is a positioning statement and a prioritised plan.
+when:
+  - Your product looks like everyone else's and you need a reason to be chosen.
+  - You want to turn rivals' bad reviews into your selling points.
+  - You are rewriting your homepage message and need a clear angle.
+  - You must decide which improvements to make first.
+you_give:
+  - Your store and product
+  - Two to five competitor stores
+  - Competitor reviews (optional)
+  - Your own reviews (optional)
+you_get:
+  - A competitor comparison matrix
+  - A list of customer pain points
+  - Your unique selling points
+  - A positioning statement
+  - A ranked list of changes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it your hiring plan. Get base, best and worst cases with costs and
 job: hire-people
 headline: Headcount scenario planner
 subhead: Give it your hiring plan. Get base, best and worst cases with costs and signs it is time to switch plans.
+explain: |
+  Three versions of next year's workforce, so one wrong guess does not wreck your plan. Most plans assume a single future. This one tests what happens if sales drop 20 percent, a market closes, or growth runs faster than expected.
+
+  You give it your current hiring plan. The skill builds base, upside and downside cases with headcount and cost for each, and shows which assumptions to vary. It then stress-tests the plan against a specific shock, such as a hiring freeze or a restructure. For each case it names the early warning signs that tell you to switch, and the actions to take: pause hiring, redeploy people or speed up. It also advises how to present this without sounding certain.
+when:
+  - Leaders ask what happens if revenue falls short.
+  - You are planning for a hiring freeze or a burst of growth.
+  - You want to know in advance what signals mean it is time to change course.
+  - You need to stress-test a restructure before announcing it.
+you_give:
+  - Your current hiring plan and headcount
+  - Cost per role or team
+  - Risks you worry about
+  - Your planning timeframe
+  - Revenue targets (optional)
+you_get:
+  - Base, best and worst case workforce plans
+  - Cost for each scenario
+  - Trigger signals to switch plans
+  - Actions to take under each scenario
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

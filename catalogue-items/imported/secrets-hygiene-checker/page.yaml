@@ -6,6 +6,25 @@ summary: Point it at your project. Get leaked keys found, env files tidied and a
 job: secure-code
 headline: Secrets hygiene checker
 subhead: Point it at your project. Get leaked keys found, env files tidied and a plan to rotate secrets.
+explain: |
+  A scan of your project for leaked keys and passwords, plus a clear order for fixing them. It finds likely credentials in the working files and ranks each one critical, high or lower, so you start with what could hurt most.
+
+  A bundled Python script runs the scan and can output JSON for your build checks. From the results you rotate real credentials, remove exposed values, and tidy your .env and .env.example files so examples hold no real secrets. It also lists common mistakes, like rotating one system but missing something downstream, and compares cloud secret stores such as Vault and AWS Secrets Manager. It finishes with advice on adding secret scanning before merge.
+when:
+  - You are about to push code and want to be sure no key is in it.
+  - A contributor joins and you need safe .env conventions for them.
+  - You suspect a password was committed and need a rotation plan.
+  - Your example env file might contain real values.
+you_give:
+  - Your project folder
+  - Your current .env and .env.example setup
+  - Where secrets live in production (optional)
+  - Your CI setup (optional)
+you_get:
+  - A list of likely leaked secrets ranked by severity
+  - Rotation and cleanup steps
+  - A tidied env file layout
+  - A pre-merge secret scan setup
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

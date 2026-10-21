@@ -6,6 +6,26 @@ summary: Tell it your products. Get video formats, hooks, hashtags and a content
 job: grow-social
 headline: TikTok Shop content planner
 subhead: Tell it your products. Get video formats, hooks, hashtags and a content calendar.
+explain: |
+  A month of TikTok Shop videos planned before you open the camera: formats, opening lines, hashtags and a calendar that mixes product demos, trends and proof from customers.
+
+  You tell the skill about your products and brand. It picks content pillars and matches them to formats that tend to sell, such as demos, before and after, and unboxing. It writes hook ideas for the first seconds, shows how to work in customer clips, and reuses one video across other platforms. If your videos get views but no sales, it checks the call to action, product tagging and where viewers drop off, and suggests simple tests to run.
+when:
+  - You post but have no plan for what comes next.
+  - Your videos get views and nobody buys.
+  - You need 30 days of ideas for a new product line.
+  - You want hooks that fit your product, not generic trends.
+you_give:
+  - Your products
+  - Brand tone
+  - Posting capacity per week
+  - Recent video results (optional)
+you_get:
+  - Content pillars
+  - Video formats for each product
+  - Hook ideas
+  - A 30 day calendar
+  - Tests to improve sales
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Share your channels and numbers. Get the right attribution model and a 
 job: read-ad-results
 headline: Attribution model chooser
 subhead: Share your channels and numbers. Get the right attribution model and a way to settle conflicting reports.
+explain: |
+  A clear answer to which marketing effort caused your sales, and what to do when your tools disagree. Share your channels, sales cycle and the numbers each tool reports.
+
+  The AI explains what attribution can and cannot tell you, compares first-touch, last-touch and multi-touch models for your case, and sets out three ways to measure: platform reports, tracking models and tests. It adds the cheap trick of asking buyers how they heard of you. Then it works through reconciling the conflicting numbers and names the blind spots. If you control the site or app, it also covers building your own first-party tracking.
+when:
+  - Google Analytics and your ad platform both claim the same sale.
+  - You don't know which channel to cut when budget shrinks.
+  - Your sales cycle is long and last-click gives a wrong picture.
+  - You want to track customers across your own site and app.
+you_give:
+  - Your channels and monthly spend
+  - Your sales cycle and business type
+  - Numbers from each tool you use
+  - Your main conversion goal
+you_get:
+  - A recommended attribution model with reasons
+  - A way to settle conflicting numbers
+  - A short list of blind spots
+  - A first-party tracking plan (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

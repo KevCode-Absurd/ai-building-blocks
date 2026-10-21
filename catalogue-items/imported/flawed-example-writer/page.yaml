@@ -6,6 +6,26 @@ summary: Name a common student mistake. Get examples with that mistake built in,
 job: teach-and-train
 headline: Flawed example writer
 subhead: Name a common student mistake. Get examples with that mistake built in, so students practise spotting it.
+explain: |
+  Worked examples that contain a planted mistake, so students learn by finding and fixing it. Seeing a common error in someone else's work sticks better than being told to avoid it.
+
+  You name the topic and the mistakes your students really make. The skill writes each example so it looks right at first and fails in exactly one targeted place, along with questions that ask students to spot the error, explain why it is wrong and correct it. It adjusts difficulty to the age and level you give and notes whether students have seen correct examples first. The design follows research on learning from erroneous examples.
+when:
+  - Your students keep repeating the same maths or writing mistake.
+  - You want a starter activity where students critique a worked answer.
+  - Students can follow steps but cannot spot when something is wrong.
+  - You need a set of examples for a given topic and year group.
+you_give:
+  - Topic or type of problem
+  - The specific mistakes students make
+  - Year group and level (optional)
+  - Whether students have seen correct examples (optional)
+  - Number of examples wanted (optional)
+you_get:
+  - Examples with one planted error each
+  - Prompts asking students to find, explain and fix it
+  - Teacher answer key
+  - Notes on how to run the activity
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

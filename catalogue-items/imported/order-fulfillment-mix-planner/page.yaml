@@ -6,6 +6,26 @@ summary: Give it your stores, stock and order types. Get rules for where each on
 job: plan-supply-chain
 headline: Order fulfillment mix planner
 subhead: Give it your stores, stock and order types. Get rules for where each online order ships from and a pickup plan.
+explain: |
+  A clear rule set for where each online order ships from, plus a plan for in-store pickup. It helps a retailer with shops, warehouses and a website sell more without paying for extra shipping.
+
+  The skill starts with your channel mix, current delivery times, pickup take-up, ship-from-store rate and cost per order. It then compares fulfilment models: buy online and pick up in store, ship from store, ship from the distribution centre and supplier direct. It builds rules for picking the best location per order, balancing speed, cost and stock. It covers inventory visibility, split shipments and pick efficiency, and sets targets to track. Needs your own numbers to give useful answers.
+when:
+  - Your shops have stock but online orders ship from far away.
+  - You want to launch click-and-collect and need a plan.
+  - Split shipments keep driving your costs up.
+  - You are choosing an order management system and need your rules defined first.
+you_give:
+  - Store and warehouse locations
+  - Stock levels by location
+  - Order volume by channel
+  - Current delivery times and costs
+  - Goals such as speed or cost
+you_get:
+  - Routing rules for each order type
+  - A pickup and ship-from-store plan
+  - Cost and speed trade-offs
+  - Targets and measures to track
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

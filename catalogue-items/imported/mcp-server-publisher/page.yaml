@@ -6,6 +6,26 @@ summary: Point it at your MCP server. Get it hosted, scaled and packaged so othe
 job: ship-and-host
 headline: MCP server publisher
 subhead: Point it at your MCP server. Get it hosted, scaled and packaged so others can install it.
+explain: |
+  Your MCP server running online and ready for others to install. It covers hosting, scaling and packaging, so people can use it remotely or install it on their own computers.
+
+  The skill starts by asking how people will reach it: as a hosted service, a local install, or both. A hosted server should keep no state between calls, so you can run many copies. It sets health checks and rolling updates, adds one log line and one trace per tool call, and packages the server for local installs. Then it walks through listing it in the MCP Registry and versioning changes so existing users are not broken. Expect to need hosting, a registry account and some command line work.
+when:
+  - Your MCP server works on your machine and you want others to use it.
+  - You need to run it behind a load balancer without losing sessions.
+  - You want it listed in the public MCP Registry.
+  - You plan to change a tool and need to avoid breaking users.
+you_give:
+  - The MCP server code
+  - How people should reach it
+  - Hosting choice
+  - A registry account (optional)
+you_get:
+  - "A delivery plan: hosted, local or both"
+  - A stateless hosting setup
+  - Health and rollout checks
+  - Install packaging
+  - Registry listing steps
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

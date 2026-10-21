@@ -6,6 +6,26 @@ summary: Give it a contract and your rules. Get a clause by clause review and su
 job: check-contracts
 headline: Contract reviewer
 subhead: Give it a contract and your rules. Get a clause by clause review and suggested edits. Have a lawyer check it.
+explain: |
+  A clause-by-clause review of a vendor or customer contract against your own negotiation rules, with each clause rated green, yellow or red and wording you can send back as edits. You arrive at the negotiation knowing which fights matter.
+
+  You provide the contract and your playbook of standard positions. It reads each clause, compares it with your rules, and rates the gap. For yellow and red items it writes suggested redlines and a fallback position. It then summarises business impact and a negotiation order, with must-haves first. If a contract system is connected, it can route the result there. A lawyer should check the final edits.
+when:
+  - A supplier sent their paper and you have a standard set of terms.
+  - You are negotiating a customer deal and need fallback positions ready.
+  - Your team reviews many contracts and wants a consistent method.
+  - You need redlines quickly before a call.
+you_give:
+  - The contract
+  - Your negotiation playbook
+  - Deal context and deadline
+  - Which side you are on
+you_get:
+  - Clause ratings
+  - Suggested redlines
+  - Fallback positions
+  - Business impact summary
+  - Negotiation order
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

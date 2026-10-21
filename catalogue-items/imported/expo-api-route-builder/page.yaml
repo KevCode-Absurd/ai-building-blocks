@@ -6,6 +6,25 @@ summary: Say what your mobile app needs from a server. Get API routes built in E
 job: build-software
 headline: Expo API route builder
 subhead: Say what your mobile app needs from a server. Get API routes built in Expo Router and set up to host.
+explain: |
+  Server routes for your mobile app, built inside Expo Router and ready to host with EAS Hosting. They keep your secret keys on the server, away from the phone.
+
+  The skill first helps you decide whether you need a route at all. Good reasons are hidden API keys, database writes, proxying Stripe or OpenAI calls, checking data on the server, webhooks and heavy work. Poor reasons are public data, plain CRUD that a managed backend handles, file uploads and sign-in alone, and it points you to better options there. When a route is the right answer, it writes the route files and sets up the deploy.
+when:
+  - Your app calls a paid API and the key must not ship inside the app.
+  - You need an endpoint that receives Stripe or GitHub webhooks.
+  - You want to check data on a server before saving it.
+  - You are unsure whether you need your own backend or a managed service.
+you_give:
+  - What the app needs from a server
+  - Services you call, such as Stripe or a database
+  - Existing Expo project
+  - Hosting set up with EAS (optional)
+you_get:
+  - Route files in Expo Router
+  - Secret handling on the server
+  - Deploy steps for EAS Hosting
+  - Advice if a managed backend fits better
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe a big software request. Get an approved spec, a controlled bui
 job: build-software
 headline: Spec to acceptance builder
 subhead: Describe a big software request. Get an approved spec, a controlled build and proof it meets the criteria.
+explain: |
+  A big software request turned into a locked spec, a controlled build and proof that it works. Before any code is written, the skill freezes three documents: the product requirements, the technical design and the acceptance criteria. It checks facts itself and only asks you about real decisions.
+
+  Code starts only after you approve those documents. Helper agents then work with clear ownership of files. When they report back, the lead agent does not take their word for it. It checks diffs, test runs and evidence against each numbered criterion. Gaps are marked TBD, ASSUMPTION or BLOCKED.
+when:
+  - You have a large feature and the requirements are still fuzzy.
+  - You want to approve what gets built before any code is written.
+  - Several agents will work on the same project and need clear lanes.
+  - You need evidence that every acceptance criterion was met.
+you_give:
+  - The software request in plain words
+  - Answers to questions on real decisions
+  - Your approval of the frozen spec
+  - The repo where the work will happen
+you_get:
+  - A product requirements document
+  - A technical design
+  - Numbered acceptance criteria
+  - A build checked against diffs and tests
+  - An evidence-backed acceptance report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

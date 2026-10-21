@@ -6,6 +6,25 @@ summary: Describe your product. Get a pay-as-you-go pricing model users understa
 job: set-prices
 headline: Usage pricing designer
 subhead: Describe your product. Get a pay-as-you-go pricing model users understand, accept and can predict, with no surprise bills.
+explain: |
+  A pay-as-you-go price that customers can read, guess and trust, so nobody opens a bill and gets a shock. You get the thing to charge for, the tiers, and a pricing page that explains it.
+
+  The skill starts by choosing a metric people already understand, such as API calls, compute time, storage, bandwidth or active users. It rejects made-up units like "compute credits" that no one can estimate. Then it designs free allowances, volume steps and spend caps or alerts. It adds a cost calculator and worked examples so a buyer can predict a month. It compares your plan with competitors and checks that costs grow in line with the value customers receive.
+when:
+  - You are launching an API or tool and must decide what to charge per unit.
+  - Customers complain their bill was higher than they expected.
+  - You want to add a usage tier next to a flat monthly plan.
+  - Your pricing page confuses people and sales keep explaining it.
+you_give:
+  - What your product does and what it costs you to run
+  - Your current prices, if any (optional)
+  - Competitor prices you know of (optional)
+  - Who your customers are
+you_get:
+  - A recommended usage metric
+  - A tier and free allowance design
+  - Pricing page copy with worked examples
+  - A cost calculator outline
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe a sudden search traffic drop. Get the likely causes ranked and
 job: get-found-in-search
 headline: Traffic drop investigator
 subhead: Describe a sudden search traffic drop. Get the likely causes ranked and a fix plan.
+explain: |
+  When your search traffic falls off a cliff, you need to know why before you change anything. This skill gives you a ranked list of likely causes and a recovery plan in priority order.
+
+  It starts with triage: when the drop began, whether it was sudden or slow, what part of the site is hit, and what changed in the last 30 to 60 days. It then checks the usual suspects: a redesign, URL moves, plugin updates, robots or canonical errors, redirects, hosting changes, content pruning, penalties and search updates. It matches the timing against your data from Search Console and analytics. This is for sudden incidents, not routine audits.
+when:
+  - Your organic traffic dropped sharply in a few days.
+  - You launched a redesign or migration and rankings fell after.
+  - You think a Google update or penalty hit your site.
+  - You need a clear fix list to send to a developer.
+you_give:
+  - The date and size of the drop
+  - Search Console and analytics numbers
+  - A list of recent site changes
+  - Which pages or sections are affected (optional)
+  - Server or deployment logs (optional)
+you_get:
+  - Likely causes ranked by evidence
+  - A check of recent changes against the timing
+  - A prioritised fix plan
+  - Steps to confirm recovery
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

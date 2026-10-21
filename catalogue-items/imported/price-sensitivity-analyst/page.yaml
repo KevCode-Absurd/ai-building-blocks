@@ -6,6 +6,25 @@ summary: Get which products sell more or less as price changes, plus price point
 job: set-prices
 headline: Price sensitivity analyst
 subhead: Get which products sell more or less as price changes, plus price points worth testing.
+explain: |
+  See which of your products sell more or less when price changes, and which price points are worth testing. It reads your Shopify store data and changes nothing.
+
+  You connect an authenticated Shopify CLI session with permission to read orders and products. The skill pulls products, variants and orders for a lookback window, 90 days by default. It compares price against sales speed and groups the results by product type, vendor or collection. The output flags price-sensitive items and suggests price points to try. It is read-only, so no price in your shop is edited.
+when:
+  - You suspect some products are priced too low.
+  - You want to know which items drop in sales when raised.
+  - You are planning a price review for the quarter.
+  - You need data to defend a price change to your team.
+you_give:
+  - Shopify store domain
+  - Read access to orders and products
+  - Lookback period (optional)
+  - Grouping choice (optional)
+you_get:
+  - Price versus sales speed by product
+  - Price-sensitive and price-stable lists
+  - Price points worth testing
+  - Group comparison summary
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

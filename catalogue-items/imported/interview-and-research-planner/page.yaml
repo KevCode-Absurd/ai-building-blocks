@@ -6,6 +6,26 @@ summary: Describe your research question. Get a plan with recruiting, interview 
 job: understand-customers
 headline: Interview and research planner
 subhead: Describe your research question. Get a plan with recruiting, interview guide, synthesis steps and next product decisions.
+explain: |
+  A research plan you can run next week, from the question to the decision it should change. Describe what you need to learn and who you can reach. The skill works in six phases. It first rewrites weak questions into specific, open ones that a decision depends on. Then it picks a method that fits, such as interviews, field visits or diary studies, and plans who to recruit and how many.
+
+  It drafts the interview guide, sets up note taking, and lays out how to turn raw notes into patterns. It finishes by linking findings to the product choices they should drive, so research does not end up in a deck nobody reads.
+when:
+  - You want to talk to customers but do not know what to ask.
+  - Something is not working and your numbers do not explain why.
+  - You are about to invest in a new feature and want proof first.
+  - Your team has drifted from users and needs fresh contact.
+you_give:
+  - Your research question or the decision behind it
+  - Who you can reach (customers, prospects, lapsed users)
+  - Your timeline and budget
+  - Earlier research (optional)
+you_get:
+  - A sharper version of your research questions
+  - A recruiting plan with numbers
+  - An interview guide
+  - Steps for turning notes into findings
+  - A list of product decisions the findings should inform
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

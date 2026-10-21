@@ -6,6 +6,25 @@ summary: Run it on your payouts. Get each one matched to the orders that funded 
 job: run-your-store
 headline: Payout reconciler
 subhead: Run it on your payouts. Get each one matched to the orders that funded it, with gaps flagged.
+explain: |
+  Each Shopify Payments payout matched to the orders that funded it, with gaps flagged so you can trace a missing dollar. It reads data only and changes nothing.
+
+  For every payout in the last 30 days or a range you pick, it adds up gross sales, refunds, adjustments and fees, then compares the total against the transactions behind it. Differences larger than your tolerance, one cent by default, are flagged for review. Flagged items are leads to check, not confirmed errors. You need a store on Shopify Payments, a command-line login and read access to payouts and orders. Stores on other gateways get a clear message.
+when:
+  - A payout is lower than you expected.
+  - You close the books and must match deposits to orders.
+  - Refunds or fees seem to be missing from a payout.
+  - Your accountant asks for proof of what each payout covered.
+you_give:
+  - Store address
+  - Days to look back (optional)
+  - Tolerance amount (optional)
+  - Shopify login with payout and order access
+you_get:
+  - Each payout matched to its orders
+  - Totals for sales, refunds, adjustments and fees
+  - List of gaps over your tolerance
+  - Readable or JSON output
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

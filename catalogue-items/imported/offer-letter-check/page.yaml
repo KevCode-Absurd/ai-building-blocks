@@ -6,6 +6,25 @@ summary: Give it an offer letter and work location. Get risky terms and non-comp
 job: hire-people
 headline: Offer letter and non-compete checker
 subhead: Give it an offer letter and work location. Get risky terms and non-compete limits flagged. Not legal advice.
+explain: |
+  A review of an offer letter before it goes out, focused on the two places trouble hides: where the person will work, and any promise not to compete. The rules differ by place, so the skill researches them for each hire instead of relying on a fixed list.
+
+  It starts by confirming the work location and how the role is classed. Then it checks the non-compete and similar limits for whether they can be enforced there, looks at pay transparency and salary history rules, and covers background check steps. Anything that hits your escalation list is flagged for a lawyer. It cites what it found. It is a first pass, not legal advice.
+when:
+  - You are about to send an offer to someone in a different state and need to know if the non-compete holds.
+  - A candidate sent back an offer letter and asked about the restrictions.
+  - You hire in several places and want one repeatable check.
+  - You want risky terms flagged before legal reviews the letter.
+you_give:
+  - The offer letter or a description of the hire
+  - The work location
+  - Your company's covenant policy (optional)
+  - The role and pay (optional)
+you_get:
+  - Risky terms flagged
+  - Non-compete limits for that location with sources
+  - Pay and background check issues
+  - A list of items to escalate to counsel
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

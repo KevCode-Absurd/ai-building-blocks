@@ -6,6 +6,26 @@ summary: Give it your hiring brief. Get a job post, interview guide with scoring
 job: hire-people
 headline: Hiring packet builder
 subhead: Give it your hiring brief. Get a job post, interview guide with scoring rubric, and an offer letter template.
+explain: |
+  Everything you need to hire for one role, in three documents: a job post, an interview guide with a scoring guide, and an offer letter template. You answer a short set of questions about the role instead of starting from a blank page.
+
+  The skill collects the brief, looks at comparable posts, writes the job post, builds interview questions with a rubric for each, then assembles the offer letter. Files come out as Word documents, or as plain text in chat if Word output is not available. It can also set up an offer in DocuSign as a draft, but it never sends anything without your say-so and never posts the job publicly. It does not screen or rank applicants.
+when:
+  - You just got approval to hire and need all the paperwork.
+  - You want a consistent interview guide for a small team.
+  - You need an offer letter template you can reuse.
+  - You are writing your first job post and do not know what to include.
+you_give:
+  - Role title, level and team
+  - Responsibilities and must-have skills
+  - Pay range and benefits
+  - Interview stages you plan to run
+  - How you want to deliver the offer (optional)
+you_get:
+  - A job post
+  - An interview guide with scoring rubric
+  - An offer letter template
+  - A draft DocuSign link if you ask for it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

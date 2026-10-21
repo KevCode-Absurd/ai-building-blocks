@@ -6,6 +6,25 @@ summary: Give it a prompt that gives weak or uneven answers. Get a tighter versi
 job: set-up-ai
 headline: Prompt fixer
 subhead: Give it a prompt that gives weak or uneven answers. Get a tighter version that works more reliably.
+explain: |
+  A prompt that stops giving vague, wrong or uneven answers. You hand over the weak one and get back a tighter version that behaves the same way run after run.
+
+  The skill first diagnoses what is wrong: too vague, no output format, made-up facts, inconsistent runs or too long. Each problem has a matching fix, such as adding context, naming the format, telling the model to say when it is unsure, or adding examples. It then rebuilds the prompt with role, situation, constraints, instructions and target output. It can also trim wasted words to cut token use, and adapt the prompt when it works on one model but fails on another.
+when:
+  - Your prompt gives different answers each time you run it.
+  - You need clean, structured output such as JSON and keep getting messy text.
+  - The AI states wrong things with confidence.
+  - Your prompt is long and costly and you want it shorter.
+you_give:
+  - The weak prompt
+  - An example of a bad answer
+  - What a good answer looks like
+  - Which AI model you use (optional)
+you_get:
+  - Diagnosis of what is wrong
+  - Rewritten prompt
+  - Why each change helps
+  - Tips to test it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

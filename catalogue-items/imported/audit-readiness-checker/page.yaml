@@ -6,6 +6,25 @@ summary: Give it your records and controls. Get a checklist of gaps to fix befor
 job: money-and-investing
 headline: Audit readiness checker
 subhead: Give it your records and controls. Get a checklist of gaps to fix before an audit.
+explain: |
+  A list of control gaps found before an auditor finds them. Describe the audit you expect, such as a full financial audit or one cycle like order-to-cash. Share your control documents and who owns each process.
+
+  The AI tests each area against the basic claims auditors check. Did the transaction happen? Is everything recorded? Do you own the asset? Is it valued right? It walks through revenue and receivables, buying and payables, and fixed assets and inventory. It looks for missing approvals, weak separation of duties and records that don't tie out. You get a findings report that ranks each gap and says what to fix first.
+when:
+  - An external audit starts next month and you want to know your weak spots.
+  - You are checking whether controls meet SOX expectations.
+  - A process owner left and nobody knows if the controls still run.
+  - You need an internal review of the purchase-to-pay cycle.
+you_give:
+  - The audit scope and period
+  - Control documents or a risk control matrix
+  - Process owners and known risk areas
+  - Sample records (optional)
+you_get:
+  - A gap list by process area
+  - Findings ranked by risk
+  - What evidence an auditor will ask for
+  - A fix-first action list
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

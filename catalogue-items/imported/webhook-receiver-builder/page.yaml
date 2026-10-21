@@ -6,6 +6,26 @@ summary: Say which events to catch. Get a webhook receiver that checks signature
 job: connect-tools
 headline: Webhook receiver builder
 subhead: Say which events to catch. Get a webhook receiver that checks signatures and handles repeats safely.
+explain: |
+  A webhook receiver that checks each message really came from the sender, handles repeats safely and does not lose events. It is the piece that lets Stripe, GitHub or Shopify tell your app that something happened.
+
+  You name the provider, the events you care about and your server framework. The skill builds a hidden endpoint, checks the signature before reading the body, and routes each event type to its own handler. It records event IDs so a retry does not charge or email twice. Slow work goes to a queue, and failed events go to a dead letter queue for review. It also covers registering the URL with the provider and testing locally.
+when:
+  - You need to react to payment or order events from a provider.
+  - Duplicate events caused double emails or double records.
+  - You want to verify webhook signatures properly.
+  - Events are being lost when your server is slow or down.
+you_give:
+  - The provider, such as Stripe or GitHub
+  - The events to handle
+  - Your server framework
+  - Where you store data (optional)
+you_get:
+  - Receiver code with signature checks
+  - Event routing by type
+  - Duplicate protection
+  - Queue and failed-event handling
+  - Setup steps for the provider
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,27 @@ summary: Give it your demand and staff. Get a shift pattern, a weekly schedule a
 job: hire-people
 headline: Shift schedule planner
 subhead: Give it your demand and staff. Get a shift pattern, a weekly schedule and a fair rotation for nights and weekends.
+explain: |
+  A weekly schedule, a shift pattern and a fair rotation for the shifts nobody likes, ready to hand to your team. Fair rotation cuts complaints and swap requests.
+
+  Start with your demand and your staff. It works out how many people you need per hour from forecast volume and shift length, then picks a pattern such as fixed, rotating or 4-on-3-off. Nights, weekends and holidays are shared out by a clear rule, not by who shouts loudest. It also checks rest periods and predictive scheduling laws, and writes the shift swap policy and the message that tells staff about changes.
+when:
+  - You run a team with nights or weekends and people say the rota is unfair.
+  - You need to know how many people to hire for a given opening time.
+  - Staff keep asking to swap shifts and you have no clear policy.
+  - You must tell employees about a schedule change and want clear wording.
+  - You want to check a rota against rest-period rules.
+you_give:
+  - Opening hours and expected demand
+  - Number of staff and shift lengths
+  - Local scheduling rules (optional)
+  - Current rota or complaints (optional)
+you_get:
+  - A shift pattern that fits your demand
+  - A weekly or monthly schedule
+  - A fair rotation for nights and weekends
+  - A shift swap and open-shift policy
+  - A staff notice about schedule changes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

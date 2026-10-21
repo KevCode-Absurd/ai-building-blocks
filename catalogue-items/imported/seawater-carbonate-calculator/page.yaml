@@ -6,6 +6,27 @@ summary: Give it two seawater measures like alkalinity and pH. Get the full carb
 job: track-numbers
 headline: Seawater carbonate calculator
 subhead: Give it two seawater measures like alkalinity and pH. Get the full carbonate chemistry worked out.
+explain: |
+  A full carbonate chemistry table for each seawater sample, worked out from two measures such as alkalinity and pH. You get pH, pCO2, carbonate ion, aragonite and calcite saturation, and the Revelle factor, with a note of the assumptions used.
+
+  First it checks your inputs: the units, the salinity scale, the temperature you measured at, the pressure and the pH scale. Missing values are never turned into zero. It can move a sample from lab conditions to ocean conditions. It can also show how your measurement error changes the answer. It uses PyCO2SYS in Python and covers seawater only.
+when:
+  - You have bottle samples with alkalinity and DIC and need the full carbonate system.
+  - You are running an ocean acidification experiment and need saturation states.
+  - Your pH was measured in the lab and you need it at sea temperature.
+  - You want to know how much your measurement error changes the answer.
+you_give:
+  - Two measured carbonate variables with units
+  - Salinity, temperature and pressure
+  - Which pH scale was used
+  - Sample IDs and quality flags
+  - Measurement uncertainties (optional)
+you_get:
+  - A carbonate speciation table
+  - Mineral saturation estimates
+  - Results converted to ocean conditions
+  - Uncertainty propagation
+  - A record of the assumptions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Give it your interview stages. Get scorecards, question banks, a phone 
 job: hire-people
 headline: Interview scorecard builder
 subhead: Give it your interview stages. Get scorecards, question banks, a phone screen script and a rating guide.
+explain: |
+  Interviewers who rate on evidence instead of gut feel. Give it your interview stages and the role. It builds one scorecard per stage, each with three to five skills. Every skill gets a plain definition, what a 1 to 5 rating looks like in real behaviours, two or three questions with follow-up probes, and a field to write down what was observed.
+
+  Company values appear in every stage with different prompts, so you can see trends across the loop. A separate box captures instinct without letting it outweigh the evidence. You also get a phone screen script and tips so that a 3 means mixed signals, not a shrug.
+when:
+  - Your interviewers give vague ratings like good vibe or not sure.
+  - You are setting up interviews for a new role and need forms fast.
+  - Hiring debriefs end in arguments because nobody wrote down evidence.
+  - You want one consistent rating scale across all your interviewers.
+you_give:
+  - Your interview stages for the role
+  - The role's must-have skills and values
+  - Your rating scale, if you have one (optional)
+  - The phone screen topics (optional)
+you_get:
+  - One scorecard per stage
+  - Rating guides with observable behaviours
+  - A bank of questions with follow-up probes
+  - A phone screen script
+  - A debrief checklist
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your team's needs. Get a wellbeing plan, a manager guide and re
 job: hire-people
 headline: Employee wellbeing program planner
 subhead: Give it your team's needs. Get a wellbeing plan, a manager guide and return-to-work steps. Not medical advice.
+explain: |
+  A wellbeing plan built around how your team really works, with a manager guide and a return-to-work process. This is HR planning support, not medical advice.
+
+  The skill explains modern wellbeing as continuous, not a yearly event. It covers burnout early warning from workload and survey signals, mental health support and crisis steps, flexible work and leave policies, and how to measure what helps. It also drafts manager guidance, staff messages and a proposal for leaders, plus return-to-work plans after burnout or leave. It can use AI to look at wellbeing data and draft supportive messages.
+when:
+  - Your team is stretched and you fear burnout.
+  - You need a proposal to fund a wellbeing program.
+  - A colleague is returning after mental health leave.
+  - Managers ask what they should say and do.
+you_give:
+  - Team size and type of work
+  - Known pressures or risks
+  - Existing benefits and policies (optional)
+  - Survey or workload data (optional)
+you_get:
+  - A wellbeing program plan
+  - A manager guide
+  - A return-to-work plan
+  - Staff communications
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Describe what your app stores and serves. Get picks for storage, copies
 job: build-software
 headline: Data system designer
 subhead: Describe what your app stores and serves. Get picks for storage, copies, splitting data and consistency, with trade-offs.
+explain: |
+  A reasoned set of choices for how your app stores, copies, splits and protects its data, with the trade-off behind each. It is based on the ideas in the book Designing Data-Intensive Applications.
+
+  You describe what you store, how it is read and written, and what must never go wrong. The skill covers seven areas: data models, storage engines, copies across servers, splitting data across machines, transactions and isolation, derived data such as caches and search, and failure handling. It scores your design from 1 to 10 using seven yes or no checks, shows which failed, such as unknown isolation level or an untested failover, and lists what to fix to reach 10.
+when:
+  - You are choosing between SQL and NoSQL for a new product.
+  - You worry about replication lag or hot spots in your database.
+  - You want a review of a data design before it ships.
+  - You need to explain data trade-offs to teammates.
+you_give:
+  - What your app stores
+  - Read and write patterns
+  - Consistency and uptime needs
+  - Your current design (optional)
+you_get:
+  - Recommended storage and replication
+  - Splitting and consistency choices
+  - Score out of 10 with failed checks
+  - Fix list to improve
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

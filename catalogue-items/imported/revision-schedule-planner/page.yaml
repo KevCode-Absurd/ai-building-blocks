@@ -6,6 +6,26 @@ summary: List your topics and dates. Get a spaced revision schedule that brings 
 job: teach-and-train
 headline: Revision schedule planner
 subhead: List your topics and dates. Get a spaced revision schedule that brings each topic back at the right gaps.
+explain: |
+  A week-by-week revision plan that brings each topic back at gaps chosen to stop it fading from memory. You get new teaching and review slots in one table.
+
+  You list your topics, the dates you have and how many lessons you get each week. If you know the assessment date, the gaps are set to land the last review just before it. Harder topics get more returns, and prerequisite order is kept. The plan rests on research showing that spreading practice beats cramming, and that the best gap depends on how long you need the knowledge to last. A note explains why each gap was picked, so you can adjust.
+when:
+  - You are planning a term and want revision built in from the start.
+  - An exam is in six weeks and you have a long topic list.
+  - Students forget early units before the test.
+  - You need to show how revision is spaced across the year.
+you_give:
+  - A list of topics
+  - The teaching period or dates
+  - Lessons per week
+  - Assessment date (optional)
+  - Which topics are hardest (optional)
+you_get:
+  - A week-by-week schedule
+  - Review slots for each topic
+  - The reasoning behind each gap
+  - A final review plan before the assessment
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

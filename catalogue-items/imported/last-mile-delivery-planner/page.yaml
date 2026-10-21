@@ -6,6 +6,26 @@ summary: Describe your local deliveries. Get ways to cut cost per drop, speed up
 job: plan-supply-chain
 headline: Last-mile delivery planner
 subhead: Describe your local deliveries. Get ways to cut cost per drop, speed up delivery and plan same-day service.
+explain: |
+  Ways to lower your cost per drop and still hit your delivery promise. Describe what you deliver, how far, how many per day and what you promise customers. The skill first asks about service model, city layout, current cost and failed delivery rate, so advice fits your real routes instead of generic tips.
+
+  It then looks at cost, speed and customer experience. Changes it may suggest: tighter route batches, time windows, pickup points, delivery photos, fixes for failed drops, and what same-day service needs. It fits parcel, grocery, restaurant and pharmacy runs.
+when:
+  - Your cost per delivery keeps climbing and you do not know why.
+  - You want to offer same-day delivery and need to know what it takes.
+  - Too many deliveries fail on the first attempt.
+  - You have to choose between hiring drivers and using gig drivers.
+you_give:
+  - What you deliver and where
+  - Deliveries per day
+  - Current cost per drop and on-time rate
+  - Your delivery promise to customers
+  - Depot or hub locations (optional)
+you_get:
+  - A read on where cost is going
+  - Specific changes to try, ranked
+  - A same-day service outline
+  - Metrics to track
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

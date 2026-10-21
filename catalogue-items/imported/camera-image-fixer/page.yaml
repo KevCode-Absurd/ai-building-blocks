@@ -6,6 +6,24 @@ summary: Say what looks wrong in your camera picture. Get settings and steps tha
 job: build-software
 headline: Camera image fixer
 subhead: Say what looks wrong in your camera picture. Get settings and steps that improve it.
+explain: |
+  A dark, blurry or washed-out camera picture gets better, starting with the camera and ending with software. Tell it what looks wrong and it checks the image, works out the likely cause, and gives you camera settings and processing steps to fix it.
+
+  It follows a hardware-first rule: change exposure, gain, focus or light at the source before touching pixels, because that keeps more detail. A diagnostic step measures brightness, contrast, sharpness and noise, and detects backlit subjects. If settings are not enough, it applies a set of image processing steps in a sensible order. It is built around MATLAB tools, so you need MATLAB and the image toolbox to run the code.
+when:
+  - Your webcam image is too dark and you do not know which setting to change.
+  - A subject standing in front of a window turns into a silhouette.
+  - Pictures from a lab or factory camera look noisy or out of focus.
+  - You want to enhance a captured image without making it look fake.
+you_give:
+  - The camera image or a description of the problem
+  - The camera type and model if known
+  - MATLAB with image processing tools
+you_get:
+  - A diagnosis of what is wrong with the image
+  - Camera settings to adjust first
+  - Image processing steps in the right order
+  - A before and after check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

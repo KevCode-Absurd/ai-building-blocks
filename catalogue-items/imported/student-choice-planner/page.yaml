@@ -6,6 +6,27 @@ summary: Give it a task students rely on you for. Get steps that hand over more 
 job: teach-and-train
 headline: Student choice and ownership planner
 subhead: Give it a task students rely on you for. Get steps that hand over more choice and voice over time.
+explain: |
+  A plan for moving students from 'tell me what to do' to choosing and owning their work, one small release at a time. It works for classes that lean hard on teacher direction.
+
+  You give the task, the students' level, and how much say they have now. The skill builds a progressive release, with steps that hand over a bit more voice each time, such as picking a topic, then a format, then a way to show learning. It sets out the choices you offer, so options stay meaningful and not overwhelming. It adds safety nets for students who flounder, lists common pitfalls, and shows how your own role shifts at each stage.
+when:
+  - Your students wait for instructions on every step of a task.
+  - You want to offer choice in an essay or project without losing control of quality.
+  - You need a way to build independence over a term, not in one lesson.
+  - Some students freeze when given open choices.
+you_give:
+  - The task students do now
+  - Year level and subject
+  - How much say students have today
+  - The learning goal
+  - Notes on particular students (optional)
+you_get:
+  - A step-by-step release of choice and voice
+  - A set of choices students can pick from
+  - Safety nets for struggling students
+  - Your changing role at each stage
+  - Common pitfalls to avoid
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

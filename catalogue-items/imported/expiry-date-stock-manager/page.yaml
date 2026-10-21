@@ -6,6 +6,27 @@ summary: Give it items with expiry dates. Get a sell-first list, markdown timing
 job: run-your-store
 headline: Expiry date stock manager
 subhead: Give it items with expiry dates. Get a sell-first list, markdown timing and a way to cut waste.
+explain: |
+  A sell-first list ordered by expiry date, markdown timing and a rotation routine that cuts the stock you throw away.
+
+  It starts with what you sell, shelf lives, storage needs and the date codes in use, such as use-by or best-before. Then it sets up first-expired-first-out, so the oldest dates leave first, not just the oldest deliveries. It looks at how long products take to reach the shelf, how often you restock and what waste costs you now. It plans when to mark items down and which items to order less of. It also covers date tracking and rules for food, pharma and cosmetics.
+when:
+  - You throw away stock because it expired before it sold.
+  - Customers complain about stale products.
+  - You want to know when to mark down items nearing their date.
+  - You are setting up date tracking in a warehouse or shop.
+you_give:
+  - Products with shelf life and date codes
+  - Current waste rate and rotation method
+  - Storage conditions
+  - Delivery lead times (optional)
+  - Rules that apply, such as food or pharma (optional)
+you_get:
+  - Sell-first list by expiry
+  - Markdown timing rules
+  - Rotation process
+  - Order quantity advice
+  - Waste reduction targets
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

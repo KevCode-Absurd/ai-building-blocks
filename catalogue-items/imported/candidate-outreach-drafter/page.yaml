@@ -6,6 +6,25 @@ summary: Describe the role and the person you want. Get personal first messages 
 job: hire-people
 headline: Candidate outreach drafter
 subhead: Describe the role and the person you want. Get personal first messages and follow-ups to send yourself.
+explain: |
+  Personal first messages that get replies, plus follow-ups to send after. Describe the role and the person you want, and you get a short opening note, a four-touch sequence and a polite last message.
+
+  Each draft leads with what matters to the candidate, names something specific from their background and asks for one small step, like a 15-minute chat. It sets length by channel: under about 400 characters for LinkedIn messages and around 100 to 150 words for email. It keeps the tone human, not stiff, and fits it to the platform. It stops after four touches. It also has notes on handling replies and on sending from the hiring manager.
+when:
+  - You found a strong person on LinkedIn or GitHub and need a first message.
+  - Your cold messages get no replies.
+  - You want a follow-up plan that does not feel pushy.
+  - A candidate replied with a question about pay or remote work and you need a response.
+you_give:
+  - The role and what makes it appealing
+  - A profile or notes on the person
+  - The channel you will use
+  - A hiring manager name to send as (optional)
+you_get:
+  - A personal first message
+  - A four-step follow-up sequence
+  - A closing message
+  - Reply templates for common questions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

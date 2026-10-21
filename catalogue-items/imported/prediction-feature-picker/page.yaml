@@ -6,6 +6,25 @@ summary: Give it a data table and a target. Get the best input columns chosen, t
 job: build-software
 headline: Prediction feature picker
 subhead: Give it a data table and a target. Get the best input columns chosen, tested and delivered as a clean table.
+explain: |
+  Choose the columns that best predict your target, test the choice and receive a clean table ready for training. This is for MATLAB and needs a licence.
+
+  The process runs in six phases: intake, build a pool of candidate features, select, assess, deliver and report. If your data is images, signals or text, it first routes extraction to a suitable skill. Selection uses several methods and keeps what they agree on, so the result does not rest on one test. It handles one response at a time, either classification or regression, and does not train the final model.
+when:
+  - Your table has 200 columns and you need the useful ones.
+  - You want proof that your chosen features work.
+  - Your model is slow and overfitting.
+  - You must hand a clean feature table to another team.
+you_give:
+  - Data table
+  - Target column
+  - Whether the task is classification or regression
+  - MATLAB access
+you_get:
+  - Selected features
+  - Evidence from several selection methods
+  - Assessment results
+  - Clean feature table and report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

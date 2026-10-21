@@ -6,6 +6,27 @@ summary: Give it your offer and audience. Get hooks, formats and a testing plan 
 job: plan-ad-tests
 headline: Ad creative variation planner
 subhead: Give it your offer and audience. Get hooks, formats and a testing plan that spots tired ads early.
+explain: |
+  Ad creative built to convert at scale needs a plan: hooks for the first three seconds, formats to use, and a testing method that spots tired ads before they cost you.
+
+  The skill separates performance creative from brand creative, and shows how to keep your voice without lowering results. It covers hook patterns, how to pick between formats, and video pacing. It builds a variation system, so each new ad changes one thing at a time. It lays out sequential testing and the early signs of fatigue. It also gives norms for each platform, such as Meta, TikTok and LinkedIn. You finish with a set of ads to make and a calendar for refreshing them.
+when:
+  - Your ads work for a week and then fade.
+  - You need hooks for a new video ad.
+  - You want to test creative without muddying the results.
+  - You run on several platforms and each one needs a different cut.
+you_give:
+  - Your offer
+  - Your audience
+  - Your platforms
+  - Current ads or results (optional)
+  - Brand voice notes (optional)
+you_get:
+  - A set of hook ideas
+  - Format recommendations
+  - A variation plan
+  - A testing and fatigue-watch schedule
+  - Platform-specific notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

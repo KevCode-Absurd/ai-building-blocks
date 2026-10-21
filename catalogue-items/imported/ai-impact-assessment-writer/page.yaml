@@ -6,6 +6,25 @@ summary: Describe an AI use at work. Get risks, rules that apply and conditions 
 job: check-contracts
 headline: AI impact assessment writer
 subhead: Describe an AI use at work. Get risks, rules that apply and conditions to meet. Not legal advice.
+explain: |
+  A written impact assessment for an AI tool your team plans to use, with the risks, the rules that apply and the conditions to meet before it goes live. It is a decision record, not a form. This is not legal advice.
+
+  The skill reads your team's house style first so the document matches your others. It picks a fast or full track, then holds a chat about what the system does, who is affected if it is wrong and what human oversight exists. For each region, it classifies the risk tier and checks banned uses and duties, citing primary sources. It compares the plan with your AI policy and flags privacy and vendor reviews.
+when:
+  - HR wants to use AI to screen résumés and you need an assessment first.
+  - A team asks to deploy an AI tool and you must decide if it is okay.
+  - You need to know which AI rules apply in each place you operate.
+  - You want a list of conditions the team must meet before launch.
+you_give:
+  - The AI use you are assessing
+  - The places and people affected
+  - Your AI policy and house style (optional)
+  - A past assessment to copy the format from (optional)
+you_get:
+  - A written impact assessment
+  - A risk tier for each region
+  - A list of conditions to meet
+  - Flags for privacy and vendor review
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

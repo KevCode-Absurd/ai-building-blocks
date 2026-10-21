@@ -6,6 +6,25 @@ summary: Answer questions about your product. Get one context file every marketi
 job: brand-file
 headline: Product context builder
 subhead: Answer questions about your product. Get one context file every marketing skill reads first.
+explain: |
+  One short file about your product that every other marketing task reads first, so you stop repeating yourself. It holds what you sell, who buys it, how you are positioned, and how your brand sounds.
+
+  Claude checks whether the file already exists. If it does, it shows what is captured and asks what changed. If not, it walks you through questions on product, ideal customer, competitors, pain points, voice and goals, then writes the file. A change log and version number record each update, and you can add short notes on what you learned. The file lives in an agents folder in your project.
+when:
+  - You are starting a new marketing project and want one source of truth.
+  - You keep pasting the same product background into every chat.
+  - Your positioning changed and old notes are out of date.
+  - A new teammate needs to learn the audience and tone fast.
+you_give:
+  - Answers about your product and customers
+  - Your website or existing brand notes (optional)
+  - Competitor names (optional)
+  - Any recent learnings to record (optional)
+you_get:
+  - A product marketing context file
+  - A summary of what the file already holds
+  - A change log of updates
+  - Gaps you still need to fill
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

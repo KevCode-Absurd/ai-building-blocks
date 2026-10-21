@@ -6,6 +6,25 @@ summary: Describe your product. Get a style guide for a tidy card-grid look, wit
 job: design-work
 headline: Bento grid style guide writer
 subhead: Describe your product. Get a style guide for a tidy card-grid look, with tokens, states and checks.
+explain: |
+  A design-system guide for a Bento look, the tidy layout of cards in different sizes that you see on many modern product pages. Describe your product, and the AI writes guidance engineers and designers can use directly.
+
+  It sets type scale, colour tokens, spacing, states and component rules, with do and do-not lists, accessibility to WCAG 2.2 AA, keyboard use and visible focus. It also writes the tone for interface text and ends with quality gates so you can check the work. The starting values, such as Inter type and a soft peach and blue palette, can be changed to match your brand. Use semantic tokens rather than raw values.
+when:
+  - You are redesigning a landing page with a card-grid layout.
+  - Developers and designers keep guessing at spacing and colours.
+  - You need accessibility rules written into your design system.
+  - You want a reusable style guide to hand to a new team member.
+you_give:
+  - A description of your product and brand
+  - Colours and fonts you already use (optional)
+  - Components you need rules for
+  - Accessibility level
+you_get:
+  - A Bento style guide
+  - Colour, type and spacing tokens
+  - Component rules with states
+  - Do and don't lists and quality gates
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

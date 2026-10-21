@@ -6,6 +6,26 @@ summary: "Describe your product. Get a nine-part strategy: vision, customers, tr
 job: plan-strategy
 headline: Product strategy canvas writer
 subhead: "Describe your product. Get a nine-part strategy: vision, customers, trade-offs, metrics and what keeps you ahead."
+explain: |
+  A nine-part product strategy that shows how you will compete, win and grow. It puts vision, customers, costs, value, trade-offs, metrics, growth, skills and defensibility on one page.
+
+  Claude works through the Product Strategy Canvas section by section. Vision asks how you will inspire people. Segments are defined by problems and jobs to be done, not demographics. It lists what you will give up as well as what you will do, since choices without trade-offs are not strategy. It ends with how you will measure progress and what stops rivals from copying you.
+when:
+  - You are setting direction for a new or existing product.
+  - Your roadmap is a feature list with no strategy behind it.
+  - Leaders ask how you will beat competitors.
+  - You are preparing a yearly planning cycle.
+you_give:
+  - A description of the product and its position
+  - Market, competitors and customer insight
+  - Company resources and limits
+  - Business data you have (optional)
+you_get:
+  - A nine-section strategy canvas
+  - Segments built on customer problems
+  - Stated trade-offs
+  - Metrics and growth plans
+  - A view of how you stay ahead
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

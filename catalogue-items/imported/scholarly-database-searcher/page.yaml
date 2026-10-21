@@ -6,6 +6,25 @@ summary: Ask a research question. Get papers, preprints, citations and open full
 job: research-topics
 headline: Scholarly database searcher
 subhead: Ask a research question. Get papers, preprints, citations and open full text from 18 free sources, with the search shown.
+explain: |
+  A literature search you can repeat and defend. Ask a research question and get papers, preprints, citations and open full text from eighteen free sources, with the exact queries shown so anyone can rerun them.
+
+  It first turns your question into a search plan. It picks the most trusted database for the job, prefers identifiers like DOIs over loose keywords, and keeps each query small. Python scripts using only the standard library call the sources. Some of these APIs report success even when they fail, so it checks the contents, not just the status. The report says what was searched, what came back and what could not be reached. No login is needed.
+when:
+  - You start a literature review and need a clear record of how you searched.
+  - You have a DOI and want the open access full text if it exists.
+  - You need citation counts and related papers for a topic.
+  - You want to check whether a journal is open access.
+you_give:
+  - Your research question or topic
+  - DOIs or titles (optional)
+  - Date range or field limits (optional)
+  - Optional API keys for some sources
+you_get:
+  - A list of matching papers and preprints
+  - Open access links where they exist
+  - Citation data
+  - The queries used, so you can repeat them
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your data. Get clear charts and dashboards made with matplotlib
 job: work-with-files
 headline: Chart maker
 subhead: Give it your data. Get clear charts and dashboards made with matplotlib, seaborn or plotly.
+explain: |
+  Hand over a dataset and a question, and get back a clean chart or a small dashboard you can drop into a report. The right chart type is chosen for you, so a trend becomes a line, a comparison becomes bars and a spread becomes a box plot.
+
+  It first checks what kind of data you have and what you want to show. It reshapes the data, sorts the bars, fills gaps and keeps missing values out of the plot. Then it styles with readable labels, a calm palette, clear titles and no clutter. It adds notes such as a median line or a highlighted point.
+when:
+  - You have a spreadsheet and need one clear chart for a slide.
+  - You want an interactive chart people can hover and zoom.
+  - You are not sure which chart type fits your data.
+  - You need a multi-panel sales dashboard from a CSV.
+you_give:
+  - Your data file or table
+  - The question the chart should answer
+  - Chart type or colour wishes (optional)
+  - Output format and size (optional)
+you_get:
+  - A styled chart in PNG, SVG or HTML
+  - The Python code that made it
+  - Labels, titles and highlights added
+  - A short note on why that chart type was chosen
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

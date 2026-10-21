@@ -6,6 +6,24 @@ summary: Describe a skill or paste one. Get a well-built version with clear trig
 job: make-skills
 headline: Skill writer and reviewer
 subhead: Describe a skill or paste one. Get a well-built version with clear triggers and safety notes.
+explain: |
+  A skill file that is easy to trigger, easy to trust and light to load. You describe the job or paste a skill you already have, and you get back a cleaner version plus notes on what changed.
+
+  The method comes from a guide on how skills work. It checks that the description says when the skill should run, that detail is split into optional reference files instead of one huge page, and that examples, limits and safety notes are present. It also explains why skills beat pasting long prompts each session. Use it when writing a skill from scratch or reviewing one before you share it with a team.
+when:
+  - You are writing your first skill and do not know the file layout.
+  - A colleague sent you a skill and you want a quality review.
+  - Your skill file has grown too long and loads slowly.
+  - You need to add safety notes before sharing a skill.
+you_give:
+  - A description of what the skill should do
+  - A skill file to review (optional)
+  - Who will use it (optional)
+you_get:
+  - A well-structured skill file
+  - A clear trigger description
+  - Examples and limits written in
+  - A short list of review notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it your selling points. Get a shot script and a 15 to 30 second ca
 job: make-video-ads
 headline: Product video ad producer
 subhead: Give it your selling points. Get a shot script and a 15 to 30 second captioned ad. Your video model makes it.
+explain: |
+  A 15 to 30 second ad with a shot script, built shot by shot and joined with captions. If one shot fails, only that shot gets redone.
+
+  Claude writes the script from your selling points. A 15 second ad follows four parts: a hook in the first 3 seconds, selling points, proof, then a call to action. Each shot lists its length, picture and caption. Shots are generated one at a time. ffmpeg joins them, re-encoding if formats differ, and makes subtitles from the shot lengths. A brand setting keeps color and camera moves the same across the ad. Voice and music are added in an editor. You need a video model.
+when:
+  - You need ad creative for paid social.
+  - You have selling points and no video.
+  - You want a shot list before spending on generation.
+  - A single failed shot should not ruin the whole run.
+you_give:
+  - Your product and its selling points
+  - "Target length: 15 to 30 seconds"
+  - Brand colors and style notes
+  - Access to a video model and ffmpeg
+you_get:
+  - A shot script with timing and captions
+  - Generated clips for each shot
+  - A joined video with subtitles
+  - A re-run list for failed shots
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

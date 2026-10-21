@@ -6,6 +6,25 @@ summary: Give it a design or prototype. Get a test plan, task scripts, moderator
 job: test-an-idea
 headline: Usability test runner
 subhead: Give it a design or prototype. Get a test plan, task scripts, moderator notes and a findings summary.
+explain: |
+  Find out whether real people can use your design before you ship it. You get a full test plan, tasks to read aloud, notes for the person running the session and a findings report that ranks the problems.
+
+  The work runs in five phases. You pick a few specific tasks, each tied to a real goal and doable in 2 to 10 minutes. A script tells the moderator what to say and what not to hint at, using think aloud. During sessions you track whether each task was finished, how long it took and where people got stuck. Afterwards, problems are grouped and rated by how often they happen and how bad they are.
+when:
+  - You have a prototype and want to check it before a developer builds it.
+  - Analytics show people leaving a page and you do not know why.
+  - You redesigned a flow and need proof it did not add new problems.
+  - You are choosing between two design directions and want real reactions.
+you_give:
+  - The design, prototype or link to test
+  - The tasks people should try
+  - Who your users are
+  - Your test tool or setup (optional)
+you_get:
+  - A test plan with goals and success measures
+  - Task scripts to read to participants
+  - Moderator notes
+  - A ranked list of findings with fixes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

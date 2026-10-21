@@ -6,6 +6,25 @@ summary: Say the deal and where you work. Get a contract, proposal, SOW or NDA d
 job: check-contracts
 headline: Contract and proposal drafter
 subhead: Say the deal and where you work. Get a contract, proposal, SOW or NDA draft with the right clauses.
+explain: |
+  A first draft of a freelance contract, proposal, scope of work, NDA or master services agreement, with the clauses that fit your deal and your country. It saves you starting from a blank page or a template that does not match.
+
+  You tell it the work, the price, the parties and where you operate. It picks a template, fills in payment terms, ownership of the work, confidentiality, warranties, liability limits and how either side can end the deal. Jurisdiction notes cover Delaware, EU data rules, the UK and German-speaking countries. Output is plain Markdown with steps to convert it to Word. It is a starting point, so have a lawyer read it before you sign.
+when:
+  - A new client wants a contract and you have nothing ready.
+  - You need a scope of work for a fixed price project.
+  - A partner asks you to sign an NDA and you want your own version.
+  - You work across borders and need terms that fit local law.
+you_give:
+  - The deal and what is being delivered
+  - Price and payment schedule
+  - Both parties' names
+  - Your country or the client's
+you_get:
+  - Draft contract, proposal, SOW or NDA
+  - Clauses matched to your location
+  - Notes on terms to negotiate
+  - Steps to turn it into a Word file
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

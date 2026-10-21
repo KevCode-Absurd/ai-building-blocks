@@ -6,6 +6,25 @@ summary: Name the HR job and the AI tool. Get a vendor test covering accuracy, b
 job: hire-people
 headline: HR AI tool vendor checker
 subhead: Name the HR job and the AI tool. Get a vendor test covering accuracy, bias and a small pilot with success rules.
+explain: |
+  A fair test of an AI tool before it touches hiring or other people decisions. Name the HR job and the vendor, and get a scorecard, a list of questions to ask and a small pilot with clear pass and fail rules.
+
+  The skill treats vendor claims as things to prove. It asks for evidence on accuracy, asks how bias was tested, and checks what data the model learned from and how your staff data is protected. It lists red flags to watch for in a sales demo, compares vendors on one scorecard, and checks fit with your HR systems. It sets a pilot with success measures and a trigger for stopping, then writes down the decision for audit.
+when:
+  - A vendor demo looked great and you need to check the claims.
+  - You are comparing two AI screening or chatbot tools for HR.
+  - You want to pilot a tool on a small group before a full rollout.
+  - Legal or leadership wants a record of why you picked a tool.
+you_give:
+  - The HR task the tool will do
+  - The vendor names or product pages
+  - Your HR systems, such as applicant tracking (optional)
+  - Any rules or regulations you must follow (optional)
+you_get:
+  - An evaluation scorecard
+  - Questions to ask each vendor on bias and data
+  - A pilot plan with success and stop rules
+  - A written decision record
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

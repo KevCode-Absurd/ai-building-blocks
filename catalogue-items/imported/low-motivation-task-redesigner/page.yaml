@@ -6,6 +6,25 @@ summary: Give it a task students resist. Get why it drains motivation and a rede
 job: teach-and-train
 headline: Low-motivation task redesigner
 subhead: Give it a task students resist. Get why it drains motivation and a redesign built on choice, success and connection.
+explain: |
+  A diagnosis of why a task drains students' motivation, plus a redesigned version that keeps the same rigor. It treats low motivation as a response to the task, not as a flaw in the student.
+
+  It uses Self-Determination Theory, which says people stay motivated when three needs are met: choice, a sense of success, and connection. The skill checks your task against each. Does it offer real choice? Does it feel doable? Does it link students to each other and to something that matters? It then changes the task where it falls short, labels each change with the need it serves, and adds notes for running it in class. The learning goal stays the same.
+when:
+  - A homework task gets blank looks or half-done work.
+  - You teach something students find dull and want it to feel worth doing.
+  - A task is too hard or too easy and students give up early.
+  - You want to add choice without lowering standards.
+you_give:
+  - The task and its learning goal
+  - The students' age and level
+  - What you see happening (optional)
+  - Time and resource limits (optional)
+you_get:
+  - A diagnosis across the three needs
+  - A redesigned task
+  - Each change tied to its reason
+  - Classroom notes
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

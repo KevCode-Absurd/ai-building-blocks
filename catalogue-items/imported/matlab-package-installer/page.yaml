@@ -6,6 +6,25 @@ summary: Name the package. Get it installed, updated or removed, with dependency
 job: build-software
 headline: MATLAB package installer
 subhead: Name the package. Get it installed, updated or removed, with dependency errors sorted.
+explain: |
+  MATLAB packages installed, updated or removed from the command line, with dependency errors sorted out. Name the package and say what you want done.
+
+  The skill uses MATLAB's own package manager from release 2026b. It always turns off the prompt so scripts do not hang waiting for an answer. It uses a dry run to resolve a package name across all configured sources before it installs. It prefers a project file to list dependencies, so another person can rebuild your setup. It warns that every install is global, that names in search are case-sensitive in one form, and that forcing an install can remove other packages. It asks you before any force. Older releases use the Add-On Manager instead.
+when:
+  - You need a community package and are unsure of its exact name.
+  - An install fails because of a missing dependency.
+  - You want your project's packages written down so a teammate can match them.
+  - You need to remove a package without breaking others.
+you_give:
+  - The package name
+  - "What you want done: install, update or remove"
+  - MATLAB release
+  - Project folder (optional)
+you_get:
+  - Install commands that run without prompts
+  - A dry run result first
+  - Dependency fixes
+  - A project file entry (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

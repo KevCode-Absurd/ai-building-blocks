@@ -6,6 +6,26 @@ summary: Point it at your AWS account. Get idle and unused resources listed, wit
 job: ship-and-host
 headline: Cloud bill waste finder
 subhead: Point it at your AWS account. Get idle and unused resources listed, with the savings for each fix.
+explain: |
+  A list of AWS resources you pay for but do not use, with the savings from fixing each. Point it at your account and it reviews your spending, finds the waste and tells you what to switch off or shrink.
+
+  It uses the AWS command line and Cost Explorer. First it breaks spending down by service, region and tag, and flags months where cost jumped. Then it hunts for idle servers with low CPU, disks not attached to anything, old snapshots, unused fixed IP addresses, quiet databases and old storage files that could move to cheaper tiers. It checks where commitment plans or smaller instance sizes would cut cost, and adds an estimated saving for each action.
+when:
+  - Your AWS bill rose and you cannot see why.
+  - You suspect forgotten test servers and disks are still running.
+  - You want to know if a savings plan would pay off.
+  - You need a list of fixes ranked by dollars saved.
+you_give:
+  - AWS command line access with read rights
+  - Cost Explorer access
+  - The time period to review
+  - Resources to leave alone (optional)
+you_get:
+  - Spend by service, region and tag
+  - A list of idle and unused resources
+  - Estimated savings per fix
+  - Right-sizing suggestions
+  - Commitment plan options
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

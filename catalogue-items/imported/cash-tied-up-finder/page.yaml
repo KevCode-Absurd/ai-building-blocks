@@ -6,6 +6,26 @@ summary: Give it your receivables, payables and stock. Get days outstanding, the
 job: money-and-investing
 headline: Cash tied-up finder
 subhead: Give it your receivables, payables and stock. Get days outstanding, the cash cycle and where cash is stuck.
+explain: |
+  You find out how much cash is locked in customers who owe you, stock on shelves and bills you pay early, and where to free it. Give receivables, payables and stock figures, and you get days outstanding for each and the full cash cycle.
+
+  The skill computes days sales outstanding, days inventory and days payable, adds them into the cash conversion cycle, and shows what one day is worth in cash. It explains every shift by volume, terms or discipline, and warns that simple averages mislead when sales are seasonal. For example, paying suppliers early with no discount is free lending. It suggests fixes that do not damage customer or supplier relationships.
+when:
+  - Profit looks fine but the bank balance keeps shrinking.
+  - You want to know how much cash one day of faster collection would free.
+  - Stock keeps growing and you suspect slow items are tying up money.
+  - You are negotiating payment terms and need numbers.
+you_give:
+  - Monthly receivables, stock and payables for about two years
+  - Revenue and cost of goods by month
+  - Receivable and payable agings
+  - Customer and supplier payment terms (optional)
+you_get:
+  - Days sales, inventory and payable outstanding
+  - The cash conversion cycle
+  - The cash value of one day
+  - Where cash is stuck and why
+  - Actions to free it
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

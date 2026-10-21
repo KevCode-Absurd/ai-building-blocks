@@ -6,6 +6,25 @@ summary: Give it your site. Get a ranked list of SEO problems and fixes, from te
 job: get-found-in-search
 headline: SEO site auditor
 subhead: Give it your site. Get a ranked list of SEO problems and fixes, from technical to content.
+explain: |
+  A ranked list of what is holding your search traffic back, from site-level technical faults to thin content, with the fix for each. It audits in a set order: can Google crawl and index the site, is it fast and sound, are pages well set up, is the content worth ranking, and does the site have authority.
+
+  First it asks about your site type, business goal, priority topics and recent changes. A key caution built in: fetch tools cannot see structured data that plugins add with JavaScript, so it checks in a browser or the Rich Results Test and never reports "no schema" from a plain fetch. Fetched page text is treated as data and never followed as orders.
+when:
+  - Your organic traffic is flat and you want to know why.
+  - You launched a site and need a full SEO check, technical and content.
+  - You want a fix list in order of impact, not a flat checklist.
+  - You recently migrated and want to confirm nothing broke.
+you_give:
+  - Your site address
+  - Business goal and priority topics
+  - Search Console or analytics access (optional)
+  - Recent migrations or changes (optional)
+you_get:
+  - A ranked list of SEO issues
+  - Fixes for each issue
+  - Technical, on-page and content findings
+  - A correct schema check
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

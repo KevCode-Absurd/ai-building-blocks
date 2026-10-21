@@ -6,6 +6,26 @@ summary: Name the options. Get a side-by-side of cost, security, team fit and lo
 job: plan-strategy
 headline: Tech stack comparer
 subhead: Name the options. Get a side-by-side of cost, security, team fit and long-term support, with a pick.
+explain: |
+  Two or more technologies compared side by side on cost, security, team fit and long-term support, ending with a pick and the reasons. You choose a framework or cloud with evidence, not on whichever blog post you read last.
+
+  The skill scores each option against weights you set. It calculates a five-year total cost that includes hidden costs such as hiring, training and migration. It checks community health, using signals like repository activity, package adoption and community size, and looks at known vulnerabilities and compliance readiness. For cloud choices it compares AWS, Azure and GCP for your workload. It can also estimate effort and risk for moving from one stack to another.
+when:
+  - Your team is split between two frameworks and needs a tiebreaker.
+  - You must choose a cloud provider for a new workload.
+  - You are worried a library is dying and want to check.
+  - A manager asks what migration would really cost.
+  - You need a written comparison to justify a decision.
+you_give:
+  - The options to compare
+  - Your workload or use case
+  - What matters most (cost, speed, security)
+  - Team skills and size (optional)
+you_get:
+  - A weighted comparison table
+  - A five-year cost estimate
+  - Security and community notes
+  - A recommendation with reasons
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

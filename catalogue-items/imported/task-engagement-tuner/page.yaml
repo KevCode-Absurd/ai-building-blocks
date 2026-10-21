@@ -6,6 +6,26 @@ summary: Give it a task students find dull or stressful. Get changes to challeng
 job: teach-and-train
 headline: Task engagement tuner
 subhead: Give it a task students find dull or stressful. Get changes to challenge, goals and feedback that improve focus.
+explain: |
+  A learning task rebalanced so students are neither bored nor overwhelmed, leaving them focused and absorbed. You get specific changes to try in your next lesson, not general advice to motivate them.
+
+  The skill uses flow theory. It checks that challenge matches skill, then looks at three more conditions: clear goals, feedback that arrives quickly, and a sense of control. If students are bored, it raises the challenge or adds a constraint. If they are anxious, it breaks the task into steps and adds support. It also suggests how to check engagement during the lesson so you can adjust on the spot. It uses the year group and what you have seen in class.
+when:
+  - Your class goes quiet and drifts halfway through an activity.
+  - Students panic when they see a task and give up.
+  - Fast students finish in five minutes and then disrupt others.
+  - You want a quick way to see if students are engaged.
+  - A good activity feels flat and you cannot say why.
+you_give:
+  - The learning activity
+  - Year group
+  - Subject (optional)
+  - What you see now, such as boredom or stress (optional)
+you_get:
+  - A diagnosis of the challenge and skill balance
+  - Changes to goals and feedback
+  - A tuned version of the activity
+  - Signs to watch for in class
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

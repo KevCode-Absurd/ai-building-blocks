@@ -6,6 +6,26 @@ summary: Get a list of customers who stopped ordering, tagged for your win-back 
 job: run-your-store
 headline: Lapsed customer finder
 subhead: Get a list of customers who stopped ordering, tagged for your win-back campaign. Adds tags to live customer records.
+explain: |
+  A list of customers who bought once and then went quiet, already tagged so you can send a win-back campaign. The skill reads your Shopify store and finds customers whose last order is older than your cutoff, 90 days by default. You can also require a minimum number of past orders.
+
+  It then adds a tag, win-back by default, to each customer record, up to a cap of 500 per run. A dry run mode shows who would be tagged without changing anything, so try that first. Because it writes tags to live customer data, you need Shopify CLI access with customer read and write permissions.
+when:
+  - You want to email customers who have not ordered in three months.
+  - You need a Klaviyo or Shopify segment for a win-back campaign.
+  - You want to check how many customers have gone quiet before you plan.
+  - You want repeat buyers only, not people who bought once.
+you_give:
+  - Your store domain
+  - Days without an order that counts as lapsed
+  - Minimum past orders (optional)
+  - Tag name (optional)
+  - Shopify CLI login with customer permissions
+you_get:
+  - A list of lapsed customers
+  - Tags added to their records
+  - A dry run preview
+  - A count and summary of who was tagged
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

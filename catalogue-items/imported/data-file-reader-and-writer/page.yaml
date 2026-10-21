@@ -6,6 +6,25 @@ summary: Name your CSV, Excel, JSON or Parquet file. Get it read or saved correc
 job: work-with-files
 headline: Data file reader and writer
 subhead: Name your CSV, Excel, JSON or Parquet file. Get it read or saved correctly, with errors fixed.
+explain: |
+  Your CSV, Excel, JSON, Parquet or XML file loads correctly in MATLAB and saves back the way you need, with no silent damage. Many import bugs do not show errors, they just change your numbers.
+
+  The skill uses the right import options for each file type and sets delimiters, locales and encodings. European files with comma decimals and semicolon separators are handled. After loading, it checks for corruption such as stray NaN values, 65535 placeholders and numbers turned into text. It decodes misleading error messages, reads from URLs and compressed files, handles awkward JSON keys, and swaps old fopen code for modern readlines and writelines. It needs MATLAB. Big files and database work go elsewhere.
+when:
+  - A CSV opens with garbled columns or wrong decimals.
+  - MATLAB says file not found but the file is right there.
+  - You need data pulled from a web address into a table.
+  - Old file reading code needs updating to modern commands.
+you_give:
+  - The file or its address
+  - What you want to read or save
+  - The error message (optional)
+  - Locale or encoding details (optional)
+you_get:
+  - Working read or write code
+  - Import options set for your file
+  - Corruption checks on loaded data
+  - Explanation of any error
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

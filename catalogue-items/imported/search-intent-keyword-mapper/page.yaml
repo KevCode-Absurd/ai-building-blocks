@@ -6,6 +6,25 @@ summary: Give it your topic. Get keywords sorted by search intent, grouped into 
 job: get-found-in-search
 headline: Search intent keyword mapper
 subhead: Give it your topic. Get keywords sorted by search intent, grouped into themes and ranked for what to write first.
+explain: |
+  A keyword list sorted by what searchers want, grouped into topics and ranked by what to write first. It works with any keyword tool, or with Search Console data alone if you have none.
+
+  There are four stages. Discover: gather 200 to 500 candidates from seed terms, competitors, your own queries, People Also Ask and customer language. Classify: label each as informational, navigational, commercial or transactional, using the actual search results as proof, not volume. Cluster: group terms into topics for internal links. Prioritise: rank clusters by value and effort. Hybrid intents are flagged. The output is a plan for a sprint or a full year.
+when:
+  - You are starting a new site and need to know which topics to cover.
+  - You have a long keyword export and no idea which ones belong together.
+  - You want to plan next quarter's content calendar from real demand.
+  - You need to find topics your competitors rank for and you do not.
+you_give:
+  - Your site or topic area
+  - Audience and what they need
+  - A keyword export or Search Console data
+  - Three to five competitors (optional)
+you_get:
+  - Keywords labelled by search intent
+  - Topic clusters for linking
+  - A ranked order of what to write first
+  - Content gaps against competitors
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,27 @@ summary: Give it rival listings and reviews. Get their weak spots, your best sel
 job: run-your-store
 headline: Amazon product edge finder
 subhead: Give it rival listings and reviews. Get their weak spots, your best selling points, and a ranked fix list.
+explain: |
+  A clear view of where rival Amazon listings fall short and what to say about your own product to win. Reviews are the source: complaints show gaps, and praise shows what buyers value.
+
+  It works in four levels, and each extra piece of data unlocks more. Product info alone gives a side by side comparison. Add rivals' negative reviews to get ranked pain points. Add your positive reviews to pull out your selling points. Add market data to get a positioning view and a full action plan. It also checks feature gaps, price against value and quality signals, and ends with a ranked list of improvements.
+when:
+  - Your product looks the same as five others on the page.
+  - You want to know what buyers hate about a rival's product.
+  - You are planning a new version and need to choose features.
+  - You need selling points drawn from real customer words.
+you_give:
+  - Your product details and price
+  - Competitor listings
+  - Competitors' negative reviews (optional)
+  - Your own positive reviews (optional)
+  - Market data (optional)
+you_get:
+  - A side by side competitor comparison
+  - Ranked competitor pain points
+  - Your key selling points
+  - A positioning view
+  - A ranked improvement plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

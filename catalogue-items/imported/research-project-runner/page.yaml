@@ -6,6 +6,25 @@ summary: Give it a research question. Get a run of tested ideas, a log of what y
 job: research-topics
 headline: Research project runner
 subhead: Give it a research question. Get a run of tested ideas, a log of what you learned, and a findings write-up.
+explain: |
+  A research project run from question to write-up: a series of tested ideas, a log of what you learned, and a findings report. The agent keeps going without asking you at every step.
+
+  It uses two loops. The inner loop runs quick experiments with a clear measure of success. The outer loop steps back to review results, change direction and combine findings. State lives in files, such as a research state file, so work survives restarts, and a continuity loop is set up first. It acts as project manager and hands the actual domain work to other skills. It works on AI research, and you should expect it to make its own calls.
+when:
+  - You have a research question and want experiments run for you.
+  - You want a running log of what worked and what did not.
+  - You are resuming a project and need it to pick up where it left off.
+  - You want a draft write-up at the end.
+you_give:
+  - Research question or plan
+  - Compute or tools it may use
+  - Success measure for experiments
+  - Existing work or code (optional)
+you_get:
+  - Series of tested experiments
+  - Research log and state file
+  - Findings across experiments
+  - Draft report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

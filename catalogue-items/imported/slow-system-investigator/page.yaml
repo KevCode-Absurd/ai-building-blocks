@@ -6,6 +6,24 @@ summary: Describe a slow or failing system. Get a checked list of causes and a c
 job: test-and-fix-code
 headline: Slow system investigator
 subhead: Describe a slow or failing system. Get a checked list of causes and a clear incident report.
+explain: |
+  A short list of checked causes and a clear incident report when a server, container or app is slow or failing. Instead of running whatever commands come to mind, the skill follows a fixed method from performance expert Brendan Gregg.
+
+  First it uses the USE method: for each resource such as CPU, memory, disk and network, check use, saturation and errors. Then the TSA method looks at where each thread spends its time. Each finding is tied to evidence, such as command output, so you can see why a cause was ruled in or out. The last step writes a root cause report or postmortem. It works best on Linux systems where you can run the commands.
+when:
+  - A server is slow and nobody knows why.
+  - Latency jumped after a deploy or a config change.
+  - Threads pile up and your app hangs.
+  - You must write a postmortem and need the evidence in order.
+you_give:
+  - A description of the slow or failing system
+  - Access to run checks, or pasted command output
+  - What changed recently (optional)
+you_get:
+  - A resource by resource checklist
+  - Findings with the evidence behind them
+  - The most likely root cause
+  - A written incident or postmortem report
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

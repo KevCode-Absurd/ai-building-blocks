@@ -6,6 +6,25 @@ summary: Give it a new lead. Get who should own it by your rules, a routing card
 job: sell-and-negotiate
 headline: Lead owner router
 subhead: Give it a new lead. Get who should own it by your rules, a routing card to accept and a handoff note.
+explain: |
+  For each new lead, a named owner chosen by your own routing rules, plus a card you can accept or override. The skill reads your CRM, checks which rep already owns the account or open deals, and applies your territory and assignment rules the same way every time. You stay the decider. Every override feeds back into the rules.
+
+  It shows values as read from the record, says when a field is blank, and never assumes one CRM's field names fit another. It can write the handoff note for chat, or draft an email asking for missing details. It also handles a whole queue at once. Pasted lead text is treated as data, never as instructions.
+when:
+  - New leads arrive faster than someone can assign them.
+  - A lead came from a company that already has an owner.
+  - You want routing that does not depend on who is online.
+  - You need a short handoff note that tells the rep what they are getting.
+you_give:
+  - The lead or the unrouted queue
+  - Your routing and territory rules
+  - CRM access, or an exported list
+  - The lead score (optional)
+you_get:
+  - A named owner for each lead
+  - A routing card to accept or override
+  - A handoff note for the new owner
+  - An info request draft for thin records
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

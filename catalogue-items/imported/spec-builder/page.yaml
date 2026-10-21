@@ -6,6 +6,26 @@ summary: Give it a spec and tickets. Get the work built in code, tested and revi
 job: build-software
 headline: Spec builder
 subhead: Give it a spec and tickets. Get the work built in code, tested and reviewed.
+explain: |
+  A finished feature, built in code from a spec and its tickets, then tested and reviewed. The tickets are treated as a task graph, not a list. Some are blocked by others, so there is always a set of tickets ready to start.
+
+  The skill creates one integration branch. Each ready ticket goes to its own helper agent in its own worktree, which builds it using test-first development. A merge agent folds each finished ticket into the branch, and new tickets open up as blockers clear. When all are done, it runs a code review. You need an issue tracker and a spec made earlier.
+when:
+  - You have a spec and tickets and want the code built.
+  - Your tickets depend on each other and you want safe parallel work.
+  - You want every ticket tested and merged into one branch.
+  - You want a review pass before anything lands on main.
+you_give:
+  - A written spec
+  - Its tickets with blocking links
+  - Your issue tracker details
+  - Notes from earlier code research (optional)
+you_get:
+  - One integration branch with the full spec built
+  - Tests for each ticket
+  - Tickets closed in your tracker
+  - A code review of the result
+  - A draft pull request (optional)
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

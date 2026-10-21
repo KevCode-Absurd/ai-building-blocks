@@ -6,6 +6,25 @@ summary: Describe a via transition. Get a via modeled with pads and return vias 
 job: build-software
 headline: PCB via modeler
 subhead: Describe a via transition. Get a via modeled with pads and return vias and its signal quality checked.
+explain: |
+  A via is where signals on a board often go wrong. Describe the layer change and get a model of it, with pads, antipads and ground return vias set, and a check of its signal quality.
+
+  The skill builds a single-ended via model, sets which layers carry signal and which carry ground, and places signal and return vias by position and layer span. You can view and edit pad and antipad shapes per layer. It then computes S-parameters, finds barrel resonances, and judges ground via spacing against the critical wavelength. Results can be cascaded with trace models or used to tune pad sizes. It runs in MATLAB with the RF PCB Toolbox.
+when:
+  - A fast signal changes layers and you need to know the loss at the via.
+  - You are deciding where to place ground return vias.
+  - You suspect a resonance in a thick board stackup.
+  - You want to try different pad and antipad sizes.
+you_give:
+  - Your layer stackup and materials
+  - Signal via position and layers
+  - Ground via locations (optional)
+  - Frequency range
+you_get:
+  - A via model with pads and antipads
+  - Return via placement checked against wavelength
+  - S-parameters with resonances flagged
+  - Pad tuning suggestions
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

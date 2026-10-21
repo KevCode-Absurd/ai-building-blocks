@@ -6,6 +6,25 @@ summary: Describe the inspection job. Get a system that finds defects, counts pa
 job: build-software
 headline: Machine vision inspector builder
 subhead: Describe the inspection job. Get a system that finds defects, counts parts or measures them.
+explain: |
+  An inspection system that finds defects, counts parts or measures them from camera images, matched to your problem. It runs in MATLAB with the Visual Inspection Toolbox.
+
+  It first picks an approach: rule-based, AI-based or a mix. Rules suit measuring widths, gaps and angles in real units. AI suits defects, and it can learn from images of good parts only. Counting uses shape matching, or few-shot counting when parts vary. When you have few defect photos, it makes more by copy-paste augmentation. Last comes deployment as a standalone app, C code for edge devices, GPU code, ONNX export, or a Beckhoff PLC. Camera setup is out of scope.
+when:
+  - You need to catch scratches or dents on manufactured parts.
+  - You only have photos of good parts and no defect examples.
+  - You need to measure part dimensions from images in millimetres.
+  - You want to count identical parts on a belt.
+you_give:
+  - The inspection task
+  - Sample images of parts
+  - Measurement units or tolerances (optional)
+  - The target device for running it
+you_get:
+  - A recommended approach
+  - MATLAB code to build it
+  - Training data ideas
+  - Deployment steps for your target
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

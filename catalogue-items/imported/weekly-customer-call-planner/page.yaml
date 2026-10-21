@@ -6,6 +6,26 @@ summary: Ask for your week. Get one brief covering every outside call in the nex
 job: organise-work
 headline: Weekly customer call planner
 subhead: Ask for your week. Get one brief covering every outside call in the next seven days. Needs your Common Room account.
+explain: |
+  One brief that prepares you for every outside call in the next seven days. Instead of researching each company the night before, you open a single document and know who you are meeting and what has changed.
+
+  The skill lists your external meetings from your calendar, or from names you type in, and asks you to confirm the list. It then researches each account and each attendee using your Common Room data, plus a quick check for company news from the past week and recent posts by senior attendees. Each meeting gets a short profile with talking points. It needs a Common Room account.
+when:
+  - Your Monday starts with five customer calls and no prep time.
+  - You want one document to read instead of ten tabs.
+  - A senior contact at a prospect just changed jobs and you want to know before you call.
+  - You manage a team and want your reps to walk in prepared.
+you_give:
+  - Calendar access or a list of calls
+  - Your Common Room account
+  - Date range (optional)
+  - Names to exclude (optional)
+you_get:
+  - Confirmed list of external meetings
+  - Account snapshot for each company
+  - Profile of each attendee
+  - Recent news for each company
+  - Suggested talking points
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

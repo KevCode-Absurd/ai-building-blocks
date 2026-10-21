@@ -6,6 +6,24 @@ summary: Give it a spreadsheet. Get formula errors, broken links and model check
 job: work-with-files
 headline: Spreadsheet formula auditor
 subhead: Give it a spreadsheet. Get formula errors, broken links and model checks such as balance sheet tie-out listed.
+explain: |
+  A list of formula errors, broken links and model problems found in your spreadsheet before someone else finds them. You choose the depth: a selected range, a sheet, or the whole model.
+
+  Every scope gets formula checks. The model scope adds financial integrity tests, such as whether the balance sheet balances, cash ties out, roll-forwards agree and the logic holds. It suits DCF, LBO, three-statement and merger models. This version follows Indian conventions: a fiscal year from April to March, and lakh and crore units, with a warning about a number format that shows a 100 times error.
+when:
+  - Your model will not balance and you cannot see why.
+  - You are about to send a model to a client or investment committee.
+  - Numbers in a sheet look off and you want a second check.
+  - You use Indian fiscal years or crore units in your reports.
+you_give:
+  - The workbook to audit
+  - "The scope: selection, sheet or whole model"
+  - Which currency and fiscal year you use (optional)
+you_get:
+  - A list of formula errors by cell
+  - Broken link and reference flags
+  - Balance sheet and cash tie-out results
+  - Unit and fiscal period warnings
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

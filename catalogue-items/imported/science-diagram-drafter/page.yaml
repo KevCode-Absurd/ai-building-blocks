@@ -6,6 +6,26 @@ summary: Describe a diagram. Get a draft of a network, pathway or flowchart, rev
 job: make-images
 headline: Science diagram drafter
 subhead: Describe a diagram. Get a draft of a network, pathway or flowchart, reviewed and refined once or twice.
+explain: |
+  A draft figure of your network, pathway or flowchart, saved as a PNG you can check label by label. You describe the parts and how they connect in plain words, and an image model draws the first version.
+
+  A second model then reviews the draft and gives it a score. The pass mark depends on where the figure is going: 8.5 out of 10 for a journal, 6.5 for slides. If the score falls short, the draft is redrawn once or twice, and a review log is saved with each attempt. The result is a raster image with no vector or print resolution control, so check it before it goes into a paper. It needs Python and an OpenRouter key.
+when:
+  - You need a first-draft pathway or workflow figure for a paper and have no time to draw it.
+  - You are building a poster and want a clean flowchart of your method.
+  - You have a rough idea of a system diagram and want to see it on the page before refining it.
+  - You want a quality score on a figure before you send it to co-authors.
+you_give:
+  - A plain-language description of the diagram
+  - Where it will be used (journal, poster, slides)
+  - The labels and links that must appear
+  - An OpenRouter API key
+  - Output file name (optional)
+you_get:
+  - A PNG draft of the diagram
+  - A quality score against the pass mark for your document type
+  - A review log of each attempt
+  - A refined second or third version if the first falls short
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

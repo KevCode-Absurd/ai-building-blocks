@@ -6,6 +6,25 @@ summary: Give it your finished paper. Get talk slides, speaker notes and a scrip
 job: research-topics
 headline: Conference talk slide maker
 subhead: Give it your finished paper. Get talk slides, speaker notes and a script for a conference talk.
+explain: |
+  Talk slides, speaker notes and a script made from your finished research paper, so you do not rebuild the story from scratch before a conference. You pick the talk type and the slide count follows.
+
+  A poster talk of three to five minutes gets five to eight slides. A spotlight gets eight to twelve. A fifteen to twenty minute oral gets fifteen to twenty-two, and an invited talk gets up to forty. Claude pulls the problem, key insight, approach, main results and takeaway from the paper. It produces a polished Beamer PDF and an editable PowerPoint file. It needs your compiled paper and a LaTeX setup for the PDF.
+when:
+  - Your paper was accepted and the talk is next month.
+  - You need a five minute spotlight and a full oral from the same work.
+  - You want speaker notes you can read aloud.
+  - You need an editable deck so co-authors can change slides.
+you_give:
+  - Your compiled research paper
+  - The talk type and time slot
+  - Key figures to feature (optional)
+  - Conference style rules (optional)
+you_get:
+  - A Beamer PDF deck
+  - An editable PowerPoint deck
+  - Speaker notes
+  - A talk script
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

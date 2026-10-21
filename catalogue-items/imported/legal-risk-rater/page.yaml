@@ -6,6 +6,25 @@ summary: Describe a deal or issue. Get each risk rated by how bad and how likely
 job: check-contracts
 headline: Legal risk rater
 subhead: Describe a deal or issue. Get each risk rated by how bad and how likely. Not legal advice.
+explain: |
+  A rating for each legal risk in a deal or issue, scored on two scales so you can tell which ones need attention now. Describe the situation. The skill scores severity from 1 (negligible) to 5 (critical) and likelihood from 1 (remote) to 5 (almost certain), then multiplies them for a risk score.
+
+  Severity is tied to the money at stake, from under one percent of deal value up to over twenty-five percent, plus disruption and public attention. The output is a documented risk list, ordered by score, that you can hand to a decision maker. It supports your team and is not legal advice, so a qualified lawyer should review the ratings.
+when:
+  - You are reviewing a contract and need to rank its risks.
+  - Leadership asks how worried they should be about an issue.
+  - You want one consistent scale across several deals.
+  - You need a written record of why you accepted a risk.
+you_give:
+  - A description of the deal or issue
+  - The value at stake
+  - Known facts and past similar cases (optional)
+  - Who will use the rating
+you_get:
+  - Severity and likelihood ratings
+  - A risk score for each item
+  - Risks ordered by priority
+  - A written record of the reasoning
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

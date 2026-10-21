@@ -6,6 +6,25 @@ summary: Give it images and questions. Get a chat that describes pictures and an
 job: build-software
 headline: Picture chat assistant builder
 subhead: Give it images and questions. Get a chat that describes pictures and answers questions about them.
+explain: |
+  A chat assistant that looks at pictures and talks about them. Ask what is in a photo, what a chart says or what a document image contains, and keep asking follow-ups.
+
+  The skill sets up LLaVA, an open-source model that pairs vision with a language model. You clone the project, install it, load a model in a chosen size and feed it images with your question. It supports multi-turn chats, captions, visual question answering and following instructions about an image. It is a good fit when you want to run it yourself and pay no per-call fee. It needs Python and a GPU.
+when:
+  - You want a bot that answers questions about product photos.
+  - You need captions for a pile of images.
+  - You want to ask follow-up questions about a screenshot.
+  - You prefer running a model yourself over a paid service.
+you_give:
+  - Images
+  - Questions to ask
+  - A computer with a GPU
+  - Model size choice (optional)
+you_get:
+  - A running picture chat setup
+  - Image descriptions
+  - Answers to questions about each image
+  - Multi-turn conversations
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

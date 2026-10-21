@@ -6,6 +6,25 @@ summary: Ask one question. Get answers from several open AI models, ranked, plus
 job: think-and-decide
 headline: Multi-model answer panel
 subhead: Ask one question. Get answers from several open AI models, ranked, plus one final answer.
+explain: |
+  One question answered by several open AI models, ranked by each other, then boiled down to one final answer. You see every answer and every ranking, so nothing is hidden.
+
+  It follows Andrej Karpathy's council idea in three rounds. Round one: every model answers alone, in parallel. Round two: each model ranks the others' answers with the names removed. Round three: a chairman model reads all of it and writes the final answer. You pick the council and the chairman. Raw responses are saved to files and shown unedited. It needs a Fireworks AI account and API key, which has a cost.
+when:
+  - You have a hard question and want more than one opinion.
+  - You want to see where models disagree.
+  - You are comparing open models on your own questions.
+  - A decision is important enough to check twice.
+you_give:
+  - Your question
+  - Which models sit on the council
+  - Which model is chairman
+  - A Fireworks AI account and key
+you_get:
+  - Each model's own answer
+  - Anonymous rankings between them
+  - A final combined answer
+  - Saved files with all raw responses
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Paste a text or topic. Get its words sorted into everyday, school and s
 job: teach-and-train
 headline: Vocabulary tier sorter
 subhead: Paste a text or topic. Get its words sorted into everyday, school and subject words, with what to teach first.
+explain: |
+  The words in your text, sorted into everyday words, school words and subject words, so you know what to teach first. It saves you from pre-teaching the whole page.
+
+  Paste a text or name a topic, and add the student age and subject. The skill places each word in one of three groups: common words most students know, useful words that appear across school subjects, and specialist words tied to this topic. It picks the school words as the best ones to teach in depth, because they carry the most reading value. It then gives a teaching order you can cap at a set number of words, with notes for students learning English.
+when:
+  - You are about to give students a hard reading passage.
+  - You plan a unit and need a short list of key words.
+  - You teach students who speak another language at home.
+  - You want to know which words matter most when time is short.
+you_give:
+  - A text extract or a topic
+  - Student age or year group
+  - The subject
+  - English level of your students (optional)
+  - A maximum number of words to pre-teach (optional)
+you_get:
+  - Words sorted into three groups
+  - A priority list of words to teach
+  - A suggested teaching order
+  - Support notes for language learners
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Name the band and split. Get a power divider or coupler designed and it
 job: build-software
 headline: PCB coupler designer
 subhead: Name the band and split. Get a power divider or coupler designed and its response plotted.
+explain: |
+  A power splitter or coupler designed for your band and split ratio, with its response plotted so you can see if it works. It runs in MATLAB.
+
+  It covers Wilkinson splitters, branchline and ratrace couplers, corporate dividers for arrays, directional couplers, and beamforming designs such as SIW splitters and Rotman lenses. You set the centre frequency and split. It builds the board model on your substrate, estimates the mesh and memory before the full solve, then reports S-parameters. It expects the board material to be set first. You need MATLAB with RF PCB Toolbox.
+when:
+  - You need to divide a signal equally or unequally.
+  - You are building a feed network for an antenna array.
+  - A circuit needs a quadrature or sum and difference network.
+  - You want to sample a signal with a directional coupler.
+you_give:
+  - Centre frequency and bandwidth
+  - Split ratio
+  - Substrate and conductor settings
+  - MATLAB with RF PCB Toolbox
+you_get:
+  - Designed coupler or splitter model
+  - Plotted S-parameter response
+  - Mesh and memory estimate
+  - Next steps for checking and tuning
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

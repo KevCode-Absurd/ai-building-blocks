@@ -6,6 +6,26 @@ summary: Describe who you need. Get target companies, pool sizes and ways in. Re
 job: hire-people
 headline: Talent pool mapper
 subhead: Describe who you need. Get target companies, pool sizes and ways in. Reads public web pages.
+explain: |
+  A map of where the people you want to hire work today, how many of them exist, and how hard they are to reach. Recruiters stop guessing and start with a ranked list of companies and a view of the rivals competing for the same people.
+
+  The skill sorts target companies into three circles. Circle one holds direct competitors. Circle two holds firms using the same skills in another setting. Circle three holds places where skills transfer with some ramp up. For each pool it estimates size, how reachable people are, likelihood of fit, competition and willingness to move. It also notes where the talent sits by city. It reads public web pages only.
+when:
+  - You must hire a rare role and do not know where those people work.
+  - You need to size a talent pool before you promise a hiring date.
+  - You want to know which companies compete with you for the same hires.
+  - A competitor just had layoffs and you want to know whom to approach.
+  - You are choosing a hiring location and want to compare cities.
+you_give:
+  - The role or skill set you need
+  - Your industry and company stage
+  - Locations you can hire in
+  - Your own competitors (optional)
+you_get:
+  - A ranked list of target companies in three circles
+  - Estimated pool sizes
+  - Competition and move likelihood per pool
+  - Suggested ways in
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Point it at your code. Get a short threat model of what attackers could
 job: secure-code
 headline: Threat model writer
 subhead: Point it at your code. Get a short threat model of what attackers could reach, how, and how to stop them.
+explain: |
+  A short, evidence-based threat model for your codebase: what is worth protecting, who might attack it, how they would get in, and what to do about it. It reads like an engineer's review, not a generic checklist.
+
+  The skill maps your components, data stores and outside connections, and sets out trust boundaries and entry points such as endpoints and upload paths. It states what an attacker could realistically do and what they could not. Each threat is an abuse path tied to an asset and ranked by likelihood and impact. Before the final write-up it asks you to confirm its assumptions, such as who can reach the service. The result is saved as Markdown.
+when:
+  - You are about to ship a service and need a security review.
+  - A customer or auditor asked for a threat model.
+  - You inherited a repository and want to know where it is weakest.
+  - You want to rank security work by real risk, not by gut feeling.
+you_give:
+  - Your repository or folder path
+  - How it runs and who can reach it
+  - Data it handles
+  - Answers to a few follow-up questions
+you_get:
+  - A map of components and trust boundaries
+  - Ranked abuse paths
+  - Fixes for each threat
+  - A Markdown threat model
+  - A list of assumptions you confirmed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

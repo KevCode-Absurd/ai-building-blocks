@@ -6,6 +6,25 @@ summary: Describe a system, process or idea. Get a clean dark-themed SVG diagram
 job: design-work
 headline: Diagram maker
 subhead: Describe a system, process or idea. Get a clean dark-themed SVG diagram you can open and reuse.
+explain: |
+  A clean SVG diagram in a dark theme, saved as one file you can open in any browser, drop into slides or edit later. Fonts and styles are built in, so it looks the same everywhere.
+
+  Pick from nine types: architecture, flowchart, sequence, structure (classes, ER, org charts), mind map, timeline, illustrative, state machine and data flow. The skill uses a fixed colour system so meaning stays consistent: cyan for front-end and user-facing parts, green for back-end services, violet for storage, amber for cloud and infrastructure. Describe your system, process or idea in words, and it chooses a fitting type and lays out the boxes, arrows and labels.
+when:
+  - You need an architecture picture for a document and have no design tool open.
+  - You want a flowchart of a process your team follows.
+  - A sequence of messages between services is hard to explain in text.
+  - You need a mind map or timeline that looks tidy without manual drawing.
+you_give:
+  - A description of the system, process or idea
+  - The diagram type you want (optional)
+  - Names of the parts to include
+  - Labels or groupings you care about (optional)
+you_get:
+  - One self-contained SVG file
+  - A diagram type chosen to fit your content
+  - Colour-coded boxes, arrows and labels
+  - A file you can edit or embed
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Describe what you are building. Get an architecture choice with diagram
 job: build-software
 headline: System design planner
 subhead: Describe what you are building. Get an architecture choice with diagrams and the trade-offs behind it.
+explain: |
+  Pick an architecture before you build it, with a diagram and a clear record of what you give up for each choice. You get a recommendation on monolith or microservices, which database fits, and how the system should grow, so the decision is written down and not guessed.
+
+  The skill works through decision flows. For databases it asks about data shape, scale and consistency needs. For structure it weighs team size and traffic against complexity. Optional scripts can scan a project folder, draw the architecture as a Mermaid diagram, and flag tangled or circular dependencies. Each recommendation lists the trade-offs, so you can defend the call to your team. The scripts need Python.
+when:
+  - You are starting a new product and must choose between a monolith and services.
+  - You need to pick a database and want the reasons laid out.
+  - You inherited a codebase and want a diagram of how it really fits together.
+  - Your app is slowing under load and you need a plan to scale.
+  - You must explain an architecture choice to your team or manager.
+you_give:
+  - A description of what you are building
+  - Expected users, traffic and team size
+  - Your project folder (optional)
+  - Constraints such as budget or cloud provider (optional)
+you_get:
+  - A recommended architecture
+  - A diagram in Mermaid form
+  - A dependency check with problems flagged
+  - A trade-off summary for each choice
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

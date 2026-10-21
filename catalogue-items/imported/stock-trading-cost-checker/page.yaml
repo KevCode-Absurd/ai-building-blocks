@@ -6,6 +6,25 @@ summary: Give it a stock. Get how easy it is to trade and what a big order may c
 job: money-and-investing
 headline: Stock trading cost checker
 subhead: Give it a stock. Get how easy it is to trade and what a big order may cost. Collects data from websites.
+explain: |
+  Learn how easily you can buy or sell a stock, and what a larger order might really cost you. The quoted price is not what you pay, so it measures the gap between buy and sell prices, daily volume in shares and dollars, and how deep the market is at the top.
+
+  It then estimates how far a given order size could move the price, using a square-root impact method, plus turnover and an illiquidity measure, and rolls it up into a liquidity grade. You can compare several stocks. It shines for small caps and thinly traded names. It uses Yahoo Finance data through Python, so it needs code to run. It is research, not advice.
+when:
+  - You want to buy a small-cap stock and fear you cannot sell it later.
+  - You plan a large order and want to guess the slippage.
+  - You are comparing the tradability of two or three tickers.
+  - A stock looks cheap and you want to know if low volume explains why.
+you_give:
+  - A ticker or list of tickers
+  - Planned order size in shares or dollars (optional)
+  - A way to run Python
+you_get:
+  - A liquidity grade
+  - Typical buy and sell price gap
+  - Average daily volume and turnover
+  - Estimated price impact for your order size
+  - A side-by-side comparison of tickers
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

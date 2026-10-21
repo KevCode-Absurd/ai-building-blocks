@@ -6,6 +6,24 @@ summary: Describe a page or offer. Get the mental models that apply and how to u
 job: understand-customers
 headline: Buyer psychology advisor
 subhead: Describe a page or offer. Get the mental models that apply and how to use them honestly.
+explain: |
+  You pick up a short list of mental models that fit your page or offer, plus a way to use each one without tricking anyone. Describe what you are selling and where people hesitate, and you get the models that apply, why they work on people, and a concrete change to make.
+
+  The skill covers thinking tools such as first principles and jobs to be done, and buying biases such as anchoring, social proof and loss aversion. For each model it explains the idea in plain words, gives one marketing use, and adds a note on keeping it honest. If you have a product context file, it reads that first so advice fits your audience.
+when:
+  - Your pricing page gets views but few buyers and you want to know why.
+  - You want to test a new headline and need ideas rooted in how people decide.
+  - A competitor wins on trust and you want to close the gap fairly.
+  - You are planning an offer and want to check it against known buying habits.
+you_give:
+  - A page, offer or price you want to improve
+  - Your audience and where they hesitate
+  - A product context file (optional)
+you_get:
+  - The mental models that fit your case
+  - A plain explanation of each one
+  - Specific changes to try on your page
+  - Guidance for using each one honestly
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

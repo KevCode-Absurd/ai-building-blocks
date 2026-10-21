@@ -6,6 +6,25 @@ summary: Pick what to audit. Get a checklist, a file sampling plan, a findings r
 job: hire-people
 headline: HR compliance audit planner
 subhead: Pick what to audit. Get a checklist, a file sampling plan, a findings report and a fix plan. Not legal advice.
+explain: |
+  A full plan to check whether your HR practices meet the rules, from first checklist to fix list. Choose what to audit and get the checklist, a sampling plan, a findings report and a corrective plan. It is not legal advice.
+
+  It begins with a written scope so coverage is the same every time. For large workforces it designs a sample of files instead of reading every one. It gives checklists for personnel files, job classifications, pay equity, leave handling and onboarding. Findings are ranked by legal risk, how often they occur and how serious they are, then turned into a corrective plan with dates and a follow-up check.
+when:
+  - An outside audit is coming and you want to find gaps first.
+  - You have hundreds of personnel files and cannot check them all.
+  - You suspect some roles are classified wrongly for overtime.
+  - You want a yearly schedule of HR checks instead of one-off reviews.
+you_give:
+  - The area to audit
+  - Workforce size and locations
+  - Your country or state
+  - Existing policies and file formats (optional)
+you_get:
+  - An audit checklist
+  - A sampling method for files
+  - A findings report ranked by risk
+  - A corrective action plan with a timeline
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

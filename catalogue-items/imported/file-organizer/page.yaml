@@ -6,6 +6,26 @@ summary: Point it at a messy folder. Get files sorted by type, date or project, 
 job: organise-work
 headline: File organizer
 subhead: Point it at a messy folder. Get files sorted by type, date or project, with duplicates found.
+explain: |
+  A cluttered folder sorted into a clear structure, with duplicate files found, and nothing moved until you have seen the plan. Downloads stops being a pile.
+
+  The skill scans the folder and notes each file's name, type, size and dates. It assigns a destination by type, by date such as year and month, or by your own rules in a YAML file. It compares file contents to find duplicates and keeps the newest copy. You can rename files to a style like kebab-case, and move files untouched for a year into an archive. Its first run is a dry run: a full list of what goes where, so you approve it before any move.
+when:
+  - Your Downloads folder has thousands of files.
+  - You need photos or exports sorted into year and month folders.
+  - You suspect you have the same file saved five times.
+  - You want old files out of the way but not deleted.
+you_give:
+  - The folder path
+  - "How to sort: by type, date or project"
+  - Naming style (optional)
+  - Your own rules file (optional)
+you_get:
+  - A move plan to approve
+  - Sorted folders
+  - A duplicate list
+  - Renamed files
+  - An archive of stale files
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

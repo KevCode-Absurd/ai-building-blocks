@@ -6,6 +6,24 @@ summary: Give it a PDF or a brief. Get the text pulled out or a new PDF with its
 job: work-with-files
 headline: PDF maker and reader
 subhead: Give it a PDF or a brief. Get the text pulled out or a new PDF with its layout checked.
+explain: |
+  Read a PDF without trusting raw text alone, or make a new one and see for yourself that it looks right. The key habit is rendering pages to images and looking at them after every change, because text extraction cannot tell you about layout.
+
+  To read, it pulls text with pdfplumber or pypdf for quick checks and renders each page to a PNG with pdftoppm for a visual look. To create, it writes the file with reportlab, then re-renders and checks alignment, spacing and legibility. Scratch files go in a temp folder and finals in an output folder with stable names. It needs Python packages and Poppler installed.
+when:
+  - You need a one-page PDF report with a set layout.
+  - You want to check that a generated PDF has no cut-off text.
+  - You need quick text from a PDF and a look at how it is laid out.
+  - A PDF output keeps shifting and you need a render-and-fix loop.
+you_give:
+  - A PDF to read, or a brief for a new one
+  - Content and layout wishes for a new file
+  - Output file name (optional)
+you_get:
+  - Extracted text from a PDF
+  - Page images to review
+  - A new PDF made with reportlab
+  - A layout check after each update
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

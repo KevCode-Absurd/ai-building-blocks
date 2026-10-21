@@ -6,6 +6,26 @@ summary: Describe the task and its goal. Get a rubric with clear descriptions fo
 job: teach-and-train
 headline: Marking rubric writer
 subhead: Describe the task and its goal. Get a rubric with clear descriptions for each level of work.
+explain: |
+  A marking rubric where each level of work is described in words a student can read and act on, not just labelled good or poor. You give the task and what it should show, and get a grid ready to hand out.
+
+  You provide the learning goal, the task, the year group and the subject. You can set how many criteria and levels you want; the default is four of each. The skill writes level descriptions that say what the work looks like, not how good it is, and it keeps the levels clearly different from each other, so two teachers would mark alike.
+when:
+  - You set a speech or project and need fair criteria before marking starts.
+  - Your old rubric uses words like good and weak that students cannot act on.
+  - You teach several classes and want marking to match across them.
+  - You want students to see what a top response looks like.
+you_give:
+  - The learning goal
+  - A description of the task
+  - Year group and subject
+  - Number of criteria and levels (optional)
+  - Criteria you already use (optional)
+you_get:
+  - A rubric grid with level descriptions
+  - Criteria matched to your goal
+  - Wording at the right reading level
+  - Ready to print or share
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

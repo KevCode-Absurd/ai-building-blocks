@@ -6,6 +6,25 @@ summary: Give it a photo of a sign, meter or receipt. Get the text read out, wit
 job: build-software
 headline: Image text reader
 subhead: Give it a photo of a sign, meter or receipt. Get the text read out, with cleanup for hard images.
+explain: |
+  The text from a sign, meter, label or receipt photo, read out in a form you can copy. Hard images get cleanup first, so a glare-covered display or a skewed label still gives usable words. It runs in MATLAB with the Computer Vision Toolbox.
+
+  The skill looks at the picture first and writes a short plan before any code runs. It then picks a text finder, cleans the image, and runs recognition. It tries at most two cleanup recipes, then stops and asks you rather than guessing. It sets the layout mode whenever you give it a box. Handwriting, fancy lettering and CAPTCHAs are named as things it cannot read.
+when:
+  - You photographed a meter or display and need the number typed out.
+  - You have scans of printed labels and want the serial numbers as text.
+  - A photo of a sign has glare or a busy background that breaks reading.
+  - You need text pulled from a whole folder of images.
+  - You want text in more than one language read from the same picture.
+you_give:
+  - The image or a folder of images
+  - Which part holds the text, if known (optional)
+  - The language of the text (optional)
+you_get:
+  - The recognised text
+  - A short plan describing the image and the cleanup chosen
+  - Confidence checks on each result
+  - MATLAB code to repeat the job
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,26 @@ summary: Point it at a slow site. Get Core Web Vitals, bundle size and caching p
 job: build-websites
 headline: Website speed tuner
 subhead: Point it at a slow site. Get Core Web Vitals, bundle size and caching problems fixed.
+explain: |
+  A slow site fixed in the order that moves the numbers most. You get a clear read on your Core Web Vitals, a list of what is dragging them down and the changes to make.
+
+  The skill starts with a measured baseline: how long the main content takes to appear, how fast the page reacts to taps and clicks, and how much the layout jumps. Then it hunts the usual causes. Oversized hero images, a heavy JavaScript bundle that blocks the page, missing caching rules and scripts that load too early. Each fix comes with the before and after target, so you can confirm it worked, and a final check against a Lighthouse score.
+when:
+  - Your pages feel slow and visitors leave before they load.
+  - Google flags your Core Web Vitals as poor.
+  - Your JavaScript bundle keeps growing and you do not know why.
+  - You are preparing for a performance audit and need a to-do list.
+you_give:
+  - Your site address or code
+  - Current speed scores (optional)
+  - Your hosting and framework
+  - Pages that matter most
+you_get:
+  - Baseline of Core Web Vitals
+  - Causes ranked by impact
+  - Image, bundle and caching fixes
+  - Target numbers for each fix
+  - Re-test plan
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

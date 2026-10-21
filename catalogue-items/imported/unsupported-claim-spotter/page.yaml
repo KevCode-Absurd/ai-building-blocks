@@ -6,6 +6,25 @@ summary: Paste a draft. Get every claim that needs a source, ranked by risk, wit
 job: research-topics
 headline: Unsupported claim spotter
 subhead: Paste a draft. Get every claim that needs a source, ranked by risk, with the kind of source to find.
+explain: |
+  A list of every sentence in your draft that needs a source before you publish, ranked by how much damage it could do if wrong. You fix the risky ones first.
+
+  The skill reads your article, post, newsletter or script and picks out numbers, studies, quotes, big words like first and always, cause and effect statements, claims about people and companies, and legal, medical or money statements. For each, it shows the exact words, the type, the risk, and what kind of source would settle it, such as an original study or an official statistics page. It never invents a source. It also catches numbers or dates that disagree inside your draft. It does not decide what is true.
+when:
+  - You are about to publish and want to catch weak claims.
+  - An editor asked you to source your numbers.
+  - Your draft says things like studies show and you cannot name one.
+  - You wrote a long piece and may have contradicted yourself.
+you_give:
+  - Your draft text or a link
+  - Where it will be published (optional)
+  - Sources you already have (optional)
+  - How strict to be (optional)
+you_get:
+  - A summary of how many claims need support
+  - A table of claims ranked by risk
+  - The kind of source that would settle each
+  - Internal conflicts in your draft
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

@@ -6,6 +6,25 @@ summary: Give it a PyTorch or LiteRT model. Get C, C++ or CUDA code that runs it
 job: build-software
 headline: AI model code generator
 subhead: Give it a PyTorch or LiteRT model. Get C, C++ or CUDA code that runs it inside your app.
+explain: |
+  Turn a trained AI model into C, C++ or CUDA code that runs inside your own product or on hardware. The model stays the same. You just stop needing the original framework to run it.
+
+  You start with a PyTorch .pt2 file or a LiteRT .tflite file. The steps: load the model into MATLAB and inspect its inputs and outputs, write an entry function, build a MEX file, check that its results match the original framework, then generate the production code. It can also place the model in Simulink. This needs MATLAB with Coder tools, which is paid software, and it covers running models only, not training them.
+when:
+  - You have a trained model and need to run it on embedded hardware.
+  - You want faster inference than your Python setup gives.
+  - You need GPU code for a model you already trained.
+  - You want a PyTorch or TFLite model inside a Simulink design.
+you_give:
+  - A model file (.pt2 or .tflite)
+  - A sample input to test with
+  - Your target, such as C, C++ or a GPU
+  - A MATLAB licence with Coder products
+you_get:
+  - An entry function that wraps the model
+  - A MEX build for quick testing
+  - A numbers check against the source framework
+  - Production C, C++ or CUDA code
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

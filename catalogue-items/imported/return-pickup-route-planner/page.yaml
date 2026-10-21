@@ -6,6 +6,26 @@ summary: Give it your deliveries and returns to collect. Get routes that bring r
 job: plan-supply-chain
 headline: Return pickup route planner
 subhead: Give it your deliveries and returns to collect. Get routes that bring returns back on the same trip.
+explain: |
+  Delivery routes that also pick up returns on the same trip, so vans drive back loaded instead of empty. That cuts miles and trips.
+
+  You list your drop-off stops, your pickup stops, your depot and your van sizes. The skill uses the backhaul approach: each van delivers first, then collects on the way back, so the load never overflows. It checks that capacity works as the van empties and refills, and handles stops that need both a delivery and a pickup. For small jobs under about 50 stops it can aim for the best route. Larger jobs use smart search methods that give strong routes fast.
+when:
+  - You deliver parcels and also collect returns or empty containers.
+  - Your vans often come back empty after drop-offs.
+  - You run a recycling or reverse logistics round.
+  - You want to cut the number of trips for returns.
+you_give:
+  - Delivery stops with quantities
+  - Pickup stops with quantities
+  - Depot location and van capacity
+  - Number of vans
+  - Distance or time between stops (optional)
+you_get:
+  - A route for each van, deliveries then pickups
+  - Load checks along each route
+  - Total distance or cost estimate
+  - Advice on method for your job size
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

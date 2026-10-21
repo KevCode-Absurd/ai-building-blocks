@@ -6,6 +6,26 @@ summary: Give it a task. Get lessons where students compare vague and clear prom
 job: teach-and-train
 headline: Prompt quality lesson planner
 subhead: Give it a task. Get lessons where students compare vague and clear prompts and see why detail changes the result.
+explain: |
+  A short sequence of lessons where students see for themselves why a detailed prompt beats a vague one. They stop treating AI as a magic box and start asking better questions.
+
+  You give the subject, year group and what students use AI for. The skill builds a prompt anatomy lesson, then a compare-and-contrast activity with a vague prompt next to a refined one. A pricing exercise has students judge what extra detail is worth. A rewriting task lets them fix weak prompts, and a summary card lists the principles. Examples fit your subject, and you can focus on context, limits, format, role or iteration.
+when:
+  - Students paste a single line into AI and accept whatever comes back.
+  - You want a lesson on AI literacy that uses real subject tasks.
+  - You teach writing or research and want better student prompts.
+  - You need a ready activity showing why wording changes results.
+you_give:
+  - Subject area
+  - Year group and AI habits
+  - What students use AI for
+  - Prompt skill to focus on (optional)
+  - Common student prompts (optional)
+you_get:
+  - Lesson sequence
+  - Vague versus refined prompt examples
+  - Rewriting activity
+  - Student summary card
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

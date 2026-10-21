@@ -6,6 +6,26 @@ summary: Describe noise or echo to remove. Get an adaptive filter built and test
 job: build-software
 headline: Adaptive filter designer
 subhead: Describe noise or echo to remove. Get an adaptive filter built and tested on your signal.
+explain: |
+  You get an adaptive filter built and tested on your own signal, ready to cancel noise or echo. The skill shows whether it settles on the right answer and gives you the final filter weights.
+
+  It starts by studying the problem: what is the signal, what is the interference, and what reference do you have. It then picks the filter type and update method that suits, such as a least mean squares style for light work or a frequency-domain one for long filters. It sets the step size and length, runs the filter in a streaming loop, and checks that the error falls. It needs MATLAB with the right signal toolbox.
+when:
+  - You need to remove an echo from a recording.
+  - Engine or fan noise is hiding your signal.
+  - You want to model an unknown system from its input and output.
+  - A long filter is too slow and you need a faster form.
+you_give:
+  - Your signal and a reference signal
+  - A description of the noise or echo
+  - Sample rate and filter length goals
+  - MATLAB with the signal processing toolbox
+you_get:
+  - Filter code in MATLAB
+  - A choice of filter type, with the reason
+  - A convergence check
+  - The final filter weights
+  - A cleaned signal
 how_to_use:
   - "Add it to your AI once: download it and add the folder to Claude, ChatGPT or Codex as a skill."
   - Ask for the job in your own words. Your AI opens the skill when it fits.

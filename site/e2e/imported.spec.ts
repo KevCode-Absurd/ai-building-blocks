@@ -35,52 +35,30 @@ test("imported cards say who made them, and ours say nothing", async ({ page }) 
   await expect(card(page, FAKE[0].slug).getByTestId("from-label")).toHaveText("From Anthropic");
   await expect(card(page, FAKE[1].slug).getByTestId("from-label")).toHaveText("From OpenAI");
   await expect(card(page, FAKE[2].slug).getByTestId("from-label")).toHaveText("From the community");
-  await page.getByTestId("library-search").fill("");
-  await page.getByTestId("filter-by").click();
-  await page.getByRole("option", { name: /^AI Blocks/ }).click();
+  await page.getByTestId("library-search").fill("Fact-based ad copy writer");
   await expect(page.getByTestId("block-card").first()).toBeVisible();
-  await expect(page.getByTestId("from-label")).toHaveCount(0);
+  await expect(page.getByTestId("block-card").first().getByTestId("from-label")).toHaveCount(0);
 });
 
-test("the Made by filter narrows the library and stays in the address", async ({ page }) => {
-  await page.goto("/#library");
-  const result = page.getByTestId("result-count");
-  await page.getByTestId("library-search").fill("pretend imported");
-  for (const [label, by, slug] of [["Anthropic", "anthropic", FAKE[0].slug], ["OpenAI", "openai", FAKE[1].slug], ["Community", "community", FAKE[2].slug]]) {
-    await page.getByTestId("filter-by").click();
-    await page.getByRole("option", { name: new RegExp(`^${label}`) }).click();
-    await expect(page.getByTestId("block-card")).toHaveCount(1);
-    await expect(card(page, slug)).toBeVisible();
-    expect(page.url()).toContain(`by=${by}`);
-  }
-  await page.getByTestId("filter-by").click();
-  // None of the pretend skills is ours, so that choice is greyed out under this search.
-  await expect(page.getByRole("option", { name: /^AI Blocks/ })).toHaveAttribute("aria-disabled", "true");
-  await page.keyboard.press("Escape");
-  await page.getByTestId("library-search").fill("");
-  await page.getByTestId("filter-by").click();
-  await page.getByRole("option", { name: /^AI Blocks/ }).click();
-  await expect(result).toBeVisible();
-  await expect(page.locator('[data-slug^="fake-"]')).toHaveCount(0);
-  await page.getByTestId("filter-by").click();
-  await page.getByRole("option", { name: /^All/ }).click();
-  expect(page.url()).not.toContain("by=");
-});
-
-test("a link with by= opens already filtered", async ({ page }) => {
+test("old maker links keep their search without silently hiding other makers", async ({ page }) => {
   await page.goto("/?q=pretend+imported&by=openai#library");
-  await expect(page.getByTestId("block-card")).toHaveCount(1);
-  await expect(card(page, FAKE[1].slug)).toBeVisible();
+  await expect(page.getByTestId("block-card")).toHaveCount(3);
+  await expect(page.getByTestId("filter-by")).toHaveCount(0);
+  await expect(page).not.toHaveURL(/by=/);
 });
 
-test("the new work groups show in browse, with their jobs", async ({ page }) => {
+test("work groups remain available as secondary filters and old job links still work", async ({ page }) => {
   await page.goto("/#library");
-  for (const id of ["developer", "files", "connector", "office"]) {
-    await expect(page.getByTestId(`fn-${id}`)).toHaveCount(1);
-    await expect(page.getByTestId(`fn-${id}`).locator(".px")).toHaveCount(1);
+  await page.getByTestId("more-filters").click();
+  await page.getByTestId("filter-work").click();
+  for (const name of ["Build and code", "Work with files", "Connect your tools", "Run your work"]) {
+    await expect(page.getByRole("option", { name: new RegExp(`^${name}`) })).toHaveCount(1);
   }
+  await page.keyboard.press("Escape");
   await page.goto("/?q=pretend+imported&fn=developer&job=build-websites#library");
   await expect(card(page, FAKE[0].slug)).toBeVisible();
+  await expect(page.getByTestId("filter-work")).toContainText("Build and code");
+  await expect(page.getByTestId("filter-task")).toContainText("Build websites");
 });
 
 test("an imported skill's page credits the maker and still reads clean with no page file", async ({ page }) => {

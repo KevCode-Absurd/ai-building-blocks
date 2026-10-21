@@ -66,22 +66,25 @@ test("header links jump to the library and the builder", async ({ page }) => {
   await expect(page.getByTestId("builder")).toBeInViewport();
 });
 
-test("the library opens on job functions, and is sorted into prompts, skills and workflows", async ({ page }) => {
+test("the library leads with six formats and keeps domains in a filter", async ({ page }) => {
   await page.goto("/#library");
-  await expect(page.locator(".fns .fn")).toHaveCount(32);
-  await expect(page.getByTestId("fn-media-buyer")).toContainText("Run Meta ads");
-  await expect(page.locator(".fns .fn .px")).toHaveCount(32); // every function has its pixel icon
-  await expect(page.getByRole("tab")).toHaveText([/^All/, /^Prompts/, /^Skills/, /^Workflows/, /^Agents/, /^Minds/]);
-  // Broad areas sit above the groups; picking one shows only its groups.
-  await page.getByTestId("area-design").click();
-  await expect(page.getByTestId("fn-photos")).toBeVisible();
-  await expect(page.getByTestId("fn-copywriter")).toHaveCount(0);
-  await page.getByTestId("area-design").click();
-  for (const kind of ["prompt", "skill", "workflow", "agent"]) {
+  await expect(page.getByRole("tablist", { name: "Format" }).getByRole("tab")).toHaveText([/^All/, /^Prompts/, /^Skills/, /^Workflows/, /^Agents/, /^Minds/]);
+  await expect(page.locator(".fns, #library .areas")).toHaveCount(0);
+  await expect(page.getByTestId("filter-work")).toHaveCount(0);
+  await expect(page.getByTestId("filter-by")).toHaveCount(0);
+  await page.getByTestId("filter-domain").click();
+  await page.getByRole("option", { name: /^Design/ }).click();
+  await expect(page).toHaveURL(/area=design/);
+  await page.getByTestId("more-filters").click();
+  await page.getByTestId("filter-work").click();
+  await expect(page.getByRole("option", { name: /^Make product photos/ })).toBeVisible();
+  await expect(page.getByRole("option", { name: /^Write copy that sells/ })).toHaveCount(0);
+  await page.keyboard.press("Escape");
+  await page.getByRole("button", { name: "Clear all" }).click();
+  for (const kind of ["prompt", "skill", "workflow", "agent", "mind"]) {
     await page.getByTestId(`tab-${kind}`).click();
     await expect(cards(page).first()).toHaveAttribute("data-kind", kind);
-    const kinds = await cards(page).evaluateAll((els) => [...new Set(els.map((e) => e.getAttribute("data-kind")))]);
-    expect(kinds).toEqual([kind]);
+    expect(await cards(page).evaluateAll((els) => [...new Set(els.map((e) => e.getAttribute("data-kind")))])).toEqual([kind]);
   }
 });
 
@@ -100,16 +103,19 @@ test("picking a function, a job and filters narrow the library; the choice is ke
   const count = page.getByTestId("result-count");
   const all = parseInt(await count.innerText());
   expect(all).toBeGreaterThan(100);
-  await page.getByTestId("fn-copywriter").click();
+  await page.getByTestId("more-filters").click();
+  await page.getByTestId("filter-work").click();
+  await page.getByRole("option", { name: /^Write copy that sells/ }).click();
   const forFn = parseInt(await count.innerText());
   expect(forFn).toBeLessThan(all);
-  await expect(page.getByTestId("subjobs")).toBeVisible();
-  await page.getByTestId("job-write-ad-copy").click();
-  await expect(page.getByTestId("job-write-ad-copy")).toHaveAttribute("aria-pressed", "true");
+  await expect(page.getByTestId("filter-task")).toBeVisible();
+  await page.getByTestId("filter-task").click();
+  await page.getByRole("option", { name: /^Write ad copy/ }).click();
+  await expect(page.getByTestId("filter-task")).toContainText("Write ad copy");
   await expect(cards(page).first().locator(".type")).toHaveText("Write ad copy");
   await expect(page).toHaveURL(/job=write-ad-copy/);
   await page.reload();
-  await expect(page.getByTestId("job-write-ad-copy")).toHaveAttribute("aria-pressed", "true");
+  await expect(page.getByTestId("filter-task")).toContainText("Write ad copy");
   await page.getByRole("button", { name: "Clear all" }).click();
   await expect(count).toHaveText(new RegExp(`^${all} results`));
   // The dropdowns: pick with the mouse, then with the keyboard.
@@ -132,13 +138,14 @@ test("picking a function, a job and filters narrow the library; the choice is ke
 
 test("create ads: image ads and video ads sit apart, and a page links to the same look in the other format", async ({ page }) => {
   await page.goto("/?fn=video#library"); // the old function link lands on Create ads
-  await expect(page.getByTestId("fn-ads")).toHaveAttribute("aria-pressed", "true");
-  await expect(page.getByTestId("fn-ads")).toContainText("Create ads");
-  await page.getByTestId("job-make-image-ads").click();
+  await expect(page.getByTestId("filter-work")).toContainText("Create ads");
+  await page.getByTestId("filter-task").click();
+  await page.getByRole("option", { name: /^Make image ads/ }).click();
   await expect(cards(page).first().locator(".type")).toHaveText("Image ad");
   const types = await cards(page).locator(".type").allInnerTexts();
   expect(new Set(types)).toEqual(new Set(["Image ad"]));
-  await page.getByTestId("job-make-video-ads").click();
+  await page.getByTestId("filter-task").click();
+  await page.getByRole("option", { name: /^Make video ads/ }).click();
   await expect(cards(page).first().locator(".type")).toHaveText("Video ad");
   // A video script page says it makes video, and links to its image twin; the twin links back.
   await page.goto("/skills/watercolor-ad-script");

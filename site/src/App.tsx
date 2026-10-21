@@ -1,6 +1,6 @@
 import { spaceKey, spaces } from "./lib/space";
 import { Suspense, lazy, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { ArrowIcon, BlockCard, Drawer, Logo, MAKERS, makerOf, PixelIcon, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
+import { ArrowIcon, BlockCard, Drawer, Logo, SearchIcon, Select, ThemeToggle, Toast } from "./ui";
 import { type Block, type Catalogue, type Kind, AREAS, areasOf, FUNCTIONS, FUNCTION_MOVED, KINDS, LEVELS, TASKS, cap, functionsOf, kindOf, loadPage, pathOf, taskOf, useCatalogue } from "./lib/data";
 import { kits, queueForCanvas, useStore } from "./lib/store";
 import { Link, navigate, setPrefetch, setSearch, useLocation } from "./lib/router";
@@ -196,8 +196,8 @@ function Header({ onKits }: { onKits: () => void }) {
   );
 }
 
-type Filters = { q: string; area: string; fn: string; task: string; kind: Kind | "all"; level: string; by: string };
-const NONE: Filters = { q: "", area: "", fn: "", task: "", kind: "all", level: "", by: "" };
+type Filters = { q: string; area: string; fn: string; task: string; kind: Kind | "all"; level: string };
+const NONE: Filters = { q: "", area: "", fn: "", task: "", kind: "all", level: "" };
 
 function Library({ c }: { c: Catalogue }) {
   const { search } = useLocation();
@@ -207,10 +207,11 @@ function Library({ c }: { c: Catalogue }) {
     const fn = FUNCTIONS.find((x) => x.id === fnId)?.id ?? (task ? FUNCTIONS.find((x) => x.tasks.includes(task))!.id : "");
     const kind = KINDS.some((k) => k.id === search.get("kind")) ? (search.get("kind") as Kind) : "all";
     const area = AREAS.some((a) => a.id === search.get("area")) ? search.get("area")! : "";
-    return { ...NONE, q: search.get("q") ?? "", area, fn, task, kind, level: search.get("level") ?? "", by: MAKERS.some((m) => m.id === search.get("by")) ? search.get("by")! : "" };
+    return { ...NONE, q: search.get("q") ?? "", area, fn, task, kind, level: LEVELS.some((l) => l === search.get("level")) ? search.get("level")! : "" };
   });
   const set = (patch: Partial<Filters>) => setF((x) => ({ ...x, ...patch }));
   const [limit, setLimit] = useState(PAGE);
+  const [moreFilters, setMoreFilters] = useState(() => !!(f.fn || f.task || f.level));
   // Press / anywhere to jump to the search box.
   useEffect(() => {
     const on = (e: KeyboardEvent) => {
@@ -223,16 +224,16 @@ function Library({ c }: { c: Catalogue }) {
     window.addEventListener("keydown", on);
     return () => window.removeEventListener("keydown", on);
   }, []);
-  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, area: f.area, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level, by: f.by }); }, [f]);
+  useEffect(() => { setLimit(PAGE); setSearch({ q: f.q, area: f.area, fn: f.fn, job: f.task, kind: f.kind === "all" ? "" : f.kind, level: f.level, by: "" }); }, [f]);
 
   // Every count reflects all the other choices, so a zero is never a surprise.
   // The list and the counts follow the typing a beat behind, so the search box never waits on them.
   const df = useDeferredValue(f);
-  const words = df.q.toLowerCase().split(/\s+/).filter(Boolean);
+  const words = df.q.toLowerCase().replace(/[_-]/g, " ").split(/\s+/).filter(Boolean);
   const hays = useMemo(() => new Map(c.blocks.map((b) => [b.slug, `${b.name} ${b.slug} ${b.summary} ${b.headline} ${taskOf(b).name} ${functionsOf(b).map((x) => x.name).join(" ")}`.toLowerCase().replace(/[_-]/g, " ")])), [c]);
   const hay = (b: Block) => hays.get(b.slug)!;
-  // Each block's areas, groups, kind and maker, worked out once, so a few thousand blocks still count fast.
-  const facts = useMemo(() => new Map(c.blocks.map((b) => [b.slug, { areas: new Set(areasOf(b)), fns: new Set(functionsOf(b).map((x) => x.id)), kind: kindOf(b), maker: makerOf(b) }])), [c]);
+  // Each block's areas, groups and kind, worked out once, so a few thousand blocks still count fast.
+  const facts = useMemo(() => new Map(c.blocks.map((b) => [b.slug, { areas: new Set(areasOf(b)), fns: new Set(functionsOf(b).map((x) => x.id)), kind: kindOf(b) }])), [c]);
   const fact = (b: Block) => facts.get(b.slug)!;
   const tests: Record<keyof Filters, (b: Block, v: string) => boolean> = {
     q: (b) => words.every((w) => hay(b).includes(w)),
@@ -241,7 +242,6 @@ function Library({ c }: { c: Catalogue }) {
     task: (b, v) => !v || b.task === v,
     kind: (b, v) => v === "all" || fact(b).kind === v,
     level: (b, v) => !v || b.level === v,
-    by: (b, v) => !v || fact(b).maker === v,
   };
   const keys = Object.keys(tests) as (keyof Filters)[];
   // Counts are worked out once per settled search, not on every redraw.
@@ -260,72 +260,53 @@ function Library({ c }: { c: Catalogue }) {
   const clear = () => setF(NONE);
   const fn = FUNCTIONS.find((x) => x.id === f.fn);
   const activeTask = TASKS.find((t) => t.id === f.task);
-  const pickFn = (id: string) => set({ fn: f.fn === id ? "" : id, task: "" });
   const area = AREAS.find((a) => a.id === f.area);
   // An area shows its own groups; areas that so far hold only minds show the minds group.
-  const fnsRef = useRef<HTMLDivElement>(null);
-  const fnsShown = area ? FUNCTIONS.filter((x) => area.fns.includes(x.id) || (x.id === "minds" && count({ area: area.id, fn: "minds", task: "" }) > 0)) : FUNCTIONS;
+  const fnsShown = area ? FUNCTIONS.filter((x) => area.fns.includes(x.id) || x.id === f.fn || (x.id === "minds" && count({ area: area.id, fn: "minds", task: "" }) > 0)) : FUNCTIONS;
+
+  const extraFilters = [f.fn, f.task, f.level].filter(Boolean).length;
+  const formats: { id: Kind | "all"; name: string; line: string }[] = [
+    { id: "all", name: "All", line: "Explore the library" },
+    { id: "prompt", name: "Prompts", line: "Paste into a chat" },
+    { id: "skill", name: "Skills", line: "Reuse a proven method" },
+    { id: "workflow", name: "Workflows", line: "Connect several steps" },
+    { id: "agent", name: "Agents", line: "Delegate a repeatable job" },
+    { id: "mind", name: "Minds", line: "Borrow an expert's thinking" },
+  ];
 
   return (
     <section className="section wrap" id="library" aria-label="Library">
       <div className="library-search-head"><h2>What do you want to get done?</h2><Link to="/how-it-works">How it works <span aria-hidden="true">→</span></Link></div>
       <label className="search big"><SearchIcon /><span className="visually-hidden">Search</span><input value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="What do you want to get done?" data-testid="library-search" /><kbd className="kbd" aria-hidden="true">/</kbd></label>
 
-      <div className="areas" role="group" aria-label="Pick an area" data-testid="areas">
-        <button className="chip" aria-pressed={!f.area} onClick={() => set({ area: "", fn: "", task: "" })}>Everything</button>
-        {AREAS.map((a) => {
-          const n = count({ area: a.id, fn: "", task: "" });
-          return <button key={a.id} className="chip" aria-pressed={f.area === a.id} disabled={!n && f.area !== a.id} onClick={() => set({ area: f.area === a.id ? "" : a.id, fn: "", task: "" })} data-testid={`area-${a.id}`}>{a.name}<span className="count">{n}</span></button>;
-        })}
+      <div className="library-formats" role="tablist" aria-label="Format" onKeyDown={(e) => {
+        if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(e.key)) return;
+        e.preventDefault();
+        const index = formats.findIndex((k) => k.id === f.kind);
+        const next = e.key === "Home" ? 0 : e.key === "End" ? formats.length - 1 : (index + (e.key === "ArrowRight" ? 1 : -1) + formats.length) % formats.length;
+        set({ kind: formats[next].id });
+        e.currentTarget.querySelectorAll<HTMLButtonElement>("button")[next]?.focus();
+      }}>
+        {formats.map((k) => <button key={k.id} id={`format-${k.id}`} type="button" role="tab" aria-selected={f.kind === k.id} aria-controls="library-results" tabIndex={f.kind === k.id ? 0 : -1} onClick={() => set({ kind: k.id })} data-testid={`tab-${k.id}`}>
+          <span>{k.name}</span><small>{k.line}</small>
+        </button>)}
       </div>
-      <div className="fn-head">
-        <h2 className="fn-h">Pick the work you do, or want done</h2>
-        <span className="fn-arrows">
-          <button type="button" className="btn btn-ghost btn-sm" aria-label="Scroll back" onClick={() => fnsRef.current?.scrollBy({ left: -fnsRef.current.clientWidth * 0.8, behavior: "smooth" })} data-testid="fns-prev">←</button>
-          <button type="button" className="btn btn-ghost btn-sm" aria-label="Scroll on" onClick={() => fnsRef.current?.scrollBy({ left: fnsRef.current.clientWidth * 0.8, behavior: "smooth" })} data-testid="fns-next">→</button>
-        </span>
+      <div className="library-filters">
+        <Select label="Domain" value={f.area} onChange={(v) => set({ area: v, fn: "", task: "" })} testId="filter-domain"
+          options={[{ value: "", label: "All domains", count: count({ area: "", fn: "", task: "" }) }, ...AREAS.map((a) => ({ value: a.id, label: a.name, count: count({ area: a.id, fn: "", task: "" }) }))]} />
+        <button type="button" className="more-filters-btn" aria-expanded={moreFilters} aria-controls="library-more-filters" onClick={() => setMoreFilters((v) => !v)} data-testid="more-filters">More filters{extraFilters > 0 && <span className="badge">{extraFilters}</span>} <span aria-hidden="true">{moreFilters ? "−" : "+"}</span></button>
       </div>
-      <div className="fns" role="group" aria-label="Pick the work" ref={fnsRef}>
-        {fnsShown.map((x) => {
-          const n = count({ fn: x.id, task: "" });
-          return (
-            <button key={x.id} className="fn" aria-pressed={f.fn === x.id} disabled={!n && f.fn !== x.id} onClick={() => pickFn(x.id)} data-testid={`fn-${x.id}`}>
-              <span className="fn-glyph" aria-hidden="true"><PixelIcon id={x.id} /></span>
-              <span className="fn-name">{x.name}</span>
-              <span className="fn-line">{x.line}</span>
-              <span className="count">{String(n).padStart(2, "0")}</span>
-            </button>
-          );
-        })}
-      </div>
-      {fn && (
-        <div className="subjobs" role="group" aria-label={`Jobs under ${fn.name}`} data-testid="subjobs">
-          <button className="chip" aria-pressed={!f.task} onClick={() => set({ task: "" })}>Everything<span className="count">{count({ task: "" })}</span></button>
-          {fn.tasks.map((id) => {
-            const t = TASKS.find((x) => x.id === id)!;
-            const n = count({ task: id });
-            return <button key={id} className="chip" aria-pressed={f.task === id} disabled={!n && f.task !== id} onClick={() => set({ task: f.task === id ? "" : id })} data-testid={`job-${id}`}>{t.name}<span className="count">{n}</span></button>;
-          })}
-        </div>
-      )}
-
-      <div className="filter-row">
-        <div className="kind-tabs" role="tablist" aria-label="Type">
-          <button role="tab" aria-selected={f.kind === "all"} onClick={() => set({ kind: "all" })}>All<span className="count">{count({ kind: "all" })}</span></button>
-          {KINDS.map((k) => (
-            <button key={k.id} role="tab" aria-selected={f.kind === k.id} onClick={() => set({ kind: k.id })} data-testid={`tab-${k.id}`}>{k.plural}<span className="count">{count({ kind: k.id })}</span></button>
-          ))}
-        </div>
-        <div className="filters">
-          <label className="search filter-search"><SearchIcon /><span className="visually-hidden">Search these results</span><input value={f.q} onChange={(e) => set({ q: e.target.value })} placeholder="Search these results" data-testid="results-search" /></label>
-          <Select label="Made by" value={f.by} onChange={(v) => set({ by: v })} testId="filter-by"
-            options={[{ value: "", label: "All", count: count({ by: "" }) }, ...MAKERS.map((m) => ({ value: m.id, label: m.name, count: count({ by: m.id }) }))]} />
-          <Select label="Level" value={f.level} onChange={(v) => set({ level: v })} testId="filter-level"
-            options={[{ value: "", label: "Any", count: count({ level: "" }) }, ...LEVELS.map((l) => ({ value: l, label: cap(l), count: count({ level: l }) }))]} />
-        </div>
-      </div>
+      {moreFilters && <div className="library-more-filters" id="library-more-filters" role="group" aria-label="More filters">
+        <Select label="Work" value={f.fn} onChange={(v) => set({ fn: v, task: "" })} testId="filter-work"
+          options={[{ value: "", label: "All work", count: count({ fn: "", task: "" }) }, ...fnsShown.map((x) => ({ value: x.id, label: x.name, count: count({ fn: x.id, task: "" }) }))]} />
+        {fn && <Select label="Task" value={f.task} onChange={(v) => set({ task: v })} testId="filter-task"
+          options={[{ value: "", label: "All tasks", count: count({ task: "" }) }, ...fn.tasks.map((id) => ({ value: id, label: TASKS.find((t) => t.id === id)!.name, count: count({ task: id }) }))]} />}
+        <Select label="Level" value={f.level} onChange={(v) => set({ level: v })} testId="filter-level"
+          options={[{ value: "", label: "Any", count: count({ level: "" }) }, ...LEVELS.map((l) => ({ value: l, label: cap(l), count: count({ level: l }) }))]} />
+      </div>}
+      <div id="library-results" role="tabpanel" aria-labelledby={`format-${f.kind}`}>
       <div className="result-line">
-        <span data-testid="result-count">{results.length} result{results.length === 1 ? "" : "s"}{activeTask ? ` for “${activeTask.name}”` : fn ? ` for “${fn.name}”` : ""}{f.kind !== "all" ? `. ${KINDS.find((k) => k.id === f.kind)!.what}` : ""}</span>
+        <span data-testid="result-count">{results.length} result{results.length === 1 ? "" : "s"}{activeTask ? ` for “${activeTask.name}”` : fn ? ` for “${fn.name}”` : area ? ` in ${area.name}` : ""}{f.kind !== "all" ? `. ${KINDS.find((k) => k.id === f.kind)!.what}` : ""}</span>
         {filtered && <button className="link-btn" onClick={clear}>Clear all</button>}
       </div>
       {results.length ? (
@@ -336,6 +317,7 @@ function Library({ c }: { c: Catalogue }) {
       ) : (
         <div className="empty"><h3 className="h3">Nothing matches that yet</h3><p>Try fewer words, or <button className="link-btn" onClick={clear}>clear all</button>.</p></div>
       )}
+      </div>
     </section>
   );
 }

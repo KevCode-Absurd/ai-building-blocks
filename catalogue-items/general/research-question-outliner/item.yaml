@@ -1,0 +1,16 @@
+slug: research-question-outliner
+name: "Research question outliner"
+summary: "Paste a research question. Get sub-questions, sources to find and what a good answer needs."
+category: general
+type: prompt
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

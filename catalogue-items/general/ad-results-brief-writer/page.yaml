@@ -1,0 +1,86 @@
+new_slug: ad-results-brief-writer
+name: Ad results brief writer
+summary: Paste two periods of ad totals. Get a one-line answer, what changed and three ranked actions.
+job: read-ad-results
+thinking: medium
+thinking_why: It does sums first and then has to rank actions by what is at stake.
+headline: Ad results brief writer
+subhead: Paste ad totals for this period and an earlier one, with the dates and what each column means. You get your key numbers worked out, a one-line answer first, what changed, one open worry, and three ranked actions with owners and checks.
+explain: |
+  Ad reports tend to bury the point. They list a dozen numbers and leave the reader to guess what to do, or they average rates and give a wrong answer.
+
+  This prompt does the sums first, from the totals, and keeps your own sales records apart from what each platform claims. It keeps three things separate: what changed, why the data suggests it changed, and what to do. The answer goes in one line at the top. You then get three actions ranked by money at stake, each tied to a number, with an owner and a way to tell when it is done. Any change to a budget or a pause is marked as needing a person's approval.
+when:
+  - You owe someone a short update on ad results.
+  - Your sales moved and you need to explain why.
+  - You have a lot of numbers and no clear next step.
+you_give:
+  - Totals for two periods, with dates and definitions
+  - Targets (optional)
+  - Who reads it (optional)
+you_get:
+  - Your key numbers worked out
+  - A one-line answer first
+  - What changed, backed by numbers
+  - Three ranked actions with owners and checks
+how_to_use:
+  - Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini, with your details under it.
+  - Under the prompt, paste totals for both periods.
+  - Say what each column means and how long after an ad a sale counts.
+  - Send only the first line and the three actions if the reader is short on time.
+how_it_works:
+  - title: Works out the numbers
+    text: From totals, not averages.
+  - title: Keeps sources apart
+    text: Your sales and platform claims never mixed.
+  - title: Separates fact from guess
+    text: Changed, explained, proposed.
+  - title: Leads with the answer
+    text: One line first.
+  - title: Ranks three actions
+    text: By money at stake.
+output_shape: |
+  ANSWER: <one line>
+  PERIOD: <dates, currency, attribution window, what is missing>
+  NUMBERS: <metric | this period | last period | change | target>
+  WHAT CHANGED: <two to four lines, each with a number>
+  ONE OPEN WORRY: <line>
+  ACTIONS:
+   1. <action> | owner <who> | done when <check> | needs approval: <yes | no>
+  CHECKS MISSED: <none, or a line each>
+tweaks:
+  - what: Targets
+    how: With targets it says good or bad. Without, it reports the change only.
+  - what: Definitions
+    how: Say what a purchase includes or numbers get marked as assumed.
+  - what: Reader
+    how: Name them and it sets the length.
+  - what: Earlier period
+    how: Use the same length of period so the comparison is fair.
+judge:
+  - The first line tells you what to do.
+  - The sums are right.
+  - Guesses are called guesses.
+  - Budget changes say they need approval.
+test:
+  - Use two weeks you know well. The answer should match what you saw.
+  - Check one number by hand.
+  - Run it twice. The answer line should be the same.
+improve:
+  - Add your targets to the prompt.
+  - Add your standing definitions.
+  - Add the names of who owns what.
+  - Pair it with the Two-version result reader for test results.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A short prompt works the same in Claude, ChatGPT or Gemini, so use the one you already have open.
+  inputs:
+    - Your own sales totals for the same dates
+    - Your targets
+    - A log of changes made in the period
+terms:
+  - term: Attribution window
+    meaning: How long after an ad a sale still counts for it.
+  - term: Return
+    meaning: Revenue divided by ad spend.

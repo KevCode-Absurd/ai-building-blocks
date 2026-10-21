@@ -1,0 +1,16 @@
+slug: risky-order-rule-writer
+name: "Risky order rule writer"
+summary: "Paste your order volume and chargebacks. Get rules by risk level and a chargeback watch line."
+category: ecommerce
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,88 @@
+new_slug: product-page-doubt-mapper
+name: "Product page doubt mapper"
+summary: "Paste your product and what buyers doubt. Get the page sections, each tied to real proof."
+job: set-up-store
+thinking: low
+thinking_why: "It maps listed doubts to sections, with little judgement."
+
+headline: "Product page doubt mapper"
+subhead: "Paste your product, price and what makes buyers hesitate. It maps each doubt to a page section and the proof that settles it, orders the page, and lists the photos and proof to collect first."
+
+explain: |
+  Most product pages are built from a features list. Buyers do not read features. They scan for an answer to the thing that worries them: will it fit, will it taste right, is it worth the price.
+
+  This prompt starts from those doubts. Each becomes a section with the proof that answers it, and anything you cannot prove yet goes on a collect list instead of onto the page.
+
+when:
+  - "You are building a new product page."
+  - "A page gets visits but few orders."
+  - "You have photos and reviews but no plan for the order of the page."
+
+you_give:
+  - "Product and price (required)."
+  - "Buyer doubts (required): taste, fit, quality, price, proof. If you have none, paste a competitor's page or their top reviews."
+  - "Proof you have (advised): reviews, test results, certificates, photos."
+  - "Your theme (optional)."
+you_get:
+  - "Each doubt tied to a section and its proof"
+  - "The page order, top to bottom"
+  - "The tabs to use"
+  - "A list of photos and proof to collect"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: product and price; buyer doubts; proof you have; your theme."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "List the doubts"
+    text: "Write the questions a buyer asks before paying. Use reviews or a competitor page if you gave none."
+  - title: "Map doubt to section and proof"
+    text: "Taste needs reviews. A bold claim needs numbers. Fit needs a size chart. Quality needs facts or a certificate. Mark whether you have each proof."
+  - title: "Order the page"
+    text: "Buy area first: title, price, three or four benefit bullets, variants and the buy button. Then sections, strongest doubt first."
+  - title: "Say key claims twice"
+    text: "Once in an image and once in text, because people read in different ways."
+  - title: "Use tabs for repeat questions"
+    text: "Description, fit, care, shipping and returns, each with a short summary and a link to the full policy."
+
+output_shape: |
+  DOUBTS AND PROOF: <doubt> | section <name> | proof <type> | have it: <yes | no>
+  SECTIONS, TOP TO BOTTOM: 1 Buy area | 2 <section> | proves <doubt>
+  TABS: <names>
+  COLLECT BEFORE BUILDING: <photos and proof still needed>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: "Proof you have"
+    how: "List real reviews, tests and certificates. The more you list, the more sections it can fill."
+  - what: "Price level"
+    how: "A dearer or more complex product gets a more detailed page. Give the price."
+
+judge:
+  - "No review, test result, certificate or number is made up."
+  - "Every section answers a named doubt."
+  - "Proof you do not have is listed under COLLECT BEFORE BUILDING, not written in."
+  - "It says to check your theme before you rely on a setting."
+
+test:
+  - "Run it on a page you know converts and see if it finds the same sections."
+  - "Give it no proof. It should list proof to collect, not invent it."
+  - "Run it twice. The page order should be close."
+
+improve:
+  - "Add your top three buyer questions under the prompt every time."
+  - "Save your proof list in your about-me note."
+  - "Pair it with a product page copywriter for the words."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "Your top reviews and questions from support"
+    - "Two competitor product pages"
+
+terms:
+  - term: "Proof"
+    meaning: "Something a buyer can check, such as a review, a test result or a certificate."

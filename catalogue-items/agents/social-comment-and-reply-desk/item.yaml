@@ -1,0 +1,25 @@
+slug: social-comment-and-reply-desk
+name: "Social comment and reply desk"
+summary: "Give it the posts and comments worth a reply. Get replies that add something, in your voice, plus repeat questions."
+category: agent
+type: agent
+role: orchestrate
+job: organic
+level: beginner
+inputs:
+  - {type: source_text, required: true}
+  - {type: copy_draft, required: false}
+  - {type: brand_brain, required: false}
+outputs:
+  - {type: copy_draft}
+  - {type: plan}
+uses: [x-reply-writer, linkedin-comment-writer, youtube-comment-reply-writer]
+steps:
+  - {uses: x-reply-writer, note: "Only for X posts: a reply that would stand alone as a post, or a clear call to skip. Says when the post is too old for reach."}
+  - {uses: linkedin-comment-writer, note: "Only for LinkedIn posts: a comment that adds what the post left out, or a call to skip."}
+  - {uses: youtube-comment-reply-writer, note: "Only for comments on your own YouTube videos: sorts them into questions, corrections, praise and bait, drafts short replies and picks one comment to pin."}
+schedule: "Once a day on days you post, and once a week for the repeat-question list"
+asks_before: [posting any reply or comment, replying as your brand to an angry or hostile comment, replying to anything about a dispute, health, money or the law, liking, following or messaging anyone, promising a video, a feature or a refund in a reply]
+origin: own
+version: 1.0.0
+example_pending: true

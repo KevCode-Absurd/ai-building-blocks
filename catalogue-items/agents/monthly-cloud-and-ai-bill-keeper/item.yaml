@@ -1,0 +1,26 @@
+slug: monthly-cloud-and-ai-bill-keeper
+name: "Monthly cloud and AI bill keeper"
+summary: "Give it your cloud and AI bills each month. Get what grew, the waste behind it and caps to add."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: codebase, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [cloud-bill-waste-finder, vercel-cost-and-speed-auditor, ai-cost-cutter, ai-spend-limit-checker, cloud-monitoring-setter]
+steps:
+  - {uses: ai-spend-limit-checker, note: "Only when AI spend jumped, or on the first run if the code calls paid AI: caps and loop limits first, because a runaway loop outranks every saving."}
+  - {uses: cloud-bill-waste-finder, note: "Every month, if you run on AWS: idle and unused resources with the saving for each fix."}
+  - {uses: vercel-cost-and-speed-auditor, note: "Every month, if you host on Vercel: cost and speed problems from real production numbers."}
+  - {uses: ai-cost-cutter, note: "Every month, if AI is a top-three line or it grew since last month: where the tokens go and what cuts the bill."}
+  - {uses: cloud-monitoring-setter, note: "Only when a jump went unseen for more than a week: alerts so the next one shows up in a day."}
+schedule: "Third working day of each month, once the bills are final"
+asks_before: [changing code or settings, deleting or stopping any resource, changing a plan or a limit on a live account, rotating keys, buying reserved capacity or a savings plan]
+origin: own
+version: 1.0.0
+example_pending: true

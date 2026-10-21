@@ -1,0 +1,79 @@
+new_slug: ad-ask-line-writer
+name: Ad ask line writer
+summary: Paste your ad and offer. Get two clear asks, each with a true reason to act and the doubts removed.
+job: write-ad-copy
+thinking: low
+thinking_why: It rewrites the ending of your ad from facts you gave.
+headline: Ad ask line writer
+subhead: Paste your ad, your offer terms and how people act. You get the kind of ask that fits, a true reason to act now if one exists, every doubt answered from your own terms, and two versions of the closing line.
+explain: |
+  Many ads end on "Learn more" or "Shop now" and lose people who were ready to act. They did not know what happens next, or they feared being stuck with a bad buy.
+
+  This prompt rewrites the end of your ad in a set order. First it picks the kind of ask that suits the price and the level of trust needed. Then it looks in your offer for a real reason to act now. If there is none, it says so and does not invent one. It lists the doubts a willing buyer might have and answers each one with your own wording, so the guarantee never says more than you promise. You get a full ask and a smaller first step to test against it.
+when:
+  - Your ad is good but the last line is weak.
+  - You get clicks but few people finish.
+  - You want a gentler second version for colder buyers.
+you_give:
+  - Your ad draft
+  - Your offer terms, exactly as you state them
+  - The link, number or form people use
+you_get:
+  - The kind of ask that fits and why
+  - A true reason to act now, or a clear "none"
+  - Each doubt matched to the term that answers it
+  - "Two versions: a full ask and a smaller first step"
+how_to_use:
+  - Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini, with your details under it.
+  - Under the prompt, paste your ad, then your offer terms, then how people act.
+  - Check the reason to act now. If it says none, do not add one.
+  - Run version A and version B as two ads and compare.
+how_it_works:
+  - title: Picks the kind of ask
+    text: Buy, try or reply, based on the price and the trust needed.
+  - title: Looks for a real reason
+    text: Uses a date, limit or bonus only if your offer states it.
+  - title: Lists the doubts
+    text: Price risk, effort, fear of being stuck, not knowing what is next.
+  - title: Answers with your terms
+    text: Uses your guarantee and trial wording word for word.
+  - title: Writes two versions
+    text: A full ask, then a smaller step with less risk.
+output_shape: |
+  KIND OF ASK: <buy | try | reply>, because <one line>
+  REASON TO ACT NOW: <from your offer, or "none in the facts">
+  BARRIERS: <each doubt> -> <how your terms answer it>
+  VERSION A: <the full ask>
+  VERSION B: <the smaller first step>
+  MISSING: <terms you did not give>
+tweaks:
+  - what: Offer terms
+    how: Paste the exact wording. The prompt will not widen a guarantee.
+  - what: Who is reading
+    how: Say if the reader is cold or warm. Colder readers suit version B.
+  - what: The action
+    how: Name the exact button or number so the path is short.
+  - what: Platform
+    how: Tell it any character limit and it will fit both versions.
+judge:
+  - Each version asks for one thing.
+  - The guarantee is no bigger than your own.
+  - There is no deadline you do not have.
+  - A reader could tell what happens right after they act.
+test:
+  - Use an offer with no deadline. The reason to act now should say none.
+  - Run it twice. The kind of ask should stay the same.
+  - Run A and B as two ads for a week and compare.
+improve:
+  - Paste your real guarantee wording into the prompt so it is always used as written.
+  - Add the buttons your platform allows.
+  - Keep a list of reasons to act that are true for your store and paste it with the offer.
+  - Pair it with the Ad claim proof gap finder so the ask is backed.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A short prompt works the same in Claude, ChatGPT or Gemini, so use the one you already have open.
+  inputs:
+    - Your guarantee and returns wording
+    - Any real sale dates or stock limits
+    - The button labels your platform offers

@@ -1,0 +1,70 @@
+new_slug: plain-words-contract-summary
+name: Plain-words contract summary
+summary: Paste a contract. Get a two-minute summary of what you owe, what they owe and the risky clauses.
+job: check-contracts
+thinking: medium
+thinking_why: It has to read clauses closely and flag the ones that could cost you.
+headline: Plain-words contract summary
+subhead: Paste the contract and say which party you are. You get a two-minute summary of what you owe, what they owe, how to leave, and the clauses that could cost you, each with its section number.
+explain: Contracts are long, and the costly part is often one sentence on page nine. This prompt reads it for you and sorts it by what you need to know. Duties, money and dates come first, then how it ends and what happens at renewal. It flags clauses that commonly cost people, quotes a few words and points to the section so you can check. It does not replace a lawyer. Have a qualified person review anything important before you sign.
+when:
+  - You have a contract to sign and no time to read every line.
+  - You want to know what to ask before you call a lawyer.
+  - You want a quick map of a contract you already signed.
+you_give:
+  - The full contract text
+  - Which party you are
+  - What matters most (optional)
+you_get:
+  - A summary under 300 words
+  - Clauses to watch, with section numbers
+  - What is vague or missing
+  - Questions to ask the other side
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste the contract text and which party you are.
+  - Send it and read the result.
+  - Check each flagged clause in the original before you act.
+how_it_works:
+  - title: Map it
+    text: What it is, who owes what, and the dates.
+  - title: Find the exits
+    text: How either side leaves and what renewal does.
+  - title: Flag the costly parts
+    text: Quoted clauses with section numbers and plain meaning.
+output_shape: |-
+  WHAT IT IS
+  YOUR DUTIES
+  THEIR DUTIES
+  MONEY AND DATES
+  HOW IT ENDS
+  WATCH THESE CLAUSES
+  <section, quoted words, plain meaning>
+  VAGUE OR MISSING
+  QUESTIONS TO ASK
+tweaks:
+  - what: Your focus
+    how: Say what matters most and it goes first.
+  - what: Length
+    how: Ask for ten lines for a quick look.
+  - what: Party
+    how: Say which party you are, or the duties land on the wrong side.
+judge:
+  - Section numbers are present.
+  - Plain words.
+  - Nothing is made up.
+  - Costly clauses are flagged.
+test:
+  - Paste a contract with an auto-renewal. It should flag it with the section.
+  - Paste a short contract. The summary should stay short.
+  - Run twice. The flagged clauses should match.
+improve:
+  - Add a note on your own red lines, like never more than one year.
+  - Compare two versions of the same contract.
+  - Use the full skill for contracts with amendments.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - The full contract text

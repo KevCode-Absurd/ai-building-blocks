@@ -1,0 +1,99 @@
+new_slug: edge-case-list-maker
+name: "Edge case list maker"
+summary: "Paste a change you plan to make. Get the cases to check, smallest first, before you write any code."
+job: build-software
+thinking: medium
+thinking_why: "It must think of odd cases and order them well."
+
+headline: "Edge case list maker"
+subhead: "Paste a change you plan to make. It states the change in one line, lists the cases it must handle including edge cases and old behaviour that must stay, orders them smallest first, and names the first check to run."
+
+explain: |
+  A list of cases written before the work shows you its shape and gives you a clear next step. Without one, people build the main case, miss the edges, and find them in front of a customer.
+
+  This prompt writes the list for you. Each case says what should happen, never how to build it, so any design can meet it. The cases come smallest first, so you can finish one in a sitting and cross it off.
+
+when:
+  - "You are about to change code, a spreadsheet or a form and want to know what could break."
+  - "Your AI keeps building the main case and missing the edges."
+  - "You want a clear first step before any work starts."
+
+you_give:
+  - "The change, in your own words"
+  - "What it does today (optional)"
+  - "Past bugs or odd customers (optional)"
+you_get:
+  - "The change in one line"
+  - "Cases in order, each with its group and size"
+  - "The first case to check, in plain words"
+  - "A short list of design decisions to make later"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "State the change in one line"
+    text: "\"After this change, when <situation>, <what happens> instead of <what happens now>.\" If a part is missing, write `MISSING:` and ask. One change per list."
+  - title: "List the cases"
+    text: "Write each as \"Given <start>, when <action>, then <result>\". Cover the main case once, variations, edge cases (empty, zero, one, many, the biggest allowed, one past it, repeated, wrong order), old behaviour that must stay, and known problems. Label each group."
+  - title: "Keep build choices off"
+    text: "Remove any word that says how to build it, such as a table, class or library. Move design questions to one line called Decisions for later."
+  - title: "Order smallest first"
+    text: "Start with the simplest main case. Mark each small, medium or large. Split any large case."
+  - title: "Pick the first check"
+    text: "Name the case to check first and write it in plain words: starting data, action, expected result."
+
+output_shape: |
+  CHANGE
+  After this change, when <situation>, <result> instead of <today>.
+
+  CASES (smallest first)
+  1. [main, small] Given <start>, when <action>, then <result>
+  2. [edge, small] ...
+
+  START WITH
+  <case 1>: <start data> + <action> = <expected result>
+
+  DECISIONS FOR LATER
+  - <design question>
+
+  MISSING
+  <gaps>
+
+tweaks:
+  - what: "What it does today"
+    how: "Paste today's behaviour. Without it the keeps-working group is marked missing."
+  - what: "Known problems"
+    how: "Past bugs become cases, so the list covers your real history."
+  - what: "Size of the change"
+    how: "Keep it to one change. A big request gets split into two lists."
+
+judge:
+  - "Each case could pass or fail with no argument."
+  - "No case names a table, class or library."
+  - "The first case is small enough for one sitting."
+  - "At least one case covers something that works today."
+
+test:
+  - "Use a change you already shipped. Does the list include the bug you hit afterwards?"
+  - "Run it twice. The edge cases should be mostly the same."
+  - "Ask for a change with two parts. It should split them."
+
+improve:
+  - "Add edge cases your product always meets, such as time zones or long names."
+  - "Add the format your team uses for tests."
+  - "Save past bugs in a note you paste each time."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "A past bug in the same area"
+  - "A sentence on today's behaviour"
+
+terms:
+  - term: "Edge case"
+    meaning: "An unusual input, such as empty, zero or the largest allowed value."

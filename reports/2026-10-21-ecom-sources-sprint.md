@@ -71,3 +71,13 @@ About 37 of the 256 sources gave no skill. Most were rated low or none by the re
 - **Site.** Agents have their own tab and `/agents/<slug>` pages (what it runs, how to add it, the agent file). The library loads cards a few at a time as you scroll, and cards off screen are not laid out until they come near.
 
 Still to check: several imported skills' frontmatter `name` differs from their folder slug, so an agent that says "run `applicant-shortlist-builder`" may find it installed under its original name. The agents say to fetch any step they can't find from its page.
+
+## Round 3: prompts, more agents and mini tools
+
+- 117 new prompts (the library had 7). Each is a one-message card cut from one skill, with fill-in slots, a short method, a fixed hand-back and checks. Each ends with a link to the full skill. They carry `example_pending: true` until a test round.
+- 28 new agents (72 in all). Every step is an existing skill or workflow. Builders turned down ideas that repeat an existing agent or have no repeat, choice, loop or memory.
+- 14 new mini tools (22 in all): ad budget, customer payback, price increase, free-shipping minimum, bundle price, returns cost, landed cost, reorder point, email list value, creator deal, subscription revenue, cash runway, meeting cost, and hire or freelance. Every worked example matches in all five ways.
+- Checks: lint is clean apart from the other session's 13 pages. No name, summary, subhead or opening line repeats across the library. Every agent step and every prompt's full-version link resolves. The build is 4,095 pages and 15,144 files, still inside the free plan.
+- Known limits:
+  - Mini tool "next" links can only point at general, ecommerce and orchestrator items, not imported ones (mini-tools/check.mjs `catalogue`).
+  - Some prompt pages were written from a template, so their how-to-use wording is uniform.

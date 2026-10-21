@@ -1,0 +1,26 @@
+slug: bad-year-plan-stress-tester
+name: Bad year plan stress tester
+summary: Paste a budget or plan. Get three bad-year tests, your breaking point and a survival score.
+category: general
+type: prompt
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: Getting Wealthy vs. Staying Wealthy
+    by: Morgan Housel (Collaborative Fund, 2022)
+    url: https://collabfund.com/blog/getting-wealthy-vs-staying-wealthy/
+    used: Survival before upside, the ruin point, borrowed money that can be called in and the need for a margin of safety
+  - title: The Psychology of Money
+    by: Morgan Housel (Collaborative Fund, 2018)
+    url: https://collabfund.com/blog/the-psychology-of-money/
+    used: Being bold over the long run while cautious in the short run, and a rule that stops panic moves

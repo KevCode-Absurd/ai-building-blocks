@@ -1,6 +1,6 @@
 # Set your prices: AI Blocks
 
-> 28 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 31 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Bulk price changer](https://useaiblocks.com/skills/bulk-price-changer): Pick products and a percent or amount. Get every price changed at once, within limits. Changes live prices, so preview first.
 - [Clearance discount planner](https://useaiblocks.com/skills/clearance-discount-planner): Give it your slow stock and past sales. Get when and how much to cut prices to sell out.
@@ -15,15 +15,18 @@
 - [Membership plan pricer](https://useaiblocks.com/skills/membership-plan-pricer): Tell it your plans or membership. Get tier prices, flat or pay-per-use advice, and ways to win upgrades.
 - [Price a product so it pays after every cost](https://useaiblocks.com/workflows/price-a-product-so-it-pays-after-delivery-ads-and-discounts): Give it a price and every cost. Get your true margin, three test prices and how deep a discount can go.
 - [Price digits and placement planner](https://useaiblocks.com/skills/price-display-planner): Give it a price you are weighing. Get whether to round it, how to price add-ons, and where to place it.
+- [Price ending picker](https://useaiblocks.com/prompts/price-ending-picker): Paste a price and what you sell. Get round, just-below or exact digits, with the reason.
 - [Price position planner](https://useaiblocks.com/skills/price-position-planner): Give it your costs and rival offers. Get a price for each product, response rules for rival discounts, and a rollout plan.
 - [Price presentation planner](https://useaiblocks.com/skills/price-presentation-planner): Give it your product and prices. Get a tier and anchor layout that makes value clear without tricks.
 - [Price sensitivity analyst](https://useaiblocks.com/skills/price-sensitivity-analyst): Get which products sell more or less as price changes, plus price points worth testing.
+- [Price test keeper](https://useaiblocks.com/agents/price-test-keeper): Give it your costs, sales and rival prices. It plans one undoable price test, reads the result and sets the next.
 - [Price test planner](https://useaiblocks.com/skills/price-test-planner): Give it your costs and sales data. Get the best price to try, three outcome cases, and a test you can undo.
 - [Pricing model designer](https://useaiblocks.com/skills/pricing-model-designer): Give it your product and price survey data. Get a pricing model, price points and good, better, best tiers.
 - [Pricing strategist](https://useaiblocks.com/skills/pricing-strategist): Describe your product and buyers. Get tiers, a value metric and a test plan for your prices.
 - [Repricing rules designer](https://useaiblocks.com/skills/repricing-rules-designer): Give it your margins and stock. Get safe automatic price rules, test cases, and a kill switch you can trust.
 - [Revenue model picker](https://useaiblocks.com/skills/revenue-model-picker): Describe your product and users. Get three to five ways to earn from it, with risks and tests.
 - [SaaS pricing designer](https://useaiblocks.com/skills/saas-pricing-designer): Give it your product and customers. Get a value metric, tier layout and pricing tests to run.
+- [Sale price wording picker](https://useaiblocks.com/prompts/sale-price-wording-picker): Paste a full price and a sale price. Get the discount shown the clearest way, with warnings.
 - [Set your price from what buyers say, then test it](https://useaiblocks.com/workflows/set-your-price-from-what-buyers-say-then-test-it-safely): Give it your product. Get a pricing survey, a price model with tiers and an undoable price test.
 - [Usage pricing designer](https://useaiblocks.com/skills/usage-pricing-designer): Describe your product. Get a pay-as-you-go pricing model users understand, accept and can predict, with no surprise bills.
 - [Waterfall price setter](https://useaiblocks.com/skills/waterfall-price-setter): Give it your targets, CAC and costs. Get the lowest viable price, or a call to drop it.

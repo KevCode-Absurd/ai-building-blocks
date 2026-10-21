@@ -1,0 +1,107 @@
+new_slug: automation-flow-sketcher
+name: "Automation flow sketcher"
+summary: "Paste a task you repeat. Get an automation laid out step by step for Zapier or Make, with what can break."
+job: connect-tools
+thinking: low
+thinking_why: "It lays out a flow from a clear task with little judgement."
+
+headline: "Automation flow sketcher"
+subhead: "Paste a task you repeat by hand and the apps involved. It names the trigger, lays out each step with the data it needs, adds filters and failure handling, and recommends Zapier or Make for your size of task."
+
+explain: |
+  Many automations break quietly. A form arrives with an empty field, a step fails once, the same order runs twice, and nobody notices for a week. The fix is to plan for failure before building.
+
+  This prompt lays out the flow first: what starts it, each step, where it should stop, and what you will see if something goes wrong. Then it picks the tool that fits your size of task.
+
+when:
+  - "You copy the same data between apps every day."
+  - "An automation you built keeps failing silently."
+  - "You are choosing between Zapier and Make."
+
+you_give:
+  - "The task, step by step as you do it now"
+  - "The apps involved"
+  - "How often and how many"
+  - "What must never happen (optional)"
+you_get:
+  - "The trigger and each step with its data"
+  - "Filters that stop bad runs"
+  - "What happens on failure, step by step"
+  - "A tool pick with a reason"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "Name the trigger"
+    text: "Say what starts the automation (a new row, a new order, a form, a time) and which app it comes from."
+  - title: "List the steps"
+    text: "Write each step as app, action and the data it needs from the step before. Keep it as short as it can be."
+  - title: "Add filters"
+    text: "Say where the automation should stop quietly, for example when a field is empty or a test order arrives."
+  - title: "Plan for failure"
+    text: "For each step, say what happens if it fails and what you will see: an alert, a retry or a log row. Say how to avoid doing the same thing twice."
+  - title: "Choose the tool"
+    text: "Recommend Zapier or Make for this size of task in one sentence, and say at what point plain code would be better."
+
+output_shape: |
+  TRIGGER
+  <event> in <app>
+
+  STEPS
+  1. <app>: <action> using <data from earlier>
+
+  FILTERS
+  - Stop if <condition>
+
+  IF IT FAILS
+  - Step <n>: <what you will see and what happens>
+
+  AVOIDING DUPLICATES
+  <how>
+
+  TOOL PICK
+  <Zapier | Make> because <reason>
+
+  MISSING
+  <gaps>
+
+tweaks:
+  - what: "Volume"
+    how: "Say how many runs per day. High volume changes the tool pick and the cost."
+  - what: "What must never happen"
+    how: "Name it, such as sending a customer two emails. It becomes a filter."
+  - what: "Your apps"
+    how: "Name the exact apps. Steps are then written for them."
+
+judge:
+  - "Each step names its app and action."
+  - "You can see what happens on failure."
+  - "Duplicate runs are handled."
+  - "The tool pick fits your volume."
+
+test:
+  - "Build it with three test rows. Does it behave as the plan says?"
+  - "Send a row with an empty field. Does the filter stop it?"
+  - "Run the prompt twice. The steps should match."
+
+improve:
+  - "Add the apps you already pay for, so it picks from those first."
+  - "Add your naming habits for automations."
+  - "Save working flows as a list you reuse as a starting point."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "The exact apps and their plans"
+  - "Three example rows of real data with names removed"
+
+terms:
+  - term: "Trigger"
+    meaning: "The event that starts an automation, such as a new row."
+  - term: "Filter"
+    meaning: "A rule that stops a run when a condition is not met."

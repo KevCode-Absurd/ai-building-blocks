@@ -1,0 +1,87 @@
+new_slug: proof-spot-mapper
+name: "Proof spot mapper"
+summary: "Paste your reviews, quotes and buyer doubts. Get which proof to show, where it goes and what to drop."
+job: write-landing-page
+thinking: low
+thinking_why: "It matches given proof to given doubts with a short set of rules."
+
+headline: "Proof spot mapper"
+subhead: "Paste your real reviews, press and numbers, along with the doubts that stop people buying. The prompt matches each doubt to the proof that settles it, says where on the page it goes, and lists proof to drop."
+
+explain: |
+  A wall of praise does not help a buyer who has one specific worry. Proof works when it sits next to the doubt, at the moment the buyer hesitates.
+
+  This prompt pairs each doubt with the real proof that answers it. It picks two kinds for the first screen and places the rest by the button, the price or the size picker. It never invents a quote. Anything that is not real, not sourced or not close to your buyer goes on a drop list with the reason.
+
+when:
+  - "You have good reviews but they sit in one block at the bottom."
+  - "Buyers hesitate at the price or the size choice."
+  - "You are redesigning a page and need to place proof."
+
+you_give:
+  - "Reviews, quotes, ratings and press, each with a source"
+  - "The doubts buyers raise"
+  - "Your buyer groups (optional)"
+you_get:
+  - "A map of doubt, proof and place on the page"
+  - "The two proof items for the first screen"
+  - "A drop list with a reason for each item"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Under it, paste your proof with the source of each."
+  - "List the doubts buyers have."
+  - "Add buyer groups if you know them."
+  - "Hand the map to whoever builds the page."
+
+how_it_works:
+  - title: "Match"
+    text: "One doubt, one piece of proof."
+  - title: "First screen"
+    text: "Two kinds of proof the visitor sees at once."
+  - title: "Place"
+    text: "Where the buyer hesitates."
+  - title: "Drop"
+    text: "Anything not real, sourced or similar."
+
+output_shape: |
+  PROOF MAP
+  <doubt> | proof: "<quote or number>" (<source>) | place: <where>
+  FIRST SCREEN
+  <kind 1> ; <kind 2>
+  DROPPED
+  <item> | reason: <...>
+  MISSING
+  <proof to collect>
+
+tweaks:
+  - what: "Source detail"
+    how: "Name, date and where it was posted make a quote usable. Quotes with no source get dropped."
+  - what: "Buyer groups"
+    how: "Tag quotes by age, use or size and matching ones are shown first."
+  - what: "Page type"
+    how: "Say if it is a product page, a sales page or an ad page. Places change."
+
+judge:
+  - "Every item is real and sourced."
+  - "Each item is tied to a named doubt."
+  - "The first screen has two kinds of proof."
+  - "The drop list gives a reason for each item."
+
+test:
+  - "Put one made-up quote in your list. It should be dropped."
+  - "Check that a size doubt gets proof next to the size picker."
+  - "Run it twice and compare the places."
+
+improve:
+  - "Add your rating spread so the balance check is accurate."
+  - "Add the page sections you have, so places match your layout."
+  - "Pair it with Buyer doubt gap finder to find doubts with no proof yet."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt works in any strong chat AI. Paste it, then add your details under it."}
+  inputs:
+    - "Rating counts by star"
+    - "Video testimonials you hold"
+    - "Your top three buyer doubts in their words"

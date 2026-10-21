@@ -1,0 +1,85 @@
+new_slug: cancel-reason-save-planner
+name: "Cancel reason save planner"
+summary: "Paste your cancel reasons and what your tool can do. Get one save per reason and the numbers to track."
+job: keep-customers
+thinking: medium
+thinking_why: "It matches each reason to a fitting save and weighs margin."
+
+headline: "Cancel reason save planner"
+subhead: "Paste the reasons subscribers give for cancelling and what your tool can do. The prompt gives one fair save per reason, the words for each screen, a discount cap and a sheet to track results."
+
+explain: |
+  Most cancel pages offer the same discount to everyone. That wastes margin on people who only had too much product, and does nothing for people who found a cheaper brand. A fitting save for each reason works better and costs less.
+
+  This prompt matches one save to each reason, keeps cancelling easy and honest, and gives you columns to track. Save rate targets from experts, such as 15 percent as good, are one speaker's view. Measure your own.
+
+when:
+  - "Subscribers leave and you only offer a discount."
+  - "You are setting up the cancel screen in your subscription tool."
+  - "You want to know which saves actually keep customers."
+
+you_give:
+  - "Your cancel reasons"
+  - "What your tool can do (advised)"
+  - "Your biggest affordable save discount (advised)"
+you_get:
+  - "One save per reason with screen copy"
+  - "A discount cap"
+  - "A tracking sheet layout and a legal note"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste your cancel reasons under the prompt, with counts if you have them."
+  - "List what your tool can do, so every save is one you can build."
+  - "Build the flow, then track the columns it gives you."
+
+how_it_works:
+  - title: "Group the reasons"
+    text: "Make five to seven reasons plus Other. Split \"too expensive\" into not worth it and no budget. Split \"too much product\" into never started and wrong schedule."
+  - title: "Give one save each"
+    text: "Too much product: skip, change date or frequency, or a smaller pack, never a discount. Need a break: a delay with a return date, not an open pause. Dislike it: swap product. Too expensive: remind of value, a capped discount or a cheaper plan. Found another brand: a short note on what differs."
+  - title: "Write the screen"
+    text: "Write one line of screen copy per reason. Every screen keeps a clear \"continue to cancel\" link."
+  - title: "Cap the discount"
+    text: "Use my biggest save discount as the cap. Say what a deeper offer would cost per order."
+  - title: "Set what to track"
+    text: "Track the save rate per reason, repeat orders 60 to 90 days after a save, and discount cost."
+
+output_shape: |
+  CANCEL FLOW
+  Reason: <reason> | save: <action> | copy: <one line> | cap: <discount or none>
+  (five to seven reasons plus Other)
+  TRACKING COLUMNS: <reason, shown, saved, save rate, repeat orders after save, discount cost>
+  LEGAL NOTE: <cancelling stays easy; check local rules>
+  MISSING: <...>
+
+tweaks:
+  - what: "Reason counts"
+    how: "Add how many people gave each reason, so the biggest is fixed first."
+  - what: "Your tool"
+    how: "Say what it can do. A save your tool cannot build is useless."
+  - what: "Discount cap"
+    how: "Give a real number. Without it the prompt will not suggest a discount level."
+
+judge:
+  - "Each reason gets one save, matched to the reason."
+  - "No discount for \"too much product\"."
+  - "Every screen can reach cancel."
+  - "No promised save rate."
+
+test:
+  - "Run it with your three top reasons and see if the saves make sense to you."
+  - "Run it twice. The saves should stay the same."
+  - "Build one save and compare its save rate to your old page."
+
+improve:
+  - "Add your real founder message for the start screen."
+  - "Add the reasons you hear in tickets."
+  - "Pair it with the Subscription cancel flow builder for the win-back and payment steps."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "A founder video or message"
+    - "Failed-payment data"

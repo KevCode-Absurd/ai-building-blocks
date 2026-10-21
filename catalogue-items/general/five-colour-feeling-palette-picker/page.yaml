@@ -1,0 +1,87 @@
+new_slug: five-colour-feeling-palette-picker
+name: "Five-colour feeling palette picker"
+summary: "Name what it is for and the feeling. Get a palette of five colours or fewer, each with one job."
+job: design-work
+thinking: low
+thinking_why: "It follows a short set of rules for a small result."
+
+headline: "Five-colour feeling palette picker"
+subhead: "Tell it what you are colouring and the one feeling it should give. The prompt returns a palette of five colours or fewer, each with a hex code and one job, plus a background, a cut list and a quick test you can run on a friend."
+
+explain: |
+  Most palettes are picked because the colours look good together. They often end up flat because no colour is pushing in one direction.
+
+  This prompt starts from one feeling. It describes the subject plainly, then pushes the main colour past real life to carry the feeling. Every colour gets one job, and any colour that fights the feeling is cut with a reason. It ends with a three-second test you can run on a friend. It never claims a palette tested well unless real people saw it.
+
+when:
+  - "You are choosing colours for a brand, page or pack."
+  - "Your palette feels busy or flat."
+  - "You need to explain colour choices to a designer."
+
+you_give:
+  - "What it is for and where it is seen"
+  - "The feeling, in one word"
+  - "Colours you cannot change (optional)"
+you_get:
+  - "A palette of five colours or fewer with hex codes"
+  - "One job for each colour"
+  - "A cut list and a three-second test"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Under it, say what you are colouring and the feeling."
+  - "Add any fixed colours."
+  - "Try the palette on a mock-up and run the three-second test."
+
+how_it_works:
+  - title: "Name the feeling"
+    text: "One word."
+  - title: "Give each colour a job"
+    text: "Main, background, accent, text, border."
+  - title: "Push the main colour"
+    text: "Past real life."
+  - title: "Cut and test"
+    text: "Remove what fights, then test."
+
+output_shape: |
+  FEELING: <word> - <what the viewer senses>
+  BASELINE: <plain description>
+  PALETTE
+  <name> | <hex> | job: <...>
+  THE PUSH: <plain> to <pushed>, adds <...>
+  BACKGROUND: <colour> because <...>
+  CUT: <colour> because <...>
+  THREE-SECOND TEST: <steps>
+  MISSING: <...>
+
+tweaks:
+  - what: "The feeling word"
+    how: "Be concrete: calm, trust, hurry, celebrate. Vague words give vague palettes."
+  - what: "Fixed colours"
+    how: "A logo colour stays, and the rest build around it."
+  - what: "Where it is seen"
+    how: "Screen, print and a room change the contrast checks."
+
+judge:
+  - "The feeling is one word."
+  - "Each colour has one job."
+  - "The background lifts the subject."
+  - "Text is readable on it."
+
+test:
+  - "Show the palette to three people for three seconds and ask for a word."
+  - "Run it twice and compare the main colour."
+  - "Check the main pair with a colour-blind simulator."
+
+improve:
+  - "Add colours your brand never uses."
+  - "Add the screens or materials you work with."
+  - "Pair it with your brand file so the palette is saved."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt works in any strong chat AI. Paste it, then add your details under it."}
+  inputs:
+    - "A photo of the space or product"
+    - "Your logo colours"
+    - "Two palettes you like and why"

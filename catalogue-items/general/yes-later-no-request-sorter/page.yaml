@@ -1,0 +1,94 @@
+new_slug: yes-later-no-request-sorter
+name: "Yes-later-no request sorter"
+summary: "Paste your feature requests, who asked and your product focus. Get yes, later or no on each, with a kind reply."
+job: build-product
+thinking: medium
+thinking_why: "It weighs demand, cost and fit, which takes some judgement."
+
+headline: "Yes-later-no request sorter"
+subhead: "Paste your feature requests with who asked and when, plus what your product is for. It counts real demand, lists the cost of each yes, tests fit, rules yes, later or no, and drafts a short kind reply to each person."
+
+explain: |
+  Every request sounds small. Each feature you add also brings screens, help text, marketing copy, support questions and a promise you now have to keep. Most teams say yes too easily because no feels rude.
+
+  This prompt starts every request at not now. A request earns a different answer only with repeat demand from different people, a cost you can see, and a fit with what the product is for. You get a ruling and a reply you can send.
+
+when:
+  - "A big customer is pushing for something that would change your product."
+  - "Your request list is long and you cannot tell what matters."
+  - "You need to say no without losing the customer."
+
+you_give:
+  - "The requests, with who asked and when"
+  - "What your product is for and who it is not for"
+  - "What is already planned"
+  - "Support emails (optional)"
+you_get:
+  - "A repeat count for each request"
+  - "A cost list for each yes"
+  - "A ruling of yes, later or no with one reason"
+  - "A short, kind reply with no promised date"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "Start at not now"
+    text: "Give every request the default answer: not now."
+  - title: "Count different people"
+    text: "Count how many different people asked, and over how long. One person asking five times is one. A burst after one event is one wave. It counts if three or more people asked over more than a month."
+  - title: "List what a yes brings"
+    text: "For each request that counts, list screens, help text, tour changes, copy, support questions, promises it could break, and yearly upkeep. Give a rough effort or write `MISSING: estimate`."
+  - title: "Test against your focus"
+    text: "Mark each as with, against or neutral to your product focus, with one sentence why. Popular and against is a kind no."
+  - title: "Rule and reply"
+    text: "Yes if it counts, fits the focus and fits the plan. Later if it fits but the plan is full. No if it does not fit. Draft a reply under 90 words with no date or promise."
+
+output_shape: |
+  <request>
+    Repeats:  <n different people over how long>
+    Cost:     <screens, docs, copy, support, upkeep, effort>
+    Fit:      <with | against | neutral> - <one sentence>
+    Ruling:   <yes | later | no> - <one reason>
+    Reply:    <under 90 words, no date>
+
+  MISSING
+  <who or when not given>
+
+tweaks:
+  - what: "Who and when"
+    how: "The more dates and names you give, the better the count. Missing ones count as one request."
+  - what: "The bar for counting"
+    how: "Say if your bar differs from three people over a month."
+  - what: "Your focus"
+    how: "Say who the product is not for. That is what makes a kind no possible."
+
+judge:
+  - "Repeat counts match the names you gave."
+  - "Each yes has a visible cost list."
+  - "Each reply is kind and promises no date."
+  - "A popular request that does not fit is a no, not a yes."
+
+test:
+  - "Paste a list where one person asked five times. It should count as one."
+  - "Include a request you know does not fit. It should rule no."
+  - "Run it twice. The rulings should match."
+
+improve:
+  - "Add your own cost items, such as translations or app store updates."
+  - "Add a line on tone so replies sound like you."
+  - "Save your product focus in your about-me note."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "Dates for each request"
+  - "Your product focus in two sentences"
+
+terms:
+  - term: "Wave"
+    meaning: "A burst of requests after one event, such as a big sale. It counts as one."

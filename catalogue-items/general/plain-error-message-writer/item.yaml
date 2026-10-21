@@ -1,0 +1,18 @@
+slug: plain-error-message-writer
+name: "Plain error message writer"
+summary: "Paste your error messages. Get each rewritten to say what went wrong and what to do next."
+category: general
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "10 Usability Heuristics for User Interface Design", by: "Jakob Nielsen, Nielsen Norman Group", url: "https://www.nngroup.com/articles/ten-usability-heuristics/", used: "Error messages in plain language that name the problem and offer a way out, and preventing the error where possible"}

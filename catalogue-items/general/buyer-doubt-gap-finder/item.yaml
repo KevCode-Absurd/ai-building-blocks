@@ -1,0 +1,19 @@
+slug: buyer-doubt-gap-finder
+name: "Buyer doubt gap finder"
+summary: "Paste customer questions and your page text. Get each doubt matched to the page, plus a score out of 100."
+category: general
+type: prompt
+role: check
+job: research
+level: beginner
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: landing_page, required: true}
+outputs:
+  - {type: objection_map}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "Product Pages Need to Show 'Estimated Shipping Costs'", by: "Christian Holst, Baymard Institute", url: "https://baymard.com/blog/show-shipping-costs-on-product-pages", used: "Where the delivery and shipping answer belongs"}

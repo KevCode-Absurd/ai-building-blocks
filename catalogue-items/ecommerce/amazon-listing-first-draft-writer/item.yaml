@@ -1,0 +1,16 @@
+slug: amazon-listing-first-draft-writer
+name: "Amazon listing first draft writer"
+summary: "Paste product facts and search phrases. Get an Amazon title, five bullets and backend keywords."
+category: ecommerce
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

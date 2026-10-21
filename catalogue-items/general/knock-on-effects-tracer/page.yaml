@@ -1,0 +1,94 @@
+new_slug: knock-on-effects-tracer
+name: "Knock-on effects tracer"
+summary: "Paste a change you plan to make. Get what it causes, what that causes, and what to watch."
+job: think-and-decide
+thinking: medium
+thinking_why: "It has to reason through chains of cause and effect, not just list them."
+
+headline: "Knock-on effects tracer"
+subhead: "Paste a change you plan to make. Your AI follows it through three steps of cause and effect, flags what it rewards by accident, and gives you three signs to watch."
+
+explain: |
+  Most changes work as planned for the first week. The trouble comes next, when customers, staff or competitors react. A discount trains buyers to wait. A sales bonus on volume pushes people to cut quality.
+
+  This prompt follows the chain: what happens first, who reacts, and what that causes. It also asks what the change now rewards. You end with three early signs to watch and what to do if they show.
+
+when:
+  - "You are about to change a price, a rule or a bonus."
+  - "A change worked at first and then something odd happened."
+  - "You want to explain a plan to people who will push back."
+
+you_give:
+  - "The change and the result you want"
+  - "Who is affected (optional)"
+  - "Current numbers (optional)"
+
+you_get:
+  - "A chain of effects by group"
+  - "Any behaviour the change pays for by accident"
+  - "A watch list of three early signs"
+
+how_to_use:
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Paste your details under it, in the slots under What you need."
+  - "Send it and read the answer against the checks on this page."
+  - "Reply with what to change, and keep the version that works."
+
+how_it_works:
+  - title: "State the change"
+    text: "And the result you want."
+  - title: "List first effects"
+    text: "Who feels it right away."
+  - title: "Follow the reactions"
+    text: "Second and third effects."
+  - title: "Check the rewards"
+    text: "What behaviour the change pays for."
+  - title: "Pick three signs"
+    text: "With what to do if they show."
+
+output_shape: |
+  CHANGE
+  <one line> - Wanted result: <line>
+  EFFECT CHAIN
+  <group>: first - second - third
+  UNINTENDED REWARDS
+  <lines or none>
+  WATCH LIST
+  1. <sign> - If it shows: <action>
+  MISSING
+  <lines>
+
+tweaks:
+  - what: "Groups"
+    how: "Name who is affected. Each group gets its own chain."
+  - what: "Depth"
+    how: "Ask for a fourth step on the biggest effect."
+  - what: "Numbers"
+    how: "Give real volumes. Effects get sized, not just named."
+
+judge:
+  - "Each link in the chain makes sense."
+  - "At least one second effect surprised you."
+  - "The watch signs are things you can count."
+  - "Estimates are labelled."
+
+test:
+  - "Run it on a change you made last year. Did it name what happened?"
+  - "Run it twice. The top three effects should match."
+  - "Give a bonus plan. It should flag what the bonus rewards."
+
+improve:
+  - "Add how your customers usually react to changes."
+  - "Add your slowest-moving group so their delay is counted."
+  - "Save the watch lists and check them at 30 days."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Works in one message."}
+  inputs:
+    - "Past changes and what followed"
+    - "Your current numbers"
+
+terms:
+  - term: "Second effect"
+    meaning: "What happens because people react to the first effect."

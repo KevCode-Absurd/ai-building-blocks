@@ -1,13 +1,15 @@
 # Write emails that get read: AI Blocks
 
-> 49 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 52 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Account-based outreach drafter](https://useaiblocks.com/skills/account-based-outreach-drafter): Name a company or contact. Get an email, call script and LinkedIn message built from your Common Room data. You send them.
 - [Browse abandonment flow builder](https://useaiblocks.com/skills/browse-abandonment-flow-builder): Give it your best sellers and proof. Get a site-visit email and a browse flow that offers a discount last.
 - [Campaign email writer](https://useaiblocks.com/skills/campaign-email-writer): Give it a campaign goal and product facts. Get email copy by block, with subject lines.
 - [Cart recovery flow builder](https://useaiblocks.com/skills/cart-recovery-flow-builder): Give it your margin, shipping terms and proof. Get cart and checkout recovery flows with filters, timing and a code rule.
+- [Cold email claim checker](https://useaiblocks.com/prompts/cold-email-claim-checker): Paste a cold email and their page text. Get each claim tested, the basics checked and a tighter version.
 - [Cold email pre-send checker](https://useaiblocks.com/skills/cold-email-pre-send-checker): Paste a cold email and what you know of the prospect. Get claims tested, legal basics checked, and a tighter version.
 - [Cold email writer](https://useaiblocks.com/skills/cold-email-writer): Name your buyer and offer. Get cold emails, follow-ups and a sending setup that gets replies.
+- [Cold outreach batch runner](https://useaiblocks.com/agents/cold-outreach-batch-runner): Give it your prospects and last batch's results. Get a checked batch of cold emails to approve and send.
 - [CRM and email strategist](https://useaiblocks.com/skills/crm-and-email-strategist): Ask any email or CRM question. Get expert advice on audits, deliverability, flows, tests and measuring what email earns.
 - [Customer email reply drafter](https://useaiblocks.com/skills/customer-email-reply-drafter): Ask what needs a reply. Get unread customer emails sorted by priority, each with a draft reply. You send them.
 - [Customer stage flow mapper](https://useaiblocks.com/skills/customer-stage-flow-mapper): Describe your flows. Get each split into new, returning and loyal paths with their own goals.
@@ -22,6 +24,7 @@
 - [Email mistake fixer](https://useaiblocks.com/skills/email-mistake-fixer): Paste an email. Get small errors fixed in your own voice, and tracking bits removed from links if you ask.
 - [Email program lead](https://useaiblocks.com/skills/email-program-lead): Say your email goal. Get flows, copy, deliverability fixes and compliance checks, with a hard stop before any real send.
 - [Email segment builder](https://useaiblocks.com/skills/email-segment-builder): Give it your email tool and send rhythm. Get core segments with exact conditions, send rules and a clean-up plan.
+- [Email send-readiness scorer](https://useaiblocks.com/prompts/email-send-readiness-scorer): Paste an email. Get counts, cuts, three subject lines, a score out of 100 and a ship or fix verdict.
 - [Email sequence writer](https://useaiblocks.com/skills/email-sequence-writer): Say the goal. Get a welcome, nurture or win-back sequence with timing, subject lines and full emails.
 - [Email setup health checker](https://useaiblocks.com/skills/email-setup-health-checker): Paste your email settings and DNS records. Get a score out of 100 and the exact fixes.
 - [Email test planner](https://useaiblocks.com/skills/email-test-planner): Give it your flows and send volumes. Get a ranked test queue with sample sizes and win rules.

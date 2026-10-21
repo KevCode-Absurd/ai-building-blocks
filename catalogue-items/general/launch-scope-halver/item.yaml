@@ -1,0 +1,18 @@
+slug: launch-scope-halver
+name: "Launch scope halver"
+summary: "Paste your launch list, date and budget. Get the same date with half the scope: a core and a parked list."
+category: general
+type: prompt
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+credits:
+  - {title: "Getting Real", by: "Jason Fried and 37signals", url: "https://basecamp.com/gettingreal", used: "Fix the date and budget, flex the scope, and ship half a product, not a half-baked one"}
+version: 1.0.0
+example_pending: true

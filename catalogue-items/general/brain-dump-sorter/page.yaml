@@ -1,0 +1,80 @@
+new_slug: brain-dump-sorter
+name: Brain dump sorter
+summary: Paste everything on your mind. Get tasks, ideas and notes sorted with nothing lost.
+job: organise-work
+thinking: low
+thinking_why: It sorts what you pasted into fixed groups with few judgement calls.
+headline: Brain dump sorter
+subhead: Paste everything on your mind in any order. You get it sorted into tasks, projects and ideas, notes and questions, your words kept, with the top three for this week and a count that proves nothing was dropped.
+explain: A head full of loose thoughts is hard to act on. This prompt does the sorting and nothing more. Tasks become short next actions that start with a verb. Related ideas are grouped under one title. Facts are kept as notes. Things to decide go under questions. It keeps your words, picks your top three for the week, and counts the items in and out so you can trust that nothing fell through.
+when:
+  - Your head is full and you cannot tell where to start.
+  - You have a long list of notes from the week.
+  - You want to act on a list, not rewrite it.
+you_give:
+  - Your dump, in any order
+  - What matters this week (optional)
+you_get:
+  - "Four groups: tasks, projects and ideas, notes, questions"
+  - Your top three for the week
+  - An in and out count
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste everything on your mind, as it is.
+  - Send it and read the result.
+  - Run it again each Friday with the week's loose notes.
+how_it_works:
+  - title: Split
+    text: Every thought becomes one item, in your words.
+  - title: Sort
+    text: Tasks, projects and ideas, notes and questions.
+  - title: Count
+    text: Items in and out must match.
+output_shape: |-
+  TASKS
+  - <verb first>
+
+  PROJECTS AND IDEAS
+  <Title>
+  - <items>
+
+  NOTES
+  - <facts>
+
+  QUESTIONS
+  - <to decide or find out>
+
+  TOP THREE
+  1-3
+
+  COUNT
+  In: <n>  Out: <n>
+
+  MISSING
+  <e.g. what matters this week>
+tweaks:
+  - what: Groups
+    how: Ask for work and home kept apart.
+  - what: Voice
+    how: It keeps your words. Ask for tidier wording if you want it.
+  - what: Size
+    how: A short dump gets a short list. It will not stretch it.
+judge:
+  - Nothing is lost.
+  - Tasks are single actions.
+  - Your words are kept.
+  - The count matches.
+test:
+  - Paste ten mixed items. Ten should come out.
+  - Include one item that could be a task or a project. It should be marked with ?.
+  - Run twice. The groups should be the same.
+improve:
+  - Add your own groups, like Clients or Home.
+  - Ask it to turn the top three into a plan for Monday.
+  - Pair it with a weekly review each Friday.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - Your dump, in any order

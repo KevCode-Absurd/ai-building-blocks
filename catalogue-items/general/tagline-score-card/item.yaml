@@ -1,0 +1,19 @@
+slug: tagline-score-card
+name: "Tagline score card"
+summary: "Paste your tagline and rivals' lines. Get a pass or fail on ten tests, a score out of 100 and sharper lines."
+category: general
+type: prompt
+role: check
+job: brand
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: competitor_set, required: false}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "Designing Brand Identity (4th edition, Part 1 only)", by: "Alina Wheeler (book)", used: "The five tagline types, the ten traits of a good tagline, one big idea backed by three key messages, and the list of places where the same words must appear"}

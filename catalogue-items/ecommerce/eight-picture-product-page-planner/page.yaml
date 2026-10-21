@@ -1,0 +1,90 @@
+new_slug: eight-picture-product-page-planner
+name: "Eight-picture product page planner"
+summary: "Paste your product facts and photos you have. Get a plan for the eight pictures on your product page."
+job: product-photos
+thinking: medium
+thinking_why: "It scores and chooses between many possible pictures, which takes some judgement."
+
+headline: "Eight-picture product page planner"
+subhead: "Paste your product facts and a list of the photos you have. The prompt scores the questions shoppers ask, picks the ones a picture answers best, and writes a card for each of up to eight pictures with the words and source for each."
+
+explain: |
+  Most product galleries are a pile of nice photos. Shoppers still cannot tell the size, what comes in the box or why they should trust it.
+
+  This prompt starts from the questions shoppers ask. It scores each by how often it comes up, whether a picture beats a sentence, and whether you hold the photo and facts. It fills up to eight slots from the top, starting with the main image and the biggest doubt, and always includes a picture that shows scale. Each card names the real photo to use and the exact words. Missing proof goes on a gaps list.
+
+when:
+  - "You are building or rebuilding a product page."
+  - "Shoppers email you questions the gallery should answer."
+  - "You need a brief for a designer."
+
+you_give:
+  - "Product facts"
+  - "A list of the photos you have, by job"
+  - "Proof you hold (optional)"
+  - "The biggest doubt (optional)"
+you_get:
+  - "A score for each possible picture"
+  - "A card for each of up to eight pictures"
+  - "A gaps list of photos and facts to get"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Under it, paste your product facts."
+  - "List the photos you have, such as front, in a hand, in use."
+  - "Add your proof and biggest doubt."
+  - "Use the gaps list to plan your next photo session."
+
+how_it_works:
+  - title: "Name the kind"
+    text: "Worn, held, in a room and so on."
+  - title: "List the questions"
+    text: "Five families of shopper questions."
+  - title: "Score"
+    text: "Asked, picture wins, proof on hand."
+  - title: "Fill and write"
+    text: "One card for each slot."
+
+output_shape: |
+  KIND: <...>
+  SCORES (asked + picture wins + proof = total)
+  <type> <a>+<p>+<pr> = <total> -> slot <nn> | gap | cut
+  CARD <nn>-<type>
+  question: <shopper question>
+  message: <one line>
+  photo: <which real photo>
+  words: <3 to 7 word headline> | source: <...>
+  GAPS
+  NEED: <photo or fact> for <picture>
+
+tweaks:
+  - what: "Photos you hold"
+    how: "List them honestly. A picture without a photo goes to the gaps list."
+  - what: "Biggest doubt"
+    how: "Give it in the customer's words and it becomes slot 2."
+  - what: "Marketplace"
+    how: "Say if the gallery is for a marketplace. Slot 1 follows its main-image rules, so check them on the marketplace's own page."
+
+judge:
+  - "The main image is slot 1."
+  - "One picture shows scale."
+  - "No two pictures answer the same question."
+  - "Gaps are listed, not filled with invented facts."
+
+test:
+  - "Compare the plan with your current gallery. It should find at least one missing question."
+  - "Remove a photo from your list. That picture should move to gaps."
+  - "Run it twice and compare the slot order."
+
+improve:
+  - "Add your product types so the scoring matches your range."
+  - "Add the claims you are allowed to use."
+  - "Pair it with Product shot list writer to plan the shoot."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt works in any strong chat AI. Paste it, then add your details under it."}
+  inputs:
+    - "Return reasons for this product"
+    - "Reviews that mention size or fit"
+    - "A photo of what comes in the box"

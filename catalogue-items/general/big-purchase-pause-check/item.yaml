@@ -1,0 +1,22 @@
+slug: big-purchase-pause-check
+name: Big purchase pause check
+summary: Paste what you want to buy and why. Get the real cost, what drives it and a small test.
+category: general
+type: prompt
+role: check
+job: analysis
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: The Art and Science of Spending Money
+    by: Morgan Housel (Collaborative Fund)
+    url: https://collabfund.com/blog/the-art-and-science-of-spending-money/
+    used: Tracing a purchase to its source in upbringing and status, counting long-run costs, asking who is watching and testing with small spending first

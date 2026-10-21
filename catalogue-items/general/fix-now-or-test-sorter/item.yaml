@@ -1,0 +1,18 @@
+slug: fix-now-or-test-sorter
+name: "Fix-now or test sorter"
+summary: "Paste your list of page problems. Get each one sorted into fix now, look into or test, then ranked."
+category: general
+type: prompt
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: audit_report, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "Optimizing Optimization (opening keynote, 2016)", by: "Peep Laja, CXL", url: "https://cxl.com/", used: "Sorting every issue into tracking, fix now, investigate or test, and ranking by likely gain and effort"}

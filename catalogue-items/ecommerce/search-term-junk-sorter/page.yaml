@@ -1,0 +1,91 @@
+new_slug: search-term-junk-sorter
+name: "Search term junk sorter"
+summary: "Paste a search terms report. Get winners to promote, negatives to add and a waste score."
+job: run-google-ads
+thinking: low
+thinking_why: "It sorts rows by clear rules."
+
+headline: "Search term junk sorter"
+subhead: "Paste a Google search terms report. It sorts each term into winners to promote, negatives to block and decisions for you, says where each goes, and scores how clean your spend is out of 100."
+
+explain: |
+  A search terms report shows what people typed before they clicked. Buried in it are terms that earn money and terms that only burn it. Blocking a term on a hunch can cut off a sale.
+
+  This prompt sorts every term by clear rules. Winners are terms that converted at or under your break-even cost. Negatives need real evidence. The rest are left to you.
+
+when:
+  - "Your Shopping or Performance Max spend feels leaky."
+  - "It is your weekly search-term check."
+  - "A new campaign has run for a few weeks."
+
+you_give:
+  - "Search terms report (required): term, clicks, conversions and cost for each. Add conversion value if you have it."
+  - "Break-even CPA (advised), or your average order value and gross margin."
+  - "Brand name and spellings (advised)."
+  - "What you do not sell (optional)."
+you_get:
+  - "Winners and where to use them"
+  - "Negatives with match type and level"
+  - "Terms left to your call"
+  - "A waste score out of 100"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: search terms report; break-even cpa; brand name and spellings; what you do not sell."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "Set the bar"
+    text: "Break-even CPA = average order value x gross margin. Show the sum. Under about 30 conversions a month, call every verdict an early read."
+  - title: "Tag each term"
+    text: "Brand, competitor, low intent (free, cheap, jobs), off topic, or relevant."
+  - title: "Pick winners"
+    text: "A term that converted at or under break-even CPA. Add it as exact match first. Rank by conversions, never by search volume."
+  - title: "Build negatives"
+    text: "Block clearly irrelevant terms, or terms with about 20 to 30 clicks and no sale (a rule of thumb). Check tracking works first. Give a match type and a level for each."
+  - title: "Leave the judgement calls to the user"
+    text: "Competitor names, low-intent words and unproven terms go under YOUR CALL. Never add them yourself. List brand terms spending in cold campaigns."
+
+output_shape: |
+  DATA CHECK: <conversions a month> | <early read: yes | no>
+  WINNERS: <term> | <conversions> | <cost per sale> | exact or phrase
+  NEGATIVES: <term> | <match type> | <account or campaign> | <why>
+  YOUR CALL: <term> | <the choice>
+  BRAND TERMS IN COLD CAMPAIGNS: <term> | <spend>
+  WASTE SCORE: 100 minus wasted spend as a share of total spend = <n>/100 (sum shown)
+
+tweaks:
+  - what: "Break-even CPA"
+    how: "Give average order value and margin so winners are judged on profit."
+  - what: "Brand spellings"
+    how: "List them so brand spend in cold campaigns is found."
+
+judge:
+  - "No term is blocked on a hunch."
+  - "Winners are ranked by conversions, not volume."
+  - "The waste score shows its sum."
+  - "Competitor and low-intent words are left for you to decide."
+
+test:
+  - "Paste a report you already cleaned and compare the negatives."
+  - "Include one converting odd term. It must stay a winner."
+  - "Run it twice. The sort should match."
+
+improve:
+  - "Add your never-relevant words to the prompt as a starting negative list."
+  - "Keep a log of every negative and why."
+  - "Pair it with a Shopping feed title writer to fix vague titles at the root."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "Break-even CPA from your margin"
+    - "A list of brand terms and misspellings"
+
+terms:
+  - term: "Negative keyword"
+    meaning: "A word you tell Google not to show your ads for."
+  - term: "Exact match"
+    meaning: "Shows your ad only for that search, or close to it in meaning."

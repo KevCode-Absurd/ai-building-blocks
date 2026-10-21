@@ -1,0 +1,87 @@
+new_slug: ad-opening-line-batch-writer
+name: Ad opening line batch writer
+summary: Paste your buyer and proof. Get ten ad opening lines, each with the line that follows it.
+job: write-ad-copy
+thinking: medium
+thinking_why: It has to pick moves that fit your buyer and keep every line inside your proof.
+headline: Ad opening line batch writer
+subhead: Paste who the ad is for and the proof you may use. You get ten opening lines, each with a named move, the fact behind it, the line that follows and a short on-screen version. It ends with the three to test first.
+explain: |
+  Most people decide in the first second whether an ad is for them. A weak opening loses them, and the rest of the ad never gets read. Asking an AI for "ten hooks" usually gives ten versions of the same idea, plus claims you never made.
+
+  This prompt fixes both. It starts from a moment your buyer lives in, not a label. It matches the opening to how much they already know. Every line must rest on a fact you pasted, so nothing is made up. Each line has an answer waiting in the next line, so a teaser never leaves the viewer hanging. You get a spread of different moves, not one idea repeated, and a short list to test first.
+when:
+  - You are about to brief a video or image ad and need openings to choose from.
+  - A good ad has stopped working and you want fresh openings on the same offer.
+  - You have proof but no idea how to lead with it.
+you_give:
+  - "Who the ad is for: one moment or object, what they know, a few of their words"
+  - "The proof you may use: numbers, review lines, offer terms"
+  - Where it runs (optional)
+you_get:
+  - Ten opening lines, each with its move and the fact behind it
+  - The line that follows each one, and a short on-screen version
+  - The three to test first, and what a win would tell you
+how_to_use:
+  - Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini, with your details under it.
+  - Under the prompt, write a few lines about the buyer, then paste your proof.
+  - Read the FLAG line first. If it is not how your buyer would say it, fix it and run it again.
+  - Pick the top three, put each in a separate ad, and keep the rest for the next round.
+how_it_works:
+  - title: Finds the flag
+    text: Names a moment or object your buyer owns, in their words.
+  - title: Matches what they know
+    text: A buyer who does not know the problem gets a moment, not an offer.
+  - title: Checks every fact
+    text: A line with no fact behind it is not written.
+  - title: Keeps lines short
+    text: The point lands in the first 8 words, in 12 words or fewer.
+  - title: Pays off teasers
+    text: Each teaser gets the line that answers it.
+  - title: Picks three
+    text: Shortlists the best three and says what a win would tell you.
+output_shape: |
+  FLAG: <the moment or object that picks out the buyer>
+  <n>. "<opening line>"
+     Move: <moment | proof | news | flip | tease>   Backed by: <your fact, word for word>
+     Next: <the line that follows>
+     On screen: <7 words or fewer>
+  TEST FIRST: <three numbers> because <what a win would tell you>
+  MISSING: <facts you needed and did not get>
+tweaks:
+  - what: The flag
+    how: A specific object works better than a feeling. "The shaker still in the sink" beats "tired of powders".
+  - what: What they know
+    how: Tell it if the buyer has never heard of you. It will keep offers out of the first line.
+  - what: Your proof
+    how: More real facts give more lines. With few facts you get fewer lines, and that is on purpose.
+  - what: How many
+    how: Ask for five if you only have a small budget to test.
+judge:
+  - Each line makes sense to a stranger in one read.
+  - Every number is one you gave it.
+  - The ten lines are different ideas, not one idea reworded.
+  - Every teaser has an answer in the next line.
+  - Nothing tells the viewer what is wrong with their body.
+test:
+  - Use an ad you know well. The flag should match what your best customers say.
+  - Run it twice. The moves will change, but the facts should stay the same.
+  - Put your three favourite lines next to your current opening and show them to someone who has never seen your brand.
+improve:
+  - Add your brand's words to avoid, under the proof.
+  - Paste your best past opening and ask for ten that keep its move but change its subject.
+  - Keep your approved facts in one file and paste it every time.
+  - Pair it with the Ad first line writer and scorer when you want each line scored.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A short prompt works the same in Claude, ChatGPT or Gemini, so use the one you already have open.
+  inputs:
+    - A buyer's own words, copied from reviews
+    - Your current best opening, so new ones are different
+    - A list of claims you are not allowed to make
+terms:
+  - term: Flag
+    meaning: The moment or object that makes the right person think the ad is about them.
+  - term: Tease
+    meaning: An opening that holds back the answer until the next line.

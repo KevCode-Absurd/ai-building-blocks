@@ -1,0 +1,16 @@
+slug: speed-fix-week-planner
+name: "Speed fix week planner"
+summary: "Paste your speed problems and store numbers. Get this week's three fixes and what each could earn."
+category: ecommerce
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,18 @@
+slug: product-shot-list-writer
+name: "Product shot list writer"
+summary: "Paste your product and where the photos will run. Get a shot list, with the reason for each shot."
+category: ecommerce
+type: prompt
+role: make
+job: image
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+outputs:
+  - {type: shot_list}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "product-visuals skill", by: "Checkout Page", url: "https://github.com/checkout-page/ecommerce-skills/tree/main/skills/product-visuals", used: "Matching the shot format, gaze, hand shots, shine and spacing to the kind of product"}

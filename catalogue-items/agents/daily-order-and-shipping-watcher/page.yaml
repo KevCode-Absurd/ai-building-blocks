@@ -1,0 +1,94 @@
+new_slug: daily-order-and-shipping-watcher
+name: Daily order and shipping watcher
+summary: Run it each morning. Get late and stuck orders found before customers write, and risky ones held only on your yes.
+job: run-your-store
+thinking: medium
+thinking_why: It runs a few checks and compares lists with yesterday. A mid-range model is enough.
+headline: Daily order and shipping watcher
+subhead: Run it each morning. It finds orders that are late, stuck or risky, compares them with yesterday so old problems rise to the top, and hands back one action list. It holds or changes nothing until you say yes.
+explain: |
+  Most late orders are found when a customer asks where their parcel is. By then you have a support ticket, and sometimes a refund. The signs were there days earlier: an order that never shipped, or tracking that stopped moving.
+
+  This agent looks at your open orders every morning. It finds unshipped orders past your limit and shipped orders with stale tracking. It sets them against yesterday, so an order open for three mornings is flagged first. If Shopify marked new orders as risky, it shows them and asks before it tags or holds any. If most stale tracking sits with one carrier, it compares that carrier with the others. You get one list. Nothing on your store changes without your yes.
+when:
+  - You ship a few dozen orders a day or more and late parcels reach you as support tickets first.
+  - You want one short morning list instead of scrolling the orders page.
+  - You use a carrier or 3PL and want to know when one is slower than the rest.
+you_give:
+  - A connection to your Shopify store, or an export of open orders
+  - How many days an order may wait before it ships, and how long tracking may sit still (optional)
+  - Corrected tracking numbers, if a carrier or 3PL sent them (optional)
+you_get:
+  - Open, late, stuck and held orders against yesterday
+  - Orders open three mornings or more, oldest first, with the next step for each
+  - Risky orders with a hold or release suggestion
+  - A carrier note when one carrier is behind
+how_to_use:
+  - Add the agent in Claude Code, or save it in .claude/agents, and connect your store.
+  - The first time, tell it your limits for unshipped orders and stale tracking.
+  - Ask it to run this morning's check. Read the list and act on the top orders.
+  - Say yes or no to each tag, hold, release or tracking change it proposes.
+  - Run it again the next weekday. It reads yesterday's file and shows what cleared.
+how_it_works:
+  - title: Read yesterday
+    text: Opens the saved list of late and stuck orders so today can be compared with it.
+  - title: Run the morning digest
+    text: Groups open orders by age and lists the ones on hold, with the reason.
+  - title: Find the late and stuck
+    text: Finds unshipped orders past your limit and shipped orders whose tracking has not moved.
+  - title: Compare with yesterday
+    text: Marks each order new, still open or cleared. Orders open three mornings or more go first.
+  - title: Choose the path
+    text: Risky orders are shown and held only after your yes. If one carrier has most of the stale tracking, it is compared with the others.
+  - title: Save and hand back
+    text: Saves today's list for tomorrow and hands back one action list, then stops.
+output_shape: |-
+  TODAY
+    Open <n> | Late <n> | Stuck tracking <n> | On hold <n> | vs yesterday: new <n>, cleared <n>
+
+  DO FIRST (open 3+ mornings, oldest first)
+    1. <order> | age <days> | status <...> | next step <...>
+
+  RISKY ORDERS
+    <order> | reason <...> | suggest <hold | release>
+
+  CARRIER NOTE
+    <carrier> <transit days> vs <others> | <keep | review>
+
+  CUSTOMERS TO WARN
+    <orders likely to arrive late>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your limits
+    how: Set the days an order may wait and the days tracking may sit still to match your promise at checkout. Defaults are 3 and 5.
+  - what: When an order counts as stubborn
+    how: Three mornings open is a starting point. Use fewer days for next-day promises.
+  - what: Holds
+    how: Say whether you want risky orders held or only tagged. Held orders do not ship until you release them.
+  - what: A 3PL
+    how: Name it. Stale tracking is often a 3PL scan delay, not a carrier delay.
+judge:
+  - Each order on the list is compared with yesterday.
+  - Orders open three mornings or more come first.
+  - Nothing was tagged, held, released or changed without your yes.
+  - The carrier check ran only when one carrier held most of the stale tracking.
+  - The next step for each top order is clear enough to act on in a minute.
+test:
+  - Run it on a day when you already know of two late orders. See if both are on the list.
+  - Run it twice in a row. The second run should show no new orders and the same old ones.
+  - Ask it to hold a risky order and check that it asks first.
+improve:
+  - Add your usual carriers and 3PL to the agent file, so the carrier note names them.
+  - Add a rule for orders you ship on a set day, so they are not called late.
+  - Save a short note each week on which late orders were a carrier issue and which were yours.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the watch folder and run each morning on a schedule.
+    - name: Shopify
+      why: The skills read your orders and fulfilments from the store connection.
+  inputs:
+    - Your promised delivery times by country
+    - A list of orders you know are waiting on stock

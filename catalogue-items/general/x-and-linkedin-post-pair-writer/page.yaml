@@ -1,0 +1,86 @@
+new_slug: x-and-linkedin-post-pair-writer
+name: "X and LinkedIn post pair writer"
+summary: "Paste one idea. Get an X post and a LinkedIn post that read as written separately."
+job: grow-social
+thinking: low
+thinking_why: "It rewrites one idea for two places using clear rules."
+
+headline: "X and LinkedIn post pair writer"
+subhead: "Paste one idea. The prompt writes a post for X and a separate post for LinkedIn from the same idea, checks that neither carries the other's habits, and tells you what it changed."
+
+explain: |
+  Posting the same words in both places fails in a visible way. A LinkedIn post on X reads like a press release. A tweet on LinkedIn reads like a fragment. The idea travels. The writing does not.
+
+  This prompt writes each post from the idea instead of adapting one into the other, because adapting is how the seams get left in. It then checks both for habits from the wrong place and shows you what differs.
+
+when:
+  - "You want to post one idea on X and LinkedIn today."
+  - "Your LinkedIn posts feel like long tweets."
+  - "You are tired of rewriting the same thing twice by hand."
+
+you_give:
+  - "The idea in rough words"
+  - "The story or facts behind it (optional)"
+  - "A past post in your voice (optional)"
+you_get:
+  - "An X post that stands alone"
+  - "A LinkedIn post that sets the scene"
+  - "One line on what differs"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste your idea and any facts under the prompt."
+  - "Add a past post if you want it to sound like you."
+  - "Read both aloud before you post."
+
+how_it_works:
+  - title: "Find the idea"
+    text: "Say the idea back in one plain sentence. If you cannot tell the point, ask which part is the point before writing."
+  - title: "Write the X post"
+    text: "Start from the idea, not from a shorter LinkedIn post. The first line must work alone. Cut the setup and begin mid-thought."
+  - title: "Write the LinkedIn post"
+    text: "Start from the idea again. Open on the situation, use short lines, and let each line earn its place. End on a lesson without preaching."
+  - title: "Check the seams"
+    text: "Look for X habits on LinkedIn (\"hot take\", thread numbers) and LinkedIn habits on X (\"excited to share\", a wind-up, a closing question to bait replies). Rewrite any sentence that appears in both."
+  - title: "Say what differs"
+    text: "Add one line on what changed and why. The difference is structure, not just length."
+
+output_shape: |
+  IDEA: <one plain sentence>
+  X POST:
+  <text>
+  LINKEDIN POST:
+  <text>
+  WHAT DIFFERS: <one line>
+  MISSING: <facts not given>
+
+tweaks:
+  - what: "Facts"
+    how: "The more real detail you give, the less it has to invent. It adds nothing you did not say."
+  - what: "Your voice"
+    how: "A past post helps more than any style note."
+  - what: "Goal"
+    how: "Say what you want readers to do, so the ending fits."
+
+judge:
+  - "The two posts open differently."
+  - "The X post makes sense with no context."
+  - "No \"excited to share\" or \"hot take\"."
+  - "Every fact came from you."
+
+test:
+  - "Try an idea you have already posted and compare the new pair to what you wrote."
+  - "Run it twice. The idea sentence should stay the same."
+  - "Post both and see which place it works better on."
+
+improve:
+  - "Add two of your best past posts for each place."
+  - "Add phrases you never use, so they stay out."
+  - "Pair it with the Cross-platform post writer for every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "Two past posts per platform that did well"
+    - "Words and phrases you never use"

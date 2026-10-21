@@ -1,0 +1,69 @@
+new_slug: candidate-reply-drafter
+name: Candidate reply drafter
+summary: Paste where the candidate is in your process. Get a clear reply or rejection to send.
+job: hire-people
+thinking: low
+thinking_why: It fills a short fixed message shape from facts you give it.
+headline: Candidate reply drafter
+subhead: Paste the stage, the candidate and what you can say. You get a short message with a real timeline and one next step, or a respectful rejection that stays honest and safe.
+explain: Candidates judge your company by how fast and how clearly you reply. Most delay because the words are hard, especially a no. This prompt gives you a short message fast. It leads with the reason, uses a real date, asks for one thing and stays readable on a phone. For rejections it keeps the reason general and respectful, without scores or comparisons that cause trouble later.
+when:
+  - A candidate is waiting and you have not replied.
+  - You need to turn someone down kindly.
+  - You want a template that does not read like one.
+you_give:
+  - The stage in your process
+  - First name, role and one detail from your talk
+  - The reason, timeline and next step
+  - Your tone (optional)
+you_get:
+  - A subject line
+  - A short message with one next step
+  - Missing facts marked, such as timeline
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste the stage, the candidate and what you can say.
+  - Send it and read the result.
+  - Send within a day of your decision. Delay does the most harm.
+how_it_works:
+  - title: Lead with why
+    text: The subject and first sentence say what the message is.
+  - title: Add a date
+    text: A real timeline, or a flag that one is missing.
+  - title: Keep rejections general
+    text: Thanks, a short honest reason, no scores and no comparisons.
+output_shape: |-
+  SUBJECT
+  <one line>
+
+  MESSAGE
+  <short paragraphs, one next step, a real timeline>
+
+  MISSING
+  <e.g. timeline>
+tweaks:
+  - what: Stage
+    how: Name the stage and the length and warmth change to fit.
+  - what: Tone
+    how: Say direct for engineers, formal for executives.
+  - what: Phone
+    how: Ask for a call script instead of an email for late-stage rejections.
+judge:
+  - The reason is in the first line.
+  - A real date is given.
+  - Rejections are honest and general.
+  - No invented detail.
+test:
+  - Give a rejection after a final interview. It should stay general and not quote interviewers.
+  - "Give no timeline. It should write MISSING: timeline."
+  - Run twice. The structure should match.
+improve:
+  - Paste two messages you liked, so the tone matches yours.
+  - Save a version per stage for your hiring folder.
+  - Use the full skill for every stage of a search.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - The stage in your process

@@ -1,0 +1,22 @@
+slug: weekly-status-update-writer
+name: Weekly status update writer
+summary: Paste what got done, what is stuck and what you need. Get a one-page status update.
+category: general
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: status-report skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/status-report
+    used: A shorter one-message version of this skill, written fresh.

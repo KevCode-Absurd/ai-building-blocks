@@ -1,0 +1,18 @@
+slug: release-day-rollback-planner
+name: "Release day rollback planner"
+summary: "Paste what you are releasing and where it runs. Get checks, a rollback plan and how to know it worked."
+category: general
+type: prompt
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+credits:
+  - {title: "deployment-procedures skill", by: "sickn33", url: "https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/deployment-procedures", used: "Pre-release checks, release steps, verification and rollback thinking, adapted under the CC BY-4.0 licence"}
+version: 1.0.0
+example_pending: true

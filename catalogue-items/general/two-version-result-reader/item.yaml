@@ -1,0 +1,23 @@
+slug: two-version-result-reader
+name: Two-version result reader
+summary: "Paste counts for two ad versions. Get the gap, a luck check and a call: keep, rerun or stop."
+category: general
+type: prompt
+role: check
+job: analysis
+level: beginner
+inputs:
+  - type: performance_sheet
+    required: true
+  - type: plan
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: Tested Advertising Methods, fifth edition (1997)
+    by: John Caples, revised by Fred E. Hahn
+    used: Stating a split-run gap as a percentage, trusting replies as an early guide to sales except when a free item draws crowds, judging by cost per reply, repeating a test to double-check, and keeping a record card for every ad. The noise check in step 3 is ours.

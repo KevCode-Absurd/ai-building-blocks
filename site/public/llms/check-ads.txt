@@ -1,10 +1,11 @@
 # Check ads before they go live: AI Blocks
 
-> 33 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 35 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad and page match checker](https://useaiblocks.com/skills/ad-and-page-match-checker): Attach your ad and its page. Get a match score out of 100, ranked mismatches and fixes.
 - [Ad and page policy checker](https://useaiblocks.com/skills/ad-and-page-policy-checker): Paste your ad, page or email. Get policy risks flagged for each platform, with safer rewrites.
 - [Ad awareness stage checker](https://useaiblocks.com/skills/ad-awareness-stage-checker): Attach your ad. Get its awareness stage, mismatches, a score out of 100 and rewrites.
+- [Ad claim proof gap finder](https://useaiblocks.com/prompts/ad-claim-proof-gap-finder): Paste your ad and your proof. Get every claim paired with proof, the gaps and fixes, and a score out of 100.
 - [Ad distraction checker](https://useaiblocks.com/skills/ad-distraction-checker): Paste your ad and what ten viewers said it said. Get the playback count, what stole their attention and what to cut.
 - [Ad meaning test planner](https://useaiblocks.com/skills/ad-meaning-test-planner): Paste your ad and your audience groups. Get a simple test of whether each group reads it as you mean.
 - [Ad pull diagnoser](https://useaiblocks.com/skills/ad-pull-diagnoser): Paste an ad that gets few replies. Get causes ranked by likelihood and cost to fix, starting with the headline.
@@ -21,6 +22,7 @@
 - [Five-part ad checker](https://useaiblocks.com/skills/five-part-ad-checker): Paste your finished ad. Get a pass or fail on its five jobs, a score out of 100 and ranked fixes.
 - [Fix a static ad's pitch and clear it to run](https://useaiblocks.com/workflows/fix-a-static-ad-then-clear-it-to-run): Give it a static ad and its copy. Get a scored critique, a rewrite that fits the buyer and a ship call.
 - [Headline promise checker](https://useaiblocks.com/skills/headline-promise-checker): Paste your headline and offer. Get whether it picks the right reader and promises a clear reward, with stronger versions.
+- [Headline reader and reward checker](https://useaiblocks.com/prompts/headline-reader-and-reward-checker): Paste your headline. Get a score out of 100 for who it picks out and what it promises, plus stronger versions.
 - [Meta ads compliance checker](https://useaiblocks.com/skills/meta-ads-compliance-checker): Paste your ad and its image. Get a compliance score out of 100, every problem, and a fixed ad.
 - [Permission email audit](https://useaiblocks.com/skills/permission-email-audit): Paste your email list source and last ten messages. Get which contacts gave real permission and which messages earn it.
 - [Pre-launch ad check and fix loop](https://useaiblocks.com/agents/pre-launch-ad-check-and-fix-loop): Give it a finished ad. It checks, fixes and re-checks until it passes, then hands you a version ready to upload.

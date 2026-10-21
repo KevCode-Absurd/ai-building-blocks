@@ -1,0 +1,72 @@
+new_slug: bad-year-plan-stress-tester
+name: Bad year plan stress tester
+summary: Paste a budget or plan. Get three bad-year tests, your breaking point and a survival score.
+job: money-and-investing
+thinking: medium
+thinking_why: It works sums under stress and has to choose sensible failures.
+headline: Bad year plan stress tester
+subhead: Paste your plan, your cash and your must-pay costs. You get three bad-case tests with numbers, the point where the plan breaks, how risky your debts are and a survival score out of 100 with the sums shown.
+explain: Plans look fine when everything goes right. This prompt asks what happens when it does not. It lists what must go right, then tests a bad year, a forced cut and one more failure with real numbers. It finds the breaking point, checks which debts can be called in, sizes a cushion in months of costs and writes a short rule to stop panic moves. The survival score shows how it was worked out. It gives checks only, not advice to buy, sell or borrow.
+when:
+  - You are about to commit to a budget or a business plan.
+  - You borrow money against a plan that must work.
+  - You want to know how big a cushion to keep.
+you_give:
+  - "Your plan: income, costs and debts"
+  - Cash and monthly must-pay costs
+  - Borrowing terms (optional)
+you_get:
+  - Three failures tested with numbers
+  - Your breaking point
+  - Borrowing risk and a sized cushion
+  - A panic rule and a survival score with sums
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste your plan, your cash and your must-pay costs.
+  - Send it and read the result.
+  - Use your own bad-year number if you have one.
+how_it_works:
+  - title: List the bets
+    text: What must go right for the plan to work.
+  - title: Break it
+    text: Three failures with numbers and cash left.
+  - title: Size the cushion
+    text: Months of costs, a panic rule and a score with sums.
+output_shape: |-
+  MUST GO RIGHT
+  THREE FAILURES
+  <failure: when, size, cash left>
+  BREAKING POINT
+  <number and share>
+  BORROWING RISK
+  CUSHION
+  PANIC RULE
+  SURVIVAL SCORE
+  <100 minus points, with sums>
+  MISSING
+tweaks:
+  - what: Bad year
+    how: Set your own fall in income, like 40 percent.
+  - what: Cushion
+    how: Say how many months you want to hold.
+  - what: Debts
+    how: Give terms and it rates each debt's call risk.
+judge:
+  - No invented figures.
+  - Each failure has numbers.
+  - The score shows sums.
+  - No buy or sell advice.
+test:
+  - "Give no cash figure. It should write MISSING: cash."
+  - Give a loan that can be called in. It should mark high risk.
+  - Run twice. The score should match.
+improve:
+  - Add your real worst month from the past.
+  - Re-run each quarter.
+  - Use the full skill when debts are complex.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - "Your plan: income, costs and debts"

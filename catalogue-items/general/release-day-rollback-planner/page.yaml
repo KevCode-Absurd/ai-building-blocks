@@ -1,0 +1,104 @@
+new_slug: release-day-rollback-planner
+name: "Release day rollback planner"
+summary: "Paste what you are releasing and where it runs. Get checks, a rollback plan and how to know it worked."
+job: ship-and-host
+thinking: medium
+thinking_why: "It must match the plan to your setup and think through what can fail."
+
+headline: "Release day rollback planner"
+subhead: "Paste what you are releasing, where it runs and who is affected if it breaks. It rates the risk, lists what to check first, orders the steps with pause points, writes the way back, and says how to tell it worked."
+
+explain: |
+  Most failed releases do not fail because of the change. They fail because nobody decided beforehand how to spot trouble or how to go back. Then the team improvises under pressure.
+
+  This prompt writes that decision first. You get the checks, the steps in order with places to pause, the signs that mean undo, and a short list to confirm success. It also names what cannot be undone.
+
+when:
+  - "You are releasing something that touches real customers."
+  - "You have never rolled back and do not know how."
+  - "A release involves a database change."
+
+you_give:
+  - "What you are releasing"
+  - "Where it runs"
+  - "Who is hurt if it breaks"
+  - "Your usual release method (optional)"
+you_get:
+  - "A risk rating with the reason"
+  - "A pre-release checklist"
+  - "Steps with pause points"
+  - "Undo signs and steps, and a post-release check"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "Rate the risk"
+    text: "Say low, medium or high and why, using what changes, who is affected and whether data changes. Data changes raise the risk."
+  - title: "Before you start"
+    text: "List checks in four groups: tests pass, the production build works, settings and secrets are set, and a backup and way back are ready. Mark what I must confirm."
+  - title: "Order the steps"
+    text: "Write the release steps in order, with a pause point after each where I look before going on."
+  - title: "Plan the way back"
+    text: "Say what would make you undo the release (name the signs), the exact steps to undo it, and what cannot be undone, such as a changed database."
+  - title: "Prove it worked"
+    text: "List what to check after: the main page loads, the changed feature works, errors have not risen. Name how long to watch."
+
+output_shape: |
+  RISK
+  <low | medium | high> because <reason>
+
+  BEFORE YOU START
+  - [ ] <check>
+
+  STEPS
+  1. <step>  (pause: <what to look at>)
+
+  UNDO IT IF
+  - <sign>
+  Undo steps: <...>
+  Cannot be undone: <...>
+
+  AFTER
+  - <check>, watch for <time>
+
+  MISSING
+  <gaps>
+
+tweaks:
+  - what: "Name your platform"
+    how: "Say where it runs so steps match it. Otherwise they stay general."
+  - what: "Database changes"
+    how: "Say if data changes. It changes the undo plan the most."
+  - what: "Who is affected"
+    how: "Customers and money raise the checks."
+
+judge:
+  - "The undo plan comes before the release steps."
+  - "Each step has a place to pause and look."
+  - "Anything that cannot be undone is named."
+  - "The after-checks are things you can actually see."
+
+test:
+  - "Walk a past release through it. Would it have caught what went wrong?"
+  - "Run it twice. The risk rating should match."
+  - "Remove the platform name. Steps should turn general."
+
+improve:
+  - "Add your platform's real commands once you have checked them."
+  - "Add your team's rule for who approves a release."
+  - "Save the plan after each release and note what you changed."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "The name of your platform"
+  - "A note on any database change"
+
+terms:
+  - term: "Rollback"
+    meaning: "Going back to the version that worked before the release."

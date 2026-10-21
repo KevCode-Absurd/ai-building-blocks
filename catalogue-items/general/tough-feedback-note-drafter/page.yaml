@@ -1,0 +1,72 @@
+new_slug: tough-feedback-note-drafter
+name: Tough feedback note drafter
+summary: Paste what went wrong and who needs to hear it. Get a note that changes the behaviour.
+job: lead-people
+thinking: medium
+thinking_why: It weighs true praise against the problem and needs some judgement on tone.
+headline: Tough feedback note drafter
+subhead: Paste what went wrong, who needs to hear it and the change you want. You get a short note that opens with true praise, makes one clear request and lets them fix it without losing face.
+explain: Hard feedback often fails in one of two ways. It is so soft the person never hears it, or so blunt they stop listening. This prompt writes the note in between. It starts from something you honestly value, joins the praise to the change with "and", asks for one thing by one date, and gives the person a way to fix it with their standing intact. If you have no true praise, it says so and asks you for some. It will not make any up.
+when:
+  - Someone keeps missing the same thing and you have to say it.
+  - You have put it off because you do not want a fight.
+  - You want a note you can send today, not a long plan.
+you_give:
+  - What went wrong, with one or two examples
+  - Who the person is and how they react
+  - The change you want
+  - What they do well (optional)
+you_get:
+  - The behaviour and the change, each in one line
+  - A short note of under 150 words
+  - Any gap, such as missing true praise, marked clearly
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste what went wrong, who needs to hear it and the change you want.
+  - Send it and read the result.
+  - Read the note out loud once. Change any line you would not say to their face.
+how_it_works:
+  - title: Start with the behaviour
+    text: One line on what they did that anyone could watch, and one line on the change.
+  - title: Add true praise
+    text: One real strength, joined to the change with "and".
+  - title: Ask for one thing
+    text: One request with a date, and a way to fix it that keeps their standing.
+output_shape: |-
+  THE BEHAVIOUR
+  <one line anyone could watch>
+
+  THE CHANGE
+  <one line>
+
+  THE NOTE
+  <under 150 words: praise, "and", the change, one request with a date, a way to save face>
+
+  MISSING
+  <e.g. true praise, if none was given>
+tweaks:
+  - what: Tone
+    how: Say how they react (defensive, quiet, senior) and the note shifts to fit.
+  - what: Your part
+    how: Tell it where you were unclear and it adds one honest line about that.
+  - what: Format
+    how: Ask for a spoken version in short lines if you will say it, not send it.
+judge:
+  - No word about the person's character.
+  - The praise is true and has a detail.
+  - One request, with a date.
+  - A way to save face is there.
+test:
+  - Give it a case with no praise to offer. It should write MISSING, not invent some.
+  - Run it twice on the same case. The request and date should match.
+  - Add a sentence like "you are always late". It should turn it into something watchable.
+improve:
+  - Paste a note you sent before that went badly, and ask what to change.
+  - Add how your team usually talks, so the note sounds like you.
+  - Use the full skill when the issue is a plan or decision.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - What went wrong, with one or two examples

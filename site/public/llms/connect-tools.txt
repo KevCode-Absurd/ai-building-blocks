@@ -1,12 +1,14 @@
 # Connect AI to your tools: AI Blocks
 
-> 24 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 26 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Agent tool designer](https://useaiblocks.com/skills/agent-tool-designer): Describe what your agent must do. Get tool definitions it can use well, with fewer and clearer tools.
 - [AI tool definition writer](https://useaiblocks.com/skills/ai-tool-definition-writer): Describe what a tool does. Get a clear, safe definition your AI can call without guessing.
 - [AI tool designer](https://useaiblocks.com/skills/ai-tool-designer): Describe what your AI needs to do. Get clear tool definitions it can call without guessing or failing silently.
+- [AI tool list drafter](https://useaiblocks.com/prompts/ai-tool-list-drafter): Paste what your AI should do with your systems. Get a short list of clearly named tools it can pick from.
 - [API connector builder](https://useaiblocks.com/skills/api-connector-builder): Name the service you need to reach. Get working code with sign-in, error handling and retries.
 - [API to MCP server builder](https://useaiblocks.com/skills/api-to-mcp-server-builder): Give it an API spec. Get an MCP server in Python or TypeScript that lets your AI use that API.
+- [Automation flow sketcher](https://useaiblocks.com/prompts/automation-flow-sketcher): Paste a task you repeat. Get an automation laid out step by step for Zapier or Make, with what can break.
 - [Build an n8n automation that reports failures and is reusable](https://useaiblocks.com/workflows/build-an-n8n-automation-that-reports-failures-and-can-be-reused): Describe the task. Get an n8n workflow that retries, alerts you on failure and splits into reusable parts.
 - [ChatGPT app builder](https://useaiblocks.com/skills/chatgpt-app-builder): Describe the tool you want inside ChatGPT. Get a working Apps SDK project with its server and screen.
 - [Google Workspace command-line operator](https://useaiblocks.com/skills/google-workspace-cli): Say what to do in Gmail, Drive, Sheets or Calendar. Get the commands set up and run for you.

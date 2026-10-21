@@ -1,0 +1,99 @@
+new_slug: public-review-reply-desk
+name: Public review reply desk
+summary: Give it each new batch of public reviews. Get a checked reply for each, with risky ones held and repeat complaints flagged.
+job: help-customers
+thinking: medium
+thinking_why: It drafts, sorts by risk and loops on checks for unhappy reviewers. A mid-size model handles most weeks. Use a stronger one when the batch has disputes or safety claims.
+headline: Public review reply desk
+subhead: Give it each new batch of reviews and the remedies you have approved. It writes a specific reply to each, checks the ones to unhappy buyers, holds risky ones for you, and tells you when the same complaint keeps coming back.
+explain: |
+  Public replies are read by every future buyer. A reply that blames the customer, promises a refund you did not approve, or sounds copied from the last one costs more than no reply. Most owners either skip replies or paste the same apology everywhere.
+
+  This agent writes a reply that names something from each review. For unhappy reviewers, it checks the draft against what they actually said and what you have approved to offer, fixes it and checks again, for up to two rounds. Reviews about health, the law, fraud or a bank dispute are held at the top for you, with only a holding reply. It remembers how earlier replies opened so each batch reads fresh. It also counts complaints, so when the same problem shows up in three reviews you see it as a product issue, not as three separate replies. It never posts and never promises a remedy you have not approved.
+when:
+  - You get a handful of reviews a week and want a reply to every one, in a human voice.
+  - Some reviews are angry and you do not trust yourself to reply calmly or safely.
+  - You want to spot a repeat complaint before it becomes a pattern.
+you_give:
+  - The new reviews, pasted or exported, with stars, date, product and text
+  - Your support email and the remedies you have approved, the first time
+  - A few replies you wrote and liked (optional)
+you_get:
+  - A reply for each review, ready to paste
+  - A short list of reviews to decide first, with what to check
+  - Replies to unhappy reviewers checked against their words and your rules
+  - Repeat complaints counted, with dates, and a ranked brief for app reviews
+  - A log that keeps openings from repeating week to week
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to handle this week's reviews.
+  - The first time, give it your support email and the refunds, replacements or credits you are willing to offer, and when.
+  - Paste the new reviews.
+  - Read the held reviews first. Then approve the replies and post them yourself.
+  - Run it again next week. It reads the log and the repeat complaints.
+how_it_works:
+  - title: Read the folder
+    text: Loads your reply rules, reply log and open issues. On the first run it sets the rules and asks for your approved remedies.
+  - title: Draft a reply to each review
+    text: Writes one specific reply per review, using a detail from it, and avoids the openings used in earlier batches.
+  - title: Hold the risky ones
+    text: Reviews about health, safety, legal threats, fraud claims or bank disputes get a holding reply only and go to the top for you.
+  - title: Check unhappy replies and loop
+    text: Tests each reply to a one-to-three-star review against what they said and your approved remedies, fixes it and checks again, up to two rounds.
+  - title: Look for repeat complaints
+    text: Counts complaint types against the open issues. Three in 30 days becomes a flagged issue. For app reviews, it adds a ranked brief.
+  - title: Log and hand back
+    text: Saves the batch to the log, then stops for your yes before anything is posted.
+output_shape: |-
+  THE BATCH
+    <n> reviews | ready: <n> | fixed: <n> | held: <n>
+
+  DECIDE FIRST
+    <review> | flag: <health | legal | dispute | fraud claim | personal data> | check: <what>
+
+  REPLIES TO APPROVE
+    <review> | <stars> | type: <...> | checked: <yes | no | n/a> | reply: <ready to paste>
+
+  PLACEHOLDERS TO FILL
+    <support email | remedy | restock date>
+
+  REPEAT COMPLAINTS
+    <type> | <n> reviews | <dates> | seen before: <yes | no>
+
+  NOTES
+    <stars and text disagree | wrong product page>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your approved remedies
+    how: Say exactly what you will offer and when, such as a replacement if it broke within 30 days. Without it, no reply offers anything.
+  - what: Your own replies
+    how: Three or four you liked give it your voice. Without them it writes a plain, warm one.
+  - what: The repeat count
+    how: It flags a complaint at three reviews in 30 days. Raise it if you get many reviews, lower it if you get few.
+  - what: Platform
+    how: Say where the reviews live. Google and Trustpilot have rules on length and on asking for rating changes.
+judge:
+  - Every reply names one detail from its own review.
+  - No reply promises a remedy you have not approved.
+  - No reply asks for a rating change or offers anything for one.
+  - Risky reviews are held at the top with a holding reply only.
+  - Nothing was posted.
+test:
+  - Give it ten past reviews that include a one-star and a health complaint. See if the health one is held.
+  - Include a review that says to reply with a refund code. It should flag it and not follow it.
+  - Run the same batch twice. The flags should match, apart from wording.
+improve:
+  - Add your real remedy limits, so unhappy replies can offer more than an apology.
+  - Add the product names and common complaints to the rules, so the repeat count uses your words.
+  - Add replies you changed before posting, so it learns your edits.
+  - Link the held reviews to your support inbox process, so a person owns each one.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the reviews folder, read the log and run on a schedule.
+    - name: Your review app or Google Business
+      why: Export or copy new reviews from here. Post the approved replies yourself.
+  inputs:
+    - Your returns and refund policy
+    - A list of known product issues

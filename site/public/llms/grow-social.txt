@@ -1,6 +1,6 @@
 # Grow on social: AI Blocks
 
-> 91 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 95 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Brand social account checker](https://useaiblocks.com/skills/brand-social-account-checker): Give it your accounts and posts. Get a score out of 100 and a fix per rule.
 - [Clipper program planner](https://useaiblocks.com/skills/clipper-program-planner): Give it a brief and budget cap. Get pay-on-approval terms, a review checklist and a seeding plan.
@@ -50,6 +50,7 @@
 - [Pick a title and thumbnail, then fix where viewers leave](https://useaiblocks.com/workflows/pick-a-title-and-thumbnail-then-fix-where-viewers-leave): Give it a video idea. Get three titles to test, then the one fix for drop-off.
 - [Plan a month of founder videos and edit the first](https://useaiblocks.com/workflows/founder-video-month): Give it your brand file. Get ten founder video episodes, a script for the first, and an edit plan for your footage.
 - [Platform-native content planner](https://useaiblocks.com/skills/platform-native-content-planner): Paste your business and the platform. Get a month of content made for that place and a daily habit.
+- [Post flop reason finder](https://useaiblocks.com/prompts/post-flop-reason-finder): Paste a post and its numbers. Get why it flopped (unseen, skipped or ignored) and one change.
 - [Post for two weeks and learn what worked and flopped](https://useaiblocks.com/workflows/post-for-two-weeks-and-learn-what-worked-and-flopped): Give it your platforms and goal. Get checked posts, then a read of what worked.
 - [Press outreach planner](https://useaiblocks.com/skills/press-outreach-planner): Say your news. Get a media list, pitch emails and a press kit outline.
 - [Product angle finder](https://useaiblocks.com/skills/product-angle-finder): Give it a plain product and its story. Get eight angles plus five story angles, ranked by effort.
@@ -60,6 +61,7 @@
 - [Short video format picker](https://useaiblocks.com/skills/short-video-format-picker): Give it your product and who is on camera. Get a format pick, a script outline and 10 hooks.
 - [Short video hook writer](https://useaiblocks.com/skills/short-video-hook-writer): Give it a product and post idea. Get ten hooks checked for length, reading level and first shot.
 - [Shorts clip finder](https://useaiblocks.com/skills/shorts-clip-finder): Give it a long video transcript. Get the best five moments to clip, each with a new first line.
+- [Social comment and reply desk](https://useaiblocks.com/agents/social-comment-and-reply-desk): Give it the posts and comments worth a reply. Get replies that add something, in your voice, plus repeat questions.
 - [Social content results reader](https://useaiblocks.com/skills/social-content-results-reader): Give it social accounts. Get engagement figures and which posts did best. Collects data from websites.
 - [Social media results analyst](https://useaiblocks.com/skills/social-media-results-analyst): Give it your post numbers. Get engagement rates, ROI and platform benchmarks, plus what to post next.
 - [Social post planner](https://useaiblocks.com/skills/social-post-planner): Name your platforms. Get a content calendar and ready posts for LinkedIn, X, Instagram and TikTok.
@@ -73,11 +75,13 @@
 - [TikTok Shop content planner](https://useaiblocks.com/skills/tiktok-shop-content-planner): Tell it your products. Get video formats, hooks, hashtags and a content calendar.
 - [Trust-first launch planner](https://useaiblocks.com/skills/trust-first-launch-planner): Describe a product people are wary of. Get the number who must hear about it, cheap trust tactics and a proof sequence.
 - [Video content planner](https://useaiblocks.com/skills/video-content-planner): Give it your channel goal. Get a video plan, scripts and ways to turn one long video into short clips.
+- [Video opening line batch writer](https://useaiblocks.com/prompts/video-opening-line-batch-writer): Paste your product and post idea. Get ten different video hooks and the two to film first.
 - [Voice-matched post writer](https://useaiblocks.com/skills/voice-matched-post-writer): Share posts you already wrote. Get new Twitter/X or LinkedIn posts that sound like you, checked against your style.
 - [Webinar promotion planner](https://useaiblocks.com/skills/webinar-promotion-planner): Give it your webinar topic and audience. Get a plan to promote it, run it and follow up.
 - [WeChat article planner](https://useaiblocks.com/skills/wechat-article-planner): Name your topic. Get a WeChat Official Account article plan with title options and layout built for the platform.
 - [Weekly social content planner](https://useaiblocks.com/agents/weekly-social-content-planner): Give it last week's post numbers. Get next week's posts planned from what worked, with hooks checked.
 - [Word of mouth planner](https://useaiblocks.com/skills/word-of-mouth-planner): Describe your product or message. Get ideas for making people talk about it, scored on six sharing triggers. Uses the STEPPS method.
+- [X and LinkedIn post pair writer](https://useaiblocks.com/prompts/x-and-linkedin-post-pair-writer): Paste one idea. Get an X post and a LinkedIn post that read as written separately.
 - [X growth writer](https://useaiblocks.com/skills/x-growth-writer): Give it your topic and past posts. Get tweets, threads and a plan to grow your audience on X.
 - [X reply writer](https://useaiblocks.com/skills/x-reply-writer): Paste a tweet. Get a reply worth reading on its own, or a clear call to skip it.
 - [X thread writer](https://useaiblocks.com/skills/x-thread-writer): Give it a long idea, transcript or draft. Get an X thread where every post stands on its own.

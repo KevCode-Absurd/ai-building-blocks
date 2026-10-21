@@ -1,0 +1,91 @@
+new_slug: sales-drop-cause-finder
+name: "Sales drop cause finder"
+summary: "Paste store numbers from before and after a drop. Get the lever that moved and the next check."
+job: track-numbers
+thinking: medium
+thinking_why: "It has to reason about which cause fits the numbers."
+
+headline: "Sales drop cause finder"
+subhead: "Paste your store numbers from before and after sales fell. It splits the drop into sessions, conversion and order value, separates refunds, and tells you the one lever to check next."
+
+explain: |
+  When sales fall, it is easy to blame ads and start changing things. Often the drop is a refund timing quirk, a small dip that is just noise, or one lever out of three.
+
+  This prompt works from one fact: sales equal sessions times conversion rate times order value. It finds which of the three moved, follows it, and says when to leave it alone.
+
+when:
+  - "Sales are down this week and you do not know why."
+  - "You are about to pause a campaign or rebuild a page."
+  - "A report shows a dip and you want to know if it is real."
+
+you_give:
+  - "Two periods (required): net sales plus shipping, sessions, conversion rate and average order value, before and after the drop."
+  - "Ad numbers (required): spend, CPM and CPC for both periods."
+  - "Refunds processed in each period (strongly advised)."
+  - "Changes you made (optional): prices, pages, apps, campaigns."
+you_get:
+  - "The three levers with percent changes"
+  - "Whether refunds explain part of the drop"
+  - "The likely cause and where to check it"
+  - "A call to ignore or investigate"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: two periods; ad numbers; refunds processed in each period; changes you made."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "Fix the sales line"
+    text: "Use net sales plus shipping. Total sales includes tax and gross sales ignores discounts and returns."
+  - title: "Take refunds out first"
+    text: "Refunds are booked the day they are processed, so a big month is followed by a fake dip. Show both views before blaming ads."
+  - title: "Split the three levers"
+    text: "Sales = sessions x conversion rate x order value. Work out the percent change in each and in sales."
+  - title: "Follow the lever that moved"
+    text: "Sessions: spend, CPM, CPC, a campaign that lost budget. Conversion: a page change, stock-out or checkout fault. Order value: a bundle, price or free-shipping change."
+  - title: "Call noise"
+    text: "A 5% dip in order value and a 4% dip in conversion compound to about 10% in sales, which can be normal. On a few hundred sessions, single-digit moves are mostly noise. Say ignore or investigate, and why."
+
+output_shape: |
+  THREE LEVERS: sessions <A to B, %> | conversion <A to B, %> | order value <A to B, %> | sales <A to B, %>
+  REFUNDS: <processed in each period, effect>
+  WHICH LEVER: <name, share of the drop>
+  CAUSE: Down because <metric> changed, likely caused by <thing>, to check <where>
+  NOISE CALL: <ignore or investigate>, because <reason>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: "Period length"
+    how: "Compare equal lengths, such as 7 days against the 7 before. Uneven periods blur the split."
+  - what: "Refunds"
+    how: "Add refunds processed. Without them it says MISSING and cannot clear ads."
+
+judge:
+  - "Every percent change can be redone from the numbers you pasted."
+  - "Refunds were separated before ads were blamed."
+  - "A cause is called a guess until a check confirms it."
+  - "No noise limit or lift is made up."
+
+test:
+  - "Use a drop where you already know the cause. It should land on the same lever."
+  - "Run it twice. The levers and percents should match."
+  - "Give it flat numbers. It should say the drop is not in the three levers."
+
+improve:
+  - "Add your usual traffic sources under the prompt so it checks the biggest first."
+  - "Keep a short change log and paste it with the numbers."
+  - "Pair it with a funnel reader if conversion is the lever that moved."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "Google Analytics sessions for both periods"
+    - "Your change history for the same dates"
+
+terms:
+  - term: "Conversion rate"
+    meaning: "The share of visits that end in an order."
+  - term: "CPM and CPC"
+    meaning: "What you pay per thousand views, and per click."

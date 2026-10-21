@@ -1,0 +1,26 @@
+slug: rough-notes-to-minutes-writer
+name: Rough notes to minutes writer
+summary: Paste rough meeting notes. Get short minutes with decisions, owners and dates.
+category: general
+type: prompt
+role: compress
+job: ops
+level: beginner
+inputs:
+  - type: meeting_notes
+    required: true
+outputs:
+  - type: meeting_notes
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: meeting-notes skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/meeting-notes
+    used: A shorter one-message version of this skill, written fresh.
+  - title: Original author
+    by: alapha888
+    url: https://github.com/alapha888
+    used: Wrote the skill; sickn33 shared it in their collection.

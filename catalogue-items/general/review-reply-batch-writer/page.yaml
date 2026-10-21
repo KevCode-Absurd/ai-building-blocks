@@ -1,0 +1,85 @@
+new_slug: review-reply-batch-writer
+name: "Review reply batch writer"
+summary: "Paste your store reviews. Get a specific public reply to each one and a list of the risky ones."
+job: help-customers
+thinking: low
+thinking_why: "Each reply follows fixed rules."
+
+headline: "Review reply batch writer"
+subhead: "Paste your store reviews. The prompt writes one specific public reply for each, sends unhappy customers to a private channel, and flags the risky ones, such as safety claims, for you to handle yourself."
+
+explain: |
+  Template replies like "We value your feedback" tell future buyers that nobody read the review. A reply that names a real detail does the opposite. But a careless reply can also admit fault or promise a refund in public.
+
+  This prompt writes each reply from the review itself, keeps unhappy replies short and calm, and moves the problem to your support email. It never promises a refund you did not approve, and flags reviews that need a person.
+
+when:
+  - "You have ten reviews waiting for a reply."
+  - "Your replies all sound the same."
+  - "You are worried about saying the wrong thing in public."
+
+you_give:
+  - "The reviews with name, stars and text"
+  - "Your support email (advised)"
+  - "Remedies you approved (optional)"
+you_get:
+  - "A ready-to-paste reply for each review"
+  - "A list of reviews that need you"
+  - "A list of gaps to fill"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste the reviews under the prompt."
+  - "Add your support email and any remedies you approve."
+  - "Read the flagged ones yourself before you reply."
+
+how_it_works:
+  - title: "Number and sort"
+    text: "Number the reviews. Mark each: praise, mixed, product problem, late, damaged or wrong item, preference, price or other."
+  - title: "Flag the risky ones"
+    text: "Flag health or safety, legal threats, chargebacks, scam claims, personal data and abuse. A flagged review gets a short holding reply and a note for me. No remedy."
+  - title: "Reply to happy reviews"
+    text: "Thank them for the specific thing they said, in 15 to 45 words. No upsell."
+  - title: "Reply to unhappy reviews"
+    text: "Use their words, say sorry for the experience, and give one next step in private by my support email. 35 to 80 words."
+  - title: "Keep it safe"
+    text: "Never admit fault or cause, promise a refund, credit or discount I did not approve (write [REMEDY: owner to choose]), ask for order details in public, or ask for a rating change."
+  - title: "Vary them"
+    text: "No two replies start with the same three words. Use \"we\" throughout."
+
+output_shape: |
+  | # | Reviewer | Stars | Type | Flag | Reply |
+  | <n> | <name> | <stars> | <type> | <flag or none> | <reply> |
+  NEEDS A HUMAN: <review number> - <flag> - <what to check>
+  PLACEHOLDERS TO FILL: <...>
+
+tweaks:
+  - what: "Approved remedies"
+    how: "Name exactly what you will offer and when. Without it, no remedy appears."
+  - what: "Support email"
+    how: "Give it and it appears in every reply that needs it."
+  - what: "Platform"
+    how: "Say Google or Trustpilot. Their rules on length and rating changes differ."
+
+judge:
+  - "Each reply names a detail from its own review."
+  - "No two start the same way."
+  - "No refund or fault admitted."
+  - "Risky reviews are on the human list."
+
+test:
+  - "Add one review that mentions a health problem. It should be flagged."
+  - "Run five happy reviews. The replies should differ."
+  - "Run it twice. The flags should match."
+
+improve:
+  - "Add your approved remedies and exchange rules."
+  - "Add your sign-off name and a line about voice."
+  - "Pair it with the Public review reply drafter for every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "Your exchange and return rules"
+    - "A reply you wrote that you liked"

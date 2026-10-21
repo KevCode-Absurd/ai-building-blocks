@@ -1,0 +1,18 @@
+slug: review-reply-batch-writer
+name: "Review reply batch writer"
+summary: "Paste your store reviews. Get a specific public reply to each one and a list of the risky ones."
+category: general
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: voc_reviews, required: true}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "review-reply-drafter skill", by: "Pro Skill Packs", url: "https://github.com/proskillpacks/skills/tree/main/skills/ecommerce/review-reply-drafter", used: "One specific reply per review, flagging risky reviews, and never promising unapproved refunds"}

@@ -1,0 +1,29 @@
+slug: weekly-sales-pipeline-reviewer
+name: "Weekly sales pipeline reviewer"
+summary: "Give it your weekly deal export. Get what changed, the deals to act on today and a fix list to approve."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: meeting_notes, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [crm-hygiene-auditor, deal-watch-digest-writer, pipeline-stage-health-reviewer, deal-health-reviewer, stalled-deal-indecision-checker, deal-next-stage-gap-finder, deal-slip-impact-modeler, win-and-loss-pattern-finder]
+steps:
+  - {uses: crm-hygiene-auditor, note: "Every week, first: finds past close dates, empty amounts and missing next steps, so you know how far to trust the numbers."}
+  - {uses: deal-watch-digest-writer, note: "Every week: compares this export with last week's and lists deals gone quiet, dates that slipped and deals that are new or missing."}
+  - {uses: pipeline-stage-health-reviewer, note: "Every week: stage totals, how long deals sit in each stage and coverage of your target."}
+  - {uses: deal-health-reviewer, note: "Only for the up to three flagged deals worth the most: a health score, the risks and the next actions."}
+  - {uses: stalled-deal-indecision-checker, note: "Only for a flagged deal that went quiet after good meetings and whose notes show hesitation: whether the buyer doubts the choice or fears a mistake, and what to send."}
+  - {uses: deal-next-stage-gap-finder, note: "Only for a flagged deal that is stuck in a stage without hesitation in the notes: what is missing to move it forward, who does it and by when."}
+  - {uses: deal-slip-impact-modeler, note: "Only when coverage is under the bar or one big deal is at risk: what the slip does to your number and what pipeline must replace it."}
+  - {uses: win-and-loss-pattern-finder, note: "Only on the first run of a month, when you give it closed deals: where losses happen and what wins share."}
+schedule: "Every Monday morning, from a fresh export of your open deals"
+asks_before: [changing a deal record in your CRM, moving a close date, stage or amount, sending any message to a buyer or a teammate, logging activity on a deal, sharing the forecast with anyone]
+origin: own
+version: 1.0.0
+example_pending: true

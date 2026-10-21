@@ -1,0 +1,99 @@
+new_slug: threat-list-maker
+name: "Threat list maker"
+summary: "Paste how your app or service works. Get the likeliest attacks ranked, each with one way to reduce the risk."
+job: secure-code
+thinking: medium
+thinking_why: "It must reason about how parts connect and what an attacker could reach."
+
+headline: "Threat list maker"
+subhead: "Paste a plain description of your app, its parts and who uses it. It maps the entry points, checks six kinds of attack against each, and hands back the top threats ranked by damage, each with one way to reduce it."
+
+explain: |
+  Most security work starts too late, after something is built. A threat list asks the plain question first: what could someone do to this, and where? Teams that skip it fix the loud problems and miss the quiet ones.
+
+  This prompt uses six standard kinds of attack, called STRIDE, as a checklist for every place outside people or services touch your system. You get the likely ones, ranked, with one fix each. It is a first pass, not a full audit.
+
+when:
+  - "You are designing something that holds customer data."
+  - "You are about to add a login, payment or API."
+  - "You need a short list to take to a security person."
+
+you_give:
+  - "What the system does"
+  - "Its parts and who uses it"
+  - "What matters most to protect"
+you_get:
+  - "A list of parts and entry points"
+  - "The top threats, ranked, with likelihood and damage"
+  - "One practical fix for each"
+  - "What was assumed and what to confirm"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "Map the parts"
+    text: "Draw the system as a list: who talks to what, and where data is stored. Mark the places where outside people or services enter."
+  - title: "Check six kinds of attack"
+    text: "For each entry point, ask about pretending to be someone else, changing data, denying an action, leaking data, overloading it, and gaining more access than allowed."
+  - title: "Keep the real ones"
+    text: "Drop threats that cannot happen in this system. Rate each remaining one for likelihood and for damage (low, medium, high)."
+  - title: "Rank and fix"
+    text: "List the top eight, worst first. For each, give one practical way to reduce it."
+  - title: "Name the gaps"
+    text: "Say what you assumed and what to confirm with someone who knows the system."
+
+output_shape: |
+  PARTS AND ENTRY POINTS
+  - <part>: <who or what reaches it>
+
+  TOP THREATS (worst first)
+  1. <attack> on <part>
+     Likelihood: <l/m/h>  Damage: <l/m/h>
+     Reduce it: <one step>
+
+  WHAT I ASSUMED
+  - <assumption>
+
+  TO CONFIRM
+  - <question for someone who knows the system>
+
+tweaks:
+  - what: "What to protect"
+    how: "Say what matters most. The ranking follows it."
+  - what: "Level of detail"
+    how: "Name real parts, such as a payment service, not just 'backend'."
+  - what: "Known controls"
+    how: "List what you already do, such as two-step sign-in, so it does not repeat it."
+
+judge:
+  - "Each threat names a part you described."
+  - "The top threat is one you would worry about."
+  - "Each fix is a step you could assign."
+  - "Assumptions are listed."
+
+test:
+  - "Run it on a system you know well. Does it find a weak spot you already knew?"
+  - "Run it twice. The top three should overlap."
+  - "Give a one-line description. It should ask for more."
+
+improve:
+  - "Add your industry's rules, such as payment card rules."
+  - "Add the controls you already have."
+  - "Save the list and rerun it when the system changes."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "A sketch of the parts and how they connect"
+  - "A list of controls you already have"
+
+terms:
+  - term: "STRIDE"
+    meaning: "Six kinds of attack: pretending, changing, denying, leaking, overloading and gaining extra access."
+  - term: "Entry point"
+    meaning: "A place where outside people or services can reach your system."

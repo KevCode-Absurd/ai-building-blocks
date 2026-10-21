@@ -1,0 +1,80 @@
+new_slug: one-line-position-writer
+name: One-line position writer
+summary: Paste your product and rivals. Get the one word to own, one plain line and a stretch limit.
+job: plan-strategy
+thinking: medium
+thinking_why: Picking one word to own takes judgement about what is true.
+headline: One-line position writer
+subhead: Paste your product and your main rivals under this prompt. It finds the word each rival owns, a true weak spot, and the one attribute left for you. You get a one-line position, a stranger test and a limit on stretching it.
+explain: |
+  Buyers hold only a few brands in mind for each category. If you cannot say what you stand for in one line, they will not either. The brands that are remembered own one word, and they do not try to be everything.
+
+        This prompt starts from the rivals, not from your wish list. It finds what each one owns, picks a weak spot you can truthfully use, and chooses one attribute for you. Then it writes one plain line and tests whether a stranger could say it back.
+when:
+  - Buyers cannot say what you stand for.
+  - A bigger rival leads your category.
+  - You are writing a website, deck or ad and need one clear line.
+you_give:
+  - Your product and who it is for
+  - Your main rivals and what each is known for
+  - Facts you can back up (optional)
+you_get:
+  - What each rival owns
+  - A true weak spot to use, with a way to check it
+  - The one attribute for you, and what you drop
+  - A one-line position, a stranger test and a stretch limit
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - Include what buyers say about each rival.
+  - Mark guesses. They will be flagged.
+  - Read the final line to someone who does not know your business.
+how_it_works:
+  - title: Build the ladder
+    text: Who comes to mind first in each category.
+  - title: Name what rivals own
+    text: One word each.
+  - title: Find a weak spot
+    text: Something true you can check.
+  - title: Find a category to lead
+    text: Narrow until you can be first.
+  - title: Pick one attribute
+    text: Open, true and wanted.
+  - title: Write and test
+    text: One line a stranger can say back.
+output_shape: |
+  LADDER: <category: first, second, where you sit>
+        WHAT RIVALS OWN: <rival: word>
+        WEAK SPOT TO USE: <...> | how to check
+        CATEGORY TO LEAD: <...>
+        ONE ATTRIBUTE: <word>   DROPPED: <...>
+        POSITION: <one line>
+        STRANGER TEST: <result>
+        STRETCH LIMIT: <...>
+        BRIEF: audience | position | proof | what not to say
+tweaks:
+  - what: What you can prove
+    how: Proof decides which attribute you can own. Add it.
+  - what: How many rivals
+    how: Three to six keeps the ladder clear.
+  - what: Narrowing
+    how: Say a buyer type or use if you cannot be first in a broad category.
+judge:
+  - Each rival has one word, not three.
+  - The weak spot is true and checkable.
+  - The position uses one attribute.
+  - A stranger could say it back.
+test:
+  - Read the line to someone outside the business and ask what you stand for.
+  - Run it twice. The attribute should match.
+  - Compare to your current tagline.
+improve:
+  - Add the words you must never use.
+  - Add your proof, such as tests and reviews.
+  - Save the position and the brief in your brand file.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - Reviews that name your rivals
+    - Your tests, guarantees and numbers

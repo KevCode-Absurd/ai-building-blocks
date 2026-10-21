@@ -1,0 +1,18 @@
+slug: search-title-and-snippet-writer
+name: "Search title and snippet writer"
+summary: "Paste your page topic, search phrase and benefit. Get three titles and descriptions within the length limits."
+category: general
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "seo-aeo-meta-description-generator skill", by: "sickn33", url: "https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/seo-aeo-meta-description-generator", used: "Putting the search phrase first, leading with the benefit and ending with an action"}

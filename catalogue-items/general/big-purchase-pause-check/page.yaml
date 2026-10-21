@@ -1,0 +1,71 @@
+new_slug: big-purchase-pause-check
+name: Big purchase pause check
+summary: Paste what you want to buy and why. Get the real cost, what drives it and a small test.
+job: money-and-investing
+thinking: medium
+thinking_why: It looks at feelings behind a purchase, which needs a careful, kind tone.
+headline: Big purchase pause check
+subhead: Paste what you want to buy and the feeling behind it. You get the full long-run cost with a total, where the pull may come from, a cheaper version and a small test to run first. The choice stays yours.
+explain: "Big purchases are often about a feeling, not the thing. This prompt slows you down without lecturing. It names the wish, traces where the pull may come from, and adds the costs that come after the price: upkeep, fees, interest and your time. It asks who you picture noticing, checks how fast the joy usually fades, and suggests a smaller version and a cheap test. It will not tell you to buy or not. It gives checks only, and the choice is yours."
+when:
+  - You are about to make a big purchase and feel a pull.
+  - You want to know what it really costs over the years.
+  - You want a cheap way to test the want first.
+you_give:
+  - What you want and its price
+  - The feeling behind it
+  - Your monthly money picture (optional)
+  - What you own that does the same job (optional)
+you_get:
+  - A full cost total over the years you would keep it
+  - Where the pull may come from
+  - A smaller version and a small test
+  - Missing costs marked
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste what you want to buy and the feeling behind it.
+  - Send it and read the result.
+  - Wait a day before you act on the result.
+how_it_works:
+  - title: Name the pull
+    text: The wish and where the feeling may come from.
+  - title: Add the real cost
+    text: Price plus upkeep, fees, interest and time, summed.
+  - title: Test small
+    text: A cheap trial before the big spend.
+output_shape: |-
+  THE WISH
+  WHERE IT MAY COME FROM
+  FULL COST
+  <items and total over N years>
+  WHO IS WATCHING
+  FADE CHECK AND SMALLER VERSION
+  SMALL TEST
+  <cost, length, the one question>
+  MISSING
+tweaks:
+  - what: Years
+    how: Say how long you would keep it.
+  - what: Borrowed
+    how: Say if you will borrow and give the rate.
+  - what: Tone
+    how: Ask for a shorter, more direct version.
+judge:
+  - Cost shows sums.
+  - Feelings are "may be".
+  - No buy or skip call.
+  - A small test is offered.
+test:
+  - Give no upkeep costs. It should mark them MISSING.
+  - Ask "should I buy it?". It should say the choice is yours.
+  - Run twice. The test should be similar.
+improve:
+  - Add your monthly spending for context.
+  - Keep a record of wants and what you decided.
+  - Use the full skill for repeated purchases.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - What you want and its price

@@ -1,0 +1,91 @@
+new_slug: top-of-page-headline-writer
+name: "Top-of-page headline writer"
+summary: "Paste your offer, buyer, proof and ad. Get five headlines with a pick, a subhead, a button and proof."
+job: write-landing-page
+thinking: low
+thinking_why: "It follows set rules to write short pieces of copy, with few decisions."
+
+headline: "Top-of-page headline writer"
+subhead: "Paste your offer, your buyer, the proof you have and the ad that brings visitors. The prompt writes five headline options with a pick, a subhead, two proof items, a button and the doubt-reducers that go under it."
+
+explain: |
+  Most visitors decide on the first screen. A headline that talks about you, or that does not match the ad they clicked, loses them in seconds.
+
+  This prompt turns your offer into a chain of results for the buyer, then writes five headlines from it. It picks the one that repeats the ad's promise. Then it adds a subhead that names the pain and the reasons your way works, two kinds of proof, and a button that states the benefit. It only uses proof and numbers you give it.
+
+when:
+  - "A page loses most visitors before they scroll."
+  - "You are launching a new offer or ad."
+  - "You want a few headline options to test."
+
+you_give:
+  - "Your offer, price and guarantee"
+  - "Your buyer and what they want"
+  - "Proof: ratings, counts, press (optional)"
+  - "The ad words that send traffic (optional)"
+you_get:
+  - "Five headline options and a pick, with the reason"
+  - "A subhead, a button and what goes under it"
+  - "Two proof items for the first screen, with sources"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Under it, paste your offer, buyer and proof."
+  - "Paste the ad copy so the headline can match it."
+  - "Pick one headline and put the others in your test list."
+
+how_it_works:
+  - title: "Chain the result"
+    text: "Do X so that Y so that Z."
+  - title: "Write five headlines"
+    text: "Five ways to state the benefit."
+  - title: "Match the ad"
+    text: "The pick repeats the ad's promise."
+  - title: "Finish the screen"
+    text: "Subhead, proof, button and doubt-reducers."
+
+output_shape: |
+  HEADLINES
+  1 <...>
+  2 <...>
+  3 <...>
+  4 <...>
+  5 <...>
+  PICK: <n> because <reason>
+  SUBHEAD: stop <pain>, no more <pain>; <reason 1>, <reason 2>
+  PROOF: <kind> | <source> ; <kind> | <source>
+  BUTTON: <label that names the benefit>
+  UNDER THE BUTTON: <guarantee, returns, shipping, price>
+  MISSING: <anything you were not given>
+
+tweaks:
+  - what: "The ad"
+    how: "Paste the real ad words. The headline will repeat them."
+  - what: "Proof"
+    how: "Real ratings with counts beat vague praise. Without them the proof slot says MISSING."
+  - what: "Buyer words"
+    how: "Paste review phrases and the headlines will use them."
+
+judge:
+  - "The headline does not start with who you are."
+  - "The pick matches the ad."
+  - "Every number can be checked."
+  - "The button names a benefit, not just an action."
+
+test:
+  - "Run it with and without the ad text. The headline should change."
+  - "Remove your proof. It should write MISSING, not invent a rating."
+  - "Put two of the five headlines in a split test if you have enough visits."
+
+improve:
+  - "Add words your brand never uses."
+  - "Add your usual guarantee wording so it is always correct."
+  - "Pair it with Buyer doubt gap finder to check the rest of the page."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt works in any strong chat AI. Paste it, then add your details under it."}
+  inputs:
+    - "Three reviews in the buyer's own words"
+    - "Your best-performing ad"
+    - "The current headline and its conversion rate"

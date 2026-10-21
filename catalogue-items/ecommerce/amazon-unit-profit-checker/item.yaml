@@ -1,0 +1,16 @@
+slug: amazon-unit-profit-checker
+name: "Amazon unit profit checker"
+summary: "Paste price, landed cost and Amazon fees. Get profit per unit and break-even ad cost."
+category: ecommerce
+type: prompt
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

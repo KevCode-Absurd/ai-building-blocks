@@ -1,0 +1,90 @@
+new_slug: sales-opener-trio-writer
+name: "Sales opener trio writer"
+summary: "Paste what you sell and who you meet. Get a ten-word opener, two spares and a test."
+job: sell-and-negotiate
+thinking: low
+thinking_why: "It writes very short lines from one benefit."
+
+headline: "Sales opener trio writer"
+subhead: "Paste what you sell, the result buyers get and where you meet them. The prompt writes a ten-word opening question about that result, two spare openers for different moods, and a simple test."
+
+explain: |
+  Most openers talk about the seller. "Hi, I work for a company that makes..." gives a stranger a reason to walk away. An opener about what the buyer gets earns a few more seconds.
+
+  This prompt turns one true benefit into a short question, then writes two spares for a hurried buyer and a doubtful one. It adds no prizes or made-up reasons for being there. It ends with a test, so you keep the one that works.
+
+when:
+  - "You greet strangers at a stall, door or event."
+  - "Your first line gets polite nods and nothing else."
+  - "You want an opener for a cold call."
+
+you_give:
+  - "What you sell and the result buyers get"
+  - "Who you meet and where"
+  - "One reason you believe in it (optional)"
+you_get:
+  - "A ten-word opening question"
+  - "Two spares for different moods"
+  - "A test plan"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste what you sell and the result under the prompt."
+  - "Say where you will use it."
+  - "Try the first opener on ten people and keep a count."
+
+how_it_works:
+  - title: "Pick a true benefit"
+    text: "Choose the benefit you can say with a straight face, and say why. If it does not fit the setting, take the next one."
+  - title: "Show the result"
+    text: "Write it as what the buyer sees, feels or saves, not what is inside it or how it is made."
+  - title: "Make it a question"
+    text: "Start with \"Did you know\", \"Have you heard\" or \"Would you like\". Write three versions and pick the clearest."
+  - title: "Cut to ten words"
+    text: "Count the words. Cut the product name or the second clause if it runs over. Read it aloud."
+  - title: "Write two spares"
+    text: "One for a buyer in a rush. One for a buyer who is relaxed or doubtful."
+  - title: "Add an honest extra"
+    text: "If it fits, add a true, light compliment about something visible, or offer a sample. No prizes, surveys or made-up reasons."
+  - title: "Plan the test"
+    text: "Try the first opener on ten people. A win is they stop, ask or let you start. Keep the winner."
+
+output_shape: |
+  BENEFIT CHOSEN: <benefit> because <reason>
+  OPENER: "<about ten words>"
+  SPARE 1 (rushed buyer): "<...>"
+  SPARE 2 (doubtful buyer): "<...>"
+  EXTRA: <true compliment or sample, if any>
+  TEST: <who, how many, what counts as a win>
+  MISSING: <...>
+
+tweaks:
+  - what: "The setting"
+    how: "A stall, a phone call and a shop floor each need a different line."
+  - what: "The result"
+    how: "Name what the buyer sees or saves. The sharper it is, the better the opener."
+  - what: "Your honesty line"
+    how: "Say what you will never claim. It stays out."
+
+judge:
+  - "The opener fits in about ten words."
+  - "A stranger could picture the result."
+  - "Nothing in it is untrue."
+  - "The spares differ from the first."
+
+test:
+  - "Say all three aloud. If you trip, simplify."
+  - "Try each on ten people and count who stops."
+  - "Keep the winner and replace the other two."
+
+improve:
+  - "Add the openers you use now."
+  - "Add words buyers say about your product."
+  - "Pair it with the Ten-second opener writer for every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "Your current opener"
+    - "Words buyers use about your product"

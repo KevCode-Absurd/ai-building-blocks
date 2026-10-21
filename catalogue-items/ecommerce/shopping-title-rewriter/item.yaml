@@ -1,0 +1,16 @@
+slug: shopping-title-rewriter
+name: "Shopping title rewriter"
+summary: "Paste product facts and search terms. Get Google Shopping titles in one order, plus a rollout."
+category: ecommerce
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

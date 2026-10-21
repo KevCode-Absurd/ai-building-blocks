@@ -1,0 +1,31 @@
+slug: monthly-product-opportunity-scout
+name: "Monthly product opportunity scout"
+summary: "Name your market each month. Get a short list of products scored and checked, with one pick and a small test plan."
+category: agent
+type: agent
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+  - {type: store_capture, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: shortlist}
+  - {type: plan}
+uses: [proven-product-scout, rating-gap-product-finder, winning-product-scorer, competitor-saturation-checker, untapped-buyer-finder, category-and-trend-risk-checker, new-product-line-checker]
+steps:
+  - {uses: competitor-saturation-checker, note: "Every month, on each candidate already on the watch list: has the field filled up since last time."}
+  - {uses: proven-product-scout, note: "Every month: new proven products in your market, from the ad and sales evidence you attach."}
+  - {uses: rating-gap-product-finder, note: "Only when you attach reviews for a category: sub-categories with weak ratings but strong search."}
+  - {uses: winning-product-scorer, note: "Every month, on each new candidate: a score out of 100 from price, cost and fit."}
+  - {uses: competitor-saturation-checker, note: "Only for candidates that pass the score: how many rivals sell it and how strong they are."}
+  - {uses: untapped-buyer-finder, note: "Only when a candidate is crowded but not dead: buyer groups nobody targets."}
+  - {uses: category-and-trend-risk-checker, note: "Only for the top candidates in a category you do not sell in yet: market size and trend risk."}
+  - {uses: new-product-line-checker, note: "Only for the one top pick: the cost to win a customer, a launch cap and a small test plan."}
+schedule: "On the first working day of each month"
+asks_before: [ordering samples or stock, contacting a supplier, spending on ads or tests, adding a product to your store, paying for a spy tool or data service]
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,99 @@
+new_slug: job-to-agent-goal-writer
+name: "Job to agent goal writer"
+summary: "Paste a vague job. Get a goal an AI agent can finish, with proof of done and stop rules."
+job: set-up-ai
+thinking: medium
+thinking_why: "It must turn a loose job into limits and tests that hold up, which takes some reasoning."
+
+headline: "Job to agent goal writer"
+subhead: "Paste a vague job. Your AI turns it into a goal an AI agent can finish, with proof of done, scope, approval points and stop rules."
+
+explain: |
+  An agent told to "look into our competitors" has no way to know when it is finished, so it either stops early or runs on. A good goal names the finished thing and how to check it.
+
+  This prompt writes the goal in a fixed layout: outcome, proof of done, scope, approval points, stop rules and a first step. It writes the goal only. It does not do the job.
+
+when:
+  - "You are about to hand a many-step job to an AI agent."
+  - "An agent keeps stopping early or wandering off."
+  - "You want to check that work is done without reading all of it."
+
+you_give:
+  - "The job in your own words"
+  - "Limits, if any (optional)"
+  - "Files or tools it can use (optional)"
+
+you_get:
+  - "A one-sentence goal"
+  - "Proof of done as yes-or-no checks"
+  - "Scope, approval points and stop rules"
+  - "A first step"
+
+how_to_use:
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Paste your details under it, in the slots under What you need."
+  - "Send it and read the answer against the checks on this page."
+  - "Reply with what to change, and keep the version that works."
+
+how_it_works:
+  - title: "Name the finished thing"
+    text: "One sentence that says what exists when the job is done."
+  - title: "Write proof of done"
+    text: "Two to four yes-or-no checks."
+  - title: "Set the edges"
+    text: "In scope, out of scope and approval points."
+  - title: "Set stop rules"
+    text: "When the agent stops and reports."
+  - title: "Pick the first step"
+    text: "The first small unit of work."
+
+output_shape: |
+  GOAL
+  <one sentence>
+  DONE WHEN
+  1. <check>
+  IN SCOPE / OUT OF SCOPE
+  <two short lists>
+  ASK FIRST
+  <actions that need approval>
+  STOP RULES
+  <when to stop and report>
+  FIRST STEP
+  <the first unit of work>
+  MISSING
+  <what was not given>
+
+tweaks:
+  - what: "Proof of done"
+    how: "Give the real test you would use, such as \"the sheet matches the supplier page\". It makes the checks sharper."
+  - what: "Limits"
+    how: "Name money, time and accounts the agent must not touch."
+  - what: "Size of job"
+    how: "For a big job, ask for the goal in phases with a check at the end of each."
+
+judge:
+  - "You can tell from the goal alone when the work is finished."
+  - "Every check has a yes or no answer."
+  - "Risky actions sit under ASK FIRST."
+  - "The goal asks for one result."
+
+test:
+  - "Hand the goal to an agent and see if it stops where you expected."
+  - "Give the same job twice. The checks should say the same thing."
+  - "Remove one limit and see if the AI flags it as missing."
+
+improve:
+  - "Add the approval rules your team always uses."
+  - "Add a standard line on where to save results."
+  - "Save good goals as templates for jobs you repeat."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "It writes the goal. Any coding or task agent can then run it."}
+  inputs:
+    - "A past job that went wrong, to guard against"
+    - "The tools the agent can use"
+
+terms:
+  - term: "AI agent"
+    meaning: "An AI that takes many steps on its own, such as searching, editing files and checking results."

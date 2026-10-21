@@ -1,0 +1,105 @@
+new_slug: launch-scope-halver
+name: "Launch scope halver"
+summary: "Paste your launch list, date and budget. Get the same date with half the scope: a core and a parked list."
+job: build-product
+thinking: medium
+thinking_why: "It needs judgement about what a first customer truly needs."
+
+headline: "Launch scope halver"
+subhead: "Paste your launch list, date and budget. It keeps the date, names what your product is for, cuts the list in rounds, and hands back a ranked core, a parked list and any promises put at risk."
+
+explain: |
+  When a launch runs late, people move the date or add money. Both cost something real. Scope is the one thing that can move without harm, because a first customer needs a working core, not every idea.
+
+  This prompt fixes the date and budget, asks you to confirm one sentence about what the product is for, then halves the list again and again against that sentence. What survives is ranked, and the rest is parked with a reason to bring it back.
+
+when:
+  - "The launch is slipping and the list keeps growing."
+  - "You have more items than the team has hours."
+  - "You need to tell a partner what ships on the date."
+
+you_give:
+  - "Your launch list, with small items too"
+  - "Your date and budget"
+  - "Hours or people available (optional)"
+  - "Promises you have already made (optional)"
+you_get:
+  - "The heart of the product in one sentence"
+  - "A ranked core with a line where time runs out"
+  - "A parked list with a trigger for each item"
+  - "Promises that now need a cut item"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "Lock the date and budget"
+    text: "Write both at the top and say neither moves. Only scope can change."
+  - title: "Name the heart"
+    text: "Write one sentence: \"It helps <who> do <what>.\" Ask me to confirm it before you cut."
+  - title: "Cut in rounds"
+    text: "Remove the half of the list that matters least to that sentence. Repeat until removing any more item would make the sentence false. Show each round."
+  - title: "Rank and draw the line"
+    text: "Order what is left by what a first customer needs first. Add up effort from the top and draw a line where the date or budget runs out."
+  - title: "Park, don't delete"
+    text: "List every cut item with what would bring it back, such as \"when 20 customers ask\"."
+  - title: "Check the promises"
+    text: "Flag any promise that needs a cut item and say whether to keep the item or change the promise."
+
+output_shape: |
+  DATE AND BUDGET
+  <both, marked as fixed>
+
+  HEART
+  It helps <who> do <what>.
+
+  CORE (ranked)
+  1. <item> - <why a first customer needs it> - <effort>
+  --- line: date or budget runs out ---
+
+  PARKED
+  - <item> - back when <trigger>
+
+  PROMISES AT RISK
+  - <promise> needs <cut item>: <keep the item or change the promise>
+
+  MISSING
+  <gaps>
+
+tweaks:
+  - what: "Effort numbers"
+    how: "Give hours or days for each item. Without them the line is drawn by need only, and it says so."
+  - what: "The heart sentence"
+    how: "If two sentences fit your plan, it shows both. Pick the one a customer would say."
+  - what: "Date flexibility"
+    how: "If the date can move, say which matters more. If both can move, this is the wrong tool yet."
+
+judge:
+  - "The date and budget at the top match what you pasted."
+  - "The heart sentence is about the customer, not the technology."
+  - "Every parked item has a reason to come back."
+  - "No cut item is needed by a promise you made."
+
+test:
+  - "Try it on a past launch you know. The core should match what customers actually used."
+  - "Run it twice. The core should be nearly the same both times."
+  - "Delete one small item from your list. The core should not change."
+
+improve:
+  - "Add your usual rule for when a parked item returns, such as a customer count."
+  - "Add the promises you always make, so it checks them every time."
+  - "Save your heart sentence in your about-me note for the next plan."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "Hours for each item"
+  - "Every promise made to customers or partners"
+
+terms:
+  - term: "Parked list"
+    meaning: "Ideas you cut for now but kept, each with a reason to bring it back."

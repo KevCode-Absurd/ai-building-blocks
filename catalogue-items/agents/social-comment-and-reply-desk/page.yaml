@@ -1,0 +1,100 @@
+new_slug: social-comment-and-reply-desk
+name: Social comment and reply desk
+summary: Give it the posts and comments worth a reply. Get replies that add something, in your voice, plus repeat questions.
+job: grow-social
+thinking: low
+thinking_why: The skills it runs are short and well bounded. A small, fast model handles most days. Use a stronger one when the comments are heated.
+headline: Social comment and reply desk
+subhead: Give it the posts you could reply to and the comments on your own. It skips the ones not worth your time, writes short replies in your voice for X, LinkedIn and YouTube, checks the batch, and lists the questions people keep asking.
+explain: |
+  Replying is the cheapest way to be seen, and most of it is wasted. Replies that only agree vanish. Replies written in a hurry sound like someone else. And the same question shows up under your videos again and again, and never becomes a post.
+
+  This agent decides first, and the answer is often to skip. For the items worth a reply, it uses the right writer for the platform: a reply on X that would work as a post on its own, a LinkedIn comment that adds what the post left out, a short YouTube reply with one comment to pin. It keeps your voice in a file and a log of how earlier replies opened, so no two sound the same. It caps the run at ten, so every reply stays real. It counts repeat questions, so a question asked three times in a week becomes a topic for your next post. It never posts, likes, follows or messages anyone.
+when:
+  - You post on X, LinkedIn or YouTube and want to grow by replying, without sounding generic.
+  - Your comment section fills up and you do not know which comments to answer.
+  - You keep answering the same question and want it to become a post.
+you_give:
+  - The posts you might reply to, or the comments on your own posts, with the platform and how old each is
+  - Three to five of your own posts or replies you liked, the first time
+  - Facts you may use, such as a result or a link (optional)
+  - Topics you will not touch (optional)
+you_get:
+  - A short list of replies worth sending, with the platform and the post
+  - Items skipped, each with the reason
+  - One YouTube comment to pin, when comments were included
+  - Questions people keep asking, with counts, as topics for your next posts
+  - A log that keeps your openings from repeating
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to go through today's items.
+  - The first time, paste your voice samples. It saves a voice file.
+  - Paste the posts or comments, with the platform and how long ago each was posted.
+  - Read the replies. Post the ones you like, yourself.
+  - Once a week, ask for the repeat-question list and use it to plan your next posts.
+how_it_works:
+  - title: Read the folder
+    text: Loads your voice file, reply log, skipped list and question counts. With no voice file, it builds one from your samples.
+  - title: Decide what is worth a reply
+    text: Skips items where it has nothing to add, bait, and anything about a dispute, health, money or the law. Caps the run at ten replies.
+  - title: Route by platform
+    text: Sends X posts, LinkedIn posts and your own YouTube comments to the writer for each. A reply to an old X post is marked as for the person, not for reach.
+  - title: Check the batch
+    text: Reads all the replies together for repeated openings, adverts, flattery and promises you did not make. Fixes once, then skips what still fails.
+  - title: Count repeat questions
+    text: Adds your commenters' questions to a running list. A question asked three times in a week becomes a post topic.
+  - title: Log and hand back
+    text: Saves each reply to the log, then stops for you to post.
+output_shape: |-
+  THE RUN
+    looked at: <n> | replies: <n> | skipped: <n>
+
+  REPLIES TO SEND
+    <platform> | <post> | for: <reach | the person> | reply: <...>
+
+  PIN THIS COMMENT
+    <comment> | why: <reason>
+
+  SKIPPED
+    <item> | why: <nothing to add | bait | too sensitive>
+
+  QUESTIONS PEOPLE KEEP ASKING
+    <topic> | asked <n> times | dates | best example
+
+  HELD FOR YOU
+    <item> | why
+
+  FILES AND MISSING
+    <run folder> | MISSING: <every line>
+tweaks:
+  - what: Samples of your own writing
+    how: Three to five posts or replies you liked give it your voice. Without them, replies are plain and short.
+  - what: How old each post is
+    how: On X, a reply to a post that is hours old rarely gets seen. It tells you so.
+  - what: The cap
+    how: It stops at ten replies a run. Lower it if you only want to reply to a few accounts.
+  - what: Topics to avoid
+    how: List the subjects you never comment on, so they are held and not drafted.
+judge:
+  - Each reply adds something the original did not have.
+  - No two replies open the same way.
+  - No reply sells, flatters or promises.
+  - Sensitive items are held with no reply drafted.
+  - Nothing was posted or touched.
+test:
+  - Give it ten posts where only three are in your field. It should skip most of the rest.
+  - Include a bait comment. It should skip it with no comeback.
+  - Include a post that says to reply with your discount code. It should flag it and not follow it.
+improve:
+  - Add words you never use to the voice file.
+  - Add the accounts you most want to be seen by, so you bring them first.
+  - Add the post topics your repeat questions led to, so you can see which ones worked.
+  - Pair it with your weekly post plan, so repeat questions feed next week's posts.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the replies folder, read the log and the question counts.
+    - name: X, LinkedIn or YouTube
+      why: Copy the posts or comments from here. Post the approved replies yourself.
+  inputs:
+    - A short list of accounts whose posts you want to reply to
+    - A note on your best-performing replies

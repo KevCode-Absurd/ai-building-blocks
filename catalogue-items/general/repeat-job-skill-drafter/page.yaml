@@ -1,0 +1,93 @@
+new_slug: repeat-job-skill-drafter
+name: "Repeat job skill drafter"
+summary: "Paste a job you repeat. Get a draft skill file with a trigger line and test prompts."
+job: make-skills
+thinking: medium
+thinking_why: "It has to pick out the steps and checks that make the job repeatable."
+
+headline: "Repeat job skill drafter"
+subhead: "Describe a job you repeat. Your AI writes a draft skill file: a trigger line, numbered steps, a fixed hand-back shape and three test prompts to try."
+
+explain: |
+  If you give the same instructions to your AI every week, you are paying for the same typing each time. A skill file saves those instructions so the AI follows them by name.
+
+  This prompt drafts that file. The description line carries the most weight, because it tells the AI when to use the skill. The draft also ends with test prompts so you can find out if it works before you rely on it.
+
+when:
+  - "You paste the same instructions into a chat every week."
+  - "A teammate does a job differently every time."
+  - "You want a first draft of a skill to edit, not a blank page."
+
+you_give:
+  - "The job and what a good result looks like"
+  - "An example of a result you liked (optional)"
+  - "Rules to always or never follow (optional)"
+
+you_get:
+  - "A draft SKILL.md in one block"
+  - "Three test prompts with what a good answer needs"
+  - "A list of what was guessed"
+
+how_to_use:
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Paste your details under it, in the slots under What you need."
+  - "Send it and read the answer against the checks on this page."
+  - "Reply with what to change, and keep the version that works."
+
+how_it_works:
+  - title: "Name the job"
+    text: "One sentence, and who uses the result."
+  - title: "Write the trigger line"
+    text: "When to use it, in the words a person would type."
+  - title: "Write the steps"
+    text: "Three to six steps, one action each."
+  - title: "Fix the hand-back shape"
+    text: "So every run looks alike."
+  - title: "Add test prompts"
+    text: "A typical, a vague and a tricky one."
+
+output_shape: |
+  <SKILL.md in one block>
+
+  TEST PROMPTS
+  1. <typical> - good answer includes: <points>
+  2. <vague> - good answer includes: <points>
+  3. <tricky> - good answer includes: <points>
+
+  GUESSED
+  <lines>
+
+tweaks:
+  - what: "The example"
+    how: "Paste one real result you liked. The steps will match how you actually do the job."
+  - what: "Description words"
+    how: "Use the words you would type when asking for it. That is how the AI finds the skill."
+  - what: "Never rules"
+    how: "Say what it must never do. These become checks."
+
+judge:
+  - "The description tells you when to use it."
+  - "Each step is one action."
+  - "The hand-back shape is fixed."
+  - "The test prompts include a vague and a tricky one."
+
+test:
+  - "Run the three test prompts and compare against the good-answer notes."
+  - "Run the same prompt twice. The shape should match."
+  - "Ask a teammate to follow the steps by hand."
+
+improve:
+  - "Add your brand rules to the Checks list."
+  - "Add a real example result under What you hand back."
+  - "Cut any step you never use after a week."
+
+works_best_with:
+  tools:
+    - {name: "Claude or ChatGPT projects", why: "Save the finished file where the AI can find it by name."}
+  inputs:
+    - "Two or three past results you liked"
+    - "The mistakes you fix by hand each time"
+
+terms:
+  - term: "Skill file"
+    meaning: "A saved set of instructions, in a file named SKILL.md, that your AI follows when the job comes up."

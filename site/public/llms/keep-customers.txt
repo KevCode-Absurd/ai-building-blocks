@@ -1,14 +1,16 @@
 # Keep customers coming back: AI Blocks
 
-> 22 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 25 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Billing reminder and confirmation writer](https://useaiblocks.com/skills/billing-reminder-and-confirmation-writer): Give it your subscription products and gift schedule. Get billing reminder and order confirmation emails that cut cancels.
 - [Build a VIP program for your best customers](https://useaiblocks.com/workflows/build-a-vip-program-for-your-best-customers): Give it your order history and brand file. Get a best-customer profile, a VIP program and personal touches.
+- [Cancel reason save planner](https://useaiblocks.com/prompts/cancel-reason-save-planner): Paste your cancel reasons and what your tool can do. Get one save per reason and the numbers to track.
 - [Customer wow budget planner](https://useaiblocks.com/skills/customer-wow-budget-planner): Give it your weekly cash and support cases. Get a wow budget and delight-versus-fix rules.
 - [Delivery update flow builder](https://useaiblocks.com/skills/delivery-update-flow-builder): Give it your shipping setup and ticket counts. Get an update flow, tracking page plan and delay script.
 - [First-use gap checker](https://useaiblocks.com/skills/first-use-gap-checker): Paste returns, tickets and reviews. Get where buyers stall before first real use, a fix each and a score.
 - [Launch a subscription and keep your subscribers](https://useaiblocks.com/workflows/launch-a-subscription-and-keep-your-subscribers): Give it your products and orders. Get a priced offer, cancel flow, billing emails and a retention calendar.
 - [Loyalty and VIP program designer](https://useaiblocks.com/skills/loyalty-and-vip-program-designer): Give it your spend tiers and margins. Get a loyalty design with non-discount perks and a test.
+- [Monthly repeat buyer keeper](https://useaiblocks.com/agents/monthly-repeat-buyer-keeper): Give it your order export each month. Get your repeat health scored, the one stage to fix and a plan for it.
 - [New customer onboarding sequence writer](https://useaiblocks.com/skills/new-customer-onboarding-sequence-writer): Give it your product and its use. Get a 14-day email and SMS plan and a 100-day map.
 - [Prepaid plan LTV modeler](https://useaiblocks.com/skills/prepaid-plan-ltv-modeler): Give it price, costs, retention. Get if a prepaid plan beats one-time sales, scored out of 100.
 - [Programmatic direct mail planner](https://useaiblocks.com/skills/programmatic-direct-mail-planner): Give it your flows and customer value. Get triggers to mail, a test cell and a payback check.
@@ -22,5 +24,6 @@
 - [Subscription page take-rate checker](https://useaiblocks.com/skills/subscription-page-take-rate-checker): Give it your product page and pop-up. Get a score out of 100 for selling subscription.
 - [Top customer touch planner](https://useaiblocks.com/skills/top-customer-touch-planner): Give it your customer list and budget. Get a top-50 touch plan and a control group.
 - [Turn the first weeks after an order into repeat buyers](https://useaiblocks.com/workflows/turn-the-first-weeks-after-an-order-into-repeat-buyers): Give it your products and order data. Get post-order emails, delivery updates, a customer stage map and a test plan.
+- [Unboxing card and note planner](https://useaiblocks.com/prompts/unboxing-card-and-note-planner): Paste your order value and margin. Get an insert card, note and gift rule with a cost check.
 - [Unboxing insert and gift planner](https://useaiblocks.com/skills/unboxing-insert-and-gift-planner): Give it order value and margin. Get a costed unboxing plan with insert card, note and gift rules.
 - [Win back lapsed buyers and clean out the rest](https://useaiblocks.com/workflows/win-back-lapsed-buyers-and-clean-out-the-rest): Give it your order history. Get a win-back flow, a stage map, a clean list and a read of the results.

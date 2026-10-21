@@ -1,0 +1,16 @@
+slug: recall-quiz-writer
+name: "Recall quiz writer"
+summary: "Paste your lesson notes. Get a low-stakes recall quiz at three levels, with answers."
+category: general
+type: prompt
+role: make
+job: creative
+level: beginner
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

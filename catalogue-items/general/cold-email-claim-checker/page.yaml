@@ -1,0 +1,89 @@
+new_slug: cold-email-claim-checker
+name: "Cold email claim checker"
+summary: "Paste a cold email and their page text. Get each claim tested, the basics checked and a tighter version."
+job: write-emails
+thinking: medium
+thinking_why: "It tests each claim against pasted text, which takes careful reading."
+
+headline: "Cold email claim checker"
+subhead: "Paste a cold email and the text of the page it mentions. The prompt tests every claim about them, flags anything about you that needs proof, checks the ask, and hands back a tighter version."
+
+explain: |
+  A cold email loses trust fast when one line is wrong about the reader. "I loved your new range" fails if they have no new range. This prompt checks every claim against text you paste, line by line, so you find the miss before they do.
+
+  It also checks the shape: a short honest subject, one ask, and a body that gets to the point. It checks the basics of commercial email, but it is not legal advice. Rules differ by country, so check with a qualified person.
+
+when:
+  - "You wrote a cold email and want it checked before it goes out."
+  - "You mention something about the prospect and want to be sure it is right."
+  - "Your emails get no replies and you suspect they sound false."
+
+you_give:
+  - "The draft with its subject"
+  - "Text from the prospect's page (advised)"
+  - "What you can prove about yourself (advised)"
+you_get:
+  - "A claims table with evidence or status"
+  - "A ranked list of issues"
+  - "A tighter version with unsupported claims removed"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste the draft under the prompt."
+  - "Paste the text of the page or post the email mentions."
+  - "Fill in each [CONFIRM] before you send."
+
+how_it_works:
+  - title: "List claims about them"
+    text: "Quote the evidence for each from their text. Mark it Supported, Unsupported (the text says nothing or says otherwise) or Not checked."
+  - title: "List claims about you"
+    text: "Mark each Backed (you said it is true) or Needs proof."
+  - title: "Flag fake familiarity"
+    text: "Flag lines that imply you read, used or met something, such as \"loved your newsletter\", unless you said so."
+  - title: "Check the shape"
+    text: "The subject is about six words or fewer and honest. There is one ask that a short reply can answer. The body is about 120 words or fewer."
+  - title: "Check the basics"
+    text: "For commercial email, check for a real sender identity, a postal address and a clear way to opt out. Rules differ by country. This is not legal advice, so check with a qualified person."
+  - title: "Tighten it"
+    text: "Remove or mark unsupported claims as [CONFIRM: ...]. Keep my voice. Add no new fact."
+
+output_shape: |
+  VERDICT: <send as is | send after fixes | do not send>, because <reason>
+  CLAIMS
+  <claim> | <evidence or status>
+  ISSUES
+  1. "<my words>" - <why it matters> - <fix>
+  TIGHTENED VERSION
+  <draft with [CONFIRM: ...] where needed>
+  BEFORE YOU SEND: <what to add or confirm>
+
+tweaks:
+  - what: "Their text"
+    how: "More of their real words means fewer \"not checked\" marks."
+  - what: "What you can prove"
+    how: "Say which results are true. Anything unsaid is marked Needs proof."
+  - what: "Country"
+    how: "Say where you and the reader are. The basics checked differ."
+
+judge:
+  - "Every claim about them has a quote or a mark."
+  - "No claim in the tighter version is new."
+  - "There is only one ask."
+  - "The postal address and opt-out line are noted as present or missing."
+
+test:
+  - "Add a made-up compliment to a draft. It should flag it."
+  - "Paste a draft with a true, sourced claim. It should keep it."
+  - "Run it twice. The verdict should match."
+
+improve:
+  - "Add your own rule for length or tone under the prompt."
+  - "Save your approved proof points, so claims about you are backed."
+  - "Pair it with the Cold email pre-send checker for every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "Your approved proof points"
+    - "Your postal address and opt-out line"

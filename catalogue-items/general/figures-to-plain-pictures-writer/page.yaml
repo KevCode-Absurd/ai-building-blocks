@@ -1,0 +1,92 @@
+new_slug: figures-to-plain-pictures-writer
+name: "Figures to plain pictures writer"
+summary: "Paste your key figures and who will hear them. Get each one as a comparison the room can picture."
+job: speak-and-persuade
+thinking: low
+thinking_why: "It translates a few numbers into short comparisons."
+
+headline: "Figures to plain pictures writer"
+subhead: "Paste your key figures and who will hear them. The prompt keeps the few that matter, turns each into a comparison and a count of people the room can picture, and keeps the real figure beside it."
+
+explain: |
+  A number means a lot to you and little to the room. "Churn rose 2.4 percent" sounds small. "About 30 of our 1,250 customers left" is a room full of people. People remember pictures, not percentages.
+
+  This prompt picks the few figures that matter, then turns each into a comparison with its sum shown. It keeps the exact figure next to the picture, so no one is misled. It never guesses a total it was not given.
+
+when:
+  - "You are presenting numbers to people who do not work with them."
+  - "Your slide has ten figures and no point."
+  - "A board member always asks \"what does that mean?\""
+
+you_give:
+  - "The figures, with what they measure, the period and source"
+  - "Who will hear them"
+  - "Where you will use them (optional)"
+you_get:
+  - "The figures kept and set aside"
+  - "A comparison, a count of people and a line to say for each"
+  - "A test question for a non-expert"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste the figures and who will hear them under the prompt."
+  - "Say where you will use them, so the lines fit."
+  - "Try one line on a person outside your field."
+
+how_it_works:
+  - title: "Keep the few that matter"
+    text: "Keep two to five figures that change what the audience should think or do. List the rest as set aside, with a reason."
+  - title: "Pick a comparison they know"
+    text: "Compare to a size, span of time or place the audience knows. Show the arithmetic. If a needed fact is missing, write MISSING."
+  - title: "Swap percentages for people"
+    text: "Turn a rate into a count, such as \"1 in 20\" or \"about 40 of your 800 customers\", only if the total was given."
+  - title: "Add who gains or loses"
+    text: "One short line per figure, using only what the data shows."
+  - title: "Keep the original"
+    text: "Put the exact figure, unit and period next to each new version."
+  - title: "Plan a test"
+    text: "Write one question to ask a non-expert after they hear it, and what a good answer repeats."
+
+output_shape: |
+  KEPT: <figure>, <why>
+  SET ASIDE: <figure>, <why>
+  FOR EACH KEPT FIGURE
+  Original: <figure, unit, period>
+  Comparison: <comparison> (sum: <arithmetic>)
+  People: <count>
+  Who gains or loses: <one line>
+  Say it: <line>
+  IMAGE (illustration): <...>
+  TEST QUESTION: <...>
+  MISSING: <...>
+
+tweaks:
+  - what: "Totals"
+    how: "Give the total each rate comes from, so it can write counts of people."
+  - what: "The audience"
+    how: "Say what they know. A comparison for engineers differs from one for a board."
+  - what: "Where it goes"
+    how: "A slide needs a shorter line than a speech."
+
+judge:
+  - "The sums are right when you check them."
+  - "The original figures are kept."
+  - "Nothing was guessed."
+  - "A newcomer would understand each line."
+
+test:
+  - "Check one sum by hand."
+  - "Try the lines on someone outside your field and ask what they remember."
+  - "Run it twice. The kept figures should match."
+
+improve:
+  - "Add comparisons your audience already uses."
+  - "Add the decision you want after the talk, so it keeps the right figures."
+  - "Pair it with the Number-to-picture translator for every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "The decision you want from the room"
+    - "Comparisons your audience already uses"

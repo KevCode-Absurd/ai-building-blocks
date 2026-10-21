@@ -1,0 +1,97 @@
+new_slug: monthly-returns-and-refunds-reviewer
+name: Monthly returns and refunds reviewer
+summary: Run it monthly. Get the products driving refunds, why, what returns cost and the one fix to make first.
+job: run-your-store
+thinking: medium
+thinking_why: It runs several read-only reports and sorts causes from counts. A mid-range model is enough.
+headline: Monthly returns and refunds reviewer
+subhead: Run it once a month. It finds the products behind your refunds, sorts the cause into listing, fit or damage, prices what returns cost you, and hands back one fix to make first.
+explain: |
+  Refunds feel like part of doing business, so most owners never look at them closely. But each one has a cause. A photo that makes a product look bigger. A size chart that is off. A box that lets things break. Fix the cause and the refunds stop.
+
+  This agent reads your returns and refunds each month. It finds products whose refund rate is far above your store's, counts the reasons, and says whether the listing, the fit or the damage is the likely cause. It prices the worst ones over 90 days, checks how fast you refund, and flags orders with odd refund patterns. You get one fix to make first. It refunds and changes nothing itself.
+when:
+  - Refunds are a visible cost and you do not know which products cause them.
+  - You think a listing or a size guide misleads, but cannot prove it.
+  - You want to check refunds are paid on time and the exchange share is not falling.
+you_give:
+  - A connection to your Shopify store, or exports of refunds and returns
+  - Product costs, so written-off stock is priced (strongly advised)
+  - What changed last month, such as a new supplier or a rewritten listing (optional)
+you_get:
+  - Your refund rate by product against the store's rate
+  - Return reasons per standout product and the likely cause
+  - What returns cost over 90 days, product by product
+  - The one fix to make first, and the rest in order
+how_to_use:
+  - Add the agent in Claude Code, or save it in .claude/agents, and connect your store.
+  - Ask it to review last month's returns on the 3rd.
+  - Read the fix to make first. Check the listing, size guide or packaging it names.
+  - Tell the agent what you changed. It saves that next to the product's rate.
+  - Run it again next month. It shows whether the rate fell.
+how_it_works:
+  - title: Read last month
+    text: Opens the saved refund rates by product, or marks this as the baseline run.
+  - title: Find rates and reasons
+    text: Works out each product's refund rate against the store's, and counts the reasons given.
+  - title: Choose the path for each standout
+    text: Sorts each standout into misleading listing, fit, damage or no clear cause, then prices it over 90 days.
+  - title: Read exchanges and speed
+    text: Checks the exchange share against last month and lists returns that ran past your refund limit.
+  - title: Check for patterns
+    text: Lists orders with several partial refunds, as a pattern to look at and not an accusation.
+  - title: Pick one fix
+    text: Ranks by money, names one fix to make first, saves the rates for next month and stops.
+output_shape: |-
+  THIS MONTH
+    Refund rate <%> vs last month <%> | returns <n> | exchange share <%> vs last month <%>
+
+  MAKE THIS FIRST
+    <fix> | product <...> | reason <...> | cost over 90 days <amount>
+
+  STANDOUT PRODUCTS
+    <product> | rate <%> vs store <%> | main reason <...> | likely cause <listing | fit | damage | unclear> | standout last month <yes | no>
+
+  LATE REFUNDS
+    <count> | longest wait <days> | your limit <days>
+
+  PATTERNS TO LOOK AT
+    <order> | why flagged <...>
+
+  WATCH NEXT MONTH
+    <1 to 3 items>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: What counts as a standout
+    how: The start is at least five orders and a rate double the store's. Use a higher bar if your store has few returns.
+  - what: Your refund limit
+    how: Default is 5 days from request to refund. Set yours to match your returns policy.
+  - what: Product costs
+    how: Add them, so damaged items are priced at what they cost you, not at their sale price.
+  - what: What changed last month
+    how: A new supplier or listing explains many jumps. Tell it, and it checks that first.
+judge:
+  - Each rate is set against the store's overall rate, with the sums shown.
+  - Every standout has a reason group and a likely cause.
+  - Small samples are called small, not trends.
+  - The one fix is named and tied to money or counts.
+  - No order, customer or listing changed without your yes.
+test:
+  - Run it on a month where you already know a product caused trouble. See if it ranks that product first.
+  - Run it twice on the same month. The standout list should be the same.
+  - Give it a month with too few returns and check it says there is not enough to act on.
+improve:
+  - Set your own rule for a standout to suit your return volume.
+  - Add the listing fix you made to the notes, so the next run shows if the rate fell.
+  - Add your return reasons list, so labels like "other" are split into real causes.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the returns folder and run on the 3rd of each month.
+    - name: Shopify
+      why: The skills read refunds and returns from the store connection.
+  inputs:
+    - Product costs for your top sellers
+    - A note of listing, supplier or packaging changes last month

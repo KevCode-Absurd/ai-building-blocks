@@ -1,0 +1,32 @@
+slug: class-quiz-reteach-keeper
+name: "Class quiz reteach keeper"
+summary: "Give it each quiz's results. Get what to reteach and how, then a check next quiz on whether it worked."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: document, required: false}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+uses: [quiz-and-dashboard-data-reader, student-mistake-analyser, direct-teaching-lesson-builder, worked-example-practice, concept-contrast-task, flawed-example-writer, step-by-step-hint-writer, retrieval-quiz-writer, lesson-understanding-check, skill-progression-map-builder]
+steps:
+  - {uses: quiz-and-dashboard-data-reader, note: "Every quiz: what the results say, which questions most of the class missed, and what to do next in class."}
+  - {uses: student-mistake-analyser, note: "Every quiz, on the one to three most-missed questions: the likely cause of each error."}
+  - {uses: direct-teaching-lesson-builder, note: "Only when more than half the class missed the idea and it is new or never clicked: a short lesson from showing to practice together to practice alone."}
+  - {uses: worked-example-practice, note: "Only when the missed idea is a procedure students cannot yet run alone: worked examples that fade to solo practice."}
+  - {uses: concept-contrast-task, note: "Only when the error is mixing up two ideas: a task of contrasting examples."}
+  - {uses: flawed-example-writer, note: "Only when one specific mistake is common (about a third or more of the class): examples with that mistake built in to spot and fix."}
+  - {uses: step-by-step-hint-writer, note: "Only when fewer than a quarter missed it: hints for a small group so the whole class does not repeat the lesson."}
+  - {uses: lesson-understanding-check, note: "For any reteach lesson: a check at each stage, so you know who has it before moving on."}
+  - {uses: retrieval-quiz-writer, note: "Every quiz: short recall questions on the reteached topic, for starters one week and three weeks on."}
+  - {uses: skill-progression-map-builder, note: "Only when a topic has been reteached twice and results have not moved: the prerequisite steps, to find the gap beneath it."}
+schedule: "After each quiz or test is marked"
+asks_before: [sharing student results or names with anyone, changing grades or records, sending messages to students or families, changing the teaching plan you have already published]
+origin: own
+version: 1.0.0
+example_pending: true

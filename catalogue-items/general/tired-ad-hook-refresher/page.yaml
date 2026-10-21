@@ -1,0 +1,91 @@
+new_slug: tired-ad-hook-refresher
+name: Tired ad hook refresher
+summary: Paste a fading winner's numbers. Get the cause, a pace, and ten new opening briefs on the same ad.
+job: launch-and-scale-ads
+thinking: medium
+thinking_why: It must read the numbers, call a cause and write briefs that really differ.
+headline: Tired ad hook refresher
+subhead: Paste the weekly spend and return of an ad that is fading, its script, and the hooks you have used. You get the cause, how hard to push it, and ten new opening briefs that keep the winning body, each changing one thing.
+explain: |
+  A winning ad fades. The usual response is to make a whole new ad, which costs more and may not work. Often the body of the ad still works, and only the first few seconds have gone stale.
+
+  This prompt reads the weekly numbers, names where the ad is in its life, and calls the cause: stale creative or an audience that is too small. It sets the pace from your stock and cash so you do not sell faster than you can ship. Then it keeps the body and writes new openings, each changing one thing: the angle, the offer, who says it, or the format. The figures it cites come from one agency's reports and are not promises.
+when:
+  - Your best ad is slipping and you do not want to start over.
+  - You have stock to sell and want to keep a winner running.
+  - You need a shoot list for one quick filming session.
+you_give:
+  - Spend and return by week
+  - The ad's script or transcript
+  - Hooks already used
+  - Stock and cash position
+you_get:
+  - The cause, tied to a number
+  - A pace for your stock and cash
+  - Ten opening briefs, each changing one thing
+  - A test plan with names and a decision order
+how_to_use:
+  - Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini, with your details under it.
+  - Under the prompt, paste the weekly numbers and the script.
+  - List the openings you have already used.
+  - Film all the new openings in one session.
+how_it_works:
+  - title: Finds the life stage
+    text: Climbing, at limit or falling.
+  - title: Calls the cause
+    text: Stale creative or too small an audience.
+  - title: Sets the pace
+    text: From stock and cash.
+  - title: Keeps the body
+    text: Only the first 3 to 5 seconds change.
+  - title: Writes the briefs
+    text: Each changes one lever.
+  - title: Plans the test
+    text: Names, spend and what decides.
+output_shape: |
+  CAUSE: <stale | audience too small | both>, because <number>
+  LIFE STAGE: <climbing | at limit | falling>
+  PACE: <push | run lower>, because <stock and cash>
+  HOOK BRIEFS (body unchanged):
+   <n> | lever: <angle | offer | person | format> | who is on camera | first line | first frame
+  TEST PLAN: <names> | spend per opener <$> | read at <days>
+  MISSING: <what would sharpen this>
+  CHECK WITH A QUALIFIED PERSON: <any health, weight or money claim>
+tweaks:
+  - what: Budget
+    how: Small budgets get 3 openings, not 10.
+  - what: Hooks used
+    how: Paste all of them so none repeats.
+  - what: Who can film
+    how: Say who is available so briefs fit.
+  - what: Stock
+    how: Low stock gives a slower pace.
+judge:
+  - The cause matches a number you gave.
+  - Each brief changes one thing.
+  - No brief is a recut of the old opening.
+  - The pace fits your stock.
+test:
+  - Use a real fading ad. The cause should match what you suspected.
+  - Check the briefs are visibly different.
+  - Run three openings first and compare thumb-stop and hold.
+improve:
+  - Add your claims rules.
+  - Add the people who can film.
+  - Add the openings that failed before.
+  - Pair it with the Ad opening line batch writer.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A short prompt works the same in Claude, ChatGPT or Gemini, so use the one you already have open.
+  inputs:
+    - The winning ad's transcript
+    - A list of every opening used
+    - Your stock and cash position
+terms:
+  - term: Hook
+    meaning: The first 3 to 5 seconds of an ad.
+  - term: Body
+    meaning: The part of the ad after the hook.
+  - term: Lever
+    meaning: The one thing a new opening changes.

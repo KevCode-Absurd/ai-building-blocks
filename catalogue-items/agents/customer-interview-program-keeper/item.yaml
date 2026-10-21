@@ -1,0 +1,28 @@
+slug: customer-interview-program-keeper
+name: "Customer interview program keeper"
+summary: "Give it each round of interview notes. Get buyer patterns that grow round by round, the next questions, and a call on when to stop."
+category: agent
+type: agent
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: question, required: true}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+  - {type: persona}
+uses: [buying-story-interview-guide, customer-interview-notes, switch-story-mapper, job-based-avatar-builder, switch-friction-remover]
+steps:
+  - {uses: buying-story-interview-guide, note: "On the first run, and after any round with weak answers or a gap to fill: the next round's questions, who to talk to and how to record."}
+  - {uses: customer-interview-notes, note: "Every round, for each person: splits the notes into facts, praise and ideas, and marks who is a likely customer."}
+  - {uses: switch-story-mapper, note: "Only once at least five people have usable stories: maps each buying story, the four forces and the patterns across people."}
+  - {uses: job-based-avatar-builder, note: "Only when a new pattern is backed by two or more separate people: one buyer card per pattern, with quotes."}
+  - {uses: switch-friction-remover, note: "Only when the patterns have stopped changing or a holding force is clear: ranks the habits and worries that hold buyers back and picks one change to test."}
+schedule: "After each round of interviews, about every two weeks"
+asks_before: [contacting anyone to invite or thank them, recording a conversation, offering a payment or gift for an interview, using a customer's words or name in an ad or page, changing a page, price or onboarding step because of a finding]
+origin: own
+version: 1.0.0
+example_pending: true

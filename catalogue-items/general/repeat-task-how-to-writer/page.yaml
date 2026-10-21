@@ -1,0 +1,71 @@
+new_slug: repeat-task-how-to-writer
+name: Repeat task how-to writer
+summary: Paste how you do a repeat task. Get exact steps, fixes and who to ask if it fails.
+job: document-work
+thinking: low
+thinking_why: It puts your rough steps into a fixed layout with few judgement calls.
+headline: Repeat task how-to writer
+subhead: Paste how you do a repeat task, even in rough form. You get numbered steps with what to expect, what to do if it fails, how to check it worked, how to undo it and who to ask.
+explain: Tasks that live in one person's head stop when that person is away. This prompt writes them down in a form anyone can follow. Each step is one action, with what you should see after it and what to try if it does not happen. It ends with a check, an undo and a name to ask. Anything a new person would have to guess is marked as missing, so you know where to add detail.
+when:
+  - Only one person knows how to do this task.
+  - A new person starts and you are about to explain it again.
+  - A task breaks now and then and the fix is not written down.
+you_give:
+  - The task name, how often and who does it
+  - Your steps as you do them
+  - What usually goes wrong (optional)
+you_get:
+  - Numbered steps with expected results
+  - A fix for each step that can fail
+  - A way to check it worked and to undo it
+  - Gaps marked clearly
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste the task and your steps.
+  - Send it and read the result.
+  - Ask someone who has never done it to follow the how-to and note where they stall.
+how_it_works:
+  - title: Set the scene
+    text: Purpose and what must be ready.
+  - title: Number the steps
+    text: One action each, with what you should see.
+  - title: Plan for trouble
+    text: Fixes, a check, an undo and who to ask.
+output_shape: |-
+  PURPOSE
+  BEFORE YOU START
+  STEPS
+  1. <action>
+     You should see: <result>
+     If not: <fix>
+  CHECK IT WORKED
+  UNDO IT
+  WHO TO ASK
+  MISSING
+tweaks:
+  - what: Detail
+    how: Say the reader is new and every step gets more detail.
+  - what: Format
+    how: Ask for a checklist version with tick boxes.
+  - what: Frequency
+    how: Give how often it runs and it adds when to run it.
+judge:
+  - One action per step.
+  - Every step has an expected result.
+  - Failure points have fixes.
+  - Gaps are marked.
+test:
+  - Give three vague steps. It should flag where a new person would stall.
+  - "Give no contact. It should write MISSING: who to ask."
+  - Follow its steps yourself once.
+improve:
+  - Add screenshots or file names after the first draft.
+  - Review it every quarter.
+  - Use the full skill for tasks with many roles and branches.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - The task name, how often and who does it

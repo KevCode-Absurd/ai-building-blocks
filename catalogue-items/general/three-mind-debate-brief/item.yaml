@@ -1,0 +1,18 @@
+slug: three-mind-debate-brief
+name: "Three-mind debate brief"
+summary: "Paste a hard decision. Get three thinkers arguing it and a brief with three first steps."
+category: general
+type: prompt
+role: make
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: council_brief}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "LLM Council", by: "Andrej Karpathy", url: "https://github.com/karpathy/llm-council", used: "Answers are ranked without knowing whose they are, then one chair writes the final answer"}

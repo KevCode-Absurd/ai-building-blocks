@@ -1,0 +1,22 @@
+slug: price-ending-picker
+name: Price ending picker
+summary: Paste a price and what you sell. Get round, just-below or exact digits, with the reason.
+category: ecommerce
+type: prompt
+role: check
+job: offer
+level: beginner
+inputs:
+  - type: product_data
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: pricing skill
+    by: Checkout Page
+    url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/pricing
+    used: Rules for round, just-below and exact price endings, flat rates and where the price sits on the page (MIT licence)

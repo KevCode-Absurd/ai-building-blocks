@@ -1,0 +1,16 @@
+slug: lesson-opener-planner
+name: "Lesson opener planner"
+summary: "Paste today's topic and last lesson. Get a five-minute opener that brings back what learners know."
+category: general
+type: prompt
+role: make
+job: creative
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

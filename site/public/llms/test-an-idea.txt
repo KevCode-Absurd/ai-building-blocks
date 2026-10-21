@@ -1,6 +1,6 @@
 # Test an idea before you build it: AI Blocks
 
-> 60 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 62 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI-fit problem checker](https://useaiblocks.com/skills/ai-fit-problem-checker): Describe a problem. Get a verdict on whether AI suits it, using three tests, and the data or simulator you would need.
 - [Assumption test ranker](https://useaiblocks.com/skills/assumption-test-ranker): Give it your list of assumptions. Get them ranked by impact and risk, with a test for each top one.
@@ -38,6 +38,7 @@
 - [Niche readiness checker](https://useaiblocks.com/skills/niche-readiness-checker): Paste your offer and how customers found you. Get a niche verdict, a one-line niche statement and the next step.
 - [One-change experiment planner](https://useaiblocks.com/skills/one-change-experiment-planner): Describe any idea or number to test. Get a plan that changes one thing at a time and says what results mean.
 - [Opportunity validation planner](https://useaiblocks.com/skills/opportunity-validation-planner): Give it a product bet. Get your riskiest assumptions mapped and a short plan to test them before you build.
+- [Plan guess ranker](https://useaiblocks.com/prompts/plan-guess-ranker): Paste your plan. Get the few guesses it rests on, each with a number, ranked by risk.
 - [Prediction and bet planner](https://useaiblocks.com/skills/prediction-and-bet-planner): Paste a belief you hold. Get what it predicts, what would prove it wrong, a small bet and a date to check.
 - [Pretotype experiment designer](https://useaiblocks.com/skills/pretotype-experiment-designer): Give it a new product idea. Get cheap tests like landing pages and pre-orders, each with a clear pass mark.
 - [Product demand researcher](https://useaiblocks.com/skills/product-demand-researcher): Give it a product idea. Get the pain points, objections and buying signals people post, with links. Collects data from websites.
@@ -60,5 +61,6 @@
 - [Three-buyer idea test planner](https://useaiblocks.com/skills/three-buyer-idea-test-planner): Paste your business idea. Get the one-minute math and a weekend plan to ask ten people to pay.
 - [Trial log planner](https://useaiblocks.com/skills/trial-log-planner): Paste what you want to get working. Get many cheap trials, a log for each and what each failure ruled out.
 - [Turn your plan into guesses and test them with customers](https://useaiblocks.com/workflows/plan-assumption-tests): Give it your business plan. Get testable guesses, an interview plan and the smallest test of the riskiest guess.
+- [Two-day paid ask planner](https://useaiblocks.com/prompts/two-day-paid-ask-planner): Paste your idea, buyer and price. Get the buyer-count math, ten people to ask and a go or change rule.
 - [Usability test runner](https://useaiblocks.com/skills/usability-test-runner): Give it a design or prototype. Get a test plan, task scripts, moderator notes and a findings summary.
 - [Would people miss your product? Then pick growth tests](https://useaiblocks.com/workflows/product-miss-growth-tests): Give it your product and users. Get a short survey, the 40 percent test and ranked growth ideas.

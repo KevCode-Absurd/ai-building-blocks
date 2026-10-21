@@ -1,6 +1,6 @@
 # Hire and look after your people: AI Blocks
 
-> 94 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 98 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [30-60-90 day onboarding planner](https://useaiblocks.com/skills/30-60-90-day-onboarding-planner): Tell it the role and team. Get a 30, 60 and 90 day plan that gets a new person productive.
 - [Applicant shortlist builder](https://useaiblocks.com/skills/applicant-shortlist-builder): Give it the job and the resumes. Get a ranked shortlist scored only on the job needs, with replies drafted.
@@ -8,6 +8,7 @@
 - [Candidate experience improver](https://useaiblocks.com/skills/candidate-experience-improver): Describe your hiring steps. Get a map of what candidates go through, where they struggle and messages for each stage.
 - [Candidate message drafter](https://useaiblocks.com/skills/candidate-message-drafter): Say where the candidate is in your process. Get a clear email, rejection or update draft for you to send.
 - [Candidate outreach drafter](https://useaiblocks.com/skills/candidate-outreach-drafter): Describe the role and the person you want. Get personal first messages and follow-ups to send yourself.
+- [Candidate reply drafter](https://useaiblocks.com/prompts/candidate-reply-drafter): Paste where the candidate is in your process. Get a clear reply or rejection to send.
 - [Candidate sourcing planner](https://useaiblocks.com/skills/candidate-sourcing-planner): Give it a role and candidate profile. Get the best places to look, target companies and a week-by-week plan.
 - [Career ladder and growth plan writer](https://useaiblocks.com/skills/career-ladder-plan): Name a job family. Get career levels, growth plans and a manager guide for career talks.
 - [Company policy explainer](https://useaiblocks.com/skills/company-policy-explainer): Ask about leave, travel or expenses. Get the rule in plain words from your handbook. Check with HR for big decisions.
@@ -49,6 +50,7 @@
 - [Inclusive workplace plan builder](https://useaiblocks.com/skills/inclusive-workplace-plan-builder): Describe your team. Get an inclusion plan, fair hiring steps, group ideas and measures to track.
 - [Internal job move program builder](https://useaiblocks.com/skills/internal-mobility-program): Describe your company. Get a transfer process, forms for staff and managers, and measures to track.
 - [Interview process planner](https://useaiblocks.com/skills/interview-process-planner): Name the role and level. Get the interview stages, who runs each one and what each stage checks.
+- [Interview question set maker](https://useaiblocks.com/prompts/interview-question-set-maker): Paste the role and what it needs. Get set questions, answer signs and a scorecard.
 - [Interview scorecard builder](https://useaiblocks.com/skills/interview-scorecard-builder): Give it your interview stages. Get scorecards, question banks, a phone screen script and a rating guide.
 - [Job ad campaign planner](https://useaiblocks.com/skills/job-ad-campaign-planner): Give it a role and who you want to reach. Get job ad copy, a content calendar and a test plan.
 - [Job duties and level analyst](https://useaiblocks.com/skills/job-duties-and-level-analyst): Name a role. Get its duties, time split, required skills and a fair level, ready for pay and planning.
@@ -76,8 +78,10 @@
 - [People cost budget builder](https://useaiblocks.com/skills/people-cost-budget-builder): Give it your headcount plan. Get a budget by team, a month-by-month view and notes to explain gaps to finance.
 - [People risk register builder](https://useaiblocks.com/skills/people-risk-register-builder): Give it your team and rules. Get a ranked list of people risks, owners and response steps. Not legal advice.
 - [Performance review helper](https://useaiblocks.com/skills/performance-review-helper): Pick your review cycle. Get a self-review template, a manager review draft and calibration prep with specific examples.
+- [Plain job post drafter](https://useaiblocks.com/prompts/plain-job-post-drafter): Paste the role and what it needs. Get a clear job post with real requirements.
 - [Plan a year of hiring and what it will cost](https://useaiblocks.com/workflows/plan-a-year-of-hiring-and-what-it-will-cost): Give it past headcount and goals. Get a forecast, a hiring plan and a monthly cost budget.
 - [Product manager resume reviewer](https://useaiblocks.com/skills/product-manager-resume-reviewer): Give it your resume and a target job. Get a review against ten best practices and a version tailored to the role.
+- [Quarterly headcount plan keeper](https://useaiblocks.com/agents/quarterly-headcount-plan-keeper): Give it each quarter's people numbers. Get the plan checked against what happened, the scenario to follow and the budget gap.
 - [Reference check question writer](https://useaiblocks.com/skills/reference-check-question-writer): Give it a role. Get fair reference questions, a call script and a sheet to record answers. Check local rules first.
 - [Review cycle form builder](https://useaiblocks.com/skills/review-cycle-form-builder): Give it your team and goals. Get review forms, goal templates and a guide for fair rating meetings. Not legal advice.
 - [Role skills framework builder](https://useaiblocks.com/skills/role-skills-framework-builder): Name your roles. Get the key skills for each, what good looks like at each level, and matching interview questions.

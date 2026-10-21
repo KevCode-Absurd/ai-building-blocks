@@ -1,0 +1,28 @@
+slug: price-test-keeper
+name: "Price test keeper"
+summary: "Give it your costs, sales and rival prices. It plans one undoable price test, reads the result and sets the next."
+category: agent
+type: agent
+role: orchestrate
+job: offer
+level: advanced
+inputs:
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: competitor_set, required: false}
+  - {type: tool_connection, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [waterfall-price-setter, price-sensitivity-analyst, price-test-planner, split-run-result-reader, price-position-planner]
+steps:
+  - {uses: waterfall-price-setter, note: "Once per product, and again when costs change: the lowest viable price, which every test stays above."}
+  - {uses: split-run-result-reader, note: "The day a price test ends: orders and visitors for each price, with a keep, rerun or stop call."}
+  - {uses: price-position-planner, note: "Only when a rival's price changed since last time: hold, test or a bounded match, never below your floor."}
+  - {uses: price-sensitivity-analyst, note: "Only when your store is connected and no test is running: which products react to price."}
+  - {uses: price-test-planner, note: "When a product has no test running: the one price to try, three outcome cases and how to undo it."}
+schedule: "Every four weeks, and the day a price test ends"
+asks_before: [changing any live price, starting a test that shows customers different prices, matching a rival's price, bulk price changes, changing shipping or discount rules]
+origin: own
+version: 1.0.0
+example_pending: true

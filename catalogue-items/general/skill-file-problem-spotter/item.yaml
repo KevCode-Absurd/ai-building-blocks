@@ -1,0 +1,16 @@
+slug: skill-file-problem-spotter
+name: "Skill file problem spotter"
+summary: "Paste a SKILL.md. Get a ranked list of problems to fix before you share it."
+category: general
+type: prompt
+role: check
+job: ops
+level: intermediate
+inputs:
+  - {type: skill_files, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

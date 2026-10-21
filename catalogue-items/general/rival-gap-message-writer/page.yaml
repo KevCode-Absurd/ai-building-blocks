@@ -1,0 +1,80 @@
+new_slug: rival-gap-message-writer
+name: Rival gap message writer
+summary: Name a rival and your proven strengths. Get messages where your strength is their gap, plus their likely reply.
+job: study-competitors
+thinking: medium
+thinking_why: It weighs proof against a rival's likely reply, which takes judgement.
+headline: Rival gap message writer
+subhead: Paste a rival's public facts and your proven strengths under this prompt. It matches your strength against their gap on the same point and writes messages you can defend. You get the evidence and the rival's likely reply for each.
+explain: |
+  Many brands attack a rival head on, or say they are better with nothing to show. A stronger move is to find the one thing you do well that the rival is weak at, and say that about yourself. Buyers who know the market will see the contrast without you naming anyone.
+
+        This prompt keeps the match honest. It uses public facts only, drops any strength without proof, and keeps pairs a buyer can check in minutes. Then it tests the rival's best reply, so you do not send a message that backfires.
+when:
+  - A bigger rival owns your category and you need a way in.
+  - You say you are better but cannot say how.
+  - You are about to run an ad that compares you with a named rival.
+you_give:
+  - The rival and public facts about it, with sources
+  - Your strengths, with proof
+  - Your brand file (optional)
+you_get:
+  - Two or three messages built on your strength
+  - The evidence a buyer can check for each
+  - The rival's likely reply and the risk to you
+  - A list of claims that have no proof yet
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - Add a source and date for each fact about the rival.
+  - Be honest about proof. Claims with no proof will be set aside.
+  - Show the messages to someone outside the business before you use them.
+how_it_works:
+  - title: List rival gaps
+    text: Weak spots come from public facts with sources.
+  - title: List your proof
+    text: Strengths with proof stay. The rest are set aside.
+  - title: Pair on one axis
+    text: Only checkable pairs on the same point are kept.
+  - title: Write the message
+    text: About your strength, without naming the rival.
+  - title: Test the reply
+    text: Messages the rival could turn against you are rewritten or dropped.
+output_shape: |
+  MESSAGE 1 (use first)
+        Headline: <about your strength>
+        Evidence: <proof a buyer can check>
+        Rival gap behind it: <weak spot> [source, date]
+        Their likely reply: <...>
+        Risk to you: <...>
+
+        MESSAGE 2 and 3 in the same shape
+
+        CLAIM ONLY (not used): <...>
+        MISSING: <...>
+tweaks:
+  - what: Proof quality
+    how: Numbers, policies and test results beat adjectives. Add them and more pairs survive.
+  - what: Sources
+    how: Facts with dates stop the prompt from relying on old news.
+  - what: More rivals
+    how: Run one rival at a time so the replies stay specific.
+judge:
+  - Each rival weak spot has a source and date.
+  - No message names or attacks the rival.
+  - Each message has proof a buyer could check in minutes.
+  - The likely reply is realistic, not weak on purpose.
+test:
+  - Use a rival you know well. The weak spots should be ones you can prove.
+  - Add a strength with no proof. It should land on the claim-only list.
+  - Read each message to a friend and ask what rival it points to.
+improve:
+  - Add your approved claims and the words you never use.
+  - Add your own weak spots so the reply test is harder.
+  - Save the winning message in your brand file.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - Public sources such as the rival's pricing page and reviews
+    - Your own test results, guarantees and numbers

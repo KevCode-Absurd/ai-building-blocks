@@ -1,6 +1,6 @@
 # Set up AI to work for you: AI Blocks
 
-> 49 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 51 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Agent context setter](https://useaiblocks.com/skills/agent-context-setter): Describe your project. Get the right rules and files loaded so your AI stays accurate through long sessions.
 - [Agent goal writer](https://useaiblocks.com/skills/agent-goal-writer): Give it a vague job. Get a goal an AI agent can finish, with proof of done, limits and stop rules.
@@ -22,6 +22,7 @@
 - [Full answer enforcer](https://useaiblocks.com/skills/full-answer-enforcer): Ask for a full file or list. Get every line, with no placeholders, skipped parts or half answers.
 - [Give AI tasks and keep what the job quietly does](https://useaiblocks.com/workflows/hand-tasks-to-ai-without-losing-what-the-job-quietly-does): Give it a job. Get the tasks AI takes on, what each hides, safe handoffs and a failure check.
 - [Goal-to-task loop runner](https://useaiblocks.com/skills/goal-to-task-loop-runner): Give it a goal and a folder of skills. Get a checked task plan that runs one task at a time.
+- [Job to agent goal writer](https://useaiblocks.com/prompts/job-to-agent-goal-writer): Paste a vague job. Get a goal an AI agent can finish, with proof of done and stop rules.
 - [Local AI model setup](https://useaiblocks.com/skills/local-ai-model-setup): Say what hardware you have. Get Ollama and Open WebUI running local models, tuned for your graphics card.
 - [Long chat failure diagnoser](https://useaiblocks.com/skills/long-chat-failure-diagnoser): Describe how your AI gets worse in long chats. Get the likely cause and a fix to try.
 - [Long chat summariser](https://useaiblocks.com/skills/long-chat-summariser): Give it a long AI session. Get a structured summary that keeps files, decisions and next steps.
@@ -44,6 +45,7 @@
 - [Repeat chore automation planner](https://useaiblocks.com/skills/repeat-chore-automation-planner): List what your team does each week. Get the chores worth handing to a tool, with steps a new hire can run.
 - [Repeatable AI loop designer](https://useaiblocks.com/skills/repeatable-ai-loop-designer): Describe a recurring job. Get a loop with triggers, checks, stop rules and handoffs.
 - [Role task breakdown for AI help](https://useaiblocks.com/skills/role-task-breakdown-for-ai-help): Describe a job and who does it. Get the tasks that drain or endanger people and where AI can help.
+- [Rough prompt rebuilder](https://useaiblocks.com/prompts/rough-prompt-rebuilder): Paste a rough prompt. Get one clear prompt that gets better answers.
 - [Short reply mode](https://useaiblocks.com/skills/short-reply-mode): Switch it on. Get much shorter AI replies that drop filler but keep the facts, to save tokens.
 - [Task automation builder](https://useaiblocks.com/skills/task-automation-builder): Name a repetitive task. Get a script, schedule or trigger that does it for you.
 - [Task handoff writer](https://useaiblocks.com/skills/task-handoff-writer): Describe work to pass on. Get a clear handoff to another AI agent, with checks along the way.

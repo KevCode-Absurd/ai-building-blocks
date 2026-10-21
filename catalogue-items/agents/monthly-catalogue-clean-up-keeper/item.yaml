@@ -1,0 +1,28 @@
+slug: monthly-catalogue-clean-up-keeper
+name: "Monthly catalogue clean-up keeper"
+summary: "Run it monthly. Get missing costs, clashing SKUs and hidden products found, and a short fix list in the right order."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: tool_connection, required: true}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [missing-product-cost-finder, duplicate-sku-finder, stock-sync-error-finder, listing-completeness-scorer, sales-channel-gap-finder, orphan-product-finder, variant-name-tidier, unused-store-file-finder]
+steps:
+  - {uses: missing-product-cost-finder, note: "Every month: products with no cost set, because every margin report depends on it."}
+  - {uses: duplicate-sku-finder, note: "Every month: variants that share a SKU or barcode, which can mix up stock and orders."}
+  - {uses: stock-sync-error-finder, note: "Every month: negative or impossible stock. Read after the SKU check, since clashing SKUs can cause it."}
+  - {uses: listing-completeness-scorer, note: "Every month: products scored on missing description, images, search fields, weight, barcode and cost, worst first."}
+  - {uses: sales-channel-gap-finder, note: "Every month: live products missing from a channel you sell on."}
+  - {uses: orphan-product-finder, note: "Every month: products in no collection, which shoppers cannot browse to."}
+  - {uses: variant-name-tidier, note: "Only when the owner gives a naming map and says yes: mixed size or colour names fixed to one standard."}
+  - {uses: unused-store-file-finder, note: "Every third month: files no product or page uses."}
+schedule: "On the 1st of each month"
+asks_before: [editing any product, variant, SKU, cost, stock count or collection, publishing or unpublishing a product, deleting any file]
+origin: own
+version: 1.0.0
+example_pending: true

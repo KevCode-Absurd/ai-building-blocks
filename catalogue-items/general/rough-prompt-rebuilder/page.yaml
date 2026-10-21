@@ -1,0 +1,80 @@
+new_slug: rough-prompt-rebuilder
+name: "Rough prompt rebuilder"
+summary: "Paste a rough prompt. Get one clear prompt that gets better answers."
+job: set-up-ai
+thinking: low
+thinking_why: "It reshapes what you wrote into a fixed layout, with few judgement calls."
+
+headline: "Rough prompt rebuilder"
+subhead: "Paste a rough prompt that gives weak answers. Your AI rebuilds it with a role, context, task, format and limits, and hands back one clear prompt ready to copy."
+
+explain: |
+  Most weak AI answers come from a weak request. A short prompt like "help me with my newsletter" leaves the AI guessing the audience, the format and the length, so it guesses wrong or goes generic.
+
+  This prompt makes your AI fill those gaps in a fixed order: role, context, task, format, limits. It asks only the questions that change the result, keeps your facts as they are, and lists what it assumed so you can correct it.
+
+when:
+  - "Your prompt gives answers that are too general."
+  - "You want a prompt your team can reuse."
+  - "You know what you want but not how to ask for it."
+
+you_give:
+  - "A rough prompt"
+  - "Who the answer is for and where it will be used (optional)"
+
+you_get:
+  - "One rebuilt prompt in a copy-ready block"
+  - "A short list of what was added and assumed"
+
+how_to_use:
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Paste your details under it, in the slots under What you need."
+  - "Send it and read the answer against the checks on this page."
+  - "Reply with what to change, and keep the version that works."
+
+how_it_works:
+  - title: "Read the rough prompt"
+    text: "Says in one line what you want done."
+  - title: "Find the gaps"
+    text: "Checks for role, context, task, format and limits."
+  - title: "Ask only what matters"
+    text: "At most two questions, only if they change the prompt."
+  - title: "Rebuild in five parts"
+    text: "Role, context, task, format, limits, with your facts kept."
+
+output_shape: |
+  <the rebuilt prompt, in one block>
+
+  ADDED
+  <up to three lines: what was added or assumed>
+
+tweaks:
+  - what: "Audience"
+    how: "Say who will read the answer. It changes the role and the tone more than anything else."
+  - what: "Format"
+    how: "Name the shape you want back, such as a table, five bullets or a 100-word email."
+  - what: "Limits"
+    how: "Add length, words to avoid and things to leave out."
+
+judge:
+  - "The rebuilt prompt has a clear role, task and format."
+  - "Nothing was added that you did not say or approve."
+  - "The task is one result, not several."
+  - "You can read it once and know what it asks."
+
+test:
+  - "Rebuild a prompt that gave you a weak answer, then run both and compare."
+  - "Run the same rough prompt twice. The structure should match."
+  - "Give a prompt with two possible meanings. It should ask or mark it as inferred."
+
+improve:
+  - "Add your usual role, for example \"You are my ecommerce copywriter\", as the default."
+  - "Add your brand rules to the limits line."
+  - "Keep your best rebuilt prompts in a note and reuse them by name."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A single pasted message works in Claude, ChatGPT and Gemini."}
+  inputs:
+    - "Two examples of answers you liked"
+    - "Words your brand never uses"

@@ -1,0 +1,88 @@
+new_slug: tagline-score-card
+name: "Tagline score card"
+summary: "Paste your tagline and rivals' lines. Get a pass or fail on ten tests, a score out of 100 and sharper lines."
+job: brand-file
+thinking: low
+thinking_why: "It checks a short line against fixed tests."
+
+headline: "Tagline score card"
+subhead: "Paste your tagline, and rivals' lines if you have them. The prompt names its type, runs ten pass or fail tests worth 10 points each, checks the promise is true, and returns a score out of 100 with three sharper versions, each scored."
+
+explain: |
+  A tagline is judged in seconds, so a weak one is easy to feel but hard to explain. Without a list, teams argue about taste.
+
+  This prompt fixes a list of ten tests. They include being short, different from rivals, easy to say aloud and free of bad second meanings. It names the tagline type, passes or fails each test with a reason, and adds up the score. It also checks that the promise is true for your business. Then it writes sharper versions and scores those too. The score shows how well the line fits the list, not how well it will sell.
+
+when:
+  - "You are choosing between tagline options."
+  - "Your tagline feels vague."
+  - "You are about to print a pack or launch a site."
+
+you_give:
+  - "Your tagline, or several"
+  - "Three rival taglines (optional)"
+  - "What you want to be known for (optional)"
+you_get:
+  - "The type, and a pass or fail on ten tests"
+  - "A score out of 100 with the sum"
+  - "Three sharper lines of the same type and one of another"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Under it, paste your tagline or options."
+  - "Add three rival taglines."
+  - "Say where it will appear."
+  - "Pick a rewrite and read it aloud before you use it."
+
+how_it_works:
+  - title: "Name the type"
+    text: "Five types."
+  - title: "Run ten tests"
+    text: "Pass or fail, 10 points each."
+  - title: "Check it is true"
+    text: "What in the business proves the claim."
+  - title: "Rewrite"
+    text: "Four versions, each scored."
+
+output_shape: |
+  TAGLINE: "<line>" | type: <...>
+  TESTS
+  1 Short: PASS | FAIL - <reason>
+  (... to 10)
+  SCORE: <passed> x 10 = <score> out of 100
+  IS IT TRUE: <claim> proven by <...>
+  REWRITES
+  1 "<line>" | type | score <n>/100 (<sum>)
+  MISSING: <...>
+
+tweaks:
+  - what: "Rival lines"
+    how: "Without rivals, the differentiated and unique tests are marked MISSING."
+  - what: "Where it appears"
+    how: "A small pack or footer changes the legibility test."
+  - what: "Markets"
+    how: "Say where you sell, so the second-meaning test checks those languages."
+
+judge:
+  - "Every test has a reason."
+  - "The sums add up."
+  - "Rewrites keep your claim true."
+  - "The type fits the stage of your business."
+
+test:
+  - "Test a tagline you know is weak. It should fail at least two tests."
+  - "Run it twice and compare the score."
+  - "Read the best rewrite aloud and see if you can repeat it the next day."
+
+improve:
+  - "Add the words your brand never uses."
+  - "Add your customers' phrases so rewrites use them."
+  - "Pair it with Brand voice one-pager writer."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt works in any strong chat AI. Paste it, then add your details under it."}
+  inputs:
+    - "Three phrases customers use about you"
+    - "Your key messages"
+    - "A search of your tagline in quotes"

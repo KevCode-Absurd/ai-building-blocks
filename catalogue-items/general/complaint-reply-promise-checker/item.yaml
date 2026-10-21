@@ -1,0 +1,20 @@
+slug: complaint-reply-promise-checker
+name: "Complaint reply promise checker"
+summary: "Paste the complaint and your draft reply. Get each promise checked, tone flags and a repaired draft."
+category: general
+type: prompt
+role: check
+job: ops
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+  - {type: voc_reviews, required: true}
+outputs:
+  - {type: copy_draft}
+  - {type: feedback_notes}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "angry-customer-reply-check skill", by: "Pro Skill Packs", url: "https://github.com/proskillpacks/skills/tree/main/skills/support/angry-customer-reply-check", used: "Checking a reply against the customer's message and the rules you are allowed to use, then repairing it"}

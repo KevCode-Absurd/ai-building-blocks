@@ -1,6 +1,6 @@
 # Build a product people want: AI Blocks
 
-> 53 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 55 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [App polish guide](https://useaiblocks.com/skills/app-polish-guide): Describe your shipped app. Get fixes for fit, flow, clarity and honest persuasion, step by step.
 - [Beta program planner](https://useaiblocks.com/skills/beta-program-planner): Describe your launch. Get who to invite, what to ask them, and clear rules for when the beta ends.
@@ -29,6 +29,7 @@
 - [Job story writer](https://useaiblocks.com/skills/job-story-writer): Describe a customer situation. Get job stories in the when, I want, so I can format, with checks for done.
 - [Launch a smaller product on the date you set](https://useaiblocks.com/workflows/smaller-product-launch): Give it your launch plan, date and budget. Get half the scope, a screened request list and a teaser plan.
 - [Launch scope cutter](https://useaiblocks.com/skills/launch-scope-cutter): Paste your launch plan, date and budget. Get the same date with half the scope, the core first and the rest parked.
+- [Launch scope halver](https://useaiblocks.com/prompts/launch-scope-halver): Paste your launch list, date and budget. Get the same date with half the scope: a core and a parked list.
 - [Lean product shaping coach](https://useaiblocks.com/skills/lean-product-shaping-coach): Describe your product plan. Get a smaller scope, a six-week bet and features to say no to. Uses Shape Up.
 - [New project planner](https://useaiblocks.com/skills/new-project-planner): Give it a vague app idea. Get eight planning files your AI reads each session to stay on track.
 - [New user drop-off finder](https://useaiblocks.com/skills/new-user-drop-off-finder): Paste visits, sign-ups and 30-day users. Get where new people leave and the first-visit fix to try before any new feature.
@@ -55,3 +56,4 @@
 - [Weekly product feedback triager](https://useaiblocks.com/agents/weekly-product-feedback-triager): Give it each week's feedback. Get every request counted, ruled yes, later or no, and a roadmap change to approve.
 - [Work flow layout planner](https://useaiblocks.com/skills/work-flow-layout-planner): Describe a repeated job. Get a layout where the work moves to the person, with fewer steps and less walking.
 - [Write the press release and six-page memo before you build](https://useaiblocks.com/workflows/press-release-memo): Paste your idea. Get a future press release, the hard questions, a six-page memo and a check of that memo.
+- [Yes-later-no request sorter](https://useaiblocks.com/prompts/yes-later-no-request-sorter): Paste your feature requests, who asked and your product focus. Get yes, later or no on each, with a kind reply.

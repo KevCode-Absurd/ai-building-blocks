@@ -1,0 +1,16 @@
+slug: task-rubric-drafter
+name: "Task rubric drafter"
+summary: "Describe a task and its goal. Get a rubric with clear wording at each level of work."
+category: general
+type: prompt
+role: make
+job: creative
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

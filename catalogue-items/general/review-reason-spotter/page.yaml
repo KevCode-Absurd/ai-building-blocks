@@ -1,0 +1,79 @@
+new_slug: review-reason-spotter
+name: Review reason spotter
+summary: Paste 20 or more reviews or emails. Get buying reasons ranked, each in a customer's exact words.
+job: understand-customers
+thinking: low
+thinking_why: It sorts and counts what you paste in, with little judgement.
+headline: Review reason spotter
+subhead: Paste a pile of reviews, support emails or survey answers under this prompt. It finds the reasons people buy and counts how many separate people gave each. You get a ranked list with an exact quote for every reason.
+explain: |
+  Most owners read reviews and remember the ones that stung or flattered. That is not a pattern. This prompt reads every entry the same way, copies out the phrases that show a reason, and counts separate people, so one loud reviewer does not outweigh five quiet ones.
+
+        The quotes stay exact, so you can drop them straight into an ad or a page. It also lists what nearly stopped people from buying, which is where your page and your emails should answer first.
+when:
+  - You have a pile of reviews and no time to read them all.
+  - You are about to write an ad or page and want the reasons in buyers' own words.
+  - You think you know why people buy but have never counted.
+you_give:
+  - 20 or more reviews, emails or survey answers, numbered
+  - One line on what you sell (optional)
+you_get:
+  - Buying reasons ranked by how many separate people gave them
+  - An exact quote for each reason, with its entry number
+  - What nearly stopped people from buying
+  - Thin reasons listed apart so you do not lean on them
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - Number your entries, 1 to 20 or more, one per line.
+  - Check the quotes against your pile before you use any in an ad.
+  - Run it again next quarter with new reviews and compare the order.
+how_it_works:
+  - title: Drop empty entries
+    text: Entries with no reason, such as "great product", are set aside.
+  - title: Copy exact phrases
+    text: The words that show a reason are copied as written.
+  - title: Group by point
+    text: Phrases that make the same point become one reason, named in plain words.
+  - title: Count people
+    text: Each reason is counted by separate people, not mentions.
+  - title: Rank and quote
+    text: The reasons are ranked and each gets its clearest quote.
+output_shape: |
+  BUYING REASONS (ranked by people)
+        <rank>. <reason> | <n> people | "<exact quote>" [<entry #>]
+
+        WHAT NEARLY STOPPED THEM
+        "<exact words>" [<entry #>]  <n> people
+
+        THIN REASONS
+        <reason>: <n>
+
+        NOTES
+        <entries used and dropped, what the pile cannot tell you>
+tweaks:
+  - what: Pile size
+    how: More entries make the ranking steadier. Under 20, the prompt flags the result as thin.
+  - what: Mixed sources
+    how: Reviews, emails and surveys together show whether a reason shows up in more than one place.
+  - what: One product at a time
+    how: If your products solve different problems, run one pile per product.
+judge:
+  - Each quote is in the entry it names, word for word.
+  - A reason with a count of 5 or more has five different people behind it.
+  - The reasons are in plain words, not in quote marks.
+  - Nothing in the list is a name, city or detail you did not paste.
+test:
+  - Run it on 20 reviews you know well. The top reason should match what you expected, or surprise you for a reason you can see in the pile.
+  - Run it twice on the same pile. The top three reasons should match.
+  - Pick one quote at random and find it in your pile.
+improve:
+  - Add your product name to the card so reasons are read in context.
+  - Add a line asking it to flag any quote that sounds like a health result, so you can check it before use.
+  - Save the ranked reasons in your brand file for the next ad or page.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - Reviews from after your last product or price change
+    - Support emails, which hold the doubts reviews leave out

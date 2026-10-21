@@ -1,0 +1,89 @@
+new_slug: two-version-ad-test-planner
+name: Two-version ad test planner
+summary: Paste two versions of an ad. Get one clear difference, a key for each and a winner rule set before launch.
+job: plan-ad-tests
+thinking: low
+thinking_why: It compares two texts and applies fixed test rules.
+headline: Two-version ad test planner
+subhead: Paste two versions of an ad, email or page, and your usual reply rate if you know it. You get the one real difference, what to keep equal, a fair split, a key for each version, the audience size with the sum, and a winner rule.
+explain: |
+  Many ad tests prove nothing. Two versions change three things at once, run in different weeks, or get called after a handful of replies.
+
+  This prompt sets up the test before you spend. It finds the one difference between your versions, and if there are several, it splits them into separate tests. It picks a fair way to divide the audience and gives each version a key so you can tell the results apart later. It sizes the audience so you reach about 100 replies per version, and shows the sum. Last, it writes the winner rule, with a read date, before launch, so you cannot change the goalposts after.
+when:
+  - You have two versions of an ad and want to know which is better.
+  - A past test was unclear and you want a cleaner one.
+  - You need to explain to a team how the test will be judged.
+you_give:
+  - The two versions, in full
+  - The offer (optional)
+  - Your usual reply rate (optional)
+you_get:
+  - The one difference, in a line
+  - A split method and a key for each version
+  - The audience size with the sum shown
+  - A winner rule with a read date
+how_to_use:
+  - Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini, with your details under it.
+  - Paste both versions under the prompt, labelled A and B.
+  - Add your usual reply rate if you know it.
+  - Save the winner rule somewhere before you launch.
+how_it_works:
+  - title: Finds the difference
+    text: Splits tests if more than one thing changed.
+  - title: Keeps the rest equal
+    text: Same offer, price, path, time and audience.
+  - title: Chooses the split
+    text: Random halves, or the platform's own.
+  - title: Keys each version
+    text: A code that changes if the text changes.
+  - title: Sizes the audience
+    text: About 100 replies per version.
+  - title: Writes the winner rule
+    text: Before launch, with a date.
+output_shape: |
+  THE ONE DIFFERENCE: <one line>
+  KEEP EQUAL: <list>
+  SPLIT: <how>
+  KEYS: A = <key>, B = <key>
+  AUDIENCE: 100 / <rate> = <people> per version, <total> in all
+  WINNER RULE: <number> decides; a gap of <size> counts; read on <date>; if close, <action>
+  TRAPS TO AVOID: <list>
+  MISSING: <what you did not give>
+tweaks:
+  - what: Versions
+    how: Change one thing between them. More than one makes the test unclear.
+  - what: Reply rate
+    how: Give your real one. A guess gives a wrong audience size.
+  - what: Winner number
+    how: Say whether you judge on replies, cost per reply or sales.
+  - what: More than two versions
+    how: Ask for a knockout plan or a control plan.
+judge:
+  - There is one difference.
+  - Both versions run together.
+  - The keys are different.
+  - The sum for the audience is shown.
+  - The rule has a date.
+test:
+  - Give it two versions with three differences. It should split them.
+  - Run it twice. The difference and keys should match.
+  - Follow the plan on a small send and see if the result is clear.
+improve:
+  - Add your usual reply rates for each channel.
+  - Add the traps you have hit before.
+  - Add how your platform splits audiences.
+  - Pair it with the Two-version result reader.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A short prompt works the same in Claude, ChatGPT or Gemini, so use the one you already have open.
+  inputs:
+    - Your past reply rates
+    - How your platform splits audiences
+    - The date you can read the result
+terms:
+  - term: Key
+    meaning: A code on each version that shows which one a reply came from.
+  - term: Control
+    meaning: The version you measure every new version against.

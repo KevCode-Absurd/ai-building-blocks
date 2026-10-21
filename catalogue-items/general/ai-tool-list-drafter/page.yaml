@@ -1,0 +1,102 @@
+new_slug: ai-tool-list-drafter
+name: "AI tool list drafter"
+summary: "Paste what your AI should do with your systems. Get a short list of clearly named tools it can pick from."
+job: connect-tools
+thinking: medium
+thinking_why: "Naming and grouping tools clearly takes careful judgement."
+
+headline: "AI tool list drafter"
+subhead: "Paste the jobs you want an AI to do with your tools or data, and what it must never do. It groups them into a small set of tools with plain names, clear descriptions, inputs, and approvals for anything that changes things."
+
+explain: |
+  When an AI has too many tools, or tools with vague names, it picks the wrong one or guesses at inputs. Each wrong pick wastes time and sometimes does something you did not want.
+
+  This prompt designs the list first, before anyone writes code. It keeps the set small, says when each tool should and should not be used, and puts an approval in front of anything that changes data.
+
+when:
+  - "You are about to connect an AI to your app or data."
+  - "Your AI keeps picking the wrong tool."
+  - "You want a clear brief before a developer builds anything."
+
+you_give:
+  - "The jobs the AI should do"
+  - "What it connects to"
+  - "What it must never do"
+you_get:
+  - "A short tool list with names and descriptions"
+  - "Inputs and what each returns"
+  - "Approvals for anything that changes things"
+  - "Tools an AI might mix up"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "List the jobs"
+    text: "Write each job as a result a person wants, such as \"find an order by email\". Merge jobs that are the same."
+  - title: "Group into a few tools"
+    text: "Aim for the fewest tools that cover the jobs. One tool per clear job, not one per button. Mark any tool that changes things as a change tool."
+  - title: "Name and describe each"
+    text: "Give a short verb-first name, a one-sentence description saying when to use it and when not to, the inputs it needs, and what it hands back."
+  - title: "Add guardrails"
+    text: "For every change tool, say what needs a person's approval. Add the limits I named, and list what the AI is never given a tool for."
+  - title: "Check for confusion"
+    text: "Point out any two tools an AI might mix up and fix the names or descriptions."
+
+output_shape: |
+  TOOLS
+  1. <verb_name> (read | change)
+     Use when: <...>   Not for: <...>
+     Needs: <inputs>   Returns: <result>
+
+  APPROVALS NEEDED
+  - <tool>: <who approves>
+
+  NEVER GIVEN A TOOL FOR
+  - <action>
+
+  MIX-UP RISKS
+  - <tool A> vs <tool B>: <fix>
+
+  MISSING
+  <gaps>
+
+tweaks:
+  - what: "The never list"
+    how: "Be firm on what the AI must not do. It shapes which tools exist."
+  - what: "Number of jobs"
+    how: "Under ten jobs gives the cleanest list."
+  - what: "Read or change"
+    how: "Say which jobs change data. Those get approvals."
+
+judge:
+  - "Each job has exactly one tool."
+  - "Names start with a verb and say what they do."
+  - "Each description says when not to use it."
+  - "Every change tool has an approval."
+
+test:
+  - "Give the list to an AI and ask it to do three jobs. Does it pick the right tools?"
+  - "Run it twice. The tool count should be close."
+  - "Add a risky job. It should add an approval."
+
+improve:
+  - "Add the real names your team uses for things."
+  - "Add limits such as maximum amounts or daily counts."
+  - "Save the list and pass it to the developer building the server."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "The words your team uses for orders, customers and so on"
+  - "A list of actions that must never happen"
+
+terms:
+  - term: "Tool"
+    meaning: "A single action an AI is allowed to take, such as finding an order."
+  - term: "Guardrail"
+    meaning: "A limit or approval step that stops the AI doing something risky."

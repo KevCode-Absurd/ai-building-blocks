@@ -1,0 +1,93 @@
+new_slug: setback-update-drafter
+name: "Setback update drafter"
+summary: "Paste the facts of a setback. Get a short plain update with the loss, the numbers and next steps."
+job: speak-and-persuade
+thinking: medium
+thinking_why: "It needs judgement about tone and what to put first."
+
+headline: "Setback update drafter"
+subhead: "Paste the facts of a setback and who the update is for. The prompt puts the loss first in one plain sentence, gives the numbers, credits what held, replaces soft words and ends on next steps."
+
+explain: |
+  Bad news told slowly or softly makes people trust you less. Words like "headwinds" and "right-sizing" hide the loss, and readers can tell. A plain update that states the loss first, with numbers, builds more trust than a gentle one.
+
+  This prompt writes that kind of update. It states the loss, gives the numbers, credits what held and leaves blame for later. It then asks if you would say each line face to face. If the news touches jobs, pay or legal duties, check with a qualified person first.
+
+when:
+  - "A sale, client or launch went badly and people need to know."
+  - "You are tempted to soften a loss with soft words."
+  - "You need to tell owners or a team in a few minutes of reading."
+
+you_give:
+  - "The facts of the setback"
+  - "Who the update is for"
+  - "A draft to fix (optional)"
+you_get:
+  - "A short update, loss first"
+  - "A list of soft words replaced"
+  - "Missing numbers marked"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste the facts, with real numbers, under the prompt."
+  - "Say who the update is for and how it hits them."
+  - "Read it aloud as if to the person it hurts most."
+
+how_it_works:
+  - title: "Say the loss first"
+    text: "State what was lost or went wrong in one plain sentence, with the number or date. No good news before it."
+  - title: "Give the numbers"
+    text: "List the bad and the good figures I gave. If an important number is missing, write MISSING and when it will be known."
+  - title: "Credit what held"
+    text: "Say what worked and who made it work, by role or name. This comes after the loss."
+  - title: "Leave blame for later"
+    text: "One sentence on who will look into the cause and when. Name no one as at fault."
+  - title: "State what remains"
+    text: "Give the money, people, customers or stock left, in figures, not adjectives."
+  - title: "Replace soft words"
+    text: "Swap words like \"headwinds\", \"restructuring\" and \"right-sizing\" for the plain word."
+  - title: "Close with actions"
+    text: "End with next steps: what, who, by when."
+
+output_shape: |
+  UPDATE
+  <loss in one sentence>
+  <numbers>
+  <what held>
+  <cause: who looks, by when>
+  <what remains>
+  <next steps: what, who, by when>
+  SOFT WORDS REPLACED: <word> -> <plain word>
+  MISSING: <...>
+  BEFORE YOU SEND: <check with a qualified person if it touches jobs, pay or legal duties>
+
+tweaks:
+  - what: "Numbers"
+    how: "Give exact figures. Without them the update uses MISSING marks."
+  - what: "The reader"
+    how: "A team update differs from an owners' letter. Say which."
+  - what: "Next steps"
+    how: "Give real owners and dates, or it will leave them blank."
+
+judge:
+  - "The first sentence states the loss."
+  - "No soft words remain."
+  - "Every number came from you."
+  - "No one is blamed."
+
+test:
+  - "Run a real past setback and compare it to what you sent."
+  - "Read it aloud to one person it would affect."
+  - "Run it twice. The loss sentence should match."
+
+improve:
+  - "Add your usual update format for owners or a team."
+  - "Add words you never use for bad news."
+  - "Pair it with the Bad news update writer for every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "Your last update to the same group"
+    - "The numbers from before the setback"

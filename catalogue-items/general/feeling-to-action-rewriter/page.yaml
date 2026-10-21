@@ -1,0 +1,86 @@
+new_slug: feeling-to-action-rewriter
+name: "Feeling-to-action rewriter"
+summary: "Paste a paragraph that names the feeling. Get it rewritten in short sentences with things and actions."
+job: write-and-tell-stories
+thinking: low
+thinking_why: "It rewrites a short paragraph with clear rules."
+
+headline: "Feeling-to-action rewriter"
+subhead: "Paste a paragraph that tells the reader how to feel. The prompt lists what happened, picks one exact detail, swaps each feeling word for its cause, and returns short sentences that end on an action."
+
+explain: |
+  When a paragraph says "she was heartbroken", the reader watches from outside. When it says "she put the key on the table and left her coffee to go cold", the reader supplies the feeling. This works in fiction, but also in a customer story, a case study or a speech.
+
+  This prompt does the swap for you. It lists what really happened, finds one exact thing to show, and replaces every feeling word with what caused it. It adds no event that was not in your paragraph.
+
+when:
+  - "Your draft keeps saying \"amazing\", \"devastating\" or \"perfect\"."
+  - "A customer story reads flat."
+  - "You want your writing to feel more real without adding fluff."
+
+you_give:
+  - "The paragraph"
+  - "What really happened (optional)"
+  - "The voice (optional)"
+you_get:
+  - "A rewritten paragraph in short sentences"
+  - "A list of feeling words cut and what replaced each"
+  - "The one detail it used"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste your paragraph under the prompt."
+  - "Add any real details you left out, such as what was said."
+  - "Read the rewrite aloud and fix any place you trip."
+
+how_it_works:
+  - title: "List what happened"
+    text: "Write the events in order, one short line each, with no feeling words. If nothing happens, say so and ask."
+  - title: "Find one true detail"
+    text: "Pick one exact thing a person could see, hear or touch, such as a cold coffee or a key left on a table. It must come from the facts. If none, write MISSING and ask."
+  - title: "Cut the feeling words"
+    text: "List each word that names a feeling or judges the moment (devastated, amazing, perfect). Put the cause beside it and use the cause instead."
+  - title: "Shorten"
+    text: "Use simple sentences under about 20 words. Join two quick actions with \"and\"."
+  - title: "Leave out the obvious"
+    text: "Cut sentences that explain what the reader can see. Never cut or add a fact."
+  - title: "End on an act"
+    text: "Replace any lesson at the end with an action or a line of five words or fewer."
+
+output_shape: |
+  REWRITE
+  <paragraph>
+  WORDS CUT: <feeling word> -> <what replaced it>
+  DETAIL USED: <the detail and its source>
+  MISSING: <...>
+
+tweaks:
+  - what: "Real details"
+    how: "The more real details you give, the less it needs to ask."
+  - what: "Voice"
+    how: "One line on who is telling it keeps the rewrite in character."
+  - what: "Length"
+    how: "Say if the rewrite must stay close to the original length."
+
+judge:
+  - "No event appears that you did not write."
+  - "No feeling word is left."
+  - "The detail is one a reader could see."
+  - "It ends on an action."
+
+test:
+  - "Run a paragraph with one feeling word and see if the swap makes sense."
+  - "Run it twice. The detail should be the same."
+  - "Read the old and new aloud, back to back."
+
+improve:
+  - "Add your best-written paragraph as an example of your voice."
+  - "Add words you overuse so they are cut."
+  - "Pair it with the Show-don't-tell scene rewriter for every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "A paragraph of yours you like"
+    - "A list of words you overuse"

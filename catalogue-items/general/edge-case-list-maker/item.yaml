@@ -1,0 +1,18 @@
+slug: edge-case-list-maker
+name: "Edge case list maker"
+summary: "Paste a change you plan to make. Get the cases to check, smallest first, before you write any code."
+category: general
+type: prompt
+role: make
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+credits:
+  - {title: "Canon TDD", by: "Kent Beck", url: "https://tidyfirst.substack.com/p/canon-tdd", used: "List the behaviour cases before any code, keep design choices off the list, work through them one at a time"}
+version: 1.0.0
+example_pending: true

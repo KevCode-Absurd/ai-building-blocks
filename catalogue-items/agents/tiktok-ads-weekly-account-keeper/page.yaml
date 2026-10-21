@@ -1,0 +1,103 @@
+new_slug: tiktok-ads-weekly-account-keeper
+name: TikTok Ads weekly account keeper
+summary: Give it your weekly TikTok Ads exports. Get each ad called keep, fix or kill and a change list to approve.
+job: launch-and-scale-ads
+thinking: high
+thinking_why: It runs up to seven skills, picks its own path ad by ad from the numbers and keeps a log from week to week. Give it your strongest model.
+headline: TikTok Ads weekly account keeper
+subhead: Give it this week's TikTok Ads export and your costs. It calls each ad keep, fix or kill against your break-even, picks posts worth boosting, checks the gates before any budget goes up, and hands back one change list for you to approve.
+explain: |
+  TikTok ads burn out fast. An ad that wins on Monday can be dead by the next Monday, and a weak ad can eat a week of budget before anyone looks. Most owners either judge ads after a day, which kills good ones, or let them run for weeks, which wastes money. TikTok also reports a return that is higher than what reaches your bank.
+
+  This agent runs the same checks every week. It works out your break-even cost per sale once, then calls each ad keep, fix or kill. It gives ads three days before judging them, and kills an ad that was fixed and still fails. Once a month it checks how much of TikTok's return is real. It only suggests more budget when the gates pass. It never touches your account on its own. You get one list of changes to approve.
+when:
+  - You run TikTok ads and want each ad judged the same way every week.
+  - You have organic or creator posts and want to know which are worth boosting.
+  - You want to raise your budget, but only when the numbers say it is safe.
+you_give:
+  - A TikTok Ads export with one row per ad for the last 7 days
+  - Your price, landed cost, shipping and fees, the first time
+  - Organic or creator posts with their results (optional)
+  - Your store orders and revenue for the same days (optional, for the monthly return check)
+you_get:
+  - Each ad called keep, fix hook, fix audience, kill or too early, with the sums
+  - Posts worth boosting as Spark ads
+  - A raise, hold or cut call on budget, with the gate that decided it
+  - One ranked list of changes to approve
+  - The numbers to watch next week
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week's check.
+  - Put this week's export in one folder, or attach it in the chat.
+  - The first time, give it your price and costs. It saves the break-even number and reuses it.
+  - Read the change list. Make the changes you agree with in TikTok Ads, or say yes to each one and let it make only those if it is connected.
+  - Run it again next Monday. It reads last week's ad log.
+how_it_works:
+  - title: Get the base number
+    text: Works out your break-even cost per sale once, then measures every ad against it.
+  - title: Check the setup
+    text: On the first run, checks your pixel and events. If tracking is broken, it stops the ad calls, because the numbers can't be trusted.
+  - title: Read each ad
+    text: Calls each ad keep, fix or kill. Ads under three days old are left alone. An ad fixed last week that still fails is killed.
+  - title: Pick posts to boost
+    text: If you gave it organic or creator posts at least five days old, it picks the ones worth boosting as Spark ads.
+  - title: Check the real return
+    text: Once a month, or after a sudden jump, it compares TikTok's return with your store totals and saves the factor.
+  - title: Check before scaling
+    text: Only when half the ads keep and the true return beats break-even does it split a budget raise. Otherwise it holds.
+  - title: Hand back one list
+    text: Merges every change, removes repeats, keeps the more careful call when steps disagree, and stops for your yes.
+output_shape: |-
+  THIS WEEK
+    Spend <amount> | Purchases <n> | Cost per purchase <amount> vs break-even <amount> | return <x>
+
+  ADS CALLED
+    KEEP <n> | FIX <n> | KILL <n> | TOO EARLY <n>
+    <ad> | <call> | <one fix or reason>
+
+  SPARK PICKS
+    <post> | <why> | or: none this week
+
+  CHANGES TO APPROVE (most important first)
+    1. <change> | where: <ad or ad group> | size: <amount> | from: <step> | why: <reason>
+
+  SCALE CALL
+    <raise | hold | cut> | gates: <pass or fail, which gate>
+
+  WATCH NEXT WEEK
+    <1 to 3 numbers>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your real costs
+    how: Use landed cost, shipping and payment fees. A cost that is too low makes every ad look better than it is.
+  - what: Days before judging
+    how: Three days is the default. A high-price product or a long buying time needs more, so tell it.
+  - what: Store totals
+    how: Give them every month. Without them the return is TikTok's own number, which runs high.
+  - what: How many changes you approve
+    how: Make a few changes a week. Too many at once and next week cannot show which one worked.
+judge:
+  - Every call is measured against your break-even, and the sums are shown.
+  - No ad under three days old was killed.
+  - No budget raise is proposed unless the gates passed.
+  - Each change says which step proposed it and why.
+  - Nothing in your account was changed without your clear yes.
+test:
+  - Run it on a past week you know well, where you remember which ads died. See if it kills the same ones.
+  - Run it twice on the same export. The calls should be the same, apart from wording.
+  - Compare its list with what you or your agency did that week, and look at where they differ.
+improve:
+  - Set your own number of days before an ad is judged, to suit your product's buying time.
+  - Add your best past ads to the ad log so the agent can compare new ones with them.
+  - If you never use organic posts, remove the Spark step so the run is shorter.
+  - Save the changes you approved in the keeper folder each week, so the next run can check whether they worked.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the keeper folder and ad log, read last week's files and run every step on a schedule.
+    - name: TikTok Ads Manager
+      why: Export the ad-level report here, with spend, CTR, watch time, add to cart and purchases.
+  inputs:
+    - A note of every change you made in the account last week
+    - Your organic and creator post results

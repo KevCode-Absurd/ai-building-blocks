@@ -1,0 +1,77 @@
+new_slug: sale-price-wording-picker
+name: Sale price wording picker
+summary: Paste a full price and a sale price. Get the discount shown the clearest way, with warnings.
+job: set-prices
+thinking: low
+thinking_why: It runs the same sums and rules on every price you give.
+headline: Sale price wording picker
+subhead: Paste a full price and a sale price under this prompt. It does the discount sums, picks amount off or percent off, and flags cuts that are too deep. You get a price display, a badge and a banner line.
+explain: |
+  The same discount can be shown several ways. On a $90 item, "$30 off" looks small, while "33% off" looks bigger, and "was 50% higher" bigger still. People react to the size of the number they see, not the sums behind it.
+
+        This prompt does the sums, picks the wording, and checks the full price was real. It also warns when a cut is so deep it hints at poor quality. It does not choose your discount or promise more sales.
+when:
+  - You are planning a sale and need the badge and banner.
+  - You are unsure whether to say percent or dollars off.
+  - You want to check a discount before you send the email.
+you_give:
+  - The full price and the sale price
+  - Where it will show (optional)
+  - The reason for the sale (optional)
+you_get:
+  - The three discount numbers with the sums
+  - How to show the price
+  - A badge and a banner or email line
+  - Warnings, and a check-with-a-qualified-person line on local rules
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - Only use a full price you really charged.
+  - Say where the discount will appear.
+  - Check the local rules on "was" prices before you publish.
+how_it_works:
+  - title: Check the full price
+    text: It must be a price you really charged.
+  - title: Do the sums
+    text: Amount off, percent off and how much higher.
+  - title: Warn on depth
+    text: Over 40 percent gets a warning.
+  - title: Pick the form
+    text: Amount off at 100 or more, percent under 100.
+  - title: Match endings
+    text: Sale price ends like the full price.
+  - title: Word the offer
+    text: Condition first, then the reward.
+output_shape: |
+  SUMS: amount off | percent off | higher by
+        SHOW IT AS: <display>
+        BADGE: <text>
+        BANNER OR EMAIL LINE: <text>
+        WARNINGS: <...>
+        CHECK WITH A QUALIFIED PERSON: <...>
+tweaks:
+  - what: Where it shows
+    how: A banner, badge and coupon each get their own wording.
+  - what: Store-wide or one product
+    how: A store-wide coupon fits percent off. A single product fits amount off.
+  - what: Time limit
+    how: Give the end date and time zone. Leave it out if you do not have one.
+judge:
+  - The three sums are shown and correct.
+  - Amount or percent matches the price size.
+  - Deep discounts carry a warning.
+  - No date or reason was made up.
+test:
+  - Use a sale you ran. The sums should match yours.
+  - Try a 60 percent discount. It should warn you.
+  - Try a full price that was never charged. It should stop you.
+improve:
+  - Add your usual sale months and reasons.
+  - Add your local rules on "was" prices once checked.
+  - Save your best badge wording in your brand file.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - Your real selling price history
+    - Your margin, so you know how deep you can afford to go

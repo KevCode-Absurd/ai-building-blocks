@@ -1,0 +1,28 @@
+slug: weekly-review-keeper
+name: "Weekly review keeper"
+summary: "Give it your task list and loose notes each week. Get open loops closed, stuck items named and a plan for Monday."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+  - {type: source_text, required: false}
+  - {type: plan, required: false}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+uses: [brain-dump-organizer, weekly-review-guide, task-list-keeper, weekly-time-audit-planner, not-to-do-list-builder, deep-work-day-planner]
+steps:
+  - {uses: brain-dump-organizer, note: "Only when you bring a pile of loose notes or a long list of unsorted items: sorted into tasks, ideas and notes with nothing lost."}
+  - {uses: weekly-review-guide, note: "Every week: open loops closed, stalled projects found, a trusted list again."}
+  - {uses: task-list-keeper, note: "Every week: the TASKS file updated with what was done, carried over or dropped, so next week can compare."}
+  - {uses: weekly-time-audit-planner, note: "Only when half or more of last week's planned work carried over, or you say the week got away from you. At most once a month unless you ask."}
+  - {uses: not-to-do-list-builder, note: "Only when the time audit shows that more than 40% of the week was taken by others or by habit."}
+  - {uses: deep-work-day-planner, note: "Every week, for the first working day and your best focus day: protected hours and shallow work cut back."}
+schedule: "Every Friday afternoon or Sunday evening"
+asks_before: [dropping or deleting a task, moving or creating calendar events, sending a message for you, changing a task you did not discuss]
+origin: own
+version: 1.0.0
+example_pending: true

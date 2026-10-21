@@ -1,0 +1,96 @@
+new_slug: monthly-content-decay-keeper
+name: Monthly content decay keeper
+summary: Give it your page list and traffic each month. Get the pages losing ground, a call on each and drafts to approve.
+job: get-found-in-search
+thinking: high
+thinking_why: It runs up to six skills, chooses a different path for each page from its traffic and past calls, and carries a page file from month to month. Give it your strongest model.
+headline: Monthly content decay keeper
+subhead: Give it your page list and traffic each month. It finds the pages losing ground since last month, decides update, merge or cut for each, drafts the fixes with a facts-to-check list, and hands everything back for you to approve.
+explain: |
+  Content ages. Facts go out of date, rivals publish better pages, and searchers want something different. Traffic to an old page drops slowly, so nobody notices until a whole section of the site has gone quiet. Most owners either never go back to old pages, or rewrite them at random.
+
+  This agent checks every month. It compares each page with last month and the 90 days before, finds the ones that lost ground, and decides what each needs. A page that was updated last month and still fell does not get the same treatment twice. Pages you must keep are never proposed for deletion. It drafts at most five updates a month, each with a list of facts to check. It never touches your live site.
+when:
+  - You have a blog, guides or many content pages and traffic seems to be sliding.
+  - You want one steady monthly check instead of a big clean-up once a year.
+  - You want to know which old pages to update, merge or cut, and in what order.
+you_give:
+  - A list of your content pages with titles, dates and types
+  - Traffic or search clicks and impressions for the last 90 days and the 90 days before
+  - A keyword data connection such as Ahrefs (optional)
+  - Pages you must always keep (optional)
+you_get:
+  - The pages that lost ground since last month, with the sums
+  - A keep, update, merge, redirect or delete call for each, with the reason
+  - Up to five rewrite drafts, each with a list of facts to check
+  - New titles and descriptions for pages that are seen but not clicked
+  - A list of pages to re-read next month
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's check.
+  - Attach your page list and the two traffic exports.
+  - Read the calls and the drafts. Check every fact on each list, then publish what you approve.
+  - Run it again next month. It reads the saved page file and last month's search state.
+how_it_works:
+  - title: See what slipped
+    text: Compares each page's search state with last month's saved copy. On the first run it saves a base to compare with later.
+  - title: Sort every page
+    text: On the first run and every third month, calls every page keep, update, merge, redirect or delete.
+  - title: Find the losers
+    text: Finds pages whose traffic fell by more than a third against the 90 days before, using keyword data if you connected it.
+  - title: Choose a path for each
+    text: Decides update, merge or delete. A page updated last month that still fell is flagged, not updated again. Must-keep pages are never cut.
+  - title: Draft the fixes
+    text: Rewrites up to five pages answer first, with a list of facts to check, and writes new titles for pages seen but not clicked.
+  - title: Hand back for approval
+    text: Lists every call and draft. Nothing goes live until you say yes.
+output_shape: |-
+  WHAT SLIPPED
+    <page> | traffic <n> now vs <n> before | change <%>
+
+  CALLS THIS MONTH
+    <page> | UPDATE | MERGE | DELETE | NEEDS A DIFFERENT ANSWER | <reason>
+
+  DRAFTS TO APPROVE (up to five)
+    <page> | rewrite attached | facts to check: <n> | new title: <if any>
+
+  QUARTER SORT (quarter months only)
+    keep <n> | update <n> | merge <n> | redirect <n> | delete <n>
+
+  WATCH NEXT MONTH
+    <pages updated this month>
+
+  FILES AND MISSING
+    <each step's file> | content-keeper/pages.md | MISSING: <every line>
+tweaks:
+  - what: What counts as losing ground
+    how: A drop of more than a third is the default. A small site with steady pages may want a smaller drop.
+  - what: Pages you must keep
+    how: List legal pages, key product pages and anything else it must never merge or delete.
+  - what: How many drafts a month
+    how: Five is the default. Lower it if you can't review that many.
+  - what: Keyword data
+    how: Connect a tool such as Ahrefs. Without it, decay is judged from traffic only.
+judge:
+  - Each page's traffic change is shown with the sums.
+  - No must-keep page was proposed for delete or merge.
+  - A page updated last month was not updated again without a new reason.
+  - Every draft has a facts-to-check list.
+  - Nothing on your live site was changed.
+test:
+  - Run it on a page you know lost traffic. See if it flags the page and gives a call you agree with.
+  - Run it twice on the same exports. The calls should be the same, apart from wording.
+  - Check three of its facts-to-check lists against real sources.
+improve:
+  - Set your own drop size that counts as losing ground.
+  - Add a note of what you changed on each page, so next month can check whether it worked.
+  - If you have no blog, give it only your guides and help pages so the run is shorter.
+  - Add the topics you want to own, so it can tell a faded topic from a weak page.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the content folder and page file, read last month's files and run every step on a schedule.
+    - name: Google Search Console
+      why: Export clicks and impressions by page for the last 90 days and the 90 days before.
+  inputs:
+    - A list of pages you must never merge or delete
+    - A note of any page you changed last month

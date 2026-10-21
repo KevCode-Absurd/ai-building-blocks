@@ -1,6 +1,6 @@
 # Understand your customers: AI Blocks
 
-> 91 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 94 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [App stickiness guide](https://useaiblocks.com/skills/app-stickiness-guide): Describe your app. Get a retention plan with a habit loop, a better first run and one metric to watch.
 - [Audience hangout finder](https://useaiblocks.com/skills/audience-hangout-finder): Describe your buyer group. Get a map of the sites, shows, accounts and communities they use, and where to show up first.
@@ -31,6 +31,7 @@
 - [Customer health and churn scorer](https://useaiblocks.com/skills/customer-health-and-churn-scorer): Give it your customer data. Get health scores, churn risk and upsell chances for each account.
 - [Customer identity messaging mapper](https://useaiblocks.com/skills/customer-identity-messaging): Give it your audience. Get a map of who they are and want to be, plus copy that reflects it.
 - [Customer interview coach](https://useaiblocks.com/skills/customer-interview-coach): Describe your idea. Get questions that draw honest answers from customers and a way to spot polite lies. Uses The Mom Test.
+- [Customer interview program keeper](https://useaiblocks.com/agents/customer-interview-program-keeper): Give it each round of interview notes. Get buyer patterns, the next questions and a call on when to stop.
 - [Customer interview synthesizer](https://useaiblocks.com/skills/customer-interview-synthesizer): Paste interviews, tickets or survey notes. Get clear patterns and what each means for your product.
 - [Customer job interview planner](https://useaiblocks.com/skills/customer-job-interview-planner): Describe what you sell. Get a plan to watch buyers, ask them on the way out and interview people who switched.
 - [Customer job mapper](https://useaiblocks.com/skills/customer-job-mapper): Describe your product and buyer. Get the functional, emotional and social jobs they hire it for.
@@ -59,6 +60,7 @@
 - [Ideal customer profiler](https://useaiblocks.com/skills/ideal-customer-profiler): Give it survey or customer data. Get a profile of your best customers and what they need.
 - [Interview and research planner](https://useaiblocks.com/skills/interview-and-research-planner): Describe your research question. Get a plan with recruiting, interview guide, synthesis steps and next product decisions.
 - [Interview customers and map what they hire you to do](https://useaiblocks.com/workflows/interview-customers-and-map-what-they-hire-you-to-do): Give it your idea. Get interview questions, then a buyer profile, their jobs and their path.
+- [Interview fact sorter](https://useaiblocks.com/prompts/interview-fact-sorter): Paste notes from customer talks. Get facts told apart from praise and ideas, with the next question.
 - [Interview summary writer](https://useaiblocks.com/skills/interview-summary-writer): Paste a customer interview transcript. Get a one-page summary of needs, satisfaction and next steps.
 - [Job hunting spot finder](https://useaiblocks.com/skills/job-hunting-spot-finder): Tell it what you sell. Get ranked leads for unmet jobs and what to go and watch for each.
 - [Job rival mapper](https://useaiblocks.com/skills/job-rival-mapper): Paste your job spec. Get every rival, including doing nothing, each with a short resume and what must be fired.
@@ -77,6 +79,7 @@
 - [Reddit thread collector](https://useaiblocks.com/skills/reddit-thread-collector): Give it a topic or subreddit. Get posts and comments in a table you can study. Collects data from websites.
 - [Research theme synthesizer](https://useaiblocks.com/skills/research-theme-synthesizer): Give it interviews, surveys or tickets. Get themes ranked by how often they come up, with quotes.
 - [Retention problem fixer](https://useaiblocks.com/skills/retention-problem-fixer): Describe why users drop off. Get the cause found and fixes to onboarding and habits. Uses behavior design.
+- [Review reason spotter](https://useaiblocks.com/prompts/review-reason-spotter): Paste 20 or more reviews or emails. Get buying reasons ranked, each in a customer's exact words.
 - [Say-do gap checker](https://useaiblocks.com/skills/say-do-gap-checker): Paste survey answers. Get a trust score out of 100 and a behaviour test to run first.
 - [Shared want hook mapper](https://useaiblocks.com/skills/shared-want-hook-mapper): Describe your product and its buyers. Get the one want they share, its smaller parts and a hook for each.
 - [Shopper doubt survey planner](https://useaiblocks.com/skills/shopper-doubt-survey-planner): Say what you sell. Get two on-site surveys, a user test script and a doubt tally.

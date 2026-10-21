@@ -1,0 +1,22 @@
+slug: ad-results-brief-writer
+name: Ad results brief writer
+summary: Paste two periods of ad totals. Get a one-line answer, what changed and three ranked actions.
+category: general
+type: prompt
+role: check
+job: analysis
+level: beginner
+inputs:
+  - type: performance_sheet
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: "The Minto Pyramid Principle: Logic in Writing, Thinking and Problem Solving"
+    by: Barbara Minto
+    url: https://www.barbaraminto.com/
+    used: Lead with the answer, then the support in order of weight

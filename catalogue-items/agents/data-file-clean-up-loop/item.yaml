@@ -1,0 +1,26 @@
+slug: data-file-clean-up-loop
+name: "Data file clean-up loop"
+summary: "Give it a messy data file. It fixes and re-checks until the file passes, and saves your rules for the next one."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: beginner
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: brief, required: false}
+outputs:
+  - {type: spreadsheet}
+  - {type: audit_report}
+uses: [data-quality-auditor, messy-spreadsheet-cleaner, data-cleaner, spreadsheet-formula-auditor, data-quality-scorecard-maker]
+steps:
+  - {uses: data-quality-auditor, note: "First, and again after every clean-up round: gaps, duplicates and odd values, so each round is judged on a count."}
+  - {uses: messy-spreadsheet-cleaner, note: "Only when the audit finds spacing, numbers stored as text, mixed date formats or exact duplicates."}
+  - {uses: data-cleaner, note: "Only when the audit finds missing values, odd values or near duplicates that need a rule, not a simple fix."}
+  - {uses: spreadsheet-formula-auditor, note: "Only when the file has formulas or links: errors, broken links and totals that do not tie out. Run once before cleaning and once after."}
+  - {uses: data-quality-scorecard-maker, note: "Once, when the file passes or the rounds run out: a scorecard to keep and compare with the next file."}
+schedule: "Each time a new export of the file arrives"
+asks_before: [overwriting the original file, deleting rows that are not exact duplicates, filling a blank with a guess, changing a formula, sending the cleaned file to anyone]
+origin: own
+version: 1.0.0
+example_pending: true

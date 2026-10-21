@@ -1,0 +1,82 @@
+new_slug: open-word-finder
+name: Open word finder
+summary: Paste your rivals and their lines. Get the word each one owns and three open words to claim.
+job: study-competitors
+thinking: low
+thinking_why: It counts repeated words and sorts them, with few judgement calls.
+headline: Open word finder
+subhead: Paste your rivals and their taglines or ad lines under this prompt. It finds the one word each rival owns and sorts words into taken, contested and open. You get three open words buyers care about.
+explain: |
+  When every brand says quality, service and value, buyers remember none of them. A word only works if it is clear, and if a rival would never say the opposite. The brands that stick are the ones tied to one word in the buyer's mind.
+
+        This prompt reads the lines your rivals use, finds the word each repeats, and marks which words are taken and which are free. It also flags the empty claims everyone makes, so you know which words to avoid.
+when:
+  - You are choosing a tagline and want a word rivals have not claimed.
+  - Your ads sound like everyone else's.
+  - You are entering a crowded category and need a gap.
+you_give:
+  - Five to eight rivals with their taglines or ad lines
+  - Reviews or comments that name them (optional)
+you_get:
+  - The one word each rival owns, with how sure it is
+  - Words sorted as taken, contested, open or empty
+  - Three open words with the evidence for each
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - List the market leader first.
+  - Paste real lines from each rival's site or ads.
+  - Pick one open word and check it against your own proof.
+how_it_works:
+  - title: Name the category
+    text: In the words a buyer would use.
+  - title: Collect signals
+    text: Taglines, headlines and buyer words for each rival.
+  - title: Pick one word each
+    text: The word that comes up most, with how sure it is.
+  - title: Sort the words
+    text: Taken, contested or open.
+  - title: Find empty claims
+    text: Words every rival uses and none could oppose.
+  - title: Pick three open words
+    text: Each with evidence from your pasted text.
+output_shape: |
+  CATEGORY: <in buyer words>
+
+        RIVAL | WORD IT OWNS | SIGNALS | HOW SURE
+
+        TAKEN: <...>
+        CONTESTED: <...>
+        OPEN: <...>
+        EMPTY CLAIMS: <...>
+
+        THREE OPEN WORDS FOR YOU
+        <word> | evidence: <source>
+
+        MISSING: <...>
+tweaks:
+  - what: Number of rivals
+    how: Five to eight gives a fair map. Fewer makes the owned words guesses.
+  - what: Buyer words
+    how: Reviews that name rivals make the result far more sure.
+  - what: The leader
+    how: Say who leads. Their second word is checked too.
+judge:
+  - Each owned word is backed by lines you pasted.
+  - The empty claims are words nobody would argue against.
+  - The open words are simple and buyers care about them.
+  - Guesses are marked.
+test:
+  - Use a category you know. The owned words should match what you already think of each rival.
+  - Run it twice. The taken words should match.
+  - Ask a friend which brand first comes to mind for one open word. None should be a clear answer.
+improve:
+  - Add your own tagline to the list to see which word it lands on.
+  - Add the words you would never use, so they are skipped.
+  - Check the open words against your proof before choosing.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - Five answers to "which brand comes to mind first for this category?"
+    - Rivals' ad lines copied from their ads or sites

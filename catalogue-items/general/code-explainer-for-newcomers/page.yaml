@@ -1,0 +1,103 @@
+new_slug: code-explainer-for-newcomers
+name: "Code explainer for newcomers"
+summary: "Paste working code. Get it explained in reading order for someone new, with what each part is for."
+job: build-software
+thinking: medium
+thinking_why: "Good explanations need an eye for where a newcomer gets lost."
+
+headline: "Code explainer for newcomers"
+subhead: "Paste working code and say who will read it. It lists the ideas in reading order, explains each in a short passage with the matching code beside it, covers what happens on bad input, and labels what is proved or only tested."
+
+explain: |
+  Code is ordered for the machine. A newcomer needs another order, with the big picture first and the reason beside every piece. Comments that repeat each line do not help.
+
+  This prompt rewrites your working code as a guide for people. It never changes the code. It names each piece, explains what happens on bad input, and marks every claim that it works as proved, tested or not checked.
+
+when:
+  - "A new teammate has to take over your script."
+  - "You wrote something with an AI and want to understand it before you trust it."
+  - "You need handover notes for a formula set or automation."
+
+you_give:
+  - "The code, in full"
+  - "Who will read it (optional)"
+  - "What it is for and what you doubt (optional)"
+you_get:
+  - "The ideas in reading order"
+  - "A short passage per idea with the code beside it"
+  - "What happens on bad input"
+  - "A list of what is proved, tested or unchecked"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "List the ideas"
+    text: "Write each idea a reader must hold, such as \"data arrives in rows\". Order them so each uses only ideas already met, big picture first."
+  - title: "Explain each in a short passage"
+    text: "Under 120 words, in plain words: what the idea is, why it is there, what goes wrong without it."
+  - title: "Place the code beside it"
+    text: "Put each code piece right after the sentence that explains it, with a short plain name such as \"round the total\". Do not change the code."
+  - title: "Cover bad input"
+    text: "List each odd input (empty, too long, wrong type, repeated) and say plainly what the code does: refuses, fixes or fails. Mark unhandled ones `MISSING:`."
+  - title: "Label what is known"
+    text: "Mark each claim that it works as proved, tested (say on what) or not checked. Never write \"works\" without a basis."
+
+output_shape: |
+  WHAT IT DOES
+  <one paragraph, for whom>
+
+  IDEAS IN ORDER
+  1. <idea>
+
+  WALKTHROUGH
+  <passage, under 120 words>
+  [<piece name>]
+  <code>
+
+  BAD INPUT
+  - <input>: <what the code does>
+
+  KNOWN OR NOT
+  - <claim>: proved | tested on <cases> | not checked
+
+  MISSING
+  <gaps>
+
+tweaks:
+  - what: "The reader"
+    how: "Say what they know. With none named it writes for someone who knows the language but not your project."
+  - what: "Your doubts"
+    how: "Name parts you are unsure of. They get flagged, not smoothed over."
+  - what: "Code length"
+    how: "Paste one script at a time for the clearest result."
+
+judge:
+  - "A newcomer could follow it without asking you."
+  - "Each piece has a name and a reason."
+  - "Bad input is covered, with gaps marked."
+  - "Nothing is called \"works\" without a basis."
+
+test:
+  - "Give it to someone new and ask where they got lost."
+  - "Compare a passage against the code line by line for mismatches."
+  - "Run it twice. The idea order should be nearly the same."
+
+improve:
+  - "Add the words your team uses for your main ideas."
+  - "Add a line on the length you want per passage."
+  - "Save the guide next to the code so it stays current."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "A line on who the reader is"
+  - "The tests you ran, if any"
+
+terms:
+  - term: "Walkthrough"
+    meaning: "An explanation written in the order a person needs, not the order the computer runs."

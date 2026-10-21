@@ -1,0 +1,77 @@
+new_slug: bonus-idea-matcher
+name: Bonus idea matcher
+summary: Paste your offer and buyer doubts. Get one named bonus for each doubt, with a value reason.
+job: make-offer
+thinking: low
+thinking_why: It pairs each doubt with a bonus, and the shape is fixed.
+headline: Bonus idea matcher
+subhead: Paste your offer and the doubts buyers have under this prompt. It matches one bonus to each doubt and names it by its benefit. You get a short description and a reasoned value for each, plus the order to show them.
+explain: |
+  Buyers who like your offer often still wait. A discount cuts your margin and teaches them to wait for sales. A bonus that answers the exact doubt keeps the price and gives them a reason to act now.
+
+        This prompt starts from the doubts, not from what you could add. Each bonus is matched to one doubt, named by its benefit, and valued with a reason. It prefers quick tools such as checklists and scripts, because they get used.
+when:
+  - People say they will think about it.
+  - You want to add value without cutting your price.
+  - Your offer has the same core as rivals' and needs something extra.
+you_give:
+  - Your offer, price and result
+  - The doubts buyers voice (optional)
+  - Any true limits (optional)
+you_get:
+  - One bonus for each doubt
+  - A benefit name and one-line description for each
+  - A value with the reason behind it
+  - The order to show them
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - Use real doubt wording from calls, emails or comments.
+  - Only keep bonuses you can make well.
+  - Do not publish a value you cannot back.
+how_it_works:
+  - title: List the doubts
+    text: Five to eight reasons a buyer says maybe.
+  - title: Match a bonus
+    text: One bonus per doubt, quick tools first.
+  - title: Name by benefit
+    text: A short name that says what it does.
+  - title: Describe it
+    text: What it is and the doubt it answers.
+  - title: Value it
+    text: A price with a reason, or MISSING.
+  - title: Add true limits
+    text: Only caps and dates that are real.
+output_shape: |
+  BONUS | DOUBT IT ANSWERS | WHAT IT IS | VALUE AND WHY | LIMIT
+        1. <name> | <doubt> | <one line> | <value, reason> | <limit>
+
+        TOTAL VALUE: <sum or MISSING>
+        ORDER TO SHOW THEM: <...>
+        MISSING: <...>
+tweaks:
+  - what: Real doubts
+    how: Doubts in buyers' own words give sharper bonuses than guesses.
+  - what: Format
+    how: Ask for templates only, or scripts only, to match what you can make.
+  - what: Limits
+    how: Add true caps or dates. If there are none, none are used.
+judge:
+  - Each bonus answers one named doubt.
+  - Names say what the bonus does for the buyer.
+  - Every value has a reason or says MISSING.
+  - No limit or proof was made up.
+test:
+  - Check each bonus against a real buyer doubt you have heard.
+  - Remove one bonus and see if its doubt is still answered elsewhere.
+  - Run twice. The doubts should match, even if the names change.
+improve:
+  - Add your cost to make each bonus so you can see the margin.
+  - Add the formats you can make.
+  - Save the bonuses you pick in your offer file.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - Buyer doubts from calls and emails
+    - Your cost and time to make each bonus

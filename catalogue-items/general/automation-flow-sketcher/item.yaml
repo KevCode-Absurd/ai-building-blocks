@@ -1,0 +1,18 @@
+slug: automation-flow-sketcher
+name: "Automation flow sketcher"
+summary: "Paste a task you repeat. Get an automation laid out step by step for Zapier or Make, with what can break."
+category: general
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+credits:
+  - {title: "zapier-make-patterns skill", by: "sickn33", url: "https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/zapier-make-patterns", used: "Trigger, action and filter patterns for Zapier and Make, with error handling, adapted under the CC BY-4.0 licence"}
+version: 1.0.0
+example_pending: true

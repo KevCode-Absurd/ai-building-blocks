@@ -1,0 +1,16 @@
+slug: repeat-job-skill-drafter
+name: "Repeat job skill drafter"
+summary: "Paste a job you repeat. Get a draft skill file with a trigger line and test prompts."
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: skill_files}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,23 @@
+slug: two-version-ad-test-planner
+name: Two-version ad test planner
+summary: Paste two versions of an ad. Get one clear difference, a key for each and a winner rule set before launch.
+category: general
+type: prompt
+role: check
+job: ads
+level: intermediate
+inputs:
+  - type: ad_copy
+    required: true
+  - type: offer
+    required: false
+outputs:
+  - type: plan
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: Tested Advertising Methods, fifth edition (1997)
+    by: John Caples, revised by Fred E. Hahn
+    used: Split-run testing (both versions at the same time and place to matched halves), key numbers that change with every edit, one difference per test, about a hundred replies per version, a control ad to measure each new ad against, and testing a series in rounds. The sample-size rule of thumb in step 5 is ours, not his.

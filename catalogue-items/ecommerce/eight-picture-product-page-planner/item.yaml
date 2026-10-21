@@ -1,0 +1,20 @@
+slug: eight-picture-product-page-planner
+name: "Eight-picture product page planner"
+summary: "Paste your product facts and photos you have. Get a plan for the eight pictures on your product page."
+category: ecommerce
+type: prompt
+role: make
+job: image
+level: beginner
+inputs:
+  - {type: product_data, required: true}
+  - {type: product_photos, required: false}
+outputs:
+  - {type: gallery_plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "Product Page UX: All Products Need at Least One 'In Scale' Image (28% Get It Wrong)", by: "Christian Holst, Baymard Institute", url: "https://baymard.com/blog/in-scale-product-images", used: "Shoppers explore images first and judge size from them, so every set needs a scale image"}
+  - {title: "UX: 7 Types of Product Images", by: "Christian Holst, Baymard Institute", url: "https://baymard.com/blog/ux-product-image-categories", used: "Image types beyond the packshot, including compatibility, texture and size"}

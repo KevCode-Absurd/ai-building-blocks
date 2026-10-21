@@ -1,0 +1,37 @@
+slug: review-quote-ad-card-planner
+name: Review quote ad card planner
+summary: Paste review lines. Get quote image ad cards with picture prompts and feed text that keep the words exact.
+category: general
+type: prompt
+role: make
+job: ads
+level: beginner
+inputs:
+  - type: voc_reviews
+    required: true
+  - type: product_photos
+    required: false
+outputs:
+  - type: image_prompt
+  - type: ad_copy
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: "Forces Friday: Pull and Anxiety"
+    by: Bob Moesta and Chris Spiek, JTBD Radio
+    url: https://jobstobedone.org/radio/pull-and-anxiety/
+    used: Sorting quotes by push, pull, doubt and habit
+  - title: How Online Reviews Influence Sales
+    by: Spiegel Research Center, Northwestern University
+    url: https://spiegel.medill.northwestern.edu/How-Online-Reviews-Influence-Sales
+    used: Why a mix of praise and an answered doubt reads truer than perfection
+  - title: "FTC's Endorsement Guides: What People Are Asking"
+    by: US Federal Trade Commission
+    url: https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking
+    used: Disclosing free products; not asking only happy buyers
+  - title: "Facebook Ads Guide: image ad specs"
+    by: Meta
+    url: https://www.facebook.com/business/ads-guide/update/image
+    used: 27-character headline and 50 to 150 character main text

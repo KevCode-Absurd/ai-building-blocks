@@ -1,0 +1,97 @@
+new_slug: monthly-catalogue-clean-up-keeper
+name: Monthly catalogue clean-up keeper
+summary: Run it monthly. Get missing costs, clashing SKUs and hidden products found, and a short fix list in the right order.
+job: run-your-store
+thinking: medium
+thinking_why: It runs read-only reports in a set order and tracks counts. A mid-range model is enough.
+headline: Monthly catalogue clean-up keeper
+subhead: Run it once a month. It finds products with no cost, clashing SKUs, impossible stock, thin listings and products shoppers cannot find, compares with last month, and hands back a short fix list in the right order.
+explain: |
+  A product catalogue gets messy a little at a time. A new product goes in without a cost. Two variants share a SKU. A product misses a sales channel. Each one is small. Together they make your margin reports wrong, mix up your stock and hide products from buyers.
+
+  This agent checks your catalogue each month, in an order that makes sense: costs first, then SKUs, then stock, then listings, then where products show. It compares with last month and marks problems new, still open or fixed. Anything stuck for three months goes to the top. It edits nothing. You get a short list of fixes, and it re-checks after you make them.
+when:
+  - You have dozens of products or more and nobody checks the data on a schedule.
+  - Your margin or stock reports have looked off and you suspect missing costs.
+  - You want to be sure every live product is on every channel you sell on.
+you_give:
+  - A connection to your Shopify store, or a product export
+  - The sales channels every live product should appear on, the first time
+  - A naming map for sizes and colours, if you want mixed names fixed (optional)
+you_get:
+  - Problem counts for each check, against last month
+  - Products with no cost, clashing SKUs and impossible stock, with names
+  - The 15 thinnest listings and what each is missing
+  - Products missing from a channel or from every collection
+how_to_use:
+  - Add the agent in Claude Code, or save it in .claude/agents, and connect your store.
+  - The first time, tell it which channels every live product should be on.
+  - Ask it to run this month's check. Fix costs and SKUs first.
+  - Tell it what you fixed. It re-checks those items and shows the new count.
+  - Run it again next month. It shows what is new, still open or fixed.
+how_it_works:
+  - title: Read last month
+    text: Opens the saved counts and channel list, or marks this as the baseline run.
+  - title: Costs, then identifiers, then stock
+    text: Finds missing costs, then clashing SKUs, then impossible stock. Clashing SKUs can cause stock errors, so they come first.
+  - title: Check the listings
+    text: Scores every active product on description, images, search fields, weight, barcode and cost, and lists the worst 15.
+  - title: Check where products show
+    text: Finds live products missing from a channel and products in no collection.
+  - title: Choose the optional steps
+    text: Runs the naming fix only with your map and your yes. Looks for unused files every third month.
+  - title: Compare and loop
+    text: Marks each problem new, still open or fixed. After you fix, it re-checks that item, at most twice, then stops.
+output_shape: |-
+  THIS MONTH
+    Missing costs <n> | Clashing SKUs <n> | Stock errors <n> | Thin listings <n> | Channel gaps <n> | In no collection <n> | vs last month
+
+  FIX FIRST
+    <missing costs | clashing SKUs | stock errors> | <product names> | <plain fix>
+
+  LISTINGS TO IMPROVE
+    <product> | missing <...>
+
+  NOT SELLING WHERE IT SHOULD
+    <product> | missing from <channel | every collection>
+
+  STUCK (3+ months)
+    <items>
+
+  SKIPPED
+    <check> | <why>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your channels
+    how: List every channel a live product must be on. A product on only one of two is flagged.
+  - what: Required fields
+    how: Name any field every product must have, such as material. The listing score counts it.
+  - what: Naming map
+    how: Give one option at a time, such as sizes. Check saved links and filters afterwards.
+  - what: Stock errors
+    how: If they stay after SKUs are fixed, they come from counts or a 3PL delay. Recount those products.
+judge:
+  - Costs, SKUs and stock were read in that order.
+  - Every count is set against last month.
+  - Problems open three months or more are marked stuck.
+  - Nothing was edited, published or deleted without your yes.
+  - The fix list names the products, not only the counts.
+test:
+  - Add a product with no cost on purpose and see if it shows up first.
+  - Run it twice in a row. The second run should show no new problems.
+  - Give two variants the same SKU and check it names both.
+improve:
+  - Add your own required fields to the listing score.
+  - Set a rule for products that should be on only some channels, so they are not flagged.
+  - Save the names of products you fixed, so repeat problems on one supplier stand out.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the catalogue folder and run on the 1st of each month.
+    - name: Shopify
+      why: The skills read products, stock and channels from the store connection.
+  inputs:
+    - Your list of sales channels
+    - Sales by product, to rank the channel and collection gaps

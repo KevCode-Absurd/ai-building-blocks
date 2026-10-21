@@ -1,6 +1,6 @@
 # Build and ship software: AI Blocks
 
-> 313 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 316 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3D image viewer builder](https://useaiblocks.com/skills/3d-image-viewer-builder): Give it a 3D scan or mesh. Get a viewer with slices, overlays and marked regions.
 - [5G waveform generator](https://useaiblocks.com/skills/5g-waveform-generator): Pick a 5G test model or channel. Get a standard-compliant baseband waveform.
@@ -56,6 +56,7 @@
 - [Claude app builder](https://useaiblocks.com/skills/claude-app-builder): Say what to build with Claude. Get working code that calls the Claude API the right way.
 - [Code comment cleaner](https://useaiblocks.com/skills/code-comment-cleaner): Give it a code file. Get clear, professional comments and tidy-ups, with the logic left untouched.
 - [Code documentation writer](https://useaiblocks.com/skills/code-documentation-writer): Point it at your code. Get docstrings, a README and usage guides that match what the code does.
+- [Code explainer for newcomers](https://useaiblocks.com/prompts/code-explainer-for-newcomers): Paste working code. Get it explained in reading order for someone new, with what each part is for.
 - [Code speed planner](https://useaiblocks.com/skills/code-speed-planner): Before it writes loops or queries, it states the best approach and cost. Get code that avoids slow patterns.
 - [Code tracing adder](https://useaiblocks.com/skills/code-tracing-adder): Give it MATLAB code. Get tracing added so you can see where time goes and where errors start.
 - [Code walkthrough writer](https://useaiblocks.com/skills/code-walkthrough-writer): Paste working code. Get an explanation for people, with each piece of code placed in reading order.
@@ -99,6 +100,7 @@
 - [Drone scenario builder](https://useaiblocks.com/skills/drone-scenario-builder): Describe the terrain, buildings and sensors. Get a drone simulation scene you can fly in MATLAB.
 - [DSPy prompt optimizer](https://useaiblocks.com/skills/dspy-prompt-optimizer): Describe your AI task and a few examples. Get a program that tunes its own prompts to score better.
 - [DuckDB big file query helper](https://useaiblocks.com/skills/duckdb-big-file-query-helper): Point it at large CSV, Parquet or JSON files. Get fast queries run from MATLAB with DuckDB.
+- [Edge case list maker](https://useaiblocks.com/prompts/edge-case-list-maker): Paste a change you plan to make. Get the cases to check, smallest first, before you write any code.
 - [Embedding model trainer](https://useaiblocks.com/skills/embedding-model-trainer): Say what your search or matching must do. Get an embedding or reranker model trained from a ready template.
 - [Error warning and recovery designer](https://useaiblocks.com/skills/error-message-designer): Describe a system and its operators. Get what the alarm says, what the person decides and how it recovers.
 - [Expo API route builder](https://useaiblocks.com/skills/expo-api-route-builder): Say what your mobile app needs from a server. Get API routes built in Expo Router and set up to host.
@@ -177,6 +179,7 @@
 - [Model training recipe finder](https://useaiblocks.com/skills/model-training-recipe-finder): Say what you are training. Get the right settings, a safe training loop and a checklist for when the loss goes wrong.
 - [Module design coach](https://useaiblocks.com/skills/module-design-coach): Name the part you want to improve. Get a simpler design with clear boundaries that is easier to test.
 - [Monorepo helper](https://useaiblocks.com/skills/monorepo-helper): Point it at a monorepo. Get what a change affects and the tests to run, in Turborepo, Nx or pnpm.
+- [Monthly tech debt keeper](https://useaiblocks.com/agents/monthly-tech-debt-keeper): Point it at your code each month. Get new debt found, last month's clean-up checked and the next small fixes ranked.
 - [Multi-agent system planner](https://useaiblocks.com/skills/multi-agent-system-planner): Describe the job. Get a choice of supervisor, swarm or handoff design for several agents, with the trade-offs.
 - [Multi-GPU training setup helper](https://useaiblocks.com/skills/multi-gpu-training-setup-helper): Give it a training script. Get it running on one GPU, many GPUs or several machines with a few added lines.
 - [Multi-session build plan writer](https://useaiblocks.com/skills/multi-session-build-plan-writer): Give it a big build request. Get a plan in your repo that any fresh agent can pick up and finish.

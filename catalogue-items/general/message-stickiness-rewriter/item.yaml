@@ -1,0 +1,19 @@
+slug: message-stickiness-rewriter
+name: "Message stickiness rewriter"
+summary: "Paste a tagline, pitch line or short paragraph. Get three versions that people will remember."
+category: general
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "made-to-stick skill", by: "Wondel.ai", url: "https://github.com/wondelai/skills/tree/main/made-to-stick", used: "The six tests of a message people remember: simple, unexpected, concrete, credible, emotional, story"}
+  - {title: "Made to Stick", by: "Chip Heath and Dan Heath (book)", url: "https://heathbrothers.com/books/made-to-stick/", used: "Why messages stay in the mind, and the curse of knowledge"}

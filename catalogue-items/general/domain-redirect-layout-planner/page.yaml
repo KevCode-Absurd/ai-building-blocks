@@ -1,0 +1,104 @@
+new_slug: domain-redirect-layout-planner
+name: "Domain and redirect layout planner"
+summary: "Paste your domains and what each is for. Get the main address, redirects and a plan for names you do not use."
+job: ship-and-host
+thinking: medium
+thinking_why: "It weighs several linked choices and their effects on search and email."
+
+headline: "Domain and redirect layout planner"
+subhead: "Paste your domains, what each is for and whether it is live, parked or unused. It picks the main address, says where new sections should live, writes a redirect table, and lists safety settings to turn on."
+
+explain: |
+  Domains pile up. You end up with a main site, a few old names, a spare for a campaign, and no clear rule for where each should point. Mistakes show up as lost visitors, duplicate pages in search, or email that stops.
+
+  This prompt makes the decisions in order: the main address, where new sections go, where every other name redirects, and what to do with the rest. It also lists safety steps like locks and auto-renew.
+
+when:
+  - "You own several domains and no plan for them."
+  - "You are launching a new site and want the address settled first."
+  - "You are merging two sites into one."
+
+you_give:
+  - "Your domains and what each is for"
+  - "Their status: live, parked or unused"
+  - "Services that depend on them (optional)"
+  - "Where each is registered (optional)"
+you_get:
+  - "A main address for each site, with a reason"
+  - "Where new sections should live"
+  - "A redirect table"
+  - "Safety settings to turn on and a plan for unused names"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "Choose the main address"
+    text: "Pick one main address for each site: with or without www. The other version redirects to it. Give a one-line reason."
+  - title: "Decide where new sections live"
+    text: "For any new blog, shop or product, say whether it belongs in a folder (example.com/blog), a subdomain or a separate domain. Default to a folder unless there is a reason."
+  - title: "Write the redirect table"
+    text: "List every other domain and old address, where it should send visitors, and whether the redirect is permanent."
+  - title: "Protect what you own"
+    text: "Check the safety basics for each domain: registrar lock, two-step sign-in, auto-renew, privacy on. List what I should turn on."
+  - title: "Handle unused names"
+    text: "For each unused domain, say keep (and redirect), park, or let go, with a reason."
+
+output_shape: |
+  MAIN ADDRESSES
+  <domain>: <with | without www> because <reason>
+
+  NEW SECTIONS
+  <section>: <folder | subdomain | separate> because <reason>
+
+  REDIRECT TABLE
+  <from> to <to> (permanent)
+
+  SAFETY TO TURN ON
+  - <domain>: <setting>
+
+  UNUSED NAMES
+  <domain>: <keep | park | let go> - <reason>
+
+  CHECK FIRST
+  <email or service that may be affected>
+
+tweaks:
+  - what: "Email and tools"
+    how: "List what uses each domain, such as email. Changes that would break them get flagged."
+  - what: "Purpose of each name"
+    how: "Say which are brand, campaign or defensive. It changes keep or let go."
+  - what: "Folders versus subdomains"
+    how: "State your platform limits. Some tools force a subdomain."
+
+judge:
+  - "There is exactly one main address per site."
+  - "Every other name has a destination."
+  - "Nothing in the plan would stop your email."
+  - "Unused names each have a clear decision."
+
+test:
+  - "Check each redirect in a browser after you set it up."
+  - "Run it twice. The main addresses should match."
+  - "Leave out the services list. It should ask what depends on each name."
+
+improve:
+  - "Add the registrar you use so the safety list names real settings."
+  - "Add renewal dates so it flags what to renew."
+  - "Save the final table as your domain record."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "A list of every service on each domain"
+  - "Renewal dates"
+
+terms:
+  - term: "Redirect"
+    meaning: "A rule that sends visitors from one web address to another."
+  - term: "Subdomain"
+    meaning: "A name in front of your domain, like blog.example.com."

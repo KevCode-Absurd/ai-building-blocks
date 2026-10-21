@@ -1,6 +1,6 @@
 # Design things people love: AI Blocks
 
-> 84 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 86 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Aesthetic direction brief writer](https://useaiblocks.com/skills/aesthetic-direction-brief-writer): Answer four questions about tone and feel. Get a brief that keeps copy, design and images in one style.
 - [AI assistant interface style guide writer](https://useaiblocks.com/skills/ai-assistant-style-guide): Describe your AI product. Get a style guide for a chat-first screen with few controls and clear outcomes.
@@ -30,6 +30,7 @@
 - [Error message rewriter](https://useaiblocks.com/skills/error-message-rewriter): Paste your error messages. Get each rewritten with what went wrong and what to do next.
 - [Everyday usability reviewer](https://useaiblocks.com/skills/everyday-usability-reviewer): Give it a product or screen. Get what confuses people and fixes for clues, limits and feedback. Uses Don Norman's principles.
 - [Feature cutting planner](https://useaiblocks.com/skills/feature-cutting-planner): Paste your feature list and the users' main job. Get what to keep, cut and merge so it explains itself.
+- [Five-colour feeling palette picker](https://useaiblocks.com/prompts/five-colour-feeling-palette-picker): Name what it is for and the feeling. Get a palette of five colours or fewer, each with one job.
 - [Frosted glass style guide writer](https://useaiblocks.com/skills/frosted-glass-style-guide-writer): Describe your product. Get a style guide for a frosted, see-through look, with blur levels and contrast checks.
 - [Hand-drawn style guide writer](https://useaiblocks.com/skills/hand-drawn-style-guide-writer): Describe your product. Get a style guide with a sketchy, handwritten, playful look and rules for each part.
 - [Hard-to-use thing diagnoser](https://useaiblocks.com/skills/hard-to-use-thing-diagnoser): Describe a thing people get wrong, or paste support complaints. Get what misleads them and the smallest fix.
@@ -57,6 +58,7 @@
 - [Page design standards checker](https://useaiblocks.com/skills/page-design-standards-checker): Give it a page or component. Get checks on colour contrast, spacing, hierarchy and mobile, with fixes.
 - [Page grid and type planner](https://useaiblocks.com/skills/page-grid-and-type-planner): Paste your content and page type. Get a grid, a short type list and a white-space plan.
 - [Place principles writer](https://useaiblocks.com/skills/place-principles-writer): Describe your space or service. Get a statement of who it serves and what it must never be.
+- [Plain error message writer](https://useaiblocks.com/prompts/plain-error-message-writer): Paste your error messages. Get each rewritten to say what went wrong and what to do next.
 - [Plain page type checker](https://useaiblocks.com/skills/plain-page-type-checker): Paste your page text and where it is read. Get type and spacing fixes, a readability check and a score.
 - [Plain words interface rewriter](https://useaiblocks.com/skills/plain-words-interface-rewriter): Paste a form, screen text or process steps. Get a rewrite in your users' own words, with a read-aloud test.
 - [Poster designer](https://useaiblocks.com/skills/poster-designer): Describe the poster or artwork. Get a finished PNG or PDF design with its own clear look.

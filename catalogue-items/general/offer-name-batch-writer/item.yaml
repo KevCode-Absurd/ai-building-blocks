@@ -1,0 +1,22 @@
+slug: offer-name-batch-writer
+name: Offer name batch writer
+summary: Paste your offer and buyer. Get ten offer names built from five parts, with three to test.
+category: general
+type: prompt
+role: make
+job: offer
+level: beginner
+inputs:
+  - type: offer
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+    by: Alex Hormozi
+    url: https://shop.acquisition.com/products/100m-offers-hardcover
+    used: "The five-part way to name an offer: reason why, who it is for, the goal, a time and a container word"

@@ -1,0 +1,101 @@
+new_slug: class-quiz-reteach-keeper
+name: Class quiz reteach keeper
+summary: Give it each quiz's results. Get what to reteach and how, then a check next quiz on whether it worked.
+job: teach-and-train
+thinking: medium
+thinking_why: It reads a table, picks one of five reteach routes by rule and compares with the last quiz. A mid-size model is enough.
+headline: Class quiz reteach keeper
+subhead: Give it your marked quiz results. It finds the ideas most of your class missed, works out why, picks the reteach that fits the size of the problem, and next time checks whether it worked. It stops you repeating a fix that did not help.
+explain: |
+  A marked quiz tells you who got what wrong. It does not tell you what to teach on Monday. Reteaching the whole class an idea that three students missed wastes the time of everyone else. Reteaching the same way twice, when it did not work the first time, wastes more.
+
+  This agent reads the results and ranks the missed questions. It looks for the cause in the wrong answers, then picks the reteach by size and kind. If most of the class missed a new idea, it builds a short lesson. If students mix up two ideas, it builds a contrast task. If one mistake is common, it builds examples with that mistake in them. If only a few missed it, it writes hints for a small group. It keeps a log, so the next quiz shows whether each topic moved. If a topic fails twice, it looks for the missing step underneath. It never changes marks or contacts anyone.
+when:
+  - You mark a quiz and want to know what to reteach, not only who struggled.
+  - A topic keeps coming back wrong and you want to try something different.
+  - You want a short recall starter for the topics students just missed.
+you_give:
+  - Quiz results, one row per student, with student numbers and no names
+  - The quiz questions and the idea each one tests, the first time
+  - Sample wrong answers for the most-missed questions (optional, best)
+  - Your year group and how long you have before the next lesson (optional)
+you_get:
+  - The most-missed questions with the share of the class who missed each
+  - Each reteached topic from last time marked moved up, flat or worse
+  - The likely cause behind each error, and the reteach that fits it
+  - A small-group list by student number, and recall starters for one and three weeks later
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to read this quiz.
+  - Take names out of your results. Use student numbers.
+  - Add a few real wrong answers for the most-missed questions if you can. The causes are then seen, not guessed.
+  - Choose what to teach from its list. Run it again after the next quiz and it compares with this one.
+how_it_works:
+  - title: Read the results
+    text: Works out the share of the class who missed each question and ranks them. It says when the class is too small for the shares to be steady.
+  - title: Compare with last time
+    text: Sets each topic you reteached against its last result and marks it moved up, flat or worse.
+  - title: Find the cause
+    text: Looks at the wrong answers for the most-missed questions and names the likely cause of each error.
+  - title: Choose the reteach
+    text: More than half missed a new idea gets a short lesson. A procedure gets worked examples. Mixed-up ideas get a contrast task. A common mistake gets examples with that mistake in. A few students get hints in a small group.
+  - title: Stop a failing fix
+    text: If a topic was reteached twice with no gain, it looks for a missing step underneath, not a third try.
+  - title: Plan the recall and save
+    text: Writes short starters for one and three weeks later and saves the numbers for the next quiz.
+output_shape: |-
+  THE QUIZ
+    Class size <n> | average <x> | most missed: <question> <share missed>
+
+  AGAINST LAST TIME
+    <topic> | then <share> | now <share> | moved up, flat or worse
+
+  WHY THEY MISSED IT
+    <topic> | cause: <cause> | seen in answers or a guess
+
+  WHAT TO RETEACH
+    <topic> | method: <lesson, worked examples, contrast task, flawed examples or hints> | why: <reason> | time: <minutes>
+
+  SMALL GROUP
+    <student numbers> | topic | hint set
+
+  STUCK TOPICS
+    <topic> | reteached <n> times | gap beneath: <prerequisite>
+
+  RECALL STARTERS
+    one week: <questions> | three weeks: <questions>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Sample wrong answers
+    how: Real answers let it see the cause. Without them every cause is a guess and is marked that way.
+  - what: The cut-offs
+    how: More than half, about a third and under a quarter are starting points. Change them for your class size and how much time you have.
+  - what: Idea tags on questions
+    how: Tell it which idea each question tests. Questions that test two ideas make the shares hard to read.
+  - what: Student privacy
+    how: Use numbers, not names, in anything you give it. Keep the log on your own device.
+judge:
+  - Each share is worked out from your table, and the class size is stated.
+  - Each reteach matches the size and the cause of the problem, and says why.
+  - No topic got a third reteach of the same kind.
+  - No student names appear in any file.
+  - Nothing was shared, changed or sent without your yes.
+test:
+  - Run it on a quiz you remember well. See if it finds the same weak spots you saw.
+  - Run it on two quizzes in a row and check the second one compares with the first.
+  - Give it a class of eight and see if it warns that the shares are not steady.
+improve:
+  - Add your own cut-offs for what counts as a whole-class problem.
+  - Save the reteach that worked for each topic, so next year starts from it.
+  - Add the questions you write yourself, with the idea each one tests.
+  - Keep a short list of students who always need hints, by number, to plan groups faster.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the reteach log and read the results file each time.
+    - name: Google Sheets or your quiz tool
+      why: Export results as a table with one row per student and one column per question.
+  inputs:
+    - A photo or paste of a few real wrong answers for the most-missed questions
+    - The scheme of work for the next two weeks

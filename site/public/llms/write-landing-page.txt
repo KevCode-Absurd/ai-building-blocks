@@ -1,6 +1,6 @@
 # Write and build a landing page: AI Blocks
 
-> 41 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 43 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [A landing page that matches your best ad](https://useaiblocks.com/workflows/ad-landing-page): Give it your website, offer and best ad. You get the page text, a design plan and a 30-point review.
 - [Ad-matched landing page writer](https://useaiblocks.com/skills/ad-matched-landing-page-writer): Paste your ad, facts and reviews. Get landing page copy that picks up where the ad left off.
@@ -25,6 +25,7 @@
 - [Page type and layout planner](https://useaiblocks.com/skills/page-type-and-layout-planner): Give it your ads, buyers and awareness stages. Get which page each ad needs and its section order.
 - [Pick a lead magnet, then build its path and page](https://useaiblocks.com/workflows/pick-a-lead-magnet-then-build-its-path-and-page): Give it your buyer. Get a lead magnet, its path to a sale, a signup page and a review.
 - [Product listing writer](https://useaiblocks.com/skills/product-listing-writer): Give it your product facts. Get a title, bullets and description built for the marketplace you sell on.
+- [Proof spot mapper](https://useaiblocks.com/prompts/proof-spot-mapper): Paste your reviews, quotes and buyer doubts. Get which proof to show, where it goes and what to drop.
 - [Proof-backed sales copy writer](https://useaiblocks.com/skills/proof-backed-sales-copy-writer): Paste your opening and proof. Get the body and close, with proof beside every claim.
 - [Quiz funnel builder](https://useaiblocks.com/skills/quiz-funnel-builder): Describe your audience. Get a scored quiz that sorts people, captures leads and leads into the right next offer.
 - [React landing page builder](https://useaiblocks.com/skills/react-landing-page-builder): Describe your product. Get a landing page as React code with hero, pricing, FAQ and proof sections.
@@ -41,5 +42,6 @@
 - [Store quiz funnel builder](https://useaiblocks.com/skills/store-quiz-funnel-builder): Give it your customer research and offer. Get a quiz, info cards, summary page and a drop-off check.
 - [Store social proof placer](https://useaiblocks.com/skills/store-social-proof-placer): Give it buyer doubts and reviews. Get which proof to show, from whom and where.
 - [TikTok Shop listing writer](https://useaiblocks.com/skills/tiktok-shop-listing-writer): Give it your product details. Get a title, description, image and video plan that fits TikTok Shop search.
+- [Top-of-page headline writer](https://useaiblocks.com/prompts/top-of-page-headline-writer): Paste your offer, buyer, proof and ad. Get five headlines with a pick, a subhead, a button and proof.
 - [Write an advertorial that turns cold traffic into sales](https://useaiblocks.com/workflows/write-an-advertorial-that-turns-cold-traffic-into-sales): Give it your product facts and customer reviews. Get an advertorial built on one big idea and checked for story and claims.
 - [Write sales copy with proof beside every claim](https://useaiblocks.com/workflows/proof-sales-copy): Give it customer reviews and product facts. Get a buyer brief, two openings to test and a body with proof.

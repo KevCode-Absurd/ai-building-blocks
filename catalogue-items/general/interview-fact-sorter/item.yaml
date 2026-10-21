@@ -1,0 +1,22 @@
+slug: interview-fact-sorter
+name: Interview fact sorter
+summary: Paste notes from customer talks. Get facts told apart from praise and ideas, with the next question.
+category: general
+type: prompt
+role: check
+job: research
+level: beginner
+inputs:
+  - type: voc_reviews
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: "The Mom Test: how to talk to customers and learn if your business is a good idea when everybody is lying to you"
+    by: Rob Fitzpatrick
+    url: https://www.momtestbook.com/
+    used: Compliments, vague talk and ideas count for little; past actions count for a lot

@@ -1,0 +1,86 @@
+new_slug: search-title-and-snippet-writer
+name: "Search title and snippet writer"
+summary: "Paste your page topic, search phrase and benefit. Get three titles and descriptions within the length limits."
+job: get-found-in-search
+thinking: low
+thinking_why: "It writes short lines to set length limits."
+
+headline: "Search title and snippet writer"
+subhead: "Paste what the page is about, the search phrase people use and your best benefit. The prompt writes three titles and descriptions that show in search results, with character counts, a line for social sharing and a pick."
+
+explain: |
+  The title and description are your page's ad in search results. A vague one gets skipped, even if you rank well. A cut-off one looks sloppy.
+
+  This prompt writes three versions from different angles. Each title puts your search phrase near the start. Each description leads with the benefit and ends with an action. It shows the character count so nothing is cut off, and it never promises more than the page does. It also adds a line for social sharing and picks one option with a reason.
+
+when:
+  - "Your page ranks but few people click."
+  - "You are publishing a new page."
+  - "Your titles are cut off in search."
+
+you_give:
+  - "What the page is about"
+  - "The main search phrase"
+  - "Who it is for and the best benefit"
+  - "Brand name (optional)"
+you_get:
+  - "Three titles and descriptions with counts"
+  - "A line for social sharing"
+  - "A pick with one reason"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Under it, describe the page and its search phrase."
+  - "Say who it is for and the best benefit."
+  - "Paste the pick into your page settings and check how it looks in search."
+
+how_it_works:
+  - title: "Title"
+    text: "Phrase near the start."
+  - title: "Description"
+    text: "Benefit first, then an action."
+  - title: "Three angles"
+    text: "Different ways in."
+  - title: "Check"
+    text: "Nothing beyond the page."
+
+output_shape: |
+  OPTION 1 (<angle>)
+  Title: <...> (<n> characters)
+  Description: <...> (<n> characters)
+  OPTION 2 ...
+  OPTION 3 ...
+  SOCIAL LINE: <...>
+  PICK: <n> because <...>
+
+tweaks:
+  - what: "Search phrase"
+    how: "Give the exact words people type. The titles center on it."
+  - what: "Page type"
+    how: "A product page, a guide and a home page use different angles."
+  - what: "Brand name"
+    how: "Say if the brand name must appear."
+
+judge:
+  - "The phrase is in each title."
+  - "Counts are within the limits."
+  - "The three angles differ."
+  - "Nothing goes beyond the page."
+
+test:
+  - "Paste the output in a search preview tool and check nothing is cut off."
+  - "Compare the pick with your current title."
+  - "Change one title and watch clicks for a few weeks."
+
+improve:
+  - "Add your usual brand name format."
+  - "Add words you never use in titles."
+  - "Pair it with Keyword to post outline writer."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt works in any strong chat AI. Paste it, then add your details under it."}
+  inputs:
+    - "Your current title and description"
+    - "Clicks and impressions for the page"
+    - "Two rival results for the same phrase"

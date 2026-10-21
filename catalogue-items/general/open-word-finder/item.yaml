@@ -1,0 +1,23 @@
+slug: open-word-finder
+name: Open word finder
+summary: Paste your rivals and their lines. Get the word each one owns and three open words to claim.
+category: general
+type: prompt
+role: source
+job: research
+level: beginner
+inputs:
+  - type: competitor_set
+    required: true
+  - type: voc_reviews
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: The 22 Immutable Laws of Marketing
+    by: Al Ries and Jack Trout
+    used: One word per brand, words rivals already hold, and claims every brand makes that nobody owns

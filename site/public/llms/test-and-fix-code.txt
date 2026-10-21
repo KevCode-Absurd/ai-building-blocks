@@ -1,6 +1,6 @@
 # Test and fix code: AI Blocks
 
-> 120 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 122 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accessibility checker](https://useaiblocks.com/skills/accessibility-checker): Point it at a page or code. Get a ranked list of accessibility problems against WCAG 2.2, and fixes if you ask.
 - [Agent run evidence auditor](https://useaiblocks.com/skills/agent-run-evidence-auditor): Give it logs from an AI agent run. Get each success claim checked against real proof, with gaps marked.
@@ -25,6 +25,7 @@
 - [Bug and security code reviewer](https://useaiblocks.com/skills/bug-and-security-code-reviewer): Give it a file or pull request. Get a review of bugs, security gaps, speed issues and style.
 - [Bug cause investigator team](https://useaiblocks.com/skills/bug-cause-investigator-team): Give it a crash or odd behaviour. Get several parallel read-only investigations and one ranked list of likely causes.
 - [Bug diagnoser](https://useaiblocks.com/skills/bug-diagnoser): Describe what is broken or slow. Get the cause found step by step and the fix checked.
+- [Bug evidence plan writer](https://useaiblocks.com/prompts/bug-evidence-plan-writer): Paste the bug, the error and the code near it. Get ranked suspects and a check for each before you change anything.
 - [Bug root cause finder](https://useaiblocks.com/skills/bug-root-cause-finder): Describe the bug. Get the cause proven with evidence before any code is changed, so fixes stop being guesses.
 - [Change impact checker](https://useaiblocks.com/skills/change-impact-checker): Describe a code change. Get what it could break outside its own diff, and one proof it is safe.
 - [Change test prover](https://useaiblocks.com/skills/change-test-prover): Give it a Python change. Get tests that fail whenever that change is broken, proven by code mutations.
@@ -51,6 +52,7 @@
 - [Fix loop breaker](https://useaiblocks.com/skills/fix-loop-breaker): Give it a bug your AI keeps failing to fix. Get a three-try repair plan, proof it works and a way back.
 - [Fixed-point code reviewer](https://useaiblocks.com/skills/fixed-point-code-reviewer): Give it MATLAB fixed-point code. Get slow or risky patterns found, with cleaner replacements.
 - [Flaky test fixer](https://useaiblocks.com/skills/flaky-test-fixer): Give it a failing or flaky Playwright test. Get the cause found and the fix made.
+- [Fragile code spotter](https://useaiblocks.com/prompts/fragile-code-spotter): Paste code an AI wrote fast. Get the few real risks that will hurt later and the smallest fix for each.
 - [Generated code reviewer](https://useaiblocks.com/skills/generated-code-reviewer): Give it code your AI just wrote. Get a pass for clean-code slips, repeated logic and common AI mistakes.
 - [GPU code speed tuner](https://useaiblocks.com/skills/gpu-code-speed-tuner): Give it MATLAB code bound for the GPU. Get faster generated CUDA code, measured after each change.
 - [Hidden bug hunter](https://useaiblocks.com/skills/hidden-bug-hunter): Point it at your code. Get a hard line-by-line hunt for logic errors and gaps, sorted by how bad they are.

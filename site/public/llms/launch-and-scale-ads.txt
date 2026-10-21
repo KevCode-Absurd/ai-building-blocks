@@ -1,6 +1,6 @@
 # Launch and scale Meta and TikTok ads: AI Blocks
 
-> 17 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 19 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Clean up your Meta account and rebuild it to scale](https://useaiblocks.com/workflows/clean-up-your-meta-account-and-rebuild-it-to-scale): Give it your campaigns and results. Get campaigns kept or cut, a simpler layout and a spend ladder.
 - [Existing customer ad budget sizer](https://useaiblocks.com/skills/existing-customer-ad-budget-sizer): Give customer count, CPM and frequency. Get a monthly dollar cap and a test to prove it.
@@ -15,7 +15,9 @@
 - [Scale Meta spend while it still pays](https://useaiblocks.com/workflows/scale-meta-spend-while-it-still-pays): Give it your ad results and costs. Get your true return, a spend ladder and a budget split.
 - [SKU ad money planner](https://useaiblocks.com/skills/sku-ad-money-planner): Give it sales, stock days and costs per SKU. Get each one's grade, ad target and clearance plan.
 - [TikTok ads account setup checker](https://useaiblocks.com/skills/tiktok-ads-account-setup-checker): Say what you set up on TikTok. Get missing steps and a score out of 100.
+- [TikTok Ads weekly account keeper](https://useaiblocks.com/agents/tiktok-ads-weekly-account-keeper): Give it your weekly TikTok Ads exports. Get each ad called keep, fix or kill and a change list to approve.
 - [TikTok Spark ad picker](https://useaiblocks.com/skills/tiktok-spark-ad-picker): Give your organic or creator posts and their results. Get which to boost as Spark ads, and how.
 - [TikTok starter campaign builder](https://useaiblocks.com/skills/tiktok-starter-campaign-builder): Give your budget and target CPA. Get a TikTok campaign layout, budgets and a four-week targeting ladder.
+- [Tired ad hook refresher](https://useaiblocks.com/prompts/tired-ad-hook-refresher): Paste a fading winner's numbers. Get the cause, a pace, and ten new opening briefs on the same ad.
 - [Turn your best posts and creator videos into ads](https://useaiblocks.com/workflows/turn-your-best-organic-posts-and-creator-videos-into-meta-ads): Give it your posts with views and your product facts. Get ranked posts, checked scripts, creator briefs and a test layout.
 - [Win back visitors who did not buy on Meta](https://useaiblocks.com/workflows/win-back-visitors-who-did-not-buy-on-meta): Give it your reviews and store results. Get an ad for each objection, a three-ad sequence and a retargeting budget cap.

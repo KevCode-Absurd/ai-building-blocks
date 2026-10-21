@@ -1,0 +1,99 @@
+new_slug: weekly-review-keeper
+name: Weekly review keeper
+summary: Give it your task list and loose notes each week. Get open loops closed, stuck items named and a plan for Monday.
+job: organise-work
+thinking: medium
+thinking_why: It runs a few light skills and counts tasks against last week. A mid-size model does this well.
+headline: Weekly review keeper
+subhead: Give it your task list and any loose notes each week. It compares the week with the last one, closes open loops, names tasks that keep slipping, and hands back a plan for your first focus days. It changes nothing without your yes.
+explain: |
+  Most people skip the weekly review, or do it by memory and miss what keeps slipping. A task carried over once is normal. A task carried over for a month is a decision you have not made. The same goes for a week that got away from you: you feel it, but you cannot say where the hours went.
+
+  This agent keeps a small folder, so each week is counted against the last. It sorts loose notes only when there is a pile. It closes open loops and finds stalled projects. If the same task has slipped three weeks running, it stops rolling it forward and asks you to drop it, shrink it or book it. If half the plan carried over, it checks where your time went and, if others took most of it, suggests a couple of stop rules. You get a plan you can start on Monday.
+when:
+  - You want one steady end-of-week routine, not a fresh effort each Friday.
+  - The same tasks keep carrying over and you want to face them.
+  - Your weeks feel full but your main work does not move.
+you_give:
+  - Your task list, ideally the TASKS file from last week
+  - Loose notes, ideas and unsorted items (optional)
+  - Last week's calendar, for the weeks the time check runs (optional)
+  - The one or two outcomes that matter most this month (optional)
+you_get:
+  - "Last week in one line: done, carried over and dropped, against the week before"
+  - Stuck items with three choices each
+  - Next week's top three outcomes and a plan for your first focus days
+  - Stop rules, in the weeks where others took most of your time
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week's review.
+  - Give it your task list and any notes. The first week it builds the folder and has nothing to compare.
+  - Answer its questions on stuck items. Say yes or no to each proposed drop.
+  - Use the plan for Monday. Run it again next Friday and it counts against this week.
+how_it_works:
+  - title: Read last week
+    text: Counts what was done, carried over and dropped, and works out the share that slipped.
+  - title: Sort the pile
+    text: Only if you bring loose notes or a long unsorted list, it sorts them into tasks, ideas and notes.
+  - title: Run the review and update the list
+    text: Closes open loops, finds stalled projects and writes the outcome into your task file. Drops stay as proposals.
+  - title: Choose the path
+    text: A task that slipped three weeks gets three choices. If half the week slipped, it checks where the time went, then adds stop rules if others took most of it.
+  - title: Plan the focus days
+    text: Protects focus hours for your first working day and one more, and keeps shallow work in two windows.
+  - title: Save and hand back
+    text: Saves this week's numbers for next time and stops for your yes on every drop.
+output_shape: |-
+  LAST WEEK
+    Planned <n> | Done <n> | Carried over <n> | Dropped <n> | Carry-over share <x%> vs the week before
+
+  STUCK ITEMS
+    <task> | weeks carried: <n> | choose: drop, shrink to <first step>, or book <block>
+
+  STALLED PROJECTS
+    <project> | next action: <action>
+
+  NEXT WEEK: TOP THREE
+    1. <outcome> | ties to: <focus goal>
+
+  MONDAY'S PLAN
+    <focus hours> | <shallow windows> | <second day>
+
+  RULES TO TRY (only if the time check ran)
+    <rule> | check: <how>
+
+  PROPOSED DROPS
+    <task> | reason
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your task file
+    how: Keep it in one place and update it only through the agent or by hand each week. Two copies make the counts wrong.
+  - what: Your focus goal
+    how: Name the one or two outcomes for the month. Without one, the top three come from the list alone.
+  - what: The three-week rule
+    how: Change how many weeks a task may slip before it is stopped. Three is the starting point.
+  - what: The time check
+    how: Give it a real calendar export. A guess about where the hours went defeats the point of the check.
+judge:
+  - Last week's numbers were counted from your files, not guessed.
+  - Any task that slipped three weeks was put to you as a choice.
+  - The top three outcomes tie to your focus goal.
+  - Nothing was dropped, sent or scheduled without your yes.
+test:
+  - Run it on a week you remember well and compare its counts with yours.
+  - Run it twice in a row on the same files. The counts should match.
+  - Give it a list with one task that has slipped for a month and see if it stops and asks.
+improve:
+  - Change the number of weeks and the share that slipped to suit how your work moves.
+  - Add your recurring tasks to the file so they are not counted as carry-over.
+  - Save which stop rules held, so next month's check starts from them.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the review folder, read the task file and run on a schedule.
+    - name: Google Calendar or Outlook
+      why: Export last week's blocks here for the time check.
+  inputs:
+    - A short note of what you wanted to finish this month
+    - Last week's calendar as a list or export

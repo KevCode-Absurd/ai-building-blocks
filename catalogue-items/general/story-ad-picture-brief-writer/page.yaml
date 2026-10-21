@@ -1,0 +1,88 @@
+new_slug: story-ad-picture-brief-writer
+name: Story ad picture brief writer
+summary: Paste your story ad. Get one picture brief, a ready image prompt and a short line to run under it.
+job: make-image-ads
+thinking: medium
+thinking_why: It has to find the right moment in the story and pick a picture that does not give the answer away.
+headline: Story ad picture brief writer
+subhead: Paste a story ad. You get the moment the old way failed, the kind of picture that shows its trace, a runner-up to test, a ready image prompt, and a short line to run under the picture.
+explain: |
+  A story ad needs a picture that makes people curious, not one that explains the ad. Most AI picture ideas show the product or a smiling person, and people scroll past them like any other ad.
+
+  This prompt works from the story. It finds the moment the old way stopped working, then asks where that moment left a trace: a room, an object, a note, a message. The picture shows the trace and leaves the story to explain it. You also get a runner-up from a different kind of trace, so your first test teaches you something. The line under the picture is kept short, since feeds cut long lines.
+when:
+  - You have a story ad and no idea what picture goes with it.
+  - Your pictures look like ads and get skipped.
+  - You want two different pictures to test against the same story.
+you_give:
+  - Your story ad
+  - Who the buyer is and what they tried (optional)
+  - Anything that must not be shown (optional)
+you_get:
+  - The moment the old way failed
+  - One picture brief and a runner-up
+  - A ready image prompt
+  - A short line to run under the picture
+how_to_use:
+  - Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini, with your details under it.
+  - Paste your story ad under the prompt.
+  - Paste the image prompt into ChatGPT or Gemini to make the picture.
+  - Run the picture and the runner-up on the same story and compare how many people read on.
+how_it_works:
+  - title: Finds the push
+    text: Quotes the line where the old way stopped working.
+  - title: Finds the trace
+    text: Asks where that moment left evidence.
+  - title: Picks a runner-up
+    text: A different kind of trace, for the first test.
+  - title: Writes the prompt
+    text: Phone-photo look with honest details.
+  - title: Writes the line
+    text: 27 characters or fewer, never a line about the reader's body.
+output_shape: |
+  PUSH: "<the quote>"
+  TRACE: <place | thing | words written | words between people>
+  PICTURE: <what is in the frame>
+  RUNNER-UP: <a different trace to test>
+  IMAGE PROMPT: <ready to paste>
+  WHAT IT MAKES PEOPLE WONDER: <one line>
+  LINE UNDER THE PICTURE: <words> (<characters>)
+  CHECKS MISSED: <none, or a line each>
+tweaks:
+  - what: The story
+    how: A story with a clear bad day gives a clearer picture.
+  - what: Things never to show
+    how: List them. The prompt will avoid them.
+  - what: Buyer detail
+    how: A detail such as "third pan this year" gives the picture something to hold.
+  - what: Number of ideas
+    how: Ask for three traces if you want more to choose from.
+judge:
+  - The picture comes from the story, not from the product.
+  - It leaves a question the story answers.
+  - The prompt has no logo, price or child.
+  - The line under it is 27 characters or fewer.
+test:
+  - Use a story you know. The push should be a line you would pick yourself.
+  - Run it twice. The trace should stay the same.
+  - Run the picture and the runner-up with the same story and compare.
+improve:
+  - Add your brand's props and rooms to the prompt.
+  - List claims and body areas that platforms flag.
+  - Save the picture rules in your brand file.
+  - Pair it with the Review quote ad card planner for a second style.
+works_best_with:
+  tools:
+    - name: ChatGPT or Gemini
+      why: Both can draw the picture from the prompt.
+    - name: Any good chat AI
+      why: A short prompt works the same in Claude, ChatGPT or Gemini, so use the one you already have open.
+  inputs:
+    - Your buyer's own words about the bad day
+    - Props and rooms your brand already uses
+    - A list of things never to show
+terms:
+  - term: Push
+    meaning: The moment the old way stopped being bearable.
+  - term: Trace
+    meaning: What that moment left behind that a camera could see.

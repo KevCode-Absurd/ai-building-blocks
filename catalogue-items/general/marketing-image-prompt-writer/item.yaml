@@ -1,0 +1,18 @@
+slug: marketing-image-prompt-writer
+name: "Marketing image prompt writer"
+summary: "Paste what the image is for. Get one prompt, a size and a file name to paste into an image maker."
+category: general
+type: prompt
+role: make
+job: image
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: image_prompt}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "image skill", by: "Corey Haines", url: "https://github.com/coreyhaines31/marketingskills/tree/main/skills/image", used: "Choosing the size for the placement and writing a clear, single-subject image prompt"}

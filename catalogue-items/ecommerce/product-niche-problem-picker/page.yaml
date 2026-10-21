@@ -1,0 +1,79 @@
+new_slug: product-niche-problem-picker
+name: Product niche problem picker
+summary: Name a market. Get 20 buyer problems, the best 5, and what to search to see who sells to each.
+job: find-products
+thinking: low
+thinking_why: It lists and ranks by clear tests, with a fixed shape.
+headline: Product niche problem picker
+subhead: Name a market and a line about you under this prompt. It lists 20 specific buyer problems and picks the best five on clear tests. You get three product kinds and the search words for each problem.
+explain: |
+  Many new sellers pick a product first, then hunt for buyers. It works better the other way round. Start with a market where people have a clear before and after. Then find the problems they feel often and want fixed badly. One good problem can hold many products.
+
+        This prompt lists 20 problems in buyers' words and ranks the best five. It then gives the searches to run in the free ad library to see who already sells to each. It never guesses brand names or ad counts, so nothing in the result is made up.
+when:
+  - You want to sell online but have not picked a product.
+  - You have a market in mind and need the right problem inside it.
+  - You want to see who already sells to a problem before you spend.
+you_give:
+  - A market
+  - "A line about you: experience, budget, country"
+  - Customer words from that market (optional)
+you_get:
+  - 20 specific buyer problems in their words
+  - The best five, ranked by clear tests
+  - Three product kinds for each
+  - Search words for the Facebook Ad Library
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - Pick a market with a clear before and after.
+  - Run the ad library searches yourself and fill in the table.
+  - Check what you can say in ads before you pick a health problem.
+how_it_works:
+  - title: Check the market
+    text: Clear before and after, loyal buyers.
+  - title: List 20 problems
+    text: In the buyer's words, with who has them.
+  - title: Rank the best five
+    text: How often felt, how much wanted, how many products, how well you know it.
+  - title: List product kinds
+    text: Three for each problem.
+  - title: Give search words
+    text: For the free ad library, with a blank table.
+output_shape: |
+  MARKET: <market> FOR <who>
+
+        20 PROBLEMS
+        1. <problem> | who has it
+
+        BEST FIVE
+        <rank>. <problem> | felt | want | product kinds | search words
+        WHO SELLS TO IT: [idea, not data]
+
+        NOTES: <...>
+tweaks:
+  - what: Market
+    how: A narrower market gives sharper problems.
+  - what: Your budget
+    how: A small budget favours problems with cheap, light products.
+  - what: Customer words
+    how: Real reviews ground the problems in what people say.
+judge:
+  - The problems are specific and in buyers' words.
+  - Each of the five has three product kinds.
+  - No brand names or ad counts appear.
+  - The ranking is called judgement.
+test:
+  - Run it on a market you know. The problems should sound familiar.
+  - Search the first problem in the ad library and see if sellers exist.
+  - Run it twice. The top five should overlap.
+improve:
+  - Add your skills so it ranks by what you know.
+  - Add a connected ad spy tool if you have one.
+  - Add a margin target to screen products.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - Reviews and comments from the market
+    - Access to the free Facebook Ad Library

@@ -1,0 +1,90 @@
+new_slug: marketing-image-prompt-writer
+name: "Marketing image prompt writer"
+summary: "Paste what the image is for. Get one prompt, a size and a file name to paste into an image maker."
+job: make-images
+thinking: low
+thinking_why: "It turns a short brief into one prompt using set rules."
+
+headline: "Marketing image prompt writer"
+subhead: "Paste what the image is for and what it should show. The prompt returns one image prompt in plain sentences, the right size for where it runs, a file name and two variations. Paste it into an image maker like ChatGPT or Gemini to get the picture."
+
+explain: |
+  Asking an image maker for a picture for my blog usually gives a generic result. A good prompt names one subject, one setting, a mood, a style and a size.
+
+  This prompt writes that for you. It picks the size for where the image will run, keeps to a single subject, and decides about words on the image, because image makers often garble text. It gives you one main prompt and two variations to test. It does not draw the picture. Claude writes text only, so you paste the prompt into an image maker.
+
+when:
+  - "You need a header or social image and no designer."
+  - "Your image maker keeps giving you messy results."
+  - "You want a few versions to test."
+
+you_give:
+  - "What the image is for"
+  - "What it should show, in a sentence"
+  - "Your colours or style (optional)"
+  - "Exact words on the image (optional)"
+you_get:
+  - "One ready-to-paste image prompt"
+  - "The size and a file name"
+  - "Two variations and an avoid line"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Under it, say what the image is for and what it shows."
+  - "Add your colours or style."
+  - "Paste the prompt it gives you into an image maker such as ChatGPT or Gemini."
+  - "Try the variations if the first is not right."
+
+how_it_works:
+  - title: "Pick the size"
+    text: "From where it runs."
+  - title: "One subject"
+    text: "One setting and one mood."
+  - title: "Style and words"
+    text: "Light, angle, and exact text or empty space."
+  - title: "Write the prompt"
+    text: "Plain sentences, plus two variations."
+
+output_shape: |
+  PROMPT
+  <60 to 120 words of plain sentences>
+  SIZE: <ratio and pixels>
+  FILE NAME: <name-with-dashes>
+  EMPTY SPACE: <where text can go, or none>
+  VARIATION A: <change>
+  VARIATION B: <change>
+  AVOID: <list>
+  Next: paste the prompt into an image maker such as ChatGPT or Gemini.
+
+tweaks:
+  - what: "Placement"
+    how: "Name the real place: blog header, Instagram feed, email banner. The size follows."
+  - what: "Words on the image"
+    how: "Short exact text works best. For long text, ask for empty space and add it later."
+  - what: "Style"
+    how: "Say photo or illustration and one mood word."
+
+judge:
+  - "The prompt names one subject."
+  - "The size fits the place."
+  - "Text is short, in quotes, or left out."
+  - "The avoid line fits the subject."
+
+test:
+  - "Paste the prompt into an image maker and check that the subject is clear."
+  - "Try both variations and keep the better one."
+  - "Run it twice for the same brief and compare."
+
+improve:
+  - "Add your colour codes and a style line you always want."
+  - "Add things you never show, such as people's faces."
+  - "Save your best prompts as examples above the request."
+
+works_best_with:
+  tools:
+    - {name: "ChatGPT", why: "Its image maker can draw the picture from the prompt."}
+    - {name: "Gemini", why: "Its image maker can also draw it from the prompt."}
+  inputs:
+    - "Your brand colours"
+    - "An image you like, to describe the style"
+    - "The page or post the image will sit on"

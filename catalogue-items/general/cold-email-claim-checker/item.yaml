@@ -1,0 +1,19 @@
+slug: cold-email-claim-checker
+name: "Cold email claim checker"
+summary: "Paste a cold email and their page text. Get each claim tested, the basics checked and a tighter version."
+category: general
+type: prompt
+role: check
+job: email
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: copy_draft}
+  - {type: feedback_notes}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "cold-email-checker skill", by: "Pro Skill Packs", url: "https://github.com/proskillpacks/skills/tree/main/skills/sales/cold-email-checker", used: "Testing each claim against supplied text, checking for one ask and the basics of commercial email"}

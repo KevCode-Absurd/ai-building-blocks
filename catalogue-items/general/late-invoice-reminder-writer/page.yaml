@@ -1,0 +1,89 @@
+new_slug: late-invoice-reminder-writer
+name: "Late invoice reminder writer"
+summary: "Paste the invoice facts. Get a warm reminder that gets paid and a firmer follow-up."
+job: sell-and-negotiate
+thinking: low
+thinking_why: "It writes two short letters from the facts."
+
+headline: "Late invoice reminder writer"
+subhead: "Paste the unpaid invoice facts and your history with the customer. The prompt writes a warm reminder with one clear way to pay and a firmer follow-up for a later date."
+
+explain: |
+  A harsh reminder can get a bill paid and lose the customer. A vague one gets ignored. Most late invoices are late for a simple reason, such as a missed email or an unclear total, so a calm letter gets paid faster than an angry one.
+
+  This prompt starts from what the customer is likely thinking, opens on something true you both agree on, states the facts and gives one step to pay. It never adds threats or new fees. If you mention fees, check the rules with a qualified person.
+
+when:
+  - "An invoice is a week late and you want to keep the customer."
+  - "You dread writing the reminder."
+  - "You want a follow-up ready for if they do not reply."
+
+you_give:
+  - "The invoice facts"
+  - "Your history with the customer (advised)"
+you_get:
+  - "A reminder letter"
+  - "A firmer follow-up with a send date"
+  - "Missing facts marked"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste the invoice details under the prompt."
+  - "Add how this customer usually pays."
+  - "Send letter 1 now and set a reminder for letter 2."
+
+how_it_works:
+  - title: "Pick the feeling"
+    text: "Write one line for how they should feel at the end, such as respected, clear and glad to keep working with you."
+  - title: "Think like the reader"
+    text: "List three things they may be thinking (I thought I paid, the invoice was unclear, cash is tight). Mark each FROM HISTORY or GUESS. Use the likeliest to open."
+  - title: "Open on a shared point"
+    text: "Start with a true point they agree with, such as the work you did together. Do not open with \"overdue\"."
+  - title: "State the facts"
+    text: "Give the invoice number, amount, due date and days late, then how to pay. Mark any missing fact MISSING."
+  - title: "Give one true reason"
+    text: "Give one real reason to pay now. No threats, no new fees, no guilt."
+  - title: "Make paying one step"
+    text: "Put one clear action on its own line, and a way out: \"If anything is unclear, reply and we will fix it.\""
+  - title: "Write a follow-up"
+    text: "Write a second letter for a set date: a little firmer, still respectful, asking for a payment date."
+
+output_shape: |
+  FEELING: <one line>
+  LETTER 1
+  <warm opening, facts, one reason, one action, thanks>
+  LETTER 2 (send on <date>)
+  <firmer, same respect, asks for a date>
+  MISSING: <...>
+  BEFORE YOU SEND: <check fee rules with a qualified person>
+
+tweaks:
+  - what: "History"
+    how: "A long, good relationship earns a warmer first line."
+  - what: "Days late"
+    how: "Give the number. The follow-up gets firmer as it grows."
+  - what: "How to pay"
+    how: "Give a link or bank details line, so the letter has one clear action."
+
+judge:
+  - "The invoice facts match exactly."
+  - "It does not open with \"overdue\"."
+  - "There is one action."
+  - "No threat or new fee."
+
+test:
+  - "Send letter 1 to a customer you know and see how they respond."
+  - "Run it twice. The facts should match."
+  - "Read letter 2 aloud. It should be firmer, not rude."
+
+improve:
+  - "Add your standard payment terms."
+  - "Add the tone you use with your best customers."
+  - "Pair it with the Payment reminder letter writer for every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "Your payment terms"
+    - "How the customer paid on past invoices"

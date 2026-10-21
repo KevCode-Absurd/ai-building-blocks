@@ -1,0 +1,70 @@
+new_slug: nda-traffic-light-checker
+name: NDA traffic-light checker
+summary: Paste an NDA. Get a green, yellow or red rating and the odd clauses explained.
+job: check-contracts
+thinking: medium
+thinking_why: It compares each clause against a standard, which needs some judgement.
+headline: NDA traffic-light checker
+subhead: Paste the NDA and say whether you share, receive or both. You get a green, yellow or red rating, the odd clauses with section numbers and plain meaning, and what to ask them to change.
+explain: "Most NDAs are routine. A few hide terms that tie your hands, like a ban on working with their competitors or a claim to your ideas. This prompt checks the agreement against common standards: the type, the definition, the usual exceptions, how long it lasts and a list of odd clauses. It gives a traffic-light rating so you know whether to sign, ask for a change or get a second opinion. Have a qualified person check anything rated yellow or red."
+when:
+  - Someone sent you an NDA and wants it back today.
+  - You want to know if it is standard before you call a lawyer.
+  - You send NDAs and want to check the ones you get back.
+you_give:
+  - The full NDA text
+  - Whether you share, receive or both
+  - What you plan to share (optional)
+you_get:
+  - A green, yellow or red rating with a reason
+  - Odd clauses quoted, with plain meaning
+  - A short list of changes to ask for
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste the NDA text and your side.
+  - Send it and read the result.
+  - Do not sign yellow or red ones without a second look.
+how_it_works:
+  - title: Check the shape
+    text: One-way or two-way, and the definition of confidential.
+  - title: Check the basics
+    text: The usual exceptions, and how long it lasts.
+  - title: Find odd terms
+    text: Clauses that go beyond secrecy, then rate it.
+output_shape: |-
+  RATING
+  <GREEN / YELLOW / RED>. <one-line reason>
+
+  ODD CLAUSES
+  <section, quoted words, plain meaning, why it matters>
+
+  ASK THEM TO CHANGE
+  <short list>
+
+  MISSING
+tweaks:
+  - what: Side
+    how: Say if you are sharing or receiving. It changes the rating.
+  - what: Strictness
+    how: Ask it to rate red on any non-compete.
+  - what: Length
+    how: Ask for just the rating and top three clauses.
+judge:
+  - Rating fits the findings.
+  - Clauses are quoted with sections.
+  - Your side is used.
+  - Plain meaning.
+test:
+  - Paste an NDA with a non-compete. It should flag it as odd.
+  - Paste a standard NDA. It should rate green.
+  - Run twice. The rating should match.
+improve:
+  - Add your own red lines, like a maximum term.
+  - Add your usual NDA to compare against.
+  - Use the full skill when many NDAs arrive at once.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - The full NDA text

@@ -1,0 +1,69 @@
+new_slug: rough-text-to-article-tidier
+name: Rough text to article tidier
+summary: Paste rough text. Get a tidy article with a title, summary and headings, in your words.
+job: work-with-files
+thinking: low
+thinking_why: It only changes layout, so there are few judgement calls.
+headline: Rough text to article tidier
+subhead: Paste rough text or notes. You get a tidy article with a title, a two-sentence summary, headings and lists, in your own words, with a list of what changed.
+explain: Rough text is full of good material in a bad shape. This prompt fixes the shape and leaves the voice alone. It adds a title that says what the reader gets, a short summary, headings where the topic turns and lists where items run in a row. It does not add facts or reword. Anything unclear is flagged as a note for you to fix, and every change is listed so you can see what it touched.
+when:
+  - You have notes that need to look like an article.
+  - A transcript or draft is one long block.
+  - You want layout help, not a rewrite.
+you_give:
+  - Rough text or loose markdown
+  - Who reads it (optional)
+you_get:
+  - A tidy article with title, summary, headings and lists
+  - A list of changes
+  - Unclear spots flagged as notes
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste your rough text.
+  - Send it and read the result.
+  - Read the NOTES first, since those are the spots that need your call.
+how_it_works:
+  - title: Keep the words
+    text: No new facts and no rewording.
+  - title: Add shape
+    text: Title, summary, headings and lists.
+  - title: List changes
+    text: Everything it touched, plus notes on unclear spots.
+output_shape: |-
+  THE ARTICLE
+  <title>
+  <two-sentence summary>
+  <headings, text and lists>
+
+  CHANGES
+  <layout changes, typo fixes>
+
+  NOTES
+  <unclear spots>
+tweaks:
+  - what: Format
+    how: Ask for markdown or plain text.
+  - what: Length of summary
+    how: Ask for one sentence.
+  - what: Headings
+    how: Ask for fewer headings in a short piece.
+judge:
+  - No facts added.
+  - Words match the original.
+  - Title says what the reader gets.
+  - Changes are listed.
+test:
+  - Paste a block with a list inside a paragraph. It should become a list.
+  - Paste text with an unclear line. It should flag it as a NOTE.
+  - Count words before and after. They should be close.
+improve:
+  - Add your house style for headings.
+  - Ask for a version with a short pull quote.
+  - Pair it with a typo checker for a last pass.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - Rough text or loose markdown

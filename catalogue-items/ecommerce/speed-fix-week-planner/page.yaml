@@ -1,0 +1,89 @@
+new_slug: speed-fix-week-planner
+name: "Speed fix week planner"
+summary: "Paste your speed problems and store numbers. Get this week's three fixes and what each could earn."
+job: speed-up-store
+thinking: low
+thinking_why: "It ranks a list by effort and traffic with fixed sums."
+
+headline: "Speed fix week planner"
+subhead: "Paste your speed problems with your sessions, conversion rate and order value. It ranks fixes by orders gained for the hours spent, shows each gain as a range, and splits the list into this week, next month and parked."
+
+explain: |
+  A speed report can list thirty problems. Fixing them in the order the tool lists them wastes weeks on changes that move nothing.
+
+  This prompt weighs each fix by where your traffic is, how many hours it takes and how risky it is. Gains come out as a low and high range so you do not plan around one hopeful number.
+
+when:
+  - "You have a long list of speed problems and one week."
+  - "You are briefing a developer."
+  - "You need to decide if speed work is worth doing at all."
+
+you_give:
+  - "The problems (required): from a speed report or an audit."
+  - "Monthly sessions by page type (required): homepage, collection, product."
+  - "Conversion rate and average order value (required)."
+  - "Who does the work and for how many hours (advised)."
+you_get:
+  - "Three fixes for this week"
+  - "Five for next month, the rest parked"
+  - "A range of extra orders for each"
+  - "A check to run on your own data first"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: the problems; monthly sessions by page type; conversion rate and average order value; who does the work and for how many hours."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "Check it is worth it"
+    text: "If real-user data already passes Core Web Vitals on mobile, say offers, page copy or ads likely beat more speed work, and rank only cheap fixes."
+  - title: "Rank by the ladder"
+    text: "Images first, then apps and third-party scripts, then hosting. Weight by traffic: a small gain on a busy page beats a big gain on a quiet one."
+  - title: "Show gains as a range"
+    text: "Extra orders = sessions x conversion rate x lift. Use a low and a high lift you state, label both as guesses, and never give one number."
+  - title: "Tag each fix"
+    text: "No-code, theme code or server. Give hours, risk (low, mid, high) and who does it. For theme code, duplicate the theme first."
+  - title: "Split the list"
+    text: "Top three this week, next five next month, the rest parked with a reason."
+
+output_shape: |
+  BASIS: <sessions by page type> | conversion <%> | order value <$>
+  THIS WEEK: 1 <fix> | page | type | hours | risk | gain <low to high orders a month> | who
+  NEXT MONTH: 4 to 8, shorter
+  PARKED: <fix> | reason
+  CHECK FIRST: <compare mobile and desktop conversion before you promise a gain>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: "Page traffic"
+    how: "Give sessions per page type so it can weight busy pages."
+  - what: "Who does the work"
+    how: "Say if it is you or a developer. Code fixes go to the developer."
+
+judge:
+  - "Every gain is a range, and the lift figures are marked as guesses."
+  - "The sums use your own sessions, conversion rate and order value."
+  - "Code fixes say to duplicate the theme first."
+  - "Parked fixes each have a reason."
+
+test:
+  - "Give it a list you already ranked and compare the top three."
+  - "Give it a store that passes mobile Core Web Vitals. It should say speed is not the lever."
+  - "Run it twice. The top three should match."
+
+improve:
+  - "Add your real mobile and desktop conversion rates under the prompt."
+  - "Save each fix and its result so you learn your own lift."
+  - "Pair it with a speed report translator."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "A speed report translated into a problem list"
+    - "Mobile and desktop conversion rates"
+
+terms:
+  - term: "Core Web Vitals"
+    meaning: "Google's three speed checks: how fast the page appears, reacts and stays still."

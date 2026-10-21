@@ -1,0 +1,95 @@
+new_slug: strongest-objection-finder
+name: "Strongest objection finder"
+summary: "Paste a plan you feel sure about. Get the three best arguments against it and a go, change or wait call."
+job: think-and-decide
+thinking: medium
+thinking_why: "It has to argue a side it was not given and judge how well you can answer it."
+
+headline: "Strongest objection finder"
+subhead: "Paste your plan and reasons. Your AI writes the three best arguments against it, rates your answers, names your weakest assumption and makes a go, change or wait call."
+
+explain: |
+  People test a plan by asking friends who agree. That feels like checking, but it only repeats what you already think. A better test is to hear the case against it from someone smart who has something to lose.
+
+  This prompt writes that case in the opponent's own voice, then rates how well your reasons answer each point. It ends with the one fact that would change your mind, so you know what to look for before you commit.
+
+when:
+  - "You feel very sure about a plan and want it tested."
+  - "You must defend a choice to people who disagree."
+  - "You are about to spend money or time on one big idea."
+
+you_give:
+  - "Your plan or opinion"
+  - "Your three or four main reasons"
+  - "Who disagrees and what they said (optional)"
+
+you_get:
+  - "Three arguments against, in the opponent's voice"
+  - "A full, part or none rating of your answers to each"
+  - "Your weakest assumption and a mind-changing test"
+  - "A go, change or wait call"
+
+how_to_use:
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Paste your details under it, in the slots under What you need."
+  - "Send it and read the answer against the checks on this page."
+  - "Reply with what to change, and keep the version that works."
+
+how_it_works:
+  - title: "State your position"
+    text: "With each reason marked fact, guess or value."
+  - title: "Pick the best opponent"
+    text: "Informed, with something at stake."
+  - title: "Write three arguments"
+    text: "Strongest first, each resting on a fact or cause."
+  - title: "Rate your answers"
+    text: "Full, part or none."
+  - title: "Make the call"
+    text: "Go, change or wait."
+
+output_shape: |
+  POSITION
+  <one line; reasons marked fact / guess / value>
+  OPPONENT
+  <who, and what they lose>
+  THREE ARGUMENTS
+  1. <argument> - Your answer: <full / part / none> because <reason>
+  WEAKEST ASSUMPTION
+  <line>
+  WOULD CHANGE MY MIND
+  <one test>
+  CALL
+  <go / change / wait> - <reason>
+  MISSING
+  <lines>
+
+tweaks:
+  - what: "The opponent"
+    how: "Name who you expect to disagree. The arguments will use their real worries."
+  - what: "Reasons"
+    how: "Be honest about which reasons are guesses. The ratings depend on it."
+  - what: "Stakes"
+    how: "Say what is at risk. A bigger risk raises the bar for a go."
+
+judge:
+  - "The arguments are ones you had not fully faced."
+  - "None is a weak version made to be easy to beat."
+  - "The call matches the ratings."
+  - "Missing facts are marked, not invented."
+
+test:
+  - "Run it on a decision you have already made. Does it find the argument you ignored?"
+  - "Run it twice. The top objection should stay the same."
+  - "Give a plan with one weak reason. It should rate that reason as a guess."
+
+improve:
+  - "Add the usual opponents in your field."
+  - "Add numbers from your business so the arguments use real facts."
+  - "Keep the mind-changing tests in a note and check them each month."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "One pasted message is enough."}
+  inputs:
+    - "Numbers behind your reasons"
+    - "Past plans that failed and why"

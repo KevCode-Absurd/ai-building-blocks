@@ -1,0 +1,26 @@
+slug: doc-typo-and-term-checker
+name: Doc typo and term checker
+summary: Paste a document. Get typos, grammar slips and term clashes listed, with no rewrites.
+category: general
+type: prompt
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: tech-writing-proofread skill
+    by: sickn33
+    url: https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/tech-writing-proofread
+    used: A shorter one-message version of this skill, written fresh.
+  - title: Original author
+    by: alapha888
+    url: https://github.com/alapha888
+    used: Wrote the skill; sickn33 shared it in their collection.

@@ -1,0 +1,22 @@
+slug: candidate-reply-drafter
+name: Candidate reply drafter
+summary: Paste where the candidate is in your process. Get a clear reply or rejection to send.
+category: general
+type: prompt
+role: make
+job: email
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: candidate-comms skill
+    by: Carlo Pezzuto
+    url: https://github.com/carlopezzuto/recruiting/tree/main/.claude/skills/candidate-comms
+    used: A shorter one-message version of this skill, written fresh.

@@ -1,18 +1,21 @@
 # Help your customers: AI Blocks
 
-> 18 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 21 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Angry customer reply checker](https://useaiblocks.com/skills/angry-customer-reply-checker): Paste the complaint and your draft reply. Get promises, facts and tone checked, plus a repaired draft.
 - [Chargeback evidence gatherer](https://useaiblocks.com/skills/chargeback-evidence-gatherer): Tell it the dispute reason. Get what proof to collect, where to find it in Shopify, and whether to accept instead.
+- [Complaint reply promise checker](https://useaiblocks.com/prompts/complaint-reply-promise-checker): Paste the complaint and your draft reply. Get each promise checked, tone flags and a repaired draft.
 - [Customer inbox triage and reply drafter](https://useaiblocks.com/agents/customer-inbox-triage-and-reply-drafter): Give it the new customer emails. Get them ranked, with a checked reply to approve for each. It never sends.
 - [Customer question researcher](https://useaiblocks.com/skills/customer-question-researcher): Ask a customer question. Get an answer found across your docs, past tickets and chats, with each source named.
 - [Customer reply and order checker](https://useaiblocks.com/skills/customer-reply-and-order-checker): Forward a customer email. Get order status checked and a reply in your voice. Refunds only on your yes.
 - [Customer reply drafter](https://useaiblocks.com/skills/customer-reply-drafter): Describe the customer's situation. Get a reply in the right tone, plus notes on what to check before you send it.
 - [Customer review reply writer](https://useaiblocks.com/skills/customer-review-reply-writer): Give it your reviews and complaints. Get themes with quotes, a reply to each review, and customers at risk. Scrapes sites.
 - [Escalation brief writer](https://useaiblocks.com/skills/escalation-brief-writer): Give it a stuck customer issue. Get a clear escalation brief for engineering or leadership, with impact and what was tried.
+- [Public review reply desk](https://useaiblocks.com/agents/public-review-reply-desk): Give it each new batch of public reviews. Get a checked reply for each, with risky ones held and repeat complaints flagged.
 - [Public review reply drafter](https://useaiblocks.com/skills/public-review-reply-drafter): Paste your store reviews. Get a specific reply to each, with risky ones flagged and no refunds promised.
 - [Refund and reorder processor](https://useaiblocks.com/skills/refund-and-reorder-processor): Name the order and items. Get a full or partial refund, plus a replacement order if you want one. Moves real money.
 - [Reply to reviews safely and plan how to get more](https://useaiblocks.com/workflows/reply-to-your-reviews-safely-and-plan-how-to-get-more): Give it your reviews. Get themes, safe replies and a plan to get more reviews.
+- [Review reply batch writer](https://useaiblocks.com/prompts/review-reply-batch-writer): Paste your store reviews. Get a specific public reply to each one and a list of the risky ones.
 - [Review request and reply planner](https://useaiblocks.com/skills/review-request-and-reply-planner): Tell it about your reviews. Get when to ask, how to word the request, and how to answer a bad review.
 - [Solved-ticket help page writer](https://useaiblocks.com/skills/solved-ticket-help-page-writer): Give it a solved ticket. Get a help article with steps, what you should see, and a fix for next time.
 - [Support desk automation builder](https://useaiblocks.com/skills/support-desk-automation-builder): Tell it your help desk and billing tool. Get scripts, reply templates and a triage routine that drafts replies for your approval.

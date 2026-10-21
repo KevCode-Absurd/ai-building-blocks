@@ -1,0 +1,22 @@
+slug: plain-words-contract-summary
+name: Plain-words contract summary
+summary: Paste a contract. Get a two-minute summary of what you owe, what they owe and the risky clauses.
+category: general
+type: prompt
+role: compress
+job: ops
+level: beginner
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: stakeholder-summary skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/commercial-legal/skills/stakeholder-summary
+    used: A shorter one-message version of this skill, written fresh.

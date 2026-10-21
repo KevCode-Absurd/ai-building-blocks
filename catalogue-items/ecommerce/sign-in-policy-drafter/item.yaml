@@ -1,0 +1,16 @@
+slug: sign-in-policy-drafter
+name: "Sign-in policy drafter"
+summary: "Paste how staff and customers sign in. Get ranked gaps, a score and a one-page policy."
+category: ecommerce
+type: prompt
+role: check
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

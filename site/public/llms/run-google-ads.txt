@@ -1,6 +1,6 @@
 # Run Google Ads: AI Blocks
 
-> 37 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 39 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Add YouTube and Demand Gen and check they pay](https://useaiblocks.com/workflows/add-youtube-and-demand-gen-as-a-cold-channel-and-read-if-it-pays): Give it your Google data and best video ads. Get a yes or wait, a cold campaign, an ad scorecard and remarketing.
 - [Bestseller Shopping campaign builder](https://useaiblocks.com/skills/bestseller-shopping-campaign-builder): Give it your bestsellers and brand name. Get Shopping settings, product group steps and brand negatives.
@@ -32,10 +32,12 @@
 - [Performance Max launch planner](https://useaiblocks.com/skills/performance-max-launch-planner): Give it your catalogue, budget and break-even numbers. Get a fit verdict and a Performance Max build.
 - [Performance Max routine keeper](https://useaiblocks.com/skills/performance-max-routine-keeper): Give it your Performance Max exports. Get this week's checks, exclusions, a budget move and a waste score.
 - [Problem-aware Search campaign builder](https://useaiblocks.com/skills/problem-aware-search-campaign-builder): Give it your product and the problem it solves. Get a problem-led Search campaign with matched ads.
+- [Search term junk sorter](https://useaiblocks.com/prompts/search-term-junk-sorter): Paste a search terms report. Get winners to promote, negatives to add and a waste score.
 - [Search term sorter](https://useaiblocks.com/skills/search-term-sorter): Paste your search terms reports. Get winners to promote, negatives to add, where each goes and a waste score.
 - [Shopify Google tracking builder](https://useaiblocks.com/skills/shopify-google-conversion-tracking-builder): Give it your Shopify and Tag Manager access. Get a build checklist for purchase tracking and enhanced conversions.
 - [Shopping campaign tuner](https://useaiblocks.com/skills/shopping-campaign-tuner): Paste a weekly Shopping export. Get which products to cut, feed, bid up or fund, with a waste score.
 - [Shopping feed title writer](https://useaiblocks.com/skills/shopping-feed-title-writer): Give it your products and converting search terms. Get search-led titles, descriptions and image fixes.
+- [Shopping title rewriter](https://useaiblocks.com/prompts/shopping-title-rewriter): Paste product facts and search terms. Get Google Shopping titles in one order, plus a rollout.
 - [Turn converting searches into Search campaigns and matching pages](https://useaiblocks.com/workflows/turn-converting-searches-into-search-campaigns-and-matching-pages): Give it your Google search terms and products. Get winners and negatives sorted, new Search campaigns with ads, and page plans.
 - [YouTube ad results reader](https://useaiblocks.com/skills/youtube-ad-results-reader): Give it your YouTube ad results. Get a scale, keep or pause call per ad, with a score out of 100.
 - [YouTube readiness checker](https://useaiblocks.com/skills/youtube-readiness-checker): Tell it your AOV, ad stack and Meta winners. Get a yes or wait on YouTube, with a score out of 100.

@@ -1,0 +1,95 @@
+new_slug: fragile-code-spotter
+name: "Fragile code spotter"
+summary: "Paste code an AI wrote fast. Get the few real risks that will hurt later and the smallest fix for each."
+job: test-and-fix-code
+thinking: medium
+thinking_why: "It needs to read code and judge which problems are real."
+
+headline: "Fragile code spotter"
+subhead: "Paste code that was written fast, plus what it is for. It reads it, finds the risks that will hurt in real use, such as exposed keys, unchecked input and silent errors, ranks them, and gives the smallest fix for each."
+
+explain: |
+  Code written quickly can work on your laptop and still fail in front of a customer. The problems are often hidden: a key in the file, an error that is swallowed, a call that waits forever.
+
+  This prompt looks for those problems and nothing else. It points to the place in your code, says what happens if it fails, and suggests the smallest change. It leaves style opinions alone.
+
+when:
+  - "An AI built something for you and it seems to work."
+  - "You are about to show a prototype to real users."
+  - "You are handing a quick project to someone else."
+
+you_give:
+  - "The code, in full"
+  - "What it is for and who uses it"
+  - "Where it will run (optional)"
+you_get:
+  - "A two-line summary of what the code does"
+  - "Ranked findings, each with its place and smallest fix"
+  - "What is fine and worth keeping"
+  - "What it could not tell from the code alone"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "Read for what it does"
+    text: "Say in two lines what the code does and how it is organised."
+  - title: "Look for real risks"
+    text: "Check for secrets left in the code, input trusted without checks, errors swallowed silently, calls with no timeout, loops that can run forever, the same logic repeated, and no tests. Only report what you can point to in the code."
+  - title: "Rank by damage"
+    text: "Label each finding high, medium or low by what happens if it fails in real use. Keep to the ten that matter most."
+  - title: "Give the smallest fix"
+    text: "For each, name the place, say why it matters in one sentence and give the smallest change. Do not rewrite the code."
+  - title: "Say what is fine"
+    text: "Name two things the code does well, so I know what to keep."
+
+output_shape: |
+  WHAT IT DOES
+  <two lines>
+
+  FINDINGS (worst first)
+  1. [high] <place>: <what could go wrong> - Fix: <smallest change>
+
+  WHAT IS FINE
+  - <thing>
+
+  CANNOT TELL FROM THIS
+  - <gap>
+
+tweaks:
+  - what: "Where it will run"
+    how: "Real customers or money raise the bar. Say so."
+  - what: "Paste size"
+    how: "One file at a time gives sharper findings than a whole project."
+  - what: "Your stack"
+    how: "Name the language and framework so fixes fit."
+
+judge:
+  - "Each finding names a real place in your code."
+  - "The top finding would genuinely hurt in real use."
+  - "Fixes are small, not rewrites."
+  - "It says what it could not see."
+
+test:
+  - "Plant a key in the code and see if it is caught first."
+  - "Run it twice. The top three should match."
+  - "Paste clean code. It should say little, not invent problems."
+
+improve:
+  - "Add your standards, such as 'every web call needs a timeout'."
+  - "Add risks specific to your product, such as payments."
+  - "Save past findings and paste the list in so it checks them first."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "A line on where the code will run"
+  - "Your language and framework"
+
+terms:
+  - term: "Swallowed error"
+    meaning: "An error the code catches and ignores, so nobody learns something failed."

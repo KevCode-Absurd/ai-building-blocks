@@ -1,0 +1,99 @@
+new_slug: data-file-clean-up-loop
+name: Data file clean-up loop
+summary: Give it a messy data file. It fixes and re-checks until the file passes, and saves your rules for the next one.
+job: work-with-files
+thinking: low
+thinking_why: Each step is a count and a rule. A smaller, faster model is enough, as long as it follows your pass rules.
+headline: Data file clean-up loop
+subhead: Give it a messy data file and what good looks like. It audits the file, fixes what it finds, audits again, and stops when the file passes or after three rounds. Your original is never touched.
+explain: |
+  A messy file gets cleaned once by hand, then the next export arrives with the same problems. Fixes are forgotten, rows vanish without a trace, and nobody can say whether the file is clean now or only looks it.
+
+  This agent cleans in rounds, and judges each round by a count. It writes down what a passing file looks like, audits, fixes only what the audit found, and audits again. It never fills a blank with a guess. Every removed row is saved with its reason. After three rounds it stops and lists what a person must decide. It keeps the rules it used, so the next export is cleaned the same way.
+when:
+  - A report or import keeps failing because of blanks, duplicates or text where numbers should be.
+  - You get the same kind of messy export every week or month.
+  - You want a clean file and a record of what was changed.
+you_give:
+  - The data file, as a spreadsheet or CSV
+  - What each column means, and which ones must never be blank (optional but best)
+  - What the file is for, such as a report or an import into another system (optional)
+  - Your rules file from last time, after the first run
+you_get:
+  - A cleaned file, with your original left alone
+  - Counts of blanks, duplicates and odd values before and after each round
+  - Every removed row, saved with its reason
+  - A list of what only a person can decide
+  - A rules file for the next export
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents.
+  - Attach the file, or put it in a folder the agent can open.
+  - Say what each column means, or let it propose rules and say yes to them.
+  - Read the hand-back. Fix the cells it left for you, or tell it the rule to use.
+  - Next time, give it the new export. It reads your rules file and cleans the same way.
+how_it_works:
+  - title: Read or write the rules
+    text: Uses last time's rules, or writes down what a passing file looks like and asks for your yes.
+  - title: Audit
+    text: Counts blanks, duplicates, wrong types and odd values, and checks formulas if the file has any.
+  - title: Choose the fix
+    text: Spacing, text numbers, mixed dates and exact duplicates get the simple cleaner. Blanks and odd values get the rule-based cleaner, only where a rule exists.
+  - title: Check again
+    text: Audits the new file. If the counts fell, it goes on. If they did not, it undoes the fix and says why.
+  - title: Stop at three rounds
+    text: Hands back what is left for a person to decide, because more rounds rarely help.
+  - title: Score and save the rules
+    text: Makes a scorecard and updates your rules file for the next export.
+output_shape: |-
+  RESULT
+    <passed | not passed> in <n> rounds
+
+  COUNTS (round 0 to last)
+    Blanks <n> to <n> | Duplicates <n> to <n> | Wrong types <n> to <n> | Odd values <n> to <n>
+
+  WHAT WAS CHANGED
+    <rule> | touched <n> cells or rows
+
+  REMOVED ROWS
+    <n> rows | saved in <file> | reasons: <list>
+
+  LEFT FOR A PERSON
+    <cell or group> | needs: <what to decide>
+
+  RULES SAVED
+    <rules added or changed>
+
+  FILES AND MISSING
+    <each round's files> | MISSING: <every line>
+tweaks:
+  - what: Which columns must be filled
+    how: Name them. The pass test depends on them, and so do the counts.
+  - what: What the file is for
+    how: An import into another system may need stricter formats than a report. Say which.
+  - what: The number of rounds
+    how: It stops at three. Raise it for a very large file, but only if the counts are still falling.
+  - what: Near duplicates
+    how: Tell it which columns make a record the same record, such as email address. Without that, it only removes exact duplicates.
+judge:
+  - Your original file is untouched.
+  - Every change maps to a rule, and no blank was filled with a guess.
+  - Every removed row is saved with its reason.
+  - The counts after the last round sit next to the counts before the first.
+  - Formula totals still tie out.
+test:
+  - Give it a small file with errors you planted. See that it finds each one and fixes only those.
+  - Run it twice on the same file. The counts and the changes should match.
+  - Give it a file that already passes. It should change nothing.
+improve:
+  - Add the column meanings to the rules file once, so later runs do not ask.
+  - Keep removed.csv from each run. It shows which errors keep coming back, so you can fix them at the source.
+  - Add a rule for each cell it left for you, so the next run handles it.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can open large files, keep the rules and removed-rows files, and run on each new export.
+    - name: Excel
+      why: Save the cleaned file back as a workbook if your team works in it.
+  inputs:
+    - A list of the allowed values for each coded column
+    - The last clean version of the file, for comparing

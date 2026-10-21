@@ -1,0 +1,27 @@
+slug: quarterly-store-security-keeper
+name: "Quarterly store security keeper"
+summary: "Give it your staff, apps and chargeback numbers each quarter. Get your score against last quarter and fixes to do first."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: store_capture, required: false}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [store-security-checkup, store-sign-in-security-checker, store-script-and-app-risk-auditor, domain-and-certificate-watch-checker, fraud-rules-setter]
+steps:
+  - {uses: store-security-checkup, note: "Every quarter: the scored baseline across sign-in, access, apps, card data, backups and habits, set against last quarter."}
+  - {uses: store-sign-in-security-checker, note: "Only when the checkup lost points on two-step sign-in or access, or the way people sign in changed."}
+  - {uses: store-script-and-app-risk-auditor, note: "Only when the checkup lost points on apps, or apps or scripts were added since last quarter."}
+  - {uses: domain-and-certificate-watch-checker, note: "In the first run, then whenever a domain, DNS record or registrar user changed, and at least once a year."}
+  - {uses: fraud-rules-setter, note: "Only when the chargeback rate is at or above half a percent, or false holds rose, and the store takes about 100 orders a month or more."}
+schedule: "Once a quarter, in the first week"
+asks_before: [removing an app or a staff account, changing a sign-in rule or a DNS record, changing payment or fraud settings, emailing staff or customers]
+origin: own
+version: 1.0.0
+example_pending: true

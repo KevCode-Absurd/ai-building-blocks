@@ -1,6 +1,6 @@
 # Track your numbers: AI Blocks
 
-> 120 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 123 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [A/B test verdict maker](https://useaiblocks.com/skills/a-b-test-verdict-maker): Give it your test data. Get a split check, the result with a confidence range, side effects and a ship call.
 - [Account reconciler](https://useaiblocks.com/skills/account-reconciler): Give it a ledger and a bank statement. Get matched items, the gaps and a note on each. Have an accountant check.
@@ -15,6 +15,7 @@
 - [Behaviour group finder](https://useaiblocks.com/skills/behaviour-group-finder): Give it customer data and a goal. Get natural groups found by behaviour, each profiled with a plan.
 - [Books reconciler and P&L narrator](https://useaiblocks.com/skills/books-reconciliation-pl): Give it your ledger and payment reports. Get mismatches, duplicates and missing receipts flagged, plus a plain P&L story.
 - [Brand health metrics planner](https://useaiblocks.com/skills/brand-health-metrics-planner): Say what your brand should achieve. Get the numbers to track, how to collect them and how to read them.
+- [Break-even ad target finder](https://useaiblocks.com/prompts/break-even-ad-target-finder): Paste one product's price and costs. Get its true margin, break-even ROAS and break-even CAC.
 - [Budget variance explainer](https://useaiblocks.com/skills/budget-variance-explainer): Give it actual and budget numbers. Get what moved, why, and a short note for leadership.
 - [Build a monthly P&L and know your real margin](https://useaiblocks.com/workflows/build-a-monthly-p-and-l-and-know-your-real-margin): Give it your invoices and sales. Get true unit costs, a monthly P&L, a new versus returning split and a daily margin.
 - [Build a weekly KPI report with a forecast and dashboard](https://useaiblocks.com/workflows/build-a-weekly-kpi-report-with-a-forecast-and-dashboard): Describe your weekly numbers. Get a report you can rerun, a forecast and a shareable dashboard.
@@ -84,6 +85,7 @@
 - [Research test picker and reporter](https://useaiblocks.com/skills/statistical-test-picker): Give it your data and question. Get the right test, assumption checks, effect sizes and a write-up in APA style.
 - [Retention cohort analyst](https://useaiblocks.com/skills/retention-cohort-analyst): Give it user activity data. Get retention curves by sign-up group, feature adoption trends and what they suggest.
 - [Retention heatmap maker](https://useaiblocks.com/skills/retention-heatmap-maker): Give it signup and activity dates. Get retention by group over time, as a colour-coded grid with a plain reading.
+- [Sales drop cause finder](https://useaiblocks.com/prompts/sales-drop-cause-finder): Paste store numbers from before and after a drop. Get the lever that moved and the next check.
 - [Sample size planner](https://useaiblocks.com/skills/sample-size-planner): Say what effect you want to detect. Get how many subjects you need, with power curves you can put in a grant.
 - [Seawater carbonate calculator](https://useaiblocks.com/skills/seawater-carbonate-calculator): Give it two seawater measures like alkalinity and pH. Get the full carbonate chemistry worked out.
 - [Set up product tracking and build a retention dashboard](https://useaiblocks.com/workflows/set-up-product-tracking-and-build-a-retention-dashboard): Describe your product. Get an event plan to ship, then a retention grid and dashboard from real use.
@@ -122,3 +124,4 @@
 - [Warehouse A/B test runner](https://useaiblocks.com/skills/warehouse-a-b-test-runner): Describe your data setup. Get SQL steps to split users, log exposure and read results with proper stats.
 - [Weekly spend impact modeler](https://useaiblocks.com/skills/weekly-spend-impact-modeler): Give it weekly spend and sales by channel. Get a simple model of what each channel adds, with honest limits.
 - [Weekly store ad pulse checker](https://useaiblocks.com/skills/weekly-store-ad-pulse-checker): Give weekly spend, sales, emails and discounts. Get a health score out of 100 and what to pull.
+- [Weekly store numbers watcher](https://useaiblocks.com/agents/weekly-store-numbers-watcher): Give it weekly Shopify and GA4 numbers. Get which to trust, any sharp drop explained, and the funnel step to fix.

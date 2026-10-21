@@ -1,0 +1,90 @@
+new_slug: brand-voice-one-pager-writer
+name: "Brand voice one-pager writer"
+summary: "Describe your brand and who you write for. Get a one-page voice guide with do and don't lines."
+job: brand-file
+thinking: medium
+thinking_why: "Capturing a voice takes some judgement about tone."
+
+headline: "Brand voice one-pager writer"
+subhead: "Describe your brand and who you write for. The prompt returns a one-page voice guide: a voice line, four tone sliders with right and wrong examples, words to use and avoid, three writing rules and before and after lines."
+
+explain: |
+  When a brand has no written voice, every post and email sounds a bit different. AI tools make it worse, because they default to a generic tone.
+
+  This prompt turns your answers into a short guide. It starts with one sentence that captures how you sound, then sets four tone sliders. Each slider has an example that fits and one that does not. You get words to use and avoid, three writing rules and three plain lines rewritten in your voice. Paste the guide above any writing request, or save it in your brand file.
+
+when:
+  - "Your emails, posts and pages sound different from each other."
+  - "You want an AI to write like you."
+  - "A new writer is joining."
+
+you_give:
+  - "Your brand and what you sell"
+  - "Who you write for"
+  - "How you want to sound and never want to sound"
+  - "Two lines you like (optional)"
+you_get:
+  - "A voice line and four tone sliders"
+  - "Words to use and avoid"
+  - "Three before and after lines in your voice"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Under it, describe your brand and your readers."
+  - "Say three words for how you sound and what you never want to sound like."
+  - "Save the guide in your brand file and paste it above future writing requests."
+
+how_it_works:
+  - title: "Write the voice line"
+    text: "One sentence."
+  - title: "Set four sliders"
+    text: "With a right and a wrong example."
+  - title: "List words"
+    text: "Six to use, six to avoid."
+  - title: "Show it"
+    text: "Three before and after lines."
+
+output_shape: |
+  VOICE LINE: <Brand> sounds like <...>
+  SLIDERS
+  <casual to formal>: <where> | right: "<...>" | wrong: "<...>"
+  (... four sliders)
+  USE: <six words or phrases>
+  AVOID: <six words or phrases>
+  RULES
+  1 <...>
+  BEFORE AND AFTER
+  <plain line> -> <in your voice>
+  MISSING: <...>
+
+tweaks:
+  - what: "Your readers"
+    how: "Say how they talk. The sliders follow."
+  - what: "Lines you like"
+    how: "Paste two real lines from your brand and the guide copies their rhythm."
+  - what: "Never lines"
+    how: "Say what you must not sound like. It sharpens the avoid list."
+
+judge:
+  - "The voice line is one sentence a stranger could follow."
+  - "The sliders have examples."
+  - "The avoid list names real words."
+  - "The before and after lines use your facts."
+
+test:
+  - "Ask an AI to write a short email with and without the guide above it."
+  - "Check that the avoid list stops words you hate."
+  - "Give the guide to a colleague and ask them to write one line."
+
+improve:
+  - "Add your real customer phrases to the use list."
+  - "Add the claims you cannot make."
+  - "Pair it with Tagline score card to test your line."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt works in any strong chat AI. Paste it, then add your details under it."}
+  inputs:
+    - "Three emails or posts you are proud of"
+    - "Customer reviews in their own words"
+    - "A brand you admire for tone"

@@ -1,6 +1,6 @@
 # Make documents, sheets and slides: AI Blocks
 
-> 52 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 55 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Article formatter](https://useaiblocks.com/skills/article-formatter): Give it plain text or rough markdown. Get a tidy article with title, summary, headings and lists, same words.
 - [Chart maker](https://useaiblocks.com/skills/chart-maker): Give it your data. Get clear charts and dashboards made with matplotlib, seaborn or plotly.
@@ -9,10 +9,12 @@
 - [Code review page maker](https://useaiblocks.com/skills/code-review-page-maker): Give it a markdown code review. Get one HTML page with severity tags and diffs that are easy to read.
 - [CV writer](https://useaiblocks.com/skills/cv-writer): Give it your background and a job post. Get a paste-ready CV that passes applicant filters, plus a flaw report.
 - [Data cleaner](https://useaiblocks.com/skills/data-cleaner): Give it a messy dataset. Get missing values, duplicates, wrong types and outliers fixed.
+- [Data file clean-up loop](https://useaiblocks.com/agents/data-file-clean-up-loop): Give it a messy data file. It fixes and re-checks until the file passes, and saves your rules for the next one.
 - [Data file reader and writer](https://useaiblocks.com/skills/data-file-reader-and-writer): Name your CSV, Excel, JSON or Parquet file. Get it read or saved correctly, with errors fixed.
 - [Data quality auditor](https://useaiblocks.com/skills/data-quality-auditor): Give it a dataset. Get a report on gaps, duplicates, odd values and the rules that would catch them.
 - [Data story writer](https://useaiblocks.com/skills/data-story-writer): Give it your numbers. Get a clear story with the point, the proof and the next step for your readers.
 - [Deck number refresher](https://useaiblocks.com/skills/deck-number-refresher): Give it a deck and new figures. Get every number updated across the slides, with a list of changes.
+- [Doc typo and term checker](https://useaiblocks.com/prompts/doc-typo-and-term-checker): Paste a document. Get typos, grammar slips and term clashes listed, with no rewrites.
 - [Document file generator](https://useaiblocks.com/skills/document-file-generator): Describe the slides, report, sheet or PDF. Get a new PPTX, DOCX, XLSX or PDF file built from a JSON spec.
 - [Editable slide deck builder](https://useaiblocks.com/skills/editable-slide-deck-builder): Give it your story and sources. Get a PowerPoint deck with real editable text, tables and charts, plus a quality check.
 - [Empty workbook builder](https://useaiblocks.com/skills/empty-workbook-builder): Give a confirmed field list. Get a formatted empty Excel or CSV file, with no invented rows.
@@ -42,6 +44,7 @@
 - [Report builder](https://useaiblocks.com/skills/report-builder): Give it your data. Get a clear report with charts, such as a sprint retro, financial summary or postmortem.
 - [Research poster builder](https://useaiblocks.com/skills/research-poster-builder): Give it your approved text and images. Get an editable PowerPoint poster at print size, checked for access and file safety.
 - [Research poster maker](https://useaiblocks.com/skills/research-poster-maker): Give it your results and figures. Get a printable research poster in LaTeX as a PDF.
+- [Rough text to article tidier](https://useaiblocks.com/prompts/rough-text-to-article-tidier): Paste rough text. Get a tidy article with a title, summary and headings, in your words.
 - [Safe database query runner](https://useaiblocks.com/skills/safe-database-query-runner): Ask a question about your Postgres data. Get a read-only query run with write protection and the results back.
 - [Scanned PDF text reader](https://useaiblocks.com/skills/scanned-pdf-text-reader): Give it PDFs, Office files or scans. Get text with page positions, read with OCR when needed, all on your computer.
 - [Screen capture taker](https://useaiblocks.com/skills/screen-capture-taker): Ask for a screen, a window or a part of one. Get a saved screenshot.

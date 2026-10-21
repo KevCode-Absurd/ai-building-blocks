@@ -1,0 +1,21 @@
+slug: two-day-paid-ask-planner
+name: Two-day paid ask planner
+summary: Paste your idea, buyer and price. Get the buyer-count math, ten people to ask and a go or change rule.
+category: general
+type: prompt
+role: make
+job: strategy
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: How to Validate a Business Idea in 48 Hours
+    by: Noah Kagan
+    used: The one-minute math, ten people to ask, asking for payment rather than opinions, and a go rule set in advance

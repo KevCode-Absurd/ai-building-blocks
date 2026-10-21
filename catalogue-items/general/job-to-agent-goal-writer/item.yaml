@@ -1,0 +1,16 @@
+slug: job-to-agent-goal-writer
+name: "Job to agent goal writer"
+summary: "Paste a vague job. Get a goal an AI agent can finish, with proof of done and stop rules."
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

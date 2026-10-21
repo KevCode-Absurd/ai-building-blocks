@@ -1,0 +1,91 @@
+new_slug: test-result-trust-checker
+name: "Test result trust checker"
+summary: "Paste a finished test's numbers. Get whether to trust it, the lift as a range and a ship call."
+job: test-store-changes
+thinking: medium
+thinking_why: "It has to judge how far a result can be trusted."
+
+headline: "Test result trust checker"
+subhead: "Paste the numbers from a finished test. It checks the traffic split, run length and early stopping, reads the lift as a range in money, checks guardrails, and gives one call: ship, do not ship, re-test or inconclusive."
+
+explain: |
+  A test can look like a winner and still be wrong. The split can be off, someone may have stopped on a lucky day, or an email blast may have bent the numbers. Shipping on a false win costs real money.
+
+  This prompt checks those traps first. Only then does it read the lift as a range, turn it into monthly profit, and check that order value and margin did not fall.
+
+when:
+  - "A test just finished and the variant looks better."
+  - "A big win looks too good to be true."
+  - "You need to explain to someone why you are or are not shipping."
+
+you_give:
+  - "Visitors and conversions for each version (required)."
+  - "The plan (required): split, sample size and dates."
+  - "Main metric and guardrails (required): order value, margin, returns."
+  - "What else happened (required): sales, emails, outages, price or tracking changes."
+  - "Smallest lift worth shipping, gross profit per order and monthly visitors (advised)."
+you_get:
+  - "A clear call with the reason"
+  - "Pass or fail on each trust check"
+  - "The lift as a range and in money per month"
+  - "A guardrail check"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: visitors and conversions for each version; the plan; main metric and guardrails; what else happened; smallest lift worth shipping, gross profit per order and monthly visitors."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "Check the split"
+    text: "If you planned 50/50, add up (seen minus expected) squared, divided by expected, for each version. Above 10.83 means the split is broken and the result is not trustworthy."
+  - title: "Check how it ended"
+    text: "Planned sample reached, at least two full weeks, and no stop at the first good-looking day."
+  - title: "Distrust big surprises"
+    text: "A huge lift is more likely a tracking bug than a discovery. Say re-test."
+  - title: "Read a range, in money"
+    text: "Give the difference with a 95% range and show the working. Monthly gain = monthly visitors x the difference in gross profit per visitor, at the low, middle and high end."
+  - title: "Check guardrails and call it"
+    text: "A win that cuts order value or margin is not a win. Call SHIP, DO NOT SHIP, RE-TEST or INCONCLUSIVE."
+
+output_shape: |
+  CALL: SHIP | DO NOT SHIP | RE-TEST | INCONCLUSIVE
+  CHECKS: split <pass | fail, numbers> | length <pass | fail> | stopping <pass | fail> | other changes <pass | fail>
+  RESULT: <control> vs <variant> | difference <x> | range <low to high> | smallest lift <y>
+  MONEY PER MONTH: low <$> | middle <$> | high <$>
+  GUARDRAILS: <each ok or hurt>
+  WHY: <two sentences>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: "Run length"
+    how: "Give the dates. Under two full weeks is a floor warning."
+  - what: "Smallest lift worth shipping"
+    how: "Set it before you read the result."
+
+judge:
+  - "The split check is done before the result is read."
+  - "The result is a range, not a single number."
+  - "A fully powered test with no effect is called INCONCLUSIVE, not extended."
+  - "No segment is read that was not agreed before the test."
+
+test:
+  - "Use a test you ran. See if the call matches what you decided."
+  - "Feed it a broken split. It should fail the split check."
+  - "Run it twice. The call should match."
+
+improve:
+  - "Add your usual smallest lift under the prompt."
+  - "Keep a log entry for every call."
+  - "Pair it with a test idea shortlist maker."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "The export from your test tool"
+    - "A list of sales and email sends during the run"
+
+terms:
+  - term: "Guardrail"
+    meaning: "A number that must not get worse, such as order value or returns, even if conversion rises."

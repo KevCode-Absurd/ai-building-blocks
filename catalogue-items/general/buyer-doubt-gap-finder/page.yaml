@@ -1,0 +1,91 @@
+new_slug: buyer-doubt-gap-finder
+name: "Buyer doubt gap finder"
+summary: "Paste customer questions and your page text. Get each doubt matched to the page, plus a score out of 100."
+job: audit-landing-page
+thinking: medium
+thinking_why: "It matches many customer words to page text, which takes some judgement."
+
+headline: "Buyer doubt gap finder"
+subhead: "Paste what customers ask in reviews and support, plus your page text. The prompt matches each doubt to the page, shows where it is answered, hidden or missing, and says where to put the answer. You also get a coverage score out of 100."
+
+explain: |
+  Customers rarely leave a page for a secret reason. They leave because a plain question went unanswered: will it fit, what if it does not work, when does it arrive. Often the answer is on the page but buried.
+
+  This prompt lists each doubt with a real quote and source, then checks your page text for the answer. It marks each as visible, hidden or missing, and says where the answer belongs. The score is the share of doubts the page settles where a buyer can see it. It measures coverage, not sales.
+
+when:
+  - "Reviews and tickets keep asking the same thing."
+  - "A page gets visits but few orders."
+  - "You are about to rewrite a page and want to know what to add."
+
+you_give:
+  - "Reviews, questions or return reasons, each with a source"
+  - "The full text of your page"
+  - "Policies and facts you can stand behind (optional)"
+you_get:
+  - "A table of doubts and where the page answers them"
+  - "The top five fixes and the facts you still need"
+  - "A coverage score out of 100, with the sum shown"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Under it, paste your customer words with the source of each."
+  - "Paste your page text, including the FAQ."
+  - "Add any facts the answers can use."
+  - "Start with the top five fixes."
+
+how_it_works:
+  - title: "List the doubts"
+    text: "One row each, with a quote and a source."
+  - title: "Find the answer"
+    text: "Visible, hidden, missing or unknown."
+  - title: "Place a fix"
+    text: "Where the buyer decides: beside the price, size picker or button."
+  - title: "Score it"
+    text: "Points divided by doubts, times 100."
+
+output_shape: |
+  <n>. DOUBT: <...>
+     Quote: "<...>" (<source>)
+     Page today: <where it is answered, or not>
+     Status: <visible | hidden | missing | unknown>
+     Fact needed: <...>
+     Add: <answer>, placed <where>
+  TOP 5 FIXES
+  <five one-line fixes>
+  FACTS TO COLLECT
+  <...>
+  SCORE
+  <points> / <doubts counted> x 100 = <score> out of 100
+
+tweaks:
+  - what: "Number of sources"
+    how: "More reviews from different people make the ranking more reliable. A few quotes make it a guess, and it will say so."
+  - what: "Page text"
+    how: "Paste the FAQ and buy area too. Without them, more rows land in UNKNOWN."
+  - what: "Facts"
+    how: "Add your return and delivery terms so the fixes can be written."
+
+judge:
+  - "Every doubt has a real quote."
+  - "Hidden answers are called hidden, not missing."
+  - "No fix adds a fact you never gave."
+  - "The score sum adds up."
+
+test:
+  - "Paste a page where you know one answer is buried. It should say HIDDEN."
+  - "Run it twice and compare the scores."
+  - "Check the top fix against the question your support team hears most."
+
+improve:
+  - "Add the doubts your team already knows about as a starter list."
+  - "Add your own placement rule, such as returns always sit beside the buy button."
+  - "Pair it with Fix-now or test sorter once you have a list of fixes."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt works in any strong chat AI. Paste it, then add your details under it."}
+  inputs:
+    - "Return reasons from your orders"
+    - "Pre-sale questions from chat or email"
+    - "Screenshots of the page on a phone"

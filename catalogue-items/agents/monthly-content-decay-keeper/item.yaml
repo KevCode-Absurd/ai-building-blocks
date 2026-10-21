@@ -1,0 +1,29 @@
+slug: monthly-content-decay-keeper
+name: "Monthly content decay keeper"
+summary: "Give it your page list and traffic each month. Get the pages losing ground, a call on each and drafts to approve."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: performance_sheet, required: true}
+  - {type: competitor_set, required: false}
+  - {type: web_page, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [seo-change-tracker, page-keep-or-cut-auditor, content-gap-and-decay-finder, old-content-refresher, answer-first-page-rewriter, title-and-meta-tag-writer]
+steps:
+  - {uses: seo-change-tracker, note: "Every month: compare your pages' search state with last month's saved copy and flag what slipped."}
+  - {uses: page-keep-or-cut-auditor, note: "First run, then every quarter: keep, update, merge, redirect or delete for every page."}
+  - {uses: content-gap-and-decay-finder, note: "Every month, if a keyword data tool is connected: decaying pages and missing topics."}
+  - {uses: old-content-refresher, note: "Every month, on the pages that lost traffic: update, merge or delete, and how deep the update goes."}
+  - {uses: answer-first-page-rewriter, note: "Only for pages called update that answer a question: sections rewritten answer first, with a list of facts to check."}
+  - {uses: title-and-meta-tag-writer, note: "Only for pages with many views in search but few clicks: new titles and descriptions."}
+schedule: "On the second Monday of each month, once last month's search data is final"
+asks_before: [publishing or editing any live page, deleting or merging pages, adding redirects, changing titles or descriptions on a live site]
+origin: own
+version: 1.0.0
+example_pending: true

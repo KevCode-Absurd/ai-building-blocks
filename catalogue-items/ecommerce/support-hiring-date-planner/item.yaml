@@ -1,0 +1,16 @@
+slug: support-hiring-date-planner
+name: "Support hiring date planner"
+summary: "Paste 12 months of tickets, costs and a sales forecast. Get agents needed and when to hire."
+category: ecommerce
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

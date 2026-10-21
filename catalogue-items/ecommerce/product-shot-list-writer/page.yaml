@@ -1,0 +1,85 @@
+new_slug: product-shot-list-writer
+name: "Product shot list writer"
+summary: "Paste your product and where the photos will run. Get a shot list, with the reason for each shot."
+job: product-photos
+thinking: low
+thinking_why: "It applies a short set of rules to your product, with few judgement calls."
+
+headline: "Product shot list writer"
+subhead: "Paste your product, whether it can be held or worn, and where the photos will run. The prompt decides if you need video, then writes a shot list for a photographer or for yourself, with a plain reason for each shot."
+
+explain: |
+  A shot list full of nice-sounding shots wastes a shoot day. Each shot should earn its place by helping a buyer decide.
+
+  This prompt first decides whether your product is bought for enjoyment or for a job. That decides whether you need video and how people in the photos should look. Then it adds the shots that help buyers feel the product: a hand holding it, a sense of scale, a true finish. Each shot comes with a reason, and a short list of what not to do.
+
+when:
+  - "You are briefing a photographer."
+  - "You are about to shoot with a phone and want a plan."
+  - "Your current photos do not sell the product."
+
+you_give:
+  - "Your product and its price"
+  - "Whether it can be held or worn, and by whom"
+  - "Where the photos will run"
+you_get:
+  - "A shot list with direction for each shot"
+  - "A reason for each shot"
+  - "A list of what not to do"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Under it, paste your product details."
+  - "Say where the photos will run."
+  - "Give the list to your photographer or work through it yourself."
+
+how_it_works:
+  - title: "Classify the product"
+    text: "Enjoyment or job."
+  - title: "Pick formats"
+    text: "Video, stills or both."
+  - title: "Add feel shots"
+    text: "Hand, scale and finish."
+  - title: "Add details"
+    text: "Gaze, shine, spacing and props."
+
+output_shape: |
+  KIND: <enjoyment | job> because <reason>
+  # | Shot | Direction | Reason
+  1 | <...> | <...> | <...>
+  DO NOT
+  <what to avoid for this product>
+  MISSING
+  <...>
+
+tweaks:
+  - what: "Where it runs"
+    how: "Product page, ads and social need different shots. Say which."
+  - what: "Who wears it"
+    how: "Say who is in the photos. Gaze and setting change."
+  - what: "Budget"
+    how: "Say if you can shoot video. Otherwise the list swaps to a short loop of stills."
+
+judge:
+  - "Each shot has a reason."
+  - "The list includes scale or a hand."
+  - "Nothing shows a false finish."
+  - "The DO NOT list is specific to your product."
+
+test:
+  - "Try an enjoyment product and a tool. The video advice should differ."
+  - "Check one reason against what you know about your buyers."
+  - "Shoot the top three and compare with your current photos."
+
+improve:
+  - "Add the shots you already have so the list skips them."
+  - "Add your brand look so directions match."
+  - "Pair it with Eight-picture product page planner to place the shots."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt works in any strong chat AI. Paste it, then add your details under it."}
+  inputs:
+    - "Your best-selling product photo"
+    - "A competitor photo you like"
+    - "Your phone or camera type"

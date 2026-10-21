@@ -1,0 +1,16 @@
+slug: search-term-junk-sorter
+name: "Search term junk sorter"
+summary: "Paste a search terms report. Get winners to promote, negatives to add and a waste score."
+category: ecommerce
+type: prompt
+role: check
+job: ads
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

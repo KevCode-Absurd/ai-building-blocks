@@ -1,0 +1,23 @@
+slug: ad-ask-line-writer
+name: Ad ask line writer
+summary: Paste your ad and offer. Get two clear asks, each with a true reason to act and the doubts removed.
+category: general
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - type: copy_draft
+    required: true
+  - type: offer
+    required: false
+outputs:
+  - type: ad_copy
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: How to Write a Good Advertisement (a book summary)
+    by: Victor O. Schwab
+    used: The three kinds of ask (go and buy, do something, reply), the ways to get action now, guarantees as barrier removers, and the fallacy of 'sometime'

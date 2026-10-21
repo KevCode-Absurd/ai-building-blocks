@@ -1,6 +1,6 @@
 # Plan your strategy: AI Blocks
 
-> 168 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 170 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [90-day plan builder](https://useaiblocks.com/skills/90-day-plan-builder): Give it a decision you made. Get a 90-day plan with weekly steps, owners and check-in times.
 - [AI disruption risk checker](https://useaiblocks.com/skills/ai-disruption-risk-checker): Name your business or industry. Get your exposure to AI on ten points and a 90-day plan to defend.
@@ -100,6 +100,7 @@
 - [OKR writer](https://useaiblocks.com/skills/okr-writer): Give it your goals for the quarter. Get clear objectives and measurable key results, plus a scoring and mid-quarter check routine.
 - [One bold move picker](https://useaiblocks.com/skills/one-bold-move-picker): Paste your plan and rivals. Get one move to back, what to stop, the money it needs and a pass test.
 - [One-goal marketing plan builder](https://useaiblocks.com/skills/one-goal-marketing-plan-builder): Paste your goal and tactics you could try. Get one numbered goal, scored tactics and a test calendar.
+- [One-line position writer](https://useaiblocks.com/prompts/one-line-position-writer): Paste your product and rivals. Get the one word to own, one plain line and a stretch limit.
 - [One-page marketing plan builder](https://useaiblocks.com/skills/one-page-marketing-plan-builder): Describe your business. Get a one-page plan that takes people from stranger to loyal fan.
 - [Onliness statement writer](https://useaiblocks.com/skills/onliness-statement-writer): Paste your brand file and rivals. Get one sentence on what only you do, with a rival swap test.
 - [Operations manual writer](https://useaiblocks.com/skills/operations-manual-writer): Paste your standards sheet. Get a job card for each role, a missed-standard rule and a day-one trial sheet.
@@ -165,6 +166,7 @@
 - [Value creation plan builder](https://useaiblocks.com/skills/value-creation-plan-builder): Give it a company's numbers. Get revenue, cost and operating levers mapped to profit, with 100 day priorities.
 - [Values-to-week planner](https://useaiblocks.com/skills/values-to-week-planner): Share your roles, values and calendar. Get a plan from values to quarter, week and day, with protected hours for hard work.
 - [Waste and by-product finder](https://useaiblocks.com/skills/waste-and-by-product-finder): List what you throw away, leave idle or redo. Get each item priced as a possible product, reuse or saving.
+- [Week priority picker](https://useaiblocks.com/prompts/week-priority-picker): Paste your task list and real hours. Get the big tasks that matter, three priorities and tomorrow's list.
 - [Weekly big task sorter](https://useaiblocks.com/skills/weekly-big-task-sorter): Paste your task list. Get the few big tasks that matter, the small ones to batch or drop, and a week plan.
 - [Weekly growth target setter](https://useaiblocks.com/skills/weekly-growth-target-setter): Paste your weekly numbers. Get one growth target, what it means for the week and what to skip.
 - [Work back from a low price to cheaper production](https://useaiblocks.com/workflows/target-cost-production): Name the price you want to sell at. Get a cost-cutting plan, a better work layout and the waste worth chasing.

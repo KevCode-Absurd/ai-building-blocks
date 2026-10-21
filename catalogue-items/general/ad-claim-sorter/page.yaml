@@ -1,0 +1,68 @@
+new_slug: ad-claim-sorter
+name: Ad claim sorter
+summary: Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording.
+job: check-contracts
+thinking: medium
+thinking_why: Each claim needs a judgement about proof and risk.
+headline: Ad claim sorter
+subhead: Paste your copy and what you can prove. You get every claim sorted as fine, needs proof or cut, with a safer line for each one that fails.
+explain: Ads get pulled, and sellers get letters, over one sentence they cannot back up. This prompt finds those sentences before you publish. It lists every claim, labels its type, matches it against the proof you hold, and rewrites the weak ones so they keep their punch without adding facts. Health and money results get extra care. Rules vary by place and product, so have a qualified person check anything risky.
+when:
+  - An ad is about to go live and you want a last check.
+  - You are not sure which words need proof.
+  - A page has big claims and no proof next to them.
+you_give:
+  - The ad, page or email copy
+  - The proof you hold
+  - Country and audience (optional)
+you_get:
+  - A table of every claim with a call
+  - Safer lines for the weak ones
+  - Claims flagged for extra care
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste your copy and the proof you hold.
+  - Send it and read the result.
+  - Keep your proof in a folder with the date, so you can show it later.
+how_it_works:
+  - title: List
+    text: Every claim, in order.
+  - title: Match
+    text: Each fact, comparison or absolute against your proof.
+  - title: Reword
+    text: A safer line for each one that falls short.
+output_shape: |-
+  | Claim | Type | Proof given | Call | Safer line |
+  (one row per claim)
+
+  EXTRA CARE
+  <health, money-result, free, testimonials>
+
+  MISSING
+  <proof not given>
+tweaks:
+  - what: Where
+    how: Name the country and the rules you must follow.
+  - what: Strict
+    how: Ask it to treat every number as needing proof.
+  - what: Short
+    how: Ask for only the claims that fail.
+judge:
+  - Every claim listed.
+  - No unproven claim marked fine.
+  - Safer lines add no fact.
+  - Extra care is flagged.
+test:
+  - Paste "clinically proven" with no proof. It should mark NEEDS PROOF.
+  - Paste "our favourite flavour". It should be an opinion, fine.
+  - Run twice. The calls should match.
+improve:
+  - Add your proof list with dates.
+  - Add past claims that got rejected.
+  - Use the full skill for a whole site.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - The ad, page or email copy

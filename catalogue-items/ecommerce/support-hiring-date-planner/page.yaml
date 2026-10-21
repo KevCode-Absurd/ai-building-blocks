@@ -1,0 +1,89 @@
+new_slug: support-hiring-date-planner
+name: "Support hiring date planner"
+summary: "Paste 12 months of tickets, costs and a sales forecast. Get agents needed and when to hire."
+job: run-your-store
+thinking: low
+thinking_why: "It applies a ratio to a forecast month by month."
+
+headline: "Support hiring date planner"
+subhead: "Paste your ticket history, support costs and sales forecast. It forecasts tickets from orders, counts the agents you need each month, and gives the date to start hiring before the peak."
+
+explain: |
+  Support tickets rise with sales, but hiring takes weeks. If you wait until the queue is long, cost per ticket jumps and replies slow down just when buyers are spending.
+
+  This prompt finds your tickets per order, applies it to your forecast, and counts back from the busy month by your own hire-and-train time. You get dates, not a guess.
+
+when:
+  - "A big sale or holiday peak is coming."
+  - "Your inbox is growing faster than sales."
+  - "You need to tell someone when hiring must start."
+
+you_give:
+  - "Tickets per month for the last 12 months (required)."
+  - "Support cost per month (required): agents plus software."
+  - "Orders per month for the same months, and forecast orders for the next months (required)."
+  - "Tickets one agent handles in a month (required): from your own data."
+  - "Weeks to hire and train an agent (required)."
+you_get:
+  - "A month-by-month ticket forecast"
+  - "Agents needed each month"
+  - "The date to start hiring"
+  - "Cost per ticket if you follow the plan"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: tickets per month for the last 12 months; support cost per month; orders per month for the same months, and forecast orders for the next months; tickets one agent handles in a month; weeks to hire and train an agent."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "Find cost per ticket"
+    text: "Support cost divided by tickets, for each month."
+  - title: "Find tickets per order"
+    text: "Tickets divided by orders, each month. Use a steady figure for the forecast."
+  - title: "Forecast tickets"
+    text: "Tickets per order times forecast orders, month by month."
+  - title: "Count agents needed"
+    text: "Forecast tickets divided by tickets one agent handles in a month. Round up."
+  - title: "Date the hires"
+    text: "Count back from the start of each busy month by the weeks to hire and train. Say what cost per ticket would be if you hire on that date."
+
+output_shape: |
+  TABLE: month | forecast orders | forecast tickets | agents needed | cost per ticket
+  HIRE BY: <date> for <number> agents (peak month <month>)
+  WATCH: <the month where cost per ticket jumps>
+  REVIEW: re-run when the sales forecast changes
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: "Tickets per agent"
+    how: "Use what your agents really handle. A made-up figure moves every date."
+  - what: "Forecast"
+    how: "Give orders, not just sales. If you only have sales, add average order value."
+
+judge:
+  - "Every figure comes from your numbers, with the sum shown for one month."
+  - "The forecast is called only as good as your sales forecast."
+  - "With under about 200 tickets a month, it says a simple monthly log is enough."
+  - "No ticket rate per agent is assumed."
+
+test:
+  - "Run it on last peak with the numbers you had then and see if the dates would have saved you."
+  - "Run it twice with the same data. The agent counts should match."
+  - "Leave out hire time. It should say MISSING."
+
+improve:
+  - "Add your usual hire-and-train weeks under the prompt."
+  - "Add your top ticket reasons so it flags the ones a page fix would remove."
+  - "Pair it with a sales forecast builder."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "A tagged list of ticket reasons"
+    - "Your sales forecast by month"
+
+terms:
+  - term: "Cost per ticket"
+    meaning: "All support costs in a month divided by the tickets handled."

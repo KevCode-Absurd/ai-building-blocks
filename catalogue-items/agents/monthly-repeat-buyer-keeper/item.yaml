@@ -1,0 +1,29 @@
+slug: monthly-repeat-buyer-keeper
+name: "Monthly repeat buyer keeper"
+summary: "Give it your order export each month. Get your repeat health scored, the one stage to fix and a plan for it."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: product_data, required: true}
+  - {type: performance_sheet, required: false}
+  - {type: voc_reviews, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [repeat-order-bottleneck-finder, first-use-gap-checker, reorder-and-second-order-planner, delivery-update-flow-builder, best-and-worst-customer-profiler, top-customer-touch-planner]
+steps:
+  - {uses: repeat-order-bottleneck-finder, note: "Every month: the repeat health score, the stage that holds buyers back and the likely cause, read against last month."}
+  - {uses: first-use-gap-checker, note: "Only when buyers stall between the first order and the second and returns, tickets or reviews show trouble: where buyers get stuck before real use."}
+  - {uses: reorder-and-second-order-planner, note: "Only when first use looks healthy and the product wears out or runs out: the reorder and second-order timing, with a check that skips unhappy buyers."}
+  - {uses: delivery-update-flow-builder, note: "Only when late or unclear delivery is the likely cause: the delivery date rule, the update flow and a delay script."}
+  - {uses: best-and-worst-customer-profiler, note: "Only when buyers from one source or offer repeat far less than the rest: who your best and worst buyers are and where they came in."}
+  - {uses: top-customer-touch-planner, note: "Only when the first-to-second order rate is fine but too few buyers spend a lot: a touch plan for your top customers with a control group."}
+schedule: "On the first working week of each month, after last month's orders are closed"
+asks_before: [sending any email or text to customers, changing prices, offers or discounts, changing shipping promises or carrier settings, spending money on gifts, mail or inserts, changing a live flow or automation]
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,91 @@
+new_slug: negotiation-call-opening-planner
+name: "Negotiation call opening planner"
+summary: "Paste the deal and who you meet. Get an opening, feeling labels, questions and what to learn first."
+job: sell-and-negotiate
+thinking: medium
+thinking_why: "It needs judgement about the other side's likely fears."
+
+headline: "Negotiation call opening planner"
+subhead: "Paste the deal you are about to discuss and what you know about the other side. The prompt writes an opening that names their likely fears, feeling labels, questions, a safe-no question and the facts to learn first."
+
+explain: |
+  Many people go into a hard talk ready to argue their case. The other side is already braced for that. A better start is to say out loud what they probably fear about you, then ask questions that hand them part of the problem.
+
+  This prompt prepares that start. It gives lines to say, feeling labels, how and what questions, and a ranked list of facts to learn before you give anything. It gives no advice on price or terms, and any contract should be checked by a qualified person.
+
+when:
+  - "You expect a tense talk with a supplier, client or landlord."
+  - "You usually concede too early."
+  - "You want a script for the first five minutes."
+
+you_give:
+  - "Who you meet, what you want and your deadline"
+  - "What you could give"
+  - "What you know about them (advised)"
+you_get:
+  - "An opening that names their likely fears"
+  - "Labels and questions in order"
+  - "A ranked list of facts to learn first"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste the deal and what you know about them under the prompt."
+  - "Mark what you know and what you are guessing."
+  - "Practise the opening aloud before the talk."
+
+how_it_works:
+  - title: "Write their worst assumptions"
+    text: "List three to five worst things they may assume about you, in their voice. Mark each KNOWN or GUESS."
+  - title: "Say them first"
+    text: "Turn them into two or three calm opening sentences before your ask. Do not agree and do not apologise."
+  - title: "Write feeling labels"
+    text: "Write two or three that start \"It seems like...\" or \"It sounds like...\". Never end one with a question mark. After each, wait."
+  - title: "Write how and what questions"
+    text: "Write four to six that put the problem in their hands, such as \"How would we get this done by the end of the month?\""
+  - title: "Plan a safe no"
+    text: "Write one question where no is the comfortable answer, and what each answer tells you."
+  - title: "Plan for a fast yes"
+    text: "If they agree quickly, ask \"How will we make that happen, and who does what by when?\""
+  - title: "Rank what to learn"
+    text: "List the facts that could change the deal. Concede nothing until you have asked."
+
+output_shape: |
+  THEIR ASSUMPTIONS: <assumption> (KNOWN | GUESS)
+  OPENING: <two or three sentences>
+  LABELS: <"It seems like..."> (pause)
+  QUESTIONS: 1. <...>
+  SAFE NO: <question> - yes means <...>, no means <...>
+  FAST YES: <follow-up>
+  LEARN FIRST: 1. <...>
+  BEFORE YOU SIGN: <check terms with a qualified person>
+
+tweaks:
+  - what: "What you know"
+    how: "Real past words from them make the labels sharper."
+  - what: "Your deadline"
+    how: "Say it. It shapes what you ask first."
+  - what: "The relationship"
+    how: "A long partner needs a softer opening than a stranger."
+
+judge:
+  - "Each assumption is marked as known or a guess."
+  - "No label ends with a question mark."
+  - "The questions start with how or what."
+  - "Nothing is conceded."
+
+test:
+  - "Role-play the opening with a friend."
+  - "Run it twice. The assumptions should match."
+  - "Use the plan in a low-stakes talk first."
+
+improve:
+  - "Add notes from past talks with the same person."
+  - "Add your limits and walk-away points privately."
+  - "Pair it with the Negotiation call prep planner for every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "Notes from past talks with them"
+    - "What you could give that costs you little"

@@ -1,0 +1,88 @@
+new_slug: message-stickiness-rewriter
+name: "Message stickiness rewriter"
+summary: "Paste a tagline, pitch line or short paragraph. Get three versions that people will remember."
+job: write-and-tell-stories
+thinking: low
+thinking_why: "It rewrites a short message using six simple tests."
+
+headline: "Message stickiness rewriter"
+subhead: "Paste a tagline, pitch line or short message and say who hears it. The prompt finds the core, makes it concrete and surprising, and gives three rewrites with a pick."
+
+explain: |
+  Once you know your subject well, it gets hard to imagine not knowing it. So your message fills up with insider words that mean nothing to a newcomer. Researchers call this the curse of knowledge.
+
+  This prompt applies six simple tests that make a message easier to understand and remember: simple, unexpected, concrete, believable, emotional and story. It does not force all six. It finds the core, writes three versions and tells you which to use. It will not invent a number.
+
+when:
+  - "Nobody remembers your tagline."
+  - "Your pitch gets nods and no follow-up."
+  - "Your message is full of words your buyer does not use."
+
+you_give:
+  - "The message"
+  - "Who hears it and what they know"
+  - "The one thing to remember (advised)"
+you_get:
+  - "The core in one sentence"
+  - "Three rewrites, each with the test it leans on"
+  - "A pick and the reason"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste your message under the prompt, with who hears it."
+  - "Add the one thing they should remember."
+  - "Say each version aloud. Keep the one you can say in one breath."
+
+how_it_works:
+  - title: "Find the core"
+    text: "If people remember one thing, what is it? Write it in a sentence a smart twelve-year-old gets."
+  - title: "Make it concrete"
+    text: "Swap abstract words for things a person can see or touch."
+  - title: "Find the surprise"
+    text: "Find the part that breaks what they expect. Lead with it, tied to the core."
+  - title: "Make it believable"
+    text: "Use a detail or number I gave. If none, write MISSING: proof."
+  - title: "Make them care"
+    text: "Tie it to what one person gets or loses. Add a tiny story only if it carries the core."
+  - title: "Write three versions"
+    text: "Each leans on a different strength. Not every message needs all six tests, so do not force them."
+
+output_shape: |
+  CORE: <one sentence>
+  VERSIONS
+  1. <text> (leans on: <test>)
+  2. <text> (leans on: <test>)
+  3. <text> (leans on: <test>)
+  PICK: <number>, because <reason>
+  MISSING: <...>
+
+tweaks:
+  - what: "Who hears it"
+    how: "Say what they already know. This decides what counts as insider."
+  - what: "Proof"
+    how: "One real number makes the message believable. Give one."
+  - what: "The one thing"
+    how: "Naming it stops the rewrite drifting."
+
+judge:
+  - "A twelve-year-old understands every version."
+  - "No invented number."
+  - "Each can be said in one breath."
+  - "The three versions differ."
+
+test:
+  - "Test the pick on someone who does not know your business. Ask what they remember."
+  - "Run it twice. The core should match."
+  - "Compare your old line and the pick side by side."
+
+improve:
+  - "Add the words your buyers use for the problem."
+  - "Add two taglines you admire so it knows your taste."
+  - "Pair it with the Memorable message writer for every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "Words your buyers use in reviews"
+    - "Two taglines you admire"

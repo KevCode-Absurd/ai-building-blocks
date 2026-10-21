@@ -1,0 +1,99 @@
+new_slug: bug-evidence-plan-writer
+name: "Bug evidence plan writer"
+summary: "Paste the bug, the error and the code near it. Get ranked suspects and a check for each before you change anything."
+job: test-and-fix-code
+thinking: high
+thinking_why: "Finding a real cause takes careful step by step reasoning."
+
+headline: "Bug evidence plan writer"
+subhead: "Paste the bug, the exact error and the code near it. It restates the problem, ranks three likely causes with the evidence for each, gives one small check per cause, and waits for your results before suggesting any fix."
+
+explain: |
+  When a bug is not fixed, the usual reason is a guess. A change goes in, the error moves, and an hour later the real cause is still there. AI tools do this fast, which makes it worse.
+
+  This prompt slows the first step on purpose. You get ranked suspects and a quick check for each, so the cause is shown by evidence. You send back what the checks showed, and the fix comes after.
+
+when:
+  - "Your AI keeps proposing fixes that do not work."
+  - "The bug only happens sometimes."
+  - "It broke after a change and you do not know which part."
+
+you_give:
+  - "What you expected and what happened, with the exact error"
+  - "How to trigger it"
+  - "The code near the problem"
+  - "What changed recently (optional)"
+you_get:
+  - "The bug restated in two lines"
+  - "Three ranked suspects with evidence"
+  - "One small check per suspect"
+  - "What is still unknown and what to send next"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "Restate the bug"
+    text: "In two lines: expected, actual. Say whether it happens every time, sometimes, or started after a change."
+  - title: "List three suspects"
+    text: "Rank the three most likely causes, each pointing to a place in my code and why it fits the evidence. Say what would make you drop each one."
+  - title: "Give a check for each"
+    text: "One small check per suspect that proves or rules it out: a log line to add, a value to print, a case to try. Do not change the logic yet."
+  - title: "Name the gap"
+    text: "Say what you cannot know from what I pasted, and the one thing to send next."
+  - title: "Stop and wait"
+    text: "End with \"Tell me which check showed what, and I will confirm the cause before suggesting a fix.\""
+
+output_shape: |
+  BUG
+  Expected: <...>
+  Actual: <...> (<every time | sometimes | after a change>)
+
+  SUSPECTS
+  1. <cause> at <place>: <why it fits> / dropped if <result>
+  2. ...
+  3. ...
+
+  CHECKS
+  1. <what to run> - shows <meaning>
+
+  WHAT I CANNOT TELL
+  <gap> - send <item>
+
+tweaks:
+  - what: "The exact error"
+    how: "Paste it whole, with the line numbers. It narrows the suspects fast."
+  - what: "Recent changes"
+    how: "Name what changed, even if it seems unrelated."
+  - what: "Run the checks"
+    how: "Send back what each check printed. That is what turns a suspect into a cause."
+
+judge:
+  - "Each suspect points to a place in your code."
+  - "Each check is small and tells you something either way."
+  - "No fix is offered yet."
+  - "It names what it could not tell."
+
+test:
+  - "Use a bug you already solved. Is the real cause among the three?"
+  - "Run it twice. The top suspect should usually match."
+  - "Remove the error text. The answer should say what is missing."
+
+improve:
+  - "Add how you run your project and its tests, so checks fit your setup."
+  - "Add known weak areas of your code to look at first."
+  - "Save solved bugs and their real causes to paste in next time."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "The full error with line numbers"
+  - "A note on what changed last"
+
+terms:
+  - term: "Root cause"
+    meaning: "The real reason the bug happens, not the place where it shows up."

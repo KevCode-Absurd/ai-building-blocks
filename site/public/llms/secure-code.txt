@@ -1,6 +1,6 @@
 # Keep your code secure: AI Blocks
 
-> 73 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 76 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Advisory exposure checker](https://useaiblocks.com/skills/advisory-exposure-checker): Name a breach or package advisory. Get a read-only check of your machine and projects, saved as a report.
 - [AI agent attack tester](https://useaiblocks.com/skills/ai-agent-attack-tester): Give it your AI agent. Get a safe, authorized test plan and a report of where it can be tricked.
@@ -26,6 +26,7 @@
 - [Cybersecurity profile builder](https://useaiblocks.com/skills/cybersecurity-profile-builder): Describe your security today and your goals. Get a NIST CSF profile, gaps and a step by step plan.
 - [Dependency risk auditor](https://useaiblocks.com/skills/dependency-risk-auditor): Point it at your project. Get risky packages, licence clashes and a safe order to upgrade.
 - [Dependency risk scanner](https://useaiblocks.com/skills/dependency-risk-scanner): Point it at your project. Get known weak spots in packages found, plus a parts list and license check.
+- [Diff security skimmer](https://useaiblocks.com/prompts/diff-security-skimmer): Paste a code change. Get the security risks in only what changed, ranked, with the line and a fix.
 - [Django access control auditor](https://useaiblocks.com/skills/django-access-control-auditor): Point it at a Django project. Get a review of who can see or change what, with fixes for each gap.
 - [EU AI Act readiness checker](https://useaiblocks.com/skills/eu-ai-act-readiness-checker): Describe your AI systems. Get a first read of your risk level, duties and gaps under the EU AI Act.
 - [EU AI Act risk classifier](https://useaiblocks.com/skills/eu-ai-act-risk-classifier): Describe your AI system. Get its risk tier under the EU AI Act and the duties that follow.
@@ -51,6 +52,7 @@
 - [Open-source license checker](https://useaiblocks.com/skills/open-source-license-checker): Give it your project dependencies. Get license clashes, duties and risks flagged.
 - [Privacy-first app designer](https://useaiblocks.com/skills/privacy-first-app-designer): Describe the data your app collects. Get privacy controls designed in: less data kept, clear consent, safe storage.
 - [Prompt injection defender](https://useaiblocks.com/skills/prompt-injection-defender): Describe your AI app. Get a threat map and fixes against hidden instructions in text it reads.
+- [Quarterly compliance readiness keeper](https://useaiblocks.com/agents/quarterly-compliance-readiness-keeper): Name your framework each quarter. Get gaps found, last quarter's fixes checked and what to close first.
 - [Risky design reviewer](https://useaiblocks.com/skills/risky-design-reviewer): Give it an API or config design. Get the easy-to-misuse parts that lead to security mistakes.
 - [Safe secrets manager](https://useaiblocks.com/skills/safe-secrets-manager): Get API keys and env variables checked and loaded without ever showing the values in logs or chat.
 - [Secrets hygiene checker](https://useaiblocks.com/skills/secrets-hygiene-checker): Point it at your project. Get leaked keys found, env files tidied and a plan to rotate secrets.
@@ -67,6 +69,7 @@
 - [SOC 2 readiness checker](https://useaiblocks.com/skills/soc-2-readiness-checker): Name your scope. Answer six questions and get gaps to fix before the SOC 2 Type II watch period.
 - [SOC 2 readiness planner](https://useaiblocks.com/skills/soc-2-readiness-planner): Describe your systems. Get your controls mapped, gaps found and the evidence an auditor will ask for.
 - [Staff access reviewer](https://useaiblocks.com/skills/staff-access-reviewer): Get staff accounts with old logins, inactive status or too much access, so your store stays safe.
+- [Threat list maker](https://useaiblocks.com/prompts/threat-list-maker): Paste how your app or service works. Get the likeliest attacks ranked, each with one way to reduce the risk.
 - [Threat model writer](https://useaiblocks.com/skills/threat-model-writer): Point it at your code. Get a short threat model of what attackers could reach, how, and how to stop them.
 - [Threat modeler](https://useaiblocks.com/skills/threat-modeler): Describe your system. Get threats found with STRIDE, rated by risk, each with a way to reduce it.
 - [Timing leak checker](https://useaiblocks.com/skills/timing-leak-checker): Point it at crypto code. Get a list of spots where run time could leak secret keys, with fixes.

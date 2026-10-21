@@ -1,0 +1,83 @@
+new_slug: review-quote-ad-card-planner
+name: Review quote ad card planner
+summary: Paste review lines. Get quote image ad cards with picture prompts and feed text that keep the words exact.
+job: make-image-ads
+thinking: medium
+thinking_why: It sorts quotes by the job they do and then lays out each card.
+headline: Review quote ad card planner
+subhead: "Paste two to four real review lines with their sources. You get one quote image ad per review: the job each quote does, a picture prompt, the exact quote kept intact, feed text with counts, and flags to check before you pay to run it."
+explain: |
+  A real customer quote is often a better ad than anything you could write. The risks are that an AI tidies the quote, an image tool changes a letter, or a free reviewer is passed off as an ordinary buyer.
+
+  This prompt sorts each quote by the job it does for a shopper: it names the old struggle, it names what is better, it answers a worry, or it shows the product in a day. Each job gets a layout that suits it. The quote stays the biggest text, letter for letter. The prompt records any cut, flags free or paid reviewers, and writes headlines inside the length platforms suggest. Image tools often swap letters, so you also get a reminder to read the quote on the finished card.
+when:
+  - You have good reviews and no time to design ads from them.
+  - You want several different customers in one test.
+  - You need to show you did not change what they said.
+you_give:
+  - Two to four review lines, each with its source
+  - What the product looks like, or a photo
+  - Whether each reviewer was verified, free or paid (optional)
+you_get:
+  - One card per review with a layout that fits its job
+  - A picture prompt for each card
+  - A headline and short text with character counts
+  - A trim record and flags
+how_to_use:
+  - Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini, with your details under it.
+  - Paste your reviews under the prompt, each with its source, copied exactly.
+  - Paste each picture prompt into ChatGPT or Gemini, with your product photo attached.
+  - Read the quote on every finished card against the source. Fix any changed letter by editing the text, not by making the image again.
+how_it_works:
+  - title: Sorts the quotes
+    text: Push, pull, doubt or habit, by what each quote does.
+  - title: Chooses a layout
+    text: Each job gets a layout that suits it.
+  - title: Locks the words
+    text: The quote is the biggest text and is never reworded.
+  - title: Credits honestly
+    text: No invented names, and free or paid reviewers are flagged.
+  - title: Writes the feed text
+    text: Headline and short text with counts.
+output_shape: |
+  CARD <n>: <push | pull | doubt | habit>, <layout>
+  Quote (<source>): "<exactly as written>"
+  Other words on the image: <plainer than the quote, or none>
+  Picture prompt: <background, where the quote sits, the real product>
+  Headline (<characters>): <the quote cut at a whole word>
+  Short text (<characters>): <who it is for, then the quote's point>
+  TRIM RECORD: <what was cut and why>
+  FLAGS: <free or paid reviewer, health claims inside a quote>
+tweaks:
+  - what: Quotes
+    how: Pick quotes with a feeling or a fact in them, not just "great product".
+  - what: A doubt
+    how: Include one quote that admits a worry and then answers it.
+  - what: Photo
+    how: Attach a real photo so the product on the card looks right.
+  - what: Number of cards
+    how: Ask for two if you want a small first test.
+judge:
+  - Each quote is word for word the same as the review.
+  - Each card has a different customer.
+  - Free or paid reviewers are flagged.
+  - No picture shows a before-and-after of a body.
+test:
+  - Make one card and compare the quote on it to the review, letter by letter.
+  - Run the prompt twice. The layouts may differ, but the quotes should not.
+  - Show a card to someone and ask what the ad promises.
+improve:
+  - Add your brand colours and fonts to the prompt.
+  - Keep a file of quotes you have permission to use.
+  - Add the platform sizes you need.
+  - Pair it with the Ad claim proof gap finder before you run a card with a result in it.
+works_best_with:
+  tools:
+    - name: ChatGPT or Gemini
+      why: Both can draw the card from the picture prompt, but check every letter of the quote.
+    - name: Any good chat AI
+      why: A short prompt works the same in Claude, ChatGPT or Gemini, so use the one you already have open.
+  inputs:
+    - Your real product photo
+    - Quotes with the reviewer's verified status
+    - Your brand colours and fonts

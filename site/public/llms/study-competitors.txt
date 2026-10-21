@@ -1,6 +1,6 @@
 # Study competitor ads: AI Blocks
 
-> 39 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 41 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad library teardown counter](https://useaiblocks.com/skills/ad-library-teardown-counter): Paste an Ad Library export. Get ad counts by format, age, page and awareness stage, plus content gaps.
 - [Ad library teardown writer](https://useaiblocks.com/skills/ad-library-teardown-writer): Give it a competitor. Get their live ads broken into hooks, offers, calls to action and test ideas. Collects data from websites.
@@ -26,8 +26,10 @@
 - [Facebook ad library collector](https://useaiblocks.com/skills/facebook-ad-library-collector): Give it a brand or keyword. Get its live Facebook ads from the public Ad Library. Collects data from websites.
 - [Map your rivals and write a message they cannot answer](https://useaiblocks.com/workflows/map-your-rivals-and-write-a-message-they-cannot-answer): Give it your product and rivals. Get a position map, the words nobody owns and a message you can defend.
 - [Monthly competitor watcher](https://useaiblocks.com/agents/monthly-competitor-watcher): Give it this month's rival ads and pages. Get what changed since last month and the one or two moves worth answering.
+- [Open word finder](https://useaiblocks.com/prompts/open-word-finder): Paste your rivals and their lines. Get the word each one owns and three open words to claim.
 - [Owned word mapper](https://useaiblocks.com/skills/owned-word-mapper): Paste your rivals and what buyers say. Get the word each rival owns, words nobody can own and the open ones.
 - [Patent prior-art searcher](https://useaiblocks.com/skills/patent-prior-art-searcher): Describe your invention or rival. Get patents found for novelty, freedom to operate or a landscape view.
+- [Rival gap message writer](https://useaiblocks.com/prompts/rival-gap-message-writer): Name a rival and your proven strengths. Get messages where your strength is their gap, plus their likely reply.
 - [Rival keyword gap finder](https://useaiblocks.com/skills/rival-keyword-gap-finder): Connect Ahrefs and name rivals. Get keywords they rank for that you do not, ranked by opportunity into quick wins.
 - [Rival matchup scorer](https://useaiblocks.com/skills/rival-matchup-scorer): Describe you and a rival. Get a side-by-side on the five factors, with where to fight and where to avoid.
 - [Rival SEO comparer](https://useaiblocks.com/skills/rival-seo-comparer): Name your site and rivals. Get a comparison of search overlap, content depth, backlinks, technical state and brand presence.

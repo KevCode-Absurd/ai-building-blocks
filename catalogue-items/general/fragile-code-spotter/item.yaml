@@ -1,0 +1,18 @@
+slug: fragile-code-spotter
+name: "Fragile code spotter"
+summary: "Paste code an AI wrote fast. Get the few real risks that will hurt later and the smallest fix for each."
+category: general
+type: prompt
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: feedback_notes}
+uses: []
+origin: own
+credits:
+  - {title: "vibe-code-auditor skill", by: "sickn33", url: "https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/vibe-code-auditor", used: "Auditing quickly generated code for fragility and production risk, adapted under the CC BY-4.0 licence"}
+version: 1.0.0
+example_pending: true

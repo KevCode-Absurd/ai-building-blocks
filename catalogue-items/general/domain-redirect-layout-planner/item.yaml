@@ -1,0 +1,18 @@
+slug: domain-redirect-layout-planner
+name: "Domain and redirect layout planner"
+summary: "Paste your domains and what each is for. Get the main address, redirects and a plan for names you do not use."
+category: general
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+credits:
+  - {title: "domain-strategy skill", by: "RampStack", url: "https://github.com/rampstackco/claude-skills/tree/main/skills/domain-strategy", used: "Main address choice, redirects, registrar safety and handling unused domains, adapted under the MIT licence"}
+version: 1.0.0
+example_pending: true

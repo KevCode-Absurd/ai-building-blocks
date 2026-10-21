@@ -1,6 +1,6 @@
 # Lead and manage people: AI Blocks
 
-> 67 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 69 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Anger pause and repair planner](https://useaiblocks.com/skills/anger-pause-and-repair-planner): Describe a fight or hurt at work or home. Get a pause routine and a calm first message.
 - [Ask for feedback, then give it](https://useaiblocks.com/workflows/ask-for-feedback-then-give-it): Say who you manage. Get a go-to question to ask for feedback and a plan for the next conversation you lead.
@@ -68,4 +68,6 @@
 - [Team layout planner](https://useaiblocks.com/skills/team-layout-planner): Describe your teams. Get a team structure for fast work, with clear owners and how teams hand off. Uses Team Topologies.
 - [Team pipeline roll-up writer](https://useaiblocks.com/skills/team-pipeline-roll-up-writer): Ask for your team's pipeline. Get a view by rep and stage, at-risk deals and coaching points.
 - [Top-priority shift memo writer](https://useaiblocks.com/skills/top-priority-shift-memo-writer): Describe a change that breaks your plan. Get a one-page memo that resets the top priority and each person's next step.
+- [Tough feedback note drafter](https://useaiblocks.com/prompts/tough-feedback-note-drafter): Paste what went wrong and who needs to hear it. Get a note that changes the behaviour.
+- [Word-for-word no writer](https://useaiblocks.com/prompts/word-for-word-no-writer): Paste the request you must turn down and why. Get a no you can say, with another way forward.
 - [Write an annual letter with long-term priorities and metrics](https://useaiblocks.com/workflows/annual-letter): Paste your year's numbers. Get principles, input metrics, a cash check, a value tally and a draft letter.

@@ -1,6 +1,6 @@
 # Test changes to your store: AI Blocks
 
-> 10 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 12 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Big swing test picker](https://useaiblocks.com/skills/big-swing-test-picker): Give it your store size and page data. Get five bold tests your traffic can prove, in order.
 - [Find the store change most worth testing](https://useaiblocks.com/workflows/find-the-store-change-most-worth-testing): Give it your store numbers and what shoppers do on key pages. Get a profit baseline and a ranked list of tests.
@@ -12,3 +12,5 @@
 - [Store test readiness checker](https://useaiblocks.com/skills/store-test-readiness-checker): Paste your orders, visits and the page to test. Get test, research or fix, plus a readiness score.
 - [Store test verdict maker](https://useaiblocks.com/skills/store-test-verdict-maker): Give it test numbers and dates. Get valid or not, the lift as a range, a ship call and a trust score.
 - [Test idea ranker](https://useaiblocks.com/skills/test-idea-ranker): Paste your research findings. Get each test written as a hypothesis and ranked by evidence and profit.
+- [Test idea shortlist maker](https://useaiblocks.com/prompts/test-idea-shortlist-maker): Paste your test ideas and the evidence for each. Get a ranked shortlist and the one to run first.
+- [Test result trust checker](https://useaiblocks.com/prompts/test-result-trust-checker): Paste a finished test's numbers. Get whether to trust it, the lift as a range and a ship call.

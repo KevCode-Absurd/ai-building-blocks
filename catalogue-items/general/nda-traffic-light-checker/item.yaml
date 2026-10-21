@@ -1,0 +1,22 @@
+slug: nda-traffic-light-checker
+name: NDA traffic-light checker
+summary: Paste an NDA. Get a green, yellow or red rating and the odd clauses explained.
+category: general
+type: prompt
+role: check
+job: ops
+level: beginner
+inputs:
+  - type: document
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: triage-nda skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/legal/skills/triage-nda
+    used: A shorter one-message version of this skill, written fresh.

@@ -1,0 +1,82 @@
+new_slug: open-buyer-group-finder
+name: Open buyer group finder
+summary: Paste your product and rival ads. Get buyer groups nobody targets, ranked, with a hook for each.
+job: find-products
+thinking: medium
+thinking_why: It compares what rivals show against groups you could serve.
+headline: Open buyer group finder
+subhead: Paste your product and notes on rival ads under this prompt. It counts who the ads show, finds the groups they miss, and ranks three to five. You get a hook, a creative idea, a page line and a stop rule for each.
+explain: |
+  When many stores sell the same product, their ads often show the same kind of buyer. That leaves other groups unserved, such as older buyers, people with a specific problem, or a hobby group. A narrow hook aimed at one of those groups can win in a crowded market.
+
+        This prompt counts who rival ads show, finds who is missing, and picks the groups worth a test. It writes a plan for each that does not copy any rival. It also caps the test, so a small budget is not spread too thin.
+when:
+  - Many stores sell your product and your ads look the same as theirs.
+  - You want a new buyer group to aim at.
+  - You are planning your first ad tests.
+you_give:
+  - Your product
+  - "Notes on rival ads: who they show and the problem they name"
+  - A test budget (optional)
+you_get:
+  - Who rivals show, with counts
+  - Groups they miss, ranked
+  - A hook, creative idea and page line for each
+  - Which groups to start with, and a stop rule
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - Look at ten or more rival ads first.
+  - Paste what each shows, not your guesses.
+  - Test three groups at most on a small budget.
+how_it_works:
+  - title: Read the rival ads
+    text: Who each one shows and the problem it names.
+  - title: Find the gaps
+    text: Groups no ad shows.
+  - title: Widen the list
+    text: Ten more groups, including new uses.
+  - title: Check each group
+    text: Drop those rivals already serve.
+  - title: Rank the rest
+    text: Clear problem, group size, few ads.
+  - title: Write a test
+    text: Hook, creative, page line, stop rule.
+output_shape: |
+  WHO RIVALS SHOW
+        <group> | seen in <n of n> | problem named
+
+        WHO THEY MISS
+        1. <group> | problem | size signal
+
+        TEST PLAN
+        <group>: hook | creative | page line | stop rule
+
+        START WITH: <up to 3>
+        MISSING: <...>
+tweaks:
+  - what: Number of ads
+    how: More ads make the counts steadier. Under ten, treat the map as a guess.
+  - what: Budget
+    how: A small budget means fewer groups tested.
+  - what: Product uses
+    how: List every use you know. Each can be a group.
+judge:
+  - The counts match the ads you pasted.
+  - The missed groups are ones you can point to evidence for.
+  - Each test names the problem of its group.
+  - No test copies a rival ad.
+test:
+  - Run it on a product you know. The rival groups should match what you see in the ads.
+  - Check one missed group by searching it in the ad library.
+  - Run it twice. The top groups should match.
+improve:
+  - Add your current buyers so it can compare.
+  - Add search volume for each group if you have it.
+  - Add the ad formats you can make.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - Ten or more rival ads from TikTok and the Meta Ad Library
+    - Your own buyer data, if you have sales

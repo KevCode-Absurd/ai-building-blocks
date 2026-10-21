@@ -1,0 +1,94 @@
+new_slug: diff-security-skimmer
+name: "Diff security skimmer"
+summary: "Paste a code change. Get the security risks in only what changed, ranked, with the line and a fix."
+job: secure-code
+thinking: medium
+thinking_why: "It must trace how changed lines could be abused."
+
+headline: "Diff security skimmer"
+subhead: "Paste a pull request or diff and what it is for. It sorts the changed lines by risk, checks the risky ones first, shows how each could be abused, and gives you a verdict with ranked findings and the smallest fix for each."
+
+explain: |
+  Reviewing a whole codebase is slow, and most new problems arrive in a change. A quick look at only the changed lines catches the risks before they reach customers.
+
+  This prompt reviews just the diff. It starts with sign-in, permissions, money, personal data and outside calls, shows how each risk could be abused, and says what it could not check outside the diff. It is a quick screen, not a full audit.
+
+when:
+  - "Someone opened a pull request that touches login or payments."
+  - "An AI wrote a change and you need a fast second look."
+  - "You have no security reviewer on the team."
+
+you_give:
+  - "The diff or pull request text"
+  - "What the change is for"
+  - "What the code protects (optional)"
+you_get:
+  - "A verdict: safe, fix first or look closer"
+  - "Findings with the line, the abuse and the level"
+  - "The smallest fix for each"
+  - "What was not checked"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "Sort the changes by risk"
+    text: "Group the changed lines: sign-in and permissions, money, personal data, outside calls, user input, settings and secrets, and everything else. Review the risky groups first."
+  - title: "Check each risky change"
+    text: "For each, ask: who can reach this, what is trusted that should be checked, what could leak, and what happens if it is called in a wrong order."
+  - title: "Show the attack"
+    text: "For each finding, describe in one or two sentences how someone would abuse it, and point to the changed line."
+  - title: "Rank and fix"
+    text: "Label findings high, medium or low. Give the smallest fix for each."
+  - title: "Say what you could not see"
+    text: "Name code outside the diff that you would need to read to be sure."
+
+output_shape: |
+  VERDICT
+  <safe to merge | fix first | needs a closer look>
+
+  FINDINGS (worst first)
+  1. [high] <changed line>
+     How it could be abused: <1 to 2 sentences>
+     Fix: <smallest change>
+
+  NOT CHECKED
+  - <code outside the diff needed>
+
+tweaks:
+  - what: "What it protects"
+    how: "Say if it touches money or personal data. Those get checked first."
+  - what: "Context lines"
+    how: "Include a few lines around each change so it sees what is trusted."
+  - what: "Size of the diff"
+    how: "Keep it under a few hundred lines for sharp results."
+
+judge:
+  - "Every finding names a changed line."
+  - "Each shows how it could be abused."
+  - "The verdict matches the findings."
+  - "It says what it could not see."
+
+test:
+  - "Run it on a change that fixed a past security bug. Does it flag the old version?"
+  - "Run it twice. The verdict should match."
+  - "Paste a harmless change. It should say so."
+
+improve:
+  - "Add your risky areas, such as the payments folder."
+  - "Add your sign-in and permission rules."
+  - "Save the findings and fixes after each review."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "Context lines around each change"
+  - "A note on what the code protects"
+
+terms:
+  - term: "Diff"
+    meaning: "The list of lines added, removed or changed in a code change."

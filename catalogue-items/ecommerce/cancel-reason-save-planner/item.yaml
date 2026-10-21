@@ -1,0 +1,22 @@
+slug: cancel-reason-save-planner
+name: "Cancel reason save planner"
+summary: "Paste your cancel reasons and what your tool can do. Get one save per reason and the numbers to track."
+category: ecommerce
+type: prompt
+role: make
+job: ops
+level: intermediate
+inputs:
+  - {type: voc_reviews, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "The $100M Subscription Brand Playbook", by: "An email and retention agency founder (name not given)", used: "Save rate targets, branching by cancel reason, the founder splash screen, the post-cancel emails and the win-back timed 30 to 60 days later"}
+  - {title: "The Most Valuable Subscription Video You'll Watch in 2026", by: "Matthew Holman, interviewed by an email and SMS marketer", used: "The one-minute founder video, six or seven reasons plus Other, bigger discounts over gifts, delay instead of pause, easy frequency changes, no offers in the cancel confirmation, and failed-payment flows by payment type"}
+  - {title: "Strategic Unorthodoxy: a framework for wild bets and unscalable actions in e-commerce", by: "Unknown (research write-up)", used: "The proactive pause for overstocked customers and a human response to a cancel after a loss"}
+  - {title: "The New Way to Run Meta Ads in 2025", by: "Nick Shackleford, head of retention at a drinks brand", used: "The four common leave reasons, a reply to each, and downsizing a pack instead of losing the customer"}
+

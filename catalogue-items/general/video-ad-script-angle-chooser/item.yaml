@@ -1,0 +1,26 @@
+slug: video-ad-script-angle-chooser
+name: Video ad script angle chooser
+summary: Paste your buyer and facts. Get four different kinds of video script to try, each with its opening.
+category: general
+type: prompt
+role: make
+job: video
+level: beginner
+inputs:
+  - type: brief
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: "How To Write Meta Ads That Scale: Copywriting Masterclass"
+    by: Blue Sense Digital
+    url: https://www.youtube.com/watch?v=LoL1w-k9Mgg
+    used: The nine beats each type reorders
+  - title: Breakthrough Advertising (1966)
+    by: Eugene M. Schwartz
+    url: https://openlibrary.org/works/OL2625224W
+    used: Matching each type to how much the buyer knows

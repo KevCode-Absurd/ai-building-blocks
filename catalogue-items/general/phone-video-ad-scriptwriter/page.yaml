@@ -1,0 +1,93 @@
+new_slug: phone-video-ad-scriptwriter
+name: Phone video ad scriptwriter
+summary: Paste your buyer, facts and offer. Get a 30-second phone-video script in five beats with a shot plan.
+job: make-video-ads
+thinking: medium
+thinking_why: It has to keep the speaker honest and fit the words to the seconds.
+headline: Phone video ad scriptwriter
+subhead: Paste who is on camera, your buyer's doubt, how the product is used and your approved claims. You get a short script in five beats, the one detail to say and show, a shot plan, a disclosure line and two other openings.
+explain: |
+  Phone-style video ads work because they look like a person sharing, not a company selling. They go wrong when an AI writes a glowing story for a "customer" who has never used the product.
+
+  This prompt settles who is speaking first and limits what they can say. It builds the script on a snag the buyer feels, with one detail that is spoken and also shown. The Show beat is the longest, because a product working in a hand sells better than talk. The result is kept smaller than your facts allow, and the end names one honest thing to know. You also get two other openings, each from a different doubt.
+when:
+  - You are briefing a creator or planning your own phone video.
+  - You want a script that does not sound like an ad.
+  - You need to check that a presenter claims nothing untrue.
+you_give:
+  - Who is on camera
+  - Your buyer's doubt in their own words
+  - How the product is used, step by step
+  - Approved claims, offer and length
+you_get:
+  - A one-line spine and the one detail to say and show
+  - A five-beat script with on-screen notes
+  - A word count that fits the length
+  - Two other openings and every blank for the speaker
+how_to_use:
+  - Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini, with your details under it.
+  - Under the prompt, write who is on camera, the buyer, how the product is used, and your approved claims.
+  - Read the script aloud before you film it.
+  - Give a real creator the blanks to fill in with their own words.
+how_it_works:
+  - title: Settles the speaker
+    text: Real creators speak of their own use. AI presenters never claim experience.
+  - title: Writes the spine
+    text: Situation, snag, what they did.
+  - title: Picks one anchor
+    text: A detail you say once and show.
+  - title: Writes five beats
+    text: Hook, doubt, show, honest result, hand-off.
+  - title: Fits the length
+    text: About 2.5 words a second.
+  - title: Adds two openings
+    text: Each from a different doubt.
+output_shape: |
+  SPINE: <situation>, but <snag>, so <what they did>
+  ANCHOR: <the detail, and where it comes from>
+  Beat | Seconds | Says | On screen
+  Hook | | |
+  Doubt | | |
+  Show | | |
+  Honest result | | |
+  Hand-off | | |
+  WORDS: <count> for <seconds>
+  DISCLOSURE: <label if an AI presenter is used>
+  BLANKS: <what only the real speaker can fill>
+  TWO OTHER OPENINGS: <each from a different doubt>
+tweaks:
+  - what: Who speaks
+    how: A real creator gets blanks. An AI presenter gets "you" lines and quoted customers.
+  - what: Length
+    how: Say 15 or 60 seconds. It writes a new script, not a squeezed one.
+  - what: Doubt
+    how: A specific doubt gives a better hook than a general one.
+  - what: Offer
+    how: Paste your offer exactly. The hand-off will not add a deadline.
+judge:
+  - The first line has no greeting and no brand name.
+  - Nobody claims an experience they did not have.
+  - You could follow the Show beat with the sound off.
+  - The word count fits the seconds.
+test:
+  - Use a product you know. The snag should be a real doubt.
+  - Read it aloud with a timer.
+  - Show the Show beat, with the sound off, to someone who has not seen the product.
+improve:
+  - Add your tone and banned words to the prompt.
+  - Save the disclosure line your platform asks for.
+  - Keep your real use steps in your brand file.
+  - Pair it with the Video ad script angle chooser to test other kinds of script.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A short prompt works the same in Claude, ChatGPT or Gemini, so use the one you already have open.
+  inputs:
+    - Quotes from reviews, with sources
+    - Your product's real use steps
+    - The disclosure wording your platform asks for
+terms:
+  - term: Spine
+    meaning: "One line that holds the script together: situation, snag, what they did."
+  - term: Anchor
+    meaning: The one detail the ad says once and shows on screen.

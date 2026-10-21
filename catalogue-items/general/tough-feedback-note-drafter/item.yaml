@@ -1,0 +1,24 @@
+slug: tough-feedback-note-drafter
+name: Tough feedback note drafter
+summary: Paste what went wrong and who needs to hear it. Get a note that changes the behaviour.
+category: general
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: How to Win Friends and Influence People, Part Four
+    by: Dale Carnegie
+    used: Praise first, join praise to the change with and, point out mistakes indirectly, speak of your own mistakes first, and leave a way to save face
+  - title: Speeches and Letters of Abraham Lincoln, 1832-1865
+    by: Abraham Lincoln
+    used: The model of a letter that names real strengths, says plainly what is not satisfactory, and puts doubts as numbered questions on cost, certainty, value and risk

@@ -1,6 +1,6 @@
 # Research a topic properly: AI Blocks
 
-> 75 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 78 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [16S microbiome read processor](https://useaiblocks.com/skills/16s-microbiome-read-processor): Give it paired 16S reads. Get checked sequence variants and species labels, with the steps kept so you can repeat them.
 - [AI answer doubt check](https://useaiblocks.com/skills/ai-answer-doubt-check): After any AI explanation, you name one place it could be wrong, one thing to check and one source to try.
@@ -58,7 +58,9 @@
 - [Research outline builder](https://useaiblocks.com/skills/research-outline-builder): Give it a topic. Get a list of items to compare and questions to answer for each, found online. Scrapes sites.
 - [Research paper figure maker](https://useaiblocks.com/skills/research-paper-figure-maker): Give it your results or a method section. Get charts and architecture diagrams that look ready for a paper.
 - [Research project runner](https://useaiblocks.com/skills/research-project-runner): Give it a research question. Get a run of tested ideas, a log of what you learned, and a findings write-up.
+- [Research question outliner](https://useaiblocks.com/prompts/research-question-outliner): Paste a research question. Get sub-questions, sources to find and what a good answer needs.
 - [Research results report builder](https://useaiblocks.com/skills/research-results-report-builder): Give it your research files. Get one report with a contents list and every checked answer. Unsure ones are left out.
+- [Research topic watcher](https://useaiblocks.com/agents/research-topic-watcher): Name a topic once. Each month get the new papers, which ones are strong, and whether they change what you believe.
 - [RNA-seq comparison preparer](https://useaiblocks.com/skills/rna-seq-comparison-preparer): Give it sequencing output. Get counts ready to compare gene activity between groups, with replicate and setup checks.
 - [RNA-seq group difference finder](https://useaiblocks.com/skills/rna-seq-group-difference-finder): Give it gene counts for two or more groups. Get which genes changed, with checks, corrected p-values and plots.
 - [Scholarly database searcher](https://useaiblocks.com/skills/scholarly-database-searcher): Ask a research question. Get papers, preprints, citations and open full text from 18 free sources, with the search shown.
@@ -72,6 +74,7 @@
 - [Social video transcript analyst](https://useaiblocks.com/skills/social-video-transcript-analyst): Give it video posts. Get the hooks, claims, quotes and themes pulled from what was said. Collects data from websites.
 - [Study claim checker](https://useaiblocks.com/skills/study-claim-checker): Give it a study or claim. Get its biases, flaws, weak statistics and evidence grade, explained in plain words.
 - [Study design and randomizer](https://useaiblocks.com/skills/study-design-and-randomizer): Describe your study. Get a design, random group assignment and run order that avoid confounded results.
+- [Study headline claim checker](https://useaiblocks.com/prompts/study-headline-claim-checker): Paste a news item or study claim. Get what it really shows, how strong it is, and what to ask.
 - [Systematic review writer](https://useaiblocks.com/skills/systematic-review-writer): Name a research question. Get a reproducible search, screened papers, a PRISMA flow and a cited review.
 - [Systems paper writer](https://useaiblocks.com/skills/systems-paper-writer): Give it your systems work. Get a paper draft built to the structure that systems conferences expect.
 - [Unsupported claim spotter](https://useaiblocks.com/skills/unsupported-claim-spotter): Paste a draft. Get every claim that needs a source, ranked by risk, with the kind of source to find.

@@ -1,0 +1,16 @@
+slug: shipping-zone-and-rate-drafter
+name: "Shipping zone and rate drafter"
+summary: "Paste where you ship and real carrier costs. Get zones, rates, a free-shipping line and test carts."
+category: ecommerce
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

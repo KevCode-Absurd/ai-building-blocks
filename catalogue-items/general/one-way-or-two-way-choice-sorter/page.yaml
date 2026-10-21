@@ -1,0 +1,95 @@
+new_slug: one-way-or-two-way-choice-sorter
+name: "One-way or two-way choice sorter"
+summary: "Paste a choice you are stuck on. Get it sorted as hard or easy to undo, with the right speed to decide."
+job: think-and-decide
+thinking: low
+thinking_why: "It sorts one choice by a clear test, with a short set of next steps."
+
+headline: "One-way or two-way choice sorter"
+subhead: "Paste a choice you are stuck on. Your AI sorts it as hard or easy to undo, names the cost of reversing it, and sets the right pace and a small trial if it is safe."
+
+explain: |
+  Many people spend a week on a choice they could undo in a day, then rush one they cannot take back. The fix is to ask one question first: if this goes wrong, how hard is it to reverse?
+
+  This prompt sorts the choice into a one-way door or a two-way door, parts and all, and sets the pace to match. Easy-to-undo choices get an owner and a small trial. Hard-to-undo choices get a list of what to learn first.
+
+when:
+  - "You keep putting off a choice."
+  - "Your team is slow on small choices and fast on big ones."
+  - "You are not sure how much review a choice needs."
+
+you_give:
+  - "The choice in one line"
+  - "What it would cost to undo (optional)"
+
+you_get:
+  - "Hard-to-undo parts and the cost of reversing"
+  - "A one-way or two-way sort with the reason"
+  - "A pace: trial and review date, or what to learn first"
+
+how_to_use:
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Paste your details under it, in the slots under What you need."
+  - "Send it and read the answer against the checks on this page."
+  - "Reply with what to change, and keep the version that works."
+
+how_it_works:
+  - title: "Name the choice"
+    text: "Who it touches."
+  - title: "List what can't be undone"
+    text: "Contracts, trust, money, data."
+  - title: "Cost the reversal"
+    text: "Time, money and trust."
+  - title: "Sort it"
+    text: "One-way, two-way or split."
+  - title: "Match the pace"
+    text: "Fast trial or slow and wide."
+
+output_shape: |
+  CHOICE
+  <one line; who it touches>
+  HARD TO UNDO
+  <parts and cost of reversing>
+  SORT
+  <one-way / two-way / split> - <reason>
+  PACE
+  <owner, trial, review date> or <what to find out first>
+  MISSING
+  <lines>
+
+tweaks:
+  - what: "Costs"
+    how: "Give real figures for time and money. The sort gets sharper."
+  - what: "Parts"
+    how: "Say if the choice has parts, such as a trial and a contract. They are sorted one by one."
+  - what: "Team"
+    how: "Name who decides. The pace line gives them a clear job."
+
+judge:
+  - "The sort matches your gut on the parts you know."
+  - "Every hard-to-undo part has a reason."
+  - "The pace line is something you can start today."
+  - "Guesses are labelled."
+
+test:
+  - "Try it on a past choice you regret. Was it sorted the way you wish you had treated it?"
+  - "Run it twice. The sort should match."
+  - "Give a choice with a contract in it. The contract should land as one-way."
+
+improve:
+  - "Add your usual undo costs, such as notice periods and refund terms."
+  - "Add who has the final say on one-way choices."
+  - "Keep a list of sorted choices and see how they turned out."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Works in one message."}
+  inputs:
+    - "Contract terms"
+    - "The cost of the last time you reversed a similar choice"
+
+terms:
+  - term: "One-way door"
+    meaning: "A choice that is hard or costly to take back."
+  - term: "Two-way door"
+    meaning: "A choice you can reverse at a modest cost."

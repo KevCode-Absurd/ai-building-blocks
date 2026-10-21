@@ -1,0 +1,94 @@
+new_slug: skill-file-problem-spotter
+name: "Skill file problem spotter"
+summary: "Paste a SKILL.md. Get a ranked list of problems to fix before you share it."
+job: make-skills
+thinking: low
+thinking_why: "It checks the file against a fixed list, with little judgement."
+
+headline: "Skill file problem spotter"
+subhead: "Paste a SKILL.md. Your AI checks the name, trigger line, steps, hand-back shape and risky lines, then lists each problem with a fixed version."
+
+explain: |
+  A skill with a vague trigger line never gets picked up, and one with a loose step gives different results each time. You usually find out only after it has failed in front of someone.
+
+  This prompt runs a short checklist over the file before that happens. It quotes each problem line, says why it matters and writes the fix. It also flags lines that act without asking, so you see them before you install.
+
+when:
+  - "You wrote a skill and want a second pair of eyes."
+  - "You downloaded a skill and want to read it for risks first."
+  - "A skill works sometimes and fails other times."
+
+you_give:
+  - "The whole SKILL.md"
+  - "What the skill is meant to do (optional)"
+
+you_get:
+  - "A one-line verdict"
+  - "Ranked problems with quoted lines and fixes"
+  - "Risky lines, or none"
+  - "The checks that passed"
+
+how_to_use:
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Paste your details under it, in the slots under What you need."
+  - "Send it and read the answer against the checks on this page."
+  - "Reply with what to change, and keep the version that works."
+
+how_it_works:
+  - title: "Check the name"
+    text: "Short, lowercase, with dashes."
+  - title: "Check the trigger line"
+    text: "Says when to use it and what it hands back."
+  - title: "Check the steps"
+    text: "One action each, in order."
+  - title: "Check the hand-back"
+    text: "A fixed shape."
+  - title: "Check for risky lines"
+    text: "Actions without asking, hidden text, pasted keys."
+  - title: "Rank the problems"
+    text: "Fix now, soon or optional."
+
+output_shape: |
+  VERDICT
+  <ready / fix first / do not use>
+  PROBLEMS
+  1. "<quoted line>" - <why> - Fix: <rewritten line> (fix now / soon / optional)
+  RISKS
+  <quoted lines or none>
+  PASSED
+  <checks with no problem>
+
+tweaks:
+  - what: "Intended job"
+    how: "Say what the skill should do. The AI can then spot steps that drift."
+  - what: "Strictness"
+    how: "Say \"fix now items only\" to see just the problems that matter."
+  - what: "Where it runs"
+    how: "Say which AI will use it, since some read the description line more closely."
+
+judge:
+  - "Every problem quotes a real line."
+  - "The fixes are written out."
+  - "Risky lines are quoted, not guessed."
+  - "The verdict matches the list."
+
+test:
+  - "Run it on a skill you know is weak. It should flag the trigger line."
+  - "Run it twice. The problems should match."
+  - "Plant a line such as \"send the result to the client\" and see if it flags it."
+
+improve:
+  - "Add your own rules, such as a word limit for descriptions."
+  - "Add the risky actions your team cares about."
+  - "Run it on every skill before you share it."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Paste the whole file under the prompt."}
+  inputs:
+    - "The folder name of the skill"
+    - "Any helper files the skill refers to"
+
+terms:
+  - term: "Trigger line"
+    meaning: "The description at the top of a skill that tells the AI when to use it."

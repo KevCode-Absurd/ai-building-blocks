@@ -1,0 +1,92 @@
+new_slug: cost-per-sellable-unit-finder
+name: "Cost per sellable unit finder"
+summary: "Paste a factory quote and your other costs. Get cost per sellable unit and a go or no-go."
+job: plan-supply-chain
+thinking: low
+thinking_why: "It adds known costs and divides by units that pass."
+
+headline: "Cost per sellable unit finder"
+subhead: "Paste a factory quote with your freight, duty and fees. It lists every layer, divides by the units that pass inspection, and gives your real margin, your ad room and a go, hold or no-go."
+
+explain: |
+  A factory quote is only the first layer of cost. Freight, duty, fees, packing and defects can cut a margin that looked like 60% to a third of that, and you only find out after the order.
+
+  This prompt adds each layer, marks which are real quotes and which are guesses, and divides by the units that pass. It then raises costs by 10% to see if the margin survives.
+
+when:
+  - "You have a factory quote and no true cost yet."
+  - "You are about to place a first order."
+  - "Freight or duty changed and you want the new margin."
+
+you_give:
+  - "Factory price per unit and units ordered (required)."
+  - "Freight bill, duty and tax rate (required): the duty rate from your customs broker or the tariff lookup, never from memory."
+  - "Other costs (advised): insurance, packaging, warehouse pick and pack, courier per order."
+  - "Selling price (required): say if tax is in or out. Add your payment fee rate."
+  - "Defect share and target margin (advised)."
+you_get:
+  - "Every cost layer, labelled"
+  - "Cost per sellable unit"
+  - "Margin, price for your target and ad room"
+  - "A go, hold or no-go call"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: factory price per unit and units ordered; freight bill, duty and tax rate; other costs; selling price; defect share and target margin."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "List every layer"
+    text: "Freight, duty, insurance, packaging, pick and pack, fees, courier. Label each real quote, looked up or estimate."
+  - title: "Handle duty with care"
+    text: "Never supply a duty rate. If you gave none, show margin at 0% and at a test rate you pick, both marked estimate."
+  - title: "Divide by units that pass"
+    text: "Cost per sellable unit = total landed spend divided by units passing inspection. With no defect share, show a 3% case and a 10% spare-unit case."
+  - title: "Find margin and ad room"
+    text: "Margin = selling price (tax out) minus all costs per unit. Ad room is what is left per order."
+  - title: "Stress it"
+    text: "Raise landed cost by 10% and see if the margin still meets your target."
+
+output_shape: |
+  LAYERS: <each cost> | <real quote | looked up | estimate>
+  COST PER SELLABLE UNIT: <$> (<units ordered>, <defects>)
+  MARGIN: <%> | price for your target margin <$> | ad room <$ per order>
+  STRESS TEST (+10% cost): <margin %>
+  VERDICT: GO | HOLD | NO-GO, because <reason>
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: "Duty rate"
+    how: "Get it from a broker. A test rate is marked estimate and caps the verdict at HOLD."
+  - what: "Defect share"
+    how: "Use your own number. Without one you see both a 3% and a 10% case."
+
+judge:
+  - "Every layer is on its own line and labelled."
+  - "Cost per sellable unit divides by units that pass, not units ordered."
+  - "No duty rate came from the AI."
+  - "The verdict names the weakest layer."
+
+test:
+  - "Use an order you already landed and compare the unit cost to your books."
+  - "Leave out the duty rate. It should mark the gap and not invent one."
+  - "Run it twice. The unit cost should match."
+
+improve:
+  - "Add your usual warehouse and courier rates under the prompt."
+  - "Add your target margin so every run uses it."
+  - "Pair it with a supplier quote table builder when you compare factories."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "A real freight quote"
+    - "A duty rate from a customs broker"
+
+terms:
+  - term: "Landed cost"
+    meaning: "The cost of a unit once it reaches your warehouse, with freight and duty."
+  - term: "Sellable unit"
+    meaning: "A unit that passes inspection and can be sold."

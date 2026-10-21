@@ -1,0 +1,90 @@
+new_slug: sign-in-policy-drafter
+name: "Sign-in policy drafter"
+summary: "Paste how staff and customers sign in. Get ranked gaps, a score and a one-page policy."
+job: protect-your-store
+thinking: low
+thinking_why: "It checks your answers against a fixed list of rules."
+
+headline: "Sign-in policy drafter"
+subhead: "Paste how staff and customers sign in to your store and tools. It finds the gaps, ranks them, scores your setup out of 100, and drafts a one-page password and second-step policy."
+
+explain: |
+  Most store takeovers start with a stolen login on one account, often email or the domain registrar, not the store itself. A password rule from ten years ago will not stop that.
+
+  This prompt checks your setup against current basics: a second step on the accounts that matter, no forced password changes, safe recovery, and a re-ask before risky changes. It ranks the gaps so you fix the worst first.
+
+when:
+  - "You added staff or agencies to your store."
+  - "You never set up second steps on email or your domain."
+  - "You need a simple policy to hand to your team."
+
+you_give:
+  - "Platform (required): Shopify, WooCommerce, headless or custom."
+  - "Staff and admin accounts (required): who has them and which second step each uses."
+  - "Key accounts (required): email, ad accounts, domain registrar. Who has access, and with what second step."
+  - "Password rules and recovery today (advised)."
+you_get:
+  - "A list of gaps, worst first"
+  - "A score out of 100 with the sum"
+  - "One fix for each gap"
+  - "A one-page sign-in policy"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: platform; staff and admin accounts; key accounts; password rules and recovery today."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "Sort who owns what"
+    text: "On hosted Shopify, password storage and sessions belong to the platform. Check staff, apps and any custom login."
+  - title: "Rank the gaps"
+    text: "Critical: no second step on admin, email, registrar or ad accounts. Then High, Medium and Low."
+  - title: "Rank second steps"
+    text: "Best to worst: security key or passkey, authenticator app, push approval, text message."
+  - title: "Check the rules"
+    text: "Minimum 8 characters, allow 64 or more, no forced symbols, no change every 90 days. Change a password only if exposure is suspected."
+  - title: "Ask again before risky changes"
+    text: "Changing email, payout details, adding staff or making an API key should ask for the password again. Recovery is the weakest link, so use backup codes or two keys."
+
+output_shape: |
+  PLATFORM OWNS: <list> | YOU OWN: <list>
+  GAPS: <Critical | High | Medium | Low> | <area> | <fix>
+  SCORE: 100 - 20 x Critical - 10 x High - 5 x Medium - 2 x Low = <n>/100
+  POLICY (one page): passwords | second steps by account | recovery | risky changes
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: "Key accounts"
+    how: "List email, ad accounts and registrar. Most takeovers start there."
+  - what: "Platform"
+    how: "Name it so platform-owned items are skipped."
+
+judge:
+  - "The score shows its sum."
+  - "Platform-owned items are marked, not scored as gaps."
+  - "Every gap has one fix."
+  - "No password or secret was pasted. Describe the setup, not the logins."
+
+test:
+  - "Describe your real setup and see if the worst gap matches your own worry."
+  - "Say staff have no second step. It should mark Critical."
+  - "Run it twice. The gap ranking should match."
+
+improve:
+  - "Add your account list under the prompt so every check covers it."
+  - "Add staff changes to the policy each time someone joins or leaves."
+  - "Pair it with a store script and app risk auditor."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "A list of who has admin access"
+    - "Which second step each account uses"
+
+terms:
+  - term: "Second step"
+    meaning: "A second proof you are you, such as a code or a key, on top of a password."
+  - term: "Passkey"
+    meaning: "A sign-in that uses your device instead of a password."

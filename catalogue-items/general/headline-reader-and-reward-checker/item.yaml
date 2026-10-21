@@ -1,0 +1,23 @@
+slug: headline-reader-and-reward-checker
+name: Headline reader and reward checker
+summary: Paste your headline. Get a score out of 100 for who it picks out and what it promises, plus stronger versions.
+category: general
+type: prompt
+role: check
+job: copy
+level: beginner
+inputs:
+  - type: ad_copy
+    required: true
+  - type: offer
+    required: false
+outputs:
+  - type: audit_report
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: 100 Good Advertising Headlines, and why they were so profitable
+    by: Victor Schwab
+    used: The two jobs of a headline (pick the reader, promise a reward), gain and loss versions, speed and ease, and the so-what test

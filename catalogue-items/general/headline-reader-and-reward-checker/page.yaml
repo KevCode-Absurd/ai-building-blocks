@@ -1,0 +1,85 @@
+new_slug: headline-reader-and-reward-checker
+name: Headline reader and reward checker
+summary: Paste your headline. Get a score out of 100 for who it picks out and what it promises, plus stronger versions.
+job: check-ads
+thinking: low
+thinking_why: It scores a short line against set questions.
+headline: Headline reader and reward checker
+subhead: Paste one headline and any facts about your offer. You get a score out of 100 with the working shown, who the line picks out, what it promises, whether it passes the so-what test, and two to four stronger versions with the fact behind each.
+explain: |
+  A headline has two jobs: to pick out the right reader and to promise them something worth reading on for. Many headlines do neither. They sound clever, but a stranger cannot tell who they are for or what they get.
+
+  This prompt checks both jobs and scores them. It then reads the line on its own and asks what a stranger would gain by reading on. It marks the reward as a gain or a loss avoided and writes a version for each side. It only adds speed, ease or cost if your facts say so, so no fact is invented in the rewrite.
+when:
+  - You have a headline you are not sure about.
+  - You have several headlines and need to rank them.
+  - You want a loss version next to a gain version to test.
+you_give:
+  - The headline
+  - Offer facts such as price, speed and terms (optional)
+  - Who it is for (optional)
+you_get:
+  - A score out of 100, with the sums
+  - Who it picks out and what it promises
+  - A pass or fail on the so-what test
+  - Stronger versions with the fact behind each
+how_to_use:
+  - Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini, with your details under it.
+  - Paste one headline under the prompt, or several, one per line.
+  - Add your offer facts.
+  - Test the gain version and the loss version side by side.
+how_it_works:
+  - title: Names the reader
+    text: Their situation, not a label.
+  - title: Checks the reward
+    text: Can you say it in one sentence?
+  - title: Marks gain or loss
+    text: And writes the other side.
+  - title: Adds true specifics
+    text: Only from your facts.
+  - title: Runs the so-what test
+    text: The line alone, to a stranger.
+  - title: Scores and rewrites
+    text: With the facts that back each version.
+output_shape: |
+  SCORE: <reader> + <reward> + <specifics> + <tease> + <facts> = <total> out of 100
+  READER: <who it should pick out>; picks them out: <yes | partly | no>
+  REWARD: <one sentence>   Type: <gain | loss avoided>
+  SO-WHAT TEST: <pass | fail, why>
+  STRONGER VERSIONS:
+   1. <headline>   Changed: <what>   Backed by: <fact>
+  MISSING: <facts you did not give>
+tweaks:
+  - what: Offer facts
+    how: More true facts allow better rewrites.
+  - what: The reader
+    how: A named situation gives a sharper score.
+  - what: Several headlines
+    how: Paste a list and ask it to rank them.
+  - what: Length
+    how: Add a character limit if your platform has one.
+judge:
+  - The reader is a person in a situation, not a label.
+  - The reward fits in a sentence.
+  - No new facts in the rewrites.
+  - The sum adds up to the score.
+test:
+  - Use a headline you know is weak. It should fail the so-what test.
+  - Run it twice. The scores should be close.
+  - Test the best rewrite against your original.
+improve:
+  - Add your reader's own words.
+  - Add claims you cannot make.
+  - Add your usual character limits.
+  - Pair it with the Ad opening line batch writer.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A short prompt works the same in Claude, ChatGPT or Gemini, so use the one you already have open.
+  inputs:
+    - Your offer terms
+    - Your reader's own words
+    - Your character limits
+terms:
+  - term: So-what test
+    meaning: Reading the line alone and asking what a stranger gains by reading on.

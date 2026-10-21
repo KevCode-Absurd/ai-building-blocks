@@ -1,0 +1,89 @@
+new_slug: speed-report-translator
+name: "Speed report translator"
+summary: "Paste your PageSpeed report. Get what passes, what causes the slowness and three fixes."
+job: speed-up-store
+thinking: low
+thinking_why: "It reads a report against fixed bands."
+
+headline: "Speed report translator"
+subhead: "Paste your PageSpeed Insights report. It separates real-user data from lab data, passes or fails each page, names the element behind the slowness, scores the results out of 100, and gives three fixes."
+
+explain: |
+  A PageSpeed report mixes two kinds of numbers, and most owners chase the wrong one. The lab score swings from run to run. The real-user numbers are what Google and your shoppers actually feel.
+
+  This prompt reads the real-user panel first, judges each page against the usual bands, then uses the lab section only to name the slow and shifting elements. You get a score and three fixes, not a wall of warnings.
+
+when:
+  - "You ran PageSpeed and do not know what matters."
+  - "Your score changes every time you test."
+  - "A developer or app says your store is slow."
+
+you_give:
+  - "PageSpeed Insights results (required): the text for your homepage, one collection page and one product page. Mobile first."
+  - "Which panel is which (advised): note if the real-user panel says \"this URL\" or \"origin\"."
+  - "Three lab runs per page (optional)."
+you_get:
+  - "A pass, fail or cannot judge call for each page"
+  - "A field score out of 100 with the sum"
+  - "The element behind the slowness"
+  - "Three fixes and when to recheck"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: pagespeed insights results; which panel is which; three lab runs per page."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "Split the report"
+    text: "Real-user data (past 28 days) decides pass or fail. Lab data (one simulated phone) finds causes. If real-user data covers the whole site only, say \"cannot judge this page\"."
+  - title: "Check each number"
+    text: "LCP: good at 2.5 s or less, poor above 4 s. INP: good at 200 ms or less, poor above 500 ms. CLS: good at 0.1 or less, poor above 0.25. In between is needs work. Tell the user to confirm these on Google's current page."
+  - title: "Name the cause"
+    text: "From the lab section, name the element that loads last and the elements that shift."
+  - title: "Score it"
+    text: "Each measured result counts good 1, needs work 0.5, poor 0. Score = points divided by results measured x 100. Show the sum."
+  - title: "Give three fixes"
+    text: "For each: the page, the element, and whether the owner or a developer does it."
+
+output_shape: |
+  FIELD SCORE: <n>/100 (sum shown) | not measured: <pages>
+  PAGE <name>: LCP <value, band> | INP <value, band> | CLS <value, band> | verdict <pass | fail | cannot judge>
+  CAUSE: slow element <what> | shifting elements <what>
+  FIRST THREE FIXES: <page, element, who>
+  RECHECK: lab at once; real-user data after about 28 days
+
+tweaks:
+  - what: "Pages"
+    how: "Paste homepage, collection and product. Shopify scores all three."
+  - what: "Lab runs"
+    how: "Add three runs per page to average out the swings."
+
+judge:
+  - "Pass or fail uses real-user data only."
+  - "Pages with no page-level real-user data are listed as not measured."
+  - "The score sum is shown."
+  - "Each fix names a page and an element."
+
+test:
+  - "Use a report for a page you already fixed and see if it names the same cause."
+  - "Paste only lab data. It should say it cannot judge pass or fail."
+  - "Run it twice. The verdicts should match."
+
+improve:
+  - "Add your template count under the prompt so it asks for each one."
+  - "Save the date and score of every run so you can compare."
+  - "Pair it with a speed fix ranker once you have the problem list."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "Reports for all three page types"
+    - "A note of recent theme or app changes"
+
+terms:
+  - term: "LCP"
+    meaning: "How long the biggest thing on the page takes to appear."
+  - term: "CLS"
+    meaning: "How much the page jumps around while it loads."

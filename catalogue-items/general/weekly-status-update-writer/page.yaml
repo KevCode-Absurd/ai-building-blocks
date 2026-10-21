@@ -1,0 +1,69 @@
+new_slug: weekly-status-update-writer
+name: Weekly status update writer
+summary: Paste what got done, what is stuck and what you need. Get a one-page status update.
+job: document-work
+thinking: low
+thinking_why: It fills a fixed one-page layout from your updates.
+headline: Weekly status update writer
+subhead: Paste your updates for the period. You get a one-page status report that opens with an overall call, then what got done, risks, the decisions you need and next steps.
+explain: Status reports fail when they bury the point. This prompt puts the call first, as one word and one reason. Then it lists results, owners, risks and the decisions you need, each with a date and your recommendation. It stays under 250 words and uses only the numbers you give it. Leaders can read it in a minute and know where they are needed.
+when:
+  - A weekly update is due and you are short on time.
+  - Your last update was too long to read.
+  - You need a decision and want it noticed.
+you_give:
+  - The period and project
+  - Your updates
+  - Who reads it (optional)
+you_get:
+  - An overall status with a reason
+  - Done, in progress, risks and decisions needed
+  - Next period's top three
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste the period, the project and your updates.
+  - Send it and read the result.
+  - Send it at the same time each week, so people look for it.
+how_it_works:
+  - title: Call it
+    text: One word and one reason, first.
+  - title: List results
+    text: What got done, in progress, and risks.
+  - title: Ask clearly
+    text: Each decision has a date and a recommendation.
+output_shape: |-
+  STATUS
+  <On track / At risk / Off track>. <one sentence>
+
+  DONE
+  IN PROGRESS (owner, date)
+  RISKS (risk, effect, action)
+  DECISIONS NEEDED (question, by when, recommendation)
+  NEXT (top three)
+  MISSING
+tweaks:
+  - what: Reader
+    how: Name leaders, customers or your team and the depth changes.
+  - what: Length
+    how: Ask for three lines for chat.
+  - what: Period
+    how: Say weekly or monthly.
+judge:
+  - Status comes first.
+  - Results, not activity.
+  - Decisions have dates.
+  - Under 250 words.
+test:
+  - Give a long ramble. It should shrink to under 250 words.
+  - Give no owner for an item. It should write MISSING.
+  - Run twice. The status call should match.
+improve:
+  - Paste last week's report so it can show change.
+  - Add your team's goals for the quarter.
+  - Keep a running file of weekly reports.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - The period and project

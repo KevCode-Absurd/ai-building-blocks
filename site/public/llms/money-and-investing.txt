@@ -1,6 +1,6 @@
 # Handle money and investing: AI Blocks
 
-> 157 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 160 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accrual schedule drafter](https://useaiblocks.com/skills/accrual-schedule-drafter): Give it the period's expenses. Get an accrual schedule with each entry, its support and a draft journal entry.
 - [Acquisition due diligence planner](https://useaiblocks.com/skills/acquisition-due-diligence): Describe the deal. Get a due diligence list, valuation checks and an integration plan.
@@ -9,9 +9,11 @@
 - [Asset floor estimator](https://useaiblocks.com/skills/asset-floor-estimator): Paste a balance sheet and share price. Get book value, net current assets, sale value and a cash strength rating.
 - [Audit readiness checker](https://useaiblocks.com/skills/audit-readiness-checker): Give it your records and controls. Get a checklist of gaps to fix before an audit.
 - [Average earnings coverage tester](https://useaiblocks.com/skills/average-earnings-coverage-tester): Paste a borrower's debts and earnings. Get cover against all charges, in a bad year too, and a pass or fail.
+- [Bad year plan stress tester](https://useaiblocks.com/prompts/bad-year-plan-stress-tester): Paste a budget or plan. Get three bad-year tests, your breaking point and a survival score.
 - [Bad-year break-even tester](https://useaiblocks.com/skills/bad-year-break-even-tester): Paste a business and its worst risks. Get how big a loss one year can bring before it stops earning.
 - [Balance roll-forward builder](https://useaiblocks.com/skills/balance-roll-forward-builder): Name an account. Get a schedule from opening to closing balance, with each movement tied to the ledger.
 - [Bargain group rules writer](https://useaiblocks.com/skills/bargain-group-rules-writer): Paste your bargain candidates. Get group size, caps, an exit rule and a scorecard that judges the method, not one stock.
+- [Big purchase pause check](https://useaiblocks.com/prompts/big-purchase-pause-check): Paste what you want to buy and why. Get the real cost, what drives it and a small test.
 - [Bond portfolio reviewer](https://useaiblocks.com/skills/bond-portfolio-reviewer): Give it your bond holdings. Get yield, duration and mix by rating, plus a rate shock test. It collects data from websites.
 - [Bond type and maturity chooser](https://useaiblocks.com/skills/bond-type-and-maturity-chooser): Paste your split and tax rate. Get the bond kind that fits, taxable or tax-free, short or long, with the sums.
 - [Bookings forecast builder](https://useaiblocks.com/skills/bookings-forecast-builder): Give it your pipeline and cohorts. Get a commit, best case and pipe-only forecast with the maths shown.
@@ -93,6 +95,7 @@
 - [Investment or speculation sorter](https://useaiblocks.com/skills/investment-or-speculation-sorter): Paste a purchase you are weighing and why. Get it sorted as investment or speculation, with the questions a careful buyer asks.
 - [Investor statement NAV checker](https://useaiblocks.com/skills/investor-statement-nav-checker): Give it an investor statement and the fund's NAV pack. Get the capital account recomputed and any mismatch flagged.
 - [Judge if a business is great enough to hold](https://useaiblocks.com/workflows/great-business-judge): Describe a business. Get its edge tested, who keeps the gain, and a keep, wait or pass call.
+- [Know-it-or-skip-it sorter](https://useaiblocks.com/prompts/know-it-or-skip-it-sorter): Describe a business or bet. Get it sorted yes, no or too tough, based on what you know.
 - [Lease accounting calculator](https://useaiblocks.com/skills/lease-accounting-calculator): Give it a lease contract. Get the lease liability, right-of-use asset and yearly entries under IFRS 16 or ASC 842.
 - [Lender safety verdict writer](https://useaiblocks.com/skills/lender-safety-verdict-writer): Paste your coverage and cushion results. Get a meets-the-bar, speculative or reject call, with reasons and what would change it.
 - [Likely buyers list builder](https://useaiblocks.com/skills/likely-buyers-list-builder): Describe a company for sale. Get a ranked list of likely buyers, strategic and financial, with fit notes.

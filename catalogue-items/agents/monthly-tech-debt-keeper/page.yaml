@@ -1,0 +1,93 @@
+new_slug: monthly-tech-debt-keeper
+name: Monthly tech debt keeper
+summary: Point it at your code each month. Get new debt found, last month's clean-up checked and the next small fixes ranked.
+job: build-software
+thinking: medium
+thinking_why: It runs up to five skills and compares two snapshots, but each step is a read and a count. A mid-level model is enough.
+headline: Monthly tech debt keeper
+subhead: Point it at your code once a month. It scans for debt and compares with last month. It checks whether the clean-up you agreed to worked, then hands back the few small fixes worth doing next. It never touches your code on its own.
+explain: |
+  Debt in code grows quietly. A clean-up gets agreed, does not get done, or gets done and changes nothing. A month later nobody can say whether the code is better or worse, so the same complaints come back.
+
+  This agent keeps a dated list so it can answer that. Each month it scans, compares with the last scan and checks every fix you agreed to. A fix that landed but left the debt in place is marked, so you do not repeat it. When many items sit in one area, it looks for the design cause first. It hands back at most five fixes, each cut into steps small enough to review alone.
+when:
+  - You work in a codebase that gets slower to change each quarter.
+  - You agree clean-up work in planning but never see whether it helped.
+  - One person is the only one who understands a part of the code.
+you_give:
+  - The code, as a folder or repo the AI can open
+  - How many people work on it and how many days a month can go to clean-up (optional)
+  - The parts that hurt most (optional)
+  - Last month's folder, after the first run
+you_get:
+  - New, gone and still-open debt against last month, with the counts
+  - A check of each fix you agreed to last time, marked done, did not work or not started
+  - Up to five fixes to approve, each cut into small reviewable steps
+  - A design cause, when many items share one area
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's check.
+  - Open it in the folder with your code. The first run builds the base list.
+  - Read the fixes. Say yes to the ones you want, and it records them for next month.
+  - Make the fixes in your normal way, or say yes to one and let it make only that change on its own branch.
+  - Run it again next month. It checks whether the fixes worked.
+how_it_works:
+  - title: Scan the code
+    text: Finds debt, scores each item and saves a dated list.
+  - title: Compare with last month
+    text: Counts what is new, gone and still open, by area.
+  - title: Check last month's clean-up
+    text: For each agreed fix, did its items leave the list? A fix that did not work is not picked again the same way.
+  - title: Rank by cost
+    text: Orders open items by what they cost in slowed work, bugs and risk, and fits the list to your time.
+  - title: Look for the cause
+    text: If one person alone knows the code, it checks ownership. If three or more items share an area, it looks for the design cause.
+  - title: Split each fix
+    text: Cuts every chosen fix into tidy-up steps small enough to review alone, then stops for your yes.
+output_shape: |-
+  THIS MONTH
+    New <n> | Gone <n> | Still open <n> | against last month <n>
+
+  LAST MONTH'S FIXES
+    <fix>: <done | did not work | not started> | items before <n>, now <n>
+
+  FIXES TO APPROVE (at most 5)
+    1. <fix> | items: <list> | size: <days> | who knows it: <name or "no one alone"> | first step: <one reviewable step>
+
+  DESIGN CAUSE
+    <area and cause, or "none found">
+
+  LEFT FOR LATER
+    <one line each>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: The time you can spare
+    how: Say how many days a month go to clean-up. The list is cut to fit, so it stays doable.
+  - what: The parts that hurt
+    how: Name the areas people avoid. They are scanned and ranked with extra care.
+  - what: Your own cut-off for "same area"
+    how: The agent looks for a design cause when three or more top items share an area. Raise or lower that to suit the size of your code.
+  - what: One snapshot per month
+    how: Run it on the same day each month so the counts compare like with like.
+judge:
+  - Every count is shown with the two scans it came from.
+  - Each fix on the list is cut into a first step that can be reviewed alone.
+  - No fix repeats an approach that did not work last month.
+  - The list fits the time you said you have.
+  - Nothing in your code was changed without your clear yes.
+test:
+  - Run it twice on the same code. The ranked list should match, apart from wording.
+  - Run it on a part of your code you know is messy. See if its top items are the ones your team complains about.
+  - After a clean-up, run it again and check the counts for those items dropped.
+improve:
+  - Keep the dated snapshots in one folder so every month has something to compare with.
+  - Record why a fix did not work in debt/chosen.md, so the next pick avoids the same approach.
+  - Add areas you never want touched to the notes, so they are listed but not ranked for change.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can open the code, keep the debt folder and run every step on a schedule.
+  inputs:
+    - A list of the bugs or outages from the last month and the files they touched
+    - The tickets your team closed last month

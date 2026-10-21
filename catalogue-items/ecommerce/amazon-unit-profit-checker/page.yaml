@@ -1,0 +1,88 @@
+new_slug: amazon-unit-profit-checker
+name: "Amazon unit profit checker"
+summary: "Paste price, landed cost and Amazon fees. Get profit per unit and break-even ad cost."
+job: sell-on-amazon
+thinking: low
+thinking_why: "It is line-by-line sums on figures you supply."
+
+headline: "Amazon unit profit checker"
+subhead: "Paste your price, landed cost and Amazon fee figures. It lists every fee, works out profit per unit before and after ads, finds your break-even ad cost per sale, and checks the usual rules of thumb."
+
+explain: |
+  Amazon takes a referral fee, a fulfilment fee, storage and returns on top of your cost. Sellers who count only the referral fee are often surprised by how little is left.
+
+  This prompt puts each fee on its own line from the figures you give it, so the answer is current. It then finds profit per unit, the most you can spend on ads for one sale, and how the product sits against common rules of thumb.
+
+when:
+  - "You are checking a product idea before ordering stock."
+  - "Amazon fees changed."
+  - "Ad spend seems to be wiping out your profit."
+
+you_give:
+  - "Selling price and landed cost (required): product, freight, duty."
+  - "Amazon fees (required): referral, fulfilment and storage, taken from Amazon's revenue calculator today."
+  - "Return rate and ad spend per sale (advised)."
+  - "Cash you can afford to lose (optional)."
+you_get:
+  - "Profit per unit before and after ads"
+  - "Break-even ad cost per sale"
+  - "A rules-of-thumb check"
+  - "The biggest cost line"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: selling price and landed cost; amazon fees; return rate and ad spend per sale; cash you can afford to lose."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "Use today's fees only"
+    text: "Take fee figures from the calculator you paste. If you gave none, show the method with placeholders marked dated and not usable."
+  - title: "Work out profit"
+    text: "Profit before ads = price minus landed cost minus every fee, with returns as rate x cost. Profit after ads = that minus ad spend per sale. Show both as dollars and percent of price."
+  - title: "Find the ad ceiling"
+    text: "Break-even ad cost per sale equals profit before ads. Above that, each sale loses money."
+  - title: "Check the rules of thumb"
+    text: "About a third of price to product cost, a third to Amazon fees, a third to profit. Net margin floor of 30%. Price at least 3 times landed cost. Say where this product sits."
+
+output_shape: |
+  PROFIT PER UNIT: price <$> | landed cost <$> | each fee <$> | returns <$> | profit before ads <$ | %> | after ads <$ | %>
+  BREAK-EVEN AD COST PER SALE: <$>
+  RULES OF THUMB: thirds <pass | fail> | net margin vs 30% <pass | fail> | price vs 3x cost <pass | fail>
+  WEAKEST LINE: <the biggest cost>
+  MISSING: <fees or costs you did not give>
+
+tweaks:
+  - what: "Fees"
+    how: "Paste from Amazon's revenue calculator today. Old fees give old answers."
+  - what: "Return rate"
+    how: "Use your own. A guess is marked."
+
+judge:
+  - "Every fee comes from your figures, not memory."
+  - "Both profit lines are shown with their sums."
+  - "Break-even ad cost per sale equals profit before ads."
+  - "Rules of thumb are marked as rules of thumb, not guarantees."
+
+test:
+  - "Use a product you sell and compare profit to your Amazon report."
+  - "Leave out the fees. It should say MISSING, not guess."
+  - "Run it twice. The sums should match."
+
+improve:
+  - "Add your usual size tier and storage months under the prompt."
+  - "Save your typical ad spend per sale."
+  - "Pair it with a product viability scorer."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "Amazon's revenue calculator output"
+    - "Your return rate and ad spend per sale"
+
+terms:
+  - term: "Landed cost"
+    meaning: "What one unit costs once it reaches Amazon, with freight and duty."
+  - term: "Referral fee"
+    meaning: "Amazon's cut of each sale, a share of the price."

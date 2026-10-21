@@ -1,0 +1,26 @@
+slug: plain-job-post-drafter
+name: Plain job post drafter
+summary: Paste the role and what it needs. Get a clear job post with real requirements.
+category: general
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: hr-job-description skill
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran/hr-skills/tree/main/skills/hr-job-description
+    used: A shorter one-message version of this skill, written fresh.
+  - title: Original author
+    by: Tuan Duc Tran
+    url: https://github.com/tuanductran
+    used: Wrote the skill; Tuan Duc Tran shared it in their collection.

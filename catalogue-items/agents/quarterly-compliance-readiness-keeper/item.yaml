@@ -1,0 +1,26 @@
+slug: quarterly-compliance-readiness-keeper
+name: "Quarterly compliance readiness keeper"
+summary: "Name your framework each quarter. Get gaps found, last quarter's fixes checked and what to close before an audit."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+  - {type: codebase, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [compliance-checklist, soc-2-readiness-checker, iso-27001-audit-prep-coach, gdpr-audit-prep-coach, gdpr-privacy-checker]
+steps:
+  - {uses: compliance-checklist, note: "Once per framework, then reused: the list of evidence an auditor will ask for, with gaps ranked."}
+  - {uses: soc-2-readiness-checker, note: "Every quarter, only if SOC 2 is in scope: gaps to fix before the watch period."}
+  - {uses: iso-27001-audit-prep-coach, note: "Every quarter, only if ISO 27001 is in scope: gaps to fix before an audit."}
+  - {uses: gdpr-audit-prep-coach, note: "Every quarter, only if GDPR is in scope: article-based gaps to fix before a review."}
+  - {uses: gdpr-privacy-checker, note: "Only when GDPR is in scope and the code or the way you use personal data changed since last quarter: the privacy risks in the change."}
+schedule: "First week of each quarter"
+asks_before: [contacting an auditor or regulator, sending evidence or policies to anyone, changing access or settings on live systems, changing a policy people have signed, telling customers you are compliant]
+origin: own
+version: 1.0.0
+example_pending: true

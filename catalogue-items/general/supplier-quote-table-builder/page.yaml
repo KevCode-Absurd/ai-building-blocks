@@ -1,0 +1,90 @@
+new_slug: supplier-quote-table-builder
+name: "Supplier quote table builder"
+summary: "Paste two or more supplier quotes. Get one table, the cash each needs and a go or walk call."
+job: plan-supply-chain
+thinking: low
+thinking_why: "It lays numbers side by side and applies fixed sums."
+
+headline: "Supplier quote table builder"
+subhead: "Paste two or more supplier quotes. It puts price, minimum order, lead time and cash needed side by side, checks each against your retail price, and lists what to agree in writing before a deposit."
+
+explain: |
+  A cheaper quote is not always the safer one. The minimum order can tie up your cash, the lead time can miss your launch, and loose terms can leave you with no recourse when goods arrive wrong.
+
+  This prompt puts every quote on the same footing: cash up front, weeks to stock, landed cost and margin. It then lists the four terms to settle in writing and gives each supplier a clear call.
+
+when:
+  - "You have two or three factory quotes and one deadline."
+  - "A supplier wants a deposit this week."
+  - "You are not sure a lower price is worth a higher minimum."
+
+you_give:
+  - "Two or more quotes (required): unit price, minimum order, production days. Freight and duty per unit if you have them."
+  - "Planned retail price (required)."
+  - "Cash you can tie up in stock (required)."
+  - "Shipping time and target launch date (optional)."
+you_get:
+  - "One table comparing every quote"
+  - "Cash up front and weeks to stock for each"
+  - "The terms to agree before a deposit"
+  - "A go, renegotiate or walk away call"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: two or more quotes; planned retail price; cash you can tie up in stock; shipping time and target launch date."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "Build the table"
+    text: "Unit price, minimum order and production time for each supplier. Show shipping time on its own line."
+  - title: "Work out cash and time"
+    text: "Cash up front = minimum order x unit price. Weeks to stock = production plus shipping. Landed unit cost = unit price + freight + duty. If freight or duty is missing, say landed cost is incomplete."
+  - title: "Test cash and price"
+    text: "Mark any quote over your cash limit. A higher price can win if it has a lower minimum or a faster lead time. Margin before ads = retail price minus landed unit cost. Ask for your lowest acceptable margin; do not invent one."
+  - title: "List terms to settle"
+    text: "Before any deposit, get these in writing: refund if the goods are wrong, quantity variance allowed, what happens on a short shipment, and who owns the design."
+  - title: "Call each supplier"
+    text: "GO, RENEGOTIATE (what) or WALK AWAY (why), one line each."
+
+output_shape: |
+  TABLE: supplier | unit price | minimum order | cash up front | weeks to stock | landed cost | margin before ads
+  OVER CASH LIMIT: <suppliers>
+  AGREE IN WRITING FIRST: refunds | variance | short shipment | design ownership
+  VERDICT: <supplier>: GO | RENEGOTIATE | WALK AWAY, because <reason>
+  MISSING: <quotes | retail price | cash limit | freight | duty>
+
+tweaks:
+  - what: "Freight and duty"
+    how: "Add them if you can. Without them landed cost stays marked incomplete."
+  - what: "Cash limit"
+    how: "Give a real figure. Quotes over it are marked at once."
+
+judge:
+  - "At least two quotes are in the table, or it says one quote cannot be compared."
+  - "Lead time is production only, with shipping shown separately."
+  - "The sums are shown for cash up front and weeks to stock."
+  - "No cost, margin or duty rate is made up."
+
+test:
+  - "Use quotes you already chose between. See if it lands on your pick or says why not."
+  - "Give it one quote. It should say one quote cannot be compared."
+  - "Run it twice. The cash and weeks figures should match."
+
+improve:
+  - "Add your lowest acceptable margin under the prompt."
+  - "Add your usual shipping time by route."
+  - "Pair it with a tech pack writer so every supplier quotes from the same spec."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "Your tech pack or spec sheet"
+    - "A freight quote for the same order size"
+
+terms:
+  - term: "Minimum order"
+    meaning: "The fewest units a supplier will make in one run."
+  - term: "Landed cost"
+    meaning: "The cost of one unit once it reaches you, with freight and duty."

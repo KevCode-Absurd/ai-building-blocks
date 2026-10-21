@@ -1,0 +1,102 @@
+new_slug: quarterly-headcount-plan-keeper
+name: Quarterly headcount plan keeper
+summary: Give it each quarter's people numbers. Get the plan checked against what happened, the scenario to follow and the budget gap.
+job: hire-people
+thinking: high
+thinking_why: It does sums on plan against actuals, picks a path by a threshold and keeps three linked files in step. Give it your strongest model.
+headline: Quarterly headcount plan keeper
+subhead: Give it last quarter's people numbers. It sets hires and exits against your plan, decides whether the plan holds or needs a new forecast, checks the people budget, and hands back a short update and a list of roles for leaders to decide. It approves nothing.
+explain: |
+  A headcount plan is right on the day you write it. After that, hires slip, people leave when you did not expect it, and goals change. Most teams find out when the budget does not add up. Others rebuild the plan every quarter and chase noise.
+
+  This agent keeps the plan, the forecast and the actuals in one folder. Each quarter it reports what happened and sets it against the plan, team by team. If hires or exits are more than a fifth off the plan, a switch sign from last quarter was hit, or your goals changed, it rebuilds the forecast and runs the scenarios. If not, it says the plan holds and leaves it alone. It then checks the people budget, reports open roles, and prices any new role someone asks for. It never ranks requests or approves a hire. That is for your leaders.
+when:
+  - You have a hiring plan and want it checked against what happened every quarter.
+  - You want to know when the plan needs a rebuild and when it only needs a note.
+  - You want a short update for leaders and the cost of each new role request.
+you_give:
+  - Last quarter's headcount by team, with hires and exits, as counts
+  - Your growth goals and people budget, the first time and when they change
+  - Actual people spend by team (optional, best)
+  - Hiring pipeline numbers and any new role requests (optional)
+you_get:
+  - Hires and exits against plan, team by team, with the sums
+  - A call on whether the plan holds, and which scenario applies if it does not
+  - The people budget against spend, with each gap explained
+  - Open roles with days open, and the yearly cost of each new role request
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it your goals and last quarter's numbers.
+  - Give counts and roles only. Leave out names and individual pay.
+  - The first time it builds a plan and a forecast for you to approve. After that it compares each quarter with them.
+  - Read the update with your leaders. The decisions on hires and budget are yours.
+how_it_works:
+  - title: Build the base
+    text: On the first run, it builds a role-by-role plan and a forecast with a range for you to approve.
+  - title: Report what happened
+    text: Counts headcount, hires, exits and team health for the quarter from your own data.
+  - title: Set it against the plan
+    text: Works out hires planned against made and exits forecast against actual, by team, and checks the switch signs from last quarter.
+  - title: Choose the path
+    text: If any gap is over a fifth, a switch sign was hit or goals changed, it rebuilds the forecast and runs scenarios. If not, it says the plan holds.
+  - title: Check the budget and pipeline
+    text: Sets people spend against budget by team and reports open roles and how long each has been open.
+  - title: Price new roles and hand back
+    text: Gives each requested role a yearly cost and a hire or contract comparison, with no ranking, then stops for your decisions.
+output_shape: |-
+  THE QUARTER
+    Headcount <n> | hires <made> of <planned> | exits <actual> vs <forecast> | sums shown
+
+  PATH TAKEN
+    <plan holds | new forecast and scenarios>: <why>
+
+  SCENARIO IN FORCE
+    <base | best | worst> | switch signs to watch: <list>
+
+  BUDGET
+    <team> | spend <amount> vs budget <amount> | gap explained: <reason>
+
+  OPEN ROLES
+    <role> | days open <n> | pipeline: <numbers>
+
+  NEW ROLE REQUESTS (no ranking)
+    <role> | yearly cost <amount> | hire or contract: <comparison> | budget effect: <amount>
+
+  DECISIONS FOR LEADERS
+    <decision>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+
+  Planning help only. Check with a qualified person before acting on pay or employment questions.
+tweaks:
+  - what: The cut-off for rebuilding
+    how: A fifth is the starting point. Lower it for a stable team, raise it for a small, fast-changing one.
+  - what: Switch signs
+    how: Write the signs that would move you to the best or worst case, such as a lost customer or a missed target. The agent checks them each quarter.
+  - what: Actual spend
+    how: Give it real spend by team. Without it the budget check cannot show the gap.
+  - what: Anonymising
+    how: Give counts and roles only. Take out names, individual pay and health details before you start.
+judge:
+  - Every gap is worked out from your files, with the sums shown.
+  - The forecast was rebuilt only when a trigger was hit.
+  - No file names or prices an individual.
+  - No hire was approved, frozen or posted and no pay was changed.
+test:
+  - Run it on two past quarters in order. The second should compare with the first.
+  - Give it a quarter within a few percent of plan. It should say the plan holds.
+  - Give it a quarter with a large exit spike and see if it runs the scenarios.
+improve:
+  - Add your own switch signs, such as a revenue target missed two months in a row.
+  - Add the hire time for each role, from post to start, so the plan dates fit.
+  - Keep a note of which new role requests were approved and what they cost.
+  - Add seasonal exits or hires, such as peaks in summer, so the forecast does not read them as surprises.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the headcount folder and read last quarter's files each time.
+    - name: Your HR system or a spreadsheet
+      why: Export counts by team, hires and exits here, without names or individual pay.
+  inputs:
+    - Your people budget by team and month
+    - The growth goals for the next year

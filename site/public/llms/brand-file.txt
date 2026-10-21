@@ -1,6 +1,6 @@
 # Set up your brand file: AI Blocks
 
-> 44 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 46 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Brand direction brainstormer](https://useaiblocks.com/skills/brand-direction-brainstormer): Describe your idea. Get name options, positioning angles, mood directions and a story, narrowed to one direction.
 - [Brand family planner](https://useaiblocks.com/skills/brand-family-planner): List your brands and products. Get a clear structure for how they relate and what each one is called.
@@ -16,6 +16,7 @@
 - [Brand style starter picker](https://useaiblocks.com/skills/brand-style-starter-picker): Say what your business does. Get a ready style starting point with colours, fonts, voice and image direction.
 - [Brand stylescape planner](https://useaiblocks.com/skills/brand-stylescape-planner): Give it your brand traits and buyers. Get three visual directions, a merged pick and photo rules.
 - [Brand voice guide builder](https://useaiblocks.com/skills/brand-voice-guide-builder): Give it your documents or call transcripts. Get a brand voice guide with rules, examples and open questions.
+- [Brand voice one-pager writer](https://useaiblocks.com/prompts/brand-voice-one-pager-writer): Describe your brand and who you write for. Get a one-page voice guide with do and don't lines.
 - [Brand voice reviewer](https://useaiblocks.com/agents/brand-voice-reviewer): Give it each draft before it goes out. Get it checked against your voice, fixed and re-checked, with repeat slips tracked.
 - [Brand voice rewriter](https://useaiblocks.com/skills/brand-voice-rewriter): Give it a draft or a topic. Get emails, posts or pitches written in your brand voice, with notes on each choice.
 - [Brand voice rules writer](https://useaiblocks.com/skills/brand-voice-rules-writer): Describe your brand and who you write for. Get tone, word choices and writing rules any writer can follow.
@@ -41,6 +42,7 @@
 - [Store photo style locker](https://useaiblocks.com/skills/store-photo-style-locker): Describe your store look once. Get a style file that keeps models, light and layout the same across every product photo.
 - [Store promise writer](https://useaiblocks.com/skills/store-promise-writer): Give it your product and best customers. Get a three-line promise and a not-for-you list.
 - [Store rebrand planner](https://useaiblocks.com/skills/store-rebrand-planner): Give it your store, name and goals. Get a keep-or-rename score out of 100 and a phased plan.
+- [Tagline score card](https://useaiblocks.com/prompts/tagline-score-card): Paste your tagline and rivals' lines. Get a pass or fail on ten tests, a score out of 100 and sharper lines.
 - [Tagline tester](https://useaiblocks.com/skills/tagline-tester): Paste your tagline and key messages. Get a score out of 100 from ten tests and sharper versions.
 - [TikTok Shop brand builder](https://useaiblocks.com/skills/tiktok-shop-brand-builder): Describe your shop. Get your brand voice, content pillars, story and ways to build a community.
 - [Voice and tone guide writer](https://useaiblocks.com/skills/voice-and-tone-guide-writer): Describe how your brand talks. Get voice traits, tone by situation, word lists and side-by-side examples.

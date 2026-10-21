@@ -1,0 +1,33 @@
+slug: decision-checklist-keeper
+name: "Decision checklist keeper"
+summary: "Give it each big decision and, later, how it turned out. Get a checked call now and a sharper checklist over time."
+category: agent
+type: agent
+role: orchestrate
+job: strategy
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: plan, required: false}
+  - {type: lessons_register, required: false}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+  - {type: lessons_register}
+uses: [reversible-decision-sorter, decision-evidence-bar-setter, decision-bias-pileup-checker, case-against-writer, ruin-risk-stress-tester, decision-checklist-runner, checklist-upkeep-planner, mistake-to-principle-writer, decision-mistake-collector, decision-checklist-builder]
+steps:
+  - {uses: reversible-decision-sorter, note: "Every new decision: one-way or two-way door, which sets how much checking it gets."}
+  - {uses: decision-evidence-bar-setter, note: "Every new decision: how much evidence is enough, what to get first and a date to decide."}
+  - {uses: decision-bias-pileup-checker, note: "Only for one-way doors, or when reward, favour, crowd, past promise or fear is pushing: the pressures and a calmer version."}
+  - {uses: case-against-writer, note: "Only for one-way doors: the best case against the plan, in the other side's words."}
+  - {uses: ruin-risk-stress-tester, note: "Only when money, time or your name is at stake and the door is one-way: the outcome you could not recover from, and a capped version."}
+  - {uses: decision-checklist-runner, note: "Whenever a checklist exists: each item answered with evidence. Loops while a stop item fails or items are unknown, at most twice."}
+  - {uses: checklist-upkeep-planner, note: "When a past decision's review date arrives: judge it by the process, then change the checklist."}
+  - {uses: mistake-to-principle-writer, note: "Only when a decision turned out badly and the cause was a skipped or weak check: the root cause and a rule."}
+  - {uses: decision-mistake-collector, note: "Once, when there is no checklist yet and three or more past cases are on file."}
+  - {uses: decision-checklist-builder, note: "Once, straight after the mistake log is built: a checklist of up to twelve questions."}
+schedule: "Each time a big decision comes up, and on the review date you set for each one"
+asks_before: [announcing or acting on a decision, spending or committing money, telling other people the call, saving a new version of your checklist, dropping a checklist item]
+origin: own
+version: 1.0.0
+example_pending: true

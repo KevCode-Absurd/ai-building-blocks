@@ -1,0 +1,16 @@
+slug: supplier-quote-table-builder
+name: "Supplier quote table builder"
+summary: "Paste two or more supplier quotes. Get one table, the cash each needs and a go or walk call."
+category: general
+type: prompt
+role: check
+job: ops
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,6 +1,6 @@
 # Teach and train people: AI Blocks
 
-> 136 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 140 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Accessible lesson auditor](https://useaiblocks.com/skills/accessible-lesson-auditor): Paste a lesson. Get a check against Universal Design for Learning, with fixes ranked by impact.
 - [AI answer critique activity builder](https://useaiblocks.com/skills/ai-answer-critique-lesson): Give it a subject. Get a worksheet that has students judge an AI answer on clarity, evidence and fairness.
@@ -17,6 +17,7 @@
 - [Child-led project planner](https://useaiblocks.com/skills/child-led-project-planner): Describe what young children keep asking about. Get a project plan that follows their interests into deeper inquiry.
 - [Choice work block planner](https://useaiblocks.com/skills/choice-work-block-planner): Describe your time block. Get a plan for a long stretch of independent, choice-based work.
 - [Class discussion format picker](https://useaiblocks.com/skills/class-discussion-format-picker): Give it your topic and group. Get the discussion format that fits, with steps to run it.
+- [Class quiz reteach keeper](https://useaiblocks.com/agents/class-quiz-reteach-keeper): Give it each quiz's results. Get what to reteach and how, then a check next quiz on whether it worked.
 - [Classroom action research planner](https://useaiblocks.com/skills/classroom-action-research): Give it a question about your teaching. Get a plan to collect evidence and act on what you find.
 - [Classroom belonging planner](https://useaiblocks.com/skills/classroom-belonging-planner): Describe a class dynamic like cliques or new students. Get actions that help everyone feel part of the group.
 - [Classroom layout redesigner](https://useaiblocks.com/skills/classroom-layout-redesigner): Describe your room. Get a layout and materials plan that helps learners work on their own with calm moves between tasks.
@@ -64,6 +65,7 @@
 - [Lesson adapter for language learners](https://useaiblocks.com/skills/ell-lesson-adapter): Paste your lesson plan. Get a version that supports students learning English in reading, writing, speaking and listening.
 - [Lesson barrier spotter](https://useaiblocks.com/skills/lesson-barrier-spotter): Paste a lesson and describe your class. Get likely barriers and which ones design can fix. It does not diagnose anyone.
 - [Lesson observation form builder](https://useaiblocks.com/skills/lesson-observation-form-builder): Give it what you want to learn from a visit. Get look-fors and a way to record evidence.
+- [Lesson opener planner](https://useaiblocks.com/prompts/lesson-opener-planner): Paste today's topic and last lesson. Get a five-minute opener that brings back what learners know.
 - [Lesson plan with wellbeing built in](https://useaiblocks.com/skills/wellbeing-lesson-plan): Give it a topic and goals. Get a lesson that teaches the content and builds student wellbeing. Not medical advice.
 - [Lesson starter writer](https://useaiblocks.com/skills/lesson-starter-writer): Give it today's topic and last lesson. Get a starter that brings back what students know and links to the new content.
 - [Lesson study cycle planner](https://useaiblocks.com/skills/lesson-study-cycle-planner): Give it a teaching question. Get a full lesson study plan, from shared planning to the research lesson.
@@ -90,6 +92,7 @@
 - [Quiz and dashboard data reader](https://useaiblocks.com/skills/quiz-and-dashboard-data-reader): Paste your quiz results or LMS numbers. Get what they say and what to do in class next.
 - [Reading strategy picker for a text](https://useaiblocks.com/skills/reading-strategy-picker): Paste a text. Get the reading strategies that fit its hard parts, in a teaching order.
 - [Real-world phenomenon unit planner](https://useaiblocks.com/skills/phenomenon-unit-planner): Name a real event or puzzle. Get a unit plan that uses several subjects to explain it.
+- [Recall quiz writer](https://useaiblocks.com/prompts/recall-quiz-writer): Paste your lesson notes. Get a low-stakes recall quiz at three levels, with answers.
 - [Recall-first study tutor](https://useaiblocks.com/skills/recall-first-study-tutor): Write what you remember and rate your confidence first. Your AI then fills gaps instead of repeating what you know.
 - [Restorative conversation planner](https://useaiblocks.com/skills/restorative-conversation-planner): Describe a conflict between students. Get steps to repair trust and relationships. Not legal or medical advice.
 - [Retrieval quiz writer](https://useaiblocks.com/skills/retrieval-quiz-writer): Give it a topic. Get low-stakes recall questions at easy, medium and hard levels for starters or revision.
@@ -120,6 +123,7 @@
 - [Task adapter for different learners](https://useaiblocks.com/skills/task-adapter-learners): Give it a task and a learner need. Get an adapted task with the same goal. It does not diagnose anyone.
 - [Task engagement tuner](https://useaiblocks.com/skills/task-engagement-tuner): Give it a task students find dull or stressful. Get changes to challenge, goals and feedback that improve focus.
 - [Task language demand checker](https://useaiblocks.com/skills/task-language-demand-checker): Paste a task or text. Get the words and sentence types that may block students still learning English.
+- [Task rubric drafter](https://useaiblocks.com/prompts/task-rubric-drafter): Describe a task and its goal. Get a rubric with clear wording at each level of work.
 - [Task scaffold adder for language learners](https://useaiblocks.com/skills/ell-task-scaffolds): Give it a task. Get a version with language help added that keeps the thinking just as hard.
 - [Teach-back practice partner](https://useaiblocks.com/skills/teach-back-practice-partner): Teach an idea to your AI, which plays a curious beginner. Get the gaps shown by its honest questions.
 - [Teaching coach conversation guide](https://useaiblocks.com/skills/teaching-coach-guide): Give it a teaching focus. Get questions, a conversation flow and follow-up actions for a coaching session.

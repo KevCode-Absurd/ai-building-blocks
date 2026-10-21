@@ -30,7 +30,36 @@ import aiCostExamples from "./ai-run-cost/examples.mjs";
 import hourly from "./hourly-rate/tool.mjs";
 import hourlyExamples from "./hourly-rate/examples.mjs";
 
-export const TOOLS = [discount, deal, margin, repeat, volume, pageTest, aiCost, hourly];
+import t_ad_budget_planner from "./ad-budget-planner/tool.mjs";
+import t_ad_budget_planner_ex from "./ad-budget-planner/examples.mjs";
+import t_customer_payback from "./customer-payback/tool.mjs";
+import t_customer_payback_ex from "./customer-payback/examples.mjs";
+import t_price_increase_calculator from "./price-increase-calculator/tool.mjs";
+import t_price_increase_calculator_ex from "./price-increase-calculator/examples.mjs";
+import t_free_shipping_threshold from "./free-shipping-threshold/tool.mjs";
+import t_free_shipping_threshold_ex from "./free-shipping-threshold/examples.mjs";
+import t_bundle_price_calculator from "./bundle-price-calculator/tool.mjs";
+import t_bundle_price_calculator_ex from "./bundle-price-calculator/examples.mjs";
+import t_returns_cost_calculator from "./returns-cost-calculator/tool.mjs";
+import t_returns_cost_calculator_ex from "./returns-cost-calculator/examples.mjs";
+import t_landed_cost from "./landed-cost/tool.mjs";
+import t_landed_cost_ex from "./landed-cost/examples.mjs";
+import t_reorder_point from "./reorder-point/tool.mjs";
+import t_reorder_point_ex from "./reorder-point/examples.mjs";
+import t_email_list_value from "./email-list-value/tool.mjs";
+import t_email_list_value_ex from "./email-list-value/examples.mjs";
+import t_creator_deal_calculator from "./creator-deal-calculator/tool.mjs";
+import t_creator_deal_calculator_ex from "./creator-deal-calculator/examples.mjs";
+import t_subscription_revenue_forecast from "./subscription-revenue-forecast/tool.mjs";
+import t_subscription_revenue_forecast_ex from "./subscription-revenue-forecast/examples.mjs";
+import t_cash_runway from "./cash-runway/tool.mjs";
+import t_cash_runway_ex from "./cash-runway/examples.mjs";
+import t_meeting_cost from "./meeting-cost/tool.mjs";
+import t_meeting_cost_ex from "./meeting-cost/examples.mjs";
+import t_hire_or_freelance from "./hire-or-freelance/tool.mjs";
+import t_hire_or_freelance_ex from "./hire-or-freelance/examples.mjs";
+
+export const TOOLS = [discount, deal, margin, repeat, volume, pageTest, aiCost, hourly, t_ad_budget_planner, t_customer_payback, t_price_increase_calculator, t_free_shipping_threshold, t_bundle_price_calculator, t_returns_cost_calculator, t_landed_cost, t_reorder_point, t_email_list_value, t_creator_deal_calculator, t_subscription_revenue_forecast, t_cash_runway, t_meeting_cost, t_hire_or_freelance];
 export const EXAMPLES = {
   [discount.slug]: discountExamples,
   [deal.slug]: dealExamples,
@@ -40,6 +69,20 @@ export const EXAMPLES = {
   [pageTest.slug]: pageTestExamples,
   [aiCost.slug]: aiCostExamples,
   [hourly.slug]: hourlyExamples,
+  [t_ad_budget_planner.slug]: t_ad_budget_planner_ex,
+  [t_customer_payback.slug]: t_customer_payback_ex,
+  [t_price_increase_calculator.slug]: t_price_increase_calculator_ex,
+  [t_free_shipping_threshold.slug]: t_free_shipping_threshold_ex,
+  [t_bundle_price_calculator.slug]: t_bundle_price_calculator_ex,
+  [t_returns_cost_calculator.slug]: t_returns_cost_calculator_ex,
+  [t_landed_cost.slug]: t_landed_cost_ex,
+  [t_reorder_point.slug]: t_reorder_point_ex,
+  [t_email_list_value.slug]: t_email_list_value_ex,
+  [t_creator_deal_calculator.slug]: t_creator_deal_calculator_ex,
+  [t_subscription_revenue_forecast.slug]: t_subscription_revenue_forecast_ex,
+  [t_cash_runway.slug]: t_cash_runway_ex,
+  [t_meeting_cost.slug]: t_meeting_cost_ex,
+  [t_hire_or_freelance.slug]: t_hire_or_freelance_ex,
 };
 /** Where the site lives, for credit links in the download and the embed. */
 export const SITE = "https://useaiblocks.com";

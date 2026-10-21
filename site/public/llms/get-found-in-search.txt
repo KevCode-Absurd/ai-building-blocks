@@ -1,6 +1,6 @@
 # Get found in search and AI answers: AI Blocks
 
-> 84 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 87 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI answer visibility tracker](https://useaiblocks.com/agents/ai-answer-visibility-tracker): Run the same shopper questions through AI assistants each month. Get your share against last month and the fix for the gap.
 - [AI brand mention scanner](https://useaiblocks.com/skills/ai-brand-mention-scanner): Give it a brand name. Get a score for where it is mentioned online. Collects data from websites.
@@ -38,9 +38,11 @@
 - [Keyword list maker](https://useaiblocks.com/skills/keyword-list-maker): Paste any text. Get one line of up to 50 ranked keywords, ready for SEO or tags.
 - [Keyword research planner](https://useaiblocks.com/skills/keyword-research-planner): Name your site and topic. Get a ranked keyword list, including question searches, grouped by what people want.
 - [Keyword researcher](https://useaiblocks.com/skills/keyword-researcher): Name your topic. Get high-value search terms, search intent and content gaps to target.
+- [Keyword to post outline writer](https://useaiblocks.com/prompts/keyword-to-post-outline-writer): Paste a keyword and who it is for. Get a one-page outline with intent, headings and what the post must cover.
 - [Link and PR outreach planner](https://useaiblocks.com/skills/link-and-pr-outreach-planner): Describe your site. Get a plan for link building, digital PR, brand mentions and local listings, with linkable ideas.
 - [llms.txt writer](https://useaiblocks.com/skills/llms-txt-writer): Give it your site. Get an llms.txt file that tells AI tools which pages and facts matter most.
 - [Local search listing manager](https://useaiblocks.com/skills/local-search-listing-manager): Describe your service business and area. Get a local search audit, listing fixes and a plan for more reviews.
+- [Monthly content decay keeper](https://useaiblocks.com/agents/monthly-content-decay-keeper): Give it your page list and traffic each month. Get the pages losing ground, a call on each and drafts to approve.
 - [Monthly store SEO keeper](https://useaiblocks.com/agents/monthly-store-seo-keeper): Give it your monthly Search Console numbers. Get a search report, the pages to push and a short fix list to approve.
 - [Monthly store SEO planner](https://useaiblocks.com/skills/monthly-store-seo-planner): Give it your store and monthly hours. Get a first 30 days plan and a monthly SEO cycle to repeat.
 - [Next.js indexing fixer](https://useaiblocks.com/skills/next-js-indexing-fixer): Give it your Next.js site and a Search Console error. Get the canonical, sitemap and rendering fixes.
@@ -62,6 +64,7 @@
 - [Search Console traffic drop diagnoser](https://useaiblocks.com/skills/search-console-traffic-drop-diagnoser): Paste a Search Console export. Get pages that lost clicks, the cause and a score out of 100.
 - [Search intent keyword mapper](https://useaiblocks.com/skills/search-intent-keyword-mapper): Give it your topic. Get keywords sorted by search intent, grouped into themes and ranked for what to write first.
 - [Search page brief writer](https://useaiblocks.com/skills/search-page-brief-writer): Give it a keyword and the pages that rank. Get a brief with search intent, gaps to fill, and an outline.
+- [Search title and snippet writer](https://useaiblocks.com/prompts/search-title-and-snippet-writer): Paste your page topic, search phrase and benefit. Get three titles and descriptions within the length limits.
 - [SEO and AI search agency vetter](https://useaiblocks.com/skills/seo-and-ai-search-agency-vetter): Paste an agency proposal. Get red flags, questions to send, a keep-or-walk verdict and a score out of 100.
 - [SEO auditor](https://useaiblocks.com/skills/seo-auditor): Give it a site or page. Get a scored SEO report and ranked fixes. Collects data from websites.
 - [SEO change tracker](https://useaiblocks.com/skills/seo-change-tracker): Save your site's SEO state today. Get a warning when rankings, tags or pages slip later.

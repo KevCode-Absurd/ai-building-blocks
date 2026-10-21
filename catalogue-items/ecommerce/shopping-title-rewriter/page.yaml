@@ -1,0 +1,90 @@
+new_slug: shopping-title-rewriter
+name: "Shopping title rewriter"
+summary: "Paste product facts and search terms. Get Google Shopping titles in one order, plus a rollout."
+job: run-google-ads
+thinking: low
+thinking_why: "It rewrites titles from facts you give it."
+
+headline: "Shopping title rewriter"
+subhead: "Paste your products and the search terms that convert. It rewrites each Shopping title in one fixed order with buyer words first, keeps every word true, and plans a rollout in small batches."
+
+explain: |
+  In Shopping you do not bid on keywords. Google reads your title and decides which searches to show it for. A vague title like "The Prowl" shows for nothing useful.
+
+  This prompt puts the words buyers type at the front of each title, in one order across the catalogue so Google learns a stable pattern. It uses only facts you gave, and changes titles in batches so you can see what works.
+
+when:
+  - "Your Shopping ads get clicks from the wrong searches."
+  - "You are setting up Shopping for the first time."
+  - "Titles in your feed are brand names and codes."
+
+you_give:
+  - "Products (required): current title, colour, size, material, use and other true facts."
+  - "Converting search terms (advised): from your search terms report."
+  - "Brand name (advised): and whether shoppers search for it."
+  - "Top products by revenue (optional)."
+you_get:
+  - "New titles in one order"
+  - "The search term each one leads with"
+  - "A character count for each"
+  - "A batch rollout plan"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: products; converting search terms; brand name; top products by revenue."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "Pick one order"
+    text: "Use it for every title. Best converting search term first, then product name and type, then colour or size, then one or two real features, brand last. Put the brand first only if shoppers search for it."
+  - title: "Keep the length"
+    text: "Stay under 150 characters. Put the words buyers type in the first 70."
+  - title: "Keep it true"
+    text: "Use only attributes the product really has. No sale words, all caps or symbols."
+  - title: "Leave IDs alone"
+    text: "Do not change product IDs or SKUs."
+  - title: "Roll out slowly"
+    text: "Change about ten products at a time. After 2 to 4 weeks, read the search terms. If they are not the ones you wanted, change the title words."
+
+output_shape: |
+  TITLE ORDER: <the order, in one line>
+  TITLES: <product> | old: <title> | new: <title> | <characters>
+  WHY: <the search term each title leads with>
+  ROLLOUT: <batches and what to check after 2 to 4 weeks>
+  MISSING: <facts or search terms you did not give>
+
+tweaks:
+  - what: "Search terms"
+    how: "Use terms that converted, not guesses. A new store can start from Keyword Planner terms."
+  - what: "Brand position"
+    how: "Say if shoppers search for your brand. If so it can go first."
+
+judge:
+  - "Every title uses one order."
+  - "Every word is a fact from what you gave."
+  - "No title is over 150 characters."
+  - "Nothing promotional appears in a title."
+
+test:
+  - "Rewrite ten products and compare the search terms after three weeks."
+  - "Give it a product with a missing fact. It should leave it out."
+  - "Run it twice. The order should match."
+
+improve:
+  - "Add your usual product attributes to the prompt so it asks for them each time."
+  - "Add words you never use in titles."
+  - "Pair it with a search term sorter."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "Converting search terms from a report"
+    - "Your top 20 products by revenue"
+
+terms:
+  - term: "Feed"
+    meaning: "The product list you send to Google Merchant Center."
+  - term: "Title order"
+    meaning: "The fixed order of parts in every title, such as search term, type, colour, feature, brand."

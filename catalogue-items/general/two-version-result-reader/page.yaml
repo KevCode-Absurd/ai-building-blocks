@@ -1,0 +1,87 @@
+new_slug: two-version-result-reader
+name: Two-version result reader
+summary: "Paste counts for two ad versions. Get the gap, a luck check and a call: keep, rerun or stop."
+job: read-ad-results
+thinking: low
+thinking_why: It is a few sums and a fixed decision rule.
+headline: Two-version result reader
+subhead: Paste the audience size, replies and, if you have them, sales and spend for two versions. You get the gap as a percentage, a luck check with the sum shown, a fairness check, and a call to keep, rerun or stop, plus a lesson and the next test.
+explain: |
+  Two ad versions rarely end in a tie, but a gap of a few replies is usually luck. People pick the leader anyway and then build on a result that was never real.
+
+  This prompt states the gap as a percentage of the lower version, then checks it against luck with a simple rule: add the two reply counts, take the square root, and see if the gap is more than twice that. It checks that the test was fair, and follows replies through to sales where you have them. You get one clear call, keep, rerun or stop, and a lesson worded as a finding for this audience, not a rule for all time.
+when:
+  - Your test has run and one version looks ahead.
+  - You want to know if a gap is luck.
+  - You need a short note on what the test taught.
+you_give:
+  - Audience, replies and (if you have them) sales and spend for each version
+  - The test plan (optional)
+  - Anything odd that happened (optional)
+you_get:
+  - A table and the gap as a percentage
+  - A luck check with the sum shown
+  - "A call: keep, rerun or stop"
+  - A lesson and the next test
+how_to_use:
+  - Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini, with your details under it.
+  - Under the prompt, write the counts for both versions.
+  - Add the plan if you have one, so the prompt can check the test was fair.
+  - Save the lesson with the date.
+how_it_works:
+  - title: Sets out the table
+    text: Rates for both versions.
+  - title: States the gap
+    text: As a percentage of the lower version.
+  - title: Checks luck
+    text: Square root of total replies.
+  - title: Checks fairness
+    text: Against your plan.
+  - title: Follows sales
+    text: Sales per 100 replies.
+  - title: Makes the call
+    text: Keep, rerun or stop.
+output_shape: |
+  TABLE: <key | audience | replies | rate | sales | spend>
+  GAP: <leader> is <percent> better
+  LUCK CHECK: sqrt(<total replies>) = <n>; gap <n> is <times> that; <probably real | borderline | luck>
+  FAIR?: <yes | broke because ...>
+  SALES: <per 100 replies, cost per sale>
+  CALL: <keep | rerun | stop>, because <reason>
+  LESSON: <one line, for this audience>
+  NEXT TEST: <what to change>
+  MISSING: <what you did not give>
+tweaks:
+  - what: Sales
+    how: Add sales so a free item does not fool the result.
+  - what: The plan
+    how: Paste it. The call is judged against it.
+  - what: Size
+    how: Small counts will land on rerun, on purpose.
+  - what: Spend
+    how: Add spend to get cost per reply.
+judge:
+  - The gap is a percentage of the lower version.
+  - The sum for the luck check is shown.
+  - A small test is not called a win.
+  - The lesson says it is for this audience.
+test:
+  - Give it equal counts. It should say stop.
+  - Give it 130 against 100. It should say borderline.
+  - Give it 150 against 100. It should say likely real.
+improve:
+  - Add the number you judge on.
+  - Add your usual test sizes.
+  - Keep lessons in one file.
+  - Pair it with the Two-version ad test planner.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A short prompt works the same in Claude, ChatGPT or Gemini, so use the one you already have open.
+  inputs:
+    - The test plan from before launch
+    - Sales as well as replies
+    - Notes on anything that went wrong
+terms:
+  - term: Luck check
+    meaning: A quick test of whether a gap is bigger than chance would give.

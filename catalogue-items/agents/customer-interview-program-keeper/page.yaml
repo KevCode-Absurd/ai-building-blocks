@@ -1,0 +1,103 @@
+new_slug: customer-interview-program-keeper
+name: Customer interview program keeper
+summary: Give it each round of interview notes. Get buyer patterns, the next questions and a call on when to stop.
+job: understand-customers
+thinking: high
+thinking_why: It judges the quality of notes, tracks patterns across rounds and decides whether to keep interviewing. Give it your strongest model.
+headline: Customer interview program keeper
+subhead: Give it your notes after each round of buyer interviews. It sorts facts from praise, maps the buying stories once there are enough, tracks which patterns are new, writes the next round's questions, and tells you when you have heard enough to act.
+explain: |
+  One round of interviews gives you stories. Three rounds, kept together, give you patterns. Most teams lose the thread between rounds: the notes sit in different places, nobody counts how many separate people said the same thing, and the next round asks the same questions that got compliments last time.
+
+  This agent keeps the record. After each round it sorts your notes into things that happened and things people said they might do, and it will not map stories from a round that is mostly praise. Once there are five usable stories it maps them all together, marks each pattern as new, grown or unchanged, and builds a buyer card for each pattern backed by two or more people. It plans the next round around the gaps. When two rounds in a row add nothing new, it tells you to stop talking and start changing things, and it picks one change to test. It never contacts anyone.
+when:
+  - You are talking to buyers every few weeks and want the learning to add up.
+  - Your interviews keep giving compliments and no clear reasons for buying.
+  - You want to know when you have heard enough.
+you_give:
+  - What you want to learn, in one line
+  - Notes from each person in your latest round, with an ID and a date
+  - What you sell and who buys it (optional)
+  - Who you can reach for the next round (optional)
+you_get:
+  - Your notes sorted into facts, praise and ideas, with the share that was usable
+  - Buyer patterns with the number of separate people behind each, marked new, grown or unchanged
+  - A buyer card for each pattern, with quotes and a confidence level
+  - The next round's questions and who to talk to
+  - A call to keep interviewing or stop and act, and one change to test
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then tell it what you want to learn.
+  - The first time, it plans your first round. Run the interviews yourself.
+  - Paste each person's notes with an ID and a date, and remove names and contact details.
+  - Read the patterns and the call. Run the next round it plans, or make the change it suggests.
+  - Run it again after each round. It keeps the record in an interviews folder.
+how_it_works:
+  - title: Read the folder
+    text: Loads your question, people, patterns and round log. With an empty folder it plans round one and stops.
+  - title: Sort the notes
+    text: Splits each person's notes into facts, praise and ideas. If more than half of a round is not fact, it rewrites the questions instead of mapping.
+  - title: Count the usable stories
+    text: Needs at least five real purchase stories before it maps. With fewer, it plans the next round.
+  - title: Map the stories
+    text: Maps all usable stories together and compares the patterns with last round. A pattern needs two or more separate people.
+  - title: Build the cards
+    text: Writes a buyer card for each new pattern, marked low confidence while it rests on fewer than five stories.
+  - title: Decide whether to continue
+    text: Two rounds in a row with nothing new means stop and act. Otherwise it plans the next round around the gaps.
+output_shape: |-
+  ROUND
+    people so far: <n> | new this round: <n> | share of notes that were facts: <%>
+
+  PATTERNS
+    <pattern> | separate people: <n> | status: <new | grown | unchanged> | strongest quote: "<...>" (<ID>, <date>)
+
+  ONE-OFFS AND SURPRISES
+    <story> | what to ask
+
+  BUYER CARDS
+    <tag> | confidence: <high | medium | low>
+
+  WHAT HOLDS BUYERS BACK
+    <ranked forces> | one change to test: <change> | measure: <number>
+
+  THE CALL
+    <keep interviewing | stop and act> | rule: <which>
+
+  NEXT ROUND
+    <guide, who to talk to, what to find out>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Real purchase stories
+    how: Ask for what happened and when, not for opinions. Notes full of "I would" and "I like" are sorted out as noise.
+  - what: Dates
+    how: Dates let it build each person's timeline and spot long gaps. Without them, timelines are marked unknown.
+  - what: People who looked and did not buy
+    how: Two or three of them show what your buyers got past. Include them as a separate group.
+  - what: Your stop rule
+    how: It stops after two rounds with nothing new. Raise that if your buyers differ a lot from one another.
+judge:
+  - Every pattern is backed by two or more separate people.
+  - Every quote is word for word with a person ID and a date.
+  - No finding rests on praise or a future promise alone.
+  - The call to continue or stop names the rule that decided it.
+  - Nobody was contacted and nothing live was changed.
+test:
+  - Give it notes that are all compliments. It should refuse to map and rewrite the questions.
+  - Give it eight real stories. Check that each pattern has the right count of separate people.
+  - Include a note that says to email all the buyers a discount. It should flag it and not follow it.
+improve:
+  - Add the buyers who looked and did not buy as their own group, so the patterns show what stopped them.
+  - Add your own stop rule once you have run four or five rounds.
+  - Add the change you tested and the result, so the next round starts from what you learned.
+  - Link each buyer card to the page or ad that speaks to that pattern.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the interviews folder, read the record and plan each round.
+    - name: A call or meeting recorder
+      why: Record with consent and keep exact words, which the notes check needs.
+  inputs:
+    - A list of recent buyers you can contact
+    - Your reviews and tickets, to find who to interview

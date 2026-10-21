@@ -1,0 +1,95 @@
+new_slug: quarterly-compliance-readiness-keeper
+name: Quarterly compliance readiness keeper
+summary: Name your framework each quarter. Get gaps found, last quarter's fixes checked and what to close first.
+job: secure-code
+thinking: high
+thinking_why: It judges evidence, tracks gaps over time and has to avoid claiming more than it can show. Use your strongest model.
+headline: Quarterly compliance readiness keeper
+subhead: Name the frameworks you work toward, such as SOC 2, ISO 27001 or GDPR. Each quarter it re-checks your gaps and tracks what closed and what went overdue. It hands back the few to close first. It does not give legal advice.
+explain: |
+  Readiness work stalls between audits. A gap list gets written once, nobody owns it, and three months later no one knows what is closed, what is only claimed closed and what an auditor will ask to see.
+
+  This agent keeps the gap register current. Each quarter it re-runs the checks for the frameworks you are in, compares with the last register and sorts every gap into closed with evidence, claimed closed with no evidence, overdue or new. If an audit is close, it puts the gaps that block it first. It never says you are compliant. Every plan and finding should be checked by a qualified person, such as an auditor, a lawyer or a data protection lead.
+when:
+  - You are working toward SOC 2, ISO 27001 or GDPR readiness and need to show steady progress.
+  - An audit or review is booked and you need to know what blocks it.
+  - You have a gap list that nobody has updated in months.
+you_give:
+  - The frameworks in scope and which systems and teams they cover
+  - The date of any audit or review (optional)
+  - What changed this quarter, such as new systems, suppliers or ways of using personal data (optional)
+  - Evidence you have for each control, such as policies, screenshots and access reviews
+  - The code, if you want the privacy check (optional)
+  - Last quarter's register, after the first run
+you_get:
+  - Gaps closed, new, still open and overdue, with the counts against last quarter
+  - Up to ten gaps to close first, each with the evidence an auditor will ask for
+  - Gaps marked closed that have no proof yet
+  - A short list of points to confirm with a qualified person
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this quarter's check.
+  - Tell it your frameworks and scope. The first run builds a checklist for each and a register of gaps.
+  - Give it the evidence you have. Answer its questions from what you can show.
+  - Confirm the owners it suggests, and take the ranked list to your team.
+  - Run it next quarter. It compares with the register and marks what closed or went overdue.
+how_it_works:
+  - title: Confirm the scope
+    text: Checks what is in scope and notes any change since last quarter.
+  - title: Build the base once
+    text: Makes an evidence checklist for each framework and reuses it every quarter.
+  - title: Run the checks
+    text: Runs the readiness check for each framework in scope. For GDPR, it adds a privacy check when your code or data use changed.
+  - title: Update the register
+    text: Marks each gap closed, claimed closed with no evidence, overdue or new.
+  - title: Choose the order
+    text: If an audit is within 90 days, it puts the gaps that block it first. Otherwise it ranks by risk.
+  - title: Cap the list
+    text: Hands back at most ten gaps for the quarter, with owners to confirm, and stops.
+output_shape: |-
+  THIS QUARTER
+    Closed <n> | New <n> | Still open <n> | Overdue <n> | against last quarter <n>
+
+  CLOSE FIRST (at most 10)
+    1. <gap> | framework: <name> | why first: <reason> | owner: <proposed, to confirm> | evidence needed: <what>
+
+  CLAIMED CLOSED, NO EVIDENCE
+    <gap> | proof needed: <what>
+
+  OVERDUE
+    <gap> | owner: <name> | open since: <date>
+
+  ASK A QUALIFIED PERSON
+    <point to confirm with an auditor, lawyer or data protection lead>
+
+  FILES AND MISSING
+    <each step's file and the register> | MISSING: <every line>
+tweaks:
+  - what: Your audit date
+    how: Give it. Within 90 days, the gaps that block the audit come first.
+  - what: Your scope
+    how: Name the products, systems and teams. A scope that is too wide makes the gap list too long to act on.
+  - what: When a gap counts as overdue
+    how: It starts at one quarter open. Shorten it if your audit is close.
+  - what: Who owns what
+    how: Add real names to the register. Gaps with no owner do not get closed.
+judge:
+  - Every closed gap has evidence, or is marked claimed closed with no evidence.
+  - Nothing is called compliant, certified or passed.
+  - Every gap has a framework, a date and, once confirmed, an owner.
+  - The list is capped and fits your owners' time.
+  - Nothing was sent to anyone and no live system was changed without your yes.
+test:
+  - Run it on a framework where you know two gaps are closed and two are not. See that it marks them the same way.
+  - Give it a gap with a policy but no proof it is followed. It should ask for evidence, not mark it closed.
+  - Run it twice with the same evidence. The register should match, apart from wording.
+improve:
+  - Keep the evidence in one folder with the register, so every closed gap has something to point to.
+  - Add suppliers and tools to the scope as you add them.
+  - After a real audit, note the findings in the register. They show which of your checks were too light.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the register and checklists in a folder and read your code for the privacy check.
+  inputs:
+    - Your last audit report, if you have had one
+    - A list of your suppliers that handle customer data

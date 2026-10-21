@@ -1,0 +1,26 @@
+slug: one-line-position-writer
+name: One-line position writer
+summary: Paste your product and rivals. Get the one word to own, one plain line and a stretch limit.
+category: general
+type: prompt
+role: make
+job: brand
+level: intermediate
+inputs:
+  - type: competitor_set
+    required: true
+  - type: product_data
+    required: false
+outputs:
+  - type: brief
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: The Positioning Era Cometh, Advertising Age articles, 1972
+    by: Al Ries and Jack Trout
+    used: The ladder of brands in the buyer's mind and one attribute per brand
+  - title: The stronger a brand gets in a particular category, the weaker it gets elsewhere
+    by: Jack Trout, Outlook Business interview
+    used: Going around a leader rather than straight at it, and the cost of stretching a brand

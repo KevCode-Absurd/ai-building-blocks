@@ -1,0 +1,89 @@
+new_slug: unboxing-card-and-note-planner
+name: "Unboxing card and note planner"
+summary: "Paste your order value and margin. Get an insert card, note and gift rule with a cost check."
+job: keep-customers
+thinking: low
+thinking_why: "It follows fixed rules and simple sums."
+
+headline: "Unboxing card and note planner"
+subhead: "Paste your average order value, margin and monthly orders. The prompt designs the insert card, the note rule and the gift rule, then works out what it costs and how many repeat orders it must earn back."
+
+explain: |
+  Parcel extras can feel kind and still lose money. A $3 box on a $25 order eats the profit. And a gift tied to a review breaks the rules of most review sites.
+
+  This prompt starts with delivery and returns, because a note in a late parcel does not build loyalty. It then sizes the card, note and gift to your order value and shows both sums, so you can see the cost before you print anything.
+
+when:
+  - "You want to add a card or gift to your parcels."
+  - "You are not sure what you can afford per order."
+  - "You want repeat orders, not just a nice unboxing."
+
+you_give:
+  - "Average order value and margin per order"
+  - "Orders per month and packaging cost per order"
+  - "Your product and a few voice lines (optional)"
+you_get:
+  - "The card wording"
+  - "A note rule and a gift rule"
+  - "A monthly cost and a payback sum"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste your numbers under the prompt."
+  - "Add a few lines your brand has written, so the card sounds like you."
+  - "Test the plan on a part of your orders and keep some without it."
+
+how_it_works:
+  - title: "Fix the base first"
+    text: "Ask if delivery is on time and returns are easy. If not, say to fix those before spending on the box."
+  - title: "Match spend to order value"
+    text: "Under about $30 order value, keep to a card and a sticker. This is a starting rule, not from a study."
+  - title: "Design the card"
+    text: "Write a thank-you, a link or QR code to a 60-second how-to video, and one next step. Prefer a loyalty sign-up over a discount code."
+  - title: "Set the note rule"
+    text: "High-value orders get a signed note that names the item bought. If notes are printed, say so on the note."
+  - title: "Set the gift rule"
+    text: "A small gift that fits what they bought, with no strings. Never tie it to a review."
+  - title: "Do the sums"
+    text: "Cost per order times orders per month gives monthly cost. Extra repeat orders needed per 100 customers equals 100 times plan cost per order, divided by gross profit per repeat order."
+
+output_shape: |
+  CARD: <thank-you, link or QR, one next step>
+  NOTE RULE: <who gets one, what it says>
+  GIFT RULE: <what, for whom, no strings>
+  COSTS
+  Monthly: <cost per order> x <orders> = <amount>
+  Payback: 100 x <plan cost> / <gross profit per repeat order> = <repeat orders per 100 customers>
+  WHAT TO MEASURE: <...>
+  MISSING: <...>
+
+tweaks:
+  - what: "Order value"
+    how: "Under about $30, the plan stays small. Over $100, it can go further."
+  - what: "Your voice"
+    how: "Give three lines you have written. The card copy will match."
+  - what: "Marketplace"
+    how: "Say if you sell on a marketplace. It limits what can go in the box."
+
+judge:
+  - "The sums use your numbers and check by hand."
+  - "The card has one next step."
+  - "The gift is not linked to anything."
+  - "The plan fits your order value."
+
+test:
+  - "Check both sums with a calculator."
+  - "Run it twice. The rules should match."
+  - "Send the plan to one batch of orders and keep another without it."
+
+improve:
+  - "Add your real packaging quotes for the cost sum."
+  - "Add your brand voice lines."
+  - "Pair it with the Unboxing insert and gift planner for every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "Real quotes for cards and stickers"
+    - "Your repeat rate and cost to win a customer"

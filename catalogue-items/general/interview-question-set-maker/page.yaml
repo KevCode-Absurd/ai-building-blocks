@@ -1,0 +1,74 @@
+new_slug: interview-question-set-maker
+name: Interview question set maker
+summary: Paste the role and what it needs. Get set questions, answer signs and a scorecard.
+job: hire-people
+thinking: medium
+thinking_why: It ties each question to a job need, which takes some judgement.
+headline: Interview question set maker
+subhead: Paste the role and the skills it needs. You get a short set of questions, what strong and weak answers sound like, and a scorecard so every candidate is judged the same way.
+explain: A chat can feel like an interview and still tell you little. This prompt keeps it fair. Every candidate gets the same core questions, each tied to a duty of the job. For each skill you get one past-experience question, one scenario, two follow-ups and plain signs of a strong and a weak answer. The scorecard is filled in before any group talk, which cuts the pull of first impressions. You make the hiring decision. The AI does not.
+when:
+  - You interview by feel and want it fairer.
+  - Two people interview and compare notes later.
+  - You need questions for a role you have not hired before.
+you_give:
+  - The role and level
+  - The three to five skills that matter most
+  - Time per interview (optional)
+you_get:
+  - Questions for each skill, with follow-ups
+  - Strong and weak answer signs
+  - A scorecard with ratings from 1 to 5
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste the role, its level and the skills it needs.
+  - Send it and read the result.
+  - Share the scorecard with everyone who interviews, before the first interview.
+how_it_works:
+  - title: Pick the skills
+    text: Four or five that the job truly needs.
+  - title: Ask the same questions
+    text: A past time, a scenario and two follow-ups for each skill.
+  - title: Score before you talk
+    text: Ratings from 1 to 5 with evidence, written alone first.
+output_shape: |-
+  <Skill 1>
+    Questions: past time / scenario / two follow-ups
+    STRONG: <what you would hear>
+    WEAK: <what you would hear>
+  (one block per skill)
+
+  SCORECARD
+  | Skill | Evidence heard | Rating 1-5 | Note |
+
+  HOW TO USE IT
+  <one line>
+
+  MISSING
+  <e.g. time per interview>
+tweaks:
+  - what: Level
+    how: Say junior or senior and the questions change in depth.
+  - what: Time
+    how: Give 30 or 60 minutes and it trims the set to fit.
+  - what: Phone screen
+    how: Ask for a five-question short version.
+judge:
+  - Every question ties to a duty.
+  - Strong and weak signs are things you can hear.
+  - No protected topics.
+  - The scorecard has evidence, not only a number.
+test:
+  - Give a role with five skills. It should pick four or five and drop none that matter.
+  - Ask it to add a question about age. It should refuse.
+  - Run twice. The skills picked should match.
+improve:
+  - Add two real moments from your team, so scenarios feel true.
+  - Score two past hires with it to see if the scorecard fits.
+  - Use the full skill for a whole panel with many stages.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - The role and level

@@ -1,0 +1,71 @@
+new_slug: rough-notes-to-minutes-writer
+name: Rough notes to minutes writer
+summary: Paste rough meeting notes. Get short minutes with decisions, owners and dates.
+job: organise-work
+thinking: low
+thinking_why: It sorts notes into three fixed buckets with few judgement calls.
+headline: Rough notes to minutes writer
+subhead: "Paste your rough notes or a transcript. You get minutes anyone can read in three minutes: the bottom line, what was decided, who does what by when, and what is still open."
+explain: Notes capture what was said. Minutes show what was decided. This prompt makes the switch. It finds the outcome first, writes each decision as a plain statement, and gives every action an owner and a date. Where the notes name no owner or date, it marks the gap and does not guess. The result is short enough that people who missed the meeting will read it.
+when:
+  - You have a page of notes and a team waiting for a summary.
+  - People left the meeting unsure who owns what.
+  - You want minutes sent within the hour.
+you_give:
+  - Rough notes or a transcript
+  - Date and who attended (optional)
+you_get:
+  - A bottom line in three lines or fewer
+  - Decisions, each as a statement
+  - Actions with owner and date
+  - Open questions with a next step
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste your rough notes.
+  - Send it and read the result.
+  - Send the minutes the same day, while people remember.
+how_it_works:
+  - title: Find the result
+    text: What was decided comes first.
+  - title: Sort three ways
+    text: Decisions, actions and open questions.
+  - title: Mark the gaps
+    text: Missing owners or dates are flagged, never guessed.
+output_shape: |-
+  BOTTOM LINE
+  <three lines at most>
+
+  DECISIONS
+  - Decided to <x>
+
+  ACTIONS
+  - [ ] <owner>: <task>, due <date>
+
+  OPEN QUESTIONS
+  - <issue>. Next step: <who, what>
+tweaks:
+  - what: Length
+    how: Ask for one paragraph for a quick team post.
+  - what: Names
+    how: Give a list of attendees so names are spelled right.
+  - what: Format
+    how: Ask for a table of actions to paste into a tracker.
+judge:
+  - Decisions are statements.
+  - Every action has an owner and a date or a mark.
+  - Nothing invented.
+  - Shorter than the notes.
+test:
+  - Paste notes with no owner on one task. It should write [unassigned].
+  - Paste notes with a topic but no decision. It should go under open questions.
+  - Run twice. The decisions should match.
+improve:
+  - Add a standard header with your team name.
+  - Ask for a short chat version for the same notes.
+  - Keep a running file of actions across meetings.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - Rough notes or a transcript

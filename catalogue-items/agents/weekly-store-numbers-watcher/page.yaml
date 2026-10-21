@@ -1,0 +1,103 @@
+new_slug: weekly-store-numbers-watcher
+name: Weekly store numbers watcher
+summary: Give it weekly Shopify and GA4 numbers. Get which to trust, any sharp drop explained, and the funnel step to fix.
+job: track-numbers
+thinking: high
+thinking_why: It compares weeks, picks a path from the gaps and traces causes. Give it your strongest model.
+headline: Weekly store numbers watcher
+subhead: Give it last week's Shopify and GA4 numbers. It checks which numbers you can trust, traces any mismatch, looks into a sharp drop in the right order, finds where shoppers leave, and hands back what to check next.
+explain: |
+  A store's numbers disagree more often than owners expect. Shopify shows one session count, GA4 another. Sales dip, and you spend a week fixing the wrong thing because the dip was only a tracking gap.
+
+  This agent reads your numbers once a week, in an order that saves time. It first checks which numbers are safe to use. If two reports disagree by more than a tenth, it traces the gap before it reads any drop. If sales or conversion fell by a fifth against your recent average and the numbers agree, it looks into the drop. Then it finds the funnel step that leaks most. You get one or two things to check, each tied to a number. It changes no tracking, ads or settings.
+when:
+  - You look at your numbers each week but the sources do not match.
+  - Sales or conversion dipped and you want to know why before changing anything.
+  - You want one weekly read of your funnel with the same checks every time.
+you_give:
+  - Shopify analytics numbers for last week and the four weeks before
+  - GA4 exports by channel, landing page and funnel step for the same weeks
+  - What changed, such as a sale, a new theme or an edit to tracking (optional)
+  - Meta or Google conversion reports, if you want them checked against orders (optional)
+you_get:
+  - Which tiles to trust and which to ignore, with the Shopify to GA4 gap
+  - This week against your four-week average, with the sums
+  - The main driver of any sharp drop, ranked
+  - The funnel step that leaks most and one or two things to check
+how_to_use:
+  - Add the agent in Claude Code, or save it in .claude/agents.
+  - Put last week's Shopify numbers and GA4 exports in one folder, with the four weeks before on the first run.
+  - Ask it to read this week. Tell it what changed.
+  - Read what to check next and look at the page or report it names.
+  - Run it again next Monday. It compares with the saved weeks.
+how_it_works:
+  - title: Read the recent weeks
+    text: Works out the four-week average for sales, orders and conversion from the saved weeks.
+  - title: Check the numbers first
+    text: Marks which Shopify tiles to trust and sets Shopify sessions against GA4.
+  - title: Read channels and pages
+    text: Works out conversion by channel and landing page and finds the worst funnel drop.
+  - title: Choose the path
+    text: If reports disagree by over a tenth, it traces the gap first. If numbers agree and something fell by a fifth, it investigates the drop. Then it checks the funnel and ad reports if the results call for it.
+  - title: Pick what to check next
+    text: Names one or two items, each tied to the number that triggered it.
+  - title: Save and hand back
+    text: Saves the week for next time and hands back the read, then stops.
+output_shape: |-
+  THIS WEEK
+    Sales <amount> | Orders <n> | Conversion <%> | vs 4-week average <change> | sums shown
+
+  CAN YOU TRUST IT
+    Use: <tiles> | Ignore: <tiles> | Shopify vs GA4 sessions gap <%>
+
+  PATH TAKEN
+    <mismatch first | drop investigation | funnel check | quiet week>: <why>
+
+  WHAT CHANGED AND WHY
+    <driver> | share of the drop <%> | evidence <...>
+
+  WHERE SHOPPERS LEAVE
+    <step to step> | likely cause <plain words>
+
+  CHECK NEXT
+    1. <check> | where to look <...> | triggered by <number>
+
+  WATCH NEXT WEEK
+    <1 to 3 numbers>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Four full weeks of numbers
+    how: The path depends on the change from your recent average. With one week it cannot tell a real drop from normal ups and downs.
+  - what: What counts as a gap
+    how: The start is 10 percent between Shopify and GA4, and 20 percent for a drop. Change both to suit your store.
+  - what: What changed
+    how: A sale, a stock-out or a tracking edit explains many drops. Tell it first.
+  - what: Ad platform reports
+    how: Paste them only if you want conversions checked against orders. Otherwise it skips that step.
+judge:
+  - The agreement check came before any drop was read.
+  - Every change is set against the four-week average, with the sums shown.
+  - No drop was explained from numbers that disagree.
+  - Each item to check is tied to a number.
+  - Nothing was changed without your yes.
+test:
+  - Run it on a past week where you know why sales dipped. See if it finds the same cause.
+  - Run it with Shopify and GA4 numbers that differ on purpose and check it traces the gap first.
+  - Run it twice on the same files. The path and the checks should be the same.
+improve:
+  - Set your own size of drop and gap that count in step 4.
+  - Add your sale calendar, so planned dips are not read as problems.
+  - Save the checks you acted on each week, so the next run can see whether they worked.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the numbers folder and run every Monday.
+    - name: Google Analytics 4
+      why: Export channels, landing pages and funnel steps from here.
+    - name: Shopify
+      why: Export the analytics numbers from the reports pages.
+  inputs:
+    - A calendar of sales, launches and price changes
+    - Ad platform conversion reports for the same weeks

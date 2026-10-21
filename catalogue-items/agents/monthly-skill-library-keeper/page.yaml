@@ -1,0 +1,98 @@
+new_slug: monthly-skill-library-keeper
+name: Monthly skill library keeper
+summary: Point it at your skills folder each month. Get weak, clashing and unsafe skills found, and gaps worth a new skill.
+job: make-skills
+thinking: medium
+thinking_why: It runs up to seven checks and merges the findings, but each check is a read. A mid-level model is enough, and the safety step is explicit.
+headline: Monthly skill library keeper
+subhead: Point it at your folder of skills once a month. It finds skills that never fire, clash, fail checks or look unsafe, and suggests skills worth adding. It checks safety first and never runs a skill it flagged.
+explain: |
+  A folder of skills decays. Two skills end up with near the same job, so neither fires reliably. A skill is edited and quietly breaks. A skill from outside brings a script nobody read. Meanwhile a task you repeat every week still has no skill.
+
+  This agent audits the whole folder each month. It checks when each skill fires, tests the new and changed ones, and tests every skill at least once a quarter. Anything from outside gets a safety check first. A skill that fails it is marked do not run and is never tested or run. It then looks for tasks worth a new skill. You get one ranked fix list. It never edits, installs or publishes anything on its own.
+when:
+  - You have more than a handful of skills and are not sure all of them still work.
+  - You add skills from other people and want them checked before they run.
+  - Your AI picks the wrong skill, or no skill, for jobs you do every week.
+you_give:
+  - The folder of skills, each with its SKILL.md
+  - Which ones came from outside (optional)
+  - A project folder, to find skills the work needs (optional)
+  - Session or screen history, to find tasks you repeat (optional)
+  - Last month's folder, after the first run
+you_get:
+  - Which skills are new, changed or flagged since last month
+  - Skills that never fire, or clash with each other
+  - Any skill marked do not run, with what was found
+  - A ranked fix list to approve
+  - Skills worth adding, from your projects and history
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's check.
+  - Point it at the folder where your skills live. Say which came from outside.
+  - Read the hand-back. Anything marked do not run goes first.
+  - Say yes to the fixes you want, or make them yourself. For a skill that failed its test, use the Prompt and skill tuner.
+  - Run it next month. It checks whether the fixes worked.
+how_it_works:
+  - title: Take stock
+    text: Lists every skill and marks it new, changed or unchanged since last month.
+  - title: Check the triggers
+    text: Finds skills too vague to fire, too broad, or clashing with another.
+  - title: Check structure and quality
+    text: Validates new and changed skills, and tests those plus every flagged skill and a rotating sample of the rest.
+  - title: Check safety first
+    text: Checks outside skills and new scripts. A skill that fails is marked do not run and is not tested or run.
+  - title: Check portability and gaps
+    text: If you use more than one AI tool, checks the skills load in each. If nothing is unsafe, looks for skills worth adding.
+  - title: Rank and hand back
+    text: Puts every finding in one list, unsafe first, and stops for your yes.
+output_shape: |-
+  THIS MONTH
+    Skills <n> | New <n> | Changed <n> | Flagged <n> | Unsafe <n>
+
+  DO NOT RUN
+    <skill> | found: <what>
+
+  FIXES TO APPROVE (at most 15, ranked)
+    1. <skill> | problem: <what> | found by: <step> | fix: <what>
+
+  CLASHES
+    <skill A> and <skill B> | keep: <which> | why: <reason>
+
+  SKILLS WORTH ADDING
+    <name> | would do: <job> | from: <project or history>
+
+  LAST MONTH'S FIXES
+    <fix> | <fixed | still open>
+
+  FILES AND MISSING
+    <each step's file and the inventory> | MISSING: <every line>
+tweaks:
+  - what: Where each skill came from
+    how: Mark the ones from outside. They get a safety check every time they change.
+  - what: How often unchanged skills are tested
+    how: It starts at once a quarter. Test them monthly if the folder is small.
+  - what: Which AI tools you use
+    how: Name them. If it is more than one, the portability check runs.
+  - what: History to read
+    how: Give it a week of session or screen history. The more real work it sees, the better the new-skill ideas.
+judge:
+  - Every skill is in the inventory, marked new, changed or unchanged.
+  - No skill flagged unsafe was tested, run or recommended.
+  - Every finding names the skill and the check that found it.
+  - Skills not tested this month are listed with when they will be.
+  - Nothing was edited, installed or published without your yes.
+test:
+  - Add a skill with a planted risk, such as a script that reads a secrets file. It should be marked do not run.
+  - Add two skills with near the same description. It should name the clash.
+  - Run it twice on the same folder. The findings should match, apart from wording.
+improve:
+  - Keep the inventory each month so changed skills are easy to see.
+  - Remove skills you no longer use. A smaller folder fires more reliably.
+  - Write down why you kept one of two clashing skills, so the next run does not raise it again.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read the skills folder, keep the inventory and run the checks on a schedule.
+  inputs:
+    - The prompts you use most often, to compare with the skills you have
+    - A note of which skills fired wrongly last month

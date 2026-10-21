@@ -1,0 +1,99 @@
+new_slug: monthly-cloud-and-ai-bill-keeper
+name: Monthly cloud and AI bill keeper
+summary: Give it your cloud and AI bills each month. Get what grew, the waste behind it and caps to add.
+job: ship-and-host
+thinking: medium
+thinking_why: It sums bills, compares two months and runs up to five skills. The sums need care but the reasoning is not deep.
+headline: Monthly cloud and AI bill keeper
+subhead: Give it this month's cloud, hosting and AI bills. It sets each line beside last month and finds what moved. It runs the right waste checks, and puts spend caps first when AI costs are climbing. You get a saving list to approve.
+explain: |
+  Cloud and AI bills creep. A forgotten server, a loop that calls a paid model again and again, or a plan that no longer fits can add up for months before anyone opens the bill. When someone does, they see one big number and no cause.
+
+  This agent reads the bills every month, line by line, against the month before. It finds what moved, then picks the checks that fit your setup. If AI spend is climbing, it looks for missing caps before anything else, because a runaway loop costs more than every other saving. Each proposed fix has a monthly saving, the time it takes and what could break. It stops and asks before it stops, deletes or changes anything.
+when:
+  - You pay for cloud, hosting or AI services and nobody reads the bills closely.
+  - Your AI bill jumped and you do not know why.
+  - You want to know whether last month's savings really showed up.
+you_give:
+  - This month's bills as a spreadsheet or export, one per provider
+  - Last month's bills, or let the agent save them from the first run
+  - The code, if you want caps added to AI calls (optional)
+  - What changed this month, such as a launch or a new feature (optional)
+  - A monthly budget (optional)
+you_get:
+  - Each line against last month, with the sums
+  - The one to three lines that explain the change, and the cause if it can be found
+  - Spend caps and loop limits for AI calls, before any other saving
+  - A saving list to approve, each with its size, effort and risk
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's check.
+  - Put the final bills in one folder, or attach them in the chat.
+  - Point it at the code if you want caps added. Give it read-only access to any account it needs to look at.
+  - Read the list. Say yes to the fixes you want, or make them yourself.
+  - Run it next month. It checks whether each fix brought its line down.
+how_it_works:
+  - title: Total each line
+    text: Sums every service and provider and shows the sums.
+  - title: Compare with last month
+    text: Gives the change in money and percent for each line.
+  - title: Find the mover
+    text: Names the lines that explain most of the change and sets them against what you said changed.
+  - title: Choose the path
+    text: If AI spend is up sharply, it checks for missing caps first. Then it runs the AWS or Vercel check that fits your setup, and the AI cost check when AI is a top line.
+  - title: Test each saving
+    text: Writes the monthly saving and the time to do it, and drops a fix that is not worth the effort.
+  - title: Hand back and stop
+    text: Gives one list to approve, saves it, and checks next month whether the lines fell.
+output_shape: |-
+  THIS MONTH
+    Total <amount> | last month <amount> | change <amount, percent> | budget <amount or none>
+
+  WHAT MOVED
+    1. <line> | <change> | cause: <cause or "not known">
+
+  CAPS TO PUT IN PLACE
+    <cap or loop limit> | where: <file or setting>
+
+  SAVINGS TO APPROVE (biggest first, at most 10)
+    1. <fix> | saves <amount> a month | effort <time> | risk: <what could break>
+
+  LAST MONTH'S FIXES
+    <fix> | line before <amount>, now <amount>
+
+  WATCH NEXT MONTH
+    <1 to 3 lines>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your budget
+    how: Give a monthly number. The report then says over or under, and by how much.
+  - what: What changed
+    how: A launch or a new feature explains many jumps. Tell it, and it will not call that waste.
+  - what: The "AI spend is up sharply" cut-off
+    how: It starts at up by more than half. Lower it if your AI bill is a big share of costs.
+  - what: The smallest saving worth doing
+    how: It starts at about an hour of your time a month. Raise it if you are short of time.
+judge:
+  - Every total and change is shown with its sums.
+  - Spend caps come first when AI spend is climbing.
+  - Each saving has a line it comes off, and is not counted twice.
+  - Each fix says what could break.
+  - Nothing in any account was changed without your clear yes.
+test:
+  - Run it on a past month where you know why the bill grew. See if it finds the same cause.
+  - Give it a bill with a made-up jump in one AI line. It should check caps first.
+  - Run it twice on the same bills. The list should match, apart from wording.
+improve:
+  - Save each month's bills in the same folder so the next run has something to compare with.
+  - Note launches and one-off costs each month, so they are not read as waste.
+  - Set a budget per provider if one provider tends to run away.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can read the code, keep the bills folder and run the checks on a schedule.
+    - name: AWS Cost Explorer
+      why: Export cost by service and by day, which shows when a jump started.
+  inputs:
+    - Your usage numbers for AI calls, by feature
+    - A list of what each server or service is for

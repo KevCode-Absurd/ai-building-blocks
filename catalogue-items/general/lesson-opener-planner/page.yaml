@@ -1,0 +1,94 @@
+new_slug: lesson-opener-planner
+name: "Lesson opener planner"
+summary: "Paste today's topic and last lesson. Get a five-minute opener that brings back what learners know."
+job: teach-and-train
+thinking: low
+thinking_why: "It builds a short activity in a fixed shape from two facts you give."
+
+headline: "Lesson opener planner"
+subhead: "Paste today's topic and last lesson. Your AI plans a five-minute opener that brings back what learners know, with what to say and what to do next."
+
+explain: |
+  A lesson that starts with new content loses the learners who forgot the last one. A short opener that brings back the right idea gets everyone ready, and shows you who is not.
+
+  This prompt picks the one idea today's topic needs and builds a five-minute task around it. You get the words to say, what to listen for, and the next move for ready and stuck learners.
+
+when:
+  - "You plan tomorrow's lesson and need a start."
+  - "Learners walk in cold each time."
+  - "You want to see who remembers last lesson."
+
+you_give:
+  - "Today's topic"
+  - "What you taught last lesson"
+  - "Learners (optional)"
+
+you_get:
+  - "The idea linking the two lessons"
+  - "A five-minute opener task"
+  - "What to say"
+  - "What ready and stuck answers sound like, and the next move"
+
+how_to_use:
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Paste your details under it, in the slots under What you need."
+  - "Send it and read the answer against the checks on this page."
+  - "Reply with what to change, and keep the version that works."
+
+how_it_works:
+  - title: "Find the link"
+    text: "The one idea carried over."
+  - title: "Build the task"
+    text: "Five minutes, learners do something."
+  - title: "Write the words"
+    text: "Two or three sentences."
+  - title: "Listen for answers"
+    text: "Ready versus stuck."
+  - title: "Plan the next move"
+    text: "For each."
+
+output_shape: |
+  LINK
+  <one idea>
+  OPENER
+  <task> (<minutes>)
+  WHAT TO SAY
+  <2 to 3 sentences>
+  READY OR STUCK
+  Ready: <answer>
+  Stuck: <answer>
+  NEXT MOVE
+  <for each>
+  MISSING
+  <lines>
+
+tweaks:
+  - what: "Format"
+    how: "Ask for a written, spoken or pairs opener."
+  - what: "Time"
+    how: "Ask for a two-minute version."
+  - what: "Learners"
+    how: "Say who struggled last time so the opener reaches them."
+
+judge:
+  - "The opener uses last lesson's idea."
+  - "It takes five minutes."
+  - "Every learner has a task."
+  - "The next move is clear for both answers."
+
+test:
+  - "Try it in a real lesson, then note who was stuck."
+  - "Run it twice for the same topic. The link should match."
+  - "Give no last lesson. It should ask or mark MISSING."
+
+improve:
+  - "Add your usual routines, such as a board question."
+  - "Add the common misunderstanding to listen for."
+  - "Keep a list of openers for each unit."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "One message is enough."}
+  inputs:
+    - "A common mistake from last lesson"
+    - "Learners who need extra help"

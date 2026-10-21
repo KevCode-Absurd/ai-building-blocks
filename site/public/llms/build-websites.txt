@@ -1,6 +1,6 @@
 # Build websites and web apps: AI Blocks
 
-> 60 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 62 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3D web scene builder](https://useaiblocks.com/skills/3d-web-scene-builder): Describe the scene or product viewer. Get a working 3D page with fast loading and a fallback.
 - [3D website builder](https://useaiblocks.com/skills/3d-website-builder): Describe the site. Get a 3D web page with shaders, smooth motion, a preloader and phone-friendly tuning.
@@ -15,6 +15,7 @@
 - [Comparison table designer](https://useaiblocks.com/skills/comparison-table-designer): Give it your products or plans. Get a comparison page that helps people choose, with a fair default pick.
 - [Editorial web designer](https://useaiblocks.com/skills/editorial-web-designer): Describe the interface. Get a calm, document-style design with warm greys, crisp borders and quiet motion.
 - [Favicon maker](https://useaiblocks.com/skills/favicon-maker): Give it a logo image. Get a full set of favicons and the link tags added to your site.
+- [Font pair shortlist maker](https://useaiblocks.com/prompts/font-pair-shortlist-maker): Paste your brand feel and who reads the site. Get three font pairs with sizes and line spacing that read well.
 - [Full-page screenshot taker](https://useaiblocks.com/skills/full-page-screenshot-taker): Give it a page address. Get one long image of the whole page, even with scroll areas and lazy images.
 - [GLSL shader writer](https://useaiblocks.com/skills/glsl-shader-writer): Describe the visual effect. Get an efficient vertex and fragment shader for the web or a game.
 - [Headless store builder](https://useaiblocks.com/skills/headless-store-builder): Describe the store you want. Get a fast custom storefront on Hydrogen, ready to host on Oxygen.
@@ -33,6 +34,7 @@
 - [Page metadata fixer](https://useaiblocks.com/skills/page-metadata-fixer): Point it at your pages. Get missing titles, share cards, canonical links and page data found and fixed.
 - [Page speed fixer](https://useaiblocks.com/skills/page-speed-fixer): Paste your PageSpeed report. Get fixes for speed, access, best practice and SEO scores, in ordered batches.
 - [Page transition animator](https://useaiblocks.com/skills/page-transition-animator): Describe the motion you want. Get smooth React page and element transitions that respect reduced-motion settings.
+- [Page tree and URL sketcher](https://useaiblocks.com/prompts/page-tree-url-sketcher): Paste what your site does and who it is for. Get a page tree, menu and web addresses.
 - [Photopea editor embedder](https://useaiblocks.com/skills/photopea-editor-embedder): Say what image editing your app needs. Get Photopea embedded and scripted to open, edit and export files.
 - [Polished interface builder](https://useaiblocks.com/skills/polished-interface-builder): Describe the interface. Get a built page with careful colour, layout and motion, not a stock template look.
 - [Product attribute field setter](https://useaiblocks.com/skills/product-attribute-field-setter): Say which product facts matter. Get fields for material, specs and sizing filled in, so AI can match products. Changes live data.

@@ -1,0 +1,98 @@
+new_slug: video-opening-line-batch-writer
+name: "Video opening line batch writer"
+summary: "Paste your product and post idea. Get ten different video hooks and the two to film first."
+job: grow-social
+thinking: low
+thinking_why: "It writes short lines from your facts, with few judgement calls."
+
+headline: "Video opening line batch writer"
+subhead: "Paste your product and post idea. The prompt writes ten opening lines in ten different styles, plans the first picture for the best three, and tells you which two to film first."
+
+explain: |
+  Most short videos are lost in the first seconds. People write the whole video, then bolt on a first line. This prompt flips that. It spends all its effort on the opening, and gives you ten options so you are not stuck with your first idea.
+
+  Each hook gets a style tag, a word count and a plain-words rule. The best three also get a first picture you can really film. The word limits come from one creator's review of viral Reels, not a controlled test. Check them against your own watch data.
+
+when:
+  - "You have a video idea and no strong first line."
+  - "Your videos get views for three seconds and then drop."
+  - "You want a batch of options before you film anything."
+
+you_give:
+  - "What you sell and the post idea"
+  - "Who should stop scrolling (optional)"
+  - "What you can really film in the first shot (optional)"
+  - "One proof number you can back up (optional)"
+you_get:
+  - "Ten hooks in ten different styles, each with a word count"
+  - "A first picture for your top three"
+  - "The two hooks to film first, with the reason"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Add your product, post idea and who it is for under the prompt."
+  - "Say what you can really film, so the first pictures are ones you can shoot."
+  - "Film the two it picks. Keep the others for next week."
+
+how_it_works:
+  - title: "Work on the opening only"
+    text: "Do not write the rest of the video. Spend all the effort on the first three seconds."
+  - title: "Write ten styles"
+    text: "Write ten hooks, each in a different style, and tag each one. Pick from: pattern interrupt, contrarian, curiosity gap, outcome, direct address, I-story, relatable, list, comparison, urgency."
+  - title: "Keep the text short and plain"
+    text: "On-screen text is four to twelve words, mostly five to eight, in words a ten-year-old knows. It must work with the sound off."
+  - title: "Hold back the result"
+    text: "For a curiosity hook, name the topic and keep the answer for later. Too vague loses strangers. Too complete gives no reason to stay."
+  - title: "Use only true facts"
+    text: "Use only numbers I gave you. Make up no result, no health or income claim and no deadline."
+  - title: "Plan the first picture"
+    text: "For your top three, describe the first frame: subject, light, background. It must show the topic and be something I can film."
+  - title: "Pick two to film"
+    text: "Say which two to film first and why."
+
+output_shape: |
+  HOOKS for <product> | post idea: <idea>
+  1  <style> | "<on-screen text>" | <n> words
+  (ten lines, ten different styles)
+
+  TOP THREE
+  A  <style> | "<text>" | first picture: <subject, light, background>
+     half-second test: <would a stranger know what is going on?>
+  B  ...
+  C  ...
+
+  FILM FIRST: <hook> and <hook>, because <reason>
+  MISSING: <anything not given>
+
+tweaks:
+  - what: "Your first shot"
+    how: "Say exactly what you can film. Without it the prompt plans a simple product-in-hand shot."
+  - what: "Proof number"
+    how: "Give one real number and its source. Without it, no outcome hook is written."
+  - what: "Platform"
+    how: "Say Reels, TikTok or Shorts if the style matters. The default is Reels."
+  - what: "Your voice"
+    how: "Paste a caption you wrote. The hooks will sound more like you."
+
+judge:
+  - "Ten hooks, and no two read like the same line reworded."
+  - "Each line makes sense to a stranger with no sound."
+  - "No number in a hook that you did not give."
+  - "The first pictures are things you could film today."
+
+test:
+  - "Run it on a video you already posted and compare its hook to the ten."
+  - "Run it twice. The styles should stay different each time."
+  - "Film two hooks, post both, and check which keeps more viewers past three seconds."
+
+improve:
+  - "Add your own best-performing hooks under the prompt so it learns what works for you."
+  - "Add words your buyers use, and words you never say."
+  - "Pair it with the Short video hook writer when you want every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "A caption or hook that already did well for you"
+    - "Words your buyers use about the problem"

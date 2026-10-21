@@ -1,6 +1,6 @@
 # Ship and host your app: AI Blocks
 
-> 58 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 61 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [App update health checker](https://useaiblocks.com/skills/app-update-health-checker): Name your Expo app. Get crash rates, installs and update sizes for each published update.
 - [AWS architecture designer](https://useaiblocks.com/skills/aws-architecture-designer): Describe your app. Get an AWS design with serverless parts, setup templates and cost cuts.
@@ -20,6 +20,7 @@
 - [Docker Compose setter](https://useaiblocks.com/skills/docker-compose-setter): Describe your app services. Get a Docker Compose setup with networks, volumes and settings.
 - [Docker setup builder](https://useaiblocks.com/skills/docker-setup-builder): Point it at your app. Get a lean, safe Dockerfile and compose file that run your project.
 - [Domain and DNS planner](https://useaiblocks.com/skills/domain-and-dns-planner): List your domains and sites. Get a DNS layout, redirect rules and a plan for unused names.
+- [Domain and redirect layout planner](https://useaiblocks.com/prompts/domain-redirect-layout-planner): Paste your domains and what each is for. Get the main address, redirects and a plan for names you do not use.
 - [Error budget planner](https://useaiblocks.com/skills/error-budget-planner): Name your service. Get service level targets, error budgets and alert rules that match what users feel.
 - [Expo build workflow writer](https://useaiblocks.com/skills/expo-build-workflow-writer): Say how you want your app built and released. Get a working EAS workflow file that does it.
 - [Feature flag planner](https://useaiblocks.com/skills/feature-flag-planner): Say what you ship. Get flags with rollout steps, kill switches and a plan to remove them later.
@@ -34,12 +35,14 @@
 - [Model launch engineer](https://useaiblocks.com/skills/model-launch-engineer): Give it a trained model. Get it running as a live service with an API and container.
 - [Monitoring planner](https://useaiblocks.com/skills/monitoring-planner): Describe your service. Get metrics, logs, traces, alerts and service targets that tell you when it hurts.
 - [Monitoring system planner](https://useaiblocks.com/skills/monitoring-system-planner): Describe your service. Get a plan for metrics, logs, traces, SLOs and alerts that you can build step by step.
+- [Monthly cloud and AI bill keeper](https://useaiblocks.com/agents/monthly-cloud-and-ai-bill-keeper): Give it your cloud and AI bills each month. Get what grew, the waste behind it and caps to add.
 - [Netlify publisher](https://useaiblocks.com/skills/netlify-publisher): Point it at your site. Get it live on Netlify as a preview or production deploy, with the link.
 - [Outage incident leader](https://useaiblocks.com/skills/outage-incident-leader): Give it an outage. Get severity, a timeline, roles and a blame-free review once it is fixed.
 - [Page speed gate builder](https://useaiblocks.com/skills/page-speed-gate-builder): Point it at your web app. Get a Lighthouse check in CI that blocks slow or weak pages.
 - [Pre-push repo cleaner](https://useaiblocks.com/skills/pre-push-repo-cleaner): Point it at your project. Get junk files, dead code and leaked secrets found and fixed before you publish.
 - [Production stability reviewer](https://useaiblocks.com/skills/production-stability-reviewer): Give it a service. Get weak spots found and fixes like timeouts, retries and circuit breakers, so outages stay small.
 - [Release a new version and prove it is live](https://useaiblocks.com/workflows/release-a-new-version-and-prove-it-is-live): Give it your project. Get a version, changelog, go or no-go call and proof it is live.
+- [Release day rollback planner](https://useaiblocks.com/prompts/release-day-rollback-planner): Paste what you are releasing and where it runs. Get checks, a rollback plan and how to know it worked.
 - [Release manager](https://useaiblocks.com/agents/release-manager): Run it before each release. Get a go or no-go, version, changelog, rollback plan and a live check.
 - [Release preparer](https://useaiblocks.com/skills/release-preparer): Point it at your project. Get the version bumped, a changelog written and a tagged release ready to publish.
 - [Release proof checker](https://useaiblocks.com/skills/release-proof-checker): Point it at a deployed service. Get fresh proof across code, CI, database and live routes before you call it ready.

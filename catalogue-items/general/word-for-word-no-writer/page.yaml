@@ -1,0 +1,72 @@
+new_slug: word-for-word-no-writer
+name: Word-for-word no writer
+summary: Paste the request you must turn down and why. Get a no you can say, with another way forward.
+job: lead-people
+thinking: low
+thinking_why: It reshapes your reasons into a short script with few judgement calls.
+headline: Word-for-word no writer
+subhead: Paste the request, your real reasons and anything you can offer. You get a no you can say or send, with the reasons first, the answer plain and one other way forward.
+explain: A vague no leaves people hoping, and a cold one costs you trust. This prompt writes the middle path. It repeats the request so the person feels heard, gives your real reasons, says no in one clear sentence, and points to what you can do. It also asks whether you would give the same answer to anyone, which keeps the no fair.
+when:
+  - You must refuse a raise, a day off, a project or a favour.
+  - You keep dodging the answer because you dread the talk.
+  - You want words you can say out loud in two minutes.
+you_give:
+  - The request, who made it and when
+  - Your real reasons
+  - What you can offer instead (optional)
+you_get:
+  - The no, word for word, under 150 words
+  - The likely goal behind the request, marked as a guess
+  - A one-line fairness check
+  - "Gaps marked, such as MISSING: alternative"
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste the request, your real reasons and what you can offer instead.
+  - Send it and read the result.
+  - Ask for a spoken version in short lines if you will say it aloud.
+how_it_works:
+  - title: Hear them first
+    text: The request is said back in your words, with what they need.
+  - title: Say the no plainly
+    text: One sentence, first person, after the real reasons.
+  - title: Point somewhere
+    text: One to three routes you can truly offer, or a clear MISSING if you offered none.
+output_shape: |-
+  THE NO
+  <request restated, reasons, the no in one sentence, the route; under 150 words>
+
+  LIKELY GOAL
+  <a guess, marked as one>
+
+  FAIRNESS
+  <one line>
+
+  MISSING
+  <e.g. alternative>
+tweaks:
+  - what: Spoken or written
+    how: Say which, and the layout changes to short lines or a short email.
+  - what: Hard reasons
+    how: If a reason is private, say so. It will write that you cannot share it.
+  - what: Length
+    how: Ask for a one-sentence no for chat or text.
+judge:
+  - The no is clear and not softened away.
+  - Reasons are true ones.
+  - Routes are ones you offered.
+  - The tone is respectful from the first line.
+test:
+  - Give it a refusal with a private reason. It should say you cannot share it, not invent one.
+  - "Give no alternative. It should write MISSING: alternative."
+  - Run twice. The no should say the same thing.
+improve:
+  - Add how you normally speak, so the script sounds like you.
+  - Paste a no you gave before and ask what it missed.
+  - Use the full skill for a no that sits inside a longer talk.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - The request, who made it and when

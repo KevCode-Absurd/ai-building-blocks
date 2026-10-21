@@ -1,0 +1,26 @@
+slug: review-reason-spotter
+name: Review reason spotter
+summary: Paste 20 or more reviews or emails. Get buying reasons ranked, each in a customer's exact words.
+category: general
+type: prompt
+role: compress
+job: research
+level: beginner
+inputs:
+  - type: voc_reviews
+    required: true
+outputs:
+  - type: angle_library
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: "Use Your Words: An Interview on Conversion Copywriting with Joanna Wiebe"
+    by: Meryl Ayres, Wistia
+    url: https://wistia.com/learn/marketing/joanna-wiebe-conversion-copywriting
+    used: Reading line by line and keeping customers' exact words
+  - title: Know Your Customers' 'Jobs to Be Done'
+    by: Clayton M. Christensen, Taddy Hall, Karen Dillon and David S. Duncan, Harvard Business Review
+    url: https://hbr.org/2016/09/know-your-customers-jobs-to-be-done
+    used: Reading a purchase as progress the buyer wants to make

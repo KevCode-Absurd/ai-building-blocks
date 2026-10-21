@@ -1,0 +1,48 @@
+slug: phone-video-ad-scriptwriter
+name: Phone video ad scriptwriter
+summary: Paste your buyer, facts and offer. Get a 30-second phone-video script in five beats with a shot plan.
+category: general
+type: prompt
+role: make
+job: video
+level: intermediate
+inputs:
+  - type: brief
+    required: true
+  - type: product_data
+    required: false
+outputs:
+  - type: script
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: Creative best practices for performance ads
+    by: TikTok For Business
+    url: https://ads.tiktok.com/help/article/creative-best-practices
+    used: Say what the video is about in the first seconds; a native, person-led look; on-screen text for context
+  - title: "Unlock the potential of Reels: Best practices for creative success using Adobe Creative Cloud"
+    by: Meta, on the Adobe Blog
+    url: https://blog.adobe.com/en/publish/2024/11/04/unlock-potential-reels-best-practices-for-creative-success-using-adobe-creative-cloud
+    used: Tall 9:16 frame, sound on, key parts inside the safe zone
+  - title: 16 CFR 255.2 Consumer endorsements
+    by: US Federal Trade Commission, via Cornell LII
+    url: https://www.law.cornell.edu/cfr/text/16/255.2
+    used: A person shown as a customer must be one, or be labelled as not one
+  - title: Disclosures 101 for Social Media Influencers
+    by: US Federal Trade Commission
+    url: https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers
+    used: Speak only from real experience and make no claims the brand can't prove, behind the honest result cap
+  - title: The ABT (And, But, Therefore) Narrative Framework Training with Randy Olson, PhD
+    by: Randy Olson (Washington University in St. Louis training page)
+    url: https://crtc.wustl.edu/the-abt-and-but-therefore-narrative-framework-training-with-randy-olson-phd/
+    used: The and-but-so spine; a script with no 'but' has no story
+  - title: Levels of Awareness
+    by: Josh Kaufman, The Personal MBA
+    url: https://personalmba.com/levels-of-awareness/
+    used: Matching the opening to how much the buyer knows
+  - title: "Creators: 150 WPM Timing and Formatting for Voice Over Script Writing"
+    by: VoiceBros Team
+    url: https://voicebros.com/en/blog/voice-over-script-writing
+    used: Word budgets per length from a talking pace

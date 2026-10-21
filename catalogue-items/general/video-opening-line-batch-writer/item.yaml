@@ -1,0 +1,22 @@
+slug: video-opening-line-batch-writer
+name: "Video opening line batch writer"
+summary: "Paste your product and post idea. Get ten different video hooks and the two to film first."
+category: general
+type: prompt
+role: make
+job: organic
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: hooks}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "I Studied 1,300 Hooks, Here's What Actually Works", by: "Instagram growth educator and podcast host", used: "On-screen hook length, reading level, negative framing, picture before words, the fifteen hook types and the hook swap"}
+  - {title: "Instagram Expert Explains How to Grow from Zero Followers in 2026", by: "Instagram growth educator (guest) with a host", used: "Putting most planning time into the first seconds, visual hooks, the simple-language test and hook swap examples"}
+  - {title: "the ONLY way to BEAT the Instagram algorithm in 2026", by: "Instagram growth coach", used: "A hook that sounds like a friend talking beats a hook that sounds like marketing"}
+  - {title: "The Secret to Making Viral Content That Actually Sells", by: "E-commerce founder and YouTuber", used: "Opening a loop in the first sentence and keeping the answer for later"}
+

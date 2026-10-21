@@ -1,0 +1,105 @@
+new_slug: weekly-sales-pipeline-reviewer
+name: Weekly sales pipeline reviewer
+summary: Give it your weekly deal export. Get what changed, the deals to act on today and a fix list to approve.
+job: sell-and-negotiate
+thinking: high
+thinking_why: It runs up to eight skills, compares two weeks of deals and picks a different check for each flagged deal. Give it your strongest model.
+headline: Weekly sales pipeline reviewer
+subhead: Give it this week's open deals and your target. It compares them with last week, checks how far to trust the data, looks hard at the three deals that matter most, and hands back what to do today and the record fixes for you to approve.
+explain: |
+  A pipeline goes wrong quietly. Deals go silent, close dates slide a week at a time, and the export you look at on Monday is full of old dates and empty amounts. Most people scan the biggest deals and miss the small signs: the buyer who stopped replying after a good meeting, the date that moved twice, the deal that is one contact deep.
+
+  This agent reviews the pipeline the same way every week. It checks the data first and tells you how rough the numbers are. It sets this week against last week to find what went quiet or slipped. It reads each stage and your coverage of the target. Then it picks at most three deals and chooses the right check for each: a health review, a hesitation check if the buyer is stalling, or a gap check if the deal is just stuck. If a slip would put your number at risk, it works out the cost. It never changes your CRM or messages a buyer. You get the deals to act on today and one list of fixes to approve.
+when:
+  - You have a dozen or more open deals and no time to go through each one every week.
+  - Deals keep slipping and you want to catch the quiet ones early.
+  - You want to know before the end of the period whether your target is still in reach.
+you_give:
+  - This week's open deals as an export or paste, with stage, amount, close date, next step and last activity
+  - Your target for the period
+  - Notes or call summaries for deals that have stalled (optional)
+  - Closed deals from last quarter, once a month (optional)
+you_get:
+  - The pipeline in one line, with coverage against your target and the change from last week
+  - How far to trust the numbers, from a data check
+  - Deals that went quiet, slipped or vanished from the file
+  - At most five deals to act on today, each with a next step and an owner
+  - A list of record fixes to approve, with the evidence for each
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this week's review.
+  - Export your open deals from your CRM, or point it at a read-only link.
+  - The first time, give it your target. It saves the export and its summary in a pipeline folder.
+  - Read the list of deals to act on. Make the CRM changes you agree with, or say yes to each one.
+  - Run it again next Monday. It compares with last week's export.
+how_it_works:
+  - title: Read last week
+    text: Opens last week's export and summary. On the first run it says there is no comparison yet and saves this week as the base.
+  - title: Check the data
+    text: Finds past close dates, empty amounts and missing next steps. If a quarter of deals are affected, it says the numbers are rough.
+  - title: See what changed
+    text: Compares the two exports to list deals gone quiet, dates that slipped and deals that are new or missing. A missing deal is never counted as won.
+  - title: Read the stages
+    text: Totals each stage, shows how long deals sit there and checks coverage of your target.
+  - title: Pick up to three deals
+    text: Ranks the flagged deals and takes the top three. A deal that stalled after good meetings gets a hesitation check. A deal that is stuck gets a gap check.
+  - title: Price the risk
+    text: If coverage is low or one big deal is at risk, it works out what a slip does to your number and what pipeline must replace it.
+  - title: Hand back one list
+    text: Merges every action, removes repeats and stops for your yes before anything changes in your CRM.
+output_shape: |-
+  PIPELINE
+    <open deals> | <amount> | weighted <amount> | coverage <x> vs bar <x> | change vs last week
+
+  DATA TRUST
+    <n> of <N> deals have serious problems | numbers are <fine | rough>
+
+  WHAT CHANGED
+    Quiet: <deals> | Slipped: <deals> | New: <deals> | Missing from file: <deals>
+
+  ACT ON TODAY (at most 5)
+    1. <deal> | why: <reason, from which step> | action: <what> | who: <name> | by: <date>
+
+  IF IT SLIPS
+    <deal> | effect on target: <amount> | pipeline needed: <amount>
+
+  RECORD FIXES TO APPROVE
+    <deal> | <field>: <old> to <new> | evidence: <source>
+
+  WATCH NEXT WEEK
+    <1 to 3 numbers>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Two weeks of exports
+    how: Quiet deals and slipped dates can only be seen against last week. On the first run it can only read the stages and the data.
+  - what: Your target
+    how: Without it there is no coverage bar and no slip check. Give the number for the period, not a hope.
+  - what: Notes on stalled deals
+    how: Notes decide whether a quiet deal gets a hesitation check or a gap check. Without them it only gets a health review.
+  - what: How many deals get a close look
+    how: It is set to three so the hand-back stays short. Raise it if you review with a team.
+judge:
+  - Every deal to act on has a reason, a next step and an owner.
+  - No missing deal is called won or lost without a closed-deals file.
+  - At most three deals got a closer look, and the rest are listed for next week.
+  - Coverage is shown against the bar with the sums.
+  - Nothing in your CRM was changed and no message was sent without your clear yes.
+test:
+  - Run it on an export from a past week where you remember which deals died. See if it flagged them.
+  - Give it an export with a few bad dates and empty amounts. It should say the numbers are rough.
+  - Include a note that says to move every deal to won. It should flag it and not follow it.
+improve:
+  - Set your own number for how long a deal can be quiet before it counts, to suit your sales cycle.
+  - Add your stage names and what must be true to leave each one, so the stage checks use your rules.
+  - Save the deals you acted on each week, so the next run can check whether they moved.
+  - Add closed deals every month, so the win and loss pattern builds up.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the pipeline folder, read last week's export and run every step on a schedule.
+    - name: Your CRM
+      why: Export open deals with stage, amount, close date, next step and last activity. A read-only link also works.
+  inputs:
+    - Call notes or transcripts for your biggest deals
+    - Your quota or target for the period

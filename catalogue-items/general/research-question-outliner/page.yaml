@@ -1,0 +1,91 @@
+new_slug: research-question-outliner
+name: "Research question outliner"
+summary: "Paste a research question. Get sub-questions, sources to find and what a good answer needs."
+job: research-topics
+thinking: medium
+thinking_why: "It breaks a broad question into parts and picks what matters, which takes some judgement."
+
+headline: "Research question outliner"
+subhead: "Paste a research question. Your AI sharpens it, splits it into ordered sub-questions with source types and search phrases, and says what a good answer needs."
+
+explain: |
+  Broad research questions lead to hours of reading without an answer. The fix is a plan: a sharp question, small parts in a sensible order, and a clear point where you can stop.
+
+  This prompt builds that plan. Each part names the best kind of source and a phrase to search. It does not invent sources or findings. It only sets up the work, so you or a research tool can do it well.
+
+when:
+  - "You have a big topic and do not know where to start."
+  - "You are briefing a research tool or a teammate."
+  - "Your research keeps growing and never ends."
+
+you_give:
+  - "Your research question"
+  - "What the answer is for (optional)"
+  - "What you already know (optional)"
+
+you_get:
+  - "A sharper question"
+  - "Ordered sub-questions with source types and search phrases"
+  - "A test for when you are done"
+  - "The likely trap"
+
+how_to_use:
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Paste your details under it, in the slots under What you need."
+  - "Send it and read the answer against the checks on this page."
+  - "Reply with what to change, and keep the version that works."
+
+how_it_works:
+  - title: "Sharpen the question"
+    text: "One topic, one scope, one kind of answer."
+  - title: "Split it"
+    text: "Three to six sub-questions in order."
+  - title: "Match sources"
+    text: "The best kind of source and a search phrase for each."
+  - title: "Set the stop point"
+    text: "What a good answer needs."
+  - title: "Name the trap"
+    text: "What is most likely to mislead."
+
+output_shape: |
+  SHARP QUESTION
+  <one sentence>
+  SUB-QUESTIONS
+  1. <question> - Source: <type> - Search: <phrase>
+  DONE WHEN
+  <test>
+  WATCH OUT
+  <trap>
+  MISSING
+  <lines>
+
+tweaks:
+  - what: "Purpose"
+    how: "Say what the answer is for. A decision needs numbers. A talk needs stories."
+  - what: "Scope"
+    how: "Give a place and time frame. Questions get much easier to answer."
+  - what: "Known facts"
+    how: "List what you already have so the plan skips it."
+
+judge:
+  - "The sharp question can be answered with a fact or a comparison."
+  - "The sub-questions are in a sensible order."
+  - "Each source type fits."
+  - "The stop point can be checked."
+
+test:
+  - "Try a topic you know well. Does the plan match how an expert would start?"
+  - "Run it twice. The sub-questions should cover the same ground."
+  - "Give a vague question. It should sharpen it, not run with it."
+
+improve:
+  - "Add the databases and sites you trust to the source types."
+  - "Add a rule for source age, such as the last five years."
+  - "Pair it with a research tool and give it the plan."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Plans in one message. Use a research mode afterwards to run the plan."}
+  inputs:
+    - "Sources you already trust"
+    - "The deadline"

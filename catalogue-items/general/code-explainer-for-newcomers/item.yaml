@@ -1,0 +1,18 @@
+slug: code-explainer-for-newcomers
+name: "Code explainer for newcomers"
+summary: "Paste working code. Get it explained in reading order for someone new, with what each part is for."
+category: general
+type: prompt
+role: make
+job: analysis
+level: beginner
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: document}
+uses: []
+origin: own
+credits:
+  - {title: "Literate Programming", by: "Donald Knuth", url: "https://www-cs-faculty.stanford.edu/~knuth/lp.html", used: "Write a program as an explanation for people, with named pieces placed where the reader needs them"}
+version: 1.0.0
+example_pending: true

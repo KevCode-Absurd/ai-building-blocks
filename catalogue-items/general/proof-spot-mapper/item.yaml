@@ -1,0 +1,20 @@
+slug: proof-spot-mapper
+name: "Proof spot mapper"
+summary: "Paste your reviews, quotes and buyer doubts. Get which proof to show, where it goes and what to drop."
+category: general
+type: prompt
+role: make
+job: page
+level: beginner
+inputs:
+  - {type: voc_reviews, required: true}
+  - {type: persona, required: false}
+outputs:
+  - {type: objection_map}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "The Only Landing Page Guide You'll Ever Need", by: "An agency owner who builds landing pages", used: "The open review grid with a headline, name and source on each review, and why carousels get little engagement"}
+  - {title: "I Studied 1000 Landing Pages, Here's What Works in 2025", by: "The same agency owner", used: "Adding a real quote to each press logo, and what makes a review believable"}

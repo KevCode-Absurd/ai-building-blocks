@@ -1,0 +1,102 @@
+new_slug: decision-checklist-keeper
+name: Decision checklist keeper
+summary: Give it each big decision and, later, how it turned out. Get a checked call now and a sharper checklist over time.
+job: think-and-decide
+thinking: high
+thinking_why: It picks its path from how hard the choice is to undo, loops on a failed check and judges old decisions by process. Use your strongest model.
+headline: Decision checklist keeper
+subhead: Give it a big decision. It sorts how hard it is to undo, runs the checks that fit, answers your own checklist item by item and hands back a call for you to make. When the result is in, it judges the process and sharpens the list.
+explain: |
+  Big decisions go wrong in the same few ways: too little checking on a choice you cannot undo, too much on one you can, a pressure you did not see, or a lesson from last time that nobody wrote down. A checklist helps, but only if it is run, and only if it is kept up to date.
+
+  This agent keeps the checklist and the record. For each new decision, it first asks how hard the choice is to undo. A choice you can reverse gets a light check. A choice you cannot gets a check for pressure, the best case against it and, where money or your name is at stake, a test for what could ruin you. Then it runs your checklist. If a stop item fails, it asks for the missing facts and runs it again, at most twice. When the review date comes, it judges the decision by how it was made, not just how it ended, and proposes changes to the list. You make every call.
+when:
+  - You face a decision that is hard to undo and want it checked the same way each time.
+  - You keep making the same kind of mistake and want a list that catches it.
+  - A past decision has played out and you want to learn from it fairly.
+you_give:
+  - The decision, who it touches and when it is due
+  - What you know and what you wish you knew
+  - What is at stake, for choices that are hard to undo
+  - Your checklist and past decisions, if you have them (optional)
+you_get:
+  - The decision sorted as easy or hard to undo, with the cost of undoing it
+  - How much evidence is enough, what to get first and a date to decide
+  - Your checklist answered item by item, with a clear go, change, wait or not-ready call
+  - A review of the process later, and changes to your checklist for you to approve
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it the decision.
+  - Answer its questions on facts it marks as unknown. It may ask twice.
+  - Make the call yourself. It saves the decision with a review date.
+  - On the review date, give it what happened. Say yes or no to each change it proposes for your checklist.
+  - The first time you have no checklist. After three decisions on file, it offers to build one.
+how_it_works:
+  - title: Sort the door
+    text: Asks how hard the choice is to undo and what undoing would cost. That sets how much checking it gets.
+  - title: Set the evidence bar
+    text: Says how much evidence is enough, what to get first and a date to decide.
+  - title: Choose the checks
+    text: An easy-to-undo choice gets a light check. A hard-to-undo one gets the pressure check and the best case against it. If money, time or your name is at stake, it also tests what could ruin you.
+  - title: Run your checklist
+    text: Answers each item with evidence. If a stop item fails, or several are unknown, it asks for facts and runs again, at most twice.
+  - title: Record the call
+    text: Saves the call, the reasons, what would prove it wrong and a review date. You make the decision.
+  - title: Review and learn
+    text: On the review date, it judges the process, writes a rule if a weak check caused a bad result, and proposes changes to your list.
+output_shape: |-
+  DECISION
+    <one line> | door: <easy or hard to undo> | cost of undoing: <amount or effort>
+
+  EVIDENCE BAR
+    enough: <level> | you have: <share> | get first: <fact> | decide by: <date>
+
+  PRESSURES AND CASE AGAINST (hard-to-undo only)
+    <strongest points> | cooling-off step: <step>
+
+  RUIN CHECK (if money, time or name at stake)
+    unrecoverable outcome: <outcome> | capped version: <change and cost>
+
+  CHECKLIST
+    1. <item> | PASS, FAIL or UNKNOWN | evidence: <fact> | rounds: <1 to 3>
+
+  THE CALL
+    <go | change | wait | not ready to decide> | reason: <reason> | would prove it wrong: <sign> | review on: <date>
+
+  REVIEW (on the review date)
+    expected: <x> | actual: <x> | process: <good or weak> | checklist changes for your yes: <list>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: What is at stake
+    how: Say it in money, time and who else is affected. Without it, the ruin check cannot tell a small loss from one you could not recover from.
+  - what: Your checklist
+    how: Keep it to twelve items or fewer, each with a clear pass line. A long list gets skipped.
+  - what: How many rounds it may loop
+    how: Two is the starting point. More rounds rarely help if the facts are not out there.
+  - what: Review dates
+    how: Set them for when the result will actually be known. Too early, and luck is mistaken for skill.
+judge:
+  - The door was sorted before any other check.
+  - A hard-to-undo choice got the pressure check and the case against it.
+  - No go was given while a stop item failed.
+  - The review judged how the decision was made, not just the result.
+  - Nothing was announced, spent or saved without your yes.
+test:
+  - Run it on a decision you made last year and compare its call with what you did.
+  - Give it the same decision twice. The door and the checklist answers should match.
+  - Give it a decision with a missing key fact and see if it asks for it instead of guessing.
+improve:
+  - Add a stop item for the mistake you make most often.
+  - Add the facts you always forget to collect to the "what you know" list.
+  - Cut checklist items that never failed in your last ten decisions.
+  - Log decisions made by other people too, to find mistakes you have not made yet.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the decisions folder and read the checklist and log each time.
+    - name: Notion or Google Docs
+      why: Keep your decision log here and paste a row in when a review date comes.
+  inputs:
+    - Notes from past decisions and how they turned out
+    - The numbers behind the choice, such as costs, dates and quotes

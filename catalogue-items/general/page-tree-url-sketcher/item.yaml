@@ -1,0 +1,18 @@
+slug: page-tree-url-sketcher
+name: "Page tree and URL sketcher"
+summary: "Paste what your site does and who it is for. Get a page tree, menu and web addresses."
+category: general
+type: prompt
+role: make
+job: page
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: page_layout_spec}
+uses: []
+origin: own
+credits:
+  - {title: "site-architecture skill", by: "Corey Haines", url: "https://github.com/coreyhaines31/marketingskills/tree/main/skills/site-architecture", used: "Page hierarchy, flat versus deep trees, URL patterns and the three-click rule, adapted under the MIT licence"}
+version: 1.0.0
+example_pending: true

@@ -1,0 +1,16 @@
+slug: test-result-trust-checker
+name: "Test result trust checker"
+summary: "Paste a finished test's numbers. Get whether to trust it, the lift as a range and a ship call."
+category: ecommerce
+type: prompt
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

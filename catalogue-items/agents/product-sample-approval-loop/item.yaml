@@ -1,0 +1,28 @@
+slug: product-sample-approval-loop
+name: "Product sample approval loop"
+summary: "Give it your tech pack and each sample. Get go or hold, fixes for the factory, and a stop at three rounds."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: intermediate
+inputs:
+  - {type: document, required: true}
+  - {type: product_photos, required: true}
+  - {type: spreadsheet, required: false}
+  - {type: product_data, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: brief}
+uses: [sample-approval-gatekeeper, product-tech-pack-writer, landed-cost-calculator, pre-shipment-inspection-brief-writer, factory-shortlist-vetter]
+steps:
+  - {uses: sample-approval-gatekeeper, note: "Every sample round: your tech pack checked line by line against the sample, scored, with a go or hold."}
+  - {uses: product-tech-pack-writer, note: "Only when a failed line is vague, missing or measured two ways in the pack: the pack is tightened before the next round."}
+  - {uses: landed-cost-calculator, note: "Once, when a pre-production or production sample gets a go: margin re-checked with the real quote and the defect rate seen so far."}
+  - {uses: pre-shipment-inspection-brief-writer, note: "Only when the production sample gets a go: the inspector's brief, pass rule and payment terms."}
+  - {uses: factory-shortlist-vetter, note: "Only when a third round still fails a critical line: the shortlist is re-scored to pick the next factory to try."}
+schedule: "Each time a new sample arrives"
+asks_before: [sending anything to a factory, paying a deposit or balance, placing or changing an order, approving mass production, switching suppliers]
+origin: own
+version: 1.0.0
+example_pending: true

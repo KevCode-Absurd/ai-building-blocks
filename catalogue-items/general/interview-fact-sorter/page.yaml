@@ -1,0 +1,79 @@
+new_slug: interview-fact-sorter
+name: Interview fact sorter
+summary: Paste notes from customer talks. Get facts told apart from praise and ideas, with the next question.
+job: understand-customers
+thinking: medium
+thinking_why: Telling a fact from praise or a wish takes some judgement.
+headline: Interview fact sorter
+subhead: Paste your rough notes from customer talks under this prompt. It labels each line as a fact, a compliment, vague talk or an idea, and marks who is a likely customer. You get the next question to ask for each.
+explain: |
+  After a customer chat it is easy to come away thinking it went well. People are kind. They say they love the idea and would buy it. That tells you very little. What counts is what they did: what they tried, what it cost them, and what they still put up with.
+
+        This prompt sorts your notes by that test. Facts about the past stay. Praise and "I would" talk are set aside, each with a better question to ask next time. Ideas get a "why", because the reason behind a feature request is the useful part.
+when:
+  - You just finished a round of customer calls and the notes are a mess.
+  - Everyone said they liked your idea and you do not trust it.
+  - You want to know which people are real customers and which were just being polite.
+you_give:
+  - Your rough notes from one or more customer talks
+  - What you wanted to learn (optional)
+you_get:
+  - Each item labelled fact, compliment, vague or idea
+  - The next question to ask for every weak item
+  - A verdict on each person, based on what they did
+  - Counts of real signals by separate people
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - Include who said what, even as initials.
+  - Put exact quotes in quote marks.
+  - Use the next questions in your following calls.
+how_it_works:
+  - title: Split into items
+    text: Each quote or learning becomes one line with a name.
+  - title: Label each one
+    text: Fact, compliment, vague or idea.
+  - title: Add the next question
+    text: Every weak item gets a better question for next time.
+  - title: Judge each person
+    text: Likely customer, complainer or not a customer, by what they did.
+  - title: Count the signals
+    text: Pains, workarounds and money facts are counted by people.
+output_shape: |
+  ITEMS
+        <person> | <item> | Fact / Compliment / Vague / Idea | <next question>
+
+        PEOPLE
+        <person>: <verdict>, because <what they did>
+
+        REAL SIGNALS
+        <signal>: <n> people
+
+        TO DO
+        <follow-ups>
+tweaks:
+  - what: Exact quotes
+    how: The more exact words you paste, the fewer lines get marked as paraphrased.
+  - what: Your questions
+    how: Say what you wanted to learn and it will say which questions the notes did not answer.
+  - what: Many calls
+    how: Paste all your calls together to count signals by people.
+judge:
+  - Only things people did or paid for are marked as facts.
+  - Every compliment and "I would" line has a better question beside it.
+  - Each person's verdict names the thing they did.
+  - No quote has been reworded.
+test:
+  - Run it on notes from a call you remember well. The facts should be the things you could prove.
+  - Plant a line like "I'd definitely buy that". It should come back as vague, with a question.
+  - Run it twice. The labels should match.
+improve:
+  - Add your own big questions at the top so every run is judged against them.
+  - Add a line asking it to list the questions you forgot to ask.
+  - Keep the real signals in a running file across calls.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - Notes written during the call, not after
+    - The date for each talk

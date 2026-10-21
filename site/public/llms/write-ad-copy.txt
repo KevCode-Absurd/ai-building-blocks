@@ -1,10 +1,12 @@
 # Write ad copy: AI Blocks
 
-> 63 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 65 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Ad angle planner](https://useaiblocks.com/skills/ad-angle-planner): Name your ad's buyer. Get a short brief on how it opens, argues and asks.
+- [Ad ask line writer](https://useaiblocks.com/prompts/ad-ask-line-writer): Paste your ad and offer. Get two clear asks, each with a true reason to act and the doubts removed.
 - [Ad first line writer and scorer](https://useaiblocks.com/skills/ad-first-line-writer-and-scorer): Paste your buyer and proof. Get ten first lines, or fixes for yours, and a score out of 100.
 - [Ad headline writer](https://useaiblocks.com/skills/ad-headline-writer): Paste your buyer and facts. Get plain headlines with character counts and the line to test first.
+- [Ad opening line batch writer](https://useaiblocks.com/prompts/ad-opening-line-batch-writer): Paste your buyer and proof. Get ten ad opening lines, each with the line that follows it.
 - [Almost-buyer follow-up writer](https://useaiblocks.com/skills/almost-buyer-follow-up-writer): Paste your offer and what leads did before they stopped. Get a follow-up email series with a new reason each time.
 - [Article-style image ad writer](https://useaiblocks.com/skills/article-style-image-ad-writer): Paste your idea and its landing page. Get an article-style ad, an image brief and a page check.
 - [Belief ladder builder](https://useaiblocks.com/skills/belief-ladder-builder): Paste a draft with a big claim. Get the claims reordered into small accepted steps, each scored, and a redraft.

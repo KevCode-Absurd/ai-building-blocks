@@ -1,0 +1,100 @@
+new_slug: monthly-repeat-buyer-keeper
+name: Monthly repeat buyer keeper
+summary: Give it your order export each month. Get your repeat health scored, the one stage to fix and a plan for it.
+job: keep-customers
+thinking: high
+thinking_why: It reads cohort numbers, judges whether last month's fix worked and picks one of five paths from the cause. Give it your strongest model.
+headline: Monthly repeat buyer keeper
+subhead: Give it last month's orders and your product list. It scores how many first-time buyers come back, checks whether last month's fix worked, finds the one stage holding buyers back, and hands back a plan for that stage to approve.
+explain: |
+  Repeat business is where most profit hides, and most advice about it starts in the wrong place. People rebuild their emails when the real cause is a product that does not match its promise, a late delivery, or buyers who came in on a deep discount and never meant to return. Fixing the wrong stage costs a month and shows nothing.
+
+  This agent reads your order data each month and scores repeat health in three parts. It checks the fix you chose last month before choosing a new one, and it will not call a fix a failure on one month of one cohort. Then it follows the cause: first-use trouble, a reorder gap, a delivery problem, a source of weak buyers, or too few big spenders. It runs the one skill that fits and sets one number to watch. It will tell you when the cause is the product, because no message fixes that. It never sends to customers or changes anything live.
+when:
+  - You sell things people could buy again and want to know where buyers drop off.
+  - You made a change last month and want an honest read on whether it worked.
+  - You are about to rebuild your emails and want to be sure that is the real problem.
+you_give:
+  - An orders export with customer, date, value, discount code and refund flag
+  - Your products, and how long one unit lasts
+  - Returns, support tickets and delivery dates (optional)
+  - Reviews or survey comments (optional)
+you_get:
+  - A repeat health score out of 100, with the three parts and the sums
+  - A verdict on last month's fix, either keep, drop or too early to tell
+  - The one stage to fix, with the cause and the evidence
+  - A plan for that fix, ready to approve, with its cost
+  - The one number to watch next month
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's check.
+  - Export your orders for at least six months and remove names and emails.
+  - Add your product list with how long one unit lasts, and any returns or ticket data.
+  - Read the plan and approve what you want. Make the changes yourself, or say yes to each one.
+  - Run it again next month. It compares with last month's files.
+how_it_works:
+  - title: Read last month
+    text: Opens last month's score, the fix you chose and the number it was meant to move. On the first run, this month becomes the base.
+  - title: Score repeat health
+    text: Scores the repeat rate, the cohort trend and how many causes are clear, and names the stage that holds buyers back.
+  - title: Check last month's fix
+    text: Compares the number the fix was meant to move. It waits two months before calling a fix a failure, and says when the data is too thin.
+  - title: Choose one path
+    text: Picks the first-use check, the reorder plan, the delivery flow, the best-and-worst buyer profile or the top-customer touch plan, from the cause. If the cause is the product, it says so and runs nothing.
+  - title: Set the measure
+    text: Names the one number that will show next month whether the fix worked, with today's value and the cohort it covers.
+  - title: Hand back
+    text: Gives the score, the verdict, the plan and the causes left for later, then stops for your yes.
+output_shape: |-
+  REPEAT HEALTH SCORE
+    <n>/100 | repeat rate <pts>/40 | cohort trend <pts>/30 | causes clear <pts>/30 | change vs last month
+
+  LAST MONTH'S FIX
+    <fix> | meant to move: <number> | now: <value> | call: <keep | drop | too early>
+
+  THE STAGE TO FIX
+    <stage> | cause: <product | range | who you win | delivery | first use | messages> | evidence: <...>
+
+  THE ONE FIX
+    <plan from the skill that ran> | cost: <...> | approve: <yes or no>
+
+  THE MEASURE
+    <number> | today: <value> | cohort: <which>
+
+  NOT THIS MONTH
+    <other causes, in order>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Six months of orders
+    how: With less, cohort numbers are noise and you get directions only.
+  - what: Cost of goods
+    how: Repeat value is measured in profit, not sales. Without costs it uses revenue after discounts and refunds as a stand-in.
+  - what: How long one unit lasts
+    how: It sets the reorder timing and the first-use window. Without it, those paths are skipped.
+  - what: Where first orders came from
+    how: With the campaign or channel for each first order, it can tell which source brings weak buyers.
+judge:
+  - The score shows its sums, and any part that was not scored is named.
+  - Last month's fix was checked before a new fix was chosen.
+  - Only one fix was chosen, with one number to watch.
+  - The cause comes from your data, and a product problem is named as one.
+  - Nothing was sent to customers or changed without your yes.
+test:
+  - Run it on an export from a year ago where you know what changed. See if it names the same stage.
+  - Run it twice on the same export. The score and the stage should match, apart from wording.
+  - Give it an export with fewer than 100 orders. It should say the numbers are directions only.
+improve:
+  - Add the campaign or channel for every first order, so it can tell which sources bring weak buyers.
+  - Set your own score line for first use if your product is slow to show a result.
+  - Save the fix you made each month in the folder, so it can check the result.
+  - Add return reasons by product, so first-use trouble shows up faster.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the repeat folder, read last month's files and run on a schedule.
+    - name: Your store or sales system
+      why: Export orders with customer id, date, value, discount code and refund flag.
+  inputs:
+    - Delivery dates against the promised date
+    - Return reasons and support ticket topics

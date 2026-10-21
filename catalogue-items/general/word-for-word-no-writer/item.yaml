@@ -1,0 +1,21 @@
+slug: word-for-word-no-writer
+name: Word-for-word no writer
+summary: Paste the request you must turn down and why. Get a no you can say, with another way forward.
+category: general
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: "The Mary Kay Way, Chapter 1: Golden Rule Leadership"
+    by: Mary Kay Ash
+    used: Treating the other person as you would want to be treated, listening and restating, giving real reasons, a direct no, and another route to their goal

@@ -1,0 +1,103 @@
+new_slug: page-tree-url-sketcher
+name: "Page tree and URL sketcher"
+summary: "Paste what your site does and who it is for. Get a page tree, menu and web addresses."
+job: build-websites
+thinking: low
+thinking_why: "It follows a clear pattern and needs few judgement calls."
+
+headline: "Page tree and URL sketcher"
+subhead: "Paste what your site does, who visits and what it must achieve. It picks a structure, draws the page tree, sets the menu, writes a short web address for each page and says which pages should link to each other."
+
+explain: |
+  Most site problems start with structure. Pages are buried, menus are crowded and addresses change every time someone adds something. Fixing it later means redirects and lost search ranking.
+
+  This prompt plans the structure first. It keeps important pages within three clicks, matches each address to its place in the tree, and lists the internal links that help visitors and search engines find things.
+
+when:
+  - "You are about to build a new site and need to know which pages to make."
+  - "Your menu has grown into a mess."
+  - "You are moving to a new platform and want a clean structure first."
+
+you_give:
+  - "What your site does and who it is for"
+  - "Your top three goals for it"
+  - "Pages and addresses you already have (optional)"
+you_get:
+  - "An indented page tree with addresses"
+  - "A main menu and footer list"
+  - "Page to page links, with a reason for each"
+  - "A list of redirects to set up"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "Pick the site type"
+    text: "Say whether it is a business, shop, blog, help site or mix, and how deep it should go (small sites 1 to 2 levels, most 3, big shops or docs 4)."
+  - title: "Draw the page tree"
+    text: "Show it as an indented list from the home page down. Keep every important page within three clicks of home. If a menu holds more than 20 items, add a level."
+  - title: "Set the menu"
+    text: "Choose the main menu (five to seven items), a footer list and where the one main action button goes."
+  - title: "Write the addresses"
+    text: "Give each page a short, lowercase address that matches its place in the tree. Mark any that must keep an old address and need a redirect."
+  - title: "Link the pages"
+    text: "For each key page, name two or three other pages it should link to, and why."
+
+output_shape: |
+  PAGE TREE
+  Home (/)
+    <Section> (/<section>)
+      <Page> (/<section>/<page>)
+
+  MAIN MENU
+  <5 to 7 items> + <main action button>
+
+  FOOTER
+  <items>
+
+  KEY LINKS
+  - <page> links to <page>: <why>
+
+  REDIRECTS NEEDED
+  - <old address> to <new address>
+
+  MISSING
+  <gaps>
+
+tweaks:
+  - what: "Your goals"
+    how: "Name the top three. Pages that serve none of them get dropped."
+  - what: "Old addresses"
+    how: "List the ones that have traffic or links, so they get a redirect."
+  - what: "Depth"
+    how: "Say if you want it flatter. Small sites work best with two levels."
+
+judge:
+  - "You can reach every key page in three clicks."
+  - "The addresses read like the menu."
+  - "The menu has seven items or fewer."
+  - "Every page has a reason to exist."
+
+test:
+  - "Ask someone to find three pages using only the tree. Time them."
+  - "Compare with your current site. Which buried page moved up?"
+  - "Run it twice. The top level should be nearly the same."
+
+improve:
+  - "Add the words your visitors use for your services, so menu names match."
+  - "Add your address rules, such as no dates."
+  - "Save the tree as a file your AI reads before building pages."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "Your top three site goals"
+  - "A list of old addresses worth keeping"
+
+terms:
+  - term: "Redirect"
+    meaning: "An instruction that sends visitors from an old web address to a new one."

@@ -1,0 +1,28 @@
+slug: research-topic-watcher
+name: "Research topic watcher"
+summary: "Name a topic once. Each month get the new papers, which ones are strong, and whether they change what you believe."
+category: agent
+type: agent
+role: orchestrate
+job: research
+level: intermediate
+inputs:
+  - {type: question, required: true}
+  - {type: source_text, required: false}
+  - {type: document, required: false}
+outputs:
+  - {type: document}
+  - {type: audit_report}
+  - {type: shortlist}
+uses: [literature-review-finder, scholarly-database-searcher, paper-claim-evidence-finder, study-claim-checker, research-paper-summarizer]
+steps:
+  - {uses: literature-review-finder, note: "Once, on the first run: the key papers sorted by theme, to build your standing summary of what is known."}
+  - {uses: scholarly-database-searcher, note: "Every month: papers and preprints published since the last run, found from open databases with the search shown."}
+  - {uses: paper-claim-evidence-finder, note: "Only for new papers that touch your standing summary and have full text available: the claims with their numbers and limits."}
+  - {uses: study-claim-checker, note: "Only for a new paper that supports or goes against your standing summary: biases, weak statistics and an evidence grade."}
+  - {uses: research-paper-summarizer, note: "Only for the few papers worth reading in full, and always for one that goes against your standing summary: the key findings in plain words."}
+schedule: "On the first working day of each month"
+asks_before: [changing your standing summary, sending anything to a colleague, client or journal, citing a paper as settled in work you publish, paying for a database or a full-text download]
+origin: own
+version: 1.0.0
+example_pending: true

@@ -1,6 +1,6 @@
 # Make image ads: AI Blocks
 
-> 52 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 54 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3D cutaway image ad maker](https://useaiblocks.com/skills/3d-cutaway-image-ad-maker): Paste how it works. Get a 3D cutaway image prompt, the words and feed copy.
 - [Accurate product image ad maker](https://useaiblocks.com/prompts/accurate-product-image-ad-maker): Paste your ad and photos. Get an image prompt that keeps your real product, and an image check.
@@ -39,8 +39,10 @@
 - [Problem moment image ad maker](https://useaiblocks.com/skills/problem-moment-image-ad-maker): Paste your story ad. Get a phone-photo image prompt of the problem moment and a caption line.
 - [Repeat one product photo in new colours as ads](https://useaiblocks.com/workflows/repeat-one-product-photo-in-new-colours-as-ads): Give it one product photo. Get matching image ads with exact words, checked, then sized up.
 - [Repeated image campaign planner](https://useaiblocks.com/skills/repeated-image-campaign-planner): Name your product and give one photo. Get a plan to repeat one flat image in new colours.
+- [Review quote ad card planner](https://useaiblocks.com/prompts/review-quote-ad-card-planner): Paste review lines. Get quote image ad cards with picture prompts and feed text that keep the words exact.
 - [Single image ad planner](https://useaiblocks.com/skills/single-image-ad-planner): Paste your facts. Get the layout, image words, feed copy and an image prompt.
 - [Sticky-note image ad maker](https://useaiblocks.com/skills/sticky-note-image-ad-maker): Paste your story ad. Get a sticky-note photo brief, an image prompt and a blank version.
+- [Story ad picture brief writer](https://useaiblocks.com/prompts/story-ad-picture-brief-writer): Paste your story ad. Get one picture brief, a ready image prompt and a short line to run under it.
 - [Talking object image ad maker](https://useaiblocks.com/skills/talking-object-image-ad-maker): Paste your buyer's moment. Get a talking object image prompt, the bubble line and the ad words.
 - [Three-way offer image ad planner](https://useaiblocks.com/skills/three-way-offer-image-ad-planner): Paste your offer. Get three offer image ads in two sizes and one offer block.
 - [Tracker chart image ad maker](https://useaiblocks.com/skills/tracker-chart-image-ad-maker): Paste your story ad and claims. Get a tracker-photo image prompt, one mark and the line under it.

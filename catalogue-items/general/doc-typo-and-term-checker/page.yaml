@@ -1,0 +1,69 @@
+new_slug: doc-typo-and-term-checker
+name: Doc typo and term checker
+summary: Paste a document. Get typos, grammar slips and term clashes listed, with no rewrites.
+job: work-with-files
+thinking: low
+thinking_why: It scans for fixed kinds of slip and lists them without rewriting.
+headline: Doc typo and term checker
+subhead: Paste your document. You get a numbered list of typos, grammar slips and term clashes, each with a fix and a reason, plus counts by type. Your words and your facts stay as they are.
+explain: "Most proofreading tools rewrite your voice. This one lists problems and stops. It checks six things only: typos, grammar, punctuation, names and capitals, style and structure. It also finds terms named two ways and picks the most common one. If a fact looks wrong it marks [verify] and leaves it alone. You get a clean list to work through and a count so you can see what kind of slips you make."
+when:
+  - A document is about to go out and you want a last check.
+  - You hate rewrites and only want errors listed.
+  - A team document uses three names for the same thing.
+you_give:
+  - The document text
+  - Spellings and terms you prefer (optional)
+you_get:
+  - A numbered list of slips with fixes and reasons
+  - Counts by type
+  - Doubtful facts marked [verify]
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste your document.
+  - Send it and read the result.
+  - Fix the list in one sitting, then read the result once more yourself.
+how_it_works:
+  - title: Read
+    text: Find the kind of document and the terms named two ways.
+  - title: Check six things
+    text: Typos, grammar, punctuation, names, style, structure.
+  - title: List, never rewrite
+    text: Each slip has a fix and a reason.
+output_shape: |-
+  1. ORIGINAL: "<quote>"
+     FIX: "<fix>"
+     REASON: <short>
+  (one entry per slip)
+
+  COUNTS
+  <typos, grammar, terms, style, structure>
+
+  VERIFY
+  <facts that look wrong>
+tweaks:
+  - what: Spelling
+    how: Say US or UK spelling.
+  - what: Strict
+    how: Ask it to flag every use of passive voice.
+  - what: Short
+    how: Ask for the top ten slips only.
+judge:
+  - No rewrites.
+  - Each item has a reason.
+  - Facts are not changed.
+  - Counts match.
+test:
+  - Paste a text with "the the". It should be found.
+  - Paste text with a wrong fact. It should say [verify].
+  - Run twice. The list should match.
+improve:
+  - Add your style guide's rules.
+  - Run it on your three most-used pages.
+  - Use the full skill for a long technical document.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - The document text

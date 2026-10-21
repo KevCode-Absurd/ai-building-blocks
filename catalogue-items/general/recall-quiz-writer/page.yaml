@@ -1,0 +1,97 @@
+new_slug: recall-quiz-writer
+name: "Recall quiz writer"
+summary: "Paste your lesson notes. Get a low-stakes recall quiz at three levels, with answers."
+job: teach-and-train
+thinking: low
+thinking_why: "It turns notes into questions in a fixed shape, with little judgement."
+
+headline: "Recall quiz writer"
+subhead: "Paste your lesson notes. Your AI picks the key ideas and writes a recall quiz with easy, medium and hard questions, model answers and a plan for when to repeat it."
+
+explain: |
+  People forget most of a lesson within days. The best fix is not re-reading, it is pulling the answer from memory. Short, low-stakes questions do that, and doing them again later helps most.
+
+  This prompt picks the ideas worth keeping and writes questions that make learners recall, not recognise. It writes three levels so every learner gets a win and a stretch, and it adds a repeat plan.
+
+when:
+  - "You taught something and want it to stick."
+  - "You need a starter quiz for the next lesson."
+  - "You are studying and want to test yourself."
+
+you_give:
+  - "The lesson notes or topic"
+  - "Who the learners are (optional)"
+  - "How many questions (optional)"
+
+you_get:
+  - "The key ideas"
+  - "Nine questions at three levels"
+  - "A model answer for each"
+  - "A repeat plan"
+
+how_to_use:
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Paste your details under it, in the slots under What you need."
+  - "Send it and read the answer against the checks on this page."
+  - "Reply with what to change, and keep the version that works."
+
+how_it_works:
+  - title: "Pick key ideas"
+    text: "The three to five that must last."
+  - title: "Write recall questions"
+    text: "Short answer or fill-in-the-blank."
+  - title: "Set three levels"
+    text: "Fact, why or how, and a new case."
+  - title: "Write model answers"
+    text: "Only from the notes."
+  - title: "Plan the repeats"
+    text: "Next day, week and month."
+
+output_shape: |
+  KEY IDEAS
+  <3 to 5>
+  QUIZ
+  Easy: 1-3
+  Medium: 4-6
+  Hard: 7-9
+  ANSWERS
+  <model answer for each>
+  REPEAT PLAN
+  <one line per level>
+  MISSING
+  <lines>
+
+tweaks:
+  - what: "Learners"
+    how: "Say their age and level so the wording fits."
+  - what: "Number"
+    how: "Ask for five questions for a quick starter, or twelve for a unit."
+  - what: "Question type"
+    how: "Ask for short answer only, or add a few matching questions."
+
+judge:
+  - "Learners could answer from memory, not by guessing."
+  - "The hard questions need a new case."
+  - "Answers match your notes."
+  - "No question hints at the answer."
+
+test:
+  - "Run the quiz on learners the next day. Which questions did most miss?"
+  - "Run it twice on the same notes. The key ideas should match."
+  - "Paste thin notes. It should mark MISSING instead of inventing facts."
+
+improve:
+  - "Add your usual question stems, such as \"Explain why\"."
+  - "Add the words learners must use."
+  - "Keep each quiz to repeat on the plan."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "One message is enough."}
+  inputs:
+    - "The learning goal"
+    - "Common mistakes learners make"
+
+terms:
+  - term: "Recall"
+    meaning: "Pulling an answer from memory, rather than reading it again."

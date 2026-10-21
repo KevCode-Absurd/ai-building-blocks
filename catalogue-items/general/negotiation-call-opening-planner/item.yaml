@@ -1,0 +1,21 @@
+slug: negotiation-call-opening-planner
+name: "Negotiation call opening planner"
+summary: "Paste the deal and who you meet. Get an opening, feeling labels, questions and what to learn first."
+category: general
+type: prompt
+role: make
+job: strategy
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "Yes is not agreement (newsletter article)", by: "Chris Voss and The Black Swan Group", url: "https://www.blackswanltd.com/", used: "Why a quick yes is weak, the safe no, and asking how a yes will get done"}
+  - {title: "Thou shalt not split the difference: 7 reasons why (newsletter article)", by: "Chris Voss and The Black Swan Group", url: "https://www.blackswanltd.com/", used: "The costs of meeting halfway and the search for hidden facts"}
+  - {title: "Never Split the Difference", by: "Chris Voss with Tahl Raz", used: "Labels, accusation audits and how and what questions, as summarised in the firm's public pages"}
+

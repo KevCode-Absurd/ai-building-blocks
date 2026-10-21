@@ -1,0 +1,18 @@
+slug: ai-tool-list-drafter
+name: "AI tool list drafter"
+summary: "Paste what your AI should do with your systems. Get a short list of clearly named tools it can pick from."
+category: general
+type: prompt
+role: make
+job: design
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+credits:
+  - {title: "mcp-server-design skill", by: "Paldom", url: "https://github.com/Paldom/mcp-server-skills/tree/main/skills/mcp-server-design", used: "Designing a small set of well-named tools with plain descriptions, adapted under the MIT licence"}
+version: 1.0.0
+example_pending: true

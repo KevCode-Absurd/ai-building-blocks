@@ -1,0 +1,79 @@
+new_slug: plan-guess-ranker
+name: Plan guess ranker
+summary: Paste your plan. Get the few guesses it rests on, each with a number, ranked by risk.
+job: test-an-idea
+thinking: medium
+thinking_why: It weighs how bad each guess is against what you really know.
+headline: Plan guess ranker
+subhead: Paste your plan under this prompt. It strips out comparisons, splits the plan into a value guess and a growth guess, and scores each belief by risk. You get a ranked list with a number on every guess and who to test first.
+explain: |
+  Every plan rests on a few guesses, and most of them feel like facts. "People will love it" and "it will spread" sound solid until you ask what number would have to be true. The risk is rarely spread evenly. A few guesses carry the whole plan.
+
+        This prompt finds them. It writes each guess as a number, marks what you know and what you only believe, and scores each by the damage if it is wrong and how little you have seen. The top one is what to test first.
+when:
+  - You have a plan and do not know what to test first.
+  - You are about to spend money on something you have not checked.
+  - Your plan leans on lines such as "it will be the next big thing".
+you_give:
+  - Your plan in a paragraph
+  - What worries you most (optional)
+you_get:
+  - The value guess and the growth guess
+  - A ranked list, each guess with a number
+  - The riskiest guess and why
+  - Who to test it on, and where to find ten of them
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - Include the price and how people find you.
+  - Be honest about what you have seen versus what you hope.
+  - Test the top guess before you work on the others.
+how_it_works:
+  - title: Strip comparisons
+    text: '"The X of Y" becomes plain facts.'
+  - title: Split the plan
+    text: A value guess and a growth guess.
+  - title: List the beliefs
+    text: What each guess needs to be true.
+  - title: Mark what you know
+    text: Known, checked or unchecked.
+  - title: Put a number on each
+    text: In the present tense.
+  - title: Rank by risk
+    text: Damage times how little you know.
+output_shape: |
+  VALUE GUESS: <...>
+        GROWTH GUESS: <...>
+
+        RANKED GUESSES
+        # | guess | number | damage | how little known | score
+
+        RISKIEST: <guess> because <reason>
+        TEST ON: <who and where>
+        MISSING: <...>
+tweaks:
+  - what: Figures in the plan
+    how: The more numbers you give, the fewer MISSING lines you get.
+  - what: What you have seen
+    how: Say what you watched real buyers do. It lowers the score.
+  - what: Stage
+    how: For a charity or inside a company, value means benefit to the people served.
+judge:
+  - Each guess has a number.
+  - Known items have a source.
+  - The top guess would hurt the most if wrong.
+  - Scores show the sum.
+test:
+  - Run it on a plan you know well. The top guess should be the one that keeps you up at night.
+  - Run it twice. The top three should match.
+  - Add a fact you have seen. That guess should drop down the list.
+improve:
+  - Add your own numbers to each guess before you run it.
+  - Add what you have already tested.
+  - Run it again after each test.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - Any numbers you have from tests
+    - A line on who you think your first buyers are

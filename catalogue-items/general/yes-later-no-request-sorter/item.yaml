@@ -1,0 +1,18 @@
+slug: yes-later-no-request-sorter
+name: "Yes-later-no request sorter"
+summary: "Paste your feature requests, who asked and your product focus. Get yes, later or no on each, with a kind reply."
+category: general
+type: prompt
+role: check
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: shortlist}
+uses: []
+origin: own
+credits:
+  - {title: "Getting Real", by: "Jason Fried and 37signals", url: "https://basecamp.com/gettingreal", used: "Start with no, count repeat requests, add up the hidden cost of each feature, and test it against the vision"}
+version: 1.0.0
+example_pending: true

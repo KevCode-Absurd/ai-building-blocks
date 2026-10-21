@@ -1,0 +1,81 @@
+new_slug: offer-name-batch-writer
+name: Offer name batch writer
+summary: Paste your offer and buyer. Get ten offer names built from five parts, with three to test.
+job: make-offer
+thinking: low
+thinking_why: It builds names from fixed parts, with few judgement calls.
+headline: Offer name batch writer
+subhead: Paste your offer and the buyer under this prompt. It builds ten names from five parts and screens them aloud. You get three names to test and a simple way to test them.
+explain: |
+  An offer called "Spring Special" says nothing. An offer called "The Neighbourhood 10-Day Kitchen Reset" says who it is for, what they get and how fast. Names like that make people stop, because they see themselves in it.
+
+        This prompt builds names from five parts: a reason for the deal, who it is for, the result, a time, and a container word that says it is a bundle. It writes ten, screens them, and picks three to test side by side.
+when:
+  - Your offer has a boring name.
+  - You are launching a deal and want it to sound specific.
+  - You want names to test against each other in ads.
+you_give:
+  - Your offer and its result
+  - Who it is for
+  - Platform rules on claims (optional)
+you_get:
+  - The five parts, filled in
+  - Ten names with the parts each one uses
+  - Three names to test and why
+  - A short plan for testing them
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - Be specific about the buyer, such as a role and a situation.
+  - Only keep names whose time and result you can back.
+  - Test no more than three names at once.
+how_it_works:
+  - title: Pick a reason
+    text: Three believable reasons for the deal.
+  - title: Name the buyer
+    text: As specific as you can.
+  - title: State the result
+    text: In a few words.
+  - title: Add time
+    text: Only if you can deliver it.
+  - title: Choose a container
+    text: A word that says it is a bundle.
+  - title: Write and screen ten
+    text: Said aloud, cut if the buyer would not see themselves.
+output_shape: |
+  PARTS
+        Reasons | Buyer | Result | Time | Container
+
+        TEN NAMES
+        1. <name> (parts used)
+
+        TEST THESE THREE
+        <name>: <why>
+
+        HOW TO TEST: <...>
+tweaks:
+  - what: How specific the buyer is
+    how: A street, role or situation makes names sharper than a broad group.
+  - what: Time claims
+    how: Remove the time if your ad platform limits time plus result claims.
+  - what: Tone
+    how: Say playful or plain and the names follow.
+judge:
+  - Each name tells a stranger who it is for.
+  - No name promises more than you can deliver.
+  - Names are short enough to say in one breath.
+  - The three picks are different from each other.
+test:
+  - Show the three picks to a buyer and ask who they think each is for.
+  - Run the three in ads with the same budget and picture.
+  - Compare with your current name.
+improve:
+  - Add names you have already used so they are not repeated.
+  - Add words you never use.
+  - Ask for names for each bonus in the same pattern.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - Your real result and how long it takes
+    - The words your buyers use for their problem

@@ -1,0 +1,24 @@
+slug: week-priority-picker
+name: Week priority picker
+summary: Paste your task list and real hours. Get the big tasks that matter, three priorities and tomorrow's list.
+category: general
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: Are You Hunting Antelope or Field Mice?
+    by: Tim Ferriss
+    used: Sorting tasks into big work that pays off and small work that only feels good, and finding the one task that makes others easier
+  - title: "Brian Tracy: ABCDE list technique and The Truth About Frogs"
+    by: Brian Tracy
+    used: Ranking tasks by consequence and doing the most important one first

@@ -1,0 +1,81 @@
+new_slug: week-priority-picker
+name: Week priority picker
+summary: Paste your task list and real hours. Get the big tasks that matter, three priorities and tomorrow's list.
+job: plan-strategy
+thinking: low
+thinking_why: It sorts a list against your hours, with a fixed result.
+headline: Week priority picker
+subhead: Paste your open tasks, your real hours this week and your main goal under this prompt. It splits big work from small work and fits the big work to your hours. You get three priorities with protected time and tomorrow's list.
+explain: |
+  Busy weeks often end with a lot done and the main project untouched. Small tasks feel good because they finish fast. Big tasks pay back for weeks, but they wait because they are harder to start.
+
+        This prompt sorts your list by that test. It finds the task that makes others easier, checks the one you have put off longest, and sends every small task to a batch, a person or the bin. Then it fits the big work into the hours you really have and picks exactly three priorities.
+when:
+  - Your list is long and the main project has not moved.
+  - You are starting a week and want a plan that fits your hours.
+  - You keep putting off the same task.
+you_give:
+  - Every open task, with rough hours
+  - Your real hours this week
+  - Your main goal this month
+you_get:
+  - Each task marked big or small, with a reason
+  - The lever task and a verdict on the one you put off
+  - Small tasks batched, handed off or dropped
+  - Three priorities with protected time and tomorrow's list
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - Count real hours, after meetings and travel.
+  - Include promises you made to others.
+  - Run it again at the start of each week.
+how_it_works:
+  - title: List everything
+    text: Every task with rough hours.
+  - title: Sort big from small
+    text: Does finishing it move the goal?
+  - title: Find the lever
+    text: The task that eases others.
+  - title: Test the one put off
+    text: Does it move the goal?
+  - title: Place the small tasks
+    text: Batch, hand off or drop.
+  - title: Fit the hours
+    text: Big work against real hours, with sums.
+  - title: Pick three
+    text: With protected time and tomorrow's list.
+output_shape: |
+  BIG: <task> | hours | why
+        SMALL: <task> | batch / hand to / drop
+        LEVER: <task>
+        PUT OFF LONGEST: <task> and verdict
+        HOURS: <big total> of <real hours>
+        THREE PRIORITIES: 1 | 2 | 3
+        TOMORROW: <time> <task>
+        MISSING: <...>
+tweaks:
+  - what: Real hours
+    how: Say how many you truly have. Low numbers give a smaller, firmer plan.
+  - what: Main goal
+    how: A sharper goal sorts big from small more cleanly.
+  - what: Helpers
+    how: Say who can take tasks so more small work is handed off.
+judge:
+  - Big tasks tie to your goal.
+  - The hours add up to no more than your real hours.
+  - Each small task has a place.
+  - Exactly three priorities.
+test:
+  - Run it on a week you know well. The big tasks should be the ones you wish you had done.
+  - Run it twice. The three priorities should match.
+  - Do the first priority and see if the day felt different.
+improve:
+  - Add your best hours of the day so priorities go there.
+  - Add recurring tasks so they are batched each week.
+  - Add a monthly goal in your own words.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - Your calendar for the week
+    - A list of who can take tasks from you

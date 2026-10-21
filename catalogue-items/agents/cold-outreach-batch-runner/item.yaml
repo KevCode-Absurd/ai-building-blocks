@@ -1,0 +1,30 @@
+slug: cold-outreach-batch-runner
+name: "Cold outreach batch runner"
+summary: "Give it your prospects and last batch's results. Get a checked batch of cold emails to approve and send."
+category: agent
+type: agent
+role: orchestrate
+job: email
+level: intermediate
+inputs:
+  - {type: persona, required: true}
+  - {type: offer, required: true}
+  - {type: spreadsheet, required: false}
+  - {type: performance_sheet, required: false}
+  - {type: source_text, required: false}
+outputs:
+  - {type: email_flow}
+  - {type: plan}
+uses: [inbox-delivery-fixer, prospect-list-builder, own-voice-outreach-writer, cold-email-writer, outbound-email-sequence-writer, cold-email-pre-send-checker]
+steps:
+  - {uses: inbox-delivery-fixer, note: "Only when the last batch bounced a lot or drew a spam complaint: stops sending and fixes the sending setup before anything else goes out."}
+  - {uses: prospect-list-builder, note: "Only when fewer unsent, qualified prospects are left than the next batch needs, or when replies show the list is the problem: builds or tightens the list, with the reason each one fits."}
+  - {uses: own-voice-outreach-writer, note: "When a voice file or a few of your sent emails exist: writes the first emails in your voice, each tied to a fact about that prospect."}
+  - {uses: cold-email-writer, note: "When there is no voice sample, or when the last batch needs a new angle: writes the first emails and the replies to people who answer."}
+  - {uses: outbound-email-sequence-writer, note: "Only for prospects who have not replied to a first email: writes the follow-ups with timing, up to four touches."}
+  - {uses: cold-email-pre-send-checker, note: "Every email, before it is ready to send: tests each claim against what you supplied, then fixes and checks again, up to three rounds."}
+schedule: "Once a week, on the day you send, after last batch's replies are in"
+asks_before: [sending any email, changing mailbox, domain or sending-limit settings, raising the daily send volume, contacting anyone on the do-not-contact list, using a paid or scraping data source to build a list, replying to a person who answered]
+origin: own
+version: 1.0.0
+example_pending: true

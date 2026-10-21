@@ -1,0 +1,22 @@
+slug: brain-dump-sorter
+name: Brain dump sorter
+summary: Paste everything on your mind. Get tasks, ideas and notes sorted with nothing lost.
+category: general
+type: prompt
+role: compress
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: plan
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: capture skill
+    by: Alireza Rezvani
+    url: https://github.com/alirezarezvani/claude-skills/tree/main/productivity/capture/skills/capture
+    used: A shorter one-message version of this skill, written fresh.

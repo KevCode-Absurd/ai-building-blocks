@@ -1,12 +1,13 @@
 # Plan stock, shipping and suppliers: AI Blocks
 
-> 86 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 89 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3PL bid and agreement builder](https://useaiblocks.com/skills/3pl-bid-and-agreement-builder): Give it forecasts and product sizes. Get a request for pricing and agreement terms to demand.
 - [AI task scoper for supply chain](https://useaiblocks.com/skills/ai-task-scoper-for-supply-chain): Describe a messy planning problem. Get one clear decision, an AI fit check and a safe hand-off plan.
 - [Assembly line balancer](https://useaiblocks.com/skills/assembly-line-balancer): Give it your work steps and times. Get steps split across stations so none waits or overloads.
 - [Budget and space picker (knapsack)](https://useaiblocks.com/skills/budget-and-space-picker-knapsack): Give it items with values and costs. Get the best set to pick within your budget, weight or space limit.
 - [Co-packer picker](https://useaiblocks.com/skills/co-packer-picker): Tell it what you need made or packed. Get a way to pick a co-packer and a plan to manage the deal.
+- [Cost per sellable unit finder](https://useaiblocks.com/prompts/cost-per-sellable-unit-finder): Paste a factory quote and your other costs. Get cost per sellable unit and a go or no-go.
 - [Cross-docking planner](https://useaiblocks.com/skills/cross-docking-planner): Describe your inbound and outbound loads. Get a plan to move goods truck to truck without storing them.
 - [Cut your product cost and turn supplier terms into cash](https://useaiblocks.com/workflows/cut-your-product-cost-and-turn-supplier-terms-into-cash): Give it your product and quote. Get a cost sheet, terms to ask for, a talk plan and a cash check.
 - [Delivery route planner (vehicle routing)](https://useaiblocks.com/skills/delivery-route-planner): Give it your stops and truck limits. Get routes that reach every stop with the fewest miles.
@@ -42,6 +43,7 @@
 - [Plan what to make each week from your past sales](https://useaiblocks.com/workflows/plan-what-to-make-each-week-from-your-past-sales): Give it past sales and your capacity. Get a forecast, a weekly make plan and a meeting agenda.
 - [Pre-shipment inspection brief writer](https://useaiblocks.com/skills/pre-shipment-inspection-brief-writer): Give it your order and tech pack. Get an inspector's brief, a pass rule and payment release terms.
 - [Product bill of materials builder](https://useaiblocks.com/skills/product-bill-of-materials-builder): Give it your product and quote. Get a cost sheet by part, with each maker and price-break questions.
+- [Product sample approval loop](https://useaiblocks.com/agents/product-sample-approval-loop): Give it your tech pack and each sample. Get go or hold, fixes for the factory, and a stop at three rounds.
 - [Product tech pack writer](https://useaiblocks.com/skills/product-tech-pack-writer): Give it your product photos and ideas. Get a factory-ready tech pack with exact measures.
 - [Production capacity checker](https://useaiblocks.com/skills/production-capacity-checker): Give it demand and what you can make. Get your bottlenecks and a plan to close the gap.
 - [Production plan builder](https://useaiblocks.com/skills/production-plan-builder): Give it your sales forecast and capacity. Get a week-by-week plan of what to make and when.
@@ -68,6 +70,7 @@
 - [Supplier partnership planner](https://useaiblocks.com/skills/supplier-partnership-planner): Name a key supplier. Get what to share, a joint plan, meeting rhythm and measures that show it is working.
 - [Supplier quote comparer](https://useaiblocks.com/skills/supplier-quote-comparer): Paste supplier quotes. Get price, minimum order, lead time and risk side by side, a deposit-safety score and terms.
 - [Supplier quote request writer](https://useaiblocks.com/skills/supplier-quote-request-writer): Give it your product and buyer complaints. Get a quote request in maker terms and checks to run.
+- [Supplier quote table builder](https://useaiblocks.com/prompts/supplier-quote-table-builder): Paste two or more supplier quotes. Get one table, the cash each needs and a go or walk call.
 - [Supplier risk scorecard builder](https://useaiblocks.com/skills/supplier-risk-scorecard-builder): Give it your suppliers. Get a risk score for each, warning signs to watch, and a backup supplier plan.
 - [Supplier scorer](https://useaiblocks.com/skills/supplier-scorer): Give it your needs and supplier offers. Get a weighted score for each supplier and a clear pick with reasons.
 - [Supplier shortlist vetter](https://useaiblocks.com/skills/factory-shortlist-vetter): Give it your spec and factory answers. Get each scored out of 100, red flags and a pick.

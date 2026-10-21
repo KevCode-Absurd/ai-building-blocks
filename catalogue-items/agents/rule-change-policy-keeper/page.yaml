@@ -1,0 +1,100 @@
+new_slug: rule-change-policy-keeper
+name: Rule change policy keeper
+summary: Give it a rule that changed and your policies. Get gaps found and small redrafts checked for review. A lawyer still checks.
+job: check-contracts
+thinking: high
+thinking_why: It ranks gaps, drafts edits, re-checks them in a loop and must not miss a clause. Give it your strongest model.
+headline: Rule change policy keeper
+subhead: Give it a law or platform rule that changed, and your policies. It finds which policies the change touches, drafts the smallest edits for each gap, and checks the drafts again until no serious gap is left or three rounds are done. A lawyer still checks. It never edits a live policy.
+explain: |
+  When a rule changes, the cost is not the new rule. It is the policy you did not update. A privacy policy that no longer matches what you do, a returns page that now breaks a platform rule, a handbook section that clashes with a new law. Most small teams find out when someone complains.
+
+  This agent gives every rule change the same first look. It checks the rule is actually in force. It finds which of your policies the change touches and ranks each gap: high if the policy says the opposite of the rule, medium if it is silent, low if the wording is just unclear. For each real gap it drafts the smallest edit, then checks the draft against the rule again. If a high gap is still open, or the edit clashes with another policy, it tries again, up to three rounds. You get drafts for review, with an owner for each. It never applies anything. It is a first check, not legal advice.
+when:
+  - A law, platform rule or standard that applies to you has changed.
+  - You are about to start a new use of customer data and want to know if your policy covers it.
+  - You have written policies and no one has time to check them against every change.
+you_give:
+  - "The rule change, as its text or a summary with its source, where it applies and when it starts"
+  - The approved text of the policies that might be touched
+  - How you really handle data, orders or staff now (optional, best)
+  - Who owns each policy (optional)
+you_get:
+  - A check that the rule is in force, with unverified dates marked
+  - Each policy touched, with gaps ranked high, medium or low and the reason
+  - A small marked-up draft for each real gap, re-checked against the rule
+  - Open gaps that need a person, and the owner for each draft
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then give it the rule and your policies.
+  - Paste the rule text, not only a news summary. Say where you operate.
+  - Read each draft with the policy owner. Nothing is applied by the agent.
+  - Take the drafts and the reminder to a lawyer before you publish. Mark each gap closed yourself once it is applied and approved.
+how_it_works:
+  - title: Check the rule is in force
+    text: Asks for the source and date. If it cannot be confirmed, every date is marked unverified.
+  - title: Find the gaps
+    text: Compares each new requirement with your policies and lists which policy needs a change.
+  - title: Choose the extra checks
+    text: An AI law adds an AI gap check. Personal data adds a privacy policy check. Store and handbook policies get their own check on the drafts.
+  - title: Rank the gaps
+    text: High if the policy says the opposite of the rule or your practice breaks it. Medium if it is silent. Low if the wording is unclear.
+  - title: Draft and check in a loop
+    text: Writes the smallest edit for each real gap, checks it again against the rule, and sends it back if a high gap is open or it clashes. At most three rounds.
+  - title: Log and hand back
+    text: Records the rule, gaps and drafts. Every draft stays a draft, with an owner, until a person applies and approves it.
+output_shape: |-
+  THE RULE
+    <what changed> | applies: <where> | starts: <date> | in force: <confirmed or unverified>
+
+  POLICIES TOUCHED
+    <policy> | gap: <gap> | rank: <high, medium or low> | reason: <reason>
+
+  DRAFTS TO REVIEW
+    <file> | edit: <one line> | rounds: <1 to 3> | high gap left: <none or which>
+
+  OPEN GAPS
+    <gap> | needs: <decision or change in practice> | tried: <what>
+
+  DEADLINES
+    <date> | <verified or unverified>
+
+  WHO DECIDES
+    <policy> | <owner>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+
+  Check with a qualified lawyer before you apply this.
+tweaks:
+  - what: The rule text
+    how: Paste the rule itself, not a news summary. A summary can miss the clause that matters.
+  - what: How you really work
+    how: Describe what you do, not only what the policy says. A policy that does not match practice is the bigger gap.
+  - what: The gap ranking
+    how: High, medium and low are starting points. Change them if your risk is different, such as health data or children.
+  - what: The number of rounds
+    how: Three is the cap. If a gap is still open after that, it needs a person's decision, not another draft.
+judge:
+  - The rule's status is stated, and unverified dates are marked.
+  - Every high gap has a draft or is listed as open with a reason.
+  - Every draft was re-checked against the rule, and the number of rounds is stated.
+  - No draft is marked applied and no gap is closed.
+  - The reminder to check with a lawyer is there.
+test:
+  - Run it on a rule that changed last year and a policy you updated then. See if it finds the same gaps.
+  - Give it a rule that does not apply to you and see if it says so.
+  - Give it a policy that is out of date and see if it asks for the approved version.
+improve:
+  - Save your policy list with owners so each draft goes to the right person.
+  - Add the rules you must follow, such as your country and platform, so it checks the right ones first.
+  - Keep a log of how long each rule change took you to close, to plan ahead.
+  - Add a note of what you do now for each data type, to catch policy drift sooner.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the policies folder and rule log, and read each policy file.
+    - name: Your policy pages or handbook
+      why: Paste the approved text here, so the drafts are built on the right version.
+  inputs:
+    - The rule text with its source and date
+    - A short note of how you handle customer data and orders today

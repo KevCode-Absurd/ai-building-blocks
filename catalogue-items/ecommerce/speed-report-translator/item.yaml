@@ -1,0 +1,16 @@
+slug: speed-report-translator
+name: "Speed report translator"
+summary: "Paste your PageSpeed report. Get what passes, what causes the slowness and three fixes."
+category: ecommerce
+type: prompt
+role: check
+job: analysis
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

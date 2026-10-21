@@ -1,0 +1,18 @@
+slug: brand-voice-one-pager-writer
+name: "Brand voice one-pager writer"
+summary: "Describe your brand and who you write for. Get a one-page voice guide with do and don't lines."
+category: general
+type: prompt
+role: make
+job: brand
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: brand_guide}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "brand-voice skill", by: "Arnab Bag", url: "https://github.com/arnabbagxd/Brand-building-skills/tree/main/skills/brand-voice", used: "A voice essence line, tone sliders, word lists and example lines in one guide"}

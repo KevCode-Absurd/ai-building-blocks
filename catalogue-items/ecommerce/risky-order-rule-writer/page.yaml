@@ -1,0 +1,89 @@
+new_slug: risky-order-rule-writer
+name: "Risky order rule writer"
+summary: "Paste your order volume and chargebacks. Get rules by risk level and a chargeback watch line."
+job: protect-your-store
+thinking: low
+thinking_why: "It sets a short rule list from a few numbers."
+
+headline: "Risky order rule writer"
+subhead: "Paste your monthly orders, chargebacks, payment setup and review time. It writes rules for low, medium and high risk orders, a review checklist, and a chargeback watch line you can track monthly."
+
+explain: |
+  Holding too many orders loses real sales. Holding none lets fraud through, and chargebacks can lead a processor to stop taking cards. The right rules depend on how many orders you get and how many you can check.
+
+  This prompt builds on the risk rating your platform already gives each order. It sets what happens at each level, fits that to your review time, and sets an early warning line well below the one processors use.
+
+when:
+  - "You had your first chargeback."
+  - "You get a few fake orders a week."
+  - "You are not sure what to do with orders marked risky."
+
+you_give:
+  - "Monthly orders and average order value (required)."
+  - "Chargebacks (advised): count and rate over the last 3 months."
+  - "Payment setup (required): Shopify Payments or another gateway."
+  - "Review time (required): who can check held orders, and hours a week."
+you_get:
+  - "Rules for low, medium and high risk"
+  - "A review checklist for held orders"
+  - "A chargeback watch line"
+  - "A monthly loop to tune the rules"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: monthly orders and average order value; chargebacks; payment setup; review time."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "Check the limits first"
+    text: "Under about 100 orders a month there is too little data to tune. Keep the platform defaults and stop. If nobody can review held orders daily, flag orders instead of holding them."
+  - title: "Use the risk rating you already have"
+    text: "Use the platform's low, medium and high rating. Do not build your own scoring first."
+  - title: "Write the rules in order"
+    text: "Low: take payment. Medium: send an internal notice. High: hold for review. Cancel only on a pattern you have confirmed."
+  - title: "Write a review checklist"
+    text: "Billing and shipping mismatch, rush shipping to a freight forwarder, a big order of one item, a new account with a high value, an odd email domain."
+  - title: "Set the watch line"
+    text: "Processors may flag chargeback rates above 0.9% and stop cards above 1%. Confirm both with your processor, and act at 0.5%."
+
+output_shape: |
+  READ: <orders a month | chargeback rate | review hours>
+  RULES: 1 Low <action> | 2 Medium <action> | 3 High <action> | 4 Cancel only if <pattern>
+  REVIEW CHECKLIST: <list>
+  WATCH LINE: now <n>% | act at 0.5% | processor flag 0.9%
+  MONTHLY LOOP: count blocked, held, released, disputed; change one rule at a time
+  MISSING: <what you did not give>
+
+tweaks:
+  - what: "Review time"
+    how: "Be honest about hours. Rules that need daily review fail if nobody looks."
+  - what: "Chargebacks"
+    how: "Give the real count and rate so the watch line starts from your number."
+
+judge:
+  - "Under about 100 orders a month, it says to keep defaults."
+  - "No order is held when nobody can review it."
+  - "Rules cancel only on a confirmed pattern."
+  - "The watch line is marked as one to confirm with your processor."
+
+test:
+  - "Give it a small store (under 100 orders). It should say keep defaults."
+  - "Say nobody reviews daily. It should flag, not hold."
+  - "Run it twice. The rule order should match."
+
+improve:
+  - "Add known bad patterns for your store, such as one address, to the cancel rule."
+  - "Log every held order and the outcome."
+  - "Pair it with a bot and AI agent access planner for card testing."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "Your last three months of chargebacks"
+    - "The risk ratings your platform shows"
+
+terms:
+  - term: "Chargeback"
+    meaning: "When a buyer disputes a charge with their bank and the money is pulled back."

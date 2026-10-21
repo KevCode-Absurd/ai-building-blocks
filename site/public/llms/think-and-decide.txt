@@ -1,6 +1,6 @@
 # Think it through and decide: AI Blocks
 
-> 121 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 125 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [Adaptive tutor](https://useaiblocks.com/skills/adaptive-tutor): Name a topic. It checks your level, then teaches in small steps with practice and feedback.
 - [Advice skin-in-the-game checker](https://useaiblocks.com/skills/advice-skin-in-the-game-checker): Paste advice or a pitch. Get who pays if it is wrong, who gains, and how far to trust it.
@@ -29,6 +29,7 @@
 - [Decide whether to quit and set the evidence bar](https://useaiblocks.com/workflows/decide-whether-to-quit-a-project-and-set-the-evidence-bar): Give it the project you want to quit. Get a push, change or stop call that survived an attack.
 - [Decision bias pile-up checker](https://useaiblocks.com/skills/decision-bias-pileup-checker): Describe a decision you are about to make. Get the pressures bending your judgment, and a calmer version of the choice.
 - [Decision checklist builder](https://useaiblocks.com/skills/decision-checklist-builder): Paste your mistake log. Get a one-page checklist of up to twelve questions, each with a pass or fail line.
+- [Decision checklist keeper](https://useaiblocks.com/agents/decision-checklist-keeper): Give it each big decision and, later, how it turned out. Get a checked call now and a sharper checklist over time.
 - [Decision checklist runner](https://useaiblocks.com/skills/decision-checklist-runner): Paste your checklist and a decision. Get each item answered with evidence, a pass, fail or unknown, and a clear call.
 - [Decision evidence bar setter](https://useaiblocks.com/skills/decision-evidence-bar-setter): Paste a decision and what you know. Get how much evidence is enough, what to get next and a date to decide.
 - [Decision mistake collector](https://useaiblocks.com/skills/decision-mistake-collector): Name a decision you keep making. Get your past mistakes and others' logged by cause, and the repeat offenders.
@@ -63,6 +64,7 @@
 - [Intent interviewer](https://useaiblocks.com/skills/intent-interviewer): Give it a vague request. Get asked one question at a time until what you really want is clear.
 - [Job ad reader](https://useaiblocks.com/skills/job-ad-reader): Paste a job ad. Get what the job is, firm needs versus wishes, what is missing, and questions to ask.
 - [Job exit plan writer](https://useaiblocks.com/skills/job-exit-plan-writer): Paste your job, notice terms and first clients. Get a notice letter, a talking order and income lined up for three months.
+- [Knock-on effects tracer](https://useaiblocks.com/prompts/knock-on-effects-tracer): Paste a change you plan to make. Get what it causes, what that causes, and what to watch.
 - [Lean-year cash rules writer](https://useaiblocks.com/skills/lean-year-cash-rules-writer): Paste your plan and monthly numbers. Get a cash buffer, who to ask early and a clear request to send.
 - [Learn, borrow or pass planner](https://useaiblocks.com/skills/learn-borrow-or-pass-planner): Paste where your knowledge ends. Get a choice to learn, borrow help, start small or pass, with a first-week plan.
 - [Leave a steady job and earn from your own work](https://useaiblocks.com/workflows/leave-job-own-income): Give it your job, pay and skills. Get an income floor, fees, a safety plan and a way to leave.
@@ -77,6 +79,7 @@
 - [No-brainer question settler](https://useaiblocks.com/skills/no-brainer-question-settler): Describe a hard problem. Get the obvious big questions settled first, a rough sum for your target, and a smaller problem left.
 - [No-good-options decider](https://useaiblocks.com/skills/no-good-options-decider): Describe a choice where every option hurts. Get a 10/10/10 and regret check, and a clear pick.
 - [Not-to-do list builder](https://useaiblocks.com/skills/not-to-do-list-builder): Paste your week and your habits. Get a list of what to stop, with a rule and a swap for each.
+- [One-way or two-way choice sorter](https://useaiblocks.com/prompts/one-way-or-two-way-choice-sorter): Paste a choice you are stuck on. Get it sorted as hard or easy to undo, with the right speed to decide.
 - [Organization dossier researcher](https://useaiblocks.com/skills/organization-dossier-researcher): Name a company, person or group. Get a tested research file with sources. Collects data from websites.
 - [Paper research assistant](https://useaiblocks.com/skills/paper-research-assistant): Name a topic or paper. Get a literature scan, a deep read or a reading list from Semantic Scholar and arXiv.
 - [Pattern from cases finder](https://useaiblocks.com/skills/pattern-from-cases-finder): Paste your first ten or twenty cases. Get the pattern, a one-line rule and a test of it on unseen cases.
@@ -110,6 +113,7 @@
 - [Software vendor chooser](https://useaiblocks.com/skills/software-vendor-chooser): Give it your needs and options. Get vendors scored against your criteria, RFP questions, risk notes and a contract checklist.
 - [Specific knowledge finder](https://useaiblocks.com/skills/specific-knowledge-finder): Say what came easily to you and what people ask you for. Get your specific knowledge, with a cheap test for each.
 - [Strategy doc interviewer](https://useaiblocks.com/skills/strategy-doc-interviewer): Name the doc you want. Get it written from your own answers, one question at a time.
+- [Strongest objection finder](https://useaiblocks.com/prompts/strongest-objection-finder): Paste a plan you feel sure about. Get the three best arguments against it and a go, change or wait call.
 - [Stuck decision guide](https://useaiblocks.com/skills/stuck-decision-guide): Tell it what feels stuck. Get a few branching questions, then a clear next step you can take today.
 - [Summarizer](https://useaiblocks.com/skills/summarizer): Give it long text. Get a short summary at the detail level you choose, from one text or many.
 - [Surprise cause ranker](https://useaiblocks.com/skills/surprise-cause-ranker): Describe a result that surprised you. Get ranked likely causes, how to test each, and what the facts rule out.

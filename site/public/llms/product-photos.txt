@@ -1,11 +1,12 @@
 # Make product photos: AI Blocks
 
-> 32 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 34 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [A full product photoshoot from your phone photos](https://useaiblocks.com/workflows/phone-product-photoshoot): Give it your product photos and brand look. You get 8 to 12 photos, each with a job and its own light.
 - [A product gallery that answers shoppers' doubts](https://useaiblocks.com/workflows/product-gallery-answers): Give it your product, photos, reviews and current gallery. You get a checked set of images, ready to upload.
 - [Accessory try-on photo maker](https://useaiblocks.com/skills/accessory-try-on-photo-maker): Give it a shoe, bag, watch or necklace photo. Get a person wearing it. Your image model draws it.
 - [AI product photo inspector](https://useaiblocks.com/skills/ai-product-photo-inspector): Give it an AI-made product photo. Get a risk rating, eight checks and lines to add to your prompt before you retry.
+- [Eight-picture product page planner](https://useaiblocks.com/prompts/eight-picture-product-page-planner): Paste your product facts and photos you have. Get a plan for the eight pictures on your product page.
 - [Fabric close-up maker](https://useaiblocks.com/skills/fabric-close-up-maker): Give it a clothing photo. Get close-ups of fabric, stitching and weave for the product page. Your image model draws them.
 - [Fabric swap sample maker](https://useaiblocks.com/skills/fabric-swap-sample-maker): Give it a garment shape and a fabric swatch. Get a sample photo in the new fabric. Your image model draws it.
 - [Fabric texture fixer](https://useaiblocks.com/skills/fabric-texture-fixer): Give it a blurry clothing photo and a sharp product photo. Get clear, believable fabric. Your image model redraws it.
@@ -29,6 +30,7 @@
 - [Product photo set maker](https://useaiblocks.com/agents/product-photo-set-maker): Give it photos of one real product. Get a planned photo set, checked frame by frame, with every failed frame redone.
 - [Product photo shoot planner](https://useaiblocks.com/skills/product-photo-shoot-planner): Attach your product photos and colours. Get a style sheet and 9 matching photo prompts.
 - [Product shoot brief writer](https://useaiblocks.com/skills/product-shoot-brief-writer): Tell it your product. Get a shot list for photos and video, with a reason for each shot.
+- [Product shot list writer](https://useaiblocks.com/prompts/product-shot-list-writer): Paste your product and where the photos will run. Get a shot list, with the reason for each shot.
 - [Reference-style product photo maker](https://useaiblocks.com/skills/reference-product-photos): Attach your product and a photo you like. Get a matching prompt and ranked pictures.
 - [Social post photo maker](https://useaiblocks.com/skills/social-post-photo-maker): Give it an outfit photo. Get lifestyle shots with new models, scenes and poses for social posts. Your image model draws them.
 - [Turn a clothing flat lay into marketplace-ready photos](https://useaiblocks.com/workflows/turn-a-clothing-flat-lay-into-marketplace-ready-photos): Give it a garment phone photo. Get a clean photo, a worn-shape photo, fabric close-ups and a rules check.

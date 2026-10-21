@@ -1,0 +1,97 @@
+new_slug: monthly-channel-budget-reviewer
+name: Monthly channel budget reviewer
+summary: Give it each channel's results and your store totals. Get the true return, fading channels and where the next dollar goes.
+job: read-ad-results
+thinking: high
+thinking_why: It runs up to six skills, chooses between moving budget and testing first from a trust score, and compares months. Give it your strongest model.
+headline: Monthly channel budget reviewer
+subhead: Give it each ad channel's month and your store totals. It sets what each platform claims against what your store really took, finds channels that are fading, and says where the next budget goes, or which test to run first.
+explain: |
+  Every ad platform says it brought you the sale. Add their numbers up and you have sold far more than your store shows. Retargeting and branded search take credit for sales that would have happened anyway. Cold channels get less credit than they earn. Owners who move budget on the platform numbers often feed the channel that over-claims.
+
+  This agent checks each channel against your store once a month. It works out how much of each platform's return is real, what a new customer costs, and which channels are fading. If the numbers can't be trusted yet, it does not move budget. It hands back the test that would make them trustworthy. If they can, it says where the next dollar goes. It never moves money or changes a campaign.
+when:
+  - You spend on more than one channel and the platform numbers add up to more than your store sold.
+  - You want one calm monthly look at where the budget goes, not weekly tweaks.
+  - You think a channel is fading but can't tell if it is real.
+you_give:
+  - Each channel's spend, reported purchases and purchase value for the month
+  - Your store's orders, revenue, new-customer orders and refunds for the same month
+  - Your price, landed cost, shipping and fees, the first time
+  - A post-purchase "how did you hear about us" answer set (optional)
+you_get:
+  - Each channel's true return against break-even, with a trust level
+  - What a new customer costs on each channel, and the payback time
+  - Channels that fell two months in a row, with the likely cause
+  - A budget split, or "hold" and the test to run first
+  - The numbers to watch next month
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this month's review.
+  - Attach each channel's month and your store totals for the same days.
+  - The first time, give it your price and costs. It saves the break-even numbers.
+  - Read the proposal. Move budget yourself, or say yes to each move.
+  - Run it again next month. It reads the saved months and compares.
+how_it_works:
+  - title: Get the base numbers
+    text: Works out break-even return and cost per customer once, then measures every channel against them.
+  - title: Check the platform numbers
+    text: Sets each platform's return against your store totals and saves a factor for each channel, with a trust level.
+  - title: Cost a real customer
+    text: Works out what a new customer costs on each channel and how soon it pays back.
+  - title: Look for fading channels
+    text: After three saved months, flags any channel whose true return fell two months in a row. Those get no extra budget.
+  - title: Choose on trust
+    text: If trust is medium or high, it splits the next budget. If trust is low, it holds and hands back the test that would raise it.
+  - title: Hand back one review
+    text: Gives the channel table, the proposal and the numbers to watch. Nothing moves until you say yes.
+output_shape: |-
+  THIS MONTH
+    Spend <amount> | Store revenue <amount> | Blended return <x> | Platforms claim <amount> more than the store
+
+  CHANNELS
+    <channel> | spend <amount> | reported <x> | true <x> | break-even <x> | new-customer cost <amount> | payback <days> | trust <high | medium | low>
+
+  FADING
+    <channel> | fell in <months> | likely cause
+
+  BUDGET PROPOSAL
+    <hold, and the test to run first> | or | <channel> <+/- amount> | why
+
+  WATCH NEXT MONTH
+    <1 to 3 numbers>
+
+  FILES AND MISSING
+    <each step's file> | reviewer/months.md | MISSING: <every line>
+tweaks:
+  - what: Store totals
+    how: Use the same days as the platform data. New-customer orders matter most, so include them.
+  - what: Attribution window
+    how: Tell it each platform's window. A longer window makes the return look higher.
+  - what: What counts as fading
+    how: Two months in a row is the default. Use longer if your sales are seasonal.
+  - what: Small channels
+    how: A channel under a tenth of spend is left out of the split. Lower this if you want small channels tuned.
+judge:
+  - Every return is shown next to break-even, with the sums.
+  - No budget goes to a channel below break-even or one that fell two months running.
+  - No budget move is proposed when trust is low.
+  - The store totals, not the platforms, are the base for the true return.
+  - Nothing was moved, paused or changed.
+test:
+  - Run it on a past month where you know a channel over-claimed. See if it finds the same gap.
+  - Run it twice on the same data. The channel table should be the same.
+  - Compare its split with what you decided that month and look at where they differ.
+improve:
+  - Add a post-purchase "how did you hear about us" question and feed the answers in.
+  - Add your own break-even return per channel if some run at different margins.
+  - Save the budget moves you approved each month, so the next review can check whether they worked.
+  - If you only run two channels, remove the fading check so the run is shorter.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the reviewer folder and months file, read last month's files and run every step on a schedule.
+    - name: Shopify
+      why: Export orders, revenue and new-customer counts for the same month as the ad data.
+  inputs:
+    - A note of any tracking change or big sale in the month
+    - Results of any holdout or lift test you have run

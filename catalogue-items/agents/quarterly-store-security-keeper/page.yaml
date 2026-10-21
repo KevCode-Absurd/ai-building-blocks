@@ -1,0 +1,98 @@
+new_slug: quarterly-store-security-keeper
+name: Quarterly store security keeper
+summary: Give it your staff, apps and chargeback numbers each quarter. Get your score against last quarter and fixes to do first.
+job: protect-your-store
+thinking: medium
+thinking_why: It runs a scored checklist and picks deeper checks from the result. A mid-range model is enough.
+headline: Quarterly store security keeper
+subhead: Give it your staff list, apps and chargeback numbers each quarter. It scores your basics, sets the score against last quarter, runs a deeper check only where points were lost, and hands back a ranked fix list.
+explain: |
+  Store security slips quietly. A contractor keeps access after the project ends. A new app asks for more than it needs. Someone turns off two-step sign-in to fix a login problem. None of it is dramatic until the day it matters.
+
+  This agent runs the security checkup once a quarter and keeps the score. It then picks which deeper check the result calls for: sign-in, apps and scripts, domains, or fraud rules. It tells you what got better, what got worse and what has stayed open for two quarters. You get a short list of fixes in order. It removes no access and changes no setting without your yes.
+when:
+  - You run a store with staff, contractors or several apps and nobody checks access on a schedule.
+  - You want to know if your security basics improved since last quarter.
+  - Chargebacks or fake orders are rising and you want to know if rules need changing.
+you_give:
+  - Everyone with admin or staff access, their role and any contractor end dates
+  - Your installed apps and what data each can read
+  - How staff sign in and how recovery works
+  - Monthly orders and chargeback numbers (optional)
+  - Your domains and who can log in to the registrar (optional)
+you_get:
+  - A security score, set against last quarter, with the sums shown
+  - The checks that got better, worse or stayed open
+  - "A fix list: do today, this month, this quarter"
+  - Which deeper checks ran, and why the others did not
+how_to_use:
+  - Add the agent in Claude Code, or save it in .claude/agents, then ask it to run this quarter's check.
+  - The first time, give it your admin list, apps and sign-in details. It saves a history file.
+  - Read the fix list and do the "today" items first.
+  - Tell the agent which fixes you made. It re-checks only those and shows the new score.
+  - Run it again next quarter. It compares with the saved score.
+how_it_works:
+  - title: Read last quarter
+    text: Opens the saved history of scores and fixes, or marks this as the baseline run.
+  - title: Run the checkup
+    text: Scores two-step sign-in, access, apps, card data, backups and habits.
+  - title: Compare
+    text: Marks each check better, worse or the same. A check that lost points twice in a row is marked still open and goes first.
+  - title: Choose the deeper checks
+    text: Runs the sign-in, app and script, domain or fraud-rule check only where the result or a change calls for it.
+  - title: Merge and re-check
+    text: Puts all fixes in one ranked list. After you make fixes, it re-runs only the check that scored them, at most twice.
+  - title: Save and hand back
+    text: Saves the score for next quarter and hands back the list, then stops for your yes.
+output_shape: |-
+  SCORE
+    <n>/100 this quarter vs <n>/100 last quarter | sum shown
+
+  WHAT MOVED
+    <check> | better | worse | same | still open (2+ quarters)
+
+  FIX LIST
+    Do today: <fix> | check <C#> | time <minutes>
+    Do this month: <fix> | check <C#>
+    Do this quarter: <fix> | check <C#>
+
+  DEEPER CHECKS
+    Ran: <which, why> | Skipped: <which, why>
+
+  NEXT QUARTER
+    <1 to 3 things to watch>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: Your staff list
+    how: Include contractors and the date their access should end. Old access is the most common loss of points.
+  - what: Your platform
+    how: Say if it is hosted or self-hosted. Hosted stores skip advice aimed at servers and firewalls.
+  - what: Chargeback numbers
+    how: Give the last three months. The fraud check only runs when the rate or false holds call for it.
+  - what: How often
+    how: Quarterly suits most stores. Run it after any staff change or new app too.
+judge:
+  - The score comes from the skill's own sums, shown.
+  - Every check is set against last quarter.
+  - A deeper check ran only when a result or change called for it.
+  - Fixes are in order and each names the check it comes from.
+  - No access or setting changed without your yes.
+test:
+  - Run it on a store where you know one gap, such as a leaver who still has access. See if it finds it.
+  - Fix one gap, tell the agent, and check it re-scores only that check.
+  - Run it twice with no changes. The score should stay the same.
+improve:
+  - Add your contractor end dates to the admin list so expired access is caught.
+  - Add your own rule for when a deeper check must run, such as after any new app.
+  - Keep the history file in a shared folder so a second person can see it.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the history folder and remind you each quarter.
+    - name: Your platform's admin pages
+      why: Staff, apps and sign-in details are copied from there.
+  inputs:
+    - A list of domains and who can log in to the registrar
+    - The last three months of chargeback counts

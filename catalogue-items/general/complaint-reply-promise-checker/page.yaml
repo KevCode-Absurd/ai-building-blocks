@@ -1,0 +1,85 @@
+new_slug: complaint-reply-promise-checker
+name: "Complaint reply promise checker"
+summary: "Paste the complaint and your draft reply. Get each promise checked, tone flags and a repaired draft."
+job: help-customers
+thinking: low
+thinking_why: "It checks a draft against rules you supply."
+
+headline: "Complaint reply promise checker"
+subhead: "Paste the customer's message, your draft reply and what you are allowed to offer. The prompt checks that the reply answers them, that every promise is backed, and that the tone helps, then repairs the draft."
+
+explain: |
+  A reply written in a hurry to an angry customer often promises a refund you cannot give or dodges the question they asked. Both make things worse. A second reader catches this before it is sent.
+
+  This prompt reads the complaint and your draft side by side. It tests answers, promises and tone, and repairs the draft without adding any refund, date or fact. It does not decide refunds. That stays with you.
+
+when:
+  - "A customer is angry and you have drafted a reply."
+  - "You are unsure if your reply sounds defensive."
+  - "A new support hire wants a second check before sending."
+
+you_give:
+  - "The customer's message"
+  - "Your draft reply"
+  - "Your policy or what you may offer"
+  - "Case facts (optional)"
+you_get:
+  - "A verdict and a list of unanswered points"
+  - "Every promise marked backed or not"
+  - "A repaired draft"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste the customer's message in full, then your draft."
+  - "Paste your policy text or list what you can offer."
+  - "Fill in each [CONFIRM] before you send."
+
+how_it_works:
+  - title: "Check it answers them"
+    text: "List what the customer asked or complained about. Mark each Answered, Dodged or Missed."
+  - title: "Check every promise"
+    text: "List each promise or offer in the draft. Mark it Backed (my policy says so) or Not backed. With no policy given, mark all \"not checked\"."
+  - title: "Check the tone"
+    text: "Quote each line that blames the customer, uses jargon, apologises emptily (\"sorry for any inconvenience\") or sounds defensive."
+  - title: "Repair the draft"
+    text: "Answer first, say sorry for what happened in their words, give one next step and keep only backed promises. Mark the rest [CONFIRM: ...]."
+
+output_shape: |
+  VERDICT: <send | send after fixes | do not send>, because <reason>
+  ANSWERS: <point> - <Answered | Dodged | Missed>
+  PROMISES: <promise> - <Backed | Not backed>
+  TONE FLAGS: "<my words>" - <why>
+  REPAIRED DRAFT
+  <reply>
+  BEFORE YOU SEND: <what to confirm>
+
+tweaks:
+  - what: "Policy text"
+    how: "Paste the exact text. A vague policy means more promises marked not checked."
+  - what: "Case facts"
+    how: "Add dates and amounts so the reply can be specific."
+  - what: "Your voice"
+    how: "Paste a past reply you liked so the repair sounds like you."
+
+judge:
+  - "Every point the customer raised is marked."
+  - "No new promise in the repair."
+  - "The reply uses their words for the problem."
+  - "Empty apologies are gone."
+
+test:
+  - "Add a refund promise your policy does not allow. It should flag it."
+  - "Run a calm reply. It should pass with few changes."
+  - "Run it twice. The marks should match."
+
+improve:
+  - "Save your policy text and paste it each time."
+  - "Add lines your team never uses."
+  - "Pair it with the Angry customer reply checker for every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "Your returns and refund policy"
+    - "Two past replies you were proud of"

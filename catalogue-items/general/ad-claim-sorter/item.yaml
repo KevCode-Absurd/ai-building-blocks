@@ -1,0 +1,22 @@
+slug: ad-claim-sorter
+name: Ad claim sorter
+summary: Paste your ad or page copy. Get each claim sorted as fine, needs proof or cut, with safer wording.
+category: general
+type: prompt
+role: check
+job: ads
+level: beginner
+inputs:
+  - type: copy_draft
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: marketing-claims-review skill
+    by: Anthropic
+    url: https://github.com/anthropics/claude-for-legal/tree/main/product-legal/skills/marketing-claims-review
+    used: A shorter one-message version of this skill, written fresh.

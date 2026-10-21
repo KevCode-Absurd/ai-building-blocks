@@ -1,0 +1,86 @@
+new_slug: ad-claim-proof-gap-finder
+name: Ad claim proof gap finder
+summary: Paste your ad and your proof. Get every claim paired with proof, the gaps and fixes, and a score out of 100.
+job: check-ads
+thinking: medium
+thinking_why: It must read as a doubter and catch claims the copy only implies.
+headline: Ad claim proof gap finder
+subhead: Paste your ad or page copy and the proof you hold, with sources. You get every claim listed, each one paired with proof or flagged as a gap, the claims the copy only implies, a fix for each gap, and a score out of 100 before and after.
+explain: |
+  Ads often claim more than the proof supports. Sometimes the claim is plain ("lose 5 pounds"). Often it is only implied. A "clean feel" can sound like "safe", and "doctor-loved" can sound like "approved".
+
+  This prompt reads your copy as a doubter would. It lists the claims and the ones the copy only suggests, pairs each with the proof you pasted, and notes how close the proof sits. A claim is matched only when the proof is there, near, and the implied meaning is true. For each gap you get one of three fixes: make the claim smaller, move real proof next to it, or add proof you hold. It never writes a new fact.
+when:
+  - You are about to run an ad that makes a strong promise.
+  - A platform has flagged an ad for a claim.
+  - You want to know which claims need more proof before you scale.
+you_give:
+  - Your ad or page copy
+  - Your proof, with sources
+  - Offer terms (optional)
+you_get:
+  - A table of every claim with its proof and verdict
+  - The claims the copy only implies
+  - A fix for each gap
+  - A score out of 100 before and after the fixes
+how_to_use:
+  - Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini, with your details under it.
+  - Paste your copy under the prompt, then your proof, each with its source.
+  - Read the fixes and choose shrink, move or add for each.
+  - Check any health, money or legal claim with a qualified person.
+how_it_works:
+  - title: Lists the claims
+    text: Everything a buyer could dispute.
+  - title: Adds implied claims
+    text: What the copy leads a reader to think.
+  - title: Pairs proof
+    text: Or flags a gap.
+  - title: Marks the distance
+    text: Proof far from a claim counts as weak.
+  - title: Writes fixes
+    text: Shrink, move or add real proof.
+  - title: Scores
+    text: Matched claims over all claims, before and after.
+output_shape: |
+  Claim | Proof | Distance | Verdict | Fix
+  <n>. <claim> | <proof or GAP> | <next to it | far> | <matched | outruns | too far | untrue implication> | <fix>
+  WORN-OUT WORDS: <list>
+  SCORE: <matched>/<counted> = <score> out of 100; with fixes: <sum>
+  MISSING: proof for claim <n>
+  CHECK WITH A QUALIFIED PERSON: <any health, money or legal claim>
+tweaks:
+  - what: Proof
+    how: Paste your real sources. Without them every claim is a gap.
+  - what: Reader
+    how: Tell it who you are selling to so it can judge what they doubt.
+  - what: Strictness
+    how: Ask it to treat customer reviews as weak proof.
+  - what: Platform
+    how: Name the platform to flag its common ad rules.
+judge:
+  - Every claim has proof or a GAP.
+  - No fix adds a fact.
+  - Implied claims are in the table.
+  - The sum adds up to the score.
+test:
+  - Use an ad you know has a risky claim. It should land as a gap.
+  - Run it twice. The gaps should match.
+  - Apply the fixes and run it again. The score should go up.
+improve:
+  - Add the claims your platform bans.
+  - Keep a file of proof with sources and paste it each time.
+  - Add your category's regulator rules.
+  - Pair it with the Headline reader and reward checker.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A short prompt works the same in Claude, ChatGPT or Gemini, so use the one you already have open.
+  inputs:
+    - A file of your proof with sources
+    - Your list of banned claims
+    - Customer reviews with sources
+terms:
+  - term: Implied claim
+    meaning: What a line leads a reader to think, even if it does not say it.
+  - term: Outruns its proof
+    meaning: The claim is bigger than the proof.

@@ -1,0 +1,96 @@
+new_slug: price-test-keeper
+name: Price test keeper
+summary: Give it your costs, sales and rival prices. It plans one undoable price test, reads the result and sets the next.
+job: set-prices
+thinking: high
+thinking_why: It runs up to five skills, reads each test on profit and chooses a different path for each product. Give it your strongest model.
+headline: Price test keeper
+subhead: Give it your costs, sales and rival prices. It keeps a floor for each product, reads finished price tests by profit, answers rival moves inside your floor, and plans the next undoable test for you to approve.
+explain: |
+  Most prices are set once and never tested. When owners do test, they read it on orders alone. A lower price nearly always sells more units, and can still earn less. Rivals cut their price, and the reflex is to cut too.
+
+  This agent runs a slow price program. It works out the lowest price each product can sell for and never goes below it. When a test ends, it judges on profit per visitor, not orders. A test that can't be read is rerun once, then stopped. When a rival moves, it holds, tests or matches within your floor. Then it plans the next test, one product at a time, with a plan to undo it. It never changes a live price.
+when:
+  - You set prices by feel and want to test them with a safe floor.
+  - A price test just ended and you need to know whether to keep the new price.
+  - A rival cut its price and you want a calm answer, not a reflex.
+you_give:
+  - Your price, landed cost, shipping, fees and target margin for each product
+  - Orders, visitors and revenue by product for the last 4 to 8 weeks
+  - Orders and visitors for each price in any test that ended
+  - Rival prices now and last time (optional)
+you_get:
+  - A floor price for each product
+  - A keep, rerun or stop call on each finished test, judged on profit per visitor
+  - An answer to each rival move, inside your floor
+  - "The next test: the price, three outcome cases, run length and how to undo it"
+  - Which tests are still running and what could disturb them
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to run this round.
+  - Attach your product costs, sales by product and results for any test that ended.
+  - Read the decisions. Change prices in your store yourself, or say yes to each change.
+  - Run it again in four weeks, or the day a test ends. It reads the saved test file.
+how_it_works:
+  - title: Set the floor
+    text: Works out the lowest viable price for each product. Every price it proposes stays at or above it.
+  - title: Read a finished test
+    text: Judges the result on profit per visitor, not orders. A test that can't be read is rerun once, then stopped.
+  - title: Leave running tests alone
+    text: Reports days left and anything that could disturb the test, such as a sale or a rival move.
+  - title: Answer rival moves
+    text: If a rival changed its price, it holds, tests or matches within your floor, and never races to the bottom.
+  - title: Plan the next test
+    text: Plans one undoable test per product, and no more than two products at once, with three outcome cases.
+  - title: Hand back decisions
+    text: Lists every decision with the profit sums behind it. Nothing changes in your store until you say yes.
+output_shape: |-
+  DECISIONS THIS ROUND
+    <product> | KEEP NEW PRICE | KEEP OLD PRICE | RERUN | HOLD | TEST | profit per visitor: <old> vs <new> | why
+
+  FLOORS
+    <product> | lowest viable price <amount>
+
+  NEXT TEST
+    <product> | try <price> | cases: <low | mid | high> | runs <days> | pass: <result> | undo: <how>
+
+  RIVAL MOVES
+    <rival> | <old> to <new> | response: <hold | test | bounded match>
+
+  RUNNING NOW
+    <product> | <days left> | could disturb: <event>
+
+  FILES AND MISSING
+    <each step's file> | price-keeper/tests.md | MISSING: <every line>
+tweaks:
+  - what: Your target margin
+    how: Give it your real target after shipping and fees. A margin that is too high pushes the floor up and blocks good tests.
+  - what: Test length
+    how: Long enough to see a full buying cycle and enough orders at each price. Tell it your usual cycle.
+  - what: Rival list
+    how: Name only rivals your buyers compare you with. A long list makes every week look like a price war.
+  - what: How many products at once
+    how: Two is the default. Use one if your traffic is small.
+judge:
+  - Every proposed price is at or above the floor.
+  - Every test result is judged on profit per visitor, with the sums shown.
+  - No running test was touched, and no product has more than one test planned.
+  - No product was rerun more than once.
+  - Nothing was changed on your live store.
+test:
+  - Run it on a past price change you know the result of. See if it reaches the same call.
+  - Run it twice on the same data. The decisions should be the same, apart from wording.
+  - Give it a rival cut you ignored. See whether its answer matches what happened.
+improve:
+  - Set your own cap on reruns and on products tested at once.
+  - Add your sale calendar so it flags tests that overlap a sale.
+  - Save the prices you approved each round, so the next round can check whether they held.
+  - If you sell one product, remove the product limit so the run is shorter.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the price folder and test file, read last round's files and run every step on a schedule.
+    - name: Shopify
+      why: Connect it to read sales by product, or export orders and visitors for the test days.
+  inputs:
+    - Your sale calendar and stock-out dates
+    - A list of rival prices from two dates

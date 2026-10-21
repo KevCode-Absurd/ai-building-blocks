@@ -1,6 +1,6 @@
 # Make your store load fast: AI Blocks
 
-> 15 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 17 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [App script auditor](https://useaiblocks.com/skills/app-script-auditor): Give it your apps and speed report. Get each app marked keep, remove or delay, and a score.
 - [Fix what slows your Shopify store, biggest wins first](https://useaiblocks.com/workflows/fix-what-slows-your-shopify-store-in-the-order-that-pays-back): Give it your PageSpeed report and theme. Get speed fixes ranked by orders gained per hour, then applied.
@@ -13,6 +13,8 @@
 - [Self-hosted store speed fixer](https://useaiblocks.com/skills/self-hosted-store-speed-fixer): Give it your WooCommerce setup. Get hosting, caching, plugin and image fixes in order.
 - [Speed budget and sale check](https://useaiblocks.com/skills/speed-budget-and-sale-check): Give it your store and sale date. Get a speed budget, test routine and pre-sale checklist.
 - [Speed fix ranker](https://useaiblocks.com/skills/speed-fix-ranker): Give it your speed problems and store numbers. Get fixes ranked by orders gained per hour of work.
+- [Speed fix week planner](https://useaiblocks.com/prompts/speed-fix-week-planner): Paste your speed problems and store numbers. Get this week's three fixes and what each could earn.
+- [Speed report translator](https://useaiblocks.com/prompts/speed-report-translator): Paste your PageSpeed report. Get what passes, what causes the slowness and three fixes.
 - [Speed up a WooCommerce store and keep it fast](https://useaiblocks.com/workflows/speed-up-a-woocommerce-store-and-keep-it-fast): Give it your PageSpeed report and setup. Get speed fixes in order and a budget that keeps the store fast.
 - [Store image prep checker](https://useaiblocks.com/skills/store-image-prep-checker): Give it your image files and sizes. Get what to resize and rename, alt text and a score.
 - [Store speed report reader](https://useaiblocks.com/skills/store-speed-report-reader): Paste your PageSpeed report. Get a field score out of 100, each page read, three fixes.

@@ -1,0 +1,97 @@
+new_slug: research-topic-watcher
+name: Research topic watcher
+summary: Name a topic once. Each month get the new papers, which ones are strong, and whether they change what you believe.
+job: research-topics
+thinking: high
+thinking_why: It weighs the strength of studies against what you currently believe and decides whether a line is at risk. Give it your strongest model.
+headline: Research topic watcher
+subhead: Name a topic once. Each month it finds the papers published since last time, drops the ones you have seen, checks how strong the relevant ones are, and says whether any go against what you currently believe. A quiet month gets a short answer.
+explain: |
+  Keeping up with a topic is easy to start and hard to keep doing. You read a few papers, build a picture, and then months pass. A paper that changes the picture can sit unread. Or one weak study gets a loud headline and you change your mind for no good reason.
+
+  This agent builds a short standing summary of what is known, the first time. After that it searches each month for papers dated since the last run and removes the ones you have seen. If nothing relevant is new, it says so and stops. If something is, it pulls out the claims, grades how strong the study is, and compares the result with each line of your summary. A strong paper that goes against a line marks that line at risk and proposes a rewrite. A weak paper is logged and changes nothing. You get up to three papers to read. It never edits your summary or shares anything without your yes.
+when:
+  - You follow one research topic for work, study or a decision, and want to stay current with little effort.
+  - You want to know if new papers change what you believe, not just a list of titles.
+  - You want one weak study to stop moving your view.
+you_give:
+  - The topic, in one or two sentences, and what makes a paper relevant
+  - Notes or papers you already trust (optional)
+  - Key terms, authors or journals (optional)
+  - How far back to look on the first run (optional)
+you_get:
+  - A standing summary of what is known, built the first time and kept up to date with your yes
+  - Each month, the new papers ranked by relevance with an evidence grade for the ones that matter
+  - Lines of your summary that a strong new paper goes against, with a proposed rewrite
+  - Up to three papers worth reading in full, each with a plain summary, and the search so it can be repeated
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then name your topic.
+  - On the first run, read the draft standing summary. Fix it and say yes before it is saved.
+  - Each month, ask it to run. It reads the same folder and searches only what is new.
+  - Read the papers at risk and the three to read. Say yes or no to each proposed change.
+how_it_works:
+  - title: Build the base
+    text: On the first run, it finds the key papers sorted by theme and drafts a standing summary of five lines or fewer for you to approve.
+  - title: Search for what is new
+    text: Each month it searches open scholarly databases for papers dated since last time and removes those already seen.
+  - title: Choose the path
+    text: If nothing relevant is new, it says so and stops. If there is something, it ranks the papers and keeps the ten most relevant.
+  - title: Pull out and check the claims
+    text: For papers that touch your summary, it pulls out claims with their numbers and limits and grades how strong the study is.
+  - title: Decide what it means
+    text: A strong paper that goes against a line marks it at risk and proposes a rewrite. A weak paper is logged and changes nothing.
+  - title: Pick what to read
+    text: Chooses up to three papers worth reading in full and gives each a plain summary.
+output_shape: |-
+  THIS MONTH
+    Found <n> | new <n> | relevant <n> | searched <dates> | nothing new: <yes or no>
+
+  LINES AT RISK
+    <line of standing summary> | paper: <title, year> | grade: <grade> | proposed rewrite: <text>
+
+  SUPPORT
+    <line> | paper: <title, year> | grade: <grade>
+
+  WEAK OR CONFLICTING
+    <paper> | reason it changed nothing: <reason> | conflict explained by: <difference>
+
+  READ THESE
+    1. <paper> | plain summary: <summary> | why it matters: <reason>
+
+  THE SEARCH
+    terms: <terms> | databases: <list>
+
+  FILES AND MISSING
+    <each step's file> | MISSING: <every line>
+tweaks:
+  - what: How narrow the topic is
+    how: A topic that fits in one or two sentences works best. A broad field gives too many papers to rank.
+  - what: Your standing summary
+    how: Keep it to five lines. Each line is a claim you rely on, so a new paper can be set against it.
+  - what: How many papers to keep each month
+    how: Ten is the starting point. Lower it if you only have an hour a month.
+  - what: What counts as strong
+    how: Tell it your field's norms, such as minimum sample size or study type, so the grade fits.
+judge:
+  - Every paper listed is new, or was removed because you had seen it.
+  - Each claim about a paper comes from its text or abstract, and says which.
+  - No line was marked at risk on a weak paper.
+  - Your standing summary was not changed without your yes.
+test:
+  - Run it on a topic you know well with a start date a year back. See if it finds the papers you know.
+  - Run it twice in one day. The second run should say nothing new.
+  - Give it a topic with very few papers and see if it says so.
+improve:
+  - Add the authors and journals you trust most to the search terms.
+  - Add the papers that shaped your view to the standing summary, line by line.
+  - Move to every three months if most months say nothing new.
+  - Keep a short list of preprints you are waiting to see published.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the watch folder, the seen list and the standing summary, and run each month.
+    - name: Zotero
+      why: Keep the papers you read here so the seen list and your library match.
+  inputs:
+    - A short review or notes you wrote on the topic
+    - Three to five papers you trust most

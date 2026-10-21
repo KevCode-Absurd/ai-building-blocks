@@ -1,0 +1,28 @@
+slug: weekly-store-numbers-watcher
+name: "Weekly store numbers watcher"
+summary: "Give it weekly Shopify and GA4 numbers. Get which to trust, any sharp drop explained, and the funnel step to fix."
+category: agent
+type: agent
+role: orchestrate
+job: analysis
+level: intermediate
+inputs:
+  - {type: performance_sheet, required: true}
+  - {type: spreadsheet, required: false}
+  - {type: question, required: false}
+outputs:
+  - {type: audit_report}
+  - {type: plan}
+uses: [shopify-dashboard-reader, store-page-conversion-reader, metric-mismatch-tracer, metric-drop-investigator, store-funnel-benchmark-checker, conversion-reconciliation]
+steps:
+  - {uses: shopify-dashboard-reader, note: "Every week: which Shopify tiles to trust, cash collected and the Shopify to GA4 gap."}
+  - {uses: store-page-conversion-reader, note: "Every week: conversion by channel and landing page, and the worst funnel drop."}
+  - {uses: metric-mismatch-tracer, note: "Only when two reports disagree by more than a tenth: where the numbers split, before any drop is read."}
+  - {uses: metric-drop-investigator, note: "Only when sales, orders or conversion fell by a fifth or more against the recent average, and the numbers agree."}
+  - {uses: store-funnel-benchmark-checker, note: "Only when the drop or the worst funnel step points at the funnel, and on the first run: the step that leaks most against ranges."}
+  - {uses: conversion-reconciliation, note: "Only when the owner pastes ad platform conversion reports and they differ from store orders by more than a fifth."}
+schedule: "Every Monday morning, after last week's data is in"
+asks_before: [changing any tracking tag, pixel or GA4 setting, changing ad budgets or targets, sending the numbers to anyone]
+origin: own
+version: 1.0.0
+example_pending: true

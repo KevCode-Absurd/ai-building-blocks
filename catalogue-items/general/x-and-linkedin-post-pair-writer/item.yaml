@@ -1,0 +1,18 @@
+slug: x-and-linkedin-post-pair-writer
+name: "X and LinkedIn post pair writer"
+summary: "Paste one idea. Get an X post and a LinkedIn post that read as written separately."
+category: general
+type: prompt
+role: make
+job: organic
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "same-idea-both-platforms skill", by: "prateeks367 (VoiceMoat skills), shared by sickn33", url: "https://github.com/prateeks367/voicemoat-skills", used: "Writing each platform's post from the idea, not by shortening one, and checking for seams"}

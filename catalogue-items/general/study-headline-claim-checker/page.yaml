@@ -1,0 +1,98 @@
+new_slug: study-headline-claim-checker
+name: "Study headline claim checker"
+summary: "Paste a news item or study claim. Get what it really shows, how strong it is, and what to ask."
+job: research-topics
+thinking: medium
+thinking_why: "It must read a claim against its evidence and judge how strong it is."
+
+headline: "Study headline claim checker"
+subhead: "Paste a news item or study claim. Your AI separates what was studied from what is claimed, names the gaps, rates the strength and gives you three questions to ask."
+
+explain: |
+  Headlines say "study proves" when the study showed a link in 40 people for six weeks. Without the details it is hard to tell the two apart, and decisions get made on the headline.
+
+  This prompt pulls out who was studied, how many and how, names the kind of study, and checks the jump from evidence to claim. It gives a plain rating and three questions to ask. It marks what the text left out instead of guessing.
+
+when:
+  - "A study claim is about to shape a choice you make."
+  - "You are sharing an article and want to be sure it holds up."
+  - "You read a post that cites a study but gives no detail."
+
+you_give:
+  - "The claim and the text around it"
+  - "Why you care (optional)"
+
+you_get:
+  - "What was studied and what type of study it was"
+  - "Where the claim goes past the evidence"
+  - "A strength rating"
+  - "Three questions to ask next"
+
+how_to_use:
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Paste your details under it, in the slots under What you need."
+  - "Send it and read the answer against the checks on this page."
+  - "Reply with what to change, and keep the version that works."
+
+how_it_works:
+  - title: "Write the claim plainly"
+    text: "Exactly as made."
+  - title: "Find what was studied"
+    text: "People, numbers, length, measures."
+  - title: "Name the study type"
+    text: "And what it can show."
+  - title: "Test the jump"
+    text: "Link versus cause, and who it applies to."
+  - title: "Rate it"
+    text: "With three questions."
+
+output_shape: |
+  CLAIM
+  <one sentence>
+  WHAT WAS STUDIED
+  <who, how many, how long, measured how>
+  STUDY TYPE
+  <type> - can show: <line>; cannot show: <line>
+  GAPS
+  <lines>
+  RATING
+  <strong / fair / weak / cannot tell> - <reason>
+  THREE QUESTIONS
+  1. <question>
+  MISSING
+  <lines>
+
+tweaks:
+  - what: "Full text"
+    how: "Paste the abstract or method section, not only the headline. Ratings improve."
+  - what: "Your decision"
+    how: "Say what you will do with the answer. The questions get more useful."
+  - what: "Two claims"
+    how: "Paste two studies that disagree and ask which gaps explain it."
+
+judge:
+  - "Every statement about the study comes from the text."
+  - "Missing details are marked, not filled in."
+  - "The rating follows from the gaps."
+  - "The questions are ones you could actually ask."
+
+test:
+  - "Try it on a headline you doubted. Did it name your doubt?"
+  - "Run it twice. The rating should match."
+  - "Give a headline with no details. It should say cannot tell."
+
+improve:
+  - "Add the fields you read most, such as nutrition or marketing, and their usual traps."
+  - "Add a rule for the minimum group size you trust."
+  - "Save the three questions as a checklist for any claim."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Works in one message. For the full paper, attach it."}
+  inputs:
+    - "The abstract or method section"
+    - "Where you saw the claim"
+
+terms:
+  - term: "Link versus cause"
+    meaning: "Two things moving together does not mean one makes the other happen."

@@ -33,13 +33,13 @@ test.afterEach(async ({ page }) => {
 
 const fill = async (page: Page, id: string, v: string | number) => page.getByTestId(`input-${id}`).fill(String(v));
 
-test("the Tools page lists all eight mini tools, and the header and footer lead to it", async ({ page }) => {
+test("the Tools page lists every mini tool, and the header and footer lead to it", async ({ page }) => {
   await page.goto("/");
   await page.locator(".nav").getByRole("link", { name: "Tools" }).click();
   await expect(page).toHaveURL(/\/tools$/);
   const index = page.getByTestId("tools-index");
   await expect(index.getByRole("heading", { level: 1 })).toHaveText("Know your numbers before you spend money");
-  await expect(index.getByTestId("tool-card")).toHaveCount(8);
+  await expect(index.getByTestId("tool-card")).toHaveCount(22);
   expect(await index.getByTestId("tool-card").evaluateAll((els) => els.map((e) => e.getAttribute("data-slug")))).toEqual(tools.map((t) => t.slug));
   await index.getByTestId("tool-card").first().click();
   await expect(page).toHaveURL(/\/tools\/discount-calculator$/);

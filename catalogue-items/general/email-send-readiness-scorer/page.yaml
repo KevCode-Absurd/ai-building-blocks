@@ -1,0 +1,89 @@
+new_slug: email-send-readiness-scorer
+name: "Email send-readiness scorer"
+summary: "Paste an email. Get counts, cuts, three subject lines, a score out of 100 and a ship or fix verdict."
+job: write-emails
+thinking: low
+thinking_why: "It counts and scores against fixed rules."
+
+headline: "Email send-readiness scorer"
+subhead: "Paste an email draft with its goal. The prompt counts the lead, length and subject, marks cuts, flips the copy to speak to the reader, gives a score out of 100 and a ship or fix verdict with three fixes."
+
+explain: |
+  A weak email usually fails in small, countable ways. The first line runs long. The subject cuts off on a phone. Every sentence starts with "we". This prompt counts all of that, so you see the fault as a number, not a feeling.
+
+  The score starts at 100 and loses points for each fault, and it shows the sum. It measures how ready the email is to send, not how it will perform. The limits are rules of thumb from one teacher, so test them against your own opens and clicks.
+
+when:
+  - "You wrote an email and want a second pair of eyes in two minutes."
+  - "Your emails get opened but not clicked."
+  - "You want one number to decide whether to send or fix."
+
+you_give:
+  - "The email with subject and preview text"
+  - "Who gets it and the one goal"
+  - "Your voice rules (optional)"
+you_get:
+  - "Counts for lead, length and subject"
+  - "The draft marked with cuts and rewrites"
+  - "A score out of 100, a verdict and three fixes"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste the full email, including the subject and preview text, under the prompt."
+  - "State the one goal in a sentence."
+  - "Fix the three things it lists, then paste the new version to score it again."
+
+how_it_works:
+  - title: "Count"
+    text: "Count the words in the first sentence (aim for 14 or fewer) and in the whole email (200 to 300 is normal), and the characters in the subject (40 or fewer)."
+  - title: "Mark the cuts"
+    text: "Mark filler such as \"very\", \"really\" and \"I hope this finds you well\". Mark any sentence that needs two reads."
+  - title: "Flip to you"
+    text: "List sentences that start with I, we or the brand name. Rewrite each so the reader is the subject. Keep \"we\" in shipping, returns and legal lines."
+  - title: "Check the ask and the facts"
+    text: "There should be one call to action. Flag any claim, price or deadline that is not true or not shown."
+  - title: "Score it"
+    text: "Start at 100. Take off 30 for each Stop (a false claim, a misleading subject, no clear next step), 10 for each Fix (lead, length, subject, I and we, call to action) and 3 for each Polish (filler, pacing). Show the sum. Ship at 80 or more with no Stop."
+
+output_shape: |
+  COUNTS
+  Lead: <n> words | Length: <n> words | Subject: <n> characters
+  I/we lines: <n>
+  MARKED DRAFT
+  <email with [cut] and [rewrite: ...] marks>
+  SUBJECT LINES: 1. <...> 2. <...> 3. <...>
+  SCORE <n>/100 (100 - 30 x <Stops> - 10 x <Fixes> - 3 x <Polish> = <n>)
+  VERDICT: <ship | fix>
+  THREE FIXES: 1. <...> 2. <...> 3. <...>
+  MISSING: <...>
+
+tweaks:
+  - what: "The goal"
+    how: "A clear goal changes the verdict on the call to action. Always give one."
+  - what: "Voice rules"
+    how: "Add them so it does not flatten your tone."
+  - what: "Your data"
+    how: "Add your open and click rates to see which limits hold for your list."
+
+judge:
+  - "Every count matches what you get if you count by hand."
+  - "The marked draft keeps your meaning."
+  - "The score sum adds up."
+  - "The three fixes are the biggest faults, not the smallest."
+
+test:
+  - "Score an email that did well. It should score high."
+  - "Score the same email twice. The score should match."
+  - "Fix the top three faults and score again. The number should rise."
+
+improve:
+  - "Change the limits to your own, such as a longer email if your list likes long ones."
+  - "Add your voice rules under the prompt."
+  - "Pair it with the Email draft reviewer when you want every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "Your last month's open and click rates"
+    - "Two past emails that did well"

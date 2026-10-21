@@ -1,0 +1,22 @@
+slug: bonus-idea-matcher
+name: Bonus idea matcher
+summary: Paste your offer and buyer doubts. Get one named bonus for each doubt, with a value reason.
+category: general
+type: prompt
+role: make
+job: offer
+level: beginner
+inputs:
+  - type: offer
+    required: true
+outputs:
+  - type: offer
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: "$100M Offers: How To Make Offers So Good People Feel Stupid Saying No"
+    by: Alex Hormozi
+    url: https://shop.acquisition.com/products/100m-offers-hardcover
+    used: Match each bonus to one doubt, prefer tools and checklists to more training, and value each bonus

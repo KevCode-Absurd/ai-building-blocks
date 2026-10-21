@@ -1,0 +1,16 @@
+slug: product-page-doubt-mapper
+name: "Product page doubt mapper"
+summary: "Paste your product and what buyers doubt. Get the page sections, each tied to real proof."
+category: ecommerce
+type: prompt
+role: make
+job: page
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

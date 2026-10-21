@@ -1,0 +1,22 @@
+slug: plan-guess-ranker
+name: Plan guess ranker
+summary: Paste your plan. Get the few guesses it rests on, each with a number, ranked by risk.
+category: general
+type: prompt
+role: check
+job: strategy
+level: intermediate
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: The Lean Startup
+    by: Eric Ries
+    url: https://theleanstartup.com/
+    used: Breaking a plan into a value guess and a growth guess, and testing the riskiest first

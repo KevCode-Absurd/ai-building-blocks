@@ -1,0 +1,90 @@
+new_slug: fix-now-or-test-sorter
+name: "Fix-now or test sorter"
+summary: "Paste your list of page problems. Get each one sorted into fix now, look into or test, then ranked."
+job: audit-landing-page
+thinking: low
+thinking_why: "It sorts what you give it into set buckets, with few judgement calls."
+
+headline: "Fix-now or test sorter"
+subhead: "Paste a list of problems with your landing page or store. The prompt gives each one a single next step: fix it now, look into it, or test it. You get a ranked order, with a reason for each rank."
+
+explain: |
+  A long list of page problems helps nobody until each item has a next step. Teams often test things that should simply be fixed, or fix things whose cause nobody knows.
+
+  This prompt puts every problem in one of four buckets. Tracking faults come first, because they make every other number wrong. Obvious fixes go next and do not wait for a test. Unclear causes get a question to answer. The rest become test ideas that say which number should move and why. Then it ranks all of them by likely gain and effort.
+
+when:
+  - "You have an audit report and no idea where to start."
+  - "Your team keeps debating what to test versus what to just fix."
+  - "You want a short, ranked to-do list for your page this week."
+
+you_give:
+  - "A list of page problems, one per line"
+  - "Proof for each: a number, a quote or what you saw"
+  - "Your goal for the page (optional)"
+you_get:
+  - "Each problem in one bucket with its next step"
+  - "Test ideas that name the number they should move"
+  - "A ranked order with a reason for each rank"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Under it, paste your problems, one per line, with the proof beside each."
+  - "Add your page goal if you have one."
+  - "Do the tracking fixes first, then the fix-now items at the top of the rank."
+
+how_it_works:
+  - title: "List with proof"
+    text: "Every problem is numbered with its proof beside it."
+  - title: "Pick a bucket"
+    text: "Tracking, fix now, look into or test. Each problem gets one."
+  - title: "Rank"
+    text: "By likely gain and effort, tracking first."
+
+output_shape: |
+  TRACKING
+  <n>. <problem> | proof: <...> | fix: <step>
+  FIX NOW
+  <n>. <problem> | proof: <...> | effort: <low | medium | high>
+  LOOK INTO
+  <n>. <problem> | question: <...> | how to answer it: <...>
+  TEST
+  <n>. <change> | moves: <number, up or down> | why: <reason from the proof>
+  NO PROOF YET
+  <n>. <problem> | proof needed: <...>
+  RANKED ORDER
+  1. <n> | gain <...> | effort <...> | <reason>
+  MISSING
+  <anything left blank>
+
+tweaks:
+  - what: "Proof"
+    how: "The more proof you paste, the fewer problems land in LOOK INTO."
+  - what: "Page goal"
+    how: "Name the goal. Gain is judged by how close a problem is to it."
+  - what: "Capacity"
+    how: "Say how many changes your team can make this week and the ranking stops after that."
+
+judge:
+  - "Each problem appears once."
+  - "Fix-now items have a clear cause."
+  - "Every test idea has a reason that comes from your proof."
+  - "Tracking problems are first."
+
+test:
+  - "Paste a list where you already know which items are tracking faults. They should all be in TRACKING."
+  - "Run it twice. The buckets should match."
+  - "Compare the top three with what your team would have picked."
+
+improve:
+  - "Add your own rule for what counts as a fix-now item, such as anything under an hour."
+  - "Add your team size so effort matches your real capacity."
+  - "Pair it with the full Page issue sorter when you want the extra checks."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt works in any strong chat AI. Paste it, then add your details under it."}
+  inputs:
+    - "Your page goal and last month's conversion rate"
+    - "Screenshots or numbers behind each problem"
+    - "How many hours your team has this week"

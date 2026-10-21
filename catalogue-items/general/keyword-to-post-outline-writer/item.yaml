@@ -1,0 +1,18 @@
+slug: keyword-to-post-outline-writer
+name: "Keyword to post outline writer"
+summary: "Paste a keyword and who it is for. Get a one-page outline with intent, headings and what the post must cover."
+category: general
+type: prompt
+role: make
+job: research
+level: beginner
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: brief}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "content-brief-authoring skill", by: "RampStack", url: "https://github.com/rampstackco/claude-skills/tree/main/skills/content-brief-authoring", used: "A short brief with intent, audience, outline, required coverage and a success measure"}

@@ -1,0 +1,76 @@
+new_slug: know-it-or-skip-it-sorter
+name: Know-it-or-skip-it sorter
+summary: Describe a business or bet. Get it sorted yes, no or too tough, based on what you know.
+job: money-and-investing
+thinking: medium
+thinking_why: It asks you to judge how well you know something, which needs care.
+headline: Know-it-or-skip-it sorter
+subhead: Describe a business or bet and what you know about it. You get five tough questions marked know, guess or blank, your real edge written down, and a sort into yes, no or too tough.
+explain: Most losses come from judging things you do not understand. This prompt tests that first. You answer five plain questions about the business with no notes, and each answer is marked as something you know, something you guess or a blank. Then it asks for your real edge. A liking is not one. If the answers are thin, the sort is too tough, and that is a full answer. Passing on most things is the point. It gives frameworks and checks only. It does not advise you to buy, sell or borrow.
+when:
+  - A friend or a headline pitched you a business or bet.
+  - You feel sure but cannot say why.
+  - You want a quick check before you do deeper work.
+you_give:
+  - The business or bet
+  - Your background (optional)
+you_get:
+  - The business in one sentence
+  - Five answers marked know, guess or blank
+  - Your edge, or "no edge"
+  - "A sort: yes, no or too tough, with the reason"
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste the business or bet and your background.
+  - Send it and read the result.
+  - Answer without notes. Looking things up changes the test.
+how_it_works:
+  - title: Say it simply
+    text: One sentence, or it is too tough.
+  - title: Test yourself
+    text: Five questions with no notes, marked know, guess or blank.
+  - title: Sort it
+    text: Yes needs real knowledge and a real edge.
+output_shape: |-
+  THE BUSINESS
+  <one sentence>
+
+  FIVE ANSWERS
+  1-5: <answer> [KNOW / GUESS / BLANK]
+
+  YOUR EDGE
+  <or "no edge">
+
+  BASKET
+  <YES / NO / TOO TOUGH>. <reason>
+
+  FIRST QUESTION YOU CANNOT ANSWER
+  <question>
+
+  MISSING
+tweaks:
+  - what: Field
+    how: Give your work history so it can spot a real edge.
+  - what: Strict
+    how: Ask it to count any GUESS as BLANK.
+  - what: Widen
+    how: Ask what you would need to learn to move a too-tough one to yes.
+judge:
+  - KNOW answers rest on facts.
+  - The edge is real.
+  - The basket follows the rule.
+  - No buy or sell advice.
+test:
+  - Say you like a brand but give no other facts. It should say no edge.
+  - Describe a business you run. It should find a real edge.
+  - Run twice. The basket should match.
+improve:
+  - Keep a log of past sorts and check them later.
+  - Add a list of fields you know well.
+  - Use the full skill when you want to widen your circle.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - The business or bet

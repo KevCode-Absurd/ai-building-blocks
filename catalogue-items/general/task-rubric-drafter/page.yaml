@@ -1,0 +1,93 @@
+new_slug: task-rubric-drafter
+name: "Task rubric drafter"
+summary: "Describe a task and its goal. Get a rubric with clear wording at each level of work."
+job: teach-and-train
+thinking: low
+thinking_why: "It fills a standard grid from the task, with little judgement."
+
+headline: "Task rubric drafter"
+subhead: "Describe a task and its goal. Your AI drafts a rubric with 3 to 5 parts, four levels, clear wording in every cell and a feedback line for each level."
+
+explain: |
+  A rubric with words like "good" and "excellent" lets two markers give the same work different grades. Learners cannot tell what to fix, either.
+
+  This prompt writes each cell in things you can see or count. It keeps every part tied to the goal, steps the levels up evenly, and adds a feedback line so markers can reply fast. The draft is yours to adjust to your class.
+
+when:
+  - "You set a new task and need a way to mark it."
+  - "Markers disagree on the same piece of work."
+  - "Learners ask what a top mark needs."
+
+you_give:
+  - "The task"
+  - "The goal it shows"
+  - "Number of levels (optional)"
+
+you_get:
+  - "A rubric table"
+  - "A feedback line for each level"
+  - "A tip on how to use it"
+
+how_to_use:
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Paste your details under it, in the slots under What you need."
+  - "Send it and read the answer against the checks on this page."
+  - "Reply with what to change, and keep the version that works."
+
+how_it_works:
+  - title: "Pick the parts"
+    text: "Three to five tied to the goal."
+  - title: "Name the levels"
+    text: "Four plain-word levels."
+  - title: "Describe each cell"
+    text: "What you can see or count."
+  - title: "Check the steps"
+    text: "Each level differs by one change."
+  - title: "Write feedback lines"
+    text: "One for each level."
+
+output_shape: |
+  | Part | Beginning | Developing | Secure | Strong |
+  | <part> | <what you see> | <...> | <...> | <...> |
+
+  FEEDBACK LINES
+  <one per level>
+  HOW TO USE
+  <one line>
+  MISSING
+  <lines>
+
+tweaks:
+  - what: "Levels"
+    how: "Ask for three levels for a quick task, or five for a major one."
+  - what: "Learners"
+    how: "Say their age so the wording fits."
+  - what: "Example work"
+    how: "Paste a sample of strong work and the rubric will match it."
+
+judge:
+  - "Each cell can be checked against the work."
+  - "The levels step up evenly."
+  - "Parts match the goal."
+  - "Two markers would agree."
+
+test:
+  - "Mark two pieces of work with the rubric, then swap with a colleague."
+  - "Run it twice. The parts should match."
+  - "Give a vague task. It should mark MISSING, not guess."
+
+improve:
+  - "Add your school's level names."
+  - "Add the terms your learners use."
+  - "Use the same parts across tasks so progress shows."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Paste the table into a document or sheet when it is done."}
+  inputs:
+    - "A sample of strong work"
+    - "Your marking scheme or standard"
+
+terms:
+  - term: "Rubric"
+    meaning: "A grid that describes what work looks like at each level."

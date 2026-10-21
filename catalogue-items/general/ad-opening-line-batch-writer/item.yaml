@@ -1,0 +1,32 @@
+slug: ad-opening-line-batch-writer
+name: Ad opening line batch writer
+summary: Paste your buyer and proof. Get ten ad opening lines, each with the line that follows it.
+category: general
+type: prompt
+role: make
+job: copy
+level: beginner
+inputs:
+  - type: brief
+    required: true
+  - type: ad_copy
+    required: false
+outputs:
+  - type: hooks
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: Tested Advertising Methods
+    by: John Caples
+    url: https://en.wikipedia.org/wiki/John_Caples
+    used: Headlines that select the reader; self-interest, news and curiosity, with curiosity weakest alone
+  - title: Breakthrough Advertising
+    by: Eugene M. Schwartz
+    url: https://breakthroughadvertisingbook.com/
+    used: "The five stages of buyer awareness: what the opening must name and which moves fit each"
+  - title: Confessions of an Advertising Man
+    by: David Ogilvy
+    url: https://en.wikipedia.org/wiki/Confessions_of_an_Advertising_Man
+    used: Far more people read the headline than the body, so it must carry the promise

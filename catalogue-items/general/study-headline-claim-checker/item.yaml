@@ -1,0 +1,16 @@
+slug: study-headline-claim-checker
+name: "Study headline claim checker"
+summary: "Paste a news item or study claim. Get what it really shows, how strong it is, and what to ask."
+category: general
+type: prompt
+role: check
+job: research
+level: beginner
+inputs:
+  - {type: source_text, required: true}
+outputs:
+  - {type: audit_report}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true

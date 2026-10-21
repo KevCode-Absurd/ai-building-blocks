@@ -1,0 +1,69 @@
+new_slug: plain-job-post-drafter
+name: Plain job post drafter
+summary: Paste the role and what it needs. Get a clear job post with real requirements.
+job: hire-people
+thinking: low
+thinking_why: It follows a fixed layout and swaps out wording, with few judgement calls.
+headline: Plain job post drafter
+subhead: Paste the role, your team and the real must-haves. You get a job post that opens with the work, lists a few true requirements and avoids wording that puts people off.
+explain: Most job posts open with a wall of requirements, and good people read the list and move on. This prompt turns the post around. It starts with why the role exists, writes duties as results, says what the first 90 days look like and keeps must-haves to five. It then scans for loaded words and needless degree or years rules. Rules on what you can ask or say in a job post differ by place, so have a qualified person look before you publish.
+when:
+  - You are hiring and the last post got weak replies.
+  - Your post has a long list of must-haves nobody meets.
+  - You want a first draft in minutes.
+you_give:
+  - The role and the team
+  - The real must-haves
+  - Pay and working arrangement (optional)
+  - An old post to rewrite (optional)
+you_get:
+  - A full job post with a fixed set of headings
+  - A list of what was cut or changed, and why
+  - Missing items, such as pay range, marked clearly
+how_to_use:
+  - Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it.
+  - Under it, paste the role, your team and the real must-haves.
+  - Send it and read the result.
+  - Check that every must-have is true for the person you would hire today.
+how_it_works:
+  - title: Start with the work
+    text: Why the role exists and what it changes.
+  - title: Trim the list
+    text: Five must-haves at most, the rest as nice-to-have.
+  - title: Clean the words
+    text: Loaded words and jargon are swapped out, and each change is listed.
+output_shape: |-
+  THE POST
+  About the role / What you will do / First 90 days / You have / Nice to have / Pay and terms / Closing line
+
+  CHANGES
+  <what was cut or swapped, and why>
+
+  MISSING
+  <e.g. pay range>
+tweaks:
+  - what: Rewrite or write new
+    how: Paste an old post to rewrite it, or give only the role to write a new one.
+  - what: Length
+    how: Ask for a short post for a job board or a long one for your site.
+  - what: Pay
+    how: Give a range and it goes in. Leave it out and you get MISSING.
+judge:
+  - Opens with the work, not a list.
+  - Five must-haves or fewer.
+  - No needless degree or years rule.
+  - No loaded wording.
+test:
+  - Paste a post full of "rockstar" and "digital native". Both should be gone and listed under CHANGES.
+  - "Give a role with no pay. It should write MISSING: pay range."
+  - Run twice. The must-have list should stay about the same.
+improve:
+  - Add two lines about your team culture, in your own words.
+  - Ask for a second version for a job board with a 150-word limit.
+  - Use the full skill for a job family with many roles.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A one-message prompt works in any strong chat AI, with nothing to install.
+  inputs:
+    - The role and the team

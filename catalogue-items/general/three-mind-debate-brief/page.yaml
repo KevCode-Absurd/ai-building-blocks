@@ -1,0 +1,103 @@
+new_slug: three-mind-debate-brief
+name: "Three-mind debate brief"
+summary: "Paste a hard decision. Get three thinkers arguing it and a brief with three first steps."
+job: think-with-minds
+thinking: medium
+thinking_why: "It has to hold three different views apart and then weigh them."
+
+headline: "Three-mind debate brief"
+subhead: "Paste a hard decision. Three thinkers argue it from different seats, rank each other's answers blind, and you get a brief with the strongest dissent and three first steps."
+
+explain: |
+  When you decide alone, you hear your own view and nothing else. A good adviser disagrees with you and with each other. This prompt gives you that in one reply.
+
+  Three thinkers with opposed habits each give a view, then challenge one another. Names are hidden while the views are ranked, so the reasoning wins, not the famous name. You end with a short brief to act on. The thinkers are an AI playing public figures from their public work, and the final call stays yours.
+
+when:
+  - "You are stuck between two good options."
+  - "You want to hear the case you are not making."
+  - "You have to defend a choice to others."
+
+you_give:
+  - "The decision and the result you want"
+  - "Facts and limits (optional)"
+  - "Three thinkers you want (optional)"
+
+you_get:
+  - "Three opening views and challenges"
+  - "A blind ranking"
+  - "A brief with the strongest dissent and three first steps"
+
+how_to_use:
+  - "Copy the prompt (the card on this page) and paste it into any AI chat, or open it if you added it to your AI."
+  - "Paste your details under it, in the slots under What you need."
+  - "Send it and read the answer against the checks on this page."
+  - "Reply with what to change, and keep the version that works."
+
+how_it_works:
+  - title: "Restate the decision"
+    text: "One line, with the result you want."
+  - title: "Seat three thinkers"
+    text: "Action, risk and question-the-question seats."
+  - title: "Opening views"
+    text: "Under 100 words each."
+  - title: "Challenges"
+    text: "Each picks the view they disagree with most."
+  - title: "Blind ranking"
+    text: "Names hidden until after the ranking."
+  - title: "The brief"
+    text: "Decision, dissent, what would change it, first steps."
+
+output_shape: |
+  QUESTION
+  <one line>
+  COUNCIL
+  <name - seat>
+  OPENING VIEWS
+  <three, under 100 words each>
+  CHALLENGES
+  <three, under 50 words each>
+  RANKING
+  <A, B, C order with one line each>, then who wrote which
+  BRIEF
+  Decision: <1-2 sentences>
+  Strongest dissent: <who and why>
+  What would change the call: <1-2 facts>
+  First three steps: <list>
+  MISSING
+  <lines>
+
+tweaks:
+  - what: "Who sits"
+    how: "Name three thinkers you trust, or ask for a mix of customer, money and craft."
+  - what: "Facts"
+    how: "Paste your numbers. Thinkers argue better from facts than guesses."
+  - what: "Second round"
+    how: "Ask for a second round on the strongest dissent."
+
+judge:
+  - "The three views differ in more than tone."
+  - "The dissent is kept at full strength."
+  - "The first steps can start this week."
+  - "Facts you did not give are marked MISSING."
+
+test:
+  - "Run it on a choice you already made. Do the views include the one you ignored?"
+  - "Run it twice with the same thinkers. The seats should stay the same."
+  - "Ask it about a question with one right answer. It should say so."
+
+improve:
+  - "Add the thinkers whose style you trust most."
+  - "Add your numbers and past results as standing facts."
+  - "Add a fourth seat for your customer."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Works in one message. Pick a model with room for a long answer."}
+  inputs:
+    - "Your numbers and deadlines"
+    - "The option you already lean towards"
+
+terms:
+  - term: "Blind ranking"
+    meaning: "Ranking answers with the names hidden, so the reasoning decides, not who said it."

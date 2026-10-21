@@ -1,0 +1,92 @@
+new_slug: break-even-ad-target-finder
+name: "Break-even ad target finder"
+summary: "Paste one product's price and costs. Get its true margin, break-even ROAS and break-even CAC."
+job: track-numbers
+thinking: low
+thinking_why: "It is mostly sums on numbers you give it."
+
+headline: "Break-even ad target finder"
+subhead: "Paste one product's price and costs. It adds every cost of delivery, shows three margins side by side, and finds the break-even ROAS and CAC you can aim for."
+
+explain: |
+  A product that looks like a 70% margin on price minus factory cost can be a 25% margin once shipping, packing, payment fees and refunds are in. Ad goals set on the first number lose money.
+
+  This prompt builds the full cost of delivery for one product, shows product, gross and contribution margin, then works out the ROAS and CAC where you break even. It names the cost line that hurts most.
+
+when:
+  - "You are about to set a ROAS or CAC goal for a product."
+  - "You changed your price or shipping and want the new floor."
+  - "A product sells well but cash feels tight."
+
+you_give:
+  - "Selling price (required): without tax. If your price includes tax, say the tax rate."
+  - "Unit cost (required): plus freight and duty per unit."
+  - "Per order (required): shipping to the customer, pick and pack, packaging."
+  - "Payment fee percent (required)."
+  - "Refund rate and average discount (required): from your last 90 days. A guess is fine if you say so."
+  - "Marketing share of price (optional)."
+you_get:
+  - "The full cost of delivery, line by line"
+  - "Product, gross and contribution margin"
+  - "Break-even ROAS and CAC"
+  - "The one cost line to fix first"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: selling price; unit cost; per order; payment fee percent; refund rate and average discount; marketing share of price."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "Take tax out"
+    text: "Work on the price your store keeps."
+  - title: "Add the cost of delivery"
+    text: "Unit cost, freight, duty, shipping out, pick and pack, packaging and the payment fee. Payment fees belong here, not in overhead."
+  - title: "Add a refund allowance"
+    text: "Use your own 90-day refund and discount rates. Mark a guess as GUESS."
+  - title: "Show three margins"
+    text: "Product margin is price minus unit cost. Gross margin is price minus every delivery cost. Contribution margin is gross margin minus marketing, at 20% of price if none was given, marked as a test value."
+  - title: "Find break-even"
+    text: "Break-even ROAS is 1 divided by gross margin as a decimal. Break-even CAC is gross profit per order."
+
+output_shape: |
+  COST OF DELIVERY per order: <each line> | total <$>
+  MARGINS: product <$ | %> | gross <$ | %> | contribution <$ | %>
+  BREAK-EVEN: ROAS <x> | CAC <$>
+  WEAKEST LINE: <the cost that hurts most>
+  MISSING: <lines you did not give>
+
+tweaks:
+  - what: "Refund rate"
+    how: "Use your real 90-day rate. A guess is marked and the answer is called provisional."
+  - what: "Sale price"
+    how: "Ask it to run the steps again at a sale price to see how far margin falls."
+
+judge:
+  - "Tax is out of the price."
+  - "Every cost line has your number, GUESS or MISSING."
+  - "Break-even ROAS is 1 divided by gross margin, and the sum is shown."
+  - "Nothing is invented. If a cost is missing, say MISSING instead of a margin."
+
+test:
+  - "Use a product you know well and check the delivery cost total against your own sheet."
+  - "Run it twice with the same numbers. The margins should match."
+  - "Drop one cost line. It should say MISSING, not guess."
+
+improve:
+  - "Add your usual shipping and pick and pack costs under the prompt so you only change price."
+  - "Save your real refund rate in your about-me note."
+  - "Pair it with a store profit calculator when you want the whole month, not one product."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "Your carrier or warehouse rate card"
+    - "Your 90-day refund and discount rates"
+
+terms:
+  - term: "ROAS"
+    meaning: "Sales from ads divided by what you spent on them."
+  - term: "CAC"
+    meaning: "What it costs to win one new customer."

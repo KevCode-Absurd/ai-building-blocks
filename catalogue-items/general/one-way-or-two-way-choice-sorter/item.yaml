@@ -1,0 +1,18 @@
+slug: one-way-or-two-way-choice-sorter
+name: "One-way or two-way choice sorter"
+summary: "Paste a choice you are stuck on. Get it sorted as hard or easy to undo, with the right speed to decide."
+category: general
+type: prompt
+role: check
+job: strategy
+level: beginner
+inputs:
+  - {type: question, required: true}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "2015 Letter to Shareholders", by: "Jeff Bezos, Amazon", url: "https://www.aboutamazon.com/news/company-news/2015-letter-to-shareholders", used: "Sorting choices by whether they can be undone, and matching the speed and weight of the process to the answer"}

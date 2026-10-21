@@ -1,0 +1,21 @@
+slug: know-it-or-skip-it-sorter
+name: Know-it-or-skip-it sorter
+summary: Describe a business or bet. Get it sorted yes, no or too tough, based on what you know.
+category: general
+type: prompt
+role: check
+job: analysis
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: audit_report
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: "Poor Charlie's Almanack: The Wit and Wisdom of Charles T. Munger (2005)"
+    by: Charles T. Munger, edited by Peter D. Kaufman
+    used: The three baskets (yes, no, too tough), the rule that you must know where your own edge ends, and the point that an edge can be built slowly by work in one field

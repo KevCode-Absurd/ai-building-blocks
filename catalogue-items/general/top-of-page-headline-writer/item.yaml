@@ -1,0 +1,21 @@
+slug: top-of-page-headline-writer
+name: "Top-of-page headline writer"
+summary: "Paste your offer, buyer, proof and ad. Get five headlines with a pick, a subhead, a button and proof."
+category: general
+type: prompt
+role: make
+job: page
+level: beginner
+inputs:
+  - {type: offer, required: true}
+  - {type: voc_reviews, required: false}
+  - {type: ad_copy, required: false}
+outputs:
+  - {type: copy_draft}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "The Only Landing Page Guide You'll Ever Need", by: "An agency owner who builds landing pages", used: "The headline and subhead formula, two kinds of proof on the first screen, a benefit-led button, doubt-reducers under the button, tight spacing and visual hierarchy"}
+  - {title: "I Studied 1000 Landing Pages, Here's What Works in 2025", by: "The same agency owner", used: "The top-screen formula, the lift from doubt-reducers, and familiar layouts"}

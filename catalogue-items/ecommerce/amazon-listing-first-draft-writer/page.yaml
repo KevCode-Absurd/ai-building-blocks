@@ -1,0 +1,88 @@
+new_slug: amazon-listing-first-draft-writer
+name: "Amazon listing first draft writer"
+summary: "Paste product facts and search phrases. Get an Amazon title, five bullets and backend keywords."
+job: sell-on-amazon
+thinking: low
+thinking_why: "It turns facts and phrases into set pieces of copy."
+
+headline: "Amazon listing first draft writer"
+subhead: "Paste your product facts and search phrases. It writes an Amazon title with the main phrase first, five benefit-first bullets, a short description and backend keywords, using only what you gave."
+
+explain: |
+  New sellers list features. Buyers on Amazon scan the title, the main image, the price and the reviews, then a few bullets. If the front of the title is a brand nobody knows, they scroll past.
+
+  This prompt puts the phrase people search first and turns each feature into a benefit. It refuses to invent a number or a guarantee, so a draft you paste into Seller Central stays honest.
+
+when:
+  - "You are listing a product for the first time."
+  - "Your current listing gets views but few sales."
+  - "You have search phrases and no copy."
+
+you_give:
+  - "Product facts (required): what it is, what it does, true numbers, certificates, guarantees."
+  - "Search phrases (advised): one main phrase and three to five more."
+  - "Competitor titles (optional)."
+  - "Whether your brand is registered (optional)."
+you_get:
+  - "A title with the main phrase first"
+  - "Five benefit-first bullets"
+  - "A short description"
+  - "Backend keywords"
+
+how_to_use:
+  - "Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini."
+  - "Under it, paste your details: product facts; search phrases; competitor titles; whether your brand is registered."
+  - "Send it and read the answer against the checks."
+  - "If a line says MISSING, add that detail and send it again."
+
+how_it_works:
+  - title: "Write the title"
+    text: "Main search phrase in the first words, then supporting phrases. Start with the brand only if it is famous."
+  - title: "Write five bullets"
+    text: "Benefit first, then the feature. Bullet 1 starts with the main phrase and a true quality number, only if you gave one."
+  - title: "Close with a promise"
+    text: "The last bullet is a plain money-back note, only if you set those terms. Mark it as a test."
+  - title: "Write the description"
+    text: "One short paragraph with the main phrases."
+  - title: "Fill backend keywords"
+    text: "Leftover true phrases, common misspellings and synonyms. No repeats of the title."
+
+output_shape: |
+  TITLE: <main phrase first> (<characters>)
+  BULLETS: 1 <phrase + true number: benefit, then feature> | 2 | 3 | 4 | 5 <money-back note, test this>
+  DESCRIPTION: <one short paragraph>
+  BACKEND KEYWORDS: <leftover phrases>
+  MISSING: <facts or phrases you did not give>
+
+tweaks:
+  - what: "Search phrases"
+    how: "Give a main phrase and a few more so the title and bullets use real buyer words."
+  - what: "True numbers"
+    how: "Give any real quality number or certificate. It will not make one up."
+
+judge:
+  - "Every fact and number comes from what you gave."
+  - "The main phrase is at the front of the title."
+  - "Each bullet leads with a benefit."
+  - "No promise is made that you did not set."
+
+test:
+  - "Write a listing for a product you sell and compare it to your current one."
+  - "Leave out numbers. It should not add any."
+  - "Run it twice. The title should lead with the same phrase."
+
+improve:
+  - "Add your brand tone words under the prompt."
+  - "Add words that are banned in your category."
+  - "Pair it with an Amazon keyword picker to get the phrases first."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A short prompt like this works the same in Claude, ChatGPT or Gemini."}
+  inputs:
+    - "Phrases from an Amazon keyword export"
+    - "Titles of the top three rivals"
+
+terms:
+  - term: "Backend keywords"
+    meaning: "Search words you add in Seller Central that buyers do not see on the page."

@@ -1,0 +1,22 @@
+slug: product-niche-problem-picker
+name: Product niche problem picker
+summary: Name a market. Get 20 buyer problems, the best 5, and what to search to see who sells to each.
+category: ecommerce
+type: prompt
+role: source
+job: research
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: shortlist
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: I asked Claude to find me a $1k/day product
+    by: Mark, e-commerce YouTuber
+    url: https://www.youtube.com/watch?v=1KrsOagtWgM
+    used: Start from a market, list emotional buyer problems, then check who already sells to each

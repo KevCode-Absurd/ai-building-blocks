@@ -1,0 +1,18 @@
+slug: post-flop-reason-finder
+name: "Post flop reason finder"
+summary: "Paste a post and its numbers. Get why it flopped (unseen, skipped or ignored) and one change."
+category: general
+type: prompt
+role: check
+job: organic
+level: beginner
+inputs:
+  - {type: copy_draft, required: true}
+outputs:
+  - {type: feedback_notes}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "why-did-this-post-flop skill", by: "prateeks367 (VoiceMoat skills), shared by sickn33", url: "https://github.com/prateeks367/voicemoat-skills", used: "Telling apart a post nobody saw, one that was skipped and one that was ignored, and ending on a single change"}

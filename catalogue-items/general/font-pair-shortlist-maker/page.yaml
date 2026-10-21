@@ -1,0 +1,98 @@
+new_slug: font-pair-shortlist-maker
+name: "Font pair shortlist maker"
+summary: "Paste your brand feel and who reads the site. Get three font pairs with sizes and line spacing that read well."
+job: build-websites
+thinking: low
+thinking_why: "It applies fixed readability rules to a short brief."
+
+headline: "Font pair shortlist maker"
+subhead: "Paste your brand in three words, who reads your site and on what device. It gives three headline and body font pairs, with sizes, line spacing and line length for each, plus a pick for your readers."
+
+explain: |
+  Fonts set the tone before anyone reads a word. A legal site should not feel playful, and a children's app should not feel stiff. Fonts also decide whether people can read a page without tiring.
+
+  This prompt separates the two jobs of type: personality for headlines and comfort for body text. It gives three pairs, each with real sizes and spacing, and flags what would make text hard to read.
+
+when:
+  - "You are building a site and every font looks the same to you."
+  - "Readers say your text is hard to read."
+  - "Your brand feels off and you suspect the fonts."
+
+you_give:
+  - "Your brand in three words"
+  - "Who reads the site and on what device"
+  - "The kind of content you publish"
+  - "Fonts you must keep (optional)"
+you_get:
+  - "Three font pairs with the feeling each gives"
+  - "Body size, line spacing and line length for each"
+  - "Warnings about readability"
+  - "One recommended pair and why"
+
+how_to_use:
+  - "Copy the prompt, then paste it into your AI chat (Claude, ChatGPT or Gemini)."
+  - "Under it, paste your details, one item for each line in What you need."
+  - "Send it and read the reply against the checks at the end of the prompt."
+  - "Answer anything marked MISSING and send it again, or ask for one part to be redone."
+
+how_it_works:
+  - title: "Split the two jobs"
+    text: "Headlines and buttons carry personality. Body text must be easy to read for a long time. Choose them separately."
+  - title: "Pick three pairs"
+    text: "For each, give a headline font and a body font that share a mood but differ in style. Use fonts free on Google Fonts unless I say otherwise. Say what feeling each pair gives."
+  - title: "Set the numbers"
+    text: "For each pair, give body size (16 pixels at least), line spacing (1.4 to 1.7), line length (45 to 75 characters) and a size for each heading level."
+  - title: "Check for trouble"
+    text: "Flag anything that hurts readers: thin weights on small text, letters that look alike (I, l, 1), low contrast, and more than two font families."
+  - title: "Recommend one"
+    text: "Pick one pair for my readers and give the reason in one sentence."
+
+output_shape: |
+  PAIR 1: <headline font> + <body font>
+  Feeling: <words>
+  Body: <size>, spacing <n>, line length <n> characters
+  Headings: <h1>, <h2>, <h3> sizes
+
+  PAIR 2: ...
+  PAIR 3: ...
+
+  WATCH OUT FOR
+  - <readability risk>
+
+  MY PICK
+  <pair> because <one reason>
+
+tweaks:
+  - what: "The readers"
+    how: "Say if they are older or on small phones. Sizes go up."
+  - what: "Fonts you keep"
+    how: "Name your logo font. The pairs build around it."
+  - what: "Free only"
+    how: "Say if you can pay. Otherwise it stays with free fonts."
+
+judge:
+  - "You can tell the three pairs apart at a glance."
+  - "Body text is 16 pixels or more."
+  - "Each pair has two fonts, not three."
+  - "The pick matches your readers, not just your taste."
+
+test:
+  - "Set a paragraph of your real copy in each pair. Which reads best on a phone?"
+  - "Show the three to a colleague without labels. Do they pick your pick?"
+  - "Run it twice. The feelings should be close."
+
+improve:
+  - "Add the fonts your competitors use so yours stand apart."
+  - "Add your logo font and brand colours."
+  - "Save the winning pair and sizes in your brand file."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "A one-message prompt works in any strong chat AI, so use the one you already have."}
+  inputs:
+  - "A paragraph of your real copy"
+  - "Your logo font"
+
+terms:
+  - term: "Line length"
+    meaning: "How many characters fit on one line of text. 45 to 75 is easiest to read."

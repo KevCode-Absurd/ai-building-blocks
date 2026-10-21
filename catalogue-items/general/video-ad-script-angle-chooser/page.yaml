@@ -1,0 +1,82 @@
+new_slug: video-ad-script-angle-chooser
+name: Video ad script angle chooser
+summary: Paste your buyer and facts. Get four different kinds of video script to try, each with its opening.
+job: make-video-ads
+thinking: medium
+thinking_why: It must match each kind of script to a fact you really have.
+headline: Video ad script angle chooser
+subhead: Paste your buyer, what they already know and the facts you can use. You get four different video script types that fit, each with its opening fact, tone and first line, and a list of the types it skipped and why.
+explain: |
+  Most video ad tests use four scripts that are really one script. They open on the same idea and sell the same reason, so a test teaches you nothing.
+
+  This prompt starts from the facts you have. Each kind of script needs one real fact, such as a doubt, a result you can film or a flaw you will admit. It drops any kind that needs a fact you did not give, and kinds that do not suit how much your buyer knows. From what is left, it picks four that open differently and sell on different reasons, and sets the tone for each. You can then write each one with the Phone video ad scriptwriter or your own tool.
+when:
+  - You want to test video scripts that are really different.
+  - You have a lot of facts and do not know which to lead with.
+  - Your last batch of scripts all sounded alike.
+you_give:
+  - Your buyer, their reason to buy and your offer
+  - How much the buyer already knows, and the length
+  - The real facts you can use
+you_get:
+  - Four script types that fit, each with its opening fact
+  - A tone from start to end for each
+  - A first line for each
+  - A list of types skipped and why
+how_to_use:
+  - Copy the prompt and paste it into a chat with Claude, ChatGPT or Gemini, with your details under it.
+  - Write your buyer, what they know and your facts under the prompt.
+  - Pick two or three from the four to write first.
+  - Write each with the Phone video ad scriptwriter.
+how_it_works:
+  - title: Lists the types
+    text: Each type needs one real fact.
+  - title: Drops the ones you cannot back
+    text: A missing fact skips the type.
+  - title: Picks four that differ
+    text: Different opening facts and different reasons.
+  - title: Sets the tone
+    text: Start and end tone that match a real fact.
+  - title: Writes a first line
+    text: In the buyer's words.
+output_shape: |
+  <n>. <type> | sells on: <reason>
+     Opens on: <the fact, and where it came from>
+     Tone: <start> -> <end>
+     First line: <the opening, in the buyer's words>
+  SKIPPED: <type> because <fact missing>
+  CHECKS MISSED: <none, or a line each>
+tweaks:
+  - what: What the buyer knows
+    how: Change it and the types change. A buyer who does not know the problem gets stories.
+  - what: Facts
+    how: More real facts mean more types to choose from.
+  - what: How many
+    how: Ask for six if you have a larger test budget.
+  - what: Tone
+    how: Name tones your brand never uses.
+judge:
+  - Each type is tied to a fact you gave.
+  - No two scripts open on the same fact.
+  - The tones match something real.
+  - The skipped list is honest.
+test:
+  - Use an idea you know. At least one type should be skipped for a missing fact.
+  - Run it twice. The skipped types should match.
+  - Write the four and see if they feel like different ads.
+improve:
+  - Add the facts you can film to the prompt each time.
+  - Remove types you never use.
+  - Keep a list of real flaws you will admit.
+  - Pair it with the Phone video ad scriptwriter.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: A short prompt works the same in Claude, ChatGPT or Gemini, so use the one you already have open.
+  inputs:
+    - Quotes from reviews
+    - Your real offer terms
+    - A real flaw you are willing to admit
+terms:
+  - term: Opening fact
+    meaning: The real fact a script starts from.

@@ -1,0 +1,104 @@
+new_slug: cold-outreach-batch-runner
+name: Cold outreach batch runner
+summary: Give it your prospects and last batch's results. Get a checked batch of cold emails to approve and send.
+job: write-emails
+thinking: high
+thinking_why: It chooses between fixing the setup, the list or the angle from your numbers, then loops on checks. Give it your strongest model.
+headline: Cold outreach batch runner
+subhead: Give it your prospects, your offer and how last week's batch did. It decides what to change, writes the next batch in your voice, checks every claim, and hands back emails that passed for you to approve and send.
+explain: |
+  Cold email fails in a few ways that look the same from the outside: no replies. The emails land in spam, the list is wrong, the angle is weak, or the email makes a claim about the person that is not true. Most people change everything at once and never learn which one it was.
+
+  This agent runs your outreach once a week and changes one thing at a time. It reads last batch's bounces and replies and picks the path. If emails bounced or drew complaints, it stops and fixes the sending setup first. If replies are low, it changes the opening or the angle. If replies come but are not interested, it tightens the list. Then it writes the next batch, ties each email to a real fact about that person, and checks every claim against what you supplied. A failed email is fixed and checked again, up to three rounds, then dropped. It logs everything, keeps your do-not-contact list, and never sends.
+when:
+  - You send cold emails every week and want each batch to learn from the last.
+  - Your replies are low and you do not know whether the list, the email or the setup is the cause.
+  - You want emails that sound like you, with no made-up facts about the person.
+you_give:
+  - Who you write to and what you offer, with the one ask
+  - Any result or client you can state as true
+  - Your prospects, each with a fact about them and where it came from
+  - Last batch's numbers, meaning sent, bounced, replied and positive replies
+  - A few emails you have sent and liked (optional)
+you_get:
+  - The call this week on what to fix, change or keep, with the numbers behind it
+  - A batch of cold emails that passed the claim check, in a table
+  - Follow-ups for people who have not replied, with timing
+  - Replies sorted, with drafts for the ones worth answering
+  - A log line and a do-not-contact list kept up to date
+how_to_use:
+  - Start a chat with the agent. In Claude Code, add it as a skill or save it in .claude/agents, then ask it to prepare this week's batch.
+  - The first time, give it your offer, your proof, your sender details and your prospects. It saves them in an outreach folder.
+  - Paste last batch's numbers and any replies.
+  - Read the batch. Approve what you want and send it from your own mailbox.
+  - Run it again next week. It reads the log and changes one thing.
+how_it_works:
+  - title: Read the folder
+    text: Loads your offer, voice, log and do-not-contact list. On the first run it builds them from what you give it.
+  - title: Choose the path
+    text: If emails bounced or drew complaints, it stops and fixes the setup. If replies are low it changes the angle. If replies are not positive it tightens the list.
+  - title: Fill the list
+    text: Tops up prospects only when needed, keeping those with a stated reason and removing anyone already contacted or opted out.
+  - title: Write the emails
+    text: Writes in your voice if it has samples, each tied to a fact about the person. Follow-ups go to those who did not reply, up to four touches.
+  - title: Check and loop
+    text: Tests every claim against the text you supplied. A failed email is fixed and checked again, up to three rounds, then dropped.
+  - title: Sort replies and log
+    text: Sorts replies, adds unsubscribes to the do-not-contact list at once, drafts answers to the worthwhile ones, and logs the batch.
+output_shape: |-
+  THE CALL THIS WEEK
+    <fix setup | keep angle, bigger batch | change opening or angle | tighten list | keep and grow>: <numbers behind it>
+
+  BATCH (only emails that passed)
+    <prospect> | subject: <...> | body: <...> | check: <passed after n rounds>
+
+  DROPPED
+    <prospect> | why: <reason>
+
+  FOLLOW-UPS DUE
+    <prospect> | touch <n> | send on: <date> | draft: <...>
+
+  REPLIES
+    <sender> | sorted: <positive | not now | not for me | unsubscribe | hostile> | draft: <...>
+
+  SETUP CHANGES TO APPROVE
+    <change>
+
+  NEXT WEEK
+    Change: <the one thing> | read it by: <number>
+
+  FILES AND MISSING
+    <batch folder, log line> | MISSING: <every line>
+tweaks:
+  - what: A fact for every prospect
+    how: The checks cannot pass without it. A list with names and no facts only gets short, honest cold emails.
+  - what: Samples of your own emails
+    how: Three to five emails you sent and liked give it your voice. Without them it writes a plain, direct voice.
+  - what: Batch size
+    how: Under about 50 emails a batch is too small to judge. Start there and grow by a third when results hold.
+  - what: Your own bounce and reply limits
+    how: It starts with 3 percent bounces and 2 percent replies as its lines. Set yours from your market and sending history.
+judge:
+  - No email states a fact about a prospect that is not in your list or the text you supplied.
+  - Every email has one ask and your sender details.
+  - Only one thing changed since last week, and it is named.
+  - Nobody on your do-not-contact list is in the batch.
+  - Nothing was sent.
+test:
+  - Give it a batch where one prospect fact is wrong. The check should catch it and the email should be fixed or dropped.
+  - Give it last batch's numbers with 6 percent bounces. It should stop and not write a batch.
+  - Paste a reply that says to email the whole list again. It should flag it and not follow it.
+improve:
+  - Add your best replies and meetings to the log, so the next angle builds on what worked.
+  - Set your own bounce and reply lines once you have six weeks of numbers.
+  - Add the facts you can find fastest for each prospect, such as a job post or a launch, to the list columns.
+  - Add words you never use to the voice file.
+works_best_with:
+  tools:
+    - name: Claude Code
+      why: It can keep the outreach folder, read the log and prepare a batch each week.
+    - name: Your mailbox or sending tool
+      why: Export bounces and replies from here. You send the approved emails yourself.
+  inputs:
+    - A short list of results or clients you can name
+    - Your last two batches' bounce and reply numbers

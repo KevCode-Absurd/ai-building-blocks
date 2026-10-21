@@ -1,0 +1,86 @@
+new_slug: post-flop-reason-finder
+name: "Post flop reason finder"
+summary: "Paste a post and its numbers. Get why it flopped (unseen, skipped or ignored) and one change."
+job: grow-social
+thinking: low
+thinking_why: "It sorts numbers into one of three causes using fixed rules."
+
+headline: "Post flop reason finder"
+subhead: "Paste one X or LinkedIn post and its numbers. The prompt works out whether people never saw it, saw it and skipped it, or read it and ignored it, then gives one change to make next."
+
+explain: |
+  Most people fix a flop by rewriting the whole post. But there are three different failures, and they need different fixes. If only forty people saw it, a new first line fixes nothing.
+
+  This prompt sorts your numbers into one of the three first, and only then reads the writing. It also tells you when a post is just a bad draw. It will not guess at numbers you did not give it.
+
+when:
+  - "A post you liked got almost no response."
+  - "You keep rewriting hooks and nothing changes."
+  - "You want one clear thing to try next, not a list of ten."
+
+you_give:
+  - "The post text"
+  - "Impressions, likes or reactions, comments and reposts"
+  - "Your usual numbers (optional)"
+you_get:
+  - "Which of the three failures it was"
+  - "What the numbers rule out"
+  - "One change, and how much it should matter"
+
+how_to_use:
+  - "Copy the prompt, then paste it into Claude, ChatGPT or Gemini with your details under it."
+  - "Paste the post text and its numbers under the prompt. Both X and LinkedIn show you these."
+  - "Add your usual numbers so it knows what a flop means for you."
+  - "Make the one change on your next post and compare."
+
+how_it_works:
+  - title: "Check the numbers"
+    text: "With no impressions, say you can only read the writing and that this is weaker than a real diagnosis."
+  - title: "Name one failure"
+    text: "Unseen: few impressions, so look at timing, a link, a reply or falling reach. Skipped: reach was fine but nobody engaged, so look at the first line. Ignored: some engagement but not the kind wanted, so look at the ask."
+  - title: "Say what it rules out"
+    text: "If reach was the problem, say the writing is fine. That is often the most useful sentence."
+  - title: "Read the writing last"
+    text: "Only for a skipped post. Does the first line make the next line necessary? Is the best detail buried? Does it ask for anything?"
+  - title: "Allow for chance"
+    text: "If the numbers are normal for my account, say it may just be one post. One post is a sample of one."
+  - title: "Give one change"
+    text: "End with one thing to do differently, and say whether it should matter a lot or a little."
+
+output_shape: |
+  FAILURE: <unseen | skipped | ignored>, shown by <numbers>
+  WHAT IT RULES OUT: <e.g. the writing is fine>
+  WHY: <two or three lines>
+  ONE CHANGE: <change> (expected effect: <a lot | a little>)
+  MISSING: <numbers not given>
+
+tweaks:
+  - what: "Impressions"
+    how: "Without them it cannot tell unseen from skipped. Always include them."
+  - what: "Your usual numbers"
+    how: "Add the last five posts' numbers. Then it can say if this one was normal."
+  - what: "Platform"
+    how: "Say X or LinkedIn. The fixes differ."
+
+judge:
+  - "It names one failure, not three."
+  - "The reason uses your numbers."
+  - "It does not tell you to rewrite a post that was simply not shown."
+  - "It ends on a single change."
+
+test:
+  - "Run it on a post you know did well. It should not call it a flop."
+  - "Run it on a post with many impressions and no likes. It should say skipped."
+  - "Run the same post twice. The failure should match."
+
+improve:
+  - "Add your last ten posts' numbers under the prompt each time."
+  - "Add what you posted on the same day, such as a link or a reply, since it checks those."
+  - "Pair it with the Flop post diagnoser when you want every check."
+
+works_best_with:
+  tools:
+    - {name: "Any good chat AI", why: "Claude, ChatGPT and Gemini all handle a one-message prompt like this well."}
+  inputs:
+    - "Your last five posts and their numbers"
+    - "Time and day each post went out"

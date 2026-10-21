@@ -1,0 +1,22 @@
+slug: sale-price-wording-picker
+name: Sale price wording picker
+summary: Paste a full price and a sale price. Get the discount shown the clearest way, with warnings.
+category: ecommerce
+type: prompt
+role: check
+job: offer
+level: beginner
+inputs:
+  - type: offer
+    required: true
+outputs:
+  - type: copy_draft
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: discounts skill
+    by: Checkout Page
+    url: https://github.com/checkout-page/ecommerce-skills/tree/main/skills/discounts
+    used: Amount off or percent off by price size, the depth warning, and the order of words for a coupon (MIT licence)

@@ -1,0 +1,77 @@
+new_slug: price-ending-picker
+name: Price ending picker
+summary: Paste a price and what you sell. Get round, just-below or exact digits, with the reason.
+job: set-prices
+thinking: low
+thinking_why: It applies a short set of rules to the facts you give.
+headline: Price ending picker
+subhead: Paste a price you are weighing and what you sell under this prompt. It picks round, just-below or exact digits, plus how to price add-ons and where to place the price. You get a reason for each and a test to run.
+explain: |
+  The last digits of a price send a signal. A round price such as $200 says think about quality. A price such as $199 says think about cost. Which one helps you depends on what you sell and who buys it.
+
+        This prompt does not choose how much to charge. It picks the digits and layout once you have a price in mind. These are rules of thumb from studies, not a promise of more sales, so it also gives you two prices to test on your own shop.
+when:
+  - You are stuck between $199, $200 and $197.50.
+  - You are pricing add-ons or an upgrade tier.
+  - You are setting up a product page and want the price to look right.
+you_give:
+  - The product and the price you are weighing
+  - Whether the brand is premium or value
+  - Add-ons, tiers or a sale price (optional)
+you_get:
+  - The price style with a reason
+  - Prices and endings for add-ons and tiers
+  - Where to place the price on the page
+  - The style it rejected, and a test to run
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - "Say how buyers choose: for feeling or for the job."
+  - List add-ons and tiers so they get matching endings.
+  - Run the test it gives you before you change every price.
+how_it_works:
+  - title: Classify the product
+    text: Bought for enjoyment or bought to do a job.
+  - title: Pick the style
+    text: Round, just below or exact.
+  - title: Match add-ons and tiers
+    text: Same endings, same first digit for upgrades.
+  - title: Check the structure
+    text: Flat rate or pay-per-use.
+  - title: Place the price
+    text: Under the product picture.
+  - title: Name what was rejected
+    text: With the reason.
+output_shape: |
+  PRICE: <price>
+        STYLE: <style>, because <reason>
+        ADD-ONS AND TIERS: <...>
+        PAGE: <...>
+        REJECTED: <style> because <reason>
+        TEST: <two prices to compare>
+tweaks:
+  - what: Premium or value
+    how: A premium brand leans round. A bargain brand can use just below.
+  - what: Sale or everyday
+    how: Just below fits sale prices best.
+  - what: Country
+    how: Say where you sell. Some markets favour certain digits.
+judge:
+  - The style has a reason tied to your product.
+  - Just below is used only when the first digit really drops.
+  - Add-ons share one ending style.
+  - It admits the rules are rules of thumb.
+test:
+  - Run it on a price you already know works. The advice should not clash with your own results.
+  - Run the two test prices on a small share of visitors.
+  - Run it twice. The style should match.
+improve:
+  - Add your real prices and add-ons so it can match them all at once.
+  - Add a line on your top competitors' endings.
+  - Save the style in your brand file so new products follow it.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - Your current price list
+    - Sales numbers, if you can test two prices

@@ -1,6 +1,6 @@
 # Write and tell stories: AI Blocks
 
-> 91 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 93 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [AI-written text detector](https://useaiblocks.com/skills/ai-written-text-detector): Paste a document. Get an honest estimate of whether AI wrote it, with the wording clues behind it.
 - [App Store release notes writer](https://useaiblocks.com/skills/app-store-release-notes-writer): Point it at your app's code history. Get plain "What's New" notes users can read, based on real changes.
@@ -31,6 +31,7 @@
 - [Executive summary writer](https://useaiblocks.com/skills/executive-summary-writer): Give it a long analysis. Get a one-page summary with the answer first, the impact in numbers and the decision needed.
 - [Expert and newcomer test planner](https://useaiblocks.com/skills/expert-and-newcomer-test-planner): Paste your draft. Get who to try it on, the questions to ask each, and a pass line for both.
 - [Fair escape checker](https://useaiblocks.com/skills/fair-escape-checker): Paste your plan and how your character escapes. Get each escape tested for fairness, with fixes for cheats.
+- [Feeling-to-action rewriter](https://useaiblocks.com/prompts/feeling-to-action-rewriter): Paste a paragraph that names the feeling. Get it rewritten in short sentences with things and actions.
 - [First reader question writer](https://useaiblocks.com/skills/first-reader-question-writer): Paste your draft. Get your ideal reader named and a short question sheet to send with it.
 - [Forceful prose writer](https://useaiblocks.com/skills/forceful-prose-writer): Give it a topic or a draft. Get clean, concrete writing with no filler and none of the usual AI habits.
 - [Help article writer](https://useaiblocks.com/skills/help-article-writer): Give it support questions and product docs. Get clear, searchable help center articles and FAQs.
@@ -47,6 +48,7 @@
 - [Long-form piece structurer](https://useaiblocks.com/skills/long-form-piece-structurer): Say what you are writing, such as a case study or whitepaper. Get a clear outline and structure that avoids padding.
 - [Make a daily writing habit that lasts](https://useaiblocks.com/workflows/daily-writing-habit): Tell it your hours. Get a daily word count, a reading plan, a restart rule and a weekly check on your log.
 - [Memorable message writer](https://useaiblocks.com/skills/memorable-message-writer): Give it a message. Get a rewrite that is simple, surprising, concrete, believable and emotional. Uses the SUCCESs checklist.
+- [Message stickiness rewriter](https://useaiblocks.com/prompts/message-stickiness-rewriter): Paste a tagline, pitch line or short paragraph. Get three versions that people will remember.
 - [Mistakes letter to partners writer](https://useaiblocks.com/skills/mistakes-letter-partners): Paste your year's results and slip-ups. Get an honest owners' letter naming each mistake, its cost and the change.
 - [Mystery plot planner](https://useaiblocks.com/skills/mystery-plot-planner): Tell it the crime or puzzle. Get a clue map where every clue is in plain sight and the reveal is fair.
 - [Name family planner](https://useaiblocks.com/skills/name-family-planner): Describe your world, brand or product range. Get names that share one root, each with a meaning and a short history.

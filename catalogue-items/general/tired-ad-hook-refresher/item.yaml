@@ -1,0 +1,30 @@
+slug: tired-ad-hook-refresher
+name: Tired ad hook refresher
+summary: Paste a fading winner's numbers. Get the cause, a pace, and ten new opening briefs on the same ad.
+category: general
+type: prompt
+role: make
+job: ads
+level: intermediate
+inputs:
+  - type: performance_sheet
+    required: true
+  - type: hooks
+    required: false
+outputs:
+  - type: hooks
+  - type: plan
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: Creative strategy for Meta in 2026 (long masterclass)
+    by: Media buyer and agency lead (about 8 years on Meta)
+    used: The spend limit of an ad, the two causes of fatigue, pacing by stock, the ranked revival moves, hook rotation on a fading winner and testing hooks as trial reels
+  - title: Why Hook Testing Still Works With Andromeda
+    by: Agency owner (about $500M attributed revenue)
+    used: The four levers to change in a hook, filming a visibly different person, ten or more hooks per body and the cost logic of the hook
+  - title: This Is How a T-Shirt Brand Outsmarted the Entire Industry
+    by: Ryan Bartlett, co-founder of True Classic
+    used: Four to five openers on every ad, a little spend behind each and more budget on the best opener

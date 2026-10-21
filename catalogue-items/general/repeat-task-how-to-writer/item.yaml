@@ -1,0 +1,22 @@
+slug: repeat-task-how-to-writer
+name: Repeat task how-to writer
+summary: Paste how you do a repeat task. Get exact steps, fixes and who to ask if it fails.
+category: general
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - type: question
+    required: true
+outputs:
+  - type: document
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: runbook skill
+    by: Anthropic
+    url: https://github.com/anthropics/knowledge-work-plugins/tree/main/operations/skills/runbook
+    used: A shorter one-message version of this skill, written fresh.

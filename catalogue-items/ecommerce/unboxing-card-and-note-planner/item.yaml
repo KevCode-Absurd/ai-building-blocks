@@ -1,0 +1,23 @@
+slug: unboxing-card-and-note-planner
+name: "Unboxing card and note planner"
+summary: "Paste your order value and margin. Get an insert card, note and gift rule with a cost check."
+category: ecommerce
+type: prompt
+role: make
+job: ops
+level: beginner
+inputs:
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - {title: "Customer delight across the e-commerce journey: a retention playbook", by: "Research write-up (author not named)", used: "Per-order cost bands for packaging, the volume math, the peak-end rule and fixing effort before adding peaks"}
+  - {title: "Engineering Customer Delight Across the E-Commerce Journey (deep research)", by: "Research write-up (author not named)", used: "The standard insert card and who gets a handwritten note"}
+  - {title: "Strategic Orchestration of Customer Delight in E-Commerce", by: "Academic-style write-up (author not named)", used: "Unconditional gifts versus discount codes, and how weight, rigidity and texture signal quality"}
+  - {title: "Wild bets folder: unconventional offer, retention and CX plays for e-commerce owners", by: "Compiled research write-up (author not named)", used: "Handwritten notes to top customers, the risk of fake handwriting, and small relevant gifts in the box"}
+  - {title: "The Power of Moments", by: "Chip Heath and Dan Heath", used: "Why one planned peak and a strong ending matter more than spreading effort evenly"}
+

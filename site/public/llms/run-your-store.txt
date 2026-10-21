@@ -1,6 +1,6 @@
 # Run your online store: AI Blocks
 
-> 123 free AI skills and workflows for this job. Each page links its SKILL.md.
+> 127 free AI skills and workflows for this job. Each page links its SKILL.md.
 
 - [3PL bill auditor](https://useaiblocks.com/skills/3pl-bill-auditor): Paste your 3PL invoice, rate card and orders. Get overcharges found, a score out of 100 and a dispute note.
 - [Abandoned checkout reader](https://useaiblocks.com/skills/abandoned-checkout-reader): Pick a date range. Get abandoned checkouts split by cart value and hour, so you see when and where buyers drop.
@@ -29,6 +29,7 @@
 - [Customer spend tier tagger](https://useaiblocks.com/skills/customer-spend-tier-tagger): Set your spend levels. Get each customer tagged Bronze, Silver, Gold or Platinum from lifetime spend. Changes live customer tags.
 - [Customer tag bulk updater](https://useaiblocks.com/skills/customer-tag-bulk-updater): Pick customers and tags. Get tags added or removed across the whole group. Changes live customer data.
 - [Daily fulfillment digest writer](https://useaiblocks.com/skills/daily-fulfillment-digest-writer): Run it each morning. Get open orders grouped by age, with holds and exceptions flagged for action.
+- [Daily order and shipping watcher](https://useaiblocks.com/agents/daily-order-and-shipping-watcher): Run it each morning. Get late and stuck orders found before customers write, and risky ones held only on your yes.
 - [Days of stock calculator](https://useaiblocks.com/skills/days-of-stock-calculator): Get how many days each product stock will last and how fast it sells, by location.
 - [Dead stock finder](https://useaiblocks.com/skills/dead-stock-finder): Get products with stock on the shelf but no sales in your chosen number of days.
 - [Delivery time analyzer](https://useaiblocks.com/skills/delivery-time-analyzer): Run it on your shipments. Get average days from shipment to delivery for each carrier.
@@ -54,6 +55,8 @@
 - [Loyalty customer list builder](https://useaiblocks.com/skills/loyalty-customer-list-builder): Get your top-spending customers tagged and exported, ready for a loyalty program. Adds tags to live customer records.
 - [Marketing consent auditor](https://useaiblocks.com/skills/marketing-consent-auditor): Run it on your customers. Get who agreed to email and SMS marketing, and who did not, for compliance.
 - [Missing product cost finder](https://useaiblocks.com/skills/missing-product-cost-finder): Get a list of products with no cost set, so your margin and stock value reports stay right.
+- [Monthly catalogue clean-up keeper](https://useaiblocks.com/agents/monthly-catalogue-clean-up-keeper): Run it monthly. Get missing costs, clashing SKUs and hidden products found, and a short fix list in the right order.
+- [Monthly returns and refunds reviewer](https://useaiblocks.com/agents/monthly-returns-and-refunds-reviewer): Run it monthly. Get the products driving refunds, why, what returns cost and the one fix to make first.
 - [Ninety day marketing plan builder](https://useaiblocks.com/skills/90-day-marketing-plan): Describe your store. Get a buyer profile, your best channels, a budget split, and a 90 day action plan.
 - [Old discount code cleaner](https://useaiblocks.com/skills/old-discount-code-cleaner): Get expired, unused and duplicate discount codes found, then switched off or deleted if you say so. Deletes cannot be undone.
 - [Online order fulfillment planner](https://useaiblocks.com/skills/online-order-fulfillment-planner): Give it your order volume and setup. Get ways to pick, pack and ship faster and cheaper, with returns handled.
@@ -113,6 +116,7 @@
 - [Subscription revenue tracker](https://useaiblocks.com/skills/subscription-revenue-tracker): Run it on your subscriptions. Get monthly and yearly recurring revenue, active subscribers and churn.
 - [Supplier name cleaner](https://useaiblocks.com/skills/supplier-name-cleaner): Get supplier name typos and case variants grouped, with one proper name suggested for each.
 - [Support capacity planner](https://useaiblocks.com/skills/support-capacity-planner): Give it ticket data and your sales forecast. Get cost per ticket and hiring dates for peak.
+- [Support hiring date planner](https://useaiblocks.com/prompts/support-hiring-date-planner): Paste 12 months of tickets, costs and a sales forecast. Get agents needed and when to hire.
 - [Survey-ready order finder](https://useaiblocks.com/skills/survey-ready-order-finder): Run it on your orders. Get the buyers 7 to 14 days after delivery who should get a survey, minus refunds.
 - [TikTok Shop launch planner](https://useaiblocks.com/skills/tiktok-shop-launch-planner): Tell it where you are starting. Get a week-by-week plan to set up, list, create content and scale.
 - [TikTok Shop overseas expansion planner](https://useaiblocks.com/skills/tiktok-shop-expansion): Tell it your products and target countries. Get which markets to enter first, plus shipping, rules and localizing steps.

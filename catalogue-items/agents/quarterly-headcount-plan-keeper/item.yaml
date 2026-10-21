@@ -1,0 +1,30 @@
+slug: quarterly-headcount-plan-keeper
+name: "Quarterly headcount plan keeper"
+summary: "Give it each quarter's people numbers. Get the plan checked against what happened, the scenario to follow and the budget gap."
+category: agent
+type: agent
+role: orchestrate
+job: ops
+level: advanced
+inputs:
+  - {type: spreadsheet, required: true}
+  - {type: brief, required: true}
+  - {type: performance_sheet, required: false}
+outputs:
+  - {type: plan}
+  - {type: audit_report}
+  - {type: document}
+uses: [headcount-plan-builder, headcount-and-turnover-reporter, headcount-forecast-builder, headcount-scenario-planner, people-cost-budget-builder, hiring-progress-reporter, headcount-business-case-builder]
+steps:
+  - {uses: headcount-plan-builder, note: "Once, on the first run: a role-by-role hiring plan and priority order from your growth goals. Reused and updated after."}
+  - {uses: headcount-and-turnover-reporter, note: "Every quarter: headcount, hires, exits and team health from your own people data."}
+  - {uses: headcount-forecast-builder, note: "On the first run, and again only when the plan was off by more than 20% or your goals changed: a new forecast of hires and exits with a range."}
+  - {uses: headcount-scenario-planner, note: "Only when the plan was off by more than 20% or a switch sign from last quarter was hit: base, best and worst cases with the signs for switching."}
+  - {uses: people-cost-budget-builder, note: "Every quarter: the people budget by team against what was spent, with notes on the gaps."}
+  - {uses: hiring-progress-reporter, note: "Only when roles are open: the pipeline numbers as an update for leaders."}
+  - {uses: headcount-business-case-builder, note: "Only for each new role someone asks to add: its yearly cost and a hire or contract comparison."}
+schedule: "In the first two weeks of each quarter, once last quarter's people data is in"
+asks_before: [approving or freezing any hire, posting a job or contacting a candidate, changing pay or budgets, sharing people data outside the leadership team, any step towards cutting roles]
+origin: own
+version: 1.0.0
+example_pending: true

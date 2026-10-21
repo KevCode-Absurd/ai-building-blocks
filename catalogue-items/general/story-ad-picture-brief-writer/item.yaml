@@ -1,0 +1,36 @@
+slug: story-ad-picture-brief-writer
+name: Story ad picture brief writer
+summary: Paste your story ad. Get one picture brief, a ready image prompt and a short line to run under it.
+category: general
+type: prompt
+role: make
+job: ads
+level: intermediate
+inputs:
+  - type: ad_copy
+    required: true
+  - type: persona
+    required: false
+outputs:
+  - type: image_prompt
+uses: []
+origin: own
+version: 1.0.0
+example_pending: true
+credits:
+  - title: "The Role of Expectancy and Relevancy in Memory for Verbal and Visual Information: What Is Incongruency?"
+    by: Susan Heckler and Terry Childers, Journal of Consumer Research
+    url: https://doi.org/10.1086/209275
+    used: "The stop check: unexpected and relevant together"
+  - title: "Banner Blindness Revisited: Users Dodge Ads on Mobile and Desktop"
+    by: Kara Pernice, Nielsen Norman Group
+    url: https://www.nngroup.com/articles/banner-blindness-old-and-new-findings/
+    used: Why ad-looking pictures get skipped
+  - title: "Forces Friday: Pull and Anxiety"
+    by: Bob Moesta and Chris Spiek, JTBD Radio
+    url: https://jobstobedone.org/radio/pull-and-anxiety/
+    used: Starting from the push, the moment the old way failed
+  - title: "Facebook Ads Guide: image ad specs"
+    by: Meta
+    url: https://www.facebook.com/business/ads-guide/update/image
+    used: About 27 characters for the line under the picture

@@ -1,0 +1,77 @@
+new_slug: two-day-paid-ask-planner
+name: Two-day paid ask planner
+summary: Paste your idea, buyer and price. Get the buyer-count math, ten people to ask and a go or change rule.
+job: test-an-idea
+thinking: low
+thinking_why: It follows a fixed plan, with a few sums to check.
+headline: Two-day paid ask planner
+subhead: Paste a one-line idea, who it is for and a price under this prompt. It does the buyer-count math, lists ten people to ask and writes the ask. You get a two-day schedule and a go or change rule to set first.
+explain: |
+  Asking friends "would you buy this?" gets polite answers. Asking them to pay gets the truth. A quick way to test an idea is to ask ten people who already have the problem to pay a real price, and write down the go rule before you start.
+
+        This prompt builds that test. It checks how many buyers your goal needs, finds ten reachable people, writes a direct ask, and sets the rules in advance so you cannot talk yourself into a yes. It is a test plan, not a forecast.
+when:
+  - You have an idea and want to know in two days if anyone will pay.
+  - You keep planning and have not asked anyone for money.
+  - You want a rule for when to go and when to change.
+you_give:
+  - The idea, the buyer and a price
+  - Your profit goal and profit per sale (optional)
+you_get:
+  - The buyer count your goal needs
+  - Ten people to ask and how to reach each
+  - The exact ask and a two-day schedule
+  - Go, change and one-more-round rules
+how_to_use:
+  - Copy the prompt and paste it into any AI chat (Claude, ChatGPT or Gemini). Put your details underneath it.
+  - Pick a price you could charge today.
+  - Write the rules down and do not change them mid-test.
+  - Only offer what you could deliver by hand.
+how_it_works:
+  - title: State the idea
+    text: Idea, buyer and one price.
+  - title: Run the math
+    text: Goal divided by profit per sale.
+  - title: List ten people
+    text: Reachable within 48 hours.
+  - title: Write the ask
+    text: Price, how to pay, and when.
+  - title: Schedule the asks
+    text: Five on each day.
+  - title: Set the rules
+    text: Go, change or one more round.
+output_shape: |
+  THE MATH: <goal> / <profit per sale> = <buyers needed>
+        TEN PEOPLE: <name or group> | <how to reach>
+        THE ASK: <...>
+        SCHEDULE: Day 1 | Day 2
+        RULES: go | change | one more round
+        REFERRAL LINE: <...>
+        MISSING: <...>
+tweaks:
+  - what: Price
+    how: A real price gives a real answer. A free trial does not.
+  - what: Who you ask
+    how: People who already have the problem and use a workaround give the best signal.
+  - what: Channel
+    how: Say where each person is, such as email, DM or a group, so the schedule fits.
+judge:
+  - The math shows both numbers.
+  - The ask names a price and a way to pay.
+  - The rules were written before the asks.
+  - The ten people already have the problem.
+test:
+  - Run it for an idea you can sell by hand in a week.
+  - Run it twice. The rules should match.
+  - Send one ask to a friend and see if the wording feels like a real offer.
+improve:
+  - Add your real profit per sale.
+  - Add the tool you use to take payment.
+  - Add what you learned after the first round and run it again.
+works_best_with:
+  tools:
+    - name: Any good chat AI
+      why: One message is enough, so any strong chat AI works.
+  inputs:
+    - A list of people who already have the problem
+    - A way to take a payment, even a simple link

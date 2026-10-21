@@ -1,0 +1,18 @@
+slug: threat-list-maker
+name: "Threat list maker"
+summary: "Paste how your app or service works. Get the likeliest attacks ranked, each with one way to reduce the risk."
+category: general
+type: prompt
+role: check
+job: analysis
+level: intermediate
+inputs:
+  - {type: brief, required: true}
+outputs:
+  - {type: security_report}
+uses: []
+origin: own
+credits:
+  - {title: "threat-modeling skill", by: "sickn33", url: "https://github.com/sickn33/agentic-awesome-skills/tree/main/skills/threat-modeling", used: "The STRIDE method and risk ranking, adapted under the CC BY-4.0 licence"}
+version: 1.0.0
+example_pending: true

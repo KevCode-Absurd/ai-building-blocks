@@ -1,5 +1,5 @@
 import { useState, type ReactNode } from "react";
-import { type Block, loadFiles } from "./lib/data";
+import type { Block } from "./lib/data";
 import { buildSkillZip, download } from "./lib/handoff";
 
 // The most a ChatGPT GPT takes in its Instructions box.
@@ -30,7 +30,7 @@ export default function Install({ b, skill, toast }: { b: Block; skill: string |
   const pick = (t: Tab) => { setTab(t); try { localStorage.setItem(KEY, t); } catch { /* private mode */ } };
   const zip = async () => {
     if (!skill) return;
-    download(await buildSkillZip(b.slug, skill, await loadFiles(b)), `${b.slug}.zip`);
+    download(await buildSkillZip(b.slug, skill, b.hasFiles), `${b.slug}.zip`);
     toast("Skill downloaded");
   };
   const file = () => { if (skill) { download(new Blob([skill], { type: "text/markdown" }), "SKILL.md"); toast("Downloaded SKILL.md"); } };

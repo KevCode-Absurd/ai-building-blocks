@@ -1,14 +1,17 @@
 // Reads catalogue-items/** and writes the site's data: one small index for the library,
-// plus each block's skill files under public/skills/<slug>/ (fetched only when a block page opens).
+// plus each block's SKILL.md under public/skills/<slug>/ (fetched only when a block page opens), and a zip for a skill with extra files.
 import fs from "node:fs";
 import path from "node:path";
 import YAML from "yaml";
 import { Marked } from "marked";
+import { zipSync } from "fflate";
 
 // CATALOGUE_ROOT points the build at another folder (tools/make-fake-catalogue.mjs makes one for load tests).
 const ROOT = path.resolve(process.env.CATALOGUE_ROOT || "../catalogue-items");
 const OUT_DATA = "public/data";
 const OUT_SKILLS = "public/skills";
+// One fixed date inside every zip, so the same files always make the same zip.
+const ZIP_DATE = new Date("2026-01-01T00:00:00Z");
 // Headings inside a skill's text drop one level (h1 to h2 and so on), so every page has one h1: its own title.
 const sub = (html) => html.replace(/<(\/?)h([1-5])\b/g, (_, slash, n) => `<${slash}h${Number(n) + 1}`);
 const OUT_PAGES = "public/data/pages";
@@ -65,7 +68,13 @@ for (const dirName of ["general", "ecommerce", "orchestrators", "imported"]) {
     // Reference files and a licence travel with the skill, so a download installs complete.
     const refDir = path.join(folder, "references");
     const files = imported ? walk(folder) : [...(fs.existsSync(refDir) ? fs.readdirSync(refDir).filter((f) => f.endsWith(".md")).sort().map((f) => `references/${f}`) : []), ...(fs.existsSync(path.join(folder, "LICENSE")) ? ["LICENSE"] : [])];
-    for (const f of files) { fs.mkdirSync(path.dirname(path.join(OUT_SKILLS, slug, f)), { recursive: true }); fs.copyFileSync(path.join(folder, f), path.join(OUT_SKILLS, slug, f)); }
+    // They ship as one zip per skill (skills/<slug>.zip, the folder Claude installs), not one file each: the site stays
+    // under Cloudflare Pages' file limit, and a download is one request. The skill's own files are never changed.
+    if (files.length) {
+      const tree = { [`${slug}/SKILL.md`]: new TextEncoder().encode(skill.replace(/\r\n?/g, "\n")) };
+      for (const f of files) tree[`${slug}/${f}`] = fs.readFileSync(path.join(folder, f));
+      fs.writeFileSync(path.join(OUT_SKILLS, `${slug}.zip`), zipSync(tree, { level: 6, mtime: ZIP_DATE }));
+    }
     const steps = (item.steps ?? []).map((s) => ({ uses: s.uses, note: s.note ?? "" }));
     const pagePath = [path.join(folder, "page.yaml"), path.join(WORKFLOW_PAGES, `${slug}.yaml`)].find((p) => fs.existsSync(p));
     let page = null;
@@ -234,6 +243,8 @@ for (const b of blocks) {
   delete b.thinkingWhy;
   // Facts only the block's own page shows (or nothing does) travel with the page, not in blocks.json.
   pageData.words = b.words; pageData.added = b.added; if (b.tested) pageData.tested = b.tested;
+  // The names of its extra files (a skill's are in its zip; a mind's are served one by one for its pack).
+  if (b.files.length) pageData.files = b.files;
   // An imported skill's GitHub link, licence, first name and commit are only shown on its page; the list keeps just the maker.
   if (b.source) pageData.source = b.source;
   fs.writeFileSync(f, JSON.stringify(pageData));
@@ -247,15 +258,13 @@ const renamedFile = path.join(ROOT, "renamed.json");
 const renamed = fs.existsSync(renamedFile) ? Object.fromEntries(Object.entries(JSON.parse(fs.readFileSync(renamedFile, "utf8"))).filter(([, to]) => blocks.some((b) => b.slug === to))) : {};
 // The whole roster goes too, so /minds can show who's coming before their files are built.
 const minds = { areas: roster.areas ?? {}, roster: roster.minds.map((m) => ({ slug: m.slug, name: m.name, area: m.area, seat: m.seat, living: !!m.living, built: !!bySlug[m.slug], face: faces[m.slug] ?? {}, labels: labelsOf(m.slug) })), labels: labelFile.labels ?? {} };
-// The file list of a skill with extra files is fetched only when someone downloads it (Install.tsx), so it isn't in blocks.json.
-for (const b of blocks) if (b.files.length) fs.writeFileSync(path.join(OUT_SKILLS, b.slug, "_files.json"), JSON.stringify(b.files));
 // blocks.json is loaded by every page, so each block is sent as small as it can be: fields the list, search, home page and
 // builder never read are left out, and a value equal to its default is left out too. loadCatalogue (lib/data.ts) puts them back.
 const DEFAULTS = { category: "general", type: "skill", role: "make", job: "ops", level: "intermediate", thinking: "medium", origin: "own", version: "1.0.0", usedIn: 0 };
 const wire = (b) => {
   const o = {};
   for (const [k, v] of Object.entries(b)) {
-    if (["words", "added", "files", "tested"].includes(k)) continue; // page JSON, or _files.json
+    if (["words", "added", "files", "tested"].includes(k)) continue; // in the page JSON
     if (k === "headline") { if (v === b.name) continue; } // same as the name: left out; no page at all: sent as ""
     else if (k in DEFAULTS ? v === DEFAULTS[k] : v == null || v === "" || (Array.isArray(v) && !v.length)) continue;
     o[k] = k === "inputs" || k === "outputs" ? v.map((p) => (p.required ? p.type : `${p.type}?`)) : k === "steps" ? v.map((x) => (x.note ? [x.uses, x.note] : x.uses)) : k === "source" ? { by: v.by } : v;

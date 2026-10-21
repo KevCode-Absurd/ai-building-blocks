@@ -250,4 +250,10 @@ fs.writeFileSync(path.join(DIST, "404.html"), render("/404", { title: "Page not 
 // The hub addresses go into their own sitemap, read by build-index's sitemap index.
 fs.writeFileSync(path.join(DIST, "sitemap-jobs.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${hubUrls.map((u) => `  <url><loc>${SITE}${u}</loc></url>`).join("\n")}\n</urlset>\n`);
 console.log(`prerender: ${wrote} pages, ${hubUrls.length} job hubs, a 404 page${problems.length ? `\n  ${problems.slice(0, 20).join("\n  ")}` : ""}`);
+// Cloudflare Pages takes at most 20,000 files on the free plan. Stop well before that, so a growing library never fails a deploy.
+const MAX_FILES = 19000;
+const count = (d) => fs.readdirSync(d, { withFileTypes: true }).reduce((n, e) => n + (e.isDirectory() ? count(path.join(d, e.name)) : 1), 0);
+const files = count(DIST);
+console.log(`dist: ${files.toLocaleString("en-US")} files (the limit here is ${MAX_FILES.toLocaleString("en-US")})`);
+if (files > MAX_FILES) { console.error(`  dist has ${files} files, over ${MAX_FILES}: bundle more files, or move to a plan that takes more`); process.exitCode = 1; }
 if (problems.length) process.exitCode = 1;

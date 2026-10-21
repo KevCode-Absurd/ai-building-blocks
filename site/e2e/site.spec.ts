@@ -923,6 +923,10 @@ test("a mind's page lists the skills from their work and downloads them as one p
     expect(files["claude-hopkins-pack/README.md"]).toContain(`\`${s}/\``);
   }
   expect(files[`claude-hopkins-pack/${dropped}/SKILL.md`]).toBeUndefined();
+  // A skill with reference files brings them out of its zip (public/skills/<slug>.zip) into the pack.
+  const zipped = kept.filter((s) => fs.existsSync(`public/skills/${s}.zip`));
+  expect(zipped.length).toBeGreaterThan(0);
+  for (const s of zipped) expect(Object.keys(files).filter((k) => k.startsWith(`claude-hopkins-pack/${s}/`) && !k.endsWith("/SKILL.md")).length, s).toBeGreaterThan(0);
 
   // The skill's own page names the minds behind it, and links back.
   await page.goto("/skills/ad-headline-writer");

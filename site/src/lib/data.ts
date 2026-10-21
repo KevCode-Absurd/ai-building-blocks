@@ -52,7 +52,7 @@ export type Block = {
   /** The last test run on the example business, if there was one. */
   tested: { on: string; result: "pass" | "fail"; business: string } | null;
   version: string;
-  /** True when the skill has extra files (references/, scripts/, LICENSE...). The list is fetched by loadFiles when someone downloads it. */
+  /** True when the skill has extra files (references/, scripts/, LICENSE...). A skill's ship in skills/<slug>.zip; the list is in its page data. */
   hasFiles?: boolean;
   /** The same look in the other format (image or video), if the library has it. */
   twin: string | null;
@@ -92,6 +92,7 @@ export type Page = {
   /** What it needs first, the steps before it and the paths after it (tools/lib/needs.mjs). */
   plan?: Plan;
   /** Facts only a block's own page needs (moved here from blocks.json to keep the library small). */
+  files?: string[];
   words?: number; added?: string; tested?: { on: string; result: "pass" | "fail"; business: string; model?: string; judge?: string };
   /** Why the block needs the thinking level it has (moved here from blocks.json to keep the library small). */
   thinkingWhy?: string;
@@ -162,22 +163,18 @@ export function loadSkillText(slug: string, file = "SKILL.md"): Promise<string |
   return textCache.get(key)!;
 }
 
-/** The extra files in a skill's folder (references/, scripts/, assets/, LICENSE...), listed at build time in skills/<slug>/_files.json. */
-const filesCache = new Map<string, Promise<string[]>>();
+/** The extra files in a skill's folder (references/, scripts/, assets/, LICENSE...), listed at build time in its page data. */
 export function loadFiles(b: Block): Promise<string[]> {
   if (!b.hasFiles) return Promise.resolve([]);
-  if (!filesCache.has(b.slug)) filesCache.set(b.slug, fetch(`/skills/${b.slug}/_files.json`).then((r) => (r.ok ? r.json() : [])).then((l) => (Array.isArray(l) ? l : [])).catch(() => []));
-  return filesCache.get(b.slug)!;
+  return loadPage(b.slug).then((p) => (Array.isArray(p?.files) ? p.files : []));
 }
-/** One file of a skill as raw bytes, so images and other binaries survive a download. Null when it isn't there. */
-export async function loadSkillBytes(slug: string, file: string): Promise<Uint8Array | null> {
+/** A skill with extra files as the zip built for it (skills/<slug>.zip: <slug>/SKILL.md plus its files). Null when it isn't there. */
+export async function loadSkillZip(slug: string): Promise<Uint8Array | null> {
   try {
-    const r = await fetch(`/skills/${slug}/${file}`);
-    if (!r.ok) return null;
-    const buf = new Uint8Array(await r.arrayBuffer());
-    // A missing file can come back as the site's own page; a real .html file in a skill is kept.
-    if ((r.headers.get("content-type") ?? "").includes("text/html") && new TextDecoder().decode(buf.subarray(0, 4000)).includes('id="root"')) return null;
-    return buf;
+    const r = await fetch(`/skills/${slug}.zip`);
+    // A missing file can come back as the site's own page.
+    if (!r.ok || (r.headers.get("content-type") ?? "").includes("text/html")) return null;
+    return new Uint8Array(await r.arrayBuffer());
   } catch { return null; }
 }
 

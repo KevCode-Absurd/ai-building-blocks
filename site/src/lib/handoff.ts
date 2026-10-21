@@ -2,7 +2,7 @@
 // PRD §6: HANDOFF.md, workflow.json, skills/<slug>/SKILL.md, README.txt.
 // The zip library loads only when someone downloads.
 import type { Zippable } from "fflate";
-import { type Catalogue, loadFiles, loadSkillBytes, loadSkillText, portLabel, taskOf } from "./data";
+import { type Catalogue, loadFiles, loadSkillText, loadSkillZip, portLabel, taskOf } from "./data";
 import type { Flow, FlowNode } from "./store";
 import { type Business, businessText } from "./business";
 import { crewSlugs, isMind, leadsOf, mindName } from "./crew";
@@ -265,14 +265,13 @@ export function download(blob: Blob, filename: string) {
   setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
 
-/** One skill as a folder Claude can install: <slug>/SKILL.md, plus its reference files. */
-export async function buildSkillZip(slug: string, skill: string, files: string[]) {
+/** One skill as a folder Claude can install: <slug>/SKILL.md, plus its reference files. A skill with files comes as the
+ *  zip built for it, byte for byte, so scripts, images and other binaries arrive exactly as they are in the library. */
+export async function buildSkillZip(slug: string, skill: string, hasFiles = false) {
+  const built = hasFiles ? await loadSkillZip(slug) : null;
+  if (built) return new Blob([built], { type: "application/zip" });
   const { strToU8, zipSync } = await import("fflate");
-  const tree: Zippable = {};
-  tree[`${slug}/SKILL.md`] = strToU8(skill);
-  // Bytes, not text: scripts, images and other binaries must come out of the zip exactly as they went in.
-  for (const [f, bytes] of await Promise.all(files.map(async (f) => [f, await loadSkillBytes(slug, f)] as const))) if (bytes) tree[`${slug}/${f}`] = bytes;
-  return new Blob([zipSync(tree)], { type: "application/zip" });
+  return new Blob([zipSync({ [`${slug}/SKILL.md`]: strToU8(skill) })], { type: "application/zip" });
 }
 
 /** One mind and the skills from their work you ticked, as one pack (docs/SOURCE-SKILLS-PRD.md): a README, the mind's
@@ -283,7 +282,7 @@ export async function buildMindPack(c: Catalogue, mindSlug: string, skillSlugs: 
   if (!m) return { error: "That mind isn't in the library." } as const;
   const mindSkill = await loadSkillText(mindSlug);
   if (!mindSkill) return { error: `Couldn't load ${m.name}. Check your connection and try again.` } as const;
-  const { strToU8, zipSync } = await import("fflate");
+  const { strToU8, unzipSync, zipSync } = await import("fflate");
   const first = m.name.split(" (")[0];
   const root = `${mindSlug}-pack`;
   const tree: Zippable = {};
@@ -299,10 +298,9 @@ export async function buildMindPack(c: Catalogue, mindSlug: string, skillSlugs: 
     if (!b || !t) continue;
     const way = `\n\n## Done the way of ${first}\nIf the \`${mindSlug}\` skill is added too, do this job the way ${first} would: read it first, ask their questions, follow their method and use their voice. Mark anything that goes beyond their public record. Without it, run this skill as written.\n`;
     tree[`${root}/${s}/SKILL.md`] = strToU8(t.replace(/\s*$/, "") + way);
-    for (const f of await loadFiles(b)) {
-      const x = await loadSkillBytes(s, f);
-      if (x) tree[`${root}/${s}/${f}`] = x;
-    }
+    // Its other files come out of its zip as they are; SKILL.md is the one above, with the mind's section added.
+    const zip = b.hasFiles ? await loadSkillZip(s) : null;
+    if (zip) for (const [name, bytes] of Object.entries(unzipSync(zip))) if (name.startsWith(`${s}/`) && name !== `${s}/SKILL.md` && !name.endsWith("/")) tree[`${root}/${name}`] = bytes;
     got.push({ slug: s, name: b.name, summary: b.summary });
   }
   const readme = [
